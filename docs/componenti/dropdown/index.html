@@ -5,20 +5,21 @@
 
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-<meta name="description" content="Attiva o disattiva overlay contestuali per visualizzare elenchi di link e altro ancora con questi menù a tendina." />
+<meta name="description" content="Attiva o disattiva overlay contestuali per visualizzare liste di link ed altro ancora con questi menù a tendina." />
 <meta name="author" content="Dipartimento per la trasformazione digitale" />
 <meta name="generator" content="Jekyll v4.2.1" />
 
 <title>Dropdown · Bootstrap Italia</title>
 
-
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202207122305" rel="stylesheet" />
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202207221548" rel="stylesheet" />
+
+
 <!-- Documentation extras -->
  
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.css" rel="stylesheet" />
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202207122305" rel="stylesheet" />
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202207221548" rel="stylesheet" />
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico" />
@@ -34,13 +35,13 @@
 <meta name="twitter:site" content="@designersITA" />
 <meta name="twitter:creator" content="Dipartimento per la trasformazione digitale" />
 <meta name="twitter:title" content="Dropdown" />
-<meta name="twitter:description" content="Attiva o disattiva overlay contestuali per visualizzare elenchi di link e altro ancora con questi menù a tendina." />
+<meta name="twitter:description" content="Attiva o disattiva overlay contestuali per visualizzare liste di link ed altro ancora con questi menù a tendina." />
 <meta name="twitter:image" content="/docs/assets/img/favicons/social-card.png" />
 
 <!-- Facebook -->
 <meta property="og:url" content="/docs/componenti/dropdown/" />
 <meta property="og:title" content="Dropdown" />
-<meta property="og:description" content="Attiva o disattiva overlay contestuali per visualizzare elenchi di link e altro ancora con questi menù a tendina." />
+<meta property="og:description" content="Attiva o disattiva overlay contestuali per visualizzare liste di link ed altro ancora con questi menù a tendina." />
 <meta property="og:type" content="website" />
 <meta property="og:image" content="/docs/assets/img/favicons/social-card.png" />
 <meta property="og:image:type" content="image/png" />
@@ -78,7 +79,7 @@
 
   </head>
   <body>
-    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+    <a id="skippy" class="visually-hidden-focusable" href="#content">
       <div class="container">
         <span class="skiplink-text">Skip to main content</span>
       </div>
@@ -88,8 +89,8 @@
   <button
     class="navbar-toggler"
     type="button"
-    data-toggle="collapse"
-    data-target="#navbarsTop"
+    data-bs-toggle="collapse"
+    data-bs-target="#navbarsTop"
     aria-controls="navbarsTop"
     aria-expanded="false"
     aria-label="Toggle navigation"
@@ -104,7 +105,7 @@
     <a class="navbar-brand text-decoration-none" href="http://agid.gov.it/">AgID</a>
   </div>
   <div class="collapse navbar-collapse" id="navbarsTop">
-    <ul class="navbar-nav ml-auto">
+    <ul class="navbar-nav ms-auto">
       <li class="nav-item nav-item-w-divider">
         <a class="nav-link text-decoration-none" href="https://pianotriennale-ict.italia.it/">Piano Triennale</a>
       </li>
@@ -137,36 +138,36 @@
     <path d="M31.799 71.9V15.7h15.1V72h-15.1zM91.099 28.5h-13.8v23.1c0 2.3.1 3.8.2 4.8.1.9.5 1.7 1.2 2.4s1.8 1 3.3 1l8.6-.2.7 12c-5 1.1-8.9 1.7-11.5 1.7-6.8 0-11.4-1.5-13.8-4.6-2.5-3-3.7-8.6-3.7-16.8V0h15.1v15.6h13.8v12.9zM9.099 32.8c-2.6 0-4.8-.9-6.5-2.7s-2.6-4-2.6-6.6.9-4.8 2.5-6.6c1.7-1.8 3.9-2.6 6.5-2.6s4.8.9 6.5 2.7 2.5 4 2.5 6.7-.8 4.8-2.5 6.6c-1.6 1.6-3.7 2.5-6.4 2.5z"></path>
   </g>
 </svg>
-<div class="d-flex flex-column pl-3 pl-sm-4">
+<div class="d-flex flex-column ps-3 ps-sm-4">
           <h1 class="bd-logo-title">Bootstrap Italia</h1>
-          <h2 class="bd-logo-subtitle">Il tema Bootstrap 4 per <span class="d-none d-sm-inline">lo sviluppo di applicazioni web per </span>la PA</h2>
+          <h2 class="bd-logo-subtitle">Il tema Bootstrap 5 per <span class="d-none d-sm-inline">lo sviluppo di applicazioni web per </span>la PA</h2>
         </div>
       </div>
     </a>
 
     
-    <button class="btn btn-xs btn-primary d-md-none px-2 text-uppercase" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+    <button class="btn btn-xs btn-primary d-md-none px-2 text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
       menu
     </button>
     
 
-    <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-      <li class="nav-item pr-2">
-        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v1.6.4/bootstrap-italia.zip" aria-label="Download">
-          <small class="pr-2 m-0">v1.6.4</small>
-          <svg class="icon icon-sm icon-light"><use href="/bootstrap-italia/dist/svg/sprite.svg#it-download" xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-download"></use></svg><span class="sr-only">Download</span>
+    <ul class="navbar-nav flex-row ms-md-auto d-none d-md-flex">
+      <li class="nav-item pe-2">
+        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v2.0.0/bootstrap-italia.zip" aria-label="Download">
+          <small class="pe-2 m-0">v2.0.0</small>
+          <svg class="icon icon-sm icon-light"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-download" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-download"></use></svg><span class="visually-hidden">Download</span>
         </a>
       </li>
-      <li class="nav-item pr-2">
+      <li class="nav-item pe-2">
         <a title="Repository GitHub di Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-          <svg class="icon icon-sm icon-light"><use href="/bootstrap-italia/dist/svg/sprite.svg#it-github" xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-github"></use></svg><span class="sr-only">GitHub</span>
+          <svg class="icon icon-sm icon-light"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-github" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-github"></use></svg><span class="visually-hidden">GitHub</span>
         </a>
       </li>
     </ul>
 
     
     <div class="bd-search w-100">
-      <label for="search-input" class="sr-only">Cerca:</label>
+      <label for="search-input" class="visually-hidden">Cerca:</label>
       <input type="search" class="form-control" id="search-input" name="search-input" placeholder="Cerca componenti, classi, informazioni..." aria-label="Cerca..." autocomplete="off" />
     </div>
     
@@ -184,16 +185,20 @@
             
             <!-- One:usare ID -->
             <a
+              role="button"
               class="list-item large medium right-icon "
               href="#collapse-1"
-              data-toggle="collapse"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse-1"
               aria-expanded="false"
               aria-controls="collapse-1"
             >
-              <span>Come iniziare</span>
-              <svg class="icon icon-sm icon-primary right" aria-hidden="true">
-                <use href="/bootstrap-italia/dist/svg/sprite.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-expand"></use>
-              </svg>
+              <span class="list-item-title-icon-wrapper">
+                <span class="list-item-title">Come iniziare</span>
+                <svg class="icon icon-sm icon-primary right" aria-hidden="true">
+                  <use href="/bootstrap-italia/dist/svg/sprites.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use>
+                </svg>
+              </span>
             </a>
             <ul class="link-sublist collapse " id="collapse-1"><li>
                 <a class="list-item " href="/bootstrap-italia/docs/come-iniziare/introduzione/">
@@ -210,22 +215,29 @@
               </li><li>
                 <a class="list-item " href="/bootstrap-italia/docs/come-iniziare/componente-base/">
                   <span>Componente base</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/come-iniziare/migrazione/">
+                  <span>Migrazione</span></a>
               </li></ul>
             
           </li><li>
             
             <!-- One:usare ID -->
             <a
+              role="button"
               class="list-item large medium right-icon "
               href="#collapse-2"
-              data-toggle="collapse"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse-2"
               aria-expanded="false"
               aria-controls="collapse-2"
             >
-              <span>Organizzare gli spazi</span>
-              <svg class="icon icon-sm icon-primary right" aria-hidden="true">
-                <use href="/bootstrap-italia/dist/svg/sprite.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-expand"></use>
-              </svg>
+              <span class="list-item-title-icon-wrapper">
+                <span class="list-item-title">Organizzare gli spazi</span>
+                <svg class="icon icon-sm icon-primary right" aria-hidden="true">
+                  <use href="/bootstrap-italia/dist/svg/sprites.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use>
+                </svg>
+              </span>
             </a>
             <ul class="link-sublist collapse " id="collapse-2"><li>
                 <a class="list-item " href="/bootstrap-italia/docs/organizzare-gli-spazi/introduzione/">
@@ -261,6 +273,9 @@
                 <a class="list-item " href="/bootstrap-italia/docs/organizzare-gli-spazi/posizionamento/">
                   <span>Posizionamento</span></a>
               </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/organizzare-gli-spazi/proporzioni/">
+                  <span>Proporzioni</span></a>
+              </li><li>
                 <a class="list-item " href="/bootstrap-italia/docs/organizzare-gli-spazi/spaziature/">
                   <span>Spaziature</span></a>
               </li></ul>
@@ -269,16 +284,20 @@
             
             <!-- One:usare ID -->
             <a
+              role="button"
               class="list-item large medium right-icon "
               href="#collapse-3"
-              data-toggle="collapse"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse-3"
               aria-expanded="false"
               aria-controls="collapse-3"
             >
-              <span>Organizzare i contenuti</span>
-              <svg class="icon icon-sm icon-primary right" aria-hidden="true">
-                <use href="/bootstrap-italia/dist/svg/sprite.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-expand"></use>
-              </svg>
+              <span class="list-item-title-icon-wrapper">
+                <span class="list-item-title">Organizzare i contenuti</span>
+                <svg class="icon icon-sm icon-primary right" aria-hidden="true">
+                  <use href="/bootstrap-italia/dist/svg/sprites.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use>
+                </svg>
+              </span>
             </a>
             <ul class="link-sublist collapse " id="collapse-3"><li>
                 <a class="list-item " href="/bootstrap-italia/docs/organizzare-i-contenuti/introduzione/">
@@ -286,9 +305,6 @@
               </li><li>
                 <a class="list-item " href="/bootstrap-italia/docs/organizzare-i-contenuti/codice/">
                   <span>Codice</span></a>
-              </li><li>
-                <a class="list-item " href="/bootstrap-italia/docs/organizzare-i-contenuti/embed/">
-                  <span>Embed</span></a>
               </li><li>
                 <a class="list-item " href="/bootstrap-italia/docs/organizzare-i-contenuti/immagini/">
                   <span>Immagini</span></a>
@@ -298,12 +314,6 @@
               </li><li>
                 <a class="list-item " href="/bootstrap-italia/docs/organizzare-i-contenuti/liste-di-immagini/">
                   <span>Liste di immagini</span></a>
-              </li><li>
-                <a class="list-item " href="/bootstrap-italia/docs/organizzare-i-contenuti/liste-di-link/">
-                  <span>Liste di link</span></a>
-              </li><li>
-                <a class="list-item " href="/bootstrap-italia/docs/organizzare-i-contenuti/oggetto-media/">
-                  <span>Oggetto Media</span></a>
               </li><li>
                 <a class="list-item " href="/bootstrap-italia/docs/organizzare-i-contenuti/tabelle/">
                   <span>Tabelle</span></a>
@@ -319,16 +329,20 @@
             
             <!-- One:usare ID -->
             <a
+              role="button"
               class="list-item large medium right-icon "
               href="#collapse-4"
-              data-toggle="collapse"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse-4"
               aria-expanded="false"
               aria-controls="collapse-4"
             >
-              <span>Menu di navigazione</span>
-              <svg class="icon icon-sm icon-primary right" aria-hidden="true">
-                <use href="/bootstrap-italia/dist/svg/sprite.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-expand"></use>
-              </svg>
+              <span class="list-item-title-icon-wrapper">
+                <span class="list-item-title">Menu di navigazione</span>
+                <svg class="icon icon-sm icon-primary right" aria-hidden="true">
+                  <use href="/bootstrap-italia/dist/svg/sprites.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use>
+                </svg>
+              </span>
             </a>
             <ul class="link-sublist collapse " id="collapse-4"><li>
                 <a class="list-item " href="/bootstrap-italia/docs/menu-di-navigazione/introduzione/">
@@ -372,20 +386,27 @@
             
             <!-- One:usare ID -->
             <a
+              role="button"
               class="list-item large medium right-icon active"
               href="#collapse-5"
-              data-toggle="collapse"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse-5"
               aria-expanded="true"
               aria-controls="collapse-5"
             >
-              <span>Componenti</span>
-              <svg class="icon icon-sm icon-primary right" aria-hidden="true">
-                <use href="/bootstrap-italia/dist/svg/sprite.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-expand"></use>
-              </svg>
+              <span class="list-item-title-icon-wrapper">
+                <span class="list-item-title">Componenti</span>
+                <svg class="icon icon-sm icon-primary right" aria-hidden="true">
+                  <use href="/bootstrap-italia/dist/svg/sprites.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use>
+                </svg>
+              </span>
             </a>
             <ul class="link-sublist collapse show" id="collapse-5"><li>
                 <a class="list-item " href="/bootstrap-italia/docs/componenti/introduzione/">
                   <span>Introduzione</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/accordion/">
+                  <span>Accordion</span></a>
               </li><li>
                 <a class="list-item " href="/bootstrap-italia/docs/componenti/affix/">
                   <span>Affix</span></a>
@@ -399,17 +420,14 @@
                 <a class="list-item " href="/bootstrap-italia/docs/componenti/badge/">
                   <span>Badge</span></a>
               </li><li>
-                <a class="list-item " href="/bootstrap-italia/docs/componenti/bottoni/">
-                  <span>Bottoni</span></a>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/buttons/">
+                  <span>Buttons</span></a>
               </li><li>
                 <a class="list-item " href="/bootstrap-italia/docs/componenti/card/">
                   <span>Card</span></a>
               </li><li>
                 <a class="list-item " href="/bootstrap-italia/docs/componenti/callout/">
                   <span>Callout</span></a>
-              </li><li>
-                <a class="list-item " href="/bootstrap-italia/docs/componenti/carousel-legacy/">
-                  <span>Carousel Legacy</span></a>
               </li><li>
                 <a class="list-item " href="/bootstrap-italia/docs/componenti/carousel/">
                   <span>Carousel</span></a>
@@ -462,6 +480,9 @@
                 <a class="list-item " href="/bootstrap-italia/docs/componenti/steppers/">
                   <span>Steppers</span></a>
               </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/sticky/">
+                  <span>Sticky</span></a>
+              </li><li>
                 <a class="list-item " href="/bootstrap-italia/docs/componenti/tab/">
                   <span>Tab</span></a>
               </li><li>
@@ -476,16 +497,20 @@
             
             <!-- One:usare ID -->
             <a
+              role="button"
               class="list-item large medium right-icon "
               href="#collapse-6"
-              data-toggle="collapse"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse-6"
               aria-expanded="false"
               aria-controls="collapse-6"
             >
-              <span>Form</span>
-              <svg class="icon icon-sm icon-primary right" aria-hidden="true">
-                <use href="/bootstrap-italia/dist/svg/sprite.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-expand"></use>
-              </svg>
+              <span class="list-item-title-icon-wrapper">
+                <span class="list-item-title">Form</span>
+                <svg class="icon icon-sm icon-primary right" aria-hidden="true">
+                  <use href="/bootstrap-italia/dist/svg/sprites.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use>
+                </svg>
+              </span>
             </a>
             <ul class="link-sublist collapse " id="collapse-6"><li>
                 <a class="list-item " href="/bootstrap-italia/docs/form/introduzione/">
@@ -529,16 +554,20 @@
             
             <!-- One:usare ID -->
             <a
+              role="button"
               class="list-item large medium right-icon "
               href="#collapse-7"
-              data-toggle="collapse"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse-7"
               aria-expanded="false"
               aria-controls="collapse-7"
             >
-              <span>Utilities</span>
-              <svg class="icon icon-sm icon-primary right" aria-hidden="true">
-                <use href="/bootstrap-italia/dist/svg/sprite.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-expand"></use>
-              </svg>
+              <span class="list-item-title-icon-wrapper">
+                <span class="list-item-title">Utilities</span>
+                <svg class="icon icon-sm icon-primary right" aria-hidden="true">
+                  <use href="/bootstrap-italia/dist/svg/sprites.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use>
+                </svg>
+              </span>
             </a>
             <ul class="link-sublist collapse " id="collapse-7"><li>
                 <a class="list-item " href="/bootstrap-italia/docs/utilities/colori/">
@@ -578,8 +607,8 @@
 <li class="toc-entry toc-h3"><a href="#dropdown-button-varianti">Dropdown button varianti</a></li>
 <li class="toc-entry toc-h3"><a href="#dropdown-link">Dropdown link</a></li>
 <li class="toc-entry toc-h3"><a href="#dropup">Dropup</a></li>
-<li class="toc-entry toc-h3"><a href="#dropright">Dropright</a></li>
-<li class="toc-entry toc-h3"><a href="#dropleft">Dropleft</a></li>
+<li class="toc-entry toc-h3"><a href="#dropend">Dropend</a></li>
+<li class="toc-entry toc-h3"><a href="#dropstart">Dropstart</a></li>
 <li class="toc-entry toc-h3"><a href="#dropdown-menu">Dropdown menu</a></li>
 <li class="toc-entry toc-h2"><a href="#informazioni-aggiuntive">Informazioni aggiuntive</a></li>
 </ul>
@@ -589,11 +618,11 @@
 
         <main class="col-12 col-md-9 col-xl-8 py-md-3 px-md-3 bd-content">
           <h1 class="bd-title" id="content">Dropdown</h1>
-          <p class="bd-lead">Attiva o disattiva overlay contestuali per visualizzare elenchi di link e altro ancora con questi menù a tendina.</p>
-          <p>Il plugin Javascript per costruire dropdown è basato su una libreria di terze parti, <a href="https://popper.js.org/">Popper.js</a>, che si occupa del posizionamento dinamico del dropdown stesso in congiunzione con la sua posizione all’interno del viewport.</p>
+          <p class="bd-lead">Attiva o disattiva overlay contestuali per visualizzare liste di link ed altro ancora con questi menù a tendina.</p>
+          <p>Il plugin JavaScript per costruire dropdown è basato su una libreria di terze parti, <a href="https://popper.js.org/">Popper.js</a>, che si occupa del posizionamento dinamico del dropdown stesso in congiunzione con la sua posizione all’interno del viewport.</p>
 
 <div class="bd-callout bd-callout-info">
-<p>Per il corretto funzionamento dei dropdown è necessario assicurarsi che sia incluso il file <code class="language-plaintext highlighter-rouge">bootstrap-italia.bundle.min.js</code> che contiene già ogni dipendenza, oppure che il file <code class="language-plaintext highlighter-rouge">popper.min.js</code> sia incluso prima del file <code class="language-plaintext highlighter-rouge">bootstrap-italia.min.js</code>. Maggiori informazioni si possono trovare alla <a href="/bootstrap-italia/docs/come-iniziare/introduzione/#javascript">pagina introduttiva</a> sull’utilizzo del Javascript di Bootstrap Italia.</p>
+<p>Per il corretto funzionamento dei dropdown è necessario assicurarsi che sia incluso il file <code class="language-plaintext highlighter-rouge">bootstrap-italia.bundle.min.js</code> che contiene già ogni dipendenza, oppure che il file <code class="language-plaintext highlighter-rouge">popper.min.js</code> sia incluso prima del file <code class="language-plaintext highlighter-rouge">bootstrap-italia.min.js</code>. Maggiori informazioni si possono trovare alla <a href="/bootstrap-italia/docs/come-iniziare/introduzione/#javascript">pagina introduttiva</a> sull’utilizzo del JavaScript di Bootstrap Italia.</p>
 </div>
 
 <p>Per l’attivazione di un dropdown è sufficiente racchiudere il link per l’apertura e il menu a discesa all’interno di un elemento con classe <code class="language-plaintext highlighter-rouge">.dropdown</code>, o un altro elemento che dichiari la <code class="language-plaintext highlighter-rouge">position: relative;</code>. I dropdown possono essere attivati da elementi <code class="language-plaintext highlighter-rouge">&lt;a&gt;</code> o <code class="language-plaintext highlighter-rouge">&lt;button&gt;</code> per soddisfare al meglio le tue esigenze.</p>
@@ -610,38 +639,38 @@
 
 <h3 id="dropdown-button">Dropdown button</h3>
 
-<p>Ogni singolo <code class="language-plaintext highlighter-rouge">.btn</code> può essere trasformato in un bottone per l’apertura di dropdown con del semplice markdown HTML.
+<p>Ogni singolo <code class="language-plaintext highlighter-rouge">.btn</code> può essere trasformato in un pulsante per l’apertura di dropdown con del semplice markdown HTML.
 Il design di default dei dropdown richiede l’applicazione della classe <code class="language-plaintext highlighter-rouge">.btn-dropdown</code>. I link o le voci all’interno del dropdown devono essere contenute in un elemento <code class="language-plaintext highlighter-rouge">.link-list</code>.</p>
 
 <div class="bd-example">
 
 <div class="dropdown">
-  <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Apri dropdown
-    <svg class="icon-expand icon icon-sm icon-primary"><use href="/bootstrap-italia/dist/svg/sprite.svg#it-expand"></use></svg>
+    <svg class="icon-expand icon icon-sm icon-primary"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use></svg>
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
     <div class="link-list-wrapper">
       <ul class="link-list">
-        <li><a class="list-item" href="#"><span>Azione 1</span></a></li>
-        <li><a class="list-item" href="#"><span>Azione 2</span></a></li>
-        <li><a class="list-item" href="#"><span>Azione 3</span></a></li>
+        <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
+        <li><a class="dropdown-item list-item" href="#"><span>Azione 2</span></a></li>
+        <li><a class="dropdown-item list-item" href="#"><span>Azione 3</span></a></li>
       </ul>
     </div>
   </div>
 </div>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-dropdown dropdown-toggle"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownMenuButton"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-dropdown dropdown-toggle"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownMenuButton"</span> <span class="na">data-bs-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
     Apri dropdown
-    <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon-expand icon icon-sm icon-primary"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-expand"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+    <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon-expand icon icon-sm icon-primary"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-expand"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
   <span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span> <span class="na">aria-labelledby=</span><span class="s">"dropdownMenuButton"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"link-list-wrapper"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"link-list"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Azione 1<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Azione 2<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Azione 3<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Azione 1<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Azione 2<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Azione 3<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
       <span class="nt">&lt;/ul&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
@@ -649,97 +678,97 @@ Il design di default dei dropdown richiede l’applicazione della classe <code c
 
 <h3 id="dropdown-button-varianti">Dropdown button varianti</h3>
 
-<p>Ovviamente, funzionano anche <a href="/bootstrap-italia/docs/componenti/bottoni/#varianti-di-colore">tutte le varianti</a> già disponibili per i bottoni. Di seguito, un esempio di utilizzo con classi <code class="language-plaintext highlighter-rouge">.btn-primary</code>, <code class="language-plaintext highlighter-rouge">.btn-secondary</code> e <code class="language-plaintext highlighter-rouge">.btn-danger</code>:</p>
+<p>Ovviamente sono disponibili <a href="/bootstrap-italia/docs/componenti/buttons/#varianti-di-colore">tutte le varianti</a> già disponibili per i pulsanti. Di seguito, un esempio di utilizzo con classi <code class="language-plaintext highlighter-rouge">.btn-primary</code>, <code class="language-plaintext highlighter-rouge">.btn-secondary</code> e <code class="language-plaintext highlighter-rouge">.btn-danger</code>:</p>
 
 <div class="bd-example">
 
 <div class="btn-group">
-  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Apri dropdown
-    <svg class="icon-expand icon icon-sm icon-light"><use href="/bootstrap-italia/dist/svg/sprite.svg#it-expand"></use></svg>
+    <svg class="icon-expand icon icon-sm icon-light"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use></svg>
   </button>
   <div class="dropdown-menu">
     <div class="link-list-wrapper">
       <ul class="link-list">
-        <li><a class="list-item" href="#"><span>Azione 1</span></a></li>
-        <li><a class="list-item" href="#"><span>Azione 2</span></a></li>
-        <li><a class="list-item" href="#"><span>Azione 3</span></a></li>
+        <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
+        <li><a class="dropdown-item list-item" href="#"><span>Azione 2</span></a></li>
+        <li><a class="dropdown-item list-item" href="#"><span>Azione 3</span></a></li>
       </ul>
     </div>
   </div>
 </div>
 <div class="btn-group">
-  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Apri dropdown
-    <svg class="icon-expand icon icon-sm icon-light"><use href="/bootstrap-italia/dist/svg/sprite.svg#it-expand"></use></svg>
+    <svg class="icon-expand icon icon-sm icon-light"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use></svg>
   </button>
   <div class="dropdown-menu">
     <div class="link-list-wrapper">
       <ul class="link-list">
-        <li><a class="list-item" href="#"><span>Azione 1</span></a></li>
-        <li><a class="list-item" href="#"><span>Azione 2</span></a></li>
-        <li><a class="list-item" href="#"><span>Azione 3</span></a></li>
+        <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
+        <li><a class="dropdown-item list-item" href="#"><span>Azione 2</span></a></li>
+        <li><a class="dropdown-item list-item" href="#"><span>Azione 3</span></a></li>
       </ul>
     </div>
   </div>
 </div>
 <div class="btn-group">
-  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Apri dropdown
-    <svg class="icon-expand icon icon-sm icon-light"><use href="/bootstrap-italia/dist/svg/sprite.svg#it-expand"></use></svg>
+    <svg class="icon-expand icon icon-sm icon-light"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use></svg>
   </button>
   <div class="dropdown-menu">
     <div class="link-list-wrapper">
       <ul class="link-list">
-        <li><a class="list-item" href="#"><span>Azione 1</span></a></li>
-        <li><a class="list-item" href="#"><span>Azione 2</span></a></li>
-        <li><a class="list-item" href="#"><span>Azione 3</span></a></li>
+        <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
+        <li><a class="dropdown-item list-item" href="#"><span>Azione 2</span></a></li>
+        <li><a class="dropdown-item list-item" href="#"><span>Azione 3</span></a></li>
       </ul>
     </div>
   </div>
 </div>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-group"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary dropdown-toggle"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary dropdown-toggle"</span> <span class="na">data-bs-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
     Apri dropdown
-    <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon-expand icon icon-sm icon-light"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-expand"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+    <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon-expand icon icon-sm icon-light"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-expand"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
   <span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"link-list-wrapper"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"link-list"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Azione 1<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Azione 2<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Azione 3<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Azione 1<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Azione 2<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Azione 3<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
       <span class="nt">&lt;/ul&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-group"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary dropdown-toggle"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary dropdown-toggle"</span> <span class="na">data-bs-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
     Apri dropdown
-    <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon-expand icon icon-sm icon-light"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-expand"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+    <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon-expand icon icon-sm icon-light"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-expand"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
   <span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"link-list-wrapper"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"link-list"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Azione 1<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Azione 2<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Azione 3<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Azione 1<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Azione 2<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Azione 3<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
       <span class="nt">&lt;/ul&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-group"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-danger dropdown-toggle"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-danger dropdown-toggle"</span> <span class="na">data-bs-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
     Apri dropdown
-    <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon-expand icon icon-sm icon-light"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-expand"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+    <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon-expand icon icon-sm icon-light"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-expand"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
   <span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"link-list-wrapper"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"link-list"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Azione 1<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Azione 2<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Azione 3<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Azione 1<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Azione 2<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Azione 3<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
       <span class="nt">&lt;/ul&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
@@ -752,32 +781,32 @@ Il design di default dei dropdown richiede l’applicazione della classe <code c
 <div class="bd-example">
 
 <div class="dropdown">
-  <a class="btn btn-dropdown dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <a class="btn btn-dropdown dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Apri dropdown
-    <svg class="icon-expand icon icon-sm icon-primary"><use href="/bootstrap-italia/dist/svg/sprite.svg#it-expand"></use></svg>
+    <svg class="icon-expand icon icon-sm icon-primary"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use></svg>
   </a>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
     <div class="link-list-wrapper">
       <ul class="link-list">
-        <li><a class="list-item" href="#"><span>Azione 1</span></a></li>
-        <li><a class="list-item" href="#"><span>Azione 2</span></a></li>
-        <li><a class="list-item" href="#"><span>Azione 3</span></a></li>
+        <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
+        <li><a class="dropdown-item list-item" href="#"><span>Azione 2</span></a></li>
+        <li><a class="dropdown-item list-item" href="#"><span>Azione 3</span></a></li>
       </ul>
     </div>
   </div>
 </div>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-dropdown dropdown-toggle"</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownMenuLink"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-dropdown dropdown-toggle"</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownMenuLink"</span> <span class="na">data-bs-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
     Apri dropdown
-    <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon-expand icon icon-sm icon-primary"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-expand"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+    <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon-expand icon icon-sm icon-primary"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-expand"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
   <span class="nt">&lt;/a&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span> <span class="na">aria-labelledby=</span><span class="s">"dropdownMenuLink"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"link-list-wrapper"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"link-list"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Azione 1<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Azione 2<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Azione 3<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Azione 1<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Azione 2<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Azione 3<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
       <span class="nt">&lt;/ul&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
@@ -785,113 +814,113 @@ Il design di default dei dropdown richiede l’applicazione della classe <code c
 
 <h3 id="dropup">Dropup</h3>
 
-<p>Per aprire le voci di menu verso l’alto aggiungere la classe <code class="language-plaintext highlighter-rouge">.dropup</code> all’elemento padre</p>
+<p>Per aprire le voci di menu verso l’alto aggiungere la classe <code class="language-plaintext highlighter-rouge">.dropup</code> all’elemento padre.</p>
 
 <div class="bd-example">
 
 <div class="dropdown dropup">
-  <a class="btn btn-dropdown dropdown-toggle" href="#" role="button" id="dropdownMenuDropup" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <a class="btn btn-dropdown dropdown-toggle" href="#" role="button" id="dropdownMenuDropup" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Apri dropup
-    <svg class="icon-expand icon icon-sm icon-primary"><use href="/bootstrap-italia/dist/svg/sprite.svg#it-expand"></use></svg>
+    <svg class="icon-expand icon icon-sm icon-primary"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use></svg>
   </a>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuDropup">
     <div class="link-list-wrapper">
       <ul class="link-list">
-        <li><a class="list-item" href="#"><span>Azione 1</span></a></li>
-        <li><a class="list-item" href="#"><span>Azione 2</span></a></li>
-        <li><a class="list-item" href="#"><span>Azione 3</span></a></li>
+        <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
+        <li><a class="dropdown-item list-item" href="#"><span>Azione 2</span></a></li>
+        <li><a class="dropdown-item list-item" href="#"><span>Azione 3</span></a></li>
       </ul>
     </div>
   </div>
 </div>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown dropup"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-dropdown dropdown-toggle"</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownMenuDropup"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-dropdown dropdown-toggle"</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownMenuDropup"</span> <span class="na">data-bs-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
     Apri dropup
-    <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon-expand icon icon-sm icon-primary"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-expand"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+    <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon-expand icon icon-sm icon-primary"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-expand"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
   <span class="nt">&lt;/a&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span> <span class="na">aria-labelledby=</span><span class="s">"dropdownMenuDropup"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"link-list-wrapper"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"link-list"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Azione 1<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Azione 2<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Azione 3<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Azione 1<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Azione 2<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Azione 3<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
       <span class="nt">&lt;/ul&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<h3 id="dropright">Dropright</h3>
+<h3 id="dropend">Dropend</h3>
 
-<p>Per aprire le voci di menu verso destra aggiungere la classe <code class="language-plaintext highlighter-rouge">.dropright</code> all’elemento padre</p>
+<p>Per aprire le voci di menu verso destra aggiungere la classe <code class="language-plaintext highlighter-rouge">.dropend</code> all’elemento padre.</p>
 
 <div class="bd-example">
 
-<div class="dropdown dropright">
-  <a class="btn btn-dropdown dropdown-toggle" href="#" role="button" id="dropdownMenuDropright" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Apri dropright
-    <svg class="icon-expand icon icon-sm icon-primary"><use href="/bootstrap-italia/dist/svg/sprite.svg#it-expand"></use></svg>
+<div class="dropdown dropend">
+  <a class="btn btn-dropdown dropdown-toggle" href="#" role="button" id="dropdownMenuDropright" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Apri dropend
+    <svg class="icon-expand icon icon-sm icon-primary"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use></svg>
   </a>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuDropright">
     <div class="link-list-wrapper">
       <ul class="link-list">
-        <li><a class="list-item" href="#"><span>Azione 1</span></a></li>
-        <li><a class="list-item" href="#"><span>Azione 2</span></a></li>
-        <li><a class="list-item" href="#"><span>Azione 3</span></a></li>
+        <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
+        <li><a class="dropdown-item list-item" href="#"><span>Azione 2</span></a></li>
+        <li><a class="dropdown-item list-item" href="#"><span>Azione 3</span></a></li>
       </ul>
     </div>
   </div>
 </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown dropright"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-dropdown dropdown-toggle"</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownMenuDropright"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
-    Apri dropright
-    <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon-expand icon icon-sm icon-primary"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-expand"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown dropend"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-dropdown dropdown-toggle"</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownMenuDropright"</span> <span class="na">data-bs-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+    Apri dropend
+    <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon-expand icon icon-sm icon-primary"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-expand"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
   <span class="nt">&lt;/a&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span> <span class="na">aria-labelledby=</span><span class="s">"dropdownMenuDropright"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"link-list-wrapper"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"link-list"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Azione 1<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Azione 2<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Azione 3<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Azione 1<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Azione 2<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Azione 3<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
       <span class="nt">&lt;/ul&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<h3 id="dropleft">Dropleft</h3>
+<h3 id="dropstart">Dropstart</h3>
 
-<p>Per aprire le voci di menu verso sinistra aggiungere la classe <code class="language-plaintext highlighter-rouge">.dropleft</code> all’elemento padre</p>
+<p>Per aprire le voci di menu verso sinistra aggiungere la classe <code class="language-plaintext highlighter-rouge">.dropstart</code> all’elemento padre.</p>
 
 <div class="bd-example">
 
-<div class="dropdown dropleft">
-  <a class="btn btn-dropdown dropdown-toggle" href="#" role="button" id="dropdownMenuDropleft" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    <svg class="icon-expand icon icon-sm icon-primary"><use href="/bootstrap-italia/dist/svg/sprite.svg#it-expand"></use></svg>
-    Apri dropleft
+<div class="dropdown dropstart">
+  <a class="btn btn-dropdown dropdown-toggle" href="#" role="button" id="dropdownMenuDropleft" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <svg class="icon-expand icon icon-sm icon-primary"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use></svg>
+    Apri dropstart
   </a>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuDropleft">
     <div class="link-list-wrapper">
       <ul class="link-list">
-        <li><a class="list-item" href="#"><span>Azione 1</span></a></li>
-        <li><a class="list-item" href="#"><span>Azione 2</span></a></li>
-        <li><a class="list-item" href="#"><span>Azione 3</span></a></li>
+        <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
+        <li><a class="dropdown-item list-item" href="#"><span>Azione 2</span></a></li>
+        <li><a class="dropdown-item list-item" href="#"><span>Azione 3</span></a></li>
       </ul>
     </div>
   </div>
 </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown dropleft"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-dropdown dropdown-toggle"</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownMenuDropleft"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon-expand icon icon-sm icon-primary"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-expand"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
-    Apri dropleft
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown dropstart"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-dropdown dropdown-toggle"</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownMenuDropleft"</span> <span class="na">data-bs-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon-expand icon icon-sm icon-primary"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-expand"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+    Apri dropstart
   <span class="nt">&lt;/a&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span> <span class="na">aria-labelledby=</span><span class="s">"dropdownMenuDropleft"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"link-list-wrapper"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"link-list"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Azione 1<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Azione 2<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Azione 3<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Azione 1<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Azione 2<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Azione 3<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
       <span class="nt">&lt;/ul&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
@@ -899,20 +928,20 @@ Il design di default dei dropdown richiede l’applicazione della classe <code c
 
 <h3 id="dropdown-menu">Dropdown menu</h3>
 
-<p>Le voci del menu che viene aperto al click sul bottone possono essere personalizzate, così come il menù stesso.</p>
+<p>Le voci del menu che viene aperto al click sul pulsante possono essere personalizzate, così come il menù stesso.</p>
 
 <h4 id="menu-voci-attive">Menu voci attive</h4>
 
-<p>Aggiungere la classe <code class="language-plaintext highlighter-rouge">.active</code> ai link del dropdown che si vogliono mostrare come <strong>attivi</strong>. Per questioni di accessibilità è consigliabile aggiungere <code class="language-plaintext highlighter-rouge">&lt;span class="sr-only"&gt; attivo&lt;/span&gt;</code> in coda al testo degli elementi attivi.</p>
+<p>Aggiungere la classe <code class="language-plaintext highlighter-rouge">.active</code> ai link del dropdown che si vogliono mostrare come <strong>attivi</strong>. Per questioni di accessibilità è consigliabile aggiungere <code class="language-plaintext highlighter-rouge">&lt;span class="visually-hidden"&gt; attivo&lt;/span&gt;</code> in coda al testo degli elementi attivi.</p>
 
 <div class="bd-example">
 
 <div class="dropdown-menu">
   <div class="link-list-wrapper">
       <ul class="link-list">
-        <li><a class="list-item active" href="#"><span>Azione 1</span><span class="sr-only"> attivo</span></a></li>
-        <li><a class="list-item" href="#"><span>Azione 2</span></a></li>
-        <li><a class="list-item" href="#"><span>Azione 3</span></a></li>
+        <li><a class="list-item active" href="#"><span>Azione 1</span><span class="visually-hidden"> attivo</span></a></li>
+        <li><a class="dropdown-item list-item" href="#"><span>Azione 2</span></a></li>
+        <li><a class="dropdown-item list-item" href="#"><span>Azione 3</span></a></li>
       </ul>
     </div>
 </div>
@@ -920,9 +949,9 @@ Il design di default dei dropdown richiede l’applicazione della classe <code c
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"link-list-wrapper"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"link-list"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item active"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Azione 1<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span> attivo<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Azione 2<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Azione 3<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item active"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Azione 1<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"visually-hidden"</span><span class="nt">&gt;</span> attivo<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Azione 2<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Azione 3<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
       <span class="nt">&lt;/ul&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
@@ -936,9 +965,9 @@ Il design di default dei dropdown richiede l’applicazione della classe <code c
 <div class="dropdown-menu">
   <div class="link-list-wrapper">
       <ul class="link-list">
-        <li><a class="list-item" href="#"><span>Azione 1</span></a></li>
-        <li><a class="list-item disabled" href="#" aria-disabled="true"><span>Azione 2</span></a></li>
-        <li><a class="list-item" href="#"><span>Azione 3</span></a></li>
+        <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
+        <li><a class="dropdown-item list-item disabled" href="#" aria-disabled="true"><span>Azione 2</span></a></li>
+        <li><a class="dropdown-item list-item" href="#"><span>Azione 3</span></a></li>
       </ul>
     </div>
 </div>
@@ -946,14 +975,14 @@ Il design di default dei dropdown richiede l’applicazione della classe <code c
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"link-list-wrapper"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"link-list"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Azione 1<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item disabled"</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">aria-disabled=</span><span class="s">"true"</span><span class="nt">&gt;&lt;span&gt;</span>Azione 2<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Azione 3<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Azione 1<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item list-item disabled"</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">aria-disabled=</span><span class="s">"true"</span><span class="nt">&gt;&lt;span&gt;</span>Azione 2<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Azione 3<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
       <span class="nt">&lt;/ul&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<h4 id="menu-headers-e-separatori">Menu headers e separatori</h4>
+<h4 id="menu-con-intestazioni-e-separatori">Menu con intestazioni e separatori</h4>
 
 <p>All’interno del menu dropdown possono essere inseriti header e separatori.</p>
 
@@ -961,39 +990,35 @@ Il design di default dei dropdown richiede l’applicazione della classe <code c
 
 <div class="dropdown-menu">
   <div class="link-list-wrapper">
+    <div class="link-list-heading">Intestazione</div>
     <ul class="link-list">
-      <li>
-        <h3 id="esempio-header-1" class="no_toc">Esempio Header 1</h3>
-      </li>
-      <li><a class="list-item" href="#"><span>Azione 1</span></a></li>
-      <li><a class="list-item" href="#"><span>Azione 2</span></a></li>
-      <li><a class="list-item" href="#"><span>Azione 3</span></a></li>
+      <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
+      <li><a class="dropdown-item list-item" href="#"><span>Azione 2</span></a></li>
+      <li><a class="dropdown-item list-item" href="#"><span>Azione 3</span></a></li>
       <li>
         <span class="divider"></span>
       </li>
-      <li><a class="list-item" href="#"><span>Azione 4</span></a></li>
+      <li><a class="dropdown-item list-item" href="#"><span>Azione 4</span></a></li>
     </ul>
   </div>
 </div>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"link-list-wrapper"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"link-list-heading"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"link-list"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;li&gt;</span>
-        <span class="nt">&lt;h3</span> <span class="na">id=</span><span class="s">"esempio-header-1"</span><span class="nt">&gt;</span>Esempio Header 1<span class="nt">&lt;/h3&gt;</span>
-      <span class="nt">&lt;/li&gt;</span>
-      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Azione 1<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
-      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Azione 2<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
-      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Azione 3<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Azione 1<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Azione 2<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Azione 3<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
       <span class="nt">&lt;li&gt;</span>
         <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"divider"</span><span class="nt">&gt;&lt;/span&gt;</span>
       <span class="nt">&lt;/li&gt;</span>
-      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Azione 4<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-item list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Azione 4<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
     <span class="nt">&lt;/ul&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<h4 id="menu-con-voci-large">Menu con voci large</h4>
+<h4 id="menu-con-voci-grandi">Menu con voci grandi</h4>
 
 <p>Per aumentare la dimensione dei link contenuti nel dropdown è sufficiente aggiungere agli stessi la classe <code class="language-plaintext highlighter-rouge">.large</code>.</p>
 
@@ -1019,7 +1044,7 @@ Il design di default dei dropdown richiede l’applicazione della classe <code c
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<h4 id="menu-full-width">Menu full width</h4>
+<h4 id="menu-a-tutta-larghezza">Menu a tutta larghezza</h4>
 
 <p>Per ottenere un dropdown menu largo quanto l’elemento che contiene il dropdown button è sufficiente aggiungere la classe<code class="language-plaintext highlighter-rouge">.full-width</code> al menù stesso. I link e testi contenuti al suo interno saranno disposti in orizzontale.</p>
 
@@ -1049,7 +1074,7 @@ Il design di default dei dropdown richiede l’applicazione della classe <code c
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<h4 id="menu-icona-a-destra">Menu icona a destra</h4>
+<h4 id="menu-con-icona-a-destra">Menu con icona a destra</h4>
 
 <p>Ai link contenuti nel menù può essere aggiunta un’icona illustrativa allineata a destra utilizzando le classi <code class="language-plaintext highlighter-rouge">.right-icon</code> sul link <code class="language-plaintext highlighter-rouge">&lt;a&gt;</code> e <code class="language-plaintext highlighter-rouge">.right</code> sul tag contenitore dell’icona.</p>
 
@@ -1061,19 +1086,19 @@ Il design di default dei dropdown richiede l’applicazione della classe <code c
       <li>
         <a class="list-item right-icon" href="#">
           <span>Azione 1</span>
-          <svg class="icon icon-sm icon-primary right"><use href="/bootstrap-italia/dist/svg/sprite.svg#it-star-outline"></use></svg>
+          <svg class="icon icon-sm icon-primary right"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-star-outline"></use></svg>
         </a>
       </li>
       <li>
         <a class="list-item right-icon" href="#">
           <span>Azione 2</span>
-          <svg class="icon icon-sm icon-primary right"><use href="/bootstrap-italia/dist/svg/sprite.svg#it-star-outline"></use></svg>
+          <svg class="icon icon-sm icon-primary right"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-star-outline"></use></svg>
         </a>
       </li>
       <li>
         <a class="list-item right-icon" href="#">
           <span>Azione 3</span>
-          <svg class="icon icon-sm icon-primary right"><use href="/bootstrap-italia/dist/svg/sprite.svg#it-star-outline"></use></svg>
+          <svg class="icon icon-sm icon-primary right"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-star-outline"></use></svg>
         </a>
       </li>
     </ul>
@@ -1086,26 +1111,26 @@ Il design di default dei dropdown richiede l’applicazione della classe <code c
       <span class="nt">&lt;li&gt;</span>
         <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"list-item right-icon"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;span&gt;</span>Azione 1<span class="nt">&lt;/span&gt;</span>
-          <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm icon-primary right"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-star-outline"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+          <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm icon-primary right"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-star-outline"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
         <span class="nt">&lt;/a&gt;</span>
       <span class="nt">&lt;/li&gt;</span>
       <span class="nt">&lt;li&gt;</span>
         <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"list-item right-icon"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;span&gt;</span>Azione 2<span class="nt">&lt;/span&gt;</span>
-          <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm icon-primary right"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-star-outline"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+          <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm icon-primary right"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-star-outline"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
         <span class="nt">&lt;/a&gt;</span>
       <span class="nt">&lt;/li&gt;</span>
       <span class="nt">&lt;li&gt;</span>
         <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"list-item right-icon"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;span&gt;</span>Azione 3<span class="nt">&lt;/span&gt;</span>
-          <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm icon-primary right"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-star-outline"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+          <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm icon-primary right"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-star-outline"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
         <span class="nt">&lt;/a&gt;</span>
       <span class="nt">&lt;/li&gt;</span>
     <span class="nt">&lt;/ul&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<h4 id="menu-icona-a-sinistra">Menu icona a sinistra</h4>
+<h4 id="menu-con-icona-a-sinistra">Menu con icona a sinistra</h4>
 
 <p>Ai link contenuti nel menù può essere aggiunta un’icona illustrativa allineata a sinistra utilizzando le classi <code class="language-plaintext highlighter-rouge">.left-icon</code> sul link <code class="language-plaintext highlighter-rouge">&lt;a&gt;</code> e <code class="language-plaintext highlighter-rouge">.left</code> sul tag contenitore dell’icona.</p>
 
@@ -1116,19 +1141,19 @@ Il design di default dei dropdown richiede l’applicazione della classe <code c
     <ul class="link-list">
       <li>
         <a class="list-item left-icon" href="#">
-          <svg class="icon icon-sm icon-primary left"><use href="/bootstrap-italia/dist/svg/sprite.svg#it-star-outline"></use></svg>
+          <svg class="icon icon-sm icon-primary left"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-star-outline"></use></svg>
           <span>Azione 1</span>
         </a>
       </li>
       <li>
         <a class="list-item left-icon" href="#">
-          <svg class="icon icon-sm icon-primary left"><use href="/bootstrap-italia/dist/svg/sprite.svg#it-star-outline"></use></svg>
+          <svg class="icon icon-sm icon-primary left"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-star-outline"></use></svg>
           <span>Azione 2</span>
         </a>
       </li>
       <li>
         <a class="list-item left-icon" href="#">
-          <svg class="icon icon-sm icon-primary left"><use href="/bootstrap-italia/dist/svg/sprite.svg#it-star-outline"></use></svg>
+          <svg class="icon icon-sm icon-primary left"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-star-outline"></use></svg>
           <span>Azione 3</span>
         </a>
       </li>
@@ -1141,19 +1166,19 @@ Il design di default dei dropdown richiede l’applicazione della classe <code c
     <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"link-list"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;li&gt;</span>
         <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"list-item left-icon"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm icon-primary left"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-star-outline"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+          <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm icon-primary left"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-star-outline"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
           <span class="nt">&lt;span&gt;</span>Azione 1<span class="nt">&lt;/span&gt;</span>
         <span class="nt">&lt;/a&gt;</span>
       <span class="nt">&lt;/li&gt;</span>
       <span class="nt">&lt;li&gt;</span>
         <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"list-item left-icon"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm icon-primary left"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-star-outline"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+          <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm icon-primary left"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-star-outline"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
           <span class="nt">&lt;span&gt;</span>Azione 2<span class="nt">&lt;/span&gt;</span>
         <span class="nt">&lt;/a&gt;</span>
       <span class="nt">&lt;/li&gt;</span>
       <span class="nt">&lt;li&gt;</span>
         <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"list-item left-icon"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm icon-primary left"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-star-outline"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+          <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm icon-primary left"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-star-outline"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
           <span class="nt">&lt;span&gt;</span>Azione 3<span class="nt">&lt;/span&gt;</span>
         <span class="nt">&lt;/a&gt;</span>
       <span class="nt">&lt;/li&gt;</span>
@@ -1169,39 +1194,37 @@ Il design di default dei dropdown richiede l’applicazione della classe <code c
 
 <div class="dropdown-menu dark">
   <div class="link-list-wrapper">
+    <div class="link-list-heading">Intestazione</div>
     <ul class="link-list">
-      <li>
-        <h3 id="esempio-header-2" class="no_toc">Esempio Header 2</h3>
-      </li>
       <li>
         <a class="list-item right-icon active" href="#">
           <span>Azione 1 (attivo)</span>
-          <svg class="icon icon-sm icon-light right"><use href="/bootstrap-italia/dist/svg/sprite.svg#it-star-outline"></use></svg>
+          <svg class="icon icon-sm icon-light right"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-star-outline"></use></svg>
         </a>
       </li>
       <li>
         <a class="list-item right-icon" href="#">
           <span>Azione 2</span>
-          <svg class="icon icon-sm icon-light right"><use href="/bootstrap-italia/dist/svg/sprite.svg#it-star-outline"></use></svg>
+          <svg class="icon icon-sm icon-light right"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-star-outline"></use></svg>
         </a>
       </li>
       <li>
         <a class="list-item right-icon" href="#">
           <span>Azione 3</span>
-          <svg class="icon icon-sm icon-light right"><use href="/bootstrap-italia/dist/svg/sprite.svg#it-star-outline"></use></svg>
+          <svg class="icon icon-sm icon-light right"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-star-outline"></use></svg>
         </a>
       </li>
       <li><span class="divider"></span></li>
       <li>
         <a class="list-item right-icon" href="#">
           <span>Azione 4</span>
-          <svg class="icon icon-sm icon-light right"><use href="/bootstrap-italia/dist/svg/sprite.svg#it-star-outline"></use></svg>
+          <svg class="icon icon-sm icon-light right"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-star-outline"></use></svg>
         </a>
       </li>
       <li>
         <a class="list-item right-icon disabled" href="#">
           <span>Azione 5 (disabilitato)</span>
-          <svg class="icon icon-sm icon-light right"><use href="/bootstrap-italia/dist/svg/sprite.svg#it-star-outline"></use></svg>
+          <svg class="icon icon-sm icon-light right"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-star-outline"></use></svg>
         </a>
       </li>
     </ul>
@@ -1210,39 +1233,37 @@ Il design di default dei dropdown richiede l’applicazione della classe <code c
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-menu dark"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"link-list-wrapper"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"link-list-heading"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"link-list"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;li&gt;</span>
-        <span class="nt">&lt;h3</span> <span class="na">id=</span><span class="s">"esempio-header-2"</span><span class="nt">&gt;</span>Esempio Header 2<span class="nt">&lt;/h3&gt;</span>
-      <span class="nt">&lt;/li&gt;</span>
       <span class="nt">&lt;li&gt;</span>
         <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"list-item right-icon active"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;span&gt;</span>Azione 1 (attivo)<span class="nt">&lt;/span&gt;</span>
-          <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm icon-light right"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-star-outline"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+          <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm icon-light right"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-star-outline"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
         <span class="nt">&lt;/a&gt;</span>
       <span class="nt">&lt;/li&gt;</span>
       <span class="nt">&lt;li&gt;</span>
         <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"list-item right-icon"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;span&gt;</span>Azione 2<span class="nt">&lt;/span&gt;</span>
-          <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm icon-light right"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-star-outline"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+          <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm icon-light right"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-star-outline"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
         <span class="nt">&lt;/a&gt;</span>
       <span class="nt">&lt;/li&gt;</span>
       <span class="nt">&lt;li&gt;</span>
         <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"list-item right-icon"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;span&gt;</span>Azione 3<span class="nt">&lt;/span&gt;</span>
-          <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm icon-light right"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-star-outline"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+          <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm icon-light right"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-star-outline"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
         <span class="nt">&lt;/a&gt;</span>
       <span class="nt">&lt;/li&gt;</span>
       <span class="nt">&lt;li&gt;&lt;span</span> <span class="na">class=</span><span class="s">"divider"</span><span class="nt">&gt;&lt;/span&gt;&lt;/li&gt;</span>
       <span class="nt">&lt;li&gt;</span>
         <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"list-item right-icon"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;span&gt;</span>Azione 4<span class="nt">&lt;/span&gt;</span>
-          <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm icon-light right"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-star-outline"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+          <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm icon-light right"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-star-outline"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
         <span class="nt">&lt;/a&gt;</span>
       <span class="nt">&lt;/li&gt;</span>
       <span class="nt">&lt;li&gt;</span>
         <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"list-item right-icon disabled"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;span&gt;</span>Azione 5 (disabilitato)<span class="nt">&lt;/span&gt;</span>
-          <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm icon-light right"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-star-outline"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+          <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm icon-light right"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-star-outline"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
         <span class="nt">&lt;/a&gt;</span>
       <span class="nt">&lt;/li&gt;</span>
     <span class="nt">&lt;/ul&gt;</span>
@@ -1251,25 +1272,25 @@ Il design di default dei dropdown richiede l’applicazione della classe <code c
 
 <h2 id="informazioni-aggiuntive">Informazioni aggiuntive</h2>
 
-<p>Per consultare altri esempi, vedere l’utilizzo di una dropdown con interi form al suo interno, capire meglio come utilizzare attributi <code class="language-plaintext highlighter-rouge">data-</code> per l’attivazione o come estendere il funzionamento del plugin Javascript del dropdown di Bootstrap 4.6.1 , si rimanda alla <a href="https://getbootstrap.com/docs/4.5/components/dropdowns/">documentazione</a> sul sito di Bootstrap.</p>
+<p>Per consultare altri esempi, vedere l’utilizzo di un dropdown con interi form al suo interno, capire meglio come utilizzare attributi <code class="language-plaintext highlighter-rouge">data-</code> per l’attivazione o come estendere il funzionamento del plugin JavaScript del dropdown di Bootstrap 5.1.3 , si rimanda alla <a href="https://getbootstrap.com/docs/5.1/components/dropdowns/">documentazione</a> sul sito di Bootstrap.</p>
 
         </main>
       </div>
     </div>
 
     
-
 <script>
   window.__PUBLIC_PATH__ = '/bootstrap-italia/dist/fonts'
-</script><script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202207122305"></script><script src="/bootstrap-italia/docs/assets/dist/js/vendor/anchor.min.js"></script>
-<script src="/bootstrap-italia/docs/assets/dist/js/vendor/clipboard.min.js"></script>
-<script src="/bootstrap-italia/docs/assets/dist/js/vendor/tsparticles.min.js"></script>
+</script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202207221548"></script><script src="/bootstrap-italia/docs/assets/src/js/vendor/anchor.min.js"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/vendor/clipboard.min.js"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/vendor/tsparticles.min.js"></script>
 
-<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202207122305"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202207221548"></script>
 
-<script src="/bootstrap-italia/docs/assets/dist/js/vendor/tweenjs.min.js"></script>
-<script src="/bootstrap-italia/docs/assets/dist/js/vendor/easeljs.min.js"></script>
-<script src="/bootstrap-italia/docs/assets/dist/js/vendor/preloadjs.min.js"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/vendor/tweenjs.min.js"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/vendor/easeljs.min.js"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/vendor/preloadjs.min.js"></script>
 
 <script>
   var manifest = [
@@ -1282,10 +1303,9 @@ Il design di default dei dropdown richiede l’applicazione della classe <code c
     { src: '/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png', id: 'cover-7' },
   ]
 </script>
-<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?202207122305"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202207221548"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/vendor/docsearch.min.js"></script>
 
-
-<script src="/bootstrap-italia/docs/assets/dist/js/vendor/docsearch.min.js"></script>
 <script>
   docsearch({
     apiKey: 'a755e381c276458251a59282bae6ee93',

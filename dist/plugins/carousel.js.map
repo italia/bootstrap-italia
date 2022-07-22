@@ -1,0 +1,1 @@
+{"version":3,"file":"carousel.js","sources":["../../src/js/plugins/carousel.js"],"sourcesContent":["import { default as BSCarousel } from 'bootstrap/js/src/carousel'\n\nclass Carousel extends BSCarousel {}\n\nexport default Carousel\n"],"names":[],"mappings":";;AAEA,MAAM,QAAQ,SAAS,UAAU,CAAC;;;;"}

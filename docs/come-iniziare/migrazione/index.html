@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="description" content="Un pratico elenco dei principali cambiamenti fra Bootstrap Italia 1.x e 2.0." />
+<meta name="author" content="Dipartimento per la trasformazione digitale" />
+<meta name="generator" content="Jekyll v4.2.1" />
+
+<title>Migrazione · Bootstrap Italia</title>
+
+<!-- Bootstrap core CSS -->
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202207221548" rel="stylesheet" />
+
+
+<!-- Documentation extras -->
+ 
+<link href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.css" rel="stylesheet" />
+
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202207221548" rel="stylesheet" />
+
+<!-- Favicons -->
+<link rel="icon" href="/bootstrap-italia/favicon.ico" />
+<link rel="icon" href="/bootstrap-italia/docs/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png" />
+<link rel="icon" href="/bootstrap-italia/docs/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png" />
+<link rel="mask-icon" href="/bootstrap-italia/docs/assets/img/favicons/safari-pinned-tab.svg" color="#0066CC" />
+<link rel="apple-touch-icon" href="/bootstrap-italia/docs/assets/img/favicons/apple-touch-icon.png" />
+<link rel="manifest" href="/bootstrap-italia/site.webmanifest" />
+<meta name="msapplication-config" content="/bootstrap-italia/browserconfig.xml" />
+<meta name="theme-color" content="#0066CC" />
+ <!-- Twitter -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@designersITA" />
+<meta name="twitter:creator" content="Dipartimento per la trasformazione digitale" />
+<meta name="twitter:title" content="Migrazione" />
+<meta name="twitter:description" content="Un pratico elenco dei principali cambiamenti fra Bootstrap Italia 1.x e 2.0." />
+<meta name="twitter:image" content="/docs/assets/img/favicons/social-card.png" />
+
+<!-- Facebook -->
+<meta property="og:url" content="/docs/come-iniziare/migrazione/" />
+<meta property="og:title" content="Migrazione" />
+<meta property="og:description" content="Un pratico elenco dei principali cambiamenti fra Bootstrap Italia 1.x e 2.0." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="/docs/assets/img/favicons/social-card.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script>
+  // Disabilita tracciamento se il cookie cookies_consent non esiste
+  if (document.cookie.indexOf('cookies_consent=true') === -1) {
+    window['ga-disable-UA-114758441-1'] = true
+  }
+</script>
+<script>
+  ;(function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r
+    ;(i[r] =
+      i[r] ||
+      function () {
+        ;(i[r].q = i[r].q || []).push(arguments)
+      }),
+      (i[r].l = 1 * new Date())
+    ;(a = s.createElement(o)), (m = s.getElementsByTagName(o)[0])
+    a.async = 1
+    a.src = g
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga')
+
+  ga('create', 'UA-114758441-1', 'auto')
+  ga('set', 'anonymizeIp', true)
+  ga('send', 'pageview')
+</script>
+<!-- End Google Analytics -->
+
+
+  </head>
+  <body>
+    <a id="skippy" class="visually-hidden-focusable" href="#content">
+      <div class="container">
+        <span class="skiplink-text">Skip to main content</span>
+      </div>
+    </a>
+
+    <nav class="navbar-institutional navbar navbar-expand-lg navbar-dark py-1 px-3">
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#navbarsTop"
+    aria-controls="navbarsTop"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div>
+    <a class="navbar-brand text-decoration-none" href="https://innovazione.gov.it/"
+      >Dipartimento <span class="d-none d-lg-inline">per la Trasformazione </span>Digitale</a
+    >
+    <span class="navbar-brand text-white"> + </span>
+    <a class="navbar-brand text-decoration-none" href="http://agid.gov.it/">AgID</a>
+  </div>
+  <div class="collapse navbar-collapse" id="navbarsTop">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item nav-item-w-divider">
+        <a class="nav-link text-decoration-none" href="https://pianotriennale-ict.italia.it/">Piano Triennale</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-decoration-none" href="https://developers.italia.it/">Developers</a>
+      </li>
+      <li class="nav-item nav-item-w-divider">
+        <a class="nav-link text-decoration-none" href="http://designers.italia.it/">Designers</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-decoration-none" href="https://forum.italia.it/">Forum</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-decoration-none" href="https://docs.italia.it/">Docs</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-decoration-none" href="https://github.com/italia/">GitHub</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+ <header class="navbar-main navbar navbar-dark bd-navbar px-3 bd-navbar--slim">
+  <div class="container-fluid">
+    <a class="navbar-brand py-2 text-decoration-none" href="/bootstrap-italia/" aria-label="Bootstrap Italia Homepage" title="Bootstrap Italia Homepage">
+      <div class="d-flex flex-row"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92 74"
+  
+   height="48"
+  >
+  <g fill="#FFF">
+    <path d="M31.799 71.9V15.7h15.1V72h-15.1zM91.099 28.5h-13.8v23.1c0 2.3.1 3.8.2 4.8.1.9.5 1.7 1.2 2.4s1.8 1 3.3 1l8.6-.2.7 12c-5 1.1-8.9 1.7-11.5 1.7-6.8 0-11.4-1.5-13.8-4.6-2.5-3-3.7-8.6-3.7-16.8V0h15.1v15.6h13.8v12.9zM9.099 32.8c-2.6 0-4.8-.9-6.5-2.7s-2.6-4-2.6-6.6.9-4.8 2.5-6.6c1.7-1.8 3.9-2.6 6.5-2.6s4.8.9 6.5 2.7 2.5 4 2.5 6.7-.8 4.8-2.5 6.6c-1.6 1.6-3.7 2.5-6.4 2.5z"></path>
+  </g>
+</svg>
+<div class="d-flex flex-column ps-3 ps-sm-4">
+          <h1 class="bd-logo-title">Bootstrap Italia</h1>
+          <h2 class="bd-logo-subtitle">Il tema Bootstrap 5 per <span class="d-none d-sm-inline">lo sviluppo di applicazioni web per </span>la PA</h2>
+        </div>
+      </div>
+    </a>
+
+    
+    <button class="btn btn-xs btn-primary d-md-none px-2 text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+      menu
+    </button>
+    
+
+    <ul class="navbar-nav flex-row ms-md-auto d-none d-md-flex">
+      <li class="nav-item pe-2">
+        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v2.0.0/bootstrap-italia.zip" aria-label="Download">
+          <small class="pe-2 m-0">v2.0.0</small>
+          <svg class="icon icon-sm icon-light"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-download" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-download"></use></svg><span class="visually-hidden">Download</span>
+        </a>
+      </li>
+      <li class="nav-item pe-2">
+        <a title="Repository GitHub di Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <svg class="icon icon-sm icon-light"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-github" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-github"></use></svg><span class="visually-hidden">GitHub</span>
+        </a>
+      </li>
+    </ul>
+
+    
+    <div class="bd-search w-100">
+      <label for="search-input" class="visually-hidden">Cerca:</label>
+      <input type="search" class="form-control" id="search-input" name="search-input" placeholder="Cerca componenti, classi, informazioni..." aria-label="Cerca..." autocomplete="off" />
+    </div>
+    
+  </div>
+</header>
+
+
+    <div class="container-fluid">
+      <div class="row flex-xl-nowrap">
+        <div class="col-12 col-md-3 col-xl-2 bd-sidebar"><nav class="collapse bd-links" id="bd-docs-nav"><div class="sidebar-wrapper">
+    <h3 class="no_toc">Documentazione</h3>
+    <div class="sidebar-linklist-wrapper">
+      <div class="link-list-wrapper">
+        <ul class="link-list"><li>
+            
+            <!-- One:usare ID -->
+            <a
+              role="button"
+              class="list-item large medium right-icon active"
+              href="#collapse-1"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse-1"
+              aria-expanded="true"
+              aria-controls="collapse-1"
+            >
+              <span class="list-item-title-icon-wrapper">
+                <span class="list-item-title">Come iniziare</span>
+                <svg class="icon icon-sm icon-primary right" aria-hidden="true">
+                  <use href="/bootstrap-italia/dist/svg/sprites.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use>
+                </svg>
+              </span>
+            </a>
+            <ul class="link-sublist collapse show" id="collapse-1"><li>
+                <a class="list-item " href="/bootstrap-italia/docs/come-iniziare/introduzione/">
+                  <span>Introduzione</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/come-iniziare/strumenti-di-compilazione/">
+                  <span>Strumenti di compilazione</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/come-iniziare/personalizzazione-della-libreria/">
+                  <span>Personalizzazione della libreria</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/come-iniziare/modificare-componenti/">
+                  <span>Modificare Componenti</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/come-iniziare/componente-base/">
+                  <span>Componente base</span></a>
+              </li><li>
+                <a class="list-item  active" href="/bootstrap-italia/docs/come-iniziare/migrazione/">
+                  <span>Migrazione</span></a>
+              </li></ul>
+            
+          </li><li>
+            
+            <!-- One:usare ID -->
+            <a
+              role="button"
+              class="list-item large medium right-icon "
+              href="#collapse-2"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse-2"
+              aria-expanded="false"
+              aria-controls="collapse-2"
+            >
+              <span class="list-item-title-icon-wrapper">
+                <span class="list-item-title">Organizzare gli spazi</span>
+                <svg class="icon icon-sm icon-primary right" aria-hidden="true">
+                  <use href="/bootstrap-italia/dist/svg/sprites.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use>
+                </svg>
+              </span>
+            </a>
+            <ul class="link-sublist collapse " id="collapse-2"><li>
+                <a class="list-item " href="/bootstrap-italia/docs/organizzare-gli-spazi/introduzione/">
+                  <span>Introduzione</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/organizzare-gli-spazi/allineamento-verticale/">
+                  <span>Allineamento verticale</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/organizzare-gli-spazi/bordi/">
+                  <span>Bordi</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/organizzare-gli-spazi/clearfix/">
+                  <span>Clearfix</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/organizzare-gli-spazi/dimensionamento/">
+                  <span>Dimensionamento</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/organizzare-gli-spazi/display/">
+                  <span>Display</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/organizzare-gli-spazi/flex/">
+                  <span>Flex</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/organizzare-gli-spazi/float/">
+                  <span>Float</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/organizzare-gli-spazi/griglie/">
+                  <span>Griglie</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/organizzare-gli-spazi/ombreggiature/">
+                  <span>Ombreggiature</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/organizzare-gli-spazi/posizionamento/">
+                  <span>Posizionamento</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/organizzare-gli-spazi/proporzioni/">
+                  <span>Proporzioni</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/organizzare-gli-spazi/spaziature/">
+                  <span>Spaziature</span></a>
+              </li></ul>
+            
+          </li><li>
+            
+            <!-- One:usare ID -->
+            <a
+              role="button"
+              class="list-item large medium right-icon "
+              href="#collapse-3"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse-3"
+              aria-expanded="false"
+              aria-controls="collapse-3"
+            >
+              <span class="list-item-title-icon-wrapper">
+                <span class="list-item-title">Organizzare i contenuti</span>
+                <svg class="icon icon-sm icon-primary right" aria-hidden="true">
+                  <use href="/bootstrap-italia/dist/svg/sprites.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use>
+                </svg>
+              </span>
+            </a>
+            <ul class="link-sublist collapse " id="collapse-3"><li>
+                <a class="list-item " href="/bootstrap-italia/docs/organizzare-i-contenuti/introduzione/">
+                  <span>Introduzione</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/organizzare-i-contenuti/codice/">
+                  <span>Codice</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/organizzare-i-contenuti/immagini/">
+                  <span>Immagini</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/organizzare-i-contenuti/liste/">
+                  <span>Liste</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/organizzare-i-contenuti/liste-di-immagini/">
+                  <span>Liste di immagini</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/organizzare-i-contenuti/tabelle/">
+                  <span>Tabelle</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/organizzare-i-contenuti/testo/">
+                  <span>Testo</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/organizzare-i-contenuti/tipografia/">
+                  <span>Tipografia</span></a>
+              </li></ul>
+            
+          </li><li>
+            
+            <!-- One:usare ID -->
+            <a
+              role="button"
+              class="list-item large medium right-icon "
+              href="#collapse-4"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse-4"
+              aria-expanded="false"
+              aria-controls="collapse-4"
+            >
+              <span class="list-item-title-icon-wrapper">
+                <span class="list-item-title">Menu di navigazione</span>
+                <svg class="icon icon-sm icon-primary right" aria-hidden="true">
+                  <use href="/bootstrap-italia/dist/svg/sprites.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use>
+                </svg>
+              </span>
+            </a>
+            <ul class="link-sublist collapse " id="collapse-4"><li>
+                <a class="list-item " href="/bootstrap-italia/docs/menu-di-navigazione/introduzione/">
+                  <span>Introduzione</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/menu-di-navigazione/bottomnav/">
+                  <span>BottomNav</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/menu-di-navigazione/breadcrumbs/">
+                  <span>Breadcrumbs</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/menu-di-navigazione/header/">
+                  <span>Header</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/menu-di-navigazione/megamenu/">
+                  <span>Megamenu</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/menu-di-navigazione/navscroll/">
+                  <span>Navscroll</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/menu-di-navigazione/sidebar/">
+                  <span>Sidebar</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/menu-di-navigazione/skiplinks/">
+                  <span>Skiplinks</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/menu-di-navigazione/thumbnav/">
+                  <span>Thumbnav</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/menu-di-navigazione/toolbar/">
+                  <span>Toolbar</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/menu-di-navigazione/torna-indietro/">
+                  <span>Torna indietro</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/menu-di-navigazione/torna-su/">
+                  <span>Torna su</span></a>
+              </li></ul>
+            
+          </li><li>
+            
+            <!-- One:usare ID -->
+            <a
+              role="button"
+              class="list-item large medium right-icon "
+              href="#collapse-5"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse-5"
+              aria-expanded="false"
+              aria-controls="collapse-5"
+            >
+              <span class="list-item-title-icon-wrapper">
+                <span class="list-item-title">Componenti</span>
+                <svg class="icon icon-sm icon-primary right" aria-hidden="true">
+                  <use href="/bootstrap-italia/dist/svg/sprites.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use>
+                </svg>
+              </span>
+            </a>
+            <ul class="link-sublist collapse " id="collapse-5"><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/introduzione/">
+                  <span>Introduzione</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/accordion/">
+                  <span>Accordion</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/affix/">
+                  <span>Affix</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/alert/">
+                  <span>Alert</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/avatar/">
+                  <span>Avatar</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/badge/">
+                  <span>Badge</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/buttons/">
+                  <span>Buttons</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/card/">
+                  <span>Card</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/callout/">
+                  <span>Callout</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/carousel/">
+                  <span>Carousel</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/chips/">
+                  <span>Chips</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/collapse/">
+                  <span>Collapse</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/cookiebar/">
+                  <span>Cookiebar</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/dimmer/">
+                  <span>Dimmer</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/dropdown/">
+                  <span>Dropdown</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/forward/">
+                  <span>Forward</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/hero/">
+                  <span>Hero</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/modale/">
+                  <span>Modale</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/notifiche/">
+                  <span>Notifiche</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/overlay/">
+                  <span>Overlay</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/paginazione/">
+                  <span>Paginazione</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/popover/">
+                  <span>Popover</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/progress-indicators/">
+                  <span>Progress Indicators</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/rating/">
+                  <span>Rating</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/sections/">
+                  <span>Sections</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/steppers/">
+                  <span>Steppers</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/sticky/">
+                  <span>Sticky</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/tab/">
+                  <span>Tab</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/timeline/">
+                  <span>Timeline</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/tooltip/">
+                  <span>Tooltip</span></a>
+              </li></ul>
+            
+          </li><li>
+            
+            <!-- One:usare ID -->
+            <a
+              role="button"
+              class="list-item large medium right-icon "
+              href="#collapse-6"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse-6"
+              aria-expanded="false"
+              aria-controls="collapse-6"
+            >
+              <span class="list-item-title-icon-wrapper">
+                <span class="list-item-title">Form</span>
+                <svg class="icon icon-sm icon-primary right" aria-hidden="true">
+                  <use href="/bootstrap-italia/dist/svg/sprites.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use>
+                </svg>
+              </span>
+            </a>
+            <ul class="link-sublist collapse " id="collapse-6"><li>
+                <a class="list-item " href="/bootstrap-italia/docs/form/introduzione/">
+                  <span>Introduzione</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/form/input/">
+                  <span>Input</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/form/input-numerico/">
+                  <span>Input Numerico</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/form/input-calendario/">
+                  <span>Input Calendario</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/form/input-ora/">
+                  <span>Input Ora</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/form/autocompletamento/">
+                  <span>Autocompletamento</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/form/upload/">
+                  <span>Upload</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/form/radio-button/">
+                  <span>Radio Button</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/form/select/">
+                  <span>Select</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/form/checkbox/">
+                  <span>Checkbox</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/form/toggles/">
+                  <span>Toggles</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/form/transfer/">
+                  <span>Transfer</span></a>
+              </li></ul>
+            
+          </li><li>
+            
+            <!-- One:usare ID -->
+            <a
+              role="button"
+              class="list-item large medium right-icon "
+              href="#collapse-7"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse-7"
+              aria-expanded="false"
+              aria-controls="collapse-7"
+            >
+              <span class="list-item-title-icon-wrapper">
+                <span class="list-item-title">Utilities</span>
+                <svg class="icon icon-sm icon-primary right" aria-hidden="true">
+                  <use href="/bootstrap-italia/dist/svg/sprites.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use>
+                </svg>
+              </span>
+            </a>
+            <ul class="link-sublist collapse " id="collapse-7"><li>
+                <a class="list-item " href="/bootstrap-italia/docs/utilities/colori/">
+                  <span>Colori</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/utilities/colori-custom/">
+                  <span>Colori Custom</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/utilities/icone/">
+                  <span>Icone</span></a>
+              </li></ul>
+            
+          </li><li>
+            
+            <a class="list-item active" href="/bootstrap-italia/docs/esempi/"><span>Esempi</span></a>
+            
+          </li><li>
+            
+            <a class="list-item active" href="/bootstrap-italia/docs/progetti/"><span>Progetti</span></a>
+            
+          </li><li>
+            
+            <a class="list-item active" href="/bootstrap-italia/docs/informazioni/"><span>Informazioni</span></a>
+            
+          </li></ul>
+      </div>
+    </div>
+  </div>
+</nav>
+</div>
+
+         <div class="d-none d-xl-block col-xl-2 bd-toc">
+  <div class="sidebar-wrapper">
+    <h3>Migrazione</h3>
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#compilazione">Compilazione</a></li>
+<li class="toc-entry toc-h2"><a href="#dipendenze">Dipendenze</a></li>
+<li class="toc-entry toc-h2"><a href="#browser-supportati">Browser supportati</a></li>
+<li class="toc-entry toc-h2"><a href="#sass">SASS</a></li>
+<li class="toc-entry toc-h2"><a href="#organizzare-gli-spazi">Organizzare gli spazi</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#bordi">Bordi</a></li>
+<li class="toc-entry toc-h3"><a href="#display">Display</a></li>
+<li class="toc-entry toc-h3"><a href="#float">Float</a></li>
+<li class="toc-entry toc-h3"><a href="#griglie">Griglie</a></li>
+<li class="toc-entry toc-h3"><a href="#proporzioni">Proporzioni</a></li>
+<li class="toc-entry toc-h3"><a href="#spaziature">Spaziature</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#organizzare-i-contenuti">Organizzare i contenuti</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#oggetti-media">Oggetti Media</a></li>
+<li class="toc-entry toc-h3"><a href="#tabelle">Tabelle</a></li>
+<li class="toc-entry toc-h3"><a href="#codice">Codice</a></li>
+<li class="toc-entry toc-h3"><a href="#testo">Testo</a></li>
+<li class="toc-entry toc-h3"><a href="#tipografia">Tipografia</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#componenti">Componenti</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#accordion">Accordion</a></li>
+<li class="toc-entry toc-h3"><a href="#badge">Badge</a></li>
+<li class="toc-entry toc-h3"><a href="#buttons">Buttons</a></li>
+<li class="toc-entry toc-h3"><a href="#card">Card</a></li>
+<li class="toc-entry toc-h3"><a href="#pulsante-di-chiusura">Pulsante di chiusura</a></li>
+<li class="toc-entry toc-h3"><a href="#dropdown">Dropdown</a></li>
+<li class="toc-entry toc-h3"><a href="#popover">Popover</a></li>
+<li class="toc-entry toc-h3"><a href="#progress-indicators">Progress Indicators</a></li>
+<li class="toc-entry toc-h3"><a href="#tooltip">Tooltip</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#form">Form</a></li>
+<li class="toc-entry toc-h2"><a href="#javascript">Javascript</a></li>
+</ul>
+  </div>
+</div>
+ 
+
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 px-md-3 bd-content">
+          <h1 class="bd-title" id="content">Migrazione</h1>
+          <p class="bd-lead">Un pratico elenco dei principali cambiamenti fra Bootstrap Italia 1.x e 2.0.</p>
+          <p>I cambiamenti che richiedono una modifica del codice precedente sono contrassegnati come <span class="bg-danger text-white px-2">Breaking</span>.</p>
+
+<h2 id="compilazione">Compilazione</h2>
+
+<p>La compilazione del progetto è stata migrata da gulp.js a <a href="https://rollupjs.org/guide/en/" target="\_blank">rollup.js</a>.</p>
+
+<h2 id="dipendenze">Dipendenze</h2>
+
+<ul>
+  <li><span class="bg-danger text-white px-2">Breaking</span> Eliminazione di jQuery e riscrittura dei plugin in vanilla JavaScript.</li>
+  <li>Upgrade di Popper da v1.x a Popper v2.x.</li>
+  <li>Sostituzione di Libsass con Dart Sass.</li>
+</ul>
+
+<h2 id="browser-supportati">Browser supportati</h2>
+
+<p><span class="bg-danger text-white px-2">Breaking</span> Bootstrap Italia 2.0, come Bootstrap 5 sul quale è basato, abbandona il supporto delle seguenti versioni dei browser:</p>
+
+<ul>
+  <li><strong>Internet Explorer 10 e 11</strong><br />
+Per chi vuole far uso di IE11 rimane a disposizione la versione Legacy di Bootstrap Italia basata su BS4</li>
+  <li><strong>Microsoft Edge &lt; 16</strong> (Legacy Edge)</li>
+  <li><strong>Firefox &lt; 60</strong></li>
+  <li><strong>Safari &lt; 12 / iOS Safari &lt; 12</strong></li>
+  <li><strong>Chrome &lt; 60</strong></li>
+</ul>
+
+<h2 id="sass">SASS</h2>
+
+<ul>
+  <li><span class="bg-danger text-white px-2">Breaking</span> Rinominata la funzione <code class="language-plaintext highlighter-rouge">color-yiq()</code> e relative variabili a <code class="language-plaintext highlighter-rouge">color-contrast()</code>, dato che non è più legata allo spazio colore YIQ.</li>
+  <li><span class="bg-danger text-white px-2">Breaking</span> I mixins delle media query sono stati modificati in favore di un approccio più logico. Ad es: <code class="language-plaintext highlighter-rouge">@include media-breakpoint-up(sm)</code></li>
+  <li><span class="bg-danger text-white px-2">Breaking</span> Tutte le funzioni <code class="language-plaintext highlighter-rouge">lighten()</code> e <code class="language-plaintext highlighter-rouge">darken()</code> sono state sostituite da <code class="language-plaintext highlighter-rouge">tint-color()</code> e <code class="language-plaintext highlighter-rouge">shade-color()</code>. Queste funzioni miscelano il colore con il bianco o il nero invece di modificarne il valore di luminosità.</li>
+  <li>I mixin <code class="language-plaintext highlighter-rouge">box-shadow</code> ora permettono valori <code class="language-plaintext highlighter-rouge">null</code> e non supportano più <code class="language-plaintext highlighter-rouge">none</code> per gli argomenti multipli.</li>
+  <li>Il mixin <code class="language-plaintext highlighter-rouge">border-radius()</code> ora ha un valore di default.</li>
+</ul>
+
+<h2 id="organizzare-gli-spazi">Organizzare gli spazi</h2>
+
+<h3 id="bordi">Bordi</h3>
+
+<ul>
+  <li><span class="bg-danger text-white px-2">Breaking</span> Rinominate le classi <code class="language-plaintext highlighter-rouge">.border-left</code> e <code class="language-plaintext highlighter-rouge">.border-right</code>, diventano <code class="language-plaintext highlighter-rouge">.border-start</code> e <code class="language-plaintext highlighter-rouge">.border-end</code>.</li>
+  <li><span class="bg-danger text-white px-2">Breaking</span> Rinominate le classi <code class="language-plaintext highlighter-rouge">.rounded-left</code> e <code class="language-plaintext highlighter-rouge">.rounded-right,</code> diventano <code class="language-plaintext highlighter-rouge">.rounded-start</code> e <code class="language-plaintext highlighter-rouge">.rounded-end</code>.</li>
+</ul>
+
+<h3 id="display">Display</h3>
+
+<ul>
+  <li><span class="bg-danger text-white px-2">Breaking</span> Le classi “Screen reader” sono ora classi “visually hidden”.<br />
+Le classi <code class="language-plaintext highlighter-rouge">.sr-only</code> e <code class="language-plaintext highlighter-rouge">.sr-only-focusable</code> diventano <code class="language-plaintext highlighter-rouge">.visually-hidden</code> e <code class="language-plaintext highlighter-rouge">.visually-hidden-focusable</code>.</li>
+</ul>
+
+<h3 id="float">Float</h3>
+
+<ul>
+  <li>Rinominate <code class="language-plaintext highlighter-rouge">.float-left</code> e <code class="language-plaintext highlighter-rouge">.float-right</code>, diventano <code class="language-plaintext highlighter-rouge">.float-start</code> e <code class="language-plaintext highlighter-rouge">.float-end</code>.</li>
+</ul>
+
+<h3 id="griglie">Griglie</h3>
+
+<ul>
+  <li><strong>Nuovo breakpoint!</strong> Aggiunta di un nuovo breakpoint <code class="language-plaintext highlighter-rouge">xxl</code> per viewport da 1400px in su. Nessuna modifica agli altri breakpoint.</li>
+  <li>Gutter:
+    <ul>
+      <li>Ora sono più grandi rispetto alla versione 1.x (24px invece di 12px).</li>
+      <li>Implementati gutter variabili (responsive).</li>
+      <li>Aggiunta una nuova classe gutter (<code class="language-plaintext highlighter-rouge">.g-*</code>, <code class="language-plaintext highlighter-rouge">.gx-*</code>, and <code class="language-plaintext highlighter-rouge">.gy-*</code>) per controllare le dimensioni dei gutter orizzontali e verticali.</li>
+      <li><span class="bg-danger text-white px-2">Breaking</span> Rinominata la classe <code class="language-plaintext highlighter-rouge">.no-gutters</code> a <code class="language-plaintext highlighter-rouge">.g-0</code> per allinearla alle altre classi dei gutter.</li>
+    </ul>
+  </li>
+  <li>Alle colonne non è più applicata la proprietà <code class="language-plaintext highlighter-rouge">position: relative</code>, potrebbe essere necessario applicare la classe <code class="language-plaintext highlighter-rouge">.position-relative</code> ad alcuni elementi per ristabilire il comportamento originale.</li>
+  <li><span class="bg-danger text-white px-2">Breaking</span> Eliminate diverse classi <code class="language-plaintext highlighter-rouge">.order-*</code>, solitamente poco utilizzate. Ora vengono fornite solo le classi da <code class="language-plaintext highlighter-rouge">.order-1</code> a <code class="language-plaintext highlighter-rouge">.order-5</code>.</li>
+  <li><span class="bg-danger text-white px-2">Breaking</span> <code class="language-plaintext highlighter-rouge">bootstrap-grid.css</code> ora applica <code class="language-plaintext highlighter-rouge">box-sizing: border-box</code> solo alla colonna invece di resettare il box-sizing globale. Questo per permettere l’utilizzo dei nostri stili di di griglia in più contesti senza creare interferenze.</li>
+</ul>
+
+<h3 id="proporzioni">Proporzioni</h3>
+
+<ul>
+  <li>L’elemento <code class="language-plaintext highlighter-rouge">.embed-responsive-item</code> e il selettore di gruppi di elementi sono stati eliminati in favore di un più semplice elemento Proporzioni, implementato con il selettore <code class="language-plaintext highlighter-rouge">.ratio &gt; *</code>.<br />
+Non sono più necessarie ulteriori classi, Proporzioni funziona con qualsiasi elemento HTML.</li>
+</ul>
+
+<h3 id="spaziature">Spaziature</h3>
+
+<p><span class="bg-danger text-white px-2">Breaking</span> Sono state rinominate diverse classi utility per favorire un approccio slegato dalla direzione sinistra/destra, garantendo un miglior supporto alle lingue RTL.</p>
+
+<ul>
+  <li>Rinominate le classi <code class="language-plaintext highlighter-rouge">.ml-*</code> e <code class="language-plaintext highlighter-rouge">.mr-*</code>, diventano <code class="language-plaintext highlighter-rouge">.ms-*</code> e <code class="language-plaintext highlighter-rouge">.me-*</code>.</li>
+  <li>Rinominate le classi <code class="language-plaintext highlighter-rouge">.pl-*</code> e <code class="language-plaintext highlighter-rouge">.pr-*</code>, diventano <code class="language-plaintext highlighter-rouge">.ps-*</code> e <code class="language-plaintext highlighter-rouge">.pe-*</code>.</li>
+</ul>
+
+<h2 id="organizzare-i-contenuti">Organizzare i contenuti</h2>
+
+<h3 id="oggetti-media">Oggetti Media</h3>
+
+<ul>
+  <li><span class="bg-danger text-white px-2">Breaking</span> Eliminato il componente <code class="language-plaintext highlighter-rouge">.media</code> dato che può essere replicato con le utilities di base.</li>
+</ul>
+
+<h3 id="tabelle">Tabelle</h3>
+
+<p>Tabelle ridisegnate e ricostruite con variabili CSS per un maggior controllo sullo stile.</p>
+
+<ul>
+  <li><span class="bg-danger text-white px-2">Breaking</span> Eliminazione della classi <code class="language-plaintext highlighter-rouge">.thead-light</code> e <code class="language-plaintext highlighter-rouge">.thead-dark</code> in favore delle classi varianti <code class="language-plaintext highlighter-rouge">.table-*</code> che possono essere usate per tutti gli elementi (<code class="language-plaintext highlighter-rouge">&lt;thead&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;tbody&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;tfoot&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;tr&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;th&gt;</code> and <code class="language-plaintext highlighter-rouge">&lt;td&gt;</code>).</li>
+</ul>
+
+<h3 id="codice">Codice</h3>
+
+<ul>
+  <li><span class="bg-danger text-white px-2">Breaking</span> Eliminazione della classe <code class="language-plaintext highlighter-rouge">.pre-scrollable</code>.</li>
+</ul>
+
+<h3 id="testo">Testo</h3>
+
+<ul>
+  <li><span class="bg-danger text-white px-2">Breaking</span> Eliminazione della classe <code class="language-plaintext highlighter-rouge">.text-justify</code>.</li>
+  <li><span class="bg-danger text-white px-2">Breaking</span> Rinominate le classi <code class="language-plaintext highlighter-rouge">.text-left</code> e <code class="language-plaintext highlighter-rouge">.text-right</code>, diventano <code class="language-plaintext highlighter-rouge">.text-start</code> e <code class="language-plaintext highlighter-rouge">.text-end</code>.</li>
+  <li><span class="bg-danger text-white px-2">Breaking</span> La classe <code class="language-plaintext highlighter-rouge">.text-monospace</code> è stata rinominata <code class="language-plaintext highlighter-rouge">.font-monospace</code>.</li>
+  <li><span class="bg-danger text-white px-2">Breaking</span> La classe <code class="language-plaintext highlighter-rouge">.text-hide</code> è stata eliminata, dato che faceva uso di un metodo antiquato per nascondere il testo.</li>
+  <li><span class="bg-danger text-white px-2">Breaking</span> La classi utility <code class="language-plaintext highlighter-rouge">.font-weight-*</code> sono state rinominate <code class="language-plaintext highlighter-rouge">.fw-*</code> per brevità e coerenza.</li>
+</ul>
+
+<h3 id="tipografia">Tipografia</h3>
+
+<ul>
+  <li>Reset del <code class="language-plaintext highlighter-rouge">padding-left</code> di default degli elementi <code class="language-plaintext highlighter-rouge">&lt;ul&gt;</code> ed <code class="language-plaintext highlighter-rouge">&lt;ol&gt;</code> dal default del browser a 2rem.</li>
+</ul>
+
+<h2 id="componenti">Componenti</h2>
+
+<h3 id="accordion">Accordion</h3>
+
+<ul>
+  <li>Aggiunto il nuovo componente <a href="/bootstrap-italia/docs/componenti/accordion/">Accordion</a>.</li>
+</ul>
+
+<h3 id="badge">Badge</h3>
+
+<ul>
+  <li><span class="bg-danger text-white px-2">Breaking</span> Eliminate tutte le classi colore <code class="language-plaintext highlighter-rouge">.badge-*</code> a favore delle utilities colore (es: usare <code class="language-plaintext highlighter-rouge">.bg-primary</code> invece di <code class="language-plaintext highlighter-rouge">.badge-primary</code>).</li>
+  <li><span class="bg-danger text-white px-2">Breaking</span> Eliminata la classe <code class="language-plaintext highlighter-rouge">.badge-pill</code>, usare <code class="language-plaintext highlighter-rouge">.rounded-pill</code> al suo posto.</li>
+</ul>
+
+<h3 id="buttons">Buttons</h3>
+
+<ul>
+  <li><span class="bg-danger text-white px-2">Breaking</span> Eliminata la classe <code class="language-plaintext highlighter-rouge">.btn-block</code>. Per creare pulsanti o gruppi di pulsanti a tutta larghezza, come i block buttons di Bootstrap 4, utilizzare un mix delle utilities display e gap. Con queste utilities abbiamo più controllo su spaziature, allineamento e comportamento responsive rispetto al classico block button.</li>
+  <li>I pulsanti disabilitati ora hanno la proprietà <code class="language-plaintext highlighter-rouge">pointer-events: none;</code>.</li>
+</ul>
+
+<h3 id="card">Card</h3>
+
+<ul>
+  <li><span class="bg-danger text-white px-2">Breaking</span> Eliminata la classe <code class="language-plaintext highlighter-rouge">.card-deck</code> a favore delle griglie.</li>
+</ul>
+
+<h3 id="pulsante-di-chiusura">Pulsante di chiusura</h3>
+
+<ul>
+  <li><span class="bg-danger text-white px-2">Breaking</span> La classe <code class="language-plaintext highlighter-rouge">.close</code> è stata rinominata in un meno generico <code class="language-plaintext highlighter-rouge">.btn-close</code>.</li>
+</ul>
+
+<h3 id="dropdown">Dropdown</h3>
+
+<ul>
+  <li><span class="bg-danger text-white px-2">Breaking</span> Tutti gli eventi del dropdown sono ora triggerati sul pulsante di toggle dello stesso e passati tramite <em>bubble up</em> all’elemento padre.</li>
+</ul>
+
+<h3 id="popover">Popover</h3>
+
+<ul>
+  <li><span class="bg-danger text-white px-2">Breaking</span> La classe <code class="language-plaintext highlighter-rouge">.arrow</code> è stata rinominata <code class="language-plaintext highlighter-rouge">.popover-arrow</code> nel template di default dei popover.</li>
+</ul>
+
+<h3 id="progress-indicators">Progress Indicators</h3>
+
+<ul>
+  <li>Gli Spinner ora rispettano <code class="language-plaintext highlighter-rouge">prefers-reduced-motion</code> riducendo la velocità di animazione.</li>
+  <li>L’allineamento verticale degli Spinner è stato migliorato.</li>
+</ul>
+
+<h3 id="tooltip">Tooltip</h3>
+
+<ul>
+  <li><span class="bg-danger text-white px-2">Breaking</span> La classe <code class="language-plaintext highlighter-rouge">.arrow</code> è stata rinominata <code class="language-plaintext highlighter-rouge">.tooltip-arrow</code> nel template di default dei tooltip.</li>
+</ul>
+
+<h2 id="form">Form</h2>
+
+<ul>
+  <li><span class="bg-danger text-white px-2">Breaking</span> Le classi di layout specifiche per i form sono state eliminate. Utilizza le griglie e le utilities invece di <code class="language-plaintext highlighter-rouge">.form-row</code> o <code class="language-plaintext highlighter-rouge">.form-inline</code>.</li>
+  <li><span class="bg-danger text-white px-2">Breaking</span> La classe <code class="language-plaintext highlighter-rouge">.form-text</code> non specifica più il display, permettendo la creazione di testo accessorio di tipo inline o block a seconda della necessità, semplicemente utilizzando <code class="language-plaintext highlighter-rouge">&lt;span&gt;</code> o <code class="language-plaintext highlighter-rouge">&lt;div&gt;</code>.</li>
+</ul>
+
+<h2 id="javascript">Javascript</h2>
+
+<ul>
+  <li>Eliminazione di jQuery e riscrittura dei plugin in vanilla JavaScript.</li>
+  <li><span class="bg-danger text-white px-2">Breaking</span> i <em>Data attributes</em> per tutti i plugin JavaScript hanno ora un namespace per distinguere le funzionalità di Bootstrap Italia da plugin di terze parti e dal tuo codice. Es: <code class="language-plaintext highlighter-rouge">data-bs-toggle</code> invece di <code class="language-plaintext highlighter-rouge">data-toggle</code>.</li>
+  <li>Rimossi gli underscore dai metodi pubblici statici come <code class="language-plaintext highlighter-rouge">_getInstance()</code> → <code class="language-plaintext highlighter-rouge">getInstance()</code>.</li>
+</ul>
+
+        </main>
+      </div>
+    </div>
+
+    
+<script>
+  window.__PUBLIC_PATH__ = '/bootstrap-italia/dist/fonts'
+</script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202207221548"></script><script src="/bootstrap-italia/docs/assets/src/js/vendor/anchor.min.js"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/vendor/clipboard.min.js"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/vendor/tsparticles.min.js"></script>
+
+<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202207221548"></script>
+
+<script src="/bootstrap-italia/docs/assets/src/js/vendor/tweenjs.min.js"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/vendor/easeljs.min.js"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/vendor/preloadjs.min.js"></script>
+
+<script>
+  var manifest = [
+    { src: '/bootstrap-italia/docs/assets/img/cover/cover-animation-1.png', id: 'cover-1' },
+    { src: '/bootstrap-italia/docs/assets/img/cover/cover-animation-2.png', id: 'cover-2' },
+    { src: '/bootstrap-italia/docs/assets/img/cover/cover-animation-3.png', id: 'cover-3' },
+    { src: '/bootstrap-italia/docs/assets/img/cover/cover-animation-4.png', id: 'cover-4' },
+    { src: '/bootstrap-italia/docs/assets/img/cover/cover-animation-5.png', id: 'cover-5' },
+    { src: '/bootstrap-italia/docs/assets/img/cover/cover-animation-6.png', id: 'cover-6' },
+    { src: '/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png', id: 'cover-7' },
+  ]
+</script>
+<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202207221548"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/vendor/docsearch.min.js"></script>
+
+<script>
+  docsearch({
+    apiKey: 'a755e381c276458251a59282bae6ee93',
+    indexName: 'bootstrap_italia',
+    inputSelector: '#search-input',
+    handleSelected: function (input, event, suggestion) {
+      var url = suggestion.url
+      url = suggestion.isLvl1 ? url.split('#')[0] : url
+      // If it's a title we remove the anchor so it does not jump.
+      window.location.href = url
+    },
+    debug: false, // Set debug to true if you want to inspect the dropdown
+  })
+</script>
+  </body>
+</html>

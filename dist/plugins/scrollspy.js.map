@@ -1,0 +1,1 @@
+{"version":3,"file":"scrollspy.js","sources":["../../src/js/plugins/scrollspy.js"],"sourcesContent":["import { default as BSScrollSpy } from 'bootstrap/js/src/scrollspy'\n\nclass ScrollSpy extends BSScrollSpy {}\n\nexport default ScrollSpy\n"],"names":[],"mappings":";;AAEA,MAAM,SAAS,SAAS,WAAW,CAAC;;;;"}

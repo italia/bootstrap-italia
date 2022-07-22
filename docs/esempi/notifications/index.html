@@ -5,18 +5,19 @@
 
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-<meta name="description" content="Bootstrap Italia è un tema Bootstrap 4 per la creazione di applicazioni web nel pieno rispetto delle Linee guida di design per i servizi web della PA" />
+<meta name="description" content="Bootstrap Italia è un tema Bootstrap 5 per la creazione di applicazioni web nel pieno rispetto delle Linee guida di design per i servizi web della PA" />
 <meta name="author" content="Dipartimento per la trasformazione digitale" />
 <meta name="generator" content="Jekyll v4.2.1" />
 
 <title>Notifications · Bootstrap Italia</title>
 
-
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202207122305" rel="stylesheet" />
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202207221548" rel="stylesheet" />
+
+
 <!-- Documentation extras -->
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202207122305" rel="stylesheet" />
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202207221548" rel="stylesheet" />
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico" />
@@ -32,13 +33,13 @@
 <meta name="twitter:site" content="@designersITA" />
 <meta name="twitter:creator" content="Dipartimento per la trasformazione digitale" />
 <meta name="twitter:title" content="Notifications" />
-<meta name="twitter:description" content="Bootstrap Italia è un tema Bootstrap 4 per la creazione di applicazioni web nel pieno rispetto delle Linee guida di design per i servizi web della PA" />
+<meta name="twitter:description" content="Bootstrap Italia è un tema Bootstrap 5 per la creazione di applicazioni web nel pieno rispetto delle Linee guida di design per i servizi web della PA" />
 <meta name="twitter:image" content="/docs/assets/img/favicons/social-card.png" />
 
 <!-- Facebook -->
 <meta property="og:url" content="/docs/esempi/notifications/" />
 <meta property="og:title" content="Notifications" />
-<meta property="og:description" content="Bootstrap Italia è un tema Bootstrap 4 per la creazione di applicazioni web nel pieno rispetto delle Linee guida di design per i servizi web della PA" />
+<meta property="og:description" content="Bootstrap Italia è un tema Bootstrap 5 per la creazione di applicazioni web nel pieno rispetto delle Linee guida di design per i servizi web della PA" />
 <meta property="og:type" content="website" />
 <meta property="og:image" content="/docs/assets/img/favicons/social-card.png" />
 <meta property="og:image:type" content="image/png" />
@@ -86,108 +87,126 @@
   <div class="row">
     <div class="col-12 col-md-4">
       <p>
-        <button onclick="notificationShow('notification');" type="button" class="btn btn-primary">Notification - 7s (default)</button>
+        <button data-bs-toggle="notification" data-bs-target="#notification" type="button" class="btn btn-primary">Notification - 7s (default)</button>
       </p>
       <p>
-        <button onclick="notificationShow('notificationIcnTxt');" type="button" class="btn btn-primary">Notification icon/text - 7s (default)</button>
+        <button data-bs-toggle="notification" data-bs-target="#notificationIcnTxt" type="button" class="btn btn-primary">
+          Notification icon/text - 7s (default)
+        </button>
       </p>
       <p>
-        <button onclick="notificationShow('notificationDism');" type="button" class="btn btn-primary">Notification Dismissable</button>
-      </p>
-    </div>
-    <div class="col-12 col-md-4">
-      <p>
-        <button onclick="notificationShow('notificationTop',5000);" type="button" class="btn btn-primary">Notification Top Fix - 5s</button>
-      </p>
-      <p>
-        <button onclick="notificationShow('notificationBottom',8000);" type="button" class="btn btn-primary">Notification Bottom Fix - 8s</button>
-      </p>
-      <p>
-        <button onclick="notificationShow('notificationLeft',6000);" type="button" class="btn btn-primary">Notification Left Fix - 6s</button>
-      </p>
-      <p>
-        <button onclick="notificationShow('notificationRight',12000);" type="button" class="btn btn-primary">Notification Right Fix - 12s</button>
+        <button data-bs-toggle="notification" data-bs-target="#notificationDism" type="button" class="btn btn-primary">Notification Dismissable</button>
       </p>
     </div>
     <div class="col-12 col-md-4">
       <p>
-        <button onclick="notificationShow('notificationDismTopFix');" type="button" class="btn btn-primary">Notification Dismissable Top Fix</button>
+        <button data-bs-toggle="notification" data-bs-target="#notificationTop" data-bs-timeout="5000" type="button" class="btn btn-primary">
+          Notification Top Fix - 5s
+        </button>
       </p>
       <p>
-        <button onclick="notificationShow('notificationDismBotFix');" type="button" class="btn btn-primary">Notification Dismissable Bottom Fix</button>
+        <button data-bs-toggle="notification" data-bs-target="#notificationBottom" data-bs-timeout="8000" type="button" class="btn btn-primary">
+          Notification Bottom Fix - 8s
+        </button>
       </p>
       <p>
-        <button onclick="notificationShow('notificationDismLftFix');" type="button" class="btn btn-primary">Notification Dismissable Left Fix</button>
+        <button data-bs-toggle="notification" data-bs-target="#notificationLeft" data-bs-timeout="6000" type="button" class="btn btn-primary">
+          Notification Left Fix - 6s
+        </button>
       </p>
       <p>
-        <button onclick="notificationShow('notificationDismRgtFix');" type="button" class="btn btn-primary">Notification Dismissable Right Fix</button>
+        <button data-bs-toggle="notification" data-bs-target="#notificationRight" data-bs-timeout="12000" type="button" class="btn btn-primary">
+          Notification Right Fix - 12s
+        </button>
+      </p>
+    </div>
+    <div class="col-12 col-md-4">
+      <p>
+        <button data-bs-toggle="notification" data-bs-target="#notificationDismTopFix" type="button" class="btn btn-primary">
+          Notification Dismissable Top Fix
+        </button>
+      </p>
+      <p>
+        <button data-bs-toggle="notification" data-bs-target="#notificationDismBotFix" type="button" class="btn btn-primary">
+          Notification Dismissable Bottom Fix
+        </button>
+      </p>
+      <p>
+        <button data-bs-toggle="notification" data-bs-target="#notificationDismLftFix" type="button" class="btn btn-primary">
+          Notification Dismissable Left Fix
+        </button>
+      </p>
+      <p>
+        <button data-bs-toggle="notification" data-bs-target="#notificationDismRgtFix" type="button" class="btn btn-primary">
+          Notification Dismissable Right Fix
+        </button>
       </p>
     </div>
   </div>
 </div>
 
 <!-- col1 -->
-<div class="notification" role="alert" id="notification" aria-labelledby="not0-title">
+<div class="notification fade" data-bs-timeout="7000" role="alert" id="notification" aria-labelledby="not0-title">
   <h5 id="not0-title">Notification</h5>
 </div>
 
-<div class="notification with-icon success" role="alert" id="notificationIcnTxt" aria-labelledby="not1-title">
+<div class="notification with-icon success" role="alert" id="notificationIcnTxt" data-bs-timeout="7000" aria-labelledby="not1-title">
   <h5 id="not1-title">
     <svg class="icon">
-      <use href="/bootstrap-italia/dist/svg/sprite.svg#it-check-circle" xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-check-circle"></use></svg
+      <use href="/bootstrap-italia/dist/svg/sprites.svg#it-check-circle" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-check-circle"></use></svg
     >Notification icon/text
   </h5>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</p>
 </div>
 
-<div class="notification dismissable with-icon success" role="alert" id="notificationDism" aria-labelledby="not6-title">
+<div class="notification dismissable with-icon success fade" role="alert" id="notificationDism" aria-labelledby="not6-title">
   <h5 id="not6-title">
     <svg class="icon">
-      <use href="/bootstrap-italia/dist/svg/sprite.svg#it-check-circle" xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-check-circle"></use></svg
+      <use href="/bootstrap-italia/dist/svg/sprites.svg#it-check-circle" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-check-circle"></use></svg
     >Notification Dismissable
   </h5>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</p>
-  <button type="button" class="btn notification-close">
+  <button type="button" class="btn notification-close" data-bs-dismiss="notification">
     <svg class="icon">
-      <use xlink="/bootstrap-italia/dist/svg/sprite.svg#it-close" xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-close"></use>
+      <use xlink="/bootstrap-italia/dist/svg/sprites.svg#it-close" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-close"></use>
     </svg>
-    <span class="sr-only">Chiudi notifica: Titolo notification</span>
+    <span class="visually-hidden">Chiudi notifica: Titolo notification</span>
   </button>
 </div>
 <!-- /col1 -->
 
 <!-- col2 -->
-<div class="notification top-fix with-icon success" role="alert" id="notificationTop" aria-labelledby="not2-title">
+<div class="notification top-fix with-icon success fade" role="alert" id="notificationTop" aria-labelledby="not2-title">
   <h5 id="not2-title">
     <svg class="icon">
-      <use href="/bootstrap-italia/dist/svg/sprite.svg#it-check-circle" xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-check-circle"></use></svg
+      <use href="/bootstrap-italia/dist/svg/sprites.svg#it-check-circle" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-check-circle"></use></svg
     >Notification Top Fix
   </h5>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</p>
 </div>
 
-<div class="notification bottom-fix with-icon error" role="alert" id="notificationBottom" aria-labelledby="not3-title">
+<div class="notification bottom-fix with-icon error fade" role="alert" id="notificationBottom" aria-labelledby="not3-title">
   <h5 id="not3-title">
     <svg class="icon">
-      <use href="/bootstrap-italia/dist/svg/sprite.svg#it-close-circle" xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-close-circle"></use></svg
+      <use href="/bootstrap-italia/dist/svg/sprites.svg#it-close-circle" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-close-circle"></use></svg
     >Notification Bottom Fix
   </h5>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</p>
 </div>
 
-<div class="notification left-fix with-icon info" role="alert" id="notificationLeft" aria-labelledby="not4-title">
+<div class="notification left-fix with-icon info fade" role="alert" id="notificationLeft" aria-labelledby="not4-title">
   <h5 id="not4-title">
     <svg class="icon">
-      <use href="/bootstrap-italia/dist/svg/sprite.svg#it-info-circle" xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-info-circle"></use></svg
+      <use href="/bootstrap-italia/dist/svg/sprites.svg#it-info-circle" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-info-circle"></use></svg
     >Notification Left Fix
   </h5>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</p>
 </div>
 
-<div class="notification right-fix with-icon warning" role="alert" id="notificationRight" aria-labelledby="not5-title">
+<div class="notification right-fix with-icon warning fade" role="alert" id="notificationRight" aria-labelledby="not5-title">
   <h5 id="not5-title">
     <svg class="icon">
-      <use href="/bootstrap-italia/dist/svg/sprite.svg#it-error" xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-error"></use></svg
+      <use href="/bootstrap-italia/dist/svg/sprites.svg#it-error" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-error"></use></svg
     >Notification Right Fix
   </h5>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</p>
@@ -195,77 +214,75 @@
 <!-- /col2 -->
 
 <!-- col3 -->
-<div class="notification dismissable top-fix with-icon success" role="alert" id="notificationDismTopFix" aria-labelledby="not7-title">
+<div class="notification dismissable top-fix with-icon success fade" role="alert" id="notificationDismTopFix" aria-labelledby="not7-title">
   <h5 id="not7-title">
     <svg class="icon">
-      <use href="/bootstrap-italia/dist/svg/sprite.svg#it-error" xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-error"></use></svg
+      <use href="/bootstrap-italia/dist/svg/sprites.svg#it-error" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-error"></use></svg
     >Dismissable Top Fix
   </h5>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</p>
-  <button type="button" class="btn notification-close">
+  <button type="button" class="btn notification-close" data-bs-dismiss="notification">
     <svg class="icon">
-      <use href="/bootstrap-italia/dist/svg/sprite.svg#it-close" xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-close"></use>
+      <use href="/bootstrap-italia/dist/svg/sprites.svg#it-close" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-close"></use>
     </svg>
-    <span class="sr-only">Chiudi notifica: Dismissable Top Fix</span>
+    <span class="visually-hidden">Chiudi notifica: Dismissable Top Fix</span>
   </button>
 </div>
 
-<div class="notification dismissable bottom-fix with-icon error" role="alert" id="notificationDismBotFix" aria-labelledby="not8-title">
+<div class="notification dismissable bottom-fix with-icon error fade" role="alert" id="notificationDismBotFix" aria-labelledby="not8-title">
   <h5 id="not8-title">
     <svg class="icon">
-      <use href="/bootstrap-italia/dist/svg/sprite.svg#it-close-circle" xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-close-circle"></use></svg
+      <use href="/bootstrap-italia/dist/svg/sprites.svg#it-close-circle" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-close-circle"></use></svg
     >Dismissable Bottom Fix
   </h5>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</p>
-  <button type="button" class="btn notification-close">
+  <button type="button" class="btn notification-close" data-bs-dismiss="notification">
     <svg class="icon">
-      <use href="/bootstrap-italia/dist/svg/sprite.svg#it-close" xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-close"></use>
+      <use href="/bootstrap-italia/dist/svg/sprites.svg#it-close" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-close"></use>
     </svg>
-    <span class="sr-only">Chiudi notifica: Dismissable Bottom Fix</span>
+    <span class="visually-hidden">Chiudi notifica: Dismissable Bottom Fix</span>
   </button>
 </div>
 
-<div class="notification dismissable left-fix with-icon info" role="alert" id="notificationDismLftFix" aria-labelledby="not9-title">
+<div class="notification dismissable left-fix with-icon info fade" role="alert" id="notificationDismLftFix" aria-labelledby="not9-title">
   <h5 id="not9-title">
     <svg class="icon">
-      <use href="/bootstrap-italia/dist/svg/sprite.svg#it-info-circle" xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-info-circle"></use></svg
+      <use href="/bootstrap-italia/dist/svg/sprites.svg#it-info-circle" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-info-circle"></use></svg
     >Dismissable Left Fix
   </h5>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</p>
-  <button type="button" class="btn notification-close">
+  <button type="button" class="btn notification-close" data-bs-dismiss="notification">
     <svg class="icon">
-      <use href="/bootstrap-italia/dist/svg/sprite.svg#it-close" xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-close"></use>
+      <use href="/bootstrap-italia/dist/svg/sprites.svg#it-close" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-close"></use>
     </svg>
-    <span class="sr-only">Chiudi notifica: Dismissable Left Fix</span>
+    <span class="visually-hidden">Chiudi notifica: Dismissable Left Fix</span>
   </button>
 </div>
 
-<div class="notification dismissable right-fix with-icon warning" role="alert" id="notificationDismRgtFix" aria-labelledby="not10-title">
+<div class="notification dismissable right-fix with-icon warning fade" role="alert" id="notificationDismRgtFix" aria-labelledby="not10-title">
   <h5 id="not10-title">
     <svg class="icon">
-      <use href="/bootstrap-italia/dist/svg/sprite.svg#it-error" xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-error"></use></svg
+      <use href="/bootstrap-italia/dist/svg/sprites.svg#it-error" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-error"></use></svg
     >Dismissable Right Fix
   </h5>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</p>
-  <button type="button" class="btn notification-close">
+  <button type="button" class="btn notification-close" data-bs-dismiss="notification">
     <svg class="icon">
-      <use href="/bootstrap-italia/dist/svg/sprite.svg#it-close" xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-close"></use>
+      <use href="/bootstrap-italia/dist/svg/sprites.svg#it-close" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-close"></use>
     </svg>
-    <span class="sr-only">Chiudi notifica: Dismissable Right Fix</span>
+    <span class="visually-hidden">Chiudi notifica: Dismissable Right Fix</span>
   </button>
 </div>
 <!-- /col3 -->
  
-
 <script>
   window.__PUBLIC_PATH__ = '/bootstrap-italia/dist/fonts'
-</script><script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202207122305"></script>
-
-<!-- Notification per tornare alla pagina principale -->
+</script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202207221548"></script><!-- Notification per tornare alla pagina principale -->
 <div class="notification dismissable with-icon" role="alert" id="notification-esempi" aria-labelledby="notification-esempi-title">
   <h5 id="notification-esempi-title">
     <svg class="icon">
-      <use href="/bootstrap-italia/dist/svg/sprite.svg#it-info-circle" xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-info-circle"></use></svg
+      <use href="/bootstrap-italia/dist/svg/sprites.svg#it-info-circle" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-info-circle"></use></svg
     >Esempio di utilizzo
   </h5>
   <p>
@@ -273,16 +290,16 @@
   </p>
   <button type="button" class="btn notification-close">
     <svg class="icon">
-      <use href="/bootstrap-italia/dist/svg/sprite.svg#it-close" xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-close"></use>
+      <use href="/bootstrap-italia/dist/svg/sprites.svg#it-close" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-close"></use>
     </svg>
-    <span class="sr-only">Chiudi notifica: Titolo notification</span>
+    <span class="visually-hidden">Chiudi notifica: Titolo notification</span>
   </button>
 </div>
 
 <script>
-  $(document).ready(function () {
+  /*$(document).ready(function () {
     notificationShow('notification-esempi')
-  })
+  })*/
 </script>
   </body>
 </html>

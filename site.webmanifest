@@ -5,7 +5,7 @@
   "theme_color": "#06C",
   "background_color": "#06C",
   "display": "standalone",
-  "description": "Bootstrap Italia è un tema open-source basato su Bootstrap 4 per la creazione di applicazioni responsive, mobile-first per il web.",
+  "description": "Bootstrap Italia è un tema open-source basato su Bootstrap 5 per la creazione di applicazioni responsive, mobile-first per il web.",
   "icons": [
     {
       "src": "/bootstrap-italia/docs/assets/img/favicons/android-chrome-192x192.png",

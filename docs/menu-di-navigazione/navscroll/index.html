@@ -5,20 +5,21 @@
 
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-<meta name="description" content="L’elemento Navscroll contiene liste di link con ancore a sezioni della pagina in cui è contenuta" />
+<meta name="description" content="L’elemento Navscroll presenta liste di link con ancore a sezioni della pagina in cui è contenuto." />
 <meta name="author" content="Dipartimento per la trasformazione digitale" />
 <meta name="generator" content="Jekyll v4.2.1" />
 
 <title>Navscroll · Bootstrap Italia</title>
 
-
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202207122305" rel="stylesheet" />
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202207221548" rel="stylesheet" />
+
+
 <!-- Documentation extras -->
  
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.css" rel="stylesheet" />
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202207122305" rel="stylesheet" />
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202207221548" rel="stylesheet" />
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico" />
@@ -34,13 +35,13 @@
 <meta name="twitter:site" content="@designersITA" />
 <meta name="twitter:creator" content="Dipartimento per la trasformazione digitale" />
 <meta name="twitter:title" content="Navscroll" />
-<meta name="twitter:description" content="L’elemento Navscroll contiene liste di link con ancore a sezioni della pagina in cui è contenuta" />
+<meta name="twitter:description" content="L’elemento Navscroll presenta liste di link con ancore a sezioni della pagina in cui è contenuto." />
 <meta name="twitter:image" content="/docs/assets/img/favicons/social-card.png" />
 
 <!-- Facebook -->
 <meta property="og:url" content="/docs/menu-di-navigazione/navscroll/" />
 <meta property="og:title" content="Navscroll" />
-<meta property="og:description" content="L’elemento Navscroll contiene liste di link con ancore a sezioni della pagina in cui è contenuta" />
+<meta property="og:description" content="L’elemento Navscroll presenta liste di link con ancore a sezioni della pagina in cui è contenuto." />
 <meta property="og:type" content="website" />
 <meta property="og:image" content="/docs/assets/img/favicons/social-card.png" />
 <meta property="og:image:type" content="image/png" />
@@ -78,7 +79,7 @@
 
   </head>
   <body>
-    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+    <a id="skippy" class="visually-hidden-focusable" href="#content">
       <div class="container">
         <span class="skiplink-text">Skip to main content</span>
       </div>
@@ -88,8 +89,8 @@
   <button
     class="navbar-toggler"
     type="button"
-    data-toggle="collapse"
-    data-target="#navbarsTop"
+    data-bs-toggle="collapse"
+    data-bs-target="#navbarsTop"
     aria-controls="navbarsTop"
     aria-expanded="false"
     aria-label="Toggle navigation"
@@ -104,7 +105,7 @@
     <a class="navbar-brand text-decoration-none" href="http://agid.gov.it/">AgID</a>
   </div>
   <div class="collapse navbar-collapse" id="navbarsTop">
-    <ul class="navbar-nav ml-auto">
+    <ul class="navbar-nav ms-auto">
       <li class="nav-item nav-item-w-divider">
         <a class="nav-link text-decoration-none" href="https://pianotriennale-ict.italia.it/">Piano Triennale</a>
       </li>
@@ -137,36 +138,36 @@
     <path d="M31.799 71.9V15.7h15.1V72h-15.1zM91.099 28.5h-13.8v23.1c0 2.3.1 3.8.2 4.8.1.9.5 1.7 1.2 2.4s1.8 1 3.3 1l8.6-.2.7 12c-5 1.1-8.9 1.7-11.5 1.7-6.8 0-11.4-1.5-13.8-4.6-2.5-3-3.7-8.6-3.7-16.8V0h15.1v15.6h13.8v12.9zM9.099 32.8c-2.6 0-4.8-.9-6.5-2.7s-2.6-4-2.6-6.6.9-4.8 2.5-6.6c1.7-1.8 3.9-2.6 6.5-2.6s4.8.9 6.5 2.7 2.5 4 2.5 6.7-.8 4.8-2.5 6.6c-1.6 1.6-3.7 2.5-6.4 2.5z"></path>
   </g>
 </svg>
-<div class="d-flex flex-column pl-3 pl-sm-4">
+<div class="d-flex flex-column ps-3 ps-sm-4">
           <h1 class="bd-logo-title">Bootstrap Italia</h1>
-          <h2 class="bd-logo-subtitle">Il tema Bootstrap 4 per <span class="d-none d-sm-inline">lo sviluppo di applicazioni web per </span>la PA</h2>
+          <h2 class="bd-logo-subtitle">Il tema Bootstrap 5 per <span class="d-none d-sm-inline">lo sviluppo di applicazioni web per </span>la PA</h2>
         </div>
       </div>
     </a>
 
     
-    <button class="btn btn-xs btn-primary d-md-none px-2 text-uppercase" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+    <button class="btn btn-xs btn-primary d-md-none px-2 text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
       menu
     </button>
     
 
-    <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-      <li class="nav-item pr-2">
-        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v1.6.4/bootstrap-italia.zip" aria-label="Download">
-          <small class="pr-2 m-0">v1.6.4</small>
-          <svg class="icon icon-sm icon-light"><use href="/bootstrap-italia/dist/svg/sprite.svg#it-download" xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-download"></use></svg><span class="sr-only">Download</span>
+    <ul class="navbar-nav flex-row ms-md-auto d-none d-md-flex">
+      <li class="nav-item pe-2">
+        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v2.0.0/bootstrap-italia.zip" aria-label="Download">
+          <small class="pe-2 m-0">v2.0.0</small>
+          <svg class="icon icon-sm icon-light"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-download" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-download"></use></svg><span class="visually-hidden">Download</span>
         </a>
       </li>
-      <li class="nav-item pr-2">
+      <li class="nav-item pe-2">
         <a title="Repository GitHub di Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-          <svg class="icon icon-sm icon-light"><use href="/bootstrap-italia/dist/svg/sprite.svg#it-github" xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-github"></use></svg><span class="sr-only">GitHub</span>
+          <svg class="icon icon-sm icon-light"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-github" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-github"></use></svg><span class="visually-hidden">GitHub</span>
         </a>
       </li>
     </ul>
 
     
     <div class="bd-search w-100">
-      <label for="search-input" class="sr-only">Cerca:</label>
+      <label for="search-input" class="visually-hidden">Cerca:</label>
       <input type="search" class="form-control" id="search-input" name="search-input" placeholder="Cerca componenti, classi, informazioni..." aria-label="Cerca..." autocomplete="off" />
     </div>
     
@@ -184,16 +185,20 @@
             
             <!-- One:usare ID -->
             <a
+              role="button"
               class="list-item large medium right-icon "
               href="#collapse-1"
-              data-toggle="collapse"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse-1"
               aria-expanded="false"
               aria-controls="collapse-1"
             >
-              <span>Come iniziare</span>
-              <svg class="icon icon-sm icon-primary right" aria-hidden="true">
-                <use href="/bootstrap-italia/dist/svg/sprite.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-expand"></use>
-              </svg>
+              <span class="list-item-title-icon-wrapper">
+                <span class="list-item-title">Come iniziare</span>
+                <svg class="icon icon-sm icon-primary right" aria-hidden="true">
+                  <use href="/bootstrap-italia/dist/svg/sprites.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use>
+                </svg>
+              </span>
             </a>
             <ul class="link-sublist collapse " id="collapse-1"><li>
                 <a class="list-item " href="/bootstrap-italia/docs/come-iniziare/introduzione/">
@@ -210,22 +215,29 @@
               </li><li>
                 <a class="list-item " href="/bootstrap-italia/docs/come-iniziare/componente-base/">
                   <span>Componente base</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/come-iniziare/migrazione/">
+                  <span>Migrazione</span></a>
               </li></ul>
             
           </li><li>
             
             <!-- One:usare ID -->
             <a
+              role="button"
               class="list-item large medium right-icon "
               href="#collapse-2"
-              data-toggle="collapse"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse-2"
               aria-expanded="false"
               aria-controls="collapse-2"
             >
-              <span>Organizzare gli spazi</span>
-              <svg class="icon icon-sm icon-primary right" aria-hidden="true">
-                <use href="/bootstrap-italia/dist/svg/sprite.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-expand"></use>
-              </svg>
+              <span class="list-item-title-icon-wrapper">
+                <span class="list-item-title">Organizzare gli spazi</span>
+                <svg class="icon icon-sm icon-primary right" aria-hidden="true">
+                  <use href="/bootstrap-italia/dist/svg/sprites.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use>
+                </svg>
+              </span>
             </a>
             <ul class="link-sublist collapse " id="collapse-2"><li>
                 <a class="list-item " href="/bootstrap-italia/docs/organizzare-gli-spazi/introduzione/">
@@ -261,6 +273,9 @@
                 <a class="list-item " href="/bootstrap-italia/docs/organizzare-gli-spazi/posizionamento/">
                   <span>Posizionamento</span></a>
               </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/organizzare-gli-spazi/proporzioni/">
+                  <span>Proporzioni</span></a>
+              </li><li>
                 <a class="list-item " href="/bootstrap-italia/docs/organizzare-gli-spazi/spaziature/">
                   <span>Spaziature</span></a>
               </li></ul>
@@ -269,16 +284,20 @@
             
             <!-- One:usare ID -->
             <a
+              role="button"
               class="list-item large medium right-icon "
               href="#collapse-3"
-              data-toggle="collapse"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse-3"
               aria-expanded="false"
               aria-controls="collapse-3"
             >
-              <span>Organizzare i contenuti</span>
-              <svg class="icon icon-sm icon-primary right" aria-hidden="true">
-                <use href="/bootstrap-italia/dist/svg/sprite.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-expand"></use>
-              </svg>
+              <span class="list-item-title-icon-wrapper">
+                <span class="list-item-title">Organizzare i contenuti</span>
+                <svg class="icon icon-sm icon-primary right" aria-hidden="true">
+                  <use href="/bootstrap-italia/dist/svg/sprites.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use>
+                </svg>
+              </span>
             </a>
             <ul class="link-sublist collapse " id="collapse-3"><li>
                 <a class="list-item " href="/bootstrap-italia/docs/organizzare-i-contenuti/introduzione/">
@@ -286,9 +305,6 @@
               </li><li>
                 <a class="list-item " href="/bootstrap-italia/docs/organizzare-i-contenuti/codice/">
                   <span>Codice</span></a>
-              </li><li>
-                <a class="list-item " href="/bootstrap-italia/docs/organizzare-i-contenuti/embed/">
-                  <span>Embed</span></a>
               </li><li>
                 <a class="list-item " href="/bootstrap-italia/docs/organizzare-i-contenuti/immagini/">
                   <span>Immagini</span></a>
@@ -298,12 +314,6 @@
               </li><li>
                 <a class="list-item " href="/bootstrap-italia/docs/organizzare-i-contenuti/liste-di-immagini/">
                   <span>Liste di immagini</span></a>
-              </li><li>
-                <a class="list-item " href="/bootstrap-italia/docs/organizzare-i-contenuti/liste-di-link/">
-                  <span>Liste di link</span></a>
-              </li><li>
-                <a class="list-item " href="/bootstrap-italia/docs/organizzare-i-contenuti/oggetto-media/">
-                  <span>Oggetto Media</span></a>
               </li><li>
                 <a class="list-item " href="/bootstrap-italia/docs/organizzare-i-contenuti/tabelle/">
                   <span>Tabelle</span></a>
@@ -319,16 +329,20 @@
             
             <!-- One:usare ID -->
             <a
+              role="button"
               class="list-item large medium right-icon active"
               href="#collapse-4"
-              data-toggle="collapse"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse-4"
               aria-expanded="true"
               aria-controls="collapse-4"
             >
-              <span>Menu di navigazione</span>
-              <svg class="icon icon-sm icon-primary right" aria-hidden="true">
-                <use href="/bootstrap-italia/dist/svg/sprite.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-expand"></use>
-              </svg>
+              <span class="list-item-title-icon-wrapper">
+                <span class="list-item-title">Menu di navigazione</span>
+                <svg class="icon icon-sm icon-primary right" aria-hidden="true">
+                  <use href="/bootstrap-italia/dist/svg/sprites.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use>
+                </svg>
+              </span>
             </a>
             <ul class="link-sublist collapse show" id="collapse-4"><li>
                 <a class="list-item " href="/bootstrap-italia/docs/menu-di-navigazione/introduzione/">
@@ -372,20 +386,27 @@
             
             <!-- One:usare ID -->
             <a
+              role="button"
               class="list-item large medium right-icon "
               href="#collapse-5"
-              data-toggle="collapse"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse-5"
               aria-expanded="false"
               aria-controls="collapse-5"
             >
-              <span>Componenti</span>
-              <svg class="icon icon-sm icon-primary right" aria-hidden="true">
-                <use href="/bootstrap-italia/dist/svg/sprite.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-expand"></use>
-              </svg>
+              <span class="list-item-title-icon-wrapper">
+                <span class="list-item-title">Componenti</span>
+                <svg class="icon icon-sm icon-primary right" aria-hidden="true">
+                  <use href="/bootstrap-italia/dist/svg/sprites.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use>
+                </svg>
+              </span>
             </a>
             <ul class="link-sublist collapse " id="collapse-5"><li>
                 <a class="list-item " href="/bootstrap-italia/docs/componenti/introduzione/">
                   <span>Introduzione</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/accordion/">
+                  <span>Accordion</span></a>
               </li><li>
                 <a class="list-item " href="/bootstrap-italia/docs/componenti/affix/">
                   <span>Affix</span></a>
@@ -399,17 +420,14 @@
                 <a class="list-item " href="/bootstrap-italia/docs/componenti/badge/">
                   <span>Badge</span></a>
               </li><li>
-                <a class="list-item " href="/bootstrap-italia/docs/componenti/bottoni/">
-                  <span>Bottoni</span></a>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/buttons/">
+                  <span>Buttons</span></a>
               </li><li>
                 <a class="list-item " href="/bootstrap-italia/docs/componenti/card/">
                   <span>Card</span></a>
               </li><li>
                 <a class="list-item " href="/bootstrap-italia/docs/componenti/callout/">
                   <span>Callout</span></a>
-              </li><li>
-                <a class="list-item " href="/bootstrap-italia/docs/componenti/carousel-legacy/">
-                  <span>Carousel Legacy</span></a>
               </li><li>
                 <a class="list-item " href="/bootstrap-italia/docs/componenti/carousel/">
                   <span>Carousel</span></a>
@@ -462,6 +480,9 @@
                 <a class="list-item " href="/bootstrap-italia/docs/componenti/steppers/">
                   <span>Steppers</span></a>
               </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/sticky/">
+                  <span>Sticky</span></a>
+              </li><li>
                 <a class="list-item " href="/bootstrap-italia/docs/componenti/tab/">
                   <span>Tab</span></a>
               </li><li>
@@ -476,16 +497,20 @@
             
             <!-- One:usare ID -->
             <a
+              role="button"
               class="list-item large medium right-icon "
               href="#collapse-6"
-              data-toggle="collapse"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse-6"
               aria-expanded="false"
               aria-controls="collapse-6"
             >
-              <span>Form</span>
-              <svg class="icon icon-sm icon-primary right" aria-hidden="true">
-                <use href="/bootstrap-italia/dist/svg/sprite.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-expand"></use>
-              </svg>
+              <span class="list-item-title-icon-wrapper">
+                <span class="list-item-title">Form</span>
+                <svg class="icon icon-sm icon-primary right" aria-hidden="true">
+                  <use href="/bootstrap-italia/dist/svg/sprites.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use>
+                </svg>
+              </span>
             </a>
             <ul class="link-sublist collapse " id="collapse-6"><li>
                 <a class="list-item " href="/bootstrap-italia/docs/form/introduzione/">
@@ -529,16 +554,20 @@
             
             <!-- One:usare ID -->
             <a
+              role="button"
               class="list-item large medium right-icon "
               href="#collapse-7"
-              data-toggle="collapse"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse-7"
               aria-expanded="false"
               aria-controls="collapse-7"
             >
-              <span>Utilities</span>
-              <svg class="icon icon-sm icon-primary right" aria-hidden="true">
-                <use href="/bootstrap-italia/dist/svg/sprite.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-expand"></use>
-              </svg>
+              <span class="list-item-title-icon-wrapper">
+                <span class="list-item-title">Utilities</span>
+                <svg class="icon icon-sm icon-primary right" aria-hidden="true">
+                  <use href="/bootstrap-italia/dist/svg/sprites.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use>
+                </svg>
+              </span>
             </a>
             <ul class="link-sublist collapse " id="collapse-7"><li>
                 <a class="list-item " href="/bootstrap-italia/docs/utilities/colori/">
@@ -578,10 +607,17 @@
 <ul>
 <li class="toc-entry toc-h3"><a href="#posizionamento-a-fondo-pagina-con-linea-a-sinistra">Posizionamento a fondo pagina con linea a sinistra</a></li>
 <li class="toc-entry toc-h3"><a href="#posizionamento-in-testa-alla-pagina-con-linea-a-destra">Posizionamento in testa alla pagina con linea a destra</a></li>
+<li class="toc-entry toc-h3"><a href="#progress-bar">Progress bar</a></li>
 <li class="toc-entry toc-h3"><a href="#variante-scura">Variante scura</a></li>
 </ul>
 </li>
 <li class="toc-entry toc-h2"><a href="#menu-inline">Menu Inline</a></li>
+<li class="toc-entry toc-h2"><a href="#attivazione-tramite-javascript">Attivazione tramite JavaScript</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#opzioni">Opzioni</a></li>
+<li class="toc-entry toc-h3"><a href="#metodi">Metodi</a></li>
+</ul>
+</li>
 </ul>
   </div>
 </div>
@@ -589,15 +625,29 @@
 
         <main class="col-12 col-md-9 col-xl-8 py-md-3 px-md-3 bd-content">
           <h1 class="bd-title" id="content">Navscroll</h1>
-          <p class="bd-lead">L’elemento Navscroll contiene liste di link con ancore a sezioni della pagina in cui è contenuta</p>
-          <h2 id="layout-della-navscroll">Layout della Navscroll</h2>
+          <p class="bd-lead">L’elemento Navscroll presenta liste di link con ancore a sezioni della pagina in cui è contenuto.</p>
+          <style>
+  /* Style override for Documentation purposes */
+  @media screen and (min-width: 992px) {
+    .bd-example .it-right-side {
+      max-width: 50%;
+    }
+  }
+  @media screen and (min-width: 1600px) {
+    .bd-example .it-right-side {
+      max-width: 33.333%;
+    }
+  }
+</style>
 
-<p>Il componente Navscroll è una declinazione del componente Navbar <code class="language-plaintext highlighter-rouge">&lt;nav class="navbar navbar-expand-lg"&gt;</code> con l’aggiunta della classe <code class="language-plaintext highlighter-rouge">.it-navscroll-wrapper</code>.<br />
-Nella sua versione mobile, la navigazione viene collassata all’interno di un menù, posizionabile a inizio o fine pagina.</p>
+<h2 id="layout-della-navscroll">Layout della Navscroll</h2>
+
+<p>Il componente Navscroll è una declinazione del componente Navbar <code class="language-plaintext highlighter-rouge">&lt;nav class="navbar navbar-expand-lg"&gt;</code> con l’aggiunta della classe <code class="language-plaintext highlighter-rouge">.it-navscroll-wrapper</code> e dell’attributo <code class="language-plaintext highlighter-rouge">data-bs-navscroll</code>.<br />
+Nella sua versione mobile, la navigazione viene collassata all’interno di un menù, posizionabile a inizio o fine viewport.</p>
 
 <p>Per posizionare tale menù in alto, è sufficiente aggiungere al tag <code class="language-plaintext highlighter-rouge">&lt;nav&gt;</code> la classe <code class="language-plaintext highlighter-rouge">.it-top-navscroll</code>. Al contrario, per posizionare il menù in basso, è sufficiente aggiungere la classe <code class="language-plaintext highlighter-rouge">.it-bottom-navscroll</code>.</p>
 
-<p>La Navscroll può avere una linea-separatore a destra o a sinistra dell’elemento, semplicemente aggiungendo al tag <code class="language-plaintext highlighter-rouge">&lt;nav&gt;</code> la classe <code class="language-plaintext highlighter-rouge">.it-left-side</code> per aggiungere una linea a sinistra, e <code class="language-plaintext highlighter-rouge">.it-right-side</code> per aggiungerla a destra.</p>
+<p>La Navscroll può avere una linea-separatore a destra o a sinistra dell’elemento. Si ottiene aggiungendo al tag <code class="language-plaintext highlighter-rouge">&lt;nav&gt;</code> la classe <code class="language-plaintext highlighter-rouge">.it-left-side</code> per ottenere una linea a sinistra, e <code class="language-plaintext highlighter-rouge">.it-right-side</code> per ottenere una linea a destra.</p>
 
 <div class="bd-callout bd-callout-info">
 <p>Ogni link all’interno della Navscroll contiene l’attributo <code class="language-plaintext highlighter-rouge">href</code> con il valore dell’id relativo all’elemento correlato in pagina: <code class="language-plaintext highlighter-rouge">href="#idElemento"</code>.</p>
@@ -605,7 +655,7 @@ Nella sua versione mobile, la navigazione viene collassata all’interno di un m
 
 <p>Per fare in modo che la voce di menu sia evidenziata automaticamente durante lo scorrimento della pagina, è sufficiente aggiungere alle sezioni corrispondenti alle voci di menu (<code class="language-plaintext highlighter-rouge">#idElemento</code>), una classe <code class="language-plaintext highlighter-rouge">.it-page-section</code>, e racchiudere le sezioni in un elemento con classe <code class="language-plaintext highlighter-rouge">.it-page-sections-container</code>.</p>
 
-<p><strong><a href="/bootstrap-italia/docs/esempi/navscroll/" target="\_blank">Esempio Navscroll &gt;</a></strong></p>
+<p>Le animazioni sono state realizzate con il plugin javascript <a href="https://animejs.com">AnimeJs</a>.</p>
 
 <h3 id="posizionamento-a-fondo-pagina-con-linea-a-sinistra">Posizionamento a fondo pagina con linea a sinistra</h3>
 
@@ -613,16 +663,21 @@ Nella sua versione mobile, la navigazione viene collassata all’interno di un m
 
 <div class="bd-example">
 
-<nav class="navbar it-navscroll-wrapper navbar-expand-lg it-bottom-navscroll it-left-side">
-  <button class="custom-navbar-toggler" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarNav"><span class="it-list"></span>1. Introduzione
+<nav class="navbar it-navscroll-wrapper navbar-expand-lg it-bottom-navscroll it-left-side" data-bs-navscroll="">
+  <button class="custom-navbar-toggler" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" data-bs-toggle="navbarcollapsible" data-bs-target="#navbarNav"><span class="it-list"></span>1. Introduzione
   </button>
   <div class="navbar-collapsable" id="navbarNav">
     <div class="overlay"></div>
-    <div class="close-div sr-only">
+    <div class="close-div visually-hidden">
       <button class="btn close-menu" type="button"><span class="it-close"></span>close
       </button>
     </div>
-    <a class="it-back-button" href="#"><svg class="icon icon-sm icon-primary align-top"><use href="/bootstrap-italia/dist/svg/sprite.svg#it-chevron-left"></use></svg><span>Back </span></a>
+    <a class="it-back-button" href="#" role="button">
+      <svg class="icon icon-sm icon-primary align-top">
+        <use href="/bootstrap-italia/dist/svg/sprites.svg#it-chevron-left" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-chevron-left"></use>
+      </svg>
+      <span>Back</span>
+    </a>
     <div class="menu-wrapper">
       <div class="link-list-wrapper">
         <h3 class="no_toc">header</h3>
@@ -631,35 +686,35 @@ Nella sua versione mobile, la navigazione viene collassata all’interno di un m
             <a class="nav-link active" href="#"><span>1. Introduzione </span></a>
             <ul class="link-list">
               <li class="nav-link active">
-                <a class="nav-link active" href="#"><span>1.1 Nested Item (active) </span></a>
+                <a class="nav-link active" href="#"><span>1.1 Elemento annidato (attivo) </span></a>
                 <ul class="tertiary link-list">
-                  <li class="nav-link"><a class="nav-link" href="#"><span>1.1.1 Nested Item </span></a></li>
-                  <li class="nav-link"><a class="nav-link" href="#"><span>1.1.2 Nested Item </span></a></li>
-                  <li class="nav-link"><a class="nav-link" href="#"><span>1.1.3 Nested Item </span></a></li>
+                  <li class="nav-link"><a class="nav-link" href="#"><span>1.1.1 Elemento annidato </span></a></li>
+                  <li class="nav-link"><a class="nav-link" href="#"><span>1.1.2 Elemento annidato </span></a></li>
+                  <li class="nav-link"><a class="nav-link" href="#"><span>1.1.3 Elemento annidato </span></a></li>
                 </ul>
               </li>
               <li class="nav-link">
-                <a class="nav-link" href="#"><span>1.2 Nested Item </span></a>
+                <a class="nav-link" href="#"><span>1.2 Elemento annidato </span></a>
               </li>
               <li class="nav-link">
-                <a class="nav-link" href="#"><span>1.3 Nested Item </span></a>
+                <a class="nav-link" href="#"><span>1.3 Elemento annidato </span></a>
               </li>
             </ul>
-            <a class="nav-link" href="#"><span>2. List item </span></a>
+            <a class="nav-link" href="#"><span>2. Sezione </span></a>
             <ul class="link-list">
               <li class="nav-link">
-                <a class="nav-link" href="#"><span>2.1 Nested Item </span></a>
+                <a class="nav-link" href="#"><span>2.1 Elemento annidato </span></a>
                 <ul class="tertiary link-list">
-                  <li class="nav-link"><a class="nav-link" href="#"><span>2.1.1 Nested Item </span></a></li>
-                  <li class="nav-link"><a class="nav-link" href="#"><span>2.1.2 Nested Item </span></a></li>
-                  <li class="nav-link"><a class="nav-link" href="#"><span>2.1.3 Nested Item </span></a></li>
+                  <li class="nav-link"><a class="nav-link" href="#"><span>2.1.1 Elemento annidato </span></a></li>
+                  <li class="nav-link"><a class="nav-link" href="#"><span>2.1.2 Elemento annidato </span></a></li>
+                  <li class="nav-link"><a class="nav-link" href="#"><span>2.1.3 Elemento annidato </span></a></li>
                 </ul>
               </li>
               <li class="nav-link">
-                <a class="nav-link" href="#"><span>2.2 Nested Item </span></a>
+                <a class="nav-link" href="#"><span>2.2 Elemento annidato </span></a>
               </li>
               <li class="nav-link">
-                <a class="nav-link" href="#"><span>2.3 Nested Item </span></a>
+                <a class="nav-link" href="#"><span>2.3 Elemento annidato </span></a>
               </li>
             </ul>
           </li>
@@ -669,16 +724,21 @@ Nella sua versione mobile, la navigazione viene collassata all’interno di un m
   </div>
 </nav>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar it-navscroll-wrapper navbar-expand-lg it-bottom-navscroll it-left-side"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"custom-navbar-toggler"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">aria-controls=</span><span class="s">"navbarNav"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-label=</span><span class="s">"Toggle navigation"</span> <span class="na">data-target=</span><span class="s">"#navbarNav"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"it-list"</span><span class="nt">&gt;&lt;/span&gt;</span>1. Introduzione
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar it-navscroll-wrapper navbar-expand-lg it-bottom-navscroll it-left-side"</span> <span class="na">data-bs-navscroll</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"custom-navbar-toggler"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">aria-controls=</span><span class="s">"navbarNav"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-label=</span><span class="s">"Toggle navigation"</span> <span class="na">data-bs-toggle=</span><span class="s">"navbarcollapsible"</span> <span class="na">data-bs-target=</span><span class="s">"#navbarNav"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"it-list"</span><span class="nt">&gt;&lt;/span&gt;</span>1. Introduzione
   <span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"navbar-collapsable"</span> <span class="na">id=</span><span class="s">"navbarNav"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"overlay"</span><span class="nt">&gt;&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"close-div sr-only"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"close-div visually-hidden"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn close-menu"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"it-close"</span><span class="nt">&gt;&lt;/span&gt;</span>close
       <span class="nt">&lt;/button&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"it-back-button"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm icon-primary align-top"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-chevron-left"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;&lt;span&gt;</span>Back <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"it-back-button"</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">role=</span><span class="s">"button"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm icon-primary align-top"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-chevron-left"</span> <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-chevron-left"</span><span class="nt">&gt;&lt;/use&gt;</span>
+      <span class="nt">&lt;/svg&gt;</span>
+      <span class="nt">&lt;span&gt;</span>Back<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/a&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"menu-wrapper"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"link-list-wrapper"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;h3&gt;</span>header<span class="nt">&lt;/h3&gt;</span>
@@ -687,35 +747,35 @@ Nella sua versione mobile, la navigazione viene collassata all’interno di un m
             <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link active"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>1. Introduzione <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
             <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"link-list"</span><span class="nt">&gt;</span>
               <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-link active"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link active"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>1.1 Nested Item (active) <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+                <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link active"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>1.1 Elemento annidato (attivo) <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
                 <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"tertiary link-list"</span><span class="nt">&gt;</span>
-                  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-link"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>1.1.1 Nested Item <span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
-                  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-link"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>1.1.2 Nested Item <span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
-                  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-link"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>1.1.3 Nested Item <span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+                  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-link"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>1.1.1 Elemento annidato <span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+                  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-link"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>1.1.2 Elemento annidato <span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+                  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-link"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>1.1.3 Elemento annidato <span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
                 <span class="nt">&lt;/ul&gt;</span>
               <span class="nt">&lt;/li&gt;</span>
               <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-link"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>1.2 Nested Item <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+                <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>1.2 Elemento annidato <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
               <span class="nt">&lt;/li&gt;</span>
               <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-link"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>1.3 Nested Item <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+                <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>1.3 Elemento annidato <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
               <span class="nt">&lt;/li&gt;</span>
             <span class="nt">&lt;/ul&gt;</span>
-            <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>2. List item <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>2. Sezione <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
             <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"link-list"</span><span class="nt">&gt;</span>
               <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-link"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>2.1 Nested Item <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+                <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>2.1 Elemento annidato <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
                 <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"tertiary link-list"</span><span class="nt">&gt;</span>
-                  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-link"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>2.1.1 Nested Item <span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
-                  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-link"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>2.1.2 Nested Item <span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
-                  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-link"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>2.1.3 Nested Item <span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+                  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-link"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>2.1.1 Elemento annidato <span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+                  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-link"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>2.1.2 Elemento annidato <span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+                  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-link"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>2.1.3 Elemento annidato <span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
                 <span class="nt">&lt;/ul&gt;</span>
               <span class="nt">&lt;/li&gt;</span>
               <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-link"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>2.2 Nested Item <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+                <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>2.2 Elemento annidato <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
               <span class="nt">&lt;/li&gt;</span>
               <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-link"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>2.3 Nested Item <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+                <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>2.3 Elemento annidato <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
               <span class="nt">&lt;/li&gt;</span>
             <span class="nt">&lt;/ul&gt;</span>
           <span class="nt">&lt;/li&gt;</span>
@@ -731,16 +791,16 @@ Nella sua versione mobile, la navigazione viene collassata all’interno di un m
 
 <div class="bd-example">
 
-<nav class="navbar it-navscroll-wrapper navbar-expand-lg it-top-navscroll it-right-side">
-  <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavB" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarNavB"><span class="it-list"></span>1. Introduzione
+<nav class="navbar it-navscroll-wrapper navbar-expand-lg it-top-navscroll it-right-side" data-bs-navscroll="">
+  <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavB" aria-expanded="false" aria-label="Toggle navigation" data-bs-toggle="navbarcollapsible" data-bs-target="#navbarNavB"><span class="it-list"></span>1. Introduzione
   </button>
   <div class="navbar-collapsable" id="navbarNavB">
     <div class="overlay"></div>
-    <div class="close-div sr-only">
+    <div class="close-div visually-hidden">
       <button class="btn close-menu" type="button"><span class="it-close"></span>close
       </button>
     </div>
-    <a class="it-back-button" href="#"><svg class="icon icon-sm icon-primary align-top"><use href="/bootstrap-italia/dist/svg/sprite.svg#it-chevron-left"></use></svg><span>Back </span></a>
+    <a class="it-back-button" href="#"><svg class="icon icon-sm icon-primary align-top"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-chevron-left"></use></svg><span>Back </span></a>
     <div class="menu-wrapper">
       <div class="link-list-wrapper">
         <h3 class="no_toc">header</h3>
@@ -749,35 +809,35 @@ Nella sua versione mobile, la navigazione viene collassata all’interno di un m
             <a class="nav-link active" href="#"><span>1. Introduzione </span></a>
             <ul class="link-list">
               <li class="nav-link active">
-                <a class="nav-link active" href="#"><span>1.1 Nested Item (active) </span></a>
+                <a class="nav-link active" href="#"><span>1.1 Elemento annidato (attivo) </span></a>
                 <ul class="tertiary link-list">
-                  <li class="nav-link"><a class="nav-link" href="#"><span>1.1.1 Nested Item </span></a></li>
-                  <li class="nav-link"><a class="nav-link" href="#"><span>1.1.2 Nested Item </span></a></li>
-                  <li class="nav-link"><a class="nav-link" href="#"><span>1.1.3 Nested Item </span></a></li>
+                  <li class="nav-link"><a class="nav-link" href="#"><span>1.1.1 Elemento annidato </span></a></li>
+                  <li class="nav-link"><a class="nav-link" href="#"><span>1.1.2 Elemento annidato </span></a></li>
+                  <li class="nav-link"><a class="nav-link" href="#"><span>1.1.3 Elemento annidato </span></a></li>
                 </ul>
               </li>
               <li class="nav-link">
-                <a class="nav-link" href="#"><span>1.2 Nested Item </span></a>
+                <a class="nav-link" href="#"><span>1.2 Elemento annidato </span></a>
               </li>
               <li class="nav-link">
-                <a class="nav-link" href="#"><span>1.3 Nested Item </span></a>
+                <a class="nav-link" href="#"><span>1.3 Elemento annidato </span></a>
               </li>
             </ul>
-            <a class="nav-link" href="#"><span>2. List item </span></a>
+            <a class="nav-link" href="#"><span>2. Sezione </span></a>
             <ul class="link-list">
               <li class="nav-link">
-                <a class="nav-link" href="#"><span>2.1 Nested Item </span></a>
+                <a class="nav-link" href="#"><span>2.1 Elemento annidato </span></a>
                 <ul class="tertiary link-list">
-                  <li class="nav-link"><a class="nav-link" href="#"><span>2.1.1 Nested Item </span></a></li>
-                  <li class="nav-link"><a class="nav-link" href="#"><span>2.1.2 Nested Item </span></a></li>
-                  <li class="nav-link"><a class="nav-link" href="#"><span>2.1.3 Nested Item </span></a></li>
+                  <li class="nav-link"><a class="nav-link" href="#"><span>2.1.1 Elemento annidato </span></a></li>
+                  <li class="nav-link"><a class="nav-link" href="#"><span>2.1.2 Elemento annidato </span></a></li>
+                  <li class="nav-link"><a class="nav-link" href="#"><span>2.1.3 Elemento annidato </span></a></li>
                 </ul>
               </li>
               <li class="nav-link">
-                <a class="nav-link" href="#"><span>2.2 Nested Item </span></a>
+                <a class="nav-link" href="#"><span>2.2 Elemento annidato </span></a>
               </li>
               <li class="nav-link">
-                <a class="nav-link" href="#"><span>2.3 Nested Item </span></a>
+                <a class="nav-link" href="#"><span>2.3 Elemento annidato </span></a>
               </li>
             </ul>
           </li>
@@ -787,16 +847,16 @@ Nella sua versione mobile, la navigazione viene collassata all’interno di un m
   </div>
 </nav>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar it-navscroll-wrapper navbar-expand-lg it-top-navscroll it-right-side"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"custom-navbar-toggler"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">aria-controls=</span><span class="s">"navbarNavB"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-label=</span><span class="s">"Toggle navigation"</span> <span class="na">data-target=</span><span class="s">"#navbarNavB"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"it-list"</span><span class="nt">&gt;&lt;/span&gt;</span>1. Introduzione
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar it-navscroll-wrapper navbar-expand-lg it-top-navscroll it-right-side"</span> <span class="na">data-bs-navscroll</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"custom-navbar-toggler"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">aria-controls=</span><span class="s">"navbarNavB"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-label=</span><span class="s">"Toggle navigation"</span> <span class="na">data-bs-toggle=</span><span class="s">"navbarcollapsible"</span> <span class="na">data-bs-target=</span><span class="s">"#navbarNavB"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"it-list"</span><span class="nt">&gt;&lt;/span&gt;</span>1. Introduzione
   <span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"navbar-collapsable"</span> <span class="na">id=</span><span class="s">"navbarNavB"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"overlay"</span><span class="nt">&gt;&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"close-div sr-only"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"close-div visually-hidden"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn close-menu"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"it-close"</span><span class="nt">&gt;&lt;/span&gt;</span>close
       <span class="nt">&lt;/button&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"it-back-button"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm icon-primary align-top"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-chevron-left"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;&lt;span&gt;</span>Back <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"it-back-button"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm icon-primary align-top"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-chevron-left"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;&lt;span&gt;</span>Back <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"menu-wrapper"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"link-list-wrapper"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;h3&gt;</span>header<span class="nt">&lt;/h3&gt;</span>
@@ -805,35 +865,177 @@ Nella sua versione mobile, la navigazione viene collassata all’interno di un m
             <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link active"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>1. Introduzione <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
             <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"link-list"</span><span class="nt">&gt;</span>
               <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-link active"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link active"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>1.1 Nested Item (active) <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+                <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link active"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>1.1 Elemento annidato (attivo) <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
                 <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"tertiary link-list"</span><span class="nt">&gt;</span>
-                  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-link"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>1.1.1 Nested Item <span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
-                  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-link"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>1.1.2 Nested Item <span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
-                  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-link"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>1.1.3 Nested Item <span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+                  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-link"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>1.1.1 Elemento annidato <span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+                  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-link"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>1.1.2 Elemento annidato <span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+                  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-link"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>1.1.3 Elemento annidato <span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
                 <span class="nt">&lt;/ul&gt;</span>
               <span class="nt">&lt;/li&gt;</span>
               <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-link"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>1.2 Nested Item <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+                <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>1.2 Elemento annidato <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
               <span class="nt">&lt;/li&gt;</span>
               <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-link"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>1.3 Nested Item <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+                <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>1.3 Elemento annidato <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
               <span class="nt">&lt;/li&gt;</span>
             <span class="nt">&lt;/ul&gt;</span>
-            <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>2. List item <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>2. Sezione <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
             <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"link-list"</span><span class="nt">&gt;</span>
               <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-link"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>2.1 Nested Item <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+                <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>2.1 Elemento annidato <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
                 <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"tertiary link-list"</span><span class="nt">&gt;</span>
-                  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-link"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>2.1.1 Nested Item <span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
-                  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-link"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>2.1.2 Nested Item <span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
-                  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-link"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>2.1.3 Nested Item <span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+                  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-link"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>2.1.1 Elemento annidato <span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+                  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-link"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>2.1.2 Elemento annidato <span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+                  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-link"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>2.1.3 Elemento annidato <span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
                 <span class="nt">&lt;/ul&gt;</span>
               <span class="nt">&lt;/li&gt;</span>
               <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-link"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>2.2 Nested Item <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+                <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>2.2 Elemento annidato <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
               <span class="nt">&lt;/li&gt;</span>
               <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-link"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>2.3 Nested Item <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+                <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>2.3 Elemento annidato <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+              <span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;/ul&gt;</span>
+          <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/nav&gt;</span></code></pre></figure>
+
+<h3 id="progress-bar">Progress bar</h3>
+
+<p>La Navscroll può mostrare una barra di avanzamento dello scorrimento del contenuto. Per farlo utilizzare il componente <a href="/bootstrap-italia/docs/componenti/progress-indicators/#progress-bar">Progress Bar</a>, aggiungendo la classe <code class="language-plaintext highlighter-rouge">.it-navscroll-progressbar</code> all’elemento <code class="language-plaintext highlighter-rouge">.progress-bar</code>. Il contenuto a cui si riferisce l’avanzamento dello scorrimento è relativo all’elemento <code class="language-plaintext highlighter-rouge">.it-page-sections-container</code>.</p>
+
+<p><strong><a href="/bootstrap-italia/docs/esempi/navscroll/" target="\_blank">Esempio Navscroll con Progress bar &gt;</a></strong></p>
+
+<div class="bd-example">
+
+<nav class="navbar it-navscroll-wrapper navbar-expand-lg it-bottom-navscroll it-right-side" data-bs-navscroll="">
+  <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavProgress" aria-expanded="false" aria-label="Toggle navigation" data-bs-toggle="navbarcollapsible" data-bs-target="#navbarNavProgress">
+    <span class="it-list"></span>1. Introduzione
+  </button>
+  <div class="progress custom-navbar-progressbar">
+    <div class="progress-bar it-navscroll-progressbar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+  <div class="navbar-collapsable" id="navbarNavProgress">
+    <div class="overlay"></div>
+    <a class="it-back-button" href="#" role="button">
+      <svg class="icon icon-sm icon-primary align-top">
+        <use href="/bootstrap-italia/dist/svg/sprites.svg#it-chevron-left" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-chevron-left"></use>
+      </svg>
+      <span>Indietro</span>
+    </a>
+    <div class="menu-wrapper">
+      <div class="link-list-wrapper">
+        <h3 class="no_toc">header</h3>
+        <div class="progress">
+          <div class="progress-bar it-navscroll-progressbar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <ul class="link-list">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">
+              <span>1. Introduzione </span>
+            </a>
+            <ul class="link-list">
+              <li class="nav-link">
+                <a class="nav-link" href="#">
+                  <span>1.1 Elemento annidato </span>
+                </a>
+                <ul class="tertiary link-list">
+                  <li class="nav-link">
+                    <a class="nav-link" href="#">
+                      <span>1.1.1 Elemento annidato </span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span>2. Seconda sezione </span>
+            </a>
+            <ul class="link-list">
+              <li class="nav-link">
+                <a class="nav-link" href="#">
+                  <span>2.1 Elemento annidato </span>
+                </a>
+                <ul class="tertiary link-list">
+                  <li class="nav-link">
+                    <a class="nav-link" href="#">
+                      <span>2.1.1 Elemento annidato </span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar it-navscroll-wrapper navbar-expand-lg it-bottom-navscroll it-right-side"</span> <span class="na">data-bs-navscroll</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"custom-navbar-toggler"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">aria-controls=</span><span class="s">"navbarNavProgress"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span>
+    <span class="na">aria-label=</span><span class="s">"Toggle navigation"</span> <span class="na">data-bs-toggle=</span><span class="s">"navbarcollapsible"</span> <span class="na">data-bs-target=</span><span class="s">"#navbarNavProgress"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"it-list"</span><span class="nt">&gt;&lt;/span&gt;</span>1. Introduzione
+  <span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress custom-navbar-progressbar"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-bar it-navscroll-progressbar"</span> <span class="na">role=</span><span class="s">"progressbar"</span> <span class="na">aria-valuenow=</span><span class="s">"0"</span> <span class="na">aria-valuemin=</span><span class="s">"0"</span> <span class="na">aria-valuemax=</span><span class="s">"100"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"navbar-collapsable"</span> <span class="na">id=</span><span class="s">"navbarNavProgress"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"overlay"</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"it-back-button"</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">role=</span><span class="s">"button"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm icon-primary align-top"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-chevron-left"</span>
+          <span class="na">xlink:href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-chevron-left"</span><span class="nt">&gt;&lt;/use&gt;</span>
+      <span class="nt">&lt;/svg&gt;</span>
+      <span class="nt">&lt;span&gt;</span>Indietro<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"menu-wrapper"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"link-list-wrapper"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h3&gt;</span>header<span class="nt">&lt;/h3&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-bar it-navscroll-progressbar"</span> <span class="na">role=</span><span class="s">"progressbar"</span> <span class="na">aria-valuenow=</span><span class="s">"0"</span> <span class="na">aria-valuemin=</span><span class="s">"0"</span> <span class="na">aria-valuemax=</span><span class="s">"100"</span><span class="nt">&gt;&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"link-list"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link active"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;span&gt;</span>1. Introduzione <span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"link-list"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-link"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+                  <span class="nt">&lt;span&gt;</span>1.1 Elemento annidato <span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;/a&gt;</span>
+                <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"tertiary link-list"</span><span class="nt">&gt;</span>
+                  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-link"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+                      <span class="nt">&lt;span&gt;</span>1.1.1 Elemento annidato <span class="nt">&lt;/span&gt;</span>
+                    <span class="nt">&lt;/a&gt;</span>
+                  <span class="nt">&lt;/li&gt;</span>
+                <span class="nt">&lt;/ul&gt;</span>
+              <span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;/ul&gt;</span>
+          <span class="nt">&lt;/li&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;span&gt;</span>2. Seconda sezione <span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"link-list"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-link"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+                  <span class="nt">&lt;span&gt;</span>2.1 Elemento annidato <span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;/a&gt;</span>
+                <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"tertiary link-list"</span><span class="nt">&gt;</span>
+                  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-link"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+                      <span class="nt">&lt;span&gt;</span>2.1.1 Elemento annidato <span class="nt">&lt;/span&gt;</span>
+                    <span class="nt">&lt;/a&gt;</span>
+                  <span class="nt">&lt;/li&gt;</span>
+                <span class="nt">&lt;/ul&gt;</span>
               <span class="nt">&lt;/li&gt;</span>
             <span class="nt">&lt;/ul&gt;</span>
           <span class="nt">&lt;/li&gt;</span>
@@ -858,16 +1060,16 @@ Per cambiare il tema è sufficiente aggiungere le seguenti classi al tag <code c
 
 <div class="bd-example">
 
-<nav class="navbar it-navscroll-wrapper navbar-expand-lg it-top-navscroll it-right-side theme-dark-mobile theme-dark-desk">
-  <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavC" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarNavC"><span class="it-list"></span>1. Introduzione
+<nav class="navbar it-navscroll-wrapper navbar-expand-lg it-top-navscroll it-right-side theme-dark-mobile theme-dark-desk" data-bs-navscroll="">
+  <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavC" aria-expanded="false" aria-label="Toggle navigation" data-bs-toggle="navbarcollapsible" data-bs-target="#navbarNavC"><span class="it-list"></span>1. Introduzione
   </button>
   <div class="navbar-collapsable" id="navbarNavC">
     <div class="overlay"></div>
-    <div class="close-div sr-only">
+    <div class="close-div visually-hidden">
       <button class="btn close-menu" type="button"><span class="it-close"></span>close
       </button>
     </div>
-    <a class="it-back-button" href="#"><svg class="icon icon-sm icon-white align-top"><use href="/bootstrap-italia/dist/svg/sprite.svg#it-chevron-left"></use></svg><span>Back </span></a>
+    <a class="it-back-button" href="#"><svg class="icon icon-sm icon-white align-top"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-chevron-left"></use></svg><span>Back </span></a>
     <div class="menu-wrapper">
       <div class="link-list-wrapper">
         <h3 class="no_toc">header</h3>
@@ -876,35 +1078,35 @@ Per cambiare il tema è sufficiente aggiungere le seguenti classi al tag <code c
             <a class="nav-link active" href="#"><span>1. Introduzione </span></a>
             <ul class="link-list">
               <li class="nav-link active">
-                <a class="nav-link active" href="#"><span>1.1 Nested Item (active) </span></a>
+                <a class="nav-link active" href="#"><span>1.1 Elemento annidato (attivo) </span></a>
                 <ul class="tertiary link-list">
-                  <li class="nav-link"><a class="nav-link" href="#"><span>1.1.1 Nested Item </span></a></li>
-                  <li class="nav-link"><a class="nav-link" href="#"><span>1.1.2 Nested Item </span></a></li>
-                  <li class="nav-link"><a class="nav-link" href="#"><span>1.1.3 Nested Item </span></a></li>
+                  <li class="nav-link"><a class="nav-link" href="#"><span>1.1.1 Elemento annidato </span></a></li>
+                  <li class="nav-link"><a class="nav-link" href="#"><span>1.1.2 Elemento annidato </span></a></li>
+                  <li class="nav-link"><a class="nav-link" href="#"><span>1.1.3 Elemento annidato </span></a></li>
                 </ul>
               </li>
               <li class="nav-link">
-                <a class="nav-link" href="#"><span>1.2 Nested Item </span></a>
+                <a class="nav-link" href="#"><span>1.2 Elemento annidato </span></a>
               </li>
               <li class="nav-link">
-                <a class="nav-link" href="#"><span>1.3 Nested Item </span></a>
+                <a class="nav-link" href="#"><span>1.3 Elemento annidato </span></a>
               </li>
             </ul>
-            <a class="nav-link" href="#"><span>2. List item </span></a>
+            <a class="nav-link" href="#"><span>2. Sezione </span></a>
             <ul class="link-list">
               <li class="nav-link">
-                <a class="nav-link" href="#"><span>2.1 Nested Item </span></a>
+                <a class="nav-link" href="#"><span>2.1 Elemento annidato </span></a>
                 <ul class="tertiary link-list">
-                  <li class="nav-link"><a class="nav-link" href="#"><span>2.1.1 Nested Item </span></a></li>
-                  <li class="nav-link"><a class="nav-link" href="#"><span>2.1.2 Nested Item </span></a></li>
-                  <li class="nav-link"><a class="nav-link" href="#"><span>2.1.3 Nested Item </span></a></li>
+                  <li class="nav-link"><a class="nav-link" href="#"><span>2.1.1 Elemento annidato </span></a></li>
+                  <li class="nav-link"><a class="nav-link" href="#"><span>2.1.2 Elemento annidato </span></a></li>
+                  <li class="nav-link"><a class="nav-link" href="#"><span>2.1.3 Elemento annidato </span></a></li>
                 </ul>
               </li>
               <li class="nav-link">
-                <a class="nav-link" href="#"><span>2.2 Nested Item </span></a>
+                <a class="nav-link" href="#"><span>2.2 Elemento annidato </span></a>
               </li>
               <li class="nav-link">
-                <a class="nav-link" href="#"><span>2.3 Nested Item </span></a>
+                <a class="nav-link" href="#"><span>2.3 Elemento annidato </span></a>
               </li>
             </ul>
           </li>
@@ -914,16 +1116,16 @@ Per cambiare il tema è sufficiente aggiungere le seguenti classi al tag <code c
   </div>
 </nav>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar it-navscroll-wrapper navbar-expand-lg it-top-navscroll it-right-side theme-dark-mobile theme-dark-desk"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"custom-navbar-toggler"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">aria-controls=</span><span class="s">"navbarNavC"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-label=</span><span class="s">"Toggle navigation"</span> <span class="na">data-target=</span><span class="s">"#navbarNavC"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"it-list"</span><span class="nt">&gt;&lt;/span&gt;</span>1. Introduzione
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar it-navscroll-wrapper navbar-expand-lg it-top-navscroll it-right-side theme-dark-mobile theme-dark-desk"</span> <span class="na">data-bs-navscroll</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"custom-navbar-toggler"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">aria-controls=</span><span class="s">"navbarNavC"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-label=</span><span class="s">"Toggle navigation"</span> <span class="na">data-bs-toggle=</span><span class="s">"navbarcollapsible"</span> <span class="na">data-bs-target=</span><span class="s">"#navbarNavC"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"it-list"</span><span class="nt">&gt;&lt;/span&gt;</span>1. Introduzione
   <span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"navbar-collapsable"</span> <span class="na">id=</span><span class="s">"navbarNavC"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"overlay"</span><span class="nt">&gt;&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"close-div sr-only"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"close-div visually-hidden"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn close-menu"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"it-close"</span><span class="nt">&gt;&lt;/span&gt;</span>close
       <span class="nt">&lt;/button&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"it-back-button"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm icon-white align-top"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-chevron-left"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;&lt;span&gt;</span>Back <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"it-back-button"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm icon-white align-top"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-chevron-left"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;&lt;span&gt;</span>Back <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"menu-wrapper"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"link-list-wrapper"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;h3&gt;</span>header<span class="nt">&lt;/h3&gt;</span>
@@ -932,35 +1134,35 @@ Per cambiare il tema è sufficiente aggiungere le seguenti classi al tag <code c
             <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link active"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>1. Introduzione <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
             <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"link-list"</span><span class="nt">&gt;</span>
               <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-link active"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link active"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>1.1 Nested Item (active) <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+                <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link active"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>1.1 Elemento annidato (attivo) <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
                 <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"tertiary link-list"</span><span class="nt">&gt;</span>
-                  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-link"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>1.1.1 Nested Item <span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
-                  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-link"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>1.1.2 Nested Item <span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
-                  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-link"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>1.1.3 Nested Item <span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+                  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-link"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>1.1.1 Elemento annidato <span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+                  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-link"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>1.1.2 Elemento annidato <span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+                  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-link"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>1.1.3 Elemento annidato <span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
                 <span class="nt">&lt;/ul&gt;</span>
               <span class="nt">&lt;/li&gt;</span>
               <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-link"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>1.2 Nested Item <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+                <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>1.2 Elemento annidato <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
               <span class="nt">&lt;/li&gt;</span>
               <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-link"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>1.3 Nested Item <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+                <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>1.3 Elemento annidato <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
               <span class="nt">&lt;/li&gt;</span>
             <span class="nt">&lt;/ul&gt;</span>
-            <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>2. List item <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>2. Sezione <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
             <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"link-list"</span><span class="nt">&gt;</span>
               <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-link"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>2.1 Nested Item <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+                <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>2.1 Elemento annidato <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
                 <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"tertiary link-list"</span><span class="nt">&gt;</span>
-                  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-link"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>2.1.1 Nested Item <span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
-                  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-link"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>2.1.2 Nested Item <span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
-                  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-link"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>2.1.3 Nested Item <span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+                  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-link"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>2.1.1 Elemento annidato <span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+                  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-link"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>2.1.2 Elemento annidato <span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+                  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-link"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>2.1.3 Elemento annidato <span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
                 <span class="nt">&lt;/ul&gt;</span>
               <span class="nt">&lt;/li&gt;</span>
               <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-link"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>2.2 Nested Item <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+                <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>2.2 Elemento annidato <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
               <span class="nt">&lt;/li&gt;</span>
               <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-link"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>2.3 Nested Item <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+                <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"nav-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>2.3 Elemento annidato <span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
               <span class="nt">&lt;/li&gt;</span>
             <span class="nt">&lt;/ul&gt;</span>
           <span class="nt">&lt;/li&gt;</span>
@@ -974,42 +1176,60 @@ Per cambiare il tema è sufficiente aggiungere le seguenti classi al tag <code c
 
 <p>La classe distintiva del wrapper esterno è <code class="language-plaintext highlighter-rouge">.inline-menu</code>.</p>
 
-<p>Gli inline menù possono contenere liste di link di ogni tipo; nell’esempio che segue è stata inserita una link list collassabile.</p>
+<p>Gli inline menù possono contenere liste di link di ogni tipo; nell’esempio che segue è stata inserita una Lista di link collassabile.</p>
 
-<p>Per maggiori informazioni, si può fare riferimento alla <a href="/bootstrap-italia/docs/organizzare-i-contenuti/liste-di-link/">documentazione dei Link List</a>.</p>
+<p>Per maggiori informazioni, si può fare riferimento alla <a href="/bootstrap-italia/docs/organizzare-i-contenuti/liste/#liste-per-menù-di-navigazione">documentazione delle Liste di link</a>.</p>
 
 <div class="bd-example">
 
 <nav class="inline-menu">
   <div class="link-list-wrapper">
     <ul class="link-list">
-      <li><a class="list-item large medium right-icon" href="#collapseOne" data-toggle="collapse" aria-expanded="false" aria-controls="collapseOne"><span>Link list 1</span><svg class="icon icon-xs icon-primary right"><use href="/bootstrap-italia/dist/svg/sprite.svg#it-expand"></use></svg></a>
+      <li>
+        <a class="list-item large medium right-icon" href="#collapseOne" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseOne">
+          <span class="list-item-title-icon-wrapper">
+            <span>Link lista 1</span>
+            <svg class="icon icon-xs icon-primary right"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use></svg>
+          </span>
+        </a>
         <ul class="link-sublist collapse" id="collapseOne">
-          <li><a class="list-item" href="#"><span>Link list 1</span></a>
+          <li><a class="list-item" href="#"><span>Link lista 1.1</span></a>
           </li>
-          <li><a class="list-item" href="#"><span>Link list 1</span></a>
+          <li><a class="list-item" href="#"><span>Link lista 1.2</span></a>
           </li>
-          <li><a class="list-item" href="#"><span>Link list 1</span></a>
+          <li><a class="list-item" href="#"><span>Link lista 1.3</span></a>
           </li>
         </ul>
       </li>
-      <li><a class="list-item large medium right-icon" href="#collapseTwo" data-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo"><span>Link list 1</span><svg class="icon icon-xs icon-primary right"><use href="/bootstrap-italia/dist/svg/sprite.svg#it-expand"></use></svg></a>
+      <li>
+        <a class="list-item large medium right-icon" href="#collapseTwo" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo">
+          <span class="list-item-title-icon-wrapper">
+            <span>Link lista 2</span>
+            <svg class="icon icon-xs icon-primary right"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use></svg>
+          </span>
+        </a>
         <ul class="link-sublist collapse" id="collapseTwo">
-          <li><a class="list-item" href="#"><span>Link list 1</span></a>
+          <li><a class="list-item" href="#"><span>Link lista 2.1</span></a>
           </li>
-          <li><a class="list-item" href="#"><span>Link list 1</span></a>
+          <li><a class="list-item" href="#"><span>Link lista 2.2</span></a>
           </li>
-          <li><a class="list-item" href="#"><span>Link list 1</span></a>
+          <li><a class="list-item" href="#"><span>Link lista 2.3</span></a>
           </li>
         </ul>
       </li>
-      <li><a class="list-item large medium right-icon" href="#collapseThree" data-toggle="collapse" aria-expanded="false" aria-controls="collapseThree"><span>Link list 1</span><svg class="icon icon-xs icon-primary right"><use href="/bootstrap-italia/dist/svg/sprite.svg#it-expand"></use></svg></a>
+      <li>
+        <a class="list-item large medium right-icon" href="#collapseThree" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseThree">
+          <span class="list-item-title-icon-wrapper">
+            <span>Link lista 3</span>
+            <svg class="icon icon-xs icon-primary right"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use></svg>
+          </span>
+        </a>
         <ul class="link-sublist collapse" id="collapseThree">
-          <li><a class="list-item" href="#"><span>Link list 1</span></a>
+          <li><a class="list-item" href="#"><span>Link lista 3.1</span></a>
           </li>
-          <li><a class="list-item" href="#"><span>Link list 1</span></a>
+          <li><a class="list-item" href="#"><span>Link lista 3.2</span></a>
           </li>
-          <li><a class="list-item" href="#"><span>Link list 1</span></a>
+          <li><a class="list-item" href="#"><span>Link lista 3.3</span></a>
           </li>
         </ul>
       </li>
@@ -1020,33 +1240,51 @@ Per cambiare il tema è sufficiente aggiungere le seguenti classi al tag <code c
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"inline-menu"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"link-list-wrapper"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"link-list"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item large medium right-icon"</span> <span class="na">href=</span><span class="s">"#collapseOne"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"collapseOne"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1<span class="nt">&lt;/span&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-xs icon-primary right"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-expand"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt;</span>
+      <span class="nt">&lt;li&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"list-item large medium right-icon"</span> <span class="na">href=</span><span class="s">"#collapseOne"</span> <span class="na">data-bs-toggle=</span><span class="s">"collapse"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"collapseOne"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-title-icon-wrapper"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span&gt;</span>Link lista 1<span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-xs icon-primary right"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-expand"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+          <span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;/a&gt;</span>
         <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"link-sublist collapse"</span> <span class="na">id=</span><span class="s">"collapseOne"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+          <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link lista 1.1<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
           <span class="nt">&lt;/li&gt;</span>
-          <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+          <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link lista 1.2<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
           <span class="nt">&lt;/li&gt;</span>
-          <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+          <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link lista 1.3<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
           <span class="nt">&lt;/li&gt;</span>
         <span class="nt">&lt;/ul&gt;</span>
       <span class="nt">&lt;/li&gt;</span>
-      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item large medium right-icon"</span> <span class="na">href=</span><span class="s">"#collapseTwo"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"collapseTwo"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1<span class="nt">&lt;/span&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-xs icon-primary right"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-expand"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt;</span>
+      <span class="nt">&lt;li&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"list-item large medium right-icon"</span> <span class="na">href=</span><span class="s">"#collapseTwo"</span> <span class="na">data-bs-toggle=</span><span class="s">"collapse"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"collapseTwo"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-title-icon-wrapper"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span&gt;</span>Link lista 2<span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-xs icon-primary right"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-expand"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+          <span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;/a&gt;</span>
         <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"link-sublist collapse"</span> <span class="na">id=</span><span class="s">"collapseTwo"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+          <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link lista 2.1<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
           <span class="nt">&lt;/li&gt;</span>
-          <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+          <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link lista 2.2<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
           <span class="nt">&lt;/li&gt;</span>
-          <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+          <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link lista 2.3<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
           <span class="nt">&lt;/li&gt;</span>
         <span class="nt">&lt;/ul&gt;</span>
       <span class="nt">&lt;/li&gt;</span>
-      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item large medium right-icon"</span> <span class="na">href=</span><span class="s">"#collapseThree"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"collapseThree"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1<span class="nt">&lt;/span&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-xs icon-primary right"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-expand"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/a&gt;</span>
+      <span class="nt">&lt;li&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"list-item large medium right-icon"</span> <span class="na">href=</span><span class="s">"#collapseThree"</span> <span class="na">data-bs-toggle=</span><span class="s">"collapse"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"collapseThree"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-title-icon-wrapper"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span&gt;</span>Link lista 3<span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-xs icon-primary right"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-expand"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+          <span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;/a&gt;</span>
         <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"link-sublist collapse"</span> <span class="na">id=</span><span class="s">"collapseThree"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+          <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link lista 3.1<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
           <span class="nt">&lt;/li&gt;</span>
-          <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+          <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link lista 3.2<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
           <span class="nt">&lt;/li&gt;</span>
-          <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link list 1<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+          <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span&gt;</span>Link lista 3.3<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
           <span class="nt">&lt;/li&gt;</span>
         <span class="nt">&lt;/ul&gt;</span>
       <span class="nt">&lt;/li&gt;</span>
@@ -1054,24 +1292,95 @@ Per cambiare il tema è sufficiente aggiungere le seguenti classi al tag <code c
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/nav&gt;</span></code></pre></figure>
 
+<h2 id="attivazione-tramite-javascript">Attivazione tramite JavaScript</h2>
+
+<p>È possibile creare un’istanza di Navscroll manualmente con il constructor:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">navscrollElement</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">'</span><span class="s1">.it-navscroll-wrapper</span><span class="dl">'</span><span class="p">)</span>
+<span class="kd">var</span> <span class="nx">navscroll</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">NavScroll</span><span class="p">(</span><span class="nx">navscrollElement</span><span class="p">,</span> <span class="nx">config</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="opzioni">Opzioni</h3>
+
+<p>Le opzioni possono essere passate tramite gli attributi data o tramite Javascript. Per quanto riguarda gli attributi data, aggiungi il nome dell’opzione a <code class="language-plaintext highlighter-rouge">data-bs</code>, come in <code class="language-plaintext highlighter-rouge">data-bs-parent=""</code>.</p>
+
+<table class="table table-bordered table-striped table-responsive">
+  <thead>
+    <tr>
+      <th style="width: 100px;">Nome</th>
+      <th style="width: 50px;">Tipo</th>
+      <th style="width: 50px;">Predefinito</th>
+      <th>Descrizione</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>scrollPadding</td>
+      <td>number | function </td>
+      <td>10</td>
+      <td>uno spazio (in pixel) per consentire allo scroll di fermarsi prima o dopo (se viene fornito un valore negativo) rispetto alla posizione del bersaglio. Nel caso in cui ci siano degli elementi fixed dinamici è possibile fornire una funzione per calcolare di volta in volta lo spazio.</td>
+    </tr>
+    <tr>
+      <td>duration</td>
+      <td>number</td>
+      <td>800</td>
+      <td>durata dell'animazione di scroll espressa in millisecondi</td>
+    </tr>
+    <tr>
+      <td>easing</td>
+      <td>string</td>
+      <td>easeInOutSine</td>
+      <td>inerzia dell'animazione di scroll. Per i valori fare riferimento alla [documentazione di AnimeJs](https://animejs.com/documentation/#linearEasing).&lt;</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="metodi">Metodi</h3>
+
+<table class="table table-bordered table-striped table-responsive">
+  <thead>
+    <tr>
+      <th style="width: 150px;">Metodo</th>
+      <th>Descrizione</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>setScrollPadding</td>
+      <td>modfica il valore dell'opzione <code>scrollPadding</code>.</td>
+    </tr>
+    <tr>
+      <td>dispose</td>
+      <td>Elimina le funzionalità del componente.</td>
+    </tr>
+    <tr>
+      <td>getInstance</td>
+      <td>Metodo statico che restituisce l'istanza NavScroll associata ad un elemento del DOM. Esempio: <code>bootstrap.NavScroll.getInstance(element)</code></td>
+    </tr>
+    <tr>
+      <td>getOrCreateInstance</td>
+      <td>Metodo statico che restituisce un'istanza NavScroll associata ad un elemento del DOM o ne crea una nuova nel caso non fosse stata inizializzata. Esempio: <code>bootstrap.NavScroll.getOrCreateInstance(element)</code></td>
+    </tr>
+  </tbody>
+</table>
 
         </main>
       </div>
     </div>
 
     
-
 <script>
   window.__PUBLIC_PATH__ = '/bootstrap-italia/dist/fonts'
-</script><script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202207122305"></script><script src="/bootstrap-italia/docs/assets/dist/js/vendor/anchor.min.js"></script>
-<script src="/bootstrap-italia/docs/assets/dist/js/vendor/clipboard.min.js"></script>
-<script src="/bootstrap-italia/docs/assets/dist/js/vendor/tsparticles.min.js"></script>
+</script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202207221548"></script><script src="/bootstrap-italia/docs/assets/src/js/vendor/anchor.min.js"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/vendor/clipboard.min.js"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/vendor/tsparticles.min.js"></script>
 
-<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202207122305"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202207221548"></script>
 
-<script src="/bootstrap-italia/docs/assets/dist/js/vendor/tweenjs.min.js"></script>
-<script src="/bootstrap-italia/docs/assets/dist/js/vendor/easeljs.min.js"></script>
-<script src="/bootstrap-italia/docs/assets/dist/js/vendor/preloadjs.min.js"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/vendor/tweenjs.min.js"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/vendor/easeljs.min.js"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/vendor/preloadjs.min.js"></script>
 
 <script>
   var manifest = [
@@ -1084,10 +1393,9 @@ Per cambiare il tema è sufficiente aggiungere le seguenti classi al tag <code c
     { src: '/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png', id: 'cover-7' },
   ]
 </script>
-<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?202207122305"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202207221548"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/vendor/docsearch.min.js"></script>
 
-
-<script src="/bootstrap-italia/docs/assets/dist/js/vendor/docsearch.min.js"></script>
 <script>
   docsearch({
     apiKey: 'a755e381c276458251a59282bae6ee93',

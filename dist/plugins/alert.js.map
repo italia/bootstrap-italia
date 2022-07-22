@@ -1,0 +1,1 @@
+{"version":3,"file":"alert.js","sources":["../../src/js/plugins/alert.js"],"sourcesContent":["import { default as BSAlert } from 'bootstrap/js/src/alert'\n\nclass Alert extends BSAlert {}\n\nexport default Alert\n"],"names":[],"mappings":";;AAEA,MAAM,KAAK,SAAS,OAAO,CAAC;;;;"}

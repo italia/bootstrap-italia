@@ -5,18 +5,19 @@
 
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-<meta name="description" content="Bootstrap Italia è un tema Bootstrap 4 per la creazione di applicazioni web nel pieno rispetto delle Linee guida di design per i servizi web della PA" />
+<meta name="description" content="Bootstrap Italia è un tema Bootstrap 5 per la creazione di applicazioni web nel pieno rispetto delle Linee guida di design per i servizi web della PA" />
 <meta name="author" content="Dipartimento per la trasformazione digitale" />
 <meta name="generator" content="Jekyll v4.2.1" />
 
 <title>CookieBar · Bootstrap Italia</title>
 
-
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202207122305" rel="stylesheet" />
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202207221548" rel="stylesheet" />
+
+
 <!-- Documentation extras -->
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202207122305" rel="stylesheet" />
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202207221548" rel="stylesheet" />
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico" />
@@ -32,13 +33,13 @@
 <meta name="twitter:site" content="@designersITA" />
 <meta name="twitter:creator" content="Dipartimento per la trasformazione digitale" />
 <meta name="twitter:title" content="CookieBar" />
-<meta name="twitter:description" content="Bootstrap Italia è un tema Bootstrap 4 per la creazione di applicazioni web nel pieno rispetto delle Linee guida di design per i servizi web della PA" />
+<meta name="twitter:description" content="Bootstrap Italia è un tema Bootstrap 5 per la creazione di applicazioni web nel pieno rispetto delle Linee guida di design per i servizi web della PA" />
 <meta name="twitter:image" content="/docs/assets/img/favicons/social-card.png" />
 
 <!-- Facebook -->
 <meta property="og:url" content="/docs/esempi/cookiebar/" />
 <meta property="og:title" content="CookieBar" />
-<meta property="og:description" content="Bootstrap Italia è un tema Bootstrap 4 per la creazione di applicazioni web nel pieno rispetto delle Linee guida di design per i servizi web della PA" />
+<meta property="og:description" content="Bootstrap Italia è un tema Bootstrap 5 per la creazione di applicazioni web nel pieno rispetto delle Linee guida di design per i servizi web della PA" />
 <meta property="og:type" content="website" />
 <meta property="og:image" content="/docs/assets/img/favicons/social-card.png" />
 <meta property="og:image:type" content="image/png" />
@@ -76,38 +77,51 @@
 
   </head>
   <body>
-    <style>
-  .cookiebar {
-    display: block !important;
-  }
-  @media (min-width: 768px) {
-    .cookiebar {
-      display: flex !important;
-    }
-  }
-</style>
+    <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    bootstrap.Cookiebar.clearCookie()
+  })
+</script>
 
-<div class="cookiebar">
-  <p>
-    Questo sito utilizza cookie tecnici, analytics e di terze parti.
-    <br />Proseguendo nella navigazione accetti l’utilizzo dei cookie.
-  </p>
+<section class="cookiebar fade" aria-label="Gestione dei cookies">
+  <p>Questo sito utilizza cookie tecnici, analytics e di terze parti. <br />Proseguendo nella navigazione accetti l’utilizzo dei cookie.</p>
   <div class="cookiebar-buttons">
-    <a href="#" class="cookiebar-btn">Preferenze<span class="sr-only">cookies</span></a>
-    <button data-accept="cookiebar" class="cookiebar-btn cookiebar-confirm">Accetto<span class="sr-only"> i cookies</span></button>
+    <a href="#" class="cookiebar-btn">Preferenze<span class="visually-hidden">cookies</span></a>
+    <button data-bs-accept="cookiebar" class="cookiebar-btn cookiebar-confirm">Accetto<span class="visually-hidden"> i cookies</span></button>
   </div>
-</div>
- 
+</section>
 
+<div class="skiplinks">
+  <a class="visually-hidden-focusable" href="#main">Vai al contenuto principale</a>
+</div>
+
+<main id="main">
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col">
+        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
+        <p>
+          Nullam ultrices elit ut libero tincidunt, at vestibulum ligula congue. Integer non elementum massa. Maecenas imperdiet lobortis ligula, quis luctus
+          urna tristique quis. Ut mollis ante risus, eu pellentesque tellus molestie non. Nullam nec nunc ipsum. Sed convallis non nibh vitae lacinia. In
+          iaculis pellentesque magna, ac malesuada lectus sodales vestibulum. Vestibulum consectetur ante rutrum metus faucibus, quis molestie nulla dapibus.
+        </p>
+        <p>
+          Mauris et porttitor magna, at accumsan velit. In nec hendrerit velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquet gravida
+          arcu, mattis tempor nisl. Suspendisse felis orci, maximus non pellentesque sed, consectetur ac dolor. Morbi ut bibendum eros.
+        </p>
+      </div>
+    </div>
+  </div>
+</main>
+ 
 <script>
   window.__PUBLIC_PATH__ = '/bootstrap-italia/dist/fonts'
-</script><script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202207122305"></script>
-
-<!-- Notification per tornare alla pagina principale -->
+</script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202207221548"></script><!-- Notification per tornare alla pagina principale -->
 <div class="notification dismissable with-icon" role="alert" id="notification-esempi" aria-labelledby="notification-esempi-title">
   <h5 id="notification-esempi-title">
     <svg class="icon">
-      <use href="/bootstrap-italia/dist/svg/sprite.svg#it-info-circle" xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-info-circle"></use></svg
+      <use href="/bootstrap-italia/dist/svg/sprites.svg#it-info-circle" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-info-circle"></use></svg
     >Esempio di utilizzo
   </h5>
   <p>
@@ -115,16 +129,16 @@
   </p>
   <button type="button" class="btn notification-close">
     <svg class="icon">
-      <use href="/bootstrap-italia/dist/svg/sprite.svg#it-close" xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-close"></use>
+      <use href="/bootstrap-italia/dist/svg/sprites.svg#it-close" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-close"></use>
     </svg>
-    <span class="sr-only">Chiudi notifica: Titolo notification</span>
+    <span class="visually-hidden">Chiudi notifica: Titolo notification</span>
   </button>
 </div>
 
 <script>
-  $(document).ready(function () {
+  /*$(document).ready(function () {
     notificationShow('notification-esempi')
-  })
+  })*/
 </script>
   </body>
 </html>

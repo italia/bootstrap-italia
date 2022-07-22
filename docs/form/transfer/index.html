@@ -5,20 +5,21 @@
 
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-<meta name="description" content="Il transfer è un componente che consente la creazione di liste di checkbox." />
+<meta name="description" content="Un componente che consente la creazione di liste di checkbox." />
 <meta name="author" content="Dipartimento per la trasformazione digitale" />
 <meta name="generator" content="Jekyll v4.2.1" />
 
 <title>Transfer · Bootstrap Italia</title>
 
-
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202207122305" rel="stylesheet" />
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202207221548" rel="stylesheet" />
+
+
 <!-- Documentation extras -->
  
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.css" rel="stylesheet" />
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202207122305" rel="stylesheet" />
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202207221548" rel="stylesheet" />
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico" />
@@ -34,13 +35,13 @@
 <meta name="twitter:site" content="@designersITA" />
 <meta name="twitter:creator" content="Dipartimento per la trasformazione digitale" />
 <meta name="twitter:title" content="Transfer" />
-<meta name="twitter:description" content="Il transfer è un componente che consente la creazione di liste di checkbox." />
+<meta name="twitter:description" content="Un componente che consente la creazione di liste di checkbox." />
 <meta name="twitter:image" content="/docs/assets/img/favicons/social-card.png" />
 
 <!-- Facebook -->
 <meta property="og:url" content="/docs/form/transfer/" />
 <meta property="og:title" content="Transfer" />
-<meta property="og:description" content="Il transfer è un componente che consente la creazione di liste di checkbox." />
+<meta property="og:description" content="Un componente che consente la creazione di liste di checkbox." />
 <meta property="og:type" content="website" />
 <meta property="og:image" content="/docs/assets/img/favicons/social-card.png" />
 <meta property="og:image:type" content="image/png" />
@@ -78,7 +79,7 @@
 
   </head>
   <body>
-    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+    <a id="skippy" class="visually-hidden-focusable" href="#content">
       <div class="container">
         <span class="skiplink-text">Skip to main content</span>
       </div>
@@ -88,8 +89,8 @@
   <button
     class="navbar-toggler"
     type="button"
-    data-toggle="collapse"
-    data-target="#navbarsTop"
+    data-bs-toggle="collapse"
+    data-bs-target="#navbarsTop"
     aria-controls="navbarsTop"
     aria-expanded="false"
     aria-label="Toggle navigation"
@@ -104,7 +105,7 @@
     <a class="navbar-brand text-decoration-none" href="http://agid.gov.it/">AgID</a>
   </div>
   <div class="collapse navbar-collapse" id="navbarsTop">
-    <ul class="navbar-nav ml-auto">
+    <ul class="navbar-nav ms-auto">
       <li class="nav-item nav-item-w-divider">
         <a class="nav-link text-decoration-none" href="https://pianotriennale-ict.italia.it/">Piano Triennale</a>
       </li>
@@ -137,36 +138,36 @@
     <path d="M31.799 71.9V15.7h15.1V72h-15.1zM91.099 28.5h-13.8v23.1c0 2.3.1 3.8.2 4.8.1.9.5 1.7 1.2 2.4s1.8 1 3.3 1l8.6-.2.7 12c-5 1.1-8.9 1.7-11.5 1.7-6.8 0-11.4-1.5-13.8-4.6-2.5-3-3.7-8.6-3.7-16.8V0h15.1v15.6h13.8v12.9zM9.099 32.8c-2.6 0-4.8-.9-6.5-2.7s-2.6-4-2.6-6.6.9-4.8 2.5-6.6c1.7-1.8 3.9-2.6 6.5-2.6s4.8.9 6.5 2.7 2.5 4 2.5 6.7-.8 4.8-2.5 6.6c-1.6 1.6-3.7 2.5-6.4 2.5z"></path>
   </g>
 </svg>
-<div class="d-flex flex-column pl-3 pl-sm-4">
+<div class="d-flex flex-column ps-3 ps-sm-4">
           <h1 class="bd-logo-title">Bootstrap Italia</h1>
-          <h2 class="bd-logo-subtitle">Il tema Bootstrap 4 per <span class="d-none d-sm-inline">lo sviluppo di applicazioni web per </span>la PA</h2>
+          <h2 class="bd-logo-subtitle">Il tema Bootstrap 5 per <span class="d-none d-sm-inline">lo sviluppo di applicazioni web per </span>la PA</h2>
         </div>
       </div>
     </a>
 
     
-    <button class="btn btn-xs btn-primary d-md-none px-2 text-uppercase" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+    <button class="btn btn-xs btn-primary d-md-none px-2 text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
       menu
     </button>
     
 
-    <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-      <li class="nav-item pr-2">
-        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v1.6.4/bootstrap-italia.zip" aria-label="Download">
-          <small class="pr-2 m-0">v1.6.4</small>
-          <svg class="icon icon-sm icon-light"><use href="/bootstrap-italia/dist/svg/sprite.svg#it-download" xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-download"></use></svg><span class="sr-only">Download</span>
+    <ul class="navbar-nav flex-row ms-md-auto d-none d-md-flex">
+      <li class="nav-item pe-2">
+        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v2.0.0/bootstrap-italia.zip" aria-label="Download">
+          <small class="pe-2 m-0">v2.0.0</small>
+          <svg class="icon icon-sm icon-light"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-download" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-download"></use></svg><span class="visually-hidden">Download</span>
         </a>
       </li>
-      <li class="nav-item pr-2">
+      <li class="nav-item pe-2">
         <a title="Repository GitHub di Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-          <svg class="icon icon-sm icon-light"><use href="/bootstrap-italia/dist/svg/sprite.svg#it-github" xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-github"></use></svg><span class="sr-only">GitHub</span>
+          <svg class="icon icon-sm icon-light"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-github" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-github"></use></svg><span class="visually-hidden">GitHub</span>
         </a>
       </li>
     </ul>
 
     
     <div class="bd-search w-100">
-      <label for="search-input" class="sr-only">Cerca:</label>
+      <label for="search-input" class="visually-hidden">Cerca:</label>
       <input type="search" class="form-control" id="search-input" name="search-input" placeholder="Cerca componenti, classi, informazioni..." aria-label="Cerca..." autocomplete="off" />
     </div>
     
@@ -184,16 +185,20 @@
             
             <!-- One:usare ID -->
             <a
+              role="button"
               class="list-item large medium right-icon "
               href="#collapse-1"
-              data-toggle="collapse"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse-1"
               aria-expanded="false"
               aria-controls="collapse-1"
             >
-              <span>Come iniziare</span>
-              <svg class="icon icon-sm icon-primary right" aria-hidden="true">
-                <use href="/bootstrap-italia/dist/svg/sprite.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-expand"></use>
-              </svg>
+              <span class="list-item-title-icon-wrapper">
+                <span class="list-item-title">Come iniziare</span>
+                <svg class="icon icon-sm icon-primary right" aria-hidden="true">
+                  <use href="/bootstrap-italia/dist/svg/sprites.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use>
+                </svg>
+              </span>
             </a>
             <ul class="link-sublist collapse " id="collapse-1"><li>
                 <a class="list-item " href="/bootstrap-italia/docs/come-iniziare/introduzione/">
@@ -210,22 +215,29 @@
               </li><li>
                 <a class="list-item " href="/bootstrap-italia/docs/come-iniziare/componente-base/">
                   <span>Componente base</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/come-iniziare/migrazione/">
+                  <span>Migrazione</span></a>
               </li></ul>
             
           </li><li>
             
             <!-- One:usare ID -->
             <a
+              role="button"
               class="list-item large medium right-icon "
               href="#collapse-2"
-              data-toggle="collapse"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse-2"
               aria-expanded="false"
               aria-controls="collapse-2"
             >
-              <span>Organizzare gli spazi</span>
-              <svg class="icon icon-sm icon-primary right" aria-hidden="true">
-                <use href="/bootstrap-italia/dist/svg/sprite.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-expand"></use>
-              </svg>
+              <span class="list-item-title-icon-wrapper">
+                <span class="list-item-title">Organizzare gli spazi</span>
+                <svg class="icon icon-sm icon-primary right" aria-hidden="true">
+                  <use href="/bootstrap-italia/dist/svg/sprites.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use>
+                </svg>
+              </span>
             </a>
             <ul class="link-sublist collapse " id="collapse-2"><li>
                 <a class="list-item " href="/bootstrap-italia/docs/organizzare-gli-spazi/introduzione/">
@@ -261,6 +273,9 @@
                 <a class="list-item " href="/bootstrap-italia/docs/organizzare-gli-spazi/posizionamento/">
                   <span>Posizionamento</span></a>
               </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/organizzare-gli-spazi/proporzioni/">
+                  <span>Proporzioni</span></a>
+              </li><li>
                 <a class="list-item " href="/bootstrap-italia/docs/organizzare-gli-spazi/spaziature/">
                   <span>Spaziature</span></a>
               </li></ul>
@@ -269,16 +284,20 @@
             
             <!-- One:usare ID -->
             <a
+              role="button"
               class="list-item large medium right-icon "
               href="#collapse-3"
-              data-toggle="collapse"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse-3"
               aria-expanded="false"
               aria-controls="collapse-3"
             >
-              <span>Organizzare i contenuti</span>
-              <svg class="icon icon-sm icon-primary right" aria-hidden="true">
-                <use href="/bootstrap-italia/dist/svg/sprite.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-expand"></use>
-              </svg>
+              <span class="list-item-title-icon-wrapper">
+                <span class="list-item-title">Organizzare i contenuti</span>
+                <svg class="icon icon-sm icon-primary right" aria-hidden="true">
+                  <use href="/bootstrap-italia/dist/svg/sprites.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use>
+                </svg>
+              </span>
             </a>
             <ul class="link-sublist collapse " id="collapse-3"><li>
                 <a class="list-item " href="/bootstrap-italia/docs/organizzare-i-contenuti/introduzione/">
@@ -286,9 +305,6 @@
               </li><li>
                 <a class="list-item " href="/bootstrap-italia/docs/organizzare-i-contenuti/codice/">
                   <span>Codice</span></a>
-              </li><li>
-                <a class="list-item " href="/bootstrap-italia/docs/organizzare-i-contenuti/embed/">
-                  <span>Embed</span></a>
               </li><li>
                 <a class="list-item " href="/bootstrap-italia/docs/organizzare-i-contenuti/immagini/">
                   <span>Immagini</span></a>
@@ -298,12 +314,6 @@
               </li><li>
                 <a class="list-item " href="/bootstrap-italia/docs/organizzare-i-contenuti/liste-di-immagini/">
                   <span>Liste di immagini</span></a>
-              </li><li>
-                <a class="list-item " href="/bootstrap-italia/docs/organizzare-i-contenuti/liste-di-link/">
-                  <span>Liste di link</span></a>
-              </li><li>
-                <a class="list-item " href="/bootstrap-italia/docs/organizzare-i-contenuti/oggetto-media/">
-                  <span>Oggetto Media</span></a>
               </li><li>
                 <a class="list-item " href="/bootstrap-italia/docs/organizzare-i-contenuti/tabelle/">
                   <span>Tabelle</span></a>
@@ -319,16 +329,20 @@
             
             <!-- One:usare ID -->
             <a
+              role="button"
               class="list-item large medium right-icon "
               href="#collapse-4"
-              data-toggle="collapse"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse-4"
               aria-expanded="false"
               aria-controls="collapse-4"
             >
-              <span>Menu di navigazione</span>
-              <svg class="icon icon-sm icon-primary right" aria-hidden="true">
-                <use href="/bootstrap-italia/dist/svg/sprite.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-expand"></use>
-              </svg>
+              <span class="list-item-title-icon-wrapper">
+                <span class="list-item-title">Menu di navigazione</span>
+                <svg class="icon icon-sm icon-primary right" aria-hidden="true">
+                  <use href="/bootstrap-italia/dist/svg/sprites.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use>
+                </svg>
+              </span>
             </a>
             <ul class="link-sublist collapse " id="collapse-4"><li>
                 <a class="list-item " href="/bootstrap-italia/docs/menu-di-navigazione/introduzione/">
@@ -372,20 +386,27 @@
             
             <!-- One:usare ID -->
             <a
+              role="button"
               class="list-item large medium right-icon "
               href="#collapse-5"
-              data-toggle="collapse"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse-5"
               aria-expanded="false"
               aria-controls="collapse-5"
             >
-              <span>Componenti</span>
-              <svg class="icon icon-sm icon-primary right" aria-hidden="true">
-                <use href="/bootstrap-italia/dist/svg/sprite.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-expand"></use>
-              </svg>
+              <span class="list-item-title-icon-wrapper">
+                <span class="list-item-title">Componenti</span>
+                <svg class="icon icon-sm icon-primary right" aria-hidden="true">
+                  <use href="/bootstrap-italia/dist/svg/sprites.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use>
+                </svg>
+              </span>
             </a>
             <ul class="link-sublist collapse " id="collapse-5"><li>
                 <a class="list-item " href="/bootstrap-italia/docs/componenti/introduzione/">
                   <span>Introduzione</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/accordion/">
+                  <span>Accordion</span></a>
               </li><li>
                 <a class="list-item " href="/bootstrap-italia/docs/componenti/affix/">
                   <span>Affix</span></a>
@@ -399,17 +420,14 @@
                 <a class="list-item " href="/bootstrap-italia/docs/componenti/badge/">
                   <span>Badge</span></a>
               </li><li>
-                <a class="list-item " href="/bootstrap-italia/docs/componenti/bottoni/">
-                  <span>Bottoni</span></a>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/buttons/">
+                  <span>Buttons</span></a>
               </li><li>
                 <a class="list-item " href="/bootstrap-italia/docs/componenti/card/">
                   <span>Card</span></a>
               </li><li>
                 <a class="list-item " href="/bootstrap-italia/docs/componenti/callout/">
                   <span>Callout</span></a>
-              </li><li>
-                <a class="list-item " href="/bootstrap-italia/docs/componenti/carousel-legacy/">
-                  <span>Carousel Legacy</span></a>
               </li><li>
                 <a class="list-item " href="/bootstrap-italia/docs/componenti/carousel/">
                   <span>Carousel</span></a>
@@ -462,6 +480,9 @@
                 <a class="list-item " href="/bootstrap-italia/docs/componenti/steppers/">
                   <span>Steppers</span></a>
               </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/sticky/">
+                  <span>Sticky</span></a>
+              </li><li>
                 <a class="list-item " href="/bootstrap-italia/docs/componenti/tab/">
                   <span>Tab</span></a>
               </li><li>
@@ -476,16 +497,20 @@
             
             <!-- One:usare ID -->
             <a
+              role="button"
               class="list-item large medium right-icon active"
               href="#collapse-6"
-              data-toggle="collapse"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse-6"
               aria-expanded="true"
               aria-controls="collapse-6"
             >
-              <span>Form</span>
-              <svg class="icon icon-sm icon-primary right" aria-hidden="true">
-                <use href="/bootstrap-italia/dist/svg/sprite.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-expand"></use>
-              </svg>
+              <span class="list-item-title-icon-wrapper">
+                <span class="list-item-title">Form</span>
+                <svg class="icon icon-sm icon-primary right" aria-hidden="true">
+                  <use href="/bootstrap-italia/dist/svg/sprites.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use>
+                </svg>
+              </span>
             </a>
             <ul class="link-sublist collapse show" id="collapse-6"><li>
                 <a class="list-item " href="/bootstrap-italia/docs/form/introduzione/">
@@ -529,16 +554,20 @@
             
             <!-- One:usare ID -->
             <a
+              role="button"
               class="list-item large medium right-icon "
               href="#collapse-7"
-              data-toggle="collapse"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse-7"
               aria-expanded="false"
               aria-controls="collapse-7"
             >
-              <span>Utilities</span>
-              <svg class="icon icon-sm icon-primary right" aria-hidden="true">
-                <use href="/bootstrap-italia/dist/svg/sprite.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-expand"></use>
-              </svg>
+              <span class="list-item-title-icon-wrapper">
+                <span class="list-item-title">Utilities</span>
+                <svg class="icon icon-sm icon-primary right" aria-hidden="true">
+                  <use href="/bootstrap-italia/dist/svg/sprites.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use>
+                </svg>
+              </span>
             </a>
             <ul class="link-sublist collapse " id="collapse-7"><li>
                 <a class="list-item " href="/bootstrap-italia/docs/utilities/colori/">
@@ -581,15 +610,15 @@
 
         <main class="col-12 col-md-9 col-xl-8 py-md-3 px-md-3 bd-content">
           <h1 class="bd-title" id="content">Transfer</h1>
-          <p class="bd-lead">Il transfer è un componente che consente la creazione di liste di checkbox.</p>
-          <p>Il componente <em>Transfer</em> consente di trasferire gli elementi di una lista di checkbox ad un altro elenco di checkbox.</p>
+          <p class="bd-lead">Un componente che consente la creazione di liste di checkbox.</p>
+          <p>Il componente Transfer consente di trasferire gli elementi di una lista di checkbox ad un’altra lista di checkbox.</p>
 
-<p><strong>Il componente <em>Transfer</em> contiene</strong></p>
+<p><strong>Il componente Transfer_contiene</strong></p>
 
 <ul>
-  <li>Lista checkbox di destra</li>
-  <li>Pulsanti per il trasferimento dei contenuti da lista a lista</li>
   <li>Lista checkbox di sinistra</li>
+  <li>Pulsanti per il trasferimento dei contenuti da lista a lista</li>
+  <li>Lista checkbox di destra</li>
 </ul>
 
 <p><strong>Le liste di checkbox, sono composte da:</strong></p>
@@ -608,13 +637,14 @@
 </ul>
 
 <div class="bd-callout bd-callout-info">
-<p>Per l’attivazione del relativo javascript è importante che il componente che contiene la struttura, abbia classe <code class="language-plaintext highlighter-rouge">.it-transfer-block</code><br />
-Nell’esempio che segue la struttura è colonnare simmetrica nella versione desktop (5 / 2 / 5), l’utente potrà scegliere i tipi di colonna da utilizzare, usando le regole di bootstrap.</p>
+<p>Per l’attivazione del relativo JavaScript è importante che il componente che contiene la struttura, abbia l’attributo <code class="language-plaintext highlighter-rouge">data-bs-transfer</code></p>
 </div>
+
+<p>Nell’esempio che segue la struttura è colonnare simmetrica nella versione desktop (5 / 2 / 5), l’utente potrà scegliere i tipi di colonna da utilizzare, usando le regole di bootstrap.</p>
 
 <div class="bd-example">
 
-<div class="it-transfer-block">
+<div data-bs-transfer="">
   <div class="row">
     <div class="col-xs-12 col-md-5">
       <div class="it-transfer-wrapper source">
@@ -691,22 +721,22 @@ Nell’esempio che segue la struttura è colonnare simmetrica nella versione des
       <div class="it-transfer-buttons">
         <a class="transfer" href="#" aria-label="Sposta avanti">
           <svg class="icon">
-            <use href="/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"></use>
+            <use href="/bootstrap-italia/dist/svg/sprites.svg#it-arrow-right"></use>
           </svg>
         </a>
-        <span class="sr-only">Label for aroow right</span>
+        <span class="visually-hidden">Label for aroow right</span>
         <a class="backtransfer" href="#" aria-label="Sposta indietro">
           <svg class="icon">
-            <use href="/bootstrap-italia/dist/svg/sprite.svg#it-arrow-left"></use>
+            <use href="/bootstrap-italia/dist/svg/sprites.svg#it-arrow-left"></use>
           </svg>
         </a>
-        <span class="sr-only">Label for aroow left</span>
+        <span class="visually-hidden">Label for aroow left</span>
         <a class="reset" href="#" aria-label="Reset">
           <svg class="icon">
-            <use href="/bootstrap-italia/dist/svg/sprite.svg#it-code-circle"></use>
+            <use href="/bootstrap-italia/dist/svg/sprites.svg#it-code-circle"></use>
           </svg>
         </a>
-        <span class="sr-only">Label for reset icon</span>
+        <span class="visually-hidden">Label for reset icon</span>
       </div>
     </div>
     <div class="col-xs-12 col-md-5">
@@ -782,7 +812,7 @@ Nell’esempio che segue la struttura è colonnare simmetrica nella versione des
   </div>
 </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-transfer-block"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">data-bs-transfer</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-xs-12 col-md-5"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-transfer-wrapper source"</span><span class="nt">&gt;</span>
@@ -859,22 +889,22 @@ Nell’esempio che segue la struttura è colonnare simmetrica nella versione des
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-transfer-buttons"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"transfer"</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">aria-label=</span><span class="s">"Sposta avanti"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right"</span><span class="nt">&gt;&lt;/use&gt;</span>
+            <span class="nt">&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-arrow-right"</span><span class="nt">&gt;&lt;/use&gt;</span>
           <span class="nt">&lt;/svg&gt;</span>
         <span class="nt">&lt;/a&gt;</span>
-        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Label for aroow right<span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"visually-hidden"</span><span class="nt">&gt;</span>Label for aroow right<span class="nt">&lt;/span&gt;</span>
         <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"backtransfer"</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">aria-label=</span><span class="s">"Sposta indietro"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-arrow-left"</span><span class="nt">&gt;&lt;/use&gt;</span>
+            <span class="nt">&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-arrow-left"</span><span class="nt">&gt;&lt;/use&gt;</span>
           <span class="nt">&lt;/svg&gt;</span>
         <span class="nt">&lt;/a&gt;</span>
-        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Label for aroow left<span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"visually-hidden"</span><span class="nt">&gt;</span>Label for aroow left<span class="nt">&lt;/span&gt;</span>
         <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"reset"</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">aria-label=</span><span class="s">"Reset"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprite.svg#it-code-circle"</span><span class="nt">&gt;&lt;/use&gt;</span>
+            <span class="nt">&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-code-circle"</span><span class="nt">&gt;&lt;/use&gt;</span>
           <span class="nt">&lt;/svg&gt;</span>
         <span class="nt">&lt;/a&gt;</span>
-        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Label for reset icon<span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"visually-hidden"</span><span class="nt">&gt;</span>Label for reset icon<span class="nt">&lt;/span&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-xs-12 col-md-5"</span><span class="nt">&gt;</span>
@@ -956,18 +986,18 @@ Nell’esempio che segue la struttura è colonnare simmetrica nella versione des
     </div>
 
     
-
 <script>
   window.__PUBLIC_PATH__ = '/bootstrap-italia/dist/fonts'
-</script><script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202207122305"></script><script src="/bootstrap-italia/docs/assets/dist/js/vendor/anchor.min.js"></script>
-<script src="/bootstrap-italia/docs/assets/dist/js/vendor/clipboard.min.js"></script>
-<script src="/bootstrap-italia/docs/assets/dist/js/vendor/tsparticles.min.js"></script>
+</script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202207221548"></script><script src="/bootstrap-italia/docs/assets/src/js/vendor/anchor.min.js"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/vendor/clipboard.min.js"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/vendor/tsparticles.min.js"></script>
 
-<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202207122305"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202207221548"></script>
 
-<script src="/bootstrap-italia/docs/assets/dist/js/vendor/tweenjs.min.js"></script>
-<script src="/bootstrap-italia/docs/assets/dist/js/vendor/easeljs.min.js"></script>
-<script src="/bootstrap-italia/docs/assets/dist/js/vendor/preloadjs.min.js"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/vendor/tweenjs.min.js"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/vendor/easeljs.min.js"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/vendor/preloadjs.min.js"></script>
 
 <script>
   var manifest = [
@@ -980,10 +1010,9 @@ Nell’esempio che segue la struttura è colonnare simmetrica nella versione des
     { src: '/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png', id: 'cover-7' },
   ]
 </script>
-<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?202207122305"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202207221548"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/vendor/docsearch.min.js"></script>
 
-
-<script src="/bootstrap-italia/docs/assets/dist/js/vendor/docsearch.min.js"></script>
 <script>
   docsearch({
     apiKey: 'a755e381c276458251a59282bae6ee93',

@@ -1,0 +1,1 @@
+{"version":3,"file":"tab.js","sources":["../../src/js/plugins/tab.js"],"sourcesContent":["import { default as BSTab } from 'bootstrap/js/src/tab'\n\nclass Tab extends BSTab {}\n\nexport default Tab\n"],"names":[],"mappings":";;AAEA,MAAM,GAAG,SAAS,KAAK,CAAC;;;;"}

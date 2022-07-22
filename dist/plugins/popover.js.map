@@ -1,0 +1,1 @@
+{"version":3,"file":"popover.js","sources":["../../src/js/plugins/popover.js"],"sourcesContent":["import { default as BSPopover } from 'bootstrap/js/src/popover'\n\nclass Popover extends BSPopover {}\n\nexport default Popover\n"],"names":[],"mappings":";;AAEA,MAAM,OAAO,SAAS,SAAS,CAAC;;;;"}

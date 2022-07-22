@@ -1,0 +1,1 @@
+{"version":3,"file":"tooltip.js","sources":["../../src/js/plugins/tooltip.js"],"sourcesContent":["import { default as BSTooltip } from 'bootstrap/js/src/tooltip'\n\nclass Tooltip extends BSTooltip {}\n\nexport default Tooltip\n"],"names":[],"mappings":";;AAEA,MAAM,OAAO,SAAS,SAAS,CAAC;;;;"}

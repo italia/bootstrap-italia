@@ -11,14 +11,15 @@
 
 <title>Alert · Bootstrap Italia</title>
 
-
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202207122305" rel="stylesheet" />
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202207221548" rel="stylesheet" />
+
+
 <!-- Documentation extras -->
  
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.css" rel="stylesheet" />
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202207122305" rel="stylesheet" />
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202207221548" rel="stylesheet" />
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico" />
@@ -78,7 +79,7 @@
 
   </head>
   <body>
-    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+    <a id="skippy" class="visually-hidden-focusable" href="#content">
       <div class="container">
         <span class="skiplink-text">Skip to main content</span>
       </div>
@@ -88,8 +89,8 @@
   <button
     class="navbar-toggler"
     type="button"
-    data-toggle="collapse"
-    data-target="#navbarsTop"
+    data-bs-toggle="collapse"
+    data-bs-target="#navbarsTop"
     aria-controls="navbarsTop"
     aria-expanded="false"
     aria-label="Toggle navigation"
@@ -104,7 +105,7 @@
     <a class="navbar-brand text-decoration-none" href="http://agid.gov.it/">AgID</a>
   </div>
   <div class="collapse navbar-collapse" id="navbarsTop">
-    <ul class="navbar-nav ml-auto">
+    <ul class="navbar-nav ms-auto">
       <li class="nav-item nav-item-w-divider">
         <a class="nav-link text-decoration-none" href="https://pianotriennale-ict.italia.it/">Piano Triennale</a>
       </li>
@@ -137,36 +138,36 @@
     <path d="M31.799 71.9V15.7h15.1V72h-15.1zM91.099 28.5h-13.8v23.1c0 2.3.1 3.8.2 4.8.1.9.5 1.7 1.2 2.4s1.8 1 3.3 1l8.6-.2.7 12c-5 1.1-8.9 1.7-11.5 1.7-6.8 0-11.4-1.5-13.8-4.6-2.5-3-3.7-8.6-3.7-16.8V0h15.1v15.6h13.8v12.9zM9.099 32.8c-2.6 0-4.8-.9-6.5-2.7s-2.6-4-2.6-6.6.9-4.8 2.5-6.6c1.7-1.8 3.9-2.6 6.5-2.6s4.8.9 6.5 2.7 2.5 4 2.5 6.7-.8 4.8-2.5 6.6c-1.6 1.6-3.7 2.5-6.4 2.5z"></path>
   </g>
 </svg>
-<div class="d-flex flex-column pl-3 pl-sm-4">
+<div class="d-flex flex-column ps-3 ps-sm-4">
           <h1 class="bd-logo-title">Bootstrap Italia</h1>
-          <h2 class="bd-logo-subtitle">Il tema Bootstrap 4 per <span class="d-none d-sm-inline">lo sviluppo di applicazioni web per </span>la PA</h2>
+          <h2 class="bd-logo-subtitle">Il tema Bootstrap 5 per <span class="d-none d-sm-inline">lo sviluppo di applicazioni web per </span>la PA</h2>
         </div>
       </div>
     </a>
 
     
-    <button class="btn btn-xs btn-primary d-md-none px-2 text-uppercase" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+    <button class="btn btn-xs btn-primary d-md-none px-2 text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
       menu
     </button>
     
 
-    <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-      <li class="nav-item pr-2">
-        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v1.6.4/bootstrap-italia.zip" aria-label="Download">
-          <small class="pr-2 m-0">v1.6.4</small>
-          <svg class="icon icon-sm icon-light"><use href="/bootstrap-italia/dist/svg/sprite.svg#it-download" xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-download"></use></svg><span class="sr-only">Download</span>
+    <ul class="navbar-nav flex-row ms-md-auto d-none d-md-flex">
+      <li class="nav-item pe-2">
+        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v2.0.0/bootstrap-italia.zip" aria-label="Download">
+          <small class="pe-2 m-0">v2.0.0</small>
+          <svg class="icon icon-sm icon-light"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-download" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-download"></use></svg><span class="visually-hidden">Download</span>
         </a>
       </li>
-      <li class="nav-item pr-2">
+      <li class="nav-item pe-2">
         <a title="Repository GitHub di Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-          <svg class="icon icon-sm icon-light"><use href="/bootstrap-italia/dist/svg/sprite.svg#it-github" xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-github"></use></svg><span class="sr-only">GitHub</span>
+          <svg class="icon icon-sm icon-light"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-github" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-github"></use></svg><span class="visually-hidden">GitHub</span>
         </a>
       </li>
     </ul>
 
     
     <div class="bd-search w-100">
-      <label for="search-input" class="sr-only">Cerca:</label>
+      <label for="search-input" class="visually-hidden">Cerca:</label>
       <input type="search" class="form-control" id="search-input" name="search-input" placeholder="Cerca componenti, classi, informazioni..." aria-label="Cerca..." autocomplete="off" />
     </div>
     
@@ -184,16 +185,20 @@
             
             <!-- One:usare ID -->
             <a
+              role="button"
               class="list-item large medium right-icon "
               href="#collapse-1"
-              data-toggle="collapse"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse-1"
               aria-expanded="false"
               aria-controls="collapse-1"
             >
-              <span>Come iniziare</span>
-              <svg class="icon icon-sm icon-primary right" aria-hidden="true">
-                <use href="/bootstrap-italia/dist/svg/sprite.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-expand"></use>
-              </svg>
+              <span class="list-item-title-icon-wrapper">
+                <span class="list-item-title">Come iniziare</span>
+                <svg class="icon icon-sm icon-primary right" aria-hidden="true">
+                  <use href="/bootstrap-italia/dist/svg/sprites.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use>
+                </svg>
+              </span>
             </a>
             <ul class="link-sublist collapse " id="collapse-1"><li>
                 <a class="list-item " href="/bootstrap-italia/docs/come-iniziare/introduzione/">
@@ -210,22 +215,29 @@
               </li><li>
                 <a class="list-item " href="/bootstrap-italia/docs/come-iniziare/componente-base/">
                   <span>Componente base</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/come-iniziare/migrazione/">
+                  <span>Migrazione</span></a>
               </li></ul>
             
           </li><li>
             
             <!-- One:usare ID -->
             <a
+              role="button"
               class="list-item large medium right-icon "
               href="#collapse-2"
-              data-toggle="collapse"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse-2"
               aria-expanded="false"
               aria-controls="collapse-2"
             >
-              <span>Organizzare gli spazi</span>
-              <svg class="icon icon-sm icon-primary right" aria-hidden="true">
-                <use href="/bootstrap-italia/dist/svg/sprite.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-expand"></use>
-              </svg>
+              <span class="list-item-title-icon-wrapper">
+                <span class="list-item-title">Organizzare gli spazi</span>
+                <svg class="icon icon-sm icon-primary right" aria-hidden="true">
+                  <use href="/bootstrap-italia/dist/svg/sprites.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use>
+                </svg>
+              </span>
             </a>
             <ul class="link-sublist collapse " id="collapse-2"><li>
                 <a class="list-item " href="/bootstrap-italia/docs/organizzare-gli-spazi/introduzione/">
@@ -261,6 +273,9 @@
                 <a class="list-item " href="/bootstrap-italia/docs/organizzare-gli-spazi/posizionamento/">
                   <span>Posizionamento</span></a>
               </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/organizzare-gli-spazi/proporzioni/">
+                  <span>Proporzioni</span></a>
+              </li><li>
                 <a class="list-item " href="/bootstrap-italia/docs/organizzare-gli-spazi/spaziature/">
                   <span>Spaziature</span></a>
               </li></ul>
@@ -269,16 +284,20 @@
             
             <!-- One:usare ID -->
             <a
+              role="button"
               class="list-item large medium right-icon "
               href="#collapse-3"
-              data-toggle="collapse"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse-3"
               aria-expanded="false"
               aria-controls="collapse-3"
             >
-              <span>Organizzare i contenuti</span>
-              <svg class="icon icon-sm icon-primary right" aria-hidden="true">
-                <use href="/bootstrap-italia/dist/svg/sprite.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-expand"></use>
-              </svg>
+              <span class="list-item-title-icon-wrapper">
+                <span class="list-item-title">Organizzare i contenuti</span>
+                <svg class="icon icon-sm icon-primary right" aria-hidden="true">
+                  <use href="/bootstrap-italia/dist/svg/sprites.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use>
+                </svg>
+              </span>
             </a>
             <ul class="link-sublist collapse " id="collapse-3"><li>
                 <a class="list-item " href="/bootstrap-italia/docs/organizzare-i-contenuti/introduzione/">
@@ -286,9 +305,6 @@
               </li><li>
                 <a class="list-item " href="/bootstrap-italia/docs/organizzare-i-contenuti/codice/">
                   <span>Codice</span></a>
-              </li><li>
-                <a class="list-item " href="/bootstrap-italia/docs/organizzare-i-contenuti/embed/">
-                  <span>Embed</span></a>
               </li><li>
                 <a class="list-item " href="/bootstrap-italia/docs/organizzare-i-contenuti/immagini/">
                   <span>Immagini</span></a>
@@ -298,12 +314,6 @@
               </li><li>
                 <a class="list-item " href="/bootstrap-italia/docs/organizzare-i-contenuti/liste-di-immagini/">
                   <span>Liste di immagini</span></a>
-              </li><li>
-                <a class="list-item " href="/bootstrap-italia/docs/organizzare-i-contenuti/liste-di-link/">
-                  <span>Liste di link</span></a>
-              </li><li>
-                <a class="list-item " href="/bootstrap-italia/docs/organizzare-i-contenuti/oggetto-media/">
-                  <span>Oggetto Media</span></a>
               </li><li>
                 <a class="list-item " href="/bootstrap-italia/docs/organizzare-i-contenuti/tabelle/">
                   <span>Tabelle</span></a>
@@ -319,16 +329,20 @@
             
             <!-- One:usare ID -->
             <a
+              role="button"
               class="list-item large medium right-icon "
               href="#collapse-4"
-              data-toggle="collapse"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse-4"
               aria-expanded="false"
               aria-controls="collapse-4"
             >
-              <span>Menu di navigazione</span>
-              <svg class="icon icon-sm icon-primary right" aria-hidden="true">
-                <use href="/bootstrap-italia/dist/svg/sprite.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-expand"></use>
-              </svg>
+              <span class="list-item-title-icon-wrapper">
+                <span class="list-item-title">Menu di navigazione</span>
+                <svg class="icon icon-sm icon-primary right" aria-hidden="true">
+                  <use href="/bootstrap-italia/dist/svg/sprites.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use>
+                </svg>
+              </span>
             </a>
             <ul class="link-sublist collapse " id="collapse-4"><li>
                 <a class="list-item " href="/bootstrap-italia/docs/menu-di-navigazione/introduzione/">
@@ -372,20 +386,27 @@
             
             <!-- One:usare ID -->
             <a
+              role="button"
               class="list-item large medium right-icon active"
               href="#collapse-5"
-              data-toggle="collapse"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse-5"
               aria-expanded="true"
               aria-controls="collapse-5"
             >
-              <span>Componenti</span>
-              <svg class="icon icon-sm icon-primary right" aria-hidden="true">
-                <use href="/bootstrap-italia/dist/svg/sprite.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-expand"></use>
-              </svg>
+              <span class="list-item-title-icon-wrapper">
+                <span class="list-item-title">Componenti</span>
+                <svg class="icon icon-sm icon-primary right" aria-hidden="true">
+                  <use href="/bootstrap-italia/dist/svg/sprites.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use>
+                </svg>
+              </span>
             </a>
             <ul class="link-sublist collapse show" id="collapse-5"><li>
                 <a class="list-item " href="/bootstrap-italia/docs/componenti/introduzione/">
                   <span>Introduzione</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/accordion/">
+                  <span>Accordion</span></a>
               </li><li>
                 <a class="list-item " href="/bootstrap-italia/docs/componenti/affix/">
                   <span>Affix</span></a>
@@ -399,17 +420,14 @@
                 <a class="list-item " href="/bootstrap-italia/docs/componenti/badge/">
                   <span>Badge</span></a>
               </li><li>
-                <a class="list-item " href="/bootstrap-italia/docs/componenti/bottoni/">
-                  <span>Bottoni</span></a>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/buttons/">
+                  <span>Buttons</span></a>
               </li><li>
                 <a class="list-item " href="/bootstrap-italia/docs/componenti/card/">
                   <span>Card</span></a>
               </li><li>
                 <a class="list-item " href="/bootstrap-italia/docs/componenti/callout/">
                   <span>Callout</span></a>
-              </li><li>
-                <a class="list-item " href="/bootstrap-italia/docs/componenti/carousel-legacy/">
-                  <span>Carousel Legacy</span></a>
               </li><li>
                 <a class="list-item " href="/bootstrap-italia/docs/componenti/carousel/">
                   <span>Carousel</span></a>
@@ -462,6 +480,9 @@
                 <a class="list-item " href="/bootstrap-italia/docs/componenti/steppers/">
                   <span>Steppers</span></a>
               </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/sticky/">
+                  <span>Sticky</span></a>
+              </li><li>
                 <a class="list-item " href="/bootstrap-italia/docs/componenti/tab/">
                   <span>Tab</span></a>
               </li><li>
@@ -476,16 +497,20 @@
             
             <!-- One:usare ID -->
             <a
+              role="button"
               class="list-item large medium right-icon "
               href="#collapse-6"
-              data-toggle="collapse"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse-6"
               aria-expanded="false"
               aria-controls="collapse-6"
             >
-              <span>Form</span>
-              <svg class="icon icon-sm icon-primary right" aria-hidden="true">
-                <use href="/bootstrap-italia/dist/svg/sprite.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-expand"></use>
-              </svg>
+              <span class="list-item-title-icon-wrapper">
+                <span class="list-item-title">Form</span>
+                <svg class="icon icon-sm icon-primary right" aria-hidden="true">
+                  <use href="/bootstrap-italia/dist/svg/sprites.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use>
+                </svg>
+              </span>
             </a>
             <ul class="link-sublist collapse " id="collapse-6"><li>
                 <a class="list-item " href="/bootstrap-italia/docs/form/introduzione/">
@@ -529,16 +554,20 @@
             
             <!-- One:usare ID -->
             <a
+              role="button"
               class="list-item large medium right-icon "
               href="#collapse-7"
-              data-toggle="collapse"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse-7"
               aria-expanded="false"
               aria-controls="collapse-7"
             >
-              <span>Utilities</span>
-              <svg class="icon icon-sm icon-primary right" aria-hidden="true">
-                <use href="/bootstrap-italia/dist/svg/sprite.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-expand"></use>
-              </svg>
+              <span class="list-item-title-icon-wrapper">
+                <span class="list-item-title">Utilities</span>
+                <svg class="icon icon-sm icon-primary right" aria-hidden="true">
+                  <use href="/bootstrap-italia/dist/svg/sprites.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use>
+                </svg>
+              </span>
             </a>
             <ul class="link-sublist collapse " id="collapse-7"><li>
                 <a class="list-item " href="/bootstrap-italia/docs/utilities/colori/">
@@ -579,9 +608,6 @@
 <li class="toc-entry toc-h3"><a href="#link-evidenziato">Link evidenziato</a></li>
 <li class="toc-entry toc-h3"><a href="#contenuto-aggiuntivo">Contenuto aggiuntivo</a></li>
 <li class="toc-entry toc-h3"><a href="#chiusura">Chiusura</a></li>
-<li class="toc-entry toc-h3"><a href="#tramite-javascript">Tramite JavaScript</a></li>
-<li class="toc-entry toc-h3"><a href="#metodo">Metodo</a></li>
-<li class="toc-entry toc-h3"><a href="#eventi">Eventi</a></li>
 </ul>
 </li>
 </ul>
@@ -594,7 +620,7 @@
           <p class="bd-lead">Puoi fornire dei feedback all’utente tramite messaggi di avviso.</p>
           <h2 id="esempi">Esempi</h2>
 
-<p>Gli avvisi sono disponibili in quattro tipologie diverse e per qualsiasi lunghezza di testo. Inoltre possono prevedere un pulsante di chiusura utilizzando il <a href="#chiusura">plugin <em>alerts</em> di jQuery</a>.</p>
+<p>Gli avvisi sono disponibili in quattro tipologie diverse e sono adatti a qualsiasi lunghezza di testo. Inoltre possono prevedere un pulsante di chiusura utilizzando un pulsante con attributo <code class="language-plaintext highlighter-rouge">data-bs-dismiss="alert"</code>.</p>
 
 <div class="bd-example">
 
@@ -635,7 +661,7 @@
 <div class="bd-callout bd-callout-accessibility">
 <h4 id="trasmettere-significato-alle-tecnologie-assistive">Trasmettere significato alle tecnologie assistive</h4>
 
-<p>L’uso del colore per aggiungere un significato fornisce solo un’indicazione visiva, che non sarà trasmesso agli utenti di tecnologie assistive – come gli screen reader. Assicurati che le informazioni denotate dal colore siano rese disponibili anche dal contenuto stesso (es.: il testo visibile), o siano incluse attraverso mezzi alternativi, come testo aggiuntivo nascosto con la classe <code class="language-plaintext highlighter-rouge">.sr-only</code>.</p>
+<p>L’uso del colore per aggiungere un significato fornisce solo un’indicazione visiva, che non sarà trasmesso agli utenti di tecnologie assistive – come gli screen reader. Assicurati che le informazioni denotate dal colore siano rese disponibili anche dal contenuto stesso (es.: il testo visibile), o siano incluse attraverso mezzi alternativi, come testo aggiuntivo nascosto con la classe <code class="language-plaintext highlighter-rouge">.visually-hidden</code>.</p>
 </div>
 
 <h3 id="link-evidenziato">Link evidenziato</h3>
@@ -654,7 +680,7 @@
 
 <h3 id="contenuto-aggiuntivo">Contenuto aggiuntivo</h3>
 
-<p>I messaggi di avviso possono avere del contenuto HTML aggiuntivo come degli heading, paragrafi e divisori.</p>
+<p>I messaggi di avviso possono avere del contenuto HTML aggiuntivo come intestazioni, paragrafi e divisori.</p>
 
 <div class="bd-example">
 
@@ -674,50 +700,63 @@
 
 <h3 id="chiusura">Chiusura</h3>
 
-<p>Utilizzando il plugin JavaScript di alert, è possibile eliminare qualsiasi avviso. Ecco come:</p>
+<p>È possibile eliminare qualsiasi avviso mediante un pulsante di chiusura:</p>
 
 <ul>
-  <li>Assicurati di aver caricato il plugin di alert o di aver compilato il codice Bootstrap JavaScript.</li>
-  <li>Inserisci il pulsante di chiusura e la classe <code class="language-plaintext highlighter-rouge">.alert-dismissible</code>, verrà così aggiunto un ulteriore padding alla destra dell’avviso e posizionerà correttamente il pulsante <code class="language-plaintext highlighter-rouge">.close</code>.</li>
-  <li>Sul pulsante di chiusura, aggiungi l’attributo <code class="language-plaintext highlighter-rouge">data-dismiss="alert"</code>, che attiverà la funzionalità JavaScript. Assicurati di utilizzare l’elemento <code class="language-plaintext highlighter-rouge">&lt;button&gt;</code> per un comportamento corretto su tutti i dispositivi.</li>
+  <li>Inserisci il pulsante di chiusura e la classe <code class="language-plaintext highlighter-rouge">.alert-dismissible</code>, verrà così aggiunto un ulteriore padding alla destra dell’avviso e posizionerà correttamente il pulsante <code class="language-plaintext highlighter-rouge">.btn-close</code>.</li>
+  <li>Sul pulsante di chiusura, aggiungi l’attributo <code class="language-plaintext highlighter-rouge">data-bs-dismiss="alert"</code>, che attiverà la funzionalità JavaScript. Assicurati di utilizzare l’elemento <code class="language-plaintext highlighter-rouge">&lt;button&gt;</code> per un comportamento corretto su tutti i dispositivi.</li>
   <li>Per animare gli avvisi quando li si elimina, assicurarsi di aggiungere le classi <code class="language-plaintext highlighter-rouge">.fade</code> e <code class="language-plaintext highlighter-rouge">.show</code>.</li>
 </ul>
 
-<p>Clicca sul bottone di chiusura per vedere la funzionalità di rimozione alert in azione:</p>
+<div class="bd-callout bd-callout-accessibility">
+<h4 id="accessibilità">Accessibilità</h4>
+
+<p>L’aria label che assegna il nome accessibile all’icona di chiusura, che nell’esempio è “chiudi avviso”, deve essere correlato al contesto.<br />
+Ad esempio “chiudi nota”, “chiudi”, “nascondi”, ecc.</p>
+</div>
+
+<p>Clicca sul pulsante di chiusura per vedere la funzionalità di rimozione alert in azione:</p>
 
 <div class="bd-example">
 
 <div class="alert alert-warning alert-dismissible fade show" role="alert">
   <strong>Attenzione</strong> Alcuni campi inseriti sono da controllare.
-  <button type="button" class="close" data-dismiss="alert" aria-label="Chiudi avviso">
-    <span aria-hidden="true">&times;</span>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Chiudi avviso">
+    <svg class="icon">
+      <use href="/bootstrap-italia/dist/svg/sprites.svg#it-close"></use>
+    </svg>
   </button>
 </div>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"alert alert-warning alert-dismissible fade show"</span> <span class="na">role=</span><span class="s">"alert"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;strong&gt;</span>Attenzione<span class="nt">&lt;/strong&gt;</span> Alcuni campi inseriti sono da controllare.
-  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"close"</span> <span class="na">data-dismiss=</span><span class="s">"alert"</span> <span class="na">aria-label=</span><span class="s">"Chiudi avviso"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span><span class="ni">&amp;times;</span><span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn-close"</span> <span class="na">data-bs-dismiss=</span><span class="s">"alert"</span> <span class="na">aria-label=</span><span class="s">"Chiudi avviso"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-close"</span><span class="nt">&gt;&lt;/use&gt;</span>
+    <span class="nt">&lt;/svg&gt;</span>
   <span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<h3 id="tramite-javascript">Tramite JavaScript</h3>
+<h4 id="tramite-javascript">Tramite JavaScript</h4>
 
 <p>Abilita la chiusura di un alert tramite JavaScript:</p>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">.alert</span><span class="dl">'</span><span class="p">).</span><span class="nx">alert</span><span class="p">()</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">alertList</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="dl">'</span><span class="s1">.alert</span><span class="dl">'</span><span class="p">)</span>
+<span class="nx">alertList</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">alert</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Alert</span><span class="p">(</span><span class="nx">alert</span><span class="p">)</span>
+<span class="p">})</span>
 </code></pre></div></div>
 
 <p>Oppure con l’assegnazione dell’attributo <code class="language-plaintext highlighter-rouge">data</code> in un pulsante <strong>all’interno dell’alert</strong>, come nell’esempio seguente:</p>
 
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"close"</span> <span class="na">data-dismiss=</span><span class="s">"alert"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;</span>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn-close"</span> <span class="na">data-bs-dismiss=</span><span class="s">"alert"</span> <span class="na">aria-label=</span><span class="s">"Chiudi avviso"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;span</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span><span class="ni">&amp;times;</span><span class="nt">&lt;/span&gt;</span>
 <span class="nt">&lt;/button&gt;</span>
 </code></pre></div></div>
 
 <p>Nota che chiudendo un alert lo rimuoverai dal DOM.</p>
 
-<h3 id="metodo">Metodo</h3>
+<h4 id="metodi">Metodi</h4>
 
 <table>
   <thead>
@@ -728,24 +767,30 @@
   </thead>
   <tbody>
     <tr>
-      <td><code class="language-plaintext highlighter-rouge">$().alert()</code></td>
-      <td>Attiva l’ascolto dell’evento click negli elementi che hanno l’attributo <code class="language-plaintext highlighter-rouge">data-dismiss="alert"</code> (Non è necessario quando c’è l’inizializzazione automatica tramite API).</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">$().alert('close')</code></td>
+      <td><code class="language-plaintext highlighter-rouge">close</code></td>
       <td>Chiude un alert rimuovendolo dal DOM. Se le classi <code class="language-plaintext highlighter-rouge">.fade</code> e <code class="language-plaintext highlighter-rouge">.show</code> sono presenti nell’elemento, l’avviso verrà chiuso con effetto scomparsa.</td>
     </tr>
     <tr>
-      <td><code class="language-plaintext highlighter-rouge">$().alert('dispose')</code></td>
+      <td><code class="language-plaintext highlighter-rouge">dispose</code></td>
       <td>L’alert viene rimosso.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">getInstance</code></td>
+      <td>Static method which allows you to get the alert instance associated to a DOM element, you can use it like this: bootstrap.Alert.getInstance(alert)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">getOrCreateInstance</code></td>
+      <td>Static method which returns an alert instance associated to a DOM element or create a new one in case it wasn’t initialised. You can use it like this: bootstrap.Alert.getOrCreateInstance(element)</td>
     </tr>
   </tbody>
 </table>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">.alert</span><span class="dl">'</span><span class="p">).</span><span class="nx">alert</span><span class="p">(</span><span class="dl">'</span><span class="s1">close</span><span class="dl">'</span><span class="p">)</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">alertNode</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">'</span><span class="s1">.alert</span><span class="dl">'</span><span class="p">)</span>
+<span class="kd">var</span> <span class="nx">alert</span> <span class="o">=</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Alert</span><span class="p">.</span><span class="nx">getInstance</span><span class="p">(</span><span class="nx">alertNode</span><span class="p">)</span>
+<span class="nx">alert</span><span class="p">.</span><span class="nx">close</span><span class="p">()</span>
 </code></pre></div></div>
 
-<h3 id="eventi">Eventi</h3>
+<h4 id="eventi">Eventi</h4>
 
 <p>Il plugin alert di Bootstrap mette a disposizione alcuni eventi per agganciare la funzionalità di avviso.</p>
 
@@ -768,8 +813,11 @@
   </tbody>
 </table>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#myAlert</span><span class="dl">'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">closed.bs.alert</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-  <span class="c1">// esegue qualcosa</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">myAlert</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">myAlert</span><span class="dl">'</span><span class="p">)</span>
+<span class="nx">myAlert</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">closed.bs.alert</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// do something, for instance, explicitly move focus to the most appropriate element,</span>
+  <span class="c1">// so it doesn't get lost/reset to the start of the page</span>
+  <span class="c1">// document.getElementById('...').focus()</span>
 <span class="p">})</span>
 </code></pre></div></div>
 
@@ -778,18 +826,18 @@
     </div>
 
     
-
 <script>
   window.__PUBLIC_PATH__ = '/bootstrap-italia/dist/fonts'
-</script><script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202207122305"></script><script src="/bootstrap-italia/docs/assets/dist/js/vendor/anchor.min.js"></script>
-<script src="/bootstrap-italia/docs/assets/dist/js/vendor/clipboard.min.js"></script>
-<script src="/bootstrap-italia/docs/assets/dist/js/vendor/tsparticles.min.js"></script>
+</script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202207221548"></script><script src="/bootstrap-italia/docs/assets/src/js/vendor/anchor.min.js"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/vendor/clipboard.min.js"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/vendor/tsparticles.min.js"></script>
 
-<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202207122305"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202207221548"></script>
 
-<script src="/bootstrap-italia/docs/assets/dist/js/vendor/tweenjs.min.js"></script>
-<script src="/bootstrap-italia/docs/assets/dist/js/vendor/easeljs.min.js"></script>
-<script src="/bootstrap-italia/docs/assets/dist/js/vendor/preloadjs.min.js"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/vendor/tweenjs.min.js"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/vendor/easeljs.min.js"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/vendor/preloadjs.min.js"></script>
 
 <script>
   var manifest = [
@@ -802,10 +850,9 @@
     { src: '/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png', id: 'cover-7' },
   ]
 </script>
-<script src="/bootstrap-italia/docs/assets/dist/js/cover-animation.min.js?202207122305"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202207221548"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/vendor/docsearch.min.js"></script>
 
-
-<script src="/bootstrap-italia/docs/assets/dist/js/vendor/docsearch.min.js"></script>
 <script>
   docsearch({
     apiKey: 'a755e381c276458251a59282bae6ee93',

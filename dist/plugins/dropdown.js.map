@@ -1,0 +1,1 @@
+{"version":3,"file":"dropdown.js","sources":["../../src/js/plugins/dropdown.js"],"sourcesContent":["import { default as BSDropdown } from 'bootstrap/js/src/dropdown'\n\nclass Dropdown extends BSDropdown {}\n\nexport default Dropdown\n"],"names":[],"mappings":";;AAEA,MAAM,QAAQ,SAAS,UAAU,CAAC;;;;"}

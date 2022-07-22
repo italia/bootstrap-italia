@@ -18,4 +18,3 @@ COPY ./package.json /app
 
 RUN npm ci
 
-RUN npm i gulp -g
