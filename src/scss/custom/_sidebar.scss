@@ -64,6 +64,9 @@
                 background-color: $sidebar-dropdown-line-selection-color;
               }
             }
+            &.icon-right {
+              padding: 0.55em 24px;
+            }
           }
         }
         &.link-sublist {
