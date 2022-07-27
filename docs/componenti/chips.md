@@ -24,29 +24,29 @@ L'azione richiesta per l'eliminazione della chip andrà associata al `<button>`.
       <span class="chip-label">Label</span>
     </div>
     <p class="mt-4 mb-2">Testo e chiusura</p>
-    <div class="chip">
+    <div class="chip alert">
       <span class="chip-label">Label</span>
-      <button>
+      <button  data-bs-dismiss='alert'>
         <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
         <span class="visually-hidden">Elimina label</span>
       </button>
     </div>
     <p class="mt-4 mb-2">Icona, testo e chiusura</p>
-    <div class="chip">
+    <div class="chip alert">
       <svg class="icon icon-xs"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-github"></use></svg>
       <span class="chip-label">Label</span>
-      <button>
+      <button data-bs-dismiss='alert'>
         <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
         <span class="visually-hidden">Elimina label</span>
       </button>
     </div>
     <p class="mt-4 mb-2">Avatar, testo e chiusura</p>
-    <div class="chip">
+    <div class="chip alert">
       <div class="avatar size-xs">
         <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Mario Rossi">
       </div>
       <span class="chip-label">Label</span>
-      <button>
+      <button data-bs-dismiss='alert'>
         <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
         <span class="visually-hidden">Elimina label</span>
       </button>
@@ -59,29 +59,29 @@ L'azione richiesta per l'eliminazione della chip andrà associata al `<button>`.
       <span class="chip-label">Label</span>
     </div>
     <p class="mt-4 mb-2">Testo e chiusura grande</p>
-    <div class="chip chip-lg">
+    <div class="chip chip-lg alert">
       <span class="chip-label">Label</span>
-      <button>
+      <button data-bs-dismiss='alert'>
         <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
         <span class="visually-hidden">Elimina label</span>
       </button>
     </div>
     <p class="mt-4 mb-2">Icona, testo e chiusura grande</p>
-    <div class="chip chip-lg">
+    <div class="chip chip-lg alert">
       <svg class="icon icon-xs"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-github"></use></svg>
       <span class="chip-label">Label</span>
-      <button>
+      <button data-bs-dismiss='alert'>
         <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
         <span class="visually-hidden">Elimina label</span>
       </button>
     </div>
     <p class="mt-4 mb-2">Avatar, testo e chiusura grande</p>
-    <div class="chip chip-lg">
+    <div class="chip chip-lg alert">
       <div class="avatar size-xs">
         <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Mario Rossi">
       </div>
       <span class="chip-label">Label</span>
-      <button>
+      <button data-bs-dismiss='alert'>
         <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
         <span class="visually-hidden">Elimina label</span>
       </button>
