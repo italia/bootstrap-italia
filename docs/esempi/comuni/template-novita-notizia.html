@@ -68,51 +68,50 @@ title: Template Pagina Notizia
   <div class="container">
     <div class="row border-top row-column-border row-column-menu-left">
       <aside class="col-lg-4">
-        <div class="sticky-wrapper navbar-wrapper">
-          <nav class="navbar it-navscroll-wrapper it-top-navscroll navbar-expand-lg">
-            <button
-              class="custom-navbar-toggler"
-              type="button"
-              aria-controls="navbarNav"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-              data-bs-target="#navbarNav"
+        <nav class="navbar it-navscroll-wrapper it-bottom-navscroll navbar-expand-lg" data-bs-navscroll>
+          <button
+            class="custom-navbar-toggler"
+            type="button"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            data-bs-target="#navbarNav"
+            data-bs-toggle="navbarcollapsible"
+          >
+            <span class="it-list"></span>Indice della pagina
+          </button>
+          <div class="navbar-collapsable" id="navbarNav">
+            <div class="overlay"></div>
+            <div class="close-div visually-hidden">
+              <button class="btn close-menu" type="button"><span class="it-close"></span>Chiudi</button>
+            </div>
+            <a class="it-back-button" href="#">
+              <svg class="icon icon-sm icon-primary align-top">
+                <use xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-left"></use>
+              </svg>
+              <span>Torna indietro</span></a
             >
-              <span class="it-list"></span>Indice della pagina
-            </button>
-            <div class="navbar-collapsable" id="navbarNav">
-              <div class="overlay"></div>
-              <div class="close-div visually-hidden">
-                <button class="btn close-menu" type="button"><span class="it-close"></span>Chiudi</button>
-              </div>
-              <a class="it-back-button" href="#">
-                <svg class="icon icon-sm icon-primary align-top">
-                  <use xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-left"></use>
-                </svg>
-                <span>Torna indietro</span></a
-              >
-              <div class="menu-wrapper">
-                <div class="link-list-wrapper menu-link-list">
-                  <h3 class="no_toc">Indice della pagina</h3>
-                  <ul class="link-list">
-                    <li class="nav-item active">
-                      <a class="nav-link active" href="#descrizione"><span>Descrizione</span></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#documenti"><span>Documenti</span></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#a-cura-di"><span>A cura di</span></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#ulteriori-informazioni"><span>Ulteriori informazioni</span></a>
-                    </li>
-                  </ul>
-                </div>
+            <div class="menu-wrapper">
+              <div class="link-list-wrapper menu-link-list">
+                <h3 class="no_toc">Indice della pagina</h3>
+                <ul class="link-list">
+                  <li class="nav-item active">
+                    <a class="nav-link active" href="#descrizione"><span>Descrizione</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#documenti"><span>Documenti</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#a-cura-di"><span>A cura di</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#ulteriori-informazioni"><span>Ulteriori informazioni</span></a>
+                  </li>
+                </ul>
               </div>
             </div>
-          </nav>
-        </div>
+          </div>
+        </nav>
       </aside>
       <section class="col-lg-8 it-page-sections-container">
         <article id="descrizione" class="it-page-section anchor-offset">
