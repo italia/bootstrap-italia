@@ -191,7 +191,7 @@ class NavScroll extends BaseComponent {
     }
   }
 
-  _onScroll = () => {
+  _onScroll() {
     const sectionsContainerTop = this._sectionContainer ? this._sectionContainer.offsetTop : 0;
     const scrollDistance = document.scrollingElement.scrollTop - sectionsContainerTop;
 
