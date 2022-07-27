@@ -15,7 +15,7 @@ jobs:
         id: waitForVercelPreviewDeployment
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          max_timeout: 120
+          max_timeout: 300
   pa11y:
     name: Pa11y tests
     needs: wait_for_vercel
