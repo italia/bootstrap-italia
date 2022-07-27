@@ -222,7 +222,7 @@ Per posizionare correttamente l'icona a sinistra del testo bisogna aggiungere al
 ### Secondary Action
 
 **Icona destra**<br>
-Per aggiungere un icona a sinistra del testo bisogna aggiungere al tag `<a>` la classe: `.icon-right`
+Per aggiungere un icona a destra del testo bisogna aggiungere al tag `<a>` la classe: `.icon-right`
 
 All'interno del tag `<a>` subito dopo lo `<span>` contenente il testo, puoi inserire il tag `svg`.
 
