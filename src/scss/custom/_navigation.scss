@@ -10,7 +10,7 @@
     margin-top: $dropdown-menu-vertical-shift;
   }
 }
-.row.row-column-border>[class^=col-] .navbar {
+.row.row-column-border > [class^='col-'] .navbar {
   padding: 8px 0;
 }
 .navbar {
@@ -281,7 +281,7 @@
 }
 //Tablet horizontal / small desktop
 @media (min-width: #{map-get($grid-breakpoints, lg)}) {
-  .row.row-column-border>[class^=col-] .navbar {
+  .row.row-column-border > [class^='col-'] .navbar {
     padding: 0;
   }
   .navbar {
