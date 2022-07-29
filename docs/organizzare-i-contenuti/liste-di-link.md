@@ -249,7 +249,7 @@ All'interno del tag `<a>` subito dopo lo `<span>` contenente il testo, puoi inse
 ### Primary e Secondary Action
 
 **Icona destra**<br>
-Per aggiungere un icona a sinistra del testo bisogna aggiungere al tag `<a>` la classe: `.icon-right`
+Per aggiungere un icona a destra del testo bisogna aggiungere al tag `<a>` la classe: `.icon-right`
 
 All'interno del tag `<a>` subito dopo lo `<span>` contenente il testo, andremo ad inserire l'icona e l'SVG con `.it-(classe icona)` per determinare quale icona inserire.
 
