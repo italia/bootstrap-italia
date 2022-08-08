@@ -8,11 +8,11 @@ redirect_from: '/informazioni/'
 
 ## Che cos'è Bootstrap Italia
 
-Bootstrap Italia - versione attuale **{{ site.current_version}}** - è una personalizzazione della libreria [Bootstrap {{ site.bootstrap_version }}](https://getbootstrap.com/docs/{{ site.bootstrap_minor }}/getting-started/introduction/) che tiene conto delle indicazioni in termini di design, usabilità ed accessibilità definite nelle [linee guida di design per i servizi web della Pubblica Amministrazione](https://docs.italia.it/italia/designers-italia/design-linee-guida-docs/), ed implementate nella versione più recente dello [UI Kit](https://github.com/italia/design-ui-kit).
+Bootstrap Italia - versione attuale **{{ site.current_version}}** - è una personalizzazione della libreria [Bootstrap {{ site.bootstrap_version }}](https://getbootstrap.com/docs/{{ site.bootstrap_minor }}/getting-started/introduction/) che tiene conto delle indicazioni in termini di design, usabilità e accessibilità definite nelle nuove "Linee guida di design per i siti internet e i servizi digitali della Pubblica Amministrazione", e nel relativo "Manuale operativo di design" a supporto. ([Scopri linee guida e manuale sul sito Designers Italia](https://designers.italia.it/linee-guida)).
 
 ### Roadmap
 
-La roadmap del progetto è consultabile nel [nuovo piano attività 2022 di Designers Italia](https://designers.italia.it/piano-attivita/).
+La roadmap del progetto è consultabile nel [piano attività di Designers Italia](https://designers.italia.it/piano-attivita/).
 
 ## Licenza d'uso
 
