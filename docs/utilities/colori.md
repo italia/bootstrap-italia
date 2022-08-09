@@ -11,7 +11,7 @@ description: Una serie di classi di utilità per applicare colori a testi e sfon
 
 #### Accessibilità
 
-Il colore è uno degli strumenti principali per la trasmissione delle informazioni, ma non dimenticare mai di affiancare all'uso del colore altri mezzi più espliciti. Leggi la sezione sull'[uso del colore](https://docs.italia.it/italia/designers-italia/design-linee-guida-docs/it/stabile/doc/service-design/accessibilita.html#uso-del-colore) delle Linee Guida di design per maggiori informazioni.
+Il colore è uno degli strumenti principali per la trasmissione delle informazioni, ma non dimenticare mai di affiancare all'uso del colore altri mezzi più espliciti. 
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
 Bootstrap Italia eredita gli stessi meccanisimi per la gestione dei colori di Bootstrap {{ site.bootstrap_version }}, dove i colori del tema sono descritti attraverso una variabile Sass nominata `$theme-colors`.
