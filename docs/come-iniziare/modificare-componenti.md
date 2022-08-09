@@ -72,6 +72,6 @@ Attraverso questo comando è possibile effettuare il test di accessibilità per 
 
 Per analizzare un componente di esempio da cui partire per lo sviluppo di componenti avanzati personalizzati, puoi fare riferimento alla pagina descrittiva del [componente base]({{ site.baseurl }}/docs/come-iniziare/componente-base/).
 
-[documentazione-bootstrap]: https://getbootstrap.com/docs/{{ site.bootstrap_minor }}/getting-started/introduction/
-[documentazione-bootstrap-theming]: https://getbootstrap.com/docs/{{ site.bootstrap_minor }}/getting-started/theming/
-[linee-guida]: https://docs.italia.it/italia/design/lg-design-servizi-web/
+[documentazione-bootstrap]: https://getbootstrap.com/docs/{{ site.bootstrap_minor }}/getting-started/introduction/ 
+[documentazione-bootstrap-theming]: https://getbootstrap.com/docs/{{ site.bootstrap_minor }}/getting-started/theming/ 
+[linee-guida]: https://docs.italia.it/italia/design/lg-design-servizi-web/ 
