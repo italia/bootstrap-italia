@@ -74,4 +74,4 @@ Per analizzare un componente di esempio da cui partire per lo sviluppo di compon
 
 [documentazione-bootstrap]: https://getbootstrap.com/docs/{{ site.bootstrap_minor }}/getting-started/introduction/
 [documentazione-bootstrap-theming]: https://getbootstrap.com/docs/{{ site.bootstrap_minor }}/getting-started/theming/
-[linee-guida]: https://docs.italia.it/italia/designers-italia/design-linee-guida-docs/
+[linee-guida]: https://docs.italia.it/italia/design/lg-design-servizi-web/
