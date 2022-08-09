@@ -12,9 +12,9 @@ _📦 [Go to Bootstrap Italia 1.x version (based on Bootstrap 4)](https://github
 
 New Bootstrap Italia version is a [Bootstrap 5](https://getbootstrap.com/docs/5.1/getting-started/introduction/) theme to create responsive web apps to make Italian public digital services consistent, accessible and simple to use.
 
-Bootstrap Italia inherits components, mixins, grid system, and anything else from Bootstrap 5, customising them accordingly to the [Italian guidelines for designing public digital services](https://docs.italia.it/italia/designers-italia/design-linee-guida-docs/).
+Bootstrap Italia inherits components, mixins, grid system, and anything else from Bootstrap 5, customising them accordingly to the [Italian guidelines for designing public digital services](https://designers.italia.it/linee-guida/) (in italian).
 
-The project roadmap is available in the [new Designers Italia 2022 activity plan](https://designers.italia.it/piano-attivita/).
+The project roadmap is available in the [Designers Italia 2022 activity plan](https://designers.italia.it/piano-attivita/).
 
 **[Check out the documentation »](https://italia.github.io/bootstrap-italia/)** (in italian)
 
@@ -39,7 +39,7 @@ you can [create an issue](https://github.com/italia/bootstrap-italia/issues).
 
 Would you like to help with Bootstrap Italia? **You are in the right place!**
 
-If you have not already done so, start by spending a few minutes to deepen your knowledge on [design guidelines for Italian public digital services](https://docs.italia.it/italia/designers-italia/design-linee-guida-docs/) (in italian), and refer to the [instructions on how to contribute to Bootstrap Italia](https://github.com/italia/bootstrap-italia/blob/main/CONTRIBUTING.md) (in italian).
+If you have not already done so, start by spending a few minutes to deepen your knowledge on [design guidelines for Italian public digital services](https://designers.italia.it/linee-guida) (in italian), and refer to the [instructions on how to contribute to Bootstrap Italia](https://github.com/italia/bootstrap-italia/blob/main/CONTRIBUTING.md) (in italian).
 
 At this point, you'll need to configure the local environment to compile the source files and generate them
 of the documentation. You can use [Docker](https://docs.docker.com/get-started/) to start your development environment
