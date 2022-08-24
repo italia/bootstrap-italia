@@ -1,3 +1,12 @@
+## [2.0.3](https://github.com/italia/bootstrap-italia/compare/v2.0.2...v2.0.3) (2022-08-24)
+
+
+### Bug Fixes
+
+* **core:** remove border on dark elements and simple cards ([8451acf](https://github.com/italia/bootstrap-italia/commit/8451acf7d1c7fc7dc58be1efaa7880264026abb8))
+
+
+
 ## [2.0.2](https://github.com/italia/bootstrap-italia/compare/v2.0.1...v2.0.2) (2022-07-27)
 
 

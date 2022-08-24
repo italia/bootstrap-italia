@@ -23,14 +23,14 @@ description:
       costruire interfacce web **moderne**, **inclusive** e **semplici da
       mantenere**.
 
-
       Completamente **open-source**, costruita sulle fondamenta di [Bootstrap
       4.6.1](https://getbootstrap.com/ "Repository GitHub di Bootstrap"), di cui
       eredita tutte le funzionalità, componenti, griglie e classi di utilità,
-      personalizzandole secondo le [Linee Guida di Design per i siti web della
+      personalizzandole secondo le indicazioni delle "[Linee guida di design per i siti internet e i servizi digitali della
       Pubblica
-      Amministrazione](https://docs.italia.it/italia/designers-italia/design-linee-guida-docs/
-      "Linee guida di design per i siti web delle PA"), **Bootstrap Italia** usa
+      Amministrazione](https://docs.italia.it/italia/design/lg-design-servizi-web/)" e del relativo "[Manuale operativo di design](https://designers.italia.it/linee-guida)" a supporto disponibile sul sito Designers Italia.
+      
+      **Bootstrap Italia** usa
       i pattern e i componenti definiti nello [UI Kit di Designers
       Italia](https://designers.italia.it/kit/ui-kit/ "User Interface Kit") e li
       trasforma in codice già pronto all'uso!
