@@ -33,7 +33,7 @@
     position: absolute;
     top: -$timeline-pin-circle-size * 0.5;
     z-index: 5;
-    left: $timeline-padding / 2;
+    left: calc($timeline-padding / 2);
     .pin-icon {
       width: $timeline-pin-circle-size;
       height: $timeline-pin-circle-size;
