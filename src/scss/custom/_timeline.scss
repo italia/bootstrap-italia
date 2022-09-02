@@ -31,7 +31,7 @@
     align-items: center;
     position: absolute;
     top: -$timeline-pin-circle-size * 0.5;
-    z-index: 5;
+    z-index: 2;
     left: $timeline-padding;
     .pin-icon {
       width: $timeline-pin-circle-size;
