@@ -2,6 +2,8 @@
 @use 'sass:math';
 
 .it-header-wrapper {
+  position: relative;
+  z-index: 5;
   .it-nav-wrapper {
     position: relative;
     z-index: auto;

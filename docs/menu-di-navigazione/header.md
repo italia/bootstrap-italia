@@ -94,6 +94,7 @@ Il cambio lingua è gestito con il componente [dropdown]({{ site.baseurl }}/docs
     </div>
   </div>
 </div>
+
 {% endcapture %}{% include example.html content=example %}
 
 #### Zona destra con pulsante full-responsive
@@ -1114,6 +1115,7 @@ Al menù di navigazione principale può essere aggiunto anche un menù di naviga
     </div>
   </div>
 </header>
+
 {% endcapture %}{% include example.html content=example %}
 
 ### Versione chiara
