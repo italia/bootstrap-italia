@@ -48,7 +48,7 @@
       overflow-y: auto;
       transform: translateX(-100%);
       transition: all 0.2s cubic-bezier(0.29, 0.85, 0.5, 0.99);
-
+      z-index: 5;
       .navbar-nav {
         padding: $navigation-h-padding 0 0;
         overflow: hidden;
