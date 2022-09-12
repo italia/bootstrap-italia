@@ -44,7 +44,8 @@ jobs:
         run: |
           git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
           chown -R 1001:121 "/github/home/.npm"
-          chmod -R 777 /github/home/.bundle
+          chown -R 1001:121 "/github/home/.bundle/"
+          chmod -R 777 /github/home/.bundle/
           chmod -R 777 /usr/local/bundle/
           npm run documentation-deploy-to-gh-pages
         env:
