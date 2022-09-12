@@ -12,14 +12,14 @@
 <title>Notifiche · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202209091545" rel="stylesheet" />
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202209122234" rel="stylesheet" />
 
 
 <!-- Documentation extras -->
  
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.css" rel="stylesheet" />
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202209091545" rel="stylesheet" />
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202209122234" rel="stylesheet" />
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico" />
@@ -601,6 +601,13 @@
 <li class="toc-entry toc-h3"><a href="#posizione-fissa">Posizione fissa</a></li>
 </ul>
 </li>
+<li class="toc-entry toc-h2"><a href="#implementazione">Implementazione</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#tramite-data-attributes">Tramite data attributes</a></li>
+<li class="toc-entry toc-h3"><a href="#tramite-javascript">Tramite JavaScript</a></li>
+<li class="toc-entry toc-h3"><a href="#metodi">Metodi</a></li>
+</ul>
+</li>
 </ul>
   </div>
 </div>
@@ -642,16 +649,6 @@
 <p>Lo stato naturale dell’elemento è invisibile. Gli esempi di questa pagina sono stati resi statici per facilitare un confronto fra le varie tipologie.</p>
 
 <p>Il comportamento delle notifiche è verificabile sulla <a href="/bootstrap-italia/docs/esempi/notifications/">pagina di esempio</a>.</p>
-
-<p>La notifica appare quando viene attivata dalla seguente funzione JavaScript:</p>
-
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">notificationShow</span><span class="p">(</span><span class="dl">'</span><span class="s1">idNotification</span><span class="dl">'</span><span class="p">,</span> <span class="mi">6000</span><span class="p">)</span>
-</code></pre></div></div>
-
-<ul>
-  <li>Il primo parametro, la stringa <strong>idNotification</strong>, corrisponde alla proprietà id del <code class="language-plaintext highlighter-rouge">&lt;div&gt;</code> della Notification <code class="language-plaintext highlighter-rouge">&lt;div class="notification" id="idNotification"&gt;...&lt;/div&gt;</code></li>
-  <li>il secondo parametro (opzionale) corrisponde alla durata di visualizzazione in millisecondi. Il valore di default, se non indicato, è di 7000ms ossia 7 secondi.</li>
-</ul>
 
 <div class="bd-callout bd-callout-accessibility">
 <h4 id="accessibilità">Accessibilità</h4>
@@ -1016,6 +1013,86 @@ Utilizzare il tag <code class="language-plaintext highlighter-rouge">h</code> co
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
+<h2 id="implementazione">Implementazione</h2>
+
+<p>Il plugin per le notifiche attiva/disattiva il suo contenuto nascosto su richiesta, tramite attributi data o tramite JavaScript.</p>
+
+<h3 id="tramite-data-attributes">Tramite data attributes</h3>
+
+<p>Attiva una notifica senza scrivere codice JavaScript. Imposta <code class="language-plaintext highlighter-rouge">data-bs-toggle="notification"</code> su un elemento di controllo, come un
+pulsante, insieme a <code class="language-plaintext highlighter-rouge">data-bs-target="#foo"</code> o <code class="language-plaintext highlighter-rouge">href="#foo"</code> per attivare/disattivare una specifica notifica.
+È possibile specificare il tempo di permanenza della notifica mediante l’attributo <code class="language-plaintext highlighter-rouge">data-bs-timeout</code>: il suo valore rappresenta i millisecondi nei quali la notifica resterà visibile.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-bs-toggle=</span><span class="s">"notification"</span> <span class="na">data-bs-target=</span><span class="s">"#myNotification"</span> <span class="na">data-bs-timeout=</span><span class="s">"5000"</span><span class="nt">&gt;</span>Lancia la notifica<span class="nt">&lt;/button&gt;</span>
+</code></pre></div></div>
+
+<p>L’attributo <code class="language-plaintext highlighter-rouge">data-bs-timeout</code> può essere assegnato anche direttamente al componente notifica. In tal caso non sarà necessario assegnarlo anche al pulsante di avvio. Se l’attributo è specificato anche nel pulsante di avvio, verrà preso come tempo di permanenza della notifica il valore di quest’ultimo.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"notification fade"</span> <span class="na">data-bs-timeout=</span><span class="s">"7000"</span> <span class="na">role=</span><span class="s">"alert"</span> <span class="na">id=</span><span class="s">"myNotification"</span> <span class="na">aria-labelledby=</span><span class="s">"not0-title"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h5</span> <span class="na">id=</span><span class="s">"not0-title"</span><span class="nt">&gt;</span>Notification<span class="nt">&lt;/h5&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<h3 id="tramite-javascript">Tramite JavaScript</h3>
+
+<p>Richiama una notifica con id <code class="language-plaintext highlighter-rouge">myNotification</code> con una singola riga di JavaScript:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">myNotification</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Notification</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">myNotification</span><span class="dl">'</span><span class="p">),</span> <span class="nx">options</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="metodi">Metodi</h3>
+
+<div class="bd-callout bd-callout-info">
+<h4 id="metodi-asincroni-e-transizioni">Metodi asincroni e transizioni</h4>
+
+<p>Tutti i metodi API sono <strong>asincroni</strong> e avviano una <strong>transizione</strong>. Ritornano al chiamante non appena viene avviata la transizione ma <strong>prima che termini</strong>. Inoltre, una chiamata al metodo su un <strong>componente in transizione verrà ignorata</strong>.</p>
+
+<p>Per maggiori informazioni consulta la <a href="https://getbootstrap.com/docs/5.0/getting-started/javascript/">documentazione Javascript di Bootstrap</a> (in inglese).</p>
+</div>
+
+<h4 id="utilizzo-delle-opzioni"><code class="language-plaintext highlighter-rouge">Utilizzo delle opzioni</code></h4>
+
+<p>Durante la creazione di un’istanza Notification è possibile passare un oggetto per la configurazione (opzionale).</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">myNotification</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Notification</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">myNotification</span><span class="dl">'</span><span class="p">),</span> <span class="p">{</span>
+  <span class="na">timeout</span><span class="p">:</span> <span class="mi">2000</span><span class="p">,</span>
+<span class="p">})</span>
+</code></pre></div></div>
+
+<table>
+<thead><tr><th>nome</th><th>descrizione</th></tr></thead>
+<tbody>
+<tr>
+  <td>timeout</td><td>durata di permanenza della notifica in millisecondi. Sostituisce l'attributo data-bs-timeout.</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="show"><code class="language-plaintext highlighter-rouge">show</code></h4>
+
+<p>Mostra manualmente una notifica.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">myNotification</span><span class="p">.</span><span class="nx">show</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>È possibile passare come parametro il valore in millisecondi di permanenza della notifica. Se non viene specificato, il tempo di permanenza della notifica verrà ricavato dal parametro di configurazione <code class="language-plaintext highlighter-rouge">timeout</code> o dal data attribute <code class="language-plaintext highlighter-rouge">data-bs-timeout</code>.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">myNotification</span><span class="p">.</span><span class="nx">show</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span> <span class="c1">//la notifica verrà visualizzata per 2 secondi, ignorando il parametro di configurazione</span>
+</code></pre></div></div>
+
+<h4 id="hide"><code class="language-plaintext highlighter-rouge">hide</code></h4>
+
+<p>Nasconde manualmente una notifica.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">myNotification</span><span class="p">.</span><span class="nx">hide</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h4 id="toggle"><code class="language-plaintext highlighter-rouge">toggle</code></h4>
+
+<p>Mostra/Nasconde manualmente una notifica.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">myNotification</span><span class="p">.</span><span class="nx">toggle</span><span class="p">()</span>
+</code></pre></div></div>
 
         </main>
       </div>
@@ -1025,11 +1102,11 @@ Utilizzare il tag <code class="language-plaintext highlighter-rouge">h</code> co
 <script>
   window.__PUBLIC_PATH__ = '/bootstrap-italia/dist/fonts'
 </script>
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202209091545"></script><script src="/bootstrap-italia/docs/assets/src/js/vendor/anchor.min.js"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202209122234"></script><script src="/bootstrap-italia/docs/assets/src/js/vendor/anchor.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/clipboard.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tsparticles.min.js"></script>
 
-<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202209091545"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202209122234"></script>
 
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tweenjs.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/easeljs.min.js"></script>
@@ -1046,7 +1123,7 @@ Utilizzare il tag <code class="language-plaintext highlighter-rouge">h</code> co
     { src: '/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png', id: 'cover-7' },
   ]
 </script>
-<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202209091545"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202209122234"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/docsearch.min.js"></script>
 
 <script>
