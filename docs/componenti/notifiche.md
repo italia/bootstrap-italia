@@ -268,13 +268,13 @@ Il plugin per le notifiche attiva/disattiva il suo contenuto nascosto su richies
 
 Attiva una notifica senza scrivere codice JavaScript. Imposta `data-bs-toggle="notification"` su un elemento di controllo, come un
 pulsante, insieme a `data-bs-target="#foo"` o `href="#foo"` per attivare/disattivare una specifica notifica.
-E' possibile specificare il tempo di permanenza della notifica mediante l'attributo `data-bs-timeout`: il suo valore rappresenta i millisecondi nei quali la notifica resterà visibile.
+È possibile specificare il tempo di permanenza della notifica mediante l'attributo `data-bs-timeout`: il suo valore rappresenta i millisecondi nei quali la notifica resterà visibile.
 
 ```html
 <button type="button" data-bs-toggle="notification" data-bs-target="#myNotification" data-bs-timeout="5000">Lancia la notifica</button>
 ```
 
-L'attributo `data-bs-timeout` può essere assegnato anche direttamente al componente notifica. In tal caso non sarà necessario assegnarlo anche al pulsante di avvio. Se l'attributo è specificato anche nel pulsante di avvio, verrà preso come tempo di permanenza il valore di quest'ultimo.
+L'attributo `data-bs-timeout` può essere assegnato anche direttamente al componente notifica. In tal caso non sarà necessario assegnarlo anche al pulsante di avvio. Se l'attributo è specificato anche nel pulsante di avvio, verrà preso come tempo di permanenza della notifica il valore di quest'ultimo.
 
 ```html
 <div class="notification fade" data-bs-timeout="7000" role="alert" id="myNotification" aria-labelledby="not0-title">
@@ -287,7 +287,7 @@ L'attributo `data-bs-timeout` può essere assegnato anche direttamente al compon
 Richiama una notifica con id `myNotification` con una singola riga di JavaScript:
 
 ```js
-var myNotification = new bootstrap.Notification(document.getElementById('myNotification'), options)
+const myNotification = new bootstrap.Notification(document.getElementById('myNotification'), options)
 ```
 
 ### Metodi
@@ -299,7 +299,7 @@ var myNotification = new bootstrap.Notification(document.getElementById('myNotif
 Durante la creazione di un'istanza Notification è possibile passare un oggetto per la configurazione (opzionale).
 
 ```js
-var myNotification = new bootstrap.Notification(document.getElementById('myNotification'), {
+const myNotification = new bootstrap.Notification(document.getElementById('myNotification'), {
   timeout: 2000,
 })
 ```
@@ -321,7 +321,7 @@ Mostra manualmente una notifica.
 myNotification.show()
 ```
 
-E' possibile passare come parametro il valore in millisecondi di permanenza della notifica. Se non viene specificato, il tempo di permanenza verrà ricavato dal parametro di configurazione `timeout` o dal data attribute `data-bs-timeout`.
+È possibile passare come parametro il valore in millisecondi di permanenza della notifica. Se non viene specificato, il tempo di permanenza della notifica verrà ricavato dal parametro di configurazione `timeout` o dal data attribute `data-bs-timeout`.
 
 ```js
 myNotification.show(2000) //la notifica verrà visualizzata per 2 secondi, ignorando il parametro di configurazione
