@@ -55,7 +55,7 @@ Le label dei tab possono essere sostituite da icone con classi che ne indicano i
   <li class="nav-item">
     <a class="nav-link active" aria-current="page" href="#">
       <svg class="icon">
-        <use href="/dist/svg/sprites.svg#it-link"></use>
+        <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use>
       </svg>
       <span class="visually-hidden">Tab titolo 1</span>
     </a>
@@ -63,7 +63,7 @@ Le label dei tab possono essere sostituite da icone con classi che ne indicano i
   <li class="nav-item">
     <a class="nav-link" href="#">
       <svg class="icon">
-        <use href="/dist/svg/sprites.svg#it-calendar"></use>
+        <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-calendar"></use>
       </svg>
       <span class="visually-hidden">Tab titolo 2</span>
     </a>
@@ -71,7 +71,7 @@ Le label dei tab possono essere sostituite da icone con classi che ne indicano i
   <li class="nav-item">
     <a class="nav-link" href="#">
       <svg class="icon">
-        <use href="/dist/svg/sprites.svg#it-comment"></use>
+        <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-comment"></use>
       </svg>
       <span class="visually-hidden">Tab titolo 3</span>
     </a>
@@ -79,7 +79,7 @@ Le label dei tab possono essere sostituite da icone con classi che ne indicano i
   <li class="nav-item">
     <a class="nav-link disabled" href="#" tabindex="-1">
       <svg class="icon">
-        <use href="/dist/svg/sprites.svg#it-close"></use>
+        <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use>
       </svg>
       <span class="visually-hidden">Tab titolo 4</span>
     </a>
@@ -97,7 +97,7 @@ Per ottenere icone più grandi utilizzare la classe `.icon-lg` alle icone. Aggiu
   <li class="nav-item">
     <a class="nav-link active" href="#" aria-current="page">
       <svg class="icon icon-lg">
-        <use href="/dist/svg/sprites.svg#it-link"></use>
+        <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use>
       </svg>
       <span class="visually-hidden">Tab titolo 1</span>
     </a>
@@ -105,7 +105,7 @@ Per ottenere icone più grandi utilizzare la classe `.icon-lg` alle icone. Aggiu
   <li class="nav-item">
     <a class="nav-link" href="#">
       <svg class="icon icon-lg">
-        <use href="/dist/svg/sprites.svg#it-calendar"></use>
+        <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-calendar"></use>
       </svg>
       <span class="visually-hidden">Tab titolo 2</span>
     </a>
@@ -113,7 +113,7 @@ Per ottenere icone più grandi utilizzare la classe `.icon-lg` alle icone. Aggiu
   <li class="nav-item">
     <a class="nav-link" href="#">
       <svg class="icon icon-lg">
-        <use href="/dist/svg/sprites.svg#it-comment"></use>
+        <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-comment"></use>
       </svg>
       <span class="visually-hidden">Tab titolo 3</span>
     </a>
@@ -121,7 +121,7 @@ Per ottenere icone più grandi utilizzare la classe `.icon-lg` alle icone. Aggiu
   <li class="nav-item">
     <a class="nav-link disabled" href="#" tabindex="-1">
       <svg class="icon icon-lg">
-        <use href="/dist/svg/sprites.svg#it-close"></use>
+        <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use>
       </svg>
       <span class="visually-hidden">Tab titolo 4</span>
     </a>
@@ -139,7 +139,7 @@ Icone e testi possono convivere all'interno dei tab, l'allineamento verticale de
   <li class="nav-item">
     <a class="nav-link active" href="#" aria-current="page">
       <svg class="icon">
-        <use href="/dist/svg/sprites.svg#it-link"></use>
+        <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use>
       </svg>
       Tab 1
     </a>
@@ -147,7 +147,7 @@ Icone e testi possono convivere all'interno dei tab, l'allineamento verticale de
   <li class="nav-item">
     <a class="nav-link" href="#">
       <svg class="icon">
-        <use href="/dist/svg/sprites.svg#it-calendar"></use>
+        <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-calendar"></use>
       </svg>
       Tab 2
     </a>
@@ -155,7 +155,7 @@ Icone e testi possono convivere all'interno dei tab, l'allineamento verticale de
   <li class="nav-item">
     <a class="nav-link" href="#">
       <svg class="icon">
-        <use href="/dist/svg/sprites.svg#it-comment"></use>
+        <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-comment"></use>
       </svg>
       Tab 3
     </a>
@@ -163,7 +163,7 @@ Icone e testi possono convivere all'interno dei tab, l'allineamento verticale de
   <li class="nav-item">
     <a class="nav-link disabled" href="#" tabindex="-1">
       <svg class="icon">
-        <use href="/dist/svg/sprites.svg#it-close"></use>
+        <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use>
       </svg>
       Tab 4
     </a>
@@ -195,7 +195,7 @@ In assenza della classe `.auto` i tab vengono dimensionati in base al contenuto.
   <li class="nav-item">
     <a class="nav-link active" href="#" aria-current="page">
       <svg class="icon">
-        <use href="/dist/svg/sprites.svg#it-link"></use>
+        <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use>
       </svg>
       <span class="visually-hidden">Tab titolo 1</span>
     </a>
@@ -203,7 +203,7 @@ In assenza della classe `.auto` i tab vengono dimensionati in base al contenuto.
   <li class="nav-item">
     <a class="nav-link" href="#">
       <svg class="icon">
-        <use href="/dist/svg/sprites.svg#it-calendar"></use>
+        <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-calendar"></use>
       </svg>
       <span class="visually-hidden">Tab titolo 2</span>
     </a>
@@ -211,7 +211,7 @@ In assenza della classe `.auto` i tab vengono dimensionati in base al contenuto.
   <li class="nav-item">
     <a class="nav-link" href="#">
       <svg class="icon">
-        <use href="/dist/svg/sprites.svg#it-comment"></use>
+        <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-comment"></use>
       </svg>
       <span class="visually-hidden">Tab titolo 3</span>
     </a>
@@ -219,7 +219,7 @@ In assenza della classe `.auto` i tab vengono dimensionati in base al contenuto.
   <li class="nav-item">
     <a class="nav-link disabled" href="#" tabindex="-1">
       <svg class="icon">
-        <use href="/dist/svg/sprites.svg#it-close"></use>
+        <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use>
       </svg>
       <span class="visually-hidden">Tab titolo 4</span>
     </a>
