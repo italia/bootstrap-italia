@@ -190,6 +190,7 @@
         }
         // active
         &.active {
+          display: flex;
           &:after {
             content: '';
             position: absolute;
@@ -224,6 +225,7 @@
           border-radius: 50%;
           text-align: center;
           margin-right: 0.667rem;
+          flex-shrink: 0;
           &:after {
             display: none;
           }
