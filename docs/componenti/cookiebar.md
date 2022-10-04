@@ -8,7 +8,9 @@ description: Banner informativo sull'utilizzo dei cookie all'interno del sito we
 
 {% capture callout %}
 
-**Contenuti in aggiornamento.**
+### Attenzione
+
+Componente e contenuti in aggiornamento.
 
 {% endcapture %}{% include callout.html content=callout type="alert" %}
 
