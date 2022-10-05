@@ -6,6 +6,14 @@ title: Cookiebar
 description: Banner informativo sull'utilizzo dei cookie all'interno del sito web.
 ---
 
+{% capture callout %}
+
+### Attenzione
+
+Componente e contenuti in aggiornamento.
+
+{% endcapture %}{% include callout.html content=callout type="alert" %}
+
 ## Perché usarlo
 
 Come previsto inizialmente dal Provvedimento dell'8 maggio 2014 sull'[individuazione delle modalità semplificate per l’informativa e l’acquisizione del consenso per l’uso dei cookie](http://www.garanteprivacy.it/web/guest/home/docweb/-/docweb-display/docweb/3118884), è necessario inserire una barra informativa per i cookie (in gergo **Cookiebar**) qualora ci sia l'effettiva registrazione di dati personali.
