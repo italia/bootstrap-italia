@@ -24,12 +24,14 @@ description:
       mantenere**.
 
       Completamente **open-source**, costruita sulle fondamenta di [Bootstrap
-      4.6.1](https://getbootstrap.com/ "Repository GitHub di Bootstrap"), di cui
+      4.6.1](https://getbootstrap.com/docs/4.6/getting-started/introduction/ "Repository GitHub di Bootstrap") per la versione 1
+      e la versione [Bootstrap
+      5.1.3](https://getbootstrap.com/docs/5.1/getting-started/introduction/ "Repository GitHub di Bootstrap") per la versione 2 , di cui
       eredita tutte le funzionalità, componenti, griglie e classi di utilità,
       personalizzandole secondo le indicazioni delle "[Linee guida di design per i siti internet e i servizi digitali della
       Pubblica
       Amministrazione](https://docs.italia.it/italia/design/lg-design-servizi-web/)" e del relativo "[Manuale operativo di design](https://designers.italia.it/linee-guida)" a supporto disponibile sul sito Designers Italia.
-      
+
       **Bootstrap Italia** usa
       i pattern e i componenti definiti nello [UI Kit di Designers
       Italia](https://designers.italia.it/kit/ui-kit/ "User Interface Kit") e li
