@@ -11,7 +11,7 @@
     "web"
   ],
   "module": "dist/bootstrap-italia.esm.js",
-  "types": "./decs.d.ts",
+  "types": "./types/decs.d.ts",
   "sideEffects": [
     "*.css",
     "*.scss",
