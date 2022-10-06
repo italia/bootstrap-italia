@@ -1,5 +1,5 @@
-## [2.0.5](https://github.com/italia/bootstrap-italia/compare/v2.0.4...v2.0.5) (2022-10-05)
+## [2.0.6](https://github.com/italia/bootstrap-italia/compare/v2.0.5...v2.0.6) (2022-10-06)
 
 ### Bug Fixes
 
-* **core:** steppers active element on desktop ([287dd99](https://github.com/italia/bootstrap-italia/commit/287dd993813532ffc9abbe7e83ee0592d61742f9))
+* **core:** types path in package.json ([05e743a](https://github.com/italia/bootstrap-italia/commit/05e743a4c49e7fc57b1ab656b144c0067bcf3961))
