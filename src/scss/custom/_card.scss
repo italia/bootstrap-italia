@@ -316,6 +316,22 @@
   }
   // cards with img top
   &.card-img {
+    // Why the margin?
+    // margin-left: $card-padding/3;
+    // margin-right: $card-padding/3;
+    .card-body {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    &.shadow .card-body,
+    &.border .card-body,
+    &.border-start .card-body,
+    &.border-end .card-body {
+      padding-left: $card-padding;
+      padding-right: $card-padding;
+    }
+
     &:after {
       //display: none;
     }
