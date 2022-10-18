@@ -1,5 +1,5 @@
-## [2.0.6](https://github.com/italia/bootstrap-italia/compare/v2.0.5...v2.0.6) (2022-10-06)
+## [2.0.7](https://github.com/italia/bootstrap-italia/compare/v2.0.6...v2.0.7) (2022-10-18)
 
 ### Bug Fixes
 
-* **core:** types path in package.json ([05e743a](https://github.com/italia/bootstrap-italia/commit/05e743a4c49e7fc57b1ab656b144c0067bcf3961))
+* restored left and right padding to card-body in a card-img ([bfd7298](https://github.com/italia/bootstrap-italia/commit/bfd729822a370942c155419442821f9cded5e306))
