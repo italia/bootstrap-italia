@@ -33,7 +33,7 @@
 
 .row {
   &.row-column-border {
-    border-top: 1px solid $border-color;
+    
 
     & > [class^='col-'] {
       padding-top: 2rem;
@@ -76,6 +76,7 @@
   @include media-breakpoint-up(lg) {
     &.row-column-border {
       margin-top: 1rem;
+	  border-top: 1px solid $border-color;
 
       & > [class^='col-'] {
         padding: 3rem 3rem;
