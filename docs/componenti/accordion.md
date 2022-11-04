@@ -367,6 +367,6 @@ Bootstrap Italia migliora l'accessibilità dell'Accordion implementando la navig
 
 Le funzionalità aggiuntive del componente vengono implementate nei seguenti file:
 
-- [src/js/plugins/accordion.js](https://github.com/italia/bootstrap-italia-next/blob/development/src/js/plugins/accordion.js){:target="\_blank"}
+- [src/js/plugins/accordion.js](https://github.com/italia/bootstrap-italia/blob/main/src/js/plugins/accordion.js){:target="\_blank"}
 
 Seguendo l'approccio utilizzato nel resto della libreria il componente è sviluppato in vanilla JS ed estende il `BaseComponent` di Bootstrap.
