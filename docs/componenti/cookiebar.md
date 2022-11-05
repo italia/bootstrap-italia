@@ -29,9 +29,17 @@ Inoltre, per ulteriori approfondimenti, ti invitiamo a consultare la risorsa “
 
 ## Come usarlo
 
-Bootstrap Italia ha predisposto un codice HTML da copiare all'interno delle proprie pagine web inserendolo appena dopo l'apertura del tag `body`.
+L’esempio di Cookiebar fornito di seguito,— un codice HTML da copiare all'interno delle proprie pagine web inserendolo appena dopo l'apertura del tag `body` — si riferisce all’ipotesi in cui il sito presenti cookie di profilazione di terze parti, che consentono ad es. la visualizzazione di contenuti disponibili su YouTube direttamente all’interno del sito.
 
 Esso può essere personalizzato nel testo a seconda delle necessità, ma è importante lasciare inalterata la classe `cookiebar` perché ad essa è collegata la funzione JavaScript che gestisce la visualizzazione della Cookiebar.
+
+{% capture callout %}
+
+### Accessibilità
+
+_Inserire qui nota su video trascrizioni e sottotitoli, a termini LG accessibilità_
+
+{% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
 Il pulsante permette la chiusura della Cookiebar attraverso il _data attribute_ `data-bs-accept="cookiebar"`; un ulteriore link di approfondimento dovrà portare alla pagina di gestione preferenze dei cookies.
 
