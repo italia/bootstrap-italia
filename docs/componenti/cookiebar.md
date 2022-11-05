@@ -3,7 +3,7 @@ layout: docs
 group: componenti
 toc: true
 title: Cookiebar
-description: Banner informativo sull'utilizzo dei cookie all'interno del sito web.
+description: Banner informativo sull’utilizzo dei cookie all’interno del sito web; perché e come usarlo 
 ---
 
 {% capture callout %}
@@ -16,9 +16,16 @@ Componente e contenuti in aggiornamento.
 
 ## Perché usarlo
 
-Come previsto inizialmente dal Provvedimento dell'8 maggio 2014 sull'[individuazione delle modalità semplificate per l’informativa e l’acquisizione del consenso per l’uso dei cookie](http://www.garanteprivacy.it/web/guest/home/docweb/-/docweb-display/docweb/3118884), è necessario inserire una barra informativa per i cookie (in gergo **Cookiebar**) qualora ci sia l'effettiva registrazione di dati personali.
+È auspicabile che un sito della Pubblica Amministrazione contenga solamente **cookie tecnici**, necessari per il suo funzionamento, e **cookie analitici** volti alla raccolta di informazioni, in forma aggregata, sul numero degli utenti e su come gli stessi visitano il sito, al fine di elaborare statistiche generali sul servizio e sul suo utilizzo. 
 
-Per maggiori informazioni si rimanda alla pagina [www.garanteprivacy.it/cookie](http://www.garanteprivacy.it/cookie) dove sono raccolti documenti e informazioni utili.
+L’articolo 7, comma 3, del Codice dell’Amministrazione Digitale (CAD) richiede, infatti, alle Pubbliche Amministrazioni di pubblicare sui propri siti le statistiche di utilizzo dei servizi digitali forniti. Le “[Linee Guida di design per i siti internet e i servizi digitali della Pubblica Amministrazione](https://designers.italia.it/linee-guida/)” prescrivono inoltre la pubblicazione di informazioni, opportunamente aggregate e anonimizzate, derivanti dal monitoraggio statistico attivato sul singolo sito e/o servizio.  
+
+Secondo le disposizioni dell’art. 122 del Decreto legislativo 30 giugno 2003, n. 196 (Codice Privacy) e delle “[Linee guida cookie e altri strumenti di tracciamento](https://www.garanteprivacy.it/web/guest/home/docweb/-/docweb-display/docweb/9677876)” emanate dal Garante per la protezione dei dati personali con provvedimento del 10 giugno 2021, **la richiesta del consenso è necessaria per l’utilizzo di tutti i cookie che non sono classificati come tecnici**. Le citate Linee guida del Garante forniscono inoltre indicazioni sulla possibilità che i cookie analitici di terze parti  possano, in taluni casi, essere ricompresi nella categoria di quelli tecnici, e come tali essere utilizzati in assenza della previa acquisizione del consenso dell’interessato. 
+
+Se invece intendi utilizzare altri tipi di cookie - scelta che dovrà essere preceduta da un’attenta valutazione in merito all’effettiva necessità di ricorrervi - il consenso è la base legale necessaria per poter trattare i dati personali derivanti dagli stessi, e tali dati potranno essere raccolti **solo dopo che gli utenti avranno espresso il loro consenso esplicito alle relative specifiche finalità di utilizzo**. Per la raccolta del consenso è possibile dunque inserire una barra informativa per i cookie (in gergo Cookiebar) attraverso la quale l’utente potrà decidere se prestare o negare l’autorizzazione al tracciamento. 
+
+Oltre che alle Linee Guida suindicate, per maggiori informazioni ti rimandiamo alla [Scheda di Sintesi](https://www.garanteprivacy.it/garante/document?ID=9679270) allegata al provvedimento e alle [FAQ](https://www.gpdp.it/faq/cookie) emanate dal Garante in materia.
+Inoltre, per ulteriori approfondimenti, ti invitiamo a consultare la risorsa “Cookie policy - Come rispettare la normativa privacy” del [kit privacy](https://designers.italia.it/kit/privacy/) di Designers Italia.
 
 ## Come usarlo
 
