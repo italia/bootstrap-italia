@@ -216,7 +216,7 @@ class NavBarCollapsible extends BaseComponent {
 
     const transitionComplete = () => {
       this._isTransitioning = false
-      const firstItem = this._getNextVisibleItem(1) //at pos 0 there's the close button
+      const firstItem = this._getNextVisibleItem(0) //at pos 0 there's the close button
       if (firstItem.item) {
         firstItem.item.focus()
         this._currItemIdx = firstItem.index
