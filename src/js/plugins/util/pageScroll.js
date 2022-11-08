@@ -4,12 +4,12 @@
 
 const CLASS_SCROLL_DISABLED = 'pagescroll-scroll-disabled'
 
-let disabled = false;
+let disabled = false
 let currentScrollPos = document.scrollingElement.scrollTop
 const htmlContainer = document.querySelector('html')
 
 export function disablePageScroll() {
-  disabled = true;
+  disabled = true
   currentScrollPos = document.scrollingElement.scrollTop
   htmlContainer.classList.add(CLASS_SCROLL_DISABLED)
 }
