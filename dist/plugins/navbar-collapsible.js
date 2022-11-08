@@ -4,6 +4,7 @@ import EventHandler from 'bootstrap/js/src/dom/event-handler';
 import SelectorEngine from 'bootstrap/js/src/dom/selector-engine';
 import { isScreenMobile } from './util/device.js';
 import { getElementIndex } from './util/dom.js';
+import { disablePageScroll, enablePageScroll } from './util/pageScroll.js';
 
 const NAME = 'navbarcollapsible';
 const DATA_KEY = 'bs.navbarcollapsible';
@@ -83,6 +84,7 @@ class NavBarCollapsible extends BaseComponent {
 
     this._isShown = true;
 
+    disablePageScroll();
     this._showElement();
   }
 
@@ -114,6 +116,7 @@ class NavBarCollapsible extends BaseComponent {
 
     this._element.classList.remove(CLASS_NAME_EXPANDED);
 
+    enablePageScroll();
     this._queueCallback(() => this._hideElement(), this._menuWrapper, isAnimated);
   }
 
@@ -207,7 +210,7 @@ class NavBarCollapsible extends BaseComponent {
 
     const transitionComplete = () => {
       this._isTransitioning = false;
-      const firstItem = this._getNextVisibleItem(1); //at pos 0 there's the close button
+      const firstItem = this._getNextVisibleItem(0); //at pos 0 there's the close button
       if (firstItem.item) {
         firstItem.item.focus();
         this._currItemIdx = firstItem.index;
