@@ -429,7 +429,7 @@ Per attivare il javascript che attiva il funzionamento dei toggles è necessario
 
 ### Con testo aggiuntivo, azioni multiple e metadata
 
-Per il testo aggiuntivo, utilizzare il tag `<em>` all'interno dell'elemento `.text`.
+Per il testo aggiuntivo, utilizzare un elemento `span` con classe `.description` all'interno dell'elemento `.text`.
 
 {% capture example %}
 
@@ -438,7 +438,9 @@ Per il testo aggiuntivo, utilizzare il tag `<em>` all'interno dell'elemento `.te
     <li>
       <div class="list-item">
         <div class="it-right-zone">
-          <span class="text">Testo<em>Lorem ipsum dolor sit amet.</em></span>
+          <span class="text">Testo
+            <span class="description">Lorem ipsum dolor sit amet.</span>
+          </span>
           <span class="it-multiple">
             <span class="metadata">metadata testo</span>
             <a href="#" aria-label="Testo - Azione 1">
@@ -463,7 +465,9 @@ Per il testo aggiuntivo, utilizzare il tag `<em>` all'interno dell'elemento `.te
     <li>
       <div  class="list-item">
         <div class="it-right-zone">
-          <span class="text">Testo 2<em>Lorem ipsum dolor sit amet.</em></span>
+          <span class="text">Testo 2
+            <span class="description">Lorem ipsum dolor sit amet.</span>
+          </span>
           <span class="it-multiple">
             <span class="metadata"><a href="#">metadata link</a></span>
             <a href="#" aria-label="Testo 2 - Azione 1">
@@ -488,7 +492,11 @@ Per il testo aggiuntivo, utilizzare il tag `<em>` all'interno dell'elemento `.te
     <li>
       <div  class="list-item">
         <div class="it-right-zone">
-          <a href="#"><span class="text">Link<em>Lorem ipsum dolor sit amet.</em></span></a>
+          <a href="#">
+            <span class="text">Link
+              <span class="description">Lorem ipsum dolor sit amet.</span>
+            </span>
+          </a>
           <span class="it-multiple">
             <span class="metadata"><a href="#">metadata link</a></span>
             <a href="#" aria-label="Link - Azione 1">
@@ -513,7 +521,11 @@ Per il testo aggiuntivo, utilizzare il tag `<em>` all'interno dell'elemento `.te
     <li>
       <div class="list-item active">
         <div class="it-right-zone">
-          <a href="#"><span class="text">Link attivo<em>Lorem ipsum dolor sit amet.</em></span></a>
+          <a href="#">
+            <span class="text">Link attivo
+              <span class="description">Lorem ipsum dolor sit amet.</span>
+            </span>
+          </a>         
           <span class="it-multiple">
             <span class="metadata">metadata testo</span>
             <a href="#" aria-label="Link attivo - Azione 1">
@@ -554,7 +566,10 @@ Per attivare il javascript che attiva il funzionamento dei checkbox è necessari
           <input id="idc1" type="checkbox">
           <label for="idc1"></label>
         </div>
-        <div class="it-right-zone"><span class="text">Label 1<em>Lorem ipsum dolor sit amet.</em></span>
+        <div class="it-right-zone">
+          <span class="text">Label 1
+            <span class="description">Lorem ipsum dolor sit amet.</span>
+          </span>
         </div>
       </a>
     </li>
@@ -564,7 +579,10 @@ Per attivare il javascript che attiva il funzionamento dei checkbox è necessari
           <input id="idc2" type="checkbox">
           <label for="idc2"></label>
         </div>
-        <div class="it-right-zone"><span class="text">Label 2<em>Lorem ipsum dolor sit amet.</em></span>
+        <div class="it-right-zone">
+          <span class="text">Label 2
+            <span class="description">Lorem ipsum dolor sit amet.</span>
+          </span>
         </div>
       </a>
     </li>
@@ -574,7 +592,10 @@ Per attivare il javascript che attiva il funzionamento dei checkbox è necessari
           <input id="idc3" type="checkbox">
           <label for="idc3"></label>
         </div>
-        <div class="it-right-zone"><span class="text">Label attiva<em>Lorem ipsum dolor sit amet.</em></span>
+        <div class="it-right-zone">
+          <span class="text">Label attiva
+            <span class="description">Lorem ipsum dolor sit amet.</span>
+          </span>
         </div>
       </a>
     </li>
