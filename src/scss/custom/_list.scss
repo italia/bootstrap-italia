@@ -90,7 +90,7 @@
         font-size: $list-font-size;
         font-weight: 600;
         display: block;
-        em {
+        em, span.description {
           display: block;
           font-size: $list-sub-size;
           color: $list-sub-color;
