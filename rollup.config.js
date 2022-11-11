@@ -2,7 +2,7 @@
 
 import { babel } from '@rollup/plugin-babel'
 import copy from 'rollup-plugin-copy'
-import svgSprite from 'rollup-plugin-svg-sprite'
+import svgSprite from 'rollup-plugin-svg-sprite-deterministic'
 import scss from 'rollup-plugin-scss'
 import uglify from '@lopatnov/rollup-plugin-uglify'
 import legacy from '@rollup/plugin-legacy'
