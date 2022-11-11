@@ -11,10 +11,10 @@ def search_examples_in_file(file_path):
     examples = []
     with open(file_path, 'r') as f:
         content = f.read()
-        for x in re.finditer("{% capture example %}((.|\n)*?){% endcapture %}", content):
+        for x in re.finditer("({% comment %}Example name\: ([a-zA-Z0-9_ ]+){% endcomment %}\n)?{% capture example %}((.|\n)*?){% endcapture %}", content):
             examples.append({
-                "name": search_name_for_example(file_path, examples),
-                "content" : x.group(1)
+                "name": x.group(2) or search_name_for_example(file_path, examples),
+                "content" : x.group(3)
             })
         return examples
 
