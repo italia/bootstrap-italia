@@ -46,11 +46,11 @@ $primary: hsl(210, 100, 40) !default; // color-blue-40
 $indigo: hsb(243, 70, 100) !default;
 $purple: hsb(243, 40, 100) !default;
 $pink: hsb(350, 30, 100) !default;
-$red: hsb(351, 75, 97) !default;
-$orange: hsb(36, 100, 100) !default;
+$red:  hsl(350, 60, 50) !default; // color-red-50
+$orange: hsl(36, 100, 40) !default; // color-orange-40
 $yellow: hsb(44, 55, 100) !default;
-$green: hsb(159, 100, 80) !default;
-$teal: hsb(178, 95, 85) !default;
+$green: hsl(160, 100, 25) !default; // color-emerald-25
+$teal: hsl(178, 90, 32) !default;
 $cyan: hsb(178, 100, 100) !default;
 $blue: hsb(210, 100, 90) !default;
 $light: hsb(255, 5, 95) !default;
@@ -59,10 +59,10 @@ $dark: hsb(210, 70, 30) !default;
 $yiq-text-light: $white !default;
 $yiq-text-dark: $black !default;
 
-$red-accessible: hsb(351, 75, 85) !default;
-$orange-accessible: hsb(36, 100, 65) !default;
+$red-accessible: $red !default;
+$orange-accessible: $orange !default;
 $yellow-accessible: hsb(44, 100, 59) !default;
-$green-accessible: hsb(159, 100, 53) !default;
+$green-accessible: $green !default;
 
 $gray-primary: hsb(210, 38.9, 44.3) !default;
 $gray-secondary: hsb(210, 29, 51) !default;
