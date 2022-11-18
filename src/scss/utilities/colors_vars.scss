@@ -168,9 +168,9 @@ $neutral-2-b: 95;
 $neutral-2: hsb($neutral-2-h, $neutral-2-s, $neutral-2-b) !default;
 
 // Light Greys A
-$lightgrey-a1: #e8f2fc;
+$lightgrey-a1: hsl(210, 3, 85); // progress-background-default
 $lightgrey-a2: #edf5fc;
-$lightgrey-a3: #f2f7fc;
+$lightgrey-a3: hsl(210, 62, 97); // color-background-primary-lighter
 $lightgrey-a4: #f5f9fc;
 
 // Light Greys B
