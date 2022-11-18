@@ -65,13 +65,13 @@ $yellow-accessible: hsb(44, 100, 59) !default;
 $green-accessible: $green !default;
 
 $gray-primary: hsb(210, 38.9, 44.3) !default;
-$gray-secondary: hsb(210, 29, 51) !default;
+$gray-secondary: hsl(210,17,44) !default; // color-slate-44
 $gray-tertiary: hsb(205, 35, 54) !default;
 $gray-quaternary: hsb(238, 1, 100) !default;
-$gray-border: hsb(240, 1, 70) !default;
-$gray-disabled: hsb(225, 5, 95) !default;
-$gray-label-disabled: hsb(222, 5, 79) !default;
-$gray-border-disabled: hsb(224, 8, 95) !default;
+$gray-border: hsl(210, 4, 78) !default; // color-slate-78
+$gray-disabled: hsl(210, 3, 85) !default; // color-background-disabled
+$gray-label-disabled: hsl(210, 12, 52) !default; // color-text-disabled
+$gray-border-disabled: $gray-disabled !default; // color-border-disabled
 
 $secondary: $gray-secondary !default;
 
