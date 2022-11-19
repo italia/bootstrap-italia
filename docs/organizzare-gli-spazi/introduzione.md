@@ -57,7 +57,7 @@ Bootstrap Italia mette a disposizione i contenitori responsive, classi che ti co
 <div class="container-xxl">...</div>
 ```
 
-_NB: Se si sta usando una versione di Bootstrap Italia basta su Bootstrap 4, la class `.container-xxl` non sarà presente._
+_NB: Se si sta usando una versione di Bootstrap Italia basata su Bootstrap 4, la class `.container-xxl` non sarà presente._
 
 ## Responsive breakpoints
 
