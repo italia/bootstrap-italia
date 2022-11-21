@@ -267,9 +267,9 @@ $navigation-dark-separator-color: $primary-c5 !default;
 // navigation light theme (desktop)
 $navigation-light-bg-color: $white !default;
 $navigation-light-text-color: $primary !default;
-$navigation-light-megamenu-footer-bg-color: $primary-a7 !default;
+$navigation-light-megamenu-footer-bg-color: $color-background-primary-lighter !default;
 $navigation-light-separator-color: $neutral-1-a2 !default;
-$navigation-light-megamenu-separator-color: $primary-c5 !default;
+$navigation-light-megamenu-separator-color: $gray-border !default;
 
 //inline
 $inline-menu-line-width: 2px;
