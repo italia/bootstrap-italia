@@ -54,7 +54,7 @@ $teal: hsl(178, 90, 32) !default;
 $cyan: hsb(178, 100, 100) !default;
 $blue: hsb(210, 100, 90) !default;
 $light: hsb(255, 5, 95) !default;
-$dark: hsb(210, 70, 30) !default;
+$dark: hsl(210, 54, 20) !default; // color-slate-20
 
 $yiq-text-light: $white !default;
 $yiq-text-dark: $black !default;
