@@ -259,17 +259,17 @@ $navigation-disabled-item-mobile-opacity: 0.6 !default;
 $navigation-hamburger-size: 24px;
 
 // navigation dark theme (mobile)
-$navigation-dark-bg-color: $primary !default;
-$navigation-dark-text-color: $white !default;
-$navigation-dark-bg-color: $primary-b1 !default;
-$navigation-dark-separator-color: $primary-c5 !default;
+$navigation-dark-bg-color: $primary !default; // missing in UI kit 
+$navigation-dark-text-color: $white !default; // missing in UI kit 
+$navigation-dark-bg-color: $primary-b1 !default; // missing in UI kit 
+$navigation-dark-separator-color: $primary-c5 !default; // missing in UI kit 
 
 // navigation light theme (desktop)
 $navigation-light-bg-color: $white !default;
 $navigation-light-text-color: $primary !default;
-$navigation-light-megamenu-footer-bg-color: $color-background-primary-lighter !default;
+$navigation-light-megamenu-footer-bg-color: $color-background-primary-lighter !default; // UI kit
 $navigation-light-separator-color: $neutral-1-a2 !default;
-$navigation-light-megamenu-separator-color: $gray-border !default;
+$navigation-light-megamenu-separator-color: $gray-border !default; // UI kit
 
 //inline
 $inline-menu-line-width: 2px;
@@ -311,7 +311,7 @@ $megamenu-heading-text-size: 0.833em;
 $megamenu-heading-margin-top: 5px;
 $megamenu-heading-letter-spacing: 1px;
 $megamenu-link-arrow-size: 0.8em;
-$megamenu-footer-bg-color: $color-background-primary-lighter !default;
+$megamenu-footer-bg-color: $color-background-primary-lighter !default; // UI kit
 $megamenu-link-more-link-list-distance-mobile: $v-gap;
 $megamenu-linklist-link-line-height: 1em;
 $megamenu-linklist-link-v-padding: 0.5em;
@@ -341,9 +341,9 @@ $pager-icon-color: $primary !default;
 $pager-icon-size: 0.7rem;
 $pager-disabled-color: $gray-label-disabled !default;
 $pager-jump-to-width: 4.5rem;
-$pager-jump-to-color: $neutral-2-b3 !default;
+$pager-jump-to-color: $gray-secondary !default; // Kit UI
 $pager-page-changer-padding: 12px;
-$pager-page-changer-border-bottom: 1px solid $gray-secondary !default;
+$pager-page-changer-border-bottom: 1px solid $gray-secondary !default; // Kit UI
 
 // Sidebar
 $sidebar-heading-font-weight: 600;
