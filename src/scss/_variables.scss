@@ -335,11 +335,11 @@ $pager-item-current-color: $primary !default;
 $pager-item-current-border: 1px solid $primary !default;
 $pager-font-size: 0.8888888888888888rem; // 16px
 $pager-font-weight: 600;
-$pager-font-color: $neutral-1-a7 !default;
+$pager-font-color: $secondary !default;
 $pager-hover-color: $primary !default;
 $pager-icon-color: $primary !default;
 $pager-icon-size: 0.7rem;
-$pager-disabled-color: $neutral-2-b2 !default;
+$pager-disabled-color: $gray-label-disabled !default;
 $pager-jump-to-width: 4.5rem;
 $pager-jump-to-color: $neutral-2-b3 !default;
 $pager-page-changer-padding: 12px;
