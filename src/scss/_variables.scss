@@ -170,7 +170,7 @@ $modal-header-padding: 1.5rem !default;
 $modal-inner-padding: 1.5rem !default;
 
 // Carousel
-$carousel-bg: #444e57 !default;
+$carousel-bg: #444e57 !default; // TODO: not used, consider to remove
 $carousel-padding: 3em !default;
 $carousel-control-color: $secondary !default;
 $carousel-control-width: auto !default;
@@ -360,6 +360,9 @@ $sidebar-dropdown-line-selection-width: 2px;
 $sidebar-dropdown-line-selection-color: $primary !default;
 $sidebar-submenu-font-size: 0.889em;
 $sidebar-submenu-link-v-padding: 0.45em;
+
+// TODO Continue from here for color checking
+
 $sidebar-border-color: $neutral-1-a2 !default;
 
 //sidebar dark theme
