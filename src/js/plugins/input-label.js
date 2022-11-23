@@ -25,6 +25,10 @@ class InputLabel {
     return NAME
   }
 
+  static getInputFromLabel = (labelElement) => {
+    return document.querySelector('#' + labelElement.getAttribute('for'))
+  }
+
   // Public
 
   // Private

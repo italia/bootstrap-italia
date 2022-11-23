@@ -64,7 +64,7 @@ Si può abbinare all'etichetta un _placeholder_ (testo di esempio) per ulteriore
 {% capture example %}
 
 <div class="form-group">
-  <label for="formGroupExampleInput2">Etichetta di esempio</label>
+  <label class="active" for="formGroupExampleInput2">Etichetta di esempio</label>
   <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Testo di esempio">
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -82,7 +82,7 @@ Il testo di aiuto deve essere esplicitamente associato agli elementi del mudulo 
 {% capture example %}
 
 <div class="form-group">
-  <label for="formGroupExampleInputWithHelp">Etichetta di esempio</label>
+  <label class="active" for="formGroupExampleInputWithHelp">Etichetta di esempio</label>
   <input
     type="text"
     class="form-control"
@@ -112,7 +112,7 @@ Il testo di aiuto deve essere esplicitamente associato agli elementi del mudulo 
     <div class="input-group-prepend">
       <div class="input-group-text"><svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-pencil"></use></svg></div>
     </div>
-    <label for="input-group-2">Con Etichetta e placeholder</label>
+    <label class="active" for="input-group-2">Con Etichetta e placeholder</label>
     <input type="text" class="form-control" id="input-group-2" name="input-group-2" placeholder="Lorem Ipsum">
   </div>
 </div>
@@ -132,9 +132,28 @@ Il testo di aiuto deve essere esplicitamente associato agli elementi del mudulo 
 
 ### Input password
 
-Per rendere più semplice l'inserimento della password, l'elemento è stato dotato di un visualizzatore dei caratteri digitati. Inoltre è possibile abbinare un controllo <!--(grazie alla componente [strength meter](https://www.npmjs.com/package/password-strength-meter))--> per segnalare quanto la password che si sta inserendo sia sicura con l'aggiunta della classe `input-password-strength-meter`.
+Per rendere più semplice l'inserimento della password, l'elemento è stato dotato di un visualizzatore dei caratteri digitati. Inoltre è possibile abbinare un controllo <!--(grazie alla componente [strength meter](https://www.npmjs.com/package/password-strength-meter))--> per segnalare quanto la password che si sta inserendo sia sicura con l'aggiunta dell'HTML necessario.
 
 È possibile personalizzare la componente `strength meter` usando gli attributi data.
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th style="width: 220px;">Attributo data</th>
+      <th>Descrizione</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>data-bs-minimum-length</code></td>
+      <td>Lunghezza minima per il calcolo della forza della password (soglia password molto debole)</td>
+      <td>4</td>
+    </tr>
+  </tbody>
+</table>
+
+E' possibile personalizzare i testi dei messaggi riguardanti la robustezza della password usando gli attributi data dell'elemento `small.form-text`.
 
 <table class="table table-bordered table-striped">
   <thead>
@@ -164,27 +183,7 @@ Per rendere più semplice l'inserimento della password, l'elemento è stato dota
       <td><code>data-bs-strong-pass</code></td>
       <td>Testo per il punteggio di forza della password massimo</td>
       <td>Password molto sicura</td>
-    </tr>
-    <tr>
-      <td><code>data-bs-enter-pass</code></td>
-      <td>Testo di aiuto</td>
-      <td>Inserisci almeno 8 caratteri e una lettera maiuscola</td>
-    </tr>
-    <tr>
-      <td><code>data-bs-alert-caps</code></td>
-      <td>Testo per avvertire che il CAPS LOCK è inserito</td>
-      <td>CAPS LOCK inserito</td>
-    </tr>
-    <tr>
-      <td><code>data-bs-show-text</code></td>
-      <td>Attiva/disattiva la visibilità dei messaggi di errore</td>
-      <td>true</td>
-    </tr>
-    <tr>
-      <td><code>data-bs-minimum-length</code></td>
-      <td>Lunghezza minima per il calcolo della forza della password (soglia password molto debole)</td>
-      <td>4</td>
-    </tr>
+    </tr>   
   </tbody>
 </table>
 
@@ -202,11 +201,29 @@ Per rendere più semplice l'inserimento della password, l'elemento è stato dota
   </div>
   <div class="form-group">
     <label for="exampleInputPassword3">Password con strength meter</label>
-    <input type="password" data-bs-input class="form-control input-password input-password-strength-meter" data-bs-enter-pass="Puoi usare un testo di aiuto personalizzato" id="exampleInputPassword3">
+    <input type="password" data-bs-input class="form-control input-password" id="exampleInputPassword3">
+    <div class="password-strength-meter">
+      <small class="form-text text-muted"
+        data-bs-short-pass="Password molto debole"
+        data-bs-bad-pas="Password debole"
+        data-bs-good-pass="Password sicura"
+        data-bs-strong-pass="Password molto sicura"
+      >Inserisci almeno 8 caratteri e una lettera maiuscola</small>
+      <div class="password-meter progress rounded-0 position-absolute">
+        <div class="row position-absolute w-100 m-0">
+          <div class="col-3 border-start border-end border-white"></div>
+          <div class="col-3 border-start border-end border-white"></div>
+          <div class="col-3 border-start border-end border-white"></div>
+          <div class="col-3 border-start border-end border-white"></div>
+        </div>
+        <div class="progress-bar bg-muted" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+    </div>
     <span class="password-icon" aria-hidden="true">
       <svg class="password-icon-visible icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-visible"></use></svg>
       <svg class="password-icon-invisible icon icon-sm d-none"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-invisible"></use></svg>
     </span>
+    <small class="password-caps form-text text-warning position-absolute bg-white w-100">CAPS LOCK inserito</small>
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -218,13 +235,6 @@ Abilitarlo manualmente con:
 ```js
 var inputElement = document.querySelector('#exampleInputPassword'))
 var passwordComponent = new bootstrap.InputPassword(inputElement, {
-  shortPass: 'Password molto debole',
-  badPass: 'Password debole',
-  goodPass: 'Password sicura',
-  strongPass: 'Password molto sicura',
-  enterPass: 'Inserisci almeno 8 caratteri e una lettera maiuscola',
-  alertCaps: 'CAPS LOCK inserito',
-  showText: true,
   minimumLength: 4,
 })
 ```
@@ -241,44 +251,9 @@ var passwordComponent = new bootstrap.InputPassword(inputElement, {
   </thead>
   <tbody>
     <tr>
-      <td><code>shortPass</code></td>
-      <td>Testo per il punteggio di forza della password minimo</td>
-      <td>Password molto debole</td>
-    </tr>
-    <tr>
-      <td><code>badPass</code></td>
-      <td>Testo per punteggio di forza della password basso</td>
-      <td>Password debole</td>
-    </tr>
-    <tr>
-      <td><code>goodPass</code></td>
-      <td>Testo per punteggio di forza della password buono</td>
-      <td>Password sicura</td>
-    </tr>
-    <tr>
-      <td><code>strongPass</code></td>
-      <td>Testo per il punteggio di forza della password massimo</td>
-      <td>Password molto sicura</td>
-    </tr>
-    <tr>
-      <td><code>enterPass</code></td>
-      <td>Testo di aiuto</td>
-      <td>Inserisci almeno 8 caratteri e una lettera maiuscola</td>
-    </tr>
-    <tr>
-      <td><code>alertCaps</code></td>
-      <td>Testo per avvertire che il CAPS LOCK è inserito</td>
-      <td>CAPS LOCK inserito</td>
-    </tr>
-    <tr>
       <td><code>minimumLength</code></td>
       <td>Lunghezza minima per il calcolo della forza della password (soglia password molto debole)</td>
       <td>4</td>
-    </tr>
-    <tr>
-      <td><code>showText</code></td>
-      <td>Attiva/disattiva la visibilità dei messaggi di errore</td>
-      <td>true</td>
     </tr>
   </tbody>
 </table>
@@ -302,7 +277,7 @@ Aggiungi l'attributo `readonly` ad un input per impedire la modifica del valore 
 {% capture example %}
 
 <div class="form-group">
-  <label for="input-text-read-only">Contenuto in sola lettura</label>
+  <label class="active" for="input-text-read-only">Contenuto in sola lettura</label>
   <input class="form-control" type="text" id="input-text-read-only" value="Sola lettura" readonly>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -315,7 +290,7 @@ Se per qualche motivo vuoi avere gli elementi `<input readonly>` nella forma sti
 
 <div>
   <div class="form-group">
-    <label for="input-text-read-only-2">Contenuto in sola lettura</label>
+    <label class="active" for="input-text-read-only-2">Contenuto in sola lettura</label>
     <input class="form-control-plaintext" value="Sola lettura" type="text" id="input-text-read-only-2" readonly>
   </div>
 </div>
