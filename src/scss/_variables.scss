@@ -363,12 +363,12 @@ $sidebar-submenu-link-v-padding: 0.45em;
 
 // TODO Continue from here for color checking
 
-$sidebar-border-color: $neutral-1-a2 !default;
+$sidebar-border-color: $gray-border !default;
 
 //sidebar dark theme
-$sidebar-dark-bg-color: $neutral-1-a8 !default;
+$sidebar-dark-bg-color: $neutral-1-a8 !default; // Missing in the new UI kit
 $sidebar-dark-text-color: $white !default;
-$sidebar-dark-separator-color: rgba(229, 229, 229, 0.3) !default;
+$sidebar-dark-separator-color: rgba(229, 229, 229, 0.3) !default; // Missing in the new UI kit
 
 // Navscroll
 $navscroll-bg-color: $white !default;
