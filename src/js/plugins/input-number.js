@@ -21,12 +21,12 @@ const EVENT_KEYUP_DATA_API = `keyup${EVENT_KEY}${DATA_API_KEY}`
 const CLASS_NAME_ADAPTIVE = 'input-number-adaptive'
 const CLASS_NAME_PERCENTAGE = 'input-number-percentage'
 const CLASS_NAME_CURRENCY = 'input-number-currency'
-const CLASS_NAME_INCREMENT = 'input-number-add'
+//const CLASS_NAME_INCREMENT = 'input-number-add'
 const CLASS_NAME_DECREMENT = 'input-number-sub'
 
 const SELECTOR_WRAPPER = '.input-number'
 const SELECTOR_INPUT = 'input[data-bs-input][type="number"]'
-const SELECTOR_BTN = 'button'
+const SELECTOR_BTN = 'button[class^="input-number-"]'
 
 class InputNumber extends BaseComponent {
   constructor(element) {
@@ -162,7 +162,7 @@ inputsButtons.forEach((button) => {
 })*/
 
 const createInput = (element) => {
-  if (element && element.matches(SELECTOR_INPUT)) {
+  if (element && element.matches(SELECTOR_INPUT) && element.parentNode.querySelector(SELECTOR_BTN)) {
     return InputNumber.getOrCreateInstance(element)
   }
   return null
@@ -179,14 +179,12 @@ EventHandler.on(document, EVENT_KEYUP_DATA_API, SELECTOR_INPUT + ', label', func
     element._label._labelOut()
   }
 })
-EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_WRAPPER + ' ' + SELECTOR_BTN, function () {
-  if (this.classList.contains(CLASS_NAME_INCREMENT) || this.classList.contains(CLASS_NAME_DECREMENT)) {
-    const wrapper = this.closest(SELECTOR_WRAPPER)
-    if (wrapper) {
-      const input = SelectorEngine.findOne(SELECTOR_INPUT, wrapper)
-      if (input) {
-        InputNumber.getOrCreateInstance(input)
-      }
+EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_BTN, function () {
+  const wrapper = this.closest(SELECTOR_WRAPPER)
+  if (wrapper) {
+    const input = SelectorEngine.findOne(SELECTOR_INPUT, wrapper)
+    if (input) {
+      InputNumber.getOrCreateInstance(input)
     }
   }
 })

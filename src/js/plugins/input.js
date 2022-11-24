@@ -67,7 +67,7 @@ class Input extends BaseComponent {
  */
 const excludes = [
   'select',
-  'input[data-bs-input][type="number"]',
+  //'input[data-bs-input][type="number"]',
   'input[data-bs-input][type="password"]',
   'input.input-password[data-bs-input]',
   'input[data-bs-autocomplete][type="search"]',
@@ -89,7 +89,8 @@ inputs.forEach((input) => {
 
 const createInput = (element) => {
   const toExclude = !!excludes.find((selector) => element.matches(selector))
-  if (!toExclude) {
+  const isInputNumber = !!(element.getAttribute('type') === 'number' && element.parentNode.querySelector('button[class^="input-number-"]')) //check if it's a InputNumber component
+  if (!toExclude && !isInputNumber) {
     return Input.getOrCreateInstance(element)
   }
   return null
