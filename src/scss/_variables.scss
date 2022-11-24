@@ -482,15 +482,15 @@ $card-h5-size: 1.125rem;
 $card-h5-size-desk: 1rem;
 $card-h5-line-height: 1.4444444444444444rem;
 $card-h5-fw: 700;
-$card-h5-color: $neutral-1-a10 !default;
+$card-h5-color: $color-text-secondary !default; // UI kit
 $card-p-size: 0.875rem;
 $card-p-size-desk: 0.7777777777777778rem;
 $card-p-l-h: 1.2rem;
-$card-p-color: $neutral-1-a8 !default;
-$card-border-color: $neutral-1-a2 !default;
+$card-p-color: $color-text-base !default;
+$card-border-color: $gray-border !default; // Missing in the UI kit but aligned to new colors
 $card-small-line-height: 1px;
 $card-small-line-w: 128px;
-$card-small-line-color: $neutral-1-a2 !default;
+$card-small-line-color: $neutral-1-a2 !default; // Not used
 $card-small-line-margin: $v-gap * 6;
 $card-category-size: 0.7777777777777778rem;
 $card-category-l-spacing: 0.9px;
