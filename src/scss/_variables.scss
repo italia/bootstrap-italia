@@ -522,7 +522,8 @@ $tag-radius: 50px;
 
 // select
 $select-label-size: 0.7777777777777778rem;
-$select-label-color: $neutral-1-a8 !default;
+$select-label-color: $color-text-base !default; // UI kit
+
 $select-label-weight: 600;
 $select-button-border: 1px solid $select-label-color !default;
 $select-button-padding: $v-gap !default;
