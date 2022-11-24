@@ -388,9 +388,9 @@ $navscroll-backbutton-weight: 600;
 $navscroll-backbutton-margin-top: $v-gap * 3;
 
 //navscroll dark theme mobile
-$navscroll-dark-bg-color: $neutral-1-a8 !default;
+$navscroll-dark-bg-color: $neutral-1-a8 !default; // Missing in the new UI kit
 $navscroll-dark-text-color: $white !default;
-$navscroll-dark-separator-color: rgba(229, 229, 229, 0.3) !default;
+$navscroll-dark-separator-color: rgba(229, 229, 229, 0.3) !default; // Missing in the new UI kit
 
 //dialog
 $dialog-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1) !default;
