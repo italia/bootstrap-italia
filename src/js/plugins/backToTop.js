@@ -116,13 +116,11 @@ toggles.forEach((toggle) => {
   BackToTop.getOrCreateInstance(toggle)
 })*/
 
-const dataApiCb = onDocumentScroll(() => {
+onDocumentScroll(() => {
   const toggles = SelectorEngine.find(SELECTOR_TOGGLE)
-  toggles.forEach((toggle) => {
-    const backToTop = BackToTop.getOrCreateInstance(toggle)
-    backToTop.toggleShow()
+  toggles.map((toggle) => {
+    BackToTop.getOrCreateInstance(toggle)
   })
-  dataApiCb.dispose()
 })
 
 export default BackToTop

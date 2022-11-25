@@ -127,19 +127,14 @@ class UploadDragDrop extends BaseComponent {
 })*/
 
 const createInput = (element) => {
-  let found = element
-  //looking for the form element starting from the target of the event
-  while ((!found.matches || !found.matches(SELECTOR_FORM)) && found.parentNode) {
-    found = found.parentNode
-  }
-  if (found.matches && found.matches(SELECTOR_FORM)) {
+  let found = element.matches && element.matches(SELECTOR_FORM) ? element : element.closest ? element.closest(SELECTOR_FORM) : null
+  if (found) {
     UploadDragDrop.getOrCreateInstance(found)
   }
   return null
 }
 
 document.addEventListener('dragenter', function (evt) {
-  console.log('---drage')
   createInput(evt.target)
 })
 EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_FORM + ' label', function () {

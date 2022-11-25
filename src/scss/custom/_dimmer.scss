@@ -5,7 +5,7 @@
 }
 
 .dimmer {
-  display: none;
+  display: flex;
   background-color: #1f2933;
   opacity: 0.92;
   position: absolute;
@@ -15,6 +15,10 @@
   right: 0;
   z-index: 1;
   padding: $v-gap * 4;
+
+  &[aria-hidden='true'] {
+    display: none;
+  }
 
   &.dimmer-primary {
     background-color: $primary;

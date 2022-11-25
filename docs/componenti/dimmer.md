@@ -107,6 +107,66 @@ Il testo è contenuto all'interno di un tag `<p>` e può essere preceduto da un'
 </div>
 {% endcapture %}{% include example.html content=example %}
 
+Se si vuole iniziare con il dimmer disabilitato è necessario utilizzare l'attributo `aria-hidden`.
+
+<div class="toggles col-md-6 col-lg-4">
+  <label for="toggleDimmer2">
+    Attiva Dimmer 2
+    <input type="checkbox" id="toggleDimmer2" data-bs-toggle="dimmer" data-bs-target="#dimmer2">
+    <span class="lever"></span>
+  </label>
+</div>
+
+{% capture example %}
+
+<div class="row dimmable">
+  <div class="dimmer fade" id="dimmer2" aria-hidden="true">
+    <div class="dimmer-inner">
+      <div class="dimmer-icon">
+        <svg class="icon icon-xl"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-unlocked"></use></svg>
+      </div>
+      <p>Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.</p>
+    </div>
+  </div>
+  <div class="col-12 col-lg-4">
+    <!--start card-->
+    <div class="card-wrapper">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
+          <p class="card-text">Praesent volutpat in dolor in sollicitudin. Donec mollis varius condimentum. Nunc viverra, metus at viverra consectetur, magna orci posuere ipsum, et bibendum est urna sed sem. Fusce libero neque, elementum volutpat tincidunt id, egestas vitae nisi. Nulla vulputate luctus sem, eu maximus lacus faucibus eget. Fusce tristique enim augue, sed suscipit lorem bibendum vel. Donec vehicula vehicula nibh non suscipit.</p>
+        </div>
+      </div>
+    </div>
+    <!--end card-->
+  </div>
+  <div class="col-12 col-lg-4 d-none d-lg-block">
+    <!--start card-->
+    <div class="card-wrapper">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
+          <p class="card-text">Praesent volutpat in dolor in sollicitudin. Donec mollis varius condimentum. Nunc viverra, metus at viverra consectetur, magna orci posuere ipsum, et bibendum est urna sed sem. Fusce libero neque, elementum volutpat tincidunt id, egestas vitae nisi. Nulla vulputate luctus sem, eu maximus lacus faucibus eget. Fusce tristique enim augue, sed suscipit lorem bibendum vel. Donec vehicula vehicula nibh non suscipit.</p>
+        </div>
+      </div>
+    </div>
+    <!--end card-->
+  </div>
+  <div class="col-12 col-lg-4 d-none d-lg-block">
+    <!--start card-->
+    <div class="card-wrapper">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
+          <p class="card-text">Praesent volutpat in dolor in sollicitudin. Donec mollis varius condimentum. Nunc viverra, metus at viverra consectetur, magna orci posuere ipsum, et bibendum est urna sed sem. Fusce libero neque, elementum volutpat tincidunt id, egestas vitae nisi. Nulla vulputate luctus sem, eu maximus lacus faucibus eget. Fusce tristique enim augue, sed suscipit lorem bibendum vel. Donec vehicula vehicula nibh non suscipit.</p>
+        </div>
+      </div>
+    </div>
+    <!--end card-->
+  </div>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
 ### Colore Primario
 
 Aggiungendo la classe `.dimmer-primary` al wrapper del dimmer si ottiene una versione con sfondo di colore primario.
@@ -122,7 +182,7 @@ Aggiungendo la classe `.dimmer-primary` al wrapper del dimmer si ottiene una ver
 {% capture example %}
 
 <div class="row dimmable">
-  <div class="dimmer dimmer-primary fade" id="dimmer2">
+  <div class="dimmer dimmer-primary fade show" id="dimmer2">
     <div class="dimmer-inner">
       <p>Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus. Nulla vulputate luctus sem, eu maximus lacus faucibus eget. Fusce tristique enim augue, sed suscipit lorem bibendum vel. Donec vehicula vehicula nibh non suscipit.</p>
     </div>
@@ -183,7 +243,7 @@ I pulsanti vanno inseriti in un `<div>` con classi `.dimmer-buttons` e `.bg-dark
 {% capture example %}
 
 <div class="row dimmable">
-  <div class="dimmer fade" id="dimmer3">
+  <div class="dimmer fade show" id="dimmer3">
     <div class="dimmer-inner">
       <h4>Titolo Dimmer</h4>
       <div class="dimmer-buttons bg-dark">
@@ -246,7 +306,7 @@ Aggiungendo la classe `.dimmer-primary` al wrapper del dimmer si ottiene una ver
 {% capture example %}
 
 <div class="row dimmable">
-  <div class="dimmer dimmer-primary fade" id="dimmer4">
+  <div class="dimmer dimmer-primary fade show" id="dimmer4">
     <div class="dimmer-inner">
       <h4>Titolo Dimmer</h4>
       <div class="dimmer-buttons single-button bg-dark">
