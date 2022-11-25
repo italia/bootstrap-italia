@@ -523,7 +523,6 @@ $select-label-color: $color-text-base !default; // UI kit
 
 // TODO Continue from here for color checking
 
-
 $select-label-weight: 600;
 $select-button-border: 1px solid $select-label-color !default;
 $select-button-padding: $v-gap !default;
@@ -531,9 +530,9 @@ $select-button-text-size: 1rem;
 $select-dd-shadow: $dialog-shadow !default;
 $select-dd-text-size: 0.8888888888888888rem;
 $select-dd-link-color: $primary !default;
-$select-dd-link-color-active: $neutral-1-a10 !default;
+$select-dd-link-color-active: $color-text-primary-active !default; // UI kit
 $select-dd-small-separator-width: 65px;
-$select-dd-small-separator-bg: $neutral-1-a1 !default;
+$select-dd-small-separator-bg: $gray-border !default; // UI kit
 $select-dd-icon-size: $v-gap * 3;
 $select-dd-icon-flag-top: 10px;
 $select-dd-pill-font-size: 0.7777777777777778rem;
