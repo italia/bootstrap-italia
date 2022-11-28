@@ -21,6 +21,12 @@ Per il corretto funzionamento degli elementi di tipo `<input>` è di fondamental
 
 Per l'inserimento guidato di campi di tipo numerico si può anche utilizzare l'elemento dedicato che fornisce migliorie per la validazione e per l'esperienza complessiva, descritto alla [pagina dedicata all'input numerico]({{ site.baseurl }}/docs/form/input-numerico/).
 
+{% capture callout %}
+
+Quando si utilizza l'attributo `placeholder` o l'input parte già valorizzato assicurarsi di aggiungere alla label la classe **`active`** per impedire la sovrapposizione della label al campo.
+
+{% endcapture %}{% include callout.html content=callout type="alert" %}
+
 {% capture example %}
 
 <div>
