@@ -39,7 +39,7 @@ export { default as Tooltip } from './plugins/tooltip'
 
 /* Side effects */
 import './plugins/fonts-loader.js'
-import './plugins/header-sticky'
+//import './plugins/header-sticky'
 import BOOTSTRAP_ITALIA_VERSION from './version'
 
 window.BOOTSTRAP_ITALIA_VERSION = BOOTSTRAP_ITALIA_VERSION
