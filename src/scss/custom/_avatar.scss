@@ -8,8 +8,8 @@
   height: $avatar-base-size * 4; // default size equals to md
   justify-content: center;
   align-items: center;
-  background: $neutral-1-a1; // default background
-  color: $neutral-1-a7;
+  background: $color-background-secondary-lighter; // UI kit
+  color: $color-text-secondary; // UI kit
   box-sizing: content-box;
   transition: background-color 0.2s;
   // image
@@ -236,7 +236,7 @@ a.avatar {
     img {
       filter: brightness(90%);
     }
-    background: shade-color($neutral-1-a1, 5%);
+    background: shade-color($color-background-secondary-lighter, 5%);
     &.avatar-primary {
       background: shade-color($primary, 5%);
     }
@@ -257,7 +257,7 @@ a.avatar {
 .avatar-dropdown {
   &:hover,
   &:focus-within {
-    background: shade-color($neutral-1-a1, 5%);
+    background: shade-color($color-background-secondary-lighter, 5%);
   }
   .btn-dropdown:focus {
     box-shadow: none;
@@ -276,7 +276,7 @@ a.avatar {
     width: 10px;
     height: 10px;
     border: 2px solid $white;
-    background: $neutral-1-a3;
+    background: $color-background-secondary-lighter;
     color: $white;
     border-radius: 50%;
     display: flex;
