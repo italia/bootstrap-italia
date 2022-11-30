@@ -129,7 +129,7 @@ $arrow-size: $font-size-base * 0.5;
       width: 1.5rem;
       height: auto;
       line-height: 0.1rem;
-      color: $primary-c5;
+      color: $primary; // UI kit
       transition: transform 0.3s;
       background-image: none;
       transform: scaleY(-1);
