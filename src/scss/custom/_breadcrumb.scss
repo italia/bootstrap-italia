@@ -21,6 +21,7 @@
         }
       }
       span.separator {
+        color: $secondary;
         display: inline-block;
         font-weight: $breadcrumb-link-font-weight;
         padding: 0 $breadcrumb-link-x-padding;

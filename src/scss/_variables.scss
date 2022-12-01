@@ -140,12 +140,12 @@ $display4-weight: 700;
 $breadcrumb-padding: 0.5em;
 $breadcrumb-bg: transparent !default;
 $breadcrumb-link-font-weight: 600;
-$breadcrumb-link-color: $neutral-1-a7 !default;
+$breadcrumb-link-color: $color-text-secondary !default;
 $breadcrumb-link-x-padding: 0.5em;
-$breadcrumb-bg-dark: $neutral-1-a8 !default;
+$breadcrumb-bg-dark: $neutral-1-a8 !default;  // Missing in the UI kit
 $breadcrumb-border-radius: 0;
 $breadcrumb-link-color-dark: $white !default;
-$breadcrumb-icon-color-dark: $analogue-2-b1 !default;
+$breadcrumb-icon-color-dark: $analogue-2-b1 !default; // Missing in the UI kit
 
 //Accordion
 $card-cap-bg: transparent !default;
