@@ -11,6 +11,8 @@ COPY ./Gemfile /app
 COPY ./Gemfile.lock /app
 
 RUN bundle config set --local deployment true
+RUN bundle config unset deployment
+RUN gem install bundler:2.3.0
 RUN bundle install
 
 COPY ./package-lock.json /app
