@@ -6,8 +6,8 @@
 
 .dimmer {
   display: none;
-  background-color: #1f2933;
-  opacity: 0.92;
+  background-color: $color-background-emphasis;
+  opacity: .9;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -15,16 +15,16 @@
   right: 0;
   z-index: 1;
   padding: $v-gap * 4;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
 
   &.dimmer-primary {
     background-color: $primary;
     &.show {
-      opacity: 0.95;
+      opacity: .9;
     }
   }
-  justify-content: center;
-  flex-wrap: wrap;
-  align-items: flex-start;
 
   h1,
   h2,
