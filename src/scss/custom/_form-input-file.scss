@@ -11,10 +11,10 @@ input[type='file'] + label {
     opacity: 0;
   }
   .form-file-name {
-    background-color: #fff;
+    background-color: $white;
     border-bottom: 1px solid rgba(0, 0, 0, 0.15);
     border-radius: 0;
-    color: #464a4c;
+    color: $color-text-secondary;
     left: 0;
     line-height: 1.7;
     overflow: hidden;
