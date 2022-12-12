@@ -38,6 +38,8 @@ regular:
   - it-exchange-circle
   - it-expand
   - it-external-link
+  - it-figma-square
+  - it-figma
   - it-file
   - it-files
   - it-flag
@@ -54,7 +56,9 @@ regular:
   - it-link
   - it-list
   - it-locked
+  - it-logout
   - it-mail
+  - it-mail-open
   - it-map-marker
   - it-map-marker-circle
   - it-map-marker-minus
@@ -115,6 +119,8 @@ social:
   - it-pinterest
   - it-quora
   - it-reddit
+  - it-slack
+  - it-slack-square
   - it-snapchat
   - it-stackexchange
   - it-stackoverflow
@@ -130,3 +136,10 @@ social:
 extra:
   - it-designers-italia
   - it-team-digitale
+files:
+  - it-file-audio
+  - it-file-compressed
+  - it-file-csv
+  - it-file-pdf
+  - it-file-sheet
+  - it-file-video
