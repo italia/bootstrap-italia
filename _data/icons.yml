@@ -38,8 +38,6 @@ regular:
   - it-exchange-circle
   - it-expand
   - it-external-link
-  - it-figma-square
-  - it-figma
   - it-flag
   - it-folder
   - it-fullscreen
@@ -106,6 +104,8 @@ platforms:
   - it-behance
   - it-facebook
   - it-facebook-square
+  - it-figma
+  - it-figma-square
   - it-flickr
   - it-flickr-square
   - it-github
@@ -148,7 +148,13 @@ files:
   - it-file-audio
   - it-file-compressed
   - it-file-csv
+  - it-file-json
+  - it-file-odp
+  - it-file-ods
+  - it-file-odt
   - it-file-pdf
+  - it-file-pdf-ext
   - it-file-sheet
   - it-file-slides
+  - it-file-txt
   - it-file-video
