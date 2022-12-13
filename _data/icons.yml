@@ -40,8 +40,6 @@ regular:
   - it-external-link
   - it-figma-square
   - it-figma
-  - it-file
-  - it-files
   - it-flag
   - it-folder
   - it-fullscreen
@@ -137,9 +135,12 @@ extra:
   - it-designers-italia
   - it-team-digitale
 files:
+  - it-file
+  - it-files
   - it-file-audio
   - it-file-compressed
   - it-file-csv
   - it-file-pdf
   - it-file-sheet
+  - it-file-slides
   - it-file-video
