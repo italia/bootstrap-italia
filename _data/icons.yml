@@ -38,8 +38,6 @@ regular:
   - it-exchange-circle
   - it-expand
   - it-external-link
-  - it-file
-  - it-files
   - it-flag
   - it-folder
   - it-fullscreen
@@ -54,7 +52,9 @@ regular:
   - it-link
   - it-list
   - it-locked
+  - it-logout
   - it-mail
+  - it-mail-open
   - it-map-marker
   - it-map-marker-circle
   - it-map-marker-minus
@@ -100,10 +100,12 @@ regular:
   - it-wifi
   - it-zoom-in
   - it-zoom-out
-social:
+platforms:
   - it-behance
   - it-facebook
   - it-facebook-square
+  - it-figma
+  - it-figma-square
   - it-flickr
   - it-flickr-square
   - it-github
@@ -112,9 +114,27 @@ social:
   - it-linkedin-square
   - it-medium
   - it-medium-square
+  - it-pinterest
+  - it-pinterest-square
+  - it-quora
+  - it-quora-square
+  - it-reddit
+  - it-reddit-square
+  - it-slack
+  - it-slack-square
+  - it-snapchat
+  - it-snapchat-square
+  - it-stackexchange
+  - it-stackexchange-square
+  - it-stackoverflow
+  - it-stackoverflow-square
   - it-telegram
+  - it-tiktok
+  - it-tiktok-square
   - it-twitter
   - it-twitter-square
+  - it-vimeo
+  - it-vimeo-square
   - it-whatsapp
   - it-whatsapp-square
   - it-youtube
@@ -122,3 +142,20 @@ social:
 extra:
   - it-designers-italia
   - it-team-digitale
+files:
+  - it-file
+  - it-files
+  - it-file-audio
+  - it-file-compressed
+  - it-file-csv
+  - it-file-json
+  - it-file-odp
+  - it-file-ods
+  - it-file-odt
+  - it-file-pdf
+  - it-file-pdf-ext
+  - it-file-sheet
+  - it-file-slides
+  - it-file-txt
+  - it-file-video
+  - it-file-xml
