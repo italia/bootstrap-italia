@@ -349,7 +349,7 @@ Utilizzate la classe `.no-after` applicata al div `.card` se volete ridurre lo s
 
 La card con immagine è contraddistinta dalla classe `.card-img` applicata al div `.card`.
 
-L'elemento immagine è `.img-responsive-wrapper` per proporzioni dell'immagine pari a circa 31:19; se associato alla classe `.img-responsive-panoramic` l'ottimo è 31:9,5. Si consiglia in ogni caso un'immagine orizzontale.  
+L'elemento immagine è `.img-responsive-wrapper` per proporzioni dell'immagine pari a circa 31:19; se associato alla classe `.img-responsive-panoramic` l'ottimo è 62:19. Si consiglia in ogni caso un'immagine orizzontale.  
 Qualora le proporzioni non fossero esatte, l'immagine occuperà il massimo dell'altezza o della larghezza disponibile escludendo il resto dell'immagine e centrandola nell'elemento.
 
 È anche possibile aggiungere un piccolo box con l'indicazione della data, per card di tipo _evento_.
