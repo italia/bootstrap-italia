@@ -9,6 +9,7 @@ styleNode.innerHTML = `
   font-family: 'Titillium Web';
   font-style: normal;
   font-weight: 300;
+  font-display: swap;
   src: url('${__PUBLIC_PATH__}/Titillium_Web/titillium-web-v10-latin-ext_latin-300.eot'); /* IE9 Compat Modes */
   src: local(''),
        url('${__PUBLIC_PATH__}/Titillium_Web/titillium-web-v10-latin-ext_latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -23,6 +24,7 @@ styleNode.innerHTML = `
   font-family: 'Titillium Web';
   font-style: italic;
   font-weight: 300;
+  font-display: swap;
   src: url('${__PUBLIC_PATH__}/Titillium_Web/titillium-web-v10-latin-ext_latin-300italic.eot'); /* IE9 Compat Modes */
   src: local(''),
        url('${__PUBLIC_PATH__}/Titillium_Web/titillium-web-v10-latin-ext_latin-300italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -37,6 +39,7 @@ styleNode.innerHTML = `
   font-family: 'Titillium Web';
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
   src: url('${__PUBLIC_PATH__}/Titillium_Web/titillium-web-v10-latin-ext_latin-regular.eot'); /* IE9 Compat Modes */
   src: local(''),
        url('${__PUBLIC_PATH__}/Titillium_Web/titillium-web-v10-latin-ext_latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -51,6 +54,7 @@ styleNode.innerHTML = `
   font-family: 'Titillium Web';
   font-style: italic;
   font-weight: 400;
+  font-display: swap;
   src: url('${__PUBLIC_PATH__}/Titillium_Web/titillium-web-v10-latin-ext_latin-italic.eot'); /* IE9 Compat Modes */
   src: local(''),
        url('${__PUBLIC_PATH__}/Titillium_Web/titillium-web-v10-latin-ext_latin-italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -65,6 +69,7 @@ styleNode.innerHTML = `
   font-family: 'Titillium Web';
   font-style: normal;
   font-weight: 700;
+  font-display: swap;
   src: url('${__PUBLIC_PATH__}/Titillium_Web/titillium-web-v10-latin-ext_latin-700.eot'); /* IE9 Compat Modes */
   src: local(''),
        url('${__PUBLIC_PATH__}/Titillium_Web/titillium-web-v10-latin-ext_latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -79,6 +84,7 @@ styleNode.innerHTML = `
   font-family: 'Titillium Web';
   font-style: italic;
   font-weight: 700;
+  font-display: swap;
   src: url('${__PUBLIC_PATH__}/Titillium_Web/titillium-web-v10-latin-ext_latin-700italic.eot'); /* IE9 Compat Modes */
   src: local(''),
        url('${__PUBLIC_PATH__}/Titillium_Web/titillium-web-v10-latin-ext_latin-700italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -92,6 +98,7 @@ styleNode.innerHTML = `
   font-family: 'Titillium Web';
   font-style: normal;
   font-weight: 600;
+  font-display: swap;
   src: url('${__PUBLIC_PATH__}/Titillium_Web/titillium-web-v10-latin-ext_latin-600.eot'); /* IE9 Compat Modes */
   src: local(''),
        url('${__PUBLIC_PATH__}/Titillium_Web/titillium-web-v10-latin-ext_latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -106,6 +113,7 @@ styleNode.innerHTML = `
   font-family: 'Titillium Web';
   font-style: italic;
   font-weight: 600;
+  font-display: swap;
   src: url('${__PUBLIC_PATH__}/Titillium_Web/titillium-web-v10-latin-ext_latin-600italic.eot'); /* IE9 Compat Modes */
   src: local(''),
        url('${__PUBLIC_PATH__}/Titillium_Web/titillium-web-v10-latin-ext_latin-600italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -122,6 +130,7 @@ styleNode.innerHTML = `
   font-family: 'Lora';
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
   src: url('${__PUBLIC_PATH__}/Lora/lora-v20-latin-ext_latin-regular.eot'); /* IE9 Compat Modes */
   src: local(''),
        url('${__PUBLIC_PATH__}/Lora/lora-v20-latin-ext_latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -136,6 +145,7 @@ styleNode.innerHTML = `
   font-family: 'Lora';
   font-style: normal;
   font-weight: 700;
+  font-display: swap;
   src: url('${__PUBLIC_PATH__}/Lora/lora-v20-latin-ext_latin-700.eot'); /* IE9 Compat Modes */
   src: local(''),
        url('${__PUBLIC_PATH__}/Lora/lora-v20-latin-ext_latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -150,6 +160,7 @@ styleNode.innerHTML = `
   font-family: 'Lora';
   font-style: italic;
   font-weight: 400;
+  font-display: swap;
   src: url('${__PUBLIC_PATH__}/Lora/lora-v20-latin-ext_latin-italic.eot'); /* IE9 Compat Modes */
   src: local(''),
        url('${__PUBLIC_PATH__}/Lora/lora-v20-latin-ext_latin-italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -164,6 +175,7 @@ styleNode.innerHTML = `
   font-family: 'Lora';
   font-style: italic;
   font-weight: 700;
+  font-display: swap;
   src: url('${__PUBLIC_PATH__}/Lora/lora-v20-latin-ext_latin-700italic.eot'); /* IE9 Compat Modes */
   src: local(''),
        url('${__PUBLIC_PATH__}/Lora/lora-v20-latin-ext_latin-700italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -180,6 +192,7 @@ styleNode.innerHTML = `
   font-family: 'Roboto Mono';
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
   src: url('${__PUBLIC_PATH__}/Roboto_Mono/roboto-mono-v13-latin-ext_latin-regular.eot'); /* IE9 Compat Modes */
   src: local(''),
        url('${__PUBLIC_PATH__}/Roboto_Mono/roboto-mono-v13-latin-ext_latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -194,6 +207,7 @@ styleNode.innerHTML = `
   font-family: 'Roboto Mono';
   font-style: normal;
   font-weight: 700;
+  font-display: swap;
   src: url('${__PUBLIC_PATH__}/Roboto_Mono/roboto-mono-v13-latin-ext_latin-700.eot'); /* IE9 Compat Modes */
   src: local(''),
        url('${__PUBLIC_PATH__}/Roboto_Mono/roboto-mono-v13-latin-ext_latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -208,6 +222,7 @@ styleNode.innerHTML = `
   font-family: 'Roboto Mono';
   font-style: italic;
   font-weight: 400;
+  font-display: swap;
   src: url('${__PUBLIC_PATH__}/Roboto_Mono/roboto-mono-v13-latin-ext_latin-italic.eot'); /* IE9 Compat Modes */
   src: local(''),
        url('${__PUBLIC_PATH__}/Roboto_Mono/roboto-mono-v13-latin-ext_latin-italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -222,6 +237,7 @@ styleNode.innerHTML = `
   font-family: 'Roboto Mono';
   font-style: italic;
   font-weight: 700;
+  font-display: swap;
   src: url('${__PUBLIC_PATH__}/Roboto_Mono/roboto-mono-v13-latin-ext_latin-700italic.eot'); /* IE9 Compat Modes */
   src: local(''),
        url('${__PUBLIC_PATH__}/Roboto_Mono/roboto-mono-v13-latin-ext_latin-700italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
