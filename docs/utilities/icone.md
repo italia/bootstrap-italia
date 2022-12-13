@@ -87,16 +87,16 @@ Sono disponibili le classi `icon-*`, dove `*` può essere `xs`, `sm`, `lg`, `xl`
     <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#{{icona}}"></use></svg> {{icona}}
   </div>{% endfor %}
 </div>
-<h4 class="mt-4">Tipi di file</h4>
+<h4 class="mt-4">File</h4>
 <div class="row">
   {% for icona in site.data.icons.files %}
   <div class="col-12 col-md-6 col-lg-4">
     <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#{{icona}}"></use></svg> {{icona}}
   </div>{% endfor %}
 </div>
-<h4 class="mt-4">Social</h4>
+<h4 class="mt-4">Piattaforme</h4>
 <div class="row">
-  {% for icona in site.data.icons.social %}
+  {% for icona in site.data.icons.platforms %}
   <div class="col-12 col-md-6 col-lg-4">
     <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#{{icona}}"></use></svg> {{icona}}
   </div>{% endfor %}

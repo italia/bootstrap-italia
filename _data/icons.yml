@@ -102,7 +102,7 @@ regular:
   - it-wifi
   - it-zoom-in
   - it-zoom-out
-social:
+platforms:
   - it-behance
   - it-facebook
   - it-facebook-square
@@ -115,18 +115,26 @@ social:
   - it-medium
   - it-medium-square
   - it-pinterest
+  - it-pinterest-square
   - it-quora
+  - it-quora-square
   - it-reddit
+  - it-reddit-square
   - it-slack
   - it-slack-square
   - it-snapchat
+  - it-snapchat-square
   - it-stackexchange
+  - it-stackexchange-square
   - it-stackoverflow
+  - it-stackoverflow-square
   - it-telegram
   - it-tiktok
+  - it-tiktok-square
   - it-twitter
   - it-twitter-square
   - it-vimeo
+  - it-vimeo-square
   - it-whatsapp
   - it-whatsapp-square
   - it-youtube
