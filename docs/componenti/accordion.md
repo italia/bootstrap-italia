@@ -26,6 +26,7 @@ Tuttavia l'implementazione degli accordion va eseguita tenendo conto del contest
 
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
+{% comment %}Example name: Collapse example{% endcomment %}
 {% capture example %}
 
 <div class="accordion" id="collapseExample">
@@ -138,6 +139,7 @@ Più gruppi di accordion possono essere annidati.
 Utilizzare questo approccio solo quando strettamente necessario: dal punto di vista dell'accessibilità non si tratta di una soluzione ottimale.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
+{% comment %}Example name: Collapse example number 3{% endcomment %}
 {% capture example %}
 
 <div class="accordion" id="accordionExample2">

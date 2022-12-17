@@ -1,0 +1,10 @@
+[
+    {
+        "name": "immagini-1",
+        "content": "\n\n<figure class=\"figure\">\n  <img src=\"https://via.placeholder.com/280x120/ebebeb/808080/?text=Immagine\" class=\"figure-img img-fluid rounded\" alt=\"Un'immagine generica segnaposto con angoli arrotondati in una figura.\">\n  <figcaption class=\"figure-caption\">Una didascalia per l'immagine sopra.</figcaption>\n</figure>\n"
+    },
+    {
+        "name": "immagini-2",
+        "content": "\n\n<figure class=\"figure\">\n  <img src=\"https://via.placeholder.com/280x120/ebebeb/808080/?text=Immagine\" class=\"figure-img img-fluid rounded\" alt=\"Un'immagine generica segnaposto con angoli arrotondati in una figura.\">\n  <figcaption class=\"figure-caption text-end\">Una didascalia per l'immagine sopra.</figcaption>\n</figure>\n"
+    }
+]
