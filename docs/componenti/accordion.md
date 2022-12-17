@@ -26,7 +26,7 @@ Tuttavia l'implementazione degli accordion va eseguita tenendo conto del contest
 
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
-{% comment %}Example name: Collapse example{% endcomment %}
+{% comment %}Example name: Base, elementi richiudibili{% endcomment %}
 {% capture example %}
 
 <div class="accordion" id="collapseExample">
@@ -86,6 +86,7 @@ _Bootstrap Italia estende le funzionalità di Bootstrap implementando i comandi 
 
 Per ottenere un gruppo di elementi mutuamente richiudibili (o _accordion_), è sufficiente aggiungere ad ogni elemento `.accordion-collapse` l’attributo `data-parent` con il relativo ID del contenitore.
 
+{% comment %}Example name: Accordion{% endcomment %}
 {% capture example %}
 
 <div class="accordion" id="accordionExample1">
@@ -139,7 +140,7 @@ Più gruppi di accordion possono essere annidati.
 Utilizzare questo approccio solo quando strettamente necessario: dal punto di vista dell'accessibilità non si tratta di una soluzione ottimale.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
-{% comment %}Example name: Collapse example number 3{% endcomment %}
+{% comment %}Example name: Accordion annidati{% endcomment %}
 {% capture example %}
 
 <div class="accordion" id="accordionExample2">
@@ -227,6 +228,7 @@ Applicando classi aggiuntive all'elemento `.accordion` è possibile utilizzare i
 
 Aggiungere la classe `.accordion-background-active` ad `.accordion` per ottenere header con sfondo di colore primario quando questi sono attivi e il contenuto relativo è visibile.
 
+{% comment %}Example name: Con sfondo header attivi{% endcomment %}
 {% capture example %}
 
 <div class="accordion accordion-background-active" id="accordionExampleHa">
@@ -273,6 +275,7 @@ Aggiungere la classe `.accordion-background-active` ad `.accordion` per ottenere
 
 Aggiungere la classe `.accordion-background-hover` ad `.accordion` per ottenere header con sfondo di colore primario all'hover.
 
+{% comment %}Example name: Con sfondo header all'hover{% endcomment %}
 {% capture example %}
 
 <div class="accordion accordion-background-hover" id="accordionExampleHh">
@@ -319,6 +322,7 @@ Aggiungere la classe `.accordion-background-hover` ad `.accordion` per ottenere 
 
 Aggiungendo la classe `.accordion-left-icon` ad `.accordion` si ottiene una variante in cui l'icona _chevron_ che indica lo stato di apertura è sostituita da segni meno/più allineati a sinistra del titolo dell'header.
 
+{% comment %}Example name: Con icona a sinistra{% endcomment %}
 {% capture example %}
 
 <div class="accordion accordion-left-icon" id="accordionExampleLft">
