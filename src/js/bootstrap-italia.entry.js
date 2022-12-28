@@ -73,5 +73,5 @@ export default {
   Transfer,
   UploadDragDrop,
   ValidatorSelectAutocomplete,
-  loadFonts
+  loadFonts,
 }
