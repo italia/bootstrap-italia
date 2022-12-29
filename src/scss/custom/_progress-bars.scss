@@ -18,9 +18,8 @@
 .progress {
   height: 4px;
   box-shadow: none;
-  background-color: $color-background-secondary-lighter; // UI Kit
   &.progress-color {
-    background-color: $secondary; // UI Kit
+    background-color: $color-background-secondary-lighter; // UI Kit
   }
   &.progress-indeterminate {
     position: relative;
@@ -36,7 +35,7 @@
 
 //progress bar
 .progress-bar {
-  background-color: $primary;
+  background-color: $secondary; // UI Kit
 }
 
 //label
