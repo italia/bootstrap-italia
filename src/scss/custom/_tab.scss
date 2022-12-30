@@ -111,7 +111,7 @@
     justify-content: center;
 
     &:hover {
-      color: $primary;
+      color: $color-text-primary-hover;
       border-bottom-color: transparent;
     }
 
@@ -140,6 +140,9 @@
     }
     .icon {
       fill: $gray-secondary;
+      &:hover {
+        fill: $color-text-primary-hover;
+      }
     }
     &.active {
       .icon {
