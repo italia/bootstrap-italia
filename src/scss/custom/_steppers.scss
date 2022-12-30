@@ -177,12 +177,12 @@
         text-transform: uppercase;
         padding: 1.778rem 1.111rem;
         flex-grow: 1;
-        border-left: 1px solid $gray-border-disabled;
+        border-left: 1px solid $gray-border;
         position: relative;
         display: flex;
         align-items: center;
         &:nth-last-child(2) {
-          border-right: 1px solid $gray-border-disabled;
+          border-right: 1px solid $gray-border;
         }
         // index
         &.steppers-index {
