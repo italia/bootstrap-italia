@@ -9,6 +9,7 @@
     align-items: center;
     li {
       font-size: 1.125rem;
+      font-weight: 600;
       color: $gray-secondary;
       list-style-type: none;
       display: none;
@@ -22,7 +23,6 @@
       &.active,
       &.confirmed {
         color: $primary;
-        font-weight: 600;
         .icon {
           fill: $primary;
         }
@@ -107,7 +107,7 @@
   .steppers-nav {
     display: flex;
     height: 64px;
-    padding: 0 24px;
+    padding: 0 $stepper-spacing-h;
     box-shadow: 0 -8px 20px rgba(0, 0, 0, 0.1); // TEMP - substitute with generic ellipsical shadow
     background: $white;
     align-items: center;
@@ -174,8 +174,7 @@
       }
       // steps
       li {
-        text-transform: uppercase;
-        padding: 1.778rem 1.111rem;
+        padding: $stepper-spacing-v $stepper-spacing-h;
         flex-grow: 1;
         border-left: 1px solid $gray-border;
         position: relative;
@@ -221,7 +220,7 @@
           display: inline-block;
           width: 1.778rem;
           height: 1.778rem;
-          border: 1px solid $gray-border-disabled;
+          border: 1px solid $gray-border;
           border-radius: 50%;
           text-align: center;
           margin-right: 0.667rem;
