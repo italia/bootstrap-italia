@@ -616,6 +616,10 @@ $chips-background-hover: $color-background-secondary-hover !default; // UI kit
 $chips-label-color: $color-text-secondary !default; // UI kit
 $chips-label-color-disabled: $gray-label-disabled !default; // UI kit
 
+// stepper
+$stepper-spacing-h: 24px;
+$stepper-spacing-v: 16px;
+
 // transfer
 $transfer-border: 1px solid $neutral-1-a3 !default; // TODO Not found
 $transfer-descr-size: 12px;
