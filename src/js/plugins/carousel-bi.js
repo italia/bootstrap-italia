@@ -1,5 +1,4 @@
 import Splide from '@splidejs/splide'
-import '@splidejs/splide/dist/css/splide-core.min.css'
 
 import BaseComponent from 'bootstrap/js/src/base-component.js'
 import SelectorEngine from 'bootstrap/js/src/dom/selector-engine'
