@@ -1351,3 +1351,24 @@ Affinché la testata rimanga visibile in formato ridotto anche allo scorrere del
 ```
 
 È disponibile una <a href="{{ site.baseurl }}/docs/esempi/comuni/template-homepage/">pagina di esempio</a> dedicata a questa funzionalità per comprenderne appieno significato ed utilizzo.
+
+### Tramite JavaScript
+
+E' possibile inizializzare il componente tramite JavaScript:
+
+```js
+var headerSticky = new bootstrap.HeaderSticky(document.getElementById('myHeaderSticky'), options)
+```
+
+### Metodi
+
+{% include callout-danger-async-methods.md %}
+
+#### `getOrCreateInstance`
+
+Metodo statico che consente di ottenere l'istanza di un HeaderSticky associata ad un elemento del DOM o di crearne una nuova nel caso non fosse stata inizializzata.
+
+```js
+var headerStickyElement = document.querySelector('#myHeaderSticky')
+var headerSticky = bootstrap.HeaderSticky.getOrCreateInstance(headerStickyElement) // Returns a Bootstrap modal instance
+```

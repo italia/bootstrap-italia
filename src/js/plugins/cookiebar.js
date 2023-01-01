@@ -278,17 +278,6 @@ EventHandler.on(window, EVENT_LOAD_DATA_API, function () {
   }
 })
 
-/*$(window).on(EVENT_LOAD_DATA_API, () => {
-  const cookiebars = $.makeArray($(SELECTOR_COOKIE_BAR))
-  var consent = Cookiebar._getCookieEU()
-  if (!consent) {
-    for (let i = cookiebars.length; i--;) {
-      const $cookiebar = $(cookiebars[i])
-      Cookiebar._jQueryInterface.call($cookiebar, 'show')
-    }
-  }
-})*/
-
 /**
  * ------------------------------------------------------------------------
  * jQuery

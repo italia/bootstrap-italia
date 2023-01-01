@@ -243,12 +243,11 @@ class Sticky extends BaseComponent {
  * ------------------------------------------------------------------------
  */
 
-const dataApiCb = onDocumentScroll(() => {
+onDocumentScroll(() => {
   const stickies = SelectorEngine.find(SELECTOR_DATA_TOGGLE)
-  stickies.forEach((sticky) => {
+  stickies.map((sticky) => {
     Sticky.getOrCreateInstance(sticky)
   })
-  dataApiCb.dispose()
 })
 
 export default Sticky

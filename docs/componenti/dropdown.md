@@ -30,6 +30,7 @@ Tuttavia, Bootstrap aggiunge il supporto integrato per la maggior parte delle in
 Ogni singolo `.btn` può essere trasformato in un pulsante per l'apertura di dropdown con del semplice markdown HTML.
 Il design di default dei dropdown richiede l'applicazione della classe `.btn-dropdown`. I link o le voci all'interno del dropdown devono essere contenute in un elemento `.link-list`.
 
+{% comment %}Example name: Base button{% endcomment %}
 {% capture example %}
 
 <div class="dropdown">
@@ -53,6 +54,7 @@ Il design di default dei dropdown richiede l'applicazione della classe `.btn-dro
 
 Ovviamente sono disponibili [tutte le varianti]({{ site.baseurl }}/docs/componenti/buttons/#varianti-di-colore) già disponibili per i pulsanti. Di seguito, un esempio di utilizzo con classi `.btn-primary`, `.btn-secondary` e `.btn-danger`:
 
+{% comment %}Example name: Esempi con varianti di pulsanti{% endcomment %}
 {% capture example %}
 
 <div class="btn-group">
@@ -106,6 +108,7 @@ Ovviamente sono disponibili [tutte le varianti]({{ site.baseurl }}/docs/componen
 
 Lo stesso vale per gli elementi `<a>`:
 
+{% comment %}Example name: Usando l'elemento <a>{% endcomment %}
 {% capture example %}
 
 <div class="dropdown">
@@ -129,6 +132,7 @@ Lo stesso vale per gli elementi `<a>`:
 
 Per aprire le voci di menu verso l'alto aggiungere la classe `.dropup` all'elemento padre.
 
+{% comment %}Example name: Dropup, si apre verso l'alto{% endcomment %}
 {% capture example %}
 
 <div class="dropdown dropup">
@@ -152,6 +156,7 @@ Per aprire le voci di menu verso l'alto aggiungere la classe `.dropup` all'eleme
 
 Per aprire le voci di menu verso destra aggiungere la classe `.dropend` all'elemento padre.
 
+{% comment %}Example name: Dropend, si apre a destra{% endcomment %}
 {% capture example %}
 
 <div class="dropdown dropend">
@@ -175,6 +180,7 @@ Per aprire le voci di menu verso destra aggiungere la classe `.dropend` all'elem
 
 Per aprire le voci di menu verso sinistra aggiungere la classe `.dropstart` all'elemento padre.
 
+{% comment %}Example name: Dropstart, si apre a sinistra{% endcomment %}
 {% capture example %}
 
 <div class="dropdown dropstart">
@@ -202,6 +208,7 @@ Le voci del menu che viene aperto al click sul pulsante possono essere personali
 
 Aggiungere la classe `.active` ai link del dropdown che si vogliono mostrare come **attivi**. Per questioni di accessibilità è consigliabile aggiungere `<span class="visually-hidden"> attivo</span>` in coda al testo degli elementi attivi.
 
+{% comment %}Example name: Menu voci attive{% endcomment %}
 {% capture example %}
 
 <div class="dropdown-menu">
@@ -219,6 +226,7 @@ Aggiungere la classe `.active` ai link del dropdown che si vogliono mostrare com
 
 Aggiungere la classe `.disabled` ai link del dropdown che si vogliono mostrare come **disabilitati**. Includere anche la proprietà `aria-disabled="true"` per comunicare lo stato disabilitato agli utenti dotati di screen reader.
 
+{% comment %}Example name: Menu voci disabilitate{% endcomment %}
 {% capture example %}
 
 <div class="dropdown-menu">
@@ -236,6 +244,7 @@ Aggiungere la classe `.disabled` ai link del dropdown che si vogliono mostrare c
 
 All'interno del menu dropdown possono essere inseriti header e separatori.
 
+{% comment %}Example name: Menu con instestazioni e separatori{% endcomment %}
 {% capture example %}
 
 <div class="dropdown-menu">
@@ -258,6 +267,7 @@ All'interno del menu dropdown possono essere inseriti header e separatori.
 
 Per aumentare la dimensione dei link contenuti nel dropdown è sufficiente aggiungere agli stessi la classe `.large`.
 
+{% comment %}Example name: Menu con voci grandi{% endcomment %}
 {% capture example %}
 
 <div class="dropdown-menu">
@@ -275,6 +285,7 @@ Per aumentare la dimensione dei link contenuti nel dropdown è sufficiente aggiu
 
 Per ottenere un dropdown menu largo quanto l'elemento che contiene il dropdown button è sufficiente aggiungere la classe`.full-width` al menù stesso. I link e testi contenuti al suo interno saranno disposti in orizzontale.
 
+{% comment %}Example name: Menu a tutta larghezza{% endcomment %}
 {% capture example %}
 
 <div class="dropdown-menu full-width">
@@ -294,6 +305,7 @@ Per ottenere un dropdown menu largo quanto l'elemento che contiene il dropdown b
 
 Ai link contenuti nel menù può essere aggiunta un'icona illustrativa allineata a destra utilizzando le classi `.right-icon` sul link `<a>` e `.right` sul tag contenitore dell'icona.
 
+{% comment %}Example name: Menu con icona a destra{% endcomment %}
 {% capture example %}
 
 <div class="dropdown-menu">
@@ -326,6 +338,7 @@ Ai link contenuti nel menù può essere aggiunta un'icona illustrativa allineata
 
 Ai link contenuti nel menù può essere aggiunta un'icona illustrativa allineata a sinistra utilizzando le classi `.left-icon` sul link `<a>` e `.left` sul tag contenitore dell'icona.
 
+{% comment %}Example name: Menu con icona a sinistra{% endcomment %}
 {% capture example %}
 
 <div class="dropdown-menu">
@@ -358,6 +371,7 @@ Ai link contenuti nel menù può essere aggiunta un'icona illustrativa allineata
 
 Aggiungendo la classe`.dark` al dropdown menu si ottiene una versione in negativo dello stesso, con link ed elementi interni declinati di conseguenza.
 
+{% comment %}Example name: Menu dark{% endcomment %}
 {% capture example %}
 
 <div class="dropdown-menu dark">
