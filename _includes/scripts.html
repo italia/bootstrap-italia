@@ -1,8 +1,7 @@
 {% assign buildTime = site.time | date: '%Y%m%d%H%M' %}
 <script src="{{ site.baseurl }}/dist/js/bootstrap-italia.bundle.min.js?{{ buildTime }}"></script>
 <script>
-  window.__PUBLIC_PATH__ = '{{ site.baseurl }}/dist/fonts'
-  bootstrap.loadFonts()
+  bootstrap.loadFonts('{{ site.baseurl }}/dist/fonts')
 </script>
 {%- if page.layout == "default" or page.layout == "docs" -%}
 <script src="{{ site.baseurl }}/docs/assets/src/js/vendor/anchor.min.js"></script>

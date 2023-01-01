@@ -1,4 +1,6 @@
-@import 'accessible-autocomplete/dist/accessible-autocomplete.min.css';
+/* stylelint-disable */
+@import 'accessible-autocomplete/dist/accessible-autocomplete.min';
+/* stylelint-enable */
 
 .autocomplete__wrapper {
   .autocomplete__menu {

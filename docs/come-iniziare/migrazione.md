@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Migrazione
+title: Migrazione da 1.x
 description: Un pratico elenco dei principali cambiamenti fra Bootstrap Italia 1.x e 2.0.
 group: come-iniziare
 toc: true
