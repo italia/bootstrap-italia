@@ -12,14 +12,14 @@
 <title>Header · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202212141816" rel="stylesheet" />
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202301011348" rel="stylesheet" />
 
 
 <!-- Documentation extras -->
  
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.css" rel="stylesheet" />
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202212141816" rel="stylesheet" />
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202301011348" rel="stylesheet" />
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico" />
@@ -141,8 +141,8 @@
 
     <ul class="navbar-nav flex-row ms-md-auto d-none d-md-flex">
       <li class="nav-item pe-2">
-        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v2.1.1/bootstrap-italia.zip" aria-label="Download">
-          <small class="pe-2 m-0">v2.1.1</small>
+        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v2.2.0/bootstrap-italia.zip" aria-label="Download">
+          <small class="pe-2 m-0">v2.2.0</small>
           <svg class="icon icon-sm icon-light"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-download" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-download"></use></svg><span class="visually-hidden">Download</span>
         </a>
       </li>
@@ -204,8 +204,8 @@
                 <a class="list-item " href="/bootstrap-italia/docs/come-iniziare/componente-base/">
                   <span>Componente base</span></a>
               </li><li>
-                <a class="list-item " href="/bootstrap-italia/docs/come-iniziare/migrazione/">
-                  <span>Migrazione</span></a>
+                <a class="list-item " href="/bootstrap-italia/docs/come-iniziare/migrazione-dalla-versione-1/">
+                  <span>Migrazione dalla versione 1</span></a>
               </li></ul>
             
           </li><li>
@@ -612,7 +612,12 @@
 <li class="toc-entry toc-h3"><a href="#versione-chiara-2">Versione chiara</a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h2"><a href="#header-sticky">Header Sticky</a></li>
+<li class="toc-entry toc-h2"><a href="#header-sticky">Header Sticky</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#tramite-javascript">Tramite JavaScript</a></li>
+<li class="toc-entry toc-h3"><a href="#metodi">Metodi</a></li>
+</ul>
+</li>
 </ul>
   </div>
 </div>
@@ -3165,19 +3170,44 @@ Verrà creata un’ombra per enfatizzare l’Header rispetto alla pagina in cui 
 
 <p>È disponibile una <a href="/bootstrap-italia/docs/esempi/comuni/template-homepage/">pagina di esempio</a> dedicata a questa funzionalità per comprenderne appieno significato ed utilizzo.</p>
 
+<h3 id="tramite-javascript">Tramite JavaScript</h3>
+
+<p>E’ possibile inizializzare il componente tramite JavaScript:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">headerSticky</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">HeaderSticky</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">myHeaderSticky</span><span class="dl">'</span><span class="p">),</span> <span class="nx">options</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="metodi">Metodi</h3>
+
+<div class="bd-callout bd-callout-info">
+<h4 id="metodi-asincroni-e-transizioni">Metodi asincroni e transizioni</h4>
+
+<p>Tutti i metodi API sono <strong>asincroni</strong> e avviano una <strong>transizione</strong>. Ritornano al chiamante non appena viene avviata la transizione ma <strong>prima che termini</strong>. Inoltre, una chiamata al metodo su un <strong>componente in transizione verrà ignorata</strong>.</p>
+
+<p>Per maggiori informazioni consulta la <a href="https://getbootstrap.com/docs/5.0/getting-started/javascript/">documentazione Javascript di Bootstrap</a> (in inglese).</p>
+</div>
+
+<h4 id="getorcreateinstance"><code class="language-plaintext highlighter-rouge">getOrCreateInstance</code></h4>
+
+<p>Metodo statico che consente di ottenere l’istanza di un HeaderSticky associata ad un elemento del DOM o di crearne una nuova nel caso non fosse stata inizializzata.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">headerStickyElement</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">'</span><span class="s1">#myHeaderSticky</span><span class="dl">'</span><span class="p">)</span>
+<span class="kd">var</span> <span class="nx">headerSticky</span> <span class="o">=</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">HeaderSticky</span><span class="p">.</span><span class="nx">getOrCreateInstance</span><span class="p">(</span><span class="nx">headerStickyElement</span><span class="p">)</span> <span class="c1">// Returns a Bootstrap modal instance</span>
+</code></pre></div></div>
+
         </main>
       </div>
     </div>
 
     
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202301011348"></script>
 <script>
-  window.__PUBLIC_PATH__ = '/bootstrap-italia/dist/fonts'
-</script>
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202212141816"></script><script src="/bootstrap-italia/docs/assets/src/js/vendor/anchor.min.js"></script>
+  bootstrap.loadFonts('/bootstrap-italia/dist/fonts')
+</script><script src="/bootstrap-italia/docs/assets/src/js/vendor/anchor.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/clipboard.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tsparticles.min.js"></script>
 
-<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202212141816"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202301011348"></script>
 
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tweenjs.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/easeljs.min.js"></script>
@@ -3194,7 +3224,7 @@ Verrà creata un’ombra per enfatizzare l’Header rispetto alla pagina in cui 
     { src: '/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png', id: 'cover-7' },
   ]
 </script>
-<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202212141816"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202301011348"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/docsearch.min.js"></script>
 
 <script>

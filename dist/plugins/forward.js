@@ -1,6 +1,5 @@
 import BaseComponent from 'bootstrap/js/src/base-component.js';
 import EventHandler from 'bootstrap/js/src/dom/event-handler';
-import SelectorEngine from 'bootstrap/js/src/dom/selector-engine';
 import Manipulator from 'bootstrap/js/src/dom/manipulator';
 import { getElementFromSelector } from 'bootstrap/js/src/util/index';
 import { documentScrollTo } from './util/tween.js';
@@ -69,13 +68,19 @@ class Forward extends BaseComponent {
  * Data Api implementation
  * ------------------------------------------------------------------------
  */
-const toggles = SelectorEngine.find(SELECTOR_TOGGLE);
+/*const toggles = SelectorEngine.find(SELECTOR_TOGGLE)
 toggles.forEach((toggle) => {
   EventHandler.one(toggle, EVENT_CLICK_DATA_API, (evt) => {
-    evt.preventDefault();
-    const forward = Forward.getOrCreateInstance(toggle);
-    forward.goToTarget();
-  });
+    evt.preventDefault()
+    const forward = Forward.getOrCreateInstance(toggle)
+    forward.goToTarget()
+  })
+})*/
+
+EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_TOGGLE, function (evt) {
+  evt.preventDefault();
+  const forward = Forward.getOrCreateInstance(this);
+  forward.goToTarget();
 });
 
 export { Forward as default };

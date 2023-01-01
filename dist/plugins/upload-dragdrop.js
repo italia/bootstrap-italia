@@ -4,9 +4,11 @@ import SelectorEngine from 'bootstrap/js/src/dom/selector-engine';
 import ProgressDonut from './progress-donut.js';
 
 const NAME = 'upload';
-//const DATA_KEY = 'bs.upload'
-//const EVENT_KEY = `.${DATA_KEY}`
-//const DATA_API_KEY = '.data-api'
+const DATA_KEY = 'bs.upload';
+const EVENT_KEY = `.${DATA_KEY}`;
+const DATA_API_KEY = '.data-api';
+
+const EVENT_CLICK_DATA_API = `click${EVENT_KEY}${DATA_API_KEY}`;
 
 const EVENT_DRAG = `drag`;
 const EVENT_DRAG_START = `dragstart`;
@@ -118,8 +120,23 @@ class UploadDragDrop extends BaseComponent {
  * ------------------------------------------------------------------------
  */
 
-SelectorEngine.find(SELECTOR_FORM).forEach((form) => {
-  UploadDragDrop.getOrCreateInstance(form);
+/*SelectorEngine.find(SELECTOR_FORM).forEach((form) => {
+  UploadDragDrop.getOrCreateInstance(form)
+})*/
+
+const createInput = (element) => {
+  let found = element.matches && element.matches(SELECTOR_FORM) ? element : element.closest ? element.closest(SELECTOR_FORM) : null;
+  if (found) {
+    UploadDragDrop.getOrCreateInstance(found);
+  }
+  return null
+};
+
+document.addEventListener('dragenter', function (evt) {
+  createInput(evt.target);
+});
+EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_FORM + ' label', function () {
+  createInput(this);
 });
 
 export { UploadDragDrop as default };

@@ -1,6 +1,7 @@
 import BaseComponent from 'bootstrap/js/src/base-component.js';
 import EventHandler from 'bootstrap/js/src/dom/event-handler';
-import SelectorEngine from 'bootstrap/js/src/dom/selector-engine';
+
+//import SelectorEngine from 'bootstrap/js/src/dom/selector-engine'
 
 const NAME = 'historyback';
 const DATA_KEY = 'bs.historyback';
@@ -45,13 +46,19 @@ class HistoryBack extends BaseComponent {
  * ------------------------------------------------------------------------
  */
 
-const toggles = SelectorEngine.find(SELECTOR_TOGGLE);
+/*const toggles = SelectorEngine.find(SELECTOR_TOGGLE)
 toggles.forEach((toggle) => {
   EventHandler.one(toggle, EVENT_CLICK_DATA_API, (evt) => {
-    evt.preventDefault();
-    const historyBack = HistoryBack.getOrCreateInstance(toggle);
-    historyBack.back();
-  });
+    evt.preventDefault()
+    const historyBack = HistoryBack.getOrCreateInstance(toggle)
+    historyBack.back()
+  })
+})*/
+
+EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_TOGGLE, function (evt) {
+  evt.preventDefault();
+  const historyBack = HistoryBack.getOrCreateInstance(this);
+  historyBack.back();
 });
 
 export { HistoryBack as default };

@@ -12,14 +12,14 @@
 <title>Introduzione · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202212141816" rel="stylesheet" />
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202301011348" rel="stylesheet" />
 
 
 <!-- Documentation extras -->
  
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.css" rel="stylesheet" />
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202212141816" rel="stylesheet" />
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202301011348" rel="stylesheet" />
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico" />
@@ -141,8 +141,8 @@
 
     <ul class="navbar-nav flex-row ms-md-auto d-none d-md-flex">
       <li class="nav-item pe-2">
-        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v2.1.1/bootstrap-italia.zip" aria-label="Download">
-          <small class="pe-2 m-0">v2.1.1</small>
+        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v2.2.0/bootstrap-italia.zip" aria-label="Download">
+          <small class="pe-2 m-0">v2.2.0</small>
           <svg class="icon icon-sm icon-light"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-download" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-download"></use></svg><span class="visually-hidden">Download</span>
         </a>
       </li>
@@ -204,8 +204,8 @@
                 <a class="list-item " href="/bootstrap-italia/docs/come-iniziare/componente-base/">
                   <span>Componente base</span></a>
               </li><li>
-                <a class="list-item " href="/bootstrap-italia/docs/come-iniziare/migrazione/">
-                  <span>Migrazione</span></a>
+                <a class="list-item " href="/bootstrap-italia/docs/come-iniziare/migrazione-dalla-versione-1/">
+                  <span>Migrazione dalla versione 1</span></a>
               </li></ul>
             
           </li><li>
@@ -593,18 +593,15 @@
     <ul id="toc" class="section-nav">
 <li class="toc-entry toc-h2"><a href="#caricare-la-libreria">Caricare la libreria</a>
 <ul>
+<li class="toc-entry toc-h3"><a href="#utilizzo-dei-file-da-cdn-o-compilato">Utilizzo dei file da CDN o compilato</a></li>
+<li class="toc-entry toc-h3"><a href="#utilizzo-come-dipendenza">Utilizzo come dipendenza</a></li>
 <li class="toc-entry toc-h3"><a href="#css">CSS</a></li>
-<li class="toc-entry toc-h3"><a href="#javascript">Javascript</a></li>
+<li class="toc-entry toc-h3"><a href="#javascript">JavaScript</a></li>
 <li class="toc-entry toc-h3"><a href="#fonts">Fonts</a></li>
 <li class="toc-entry toc-h3"><a href="#icone">Icone</a></li>
-</ul>
-</li>
-<li class="toc-entry toc-h2"><a href="#pagina-html-di-esempio">Pagina HTML di esempio</a>
-<ul>
 <li class="toc-entry toc-h3"><a href="#altri-esempi">Altri esempi</a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h2"><a href="#utilizzo-come-dipendenza">Utilizzo come dipendenza</a></li>
 <li class="toc-entry toc-h2"><a href="#impostazioni-globali">Impostazioni globali</a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#doctype-html5">Doctype HTML5</a></li>
@@ -623,9 +620,18 @@
           <p class="bd-lead">Come usare Bootstrap Italia nel tuo progetto.</p>
           <h2 id="caricare-la-libreria">Caricare la libreria</h2>
 
-<p>Per utilizzare il codice compilato di Bootstrap Italia nel proprio progetto, è sufficiente scaricare ed includere nella pagina HTML alcuni file, tra cui un file CSS, un Javascript, i fonts e una SVG sprite, il tutto scaricabile qui:</p>
+<p>Per utilizzare il codice compilato di Bootstrap Italia nel proprio progetto, è sufficiente scaricare ed includere nella pagina HTML alcuni file, tra cui:</p>
 
-<p><a href="https://github.com/italia/bootstrap-italia/releases/download/v2.1.1/bootstrap-italia.zip" class="btn btn-primary">Scarica Bootstrap Italia v2.1.1</a></p>
+<ul>
+  <li>il foglio di stile contenuto nel file CSS</li>
+  <li>le funzionalità dei vari componenti contenute nel bundle JavaScript</li>
+  <li>i font</li>
+  <li>lo sprite SVG contenente le icone</li>
+</ul>
+
+<p>il tutto scaricabile qui:</p>
+
+<p><a href="https://github.com/italia/bootstrap-italia/releases/download/v2.2.0/bootstrap-italia.zip" class="btn btn-primary">Scarica Bootstrap Italia v2.2.0</a></p>
 
 <div class="bd-callout bd-callout-warning">
 <h5 id="importante">Importante!</h5>
@@ -641,46 +647,7 @@
 
 <p>La libreria è accessibile anche via CDN su <a href="https://www.jsdelivr.com/package/npm/bootstrap-italia">jsDelivr</a> o <a href="https://unpkg.com/bootstrap-italia/">unpkg</a>, di cui però è sconsigliato l’utilizzo in ambienti di produzione.</p>
 
-<p>Di seguito le informazioni per l’utilizzo dei singoli file.</p>
-
-<h3 id="css">CSS</h3>
-
-<p>Una volta scaricato e decompresso il file, all’interno della cartella <code class="language-plaintext highlighter-rouge">css</code> sarà presente un file CSS minificato (<code class="language-plaintext highlighter-rouge">bootstrap-italia.min.css</code>) con la sua <a href="https://www.html5rocks.com/en/tutorials/developertools/sourcemaps/">sourcemap</a> (opzionale).</p>
-
-<p>Per includere questo file all’interno del proprio progetto sarà sufficiente aggiungere il tag <code class="language-plaintext highlighter-rouge">&lt;link&gt;</code> di seguito riportato all’interno del tag <code class="language-plaintext highlighter-rouge">&lt;head&gt;</code> della pagina, prima di ogni altro CSS già presente, eventualmente correggendo il riferimento al percorso del file:</p>
-
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"./bootstrap-italia.min.css"</span> <span class="nt">/&gt;</span>
-</code></pre></div></div>
-
-<h3 id="javascript">Javascript</h3>
-
-<p>All’interno della cartella <code class="language-plaintext highlighter-rouge">js</code> saranno invece presenti il file di bundle e i componenti suddivisi in moduli.</p>
-
-<p>In questo caso, dopo aver copiato i file all’interno del progetto, sarà sufficiente inserire una versione dei tag <code class="language-plaintext highlighter-rouge">&lt;script&gt;</code> di seguito riportati alla fine della pagina HTML, giusto prima della chiusura del tag <code class="language-plaintext highlighter-rouge">&lt;/body&gt;</code>. Si potrà quindi includere la versione <code class="language-plaintext highlighter-rouge">*.bundle.*</code> in questo modo</p>
-
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"./bootstrap-italia.bundle.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-</code></pre></div></div>
-
-<h3 id="fonts">Fonts</h3>
-
-<p>È necessario anche includere i file relativi ai font referenziati nel CSS, mantenendo i path dei singoli font utilizzato nei <a href="https://github.com/italia/bootstrap-italia/releases/tag/v2.1.1">file sorgente della libreria</a>. Il path di base della cartella dei font può essere impostato utilizzando la variabile globale <strong>prima</strong> del caricamento della libreria Javascript di Bootstrap Italia:</p>
-
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script&gt;</span>
-  <span class="nb">window</span><span class="p">.</span><span class="nx">__PUBLIC_PATH__</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">/bootstrap-italia/dist/fonts</span><span class="dl">'</span>
-<span class="nt">&lt;/script&gt;</span>
-</code></pre></div></div>
-
-<p>Se tale variabile non è valorizzata, i font saranno cercati all’interno di una cartella <code class="language-plaintext highlighter-rouge">/bootstrap-italia/dist/fonts/</code>.</p>
-
-<h3 id="icone">Icone</h3>
-
-<p>Le icone a disposizione sono un componente assolutamente opzionale e sono pubblicate nella libreria sotto forma di sprite SVG <code class="language-plaintext highlighter-rouge">/bootstrap-italia/dist/svg/</code>, le cui singole SVG sorgenti sono presenti nel repository.</p>
-
-<p>Per informazioni, si può fare riferimento alla <a href="/bootstrap-italia/docs/utilities/icone/">documentazione sull’utilizzo delle icone</a>.</p>
-
-<h2 id="pagina-html-di-esempio">Pagina HTML di esempio</h2>
-
-<p>In breve, si dovrebbe ottenere qualcosa di simile a ciò che segue:</p>
+<h3 id="utilizzo-dei-file-da-cdn-o-compilato">Utilizzo dei file da CDN o compilato</h3>
 
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
@@ -690,17 +657,359 @@
     <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1, shrink-to-fit=no"</span> <span class="nt">/&gt;</span>
 
     <span class="c">&lt;!-- CSS --&gt;</span>
-    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"./bootstrap-italia.min.css"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"&lt;path-a-bootstrap-italia&gt;/dist/css/bootstrap-italia.min.css"</span> <span class="nt">/&gt;</span>
   <span class="nt">&lt;/head&gt;</span>
   <span class="nt">&lt;body&gt;</span>
     <span class="nt">&lt;h1&gt;</span>Hello, world!<span class="nt">&lt;/h1&gt;</span>
     <span class="c">&lt;!-- JS --&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"./bootstrap-italia.bundle.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"&lt;path-a-bootstrap-italia&gt;/dist/js/bootstrap-italia.bundle.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
   <span class="nt">&lt;/body&gt;</span>
 <span class="nt">&lt;/html&gt;</span>
 </code></pre></div></div>
 
-<p>Questo è tutto ciò che è sufficiente per avere a disposizione le funzionalità e gli stili di Bootstrap Italia.</p>
+<h3 id="utilizzo-come-dipendenza">Utilizzo come dipendenza</h3>
+
+<p>Alternativamente, specialmente se si utilizza <a href="https://webpack.github.io/">Webpack</a>, <a href="https://rollupjs.org/">Rollup.js</a> o altri module bundler per l’inclusione di librerie esterne attraverso <code class="language-plaintext highlighter-rouge">npm</code>, è possibile aggiungere Bootstrap Italia come dipendenza con il seguente comando:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm i bootstrap-italia <span class="nt">--save</span>
+</code></pre></div></div>
+
+<p>Di seguito le informazioni per l’utilizzo dei singoli file.</p>
+
+<h3 id="css">CSS</h3>
+
+<p>Una volta scaricato e decompresso il file, all’interno della cartella <code class="language-plaintext highlighter-rouge">css</code> sarà presente un file CSS minificato (<code class="language-plaintext highlighter-rouge">bootstrap-italia.min.css</code>) con la sua <a href="https://www.html5rocks.com/en/tutorials/developertools/sourcemaps/">sourcemap</a> (opzionale).</p>
+
+<p>Per includere questo file all’interno del proprio progetto sarà sufficiente aggiungere il tag <code class="language-plaintext highlighter-rouge">&lt;link&gt;</code> di seguito riportato all’interno del tag <code class="language-plaintext highlighter-rouge">&lt;head&gt;</code> della pagina, prima di ogni altro CSS già presente, eventualmente correggendo il riferimento al percorso del file:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"&lt;path-a-bootstrap-italia&gt;/dist/css/bootstrap-italia.min.css"</span> <span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<h3 id="javascript">JavaScript</h3>
+
+<p>All’interno della cartella <code class="language-plaintext highlighter-rouge">js</code> saranno invece presenti il file di bundle e i componenti suddivisi in moduli.</p>
+
+<p>In questo caso, dopo aver copiato i file all’interno del progetto, sarà sufficiente inserire una versione dei tag <code class="language-plaintext highlighter-rouge">&lt;script&gt;</code> di seguito riportati alla fine della pagina HTML, giusto prima della chiusura del tag <code class="language-plaintext highlighter-rouge">&lt;/body&gt;</code>. Si potrà quindi includere la versione <code class="language-plaintext highlighter-rouge">*.bundle.*</code> in questo modo</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"&lt;path-a-bootstrap-italia&gt;/dist/js/bootstrap-italia.bundle.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre></div></div>
+
+<p>In alternativa se si vogliono utilizzare i moduli,  è possibile importare e utilizzare singolarmente i vari componenti. Di seguito un esempio di cui potete trovare l’intero esempio completo <a href="https://github.com/astagi/demo-bsitalia-2">qui</a>.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">CarouselBI</span><span class="p">,</span> <span class="nx">Alert</span><span class="p">,</span> <span class="nx">Notification</span><span class="p">,</span> <span class="nx">Tooltip</span><span class="p">,</span> <span class="nx">Sticky</span><span class="p">,</span> <span class="nx">loadFonts</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">bootstrap-italia</span><span class="dl">'</span>
+
+
+<span class="k">new</span> <span class="nx">CarouselBI</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">myCarousel</span><span class="dl">'</span><span class="p">))</span>
+
+<span class="kd">const</span> <span class="nx">alert</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Alert</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByClassName</span><span class="p">(</span><span class="dl">'</span><span class="s1">alert</span><span class="dl">'</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
+
+<span class="nx">setTimeout</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">alert</span><span class="p">.</span><span class="nx">close</span><span class="p">()</span>
+<span class="p">},</span> <span class="mi">15000</span><span class="p">)</span>
+
+<span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="dl">'</span><span class="s1">.ttp</span><span class="dl">'</span><span class="p">).</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">el</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">new</span> <span class="nx">Tooltip</span><span class="p">(</span><span class="nx">el</span><span class="p">)</span>
+<span class="p">});</span>
+
+<span class="kd">const</span> <span class="nx">stickyElement</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">sticky</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">sticky</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Sticky</span><span class="p">(</span><span class="nx">stickyElement</span><span class="p">,</span> <span class="p">{</span>
+  <span class="na">positionType</span><span class="p">:</span> <span class="dl">'</span><span class="s1">sticky</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">stickyClassName</span><span class="p">:</span> <span class="dl">'</span><span class="s1">is-sticky</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">stackable</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="na">paddingTop</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+<span class="p">})</span>
+
+<span class="kd">const</span> <span class="nx">notification</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Notification</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">copyToast</span><span class="dl">"</span><span class="p">),</span> <span class="p">{</span>
+  <span class="na">timeout</span><span class="p">:</span> <span class="mi">2000</span>
+<span class="p">})</span>
+<span class="nx">notification</span><span class="p">.</span><span class="nx">show</span><span class="p">()</span>
+
+<span class="nx">loadFonts</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h3 id="fonts">Fonts</h3>
+
+<p>È necessario anche includere i file relativi ai font referenziati nel CSS, mantenendo i path dei singoli font utilizzato nei <a href="https://github.com/italia/bootstrap-italia/releases/tag/v2.2.0">file sorgente della libreria</a>. L’inclusione dei font può avvenire utilizzando CSS o JavaScript.</p>
+
+<h4 id="via-css">Via CSS</h4>
+
+<p>Per caricare i font necessari via CSS è necessario inserire nei propri fogli di stile il seguente codice. Per semplicità abbiamo utilizzato la sintassi SCSS in modo da utilizzare una variabile per specificare la path di base dove prendere i font.</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$font-path</span><span class="p">:</span> <span class="s2">"/fonts"</span><span class="p">;</span>
+
+<span class="cm">/* Titillium+Web:300,400,600,700 */</span>
+
+<span class="cm">/* titillium-web-300 - latin-ext_latin */</span>
+<span class="k">@font-face</span> <span class="p">{</span>
+    <span class="nl">font-family</span><span class="p">:</span> <span class="s1">'Titillium Web'</span><span class="p">;</span>
+    <span class="nl">font-style</span><span class="p">:</span> <span class="nb">normal</span><span class="p">;</span>
+    <span class="nl">font-weight</span><span class="p">:</span> <span class="m">300</span><span class="p">;</span>
+    <span class="na">font-display</span><span class="p">:</span> <span class="n">swap</span><span class="p">;</span>
+    <span class="nl">src</span><span class="p">:</span> <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Titillium_Web/titillium-web-v10-latin-ext_latin-300.eot')</span><span class="p">;</span> <span class="cm">/* IE9 Compat Modes */</span>
+    <span class="nl">src</span><span class="p">:</span> <span class="nf">local</span><span class="p">(</span><span class="s1">''</span><span class="p">)</span><span class="o">,</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Titillium_Web/titillium-web-v10-latin-ext_latin-300.eot?#iefix')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'embedded-opentype'</span><span class="p">)</span><span class="o">,</span> <span class="o">/*</span> <span class="n">IE6-IE8</span> <span class="o">*/</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Titillium_Web/titillium-web-v10-latin-ext_latin-300.woff2')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'woff2'</span><span class="p">)</span><span class="o">,</span> <span class="o">/*</span> <span class="n">Super</span> <span class="n">Modern</span> <span class="n">Browsers</span> <span class="o">*/</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Titillium_Web/titillium-web-v10-latin-ext_latin-300.woff')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'woff'</span><span class="p">)</span><span class="o">,</span> <span class="o">/*</span> <span class="n">Modern</span> <span class="n">Browsers</span> <span class="o">*/</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Titillium_Web/titillium-web-v10-latin-ext_latin-300.ttf')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'truetype'</span><span class="p">)</span><span class="o">,</span> <span class="o">/*</span> <span class="n">Safari</span><span class="o">,</span> <span class="n">Android</span><span class="o">,</span> <span class="n">iOS</span> <span class="o">*/</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Titillium_Web/titillium-web-v10-latin-ext_latin-300.svg#TitilliumWeb')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'svg'</span><span class="p">);</span> <span class="cm">/* Legacy iOS */</span>
+<span class="p">}</span>
+
+<span class="cm">/* titillium-web-300italic - latin-ext_latin */</span>
+<span class="k">@font-face</span> <span class="p">{</span>
+    <span class="nl">font-family</span><span class="p">:</span> <span class="s1">'Titillium Web'</span><span class="p">;</span>
+    <span class="nl">font-style</span><span class="p">:</span> <span class="nb">italic</span><span class="p">;</span>
+    <span class="nl">font-weight</span><span class="p">:</span> <span class="m">300</span><span class="p">;</span>
+    <span class="na">font-display</span><span class="p">:</span> <span class="n">swap</span><span class="p">;</span>
+    <span class="nl">src</span><span class="p">:</span> <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Titillium_Web/titillium-web-v10-latin-ext_latin-300italic.eot')</span><span class="p">;</span> <span class="cm">/* IE9 Compat Modes */</span>
+    <span class="nl">src</span><span class="p">:</span> <span class="nf">local</span><span class="p">(</span><span class="s1">''</span><span class="p">)</span><span class="o">,</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Titillium_Web/titillium-web-v10-latin-ext_latin-300italic.eot?#iefix')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'embedded-opentype'</span><span class="p">)</span><span class="o">,</span> <span class="o">/*</span> <span class="n">IE6-IE8</span> <span class="o">*/</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Titillium_Web/titillium-web-v10-latin-ext_latin-300italic.woff2')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'woff2'</span><span class="p">)</span><span class="o">,</span> <span class="o">/*</span> <span class="n">Super</span> <span class="n">Modern</span> <span class="n">Browsers</span> <span class="o">*/</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Titillium_Web/titillium-web-v10-latin-ext_latin-300italic.woff')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'woff'</span><span class="p">)</span><span class="o">,</span> <span class="o">/*</span> <span class="n">Modern</span> <span class="n">Browsers</span> <span class="o">*/</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Titillium_Web/titillium-web-v10-latin-ext_latin-300italic.ttf')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'truetype'</span><span class="p">)</span><span class="o">,</span> <span class="o">/*</span> <span class="n">Safari</span><span class="o">,</span> <span class="n">Android</span><span class="o">,</span> <span class="n">iOS</span> <span class="o">*/</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Titillium_Web/titillium-web-v10-latin-ext_latin-300italic.svg#TitilliumWeb')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'svg'</span><span class="p">);</span> <span class="cm">/* Legacy iOS */</span>
+<span class="p">}</span>
+
+<span class="cm">/* titillium-web-regular - latin-ext_latin */</span>
+<span class="k">@font-face</span> <span class="p">{</span>
+    <span class="nl">font-family</span><span class="p">:</span> <span class="s1">'Titillium Web'</span><span class="p">;</span>
+    <span class="nl">font-style</span><span class="p">:</span> <span class="nb">normal</span><span class="p">;</span>
+    <span class="nl">font-weight</span><span class="p">:</span> <span class="m">400</span><span class="p">;</span>
+    <span class="na">font-display</span><span class="p">:</span> <span class="n">swap</span><span class="p">;</span>
+    <span class="nl">src</span><span class="p">:</span> <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Titillium_Web/titillium-web-v10-latin-ext_latin-regular.eot')</span><span class="p">;</span> <span class="cm">/* IE9 Compat Modes */</span>
+    <span class="nl">src</span><span class="p">:</span> <span class="nf">local</span><span class="p">(</span><span class="s1">''</span><span class="p">)</span><span class="o">,</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Titillium_Web/titillium-web-v10-latin-ext_latin-regular.eot?#iefix')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'embedded-opentype'</span><span class="p">)</span><span class="o">,</span> <span class="o">/*</span> <span class="n">IE6-IE8</span> <span class="o">*/</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Titillium_Web/titillium-web-v10-latin-ext_latin-regular.woff2')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'woff2'</span><span class="p">)</span><span class="o">,</span> <span class="o">/*</span> <span class="n">Super</span> <span class="n">Modern</span> <span class="n">Browsers</span> <span class="o">*/</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Titillium_Web/titillium-web-v10-latin-ext_latin-regular.woff')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'woff'</span><span class="p">)</span><span class="o">,</span> <span class="o">/*</span> <span class="n">Modern</span> <span class="n">Browsers</span> <span class="o">*/</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Titillium_Web/titillium-web-v10-latin-ext_latin-regular.ttf')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'truetype'</span><span class="p">)</span><span class="o">,</span> <span class="o">/*</span> <span class="n">Safari</span><span class="o">,</span> <span class="n">Android</span><span class="o">,</span> <span class="n">iOS</span> <span class="o">*/</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Titillium_Web/titillium-web-v10-latin-ext_latin-regular.svg#TitilliumWeb')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'svg'</span><span class="p">);</span> <span class="cm">/* Legacy iOS */</span>
+<span class="p">}</span>
+
+<span class="cm">/* titillium-web-italic - latin-ext_latin */</span>
+<span class="k">@font-face</span> <span class="p">{</span>
+    <span class="nl">font-family</span><span class="p">:</span> <span class="s1">'Titillium Web'</span><span class="p">;</span>
+    <span class="nl">font-style</span><span class="p">:</span> <span class="nb">italic</span><span class="p">;</span>
+    <span class="nl">font-weight</span><span class="p">:</span> <span class="m">400</span><span class="p">;</span>
+    <span class="na">font-display</span><span class="p">:</span> <span class="n">swap</span><span class="p">;</span>
+    <span class="nl">src</span><span class="p">:</span> <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Titillium_Web/titillium-web-v10-latin-ext_latin-italic.eot')</span><span class="p">;</span> <span class="cm">/* IE9 Compat Modes */</span>
+    <span class="nl">src</span><span class="p">:</span> <span class="nf">local</span><span class="p">(</span><span class="s1">''</span><span class="p">)</span><span class="o">,</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Titillium_Web/titillium-web-v10-latin-ext_latin-italic.eot?#iefix')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'embedded-opentype'</span><span class="p">)</span><span class="o">,</span> <span class="o">/*</span> <span class="n">IE6-IE8</span> <span class="o">*/</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Titillium_Web/titillium-web-v10-latin-ext_latin-italic.woff2')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'woff2'</span><span class="p">)</span><span class="o">,</span> <span class="o">/*</span> <span class="n">Super</span> <span class="n">Modern</span> <span class="n">Browsers</span> <span class="o">*/</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Titillium_Web/titillium-web-v10-latin-ext_latin-italic.woff')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'woff'</span><span class="p">)</span><span class="o">,</span> <span class="o">/*</span> <span class="n">Modern</span> <span class="n">Browsers</span> <span class="o">*/</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Titillium_Web/titillium-web-v10-latin-ext_latin-italic.ttf')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'truetype'</span><span class="p">)</span><span class="o">,</span> <span class="o">/*</span> <span class="n">Safari</span><span class="o">,</span> <span class="n">Android</span><span class="o">,</span> <span class="n">iOS</span> <span class="o">*/</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Titillium_Web/titillium-web-v10-latin-ext_latin-italic.svg#TitilliumWeb')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'svg'</span><span class="p">);</span> <span class="cm">/* Legacy iOS */</span>
+<span class="p">}</span>
+
+<span class="cm">/* titillium-web-700 - latin-ext_latin */</span>
+<span class="k">@font-face</span> <span class="p">{</span>
+    <span class="nl">font-family</span><span class="p">:</span> <span class="s1">'Titillium Web'</span><span class="p">;</span>
+    <span class="nl">font-style</span><span class="p">:</span> <span class="nb">normal</span><span class="p">;</span>
+    <span class="nl">font-weight</span><span class="p">:</span> <span class="m">700</span><span class="p">;</span>
+    <span class="na">font-display</span><span class="p">:</span> <span class="n">swap</span><span class="p">;</span>
+    <span class="nl">src</span><span class="p">:</span> <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Titillium_Web/titillium-web-v10-latin-ext_latin-700.eot')</span><span class="p">;</span> <span class="cm">/* IE9 Compat Modes */</span>
+    <span class="nl">src</span><span class="p">:</span> <span class="nf">local</span><span class="p">(</span><span class="s1">''</span><span class="p">)</span><span class="o">,</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Titillium_Web/titillium-web-v10-latin-ext_latin-700.eot?#iefix')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'embedded-opentype'</span><span class="p">)</span><span class="o">,</span> <span class="o">/*</span> <span class="n">IE6-IE8</span> <span class="o">*/</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Titillium_Web/titillium-web-v10-latin-ext_latin-700.woff2')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'woff2'</span><span class="p">)</span><span class="o">,</span> <span class="o">/*</span> <span class="n">Super</span> <span class="n">Modern</span> <span class="n">Browsers</span> <span class="o">*/</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Titillium_Web/titillium-web-v10-latin-ext_latin-700.woff')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'woff'</span><span class="p">)</span><span class="o">,</span> <span class="o">/*</span> <span class="n">Modern</span> <span class="n">Browsers</span> <span class="o">*/</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Titillium_Web/titillium-web-v10-latin-ext_latin-700.ttf')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'truetype'</span><span class="p">)</span><span class="o">,</span> <span class="o">/*</span> <span class="n">Safari</span><span class="o">,</span> <span class="n">Android</span><span class="o">,</span> <span class="n">iOS</span> <span class="o">*/</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Titillium_Web/titillium-web-v10-latin-ext_latin-700.svg#TitilliumWeb')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'svg'</span><span class="p">);</span> <span class="cm">/* Legacy iOS */</span>
+<span class="p">}</span>
+
+<span class="cm">/* titillium-web-700italic - latin-ext_latin */</span>
+<span class="k">@font-face</span> <span class="p">{</span>
+    <span class="nl">font-family</span><span class="p">:</span> <span class="s1">'Titillium Web'</span><span class="p">;</span>
+    <span class="nl">font-style</span><span class="p">:</span> <span class="nb">italic</span><span class="p">;</span>
+    <span class="nl">font-weight</span><span class="p">:</span> <span class="m">700</span><span class="p">;</span>
+    <span class="na">font-display</span><span class="p">:</span> <span class="n">swap</span><span class="p">;</span>
+    <span class="nl">src</span><span class="p">:</span> <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Titillium_Web/titillium-web-v10-latin-ext_latin-700italic.eot')</span><span class="p">;</span> <span class="cm">/* IE9 Compat Modes */</span>
+    <span class="nl">src</span><span class="p">:</span> <span class="nf">local</span><span class="p">(</span><span class="s1">''</span><span class="p">)</span><span class="o">,</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Titillium_Web/titillium-web-v10-latin-ext_latin-700italic.eot?#iefix')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'embedded-opentype'</span><span class="p">)</span><span class="o">,</span> <span class="o">/*</span> <span class="n">IE6-IE8</span> <span class="o">*/</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Titillium_Web/titillium-web-v10-latin-ext_latin-700italic.woff2')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'woff2'</span><span class="p">)</span><span class="o">,</span> <span class="o">/*</span> <span class="n">Super</span> <span class="n">Modern</span> <span class="n">Browsers</span> <span class="o">*/</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Titillium_Web/titillium-web-v10-latin-ext_latin-700italic.woff')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'woff'</span><span class="p">)</span><span class="o">,</span> <span class="o">/*</span> <span class="n">Modern</span> <span class="n">Browsers</span> <span class="o">*/</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Titillium_Web/titillium-web-v10-latin-ext_latin-700italic.ttf')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'truetype'</span><span class="p">)</span><span class="o">,</span> <span class="o">/*</span> <span class="n">Safari</span><span class="o">,</span> <span class="n">Android</span><span class="o">,</span> <span class="n">iOS</span> <span class="o">*/</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Titillium_Web/titillium-web-v10-latin-ext_latin-700italic.svg#TitilliumWeb')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'svg'</span><span class="p">);</span> <span class="cm">/* Legacy iOS */</span>
+<span class="p">}</span>
+<span class="cm">/* titillium-web-600 - latin-ext_latin */</span>
+<span class="k">@font-face</span> <span class="p">{</span>
+    <span class="nl">font-family</span><span class="p">:</span> <span class="s1">'Titillium Web'</span><span class="p">;</span>
+    <span class="nl">font-style</span><span class="p">:</span> <span class="nb">normal</span><span class="p">;</span>
+    <span class="nl">font-weight</span><span class="p">:</span> <span class="m">600</span><span class="p">;</span>
+    <span class="na">font-display</span><span class="p">:</span> <span class="n">swap</span><span class="p">;</span>
+    <span class="nl">src</span><span class="p">:</span> <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Titillium_Web/titillium-web-v10-latin-ext_latin-600.eot')</span><span class="p">;</span> <span class="cm">/* IE9 Compat Modes */</span>
+    <span class="nl">src</span><span class="p">:</span> <span class="nf">local</span><span class="p">(</span><span class="s1">''</span><span class="p">)</span><span class="o">,</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Titillium_Web/titillium-web-v10-latin-ext_latin-600.eot?#iefix')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'embedded-opentype'</span><span class="p">)</span><span class="o">,</span> <span class="o">/*</span> <span class="n">IE6-IE8</span> <span class="o">*/</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Titillium_Web/titillium-web-v10-latin-ext_latin-600.woff2')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'woff2'</span><span class="p">)</span><span class="o">,</span> <span class="o">/*</span> <span class="n">Super</span> <span class="n">Modern</span> <span class="n">Browsers</span> <span class="o">*/</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Titillium_Web/titillium-web-v10-latin-ext_latin-600.woff')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'woff'</span><span class="p">)</span><span class="o">,</span> <span class="o">/*</span> <span class="n">Modern</span> <span class="n">Browsers</span> <span class="o">*/</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Titillium_Web/titillium-web-v10-latin-ext_latin-600.ttf')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'truetype'</span><span class="p">)</span><span class="o">,</span> <span class="o">/*</span> <span class="n">Safari</span><span class="o">,</span> <span class="n">Android</span><span class="o">,</span> <span class="n">iOS</span> <span class="o">*/</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Titillium_Web/titillium-web-v10-latin-ext_latin-600.svg#TitilliumWeb')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'svg'</span><span class="p">);</span> <span class="cm">/* Legacy iOS */</span>
+<span class="p">}</span>
+
+<span class="cm">/* titillium-web-600italic - latin-ext_latin */</span>
+<span class="k">@font-face</span> <span class="p">{</span>
+    <span class="nl">font-family</span><span class="p">:</span> <span class="s1">'Titillium Web'</span><span class="p">;</span>
+    <span class="nl">font-style</span><span class="p">:</span> <span class="nb">italic</span><span class="p">;</span>
+    <span class="nl">font-weight</span><span class="p">:</span> <span class="m">600</span><span class="p">;</span>
+    <span class="na">font-display</span><span class="p">:</span> <span class="n">swap</span><span class="p">;</span>
+    <span class="nl">src</span><span class="p">:</span> <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Titillium_Web/titillium-web-v10-latin-ext_latin-600italic.eot')</span><span class="p">;</span> <span class="cm">/* IE9 Compat Modes */</span>
+    <span class="nl">src</span><span class="p">:</span> <span class="nf">local</span><span class="p">(</span><span class="s1">''</span><span class="p">)</span><span class="o">,</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Titillium_Web/titillium-web-v10-latin-ext_latin-600italic.eot?#iefix')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'embedded-opentype'</span><span class="p">)</span><span class="o">,</span> <span class="o">/*</span> <span class="n">IE6-IE8</span> <span class="o">*/</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Titillium_Web/titillium-web-v10-latin-ext_latin-600italic.woff2')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'woff2'</span><span class="p">)</span><span class="o">,</span> <span class="o">/*</span> <span class="n">Super</span> <span class="n">Modern</span> <span class="n">Browsers</span> <span class="o">*/</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Titillium_Web/titillium-web-v10-latin-ext_latin-600italic.woff')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'woff'</span><span class="p">)</span><span class="o">,</span> <span class="o">/*</span> <span class="n">Modern</span> <span class="n">Browsers</span> <span class="o">*/</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Titillium_Web/titillium-web-v10-latin-ext_latin-600italic.ttf')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'truetype'</span><span class="p">)</span><span class="o">,</span> <span class="o">/*</span> <span class="n">Safari</span><span class="o">,</span> <span class="n">Android</span><span class="o">,</span> <span class="n">iOS</span> <span class="o">*/</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Titillium_Web/titillium-web-v10-latin-ext_latin-600italic.svg#TitilliumWeb')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'svg'</span><span class="p">);</span> <span class="cm">/* Legacy iOS */</span>
+<span class="p">}</span>
+
+<span class="cm">/* Lora:400,700 */</span>
+
+<span class="cm">/* lora-regular - latin-ext_latin */</span>
+<span class="k">@font-face</span> <span class="p">{</span>
+    <span class="nl">font-family</span><span class="p">:</span> <span class="s1">'Lora'</span><span class="p">;</span>
+    <span class="nl">font-style</span><span class="p">:</span> <span class="nb">normal</span><span class="p">;</span>
+    <span class="nl">font-weight</span><span class="p">:</span> <span class="m">400</span><span class="p">;</span>
+    <span class="na">font-display</span><span class="p">:</span> <span class="n">swap</span><span class="p">;</span>
+    <span class="nl">src</span><span class="p">:</span> <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Lora/lora-v20-latin-ext_latin-regular.eot')</span><span class="p">;</span> <span class="cm">/* IE9 Compat Modes */</span>
+    <span class="nl">src</span><span class="p">:</span> <span class="nf">local</span><span class="p">(</span><span class="s1">''</span><span class="p">)</span><span class="o">,</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Lora/lora-v20-latin-ext_latin-regular.eot?#iefix')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'embedded-opentype'</span><span class="p">)</span><span class="o">,</span> <span class="o">/*</span> <span class="n">IE6-IE8</span> <span class="o">*/</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Lora/lora-v20-latin-ext_latin-regular.woff2')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'woff2'</span><span class="p">)</span><span class="o">,</span> <span class="o">/*</span> <span class="n">Super</span> <span class="n">Modern</span> <span class="n">Browsers</span> <span class="o">*/</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Lora/lora-v20-latin-ext_latin-regular.woff')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'woff'</span><span class="p">)</span><span class="o">,</span> <span class="o">/*</span> <span class="n">Modern</span> <span class="n">Browsers</span> <span class="o">*/</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Lora/lora-v20-latin-ext_latin-regular.ttf')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'truetype'</span><span class="p">)</span><span class="o">,</span> <span class="o">/*</span> <span class="n">Safari</span><span class="o">,</span> <span class="n">Android</span><span class="o">,</span> <span class="n">iOS</span> <span class="o">*/</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Lora/lora-v20-latin-ext_latin-regular.svg#Lora')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'svg'</span><span class="p">);</span> <span class="cm">/* Legacy iOS */</span>
+<span class="p">}</span>
+
+<span class="cm">/* lora-700 - latin-ext_latin */</span>
+<span class="k">@font-face</span> <span class="p">{</span>
+    <span class="nl">font-family</span><span class="p">:</span> <span class="s1">'Lora'</span><span class="p">;</span>
+    <span class="nl">font-style</span><span class="p">:</span> <span class="nb">normal</span><span class="p">;</span>
+    <span class="nl">font-weight</span><span class="p">:</span> <span class="m">700</span><span class="p">;</span>
+    <span class="na">font-display</span><span class="p">:</span> <span class="n">swap</span><span class="p">;</span>
+    <span class="nl">src</span><span class="p">:</span> <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Lora/lora-v20-latin-ext_latin-700.eot')</span><span class="p">;</span> <span class="cm">/* IE9 Compat Modes */</span>
+    <span class="nl">src</span><span class="p">:</span> <span class="nf">local</span><span class="p">(</span><span class="s1">''</span><span class="p">)</span><span class="o">,</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Lora/lora-v20-latin-ext_latin-700.eot?#iefix')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'embedded-opentype'</span><span class="p">)</span><span class="o">,</span> <span class="o">/*</span> <span class="n">IE6-IE8</span> <span class="o">*/</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Lora/lora-v20-latin-ext_latin-700.woff2')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'woff2'</span><span class="p">)</span><span class="o">,</span> <span class="o">/*</span> <span class="n">Super</span> <span class="n">Modern</span> <span class="n">Browsers</span> <span class="o">*/</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Lora/lora-v20-latin-ext_latin-700.woff')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'woff'</span><span class="p">)</span><span class="o">,</span> <span class="o">/*</span> <span class="n">Modern</span> <span class="n">Browsers</span> <span class="o">*/</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Lora/lora-v20-latin-ext_latin-700.ttf')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'truetype'</span><span class="p">)</span><span class="o">,</span> <span class="o">/*</span> <span class="n">Safari</span><span class="o">,</span> <span class="n">Android</span><span class="o">,</span> <span class="n">iOS</span> <span class="o">*/</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Lora/lora-v20-latin-ext_latin-700.svg#Lora')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'svg'</span><span class="p">);</span> <span class="cm">/* Legacy iOS */</span>
+<span class="p">}</span>
+
+<span class="cm">/* lora-italic - latin-ext_latin */</span>
+<span class="k">@font-face</span> <span class="p">{</span>
+    <span class="nl">font-family</span><span class="p">:</span> <span class="s1">'Lora'</span><span class="p">;</span>
+    <span class="nl">font-style</span><span class="p">:</span> <span class="nb">italic</span><span class="p">;</span>
+    <span class="nl">font-weight</span><span class="p">:</span> <span class="m">400</span><span class="p">;</span>
+    <span class="na">font-display</span><span class="p">:</span> <span class="n">swap</span><span class="p">;</span>
+    <span class="nl">src</span><span class="p">:</span> <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Lora/lora-v20-latin-ext_latin-italic.eot')</span><span class="p">;</span> <span class="cm">/* IE9 Compat Modes */</span>
+    <span class="nl">src</span><span class="p">:</span> <span class="nf">local</span><span class="p">(</span><span class="s1">''</span><span class="p">)</span><span class="o">,</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Lora/lora-v20-latin-ext_latin-italic.eot?#iefix')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'embedded-opentype'</span><span class="p">)</span><span class="o">,</span> <span class="o">/*</span> <span class="n">IE6-IE8</span> <span class="o">*/</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Lora/lora-v20-latin-ext_latin-italic.woff2')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'woff2'</span><span class="p">)</span><span class="o">,</span> <span class="o">/*</span> <span class="n">Super</span> <span class="n">Modern</span> <span class="n">Browsers</span> <span class="o">*/</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Lora/lora-v20-latin-ext_latin-italic.woff')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'woff'</span><span class="p">)</span><span class="o">,</span> <span class="o">/*</span> <span class="n">Modern</span> <span class="n">Browsers</span> <span class="o">*/</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Lora/lora-v20-latin-ext_latin-italic.ttf')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'truetype'</span><span class="p">)</span><span class="o">,</span> <span class="o">/*</span> <span class="n">Safari</span><span class="o">,</span> <span class="n">Android</span><span class="o">,</span> <span class="n">iOS</span> <span class="o">*/</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Lora/lora-v20-latin-ext_latin-italic.svg#Lora')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'svg'</span><span class="p">);</span> <span class="cm">/* Legacy iOS */</span>
+<span class="p">}</span>
+
+<span class="cm">/* lora-700italic - latin-ext_latin */</span>
+<span class="k">@font-face</span> <span class="p">{</span>
+    <span class="nl">font-family</span><span class="p">:</span> <span class="s1">'Lora'</span><span class="p">;</span>
+    <span class="nl">font-style</span><span class="p">:</span> <span class="nb">italic</span><span class="p">;</span>
+    <span class="nl">font-weight</span><span class="p">:</span> <span class="m">700</span><span class="p">;</span>
+    <span class="na">font-display</span><span class="p">:</span> <span class="n">swap</span><span class="p">;</span>
+    <span class="nl">src</span><span class="p">:</span> <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Lora/lora-v20-latin-ext_latin-700italic.eot')</span><span class="p">;</span> <span class="cm">/* IE9 Compat Modes */</span>
+    <span class="nl">src</span><span class="p">:</span> <span class="nf">local</span><span class="p">(</span><span class="s1">''</span><span class="p">)</span><span class="o">,</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Lora/lora-v20-latin-ext_latin-700italic.eot?#iefix')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'embedded-opentype'</span><span class="p">)</span><span class="o">,</span> <span class="o">/*</span> <span class="n">IE6-IE8</span> <span class="o">*/</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Lora/lora-v20-latin-ext_latin-700italic.woff2')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'woff2'</span><span class="p">)</span><span class="o">,</span> <span class="o">/*</span> <span class="n">Super</span> <span class="n">Modern</span> <span class="n">Browsers</span> <span class="o">*/</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Lora/lora-v20-latin-ext_latin-700italic.woff')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'woff'</span><span class="p">)</span><span class="o">,</span> <span class="o">/*</span> <span class="n">Modern</span> <span class="n">Browsers</span> <span class="o">*/</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Lora/lora-v20-latin-ext_latin-700italic.ttf')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'truetype'</span><span class="p">)</span><span class="o">,</span> <span class="o">/*</span> <span class="n">Safari</span><span class="o">,</span> <span class="n">Android</span><span class="o">,</span> <span class="n">iOS</span> <span class="o">*/</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Lora/lora-v20-latin-ext_latin-700italic.svg#Lora')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'svg'</span><span class="p">);</span> <span class="cm">/* Legacy iOS */</span>
+<span class="p">}</span>
+
+<span class="cm">/* Roboto+Mono:400,700 */</span>
+
+<span class="cm">/* roboto-mono-regular - latin-ext_latin */</span>
+<span class="k">@font-face</span> <span class="p">{</span>
+    <span class="nl">font-family</span><span class="p">:</span> <span class="s1">'Roboto Mono'</span><span class="p">;</span>
+    <span class="nl">font-style</span><span class="p">:</span> <span class="nb">normal</span><span class="p">;</span>
+    <span class="nl">font-weight</span><span class="p">:</span> <span class="m">400</span><span class="p">;</span>
+    <span class="na">font-display</span><span class="p">:</span> <span class="n">swap</span><span class="p">;</span>
+    <span class="nl">src</span><span class="p">:</span> <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Roboto_Mono/roboto-mono-v13-latin-ext_latin-regular.eot')</span><span class="p">;</span> <span class="cm">/* IE9 Compat Modes */</span>
+    <span class="nl">src</span><span class="p">:</span> <span class="nf">local</span><span class="p">(</span><span class="s1">''</span><span class="p">)</span><span class="o">,</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Roboto_Mono/roboto-mono-v13-latin-ext_latin-regular.eot?#iefix')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'embedded-opentype'</span><span class="p">)</span><span class="o">,</span> <span class="o">/*</span> <span class="n">IE6-IE8</span> <span class="o">*/</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Roboto_Mono/roboto-mono-v13-latin-ext_latin-regular.woff2')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'woff2'</span><span class="p">)</span><span class="o">,</span> <span class="o">/*</span> <span class="n">Super</span> <span class="n">Modern</span> <span class="n">Browsers</span> <span class="o">*/</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Roboto_Mono/roboto-mono-v13-latin-ext_latin-regular.woff')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'woff'</span><span class="p">)</span><span class="o">,</span> <span class="o">/*</span> <span class="n">Modern</span> <span class="n">Browsers</span> <span class="o">*/</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Roboto_Mono/roboto-mono-v13-latin-ext_latin-regular.ttf')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'truetype'</span><span class="p">)</span><span class="o">,</span> <span class="o">/*</span> <span class="n">Safari</span><span class="o">,</span> <span class="n">Android</span><span class="o">,</span> <span class="n">iOS</span> <span class="o">*/</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Roboto_Mono/roboto-mono-v13-latin-ext_latin-regular.svg#RobotoMono')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'svg'</span><span class="p">);</span> <span class="cm">/* Legacy iOS */</span>
+<span class="p">}</span>
+
+<span class="cm">/* roboto-mono-700 - latin-ext_latin */</span>
+<span class="k">@font-face</span> <span class="p">{</span>
+    <span class="nl">font-family</span><span class="p">:</span> <span class="s1">'Roboto Mono'</span><span class="p">;</span>
+    <span class="nl">font-style</span><span class="p">:</span> <span class="nb">normal</span><span class="p">;</span>
+    <span class="nl">font-weight</span><span class="p">:</span> <span class="m">700</span><span class="p">;</span>
+    <span class="na">font-display</span><span class="p">:</span> <span class="n">swap</span><span class="p">;</span>
+    <span class="nl">src</span><span class="p">:</span> <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Roboto_Mono/roboto-mono-v13-latin-ext_latin-700.eot')</span><span class="p">;</span> <span class="cm">/* IE9 Compat Modes */</span>
+    <span class="nl">src</span><span class="p">:</span> <span class="nf">local</span><span class="p">(</span><span class="s1">''</span><span class="p">)</span><span class="o">,</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Roboto_Mono/roboto-mono-v13-latin-ext_latin-700.eot?#iefix')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'embedded-opentype'</span><span class="p">)</span><span class="o">,</span> <span class="o">/*</span> <span class="n">IE6-IE8</span> <span class="o">*/</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Roboto_Mono/roboto-mono-v13-latin-ext_latin-700.woff2')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'woff2'</span><span class="p">)</span><span class="o">,</span> <span class="o">/*</span> <span class="n">Super</span> <span class="n">Modern</span> <span class="n">Browsers</span> <span class="o">*/</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Roboto_Mono/roboto-mono-v13-latin-ext_latin-700.woff')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'woff'</span><span class="p">)</span><span class="o">,</span> <span class="o">/*</span> <span class="n">Modern</span> <span class="n">Browsers</span> <span class="o">*/</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Roboto_Mono/roboto-mono-v13-latin-ext_latin-700.ttf')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'truetype'</span><span class="p">)</span><span class="o">,</span> <span class="o">/*</span> <span class="n">Safari</span><span class="o">,</span> <span class="n">Android</span><span class="o">,</span> <span class="n">iOS</span> <span class="o">*/</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Roboto_Mono/roboto-mono-v13-latin-ext_latin-700.svg#RobotoMono')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'svg'</span><span class="p">);</span> <span class="cm">/* Legacy iOS */</span>
+<span class="p">}</span>
+
+<span class="cm">/* roboto-mono-italic - latin-ext_latin */</span>
+<span class="k">@font-face</span> <span class="p">{</span>
+    <span class="nl">font-family</span><span class="p">:</span> <span class="s1">'Roboto Mono'</span><span class="p">;</span>
+    <span class="nl">font-style</span><span class="p">:</span> <span class="nb">italic</span><span class="p">;</span>
+    <span class="nl">font-weight</span><span class="p">:</span> <span class="m">400</span><span class="p">;</span>
+    <span class="na">font-display</span><span class="p">:</span> <span class="n">swap</span><span class="p">;</span>
+    <span class="nl">src</span><span class="p">:</span> <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Roboto_Mono/roboto-mono-v13-latin-ext_latin-italic.eot')</span><span class="p">;</span> <span class="cm">/* IE9 Compat Modes */</span>
+    <span class="nl">src</span><span class="p">:</span> <span class="nf">local</span><span class="p">(</span><span class="s1">''</span><span class="p">)</span><span class="o">,</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Roboto_Mono/roboto-mono-v13-latin-ext_latin-italic.eot?#iefix')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'embedded-opentype'</span><span class="p">)</span><span class="o">,</span> <span class="o">/*</span> <span class="n">IE6-IE8</span> <span class="o">*/</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Roboto_Mono/roboto-mono-v13-latin-ext_latin-italic.woff2')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'woff2'</span><span class="p">)</span><span class="o">,</span> <span class="o">/*</span> <span class="n">Super</span> <span class="n">Modern</span> <span class="n">Browsers</span> <span class="o">*/</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Roboto_Mono/roboto-mono-v13-latin-ext_latin-italic.woff')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'woff'</span><span class="p">)</span><span class="o">,</span> <span class="o">/*</span> <span class="n">Modern</span> <span class="n">Browsers</span> <span class="o">*/</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Roboto_Mono/roboto-mono-v13-latin-ext_latin-italic.ttf')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'truetype'</span><span class="p">)</span><span class="o">,</span> <span class="o">/*</span> <span class="n">Safari</span><span class="o">,</span> <span class="n">Android</span><span class="o">,</span> <span class="n">iOS</span> <span class="o">*/</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Roboto_Mono/roboto-mono-v13-latin-ext_latin-italic.svg#RobotoMono')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'svg'</span><span class="p">);</span> <span class="cm">/* Legacy iOS */</span>
+<span class="p">}</span>
+
+<span class="cm">/* roboto-mono-700italic - latin-ext_latin */</span>
+<span class="k">@font-face</span> <span class="p">{</span>
+    <span class="nl">font-family</span><span class="p">:</span> <span class="s1">'Roboto Mono'</span><span class="p">;</span>
+    <span class="nl">font-style</span><span class="p">:</span> <span class="nb">italic</span><span class="p">;</span>
+    <span class="nl">font-weight</span><span class="p">:</span> <span class="m">700</span><span class="p">;</span>
+    <span class="na">font-display</span><span class="p">:</span> <span class="n">swap</span><span class="p">;</span>
+    <span class="nl">src</span><span class="p">:</span> <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Roboto_Mono/roboto-mono-v13-latin-ext_latin-700italic.eot')</span><span class="p">;</span> <span class="cm">/* IE9 Compat Modes */</span>
+    <span class="nl">src</span><span class="p">:</span> <span class="nf">local</span><span class="p">(</span><span class="s1">''</span><span class="p">)</span><span class="o">,</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Roboto_Mono/roboto-mono-v13-latin-ext_latin-700italic.eot?#iefix')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'embedded-opentype'</span><span class="p">)</span><span class="o">,</span> <span class="o">/*</span> <span class="n">IE6-IE8</span> <span class="o">*/</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Roboto_Mono/roboto-mono-v13-latin-ext_latin-700italic.woff2')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'woff2'</span><span class="p">)</span><span class="o">,</span> <span class="o">/*</span> <span class="n">Super</span> <span class="n">Modern</span> <span class="n">Browsers</span> <span class="o">*/</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Roboto_Mono/roboto-mono-v13-latin-ext_latin-700italic.woff')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'woff'</span><span class="p">)</span><span class="o">,</span> <span class="o">/*</span> <span class="n">Modern</span> <span class="n">Browsers</span> <span class="o">*/</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Roboto_Mono/roboto-mono-v13-latin-ext_latin-700italic.ttf')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'truetype'</span><span class="p">)</span><span class="o">,</span> <span class="o">/*</span> <span class="n">Safari</span><span class="o">,</span> <span class="n">Android</span><span class="o">,</span> <span class="n">iOS</span> <span class="o">*/</span>
+        <span class="sx">url('</span><span class="si">#{</span><span class="nv">$font-path</span><span class="si">}</span><span class="sx">/Roboto_Mono/roboto-mono-v13-latin-ext_latin-700italic.svg#RobotoMono')</span> <span class="nf">format</span><span class="p">(</span><span class="s1">'svg'</span><span class="p">);</span> <span class="cm">/* Legacy iOS */</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h4 id="via-javascript">Via JavaScript</h4>
+
+<div class="bd-callout bd-callout-danger">
+<p>Breaking feature dalla versione <strong>2.2.0</strong></p>
+</div>
+
+<p>Per caricare i font utilizzando JavaScript occorre chiamare <strong>esplicitamente</strong> la funzione <code class="language-plaintext highlighter-rouge">loadFonts</code> passando il percorso della cartella dove si trovano i font.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script&gt;</span>
+  <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">loadFonts</span><span class="p">(</span><span class="dl">'</span><span class="s1">/bootstrap-italia/dist/fonts</span><span class="dl">'</span><span class="p">);</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre></div></div>
+
+<p>o importandolo</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">loadFonts</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">bootstrap-italia</span><span class="dl">'</span>
+
+<span class="nx">loadFonts</span><span class="p">(</span><span class="dl">'</span><span class="s1">/bootstrap-italia/dist/fonts</span><span class="dl">'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>Di default se non viene specificato alcun path, i font saranno cercati all’interno di una cartella <code class="language-plaintext highlighter-rouge">/node_modules/bootstrap-italia/dist/fonts</code> oppure, se valorizzata, utilizzando il contenuto della variabile globale <code class="language-plaintext highlighter-rouge">__PUBLIC_PATH__</code>.</p>
+
+<h3 id="icone">Icone</h3>
+
+<p>Le icone a disposizione sono un componente assolutamente opzionale e sono pubblicate nella libreria sotto forma di sprite SVG <code class="language-plaintext highlighter-rouge">/bootstrap-italia/dist/svg/</code>, le cui singole SVG sorgenti sono presenti nel repository.</p>
+
+<p>Per informazioni, si può fare riferimento alla <a href="/bootstrap-italia/docs/utilities/icone/">documentazione sull’utilizzo delle icone</a>.</p>
 
 <h3 id="altri-esempi">Altri esempi</h3>
 
@@ -709,13 +1018,6 @@
 <p>Il codice sorgente di tali esempi si può trovare anche nel repository di Bootstrap Italia, nella <a href="https://github.com/italia/bootstrap-italia/tree/master/docs/esempi">cartella <code class="language-plaintext highlighter-rouge">docs/esempi/</code></a>.</p>
 
 <p>Tra i <a href="/bootstrap-italia/docs/progetti/">progetti</a> si possono trovare molti riferimenti a progetti terzi che fanno uso di Bootstrap Italia, come i temi per alcuni CMS, generatori di siti statici e framework per il web.</p>
-
-<h2 id="utilizzo-come-dipendenza">Utilizzo come dipendenza</h2>
-
-<p>Alternativamente, se si utilizza <a href="https://webpack.github.io/">Webpack</a>, <a href="https://rollupjs.org/">Rollup.js</a> o altri module bundler per l’inclusione di librerie esterne attraverso <code class="language-plaintext highlighter-rouge">npm</code>, è possibile aggiungere Bootstrap Italia come dipendenza con il seguente comando:</p>
-
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm i bootstrap-italia <span class="nt">--save</span>
-</code></pre></div></div>
 
 <h2 id="impostazioni-globali">Impostazioni globali</h2>
 
@@ -737,8 +1039,6 @@
 
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1, shrink-to-fit=no"</span> <span class="nt">/&gt;</span>
 </code></pre></div></div>
-
-<p>È possibile visualizzare un’esempio di tale codice applicato nella <a href="#pagina-html-di-esempio">pagina html di esempio</a>.</p>
 
 <h3 id="box-sizing">Box-sizing</h3>
 
@@ -769,14 +1069,14 @@ continua a leggere alla pagina <a href="/bootstrap-italia/docs/come-iniziare/str
     </div>
 
     
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202301011348"></script>
 <script>
-  window.__PUBLIC_PATH__ = '/bootstrap-italia/dist/fonts'
-</script>
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202212141816"></script><script src="/bootstrap-italia/docs/assets/src/js/vendor/anchor.min.js"></script>
+  bootstrap.loadFonts('/bootstrap-italia/dist/fonts')
+</script><script src="/bootstrap-italia/docs/assets/src/js/vendor/anchor.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/clipboard.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tsparticles.min.js"></script>
 
-<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202212141816"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202301011348"></script>
 
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tweenjs.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/easeljs.min.js"></script>
@@ -793,7 +1093,7 @@ continua a leggere alla pagina <a href="/bootstrap-italia/docs/come-iniziare/str
     { src: '/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png', id: 'cover-7' },
   ]
 </script>
-<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202212141816"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202301011348"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/docsearch.min.js"></script>
 
 <script>

@@ -7,7 +7,7 @@ import InputLabel from './input-label.js';
 const NAME = 'inputpassword';
 const DATA_KEY = 'bs.inputpassword';
 const EVENT_KEY = `.${DATA_KEY}`;
-//const DATA_API_KEY = '.data-api'
+const DATA_API_KEY = '.data-api';
 
 const Default = {
   shortPass: 'Password molto debole',
@@ -27,11 +27,21 @@ const EVENT_KEYPRESS = `keypress${EVENT_KEY}`;
 const EVENT_SCORE = `score${EVENT_KEY}`;
 const EVENT_TEXT = `text${EVENT_KEY}`;
 
+const EVENT_CLICK_DATA_API = `click${EVENT_KEY}${DATA_API_KEY}`;
+const EVENT_MOUSEDOWN_DATA_API = `mousedown${EVENT_KEY}${DATA_API_KEY}`;
+const EVENT_KEYUP_DATA_API = `keyup${EVENT_KEY}${DATA_API_KEY}`;
+
 const CLASS_NAME_PASSWORD = 'input-password';
-const CLASS_NAME_METER = 'input-password-strength-meter';
+//const CLASS_NAME_METER = 'input-password-strength-meter'
+const CLASS_NAME_SHOW = 'show';
 
 const SELECTOR_PASSWORD = 'input[data-bs-input][type="password"]';
 const SELECTOR_BTN_SHOW_PWD = '.password-icon';
+const SELECTOR_METER = '.password-strength-meter';
+const SELECTOR_METER_GRAYBAR = '.password-meter';
+const SELECTOR_METER_COLBAR = '.progress-bar';
+const SELECTOR_CAPS = '.password-caps';
+const SELECTOR_TEXT = '.form-text';
 
 class InputPassword extends BaseComponent {
   constructor(element, config) {
@@ -39,7 +49,7 @@ class InputPassword extends BaseComponent {
 
     this._config = this._getConfig(config);
     this._isCustom = this._element.classList.contains(CLASS_NAME_PASSWORD);
-    this._hasMeter = this._element.classList.contains(CLASS_NAME_METER);
+    this._meter = this._element.parentNode.querySelector(SELECTOR_METER);
     this._isShiftPressed = false;
     this._isCapsOn = false;
 
@@ -48,6 +58,8 @@ class InputPassword extends BaseComponent {
     this._textElement = null;
     this._capsElement = null;
     this._showPwdElement = null;
+
+    this._text = {};
 
     this._label = new InputLabel(element);
 
@@ -74,53 +86,63 @@ class InputPassword extends BaseComponent {
   }
 
   _init() {
-    if (this._hasMeter) {
-      this._grayBarElement = document.createElement('div');
-      this._grayBarElement.classList.add('password-meter', 'progress', 'rounded-0', 'position-absolute');
+    if (this._meter) {
+      /*this._grayBarElement = document.createElement('div')
+      this._grayBarElement.classList.add('password-meter', 'progress', 'rounded-0', 'position-absolute')
       this._grayBarElement.innerHTML = `<div class="row position-absolute w-100 m-0">
           <div class="col-3 border-start border-end border-white"></div>
           <div class="col-3 border-start border-end border-white"></div>
           <div class="col-3 border-start border-end border-white"></div>
           <div class="col-3 border-start border-end border-white"></div>
-        </div>`;
+        </div>`
 
-      this._colorBarElement = document.createElement('div');
-      this._colorBarElement.classList.add('progress-bar');
-      this._colorBarElement.setAttribute('role', 'progressbar');
-      this._colorBarElement.setAttribute('aria-valuenow', '0');
-      this._colorBarElement.setAttribute('aria-valuemin', '0');
-      this._colorBarElement.setAttribute('aria-valuemax', '100');
+      this._colorBarElement = document.createElement('div')
+      this._colorBarElement.classList.add('progress-bar')
+      this._colorBarElement.setAttribute('role', 'progressbar')
+      this._colorBarElement.setAttribute('aria-valuenow', '0')
+      this._colorBarElement.setAttribute('aria-valuemin', '0')
+      this._colorBarElement.setAttribute('aria-valuemax', '100')
 
-      const wrapper = document.createElement('div');
-      wrapper.classList.add('password-strength-meter');
+      const wrapper = document.createElement('div')
+      wrapper.classList.add('password-strength-meter')
 
-      this._grayBarElement.appendChild(this._colorBarElement);
+      this._grayBarElement.appendChild(this._colorBarElement)
 
       if (this._config.showText) {
-        this._textElement = document.createElement('small');
-        this._textElement.classList.add('form-text', 'text-muted');
-        this._textElement.innerHTML = this._config.enterPass;
-        wrapper.appendChild(this._textElement);
+        this._textElement = document.createElement('small')
+        this._textElement.classList.add('form-text', 'text-muted')
+        this._textElement.innerHTML = this._config.enterPass
+        wrapper.appendChild(this._textElement)
       }
 
-      wrapper.appendChild(this._grayBarElement);
+      wrapper.appendChild(this._grayBarElement)
 
-      this._element.parentNode.insertBefore(wrapper, this._element.nextSibling);
+      this._element.parentNode.insertBefore(wrapper, this._element.nextSibling)*/
+
+      this._grayBarElement = this._meter.querySelector(SELECTOR_METER_GRAYBAR);
+      this._colorBarElement = this._meter.querySelector(SELECTOR_METER_COLBAR);
+      this._textElement = this._meter.querySelector(SELECTOR_TEXT);
+
+      if (this._textElement) {
+        this._config = Object.assign({}, this._config, { ...Manipulator.getDataAttributes(this._textElement) }, { enterPass: this._textElement.innerText });
+      }
     }
     if (this._isCustom) {
-      this._capsElement = document.createElement('small');
-      this._capsElement.style.display = 'none';
-      this._capsElement.classList.add('password-caps', 'form-text', 'text-warning', 'position-absolute', 'bg-white', 'w-100');
-      this._capsElement.innerHTML = this._config.alertCaps;
+      /*this._capsElement = document.createElement('small')
+      this._capsElement.style.display = 'none'
+      this._capsElement.classList.add('password-caps', 'form-text', 'text-warning', 'position-absolute', 'bg-white', 'w-100')
+      this._capsElement.innerHTML = this._config.alertCaps
 
-      this._element.parentNode.appendChild(this._capsElement);
+      this._element.parentNode.appendChild(this._capsElement)*/
+
+      this._capsElement = this._element.parentNode.querySelector(SELECTOR_CAPS);
     }
 
     this._showPwdElement = SelectorEngine.findOne(SELECTOR_BTN_SHOW_PWD, this._element.parentNode);
   }
 
   _bindEvents() {
-    if (this._hasMeter) {
+    if (this._meter) {
       EventHandler.on(this._element, EVENT_KEYUP, () => this._checkPassword());
     }
 
@@ -161,10 +183,14 @@ class InputPassword extends BaseComponent {
   }
 
   _showCapsMsg() {
-    this._capsElement.style.display = 'block';
+    if (this._capsElement) {
+      this._capsElement.classList.add(CLASS_NAME_SHOW);
+    }
   }
   _hideCapsMsg() {
-    this._capsElement.style.display = 'none';
+    if (this._capsElement) {
+      this._capsElement.classList.remove(CLASS_NAME_SHOW);
+    }
   }
 
   _toggleShowPassword() {
@@ -192,7 +218,7 @@ class InputPassword extends BaseComponent {
 
     EventHandler.trigger(this._element, EVENT_SCORE);
 
-    if (this._config.showText) {
+    if (this._textElement) {
       let text = this._scoreText(score);
       if (this._element.value.length === 0 && score <= 0) {
         text = this._config.enterPass;
@@ -371,9 +397,34 @@ class InputPassword extends BaseComponent {
  * ------------------------------------------------------------------------
  */
 
-const inputs = SelectorEngine.find(SELECTOR_PASSWORD);
+/*const inputs = SelectorEngine.find(SELECTOR_PASSWORD)
 inputs.forEach((input) => {
-  InputPassword.getOrCreateInstance(input);
+  InputPassword.getOrCreateInstance(input)
+})*/
+
+const createInput = (element) => {
+  if (element && element.matches(SELECTOR_PASSWORD)) {
+    return InputPassword.getOrCreateInstance(element)
+  }
+  return null
+};
+
+EventHandler.on(document, EVENT_MOUSEDOWN_DATA_API, SELECTOR_PASSWORD + ', label', function () {
+  const target = InputLabel.getInputFromLabel(this) || this;
+  createInput(target);
+});
+EventHandler.on(document, EVENT_KEYUP_DATA_API, SELECTOR_PASSWORD + ', label', function () {
+  const target = InputLabel.getInputFromLabel(this) || this;
+  const element = createInput(target);
+  if (element && element._label) {
+    element._label._labelOut();
+  }
+});
+EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_BTN_SHOW_PWD, function () {
+  const target = this.parentNode && this.parentNode.querySelector(SELECTOR_PASSWORD);
+  if (target) {
+    InputPassword.getOrCreateInstance(target);
+  }
 });
 
 export { InputPassword as default };

@@ -239,12 +239,11 @@ class NavScroll extends BaseComponent {
  * ------------------------------------------------------------------------
  */
 
-const dataApiCb = onDocumentScroll(() => {
+onDocumentScroll(() => {
   const navs = SelectorEngine.find(SELECTOR_NAVSCROLL);
-  navs.forEach((nav) => {
+  navs.map((nav) => {
     NavScroll.getOrCreateInstance(nav);
   });
-  dataApiCb.dispose();
 });
 
 export { NavScroll as default };

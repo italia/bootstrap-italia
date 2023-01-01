@@ -12,14 +12,14 @@
 <title>Introduzione · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202212141816" rel="stylesheet" />
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202301011348" rel="stylesheet" />
 
 
 <!-- Documentation extras -->
  
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.css" rel="stylesheet" />
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202212141816" rel="stylesheet" />
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202301011348" rel="stylesheet" />
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico" />
@@ -141,8 +141,8 @@
 
     <ul class="navbar-nav flex-row ms-md-auto d-none d-md-flex">
       <li class="nav-item pe-2">
-        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v2.1.1/bootstrap-italia.zip" aria-label="Download">
-          <small class="pe-2 m-0">v2.1.1</small>
+        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v2.2.0/bootstrap-italia.zip" aria-label="Download">
+          <small class="pe-2 m-0">v2.2.0</small>
           <svg class="icon icon-sm icon-light"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-download" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-download"></use></svg><span class="visually-hidden">Download</span>
         </a>
       </li>
@@ -204,8 +204,8 @@
                 <a class="list-item " href="/bootstrap-italia/docs/come-iniziare/componente-base/">
                   <span>Componente base</span></a>
               </li><li>
-                <a class="list-item " href="/bootstrap-italia/docs/come-iniziare/migrazione/">
-                  <span>Migrazione</span></a>
+                <a class="list-item " href="/bootstrap-italia/docs/come-iniziare/migrazione-dalla-versione-1/">
+                  <span>Migrazione dalla versione 1</span></a>
               </li></ul>
             
           </li><li>
@@ -692,11 +692,11 @@
 <div>
   <div class="row">
     <div class="form-group col-md-6">
-      <label for="inputEmail4">Email</label>
+      <label class="active" for="inputEmail4">Email</label>
       <input type="email" class="form-control" id="inputEmail4" placeholder="inserisci il tuo indirizzo email" />
     </div>
     <div class="form-group col-md-6">
-      <label for="exampleInputPassword">Password</label>
+      <label class="active" for="exampleInputPassword">Password</label>
       <input type="password" data-bs-input="" class="form-control input-password" id="exampleInputPassword" placeholder="inserisci la tua password" />
       <span class="password-icon" aria-hidden="true">
         <svg class="password-icon-visible icon icon-sm"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-password-visible"></use></svg>
@@ -706,7 +706,7 @@
   </div>
   <div class="row">
     <div class="form-group col">
-      <label for="inputAddress">Indirizzo</label>
+      <label class="active" for="inputAddress">Indirizzo</label>
       <input type="text" class="form-control" id="inputAddress" placeholder="Via Roma, 1" />
     </div>
   </div>
@@ -754,11 +754,11 @@
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group col-md-6"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"inputEmail4"</span><span class="nt">&gt;</span>Email<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"active"</span> <span class="na">for=</span><span class="s">"inputEmail4"</span><span class="nt">&gt;</span>Email<span class="nt">&lt;/label&gt;</span>
       <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"email"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"inputEmail4"</span> <span class="na">placeholder=</span><span class="s">"inserisci il tuo indirizzo email"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group col-md-6"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"exampleInputPassword"</span><span class="nt">&gt;</span>Password<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"active"</span> <span class="na">for=</span><span class="s">"exampleInputPassword"</span><span class="nt">&gt;</span>Password<span class="nt">&lt;/label&gt;</span>
       <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"password"</span> <span class="na">data-bs-input</span> <span class="na">class=</span><span class="s">"form-control input-password"</span> <span class="na">id=</span><span class="s">"exampleInputPassword"</span> <span class="na">placeholder=</span><span class="s">"inserisci la tua password"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"password-icon"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"password-icon-visible icon icon-sm"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-password-visible"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
@@ -768,7 +768,7 @@
   <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group col"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"inputAddress"</span><span class="nt">&gt;</span>Indirizzo<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"active"</span> <span class="na">for=</span><span class="s">"inputAddress"</span><span class="nt">&gt;</span>Indirizzo<span class="nt">&lt;/label&gt;</span>
       <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"inputAddress"</span> <span class="na">placeholder=</span><span class="s">"Via Roma, 1"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
@@ -1038,11 +1038,11 @@
 <form class="needs-validation" id="justValidateForm">
   <div class="row mt-4">
     <div class="form-group col-md-3">
-      <label for="validationCustom01">Nome</label>
+      <label class="active" for="validationCustom01">Nome</label>
       <input type="text" class="form-control" id="validationCustom01" value="Mario" required="" />
     </div>
     <div class="form-group col-md-3">
-      <label for="validationCustom02">Cognome</label>
+      <label class="active" for="validationCustom02">Cognome</label>
       <input type="text" class="form-control" id="validationCustom02" value="Rossi" required="" />
     </div>
     <div class="form-group col-md-3">
@@ -1174,11 +1174,11 @@
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"needs-validation"</span> <span class="na">id=</span><span class="s">"justValidateForm"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row mt-4"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group col-md-3"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"validationCustom01"</span><span class="nt">&gt;</span>Nome<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"active"</span> <span class="na">for=</span><span class="s">"validationCustom01"</span><span class="nt">&gt;</span>Nome<span class="nt">&lt;/label&gt;</span>
       <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"validationCustom01"</span> <span class="na">value=</span><span class="s">"Mario"</span> <span class="na">required</span><span class="nt">&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group col-md-3"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"validationCustom02"</span><span class="nt">&gt;</span>Cognome<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"active"</span> <span class="na">for=</span><span class="s">"validationCustom02"</span><span class="nt">&gt;</span>Cognome<span class="nt">&lt;/label&gt;</span>
       <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"validationCustom02"</span> <span class="na">value=</span><span class="s">"Rossi"</span> <span class="na">required</span><span class="nt">&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group col-md-3"</span><span class="nt">&gt;</span>
@@ -1315,14 +1315,14 @@
     </div>
 
     
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202301011348"></script>
 <script>
-  window.__PUBLIC_PATH__ = '/bootstrap-italia/dist/fonts'
-</script>
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202212141816"></script><script src="/bootstrap-italia/docs/assets/src/js/vendor/anchor.min.js"></script>
+  bootstrap.loadFonts('/bootstrap-italia/dist/fonts')
+</script><script src="/bootstrap-italia/docs/assets/src/js/vendor/anchor.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/clipboard.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tsparticles.min.js"></script>
 
-<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202212141816"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202301011348"></script>
 
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tweenjs.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/easeljs.min.js"></script>
@@ -1339,7 +1339,7 @@
     { src: '/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png', id: 'cover-7' },
   ]
 </script>
-<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202212141816"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202301011348"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/docsearch.min.js"></script>
 
 <script>

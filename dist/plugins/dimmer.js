@@ -1,28 +1,29 @@
 import BaseComponent from 'bootstrap/js/src/base-component.js';
 import { getElementFromSelector, reflow } from 'bootstrap/js/src/util';
 import EventHandler from 'bootstrap/js/src/dom/event-handler';
-import SelectorEngine from 'bootstrap/js/src/dom/selector-engine';
+
+//import SelectorEngine from 'bootstrap/js/src/dom/selector-engine'
 
 const NAME = 'dimmer';
 const DATA_KEY = 'bs.dimmer';
 const EVENT_KEY = `.${DATA_KEY}`;
-//const DATA_API_KEY = '.data-api'
+const DATA_API_KEY = '.data-api';
 
-const EVENT_CLICK = `click${EVENT_KEY}`;
+const EVENT_CLICK_DATA_API = `click${EVENT_KEY}${DATA_API_KEY}`;
+//const EVENT_CLICK = `click${EVENT_KEY}`
 
 const CLASS_NAME_FADE = 'fade';
 const CLASS_NAME_SHOW = 'show';
 
 const SELECTOR_DATA_TOGGLE = '[data-bs-toggle="dimmer"]';
+const SELECTOR_DATA_ARIAHIDDEN = '[aria-hidden=true]';
 
 class Dimmer extends BaseComponent {
   constructor(element) {
     super(element);
 
-    this._isShown = false;
+    this._isShown = !element.matches(SELECTOR_DATA_ARIAHIDDEN);
     this._isTransitioning = false;
-
-    this._init();
   }
 
   // Getters
@@ -65,11 +66,6 @@ class Dimmer extends BaseComponent {
   }
 
   //Private
-  _init() {
-    if (this._element.classList.contains(CLASS_NAME_SHOW)) {
-      this.show();
-    }
-  }
 
   _isAnimated() {
     return this._element.classList.contains(CLASS_NAME_FADE)
@@ -78,7 +74,7 @@ class Dimmer extends BaseComponent {
   _showElement() {
     const isAnimated = this._isAnimated();
 
-    this._element.style.display = 'flex';
+    //this._element.style.display = 'flex'
     this._element.removeAttribute('aria-hidden');
     //this._element.setAttribute('aria-modal', true)
     //this._element.setAttribute('role', 'dialog')
@@ -97,7 +93,7 @@ class Dimmer extends BaseComponent {
   }
 
   _hideElement() {
-    this._element.style.display = 'none';
+    //this._element.style.display = 'none'
     this._element.setAttribute('aria-hidden', true);
     //this._element.removeAttribute('aria-modal')
     //this._element.removeAttribute('role')
@@ -111,17 +107,24 @@ class Dimmer extends BaseComponent {
  * ------------------------------------------------------------------------
  */
 
-SelectorEngine.find(SELECTOR_DATA_TOGGLE).forEach((toggle) => {
-  const dimmerElement = getElementFromSelector(toggle);
-  const dimmer = Dimmer.getOrCreateInstance(dimmerElement);
+/*SelectorEngine.find(SELECTOR_DATA_TOGGLE).forEach((toggle) => {
+  const dimmerElement = getElementFromSelector(toggle)
+  const dimmer = Dimmer.getOrCreateInstance(dimmerElement)
 
   EventHandler.on(toggle, EVENT_CLICK, () => {
-    toggle.checked ? dimmer.show() : dimmer.hide();
-  });
+    toggle.checked ? dimmer.show() : dimmer.hide()
+  })
 
   if (toggle.checked) {
-    dimmer.show();
+    dimmer.show()
   }
+})*/
+
+EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function () {
+  const dimmerElement = getElementFromSelector(this);
+  const dimmer = Dimmer.getOrCreateInstance(dimmerElement);
+
+  this.checked ? dimmer.show() : dimmer.hide();
 });
 
 export { Dimmer as default };

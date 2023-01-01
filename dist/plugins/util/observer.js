@@ -36,8 +36,10 @@ class CssClassObserver {
         if (this.ignoreToggle || this.lastClassState !== currentClassState) {
           this.lastClassState = currentClassState;
           if (currentClassState) {
-            this.classAddedCallback();
-          } else {
+            if (typeof this.classAddedCallback === 'function') {
+              this.classAddedCallback();
+            }
+          } else if (typeof this.classRemovedCallback === 'function') {
             this.classRemovedCallback();
           }
         }
@@ -61,13 +63,15 @@ class ContentObserver {
     this.init();
   }
 
+  //public
+
   init() {
     this.observer = new MutationObserver((mutationsList) => this.mutationCallback(mutationsList));
     this.observe();
   }
 
   observe() {
-    this.observer.observe(this.targetNode, { childList: true });
+    this.observer.observe(this.targetNode, { childList: true, subtree: true });
   }
 
   disconnect() {
@@ -78,16 +82,26 @@ class ContentObserver {
     for (let mutation of mutationsList) {
       if (mutation.type === 'childList') {
         mutation.addedNodes.forEach((node) => {
-          if (node.matches(this.contentSelector)) {
-            this.contentAddedCallback();
-          }
+          this._callbackExec(node);
         });
         mutation.removedNodes.forEach((node) => {
-          if (node.matches(this.contentSelector)) {
-            this.contentRemovedCallback();
-          }
+          this._callbackExec(node, true);
         });
       }
+    }
+  }
+
+  //private
+  _callbackExec(node, actionRemove) {
+    const foundNodes = node.matches && node.matches(this.contentSelector) ? [node] : node.querySelectorAll ? node.querySelectorAll(this.contentSelector) : null;
+    const callback =
+      actionRemove && typeof this.contentRemovedCallback === 'function'
+        ? this.contentRemovedCallback
+        : typeof this.contentAddedCallback === 'function'
+        ? this.contentAddedCallback
+        : null;
+    if (foundNodes && callback) {
+      foundNodes.forEach((node) => callback(node));
     }
   }
 }

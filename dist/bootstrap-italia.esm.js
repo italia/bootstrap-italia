@@ -7,7 +7,7 @@ export { default as NavBarCollapsible } from './plugins/navbar-collapsible.js';
 export { default as Accordion } from './plugins/accordion.js';
 export { default as NavScroll } from './plugins/navscroll.js';
 export { default as Sticky } from './plugins/sticky.js';
-export { default as TrackFocus } from './plugins/track-focus.js';
+export { default as HeaderSticky } from './plugins/header-sticky.js';
 export { FormValidate, ValidatorSelectAutocomplete } from './plugins/form-validate.js';
 export { default as Input } from './plugins/input.js';
 export { default as SelectAutocomplete } from './plugins/select-autocomplete.js';
@@ -33,9 +33,6 @@ export { default as ScrollSpy } from './plugins/scrollspy.js';
 export { default as Tab } from './plugins/tab.js';
 export { default as Toast } from './plugins/toast.js';
 export { default as Tooltip } from './plugins/tooltip.js';
-import './plugins/fonts-loader.js';
-import './plugins/header-sticky.js';
-import BOOTSTRAP_ITALIA_VERSION from './version.js';
-
-window.BOOTSTRAP_ITALIA_VERSION = BOOTSTRAP_ITALIA_VERSION;
+export { default as loadFonts } from './plugins/fonts-loader.js';
+export { default as init } from './plugins/init.js';
 //# sourceMappingURL=bootstrap-italia.esm.js.map
