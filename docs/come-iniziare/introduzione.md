@@ -89,7 +89,7 @@ In questo caso, dopo aver copiato i file all'interno del progetto, sarà suffici
 <script src="<path-a-bootstrap-italia>/dist/js/bootstrap-italia.bundle.min.js"></script>
 ```
 
-In alternativa se si vogliono utilizzare i moduli,  è possibile importare e utilizzare singolarmente i vari componenti. Di seguito un esempio.
+In alternativa se si vogliono utilizzare i moduli,  è possibile importare e utilizzare singolarmente i vari componenti. Di seguito un esempio di cui potete trovare l'intero esempio completo [qui](https://github.com/astagi/demo-bsitalia-2).
 
 ```js
 import { CarouselBI, Alert, Notification, Tooltip, Sticky, loadFonts } from 'bootstrap-italia'
