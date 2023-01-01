@@ -382,7 +382,11 @@ $font-path: "/fonts";
 
 #### Via JavaScript
 
-Per caricare i font utilizzando JavaScript occorre chiamare esplicitamente la funzione `loadFonts` passando il percorso della cartella dove si trovano i font.
+{% capture callout %}
+Breaking feature dalla versione **2.2.0**
+{% endcapture %}{% include callout.html content=callout type="danger" %}
+
+Per caricare i font utilizzando JavaScript occorre chiamare **esplicitamente** la funzione `loadFonts` passando il percorso della cartella dove si trovano i font.
 
 ```html
 <script>
@@ -398,7 +402,7 @@ import { loadFonts } from 'bootstrap-italia'
 loadFonts('/bootstrap-italia/dist/fonts');
 ```
 
-Di default se non viene specificato alcun path, i font saranno cercati all'interno di una cartella `/node_modules/bootstrap-italia/dist/fonts` oppure, se valorizzata, utilizzando il valore della variabile globale `__PUBLIC_PATH__`.
+Di default se non viene specificato alcun path, i font saranno cercati all'interno di una cartella `/node_modules/bootstrap-italia/dist/fonts` oppure, se valorizzata, utilizzando il contenuto della variabile globale `__PUBLIC_PATH__`.
 
 ### Icone
 
