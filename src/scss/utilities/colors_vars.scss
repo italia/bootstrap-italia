@@ -389,28 +389,32 @@ $neutral-2-a5: hsb($neutral-2-h, $neutral-2-s + 2, $neutral-2-b - 60) !default;
 $neutral-2-a6: hsb($neutral-2-h, $neutral-2-s + 2, $neutral-2-b - 75) !default;
 $neutral-2-a7: hsb($neutral-2-h, $neutral-2-s + 4, $neutral-2-b - 85) !default;
 
-//***********************************************************************
-//******************** DESIGN TOKENS VARIABLES **************************
-//***********************************************************************
 
+//==================== DESIGN TOKENS VARIABLES ============================//
 
-// SEMATNIC TOKENS
+// SEMANTIC TOKENS =========================================================
+
+// Backgrounds
 $color-background-emphasis: hsl(210, 54%, 20%); // color-slate-20
 $color-background-primary-lighter: hsl(210, 62%, 97%); // color-blue-97
 $color-background-secondary-hover: hsl(210, 33%, 28%); // color-slate-28
 $color-background-secondary-lighter: hsl(210, 3%, 85%); // color-slate-85
 $color-background-muted: $gray-100; // color-gray-96
 
+// Borders
 $color-border-secondary: hsl(210, 17%, 44%); // color-slate-44
 $color-border-subtle: hsl(210, 4%, 78%); // color-slate-78
 
+// Text
 $color-text-primary-active: hsl(210, 100%, 15%); // color-blue-15
 $color-text-primary-hover: hsl(210, 100%, 30%); // color-blue-30
 $color-text-muted: hsl(210, 17%, 44%); // color-slate-44
 $color-text-base: $gray-900; // color-gray-10
 $color-text-secondary: hsl(210, 33%, 28%); // color-slate-28
 
-// SPECIFIC TOKENS
+// SPECIFIC TOKENS =========================================================
+//
+// Footer
 $footer-top-background: hsl(210, 100%, 30%); // color-blue-30
 $footer-bottom-background: hsl(210, 100%, 20%); // color-blue-20
 
