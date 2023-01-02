@@ -100,9 +100,9 @@
       }
       // active
       &.active {
-        color: $neutral-1-a10;
+        color: $color-text-base;
         .text {
-          color: $neutral-1-a10;
+          color: $color-text-base;
         }
       }
     }
@@ -175,7 +175,7 @@
         &.list-item {
           &:hover {
             box-shadow: $card-shadow;
-            color: $primary-a5;
+            color: $color-text-primary-hover;
             text-decoration: none;
             background: #fff;
             position: relative;
