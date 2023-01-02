@@ -33,7 +33,7 @@ fieldset {
   input,
   optgroup,
   textarea {
-    color: $dark;
+    color: $color-text-muted;
   }
 
   label {
@@ -45,6 +45,7 @@ fieldset {
     top: 0;
     font-size: 1rem;
     cursor: text;
+    color: $input-color-placeholder;
     display: block;
     max-width: 100%;
     width: auto;
@@ -56,6 +57,7 @@ fieldset {
     &.active {
       transform: translateY(-75%);
       font-size: $small-font-size;
+      color: $input-label-color;
     }
   }
 
@@ -472,8 +474,8 @@ textarea {
   }
 
   input.semi-checked:not(:checked) + label::after {
-    border-color: $primary-a5;
-    background-color: $primary-a5;
+    border-color: $primary-a5; // TODO: Not found
+    background-color: $primary-a5; // TODO: Not found
     z-index: 0;
   }
 }

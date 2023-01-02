@@ -22,14 +22,14 @@
       display: none;
     }
 
-    color: $color-text-muted;
+    // color: $color-text-muted;
     padding-right: 32px;
     padding-left: 12px;
     min-width: 86px !important;
     width: 100%;
 
     &:focus {
-      color: $dark;
+      color: $color-text-base;
     }
   }
 
@@ -40,7 +40,7 @@
       position: absolute;
       left: 14px;
       top: 0;
-      color: $color-text-muted;
+      // color: $color-text-muted;
       font-weight: bold;
       font-size: 1rem;
     }
