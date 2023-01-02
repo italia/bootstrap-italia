@@ -41,7 +41,7 @@ $primary-s: 100 !default;
 $primary-b: 80 !default;
 $primary-l: 40 !default; // Kit UI
 
-$primary: hsl(210, 100, 40) !default; // color-blue-40
+$primary: hsl(210, 100, 40%) !default; // color-blue-40
 
 $indigo: hsb(243, 70, 100) !default;
 $purple: hsb(243, 40, 100) !default;
