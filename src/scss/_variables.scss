@@ -633,6 +633,7 @@ $timeline-width: 4px;
 $timeline-padding: ($v-gap * 3) - calc($grid-gutter-width / 2);
 $timeline-border-color: linear-gradient(0deg, $primary 0%, hsl(210, 100%, 20%) 100%) !default; // UI kit
 $timeline-pin-size: $v-gap * 3;
+$timeline-pin-background: hsl(210, 100%, 20%); // color-blue-20
 $timeline-pin-circle-size: 48px;
 $timeline-pin-circle-border: $v-gap solid $white !default;
 $timeline-content-padding: 18px 0 18px 40px;
