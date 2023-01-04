@@ -131,7 +131,7 @@ gulp.task('scss-min', () => {
     .src(Paths.SOURCE_SCSS)
     .pipe(gap.prependText(bootstrapItaliaBanner))
     .pipe(sourcemaps.init())
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sass({ includePaths: ['node_modules'] }).on('error', sass.logError))
     .pipe(autoprefixer())
     .pipe(
       cleanCSS({
