@@ -27,7 +27,7 @@ Le animazioni sono state realizzate con il plugin javascript [AnimeJs](https://a
 Per visualizzare il Back to top nella posizione corretta è necessario scrollare questa pagina. L'esempio del codice sottostante sarà visibile solo a scroll avvenuto.
 
 {% capture example %}
-<a href="#" tabindex="-1" data-bs-toggle="backtotop" class="back-to-top" id="example">
+<a href="#" aria-hidden="true" tabindex="-1" data-bs-toggle="backtotop" class="back-to-top" id="example">
 <svg class="icon icon-light"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-up"></use></svg>
 </a>
 {% endcapture %}{% include example.html content=example %}
@@ -35,7 +35,7 @@ Per visualizzare il Back to top nella posizione corretta è necessario scrollare
 **Per facilitare la visualizzazione delle varie versioni di Back to top disponibili i seguenti esempi saranno visualizzati in linea.**
 
 {% capture example %}
-<a href="#" tabindex="-1" data-bs-toggle="backtotop" class="back-to-top">
+<a href="#" aria-hidden="true" tabindex="-1" data-bs-toggle="backtotop" class="back-to-top">
 <svg class="icon icon-light"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-up"></use></svg>
 </a>
 {% endcapture %}{% include example.html content=example %}
@@ -45,7 +45,7 @@ Per visualizzare il Back to top nella posizione corretta è necessario scrollare
 Aggiungendo la classe `.back-to-top-small` al link si ottiene un pulsante di dimensioni ridotte.
 
 {% capture example %}
-<a href="#" tabindex="-1" data-bs-toggle="backtotop" class="back-to-top back-to-top-small">
+<a href="#" aria-hidden="true" tabindex="-1" data-bs-toggle="backtotop" class="back-to-top back-to-top-small">
 <svg class="icon icon-light"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-up"></use></svg>
 </a>
 
@@ -58,10 +58,10 @@ Aggiungendo la classe `.shadow` al link si aggiunge un'ombra al pulsante.
 {% capture example %}
 
 <div class="d-flex align-items-center">
-  <a href="#" tabindex="-1" data-bs-toggle="backtotop" class="back-to-top shadow">
+  <a href="#" aria-hidden="true" tabindex="-1" data-bs-toggle="backtotop" class="back-to-top shadow">
     <svg class="icon icon-light"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-up"></use></svg>
   </a>
-  <a href="#" tabindex="-1" data-bs-toggle="backtotop" class="back-to-top back-to-top-small shadow">
+  <a href="#" aria-hidden="true" tabindex="-1" data-bs-toggle="backtotop" class="back-to-top back-to-top-small shadow">
     <svg class="icon icon-light"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-up"></use></svg>
   </a>
 </div>
@@ -74,10 +74,10 @@ Aggiungendo la classe `.dark` al link si ottiente un pulsante utilizzabile su sf
 {% capture example %}
 
 <div class="d-flex align-items-center p-4 neutral-1-bg-a8">
-  <a href="#" tabindex="-1" data-bs-toggle="backtotop" class="back-to-top dark">
+  <a href="#" aria-hidden="true" tabindex="-1" data-bs-toggle="backtotop" class="back-to-top dark">
     <svg class="icon icon-secondary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-up"></use></svg>
   </a>
-  <a href="#" tabindex="-1" data-bs-toggle="backtotop" class="back-to-top back-to-top-small dark">
+  <a href="#" aria-hidden="true" tabindex="-1" data-bs-toggle="backtotop" class="back-to-top back-to-top-small dark">
     <svg class="icon icon-secondary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-up"></use></svg>
   </a>
 </div>
@@ -90,10 +90,10 @@ Aggiungendo le classi `.dark` e `.shadow` al link si ottiente un pulsante con om
 {% capture example %}
 
 <div class="d-flex align-items-center p-4 neutral-1-bg-a8">
-  <a href="#" tabindex="-1" data-bs-toggle="backtotop" class="back-to-top dark shadow">
+  <a href="#" aria-hidden="true" tabindex="-1" data-bs-toggle="backtotop" class="back-to-top dark shadow">
     <svg class="icon icon-secondary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-up"></use></svg>
   </a>
-  <a href="#" tabindex="-1" data-bs-toggle="backtotop" class="back-to-top back-to-top-small dark shadow">
+  <a href="#" aria-hidden="true" tabindex="-1" data-bs-toggle="backtotop" class="back-to-top back-to-top-small dark shadow">
     <svg class="icon icon-secondary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-up"></use></svg>
   </a>
 </div>
