@@ -1,9 +1,19 @@
 {
-  "extends": ["eslint:recommended", "prettier"],
-  "plugins": ["prettier"],
-  "ignorePatterns": ["*.min.js"],
+  "extends": [
+    "eslint:recommended",
+    "prettier"
+  ],
+  "plugins": [
+    "prettier"
+  ],
+  "ignorePatterns": [
+    "*.min.js",
+    "*.d.ts"
+  ],
   "rules": {
-    "prettier/prettier": ["error"]
+    "prettier/prettier": [
+      "error"
+    ]
   },
   "parserOptions": {
     "ecmaVersion": "latest",
