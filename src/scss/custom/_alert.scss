@@ -7,7 +7,7 @@
   padding-left: 4em;
   background-color: transparent;
   border-radius: 0;
-  color: $body-color;
+  color: $color-text-base; // UI kit
   .alert-link {
     color: $link-color;
   }
@@ -16,7 +16,7 @@
 // Headings for larger alerts
 .alert-heading {
   // Specified to prevent conflicts of changing $headings-color
-  color: $body-color;
+  color: $color-text-base; // UI kit
   line-height: 1;
 }
 
