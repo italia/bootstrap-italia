@@ -22,14 +22,14 @@
       display: none;
     }
 
-    color: $neutral-1-a7;
+    // color: $color-text-muted;
     padding-right: 32px;
     padding-left: 12px;
     min-width: 86px !important;
     width: 100%;
 
     &:focus {
-      color: $dark;
+      color: $color-text-base;
     }
   }
 
@@ -40,7 +40,7 @@
       position: absolute;
       left: 14px;
       top: 0;
-      color: $neutral-1-a7;
+      // color: $color-text-muted;
       font-weight: bold;
       font-size: 1rem;
     }
@@ -63,11 +63,11 @@
   &.disabled {
     input[type='number'] {
       background-color: transparent;
-      color: $neutral-1-a4;
-      border-bottom-color: $neutral-1-a4;
+      color: $gray-label-disabled;
+      border-bottom-color: $gray-border-disabled;
       &:hover {
         cursor: not-allowed;
-        color: $neutral-1-a4;
+        color: $gray-label-disabled;
       }
     }
     button {
@@ -77,12 +77,12 @@
       }
       &.input-number-add {
         &:after {
-          border-color: transparent transparent $neutral-1-a4 transparent;
+          border-color: transparent transparent $gray-border-disabled transparent;
         }
       }
       &.input-number-sub {
         &:after {
-          border-color: $neutral-1-a4 transparent transparent transparent;
+          border-color: $gray-border-disabled transparent transparent transparent;
         }
       }
     }
@@ -112,12 +112,12 @@
     &:hover {
       &.input-number-add {
         &:after {
-          border-color: transparent transparent $dark transparent;
+          border-color: transparent transparent $dark transparent; // TODO Check if still necessary
         }
       }
       &.input-number-sub {
         &:after {
-          border-color: $dark transparent transparent transparent;
+          border-color: $dark transparent transparent transparent; // TODO Check if still necessary
         }
       }
     }
@@ -129,14 +129,14 @@
       top: -6px;
       &:after {
         border-width: 0 5px 6px 5px;
-        border-color: transparent transparent $neutral-1-a7 transparent;
+        border-color: transparent transparent $neutral-1-a7 transparent; // TODO Check if still necessary
       }
     }
     &.input-number-sub {
       bottom: -6px;
       &:after {
         border-width: 6px 5px 0 5px;
-        border-color: $neutral-1-a7 transparent transparent transparent;
+        border-color: $neutral-1-a7 transparent transparent transparent; // TODO Check if still necessary
       }
     }
     &:hover {
@@ -149,7 +149,7 @@
 label {
   &.input-number-label {
     display: block;
-    color: $neutral-1-a7;
+    color: $color-text-base;
     font-weight: 600;
     font-size: $small-font-size;
     cursor: text;

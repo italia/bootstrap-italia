@@ -10,13 +10,14 @@
 
   // color and image variants
   &.section-muted {
-    background: $lightgrey-a3;
+    background: $color-background-muted;
   }
   &.section-primary {
     background: $primary;
   }
   &.section-neutral {
-    background: $neutral-1;
+    // TODO: Consider updating class name to match the variable
+    background: $color-background-emphasis;
   }
   &.section-image {
     background-size: cover;

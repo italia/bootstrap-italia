@@ -246,7 +246,7 @@
         min-width: 1px; // fix for IE11
         max-width: 1px;
         height: calc(100% - 16px);
-        background: $gray-border-disabled;
+        background: $gray-border;
       }
     }
   }
@@ -254,9 +254,9 @@
   a,
   .btn-dropdown {
     display: block;
-    color: $neutral-1;
+    color: $color-text-secondary;
     .icon {
-      fill: $neutral-1;
+      fill: $secondary;
     }
     // active
     &.active {
@@ -268,30 +268,30 @@
     // disabled
     &.disabled {
       cursor: not-allowed;
-      color: $neutral-1-a2;
+      color: $gray-disabled;
       .icon {
-        fill: $neutral-1-a2;
+        fill: $gray-disabled;
       }
       &:hover {
         text-decoration: none;
-        color: $neutral-1-a2;
+        color: $gray-disabled;
         .icon {
-          fill: $neutral-1-a2;
+          fill: $gray-disabled;
         }
       }
       &:after {
-        color: $neutral-1-a2;
+        color: $gray-disabled;
         .icon {
-          fill: $neutral-1-a2;
+          fill: $gray-disabled;
         }
       }
     }
     // hover
     &:not(.disabled):hover {
       text-decoration: underline;
-      color: $primary;
+      color: $color-text-primary-hover;
       .icon {
-        fill: $primary;
+        fill: $color-text-primary-hover;
       }
     }
     // hover fix for ie11
@@ -333,7 +333,7 @@
       height: 0;
       border-style: solid;
       border-width: 4px 3px 0 3px;
-      border-color: $neutral-1 transparent transparent transparent;
+      border-color: $secondary transparent transparent transparent;
       position: absolute;
       top: 16px;
       right: 2px;

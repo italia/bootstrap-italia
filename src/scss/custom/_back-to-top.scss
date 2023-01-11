@@ -50,13 +50,13 @@
   &.dark {
     background: #fff;
     &:hover {
-      background: $neutral-1-a1;
+      background: $neutral-1-a1; // TODO Missing in the UI kit
     }
 
     //caret
     .icon {
       &:before {
-        color: $neutral-1-a8;
+        color: $neutral-1-a8; // TODO Missing in the UI kit
       }
     }
   }
