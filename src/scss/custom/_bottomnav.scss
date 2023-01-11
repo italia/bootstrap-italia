@@ -42,10 +42,10 @@
   }
   a {
     display: block;
-    color: $neutral-1-a7;
+    color: $color-text-secondary; // UI kit
     text-decoration: none;
     .icon {
-      fill: $neutral-1-a7;
+      fill: $secondary; // UI kit
     }
     &.active {
       color: $primary;

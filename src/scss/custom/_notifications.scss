@@ -9,13 +9,13 @@
   bottom: 0;
   right: 0;
   display: none;
-  border-top: 4px solid $secondary;
+  border-top: 4px solid $color-border-secondary;
 
   //title
   h5 {
     font-size: 0.938rem;
     text-transform: uppercase;
-    color: $neutral-1;
+    color: $color-text-base;
     letter-spacing: 0;
     margin: 0;
     position: relative;
@@ -26,11 +26,11 @@
   p {
     font-size: 0.875rem;
     margin: 1.5rem 0 0 0;
-    color: $secondary;
+    color: $color-text-secondary;
   }
   //icon version
   &.with-icon {
-    border-top: 4px solid $secondary;
+    border-top: 4px solid $color-border-secondary;
     h5 {
       .icon {
         position: absolute;
@@ -81,11 +81,11 @@
       padding: 0;
       background: none;
       .icon {
-        fill: $neutral-1;
+        fill: $icon-secondary;
       }
       &:hover {
         .icon {
-          fill: $primary;
+          fill: $icon-primary;
         }
       }
       &:active {

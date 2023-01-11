@@ -56,7 +56,7 @@
           text-decoration: none;
         }
         svg {
-          fill: $primary-a5;
+          fill: $primary;
           width: $v-gap * 3;
           height: $v-gap * 3;
         }
@@ -100,9 +100,9 @@
       }
       // active
       &.active {
-        color: $neutral-1-a10;
+        color: $color-text-base;
         .text {
-          color: $neutral-1-a10;
+          color: $color-text-base;
         }
       }
     }
@@ -175,9 +175,9 @@
         &.list-item {
           &:hover {
             box-shadow: $card-shadow;
-            color: $primary-a5;
+            color: $color-text-primary-hover;
             text-decoration: none;
-            background: #fff;
+            background: $white;
             position: relative;
             z-index: 1;
             transition: none;

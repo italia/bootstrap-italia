@@ -9,7 +9,7 @@
           .dropdown-menu {
             .it-vertical {
               width: 100%;
-              background: $lightgrey-c2;
+              background: $color-background-primary-lighter;
               padding-top: $v-gap * 2;
               padding-bottom: $v-gap * 2;
               margin-top: $v-gap * 2;
@@ -44,7 +44,7 @@
                     display: block;
                     height: 1px;
                     width: $megamenu-link-small-line-width;
-                    background: $neutral-2;
+                    background: $color-border-subtle;
                     margin-bottom: $megamenu-link-small-line-margin-bottom * 2;
                   }
                   img {
@@ -62,7 +62,7 @@
             // asymettrical column
             .it-heading-megacolumn-wrapper {
               .it-heading-megacolumn {
-                color: $neutral-1-a10;
+                color: $color-text-base;
                 margin: $megamenu-linklist-link-v-padding $link-list-h-pad;
                 padding-left: $link-list-h-pad;
                 padding-bottom: $megamenu-linklist-link-v-padding;
@@ -85,7 +85,7 @@
                     display: block;
                     height: 1px;
                     width: $megamenu-link-small-line-width;
-                    background: $neutral-2;
+                    background: $color-border-subtle;
                     margin-bottom: $megamenu-link-small-line-margin-bottom;
                   }
                 }
@@ -145,7 +145,7 @@
               display: block;
               height: 1px;
               width: $megamenu-link-small-line-width;
-              background: $neutral-2;
+              background: $color-border-subtle;
               margin-bottom: $megamenu-link-small-line-margin-bottom;
             }
           }
@@ -197,7 +197,7 @@
                     display: block;
                     height: 1px;
                     width: $megamenu-link-small-line-width;
-                    background: $neutral-2;
+                    background: $color-border-subtle;
                     margin-bottom: $megamenu-link-small-line-margin-bottom;
                   }
                 }
@@ -215,7 +215,7 @@
                         display: block;
                         height: 1px;
                         width: $megamenu-link-small-line-width;
-                        background: $neutral-2;
+                        background: $color-border-subtle;
                         margin-bottom: $megamenu-link-small-line-margin-bottom;
                       }
                     }
@@ -276,7 +276,7 @@
             display: block;
             height: 1px;
             width: $megamenu-link-small-line-width;
-            background: $neutral-2;
+            background: $color-border-subtle;
             margin-bottom: $megamenu-link-small-line-margin-bottom;
           }
         }
@@ -298,7 +298,7 @@
                   font-size: $megamenu-heading-text-size;
                   font-weight: $megamenu-heading-font-weight;
                   letter-spacing: $megamenu-heading-letter-spacing;
-                  border-bottom: 1px solid $neutral-2;
+                  border-bottom: 1px solid $color-border-subtle;
                   padding-bottom: $megamenu-linklist-link-v-padding;
                   padding-left: 0;
                   line-height: 1.2em;
@@ -366,7 +366,7 @@
                   line-height: $megamenu-heading-line-height;
                   font-size: $megamenu-heading-text-size;
                   text-transform: uppercase;
-                  border-bottom: 1px solid $neutral-2;
+                  border-bottom: 1px solid $color-border-subtle;
                   padding-bottom: $megamenu-linklist-link-v-padding;
                 }
               }
@@ -383,7 +383,7 @@
                   line-height: $megamenu-heading-line-height;
                   font-size: $megamenu-heading-text-size;
                   text-transform: uppercase;
-                  border-bottom: 1px solid $neutral-2;
+                  border-bottom: 1px solid $color-border-subtle;
                   padding-bottom: $megamenu-linklist-link-v-padding;
                 }
               }
@@ -420,7 +420,7 @@
                       .divider {
                         height: 1px;
                         display: block;
-                        background: $neutral-1-a2;
+                        background: $color-border-subtle;
                         margin: 0 0 0 $megamenu-linklist-vertical-link-padding;
                         width: $megamenu-link-small-line-width;
                         margin-top: $megamenu-liklist-vertical-margin-top;

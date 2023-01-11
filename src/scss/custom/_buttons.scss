@@ -141,8 +141,8 @@
     border-color: $gray-border-disabled;
     //progress bar button
     &.btn-progress {
-      background-color: $primary-a3;
-      border-color: $primary-a3;
+      background-color: hsl(210, 76%, 67%); // UI kit - missing token
+      border-color: hsl(210, 76%, 67%); // UI kit - missing token
       color: $white;
       opacity: 1;
     }
@@ -154,8 +154,8 @@
   &.disabled {
     //progress bar button
     &.btn-progress {
-      background-color: tint-color($gray-secondary, 10);
-      border-color: tint-color($gray-secondary, 10);
+      background-color: hsl(210, 12%, 52%); // UI kit - missing tokens
+      border-color: hsl(210, 12%, 52%); // UI kit - missing tokens
       opacity: 1;
     }
   }
