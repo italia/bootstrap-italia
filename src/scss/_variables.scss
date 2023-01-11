@@ -142,7 +142,7 @@ $breadcrumb-bg: transparent !default;
 $breadcrumb-link-font-weight: 600;
 $breadcrumb-link-color: $color-text-secondary !default;
 $breadcrumb-link-x-padding: 0.5em;
-$breadcrumb-bg-dark: $neutral-1-a8 !default;  // Missing in the UI kit
+$breadcrumb-bg-dark: $neutral-1-a8 !default; // Missing in the UI kit
 $breadcrumb-border-radius: 0;
 $breadcrumb-link-color-dark: $white !default;
 $breadcrumb-icon-color-dark: $analogue-2-b1 !default; // Missing in the UI kit
@@ -259,10 +259,10 @@ $navigation-disabled-item-mobile-opacity: 0.6 !default;
 $navigation-hamburger-size: 24px;
 
 // navigation dark theme (mobile)
-$navigation-dark-bg-color: $primary !default; // missing in UI kit 
-$navigation-dark-text-color: $white !default; // missing in UI kit 
-$navigation-dark-bg-color: $primary-b1 !default; // missing in UI kit 
-$navigation-dark-separator-color: $primary-c5 !default; // missing in UI kit 
+$navigation-dark-bg-color: $primary !default; // missing in UI kit
+$navigation-dark-text-color: $white !default; // missing in UI kit
+$navigation-dark-bg-color: $primary-b1 !default; // missing in UI kit
+$navigation-dark-separator-color: $primary-c5 !default; // missing in UI kit
 
 // navigation light theme (desktop)
 $navigation-light-bg-color: $white !default;
@@ -624,7 +624,7 @@ $stepper-spacing-v: 16px;
 $transfer-border: 1px solid $neutral-1-a3 !default; // TODO Not found
 $transfer-descr-size: 12px;
 $transfer-descr-color: $neutral-1-a8 !default; // TODO Not found
-$transfer-header-line-color: $neutral-1-a3 !default; // TODO Not found 
+$transfer-header-line-color: $neutral-1-a3 !default; // TODO Not found
 $transfer-header-line-w: 65px;
 $transfer-height: 240px;
 

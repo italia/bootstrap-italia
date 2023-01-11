@@ -15,8 +15,9 @@
   &.section-primary {
     background: $primary;
   }
-  &.section-neutral { // TODO: Consider updating class name to match the variable
-    background: $color-background-emphasis; 
+  &.section-neutral {
+    // TODO: Consider updating class name to match the variable
+    background: $color-background-emphasis;
   }
   &.section-image {
     background-size: cover;

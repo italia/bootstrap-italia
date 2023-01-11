@@ -46,7 +46,7 @@ $primary: hsl(210, 100, 40%) !default; // color-blue-40
 $indigo: hsb(243, 70, 100) !default;
 $purple: hsb(243, 40, 100) !default;
 $pink: hsb(350, 30, 100) !default;
-$red:  hsl(350, 60%, 50%) !default; // color-red-50
+$red: hsl(350, 60%, 50%) !default; // color-red-50
 $orange: hsl(36, 100%, 40%) !default; // color-orange-40
 $yellow: hsb(44, 55, 100) !default;
 $green: hsl(160, 100%, 25%) !default; // color-emerald-25
@@ -388,7 +388,6 @@ $neutral-2-a4: hsb($neutral-2-h, $neutral-2-s + 2, $neutral-2-b - 45) !default;
 $neutral-2-a5: hsb($neutral-2-h, $neutral-2-s + 2, $neutral-2-b - 60) !default;
 $neutral-2-a6: hsb($neutral-2-h, $neutral-2-s + 2, $neutral-2-b - 75) !default;
 $neutral-2-a7: hsb($neutral-2-h, $neutral-2-s + 4, $neutral-2-b - 85) !default;
-
 
 //==================== DESIGN TOKENS VARIABLES ============================//
 
