@@ -178,7 +178,7 @@ Gli elementi disabilitati avranno invece una classe `.disabled` con ulteriori ac
 
 ## Divisori
 
-Per aggiungere degli elementi divisori fra gli elementi utilizzare dei tag `<li>` con classe `.toolbar-divider`, aggiungendo l'attributo `aria-hidden="true"` per nasconderli agli screen reader.
+Per aggiungere degli elementi divisori fra gli elementi utilizzare dei tag `<li>` con classe `.toolbar-divider`, aggiungendo il ruolo separatore `role="separator"` per indicarne la presenza agli screen reader e `aria-orientation="vertical"` per indicarne l'orientamento.
 
 {% capture example %}
 
@@ -196,7 +196,7 @@ Per aggiungere degli elementi divisori fra gli elementi utilizzare dei tag `<li>
         <span class="toolbar-label">immagini</span>
       </a>
     </li>
-    <li class="toolbar-divider" aria-hidden="true"></li>
+    <li class="toolbar-divider" role="separator" aria-orientation="vertical"></li>
     <li>
       <a href="#">
         <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
@@ -209,7 +209,7 @@ Per aggiungere degli elementi divisori fra gli elementi utilizzare dei tag `<li>
         <span class="toolbar-label">privacy</span>
       </a>
     </li>
-    <li class="toolbar-divider" aria-hidden="true"></li>
+    <li class="toolbar-divider" role="separator" aria-orientation="vertical"></li>
     <li>
       <a href="#" class="disabled" disabled aria-disabled="true">
         <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg>
@@ -756,7 +756,7 @@ Applicando una classe aggiuntiva `.toolbar-vertical` alla Toolbar gli elementi v
         </div>
       </div>
   </li>
-  <li class="toolbar-divider" aria-hidden="true"></li>
+  <li class="toolbar-divider" role="separator" aria-orientation="vertical"></li>
   <li>
       <a href="#">
         <svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
@@ -816,7 +816,7 @@ Applicando una classe aggiuntiva `.toolbar-vertical` alla Toolbar gli elementi v
         </div>
       </div>
     </li>
-    <li class="toolbar-divider" aria-hidden="true"></li>
+    <li class="toolbar-divider" role="separator" aria-orientation="vertical"></li>
     <li>
       <a href="#">
         <span class="visually-hidden">privacy</span>
@@ -876,7 +876,7 @@ Applicando una classe aggiuntiva `.toolbar-vertical` alla Toolbar gli elementi v
         </div>
       </div>
     </li>
-    <li class="toolbar-divider" aria-hidden="true"></li>
+    <li class="toolbar-divider" role="separator" aria-orientation="vertical"></li>
     <li>
         <a href="#">
         <span class="visually-hidden">immagini</span>
