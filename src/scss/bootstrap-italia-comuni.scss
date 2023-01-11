@@ -201,7 +201,7 @@ $card-comuni-bg-dark: #2c2c2c;
 @import 'utilities/icons';
 
 // splide carousel
-@import '../../@splidejs/splide/src/css/core/index';
+@import '@splidejs/splide/src/css/core/index';
 
 // override comuni
 @import 'override-comuni';
