@@ -2,7 +2,7 @@
 
 import BaseComponent from 'bootstrap/js/src/base-component'
 import EventHandler from 'bootstrap/js/src/dom/event-handler'
-import SelectorEngine from 'bootstrap/js/src/dom/selector-engine'
+//import SelectorEngine from 'bootstrap/js/src/dom/selector-engine'
 
 import InputLabel from './input-label'
 
@@ -17,6 +17,7 @@ const Default = {
 
 const EVENT_KEYUP = `keyup${EVENT_KEY}`
 const EVENT_KEYUP_DATA_API = `keyup${EVENT_KEY}${DATA_API_KEY}`
+const EVENT_MOUSEDOWN_DATA_API = `mousedown${EVENT_KEY}${DATA_API_KEY}`
 
 const CLASS_NAME_SHOW = 'autocomplete-list-show'
 const CLASS_NAME_AUTOCOMPLETE = 'autocomplete'
@@ -121,12 +122,31 @@ class InputSearch extends BaseComponent {
  * ------------------------------------------------------------------------
  */
 
-const inputs = SelectorEngine.find(SELECTOR_SEARCH)
+/*const inputs = SelectorEngine.find(SELECTOR_SEARCH)
 inputs.forEach((input) => {
   EventHandler.one(input, EVENT_KEYUP_DATA_API, () => {
     const searchInput = InputSearch.getOrCreateInstance(input)
     searchInput.search()
   })
+})*/
+
+const createInput = (element) => {
+  if (element && element.matches(SELECTOR_SEARCH)) {
+    return InputSearch.getOrCreateInstance(element)
+  }
+  return null
+}
+
+EventHandler.on(document, EVENT_MOUSEDOWN_DATA_API, SELECTOR_SEARCH + ', label', function () {
+  const target = InputLabel.getInputFromLabel(this) || this
+  createInput(target)
+})
+EventHandler.on(document, EVENT_KEYUP_DATA_API, SELECTOR_SEARCH + ', label', function () {
+  const target = InputLabel.getInputFromLabel(this) || this
+  const element = createInput(target)
+  if (element && element._label) {
+    element._label._labelOut()
+  }
 })
 
 export default InputSearch
