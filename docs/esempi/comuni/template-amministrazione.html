@@ -28,10 +28,11 @@ title: Template Amministrazione
         <div class="form-group mt-5">
           <form>
             <input id="ricerca-amministrazione" type="search" />
-            <label for="ricerca-amministrazione">Cerca contenuti in "Amministrazione"</label>
+            <label for="ricerca-amministrazione">Cerca contenuti in "Amministrazione" <span class="visually-hidden">(invia per lanciare la ricerca)</span></label>
             <span aria-hidden="true" class="autocomplete-icon">
               <svg class="icon icon-sm"><use xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-search"></use></svg>
             </span>
+            <button type="submit" tabindex="-1" class="visually-hidden">Invia</button>
           </form>
         </div>
         <div id="filtri-ricerca-amministrazione">
