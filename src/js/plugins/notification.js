@@ -5,7 +5,7 @@ import {
   //isRTL,
   isVisible,
   reflow,
-  typeCheckConfig,
+  // typeCheckConfig,
   //getSelectorFromElement,
 } from 'bootstrap/js/src/util'
 import Manipulator from 'bootstrap/js/src/dom/manipulator'
@@ -153,7 +153,7 @@ class Notification extends BaseComponent {
       ...Manipulator.getDataAttributes(this._element),
       ...(typeof config === 'object' ? config : {}),
     }
-    typeCheckConfig(NAME, config, DefaultType)
+    // typeCheckConfig(NAME, config, DefaultType)
     return config
   }
 
