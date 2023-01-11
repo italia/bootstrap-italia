@@ -61,11 +61,11 @@ Ecco l'esempio di una struttura più complessa creata con il sistema a griglie.
 <div>
   <div class="row">
     <div class="form-group col-md-6">
-      <label for="inputEmail4">Email</label>
+      <label class="active" for="inputEmail4">Email</label>
       <input type="email" class="form-control" id="inputEmail4" placeholder="inserisci il tuo indirizzo email">
     </div>
     <div class="form-group col-md-6">
-      <label for="exampleInputPassword">Password</label>
+      <label class="active" for="exampleInputPassword">Password</label>
       <input type="password" data-bs-input class="form-control input-password" id="exampleInputPassword" placeholder="inserisci la tua password">
       <span class="password-icon" aria-hidden="true">
         <svg class="password-icon-visible icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-visible"></use></svg>
@@ -75,7 +75,7 @@ Ecco l'esempio di una struttura più complessa creata con il sistema a griglie.
   </div>
   <div class="row">
     <div class="form-group col">
-      <label for="inputAddress">Indirizzo</label>
+      <label class="active" for="inputAddress">Indirizzo</label>
       <input type="text" class="form-control" id="inputAddress" placeholder="Via Roma, 1">
     </div>
   </div>
@@ -263,11 +263,11 @@ Di seguito un esempio di form validato con Just Validate.
 <form class="needs-validation" id="justValidateForm">
   <div class="row mt-4">
     <div class="form-group col-md-3">
-      <label for="validationCustom01">Nome</label>
+      <label class="active" for="validationCustom01">Nome</label>
       <input type="text" class="form-control" id="validationCustom01" value="Mario" required>
     </div>
     <div class="form-group col-md-3">
-      <label for="validationCustom02">Cognome</label>
+      <label class="active" for="validationCustom02">Cognome</label>
       <input type="text" class="form-control" id="validationCustom02" value="Rossi" required>
     </div>
     <div class="form-group col-md-3">

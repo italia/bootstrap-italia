@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-italia",
-  "version": "2.0.9",
+  "version": "2.2.0",
   "keywords": [
     "css",
     "sass",
@@ -16,7 +16,7 @@
     "*.css",
     "*.scss",
     "dist/bootstrap-italia.esm.js",
-    "dist/plugins/fonts-loader.js"
+    "dist/plugins/init.js"
   ],
   "description": "Bootstrap Italia è un tema Bootstrap 5 per la creazione di applicazioni web nel pieno rispetto delle linee guida di design per i siti internet e i servizi digitali della PA",
   "homepage": "https://italia.github.io/bootstrap-italia/",
@@ -62,7 +62,7 @@
     "@rollup/plugin-legacy": "^2.2.0",
     "@rollup/plugin-node-resolve": "^13.1.3",
     "browser-sync": "^2.27.9",
-    "browserslist-config-design-italia": "^1.0.0",
+    "browserslist-config-design-italia": "^1.1.0",
     "concurrently": "^7.0.0",
     "conventional-changelog": "^3.1.24",
     "conventional-changelog-cli": "^2.2.2",

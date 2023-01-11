@@ -45,6 +45,20 @@ Utilizzando la classe `.container-fluid` esso occuperà in larghezza tutta l'are
 <div class="container-fluid">...</div>
 ```
 
+## Contenitori responsive
+
+Bootstrap Italia mette a disposizione i contenitori responsive, classi che ti consentono di specificare la larghezza del contenitore al 100% fino al raggiungimento del breakpoint, dopodiché viene applicata la larghezza massima in base al punto di interruzione.
+
+```html
+<div class="container-sm">...</div>
+<div class="container-md">...</div>
+<div class="container-lg">...</div>
+<div class="container-xl">...</div>
+<div class="container-xxl">...</div>
+```
+
+_NB: Se si sta usando una versione di Bootstrap Italia basata su Bootstrap 4, la classe `.container-xxl` non sarà presente._
+
 ## Responsive breakpoints
 
 Visto che la progettazione web è bene venga gestita _mobile-first_, in Bootstrap Italia sono definite alcune [media query](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) per definire breakpoints ai quali il layout si modifica. Questi breakpoints sono basati sulla dimensioni minima del viewport e permettono di scalare verso l'alto quando la dimensione della finesta aumenta.

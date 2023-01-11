@@ -15,8 +15,9 @@ export default [
     input: 'src/js/bootstrap-italia.entry.js',
     output: {
       file: 'dist/js/bootstrap-italia.bundle.min.js',
-      compact: true,
-      format: 'iife',
+      format: 'umd',
+      generatedCode: 'es2015',
+      name: "bootstrap"
     },
     plugins: [
       babel({
@@ -38,12 +39,7 @@ export default [
         sourceMap: true,
         watch: 'src/scss',
       }),
-      nodeResolve({
-        // use "jsnext:main" if possible
-        // see https://github.com/rollup/rollup/wiki/jsnext:main
-        jsnext: true,
-        main: true,
-      }),
+      nodeResolve(),
       commonjs(),
       injectProcessEnv({
         NODE_ENV: 'production',
@@ -51,7 +47,7 @@ export default [
       uglify(),
     ],
   },
-  // ESM and CJS
+  // ESM
   {
     input: 'src/js/bootstrap-italia.esm.js',
     output: [

@@ -10,6 +10,7 @@ toc: true
 
 Per aggiungere un pulsante personalizzato, è sufficiente utilizzare la classe `.btn`, associandola a classi di tipo `.btn-` per applicarne le varianti di stile, dimensione, ecc.
 
+{% comment %}Example name: Base{% endcomment %}
 {% capture example %}
 <button type="button" class="btn">Link</button>
 {% endcapture %}{% include example.html content=example %}
@@ -27,6 +28,7 @@ Dove il click sul pulsante non genera un cambio di pagina utilizzare esclusivame
 Quando non fosse possibile, non dimenticare di utilizzare in modo appropriato gli attributi `role="button"` per trasmettere il loro scopo alle tecnologie assistive.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
+{% comment %}Example name: Con classe .btn{% endcomment %}
 {% capture example %}
 <a class="btn" href="#" role="button">Link</a>
 <button class="btn" type="submit">Button</button>
@@ -39,6 +41,7 @@ Quando non fosse possibile, non dimenticare di utilizzare in modo appropriato gl
 
 Gli stili definiti da Bootstrap Italia utilizzano un naming consistente con Bootstrap, con alcune personalizzazioni:
 
+{% comment %}Example name: Varianti di colore{% endcomment %}
 {% capture example %}
 
 <div class="py-1">{% for color in site.data.theme-colors %}{% if color.name == "primary" or color.name == "secondary" %}
@@ -55,6 +58,7 @@ Gli stili definiti da Bootstrap Italia utilizzano un naming consistente con Boot
 - I tag `<a>` non supportano l'attributo `disabled`, per cui è necessario usare la classe `.disabled` per farli apparire visivamente disabilitati, e in modo da disabilitare `pointer-events` su di essi sui browser che lo supportano.
 - I pulsanti disabilitati includeranno l'attributo `aria-disabled="true"` per indicare lo stato dell'elemento alle tecnologie assistive.
 
+{% comment %}Example name: Disabilitato{% endcomment %}
 {% capture example %}
 <a href="#" class="btn btn-primary disabled" role="button" aria-disabled="true">Link disabilitato</a>
 {% endcapture %}{% include example.html content=example %}
@@ -68,6 +72,7 @@ La classe `.disabled` usa `pointer-events: none` per provare a disabilitare l'at
 
 #### Su sfondo scuro
 
+{% comment %}Example name: Su fondo scuro{% endcomment %}
 {% capture example %}
 
 <div class="bg-dark py-1">{% for color in site.data.theme-colors %}{% if color.name == "primary" or color.name == "secondary" %}
@@ -84,6 +89,7 @@ La classe `.disabled` usa `pointer-events: none` per provare a disabilitare l'at
 
 È possibile aggiungere un'icona personalizzata al pulsante con la classe `.btn-icon` in aggiunta alla classe `.btn` e alle relative varianti cromatiche e di dimensione.
 
+{% comment %}Example name: Con icona{% endcomment %}
 {% capture example %}
 <button class="btn btn-success btn-lg btn-icon btn-me">
 <span>Icon Button Lg</span>
@@ -136,6 +142,7 @@ La classe `.disabled` usa `pointer-events: none` per provare a disabilitare l'at
 
 Inoltre è possibile applicare un contorno cerchiato dell'icona utilizzando un contenitore con classe `.rounded-icon` da inserire all'interno della classe `.btn` con possibilità di personalizzazione del suo aspetto cromatico attraverso i modificatori `.rounded-*` e `.icon.icon-*`.
 
+{% comment %}Example name: Icona cerchiata{% endcomment %}
 {% capture example %}
 <button class="btn btn-success btn-lg btn-icon btn-me">
 <span class="rounded-icon">
@@ -180,6 +187,7 @@ Per ottenere pulsanti di dimensione più grande o più piccola, è sufficiente u
 
 #### Large
 
+{% comment %}Example name: Dimensione grande Large{% endcomment %}
 {% capture example %}
 <button type="button" class="btn btn-primary btn-lg btn-me">Primary Large</button>
 <button type="button" class="btn btn-secondary btn-lg">Secondary Large</button>
@@ -187,6 +195,7 @@ Per ottenere pulsanti di dimensione più grande o più piccola, è sufficiente u
 
 #### Small
 
+{% comment %}Example name: Dimensione normale Small{% endcomment %}
 {% capture example %}
 <button type="button" class="btn btn-primary btn-sm btn-me">Primary Small</button>
 <button type="button" class="btn btn-secondary btn-sm">Secondary Small</button>
@@ -194,6 +203,7 @@ Per ottenere pulsanti di dimensione più grande o più piccola, è sufficiente u
 
 #### Mini
 
+{% comment %}Example name: Dimensione minima Mini{% endcomment %}
 {% capture example %}
 <button type="button" class="btn btn-primary btn-xs btn-me">Primary Mini</button>
 <button type="button" class="btn btn-secondary btn-xs">Secondary Mini</button>
@@ -203,6 +213,7 @@ Per ottenere pulsanti di dimensione più grande o più piccola, è sufficiente u
 
 Per creare pulsanti o gruppi di pulsanti a tutta larghezza, come i _block buttons_ di Bootstrap 4, utilizzare un mix delle utilities **display** e **gap**. Con queste utilities abbiamo più controllo su spaziature, allineamento e comportamento responsive rispetto al classico _block button_.
 
+{% comment %}Example name: A tutta larghezza{% endcomment %}
 {% capture example %}
 
 <div class="d-grid gap-2">
@@ -213,6 +224,7 @@ Per creare pulsanti o gruppi di pulsanti a tutta larghezza, come i _block button
 
 In questo caso è stata implemenentata una variante responsive che visualizza i tasti a tutta larghezza e sovrapposti in mobile per poi affiancarli dl breakpoint `md` in su.
 
+{% comment %}Example name: A tutta larghezza solo su mobile{% endcomment %}
 {% capture example %}
 
 <div class="d-grid gap-2 d-md-block">
