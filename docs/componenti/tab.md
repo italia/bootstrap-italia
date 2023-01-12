@@ -419,19 +419,16 @@ Gli esempi sopra riportati non hanno molto senso senza un contenuto che cambi al
     <li class="nav-item">
       <a class="nav-link active" id="tab1a-tab" data-bs-toggle="tab" href="#tab1a" role="tab" aria-controls="tab1a" aria-selected="true">
         <svg class="icon icon-lg"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg>
-        <span class="visually-hidden"> Tab titolo 1</span>
       </a>
     </li>
     <li class="nav-item">
       <a class="nav-link" id="tab2a-tab" data-bs-toggle="tab" href="#tab2a" role="tab" aria-controls="tab2a" aria-selected="false">
         <svg class="icon icon-lg"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg>
-        <span class="visually-hidden"> Tab titolo 2</span>
       </a>
     </li>
     <li class="nav-item">
       <a class="nav-link" id="tab3a-tab" data-bs-toggle="tab" href="#tab3a" role="tab" aria-controls="tab3a" aria-selected="false">
         <svg class="icon icon-lg"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg>
-        <span class="visually-hidden"> Tab titolo 3</span>
       </a>
     </li>
     <li class="nav-item">
