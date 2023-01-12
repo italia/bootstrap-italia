@@ -72,6 +72,15 @@ title: Validazione Form
       </div>
     </div>
 
+    <div class="row">
+      <div class="col-12">
+        <div class="form-group">
+          <label for="description">Testo descrizione</label>
+          <textarea id="description" rows="3"></textarea>
+        </div>
+      </div>
+    </div>
+
     <div class="row mb-4">
       <div class="col-12">
         <h2>Autocomplete</h2>
@@ -404,6 +413,12 @@ title: Validazione Form
           errorMessage: 'Questo campo è richiesto',
         },
       ])
+		  .addField('#description', [
+			{
+			  rule: 'required',
+			  errorMessage: 'Questo campo è richiesto'
+			},
+		  ])
       .addField('#toggleEsempio1a', [
         {
           rule: 'required',
