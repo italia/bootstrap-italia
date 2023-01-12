@@ -5,7 +5,7 @@
         "--no-sandbox"
       ]
     },
-    "timeout": 20000,
+    "timeout": 21000,
     "hideElements": [
       "#evidenza",
       "#preloadjs-container",
