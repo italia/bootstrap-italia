@@ -10,7 +10,7 @@ title: Introduzione
 description: Come usare Bootstrap Italia nel tuo progetto.
 ---
 
-## Caricare la libreria
+## Installazione
 
 Per utilizzare il codice compilato di Bootstrap Italia nel proprio progetto, è sufficiente scaricare ed includere nella pagina HTML alcuni file, tra cui: 
 
@@ -38,27 +38,6 @@ Le librerie Javascript e CSS di Bootstrap Italia personalizzano e comprendono an
 
 La libreria è accessibile anche via CDN su [jsDelivr](https://www.jsdelivr.com/package/npm/bootstrap-italia) o [unpkg](https://unpkg.com/bootstrap-italia/), di cui però è sconsigliato l'utilizzo in ambienti di produzione.
 
-### Utilizzo dei file da CDN o compilato
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="<path-a-bootstrap-italia>/dist/css/bootstrap-italia.min.css" />
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
-    <!-- JS -->
-    <script src="<path-a-bootstrap-italia>/dist/js/bootstrap-italia.bundle.min.js"></script>
-  </body>
-</html>
-```
-
 ### Utilizzo come dipendenza
 
 Alternativamente, specialmente se si utilizza [Webpack](https://webpack.github.io/), [Rollup.js](https://rollupjs.org/) o altri module bundler per l'inclusione di librerie esterne attraverso `npm`, è possibile aggiungere Bootstrap Italia come dipendenza con il seguente comando:
@@ -81,13 +60,30 @@ Per includere questo file all'interno del proprio progetto sarà sufficiente agg
 
 ### JavaScript
 
-All'interno della cartella `js` saranno invece presenti il file di bundle e i componenti suddivisi in moduli.
+All'interno della cartella `js` saranno invece presenti il file di bundle, il file non bundle e i componenti suddivisi in moduli.
 
-In questo caso, dopo aver copiato i file all'interno del progetto, sarà sufficiente inserire una versione dei tag `<script>` di seguito riportati alla fine della pagina HTML, giusto prima della chiusura del tag `</body>`. Si potrà quindi includere la versione `*.bundle.*` in questo modo
+#### Versione bundle
+
+In questo caso, dopo aver copiato i file all'interno del progetto, sarà sufficiente inserire una versione dei tag `<script>` di seguito riportati alla fine della pagina HTML, giusto prima della chiusura del tag `</body>`. Si potrà quindi includere la libreria in questo modo:
 
 ```html
 <script src="<path-a-bootstrap-italia>/dist/js/bootstrap-italia.bundle.min.js"></script>
 ```
+
+#### Versione non bundle
+
+Per la versione non bundle, dopo aver copiato i file all'interno del progetto, sarà sufficiente inserire una versione dei tag `<script>` di seguito riportati alla fine della pagina HTML, giusto prima della chiusura del tag `</body>`. Si potrà quindi includere la libreria in questo modo, inserendo solo le dipendenze che servono al nostro progetto (qui nell'esempio sono inserite solo alcune per riferimento):
+
+```html
+<!--- Dipendenze da inserire solo se usate -->
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<!--- Versione non bundle di Bootstrap Italia -->
+<script src="<path-a-bootstrap-italia>/dist/js/bootstrap-italia.min.js"></script>
+```
+
+#### Moduli
 
 In alternativa se si vogliono utilizzare i moduli,  è possibile importare e utilizzare singolarmente i vari componenti. Di seguito un esempio di cui potete trovare l'intero esempio completo [qui](https://github.com/astagi/demo-bsitalia-2).
 
