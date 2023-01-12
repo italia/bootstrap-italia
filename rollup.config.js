@@ -55,7 +55,7 @@ export default [
       generatedCode: 'es2015',
       name: "bootstrap",
       globals: {
-        'popperjs/core' : 'Popper', 
+        '@popperjs/core' : 'Popper', 
         '@splidejs/splide' : 'Splide', 
         'masonry-layout' : 'MasonryPlugin', 
         'accessible-autocomplete' : 'accessibleAutocomplete',
@@ -63,7 +63,7 @@ export default [
       },
     },
     external: [
-      'popperjs/core', 
+      '@popperjs/core', 
       '@splidejs/splide', 
       'masonry-layout', 
       'accessible-autocomplete',
