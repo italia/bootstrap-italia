@@ -21,7 +21,7 @@
   "description": "Bootstrap Italia è un tema Bootstrap 5 per la creazione di applicazioni web nel pieno rispetto delle linee guida di design per i siti internet e i servizi digitali della PA",
   "homepage": "https://italia.github.io/bootstrap-italia/",
   "style": "dist/css/bootstrap-italia.min.css",
-  "main": "dist/js/bootstrap-italia.min.js",
+  "main": "dist/js/bootstrap-italia.bundle.min.js",
   "scripts": {
     "start": "concurrently \"npm run dev-code\" \"npm run dev-docs\" \"npm run start-bs\"",
     "build": "rollup -c",
