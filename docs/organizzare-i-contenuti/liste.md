@@ -429,7 +429,17 @@ Per attivare il javascript che attiva il funzionamento dei toggles è necessario
 
 ### Con testo aggiuntivo, azioni multiple e metadata
 
-Per avere un testo aggiuntivo, bisogna utilizzare un approccio con titoli (headings) e paragrafi `<p>` all'interno dell'elemento `.text`. Il livello di heading corretto dipenderà dalla posizione e gerarchia nella pagina. Nell'esempio `<h4>`:
+Per avere una lista che permetta paragrafi di testo aggiuntivo per ogni elemento, bisogna utilizzare un approccio con titoli (heading) e paragrafi `<p>` all'interno dell'elemento `.text`. 
+
+{% capture callout %}
+
+#### Accessibilità
+
+Il livello di heading corretto dipenderà dal contesto, inteso come posizione e gerarchia nella pagina, nell'esempio `<h4>`.
+
+Tuttavia l'implementazione va eseguita tenendo conto del contenuto nel suo complesso: nel caso di piccoli pannelli di controllo con contenuti limitati potrebbe essere possibile eliminare gli elementi `<h4>` e `<p>` e gestire il componente con altra semantica più consona.
+
+{% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
 {% capture example %}
 
@@ -497,8 +507,8 @@ Per avere un testo aggiuntivo, bisogna utilizzare un approccio con titoli (headi
           <div class="text">
             <a href="#">
               <h4>Link</h4>
-              <p class="small">Lorem ipsum dolor sit amet.</p>
             </a>
+            <p class="small">Lorem ipsum dolor sit amet.</p>
           </div>
           <span class="it-multiple">
             <span class="metadata"><a href="#">metadata link</a></span>
@@ -527,8 +537,8 @@ Per avere un testo aggiuntivo, bisogna utilizzare un approccio con titoli (headi
           <div class="text">
             <a href="#">
               <h4>Link attivo</h4>
-              <p class="small">Lorem ipsum dolor sit amet.</p>
             </a>
+            <p class="small">Lorem ipsum dolor sit amet.</p>
           </div>
           <span class="it-multiple">
             <span class="metadata">metadata testo</span>
