@@ -418,22 +418,26 @@ Gli esempi sopra riportati non hanno molto senso senza un contenuto che cambi al
   <ul class="nav nav-tabs nav-tabs-icon-lg" id="myTab2" role="tablist">
     <li class="nav-item">
       <a class="nav-link active" id="tab1a-tab" data-bs-toggle="tab" href="#tab1a" role="tab" aria-controls="tab1a" aria-selected="true">
-        TAB
+        <svg class="icon icon-lg"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg>
+        <span class="visually-hidden"> Tab titolo 1</span>
       </a>
     </li>
     <li class="nav-item">
       <a class="nav-link" id="tab2a-tab" data-bs-toggle="tab" href="#tab2a" role="tab" aria-controls="tab2a" aria-selected="false">
-        TAB
+        <svg class="icon icon-lg"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg>
+        <span class="visually-hidden"> Tab titolo 2</span>
       </a>
     </li>
     <li class="nav-item">
       <a class="nav-link" id="tab3a-tab" data-bs-toggle="tab" href="#tab3a" role="tab" aria-controls="tab3a" aria-selected="false">
-        TAB
+        <svg class="icon icon-lg"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg>
+        <span class="visually-hidden"> Tab titolo 3</span>
       </a>
     </li>
     <li class="nav-item">
       <a class="nav-link disabled" id="tab4a-tab" data-bs-toggle="tab" href="#tab4a" role="tab" aria-controls="tab4a" aria-selected="false"  aria-disabled="true" tabindex="-1">
-        TAB
+        <svg class="icon icon-lg"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg>
+        <span class="visually-hidden"> Tab titolo 4</span>
       </a>
     </li>
   </ul>
