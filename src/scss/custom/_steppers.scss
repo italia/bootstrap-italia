@@ -1,56 +1,80 @@
 //mobile
 .steppers {
-  .steppers-header {
-    padding: 0 24px;
-    height: 64px;
-    background: $white;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); // TEMP - substitute with generic ellipsical shadow
-    display: flex;
-    align-items: center;
-    li {
-      font-size: 1.125rem;
-      font-weight: 600;
-      color: $gray-secondary;
-      list-style-type: none;
+  // steppers
+  .steppers-index {
+    margin-left: auto;
+    font-size: 0.875rem;
+    font-weight: 600;
+    flex-shrink: 0;
+    @include media-breakpoint-up(lg) {
       display: none;
-      .icon {
-        fill: $gray-secondary;
-        margin-right: 0.667rem;
-        width: 24px;
-        height: 24px;
-      }
-      // states
-      &.active,
-      &.confirmed {
+    }
+    span {
+      margin-left: 0.25rem;
+      &.active {
         color: $primary;
-        .icon {
-          fill: $primary;
-        }
+        text-decoration: underline;
       }
-      &.active,
-      &.steppers-index {
-        display: block;
+    }
+  }
+  .steppers-header {
+    @include media-breakpoint-down(md) {
+      padding: 0 24px;
+      height: 64px;
+      background: $white;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    ul {
+      display: flex;
+      width: 100%;
+      padding: 0;
+      @include media-breakpoint-down(md) {
+        margin: 0;
+        padding: 0;
       }
-      // steppers
-      &.steppers-index {
-        margin-left: auto;
-        font-size: 0.875rem;
+      li {
+        display: flex;
+        font-size: 1.125rem;
         font-weight: 600;
-        span {
-          margin-left: 0.25rem;
-          &.active {
-            color: $primary;
-            text-decoration: underline;
+        color: $gray-secondary;
+        list-style-type: none;
+        .icon {
+          fill: $gray-secondary;
+          margin-right: 0.667rem;
+          width: 24px;
+          height: 24px;
+        }
+        // states
+        &:not(.active) {
+          @include media-breakpoint-down(md) {
+            clip: rect(1px, 1px, 1px, 1px);
+            height: 0;
+            position: absolute;
+            display: block;
           }
         }
-      }
-      // numbers
-      .steppers-number {
-        .icon {
-          margin: 0;
+        &.active,
+        &.confirmed {
+          color: $primary;
+          .icon {
+            fill: $primary;
+          }
         }
-        &:after {
-          content: '. ';
+        &.active,
+        &.steppers-index {
+          display: block;
+        }
+        // numbers
+        .steppers-number {
+          .icon {
+            margin: 0;
+          }
+          &:after {
+            content: '. ';
+          }
         }
       }
     }
@@ -60,6 +84,15 @@
   &.bg-dark {
     .steppers-header {
       background: none;
+      // steppers
+      .steppers-index {
+        color: $neutral-1-a2;
+        span {
+          &.active {
+            color: $analogue-2-a6;
+          }
+        }
+      }
       // steps
       li {
         color: $neutral-1-a2;
@@ -78,14 +111,6 @@
           color: $white;
           .icon {
             fill: $white;
-          }
-        }
-        // steppers
-        &.steppers-index {
-          span {
-            &.active {
-              color: $analogue-2-a6;
-            }
           }
         }
       }

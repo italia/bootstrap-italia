@@ -81,17 +81,19 @@ I passi visibili nell'intestazione possono essere corredati da tre classi aggiun
 - `.active` per individuare lo step attualmente attivo; su dispositivi mobili è l'unico visualizzato.
 - `.steppers-index` per individuare un indice, visibile solo su mobile, che può contenere lo stato attuale di progresso indicato in forma testuale
 
-È necessario ridurre finestra del browser per apprezzare il comportamente degli Stepper su dispositivi di dimensioni ridotte.
+È necessario ridurre la finestra del browser per apprezzare il comportamente degli Stepper su dispositivi di dimensioni ridotte.
 
 {% capture example %}
 
 <div class="steppers">
-  <ul class="steppers-header">
-    <li class="confirmed">Primo contenuto <svg class="icon steppers-success"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg><span class="visually-hidden">Confermato</span></li>
-    <li class="active">Secondo contenuto <span class="visually-hidden">Attivo</span></li>
-    <li>Terzo contenuto</li>
-    <li class="steppers-index" aria-hidden="true">2/6</li>
-  </ul>
+  <div class="steppers-header">
+    <ul>
+      <li class="confirmed">Primo contenuto <svg class="icon steppers-success"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg><span class="visually-hidden">Confermato</span></li>
+      <li class="active">Secondo contenuto <span class="visually-hidden">Attivo</span></li>
+      <li>Terzo contenuto</li>
+    </ul>
+    <span class="steppers-index" aria-hidden="true">2/6</span>
+  </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -102,12 +104,14 @@ Le label presenti negli step dell'intestazione possono essere anticipate da un'i
 {% capture example %}
 
 <div class="steppers">
-  <ul class="steppers-header">
-    <li class="confirmed"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-calendar"></use></svg>Primo contenuto <svg class="icon steppers-success"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg><span class="visually-hidden">Confermato</span></li>
-    <li class="active"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-lock"></use></svg>Secondo contenuto <span class="visually-hidden">Attivo</span></li>
-    <li><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-settings"></use></svg>Terzo contenuto</li>
-    <li class="steppers-index" aria-hidden="true">2/6</li>
-  </ul>
+  <div class="steppers-header">
+    <ul>
+      <li class="confirmed"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-calendar"></use></svg>Primo contenuto <svg class="icon steppers-success"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg><span class="visually-hidden">Confermato</span></li>
+      <li class="active"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-lock"></use></svg>Secondo contenuto <span class="visually-hidden">Attivo</span></li>
+      <li><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-settings"></use></svg>Terzo contenuto</li>
+    </ul>
+    <span class="steppers-index" aria-hidden="true">2/6</span>
+  </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -120,12 +124,14 @@ Le label presenti negli steps dell'header possono essere anticipate dal numero o
 {% capture example %}
 
 <div class="steppers">
-  <ul class="steppers-header">
-    <li class="confirmed"><span class="steppers-number"><svg class="icon steppers-success"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg><span class="visually-hidden">Confermato</span></span>Primo contenuto</li>
-    <li class="active no-line"><span class="steppers-number"><span class="visually-hidden">Step </span>2</span>Secondo contenuto <span class="visually-hidden">Attivo</span></li>
-    <li><span class="steppers-number"><span class="visually-hidden">Step </span>3</span>Terzo contenuto</li>
-    <li class="steppers-index" aria-hidden="true"><span>1</span> <span class="active">2</span> <span>3</span> <span>4</span></li>
-  </ul>
+  <div class="steppers-header">
+    <ul>
+      <li class="confirmed"><span class="steppers-number"><svg class="icon steppers-success"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg><span class="visually-hidden">Confermato</span></span>Primo contenuto</li>
+      <li class="active no-line"><span class="steppers-number"><span class="visually-hidden">Step </span>2</span>Secondo contenuto <span class="visually-hidden">Attivo</span></li>
+      <li><span class="steppers-number"><span class="visually-hidden">Step </span>3</span>Terzo contenuto</li>
+    </ul>
+    <span class="steppers-index" aria-hidden="true"><span>1</span> <span class="active">2</span> <span>3</span> <span>4</span></span>
+  </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -146,12 +152,14 @@ Nel caso si stia sviluppando una _Single page application_ oppure una sequenza d
 {% capture example %}
 
 <div class="steppers">
-  <ul class="steppers-header">
-    <li class="confirmed">Primo contenuto <svg class="icon steppers-success"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg><span class="visually-hidden">Confermato</span></li>
-    <li class="active">Secondo contenuto <span class="visually-hidden">Attivo</span></li>
-    <li>Terzo contenuto</li>
-    <li class="steppers-index" aria-hidden="true">2/6</li>
-  </ul>
+  <div class="steppers-header">
+    <ul>
+      <li class="confirmed">Primo contenuto <svg class="icon steppers-success"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg><span class="visually-hidden">Confermato</span></li>
+      <li class="active">Secondo contenuto <span class="visually-hidden">Attivo</span></li>
+      <li>Terzo contenuto</li>
+    </ul>
+    <span class="steppers-index" aria-hidden="true">2/6</span>
+  </div>
   <div class="steppers-content" aria-live="polite">
     <!-- Esempio START -->
     <p>Contenuto di esempio dello step corrente</p>
@@ -270,12 +278,14 @@ Per ottenere una versione scura degli Stepper è sufficiente aggiungere la class
 {% capture example %}
 
 <div class="steppers bg-dark">
-  <ul class="steppers-header">
-    <li class="confirmed">Primo contenuto <svg class="icon steppers-success"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg><span class="visually-hidden">Confermato</span></li>
-    <li class="active">Secondo contenuto <span class="visually-hidden">Attivo</span></li>
-    <li>Terzo contenuto</li>
-    <li class="steppers-index" aria-hidden="true">2/6</li>
-  </ul>
+  <div class="steppers-header">
+    <ul>
+      <li class="confirmed">Primo contenuto <svg class="icon steppers-success"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg><span class="visually-hidden">Confermato</span></li>
+      <li class="active">Secondo contenuto <span class="visually-hidden">Attivo</span></li>
+      <li>Terzo contenuto</li>
+    </ul>
+    <span class="steppers-index" aria-hidden="true">2/6</span>
+  </div>
   <div class="steppers-content" aria-live="polite">
     <!-- Esempio START -->
     <p>Contenuto di esempio dello step corrente</p>
@@ -295,32 +305,38 @@ Per ottenere una versione scura degli Stepper è sufficiente aggiungere la class
 
 <!-- Solo testo -->
 <div class="steppers bg-dark">
-  <ul class="steppers-header">
-    <li class="confirmed">Primo contenuto <svg class="icon steppers-success"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg><span class="visually-hidden">Confermato</span></li>
-    <li class="active">Secondo contenuto <span class="visually-hidden">Attivo</span></li>
-    <li>Terzo contenuto</li>
-    <li class="steppers-index" aria-hidden="true">2/6</li>
-  </ul>
+  <div class="steppers-header">
+    <ul>
+      <li class="confirmed">Primo contenuto <svg class="icon steppers-success"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg><span class="visually-hidden">Confermato</span></li>
+      <li class="active">Secondo contenuto <span class="visually-hidden">Attivo</span></li>
+      <li>Terzo contenuto</li>
+    </ul>
+    <span class="steppers-index" aria-hidden="true">2/6</span>
+  </div>
 </div>
 
 <!-- Testo e icone -->
 <div class="steppers bg-dark">
-  <ul class="steppers-header">
-    <li class="confirmed"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-calendar"></use></svg>Primo contenuto <svg class="icon steppers-success"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg><span class="visually-hidden">Confermato</span></li>
-    <li class="active"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-lock"></use></svg>Secondo contenuto <span class="visually-hidden">Attivo</span></li>
-    <li><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-settings"></use></svg>Terzo contenuto</li>
-    <li class="steppers-index" aria-hidden="true">2/6</li>
-  </ul>
+  <div class="steppers-header">
+    <ul>
+      <li class="confirmed"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-calendar"></use></svg>Primo contenuto <svg class="icon steppers-success"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg><span class="visually-hidden">Confermato</span></li>
+      <li class="active"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-lock"></use></svg>Secondo contenuto <span class="visually-hidden">Attivo</span></li>
+      <li><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-settings"></use></svg>Terzo contenuto</li>
+    </ul>
+    <span class="steppers-index" aria-hidden="true">2/6</span>
+  </div>
 </div>
 
 <!-- Numeri -->
 <div class="steppers bg-dark">
-  <ul class="steppers-header">
-    <li class="confirmed"><span class="steppers-number"><svg class="icon steppers-success"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg><span class="visually-hidden">Confermato Step 1</span></span>Primo contenuto</li>
-    <li class="active no-line"><span class="steppers-number"><span class="visually-hidden">Attivo Step </span>2</span>Secondo contenuto</li>
-    <li><span class="steppers-number"><span class="visually-hidden">Step </span>3</span>Terzo contenuto</li>
-    <li class="steppers-index" aria-hidden="true"><span>1</span> <span class="active">2</span> <span>3</span> <span>4</span></li>
-  </ul>
+  <div class="steppers-header">
+    <ul>
+      <li class="confirmed"><span class="steppers-number"><svg class="icon steppers-success"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg><span class="visually-hidden">Confermato Step 1</span></span>Primo contenuto</li>
+      <li class="active no-line"><span class="steppers-number"><span class="visually-hidden">Attivo Step </span>2</span>Secondo contenuto</li>
+      <li><span class="steppers-number"><span class="visually-hidden">Step </span>3</span>Terzo contenuto</li>
+    </ul>
+    <span class="steppers-index" aria-hidden="true"><span>1</span> <span class="active">2</span> <span>3</span> <span>4</span></span>
+  </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
