@@ -1,9 +1,5 @@
 import BaseComponent from 'bootstrap/js/src/base-component.js'
-import {
-  getElementFromSelector,
-  isVisible,
-  reflow,
-} from 'bootstrap/js/src/util'
+import { getElementFromSelector, isVisible, reflow } from 'bootstrap/js/src/util'
 import Manipulator from 'bootstrap/js/src/dom/manipulator'
 import EventHandler from 'bootstrap/js/src/dom/event-handler'
 import { enableDismissTrigger } from 'bootstrap/js/src/util/component-functions'

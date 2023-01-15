@@ -23,17 +23,16 @@ const SELECTOR_DATA_TOGGLE = '[data-bs-toggle="tab"], [data-bs-toggle="pill"], [
 const SELECTOR_DATA_TOGGLE_ACTIVE = `.${CLASS_NAME_ACTIVE}[data-bs-toggle="tab"], .${CLASS_NAME_ACTIVE}[data-bs-toggle="pill"], .${CLASS_NAME_ACTIVE}[data-bs-toggle="list"]`
 
 class Tab extends BSTab {
-
   constructor(element) {
     super(element)
   }
 
   _keydown(event) {
-    if (!([ARROW_LEFT_KEY, ARROW_RIGHT_KEY, ARROW_UP_KEY, ARROW_DOWN_KEY, ENTER_KEY, SPACE_BAR_KEY].includes(event.key))) {
+    if (![ARROW_LEFT_KEY, ARROW_RIGHT_KEY, ARROW_UP_KEY, ARROW_DOWN_KEY, ENTER_KEY, SPACE_BAR_KEY].includes(event.key)) {
       return
     }
 
-    event.stopPropagation()// stopPropagation/preventDefault both added to support up/down keys without scrolling the page
+    event.stopPropagation() // stopPropagation/preventDefault both added to support up/down keys without scrolling the page
     event.preventDefault()
 
     if (event.key === ENTER_KEY || event.key === SPACE_BAR_KEY) {
@@ -42,12 +41,16 @@ class Tab extends BSTab {
     }
 
     const isNext = [ARROW_RIGHT_KEY, ARROW_DOWN_KEY].includes(event.key)
-    const nextActiveElement = getNextActiveElement(this._getChildren().filter(element => !isDisabled(element)), event.target, isNext, true)
+    const nextActiveElement = getNextActiveElement(
+      this._getChildren().filter((element) => !isDisabled(element)),
+      event.target,
+      isNext,
+      true
+    )
     if (nextActiveElement) {
       nextActiveElement.focus({ preventScroll: true })
     }
   }
-
 }
 
 EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function (event) {

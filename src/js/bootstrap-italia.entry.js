@@ -7,17 +7,17 @@ import * as icons from './icons'
 
 import {
   // Bootstrap
-  Alert, 
-  Button, 
-  Carousel, 
-  Collapse, 
-  Dropdown, 
-  Modal, 
-  Offcanvas, 
-  Popover, 
-  ScrollSpy, 
-  Tab, 
-  Toast, 
+  Alert,
+  Button,
+  Carousel,
+  Collapse,
+  Dropdown,
+  Modal,
+  Offcanvas,
+  Popover,
+  ScrollSpy,
+  Tab,
+  Toast,
   Tooltip,
   // Extra components
   Dimmer,
