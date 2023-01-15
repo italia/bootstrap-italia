@@ -150,6 +150,7 @@ Tabelle ridisegnate e ricostruite con variabili CSS per un maggior controllo sul
 
 - <span class="bg-danger text-white px-2">Breaking</span> Le classi di layout specifiche per i form sono state eliminate. Utilizza le griglie e le utilities invece di `.form-row` o `.form-inline`.
 - <span class="bg-danger text-white px-2">Breaking</span> La classe `.form-text` non specifica più il display, permettendo la creazione di testo accessorio di tipo inline o block a seconda della necessità, semplicemente utilizzando `<span>` o `<div>`.
+- <span class="bg-danger text-white px-2">Breaking</span> Se si migra dalla 1.x alla versione 2.2.0 in poi, assicurarsi di aggiungere alla label su input la classe `active` per impedire la sovrapposizione della label al campo stesso nel caso in cui si utilizza l’attributo placeholder o l’input parte già valorizzato.
 
 ## Javascript
 
