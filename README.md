@@ -8,7 +8,7 @@
 
 _🇬🇧 [English version](README.EN.md)_
 
-_📦 [Vai alla versione 1.x di Bootstrap Italia (basata su Bootstrap 4)](https://github.com/italia/bootstrap-italia/tree/1.x)_
+_⚠️ [La versione 1.x di Bootstrap Italia (basata su Bootstrap 4) è stata ufficialmente deprecata](https://github.com/italia/bootstrap-italia/tree/1.x)_
 
 Bootstrap Italia è un tema basato su [Bootstrap 5](https://getbootstrap.com/docs/5.1/getting-started/introduction/) conforme alle [linee guida di design per i siti internet e i servizi digitali delle Pubbliche Amministrazioni](https://docs.italia.it/italia/design/lg-design-servizi-web/).
 
