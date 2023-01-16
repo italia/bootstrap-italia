@@ -3,7 +3,7 @@ import { default as BaseComponent } from 'bootstrap/js/dist/base-component'
 declare class Dimmer extends BaseComponent {
   static get NAME(): string
 
-  constructor(element: any)
+  constructor(element: HTMLElement)
 
   _isShown: boolean
   _isTransitioning: boolean
@@ -12,7 +12,7 @@ declare class Dimmer extends BaseComponent {
 
   hide(): void
 
-  _isAnimated(): any
+  _isAnimated(): boolean
 
   _showElement(): void
 

@@ -1,7 +1,7 @@
 declare class HeaderSticky {
-  static getOrCreateInstance(element: any): any
+  static getOrCreateInstance(element: HTMLElement): any
 
-  constructor(element: any)
+  constructor(element: HTMLElement)
 
   _element: any
   _elementObj: any

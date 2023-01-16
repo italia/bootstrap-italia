@@ -4,7 +4,7 @@ import { InputLabel } from './input-label'
 declare class InputNumber extends BaseComponent {
   static get NAME(): string
 
-  constructor(element: any)
+  constructor(element: HTMLElement)
 
   _wrapperElement: any
   _label: InputLabel

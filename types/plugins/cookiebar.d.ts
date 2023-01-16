@@ -18,18 +18,18 @@ declare class Cookiebar extends BaseComponent {
 
   static _getCookieEU(): string
 
-  constructor(element: any)
+  constructor(element: HTMLElement)
 
-  _isShown: any
+  _isShown: boolean
   _isTransitioning: boolean
 
   show(): void
 
   hide(): void
 
-  accept(element: any): void
+  accept(element: HTMLElement): void
 
-  _isAnimated(): any
+  _isAnimated(): boolean
 
   _showElement(): void
 
@@ -37,11 +37,11 @@ declare class Cookiebar extends BaseComponent {
 
   _setCookieEU(): void
 
-  _getRootElement(element: any): any
+  _getRootElement(element: HTMLElement): any
 
-  _triggerCloseEvent(element: any): any
+  _triggerCloseEvent(element: HTMLElement): any
 
-  _removeElement(element: any): void
+  _removeElement(element: HTMLElement): void
 }
 
 export { Cookiebar }

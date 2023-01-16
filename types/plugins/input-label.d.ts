@@ -3,7 +3,7 @@ declare class InputLabel {
 
   static getInputFromLabel: (labelElement: any) => Element
 
-  constructor(element: any)
+  constructor(element: HTMLElement)
 
   _element: any
 

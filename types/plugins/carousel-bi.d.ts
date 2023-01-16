@@ -4,7 +4,7 @@ import Splide from '@splidejs/splide'
 declare class CarouselBI extends BaseComponent {
   static get NAME(): string
 
-  constructor(element: any)
+  constructor(element: HTMLElement)
 
   _config: {
     slideFocus: boolean

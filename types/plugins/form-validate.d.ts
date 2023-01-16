@@ -1,7 +1,7 @@
 import JustValidate from 'just-validate'
 
 export class FormValidate {
-  constructor(selector: any, config: any)
+  constructor(selector: HTMLElement, config: any)
 
   formSelector: any
   target: any

@@ -3,7 +3,7 @@ import { default as BaseComponent } from 'bootstrap/js/dist/base-component'
 declare class NavScroll extends BaseComponent {
   static get NAME(): string
 
-  constructor(element: any, config: any)
+  constructor(element: HTMLElement, config: any)
 
   _config: any
   _togglerElement: any

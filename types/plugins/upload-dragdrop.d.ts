@@ -3,7 +3,7 @@ import { default as BaseComponent } from 'bootstrap/js/dist/base-component'
 declare class UploadDragDrop extends BaseComponent {
   static get NAME(): string
 
-  constructor(element: any)
+  constructor(element: HTMLElement)
 
   _donut: any
 

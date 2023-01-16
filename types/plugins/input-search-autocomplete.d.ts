@@ -4,7 +4,7 @@ import { InputLabel } from './input-label'
 declare class InputSearch extends BaseComponent {
   static get NAME(): string
 
-  constructor(element: any, config: any)
+  constructor(element: HTMLElement, config: any)
 
   _config: any
   _items: any[]

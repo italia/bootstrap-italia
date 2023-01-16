@@ -9,20 +9,20 @@ import { default as BaseComponent } from 'bootstrap/js/dist/base-component'
 declare class Notification extends BaseComponent {
   static get NAME(): string
 
-  constructor(element: any, config: any)
+  constructor(element: HTMLElement, config: any)
 
   _config: any
-  _isShown: any
+  _isShown: boolean
   _isTransitioning: boolean
   _toId: any
 
-  show(timeout: any, relatedTarget: any): void
+  show(timeout: number, relatedTarget: string | Element): void
 
   hide(): void
 
-  toggle(relatedTarget: any): void
+  toggle(relatedTarget: string | Element): void
 
-  _isAnimated(): any
+  _isAnimated(): boolean
 
   _showElement(timeout: any): void
 
@@ -30,7 +30,7 @@ declare class Notification extends BaseComponent {
 
   _getConfig(config: any): any
 
-  _getElementTimeout(relatedTarget: any): any
+  _getElementTimeout(relatedTarget: string | Element): any
 
   _setTimeout(duration: any, callback: any): void
 

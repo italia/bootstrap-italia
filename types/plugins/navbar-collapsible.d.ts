@@ -3,9 +3,9 @@ import { default as BaseComponent } from 'bootstrap/js/dist/base-component'
 declare class NavBarCollapsible extends BaseComponent {
   static get NAME(): string
 
-  constructor(element: any)
+  constructor(element: HTMLElement)
 
-  _isShown: any
+  _isShown: boolean
   _isTransitioning: boolean
   _isMobile: boolean
   _isKeyShift: boolean
