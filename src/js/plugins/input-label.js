@@ -38,8 +38,8 @@ class InputLabel {
       //script disabled if active on init
       this._labelOut()
       this._labelOver()
-      this._bindEvents()
     }
+    this._bindEvents()
   }
 
   _bindEvents() {
