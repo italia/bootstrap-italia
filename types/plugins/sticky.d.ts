@@ -3,9 +3,9 @@ import { default as BaseComponent } from 'bootstrap/js/dist/base-component'
 declare class Sticky extends BaseComponent {
   static get NAME(): string
 
-  constructor(element: HTMLElement, config: any)
+  constructor(element: HTMLElement, config?: Partial<Carousel.Options>)
 
-  _config: any
+  _config: Partial<Carousel.Options>;
   _isSticky: boolean
   _wrapper: HTMLDivElement
   _stickyTarget: any
@@ -60,6 +60,38 @@ declare class Sticky extends BaseComponent {
    * returns the top position of the element considering the config and the other sticky elements
    */
   _getPositionTop(): any
+}
+
+declare namespace Sticky {
+  interface Options {
+    /**
+     * Position type: 'sticky' or 'fixed'.
+     *
+     * @default 'sticky'
+     */
+    positionType: 'sticky' | string;
+
+    /**
+     * Class name for sticky.
+     *
+     * @default ''
+     */
+    stickyClassName: string;
+
+    /**
+     * If set to true, Sticky element will be stackable
+     *
+     * @default false
+     */
+    stackable: boolean | false;
+
+    /**
+     * Padding top value
+     *
+     * @default 0
+     */
+    paddingTop: number;
+  }
 }
 
 export { Sticky }
