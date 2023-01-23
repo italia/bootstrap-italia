@@ -68,6 +68,12 @@ description: Gli "Stepper" mostrano l'avanzamento del progresso di una procedura
 Il contenitore degli Stepper ha sempre una classe `.steppers`. La sua intestazione è contenuta in una lista `<ul>` all'interno della quale i singoli passi (o _step_) sono rappresentati da elementi `<li>`.
 
 {% capture callout %}
+Breaking feature dalla versione **2.3.0**
+
+L'elemento con classe `.steppers-index` adesso è diventato uno `<span>` collocato fuori dalla lista `<ul>`.
+{% endcapture %}{% include callout.html content=callout type="danger" %}
+
+{% capture callout %}
 L'aspetto della modalità mobile degli Steppers è differente rispetto a quello desktop. Se si sta consultando questa documentazione su un PC desktop, per visualizzare correttamente gli esempi seguenti in formato mobile sarà necessario ridimensionare la finestra del browser al di sotto dei 992 pixel.
 {% endcapture %}{% include callout.html content=callout type="info" %}
 
