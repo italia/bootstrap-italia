@@ -98,7 +98,7 @@ Scopri come gli aspetti della griglia di Bootstrap funzionano su più dispositiv
         <td>540px</td>
         <td>720px</td>
         <td>960px</td>
-        <td>1140px</td>
+        <td>1184px</td>
         <td>1320px</td>
       </tr>
       <tr>
