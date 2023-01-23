@@ -70,7 +70,7 @@ $gray-tertiary: hsb(205, 35, 54) !default;
 $gray-quaternary: hsb(238, 1, 100) !default;
 $gray-border: hsl(210, 4%, 78%) !default; // color-border-subtle
 $gray-disabled: hsl(210, 3%, 85%) !default; // color-background-disabled
-$gray-label-disabled: hsl(210, 12%, 52%) !default; // color-text-disabled
+$gray-label-disabled: hsl(210, 12%, 44%) !default; // color-text-disabled
 $gray-border-disabled: $gray-disabled !default; // color-border-disabled
 
 $secondary: $gray-secondary !default;
@@ -412,7 +412,6 @@ $color-text-muted: hsl(210, 17%, 44%); // color-slate-44
 $color-text-base: $gray-900; // color-gray-10
 $color-text-secondary: hsl(210, 33%, 28%); // color-slate-28
 $color-text-warning: hsl(36, 100%, 30%); // color-orange-30
-
 
 // SPECIFIC TOKENS =========================================================
 //
