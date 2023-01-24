@@ -13,8 +13,8 @@ const NAME = 'progressdonut'
 const SELECTOR_DONUT = '[data-bs-progress-donut]'
 
 const Default = {
-  color: '#0073E6',
-  trailColor: '#D4E9FF',
+  color: '#5C6F82',
+  trailColor: '#D9DADB',
   // This has to be the same size as the maximum width to
   // prevent clipping
   strokeWidth: 24,
