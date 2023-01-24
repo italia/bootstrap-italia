@@ -133,12 +133,17 @@
   }
 }
 
+.btn:disabled:hover,
+.btn.disabled:hover {
+  cursor: not-allowed;
+}
+
 .btn-primary {
   &:disabled,
   &.disabled {
-    color: $gray-label-disabled;
-    background-color: $gray-disabled;
-    border-color: $gray-border-disabled;
+    // color: $gray-label-disabled;
+    // background-color: $gray-disabled;
+    // border-color: $gray-border-disabled;
     //progress bar button
     &.btn-progress {
       background-color: hsl(210, 76%, 67%); // UI kit - missing token
@@ -203,7 +208,6 @@
   }
   .btn-outline-secondary {
     @include button-outline-variant($white, color-hover($white), transparent, color-hover($white));
-    box-shadow: none;
     &:hover {
       box-shadow: none;
     }
