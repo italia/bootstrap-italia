@@ -54,7 +54,7 @@
       margin-left: $v-gap * 4;
     }
     &:not(.cookiebar-confirm) {
-      color: $neutral-2-a1;
+      color: $neutral-2-a1; // Missing in the UI kit
     }
   }
 }

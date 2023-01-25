@@ -25,6 +25,10 @@ class InputLabel {
     return NAME
   }
 
+  static getInputFromLabel = (labelElement) => {
+    return document.querySelector('#' + labelElement.getAttribute('for'))
+  }
+
   // Public
 
   // Private
@@ -34,11 +38,14 @@ class InputLabel {
       //script disabled if active on init
       this._labelOut()
       this._labelOver()
-      this._bindEvents()
     }
+    this._bindEvents()
   }
 
   _bindEvents() {
+    if (['date', 'time'].includes(this._element.getAttribute('type'))) {
+      return
+    }
     if (this._element.getAttribute('type') === 'file') {
       EventHandler.on(this._element, EVENT_BLUR, () => {
         this._labelOut()

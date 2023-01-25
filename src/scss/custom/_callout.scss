@@ -1,6 +1,6 @@
 .callout {
   padding: 2.5rem 2.222rem;
-  border: 1px solid $neutral-1-a7;
+  border: 2px solid $color-border-secondary;
   position: relative;
   max-width: 60ch;
   margin: 1.75rem 0 1rem;
@@ -9,7 +9,7 @@
   // Highlights version
   &.callout-highlight {
     border: none;
-    border-left: 2px solid rgba($gray-border-disabled, 1);
+    border-left: 2px solid $color-border-secondary;
     border-radius: 0;
     padding: 0 2.222rem;
     .callout-title {
@@ -20,22 +20,22 @@
       border-color: rgba($success, 1);
     }
     &.warning {
-      border-color: rgba($warning, 1);
+      border-color: $color-border-warning;
     }
     &.danger {
       border-color: rgba($danger, 1);
     }
     &.important {
-      border-color: rgba($complementary-3-a9, 1);
+      border-color: $success;
     }
     &.note {
-      border-color: rgba($primary-a9, 1);
+      border-color: $primary;
     }
   }
 
   // More version
   &.callout-more {
-    background: #fafaf7;
+    background: #f9f9f5;
     border: none;
     border-radius: 0;
     padding: 2.222rem 2.222rem;
@@ -67,7 +67,7 @@
     p {
       font-size: 0.778rem;
       line-height: 1.333rem;
-      color: $neutral-1-a10;
+      color: $color-text-secondary; // UI kit
     }
     // title
     .callout-title {
@@ -102,7 +102,7 @@
   &.warning {
     border-color: $warning;
     .callout-title {
-      color: $warning;
+      color: $color-text-warning;
       .icon {
         fill: $warning;
       }
@@ -124,47 +124,47 @@
     }
   }
   &.important {
-    border-color: $complementary-3-a9;
+    border-color: $success;
     .callout-title {
-      color: $complementary-3-a9;
+      color: $success;
       .icon {
-        fill: $complementary-3-a9;
+        fill: $success;
       }
       span {
-        border-color: $complementary-3-a9;
+        border-color: $success;
       }
     }
   }
   &.note {
-    border-color: $primary-a9;
+    border-color: $primary;
     .callout-title {
-      color: $primary-a9;
+      color: $primary;
       .icon {
-        fill: $primary-a9;
+        fill: $primary;
       }
       span {
-        border-color: $primary-a9;
+        border-color: $primary;
       }
     }
     .collapse-div .collapse-header .callout-more-toggle {
-      color: $primary-a9;
+      color: $primary;
       &:active,
       &:hover {
-        color: $primary-a9;
+        color: $primary;
       }
       span {
-        border-color: $primary-a9;
+        border-color: $primary;
         &:before,
         &:after {
-          background: $primary-a9;
+          background: $primary;
         }
       }
     }
     a {
-      color: $primary-a9;
+      color: $primary;
     }
     .icon {
-      fill: $primary-a9;
+      fill: $primary;
     }
   }
 
@@ -175,9 +175,9 @@
     font-size: 1rem;
     margin-right: 2.222rem;
     letter-spacing: 0.06rem;
-    color: $neutral-1-a7;
+    color: $color-text-secondary; // UI kit
     .icon {
-      fill: $neutral-1-a7;
+      fill: $color-text-secondary; // UI kit
       margin-right: 0.444rem;
     }
   }
@@ -197,7 +197,7 @@
   p {
     font-family: $font-family-serif;
     font-size: 0.889rem;
-    color: $neutral-1-a7;
+    color: $color-text-secondary; // UI kit
     &:last-child {
       margin: 0;
     }

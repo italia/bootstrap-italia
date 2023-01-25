@@ -7,7 +7,7 @@ export { default as NavBarCollapsible } from './plugins/navbar-collapsible'
 export { default as Accordion } from './plugins/accordion'
 export { default as NavScroll } from './plugins/navscroll'
 export { default as Sticky } from './plugins/sticky'
-export { default as TrackFocus } from './plugins/track-focus'
+export { default as HeaderSticky } from './plugins/header-sticky'
 export { FormValidate, ValidatorSelectAutocomplete } from './plugins/form-validate'
 export { default as Input } from './plugins/input'
 export { default as SelectAutocomplete } from './plugins/select-autocomplete'
@@ -35,10 +35,7 @@ export { default as ScrollSpy } from './plugins/scrollspy'
 export { default as Tab } from './plugins/tab'
 export { default as Toast } from './plugins/toast'
 export { default as Tooltip } from './plugins/tooltip'
+export { default as loadFonts } from './plugins/fonts-loader'
 
 /* Side effects */
-import './plugins/fonts-loader.js'
-import './plugins/header-sticky'
-import BOOTSTRAP_ITALIA_VERSION from './version'
-
-window.BOOTSTRAP_ITALIA_VERSION = BOOTSTRAP_ITALIA_VERSION
+export { default as init } from './plugins/init'

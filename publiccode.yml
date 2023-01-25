@@ -26,7 +26,7 @@ description:
       Completamente **open-source**, costruita sulle fondamenta di [Bootstrap
       4.6.1](https://getbootstrap.com/docs/4.6/getting-started/introduction/ "Repository GitHub di Bootstrap") per la versione 1
       e la versione [Bootstrap
-      5.1.3](https://getbootstrap.com/docs/5.1/getting-started/introduction/ "Repository GitHub di Bootstrap") per la versione 2 , di cui
+      5.2.3](https://getbootstrap.com/docs/5.1/getting-started/introduction/ "Repository GitHub di Bootstrap") per la versione 2 , di cui
       eredita tutte le funzionalità, componenti, griglie e classi di utilità,
       personalizzandole secondo le indicazioni delle "[Linee guida di design per i siti internet e i servizi digitali della
       Pubblica
@@ -72,8 +72,8 @@ maintenance:
 name: Bootstrap Italia
 platforms:
   - web
-releaseDate: '2022-10-06'
+releaseDate: '2023-01-01'
 roadmap: 'https://designers.italia.it/piano-attivita/'
 softwareType: library
-softwareVersion: v2.0.6
+softwareVersion: v2.2.0
 url: 'https://github.com/italia/bootstrap-italia'

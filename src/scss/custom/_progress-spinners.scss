@@ -34,15 +34,15 @@
   width: $v-gap * 6;
   height: $v-gap * 6;
   border-radius: 50%;
-  border: 4px solid tint-color($primary-a1, 4);
+  border: 4px solid $color-background-secondary-lighter; // UI Kit
   //spinner active state
   &.progress-spinner-active {
     animation: spinnerAnim 0.75s linear infinite;
   }
   //standard spinner active state
   &.progress-spinner-active:not(.progress-spinner-double) {
-    border-color: $primary;
-    border-bottom-color: tint-color($primary-a1, 4);
+    border-color: $secondary;
+    border-bottom-color: $color-background-secondary-lighter;
   }
   //small size
   &.size-sm {
@@ -92,7 +92,7 @@
         display: inline-block;
         transform: rotate(45deg);
         border-radius: 50%;
-        border: 4px solid $primary;
+        border: 4px solid $secondary;
         border-right: 4px solid transparent;
         border-bottom: 4px solid transparent;
         width: 100%;

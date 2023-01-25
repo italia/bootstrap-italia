@@ -15,8 +15,10 @@ import SelectorEngine from 'bootstrap/js/src/dom/selector-engine'
 const NAME = 'transfer'
 const DATA_KEY = 'bs.transfer'
 const EVENT_KEY = `.${DATA_KEY}`
-//const DATA_API_KEY = '.data-api'
+const DATA_API_KEY = '.data-api'
 
+const EVENT_CLICK_DATA_API = `click${EVENT_KEY}${DATA_API_KEY}`
+const EVENT_KEYUP_DATA_API = `keyup${EVENT_KEY}${DATA_API_KEY}`
 //const EVENT_SCROLL = `scroll${EVENT_KEY}`
 const EVENT_CLICK = `click${EVENT_KEY}`
 
@@ -258,8 +260,15 @@ class Transfer extends BaseComponent {
  * ------------------------------------------------------------------------
  */
 
-SelectorEngine.find(SELECTOR_BLOCK).forEach((block) => {
+/*SelectorEngine.find(SELECTOR_BLOCK).forEach((block) => {
   Transfer.getOrCreateInstance(block)
+})*/
+
+EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_BLOCK + ' .form-check label', function () {
+  Transfer.getOrCreateInstance(this.closest(SELECTOR_BLOCK))
+})
+EventHandler.on(document, EVENT_KEYUP_DATA_API, SELECTOR_BLOCK + ' .form-check label', function () {
+  Transfer.getOrCreateInstance(this.closest(SELECTOR_BLOCK))
 })
 
 export default Transfer

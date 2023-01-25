@@ -22,9 +22,9 @@ $arrow-size: $font-size-base * 0.5;
 
 //collapse wrapper
 .accordion {
-  border-bottom: 1px solid $gray-100;
+  border-bottom: 1px solid $gray-border; // UI kit;
   .accordion {
-    border: 1px solid $gray-100;
+    border: 1px solid $gray-border; // UI kit;
     border-top: 0;
   }
 
@@ -106,7 +106,7 @@ $arrow-size: $font-size-base * 0.5;
     text-align: left;
     border: 0;
     background-color: transparent;
-    border-top: 1px solid $gray-100;
+    border-top: 1px solid $gray-border; // UI kit;
     box-shadow: none;
     padding: 14px 24px;
     cursor: pointer;
@@ -129,7 +129,7 @@ $arrow-size: $font-size-base * 0.5;
       width: 1.5rem;
       height: auto;
       line-height: 0.1rem;
-      color: $primary-c5;
+      color: $primary; // UI kit
       transition: transform 0.3s;
       background-image: none;
       transform: scaleY(-1);
@@ -144,7 +144,7 @@ $arrow-size: $font-size-base * 0.5;
     &:active,
     &:hover,
     &:focus {
-      border-top-color: $gray-100 !important;
+      border-top-color: $gray-border; // UI kit !important;
     }
   }
 }

@@ -8,7 +8,7 @@
 
 _🇮🇹 [Versione in italiano](README.md)_
 
-_📦 [Go to Bootstrap Italia 1.x version (based on Bootstrap 4)](https://github.com/italia/bootstrap-italia/tree/1.x)_
+_⚠️ [Bootstrap Italia 1.x version (based on Bootstrap 4) has been marked as deprecated](https://github.com/italia/bootstrap-italia/tree/1.x)_
 
 New Bootstrap Italia version is a [Bootstrap 5](https://getbootstrap.com/docs/5.1/getting-started/introduction/) theme to create responsive web apps to make Italian public digital services consistent, accessible and simple to use.
 

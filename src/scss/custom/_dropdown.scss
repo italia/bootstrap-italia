@@ -173,13 +173,13 @@
 
   //dark version
   &.dark {
-    background-color: $neutral-1-a8;
+    background-color: $neutral-1-a8; // Missing in the UI kit
     .link-list-wrapper .link-list-heading {
       color: #fff;
     }
     .link-list-wrapper ul {
       span.divider {
-        background: #2e465e;
+        background: #2e465e; // Missing in the UI kit
       }
 
       li {
@@ -191,19 +191,19 @@
           color: #fff;
         }
         a:not(.active):not(.disabled):hover i {
-          color: $analogue-2-a4;
+          color: $analogue-2-a4; // Missing in the UI kit
         }
         a.disabled span {
-          color: $neutral-1-a4;
+          color: $neutral-1-a4; // Missing in the UI kit
         }
         a.active span {
-          color: $cyan;
+          color: $cyan; // Missing in the UI kit
         }
       }
     }
     //notch
     &:before {
-      background-color: $neutral-1-a8;
+      background-color: $neutral-1-a8; // Missing in the UI kit
     }
   }
   &.show {

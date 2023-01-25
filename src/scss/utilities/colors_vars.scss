@@ -5,15 +5,15 @@
 $black: hsl(0, 0%, 0%) !default;
 $white: hsl(0, 0%, 100%) !default;
 
-$gray-100: hsb(225, 0, 90) !default;
-$gray-200: hsb(225, 0, 80) !default;
-$gray-300: hsb(225, 0, 70) !default;
-$gray-400: hsb(225, 0, 60) !default;
-$gray-500: hsb(225, 0, 50) !default;
-$gray-600: hsb(225, 0, 40) !default;
-$gray-700: hsb(225, 0, 30) !default;
-$gray-800: hsb(225, 0, 20) !default;
-$gray-900: hsb(225, 0, 10) !default;
+$gray-100: hsl(0, 0%, 96%) !default; // color-gray-96
+$gray-200: hsl(0, 0%, 90%) !default; // color-gray-90
+$gray-300: hsl(0, 0%, 83%) !default; // color-gray-83
+$gray-400: hsl(0, 0%, 64%) !default; // color-gray-64
+$gray-500: hsl(0, 0%, 45%) !default; // color-gray-45
+$gray-600: hsl(0, 0%, 32%) !default; // color-gray-32
+$gray-700: hsl(0, 0%, 25%) !default; // color-gray-25
+$gray-800: hsl(0, 0%, 15%) !default; // color-gray-15
+$gray-900: hsl(0, 0%, 10%) !default; // color-gray-10
 
 $grays: () !default;
 $grays: map-merge(
@@ -39,38 +39,39 @@ $grays: map-merge(
 $primary-h: 210 !default;
 $primary-s: 100 !default;
 $primary-b: 80 !default;
+$primary-l: 40 !default; // Kit UI
 
-$primary: hsb($primary-h, $primary-s, $primary-b) !default;
+$primary: hsl(210, 100%, 40%) !default; // color-blue-40
 
 $indigo: hsb(243, 70, 100) !default;
 $purple: hsb(243, 40, 100) !default;
 $pink: hsb(350, 30, 100) !default;
-$red: hsb(351, 75, 97) !default;
-$orange: hsb(36, 100, 100) !default;
+$red: hsl(350, 60%, 50%) !default; // color-red-50
+$orange: hsl(36, 100%, 30%) !default; // color-orange-30
 $yellow: hsb(44, 55, 100) !default;
-$green: hsb(159, 100, 80) !default;
-$teal: hsb(178, 95, 85) !default;
+$green: hsl(160, 100%, 25%) !default; // color-emerald-25
+$teal: hsl(178, 90%, 32%) !default;
 $cyan: hsb(178, 100, 100) !default;
 $blue: hsb(210, 100, 90) !default;
 $light: hsb(255, 5, 95) !default;
-$dark: hsb(210, 70, 30) !default;
+$dark: hsl(210, 54%, 20%) !default; // color-slate-20
 
 $yiq-text-light: $white !default;
 $yiq-text-dark: $black !default;
 
-$red-accessible: hsb(351, 75, 85) !default;
-$orange-accessible: hsb(36, 100, 65) !default;
+$red-accessible: $red !default;
+$orange-accessible: $orange !default;
 $yellow-accessible: hsb(44, 100, 59) !default;
-$green-accessible: hsb(159, 100, 53) !default;
+$green-accessible: $green !default;
 
 $gray-primary: hsb(210, 38.9, 44.3) !default;
-$gray-secondary: hsb(210, 29, 51) !default;
+$gray-secondary: hsl(210, 17%, 44%) !default; // color-slate-44
 $gray-tertiary: hsb(205, 35, 54) !default;
 $gray-quaternary: hsb(238, 1, 100) !default;
-$gray-border: hsb(240, 1, 70) !default;
-$gray-disabled: hsb(225, 5, 95) !default;
-$gray-label-disabled: hsb(222, 5, 79) !default;
-$gray-border-disabled: hsb(224, 8, 95) !default;
+$gray-border: hsl(210, 4%, 78%) !default; // color-border-subtle
+$gray-disabled: hsl(210, 3%, 85%) !default; // color-background-disabled
+$gray-label-disabled: hsl(210, 12%, 44%) !default; // color-text-disabled
+$gray-border-disabled: $gray-disabled !default; // color-border-disabled
 
 $secondary: $gray-secondary !default;
 
@@ -102,7 +103,7 @@ $border-color: $gray-border !default;
 
 // Info Colors
 $success: $green-accessible !default;
-$info: $gray-400 !default;
+$info: $secondary !default;
 $warning: $orange-accessible !default;
 $danger: $red-accessible !default;
 
@@ -167,20 +168,20 @@ $neutral-2-b: 95;
 $neutral-2: hsb($neutral-2-h, $neutral-2-s, $neutral-2-b) !default;
 
 // Light Greys A
-$lightgrey-a1: #e8f2fc;
+$lightgrey-a1: hsl(210, 3%, 85%); // progress-background-default
 $lightgrey-a2: #edf5fc;
-$lightgrey-a3: #f2f7fc;
+$lightgrey-a3: hsl(210, 62%, 97%); // color-background-primary-lighter
 $lightgrey-a4: #f5f9fc;
 
 // Light Greys B
-$lightgrey-b1: #e6f0fa;
+$lightgrey-b1: hsl(210, 62%, 97%); // color-background-primary-lighter
 $lightgrey-b2: #ebf2fa;
 $lightgrey-b3: #edf4fa;
 $lightgrey-b4: #f2f6fa;
 
 // Light Greys C
 $lightgrey-c1: #f7f9fa;
-$lightgrey-c2: #f5f6f7;
+$lightgrey-c2: hsl(210, 62%, 97%); // color-background-primary-lighter;
 
 //***********************************************************************
 //********************Primary color variations***************************
@@ -387,3 +388,38 @@ $neutral-2-a4: hsb($neutral-2-h, $neutral-2-s + 2, $neutral-2-b - 45) !default;
 $neutral-2-a5: hsb($neutral-2-h, $neutral-2-s + 2, $neutral-2-b - 60) !default;
 $neutral-2-a6: hsb($neutral-2-h, $neutral-2-s + 2, $neutral-2-b - 75) !default;
 $neutral-2-a7: hsb($neutral-2-h, $neutral-2-s + 4, $neutral-2-b - 85) !default;
+
+//==================== DESIGN TOKENS VARIABLES ============================//
+
+// SEMANTIC TOKENS =========================================================
+
+// Backgrounds
+$color-background-emphasis: hsl(210, 54%, 20%); // color-slate-20
+$color-background-primary-lighter: hsl(210, 62%, 97%); // color-blue-97
+$color-background-secondary-hover: hsl(210, 33%, 28%); // color-slate-28
+$color-background-secondary-lighter: hsl(210, 3%, 85%); // color-slate-85
+$color-background-muted: $gray-100; // color-gray-96
+
+// Borders
+$color-border-secondary: hsl(210, 17%, 44%); // color-slate-44
+$color-border-subtle: hsl(210, 4%, 78%); // color-slate-78
+$color-border-warning: hsl(36, 100%, 30%); // color-orange-30
+
+// Text
+$color-text-primary-active: hsl(210, 100%, 15%); // color-blue-15
+$color-text-primary-hover: hsl(210, 100%, 30%); // color-blue-30
+$color-text-muted: hsl(210, 17%, 44%); // color-slate-44
+$color-text-base: $gray-900; // color-gray-10
+$color-text-secondary: hsl(210, 33%, 28%); // color-slate-28
+$color-text-warning: hsl(36, 100%, 30%); // color-orange-30
+
+// SPECIFIC TOKENS =========================================================
+//
+// Footer
+$footer-top-background: hsl(210, 100%, 30%); // color-blue-30
+$footer-bottom-background: hsl(210, 100%, 20%); // color-blue-20
+
+// Icons
+$icon-primary: $primary;
+$icon-secondary: $secondary;
+$icon-base: $color-text-base;

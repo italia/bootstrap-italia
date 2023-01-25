@@ -15,12 +15,14 @@
         font-weight: $breadcrumb-link-font-weight;
       }
       &.active {
+        color: $color-text-base;
         a {
           font-weight: normal;
           pointer-events: none;
         }
       }
       span.separator {
+        color: $secondary;
         display: inline-block;
         font-weight: $breadcrumb-link-font-weight;
         padding: 0 $breadcrumb-link-x-padding;

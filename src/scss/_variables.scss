@@ -56,8 +56,8 @@ $link-decoration: underline;
 $focus-outline-color: $orange !default;
 
 //skiplinks
-$skiplinks-color: $primary-a12 !default;
-$skiplinks-bg: $analogue-2-b1 !default;
+$skiplinks-color: $primary !default;
+$skiplinks-bg: $color-background-primary-lighter !default;
 
 // Navbar
 $navbar-brand-font-size: 1rem !default;
@@ -140,12 +140,12 @@ $display4-weight: 700;
 $breadcrumb-padding: 0.5em;
 $breadcrumb-bg: transparent !default;
 $breadcrumb-link-font-weight: 600;
-$breadcrumb-link-color: $neutral-1-a7 !default;
+$breadcrumb-link-color: $color-text-secondary !default;
 $breadcrumb-link-x-padding: 0.5em;
-$breadcrumb-bg-dark: $neutral-1-a8 !default;
+$breadcrumb-bg-dark: $neutral-1-a8 !default; // Missing in the UI kit
 $breadcrumb-border-radius: 0;
 $breadcrumb-link-color-dark: $white !default;
-$breadcrumb-icon-color-dark: $analogue-2-b1 !default;
+$breadcrumb-icon-color-dark: $analogue-2-b1 !default; // Missing in the UI kit
 
 //Accordion
 $card-cap-bg: transparent !default;
@@ -170,7 +170,7 @@ $modal-header-padding: 1.5rem !default;
 $modal-inner-padding: 1.5rem !default;
 
 // Carousel
-$carousel-bg: #444e57 !default;
+$carousel-bg: #444e57 !default; // TODO: not used, consider to remove
 $carousel-padding: 3em !default;
 $carousel-control-color: $secondary !default;
 $carousel-control-width: auto !default;
@@ -178,9 +178,9 @@ $carousel-control-opacity: 1 !default;
 $carousel-control-icon-width: 32px !default;
 
 // Inputs
-$input-border: $gray-200 !default;
-$input-label-color: $neutral-1 !default;
-$input-color-placeholder: $gray-500 !default;
+$input-border: $gray-secondary !default;
+$input-label-color: $color-text-base !default; // UI kit
+$input-color-placeholder: $color-text-muted !default; // UI Kit
 $input-focus-border-color: $gray-secondary !default;
 
 //List group
@@ -259,17 +259,17 @@ $navigation-disabled-item-mobile-opacity: 0.6 !default;
 $navigation-hamburger-size: 24px;
 
 // navigation dark theme (mobile)
-$navigation-dark-bg-color: $primary !default;
-$navigation-dark-text-color: $white !default;
-$navigation-dark-bg-color: $primary-b1 !default;
-$navigation-dark-separator-color: $primary-c5 !default;
+$navigation-dark-bg-color: $primary !default; // missing in UI kit
+$navigation-dark-text-color: $white !default; // missing in UI kit
+$navigation-dark-bg-color: $primary-b1 !default; // missing in UI kit
+$navigation-dark-separator-color: $primary-c5 !default; // missing in UI kit
 
 // navigation light theme (desktop)
 $navigation-light-bg-color: $white !default;
 $navigation-light-text-color: $primary !default;
-$navigation-light-megamenu-footer-bg-color: $primary-a7 !default;
+$navigation-light-megamenu-footer-bg-color: $color-background-primary-lighter !default; // UI kit
 $navigation-light-separator-color: $neutral-1-a2 !default;
-$navigation-light-megamenu-separator-color: $primary-c5 !default;
+$navigation-light-megamenu-separator-color: $gray-border !default; // UI kit
 
 //inline
 $inline-menu-line-width: 2px;
@@ -297,7 +297,7 @@ $link-list-checkbox-icon-right: 35px;
 $link-list-toggle-margin: 8px;
 $link-list-icon-v-padding: 5px;
 $link-list-v-padding-l: 0.45em;
-$link-list-hover-color: $primary-a5 !default;
+$link-list-hover-color: $primary-a5 !default; // TODO: Not used, consider to remove it
 
 // Megamenu
 $megamenu-padding-top-desktop: $v-gap * 4;
@@ -311,7 +311,7 @@ $megamenu-heading-text-size: 0.833em;
 $megamenu-heading-margin-top: 5px;
 $megamenu-heading-letter-spacing: 1px;
 $megamenu-link-arrow-size: 0.8em;
-$megamenu-footer-bg-color: $lightgrey-c2 !default;
+$megamenu-footer-bg-color: $color-background-primary-lighter !default; // UI kit
 $megamenu-link-more-link-list-distance-mobile: $v-gap;
 $megamenu-linklist-link-line-height: 1em;
 $megamenu-linklist-link-v-padding: 0.5em;
@@ -321,7 +321,7 @@ $megamenu-linklist-vertical-link-padding: 36px;
 $megamenu-vertical-desription-font-size: 0.889em;
 
 // Linklist footer megamenu
-$link-list-megamenu-footer-bg-color: $neutral-2 !default;
+$link-list-megamenu-footer-bg-color: $neutral-2 !default; // TODO: Not used, consider to remove it
 $link-list-megamenu-footer-link-padding: 16px;
 $link-list-footer-distance-bottom: 0.5rem;
 
@@ -335,15 +335,15 @@ $pager-item-current-color: $primary !default;
 $pager-item-current-border: 1px solid $primary !default;
 $pager-font-size: 0.8888888888888888rem; // 16px
 $pager-font-weight: 600;
-$pager-font-color: $neutral-1-a7 !default;
+$pager-font-color: $secondary !default;
 $pager-hover-color: $primary !default;
 $pager-icon-color: $primary !default;
 $pager-icon-size: 0.7rem;
-$pager-disabled-color: $neutral-2-b2 !default;
+$pager-disabled-color: $gray-label-disabled !default;
 $pager-jump-to-width: 4.5rem;
-$pager-jump-to-color: $neutral-2-b3 !default;
+$pager-jump-to-color: $gray-secondary !default; // Kit UI
 $pager-page-changer-padding: 12px;
-$pager-page-changer-border-bottom: 1px solid $gray-secondary !default;
+$pager-page-changer-border-bottom: 1px solid $gray-secondary !default; // Kit UI
 
 // Sidebar
 $sidebar-heading-font-weight: 600;
@@ -360,12 +360,12 @@ $sidebar-dropdown-line-selection-width: 2px;
 $sidebar-dropdown-line-selection-color: $primary !default;
 $sidebar-submenu-font-size: 0.889em;
 $sidebar-submenu-link-v-padding: 0.45em;
-$sidebar-border-color: $neutral-1-a2 !default;
+$sidebar-border-color: $gray-border !default;
 
 //sidebar dark theme
-$sidebar-dark-bg-color: $neutral-1-a8 !default;
+$sidebar-dark-bg-color: $neutral-1-a8 !default; // Missing in the new UI kit
 $sidebar-dark-text-color: $white !default;
-$sidebar-dark-separator-color: rgba(229, 229, 229, 0.3) !default;
+$sidebar-dark-separator-color: rgba(229, 229, 229, 0.3) !default; // Missing in the new UI kit
 
 // Navscroll
 $navscroll-bg-color: $white !default;
@@ -376,18 +376,18 @@ $navscroll-bottom-box-shadow: 0 0px 30px 5px rgba(0, 0, 0, 0.05) !default;
 $navscroll-primary-font-weight: 600;
 $navscroll-font-size: 1em;
 $navscroll-selection-link-left: $sidebar-dropdown-line-selection-width solid $sidebar-dropdown-line-selection-color !default;
-$navscroll-secondary-active-color: $neutral-1-a10 !default;
+$navscroll-secondary-active-color: $color-text-primary-active !default;
 $navscroll-links-padding: 0.55em;
 $navscroll-bg-color-desk: $white !default;
-$navscroll-line-color: $neutral-1-a2 !default;
+$navscroll-line-color: $gray-border !default; // UI kit
 $navscroll-backbutton-padding: $v-gap * 2 $v-gap * 3;
 $navscroll-backbutton-weight: 600;
 $navscroll-backbutton-margin-top: $v-gap * 3;
 
 //navscroll dark theme mobile
-$navscroll-dark-bg-color: $neutral-1-a8 !default;
+$navscroll-dark-bg-color: $neutral-1-a8 !default; // Missing in the new UI kit
 $navscroll-dark-text-color: $white !default;
-$navscroll-dark-separator-color: rgba(229, 229, 229, 0.3) !default;
+$navscroll-dark-separator-color: rgba(229, 229, 229, 0.3) !default; // Missing in the new UI kit
 
 //dialog
 $dialog-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1) !default;
@@ -397,13 +397,13 @@ $modal-padding-close: $v-gap * 2;
 $modal-heading-size: 0.8333333333333334rem;
 $modal-heading-weight: 600;
 $modal-heading-l-space: 0.5px;
-$modal-heading-color: $neutral-1-a10 !default;
+$modal-heading-color: $color-text-base !default; // UI kit
 $modal-p-size: 0.8888888888888888rem;
 $modal-p-l-height: 1.3333333333333333rem;
 $modal-icon-color: $primary !default;
 $modal-icon-distance: $v-gap * 2;
 $modal-alert-p-distance: 32px + $v-gap * 2;
-$modal-heading-border: 1px solid rgba(0, 0, 0, 0.05) !default;
+$modal-heading-border: 1px solid $color-border-subtle;
 $modal-sticky-bg: $white !default;
 $modal-body-height: 50vh;
 $modal-popconfirm-p-size-mobile: 0.875rem;
@@ -479,15 +479,15 @@ $card-h5-size: 1.125rem;
 $card-h5-size-desk: 1rem;
 $card-h5-line-height: 1.4444444444444444rem;
 $card-h5-fw: 700;
-$card-h5-color: $neutral-1-a10 !default;
+$card-h5-color: $color-text-secondary !default; // UI kit
 $card-p-size: 0.875rem;
 $card-p-size-desk: 0.7777777777777778rem;
 $card-p-l-h: 1.2rem;
-$card-p-color: $neutral-1-a8 !default;
-$card-border-color: $neutral-1-a2 !default;
+$card-p-color: $color-text-base !default;
+$card-border-color: $gray-border !default; // Missing in the UI kit but aligned to new colors
 $card-small-line-height: 1px;
 $card-small-line-w: 128px;
-$card-small-line-color: $neutral-1-a2 !default;
+$card-small-line-color: $neutral-1-a2 !default; // Not used
 $card-small-line-margin: $v-gap * 6;
 $card-category-size: 0.7777777777777778rem;
 $card-category-l-spacing: 0.9px;
@@ -519,7 +519,10 @@ $tag-radius: 50px;
 
 // select
 $select-label-size: 0.7777777777777778rem;
-$select-label-color: $neutral-1-a8 !default;
+$select-label-color: $color-text-base !default; // UI kit
+
+// TODO Continue from here for color checking
+
 $select-label-weight: 600;
 $select-button-border: 1px solid $select-label-color !default;
 $select-button-padding: $v-gap !default;
@@ -527,9 +530,9 @@ $select-button-text-size: 1rem;
 $select-dd-shadow: $dialog-shadow !default;
 $select-dd-text-size: 0.8888888888888888rem;
 $select-dd-link-color: $primary !default;
-$select-dd-link-color-active: $neutral-1-a10 !default;
+$select-dd-link-color-active: $color-text-primary-active !default; // UI kit
 $select-dd-small-separator-width: 65px;
-$select-dd-small-separator-bg: $neutral-1-a1 !default;
+$select-dd-small-separator-bg: $gray-border !default; // UI kit
 $select-dd-icon-size: $v-gap * 3;
 $select-dd-icon-flag-top: 10px;
 $select-dd-pill-font-size: 0.7777777777777778rem;
@@ -540,8 +543,8 @@ $select-dd-header-w: 600;
 $select-dd-check-height: 30px;
 
 //date picker
-$dp-label-color: $neutral-1-a8 !default;
-$dp-border-bottom: 1px solid $dp-label-color !default;
+$dp-label-color: $color-text-base !default;
+$dp-border-bottom: 1px solid $dp-label-color !default; // TODO Not found - need more attention
 $dp-shadow: $dialog-shadow;
 $dp-arrow-size: $v-gap * 2;
 $dp-month-size: 0.8333333333333334rem;
@@ -564,7 +567,7 @@ $hero-heding-size-desk: 2.6666666666666665rem;
 $hero-p-size: 1rem;
 $hero-cat-spacing: $card-category-l-spacing !default;
 $hero-text-padding-desk: 120px;
-$hero-dark-bg: rgba($neutral-1-a10, 0.54) !default;
+$hero-dark-bg: rgba($neutral-1-a10, 0.54) !default; // Missing in the UI kit
 $hero-primary-bg: rgba($primary, 0.85) !default;
 $hero-negative-margin: 80px;
 $hero-negative-margin-desk: 80px;
@@ -575,7 +578,7 @@ $hero-negative-bottom-padding-mob: 136px;
 $crs-margin-bottom: $v-gap * 3;
 $crs-mob-live-padding: $v-gap * 2;
 $crs-dots-simension: $v-gap;
-$crs-dots-color: $primary-a7 !default;
+$crs-dots-color: hsl(210, 83%, 77%) !default;
 $crs-dots-margin-left: 38px;
 $crs-dots-margin-left-desk: $v-gap * 2;
 $crs-heading-h-padding: $v-gap * 3;
@@ -588,8 +591,8 @@ $grid-item-df-proportion: 66.81222707423581%;
 $grid-item-df-double-proportion: 33.4061135371179%;
 $grid-item-text-size: 1rem;
 $grid-item-text-size-mob: 0.8rem;
-$grid-item-text-color: $neutral-1 !default;
-$grid-item-text-overlay-bg: $neutral-1-a10 !default;
+$grid-item-text-color: $neutral-1 !default; // Missing in the UI kit - need more attention
+$grid-item-text-overlay-bg: $neutral-1-a10 !default; // Missing in the UI kit - need more attention
 $grid-list-default-gap: 2px;
 $grid-list-text-gap: $v-gap;
 $grid-item-sm-col: 50%;
@@ -600,40 +603,46 @@ $grid-item-icon-size-desk: 32px;
 // list
 $list-font-size: 1rem;
 $list-text-padding: $v-gap * 2 0 $v-gap * 2 0;
-$list-border-color: $neutral-1-a3 !default;
-$list-metadata-color: $neutral-1-a7 !default;
+$list-border-color: $gray-border !default; // UI kit
+$list-metadata-color: $color-text-muted !default; // Missing in the UI kit but token applicable
 $list-metadata-size: 12px;
 $list-metadata-space: 0.5px;
 $list-sub-size: 14px;
-$list-sub-color: $neutral-1-a8 !default;
+$list-sub-color: $color-text-muted !default; // UI kit
 
 //chips
-$chips-background: #fcfdff !default;
-$chips-background-hover: #8b98a6 !default;
-$chips-label-color: $gray-secondary !default;
-$chips-label-color-disabled: $neutral-1-a7 !default;
+$chips-background: $color-background-muted !default; // UI kit
+$chips-background-hover: $color-background-secondary-hover !default; // UI kit
+$chips-label-color: $color-text-secondary !default; // UI kit
+$chips-label-color-disabled: $gray-label-disabled !default; // UI kit
+$chips-border: $color-border-subtle;
+
+// stepper
+$stepper-spacing-h: 24px;
+$stepper-spacing-v: 16px;
 
 // transfer
-$transfer-border: 1px solid $neutral-1-a3 !default;
+$transfer-border: 1px solid $neutral-1-a3 !default; // TODO Not found
 $transfer-descr-size: 12px;
-$transfer-descr-color: $neutral-1-a8 !default;
-$transfer-header-line-color: $neutral-1-a3 !default;
+$transfer-descr-color: $neutral-1-a8 !default; // TODO Not found
+$transfer-header-line-color: $neutral-1-a3 !default; // TODO Not found
 $transfer-header-line-w: 65px;
 $transfer-height: 240px;
 
 //Timeline
 $timeline-width: 4px;
 $timeline-padding: ($v-gap * 3) - calc($grid-gutter-width / 2);
-$timeline-border-color: linear-gradient(0deg, $primary 0%, #004080 100%) !default;
+$timeline-border-color: linear-gradient(0deg, $primary 0%, hsl(210, 100%, 20%) 100%) !default; // UI kit
 $timeline-pin-size: $v-gap * 3;
+$timeline-pin-background: hsl(210, 100%, 20%); // color-blue-20
 $timeline-pin-circle-size: 48px;
 $timeline-pin-circle-border: $v-gap solid $white !default;
 $timeline-content-padding: 18px 0 18px 40px;
 $timeline-content-padding-reverse: 18px 40px 18px 18px;
 
 //Sections
-$section-header-background-color: $primary-a7 !default;
-$section-user-header-background-color: $primary-a1 !default;
+$section-header-background-color: $primary-a7 !default; // Missing in the UI kit
+$section-user-header-background-color: $primary-a1 !default; // Missing in the UI kit
 
 // Grid breakpoints
 // Define the minimum dimensions at which your layout will change,

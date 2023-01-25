@@ -77,7 +77,7 @@
               padding-bottom: $sidebar-submenu-link-v-padding;
               &.active {
                 span {
-                  color: $neutral-1-a10;
+                  color: $color-text-base;
                   text-decoration: underline;
                 }
                 &::after {
@@ -94,7 +94,7 @@
         content: '';
         width: $sidebar-link-small-line-width;
         height: 1px;
-        background: $neutral-2;
+        background: $color-border-subtle;
         display: block;
         margin-left: $v-gap * 3;
         margin-top: $v-gap * 3;
