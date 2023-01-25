@@ -1,0 +1,27 @@
+name: Update examples API
+on:
+  schedule:
+    - cron:  '00 17 * * *'
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-python@v4
+      with:
+        python-version: '3.10' 
+        cache: 'pip'
+    - run: pip install -r requirements.txt
+    - run: python extract_examples.py
+    - name: Setup Git
+      uses: fregante/setup-git-user@v1
+    - name: Add API stuff
+      run: | 
+        git add api/
+        git commit -m "chore: update examples api"
+    - name: Create Pull Request
+      uses: peter-evans/create-pull-request@v4
+      with:
+        title: "chore: update examples api"
+        branch: feature/update-examples-api

@@ -18,9 +18,8 @@
 .progress {
   height: 4px;
   box-shadow: none;
-  background-color: tint-color($primary-a1, 4);
   &.progress-color {
-    background-color: $neutral-2;
+    background-color: $color-background-secondary-lighter; // UI Kit
   }
   &.progress-indeterminate {
     position: relative;
@@ -36,14 +35,14 @@
 
 //progress bar
 .progress-bar {
-  background-color: $primary;
+  background-color: $secondary; // UI Kit
 }
 
 //label
 .progress-bar-label {
   text-align: right;
   font-size: 0.75rem;
-  color: $dark;
+  color: $color-text-base;
   font-weight: 500;
 }
 

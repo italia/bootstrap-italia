@@ -1,0 +1,22 @@
+[
+    {
+        "name": "popover-1",
+        "content": "\n<button type=\"button\" class=\"btn btn-lg btn-danger fade show\" data-bs-toggle=\"popover\" title=\"Titolo del Popover\" data-bs-content=\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue.\">Clicca per attivare/disattivare il popover</button>\n"
+    },
+    {
+        "name": "popover-2",
+        "content": "\n<button type=\"button\" class=\"btn btn-secondary fade show\" data-container=\"body\" data-bs-toggle=\"popover\" data-bs-placement=\"top\" data-bs-html=\"true\" title=\"<svg class='icon'><use href='/dist/svg/sprites.svg#it-help-circle'></use></svg> Titolo con icona\" data-bs-content=\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue.<a href='#' class='popover-inner-link'>Leggi tutto<svg class='icon'><use href='/dist/svg/sprites.svg#it-arrow-right'></use></svg></a>\">\nPopover con icona e link\n</button>\n"
+    },
+    {
+        "name": "popover-3",
+        "content": "\n<button type=\"button\" class=\"btn btn-secondary fade show\" data-container=\"body\" data-bs-toggle=\"popover\" data-bs-trigger=\"hover\" data-bs-placement=\"right\" data-html=\"true\" title=\"Popover in Hover\" data-bs-content=\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue.\">\nApertura in Hover\n</button>\n"
+    },
+    {
+        "name": "popover-4",
+        "content": "\n<a tabindex=\"0\" href=\"#\" class=\"btn btn-lg btn-danger fade show\" role=\"button\" data-bs-toggle=\"popover\" data-bs-trigger=\"focus\" title=\"Popover richiudibile\" data-bs-content=\"Ecco il contenuto del popover richiudibile\">Popover richiudibile</a>\n"
+    },
+    {
+        "name": "popover-5",
+        "content": "\n<span class=\"d-inline-block fade show\" data-bs-toggle=\"popover\" data-bs-content=\"Popover disabilitato\">\n<button class=\"btn btn-primary\" style=\"pointer-events: none;\" type=\"button\" disabled>Popover disabilitato</button>\n</span>\n"
+    }
+]

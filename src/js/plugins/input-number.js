@@ -12,18 +12,21 @@ const DATA_API_KEY = '.data-api'
 
 const EVENT_CLICK = `click${EVENT_KEY}`
 const EVENT_CHANGE = `change${EVENT_KEY}`
-const EVENT_FOCUS_DATA_API = `focus${EVENT_KEY}${DATA_API_KEY}`
+
+//const EVENT_FOCUS_DATA_API = `focus${EVENT_KEY}${DATA_API_KEY}`
 const EVENT_CLICK_DATA_API = `click${EVENT_KEY}${DATA_API_KEY}`
+const EVENT_MOUSEDOWN_DATA_API = `mousedown${EVENT_KEY}${DATA_API_KEY}`
+const EVENT_KEYUP_DATA_API = `keyup${EVENT_KEY}${DATA_API_KEY}`
 
 const CLASS_NAME_ADAPTIVE = 'input-number-adaptive'
 const CLASS_NAME_PERCENTAGE = 'input-number-percentage'
 const CLASS_NAME_CURRENCY = 'input-number-currency'
-const CLASS_NAME_INCREMENT = 'input-number-add'
+//const CLASS_NAME_INCREMENT = 'input-number-add'
 const CLASS_NAME_DECREMENT = 'input-number-sub'
 
 const SELECTOR_WRAPPER = '.input-number'
 const SELECTOR_INPUT = 'input[data-bs-input][type="number"]'
-const SELECTOR_BTN = 'button'
+const SELECTOR_BTN = 'button[class^="input-number-"]'
 
 class InputNumber extends BaseComponent {
   constructor(element) {
@@ -129,14 +132,8 @@ class InputNumber extends BaseComponent {
  * ------------------------------------------------------------------------
  */
 
-const inputs = SelectorEngine.find(SELECTOR_INPUT)
+/*const inputs = SelectorEngine.find(SELECTOR_INPUT)
 inputs.forEach((input) => {
-  /*const prevInst = BaseComponent.getInstance(input)
-  if (prevInst.NAME === 'input') {
-    prevInst.dispose()
-  }
-  InputNumber.getOrCreateInstance(input)*/
-
   EventHandler.one(input, EVENT_FOCUS_DATA_API, (evt) => {
     evt.preventDefault()
     InputNumber.getOrCreateInstance(input)
@@ -162,6 +159,34 @@ inputsButtons.forEach((button) => {
       }
     }
   })
+})*/
+
+const createInput = (element) => {
+  if (element && element.matches(SELECTOR_INPUT) && element.parentNode.querySelector(SELECTOR_BTN)) {
+    return InputNumber.getOrCreateInstance(element)
+  }
+  return null
+}
+
+EventHandler.on(document, EVENT_MOUSEDOWN_DATA_API, SELECTOR_INPUT + ', label', function () {
+  const target = InputLabel.getInputFromLabel(this) || this
+  createInput(target)
+})
+EventHandler.on(document, EVENT_KEYUP_DATA_API, SELECTOR_INPUT + ', label', function () {
+  const target = InputLabel.getInputFromLabel(this) || this
+  const element = createInput(target)
+  if (element && element._label) {
+    element._label._labelOut()
+  }
+})
+EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_BTN, function () {
+  const wrapper = this.closest(SELECTOR_WRAPPER)
+  if (wrapper) {
+    const input = SelectorEngine.findOne(SELECTOR_INPUT, wrapper)
+    if (input) {
+      InputNumber.getOrCreateInstance(input)
+    }
+  }
 })
 
 export default InputNumber

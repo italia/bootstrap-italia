@@ -1,56 +1,81 @@
 //mobile
 .steppers {
-  .steppers-header {
-    padding: 0 24px;
-    height: 64px;
-    background: $white;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); // TEMP - substitute with generic ellipsical shadow
-    display: flex;
-    align-items: center;
-    li {
-      font-size: 1.125rem;
-      color: $gray-secondary;
-      list-style-type: none;
+  // steppers
+  .steppers-index {
+    margin-left: auto;
+    font-size: 0.875rem;
+    font-weight: 600;
+    flex-shrink: 0;
+    @include media-breakpoint-up(lg) {
       display: none;
-      .icon {
-        fill: $gray-secondary;
-        margin-right: 0.667rem;
-        width: 24px;
-        height: 24px;
-      }
-      // states
-      &.active,
-      &.confirmed {
+    }
+    span {
+      margin-left: 0.25rem;
+      &.active {
         color: $primary;
+        text-decoration: underline;
+      }
+    }
+  }
+  .steppers-header {
+    @include media-breakpoint-down(lg) {
+      padding: 0 24px;
+      height: 64px;
+      background: $white;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    margin-bottom: 1rem;
+    ul {
+      display: flex;
+      width: 100%;
+      padding: 0;
+      @include media-breakpoint-down(lg) {
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        display: flex;
+        font-size: 1.125rem;
         font-weight: 600;
+        color: $gray-secondary;
+        list-style-type: none;
         .icon {
-          fill: $primary;
+          fill: $gray-secondary;
+          margin-right: 0.667rem;
+          width: 24px;
+          height: 24px;
         }
-      }
-      &.active,
-      &.steppers-index {
-        display: block;
-      }
-      // steppers
-      &.steppers-index {
-        margin-left: auto;
-        font-size: 0.875rem;
-        font-weight: 600;
-        span {
-          margin-left: 0.25rem;
-          &.active {
-            color: $primary;
-            text-decoration: underline;
+        // states
+        &:not(.active) {
+          @include media-breakpoint-down(lg) {
+            clip: rect(1px, 1px, 1px, 1px);
+            height: 0;
+            position: absolute;
+            display: block;
           }
         }
-      }
-      // numbers
-      .steppers-number {
-        .icon {
-          margin: 0;
+        &.active,
+        &.confirmed {
+          color: $primary;
+          .icon {
+            fill: $primary;
+          }
         }
-        &:after {
-          content: '. ';
+        &.active,
+        &.steppers-index {
+          display: block;
+        }
+        // numbers
+        .steppers-number {
+          .icon {
+            margin: 0;
+          }
+          &:after {
+            content: '. ';
+          }
         }
       }
     }
@@ -60,6 +85,15 @@
   &.bg-dark {
     .steppers-header {
       background: none;
+      // steppers
+      .steppers-index {
+        color: $neutral-1-a2;
+        span {
+          &.active {
+            color: $analogue-2-a6;
+          }
+        }
+      }
       // steps
       li {
         color: $neutral-1-a2;
@@ -78,14 +112,6 @@
           color: $white;
           .icon {
             fill: $white;
-          }
-        }
-        // steppers
-        &.steppers-index {
-          span {
-            &.active {
-              color: $analogue-2-a6;
-            }
           }
         }
       }
@@ -107,7 +133,7 @@
   .steppers-nav {
     display: flex;
     height: 64px;
-    padding: 0 24px;
+    padding: 0 $stepper-spacing-h;
     box-shadow: 0 -8px 20px rgba(0, 0, 0, 0.1); // TEMP - substitute with generic ellipsical shadow
     background: $white;
     align-items: center;
@@ -174,15 +200,14 @@
       }
       // steps
       li {
-        text-transform: uppercase;
-        padding: 1.778rem 1.111rem;
+        padding: $stepper-spacing-v $stepper-spacing-h;
         flex-grow: 1;
-        border-left: 1px solid $gray-border-disabled;
+        border-left: 1px solid $gray-border;
         position: relative;
         display: flex;
         align-items: center;
         &:nth-last-child(2) {
-          border-right: 1px solid $gray-border-disabled;
+          border-right: 1px solid $gray-border;
         }
         // index
         &.steppers-index {
@@ -221,7 +246,7 @@
           display: inline-block;
           width: 1.778rem;
           height: 1.778rem;
-          border: 1px solid $gray-border-disabled;
+          border: 1px solid $gray-border;
           border-radius: 50%;
           text-align: center;
           margin-right: 0.667rem;

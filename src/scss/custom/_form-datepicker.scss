@@ -1,3 +1,5 @@
+// TODO: Check if this classes are obsolete due to default browser styles
+
 a.datepicker-button {
   cursor: pointer;
 
@@ -301,12 +303,6 @@ a.datepicker-button {
   height: 100%;
   min-height: 100%;
   z-index: 40;
-}
-
-abbr[data-original-title],
-abbr[title] {
-  text-decoration: none;
-  cursor: default;
 }
 
 .it-datepicker-wrapper {

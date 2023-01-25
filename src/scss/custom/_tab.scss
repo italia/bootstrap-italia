@@ -1,7 +1,7 @@
 .nav-tabs {
   position: relative;
   background-color: $white;
-  border-bottom-color: $gray-border-disabled;
+  border-bottom-color: $color-border-subtle;
   display: flex;
   overflow-x: scroll;
   overflow-y: hidden;
@@ -62,7 +62,7 @@
   &.nav-tabs-vertical {
     flex-direction: column;
     border-bottom: none;
-    border-right: 1px solid $gray-border-disabled;
+    border-right: 1px solid $color-border-subtle;
     .nav-link {
       justify-content: space-between;
       border-bottom: none;
@@ -88,7 +88,7 @@
     &.nav-tabs-vertical-background {
       .nav-link.active,
       .nav-item.show .nav-link {
-        background-color: $neutral-2;
+        background-color: $color-background-primary-lighter;
       }
     }
   }
@@ -97,7 +97,7 @@
   .nav-link {
     border-radius: 0;
     font-weight: 600;
-    color: $neutral-1-a7;
+    color: $color-text-secondary;
     border: none;
     border-bottom: 3px solid transparent;
     padding: 0.778rem 1.333em;
@@ -111,7 +111,7 @@
     justify-content: center;
 
     &:hover {
-      color: $primary;
+      color: $color-text-primary-hover;
       border-bottom-color: transparent;
     }
 
@@ -120,10 +120,10 @@
     }
 
     &.disabled {
-      color: $gray-300;
+      color: $gray-disabled;
       cursor: default;
       .icon {
-        fill: $gray-300;
+        fill: $gray-disabled;
       }
     }
 
@@ -140,6 +140,9 @@
     }
     .icon {
       fill: $gray-secondary;
+      &:hover {
+        fill: $color-text-primary-hover;
+      }
     }
     &.active {
       .icon {
@@ -158,7 +161,8 @@
     display: flex;
   }
 
-  //dark version
+  // Dark version
+  // Missing in the UI kit v3.x.x
   &.nav-dark {
     background-color: $gray-primary;
     border-bottom: none;
@@ -206,16 +210,16 @@
     //grey fullwidth bottom border for ul
     .nav-item-filler {
       flex-grow: 1;
-      border-bottom: 1px solid $gray-border-disabled;
+      border-bottom: 1px solid $color-border-subtle;
     }
     .nav-link {
       border-bottom-width: 2px;
       border-color: transparent;
       position: relative;
-      border-bottom-color: $gray-border-disabled;
+      border-bottom-color: $color-border-subtle;
       border-radius: $border-radius $border-radius 0 0;
       &.active {
-        border: 1px solid $gray-border-disabled;
+        border: 1px solid $color-border-subtle;
         border-bottom-color: transparent;
         border-bottom-width: 1px;
       }
@@ -227,7 +231,7 @@
     .nav-item {
       position: relative;
       &:last-of-type {
-        border-bottom: 1px solid $gray-border-disabled;
+        border-bottom: 1px solid $color-border-subtle;
       }
     }
 
@@ -243,7 +247,7 @@
       width: 1.444rem;
       height: 1.444rem;
       top: 0.8rem;
-      border: 1px solid $gray-border-disabled;
+      border: 1px solid $color-border-subtle;
       border-radius: 50%;
       right: 0;
       //plus sign
@@ -277,16 +281,16 @@
       position: absolute;
       top: calc(50% - 0.9rem);
       right: 0.889rem;
-      color: $neutral-1-a7;
+      color: $color-text-secondary;
       transition: color 0.2s;
       .icon {
-        fill: $neutral-1-a7;
+        fill: $color-text-secondary;
       }
       &.disabled {
-        color: $gray-300;
+        color: $gray-disabled;
         cursor: pointer;
         .icon {
-          fill: $gray-300;
+          fill: $gray-disabled;
         }
       }
       &:hover {
@@ -320,7 +324,7 @@
 .flex-column-reverse {
   .nav-tabs {
     border-bottom: none;
-    border-top: 1px solid $gray-border-disabled;
+    border-top: 1px solid $color-border-subtle;
     .nav-link {
       border-bottom: none;
       border-top: 2px solid transparent;
@@ -345,7 +349,7 @@
     }
     &.nav-tabs-vertical {
       border-right: none;
-      border-left: 1px solid $gray-border-disabled;
+      border-left: 1px solid $color-border-subtle;
       .nav-link {
         justify-content: flex-start;
         border-bottom: none;

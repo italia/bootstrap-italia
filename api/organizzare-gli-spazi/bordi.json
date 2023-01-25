@@ -1,0 +1,14 @@
+[
+    {
+        "name": "bordi-1",
+        "content": "\n<span class=\"border\"></span>\n<span class=\"border-top\"></span>\n<span class=\"border-end\"></span>\n<span class=\"border-bottom\"></span>\n<span class=\"border-start\"></span>\n"
+    },
+    {
+        "name": "bordi-2",
+        "content": "\n<span class=\"border-0\"></span>\n<span class=\"border-top-0\"></span>\n<span class=\"border-end-0\"></span>\n<span class=\"border-bottom-0\"></span>\n<span class=\"border-start-0\"></span>\n"
+    },
+    {
+        "name": "bordi-3",
+        "content": "\n\n<span class=\"border border-primary\"></span>\n<span class=\"border border-secondary\"></span>\n<span class=\"border border-success\"></span>\n<span class=\"border border-danger\"></span>\n<span class=\"border border-warning\"></span>\n<span class=\"border border-white\"></span>\n"
+    }
+]

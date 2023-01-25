@@ -1,3 +1,7 @@
+/* stylelint-disable */
+@import '@splidejs/splide/dist/css/splide-core.min';
+/* stylelint-enable */
+
 //mobile
 .it-carousel-wrapper {
   // splide pagination
@@ -10,7 +14,6 @@
       height: $crs-dots-simension;
       background: $crs-dots-color;
       display: inline-block;
-      opacity: 0.3;
       transition: all 0.3s;
       border-radius: 50px;
       margin: 0 $v-gap;
@@ -18,7 +21,7 @@
       box-shadow: none;
       border: none;
       &.is-active {
-        opacity: 1;
+        background: $primary;
       }
     }
   }
@@ -106,7 +109,7 @@
           transform: rotate(180deg);
         }
         &[disabled] {
-          background: $neutral-2;
+          background: $gray-disabled;
         }
       }
     }
@@ -220,7 +223,7 @@
           right: -$v-gap * 1.5;
           top: 0;
           bottom: 0;
-          background-color: $neutral-2;
+          background-color: $neutral-2; // Missing in the UI kit
         }
       }
     }

@@ -71,12 +71,10 @@ title: Template Evento Comunale
     </div>
   </div>
   <div class="container">
-    <div class="row border-top row-column-border row-column-menu-left">
+    <div class="row row-column-border row-column-menu-left">
       <aside class="col-lg-4">
-        <div class="sticky-wrapper navbar-wrapper">
-          <nav
-            class="navbar it-navscroll-wrapper it-top-navscroll navbar-expand-lg"
-          >
+        <div data-bs-toggle="sticky" data-bs-stackable="true">
+          <nav class="navbar it-navscroll-wrapper it-bottom-navscroll navbar-expand-lg" data-bs-navscroll>
             <button
               class="custom-navbar-toggler"
               type="button"
@@ -84,6 +82,7 @@ title: Template Evento Comunale
               aria-expanded="false"
               aria-label="Toggle navigation"
               data-bs-target="#navbarNav"
+              data-bs-toggle="navbarcollapsible"
             >
               <span class="it-list"></span>Indice della pagina
             </button>
@@ -559,6 +558,7 @@ title: Template Evento Comunale
             </div>
             <div class="d-flex align-items-center mt-5">
               <fieldset class="rating">
+                <legend class="visually-hidden">Lascia una valutazione</legend>
                 <input type="radio" id="star5a" name="ratingA" value="5" />
                 <label class = "full" for="star5a">
                   <svg class="icon icon-sm"><use xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-full"></use></svg>

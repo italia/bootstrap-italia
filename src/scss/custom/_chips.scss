@@ -4,7 +4,7 @@
   justify-content: space-evenly;
   align-items: center;
   background: $chips-background;
-  border: 1px solid $gray-border-disabled;
+  border: 1px solid $chips-border;
   border-radius: $v-gap * 1.5;
   height: $v-gap * 3;
   min-width: 100px;
@@ -137,7 +137,7 @@
   //disabled state--------------------------------
   &.chip-disabled {
     background: $white;
-    color: $neutral-1-a7;
+    color: $chips-label-color-disabled;
     &:hover {
       cursor: not-allowed;
     }
@@ -148,12 +148,12 @@
     //close button
     button {
       .icon {
-        fill: $neutral-1-a1;
+        fill: $gray-disabled;
       }
     }
     //left icon
     & > .icon {
-      fill: $neutral-1-a1;
+      fill: $gray-disabled;
     }
     .avatar {
       img {

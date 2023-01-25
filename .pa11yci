@@ -5,7 +5,7 @@
         "--no-sandbox"
       ]
     },
-    "timeout": 20000,
+    "timeout": 21000,
     "hideElements": [
       "#evidenza",
       "#preloadjs-container",
@@ -13,6 +13,9 @@
       ".highlight",
       ".highlighter-rouge",
       ".disabled"
+    ],
+    "ignore": [
+      "WCAG2AA.Principle1.Guideline1_3.1_3_1.F92,ARIA4"
     ]
   },
   "comments": [

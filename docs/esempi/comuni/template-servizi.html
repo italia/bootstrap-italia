@@ -28,10 +28,11 @@ title: Template Amministrazione
         <div class="form-group mt-5">
           <form>
             <input id="ricerca-amministrazione" type="search" />
-            <label for="ricerca-amministrazione">Cerca contenuti in "Servizi"</label>
+            <label for="ricerca-amministrazione">Cerca contenuti in "Servizi" <span class="visually-hidden">(invia per lanciare la ricerca)</span></label>
             <span aria-hidden="true" class="autocomplete-icon">
               <svg class="icon icon-sm"><use xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-search"></use></svg>
             </span>
+            <button type="submit" tabindex="-1" class="visually-hidden">Invia</button>
           </form>
         </div>
         <div id="filtri-ricerca-amministrazione">
@@ -80,6 +81,7 @@ title: Template Amministrazione
             <li>
               <a class="list-item large medium left-icon" href="#altri-servizi" data-bs-toggle="collapse" aria-expanded="false" aria-controls="altri-servizi">
                 <svg class="icon icon-primary right"><use xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-more-items"></use></svg>
+                <span class="visually-hidden">Apri/chiudi lista altri servizi</span>
               </a>
               <ul class="link-sublist collapse px-0" id="altri-servizi">
                 <li>

@@ -46,7 +46,7 @@
     background: none;
     border: none;
     text-transform: uppercase;
-    color: $dark;
+    color: $color-text-base;
     font-size: 0.938rem;
     padding: $v-gap * 2 $v-gap * 3 0;
     letter-spacing: 0.05em;
@@ -63,7 +63,7 @@
   .popover-body {
     font-size: 0.875rem;
     line-height: 1.5em;
-    color: $gray-tertiary;
+    color: $color-text-secondary; // UI Kit
     padding: $v-gap * 2 $v-gap * 3;
     //inner bottom link
     a.popover-inner-link {

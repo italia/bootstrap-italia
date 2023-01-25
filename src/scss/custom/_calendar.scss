@@ -13,7 +13,7 @@
   .card {
     .card-title,
     .card-text {
-      border-bottom: 1px solid $border-color;
+      border-bottom: 1px solid $color-border-subtle;
       padding-bottom: 16px;
     }
 
@@ -37,7 +37,7 @@
     .card-text {
       a {
         text-decoration: none;
-        color: $text-color;
+        color: $color-text-base;
         font-family: $font-family-sans-serif;
         font-size: $link-list-font-size-l;
 

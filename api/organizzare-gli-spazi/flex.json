@@ -1,0 +1,30 @@
+[
+    {
+        "name": "flex-1",
+        "content": "\n\n<div class=\"d-flex p-2 bd-highlight\">Io sono un contenitore flexbox!</div>\n"
+    },
+    {
+        "name": "flex-2",
+        "content": "\n\n<div class=\"d-inline-flex p-2 bd-highlight\">Io sono un contenitore inline flexbox!</div>\n"
+    },
+    {
+        "name": "flex-3",
+        "content": "\n<div class=\"d-flex flex-row mb-3\">\n  <div class=\"p-2 bd-highlight\">Elemento flex 1</div>\n  <div class=\"p-2 bd-highlight\">Elemento flex 2</div>\n  <div class=\"p-2 bd-highlight\">Elemento flex 3</div>\n</div>\n<div class=\"d-flex flex-row-reverse\">\n  <div class=\"p-2 bd-highlight\">Elemento flex 1</div>\n  <div class=\"p-2 bd-highlight\">Elemento flex 2</div>\n  <div class=\"p-2 bd-highlight\">Elemento flex 3</div>\n</div>\n"
+    },
+    {
+        "name": "flex-4",
+        "content": "\n<div class=\"d-flex flex-column mb-3\">\n  <div class=\"p-2 bd-highlight\">Elemento flex 1</div>\n  <div class=\"p-2 bd-highlight\">Elemento flex 2</div>\n  <div class=\"p-2 bd-highlight\">Elemento flex 3</div>\n</div>\n<div class=\"d-flex flex-column-reverse\">\n  <div class=\"p-2 bd-highlight\">Elemento flex 1</div>\n  <div class=\"p-2 bd-highlight\">Elemento flex 2</div>\n  <div class=\"p-2 bd-highlight\">Elemento flex 3</div>\n</div>\n"
+    },
+    {
+        "name": "flex-5",
+        "content": "\n<div class=\"d-flex mb-3\">\n  <div class=\"p-2 bd-highlight\">Elemento flex</div>\n  <div class=\"p-2 bd-highlight\">Elemento flex</div>\n  <div class=\"p-2 bd-highlight\">Elemento flex</div>\n</div>\n\n<div class=\"d-flex mb-3\">\n  <div class=\"me-auto p-2 bd-highlight\">Elemento flex</div>\n  <div class=\"p-2 bd-highlight\">Elemento flex</div>\n  <div class=\"p-2 bd-highlight\">Elemento flex</div>\n</div>\n\n<div class=\"d-flex mb-3\">\n  <div class=\"p-2 bd-highlight\">Elemento flex</div>\n  <div class=\"p-2 bd-highlight\">Elemento flex</div>\n  <div class=\"ms-auto p-2 bd-highlight\">Elemento flex</div>\n</div>\n"
+    },
+    {
+        "name": "flex-6",
+        "content": "\n<div class=\"d-flex align-items-start flex-column mb-3\" style=\"height: 200px;\">\n  <div class=\"mb-auto p-2 bd-highlight\">Elemento flex</div>\n  <div class=\"p-2 bd-highlight\">Elemento flex</div>\n  <div class=\"p-2 bd-highlight\">Elemento flex</div>\n</div>\n\n<div class=\"d-flex align-items-end flex-column mb-3\" style=\"height: 200px;\">\n  <div class=\"p-2 bd-highlight\">Elemento flex</div>\n  <div class=\"p-2 bd-highlight\">Elemento flex</div>\n  <div class=\"mt-auto p-2 bd-highlight\">Elemento flex</div>\n</div>\n"
+    },
+    {
+        "name": "flex-7",
+        "content": "\n<div class=\"d-flex flex-nowrap\">\n  <div class=\"order-3 p-2 bd-highlight\">Primo elemento flex</div>\n  <div class=\"order-2 p-2 bd-highlight\">Secondo elemento flex</div>\n  <div class=\"order-1 p-2 bd-highlight\">Terzo elemento flex</div>\n</div>\n"
+    }
+]

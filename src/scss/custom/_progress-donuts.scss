@@ -4,7 +4,7 @@
   height: 128px;
   position: relative;
   .progressbar-text {
-    color: #000 !important;
+    color: $color-text-base !important;
     font-weight: 700;
     z-index: 3;
   }
@@ -16,7 +16,7 @@
   }
   &:after {
     content: '';
-    background: #fff;
+    background: $white;
     width: 67px;
     height: 67px;
     left: 50%;
@@ -28,7 +28,7 @@
   }
   &:before {
     content: '';
-    background: #d4e9ff;
+    background: $color-background-secondary-lighter; // UI Kit
     width: 110px;
     height: 110px;
     left: 50%;

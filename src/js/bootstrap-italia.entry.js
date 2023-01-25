@@ -1,25 +1,31 @@
 import '../scss/bootstrap-italia.scss'
-import { Alert, Button, Carousel, Collapse, Dropdown, Modal, Offcanvas, Popover, ScrollSpy, Tab, Toast, Tooltip } from 'bootstrap'
 
 import { loadPlugin } from './load-plugin'
-import * as fontsLoader from './plugins/fonts-loader'
+import init from './plugins/init'
+import loadFonts from './plugins/fonts-loader'
 import * as icons from './icons'
-import * as headerSticky from './plugins/header-sticky'
-
-import BOOTSTRAP_ITALIA_VERSION from './version'
-
-loadPlugin(icons)
-loadPlugin(fontsLoader)
-loadPlugin(headerSticky)
 
 import {
+  // Bootstrap
+  Alert,
+  Button,
+  Carousel,
+  Collapse,
+  Dropdown,
+  Modal,
+  Offcanvas,
+  Popover,
+  ScrollSpy,
+  Tab,
+  Toast,
+  Tooltip,
+  // Extra components
   Dimmer,
   Notification,
   Cookiebar,
   NavBarCollapsible,
   Accordion,
   NavScroll,
-  TrackFocus,
   CarouselBI,
   FormValidate,
   ValidatorSelectAutocomplete,
@@ -32,6 +38,7 @@ import {
   UploadDragDrop,
   BackToTop,
   Sticky,
+  HeaderSticky,
   HistoryBack,
   Forward,
   Masonry,
@@ -39,9 +46,10 @@ import {
   Transfer,
 } from './bootstrap-italia.esm'
 
-window.BOOTSTRAP_ITALIA_VERSION = BOOTSTRAP_ITALIA_VERSION
+loadPlugin(icons)
+init()
 
-window.bootstrap = {
+export default {
   Alert,
   Button,
   Carousel,
@@ -74,8 +82,9 @@ window.bootstrap = {
   ProgressDonut,
   SelectAutocomplete,
   Sticky,
-  TrackFocus,
+  HeaderSticky,
   Transfer,
   UploadDragDrop,
   ValidatorSelectAutocomplete,
+  loadFonts,
 }

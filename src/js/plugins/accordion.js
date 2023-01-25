@@ -87,7 +87,7 @@ accordions.forEach((acc) => {
   Accordion.getOrCreateInstance(acc)
 })*/
 
-const accordionToggles = SelectorEngine.find(SELECTOR_HEADBTN)
+/*const accordionToggles = SelectorEngine.find(SELECTOR_HEADBTN)
 accordionToggles.forEach((toggle) => {
   EventHandler.one(toggle, EVENT_KEYDOWN_DATA_API, (evt) => {
     const parent = toggle.closest(SELECTOR_HEADBTN_WRAPPER)
@@ -96,6 +96,14 @@ accordionToggles.forEach((toggle) => {
       accordion.handleKeyDown(evt.key, toggle, evt)
     }
   })
+})*/
+
+EventHandler.on(document, EVENT_KEYDOWN_DATA_API, SELECTOR_HEADBTN, function (evt) {
+  const parent = this.closest(SELECTOR_HEADBTN_WRAPPER)
+  if (parent) {
+    const accordion = Accordion.getOrCreateInstance(parent)
+    accordion.handleKeyDown(evt.key, this, evt)
+  }
 })
 
 export default Accordion
