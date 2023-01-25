@@ -20,7 +20,7 @@
       border-color: rgba($success, 1);
     }
     &.warning {
-      border-color: rgba($warning, 1);
+      border-color: $color-border-warning;
     }
     &.danger {
       border-color: rgba($danger, 1);
@@ -102,7 +102,7 @@
   &.warning {
     border-color: $warning;
     .callout-title {
-      color: $warning;
+      color: $color-text-warning;
       .icon {
         fill: $warning;
       }
