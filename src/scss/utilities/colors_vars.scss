@@ -41,13 +41,13 @@ $primary-s: 100 !default;
 $primary-b: 80 !default;
 $primary-l: 40 !default; // Kit UI
 
-$primary: hsl(210, 100, 40%) !default; // color-blue-40
+$primary: hsl(210, 100%, 40%) !default; // color-blue-40
 
 $indigo: hsb(243, 70, 100) !default;
 $purple: hsb(243, 40, 100) !default;
 $pink: hsb(350, 30, 100) !default;
 $red: hsl(350, 60%, 50%) !default; // color-red-50
-$orange: hsl(36, 100%, 40%) !default; // color-orange-40
+$orange: hsl(36, 100%, 30%) !default; // color-orange-30
 $yellow: hsb(44, 55, 100) !default;
 $green: hsl(160, 100%, 25%) !default; // color-emerald-25
 $teal: hsl(178, 90%, 32%) !default;
@@ -70,7 +70,7 @@ $gray-tertiary: hsb(205, 35, 54) !default;
 $gray-quaternary: hsb(238, 1, 100) !default;
 $gray-border: hsl(210, 4%, 78%) !default; // color-border-subtle
 $gray-disabled: hsl(210, 3%, 85%) !default; // color-background-disabled
-$gray-label-disabled: hsl(210, 12%, 52%) !default; // color-text-disabled
+$gray-label-disabled: hsl(210, 12%, 44%) !default; // color-text-disabled
 $gray-border-disabled: $gray-disabled !default; // color-border-disabled
 
 $secondary: $gray-secondary !default;
@@ -103,7 +103,7 @@ $border-color: $gray-border !default;
 
 // Info Colors
 $success: $green-accessible !default;
-$info: $gray-400 !default;
+$info: $secondary !default;
 $warning: $orange-accessible !default;
 $danger: $red-accessible !default;
 
@@ -403,6 +403,7 @@ $color-background-muted: $gray-100; // color-gray-96
 // Borders
 $color-border-secondary: hsl(210, 17%, 44%); // color-slate-44
 $color-border-subtle: hsl(210, 4%, 78%); // color-slate-78
+$color-border-warning: hsl(36, 100%, 30%); // color-orange-30
 
 // Text
 $color-text-primary-active: hsl(210, 100%, 15%); // color-blue-15
@@ -410,6 +411,7 @@ $color-text-primary-hover: hsl(210, 100%, 30%); // color-blue-30
 $color-text-muted: hsl(210, 17%, 44%); // color-slate-44
 $color-text-base: $gray-900; // color-gray-10
 $color-text-secondary: hsl(210, 33%, 28%); // color-slate-28
+$color-text-warning: hsl(36, 100%, 30%); // color-orange-30
 
 // SPECIFIC TOKENS =========================================================
 //

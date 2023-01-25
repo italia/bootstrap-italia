@@ -53,7 +53,7 @@
       fill: $primary;
     }
     .pin-text {
-      color: $select-label-color;
+      color: $white;
       font-weight: 600;
       text-transform: uppercase;
       background: $timeline-pin-background;
@@ -85,7 +85,6 @@
         fill: $white;
       }
       .pin-text {
-        color: $white;
         background: $primary;
         span {
           &:after {
@@ -102,7 +101,6 @@
         fill: $white;
       }
       .pin-text {
-        color: $white;
         background: $timeline-pin-background;
         span {
           &:after {
