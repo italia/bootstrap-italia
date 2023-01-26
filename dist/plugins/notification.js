@@ -1,5 +1,5 @@
 import BaseComponent from 'bootstrap/js/src/base-component.js';
-import { getElementFromSelector, isVisible, reflow, typeCheckConfig } from 'bootstrap/js/src/util';
+import { getElementFromSelector, isVisible, reflow } from 'bootstrap/js/src/util';
 import Manipulator from 'bootstrap/js/src/dom/manipulator';
 import EventHandler from 'bootstrap/js/src/dom/event-handler';
 import { enableDismissTrigger } from 'bootstrap/js/src/util/component-functions';
@@ -17,15 +17,10 @@ const Default = {
   timeout: 0,
 };
 
-const DefaultType = {
-  timeout: 'number',
-};
-
 const CLASS_NAME_FADE = 'fade';
 const CLASS_NAME_SHOW = 'show';
 
 const ATTRIBUTE_TIMEOUT = 'data-bs-timeout';
-//const ATTRIBUTE_TARGET = 'data-bs-target' //const selector = getSelectorFromElement(this)
 
 const SELECTOR_DATA_TOGGLE = '[data-bs-toggle="notification"]';
 
@@ -60,14 +55,6 @@ class Notification extends BaseComponent {
       return
     }
 
-    //manage event - TODO
-    /*const showEvent = EventHandler.trigger(this._element, EVENT_SHOW, {
-      relatedTarget
-    })
-
-    if (showEvent.defaultPrevented) {
-      return
-    }*/
     const timeoutVal = timeout || this._getElementTimeout(relatedTarget);
 
     this._isShown = true;
@@ -133,8 +120,6 @@ class Notification extends BaseComponent {
   _hideElement() {
     this._element.style.display = 'none';
     this._element.setAttribute('aria-hidden', true);
-    //this._element.removeAttribute('aria-modal')
-    //this._element.removeAttribute('role')
     this._isTransitioning = false;
   }
 
@@ -144,7 +129,6 @@ class Notification extends BaseComponent {
       ...Manipulator.getDataAttributes(this._element),
       ...(typeof config === 'object' ? config : {}),
     };
-    typeCheckConfig(NAME, config, DefaultType);
     return config
   }
 
@@ -190,12 +174,6 @@ EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function (
       }
     });
   });
-
-  // avoid conflict when clicking moddal toggler while another one is open
-  /*const allReadyOpen = SelectorEngine.findOne(OPEN_SELECTOR)
-  if (allReadyOpen) {
-    Modal.getInstance(allReadyOpen).hide()
-  }*/
 
   const data = Notification.getOrCreateInstance(target);
 

@@ -12,14 +12,14 @@
 <title>Toolbar · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202301011348" rel="stylesheet" />
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202301261734" rel="stylesheet" />
 
 
 <!-- Documentation extras -->
  
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.css" rel="stylesheet" />
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202301011348" rel="stylesheet" />
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202301261734" rel="stylesheet" />
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico" />
@@ -141,8 +141,8 @@
 
     <ul class="navbar-nav flex-row ms-md-auto d-none d-md-flex">
       <li class="nav-item pe-2">
-        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v2.2.0/bootstrap-italia.zip" aria-label="Download">
-          <small class="pe-2 m-0">v2.2.0</small>
+        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v2.3.0/bootstrap-italia.zip" aria-label="Download">
+          <small class="pe-2 m-0">v2.3.0</small>
           <svg class="icon icon-sm icon-light"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-download" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-download"></use></svg><span class="visually-hidden">Download</span>
         </a>
       </li>
@@ -917,7 +917,7 @@
 
 <h2 id="divisori">Divisori</h2>
 
-<p>Per aggiungere degli elementi divisori fra gli elementi utilizzare dei tag <code class="language-plaintext highlighter-rouge">&lt;li&gt;</code> con classe <code class="language-plaintext highlighter-rouge">.toolbar-divider</code>, aggiungendo l’attributo <code class="language-plaintext highlighter-rouge">aria-hidden="true"</code> per nasconderli agli screen reader.</p>
+<p>Per aggiungere degli elementi divisori fra gli elementi utilizzare dei tag <code class="language-plaintext highlighter-rouge">&lt;li&gt;</code> con classe <code class="language-plaintext highlighter-rouge">.toolbar-divider</code>, aggiungendo il ruolo separatore <code class="language-plaintext highlighter-rouge">role="separator"</code> per indicarne la presenza agli screen reader e <code class="language-plaintext highlighter-rouge">aria-orientation="vertical"</code> per indicarne l’orientamento.</p>
 
 <div class="bd-example">
 
@@ -935,7 +935,7 @@
         <span class="toolbar-label">immagini</span>
       </a>
     </li>
-    <li class="toolbar-divider" aria-hidden="true"></li>
+    <li class="toolbar-divider" role="separator" aria-orientation="vertical"></li>
     <li>
       <a href="#">
         <svg class="icon"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-file"></use></svg>
@@ -948,7 +948,7 @@
         <span class="toolbar-label">privacy</span>
       </a>
     </li>
-    <li class="toolbar-divider" aria-hidden="true"></li>
+    <li class="toolbar-divider" role="separator" aria-orientation="vertical"></li>
     <li>
       <a href="#" class="disabled" disabled="" aria-disabled="true">
         <svg class="icon"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-star-outline"></use></svg>
@@ -972,7 +972,7 @@
         <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"toolbar-label"</span><span class="nt">&gt;</span>immagini<span class="nt">&lt;/span&gt;</span>
       <span class="nt">&lt;/a&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"toolbar-divider"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"toolbar-divider"</span> <span class="na">role=</span><span class="s">"separator"</span> <span class="na">aria-orientation=</span><span class="s">"vertical"</span><span class="nt">&gt;&lt;/li&gt;</span>
     <span class="nt">&lt;li&gt;</span>
       <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-file"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
@@ -985,7 +985,7 @@
         <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"toolbar-label"</span><span class="nt">&gt;</span>privacy<span class="nt">&lt;/span&gt;</span>
       <span class="nt">&lt;/a&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"toolbar-divider"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"toolbar-divider"</span> <span class="na">role=</span><span class="s">"separator"</span> <span class="na">aria-orientation=</span><span class="s">"vertical"</span><span class="nt">&gt;&lt;/li&gt;</span>
     <span class="nt">&lt;li&gt;</span>
       <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"disabled"</span> <span class="na">disabled</span> <span class="na">aria-disabled=</span><span class="s">"true"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-star-outline"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
@@ -1982,7 +1982,7 @@
         </div>
       </div>
   </li>
-  <li class="toolbar-divider" aria-hidden="true"></li>
+  <li class="toolbar-divider" role="separator" aria-orientation="vertical"></li>
   <li>
       <a href="#">
         <svg class="icon" aria-hidden="true"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-file"></use></svg>
@@ -2031,7 +2031,7 @@
         <span class="nt">&lt;/div&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/li&gt;</span>
-  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"toolbar-divider"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"toolbar-divider"</span> <span class="na">role=</span><span class="s">"separator"</span> <span class="na">aria-orientation=</span><span class="s">"vertical"</span><span class="nt">&gt;&lt;/li&gt;</span>
   <span class="nt">&lt;li&gt;</span>
       <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-file"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
@@ -2090,7 +2090,7 @@
         </div>
       </div>
     </li>
-    <li class="toolbar-divider" aria-hidden="true"></li>
+    <li class="toolbar-divider" role="separator" aria-orientation="vertical"></li>
     <li>
       <a href="#">
         <span class="visually-hidden">privacy</span>
@@ -2145,7 +2145,7 @@
         <span class="nt">&lt;/div&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"toolbar-divider"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"toolbar-divider"</span> <span class="na">role=</span><span class="s">"separator"</span> <span class="na">aria-orientation=</span><span class="s">"vertical"</span><span class="nt">&gt;&lt;/li&gt;</span>
     <span class="nt">&lt;li&gt;</span>
       <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"visually-hidden"</span><span class="nt">&gt;</span>privacy<span class="nt">&lt;/span&gt;</span>
@@ -2204,7 +2204,7 @@
         </div>
       </div>
     </li>
-    <li class="toolbar-divider" aria-hidden="true"></li>
+    <li class="toolbar-divider" role="separator" aria-orientation="vertical"></li>
     <li>
         <a href="#">
         <span class="visually-hidden">immagini</span>
@@ -2265,7 +2265,7 @@
         <span class="nt">&lt;/div&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"toolbar-divider"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"toolbar-divider"</span> <span class="na">role=</span><span class="s">"separator"</span> <span class="na">aria-orientation=</span><span class="s">"vertical"</span><span class="nt">&gt;&lt;/li&gt;</span>
     <span class="nt">&lt;li&gt;</span>
         <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"visually-hidden"</span><span class="nt">&gt;</span>immagini<span class="nt">&lt;/span&gt;</span>
@@ -2299,14 +2299,14 @@
     </div>
 
     
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202301011348"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202301261734"></script>
 <script>
   bootstrap.loadFonts('/bootstrap-italia/dist/fonts')
 </script><script src="/bootstrap-italia/docs/assets/src/js/vendor/anchor.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/clipboard.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tsparticles.min.js"></script>
 
-<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202301011348"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202301261734"></script>
 
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tweenjs.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/easeljs.min.js"></script>
@@ -2323,7 +2323,7 @@
     { src: '/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png', id: 'cover-7' },
   ]
 </script>
-<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202301011348"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202301261734"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/docsearch.min.js"></script>
 
 <script>

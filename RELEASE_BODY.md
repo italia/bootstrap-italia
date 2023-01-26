@@ -1,17 +1,19 @@
-# [2.2.0](https://github.com/italia/bootstrap-italia/compare/v2.1.1...v2.2.0) (2023-01-01)
+# [2.3.0](https://github.com/italia/bootstrap-italia/compare/v2.2.0...v2.3.0) (2023-01-26)
 
 ### Bug Fixes
 
-* dynamic bind for components ([4456c53](https://github.com/italia/bootstrap-italia/commit/4456c53b5d8e918f1e5530ac5a08f66d885892dd))
-* dynamic bind for input number and search autocomplete ([0085bd0](https://github.com/italia/bootstrap-italia/commit/0085bd0dda3c22209623d0e18412cfc7f8891a5b))
-* dynamic bind input upload drag and drop ([c27bcc1](https://github.com/italia/bootstrap-italia/commit/c27bcc1ef0a1b699dd8e3fc40acbf3083fa55c3b))
-* dynamic bind input, input number and input password ([4d580f5](https://github.com/italia/bootstrap-italia/commit/4d580f5acad76a7333efa2f5c0c012f91786b346))
-* header-sticky script converted to a component ([1a23929](https://github.com/italia/bootstrap-italia/commit/1a239294c2ee5b41f3a0196683c2dbe4d0bbf635))
-* move splide and autocomplete css outside js ([b396523](https://github.com/italia/bootstrap-italia/commit/b39652345137376a602fb838b5bf597d4f4b24aa))
-* new icons for medium ([cc625e5](https://github.com/italia/bootstrap-italia/commit/cc625e5a6c1b07d08fa606cd9f5f75b705d76972))
-* removed import header sticky as script ([2cde962](https://github.com/italia/bootstrap-italia/commit/2cde962e5698908e7a0bcfd1caa46454daa2127b))
+* **a11y:** add tab index on back to top component ([70f3f4d](https://github.com/italia/bootstrap-italia/commit/70f3f4d35d3259e0f6557befeef61e45a960cf65))
+* **a11y:** scss color adjustments ([edb2571](https://github.com/italia/bootstrap-italia/commit/edb2571dbe5df0d90b49845629e6565a979dc5d6))
+* **a11y:** separate index counter from lists on steppers ([0c4d218](https://github.com/italia/bootstrap-italia/commit/0c4d2189912a33cd5943109a5dd50c6a4b9342fe))
+* **a11y:** toolbar divider accessibility ([60792d1](https://github.com/italia/bootstrap-italia/commit/60792d17c53e1bc57a8bda87303e1c0e34d0c060))
+* abbr tag style ([1cadb9a](https://github.com/italia/bootstrap-italia/commit/1cadb9a115afc5f2b0ce3d26c346161e0ea10ff8))
+* bind events on active input labels ([b96274d](https://github.com/italia/bootstrap-italia/commit/b96274d913293beb06c7831523f13910de191eb6))
+* container max-width for xl breakpoint ([abb3fac](https://github.com/italia/bootstrap-italia/commit/abb3facbdd14430c4d0b2778cb07ba4d02e700fa))
+* main entry points to a non-existing file ([c2e68d5](https://github.com/italia/bootstrap-italia/commit/c2e68d55dedaa32a7eac35c5593f57c3c52baae6))
+* textarea validation icon ([94d979c](https://github.com/italia/bootstrap-italia/commit/94d979c15ed97f3c5b875d350898d5ea2505c426))
 
 ### Features
 
-* move js fonts loading externally ([932f68b](https://github.com/italia/bootstrap-italia/commit/932f68b5c1bc58d01b3f4fa7ba0526c851a8595f))
-* use active class when you set placeholder attribute to inputs ([675d2c2](https://github.com/italia/bootstrap-italia/commit/675d2c2cbafefa56c29b0b5f8b0b394e5d5a53f4))
+* add non-bundled version ([351f907](https://github.com/italia/bootstrap-italia/commit/351f907e8346a55b60f9c914caa2737a2248cfc7))
+* new mastodon icons ([46b953b](https://github.com/italia/bootstrap-italia/commit/46b953b202b1e55ecc1d44b5de037b181e63781c))
+* upgrade to bootstrap 5.2.3 ([66fd71d](https://github.com/italia/bootstrap-italia/commit/66fd71d127d0184aab7c9771cf1caee1f7e96d36))

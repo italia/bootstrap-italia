@@ -12,12 +12,12 @@
 <title>Validazione Form · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202301011348" rel="stylesheet" />
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202301261734" rel="stylesheet" />
 
 
 <!-- Documentation extras -->
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202301011348" rel="stylesheet" />
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202301261734" rel="stylesheet" />
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico" />
@@ -130,6 +130,15 @@
         <div class="form-group">
           <label class="active" for="time">Timepicker</label>
           <input class="form-control" id="time" type="time" required />
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        <div class="form-group">
+          <label for="description">Testo descrizione</label>
+          <textarea id="description" rows="3"></textarea>
         </div>
       </div>
     </div>
@@ -466,6 +475,12 @@
           errorMessage: 'Questo campo è richiesto',
         },
       ])
+		  .addField('#description', [
+			{
+			  rule: 'required',
+			  errorMessage: 'Questo campo è richiesto'
+			},
+		  ])
       .addField('#toggleEsempio1a', [
         {
           rule: 'required',
@@ -516,7 +531,7 @@
   })
 </script>
  
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202301011348"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202301261734"></script>
 <script>
   bootstrap.loadFonts('/bootstrap-italia/dist/fonts')
 </script><!-- Notification per tornare alla pagina principale -->
