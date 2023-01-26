@@ -9,22 +9,22 @@ import { default as BaseComponent } from 'bootstrap/js/dist/base-component'
 declare class Notification extends BaseComponent {
   static get NAME(): string
 
-  constructor(element: HTMLElement, config: any)
+  constructor(element: HTMLElement, config?: Partial<Notification.Options>)
 
   _config: any
   _isShown: boolean
   _isTransitioning: boolean
   _toId: any
 
-  show(timeout: number, relatedTarget: string | Element): void
+  show(timeout?: number, relatedTarget?: string | Element): void
 
   hide(): void
 
-  toggle(relatedTarget: string | Element): void
+  toggle(relatedTarget?: string | Element): void
 
   _isAnimated(): boolean
 
-  _showElement(timeout: any): void
+  _showElement(timeout: number): void
 
   _hideElement(): void
 
@@ -35,6 +35,46 @@ declare class Notification extends BaseComponent {
   _setTimeout(duration: any, callback: any): void
 
   _clearTimeout(): void
+}
+
+declare namespace Notification {
+  enum Events {
+    /**
+     * This event fires immediately when the show instance method is called.
+     * If caused by a click, the clicked element is available as the
+     * relatedTarget property of the event.
+     */
+    show = 'show.bs.modal',
+
+    /**
+     * This event is fired when the modal has finished being hidden from the
+     * user (will wait for CSS transitions to complete).
+     */
+    hidden = 'hidden.bs.modal',
+  }
+
+  interface Options {
+    /**
+     * Closes the modal timeout milliseconds
+     *
+     * @default null
+     */
+    timeout: number;
+  }
+
+  interface Event extends CustomEvent {
+    /**
+     * The modal DOM element.
+     */
+    target: HTMLElement;
+
+    /**
+     * Only present for `show.bs.modal` and `shown.bs.modal` events when
+     * the event was triggered by a click. In that case, it's the element
+     * that was clicked. Otherwise, it's undefined.
+     */
+    relatedTarget?: HTMLElement;
+  }
 }
 
 export { Notification }
