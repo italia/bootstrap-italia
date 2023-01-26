@@ -11,7 +11,7 @@
     "web"
   ],
   "module": "dist/bootstrap-italia.esm.js",
-  "types": "./types/decs.d.ts",
+  "types": "./types/index.d.ts",
   "sideEffects": [
     "*.css",
     "*.scss",
@@ -61,6 +61,7 @@
     "@rollup/plugin-babel": "^5.3.1",
     "@rollup/plugin-legacy": "^2.2.0",
     "@rollup/plugin-node-resolve": "^13.1.3",
+    "@types/bootstrap": "^5.2.6",
     "browser-sync": "^2.27.9",
     "browserslist-config-design-italia": "^1.1.0",
     "concurrently": "^7.0.0",
