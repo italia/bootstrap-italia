@@ -16,7 +16,7 @@ declare class NavScroll extends BaseComponent {
     NavScroll, Partial<NavScroll.Options>
   >;
 
-  constructor(element: HTMLElement, config: any)
+  constructor(element: HTMLElement, config?: Partial<NavScroll.Options>)
 
   _config: any
   _togglerElement: any

@@ -16,7 +16,7 @@ declare class SelectAutocomplete extends BaseComponent {
     SelectAutocomplete, any
   >;
 
-  constructor(element: HTMLElement, config: any)
+  constructor(element: HTMLElement, config?: any)
 
   _config: any
 

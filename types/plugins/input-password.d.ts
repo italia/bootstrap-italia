@@ -121,6 +121,12 @@ declare namespace InputPassword {
      * @default 4
      */
     minimumLength: number;
+    /**
+     * Show text toggle
+     *
+     * @default true
+     */
+    showText: boolean;
   }
 
 }
