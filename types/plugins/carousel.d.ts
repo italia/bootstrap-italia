@@ -11,9 +11,7 @@ declare class Carousel extends BSCarousel {
    * Static method which allows you to get the modal instance associated with
    * a DOM element, or create a new one in case it wasn’t initialised
    */
-  static getOrCreateInstance: GetOrCreateInstanceFactory<
-    Carousel
-  >;
+  static getOrCreateInstance: GetOrCreateInstanceFactory<Carousel>;
 }
 
 export { Carousel }

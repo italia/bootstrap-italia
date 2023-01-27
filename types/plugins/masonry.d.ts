@@ -15,7 +15,7 @@ declare class Masonry extends BaseComponent {
   static getOrCreateInstance: GetOrCreateInstanceFactory<
     Masonry, Partial<Masonry.Options>
   >;
-  constructor(element: HTMLElement, config: any)
+  constructor(element: HTMLElement, config?: Partial<Masonry.Options>)
 
   _config: any
   _masonry: any
