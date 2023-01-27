@@ -3,9 +3,9 @@ import { default as BaseComponent } from 'bootstrap/js/dist/base-component'
 declare class Sticky extends BaseComponent {
   static get NAME(): string
 
-  constructor(element: HTMLElement, config?: Partial<Carousel.Options>)
+  constructor(element: HTMLElement, config?: Partial<Sticky.Options>)
 
-  _config: Partial<Carousel.Options>;
+  _config: Partial<Sticky.Options>;
   _isSticky: boolean
   _wrapper: HTMLDivElement
   _stickyTarget: any
