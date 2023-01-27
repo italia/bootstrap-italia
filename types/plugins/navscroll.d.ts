@@ -1,7 +1,20 @@
 import { default as BaseComponent } from 'bootstrap/js/dist/base-component'
+import { GetInstanceFactory, GetOrCreateInstanceFactory } from 'bootstrap/js/dist/base-component';
 
 declare class NavScroll extends BaseComponent {
   static get NAME(): string
+  /**
+   * Static method which allows you to get the instance associated
+   * with a DOM element.
+   */
+  static getInstance: GetInstanceFactory<NavScroll>;
+  /**
+   * Static method which allows you to get the modal instance associated with
+   * a DOM element, or create a new one in case it wasn’t initialised
+   */
+  static getOrCreateInstance: GetOrCreateInstanceFactory<
+    NavScroll, Partial<NavScroll.Options>
+  >;
 
   constructor(element: HTMLElement, config: any)
 
@@ -43,6 +56,30 @@ declare class NavScroll extends BaseComponent {
   _getCollapsible(): any
 
   _getScrollPadding(): any
+}
+
+declare namespace NavScroll {
+
+  interface Options {
+    /**
+     * Scroll padding
+     *
+     * @default 10
+     */
+    scrollPadding: number;
+    /**
+     * Scroll duration
+     *
+     * @default 800
+     */
+    duration: number;
+    /**
+     * Scroll easing
+     *
+     * @default 'easeInOutSine'
+     */
+    easing: string;
+  }
 }
 
 export { NavScroll }
