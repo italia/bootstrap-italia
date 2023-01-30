@@ -10,7 +10,7 @@ jobs:
     container:
       image: timbru31/ruby-node:3.0-16
     steps:
-      - uses: actions/checkout@v2.3.1
+      - uses: actions/checkout@v3
       - run: bundle install
       - run: chmod -R 777 .
       - run: npm ci
