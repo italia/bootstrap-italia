@@ -92,6 +92,13 @@ La select è composta dal un wrapper esterno `.bootstrap-select-wrapper` seguita
 
 ### Select custom disabilitata
 
+{% capture callout %}
+
+**Il componente verrà deprecato in tutte le sue forme nella prossima release di Bootstrap Italia**
+
+Il componente select custom presenta alcuni problemi di accessibilità si consiglia l'utilizzo della select standard pienamente accessibile.
+{% endcapture %}{% include callout.html content=callout type="danger" %}
+
 Per disabilitare una select, aggiungere la classe `.disabled` a `.bootstrap-select-wrapper` e aggiungere l'attributo `disabled` al tag `<select>` per disabilitare le funzionalità.
 
 {% capture example %}
@@ -109,6 +116,13 @@ Per disabilitare una select, aggiungere la classe `.disabled` a `.bootstrap-sele
 {% endcapture %}{% include example.html content=example %}
 
 ### Select custom con reset
+
+{% capture callout %}
+
+**Il componente verrà deprecato in tutte le sue forme nella prossima release di Bootstrap Italia**
+
+Il componente select custom presenta alcuni problemi di accessibilità si consiglia l'utilizzo della select standard pienamente accessibile.
+{% endcapture %}{% include callout.html content=callout type="danger" %}
 
 Per creare l'opzione che resetterà i valori selezionati andremo ad inserire nella option desiderata, all'interno dell'attributo "**data-content**" il seguente html:
 `"Label del tasto reset <span class='reset-label'></span>"`
@@ -131,13 +145,14 @@ All'interno dell'attributo `title` dell'opzione inseriremo il titolo di default 
 
 ### Select custom con ricerca
 
-Per attivare la ricerca è sufficiente aggiungere il parametro `data-live-search="true"` al tag `<select>` ed il relativo placeholder `data-live-search-placeholder="qui il placeholder..."`
 {% capture callout %}
 
-**Il componente verrà deprecato per problemi di accessibilità**
+**Il componente verrà deprecato in tutte le sue forme nella prossima release di Bootstrap Italia**
 
-Il componente select custom con ricerca presenta alcuni problemi di accessibilità si consiglia l'utilizzo del componente [autocompletamento]({{ site.baseurl }}/docs/form/autocompletamento/).
+Il componente select custom presenta alcuni problemi di accessibilità si consiglia l'utilizzo della select standard pienamente accessibile.
 {% endcapture %}{% include callout.html content=callout type="danger" %}
+
+Per attivare la ricerca è sufficiente aggiungere il parametro `data-live-search="true"` al tag `<select>` ed il relativo placeholder `data-live-search-placeholder="qui il placeholder..."`
 
 {% capture callout %}
 In caso di problemi di layout quando nella select sono presenti più di 599 elementi, disabilitare `virtualScroll` come riportato nella [issue #619](https://github.com/italia/bootstrap-italia/issues/619).
@@ -189,6 +204,13 @@ Al tag `<option>` aggiungeremo la classe `".icon-option-li"` per dare uno stile 
 
 ### Select custom Multipla
 
+{% capture callout %}
+
+**Il componente verrà deprecato in tutte le sue forme nella prossima release di Bootstrap Italia**
+
+Il componente select custom presenta alcuni problemi di accessibilità si consiglia l'utilizzo della select standard pienamente accessibile.
+{% endcapture %}{% include callout.html content=callout type="danger" %}
+
 Per attivare la multiselezione, aggiungere gli attributi `multiple="true"` e `data-multiple-separator=""` alla select.
 
 Nelle option inseriremo per l'attributo `data-content` il seguente HTML, che servirà a renderizzare con il corretto stile le opzioni selezionate.
@@ -208,6 +230,13 @@ Nelle option inseriremo per l'attributo `data-content` il seguente HTML, che ser
 {% endcapture %}{% include example.html content=example %}
 
 ### Select custom con gruppi
+
+{% capture callout %}
+
+**Il componente verrà deprecato in tutte le sue forme nella prossima release di Bootstrap Italia**
+
+Il componente select custom presenta alcuni problemi di accessibilità si consiglia l'utilizzo della select standard pienamente accessibile.
+{% endcapture %}{% include callout.html content=callout type="danger" %}
 
 Per le select con raggruppamenti utilizzare il tag HTML `<optgroup>` per raggruppare le `<option>`.
 
@@ -232,6 +261,14 @@ Per le select con raggruppamenti utilizzare il tag HTML `<optgroup>` per raggrup
 {% TODO questo esempio è stato temporaneamente rimosso perché potenzialmente a rischio di XSS %}
 
 ### Select custom multipla con gruppi e checkboxes
+
+
+{% capture callout %}
+
+**Il componente verrà deprecato in tutte le sue forme nella prossima release di Bootstrap Italia**
+
+Il componente select custom presenta alcuni problemi di accessibilità si consiglia l'utilizzo della select standard pienamente accessibile.
+{% endcapture %}{% include callout.html content=callout type="danger" %}
 
 Per la creazione di questo tipo di select:
 
@@ -261,6 +298,13 @@ Per inserire il componente [Checkbox]({{ site.baseurl }}/docs/form/checkbox/) in
 {% endcomment %}
 
 ### Modifica dinamica del campi della select custom
+
+{% capture callout %}
+
+**Il componente verrà deprecato in tutte le sue forme nella prossima release di Bootstrap Italia**
+
+Il componente select custom presenta alcuni problemi di accessibilità si consiglia l'utilizzo della select standard pienamente accessibile.
+{% endcapture %}{% include callout.html content=callout type="danger" %}
 
 Dal momento che il plugin viene attivato al caricamento del documento mentre a volte può essere necessario attendere, viene messa a disposizione una funzione `$.setOptionsToSelect(_parametro)` che permette di riscrivere le opzioni della select, ad esempio nel caso vengano caricate successivamente. La funzione dev'essere chiamata dall'elemento con classe `.bootstrap-select-wrapper`, e con parametro in input `_parametro` un oggetto Javascript con proprietà "value" e "text" come segue:
 
