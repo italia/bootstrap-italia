@@ -403,7 +403,7 @@ $modal-p-l-height: 1.3333333333333333rem;
 $modal-icon-color: $primary !default;
 $modal-icon-distance: $v-gap * 2;
 $modal-alert-p-distance: 32px + $v-gap * 2;
-$modal-heading-border: 1px solid $color-border-subtle;
+$modal-heading-border: 1px solid $color-border-subtle !default;
 $modal-sticky-bg: $white !default;
 $modal-body-height: 50vh;
 $modal-popconfirm-p-size-mobile: 0.875rem;
@@ -615,7 +615,7 @@ $chips-background: $color-background-muted !default; // UI kit
 $chips-background-hover: $color-background-secondary-hover !default; // UI kit
 $chips-label-color: $color-text-secondary !default; // UI kit
 $chips-label-color-disabled: $gray-label-disabled !default; // UI kit
-$chips-border: $color-border-subtle;
+$chips-border: $color-border-subtle !default;
 
 // stepper
 $stepper-spacing-h: 24px;

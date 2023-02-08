@@ -79,6 +79,7 @@
   background-color: $dropdown-custom-button-background;
   font-size: $dropdown-custom-button-font-size;
   border-radius: 0;
+  box-shadow: none;
   &:not(:disabled):not(.disabled):active {
     box-shadow: none;
   }
