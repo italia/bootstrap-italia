@@ -23,6 +23,10 @@ jobs:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
+      - name: Fixup git permissions
+        # https://github.com/actions/checkout/issues/766
+        shell: bash
+        run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
       - uses: actions/setup-node@v2.1.0
       - run: npm install @commitlint/cli
       - run: npx commitlint --from HEAD~${{ github.event.pull_request.commits }} --to HEAD

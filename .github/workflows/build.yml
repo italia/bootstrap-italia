@@ -11,6 +11,10 @@ jobs:
       image: timbru31/ruby-node:3.0-16
     steps:
       - uses: actions/checkout@v3
+      - name: Fixup git permissions
+        # https://github.com/actions/checkout/issues/766
+        shell: bash
+        run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
       - run: bundle install
       - run: chmod -R 777 .
       - run: npm ci
