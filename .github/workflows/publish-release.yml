@@ -54,3 +54,8 @@ jobs:
           npm run documentation-deploy-to-gh-pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: italia/slack-notify-release-action@v0.2.0
+        with:
+          slack_token: ${{ secrets.SLACK_TOKEN }}
+          channel_id: ${{ secrets.SLACK_CHANNEL }}
+          project_name: Bootstrap Italia
