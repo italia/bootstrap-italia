@@ -49,6 +49,7 @@ Gli stili definiti da Bootstrap Italia utilizzano un naming consistente con Boot
   <button type="button" class="btn btn-{{ color.name }}">{{ color.name | capitalize }}</button>
   <button type="button" class="btn btn-outline-{{ color.name }}">{{ color.name | capitalize }} outline</button>
   <button type="button" class="btn btn-{{ color.name }} disabled">{{ color.name | capitalize }} disabled</button>
+  <button type="button" class="btn btn-outline-{{ color.name }} disabled">{{ color.name | capitalize }} o. disabled</button>
 </div>{% endif %}{% endfor %}
 </div>
 {% endcapture %}{% include example.html content=example %}
