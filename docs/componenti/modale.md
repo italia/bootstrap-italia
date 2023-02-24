@@ -62,6 +62,8 @@ In questa sezione gli esempi sono rappresentati da modali _statiche_, dove `posi
 Sono inclusi l'intestazione, il corpo, e il footer della modale. È
 richiesta l'inclusione di intestazioni o elementi con funzione di chiusura della modale stessa.
 
+{% comment %}Example name: Componenti della modale{% endcomment %}
+{% capture example %}
 <div class="it-example-modal">
    <div class="modal" tabindex="-1" role="dialog" id="modal1" aria-labelledby="modal1Title" aria-describedby="modal1Description">
       <div class="modal-dialog" role="document">
@@ -81,28 +83,7 @@ richiesta l'inclusione di intestazioni o elementi con funzione di chiusura della
       </div>
    </div>
 </div>
-
-```html
-<div class="it-example-modal">
-  <div class="modal" tabindex="-1" role="dialog" id="modal1" aria-labelledby="modal1Title" aria-describedby="modal1Description">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title h5 no_toc" id="modal1Title">Intestazione modale</h2>
-        </div>
-        <div class="modal-body">
-          <p id="modal1Description">Descrizione scopo della modale.</p>
-          <p>Font Titillium 16px. Leading 24px. omnis iste natus error.</p>
-        </div>
-        <div class="modal-footer">
-          <button class="btn btn-outline-primary btn-sm" type="button" data-bs-dismiss="modal">Azione 2</button>
-          <button class="btn btn-primary btn-sm" type="button">Azione 1</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-```
+{% endcapture %}{% include example.html content=example %}
 
 ### Modale con pulsante di chiusura
 
@@ -115,6 +96,7 @@ Per chiudere la modale, si può utilizzare un pulsante con classe `.btn-close`.
 **Assicurati di inserire del testo per gli screen readers**, utilizzando l'attributo `aria-label`.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
+{% comment %}Example name: Pulsante di chiusura, dettaglio{% endcomment %}
 {% capture example %}
 <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Chiudi finestra modale">
 <svg class="icon">
@@ -125,8 +107,8 @@ Per chiudere la modale, si può utilizzare un pulsante con classe `.btn-close`.
 
 Esempio completo:
 
+{% comment %}Example name: Con pulsante di chiusura{% endcomment %}
 {% capture example %}
-
 <div class="it-example-modal">
    <div class="modal" tabindex="-1" role="dialog" id="modal2" aria-labelledby="modal2Title">
       <div class="modal-dialog" role="document">
@@ -156,8 +138,8 @@ Esempio completo:
 È possibile inserire un icona di alert (o altro tipo) affiancandola all'intestazione.
 Per formattare correttamente i contenuti della modale con icona, occorre aggiungere la classe `alert-modal` all'elemento `<div class="modal">`
 
+{% comment %}Example name: Con icona{% endcomment %}
 {% capture example %}
-
 <div class="it-example-modal">
   <div class="modal alert-modal" tabindex="-1" role="dialog" id="modal3" aria-labelledby="modal3Title">
     <div class="modal-dialog" role="document">
@@ -180,13 +162,13 @@ Per formattare correttamente i contenuti della modale con icona, occorre aggiung
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Modale con radiobuttons
+### Modale con elementi form
 
 All'interno della modale è possibile inserire elementi form.
 Di seguito una modale con un elenco di radio button.
 
+{% comment %}Example name: Con elementi form{% endcomment %}
 {% capture example %}
-
 <div class="it-example-modal">
    <div class="modal" tabindex="-1" role="dialog" id="modal4" aria-labelledby="modal4Title">
       <div class="modal-dialog" role="document">
@@ -227,8 +209,8 @@ Di seguito una modale con un elenco di radio button.
 All'interno della modale è possibile inserire delle [Liste di link]({{ site.baseurl }}/docs/organizzare-i-contenuti/liste/#liste-per-menù-di-navigazione).
 Per formattare correttamente il contenuto di questa modale, aggiungere la classe `it-dialog-link-list` all'elemento `<div class="modal">`
 
+{% comment %}Example name: Con lista link{% endcomment %}
 {% capture example %}
-
 <div class="it-example-modal">
    <div class="modal it-dialog-link-list" tabindex="-1" role="dialog" id="modal5" aria-labelledby="modal5Title">
       <div class="modal-dialog" role="document">
@@ -272,14 +254,14 @@ Per formattare correttamente il contenuto di questa modale, aggiungere la classe
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Modale Popconfirm
+### Modale popconfirm
 
-La Modale di tipo Popconfirm può essere utilizzata per brevi messaggi di conferma. Questo particolare design si ottiene applicando la classe `popconfirm-modal` all'elemento `<div class="modal">`.
+La modale di tipo popconfirm può essere utilizzata per brevi messaggi di conferma. Questo particolare design si ottiene applicando la classe `popconfirm-modal` all'elemento `<div class="modal">`.
 
 Il titolo della modale è facoltativo, nel caso non fosse necessario è sufficiente rimuovere l'intero elemento `<div class="modal-header">`.
 
+{% comment %}Example name: Popconfirm{% endcomment %}
 {% capture example %}
-
 <div class="it-example-modal">
   <div class="container">
     <div class="row">
