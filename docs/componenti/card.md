@@ -26,6 +26,7 @@ Utilizzare il tag `h` corretto a seconda del contesto.
 
 Esempio di card semplice con titolo e testo:
 
+{% comment %}Example name: Base{% endcomment %}
 {% capture example %}
 
 <div class="row">
@@ -46,6 +47,7 @@ Esempio di card semplice con titolo e testo:
 
 #### Card semplice su più colonne
 
+{% comment %}Example name: Bade, su più colonne{% endcomment %}
 {% capture example %}
 
 <div class="row">
@@ -101,8 +103,8 @@ La categoria nell'esempio seguente è un link, ma potrebbe essere un testo sempl
 Quando si utilizzano link con label generiche come “Leggi tutto” o “Leggi di più” è importante ricordare di aggiungere uno `<span class="visually-hidden">...</span>` a seguito della label nel quale specificare a che contenuto si fa riferimento (idealmente ripetendo il titolo della card). In caso contrario un utente che faccia uso di _screen reader_ non avrebbe modo di distinguere link identici a contenuti differenti.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
+{% comment %}Example name: Base, articolo{% endcomment %}
 {% capture example %}
-
 <div class="row">
   <div class="col-12 col-lg-6">
     <!--start card-->
@@ -136,8 +138,8 @@ Quando si utilizzano link con label generiche come “Leggi tutto” o “Leggi 
 Esempio di card contenente categorizzazione e icona.  
 Per inserire la categorizzazione con relativa icona, usare l'elemento `.categoryicon-top` ed inserire al suo interno gli elementi come da esempio.
 
+{% comment %}Example name: Con icona{% endcomment %}
 {% capture example %}
-
 <div class="row">
   <div class="col-12 col-lg-6">
     <!--start card-->
@@ -171,8 +173,8 @@ Nell'esempio seguente sono stati inseriti un sottotitolo ed un link semplice che
 segue il paragrafo. Per i sottotitoli utilizzare il tag `<h6>`, per i link
 semplici utilizzare la classe `.simple-link`.
 
+{% comment %}Example name: Con icona, sottotitolo e link{% endcomment %}
 {% capture example %}
-
 <div class="row">
   <div class="col-12 col-lg-6">
     <!--start card-->
@@ -206,8 +208,8 @@ Le card con ombreggiatura sono caratterizzate dalle classi:
 - **`.card-space`:** utilizzata nel div più esterno `card-wrapper` serve a distanziare le card nella loro versione mobile.
 - **`.card-bg`:** utilizzata nel div `card` serve a creare background e ombra della card.
 
+{% comment %}Example name: Con ombra{% endcomment %}
 {% capture example %}
-
 <div class="row">
   <div class="col-12 col-lg-6">
     <!--start card-->
@@ -243,8 +245,8 @@ il div contenente l'icona è di classe `.top-icon`.
 
 #### Esempio 1:
 
+{% comment %}Example name: Con ombra, grande{% endcomment %}
 {% capture example %}
-
 <div class="row">
   <div class="col-12 col-lg-8">
     <!--start card-->
@@ -280,8 +282,8 @@ Per creare un bordo di colore primario a chiusura card, potete utilizzare la cla
 
 #### Esempio 2:
 
+{% comment %}Example name: Con ombra, grande, con categoria ed in evidenza{% endcomment %}
 {% capture example %}
-
 <div class="row">
   <div class="col-12 col-lg-8">
     <!--start card-->
@@ -319,8 +321,8 @@ Per inserire il pulsante a fondo card, utilizzare l'elemento: `.it-card-footer`.
 Nell'esempio seguente sono state inseriti firma e pulsante nel footer della card.
 Utilizzate la classe `.no-after` applicata al div `.card` se volete ridurre lo spazio inferiore della card.
 
+{% comment %}Example name: Con ombra, grande, con tag, data e call to action{% endcomment %}
 {% capture example %}
-
 <div class="row">
   <div class="col-12 col-lg-6">
     <!--start card-->
@@ -354,8 +356,8 @@ Qualora le proporzioni non fossero esatte, l'immagine occuperà il massimo dell'
 
 È anche possibile aggiungere un piccolo box con l'indicazione della data, per card di tipo _evento_.
 
+{% comment %}Example name: Con immagine{% endcomment %}
 {% capture example %}
-
 <div class="row">
   <div class="col-12 col-lg-6">
     <!--start card-->
@@ -475,8 +477,8 @@ La card speciale è contraddistinta dalla classe `.special-card` applicata al ta
 Tutta la card è un link al relativo contenuto.
 Le proporzioni ottimali dell'immagine per questa card sono 17:21.
 
+{% comment %}Example name: Speciale{% endcomment %}
 {% capture example %}
-
 <div class="row">
   <div class="col-12 col-lg-6">
     <!--start card-->
@@ -507,8 +509,8 @@ Per creare card con contenuti brevi o di _"anteprima"_ è sufficiente aggiungere
 
 Come per ogni elemento, è possibile aggiungere le classi `rounded` o `shadow` per aggiungere bordi, effetti di arrotondamento o ombreggiatura.
 
+{% comment %}Example name: Teaser{% endcomment %}
 {% capture example %}
-
 <div class="card-wrapper card-teaser-wrapper">
   <!--start card-->
   <div class="card card-teaser">

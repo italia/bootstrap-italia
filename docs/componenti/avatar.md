@@ -302,7 +302,7 @@ Racchiudendo una serie di Avatar in una lista di tipo `<ul>` con classe `.avatar
 
 Gruppo di Avatar sovrapposti di dimensione piccola con classe `.size-sm`.
 
-{% comment %}Example name: Sovrapposti, piccoli{% endcomment %}
+{% comment %}Example name: Gruppo, sovrapposti piccoli{% endcomment %}
 {% capture example %}
 
 <ul class="avatar-group-stacked">
@@ -405,7 +405,7 @@ Gruppo di Avatar sovrapposti di dimensione piccola con classe `.size-sm`.
 
 Gruppo di Avatar sovrapposti di dimensione media con classe `.size-md`.
 
-{% comment %}Example name: Sovrapposti, medi{% endcomment %}
+{% comment %}Example name: Gruppo, sovrapposti medi{% endcomment %}
 {% capture example %}
 
 <ul class="avatar-group-stacked">
@@ -500,7 +500,7 @@ Inserendo un `<div>` con classe `.avatar-presence` all'interno dell'Avatar si ot
 
 Inserire un `<span>` riservato agli screen reader con indicazione della presenza dell'utente: `<span class="visually-hidden">Presenza: (stato presenza)</span>`.
 
-{% comment %}Example name: Comportamento, presenza utente{% endcomment %}
+{% comment %}Example name: Con comportamento, presenza utente{% endcomment %}
 {% capture example %}
 
 <div class="d-flex align-items-center justify-content-around flex-wrap flex-sm-nowrap mb-5">
@@ -586,7 +586,7 @@ Inserendo un `<div>` con classe `.avatar-status` all'interno dell'Avatar si otte
 Inserire un `<span>` riservato agli screen reader con indicazione dello stato dell'utenza: `<span class="visually-hidden">Stato: (stato utenza)</span>`
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
-{% comment %}Example name: Comportamento, status utente{% endcomment %}
+{% comment %}Example name: Con comportamento, status utente{% endcomment %}
 {% capture example %}
 
 <div class="d-flex align-items-center justify-content-around flex-wrap flex-sm-nowrap mb-5">
