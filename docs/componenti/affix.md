@@ -123,7 +123,7 @@ Per ancorare un elemento a svliuppo orizzontale alla parte alta della pagina è 
 
 Per ancorare un elemento a sviluppo orizzontale alla parte inferiore della pagina è sufficiente applicare la classe `.affix-parent` all'elemento che lo contiene e la classe `.affix-bottom` all'elemento stesso.
 
-ù{% comment %}Example name: Affix orizzontale in basso {% endcomment %}
+{% comment %}Example name: Affix orizzontale in basso {% endcomment %}
 {% capture example %}
 
 <div class="affix-example container affix-parent">

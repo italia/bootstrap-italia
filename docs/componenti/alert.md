@@ -10,6 +10,7 @@ toc: true
 
 Gli avvisi sono disponibili in quattro tipologie diverse e sono adatti a qualsiasi lunghezza di testo. Inoltre possono prevedere un pulsante di chiusura utilizzando un pulsante con attributo `data-bs-dismiss="alert"`.
 
+{% comment %}Example name: Varianti per tipologia{% endcomment %}
 {% capture example %}
 {% assign colors = "info,success,warning,danger" | split: ','%}
 {% for color in colors %}
@@ -26,6 +27,7 @@ Gli avvisi sono disponibili in quattro tipologie diverse e sono adatti a qualsia
 
 Usa la classe `.alert-link` per dare risalto ad un link all'interno dell'alert.
 
+{% comment %}Example name: Link evidenziato{% endcomment %}
 {% capture example %}
 
 <div class="alert alert-danger" role="alert">
@@ -38,6 +40,7 @@ Usa la classe `.alert-link` per dare risalto ad un link all'interno dell'alert.
 
 I messaggi di avviso possono avere del contenuto HTML aggiuntivo come intestazioni, paragrafi e divisori.
 
+{% comment %}Example name: Contenuto aggiuntivo{% endcomment %}
 {% capture example %}
 
 <div class="alert alert-success" role="alert">
@@ -67,6 +70,7 @@ Ad esempio "chiudi nota", "chiudi", "nascondi", ecc.
 
 Clicca sul pulsante di chiusura per vedere la funzionalità di rimozione alert in azione:
 
+{% comment %}Example name: Pulsante di chiusura{% endcomment %}
 {% capture example %}
 
 <div class="alert alert-warning alert-dismissible fade show" role="alert">
