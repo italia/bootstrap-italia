@@ -22,7 +22,7 @@ La grandezza di ogni badge si adatta come dimensione a quella del font (misurato
 
 I badge possono essere utilizzati come parte di link o pulsanti per fornire un contatore.
 
-{% comment %}Example name: In pulsante%}
+{% comment %}Example name: In pulsante{% endcomment %}
 {% capture example %}
 <button type="button" class="btn btn-primary">
 Notifiche <span class="badge neutral-2-bg text-secondary">4</span>
