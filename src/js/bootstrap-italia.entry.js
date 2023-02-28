@@ -19,6 +19,7 @@ import {
   Tab,
   Toast,
   Tooltip,
+  VideoPlayer,
   // Extra components
   Dimmer,
   Notification,
@@ -62,6 +63,7 @@ export default {
   Tab,
   Toast,
   Tooltip,
+  VideoPlayer,
   Accordion,
   BackToTop,
   CarouselBI,
