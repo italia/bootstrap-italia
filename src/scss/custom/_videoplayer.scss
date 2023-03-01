@@ -5,12 +5,21 @@
 .vjs-theme-bootstrap-italia {
   *, :after, :before {}
   
-  .vjs-big-play-button {}
+  .vjs-big-play-button {
+    background-color: $primary;
+  }
   
   &:hover .vjs-big-play-button,
-  &.vjs-big-play-button:focus {}
+  &.vjs-big-play-button:focus {
+    background-color: $primary;
+  }
   
-  .vjs-control-bar {}
+  .vjs-control-bar {
+    background-color: $primary;
+    @include media-breakpoint-down(lg) {
+        font-size: 1.5em;
+    }
+  }
   
   .vjs-volume-panel {}
   

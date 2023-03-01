@@ -21,12 +21,15 @@ const Default = {
 class VideoPlayer extends BaseComponent {
   constructor(element, config) {
     super(element)
-    element.classList.add("video-js")
-    element.classList.add('vjs-big-play-centered')
+    element.classList.add(
+      "video-js", 
+      "vjs-theme-bootstrap-italia", 
+      "vjs-fluid", 
+      "vjs-big-play-centered"
+    )
     this._config = this._getConfig(config)
 
-    videojs(element, config, () => {
-      videojs.log('player is ready')
+    this.video = videojs(element, config, () => {
     })
   }
 
@@ -34,23 +37,6 @@ class VideoPlayer extends BaseComponent {
 
   static get NAME() {
     return NAME
-  }
-
-  // Public
-  play() {
-
-  }
-
-  pause() {
-
-  }
-
-  stop() {
-
-  }
-
-  reset() {
-
   }
 
   // Private
