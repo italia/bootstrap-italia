@@ -187,7 +187,7 @@ semplici utilizzare la classe `.simple-link`.
           </div>
           <a href="#">
             <h3 class="card-title h5 no_toc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h3>
-            <h6 class="card-subtitle">Sottotitolo</h6>
+            <h4 class="card-subtitle h6">Sottotitolo</h4>
           </a>
           <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           <a class="simple-link" href="#">Link <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span></a>
