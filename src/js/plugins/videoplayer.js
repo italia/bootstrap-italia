@@ -29,8 +29,7 @@ class VideoPlayer extends BaseComponent {
     )
     this._config = this._getConfig(config)
 
-    this.video = videojs(element, config, () => {
-    })
+    this.player = videojs(element, config)
   }
 
   // Getters

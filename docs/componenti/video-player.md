@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Video Player
-description: componente Video Player.
+description: Componente Video Player.
 group: componenti
 toc: true
 ---
@@ -22,3 +22,14 @@ Puoi usare un contenitore video con l'attributo `data-bs-video` .
 ### Attivazione dell'overlay di consenso
 
 Lorem ipsum
+
+### Controllare il player con JavaScript
+
+```js
+const videoEl = document.getElementById("albatrosvideo");
+const player = bootstrap.VideoPlayer.getOrCreateInstance(videoEl).player;
+player.pause();
+```
+
+Per vedere tutte le opzioni disponibili, consultare la documentazione di 
+[VideoJS](https://docs.videojs.com/player).
