@@ -13,7 +13,7 @@ Lorem ipsum descrizione
 Puoi usare un contenitore video con l'attributo `data-bs-video` .
 
 {% capture example %}
-<video controls data-bs-video>
+<video class="vjs-theme-bootstrap-italia" controls data-bs-video>
   <source src="//vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
   <source src="//vjs.zencdn.net/v/oceans.webm" type="video/webm">
 </video>
