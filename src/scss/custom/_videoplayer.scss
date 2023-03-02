@@ -16,8 +16,10 @@
   
   .vjs-control-bar {
     background-color: $primary;
-    @include media-breakpoint-down(lg) {
-        font-size: 1.5em;
+    font-size: 1.1em;
+    @include media-breakpoint-up(lg) {
+        min-height: 48px;
+        font-size: 1rem;
     }
   }
   
