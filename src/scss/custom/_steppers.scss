@@ -206,7 +206,7 @@
         position: relative;
         display: flex;
         align-items: center;
-        &:nth-last-child(2) {
+        &:nth-last-child(1) {
           border-right: 1px solid $gray-border;
         }
         // index
