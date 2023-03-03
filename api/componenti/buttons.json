@@ -9,7 +9,7 @@
     },
     {
         "name": "Varianti di colore",
-        "content": "\n\n<div class=\"py-1\">\n<div class=\"btn-example\">\n  <button type=\"button\" class=\"btn btn-primary\">Primary</button>\n  <button type=\"button\" class=\"btn btn-outline-primary\">Primary outline</button>\n  <button type=\"button\" class=\"btn btn-primary disabled\">Primary disabled</button>\n</div>\n<div class=\"btn-example\">\n  <button type=\"button\" class=\"btn btn-secondary\">Secondary</button>\n  <button type=\"button\" class=\"btn btn-outline-secondary\">Secondary outline</button>\n  <button type=\"button\" class=\"btn btn-secondary disabled\">Secondary disabled</button>\n</div>\n</div>\n"
+        "content": "\n\n<div class=\"py-1\">\n<div class=\"btn-example\">\n  <button type=\"button\" class=\"btn btn-primary\">Primary</button>\n  <button type=\"button\" class=\"btn btn-outline-primary\">Primary outline</button>\n  <button type=\"button\" class=\"btn btn-primary disabled\">Primary disabled</button>\n  <button type=\"button\" class=\"btn btn-outline-primary disabled\">Primary o. disabled</button>\n</div>\n<div class=\"btn-example\">\n  <button type=\"button\" class=\"btn btn-secondary\">Secondary</button>\n  <button type=\"button\" class=\"btn btn-outline-secondary\">Secondary outline</button>\n  <button type=\"button\" class=\"btn btn-secondary disabled\">Secondary disabled</button>\n  <button type=\"button\" class=\"btn btn-outline-secondary disabled\">Secondary o. disabled</button>\n</div>\n</div>\n"
     },
     {
         "name": "Disabilitato",
