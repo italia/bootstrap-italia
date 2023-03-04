@@ -27,10 +27,40 @@ Il player viene istanziato automaticamente quando è presente l'attributo `data-
 ### Controllare il player con i data-attribute
 
 Il player offre numerose opzioni di configurazione per personalizzare l'aspetto e 
-il comportamento del player video. Una delle modalità per configurare il player consiste
-nell'utilizzare i `data-attribute` che possono essere definiti all'interno del tag `video`.
+il comportamento del player stesso. Una delle modalità per configurare il player consiste
+nell'utilizzare l'attributo `data-setup` definito all'interno del tag `video` avente come
+valore un array in formato JSON.
 
-***esempi***
+```html
+<video controls data-bs-video data-setup='{}'>
+  <source src="//vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+  <source src="//vjs.zencdn.net/v/oceans.webm" type="video/webm">
+</video>
+```
+
+{% capture callout %}
+
+##### Importante!
+
+Nota l'uso delle virgolette singole, `data-setup` si aspetta di ricevere un JSON.
+{% endcapture %}{% include callout.html content=callout type="warning" %}
+
+{% capture example %}
+<video 
+  data-bs-video 
+  data-setup='{
+    "controls": true,
+    "autoplay": false, 
+    "preload": "auto"
+  }'
+>
+  <source src="//vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+  <source src="//vjs.zencdn.net/v/oceans.webm" type="video/webm">
+</video>
+{% endcapture %}{% include example.html content=example %}
+
+Per vedere tutte le opzioni disponibili, consultare la documentazione di
+[VideoJS](https://videojs.com/guides/options/).
 
 ### Controllare il player con JavaScript
 
@@ -47,8 +77,8 @@ Per vedere tutte le opzioni disponibili, consultare la documentazione di
 
 ## Sottotitoli, didascalie, capitoli e descrizioni
 
-Tramite il tag `track` puoi aggiungere del testo assistivo presente
-in un file testuale, l'unico formato supportato è [WebVTT](https://www.w3.org/TR/webvtt1/).
+Tramite il tag `track` puoi aggiungere del testo accessibile presente
+in un file testuale; l'unico formato supportato è [WebVTT](https://www.w3.org/TR/webvtt1/).
 Valorizzando opportunamente l'attributo `kind` puoi specificare se
 il file associato contiene i sottotitoli (trascrizione dei dialoghi),
 le didascalie (trascrizione dei dialoghi, degli effetti sonori, trascrizione
