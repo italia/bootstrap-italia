@@ -6,11 +6,16 @@ group: componenti
 toc: true
 ---
 
-Lorem ipsum descrizione
+Il tag `video` HTML5 consente di incorporare video all'interno di una pagina web senza 
+dover utilizzare plugin esterni. Per gestire la riproduzione e l'interazione con l'utente,
+è possibile utilizzare diverse librerie JavaScript. 
+Questo componente utilizza la libreria video.js per implementare funzionalità avanzate
+come il supporto a diversi formati video, la personalizzazione dell'interfaccia utente
+e l'integrazione con API esterne.
 
 ## Come funziona
 
-Puoi usare un contenitore video con l'attributo `data-bs-video` .
+Il player viene istanziato automaticamente quando è presente l'attributo `data-bs-video`.
 
 {% capture example %}
 <video controls data-bs-video>
@@ -19,15 +24,17 @@ Puoi usare un contenitore video con l'attributo `data-bs-video` .
 </video>
 {% endcapture %}{% include example.html content=example %}
 
-### Attivazione dell'overlay di consenso
-
-Lorem ipsum
-
 ### Controllare il player con i data-attribute
 
-Lorem ipsum
+Il player offre numerose opzioni di configurazione per personalizzare l'aspetto e 
+il comportamento del player video. Una delle modalità per configurare il player consiste
+nell'utilizzare i `data-attribute` che possono essere definiti all'interno del tag `video`.
+
+***esempi***
 
 ### Controllare il player con JavaScript
+
+Puoi anche controllare il player tramite javascript, di seguito un esempio.
 
 ```js
 const videoEl = document.getElementById("albatrosvideo");
@@ -76,6 +83,41 @@ diverse lingue.
 Approfondisci l'argomento consultando la documentazione di 
 [VideoJS (Inglese)](https://videojs.com/guides/text-tracks/)
 
-## Streaming asincrono
+## Streaming
 
-Lorem ipsum
+Servire video tramite dei file in formato `mp4` o `webm` (che sono i formati 
+più supportati) non è la migliore soluzione in termini di performance e di
+ottimizzazione della banda.
+Per garantire una buona esperienza utente è fondamentale scegliere il formato 
+di riproduzione più adatto. In questo contesto, i formati di streaming 
+HLS e DASH offrono importanti vantaggi rispetto al tradizionale file MP4.
+L'uso dei formati di streaming permette una riproduzione fluida dei video online
+grazie alla loro capacità di adattarsi alla larghezza di banda disponibile. 
+In questo modo si evitano interruzioni o rallentamenti durante la visualizzazione, 
+migliorando l'esperienza utente. Inoltre, questi formati consentono di distribuire 
+il contenuto su diverse piattaforme e dispositivi, aumentando la portabilità del video.
+
+***esempi***
+
+## Embed da piattaforme terze
+
+Oltre a consentire la riproduzione di video direttamente sulle proprie pagine web, 
+il player video.js offre anche la possibilità di incorporare video provenienti 
+da altre piattaforme come YouTube o Vimeo. Questa funzionalità consente di sfruttare
+i video già disponibili su queste piattaforme, senza doverli caricare sul proprio sito web.
+Tuttavia, è importante tenere in considerazione la questione della privacy: 
+quando si incorporano video di terze parti, si può finire per condividere con queste 
+piattaforme i dati degli utenti che visualizzano i video, come ad esempio le informazioni 
+sulla navigazione o l'indirizzo IP. È quindi importante valutare attentamente l'utilizzo 
+di questa funzionalità e bisogna adottare misure di protezione della privacy degli utenti.
+
+***esempi***
+
+### Attivazione dell'overlay di consenso
+
+L'utilizzo di un overlay per il consenso è una soluzione comune per garantire 
+la conformità alla normativa sulla privacy in materia di cookie e tracciamento degli utenti.
+L'overlay per il consenso consente di informare l'utente sui cookie utilizzati e 
+di ottenere il suo consenso in modo esplicito e consapevole alla riproduzione del video
+
+***esempi***
