@@ -185,9 +185,7 @@ del contenuto multimediale.
 
 Per superare questo problema, è necessario configurare correttamente il server che
 fornisce le risorse audio e video, consentendo l'accesso a domini esterni tramite 
-il protocollo CORS. In alternativa, è possibile utilizzare soluzioni di proxy 
-per aggirare le restrizioni del browser e riprodurre il contenuto multimediale 
-su altri domini.
+il protocollo CORS.
 
 ## Embed da piattaforme terze
 
