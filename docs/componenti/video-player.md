@@ -127,7 +127,67 @@ In questo modo si evitano interruzioni o rallentamenti durante la visualizzazion
 migliorando l'esperienza utente. Inoltre, questi formati consentono di distribuire 
 il contenuto su diverse piattaforme e dispositivi, aumentando la portabilità del video.
 
-***esempi***
+Di seguito un esempio in formato MPEG-DASH
+
+{% capture example %}
+<video 
+  data-bs-video
+  poster="https://picsum.photos/800/300?image=1055"
+  preload="auto"
+  data-setup='{
+    "controls": true,
+    "autoplay": false,
+    "fluid": true
+  }'
+>
+  <source src="https://dash.akamaized.net/dash264/TestCasesHD/2b/qualcomm/1/MultiResMPEG2.mpd" type="application/dash+xml">
+  <track 
+    kind="captions" 
+    src="//example.com/path/to/captions-it.vtt" 
+    srclang="it" 
+    label="Italiano" default>
+  <track 
+    kind="captions" 
+    src="//example.com/path/to/captions-en.vtt" 
+    srclang="en" 
+    label="English">
+  <track 
+    kind="captions" 
+    src="//example.com/path/to/captions-ch.vtt" 
+    srclang="ch" 
+    label="中文">
+</video>
+{% endcapture %}{% include example.html content=example %}
+
+Di seguito un esempio in formato HLS multilingua (solo DASH e HLS supportano più tracce audio).
+
+{% capture example %}
+<video
+  data-bs-video
+  poster="https://picsum.photos/800/300?image=1055"
+  preload="auto"
+  data-setup='{
+    "controls": true,
+    "autoplay": false,
+    "fluid": true
+  }'
+>
+  <source src="https://d3rlna7iyyu8wu.cloudfront.net/skip_armstrong/skip_armstrong_multi_language_subs.m3u8" type="application/x-mpegURL">
+</video>
+{% endcapture %}{% include example.html content=example %}
+
+Le playlist HLS e DASH possono essere condivise su più domini condividendo solo l'URL.
+Tuttavia, a causa delle restrizioni imposte dalle politiche di sicurezza del browser,
+l'utilizzo di queste playlist in domini diversi da quello originale può causare errori 
+di CORS (Cross-Origin Resource Sharing). In altre parole, il browser può rifiutare 
+l'accesso alle risorse audio e video, impedendo la corretta riproduzione 
+del contenuto multimediale.
+
+Per superare questo problema, è necessario configurare correttamente il server che
+fornisce le risorse audio e video, consentendo l'accesso a domini esterni tramite 
+il protocollo CORS. In alternativa, è possibile utilizzare soluzioni di proxy 
+per aggirare le restrizioni del browser e riprodurre il contenuto multimediale 
+su altri domini.
 
 ## Embed da piattaforme terze
 
