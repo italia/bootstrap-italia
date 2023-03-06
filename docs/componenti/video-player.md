@@ -7,11 +7,9 @@ toc: true
 ---
 
 Il tag `video` HTML5 consente di incorporare video all'interno di una pagina web senza 
-dover utilizzare plugin esterni. Per gestire la riproduzione e l'interazione con l'utente,
-è possibile utilizzare diverse librerie JavaScript. 
-Questo componente utilizza la libreria video.js per implementare funzionalità avanzate
-come il supporto a diversi formati video, la personalizzazione dell'interfaccia utente
-e l'integrazione con API esterne.
+dover utilizzare plugin esterni. Questo componente utilizza la libreria video.js per 
+implementare funzionalità avanzate come il supporto a diversi formati video, 
+la personalizzazione dell'interfaccia utente e l'integrazione con API esterne.
 
 ## Come funziona
 
@@ -27,7 +25,7 @@ Il player viene istanziato automaticamente quando è presente l'attributo `data-
 ### Controllare il player con i data-attribute
 
 Il player offre numerose opzioni di configurazione per personalizzare l'aspetto e 
-il comportamento del player stesso. Una delle modalità per configurare il player consiste
+il comportamento dello stesso. Una delle modalità per configurarlo consiste
 nell'utilizzare l'attributo `data-setup` definito all'interno del tag `video` avente come
 valore un array in formato JSON.
 
@@ -115,17 +113,28 @@ Approfondisci l'argomento consultando la documentazione di
 
 ## Streaming
 
-Servire video tramite dei file in formato `mp4` o `webm` (che sono i formati 
+Servire i video tramite dei file in formato `mp4` o `webm` (che sono i formati 
 più supportati) non è la migliore soluzione in termini di performance e di
 ottimizzazione della banda.
 Per garantire una buona esperienza utente è fondamentale scegliere il formato 
 di riproduzione più adatto. In questo contesto, i formati di streaming 
-HLS e DASH offrono importanti vantaggi rispetto al tradizionale file MP4.
+`HLS` e `DASH` offrono importanti vantaggi rispetto al tradizionale file MP4.
 L'uso dei formati di streaming permette una riproduzione fluida dei video online
 grazie alla loro capacità di adattarsi alla larghezza di banda disponibile. 
 In questo modo si evitano interruzioni o rallentamenti durante la visualizzazione, 
 migliorando l'esperienza utente. Inoltre, questi formati consentono di distribuire 
 il contenuto su diverse piattaforme e dispositivi, aumentando la portabilità del video.
+
+{% capture callout %}
+
+##### Tip
+
+FFmpeg è uno strumento di conversione multimediale open-source che consente di convertire
+facilmente i file MP4 in formati adattivi come HLS o DASH, ti permette la conversione del
+video MP4 in un formato a bitrate variabile per adattare la qualità del video alle diverse
+velocità di connessione degli utenti.
+Approfondisci su [FFmpeg](https://ffmpeg.org/)
+{% endcapture %}{% include callout.html content=callout type="info" %}
 
 Di seguito un esempio in formato MPEG-DASH
 
@@ -159,7 +168,25 @@ Di seguito un esempio in formato MPEG-DASH
 </video>
 {% endcapture %}{% include example.html content=example %}
 
-Di seguito un esempio in formato HLS multilingua (solo DASH e HLS supportano più tracce audio).
+Le playlist HLS e DASH possono essere riprodotte su più domini condividendo solo l'URL.
+Tuttavia, a causa delle restrizioni imposte dalle politiche di sicurezza del browser,
+l'utilizzo di queste playlist in domini diversi da quello originale può causare errori 
+CORS (Cross-Origin Resource Sharing). In altre parole, il browser può rifiutare 
+l'accesso alle risorse audio e video, impedendo la corretta riproduzione 
+del contenuto multimediale.
+
+Per superare questo problema, è necessario configurare correttamente il server che
+fornisce le risorse audio e video, consentendo l'accesso a domini esterni tramite 
+il protocollo CORS.
+
+### Gestire più tracce audio
+L'uso di più tracce audio nei video è una buona tecnica per migliorare l'accessibilità 
+dei contenuti multimediali. Ad esempio, è possibile creare una traccia audio aggiuntiva 
+che descrive in dettaglio le immagini e le azioni che si svolgono nel video, per aiutare 
+le persone non vedenti a comprendere il contenuto visivo. Inoltre, l'aggiunta di tracce 
+audio in lingue diverse consente di offrire il video in più lingue.
+
+Di seguito un esempio in formato HLS multilingua.
 
 {% capture example %}
 <video
@@ -176,16 +203,16 @@ Di seguito un esempio in formato HLS multilingua (solo DASH e HLS supportano pi�
 </video>
 {% endcapture %}{% include example.html content=example %}
 
-Le playlist HLS e DASH possono essere condivise su più domini condividendo solo l'URL.
-Tuttavia, a causa delle restrizioni imposte dalle politiche di sicurezza del browser,
-l'utilizzo di queste playlist in domini diversi da quello originale può causare errori 
-di CORS (Cross-Origin Resource Sharing). In altre parole, il browser può rifiutare 
-l'accesso alle risorse audio e video, impedendo la corretta riproduzione 
-del contenuto multimediale.
+{% capture callout %}
 
-Per superare questo problema, è necessario configurare correttamente il server che
-fornisce le risorse audio e video, consentendo l'accesso a domini esterni tramite 
-il protocollo CORS.
+##### Tieni presente che
+
+Video.js offre un'implementazione cross-browser delle tracce audio, a condizione che la 
+tecnologia di riproduzione supporti le tracce audio. Le tracce audio per i file mp4 sono
+supportate solo da Safari, altri browser non supportano la riproduzione mp4 con più tracce
+audio. L'unico modo per fornire l'audio multi-traccia è l'uso dei formati HLS e/o DASH. 
+Approfondisci su [Video.js](https://videojs.com/guides/audio-tracks/)  
+{% endcapture %}{% include callout.html content=callout type="info" %}
 
 ## Embed da piattaforme terze
 
