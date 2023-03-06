@@ -236,3 +236,10 @@ L'overlay per il consenso consente di informare l'utente sui cookie utilizzati e
 di ottenere il suo consenso in modo esplicito e consapevole alla riproduzione del video
 
 ***esempi***
+
+## Plugin
+
+Esistono numerosi [plugin](https://videojs.com/plugins/) disponibili per video.js, che
+consentono di aggiungere nuove funzionalità, come la riproduzione di video in VR, 
+l'analisi delle statistiche di visualizzazione del video, le utility per la UI mobile 
+e molto altro ancora.
