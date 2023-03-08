@@ -19,7 +19,6 @@ import {
   Tab,
   Toast,
   Tooltip,
-  VideoPlayer,
   // Extra components
   Dimmer,
   Notification,
@@ -38,6 +37,7 @@ import {
   ProgressDonut,
   UploadDragDrop,
   BackToTop,
+  AcceptOverlay,
   Sticky,
   HeaderSticky,
   HistoryBack,
@@ -45,6 +45,7 @@ import {
   Masonry,
   List,
   Transfer,
+  VideoPlayer,
 } from './bootstrap-italia.esm'
 
 loadPlugin(icons)
@@ -64,6 +65,7 @@ export default {
   Toast,
   Tooltip,
   VideoPlayer,
+  AcceptOverlay,
   Accordion,
   BackToTop,
   CarouselBI,

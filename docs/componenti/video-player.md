@@ -228,14 +228,33 @@ di questa funzionalità e bisogna adottare misure di protezione della privacy de
 
 ***esempi***
 
-### Attivazione dell'overlay di consenso
+### Attivazione dell'acceptoverlay di consenso
 
-L'utilizzo di un overlay per il consenso è una soluzione comune per garantire 
+L'utilizzo di un acceptoverlay per il consenso è una soluzione comune per garantire 
 la conformità alla normativa sulla privacy in materia di cookie e tracciamento degli utenti.
 L'overlay per il consenso consente di informare l'utente sui cookie utilizzati e 
 di ottenere il suo consenso in modo esplicito e consapevole alla riproduzione del video
 
-***esempi***
+{% capture example %}
+<div class="row acceptoverlayable">
+  <div class="acceptoverlay acceptoverlay-primary fade show" id="acceptoverlay1">
+    <div class="acceptoverlay-inner">
+      <div class="acceptoverlay-icon">
+        <svg class="icon icon-xl"><use href="/dist/svg/sprites.svg#it-video"></use></svg>
+      </div>
+      <p>Questo contenuto è ospitato da un sito di terze parti. Mostrando il contenuto esterno accetti i <a href="https://www.youtube.com/t/terms" class="text-white">termini e le condizioni di youtube.com.</a></p>
+      <div class="acceptoverlay-buttons bg-dark">
+        <button type="button" class="btn btn-primary">Accetta</button>
+        <button type="button" class="btn btn-primary">Accetta e ricorda la mia scelta</button>
+      </div>
+    </div>
+  </div>
+  <video controls data-bs-video data-setup='{}'>
+    <source src="//vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+    <source src="//vjs.zencdn.net/v/oceans.webm" type="video/webm">
+  </video>
+</div>
+{% endcapture %}{% include example.html content=example %}
 
 ## Plugin
 

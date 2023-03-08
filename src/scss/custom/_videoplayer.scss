@@ -48,3 +48,7 @@
   &.vjs-layout-x-large {}
   &.vjs-layout-x-huge {}
 }
+
+.acceptoverlay + .vjs-fluid {
+  min-height: 400px;
+}

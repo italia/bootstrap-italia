@@ -59,7 +59,8 @@ export default [
         '@splidejs/splide' : 'Splide', 
         'masonry-layout' : 'MasonryPlugin', 
         'accessible-autocomplete' : 'accessibleAutocomplete',
-        'animejs/lib/anime.es.js' : 'anime'
+        'animejs/lib/anime.es.js' : 'anime',
+        'video.js' : 'videojs'
       },
     },
     external: [
@@ -67,7 +68,8 @@ export default [
       '@splidejs/splide', 
       'masonry-layout', 
       'accessible-autocomplete',
-      'animejs/lib/anime.es.js'
+      'animejs/lib/anime.es.js',
+      'video.js'
     ],
     plugins: [
       babel({

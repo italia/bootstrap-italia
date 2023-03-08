@@ -3,8 +3,8 @@ import BaseComponent from 'bootstrap/js/src/base-component.js'
 import { reflow, getElementFromSelector } from 'bootstrap/js/src/util'
 import EventHandler from 'bootstrap/js/src/dom/event-handler'
 
-const NAME = 'dimmer'
-const DATA_KEY = 'bs.dimmer'
+const NAME = 'acceptoverlay'
+const DATA_KEY = 'bs.accept-overlay'
 const EVENT_KEY = `.${DATA_KEY}`
 const DATA_API_KEY = '.data-api'
 
@@ -13,10 +13,10 @@ const EVENT_CLICK_DATA_API = `click${EVENT_KEY}${DATA_API_KEY}`
 const CLASS_NAME_FADE = 'fade'
 const CLASS_NAME_SHOW = 'show'
 
-const SELECTOR_DATA_TOGGLE = '[data-bs-toggle="dimmer"]'
+const SELECTOR_DATA_TOGGLE = '[data-bs-toggle="accept-overlay"]'
 const SELECTOR_DATA_ARIAHIDDEN = '[aria-hidden=true]'
 
-class Dimmer extends BaseComponent {
+class AcceptOverlay extends BaseComponent {
   constructor(element) {
     super(element)
 
@@ -72,10 +72,7 @@ class Dimmer extends BaseComponent {
   _showElement() {
     const isAnimated = this._isAnimated()
 
-    //this._element.style.display = 'flex'
     this._element.removeAttribute('aria-hidden')
-    //this._element.setAttribute('aria-modal', true)
-    //this._element.setAttribute('role', 'dialog')
 
     if (isAnimated) {
       reflow(this._element)
@@ -91,10 +88,7 @@ class Dimmer extends BaseComponent {
   }
 
   _hideElement() {
-    //this._element.style.display = 'none'
     this._element.setAttribute('aria-hidden', true)
-    //this._element.removeAttribute('aria-modal')
-    //this._element.removeAttribute('role')
     this._isTransitioning = false
   }
 }
@@ -106,10 +100,10 @@ class Dimmer extends BaseComponent {
  */
 
 EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function () {
-  const dimmerElement = getElementFromSelector(this)
-  const dimmer = Dimmer.getOrCreateInstance(dimmerElement)
+  const acceptOverlayElement = getElementFromSelector(this)
+  const acceptOverlay = AcceptOverlay.getOrCreateInstance(acceptOverlayElement)
 
-  this.checked ? dimmer.show() : dimmer.hide()
+  this.checked ? acceptOverlay.show() : acceptOverlay.hide()
 })
 
-export default Dimmer
+export default AcceptOverlay
