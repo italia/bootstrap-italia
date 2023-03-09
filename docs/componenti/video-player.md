@@ -226,11 +226,25 @@ piattaforme i dati degli utenti che visualizzano i video, come ad esempio le inf
 sulla navigazione o l'indirizzo IP. È quindi importante valutare attentamente l'utilizzo 
 di questa funzionalità e bisogna adottare misure di protezione della privacy degli utenti.
 
-***esempi***
+{% capture example %}
+  <video controls data-bs-video id="video-youtube"
+    class="video-js"
+    width="640" height="264"
+    data-setup='{ "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/watch?v=xjS6SftYQaQ"}] }'>
+  </video>
+{% endcapture %}{% include example.html content=example %}
 
-### Attivazione dell'acceptoverlay di consenso
+{% capture example %}
+  <video controls data-bs-video id="video-vimeo"
+    class="video-js"
+    width="640" height="264"
+    data-setup='{ "techOrder": ["vimeo"], "sources": [{ "type": "video/vimeo", "src": "https://vimeo.com/326701979"}]}'>
+  </video>
+{% endcapture %}{% include example.html content=example %}
 
-L'utilizzo di un acceptoverlay per il consenso è una soluzione comune per garantire 
+### Attivazione dell'overlay di consenso
+
+L'utilizzo di un overlay per il consenso è una soluzione comune per garantire 
 la conformità alla normativa sulla privacy in materia di cookie e tracciamento degli utenti.
 L'overlay per il consenso consente di informare l'utente sui cookie utilizzati e 
 di ottenere il suo consenso in modo esplicito e consapevole alla riproduzione del video
@@ -249,9 +263,9 @@ di ottenere il suo consenso in modo esplicito e consapevole alla riproduzione de
       </div>
     </div>
   </div>
-  <video controls data-bs-video data-setup='{}'>
-    <source src="//vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
-    <source src="//vjs.zencdn.net/v/oceans.webm" type="video/webm">
+  <video controls data-bs-video id="vid1"
+    class="video-js"
+    width="640" height="264">
   </video>
 </div>
 {% endcapture %}{% include example.html content=example %}

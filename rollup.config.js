@@ -120,17 +120,24 @@ export default [
       compact: true,
       format: 'iife',
     },
+    context: "window",
     plugins: [
+      babel({
+        babelHelpers: 'bundled',
+        exclude: 'node_modules/**',
+      }),
       legacy({
         './cover-animation.js': {
           initCoverAnimation: 'animation.initCoverAnimation',
         },
       }),
-      babel({ babelHelpers: 'bundled' }),
       scss({
         output: 'docs/assets/dist/css/docs.min.css',
         outputStyle: 'compressed',
         watch: 'docs/assets/src/scss',
+      }),
+      injectProcessEnv({
+        NODE_ENV: 'production',
       }),
     ],
   },
