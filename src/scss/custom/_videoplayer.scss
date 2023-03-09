@@ -52,3 +52,11 @@
 .acceptoverlay + .vjs-fluid {
   min-height: 400px;
 }
+
+.vjs-transcription {
+  max-width: 75ch;
+  border: none;
+  .accordion-item {
+    border: none;
+  }
+}

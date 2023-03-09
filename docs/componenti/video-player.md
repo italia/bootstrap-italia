@@ -16,10 +16,26 @@ la personalizzazione dell'interfaccia utente e l'integrazione con API esterne.
 Il player viene istanziato automaticamente quando è presente l'attributo `data-bs-video`.
 
 {% capture example %}
-<video controls data-bs-video>
-  <source src="//vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
-  <source src="//vjs.zencdn.net/v/oceans.webm" type="video/webm">
-</video>
+<div class="row">
+  <video controls data-bs-video>
+    <source src="//vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+    <source src="//vjs.zencdn.net/v/oceans.webm" type="video/webm">
+  </video>
+  <div class="vjs-transcription accordion">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="transcription-head1">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#transcription1" aria-expanded="true" aria-controls="transcription">
+          Transcrizione
+        </button>
+      </h2>
+      <div id="transcription1" class="accordion-collapse collapse" role="region" aria-labelledby="transcription-head1">
+        <div class="accordion-body">
+          Vestibulum hendrerit ultrices nibh, sed pharetra lacus ultrices eget. Morbi et ipsum et sapien dapibus facilisis. Integer eget semper nibh. Proin enim nulla, egestas ac rutrum eget, ullamcorper nec turpis.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 {% endcapture %}{% include example.html content=example %}
 
 ### Controllare il player con i data-attribute
@@ -30,10 +46,26 @@ nell'utilizzare l'attributo `data-setup` definito all'interno del tag `video` av
 valore un array in formato JSON.
 
 ```html
-<video controls data-bs-video data-setup='{}'>
-  <source src="//vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
-  <source src="//vjs.zencdn.net/v/oceans.webm" type="video/webm">
-</video>
+<div class="row">
+  <video controls data-bs-video data-setup='{}'>
+    <source src="//vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+    <source src="//vjs.zencdn.net/v/oceans.webm" type="video/webm">
+  </video>
+  <div class="vjs-transcription accordion">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="transcription-head2">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#transcription2" aria-expanded="true" aria-controls="transcription">
+          Transcrizione
+        </button>
+      </h2>
+      <div id="transcription2" class="accordion-collapse collapse" role="region" aria-labelledby="transcription-head2">
+        <div class="accordion-body">
+          Vestibulum hendrerit ultrices nibh, sed pharetra lacus ultrices eget. Morbi et ipsum et sapien dapibus facilisis. Integer eget semper nibh. Proin enim nulla, egestas ac rutrum eget, ullamcorper nec turpis.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 ```
 
 {% capture callout %}
@@ -44,17 +76,33 @@ Nota l'uso delle virgolette singole, `data-setup` si aspetta di ricevere un JSON
 {% endcapture %}{% include callout.html content=callout type="warning" %}
 
 {% capture example %}
-<video 
-  data-bs-video 
-  data-setup='{
-    "controls": true,
-    "autoplay": false, 
-    "preload": "auto"
-  }'
->
-  <source src="//vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
-  <source src="//vjs.zencdn.net/v/oceans.webm" type="video/webm">
-</video>
+<div class="row">
+  <video 
+    data-bs-video 
+    data-setup='{
+      "controls": true,
+      "autoplay": false, 
+      "preload": "auto"
+    }'
+  >
+    <source src="//vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+    <source src="//vjs.zencdn.net/v/oceans.webm" type="video/webm">
+  </video>
+  <div class="vjs-transcription accordion">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="transcription-head3">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#transcription3" aria-expanded="true" aria-controls="transcription">
+          Transcrizione
+        </button>
+      </h2>
+      <div id="transcription3" class="accordion-collapse collapse" role="region" aria-labelledby="transcription-head3">
+        <div class="accordion-body">
+          Vestibulum hendrerit ultrices nibh, sed pharetra lacus ultrices eget. Morbi et ipsum et sapien dapibus facilisis. Integer eget semper nibh. Proin enim nulla, egestas ac rutrum eget, ullamcorper nec turpis.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 {% endcapture %}{% include example.html content=example %}
 
 Per vedere tutte le opzioni disponibili, consultare la documentazione di
@@ -87,28 +135,84 @@ Di seguito un esempio d'uso delle didascalie (`kind="captions"`) in
 diverse lingue.
 
 {% capture example %}
-<video controls data-bs-video>
-  <source src="/docs/assets/video/ElephantsDream.mp4" type="video/mp4">
-  <track 
-    kind="captions" 
-    src="/docs/assets/video/subtitles-it.vtt" 
-    srclang="it" 
-    label="Italiano" default>
-  <track 
-    kind="captions" 
-    src="/docs/assets/video/subtitles-en.vtt" 
-    srclang="en" 
-    label="English">
-  <track 
-    kind="captions" 
-    src="/docs/assets/video/subtitles-es.vtt" 
-    srclang="es" 
-    label="Spanish">
-</video>
+<div class="row">
+  <video controls data-bs-video>
+    <source src="/docs/assets/video/ElephantsDream.mp4" type="video/mp4">
+    <track 
+      kind="captions" 
+      src="/docs/assets/video/subtitles-it.vtt" 
+      srclang="it" 
+      label="Italiano" default>
+    <track 
+      kind="captions" 
+      src="/docs/assets/video/subtitles-en.vtt" 
+      srclang="en" 
+      label="English">
+    <track 
+      kind="captions" 
+      src="/docs/assets/video/subtitles-es.vtt" 
+      srclang="es" 
+      label="Spanish">
+  </video>
+  <div class="vjs-transcription accordion">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="transcription-head4">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#transcription4" aria-expanded="true" aria-controls="transcription">
+          Transcrizione
+        </button>
+      </h2>
+      <div id="transcription4" class="accordion-collapse collapse" role="region" aria-labelledby="transcription-head4">
+        <div class="accordion-body">
+          Vestibulum hendrerit ultrices nibh, sed pharetra lacus ultrices eget. Morbi et ipsum et sapien dapibus facilisis. Integer eget semper nibh. Proin enim nulla, egestas ac rutrum eget, ullamcorper nec turpis.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 {% endcapture %}{% include example.html content=example %}
 
 Approfondisci l'argomento consultando la documentazione di 
 [VideoJS (Inglese)](https://videojs.com/guides/text-tracks/)
+
+### Aggiungere la transcrizione 
+
+{% capture example %}
+<div class="row">
+  <video controls data-bs-video>
+    <source src="/docs/assets/video/ElephantsDream.mp4" type="video/mp4">
+    <track 
+      kind="captions" 
+      src="/docs/assets/video/subtitles-it.vtt" 
+      srclang="it" 
+      label="Italiano" default>
+    <track 
+      kind="captions" 
+      src="/docs/assets/video/subtitles-en.vtt" 
+      srclang="en" 
+      label="English">
+    <track 
+      kind="captions" 
+      src="/docs/assets/video/subtitles-es.vtt" 
+      srclang="es" 
+      label="Spanish">
+  </video>
+  <div class="vjs-transcription accordion">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="transcription-head5">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#transcription5" aria-expanded="true" aria-controls="transcription">
+          Transcrizione
+        </button>
+      </h2>
+      <div id="transcription5" class="accordion-collapse collapse" role="region" aria-labelledby="transcription-head5">
+        <div class="accordion-body">
+          Vestibulum hendrerit ultrices nibh, sed pharetra lacus ultrices eget. Morbi et ipsum et sapien dapibus facilisis. Integer eget semper nibh. Proin enim nulla, egestas ac rutrum eget, ullamcorper nec turpis.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
 
 ## Streaming
 
@@ -138,18 +242,34 @@ Approfondisci su [FFmpeg](https://ffmpeg.org/)
 Di seguito un esempio in formato MPEG-DASH
 
 {% capture example %}
-<video 
-  data-bs-video
-  poster="https://picsum.photos/800/300?image=1055"
-  preload="auto"
-  data-setup='{
-    "controls": true,
-    "autoplay": false,
-    "fluid": true
-  }'
->
-  <source src="https://dash.akamaized.net/dash264/TestCasesHD/2b/qualcomm/1/MultiResMPEG2.mpd" type="application/dash+xml">
-</video>
+<div class="row">
+  <video 
+    data-bs-video
+    poster="https://picsum.photos/800/300?image=1055"
+    preload="auto"
+    data-setup='{
+      "controls": true,
+      "autoplay": false,
+      "fluid": true
+    }'
+  >
+    <source src="https://dash.akamaized.net/dash264/TestCasesHD/2b/qualcomm/1/MultiResMPEG2.mpd" type="application/dash+xml">
+  </video>
+  <div class="vjs-transcription accordion">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="transcription-head6">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#transcription6" aria-expanded="true" aria-controls="transcription">
+          Transcrizione
+        </button>
+      </h2>
+      <div id="transcription6" class="accordion-collapse collapse" role="region" aria-labelledby="transcription-head6">
+        <div class="accordion-body">
+          Vestibulum hendrerit ultrices nibh, sed pharetra lacus ultrices eget. Morbi et ipsum et sapien dapibus facilisis. Integer eget semper nibh. Proin enim nulla, egestas ac rutrum eget, ullamcorper nec turpis.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 {% endcapture %}{% include example.html content=example %}
 
 Le playlist HLS e DASH possono essere riprodotte su più domini condividendo solo l'URL.
@@ -173,18 +293,34 @@ audio in lingue diverse consente di offrire il video in più lingue.
 Di seguito un esempio in formato HLS multilingua.
 
 {% capture example %}
-<video
-  data-bs-video
-  poster="https://picsum.photos/800/300?image=1055"
-  preload="auto"
-  data-setup='{
-    "controls": true,
-    "autoplay": false,
-    "fluid": true
-  }'
->
-  <source src="https://d3rlna7iyyu8wu.cloudfront.net/skip_armstrong/skip_armstrong_multi_language_subs.m3u8" type="application/x-mpegURL">
-</video>
+<div class="row">
+  <video
+    data-bs-video
+    poster="https://picsum.photos/800/300?image=1055"
+    preload="auto"
+    data-setup='{
+      "controls": true,
+      "autoplay": false,
+      "fluid": true
+    }'
+  >
+    <source src="https://d3rlna7iyyu8wu.cloudfront.net/skip_armstrong/skip_armstrong_multi_language_subs.m3u8" type="application/x-mpegURL">
+  </video>
+  <div class="vjs-transcription accordion">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="transcription-head7">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#transcription7" aria-expanded="true" aria-controls="transcription">
+          Transcrizione
+        </button>
+      </h2>
+      <div id="transcription7" class="accordion-collapse collapse" role="region" aria-labelledby="transcription-head7">
+        <div class="accordion-body">
+          Vestibulum hendrerit ultrices nibh, sed pharetra lacus ultrices eget. Morbi et ipsum et sapien dapibus facilisis. Integer eget semper nibh. Proin enim nulla, egestas ac rutrum eget, ullamcorper nec turpis.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 {% endcapture %}{% include example.html content=example %}
 
 {% capture callout %}
@@ -211,11 +347,27 @@ sulla navigazione o l'indirizzo IP. È quindi importante valutare attentamente l
 di questa funzionalità e bisogna adottare misure di protezione della privacy degli utenti.
 
 {% capture example %}
+<div class="row">
   <video controls data-bs-video id="video-youtube"
     class="video-js"
     width="640" height="264"
     data-setup='{ "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/watch?v=dQVy8DLPJbY"}] }'>
   </video>
+  <div class="vjs-transcription accordion">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="transcription-head8">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#transcription8" aria-expanded="true" aria-controls="transcription">
+          Transcrizione
+        </button>
+      </h2>
+      <div id="transcription8" class="accordion-collapse collapse" role="region" aria-labelledby="transcription-head8">
+        <div class="accordion-body">
+          Vestibulum hendrerit ultrices nibh, sed pharetra lacus ultrices eget. Morbi et ipsum et sapien dapibus facilisis. Integer eget semper nibh. Proin enim nulla, egestas ac rutrum eget, ullamcorper nec turpis.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 {% endcapture %}{% include example.html content=example %}
 
 
@@ -240,11 +392,27 @@ di ottenere il suo consenso in modo esplicito e consapevole alla riproduzione de
       </div>
     </div>
   </div>
-  <video controls data-bs-video id="vid1"
-    class="video-js"
-    width="640" height="264"
-    data-setup='{ "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/watch?v=dQVy8DLPJbY"}] }'>
-  </video>
+  <div class="row">
+    <video controls data-bs-video id="vid1"
+      class="video-js"
+      width="640" height="264"
+      data-setup='{ "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/watch?v=dQVy8DLPJbY"}] }'>
+    </video>
+    <div class="vjs-transcription accordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="transcription-head9">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#transcription9" aria-expanded="true" aria-controls="transcription">
+            Transcrizione
+          </button>
+        </h2>
+        <div id="transcription9" class="accordion-collapse collapse" role="region" aria-labelledby="transcription-head9">
+          <div class="accordion-body">
+            Vestibulum hendrerit ultrices nibh, sed pharetra lacus ultrices eget. Morbi et ipsum et sapien dapibus facilisis. Integer eget semper nibh. Proin enim nulla, egestas ac rutrum eget, ullamcorper nec turpis.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
