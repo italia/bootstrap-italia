@@ -88,23 +88,22 @@ diverse lingue.
 
 {% capture example %}
 <video controls data-bs-video>
-  <source src="//vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
-  <source src="//vjs.zencdn.net/v/oceans.webm" type="video/webm">
+  <source src="/docs/assets/video/ElephantsDream.mp4" type="video/mp4">
   <track 
     kind="captions" 
-    src="//example.com/path/to/captions-it.vtt" 
+    src="/docs/assets/video/subtitles-it.vtt" 
     srclang="it" 
     label="Italiano" default>
   <track 
     kind="captions" 
-    src="//example.com/path/to/captions-en.vtt" 
+    src="/docs/assets/video/subtitles-en.vtt" 
     srclang="en" 
     label="English">
   <track 
     kind="captions" 
-    src="//example.com/path/to/captions-ch.vtt" 
-    srclang="ch" 
-    label="中文">
+    src="/docs/assets/video/subtitles-es.vtt" 
+    srclang="es" 
+    label="Spanish">
 </video>
 {% endcapture %}{% include example.html content=example %}
 
@@ -150,21 +149,6 @@ Di seguito un esempio in formato MPEG-DASH
   }'
 >
   <source src="https://dash.akamaized.net/dash264/TestCasesHD/2b/qualcomm/1/MultiResMPEG2.mpd" type="application/dash+xml">
-  <track 
-    kind="captions" 
-    src="//example.com/path/to/captions-it.vtt" 
-    srclang="it" 
-    label="Italiano" default>
-  <track 
-    kind="captions" 
-    src="//example.com/path/to/captions-en.vtt" 
-    srclang="en" 
-    label="English">
-  <track 
-    kind="captions" 
-    src="//example.com/path/to/captions-ch.vtt" 
-    srclang="ch" 
-    label="中文">
 </video>
 {% endcapture %}{% include example.html content=example %}
 
@@ -230,17 +214,10 @@ di questa funzionalità e bisogna adottare misure di protezione della privacy de
   <video controls data-bs-video id="video-youtube"
     class="video-js"
     width="640" height="264"
-    data-setup='{ "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/watch?v=xjS6SftYQaQ"}] }'>
+    data-setup='{ "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/watch?v=dQVy8DLPJbY"}] }'>
   </video>
 {% endcapture %}{% include example.html content=example %}
 
-{% capture example %}
-  <video controls data-bs-video id="video-vimeo"
-    class="video-js"
-    width="640" height="264"
-    data-setup='{ "techOrder": ["vimeo"], "sources": [{ "type": "video/vimeo", "src": "https://vimeo.com/326701979"}]}'>
-  </video>
-{% endcapture %}{% include example.html content=example %}
 
 ### Attivazione dell'overlay di consenso
 
@@ -265,7 +242,8 @@ di ottenere il suo consenso in modo esplicito e consapevole alla riproduzione de
   </div>
   <video controls data-bs-video id="vid1"
     class="video-js"
-    width="640" height="264">
+    width="640" height="264"
+    data-setup='{ "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/watch?v=dQVy8DLPJbY"}] }'>
   </video>
 </div>
 {% endcapture %}{% include example.html content=example %}
