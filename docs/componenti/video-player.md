@@ -137,20 +137,20 @@ diverse lingue.
 {% capture example %}
 <div class="row">
   <video controls data-bs-video>
-    <source src="/docs/assets/video/ElephantsDream.mp4" type="video/mp4">
+    <source src="{{ site.baseurl }}/docs/assets/video/ElephantsDream.mp4" type="video/mp4">
     <track 
       kind="captions" 
-      src="/docs/assets/video/subtitles-it.vtt" 
+      src="{{ site.baseurl }}/docs/assets/video/subtitles-it.vtt" 
       srclang="it" 
       label="Italiano" default>
     <track 
       kind="captions" 
-      src="/docs/assets/video/subtitles-en.vtt" 
+      src="{{ site.baseurl }}/docs/assets/video/subtitles-en.vtt" 
       srclang="en" 
       label="English">
     <track 
       kind="captions" 
-      src="/docs/assets/video/subtitles-es.vtt" 
+      src="{{ site.baseurl }}/docs/assets/video/subtitles-es.vtt" 
       srclang="es" 
       label="Español">
   </video>
@@ -179,20 +179,20 @@ Approfondisci l'argomento consultando la documentazione di
 {% capture example %}
 <div class="row">
   <video controls data-bs-video>
-    <source src="/docs/assets/video/ElephantsDream.mp4" type="video/mp4">
+    <source src="{{ site.baseurl }}/docs/assets/video/ElephantsDream.mp4" type="video/mp4">
     <track 
       kind="captions" 
-      src="/docs/assets/video/subtitles-it.vtt" 
+      src="{{ site.baseurl }}/docs/assets/video/subtitles-it.vtt" 
       srclang="it" 
       label="Italiano" default>
     <track 
       kind="captions" 
-      src="/docs/assets/video/subtitles-en.vtt" 
+      src="{{ site.baseurl }}/docs/assets/video/subtitles-en.vtt" 
       srclang="en" 
       label="English">
     <track 
       kind="captions" 
-      src="/docs/assets/video/subtitles-es.vtt" 
+      src="{{ site.baseurl }}/docs/assets/video/subtitles-es.vtt" 
       srclang="es" 
       label="Español">
   </video>
@@ -245,7 +245,7 @@ Di seguito un esempio in formato MPEG-DASH
 <div class="row">
   <video 
     data-bs-video
-    poster="/docs/assets/video/ElephantsDreamDASH/poster/ElephantsDream.mp4-16.gif"
+    poster="{{ site.baseurl }}/docs/assets/video/ElephantsDreamDASH/poster/ElephantsDream.mp4-16.gif"
     preload="auto"
     data-setup='{
       "controls": true,
@@ -253,35 +253,35 @@ Di seguito un esempio in formato MPEG-DASH
       "fluid": true
     }'
   >
-    <source src="/docs/assets/video/ElephantsDreamDASH/ElephantsDream.mp4.mpd" type="application/dash+xml">
+    <source src="{{ site.baseurl }}/docs/assets/video/ElephantsDreamDASH/ElephantsDream.mp4.mpd" type="application/dash+xml">
     <track 
       kind="captions" 
-      src="/docs/assets/video/subtitles-it.vtt" 
+      src="{{ site.baseurl }}/docs/assets/video/subtitles-it.vtt" 
       srclang="it" 
       label="Italiano" default>
     <track 
       kind="captions" 
-      src="/docs/assets/video/subtitles-en.vtt" 
+      src="{{ site.baseurl }}/docs/assets/video/subtitles-en.vtt" 
       srclang="en" 
       label="English">
     <track 
       kind="captions" 
-      src="/docs/assets/video/subtitles-es.vtt" 
+      src="{{ site.baseurl }}/docs/assets/video/subtitles-es.vtt" 
       srclang="es" 
       label="Español">
     <track 
       kind="chapters"
-      src="/docs/assets/video/chapters-en.vtt" 
+      src="{{ site.baseurl }}/docs/assets/video/chapters-en.vtt" 
       srclang="en" 
       label="English">
     <track 
       kind="chapters"
-      src="/docs/assets/video/chapters-es.vtt" 
+      src="{{ site.baseurl }}/docs/assets/video/chapters-es.vtt" 
       srclang="es" 
       label="Español">
     <track 
       kind="chapters"
-      src="/docs/assets/video/chapters-it.vtt" 
+      src="{{ site.baseurl }}/docs/assets/video/chapters-it.vtt" 
       srclang="it" 
       label="Italiano" default>
   </video>
@@ -326,7 +326,7 @@ Di seguito un esempio in formato HLS multilingua.
 <div class="row">
   <video
     data-bs-video
-    poster="/docs/assets/video/ElephantsDreamHLS/poster/ElephantsDream.mp4-21.jpg"
+    poster="{{ site.baseurl }}/docs/assets/video/ElephantsDreamHLS/poster/ElephantsDream.mp4-21.jpg"
     preload="auto"
     data-setup='{
       "controls": true,
@@ -334,7 +334,7 @@ Di seguito un esempio in formato HLS multilingua.
       "fluid": true
     }'
   >
-    <source src="/docs/assets/video/ElephantsDreamHLS/ElephantsDream.mp4.m3u8" type="application/x-mpegURL">
+    <source src="{{ site.baseurl }}/docs/assets/video/ElephantsDreamHLS/ElephantsDream.mp4.m3u8" type="application/x-mpegURL">
   </video>
   <div class="vjs-transcription accordion">
     <div class="accordion-item">
@@ -413,7 +413,7 @@ di ottenere il suo consenso in modo esplicito e consapevole alla riproduzione de
   <div class="acceptoverlay acceptoverlay-primary fade show" id="acceptoverlay1">
     <div class="acceptoverlay-inner">
       <div class="acceptoverlay-icon">
-        <svg class="icon icon-xl"><use href="/dist/svg/sprites.svg#it-video"></use></svg>
+        <svg class="icon icon-xl"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-video"></use></svg>
       </div>
       <p>Questo contenuto è ospitato da un sito di terze parti. Mostrando il contenuto esterno accetti i <a href="https://www.youtube.com/t/terms" class="text-white">termini e le condizioni di youtube.com.</a></p>
       <div class="acceptoverlay-buttons bg-dark">
