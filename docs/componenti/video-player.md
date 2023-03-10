@@ -25,7 +25,7 @@ Il player viene istanziato automaticamente quando è presente l'attributo `data-
     <div class="accordion-item">
       <h2 class="accordion-header" id="transcription-head1">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#transcription1" aria-expanded="true" aria-controls="transcription">
-          Transcrizione
+          Trascrizione
         </button>
       </h2>
       <div id="transcription1" class="accordion-collapse collapse" role="region" aria-labelledby="transcription-head1">
@@ -55,7 +55,7 @@ valore un array in formato JSON.
     <div class="accordion-item">
       <h2 class="accordion-header" id="transcription-head2">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#transcription2" aria-expanded="true" aria-controls="transcription">
-          Transcrizione
+          Trascrizione
         </button>
       </h2>
       <div id="transcription2" class="accordion-collapse collapse" role="region" aria-labelledby="transcription-head2">
@@ -92,7 +92,7 @@ Nota l'uso delle virgolette singole, `data-setup` si aspetta di ricevere un JSON
     <div class="accordion-item">
       <h2 class="accordion-header" id="transcription-head3">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#transcription3" aria-expanded="true" aria-controls="transcription">
-          Transcrizione
+          Trascrizione
         </button>
       </h2>
       <div id="transcription3" class="accordion-collapse collapse" role="region" aria-labelledby="transcription-head3">
@@ -152,13 +152,13 @@ diverse lingue.
       kind="captions" 
       src="/docs/assets/video/subtitles-es.vtt" 
       srclang="es" 
-      label="Spanish">
+      label="Español">
   </video>
   <div class="vjs-transcription accordion">
     <div class="accordion-item">
       <h2 class="accordion-header" id="transcription-head4">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#transcription4" aria-expanded="true" aria-controls="transcription">
-          Transcrizione
+          Trascrizione
         </button>
       </h2>
       <div id="transcription4" class="accordion-collapse collapse" role="region" aria-labelledby="transcription-head4">
@@ -174,7 +174,7 @@ diverse lingue.
 Approfondisci l'argomento consultando la documentazione di 
 [VideoJS (Inglese)](https://videojs.com/guides/text-tracks/)
 
-### Aggiungere la transcrizione 
+### Aggiungere la trascrizione 
 
 {% capture example %}
 <div class="row">
@@ -194,13 +194,13 @@ Approfondisci l'argomento consultando la documentazione di
       kind="captions" 
       src="/docs/assets/video/subtitles-es.vtt" 
       srclang="es" 
-      label="Spanish">
+      label="Español">
   </video>
   <div class="vjs-transcription accordion">
     <div class="accordion-item">
       <h2 class="accordion-header" id="transcription-head5">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#transcription5" aria-expanded="true" aria-controls="transcription">
-          Transcrizione
+          Trascrizione
         </button>
       </h2>
       <div id="transcription5" class="accordion-collapse collapse" role="region" aria-labelledby="transcription-head5">
@@ -245,7 +245,7 @@ Di seguito un esempio in formato MPEG-DASH
 <div class="row">
   <video 
     data-bs-video
-    poster="https://picsum.photos/800/300?image=1055"
+    poster="/docs/assets/video/ElephantsDreamDASH/poster/ElephantsDream.mp4-16.gif"
     preload="auto"
     data-setup='{
       "controls": true,
@@ -253,13 +253,43 @@ Di seguito un esempio in formato MPEG-DASH
       "fluid": true
     }'
   >
-    <source src="https://dash.akamaized.net/dash264/TestCasesHD/2b/qualcomm/1/MultiResMPEG2.mpd" type="application/dash+xml">
+    <source src="/docs/assets/video/ElephantsDreamDASH/ElephantsDream.mp4.mpd" type="application/dash+xml">
+    <track 
+      kind="captions" 
+      src="/docs/assets/video/subtitles-it.vtt" 
+      srclang="it" 
+      label="Italiano" default>
+    <track 
+      kind="captions" 
+      src="/docs/assets/video/subtitles-en.vtt" 
+      srclang="en" 
+      label="English">
+    <track 
+      kind="captions" 
+      src="/docs/assets/video/subtitles-es.vtt" 
+      srclang="es" 
+      label="Español">
+    <track 
+      kind="chapters"
+      src="/docs/assets/video/chapters-en.vtt" 
+      srclang="en" 
+      label="English">
+    <track 
+      kind="chapters"
+      src="/docs/assets/video/chapters-es.vtt" 
+      srclang="es" 
+      label="Español">
+    <track 
+      kind="chapters"
+      src="/docs/assets/video/chapters-it.vtt" 
+      srclang="it" 
+      label="Italiano" default>
   </video>
   <div class="vjs-transcription accordion">
     <div class="accordion-item">
       <h2 class="accordion-header" id="transcription-head6">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#transcription6" aria-expanded="true" aria-controls="transcription">
-          Transcrizione
+          Trascrizione
         </button>
       </h2>
       <div id="transcription6" class="accordion-collapse collapse" role="region" aria-labelledby="transcription-head6">
@@ -281,7 +311,7 @@ del contenuto multimediale.
 
 Per superare questo problema, è necessario configurare correttamente il server che
 fornisce le risorse audio e video, consentendo l'accesso a domini esterni tramite 
-il protocollo CORS.
+le policy CORS.
 
 ### Gestire più tracce audio
 L'uso di più tracce audio nei video è una buona tecnica per migliorare l'accessibilità 
@@ -296,7 +326,7 @@ Di seguito un esempio in formato HLS multilingua.
 <div class="row">
   <video
     data-bs-video
-    poster="https://picsum.photos/800/300?image=1055"
+    poster="/docs/assets/video/ElephantsDreamHLS/poster/ElephantsDream.mp4-21.jpg"
     preload="auto"
     data-setup='{
       "controls": true,
@@ -304,13 +334,13 @@ Di seguito un esempio in formato HLS multilingua.
       "fluid": true
     }'
   >
-    <source src="https://d3rlna7iyyu8wu.cloudfront.net/skip_armstrong/skip_armstrong_multi_language_subs.m3u8" type="application/x-mpegURL">
+    <source src="/docs/assets/video/ElephantsDreamHLS/ElephantsDream.mp4.m3u8" type="application/x-mpegURL">
   </video>
   <div class="vjs-transcription accordion">
     <div class="accordion-item">
       <h2 class="accordion-header" id="transcription-head7">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#transcription7" aria-expanded="true" aria-controls="transcription">
-          Transcrizione
+          Trascrizione
         </button>
       </h2>
       <div id="transcription7" class="accordion-collapse collapse" role="region" aria-labelledby="transcription-head7">
@@ -357,7 +387,7 @@ di questa funzionalità e bisogna adottare misure di protezione della privacy de
     <div class="accordion-item">
       <h2 class="accordion-header" id="transcription-head8">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#transcription8" aria-expanded="true" aria-controls="transcription">
-          Transcrizione
+          Trascrizione
         </button>
       </h2>
       <div id="transcription8" class="accordion-collapse collapse" role="region" aria-labelledby="transcription-head8">
@@ -402,7 +432,7 @@ di ottenere il suo consenso in modo esplicito e consapevole alla riproduzione de
       <div class="accordion-item">
         <h2 class="accordion-header" id="transcription-head9">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#transcription9" aria-expanded="true" aria-controls="transcription">
-            Transcrizione
+            Trascrizione
           </button>
         </h2>
         <div id="transcription9" class="accordion-collapse collapse" role="region" aria-labelledby="transcription-head9">
