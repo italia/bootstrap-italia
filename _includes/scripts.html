@@ -4,6 +4,8 @@
   bootstrap.loadFonts('{{ site.baseurl }}/dist/fonts')
 </script>
 {%- if page.layout == "default" or page.layout == "docs" -%}
+<script src="{{ site.baseurl }}/docs/assets/src/js/vendor/vimeo-player.min.js"></script>
+<script src="{{ site.baseurl }}/docs/assets/dist/js/docs.min.js?{{ buildTime }}"></script>
 <script src="{{ site.baseurl }}/docs/assets/src/js/vendor/anchor.min.js"></script>
 <script src="{{ site.baseurl }}/docs/assets/src/js/vendor/clipboard.min.js"></script>
 <script src="{{ site.baseurl }}/docs/assets/src/js/vendor/tsparticles.min.js"></script>

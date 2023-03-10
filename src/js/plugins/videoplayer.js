@@ -12,11 +12,9 @@ const DATA_KEY = 'bs.video'
 const SELECTOR_TOGGLE = '[data-bs-video]'
 
 const Default = {
-  positionTop: 0,
-  scrollLimit: 100,
-  duration: 800,
-  easing: 'easeInOutSine',
 }
+
+window.videojs = videojs
 
 class VideoPlayer extends BaseComponent {
   constructor(element, config) {
@@ -29,7 +27,7 @@ class VideoPlayer extends BaseComponent {
     )
     this._config = this._getConfig(config)
 
-    this.player = videojs(element, config)
+    this.player = videojs(element)
   }
 
   // Getters

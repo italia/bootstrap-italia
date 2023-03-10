@@ -9,4 +9,4 @@ services:
     ports:
       - '3001:3001'
       - '4000:4000'
-    command: npm run start
+    command: yarn run start

@@ -1,0 +1,109 @@
+import BaseComponent from 'bootstrap/js/src/base-component.js'
+
+import { reflow, getElementFromSelector } from 'bootstrap/js/src/util'
+import EventHandler from 'bootstrap/js/src/dom/event-handler'
+
+const NAME = 'acceptoverlay'
+const DATA_KEY = 'bs.accept-overlay'
+const EVENT_KEY = `.${DATA_KEY}`
+const DATA_API_KEY = '.data-api'
+
+const EVENT_CLICK_DATA_API = `click${EVENT_KEY}${DATA_API_KEY}`
+
+const CLASS_NAME_FADE = 'fade'
+const CLASS_NAME_SHOW = 'show'
+
+const SELECTOR_DATA_TOGGLE = '[data-bs-toggle="accept-overlay"]'
+const SELECTOR_DATA_ARIAHIDDEN = '[aria-hidden=true]'
+
+class AcceptOverlay extends BaseComponent {
+  constructor(element) {
+    super(element)
+
+    this._isShown = !element.matches(SELECTOR_DATA_ARIAHIDDEN)
+    this._isTransitioning = false
+  }
+
+  // Getters
+
+  static get NAME() {
+    return NAME
+  }
+
+  // Public
+
+  show() {
+    if (this._isShown || this._isTransitioning) {
+      return
+    }
+
+    this._isShown = true
+
+    if (this._isAnimated()) {
+      this._isTransitioning = true
+    }
+
+    this._showElement()
+  }
+
+  hide() {
+    if (!this._isShown || this._isTransitioning) {
+      return
+    }
+
+    this._isShown = false
+    const isAnimated = this._isAnimated()
+
+    if (isAnimated) {
+      this._isTransitioning = true
+    }
+
+    this._element.classList.remove(CLASS_NAME_SHOW)
+
+    this._queueCallback(() => this._hideElement(), this._element, isAnimated)
+  }
+
+  //Private
+
+  _isAnimated() {
+    return this._element.classList.contains(CLASS_NAME_FADE)
+  }
+
+  _showElement() {
+    const isAnimated = this._isAnimated()
+
+    this._element.removeAttribute('aria-hidden')
+
+    if (isAnimated) {
+      reflow(this._element)
+    }
+
+    this._element.classList.add(CLASS_NAME_SHOW)
+
+    const transitionComplete = () => {
+      this._isTransitioning = false
+    }
+
+    this._queueCallback(transitionComplete, this._element, isAnimated)
+  }
+
+  _hideElement() {
+    this._element.setAttribute('aria-hidden', true)
+    this._isTransitioning = false
+  }
+}
+
+/**
+ * ------------------------------------------------------------------------
+ * Data Api implementation
+ * ------------------------------------------------------------------------
+ */
+
+EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function () {
+  const acceptOverlayElement = getElementFromSelector(this)
+  const acceptOverlay = AcceptOverlay.getOrCreateInstance(acceptOverlayElement)
+
+  this.checked ? acceptOverlay.show() : acceptOverlay.hide()
+})
+
+export default AcceptOverlay
