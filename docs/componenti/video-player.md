@@ -245,7 +245,7 @@ Di seguito un esempio in formato MPEG-DASH
 <div class="row">
   <video 
     data-bs-video
-    poster="{{ site.baseurl }}/docs/assets/video/ElephantsDreamDASH/poster/ElephantsDream.mp4-16.gif"
+    poster="{{ site.baseurl }}/docs/assets/video/ElephantsDream.mp4-poster16.gif"
     preload="auto"
     data-setup='{
       "controls": true,
@@ -326,7 +326,7 @@ Di seguito un esempio in formato HLS multilingua.
 <div class="row">
   <video
     data-bs-video
-    poster="{{ site.baseurl }}/docs/assets/video/ElephantsDreamHLS/poster/ElephantsDream.mp4-21.jpg"
+    poster="{{ site.baseurl }}/docs/assets/video/ElephantsDream.mp4-poster21.jpg"
     preload="auto"
     data-setup='{
       "controls": true,
