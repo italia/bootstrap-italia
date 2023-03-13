@@ -360,7 +360,8 @@ Di seguito un esempio in formato HLS multilingua.
 Video.js offre un'implementazione cross-browser delle tracce audio, a condizione che la 
 tecnologia di riproduzione supporti le tracce audio. Le tracce audio per i file mp4 sono
 supportate solo da Safari, altri browser non supportano la riproduzione mp4 con più tracce
-audio. L'unico modo per fornire l'audio multi-traccia è l'uso dei formati HLS e/o DASH. 
+audio. L'unico modo per fornire l'audio multi-traccia cross-browser è l'uso dei formati 
+HLS e/o DASH. 
 Approfondisci su [Video.js](https://videojs.com/guides/audio-tracks/)  
 {% endcapture %}{% include callout.html content=callout type="info" %}
 
