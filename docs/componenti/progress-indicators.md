@@ -211,7 +211,7 @@ Per variare il colore della barra è sufficiente aggiungere la classe `.progress
 La Progress Bar può essere integrata in un pulsante Primario o Secondario con classe aggiuntiva `.btn-progress` utilizzando la struttura e le classi riportate nei seguenti esempi:
 
 {% comment %}Example name: Pulsante con barra di progresso{% endcomment %}
-{% capture example %
+{% capture example %}
 <div class="container">
   <div class="row">
     <div class="col-12 col-sm-6">
