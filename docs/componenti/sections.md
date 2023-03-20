@@ -24,8 +24,8 @@ Gli autori dovrebbero dividere la pagina in sezioni semantiche reali e non per s
 
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
+{% comment %}Example name: Base{% endcomment %}
 {% capture example %}
-
 <section class="section" aria-describedby="titleEx1">
   <div class="section-content">
     <!-- contenuto di esempio START -->
@@ -54,8 +54,8 @@ Il componente Section ha, per default, uno sfondo trasparente. Aggiungendo le cl
 
 Al componente Section può essere applicato uno sfondo di colore tenue utilizzano la classe aggiuntiva `.section-muted`.
 
+{% comment %}Example name: Sfondo tenue{% endcomment %}
 {% capture example %}
-
 <section class="section section-muted" aria-describedby="titleEx2">
   <div class="section-content">
     <!-- contenuto di esempio START -->
@@ -82,8 +82,8 @@ Aggiungendo invece classe `.section-primary` si otterrà un sfondo del colore pr
 
 Si consiglia di applicare la classe `.white-color` al contenuto (come da esempio) per garantire la leggibilità dei testi contenuti.
 
+{% comment %}Example name: Sfondo primario{% endcomment %}
 {% capture example %}
-
 <section class="section section-primary" aria-describedby="titleEx3">
   <div class="section-content">
     <!-- contenuto di esempio START -->
@@ -110,8 +110,8 @@ Infine, utilizzando la classe `.section-neutral` si otterrà un sfondo di colore
 
 Si consiglia di applicare la classe `.white-color` al contenuto (come da esempio) per garantire la leggibilità dei testi contenuti.
 
+{% comment %}Example name: Sfondo neutrale{% endcomment %}
 {% capture example %}
-
 <section class="section section-neutral" aria-describedby="titleEx4">
   <div class="section-content">
     <!-- contenuto di esempio START -->
@@ -138,8 +138,8 @@ Aggiungendo la classe `.section-image` alla Section e indicando attraverso CSS i
 
 A seconda della luminosità dell'immagine si consiglia di applicare la classe `.white-color` al contenuto (come da esempio) per garantire il corretto contrasto fra testi e sfondo.
 
+{% comment %}Example name: Con immagine di sfondo{% endcomment %}
 {% capture example %}
-
 <section class="section section-image" style="background-image: url('https://picsum.photos/1280/720?image=811')"  aria-describedby="titleEx5">
   <div class="section-content">
     <!-- contenuto di esempio START -->
@@ -164,8 +164,8 @@ A seconda della luminosità dell'immagine si consiglia di applicare la classe `.
 
 Per aggiungere una serie di card all'interno di una Section si consiglia di utilizzare le griglie per garantire un corretto margine fra gli elementi `.card`.
 
+{% comment %}Example name: Con card{% endcomment %}
 {% capture example %}
-
 <section class="section section-muted"  aria-describedby="titleEx6">
   <div class="section-content">
     <!-- contenuto di esempio START -->
