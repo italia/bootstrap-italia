@@ -9,8 +9,8 @@ description: Elementi e stili per la creazione di radio button accessibili.
 
 Per utilizzare i radio button personalizzati è necessario inserire la classe `.form-check` nell'elemento padre.
 
+{% comment %}Example name: Base {% endcomment %}
 {% capture example %}
-
 <div>
   <div class="form-check">
     <input name="gruppo1" type="radio" id="radio1" checked>
@@ -27,8 +27,8 @@ Per utilizzare i radio button personalizzati è necessario inserire la classe `.
 
 Per allineare orizzontalmente le `checkbox` o i `radio` basterà aggiungere la classe `.form-check-inline` a qualsiasi `.form-check`.
 
+{% comment %}Example name: In linea {% endcomment %}
 {% capture example %}
-
 <div>
     <div class="form-check form-check-inline">
       <input name="gruppo2" type="radio" id="radio4" checked>
@@ -45,8 +45,8 @@ Per allineare orizzontalmente le `checkbox` o i `radio` basterà aggiungere la c
 
 Affinchè i campi `checkbox` e `radio` risultino disabilitati occorrerà aggiungere l'attributo `disabled` all'input e la classe `.disabled` alla label relativa.
 
+{% comment %}Example name: Disabilitato {% endcomment %}
 {% capture example %}
-
 <div>
   <div class="form-check">
     <input name="gruppo3" type="radio" class="with-gap" id="radio7" checked disabled>
@@ -63,8 +63,8 @@ Affinchè i campi `checkbox` e `radio` risultino disabilitati occorrerà aggiung
 
 Per poter raggruppare gli elementi `checkbox` e `radio` occorrerà aggiungere al `.form-check` la classe `.form-check-group`. L'elemento grafico di spunta verrà allineato alla destra del contenuto testuale.
 
+{% comment %}Example name: Gruppi {% endcomment %}
 {% capture example %}
-
 <div>
   <div class="row">
     <div class="col-5">
