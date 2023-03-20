@@ -39,8 +39,8 @@ Maggiori dettagli sull'accessibilità del **megamenu** sono presenti nella [rela
 Lo **Slim Header** mostra un'intestazione, solitamente con riferimento all'ente di appartenenza del progetto o riferimenti utili, oltre ad un eventuale menu per il cambio lingua e l'accesso ad area riservata.  
 Il cambio lingua è gestito con il componente [dropdown]({{ site.baseurl }}/docs/componenti/dropdown/).
 
+{% comment %}Example name: Slim header{% endcomment %}
 {% capture example %}
-
 <div class="it-header-slim-wrapper">
   <div class="container">
     <div class="row">
@@ -103,8 +103,8 @@ Per trasformare il pulsante di _action_ situato nell'elemento identificato con `
 
 Il modificatore `.btn-full` è disponibile anche con il tema chiaro attivato da `.theme-light`.
 
+{% comment %}Example name: Slim header con pulsante accedi full-responsive{% endcomment %}
 {% capture example %}
-
 <div class="it-header-slim-wrapper">
   <div class="container">
     <div class="row">
@@ -153,8 +153,8 @@ Il modificatore `.btn-full` è disponibile anche con il tema chiaro attivato da 
 
 Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-light` al tag `<div class="it-header-slim-wrapper">`
 
+{% comment %}Example name: Slim header, variante chiara{% endcomment %}
 {% capture example %}
-
 <div class="it-header-slim-wrapper theme-light">
   <div class="container">
     <div class="row">
@@ -214,8 +214,8 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
 
 **Header Centrale**, per mostrare il logo dell'ente e la sua descrizione, link aggiuntivi ai social media e l'accesso al motore di ricerca, se presente.
 
+{% comment %}Example name: Header centrale{% endcomment %}
 {% capture example %}
-
 <div class="it-header-center-wrapper">
   <div class="container">
     <div class="row">
@@ -275,12 +275,12 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Versione stretta
+### Versione compatta
 
-Per utilizzare la versione più stretta in verticale dell'header centrale è sufficiente aggiungere la classe `it-small-header` al tag `<div class="it-header-center-wrapper">`
+Per utilizzare la versione più compatta in verticale dell'header centrale è sufficiente aggiungere la classe `it-small-header` al tag `<div class="it-header-center-wrapper">`
 
+{% comment %}Example name: Header centrale, variante compatta{% endcomment %}
 {% capture example %}
-
 <div class="it-header-center-wrapper it-small-header">
   <div class="container">
     <div class="row">
@@ -344,8 +344,8 @@ Per utilizzare la versione più stretta in verticale dell'header centrale è suf
 
 Per cambiare tema all'header centrale è sufficiente aggiungere la classe `theme-light` al tag `<div class="it-header-center-wrapper">`.
 
+{% comment %}Example name: Header centrale, variante chiara{% endcomment %}
 {% capture example %}
-
 <div class="it-header-center-wrapper theme-light">
   <div class="container">
     <div class="row">
@@ -409,8 +409,8 @@ Per cambiare tema all'header centrale è sufficiente aggiungere la classe `theme
 
 **Header Nav**, per elencare le voci di navigazione, siano esse semplici link, [menu a tendina]({{ site.baseurl }}/docs/componenti/dropdown/) oppure [Megamenu]({{ site.baseurl }}/docs/menu-di-navigazione/megamenu/) a tutta larghezza.
 
+{% comment %}Example name: Header navigazione{% endcomment %}
 {% capture example %}
-
 <div class="it-header-navbar-wrapper">
   <div class="container">
     <div class="row">
@@ -528,8 +528,8 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
 
 #### Header Nav standard
 
+{% comment %}Example name: Header navigazione standard{% endcomment %}
 {% capture example %}
-
 <div class="it-header-navbar-wrapper">
   <div class="container">
     <div class="row">
@@ -635,8 +635,8 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
 
 #### Header Nav mobile scura
 
+{% comment %}Example name: Header navigazione mobile scura{% endcomment %}
 {% capture example %}
-
 <div class="it-header-navbar-wrapper theme-dark-mobile">
   <div class="container">
     <div class="row">
@@ -742,8 +742,8 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
 
 #### Header Nav desktop chiara
 
+{% comment %}Example name: Header navigazione desktop chiara{% endcomment %}
 {% capture example %}
-
 <div class="it-header-navbar-wrapper theme-light-desk">
   <div class="container">
     <div class="row">
@@ -851,8 +851,8 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
 
 Al menù di navigazione principale può essere aggiunto anche un menù di navigazione secondario includendo a `.menu-wrapper` una seconda lista `<ul>` con classe `.navbar-nav.navbar-secondary` e la stessa struttura dati della lista `.navbar-nav` principale.
 
+{% comment %}Example name: Header navigazione secondaria{% endcomment %}
 {% capture example %}
-
 <div class="it-header-navbar-wrapper">
   <div class="container">
     <div class="row">
@@ -898,8 +898,8 @@ Al menù di navigazione principale può essere aggiunto anche un menù di naviga
 
 ## Header Completa
 
+{% comment %}Example name: Header completa{% endcomment %}
 {% capture example %}
-
 <header class="it-header-wrapper">
   <div class="it-header-slim-wrapper">
     <div class="container">
@@ -1123,8 +1123,8 @@ Al menù di navigazione principale può essere aggiunto anche un menù di naviga
 Nella versione light è consigliabile aggiungere la classe `.it-shadow` al tag `<div class="it-header-wrapper">`.  
 Verrà creata un'ombra per enfatizzare l'Header rispetto alla pagina in cui è contenuto.
 
+{% comment %}Example name: Header completa, variante chiara{% endcomment %}
 {% capture example %}
-
 <header class="it-header-wrapper it-shadow">
   <div class="it-header-slim-wrapper theme-light">
     <div class="container">
