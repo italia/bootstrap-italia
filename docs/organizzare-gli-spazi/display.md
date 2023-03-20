@@ -44,6 +44,7 @@ Per esempio, `.d-lg-none` imposta `display: none;` nella visualizzazione in `lg`
 {% endcapture %}{% include example.html content=example %}
 
 {% comment %}Example name: Block{% endcomment %}
+{% capture example %}
 <span class="d-block p-2 bg-primary text-white">d-block</span>
 <span class="d-block p-2 bg-dark text-white">d-block</span>
 {% endcapture %}{% include example.html content=example %}
