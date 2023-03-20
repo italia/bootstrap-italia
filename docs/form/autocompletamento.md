@@ -15,8 +15,8 @@ Per la creazione del componente, è stato utilizzato il plugin [Accessible autoc
 
 Per una corretta implementazione si consiglia di consultare la [documentazione](https://alphagov.github.io/accessible-autocomplete/).
 
+{% comment %}Example name: Base {% endcomment %}
 {% capture example %}
-
 <div class="select-wrapper">
   <label for="accessibleAutocomplete">Provincia</label>
   <select class="form-control" id="accessibleAutocomplete" title="Scegli una provincia" required>
