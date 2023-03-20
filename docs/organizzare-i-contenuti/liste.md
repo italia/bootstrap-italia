@@ -13,8 +13,8 @@ Le liste, costituite da tag `<ul>` con classe `.it-list` all'interno di un wrapp
 
 ### Lista semplice solo testo
 
+{% comment %}Example name: Base, con testo{% endcomment %}
 {% capture example %}
-
 <div class="it-list-wrapper">
   <ul class="it-list">
     <li>
@@ -43,8 +43,8 @@ Le liste, costituite da tag `<ul>` con classe `.it-list` all'interno di un wrapp
 
 L'elemento `.avatar` precede l'elemento `.it-right-zone` che contiene il testo.
 
+{% comment %}Example name: Base, con avatar{% endcomment %}
 {% capture example %}
-
 <div class="it-list-wrapper">
   <ul class="it-list">
     <li>
@@ -76,8 +76,8 @@ L'elemento `.avatar` precede l'elemento `.it-right-zone` che contiene il testo.
 
 L'elemento `.it-rounded-icon` con all'interno la relativa icona, precede l'elemento `.it-right-zone` che contiene il testo.
 
+{% comment %}Example name: Base, con icona{% endcomment %}
 {% capture example %}
-
 <div class="it-list-wrapper">
   <ul class="it-list">
     <li>
@@ -121,8 +121,8 @@ L'elemento `.it-rounded-icon` con all'interno la relativa icona, precede l'eleme
 
 L'elemento `.it-thumb` con all'interno la relativa immagine, precede l'elemento `.it-right-zone` che contiene il testo.
 
+{% comment %}Example name: Base, con immagine{% endcomment %}
 {% capture example %}
-
 <div class="it-list-wrapper">
   <ul class="it-list">
     <li>
@@ -158,8 +158,8 @@ Le liste con azioni hanno al loro interno icone o elementi interattivi da associ
 
 L'elemento `.icon` con all'interno la relativa icona segue l'elemento `.text` che contiene il testo.
 
+{% comment %}Example name: Azioni, con freccia{% endcomment %}
 {% capture example %}
-
 <div class="it-list-wrapper">
   <ul class="it-list">
     <li>
@@ -190,8 +190,8 @@ L'elemento `.icon` con all'interno la relativa icona segue l'elemento `.text` ch
 
 L'elemento `.it-multiple` con all'interno le relative icone, segue l'elemento `.text`.
 
+{% comment %}Example name: Azioni, multiple{% endcomment %}
 {% capture example %}
-
 <div class="it-list-wrapper">
   <ul class="it-list">
     <li>
@@ -328,11 +328,11 @@ Per attivare il javascript che attiva il funzionamento dei toggles è necessario
 
 ### Con metadata
 
-Ad ogni list si può aggiungere un campo testuale _metadata_, come nell'esempio seguente.
+Ad ogni lista si può aggiungere un campo testuale _metadata_, come nell'esempio seguente.
 L'elemento `.metadata`, segue l'elemento `.text`.
 
+{% comment %}Example name: Con medatada{% endcomment %}
 {% capture example %}
-
 <div class="it-list-wrapper">
   <ul class="it-list">
     <li>
@@ -431,8 +431,8 @@ Per attivare il javascript che attiva il funzionamento dei toggles è necessario
 
 Per il testo aggiuntivo, utilizzare il tag `<em>` all'interno dell'elemento `.text`.
 
+{% comment %}Example name: Con testo aggiuntivo, azioni multiple e metadata{% endcomment %}
 {% capture example %}
-
 <div class="it-list-wrapper">
   <ul class="it-list">
     <li>
@@ -589,8 +589,8 @@ Le liste per menù di navigazione, costituite da tag `<ul>` con classe `.link-li
 
 ### Linea singola
 
+{% comment %}Example name: Per menu, base{% endcomment %}
 {% capture example %}
-
 <div class="link-list-wrapper">
   <ul class="link-list">
      <li><a class="list-item" href="#"><span>Link lista 1</span></a></li>
@@ -604,8 +604,8 @@ Le liste per menù di navigazione, costituite da tag `<ul>` con classe `.link-li
 
 Per rendere attivo un elemento è sufficiente aggiungere la classe `.active` al relativo link.
 
+{% comment %}Example name: Per menu, con stato attivo{% endcomment %}
 {% capture example %}
-
 <div class="link-list-wrapper">
   <ul class="link-list">
     <li>
@@ -625,8 +625,8 @@ Per rendere attivo un elemento è sufficiente aggiungere la classe `.active` al 
 
 Per disabilitare un elemento è sufficiente aggiungere la classe `.disabled` al relativo link.
 
+{% comment %}Example name: Per menu, con stato disabilitato{% endcomment %}
 {% capture example %}
-
 <div class="link-list-wrapper">
   <ul class="link-list">
     <li>
@@ -649,8 +649,8 @@ Le liste di link possono avere un'intestazione (con o senza link) e/o divisori p
 L'intestazione è costituita dall'elemento `.link-list-heading` che precede il tag `<ul>`.  
 Il divisore è costituito dal tag `<span>` con classe `.divider` all'interno del tag `<li>`.
 
+{% comment %}Example name: Per menu, con intestazione e divisore{% endcomment %}
 {% capture example %}
-
 <div class="link-list-wrapper">
   <div class="link-list-heading">Intestazione senza link</div>
   <ul class="link-list">
@@ -673,8 +673,8 @@ Il divisore è costituito dal tag `<span>` con classe `.divider` all'interno del
 </div>
 {% endcapture %}{% include example.html content=example %}
 
+{% comment %}Example name: Per menu, con intestazione e link, e divisore{% endcomment %}
 {% capture example %}
-
 <div class="link-list-wrapper">
   <div class="link-list-heading"><a href="#">Intestazione con link</a></div>
   <ul class="link-list">
@@ -696,8 +696,8 @@ Il divisore è costituito dal tag `<span>` con classe `.divider` all'interno del
 
 Per ogni elemento di una lista di link è possibile definire una variante di dimensione maggiore utilizzando la classe `.large` applicata al tag `<a>`.
 
+{% comment %}Example name: Per menu, con dimensione grande{% endcomment %}
 {% capture example %}
-
 <div class="link-list-wrapper">
   <div class="link-list-heading">Intestazione</div>
   <ul class="link-list">
@@ -726,8 +726,8 @@ Per includere un'icona bisogna aggiungere al tag `<a>` uan delle segeunti classi
 
 All'interno del tag `<span class="list-item-title-icon-wrapper">` subito dopo lo `<span class="list-item-title">` contenente il testo, puoi inserire [l'icona necessaria]({{ site.baseurl }}/docs/utilities/icone/).
 
+{% comment %}Example name: Per menu, multilinea con icona{% endcomment %}
 {% capture example %}
-
 <div class="link-list-wrapper multiline">
   <ul class="link-list">
     <li>
@@ -781,8 +781,8 @@ Quella di destra è descrittiva mentre quella di sinistra può essere un'eventua
 All'interno del tag `<span class="list-item-title-icon-wrapper">` subito prima del tag `<span class="list-item-title">` contenente il testo, puoi inserire [l'icona necessaria]({{ site.baseurl }}/docs/utilities/icone/).  
 Per posizionare correttamente l'icona a sinistra del testo bisogna aggiungere al tag `<a>` la classe: `.icon-left`.
 
+{% comment %}Example name: Per menu, con controlli e icona a sinistra{% endcomment %}
 {% capture example %}
-
 <div class="link-list-wrapper">
   <ul class="link-list">
     <li>
@@ -820,8 +820,8 @@ Per posizionare correttamente l'icona a sinistra del testo bisogna aggiungere al
 All'interno del tag `<span class="list-item-title-icon-wrapper">` subito dopo il tag `<span class="list-item-title">` contenente il testo, puoi inserire [l'icona necessaria]({{ site.baseurl }}/docs/utilities/icone/).  
 Per posizionare correttamente l'icona a destra del testo bisogna aggiungere al tag `<a>` la classe: `.icon-right`
 
+{% comment %}Example name: Per menu, con controlli e icona a destra{% endcomment %}
 {% capture example %}
-
 <div class="link-list-wrapper">
   <ul class="link-list">
     <li>
@@ -861,12 +861,11 @@ Inserisci l'icona all'interno del tag `<span class="list-item-title-icon-wrapper
 
 ##### Icona a destra
 
-.
 Per aggiungere un'icona a destra del testo bisogna aggiungere al tag `<a>` la classe: `.icon-right`.  
 Inserisci l'icona all'interno del tag `<span class="list-item-title-icon-wrapper">` subito prima del tag `<span class="list-item-title">` contenente il testo.
 
+{% comment %}Example name: Per menu, con azioni primaria e secondaria, varianti posizione icona{% endcomment %}
 {% capture example %}
-
 <div class="link-list-wrapper">
   <ul class="link-list">
     <li>
@@ -924,8 +923,8 @@ All'interno del tag `<a>` subito prima dello `<span>` contenente il testo, andre
 
 Una lista di link può contenere anche elementi appartenenti ai form, di seguito un esempio contenente un [toggle]({{ site.baseurl }}/docs/form/toggles/).
 
+{% comment %}Example name: Lista di link, con toggle{% endcomment %}
 {% capture example %}
-
  <div class="link-list-wrapper">
   <ul class="link-list">
     <li>
@@ -950,8 +949,8 @@ Una lista di link può contenere anche elementi appartenenti ai form, di seguito
 
 Lista di link contenente un [checkbox]({{ site.baseurl }}/docs/form/checkbox/).
 
+{% comment %}Example name: Lista di link, con checkbox{% endcomment %}
 {% capture example %}
-
 <div class="link-list-wrapper">
   <ul class="link-list">
     <li>
@@ -984,8 +983,8 @@ Le liste di link possono contenere link con sottosezioni espanse o collassabili.
 
 Di seguito un esempio di navigazione annidata espansa.
 
+{% comment %}Example name: Per menu, annidata espansa{% endcomment %}
 {% capture example %}
-
 <div class="link-list-wrapper">
   <ul class="link-list">
     <li>
@@ -1029,8 +1028,8 @@ Di seguito un esempio di navigazione annidata espansa.
 Di seguito un esempio di navigazione annidata collassabile.  
 Per questo tipo di link list sono state utilizzate, oltre alle classi custom, le classi e gli attributi di Bootstrap per l'attivazione del comportamento [collapse]({{ site.baseurl }}/docs/componenti/collapse/).
 
+{% comment %}Example name: Per menu, annidata collassabile{% endcomment %}
 {% capture example %}
-
 <div class="link-list-wrapper">
   <ul class="link-list">
     <li>

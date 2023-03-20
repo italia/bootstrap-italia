@@ -13,8 +13,8 @@ A causa dell'uso diffuso di tabelle su widget di terze parti come calendari e ca
 Usando il markup di base della tabella, ecco come appaiono le tabelle che utilizzano la classe `.table` in Bootstrap.  
 **Tutti gli stili di tabella sono ereditari**, il che significa che tutte le tabelle annidate avranno lo stesso stile della tabella genitrice.
 
+{% comment %}Example name: Base{% endcomment %}
 {% capture example %}
-
 <table class="table">
   <thead>
     <tr>
@@ -51,7 +51,95 @@ Usando il markup di base della tabella, ecco come appaiono le tabelle che utiliz
 
 Utilizza le classi contestuali per colorare tabelle, righe o celle individuali.
 
-<div class="bd-example">
+### Tabelle colorate 
+
+{% comment %}Example name: Tabelle colorate{% endcomment %}
+{% capture example %}
+  <table class="table table-primary">
+    <tbody>
+      <tr>
+        <th scope="row">Default</th>
+        <td>Cella</td>
+        <td>Cella</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="table table-secondary">
+    <tbody>
+      <tr>
+        <th scope="row">Secondary</th>
+        <td>Cella</td>
+        <td>Cella</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="table table-success">
+    <tbody>
+      <tr>
+        <th scope="row">Success</th>
+        <td>Cella</td>
+        <td>Cella</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <table class="table table-danger">
+    <tbody>
+      <tr>
+        <th scope="row">Danger</th>
+        <td>Cella</td>
+        <td>Cella</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="table table-warning">
+    <tbody>
+      <tr>
+        <th scope="row">Warning</th>
+        <td>Cella</td>
+        <td>Cella</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="table table-info">
+    <tbody>
+      <tr>
+        <th scope="row">Info</th>
+        <td>Cella</td>
+        <td>Cella</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="table table-light">
+    <tbody>
+      <tr>
+        <th scope="row">Light</th>
+        <td>Cella</td>
+        <td>Cella</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="table table-dark">
+    <tbody>
+      <tr>
+        <th scope="row">Dark</th>
+        <td>Cella</td>
+        <td>Cella</td>
+      </tr>
+    </tbody>
+  </table>
+{% endcapture %}{% include example.html content=example %}
+
+### Righe colorate 
+
+{% comment %}Example name: Righe colorate{% endcomment %}
+{% capture example %}
   <table class="table">
     <thead>
       <tr>
@@ -108,73 +196,28 @@ Utilizza le classi contestuali per colorare tabelle, righe o celle individuali.
       </tr>
     </tbody>
   </table>
-</div>
+{% endcapture %}{% include example.html content=example %}
 
-```html
-<!-- Su tabelle -->
-<table class="table-primary">
-  ...
-</table>
-<table class="table-secondary">
-  ...
-</table>
-<table class="table-success">
-  ...
-</table>
-<table class="table-danger">
-  ...
-</table>
-<table class="table-warning">
-  ...
-</table>
-<table class="table-info">
-  ...
-</table>
-<table class="table-light">
-  ...
-</table>
-<table class="table-dark">
-  ...
-</table>
+### Celle colorate
 
-<!-- Su righe -->
-<tr class="table-primary">
-  ...
-</tr>
-<tr class="table-secondary">
-  ...
-</tr>
-<tr class="table-success">
-  ...
-</tr>
-<tr class="table-danger">
-  ...
-</tr>
-<tr class="table-warning">
-  ...
-</tr>
-<tr class="table-info">
-  ...
-</tr>
-<tr class="table-light">
-  ...
-</tr>
-<tr class="table-dark">
-  ...
-</tr>
-
-<!-- Su celle (`td` o `th`) -->
-<tr>
-  <td class="table-primary">...</td>
-  <td class="table-secondary">...</td>
-  <td class="table-success">...</td>
-  <td class="table-danger">...</td>
-  <td class="table-warning">...</td>
-  <td class="table-info">...</td>
-  <td class="table-light">...</td>
-  <td class="table-dark">...</td>
-</tr>
-```
+{% comment %}Example name: Celle colorate{% endcomment %}
+{% capture example %}
+  <table class="table table-primary">
+    <tbody>
+      <tr>
+        <th scope="row">Default</th>
+        <td class="table-primary">Primary</td>
+        <td class="table-secondary">Secondary</td>
+        <td class="table-success">Success</td>
+        <td class="table-danger">Danger</td>
+        <td class="table-warning">Warning</td>
+        <td class="table-info">Info</td>
+        <td class="table-light">Light</td>
+        <td class="table-dark">Dark</td>
+      </tr>
+    </tbody>
+  </table>
+  {% endcapture %}{% include example.html content=example %}
 
 {% include callout-warning-color-assistive-technologies.md %}
 
@@ -182,7 +225,8 @@ Utilizza le classi contestuali per colorare tabelle, righe o celle individuali.
 
 Usa `.table-striped` per aggiungere delle striature zebrate ad ogni riga della tabella contenute in `<tbody>`.
 
-<div class="bd-example">
+{% comment %}Example name: Righe striate{% endcomment %}
+{% capture example %}
   <table class="table table-striped">
     <thead>
       <tr>
@@ -213,17 +257,12 @@ Usa `.table-striped` per aggiungere delle striature zebrate ad ogni riga della t
       </tr>
     </tbody>
   </table>
-</div>
-
-```html
-<table class="table table-striped">
-  ...
-</table>
-```
+{% endcapture %}{% include example.html content=example %}
 
 Queste classi sono applicabili anche alle varianti:
 
-<div class="bd-example">
+{% comment %}Example name: Righe striate, sfondo scuro{% endcomment %}
+{% capture example %}
   <table class="table table-dark table-striped">
     <thead>
       <tr>
@@ -254,19 +293,14 @@ Queste classi sono applicabili anche alle varianti:
       </tr>
     </tbody>
   </table>
-</div>
+{% endcapture %}{% include example.html content=example %}
 
-```html
-<table class="table table-dark table-striped">
-  ...
-</table>
-```
-
-### Righe ed hover
+### Righe e hover
 
 Aggiungi `.table-hover` per abilitare lo stato hover sulle righe della tabella contenute in `<tbody>`.
 
-<div class="bd-example">
+{% comment %}Example name: Righe con stato hover{% endcomment %}
+{% capture example %}
   <table class="table table-hover">
     <thead>
       <tr>
@@ -297,17 +331,12 @@ Aggiungi `.table-hover` per abilitare lo stato hover sulle righe della tabella c
       </tr>
     </tbody>
   </table>
-</div>
-
-```html
-<table class="table table-hover">
-  ...
-</table>
-```
+{% endcapture %}{% include example.html content=example %}
 
 Le tabelle con hover possono essere combinate con la variante striata.
 
-<div class="bd-example">
+{% comment %}Example name: Righe striate con stato hover{% endcomment %}
+{% capture example %}
   <table class="table table-striped table-hover">
     <thead>
       <tr>
@@ -338,18 +367,12 @@ Le tabelle con hover possono essere combinate con la variante striata.
       </tr>
     </tbody>
   </table>
-</div>
-
-```html
-<table class="table table-striped table-hover">
-  ...
-</table>
-```
+{% endcapture %}{% include example.html content=example %}
 
 ### Tabelle attive
 
+{% comment %}Example name: Con stato attivo{% endcomment %}
 {% capture example %}
-
 <table class="table">
   <thead>
     <tr>
@@ -385,7 +408,8 @@ Le tabelle con hover possono essere combinate con la variante striata.
 
 Aggiungi `.table-bordered` per avere i bordi a tutti i lati della tabella e su tutte le celle.
 
-<div class="bd-example">
+{% comment %}Example name: Con bordi{% endcomment %}
+{% capture example %}
   <table class="table table-bordered">
       <thead>
         <tr>
@@ -415,17 +439,12 @@ Aggiungi `.table-bordered` per avere i bordi a tutti i lati della tabella e su t
         </tr>
       </tbody>
   </table>
-</div>
-
-```html
-<table class="table table-bordered">
-  ...
-</table>
-```
+{% endcapture %}{% include example.html content=example %}
 
 Le [utilities di colorazione dei bordi]({{site.baseurl}}/docs/organizzare-gli-spazi/bordi/#colore-dei-bordi) possono essere utilizzate per cambiarne i colori.
 
-<div class="bd-example">
+{% comment %}Example name: Con bordi, varianti di colore{% endcomment %}
+{% capture example %}
   <table class="table table-bordered border-primary">
       <thead>
         <tr>
@@ -455,19 +474,14 @@ Le [utilities di colorazione dei bordi]({{site.baseurl}}/docs/organizzare-gli-sp
         </tr>
       </tbody>
   </table>
-</div>
-
-```html
-<table class="table table-bordered">
-  ...
-</table>
-```
+{% endcapture %}{% include example.html content=example %}
 
 ## Tabella senza bordi
 
 Aggiungi la classe `.table-borderless` per una tabella senza bordi.
 
-<div class="bd-example">
+{% comment %}Example name: Senza bordi{% endcomment %}
+{% capture example %}
   <table class="table table-borderless">
       <thead>
         <tr>
@@ -497,15 +511,10 @@ Aggiungi la classe `.table-borderless` per una tabella senza bordi.
         </tr>
       </tbody>
   </table>
-</div>
+{% endcapture %}{% include example.html content=example %}
 
-```html
-<table class="table table-borderless">
-  ...
-</table>
-```
-
-<div class="bd-example">
+{% comment %}Example name: Senza bordi, sfondo scuro{% endcomment %}
+{% capture example %}
   <table class="table table-dark table-borderless">
       <thead>
         <tr>
@@ -535,19 +544,14 @@ Aggiungi la classe `.table-borderless` per una tabella senza bordi.
         </tr>
       </tbody>
   </table>
-</div>
-
-```html
-<table class="table table-dark table-borderless">
-  ...
-</table>
-```
+{% endcapture %}{% include example.html content=example %}
 
 ## Tabella compatta
 
 Aggiungi `.table-sm` per rendere le tabelle più compatte dimezzando il cell padding.
 
-<div class="bd-example">
+{% comment %}Example name: Compatta{% endcomment %}
+{% capture example %}
   <table class="table table-sm">
       <thead>
         <tr>
@@ -577,19 +581,14 @@ Aggiungi `.table-sm` per rendere le tabelle più compatte dimezzando il cell pad
         </tr>
       </tbody>
   </table>
-</div>
-
-```html
-<table class="table table-sm">
-  ...
-</table>
-```
+{% endcapture %}{% include example.html content=example %}
 
 ## Allineamento verticale
 
 Le celle contenute nel `<thead>` sono sempre allineate verticalmente al bottom. Le celle del `<tbody>` ereditano l'allineamento da `<table>` e sono allineate al top per default. Utilizza le classi di [allineamento verticale]({{site.baseurl}}/docs/organizzare-gli-spazi/allineamento-verticale/) per riallineare dove necessario.
 
-<div class="bd-example">
+{% comment %}Example name: Allineamenti verticali{% endcomment %}
+{% capture example %}
   <div class="table-responsive">
     <table class="table align-middle">
       <thead>
@@ -622,39 +621,14 @@ Le celle contenute nel `<thead>` sono sempre allineate verticalmente al bottom. 
       </tbody>
     </table>
   </div>
-</div>
-
-```html
-<div class="table-responsive">
-  <table class="table align-middle">
-    <thead>
-      <tr>
-        ...
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        ...
-      </tr>
-      <tr class="align-bottom">
-        ...
-      </tr>
-      <tr>
-        <td>...</td>
-        <td>...</td>
-        <td class="align-top">This cell is aligned to the top.</td>
-        <td>...</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-```
+{% endcapture %}{% include example.html content=example %}
 
 ## Annidamento
 
 Gli stili di bordi, gli stili attivi e le varianti non sono ereditati dalle tabelle annidate.
 
-<div class="bd-example">
+{% comment %}Example name: Annidamento{% endcomment %}
+{% capture example %}
   <table class="table table-striped table-bordered">
     <thead>
       <tr>
@@ -709,26 +683,7 @@ Gli stili di bordi, gli stili attivi e le varianti non sono ereditati dalle tabe
       </tr>
     </tbody>
   </table>
-</div>
-
-```html
-<table class="table table-striped">
-  <thead>
-    ...
-  </thead>
-  <tbody>
-    ...
-    <tr>
-      <td colspan="4">
-        <table class="table mb-0">
-          ...
-        </table>
-      </td>
-    </tr>
-    ...
-  </tbody>
-</table>
-```
+{% endcapture %}{% include example.html content=example %}
 
 ## Struttura
 
@@ -736,7 +691,8 @@ Gli stili di bordi, gli stili attivi e le varianti non sono ereditati dalle tabe
 
 Come per le tabelle utilizza le classi varianti come `.table-light` o `.table-dark` per modificare l'aspetto di `<thead>`.
 
-<div class="bd-example">
+{% comment %}Example name: Con testata scura{% endcomment %}
+{% capture example %}
   <table class="table">
     <thead class="table-dark">
       <tr>
@@ -767,22 +723,12 @@ Come per le tabelle utilizza le classi varianti come `.table-light` o `.table-da
       </tr>
     </tbody>
   </table>
-</div>
-
-```html
-<table class="table">
-  <thead class="table-dark">
-    ...
-  </thead>
-  <tbody>
-    ...
-  </tbody>
-</table>
-```
+{% endcapture %}{% include example.html content=example %}
 
 ### Footer
 
-<div class="bd-example">
+{% comment %}Example name: Con piede{% endcomment %}
+{% capture example %}
   <table class="table">
     <thead class="table-light">
       <tr>
@@ -821,27 +767,14 @@ Come per le tabelle utilizza le classi varianti come `.table-light` o `.table-da
       </tr>
     </tfoot>
   </table>
-</div>
-
-```html
-<table class="table">
-  <thead>
-    ...
-  </thead>
-  <tbody>
-    ...
-  </tbody>
-  <tfoot>
-    ...
-  </tfoot>
-</table>
-```
+{% endcapture %}{% include example.html content=example %}
 
 ### Caption
 
 Un `<caption>` funziona come un'intestazione per una tabella. Aiuta gli utenti con screen reader a trovare una tabella e capire di cosa si tratta e decidere se vogliono leggerla.
 
-<div class="bd-example">
+{% comment %}Example name: Con didascalia al piede{% endcomment %}
+{% capture example %}
   <table class="table table-sm">
     <caption>Lista degli utenti</caption>
     <thead>
@@ -872,26 +805,12 @@ Un `<caption>` funziona come un'intestazione per una tabella. Aiuta gli utenti c
       </tr>
     </tbody>
   </table>
-</div>
-
-```html
-<!-- On rows -->
-<table class="table table-sm">
-  <caption>
-    Lista degli utenti
-  </caption>
-  <thead>
-    ...
-  </thead>
-  <tbody>
-    ...
-  </tbody>
-</table>
-```
+{% endcapture %}{% include example.html content=example %}
 
 Per renderizzare la `<caption>` in cima alla tabella utilizza la classe `.caption-top`.
 
-<div class="bd-example">
+{% comment %}Example name: Con didascalia in alto{% endcomment %}
+{% capture example %}
   <table class="table sm caption-top">
     <caption>Lista degli utenti</caption>
     <thead>
@@ -922,21 +841,7 @@ Per renderizzare la `<caption>` in cima alla tabella utilizza la classe `.captio
       </tr>
     </tbody>
   </table>
-</div>
-
-```html
-<table class="table table-sm caption-top">
-  <caption>
-    Lista degli utenti
-  </caption>
-  <thead>
-    ...
-  </thead>
-  <tbody>
-    ...
-  </tbody>
-</table>
-```
+{% endcapture %}{% include example.html content=example %}
 
 ## Tabelle responsive
 
@@ -953,7 +858,8 @@ Le tabelle responsive fanno uso di `overflow-y: hidden`, che rimuove qualsiasi c
 
 Attraverso ogni breakpoint, usa `.table-responsive` per tabelle con scorrimento verticale.
 
-<div class="bd-example">
+{% comment %}Example name: Responsive, sempre{% endcomment %}
+{% capture example %}
   <div class="table-responsive">
     <table class="table">
       <thead>
@@ -1010,23 +916,17 @@ Attraverso ogni breakpoint, usa `.table-responsive` per tabelle con scorrimento 
       </tbody>
     </table>
   </div>
-</div>
-
-```html
-<div class="table-responsive">
-  <table class="table">
-    ...
-  </table>
-</div>
-```
+{% endcapture %}{% include example.html content=example %}
 
 ### Breakpoint specifici
 
 Usa `.table-responsive{-sm|-md|-lg|-xl|-xxl}` come necessario per creare tabelle responsive fino a un punto di interruzione particolare. Da quel punto di interruzione in su, la tabella si comporterà normalmente e non scorrerà orizzontalmente.
 
+{% comment %}Example name: Responsive, breakpoint specifici{% endcomment %}
+{% capture example %}
+
 {% for bp in site.data.breakpoints %}{% unless bp.breakpoint == "xs" %}
 
-<div class="bd-example">
   <div class="table-responsive{{ bp.abbr }}">
     <table class="table">
       <thead>
@@ -1067,15 +967,6 @@ Usa `.table-responsive{-sm|-md|-lg|-xl|-xxl}` come necessario per creare tabelle
       </tbody>
     </table>
   </div>
-</div>
 {% endunless %}{% endfor %}
 
-```html
-{% for bp in site.data.breakpoints %}{% unless bp.breakpoint == "xs" %}
-<div class="table-responsive{{ bp.abbr }}">
-  <table class="table">
-    ...
-  </table>
-</div>
-{% endunless %}{% endfor %}
-```
+{% endcapture %}{% include example.html content=example %}
