@@ -1,7 +1,7 @@
 //-modifica stili per template comuni non modificabili con la redifinizione delle variabili colore
 //body
 body {
-  color: $neutral-1-a7;
+  color: $color-text-secondary;
 }
 //BUTTONS
 .btn-primary,
@@ -42,8 +42,9 @@ body {
 //card texts color
 .card .card-body h5.card-title,
 .card .card-body .card-title.h5 {
-  color: $neutral-1-a7;
+  color: $color-text-secondary;
 }
+
 .text-primary {
-  color: $neutral-1-a7 !important;
+  color: $neutral-1-a7 !important; // TODO: check if still valid
 }

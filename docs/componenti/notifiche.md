@@ -58,8 +58,8 @@ Per ragioni di accessibilità è necessario:
 
 La notifica può essere composta da un solo titolo oppure da un titolo accompagnato da icona, contentuta nel tag `<h5>` del titolo. In questo caso l'elemento dovrà avere la classe `.with-icon`.
 
+{% comment %}Example name: Base, con o senza icona{% endcomment %}
 {% capture example %}
-
 <div class="container test-docs">
   <div class="row">
     <div class="col-12 col-md-6 mb-4 mb-md-0">
@@ -82,8 +82,8 @@ La notifica può essere composta da un solo titolo oppure da un titolo accompagn
 
 Si può aggiungere un breve testo al di sotto del titolo utilizzando un tag `<p>`.
 
+{% comment %}Example name: Con messaggio{% endcomment %}
 {% capture example %}
-
 <div class="container test-docs">
   <div class="row">
     <div class="col-12 col-md-6 mb-4 mb-md-0">
@@ -110,8 +110,8 @@ Le notifiche eliminabili non vengono nascoste dopo un intervallo di tempo ma ven
 
 Utilizzare una classe aggiuntiva `.dismissable` per ottenere questo comportamento.
 
+{% comment %}Example name: Eliminabili{% endcomment %}
 {% capture example %}
-
 <div class="container test-docs">
   <div class="row">
     <div class="col-12 col-md-6 mb-4 mb-md-0">
@@ -148,8 +148,8 @@ Alle notifiche possono essere applicate classi aggiuntive che ne determinano lo 
 - `.info` - per info generiche
 - `.warning` - per messaggi di precauzione
 
+{% comment %}Example name: Varianti di stato{% endcomment %}
 {% capture example %}
-
 <div class="container test-docs">
   <div class="row mb-5">
     <div class="col-12 col-md-6 mb-4 mb-md-0">
@@ -190,8 +190,8 @@ Utilizzando le classi aggiuntive di posizione fissa elencate di seguito la notif
 
 **N.B. queste classi non influenzano il posizionamento su device mobile, in questo caso la Notification è sempre a piede della finestra e ne occupa tutta la larghezza**
 
+{% comment %}Example name: Posizione e arrotondamento{% endcomment %}
 {% capture example %}
-
 <div class="container test-docs">
   <div class="row mb-5">
     <div class="col-12 col-md-6 mb-4 mb-md-0">
@@ -226,8 +226,8 @@ Utilizzando le classi aggiuntive di posizione fissa elencate di seguito la notif
 
 Posizionamento predefinito della notifica.
 
+{% comment %}Example name: Posizione predefinita{% endcomment %}
 {% capture example %}
-
 <div class="container test-desktop">
   <div class="notification with-icon success" role="alert" aria-labelledby="not1d-title" id="not1d">
     <h2 id="not1d-title" class="h5 no_toc"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>Titolo notifica</h2>
@@ -240,8 +240,8 @@ Posizionamento predefinito della notifica.
 
 Esempi delle quattro posizioni fisse possibili.
 
+{% comment %}Example name: Posizione fissa{% endcomment %}
 {% capture example %}
-
 <div class="container test-desktop">
   <div class="notification top-fix with-icon success" role="alert" aria-labelledby="not1e-title" id="not1e">
     <h2 id="not1e-title" class="h5 no_toc"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>Top fix</h2>

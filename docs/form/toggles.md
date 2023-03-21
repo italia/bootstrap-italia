@@ -9,8 +9,8 @@ description: Campi di tipo "interruttore".
 
 Per ottenere un interruttore con levetta basterà usare la seguente sintassi HTML, gli stili CSS penseranno al resto. Il contenitore padre dovrà avere la classe `.toggles`, mentre la label conterrà sia la checkbox che uno `<span>` con classe `.lever`.
 
+{% comment %}Example name: Base {% endcomment %}
 {% capture example %}
-
 <div>
   <div class="row">
     <div class="form-check col-6">
@@ -39,8 +39,8 @@ Per ottenere un interruttore con levetta basterà usare la seguente sintassi HTM
 
 Affinchè l'interruttore risulti disabilitato occorrerà aggiungere l'attributo `disabled` al checkbox.
 
+{% comment %}Example name: Disabilitato {% endcomment %}
 {% capture example %}
-
 <div>
   <div class="row">
     <div class="form-check col-6">
@@ -69,8 +69,8 @@ Affinchè l'interruttore risulti disabilitato occorrerà aggiungere l'attributo 
 
 Per poter raggruppare gli elementi **toggle** occorrerà aggiungere al `.form-check` la classe `.form-check-group`.
 
+{% comment %}Example name: Gruppi {% endcomment %}
 {% capture example %}
-
 <div>
   <div class="row">
     <div class="col-5">

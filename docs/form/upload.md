@@ -30,8 +30,8 @@ Ogni elemento può avere tre differenti stati e relative classi:
 Come è evidente dall'esempio sottostante è sempre necessario includere informazioni accessibili relative allo stato quando questo è comunicato solamente attraverso elementi grafici come icone o colori.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
+{% comment %}Example name: Con lista di file {% endcomment %}
 {% capture example %}
-
 <form method="post" action="" enctype="multipart/form-data">
   <input type="file" name="upload1" id="upload1" class="upload" multiple="multiple" />
   <label for="upload1">
@@ -98,8 +98,8 @@ Alla lista `<ul>` con classe `.upload-file-list` va aggiunta la classe `.upload-
 
 Il componente ottimizza la visualizzazione delle immagini anche quando queste non hanno proporzione quadrata, si consiglia comunque di utilizzare immagini dal peso contenuto.
 
+{% comment %}Example name: Con anteprima delle immagini {% endcomment %}
 {% capture example %}
-
 <form method="post" action="" enctype="multipart/form-data">
   <input type="file" name="upload2" id="upload2" class="upload" multiple="multiple" />
   <label for="upload2">
@@ -178,8 +178,8 @@ Ci si aspetta venga caricato un solo file (immagine) il form non ha quindi l'att
 
 **L'elemento ha design e comportamento differenti in versione mobile** si consiglia quindi di ridurre le dimensioni della finestra del browser per testare questa versione.
 
+{% comment %}Example name: Con avatar {% endcomment %}
 {% capture example %}
-
 <div class="container">
   <div class="row">
     <div class="col-12 col-md-6 mb-4 mb-md-0">
@@ -232,8 +232,8 @@ Le immagini caricate andranno aggiunte in testa alla lista `<ul>` come elementi 
 
 Anche in questo caso, nonostante il componente ottimizzi la visualizzazione delle immagini quando queste non hanno proporzione quadrata, si consiglia comunque di utilizzare immagini dal peso contenuto.
 
+{% comment %}Example name: Galleria {% endcomment %}
 {% capture example %}
-
 <form method="post" action="" enctype="multipart/form-data">
   <ul class="upload-pictures-wall">
     <li>
@@ -289,10 +289,9 @@ Su questa pagina è presente <a href="#esempio-animato">un'esempio simulato</a> 
 
 Lo stato dell'upload è rappresentato graficamente dall'elemento `<div class="progress-donut" data-bs-progress-donut></div>` come progress circolare.
 
+{% comment %}Example name: Trascina e rilascia {% endcomment %}
 {% capture example %}
-
 <p><strong>Default</strong></p>
-
 <form class="upload-dragdrop" method="post" action="" enctype="multipart/form-data" data-bs-upload-dragdrop>
   <div class="upload-dragdrop-image">
     <img src="{{ site.baseurl }}/dist/assets/upload-drag-drop-icon.svg" alt="descrizione immagine" aria-hidden="true">
@@ -405,8 +404,8 @@ var uploadDragDrop = new bootstrap.UploadDragDrop(uploadElement)
 </table>
 ### Esempio animato
 
+{% comment %}Example name: Con animazione {% endcomment %}
 {% capture example %}
-
 <p><button type="button" class="btn btn-primary" onClick="testAnimation()">Simula Upload</button></p>
 
 <form class="upload-dragdrop" method="post" action="" enctype="multipart/form-data" id="uploadChangeStateTarget" data-bs-upload-dragdrop>

@@ -26,6 +26,7 @@ Approfondisci l'argomento sul sito del W3C [WAI-ARIA Authoring Practices](https:
 
 Ogni icona può essere inclusa semplicemente creando un tag `<svg>` con riferimento all'àncora desiderata. In questo primo esempio utilizzeremo sia l'attributo `href` che `xlink:href` per compatibilità con i browser obsoleti:
 
+{% comment %}Example name: Base{% endcomment %}
 {% capture example %}
 <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-tool" xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-tool"></use></svg>
 {% endcapture %}{% include example.html content=example %}
@@ -34,6 +35,7 @@ Ogni icona può essere inclusa semplicemente creando un tag `<svg>` con riferime
 
 Sono disponibili le classi `icon-*`, dove `*` può essere `xs`, `sm`, `lg`, `xl`, per ottenere icone di diverse dimensioni.
 
+{% comment %}Example name: Varianti dimensioni{% endcomment %}
 {% capture example %}
 <svg class="bg-light icon icon-xs"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>
 <svg class="bg-light icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>
@@ -44,6 +46,7 @@ Sono disponibili le classi `icon-*`, dove `*` può essere `xs`, `sm`, `lg`, `xl`
 
 È anche possibile applicare la classe `icon-padded` all'icona per creare un padding proporzionale alla dimensione dell'icona attorno ad essa.
 
+{% comment %}Example name: Varianti dimensioni, con padding{% endcomment %}
 {% capture example %}
 <svg class="bg-light icon icon-xs icon-padded"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>
 <svg class="bg-light icon icon-sm icon-padded"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>
@@ -54,6 +57,7 @@ Sono disponibili le classi `icon-*`, dove `*` può essere `xs`, `sm`, `lg`, `xl`
 
 ### Colori
 
+{% comment %}Example name: Varianti colori{% endcomment %}
 {% capture example %}
 <svg class="icon icon-primary bg-light"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>
 <svg class="icon icon-secondary bg-light"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>
@@ -68,8 +72,8 @@ Sono disponibili le classi `icon-*`, dove `*` può essere `xs`, `sm`, `lg`, `xl`
 
 È possibile usare le classi di allineamento per posizionare le icone all'interno di un elemento.
 
+{% comment %}Example name: Allineamenti{% endcomment %}
 {% capture example %}
-
 <div style="line-height: 4em;">
   <svg class="bg-light icon align-bottom"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>
   <svg class="bg-light icon align-middle"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>
@@ -79,8 +83,8 @@ Sono disponibili le classi `icon-*`, dove `*` può essere `xs`, `sm`, `lg`, `xl`
 
 ### Lista delle icone disponibili
 
+{% comment %}Example name: Icone disponibili{% endcomment %}
 {% capture example %}
-
 <div class="row">
   {% for icona in site.data.icons.regular %}
   <div class="col-12 col-md-6 col-lg-4">

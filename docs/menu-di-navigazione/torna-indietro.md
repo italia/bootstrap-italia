@@ -12,6 +12,7 @@ Aggiungendo l'attributo `data-bs-toggle="historyback"` a qualsiasi link o pulsan
 
 Quando si utilizza un link (tag `<a>`) è necessario aggiungere un valore all'attributo href perché il link sia correttamente navigabile via tastiera.
 
+{% comment %}Example name: Link{% endcomment %}
 {% capture example %}
 <a href="#" class="go-back" data-bs-toggle="historyback"><svg class="icon icon-sm icon-primary me-2"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-left"></use></svg> Torna indietro</a>
 {% endcapture %}{% include example.html content=example %}
@@ -20,11 +21,9 @@ Quando si utilizza un link (tag `<a>`) è necessario aggiungere un valore all'at
 
 Nel caso dell'utilizzo di un pulsante l'accorgimento sopraindicato non è necessario.
 
+{% comment %}Example name: Pulsanti con freccia{% endcomment %}
 {% capture example %}
 <button type="button" class="btn btn-primary go-back" data-bs-toggle="historyback"><svg class="icon icon-sm icon-white me-2"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-left"></use></svg> Torna indietro</button>
-{% endcapture %}{% include example.html content=example %}
-
-{% capture example %}
 <button type="button" class="btn btn-primary go-back" data-bs-toggle="historyback"><svg class="icon icon-sm icon-white me-2"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-up"></use></svg> Livello superiore</button>
 {% endcapture %}{% include example.html content=example %}
 
@@ -32,6 +31,7 @@ Nel caso dell'utilizzo di un pulsante l'accorgimento sopraindicato non è necess
 
 È possibile creare pulsanti senza testo dotati di sola icona avendo cura di includere il testo alternativo per gli screen reader in un tag `<span>` con classe `.visually-hidden`.
 
+{% comment %}Example name: Pulsanti, solo icona{% endcomment %}
 {% capture example %}
 <button type="button" class="btn btn-primary go-back" data-bs-toggle="historyback"><svg class="icon icon-sm icon-white"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-left"></use></svg><span class="visually-hidden">Torna indietro</span></button>
 <button type="button" class="btn btn-primary go-back" data-bs-toggle="historyback"><svg class="icon icon-sm icon-white"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-up"></use></svg><span class="visually-hidden">Livello superiore</span></button>

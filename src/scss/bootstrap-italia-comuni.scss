@@ -23,22 +23,19 @@ $primary-b: 48;
 @import 'utilities/colors_vars';
 
 // color custom variables
+$color-text-primary-hover: hsl(160, 100%, 19%); // color-seagreen-19
+$color-text-primary-active: hsl(160, 100%, 14%); // color-seagreen-14
+$color-background-primary-lighter: hsl(160, 40, 92%); // color-seagreen-92
+$btn-comuni-primary-hover: #fff;
 $header-center-bg-color: $primary;
 $header-slim-bg-color: #00402b;
-
 $section-header-background-color: $primary-a10;
 $section-user-header-background-color: #f0f8f5;
-
 $card-link-color: $primary;
-
-$btn-comuni-primary-hover: #fff;
-
+$card-comuni-bg-dark: #2c2c2c;
 $footer-comuni-bg-color: #202a2e;
-
 $link-list-comuni-color: #455a64;
 $link-list-hover-color: $primary;
-
-$card-comuni-bg-dark: #2c2c2c;
 
 //variables
 @import 'variables';

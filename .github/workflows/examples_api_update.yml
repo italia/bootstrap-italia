@@ -8,6 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
+    - name: Fixup git permissions
+      # https://github.com/actions/checkout/issues/766
+      shell: bash
+      run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
     - uses: actions/setup-python@v4
       with:
         python-version: '3.10' 

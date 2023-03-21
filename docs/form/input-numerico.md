@@ -17,8 +17,8 @@ La label va posizionata prima del wrapper e, per garantire l'accessibilità del 
 
 La larghezza del campo predefinita è quella del suo contenitore, per limitare la larghezza alle dimensioni del valore contenuto utilizzare il <a href="#ridimensionamento">ridimensionamento adattivo</a>.
 
+{% comment %}Example name: Base {% endcomment %}
 {% capture example %}
-
 <div class="w-100">
   <label for="inputNumber" class="input-number-label">Input Number inserito in una colonna a tutta larghezza</label>
   <span class="input-number">
@@ -44,15 +44,14 @@ La larghezza del campo predefinita è quella del suo contenitore, per limitare l
     </button>
   </span>
 </div>
-
 {% endcapture %}{% include example.html content=example %}
 
 ### Limiti e Step
 
 Aggiungendo gli attributi HTML `min=""`, `max=""` e `step=""` all'input è possibile limitare il valore minimo e massimo del campo e decidere di quanto varierà a ogni click sui pulsanti.
 
+{% comment %}Example name: Con limiti e incremento {% endcomment %}
 {% capture example %}
-
 <div>
   <label for="inputNumber2" class="input-number-label">Min, Max & Step</label>
   <span class="input-number">
@@ -71,8 +70,8 @@ Aggiungendo gli attributi HTML `min=""`, `max=""` e `step=""` all'input è possi
 
 Per anteporre il simbolo della valuta in Euro, aggiungere la classe `.input-number-currency` al wrapper `.input-number`.
 
+{% comment %}Example name: Con valuta {% endcomment %}
 {% capture example %}
-
 <div>
   <label for="inputNumber3" class="input-number-label">Currency</label>
   <span class="input-number input-number-currency">
@@ -93,8 +92,8 @@ Per anteporre il simbolo percentuale, aggiungere la classe `.input-number-percen
 
 Si consiglia di impostare gli attributi `min=0` e `max="100"`.
 
+{% comment %}Example name: Con percentuale {% endcomment %}
 {% capture example %}
-
 <div>
   <label for="inputNumber4" class="input-number-label">Percentage</label>
   <span class="input-number input-number-percentage">
@@ -114,8 +113,8 @@ Si consiglia di impostare gli attributi `min=0` e `max="100"`.
 Per disabilitare un Input number, aggiungere la classe `.disabled` al wrapper `.input-number`.
 Aggiungere anche l'attributo `disabled` al campo e ai pulsanti.
 
+{% comment %}Example name: Disabilitato {% endcomment %}
 {% capture example %}
-
 <div>
   <label for="inputNumber5" class="input-number-label">Disabled</label>
   <span class="input-number disabled">
@@ -136,8 +135,8 @@ Aggiungere anche l'attributo `disabled` al campo e ai pulsanti.
 seconda del valore contenuto in esso. Per ottenere questo comportamento, è
 sufficiente aggiungere la classe `input-number-adaptive`.
 
+{% comment %}Example name: Con ridimensionamento {% endcomment %}
 {% capture example %}
-
 <div class="w-100">
   <label for="inputNumber6" class="input-number-label">Adattivo</label>
   <span class="input-number input-number-adaptive">

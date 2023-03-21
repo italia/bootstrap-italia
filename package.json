@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-italia",
-  "version": "2.2.0",
+  "version": "2.3.5",
   "keywords": [
     "css",
     "sass",
@@ -11,7 +11,7 @@
     "web"
   ],
   "module": "dist/bootstrap-italia.esm.js",
-  "types": "./types/decs.d.ts",
+  "types": "./types/index.d.ts",
   "sideEffects": [
     "*.css",
     "*.scss",
@@ -94,6 +94,7 @@
   "dependencies": {
     "@popperjs/core": "^2.11.2",
     "@splidejs/splide": "^3.6.12",
+    "@types/bootstrap": "^5.2.6",
     "accessible-autocomplete": "^2.0.4",
     "animejs": "^3.2.1",
     "bootstrap": "^5.2.3",

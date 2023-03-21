@@ -20,8 +20,8 @@ Questo comportamento viene comunemente definito "sticky".
 
 Puoi usare l'attributo `data-bs-toggle` con valore `sticky` per attivare la funzionalità sull'elemento.
 
+{% comment %}Example name: Base{% endcomment %}
 {% capture example %}
-
 <div class="it-header-slim-wrapper" data-bs-toggle="sticky">
   <div class="container">
     <div class="row">
@@ -42,8 +42,8 @@ Puoi usare l'attributo `data-bs-toggle` con valore `sticky` per attivare la funz
 Il componente assegna all'elemento la proprietà CSS `position` con valore `sticky`. Talvolta questo valore può causare dei problemi di posizionamento, soprattutto quando l'elemento varia in altezza quando diventa sticky. Per questo è possibile forzare il valore `fixed` mediante l'attributo `data-bs-position-type`.
 Per facilitare il cambio di stile dell'elemento è possibile usare la proprietà `data-bs-sticky-class-name`: mediante questa proprietà la classe CSS indicata verrà assegnata all'elemento quando diventa sticky e rimossa quando ritorna normale.
 
+{% comment %}Example name: Con posizione fissa{% endcomment %}
 {% capture example %}
-
 <div class="it-header-slim-wrapper it-header-sticky" data-bs-toggle="sticky" data-bs-position-type="fixed" data-bs-target="#stickyTrigger1" data-bs-sticky-class-name="is-sticky">
   <div class="container">
     <div class="row">
@@ -63,8 +63,8 @@ Per facilitare il cambio di stile dell'elemento è possibile usare la proprietà
 
 Se sono presenti più componenti sticky nella pagina, è possibile fare in modo che si impilino l'uno sull'altro utilizzando l'attributo `data-bs-stackable`
 
+{% comment %}Example name: Variante impilabile{% endcomment %}
 {% capture example %}
-
 <div class="it-header-slim-wrapper" data-bs-toggle="sticky" data-bs-stackable="true">
   <div class="container">
     <div class="row">
@@ -97,8 +97,8 @@ Se sono presenti più componenti sticky nella pagina, è possibile fare in modo 
 È possibile attivare la funzionalità quando un particolare elemento interno esce dal viewport della pagina.
 In tal caso è necessario utilizzare l'attributo `data-bs-target`.
 
+{% comment %}Example name: Attivabile con target{% endcomment %}
 {% capture example %}
-
 <header class="it-header-wrapper" data-bs-toggle="sticky"  data-bs-target="#stickyTrigger1">
   <div class="it-header-slim-wrapper">
     <div class="container">
