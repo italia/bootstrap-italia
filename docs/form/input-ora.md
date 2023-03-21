@@ -17,8 +17,8 @@ Assicurarsi di aggiungere alla label la classe **`active`** per impedire la sovr
 
 Clicca sull’icona a destra per visualizzare il timepicker.
 
+{% comment %}Example name: Base {% endcomment %}
 {% capture example %}
-
 <div class="form-group">
   <label class="active" for="timeStandard">Timepicker</label>
   <input class="form-control" id="timeStandard" type="time">

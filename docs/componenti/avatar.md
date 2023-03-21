@@ -49,6 +49,7 @@ Per gli Avatar con icona inserire un testo alternativo: `<span class="visually-h
 
 L'Avatar ridimensiona automaticamente l'immagine adattandola al formato circolare e centrandola. Si consiglia in ogni caso di utilizzare immagini delle dimensioni corrette.
 
+{% comment %}Example name: Immagine{% endcomment %}
 {% capture example %}
 
 <div class="d-flex align-items-center justify-content-around flex-wrap flex-sm-nowrap">
@@ -87,6 +88,7 @@ Oltre ai colori di default è possibile utilizzare uno sfondo a scelta fra:
 
 In questi casi il testo sarà di colore bianco.
 
+{% comment %}Example name: Testo{% endcomment %}
 {% capture example %}
 
 <div class="d-flex align-items-center justify-content-around flex-wrap flex-sm-nowrap">
@@ -121,6 +123,7 @@ In questi casi il testo sarà di colore bianco.
 
 Per utilizzare un'icona all'interno degli Avatar è sufficiente includere il codice dell'icona prescelta dalla [libreria icone]({{ site.baseurl }}/docs/utilities/icone/) e indicarne il colore con una delle classi disponibili.
 
+{% comment %}Example name: Icona{% endcomment %}
 {% capture example %}
 
 <div class="d-flex align-items-center justify-content-around flex-wrap flex-sm-nowrap">
@@ -155,6 +158,7 @@ Per utilizzare un'icona all'interno degli Avatar è sufficiente includere il cod
 
 Per associare un Avatar ad un'azione o un link, utilizzare il tag `<a>` con relativo link o chiamata JavaScript.
 
+{% comment %}Example name: Link{% endcomment %}
 {% capture example %}
 
 <div class="d-flex align-items-center justify-content-around flex-wrap flex-sm-nowrap">
@@ -176,6 +180,7 @@ Per associare un Avatar ad un'azione o un link, utilizzare il tag `<a>` con rela
 
 È possibile associare un Tooltip con maggiori informazioni relative all'utente o all'azione associata utilizzando i <a href="{{ site.baseurl }}/docs/componenti/tooltip/">Tooltip di Bootstrap</a>.
 
+{% comment %}Example name: Link con tooltip{% endcomment %}
 {% capture example %}
 
 <div class="d-flex align-items-center justify-content-around flex-wrap flex-sm-nowrap">
@@ -205,6 +210,7 @@ Utilizzando una <a href="{{ site.baseurl }}/docs/organizzare-i-contenuti/liste/#
 
 Lista verticale di Avatar di dimensione piccola con classe `.size-sm`.
 
+{% comment %}Example name: Gruppo, lista piccola{% endcomment %}
 {% capture example %}
 
 <div class="link-list-wrapper">
@@ -248,6 +254,7 @@ Lista verticale di Avatar di dimensione piccola con classe `.size-sm`.
 
 Lista verticale di Avatar di dimensione media con classe `.size-md`.
 
+{% comment %}Example name: Gruppo, lista media{% endcomment %}
 {% capture example %}
 
 <div class="link-list-wrapper">
@@ -295,6 +302,7 @@ Racchiudendo una serie di Avatar in una lista di tipo `<ul>` con classe `.avatar
 
 Gruppo di Avatar sovrapposti di dimensione piccola con classe `.size-sm`.
 
+{% comment %}Example name: Gruppo, sovrapposti piccoli{% endcomment %}
 {% capture example %}
 
 <ul class="avatar-group-stacked">
@@ -397,6 +405,7 @@ Gruppo di Avatar sovrapposti di dimensione piccola con classe `.size-sm`.
 
 Gruppo di Avatar sovrapposti di dimensione media con classe `.size-md`.
 
+{% comment %}Example name: Gruppo, sovrapposti medi{% endcomment %}
 {% capture example %}
 
 <ul class="avatar-group-stacked">
@@ -491,6 +500,7 @@ Inserendo un `<div>` con classe `.avatar-presence` all'interno dell'Avatar si ot
 
 Inserire un `<span>` riservato agli screen reader con indicazione della presenza dell'utente: `<span class="visually-hidden">Presenza: (stato presenza)</span>`.
 
+{% comment %}Example name: Con comportamento, presenza utente{% endcomment %}
 {% capture example %}
 
 <div class="d-flex align-items-center justify-content-around flex-wrap flex-sm-nowrap mb-5">
@@ -576,6 +586,7 @@ Inserendo un `<div>` con classe `.avatar-status` all'interno dell'Avatar si otte
 Inserire un `<span>` riservato agli screen reader con indicazione dello stato dell'utenza: `<span class="visually-hidden">Stato: (stato utenza)</span>`
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
+{% comment %}Example name: Con comportamento, status utente{% endcomment %}
 {% capture example %}
 
 <div class="d-flex align-items-center justify-content-around flex-wrap flex-sm-nowrap mb-5">
@@ -652,6 +663,7 @@ Per ottenere una versione più completa dell'Avatar con nome esteso ed eventuale
 
 Per il nome è possibile utilizzare i tag `<h3>` o `<h4>`. Il testo esteso può essere contenuto in un `<p>` o in un tag `<time>` nel caso di date/orari.
 
+{% comment %}Example name: Con testo aggiuntivo{% endcomment %}
 {% capture example %}
 
 <div class="d-flex align-items-center justify-content-start justify-content-md-around flex-wrap flex-sm-nowrap">

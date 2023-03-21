@@ -54,8 +54,8 @@ Esempio di carousel con card semplici.
 - div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-abstract-three-cols` che attiva la visualizzazione a 3 colonne su desktop.
 - div **`splide__track`** : vengono aggiunte le classi `ps-lg-3 pe-lg-3` che implementano il padding richiesto dal breakpoint `lg` in su.
 
+{% comment %}Example name: Titolo e card base{% endcomment %}
 {% capture example %}
-
 <div class="it-carousel-wrapper it-carousel-landscape-abstract-three-cols splide" data-bs-carousel-splide>
   <div class="it-header-block">
     <div class="it-header-block-title">
@@ -183,6 +183,7 @@ Esempio di carousel con card semplici.
 
 - div **`it-carousel-wrapper`**: viene aggiunta la classe `it-carousel-landscape-abstract-three-cols-arrow-visible` che attiva la visualizzazione a 3 colonne su desktop e la visualizzazione delle frecce di navigazione.
 
+{% comment %}Example name: Card articolo{% endcomment %}
 {% capture example %}
 
 <div class="it-carousel-wrapper splide it-carousel-landscape-abstract-three-cols-arrow-visible" data-bs-carousel-splide>
@@ -293,6 +294,7 @@ Contiene un'immagine associata ad una card "articolo".
 
 - div **`it-carousel-wrapper`**: viene aggiunta la classe `it-carousel-landscape-abstract` che attiva la visualizzazione a 2 colonne in Flex.
 
+{% comment %}Example name: Card con immagine in evidenza{% endcomment %}
 {% capture example %}
 
 <div class="it-carousel-wrapper it-carousel-landscape-abstract splide" data-bs-carousel-splide>
@@ -405,6 +407,7 @@ Contiene un'immagine associata ad una card "articolo".
 
 - div **`it-carousel-wrapper`**: viene aggiunta la classe `it-carousel-landscape-abstract-three-cols` per la visualizzazione a 3 colonne.
 
+{% comment %}Example name: Card con immagine in alto{% endcomment %}
 {% capture example %}
 
 <div class="it-carousel-wrapper it-carousel-landscape-abstract-three-cols splide" data-bs-carousel-splide>
@@ -555,6 +558,7 @@ Contiene [Card di tipo speciale]({{ site.baseurl }}/docs/componenti/card/#card-s
 
 - div **`it-carousel-wrapper`**: viene aggiunta la classe `it-carousel-landscape-abstract-three-cols` per la visualizzazione a 3 colonne.
 
+{% comment %}Example name: Card speciali{% endcomment %}
 {% capture example %}
 
 <div class="it-carousel-wrapper it-carousel-landscape-abstract-three-cols splide" data-bs-carousel-splide>
@@ -689,6 +693,7 @@ div **`it-carousel-wrapper`** :
 - viene aggiunta la classe `it-full-carousel` per la visualizzazione a tutto schermo (orizzontale)
 - viene aggiunta la classe `it-big-img` per indicare che l'immagine contenuta è di tipo grande
 
+{% comment %}Example name: Immagini{% endcomment %}
 {% capture example %}
 
 <div class="it-carousel-wrapper it-carousel-landscape-abstract-three-cols it-full-carousel it-big-img splide" data-bs-carousel-splide>
@@ -787,6 +792,7 @@ div **`it-carousel-wrapper`** :
 - viene aggiunta la classe `it-full-carousel` per la visualizzazione a tutto schermo (orizzontale)
 - viene aggiunta la classe `it-standard-image` per indicare che l'immagine contenuta è di tipo standard.
 
+{% comment %}Example name: Immagini di dimensione standard{% endcomment %}
 {% capture example %}
 
 <div class="it-carousel-wrapper it-carousel-landscape-abstract-three-cols it-full-carousel it-standard-image splide" data-bs-carousel-splide>

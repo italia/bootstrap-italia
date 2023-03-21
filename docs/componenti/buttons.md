@@ -143,7 +143,7 @@ La classe `.disabled` usa `pointer-events: none` per provare a disabilitare l'at
 
 Inoltre è possibile applicare un contorno cerchiato dell'icona utilizzando un contenitore con classe `.rounded-icon` da inserire all'interno della classe `.btn` con possibilità di personalizzazione del suo aspetto cromatico attraverso i modificatori `.rounded-*` e `.icon.icon-*`.
 
-{% comment %}Example name: Icona cerchiata{% endcomment %}
+{% comment %}Example name: Con icona, cerchiata{% endcomment %}
 {% capture example %}
 <button class="btn btn-success btn-lg btn-icon btn-me">
 <span class="rounded-icon">
@@ -188,7 +188,7 @@ Per ottenere pulsanti di dimensione più grande o più piccola, è sufficiente u
 
 #### Large
 
-{% comment %}Example name: Dimensione grande Large{% endcomment %}
+{% comment %}Example name: Dimensione grande{% endcomment %}
 {% capture example %}
 <button type="button" class="btn btn-primary btn-lg btn-me">Primary Large</button>
 <button type="button" class="btn btn-secondary btn-lg">Secondary Large</button>
@@ -196,7 +196,7 @@ Per ottenere pulsanti di dimensione più grande o più piccola, è sufficiente u
 
 #### Small
 
-{% comment %}Example name: Dimensione normale Small{% endcomment %}
+{% comment %}Example name: Dimensione normale{% endcomment %}
 {% capture example %}
 <button type="button" class="btn btn-primary btn-sm btn-me">Primary Small</button>
 <button type="button" class="btn btn-secondary btn-sm">Secondary Small</button>
@@ -204,7 +204,7 @@ Per ottenere pulsanti di dimensione più grande o più piccola, è sufficiente u
 
 #### Mini
 
-{% comment %}Example name: Dimensione minima Mini{% endcomment %}
+{% comment %}Example name: Dimensione minima{% endcomment %}
 {% capture example %}
 <button type="button" class="btn btn-primary btn-xs btn-me">Primary Mini</button>
 <button type="button" class="btn btn-secondary btn-xs">Secondary Mini</button>
@@ -225,7 +225,7 @@ Per creare pulsanti o gruppi di pulsanti a tutta larghezza, come i _block button
 
 In questo caso è stata implemenentata una variante responsive che visualizza i tasti a tutta larghezza e sovrapposti in mobile per poi affiancarli dl breakpoint `md` in su.
 
-{% comment %}Example name: A tutta larghezza solo su mobile{% endcomment %}
+{% comment %}Example name: A tutta larghezza, solo su mobile{% endcomment %}
 {% capture example %}
 
 <div class="d-grid gap-2 d-md-block">

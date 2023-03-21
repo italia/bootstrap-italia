@@ -32,6 +32,7 @@ Un elemento Affix posizionato al lato del contenuto di pagina può essere ancora
 
 Per ancorare un elemento alla parte alta della pagina è sufficiente applicare la classe `.affix-parent` all'elemento che lo contiene e la classe `.affix-top` all'elemento stesso.
 
+{% comment %}Example name: Verticale in alto{% endcomment %}
 {% capture example %}
 
 <div class="affix-example container">
@@ -62,6 +63,7 @@ Per ancorare un elemento alla parte alta della pagina è sufficiente applicare l
 
 Per ancorare un elemento alla parte alta della pagina è sufficiente applicare la classe `.affix-parent` all'elemento che lo contiene e la classe `.affix-bottom` all'elemento stesso.
 
+{% comment %}Example name: Verticale in basso{% endcomment %}
 {% capture example %}
 
 <div class="affix-example container">
@@ -102,6 +104,7 @@ Un elemento Affix a sviluppo orizzontale può essere ancorato alla parte alta o 
 
 Per ancorare un elemento a svliuppo orizzontale alla parte alta della pagina è sufficiente applicare la classe `.affix-parent` all'elemento che lo contiene e la classe `.affix-top` all'elemento stesso.
 
+{% comment %}Example name: Orizzontale in alto{% endcomment %}
 {% capture example %}
 
 <div class="affix-example container affix-parent">
@@ -119,6 +122,8 @@ Per ancorare un elemento a svliuppo orizzontale alla parte alta della pagina è 
 ### Horizontal Affix bottom
 
 Per ancorare un elemento a sviluppo orizzontale alla parte inferiore della pagina è sufficiente applicare la classe `.affix-parent` all'elemento che lo contiene e la classe `.affix-bottom` all'elemento stesso.
+
+{% comment %}Example name: Orizzontale in basso{% endcomment %}
 {% capture example %}
 
 <div class="affix-example container affix-parent">

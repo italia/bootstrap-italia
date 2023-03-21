@@ -28,6 +28,7 @@ Definisci colori di background, bordi, colore di testo attraverso specifiche cla
 </div>
 
 <div class="exclude-a11y-check">
+{% comment %}Example name: Colori primari{% endcomment %}
 {% capture example %}
 <div class="primary-bg p-3"><span class="white-color">Testo bianco su background colore primario</span></div>
 <div class="primary-border-color border p-3"><span class="primary-color">Testo colore primario su background con bordo primario</span></div>
@@ -53,6 +54,7 @@ Il colore primario possiede tre tipologie di varianti cromatiche. Per utilizzarl
 (es. `.primary-bg-a5` per utilizzare come background il colore primario con variante **a5** )
 
 <div class="exclude-a11y-check">
+{% comment %}Example name: Varianti monocromatiche del colore base{% endcomment %}
 {% capture example %}
 <div class="bd-example-border-utils">
   <div class="row">
@@ -127,6 +129,7 @@ Devono essere usati in modo parsimonioso.
 `.analogue-(+ 1/2 +)-border-color` : per border color
 
 <div class="exclude-a11y-check">
+{% comment %}Example name: Colori secondari{% endcomment %}
 {% capture example %}
 <div class="analogue-1-bg p-3"><span class="white-color">Testo bianco su background colore analogo 1</span></div>
 <div class="analogue-2-bg p-3"><span>Testo nero su background colore analogo 2</span></div>
@@ -158,6 +161,7 @@ Devono essere usati in modo parsimonioso.
 `.complementary-(+ 1/2/3 +)-border-color` : per border color
 
 <div class="exclude-a11y-check">
+{% comment %}Example name: Colori complementari e triadici{% endcomment %}
 {% capture example %}
 <div class="complementary-1-bg p-3"><span>Testo su background colore complementare 1</span></div>
 <div class="complementary-2-bg p-3"><span>Testo su background colore complementare 2</span></div>
@@ -182,6 +186,7 @@ I colori analoghi possiedono due tipologie di varianti cromatiche. Per utilizzar
 (es. `.analogue-1-bg-a5` per utilizzare come background il colore analogo **1** con variante **a5** )
 
 <div class="exclude-a11y-check">
+{% comment %}Example name: Varianti colori secondari, analoghi{% endcomment %}
 {% capture example %}
 <div class="row">
   <div class="col-md-3">
@@ -249,6 +254,7 @@ I colori Complementari possiedono due tipologie di varianti cromatiche. Per util
 (es. `.complementary-1-bg-a5` per utilizzare come background il colore complementare **1** con variante **a4** )
 
 <div class="exclude-a11y-check">
+{% comment %}Example name: Varianti colori secondari, complementari e triadici{% endcomment %}
 {% capture example %}
 <div class="row">
    <div class="col-md-2">
@@ -347,6 +353,7 @@ I colori Complementari possiedono due tipologie di varianti cromatiche. Per util
 `.neutral-(+ 1/2 +)-border-color` : per border color
 
 <div class="exclude-a11y-check">
+{% comment %}Example name: Varianti colori neutrali{% endcomment %}
 {% capture example %}
 <div class="neutral-1-bg p-3"><span class="white-color">Testo bianco su background colore neutrale 1</span></div>
 <div class="neutral-2-bg p-3"><span>Testo su background colore neutrale 2</span></div>
@@ -366,6 +373,7 @@ I colori neutrali possiedono tre tipologie di varianti cromatiche. Per utilizzar
 (es. `.neutral-1-bg-a5` per utilizzare come background il colore neutrale **1** con variante **a5** )
 
 <div class="exclude-a11y-check">
+{% comment %}Example name: Varianti colori neutrali{% endcomment %}
 {% capture example %}
 <div class="row">
   <div class="col-md-3">
@@ -415,6 +423,7 @@ I grigi chiari sono di tre tipologie. Per utilizzarle è sufficiente utilizzare 
 (es. `.lightgrey-1-bg-a4` per utilizzare come background il grigio chiaro **1** con variante **a5** )
 
 <div class="exclude-a11y-check">
+{% comment %}Example name: Grigi chiari{% endcomment %}
 {% capture example %}
 <div class="row">
   <div class="col-md-2">

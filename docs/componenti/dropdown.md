@@ -30,7 +30,7 @@ Tuttavia, Bootstrap aggiunge il supporto integrato per la maggior parte delle in
 Ogni singolo `.btn` può essere trasformato in un pulsante per l'apertura di dropdown con del semplice markdown HTML.
 Il design di default dei dropdown richiede l'applicazione della classe `.btn-dropdown`. I link o le voci all'interno del dropdown devono essere contenute in un elemento `.link-list`.
 
-{% comment %}Example name: Base button{% endcomment %}
+{% comment %}Example name: Base, con pulsante{% endcomment %}
 {% capture example %}
 
 <div class="dropdown">
@@ -54,7 +54,7 @@ Il design di default dei dropdown richiede l'applicazione della classe `.btn-dro
 
 Ovviamente sono disponibili [tutte le varianti]({{ site.baseurl }}/docs/componenti/buttons/#varianti-di-colore) già disponibili per i pulsanti. Di seguito, un esempio di utilizzo con classi `.btn-primary`, `.btn-secondary` e `.btn-danger`:
 
-{% comment %}Example name: Esempi con varianti di pulsanti{% endcomment %}
+{% comment %}Example name: Con varianti di pulsanti{% endcomment %}
 {% capture example %}
 
 <div class="btn-group">
@@ -108,7 +108,7 @@ Ovviamente sono disponibili [tutte le varianti]({{ site.baseurl }}/docs/componen
 
 Lo stesso vale per gli elementi `<a>`:
 
-{% comment %}Example name: Usando l'elemento <a>{% endcomment %}
+{% comment %}Example name: Link{% endcomment %}
 {% capture example %}
 
 <div class="dropdown">

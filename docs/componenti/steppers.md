@@ -89,8 +89,8 @@ I passi visibili nell'intestazione possono essere corredati da tre classi aggiun
 
 È necessario ridurre la finestra del browser per apprezzare il comportamente degli Stepper su dispositivi di dimensioni ridotte.
 
+{% comment %}Example name: Intestazione solo testo{% endcomment %}
 {% capture example %}
-
 <div class="steppers">
   <div class="steppers-header">
     <ul>
@@ -107,8 +107,8 @@ I passi visibili nell'intestazione possono essere corredati da tre classi aggiun
 
 Le label presenti negli step dell'intestazione possono essere anticipate da un'icona.
 
+{% comment %}Example name: Intestazione testo e icone{% endcomment %}
 {% capture example %}
-
 <div class="steppers">
   <div class="steppers-header">
     <ul>
@@ -127,8 +127,8 @@ Le label presenti negli steps dell'header possono essere anticipate dal numero o
 
 È necessario aggiungere la classe `.no-line` al `<li>` attivo per nascondere il bordo inferiore azzurro, in questo caso ridondante.
 
+{% comment %}Example name: Intestazione ordinata{% endcomment %}
 {% capture example %}
-
 <div class="steppers">
   <div class="steppers-header">
     <ul>
@@ -155,8 +155,8 @@ Nel caso si stia sviluppando una _Single page application_ oppure una sequenza d
 
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
+{% comment %}Example name: Con navigazione degli step{% endcomment %}
 {% capture example %}
-
 <div class="steppers">
   <div class="steppers-header">
     <ul>
@@ -189,8 +189,8 @@ Questi indicatori saranno visualizzati solo su mobile, ma nei seguenti esempi so
 
 La Progress bar è quella nativa di Bootstrap 5 ed è contenuta in un elemento `.steppers-progress` situato fra i pulsanti "Indietro" ed "Avanti".
 
+{% comment %}Example name: Con navigazione mobile barra di progresso{% endcomment %}
 {% capture example %}
-
 <div class="steppers mobile-examples">
   <div class="steppers-content" aria-live="polite">
     <!-- Esempio START -->
@@ -215,8 +215,8 @@ I pallini sono elementi `<li>` contenuti in una lista `.steppers-dots` situato f
 
 Per ragioni di accessibilità, i `<li>` devono contenere uno `<span>` con classe `.visually-hidden `riservato agli screen reader con un testo indicante il numero di step e lo stato.
 
+{% comment %}Example name: Con navigazione mobile pallini{% endcomment %}
 {% capture example %}
-
 <div class="steppers mobile-examples">
   <div class="steppers-content" aria-live="polite">
     <!-- Esempio START -->
@@ -242,8 +242,8 @@ Per ragioni di accessibilità, i `<li>` devono contenere uno `<span>` con classe
 
 Su dispositivi mobili è possibile inserire un terzo pulsante "Salva" di aspetto differente con classe `.steppers-btn-save` fra i pulsanti "Indietro" e "Avanti".
 
+{% comment %}Example name: Con navigazione mobile e pulsante salva{% endcomment %}
 {% capture example %}
-
 <div class="steppers mobile-examples">
   <div class="steppers-content" aria-live="polite">
     <!-- Esempio START -->
@@ -262,8 +262,8 @@ Su dispositivi mobili è possibile inserire un terzo pulsante "Salva" di aspetto
 
 Su dispositivi mobili è possibile sostituire il pulsante "Avanti" con un pulsante "Conferma" di stile differente, con la classe `.steppers-btn-confirm`.
 
+{% comment %}Example name: Con navigazione mobile e pulsante conferma{% endcomment %}
 {% capture example %}
-
 <div class="steppers mobile-examples">
   <div class="steppers-content" aria-live="polite">
     <!-- Esempio START -->
@@ -281,8 +281,8 @@ Su dispositivi mobili è possibile sostituire il pulsante "Avanti" con un pulsan
 
 Per ottenere una versione scura degli Stepper è sufficiente aggiungere la classe `.bg-dark` al contenitore principale.
 
+{% comment %}Example name: Con sfondo scuro{% endcomment %}
 {% capture example %}
-
 <div class="steppers bg-dark">
   <div class="steppers-header">
     <ul>
@@ -307,8 +307,8 @@ Per ottenere una versione scura degli Stepper è sufficiente aggiungere la class
 
 ### Varianti intestazione
 
+{% comment %}Example name: Con sfondo scuro, varianti intestazione{% endcomment %}
 {% capture example %}
-
 <!-- Solo testo -->
 <div class="steppers bg-dark">
   <div class="steppers-header">
@@ -352,8 +352,8 @@ Si raccomanda la visualizzazione in un viewport ridotto per ottenere un esempio 
 
 #### Progress bar
 
+{% comment %}Example name: Con sfondo scuro, navigazione mobile barra di progresso{% endcomment %}
 {% capture example %}
-
 <div class="steppers bg-dark mobile-examples">
   <div class="steppers-content" aria-live="polite">
     <!-- Esempio START -->
@@ -374,8 +374,8 @@ Si raccomanda la visualizzazione in un viewport ridotto per ottenere un esempio 
 
 #### Pallini
 
+{% comment %}Example name: Con sfondo scuro, navigazione mobile pallini{% endcomment %}
 {% capture example %}
-
 <div class="steppers bg-dark mobile-examples">
   <div class="steppers-content" aria-live="polite">
     <!-- Esempio START -->
@@ -399,8 +399,8 @@ Si raccomanda la visualizzazione in un viewport ridotto per ottenere un esempio 
 
 #### Pulsante Salva
 
+{% comment %}Example name: Con sfondo scuro, navigazione mobile e pulsante salva{% endcomment %}
 {% capture example %}
-
 <div class="steppers bg-dark mobile-examples">
   <div class="steppers-content" aria-live="polite">
     <!-- Esempio START -->
@@ -417,8 +417,8 @@ Si raccomanda la visualizzazione in un viewport ridotto per ottenere un esempio 
 
 #### Pulsante conferma
 
+{% comment %}Example name: Con sfondo scuro, navigazione mobile e pulsante conferma{% endcomment %}
 {% capture example %}
-
 <div class="steppers bg-dark mobile-examples">
   <div class="steppers-content" aria-live="polite">
     <!-- Esempio START -->

@@ -30,8 +30,8 @@ Per indicare il link/thumbail attivo applicare la classe `.active` al relativo t
 Per ragioni di accessibilità è importante indicare all'interno dell'attributo `alt=""` dell'immagine thumbnail l'azione associata al link relativo.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
+{% comment %}Example name: Base{% endcomment %}
 {% capture example %}
-
 <ul class="thumb-nav">
     <li>
       <a href="#" class="active ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1056" alt="Visualizza immagine 1"></a>
@@ -49,8 +49,8 @@ Per ragioni di accessibilità è importante indicare all'interno dell'attributo 
 
 Applicando la classe `.thumb-nav-small` al contenitore `.thumb-nav` si otterranno thumbnail di dimensione ridotta.
 
+{% comment %}Example name: Variante compatta{% endcomment %}
 {% capture example %}
-
 <ul class="thumb-nav thumb-nav-small">
     <li>
       <a href="#" class="active ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1056" alt="Visualizza immagine 1"></a>
@@ -72,8 +72,8 @@ Applicando delle classi predefinite al contenitore `.thumb-nav` è possibile cus
 
 Utilizzare la classe `.thumb-nav-nozoom` per disabilitare l'effetto di zoom sull'immagine.
 
+{% comment %}Example name: Con hover senza ingrandimento{% endcomment %}
 {% capture example %}
-
 <ul class="thumb-nav thumb-nav-nozoom">
     <li>
       <a href="#" class="active ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1056" alt="Visualizza immagine 1"></a>
@@ -91,8 +91,8 @@ Utilizzare la classe `.thumb-nav-nozoom` per disabilitare l'effetto di zoom sull
 
 Utilizzare la classe `.thumb-nav-black` per ottenere un effetto di overlay nero trasparente sull'immagine.
 
+{% comment %}Example name: Con hover con livello nero{% endcomment %}
 {% capture example %}
-
 <ul class="thumb-nav thumb-nav-black">
     <li>
       <a href="#" class="active ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1056" alt="Visualizza immagine 1"></a>
@@ -110,8 +110,8 @@ Utilizzare la classe `.thumb-nav-black` per ottenere un effetto di overlay nero 
 
 Utilizzare la classe `.thumb-nav-primary` per ottenere un effetto di overlay di colore primary sull'immagine.
 
+{% comment %}Example name: Con hover con livello primary{% endcomment %}
 {% capture example %}
-
 <ul class="thumb-nav thumb-nav-primary">
     <li>
       <a href="#" class="active ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1056" alt="Visualizza immagine 1"></a>
@@ -129,8 +129,8 @@ Utilizzare la classe `.thumb-nav-primary` per ottenere un effetto di overlay di 
 
 Applicando la classe `.thumb-nav-vertical` al contenitore `.thumb-nav` si ottiene una versione verticale della Thumbnav.
 
+{% comment %}Example name: Verticale{% endcomment %}
 {% capture example %}
-
 <ul class="thumb-nav thumb-nav-vertical">
     <li>
       <a href="#" class="active ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1056" alt="Visualizza immagine 1"></a>
@@ -157,8 +157,8 @@ Alla Thumbnav dovrà essere applicata una classe a scelta fra:
 
 ### Overlay orizzontale inferiore
 
+{% comment %}Example name: Overlay orizzontale in basso{% endcomment %}
 {% capture example %}
-
 <div class="test-gallery position-relative">
   <img src="https://picsum.photos/1280/720?image=1056" class="test-image" alt="Descrizione immagine"/>
   <ul class="thumb-nav thumb-nav-small thumb-nav-bottom">
@@ -177,8 +177,8 @@ Alla Thumbnav dovrà essere applicata una classe a scelta fra:
 
 ### Overlay orizzontale top
 
+{% comment %}Example name: Overlay orizzontale in alto{% endcomment %}
 {% capture example %}
-
 <div class="test-gallery position-relative">
   <img src="https://picsum.photos/1280/720?image=1056" class="test-image" alt="Descrizione immagine"/>
   <ul class="thumb-nav thumb-nav-small thumb-nav-top">
@@ -197,8 +197,8 @@ Alla Thumbnav dovrà essere applicata una classe a scelta fra:
 
 ### Overlay verticale a sinistra
 
+{% comment %}Example name: Overlay verticale a sinistra{% endcomment %}
 {% capture example %}
-
 <div class="test-gallery position-relative">
   <img src="https://picsum.photos/720/720?image=1056" class="d-md-none test-image" alt="Descrizione immagine"/>
   <img src="https://picsum.photos/1280/720?image=1056" class="d-none d-md-block test-image" alt="Descrizione immagine"/>
@@ -218,8 +218,8 @@ Alla Thumbnav dovrà essere applicata una classe a scelta fra:
 
 ### Overlay verticale a destra
 
+{% comment %}Example name: Overlay verticale a destra{% endcomment %}
 {% capture example %}
-
 <div class="test-gallery position-relative">
   <img src="https://picsum.photos/720/720?image=1056" class="d-md-none test-image" alt="Descrizione immagine"/>
   <img src="https://picsum.photos/1280/720?image=1056" class="d-none d-md-block test-image" alt="Descrizione immagine"/>
@@ -241,8 +241,8 @@ Alla Thumbnav dovrà essere applicata una classe a scelta fra:
 
 Applicando la classe `.thumb-nav-fixed` alla Thumbnav le thumbnail avranno una larghezza fissa di 240px oppure di 120px se è stata utilizzata anche la classe `.thumb-nav-small`.
 
+{% comment %}Example name: Griglia a larghezza fissa{% endcomment %}
 {% capture example %}
-
 <ul class="thumb-nav thumb-nav-fixed">
     <li>
       <a href="#" class="ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1056" alt="Visualizza immagine 1"></a>
@@ -274,8 +274,8 @@ Applicando la classe `.thumb-nav-auto` alla Thumbnav le thumbnail occuperanno au
 
 ### Esempio: 3 thumbnail per riga
 
+{% comment %}Example name: Griglia a larghezza automatica, eg. 1{% endcomment %}
 {% capture example %}
-
 <ul class="thumb-nav thumb-nav-auto thumb-nav-auto-3">
     <li>
       <a href="#" class="ratio ratio-3x2"><img src="https://picsum.photos/390/260?image=1056" alt="Visualizza immagine 1"></a>
@@ -297,8 +297,8 @@ Applicando la classe `.thumb-nav-auto` alla Thumbnav le thumbnail occuperanno au
 
 ### Esempio: 5 thumbnail per riga
 
+{% comment %}Example name: Griglia a larghezza automatica, eg. 2{% endcomment %}
 {% capture example %}
-
 <ul class="thumb-nav thumb-nav-auto thumb-nav-auto-5">
     <li>
       <a href="#" class="ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1056" alt="Visualizza immagine 1"></a>
