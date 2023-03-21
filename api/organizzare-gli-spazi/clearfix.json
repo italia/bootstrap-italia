@@ -1,6 +1,6 @@
 [
     {
-        "name": "clearfix-1",
-        "content": "\n\n<div class=\"neutral-2-bg p-2 clearfix\">\n  <button type=\"button\" class=\"btn btn-secondary float-start\">Pulsante con float a sinistra</button>\n  <button type=\"button\" class=\"btn btn-secondary float-end\">Pulsante con float a destra</button>\n</div>\n"
+        "name": "Base",
+        "content": "\n<div class=\"neutral-2-bg p-2 clearfix\">\n  <button type=\"button\" class=\"btn btn-secondary float-start\">Pulsante con float a sinistra</button>\n  <button type=\"button\" class=\"btn btn-secondary float-end\">Pulsante con float a destra</button>\n</div>\n"
     }
 ]

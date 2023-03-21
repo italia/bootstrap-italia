@@ -1,18 +1,18 @@
 [
     {
-        "name": "proporzioni-1",
-        "content": "\n\n<div class=\"ratio ratio-16x9\">\n  <iframe title=\"Video YouTube\" src=\"https://www.youtube-nocookie.com/embed/RaHmGbBOP84\" allowfullscreen></iframe>\n</div>\n"
+        "name": "Esempio proporzione 16x9",
+        "content": "\n<div class=\"ratio ratio-16x9\">\n  <iframe title=\"Video YouTube\" src=\"https://www.youtube-nocookie.com/embed/RaHmGbBOP84\" allowfullscreen></iframe>\n</div>\n"
     },
     {
-        "name": "proporzioni-2",
-        "content": "\n\n<div class=\"ratio ratio-1x1 ratio-example\">\n  <div>1x1</div>\n</div>\n<div class=\"ratio ratio-4x3 ratio-example\">\n  <div>4x3</div>\n</div>\n<div class=\"ratio ratio-16x9 ratio-example\">\n  <div>16x9</div>\n</div>\n<div class=\"ratio ratio-21x9 ratio-example\">\n  <div>21x9</div>\n</div>\n"
+        "name": "Varianti di proporzioni",
+        "content": "\n<div class=\"ratio ratio-1x1 ratio-example\">\n  <div>1x1</div>\n</div>\n<div class=\"ratio ratio-4x3 ratio-example\">\n  <div>4x3</div>\n</div>\n<div class=\"ratio ratio-16x9 ratio-example\">\n  <div>16x9</div>\n</div>\n<div class=\"ratio ratio-21x9 ratio-example\">\n  <div>21x9</div>\n</div>\n"
     },
     {
-        "name": "proporzioni-3",
-        "content": "\n\n<div class=\"ratio ratio-example\" style=\"--bs-aspect-ratio: 50%;\">\n  <div>2x1</div>\n</div>\n"
+        "name": "Proporzione personalizzata",
+        "content": "\n<div class=\"ratio ratio-example\" style=\"--bs-aspect-ratio: 50%;\">\n  <div>2x1</div>\n</div>\n"
     },
     {
-        "name": "proporzioni-4",
-        "content": "\n\n<div class=\"ratio ratio-4x3 ratio-example ratio-example-breakpoint\">\n  <div>4x3, poi 2x1</div>\n</div>\n"
+        "name": "Proporzione personalizzata responsive",
+        "content": "\n<div class=\"ratio ratio-4x3 ratio-example ratio-example-breakpoint\">\n  <div>4x3, poi 2x1</div>\n</div>\n"
     }
 ]

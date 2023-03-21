@@ -1,6 +1,6 @@
 [
     {
-        "name": "input-ora-1",
-        "content": "\n\n<div class=\"form-group\">\n  <label class=\"active\" for=\"timeStandard\">Timepicker</label>\n  <input class=\"form-control\" id=\"timeStandard\" type=\"time\">\n</div>\n"
+        "name": "Base ",
+        "content": "\n<div class=\"form-group\">\n  <label class=\"active\" for=\"timeStandard\">Timepicker</label>\n  <input class=\"form-control\" id=\"timeStandard\" type=\"time\">\n</div>\n"
     }
 ]

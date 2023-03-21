@@ -1,10 +1,30 @@
 [
     {
-        "name": "immagini-1",
-        "content": "\n\n<figure class=\"figure\">\n  <img src=\"https://via.placeholder.com/280x120/ebebeb/808080/?text=Immagine\" class=\"figure-img img-fluid rounded\" alt=\"Un'immagine generica segnaposto con angoli arrotondati in una figura.\">\n  <figcaption class=\"figure-caption\">Una didascalia per l'immagine sopra.</figcaption>\n</figure>\n"
+        "name": "Base",
+        "content": "\n  <img src=\"https://via.placeholder.com/120x120/ebebeb/808080/?text=Immagine\" class=\"img-fluid\" alt=\"Immagine responsive generica\">\n"
     },
     {
-        "name": "immagini-2",
-        "content": "\n\n<figure class=\"figure\">\n  <img src=\"https://via.placeholder.com/280x120/ebebeb/808080/?text=Immagine\" class=\"figure-img img-fluid rounded\" alt=\"Un'immagine generica segnaposto con angoli arrotondati in una figura.\">\n  <figcaption class=\"figure-caption text-end\">Una didascalia per l'immagine sopra.</figcaption>\n</figure>\n"
+        "name": "Thumbnail",
+        "content": "\n  <img src=\"https://via.placeholder.com/120x120/ebebeb/808080/?text=Immagine\" class=\"img-thumbnail\" alt=\"Una generica immagine segnaposto quadrata con un bordo bianco attorno ad essa, che la rende simile a una foto scattata con una vecchia macchina fotografica istantanea\">\n"
+    },
+    {
+        "name": "Allineamenti start-end",
+        "content": "\n  <img src=\"https://via.placeholder.com/120x120/ebebeb/808080/?text=Immagine\" class=\"rounded float-start\" alt=\"Un'immagine generica segnaposto con angoli arrotondati\">\n  <img src=\"https://via.placeholder.com/120x120/ebebeb/808080/?text=Immagine\" class=\"rounded float-end\" alt=\"Un'immagine generica segnaposto con angoli arrotondati\">\n"
+    },
+    {
+        "name": "Allineamento centrato",
+        "content": "\n  <img src=\"https://via.placeholder.com/120x120/ebebeb/808080/?text=Immagine\" class=\"rounded mx-auto d-block\" alt=\"Un'immagine generica segnaposto con angoli arrotondati\">\n"
+    },
+    {
+        "name": "Allineamento centrato, alternativa",
+        "content": "\n  <div class=\"text-center\">\n    <img src=\"https://via.placeholder.com/120x120/ebebeb/808080/?text=Immagine\" class=\"rounded\" alt=\"Un'immagine generica segnaposto con angoli arrotondati\">\n  </div>\n"
+    },
+    {
+        "name": "Figure",
+        "content": "\n<figure class=\"figure\">\n  <img src=\"https://via.placeholder.com/280x120/ebebeb/808080/?text=Immagine\" class=\"figure-img img-fluid rounded\" alt=\"Un'immagine generica segnaposto con angoli arrotondati in una figura.\">\n  <figcaption class=\"figure-caption\">Una didascalia per l'immagine sopra.</figcaption>\n</figure>\n"
+    },
+    {
+        "name": "Figure con didascalia allineata a destra",
+        "content": "\n<figure class=\"figure\">\n  <img src=\"https://via.placeholder.com/280x120/ebebeb/808080/?text=Immagine\" class=\"figure-img img-fluid rounded\" alt=\"Un'immagine generica segnaposto con angoli arrotondati in una figura.\">\n  <figcaption class=\"figure-caption text-end\">Una didascalia per l'immagine sopra.</figcaption>\n</figure>\n"
     }
 ]

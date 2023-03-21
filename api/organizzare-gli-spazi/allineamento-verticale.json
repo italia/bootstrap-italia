@@ -1,10 +1,10 @@
 [
     {
-        "name": "allineamento-verticale-1",
+        "name": "Con elementi inline",
         "content": "\n<span class=\"bg-primary text-white p-1 align-baseline\">baseline</span>\n<span class=\"bg-primary text-white p-1 align-top\">top</span>\n<span class=\"bg-primary text-white p-1 align-middle\">middle</span>\n<span class=\"bg-primary text-white p-1 align-bottom\">bottom</span>\n<span class=\"bg-primary text-white p-1 align-text-top\">text-top</span>\n<span class=\"bg-primary text-white p-1 align-text-bottom\">text-bottom</span>\n"
     },
     {
-        "name": "allineamento-verticale-2",
-        "content": "\n\n<table style=\"height: 100px;\" class=\"table table-bordered\">\n  <tbody>\n    <tr>\n      <td class=\"align-baseline\">baseline</td>\n      <td class=\"align-top\">top</td>\n      <td class=\"align-middle\">middle</td>\n      <td class=\"align-bottom\">bottom</td>\n      <td class=\"align-text-top\">text-top</td>\n      <td class=\"align-text-bottom\">text-bottom</td>\n    </tr>\n  </tbody>\n</table>\n"
+        "name": "Con celle di tabella",
+        "content": "\n<table style=\"height: 100px;\" class=\"table table-bordered\">\n  <tbody>\n    <tr>\n      <td class=\"align-baseline\">baseline</td>\n      <td class=\"align-top\">top</td>\n      <td class=\"align-middle\">middle</td>\n      <td class=\"align-bottom\">bottom</td>\n      <td class=\"align-text-top\">text-top</td>\n      <td class=\"align-text-bottom\">text-bottom</td>\n    </tr>\n  </tbody>\n</table>\n"
     }
 ]

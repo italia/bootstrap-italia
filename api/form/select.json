@@ -1,14 +1,14 @@
 [
     {
-        "name": "select-1",
-        "content": "\n\n<div class=\"select-wrapper\">\n  <label for=\"defaultSelect\">Etichetta</label>\n  <select id=\"defaultSelect\">\n    <option selected=\"\" value=\"\">Scegli un'opzione</option>\n    <option value=\"Value 1\">Opzione 1</option>\n    <option value=\"Value 2\">Opzione 2</option>\n    <option value=\"Value 3\">Opzione 3</option>\n    <option value=\"Value 4\">Opzione 4</option>\n    <option value=\"Value 5\">Opzione 5</option>\n  </select>\n</div>\n"
+        "name": "Base ",
+        "content": "\n<div class=\"select-wrapper\">\n  <label for=\"defaultSelect\">Etichetta</label>\n  <select id=\"defaultSelect\">\n    <option selected=\"\" value=\"\">Scegli un'opzione</option>\n    <option value=\"Value 1\">Opzione 1</option>\n    <option value=\"Value 2\">Opzione 2</option>\n    <option value=\"Value 3\">Opzione 3</option>\n    <option value=\"Value 4\">Opzione 4</option>\n    <option value=\"Value 5\">Opzione 5</option>\n  </select>\n</div>\n"
     },
     {
-        "name": "select-2",
-        "content": "\n\n<div class=\"select-wrapper\">\n  <label for=\"defaultSelectDisabled\">Etichetta</label>\n  <select id=\"defaultSelectDisabled\" disabled>\n    <option selected=\"\" value=\"\">Scegli un'opzione</option>\n    <option value=\"Value 1\">Opzione 1</option>\n    <option value=\"Value 2\">Opzione 2</option>\n    <option value=\"Value 3\">Opzione 3</option>\n    <option value=\"Value 4\">Opzione 4</option>\n    <option value=\"Value 5\">Opzione 5</option>\n  </select>\n</div>\n"
+        "name": "Disabilitata ",
+        "content": "\n<div class=\"select-wrapper\">\n  <label for=\"defaultSelectDisabled\">Etichetta</label>\n  <select id=\"defaultSelectDisabled\" disabled>\n    <option selected=\"\" value=\"\">Scegli un'opzione</option>\n    <option value=\"Value 1\">Opzione 1</option>\n    <option value=\"Value 2\">Opzione 2</option>\n    <option value=\"Value 3\">Opzione 3</option>\n    <option value=\"Value 4\">Opzione 4</option>\n    <option value=\"Value 5\">Opzione 5</option>\n  </select>\n</div>\n"
     },
     {
-        "name": "select-3",
-        "content": "\n\n<div class=\"select-wrapper\">\n  <label for=\"defaultSelectGroup\">Etichetta</label>\n  <select id=\"defaultSelectGroup\">\n    <option selected=\"\" value=\"\">Scegli un'opzione</option>\n    <optgroup label=\"Gruppo 1\">\n      <option value=\"1\">Opzione 1</option>\n      <option value=\"2\">Opzione 2</option>\n    </optgroup>\n    <optgroup label=\"Gruppo 2\">\n      <option value=\"3\">Opzione 3</option>\n      <option value=\"4\">Opzione 4</option>\n    </optgroup>\n  </select>\n</div>\n"
+        "name": "Con gruppi ",
+        "content": "\n<div class=\"select-wrapper\">\n  <label for=\"defaultSelectGroup\">Etichetta</label>\n  <select id=\"defaultSelectGroup\">\n    <option selected=\"\" value=\"\">Scegli un'opzione</option>\n    <optgroup label=\"Gruppo 1\">\n      <option value=\"1\">Opzione 1</option>\n      <option value=\"2\">Opzione 2</option>\n    </optgroup>\n    <optgroup label=\"Gruppo 2\">\n      <option value=\"3\">Opzione 3</option>\n      <option value=\"4\">Opzione 4</option>\n    </optgroup>\n  </select>\n</div>\n"
     }
 ]

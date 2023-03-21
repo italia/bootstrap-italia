@@ -24,19 +24,19 @@
         "content": "\n<button class=\"btn btn-success btn-lg btn-icon btn-me\">\n<span>Icon Button Lg</span>\n<svg class=\"icon icon-white ms-1\">\n<use\n        href=\"/dist/svg/sprites.svg#it-star-full\"\n      ></use>\n</svg>\n</button>\n\n<button class=\"btn btn-primary btn-icon btn-me\">\n  <span>Icon Button</span>\n  <svg class=\"icon icon-white ms-1\">\n  <use\n        href=\"/dist/svg/sprites.svg#it-star-full\"\n      ></use>\n  </svg>\n</button>\n\n<button class=\"btn btn-danger btn-sm btn-icon btn-me\">\n  <span>Icon Button Sm</span>\n  <svg class=\"icon icon-secondary ms-1\">\n  <use\n        href=\"/dist/svg/sprites.svg#it-star-full\"\n      ></use>\n  </svg>\n</button>\n\n<button class=\"btn btn-info btn-xs btn-icon ms-1\">\n  <span>Icon Button Xs</span>\n  <svg class=\"icon icon-danger\">\n  <use\n        href=\"/dist/svg/sprites.svg#it-star-full\"\n      ></use>\n  </svg>\n</button>\n"
     },
     {
-        "name": "Icona cerchiata",
+        "name": "Con icona, cerchiata",
         "content": "\n<button class=\"btn btn-success btn-lg btn-icon btn-me\">\n<span class=\"rounded-icon\">\n<svg class=\"icon icon-success\">\n<use href=\"/dist/svg/sprites.svg#it-user\"></use>\n</svg>\n</span>\n<span>Round Icon Lg</span>\n</button>\n\n<button class=\"btn btn-primary btn-icon btn-me\">\n<span class=\"rounded-icon\">\n<svg class=\"icon icon-primary\">\n<use href=\"/dist/svg/sprites.svg#it-user\"></use>\n</svg>\n</span>\n<span>Round Icon</span>\n</button>\n\n<button class=\"btn btn-danger btn-sm btn-icon btn-me\">\n<span class=\"rounded-icon rounded-secondary\">\n<svg class=\"icon icon-white\">\n<use href=\"/dist/svg/sprites.svg#it-user\"></use>\n</svg>\n</span>\n<span>Round Icon Sm</span>\n</button>\n\n<button class=\"btn btn-secondary btn-xs btn-icon\">\n<span class=\"rounded-icon rounded-danger\">\n<svg class=\"icon icon-white\">\n<use href=\"/dist/svg/sprites.svg#it-user\"></use>\n</svg>\n</span>\n<span>Round Icon Xs</span>\n</button>\n"
     },
     {
-        "name": "Dimensione grande Large",
+        "name": "Dimensione grande",
         "content": "\n<button type=\"button\" class=\"btn btn-primary btn-lg btn-me\">Primary Large</button>\n<button type=\"button\" class=\"btn btn-secondary btn-lg\">Secondary Large</button>\n"
     },
     {
-        "name": "Dimensione normale Small",
+        "name": "Dimensione normale",
         "content": "\n<button type=\"button\" class=\"btn btn-primary btn-sm btn-me\">Primary Small</button>\n<button type=\"button\" class=\"btn btn-secondary btn-sm\">Secondary Small</button>\n"
     },
     {
-        "name": "Dimensione minima Mini",
+        "name": "Dimensione minima",
         "content": "\n<button type=\"button\" class=\"btn btn-primary btn-xs btn-me\">Primary Mini</button>\n<button type=\"button\" class=\"btn btn-secondary btn-xs\">Secondary Mini</button>\n"
     },
     {
@@ -44,7 +44,7 @@
         "content": "\n\n<div class=\"d-grid gap-2\">\n  <button class=\"btn btn-primary btn-me\" type=\"button\">Primary</button>\n  <button class=\"btn btn-secondary\" type=\"button\">Secondary</button>\n</div>\n"
     },
     {
-        "name": "A tutta larghezza solo su mobile",
+        "name": "A tutta larghezza, solo su mobile",
         "content": "\n\n<div class=\"d-grid gap-2 d-md-block\">\n  <button class=\"btn btn-primary btn-me\" type=\"button\">Primary</button>\n  <button class=\"btn btn-secondary\" type=\"button\">Secondary</button>\n</div>\n"
     }
 ]
