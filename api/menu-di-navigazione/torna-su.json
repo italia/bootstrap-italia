@@ -1,26 +1,26 @@
 [
     {
-        "name": "torna-su-1",
+        "name": "Base, funzionante",
         "content": "\n<a href=\"#\" aria-hidden=\"true\" tabindex=\"-1\" data-bs-toggle=\"backtotop\" class=\"back-to-top\" id=\"example\">\n<svg class=\"icon icon-light\"><use href=\"/dist/svg/sprites.svg#it-arrow-up\"></use></svg>\n</a>\n"
     },
     {
-        "name": "torna-su-2",
+        "name": "Base, esempio",
         "content": "\n<a href=\"#\" aria-hidden=\"true\" tabindex=\"-1\" data-bs-toggle=\"backtotop\" class=\"back-to-top\">\n<svg class=\"icon icon-light\"><use href=\"/dist/svg/sprites.svg#it-arrow-up\"></use></svg>\n</a>\n"
     },
     {
-        "name": "torna-su-3",
+        "name": "Compatto, esempio",
         "content": "\n<a href=\"#\" aria-hidden=\"true\" tabindex=\"-1\" data-bs-toggle=\"backtotop\" class=\"back-to-top back-to-top-small\">\n<svg class=\"icon icon-light\"><use href=\"/dist/svg/sprites.svg#it-arrow-up\"></use></svg>\n</a>\n\n"
     },
     {
-        "name": "torna-su-4",
-        "content": "\n\n<div class=\"d-flex align-items-center\">\n  <a href=\"#\" aria-hidden=\"true\" tabindex=\"-1\" data-bs-toggle=\"backtotop\" class=\"back-to-top shadow\">\n    <svg class=\"icon icon-light\"><use href=\"/dist/svg/sprites.svg#it-arrow-up\"></use></svg>\n  </a>\n  <a href=\"#\" aria-hidden=\"true\" tabindex=\"-1\" data-bs-toggle=\"backtotop\" class=\"back-to-top back-to-top-small shadow\">\n    <svg class=\"icon icon-light\"><use href=\"/dist/svg/sprites.svg#it-arrow-up\"></use></svg>\n  </a>\n</div>\n"
+        "name": "Con ombra, esempio",
+        "content": "\n<div class=\"d-flex align-items-center\">\n  <a href=\"#\" aria-hidden=\"true\" tabindex=\"-1\" data-bs-toggle=\"backtotop\" class=\"back-to-top shadow\">\n    <svg class=\"icon icon-light\"><use href=\"/dist/svg/sprites.svg#it-arrow-up\"></use></svg>\n  </a>\n  <a href=\"#\" aria-hidden=\"true\" tabindex=\"-1\" data-bs-toggle=\"backtotop\" class=\"back-to-top back-to-top-small shadow\">\n    <svg class=\"icon icon-light\"><use href=\"/dist/svg/sprites.svg#it-arrow-up\"></use></svg>\n  </a>\n</div>\n"
     },
     {
-        "name": "torna-su-5",
-        "content": "\n\n<div class=\"d-flex align-items-center p-4 neutral-1-bg-a8\">\n  <a href=\"#\" aria-hidden=\"true\" tabindex=\"-1\" data-bs-toggle=\"backtotop\" class=\"back-to-top dark\">\n    <svg class=\"icon icon-secondary\"><use href=\"/dist/svg/sprites.svg#it-arrow-up\"></use></svg>\n  </a>\n  <a href=\"#\" aria-hidden=\"true\" tabindex=\"-1\" data-bs-toggle=\"backtotop\" class=\"back-to-top back-to-top-small dark\">\n    <svg class=\"icon icon-secondary\"><use href=\"/dist/svg/sprites.svg#it-arrow-up\"></use></svg>\n  </a>\n</div>\n"
+        "name": "Per sfondo scuro, esempio",
+        "content": "\n<div class=\"d-flex align-items-center p-4 neutral-1-bg-a8\">\n  <a href=\"#\" aria-hidden=\"true\" tabindex=\"-1\" data-bs-toggle=\"backtotop\" class=\"back-to-top dark\">\n    <svg class=\"icon icon-secondary\"><use href=\"/dist/svg/sprites.svg#it-arrow-up\"></use></svg>\n  </a>\n  <a href=\"#\" aria-hidden=\"true\" tabindex=\"-1\" data-bs-toggle=\"backtotop\" class=\"back-to-top back-to-top-small dark\">\n    <svg class=\"icon icon-secondary\"><use href=\"/dist/svg/sprites.svg#it-arrow-up\"></use></svg>\n  </a>\n</div>\n"
     },
     {
-        "name": "torna-su-6",
-        "content": "\n\n<div class=\"d-flex align-items-center p-4 neutral-1-bg-a8\">\n  <a href=\"#\" aria-hidden=\"true\" tabindex=\"-1\" data-bs-toggle=\"backtotop\" class=\"back-to-top dark shadow\">\n    <svg class=\"icon icon-secondary\"><use href=\"/dist/svg/sprites.svg#it-arrow-up\"></use></svg>\n  </a>\n  <a href=\"#\" aria-hidden=\"true\" tabindex=\"-1\" data-bs-toggle=\"backtotop\" class=\"back-to-top back-to-top-small dark shadow\">\n    <svg class=\"icon icon-secondary\"><use href=\"/dist/svg/sprites.svg#it-arrow-up\"></use></svg>\n  </a>\n</div>\n"
+        "name": "Con ombra, per sfondo scuro, esempio",
+        "content": "\n<div class=\"d-flex align-items-center p-4 neutral-1-bg-a8\">\n  <a href=\"#\" aria-hidden=\"true\" tabindex=\"-1\" data-bs-toggle=\"backtotop\" class=\"back-to-top dark shadow\">\n    <svg class=\"icon icon-secondary\"><use href=\"/dist/svg/sprites.svg#it-arrow-up\"></use></svg>\n  </a>\n  <a href=\"#\" aria-hidden=\"true\" tabindex=\"-1\" data-bs-toggle=\"backtotop\" class=\"back-to-top back-to-top-small dark shadow\">\n    <svg class=\"icon icon-secondary\"><use href=\"/dist/svg/sprites.svg#it-arrow-up\"></use></svg>\n  </a>\n</div>\n"
     }
 ]

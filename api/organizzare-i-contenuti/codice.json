@@ -1,22 +1,22 @@
 [
     {
-        "name": "codice-1",
+        "name": "Codice inline",
         "content": "\nPer esempio, <code>&lt;section&gt;</code> dovrebbe essere renderizzato come inline.\n"
     },
     {
-        "name": "codice-2",
-        "content": "\n\n<pre><code>&lt;p&gt;Testo di esempio qui...&lt;/p&gt;\n&lt;p&gt;E un'altra linea di testo di esempio qui...&lt;/p&gt;\n</code></pre>\n\n"
+        "name": "Blocchi di codice",
+        "content": "\n<pre><code>&lt;p&gt;Testo di esempio qui...&lt;/p&gt;\n&lt;p&gt;E un'altra linea di testo di esempio qui...&lt;/p&gt;\n</code></pre>\n"
     },
     {
-        "name": "codice-3",
+        "name": "Variabili",
         "content": "\n<var>y</var> = <var>m</var><var>x</var> + <var>b</var>\n"
     },
     {
-        "name": "codice-4",
+        "name": "Input utente",
         "content": "\nPer cambiare directory, digitare <kbd>cd</kbd> seguito dal nome della directory.<br>\nPer modificare le impostazioni, premi <kbd>ctrl</kbd> + <kbd>i</kbd>.\n"
     },
     {
-        "name": "codice-5",
+        "name": "Output di esempio",
         "content": "\n<samp>Questo testo \u00e8 pensato per essere trattato come output di esempio di un programma per computer.</samp>\n"
     }
 ]

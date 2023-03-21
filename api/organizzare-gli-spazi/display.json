@@ -1,18 +1,18 @@
 [
     {
-        "name": "display-1",
-        "content": "\n\n<div class=\"d-inline p-2 bg-primary text-white\">d-inline</div>\n<div class=\"d-inline p-2 bg-dark text-white\">d-inline</div>\n"
+        "name": "Inline",
+        "content": "\n<div class=\"d-inline p-2 bg-primary text-white\">d-inline</div>\n<div class=\"d-inline p-2 bg-dark text-white\">d-inline</div>\n"
     },
     {
-        "name": "display-2",
+        "name": "Block",
         "content": "\n<span class=\"d-block p-2 bg-primary text-white\">d-block</span>\n<span class=\"d-block p-2 bg-dark text-white\">d-block</span>\n"
     },
     {
-        "name": "display-3",
-        "content": "\n\n<div class=\"d-lg-none\">Nascosto su schermi pi\u00f9 larghi di lg</div>\n<div class=\"d-none d-lg-block\">Nascosto su schermi pi\u00f9 piccoli di lg</div>\n"
+        "name": "Responsive",
+        "content": "\n<div class=\"d-lg-none\">Nascosto su schermi pi\u00f9 larghi di lg</div>\n<div class=\"d-none d-lg-block\">Nascosto su schermi pi\u00f9 piccoli di lg</div>\n"
     },
     {
-        "name": "display-4",
-        "content": "\n\n<div class=\"d-print-none\">Solo schermo (Nascondi solo su stampa)</div>\n<div class=\"d-none d-print-block\">Solo stampa (Nascondi solo sullo schermo)</div>\n<div class=\"d-none d-lg-block d-print-block\">Nascondi fino al grande schermo, ma mostra sempre sulla stampa</div>\n"
+        "name": "Stampa",
+        "content": "\n<div class=\"d-print-none\">Solo schermo (Nascondi solo su stampa)</div>\n<div class=\"d-none d-print-block\">Solo stampa (Nascondi solo sullo schermo)</div>\n<div class=\"d-none d-lg-block d-print-block\">Nascondi fino al grande schermo, ma mostra sempre sulla stampa</div>\n"
     }
 ]

@@ -1,114 +1,114 @@
 [
     {
-        "name": "griglie-1",
+        "name": "Base",
         "content": "\n<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-sm\"> Una di tre colonne </div>\n    <div class=\"col-sm\"> Una di tre colonne </div>\n    <div class=\"col-sm\">Una di tre colonne</div>\n  </div>\n</div>\n"
     },
     {
-        "name": "griglie-2",
+        "name": "Colonne con larghezze omogenee",
         "content": "\n<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col\">1 di 2</div>\n    <div class=\"col\">2 di 2</div>\n  </div>\n  <div class=\"row\">\n    <div class=\"col\">1 di 3</div>\n    <div class=\"col\">2 di 3</div>\n    <div class=\"col\">3 di 3</div>\n  </div>\n</div>\n"
     },
     {
-        "name": "griglie-3",
+        "name": "Colonne con larghezze omogenee, alternativa",
         "content": "\n<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col\">Colonna</div>\n    <div class=\"col\">Colonna</div>\n    <div class=\"w-100\"></div>\n    <div class=\"col\">Colonna</div>\n    <div class=\"col\">Colonna</div>\n  </div>\n</div>\n"
     },
     {
-        "name": "griglie-4",
+        "name": "Impostare la larghezza di una colonna",
         "content": "\n<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col\">1 di 3</div>\n    <div class=\"col-6\">2 di 3 (larga 6/12)</div>\n    <div class=\"col\">3 di 3</div>\n  </div>\n  <div class=\"row\">\n    <div class=\"col\">1 di 3</div>\n    <div class=\"col-5\">2 di 3 (larga 5/12)</div>\n    <div class=\"col\">3 di 3</div>\n  </div>\n</div>\n"
     },
     {
-        "name": "griglie-5",
+        "name": "Contenuto a larghezza variabile",
         "content": "\n<div class=\"container\">\n  <div class=\"row justify-content-md-center\">\n    <div class=\"col col-lg-2\">1 di 3</div>\n    <div class=\"col-md-auto\">Contenuto a larghezza variabile</div>\n    <div class=\"col col-lg-2\">3 di 3</div>\n  </div>\n  <div class=\"row\">\n    <div class=\"col\">1 di 3</div>\n    <div class=\"col-md-auto\">Contenuto a larghezza variabile</div>\n    <div class=\"col col-lg-2\">3 di 3</div>\n  </div>\n</div>\n"
     },
     {
-        "name": "griglie-6",
+        "name": "Larghezza identica su pi\u00f9 righe",
         "content": "\n<div class=\"row\">\n  <div class=\"col\">col</div>\n  <div class=\"col\">col</div>\n  <div class=\"w-100\"></div>\n  <div class=\"col\">col</div>\n  <div class=\"col\">col</div>\n</div>\n"
     },
     {
-        "name": "griglie-7",
+        "name": "Responsive, per tutti i breakpoint",
         "content": "\n<div class=\"row\">\n  <div class=\"col\">col</div>\n  <div class=\"col\">col</div>\n  <div class=\"col\">col</div>\n  <div class=\"col\">col</div>\n</div>\n<div class=\"row\">\n  <div class=\"col-8\">col-8</div>\n  <div class=\"col-4\">col-4</div>\n</div>\n"
     },
     {
-        "name": "griglie-8",
+        "name": "Responsive, raccolti in orizzontale",
         "content": "\n<div class=\"row\">\n  <div class=\"col-sm-8\">col-sm-8</div>\n  <div class=\"col-sm-4\">col-sm-4</div>\n</div>\n<div class=\"row\">\n  <div class=\"col-sm\">col-sm</div>\n  <div class=\"col-sm\">col-sm</div>\n  <div class=\"col-sm\">col-sm</div>\n</div>\n"
     },
     {
-        "name": "griglie-9",
+        "name": "Responsive, mischiare e abbinare",
         "content": "\n<!-- Ordina le colonne sui dispositivi mobile creando una larghezza intera e l'altra mezza larghezza -->\n<div class=\"row\">\n  <div class=\"col-12 col-md-8\">.col-12 .col-md-8</div>\n  <div class=\"col-6 col-md-4\">.col-6 .col-md-4</div>\n</div>\n\n<!-- Le colonne partono con una larghezza del 50% sui dispositivi mobile e arrivano al 33.3% sui desktop -->\n<div class=\"row\">\n  <div class=\"col-6 col-md-4\">.col-6 .col-md-4</div>\n  <div class=\"col-6 col-md-4\">.col-6 .col-md-4</div>\n  <div class=\"col-6 col-md-4\">.col-6 .col-md-4</div>\n</div>\n\n<!-- Le colonne sono sempre larghe 50%, su dispositivi mobile e desktop -->\n<div class=\"row\">\n  <div class=\"col-6\">.col-6</div>\n  <div class=\"col-6\">.col-6</div>\n</div>\n"
     },
     {
-        "name": "griglie-10",
+        "name": "Responsive, righe di colonne, eg. 1",
         "content": "\n<div class=\"container\">\n  <div class=\"row row-cols-2\">\n    <div class=\"col\">Colonna</div>\n    <div class=\"col\">Colonna</div>\n    <div class=\"col\">Colonna</div>\n    <div class=\"col\">Colonna</div>\n  </div>\n</div>\n"
     },
     {
-        "name": "griglie-11",
+        "name": "Responsive, righe di colonne, eg. 2",
         "content": "\n<div class=\"container\">\n  <div class=\"row row-cols-3\">\n    <div class=\"col\">Colonna</div>\n    <div class=\"col\">Colonna</div>\n    <div class=\"col\">Colonna</div>\n    <div class=\"col\">Colonna</div>\n  </div>\n</div>\n"
     },
     {
-        "name": "griglie-12",
+        "name": "Responsive, righe di colonne, eg. 3",
         "content": "\n<div class=\"container\">\n  <div class=\"row row-cols-4\">\n    <div class=\"col\">Colonna</div>\n    <div class=\"col\">Colonna</div>\n    <div class=\"col\">Colonna</div>\n    <div class=\"col\">Colonna</div>\n  </div>\n</div>\n"
     },
     {
-        "name": "griglie-13",
+        "name": "Responsive, righe di colonne, eg. 4",
         "content": "\n<div class=\"container\">\n  <div class=\"row row-cols-4\">\n    <div class=\"col\">Colonna</div>\n    <div class=\"col\">Colonna</div>\n    <div class=\"col-6\">Colonna</div>\n    <div class=\"col\">Colonna</div>\n  </div>\n</div>\n"
     },
     {
-        "name": "griglie-14",
+        "name": "Responsive, righe di colonne, eg. 5",
         "content": "\n<div class=\"container\">\n  <div class=\"row row-cols-1 row-cols-sm-2 row-cols-md-4\">\n    <div class=\"col\">Colonna</div>\n    <div class=\"col\">Colonna</div>\n    <div class=\"col\">Colonna</div>\n    <div class=\"col\">Colonna</div>\n  </div>\n</div>\n"
     },
     {
-        "name": "griglie-15",
+        "name": "Allineamento verticale",
         "content": "\n<div class=\"container\">\n  <div class=\"row align-items-start\" style=\"min-height: 5rem;\">\n    <div class=\"col\">Una di tre colonne</div>\n    <div class=\"col\">Una di tre colonne</div>\n    <div class=\"col\">Una di tre colonne</div>\n  </div>\n  <div class=\"row align-items-center\" style=\"min-height: 5rem;\">\n    <div class=\"col\">Una di tre colonne</div>\n    <div class=\"col\">Una di tre colonne</div>\n    <div class=\"col\">Una di tre colonne</div>\n  </div>\n  <div class=\"row align-items-end\" style=\"min-height: 5rem;\">\n    <div class=\"col\">Una di tre colonne</div>\n    <div class=\"col\">Una di tre colonne</div>\n    <div class=\"col\">Una di tre colonne</div>\n  </div>\n</div>\n"
     },
     {
-        "name": "griglie-16",
+        "name": "Allineamento verticale, misto",
         "content": "\n<div class=\"container\">\n  <div class=\"row\" style=\"min-height: 5rem;\">\n    <div class=\"col align-self-start\">Una di tre colonne</div>\n    <div class=\"col align-self-center\">Una di tre colonne</div>\n    <div class=\"col align-self-end\">Una di tre colonne</div>\n  </div>\n</div>\n"
     },
     {
-        "name": "griglie-17",
+        "name": "Allineamento orizzontale",
         "content": "\n<div class=\"container\">\n  <div class=\"row justify-content-start\">\n    <div class=\"col-4\">Una di due colonne</div>\n    <div class=\"col-4\">Una di due colonne</div>\n  </div>\n  <div class=\"row justify-content-center\">\n    <div class=\"col-4\">Una di due colonne</div>\n    <div class=\"col-4\">Una di due colonne</div>\n  </div>\n  <div class=\"row justify-content-end\">\n    <div class=\"col-4\">Una di due colonne</div>\n    <div class=\"col-4\">Una di due colonne</div>\n  </div>\n  <div class=\"row justify-content-around\">\n    <div class=\"col-4\">Una di due colonne</div>\n    <div class=\"col-4\">Una di due colonne</div>\n  </div>\n  <div class=\"row justify-content-between\">\n    <div class=\"col-4\">Una di due colonne</div>\n    <div class=\"col-4\">Una di due colonne</div>\n  </div>\n</div>\n"
     },
     {
-        "name": "griglie-18",
+        "name": "Senza gutter",
         "content": "\n<div class=\"row g-0\">\n  <div class=\"col-12 col-sm-6 col-md-8\">.col-12 .col-sm-6 .col-md-8</div>\n  <div class=\"col-6 col-md-4\">.col-6 .col-md-4</div>\n</div>\n"
     },
     {
-        "name": "griglie-19",
+        "name": "Gutter variabile",
         "content": "\n<div class=\"row variable-gutters\">\n  <div class=\"col-12 col-sm-6 col-md-8\">.col-12 .col-sm-6 .col-md-8</div>\n  <div class=\"col-6 col-md-4\">.col-6 .col-md-4</div>\n</div>\n"
     },
     {
-        "name": "griglie-20",
+        "name": "Colonna a capo",
         "content": "\n<div class=\"row\">\n  <div class=\"col-9\">.col-9</div>\n  <div class=\"col-4\">.col-4<br>Dato che 9 + 4 = 13 &gt; 12, questo div largo come 4 colonne viene portato a capo su una nuova linea come un'unit\u00e0 contigua.</div>\n  <div class=\"col-6\">.col-6<br>Le colonne successive continuano lungo la nuova riga.</div>\n</div>\n"
     },
     {
-        "name": "griglie-21",
+        "name": "Interruzione di colonna",
         "content": "\n<div class=\"row\">\n  <div class=\"col-6 col-sm-3\">.col-6 .col-sm-3</div>\n  <div class=\"col-6 col-sm-3\">.col-6 .col-sm-3</div>\n  <!-- Forza le prossime colonne per passare a una nuova riga -->\n  <div class=\"w-100\"></div>\n  <div class=\"col-6 col-sm-3\">.col-6 .col-sm-3</div>\n  <div class=\"col-6 col-sm-3\">.col-6 .col-sm-3</div>\n</div>\n"
     },
     {
-        "name": "griglie-22",
+        "name": "Interruzione di colonna, responsive",
         "content": "\n<div class=\"row\">\n  <div class=\"col-6 col-sm-4\">.col-6 .col-sm-4</div>\n  <div class=\"col-6 col-sm-4\">.col-6 .col-sm-4</div>\n  <!-- Forza le prossime colonne per passare alla nuova riga al breakpoint md e superiori -->\n  <div class=\"w-100 d-none d-md-block\"></div>\n  <div class=\"col-6 col-sm-4\">.col-6 .col-sm-4</div>\n  <div class=\"col-6 col-sm-4\">.col-6 .col-sm-4</div>\n</div>\n"
     },
     {
-        "name": "griglie-23",
+        "name": "Riordinamento",
         "content": "\n<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col\">Prima, ma non ordinata</div>\n    <div class=\"col order-2\">Seconda, ma ultima</div>\n    <div class=\"col order-1\">Terza ma prima</div>\n  </div>\n</div>\n"
     },
     {
-        "name": "griglie-24",
+        "name": "Riordinamento first e last",
         "content": "\n<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col order-last\">Prima, ma non ordinata</div>\n    <div class=\"col\">Seconda, ma non ordinata</div>\n    <div class=\"col order-first\">Terza ma prima</div>\n  </div>\n</div>\n"
     },
     {
-        "name": "griglie-25",
+        "name": "Offset",
         "content": "\n<div class=\"row\">\n  <div class=\"col-md-4\">.col-md-4</div>\n  <div class=\"col-md-4 offset-md-4\">.col-md-4 .offset-md-4</div>\n</div>\n<div class=\"row\">\n  <div class=\"col-md-3 offset-md-3\">.col-md-3 .offset-md-3</div>\n  <div class=\"col-md-3 offset-md-3\">.col-md-3 .offset-md-3</div>\n</div>\n<div class=\"row\">\n  <div class=\"col-md-6 offset-md-3\">.col-md-6 .offset-md-3</div>\n</div>\n"
     },
     {
-        "name": "griglie-26",
+        "name": "Offset responsive",
         "content": "\n<div class=\"row\">\n  <div class=\"col-sm-5 col-md-6\">.col-sm-5 .col-md-6</div>\n  <div class=\"col-sm-5 offset-sm-2 col-md-6 offset-md-0\">.col-sm-5 .offset-sm-2 .col-md-6 .offset-md-0</div>\n</div>\n\n<div class=\"row\">\n  <div class=\"col-sm-6 col-md-5 col-lg-6\">.col-sm-6 .col-md-5 .col-lg-6</div>\n  <div class=\"col-sm-6 col-md-5 offset-md-2 col-lg-6 offset-lg-0\">.col-sm-6 .col-md-5 .offset-md-2 .col-lg-6 .offset-lg-0</div>\n</div>\n"
     },
     {
-        "name": "griglie-27",
+        "name": "Margini forzati tra colonne adiacenti",
         "content": "\n<div class=\"row\">\n  <div class=\"col-md-4\">.col-md-4</div>\n  <div class=\"col-md-4 ms-auto\">.col-md-4 .ms-auto</div>\n</div>\n<div class=\"row\">\n  <div class=\"col-md-3 ms-md-auto\">.col-md-3 .ms-md-auto</div>\n  <div class=\"col-md-3 ms-md-auto\">.col-md-3 .ms-md-auto</div>\n</div>\n<div class=\"row\">\n  <div class=\"col-auto me-auto\">.col-auto .me-auto</div>\n  <div class=\"col-auto\">.col-auto</div>\n</div>\n"
     },
     {
-        "name": "griglie-28",
+        "name": "Annidamento",
         "content": "\n<div class=\"row\">\n  <div class=\"col-sm-9\">\n    Livello 1: .col-sm-9\n    <div class=\"row\">\n      <div class=\"col-8 col-sm-6\">Livello 2: .col-8 .col-sm-6</div>\n      <div class=\"col-4 col-sm-6\">Livello 2: .col-4 .col-sm-6</div>\n    </div>\n  </div>\n</div>\n"
     }
 ]
