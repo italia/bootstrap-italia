@@ -12,14 +12,14 @@
 <title>Le Griglie · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202303030935" rel="stylesheet" />
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202303222224" rel="stylesheet" />
 
 
 <!-- Documentation extras -->
  
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.css" rel="stylesheet" />
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202303030935" rel="stylesheet" />
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202303222224" rel="stylesheet" />
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico" />
@@ -141,8 +141,8 @@
 
     <ul class="navbar-nav flex-row ms-md-auto d-none d-md-flex">
       <li class="nav-item pe-2">
-        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v2.3.5/bootstrap-italia.zip" aria-label="Download">
-          <small class="pe-2 m-0">v2.3.5</small>
+        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v2.3.6/bootstrap-italia.zip" aria-label="Download">
+          <small class="pe-2 m-0">v2.3.6</small>
           <svg class="icon icon-sm icon-light"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-download" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-download"></use></svg><span class="visually-hidden">Download</span>
         </a>
       </li>
@@ -659,6 +659,7 @@
 <p>Di seguito puoi trovare un esempio e uno sguardo approfondito su come la griglia viene costruita.</p>
 
 <div class="bd-example-row">
+
 <div class="bd-example">
 <div class="container">
   <div class="row">
@@ -782,6 +783,7 @@
 <p>Ad esempio, qui ci sono due layout di griglia che si applicano a ogni dispositivo e viewport, da <code class="language-plaintext highlighter-rouge">xs</code> a <code class="language-plaintext highlighter-rouge">xxl</code>. Aggiungi un numero qualsiasi di classi senza unità per ogni breakpoint di cui hai bisogno e ogni colonna avrà la stessa larghezza.</p>
 
 <div class="bd-example-row">
+
 <div class="bd-example">
 <div class="container">
   <div class="row">
@@ -812,6 +814,7 @@
 <p>Colonne con uguale larghezza possono essere spezzate su più linee, ma c’è un <a href="https://github.com/philipwalton/flexbugs#11-min-and-max-size-declarations-are-ignored-when-wrapping-flex-items">bug di flexbox su Safari</a>, risolto dalla versione 10.1, che ne impediva il funzionamento senza uno specifico <code class="language-plaintext highlighter-rouge">flex-basis</code> o <code class="language-plaintext highlighter-rouge">border</code>. Esistono soluzioni alternative per le versioni precedenti dei browser, ma non dovrebbero essere necessarie se si è aggiornati.</p>
 
 <div class="bd-example-row">
+
 <div class="bd-example">
 <div class="container">
   <div class="row">
@@ -840,6 +843,7 @@
 <p>La disposizione automatica per le colonne della griglia di flexbox significa anche che puoi impostare la larghezza di una colonna e avere le colonne sorelle automaticamente ridimensionate in base ad essa. È possibile utilizzare classi di griglia predefinite (come mostrato di seguito), mixins di griglia o larghezze in linea. Notare che le altre colonne si ridimensioneranno indipendentemente dalla larghezza della colonna centrale.</p>
 
 <div class="bd-example-row">
+
 <div class="bd-example">
 <div class="container">
   <div class="row">
@@ -874,6 +878,7 @@
 <p>Puoi usare la classe <code class="language-plaintext highlighter-rouge">col-{breakpoint}-auto</code> per ridimensionare le colonne in base alla naturale larghezza del loro contenuto.</p>
 
 <div class="bd-example-row">
+
 <div class="bd-example">
 <div class="container">
   <div class="row justify-content-md-center">
@@ -908,6 +913,7 @@
 <p>Crea colonne di uguale larghezza che si estendono su più righe inserendo un <code class="language-plaintext highlighter-rouge">.w-100</code> dove vuoi che le colonne vengano divise su un’altra riga.</p>
 
 <div class="bd-example-row">
+
 <div class="bd-example">
 <div class="row">
   <div class="col">col</div>
@@ -936,6 +942,7 @@
 <p>Per griglie con layout identico dal più piccolo dei dispositivi al più grande, usa le classi <code class="language-plaintext highlighter-rouge">.col</code> e <code class="language-plaintext highlighter-rouge">.col-*</code>. Specifica una classe numerata quando hai bisogno di una colonna particolarmente grande; altrimenti sentiti libero di attenerti alla classe <code class="language-plaintext highlighter-rouge">.col</code>.</p>
 
 <div class="bd-example-row">
+
 <div class="bd-example">
 <div class="row">
   <div class="col">col</div>
@@ -966,6 +973,7 @@
 <p>Utilizzando un singolo set di classi <code class="language-plaintext highlighter-rouge">.col-sm-*</code>, puoi creare un layout di base distribuito in verticale su dispositivi <code class="language-plaintext highlighter-rouge">extra-small</code> che diventa orizzontale su dispositivi <code class="language-plaintext highlighter-rouge">small</code>.</p>
 
 <div class="bd-example-row">
+
 <div class="bd-example">
 <div class="row">
   <div class="col-sm-8">col-sm-8</div>
@@ -994,6 +1002,7 @@
 <p>Non vuoi che le tue colonne si dispongano verticalmente su alcuni breakpoints? Puoi utilizzare una combinazione di classi diverse per ogni riga secondo necessità. Guarda l’esempio di seguito per farti un’idea di come funziona.</p>
 
 <div class="bd-example-row">
+
 <div class="bd-example">
 <!-- Ordina le colonne sui dispositivi mobile creando una larghezza intera e l'altra mezza larghezza -->
 <div class="row">
@@ -1040,6 +1049,7 @@
 <p>Usa le classi reattive <code class="language-plaintext highlighter-rouge">.row-cols-*</code> per impostare rapidamente il numero di colonne del tuo layout. Mentre le normali classi <code class="language-plaintext highlighter-rouge">.col-</code> * si applicano alle singole colonne (ad es. <code class="language-plaintext highlighter-rouge">.col-md-4</code>), le classi delle “righe di colonne” sono impostate sul genitore <code class="language-plaintext highlighter-rouge">.row</code> come scorciatoia.</p>
 
 <div class="bd-example-row">
+
 <div class="bd-example">
 <div class="container">
   <div class="row row-cols-2">
@@ -1062,6 +1072,7 @@
 </div>
 
 <div class="bd-example-row">
+
 <div class="bd-example">
 <div class="container">
   <div class="row row-cols-3">
@@ -1084,6 +1095,7 @@
 </div>
 
 <div class="bd-example-row">
+
 <div class="bd-example">
 <div class="container">
   <div class="row row-cols-4">
@@ -1106,6 +1118,7 @@
 </div>
 
 <div class="bd-example-row">
+
 <div class="bd-example">
 <div class="container">
   <div class="row row-cols-4">
@@ -1128,6 +1141,7 @@
 </div>
 
 <div class="bd-example-row">
+
 <div class="bd-example">
 <div class="container">
   <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
@@ -1156,6 +1170,7 @@
 <h3 id="allineamento-verticale">Allineamento verticale</h3>
 
 <div class="bd-example-row">
+
 <div class="bd-example">
 <div class="container">
   <div class="row align-items-start" style="min-height: 5rem;">
@@ -1196,6 +1211,7 @@
 </div>
 
 <div class="bd-example-row bd-example-bg">
+
 <div class="bd-example">
 <div class="container">
   <div class="row" style="min-height: 5rem;">
@@ -1218,6 +1234,7 @@
 <h3 id="allineamento-orizzontale">Allineamento orizzontale</h3>
 
 <div class="bd-example-row bd-example-bg">
+
 <div class="bd-example">
 <div class="container">
   <div class="row justify-content-start">
@@ -1294,6 +1311,7 @@ Mentre questo genera un selettore più specifico, il padding della colonna può 
 <p>In pratica, ecco come appare. Nota che puoi continuare ad usarlo con tutte le altre classi di griglia predefinite (incluse le larghezze delle colonne, i livelli responsive, i riordini e altro).</p>
 
 <div class="bd-example-row">
+
 <div class="bd-example">
 <div class="row g-0">
   <div class="col-12 col-sm-6 col-md-8">.col-12 .col-sm-6 .col-md-8</div>
@@ -1370,6 +1388,7 @@ Mentre questo genera un selettore più specifico, il padding della colonna può 
 </div>
 
 <div class="bd-example-row">
+
 <div class="bd-example">
 <div class="row variable-gutters">
   <div class="col-12 col-sm-6 col-md-8">.col-12 .col-sm-6 .col-md-8</div>
@@ -1388,6 +1407,7 @@ Mentre questo genera un selettore più specifico, il padding della colonna può 
 <p>Se in una singola riga vengono inserite più di 12 colonne, ogni singola colonna o gruppo di colonne extra andrà a capo su una nuova linea.</p>
 
 <div class="bd-example-row">
+
 <div class="bd-example">
 <div class="row">
   <div class="col-9">.col-9</div>
@@ -1408,6 +1428,7 @@ Mentre questo genera un selettore più specifico, il padding della colonna può 
 <p>Dividere le colonne su una nuova riga in flexbox richiede un piccolo trucco: aggiungi un elemento con <code class="language-plaintext highlighter-rouge">width: 100%</code> ovunque tu voglia fare andare a capo le tue colonne in una nuova riga. Di solito questo layout viene realizzato con <code class="language-plaintext highlighter-rouge">.row</code> multiple, ma non sempre è possibile implementarlo.</p>
 
 <div class="bd-example-row">
+
 <div class="bd-example">
 <div class="row">
   <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
@@ -1432,6 +1453,7 @@ Mentre questo genera un selettore più specifico, il padding della colonna può 
 <p>Puoi anche applicare questa interruzione a specifici breakpoint con le <a href="/bootstrap-italia/docs/organizzare-gli-spazi/display/">utilità per la visualizzazione responsive</a>.</p>
 
 <div class="bd-example-row">
+
 <div class="bd-example">
 <div class="row">
   <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
@@ -1460,6 +1482,7 @@ Mentre questo genera un selettore più specifico, il padding della colonna può 
 <p>Usa le classi <code class="language-plaintext highlighter-rouge">.order-</code> per controllare l’ <strong>ordine di visualizzazione</strong> del tuo contenuto. Queste classi sono responsive, così puoi impostare <code class="language-plaintext highlighter-rouge">order</code> tramite breakpoint (e.g., <code class="language-plaintext highlighter-rouge">.order-1.order-md-2</code>). Include il supporto per numeri da <code class="language-plaintext highlighter-rouge">1</code> a <code class="language-plaintext highlighter-rouge">5</code>.</p>
 
 <div class="bd-example-row">
+
 <div class="bd-example">
 <div class="container">
   <div class="row">
@@ -1482,6 +1505,7 @@ Mentre questo genera un selettore più specifico, il padding della colonna può 
 <p>Esistono anche delle classi responsive <code class="language-plaintext highlighter-rouge">.order-first</code> e <code class="language-plaintext highlighter-rouge">.order-last</code> che cambiano velocemente l’ordine di un elemento applicando <code class="language-plaintext highlighter-rouge">order: -1</code> o <code class="language-plaintext highlighter-rouge">order: 6</code>. Queste classi possono essere utilizzate insieme con le classi numerate <code class="language-plaintext highlighter-rouge">.order-*</code> se necessario.</p>
 
 <div class="bd-example-row">
+
 <div class="bd-example">
 <div class="container">
   <div class="row">
@@ -1510,6 +1534,7 @@ Mentre questo genera un selettore più specifico, il padding della colonna può 
 <p>Sposta le colonne sulla destra usando le classi <code class="language-plaintext highlighter-rouge">.offset-md-*</code>. Queste class aumentano il margine sinistro della colonna con <code class="language-plaintext highlighter-rouge">*</code>. Ad esempio, <code class="language-plaintext highlighter-rouge">.offset-md-4</code> sposta <code class="language-plaintext highlighter-rouge">.col-md-4</code> di quattro colonne.</p>
 
 <div class="bd-example-row">
+
 <div class="bd-example">
 <div class="row">
   <div class="col-md-4">.col-md-4</div>
@@ -1540,6 +1565,7 @@ Mentre questo genera un selettore più specifico, il padding della colonna può 
 <p>Oltre alle interruzioni di colonna ai breakpoint, potrebbe essere necessario reimpostare gli offset.</p>
 
 <div class="bd-example-row">
+
 <div class="bd-example">
 <div class="row">
   <div class="col-sm-5 col-md-6">.col-sm-5 .col-md-6</div>
@@ -1568,6 +1594,7 @@ Mentre questo genera un selettore più specifico, il padding della colonna può 
 <p>Dato che Bootstrap utilizza flexbox per generare le griglie, puoi usare le utilità del margin come <code class="language-plaintext highlighter-rouge">.me-auto</code> per forzare lo spazio tra colonne adiacenti.</p>
 
 <div class="bd-example-row">
+
 <div class="bd-example">
 <div class="row">
   <div class="col-md-4">.col-md-4</div>
@@ -1602,6 +1629,7 @@ Mentre questo genera un selettore più specifico, il padding della colonna può 
 <p>Per annidare il contenuto con la griglia predefinita, aggiungi una nuova <code class="language-plaintext highlighter-rouge">.row</code> e un set di colonne <code class="language-plaintext highlighter-rouge">.col-sm-*</code> all’interno di una esistente <code class="language-plaintext highlighter-rouge">.col-sm-*</code>. Le righe annidate dovrebbero includere un set di colonne che ne aggiunge fino a 12 o meno (non è necessario usare tutte e 12 le colonne disponibili).</p>
 
 <div class="bd-example-row">
+
 <div class="bd-example">
 <div class="row">
   <div class="col-sm-9">
@@ -1630,14 +1658,14 @@ Mentre questo genera un selettore più specifico, il padding della colonna può 
     </div>
 
     
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202303030935"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202303222224"></script>
 <script>
   bootstrap.loadFonts('/bootstrap-italia/dist/fonts')
 </script><script src="/bootstrap-italia/docs/assets/src/js/vendor/anchor.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/clipboard.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tsparticles.min.js"></script>
 
-<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202303030935"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202303222224"></script>
 
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tweenjs.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/easeljs.min.js"></script>
@@ -1654,7 +1682,7 @@ Mentre questo genera un selettore più specifico, il padding della colonna può 
     { src: '/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png', id: 'cover-7' },
   ]
 </script>
-<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202303030935"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202303222224"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/docsearch.min.js"></script>
 
 <script>

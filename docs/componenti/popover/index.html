@@ -12,14 +12,14 @@
 <title>Popover · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202303030935" rel="stylesheet" />
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202303222224" rel="stylesheet" />
 
 
 <!-- Documentation extras -->
  
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.css" rel="stylesheet" />
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202303030935" rel="stylesheet" />
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202303222224" rel="stylesheet" />
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico" />
@@ -141,8 +141,8 @@
 
     <ul class="navbar-nav flex-row ms-md-auto d-none d-md-flex">
       <li class="nav-item pe-2">
-        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v2.3.5/bootstrap-italia.zip" aria-label="Download">
-          <small class="pe-2 m-0">v2.3.5</small>
+        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v2.3.6/bootstrap-italia.zip" aria-label="Download">
+          <small class="pe-2 m-0">v2.3.6</small>
           <svg class="icon icon-sm icon-light"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-download" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-download"></use></svg><span class="visually-hidden">Download</span>
         </a>
       </li>
@@ -675,94 +675,74 @@ il codice generato per i Popover è accessibile.</p>
 
 <p>Sono disponibili quattro opzioni: allineato in alto, a destra, in basso e a sinistra.</p>
 
-<div class="bd-example popover-demo">
-  <div class="bd-example-popovers">
-
-    <div class="container">
-      <div class="row">
-        <div class="col-12 col-md-4"></div>
-        <div class="col-12 col-md-4">
-          <button type="button" class="btn btn-secondary fade show" data-container="body" data-bs-toggle="popover" data-bs-placement="top" title="Titolo del Popover" data-bs-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue." style="width:100%;">
-            Popover in alto
-          </button>
-        </div>
-        <div class="col-12 col-md-4"></div>
-      </div>
-      <div class="row mt-4">
-        <div class="col-12 col-md-4">
-          <button type="button" class="btn btn-secondary fade show" data-container="body" data-bs-toggle="popover" data-bs-placement="right" title="Titolo del Popover" data-bs-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue." style="width:100%;">
-            Popover a destra
-          </button>
-        </div>
-        <div class="col-12 col-md-4"></div>
-        <div class="col-12 col-md-4 mt-4 mt-md-0">
-          <button type="button" class="btn btn-secondary fade show" data-container="body" data-bs-toggle="popover" data-bs-placement="left" title="Titolo del Popover" data-bs-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue." style="width:100%;">
-            Popover a sinistra
-          </button>
-        </div>
-      </div>
-      <div class="row mt-4">
-        <div class="col-12 col-md-4"></div>
-        <div class="col-12 col-md-4">
-          <button type="button" class="btn btn-secondary fade show" data-container="body" data-bs-toggle="popover" data-bs-placement="bottom" title="Titolo del Popover" data-bs-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue." style="width:100%;">
-            Popover in basso
-          </button>
-        </div>
-        <div class="col-12 col-md-4"></div>
-      </div>
+<div class="bd-example">
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-md-4"></div>
+    <div class="col-12 col-md-4">
+      <button type="button" class="btn btn-secondary fade show" data-container="body" data-bs-toggle="popover" data-bs-placement="top" title="Titolo del Popover" data-bs-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue." style="width:100%;">
+        Popover in alto
+      </button>
     </div>
-
+    <div class="col-12 col-md-4"></div>
+  </div>
+  <div class="row mt-4">
+    <div class="col-12 col-md-4">
+      <button type="button" class="btn btn-secondary fade show" data-container="body" data-bs-toggle="popover" data-bs-placement="right" title="Titolo del Popover" data-bs-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue." style="width:100%;">
+        Popover a destra
+      </button>
+    </div>
+    <div class="col-12 col-md-4"></div>
+    <div class="col-12 col-md-4 mt-4 mt-md-0">
+      <button type="button" class="btn btn-secondary fade show" data-container="body" data-bs-toggle="popover" data-bs-placement="left" title="Titolo del Popover" data-bs-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue." style="width:100%;">
+        Popover a sinistra
+      </button>
+    </div>
+  </div>
+  <div class="row mt-4">
+    <div class="col-12 col-md-4"></div>
+    <div class="col-12 col-md-4">
+      <button type="button" class="btn btn-secondary fade show" data-container="body" data-bs-toggle="popover" data-bs-placement="bottom" title="Titolo del Popover" data-bs-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue." style="width:100%;">
+        Popover in basso
+      </button>
+    </div>
+    <div class="col-12 col-md-4"></div>
   </div>
 </div>
-
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;button</span>
-  <span class="na">type=</span><span class="s">"button"</span>
-  <span class="na">class=</span><span class="s">"btn btn-secondary fade show"</span>
-  <span class="na">data-container=</span><span class="s">"body"</span>
-  <span class="na">data-bs-toggle=</span><span class="s">"popover"</span>
-  <span class="na">data-bs-placement=</span><span class="s">"top"</span>
-  <span class="na">title=</span><span class="s">"Titolo del Popover"</span>
-  <span class="na">data-bs-content=</span><span class="s">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue."</span>
-<span class="nt">&gt;</span>
-  Popover in alto
-<span class="nt">&lt;/button&gt;</span>
-
-<span class="nt">&lt;button</span>
-  <span class="na">type=</span><span class="s">"button"</span>
-  <span class="na">class=</span><span class="s">"btn btn-secondary fade show"</span>
-  <span class="na">data-container=</span><span class="s">"body"</span>
-  <span class="na">data-bs-toggle=</span><span class="s">"popover"</span>
-  <span class="na">data-bs-placement=</span><span class="s">"right"</span>
-  <span class="na">title=</span><span class="s">"Titolo del Popover"</span>
-  <span class="na">data-bs-content=</span><span class="s">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue."</span>
-<span class="nt">&gt;</span>
-  Popover a destra
-<span class="nt">&lt;/button&gt;</span>
-
-<span class="nt">&lt;button</span>
-  <span class="na">type=</span><span class="s">"button"</span>
-  <span class="na">class=</span><span class="s">"btn btn-secondary fade show"</span>
-  <span class="na">data-container=</span><span class="s">"body"</span>
-  <span class="na">data-bs-toggle=</span><span class="s">"popover"</span>
-  <span class="na">data-bs-placement=</span><span class="s">"bottom"</span>
-  <span class="na">title=</span><span class="s">"Titolo del Popover"</span>
-  <span class="na">data-bs-content=</span><span class="s">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue."</span>
-<span class="nt">&gt;</span>
-  Popover in basso
-<span class="nt">&lt;/button&gt;</span>
-
-<span class="nt">&lt;button</span>
-  <span class="na">type=</span><span class="s">"button"</span>
-  <span class="na">class=</span><span class="s">"btn btn-secondary fade show"</span>
-  <span class="na">data-container=</span><span class="s">"body"</span>
-  <span class="na">data-bs-toggle=</span><span class="s">"popover"</span>
-  <span class="na">data-bs-placement=</span><span class="s">"left"</span>
-  <span class="na">title=</span><span class="s">"Titolo del Popover"</span>
-  <span class="na">data-bs-content=</span><span class="s">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue."</span>
-<span class="nt">&gt;</span>
-  Popover a sinistra
-<span class="nt">&lt;/button&gt;</span>
-</code></pre></div></div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-md-4"</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-md-4"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary fade show"</span> <span class="na">data-container=</span><span class="s">"body"</span> <span class="na">data-bs-toggle=</span><span class="s">"popover"</span> <span class="na">data-bs-placement=</span><span class="s">"top"</span> <span class="na">title=</span><span class="s">"Titolo del Popover"</span> <span class="na">data-bs-content=</span><span class="s">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue."</span> <span class="na">style=</span><span class="s">"width:100%;"</span><span class="nt">&gt;</span>
+        Popover in alto
+      <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-md-4"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row mt-4"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-md-4"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary fade show"</span> <span class="na">data-container=</span><span class="s">"body"</span> <span class="na">data-bs-toggle=</span><span class="s">"popover"</span> <span class="na">data-bs-placement=</span><span class="s">"right"</span> <span class="na">title=</span><span class="s">"Titolo del Popover"</span> <span class="na">data-bs-content=</span><span class="s">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue."</span> <span class="na">style=</span><span class="s">"width:100%;"</span><span class="nt">&gt;</span>
+        Popover a destra
+      <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-md-4"</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-md-4 mt-4 mt-md-0"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary fade show"</span> <span class="na">data-container=</span><span class="s">"body"</span> <span class="na">data-bs-toggle=</span><span class="s">"popover"</span> <span class="na">data-bs-placement=</span><span class="s">"left"</span> <span class="na">title=</span><span class="s">"Titolo del Popover"</span> <span class="na">data-bs-content=</span><span class="s">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue."</span> <span class="na">style=</span><span class="s">"width:100%;"</span><span class="nt">&gt;</span>
+        Popover a sinistra
+      <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row mt-4"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-md-4"</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-md-4"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary fade show"</span> <span class="na">data-container=</span><span class="s">"body"</span> <span class="na">data-bs-toggle=</span><span class="s">"popover"</span> <span class="na">data-bs-placement=</span><span class="s">"bottom"</span> <span class="na">title=</span><span class="s">"Titolo del Popover"</span> <span class="na">data-bs-content=</span><span class="s">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue."</span> <span class="na">style=</span><span class="s">"width:100%;"</span><span class="nt">&gt;</span>
+        Popover in basso
+      <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-md-4"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <h3 id="titolo-con-icona-e-link">Titolo con icona e link</h3>
 
@@ -971,14 +951,14 @@ Apertura in Hover
     </div>
 
     
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202303030935"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202303222224"></script>
 <script>
   bootstrap.loadFonts('/bootstrap-italia/dist/fonts')
 </script><script src="/bootstrap-italia/docs/assets/src/js/vendor/anchor.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/clipboard.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tsparticles.min.js"></script>
 
-<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202303030935"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202303222224"></script>
 
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tweenjs.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/easeljs.min.js"></script>
@@ -995,7 +975,7 @@ Apertura in Hover
     { src: '/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png', id: 'cover-7' },
   ]
 </script>
-<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202303030935"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202303222224"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/docsearch.min.js"></script>
 
 <script>

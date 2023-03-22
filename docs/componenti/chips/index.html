@@ -12,14 +12,14 @@
 <title>Chips · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202303030935" rel="stylesheet" />
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202303222224" rel="stylesheet" />
 
 
 <!-- Documentation extras -->
  
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.css" rel="stylesheet" />
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202303030935" rel="stylesheet" />
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202303222224" rel="stylesheet" />
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico" />
@@ -141,8 +141,8 @@
 
     <ul class="navbar-nav flex-row ms-md-auto d-none d-md-flex">
       <li class="nav-item pe-2">
-        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v2.3.5/bootstrap-italia.zip" aria-label="Download">
-          <small class="pe-2 m-0">v2.3.5</small>
+        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v2.3.6/bootstrap-italia.zip" aria-label="Download">
+          <small class="pe-2 m-0">v2.3.6</small>
           <svg class="icon icon-sm icon-light"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-download" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-download"></use></svg><span class="visually-hidden">Download</span>
         </a>
       </li>
@@ -591,6 +591,7 @@
   <div class="sidebar-wrapper">
     <h3>Chips</h3>
     <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h3"><a href="#varianti-standard-e-grandi">Varianti standard e grandi</a></li>
 <li class="toc-entry toc-h3"><a href="#varianti-di-colore">Varianti di colore</a></li>
 <li class="toc-entry toc-h2"><a href="#chip-disabilitata">Chip Disabilitata</a></li>
 <li class="toc-entry toc-h2"><a href="#gruppi-di-chip">Gruppi di Chip</a></li>
@@ -610,11 +611,12 @@
 
 <p>L’azione richiesta per l’eliminazione della chip andrà associata al <code class="language-plaintext highlighter-rouge">&lt;button&gt;</code>.</p>
 
+<h3 id="varianti-standard-e-grandi">Varianti standard e grandi</h3>
+
 <div class="bd-example">
 
 <div class="row">
   <div class="col-12 col-md-6">
-    <h4>Versione Standard</h4>
     <p class="mt-4 mb-2">Solo testo</p>
     <div class="chip chip-simple">
       <span class="chip-label">Label</span>
@@ -649,7 +651,6 @@
     </div>
   </div>
   <div class="col-12 col-md-6">
-    <h4>Versione Grande</h4>
     <p class="mt-4 mb-2">Solo testo grande</p>
     <div class="chip chip-simple chip-lg">
       <span class="chip-label">Label</span>
@@ -687,7 +688,6 @@
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-md-6"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;h4&gt;</span>Versione Standard<span class="nt">&lt;/h4&gt;</span>
     <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"mt-4 mb-2"</span><span class="nt">&gt;</span>Solo testo<span class="nt">&lt;/p&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"chip chip-simple"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"chip-label"</span><span class="nt">&gt;</span>Label<span class="nt">&lt;/span&gt;</span>
@@ -722,7 +722,6 @@
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-md-6"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;h4&gt;</span>Versione Grande<span class="nt">&lt;/h4&gt;</span>
     <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"mt-4 mb-2"</span><span class="nt">&gt;</span>Solo testo grande<span class="nt">&lt;/p&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"chip chip-simple chip-lg"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"chip-label"</span><span class="nt">&gt;</span>Label<span class="nt">&lt;/span&gt;</span>
@@ -811,7 +810,6 @@
 <p>Aggiungendo la classe <code class="language-plaintext highlighter-rouge">.chip-disabled</code> al contenitore e l’attributo <code class="language-plaintext highlighter-rouge">disabled</code> al <code class="language-plaintext highlighter-rouge">&lt;button&gt;</code> si ottiene una chip disabilitata.</p>
 
 <div class="bd-example">
-
 <div class="chip chip-simple chip-lg chip-disabled">
   <span class="chip-label">Label disabilitata</span>
 </div>
@@ -881,7 +879,6 @@
 <p>I gruppi di chip vengono visualizzati in linea.</p>
 
 <div class="bd-example">
-
 <div class="chip chip-simple">
   <span class="chip-label">Label</span>
 </div>
@@ -1020,14 +1017,14 @@
     </div>
 
     
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202303030935"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202303222224"></script>
 <script>
   bootstrap.loadFonts('/bootstrap-italia/dist/fonts')
 </script><script src="/bootstrap-italia/docs/assets/src/js/vendor/anchor.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/clipboard.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tsparticles.min.js"></script>
 
-<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202303030935"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202303222224"></script>
 
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tweenjs.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/easeljs.min.js"></script>
@@ -1044,7 +1041,7 @@
     { src: '/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png', id: 'cover-7' },
   ]
 </script>
-<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202303030935"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202303222224"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/docsearch.min.js"></script>
 
 <script>

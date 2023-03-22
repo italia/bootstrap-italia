@@ -1,30 +1,78 @@
 [
     {
-        "name": "flex-1",
-        "content": "\n\n<div class=\"d-flex p-2 bd-highlight\">Io sono un contenitore flexbox!</div>\n"
+        "name": "Flexbox",
+        "content": "\n<div class=\"d-flex p-2 bd-highlight\">Io sono un contenitore flexbox!</div>\n"
     },
     {
-        "name": "flex-2",
-        "content": "\n\n<div class=\"d-inline-flex p-2 bd-highlight\">Io sono un contenitore inline flexbox!</div>\n"
+        "name": "Inline flexbox",
+        "content": "\n<div class=\"d-inline-flex p-2 bd-highlight\">Io sono un contenitore inline flexbox!</div>\n"
     },
     {
-        "name": "flex-3",
+        "name": "Varianti di direzione",
         "content": "\n<div class=\"d-flex flex-row mb-3\">\n  <div class=\"p-2 bd-highlight\">Elemento flex 1</div>\n  <div class=\"p-2 bd-highlight\">Elemento flex 2</div>\n  <div class=\"p-2 bd-highlight\">Elemento flex 3</div>\n</div>\n<div class=\"d-flex flex-row-reverse\">\n  <div class=\"p-2 bd-highlight\">Elemento flex 1</div>\n  <div class=\"p-2 bd-highlight\">Elemento flex 2</div>\n  <div class=\"p-2 bd-highlight\">Elemento flex 3</div>\n</div>\n"
     },
     {
-        "name": "flex-4",
+        "name": "Varianti di direzione verticale",
         "content": "\n<div class=\"d-flex flex-column mb-3\">\n  <div class=\"p-2 bd-highlight\">Elemento flex 1</div>\n  <div class=\"p-2 bd-highlight\">Elemento flex 2</div>\n  <div class=\"p-2 bd-highlight\">Elemento flex 3</div>\n</div>\n<div class=\"d-flex flex-column-reverse\">\n  <div class=\"p-2 bd-highlight\">Elemento flex 1</div>\n  <div class=\"p-2 bd-highlight\">Elemento flex 2</div>\n  <div class=\"p-2 bd-highlight\">Elemento flex 3</div>\n</div>\n"
     },
     {
-        "name": "flex-5",
-        "content": "\n<div class=\"d-flex mb-3\">\n  <div class=\"p-2 bd-highlight\">Elemento flex</div>\n  <div class=\"p-2 bd-highlight\">Elemento flex</div>\n  <div class=\"p-2 bd-highlight\">Elemento flex</div>\n</div>\n\n<div class=\"d-flex mb-3\">\n  <div class=\"me-auto p-2 bd-highlight\">Elemento flex</div>\n  <div class=\"p-2 bd-highlight\">Elemento flex</div>\n  <div class=\"p-2 bd-highlight\">Elemento flex</div>\n</div>\n\n<div class=\"d-flex mb-3\">\n  <div class=\"p-2 bd-highlight\">Elemento flex</div>\n  <div class=\"p-2 bd-highlight\">Elemento flex</div>\n  <div class=\"ms-auto p-2 bd-highlight\">Elemento flex</div>\n</div>\n"
+        "name": "Contenuto giustificato",
+        "content": "\n  <div class=\"d-flex justify-content-start mb-3\">\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n  </div>\n  <div class=\"d-flex justify-content-end mb-3\">\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n  </div>\n  <div class=\"d-flex justify-content-center mb-3\">\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n  </div>\n  <div class=\"d-flex justify-content-between mb-3\">\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n  </div>\n  <div class=\"d-flex justify-content-around\">\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n  </div>\n"
     },
     {
-        "name": "flex-6",
-        "content": "\n<div class=\"d-flex align-items-start flex-column mb-3\" style=\"height: 200px;\">\n  <div class=\"mb-auto p-2 bd-highlight\">Elemento flex</div>\n  <div class=\"p-2 bd-highlight\">Elemento flex</div>\n  <div class=\"p-2 bd-highlight\">Elemento flex</div>\n</div>\n\n<div class=\"d-flex align-items-end flex-column mb-3\" style=\"height: 200px;\">\n  <div class=\"p-2 bd-highlight\">Elemento flex</div>\n  <div class=\"p-2 bd-highlight\">Elemento flex</div>\n  <div class=\"mt-auto p-2 bd-highlight\">Elemento flex</div>\n</div>\n"
+        "name": "Allineamento elementi",
+        "content": "\n  <div class=\"d-flex align-items-start mb-3\" style=\"height: 100px\">\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n  </div>\n  <div class=\"d-flex align-items-end mb-3\" style=\"height: 100px\">\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n  </div>\n  <div class=\"d-flex align-items-center mb-3\" style=\"height: 100px\">\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n  </div>\n  <div class=\"d-flex align-items-baseline mb-3\" style=\"height: 100px\">\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n  </div>\n  <div class=\"d-flex align-items-stretch\" style=\"height: 100px\">\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n  </div>\n</div>\n"
     },
     {
-        "name": "flex-7",
+        "name": "Auto allineamento",
+        "content": "\n  <div class=\"d-flex mb-3\" style=\"height: 100px\">\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"align-self-start p-2 bd-highlight\">Elemento flex allineato</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n  </div>\n  <div class=\"d-flex mb-3\" style=\"height: 100px\">\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"align-self-end p-2 bd-highlight\">Elemento flex allineato</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n  </div>\n  <div class=\"d-flex mb-3\" style=\"height: 100px\">\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"align-self-center p-2 bd-highlight\">Elemento flex allineato</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n  </div>\n  <div class=\"d-flex mb-3\" style=\"height: 100px\">\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"align-self-baseline p-2 bd-highlight\">Elemento flex allineato</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n  </div>\n  <div class=\"d-flex\" style=\"height: 100px\">\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"align-self-stretch p-2 bd-highlight\">Elemento flex allineato</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n  </div>\n</div>\n"
+    },
+    {
+        "name": "Margini automatici",
+        "content": "\n<div class=\"d-flex mb-3\">\n  <div class=\"p-2 bd-highlight\">Elemento flex</div>\n  <div class=\"p-2 bd-highlight\">Elemento flex</div>\n  <div class=\"p-2 bd-highlight\">Elemento flex</div>\n</div>\n<div class=\"d-flex mb-3\">\n  <div class=\"me-auto p-2 bd-highlight\">Elemento flex</div>\n  <div class=\"p-2 bd-highlight\">Elemento flex</div>\n  <div class=\"p-2 bd-highlight\">Elemento flex</div>\n</div>\n<div class=\"d-flex mb-3\">\n  <div class=\"p-2 bd-highlight\">Elemento flex</div>\n  <div class=\"p-2 bd-highlight\">Elemento flex</div>\n  <div class=\"ms-auto p-2 bd-highlight\">Elemento flex</div>\n</div>\n"
+    },
+    {
+        "name": "Con elementi spostati in cima o in fondo",
+        "content": "\n<div class=\"d-flex align-items-start flex-column mb-3\" style=\"height: 200px;\">\n  <div class=\"mb-auto p-2 bd-highlight\">Elemento flex</div>\n  <div class=\"p-2 bd-highlight\">Elemento flex</div>\n  <div class=\"p-2 bd-highlight\">Elemento flex</div>\n</div>\n<div class=\"d-flex align-items-end flex-column mb-3\" style=\"height: 200px;\">\n  <div class=\"p-2 bd-highlight\">Elemento flex</div>\n  <div class=\"p-2 bd-highlight\">Elemento flex</div>\n  <div class=\"mt-auto p-2 bd-highlight\">Elemento flex</div>\n</div>\n"
+    },
+    {
+        "name": "No-wrap",
+        "content": "\n  <div class=\"d-flex flex-nowrap\" style=\"width: 8rem;\">\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n  </div>\n"
+    },
+    {
+        "name": "Wrap",
+        "content": "\n  <div class=\"d-flex flex-wrap\">\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n  </div>\n"
+    },
+    {
+        "name": "Wrap-reverse",
+        "content": "\n  <div class=\"d-flex flex-wrap-reverse\">\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n  </div>\n"
+    },
+    {
+        "name": "Ordinamento",
         "content": "\n<div class=\"d-flex flex-nowrap\">\n  <div class=\"order-3 p-2 bd-highlight\">Primo elemento flex</div>\n  <div class=\"order-2 p-2 bd-highlight\">Secondo elemento flex</div>\n  <div class=\"order-1 p-2 bd-highlight\">Terzo elemento flex</div>\n</div>\n"
+    },
+    {
+        "name": "Align-content-start ",
+        "content": "\n  <div class=\"d-flex align-content-start flex-wrap mb-3\" style=\"height: 200px\">\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n  </div>\n"
+    },
+    {
+        "name": "Align-content-end ",
+        "content": "\n  <div class=\"d-flex align-content-end flex-wrap mb-3\" style=\"height: 200px\">\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n  </div>\n"
+    },
+    {
+        "name": "Align-content-center ",
+        "content": "\n  <div class=\"d-flex align-content-center flex-wrap mb-3\" style=\"height: 200px\">\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n  </div>\n  "
+    },
+    {
+        "name": "Align-content-between ",
+        "content": "\n  <div class=\"d-flex align-content-between flex-wrap mb-3\" style=\"height: 200px\">\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n  </div>\n"
+    },
+    {
+        "name": "Align-content-around ",
+        "content": "\n  <div class=\"d-flex align-content-around flex-wrap mb-3\" style=\"height: 200px\">\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n  </div>\n"
+    },
+    {
+        "name": "Align-content-stretch ",
+        "content": "\n  <div class=\"d-flex align-content-stretch flex-wrap mb-3\" style=\"height: 200px\">\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n    <div class=\"p-2 bd-highlight\">Elemento flex</div>\n  </div>\n"
     }
 ]
