@@ -55,8 +55,8 @@ sovrascritto.
 Estendi ogni oggetto, ad esempio un `<iframe>`, aggiungendo al suo contenitore la classe `.ratio` e le proporzioni
 richieste. L'elemento contenuto viene automaticamente ridimensionato grazie al selettore universale `ratio > *`.
 
+{% comment %}Example name: Esempio proporzione 16x9{% endcomment %}
 {% capture example %}
-
 <div class="ratio ratio-16x9">
   <iframe title="Video YouTube" src="https://www.youtube-nocookie.com/embed/RaHmGbBOP84" allowfullscreen></iframe>
 </div>
@@ -67,8 +67,8 @@ richieste. L'elemento contenuto viene automaticamente ridimensionato grazie al s
 Le proporzioni possono essere personalizzate con delle classi apposite.  
 Vengono fornite le seguenti proporzioni pre-impostate:
 
+{% comment %}Example name: Varianti di proporzioni{% endcomment %}
 {% capture example %}
-
 <div class="ratio ratio-1x1 ratio-example">
   <div>1x1</div>
 </div>
@@ -89,8 +89,8 @@ Ogni classe `.ratio-*` include una variabile CSS nel selettore. Puoi fare un ove
 
 Ad esempio, per creare una proporzione custom 2x1, utilizza il valore `--bs-aspect-ratio: 50%` sull'elemento `.ratio`.
 
+{% comment %}Example name: Proporzione personalizzata{% endcomment %}
 {% capture example %}
-
 <div class="ratio ratio-example" style="--bs-aspect-ratio: 50%;">
   <div>2x1</div>
 </div>
@@ -106,8 +106,8 @@ Questa variabile CSS rende semplice modificare la proporzione a seconda del brea
 }
 ```
 
+{% comment %}Example name: Proporzione personalizzata responsive{% endcomment %}
 {% capture example %}
-
 <div class="ratio ratio-4x3 ratio-example ratio-example-breakpoint">
   <div>4x3, poi 2x1</div>
 </div>

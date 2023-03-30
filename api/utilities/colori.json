@@ -1,10 +1,10 @@
 [
     {
-        "name": "colori-1",
-        "content": "\n\n\n<p class=\"p-3 mb-2 text-primary\">.text-primary</p>\n\n<p class=\"p-3 mb-2 text-secondary\">.text-secondary</p>\n\n<p class=\"p-3 mb-2 text-success\">.text-success</p>\n\n<p class=\"p-3 mb-2 text-danger\">.text-danger</p>\n\n<p class=\"p-3 mb-2 text-warning\">.text-warning</p>\n\n<p class=\"p-3 mb-2 text-muted\">.text-muted</p>\n\n<p class=\"p-3 mb-2 text-white bg-dark\">.text-white</p>\n"
+        "name": "Testo",
+        "content": "\n\n<p class=\"p-3 mb-2 text-primary\">.text-primary</p>\n<p class=\"p-3 mb-2 text-secondary\">.text-secondary</p>\n<p class=\"p-3 mb-2 text-success\">.text-success</p>\n<p class=\"p-3 mb-2 text-danger\">.text-danger</p>\n<p class=\"p-3 mb-2 text-warning\">.text-warning</p>\n\n<p class=\"p-3 mb-2 text-muted\">.text-muted</p>\n\n<p class=\"p-3 mb-2 text-white bg-dark\">.text-white</p>\n"
     },
     {
-        "name": "colori-2",
+        "name": "Sfondo",
         "content": "\n\n\n<div class=\"p-3 mb-2 bg-primary text-white\">.bg-primary</div>\n\n<div class=\"p-3 mb-2 bg-secondary text-white\">.bg-secondary</div>\n\n<div class=\"p-3 mb-2 bg-success text-white\">.bg-success</div>\n\n<div class=\"p-3 mb-2 bg-danger text-white\">.bg-danger</div>\n\n<div class=\"p-3 mb-2 bg-warning text-white\">.bg-warning</div>\n\n<div class=\"p-3 mb-2 bg-white text-dark\">.bg-white</div>\n"
     }
 ]

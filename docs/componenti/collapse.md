@@ -20,6 +20,7 @@ L'interazione con i pulsanti cambierà le seguenti classi dell'elemento richiudi
 - `.collapsing` viene applicata durante la transizione
 - `.collapse.show` mostra il contenuto
 
+{% comment %}Example name: Base{% endcomment %}
 {% capture example %}
 
 <p>
@@ -42,6 +43,7 @@ L'interazione con i pulsanti cambierà le seguenti classi dell'elemento richiudi
 Un `<button>` o un `<a>` può mostrare o nascondere più elementi facendo riferimento ad essi con un selettore nell'attributo `href` o nell'attributo `data-bs-target`.
 Molteplici `<button>` o `<a>` possono mostrare o nascondere un elemento se ognuno di loro fa riferimento ad esso con gli attributi `href` o `data-bs-target`.
 
+{% comment %}Example name: Attivazione elementi richiudibili{% endcomment %}
 {% capture example %}
 
 <p>

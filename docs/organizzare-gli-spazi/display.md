@@ -37,12 +37,13 @@ Per esempio, `.d-lg-none` imposta `display: none;` nella visualizzazione in `lg`
 
 ## Esempi
 
+{% comment %}Example name: Inline{% endcomment %}
 {% capture example %}
-
 <div class="d-inline p-2 bg-primary text-white">d-inline</div>
 <div class="d-inline p-2 bg-dark text-white">d-inline</div>
 {% endcapture %}{% include example.html content=example %}
 
+{% comment %}Example name: Block{% endcomment %}
 {% capture example %}
 <span class="d-block p-2 bg-primary text-white">d-block</span>
 <span class="d-block p-2 bg-dark text-white">d-block</span>
@@ -79,8 +80,9 @@ nascosto).
 | Visibile solo su xl      | `.d-none .d-xl-block`            |
 | Visibile solo su xxl     | `.d-none .d-xxl-block`           |
 
-{% capture example %}
 
+{% comment %}Example name: Responsive{% endcomment %}
+{% capture example %}
 <div class="d-lg-none">Nascosto su schermi più larghi di lg</div>
 <div class="d-none d-lg-block">Nascosto su schermi più piccoli di lg</div>
 {% endcapture %}{% include example.html content=example %}
@@ -101,8 +103,8 @@ Modifica il valore `display` degli elementi per la stampa con le classi apposite
 
 Le classi di stampa e di visualizzazione possono essere combinate insieme:
 
+{% comment %}Example name: Stampa{% endcomment %}
 {% capture example %}
-
 <div class="d-print-none">Solo schermo (Nascondi solo su stampa)</div>
 <div class="d-none d-print-block">Solo stampa (Nascondi solo sullo schermo)</div>
 <div class="d-none d-lg-block d-print-block">Nascondi fino al grande schermo, ma mostra sempre sulla stampa</div>

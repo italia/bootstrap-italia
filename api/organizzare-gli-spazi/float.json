@@ -1,10 +1,10 @@
 [
     {
-        "name": "float-1",
-        "content": "\n\n<div class=\"float-start\">Esempio di float a sinistra per tutte le dimensioni</div><br>\n<div class=\"float-end\">Esempio di float a destra per tutte le dimensioni</div><br>\n<div class=\"float-none\">Float disattivo per tutte le dimensioni</div>\n"
+        "name": "Varianti start-end-none",
+        "content": "\n<div class=\"float-start\">Esempio di float a sinistra per tutte le dimensioni</div><br />\n<div class=\"float-end\">Esempio di float a destra per tutte le dimensioni</div><br />\n<div class=\"float-none\">Float disattivo per tutte le dimensioni</div>\n"
     },
     {
-        "name": "float-2",
-        "content": "\n\n<div class=\"float-sm-start\">Esempio di float a sinistra per dimensioni SM (small) o maggiori.</div><br>\n<div class=\"float-md-start\">Esempio di float a sinistra per dimensioni MD (medium) o maggiori.</div><br>\n<div class=\"float-lg-start\">Esempio di float a sinistra per dimensioni LG (large)  o maggiori.</div><br>\n<div class=\"float-xl-start\">Esempio di float a sinistra per dimensioni XL (extra-large) o maggiori.</div><br>\n<div class=\"float-xxl-start\">Esempio di float a sinistra per dimensioni XXL (extra-extra-large) o maggiori.</div><br>\n"
+        "name": "Varianti responsive",
+        "content": "\n<div class=\"float-sm-end\">Esempio di float a destra per dimensioni SM (small) o maggiori.</div><br />\n<div class=\"float-md-end\">Esempio di float a destra per dimensioni MD (medium) o maggiori.</div><br />\n<div class=\"float-lg-end\">Esempio di float a destra per dimensioni LG (large) o maggiori.</div><br />\n<div class=\"float-xl-end\">Esempio di float a destra per dimensioni XL (extra-large) o maggiori.</div><br />\n<div class=\"float-xxl-end\">Esempio di float a destra per dimensioni XXL (extra-extra-large) o maggiori.</div>\n"
     }
 ]

@@ -11,8 +11,8 @@ description: Il classico “menu a tendina”.
 
 La select è composta dal un wrapper esterno `.select-wrapper` contenente la label e l'elemento `<select>`.
 
+{% comment %}Example name: Base {% endcomment %}
 {% capture example %}
-
 <div class="select-wrapper">
   <label for="defaultSelect">Etichetta</label>
   <select id="defaultSelect">
@@ -29,8 +29,9 @@ La select è composta dal un wrapper esterno `.select-wrapper` contenente la lab
 ### Select disabilitata
 
 Per disabilitare una select, aggiungere l'attributo `disabled` al tag `<select>`.
-{% capture example %}
 
+{% comment %}Example name: Disabilitata {% endcomment %}
+{% capture example %}
 <div class="select-wrapper">
   <label for="defaultSelectDisabled">Etichetta</label>
   <select id="defaultSelectDisabled" disabled>
@@ -48,8 +49,8 @@ Per disabilitare una select, aggiungere l'attributo `disabled` al tag `<select>`
 
 Per ottenere select con raggruppamenti, utilizzare il tag HTML `<optgroup>` per raggruppare le `<option>` al suo interno.
 
+{% comment %}Example name: Con gruppi {% endcomment %}
 {% capture example %}
-
 <div class="select-wrapper">
   <label for="defaultSelectGroup">Etichetta</label>
   <select id="defaultSelectGroup">
@@ -65,4 +66,3 @@ Per ottenere select con raggruppamenti, utilizzare il tag HTML `<optgroup>` per 
   </select>
 </div>
 {% endcapture %}{% include example.html content=example %}
-```

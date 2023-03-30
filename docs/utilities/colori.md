@@ -24,9 +24,9 @@ Puoi trovare maggiori informazioni sulla palette di colori a disposizione alla p
 
 ## Colore del testo
 
+{% comment %}Example name: Testo{% endcomment %}
 {% capture example %}
 {% for color in site.data.theme-colors %}
-
 <p class="p-3 mb-2 text-{{ color.name }}{% if color.name == "light" %} bg-dark{% endif %}">.text-{{ color.name }}</p>{% endfor %}
 
 <p class="p-3 mb-2 text-muted">.text-muted</p>
@@ -38,6 +38,7 @@ Puoi trovare maggiori informazioni sulla palette di colori a disposizione alla p
 
 Allo stesso modo di quanto avviene per il testo, le classi `bg-*` permettono di colorare lo sfondo di un elemento; le classi per gli sfondi **non hanno alcun impatto sulla proprità `color`**, per cui in alcuni casi sarà necessario affiancarle alle classi `.text-*`.
 
+{% comment %}Example name: Sfondo{% endcomment %}
 {% capture example %}
 {% for color in site.data.theme-colors %}
 

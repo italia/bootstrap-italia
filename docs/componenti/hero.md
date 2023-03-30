@@ -42,8 +42,8 @@ Nel caso di un componente hero con sola immagine utilizzare il tag `section` con
 
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
+{% comment %}Example name: Con immagine{% endcomment %}
 {% capture example %}
-
 <section class="it-hero-wrapper" aria-label="In evidenza">
    <div class="img-responsive-wrapper">
       <div class="img-responsive">
@@ -54,12 +54,11 @@ Nel caso di un componente hero con sola immagine utilizzare il tag `section` con
 {% endcapture %}{% include example.html content=example %}
 
 ### Versione small
-
 Per ottenere il componente Hero nella sua versione più piccola:  
 aggiungere alla section `.it-hero-wrapper` la classe `.it-hero-small-size`.
 
+{% comment %}Example name: Con immagine, piccolo{% endcomment %}
 {% capture example %}
-
 <section class="it-hero-wrapper it-hero-small-size"  aria-label="In evidenza">
    <div class="img-responsive-wrapper">
       <div class="img-responsive">
@@ -81,8 +80,8 @@ Nei casi in cui fossero presenti contenuti testuali utilizzare per il titolo il 
 
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
+{% comment %}Example name: Con testo{% endcomment %}
 {% capture example %}
-
 <section class="it-hero-wrapper">
   <div class="container">
     <div class="row">
@@ -104,8 +103,8 @@ Nei casi in cui fossero presenti contenuti testuali utilizzare per il titolo il 
 Per ottenere il componente Hero con testi centrati orizzontalmente:  
 aggiungere alla section `.it-hero-wrapper` la classe `.it-text-centered`.
 
+{% comment %}Example name: Con testo, centrato{% endcomment %}
 {% capture example %}
-
 <section class="it-hero-wrapper it-text-centered">
    <div class="container">
       <div class="row">
@@ -138,8 +137,8 @@ Verificare che l'immagine utilizzata assicuri sempre un adeguato contrasto rispe
 
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
+{% comment %}Example name: Con testo e immagine di sfondo{% endcomment %}
 {% capture example %}
-
 <section class="it-hero-wrapper it-dark it-overlay">
   <!-- - img-->
   <div class="img-responsive-wrapper">
@@ -170,8 +169,8 @@ Per un div opaco di colore primario, aggiungere alla section `.it-hero-wrapper` 
 - **`.it-overlay`**: crea il div che si sovrappone all'immagine
 - **`.it-primary`**: definisce il colore di background del div in overlay.
 
+{% comment %}Example name: Con overlay di colore primary{% endcomment %}
 {% capture example %}
-
 <section class="it-hero-wrapper it-primary it-overlay">
    <!-- - img-->
    <div class="img-responsive-wrapper">
@@ -202,8 +201,8 @@ Per aggiungere un filtro di tipo "screen" aggiungere alla section `.it-hero-wrap
 - **`.it-overlay`**: crea il div che si sovrappone all'immagine
 - **`.it-filter`**: definisce il filtro da applicare all'immagine.
 
+{% comment %}Example name: Con overlay e filtro di colore primary{% endcomment %}
 {% capture example %}
-
 <section class="it-hero-wrapper it-filter it-overlay" aria-label="In evidenza">
    <div class="img-responsive-wrapper">
       <div class="img-responsive">
@@ -218,8 +217,8 @@ Per aggiungere un filtro di tipo "screen" aggiungere alla section `.it-hero-wrap
 In alcuni casi, il contenuto che segue può sovrapporsi al componente hero.
 Aggiungere alla section `.it-hero-wrapper` la classe `.it-bottom-overlapping-content` per far sì che il contenuto seguente si sovrapponga al componente hero (in questo caso il componente seguente è una card).
 
+{% comment %}Example name: Con immagine e margine negativo{% endcomment %}
 {% capture example %}
-
 <section class="it-hero-wrapper it-dark it-overlay it-bottom-overlapping-content">
    <div class="img-responsive-wrapper">
       <div class="img-responsive">

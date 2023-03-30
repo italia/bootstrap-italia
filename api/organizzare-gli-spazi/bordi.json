@@ -1,14 +1,18 @@
 [
     {
-        "name": "bordi-1",
+        "name": "Aggiuntivo",
         "content": "\n<span class=\"border\"></span>\n<span class=\"border-top\"></span>\n<span class=\"border-end\"></span>\n<span class=\"border-bottom\"></span>\n<span class=\"border-start\"></span>\n"
     },
     {
         "name": "bordi-2",
-        "content": "\n<span class=\"border-0\"></span>\n<span class=\"border-top-0\"></span>\n<span class=\"border-end-0\"></span>\n<span class=\"border-bottom-0\"></span>\n<span class=\"border-start-0\"></span>\n"
+        "content": "\n\n<span class=\"border-0\"></span>\n<span class=\"border-top-0\"></span>\n<span class=\"border-end-0\"></span>\n<span class=\"border-bottom-0\"></span>\n<span class=\"border-start-0\"></span>\n"
     },
     {
-        "name": "bordi-3",
+        "name": "Varianti di colore",
         "content": "\n\n<span class=\"border border-primary\"></span>\n<span class=\"border border-secondary\"></span>\n<span class=\"border border-success\"></span>\n<span class=\"border border-danger\"></span>\n<span class=\"border border-warning\"></span>\n<span class=\"border border-white\"></span>\n"
+    },
+    {
+        "name": "Arrotondati",
+        "content": "\n  <img src=\"https://via.placeholder.com/75x75/ebebeb/808080/?text=Immagine\" class=\"rounded\" alt=\"Esempio di immagine arrotondata\">\n  <img src=\"https://via.placeholder.com/75x75/ebebeb/808080/?text=Immagine\" class=\"rounded-top\" alt=\"Esempio di immagine arrotondata in alto\">\n  <img src=\"https://via.placeholder.com/75x75/ebebeb/808080/?text=Immagine\" class=\"rounded-end\" alt=\"Esempio di immagine arrotondata a destra\">\n  <img src=\"https://via.placeholder.com/75x75/ebebeb/808080/?text=Immagine\" class=\"rounded-bottom\" alt=\"Esempio di immagine arrotondata in basso\">\n  <img src=\"https://via.placeholder.com/75x75/ebebeb/808080/?text=Immagine\" class=\"rounded-start\" alt=\"Esempio di immagine arrotondata a sinistra\">\n  <img src=\"https://via.placeholder.com/75x75/ebebeb/808080/?text=Immagine\" class=\"rounded-circle\" alt=\"Esempio di immagine arrotondata a cerchio\">\n  <img src=\"https://via.placeholder.com/75x75/ebebeb/808080/?text=Immagine\" class=\"rounded-0\" alt=\"Esempio di immagine non arrotondata (sovrascrive l'eventuale arrotondamento applicato precedentemente)\">\n  <img src=\"https://via.placeholder.com/150x75/ebebeb/808080/?text=Immagine\" class=\"rounded-pill\" alt=\"Esempio di immagine arrotondata a pillola\">\n"
     }
 ]

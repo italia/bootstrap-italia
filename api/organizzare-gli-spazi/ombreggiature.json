@@ -1,6 +1,6 @@
 [
     {
-        "name": "ombreggiature-1",
-        "content": "\n\n<div class=\"shadow-none p-3 mb-5 bg-light\">Nessuna ombra</div>\n<div class=\"shadow-sm p-3 mb-5 bg-white\">Ombra piccola</div>\n<div class=\"shadow p-3 mb-5 bg-white\">Ombra media</div>\n<div class=\"shadow-lg p-3 mb-5 bg-white\">Ombra grande</div>\n"
+        "name": "Varianti di profondit\u00e0",
+        "content": "\n<div class=\"shadow-none p-3 mb-5 bg-light\">Nessuna ombra</div>\n<div class=\"shadow-sm p-3 mb-5 bg-white\">Ombra piccola</div>\n<div class=\"shadow p-3 mb-5 bg-white\">Ombra media</div>\n<div class=\"shadow-lg p-3 mb-5 bg-white\">Ombra grande</div>\n"
     }
 ]

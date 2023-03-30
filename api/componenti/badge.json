@@ -1,22 +1,26 @@
 [
     {
-        "name": "badge-1",
+        "name": "Base",
+        "content": "\n<div class=\"bd-example\">\n<div class=\"h1\">Titolo di esempio h1<span class=\"badge bg-secondary\">New</span></div>\n<div class=\"h2\">Titolo di esempio h2<span class=\"badge bg-secondary\">New</span></div>\n<div class=\"h3\">Titolo di esempio h3<span class=\"badge bg-secondary\">New</span></div>\n<div class=\"h4\">Titolo di esempio h4<span class=\"badge bg-secondary\">New</span></div>\n<div class=\"h5\">Titolo di esempio h5<span class=\"badge bg-secondary\">New</span></div>\n<div class=\"h6\">Titolo di esempio h6<span class=\"badge bg-secondary\">New</span></div>\n</div>\n"
+    },
+    {
+        "name": "In pulsante",
         "content": "\n<button type=\"button\" class=\"btn btn-primary\">\nNotifiche <span class=\"badge neutral-2-bg text-secondary\">4</span>\n</button>\n"
     },
     {
-        "name": "badge-2",
+        "name": "In pulsante, per screen reader",
         "content": "\n<button type=\"button\" class=\"btn btn-primary\">\nProfilo <span class=\"badge neutral-2-bg text-secondary\">9</span>\n<span class=\"visually-hidden\">Messaggi non letti</span>\n</button>\n"
     },
     {
-        "name": "badge-3",
+        "name": "Varianti di colore",
         "content": "\n\n<span class=\"badge bg-primary\">Primary</span>\n<span class=\"badge bg-secondary\">Secondary</span>\n<span class=\"badge bg-success\">Success</span>\n<span class=\"badge bg-danger\">Danger</span>\n<span class=\"badge bg-warning\">Warning</span>\n"
     },
     {
-        "name": "badge-4",
+        "name": "Arrotondati",
         "content": "\n\n<span class=\"badge rounded-pill bg-primary\">Primary</span>\n<span class=\"badge rounded-pill bg-secondary\">Secondary</span>\n<span class=\"badge rounded-pill bg-success\">Success</span>\n<span class=\"badge rounded-pill bg-danger\">Danger</span>\n<span class=\"badge rounded-pill bg-warning\">Warning</span>\n"
     },
     {
-        "name": "badge-5",
+        "name": "Link",
         "content": "\n\n<a href=\"#\" class=\"badge bg-primary\">Primary</a>\n<a href=\"#\" class=\"badge bg-secondary\">Secondary</a>\n<a href=\"#\" class=\"badge bg-success\">Success</a>\n<a href=\"#\" class=\"badge bg-danger\">Danger</a>\n<a href=\"#\" class=\"badge bg-warning\">Warning</a>\n"
     }
 ]

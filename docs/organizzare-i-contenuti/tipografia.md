@@ -25,8 +25,8 @@ suggeriscono di usare le seguenti famiglie di caratteri:
 è necessario applicarlo esplicitamente. In caso si renda necessario è possibile
 utilizzare la classe `font-sans-serif`.
 
+{% comment %}Example name: Titillium Web{% endcomment %}
 {% capture example %}
-
 <p class="font-sans-serif">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
 <p class="font-sans-serif">abcdefghijklmnopqrstuvwxyz</p>
 <p class="font-sans-serif">0123456789</p>
@@ -38,8 +38,8 @@ utilizzare la classe `font-sans-serif`.
 nato espressamente per la lettura su display. Può essere utilizzato applicando
 la classe `font-serif`.
 
+{% comment %}Example name: Lora{% endcomment %}
 {% capture example %}
-
 <p class="font-serif">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
 <p class="font-serif">abcdefghijklmnopqrstuvwxyz</p>
 <p class="font-serif">0123456789</p>
@@ -51,8 +51,8 @@ la classe `font-serif`.
 di numeri, codici, calcoli matematici, esempi con linguaggi di programmazione.
 Per il suo utilizzo, è sufficiente usare la classe `font-monospace`.
 
+{% comment %}Example name: Roboto{% endcomment %}
 {% capture example %}
-
 <p class="font-monospace">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
 <p class="font-monospace">abcdefghijklmnopqrstuvwxyz</p>
 <p class="font-monospace">0123456789</p>
@@ -85,20 +85,22 @@ Nel caso in cui si voglia presentare il testo nello stesso stile delle
 intestazioni, ma non sia possibile utilizzare l'elemento HTML appropriato,
 sono disponibili anche classi di tipo `.h1`, `.h2`, ecc.
 
-<p class="h1">Intestazione di tipo h1</p>
-<p class="h2">Intestazione di tipo h2</p>
-<p class="h3">Intestazione di tipo h3</p>
-<p class="h4">Intestazione di tipo h4</p>
-<p class="h5">Intestazione di tipo h5</p>
-<p class="h6">Intestazione di tipo h6</p>
-```html
+{% comment %}Example name: Intestazioni{% endcomment %}
+{% capture example %}
 <h1>Intestazione di tipo h1</h1>
 <h2>Intestazione di tipo h2</h2>
 <h3>Intestazione di tipo h3</h3>
 <h4>Intestazione di tipo h4</h4>
 <h5>Intestazione di tipo h5</h5>
 <h6>Intestazione di tipo h6</h6>
-```
+
+<p class="h1">Stile h1</p>
+<p class="h2">Stile h2</p>
+<p class="h3">Stile h3</p>
+<p class="h4">Stile h4</p>
+<p class="h5">Stile h5</p>
+<p class="h6">Stile h6</p>
+{% endcapture %}{% include example.html content=example %}
 
 Queste le dimensioni nel dettaglio:
 
@@ -156,7 +158,7 @@ Queste le dimensioni nel dettaglio:
   </tbody>
 </table>
 
-### Intestazioni in evidenza
+### Intestazione h1 in evidenza
 
 Gli elementi di intestazione tradizionali sono progettati per funzionare al
 meglio nel contesto della pagina. Nel caso sia necessario mettere in ulteriore
@@ -164,13 +166,12 @@ evidenza un'intestazione di tipo `<h1>`, si può prendere in considerazione l'us
 della classe `.display-1`, che restituirà una dimensione sensibilmente più
 grande.
 
-<span class="h1 display-1">Intestazione di tipo h1</span>
+{% comment %}Example name: Intestazioni{% endcomment %}
+{% capture example %}
+<h1 class="display-1">Intestazione di tipo h1 in evidenza</h1>
+{% endcapture %}{% include example.html content=example %}
 
-```html
-<h1 class="display-1">Intestazione di tipo h1</h1>
-```
-
-### Personalizzazione delle intestazioni
+<!-- ### Personalizzazione delle intestazioni
 
 È possibile utilizzare le classi di utilità incluse in Bootstrap per
 dare uno stile diverso per testi di intestazione secondaria.
@@ -180,14 +181,16 @@ dare uno stile diverso per testi di intestazione secondaria.
 <h4>Intestazione <small class="text-muted">con testo secondario</small></h4>
 {% endcapture %}{% include example.html content=example %}
 
+--> 
+
 ## Paragrafi
 
 Il semplice paragrafo prevede una dimensione di testo e un'interlinea di
 `16px/24px` per dispositivi mobili, e di `18px/28px` per schermi con dimensioni
 maggiori di 576px.
 
+{% comment %}Example name: Paragrafi contenuti{% endcomment %}
 {% capture example %}
-
 <p>Ullamco laboris nisi ut aliquid ex ea commodi consequat. Curabitur blandit tempus ardua ridiculus sed magna. Curabitur est gravida et libero vitae dictum. Phasellus laoreet lorem vel dolor tempus vehicula. Magna pars studiorum, prodita quaerimus.</p>
 <p>Ullamco laboris nisi ut aliquid ex ea commodi consequat. Curabitur blandit tempus ardua ridiculus sed magna. Curabitur est gravida et libero vitae dictum. Phasellus laoreet lorem vel dolor tempus vehicula. Magna pars studiorum, prodita quaerimus.</p>
 {% endcapture %}{% include example.html content=example %}
@@ -201,8 +204,8 @@ minima è di 12-15 caratteri.
 
 Per mettere in risalto un paragrafo è sufficiente aggiungere la classe `.lead`.
 
+{% comment %}Example name: Paragrafi in evidenza{% endcomment %}
 {% capture example %}
-
 <p class="lead">Paragrafo in evidenza</p>
 {% endcapture %}{% include example.html content=example %}
 
@@ -211,8 +214,8 @@ Per mettere in risalto un paragrafo è sufficiente aggiungere la classe `.lead`.
 È possibile stilizzare correttamente lo stile anche nel caso vengano utilizzati
 semplicemente gli elementi HTML5 per il trattamento di testo.
 
+{% comment %}Example name: Markup semantico nei paragrafi{% endcomment %}
 {% capture example %}
-
 <p>Esempio di testo <u>sottolineato</u>.</p>
 <p>Esempio di testo <mark>evidenziato</mark>.</p>
 <p>Esempio di testo <em>corsivo</em>.</p>
@@ -243,8 +246,8 @@ e [utilità di colore]({{ site.baseurl }}/docs/utilities/colori/).
 
 Nel rispetto delle regole di accessibilità vigenti, Bootstrap Italia mantiene la sottolineatura ai link di tipo `<a>`. Nel caso di link già in evidenza (menu principali, liste di link, link in grassetto, ecc.), è possibile rimuovere la sottolineatura utilizzando la classe `.text-decoration-none`.
 
+{% comment %}Example name: Link{% endcomment %}
 {% capture example %}
-
 <p>Esempio di <a href="#">link normale</a>.</p>
 <p>Esempio di <a href="#" class="text-decoration-none fw-bold">link in grassetto senza sottolineatura</a>.</p>
 {% endcapture %}{% include example.html content=example %}
@@ -260,8 +263,8 @@ assistive.
 Aggiungi `.initialism` a un'abbreviazione per una dimensione del font
 leggermente più piccola.
 
+{% comment %}Example name: Abbreviazioni{% endcomment %}
 {% capture example %}
-
 <p><abbr title="attribute">attr</abbr></p>
 <p><abbr title="HyperText Markup Language" class="initialism">HTML</abbr></p>
 {% endcapture %}{% include example.html content=example %}
@@ -272,8 +275,8 @@ Per citare blocchi di contenuti da un'altra fonte all'interno del documento.
 Racchiudi ogni <abbr title="HyperText Markup Language">HTML</abbr> all'interno
 di un `<blockquote class="blockquote">` come la citazione.
 
+{% comment %}Example name: Citazioni{% endcomment %}
 {% capture example %}
-
 <blockquote class="blockquote">
   <p class="mb-0">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt sequi eos ratione.</p>
 </blockquote>
@@ -284,8 +287,8 @@ di un `<blockquote class="blockquote">` come la citazione.
 Aggiungi un `<footer class="blockquote-footer">` per identificare la fonte.
 Includi il nome delle fonte di origine in `<cite>`.
 
+{% comment %}Example name: Citazioni con fonte{% endcomment %}
 {% capture example %}
-
 <blockquote class="blockquote">
   <p class="mb-0">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt sequi eos ratione.</p>
   <footer class="blockquote-footer">Nome Cognome da <cite title="Titolo fonte">Titolo fonte</cite></footer>
@@ -297,16 +300,16 @@ Includi il nome delle fonte di origine in `<cite>`.
 Utilizza le utilità di testo necessarie per modificare l'allineamento del tuo
 blockquote.
 
+{% comment %}Example name: Citazione, centrata{% endcomment %}
 {% capture example %}
-
 <blockquote class="blockquote text-center">
   <p class="mb-0">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt sequi eos ratione.</p>
   <footer class="blockquote-footer">Nome Cognome da <cite title="Titolo fonte">Titolo fonte</cite></footer>
 </blockquote>
 {% endcapture %}{% include example.html content=example %}
 
+{% comment %}Example name: Citazione, a destra{% endcomment %}
 {% capture example %}
-
 <blockquote class="blockquote text-end">
   <p class="mb-0">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt sequi eos ratione.</p>
   <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
@@ -315,10 +318,10 @@ blockquote.
 
 ### Semplice
 
-Aggiungendo la classe `.blockquote-simple` si ottiene una versione card del Blockquote.
+Aggiungendo la classe `.blockquote-simple` si ottiene una versione base del Blockquote.
 
+{% comment %}Example name: Citazione, base{% endcomment %}
 {% capture example %}
-
 <blockquote class="blockquote blockquote-simple">
   <p class="mb-0">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt sequi eos ratione.</p>
 </blockquote>
@@ -328,8 +331,8 @@ Aggiungendo la classe `.blockquote-simple` si ottiene una versione card del Bloc
 
 Aggiungendo la classe `.blockquote-card` si ottiene un Blockquote di tipo card.
 
+{% comment %}Example name: Citazione, card{% endcomment %}
 {% capture example %}
-
 <blockquote class="blockquote blockquote-card">
   <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt sequi eos ratione.</p>
   <footer class="blockquote-footer"><cite title="Titolo fonte">Titolo fonte</cite></footer>
@@ -338,8 +341,8 @@ Aggiungendo la classe `.blockquote-card` si ottiene un Blockquote di tipo card.
 
 Aggiungendo un'ulteriore classe `.dark` si ottiene un Blockquote card scuro.
 
+{% comment %}Example name: Citazione, card con sfondo scuro{% endcomment %}
 {% capture example %}
-
 <blockquote class="blockquote blockquote-card dark">
   <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt sequi eos ratione.</p>
   <footer class="blockquote-footer"><cite title="Titolo fonte">Titolo fonte</cite></footer>
@@ -349,19 +352,19 @@ Aggiungendo un'ulteriore classe `.dark` si ottiene un Blockquote card scuro.
 ## Liste
 
 Rimuovi il predefinito `list-style` e il margine sinistro sugli elementi
-elenco (solo per i figli diretti). **Questo si applica solo agli elementi dellas
+elenco (solo per i figli diretti). **Questo si applica solo agli elementi della 
 lista che sono figli diretti**, il che significa che dovrai aggiungere la classe
 per tutti gli elenchi annidati.
 
+{% comment %}Example name: Lista senza stile{% endcomment %}
 {% capture example %}
-
 <ul class="list-unstyled">
   <li>Lorem ipsum dolor sit amet</li>
   <li>Consectetur adipiscing elit</li>
   <li>Integer molestie lorem at massa</li>
   <li>Facilisis in pretium nisl aliquet</li>
   <li>Nulla volutpat aliquam velit
-    <ul>
+    <ul class="list-unstyled">
       <li>Phasellus iaculis neque</li>
       <li>Purus sodales ultricies</li>
       <li>Vestibulum laoreet porttitor sem</li>
@@ -379,8 +382,8 @@ per tutti gli elenchi annidati.
 Rimuovi i punti elenco di una lista e applica un leggero `margin` con una
 combinazione di due classi, `.list-inline` e `.list-inline-item`.
 
+{% comment %}Example name: Lista inline{% endcomment %}
 {% capture example %}
-
 <ul class="list-inline">
   <li class="list-inline-item">Lorem ipsum</li>
   <li class="list-inline-item">Phasellus iaculis</li>
@@ -395,8 +398,8 @@ predefinite del nostro sistema di griglia. Per termini più lunghi, puoi
 facoltativamente aggiungere la classe `.text-truncate` per troncare il testo
 con un `ellipsis`.
 
+{% comment %}Example name: Lista, allineamento descrizione{% endcomment %}
 {% capture example %}
-
 <dl class="row">
   <dt class="col-sm-3">Lista descrizioni</dt>
   <dd class="col-sm-9">Una lista di discrezioni è lo strumento ideale per definire dei termini.</dd>

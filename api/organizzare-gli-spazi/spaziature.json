@@ -1,0 +1,6 @@
+[
+    {
+        "name": "Centratura orizzontale",
+        "content": "\n  <div class=\"mx-auto border bg-dark text-white text-center\" style=\"width: 200px;\">\n    Elemento centrato\n  </div>\n"
+    }
+]

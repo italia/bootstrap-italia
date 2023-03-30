@@ -1,18 +1,14 @@
 [
     {
-        "name": "torna-indietro-1",
+        "name": "Link",
         "content": "\n<a href=\"#\" class=\"go-back\" data-bs-toggle=\"historyback\"><svg class=\"icon icon-sm icon-primary me-2\"><use href=\"/dist/svg/sprites.svg#it-arrow-left\"></use></svg> Torna indietro</a>\n"
     },
     {
-        "name": "torna-indietro-2",
-        "content": "\n<button type=\"button\" class=\"btn btn-primary go-back\" data-bs-toggle=\"historyback\"><svg class=\"icon icon-sm icon-white me-2\"><use href=\"/dist/svg/sprites.svg#it-arrow-left\"></use></svg> Torna indietro</button>\n"
+        "name": "Pulsanti con freccia",
+        "content": "\n<button type=\"button\" class=\"btn btn-primary go-back\" data-bs-toggle=\"historyback\"><svg class=\"icon icon-sm icon-white me-2\"><use href=\"/dist/svg/sprites.svg#it-arrow-left\"></use></svg> Torna indietro</button>\n<button type=\"button\" class=\"btn btn-primary go-back\" data-bs-toggle=\"historyback\"><svg class=\"icon icon-sm icon-white me-2\"><use href=\"/dist/svg/sprites.svg#it-arrow-up\"></use></svg> Livello superiore</button>\n"
     },
     {
-        "name": "torna-indietro-3",
-        "content": "\n<button type=\"button\" class=\"btn btn-primary go-back\" data-bs-toggle=\"historyback\"><svg class=\"icon icon-sm icon-white me-2\"><use href=\"/dist/svg/sprites.svg#it-arrow-up\"></use></svg> Livello superiore</button>\n"
-    },
-    {
-        "name": "torna-indietro-4",
+        "name": "Pulsanti, solo icona",
         "content": "\n<button type=\"button\" class=\"btn btn-primary go-back\" data-bs-toggle=\"historyback\"><svg class=\"icon icon-sm icon-white\"><use href=\"/dist/svg/sprites.svg#it-arrow-left\"></use></svg><span class=\"visually-hidden\">Torna indietro</span></button>\n<button type=\"button\" class=\"btn btn-primary go-back\" data-bs-toggle=\"historyback\"><svg class=\"icon icon-sm icon-white\"><use href=\"/dist/svg/sprites.svg#it-arrow-up\"></use></svg><span class=\"visually-hidden\">Livello superiore</span></button>\n"
     }
 ]
