@@ -418,8 +418,11 @@ di ottenere il suo consenso in modo esplicito e consapevole alla riproduzione de
       </div>
       <p>Questo contenuto è ospitato da un sito di terze parti. Mostrando il contenuto esterno accetti i <a href="https://www.youtube.com/t/terms" class="text-white">termini e le condizioni di youtube.com.</a></p>
       <div class="acceptoverlay-buttons bg-dark">
+        <div class="form-check">
+          <input id="chk-remember" type="checkbox">
+          <label for="chk-remember">Ricorda la mia scelta</label>
+        </div>
         <button type="button" class="btn btn-primary">Accetta</button>
-        <button type="button" class="btn btn-primary">Accetta e ricorda la mia scelta</button>
       </div>
     </div>
   </div>

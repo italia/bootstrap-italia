@@ -54,9 +54,13 @@
 }
 
 .vjs-transcription {
-  max-width: 75ch;
+  display: flex;
+  justify-content: center;
   border: none;
   .accordion-item {
-    border: none;
+    width: 100%;
+    @include media-breakpoint-up(lg) {
+      width: 75ch;
+    }
   }
 }

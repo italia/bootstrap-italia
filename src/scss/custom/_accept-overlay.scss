@@ -2,6 +2,7 @@
 
 .acceptoverlayable {
   position: relative;
+  min-height: 400px;
 }
 
 .acceptoverlay {
@@ -18,6 +19,10 @@
   justify-content: center;
   flex-wrap: wrap;
   align-items: flex-start;
+
+  label {
+    color: $white;
+  }
 
   &[aria-hidden='true'] {
     display: none;
