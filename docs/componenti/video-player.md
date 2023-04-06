@@ -374,33 +374,9 @@ i video già disponibili su queste piattaforme, senza doverli caricare sul propr
 Tuttavia, è importante tenere in considerazione la questione della privacy: 
 quando si incorporano video di terze parti, si può finire per condividere con queste 
 piattaforme i dati degli utenti che visualizzano i video, come ad esempio le informazioni 
-sulla navigazione o l'indirizzo IP. È quindi importante valutare attentamente l'utilizzo 
-di questa funzionalità e bisogna adottare misure di protezione della privacy degli utenti.
-
-{% capture example %}
-<div class="row">
-  <video controls data-bs-video id="video-youtube"
-    class="video-js"
-    width="640" height="264"
-    data-setup='{ "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/watch?v=dQVy8DLPJbY"}] }'>
-  </video>
-  <div class="vjs-transcription accordion">
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="transcription-head8">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#transcription8" aria-expanded="true" aria-controls="transcription">
-          Trascrizione
-        </button>
-      </h2>
-      <div id="transcription8" class="accordion-collapse collapse" role="region" aria-labelledby="transcription-head8">
-        <div class="accordion-body">
-          Vestibulum hendrerit ultrices nibh, sed pharetra lacus ultrices eget. Morbi et ipsum et sapien dapibus facilisis. Integer eget semper nibh. Proin enim nulla, egestas ac rutrum eget, ullamcorper nec turpis.
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-{% endcapture %}{% include example.html content=example %}
-
+sulla navigazione o l'indirizzo IP. È quindi importante l'utilizzo di questa 
+funzionalità assieme al componente di accettazione del consenso per garantire la 
+protezione della privacy degli utenti.
 
 ### Attivazione dell'overlay di consenso
 
@@ -410,6 +386,13 @@ L'overlay per il consenso consente di informare l'utente sui cookie utilizzati e
 di ottenere il suo consenso in modo esplicito e consapevole alla riproduzione del video
 
 {% capture example %}
+<script>
+  const loadYouTubeVideo = function(videoUrl) {
+    const videoEl = document.getElementById("vid1");
+    const video = bootstrap.VideoPlayer.getOrCreateInstance(videoEl);
+    video.setYouTubeVideo(videoUrl);
+  }
+</script>
 <div class="row acceptoverlayable">
   <div class="acceptoverlay acceptoverlay-primary fade show" id="acceptoverlay1">
     <div class="acceptoverlay-inner">
@@ -422,15 +405,15 @@ di ottenere il suo consenso in modo esplicito e consapevole alla riproduzione de
           <input id="chk-remember" type="checkbox">
           <label for="chk-remember">Ricorda la mia scelta</label>
         </div>
-        <button type="button" class="btn btn-primary">Accetta</button>
+        <button type="button" data-bs-accept-from="https://www.youtube.com" class="btn btn-primary" 
+        onclick="loadYouTubeVideo('https://www.youtube.com/watch?v=dQVy8DLPJbY')">Accetta</button>
       </div>
     </div>
   </div>
   <div class="row">
     <video controls data-bs-video id="vid1"
       class="video-js"
-      width="640" height="264"
-      data-setup='{ "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/watch?v=dQVy8DLPJbY"}] }'>
+      width="640" height="264">
     </video>
     <div class="vjs-transcription accordion">
       <div class="accordion-item">
