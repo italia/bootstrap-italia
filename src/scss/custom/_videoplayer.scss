@@ -3,50 +3,21 @@
 /* stylelint-enable */
 
 .vjs-theme-bootstrap-italia {
-  *, :after, :before {}
-  
   .vjs-big-play-button {
     background-color: $primary;
   }
-  
   &:hover .vjs-big-play-button,
   &.vjs-big-play-button:focus {
     background-color: $primary;
   }
-  
   .vjs-control-bar {
     background-color: $primary;
     font-size: 1.1em;
     @include media-breakpoint-up(lg) {
-        min-height: 48px;
-        font-size: 1rem;
+      min-height: 48px;
+      font-size: 1rem;
     }
   }
-  
-  .vjs-volume-panel {}
-  
-  .vjs-time-control {}
-  
-  .vjs-progress-holder {}
-  
-  .vjs-play-progress {}
-  
-  .vjs-time-tooltip {}
-  
-  .vjs-progress-control {}
-  
-  .vjs-menu-button-popup {}
-  
-  .vjs-modal-dialog {}
-  
-  /* Responsive utility */
-  &.vjs-layout-tiny {}
-  &.vjs-layout-x-small {}
-  &.vjs-layout-small {}
-  &.vjs-layout-medium {}
-  &.vjs-layout-large {}
-  &.vjs-layout-x-large {}
-  &.vjs-layout-x-huge {}
 }
 
 .acceptoverlay + .vjs-fluid {

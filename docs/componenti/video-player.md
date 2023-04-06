@@ -393,8 +393,8 @@ di ottenere il suo consenso in modo esplicito e consapevole alla riproduzione de
     video.setYouTubeVideo(videoUrl);
   }
 </script>
-<div class="row acceptoverlayable">
-  <div class="acceptoverlay acceptoverlay-primary fade show" id="acceptoverlay1">
+<div class="row acceptoverlayable" data-bs-accept-from="https://www.youtube.com">
+  <div class="acceptoverlay acceptoverlay-primary fade show">
     <div class="acceptoverlay-inner">
       <div class="acceptoverlay-icon">
         <svg class="icon icon-xl"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-video"></use></svg>
@@ -405,7 +405,7 @@ di ottenere il suo consenso in modo esplicito e consapevole alla riproduzione de
           <input id="chk-remember" type="checkbox">
           <label for="chk-remember">Ricorda la mia scelta</label>
         </div>
-        <button type="button" data-bs-accept-from="https://www.youtube.com" class="btn btn-primary" 
+        <button type="button" class="btn btn-primary" 
         onclick="loadYouTubeVideo('https://www.youtube.com/watch?v=dQVy8DLPJbY')">Accetta</button>
       </div>
     </div>
