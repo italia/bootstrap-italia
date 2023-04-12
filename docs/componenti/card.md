@@ -47,7 +47,7 @@ Esempio di card semplice con titolo e testo:
 
 #### Card semplice su più colonne
 
-{% comment %}Example name: Bade, su più colonne{% endcomment %}
+{% comment %}Example name: Base, su più colonne{% endcomment %}
 {% capture example %}
 
 <div class="row">
