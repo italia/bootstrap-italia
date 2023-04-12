@@ -218,7 +218,7 @@ Per creare pulsanti o gruppi di pulsanti a tutta larghezza, come i _block button
 {% capture example %}
 
 <div class="d-grid gap-2">
-  <button class="btn btn-primary btn-me" type="button">Primary</button>
+  <button class="btn btn-primary" type="button">Primary</button>
   <button class="btn btn-secondary" type="button">Secondary</button>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -229,7 +229,7 @@ In questo caso è stata implemenentata una variante responsive che visualizza i 
 {% capture example %}
 
 <div class="d-grid gap-2 d-md-block">
-  <button class="btn btn-primary btn-me" type="button">Primary</button>
+  <button class="btn btn-primary" type="button">Primary</button>
   <button class="btn btn-secondary" type="button">Secondary</button>
 </div>
 {% endcapture %}{% include example.html content=example %}
