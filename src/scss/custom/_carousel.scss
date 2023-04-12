@@ -250,6 +250,7 @@
     // Landscape abstract
     &.it-carousel-landscape-abstract {
       max-width: #{map-get($container-max-widths, xl)};
+      background-color: $white;
     }
     // 3 col card
     &.it-carousel-landscape-abstract-3 {
