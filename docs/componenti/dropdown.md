@@ -33,7 +33,7 @@ Il design di default dei dropdown richiede l'applicazione della classe `.btn-dro
 {% comment %}Example name: Base, con pulsante{% endcomment %}
 {% capture example %}
 
-<div class="dropdown">
+<div class="dropdown text-center">
   <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Apri dropdown
     <svg class="icon-expand icon icon-sm icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
@@ -111,7 +111,7 @@ Lo stesso vale per gli elementi `<a>`:
 {% comment %}Example name: Link{% endcomment %}
 {% capture example %}
 
-<div class="dropdown">
+<div class="dropdown text-center">
   <a class="btn btn-dropdown dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Apri dropdown
     <svg class="icon-expand icon icon-sm icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
@@ -135,7 +135,7 @@ Per aprire le voci di menu verso l'alto aggiungere la classe `.dropup` all'eleme
 {% comment %}Example name: Dropup, si apre verso l'alto{% endcomment %}
 {% capture example %}
 
-<div class="dropdown dropup">
+<div class="dropdown dropup text-center">
   <a class="btn btn-dropdown dropdown-toggle" href="#" role="button" id="dropdownMenuDropup" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Apri dropup
     <svg class="icon-expand icon icon-sm icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
@@ -159,7 +159,7 @@ Per aprire le voci di menu verso destra aggiungere la classe `.dropend` all'elem
 {% comment %}Example name: Dropend, si apre a destra{% endcomment %}
 {% capture example %}
 
-<div class="dropdown dropend">
+<div class="dropdown dropend text-center">
   <a class="btn btn-dropdown dropdown-toggle" href="#" role="button" id="dropdownMenuDropright" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Apri dropend
     <svg class="icon-expand icon icon-sm icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
@@ -183,7 +183,7 @@ Per aprire le voci di menu verso sinistra aggiungere la classe `.dropstart` all'
 {% comment %}Example name: Dropstart, si apre a sinistra{% endcomment %}
 {% capture example %}
 
-<div class="dropdown dropstart">
+<div class="dropdown dropstart text-center">
   <a class="btn btn-dropdown dropdown-toggle" href="#" role="button" id="dropdownMenuDropleft" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     <svg class="icon-expand icon icon-sm icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
     Apri dropstart
