@@ -41,10 +41,10 @@
     },
     {
         "name": "A tutta larghezza",
-        "content": "\n\n<div class=\"d-grid gap-2\">\n  <button class=\"btn btn-primary btn-me\" type=\"button\">Primary</button>\n  <button class=\"btn btn-secondary\" type=\"button\">Secondary</button>\n</div>\n"
+        "content": "\n\n<div class=\"d-grid gap-2\">\n  <button class=\"btn btn-primary\" type=\"button\">Primary</button>\n  <button class=\"btn btn-secondary\" type=\"button\">Secondary</button>\n</div>\n"
     },
     {
         "name": "A tutta larghezza, solo su mobile",
-        "content": "\n\n<div class=\"d-grid gap-2 d-md-block\">\n  <button class=\"btn btn-primary btn-me\" type=\"button\">Primary</button>\n  <button class=\"btn btn-secondary\" type=\"button\">Secondary</button>\n</div>\n"
+        "content": "\n\n<div class=\"d-grid gap-2 d-md-block\">\n  <button class=\"btn btn-primary\" type=\"button\">Primary</button>\n  <button class=\"btn btn-secondary\" type=\"button\">Secondary</button>\n</div>\n"
     }
 ]
