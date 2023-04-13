@@ -26,7 +26,7 @@ Tuttavia l'implementazione degli accordion va eseguita tenendo conto del contest
 
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
-{% comment %}Example name: Base, elementi richiudibili{% endcomment %}
+{% comment %}Example name: Base{% endcomment %}
 {% capture example %}
 
 <div class="accordion" id="collapseExample">

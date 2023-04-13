@@ -13,6 +13,7 @@ Puoi scegliere tra `.align-baseline`, `.align-top`, `.align-middle`, `.align-bot
 
 Con elementi inline:
 
+{% comment %}Example name: Con elementi inline{% endcomment %}
 {% capture example %}
 <span class="bg-primary text-white p-1 align-baseline">baseline</span>
 <span class="bg-primary text-white p-1 align-top">top</span>
@@ -24,8 +25,8 @@ Con elementi inline:
 
 Con le celle di tabella:
 
+{% comment %}Example name: Con celle di tabella{% endcomment %}
 {% capture example %}
-
 <table style="height: 100px;" class="table table-bordered">
   <tbody>
     <tr>

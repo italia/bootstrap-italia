@@ -17,8 +17,8 @@ I collegamenti della paginazione sono contenuti per praticità in un elemento `<
 Poiché è molto probabile che la pagina possa contenere più di un elemento `<nav class="pagination-wrapper">` è consigliabile inserire un attributo `aria-label` con la descrizione del suo scopo. Ad esempio, se il componente di impaginazione viene utilizzato per navigare tra una serie di risultati di ricerca, un'etichetta appropriata potrebbe essere `aria-label="Pagine dei risultati di ricerca"`.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
+{% comment %}Example name: Base{% endcomment %}
 {% capture example %}
-
 <nav class="pagination-wrapper" aria-label="Esempio di navigazione della pagina">
   <ul class="pagination">
     <li class="page-item disabled">
@@ -56,8 +56,8 @@ La classe `.disabled` usa `pointer-events: none` per provare a disabilitare l'at
 In alternativa per la paginazione si può sostituire il link disabilitato con uno `<span>` avente classe `.page-link` e contenuto in un `<li>` con classe `.nolink` (es.: `<li class="page-item"><span class="page-link">1</span></li>`).
 {% endcapture %}{% include callout.html content=callout type="warning" %}
 
+{% comment %}Example name: Con stato disabilitato{% endcomment %}
 {% capture example %}
-
 <nav class="pagination-wrapper" aria-label="Esempio di paginazione">
   <ul class="pagination">
     <li class="page-item disabled">
@@ -94,8 +94,8 @@ Sui dispositivi mobile la paginazione è centrata per default.
 
 Per centrare la navigazione aggiungere la classe `justify-content-center` al tag `<nav>`.
 
+{% comment %}Example name: Navigazione centrata{% endcomment %}
 {% capture example %}
-
 <nav class="pagination-wrapper justify-content-center" aria-label="Navigazione centrata">
   <ul class="pagination">
     <li class="page-item disabled">
@@ -125,8 +125,8 @@ Per centrare la navigazione aggiungere la classe `justify-content-center` al tag
 
 Per allineare a destra la navigazione aggiungere la classe `justify-content-end` al tag `<nav>.`
 
+{% comment %}Example name: Navigazione a destra{% endcomment %}
 {% capture example %}
-
 <nav class="pagination-wrapper justify-content-end" aria-label="Navigazione allineata a destra">
   <ul class="pagination">
     <li class="page-item disabled">
@@ -156,8 +156,8 @@ Per allineare a destra la navigazione aggiungere la classe `justify-content-end`
 
 Con i dovuti accorgimenti sopraelencati e inserendo alcune classi delle [utilità display]({{ site.baseurl }}/docs/organizzare-gli-spazi/display/) si può trasformare la paginazione in base alla risoluzione del dispositivo in uso dell'utente.
 
+{% comment %}Example name: Navigazione responsive{% endcomment %}
 {% capture example %}
-
 <nav class="pagination-wrapper" aria-label="Esempio di navigazione responsive della pagina">
   <ul class="pagination justify-content-center">
     <li class="page-item">
@@ -201,8 +201,8 @@ La paginazione base può essere integrata con elementi aggiuntivi per rendere pi
 
 Quando è presente un grande numero di pagine è consigliabile visualizzare unicamente le pagine più prossime a quella corrente, inserendo delle ellissi (...) fra queste e la prima ed ultima pagina. Non essendo collegate a nessuna pagina le ellissi vanno inserite in un tag `<span>`.
 
+{% comment %}Example name: Con funzionalità più{% endcomment %}
 {% capture example %}
-
 <nav class="pagination-wrapper" aria-label="Esempio di navigazione con ellissi/more">
   <ul class="pagination">
     <li class="page-item">
@@ -242,8 +242,8 @@ Quando è presente un grande numero di pagine è consigliabile visualizzare unic
 
 La funzionalità di changer permette di scegliere da un dropdown la quantità di record da visualizzare in una pagina.
 
+{% comment %}Example name: Con funzionalità cambia pagina{% endcomment %}
 {% capture example %}
-
 <nav class="pagination-wrapper" aria-label="Esempio di navigazione con page changer">
   <ul class="pagination">
     <li class="page-item">
@@ -296,8 +296,8 @@ La funzionalità di changer permette di scegliere da un dropdown la quantità di
 
 Con l'elemento aggiuntivo "Jump to page" l'utente può specificare un numero di pagina concreto.
 
+{% comment %}Example name: Con funzionalità salta alla pagina{% endcomment %}
 {% capture example %}
-
 <nav class="pagination-wrapper" aria-label="Esempio di navigazione con jump to page">
   <ul class="pagination">
     <li class="page-item">
@@ -337,8 +337,8 @@ Con l'elemento aggiuntivo "Jump to page" l'utente può specificare un numero di 
 
 La paginazione in versione "Simple mode" è ottimizzata per i dispositivi mobile. Può essere utilizzata anche su tablet e desktop quando il numero di pagine è ridotto.
 
+{% comment %}Example name: Modalità semplificata mobile{% endcomment %}
 {% capture example %}
-
 <nav class="pagination-wrapper" aria-label="Esempio di navigazione simple mode">
   <ul class="pagination" aria-label="Pagina 1 di 5">
     <li class="page-item disabled">
@@ -368,8 +368,8 @@ La paginazione in versione "Simple mode" è ottimizzata per i dispositivi mobile
 Le icone _chevron_ utilizzate come link di navigazione possono essere sostituite da link testuali come "precedente" e "successiva". In tal caso al tag `<a>` contenente il testo dovrà essere aggiunta la classe `.text`. Es: `<a class="page-link text" href="#">Precedente</a>`.
 Notare come sia stato inserito il testo "Pagina" in un elemento `<span class="visually-hidden">` invisibile su schermo ma enunciabile dagli screen reader per facilitare la comprensione agli utenti che utilizzano tecnologie assistive.
 
+{% comment %}Example name: Con link testuali{% endcomment %}
 {% capture example %}
-
 <nav class="pagination-wrapper" aria-label="Esempio di navigazione con link testuali">
   <ul class="pagination">
     <li class="page-item">
@@ -397,10 +397,10 @@ Notare come sia stato inserito il testo "Pagina" in un elemento `<span class="vi
 
 ### Total number
 
-Aggiungendo al classe `.pagination-total` al tag `<nav>` che contiene la paginazione è possibile indicare il numero totale di elementi o il il numero totale di elementi per pagina all'interno di un tag `<p>` collocato priam della chiusura del `<nav>`.
+Aggiungendo al classe `.pagination-total` al tag `<nav>` che contiene la paginazione è possibile indicare il numero totale di elementi o il numero totale di elementi per pagina all'interno di un tag `<p>` collocato priam della chiusura del `<nav>`.
 
+{% comment %}Example name: Con numero totale elementi{% endcomment %}
 {% capture example %}
-
 <nav class="pagination-wrapper pagination-total" aria-label="Esempio di navigazione con total number">
   <ul class="pagination">
     <li class="page-item">
@@ -433,8 +433,8 @@ Aggiungendo al classe `.pagination-total` al tag `<nav>` che contiene la paginaz
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
+{% comment %}Example name: Con numero totale elementi per pagina{% endcomment %}
 {% capture example %}
-
 <nav class="pagination-wrapper pagination-total" aria-label="Esempio di navigazione con total number">
   <ul class="pagination">
     <li class="page-item">

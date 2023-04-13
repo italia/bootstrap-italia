@@ -16,8 +16,8 @@ Assicurarsi di aggiungere alla label la classe **`active`** per impedire la sovr
 
 {% endcapture %}{% include callout.html content=callout type="alert" %}
 
+{% comment %}Example name: Base {% endcomment %}
 {% capture example %}
-
 <div class="form-group">
     <label class="active" for="dateStandard">Datepicker</label>
     <input type="date" id="dateStandard" name="dateStandard">

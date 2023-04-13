@@ -41,8 +41,8 @@ Le animazioni sono state realizzate con il plugin javascript [AnimeJs](https://a
 
 In questo esempio, la linea che limita la barra di navigazione è posizionata a sinistra. Su dispositivi con schermi a dimensione inferiore a 992px, la barra che permette di aprire la navigazione si sposterà in basso nella pagina.
 
+{% comment %}Example name: Posizionata a fondo pagina con linea a sinistra{% endcomment %}
 {% capture example %}
-
 <nav class="navbar it-navscroll-wrapper navbar-expand-lg it-bottom-navscroll it-left-side" data-bs-navscroll>
   <button class="custom-navbar-toggler" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" data-bs-toggle="navbarcollapsible" data-bs-target="#navbarNav"><span class="it-list"></span>1. Introduzione
   </button>
@@ -109,8 +109,8 @@ In questo esempio, la linea che limita la barra di navigazione è posizionata a 
 
 In questo esempio, la linea che limita la barra di navigazione è posizionata a destra. Su dispositivi con schermi a dimensione inferiore a 992px, la barra che permette di aprire la navigazione si sposterà in alto nella pagina.
 
+{% comment %}Example name: Posizionata in testa pagina con linea a destra{% endcomment %}
 {% capture example %}
-
 <nav class="navbar it-navscroll-wrapper navbar-expand-lg it-top-navscroll it-right-side" data-bs-navscroll>
   <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavB" aria-expanded="false" aria-label="Toggle navigation" data-bs-toggle="navbarcollapsible" data-bs-target="#navbarNavB"><span class="it-list"></span>1. Introduzione
   </button>
@@ -174,8 +174,8 @@ La Navscroll può mostrare una barra di avanzamento dello scorrimento del conten
 
 **[Esempio Navscroll con Progress bar >]({{ site.baseurl }}/docs/esempi/navscroll/){:target="\_blank"}**
 
+{% comment %}Example name: Con barra progresso{% endcomment %}
 {% capture example %}
-
 <nav class="navbar it-navscroll-wrapper navbar-expand-lg it-bottom-navscroll it-right-side" data-bs-navscroll>
   <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavProgress" aria-expanded="false"
     aria-label="Toggle navigation" data-bs-toggle="navbarcollapsible" data-bs-target="#navbarNavProgress">
@@ -258,8 +258,8 @@ Per cambiare il tema è sufficiente aggiungere le seguenti classi al tag `<nav c
 
 **`.theme-dark-desktop`**: background scuro, testi e links di colore bianco. (modifica unicamente la versione desktop del Navscroll)
 
+{% comment %}Example name: Variante scura{% endcomment %}
 {% capture example %}
-
 <nav class="navbar it-navscroll-wrapper navbar-expand-lg it-top-navscroll it-right-side theme-dark-mobile theme-dark-desk" data-bs-navscroll>
   <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavC" aria-expanded="false" aria-label="Toggle navigation" data-bs-toggle="navbarcollapsible" data-bs-target="#navbarNavC"><span class="it-list"></span>1. Introduzione
   </button>
@@ -325,8 +325,8 @@ Gli inline menù possono contenere liste di link di ogni tipo; nell'esempio che 
 
 Per maggiori informazioni, si può fare riferimento alla [documentazione delle Liste di link]({{ site.baseurl }}/docs/organizzare-i-contenuti/liste/#liste-per-menù-di-navigazione).
 
+{% comment %}Example name: Menu in linea{% endcomment %}
 {% capture example %}
-
 <nav class="inline-menu">
   <div class="link-list-wrapper">
     <ul class="link-list">

@@ -29,8 +29,8 @@ Per ottimizzare lo spazio disponibile l'elemento è fornito in tre versioni: gra
 
 La versione predefinita dell'elemento è quella con icone grandi e label.
 
+{% comment %}Example name: Grande{% endcomment %}
 {% capture example %}
-
 <nav class="toolbar">
   <ul>
     <li>
@@ -73,8 +73,8 @@ Applicando una classe aggiuntiva `.toolbar-medium` alla Toolbar si ottiene una v
 
 In questo caso le label, nascoste visivamente, devono essere contenute in uno `<span>` con classe `.visually-hidden`, per rendere disponibile la descrizione agli screen reader.
 
+{% comment %}Example name: Media{% endcomment %}
 {% capture example %}
-
 <nav class="toolbar toolbar-medium">
   <ul>
     <li>
@@ -123,8 +123,8 @@ Applicando una classe aggiuntiva `.toolbar-small` alla Toolbar si ottiene la ver
 
 Anche in questo caso le label, non visibile, devono essere contenute in uno `<span>` con classe `.visually-hidden`, per rendere disponibile la descrizione agli screen reader.
 
+{% comment %}Example name: Piccola{% endcomment %}
 {% capture example %}
-
 <nav class="toolbar toolbar-small">
   <ul>
     <li>
@@ -180,8 +180,8 @@ Gli elementi disabilitati avranno invece una classe `.disabled` con ulteriori ac
 
 Per aggiungere degli elementi divisori fra gli elementi utilizzare dei tag `<li>` con classe `.toolbar-divider`, aggiungendo il ruolo separatore `role="separator"` per indicarne la presenza agli screen reader e `aria-orientation="vertical"` per indicarne l'orientamento.
 
+{% comment %}Example name: Con divisori{% endcomment %}
 {% capture example %}
-
 <nav class="toolbar">
   <ul>
     <li>
@@ -228,8 +228,8 @@ I Badge possono essere utilizzati per indicare contenuti non letti o alert di va
 
 Nella versione grande i Badge possono contenere dei numeri. Il numero dei contenuti non letti o nuovi va indicato anche all'interno della label in uno `<span>` con classe `.visually-hidden` riservato agli screen reader.
 
+{% comment %}Example name: Grande con badge{% endcomment %}
 {% capture example %}
-
 <nav class="toolbar">
   <ul>
     <li>
@@ -272,8 +272,8 @@ Nella versione grande i Badge possono contenere dei numeri. Il numero dei conten
 
 Nella versione media i Badge non contengono numeri ma possono essere usati come alert generici. Il numero dei contenuti non letti o nuovi va indicato all'interno della label con classe `.visually-hidden` riservata agli screen reader.
 
+{% comment %}Example name: Media con badge{% endcomment %}
 {% capture example %}
-
 <nav class="toolbar toolbar-medium">
   <ul>
     <li>
@@ -328,8 +328,8 @@ Nella versione media i Badge non contengono numeri ma possono essere usati come 
 
 Nella versione piccola i Badge non contengono numeri ma possono essere usati come alert generici. Il numero dei contenuti non letti o nuovi va indicato all'interno della label con classe `.visually-hidden` riservata agli screen reader.
 
+{% comment %}Example name: Piccola con badge{% endcomment %}
 {% capture example %}
-
 <nav class="toolbar toolbar-small">
   <ul>
     <li>
@@ -386,8 +386,8 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
 
 ### Grande con Dropdown
 
+{% comment %}Example name: Grande con dropdown{% endcomment %}
 {% capture example %}
-
 <nav class="toolbar">
   <ul>
     <li>
@@ -483,8 +483,8 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
 
 ### Media con Dropdown
 
+{% comment %}Example name: Media con dropdown{% endcomment %}
 {% capture example %}
-
 <nav class="toolbar toolbar-medium">
   <ul>
     <li>
@@ -603,8 +603,8 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
 
 ### Piccola con Dropdown
 
+{% comment %}Example name: Piccola con dropdown{% endcomment %}
 {% capture example %}
-
 <nav class="toolbar toolbar-small">
   <ul>
     <li>
@@ -727,8 +727,8 @@ Applicando una classe aggiuntiva `.toolbar-vertical` alla Toolbar gli elementi v
 
 ### Grande verticale
 
+{% comment %}Example name: Grande verticale{% endcomment %}
 {% capture example %}
-
 <nav class="toolbar toolbar-vertical">
   <ul>
     <li>
@@ -781,8 +781,8 @@ Applicando una classe aggiuntiva `.toolbar-vertical` alla Toolbar gli elementi v
 
 ### Media verticale
 
+{% comment %}Example name: Media verticale{% endcomment %}
 {% capture example %}
-
 <nav class="toolbar toolbar-medium toolbar-vertical">
   <ul>
     <li>
@@ -841,8 +841,8 @@ Applicando una classe aggiuntiva `.toolbar-vertical` alla Toolbar gli elementi v
 
 ### Piccola verticale
 
+{% comment %}Example name: Piccola verticale{% endcomment %}
 {% capture example %}
-
 <nav class="toolbar toolbar-small toolbar-vertical">
   <ul>
     <li>

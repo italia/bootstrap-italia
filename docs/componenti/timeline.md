@@ -21,8 +21,8 @@ Il **PIN** ha tre varianti di classe per il suo contenitore `.it-pin-wrapper`:
 
 ## Esempio
 
+{% comment %}Example name: Base, verticale{% endcomment %}
 {% capture example %}
-
 <div class="it-timeline-wrapper">
   <div class="row">
     <div class="col-12">

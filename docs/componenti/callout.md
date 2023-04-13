@@ -21,6 +21,7 @@ Al titolo può essere aggiunta un'icona a scelta fra quelle disponibili, avendo 
 Nel caso l'icona comunicasse visivamente contenuti non disponibili nel testo (ad esempio un allarme o una conferma) questa andrà affiancata da un testo riservato agli screen reader: `<span class="visually-hidden">Testo alternativo</span>`
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
+{% comment %}Example name: Testo{% endcomment %}
 {% capture example %}
 
 <div class="callout">
@@ -35,6 +36,7 @@ Al Callout può essere aggiunta una classe che determina il colore del bordo e d
 
 Aggiungere la classe `.success` per indicare una procedura andata a buon fine.
 
+{% comment %}Example name: Successo{% endcomment %}
 {% capture example %}
 
 <div class="callout success">
@@ -47,6 +49,7 @@ Aggiungere la classe `.success` per indicare una procedura andata a buon fine.
 
 Aggiungere la classe `.warning` per indicare una procedura o testo che richiede l'attenzione dell'utente.
 
+{% comment %}Example name: Attenzione{% endcomment %}
 {% capture example %}
 
 <div class="callout warning">
@@ -59,6 +62,7 @@ Aggiungere la classe `.warning` per indicare una procedura o testo che richiede 
 
 Aggiungere la classe `.danger` per indicare un errore o una procedura pericolosa o non consentita.
 
+{% comment %}Example name: Pericolo o errore{% endcomment %}
 {% capture example %}
 
 <div class="callout danger">
@@ -71,6 +75,7 @@ Aggiungere la classe `.danger` per indicare un errore o una procedura pericolosa
 
 Aggiungere la classe `.important` per attirare ulteriormente l'attenzione.
 
+{% comment %}Example name: Importante{% endcomment %}
 {% capture example %}
 
 <div class="callout important">
@@ -83,6 +88,7 @@ Aggiungere la classe `.important` per attirare ulteriormente l'attenzione.
 
 Aggiungere la classe `.note` per caratterizzare il Callout come una nota.
 
+{% comment %}Example name: Nota{% endcomment %}
 {% capture example %}
 
 <div class="callout note">
@@ -97,8 +103,8 @@ Aggiungendo la classe `.callout-highlight` si ottiene una differente versione de
 
 Per aumentare la dimensione di un paragrafo contenuto nel Callout applicare la classe `.callout-big-text` allo stesso.
 
+{% comment %}Example name: Testo, in evidenza{% endcomment %}
 {% capture example %}
-
 <div class="callout callout-highlight">
   <div class="callout-title">Titolo callout</div>
   <p class="callout-big-text">Maecenas at erat id sem interdum efficitur eu sed nunc. Mauris sit amet erat eget augue molestie malesuada ut sed ex. In sed dignissim elit.</p>
@@ -108,6 +114,7 @@ Per aumentare la dimensione di un paragrafo contenuto nel Callout applicare la c
 
 ### Highlight Success
 
+{% comment %}Example name: Successo, in evidenza{% endcomment %}
 {% capture example %}
 
 <div class="callout callout-highlight success">
@@ -119,6 +126,7 @@ Per aumentare la dimensione di un paragrafo contenuto nel Callout applicare la c
 
 ### Highlight Warning
 
+{% comment %}Example name: Attenzione, in evidenza{% endcomment %}
 {% capture example %}
 
 <div class="callout callout-highlight warning">
@@ -130,6 +138,7 @@ Per aumentare la dimensione di un paragrafo contenuto nel Callout applicare la c
 
 ### Highlight Danger
 
+{% comment %}Example name: Periocolo o errore, in evidenza{% endcomment %}
 {% capture example %}
 
 <div class="callout callout-highlight danger">
@@ -141,6 +150,7 @@ Per aumentare la dimensione di un paragrafo contenuto nel Callout applicare la c
 
 ### Highlight Important
 
+{% comment %}Example name: Importante, in evidenza{% endcomment %}
 {% capture example %}
 
 <div class="callout callout-highlight important">
@@ -152,6 +162,7 @@ Per aumentare la dimensione di un paragrafo contenuto nel Callout applicare la c
 
 ### Highlight Note
 
+{% comment %}Example name: Nota, in evidenza{% endcomment %}
 {% capture example %}
 
 <div class="callout callout-highlight note">
@@ -169,6 +180,7 @@ Come da esempio, è possibile aggiungere ulteriore testo all'interno di un <a hr
 
 Il pulsante di controllo del Collapse può essere affiancato da un link per download di PDF o altri tipi di documento, con relativa icona.
 
+{% comment %}Example name: Approfondimento{% endcomment %}
 {% capture example %}
 
 <div class="callout callout-more note">

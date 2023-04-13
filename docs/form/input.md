@@ -28,8 +28,8 @@ Quando si utilizza l'attributo `placeholder` o l'input parte già valorizzato as
 
 {% endcapture %}{% include callout.html content=callout type="danger" %}
 
+{% comment %}Example name: Varianti per tipo {% endcomment %}
 {% capture example %}
-
 <div>
   <div class="form-group">
     <label for="exampleInputText">Campo di tipo testuale</label>
@@ -58,8 +58,8 @@ Quando si utilizza l'attributo `placeholder` o l'input parte già valorizzato as
 
 Si può includere un'etichetta che si riposiziona automaticamente quando l'utente utilizza il campo di testo.
 
+{% comment %}Example name: Con etichetta {% endcomment %}
 {% capture example %}
-
 <div class="form-group">
   <label for="formGroupExampleInput">Etichetta di esempio</label>
   <input type="text" class="form-control" id="formGroupExampleInput">
@@ -68,8 +68,8 @@ Si può includere un'etichetta che si riposiziona automaticamente quando l'utent
 
 Si può abbinare all'etichetta un _placeholder_ (testo di esempio) per ulteriore chiarezza.
 
+{% comment %}Example name: Con etichetta e segnaposto {% endcomment %}
 {% capture example %}
-
 <div class="form-group">
   <label class="active" for="formGroupExampleInput2">Etichetta di esempio</label>
   <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Testo di esempio">
@@ -86,8 +86,8 @@ Il testo di aiuto deve essere esplicitamente associato agli elementi del mudulo 
 
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
+{% comment %}Example name: Con testo di aiuto {% endcomment %}
 {% capture example %}
-
 <div class="form-group">
   <label class="active" for="formGroupExampleInputWithHelp">Etichetta di esempio</label>
   <input
@@ -103,8 +103,8 @@ Il testo di aiuto deve essere esplicitamente associato agli elementi del mudulo 
 
 ### Input con icona o pulsanti
 
+{% comment %}Example name: Varianti con icona o pulsanti {% endcomment %}
 {% capture example %}
-
 <div class="form-group">
   <div class="input-group">
     <div class="input-group-prepend">
@@ -194,8 +194,8 @@ E' possibile personalizzare i testi dei messaggi riguardanti la robustezza della
   </tbody>
 </table>
 
+{% comment %}Example name: Password {% endcomment %}
 {% capture example %}
-
 <div>
   <div class="form-group">
     <label for="exampleInputPassword">Password con label, placeholder e testo di aiuto</label>
@@ -269,8 +269,8 @@ var passwordComponent = new bootstrap.InputPassword(inputElement, {
 
 Aggiungi l'attributo `disabled` ad un input per impedire la modifica del valore contenuto e non inviare i dati in esso contenuti.
 
+{% comment %}Example name: Disabilitato {% endcomment %}
 {% capture example %}
-
 <div class="form-group">
   <label for="input-text-disabled">Contenuto disabilitato</label>
   <input class="form-control" type="text" id="input-text-disabled" disabled>
@@ -281,8 +281,8 @@ Aggiungi l'attributo `disabled` ad un input per impedire la modifica del valore 
 
 Aggiungi l'attributo `readonly` ad un input per impedire la modifica del valore contenuto.
 
+{% comment %}Example name: Solo lettura {% endcomment %}
 {% capture example %}
-
 <div class="form-group">
   <label class="active" for="input-text-read-only">Contenuto in sola lettura</label>
   <input class="form-control" type="text" id="input-text-read-only" value="Sola lettura" readonly>
@@ -293,8 +293,8 @@ Aggiungi l'attributo `readonly` ad un input per impedire la modifica del valore 
 
 Se per qualche motivo vuoi avere gli elementi `<input readonly>` nella forma stilizzata come testo normale usa la classe `.form-control-plaintext` anziché `.form-control`.
 
+{% comment %}Example name: Solo lettura, normalizzato {% endcomment %}
 {% capture example %}
-
 <div>
   <div class="form-group">
     <label class="active" for="input-text-read-only-2">Contenuto in sola lettura</label>
@@ -325,8 +325,8 @@ L'elenco dei risultati generati dalla ricerca è una lista `<ul>` con classe `.a
 
 Il testo corrispondente alla ricerca (_"ite"_, nell'esempio) deve essere racchiuso in un tag `<mark>`.
 
+{% comment %}Example name: Ricerca con autocompletamento {% endcomment %}
 {% capture example %}
-
 <div class="form-group">
   <label for="autocomplete-one" class="visually-hidden">Cerca nel sito</label>
   <input type="search" class="autocomplete" placeholder="Testo da cercare"
@@ -396,8 +396,8 @@ Il testo corrispondente alla ricerca (_"ite"_, nell'esempio) deve essere racchiu
 
 Per ottenere una versione grande dell'Autocomplete, indicata ad esempio per intestazioni di pagina ed overlay dedicati, aggiungere la classe `.autocomplete-wrapper-big` al contenitore `.form-group`.
 
+{% comment %}Example name: Ricerca con autocompletamento grande {% endcomment %}
 {% capture example %}
-
 <div class="form-group autocomplete-wrapper-big">
   <label for="autocomplete-two" class="visually-hidden">Cerca nel sito</label>
   <input type="search" class="autocomplete" placeholder="Testo da cercare"
@@ -459,8 +459,8 @@ Questi sono i minimi dati necessari per il corretto funzionamento dell'autocompl
 
 Cerca una regione italiana per verificarne il comportamento.
 
+{% comment %}Example name: Ricerca con autocompletamento e dati {% endcomment %}
 {% capture example %}
-
 <div class="form-group">
   <label for="autocomplete-regioni" class="visually-hidden">Cerca nel sito</label>
   <input type="search" class="autocomplete" placeholder="Testo da cercare"
@@ -513,34 +513,30 @@ Per permettere agli utenti di inserire un testo esteso (ad esempio per lasciare 
 
 Includendo l'elemento all'interno di un `.form-group`, la label assumerà lo stesso comportamento dinamico dei campi di input.
 
+{% comment %}Example name: Area di testo {% endcomment %}
 {% capture example %}
-
-<div>
   <div class="form-group">
     <label for="exampleFormControlTextarea1">Esempio di area di testo</label>
     <textarea id="exampleFormControlTextarea1" rows="3"></textarea>
   </div>
-</div>
 {% endcapture %}{% include example.html content=example %}
-
-{% comment %}
 
 ### Dimensione
 
 È possibile modificare la dimensione dell'elemento utilizzando le classi `.form-control-lg` e `.form-control-sm`, che modificano la grandezza del carattere e la spaziatura interna.
 
+{% comment %}Example name: Varianti di dimensione {% endcomment %}
 {% capture example %}
-
-<div>
   <div class="form-group">
-    <label for="input-text-lg">.form-control-lg</label>
+    <label class="active" for="input-text-lg">Grande</label>
     <input type="text" class="form-control form-control-lg" id="input-text-lg" placeholder="Inserisci il tuo nome">
   </div>
+    <div class="form-group">
+    <label class="active" for="input-text-normal">Normale</label>
+    <input type="text" class="form-control" id="input-text-normal" placeholder="Inserisci il tuo nome">
+  </div>
   <div class="form-group">
-    <label for="input-text-lg">.form-control-sm</label>
+    <label class="active" for="input-text-lg">Piccolo</label>
     <input type="text" class="form-control form-control-sm" id="input-text-sm" placeholder="Inserisci il tuo nome">
   </div>
-</div>
 {% endcapture %}{% include example.html content=example %}
-
-{% endcomment %}

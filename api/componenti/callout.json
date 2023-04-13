@@ -1,54 +1,54 @@
 [
     {
-        "name": "callout-1",
+        "name": "Testo",
         "content": "\n\n<div class=\"callout\">\n  <div class=\"callout-title\"><svg class=\"icon\"><use href=\"/dist/svg/sprites.svg#it-info-circle\"></use></svg><span class=\"visually-hidden\">Confermato</span> Titolo callout</div>\n  <p>Maecenas vulputate ante dictum vestibulum volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non augue non purus vestibulum varius.</p>\n</div>\n"
     },
     {
-        "name": "callout-2",
+        "name": "Successo",
         "content": "\n\n<div class=\"callout success\">\n  <div class=\"callout-title\"><svg class=\"icon\"><use href=\"/dist/svg/sprites.svg#it-check-circle\"></use></svg>Usa</div>\n  <p>Maecenas vulputate ante dictum vestibulum volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non augue non purus vestibulum varius.</p>\n</div>\n"
     },
     {
-        "name": "callout-3",
+        "name": "Attenzione",
         "content": "\n\n<div class=\"callout warning\">\n  <div class=\"callout-title\"><svg class=\"icon\"><use href=\"/dist/svg/sprites.svg#it-help-circle\"></use></svg>Attenzione</div>\n  <p>Quisque ex eros, pellentesque vitae enim sed, pharetra tempus dolor. Donec eu nibh ac lacus luctus pellentesque. Duis interdum scelerisque magna nec malesuada.</p>\n</div>\n"
     },
     {
-        "name": "callout-4",
+        "name": "Pericolo o errore",
         "content": "\n\n<div class=\"callout danger\">\n  <div class=\"callout-title\"><svg class=\"icon\"><use href=\"/dist/svg/sprites.svg#it-close-circle\"></use></svg>Non usare</div>\n  <p>Quisque ex eros, pellentesque vitae enim sed, pharetra tempus dolor. Donec eu nibh ac lacus luctus pellentesque. Duis interdum scelerisque magna nec malesuada.</p>\n</div>\n"
     },
     {
-        "name": "callout-5",
+        "name": "Importante",
         "content": "\n\n<div class=\"callout important\">\n  <div class=\"callout-title\"><svg class=\"icon\"><use href=\"/dist/svg/sprites.svg#it-info-circle\"></use></svg>Importante</div>\n  <p>Quisque ex eros, pellentesque vitae enim sed, pharetra tempus dolor. Donec eu nibh ac lacus luctus pellentesque. Duis interdum scelerisque magna nec malesuada.</p>\n</div>\n"
     },
     {
-        "name": "callout-6",
+        "name": "Nota",
         "content": "\n\n<div class=\"callout note\">\n  <div class=\"callout-title\"><svg class=\"icon\"><use href=\"/dist/svg/sprites.svg#it-info-circle\"></use></svg>Note a riguardo</div>\n  <p>Quisque ex eros, pellentesque vitae enim sed, pharetra tempus dolor. Donec eu nibh ac lacus luctus pellentesque. Duis interdum scelerisque magna nec malesuada.</p>\n</div>\n"
     },
     {
-        "name": "callout-7",
-        "content": "\n\n<div class=\"callout callout-highlight\">\n  <div class=\"callout-title\">Titolo callout</div>\n  <p class=\"callout-big-text\">Maecenas at erat id sem interdum efficitur eu sed nunc. Mauris sit amet erat eget augue molestie malesuada ut sed ex. In sed dignissim elit.</p>\n  <p>Maecenas vulputate ante dictum vestibulum volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non augue non purus vestibulum varius. Maecenas ullamcorper <a href=\"#\">tincidunt nulla quis laoreet.</a></p>\n</div>\n"
+        "name": "Testo, in evidenza",
+        "content": "\n<div class=\"callout callout-highlight\">\n  <div class=\"callout-title\">Titolo callout</div>\n  <p class=\"callout-big-text\">Maecenas at erat id sem interdum efficitur eu sed nunc. Mauris sit amet erat eget augue molestie malesuada ut sed ex. In sed dignissim elit.</p>\n  <p>Maecenas vulputate ante dictum vestibulum volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non augue non purus vestibulum varius. Maecenas ullamcorper <a href=\"#\">tincidunt nulla quis laoreet.</a></p>\n</div>\n"
     },
     {
-        "name": "callout-8",
+        "name": "Successo, in evidenza",
         "content": "\n\n<div class=\"callout callout-highlight success\">\n  <div class=\"callout-title\"><svg class=\"icon\"><use href=\"/dist/svg/sprites.svg#it-check-circle\"></use></svg>Usa</div>\n  <p>Maecenas at erat id <strong>sem interdum efficitur eu sed nunc.</strong> Mauris sit amet erat eget augue molestie malesuada ut sed ex. In sed dignissim elit. Donec efficitur, sem eget vestibulum auctor, sem erat interdum magna, eu commodo odio mauris semper dolor.</p>\n  <p>Maecenas vulputate ante dictum <a href=\"#\">vestibulum volutpat</a>. Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit.</strong> Aenean non augue non purus vestibulum varius. Maecenas ullamcorper tincidunt nulla quis laoreet.</p>\n</div>\n"
     },
     {
-        "name": "callout-9",
+        "name": "Attenzione, in evidenza",
         "content": "\n\n<div class=\"callout callout-highlight warning\">\n  <div class=\"callout-title\"><svg class=\"icon\"><use href=\"/dist/svg/sprites.svg#it-help-circle\"></use></svg>Attenzione</div>\n  <p>Maecenas at erat id <strong>sem interdum efficitur eu sed nunc.</strong> Mauris sit amet erat eget augue molestie malesuada ut sed ex. In sed dignissim elit. Donec efficitur, sem eget vestibulum auctor, sem erat interdum magna, eu commodo odio mauris semper dolor.</p>\n  <p>Maecenas vulputate ante dictum <a href=\"#\">vestibulum volutpat</a>. Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit.</strong> Aenean non augue non purus vestibulum varius. Maecenas ullamcorper tincidunt nulla quis laoreet.</p>\n</div>\n"
     },
     {
-        "name": "callout-10",
+        "name": "Periocolo o errore, in evidenza",
         "content": "\n\n<div class=\"callout callout-highlight danger\">\n  <div class=\"callout-title\"><svg class=\"icon\"><use href=\"/dist/svg/sprites.svg#it-close-circle\"></use></svg>Non usare</div>\n  <p>Maecenas at erat id <strong>sem interdum efficitur eu sed nunc.</strong> Mauris sit amet erat eget augue molestie malesuada ut sed ex. In sed dignissim elit. Donec efficitur, sem eget vestibulum auctor, sem erat interdum magna, eu commodo odio mauris semper dolor.</p>\n  <p>Maecenas vulputate ante dictum <a href=\"#\">vestibulum volutpat</a>. Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit.</strong> Aenean non augue non purus vestibulum varius. Maecenas ullamcorper tincidunt nulla quis laoreet.</p>\n</div>\n"
     },
     {
-        "name": "callout-11",
+        "name": "Importante, in evidenza",
         "content": "\n\n<div class=\"callout callout-highlight important\">\n  <div class=\"callout-title\"><svg class=\"icon\"><use href=\"/dist/svg/sprites.svg#it-info-circle\"></use></svg>Importante</div>\n  <p>Maecenas at erat id <strong>sem interdum efficitur eu sed nunc.</strong> Mauris sit amet erat eget augue molestie malesuada ut sed ex. In sed dignissim elit. Donec efficitur, sem eget vestibulum auctor, sem erat interdum magna, eu commodo odio mauris semper dolor.</p>\n  <p>Maecenas vulputate ante dictum <a href=\"#\">vestibulum volutpat</a>. Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit.</strong> Aenean non augue non purus vestibulum varius. Maecenas ullamcorper tincidunt nulla quis laoreet.</p>\n</div>\n"
     },
     {
-        "name": "callout-12",
+        "name": "Nota, in evidenza",
         "content": "\n\n<div class=\"callout callout-highlight note\">\n  <div class=\"callout-title\"><svg class=\"icon\"><use href=\"/dist/svg/sprites.svg#it-info-circle\"></use></svg>Note</div>\n  <p>Maecenas at erat id <strong>sem interdum efficitur eu sed nunc.</strong> Mauris sit amet erat eget augue molestie malesuada ut sed ex. In sed dignissim elit. Donec efficitur, sem eget vestibulum auctor, sem erat interdum magna, eu commodo odio mauris semper dolor.</p>\n  <p>Maecenas vulputate ante dictum <a href=\"#\">vestibulum volutpat</a>. Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit.</strong> Aenean non augue non purus vestibulum varius. Maecenas ullamcorper tincidunt nulla quis laoreet.</p>\n</div>\n"
     },
     {
-        "name": "callout-13",
+        "name": "Approfondimento",
         "content": "\n\n<div class=\"callout callout-more note\">\n  <div class=\"callout-title\"><svg class=\"icon\"><use href=\"/dist/svg/sprites.svg#it-zoom-in\"></use></svg><span>Approfondimento</span></div>\n  <p>Quisque suscipit interdum augue non volutpat. Cras tristique arcu tortor. Mauris eu magna nibh. Curabitur malesuada neque in lectus sagittis accumsan. In vitae justo eros. Maecenas pellentesque lacinia ipsum vitae rhoncus. Vestibulum pretium tempor turpis, nec gravida eros viverra in. Proin dictum nibh ut semper tristique.</p>\n  <p>Maecenas at erat id <strong>sem interdum efficitur eu sed nunc.</strong> Mauris sit amet erat eget augue molestie malesuada ut sed ex. In sed dignissim elit. Donec efficitur, sem eget vestibulum auctor, sem erat interdum magna, eu commodo odio mauris semper dolor.</p>\n  <p>Maecenas vulputate ante dictum <a href=\"#\">vestibulum volutpat</a>. Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit.</strong> Aenean non augue non purus vestibulum varius. Maecenas ullamcorper tincidunt nulla quis laoreet.</p>\n  <div class=\"collapse-div\" id=\"collapseDiv1\">\n    <div class=\"collapse-header\" id=\"heading1\">\n      <button aria-controls=\"collapse1\" aria-expanded=\"false\" class=\"callout-more-toggle\" data-bs-target=\"#collapse1\" data-bs-toggle=\"collapse\">\n        Leggi tutto <span></span>\n      </button>\n      <a class=\"callout-more-download\" href=\"#\"><svg class=\"icon me-2\"><use href=\"/dist/svg/sprites.svg#it-download\"></use></svg><span class=\"visually-hidden\">PDF </span>Download</a>\n    </div>\n    <div aria-labelledby=\"heading1\" class=\"collapse\" id=\"collapse1\" role=\"tabpanel\">\n      <div class=\"collapse-body\">\n        <p>Aenean tortor enim, suscipit eget commodo at, imperdiet quis diam. Vestibulum non accumsan felis, at ultrices lorem. Pellentesque ac diam a ipsum cursus interdum id nec odio. Vestibulum nec congue mauris. Aliquam et dui purus. Mauris in imperdiet risus, sed blandit tellus. Donec posuere accumsan lacinia. Mauris dignissim, sem vel volutpat rhoncus, neque mi ullamcorper ante, vitae volutpat ipsum quam id purus. Duis tincidunt sodales nisl eget ultricies. Sed condimentum mi eu ex venenatis, quis bibendum dui ultrices. Quisque ex eros, pellentesque vitae enim sed, pharetra tempus dolor. Donec eu nibh ac lacus luctus pellentesque. Duis interdum scelerisque magna nec malesuada.</p>\n        <p>Maecenas at erat id <strong>sem interdum efficitur eu sed nunc.</strong> Mauris sit amet erat eget augue molestie malesuada ut sed ex. In sed dignissim elit. Donec efficitur, sem eget vestibulum auctor, sem erat interdum magna, eu commodo odio mauris semper dolor.</p>\n        <p>Maecenas vulputate ante dictum <a href=\"#\">vestibulum volutpat</a>. Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit.</strong> Aenean non augue non purus vestibulum varius. Maecenas ullamcorper tincidunt nulla quis laoreet.</p>\n      </div>\n    </div>\n  </div>\n</div>\n"
     }
 ]

@@ -14,11 +14,13 @@ Aggiungendo la classe `.chip-lg` al contenitore si ottiene una versione più gra
 
 L'azione richiesta per l'eliminazione della chip andrà associata al `<button>`.
 
+### Varianti standard e grandi
+
+{% comment %}Example name: Standard e grandi{% endcomment %}
 {% capture example %}
 
 <div class="row">
   <div class="col-12 col-md-6">
-    <h4>Versione Standard</h4>
     <p class="mt-4 mb-2">Solo testo</p>
     <div class="chip chip-simple">
       <span class="chip-label">Label</span>
@@ -53,7 +55,6 @@ L'azione richiesta per l'eliminazione della chip andrà associata al `<button>`.
     </div>
   </div>
   <div class="col-12 col-md-6">
-    <h4>Versione Grande</h4>
     <p class="mt-4 mb-2">Solo testo grande</p>
     <div class="chip chip-simple chip-lg">
       <span class="chip-label">Label</span>
@@ -94,6 +95,7 @@ L'azione richiesta per l'eliminazione della chip andrà associata al `<button>`.
 
 Gli stili definiti da Bootstrap Italia utilizzano un naming consistente con i temi di Bootstrap:
 
+{% comment %}Example name: Varianti di colore{% endcomment %}
 {% capture example %}
 
 {% for color in site.data.theme-colors %}
@@ -107,8 +109,8 @@ Gli stili definiti da Bootstrap Italia utilizzano un naming consistente con i te
 
 Aggiungendo la classe `.chip-disabled` al contenitore e l'attributo `disabled` al `<button>` si ottiene una chip disabilitata.
 
+{% comment %}Example name: Disabilitata{% endcomment %}
 {% capture example %}
-
 <div class="chip chip-simple chip-lg chip-disabled">
   <span class="chip-label">Label disabilitata</span>
 </div>
@@ -146,8 +148,8 @@ Aggiungendo la classe `.chip-disabled` al contenitore e l'attributo `disabled` a
 
 I gruppi di chip vengono visualizzati in linea.
 
+{% comment %}Example name: Gruppi{% endcomment %}
 {% capture example %}
-
 <div class="chip chip-simple">
   <span class="chip-label">Label</span>
 </div>

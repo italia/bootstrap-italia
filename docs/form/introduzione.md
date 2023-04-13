@@ -24,8 +24,8 @@ Strutture più complesse possono essere costruite usando il sistema a griglia, d
 
 Si può scegliere di dare una dimensione ad una colonna, ad esempio dandogli una classe `.col-md-6` per ottenere una certo design dal breakpoint `md` in su, mentre le restanti `.col-md` si divideranno il resto dello spazio.
 
+{% comment %}Example name: Dimensionamento colonne{% endcomment %}
 {% capture example %}
-
 <div>
   <div class="row">
     <div class="form-group col-md-6">
@@ -56,8 +56,8 @@ Si può scegliere di dare una dimensione ad una colonna, ad esempio dandogli una
 
 Ecco l'esempio di una struttura più complessa creata con il sistema a griglie.
 
+{% comment %}Example name: Con sistema a griglie{% endcomment %}
 {% capture example %}
-
 <div>
   <div class="row">
     <div class="form-group col-md-6">
@@ -125,8 +125,8 @@ Ecco l'esempio di una struttura più complessa creata con il sistema a griglie.
 
 L'esempio seguente usa una delle [utilità di flexbox]({{ site.baseurl }}/docs/organizzare-gli-spazi/flex/) per centrare verticalmente dal breakpoint `lg` in su il contenuto e cambiando `.col` con `.col-auto` in modo che le colonne occupino solo lo spazio necessario. In altre parole, la colonna si dimensiona in base al contenuto. È possibile usarlo anche quando sono presenti altre colonne con dimensioni specifiche (es.: `col-sm-3`).
 
+{% comment %}Example name: Auto-dimensionamento {% endcomment %}
 {% capture example %}
-
 <div class="row align-items-center">
   <div class="col-12 col-md-6 col-lg-auto mb-3">
     <label class="visually-hidden" for="inlineFormInput">Nome</label>
@@ -167,6 +167,7 @@ Le tecnologie assistive come gli screenreader avranno problemi con i tuoi moduli
 
 Aggiungi l'attributo booleano `disabled` su un input per impedire le interazioni dell'utente e renderlo più chiaro.
 
+{% comment %}Example name: Campo input disabilitato {% endcomment %}
 {% capture example %}
 <input class="form-control" id="disabledInput" type="text" value="Esempio di input disabilitato" aria-label="Label" disabled>
 {% endcapture %}{% include example.html content=example %}
@@ -175,8 +176,8 @@ Aggiungi l'attributo booleano `disabled` su un input per impedire le interazioni
 
 Aggiungi l'attributo `disabled` al `<fieldset>` per disabilitare tutti gli elementi del form contenuti.
 
+{% comment %}Example name: Form disabilitato {% endcomment %}
 {% capture example %}
-
 <div>
   <fieldset disabled aria-label="Form disabilitato">
     <legend class="mb-4">Esempio di form disabilitato</legend>
@@ -258,8 +259,8 @@ I campi che necessitano di validazione acquisiranno all'invio del form le classi
 
 Di seguito un esempio di form validato con Just Validate.
 
+{% comment %}Example name: Con validazione {% endcomment %}
 {% capture example %}
-
 <form class="needs-validation" id="justValidateForm">
   <div class="row mt-4">
     <div class="form-group col-md-3">

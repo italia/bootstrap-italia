@@ -1,30 +1,30 @@
 [
     {
-        "name": "testo-1",
-        "content": "\n\n<p class=\"text-start\">Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex communi. At nos hinc posthac, sitientis piros Afros. Petierunt uti sibi concilium totius Galliae in diem certam indicere. Cras mattis iudicium purus sit amet fermentum.</p>\n"
+        "name": "Allineato a sinistra",
+        "content": "\n<p class=\"text-start\">Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex communi. At nos hinc posthac, sitientis piros Afros. Petierunt uti sibi concilium totius Galliae in diem certam indicere. Cras mattis iudicium purus sit amet fermentum.</p>\n"
     },
     {
-        "name": "testo-2",
-        "content": "\n\n<p class=\"text-start\">Testo allineato a sinistra per tutte le dimensioni del viewport.</p>\n<p class=\"text-center\">Testo allineato al centro per tutte le dimensioni del viewport.</p>\n<p class=\"text-end\">Testo allineato a destra per tutte le dimensioni del viewport.</p>\n\n<p class=\"text-sm-left\">Testo allineato a sinistra per dimensioni SM (small) o maggiori.</p>\n<p class=\"text-md-left\">Testo allineato a sinistra per dimensioni MD (medium) o maggiori.</p>\n<p class=\"text-lg-left\">Testo allineato a sinistra per dimensioni LG (large) o maggiori.</p>\n<p class=\"text-xl-left\">Testo allineato a sinistra per dimensioni XL (extra-large) o maggiori.</p>\n"
+        "name": "Varianti di allineamento",
+        "content": "\n<p class=\"text-start\">Testo allineato a sinistra per tutte le dimensioni del viewport.</p>\n<p class=\"text-center\">Testo allineato al centro per tutte le dimensioni del viewport.</p>\n<p class=\"text-end\">Testo allineato a destra per tutte le dimensioni del viewport.</p>\n\n<p class=\"text-sm-left\">Testo allineato a sinistra per dimensioni SM (small) o maggiori.</p>\n<p class=\"text-md-left\">Testo allineato a sinistra per dimensioni MD (medium) o maggiori.</p>\n<p class=\"text-lg-left\">Testo allineato a sinistra per dimensioni LG (large) o maggiori.</p>\n<p class=\"text-xl-left\">Testo allineato a sinistra per dimensioni XL (extra-large) o maggiori.</p>\n"
     },
     {
-        "name": "testo-3",
-        "content": "\n\n<div class=\"text-nowrap bd-highlight\" style=\"width: 8rem;\">\n  Questo testo oltrepassa il contenitore.\n</div>\n"
+        "name": "Per esteso e overflow",
+        "content": "\n<div class=\"text-nowrap bd-highlight\" style=\"width: 8rem;\">\n  Questo testo oltrepassa il contenitore.\n</div>\n"
     },
     {
-        "name": "testo-4",
-        "content": "\n\n<!-- Block level -->\n<div class=\"row\">\n  <div class=\"col-2 text-truncate\">\n    Praeterea iter est quasdam res quas ex communi.\n  </div>\n</div>\n\n<!-- Inline level -->\n<span class=\"d-inline-block text-truncate\" style=\"max-width: 150px;\">\n  Praeterea iter est quasdam res quas ex communi.\n</span>\n"
+        "name": "Con troncamento in punti di sospensione",
+        "content": "\n<!-- Block level -->\n<div class=\"row\">\n  <div class=\"col-2 text-truncate\">\n    Praeterea iter est quasdam res quas ex communi.\n  </div>\n</div>\n\n<!-- Inline level -->\n<span class=\"d-inline-block text-truncate\" style=\"max-width: 150px;\">\n  Praeterea iter est quasdam res quas ex communi.\n</span>\n"
     },
     {
-        "name": "testo-5",
-        "content": "\n\n<p class=\"text-lowercase\">Testo tutto minuscolo.</p>\n<p class=\"text-uppercase\">Testo tutto maiuscolo.</p>\n<p class=\"text-capitalize\">Testo con prime lettere MaiuscOLE.</p>\n"
+        "name": "Trasformazioni",
+        "content": "\n<p class=\"text-lowercase\">Testo tutto minuscolo.</p>\n<p class=\"text-uppercase\">Testo tutto maiuscolo.</p>\n<p class=\"text-capitalize\">Testo con prime lettere MaiuscOLE.</p>\n"
     },
     {
-        "name": "testo-6",
-        "content": "\n\n<p class=\"fw-bold\">Testo in grassetto.</p>\n<p class=\"fw-semibold\">Testo in semi-grassetto.</p>\n<p class=\"fw-normal\">Testo normale.</p>\n<p class=\"fw-light\">Testo sottile.</p>\n<p class=\"fst-italic\">Testo in corsivo.</p>\n"
+        "name": "Stile",
+        "content": "\n<p class=\"fw-bold\">Testo in grassetto.</p>\n<p class=\"fw-semibold\">Testo in semi-grassetto.</p>\n<p class=\"fw-normal\">Testo normale.</p>\n<p class=\"fw-light\">Testo sottile.</p>\n<p class=\"fst-italic\">Testo in corsivo.</p>\n"
     },
     {
-        "name": "testo-7",
-        "content": "\n\n<p class=\"font-monospace\">Testo monospace</p>\n"
+        "name": "Monospaziato",
+        "content": "\n<p class=\"font-monospace\">Testo monospace</p>\n"
     }
 ]

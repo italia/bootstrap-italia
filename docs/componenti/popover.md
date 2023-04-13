@@ -51,6 +51,7 @@ var popover = new bootstrap.Popover(document.querySelector('.example-popover'), 
 })
 ```
 
+{% comment %}Example name: Base{% endcomment %}
 {% capture example %}
 <button type="button" class="btn btn-lg btn-danger fade show" data-bs-toggle="popover" title="Titolo del Popover" data-bs-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue.">Clicca per attivare/disattivare il popover</button>
 {% endcapture %}{% include example.html content=example %}
@@ -61,95 +62,42 @@ var popover = new bootstrap.Popover(document.querySelector('.example-popover'), 
 
 Sono disponibili quattro opzioni: allineato in alto, a destra, in basso e a sinistra.
 
-<div class="bd-example popover-demo">
-  <div class="bd-example-popovers">
-
-    <div class="container">
-      <div class="row">
-        <div class="col-12 col-md-4"></div>
-        <div class="col-12 col-md-4">
-          <button type="button" class="btn btn-secondary fade show" data-container="body" data-bs-toggle="popover" data-bs-placement="top" title="Titolo del Popover" data-bs-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue." style="width:100%;">
-            Popover in alto
-          </button>
-        </div>
-        <div class="col-12 col-md-4"></div>
-      </div>
-      <div class="row mt-4">
-        <div class="col-12 col-md-4">
-          <button type="button" class="btn btn-secondary fade show" data-container="body" data-bs-toggle="popover" data-bs-placement="right" title="Titolo del Popover" data-bs-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue." style="width:100%;">
-            Popover a destra
-          </button>
-        </div>
-        <div class="col-12 col-md-4"></div>
-        <div class="col-12 col-md-4 mt-4 mt-md-0">
-          <button type="button" class="btn btn-secondary fade show" data-container="body" data-bs-toggle="popover" data-bs-placement="left" title="Titolo del Popover" data-bs-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue." style="width:100%;">
-            Popover a sinistra
-          </button>
-        </div>
-      </div>
-      <div class="row mt-4">
-        <div class="col-12 col-md-4"></div>
-        <div class="col-12 col-md-4">
-          <button type="button" class="btn btn-secondary fade show" data-container="body" data-bs-toggle="popover" data-bs-placement="bottom" title="Titolo del Popover" data-bs-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue." style="width:100%;">
-            Popover in basso
-          </button>
-        </div>
-        <div class="col-12 col-md-4"></div>
-      </div>
+{% comment %}Example name: Varianti di allineamento{% endcomment %}
+{% capture example %}
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-md-4"></div>
+    <div class="col-12 col-md-4">
+      <button type="button" class="btn btn-secondary fade show" data-container="body" data-bs-toggle="popover" data-bs-placement="top" title="Titolo del Popover" data-bs-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue." style="width:100%;">
+        Popover in alto
+      </button>
     </div>
-
+    <div class="col-12 col-md-4"></div>
+  </div>
+  <div class="row mt-4">
+    <div class="col-12 col-md-4">
+      <button type="button" class="btn btn-secondary fade show" data-container="body" data-bs-toggle="popover" data-bs-placement="right" title="Titolo del Popover" data-bs-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue." style="width:100%;">
+        Popover a destra
+      </button>
+    </div>
+    <div class="col-12 col-md-4"></div>
+    <div class="col-12 col-md-4 mt-4 mt-md-0">
+      <button type="button" class="btn btn-secondary fade show" data-container="body" data-bs-toggle="popover" data-bs-placement="left" title="Titolo del Popover" data-bs-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue." style="width:100%;">
+        Popover a sinistra
+      </button>
+    </div>
+  </div>
+  <div class="row mt-4">
+    <div class="col-12 col-md-4"></div>
+    <div class="col-12 col-md-4">
+      <button type="button" class="btn btn-secondary fade show" data-container="body" data-bs-toggle="popover" data-bs-placement="bottom" title="Titolo del Popover" data-bs-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue." style="width:100%;">
+        Popover in basso
+      </button>
+    </div>
+    <div class="col-12 col-md-4"></div>
   </div>
 </div>
-
-```html
-<button
-  type="button"
-  class="btn btn-secondary fade show"
-  data-container="body"
-  data-bs-toggle="popover"
-  data-bs-placement="top"
-  title="Titolo del Popover"
-  data-bs-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue."
->
-  Popover in alto
-</button>
-
-<button
-  type="button"
-  class="btn btn-secondary fade show"
-  data-container="body"
-  data-bs-toggle="popover"
-  data-bs-placement="right"
-  title="Titolo del Popover"
-  data-bs-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue."
->
-  Popover a destra
-</button>
-
-<button
-  type="button"
-  class="btn btn-secondary fade show"
-  data-container="body"
-  data-bs-toggle="popover"
-  data-bs-placement="bottom"
-  title="Titolo del Popover"
-  data-bs-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue."
->
-  Popover in basso
-</button>
-
-<button
-  type="button"
-  class="btn btn-secondary fade show"
-  data-container="body"
-  data-bs-toggle="popover"
-  data-bs-placement="left"
-  title="Titolo del Popover"
-  data-bs-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue."
->
-  Popover a sinistra
-</button>
-```
+{% endcapture %}{% include example.html content=example %}
 
 ### Titolo con icona e link
 
@@ -159,6 +107,7 @@ L'icona va inclusa come HTML nell'attributo `title=""` subito prima del vero e p
 
 Il link come HTML nell'attributo `data-bs-content=""` dopo il contenuto testuale, con classe `.popover-inner-link`.
 
+{% comment %}Example name: Con icona e link{% endcomment %}
 {% capture example %}
 <button type="button" class="btn btn-secondary fade show" data-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-html="true" title="<svg class='icon'><use href='{{ site.baseurl }}/dist/svg/sprites.svg#it-help-circle'></use></svg> Titolo con icona" data-bs-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue.<a href='#' class='popover-inner-link'>Leggi tutto<svg class='icon'><use href='{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right'></use></svg></a>">
 Popover con icona e link
@@ -169,6 +118,7 @@ Popover con icona e link
 
 Per aprire il Popover all'hover del mouse sull'elemento, aggiungere l'attributo `data-bs-trigger="hover"` al tag dello stesso.
 
+{% comment %}Example name: Modalità hover{% endcomment %}
 {% capture example %}
 <button type="button" class="btn btn-secondary fade show" data-container="body" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="right" data-html="true" title="Popover in Hover" data-bs-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue.">
 Apertura in Hover
@@ -186,6 +136,7 @@ Usa l'evento `focus` per ignorare i popover sul clic successivo dell'utente di u
 Per il giusto comportamento cross-browser e cross-platform, è necessario utilizzare il tag `<a>`, _non_ il tag `<button>`, ed è necessario anche includere l'attributo [`tabindex`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex).
 {% endcapture %}{% include callout.html content=callout type="danger" %}
 
+{% comment %}Example name: Con chiusura al click successivo{% endcomment %}
 {% capture example %}
 <a tabindex="0" href="#" class="btn btn-lg btn-danger fade show" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="Popover richiudibile" data-bs-content="Ecco il contenuto del popover richiudibile">Popover richiudibile</a>
 {% endcapture %}{% include example.html content=example %}
@@ -202,6 +153,7 @@ Elementi con l'attributo `disabled` non sono interattivi, il che significa che g
 
 Per gli eventi dei popover disabilitati, potresti preferire `data-bs-trigger="hover"` in modo che il popover appaia come feedback visivo immediato per gli utenti in quanto non possono aspettarsi di _cliccare_ su un elemento disabilitato.
 
+{% comment %}Example name: Per elementi disabilitati{% endcomment %}
 {% capture example %}
 <span class="d-inline-block fade show" data-bs-toggle="popover" data-bs-content="Popover disabilitato">
 <button class="btn btn-primary" style="pointer-events: none;" type="button" disabled>Popover disabilitato</button>

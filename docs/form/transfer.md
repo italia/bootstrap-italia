@@ -32,8 +32,8 @@ Per l'attivazione del relativo JavaScript è importante che il componente che co
 
 Nell'esempio che segue la struttura è colonnare simmetrica nella versione desktop (5 / 2 / 5), l'utente potrà scegliere i tipi di colonna da utilizzare, usando le regole di bootstrap.
 
+{% comment %}Example name: Base {% endcomment %}
 {% capture example %}
-
 <div data-bs-transfer>
   <div class="row">
     <div class="col-xs-12 col-md-5">
