@@ -274,56 +274,6 @@ L'elemento `.it-multiple` con all'interno le relative icone, segue l'elemento `.
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-<!-- ### Con toggle
-
-L'elemento `.toggles`, segue l'elemento `.text`.
-Per attivare il javascript che attiva il funzionamento dei toggles è necessario aggiungere l'attributo `data-bs-list-checkbox`.
-
-{% capture example %}
-
-<div class="it-list-wrapper">
-  <ul class="it-list" data-bs-list-checkbox>
-    <li>
-      <a href="#" class="list-item">
-        <div class="it-right-zone">
-          <span class="text">Label 1</span>
-          <div class="toggles">
-            <label for="toggle1">
-            <input type="checkbox" id="id1"><span class="lever"></span>
-            </label>
-          </div>
-        </div>
-      </a>
-    </li>
-    <li>
-      <a href="#" class="list-item">
-        <div class="it-right-zone">
-          <span class="text">Label 2</span>
-          <div class="toggles">
-            <label for="toggle1">
-            <input type="checkbox" id="id2"><span class="lever"></span>
-            </label>
-          </div>
-        </div>
-      </a>
-    </li>
-    <li>
-      <a href="#" class="list-item">
-        <div class="it-right-zone">
-          <span class="text">Label 3</span>
-          <div class="toggles">
-            <label for="toggle1">
-            <input type="checkbox" id="id3"><span class="lever"></span>
-            </label>
-          </div>
-        </div>
-      </a>
-    </li>
-  </ul>
-</div>
-{% endcapture %}{% include example.html content=example %}
--->
-
 ## Altre variazioni
 
 ### Con metadata
@@ -373,59 +323,6 @@ L'elemento `.metadata`, segue l'elemento `.text`.
   </ul>
 </div>
 {% endcapture %}{% include example.html content=example %}
-
-<!--### Con immagine e toggles
-
-Gli elementi a destra e sinistra del testo possono essere combinati. Di seguito un esempio con immagine e toggle.
-Per attivare il javascript che attiva il funzionamento dei toggles è necessario aggiungere l'attributo `data-bs-list-checkbox`.
-
-{% capture example %}
-
-<div class="it-list-wrapper">
-  <ul class="it-list" data-bs-list-checkbox>
-    <li>
-      <a href="#" class="list-item">
-        <div class="it-thumb"><img src="https://via.placeholder.com/40x40.png?text=40x40" alt="descrizione immagine"></div>
-        <div class="it-right-zone">
-          <span class="text">Label 1</span>
-          <div class="toggles">
-            <label for="toggle1">
-            <input type="checkbox" id="idt1"><span class="lever"></span>
-            </label>
-          </div>
-        </div>
-      </a>
-    </li>
-    <li>
-      <a href="#" class="list-item">
-        <div class="it-thumb"><img src="https://via.placeholder.com/40x40.png?text=40x40" alt="descrizione immagine"></div>
-        <div class="it-right-zone">
-          <span class="text">Label 2</span>
-          <div class="toggles">
-            <label for="toggle1">
-            <input type="checkbox" id="idt2"><span class="lever"></span>
-            </label>
-          </div>
-        </div>
-      </a>
-    </li>
-    <li>
-      <a href="#" class="list-item">
-        <div class="it-thumb"><img src="https://via.placeholder.com/40x40.png?text=40x40" alt="descrizione immagine"></div>
-        <div class="it-right-zone">
-          <span class="text">Label 3</span>
-          <div class="toggles">
-            <label for="toggle1">
-            <input type="checkbox" id="idt3"><span class="lever"></span>
-            </label>
-          </div>
-        </div>
-      </a>
-    </li>
-  </ul>
-</div>
-{% endcapture %}{% include example.html content=example %}
--->
 
 ### Con testo aggiuntivo, azioni multiple e metadata
 
@@ -538,50 +435,6 @@ Per il testo aggiuntivo, utilizzare il tag `<em>` all'interno dell'elemento `.te
   </ul>
 </div>
 {% endcapture %}{% include example.html content=example %}
-
-<!--### Con testo aggiuntivo e checkbox.
-
-L'elemento `.form-check` con all'interno il relativo input, precede l'elemento `.it-right-zone` che contiene il testo.
-Per attivare il javascript che attiva il funzionamento dei checkbox è necessario aggiungere l'attributo `data-bs-list-checkbox`.
-
-{% capture example %}
-
-<div class="it-list-wrapper">
-  <ul class="it-list" data-bs-list-checkbox>
-    <li>
-      <a href="#" class="list-item">
-        <div class="form-check">
-          <input id="idc1" type="checkbox">
-          <label for="idc1"></label>
-        </div>
-        <div class="it-right-zone"><span class="text">Label 1<em>Lorem ipsum dolor sit amet.</em></span>
-        </div>
-      </a>
-    </li>
-    <li>
-      <a href="#" class="list-item">
-        <div class="form-check">
-          <input id="idc2" type="checkbox">
-          <label for="idc2"></label>
-        </div>
-        <div class="it-right-zone"><span class="text">Label 2<em>Lorem ipsum dolor sit amet.</em></span>
-        </div>
-      </a>
-    </li>
-    <li>
-      <a href="#" class="list-item">
-        <div class="form-check">
-          <input id="idc3" type="checkbox">
-          <label for="idc3"></label>
-        </div>
-        <div class="it-right-zone"><span class="text">Label attiva<em>Lorem ipsum dolor sit amet.</em></span>
-        </div>
-      </a>
-    </li>
-  </ul>
-</div>
-{% endcapture %}{% include example.html content=example %}
--->
 
 ## Liste per menù di navigazione
 
@@ -895,29 +748,6 @@ Inserisci l'icona all'interno del tag `<span class="list-item-title-icon-wrapper
   </ul>
 </div>
 {% endcapture %}{% include example.html content=example %}
-
-<!-- To be reviewed
-
-### List con avatar
-**Avatar**<br>
-Per aggiungere un avatar a sinistra del testo bisogna aggiungere al tag `<a>` la classe: `.avatar`
-
-All'interno del tag `<a>` subito prima dello `<span>` contenente il testo, andremo ad inserire il tag `<img>` con classe `.avatar`.
-
-{% capture example %}
-<div class="link-list-wrapper">
-  <ul class="link-list">
-    <li><a class="list-item active avatar" href="#"><img class="avatar" src="https://via.placeholder.com/40x40" alt="avatar"><span>Link lista 1 attivo</span></a>
-    </li>
-    <li><a class="list-item avatar" href="#"><img class="avatar" src="https://via.placeholder.com/40x40" alt="avatar"><span>Link lista 1</span></a>
-    </li>
-    <li><a class="list-item disabled avatar" href="#"><img class="avatar" src="https://via.placeholder.com/40x40" alt="avatar"><span>Link lista 1 disabilitato</span></a>
-    </li>
-  </ul>
-</div>
-{% endcapture %}{% include example.html content=example %}
-
--->
 
 #### Lista con toggle
 
