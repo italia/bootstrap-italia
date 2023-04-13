@@ -149,7 +149,7 @@ class Cookiebar extends BaseComponent {
     var exdate = new Date()
     exdate.setDate(exdate.getDate() + COOKIE_EXPIRE)
     var c_value = escape(COOKIE_VALUE) + (COOKIE_EXPIRE == null ? '' : '; expires=' + exdate.toUTCString())
-    document.cookie = COOKIE_NAME + '=' + c_value + '; path=/'
+    document.cookie = COOKIE_NAME + '=' + c_value + '; path=/; SameSite=Strict'
   }
 
   _getRootElement(element) {
