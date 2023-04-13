@@ -29,7 +29,11 @@ def get_globals(path):
 def parse_liquid_template(template):
     globals = get_globals(os.path.join("_data"))
     liquid_tpl = env.from_string(template)
-    return liquid_tpl.render(site=globals)
+    rendered = liquid_tpl.render(site=globals)
+    rendered = rendered.replace("no_toc", "")
+    rendered = rendered.replace("class=\"\"", "")
+    rendered = rendered.replace("class=\" \"", "")
+    return rendered
 
 
 def search_name_for_example(file_path, examples):
