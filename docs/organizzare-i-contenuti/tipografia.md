@@ -87,12 +87,12 @@ sono disponibili anche classi di tipo `.h1`, `.h2`, ecc.
 
 {% comment %}Example name: Intestazioni{% endcomment %}
 {% capture example %}
-<h1>Intestazione di tipo h1</h1>
-<h2>Intestazione di tipo h2</h2>
-<h3>Intestazione di tipo h3</h3>
-<h4>Intestazione di tipo h4</h4>
-<h5>Intestazione di tipo h5</h5>
-<h6>Intestazione di tipo h6</h6>
+<h1 class="no_toc">Intestazione di tipo h1</h1>
+<h2 class="no_toc">Intestazione di tipo h2</h2>
+<h3 class="no_toc">Intestazione di tipo h3</h3>
+<h4 class="no_toc">Intestazione di tipo h4</h4>
+<h5 class="no_toc">Intestazione di tipo h5</h5>
+<h6 class="no_toc">Intestazione di tipo h6</h6>
 
 <p class="h1">Stile h1</p>
 <p class="h2">Stile h2</p>
@@ -168,7 +168,7 @@ grande.
 
 {% comment %}Example name: Intestazioni{% endcomment %}
 {% capture example %}
-<h1 class="display-1">Intestazione di tipo h1 in evidenza</h1>
+<h1 class="no_toc display-1">Intestazione di tipo h1 in evidenza</h1>
 {% endcapture %}{% include example.html content=example %}
 
 <!-- ### Personalizzazione delle intestazioni
