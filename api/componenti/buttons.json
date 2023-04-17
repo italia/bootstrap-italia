@@ -17,7 +17,7 @@
     },
     {
         "name": "Su fondo scuro",
-        "content": "\n\n<div class=\"bg-dark py-1\">\n<div class=\"btn-example\">\n  <button type=\"button\" class=\"btn btn-primary\">Primary</button>\n  <button type=\"button\" class=\"btn btn-outline-primary\">Primary outline</button>\n  <button type=\"button\" class=\"btn btn-primary disabled\">Primary disabled</button>\n</div>\n<div class=\"btn-example\">\n  <button type=\"button\" class=\"btn btn-secondary\">Secondary</button>\n  <button type=\"button\" class=\"btn btn-outline-secondary\">Secondary outline</button>\n  <button type=\"button\" class=\"btn btn-secondary disabled\">Secondary disabled</button>\n</div></div>\n"
+        "content": "\n\n<div class=\"bg-dark py-1\">\n<div class=\"btn-example\">\n  <button type=\"button\" class=\"btn btn-primary\">Primary</button>\n  <button type=\"button\" class=\"btn btn-outline-primary\">Primary outline</button>\n  <button type=\"button\" class=\"btn btn-primary disabled\">Primary disabled</button>\n  <button type=\"button\" class=\"btn btn-outline-primary disabled\">Primary disabled</button>\n</div>\n<div class=\"btn-example\">\n  <button type=\"button\" class=\"btn btn-secondary\">Secondary</button>\n  <button type=\"button\" class=\"btn btn-outline-secondary\">Secondary outline</button>\n  <button type=\"button\" class=\"btn btn-secondary disabled\">Secondary disabled</button>\n  <button type=\"button\" class=\"btn btn-outline-secondary disabled\">Secondary disabled</button>\n</div></div>\n"
     },
     {
         "name": "Con icona",
@@ -41,10 +41,10 @@
     },
     {
         "name": "A tutta larghezza",
-        "content": "\n\n<div class=\"d-grid gap-2\">\n  <button class=\"btn btn-primary btn-me\" type=\"button\">Primary</button>\n  <button class=\"btn btn-secondary\" type=\"button\">Secondary</button>\n</div>\n"
+        "content": "\n\n<div class=\"d-grid gap-2\">\n  <button class=\"btn btn-primary\" type=\"button\">Primary</button>\n  <button class=\"btn btn-secondary\" type=\"button\">Secondary</button>\n</div>\n"
     },
     {
         "name": "A tutta larghezza, solo su mobile",
-        "content": "\n\n<div class=\"d-grid gap-2 d-md-block\">\n  <button class=\"btn btn-primary btn-me\" type=\"button\">Primary</button>\n  <button class=\"btn btn-secondary\" type=\"button\">Secondary</button>\n</div>\n"
+        "content": "\n\n<div class=\"d-grid gap-2 d-md-block\">\n  <button class=\"btn btn-primary\" type=\"button\">Primary</button>\n  <button class=\"btn btn-secondary\" type=\"button\">Secondary</button>\n</div>\n"
     }
 ]
