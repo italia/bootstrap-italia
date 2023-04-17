@@ -13,15 +13,15 @@ const EVENT_CLICK_DATA_API = `click${EVENT_KEY}${DATA_API_KEY}`
 const CLASS_NAME_FADE = 'fade'
 const CLASS_NAME_SHOW = 'show'
 
-const SELECTOR_DATA_TOGGLE = '[data-bs-toggle="accept-overlay"]'
+const SELECTOR_DATA_TOGGLE = '[data-bs-accept-from]'
 const SELECTOR_DATA_ARIAHIDDEN = '[aria-hidden=true]'
 
 class AcceptOverlay extends BaseComponent {
   constructor(element) {
     super(element)
-
-    this._isShown = !element.matches(SELECTOR_DATA_ARIAHIDDEN)
-    this._isTransitioning = false
+    this._isShown = true
+    // this._isShown = !element.matches(SELECTOR_DATA_ARIAHIDDEN)
+    // this._isTransitioning = false
   }
 
   // Getters
@@ -100,10 +100,8 @@ class AcceptOverlay extends BaseComponent {
  */
 
 EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function () {
-  const acceptOverlayElement = getElementFromSelector(this)
-  const acceptOverlay = AcceptOverlay.getOrCreateInstance(acceptOverlayElement)
-
-  this.checked ? acceptOverlay.show() : acceptOverlay.hide()
+  const acceptOverlay = AcceptOverlay.getOrCreateInstance(this.closest('.acceptoverlay'))
+  acceptOverlay.hide()
 })
 
 export default AcceptOverlay
