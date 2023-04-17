@@ -28,6 +28,9 @@
   display: flex;
   justify-content: center;
   border: none;
+  .accordion-button {
+    border: none;
+  }
   .accordion-item {
     width: 100%;
     @include media-breakpoint-up(lg) {
