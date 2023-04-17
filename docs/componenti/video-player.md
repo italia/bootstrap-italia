@@ -410,7 +410,7 @@ di ottenere il suo consenso in modo esplicito e consapevole alla riproduzione de
       </div>
     </div>
   </div>
-  <div class="row">
+  <div>
     <video controls data-bs-video id="vid1"
       class="video-js"
       width="640" height="264">
