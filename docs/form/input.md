@@ -536,7 +536,7 @@ Includendo l'elemento all'interno di un `.form-group`, la label assumerà lo ste
     <input type="text" class="form-control" id="input-text-normal" placeholder="Inserisci il tuo nome">
   </div>
   <div class="form-group">
-    <label class="active" for="input-text-lg">Piccolo</label>
+    <label class="active" for="input-text-sm">Piccolo</label>
     <input type="text" class="form-control form-control-sm" id="input-text-sm" placeholder="Inserisci il tuo nome">
   </div>
 {% endcapture %}{% include example.html content=example %}
