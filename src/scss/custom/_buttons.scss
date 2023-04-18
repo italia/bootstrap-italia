@@ -3,7 +3,9 @@
   font-size: $btn-font-size;
   white-space: initial;
   text-decoration: none;
-  box-shadow: none;
+  &:not(.btn-outline-primary, .btn-outline-secondary) {
+    box-shadow: none;
+  }
 }
 
 .btn-me {
@@ -170,9 +172,16 @@
 
 .btn-outline-secondary {
   box-shadow: inset 0 0 0 2px $secondary;
+  &.disabled,
   &:hover,
   &:active {
     box-shadow: inset 0 0 0 2px color-hover($secondary);
+  }
+}
+
+.btn-outline-primary {
+  &.disabled {
+    box-shadow: inset 0 0 0 2px color-hover($primary);
   }
 }
 
