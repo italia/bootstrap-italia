@@ -383,7 +383,7 @@ protezione della privacy degli utenti.
 L'utilizzo di un overlay per il consenso è una soluzione comune per garantire 
 la conformità alla normativa sulla privacy in materia di cookie e tracciamento degli utenti.
 L'overlay per il consenso consente di informare l'utente sui cookie utilizzati e 
-di ottenere il suo consenso in modo esplicito e consapevole alla riproduzione del video
+di ottenere il suo consenso in modo esplicito e consapevole alla riproduzione del video.
 
 {% capture example %}
 <script>
