@@ -219,9 +219,6 @@
   }
   .btn-outline-secondary {
     @include button-outline-variant($white, color-hover($white), transparent, color-hover($white));
-    &:hover {
-      box-shadow: none;
-    }
     &:focus,
     &.focus {
       box-shadow: 0 0 0 $btn-focus-width rgba($white, 0.5);
