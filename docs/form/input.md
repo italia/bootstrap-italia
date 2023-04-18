@@ -459,7 +459,7 @@ Questi sono i minimi dati necessari per il corretto funzionamento dell'autocompl
 
 Cerca una regione italiana per verificarne il comportamento.
 
-{% comment %}Example name: Ricerca con autocompletamento e dati {% endcomment %}
+{% comment %}Example name: Ricerca con autocompletamento e dati, cerca una regione italiana {% endcomment %}
 {% capture example %}
 <div class="form-group">
   <label for="autocomplete-regioni" class="visually-hidden">Cerca nel sito</label>
@@ -482,8 +482,8 @@ Questo Autocomplete è collegato, sempre tramite l'attributo `data-bs-autocomple
 
 Cerca ad esempio _"Italia"_ per verificarne il comportamento.
 
+{% comment %}Example name: Ricerca con autocompletamento e dati, cerca una nazione {% endcomment %}
 {% capture example %}
-
 <div class="form-group">
   <label for="autocomplete-test" class="visually-hidden">Cerca nel sito</label>
   <input type="search" class="autocomplete" placeholder="Testo da cercare"
@@ -536,7 +536,7 @@ Includendo l'elemento all'interno di un `.form-group`, la label assumerà lo ste
     <input type="text" class="form-control" id="input-text-normal" placeholder="Inserisci il tuo nome">
   </div>
   <div class="form-group">
-    <label class="active" for="input-text-lg">Piccolo</label>
+    <label class="active" for="input-text-sm">Piccolo</label>
     <input type="text" class="form-control form-control-sm" id="input-text-sm" placeholder="Inserisci il tuo nome">
   </div>
 {% endcapture %}{% include example.html content=example %}
