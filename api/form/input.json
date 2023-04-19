@@ -57,6 +57,6 @@
     },
     {
         "name": "Varianti di dimensione ",
-        "content": "\n  <div class=\"form-group\">\n    <label class=\"active\" for=\"input-text-lg\">Grande</label>\n    <input type=\"text\" class=\"form-control form-control-lg\" id=\"input-text-lg\" placeholder=\"Inserisci il tuo nome\">\n  </div>\n    <div class=\"form-group\">\n    <label class=\"active\" for=\"input-text-normal\">Normale</label>\n    <input type=\"text\" class=\"form-control\" id=\"input-text-normal\" placeholder=\"Inserisci il tuo nome\">\n  </div>\n  <div class=\"form-group\">\n    <label class=\"active\" for=\"input-text-lg\">Piccolo</label>\n    <input type=\"text\" class=\"form-control form-control-sm\" id=\"input-text-sm\" placeholder=\"Inserisci il tuo nome\">\n  </div>\n"
+        "content": "\n  <div class=\"form-group\">\n    <label class=\"active\" for=\"input-text-lg\">Grande</label>\n    <input type=\"text\" class=\"form-control form-control-lg\" id=\"input-text-lg\" placeholder=\"Inserisci il tuo nome\">\n  </div>\n    <div class=\"form-group\">\n    <label class=\"active\" for=\"input-text-normal\">Normale</label>\n    <input type=\"text\" class=\"form-control\" id=\"input-text-normal\" placeholder=\"Inserisci il tuo nome\">\n  </div>\n  <div class=\"form-group\">\n    <label class=\"active\" for=\"input-text-sm\">Piccolo</label>\n    <input type=\"text\" class=\"form-control form-control-sm\" id=\"input-text-sm\" placeholder=\"Inserisci il tuo nome\">\n  </div>\n"
     }
 ]

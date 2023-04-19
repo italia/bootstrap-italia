@@ -38,7 +38,7 @@ const CONFIGS = {
       768: {
         perPage: 1,
         gap: 24,
-        padding: { left: 40, right: 40 },
+        padding: { left: 0, right: 0 },
         arrows: false,
       },
       992: {
