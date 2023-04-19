@@ -172,16 +172,8 @@
     float: none;
   }
 
-  .btn-example {
-    display: flex;
-    justify-content: space-between;
-    @include media-breakpoint-down(lg) {
-      flex-direction: column;
-    }
-    .btn {
-      margin: 4px 8px;
-      flex-grow: 1;
-    }
+  .btn-example .btn {
+    margin: 4px 8px;
   }
 
   // Buttons
