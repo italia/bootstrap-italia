@@ -172,9 +172,16 @@
     float: none;
   }
 
-  .btn-example .btn {
-    margin: 4px 8px;
-    width: 200px;
+  .btn-example {
+    display: flex;
+    justify-content: space-between;
+    @include media-breakpoint-down(lg) {
+      flex-direction: column;
+    }
+    .btn {
+      margin: 4px 8px;
+      flex-grow: 1;
+    }
   }
 
   // Buttons
