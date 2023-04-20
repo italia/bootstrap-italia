@@ -5,7 +5,7 @@
   margin-bottom: $alert-margin-bottom;
   border: 1px solid $color-border-secondary;
   padding-left: 4em;
-  background-color: transparent;
+  background-color: $white;
   border-radius: 0;
   color: $color-text-base; // UI kit
   .alert-link {
