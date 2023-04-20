@@ -1,6 +1,8 @@
 .callout {
   padding: 2.5rem 2.222rem;
-  border: 2px solid $color-border-secondary;
+  border-bottom: 2px solid $color-border-secondary;
+  border-left: 2px solid $color-border-secondary;
+  border-right: 2px solid $color-border-secondary;
   position: relative;
   max-width: 60ch;
   margin: 1.75rem 0 1rem;
@@ -188,8 +190,22 @@
       position: absolute;
       font-size: 1rem;
       padding: 0 1.389rem;
-      background: $white;
       top: -0.78em;
+      .text:after {
+        content: "";
+        top: 0.78em;
+        border-top: 2px solid #5d7083;
+        position: absolute;
+        width: 200%;
+      }
+      &:before {
+        content: "";
+        top: 0.78em;
+        border-top: 2px solid #5d7083;
+        position: absolute;
+        width: 100px;
+        left: -80px;
+      }
     }
   }
 

@@ -25,7 +25,11 @@ Nel caso l'icona comunicasse visivamente contenuti non disponibili nel testo (ad
 {% capture example %}
 
 <div class="callout">
-  <div class="callout-title"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-info-circle"></use></svg><span class="visually-hidden">Confermato</span> Titolo callout</div>
+  <div class="callout-title">
+    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-info-circle"></use></svg>
+    <span class="visually-hidden">Confermato</span> 
+    <span class="text">Titolo callout</span>
+  </div>
   <p>Maecenas vulputate ante dictum vestibulum volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non augue non purus vestibulum varius.</p>
 </div>
 {% endcapture %}{% include example.html content=example %}
