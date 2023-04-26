@@ -20,10 +20,10 @@ class AcceptOverlay extends BaseComponent {
   constructor(element, config) {
     const parentElement = element.closest('.acceptoverlay')
     super(parentElement)
-    const preference = getCookiePreference(config.service);
+    const remember = getCookiePreference(config.service);
     this._isShown = true
     this._toggleElement = element
-    if (preference === 2) {
+    if (remember) {
       this.hide()
       setTimeout(() => {
         this._toggleElement.dispatchEvent(new Event('click'));
@@ -33,7 +33,7 @@ class AcceptOverlay extends BaseComponent {
     this._toggleElement.addEventListener("click", () => {
       this.hide();
       this._remember = this._toggleElement.parentElement.querySelector(SELECTOR_DATA_REMEMBER).checked
-      setCookiePreference(config.service, this._remember ? 2 : 1)
+      setCookiePreference(config.service, this._remember)
     });
   }
 
