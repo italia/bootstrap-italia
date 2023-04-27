@@ -23,7 +23,7 @@ Il player viene istanziato automaticamente quando è presente l'attributo `data-
   </video>
   <div class="vjs-transcription accordion">
     <div class="accordion-item">
-      <h2 class="accordion-header" id="transcription-head1">
+      <h2 class="accordion-header no_toc" id="transcription-head1">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#transcription1" aria-expanded="true" aria-controls="transcription">
           Trascrizione
         </button>
@@ -53,7 +53,7 @@ valore un array in formato JSON.
   </video>
   <div class="vjs-transcription accordion">
     <div class="accordion-item">
-      <h2 class="accordion-header" id="transcription-head2">
+      <h2 class="accordion-header no_toc" id="transcription-head2">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#transcription2" aria-expanded="true" aria-controls="transcription">
           Trascrizione
         </button>
@@ -90,7 +90,7 @@ Nota l'uso delle virgolette singole, `data-setup` si aspetta di ricevere un JSON
   </video>
   <div class="vjs-transcription accordion">
     <div class="accordion-item">
-      <h2 class="accordion-header" id="transcription-head3">
+      <h2 class="accordion-header no_toc" id="transcription-head3">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#transcription3" aria-expanded="true" aria-controls="transcription">
           Trascrizione
         </button>
@@ -156,7 +156,7 @@ diverse lingue.
   </video>
   <div class="vjs-transcription accordion">
     <div class="accordion-item">
-      <h2 class="accordion-header" id="transcription-head4">
+      <h2 class="accordion-header no_toc" id="transcription-head4">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#transcription4" aria-expanded="true" aria-controls="transcription">
           Trascrizione
         </button>
@@ -173,46 +173,6 @@ diverse lingue.
 
 Approfondisci l'argomento consultando la documentazione di 
 [VideoJS (Inglese)](https://videojs.com/guides/text-tracks/)
-
-### Aggiungere la trascrizione 
-
-{% capture example %}
-<div class="row">
-  <video controls data-bs-video>
-    <source src="{{ site.baseurl }}/docs/assets/video/ElephantsDream.mp4" type="video/mp4">
-    <track 
-      kind="captions" 
-      src="{{ site.baseurl }}/docs/assets/video/subtitles-it.vtt" 
-      srclang="it" 
-      label="Italiano" default>
-    <track 
-      kind="captions" 
-      src="{{ site.baseurl }}/docs/assets/video/subtitles-en.vtt" 
-      srclang="en" 
-      label="English">
-    <track 
-      kind="captions" 
-      src="{{ site.baseurl }}/docs/assets/video/subtitles-es.vtt" 
-      srclang="es" 
-      label="Español">
-  </video>
-  <div class="vjs-transcription accordion">
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="transcription-head5">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#transcription5" aria-expanded="true" aria-controls="transcription">
-          Trascrizione
-        </button>
-      </h2>
-      <div id="transcription5" class="accordion-collapse collapse" role="region" aria-labelledby="transcription-head5">
-        <div class="accordion-body">
-          Vestibulum hendrerit ultrices nibh, sed pharetra lacus ultrices eget. Morbi et ipsum et sapien dapibus facilisis. Integer eget semper nibh. Proin enim nulla, egestas ac rutrum eget, ullamcorper nec turpis.
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-{% endcapture %}{% include example.html content=example %}
-
 
 ## Streaming
 
@@ -287,7 +247,7 @@ Di seguito un esempio in formato MPEG-DASH
   </video>
   <div class="vjs-transcription accordion">
     <div class="accordion-item">
-      <h2 class="accordion-header" id="transcription-head6">
+      <h2 class="accordion-header no_toc" id="transcription-head6">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#transcription6" aria-expanded="true" aria-controls="transcription">
           Trascrizione
         </button>
@@ -338,7 +298,7 @@ Di seguito un esempio in formato HLS multilingua.
   </video>
   <div class="vjs-transcription accordion">
     <div class="accordion-item">
-      <h2 class="accordion-header" id="transcription-head7">
+      <h2 class="accordion-header no_toc" id="transcription-head7">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#transcription7" aria-expanded="true" aria-controls="transcription">
           Trascrizione
         </button>
@@ -385,7 +345,12 @@ la conformità alla normativa sulla privacy in materia di cookie e tracciamento 
 L'overlay per il consenso consente di informare l'utente sui cookie utilizzati e 
 di ottenere il suo consenso in modo esplicito e consapevole alla riproduzione del video.
 
+{% capture callout %}
+In questo la Pubblica Amministrazione che fa uso di servizi di terze parti come YouTube deve necessariamente specificare l’utilizzo di cookie di tracciamento da parte di piattaforme di terze parti.
+{% endcapture %}{% include callout.html content=callout type="warning" %}
+
 {% capture example %}
+
 <script>
   const loadYouTubeVideo = function(videoUrl) {
     const videoEl = document.getElementById("vid1");
@@ -417,7 +382,7 @@ di ottenere il suo consenso in modo esplicito e consapevole alla riproduzione de
     </video>
     <div class="vjs-transcription accordion">
       <div class="accordion-item">
-        <h2 class="accordion-header" id="transcription-head9">
+        <h2 class="accordion-header no_toc" id="transcription-head9">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#transcription9" aria-expanded="true" aria-controls="transcription">
             Trascrizione
           </button>
