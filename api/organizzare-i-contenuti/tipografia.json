@@ -1,78 +1,86 @@
 [
     {
-        "name": "tipografia-1",
-        "content": "\n\n<p class=\"font-sans-serif\">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>\n<p class=\"font-sans-serif\">abcdefghijklmnopqrstuvwxyz</p>\n<p class=\"font-sans-serif\">0123456789</p>\n"
+        "name": "Titillium Web",
+        "content": "\n<p class=\"font-sans-serif\">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>\n<p class=\"font-sans-serif\">abcdefghijklmnopqrstuvwxyz</p>\n<p class=\"font-sans-serif\">0123456789</p>\n"
     },
     {
-        "name": "tipografia-2",
-        "content": "\n\n<p class=\"font-serif\">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>\n<p class=\"font-serif\">abcdefghijklmnopqrstuvwxyz</p>\n<p class=\"font-serif\">0123456789</p>\n"
+        "name": "Lora",
+        "content": "\n<p class=\"font-serif\">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>\n<p class=\"font-serif\">abcdefghijklmnopqrstuvwxyz</p>\n<p class=\"font-serif\">0123456789</p>\n"
     },
     {
-        "name": "tipografia-3",
-        "content": "\n\n<p class=\"font-monospace\">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>\n<p class=\"font-monospace\">abcdefghijklmnopqrstuvwxyz</p>\n<p class=\"font-monospace\">0123456789</p>\n"
+        "name": "Roboto",
+        "content": "\n<p class=\"font-monospace\">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>\n<p class=\"font-monospace\">abcdefghijklmnopqrstuvwxyz</p>\n<p class=\"font-monospace\">0123456789</p>\n"
     },
     {
-        "name": "tipografia-4",
-        "content": "\n\n<h4>Intestazione <small class=\"text-muted\">con testo secondario</small></h4>\n"
+        "name": "Intestazioni",
+        "content": "\n<h1>Intestazione di tipo h1</h1>\n<h2>Intestazione di tipo h2</h2>\n<h3>Intestazione di tipo h3</h3>\n<h4>Intestazione di tipo h4</h4>\n<h5>Intestazione di tipo h5</h5>\n<h6>Intestazione di tipo h6</h6>\n\n<p class=\"h1\">Stile h1</p>\n<p class=\"h2\">Stile h2</p>\n<p class=\"h3\">Stile h3</p>\n<p class=\"h4\">Stile h4</p>\n<p class=\"h5\">Stile h5</p>\n<p class=\"h6\">Stile h6</p>\n"
     },
     {
-        "name": "tipografia-5",
-        "content": "\n\n<p>Ullamco laboris nisi ut aliquid ex ea commodi consequat. Curabitur blandit tempus ardua ridiculus sed magna. Curabitur est gravida et libero vitae dictum. Phasellus laoreet lorem vel dolor tempus vehicula. Magna pars studiorum, prodita quaerimus.</p>\n<p>Ullamco laboris nisi ut aliquid ex ea commodi consequat. Curabitur blandit tempus ardua ridiculus sed magna. Curabitur est gravida et libero vitae dictum. Phasellus laoreet lorem vel dolor tempus vehicula. Magna pars studiorum, prodita quaerimus.</p>\n"
+        "name": "Intestazioni",
+        "content": "\n<h1 class=\"display-1\">Intestazione di tipo h1 in evidenza</h1>\n"
     },
     {
         "name": "tipografia-6",
-        "content": "\n\n<p class=\"lead\">Paragrafo in evidenza</p>\n"
+        "content": "\n\n<h4>Intestazione <small class=\"text-muted\">con testo secondario</small></h4>\n"
     },
     {
-        "name": "tipografia-7",
-        "content": "\n\n<p>Esempio di testo <u>sottolineato</u>.</p>\n<p>Esempio di testo <mark>evidenziato</mark>.</p>\n<p>Esempio di testo <em>corsivo</em>.</p>\n<p>Esempio di testo <strong>in grassetto</strong>.</p>\n<p>Esempio di testo <small>rimpicciolito</small>.</p>\n<p>Esempio di testo <ins>aggiuntivo</ins>.</p>\n<p>Esempio di testo <del>cancellato</del> o <s>invalido</s>.</p>\n<p>Esempio di testo <code>monospace</code>.</p>\n"
+        "name": "Paragrafi contenuti",
+        "content": "\n<p>Ullamco laboris nisi ut aliquid ex ea commodi consequat. Curabitur blandit tempus ardua ridiculus sed magna. Curabitur est gravida et libero vitae dictum. Phasellus laoreet lorem vel dolor tempus vehicula. Magna pars studiorum, prodita quaerimus.</p>\n<p>Ullamco laboris nisi ut aliquid ex ea commodi consequat. Curabitur blandit tempus ardua ridiculus sed magna. Curabitur est gravida et libero vitae dictum. Phasellus laoreet lorem vel dolor tempus vehicula. Magna pars studiorum, prodita quaerimus.</p>\n"
     },
     {
-        "name": "tipografia-8",
-        "content": "\n\n<p>Esempio di <a href=\"#\">link normale</a>.</p>\n<p>Esempio di <a href=\"#\" class=\"text-decoration-none fw-bold\">link in grassetto senza sottolineatura</a>.</p>\n"
+        "name": "Paragrafi in evidenza",
+        "content": "\n<p class=\"lead\">Paragrafo in evidenza</p>\n"
     },
     {
-        "name": "tipografia-9",
-        "content": "\n\n<p><abbr title=\"attribute\">attr</abbr></p>\n<p><abbr title=\"HyperText Markup Language\" class=\"initialism\">HTML</abbr></p>\n"
+        "name": "Markup semantico nei paragrafi",
+        "content": "\n<p>Esempio di testo <u>sottolineato</u>.</p>\n<p>Esempio di testo <mark>evidenziato</mark>.</p>\n<p>Esempio di testo <em>corsivo</em>.</p>\n<p>Esempio di testo <strong>in grassetto</strong>.</p>\n<p>Esempio di testo <small>rimpicciolito</small>.</p>\n<p>Esempio di testo <ins>aggiuntivo</ins>.</p>\n<p>Esempio di testo <del>cancellato</del> o <s>invalido</s>.</p>\n<p>Esempio di testo <code>monospace</code>.</p>\n"
     },
     {
-        "name": "tipografia-10",
-        "content": "\n\n<blockquote class=\"blockquote\">\n  <p class=\"mb-0\">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt sequi eos ratione.</p>\n</blockquote>\n"
+        "name": "Link",
+        "content": "\n<p>Esempio di <a href=\"#\">link normale</a>.</p>\n<p>Esempio di <a href=\"#\" class=\"text-decoration-none fw-bold\">link in grassetto senza sottolineatura</a>.</p>\n"
     },
     {
-        "name": "tipografia-11",
-        "content": "\n\n<blockquote class=\"blockquote\">\n  <p class=\"mb-0\">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt sequi eos ratione.</p>\n  <footer class=\"blockquote-footer\">Nome Cognome da <cite title=\"Titolo fonte\">Titolo fonte</cite></footer>\n</blockquote>\n"
+        "name": "Abbreviazioni",
+        "content": "\n<p><abbr title=\"attribute\">attr</abbr></p>\n<p><abbr title=\"HyperText Markup Language\" class=\"initialism\">HTML</abbr></p>\n"
     },
     {
-        "name": "tipografia-12",
-        "content": "\n\n<blockquote class=\"blockquote text-center\">\n  <p class=\"mb-0\">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt sequi eos ratione.</p>\n  <footer class=\"blockquote-footer\">Nome Cognome da <cite title=\"Titolo fonte\">Titolo fonte</cite></footer>\n</blockquote>\n"
+        "name": "Citazioni",
+        "content": "\n<blockquote class=\"blockquote\">\n  <p class=\"mb-0\">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt sequi eos ratione.</p>\n</blockquote>\n"
     },
     {
-        "name": "tipografia-13",
-        "content": "\n\n<blockquote class=\"blockquote text-end\">\n  <p class=\"mb-0\">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt sequi eos ratione.</p>\n  <footer class=\"blockquote-footer\">Someone famous in <cite title=\"Source Title\">Source Title</cite></footer>\n</blockquote>\n"
+        "name": "Citazioni con fonte",
+        "content": "\n<blockquote class=\"blockquote\">\n  <p class=\"mb-0\">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt sequi eos ratione.</p>\n  <footer class=\"blockquote-footer\">Nome Cognome da <cite title=\"Titolo fonte\">Titolo fonte</cite></footer>\n</blockquote>\n"
     },
     {
-        "name": "tipografia-14",
-        "content": "\n\n<blockquote class=\"blockquote blockquote-simple\">\n  <p class=\"mb-0\">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt sequi eos ratione.</p>\n</blockquote>\n"
+        "name": "Citazione, centrata",
+        "content": "\n<blockquote class=\"blockquote text-center\">\n  <p class=\"mb-0\">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt sequi eos ratione.</p>\n  <footer class=\"blockquote-footer\">Nome Cognome da <cite title=\"Titolo fonte\">Titolo fonte</cite></footer>\n</blockquote>\n"
     },
     {
-        "name": "tipografia-15",
-        "content": "\n\n<blockquote class=\"blockquote blockquote-card\">\n  <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt sequi eos ratione.</p>\n  <footer class=\"blockquote-footer\"><cite title=\"Titolo fonte\">Titolo fonte</cite></footer>\n</blockquote>\n"
+        "name": "Citazione, a destra",
+        "content": "\n<blockquote class=\"blockquote text-end\">\n  <p class=\"mb-0\">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt sequi eos ratione.</p>\n  <footer class=\"blockquote-footer\">Someone famous in <cite title=\"Source Title\">Source Title</cite></footer>\n</blockquote>\n"
     },
     {
-        "name": "tipografia-16",
-        "content": "\n\n<blockquote class=\"blockquote blockquote-card dark\">\n  <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt sequi eos ratione.</p>\n  <footer class=\"blockquote-footer\"><cite title=\"Titolo fonte\">Titolo fonte</cite></footer>\n</blockquote>\n"
+        "name": "Citazione, base",
+        "content": "\n<blockquote class=\"blockquote blockquote-simple\">\n  <p class=\"mb-0\">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt sequi eos ratione.</p>\n</blockquote>\n"
     },
     {
-        "name": "tipografia-17",
-        "content": "\n\n<ul class=\"list-unstyled\">\n  <li>Lorem ipsum dolor sit amet</li>\n  <li>Consectetur adipiscing elit</li>\n  <li>Integer molestie lorem at massa</li>\n  <li>Facilisis in pretium nisl aliquet</li>\n  <li>Nulla volutpat aliquam velit\n    <ul>\n      <li>Phasellus iaculis neque</li>\n      <li>Purus sodales ultricies</li>\n      <li>Vestibulum laoreet porttitor sem</li>\n      <li>Ac tristique libero volutpat at</li>\n    </ul>\n  </li>\n  <li>Faucibus porta lacus fringilla vel</li>\n  <li>Aenean sit amet erat nunc</li>\n  <li>Eget porttitor lorem</li>\n</ul>\n"
+        "name": "Citazione, card",
+        "content": "\n<blockquote class=\"blockquote blockquote-card\">\n  <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt sequi eos ratione.</p>\n  <footer class=\"blockquote-footer\"><cite title=\"Titolo fonte\">Titolo fonte</cite></footer>\n</blockquote>\n"
     },
     {
-        "name": "tipografia-18",
-        "content": "\n\n<ul class=\"list-inline\">\n  <li class=\"list-inline-item\">Lorem ipsum</li>\n  <li class=\"list-inline-item\">Phasellus iaculis</li>\n  <li class=\"list-inline-item\">Nulla volutpat</li>\n</ul>\n"
+        "name": "Citazione, card con sfondo scuro",
+        "content": "\n<blockquote class=\"blockquote blockquote-card dark\">\n  <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt sequi eos ratione.</p>\n  <footer class=\"blockquote-footer\"><cite title=\"Titolo fonte\">Titolo fonte</cite></footer>\n</blockquote>\n"
     },
     {
-        "name": "tipografia-19",
-        "content": "\n\n<dl class=\"row\">\n  <dt class=\"col-sm-3\">Lista descrizioni</dt>\n  <dd class=\"col-sm-9\">Una lista di discrezioni \u00e8 lo strumento ideale per definire dei termini.</dd>\n\n  <dt class=\"col-sm-3\">Euismod</dt>\n  <dd class=\"col-sm-9\">\n    <p>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</p>\n    <p>Donec id elit non mi porta gravida at eget metus.</p>\n  </dd>\n\n  <dt class=\"col-sm-3\">Malesuada porta</dt>\n  <dd class=\"col-sm-9\">Etiam porta sem malesuada magna mollis euismod.</dd>\n\n  <dt class=\"col-sm-3 text-truncate\">Testo troncato: questo testo troppo lungo verr\u00e0 troncato</dt>\n  <dd class=\"col-sm-9\">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</dd>\n\n  <dt class=\"col-sm-3\">Annidamento</dt>\n  <dd class=\"col-sm-9\">\n    <dl class=\"row\">\n      <dt class=\"col-sm-4\">Lista descrizione annidata</dt>\n      <dd class=\"col-sm-8\">Aenean posuere, tortor sed cursus feugiat, nunc augue blandit nunc.</dd>\n    </dl>\n  </dd>\n</dl>\n"
+        "name": "Lista senza stile",
+        "content": "\n<ul class=\"list-unstyled\">\n  <li>Lorem ipsum dolor sit amet</li>\n  <li>Consectetur adipiscing elit</li>\n  <li>Integer molestie lorem at massa</li>\n  <li>Facilisis in pretium nisl aliquet</li>\n  <li>Nulla volutpat aliquam velit\n    <ul class=\"list-unstyled\">\n      <li>Phasellus iaculis neque</li>\n      <li>Purus sodales ultricies</li>\n      <li>Vestibulum laoreet porttitor sem</li>\n      <li>Ac tristique libero volutpat at</li>\n    </ul>\n  </li>\n  <li>Faucibus porta lacus fringilla vel</li>\n  <li>Aenean sit amet erat nunc</li>\n  <li>Eget porttitor lorem</li>\n</ul>\n"
+    },
+    {
+        "name": "Lista inline",
+        "content": "\n<ul class=\"list-inline\">\n  <li class=\"list-inline-item\">Lorem ipsum</li>\n  <li class=\"list-inline-item\">Phasellus iaculis</li>\n  <li class=\"list-inline-item\">Nulla volutpat</li>\n</ul>\n"
+    },
+    {
+        "name": "Lista, allineamento descrizione",
+        "content": "\n<dl class=\"row\">\n  <dt class=\"col-sm-3\">Lista descrizioni</dt>\n  <dd class=\"col-sm-9\">Una lista di discrezioni \u00e8 lo strumento ideale per definire dei termini.</dd>\n\n  <dt class=\"col-sm-3\">Euismod</dt>\n  <dd class=\"col-sm-9\">\n    <p>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</p>\n    <p>Donec id elit non mi porta gravida at eget metus.</p>\n  </dd>\n\n  <dt class=\"col-sm-3\">Malesuada porta</dt>\n  <dd class=\"col-sm-9\">Etiam porta sem malesuada magna mollis euismod.</dd>\n\n  <dt class=\"col-sm-3 text-truncate\">Testo troncato: questo testo troppo lungo verr\u00e0 troncato</dt>\n  <dd class=\"col-sm-9\">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</dd>\n\n  <dt class=\"col-sm-3\">Annidamento</dt>\n  <dd class=\"col-sm-9\">\n    <dl class=\"row\">\n      <dt class=\"col-sm-4\">Lista descrizione annidata</dt>\n      <dd class=\"col-sm-8\">Aenean posuere, tortor sed cursus feugiat, nunc augue blandit nunc.</dd>\n    </dl>\n  </dd>\n</dl>\n"
     }
 ]

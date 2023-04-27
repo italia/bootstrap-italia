@@ -1,18 +1,18 @@
 [
     {
-        "name": "alert-1",
+        "name": "Varianti per tipologia",
         "content": "\n\n\n\n<div class=\"alert alert-info\" role=\"alert\">\n  Questo \u00e8 un alert di tipo \"<b>info</b>\".\n</div>\n\n<div class=\"alert alert-success\" role=\"alert\">\n  Questo \u00e8 un alert di tipo \"<b>success</b>\".\n</div>\n\n<div class=\"alert alert-warning\" role=\"alert\">\n  Questo \u00e8 un alert di tipo \"<b>warning</b>\".\n</div>\n\n<div class=\"alert alert-danger\" role=\"alert\">\n  Questo \u00e8 un alert di tipo \"<b>danger</b>\".\n</div>\n"
     },
     {
-        "name": "alert-2",
+        "name": "Link evidenziato",
         "content": "\n\n<div class=\"alert alert-danger\" role=\"alert\">\n  Questo \u00e8 un alert con un esempio di <a href=\"#\" class=\"alert-link\">link</a> evidenziato.\n</div>\n"
     },
     {
-        "name": "alert-3",
+        "name": "Contenuto aggiuntivo",
         "content": "\n\n<div class=\"alert alert-success\" role=\"alert\">\n  <h4 class=\"alert-heading\">Avviso di successo!</h4>\n  <p>Stai leggendo questo importante messaggio di avviso di successo. Questo testo di esempio sar\u00e0 pi\u00f9 lungo in modo da poter vedere come funzioni la spaziatura all'interno di un avviso con questo tipo di contenuto.</p>\n  <hr>\n  <p class=\"mb-0\">Quando necessario, assicurarti di inserire le utilit\u00e0 di margine per mantenere gli spazi equilibrati.</p>\n</div>\n"
     },
     {
-        "name": "alert-4",
+        "name": "Pulsante di chiusura",
         "content": "\n\n<div class=\"alert alert-warning alert-dismissible fade show\" role=\"alert\">\n  <strong>Attenzione</strong> Alcuni campi inseriti sono da controllare.\n  <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\" aria-label=\"Chiudi avviso\">\n    <svg class=\"icon\">\n      <use href=\"/dist/svg/sprites.svg#it-close\"></use>\n    </svg>\n  </button>\n</div>\n"
     }
 ]

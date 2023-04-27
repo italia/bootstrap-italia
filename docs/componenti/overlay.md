@@ -18,8 +18,8 @@ Aggiungendo all'Overlay Panel la classe `.overlay-panel-fullheight` questo copri
 
 Il colore predefinito dell'Overlay Panel corrisponde al colore Primary.
 
+{% comment %}Example name: Colore primary{% endcomment %}
 {% capture example %}
-
 <div class="container">
   <div class="row">
     <div class="col-12 col-md-6">
@@ -51,8 +51,8 @@ Il colore predefinito dell'Overlay Panel corrisponde al colore Primary.
 
 Aggiungendo all'Overlay Panel la classe `.overlay-black` si ottiene un overlay di colore nero.
 
+{% comment %}Example name: Colore nero{% endcomment %}
 {% capture example %}
-
 <div class="container">
   <div class="row">
     <div class="col-12 col-md-6">
@@ -91,8 +91,8 @@ Per ottenere un Overlay Panel con icona centrata in verticale ed orizzontale agg
 Ricordarsi di aggiungere un testo alternativo per Screen Reader che comunichi lo stesso messaggio dell'icona.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
+{% comment %}Example name: Con icona{% endcomment %}
 {% capture example %}
-
 <div class="container">
   <div class="row">
     <div class="col-12 col-md-6">

@@ -54,8 +54,8 @@ Esempio di carousel con card semplici.
 - div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-abstract-three-cols` che attiva la visualizzazione a 3 colonne su desktop.
 - div **`splide__track`** : vengono aggiunte le classi `ps-lg-3 pe-lg-3` che implementano il padding richiesto dal breakpoint `lg` in su.
 
+{% comment %}Example name: Titolo e card base{% endcomment %}
 {% capture example %}
-
 <div class="it-carousel-wrapper it-carousel-landscape-abstract-three-cols splide" data-bs-carousel-splide>
   <div class="it-header-block">
     <div class="it-header-block-title">
@@ -183,6 +183,7 @@ Esempio di carousel con card semplici.
 
 - div **`it-carousel-wrapper`**: viene aggiunta la classe `it-carousel-landscape-abstract-three-cols-arrow-visible` che attiva la visualizzazione a 3 colonne su desktop e la visualizzazione delle frecce di navigazione.
 
+{% comment %}Example name: Card articolo{% endcomment %}
 {% capture example %}
 
 <div class="it-carousel-wrapper splide it-carousel-landscape-abstract-three-cols-arrow-visible" data-bs-carousel-splide>
@@ -293,6 +294,7 @@ Contiene un'immagine associata ad una card "articolo".
 
 - div **`it-carousel-wrapper`**: viene aggiunta la classe `it-carousel-landscape-abstract` che attiva la visualizzazione a 2 colonne in Flex.
 
+{% comment %}Example name: Card con immagine in evidenza{% endcomment %}
 {% capture example %}
 
 <div class="it-carousel-wrapper it-carousel-landscape-abstract splide" data-bs-carousel-splide>
@@ -405,6 +407,7 @@ Contiene un'immagine associata ad una card "articolo".
 
 - div **`it-carousel-wrapper`**: viene aggiunta la classe `it-carousel-landscape-abstract-three-cols` per la visualizzazione a 3 colonne.
 
+{% comment %}Example name: Card con immagine in alto{% endcomment %}
 {% capture example %}
 
 <div class="it-carousel-wrapper it-carousel-landscape-abstract-three-cols splide" data-bs-carousel-splide>
@@ -419,7 +422,7 @@ Contiene un'immagine associata ad una card "articolo".
                   <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine1" title="titolo immagine" alt="descrizione immagine"></div>
                 </div>
               </div>
-              <div class="card-body">
+              <div class="card-body px-3 px-md-4">
                 <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
@@ -441,7 +444,7 @@ Contiene un'immagine associata ad una card "articolo".
                   <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine2" title="titolo immagine" alt="descrizione immagine"></div>
                 </div>
               </div>
-              <div class="card-body">
+              <div class="card-body px-3 px-md-4">
                 <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
@@ -463,7 +466,7 @@ Contiene un'immagine associata ad una card "articolo".
                   <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine3" title="titolo immagine" alt="descrizione immagine"></div>
                 </div>
               </div>
-              <div class="card-body">
+              <div class="card-body px-3 px-md-4">
                 <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
@@ -485,7 +488,7 @@ Contiene un'immagine associata ad una card "articolo".
                   <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine4" title="titolo immagine" alt="descrizione immagine"></div>
                 </div>
               </div>
-              <div class="card-body">
+              <div class="card-body px-3 px-md-4">
                 <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
@@ -507,7 +510,7 @@ Contiene un'immagine associata ad una card "articolo".
                   <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine5" title="titolo immagine" alt="descrizione immagine"></div>
                 </div>
               </div>
-              <div class="card-body">
+              <div class="card-body px-3 px-md-4">
                 <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
@@ -529,7 +532,7 @@ Contiene un'immagine associata ad una card "articolo".
                   <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine6" title="titolo immagine" alt="descrizione immagine"></div>
                 </div>
               </div>
-              <div class="card-body">
+              <div class="card-body px-3 px-md-4">
                 <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
@@ -555,6 +558,7 @@ Contiene [Card di tipo speciale]({{ site.baseurl }}/docs/componenti/card/#card-s
 
 - div **`it-carousel-wrapper`**: viene aggiunta la classe `it-carousel-landscape-abstract-three-cols` per la visualizzazione a 3 colonne.
 
+{% comment %}Example name: Card speciali{% endcomment %}
 {% capture example %}
 
 <div class="it-carousel-wrapper it-carousel-landscape-abstract-three-cols splide" data-bs-carousel-splide>
@@ -563,7 +567,7 @@ Contiene [Card di tipo speciale]({{ site.baseurl }}/docs/componenti/card/#card-s
       <li class="splide__slide">
         <div class="it-single-slide-wrapper">
           <div class="card-wrapper">
-            <a class="card card-img no-after special-card" href="#">
+            <a class="card card-img no-after special-card p-3 p-md-4" href="#">
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
                   <div class="img-wrapper"><img src="https://via.placeholder.com/360x480/ebebeb/808080/?text=Immagine1" title="titolo immagine" alt="descrizione immagine"></div>
@@ -582,7 +586,7 @@ Contiene [Card di tipo speciale]({{ site.baseurl }}/docs/componenti/card/#card-s
       <li class="splide__slide">
         <div class="it-single-slide-wrapper">
           <div class="card-wrapper">
-            <a class="card card-img no-after special-card" href="#">
+            <a class="card card-img no-after special-card p-3 p-md-4" href="#">
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
                   <div class="img-wrapper"><img src="https://via.placeholder.com/360x480/ebebeb/808080/?text=Immagine2" title="titolo immagine" alt="descrizione immagine"></div>
@@ -601,7 +605,7 @@ Contiene [Card di tipo speciale]({{ site.baseurl }}/docs/componenti/card/#card-s
       <li class="splide__slide">
         <div class="it-single-slide-wrapper">
           <div class="card-wrapper">
-            <a class="card card-img no-after special-card" href="#">
+            <a class="card card-img no-after special-card p-3 p-md-4" href="#">
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
                   <div class="img-wrapper"><img src="https://via.placeholder.com/360x480/ebebeb/808080/?text=Immagine3" title="titolo immagine" alt="descrizione immagine"></div>
@@ -620,7 +624,7 @@ Contiene [Card di tipo speciale]({{ site.baseurl }}/docs/componenti/card/#card-s
       <li class="splide__slide">
         <div class="it-single-slide-wrapper">
           <div class="card-wrapper">
-            <a class="card card-img no-after special-card" href="#">
+            <a class="card card-img no-after special-card p-3 p-md-4" href="#">
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
                   <div class="img-wrapper"><img src="https://via.placeholder.com/360x480/ebebeb/808080/?text=Immagine4" title="titolo immagine" alt="descrizione immagine"></div>
@@ -639,7 +643,7 @@ Contiene [Card di tipo speciale]({{ site.baseurl }}/docs/componenti/card/#card-s
       <li class="splide__slide">
         <div class="it-single-slide-wrapper">
           <div class="card-wrapper">
-            <a class="card card-img no-after special-card" href="#">
+            <a class="card card-img no-after special-card p-3 p-md-4" href="#">
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
                   <div class="img-wrapper"><img src="https://via.placeholder.com/360x480/ebebeb/808080/?text=Immagine5" title="titolo immagine" alt="descrizione immagine"></div>
@@ -658,7 +662,7 @@ Contiene [Card di tipo speciale]({{ site.baseurl }}/docs/componenti/card/#card-s
       <li class="splide__slide">
         <div class="it-single-slide-wrapper">
           <div class="card-wrapper">
-            <a class="card card-img no-after special-card" href="#">
+            <a class="card card-img no-after special-card p-3 p-md-4" href="#">
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
                   <div class="img-wrapper"><img src="https://via.placeholder.com/360x480/ebebeb/808080/?text=Immagine6" title="titolo immagine" alt="descrizione immagine"></div>
@@ -689,6 +693,7 @@ div **`it-carousel-wrapper`** :
 - viene aggiunta la classe `it-full-carousel` per la visualizzazione a tutto schermo (orizzontale)
 - viene aggiunta la classe `it-big-img` per indicare che l'immagine contenuta è di tipo grande
 
+{% comment %}Example name: Immagini{% endcomment %}
 {% capture example %}
 
 <div class="it-carousel-wrapper it-carousel-landscape-abstract-three-cols it-full-carousel it-big-img splide" data-bs-carousel-splide>
@@ -787,6 +792,7 @@ div **`it-carousel-wrapper`** :
 - viene aggiunta la classe `it-full-carousel` per la visualizzazione a tutto schermo (orizzontale)
 - viene aggiunta la classe `it-standard-image` per indicare che l'immagine contenuta è di tipo standard.
 
+{% comment %}Example name: Immagini di dimensione standard{% endcomment %}
 {% capture example %}
 
 <div class="it-carousel-wrapper it-carousel-landscape-abstract-three-cols it-full-carousel it-standard-image splide" data-bs-carousel-splide>

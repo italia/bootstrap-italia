@@ -1,18 +1,18 @@
 [
     {
-        "name": "dimensionamento-1",
-        "content": "\n\n<div class=\"border\">\n  <div class=\"bg-primary text-white p-3 w-100\">Width 100%</div>\n  <div class=\"bg-primary text-white p-3 w-75\">Width 75%</div>\n  <div class=\"bg-primary text-white p-3 w-50\">Width 50%</div>\n  <div class=\"bg-primary text-white p-3 w-25\">Width 25%</div>\n</div>\n"
+        "name": "Larghezza fissa",
+        "content": "\n<div class=\"border\">\n  <div class=\"bg-primary text-white p-3 w-100\">Width 100%</div>\n  <div class=\"bg-primary text-white p-3 w-75\">Width 75%</div>\n  <div class=\"bg-primary text-white p-3 w-50\">Width 50%</div>\n  <div class=\"bg-primary text-white p-3 w-25\">Width 25%</div>\n</div>\n"
     },
     {
-        "name": "dimensionamento-2",
-        "content": "\n\n<div class=\"border d-flex\" style=\"height: 200px;\">\n  <div class=\"bg-primary text-white text-center h-100 d-inline-block\" style=\"width: 120px;\">Height 100%</div>\n  <div class=\"bg-primary text-white text-center h-75 d-inline-block\" style=\"width: 120px;\">Height 75%</div>\n  <div class=\"bg-primary text-white text-center h-50 d-inline-block\" style=\"width: 120px;\">Height 50%</div>\n  <div class=\"bg-primary text-white text-center h-25 d-inline-block\" style=\"width: 120px;\">Height 25%</div>\n</div>\n"
+        "name": "Altezza fissa",
+        "content": "\n<div class=\"border d-flex\" style=\"height: 200px;\">\n  <div class=\"bg-primary text-white text-center h-100 d-inline-block\" style=\"width: 120px;\">Height 100%</div>\n  <div class=\"bg-primary text-white text-center h-75 d-inline-block\" style=\"width: 120px;\">Height 75%</div>\n  <div class=\"bg-primary text-white text-center h-50 d-inline-block\" style=\"width: 120px;\">Height 50%</div>\n  <div class=\"bg-primary text-white text-center h-25 d-inline-block\" style=\"width: 120px;\">Height 25%</div>\n</div>\n"
     },
     {
-        "name": "dimensionamento-3",
-        "content": "\n<img class=\"mw-100\" src=\"https://via.placeholder.com/64x64/ebebeb/808080/?text=Immagine\" alt=\"Max-width 100%\">\n"
+        "name": "Larghezza massima",
+        "content": "\n<div style=\"width: 100px;\">\n <div class=\"bg-primary text-white mw-100\" style=\"width: 500px;\">Max-width 100%</div>\n</div>\n"
     },
     {
-        "name": "dimensionamento-4",
-        "content": "\n\n<div style=\"height: 200px;\">\n  <div class=\"bg-primary text-white mh-100\" style=\"width: 100px; height: 200px;\">Max-height 100%</div>\n</div>\n"
+        "name": "Altezza massima",
+        "content": "\n<div style=\"height: 100px;\">\n  <div class=\"bg-primary text-white mh-100\" style=\"height: 400px;\">Max-height 100%</div>\n</div>\n"
     }
 ]

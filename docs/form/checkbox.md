@@ -11,8 +11,8 @@ description: Elementi e stili per la creazione di checkbox accessibili.
 
 Per utilizzare i checkbox personalizzati è necessario inserire la classe `.form-check` nell'elemento padre.
 
+{% comment %}Example name: Base {% endcomment %}
 {% capture example %}
-
 <div>
   <div class="form-check">
     <input id="checkbox1" type="checkbox">
@@ -25,8 +25,8 @@ Per utilizzare i checkbox personalizzati è necessario inserire la classe `.form
 
 Per allineare orizzontalmente le `checkbox` basterà aggiungere la classe `.form-check-inline` a qualsiasi `.form-check`.
 
+{% comment %}Example name: In linea {% endcomment %}
 {% capture example %}
-
 <div>
     <div class="form-check form-check-inline">
       <input id="checkbox2" type="checkbox">
@@ -43,8 +43,8 @@ Per allineare orizzontalmente le `checkbox` basterà aggiungere la classe `.form
 
 Affinchè i campi `checkbox` e `radio` risultino disabilitati occorrerà aggiungere l'attributo `disabled` all'input e la classe `.disabled` alla label relativa.
 
+{% comment %}Example name: Disabilitato {% endcomment %}
 {% capture example %}
-
 <div>
   <div class="form-check">
     <input id="checkbox4" type="checkbox" disabled>
@@ -61,8 +61,8 @@ Affinchè i campi `checkbox` e `radio` risultino disabilitati occorrerà aggiung
 
 Per poter raggruppare gli elementi `checkbox` occorrerà aggiungere al `.form-check` la classe `.form-check-group`. L'elemento grafico di spunta verrà allineato alla destra del contenuto testuale.
 
+{% comment %}Example name: Gruppi {% endcomment %}
 {% capture example %}
-
 <div>
   <div class="row">
     <div class="col-5">
@@ -106,8 +106,8 @@ Per poter raggruppare gli elementi `checkbox` occorrerà aggiungere al `.form-ch
 Per ottenere una stato di tipo **Mixed** basterà aggiungere la classe `.semi-checked` all'input di tipo `checkbox`.<br>
 Per l'utilizzo del componente mixed button, è disponibile un esempio integrato nel componente [Transfer]({{ site.baseurl }}/docs/form/transfer/).
 
+{% comment %}Example name: Con stato mixed {% endcomment %}
 {% capture example %}
-
 <div>
   <div class="row">
     <div class="col-12">

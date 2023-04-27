@@ -1,22 +1,26 @@
 [
     {
-        "name": "popover-1",
+        "name": "Base",
         "content": "\n<button type=\"button\" class=\"btn btn-lg btn-danger fade show\" data-bs-toggle=\"popover\" title=\"Titolo del Popover\" data-bs-content=\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue.\">Clicca per attivare/disattivare il popover</button>\n"
     },
     {
-        "name": "popover-2",
+        "name": "Varianti di allineamento",
+        "content": "\n<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-12 col-md-4\"></div>\n    <div class=\"col-12 col-md-4\">\n      <button type=\"button\" class=\"btn btn-secondary fade show\" data-container=\"body\" data-bs-toggle=\"popover\" data-bs-placement=\"top\" title=\"Titolo del Popover\" data-bs-content=\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue.\" style=\"width:100%;\">\n        Popover in alto\n      </button>\n    </div>\n    <div class=\"col-12 col-md-4\"></div>\n  </div>\n  <div class=\"row mt-4\">\n    <div class=\"col-12 col-md-4\">\n      <button type=\"button\" class=\"btn btn-secondary fade show\" data-container=\"body\" data-bs-toggle=\"popover\" data-bs-placement=\"right\" title=\"Titolo del Popover\" data-bs-content=\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue.\" style=\"width:100%;\">\n        Popover a destra\n      </button>\n    </div>\n    <div class=\"col-12 col-md-4\"></div>\n    <div class=\"col-12 col-md-4 mt-4 mt-md-0\">\n      <button type=\"button\" class=\"btn btn-secondary fade show\" data-container=\"body\" data-bs-toggle=\"popover\" data-bs-placement=\"left\" title=\"Titolo del Popover\" data-bs-content=\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue.\" style=\"width:100%;\">\n        Popover a sinistra\n      </button>\n    </div>\n  </div>\n  <div class=\"row mt-4\">\n    <div class=\"col-12 col-md-4\"></div>\n    <div class=\"col-12 col-md-4\">\n      <button type=\"button\" class=\"btn btn-secondary fade show\" data-container=\"body\" data-bs-toggle=\"popover\" data-bs-placement=\"bottom\" title=\"Titolo del Popover\" data-bs-content=\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue.\" style=\"width:100%;\">\n        Popover in basso\n      </button>\n    </div>\n    <div class=\"col-12 col-md-4\"></div>\n  </div>\n</div>\n"
+    },
+    {
+        "name": "Con icona e link",
         "content": "\n<button type=\"button\" class=\"btn btn-secondary fade show\" data-container=\"body\" data-bs-toggle=\"popover\" data-bs-placement=\"top\" data-bs-html=\"true\" title=\"<svg class='icon'><use href='/dist/svg/sprites.svg#it-help-circle'></use></svg> Titolo con icona\" data-bs-content=\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue.<a href='#' class='popover-inner-link'>Leggi tutto<svg class='icon'><use href='/dist/svg/sprites.svg#it-arrow-right'></use></svg></a>\">\nPopover con icona e link\n</button>\n"
     },
     {
-        "name": "popover-3",
+        "name": "Modalit\u00e0 hover",
         "content": "\n<button type=\"button\" class=\"btn btn-secondary fade show\" data-container=\"body\" data-bs-toggle=\"popover\" data-bs-trigger=\"hover\" data-bs-placement=\"right\" data-html=\"true\" title=\"Popover in Hover\" data-bs-content=\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue.\">\nApertura in Hover\n</button>\n"
     },
     {
-        "name": "popover-4",
+        "name": "Con chiusura al click successivo",
         "content": "\n<a tabindex=\"0\" href=\"#\" class=\"btn btn-lg btn-danger fade show\" role=\"button\" data-bs-toggle=\"popover\" data-bs-trigger=\"focus\" title=\"Popover richiudibile\" data-bs-content=\"Ecco il contenuto del popover richiudibile\">Popover richiudibile</a>\n"
     },
     {
-        "name": "popover-5",
+        "name": "Per elementi disabilitati",
         "content": "\n<span class=\"d-inline-block fade show\" data-bs-toggle=\"popover\" data-bs-content=\"Popover disabilitato\">\n<button class=\"btn btn-primary\" style=\"pointer-events: none;\" type=\"button\" disabled>Popover disabilitato</button>\n</span>\n"
     }
 ]

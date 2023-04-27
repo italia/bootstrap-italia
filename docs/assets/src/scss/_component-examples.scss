@@ -114,8 +114,8 @@
 .bd-example {
   padding: 1rem;
   margin-top: 1rem;
-  border: solid #f3f3f5;
-  border-width: 4px;
+  border: solid #404040;
+  background-color: rgb(242, 247, 252);
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
   border-bottom: 0;
@@ -123,7 +123,7 @@
 
   @include media-breakpoint-up(sm) {
     padding: 1.5rem;
-    border-width: 0.2rem;
+    border-width: 0.1rem;
   }
 
   + .highlight,
@@ -174,7 +174,6 @@
 
   .btn-example .btn {
     margin: 4px 8px;
-    width: 200px;
   }
 
   // Buttons

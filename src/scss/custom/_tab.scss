@@ -3,7 +3,7 @@
   background-color: $white;
   border-bottom-color: $color-border-subtle;
   display: flex;
-  overflow-x: scroll;
+  overflow-x: auto;
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
   flex-wrap: nowrap;

@@ -1,6 +1,6 @@
 [
     {
-        "name": "componente-base-1",
+        "name": "Base ",
         "content": "\n<span class=\"componente-base\" data-value=\"Test Componente\">componente base</span>\n"
     }
 ]

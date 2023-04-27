@@ -1,3 +1,47 @@
+## [2.3.8](https://github.com/italia/bootstrap-italia/compare/v2.3.7...v2.3.8) (2023-04-19)
+
+
+### Bug Fixes
+
+* **a11y:** reset white background for examples ([939e9e9](https://github.com/italia/bootstrap-italia/commit/939e9e9be2002152ffccba7fdcf1cda163e922c9))
+* add padding to cards in carousel ([d0796e2](https://github.com/italia/bootstrap-italia/commit/d0796e2ae3e08bdd65b346bb128fee1cd37b4ffa))
+* box shadow in buttons ([a593394](https://github.com/italia/bootstrap-italia/commit/a593394f4f97cf202d6e4e5f7229233736359b2d))
+* cards padding for carousel on mobile ([0023a37](https://github.com/italia/bootstrap-italia/commit/0023a37a60c7a85992b2517cbca9eeab9c38282b))
+* carousel single slide wrapper background ([25c86e4](https://github.com/italia/bootstrap-italia/commit/25c86e4f4c38f243d40c46ac9a1f0f6b6058a8ae))
+* hover on dark outline secondary button ([88481bc](https://github.com/italia/bootstrap-italia/commit/88481bc1b65441db2a39d138854735169e03f940))
+* primary and secondary outline buttons ([b1040f0](https://github.com/italia/bootstrap-italia/commit/b1040f0ed7bb9f52db04d7bb4b5c1f49e4e556d3))
+* remove background for timeline cards ([04cabf3](https://github.com/italia/bootstrap-italia/commit/04cabf360fb9754a206d1069eb66e99288fcad62))
+
+
+
+## [2.3.7](https://github.com/italia/bootstrap-italia/compare/v2.3.6...v2.3.7) (2023-04-13)
+
+
+### Bug Fixes
+
+* carousel dots on card ([0e00a55](https://github.com/italia/bootstrap-italia/commit/0e00a555f521870fb24116ef7b232d421fb256c0))
+* use same site script for cookiebar ([9c9ca62](https://github.com/italia/bootstrap-italia/commit/9c9ca62b65228de1d395828dd6caeb409035d7bb))
+
+
+
+## [2.3.6](https://github.com/italia/bootstrap-italia/compare/v2.3.5...v2.3.6) (2023-03-22)
+
+
+### Bug Fixes
+
+* horizontal nav tabs scroll ([593d130](https://github.com/italia/bootstrap-italia/commit/593d130e75160dc45561fde6daa9449b276406ff))
+
+
+
+## [2.3.5](https://github.com/italia/bootstrap-italia/compare/v2.3.4...v2.3.5) (2023-03-03)
+
+
+### Bug Fixes
+
+* stepper borders ([a5118f7](https://github.com/italia/bootstrap-italia/commit/a5118f7d56f61ea092f9385a7c68d4c989b1773b))
+
+
+
 ## [2.3.4](https://github.com/italia/bootstrap-italia/compare/v2.3.3...v2.3.4) (2023-02-09)
 
 

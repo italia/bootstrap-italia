@@ -49,6 +49,8 @@ Il dimmer si compone di un wrapper generale `.dimmer` e di un contenitore `.dimm
 
 Il testo è contenuto all'interno di un tag `<p>` e può essere preceduto da un'icona contenuta in un `<div>` con classe `.dimmer-icon`.
 
+{% comment %}Example name: Base{% endcomment %}
+{% capture example %}
 <div class="toggles col-md-6 col-lg-4">
   <label for="toggleDimmer1">
     Attiva Dimmer 1
@@ -56,8 +58,6 @@ Il testo è contenuto all'interno di un tag `<p>` e può essere preceduto da un'
     <span class="lever"></span>
   </label>
 </div>
-
-{% capture example %}
 
 <div class="row dimmable">
   <div class="dimmer fade show" id="dimmer1">
@@ -109,6 +109,9 @@ Il testo è contenuto all'interno di un tag `<p>` e può essere preceduto da un'
 
 Se si vuole iniziare con il dimmer disabilitato è necessario utilizzare l'attributo `aria-hidden`.
 
+{% comment %}Example name: Base, default disattivato{% endcomment %}
+{% capture example %}
+
 <div class="toggles col-md-6 col-lg-4">
   <label for="toggleDimmer2">
     Attiva Dimmer 2
@@ -116,8 +119,6 @@ Se si vuole iniziare con il dimmer disabilitato è necessario utilizzare l'attri
     <span class="lever"></span>
   </label>
 </div>
-
-{% capture example %}
 
 <div class="row dimmable">
   <div class="dimmer fade" id="dimmer2" aria-hidden="true">
@@ -171,6 +172,9 @@ Se si vuole iniziare con il dimmer disabilitato è necessario utilizzare l'attri
 
 Aggiungendo la classe `.dimmer-primary` al wrapper del dimmer si ottiene una versione con sfondo di colore primario.
 
+{% comment %}Example name: Colore primary{% endcomment %}
+{% capture example %}
+
 <div class="toggles col-md-6 col-lg-4">
   <label for="toggleDimmer3">
     Attiva Dimmer 2
@@ -178,8 +182,6 @@ Aggiungendo la classe `.dimmer-primary` al wrapper del dimmer si ottiene una ver
     <span class="lever"></span>
   </label>
 </div>
-
-{% capture example %}
 
 <div class="row dimmable">
   <div class="dimmer dimmer-primary fade show" id="dimmer3">
@@ -232,6 +234,9 @@ Un dimmer può contenere tasti collegati ad azioni ed un titolo descrittivo.
 
 I pulsanti vanno inseriti in un `<div>` con classi `.dimmer-buttons` e `.bg-dark`. Se è presente un solo pulsante aggiungere la classe `.single-button`.
 
+{% comment %}Example name: Con azioni{% endcomment %}
+{% capture example %}
+
 <div class="toggles col-md-6 col-lg-4">
   <label for="toggleDimmer4">
     Attiva Dimmer 4
@@ -239,8 +244,6 @@ I pulsanti vanno inseriti in un `<div>` con classi `.dimmer-buttons` e `.bg-dark
     <span class="lever"></span>
   </label>
 </div>
-
-{% capture example %}
 
 <div class="row dimmable">
   <div class="dimmer fade show" id="dimmer4">
@@ -295,6 +298,9 @@ I pulsanti vanno inseriti in un `<div>` con classi `.dimmer-buttons` e `.bg-dark
 
 Aggiungendo la classe `.dimmer-primary` al wrapper del dimmer si ottiene una versione con sfondo di colore primario.
 
+{% comment %}Example name: Con azioni, colore primary{% endcomment %}
+{% capture example %}
+
 <div class="toggles col-md-6 col-lg-4">
   <label for="toggleDimmer5">
     Attiva Dimmer 5
@@ -302,8 +308,6 @@ Aggiungendo la classe `.dimmer-primary` al wrapper del dimmer si ottiene una ver
     <span class="lever"></span>
   </label>
 </div>
-
-{% capture example %}
 
 <div class="row dimmable">
   <div class="dimmer dimmer-primary fade show" id="dimmer5">

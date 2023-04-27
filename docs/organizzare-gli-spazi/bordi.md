@@ -12,6 +12,7 @@ logica aggiuntiva o sottrattiva.
 ### Aggiuntivo
 
 <div class="bd-example-border-utils">
+{% comment %}Example name: Aggiuntivo{% endcomment %}
 {% capture example %}
 <span class="border"></span>
 <span class="border-top"></span>
@@ -25,6 +26,7 @@ logica aggiuntiva o sottrattiva.
 
 <div class="bd-example-border-utils bd-example-border-utils-0">
 {% capture example %}
+{% comment %}Example name: Sottrattivo{% endcomment %}
 <span class="border-0"></span>
 <span class="border-top-0"></span>
 <span class="border-end-0"></span>
@@ -38,6 +40,7 @@ logica aggiuntiva o sottrattiva.
 Cambia il colore del bordo scegliendo dalla palette del tema utilizzato.
 
 <div class="bd-example-border-utils">
+{% comment %}Example name: Varianti di colore{% endcomment %}
 {% capture example %}
 {% for color in site.data.theme-colors %}
 <span class="border border-{{ color.name }}"></span>{% endfor %}
@@ -49,7 +52,8 @@ Cambia il colore del bordo scegliendo dalla palette del tema utilizzato.
 
 Classi per arrotondare facilmente gli angoli di un elemento.
 
-<div class="bd-example bd-example-images">
+{% comment %}Example name: Arrotondati{% endcomment %}
+{% capture example %}
   <img src="https://via.placeholder.com/75x75/ebebeb/808080/?text=Immagine" class="rounded" alt="Esempio di immagine arrotondata">
   <img src="https://via.placeholder.com/75x75/ebebeb/808080/?text=Immagine" class="rounded-top" alt="Esempio di immagine arrotondata in alto">
   <img src="https://via.placeholder.com/75x75/ebebeb/808080/?text=Immagine" class="rounded-end" alt="Esempio di immagine arrotondata a destra">
@@ -58,15 +62,4 @@ Classi per arrotondare facilmente gli angoli di un elemento.
   <img src="https://via.placeholder.com/75x75/ebebeb/808080/?text=Immagine" class="rounded-circle" alt="Esempio di immagine arrotondata a cerchio">
   <img src="https://via.placeholder.com/75x75/ebebeb/808080/?text=Immagine" class="rounded-0" alt="Esempio di immagine non arrotondata (sovrascrive l'eventuale arrotondamento applicato precedentemente)">
   <img src="https://via.placeholder.com/150x75/ebebeb/808080/?text=Immagine" class="rounded-pill" alt="Esempio di immagine arrotondata a pillola">
-</div>
-
-```html
-<img src="..." alt="..." class="rounded" />
-<img src="..." alt="..." class="rounded-top" />
-<img src="..." alt="..." class="rounded-end" />
-<img src="..." alt="..." class="rounded-bottom" />
-<img src="..." alt="..." class="rounded-start" />
-<img src="..." alt="..." class="rounded-circle" />
-<img src="..." alt="..." class="rounded-0" />
-<img src="..." alt="..." class="rounded-pill" />
-```
+{% endcapture %}{% include example.html content=example %}

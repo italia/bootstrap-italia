@@ -15,8 +15,8 @@ Gli elementi Skiplinks sono contraddistinti dalle classi:
 
 Per attivare la funzionalità si digita da tastiera il tasto: **TAB**.
 
+{% comment %}Example name: Base{% endcomment %}
 {% capture example %}
-
 <div class="skiplinks">
   <a class="visually-hidden-focusable" href="#">Vai al contenuto principale</a>
   <a class="visually-hidden-focusable" href="#">Vai al piede di pagina</a>

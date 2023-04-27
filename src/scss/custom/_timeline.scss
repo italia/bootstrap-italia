@@ -26,6 +26,9 @@
   .timeline-element {
     padding: $timeline-content-padding;
     position: relative;
+    .card {
+      background: none;
+    }
   }
   .it-pin-wrapper {
     display: flex;

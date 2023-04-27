@@ -1,6 +1,6 @@
 [
     {
-        "name": "forward-1",
+        "name": "Base",
         "content": "\n<a href=\"#sezione-di-esempio\" data-bs-toggle=\"forward\" class=\"forward\" aria-label=\"Vai a: Sezione di esempio\">\n<svg class=\"icon icon-lg icon-primary\"><use href=\"/dist/svg/sprites.svg#it-expand\"></use></svg>\n</a>\n"
     }
 ]
