@@ -170,8 +170,7 @@ presenti) e icona: la struttura è uguale alla card precedente, per l'intestazio
 elementi come da esempio.
 
 Nell'esempio seguente sono stati inseriti un sottotitolo ed un link semplice che
-segue il paragrafo. Per i sottotitoli utilizzare il tag `<h6>`, per i link
-semplici utilizzare la classe `.simple-link`.
+segue il paragrafo.
 
 {% comment %}Example name: Con icona, sottotitolo e link{% endcomment %}
 {% capture example %}
@@ -189,7 +188,7 @@ semplici utilizzare la classe `.simple-link`.
           </div>
           <a href="#">
             <h3 class="card-title h5 no_toc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h3>
-            <h6 class="card-subtitle">Sottotitolo</h6>
+            <p class="card-subtitle h6">Sottotitolo</p>
           </a>
           <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           <a class="simple-link" href="#">Link <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span></a>
