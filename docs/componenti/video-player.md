@@ -11,6 +11,17 @@ dover utilizzare plugin esterni. Questo componente utilizza la libreria video.js
 implementare funzionalità avanzate come il supporto a diversi formati video, 
 la personalizzazione dell'interfaccia utente e l'integrazione con API esterne.
 
+{% capture callout %}
+
+#### Accessibilità
+
+Le persone che utilizzano le tecnologie assistive possono agevolmente accedere ai comandi di questo player video, tuttavia per rendere accessibile un contenuto video è necessario soddisfare i Criteri di Successo contenuti nella [linee guida 1.2 Media temporizzati delle WCAG (versione corrente)](https://www.w3.org/Translations/WCAG21-it/#time-based-media). In particolare:
+ - Se il contenuto è costituito da “solo video” oppure “solo audio”, è necessario fornire una trascrizione (Criterio di Successo 1.2.1)
+ - Fornire sempre sottotitoli (Criterio di Successo 1.2.2).
+ - Fornire audio descrizioni quando sono presenti scene o contenuti non descritte dalla traccia audio primaria. (Criteri di Successo 1.2.3 e 1.2.5)
+
+{% endcapture %}{% include callout.html content=callout type="accessibility" %}
+
 ## Come funziona
 
 Il player viene istanziato automaticamente quando è presente l'attributo `data-bs-video`.
