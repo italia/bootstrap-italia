@@ -7,5 +7,7 @@
 // import './vendor/tsparticles.min.js'
 // import './vendor/tweenjs.min.js'
 // import './docs.js'
+import './vendor/videojs-vimeo.js'
+import './vendor/videojs-youtube.js'
 
 import '../scss/docs.scss'

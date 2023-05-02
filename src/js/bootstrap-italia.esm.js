@@ -35,6 +35,8 @@ export { default as ScrollSpy } from './plugins/scrollspy'
 export { default as Tab } from './plugins/tab'
 export { default as Toast } from './plugins/toast'
 export { default as Tooltip } from './plugins/tooltip'
+export { default as VideoPlayer } from './plugins/videoplayer'
+export { default as AcceptOverlay } from './plugins/accept-overlay'
 export { default as loadFonts } from './plugins/fonts-loader'
 
 /* Side effects */

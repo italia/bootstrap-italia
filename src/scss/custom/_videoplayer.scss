@@ -1,0 +1,40 @@
+/* stylelint-disable */
+@import 'video.js/src/css/video-js';
+/* stylelint-enable */
+
+.vjs-theme-bootstrap-italia {
+  .vjs-big-play-button {
+    background-color: $primary;
+  }
+  &:hover .vjs-big-play-button,
+  &.vjs-big-play-button:focus {
+    background-color: $primary;
+  }
+  .vjs-control-bar {
+    background-color: $primary;
+    font-size: 1.1em;
+    @include media-breakpoint-up(lg) {
+      min-height: 48px;
+      font-size: 1rem;
+    }
+  }
+}
+
+.acceptoverlay + .vjs-fluid {
+  min-height: 400px;
+}
+
+.vjs-transcription {
+  display: flex;
+  justify-content: center;
+  border: none;
+  .accordion-button {
+    border: none;
+  }
+  .accordion-item {
+    width: 100%;
+    @include media-breakpoint-up(lg) {
+      width: 75ch;
+    }
+  }
+}

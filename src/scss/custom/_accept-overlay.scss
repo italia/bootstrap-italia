@@ -1,0 +1,128 @@
+//mobile
+
+.acceptoverlayable {
+  position: relative;
+  min-height: 400px;
+}
+
+.acceptoverlay {
+  display: flex;
+  background-color: $color-background-emphasis;
+  opacity: 0.92;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  padding: $v-gap * 4;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
+
+  label {
+    color: $white;
+    &::after {
+      border-color: $white !important;
+    }
+  }
+
+  &[aria-hidden='true'] {
+    display: none;
+  }
+
+  &.acceptoverlay-primary {
+    background-color: $primary;
+    &.show {
+      opacity: 0.9;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    color: $white;
+    margin-bottom: 0;
+  }
+
+  h4 {
+    text-align: center;
+    font-size: 2.222rem;
+  }
+
+  p {
+    text-align: justify;
+    font-family: $font-family-serif;
+    font-size: 1rem;
+  }
+
+  .acceptoverlay-inner {
+    width: 100%;
+    max-width: 480px;
+  }
+
+  .acceptoverlay-icon {
+    text-align: center;
+    margin-bottom: $v-gap * 3;
+    .icon {
+      fill: $white;
+    }
+  }
+
+  .acceptoverlay-buttons {
+    background-color: transparent !important;
+    margin-top: $v-gap * 4;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    button {
+      width: 100%;
+      &:last-child {
+        margin-top: $v-gap * 2;
+      }
+    }
+    &.single-button {
+      button {
+        margin-top: 0;
+      }
+    }
+  }
+}
+//Tablet vertical
+@include media-breakpoint-up(md) {
+  .acceptoverlay {
+    padding: $v-gap * 3;
+    .acceptoverlay-icon {
+      margin-bottom: $v-gap * 6;
+    }
+    .acceptoverlay-buttons {
+      flex-wrap: nowrap;
+      button {
+        width: 50%;
+        margin-top: 0 !important;
+        &:last-child {
+          margin-left: $v-gap * 3;
+        }
+      }
+      &.single-button {
+        //text-align: center;
+        button {
+          width: auto;
+          min-width: 50%;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}
+
+//Tablet horizontal / small desktop
+@include media-breakpoint-up(lg) {
+  .acceptoverlay {
+    align-items: center;
+  }
+}
