@@ -11,7 +11,7 @@ I Callout posso essere utilizzati per evidenziare alcune parti del testo che ric
 ## Esempi
 
 {% capture callout %}
-Breaking feature dalla versione **2.7.0**
+Breaking feature dalla versione **2.4.0**
 
 Il contenitore `<div>` con classe `.callout` deve essere seguito da un ulteriore contenitore `<div>` con classe `.callout-inner`. Seguire gli esempi e la successiva descrizione per capire la composizione del nuovo componente.
 {% endcapture %}{% include callout.html content=callout type="danger" %}
