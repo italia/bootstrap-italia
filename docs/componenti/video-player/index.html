@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="description" content="Componente Video Player." />
+<meta name="author" content="Dipartimento per la trasformazione digitale" />
+<meta name="generator" content="Jekyll v4.2.1" />
+
+<title>Video Player · Bootstrap Italia</title>
+
+<!-- Bootstrap core CSS -->
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202305021315" rel="stylesheet" />
+
+
+<!-- Documentation extras -->
+ 
+<link href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.css" rel="stylesheet" />
+
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202305021315" rel="stylesheet" />
+
+<!-- Favicons -->
+<link rel="icon" href="/bootstrap-italia/favicon.ico" />
+<link rel="icon" href="/bootstrap-italia/docs/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png" />
+<link rel="icon" href="/bootstrap-italia/docs/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png" />
+<link rel="mask-icon" href="/bootstrap-italia/docs/assets/img/favicons/safari-pinned-tab.svg" color="#0066CC" />
+<link rel="apple-touch-icon" href="/bootstrap-italia/docs/assets/img/favicons/apple-touch-icon.png" />
+<link rel="manifest" href="/bootstrap-italia/site.webmanifest" />
+<meta name="msapplication-config" content="/bootstrap-italia/browserconfig.xml" />
+<meta name="theme-color" content="#0066CC" />
+ <!-- Twitter -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@designersITA" />
+<meta name="twitter:creator" content="Dipartimento per la trasformazione digitale" />
+<meta name="twitter:title" content="Video Player" />
+<meta name="twitter:description" content="Componente Video Player." />
+<meta name="twitter:image" content="/docs/assets/img/favicons/social-card.png" />
+
+<!-- Facebook -->
+<meta property="og:url" content="/docs/componenti/video-player/" />
+<meta property="og:title" content="Video Player" />
+<meta property="og:description" content="Componente Video Player." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="/docs/assets/img/favicons/social-card.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+
+
+
+<script type="text/javascript">
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://ingestion.webanalytics.italia.it/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', 'kjpRNRPp1y']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+
+
+  </head>
+  <body>
+    <a id="skippy" class="visually-hidden-focusable" href="#content">
+      <div class="container">
+        <span class="skiplink-text">Skip to main content</span>
+      </div>
+    </a>
+
+    <nav class="navbar-institutional navbar navbar-expand-lg navbar-dark py-1 px-3">
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#navbarsTop"
+    aria-controls="navbarsTop"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div>
+    <a class="navbar-brand text-decoration-none" href="https://innovazione.gov.it/"
+      >Dipartimento <span class="d-none d-lg-inline">per la Trasformazione </span>Digitale</a
+    >
+    <span class="navbar-brand text-white"> + </span>
+    <a class="navbar-brand text-decoration-none" href="http://agid.gov.it/">AgID</a>
+  </div>
+  <div class="collapse navbar-collapse" id="navbarsTop">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item nav-item-w-divider">
+        <a class="nav-link text-decoration-none" href="https://pianotriennale-ict.italia.it/">Piano Triennale</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-decoration-none" href="https://developers.italia.it/">Developers</a>
+      </li>
+      <li class="nav-item nav-item-w-divider">
+        <a class="nav-link text-decoration-none" href="http://designers.italia.it/">Designers</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-decoration-none" href="https://forum.italia.it/">Forum</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-decoration-none" href="https://docs.italia.it/">Docs</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-decoration-none" href="https://github.com/italia/">GitHub</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+ <header class="navbar-main navbar navbar-dark bd-navbar px-3 bd-navbar--slim">
+  <div class="container-fluid">
+    <a class="navbar-brand py-2 text-decoration-none" href="/bootstrap-italia/" aria-label="Bootstrap Italia Homepage" title="Bootstrap Italia Homepage">
+      <div class="d-flex flex-row"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92 74"
+  
+   height="48"
+  >
+  <g fill="#FFF">
+    <path d="M31.799 71.9V15.7h15.1V72h-15.1zM91.099 28.5h-13.8v23.1c0 2.3.1 3.8.2 4.8.1.9.5 1.7 1.2 2.4s1.8 1 3.3 1l8.6-.2.7 12c-5 1.1-8.9 1.7-11.5 1.7-6.8 0-11.4-1.5-13.8-4.6-2.5-3-3.7-8.6-3.7-16.8V0h15.1v15.6h13.8v12.9zM9.099 32.8c-2.6 0-4.8-.9-6.5-2.7s-2.6-4-2.6-6.6.9-4.8 2.5-6.6c1.7-1.8 3.9-2.6 6.5-2.6s4.8.9 6.5 2.7 2.5 4 2.5 6.7-.8 4.8-2.5 6.6c-1.6 1.6-3.7 2.5-6.4 2.5z"></path>
+  </g>
+</svg>
+<div class="d-flex flex-column ps-3 ps-sm-4">
+          <h1 class="bd-logo-title">Bootstrap Italia</h1>
+          <h2 class="bd-logo-subtitle">Il tema Bootstrap 5 per <span class="d-none d-sm-inline">lo sviluppo di applicazioni web per </span>la PA</h2>
+        </div>
+      </div>
+    </a>
+
+    
+    <button class="btn btn-xs btn-primary d-md-none px-2 text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+      menu
+    </button>
+    
+
+    <ul class="navbar-nav flex-row ms-md-auto d-none d-md-flex">
+      <li class="nav-item pe-2">
+        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v2.4.0/bootstrap-italia.zip" aria-label="Download">
+          <small class="pe-2 m-0">v2.4.0</small>
+          <svg class="icon icon-sm icon-light"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-download" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-download"></use></svg><span class="visually-hidden">Download</span>
+        </a>
+      </li>
+      <li class="nav-item pe-2">
+        <a title="Repository GitHub di Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <svg class="icon icon-sm icon-light"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-github" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-github"></use></svg><span class="visually-hidden">GitHub</span>
+        </a>
+      </li>
+    </ul>
+
+    
+    <div class="bd-search w-100">
+      <label for="search-input" class="visually-hidden">Cerca:</label>
+      <input type="search" class="form-control" id="search-input" name="search-input" placeholder="Cerca componenti, classi, informazioni..." aria-label="Cerca..." autocomplete="off" />
+    </div>
+    
+  </div>
+</header>
+
+
+    <div class="container-fluid">
+      <div class="row flex-xl-nowrap">
+        <div class="col-12 col-md-3 col-xl-2 bd-sidebar"><nav class="collapse bd-links" id="bd-docs-nav"><div class="sidebar-wrapper">
+    <h3 class="no_toc">Documentazione</h3>
+    <div class="sidebar-linklist-wrapper">
+      <div class="link-list-wrapper">
+        <ul class="link-list"><li>
+            
+            <!-- One:usare ID -->
+            <a
+              role="button"
+              class="list-item large medium icon-right "
+              href="#collapse-1"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse-1"
+              aria-expanded="false"
+              aria-controls="collapse-1"
+            >
+              <span class="list-item-title-icon-wrapper">
+                <span class="list-item-title">Come iniziare</span>
+                <svg class="icon icon-sm icon-primary right" aria-hidden="true">
+                  <use href="/bootstrap-italia/dist/svg/sprites.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use>
+                </svg>
+              </span>
+            </a>
+            <ul class="link-sublist collapse " id="collapse-1"><li>
+                <a class="list-item " href="/bootstrap-italia/docs/come-iniziare/introduzione/">
+                  <span>Introduzione</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/come-iniziare/strumenti-di-compilazione/">
+                  <span>Strumenti di compilazione</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/come-iniziare/personalizzazione-della-libreria/">
+                  <span>Personalizzazione della libreria</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/come-iniziare/modificare-componenti/">
+                  <span>Modificare Componenti</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/come-iniziare/componente-base/">
+                  <span>Componente base</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/come-iniziare/migrazione-dalla-versione-1/">
+                  <span>Migrazione dalla versione 1</span></a>
+              </li></ul>
+            
+          </li><li>
+            
+            <!-- One:usare ID -->
+            <a
+              role="button"
+              class="list-item large medium icon-right "
+              href="#collapse-2"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse-2"
+              aria-expanded="false"
+              aria-controls="collapse-2"
+            >
+              <span class="list-item-title-icon-wrapper">
+                <span class="list-item-title">Organizzare gli spazi</span>
+                <svg class="icon icon-sm icon-primary right" aria-hidden="true">
+                  <use href="/bootstrap-italia/dist/svg/sprites.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use>
+                </svg>
+              </span>
+            </a>
+            <ul class="link-sublist collapse " id="collapse-2"><li>
+                <a class="list-item " href="/bootstrap-italia/docs/organizzare-gli-spazi/introduzione/">
+                  <span>Introduzione</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/organizzare-gli-spazi/allineamento-verticale/">
+                  <span>Allineamento verticale</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/organizzare-gli-spazi/bordi/">
+                  <span>Bordi</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/organizzare-gli-spazi/clearfix/">
+                  <span>Clearfix</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/organizzare-gli-spazi/dimensionamento/">
+                  <span>Dimensionamento</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/organizzare-gli-spazi/display/">
+                  <span>Display</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/organizzare-gli-spazi/flex/">
+                  <span>Flex</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/organizzare-gli-spazi/float/">
+                  <span>Float</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/organizzare-gli-spazi/griglie/">
+                  <span>Griglie</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/organizzare-gli-spazi/ombreggiature/">
+                  <span>Ombreggiature</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/organizzare-gli-spazi/posizionamento/">
+                  <span>Posizionamento</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/organizzare-gli-spazi/proporzioni/">
+                  <span>Proporzioni</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/organizzare-gli-spazi/spaziature/">
+                  <span>Spaziature</span></a>
+              </li></ul>
+            
+          </li><li>
+            
+            <!-- One:usare ID -->
+            <a
+              role="button"
+              class="list-item large medium icon-right "
+              href="#collapse-3"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse-3"
+              aria-expanded="false"
+              aria-controls="collapse-3"
+            >
+              <span class="list-item-title-icon-wrapper">
+                <span class="list-item-title">Organizzare i contenuti</span>
+                <svg class="icon icon-sm icon-primary right" aria-hidden="true">
+                  <use href="/bootstrap-italia/dist/svg/sprites.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use>
+                </svg>
+              </span>
+            </a>
+            <ul class="link-sublist collapse " id="collapse-3"><li>
+                <a class="list-item " href="/bootstrap-italia/docs/organizzare-i-contenuti/introduzione/">
+                  <span>Introduzione</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/organizzare-i-contenuti/codice/">
+                  <span>Codice</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/organizzare-i-contenuti/immagini/">
+                  <span>Immagini</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/organizzare-i-contenuti/liste/">
+                  <span>Liste</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/organizzare-i-contenuti/liste-di-immagini/">
+                  <span>Liste di immagini</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/organizzare-i-contenuti/tabelle/">
+                  <span>Tabelle</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/organizzare-i-contenuti/testo/">
+                  <span>Testo</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/organizzare-i-contenuti/tipografia/">
+                  <span>Tipografia</span></a>
+              </li></ul>
+            
+          </li><li>
+            
+            <!-- One:usare ID -->
+            <a
+              role="button"
+              class="list-item large medium icon-right "
+              href="#collapse-4"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse-4"
+              aria-expanded="false"
+              aria-controls="collapse-4"
+            >
+              <span class="list-item-title-icon-wrapper">
+                <span class="list-item-title">Menu di navigazione</span>
+                <svg class="icon icon-sm icon-primary right" aria-hidden="true">
+                  <use href="/bootstrap-italia/dist/svg/sprites.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use>
+                </svg>
+              </span>
+            </a>
+            <ul class="link-sublist collapse " id="collapse-4"><li>
+                <a class="list-item " href="/bootstrap-italia/docs/menu-di-navigazione/introduzione/">
+                  <span>Introduzione</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/menu-di-navigazione/bottomnav/">
+                  <span>BottomNav</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/menu-di-navigazione/breadcrumbs/">
+                  <span>Breadcrumbs</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/menu-di-navigazione/header/">
+                  <span>Header</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/menu-di-navigazione/megamenu/">
+                  <span>Megamenu</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/menu-di-navigazione/navscroll/">
+                  <span>Navscroll</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/menu-di-navigazione/sidebar/">
+                  <span>Sidebar</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/menu-di-navigazione/skiplinks/">
+                  <span>Skiplinks</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/menu-di-navigazione/thumbnav/">
+                  <span>Thumbnav</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/menu-di-navigazione/toolbar/">
+                  <span>Toolbar</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/menu-di-navigazione/torna-indietro/">
+                  <span>Torna indietro</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/menu-di-navigazione/torna-su/">
+                  <span>Torna su</span></a>
+              </li></ul>
+            
+          </li><li>
+            
+            <!-- One:usare ID -->
+            <a
+              role="button"
+              class="list-item large medium icon-right active"
+              href="#collapse-5"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse-5"
+              aria-expanded="true"
+              aria-controls="collapse-5"
+            >
+              <span class="list-item-title-icon-wrapper">
+                <span class="list-item-title">Componenti</span>
+                <svg class="icon icon-sm icon-primary right" aria-hidden="true">
+                  <use href="/bootstrap-italia/dist/svg/sprites.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use>
+                </svg>
+              </span>
+            </a>
+            <ul class="link-sublist collapse show" id="collapse-5"><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/introduzione/">
+                  <span>Introduzione</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/accordion/">
+                  <span>Accordion</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/affix/">
+                  <span>Affix</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/alert/">
+                  <span>Alert</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/avatar/">
+                  <span>Avatar</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/badge/">
+                  <span>Badge</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/buttons/">
+                  <span>Buttons</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/card/">
+                  <span>Card</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/callout/">
+                  <span>Callout</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/carousel/">
+                  <span>Carousel</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/chips/">
+                  <span>Chips</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/collapse/">
+                  <span>Collapse</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/cookiebar/">
+                  <span>Cookiebar</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/dimmer/">
+                  <span>Dimmer</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/dropdown/">
+                  <span>Dropdown</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/forward/">
+                  <span>Forward</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/hero/">
+                  <span>Hero</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/modale/">
+                  <span>Modale</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/notifiche/">
+                  <span>Notifiche</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/overlay/">
+                  <span>Overlay</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/paginazione/">
+                  <span>Paginazione</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/popover/">
+                  <span>Popover</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/progress-indicators/">
+                  <span>Progress Indicators</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/rating/">
+                  <span>Rating</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/sections/">
+                  <span>Sections</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/steppers/">
+                  <span>Steppers</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/sticky/">
+                  <span>Sticky</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/tab/">
+                  <span>Tab</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/timeline/">
+                  <span>Timeline</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/tooltip/">
+                  <span>Tooltip</span></a>
+              </li><li>
+                <a class="list-item  active" href="/bootstrap-italia/docs/componenti/video-player/">
+                  <span>Video Player</span></a>
+              </li></ul>
+            
+          </li><li>
+            
+            <!-- One:usare ID -->
+            <a
+              role="button"
+              class="list-item large medium icon-right "
+              href="#collapse-6"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse-6"
+              aria-expanded="false"
+              aria-controls="collapse-6"
+            >
+              <span class="list-item-title-icon-wrapper">
+                <span class="list-item-title">Form</span>
+                <svg class="icon icon-sm icon-primary right" aria-hidden="true">
+                  <use href="/bootstrap-italia/dist/svg/sprites.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use>
+                </svg>
+              </span>
+            </a>
+            <ul class="link-sublist collapse " id="collapse-6"><li>
+                <a class="list-item " href="/bootstrap-italia/docs/form/introduzione/">
+                  <span>Introduzione</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/form/input/">
+                  <span>Input</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/form/input-numerico/">
+                  <span>Input Numerico</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/form/input-calendario/">
+                  <span>Input Calendario</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/form/input-ora/">
+                  <span>Input Ora</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/form/autocompletamento/">
+                  <span>Autocompletamento</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/form/upload/">
+                  <span>Upload</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/form/radio-button/">
+                  <span>Radio Button</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/form/select/">
+                  <span>Select</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/form/checkbox/">
+                  <span>Checkbox</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/form/toggles/">
+                  <span>Toggles</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/form/transfer/">
+                  <span>Transfer</span></a>
+              </li></ul>
+            
+          </li><li>
+            
+            <!-- One:usare ID -->
+            <a
+              role="button"
+              class="list-item large medium icon-right "
+              href="#collapse-7"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse-7"
+              aria-expanded="false"
+              aria-controls="collapse-7"
+            >
+              <span class="list-item-title-icon-wrapper">
+                <span class="list-item-title">Utilities</span>
+                <svg class="icon icon-sm icon-primary right" aria-hidden="true">
+                  <use href="/bootstrap-italia/dist/svg/sprites.svg#it-expand" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use>
+                </svg>
+              </span>
+            </a>
+            <ul class="link-sublist collapse " id="collapse-7"><li>
+                <a class="list-item " href="/bootstrap-italia/docs/utilities/colori/">
+                  <span>Colori</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/utilities/colori-custom/">
+                  <span>Colori Custom</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/utilities/icone/">
+                  <span>Icone</span></a>
+              </li></ul>
+            
+          </li><li>
+            
+            <a class="list-item active" href="/bootstrap-italia/docs/esempi/"><span>Esempi</span></a>
+            
+          </li><li>
+            
+            <a class="list-item active" href="/bootstrap-italia/docs/progetti/"><span>Progetti</span></a>
+            
+          </li><li>
+            
+            <a class="list-item active" href="/bootstrap-italia/docs/informazioni/"><span>Informazioni</span></a>
+            
+          </li></ul>
+      </div>
+    </div>
+  </div>
+</nav>
+</div>
+
+         <div class="d-none d-xl-block col-xl-2 bd-toc">
+  <div class="sidebar-wrapper">
+    <h3>Video Player</h3>
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#come-funziona">Come funziona</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#controllare-il-player-con-i-data-attribute">Controllare il player con i data-attribute</a></li>
+<li class="toc-entry toc-h3"><a href="#controllare-il-player-con-javascript">Controllare il player con JavaScript</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#sottotitoli-didascalie-capitoli-e-descrizioni">Sottotitoli, didascalie, capitoli e descrizioni</a></li>
+<li class="toc-entry toc-h2"><a href="#streaming">Streaming</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#gestire-più-tracce-audio">Gestire più tracce audio</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#embed-da-piattaforme-terze">Embed da piattaforme terze</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#attivazione-delloverlay-di-consenso">Attivazione dell’overlay di consenso</a></li>
+<li class="toc-entry toc-h3"><a href="#gestione-delle-preferenze-con-javascript">Gestione delle preferenze con JavaScript</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#plugin">Plugin</a></li>
+</ul>
+  </div>
+</div>
+ 
+
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 px-md-3 bd-content">
+          <h1 class="bd-title" id="content">Video Player</h1>
+          <p class="bd-lead">Componente Video Player.</p>
+          <p>Il tag <code class="language-plaintext highlighter-rouge">video</code> HTML5 consente di incorporare video all’interno di una pagina web senza 
+dover utilizzare plugin esterni. Questo componente utilizza la libreria video.js per 
+implementare funzionalità avanzate come il supporto a diversi formati video, 
+la personalizzazione dell’interfaccia utente e l’integrazione con API esterne.</p>
+
+<div class="bd-callout bd-callout-accessibility">
+<h4 id="accessibilità">Accessibilità</h4>
+
+<p>Le persone che utilizzano le tecnologie assistive possono agevolmente accedere ai comandi di questo player video, tuttavia per rendere accessibile un contenuto video è necessario soddisfare i Criteri di Successo contenuti nella <a href="https://www.w3.org/Translations/WCAG21-it/#time-based-media">linee guida 1.2 Media temporizzati delle WCAG (versione corrente)</a>. In particolare:</p>
+<ul>
+  <li>Se il contenuto è costituito da “solo video” oppure “solo audio”, è necessario fornire una trascrizione (Criterio di Successo 1.2.1)</li>
+  <li>Fornire sempre sottotitoli (Criterio di Successo 1.2.2).</li>
+  <li>Fornire audio descrizioni quando sono presenti scene o contenuti non descritte dalla traccia audio primaria. (Criteri di Successo 1.2.3 e 1.2.5)</li>
+</ul>
+
+</div>
+
+<h2 id="come-funziona">Come funziona</h2>
+
+<p>Il player viene istanziato automaticamente quando è presente l’attributo <code class="language-plaintext highlighter-rouge">data-bs-video</code>.</p>
+
+<div class="bd-example">
+<div class="row">
+  <video controls="" data-bs-video="">
+    <source src="//vjs.zencdn.net/v/oceans.mp4" type="video/mp4" />
+    <source src="//vjs.zencdn.net/v/oceans.webm" type="video/webm" />
+  </video>
+  <div class="vjs-transcription accordion">
+    <div class="accordion-item">
+      <h2 class="accordion-header no_toc" id="transcription-head1">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#transcription1" aria-expanded="true" aria-controls="transcription">
+          Trascrizione
+        </button>
+      </h2>
+      <div id="transcription1" class="accordion-collapse collapse" role="region" aria-labelledby="transcription-head1">
+        <div class="accordion-body">
+          Vestibulum hendrerit ultrices nibh, sed pharetra lacus ultrices eget. Morbi et ipsum et sapien dapibus facilisis. Integer eget semper nibh. Proin enim nulla, egestas ac rutrum eget, ullamcorper nec turpis.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;video</span> <span class="na">controls</span> <span class="na">data-bs-video</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;source</span> <span class="na">src=</span><span class="s">"//vjs.zencdn.net/v/oceans.mp4"</span> <span class="na">type=</span><span class="s">"video/mp4"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;source</span> <span class="na">src=</span><span class="s">"//vjs.zencdn.net/v/oceans.webm"</span> <span class="na">type=</span><span class="s">"video/webm"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/video&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"vjs-transcription accordion"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"accordion-item"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"accordion-header "</span> <span class="na">id=</span><span class="s">"transcription-head1"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"accordion-button collapsed"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-bs-toggle=</span><span class="s">"collapse"</span> <span class="na">data-bs-target=</span><span class="s">"#transcription1"</span> <span class="na">aria-expanded=</span><span class="s">"true"</span> <span class="na">aria-controls=</span><span class="s">"transcription"</span><span class="nt">&gt;</span>
+          Trascrizione
+        <span class="nt">&lt;/button&gt;</span>
+      <span class="nt">&lt;/h2&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"transcription1"</span> <span class="na">class=</span><span class="s">"accordion-collapse collapse"</span> <span class="na">role=</span><span class="s">"region"</span> <span class="na">aria-labelledby=</span><span class="s">"transcription-head1"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"accordion-body"</span><span class="nt">&gt;</span>
+          Vestibulum hendrerit ultrices nibh, sed pharetra lacus ultrices eget. Morbi et ipsum et sapien dapibus facilisis. Integer eget semper nibh. Proin enim nulla, egestas ac rutrum eget, ullamcorper nec turpis.
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h3 id="controllare-il-player-con-i-data-attribute">Controllare il player con i data-attribute</h3>
+
+<p>Il player offre numerose opzioni di configurazione per personalizzare l’aspetto e 
+il comportamento dello stesso. Una delle modalità per configurarlo consiste
+nell’utilizzare l’attributo <code class="language-plaintext highlighter-rouge">data-setup</code> definito all’interno del tag <code class="language-plaintext highlighter-rouge">video</code> avente come
+valore un array in formato JSON.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;video</span> <span class="na">controls</span> <span class="na">data-bs-video</span> <span class="na">data-setup=</span><span class="s">'{}'</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;source</span> <span class="na">src=</span><span class="s">"//vjs.zencdn.net/v/oceans.mp4"</span> <span class="na">type=</span><span class="s">"video/mp4"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;source</span> <span class="na">src=</span><span class="s">"//vjs.zencdn.net/v/oceans.webm"</span> <span class="na">type=</span><span class="s">"video/webm"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/video&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"vjs-transcription accordion"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"accordion-item"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"accordion-header no_toc"</span> <span class="na">id=</span><span class="s">"transcription-head2"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"accordion-button collapsed"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-bs-toggle=</span><span class="s">"collapse"</span> <span class="na">data-bs-target=</span><span class="s">"#transcription2"</span> <span class="na">aria-expanded=</span><span class="s">"true"</span> <span class="na">aria-controls=</span><span class="s">"transcription"</span><span class="nt">&gt;</span>
+          Trascrizione
+        <span class="nt">&lt;/button&gt;</span>
+      <span class="nt">&lt;/h2&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"transcription2"</span> <span class="na">class=</span><span class="s">"accordion-collapse collapse"</span> <span class="na">role=</span><span class="s">"region"</span> <span class="na">aria-labelledby=</span><span class="s">"transcription-head2"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"accordion-body"</span><span class="nt">&gt;</span>
+          Vestibulum hendrerit ultrices nibh, sed pharetra lacus ultrices eget. Morbi et ipsum et sapien dapibus facilisis. Integer eget semper nibh. Proin enim nulla, egestas ac rutrum eget, ullamcorper nec turpis.
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<div class="bd-callout bd-callout-warning">
+<h5 id="importante">Importante!</h5>
+
+<p>Nota l’uso delle virgolette singole, <code class="language-plaintext highlighter-rouge">data-setup</code> si aspetta di ricevere un JSON.</p>
+</div>
+
+<div class="bd-example">
+<div class="row">
+  <video data-bs-video="" data-setup="{
+      &quot;controls&quot;: true,
+      &quot;autoplay&quot;: false, 
+      &quot;preload&quot;: &quot;auto&quot;
+    }">
+    <source src="//vjs.zencdn.net/v/oceans.mp4" type="video/mp4" />
+    <source src="//vjs.zencdn.net/v/oceans.webm" type="video/webm" />
+  </video>
+  <div class="vjs-transcription accordion">
+    <div class="accordion-item">
+      <h2 class="accordion-header no_toc" id="transcription-head3">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#transcription3" aria-expanded="true" aria-controls="transcription">
+          Trascrizione
+        </button>
+      </h2>
+      <div id="transcription3" class="accordion-collapse collapse" role="region" aria-labelledby="transcription-head3">
+        <div class="accordion-body">
+          Vestibulum hendrerit ultrices nibh, sed pharetra lacus ultrices eget. Morbi et ipsum et sapien dapibus facilisis. Integer eget semper nibh. Proin enim nulla, egestas ac rutrum eget, ullamcorper nec turpis.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;video</span> 
+    <span class="na">data-bs-video</span> 
+    <span class="na">data-setup=</span><span class="s">'{
+      "controls": true,
+      "autoplay": false, 
+      "preload": "auto"
+    }'</span>
+  <span class="nt">&gt;</span>
+    <span class="nt">&lt;source</span> <span class="na">src=</span><span class="s">"//vjs.zencdn.net/v/oceans.mp4"</span> <span class="na">type=</span><span class="s">"video/mp4"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;source</span> <span class="na">src=</span><span class="s">"//vjs.zencdn.net/v/oceans.webm"</span> <span class="na">type=</span><span class="s">"video/webm"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/video&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"vjs-transcription accordion"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"accordion-item"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"accordion-header "</span> <span class="na">id=</span><span class="s">"transcription-head3"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"accordion-button collapsed"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-bs-toggle=</span><span class="s">"collapse"</span> <span class="na">data-bs-target=</span><span class="s">"#transcription3"</span> <span class="na">aria-expanded=</span><span class="s">"true"</span> <span class="na">aria-controls=</span><span class="s">"transcription"</span><span class="nt">&gt;</span>
+          Trascrizione
+        <span class="nt">&lt;/button&gt;</span>
+      <span class="nt">&lt;/h2&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"transcription3"</span> <span class="na">class=</span><span class="s">"accordion-collapse collapse"</span> <span class="na">role=</span><span class="s">"region"</span> <span class="na">aria-labelledby=</span><span class="s">"transcription-head3"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"accordion-body"</span><span class="nt">&gt;</span>
+          Vestibulum hendrerit ultrices nibh, sed pharetra lacus ultrices eget. Morbi et ipsum et sapien dapibus facilisis. Integer eget semper nibh. Proin enim nulla, egestas ac rutrum eget, ullamcorper nec turpis.
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<p>Per vedere tutte le opzioni disponibili, consultare la documentazione di
+<a href="https://videojs.com/guides/options/">VideoJS</a>.</p>
+
+<h3 id="controllare-il-player-con-javascript">Controllare il player con JavaScript</h3>
+
+<p>Puoi anche controllare il player tramite javascript, di seguito un esempio.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">videoEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">albatrosvideo</span><span class="dl">"</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">player</span> <span class="o">=</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">VideoPlayer</span><span class="p">.</span><span class="nx">getOrCreateInstance</span><span class="p">(</span><span class="nx">videoEl</span><span class="p">).</span><span class="nx">player</span><span class="p">;</span>
+<span class="nx">player</span><span class="p">.</span><span class="nx">pause</span><span class="p">();</span>
+</code></pre></div></div>
+
+<p>Per vedere tutte le opzioni disponibili, consultare la documentazione di 
+<a href="https://docs.videojs.com/player">VideoJS</a>.</p>
+
+<h2 id="sottotitoli-didascalie-capitoli-e-descrizioni">Sottotitoli, didascalie, capitoli e descrizioni</h2>
+
+<p>Tramite il tag <code class="language-plaintext highlighter-rouge">track</code> puoi aggiungere del testo accessibile presente
+in un file testuale; l’unico formato supportato è <a href="https://www.w3.org/TR/webvtt1/">WebVTT</a>.
+Valorizzando opportunamente l’attributo <code class="language-plaintext highlighter-rouge">kind</code> puoi specificare se
+il file associato contiene i sottotitoli (trascrizione dei dialoghi),
+le didascalie (trascrizione dei dialoghi, degli effetti sonori, trascrizione
+del tipo di emozioni rappresentate dalla musica, ecc), i capitoli e/o la descrizione
+generica del video.</p>
+
+<p>Di seguito un esempio d’uso delle didascalie (<code class="language-plaintext highlighter-rouge">kind="captions"</code>) in
+diverse lingue.</p>
+
+<div class="bd-example">
+<div class="row">
+  <video controls="" data-bs-video="">
+    <source src="/bootstrap-italia/docs/assets/video/ElephantsDream.mp4" type="video/mp4" />
+    <track kind="captions" src="/bootstrap-italia/docs/assets/video/subtitles-it.vtt" srclang="it" label="Italiano" default="" />
+    <track kind="captions" src="/bootstrap-italia/docs/assets/video/subtitles-en.vtt" srclang="en" label="English" />
+    <track kind="captions" src="/bootstrap-italia/docs/assets/video/subtitles-es.vtt" srclang="es" label="Español" />
+  </video>
+  <div class="vjs-transcription accordion">
+    <div class="accordion-item">
+      <h2 class="accordion-header no_toc" id="transcription-head4">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#transcription4" aria-expanded="true" aria-controls="transcription">
+          Trascrizione
+        </button>
+      </h2>
+      <div id="transcription4" class="accordion-collapse collapse" role="region" aria-labelledby="transcription-head4">
+        <div class="accordion-body">
+          Vestibulum hendrerit ultrices nibh, sed pharetra lacus ultrices eget. Morbi et ipsum et sapien dapibus facilisis. Integer eget semper nibh. Proin enim nulla, egestas ac rutrum eget, ullamcorper nec turpis.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;video</span> <span class="na">controls</span> <span class="na">data-bs-video</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;source</span> <span class="na">src=</span><span class="s">"/bootstrap-italia/docs/assets/video/ElephantsDream.mp4"</span> <span class="na">type=</span><span class="s">"video/mp4"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;track</span> 
+      <span class="na">kind=</span><span class="s">"captions"</span> 
+      <span class="na">src=</span><span class="s">"/bootstrap-italia/docs/assets/video/subtitles-it.vtt"</span> 
+      <span class="na">srclang=</span><span class="s">"it"</span> 
+      <span class="na">label=</span><span class="s">"Italiano"</span> <span class="na">default</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;track</span> 
+      <span class="na">kind=</span><span class="s">"captions"</span> 
+      <span class="na">src=</span><span class="s">"/bootstrap-italia/docs/assets/video/subtitles-en.vtt"</span> 
+      <span class="na">srclang=</span><span class="s">"en"</span> 
+      <span class="na">label=</span><span class="s">"English"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;track</span> 
+      <span class="na">kind=</span><span class="s">"captions"</span> 
+      <span class="na">src=</span><span class="s">"/bootstrap-italia/docs/assets/video/subtitles-es.vtt"</span> 
+      <span class="na">srclang=</span><span class="s">"es"</span> 
+      <span class="na">label=</span><span class="s">"Español"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/video&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"vjs-transcription accordion"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"accordion-item"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"accordion-header "</span> <span class="na">id=</span><span class="s">"transcription-head4"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"accordion-button collapsed"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-bs-toggle=</span><span class="s">"collapse"</span> <span class="na">data-bs-target=</span><span class="s">"#transcription4"</span> <span class="na">aria-expanded=</span><span class="s">"true"</span> <span class="na">aria-controls=</span><span class="s">"transcription"</span><span class="nt">&gt;</span>
+          Trascrizione
+        <span class="nt">&lt;/button&gt;</span>
+      <span class="nt">&lt;/h2&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"transcription4"</span> <span class="na">class=</span><span class="s">"accordion-collapse collapse"</span> <span class="na">role=</span><span class="s">"region"</span> <span class="na">aria-labelledby=</span><span class="s">"transcription-head4"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"accordion-body"</span><span class="nt">&gt;</span>
+          Vestibulum hendrerit ultrices nibh, sed pharetra lacus ultrices eget. Morbi et ipsum et sapien dapibus facilisis. Integer eget semper nibh. Proin enim nulla, egestas ac rutrum eget, ullamcorper nec turpis.
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<p>Approfondisci l’argomento consultando la documentazione di 
+<a href="https://videojs.com/guides/text-tracks/">VideoJS (Inglese)</a></p>
+
+<h2 id="streaming">Streaming</h2>
+
+<p>Servire i video tramite dei file in formato <code class="language-plaintext highlighter-rouge">mp4</code> o <code class="language-plaintext highlighter-rouge">webm</code> (che sono i formati 
+più supportati) non è la migliore soluzione in termini di performance e di
+ottimizzazione della banda.
+Per garantire una buona esperienza utente è fondamentale scegliere il formato 
+di riproduzione più adatto. In questo contesto, i formati di streaming 
+<code class="language-plaintext highlighter-rouge">HLS</code> e <code class="language-plaintext highlighter-rouge">DASH</code> offrono importanti vantaggi rispetto al tradizionale file MP4.
+L’uso dei formati di streaming permette una riproduzione fluida dei video online
+grazie alla loro capacità di adattarsi alla larghezza di banda disponibile. 
+In questo modo si evitano interruzioni o rallentamenti durante la visualizzazione, 
+migliorando l’esperienza utente. Inoltre, questi formati consentono di distribuire 
+il contenuto su diverse piattaforme e dispositivi, aumentando la portabilità del video.</p>
+
+<div class="bd-callout bd-callout-info">
+<h5 id="tip">Tip</h5>
+
+<p>FFmpeg è uno strumento di conversione multimediale open-source che consente di convertire
+facilmente i file MP4 in formati adattivi come HLS o DASH, ti permette la conversione del
+video MP4 in un formato a bitrate variabile per adattare la qualità del video alle diverse
+velocità di connessione degli utenti.
+Approfondisci su <a href="https://ffmpeg.org/">FFmpeg</a></p>
+</div>
+
+<p>Di seguito un esempio in formato MPEG-DASH</p>
+
+<div class="bd-example">
+<div class="row">
+  <video data-bs-video="" poster="/bootstrap-italia/docs/assets/video/ElephantsDream.mp4-poster16.gif" preload="auto" data-setup="{
+      &quot;controls&quot;: true,
+      &quot;autoplay&quot;: false,
+      &quot;fluid&quot;: true
+    }">
+    <source src="/bootstrap-italia/docs/assets/video/ElephantsDreamDASH/ElephantsDream.mp4.mpd" type="application/dash+xml" />
+    <track kind="captions" src="/bootstrap-italia/docs/assets/video/subtitles-it.vtt" srclang="it" label="Italiano" default="" />
+    <track kind="captions" src="/bootstrap-italia/docs/assets/video/subtitles-en.vtt" srclang="en" label="English" />
+    <track kind="captions" src="/bootstrap-italia/docs/assets/video/subtitles-es.vtt" srclang="es" label="Español" />
+    <track kind="chapters" src="/bootstrap-italia/docs/assets/video/chapters-en.vtt" srclang="en" label="English" />
+    <track kind="chapters" src="/bootstrap-italia/docs/assets/video/chapters-es.vtt" srclang="es" label="Español" />
+    <track kind="chapters" src="/bootstrap-italia/docs/assets/video/chapters-it.vtt" srclang="it" label="Italiano" default="" />
+  </video>
+  <div class="vjs-transcription accordion">
+    <div class="accordion-item">
+      <h2 class="accordion-header no_toc" id="transcription-head6">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#transcription6" aria-expanded="true" aria-controls="transcription">
+          Trascrizione
+        </button>
+      </h2>
+      <div id="transcription6" class="accordion-collapse collapse" role="region" aria-labelledby="transcription-head6">
+        <div class="accordion-body">
+          Vestibulum hendrerit ultrices nibh, sed pharetra lacus ultrices eget. Morbi et ipsum et sapien dapibus facilisis. Integer eget semper nibh. Proin enim nulla, egestas ac rutrum eget, ullamcorper nec turpis.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;video</span> 
+    <span class="na">data-bs-video</span>
+    <span class="na">poster=</span><span class="s">"/bootstrap-italia/docs/assets/video/ElephantsDream.mp4-poster16.gif"</span>
+    <span class="na">preload=</span><span class="s">"auto"</span>
+    <span class="na">data-setup=</span><span class="s">'{
+      "controls": true,
+      "autoplay": false,
+      "fluid": true
+    }'</span>
+  <span class="nt">&gt;</span>
+    <span class="nt">&lt;source</span> <span class="na">src=</span><span class="s">"/bootstrap-italia/docs/assets/video/ElephantsDreamDASH/ElephantsDream.mp4.mpd"</span> <span class="na">type=</span><span class="s">"application/dash+xml"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;track</span> 
+      <span class="na">kind=</span><span class="s">"captions"</span> 
+      <span class="na">src=</span><span class="s">"/bootstrap-italia/docs/assets/video/subtitles-it.vtt"</span> 
+      <span class="na">srclang=</span><span class="s">"it"</span> 
+      <span class="na">label=</span><span class="s">"Italiano"</span> <span class="na">default</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;track</span> 
+      <span class="na">kind=</span><span class="s">"captions"</span> 
+      <span class="na">src=</span><span class="s">"/bootstrap-italia/docs/assets/video/subtitles-en.vtt"</span> 
+      <span class="na">srclang=</span><span class="s">"en"</span> 
+      <span class="na">label=</span><span class="s">"English"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;track</span> 
+      <span class="na">kind=</span><span class="s">"captions"</span> 
+      <span class="na">src=</span><span class="s">"/bootstrap-italia/docs/assets/video/subtitles-es.vtt"</span> 
+      <span class="na">srclang=</span><span class="s">"es"</span> 
+      <span class="na">label=</span><span class="s">"Español"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;track</span> 
+      <span class="na">kind=</span><span class="s">"chapters"</span>
+      <span class="na">src=</span><span class="s">"/bootstrap-italia/docs/assets/video/chapters-en.vtt"</span> 
+      <span class="na">srclang=</span><span class="s">"en"</span> 
+      <span class="na">label=</span><span class="s">"English"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;track</span> 
+      <span class="na">kind=</span><span class="s">"chapters"</span>
+      <span class="na">src=</span><span class="s">"/bootstrap-italia/docs/assets/video/chapters-es.vtt"</span> 
+      <span class="na">srclang=</span><span class="s">"es"</span> 
+      <span class="na">label=</span><span class="s">"Español"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;track</span> 
+      <span class="na">kind=</span><span class="s">"chapters"</span>
+      <span class="na">src=</span><span class="s">"/bootstrap-italia/docs/assets/video/chapters-it.vtt"</span> 
+      <span class="na">srclang=</span><span class="s">"it"</span> 
+      <span class="na">label=</span><span class="s">"Italiano"</span> <span class="na">default</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/video&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"vjs-transcription accordion"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"accordion-item"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"accordion-header "</span> <span class="na">id=</span><span class="s">"transcription-head6"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"accordion-button collapsed"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-bs-toggle=</span><span class="s">"collapse"</span> <span class="na">data-bs-target=</span><span class="s">"#transcription6"</span> <span class="na">aria-expanded=</span><span class="s">"true"</span> <span class="na">aria-controls=</span><span class="s">"transcription"</span><span class="nt">&gt;</span>
+          Trascrizione
+        <span class="nt">&lt;/button&gt;</span>
+      <span class="nt">&lt;/h2&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"transcription6"</span> <span class="na">class=</span><span class="s">"accordion-collapse collapse"</span> <span class="na">role=</span><span class="s">"region"</span> <span class="na">aria-labelledby=</span><span class="s">"transcription-head6"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"accordion-body"</span><span class="nt">&gt;</span>
+          Vestibulum hendrerit ultrices nibh, sed pharetra lacus ultrices eget. Morbi et ipsum et sapien dapibus facilisis. Integer eget semper nibh. Proin enim nulla, egestas ac rutrum eget, ullamcorper nec turpis.
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<p>Le playlist HLS e DASH possono essere riprodotte su più domini condividendo solo l’URL.
+Tuttavia, a causa delle restrizioni imposte dalle politiche di sicurezza del browser,
+l’utilizzo di queste playlist in domini diversi da quello originale può causare errori 
+CORS (Cross-Origin Resource Sharing). In altre parole, il browser può rifiutare 
+l’accesso alle risorse audio e video, impedendo la corretta riproduzione 
+del contenuto multimediale.</p>
+
+<p>Per superare questo problema, è necessario configurare correttamente il server che
+fornisce le risorse audio e video, consentendo l’accesso a domini esterni tramite 
+le policy CORS.</p>
+
+<h3 id="gestire-più-tracce-audio">Gestire più tracce audio</h3>
+<p>L’uso di più tracce audio nei video è una buona tecnica per migliorare l’accessibilità 
+dei contenuti multimediali. Ad esempio, è possibile creare una traccia audio aggiuntiva 
+che descrive in dettaglio le immagini e le azioni che si svolgono nel video, per aiutare 
+le persone non vedenti a comprendere il contenuto visivo. Inoltre, l’aggiunta di tracce 
+audio in lingue diverse consente di offrire il video in più lingue.</p>
+
+<p>Di seguito un esempio in formato HLS multilingua.</p>
+
+<div class="bd-example">
+<div class="row">
+  <video data-bs-video="" poster="/bootstrap-italia/docs/assets/video/ElephantsDream.mp4-poster21.jpg" preload="auto" data-setup="{
+      &quot;controls&quot;: true,
+      &quot;autoplay&quot;: false,
+      &quot;fluid&quot;: true
+    }">
+    <source src="/bootstrap-italia/docs/assets/video/ElephantsDreamHLS/ElephantsDream.mp4.m3u8" type="application/x-mpegURL" />
+  </video>
+  <div class="vjs-transcription accordion">
+    <div class="accordion-item">
+      <h2 class="accordion-header no_toc" id="transcription-head7">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#transcription7" aria-expanded="true" aria-controls="transcription">
+          Trascrizione
+        </button>
+      </h2>
+      <div id="transcription7" class="accordion-collapse collapse" role="region" aria-labelledby="transcription-head7">
+        <div class="accordion-body">
+          Vestibulum hendrerit ultrices nibh, sed pharetra lacus ultrices eget. Morbi et ipsum et sapien dapibus facilisis. Integer eget semper nibh. Proin enim nulla, egestas ac rutrum eget, ullamcorper nec turpis.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;video</span>
+    <span class="na">data-bs-video</span>
+    <span class="na">poster=</span><span class="s">"/bootstrap-italia/docs/assets/video/ElephantsDream.mp4-poster21.jpg"</span>
+    <span class="na">preload=</span><span class="s">"auto"</span>
+    <span class="na">data-setup=</span><span class="s">'{
+      "controls": true,
+      "autoplay": false,
+      "fluid": true
+    }'</span>
+  <span class="nt">&gt;</span>
+    <span class="nt">&lt;source</span> <span class="na">src=</span><span class="s">"/bootstrap-italia/docs/assets/video/ElephantsDreamHLS/ElephantsDream.mp4.m3u8"</span> <span class="na">type=</span><span class="s">"application/x-mpegURL"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/video&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"vjs-transcription accordion"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"accordion-item"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"accordion-header "</span> <span class="na">id=</span><span class="s">"transcription-head7"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"accordion-button collapsed"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-bs-toggle=</span><span class="s">"collapse"</span> <span class="na">data-bs-target=</span><span class="s">"#transcription7"</span> <span class="na">aria-expanded=</span><span class="s">"true"</span> <span class="na">aria-controls=</span><span class="s">"transcription"</span><span class="nt">&gt;</span>
+          Trascrizione
+        <span class="nt">&lt;/button&gt;</span>
+      <span class="nt">&lt;/h2&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"transcription7"</span> <span class="na">class=</span><span class="s">"accordion-collapse collapse"</span> <span class="na">role=</span><span class="s">"region"</span> <span class="na">aria-labelledby=</span><span class="s">"transcription-head7"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"accordion-body"</span><span class="nt">&gt;</span>
+          Vestibulum hendrerit ultrices nibh, sed pharetra lacus ultrices eget. Morbi et ipsum et sapien dapibus facilisis. Integer eget semper nibh. Proin enim nulla, egestas ac rutrum eget, ullamcorper nec turpis.
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<div class="bd-callout bd-callout-info">
+<h5 id="tieni-presente-che">Tieni presente che</h5>
+
+<p>Video.js offre un’implementazione cross-browser delle tracce audio, a condizione che la 
+tecnologia di riproduzione supporti le tracce audio. Le tracce audio per i file mp4 sono
+supportate solo da Safari, altri browser non supportano la riproduzione mp4 con più tracce
+audio. L’unico modo per fornire l’audio multi-traccia cross-browser è l’uso dei formati 
+HLS e/o DASH. 
+Approfondisci su <a href="https://videojs.com/guides/audio-tracks/">Video.js</a></p>
+</div>
+
+<h2 id="embed-da-piattaforme-terze">Embed da piattaforme terze</h2>
+
+<p>Oltre a consentire la riproduzione di video direttamente sulle proprie pagine web, 
+il player video.js offre anche la possibilità di incorporare video provenienti 
+da altre piattaforme come YouTube o Vimeo. Questa funzionalità consente di sfruttare
+i video già disponibili su queste piattaforme, senza doverli caricare sul proprio sito web.
+Tuttavia, è importante tenere in considerazione la questione della privacy: 
+quando si incorporano video di terze parti, si può finire per condividere con queste 
+piattaforme i dati degli utenti che visualizzano i video, come ad esempio le informazioni 
+sulla navigazione o l’indirizzo IP. È quindi importante l’utilizzo di questa 
+funzionalità assieme al componente di accettazione del consenso per garantire la 
+protezione della privacy degli utenti.</p>
+
+<h3 id="attivazione-delloverlay-di-consenso">Attivazione dell’overlay di consenso</h3>
+
+<p>L’utilizzo di un overlay per il consenso è una soluzione comune per garantire 
+la conformità alla normativa sulla privacy in materia di cookie e tracciamento degli utenti.
+L’overlay per il consenso consente di informare l’utente sui cookie utilizzati e 
+di ottenere il suo consenso in modo esplicito e consapevole alla riproduzione del video.</p>
+
+<div class="bd-callout bd-callout-warning">
+<p>In questo la Pubblica Amministrazione che fa uso di servizi di terze parti come YouTube deve necessariamente specificare l’utilizzo di cookie di tracciamento da parte di piattaforme di terze parti. Nella sezione seguente
+vengono illustrate le funzioni per la gestione delle preferenze con JavaScript.</p>
+</div>
+
+<div class="bd-example">
+
+<script>
+  const loadYouTubeVideo = function(videoUrl) {
+    const videoEl = document.getElementById("vid1");
+    const video = bootstrap.VideoPlayer.getOrCreateInstance(videoEl);
+    video.setYouTubeVideo(videoUrl);
+  }
+</script>
+<div class="acceptoverlayable">
+  <div class="acceptoverlay acceptoverlay-primary fade show">
+    <div class="acceptoverlay-inner">
+      <div class="acceptoverlay-icon">
+        <svg class="icon icon-xl"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-video"></use></svg>
+      </div>
+      <p>Questo contenuto è ospitato da un sito di terze parti. Mostrando il contenuto esterno accetti i <a href="https://www.youtube.com/t/terms" class="text-white">termini e le condizioni di youtube.com.</a></p>
+      <div class="acceptoverlay-buttons bg-dark">
+        <div class="form-check">
+          <input id="chk-remember" type="checkbox" data-bs-accept-remember="" />
+          <label for="chk-remember">Ricorda la mia scelta</label>
+        </div>
+        <button type="button" class="btn btn-primary" data-bs-accept-from="youtube.com" onclick="loadYouTubeVideo('https://youtu.be/_0j7ZQ67KtY')">Accetta</button>
+      </div>
+    </div>
+  </div>
+  <div>
+    <video controls="" data-bs-video="" id="vid1" class="video-js" width="640" height="264">
+    </video>
+    <div class="vjs-transcription accordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header no_toc" id="transcription-head9">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#transcription9" aria-expanded="true" aria-controls="transcription">
+            Trascrizione
+          </button>
+        </h2>
+        <div id="transcription9" class="accordion-collapse collapse" role="region" aria-labelledby="transcription-head9">
+          <div class="accordion-body">
+            Vestibulum hendrerit ultrices nibh, sed pharetra lacus ultrices eget. Morbi et ipsum et sapien dapibus facilisis. Integer eget semper nibh. Proin enim nulla, egestas ac rutrum eget, ullamcorper nec turpis.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script&gt;</span>
+  <span class="kd">const</span> <span class="nx">loadYouTubeVideo</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">videoUrl</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">videoEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">vid1</span><span class="dl">"</span><span class="p">);</span>
+    <span class="kd">const</span> <span class="nx">video</span> <span class="o">=</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">VideoPlayer</span><span class="p">.</span><span class="nx">getOrCreateInstance</span><span class="p">(</span><span class="nx">videoEl</span><span class="p">);</span>
+    <span class="nx">video</span><span class="p">.</span><span class="nx">setYouTubeVideo</span><span class="p">(</span><span class="nx">videoUrl</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"acceptoverlayable"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"acceptoverlay acceptoverlay-primary fade show"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"acceptoverlay-inner"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"acceptoverlay-icon"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-xl"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-video"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;p&gt;</span>Questo contenuto è ospitato da un sito di terze parti. Mostrando il contenuto esterno accetti i <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://www.youtube.com/t/terms"</span> <span class="na">class=</span><span class="s">"text-white"</span><span class="nt">&gt;</span>termini e le condizioni di youtube.com.<span class="nt">&lt;/a&gt;&lt;/p&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"acceptoverlay-buttons bg-dark"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"chk-remember"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">data-bs-accept-remember</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"chk-remember"</span><span class="nt">&gt;</span>Ricorda la mia scelta<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">data-bs-accept-from=</span><span class="s">"youtube.com"</span>
+        <span class="na">onclick=</span><span class="s">"loadYouTubeVideo('https://youtu.be/_0j7ZQ67KtY')"</span><span class="nt">&gt;</span>Accetta<span class="nt">&lt;/button&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div&gt;</span>
+    <span class="nt">&lt;video</span> <span class="na">controls</span> <span class="na">data-bs-video</span> <span class="na">id=</span><span class="s">"vid1"</span>
+      <span class="na">class=</span><span class="s">"video-js"</span>
+      <span class="na">width=</span><span class="s">"640"</span> <span class="na">height=</span><span class="s">"264"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/video&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"vjs-transcription accordion"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"accordion-item"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"accordion-header "</span> <span class="na">id=</span><span class="s">"transcription-head9"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"accordion-button collapsed"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-bs-toggle=</span><span class="s">"collapse"</span> <span class="na">data-bs-target=</span><span class="s">"#transcription9"</span> <span class="na">aria-expanded=</span><span class="s">"true"</span> <span class="na">aria-controls=</span><span class="s">"transcription"</span><span class="nt">&gt;</span>
+            Trascrizione
+          <span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;/h2&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"transcription9"</span> <span class="na">class=</span><span class="s">"accordion-collapse collapse"</span> <span class="na">role=</span><span class="s">"region"</span> <span class="na">aria-labelledby=</span><span class="s">"transcription-head9"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"accordion-body"</span><span class="nt">&gt;</span>
+            Vestibulum hendrerit ultrices nibh, sed pharetra lacus ultrices eget. Morbi et ipsum et sapien dapibus facilisis. Integer eget semper nibh. Proin enim nulla, egestas ac rutrum eget, ullamcorper nec turpis.
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h3 id="gestione-delle-preferenze-con-javascript">Gestione delle preferenze con JavaScript</h3>
+
+<p>La gestione delle preferenze viene effettuata in maniera automatica dal componente
+di overlay, per poter gestire le preferenze esistono 3 diverse funzioni</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">rememberChoice(service, remember)</code>: permette di settare la preferenza di
+un dato servizio (<code class="language-plaintext highlighter-rouge">true</code> ricorda la scelta, <code class="language-plaintext highlighter-rouge">false</code> solo per questa volta).</li>
+  <li><code class="language-plaintext highlighter-rouge">isChoiceRemembered(service)</code>: dato un servizio, torna <code class="language-plaintext highlighter-rouge">true</code> o <code class="language-plaintext highlighter-rouge">false</code> a
+seconda della scelta fatta dall’utente.</li>
+  <li><code class="language-plaintext highlighter-rouge">clearAllRememberedChoices()</code>: permette di reimpostare tutte le preferenze dell’
+utente</li>
+</ul>
+
+<p>Le funzioni viste sopra possono essere importate lato JavaScript</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">cookies</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./util/cookies</span><span class="dl">'</span>
+
+<span class="nx">cookies</span><span class="p">.</span><span class="nx">clearAllRememberedChoices</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>oppure utilizzate con il bundle di Bootstrap Italia</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script&gt;</span>
+  <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">cookies</span><span class="p">.</span><span class="nx">clearAllRememberedChoices</span><span class="p">();</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre></div></div>
+
+<h2 id="plugin">Plugin</h2>
+
+<p>Esistono numerosi <a href="https://videojs.com/plugins/">plugin</a> disponibili per video.js, che
+consentono di aggiungere nuove funzionalità, come la riproduzione di video in VR, 
+l’analisi delle statistiche di visualizzazione del video, le utility per la UI mobile 
+e molto altro ancora.</p>
+
+        </main>
+      </div>
+    </div>
+
+    
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202305021315"></script>
+<script>
+  bootstrap.loadFonts('/bootstrap-italia/dist/fonts')
+</script><script src="/bootstrap-italia/docs/assets/src/js/vendor/vimeo-player.min.js"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202305021315"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/vendor/anchor.min.js"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/vendor/clipboard.min.js"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/vendor/tsparticles.min.js"></script>
+
+<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202305021315"></script>
+
+<script src="/bootstrap-italia/docs/assets/src/js/vendor/tweenjs.min.js"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/vendor/easeljs.min.js"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/vendor/preloadjs.min.js"></script>
+
+<script>
+  var manifest = [
+    { src: '/bootstrap-italia/docs/assets/img/cover/cover-animation-1.png', id: 'cover-1' },
+    { src: '/bootstrap-italia/docs/assets/img/cover/cover-animation-2.png', id: 'cover-2' },
+    { src: '/bootstrap-italia/docs/assets/img/cover/cover-animation-3.png', id: 'cover-3' },
+    { src: '/bootstrap-italia/docs/assets/img/cover/cover-animation-4.png', id: 'cover-4' },
+    { src: '/bootstrap-italia/docs/assets/img/cover/cover-animation-5.png', id: 'cover-5' },
+    { src: '/bootstrap-italia/docs/assets/img/cover/cover-animation-6.png', id: 'cover-6' },
+    { src: '/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png', id: 'cover-7' },
+  ]
+</script>
+<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202305021315"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/vendor/docsearch.min.js"></script>
+
+<script>
+  docsearch({
+    apiKey: 'a755e381c276458251a59282bae6ee93',
+    indexName: 'bootstrap_italia',
+    inputSelector: '#search-input',
+    handleSelected: function (input, event, suggestion) {
+      var url = suggestion.url
+      url = suggestion.isLvl1 ? url.split('#')[0] : url
+      // If it's a title we remove the anchor so it does not jump.
+      window.location.href = url
+    },
+    debug: false, // Set debug to true if you want to inspect the dropdown
+  })
+</script>
+  </body>
+</html>

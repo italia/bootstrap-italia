@@ -12,14 +12,14 @@
 <title>Callout · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202304191647" rel="stylesheet" />
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202305021315" rel="stylesheet" />
 
 
 <!-- Documentation extras -->
  
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.css" rel="stylesheet" />
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202304191647" rel="stylesheet" />
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202305021315" rel="stylesheet" />
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico" />
@@ -141,8 +141,8 @@
 
     <ul class="navbar-nav flex-row ms-md-auto d-none d-md-flex">
       <li class="nav-item pe-2">
-        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v2.3.8/bootstrap-italia.zip" aria-label="Download">
-          <small class="pe-2 m-0">v2.3.8</small>
+        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v2.4.0/bootstrap-italia.zip" aria-label="Download">
+          <small class="pe-2 m-0">v2.4.0</small>
           <svg class="icon icon-sm icon-light"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-download" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-download"></use></svg><span class="visually-hidden">Download</span>
         </a>
       </li>
@@ -479,6 +479,9 @@
               </li><li>
                 <a class="list-item " href="/bootstrap-italia/docs/componenti/tooltip/">
                   <span>Tooltip</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/componenti/video-player/">
+                  <span>Video Player</span></a>
               </li></ul>
             
           </li><li>
@@ -622,7 +625,13 @@
 
 <h2 id="esempi">Esempi</h2>
 
-<p>Il Callout basico è costituito da un contenitore <code class="language-plaintext highlighter-rouge">&lt;div&gt;</code> con classe <code class="language-plaintext highlighter-rouge">.callout</code>, un titolo contenuto in un <code class="language-plaintext highlighter-rouge">&lt;div&gt;</code> con classe <code class="language-plaintext highlighter-rouge">.callout-title</code> e un testo contenuto in uno o più tag <code class="language-plaintext highlighter-rouge">&lt;p&gt;</code>.</p>
+<div class="bd-callout bd-callout-danger">
+<p>Breaking feature dalla versione <strong>2.4.0</strong></p>
+
+<p>Il contenitore <code class="language-plaintext highlighter-rouge">&lt;div&gt;</code> con classe <code class="language-plaintext highlighter-rouge">.callout</code> deve essere seguito da un ulteriore contenitore <code class="language-plaintext highlighter-rouge">&lt;div&gt;</code> con classe <code class="language-plaintext highlighter-rouge">.callout-inner</code>. Seguire gli esempi e la successiva descrizione per capire la composizione del nuovo componente.</p>
+</div>
+
+<p>Il Callout basico è costituito da un contenitore <code class="language-plaintext highlighter-rouge">&lt;div&gt;</code> con classe <code class="language-plaintext highlighter-rouge">.callout</code>, un contenitore <code class="language-plaintext highlighter-rouge">&lt;div&gt;</code> con classe <code class="language-plaintext highlighter-rouge">.callout-inner</code> contenente a sua volta un titolo contenuto in un <code class="language-plaintext highlighter-rouge">&lt;div&gt;</code> con classe <code class="language-plaintext highlighter-rouge">.callout-title</code>. A seguire il testo del contenuto principale del Callout incluso in uno o più tag <code class="language-plaintext highlighter-rouge">&lt;p&gt;</code>.</p>
 
 <p>Al titolo può essere aggiunta un’icona a scelta fra quelle disponibili, avendo cura di nasconderla agli screen reader con la proprietà <code class="language-plaintext highlighter-rouge">aria-hidden="true"</code>.</p>
 
@@ -633,15 +642,26 @@
 </div>
 
 <div class="bd-example">
-
 <div class="callout">
-  <div class="callout-title"><svg class="icon"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-info-circle"></use></svg><span class="visually-hidden">Confermato</span> Titolo callout</div>
-  <p>Maecenas vulputate ante dictum vestibulum volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non augue non purus vestibulum varius.</p>
+  <div class="callout-inner">
+    <div class="callout-title">
+      <svg class="icon"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-info-circle"></use></svg>
+      <span class="visually-hidden">Confermato</span> 
+      <span class="text">Titolo callout</span>
+    </div>
+    <p>Maecenas vulputate ante dictum vestibulum volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non augue non purus vestibulum varius.</p>
+  </div>
 </div>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout-title"</span><span class="nt">&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-info-circle"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;&lt;span</span> <span class="na">class=</span><span class="s">"visually-hidden"</span><span class="nt">&gt;</span>Confermato<span class="nt">&lt;/span&gt;</span> Titolo callout<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;p&gt;</span>Maecenas vulputate ante dictum vestibulum volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non augue non purus vestibulum varius.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout-inner"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout-title"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-info-circle"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"visually-hidden"</span><span class="nt">&gt;</span>Confermato<span class="nt">&lt;/span&gt;</span> 
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text"</span><span class="nt">&gt;</span>Titolo callout<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Maecenas vulputate ante dictum vestibulum volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non augue non purus vestibulum varius.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <p>Al Callout può essere aggiunta una classe che determina il colore del bordo e del titolo. Le classi disponibili sono elencate qui di seguito.</p>
@@ -653,13 +673,25 @@
 <div class="bd-example">
 
 <div class="callout success">
-  <div class="callout-title"><svg class="icon"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-check-circle"></use></svg>Usa</div>
-  <p>Maecenas vulputate ante dictum vestibulum volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non augue non purus vestibulum varius.</p>
+  <div class="callout-inner">
+    <div class="callout-title">
+      <svg class="icon"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-check-circle"></use></svg>
+      <span class="visually-hidden">Usa</span> 
+      <span class="text">Usa</span>    
+    </div>
+    <p>Maecenas vulputate ante dictum vestibulum volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non augue non purus vestibulum varius.</p>
+  </div>
 </div>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout success"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout-title"</span><span class="nt">&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-check-circle"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>Usa<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;p&gt;</span>Maecenas vulputate ante dictum vestibulum volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non augue non purus vestibulum varius.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout-inner"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout-title"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-check-circle"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"visually-hidden"</span><span class="nt">&gt;</span>Usa<span class="nt">&lt;/span&gt;</span> 
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text"</span><span class="nt">&gt;</span>Usa<span class="nt">&lt;/span&gt;</span>    
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Maecenas vulputate ante dictum vestibulum volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non augue non purus vestibulum varius.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <h3 id="callout-warning">Callout Warning</h3>
@@ -669,13 +701,25 @@
 <div class="bd-example">
 
 <div class="callout warning">
-  <div class="callout-title"><svg class="icon"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-help-circle"></use></svg>Attenzione</div>
-  <p>Quisque ex eros, pellentesque vitae enim sed, pharetra tempus dolor. Donec eu nibh ac lacus luctus pellentesque. Duis interdum scelerisque magna nec malesuada.</p>
+  <div class="callout-inner">
+    <div class="callout-title">
+      <svg class="icon"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-help-circle"></use></svg>
+      <span class="visually-hidden">Attenzione</span> 
+      <span class="text">Attenzione</span>
+    </div>
+    <p>Quisque ex eros, pellentesque vitae enim sed, pharetra tempus dolor. Donec eu nibh ac lacus luctus pellentesque. Duis interdum scelerisque magna nec malesuada.</p>
+  </div>
 </div>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout warning"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout-title"</span><span class="nt">&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-help-circle"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>Attenzione<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;p&gt;</span>Quisque ex eros, pellentesque vitae enim sed, pharetra tempus dolor. Donec eu nibh ac lacus luctus pellentesque. Duis interdum scelerisque magna nec malesuada.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout-inner"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout-title"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-help-circle"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"visually-hidden"</span><span class="nt">&gt;</span>Attenzione<span class="nt">&lt;/span&gt;</span> 
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text"</span><span class="nt">&gt;</span>Attenzione<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Quisque ex eros, pellentesque vitae enim sed, pharetra tempus dolor. Donec eu nibh ac lacus luctus pellentesque. Duis interdum scelerisque magna nec malesuada.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <h3 id="callout-danger">Callout Danger</h3>
@@ -685,13 +729,25 @@
 <div class="bd-example">
 
 <div class="callout danger">
-  <div class="callout-title"><svg class="icon"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-close-circle"></use></svg>Non usare</div>
-  <p>Quisque ex eros, pellentesque vitae enim sed, pharetra tempus dolor. Donec eu nibh ac lacus luctus pellentesque. Duis interdum scelerisque magna nec malesuada.</p>
+  <div class="callout-inner">
+    <div class="callout-title">
+      <svg class="icon"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-close-circle"></use></svg>
+      <span class="visually-hidden">Non usare</span> 
+      <span class="text">Non usare</span>
+    </div>
+    <p>Quisque ex eros, pellentesque vitae enim sed, pharetra tempus dolor. Donec eu nibh ac lacus luctus pellentesque. Duis interdum scelerisque magna nec malesuada.</p>
+  </div>
 </div>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout danger"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout-title"</span><span class="nt">&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-close-circle"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>Non usare<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;p&gt;</span>Quisque ex eros, pellentesque vitae enim sed, pharetra tempus dolor. Donec eu nibh ac lacus luctus pellentesque. Duis interdum scelerisque magna nec malesuada.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout-inner"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout-title"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-close-circle"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"visually-hidden"</span><span class="nt">&gt;</span>Non usare<span class="nt">&lt;/span&gt;</span> 
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text"</span><span class="nt">&gt;</span>Non usare<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Quisque ex eros, pellentesque vitae enim sed, pharetra tempus dolor. Donec eu nibh ac lacus luctus pellentesque. Duis interdum scelerisque magna nec malesuada.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <h3 id="callout-important">Callout Important</h3>
@@ -701,13 +757,25 @@
 <div class="bd-example">
 
 <div class="callout important">
-  <div class="callout-title"><svg class="icon"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-info-circle"></use></svg>Importante</div>
-  <p>Quisque ex eros, pellentesque vitae enim sed, pharetra tempus dolor. Donec eu nibh ac lacus luctus pellentesque. Duis interdum scelerisque magna nec malesuada.</p>
+  <div class="callout-inner">
+    <div class="callout-title">
+      <svg class="icon"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-info-circle"></use></svg>
+      <span class="visually-hidden">Importante</span> 
+      <span class="text">Importante</span>
+    </div>
+    <p>Quisque ex eros, pellentesque vitae enim sed, pharetra tempus dolor. Donec eu nibh ac lacus luctus pellentesque. Duis interdum scelerisque magna nec malesuada.</p>
+  </div>
 </div>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout important"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout-title"</span><span class="nt">&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-info-circle"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>Importante<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;p&gt;</span>Quisque ex eros, pellentesque vitae enim sed, pharetra tempus dolor. Donec eu nibh ac lacus luctus pellentesque. Duis interdum scelerisque magna nec malesuada.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout-inner"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout-title"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-info-circle"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"visually-hidden"</span><span class="nt">&gt;</span>Importante<span class="nt">&lt;/span&gt;</span> 
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text"</span><span class="nt">&gt;</span>Importante<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Quisque ex eros, pellentesque vitae enim sed, pharetra tempus dolor. Donec eu nibh ac lacus luctus pellentesque. Duis interdum scelerisque magna nec malesuada.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <h3 id="callout-note">Callout Note</h3>
@@ -717,13 +785,25 @@
 <div class="bd-example">
 
 <div class="callout note">
-  <div class="callout-title"><svg class="icon"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-info-circle"></use></svg>Note a riguardo</div>
-  <p>Quisque ex eros, pellentesque vitae enim sed, pharetra tempus dolor. Donec eu nibh ac lacus luctus pellentesque. Duis interdum scelerisque magna nec malesuada.</p>
+  <div class="callout-inner">
+    <div class="callout-title">
+      <svg class="icon"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-info-circle"></use></svg>
+      <span class="visually-hidden">Note</span> 
+      <span class="text">Note a riguardo</span>
+    </div>
+    <p>Quisque ex eros, pellentesque vitae enim sed, pharetra tempus dolor. Donec eu nibh ac lacus luctus pellentesque. Duis interdum scelerisque magna nec malesuada.</p>
+  </div>
 </div>
 </div>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout note"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout-title"</span><span class="nt">&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-info-circle"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>Note a riguardo<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;p&gt;</span>Quisque ex eros, pellentesque vitae enim sed, pharetra tempus dolor. Donec eu nibh ac lacus luctus pellentesque. Duis interdum scelerisque magna nec malesuada.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout-inner"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"callout-title"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-info-circle"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"visually-hidden"</span><span class="nt">&gt;</span>Note<span class="nt">&lt;/span&gt;</span> 
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text"</span><span class="nt">&gt;</span>Note a riguardo<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Quisque ex eros, pellentesque vitae enim sed, pharetra tempus dolor. Donec eu nibh ac lacus luctus pellentesque. Duis interdum scelerisque magna nec malesuada.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <h2 id="callout-highlights">Callout Highlights</h2>
@@ -885,14 +965,16 @@
     </div>
 
     
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202304191647"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202305021315"></script>
 <script>
   bootstrap.loadFonts('/bootstrap-italia/dist/fonts')
-</script><script src="/bootstrap-italia/docs/assets/src/js/vendor/anchor.min.js"></script>
+</script><script src="/bootstrap-italia/docs/assets/src/js/vendor/vimeo-player.min.js"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202305021315"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/vendor/anchor.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/clipboard.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tsparticles.min.js"></script>
 
-<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202304191647"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202305021315"></script>
 
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tweenjs.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/easeljs.min.js"></script>
@@ -909,7 +991,7 @@
     { src: '/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png', id: 'cover-7' },
   ]
 </script>
-<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202304191647"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202305021315"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/docsearch.min.js"></script>
 
 <script>

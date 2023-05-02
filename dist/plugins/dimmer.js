@@ -2,15 +2,12 @@ import BaseComponent from 'bootstrap/js/src/base-component.js';
 import { getElementFromSelector, reflow } from 'bootstrap/js/src/util';
 import EventHandler from 'bootstrap/js/src/dom/event-handler';
 
-//import SelectorEngine from 'bootstrap/js/src/dom/selector-engine'
-
 const NAME = 'dimmer';
 const DATA_KEY = 'bs.dimmer';
 const EVENT_KEY = `.${DATA_KEY}`;
 const DATA_API_KEY = '.data-api';
 
 const EVENT_CLICK_DATA_API = `click${EVENT_KEY}${DATA_API_KEY}`;
-//const EVENT_CLICK = `click${EVENT_KEY}`
 
 const CLASS_NAME_FADE = 'fade';
 const CLASS_NAME_SHOW = 'show';
@@ -106,19 +103,6 @@ class Dimmer extends BaseComponent {
  * Data Api implementation
  * ------------------------------------------------------------------------
  */
-
-/*SelectorEngine.find(SELECTOR_DATA_TOGGLE).forEach((toggle) => {
-  const dimmerElement = getElementFromSelector(toggle)
-  const dimmer = Dimmer.getOrCreateInstance(dimmerElement)
-
-  EventHandler.on(toggle, EVENT_CLICK, () => {
-    toggle.checked ? dimmer.show() : dimmer.hide()
-  })
-
-  if (toggle.checked) {
-    dimmer.show()
-  }
-})*/
 
 EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function () {
   const dimmerElement = getElementFromSelector(this);
