@@ -3,6 +3,7 @@ import '../scss/bootstrap-italia.scss'
 import { loadPlugin } from './load-plugin'
 import init from './plugins/init'
 import loadFonts from './plugins/fonts-loader'
+import { cookies } from './plugins/util/cookies'
 import * as icons from './icons'
 
 import {
@@ -91,4 +92,5 @@ export default {
   UploadDragDrop,
   ValidatorSelectAutocomplete,
   loadFonts,
+  cookies,
 }

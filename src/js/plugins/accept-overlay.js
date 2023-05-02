@@ -1,14 +1,10 @@
 import BaseComponent from 'bootstrap/js/src/base-component.js'
 
 import { reflow } from 'bootstrap/js/src/util'
-import { setCookiePreference, getCookiePreference } from './util/cookies'
+import { cookies } from './util/cookies'
 import SelectorEngine from 'bootstrap/js/src/dom/selector-engine'
 
-
 const NAME = 'acceptoverlay'
-const DATA_KEY = 'bs.accept-overlay'
-const EVENT_KEY = `.${DATA_KEY}`
-const DATA_API_KEY = '.data-api'
 
 const CLASS_NAME_FADE = 'fade'
 const CLASS_NAME_SHOW = 'show'
@@ -20,21 +16,21 @@ class AcceptOverlay extends BaseComponent {
   constructor(element, config) {
     const parentElement = element.closest('.acceptoverlay')
     super(parentElement)
-    const remember = getCookiePreference(config.service);
+    const remember = cookies.isChoiceRemembered(config.service)
     this._isShown = true
     this._toggleElement = element
     if (remember) {
       this.hide()
       setTimeout(() => {
-        this._toggleElement.dispatchEvent(new Event('click'));
-      }, 100);
+        this._toggleElement.dispatchEvent(new Event('click'))
+      }, 100)
       return
     }
-    this._toggleElement.addEventListener("click", () => {
-      this.hide();
+    this._toggleElement.addEventListener('click', () => {
+      this.hide()
       this._remember = this._toggleElement.parentElement.querySelector(SELECTOR_DATA_REMEMBER).checked
-      setCookiePreference(config.service, this._remember)
-    });
+      cookies.rememberChoice(config.service, this._remember)
+    })
   }
 
   // Getters
@@ -115,9 +111,7 @@ class AcceptOverlay extends BaseComponent {
 const acceptOverlays = SelectorEngine.find(SELECTOR_DATA_TOGGLE)
 if (acceptOverlays.length > 0) {
   acceptOverlays.forEach((element) => {
-    AcceptOverlay.getOrCreateInstance(
-      element, {service: element.dataset.bsAcceptFrom}
-    )
+    AcceptOverlay.getOrCreateInstance(element, { service: element.dataset.bsAcceptFrom })
   })
 }
 

@@ -357,7 +357,8 @@ L'overlay per il consenso consente di informare l'utente sui cookie utilizzati e
 di ottenere il suo consenso in modo esplicito e consapevole alla riproduzione del video.
 
 {% capture callout %}
-In questo la Pubblica Amministrazione che fa uso di servizi di terze parti come YouTube deve necessariamente specificare l’utilizzo di cookie di tracciamento da parte di piattaforme di terze parti.
+In questo la Pubblica Amministrazione che fa uso di servizi di terze parti come YouTube deve necessariamente specificare l’utilizzo di cookie di tracciamento da parte di piattaforme di terze parti. Nella sezione seguente
+vengono illustrate le funzioni per la gestione delle preferenze con JavaScript.
 {% endcapture %}{% include callout.html content=callout type="warning" %}
 
 {% capture example %}
@@ -408,6 +409,33 @@ In questo la Pubblica Amministrazione che fa uso di servizi di terze parti come 
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
+
+### Gestione delle preferenze con JavaScript
+
+La gestione delle preferenze viene effettuata in maniera automatica dal componente
+di overlay, per poter gestire le preferenze esistono 3 diverse funzioni
+
+- `rememberChoice(service, remember)`: permette di settare la preferenza di
+un dato servizio (`true` ricorda la scelta, `false` solo per questa volta).
+- `isChoiceRemembered(service)`: dato un servizio, torna `true` o `false` a
+seconda della scelta fatta dall'utente.
+- `clearAllRememberedChoices()`: permette di reimpostare tutte le preferenze dell'
+utente
+
+Le funzioni viste sopra possono essere importate lato JavaScript
+```js
+import { cookies } from './util/cookies'
+
+cookies.clearAllRememberedChoices()
+```
+
+oppure utilizzate con il bundle di Bootstrap Italia
+
+```html
+<script>
+  bootstrap.cookies.clearAllRememberedChoices();
+</script>
+```
 
 ## Plugin
 
