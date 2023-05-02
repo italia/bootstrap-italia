@@ -23,14 +23,15 @@ Nel caso l'icona comunicasse visivamente contenuti non disponibili nel testo (ad
 
 {% comment %}Example name: Testo{% endcomment %}
 {% capture example %}
-
 <div class="callout">
-  <div class="callout-title">
-    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-info-circle"></use></svg>
-    <span class="visually-hidden">Confermato</span> 
-    <span class="text">Titolo callout</span>
+  <div class="callout-inner">
+    <div class="callout-title">
+      <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-info-circle"></use></svg>
+      <span class="visually-hidden">Confermato</span> 
+      <span class="text">Titolo callout</span>
+    </div>
+    <p>Maecenas vulputate ante dictum vestibulum volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non augue non purus vestibulum varius.</p>
   </div>
-  <p>Maecenas vulputate ante dictum vestibulum volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non augue non purus vestibulum varius.</p>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -44,8 +45,14 @@ Aggiungere la classe `.success` per indicare una procedura andata a buon fine.
 {% capture example %}
 
 <div class="callout success">
-  <div class="callout-title"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>Usa</div>
-  <p>Maecenas vulputate ante dictum vestibulum volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non augue non purus vestibulum varius.</p>
+  <div class="callout-inner">
+    <div class="callout-title">
+      <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>
+      <span class="visually-hidden">Usa</span> 
+      <span class="text">Usa</span>    
+    </div>
+    <p>Maecenas vulputate ante dictum vestibulum volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non augue non purus vestibulum varius.</p>
+  </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -57,8 +64,14 @@ Aggiungere la classe `.warning` per indicare una procedura o testo che richiede 
 {% capture example %}
 
 <div class="callout warning">
-  <div class="callout-title"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-help-circle"></use></svg>Attenzione</div>
-  <p>Quisque ex eros, pellentesque vitae enim sed, pharetra tempus dolor. Donec eu nibh ac lacus luctus pellentesque. Duis interdum scelerisque magna nec malesuada.</p>
+  <div class="callout-inner">
+    <div class="callout-title">
+      <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-help-circle"></use></svg>
+      <span class="visually-hidden">Attenzione</span> 
+      <span class="text">Attenzione</span>
+    </div>
+    <p>Quisque ex eros, pellentesque vitae enim sed, pharetra tempus dolor. Donec eu nibh ac lacus luctus pellentesque. Duis interdum scelerisque magna nec malesuada.</p>
+  </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -70,8 +83,14 @@ Aggiungere la classe `.danger` per indicare un errore o una procedura pericolosa
 {% capture example %}
 
 <div class="callout danger">
-  <div class="callout-title"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close-circle"></use></svg>Non usare</div>
-  <p>Quisque ex eros, pellentesque vitae enim sed, pharetra tempus dolor. Donec eu nibh ac lacus luctus pellentesque. Duis interdum scelerisque magna nec malesuada.</p>
+  <div class="callout-inner">
+    <div class="callout-title">
+      <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close-circle"></use></svg>
+      <span class="visually-hidden">Non usare</span> 
+      <span class="text">Non usare</span>
+    </div>
+    <p>Quisque ex eros, pellentesque vitae enim sed, pharetra tempus dolor. Donec eu nibh ac lacus luctus pellentesque. Duis interdum scelerisque magna nec malesuada.</p>
+  </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -83,8 +102,14 @@ Aggiungere la classe `.important` per attirare ulteriormente l'attenzione.
 {% capture example %}
 
 <div class="callout important">
-  <div class="callout-title"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-info-circle"></use></svg>Importante</div>
-  <p>Quisque ex eros, pellentesque vitae enim sed, pharetra tempus dolor. Donec eu nibh ac lacus luctus pellentesque. Duis interdum scelerisque magna nec malesuada.</p>
+  <div class="callout-inner">
+    <div class="callout-title">
+      <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-info-circle"></use></svg>
+      <span class="visually-hidden">Importante</span> 
+      <span class="text">Importante</span>
+    </div>
+    <p>Quisque ex eros, pellentesque vitae enim sed, pharetra tempus dolor. Donec eu nibh ac lacus luctus pellentesque. Duis interdum scelerisque magna nec malesuada.</p>
+  </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -96,8 +121,14 @@ Aggiungere la classe `.note` per caratterizzare il Callout come una nota.
 {% capture example %}
 
 <div class="callout note">
-  <div class="callout-title"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-info-circle"></use></svg>Note a riguardo</div>
-  <p>Quisque ex eros, pellentesque vitae enim sed, pharetra tempus dolor. Donec eu nibh ac lacus luctus pellentesque. Duis interdum scelerisque magna nec malesuada.</p>
+  <div class="callout-inner">
+    <div class="callout-title">
+      <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-info-circle"></use></svg>
+      <span class="visually-hidden">Note</span> 
+      <span class="text">Note a riguardo</span>
+    </div>
+    <p>Quisque ex eros, pellentesque vitae enim sed, pharetra tempus dolor. Donec eu nibh ac lacus luctus pellentesque. Duis interdum scelerisque magna nec malesuada.</p>
+  </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
