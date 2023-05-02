@@ -10,7 +10,13 @@ I Callout posso essere utilizzati per evidenziare alcune parti del testo che ric
 
 ## Esempi
 
-Il Callout basico è costituito da un contenitore `<div>` con classe `.callout`, un titolo contenuto in un `<div>` con classe `.callout-title` e un testo contenuto in uno o più tag `<p>`.
+{% capture callout %}
+Breaking feature dalla versione **2.7.0**
+
+Il contenitore `<div>` con classe `.callout` deve essere seguito da un ulteriore contenitore `<div>` con classe `.callout-inner`. Seguire gli esempi e la successiva descrizione per capire la composizione del nuovo componente.
+{% endcapture %}{% include callout.html content=callout type="danger" %}
+
+Il Callout basico è costituito da un contenitore `<div>` con classe `.callout`, un contenitore `<div>` con classe `.callout-inner` contenente a sua volta un titolo contenuto in un `<div>` con classe `.callout-title`. A seguire il testo del contenuto principale del Callout incluso in uno o più tag `<p>`.
 
 Al titolo può essere aggiunta un'icona a scelta fra quelle disponibili, avendo cura di nasconderla agli screen reader con la proprietà `aria-hidden="true"`.
 
