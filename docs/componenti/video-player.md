@@ -26,6 +26,7 @@ Le persone che utilizzano le tecnologie assistive possono agevolmente accedere a
 
 Il player viene istanziato automaticamente quando è presente l'attributo `data-bs-video`.
 
+{% comment %}Example name: Base{% endcomment %}
 {% capture example %}
 <div class="row">
   <video controls data-bs-video>
@@ -86,6 +87,7 @@ valore un array in formato JSON.
 Nota l'uso delle virgolette singole, `data-setup` si aspetta di ricevere un JSON.
 {% endcapture %}{% include callout.html content=callout type="warning" %}
 
+{% comment %}Example name: Con configurazione iniziale{% endcomment %}
 {% capture example %}
 <div class="row">
   <video 
@@ -145,6 +147,7 @@ generica del video.
 Di seguito un esempio d'uso delle didascalie (`kind="captions"`) in
 diverse lingue.
 
+{% comment %}Example name: Con didascalie in più lingue{% endcomment %}
 {% capture example %}
 <div class="row">
   <video controls data-bs-video>
@@ -212,6 +215,7 @@ Approfondisci su [FFmpeg](https://ffmpeg.org/)
 
 Di seguito un esempio in formato MPEG-DASH
 
+{% comment %}Example name: Con video in streaming in formato MPEG-DASH{% endcomment %}
 {% capture example %}
 <div class="row">
   <video 
@@ -293,6 +297,7 @@ audio in lingue diverse consente di offrire il video in più lingue.
 
 Di seguito un esempio in formato HLS multilingua.
 
+{% comment %}Example name: Con video e più tracce audio HLS multilingua{% endcomment %}
 {% capture example %}
 <div class="row">
   <video
@@ -361,8 +366,8 @@ In questo la Pubblica Amministrazione che fa uso di servizi di terze parti come 
 vengono illustrate le funzioni per la gestione delle preferenze con JavaScript.
 {% endcapture %}{% include callout.html content=callout type="warning" %}
 
+{% comment %}Example name: Con overlay di consenso cookie (YouTube){% endcomment %}
 {% capture example %}
-
 <script>
   const loadYouTubeVideo = function(videoUrl) {
     const videoEl = document.getElementById("vid1");
