@@ -26,6 +26,7 @@ Le persone che utilizzano le tecnologie assistive possono agevolmente accedere a
 
 Il player viene istanziato automaticamente quando è presente l'attributo `data-bs-video`.
 
+{% comment %}Example name: Base{% endcomment %}
 {% capture example %}
 <div class="row">
   <video controls data-bs-video>
@@ -86,6 +87,7 @@ valore un array in formato JSON.
 Nota l'uso delle virgolette singole, `data-setup` si aspetta di ricevere un JSON.
 {% endcapture %}{% include callout.html content=callout type="warning" %}
 
+{% comment %}Example name: Con configurazione iniziale{% endcomment %}
 {% capture example %}
 <div class="row">
   <video 
@@ -145,23 +147,24 @@ generica del video.
 Di seguito un esempio d'uso delle didascalie (`kind="captions"`) in
 diverse lingue.
 
+{% comment %}Example name: Con didascalie in più lingue{% endcomment %}
 {% capture example %}
 <div class="row">
   <video controls data-bs-video>
-    <source src="{{ site.baseurl }}/docs/assets/video/ElephantsDream.mp4" type="video/mp4">
+    <source src="https://italia.github.io/bootstrap-italia/docs/assets/video/ElephantsDream.mp4" type="video/mp4">
     <track 
       kind="captions" 
-      src="{{ site.baseurl }}/docs/assets/video/subtitles-it.vtt" 
+      src="https://italia.github.io/bootstrap-italia/docs/assets/video/subtitles-it.vtt" 
       srclang="it" 
       label="Italiano" default>
     <track 
       kind="captions" 
-      src="{{ site.baseurl }}/docs/assets/video/subtitles-en.vtt" 
+      src="https://italia.github.io/bootstrap-italia/docs/assets/video/subtitles-en.vtt" 
       srclang="en" 
       label="English">
     <track 
       kind="captions" 
-      src="{{ site.baseurl }}/docs/assets/video/subtitles-es.vtt" 
+      src="https://italia.github.io/bootstrap-italia/docs/assets/video/subtitles-es.vtt" 
       srclang="es" 
       label="Español">
   </video>
@@ -212,11 +215,12 @@ Approfondisci su [FFmpeg](https://ffmpeg.org/)
 
 Di seguito un esempio in formato MPEG-DASH
 
+{% comment %}Example name: Con video in streaming in formato MPEG-DASH{% endcomment %}
 {% capture example %}
 <div class="row">
   <video 
     data-bs-video
-    poster="{{ site.baseurl }}/docs/assets/video/ElephantsDream.mp4-poster16.gif"
+    poster="https://italia.github.io/bootstrap-italia/docs/assets/video/ElephantsDream.mp4-poster16.gif"
     preload="auto"
     data-setup='{
       "controls": true,
@@ -227,32 +231,32 @@ Di seguito un esempio in formato MPEG-DASH
     <source src="{{ site.baseurl }}/docs/assets/video/ElephantsDreamDASH/ElephantsDream.mp4.mpd" type="application/dash+xml">
     <track 
       kind="captions" 
-      src="{{ site.baseurl }}/docs/assets/video/subtitles-it.vtt" 
+      src="https://italia.github.io/bootstrap-italia/docs/assets/video/subtitles-it.vtt" 
       srclang="it" 
       label="Italiano" default>
     <track 
       kind="captions" 
-      src="{{ site.baseurl }}/docs/assets/video/subtitles-en.vtt" 
+      src="https://italia.github.io/bootstrap-italia/docs/assets/video/subtitles-en.vtt" 
       srclang="en" 
       label="English">
     <track 
       kind="captions" 
-      src="{{ site.baseurl }}/docs/assets/video/subtitles-es.vtt" 
+      src="https://italia.github.io/bootstrap-italia/docs/assets/video/subtitles-es.vtt" 
       srclang="es" 
       label="Español">
     <track 
       kind="chapters"
-      src="{{ site.baseurl }}/docs/assets/video/chapters-en.vtt" 
+      src="https://italia.github.io/bootstrap-italia/docs/assets/video/chapters-en.vtt" 
       srclang="en" 
       label="English">
     <track 
       kind="chapters"
-      src="{{ site.baseurl }}/docs/assets/video/chapters-es.vtt" 
+      src="https://italia.github.io/bootstrap-italia/docs/assets/video/chapters-es.vtt" 
       srclang="es" 
       label="Español">
     <track 
       kind="chapters"
-      src="{{ site.baseurl }}/docs/assets/video/chapters-it.vtt" 
+      src="https://italia.github.io/bootstrap-italia/docs/assets/video/chapters-it.vtt" 
       srclang="it" 
       label="Italiano" default>
   </video>
@@ -293,11 +297,12 @@ audio in lingue diverse consente di offrire il video in più lingue.
 
 Di seguito un esempio in formato HLS multilingua.
 
+{% comment %}Example name: Con video e più tracce audio HLS multilingua{% endcomment %}
 {% capture example %}
 <div class="row">
   <video
     data-bs-video
-    poster="{{ site.baseurl }}/docs/assets/video/ElephantsDream.mp4-poster21.jpg"
+    poster="https://italia.github.io/bootstrap-italia/docs/assets/video/ElephantsDream.mp4-poster21.jpg"
     preload="auto"
     data-setup='{
       "controls": true,
@@ -305,7 +310,7 @@ Di seguito un esempio in formato HLS multilingua.
       "fluid": true
     }'
   >
-    <source src="{{ site.baseurl }}/docs/assets/video/ElephantsDreamHLS/ElephantsDream.mp4.m3u8" type="application/x-mpegURL">
+    <source src="https://italia.github.io/bootstrap-italia/docs/assets/video/ElephantsDreamHLS/ElephantsDream.mp4.m3u8" type="application/x-mpegURL">
   </video>
   <div class="vjs-transcription accordion">
     <div class="accordion-item">
@@ -361,8 +366,8 @@ In questo la Pubblica Amministrazione che fa uso di servizi di terze parti come 
 vengono illustrate le funzioni per la gestione delle preferenze con JavaScript.
 {% endcapture %}{% include callout.html content=callout type="warning" %}
 
+{% comment %}Example name: Con overlay di consenso cookie (YouTube){% endcomment %}
 {% capture example %}
-
 <script>
   const loadYouTubeVideo = function(videoUrl) {
     const videoEl = document.getElementById("vid1");
