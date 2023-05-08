@@ -8,7 +8,8 @@
   ],
   "ignorePatterns": [
     "*.min.js",
-    "*.d.ts"
+    "*.d.ts",
+    "**/vendor/*.js"
   ],
   "rules": {
     "prettier/prettier": [

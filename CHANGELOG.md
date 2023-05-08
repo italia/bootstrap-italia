@@ -1,3 +1,55 @@
+## [2.4.2](https://github.com/italia/bootstrap-italia/compare/v2.4.1...v2.4.2) (2023-05-08)
+
+
+### Bug Fixes
+
+* attempt to remove display block from active step ([5fabb2f](https://github.com/italia/bootstrap-italia/commit/5fabb2f5f62eca9eca1b203129505e494cca4cfa))
+
+
+
+## [2.4.1](https://github.com/italia/bootstrap-italia/compare/v2.4.0...v2.4.1) (2023-05-03)
+
+
+### Bug Fixes
+
+* arrow not getting white when background is primary ([f594187](https://github.com/italia/bootstrap-italia/commit/f5941879fc0d1536148beceb4e4b1ea8fd86e62c))
+* **types:** remove parameter initializer ([b33854b](https://github.com/italia/bootstrap-italia/commit/b33854b0e35625dbca0bb870de7cf63dca53144f))
+
+
+
+# [2.4.0](https://github.com/italia/bootstrap-italia/compare/v2.3.8...v2.4.0) (2023-05-02)
+
+
+### Bug Fixes
+
+* **a11y:** cards subtitles ([8ebeac1](https://github.com/italia/bootstrap-italia/commit/8ebeac127fdbfe2165cc0aaf239a8a1273af66d1))
+* add types for loadfonts ([a9cd91f](https://github.com/italia/bootstrap-italia/commit/a9cd91fd6575414d9b6a59a2e2934ca9fc867657))
+* background color for alert is white ([5344936](https://github.com/italia/bootstrap-italia/commit/534493692de7f86a7f9898152a27e1d7e9b9a204))
+
+
+### Features
+
+* add video component ([d685042](https://github.com/italia/bootstrap-italia/commit/d685042320619cbe13b882fc4de6638353816d43))
+* new callout component ([646bf41](https://github.com/italia/bootstrap-italia/commit/646bf412e83d279ee030bf8bbbf933959d4d3b36))
+
+
+
+## [2.3.8](https://github.com/italia/bootstrap-italia/compare/v2.3.7...v2.3.8) (2023-04-19)
+
+
+### Bug Fixes
+
+* **a11y:** reset white background for examples ([939e9e9](https://github.com/italia/bootstrap-italia/commit/939e9e9be2002152ffccba7fdcf1cda163e922c9))
+* add padding to cards in carousel ([d0796e2](https://github.com/italia/bootstrap-italia/commit/d0796e2ae3e08bdd65b346bb128fee1cd37b4ffa))
+* box shadow in buttons ([a593394](https://github.com/italia/bootstrap-italia/commit/a593394f4f97cf202d6e4e5f7229233736359b2d))
+* cards padding for carousel on mobile ([0023a37](https://github.com/italia/bootstrap-italia/commit/0023a37a60c7a85992b2517cbca9eeab9c38282b))
+* carousel single slide wrapper background ([25c86e4](https://github.com/italia/bootstrap-italia/commit/25c86e4f4c38f243d40c46ac9a1f0f6b6058a8ae))
+* hover on dark outline secondary button ([88481bc](https://github.com/italia/bootstrap-italia/commit/88481bc1b65441db2a39d138854735169e03f940))
+* primary and secondary outline buttons ([b1040f0](https://github.com/italia/bootstrap-italia/commit/b1040f0ed7bb9f52db04d7bb4b5c1f49e4e556d3))
+* remove background for timeline cards ([04cabf3](https://github.com/italia/bootstrap-italia/commit/04cabf360fb9754a206d1069eb66e99288fcad62))
+
+
+
 ## [2.3.7](https://github.com/italia/bootstrap-italia/compare/v2.3.6...v2.3.7) (2023-04-13)
 
 

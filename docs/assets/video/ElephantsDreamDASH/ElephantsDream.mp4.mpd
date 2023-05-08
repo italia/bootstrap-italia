@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MPD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="urn:mpeg:dash:schema:mpd:2011"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	xsi:schemaLocation="urn:mpeg:DASH:schema:MPD:2011 http://standards.iso.org/ittf/PubliclyAvailableStandards/MPEG-DASH_schema_files/DASH-MPD.xsd"
+	profiles="urn:mpeg:dash:profile:isoff-live:2011"
+	type="static"
+	mediaPresentationDuration="PT37.0S"
+	maxSegmentDuration="PT5.0S"
+	minBufferTime="PT18.5S">
+	<ProgramInformation>
+	</ProgramInformation>
+	<ServiceDescription id="0">
+	</ServiceDescription>
+	<Period id="0" start="PT0.0S">
+		<AdaptationSet id="0" contentType="video" startWithSAP="1" segmentAlignment="true" bitstreamSwitching="true" frameRate="24/1" maxWidth="1280" maxHeight="720" par="16:9" lang="und">
+			<Representation id="0" mimeType="video/mp4" codecs="avc1.64000c" bandwidth="95000" width="256" height="144" sar="1:1">
+				<SegmentTemplate timescale="12288" initialization="ElephantsDream.mp4_init_$RepresentationID$.m4s" media="ElephantsDream.mp4_chunk_$RepresentationID$_$Number%05d$.m4s" startNumber="1">
+					<SegmentTimeline>
+						<S t="0" d="87552" />
+						<S d="82432" r="1" />
+						<S d="114176" />
+						<S d="88064" />
+					</SegmentTimeline>
+				</SegmentTemplate>
+			</Representation>
+			<Representation id="2" mimeType="video/mp4" codecs="avc1.64001e" bandwidth="276000" width="640" height="360" sar="1:1">
+				<SegmentTemplate timescale="12288" initialization="ElephantsDream.mp4_init_$RepresentationID$.m4s" media="ElephantsDream.mp4_chunk_$RepresentationID$_$Number%05d$.m4s" startNumber="1">
+					<SegmentTimeline>
+						<S t="0" d="87552" />
+						<S d="82432" r="1" />
+						<S d="107520" />
+						<S d="94720" />
+					</SegmentTimeline>
+				</SegmentTemplate>
+			</Representation>
+			<Representation id="4" mimeType="video/mp4" codecs="avc1.64001e" bandwidth="750000" width="854" height="480" sar="1280:1281">
+				<SegmentTemplate timescale="12288" initialization="ElephantsDream.mp4_init_$RepresentationID$.m4s" media="ElephantsDream.mp4_chunk_$RepresentationID$_$Number%05d$.m4s" startNumber="1">
+					<SegmentTimeline>
+						<S t="0" d="87552" />
+						<S d="82432" r="1" />
+						<S d="112640" />
+						<S d="89600" />
+					</SegmentTimeline>
+				</SegmentTemplate>
+			</Representation>
+			<Representation id="6" mimeType="video/mp4" codecs="avc1.64001f" bandwidth="2048000" width="1280" height="720" sar="1:1">
+				<SegmentTemplate timescale="12288" initialization="ElephantsDream.mp4_init_$RepresentationID$.m4s" media="ElephantsDream.mp4_chunk_$RepresentationID$_$Number%05d$.m4s" startNumber="1">
+					<SegmentTimeline>
+						<S t="0" d="87552" />
+						<S d="82432" r="1" />
+						<S d="111616" />
+						<S d="90624" />
+					</SegmentTimeline>
+				</SegmentTemplate>
+			</Representation>
+		</AdaptationSet>
+		<AdaptationSet id="1" contentType="audio" startWithSAP="1" segmentAlignment="true" bitstreamSwitching="true" lang="und">
+			<Representation id="1" mimeType="audio/mp4" codecs="mp4a.40.2" bandwidth="128000" audioSamplingRate="44100">
+				<AudioChannelConfiguration schemeIdUri="urn:mpeg:dash:23003:3:audio_channel_configuration:2011" value="2" />
+				<SegmentTemplate timescale="44100" initialization="ElephantsDream.mp4_init_$RepresentationID$.m4s" media="ElephantsDream.mp4_chunk_$RepresentationID$_$Number%05d$.m4s" startNumber="1">
+					<SegmentTimeline>
+						<S t="0" d="220160" />
+						<S d="221184" r="5" />
+						<S d="84992" />
+					</SegmentTimeline>
+				</SegmentTemplate>
+			</Representation>
+			<Representation id="3" mimeType="audio/mp4" codecs="mp4a.40.2" bandwidth="128000" audioSamplingRate="44100">
+				<AudioChannelConfiguration schemeIdUri="urn:mpeg:dash:23003:3:audio_channel_configuration:2011" value="2" />
+				<SegmentTemplate timescale="44100" initialization="ElephantsDream.mp4_init_$RepresentationID$.m4s" media="ElephantsDream.mp4_chunk_$RepresentationID$_$Number%05d$.m4s" startNumber="1">
+					<SegmentTimeline>
+						<S t="0" d="220160" />
+						<S d="221184" r="5" />
+						<S d="84992" />
+					</SegmentTimeline>
+				</SegmentTemplate>
+			</Representation>
+			<Representation id="5" mimeType="audio/mp4" codecs="mp4a.40.2" bandwidth="128000" audioSamplingRate="44100">
+				<AudioChannelConfiguration schemeIdUri="urn:mpeg:dash:23003:3:audio_channel_configuration:2011" value="2" />
+				<SegmentTemplate timescale="44100" initialization="ElephantsDream.mp4_init_$RepresentationID$.m4s" media="ElephantsDream.mp4_chunk_$RepresentationID$_$Number%05d$.m4s" startNumber="1">
+					<SegmentTimeline>
+						<S t="0" d="220160" />
+						<S d="221184" r="5" />
+						<S d="84992" />
+					</SegmentTimeline>
+				</SegmentTemplate>
+			</Representation>
+			<Representation id="7" mimeType="audio/mp4" codecs="mp4a.40.2" bandwidth="128000" audioSamplingRate="44100">
+				<AudioChannelConfiguration schemeIdUri="urn:mpeg:dash:23003:3:audio_channel_configuration:2011" value="2" />
+				<SegmentTemplate timescale="44100" initialization="ElephantsDream.mp4_init_$RepresentationID$.m4s" media="ElephantsDream.mp4_chunk_$RepresentationID$_$Number%05d$.m4s" startNumber="1">
+					<SegmentTimeline>
+						<S t="0" d="220160" />
+						<S d="221184" r="5" />
+						<S d="84992" />
+					</SegmentTimeline>
+				</SegmentTemplate>
+			</Representation>
+		</AdaptationSet>
+	</Period>
+</MPD>

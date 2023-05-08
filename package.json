@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-italia",
-  "version": "2.3.7",
+  "version": "2.4.2",
   "keywords": [
     "css",
     "sass",
@@ -83,10 +83,10 @@
     "rollup-plugin-scss": "^3.0.0",
     "rollup-plugin-svg-sprite-deterministic": "^2.0.0",
     "sass": "^1.32.6",
-    "stylelint": "^14.2.0",
+    "stylelint": "^15.6.0",
     "stylelint-config-prettier": "^9.0.3",
-    "stylelint-config-recommended-scss": "^5.0.2",
-    "stylelint-config-standard": "^24.0.0",
+    "stylelint-config-recommended-scss": "^11.0.0",
+    "stylelint-config-standard": "^33.0.0",
     "stylelint-prettier": "^2.0.0",
     "stylelint-scss": "^4.1.0",
     "terser": "^5.14.2"
@@ -101,6 +101,7 @@
     "just-validate": "^3.5.1",
     "masonry-layout": "^4.2.2",
     "progressbar.js": "^1.1.0",
-    "uuid": "^8.3.2"
+    "uuid": "^8.3.2",
+    "video.js": "^8.0.4"
   }
 }

@@ -1,10 +1,15 @@
 .callout {
-  padding: 2.5rem 2.222rem;
-  border: 2px solid $color-border-secondary;
   position: relative;
   max-width: 60ch;
-  margin: 1.75rem 0 1rem;
-  border-radius: 8px;
+  overflow: hidden;
+
+  .callout-inner {
+    padding: 1.1rem 2.222rem;
+    border: 2px solid;
+    border-top: 0;
+    border-color: $color-border-secondary;
+    margin: 1.75rem 0 1rem;
+  }
 
   // Highlights version
   &.callout-highlight {
@@ -12,6 +17,11 @@
     border-left: 2px solid $color-border-secondary;
     border-radius: 0;
     padding: 0 2.222rem;
+    p {
+      &:last-child {
+        margin: 0;
+      }
+    }
     .callout-title {
       margin-bottom: 1.556rem;
     }
@@ -89,6 +99,9 @@
   // color versions
   &.success {
     border-color: $success;
+    .callout-inner {
+      border-color: rgba($success, 1);
+    }
     .callout-title {
       color: $success;
       .icon {
@@ -97,10 +110,19 @@
       span {
         border-color: $success;
       }
+      .text:after {
+        border-color: $success;
+      }
+      &:before {
+        border-color: $success;
+      }
     }
   }
   &.warning {
     border-color: $warning;
+    .callout-inner {
+      border-color: $color-border-warning;
+    }
     .callout-title {
       color: $color-text-warning;
       .icon {
@@ -113,6 +135,9 @@
   }
   &.danger {
     border-color: $danger;
+    .callout-inner {
+      border-color: rgba($danger, 1);
+    }
     .callout-title {
       color: $danger;
       .icon {
@@ -125,6 +150,9 @@
   }
   &.important {
     border-color: $success;
+    .callout-inner {
+      border-color: $success;
+    }
     .callout-title {
       color: $success;
       .icon {
@@ -137,6 +165,9 @@
   }
   &.note {
     border-color: $primary;
+    .callout-inner {
+      border-color: $primary;
+    }
     .callout-title {
       color: $primary;
       .icon {
@@ -185,11 +216,26 @@
   // standard title
   &:not(.callout-highlight):not(.callout-more) {
     .callout-title {
-      position: absolute;
+      position: relative;
       font-size: 1rem;
       padding: 0 1.389rem;
-      background: $white;
-      top: -0.78em;
+      top: -2em;
+      .text:after {
+        content: '';
+        top: 0.78em;
+        border-top: 2px solid;
+        position: absolute;
+        width: 200%;
+        margin-left: calc(10px + 0.7rem);
+      }
+      &:before {
+        content: '';
+        top: 0.78em;
+        border-top: 2px solid;
+        position: absolute;
+        width: 3.222rem;
+        left: calc(-40px - 0.7rem);
+      }
     }
   }
 
@@ -198,9 +244,6 @@
     font-family: $font-family-serif;
     font-size: 0.889rem;
     color: $color-text-secondary; // UI kit
-    &:last-child {
-      margin: 0;
-    }
     &.callout-big-text {
       font-weight: bold;
       font-size: 1.111rem;

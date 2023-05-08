@@ -3,6 +3,7 @@ import '../scss/bootstrap-italia.scss'
 import { loadPlugin } from './load-plugin'
 import init from './plugins/init'
 import loadFonts from './plugins/fonts-loader'
+import { cookies } from './plugins/util/cookies'
 import * as icons from './icons'
 
 import {
@@ -37,6 +38,7 @@ import {
   ProgressDonut,
   UploadDragDrop,
   BackToTop,
+  AcceptOverlay,
   Sticky,
   HeaderSticky,
   HistoryBack,
@@ -44,6 +46,7 @@ import {
   Masonry,
   List,
   Transfer,
+  VideoPlayer,
 } from './bootstrap-italia.esm'
 
 loadPlugin(icons)
@@ -62,6 +65,8 @@ export default {
   Tab,
   Toast,
   Tooltip,
+  VideoPlayer,
+  AcceptOverlay,
   Accordion,
   BackToTop,
   CarouselBI,
@@ -87,4 +92,5 @@ export default {
   UploadDragDrop,
   ValidatorSelectAutocomplete,
   loadFonts,
+  cookies,
 }

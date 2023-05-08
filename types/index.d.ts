@@ -36,6 +36,7 @@ import { Tooltip } from './plugins/tooltip'
 import { TrackFocus } from './plugins/track-focus'
 import { Transfer } from './plugins/transfer'
 import { UploadDragDrop } from './plugins/upload-dragdrop'
+import { loadFonts } from './plugins/fonts-loader'
 
 export {
   Alert,
@@ -77,4 +78,5 @@ export {
   TrackFocus,
   Transfer,
   UploadDragDrop,
+  loadFonts
 }

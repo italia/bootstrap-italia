@@ -1,6 +1,6 @@
 # Bootstrap Italia
 
-[![Versione](https://img.shields.io/npm/v/bootstrap-italia.svg?logo=npm)](https://github.com/italia/bootstrap-italia/releases)
+[![Versione](https://img.shields.io/npm/v/bootstrap-italia.svg?logo=npm)](https://www.npmjs.com/package/bootstrap-italia)
 [![Build](https://github.com/italia/bootstrap-italia/actions/workflows/build.yml/badge.svg)](https://github.com/italia/bootstrap-italia/actions)
 [![GitHub issues](https://img.shields.io/github/issues/italia/bootstrap-italia.svg)](https://github.com/italia/bootstrap-italia/issues)
 [![License](https://img.shields.io/github/license/italia/bootstrap-italia.svg)](https://github.com/italia/bootstrap-italia/blob/main/LICENSE)
