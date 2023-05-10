@@ -228,7 +228,7 @@ Di seguito un esempio in formato MPEG-DASH
       "fluid": true
     }'
   >
-    <source src="{{ site.baseurl }}/docs/assets/video/ElephantsDreamDASH/ElephantsDream.mp4.mpd" type="application/dash+xml">
+    <source src="https://italia.github.io/docs/assets/video/ElephantsDreamDASH/ElephantsDream.mp4.mpd" type="application/dash+xml">
     <track 
       kind="captions" 
       src="https://italia.github.io/bootstrap-italia/docs/assets/video/subtitles-it.vtt" 
