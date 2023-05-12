@@ -381,7 +381,8 @@ vengono illustrate le funzioni per la gestione delle preferenze con JavaScript.
       <div class="acceptoverlay-icon">
         <svg class="icon icon-xl"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-video"></use></svg>
       </div>
-      <p>Questo contenuto è ospitato da un sito di terze parti. Mostrando il contenuto esterno accetti i <a href="https://www.youtube.com/t/terms" class="text-white">termini e le condizioni di youtube.com.</a></p>
+        <p>Devi accettare i cookie di YouTube per abilitare la visione di questo contenuto. Scopri cosa sono i cookie e approfondisci i dettagli nella nostra <a href="https://www.youtube.com/t/terms" class="text-white">cookie policy</a>.
+        </p>
       <div class="acceptoverlay-buttons bg-dark">
         <div class="form-check">
           <input id="chk-remember" type="checkbox" data-bs-accept-remember>
