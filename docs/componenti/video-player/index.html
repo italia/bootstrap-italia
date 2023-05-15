@@ -12,14 +12,14 @@
 <title>Video Player · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202305101138" rel="stylesheet" />
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202305151708" rel="stylesheet" />
 
 
 <!-- Documentation extras -->
  
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.css" rel="stylesheet" />
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202305101138" rel="stylesheet" />
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202305151708" rel="stylesheet" />
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico" />
@@ -1078,6 +1078,11 @@ sulla navigazione o l’indirizzo IP. È quindi importante l’utilizzo di quest
 funzionalità assieme al componente di accettazione del consenso per garantire la 
 protezione della privacy degli utenti.</p>
 
+<div class="bd-callout bd-callout-info">
+<p>Coinvolgi il Responsabile per la protezione dei dati (RDP/DPO) della tua amministrazione e ricordati di aggiornare la cookie policy del sito. Designers Italia mette a disposizione il <a href="https://designers.italia.it/risorse-per-progettare/organizzare/privacy/">kit Privacy</a>  per approfondire questi temi e in particolare uno strumento dedicato alla redazione della Cookie policy che trovi in <a href="https://designers.italia.it/risorse-per-progettare/organizzare/privacy/rispetta-la-privacy-per-il-go-live-di-un-sito/">questa azione del kit</a>.</p>
+
+</div>
+
 <h3 id="attivazione-delloverlay-di-consenso">Attivazione dell’overlay di consenso</h3>
 
 <p>L’utilizzo di un overlay per il consenso è una soluzione comune per garantire 
@@ -1086,8 +1091,7 @@ L’overlay per il consenso consente di informare l’utente sui cookie utilizza
 di ottenere il suo consenso in modo esplicito e consapevole alla riproduzione del video.</p>
 
 <div class="bd-callout bd-callout-warning">
-<p>In questo la Pubblica Amministrazione che fa uso di servizi di terze parti come YouTube deve necessariamente specificare l’utilizzo di cookie di tracciamento da parte di piattaforme di terze parti. Nella sezione seguente
-vengono illustrate le funzioni per la gestione delle preferenze con JavaScript.</p>
+<p>In questo la Pubblica Amministrazione che fa uso di servizi di terze parti come YouTube deve necessariamente specificare l’utilizzo di cookie di tracciamento da parte di piattaforme di terze parti, inserendo inoltre il link alla propria cookie policy all’interno dell’overlay (dove adesso c’è il link a ‘#’). Nella sezione seguente vengono illustrate le funzioni per la gestione delle preferenze con JavaScript.</p>
 </div>
 
 <div class="bd-example">
@@ -1104,7 +1108,8 @@ vengono illustrate le funzioni per la gestione delle preferenze con JavaScript.<
       <div class="acceptoverlay-icon">
         <svg class="icon icon-xl"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-video"></use></svg>
       </div>
-      <p>Questo contenuto è ospitato da un sito di terze parti. Mostrando il contenuto esterno accetti i <a href="https://www.youtube.com/t/terms" class="text-white">termini e le condizioni di youtube.com.</a></p>
+        <p>Devi accettare i cookie di YouTube per abilitare la visione di questo contenuto. Scopri cosa sono i cookie e approfondisci i dettagli nella nostra <a href="#" class="text-white">cookie policy</a>.
+        </p>
       <div class="acceptoverlay-buttons bg-dark">
         <div class="form-check">
           <input id="chk-remember" type="checkbox" data-bs-accept-remember="" />
@@ -1147,7 +1152,8 @@ vengono illustrate le funzioni per la gestione delle preferenze con JavaScript.<
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"acceptoverlay-icon"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-xl"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-video"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;p&gt;</span>Questo contenuto è ospitato da un sito di terze parti. Mostrando il contenuto esterno accetti i <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://www.youtube.com/t/terms"</span> <span class="na">class=</span><span class="s">"text-white"</span><span class="nt">&gt;</span>termini e le condizioni di youtube.com.<span class="nt">&lt;/a&gt;&lt;/p&gt;</span>
+        <span class="nt">&lt;p&gt;</span>Devi accettare i cookie di YouTube per abilitare la visione di questo contenuto. Scopri cosa sono i cookie e approfondisci i dettagli nella nostra <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"text-white"</span><span class="nt">&gt;</span>cookie policy<span class="nt">&lt;/a&gt;</span>.
+        <span class="nt">&lt;/p&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"acceptoverlay-buttons bg-dark"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"chk-remember"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">data-bs-accept-remember</span><span class="nt">&gt;</span>
@@ -1219,16 +1225,16 @@ e molto altro ancora.</p>
     </div>
 
     
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202305101138"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202305151708"></script>
 <script>
   bootstrap.loadFonts('/bootstrap-italia/dist/fonts')
 </script><script src="/bootstrap-italia/docs/assets/src/js/vendor/vimeo-player.min.js"></script>
-<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202305101138"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202305151708"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/anchor.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/clipboard.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tsparticles.min.js"></script>
 
-<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202305101138"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202305151708"></script>
 
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tweenjs.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/easeljs.min.js"></script>
@@ -1245,7 +1251,7 @@ e molto altro ancora.</p>
     { src: '/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png', id: 'cover-7' },
   ]
 </script>
-<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202305101138"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202305151708"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/docsearch.min.js"></script>
 
 <script>
