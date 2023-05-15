@@ -354,6 +354,12 @@ sulla navigazione o l'indirizzo IP. È quindi importante l'utilizzo di questa
 funzionalità assieme al componente di accettazione del consenso per garantire la 
 protezione della privacy degli utenti.
 
+{% capture callout %}
+
+Coinvolgi il Responsabile per la protezione dei dati (RDP/DPO) della tua amministrazione e ricordati di aggiornare la cookie policy del sito. Designers Italia mette a disposizione il [kit Privacy](https://designers.italia.it/risorse-per-progettare/organizzare/privacy/)  per approfondire questi temi e in particolare uno strumento dedicato alla redazione della Cookie policy che trovi in [questa azione del kit](https://designers.italia.it/risorse-per-progettare/organizzare/privacy/rispetta-la-privacy-per-il-go-live-di-un-sito/).
+
+{% endcapture %}{% include callout.html content=callout type="info" %}
+
 ### Attivazione dell'overlay di consenso
 
 L'utilizzo di un overlay per il consenso è una soluzione comune per garantire 
@@ -362,8 +368,7 @@ L'overlay per il consenso consente di informare l'utente sui cookie utilizzati e
 di ottenere il suo consenso in modo esplicito e consapevole alla riproduzione del video.
 
 {% capture callout %}
-In questo la Pubblica Amministrazione che fa uso di servizi di terze parti come YouTube deve necessariamente specificare l’utilizzo di cookie di tracciamento da parte di piattaforme di terze parti. Nella sezione seguente
-vengono illustrate le funzioni per la gestione delle preferenze con JavaScript.
+In questo la Pubblica Amministrazione che fa uso di servizi di terze parti come YouTube deve necessariamente specificare l’utilizzo di cookie di tracciamento da parte di piattaforme di terze parti, inserendo inoltre il link alla propria cookie policy all'interno dell'overlay (dove adesso c'è il link a '#'). Nella sezione seguente vengono illustrate le funzioni per la gestione delle preferenze con JavaScript.
 {% endcapture %}{% include callout.html content=callout type="warning" %}
 
 {% comment %}Example name: Con overlay di consenso cookie (YouTube){% endcomment %}
@@ -381,7 +386,8 @@ vengono illustrate le funzioni per la gestione delle preferenze con JavaScript.
       <div class="acceptoverlay-icon">
         <svg class="icon icon-xl"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-video"></use></svg>
       </div>
-      <p>Questo contenuto è ospitato da un sito di terze parti. Mostrando il contenuto esterno accetti i <a href="https://www.youtube.com/t/terms" class="text-white">termini e le condizioni di youtube.com.</a></p>
+        <p>Devi accettare i cookie di YouTube per abilitare la visione di questo contenuto. Scopri cosa sono i cookie e approfondisci i dettagli nella nostra <a href="#" class="text-white">cookie policy</a>.
+        </p>
       <div class="acceptoverlay-buttons bg-dark">
         <div class="form-check">
           <input id="chk-remember" type="checkbox" data-bs-accept-remember>
