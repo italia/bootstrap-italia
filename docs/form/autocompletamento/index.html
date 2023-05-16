@@ -12,14 +12,14 @@
 <title>Autocompletamento · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202305151708" rel="stylesheet" />
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202305161920" rel="stylesheet" />
 
 
 <!-- Documentation extras -->
  
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.css" rel="stylesheet" />
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202305151708" rel="stylesheet" />
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202305161920" rel="stylesheet" />
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico" />
@@ -874,6 +874,12 @@
   <span class="p">})</span>
 <span class="nt">&lt;/script&gt;</span></code></pre></figure>
 
+<p>Per prendere il valore della option che siamo andati a selezionare occorre agire su <code class="language-plaintext highlighter-rouge">_element</code> dell’oggetto <code class="language-plaintext highlighter-rouge">SelectAutocomplete</code></p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">e</span> <span class="o">=</span> <span class="nx">selectAutocomplete</span><span class="p">.</span><span class="nx">_element</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">value</span> <span class="o">=</span> <span class="nx">e</span><span class="p">.</span><span class="nx">options</span><span class="p">[</span><span class="nx">e</span><span class="p">.</span><span class="nx">selectedIndex</span><span class="p">].</span><span class="nx">value</span><span class="p">;</span>
+</code></pre></div></div>
+
 <h3 id="validazione">Validazione</h3>
 
 <p>Per la validazione del campo con autocompletamento, si consiglia di utilizzare il plugin Just Validate come da <a href="/bootstrap-italia/docs/form/introduzione/#validazione">guida</a>.</p>
@@ -885,16 +891,16 @@
     </div>
 
     
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202305151708"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202305161920"></script>
 <script>
   bootstrap.loadFonts('/bootstrap-italia/dist/fonts')
 </script><script src="/bootstrap-italia/docs/assets/src/js/vendor/vimeo-player.min.js"></script>
-<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202305151708"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202305161920"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/anchor.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/clipboard.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tsparticles.min.js"></script>
 
-<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202305151708"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202305161920"></script>
 
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tweenjs.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/easeljs.min.js"></script>
@@ -911,7 +917,7 @@
     { src: '/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png', id: 'cover-7' },
   ]
 </script>
-<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202305151708"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202305161920"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/docsearch.min.js"></script>
 
 <script>
