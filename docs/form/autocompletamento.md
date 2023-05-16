@@ -147,6 +147,13 @@ Per una corretta implementazione si consiglia di consultare la [documentazione](
 </script>
 {% endcapture %}{% include example.html content=example %}
 
+Per prendere il valore della option che siamo andati a selezionare occorre agire su `_element` dell'oggetto `SelectAutocomplete`
+
+```js
+const e = selectAutocomplete._element;
+const value = e.options[e.selectedIndex].value;
+```
+
 ### Validazione
 
 Per la validazione del campo con autocompletamento, si consiglia di utilizzare il plugin Just Validate come da [guida]({{ site.baseurl }}/docs/form/introduzione/#validazione).
