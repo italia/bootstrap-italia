@@ -416,8 +416,8 @@ $color-text-warning: hsl(36, 100%, 30%); // color-orange-30
 // SPECIFIC TOKENS =========================================================
 //
 // Footer
-$footer-top-background: hsl(210, 100%, 30%); // color-blue-30
-$footer-bottom-background: hsl(210, 100%, 20%); // color-blue-20
+$footer-top-background: $primary-a8; // color-blue-30
+$footer-bottom-background: $primary-a10; // color-blue-20
 
 // Icons
 $icon-primary: $primary;
