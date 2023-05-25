@@ -117,7 +117,7 @@ La classe `.disabled` usa `pointer-events: none` per provare a disabilitare l'at
 
 <button class="btn btn-danger btn-sm btn-icon btn-me">
   <span>Icon Button Sm</span>
-  <svg class="icon icon-secondary ms-1">
+  <svg class="icon icon-white ms-1">
   <use
         href="{{
           site.baseurl
@@ -128,7 +128,7 @@ La classe `.disabled` usa `pointer-events: none` per provare a disabilitare l'at
 
 <button class="btn btn-info btn-xs btn-icon ms-1">
   <span>Icon Button Xs</span>
-  <svg class="icon icon-danger">
+  <svg class="icon icon-white">
   <use
         href="{{
           site.baseurl
@@ -165,8 +165,8 @@ Inoltre è possibile applicare un contorno cerchiato dell'icona utilizzando un c
 </button>
 
 <button class="btn btn-danger btn-sm btn-icon btn-me">
-<span class="rounded-icon rounded-secondary">
-<svg class="icon icon-white">
+<span class="rounded-icon">
+<svg class="icon icon-danger">
 <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-user"></use>
 </svg>
 </span>
@@ -174,8 +174,8 @@ Inoltre è possibile applicare un contorno cerchiato dell'icona utilizzando un c
 </button>
 
 <button class="btn btn-secondary btn-xs btn-icon">
-<span class="rounded-icon rounded-danger">
-<svg class="icon icon-white">
+<span class="rounded-icon">
+<svg class="icon icon-secondary">
 <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-user"></use>
 </svg>
 </span>
