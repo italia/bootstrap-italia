@@ -44,13 +44,13 @@ Gli stili definiti da Bootstrap Italia utilizzano un naming consistente con Boot
 {% comment %}Example name: Varianti di colore{% endcomment %}
 {% capture example %}
 
-<div class="py-1">{% for color in site.data.theme-colors %}{% if color.name == "primary" or color.name == "secondary" %}
+<div class="py-1">{% for color in site.data.theme-colors %}
 <div class="btn-example">
   <button type="button" class="btn btn-{{ color.name }}">{{ color.name | capitalize }}</button>
   <button type="button" class="btn btn-outline-{{ color.name }}">{{ color.name | capitalize }} outline</button>
   <button type="button" class="btn btn-{{ color.name }} disabled">{{ color.name | capitalize }} disabled</button>
   <button type="button" class="btn btn-outline-{{ color.name }} disabled">{{ color.name | capitalize }} outline disabled</button>
-</div>{% endif %}{% endfor %}
+</div>{% endfor %}
 </div>
 {% endcapture %}{% include example.html content=example %}
 
