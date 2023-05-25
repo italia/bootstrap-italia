@@ -3,9 +3,7 @@
   font-size: $btn-font-size;
   white-space: initial;
   text-decoration: none;
-  &:not(.btn-outline-primary, .btn-outline-secondary) {
-    box-shadow: none;
-  }
+  box-shadow: none;
 }
 
 .btn-me {
