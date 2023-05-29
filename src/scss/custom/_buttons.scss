@@ -3,9 +3,7 @@
   font-size: $btn-font-size;
   white-space: initial;
   text-decoration: none;
-  &:not(.btn-outline-primary, .btn-outline-secondary) {
-    box-shadow: none;
-  }
+  box-shadow: none;
 }
 
 .btn-me {
@@ -70,7 +68,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
     background-color: $white;
 
     @each $color, $value in $theme-colors {
@@ -101,20 +98,15 @@
   box-shadow: none;
   line-height: 1.555;
   @include border-radius(0);
-
   // allow height 100%
   align-self: stretch;
   // height: 100%;
-
   width: inherit;
-
   margin-top: -$header-slim-button-v-padding;
   margin-bottom: -$header-slim-button-v-padding;
   margin-right: -$header-slim-button-v-padding;
-
   padding-left: 8px;
   padding-right: 8px;
-
   &:hover {
     text-decoration: none !important;
   }
@@ -128,7 +120,6 @@
   @include media-breakpoint-up(lg) {
     padding: 12px 24px !important;
     margin: 0;
-
     flex: 1;
     display: flex;
     flex-direction: row;
@@ -170,18 +161,44 @@
   }
 }
 
-.btn-outline-secondary {
-  box-shadow: inset 0 0 0 2px $secondary;
-  &.disabled,
-  &:hover,
-  &:active {
-    box-shadow: inset 0 0 0 2px color-hover($secondary);
+.btn-outline {
+  &-primary {
+    box-shadow: inset 0 0 0 2px $primary;
+    &.disabled {
+      box-shadow: inset 0 0 0 2px color-hover($primary);
+    }
   }
-}
-
-.btn-outline-primary {
-  &.disabled {
-    box-shadow: inset 0 0 0 2px color-hover($primary);
+  &-secondary {
+    box-shadow: inset 0 0 0 2px $secondary;
+    &.disabled,
+    &:hover,
+    &:active {
+      box-shadow: inset 0 0 0 2px color-hover($secondary);
+    }
+  }
+  &-success {
+    box-shadow: inset 0 0 0 2px $success;
+    &.disabled,
+    &:hover,
+    &:active {
+      box-shadow: inset 0 0 0 2px color-hover($success);
+    }
+  }
+  &-warning {
+    box-shadow: inset 0 0 0 2px $color-border-warning;
+    &.disabled,
+    &:hover,
+    &:active {
+      box-shadow: inset 0 0 0 2px color-hover($color-border-warning);
+    }
+  }
+  &-danger {
+    box-shadow: inset 0 0 0 2px $danger;
+    &.disabled,
+    &:hover,
+    &:active {
+      box-shadow: inset 0 0 0 2px color-hover($danger);
+    }
   }
 }
 
