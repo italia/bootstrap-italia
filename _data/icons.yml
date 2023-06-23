@@ -156,6 +156,7 @@ files:
   - it-file-odt
   - it-file-pdf
   - it-file-pdf-ext
+  - it-file-ppt
   - it-file-sheet
   - it-file-slides
   - it-file-txt
