@@ -1,4 +1,4 @@
-FROM timbru31/ruby-node:3.0-16
+FROM timbru31/ruby-node:3.1-18
 
 WORKDIR /app
 
