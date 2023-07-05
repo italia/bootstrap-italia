@@ -1,14 +1,10 @@
 html,
 body {
+  // base font size shouldn't change for properly rem sizes calculation
   font-size: 16px;
-  // line-height: 1.5;
-  // @include media-breakpoint-up(sm) {
-  //   font-size: 18px;
-  //   line-height: 1.555;
-  // }
 }
 
-// Intestazioni
+// Headings
 
 h1,
 .h1 {
@@ -79,7 +75,7 @@ h4, h5, h6, .h4, .h5, .h6 {
   font-weight: 600;
 }
 
-// Intestazioni in evidenza
+// Display headings
 
 .display-1,
 .display-2,
@@ -101,6 +97,8 @@ h4, h5, h6, .h4, .h5, .h6 {
   }
 }
 
+// Text paragraph
+
 p {
   font-size: inherit;
   line-height: 2rem;
@@ -109,6 +107,16 @@ p {
     line-height: 1.75rem;
   }
 }
+
+.lead {
+  font-size: 1.25rem;
+  line-height: 2rem;
+  @include media-breakpoint-up(sm) {
+    font-size: 1.5rem;
+  } 
+}
+
+// Blockquote
 
 blockquote,
 .blockquote {
@@ -136,7 +144,7 @@ blockquote,
     font-style: italic;
   }
 
-  //card version
+  // Card version
   &.blockquote-card {
     margin-left: 0;
     padding: 16px 40px 24px;
@@ -159,6 +167,16 @@ blockquote,
   }
 }
 
+.blockquote-footer {
+  color: $blockquote-small-color;
+  margin-top: 0;
+  .bg-dark & {
+    color: $blockquote-small-color-dark;
+  }
+}
+
+// Global typography elements
+
 caption {
   font-size: 0.875rem;
   line-height: 1rem;
@@ -172,24 +190,17 @@ strong {
 
 small,
 .small {
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   font-weight: $font-weight-normal;
 }
 
 .x-small {
-  font-size: 0.675rem;
+  font-size: 0.75rem;
   font-weight: $font-weight-normal;
 }
 
-.blockquote-footer {
-  color: $blockquote-small-color;
-  margin-top: 0;
-  .bg-dark & {
-    color: $blockquote-small-color-dark;
-  }
-}
-
 // Font Family
+
 .font-serif {
   font-family: $font-family-serif !important;
 }
@@ -200,7 +211,8 @@ small,
   font-family: $font-family-monospace !important;
 }
 
-// Abbreviazioni
+// Abbreviations
+
 .initialism {
   font-size: 90%;
 }
