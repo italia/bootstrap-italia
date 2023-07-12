@@ -11,6 +11,9 @@
     padding-left: 0.6em;
     padding-right: 0.6em;
   }
+  .text-secondary {
+    color: darken(map.get($theme-colors, "secondary"), 15%);
+  }
 }
 
 a {
