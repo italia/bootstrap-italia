@@ -98,6 +98,7 @@
     "accessible-autocomplete": "^2.0.4",
     "animejs": "^3.2.1",
     "bootstrap": "5.2.3",
+    "design-tokens-italia": "^1.1.0",
     "just-validate": "^3.5.1",
     "masonry-layout": "^4.2.2",
     "progressbar.js": "^1.1.0",
