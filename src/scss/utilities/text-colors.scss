@@ -2,7 +2,7 @@
 @each $color, $value in $theme-colors {
   @if $color != 'white' {
     .text-#{$color} {
-      color: $value !important;
+      color: $value;
     }
   }
 }
