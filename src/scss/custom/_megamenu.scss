@@ -37,8 +37,8 @@
                 background: transparent;
 
                 .description-content {
-                  padding-left: $megamenu-linklist-vertical-link-padding + $grid-gutter-width * 0.5;
-                  padding-right: $megamenu-linklist-vertical-link-padding + $grid-gutter-width * 0.5;
+                  padding-left: 48px;
+                  padding-right: 48px;
                   &:before {
                     content: '';
                     display: block;
@@ -94,7 +94,7 @@
             h3,
             .link-list-heading {
               &.it-heading-megacolumn {
-                margin: $megamenu-linklist-link-v-padding $megamenu-column-gap + $grid-gutter-width * 2;
+                margin: $megamenu-linklist-link-v-padding $megamenu-column-gap + 24px * 2;
                 line-height: $megamenu-heading-line-height;
                 font-size: $megamenu-heading-text-size;
                 text-transform: uppercase;
@@ -157,7 +157,7 @@
       padding: $v-gap * 2 0;
       margin-top: $v-gap * 2;
       .col-12 {
-        padding-bottom: 0px !important;
+        padding-bottom: 0 !important;
       }
       .link-list-wrapper {
         margin-bottom: 0;
@@ -389,7 +389,7 @@
               }
               .row.max-height-col {
                 min-height: 100%;
-                margin-right: -($megamenu-column-gap + $grid-gutter-width * 0.5 + 1);
+                margin-right: -($megamenu-column-gap + 24px * 0.5 + 1);
                 .row.max-height-col {
                   margin-right: -$grid-gutter-width * 0.5;
                 }

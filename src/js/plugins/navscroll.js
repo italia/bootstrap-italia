@@ -175,6 +175,9 @@ class NavScroll extends BaseComponent {
   }
 
   _updateProgress(content) {
+    if (!content) {
+      return
+    }
     const progressBars = SelectorEngine.find(SELECTOR_PROGRESS_BAR)
     if (progressBars) {
       const offset = Math.abs(content.getBoundingClientRect().top)

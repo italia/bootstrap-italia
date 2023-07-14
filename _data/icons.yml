@@ -116,6 +116,8 @@ platforms:
   - it-mastodon-square
   - it-medium
   - it-medium-square
+  - it-moodle
+  - it-moodle-square
   - it-pinterest
   - it-pinterest-square
   - it-quora
@@ -156,6 +158,7 @@ files:
   - it-file-odt
   - it-file-pdf
   - it-file-pdf-ext
+  - it-file-ppt
   - it-file-sheet
   - it-file-slides
   - it-file-txt
