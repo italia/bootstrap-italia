@@ -74,22 +74,12 @@ h4, h5, h6, .h4, .h5, .h6 {
   font-weight: 600;
 }
 
-// Display headings
-
-.display-1,
-.display-2,
-.display-3,
-.display-5 {
-  font-weight: 700;
-}
-
-.display-4,
-.display-6 {
-  font-weight: 600;
-}
+// Display heading
 
 .display-1 {
   font-size: 3rem;
+  font-weight: 700;
+
   @include media-breakpoint-up(sm) {
     font-size: 3.5rem;
     line-height: 1.25;
@@ -99,8 +89,8 @@ h4, h5, h6, .h4, .h5, .h6 {
 // Text paragraph
 
 p {
-  font-size: inherit;
-  line-height: 2rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
   @include media-breakpoint-up(sm) {
     font-size: 1.15rem;
     line-height: 1.75rem;
@@ -179,7 +169,6 @@ blockquote,
 caption {
   font-size: 0.875rem;
   line-height: 1rem;
-  color: $color-text-muted;
 }
 
 b,
@@ -190,24 +179,22 @@ strong {
 small,
 .small {
   font-size: 0.875rem;
-  font-weight: $font-weight-normal;
 }
 
 .x-small {
   font-size: 0.75rem;
-  font-weight: $font-weight-normal;
 }
 
 // Font Family
 
 .font-serif {
-  font-family: $font-family-serif !important;
+  font-family: $font-family-serif;
 }
 .font-sans-serif {
-  font-family: $font-family-sans-serif !important;
+  font-family: $font-family-sans-serif;
 }
 .font-monospace {
-  font-family: $font-family-monospace !important;
+  font-family: $font-family-monospace;
 }
 
 // Abbreviations
@@ -216,10 +203,7 @@ small,
   font-size: 90%;
 }
 
-a {
-  &.text-decoration-none {
-    &:hover {
-      text-decoration: underline !important;
-    }
-  }
+// force text decoration for links with `.text-decoration-none` class
+a.text-decoration-none:hover {
+  text-decoration: underline;
 }
