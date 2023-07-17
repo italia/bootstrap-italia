@@ -55,12 +55,6 @@
   .bd-links {
     padding: 0;
 
-    .link-list-wrapper {
-      ul.link-list > li > a {
-        font-size: 0.889rem;
-      }
-    }
-
     @include media-breakpoint-up(md) {
       @supports (position: sticky) {
         max-height: calc(100vh - 5rem);
@@ -77,7 +71,7 @@
     > li > a {
       display: inline-block;
       padding: 0.25rem 0.5rem 0.25rem 1.5rem;
-      font-size: 16px;
+      font-size: 1rem;
       color: $gray-800;
 
       &:hover {
