@@ -44,13 +44,11 @@ $text-color: $gray-700 !default;
 $text-muted: $color-text-muted !default;
 $letter-spacing-base: 0;
 $line-height-base: 1.5;
-$font-weight-base: 300;
 $mark-bg: $analogue-2-a1;
 
 // Paragraphs
-$headings-line-height: 1.2 !default;
 $paragraph-margin-bottom: 1rem !default;
-$small-font-size: 0.777rem !default;
+$small-font-size: 0.875rem !default;
 
 // Links
 $link-decoration: underline;
@@ -118,26 +116,7 @@ $theme-color-interval: 8% !default;
 
 // Code
 $code-color: $dark !default;
-
 $yiq-contrasted-threshold: 120 !default;
-
-// Headings
-$headings-font-weight: 700;
-$headings-line-height: 1.2 !default;
-
-$h3-font-size: 1.75rem;
-$h4-font-size: 1.5rem;
-$h5-font-size: 1.25rem;
-
-$display1-size: 3.5rem;
-$display2-size: 2.5rem;
-$display3-size: 1.5rem;
-$display4-size: 1.25rem;
-
-$display1-weight: 700;
-$display2-weight: 700;
-$display3-weight: 700;
-$display4-weight: 700;
 
 // Breadcrumbs
 $breadcrumb-padding: 0.5em;
