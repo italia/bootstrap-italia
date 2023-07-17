@@ -62,7 +62,7 @@ h6,
   font-size: 1rem;
   line-height: 1.5rem;
   @include media-breakpoint-up(sm) {
-    font-size: 1.15rem;
+    font-size: 1.125rem;
   }
 }
 
@@ -92,7 +92,7 @@ p {
   font-size: 1rem;
   line-height: 1.5rem;
   @include media-breakpoint-up(sm) {
-    font-size: 1.15rem;
+    font-size: 1.125rem;
     line-height: 1.75rem;
   }
 }
@@ -109,7 +109,7 @@ p {
 
 blockquote,
 .blockquote {
-  font-size: 1.15rem;
+  font-size: 1.125rem;
   line-height: 1.5rem;
   margin: 1.5rem 0;
   margin-left: calc($spacer / 2);

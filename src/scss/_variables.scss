@@ -73,7 +73,7 @@ $btn-letter-spacing: normal;
 $btn-font-weight: 600 !default;
 $btn-font-size: 1rem !default;
 $btn-font-size-sm: .75rem !default;
-$btn-font-size-lg: 1.15rem !default;
+$btn-font-size-lg: 1.125rem !default;
 
 // Input
 $input-btn-line-height: 1.5 !default;
@@ -263,10 +263,10 @@ $componente-base-padding-y: 8px;
 
 // Linklist
 $link-list-font-size: 1rem;
-$link-list-font-size-l: 1.15rem;
+$link-list-font-size-l: 1.125rem;
 $link-list-line-height: 1.5rem;
 $link-list-line-height-l: 1.5rem;
-$link-list-heading-size: 1.15rem;
+$link-list-heading-size: 1.125rem;
 $link-list-divider-height: 1px;
 $link-list-divider-distance: 8px;
 $link-list-h-pad: 24px;
@@ -289,7 +289,7 @@ $megamenu-link-small-line-margin-bottom: $v-gap;
 $megamenu-heading-line-height: 1.2em;
 $megamenu-heading-font-weight: 600;
 $megamenu-heading-bottom-margin: 0.5rem;
-$megamenu-heading-text-size: 1.15rem;
+$megamenu-heading-text-size: 1.125rem;
 $megamenu-heading-margin-top: 5px;
 $megamenu-heading-letter-spacing: 1px;
 $megamenu-link-arrow-size: 0.8em;
@@ -330,7 +330,7 @@ $pager-page-changer-border-bottom: 1px solid $gray-secondary !default; // Kit UI
 // Sidebar
 $sidebar-heading-font-weight: 600;
 $sidebar-heading-bottom-margin: 0.8rem;
-$sidebar-heading-text-size: 1.15rem;
+$sidebar-heading-text-size: 1.125rem;
 $sidebar-heading-margin-top: 4px;
 $sidebar-heading-letter-spacing: 1px;
 $sidebar-linklist-link-line-height: 1em;
@@ -463,7 +463,7 @@ $card-h5-line-height: 1.4444444444444444rem;
 $card-h5-fw: 700;
 $card-h5-color: $color-text-secondary !default; // UI kit
 $card-p-size: 1rem;
-$card-p-size-desk: 1.15rem;
+$card-p-size-desk: 1.125rem;
 $card-p-l-h: 1.5rem;
 $card-p-color: $color-text-base !default;
 $card-border-color: $gray-border !default; // Missing in the UI kit but aligned to new colors
@@ -486,7 +486,7 @@ $card-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.1) !default;
 $card-shadow-bg: $white !default;
 $card-big-h5-size: 1.25rem;
 $card-big-h5-l-h: 1.5rem;
-$card-big-p-size: 1.15rem;
+$card-big-p-size: 1.125rem;
 $card-big-p-l-h: 1.5rem;
 $card-big-top-icon-size: $v-gap * 10;
 $card-img-heading-size: 1.1111111111111112rem;
