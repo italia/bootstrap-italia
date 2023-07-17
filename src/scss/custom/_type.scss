@@ -1,7 +1,6 @@
 html,
 body {
-  // base font size shouldn't change for properly rem sizes calculation
-  font-size: 16px;
+  font-size: 16px; // CAUTION: Don't change this value
 }
 
 // Headings
