@@ -109,7 +109,8 @@ p {
 
 blockquote,
 .blockquote {
-  font-size: inherit;
+  font-size: 1.15rem;
+  line-height: 1.5rem;
   margin: 1.5rem 0;
   margin-left: calc($spacer / 2);
   border-left: 4px solid $analogue-2;
