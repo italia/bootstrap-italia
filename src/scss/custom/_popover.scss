@@ -47,7 +47,7 @@
     border: none;
     text-transform: uppercase;
     color: $color-text-base;
-    font-size: 0.938rem;
+    font-size: 1rem;
     padding: $v-gap * 2 $v-gap * 3 0;
     letter-spacing: 0.05em;
     font-weight: 600;
@@ -96,11 +96,11 @@
   .popover {
     //title
     .popover-header {
-      font-size: 0.833rem;
+      font-size: 0.875rem;
     }
     //text
     .popover-body {
-      font-size: 0.778rem;
+      font-size: 0.75rem;
     }
   }
 }

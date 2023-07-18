@@ -75,7 +75,7 @@
     }
     // text
     p {
-      font-size: 0.778rem;
+      font-size: 0.75rem;
       line-height: 1.333rem;
       color: $color-text-secondary; // UI kit
     }
@@ -242,11 +242,11 @@
   //text
   p {
     font-family: $font-family-serif;
-    font-size: 0.889rem;
+    font-size: 0.875rem;
     color: $color-text-secondary; // UI kit
     &.callout-big-text {
       font-weight: bold;
-      font-size: 1.111rem;
+      font-size: 1.125rem;
     }
   }
 
@@ -366,7 +366,7 @@ _:-ms-fullscreen,
     // More version
     &.callout-more {
       p {
-        font-size: 0.722rem;
+        font-size: 0.75rem;
       }
     }
   }

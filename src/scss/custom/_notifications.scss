@@ -13,13 +13,13 @@
 
   //title
   h5 {
-    font-size: 0.938rem;
+    font-size: 0.875rem;
     text-transform: uppercase;
     color: $color-text-base;
     letter-spacing: 0;
     margin: 0;
     position: relative;
-    line-height: 1em;
+    line-height: 1rem;
     font-weight: 700;
   }
   //text
@@ -104,7 +104,7 @@
       font-size: 0.833rem;
     }
     p {
-      font-size: 0.778rem;
+      font-size: 0.75rem;
       margin: 1.333rem 0 0 0;
     }
     &.with-icon {

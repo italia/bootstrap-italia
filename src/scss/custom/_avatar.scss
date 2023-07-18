@@ -23,7 +23,7 @@
   }
   // text
   p {
-    font-size: 16px; // default size equals to md
+    font-size: 1rem; // default size equals to md
     margin: 0;
     text-align: center;
     line-height: 1em;
@@ -79,13 +79,13 @@
       color: inherit;
       padding: 0;
       line-height: 0;
-      font-size: 11px;
+      font-size: 0.75rem;
     }
     .list-item {
       display: flex;
       align-items: center;
       padding: 0 16px;
-      font-size: 0.889rem;
+      font-size: 0.875rem;
     }
     .link-list {
       span {
@@ -119,7 +119,7 @@
     width: $avatar-base-size * 2;
     height: $avatar-base-size * 2;
     p {
-      font-size: 10px;
+      font-size: 0.625rem;
     }
     .icon {
       height: 10px;
@@ -130,7 +130,7 @@
     width: $avatar-base-size * 3;
     height: $avatar-base-size * 3;
     p {
-      font-size: 14px;
+      font-size: 0.875rem;
     }
     .icon {
       height: 12px;
@@ -141,7 +141,7 @@
     width: $avatar-base-size * 4;
     height: $avatar-base-size * 4;
     p {
-      font-size: 16px;
+      font-size: 1rem;
     }
     .icon {
       height: 16px;
@@ -159,7 +159,7 @@
     width: $avatar-base-size * 5;
     height: $avatar-base-size * 5;
     p {
-      font-size: 18px;
+      font-size: 1.125rem;
     }
     .icon {
       height: 20px;
@@ -179,7 +179,7 @@
     width: $avatar-base-size * 10;
     height: $avatar-base-size * 10;
     p {
-      font-size: 36px;
+      font-size: 2.25rem;
     }
     .icon {
       height: 40px;
@@ -352,7 +352,7 @@ a.avatar {
       h4 {
         font-weight: 600;
         margin: 0;
-        font-size: 1.111rem;
+        font-size: 1.125rem;
         a {
           display: inline-block;
           text-decoration: none;
@@ -365,7 +365,7 @@ a.avatar {
       time {
         margin: 0;
         text-transform: uppercase;
-        font-size: 0.778rem;
+        font-size: 0.75rem;
       }
     }
   }
@@ -390,7 +390,7 @@ a.avatar {
         margin-right: 12px;
         //reset color & font size for avatar
         p {
-          font-size: 16px;
+          font-size: 1rem;
         }
         &.avatar-primary,
         &.avatar-secondary,
@@ -405,7 +405,7 @@ a.avatar {
       }
       span {
         margin: 0;
-        font-size: 0.889rem;
+        font-size: 0.875rem;
         font-weight: 600;
       }
     }
