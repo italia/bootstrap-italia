@@ -46,7 +46,7 @@
 // Generate contextual modifier classes for colorizing the alert.
 
 @each $color, $value in $theme-colors {
-  @if ($color == 'danger' or $color == 'warning' or $color == 'success' or $color == 'info') {
+  @if ($color == 'danger' or $color == 'warning' or $color == 'success' or $color == 'info' or $color == 'primary') {
     .alert-#{$color} {
       background-position: 20px 16px;
       background-repeat: no-repeat;
