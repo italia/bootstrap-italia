@@ -201,11 +201,11 @@
 
   //title
   .callout-title {
-    font-weight: bold;
+    font-weight: 600;
     text-transform: uppercase;
     font-size: 1rem;
     margin-right: 2.222rem;
-    letter-spacing: 0.06rem;
+    letter-spacing: 1.5rem;
     color: $color-text-secondary; // UI kit
     .icon {
       fill: $color-text-secondary; // UI kit
@@ -366,7 +366,7 @@ _:-ms-fullscreen,
     // More version
     &.callout-more {
       p {
-        font-size: 0.75rem;
+        font-size: 0.875rem;
       }
     }
   }
