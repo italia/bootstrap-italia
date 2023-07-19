@@ -162,6 +162,13 @@ $arrow-size: $font-size-base * 0.5;
 // body
 .accordion-body {
   padding: 12px 24px 42px;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  @include media-breakpoint-up(lg) {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
   .accordion-header button[aria-expanded='true']:before {
     height: 0;
     width: 0;
