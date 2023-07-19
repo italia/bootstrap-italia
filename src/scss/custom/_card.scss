@@ -572,8 +572,6 @@
 
       .card-text,
       .card-text > p {
-        font-family: $font-family-sans-serif;
-        font-size: $card-signature-size;
         margin: 0;
 
         & + .card-text {
