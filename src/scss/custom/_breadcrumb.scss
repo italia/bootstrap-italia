@@ -16,9 +16,8 @@
         font-weight: $breadcrumb-link-font-weight;
       }
       &.active {
-        color: $color-text-base;
         a {
-          font-weight: normal;
+          font-weight: 400;
           pointer-events: none;
         }
       }
