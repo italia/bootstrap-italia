@@ -205,8 +205,10 @@
     text-transform: uppercase;
     font-size: 1rem;
     margin-right: 2.222rem;
-    letter-spacing: 1.5rem;
     color: $color-text-secondary; // UI kit
+    @include media-breakpoint-up(lg) {
+      font-size: 1.125rem;
+    }
     .icon {
       fill: $color-text-secondary; // UI kit
       margin-right: 0.444rem;
@@ -217,9 +219,8 @@
   &:not(.callout-highlight):not(.callout-more) {
     .callout-title {
       position: relative;
-      font-size: 1rem;
       padding: 0 1.389rem;
-      top: -2em;
+      top: -2rem;
       .text:after {
         content: '';
         top: 0.78em;
@@ -242,10 +243,12 @@
   //text
   p {
     font-family: $font-family-serif;
-    font-size: 0.875rem;
+    font-size: 1rem;
     color: $color-text-secondary; // UI kit
+    @include media-breakpoint-up(lg) {
+      font-size: 1.125rem;
+    }
     &.callout-big-text {
-      font-weight: bold;
       font-size: 1.125rem;
     }
   }
