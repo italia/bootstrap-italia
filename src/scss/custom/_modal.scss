@@ -12,21 +12,12 @@
           padding: $modal-padding-close;
         }
         h5 {
-          font-size: $modal-heading-size;
-          font-weight: $modal-heading-weight;
-          letter-spacing: $modal-heading-l-space;
-          text-transform: uppercase;
           color: $modal-heading-color;
         }
       }
       .modal-body {
         padding: $modal-padding;
         padding-bottom: 0;
-        p {
-          font-size: $modal-p-size;
-          margin-bottom: 0;
-          line-height: $modal-p-l-height;
-        }
       }
       .modal-footer {
         padding: $modal-padding * 0.5 $modal-padding;
