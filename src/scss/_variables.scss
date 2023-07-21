@@ -396,12 +396,12 @@ $header-slim-bg-color: $primary-a7 !default;
 $header-slim-text-color: $white !default;
 $header-slim-button-color: $primary-a9 !default;
 $header-slim-button-hover-color: $primary-a8 !default;
-$header-slim-brand-text-size: 0.778em;
+$header-slim-brand-text-size: 0.875rem;
 $header-slim-icon-size: 18px;
 $header-slim-padding-desk: 3px $v-gap * 3;
 $header-slim-dropdown-distance: 14px;
 $header-slim-dropdown-distance-mob: 9px;
-$header-slim-links-padding: 5px;
+$header-slim-links-padding: 7px;
 $header-slim-brand-padding: 12px;
 $header-slim-button-v-padding: 7.5px;
 $header-slim-lang-v-padding: 12px;
@@ -420,10 +420,10 @@ $header-center-max-height: 120px;
 $header-center-max-height-mob: 80px;
 $header-center-pad: 47px;
 $header-center-pad-mob: 16px;
-$header-center-h2-size: 1.778em;
-$header-center-h2-size-mob: 1.25em;
+$header-center-h2-size: 1.778em; // TODO: Change size
+$header-center-h2-size-mob: 1.25em; // TODO: Change size
 $header-center-h2-weight: 600;
-$header-center-h3-size: 0.889em;
+$header-center-h3-size: 0.889em; // TODO: Change size
 $header-center-icon-size: 82px;
 $header-center-icon-size-mob: 48px;
 $header-center-icon-margin: $v-gap * 2;
@@ -434,14 +434,14 @@ $header-center-search-size: $v-gap * 6;
 $header-center-search-radius: $v-gap * 3;
 $header-center-search-icon-size: $v-gap * 3;
 $header-center-search-distance: $v-gap * 10;
-$header-center-text-size: 0.889em;
+$header-center-text-size: 0.889em; // TODO: Change size
 $header-center-button-left: 10px;
 $header-nav-button-distance: 22px;
 $header-nav-icon-arrow-megamenu-distance: 14px;
 $header-center-small-height: 104px;
 $header-center-small-mob-height: 64px;
-$header-center-small-h2-size: 1.333em;
-$header-center-small-h3-size: 0.778em;
+$header-center-small-h2-size: 1.333em; // TODO: Change size
+$header-center-small-h3-size: 0.778em; // TODO: Change size
 // Header Center theme light
 $header-center-theme-light-bg-color: $white !default;
 $header-center-theme-light-text-color: $primary !default;
