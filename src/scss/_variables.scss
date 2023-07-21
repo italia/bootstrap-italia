@@ -105,6 +105,7 @@ $zoom-overlay-bg: $white !default;
 $border-radius: 4px !default;
 $border-radius-sm: 2px !default;
 $border-radius-lg: 8px !default;
+$radius-rounded: 40px;
 
 // Link and button colors
 $btn-primary-bg: $primary !default;
@@ -201,7 +202,6 @@ $dropdown-box-shadow-vertical: 0 0 30px 5px rgba(0, 0, 0, 0.05) !default;
 
 // Dropdown custom
 $dropdown-custom-button-padding: 0 4px;
-$dropdown-custom-button-font-size: 1rem;
 $dropdown-custom-button-color: $primary !default;
 $dropdown-custom-button-background: transparent !default;
 $dropdown-custom-button-caret-font-size: 0.55rem;
@@ -264,7 +264,7 @@ $componente-base-padding-y: 8px;
 // Linklist
 $link-list-font-size: 1rem;
 $link-list-font-size-l: 1.125rem;
-$link-list-line-height: 1.5rem;
+$link-list-line-height: 2rem;
 $link-list-line-height-l: 1.5rem;
 $link-list-heading-size: 1.125rem;
 $link-list-divider-height: 1px;
