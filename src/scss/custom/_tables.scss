@@ -1,4 +1,7 @@
 .table {
+  @include media-breakpoint-up(lg) {
+    font-size: 1.125rem;
+  }
   //table styles go here
   .table-dark {
     a {

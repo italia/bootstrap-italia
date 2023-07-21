@@ -90,6 +90,9 @@
         font-size: $list-font-size;
         font-weight: 600;
         display: block;
+        @include media-breakpoint-up(lg) {
+          font-size: 1.125rem;
+        }
         em {
           display: block;
           font-size: $list-sub-size;
