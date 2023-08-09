@@ -171,6 +171,8 @@ class NavScroll extends BaseComponent {
       } else {
         location.hash = hash
       }
+	  
+	  target.focus()
     }
   }
 
