@@ -94,7 +94,6 @@ class NavScroll extends BaseComponent {
 
     SelectorEngine.find(SELECTOR_LINK_CLICKABLE, this._element).forEach((link) => {
       link.addEventListener('click', (event) => {
-        event.preventDefault()
         const scrollHash = () => this._scrollToHash(link.hash)
         if (this._isCollapseOpened) {
           this._callbackQueue.push(scrollHash)
@@ -171,8 +170,6 @@ class NavScroll extends BaseComponent {
       } else {
         location.hash = hash
       }
-
-      target.focus()
     }
   }
 
