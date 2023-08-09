@@ -244,11 +244,10 @@ class NavScroll extends BaseComponent {
  * ------------------------------------------------------------------------
  */
 
-onDocumentScroll(() => {
-  const navs = SelectorEngine.find(SELECTOR_NAVSCROLL)
-  navs.map((nav) => {
-    NavScroll.getOrCreateInstance(nav)
-  })
+const navs = SelectorEngine.find(SELECTOR_NAVSCROLL)
+navs.map((nav) => {
+  NavScroll.getOrCreateInstance(nav)
 })
+
 
 export default NavScroll
