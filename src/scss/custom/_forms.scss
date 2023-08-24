@@ -74,7 +74,6 @@ fieldset {
 }
 
 ::placeholder {
-  font-weight: 600;
   color: $input-color-placeholder;
 }
 
@@ -98,12 +97,10 @@ textarea {
   width: 100%;
   box-shadow: none;
   transition: none;
-  font-weight: 700;
   -webkit-appearance: none;
   -webkit-border-radius: 0;
   &::placeholder {
     color: $input-color-placeholder;
-    font-weight: 600;
   }
 }
 
