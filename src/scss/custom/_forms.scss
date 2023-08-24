@@ -39,7 +39,6 @@ fieldset {
   label {
     background-color: transparent;
     position: absolute;
-    font-weight: 600;
     line-height: calc(#{$input-height} - 1px);
     transition: 0.2s ease-out;
     top: 0;
@@ -56,6 +55,7 @@ fieldset {
     z-index: 1;
     &.active {
       transform: translateY(-75%);
+      font-weight: 600;
       font-size: $small-font-size;
       color: $input-label-color;
     }
