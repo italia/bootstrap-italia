@@ -166,7 +166,7 @@ evidenza un'intestazione di tipo `<h1>`, si può prendere in considerazione l'us
 della classe `.display-1`, che restituirà una dimensione sensibilmente più
 grande.
 
-{% comment %}Example name: Intestazioni{% endcomment %}
+{% comment %}Example name: Intestazione h1 in evidenza{% endcomment %}
 {% capture example %}
 <h1 class="no_toc display-1">Intestazione di tipo h1 in evidenza</h1>
 {% endcapture %}{% include example.html content=example %}

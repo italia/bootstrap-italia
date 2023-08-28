@@ -25,8 +25,8 @@ logica aggiuntiva o sottrattiva.
 ### Sottrattivo
 
 <div class="bd-example-border-utils bd-example-border-utils-0">
-{% capture example %}
 {% comment %}Example name: Sottrattivo{% endcomment %}
+{% capture example %}
 <span class="border-0"></span>
 <span class="border-top-0"></span>
 <span class="border-end-0"></span>
