@@ -2,6 +2,7 @@
 .tooltip {
   border-radius: $border-radius;
   font-size: 0.75rem;
+
   //hide arrow
   .tooltip-arrow {
     display: none;
@@ -10,6 +11,11 @@
   .tooltip-inner {
     padding: 7px $v-gap * 2;
     background-color: $color-background-emphasis;
+    @include media-breakpoint-up(md) {
+      .tooltip-inner {
+        padding: 4.5px $v-gap;
+      }
+    }
     a {
       color: $white;
       text-decoration: underline;
@@ -23,23 +29,5 @@
   &.bs-tooltip-left,
   &.bs-tooltip-right {
     padding: 0 $v-gap;
-  }
-}
-
-//small - tablet
-@include media-breakpoint-up(sm) {
-  .tooltip {
-    font-size: 0.75rem;
-  }
-}
-
-//Tablet vertical
-@include media-breakpoint-up(md) {
-  .tooltip {
-    font-size: 0.75rem;
-    //text
-    .tooltip-inner {
-      padding: 4.5px $v-gap;
-    }
   }
 }
