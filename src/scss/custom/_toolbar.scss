@@ -381,7 +381,8 @@
     height: 18px;
     padding: 0 4px;
     color: $white;
-    font-size: 0.563rem;
+    font-size: 0.5rem;
+    line-height: 1rem;
     border-radius: 50%;
     font-style: normal;
   }
@@ -389,9 +390,9 @@
   // text label
   .toolbar-label {
     margin-top: 8px;
-    font-size: 0.688rem;
+    font-size: 0.75rem;
+    font-weight: 600;
     line-height: 1;
     display: block;
-    font-weight: 600;
   }
 }
