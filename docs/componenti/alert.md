@@ -12,7 +12,7 @@ Gli avvisi sono disponibili in quattro tipologie diverse e sono adatti a qualsia
 
 {% comment %}Example name: Varianti per tipologia{% endcomment %}
 {% capture example %}
-{% assign colors = "info,success,warning,danger" | split: ','%}
+{% assign colors = "primary,info,success,warning,danger" | split: ','%}
 {% for color in colors %}
 
 <div class="alert alert-{{color}}" role="alert">
