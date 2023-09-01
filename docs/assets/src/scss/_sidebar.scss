@@ -18,9 +18,11 @@
 
   .section-nav {
     padding-left: 0;
+    font-size: 0.875rem;
 
     ul {
       padding-left: 1rem;
+      font-size: 0.875rem;
 
       ul {
         display: none;
@@ -51,6 +53,11 @@
 .bd-sidebar {
   order: 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+  ul,
+  li ul {
+    font-size: 1rem;
+  }
 
   .bd-links {
     padding: 0;
