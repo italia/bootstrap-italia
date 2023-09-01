@@ -81,9 +81,9 @@ h4, h5, h6, .h4, .h5, .h6 {
   }
 }
 
-// Text paragraph
+// Text elements
 
-p {
+p, ul, ol, dl, span {
   font-size: 1rem;
   line-height: 1.5rem;
   @include media-breakpoint-up(sm) {
