@@ -44,16 +44,6 @@
   margin-bottom: 0.5rem;
 }
 
-.bd-lead {
-  font-size: 1.125rem;
-  font-weight: 300;
-
-  @include media-breakpoint-up(sm) {
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-  }
-}
-
 code.highlighter-rouge {
   background-color: #efc;
   a > & {
