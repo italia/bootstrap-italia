@@ -16,7 +16,7 @@
         "content": "\n<h1>Intestazione di tipo h1</h1>\n<h2>Intestazione di tipo h2</h2>\n<h3>Intestazione di tipo h3</h3>\n<h4>Intestazione di tipo h4</h4>\n<h5>Intestazione di tipo h5</h5>\n<h6>Intestazione di tipo h6</h6>\n\n<p class=\"h1\">Stile h1</p>\n<p class=\"h2\">Stile h2</p>\n<p class=\"h3\">Stile h3</p>\n<p class=\"h4\">Stile h4</p>\n<p class=\"h5\">Stile h5</p>\n<p class=\"h6\">Stile h6</p>\n"
     },
     {
-        "name": "Intestazioni",
+        "name": "Intestazione h1 in evidenza",
         "content": "\n<h1 class=\"display-1\">Intestazione di tipo h1 in evidenza</h1>\n"
     },
     {
