@@ -83,7 +83,7 @@ h4, h5, h6, .h4, .h5, .h6 {
 
 // Text elements
 
-p, ul, ol, dl, span {
+p, ul, ol, dl {
   font-size: 1rem;
   line-height: 1.5rem;
   @include media-breakpoint-up(sm) {
