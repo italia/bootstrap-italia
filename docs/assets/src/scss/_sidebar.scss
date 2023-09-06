@@ -54,8 +54,9 @@
   order: 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
-  ul,
-  li ul {
+  .link-list,
+  .link-sublist,
+  .list-item span {
     font-size: 1rem;
   }
 
