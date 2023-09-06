@@ -1,5 +1,5 @@
 .badge {
-  --bs-badge-font-size: .875rem;
+  --bs-badge-font-size: 0.875rem;
   --bs-badge-font-weight: #{$font-weight-semibold};
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   @each $color, $value in $theme-colors {

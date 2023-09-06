@@ -71,7 +71,7 @@ $btn-text-transform: uppercase;
 $btn-letter-spacing: normal;
 $btn-font-weight: 600 !default;
 $btn-font-size-sm: 1rem !default;
-$btn-font-size-xs: .875rem !default;
+$btn-font-size-xs: 0.875rem !default;
 $btn-font-size-lg: 1.125rem !default;
 
 // Input
@@ -595,7 +595,7 @@ $stepper-spacing-v: 16px;
 
 // transfer
 $transfer-border: 1px solid $neutral-1-a3 !default; // TODO Not found
-$transfer-descr-size: .75rem;
+$transfer-descr-size: 0.75rem;
 $transfer-descr-color: $neutral-1-a8 !default; // TODO Not found
 $transfer-header-line-color: $neutral-1-a3 !default; // TODO Not found
 $transfer-header-line-w: 65px;
