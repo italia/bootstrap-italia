@@ -60,21 +60,12 @@ Per il suo utilizzo, è sufficiente usare la classe `font-monospace`.
 
 ## Tipografia responsive
 
-Bootstrap Italia ridimensiona testo e alcune propietà dei componenti modificando
-il `font-size` dell'elemento radice, con una media query che imposta dimensioni
+Bootstrap Italia ridimensiona la dimensione di intestazioni e testo modificando
+le proprietà `font-size` e `line-height` dell'elemento tramite una media query che imposta dimensioni
 lievemente maggiori per schermi con dimensioni maggiori di _576px_. Questa
 impostazione, unita all'utilizzo di dimensioni in `rem` o in semplici valori
 numerici all'interno del CSS, fa sì che testo e altre proprietà occupino più
-spazio quando lo schermo lo permette:
-
-```scss
-html {
-  font-size: 16px;
-  @include media-breakpoint-up(sm) {
-    font-size: 18px;
-  }
-}
-```
+spazio quando lo schermo lo permette.
 
 ## Intestazioni
 
