@@ -96,16 +96,11 @@ const createInput = (element) => {
   return null
 }
 
-EventHandler.on(document, EVENT_MOUSEDOWN_DATA_API, 'input, textarea, label', function () {
-  const target = InputLabel.getInputFromLabel(this) || this
+var frmel = document.querySelectorAll('input, textarea, label')
+frmel.forEach(function (item, index, arr) {
+  const target = InputLabel.getInputFromLabel(item) || item
   createInput(target)
 })
-EventHandler.on(document, EVENT_KEYUP_DATA_API, 'input, textarea, label', function () {
-  const target = InputLabel.getInputFromLabel(this) || this
-  const element = createInput(target)
-  if (element && element._label) {
-    element._label._labelOut()
-  }
-})
+
 
 export default Input
