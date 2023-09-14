@@ -8,10 +8,6 @@ import InputLabel from './input-label'
 const NAME = 'input'
 const DATA_KEY = 'bs.input'
 const EVENT_KEY = `.${DATA_KEY}`
-const DATA_API_KEY = '.data-api'
-
-const EVENT_MOUSEDOWN_DATA_API = `mousedown${EVENT_KEY}${DATA_API_KEY}`
-const EVENT_KEYUP_DATA_API = `keyup${EVENT_KEY}${DATA_API_KEY}`
 
 const EVENT_CHANGE = `change${EVENT_KEY}`
 
@@ -67,11 +63,13 @@ class Input extends BaseComponent {
  */
 const excludes = [
   'select',
-  //'input[data-bs-input][type="number"]',
+  'textarea',
   'input[data-bs-input][type="password"]',
   'input.input-password[data-bs-input]',
   'input[data-bs-autocomplete][type="search"]',
   'input[type="time"]',
+  'input[type="radio"]',
+  'input[type="checkbox"]',
 ]
 
 /*const inputs = SelectorEngine.find('input, textarea').filter((input) => {
@@ -96,11 +94,12 @@ const createInput = (element) => {
   return null
 }
 
-var frmel = document.querySelectorAll('input, textarea, label')
-frmel.forEach(function (item, index, arr) {
-  const target = InputLabel.getInputFromLabel(item) || item
-  createInput(target)
+document.addEventListener('DOMContentLoaded', function () {
+  var frmel = document.querySelectorAll('input, textarea, label')
+  frmel.forEach(function (item) {
+    const target = InputLabel.getInputFromLabel(item) || item
+    createInput(target)
+  })
 })
-
 
 export default Input
