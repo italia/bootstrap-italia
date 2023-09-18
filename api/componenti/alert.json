@@ -1,7 +1,7 @@
 [
     {
         "name": "Varianti per tipologia",
-        "content": "\n\n\n\n<div class=\"alert alert-info\" role=\"alert\">\n  Questo \u00e8 un alert di tipo \"<b>info</b>\".\n</div>\n\n<div class=\"alert alert-success\" role=\"alert\">\n  Questo \u00e8 un alert di tipo \"<b>success</b>\".\n</div>\n\n<div class=\"alert alert-warning\" role=\"alert\">\n  Questo \u00e8 un alert di tipo \"<b>warning</b>\".\n</div>\n\n<div class=\"alert alert-danger\" role=\"alert\">\n  Questo \u00e8 un alert di tipo \"<b>danger</b>\".\n</div>\n"
+        "content": "\n\n\n\n<div class=\"alert alert-primary\" role=\"alert\">\n  Questo \u00e8 un alert di tipo \"<b>primary</b>\".\n</div>\n\n<div class=\"alert alert-info\" role=\"alert\">\n  Questo \u00e8 un alert di tipo \"<b>info</b>\".\n</div>\n\n<div class=\"alert alert-success\" role=\"alert\">\n  Questo \u00e8 un alert di tipo \"<b>success</b>\".\n</div>\n\n<div class=\"alert alert-warning\" role=\"alert\">\n  Questo \u00e8 un alert di tipo \"<b>warning</b>\".\n</div>\n\n<div class=\"alert alert-danger\" role=\"alert\">\n  Questo \u00e8 un alert di tipo \"<b>danger</b>\".\n</div>\n"
     },
     {
         "name": "Link evidenziato",

@@ -4,8 +4,8 @@
         "content": "\n<span class=\"border\"></span>\n<span class=\"border-top\"></span>\n<span class=\"border-end\"></span>\n<span class=\"border-bottom\"></span>\n<span class=\"border-start\"></span>\n"
     },
     {
-        "name": "bordi-2",
-        "content": "\n\n<span class=\"border-0\"></span>\n<span class=\"border-top-0\"></span>\n<span class=\"border-end-0\"></span>\n<span class=\"border-bottom-0\"></span>\n<span class=\"border-start-0\"></span>\n"
+        "name": "Sottrattivo",
+        "content": "\n<span class=\"border-0\"></span>\n<span class=\"border-top-0\"></span>\n<span class=\"border-end-0\"></span>\n<span class=\"border-bottom-0\"></span>\n<span class=\"border-start-0\"></span>\n"
     },
     {
         "name": "Varianti di colore",
