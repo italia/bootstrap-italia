@@ -1354,7 +1354,7 @@ Affinché la testata rimanga visibile in formato ridotto anche allo scorrere del
 
 ### Tramite JavaScript
 
-E' possibile inizializzare il componente tramite JavaScript:
+È possibile inizializzare il componente tramite JavaScript:
 
 ```js
 var headerSticky = new bootstrap.HeaderSticky(document.getElementById('myHeaderSticky'), options)

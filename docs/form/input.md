@@ -160,7 +160,7 @@ Per rendere più semplice l'inserimento della password, l'elemento è stato dota
   </tbody>
 </table>
 
-E' possibile personalizzare i testi dei messaggi riguardanti la robustezza della password usando gli attributi data dell'elemento `small.form-text`.
+È possibile personalizzare i testi dei messaggi riguardanti la robustezza della password usando gli attributi data dell'elemento `small.form-text`.
 
 <table class="table table-bordered table-striped">
   <thead>
