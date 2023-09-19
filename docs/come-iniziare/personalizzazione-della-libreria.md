@@ -82,4 +82,4 @@ function App() {
 export default App
 ```
 
-In questo semplice e veloce esempio, il pulsante con classe **.btn-primary** avrà lo sfondo di colore **rosso** anzichè il default blu.
+In questo semplice e veloce esempio, il pulsante con classe **.btn-primary** avrà lo sfondo di colore **rosso** anziché il default blu.

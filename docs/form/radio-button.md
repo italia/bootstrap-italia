@@ -43,7 +43,7 @@ Per allineare orizzontalmente le `checkbox` o i `radio` basterà aggiungere la c
 
 ### Disabilitato
 
-Affinchè i campi `checkbox` e `radio` risultino disabilitati occorrerà aggiungere l'attributo `disabled` all'input e la classe `.disabled` alla label relativa.
+Affinché i campi `checkbox` e `radio` risultino disabilitati occorrerà aggiungere l'attributo `disabled` all'input e la classe `.disabled` alla label relativa.
 
 {% comment %}Example name: Disabilitato {% endcomment %}
 {% capture example %}
