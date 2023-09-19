@@ -285,7 +285,7 @@ In questo caso è l'interno form ad avere una classe specifica `upload-dragdrop`
 
 I primi due stati sono gestiti dal codice JS incluso nello UI-Kit, lo stato di **success** dipende dal caricamento corretto del file sul server e va quindi gestito da chi svilupperà il font/back-end del sito o webapp.
 
-Su questa pagina è presente <a href="#esempio-animato">un'esempio simulato</a> del risultato finale.
+Su questa pagina è presente <a href="#esempio-animato">un esempio simulato</a> del risultato finale.
 
 Lo stato dell'upload è rappresentato graficamente dall'elemento `<div class="progress-donut" data-bs-progress-donut></div>` come progress circolare.
 
