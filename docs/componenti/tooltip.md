@@ -10,7 +10,7 @@ I tooltip sono suggerimenti personalizzati con CSS e JavaScript, utilizzano CSS3
 
 {% capture callout %}
 
-#### Accessibiltà
+#### Accessibilità
 
 I tooltip funzionano sia con la tastiera che per gli utenti dotati di tecnologia assistiva.
 
