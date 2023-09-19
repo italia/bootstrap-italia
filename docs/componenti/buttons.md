@@ -224,7 +224,7 @@ Per creare pulsanti o gruppi di pulsanti a tutta larghezza, come i _block button
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-In questo caso è stata implemenentata una variante responsive che visualizza i tasti a tutta larghezza e sovrapposti in mobile per poi affiancarli dl breakpoint `md` in su.
+In questo caso è stata implementata una variante responsive che visualizza i tasti a tutta larghezza e sovrapposti in mobile per poi affiancarli dl breakpoint `md` in su.
 
 {% comment %}Example name: A tutta larghezza, solo su mobile{% endcomment %}
 {% capture example %}

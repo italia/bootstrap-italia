@@ -8,7 +8,7 @@ description: Consente all'utente di far scorrere automaticamente a una parte spe
 
 ## Esempio
 
-Per attivare lo scorrimento automatico del documento all'àncora indicata nell'attibuto `href` o dall'attributo `data-bs-target`, è sufficiente aggiungere al tag link l'attributo `data-bs-toggle="forward"` e la classe `.forward`:
+Per attivare lo scorrimento automatico del documento all'àncora indicata nell'attributo `href` o dall'attributo `data-bs-target`, è sufficiente aggiungere al tag link l'attributo `data-bs-toggle="forward"` e la classe `.forward`:
 
 {% comment %}Example name: Base{% endcomment %}
 {% capture example %}

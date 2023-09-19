@@ -281,7 +281,7 @@ L'elemento `.it-multiple` con all'interno le relative icone, segue l'elemento `.
 Ad ogni lista si può aggiungere un campo testuale _metadata_, come nell'esempio seguente.
 L'elemento `.metadata`, segue l'elemento `.text`.
 
-{% comment %}Example name: Con medatada{% endcomment %}
+{% comment %}Example name: Con metadata{% endcomment %}
 {% capture example %}
 <div class="it-list-wrapper">
   <ul class="it-list">
@@ -572,7 +572,7 @@ Per ogni elemento di una lista di link è possibile definire una variante di dim
 
 Ogni elemento di una lista di link può avere un'icona (a destra o sinistra del testo) ed un abstract.
 
-Per includere un'icona bisogna aggiungere al tag `<a>` uan delle segeunti classi:
+Per includere un'icona bisogna aggiungere al tag `<a>` una delle seguenti classi:
 
 - `icon-right`: se si vuole posizionare l'icona a destra del testo
 - `icon-left`: se si vuole posizionare l'icona a sinistra del testo

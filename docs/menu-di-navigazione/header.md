@@ -27,7 +27,7 @@ L'header di un sito della Pubblica Amministrazione è solitamente composto di 3 
 
 #### Accessibilità
 
-Condierando l'importanza dell'Header per la navigazione di un sito, si consiglia di seguire attentamente gli esempi per quanto riguarda l'utilizzo di attributi `ARIA` e labelling accessibile.
+Considerando l'importanza dell'Header per la navigazione di un sito, si consiglia di seguire attentamente gli esempi per quanto riguarda l'utilizzo di attributi `ARIA` e labelling accessibile.
 
 Il titolo del sito, "Nome dell'Istituzione" negli esempi, è contenuto in un `<div>` generico e non un tag `<h1>` per evitare conflitti con gli `<h1>` presenti nelle singole pagine. Nel caso in cui la home page fosse priva di un titolo relativo all'Istituzione (es: carousel con ultime notizie) è consigliabile applicare il tag `<h1>` al titolo dell'header unicamente in quella pagina.
 

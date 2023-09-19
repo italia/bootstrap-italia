@@ -179,7 +179,7 @@ Per aumentare la dimensione di un paragrafo contenuto nel Callout applicare la c
 
 ### Highlight Danger
 
-{% comment %}Example name: Periocolo o errore, in evidenza{% endcomment %}
+{% comment %}Example name: Pericolo o errore, in evidenza{% endcomment %}
 {% capture example %}
 
 <div class="callout callout-highlight danger">

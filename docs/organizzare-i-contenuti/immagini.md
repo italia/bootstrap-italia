@@ -6,7 +6,7 @@ title: Immagini
 description: Documentazione ed esempi per l'inserimento di immagini responsive, che quindi non diventano mai più grandi dei loro elementi genitore.
 ---
 
-Le immagini in Bootstrap Italia sono rese responsive con la classe `.img-fluid`, così che vengano applicate all'immagine le proporietà `max-width: 100%;` e `height: auto;` in modo che sia ridimensionata attraverso l'elemento padre.
+Le immagini in Bootstrap Italia sono rese responsive con la classe `.img-fluid`, così che vengano applicate all'immagine le proprietà `max-width: 100%;` e `height: auto;` in modo che sia ridimensionata attraverso l'elemento padre.
 
 {% comment %}Example name: Base{% endcomment %}
 {% capture example %}

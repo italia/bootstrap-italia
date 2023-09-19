@@ -244,7 +244,7 @@ Aggiungere la classe `.disabled` ai link del dropdown che si vogliono mostrare c
 
 All'interno del menu dropdown possono essere inseriti header e separatori.
 
-{% comment %}Example name: Menu con instestazioni e separatori{% endcomment %}
+{% comment %}Example name: Menu con intestazioni e separatori{% endcomment %}
 {% capture example %}
 
 <div class="dropdown-menu">

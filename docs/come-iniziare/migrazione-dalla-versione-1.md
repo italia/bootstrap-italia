@@ -63,7 +63,7 @@ La compilazione del progetto è stata migrata da gulp.js a [rollup.js](https://r
   - <span class="bg-danger text-white px-2">Breaking</span> Rinominata la classe `.no-gutters` a `.g-0` per allinearla alle altre classi dei gutter.
 - Alle colonne non è più applicata la proprietà `position: relative`, potrebbe essere necessario applicare la classe `.position-relative` ad alcuni elementi per ristabilire il comportamento originale.
 - <span class="bg-danger text-white px-2">Breaking</span> Eliminate diverse classi `.order-*`, solitamente poco utilizzate. Ora vengono fornite solo le classi da `.order-1` a `.order-5`.
-- <span class="bg-danger text-white px-2">Breaking</span> `bootstrap-grid.css` ora applica `box-sizing: border-box` solo alla colonna invece di resettare il box-sizing globale. Questo per permettere l'utilizzo dei nostri stili di di griglia in più contesti senza creare interferenze.
+- <span class="bg-danger text-white px-2">Breaking</span> `bootstrap-grid.css` ora applica `box-sizing: border-box` solo alla colonna invece di resettare il box-sizing globale. Questo per permettere l'utilizzo dei nostri stili di griglia in più contesti senza creare interferenze.
 
 ### Proporzioni
 

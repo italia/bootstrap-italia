@@ -381,7 +381,7 @@ Usa le classi reattive `.row-cols-*` per impostare rapidamente il numero di colo
 
 ## Allineamento
 
-Usa le [utilità d'allineamento]({{ site.baseurl }}/docs/organizzare-gli-spazi/flex/) di Flexbox per allineare orizzontalmente e vericalmente le colonne.
+Usa le [utilità d'allineamento]({{ site.baseurl }}/docs/organizzare-gli-spazi/flex/) di Flexbox per allineare orizzontalmente e verticalmente le colonne.
 
 ### Allineamento verticale
 

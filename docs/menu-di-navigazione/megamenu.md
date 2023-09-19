@@ -10,7 +10,7 @@ toc: true
 
 Il megamenu, all'interno del `<nav>`, è una variazione del componente [dropdown]({{ site.baseurl }}/docs/componenti/dropdown/) contenente un elenco di links.
 
-Per stilare correttamente il megamenu è sufficiente aggiungere la classe `.has-megamenu` al tag `<nav class="navbar">`. Ai dropdown dei quali si desidera modificare l'aspetto transformandoli in megamenu è sufficiente aggiungere la classe `.has-megamenu` al tag `<li class="nav-item dropdown">`.
+Per stilare correttamente il megamenu è sufficiente aggiungere la classe `.has-megamenu` al tag `<nav class="navbar">`. Ai dropdown dei quali si desidera modificare l'aspetto trasformandoli in megamenu è sufficiente aggiungere la classe `.has-megamenu` al tag `<li class="nav-item dropdown">`.
 
 Gli elementi megamenu contenuti nelle navbar sono gestiti come elementi di tipo **collapse** nella loro versione mobile.
 

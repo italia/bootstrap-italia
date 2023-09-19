@@ -72,7 +72,7 @@ Aggiungendo la classe `.shadow` al link si aggiunge un'ombra al pulsante.
 
 ### Versione per sfondo scuro
 
-Aggiungendo la classe `.dark` al link si ottiente un pulsante utilizzabile su sfondo scuro.
+Aggiungendo la classe `.dark` al link si ottiene un pulsante utilizzabile su sfondo scuro.
 
 {% comment %}Example name: Per sfondo scuro, esempio{% endcomment %}
 {% capture example %}
@@ -88,7 +88,7 @@ Aggiungendo la classe `.dark` al link si ottiente un pulsante utilizzabile su sf
 
 #### Ombra su sfondo scuro
 
-Aggiungendo le classi `.dark` e `.shadow` al link si ottiente un pulsante con ombra utilizzabile su sfondo scuro.
+Aggiungendo le classi `.dark` e `.shadow` al link si ottiene un pulsante con ombra utilizzabile su sfondo scuro.
 
 {% comment %}Example name: Con ombra, per sfondo scuro, esempio{% endcomment %}
 {% capture example %}
