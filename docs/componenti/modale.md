@@ -603,7 +603,7 @@ Le modali hanno due dimensioni opzionali, disponibili tramite classi da posizion
 {% comment %}Example name: Varianti di dimensione{% endcomment %}
 {% capture example %}
 <!-- Small modal -->
-<button type="button" class="btn btn-primary " data-bs-toggle="modal" data-bs-target=".bd-example-modal-sm">Modale piccola</button>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target=".bd-example-modal-sm">Modale piccola</button>
 
 <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-sm">

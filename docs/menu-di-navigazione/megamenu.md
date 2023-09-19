@@ -631,7 +631,7 @@ All'interno dell'ultimo tag `<div class="col-xs-12 col-lg-4">` inseriremo il tag
 Possiamo inserire a destra del megamenu un'immagine ed una descrizione riguardante la sezione.
 
 All'interno dell'ultimo tag `<div class="col-xs-12 col-lg-4">` inseriremo il tag `<div class="row max-height-col">` che a sua volta conterrà la colonna `<div class="col-12 it-vertical it-description">` all'interno della quale andremo ad inserire il blocco contenente immagine e testo.  
-Il tag contenente immagine e descrizione sarà : `<div class="description-content">`.
+Il tag contenente immagine e descrizione sarà: `<div class="description-content">`.
 
 {% comment %}Example name: Con immagine e descrizione{% endcomment %}
 {% capture example %}
