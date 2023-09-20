@@ -12,7 +12,7 @@ L'interfaccia a tab (o schede) di Bootstrap si basa sull'utilizzo del layout di 
 
 #### Accessibilità
 
-Le interfacce a tab, come descritto nelle [pratiche di implementazione WAI ARIA](https://www.w3.org/TR/wai-aria-practices/#tabpanel), richiedono l'utilizzo di attributi `role="tablist"`, `role="tab"`, `role="tabpanel"`, e ulteriori attributi `aria-`, al fine di trasmettere la loro struttura, funzionalità e stato attuale agli utenti delle tecnologie assistive (come i lettori di schermo).
+Le interfacce a tab, come descritto nelle [pratiche di implementazione WAI ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/tabs/), richiedono l'utilizzo di attributi `role="tablist"`, `role="tab"`, `role="tabpanel"`, e ulteriori attributi `aria-`, al fine di trasmettere la loro struttura, funzionalità e stato attuale agli utenti delle tecnologie assistive (come i lettori di schermo).
 
 Nota che le interfacce dinamiche a tab **non devono** contenere menu a discesa, poiché ciò causa problemi di usabilità e accessibilità. Dal punto di vista dell'usabilità, il fatto che l'elemento trigger del tab attualmente visualizzato non sia immediatamente visibile (dato che si trova all'interno del menu a discesa chiuso) può causare confusione.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
