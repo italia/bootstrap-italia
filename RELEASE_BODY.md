@@ -1,7 +1,9 @@
-## [2.6.2](https://github.com/italia/bootstrap-italia/compare/v2.6.1...v2.6.2) (2023-09-18)
+# [2.7.0](https://github.com/italia/bootstrap-italia/compare/v2.6.2...v2.7.0) (2023-09-25)
 
 ### Bug Fixes
 
-* alert color variants ([115c085](https://github.com/italia/bootstrap-italia/commit/115c085871316a5d68f9e00f17485947026ef5cb))
-* example names ([b5b7a6e](https://github.com/italia/bootstrap-italia/commit/b5b7a6e1406e06873edf08bce69502bfca146a19))
-* video overlay height on mobile ([4625d1b](https://github.com/italia/bootstrap-italia/commit/4625d1b3187859671f5eb11ef69903a25e13a9d3))
+* **a11y:** nav-link anchor set focus on target ([51d69cf](https://github.com/italia/bootstrap-italia/commit/51d69cf556ea462a1eb2f62f973cb494dd35a049))
+
+### Features
+
+* typography update ([84f0955](https://github.com/italia/bootstrap-italia/commit/84f095561491ddaa1b6d25003b50b03ddc9e0613))

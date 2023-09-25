@@ -90,8 +90,7 @@ class NavScroll extends BaseComponent {
     }
 
     SelectorEngine.find(SELECTOR_LINK_CLICKABLE, this._element).forEach((link) => {
-      link.addEventListener('click', (event) => {
-        event.preventDefault();
+      link.addEventListener('click', () => {
         const scrollHash = () => this._scrollToHash(link.hash);
         if (this._isCollapseOpened) {
           this._callbackQueue.push(scrollHash);
@@ -242,11 +241,9 @@ class NavScroll extends BaseComponent {
  * ------------------------------------------------------------------------
  */
 
-onDocumentScroll(() => {
-  const navs = SelectorEngine.find(SELECTOR_NAVSCROLL);
-  navs.map((nav) => {
-    NavScroll.getOrCreateInstance(nav);
-  });
+const navs = SelectorEngine.find(SELECTOR_NAVSCROLL);
+navs.map((nav) => {
+  NavScroll.getOrCreateInstance(nav);
 });
 
 export { NavScroll as default };

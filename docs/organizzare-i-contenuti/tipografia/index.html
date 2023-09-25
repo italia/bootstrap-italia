@@ -12,14 +12,14 @@
 <title>Tipografia · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202309181441" rel="stylesheet" />
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202309251249" rel="stylesheet" />
 
 
 <!-- Documentation extras -->
  
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.css" rel="stylesheet" />
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202309181441" rel="stylesheet" />
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202309251249" rel="stylesheet" />
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico" />
@@ -141,8 +141,8 @@
 
     <ul class="navbar-nav flex-row ms-md-auto d-none d-md-flex">
       <li class="nav-item pe-2">
-        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v2.6.2/bootstrap-italia.zip" aria-label="Download">
-          <small class="pe-2 m-0">v2.6.2</small>
+        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v2.7.0/bootstrap-italia.zip" aria-label="Download">
+          <small class="pe-2 m-0">v2.7.0</small>
           <svg class="icon icon-sm icon-light"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-download" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-download"></use></svg><span class="visually-hidden">Download</span>
         </a>
       </li>
@@ -636,7 +636,7 @@
 
         <main class="col-12 col-md-9 col-xl-8 py-md-3 px-md-3 bd-content">
           <h1 class="bd-title" id="content">Tipografia</h1>
-          <p class="bd-lead">Documentazione sulla gestione della tipografia, come intestazioni, paragrafi, citazioni, elenchi e altro.</p>
+          <p class="lead">Documentazione sulla gestione della tipografia, come intestazioni, paragrafi, citazioni, elenchi e altro.</p>
           <p>Bootstrap imposta alcune proprietà di base per la tipografia e gli stili dei
 link. Quando è necessario un maggiore controllo, fornisce delle
 <a href="/bootstrap-italia/docs/organizzare-i-contenuti/testo/">classi di utilità testuali</a>.</p>
@@ -699,20 +699,12 @@ Per il suo utilizzo, è sufficiente usare la classe <code class="language-plaint
 
 <h2 id="tipografia-responsive">Tipografia responsive</h2>
 
-<p>Bootstrap Italia ridimensiona testo e alcune propietà dei componenti modificando
-il <code class="language-plaintext highlighter-rouge">font-size</code> dell’elemento radice, con una media query che imposta dimensioni
+<p>Bootstrap Italia ridimensiona la dimensione di intestazioni e testo modificando
+le proprietà <code class="language-plaintext highlighter-rouge">font-size</code> e <code class="language-plaintext highlighter-rouge">line-height</code> dell’elemento tramite una media query che imposta dimensioni
 lievemente maggiori per schermi con dimensioni maggiori di <em>576px</em>. Questa
 impostazione, unita all’utilizzo di dimensioni in <code class="language-plaintext highlighter-rouge">rem</code> o in semplici valori
 numerici all’interno del CSS, fa sì che testo e altre proprietà occupino più
-spazio quando lo schermo lo permette:</p>
-
-<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">html</span> <span class="p">{</span>
-  <span class="nl">font-size</span><span class="p">:</span> <span class="m">16px</span><span class="p">;</span>
-  <span class="k">@include</span> <span class="nd">media-breakpoint-up</span><span class="p">(</span><span class="n">sm</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nl">font-size</span><span class="p">:</span> <span class="m">18px</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></div>
+spazio quando lo schermo lo permette.</p>
 
 <h2 id="intestazioni">Intestazioni</h2>
 
@@ -948,7 +940,7 @@ di un <code class="language-plaintext highlighter-rouge">&lt;blockquote class="b
 <h3 id="citare-una-fonte">Citare una fonte</h3>
 
 <p>Aggiungi un <code class="language-plaintext highlighter-rouge">&lt;footer class="blockquote-footer"&gt;</code> per identificare la fonte.
-Includi il nome delle fonte di origine in <code class="language-plaintext highlighter-rouge">&lt;cite&gt;</code>.</p>
+Includi il nome della fonte di origine in <code class="language-plaintext highlighter-rouge">&lt;cite&gt;</code>.</p>
 
 <div class="bd-example">
 <blockquote class="blockquote">
@@ -1155,16 +1147,16 @@ con un <code class="language-plaintext highlighter-rouge">ellipsis</code>.</p>
     </div>
 
     
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202309181441"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202309251249"></script>
 <script>
   bootstrap.loadFonts('/bootstrap-italia/dist/fonts')
 </script><script src="/bootstrap-italia/docs/assets/src/js/vendor/vimeo-player.min.js"></script>
-<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202309181441"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202309251249"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/anchor.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/clipboard.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tsparticles.min.js"></script>
 
-<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202309181441"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202309251249"></script>
 
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tweenjs.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/easeljs.min.js"></script>
@@ -1181,7 +1173,7 @@ con un <code class="language-plaintext highlighter-rouge">ellipsis</code>.</p>
     { src: '/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png', id: 'cover-7' },
   ]
 </script>
-<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202309181441"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202309251249"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/docsearch.min.js"></script>
 
 <script>
