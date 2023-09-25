@@ -107,7 +107,7 @@ Il colore primario possiede tre tipologie di varianti cromatiche. Per utilizzarl
 
 ### Analoghi
 
-Ai colori monocromatici può essere affiancato un accent color, definito così perche si tratta di un colore molto luminoso, serve ad attirare l’attenzione.
+Ai colori monocromatici può essere affiancato un accent color, definito così perché si tratta di un colore molto luminoso, serve ad attirare l’attenzione.
 
 Devono essere usati in modo parsimonioso.
 

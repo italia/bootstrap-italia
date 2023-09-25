@@ -10,7 +10,7 @@ toc: true
 
 Il megamenu, all'interno del `<nav>`, è una variazione del componente [dropdown]({{ site.baseurl }}/docs/componenti/dropdown/) contenente un elenco di links.
 
-Per stilare correttamente il megamenu è sufficiente aggiungere la classe `.has-megamenu` al tag `<nav class="navbar">`. Ai dropdown dei quali si desidera modificare l'aspetto transformandoli in megamenu è sufficiente aggiungere la classe `.has-megamenu` al tag `<li class="nav-item dropdown">`.
+Per stilare correttamente il megamenu è sufficiente aggiungere la classe `.has-megamenu` al tag `<nav class="navbar">`. Ai dropdown dei quali si desidera modificare l'aspetto trasformandoli in megamenu è sufficiente aggiungere la classe `.has-megamenu` al tag `<li class="nav-item dropdown">`.
 
 Gli elementi megamenu contenuti nelle navbar sono gestiti come elementi di tipo **collapse** nella loro versione mobile.
 
@@ -631,7 +631,7 @@ All'interno dell'ultimo tag `<div class="col-xs-12 col-lg-4">` inseriremo il tag
 Possiamo inserire a destra del megamenu un'immagine ed una descrizione riguardante la sezione.
 
 All'interno dell'ultimo tag `<div class="col-xs-12 col-lg-4">` inseriremo il tag `<div class="row max-height-col">` che a sua volta conterrà la colonna `<div class="col-12 it-vertical it-description">` all'interno della quale andremo ad inserire il blocco contenente immagine e testo.  
-Il tag contenente immagine e descrizione sarà : `<div class="description-content">`.
+Il tag contenente immagine e descrizione sarà: `<div class="description-content">`.
 
 {% comment %}Example name: Con immagine e descrizione{% endcomment %}
 {% capture example %}

@@ -40,7 +40,7 @@ Prima di utilizzare il componente modale di Bootstrap, assicurati di leggere qua
 
 - Le modali sono costruite in HTML, CSS, e JavaScript. Sono posizionate al di sopra di ogni altro elemento della pagina
   e rimuovono lo scroll dal `<body>` in modo che il contenuto della modale invece scorra.
-- Cliccando sulla parte che oscura la pagina (il cosiddetto _backdrop_ della modale), questa verrà chiusa automativamente.
+- Cliccando sulla parte che oscura la pagina (il cosiddetto _backdrop_ della modale), questa verrà chiusa automaticamente.
 - A causa di come HTML5 definisce la sua semantica, [l'attributo HTML `autofocus`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-autofocus)
   non ha effetto sulle modali di Bootstrap. Per ottenere lo stesso effetto, usa un codice JavaScript personalizzato:
 
@@ -91,7 +91,7 @@ Per chiudere la modale, si può utilizzare un pulsante con classe `.btn-close`.
 
 {% capture callout %}
 
-#### Accessibilità pulsante di chiusra
+#### Accessibilità pulsante di chiusura
 
 **Assicurati di inserire del testo per gli screen readers**, utilizzando l'attributo `aria-label`.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
@@ -603,7 +603,7 @@ Le modali hanno due dimensioni opzionali, disponibili tramite classi da posizion
 {% comment %}Example name: Varianti di dimensione{% endcomment %}
 {% capture example %}
 <!-- Small modal -->
-<button type="button" class="btn btn-primary " data-bs-toggle="modal" data-bs-target=".bd-example-modal-sm">Modale piccola</button>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target=".bd-example-modal-sm">Modale piccola</button>
 
 <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-sm">

@@ -61,7 +61,7 @@ _NB: Se si sta usando una versione di Bootstrap Italia basata su Bootstrap 4, la
 
 ## Responsive breakpoints
 
-Visto che la progettazione web è bene venga gestita _mobile-first_, in Bootstrap Italia sono definite alcune [media query](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) per definire breakpoints ai quali il layout si modifica. Questi breakpoints sono basati sulla dimensioni minima del viewport e permettono di scalare verso l'alto quando la dimensione della finesta aumenta.
+Visto che la progettazione web è bene venga gestita _mobile-first_, in Bootstrap Italia sono definite alcune [media query](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) per definire breakpoints ai quali il layout si modifica. Questi breakpoints sono basati sulla dimensione minima del viewport e permettono di scalare verso l'alto quando la dimensione della finestra aumenta.
 
 Bootstrap Italia utilizza le seguenti media query per definire i breakpoint usati nelle sue griglie e componenti.
 

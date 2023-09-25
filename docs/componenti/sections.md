@@ -48,7 +48,7 @@ Gli autori dovrebbero dividere la pagina in sezioni semantiche reali e non per s
 
 ## Colori di sfondo
 
-Il componente Section ha, per default, uno sfondo trasparente. Aggiungendo le classi sottoelencate è possbile aggiungere colori di sfondo.
+Il componente Section ha, per default, uno sfondo trasparente. Aggiungendo le classi sottoelencate è possibile aggiungere colori di sfondo.
 
 ### Sfondo Tenue
 

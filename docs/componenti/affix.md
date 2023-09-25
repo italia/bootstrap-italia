@@ -102,7 +102,7 @@ Un elemento Affix a sviluppo orizzontale può essere ancorato alla parte alta o 
 
 ### Horizontal Affix top
 
-Per ancorare un elemento a svliuppo orizzontale alla parte alta della pagina è sufficiente applicare la classe `.affix-parent` all'elemento che lo contiene e la classe `.affix-top` all'elemento stesso.
+Per ancorare un elemento a sviluppo orizzontale alla parte alta della pagina è sufficiente applicare la classe `.affix-parent` all'elemento che lo contiene e la classe `.affix-top` all'elemento stesso.
 
 {% comment %}Example name: Orizzontale in alto{% endcomment %}
 {% capture example %}

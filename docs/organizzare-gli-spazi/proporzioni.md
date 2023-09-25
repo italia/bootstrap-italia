@@ -34,7 +34,7 @@ description: Obbligano un elemento a mantenere la proporzione scelta. Soluzione 
 
 Utilizza queste classi helper per gestire le proporzioni di contenuti esterni come `<iframe>`, `<embed>`, `<video>` e `<object>`. Queste classi possono inoltre essere utilizzate per ridimensionare qualsiasi elemento HTML standard come `<div>` o `<img>`. Gli stili vengono applicati dall'elemento contenitore `.ratio` all'elemento contenuto.
 
-Le proporzioni predefinite sono dichiarate in un amappa Sass ed incluse in ogni classe con una variabile CSS, la quale permette di generare [proporzioni custom](#proporzioni-custom).
+Le proporzioni predefinite sono dichiarate in una mappa Sass ed incluse in ogni classe con una variabile CSS, la quale permette di generare [proporzioni custom](#proporzioni-custom).
 
 {% capture callout %}
 

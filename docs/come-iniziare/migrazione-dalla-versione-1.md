@@ -63,7 +63,7 @@ La compilazione del progetto è stata migrata da gulp.js a [rollup.js](https://r
   - <span class="bg-danger text-white px-2">Breaking</span> Rinominata la classe `.no-gutters` a `.g-0` per allinearla alle altre classi dei gutter.
 - Alle colonne non è più applicata la proprietà `position: relative`, potrebbe essere necessario applicare la classe `.position-relative` ad alcuni elementi per ristabilire il comportamento originale.
 - <span class="bg-danger text-white px-2">Breaking</span> Eliminate diverse classi `.order-*`, solitamente poco utilizzate. Ora vengono fornite solo le classi da `.order-1` a `.order-5`.
-- <span class="bg-danger text-white px-2">Breaking</span> `bootstrap-grid.css` ora applica `box-sizing: border-box` solo alla colonna invece di resettare il box-sizing globale. Questo per permettere l'utilizzo dei nostri stili di di griglia in più contesti senza creare interferenze.
+- <span class="bg-danger text-white px-2">Breaking</span> `bootstrap-grid.css` ora applica `box-sizing: border-box` solo alla colonna invece di resettare il box-sizing globale. Questo per permettere l'utilizzo dei nostri stili di griglia in più contesti senza creare interferenze.
 
 ### Proporzioni
 
@@ -151,7 +151,7 @@ Tabelle ridisegnate e ricostruite con variabili CSS per un maggior controllo sul
 - <span class="bg-danger text-white px-2">Breaking</span> Le classi di layout specifiche per i form sono state eliminate. Utilizza le griglie e le utilities invece di `.form-row` o `.form-inline`.
 - <span class="bg-danger text-white px-2">Breaking</span> La classe `.form-text` non specifica più il display, permettendo la creazione di testo accessorio di tipo inline o block a seconda della necessità, semplicemente utilizzando `<span>` o `<div>`.
 - <span class="bg-danger text-white px-2">Breaking</span> Se si migra dalla 1.x alla versione 2.2.0 in poi, assicurarsi di aggiungere alla label su input la classe `active` per impedire la sovrapposizione della label al campo stesso nel caso in cui si utilizza l’attributo placeholder o l’input parte già valorizzato.
-- <span class="bg-danger text-white px-2">Breaking</span> Tutti i componenti **Select Custom** (*reset*, *multipla*, *con gruppi*, *con ricerca*,  *multipla con gruppi e checkboxes*) non sono più supportati dalla versione 2.0.0 e successive.
+- <span class="bg-danger text-white px-2">Breaking</span> Tutti i componenti **Select Custom** (*reset*, *multipla*, *con gruppi*, *con ricerca*, *multipla con gruppi e checkboxes*) non sono più supportati dalla versione 2.0.0 e successive.
 
 ## Javascript
 

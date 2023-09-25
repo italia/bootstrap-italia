@@ -17,7 +17,7 @@ description: Elementi e stili per la creazione di input accessibili e responsivi
 
 ## Esempi di campi di input
 
-Per il corretto funzionamento degli elementi di tipo `<input>` è di fondamentale importanza l'utilizzo uno degli appositi attributi `type` (ad esempio, `email` per l'inserimento di indirizzi email o `number` per informazioni numeriche), in modo da sfruttare i controlli nativi dei borowser più recenti come la verifica dell'email, l'utilizzo di metodo di input numerico ed altro.
+Per il corretto funzionamento degli elementi di tipo `<input>` è di fondamentale importanza l'utilizzo uno degli appositi attributi `type` (ad esempio, `email` per l'inserimento di indirizzi email o `number` per informazioni numeriche), in modo da sfruttare i controlli nativi dei browser più recenti come la verifica dell'email, l'utilizzo di metodo di input numerico ed altro.
 
 Per l'inserimento guidato di campi di tipo numerico si può anche utilizzare l'elemento dedicato che fornisce migliorie per la validazione e per l'esperienza complessiva, descritto alla [pagina dedicata all'input numerico]({{ site.baseurl }}/docs/form/input-numerico/).
 
@@ -82,7 +82,7 @@ In caso di necessità, è anche possibile utilizzare un ulteriore contenuto test
 
 #### Associazione del testo di aiuto con gli elementi del modulo form
 
-Il testo di aiuto deve essere esplicitamente associato agli elementi del mudulo form a cui si riferisce utilizzando l'attributo `aria-describedby`. Ciò garantirà che le tecnologie assistive, come gli screenreader, leggano questo testo di aiuto quando l'utente avrà il focus sull'elemento.
+Il testo di aiuto deve essere esplicitamente associato agli elementi del modulo form a cui si riferisce utilizzando l'attributo `aria-describedby`. Ciò garantirà che le tecnologie assistive, come gli screenreader, leggano questo testo di aiuto quando l'utente avrà il focus sull'elemento.
 
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
@@ -160,7 +160,7 @@ Per rendere più semplice l'inserimento della password, l'elemento è stato dota
   </tbody>
 </table>
 
-E' possibile personalizzare i testi dei messaggi riguardanti la robustezza della password usando gli attributi data dell'elemento `small.form-text`.
+È possibile personalizzare i testi dei messaggi riguardanti la robustezza della password usando gli attributi data dell'elemento `small.form-text`.
 
 <table class="table table-bordered table-striped">
   <thead>

@@ -56,7 +56,7 @@ Per ragioni di accessibilità è necessario:
 
 ## Esempio
 
-La notifica può essere composta da un solo titolo oppure da un titolo accompagnato da icona, contentuta nel tag `<h5>` del titolo. In questo caso l'elemento dovrà avere la classe `.with-icon`.
+La notifica può essere composta da un solo titolo oppure da un titolo accompagnato da icona, contenuta nel tag `<h5>` del titolo. In questo caso l'elemento dovrà avere la classe `.with-icon`.
 
 {% comment %}Example name: Base, con o senza icona{% endcomment %}
 {% capture example %}
@@ -184,7 +184,7 @@ Alle notifiche possono essere applicate classi aggiuntive che ne determinano lo 
 
 ## Posizione e arrotondamento degli angoli
 
-La posizione predefinita della notifiche è nella parte destra inferiore della finestra.
+La posizione predefinita delle notifiche è nella parte destra inferiore della finestra.
 
 Utilizzando le classi aggiuntive di posizione fissa elencate di seguito la notifica verrà posizionata a filo di uno dei margini indicati, modificando l'arrotondamento degli angoli di conseguenza.
 

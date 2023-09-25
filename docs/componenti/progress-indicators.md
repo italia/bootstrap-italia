@@ -178,7 +178,7 @@ Non dimenticare il testo esplicativo dedicato agli Screen Reader all'interno di 
 
 Quando non è possibile stabilire una percentuale di progressione utilizzare una Progress Bar di tipo indeterminato, aggiungendo una classe `.progress-indeterminate` al contenitore `.progress` ed eliminando gli attributi `aria-` dalla Progress Bar.
 
-{% comment %}Example name: Progresso intederminato{% endcomment %}
+{% comment %}Example name: Progresso indeterminato{% endcomment %}
 {% capture example %}
 <div class="progress progress-indeterminate">
   <span class="visually-hidden">In elaborazione...</span>

@@ -183,7 +183,7 @@ Inizializza i popover per una raccolta di elementi.
 
 #### `show`
 
-Mostra il popover di un elemento. **Ritorna al chiamante prima che il popover sia stato effettivamente mostrato** (prima che si verifichi l'evento `shown.bs.popover`). Questo è considerato un'attivazione "manuale" del popover. I popover senza nè titoli nècontenuto non vengono mai visualizzati.
+Mostra il popover di un elemento. **Ritorna al chiamante prima che il popover sia stato effettivamente mostrato** (prima che si verifichi l'evento `shown.bs.popover`). Questo è considerato un'attivazione "manuale" del popover. I popover senza nè titoli nè contenuto non vengono mai visualizzati.
 
 ```js
 myPopover.show()
@@ -287,7 +287,7 @@ var popover = bootstrap.Popover.getOrCreateInstance(exampleTriggerEl) // Returns
     </tr>
     <tr>
       <td>hidden.bs.popover</td>
-      <td>Questo evento viene generato quando il popover ha finito di essere nascosto all'utente (attenderà il completamento delle transizioni CSS)..</td>
+      <td>Questo evento viene generato quando il popover ha finito di essere nascosto all'utente (attenderà il completamento delle transizioni CSS).</td>
     </tr>
     <tr>
       <td>inserted.bs.popover</td>

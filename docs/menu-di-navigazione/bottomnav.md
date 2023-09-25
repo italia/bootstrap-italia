@@ -31,7 +31,7 @@ Il componente, di altezza fissa, è ancorato al fondo della pagina e ne occupa t
 
 Ogni link `<a>` contiene un icona con classe `.icon` e una label contenuta in uno `<span>` con classe `.bottom-nav-label`.
 
-Il link `<a>` attivo possiede una una classe `.active`.
+Il link `<a>` attivo possiede una classe `.active`.
 
 {% comment %}Example name: Base{% endcomment %}
 {% capture example %}

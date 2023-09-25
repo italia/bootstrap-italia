@@ -6,7 +6,7 @@ group: come-iniziare
 toc: true
 ---
 
-**Bootstrap Italia** eredita ed estende tutte le variabili di default di Bootstrap, sovrascrivendo alcuni valori in fase di compilazione e impostandone di nuovi all'occorenza.
+**Bootstrap Italia** eredita ed estende tutte le variabili di default di Bootstrap, sovrascrivendo alcuni valori in fase di compilazione e impostandone di nuovi all'occorrenza.
 Un esempio fra tutti è il valore del colore `$primary` che in **Bootstrap Italia** è rappresentato dal colore blu `#0066CC`, tipico della libreria.
 
 L'utilizzo del blu `#0066CC` dovrebbe però essere riservato alle amministrazioni centrali dello Stato, e quindi ci si può trovare nella condizione di dover personalizzare i valori delle variabili colore di **Bootstrap Italia**, impostando nuovi valori per le proprie necessità.
@@ -82,4 +82,4 @@ function App() {
 export default App
 ```
 
-In questo semplice e veloce esempio, il pulsante con classe **.btn-primary** avrà lo sfondo di colore **rosso** anzichè il default blu.
+In questo semplice e veloce esempio, il pulsante con classe **.btn-primary** avrà lo sfondo di colore **rosso** anziché il default blu.

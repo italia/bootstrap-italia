@@ -37,7 +37,7 @@ Per ottenere un interruttore con levetta basterà usare la seguente sintassi HTM
 
 ### Disabilitato
 
-Affinchè l'interruttore risulti disabilitato occorrerà aggiungere l'attributo `disabled` al checkbox.
+Affinché l'interruttore risulti disabilitato occorrerà aggiungere l'attributo `disabled` al checkbox.
 
 {% comment %}Example name: Disabilitato {% endcomment %}
 {% capture example %}

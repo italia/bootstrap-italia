@@ -276,7 +276,7 @@ di un `<blockquote class="blockquote">` come la citazione.
 ### Citare una fonte
 
 Aggiungi un `<footer class="blockquote-footer">` per identificare la fonte.
-Includi il nome delle fonte di origine in `<cite>`.
+Includi il nome della fonte di origine in `<cite>`.
 
 {% comment %}Example name: Citazioni con fonte{% endcomment %}
 {% capture example %}

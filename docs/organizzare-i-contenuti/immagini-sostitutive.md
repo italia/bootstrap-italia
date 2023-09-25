@@ -19,7 +19,7 @@ Utilizza la classe `.text-hide` o il relativo mixin per sostituire del testo in 
 }
 ```
 
-Usa la classe `.text-hide` per mantere accessibile la pagina e i vantaggi SEO dei tags di intestazione pur utilizzando
+Usa la classe `.text-hide` per mantenere accessibile la pagina e i vantaggi SEO dei tags di intestazione pur utilizzando
 un'immagine di sfondo invece del testo.
 
 {% capture example %}

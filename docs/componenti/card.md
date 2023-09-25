@@ -164,7 +164,7 @@ Per inserire la categorizzazione con relativa icona, usare l'elemento `.category
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-Un'altro esempio di card contenente intestazione (in questo caso numero di files
+Un altro esempio di card contenente intestazione (in questo caso numero di files
 presenti) e icona: la struttura è uguale alla card precedente, per l'intestazione
 è sufficiente usare l'elemento `.categoryicon-top` ed inserire al suo interno gli
 elementi come da esempio.

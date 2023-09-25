@@ -612,7 +612,7 @@ Le label dei Tab possono essere sostituite da icone, avendo cura di includere al
 
 ## Posizione dei Tab
 
-Per questioni di accessibilità è preferibile utilizzare le proprietà Flex di CSS a un cambio di posizione dei Tab nell'HTML. Per garantiore un flusso di lettura naturale della pagina i tab di navigazione devono precedere il contenuto a loro associato.
+Per questioni di accessibilità è preferibile utilizzare le proprietà Flex di CSS a un cambio di posizione dei Tab nell'HTML. Per garantire un flusso di lettura naturale della pagina i tab di navigazione devono precedere il contenuto a loro associato.
 
 ### Orizzontale in fondo
 

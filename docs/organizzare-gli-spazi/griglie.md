@@ -46,7 +46,7 @@ Analizzandolo nel dettaglio, ecco come funziona:
 - Le righe sono involucri per colonne. Ogni colonna ha un spaziature orizzontale (`gutter`) per regolare lo spazio tra di esse. Questo `padding` viene poi neutralizzato dalle righe con margini negativi. In questo modo, tutto il contenuto nelle colonne viene allineato sul lato sinistro.
 - In un layout a griglia, il contenuto deve essere posizionato all'interno di colonne e solo le colonne possono essere figlie dirette delle righe.
 - Grazie a flexbox, le colonne della griglia senza uno specifico `width` verranno automaticamente impostate come colonne di uguale larghezza. Per esempio, quattro casi di `.col-sm` avranno automaticamente una larghezza del 25% dal più piccolo breakpoint in su. Guarda la sezione [colonne a disposizione automatica](#colonne-a-disposizione-automatica) per maggiori informazioni.
-- Le classi delle colonne indicano il numero delle colonne che dovresti utilizzare in base alle 12 possibili per riga. Quindi, se vuoi tre colonne di uguale larghezza , puoi usare `.col-4`.
+- Le classi delle colonne indicano il numero delle colonne che dovresti utilizzare in base alle 12 possibili per riga. Quindi, se vuoi tre colonne di uguale larghezza, puoi usare `.col-4`.
 - Le `width` delle colonne sono stabilite in percentuale, quindi sono sempre fluide e dimensionate rispetto al loro elemento genitore.
 - Le colonne hanno un `padding` orizzontale per creare il gutter tra le singole colonne. Per rimuovere il `margin` dalle righe e il `padding` dalle colonne aggiungendo la classe `.g-0` alla classe `.row`.
 - Per renderla responsive, esistono sei breakpoint della griglia, uno per ogni responsive breakpoint: tutti i breakpoint (extra small), small, medium, large, extra large ed extra extra large.
@@ -381,7 +381,7 @@ Usa le classi reattive `.row-cols-*` per impostare rapidamente il numero di colo
 
 ## Allineamento
 
-Usa le [utilità d'allineamento]({{ site.baseurl }}/docs/organizzare-gli-spazi/flex/) di Flexbox per allineare orizzontalmente e vericalmente le colonne.
+Usa le [utilità d'allineamento]({{ site.baseurl }}/docs/organizzare-gli-spazi/flex/) di Flexbox per allineare orizzontalmente e verticalmente le colonne.
 
 ### Allineamento verticale
 

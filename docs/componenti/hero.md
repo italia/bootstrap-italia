@@ -21,7 +21,7 @@ Il componente Hero può contenere:
 
 #### Accessibilità
 
-Valutare attentantamente l'opportunità di utilizzare più hero nella stessa pagina.
+Valutare attentamente l'opportunità di utilizzare più hero nella stessa pagina.
 
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 

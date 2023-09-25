@@ -42,7 +42,7 @@ Poiché è molto probabile che la pagina possa contenere più di un elemento `<n
 
 ## Stato disabilitato e attivo
 
-I link della paginazione assumonono uno stato disabilitato usando la classe `.disabled` nel tag `<li>`.
+I link della paginazione assumono uno stato disabilitato usando la classe `.disabled` nel tag `<li>`.
 Per indicare la pagina attiva corrente utilizzare l'attributo `aria-current="page"` nel tag `<a>`, l'aspetto grafico cambierà di conseguenza.
 
 {% capture callout %}
@@ -397,7 +397,7 @@ Notare come sia stato inserito il testo "Pagina" in un elemento `<span class="vi
 
 ### Total number
 
-Aggiungendo al classe `.pagination-total` al tag `<nav>` che contiene la paginazione è possibile indicare il numero totale di elementi o il numero totale di elementi per pagina all'interno di un tag `<p>` collocato priam della chiusura del `<nav>`.
+Aggiungendo la classe `.pagination-total` al tag `<nav>` che contiene la paginazione è possibile indicare il numero totale di elementi o il numero totale di elementi per pagina all'interno di un tag `<p>` collocato priam della chiusura del `<nav>`.
 
 {% comment %}Example name: Con numero totale elementi{% endcomment %}
 {% capture example %}

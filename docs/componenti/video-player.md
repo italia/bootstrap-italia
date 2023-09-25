@@ -15,7 +15,7 @@ la personalizzazione dell'interfaccia utente e l'integrazione con API esterne.
 
 #### Accessibilità
 
-Le persone che utilizzano le tecnologie assistive possono agevolmente accedere ai comandi di questo player video, tuttavia per rendere accessibile un contenuto video è necessario soddisfare i Criteri di Successo contenuti nella [linee guida 1.2 Media temporizzati delle WCAG (versione corrente)](https://www.w3.org/Translations/WCAG21-it/#time-based-media). In particolare:
+Le persone che utilizzano le tecnologie assistive possono agevolmente accedere ai comandi di questo player video, tuttavia per rendere accessibile un contenuto video è necessario soddisfare i Criteri di Successo contenuti nelle [linee guida 1.2 Media temporizzati delle WCAG (versione corrente)](https://www.w3.org/Translations/WCAG21-it/#time-based-media). In particolare:
  - Se il contenuto è costituito da “solo video” oppure “solo audio”, è necessario fornire una trascrizione (Criterio di Successo 1.2.1)
  - Fornire sempre sottotitoli (Criterio di Successo 1.2.2).
  - Fornire audio descrizioni quando sono presenti scene o contenuti non descritte dalla traccia audio primaria. (Criteri di Successo 1.2.3 e 1.2.5)
@@ -368,7 +368,7 @@ Video.js importandolo come script.
 
 {% capture callout %}
 
-Coinvolgi il Responsabile per la protezione dei dati (RDP/DPO) della tua amministrazione e ricordati di aggiornare la cookie policy del sito. Designers Italia mette a disposizione il [kit Privacy](https://designers.italia.it/risorse-per-progettare/organizzare/privacy/)  per approfondire questi temi e in particolare uno strumento dedicato alla redazione della Cookie policy che trovi in [questa azione del kit](https://designers.italia.it/risorse-per-progettare/organizzare/privacy/rispetta-la-privacy-per-il-go-live-di-un-sito/).
+Coinvolgi il Responsabile per la protezione dei dati (RDP/DPO) della tua amministrazione e ricordati di aggiornare la cookie policy del sito. Designers Italia mette a disposizione il [kit Privacy](https://designers.italia.it/risorse-per-progettare/organizzare/privacy/) per approfondire questi temi e in particolare uno strumento dedicato alla redazione della Cookie policy che trovi in [questa azione del kit](https://designers.italia.it/risorse-per-progettare/organizzare/privacy/rispetta-la-privacy-per-il-go-live-di-un-sito/).
 
 {% endcapture %}{% include callout.html content=callout type="info" %}
 
