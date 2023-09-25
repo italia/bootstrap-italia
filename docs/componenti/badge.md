@@ -23,7 +23,7 @@ I badge possono essere utilizzati come parte di link o pulsanti per fornire un c
 {% comment %}Example name: In pulsante{% endcomment %}
 {% capture example %}
 <button type="button" class="btn btn-primary">
-Notifiche <span class="badge bg-secondary">4</span>
+Notifiche <span class="badge bg-white text-secondary">4</span>
 </button>
 {% endcapture %}{% include example.html content=example %}
 
@@ -40,7 +40,7 @@ A meno che il contesto non sia chiaro (come con l'esempio "Notifiche", dove si c
 {% comment %}Example name: In pulsante, per screen reader{% endcomment %}
 {% capture example %}
 <button type="button" class="btn btn-primary">
-Profilo <span class="badge bg-secondary">9</span>
+Profilo <span class="badge bg-white text-primary">9</span>
 <span class="visually-hidden">Messaggi non letti</span>
 </button>
 {% endcapture %}{% include example.html content=example %}

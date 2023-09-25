@@ -1,103 +1,124 @@
-html,
-body {
-  font-size: 16px;
-  line-height: 1.5;
-  @include media-breakpoint-up(sm) {
-    font-size: 18px;
-    line-height: 1.555;
-  }
-}
-
-// Intestazioni
+// Headings
 
 h1,
 .h1 {
   font-size: 2.5rem;
+  line-height: 3rem;
   letter-spacing: -1px;
   @include media-breakpoint-up(sm) {
-    font-size: 2.666rem;
-    letter-spacing: -1.2px;
-    line-height: 1.25;
+    font-size: 3rem;
+    letter-spacing: -2px;
+    line-height: 3.5rem;
   }
 }
 
 h2,
 .h2 {
   font-size: 2rem;
-  line-height: 1.25;
-  letter-spacing: normal;
+  line-height: 2.5rem;
   @include media-breakpoint-up(sm) {
-    font-size: 2.222rem;
-    line-height: 1.2;
+    font-size: 2.5rem;
+    line-height: 3rem;
   }
 }
 
 h3,
 .h3 {
   font-size: 1.75rem;
-  line-height: 1.1428;
-  letter-spacing: normal;
+  line-height: 2rem;
   @include media-breakpoint-up(sm) {
-    font-size: 1.777rem;
-    line-height: 1.25;
+    font-size: 2rem;
+    line-height: 2.5rem;
   }
 }
 
 h4,
 .h4 {
   font-size: 1.5rem;
-  line-height: 1.1666;
-  letter-spacing: normal;
+  line-height: 2rem;
   @include media-breakpoint-up(sm) {
-    font-size: 1.555rem;
-    line-height: 1.428;
-    font-weight: 600;
+    font-size: 1.75rem;
+    line-height: 2rem;
   }
 }
 
 h5,
 .h5 {
   font-size: 1.25rem;
-  font-weight: 400;
-  letter-spacing: normal;
+  line-height: 1.5rem;
   @include media-breakpoint-up(sm) {
-    font-size: 1.333rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
 
 h6,
 .h6 {
   font-size: 1rem;
-  font-weight: 600;
-  line-height: 1.5;
-  letter-spacing: normal;
-}
-
-// Intestazioni in evidenza
-
-.display-1,
-.display-2,
-.display-3,
-.display-5 {
-  font-weight: 700;
-}
-
-.display-4,
-.display-6 {
-  font-weight: 600;
-}
-
-.display-1 {
-  font-size: 3.111rem;
+  line-height: 1.5rem;
   @include media-breakpoint-up(sm) {
-    font-size: 3.111rem;
-    line-height: 1.428;
+    font-size: 1.125rem;
   }
 }
 
+h1,
+h2,
+h3,
+.h1,
+.h2,
+.h3 {
+  font-weight: 700;
+}
+
+h4,
+h5,
+h6,
+.h4,
+.h5,
+.h6 {
+  font-weight: 600;
+}
+
+// Display heading
+
+.display-1 {
+  font-size: 3rem;
+  font-weight: 700;
+
+  @include media-breakpoint-up(sm) {
+    font-size: 3.5rem;
+    line-height: 1.25;
+  }
+}
+
+// Text elements
+
+p,
+ul,
+ol,
+dl {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  @include media-breakpoint-up(sm) {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+
+.lead {
+  font-size: 1.25rem;
+  line-height: 2rem;
+  @include media-breakpoint-up(sm) {
+    font-size: 1.5rem;
+  }
+}
+
+// Blockquote
+
 blockquote,
 .blockquote {
-  font-size: inherit;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
   margin: 1.5rem 0;
   margin-left: calc($spacer / 2);
   border-left: 4px solid $analogue-2;
@@ -121,7 +142,7 @@ blockquote,
     font-style: italic;
   }
 
-  //card version
+  // Card version
   &.blockquote-card {
     margin-left: 0;
     padding: 16px 40px 24px;
@@ -144,34 +165,6 @@ blockquote,
   }
 }
 
-caption {
-  font-size: 0.777rem;
-  line-height: 1.4285;
-  color: $color-text-muted;
-}
-
-b,
-strong {
-  font-weight: 600;
-}
-
-small,
-.small {
-  font-size: 0.9375rem;
-  font-weight: $font-weight-normal;
-  @include media-breakpoint-up(sm) {
-    font-size: 0.8888rem;
-  }
-}
-
-.x-small {
-  font-size: 0.875rem;
-  font-weight: $font-weight-normal;
-  @include media-breakpoint-up(sm) {
-    font-size: 0.7777rem;
-  }
-}
-
 .blockquote-footer {
   color: $blockquote-small-color;
   margin-top: 0;
@@ -180,26 +173,47 @@ small,
   }
 }
 
-// Font Family
-.font-serif {
-  font-family: $font-family-serif !important;
-}
-.font-sans-serif {
-  font-family: $font-family-sans-serif !important;
-}
-.font-monospace {
-  font-family: $font-family-monospace !important;
+// Global typography elements
+
+caption,
+figcaption {
+  font-size: 0.875rem;
+  line-height: 1rem;
 }
 
-// Abbreviazioni
+b,
+strong {
+  font-weight: 700;
+}
+
+small,
+.small {
+  font-size: 0.875rem;
+}
+
+.x-small {
+  font-size: 0.75rem;
+}
+
+// Font Family
+
+.font-serif {
+  font-family: $font-family-serif;
+}
+.font-sans-serif {
+  font-family: $font-family-sans-serif;
+}
+.font-monospace {
+  font-family: $font-family-monospace;
+}
+
+// Abbreviations
+
 .initialism {
   font-size: 90%;
 }
 
-a {
-  &.text-decoration-none {
-    &:hover {
-      text-decoration: underline !important;
-    }
-  }
+// force text decoration for links with `.text-decoration-none` class
+a.text-decoration-none:hover {
+  text-decoration: underline;
 }

@@ -190,7 +190,7 @@
     //file name
     p {
       margin: 0;
-      font-size: 0.889rem;
+      font-size: 0.875rem;
       font-weight: 600;
       text-overflow: ellipsis;
       white-space: nowrap;
@@ -361,12 +361,12 @@
 .upload-dragdrop-text {
   p {
     margin: 0;
-    font-size: 0.889rem;
+    font-size: 0.875rem;
     color: $secondary;
 
     &.upload-dragdrop-weight {
       color: $neutral-1-a7;
-      font-size: 0.778rem;
+      font-size: 0.75rem;
       visibility: hidden;
 
       svg {
@@ -377,9 +377,9 @@
 
   h5 {
     margin: 0;
-    font-size: 1.333rem;
+    font-size: 1.25rem;
     font-weight: 600;
-    line-height: 1.3;
+    line-height: 1.75rem;
     color: $neutral-1;
   }
 }
@@ -495,7 +495,7 @@
   //input file
   .upload {
     &[type='file'] + label {
-      font-size: 0.889rem;
+      font-size: 0.875rem;
     }
   }
 }
@@ -558,7 +558,7 @@
         text-align: center;
         width: 100%;
         height: 100%;
-        font-size: 12px;
+        font-size: 0.75rem;
         display: flex;
         justify-content: flex-start;
         align-items: center;

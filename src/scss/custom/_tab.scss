@@ -8,10 +8,6 @@
   -webkit-overflow-scrolling: touch;
   flex-wrap: nowrap;
 
-  a {
-    text-decoration: none;
-  }
-
   //reset icon right margin
   .it-ico,
   .it-ico-lg {
@@ -96,6 +92,7 @@
   //link element
   .nav-link {
     border-radius: 0;
+    font-size: 1rem;
     font-weight: 600;
     color: $color-text-secondary;
     border: none;
@@ -103,12 +100,14 @@
     padding: 0.778rem 1.333em;
     flex: 1 0 auto;
     white-space: nowrap;
-    line-height: 1em;
-
-    //vertical & center align
+    line-height: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
+    text-decoration: none;
+    @include media-breakpoint-up(lg) {
+      font-size: 1.125rem;
+    }
 
     &:hover {
       color: $color-text-primary-hover;
@@ -130,12 +129,12 @@
     //icons
     .it-ico {
       &:before {
-        font-size: 1.333rem;
+        font-size: 1.25rem;
       }
     }
     .it-ico-lg {
       &:before {
-        font-size: 1.778rem;
+        font-size: 2rem;
       }
     }
     .icon {
@@ -300,7 +299,7 @@
         }
       }
       .it-ico {
-        font-size: 0.6rem;
+        font-size: 0.625rem;
         &:before {
           margin-right: 0;
         }
@@ -386,7 +385,7 @@
 }
 @include media-breakpoint-down(md) {
   .nav-tabs {
-    box-shadow: 0px 12px 25px -20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 12px 25px -20px rgba(0, 0, 0, 0.5);
     &.nav-tabs-vertical,
     &.nav-tabs-cards {
       box-shadow: none;

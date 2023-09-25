@@ -1,4 +1,9 @@
 .btn {
+  //btn-css-vars
+  --bs-btn-color: #06c;
+  --bs-btn-hover-color: #004d99; // TODO change with tokens when available
+  --bs-btn-active-color: #003366; // TODO change with tokens when available
+  //btn-css-vars-end
   padding: 12px 24px;
   font-size: $btn-font-size;
   white-space: initial;
@@ -14,12 +19,11 @@
 .btn-sm,
 .btn-lg {
   border-radius: $btn-border-radius;
-  line-height: $input-btn-line-height;
 }
 
 .btn-xs {
-  padding: 10px 20px;
-  font-size: $btn-font-size-sm;
+  padding: 12px 16px;
+  font-size: $btn-font-size-xs;
   line-height: $input-btn-line-height-xs;
 }
 
@@ -30,7 +34,7 @@
 }
 
 .btn-lg {
-  padding: 14px 28px;
+  padding: 16px 24px;
   font-size: $btn-font-size-lg;
   line-height: $input-btn-line-height-lg;
 }

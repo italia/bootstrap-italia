@@ -77,18 +77,20 @@
   color: $dropdown-custom-button-color;
   padding: $dropdown-custom-button-padding;
   background-color: $dropdown-custom-button-background;
-  font-size: $dropdown-custom-button-font-size;
   border-radius: 0;
   box-shadow: none;
+  @include media-breakpoint-up(lg) {
+    font-size: 1.125rem;
+  }
   &:not(:disabled):not(.disabled):active {
     box-shadow: none;
   }
 }
+
 .btn-dropdown,
 .dropdown-toggle {
   &:after {
     content: '';
-    speak: none;
     border: none;
     display: inline;
     margin: 0;

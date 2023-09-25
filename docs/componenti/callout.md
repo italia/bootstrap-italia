@@ -54,8 +54,8 @@ Aggiungere la classe `.success` per indicare una procedura andata a buon fine.
   <div class="callout-inner">
     <div class="callout-title">
       <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>
-      <span class="visually-hidden">Usa</span> 
-      <span class="text">Usa</span>    
+      <span class="visually-hidden">Titolo di conferma</span> 
+      <span class="text">Titolo di conferma</span>    
     </div>
     <p>Maecenas vulputate ante dictum vestibulum volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non augue non purus vestibulum varius.</p>
   </div>
@@ -73,8 +73,8 @@ Aggiungere la classe `.warning` per indicare una procedura o testo che richiede 
   <div class="callout-inner">
     <div class="callout-title">
       <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-help-circle"></use></svg>
-      <span class="visually-hidden">Attenzione</span> 
-      <span class="text">Attenzione</span>
+      <span class="visually-hidden">Titolo di attenzione</span> 
+      <span class="text">Titolo di attenzione</span>
     </div>
     <p>Quisque ex eros, pellentesque vitae enim sed, pharetra tempus dolor. Donec eu nibh ac lacus luctus pellentesque. Duis interdum scelerisque magna nec malesuada.</p>
   </div>
@@ -92,8 +92,8 @@ Aggiungere la classe `.danger` per indicare un errore o una procedura pericolosa
   <div class="callout-inner">
     <div class="callout-title">
       <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close-circle"></use></svg>
-      <span class="visually-hidden">Non usare</span> 
-      <span class="text">Non usare</span>
+      <span class="visually-hidden">Titolo di allerta</span> 
+      <span class="text">Titolo di allerta</span>
     </div>
     <p>Quisque ex eros, pellentesque vitae enim sed, pharetra tempus dolor. Donec eu nibh ac lacus luctus pellentesque. Duis interdum scelerisque magna nec malesuada.</p>
   </div>
@@ -159,7 +159,7 @@ Per aumentare la dimensione di un paragrafo contenuto nel Callout applicare la c
 {% capture example %}
 
 <div class="callout callout-highlight success">
-  <div class="callout-title"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>Usa</div>
+  <div class="callout-title"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>Titolo di conferma</div>
   <p>Maecenas at erat id <strong>sem interdum efficitur eu sed nunc.</strong> Mauris sit amet erat eget augue molestie malesuada ut sed ex. In sed dignissim elit. Donec efficitur, sem eget vestibulum auctor, sem erat interdum magna, eu commodo odio mauris semper dolor.</p>
   <p>Maecenas vulputate ante dictum <a href="#">vestibulum volutpat</a>. Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit.</strong> Aenean non augue non purus vestibulum varius. Maecenas ullamcorper tincidunt nulla quis laoreet.</p>
 </div>
@@ -171,7 +171,7 @@ Per aumentare la dimensione di un paragrafo contenuto nel Callout applicare la c
 {% capture example %}
 
 <div class="callout callout-highlight warning">
-  <div class="callout-title"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-help-circle"></use></svg>Attenzione</div>
+  <div class="callout-title"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-help-circle"></use></svg>Titolo di attenzione</div>
   <p>Maecenas at erat id <strong>sem interdum efficitur eu sed nunc.</strong> Mauris sit amet erat eget augue molestie malesuada ut sed ex. In sed dignissim elit. Donec efficitur, sem eget vestibulum auctor, sem erat interdum magna, eu commodo odio mauris semper dolor.</p>
   <p>Maecenas vulputate ante dictum <a href="#">vestibulum volutpat</a>. Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit.</strong> Aenean non augue non purus vestibulum varius. Maecenas ullamcorper tincidunt nulla quis laoreet.</p>
 </div>
@@ -183,7 +183,7 @@ Per aumentare la dimensione di un paragrafo contenuto nel Callout applicare la c
 {% capture example %}
 
 <div class="callout callout-highlight danger">
-  <div class="callout-title"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close-circle"></use></svg>Non usare</div>
+  <div class="callout-title"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close-circle"></use></svg>Titolo di allerta</div>
   <p>Maecenas at erat id <strong>sem interdum efficitur eu sed nunc.</strong> Mauris sit amet erat eget augue molestie malesuada ut sed ex. In sed dignissim elit. Donec efficitur, sem eget vestibulum auctor, sem erat interdum magna, eu commodo odio mauris semper dolor.</p>
   <p>Maecenas vulputate ante dictum <a href="#">vestibulum volutpat</a>. Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit.</strong> Aenean non augue non purus vestibulum varius. Maecenas ullamcorper tincidunt nulla quis laoreet.</p>
 </div>

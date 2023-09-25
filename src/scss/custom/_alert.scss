@@ -8,6 +8,9 @@
   background-color: $white;
   border-radius: 0;
   color: $color-text-base; // UI kit
+  background-position: 20px 12px;
+  background-repeat: no-repeat;
+  background-size: 32px 32px;
   .alert-link {
     color: $link-color;
   }
@@ -48,9 +51,6 @@
 @each $color, $value in $theme-colors {
   @if ($color == 'danger' or $color == 'warning' or $color == 'success' or $color == 'info' or $color == 'primary') {
     .alert-#{$color} {
-      background-position: 20px 16px;
-      background-repeat: no-repeat;
-      background-size: 32px 32px;
       border-left: 8px solid #{$value};
     }
   }

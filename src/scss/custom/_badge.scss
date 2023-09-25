@@ -1,10 +1,12 @@
 .badge {
+  --bs-badge-font-size: 0.875em;
+  --bs-badge-font-weight: #{$font-weight-semibold};
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   @each $color, $value in $theme-colors {
     &.badge-outline-#{$color} {
+      background-color: transparent !important;
       color: $value;
       border: 1px solid $value;
-      background-color: transparent !important;
     }
   }
   &.rounded-pill {
@@ -13,16 +15,11 @@
   }
 }
 
-a {
-  &.badge {
-    &:hover {
-      text-decoration: none;
-      color: #fff;
-      @each $color, $value in $theme-colors {
-        &.bg-#{$color} {
-          background-color: shade-color($value, 20%) !important;
-        }
-      }
+a.badge:hover {
+  color: $white;
+  @each $color, $value in $theme-colors {
+    &.bg-#{$color} {
+      background-color: shade-color($value, 20%) !important;
     }
   }
 }

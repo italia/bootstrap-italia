@@ -13,21 +13,25 @@
 
   //title
   h5 {
-    font-size: 0.938rem;
+    font-size: 0.875rem;
     text-transform: uppercase;
     color: $color-text-base;
     letter-spacing: 0;
     margin: 0;
     position: relative;
-    line-height: 1em;
+    line-height: 1rem;
     font-weight: 700;
   }
-  //text
   p {
+    margin-top: 1rem;
     font-size: 0.875rem;
-    margin: 1.5rem 0 0 0;
+    line-height: 1.5rem;
     color: $color-text-secondary;
   }
+  p:last-child {
+    margin-bottom: 0;
+  }
+
   //icon version
   &.with-icon {
     border-top: 4px solid $color-border-secondary;
@@ -100,13 +104,6 @@
   .notification {
     padding: 1.333rem;
     padding-right: 3.556rem;
-    h5 {
-      font-size: 0.833rem;
-    }
-    p {
-      font-size: 0.778rem;
-      margin: 1.333rem 0 0 0;
-    }
     &.with-icon {
       h5,
       p {

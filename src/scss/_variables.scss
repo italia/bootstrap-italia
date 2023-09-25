@@ -1,8 +1,11 @@
+// Import Design Tokens Italia
+// @import '../../node_modules/design-tokens-italia/scss/variables';
+
 // Shadows
 $enable-shadows: true;
 
 // Spacer
-$spacer: 16px !default;
+$spacer: 1rem !default;
 
 // Grid columns
 // Set the number of columns and specify the width of the gutters.
@@ -36,18 +39,15 @@ $aspect-ratios: (
 $font-family-serif: 'Lora', Georgia, serif !default;
 $font-family-sans-serif: 'Titillium Web', Geneva, Tahoma, sans-serif !default;
 $font-family-monospace: 'Roboto Mono', monospace !default;
-$font-family-base: $font-family-sans-serif;
 $text-color: $gray-700 !default;
 $text-muted: $color-text-muted !default;
 $letter-spacing-base: 0;
 $line-height-base: 1.5;
-$font-weight-base: 300;
 $mark-bg: $analogue-2-a1;
 
 // Paragraphs
-$headings-line-height: 1.2 !default;
 $paragraph-margin-bottom: 1rem !default;
-$small-font-size: 0.777rem !default;
+$small-font-size: 0.875rem !default;
 
 // Links
 $link-decoration: underline;
@@ -70,15 +70,15 @@ $btn-border-width: 0;
 $btn-text-transform: uppercase;
 $btn-letter-spacing: normal;
 $btn-font-weight: 600 !default;
-$btn-font-size: 16px !default;
-$btn-font-size-sm: 14px !default;
-$btn-font-size-lg: 18px !default;
+$btn-font-size-sm: 1rem !default;
+$btn-font-size-xs: 0.875rem !default;
+$btn-font-size-lg: 1.125rem !default;
 
 // Input
 $input-btn-line-height: 1.5 !default;
-$input-btn-line-height-sm: 24px !default;
-$input-btn-line-height-xs: 20px !default;
-$input-btn-line-height-lg: 1.6 !default;
+$input-btn-line-height-sm: 1.5rem !default;
+$input-btn-line-height-xs: 1rem !default;
+$input-btn-line-height-lg: 1.75rem !default;
 $input-disabled-bg: $gray-disabled !default;
 $input-spacing-x: 0.5rem;
 $input-spacing-y: 0.375rem;
@@ -104,6 +104,7 @@ $zoom-overlay-bg: $white !default;
 $border-radius: 4px !default;
 $border-radius-sm: 2px !default;
 $border-radius-lg: 8px !default;
+$radius-rounded: 40px;
 
 // Link and button colors
 $btn-primary-bg: $primary !default;
@@ -115,26 +116,7 @@ $theme-color-interval: 8% !default;
 
 // Code
 $code-color: $dark !default;
-
 $yiq-contrasted-threshold: 120 !default;
-
-// Headings
-$headings-font-weight: 700;
-$headings-line-height: 1.2 !default;
-
-$h3-font-size: 1.75rem;
-$h4-font-size: 1.5rem;
-$h5-font-size: 1.25rem;
-
-$display1-size: 3.5rem;
-$display2-size: 2.5rem;
-$display3-size: 1.5rem;
-$display4-size: 1.25rem;
-
-$display1-weight: 700;
-$display2-weight: 700;
-$display3-weight: 700;
-$display4-weight: 700;
 
 // Breadcrumbs
 $breadcrumb-padding: 0.5em;
@@ -219,7 +201,6 @@ $dropdown-box-shadow-vertical: 0 0 30px 5px rgba(0, 0, 0, 0.05) !default;
 
 // Dropdown custom
 $dropdown-custom-button-padding: 0 4px;
-$dropdown-custom-button-font-size: 1rem;
 $dropdown-custom-button-color: $primary !default;
 $dropdown-custom-button-background: transparent !default;
 $dropdown-custom-button-caret-font-size: 0.55rem;
@@ -280,11 +261,11 @@ $componente-base-padding-x: 8px;
 $componente-base-padding-y: 8px;
 
 // Linklist
-$link-list-font-size: 0.889em;
-$link-list-font-size-l: 1em;
-$link-list-line-height: 2.3em;
-$link-list-line-height-l: 2.7em;
-$link-list-heading-size: 1em;
+$link-list-font-size: 1rem;
+$link-list-font-size-l: 1.125rem;
+$link-list-line-height: 2rem;
+$link-list-line-height-l: 1.5rem;
+$link-list-heading-size: 1.125rem;
 $link-list-divider-height: 1px;
 $link-list-divider-distance: 8px;
 $link-list-h-pad: 24px;
@@ -307,7 +288,7 @@ $megamenu-link-small-line-margin-bottom: $v-gap;
 $megamenu-heading-line-height: 1.2em;
 $megamenu-heading-font-weight: 600;
 $megamenu-heading-bottom-margin: 0.5rem;
-$megamenu-heading-text-size: 0.833em;
+$megamenu-heading-text-size: 1.125rem;
 $megamenu-heading-margin-top: 5px;
 $megamenu-heading-letter-spacing: 1px;
 $megamenu-link-arrow-size: 0.8em;
@@ -333,7 +314,7 @@ $pager-item-border-radius: 4px;
 $pager-item-margin-right: 5px;
 $pager-item-current-color: $primary !default;
 $pager-item-current-border: 1px solid $primary !default;
-$pager-font-size: 0.8888888888888888rem; // 16px
+$pager-font-size: 1rem;
 $pager-font-weight: 700;
 $pager-font-color: $secondary !default;
 $pager-hover-color: $primary !default;
@@ -348,17 +329,17 @@ $pager-page-changer-border-bottom: 1px solid $gray-secondary !default; // Kit UI
 // Sidebar
 $sidebar-heading-font-weight: 600;
 $sidebar-heading-bottom-margin: 0.8rem;
-$sidebar-heading-text-size: 0.833em;
-$sidebar-heading-margin-top: 5px;
+$sidebar-heading-text-size: 1.15rem;
+$sidebar-heading-margin-top: 4px;
 $sidebar-heading-letter-spacing: 1px;
 $sidebar-linklist-link-line-height: 1em;
 $sidebar-linklist-link-v-padding: 0.55em;
 $sidebar-link-small-line-width: 65px;
-$sidebar-link-size: 1em;
+$sidebar-link-size: 1rem;
 $sidebar-dropdown-icon-size: 0.8em;
 $sidebar-dropdown-line-selection-width: 2px;
 $sidebar-dropdown-line-selection-color: $primary !default;
-$sidebar-submenu-font-size: 0.889em;
+$sidebar-submenu-font-size: 1rem;
 $sidebar-submenu-link-v-padding: 0.45em;
 $sidebar-border-color: $gray-border !default;
 
@@ -374,7 +355,7 @@ $navscroll-button-text-weight: 600;
 $navscroll-top-box-shadow: 0 0px 30px 5px rgba(0, 0, 0, 0.05) !default;
 $navscroll-bottom-box-shadow: 0 0px 30px 5px rgba(0, 0, 0, 0.05) !default;
 $navscroll-primary-font-weight: 600;
-$navscroll-font-size: 1em;
+$navscroll-font-size: 1rem;
 $navscroll-selection-link-left: $sidebar-dropdown-line-selection-width solid $sidebar-dropdown-line-selection-color !default;
 $navscroll-secondary-active-color: $color-text-primary-active !default;
 $navscroll-links-padding: 0.55em;
@@ -394,12 +375,7 @@ $dialog-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1) !default;
 $modal-padding: $v-gap * 3;
 $modal-margin: $v-gap * 6;
 $modal-padding-close: $v-gap * 2;
-$modal-heading-size: 0.8333333333333334rem;
-$modal-heading-weight: 600;
-$modal-heading-l-space: 0.5px;
 $modal-heading-color: $color-text-base !default; // UI kit
-$modal-p-size: 0.8888888888888888rem;
-$modal-p-l-height: 1.3333333333333333rem;
 $modal-icon-color: $primary !default;
 $modal-icon-distance: $v-gap * 2;
 $modal-alert-p-distance: 32px + $v-gap * 2;
@@ -419,12 +395,12 @@ $header-slim-bg-color: $primary-a7 !default;
 $header-slim-text-color: $white !default;
 $header-slim-button-color: $primary-a9 !default;
 $header-slim-button-hover-color: $primary-a8 !default;
-$header-slim-brand-text-size: 0.778em;
+$header-slim-brand-text-size: 0.875rem;
 $header-slim-icon-size: 18px;
 $header-slim-padding-desk: 3px $v-gap * 3;
 $header-slim-dropdown-distance: 14px;
 $header-slim-dropdown-distance-mob: 9px;
-$header-slim-links-padding: 5px;
+$header-slim-links-padding: 7px;
 $header-slim-brand-padding: 12px;
 $header-slim-button-v-padding: 7.5px;
 $header-slim-lang-v-padding: 12px;
@@ -443,10 +419,10 @@ $header-center-max-height: 120px;
 $header-center-max-height-mob: 80px;
 $header-center-pad: 47px;
 $header-center-pad-mob: 16px;
-$header-center-h2-size: 1.778em;
-$header-center-h2-size-mob: 1.25em;
+$header-center-h2-size: 1.778em; // TODO: Change size
+$header-center-h2-size-mob: 1.25em; // TODO: Change size
 $header-center-h2-weight: 600;
-$header-center-h3-size: 0.889em;
+$header-center-h3-size: 0.889em; // TODO: Change size
 $header-center-icon-size: 82px;
 $header-center-icon-size-mob: 48px;
 $header-center-icon-margin: $v-gap * 2;
@@ -457,14 +433,14 @@ $header-center-search-size: $v-gap * 6;
 $header-center-search-radius: $v-gap * 3;
 $header-center-search-icon-size: $v-gap * 3;
 $header-center-search-distance: $v-gap * 10;
-$header-center-text-size: 0.889em;
+$header-center-text-size: 0.889em; // TODO: Change size
 $header-center-button-left: 10px;
 $header-nav-button-distance: 22px;
 $header-nav-icon-arrow-megamenu-distance: 14px;
 $header-center-small-height: 104px;
 $header-center-small-mob-height: 64px;
-$header-center-small-h2-size: 1.333em;
-$header-center-small-h3-size: 0.778em;
+$header-center-small-h2-size: 1.333em; // TODO: Change size
+$header-center-small-h3-size: 0.778em; // TODO: Change size
 // Header Center theme light
 $header-center-theme-light-bg-color: $white !default;
 $header-center-theme-light-text-color: $primary !default;
@@ -476,25 +452,24 @@ $anchor-v-offset: $header-center-max-height-mob + 16px;
 //cards
 $card-padding: $v-gap * 3;
 $card-h5-size: 1.125rem;
-$card-h5-size-desk: 1rem;
-$card-h5-line-height: 1.4444444444444444rem;
+$card-h5-line-height: 1.5rem;
 $card-h5-fw: 700;
 $card-h5-color: $color-text-secondary !default; // UI kit
-$card-p-size: 0.875rem;
-$card-p-size-desk: 0.7777777777777778rem;
-$card-p-l-h: 1.2rem;
+$card-p-size: 1rem;
+$card-p-size-desk: 1.125rem;
+$card-p-l-h: 1.5rem;
 $card-p-color: $color-text-base !default;
 $card-border-color: $gray-border !default; // Missing in the UI kit but aligned to new colors
 $card-small-line-height: 1px;
 $card-small-line-w: 128px;
 $card-small-line-color: $neutral-1-a2 !default; // Not used
 $card-small-line-margin: $v-gap * 6;
-$card-category-size: 0.7777777777777778rem;
+$card-category-size: 0.875rem;
 $card-category-l-spacing: 0.9px;
 $card-category-m-bottom: $v-gap * 2;
-$card-big-head-size: 1.5555555555555556rem;
-$card-big-head-l-h: 1.7777777777777777rem;
-$card-signature-size: 0.8888888888888888rem;
+$card-big-head-size: 1.5rem;
+$card-big-head-l-h: 1.75rem;
+$card-signature-size: 0.875rem;
 $card-link-color: $primary !default;
 $card-link-icon-size: $v-gap * 2;
 $card-cat-icon-block-margin: $v-gap * 2;
@@ -502,10 +477,10 @@ $card-cat-icon-size: $v-gap * 5;
 $card-simple-link-margin: $v-gap * 4;
 $card-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.1) !default;
 $card-shadow-bg: $white !default;
-$card-big-h5-size: 1.3333333333333333rem;
-$card-big-h5-l-h: 1.5555555555555556rem;
-$card-big-p-size: 0.8888888888888888rem;
-$card-big-p-l-h: 1.3333333333333333rem;
+$card-big-h5-size: 1.25rem;
+$card-big-h5-l-h: 1.5rem;
+$card-big-p-size: 1.125rem;
+$card-big-p-l-h: 1.5rem;
 $card-big-top-icon-size: $v-gap * 10;
 $card-img-heading-size: 1.1111111111111112rem;
 $card-img-heading-l-h: 1.5555555555555556rem;
@@ -518,17 +493,14 @@ $flag-icon-w: $v-gap * 4;
 $tag-radius: 50px;
 
 // select
-$select-label-size: 0.7777777777777778rem;
+$select-label-size: 0.875rem;
 $select-label-color: $color-text-base !default; // UI kit
-
-// TODO Continue from here for color checking
-
 $select-label-weight: 600;
 $select-button-border: 1px solid $select-label-color !default;
 $select-button-padding: $v-gap !default;
 $select-button-text-size: 1rem;
 $select-dd-shadow: $dialog-shadow !default;
-$select-dd-text-size: 0.8888888888888888rem;
+$select-dd-text-size: 1rem;
 $select-dd-link-color: $primary !default;
 $select-dd-link-color-active: $color-text-primary-active !default; // UI kit
 $select-dd-small-separator-width: 65px;
@@ -538,7 +510,7 @@ $select-dd-icon-flag-top: 10px;
 $select-dd-pill-font-size: 0.7777777777777778rem;
 $select-dd-pill-distance: $v-gap;
 $select-dd-pill-font-w: 700;
-$select-dd-header-size: 0.8333333333333334rem;
+$select-dd-header-size: 0.875rem;
 $select-dd-header-w: 600;
 $select-dd-check-height: 30px;
 
@@ -547,9 +519,9 @@ $dp-label-color: $color-text-base !default;
 $dp-border-bottom: 1px solid $dp-label-color !default; // TODO Not found - need more attention
 $dp-shadow: $dialog-shadow;
 $dp-arrow-size: $v-gap * 2;
-$dp-month-size: 0.8333333333333334rem;
+$dp-month-size: 0.875rem;
 $dp-month-l-spacing: 0.1px;
-$dp-grid-size: 13px;
+$dp-grid-size: 0.75rem;
 $dp-current-size: $v-gap * 4;
 
 //hero
@@ -623,7 +595,7 @@ $stepper-spacing-v: 16px;
 
 // transfer
 $transfer-border: 1px solid $neutral-1-a3 !default; // TODO Not found
-$transfer-descr-size: 12px;
+$transfer-descr-size: 0.75rem;
 $transfer-descr-color: $neutral-1-a8 !default; // TODO Not found
 $transfer-header-line-color: $neutral-1-a3 !default; // TODO Not found
 $transfer-header-line-w: 65px;

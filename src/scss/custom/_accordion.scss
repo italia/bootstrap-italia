@@ -117,8 +117,12 @@ $arrow-size: $font-size-base * 0.5;
     padding: 14px 24px;
     cursor: pointer;
     color: $primary;
+    font-size: 1rem;
     font-weight: 600;
-    //transition: background-color 0.1s;
+    line-height: 1.5rem;
+    @include media-breakpoint-up(lg) {
+      font-size: 1.125rem;
+    }
     &:not(.collapsed) {
       color: $gray-secondary;
       &:after {
@@ -158,6 +162,13 @@ $arrow-size: $font-size-base * 0.5;
 // body
 .accordion-body {
   padding: 12px 24px 42px;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  @include media-breakpoint-up(lg) {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
   .accordion-header button[aria-expanded='true']:before {
     height: 0;
     width: 0;

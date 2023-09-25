@@ -1,4 +1,5 @@
 .breadcrumb-container {
+  --bs-breadcrumb-font-size: 1rem;
   .breadcrumb {
     padding: $breadcrumb-padding 0;
     border-radius: $breadcrumb-border-radius;
@@ -15,9 +16,8 @@
         font-weight: $breadcrumb-link-font-weight;
       }
       &.active {
-        color: $color-text-base;
         a {
-          font-weight: normal;
+          font-weight: 400;
           pointer-events: none;
         }
       }

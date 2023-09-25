@@ -167,7 +167,7 @@
   //results list
   .autocomplete-list {
     a {
-      font-size: 0.889rem;
+      font-size: 0.875rem;
       align-items: flex-start;
 
       .autocomplete-list-text {
@@ -179,7 +179,7 @@
         //item label
         em {
           display: inline-block;
-          font-size: 0.667rem;
+          font-size: 0.75rem;
           margin-top: 0;
         }
       }
@@ -191,7 +191,7 @@
     //search field
     .autocomplete {
       height: $v-gap * 9;
-      font-size: 2.222rem;
+      font-size: 2.25rem;
       padding-left: $v-gap * 8;
     }
 
@@ -206,7 +206,7 @@
     //results list
     .autocomplete-list {
       a {
-        font-size: 1.111rem;
+        font-size: 1.125rem;
         //item text
         .autocomplete-list-text {
           span {

@@ -13,7 +13,7 @@ a.datepicker-button {
 
 .datepicker-calendar {
   margin: 0 10px 10px 0;
-  font-size: 0.9em;
+  font-size: 1rem;
   padding: 2px;
   position: absolute;
   width: 261px;
@@ -74,13 +74,13 @@ a.datepicker-button {
     height: 24px;
     text-align: center;
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 1.25rem;
     cursor: pointer;
     padding-top: 1px;
 
     &:after {
       font-family: 'Glyphicons Halflings', sans-serif;
-      font-size: 0.6em;
+      font-size: 0.625rem;
       display: inline-block;
       content: '\e252';
     }
@@ -97,7 +97,7 @@ a.datepicker-button {
 
   table.datepicker-grid {
     width: 100%;
-    font-size: 1.2em;
+    font-size: 1.25rem;
     text-align: center;
 
     &.rtl {

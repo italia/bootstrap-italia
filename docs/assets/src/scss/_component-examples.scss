@@ -114,8 +114,8 @@
 .bd-example {
   padding: 1rem;
   margin-top: 1rem;
-  border: solid #404040;
-  background-color: rgb(242, 247, 252);
+  border: solid $border-color;
+  background-color: $gray-100;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
   border-bottom: 0;
@@ -123,7 +123,7 @@
 
   @include media-breakpoint-up(sm) {
     padding: 1.5rem;
-    border-width: 0.1rem;
+    border-width: 1px;
   }
 
   + .highlight,
