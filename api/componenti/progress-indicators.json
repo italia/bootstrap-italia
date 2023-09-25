@@ -12,7 +12,7 @@
         "content": "\n<div class=\"progress-bar-wrapper\">\n  <div class=\"progress-bar-label\"><span class=\"visually-hidden\">Progresso </span>35%</div>\n  <div class=\"progress\">\n    <div class=\"progress-bar\" role=\"progressbar\" style=\"width: 50%\" aria-valuenow=\"50\" aria-valuemin=\"0\" aria-valuemax=\"100\"></div>\n  </div>\n</div>\n"
     },
     {
-        "name": "Progresso intederminato",
+        "name": "Progresso indeterminato",
         "content": "\n<div class=\"progress progress-indeterminate\">\n  <span class=\"visually-hidden\">In elaborazione...</span>\n  <div class=\"progress-bar\" role=\"progressbar\"></div>\n</div>\n"
     },
     {

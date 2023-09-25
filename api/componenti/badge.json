@@ -5,11 +5,11 @@
     },
     {
         "name": "In pulsante",
-        "content": "\n<button type=\"button\" class=\"btn btn-primary\">\nNotifiche <span class=\"badge bg-secondary\">4</span>\n</button>\n"
+        "content": "\n<button type=\"button\" class=\"btn btn-primary\">\nNotifiche <span class=\"badge bg-white text-secondary\">4</span>\n</button>\n"
     },
     {
         "name": "In pulsante, per screen reader",
-        "content": "\n<button type=\"button\" class=\"btn btn-primary\">\nProfilo <span class=\"badge bg-secondary\">9</span>\n<span class=\"visually-hidden\">Messaggi non letti</span>\n</button>\n"
+        "content": "\n<button type=\"button\" class=\"btn btn-primary\">\nProfilo <span class=\"badge bg-white text-primary\">9</span>\n<span class=\"visually-hidden\">Messaggi non letti</span>\n</button>\n"
     },
     {
         "name": "Varianti di colore",
