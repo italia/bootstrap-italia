@@ -389,6 +389,9 @@ Di seguito un esempio di form validato con Just Validate.
           errorMessage: 'Questo campo è richiesto'
         },
       ])
+      .onSuccess(() => {
+        document.forms['justValidate'].submit()
+      })
       .onFail((fields) => {
         errorWrapper.innerHTML = '';
         errorWrapper.innerHTML = errorMessage
