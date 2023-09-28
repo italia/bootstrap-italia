@@ -70,3 +70,28 @@
   })*/
 </script>
 {%- endif -%}
+
+<script>
+  document
+    .querySelectorAll('figure.highlight')
+    .forEach(function (figure) {
+      let button = document.createElement('button'),
+      divContainer = document.createElement('div'),
+      pre = figure.querySelector('pre');
+      divContainer.classList.add('d-flex', 'justify-content-end');
+      button.type = 'button';
+      button.ariaLabel = 'Copy code to clipboard';
+      button.innerText = 'Copia';
+      button.classList.add('btn', 'btn-primary', 'btn-xs');
+      button.setAttribute('type', 'button');
+      button.addEventListener('click', function () {
+        var code = figure.querySelector('code').innerText.trim();
+        navigator.clipboard.writeText(code);
+        button.innerText = 'Copiato';
+        button.classList.remove('btn-primary');
+        button.classList.add('btn-success');
+      });
+      divContainer.appendChild(button);
+      figure.insertBefore(divContainer, pre);
+    });
+</script>
