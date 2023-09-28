@@ -344,11 +344,6 @@ title: Validazione Form
           rule: 'required',
           errorMessage: 'Questo campo è richiesto',
         },
-        {
-          //rule: 'required',
-          errorMessage: "Seleziona un'opzione fra quelle disponibili",
-          validator: bootstrap.ValidatorSelectAutocomplete('#accessibleAutocomplete'),
-        },
       ])
       .addField('#age', [
         {
@@ -461,7 +456,6 @@ title: Validazione Form
         document.forms['justValidate'].submit()
       })
       .onFail((fields) => {
-        $('errorMsgContainer').alert()
         errorWrapper.innerHTML = ''
         errorWrapper.innerHTML = errorMessage
         errorWrapper.scrollIntoView()
