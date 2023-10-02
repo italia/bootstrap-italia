@@ -43,6 +43,7 @@
     - title: Breadcrumbs
     - title: Header # TODO Rewiew mobile version
     - title: Megamenu # TODO Review mobile version
+    - title: Footer
     - title: Navscroll
     - title: Sidebar
     - title: Skiplinks
