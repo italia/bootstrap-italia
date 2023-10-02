@@ -262,6 +262,14 @@ textarea {
     }
   }
 
+  [type='checkbox'] + label,
+  [type='radio'] +label {
+    font-size: 1rem;
+    @include media-breakpoint-up(sm) {
+      font-size: 1.125rem;
+    }
+  }
+
   [type='checkbox'] {
     + label::after,
     + label::before {
