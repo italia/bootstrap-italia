@@ -1,3 +1,7 @@
+import '../svg/it-android.svg'
+import '../svg/it-android-square.svg'
+import '../svg/it-apple.svg'
+import '../svg/it-apple-square.svg'
 import '../svg/it-arrow-down-circle.svg'
 import '../svg/it-arrow-down-triangle.svg'
 import '../svg/it-arrow-down.svg'
