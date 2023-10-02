@@ -7,7 +7,6 @@ h1,
   letter-spacing: -1px;
   @include media-breakpoint-up(sm) {
     font-size: 3rem;
-    letter-spacing: -2px;
     line-height: 3.5rem;
   }
 }
