@@ -101,6 +101,10 @@ regular:
   - it-zoom-in
   - it-zoom-out
 platforms:
+  - it-android
+  - it-android-square
+  - it-apple
+  - it-apple-square
   - it-behance
   - it-facebook
   - it-facebook-square
