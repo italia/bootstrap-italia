@@ -107,6 +107,7 @@ textarea {
 textarea {
   border: 1px solid $input-border;
   height: auto;
+  font-size: 1rem;
 }
 
 .form-control {
@@ -250,6 +251,9 @@ textarea {
       font-size: 1rem;
       user-select: none;
       margin-bottom: 0.5rem;
+      @include media-breakpoint-up(sm) {
+        font-size: 1.125rem;
+      }
     }
 
     //focus

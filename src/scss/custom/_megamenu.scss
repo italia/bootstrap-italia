@@ -53,7 +53,8 @@
                     margin-bottom: $grid-gutter-width;
                   }
                   p {
-                    font-size: $megamenu-vertical-desription-font-size;
+                    font-size: $megamenu-vertical-description-font-size;
+                    line-height: 1.5rem;
                   }
                 }
               }
@@ -444,7 +445,8 @@
                       margin-bottom: $grid-gutter-width;
                     }
                     p {
-                      font-size: $megamenu-vertical-desription-font-size;
+                      font-size: $megamenu-vertical-description-font-size;
+                      line-height: 1.5rem;
                     }
                   }
                 }
