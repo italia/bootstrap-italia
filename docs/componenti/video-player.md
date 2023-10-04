@@ -398,15 +398,15 @@ In questo la Pubblica Amministrazione che fa uso di servizi di terze parti come 
       <div class="acceptoverlay-icon">
         <svg class="icon icon-xl"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-video"></use></svg>
       </div>
-        <p>Devi accettare i cookie di YouTube per abilitare la visione di questo contenuto. Scopri cosa sono i cookie e approfondisci i dettagli nella nostra <a href="#" class="text-white">cookie policy</a>.
+        <p>Accetta i cookie di YouTube per vedere il video. Puoi rimuovere le preferenze nella <a href="#" class="text-white">cookie policy</a>.
         </p>
       <div class="acceptoverlay-buttons bg-dark">
-        <div class="form-check">
-          <input id="chk-remember" type="checkbox" data-bs-accept-remember>
-          <label for="chk-remember">Ricorda la mia scelta</label>
-        </div>
         <button type="button" class="btn btn-primary" data-bs-accept-from="youtube.com"
         onclick="loadYouTubeVideo('https://youtu.be/_0j7ZQ67KtY')">Accetta</button>
+        <div class="form-check">
+          <input id="chk-remember" type="checkbox" data-bs-accept-remember>
+          <label for="chk-remember">Ricorda per tutti i video</label>
+        </div>
       </div>
     </div>
   </div>
