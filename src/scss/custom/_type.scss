@@ -7,7 +7,6 @@ h1,
   letter-spacing: -1px;
   @include media-breakpoint-up(sm) {
     font-size: 3rem;
-    letter-spacing: -2px;
     line-height: 3.5rem;
   }
 }
@@ -198,13 +197,15 @@ small,
 // Font Family
 
 .font-serif {
-  font-family: $font-family-serif;
+  font-family: $font-family-serif !important;
 }
+
 .font-sans-serif {
-  font-family: $font-family-sans-serif;
+  font-family: $font-family-sans-serif !important;
 }
+
 .font-monospace {
-  font-family: $font-family-monospace;
+  font-family: $font-family-monospace !important;
 }
 
 // Abbreviations

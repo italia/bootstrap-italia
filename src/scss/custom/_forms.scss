@@ -53,7 +53,7 @@ fieldset {
     white-space: nowrap;
     padding: 0 $input-spacing-x;
     z-index: 1;
-    &.active {
+    &.active:first-child {
       transform: translateY(-75%);
       font-weight: 600;
       font-size: $small-font-size;
@@ -107,6 +107,7 @@ textarea {
 textarea {
   border: 1px solid $input-border;
   height: auto;
+  font-size: 1rem;
 }
 
 .form-control {
@@ -250,6 +251,9 @@ textarea {
       font-size: 1rem;
       user-select: none;
       margin-bottom: 0.5rem;
+      @include media-breakpoint-up(sm) {
+        font-size: 1.125rem;
+      }
     }
 
     //focus

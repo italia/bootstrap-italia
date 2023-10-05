@@ -39,7 +39,7 @@
         font-size: $link-list-font-size;
         line-height: $link-list-line-height;
         display: block;
-        padding: 0 $link-list-h-pad;
+        padding: 0.25rem $link-list-h-pad;
         text-decoration: none;
         position: relative;
         &.icon-right,
@@ -251,36 +251,20 @@
 }
 //small - tablet
 @include media-breakpoint-up(sm) {
-  .link-list-wrapper {
-    ul {
-      li {
-        a {
-          &.large {
-            font-size: $link-list-font-size-l;
-            line-height: $link-list-line-height-l;
-          }
-        }
-      }
-    }
+  .link-list-wrapper ul li a.large {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: $link-list-font-size-l;
   }
 }
 
 //Tablet vertical
 @include media-breakpoint-up(md) {
-  .link-list-wrapper {
-    ul {
-      li {
-        a {
-          &.large {
-            line-height: $link-list-line-height-l;
-            &.icon-left,
-            &.icon-right {
-              padding-top: $link-list-v-padding-l;
-              padding-bottom: $link-list-v-padding-l;
-            }
-          }
-        }
-      }
+  .link-list-wrapper ul li a.large {
+    &.icon-left,
+    &.icon-right {
+      padding-top: $link-list-v-padding-l;
+      padding-bottom: $link-list-v-padding-l;
     }
   }
 }

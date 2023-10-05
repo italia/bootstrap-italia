@@ -2,7 +2,7 @@
 
 .acceptoverlayable {
   position: relative;
-  &:has(.acceptoverlay.show) {
+  &.show {
     min-height: 450px;
   }
 }
@@ -36,7 +36,7 @@
   &.acceptoverlay-primary {
     background-color: $primary;
     &.show {
-      opacity: 0.9;
+      opacity: 0.97;
     }
   }
 

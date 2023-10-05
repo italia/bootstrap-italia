@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-italia",
-  "version": "2.7.0",
+  "version": "2.7.1",
   "keywords": [
     "css",
     "sass",
@@ -99,7 +99,7 @@
     "animejs": "^3.2.1",
     "bootstrap": "5.2.3",
     "design-tokens-italia": "^1.1.1",
-    "just-validate": "^3.5.1",
+    "just-validate": "^3.10.0",
     "masonry-layout": "^4.2.2",
     "progressbar.js": "^1.1.0",
     "uuid": "^8.3.2",
