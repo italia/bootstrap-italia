@@ -203,7 +203,7 @@ $dropdown-box-shadow-vertical: 0 0 30px 5px rgba(0, 0, 0, 0.05) !default;
 $dropdown-custom-button-padding: 0 4px;
 $dropdown-custom-button-color: $primary !default;
 $dropdown-custom-button-background: transparent !default;
-$dropdown-custom-button-caret-font-size: 0.55rem;
+$dropdown-custom-button-caret-font-size: 0.5rem;
 $dropdown-custom-button-caret-distance: $v-gap;
 $dropdown-menu-animation-speed: 0.3s;
 $dropdown-menu-vertical-shift: 16px;
@@ -222,8 +222,8 @@ $navigation-v-padding: 13px;
 $navigation-sidebar-bg-color-mobile: rgba(0, 0, 0, 0.6) !default;
 $navigation-close-button-size: 44px !default;
 $navigation-close-button-text-color: $primary !default;
-$navigation-close-button-text-size: 0.75em;
-$navigation-close-button-icon-size: 2em;
+$navigation-close-button-text-size: 0.75rem;
+$navigation-close-button-icon-size: 2rem;
 $navigation-links-margin-top: 102px;
 $navigation-link-color: $primary !default;
 $navigation-link-color-desk: $white !default;
@@ -231,10 +231,10 @@ $navigation-link-active-bar-size: 3px;
 $navigation-link-active-bar-color: $primary !default;
 $navigation-link-active-bar-color-desk: $white !default;
 $navigation-toggle-button-icon-color: $white !default;
-$navigation-toggle-button-icon-size: 1.625em;
-$navigation-dropdown-icon-size: 0.8em;
-$navigation-dropdown-icon-line-height: 2em;
-$navigation-dropdown-icon-width: 1em;
+$navigation-toggle-button-icon-size: 1.5rem;
+$navigation-dropdown-icon-size: 0.75rem;
+$navigation-dropdown-icon-line-height: 1rem;
+$navigation-dropdown-icon-width: 1rem;
 $navigation-disabled-item-opacity: 0.7 !default;
 $navigation-disabled-item-mobile-opacity: 0.6 !default;
 $navigation-hamburger-size: 24px;
@@ -264,13 +264,12 @@ $componente-base-padding-y: 8px;
 $link-list-font-size: 1rem;
 $link-list-font-size-l: 1.125rem;
 $link-list-line-height: 2rem;
-$link-list-line-height-l: 1.5rem;
 $link-list-heading-size: 1.125rem;
 $link-list-divider-height: 1px;
 $link-list-divider-distance: 8px;
 $link-list-h-pad: 24px;
 $link-list-v-pad: 0.25em;
-$link-list-paragraph-size: 0.778em;
+$link-list-paragraph-size: 0.75rem; 
 $link-list-left-icon-space: 8px;
 $link-list-avatar-radius: 50px;
 $link-list-avatar-margin: 8px;
@@ -285,21 +284,21 @@ $megamenu-padding-top-desktop: $v-gap * 4;
 $megamenu-column-gap: $v-gap * 3;
 $megamenu-link-small-line-width: 65px;
 $megamenu-link-small-line-margin-bottom: $v-gap;
-$megamenu-heading-line-height: 1.2em;
+$megamenu-heading-line-height: 1.5rem;
 $megamenu-heading-font-weight: 600;
 $megamenu-heading-bottom-margin: 0.5rem;
 $megamenu-heading-text-size: 1.125rem;
 $megamenu-heading-margin-top: 5px;
 $megamenu-heading-letter-spacing: 1px;
-$megamenu-link-arrow-size: 0.8em;
+$megamenu-link-arrow-size: 0.75rem;
 $megamenu-footer-bg-color: $color-background-primary-lighter !default; // UI kit
 $megamenu-link-more-link-list-distance-mobile: $v-gap;
-$megamenu-linklist-link-line-height: 1em;
+$megamenu-linklist-link-line-height: 1rem;
 $megamenu-linklist-link-v-padding: 0.5em;
 $megamenu-liklist-vertical-margin-top: 25px;
 $megamenu-liklist-vertical-margin-bottom: 16px;
 $megamenu-linklist-vertical-link-padding: 36px;
-$megamenu-vertical-desription-font-size: 0.889em;
+$megamenu-vertical-description-font-size: 1rem;
 
 // Linklist footer megamenu
 $link-list-megamenu-footer-bg-color: $neutral-2 !default; // TODO: Not used, consider to remove it
@@ -309,7 +308,7 @@ $link-list-footer-distance-bottom: 0.5rem;
 // Pager
 $pager-margin-bottom: 0.5rem;
 $pager-item-size-mobile: 2.5rem; // 40px
-$pager-item-size-tablet: 2.6666666666666665rem; // 48px
+$pager-item-size-tablet: 3rem; // 48px 
 $pager-item-border-radius: 4px;
 $pager-item-margin-right: 5px;
 $pager-item-current-color: $primary !default;
@@ -319,7 +318,7 @@ $pager-font-weight: 700;
 $pager-font-color: $secondary !default;
 $pager-hover-color: $primary !default;
 $pager-icon-color: $primary !default;
-$pager-icon-size: 0.7rem;
+$pager-icon-size: 1rem;
 $pager-disabled-color: $gray-label-disabled !default;
 $pager-jump-to-width: 4.5rem;
 $pager-jump-to-color: $gray-secondary !default; // Kit UI
@@ -332,11 +331,11 @@ $sidebar-heading-bottom-margin: 0.8rem;
 $sidebar-heading-text-size: 1.15rem;
 $sidebar-heading-margin-top: 4px;
 $sidebar-heading-letter-spacing: 1px;
-$sidebar-linklist-link-line-height: 1em;
-$sidebar-linklist-link-v-padding: 0.55em;
+$sidebar-linklist-link-line-height: 1.5rem;
+$sidebar-linklist-link-v-padding: 0.75rem;
 $sidebar-link-small-line-width: 65px;
 $sidebar-link-size: 1rem;
-$sidebar-dropdown-icon-size: 0.8em;
+$sidebar-dropdown-icon-size: 1.5rem;
 $sidebar-dropdown-line-selection-width: 2px;
 $sidebar-dropdown-line-selection-color: $primary !default;
 $sidebar-submenu-font-size: 1rem;
@@ -383,7 +382,7 @@ $modal-heading-border: 1px solid $color-border-subtle !default;
 $modal-sticky-bg: $white !default;
 $modal-body-height: 50vh;
 $modal-popconfirm-p-size-mobile: 0.875rem;
-$modal-popconfirm-p-size: 0.778rem;
+$modal-popconfirm-p-size: 1rem; 
 $modal-popconfirm-max-width: 300px;
 
 // ##### HEADER #####
@@ -419,10 +418,10 @@ $header-center-max-height: 120px;
 $header-center-max-height-mob: 80px;
 $header-center-pad: 47px;
 $header-center-pad-mob: 16px;
-$header-center-h2-size: 1.778em; // TODO: Change size
-$header-center-h2-size-mob: 1.25em; // TODO: Change size
+$header-center-h2-size: 1.75rem; 
+$header-center-h2-size-mob: 1.25rem;
 $header-center-h2-weight: 600;
-$header-center-h3-size: 0.889em; // TODO: Change size
+$header-center-h3-size: 0.875rem;
 $header-center-icon-size: 82px;
 $header-center-icon-size-mob: 48px;
 $header-center-icon-margin: $v-gap * 2;
@@ -433,14 +432,14 @@ $header-center-search-size: $v-gap * 6;
 $header-center-search-radius: $v-gap * 3;
 $header-center-search-icon-size: $v-gap * 3;
 $header-center-search-distance: $v-gap * 10;
-$header-center-text-size: 0.889em; // TODO: Change size
+$header-center-text-size: 0.875rem;
 $header-center-button-left: 10px;
 $header-nav-button-distance: 22px;
 $header-nav-icon-arrow-megamenu-distance: 14px;
 $header-center-small-height: 104px;
 $header-center-small-mob-height: 64px;
-$header-center-small-h2-size: 1.333em; // TODO: Change size
-$header-center-small-h3-size: 0.778em; // TODO: Change size
+$header-center-small-h2-size: 1.25rem; 
+$header-center-small-h3-size: 0.75rem; 
 // Header Center theme light
 $header-center-theme-light-bg-color: $white !default;
 $header-center-theme-light-text-color: $primary !default;
@@ -482,7 +481,7 @@ $card-big-h5-l-h: 1.5rem;
 $card-big-p-size: 1.125rem;
 $card-big-p-l-h: 1.5rem;
 $card-big-top-icon-size: $v-gap * 10;
-$card-img-heading-size: 1.1111111111111112rem;
+$card-img-heading-size: 1.1111111111111112rem; // FIXME
 $card-img-heading-l-h: 1.5555555555555556rem;
 $special-card-img-width: 174px;
 // flag icon
@@ -507,7 +506,7 @@ $select-dd-small-separator-width: 65px;
 $select-dd-small-separator-bg: $gray-border !default; // UI kit
 $select-dd-icon-size: $v-gap * 3;
 $select-dd-icon-flag-top: 10px;
-$select-dd-pill-font-size: 0.7777777777777778rem;
+$select-dd-pill-font-size: 0.7777777777777778rem; // FIXME 
 $select-dd-pill-distance: $v-gap;
 $select-dd-pill-font-w: 700;
 $select-dd-header-size: 0.875rem;
