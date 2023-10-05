@@ -32,7 +32,7 @@
         "content": "\n\n<div class=\"dropdown-menu\">\n  <div class=\"link-list-wrapper\">\n      <ul class=\"link-list\">\n        <li><a class=\"dropdown-item list-item\" href=\"#\"><span>Azione 1</span></a></li>\n        <li><a class=\"dropdown-item list-item disabled\" href=\"#\" aria-disabled=\"true\"><span>Azione 2</span></a></li>\n        <li><a class=\"dropdown-item list-item\" href=\"#\"><span>Azione 3</span></a></li>\n      </ul>\n    </div>\n</div>\n"
     },
     {
-        "name": "Menu con instestazioni e separatori",
+        "name": "Menu con intestazioni e separatori",
         "content": "\n\n<div class=\"dropdown-menu\">\n  <div class=\"link-list-wrapper\">\n    <div class=\"link-list-heading\">Intestazione</div>\n    <ul class=\"link-list\">\n      <li><a class=\"dropdown-item list-item\" href=\"#\"><span>Azione 1</span></a></li>\n      <li><a class=\"dropdown-item list-item\" href=\"#\"><span>Azione 2</span></a></li>\n      <li><a class=\"dropdown-item list-item\" href=\"#\"><span>Azione 3</span></a></li>\n      <li>\n        <span class=\"divider\"></span>\n      </li>\n      <li><a class=\"dropdown-item list-item\" href=\"#\"><span>Azione 4</span></a></li>\n    </ul>\n  </div>\n</div>\n"
     },
     {

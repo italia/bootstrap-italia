@@ -12,14 +12,14 @@
 <title>Video Player · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202309251249" rel="stylesheet" />
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202310051355" rel="stylesheet" />
 
 
 <!-- Documentation extras -->
  
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.css" rel="stylesheet" />
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202309251249" rel="stylesheet" />
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202310051355" rel="stylesheet" />
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico" />
@@ -141,8 +141,8 @@
 
     <ul class="navbar-nav flex-row ms-md-auto d-none d-md-flex">
       <li class="nav-item pe-2">
-        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v2.7.0/bootstrap-italia.zip" aria-label="Download">
-          <small class="pe-2 m-0">v2.7.0</small>
+        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v2.7.1/bootstrap-italia.zip" aria-label="Download">
+          <small class="pe-2 m-0">v2.7.1</small>
           <svg class="icon icon-sm icon-light"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-download" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-download"></use></svg><span class="visually-hidden">Download</span>
         </a>
       </li>
@@ -347,6 +347,9 @@
               </li><li>
                 <a class="list-item " href="/bootstrap-italia/docs/menu-di-navigazione/megamenu/">
                   <span>Megamenu</span></a>
+              </li><li>
+                <a class="list-item " href="/bootstrap-italia/docs/menu-di-navigazione/footer/">
+                  <span>Footer</span></a>
               </li><li>
                 <a class="list-item " href="/bootstrap-italia/docs/menu-di-navigazione/navscroll/">
                   <span>Navscroll</span></a>
@@ -1118,14 +1121,14 @@ di ottenere il suo consenso in modo esplicito e consapevole alla riproduzione de
       <div class="acceptoverlay-icon">
         <svg class="icon icon-xl"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-video"></use></svg>
       </div>
-        <p>Devi accettare i cookie di YouTube per abilitare la visione di questo contenuto. Scopri cosa sono i cookie e approfondisci i dettagli nella nostra <a href="#" class="text-white">cookie policy</a>.
+        <p>Accetta i cookie di YouTube per vedere il video. Puoi rimuovere le preferenze nella <a href="#" class="text-white">cookie policy</a>.
         </p>
       <div class="acceptoverlay-buttons bg-dark">
+        <button type="button" class="btn btn-primary" data-bs-accept-from="youtube.com" onclick="loadYouTubeVideo('https://youtu.be/_0j7ZQ67KtY')">Accetta</button>
         <div class="form-check">
           <input id="chk-remember" type="checkbox" data-bs-accept-remember="" />
-          <label for="chk-remember">Ricorda la mia scelta</label>
+          <label for="chk-remember">Ricorda per tutti i video</label>
         </div>
-        <button type="button" class="btn btn-primary" data-bs-accept-from="youtube.com" onclick="loadYouTubeVideo('https://youtu.be/_0j7ZQ67KtY')">Accetta</button>
       </div>
     </div>
   </div>
@@ -1162,15 +1165,15 @@ di ottenere il suo consenso in modo esplicito e consapevole alla riproduzione de
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"acceptoverlay-icon"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-xl"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-video"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
-        <span class="nt">&lt;p&gt;</span>Devi accettare i cookie di YouTube per abilitare la visione di questo contenuto. Scopri cosa sono i cookie e approfondisci i dettagli nella nostra <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"text-white"</span><span class="nt">&gt;</span>cookie policy<span class="nt">&lt;/a&gt;</span>.
+        <span class="nt">&lt;p&gt;</span>Accetta i cookie di YouTube per vedere il video. Puoi rimuovere le preferenze nella <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"text-white"</span><span class="nt">&gt;</span>cookie policy<span class="nt">&lt;/a&gt;</span>.
         <span class="nt">&lt;/p&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"acceptoverlay-buttons bg-dark"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"chk-remember"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">data-bs-accept-remember</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"chk-remember"</span><span class="nt">&gt;</span>Ricorda la mia scelta<span class="nt">&lt;/label&gt;</span>
-        <span class="nt">&lt;/div&gt;</span>
         <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">data-bs-accept-from=</span><span class="s">"youtube.com"</span>
         <span class="na">onclick=</span><span class="s">"loadYouTubeVideo('https://youtu.be/_0j7ZQ67KtY')"</span><span class="nt">&gt;</span>Accetta<span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-check"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"chk-remember"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">data-bs-accept-remember</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"chk-remember"</span><span class="nt">&gt;</span>Ricorda per tutti i video<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
@@ -1235,16 +1238,16 @@ e molto altro ancora.</p>
     </div>
 
     
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202309251249"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202310051355"></script>
 <script>
   bootstrap.loadFonts('/bootstrap-italia/dist/fonts')
 </script><script src="/bootstrap-italia/docs/assets/src/js/vendor/vimeo-player.min.js"></script>
-<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202309251249"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202310051355"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/anchor.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/clipboard.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tsparticles.min.js"></script>
 
-<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202309251249"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202310051355"></script>
 
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tweenjs.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/easeljs.min.js"></script>
@@ -1261,7 +1264,7 @@ e molto altro ancora.</p>
     { src: '/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png', id: 'cover-7' },
   ]
 </script>
-<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202309251249"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202310051355"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/docsearch.min.js"></script>
 
 <script>

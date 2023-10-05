@@ -15,9 +15,13 @@ class AcceptOverlay extends BaseComponent {
   constructor(element, config) {
     const parentElement = element.closest('.acceptoverlay');
     super(parentElement);
+    this._overlayable = element.closest('.acceptoverlayable');
     const remember = cookies.isChoiceRemembered(config.service);
     this._isShown = true;
     this._toggleElement = element;
+    if (this._element.classList.contains(CLASS_NAME_SHOW)) {
+      this._overlayable.classList.add(CLASS_NAME_SHOW);
+    }
     if (remember) {
       this.hide();
       setTimeout(() => {
@@ -67,6 +71,7 @@ class AcceptOverlay extends BaseComponent {
     }
 
     this._element.classList.remove(CLASS_NAME_SHOW);
+    this._overlayable.classList.remove(CLASS_NAME_SHOW);
 
     this._queueCallback(() => this._hideElement(), this._element, isAnimated);
   }
@@ -87,6 +92,7 @@ class AcceptOverlay extends BaseComponent {
     }
 
     this._element.classList.add(CLASS_NAME_SHOW);
+    this._overlayable.add(CLASS_NAME_SHOW);
 
     const transitionComplete = () => {
       this._isTransitioning = false;
