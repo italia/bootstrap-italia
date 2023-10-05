@@ -269,7 +269,7 @@ $link-list-divider-height: 1px;
 $link-list-divider-distance: 8px;
 $link-list-h-pad: 24px;
 $link-list-v-pad: 0.25em;
-$link-list-paragraph-size: 0.75rem; 
+$link-list-paragraph-size: 0.75rem;
 $link-list-left-icon-space: 8px;
 $link-list-avatar-radius: 50px;
 $link-list-avatar-margin: 8px;
@@ -308,7 +308,7 @@ $link-list-footer-distance-bottom: 0.5rem;
 // Pager
 $pager-margin-bottom: 0.5rem;
 $pager-item-size-mobile: 2.5rem; // 40px
-$pager-item-size-tablet: 3rem; // 48px 
+$pager-item-size-tablet: 3rem; // 48px
 $pager-item-border-radius: 4px;
 $pager-item-margin-right: 5px;
 $pager-item-current-color: $primary !default;
@@ -382,7 +382,7 @@ $modal-heading-border: 1px solid $color-border-subtle !default;
 $modal-sticky-bg: $white !default;
 $modal-body-height: 50vh;
 $modal-popconfirm-p-size-mobile: 0.875rem;
-$modal-popconfirm-p-size: 1rem; 
+$modal-popconfirm-p-size: 1rem;
 $modal-popconfirm-max-width: 300px;
 
 // ##### HEADER #####
@@ -418,7 +418,7 @@ $header-center-max-height: 120px;
 $header-center-max-height-mob: 80px;
 $header-center-pad: 47px;
 $header-center-pad-mob: 16px;
-$header-center-h2-size: 1.75rem; 
+$header-center-h2-size: 1.75rem;
 $header-center-h2-size-mob: 1.25rem;
 $header-center-h2-weight: 600;
 $header-center-h3-size: 0.875rem;
@@ -438,8 +438,8 @@ $header-nav-button-distance: 22px;
 $header-nav-icon-arrow-megamenu-distance: 14px;
 $header-center-small-height: 104px;
 $header-center-small-mob-height: 64px;
-$header-center-small-h2-size: 1.25rem; 
-$header-center-small-h3-size: 0.75rem; 
+$header-center-small-h2-size: 1.25rem;
+$header-center-small-h3-size: 0.75rem;
 // Header Center theme light
 $header-center-theme-light-bg-color: $white !default;
 $header-center-theme-light-text-color: $primary !default;
@@ -506,7 +506,7 @@ $select-dd-small-separator-width: 65px;
 $select-dd-small-separator-bg: $gray-border !default; // UI kit
 $select-dd-icon-size: $v-gap * 3;
 $select-dd-icon-flag-top: 10px;
-$select-dd-pill-font-size: 0.7777777777777778rem; // FIXME 
+$select-dd-pill-font-size: 0.7777777777777778rem; // FIXME
 $select-dd-pill-distance: $v-gap;
 $select-dd-pill-font-w: 700;
 $select-dd-header-size: 0.875rem;

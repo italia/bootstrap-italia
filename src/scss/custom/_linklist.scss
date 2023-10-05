@@ -39,7 +39,7 @@
         font-size: $link-list-font-size;
         line-height: $link-list-line-height;
         display: block;
-        padding: .25rem $link-list-h-pad;
+        padding: 0.25rem $link-list-h-pad;
         text-decoration: none;
         position: relative;
         &.icon-right,
@@ -252,8 +252,8 @@
 //small - tablet
 @include media-breakpoint-up(sm) {
   .link-list-wrapper ul li a.large {
-    padding-top: .5rem;
-    padding-bottom: .5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
     font-size: $link-list-font-size-l;
   }
 }
