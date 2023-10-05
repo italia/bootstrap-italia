@@ -2,7 +2,7 @@
 
 .acceptoverlayable {
   position: relative;
-  &:has(.acceptoverlay.show) {
+  &.show {
     min-height: 450px;
   }
 }
