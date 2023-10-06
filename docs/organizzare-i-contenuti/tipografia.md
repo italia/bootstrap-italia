@@ -10,6 +10,17 @@ Bootstrap imposta alcune proprietà di base per la tipografia e gli stili dei
 link. Quando è necessario un maggiore controllo, fornisce delle
 [classi di utilità testuali]({{ site.baseurl }}/docs/organizzare-i-contenuti/testo/).
 
+{% capture callout %}
+Cosa cambia nella tipografia dalla versione **2.7.0** della libreria
+
+- reimpostata la dimensione del carattere di base su `16px` su `body`.
+- sostituite le unità `em` con `rem`.
+- aggiornati i valori `font-size` per corrispondere al nuovo calcolo dell'unità `rem`.
+- rimosse le variabili obsolete e inutilizzate da `_variables.scss`
+- variabili specifiche dei componenti aggiornate e allineate al `kit UI v3.0`
+
+{% endcapture %}{% include callout.html content=callout type="danger" %}
+
 ## Famiglie di Caratteri
 
 Come descritto in dettaglio nel capitolo sullo UI Kit, le Linee Guida di Design
