@@ -85,7 +85,7 @@ https://github.com/algolia/docsearch{% endcomment %}
     .forEach(function (node) {
       const button = document.createElement('button'),
         divContainer = document.createElement('div');
-      divContainer.classList.add('d-flex', 'justify-content-end');
+      divContainer.classList.add('copy-button-container');
       button.type = 'button';
       button.ariaLabel = 'Copia il codice negli appunti';
       button.innerText = 'Copia';
@@ -109,14 +109,16 @@ https://github.com/algolia/docsearch{% endcomment %}
        * {% capture example %}
        * {% endcapture %}{% include example.html content=example %}  
        */
-      if (node.nodeName == 'FIGURE') { node.insertBefore(divContainer, node.querySelector('pre')); }
+      if (node.nodeName == 'FIGURE') { 
+        node.insertBefore(divContainer, node.querySelector('pre')); 
+      }
       /*
       * Snippet
       * ```html
       * ``` 
       */
       else if (node.nodeName == 'PRE') {
-        node.insertBefore(divContainer, node.querySelector('code'));
+        node.insertAdjacentElement('beforebegin', divContainer);
       }
     });
 </script>
