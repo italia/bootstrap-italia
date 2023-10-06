@@ -97,6 +97,11 @@ https://github.com/algolia/docsearch{% endcomment %}
         button.innerText = 'Copiato';
         button.classList.remove('btn-primary');
         button.classList.add('btn-success');
+        setTimeout(() => {
+          button.classList.remove('btn-success');
+          button.classList.add('btn-primary');
+          button.innerText = 'Copia';
+        }, 5000);
       });
       divContainer.appendChild(button);
       /**
