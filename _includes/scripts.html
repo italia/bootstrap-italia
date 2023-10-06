@@ -78,57 +78,40 @@ https://github.com/algolia/docsearch{% endcomment %}
 
 <script>
   /**
-   * Aggiungo il bottone copia negli elementi creati con 
-   * {% capture example %}
-   * {% endcapture %}{% include example.html content=example %}
+   * Aggiungo il bottone copia negli elementi di esempio codice
    */
   document
-    .querySelectorAll('figure.highlight')
-    .forEach(function (figure) {
-      let button = document.createElement('button'),
-        divContainer = document.createElement('div'),
-        pre = figure.querySelector('pre');
-      divContainer.classList.add('d-flex', 'justify-content-end');
-      button.type = 'button';
-      button.ariaLabel = 'Copy code to clipboard';
-      button.innerText = 'Copia';
-      button.classList.add('btn', 'btn-primary', 'btn-xs');
-      button.setAttribute('type', 'button');
-      button.addEventListener('click', function () {
-        var code = figure.querySelector('code').innerText.trim();
-        navigator.clipboard.writeText(code);
-        button.innerText = 'Copiato';
-        button.classList.remove('btn-primary');
-        button.classList.add('btn-success');
-      });
-      divContainer.appendChild(button);
-      figure.insertBefore(divContainer, pre);
-    });
-
-  /**
-  * Aggiungo il bottone copia negli elementi creati con 
-  * ```html
-  * ```
-  */
-  document
-    .querySelectorAll('pre.highlight')
-    .forEach(function (pre) {
-      let button = document.createElement('button'),
+    .querySelectorAll('figure.highlight, pre.highlight')
+    .forEach(function (node) {
+      const button = document.createElement('button'),
         divContainer = document.createElement('div');
       divContainer.classList.add('d-flex', 'justify-content-end');
       button.type = 'button';
-      button.ariaLabel = 'Copy code to clipboard';
+      button.ariaLabel = 'Copia il codine negli appunti';
       button.innerText = 'Copia';
       button.classList.add('btn', 'btn-primary', 'btn-xs');
       button.setAttribute('type', 'button');
       button.addEventListener('click', function () {
-        var code = pre.querySelector('code').innerText.trim();
+        const code = node.querySelector('code').innerText.trim();
         navigator.clipboard.writeText(code);
         button.innerText = 'Copiato';
         button.classList.remove('btn-primary');
         button.classList.add('btn-success');
       });
       divContainer.appendChild(button);
-      pre.insertBefore(divContainer, pre.querySelector('code'));
+      /**
+       * Snippet
+       * {% capture example %}
+       * {% endcapture %}{% include example.html content=example %}  
+       */
+      if (node.nodeName == 'FIGURE') { node.insertBefore(divContainer, node.querySelector('pre')); }
+      /*
+      * Snippet
+      * ```html
+      * ``` 
+      */
+      else if (node.nodeName == 'PRE') {
+        node.insertBefore(divContainer, node.querySelector('code'));
+      }
     });
 </script>
