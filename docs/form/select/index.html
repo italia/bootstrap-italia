@@ -12,14 +12,14 @@
 <title>Select · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202310060854" rel="stylesheet" />
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202310090926" rel="stylesheet" />
 
 
 <!-- Documentation extras -->
  
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.css" rel="stylesheet" />
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202310060854" rel="stylesheet" />
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202310090926" rel="stylesheet" />
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico" />
@@ -707,16 +707,16 @@
     </div>
 
     
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202310060854"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202310090926"></script>
 <script>
   bootstrap.loadFonts('/bootstrap-italia/dist/fonts')
 </script><script src="/bootstrap-italia/docs/assets/src/js/vendor/vimeo-player.min.js"></script>
-<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202310060854"></script>
+<script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202310090926"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/anchor.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/clipboard.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tsparticles.min.js"></script>
 
-<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202310060854"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202310090926"></script>
 
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tweenjs.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/easeljs.min.js"></script>
@@ -733,7 +733,7 @@
     { src: '/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png', id: 'cover-7' },
   ]
 </script>
-<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202310060854"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202310090926"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/docsearch.min.js"></script>
 
 <script>
@@ -749,6 +749,54 @@
     },
     debug: false, // Set debug to true if you want to inspect the dropdown
   })
+</script><script>
+  /**
+   * Aggiungo il bottone copia negli elementi di esempio codice
+   */
+  document
+    .querySelectorAll('figure.highlight, pre.highlight')
+    .forEach(function (node) {
+      const button = document.createElement('button'),
+        divContainer = document.createElement('div');
+      divContainer.classList.add('copy-button-container');
+      button.type = 'button';
+      button.ariaLabel = 'Copia il codice negli appunti';
+      button.innerText = 'Copia';
+      button.classList.add('btn', 'btn-primary', 'btn-xs');
+      button.setAttribute('type', 'button');
+      button.addEventListener('click', function () {
+        const code = node.querySelector('code').innerText.trim();
+        navigator.clipboard.writeText(code);
+        button.innerText = 'Copiato';
+        button.classList.remove('btn-primary');
+        button.classList.add('btn-success');
+        setTimeout(() => {
+          button.classList.remove('btn-success');
+          button.classList.add('btn-primary');
+          button.innerText = 'Copia';
+        }, 5000);
+      });
+      divContainer.appendChild(button);
+      /**
+       * Snippet
+       * <div class="bd-example">
+       * </div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html">       * </code></pre></figure>
+  
+       */
+      if (node.nodeName == 'FIGURE') { 
+        node.insertBefore(divContainer, node.querySelector('pre')); 
+      }
+      /*
+      * Snippet
+      * ```html
+      * ``` 
+      */
+      else if (node.nodeName == 'PRE') {
+        node.insertAdjacentElement('beforebegin', divContainer);
+      }
+    });
 </script>
+
   </body>
 </html>

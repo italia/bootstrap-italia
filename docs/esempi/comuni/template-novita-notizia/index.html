@@ -12,12 +12,12 @@
 <title>Template Pagina Notizia · Bootstrap Italia</title>
 
 <!--Bootstrap comuni CSS-->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia-comuni.min.css?202310060854" rel="stylesheet" />
+<link href="/bootstrap-italia/dist/css/bootstrap-italia-comuni.min.css?202310090926" rel="stylesheet" />
 
 
 <!-- Documentation extras -->
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202310060854" rel="stylesheet" />
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202310090926" rel="stylesheet" />
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico" />
@@ -780,22 +780,26 @@
 </a>
 
  
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202310060854"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202310090926"></script>
 <script>
   bootstrap.loadFonts('/bootstrap-italia/dist/fonts')
 </script><!-- Notification per tornare alla pagina principale -->
-<div class="notification dismissable with-icon" role="alert" id="notification-esempi" aria-labelledby="notification-esempi-title">
+<div class="notification dismissable with-icon" role="alert" id="notification-esempi"
+  aria-labelledby="notification-esempi-title">
   <h5 id="notification-esempi-title">
     <svg class="icon">
-      <use href="/bootstrap-italia/dist/svg/sprites.svg#it-info-circle" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-info-circle"></use></svg
-    >Esempio di utilizzo
+      <use href="/bootstrap-italia/dist/svg/sprites.svg#it-info-circle"
+        xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-info-circle"></use>
+    </svg>
+    Esempio di utilizzo
   </h5>
   <p>
     <a href="/bootstrap-italia/docs/esempi/">Torna alla pagina principale degli esempi</a>
   </p>
   <button type="button" class="btn notification-close">
     <svg class="icon">
-      <use href="/bootstrap-italia/dist/svg/sprites.svg#it-close" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-close"></use>
+      <use href="/bootstrap-italia/dist/svg/sprites.svg#it-close"
+        xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-close"></use>
     </svg>
     <span class="visually-hidden">Chiudi notifica: Titolo notification</span>
   </button>
@@ -805,6 +809,52 @@
   /*$(document).ready(function () {
     notificationShow('notification-esempi')
   })*/
+</script><script>
+  /**
+   * Aggiungo il bottone copia negli elementi di esempio codice
+   */
+  document
+    .querySelectorAll('figure.highlight, pre.highlight')
+    .forEach(function (node) {
+      const button = document.createElement('button'),
+        divContainer = document.createElement('div');
+      divContainer.classList.add('copy-button-container');
+      button.type = 'button';
+      button.ariaLabel = 'Copia il codice negli appunti';
+      button.innerText = 'Copia';
+      button.classList.add('btn', 'btn-primary', 'btn-xs');
+      button.setAttribute('type', 'button');
+      button.addEventListener('click', function () {
+        const code = node.querySelector('code').innerText.trim();
+        navigator.clipboard.writeText(code);
+        button.innerText = 'Copiato';
+        button.classList.remove('btn-primary');
+        button.classList.add('btn-success');
+        setTimeout(() => {
+          button.classList.remove('btn-success');
+          button.classList.add('btn-primary');
+          button.innerText = 'Copia';
+        }, 5000);
+      });
+      divContainer.appendChild(button);
+      /**
+       * Snippet
+       * <div class="bd-example">
+       * </div><figure class="highlight"><pre><code class="language-html" data-lang="html">       * </code></pre></figure>  
+       */
+      if (node.nodeName == 'FIGURE') { 
+        node.insertBefore(divContainer, node.querySelector('pre')); 
+      }
+      /*
+      * Snippet
+      * ```html
+      * ``` 
+      */
+      else if (node.nodeName == 'PRE') {
+        node.insertAdjacentElement('beforebegin', divContainer);
+      }
+    });
 </script>
+
   </body>
 </html>
