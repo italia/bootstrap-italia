@@ -28,7 +28,8 @@
   ]
 </script>
 <script src="{{ site.baseurl }}/docs/assets/src/js/cover-animation.js?{{ buildTime }}"></script>
-{%- endif -%} {%- if page.layout == "docs" -%} {% comment %}La ricerca è gestita con Algolia DocSearch https://github.com/algolia/docsearch{% endcomment %}
+{%- endif -%} {%- if page.layout == "docs" -%} {% comment %}La ricerca è gestita con Algolia DocSearch
+https://github.com/algolia/docsearch{% endcomment %}
 <script src="{{ site.baseurl }}/docs/assets/src/js/vendor/docsearch.min.js"></script>
 
 <script>
@@ -47,18 +48,22 @@
 </script>
 {%- endif -%} {%- if page.layout == "base" -%}
 <!-- Notification per tornare alla pagina principale -->
-<div class="notification dismissable with-icon" role="alert" id="notification-esempi" aria-labelledby="notification-esempi-title">
+<div class="notification dismissable with-icon" role="alert" id="notification-esempi"
+  aria-labelledby="notification-esempi-title">
   <h5 id="notification-esempi-title">
     <svg class="icon">
-      <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-info-circle" xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-info-circle"></use></svg
-    >Esempio di utilizzo
+      <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-info-circle"
+        xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-info-circle"></use>
+    </svg>
+    Esempio di utilizzo
   </h5>
   <p>
     <a href="{{ site.baseurl }}/docs/esempi/">Torna alla pagina principale degli esempi</a>
   </p>
   <button type="button" class="btn notification-close">
     <svg class="icon">
-      <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close" xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use>
+      <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"
+        xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use>
     </svg>
     <span class="visually-hidden">Chiudi notifica: Titolo notification</span>
   </button>
@@ -70,3 +75,50 @@
   })*/
 </script>
 {%- endif -%}
+
+<script>
+  /**
+   * Aggiungo il bottone copia negli elementi di esempio codice
+   */
+  document
+    .querySelectorAll('figure.highlight, pre.highlight')
+    .forEach(function (node) {
+      const button = document.createElement('button'),
+        divContainer = document.createElement('div');
+      divContainer.classList.add('copy-button-container');
+      button.type = 'button';
+      button.ariaLabel = 'Copia il codice negli appunti';
+      button.innerText = 'Copia';
+      button.classList.add('btn', 'btn-primary', 'btn-xs');
+      button.setAttribute('type', 'button');
+      button.addEventListener('click', function () {
+        const code = node.querySelector('code').innerText.trim();
+        navigator.clipboard.writeText(code);
+        button.innerText = 'Copiato';
+        button.classList.remove('btn-primary');
+        button.classList.add('btn-success');
+        setTimeout(() => {
+          button.classList.remove('btn-success');
+          button.classList.add('btn-primary');
+          button.innerText = 'Copia';
+        }, 5000);
+      });
+      divContainer.appendChild(button);
+      /**
+       * Snippet
+       * {% capture example %}
+       * {% endcapture %}{% include example.html content=example %}  
+       */
+      if (node.nodeName == 'FIGURE') { 
+        node.insertBefore(divContainer, node.querySelector('pre')); 
+      }
+      /*
+      * Snippet
+      * ```html
+      * ``` 
+      */
+      else if (node.nodeName == 'PRE') {
+        node.insertAdjacentElement('beforebegin', divContainer);
+      }
+    });
+</script>
