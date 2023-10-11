@@ -100,7 +100,7 @@ const DEFAULT_CONFIG = { languages: { it: itLang }, language: 'it' }
 
 const Default = {}
 
-const VIDEOJS_YT_PLUGIN_SRC = "https://cdnjs.cloudflare.com/ajax/libs/videojs-youtube/3.0.1/Youtube.min.js"
+const VIDEOJS_YT_PLUGIN_SRC = 'https://cdnjs.cloudflare.com/ajax/libs/videojs-youtube/3.0.1/Youtube.min.js'
 
 window.videojs = videojs
 
@@ -116,8 +116,12 @@ class VideoPlayer extends BaseComponent {
   // Public
 
   setYouTubeVideo(url) {
-    if (!Array.from(document.querySelectorAll('script')).map(scr => scr.src).includes(VIDEOJS_YT_PLUGIN_SRC)) {
-      const script = document.createElement("script")
+    if (
+      !Array.from(document.querySelectorAll('script'))
+        .map((scr) => scr.src)
+        .includes(VIDEOJS_YT_PLUGIN_SRC)
+    ) {
+      const script = document.createElement('script')
       script.src = VIDEOJS_YT_PLUGIN_SRC
       document.head.appendChild(script)
     }
