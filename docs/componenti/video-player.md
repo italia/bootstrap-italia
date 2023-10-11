@@ -357,12 +357,9 @@ protezione della privacy degli utenti.
 {% capture callout %}
 
 Gli esempi che seguono fanno tutti riferimento alla piattaforma di terze parti YouTube. 
-Per far funzionare questi esempi nel proprio progetto occorre installare l'apposito plugin 
-Video.js importandolo come script.
-
-```html
-<script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-youtube/3.0.1/Youtube.min.js"></script>
-```
+Questi esempi funzionano grazie al caricamento automatico dell'apposito [plugin 
+YouTube per Video.js](https://cdnjs.cloudflare.com/ajax/libs/videojs-youtube/3.0.1/Youtube.min.js)
+già integrato in Bootstrap Italia.
 
 {% endcapture %}{% include callout.html content=callout type="warning" %}
 
