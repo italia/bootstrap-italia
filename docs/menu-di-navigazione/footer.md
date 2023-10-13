@@ -12,6 +12,7 @@ Il **footer** (in italiano piè di pagina) è una sezione che contiene tutte le 
 Potrebbe anche contenere riferimenti alle pagine social dell'amministrazione.
 
 ## Footer completo
+{% comment %}Example name: Completo{% endcomment %}
 {% capture example %}
 <footer class="it-footer">
   <div class="it-footer-main">
@@ -150,6 +151,7 @@ Potrebbe anche contenere riferimenti alle pagine social dell'amministrazione.
 {% endcapture %}{% include example.html content=example %}
 
 ## Footer solo contatti
+{% comment %}Example name: Compatto{% endcomment %}
 {% capture example %}
 <footer class="it-footer">
   <div class="it-footer-main">
