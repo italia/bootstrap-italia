@@ -3,7 +3,7 @@ import BaseComponent from 'bootstrap/js/src/base-component.js'
 import SelectorEngine from 'bootstrap/js/src/dom/selector-engine'
 import Manipulator from 'bootstrap/js/src/dom/manipulator'
 import videojs from 'video.js'
-import {initYoutubePlugin} from './util/youtube-video'
+import { initYoutubePlugin } from './util/youtube-video'
 
 const NAME = 'videoplayer'
 
