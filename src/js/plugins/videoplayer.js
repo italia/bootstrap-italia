@@ -3,6 +3,7 @@ import BaseComponent from 'bootstrap/js/src/base-component.js'
 import SelectorEngine from 'bootstrap/js/src/dom/selector-engine'
 import Manipulator from 'bootstrap/js/src/dom/manipulator'
 import videojs from 'video.js'
+import {initYoutubePlugin} from './util/youtube-video'
 
 const NAME = 'videoplayer'
 
@@ -100,8 +101,6 @@ const DEFAULT_CONFIG = { languages: { it: itLang }, language: 'it' }
 
 const Default = {}
 
-const VIDEOJS_YT_PLUGIN_SRC = 'https://cdnjs.cloudflare.com/ajax/libs/videojs-youtube/3.0.1/Youtube.min.js'
-
 window.videojs = videojs
 
 class VideoPlayer extends BaseComponent {
@@ -109,29 +108,15 @@ class VideoPlayer extends BaseComponent {
     super(element)
     element.classList.add('video-js', 'vjs-theme-bootstrap-italia', 'vjs-fluid', 'vjs-big-play-centered')
     this._config = this._getConfig(config)
-
     this.player = videojs(element, DEFAULT_CONFIG)
   }
 
   // Public
 
   setYouTubeVideo(url) {
-    if (
-      !Array.from(document.querySelectorAll('script'))
-        .map((scr) => scr.src)
-        .includes(VIDEOJS_YT_PLUGIN_SRC)
-    ) {
-      const script = document.createElement('script')
-      script.src = VIDEOJS_YT_PLUGIN_SRC
-      document.head.appendChild(script)
-    }
-    const searchPlugin = setInterval(() => {
-      if (window.videojs.getTech('youtube')) {
-        this.player.tech('youtube')
-        this.player.src({ type: 'video/youtube', src: url })
-        clearInterval(searchPlugin)
-      }
-    }, 300)
+    initYoutubePlugin(videojs)
+    this.player.tech('youtube')
+    this.player.src({ type: 'video/youtube', src: url })
   }
 
   // Getters
