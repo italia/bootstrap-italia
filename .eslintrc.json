@@ -9,7 +9,8 @@
   "ignorePatterns": [
     "*.min.js",
     "*.d.ts",
-    "**/vendor/*.js"
+    "**/vendor/*.js",
+    "**/util/youtube-video.js"
   ],
   "rules": {
     "prettier/prettier": [
