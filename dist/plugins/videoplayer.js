@@ -2,6 +2,7 @@ import BaseComponent from 'bootstrap/js/src/base-component.js';
 import SelectorEngine from 'bootstrap/js/src/dom/selector-engine';
 import Manipulator from 'bootstrap/js/src/dom/manipulator';
 import videojs from 'video.js';
+import { initYoutubePlugin } from './util/youtube-video.js';
 
 const NAME = 'videoplayer';
 
@@ -106,13 +107,13 @@ class VideoPlayer extends BaseComponent {
     super(element);
     element.classList.add('video-js', 'vjs-theme-bootstrap-italia', 'vjs-fluid', 'vjs-big-play-centered');
     this._config = this._getConfig(config);
-
     this.player = videojs(element, DEFAULT_CONFIG);
   }
 
   // Public
 
   setYouTubeVideo(url) {
+    initYoutubePlugin(videojs);
     this.player.tech('youtube');
     this.player.src({ type: 'video/youtube', src: url });
   }
