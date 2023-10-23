@@ -37,3 +37,21 @@
     }
   }
 }
+
+@include media-breakpoint-down(sm) {
+  .vjs-remaining-time {
+    display: none;
+  }
+
+  .vjs-picture-in-picture-control {
+    display: none !important;
+  }
+
+  .vjs-control-bar {
+    overflow: hidden;
+  }
+
+  .video-js .vjs-control {
+    width: 3.5em;
+  }
+}
