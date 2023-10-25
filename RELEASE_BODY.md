@@ -1,5 +1,5 @@
-## [2.7.4](https://github.com/italia/bootstrap-italia/compare/v2.7.3...v2.7.4) (2023-10-18)
+## [2.7.5](https://github.com/italia/bootstrap-italia/compare/v2.7.4...v2.7.5) (2023-10-25)
 
 ### Bug Fixes
 
-* load youtube plugin from bootstrap italia ([1b55ad3](https://github.com/italia/bootstrap-italia/commit/1b55ad3169095f638743c15dd4ed737eee2b72c3))
+* hide unnecessary video controls on mobile ([b671d02](https://github.com/italia/bootstrap-italia/commit/b671d02ba36551372b6aa7ef88ee0a1f22a7c88f))
