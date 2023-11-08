@@ -12,14 +12,14 @@
 <title>Tabelle · Bootstrap Italia</title>
 
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202310252032" rel="stylesheet" />
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202311081458" rel="stylesheet" />
 
 
 <!-- Documentation extras -->
  
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.css" rel="stylesheet" />
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202310252032" rel="stylesheet" />
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202311081458" rel="stylesheet" />
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico" />
@@ -598,6 +598,12 @@
     <h3>Tabelle</h3>
     <ul id="toc" class="section-nav">
 <li class="toc-entry toc-h2"><a href="#esempi">Esempi</a></li>
+<li class="toc-entry toc-h2"><a href="#tabelle-responsive">Tabelle responsive</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#sempre-responsive">Sempre responsive</a></li>
+<li class="toc-entry toc-h3"><a href="#breakpoint-specifici">Breakpoint specifici</a></li>
+</ul>
+</li>
 <li class="toc-entry toc-h2"><a href="#varianti">Varianti</a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#tabelle-colorate">Tabelle colorate</a></li>
@@ -618,12 +624,6 @@
 <li class="toc-entry toc-h3"><a href="#intestazione">Intestazione</a></li>
 <li class="toc-entry toc-h3"><a href="#footer">Footer</a></li>
 <li class="toc-entry toc-h3"><a href="#caption">Caption</a></li>
-</ul>
-</li>
-<li class="toc-entry toc-h2"><a href="#tabelle-responsive">Tabelle responsive</a>
-<ul>
-<li class="toc-entry toc-h3"><a href="#sempre-responsive">Sempre responsive</a></li>
-<li class="toc-entry toc-h3"><a href="#breakpoint-specifici">Breakpoint specifici</a></li>
 </ul>
 </li>
 </ul>
@@ -703,6 +703,563 @@
     <span class="nt">&lt;/tr&gt;</span>
   <span class="nt">&lt;/tbody&gt;</span>
 <span class="nt">&lt;/table&gt;</span></code></pre></figure>
+
+<h2 id="tabelle-responsive">Tabelle responsive</h2>
+
+<p>Le tabelle responsive consentono di scorrere le tabelle orizzontalmente con facilità. Rendi ogni tabella responsive su tutti i viewports racchiudendo un <code class="language-plaintext highlighter-rouge">.table</code> con <code class="language-plaintext highlighter-rouge">.table-responsive</code>. Oppure, scegli un breakpoint massimo con il quale ottenere una tabella responsive usando <code class="language-plaintext highlighter-rouge">.table-responsive{-sm|-md|-lg|-xl|-xxl}</code>, rispettivamente con <code class="language-plaintext highlighter-rouge">max-width</code> di 576px, 768px, 992px, 1200px, 1400px.</p>
+
+<div class="bd-callout bd-callout-warning">
+<h5 id="ritaglio--troncamento-verticale">Ritaglio / troncamento verticale</h5>
+
+<p>Le tabelle responsive fanno uso di <code class="language-plaintext highlighter-rouge">overflow-y: hidden</code>, che rimuove qualsiasi contenuto che va oltre i bordi inferiore o superiore della tabella. In particolare, questo può ritagliare i menu a discesa e altri widget di terze parti.</p>
+</div>
+
+<h3 id="sempre-responsive">Sempre responsive</h3>
+
+<p>Attraverso ogni breakpoint, usa <code class="language-plaintext highlighter-rouge">.table-responsive</code> per tabelle con scorrimento verticale.</p>
+
+<div class="bd-example">
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Intestazione</th>
+          <th scope="col">Intestazione</th>
+          <th scope="col">Intestazione</th>
+          <th scope="col">Intestazione</th>
+          <th scope="col">Intestazione</th>
+          <th scope="col">Intestazione</th>
+          <th scope="col">Intestazione</th>
+          <th scope="col">Intestazione</th>
+          <th scope="col">Intestazione</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html">  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"table-responsive"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;thead&gt;</span>
+        <span class="nt">&lt;tr&gt;</span>
+          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>#<span class="nt">&lt;/th&gt;</span>
+          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/th&gt;</span>
+          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/th&gt;</span>
+          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/th&gt;</span>
+          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/th&gt;</span>
+          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/th&gt;</span>
+          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/th&gt;</span>
+          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/th&gt;</span>
+          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/th&gt;</span>
+          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/th&gt;</span>
+        <span class="nt">&lt;/tr&gt;</span>
+      <span class="nt">&lt;/thead&gt;</span>
+      <span class="nt">&lt;tbody&gt;</span>
+        <span class="nt">&lt;tr&gt;</span>
+          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/th&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;/tr&gt;</span>
+        <span class="nt">&lt;tr&gt;</span>
+          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/th&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;/tr&gt;</span>
+        <span class="nt">&lt;tr&gt;</span>
+          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/th&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;/tr&gt;</span>
+      <span class="nt">&lt;/tbody&gt;</span>
+    <span class="nt">&lt;/table&gt;</span>
+  <span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h3 id="breakpoint-specifici">Breakpoint specifici</h3>
+
+<p>Usa <code class="language-plaintext highlighter-rouge">.table-responsive{-sm|-md|-lg|-xl|-xxl}</code> come necessario per creare tabelle responsive fino a un punto di interruzione particolare. Da quel punto di interruzione in su, la tabella si comporterà normalmente e non scorrerà orizzontalmente.</p>
+
+<div class="bd-example">
+
+
+
+  <div class="table-responsive-sm">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Intestazione</th>
+          <th scope="col">Intestazione</th>
+          <th scope="col">Intestazione</th>
+          <th scope="col">Intestazione</th>
+          <th scope="col">Intestazione</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+  <div class="table-responsive-md">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Intestazione</th>
+          <th scope="col">Intestazione</th>
+          <th scope="col">Intestazione</th>
+          <th scope="col">Intestazione</th>
+          <th scope="col">Intestazione</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+  <div class="table-responsive-lg">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Intestazione</th>
+          <th scope="col">Intestazione</th>
+          <th scope="col">Intestazione</th>
+          <th scope="col">Intestazione</th>
+          <th scope="col">Intestazione</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+  <div class="table-responsive-xl">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Intestazione</th>
+          <th scope="col">Intestazione</th>
+          <th scope="col">Intestazione</th>
+          <th scope="col">Intestazione</th>
+          <th scope="col">Intestazione</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+  <div class="table-responsive-xxl">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Intestazione</th>
+          <th scope="col">Intestazione</th>
+          <th scope="col">Intestazione</th>
+          <th scope="col">Intestazione</th>
+          <th scope="col">Intestazione</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html">  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"table-responsive-sm"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;thead&gt;</span>
+        <span class="nt">&lt;tr&gt;</span>
+          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>#<span class="nt">&lt;/th&gt;</span>
+          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/th&gt;</span>
+          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/th&gt;</span>
+          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/th&gt;</span>
+          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/th&gt;</span>
+          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/th&gt;</span>
+        <span class="nt">&lt;/tr&gt;</span>
+      <span class="nt">&lt;/thead&gt;</span>
+      <span class="nt">&lt;tbody&gt;</span>
+        <span class="nt">&lt;tr&gt;</span>
+          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/th&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;/tr&gt;</span>
+        <span class="nt">&lt;tr&gt;</span>
+          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/th&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;/tr&gt;</span>
+        <span class="nt">&lt;tr&gt;</span>
+          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/th&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;/tr&gt;</span>
+      <span class="nt">&lt;/tbody&gt;</span>
+    <span class="nt">&lt;/table&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+
+
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"table-responsive-md"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;thead&gt;</span>
+        <span class="nt">&lt;tr&gt;</span>
+          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>#<span class="nt">&lt;/th&gt;</span>
+          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/th&gt;</span>
+          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/th&gt;</span>
+          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/th&gt;</span>
+          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/th&gt;</span>
+          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/th&gt;</span>
+        <span class="nt">&lt;/tr&gt;</span>
+      <span class="nt">&lt;/thead&gt;</span>
+      <span class="nt">&lt;tbody&gt;</span>
+        <span class="nt">&lt;tr&gt;</span>
+          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/th&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;/tr&gt;</span>
+        <span class="nt">&lt;tr&gt;</span>
+          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/th&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;/tr&gt;</span>
+        <span class="nt">&lt;tr&gt;</span>
+          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/th&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;/tr&gt;</span>
+      <span class="nt">&lt;/tbody&gt;</span>
+    <span class="nt">&lt;/table&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+
+
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"table-responsive-lg"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;thead&gt;</span>
+        <span class="nt">&lt;tr&gt;</span>
+          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>#<span class="nt">&lt;/th&gt;</span>
+          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/th&gt;</span>
+          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/th&gt;</span>
+          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/th&gt;</span>
+          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/th&gt;</span>
+          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/th&gt;</span>
+        <span class="nt">&lt;/tr&gt;</span>
+      <span class="nt">&lt;/thead&gt;</span>
+      <span class="nt">&lt;tbody&gt;</span>
+        <span class="nt">&lt;tr&gt;</span>
+          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/th&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;/tr&gt;</span>
+        <span class="nt">&lt;tr&gt;</span>
+          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/th&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;/tr&gt;</span>
+        <span class="nt">&lt;tr&gt;</span>
+          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/th&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;/tr&gt;</span>
+      <span class="nt">&lt;/tbody&gt;</span>
+    <span class="nt">&lt;/table&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+
+
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"table-responsive-xl"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;thead&gt;</span>
+        <span class="nt">&lt;tr&gt;</span>
+          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>#<span class="nt">&lt;/th&gt;</span>
+          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/th&gt;</span>
+          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/th&gt;</span>
+          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/th&gt;</span>
+          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/th&gt;</span>
+          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/th&gt;</span>
+        <span class="nt">&lt;/tr&gt;</span>
+      <span class="nt">&lt;/thead&gt;</span>
+      <span class="nt">&lt;tbody&gt;</span>
+        <span class="nt">&lt;tr&gt;</span>
+          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/th&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;/tr&gt;</span>
+        <span class="nt">&lt;tr&gt;</span>
+          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/th&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;/tr&gt;</span>
+        <span class="nt">&lt;tr&gt;</span>
+          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/th&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;/tr&gt;</span>
+      <span class="nt">&lt;/tbody&gt;</span>
+    <span class="nt">&lt;/table&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+
+
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"table-responsive-xxl"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;thead&gt;</span>
+        <span class="nt">&lt;tr&gt;</span>
+          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>#<span class="nt">&lt;/th&gt;</span>
+          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/th&gt;</span>
+          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/th&gt;</span>
+          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/th&gt;</span>
+          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/th&gt;</span>
+          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/th&gt;</span>
+        <span class="nt">&lt;/tr&gt;</span>
+      <span class="nt">&lt;/thead&gt;</span>
+      <span class="nt">&lt;tbody&gt;</span>
+        <span class="nt">&lt;tr&gt;</span>
+          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/th&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;/tr&gt;</span>
+        <span class="nt">&lt;tr&gt;</span>
+          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/th&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;/tr&gt;</span>
+        <span class="nt">&lt;tr&gt;</span>
+          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/th&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;/tr&gt;</span>
+      <span class="nt">&lt;/tbody&gt;</span>
+    <span class="nt">&lt;/table&gt;</span>
+  <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <h2 id="varianti">Varianti</h2>
 
@@ -991,37 +1548,41 @@
 <h3 id="celle-colorate">Celle colorate</h3>
 
 <div class="bd-example">
-  <table class="table table-primary">
-    <tbody>
-      <tr>
-        <th scope="row">Default</th>
-        <td class="table-primary">Primary</td>
-        <td class="table-secondary">Secondary</td>
-        <td class="table-success">Success</td>
-        <td class="table-danger">Danger</td>
-        <td class="table-warning">Warning</td>
-        <td class="table-info">Info</td>
-        <td class="table-light">Light</td>
-        <td class="table-dark">Dark</td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="table-responsive">
+    <table class="table table-primary">
+      <tbody>
+        <tr>
+          <th scope="row">Default</th>
+          <td class="table-primary">Primary</td>
+          <td class="table-secondary">Secondary</td>
+          <td class="table-success">Success</td>
+          <td class="table-danger">Danger</td>
+          <td class="table-warning">Warning</td>
+          <td class="table-info">Info</td>
+          <td class="table-light">Light</td>
+          <td class="table-dark">Dark</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html">  <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-primary"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;tbody&gt;</span>
-      <span class="nt">&lt;tr&gt;</span>
-        <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>Default<span class="nt">&lt;/th&gt;</span>
-        <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"table-primary"</span><span class="nt">&gt;</span>Primary<span class="nt">&lt;/td&gt;</span>
-        <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"table-secondary"</span><span class="nt">&gt;</span>Secondary<span class="nt">&lt;/td&gt;</span>
-        <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"table-success"</span><span class="nt">&gt;</span>Success<span class="nt">&lt;/td&gt;</span>
-        <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"table-danger"</span><span class="nt">&gt;</span>Danger<span class="nt">&lt;/td&gt;</span>
-        <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"table-warning"</span><span class="nt">&gt;</span>Warning<span class="nt">&lt;/td&gt;</span>
-        <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"table-info"</span><span class="nt">&gt;</span>Info<span class="nt">&lt;/td&gt;</span>
-        <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"table-light"</span><span class="nt">&gt;</span>Light<span class="nt">&lt;/td&gt;</span>
-        <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"table-dark"</span><span class="nt">&gt;</span>Dark<span class="nt">&lt;/td&gt;</span>
-      <span class="nt">&lt;/tr&gt;</span>
-    <span class="nt">&lt;/tbody&gt;</span>
-  <span class="nt">&lt;/table&gt;</span>
+  </div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html">  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"table-responsive"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-primary"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;tbody&gt;</span>
+        <span class="nt">&lt;tr&gt;</span>
+          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>Default<span class="nt">&lt;/th&gt;</span>
+          <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"table-primary"</span><span class="nt">&gt;</span>Primary<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"table-secondary"</span><span class="nt">&gt;</span>Secondary<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"table-success"</span><span class="nt">&gt;</span>Success<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"table-danger"</span><span class="nt">&gt;</span>Danger<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"table-warning"</span><span class="nt">&gt;</span>Warning<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"table-info"</span><span class="nt">&gt;</span>Info<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"table-light"</span><span class="nt">&gt;</span>Light<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"table-dark"</span><span class="nt">&gt;</span>Dark<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;/tr&gt;</span>
+      <span class="nt">&lt;/tbody&gt;</span>
+    <span class="nt">&lt;/table&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
   </code></pre></figure>
 
 <div class="bd-callout bd-callout-accessibility">
@@ -2144,577 +2705,21 @@
     <span class="nt">&lt;/tbody&gt;</span>
   <span class="nt">&lt;/table&gt;</span></code></pre></figure>
 
-<h2 id="tabelle-responsive">Tabelle responsive</h2>
-
-<p>Le tabelle responsive consentono di scorrere le tabelle orizzontalmente con facilità. Rendi ogni tabella responsive su tutti i viewports racchiudendo un <code class="language-plaintext highlighter-rouge">.table</code> con <code class="language-plaintext highlighter-rouge">.table-responsive</code>. Oppure, scegli un breakpoint massimo con il quale ottenere una tabella responsive usando <code class="language-plaintext highlighter-rouge">.table-responsive{-sm|-md|-lg|-xl|-xxl}</code>, rispettivamente con <code class="language-plaintext highlighter-rouge">max-width</code> di 576px, 768px, 992px, 1200px, 1400px.</p>
-
-<div class="bd-callout bd-callout-warning">
-<h5 id="ritaglio--troncamento-verticale">Ritaglio / troncamento verticale</h5>
-
-<p>Le tabelle responsive fanno uso di <code class="language-plaintext highlighter-rouge">overflow-y: hidden</code>, che rimuove qualsiasi contenuto che va oltre i bordi inferiore o superiore della tabella. In particolare, questo può ritagliare i menu a discesa e altri widget di terze parti.</p>
-</div>
-
-<h3 id="sempre-responsive">Sempre responsive</h3>
-
-<p>Attraverso ogni breakpoint, usa <code class="language-plaintext highlighter-rouge">.table-responsive</code> per tabelle con scorrimento verticale.</p>
-
-<div class="bd-example">
-  <div class="table-responsive">
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">Intestazione</th>
-          <th scope="col">Intestazione</th>
-          <th scope="col">Intestazione</th>
-          <th scope="col">Intestazione</th>
-          <th scope="col">Intestazione</th>
-          <th scope="col">Intestazione</th>
-          <th scope="col">Intestazione</th>
-          <th scope="col">Intestazione</th>
-          <th scope="col">Intestazione</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html">  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"table-responsive"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;thead&gt;</span>
-        <span class="nt">&lt;tr&gt;</span>
-          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>#<span class="nt">&lt;/th&gt;</span>
-          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/th&gt;</span>
-          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/th&gt;</span>
-          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/th&gt;</span>
-          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/th&gt;</span>
-          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/th&gt;</span>
-          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/th&gt;</span>
-          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/th&gt;</span>
-          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/th&gt;</span>
-          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/th&gt;</span>
-        <span class="nt">&lt;/tr&gt;</span>
-      <span class="nt">&lt;/thead&gt;</span>
-      <span class="nt">&lt;tbody&gt;</span>
-        <span class="nt">&lt;tr&gt;</span>
-          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/th&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-        <span class="nt">&lt;/tr&gt;</span>
-        <span class="nt">&lt;tr&gt;</span>
-          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/th&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-        <span class="nt">&lt;/tr&gt;</span>
-        <span class="nt">&lt;tr&gt;</span>
-          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/th&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-        <span class="nt">&lt;/tr&gt;</span>
-      <span class="nt">&lt;/tbody&gt;</span>
-    <span class="nt">&lt;/table&gt;</span>
-  <span class="nt">&lt;/div&gt;</span></code></pre></figure>
-
-<h3 id="breakpoint-specifici">Breakpoint specifici</h3>
-
-<p>Usa <code class="language-plaintext highlighter-rouge">.table-responsive{-sm|-md|-lg|-xl|-xxl}</code> come necessario per creare tabelle responsive fino a un punto di interruzione particolare. Da quel punto di interruzione in su, la tabella si comporterà normalmente e non scorrerà orizzontalmente.</p>
-
-<div class="bd-example">
-
-
-
-  <div class="table-responsive-sm">
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">Intestazione</th>
-          <th scope="col">Intestazione</th>
-          <th scope="col">Intestazione</th>
-          <th scope="col">Intestazione</th>
-          <th scope="col">Intestazione</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-
-  <div class="table-responsive-md">
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">Intestazione</th>
-          <th scope="col">Intestazione</th>
-          <th scope="col">Intestazione</th>
-          <th scope="col">Intestazione</th>
-          <th scope="col">Intestazione</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-
-  <div class="table-responsive-lg">
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">Intestazione</th>
-          <th scope="col">Intestazione</th>
-          <th scope="col">Intestazione</th>
-          <th scope="col">Intestazione</th>
-          <th scope="col">Intestazione</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-
-  <div class="table-responsive-xl">
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">Intestazione</th>
-          <th scope="col">Intestazione</th>
-          <th scope="col">Intestazione</th>
-          <th scope="col">Intestazione</th>
-          <th scope="col">Intestazione</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-
-  <div class="table-responsive-xxl">
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">Intestazione</th>
-          <th scope="col">Intestazione</th>
-          <th scope="col">Intestazione</th>
-          <th scope="col">Intestazione</th>
-          <th scope="col">Intestazione</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-
-</div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html">  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"table-responsive-sm"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;thead&gt;</span>
-        <span class="nt">&lt;tr&gt;</span>
-          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>#<span class="nt">&lt;/th&gt;</span>
-          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/th&gt;</span>
-          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/th&gt;</span>
-          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/th&gt;</span>
-          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/th&gt;</span>
-          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/th&gt;</span>
-        <span class="nt">&lt;/tr&gt;</span>
-      <span class="nt">&lt;/thead&gt;</span>
-      <span class="nt">&lt;tbody&gt;</span>
-        <span class="nt">&lt;tr&gt;</span>
-          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/th&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-        <span class="nt">&lt;/tr&gt;</span>
-        <span class="nt">&lt;tr&gt;</span>
-          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/th&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-        <span class="nt">&lt;/tr&gt;</span>
-        <span class="nt">&lt;tr&gt;</span>
-          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/th&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-        <span class="nt">&lt;/tr&gt;</span>
-      <span class="nt">&lt;/tbody&gt;</span>
-    <span class="nt">&lt;/table&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-
-
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"table-responsive-md"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;thead&gt;</span>
-        <span class="nt">&lt;tr&gt;</span>
-          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>#<span class="nt">&lt;/th&gt;</span>
-          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/th&gt;</span>
-          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/th&gt;</span>
-          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/th&gt;</span>
-          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/th&gt;</span>
-          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/th&gt;</span>
-        <span class="nt">&lt;/tr&gt;</span>
-      <span class="nt">&lt;/thead&gt;</span>
-      <span class="nt">&lt;tbody&gt;</span>
-        <span class="nt">&lt;tr&gt;</span>
-          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/th&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-        <span class="nt">&lt;/tr&gt;</span>
-        <span class="nt">&lt;tr&gt;</span>
-          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/th&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-        <span class="nt">&lt;/tr&gt;</span>
-        <span class="nt">&lt;tr&gt;</span>
-          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/th&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-        <span class="nt">&lt;/tr&gt;</span>
-      <span class="nt">&lt;/tbody&gt;</span>
-    <span class="nt">&lt;/table&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-
-
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"table-responsive-lg"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;thead&gt;</span>
-        <span class="nt">&lt;tr&gt;</span>
-          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>#<span class="nt">&lt;/th&gt;</span>
-          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/th&gt;</span>
-          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/th&gt;</span>
-          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/th&gt;</span>
-          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/th&gt;</span>
-          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/th&gt;</span>
-        <span class="nt">&lt;/tr&gt;</span>
-      <span class="nt">&lt;/thead&gt;</span>
-      <span class="nt">&lt;tbody&gt;</span>
-        <span class="nt">&lt;tr&gt;</span>
-          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/th&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-        <span class="nt">&lt;/tr&gt;</span>
-        <span class="nt">&lt;tr&gt;</span>
-          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/th&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-        <span class="nt">&lt;/tr&gt;</span>
-        <span class="nt">&lt;tr&gt;</span>
-          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/th&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-        <span class="nt">&lt;/tr&gt;</span>
-      <span class="nt">&lt;/tbody&gt;</span>
-    <span class="nt">&lt;/table&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-
-
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"table-responsive-xl"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;thead&gt;</span>
-        <span class="nt">&lt;tr&gt;</span>
-          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>#<span class="nt">&lt;/th&gt;</span>
-          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/th&gt;</span>
-          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/th&gt;</span>
-          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/th&gt;</span>
-          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/th&gt;</span>
-          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/th&gt;</span>
-        <span class="nt">&lt;/tr&gt;</span>
-      <span class="nt">&lt;/thead&gt;</span>
-      <span class="nt">&lt;tbody&gt;</span>
-        <span class="nt">&lt;tr&gt;</span>
-          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/th&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-        <span class="nt">&lt;/tr&gt;</span>
-        <span class="nt">&lt;tr&gt;</span>
-          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/th&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-        <span class="nt">&lt;/tr&gt;</span>
-        <span class="nt">&lt;tr&gt;</span>
-          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/th&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-        <span class="nt">&lt;/tr&gt;</span>
-      <span class="nt">&lt;/tbody&gt;</span>
-    <span class="nt">&lt;/table&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-
-
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"table-responsive-xxl"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;thead&gt;</span>
-        <span class="nt">&lt;tr&gt;</span>
-          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>#<span class="nt">&lt;/th&gt;</span>
-          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/th&gt;</span>
-          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/th&gt;</span>
-          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/th&gt;</span>
-          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/th&gt;</span>
-          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Intestazione<span class="nt">&lt;/th&gt;</span>
-        <span class="nt">&lt;/tr&gt;</span>
-      <span class="nt">&lt;/thead&gt;</span>
-      <span class="nt">&lt;tbody&gt;</span>
-        <span class="nt">&lt;tr&gt;</span>
-          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/th&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-        <span class="nt">&lt;/tr&gt;</span>
-        <span class="nt">&lt;tr&gt;</span>
-          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/th&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-        <span class="nt">&lt;/tr&gt;</span>
-        <span class="nt">&lt;tr&gt;</span>
-          <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/th&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-          <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
-        <span class="nt">&lt;/tr&gt;</span>
-      <span class="nt">&lt;/tbody&gt;</span>
-    <span class="nt">&lt;/table&gt;</span>
-  <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
         </main>
       </div>
     </div>
 
     
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202310252032"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202311081458"></script>
 <script>
   bootstrap.loadFonts('/bootstrap-italia/dist/fonts')
-</script><script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202310252032"></script>
+</script><script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202311081458"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/anchor.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/clipboard.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tsparticles.min.js"></script>
 
-<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202310252032"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202311081458"></script>
 
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tweenjs.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/easeljs.min.js"></script>
@@ -2731,7 +2736,7 @@
     { src: '/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png', id: 'cover-7' },
   ]
 </script>
-<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202310252032"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202311081458"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/docsearch.min.js"></script>
 
 <script>
