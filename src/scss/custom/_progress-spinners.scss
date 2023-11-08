@@ -50,10 +50,23 @@
     height: $v-gap * 4;
   }
 
+  //large size
+  &.size-lg {
+    width: $v-gap * 8;
+    height: $v-gap * 8;
+  }
+
+  //extra-large size
+  &.size-xl {
+    width: $v-gap * 10;
+    height: $v-gap * 10;
+  }
+
   //double spinner
   &.progress-spinner-double {
     $size: 48px;
     display: inline-block;
+
     //small size
     &.size-sm {
       width: $v-gap * 4;
@@ -64,6 +77,27 @@
         height: $v-gap * 2;
       }
     }
+
+    &.size-lg {
+      width: $v-gap * 8;
+      height: $v-gap * 8;
+      //double spinner inner
+      .progress-spinner-inner {
+        width: $v-gap * 8;
+        height: $v-gap * 4;
+      }
+    }
+
+    &.size-xl {
+      width: $v-gap * 10;
+      height: $v-gap * 10;
+      //double spinner inner
+      .progress-spinner-inner {
+        width: $v-gap * 10;
+        height: $v-gap * 5;
+      }
+    }
+
     //double spinner active state
     &.progress-spinner-active {
       .progress-spinner-inner {
