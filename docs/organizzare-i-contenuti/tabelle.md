@@ -47,6 +47,134 @@ Usando il markup di base della tabella, ecco come appaiono le tabelle che utiliz
 </table>
 {% endcapture %}{% include example.html content=example %}
 
+## Tabelle responsive
+
+Le tabelle responsive consentono di scorrere le tabelle orizzontalmente con facilità. Rendi ogni tabella responsive su tutti i viewports racchiudendo un `.table` con `.table-responsive`. Oppure, scegli un breakpoint massimo con il quale ottenere una tabella responsive usando `.table-responsive{-sm|-md|-lg|-xl|-xxl}`, rispettivamente con `max-width` di {% for bp in site.data.breakpoints %}{% unless bp.breakpoint == "xs" %}{{ bp.min-width }}{% if forloop.last != true %}, {% endif %}{% endunless %}{% endfor %}.
+
+{% capture callout %}
+
+##### Ritaglio / troncamento verticale
+
+Le tabelle responsive fanno uso di `overflow-y: hidden`, che rimuove qualsiasi contenuto che va oltre i bordi inferiore o superiore della tabella. In particolare, questo può ritagliare i menu a discesa e altri widget di terze parti.
+{% endcapture %}{% include callout.html content=callout type="warning" %}
+
+### Sempre responsive
+
+Attraverso ogni breakpoint, usa `.table-responsive` per tabelle con scorrimento verticale.
+
+{% comment %}Example name: Responsive, sempre{% endcomment %}
+{% capture example %}
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Intestazione</th>
+          <th scope="col">Intestazione</th>
+          <th scope="col">Intestazione</th>
+          <th scope="col">Intestazione</th>
+          <th scope="col">Intestazione</th>
+          <th scope="col">Intestazione</th>
+          <th scope="col">Intestazione</th>
+          <th scope="col">Intestazione</th>
+          <th scope="col">Intestazione</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+{% endcapture %}{% include example.html content=example %}
+
+### Breakpoint specifici
+
+Usa `.table-responsive{-sm|-md|-lg|-xl|-xxl}` come necessario per creare tabelle responsive fino a un punto di interruzione particolare. Da quel punto di interruzione in su, la tabella si comporterà normalmente e non scorrerà orizzontalmente.
+
+{% comment %}Example name: Responsive, breakpoint specifici{% endcomment %}
+{% capture example %}
+
+{% for bp in site.data.breakpoints %}{% unless bp.breakpoint == "xs" %}
+
+  <div class="table-responsive{{ bp.abbr }}">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Intestazione</th>
+          <th scope="col">Intestazione</th>
+          <th scope="col">Intestazione</th>
+          <th scope="col">Intestazione</th>
+          <th scope="col">Intestazione</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+          <td>Cella</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+{% endunless %}{% endfor %}
+
+{% endcapture %}{% include example.html content=example %}
+
 ## Varianti
 
 Utilizza le classi contestuali per colorare tabelle, righe o celle individuali.
@@ -202,21 +330,23 @@ Utilizza le classi contestuali per colorare tabelle, righe o celle individuali.
 
 {% comment %}Example name: Celle colorate{% endcomment %}
 {% capture example %}
-  <table class="table table-primary">
-    <tbody>
-      <tr>
-        <th scope="row">Default</th>
-        <td class="table-primary">Primary</td>
-        <td class="table-secondary">Secondary</td>
-        <td class="table-success">Success</td>
-        <td class="table-danger">Danger</td>
-        <td class="table-warning">Warning</td>
-        <td class="table-info">Info</td>
-        <td class="table-light">Light</td>
-        <td class="table-dark">Dark</td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="table-responsive">
+    <table class="table table-primary">
+      <tbody>
+        <tr>
+          <th scope="row">Default</th>
+          <td class="table-primary">Primary</td>
+          <td class="table-secondary">Secondary</td>
+          <td class="table-success">Success</td>
+          <td class="table-danger">Danger</td>
+          <td class="table-warning">Warning</td>
+          <td class="table-info">Info</td>
+          <td class="table-light">Light</td>
+          <td class="table-dark">Dark</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
   {% endcapture %}{% include example.html content=example %}
 
 {% include callout-warning-color-assistive-technologies.md %}
@@ -841,132 +971,4 @@ Per renderizzare la `<caption>` in cima alla tabella utilizza la classe `.captio
       </tr>
     </tbody>
   </table>
-{% endcapture %}{% include example.html content=example %}
-
-## Tabelle responsive
-
-Le tabelle responsive consentono di scorrere le tabelle orizzontalmente con facilità. Rendi ogni tabella responsive su tutti i viewports racchiudendo un `.table` con `.table-responsive`. Oppure, scegli un breakpoint massimo con il quale ottenere una tabella responsive usando `.table-responsive{-sm|-md|-lg|-xl|-xxl}`, rispettivamente con `max-width` di {% for bp in site.data.breakpoints %}{% unless bp.breakpoint == "xs" %}{{ bp.min-width }}{% if forloop.last != true %}, {% endif %}{% endunless %}{% endfor %}.
-
-{% capture callout %}
-
-##### Ritaglio / troncamento verticale
-
-Le tabelle responsive fanno uso di `overflow-y: hidden`, che rimuove qualsiasi contenuto che va oltre i bordi inferiore o superiore della tabella. In particolare, questo può ritagliare i menu a discesa e altri widget di terze parti.
-{% endcapture %}{% include callout.html content=callout type="warning" %}
-
-### Sempre responsive
-
-Attraverso ogni breakpoint, usa `.table-responsive` per tabelle con scorrimento verticale.
-
-{% comment %}Example name: Responsive, sempre{% endcomment %}
-{% capture example %}
-  <div class="table-responsive">
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">Intestazione</th>
-          <th scope="col">Intestazione</th>
-          <th scope="col">Intestazione</th>
-          <th scope="col">Intestazione</th>
-          <th scope="col">Intestazione</th>
-          <th scope="col">Intestazione</th>
-          <th scope="col">Intestazione</th>
-          <th scope="col">Intestazione</th>
-          <th scope="col">Intestazione</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-{% endcapture %}{% include example.html content=example %}
-
-### Breakpoint specifici
-
-Usa `.table-responsive{-sm|-md|-lg|-xl|-xxl}` come necessario per creare tabelle responsive fino a un punto di interruzione particolare. Da quel punto di interruzione in su, la tabella si comporterà normalmente e non scorrerà orizzontalmente.
-
-{% comment %}Example name: Responsive, breakpoint specifici{% endcomment %}
-{% capture example %}
-
-{% for bp in site.data.breakpoints %}{% unless bp.breakpoint == "xs" %}
-
-  <div class="table-responsive{{ bp.abbr }}">
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">Intestazione</th>
-          <th scope="col">Intestazione</th>
-          <th scope="col">Intestazione</th>
-          <th scope="col">Intestazione</th>
-          <th scope="col">Intestazione</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-          <td>Cella</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-{% endunless %}{% endfor %}
-
 {% endcapture %}{% include example.html content=example %}
