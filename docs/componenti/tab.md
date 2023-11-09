@@ -9,6 +9,10 @@ toc: true
 L'interfaccia a tab (o schede) di Bootstrap si basa sull'utilizzo del layout di navigazione, con l'aggiunta della classe `.nav-tabs`. Per ottenere una versione con sfondo scuro e testo chiaro bisognerà aggiungere un'ulteriore classe: `.nav-dark`.
 
 {% capture callout %}
+La maggior parte degli esempi riguardanti il componente Tab non hanno pannelli di contenuto associati, pertanto la funzionalità per selezionare il pannello risulterà disattivata. Per vedere il componente Tab in azione fare riferimento alla sezione [Controllo dei pannelli associati](#controllo-dei-pannelli-associati).
+{% endcapture %}{% include callout.html content=callout type="warning" %}
+
+{% capture callout %}
 
 #### Accessibilità
 
