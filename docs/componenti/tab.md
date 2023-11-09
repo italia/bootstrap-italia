@@ -31,16 +31,16 @@ Utilizzare la classe `.disabled` sul link dei tab da disabilitare, aggiungendo l
 {% capture example %}
 <ul class="nav nav-tabs auto">
   <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="#">Attivo</a>
+    <a class="nav-link active" aria-current="page">Attivo</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
+    <a class="nav-link">Link</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
+    <a class="nav-link">Link</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabilitato</a>
+    <a class="nav-link disabled" tabindex="-1" aria-disabled="true">Disabilitato</a>
   </li>
 </ul>
 {% endcapture %}{% include example.html content=example %}
@@ -53,7 +53,7 @@ Le label dei tab possono essere sostituite da icone con classi che ne indicano i
 {% capture example %}
 <ul class="nav nav-tabs auto">
   <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="#">
+    <a class="nav-link active" aria-current="page">
       <svg class="icon">
         <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use>
       </svg>
@@ -61,7 +61,7 @@ Le label dei tab possono essere sostituite da icone con classi che ne indicano i
     </a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">
+    <a class="nav-link">
       <svg class="icon">
         <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-calendar"></use>
       </svg>
@@ -69,7 +69,7 @@ Le label dei tab possono essere sostituite da icone con classi che ne indicano i
     </a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">
+    <a class="nav-link">
       <svg class="icon">
         <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-comment"></use>
       </svg>
@@ -77,7 +77,7 @@ Le label dei tab possono essere sostituite da icone con classi che ne indicano i
     </a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled" href="#" tabindex="-1">
+    <a class="nav-link disabled" tabindex="-1">
       <svg class="icon">
         <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use>
       </svg>
@@ -95,7 +95,7 @@ Per ottenere icone più grandi utilizzare la classe `.icon-lg` alle icone. Aggiu
 {% capture example %}
 <ul class="nav nav-tabs nav-tabs-icon-lg auto">
   <li class="nav-item">
-    <a class="nav-link active" href="#" aria-current="page">
+    <a class="nav-link active" aria-current="page">
       <svg class="icon icon-lg">
         <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use>
       </svg>
@@ -103,7 +103,7 @@ Per ottenere icone più grandi utilizzare la classe `.icon-lg` alle icone. Aggiu
     </a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">
+    <a class="nav-link">
       <svg class="icon icon-lg">
         <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-calendar"></use>
       </svg>
@@ -111,7 +111,7 @@ Per ottenere icone più grandi utilizzare la classe `.icon-lg` alle icone. Aggiu
     </a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">
+    <a class="nav-link">
       <svg class="icon icon-lg">
         <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-comment"></use>
       </svg>
@@ -119,7 +119,7 @@ Per ottenere icone più grandi utilizzare la classe `.icon-lg` alle icone. Aggiu
     </a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled" href="#" tabindex="-1">
+    <a class="nav-link disabled" tabindex="-1">
       <svg class="icon icon-lg">
         <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use>
       </svg>
@@ -137,7 +137,7 @@ Icone e testi possono convivere all'interno dei tab, l'allineamento verticale de
 {% capture example %}
 <ul class="nav nav-tabs nav-tabs-icon-text auto">
   <li class="nav-item">
-    <a class="nav-link active" href="#" aria-current="page">
+    <a class="nav-link active" aria-current="page">
       <svg class="icon">
         <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use>
       </svg>
@@ -145,7 +145,7 @@ Icone e testi possono convivere all'interno dei tab, l'allineamento verticale de
     </a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">
+    <a class="nav-link">
       <svg class="icon">
         <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-calendar"></use>
       </svg>
@@ -153,7 +153,7 @@ Icone e testi possono convivere all'interno dei tab, l'allineamento verticale de
     </a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">
+    <a class="nav-link">
       <svg class="icon">
         <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-comment"></use>
       </svg>
@@ -161,7 +161,7 @@ Icone e testi possono convivere all'interno dei tab, l'allineamento verticale de
     </a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled" href="#" tabindex="-1">
+    <a class="nav-link disabled" tabindex="-1">
       <svg class="icon">
         <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use>
       </svg>
@@ -180,10 +180,10 @@ In assenza della classe `.auto` i tab vengono dimensionati in base al contenuto.
 {% comment %}Example name: Orizzontali, testuali{% endcomment %}
 {% capture example %}
 <ul class="nav nav-tabs">
-  <li class="nav-item"><a class="nav-link active" href="#" aria-current="page">Tab 1 Attivo</a></li>
-  <li class="nav-item"><a class="nav-link" href="#">Tab 2</a></li>
-  <li class="nav-item"><a class="nav-link" href="#">Tab 3</a></li>
-  <li class="nav-item"><a class="nav-link disabled" href="#" tabindex="-1">Tab 4 Disabilitato</a></li>
+  <li class="nav-item"><a class="nav-link active" aria-current="page">Tab 1 Attivo</a></li>
+  <li class="nav-item"><a class="nav-link">Tab 2</a></li>
+  <li class="nav-item"><a class="nav-link">Tab 3</a></li>
+  <li class="nav-item"><a class="nav-link disabled" tabindex="-1">Tab 4 Disabilitato</a></li>
 </ul>
 {% endcapture %}{% include example.html content=example %}
 
@@ -193,7 +193,7 @@ In assenza della classe `.auto` i tab vengono dimensionati in base al contenuto.
 {% capture example %}
 <ul class="nav nav-tabs">
   <li class="nav-item">
-    <a class="nav-link active" href="#" aria-current="page">
+    <a class="nav-link active" aria-current="page">
       <svg class="icon">
         <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use>
       </svg>
@@ -201,7 +201,7 @@ In assenza della classe `.auto` i tab vengono dimensionati in base al contenuto.
     </a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">
+    <a class="nav-link">
       <svg class="icon">
         <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-calendar"></use>
       </svg>
@@ -209,7 +209,7 @@ In assenza della classe `.auto` i tab vengono dimensionati in base al contenuto.
     </a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">
+    <a class="nav-link">
       <svg class="icon">
         <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-comment"></use>
       </svg>
@@ -217,7 +217,7 @@ In assenza della classe `.auto` i tab vengono dimensionati in base al contenuto.
     </a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled" href="#" tabindex="-1">
+    <a class="nav-link disabled" tabindex="-1">
       <svg class="icon">
         <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use>
       </svg>
@@ -233,7 +233,7 @@ In assenza della classe `.auto` i tab vengono dimensionati in base al contenuto.
 {% capture example %}
 <ul class="nav nav-tabs nav-tabs-icon-lg">
   <li class="nav-item">
-    <a class="nav-link active" href="#" aria-current="page">
+    <a class="nav-link active" aria-current="page">
       <svg class="icon icon-lg">
         <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use>
       </svg>
@@ -241,7 +241,7 @@ In assenza della classe `.auto` i tab vengono dimensionati in base al contenuto.
     </a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">
+    <a class="nav-link">
       <svg class="icon icon-lg">
         <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-calendar"></use>
       </svg>
@@ -249,7 +249,7 @@ In assenza della classe `.auto` i tab vengono dimensionati in base al contenuto.
     </a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">
+    <a class="nav-link">
       <svg class="icon icon-lg">
         <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-comment"></use>
       </svg>
@@ -257,7 +257,7 @@ In assenza della classe `.auto` i tab vengono dimensionati in base al contenuto.
     </a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled" href="#" tabindex="-1">
+    <a class="nav-link disabled" tabindex="-1">
       <svg class="icon icon-lg">
         <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use>
       </svg>
@@ -273,7 +273,7 @@ In assenza della classe `.auto` i tab vengono dimensionati in base al contenuto.
 {% capture example %}
 <ul class="nav nav-tabs nav-tabs-icon-text">
   <li class="nav-item">
-    <a class="nav-link active" href="#" aria-current="page">
+    <a class="nav-link active" aria-current="page">
       <svg class="icon">
         <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use>
       </svg>
@@ -281,7 +281,7 @@ In assenza della classe `.auto` i tab vengono dimensionati in base al contenuto.
     </a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">
+    <a class="nav-link">
       <svg class="icon">
         <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-calendar"></use>
       </svg>
@@ -289,7 +289,7 @@ In assenza della classe `.auto` i tab vengono dimensionati in base al contenuto.
     </a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">
+    <a class="nav-link">
       <svg class="icon">
         <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-comment"></use>
       </svg>
@@ -297,7 +297,7 @@ In assenza della classe `.auto` i tab vengono dimensionati in base al contenuto.
     </a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled" href="#" tabindex="-1">
+    <a class="nav-link disabled" tabindex="-1">
       <svg class="icon">
         <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use>
       </svg>
@@ -329,7 +329,7 @@ Se i tab contengono icone è necessario aggiungere un'ulteriore classe al wrappe
 <div class="nav-tabs-hidescroll hidescroll-ico">
   <ul class="nav nav-tabs nav-tabs-icon-text">
     <li class="nav-item">
-      <a class="nav-link active" href="#" aria-current="page">
+      <a class="nav-link active" aria-current="page">
         <svg class="icon">
           <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use>
         </svg>
@@ -337,7 +337,7 @@ Se i tab contengono icone è necessario aggiungere un'ulteriore classe al wrappe
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">
+      <a class="nav-link">
         <svg class="icon">
           <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use>
         </svg>
@@ -345,7 +345,7 @@ Se i tab contengono icone è necessario aggiungere un'ulteriore classe al wrappe
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">
+      <a class="nav-link">
         <svg class="icon">
           <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use>
         </svg>
@@ -353,7 +353,7 @@ Se i tab contengono icone è necessario aggiungere un'ulteriore classe al wrappe
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">
+      <a class="nav-link">
         <svg class="icon">
           <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use>
         </svg>
@@ -361,7 +361,7 @@ Se i tab contengono icone è necessario aggiungere un'ulteriore classe al wrappe
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">
+      <a class="nav-link">
         <svg class="icon">
           <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use>
         </svg>
@@ -369,7 +369,7 @@ Se i tab contengono icone è necessario aggiungere un'ulteriore classe al wrappe
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">
+      <a class="nav-link">
         <svg class="icon">
           <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use>
         </svg>
@@ -377,7 +377,7 @@ Se i tab contengono icone è necessario aggiungere un'ulteriore classe al wrappe
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">
+      <a class="nav-link">
         <svg class="icon">
           <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use>
         </svg>
@@ -670,10 +670,10 @@ Per posizionare i tab verticali a destra contenuto è necessario applicare la cl
 {% comment %}Example name: Con controllo pannelli, sfondo scuro, orizzontale a tutta larghezza{% endcomment %}
 {% capture example %}
 <ul class="nav nav-tabs auto nav-dark">
-  <li class="nav-item"><a class="nav-link active" href="#">Tab 1 Attivo</a></li>
-  <li class="nav-item"><a class="nav-link" href="#">Tab 2</a></li>
-  <li class="nav-item"><a class="nav-link" href="#">Tab 3</a></li>
-  <li class="nav-item"><a class="nav-link disabled" href="#" tabindex="-1">Tab 4 Disabilitato</a></li>
+  <li class="nav-item"><a class="nav-link active">Tab 1 Attivo</a></li>
+  <li class="nav-item"><a class="nav-link">Tab 2</a></li>
+  <li class="nav-item"><a class="nav-link">Tab 3</a></li>
+  <li class="nav-item"><a class="nav-link disabled" tabindex="-1">Tab 4 Disabilitato</a></li>
 </ul>
 {% endcapture %}{% include example.html content=example %}
 
@@ -682,10 +682,10 @@ Per posizionare i tab verticali a destra contenuto è necessario applicare la cl
 {% comment %}Example name: Con controllo pannelli, sfondo scuro, orizzontale a tutta larghezza, testo e icona{% endcomment %}
 {% capture example %}
 <ul class="nav nav-tabs nav-tabs-icon-text nav-dark">
-  <li class="nav-item"><a class="nav-link active" href="#"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg> Tab 1</a></li>
-  <li class="nav-item"><a class="nav-link" href="#"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg> Tab 2</a></li>
-  <li class="nav-item"><a class="nav-link" href="#"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg> Tab 3</a></li>
-  <li class="nav-item"><a class="nav-link disabled" href="#" tabindex="-1"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg> Tab 4</a></li>
+  <li class="nav-item"><a class="nav-link active"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg> Tab 1</a></li>
+  <li class="nav-item"><a class="nav-link"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg> Tab 2</a></li>
+  <li class="nav-item"><a class="nav-link"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg> Tab 3</a></li>
+  <li class="nav-item"><a class="nav-link disabled" tabindex="-1"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg> Tab 4</a></li>
 </ul>
 {% endcapture %}{% include example.html content=example %}
 
@@ -770,23 +770,23 @@ Aggiungere le classi `.nav-tabs-editable` e `.nav-tabs-cards` al tag `ul` per ot
   <ul class="nav nav-tabs nav-tabs-cards nav-tabs-editable" id="card-simple-btn" role="tablist">
       <li class="nav-item">
         <a class="nav-link active" id="card-simple-btn1-tab" data-bs-toggle="tab" href="#card-simple-btntab1" role="tab" aria-controls="card-simple-btntab1" aria-selected="true">Tab 1 </a>
-        <a href="#" class="nav-link-close"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg><span class="visually-hidden"> Chiudi tab 1</span></a>
+        <a class="nav-link-close" href="#"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg><span class="visually-hidden"> Chiudi tab 1</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" id="card-simple-btn2-tab" data-bs-toggle="tab" href="#card-simple-btntab2" role="tab" aria-controls="card-simple-btntab2" aria-selected="false">Tab 2</a>
-        <a href="#" class="nav-link-close"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg><span class="visually-hidden"> Chiudi tab 2</span></a>
+        <a class="nav-link-close" href="#"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg><span class="visually-hidden"> Chiudi tab 2</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" id="card-simple-btn3-tab" data-bs-toggle="tab" href="#card-simple-btntab3" role="tab" aria-controls="card-simple-btntab3" aria-selected="false">Tab 3</a>
-        <a href="#" class="nav-link-close"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg><span class="visually-hidden"> Chiudi tab 3</span></a>
+        <a class="nav-link-close" href="#"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg><span class="visually-hidden"> Chiudi tab 3</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link disabled" id="card-simple-btn4-tab" data-bs-toggle="tab" href="#card-simple-btntab4" role="tab" aria-controls="card-simple-btntab4" aria-selected="false" aria-disabled="true"  tabindex="-1">Tab 4 Disabilitato</a>
-        <a href="#" class="nav-link-close disabled"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg><span class="visually-hidden"> Chiudi tab 4</span></a>
+        <a class="nav-link-close disabled" href="#"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg><span class="visually-hidden"> Chiudi tab 4</span></a>
       </li>
       <li class="nav-item-filler"></li>
       <li class="nav-item">
-        <a href="#" class="nav-tab-add"><span class="visually-hidden"> Aggiungi un tab</span></a>
+        <a class="nav-tab-add"><span class="visually-hidden"> Aggiungi un tab</span></a>
       </li>
   </ul>
 </div>
