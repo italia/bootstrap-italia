@@ -114,8 +114,8 @@
       border-bottom-color: transparent;
     }
 
-    &:focus {
-      border-bottom-color: transparent;
+    &:focus:not(.focus--mouse) {
+      box-shadow: inset 0 0 0 2px $focus-outline-color !important;
     }
 
     &.disabled {
