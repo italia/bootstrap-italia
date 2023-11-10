@@ -331,7 +331,7 @@
       border-bottom: none;
       border-top: 2px solid transparent;
       &:focus:not(.focus--mouse) {
-        box-shadow: inset 0 -1px 0 2px $focus-outline-color  !important;
+        box-shadow: inset 0 -1px 0 2px $focus-outline-color !important;
       }
     }
     .nav-link.active,
