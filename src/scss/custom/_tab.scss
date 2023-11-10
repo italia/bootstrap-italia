@@ -115,7 +115,7 @@
     }
 
     &:focus:not(.focus--mouse) {
-      box-shadow: inset 0 0 0 2px $focus-outline-color !important;
+      box-shadow: inset 0 1px 0 2px $focus-outline-color !important;
     }
 
     &.disabled {
