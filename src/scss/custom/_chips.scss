@@ -10,8 +10,7 @@
   min-width: 100px;
   padding: 0 $v-gap * 2 2px $v-gap;
   transition: all 0.05s;
-  margin-right: $v-gap * 0.5;
-  margin-bottom: 0;
+  margin: 6px 4px 6px auto;
   //label
   .chip-label {
     font-size: 0.875rem;
@@ -68,7 +67,6 @@
     min-width: 120px;
     border-radius: $v-gap * 2;
     padding: 2px $v-gap * 3 0 $v-gap * 2;
-    margin: $v-gap * 0.5 $v-gap $v-gap * 0.5 auto;
     //label
     .chip-label {
       font-size: 1rem;
