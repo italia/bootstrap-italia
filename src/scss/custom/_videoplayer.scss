@@ -39,7 +39,12 @@
 }
 
 @include media-breakpoint-down(sm) {
+
   .vjs-remaining-time {
+    display: none;
+  }
+
+  .video-js .vjs-progress-control {
     display: none;
   }
 
@@ -47,11 +52,11 @@
     display: none !important;
   }
 
-  .vjs-control-bar {
-    overflow: hidden;
+  .video-js .vjs-control {
+    width: 48px;
   }
 
-  .video-js .vjs-control {
-    width: 3.5em;
+  .vjs-control-bar {
+    justify-content: space-around;
   }
 }
