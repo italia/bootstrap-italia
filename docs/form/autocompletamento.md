@@ -200,7 +200,6 @@ const value = e.options[e.selectedIndex].value;
           const results = form_data[category.value]
           const filteredResults = results.filter(result => result.indexOf(query) !== -1)
           populateResults(filteredResults)
-          console.log(populateResults)
         }
       });
     })
