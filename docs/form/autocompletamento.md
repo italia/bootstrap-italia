@@ -147,12 +147,66 @@ Per una corretta implementazione si consiglia di consultare la [documentazione](
 </script>
 {% endcapture %}{% include example.html content=example %}
 
-Per prendere il valore della option che siamo andati a selezionare occorre agire su `_element` dell'oggetto `SelectAutocomplete`
+Per ottenere il valore della option che siamo andati a selezionare occorre agire su `_element` dell'oggetto `SelectAutocomplete`
 
 ```js
 const e = selectAutocomplete._element;
 const value = e.options[e.selectedIndex].value;
 ```
+
+## Cambiare i valori dinamicamente
+
+{% comment %}Example name: Cambiare i valori dinamicamente {% endcomment %}
+{% capture example %}
+<div>
+  <div class="select-wrapper">
+    <label for="category">Categoria</label>
+    <select id="category" name="category">
+      <option value="frutta" selected>Frutta</option>
+      <option value="verdura">Verdura</option>
+    </select>
+  </div>
+  <br>
+  <div class="select-wrapper">
+    <label for="items_select">Alimento</label>
+    <select class="form-control" id="productAutocomplete" title="Scegli un prodotto" required>
+    </select>
+  </div>
+  <script>
+    const form_data = {
+      'frutta' : [
+        'Mela',
+        'Pera',
+        'Melone',
+        'Banana',
+      ],
+      'verdura' : [
+        'Carota',
+        'Zucchina',
+        'Melanzana',
+        'Carciofo',
+      ],
+    }
+    document.addEventListener('DOMContentLoaded', function () {
+      const category = document.getElementById("category");
+      const selectElement = document.querySelector('#productAutocomplete');
+      const selectAutocomplete = new bootstrap.SelectAutocomplete(selectElement, {
+        showAllValues: true,
+        defaultValue: '',
+        autoselect: false,
+        showNoOptionsFound: false,
+        dropdownArrow: () => '',
+        source: (query, populateResults) => {
+          const results = form_data[category.value]
+          const filteredResults = results.filter(result => result.indexOf(query) !== -1)
+          populateResults(filteredResults)
+          console.log(populateResults)
+        }
+      });
+    })
+  </script>
+</div>
+{% endcapture %}{% include example.html content=example %}
 
 ### Validazione
 
