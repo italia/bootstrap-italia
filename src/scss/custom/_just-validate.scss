@@ -24,7 +24,8 @@ textarea {
 }
 input[type='date'],
 input[type='file'],
-input[type='text'] {
+input[type='text'],
+input[type='number'] {
   &.just-validate-success-field {
     background-repeat: no-repeat;
     background-size: 37px 21px;

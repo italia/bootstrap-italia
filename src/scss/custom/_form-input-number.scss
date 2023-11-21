@@ -127,6 +127,7 @@
 
     &.input-number-add {
       top: -6px;
+      right: 20px;
       &:after {
         border-width: 0 5px 6px 5px;
         border-color: transparent transparent $neutral-1-a7 transparent; // TODO Check if still necessary
@@ -134,6 +135,7 @@
     }
     &.input-number-sub {
       bottom: -6px;
+      right: 20px;
       &:after {
         border-width: 6px 5px 0 5px;
         border-color: $neutral-1-a7 transparent transparent transparent; // TODO Check if still necessary
