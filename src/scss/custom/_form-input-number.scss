@@ -39,7 +39,7 @@
     &:before {
       position: absolute;
       left: 14px;
-      top: 0;
+      top: 8px;
       // color: $color-text-muted;
       font-weight: bold;
       font-size: 1rem;
@@ -126,16 +126,16 @@
     }
 
     &.input-number-add {
-      top: -6px;
-      right: 20px;
+      top: 0px;
+      right: 22px;
       &:after {
         border-width: 0 5px 6px 5px;
         border-color: transparent transparent $neutral-1-a7 transparent; // TODO Check if still necessary
       }
     }
     &.input-number-sub {
-      bottom: -6px;
-      right: 20px;
+      bottom: 0px;
+      right: 22px;
       &:after {
         border-width: 6px 5px 0 5px;
         border-color: $neutral-1-a7 transparent transparent transparent; // TODO Check if still necessary
