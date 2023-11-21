@@ -177,7 +177,7 @@ Per maggiori informazioni si rimanda alla [documentazione ufficiale](https://alp
   </div>
   <div class="col-12 mt-5">
     <div class="select-wrapper">
-      <label for="items_select">Alimento</label>
+      <label for="productAutocomplete">Alimento</label>
       <select class="form-control" id="productAutocomplete" title="Scegli un prodotto" required>
       </select>
     </div>
