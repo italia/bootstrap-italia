@@ -156,21 +156,31 @@ const value = e.options[e.selectedIndex].value;
 
 ## Cambiare i valori dinamicamente
 
+In questo esempio viene mostrato come popolare il componente con dati che 
+cambiano a fronte di un altro input, ad esempio il valore di un altro elemento
+di un form (come una select nell'esempio che segue). 
+Per far fronte a questa esigenza è sufficiente passare al parametro `source`
+del costruttore una funzione per filtrare i dati e popolare il componente.
+Per maggiori informazioni si rimanda alla [documentazione ufficiale](https://alphagov.github.io/accessible-autocomplete/#source).
+
 {% comment %}Example name: Cambiare i valori dinamicamente {% endcomment %}
 {% capture example %}
-<div>
-  <div class="select-wrapper">
-    <label for="category">Categoria</label>
-    <select id="category" name="category">
-      <option value="frutta" selected>Frutta</option>
-      <option value="verdura">Verdura</option>
-    </select>
+<div class="row">
+  <div class="col-12 mt-5">
+    <div class="select-wrapper">
+      <label for="category">Categoria alimento</label>
+      <select id="category" name="category">
+        <option value="frutta" selected>Frutta</option>
+        <option value="verdura">Verdura</option>
+      </select>
+    </div>
   </div>
-  <br>
-  <div class="select-wrapper">
-    <label for="items_select">Alimento</label>
-    <select class="form-control" id="productAutocomplete" title="Scegli un prodotto" required>
-    </select>
+  <div class="col-12 mt-5">
+    <div class="select-wrapper">
+      <label for="items_select">Alimento</label>
+      <select class="form-control" id="productAutocomplete" title="Scegli un prodotto" required>
+      </select>
+    </div>
   </div>
   <script>
     const form_data = {
@@ -189,7 +199,7 @@ const value = e.options[e.selectedIndex].value;
     }
     document.addEventListener('DOMContentLoaded', function () {
       const category = document.getElementById("category");
-      const selectElement = document.querySelector('#productAutocomplete');
+      const selectElement = document.getElementById("productAutocomplete");
       const selectAutocomplete = new bootstrap.SelectAutocomplete(selectElement, {
         showAllValues: true,
         defaultValue: '',
