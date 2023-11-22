@@ -22,7 +22,7 @@ La larghezza del campo predefinita è quella del suo contenitore, per limitare l
 <div class="w-100">
   <label for="inputNumber" class="input-number-label">Input Number inserito in una colonna a tutta larghezza</label>
   <span class="input-number">
-    <input type="number" data-bs-input id="inputNumber" name="inputNumber" value="100" step="any" />
+    <input type="number" class="form-control" data-bs-input id="inputNumber" name="inputNumber" value="100" step="any" />
     <button class="input-number-add">
       <span class="visually-hidden">Aumenta valore</span>
     </button>
@@ -35,7 +35,7 @@ La larghezza del campo predefinita è quella del suo contenitore, per limitare l
 <div class="w-50 mt-5">
   <label for="inputNumber1" class="input-number-label">Input Number inserito in una colonna di larghezza 50%</label>
   <span class="input-number">
-    <input type="number" data-bs-input id="inputNumber1" name="inputNumber1" value="100" step="any" />
+    <input type="number" class="form-control" data-bs-input id="inputNumber1" name="inputNumber1" value="100" step="any" />
     <button class="input-number-add">
       <span class="visually-hidden">Aumenta valore</span>
     </button>
@@ -55,7 +55,7 @@ Aggiungendo gli attributi HTML `min=""`, `max=""` e `step=""` all'input è possi
 <div>
   <label for="inputNumber2" class="input-number-label">Min, Max & Step</label>
   <span class="input-number">
-    <input type="number" data-bs-input id="inputNumber2" name="inputNumber2" value="100" min="-2000" max="15000" step="500" />
+    <input type="number" class="form-control" data-bs-input id="inputNumber2" name="inputNumber2" value="100" min="-2000" max="15000" step="500" />
     <button class="input-number-add">
       <span class="visually-hidden">Aumenta valore di 500</span>
     </button>
@@ -75,7 +75,7 @@ Per anteporre il simbolo della valuta in Euro, aggiungere la classe `.input-numb
 <div>
   <label for="inputNumber3" class="input-number-label">Currency</label>
   <span class="input-number input-number-currency">
-    <input type="number" data-bs-input id="inputNumber3" name="inputNumber3" step="any" value="3.50" min="0" />
+    <input type="number" class="form-control" data-bs-input id="inputNumber3" name="inputNumber3" step="any" value="3.50" min="0" />
     <button class="input-number-add">
       <span class="visually-hidden">Aumenta valore Euro</span>
     </button>
@@ -97,7 +97,7 @@ Si consiglia di impostare gli attributi `min=0` e `max="100"`.
 <div>
   <label for="inputNumber4" class="input-number-label">Percentage</label>
   <span class="input-number input-number-percentage">
-    <input type="number" data-bs-input id="inputNumber4" name="inputNumber4" value="50" min="0" max="100" step="any" />
+    <input type="number" class="form-control" data-bs-input id="inputNumber4" name="inputNumber4" value="50" min="0" max="100" step="any" />
     <button class="input-number-add">
       <span class="visually-hidden">Aumenta del 10%</span>
     </button>
@@ -118,7 +118,7 @@ Aggiungere anche l'attributo `disabled` al campo e ai pulsanti.
 <div>
   <label for="inputNumber5" class="input-number-label">Disabled</label>
   <span class="input-number disabled">
-    <input type="number" data-bs-input id="inputNumber5" name="inputNumber5" value="50" min="0" max="100" step="1" disabled />
+    <input type="number" class="form-control" data-bs-input id="inputNumber5" name="inputNumber5" value="50" min="0" max="100" step="1" disabled />
     <button class="input-number-add" disabled>
       <span class="visually-hidden">Aumenta valore</span>
     </button>
@@ -140,7 +140,7 @@ sufficiente aggiungere la classe `input-number-adaptive`.
 <div class="w-100">
   <label for="inputNumber6" class="input-number-label">Adattivo</label>
   <span class="input-number input-number-adaptive">
-    <input type="number" data-bs-input id="inputNumber6" name="inputNumber6" value="99999" step="any">
+    <input type="number" class="form-control" data-bs-input id="inputNumber6" name="inputNumber6" value="99999" step="any">
     <button class="input-number-add">
       <span class="visually-hidden">Aumenta valore</span>
     </button>
