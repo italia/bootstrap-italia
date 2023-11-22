@@ -59,7 +59,7 @@ title: Validazione Form
       <div class="col-12 col-md-4">
         <div class="form-group">
           <label class="active" for="date">Datepicker</label>
-          <input type="date" id="date" name="date" required />
+          <input class="form-control" type="date" id="date" name="date" required />
         </div>
       </div>
     </div>
@@ -68,6 +68,20 @@ title: Validazione Form
         <div class="form-group">
           <label class="active" for="time">Timepicker</label>
           <input class="form-control" id="time" type="time" required />
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="form-group">
+          <label for="importo" class="input-number-label active">Importo</label>
+          <span class="input-number input-number-currency">
+            <input type="number" class="form-control" data-bs-input id="importo" name="importo" step="any" value="3.50" min="0" required />
+            <button class="input-number-add">
+              <span class="visually-hidden">Aumenta valore Euro</span>
+            </button>
+            <button class="input-number-sub">
+              <span class="visually-hidden">Diminuisci valore Euro</span>
+            </button>
+          </span>
         </div>
       </div>
     </div>
@@ -344,6 +358,17 @@ title: Validazione Form
           rule: 'required',
           errorMessage: 'Questo campo è richiesto',
         },
+      ])
+      .addField('#importo', [
+        {
+          rule: 'required',
+          errorMessage: 'Questo campo è richiesto',
+        },
+        {
+          rule: 'minNumber',
+          value: 3.50,
+          errorMessage: 'Deve essere maggiore di 3.50',
+        }
       ])
       .addField('#age', [
         {
