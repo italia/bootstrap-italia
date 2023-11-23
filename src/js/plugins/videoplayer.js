@@ -78,7 +78,7 @@ const itLang = {
   'Text Edge Style': 'Stile dei bordi del testo',
   None: 'Nessuno',
   Uniform: 'Uniforme',
-  'Drop shadow': 'Ombreggiatura',
+  'Drop shadow': 'Ombra',
   'Font Family': 'Carattere',
   'Proportional Sans-Serif': 'Sans-Serif proporzionale',
   'Monospace Sans-Serif': 'Sans-Serif monospazio',
