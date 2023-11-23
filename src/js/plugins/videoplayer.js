@@ -99,7 +99,7 @@ const itLang = {
   Opacity: 'Opacità',
   'Text Background': 'Sfondo testo',
   'Caption Area Background': 'Sfondo area sottotitoli',
-  'Skip forward {1} seconds': 'Avanti di {1} secondi',
+  'Skip forward {1} seconds': 'Avanti {1} secondi',
   'Skip backward {1} seconds': 'Indietro di {1} secondi',
 }
 
