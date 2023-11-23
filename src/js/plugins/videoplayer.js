@@ -100,7 +100,7 @@ const itLang = {
   'Text Background': 'Sfondo testo',
   'Caption Area Background': 'Sfondo area sottotitoli',
   'Skip forward {1} seconds': 'Avanti {1} secondi',
-  'Skip backward {1} seconds': 'Indietro di {1} secondi',
+  'Skip backward {1} seconds': 'Indietro {1} secondi',
 }
 
 const DEFAULT_CONFIG = { languages: { it: itLang }, language: 'it' }
