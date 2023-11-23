@@ -57,7 +57,7 @@ const itLang = {
   ', opens subtitles settings dialog': ', aprire i parametri dei sottotitoli',
   ', opens descriptions settings dialog': ', aprire i parametri delle descrizioni',
   ', selected': ', selezionato',
-  'captions settings': 'Parametri sottotitoli non udenti",
+  'captions settings': 'Parametri sottotitoli non udenti',
   'subtitles settings': 'Parametri sottotitoli',
   'descriptions settings': 'Parametri descrizioni',
   Text: 'Testo',
@@ -87,7 +87,7 @@ const itLang = {
   'Small Caps': 'Maiuscoletto',
   Reset: 'Reinizializza',
   'restore all settings to the default values': 'Ripristina i valori predefiniti per tutti i parametri',
-  Done: 'Operazione completata',
+  Done: 'Fatto',
   'Caption Settings Dialog': 'Finestra di dialogo dei parametri della trascrizione dei sottotitoli',
   'Beginning of dialog window. Escape will cancel and close the window.':
     'Inizio della finestra di dialogo. Il tasto Esc annullerà l’operazione e chiuderà la finestra.',
