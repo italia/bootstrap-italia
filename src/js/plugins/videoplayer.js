@@ -79,7 +79,7 @@ const itLang = {
   None: 'Nessuno',
   Uniform: 'Uniforme',
   'Drop shadow': 'Ombreggiatura',
-  'Font Family': 'Font utilizzato',
+  'Font Family': 'Carattere',
   'Proportional Sans-Serif': 'Sans-Serif proporzionale',
   'Monospace Sans-Serif': 'Sans-Serif monospazio',
   'Proportional Serif': 'Serif proporzionale',
