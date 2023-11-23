@@ -178,7 +178,7 @@ Per maggiori informazioni si rimanda alla [documentazione ufficiale](https://alp
   <div class="col-12 mt-5">
     <div class="select-wrapper">
       <label for="productAutocomplete">Alimento</label>
-      <select class="form-control" id="productAutocomplete" title="Scegli un prodotto" required>
+      <select class="form-control" id="productAutocomplete" title="Scegli un prodotto">
       </select>
     </div>
   </div>
@@ -198,19 +198,26 @@ Per maggiori informazioni si rimanda alla [documentazione ufficiale](https://alp
       ],
     }
     document.addEventListener('DOMContentLoaded', function () {
-      const category = document.getElementById("category");
+      const categorySelect = document.getElementById("category");
       const selectElement = document.getElementById("productAutocomplete");
       const selectAutocomplete = new bootstrap.SelectAutocomplete(selectElement, {
+        required: true,
+        name: 'productAutocomplete',
+        confirmOnBlur: false,
         showAllValues: true,
         defaultValue: '',
         autoselect: false,
         showNoOptionsFound: false,
         dropdownArrow: () => '',
         source: (query, populateResults) => {
-          const results = form_data[category.value]
+          const results = form_data[categorySelect.value]
           const filteredResults = results.filter(result => result.indexOf(query) !== -1)
           populateResults(filteredResults)
         }
+      });
+      // Facoltativo: se si vuole cancellare l'elemento al cambio del filtro
+      categorySelect.addEventListener('change', (event) => {
+        document.getElementById("productAutocomplete").value = '';
       });
     })
   </script>
