@@ -83,7 +83,7 @@ const itLang = {
   'Proportional Sans-Serif': 'Sans-Serif proporzionale',
   'Monospace Sans-Serif': 'Sans-Serif monospaziato',
   'Proportional Serif': 'Serif proporzionale',
-  'Monospace Serif': 'Serif monospazio',
+  'Monospace Serif': 'Serif monospaziato',
   'Small Caps': 'Maiuscoletto',
   Reset: 'Reinizializza',
   'restore all settings to the default values': 'Ripristina i valori predefiniti per tutti i parametri',
