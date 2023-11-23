@@ -12,7 +12,7 @@ const SELECTOR_TOGGLE = '[data-bs-video]'
 const itLang = {
   'Audio Player': 'Lettore audio',
   'Video Player': 'Lettore video',
-  Play: 'Riproduci',
+  Play: 'Play',
   Pause: 'Pausa',
   Replay: 'Replay',
   'Current Time': 'Orario attuale',
