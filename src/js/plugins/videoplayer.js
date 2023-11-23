@@ -81,7 +81,7 @@ const itLang = {
   'Drop shadow': 'Ombra',
   'Font Family': 'Carattere',
   'Proportional Sans-Serif': 'Sans-Serif proporzionale',
-  'Monospace Sans-Serif': 'Sans-Serif monospazio',
+  'Monospace Sans-Serif': 'Sans-Serif monospaziato',
   'Proportional Serif': 'Serif proporzionale',
   'Monospace Serif': 'Serif monospazio',
   'Small Caps': 'Maiuscoletto',
