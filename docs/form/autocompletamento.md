@@ -147,12 +147,82 @@ Per una corretta implementazione si consiglia di consultare la [documentazione](
 </script>
 {% endcapture %}{% include example.html content=example %}
 
-Per prendere il valore della option che siamo andati a selezionare occorre agire su `_element` dell'oggetto `SelectAutocomplete`
+Per ottenere il valore della option che siamo andati a selezionare occorre agire su `_element` dell'oggetto `SelectAutocomplete`
 
 ```js
 const e = selectAutocomplete._element;
 const value = e.options[e.selectedIndex].value;
 ```
+
+## Cambiare i valori dinamicamente
+
+In questo esempio viene mostrato come popolare il componente con dati che 
+cambiano a fronte di un altro input, ad esempio il valore di un altro elemento
+di un form (come una select nell'esempio che segue). 
+Per far fronte a questa esigenza è sufficiente passare al parametro `source`
+del costruttore una funzione per filtrare i dati e popolare il componente.
+Per maggiori informazioni si rimanda alla [documentazione ufficiale](https://alphagov.github.io/accessible-autocomplete/#source).
+
+{% comment %}Example name: Cambiare i valori dinamicamente {% endcomment %}
+{% capture example %}
+<div class="row">
+  <div class="col-12 mt-5">
+    <div class="select-wrapper">
+      <label for="category">Categoria alimento</label>
+      <select id="category" name="category">
+        <option value="frutta" selected>Frutta</option>
+        <option value="verdura">Verdura</option>
+      </select>
+    </div>
+  </div>
+  <div class="col-12 mt-5">
+    <div class="select-wrapper">
+      <label for="productAutocomplete">Alimento</label>
+      <select class="form-control" id="productAutocomplete" title="Scegli un prodotto">
+      </select>
+    </div>
+  </div>
+  <script>
+    const form_data = {
+      'frutta' : [
+        'Mela',
+        'Pera',
+        'Melone',
+        'Banana',
+      ],
+      'verdura' : [
+        'Carota',
+        'Zucchina',
+        'Melanzana',
+        'Carciofo',
+      ],
+    }
+    document.addEventListener('DOMContentLoaded', function () {
+      const categorySelect = document.getElementById("category");
+      const selectElement = document.getElementById("productAutocomplete");
+      const selectAutocomplete = new bootstrap.SelectAutocomplete(selectElement, {
+        required: true,
+        name: 'productAutocomplete',
+        confirmOnBlur: false,
+        showAllValues: true,
+        defaultValue: '',
+        autoselect: false,
+        showNoOptionsFound: false,
+        dropdownArrow: () => '',
+        source: (query, populateResults) => {
+          const results = form_data[categorySelect.value]
+          const filteredResults = results.filter(result => result.indexOf(query) !== -1)
+          populateResults(filteredResults)
+        }
+      });
+      // Facoltativo: se si vuole cancellare l'elemento al cambio del filtro
+      categorySelect.addEventListener('change', (event) => {
+        document.getElementById("productAutocomplete").value = '';
+      });
+    })
+  </script>
+</div>
+{% endcapture %}{% include example.html content=example %}
 
 ### Validazione
 
