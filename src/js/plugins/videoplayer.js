@@ -58,7 +58,7 @@ const itLang = {
   ', opens descriptions settings dialog': ', aprire i parametri delle descrizioni',
   ', selected': ', selezionato',
   'captions settings': 'Parametri sottotitoli non udenti",
-  'subtitles settings': 'Settaggi dei sottotitoli',
+  'subtitles settings': 'Parametri sottotitoli',
   'descriptions settings': 'Settaggi delle descrizioni',
   Text: 'Testo',
   White: 'Bianco',
