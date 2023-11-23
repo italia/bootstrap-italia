@@ -59,7 +59,7 @@ const itLang = {
   ', selected': ', selezionato',
   'captions settings': 'Parametri sottotitoli non udenti",
   'subtitles settings': 'Parametri sottotitoli',
-  'descriptions settings': 'Settaggi delle descrizioni',
+  'descriptions settings': 'Parametri descrizioni',
   Text: 'Testo',
   White: 'Bianco',
   Black: 'Nero',
