@@ -89,7 +89,8 @@ class InputNumber extends BaseComponent {
   }
 
   _incrDecr(isDecr) {
-    const inputVal = parseFloat(this._element.value)
+    var inputVal = 0
+    if (this._element.value !== '') inputVal = parseFloat(this._element.value)
 
     if (!isNaN(inputVal)) {
       //get step
