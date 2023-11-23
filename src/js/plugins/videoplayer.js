@@ -28,7 +28,7 @@ const itLang = {
   'Exit Fullscreen': 'Chiudi Schermo intero',
   Mute: 'Disattiva l’audio',
   Unmute: 'Attiva l’audio',
-  'Playback Rate': 'Tasso di riproduzione',
+  'Playback Rate': 'Velocità di riproduzione',
   Subtitles: 'Sottotitoli',
   'subtitles off': 'Senza sottotitoli',
   Captions: 'Sottotitoli non udenti',
