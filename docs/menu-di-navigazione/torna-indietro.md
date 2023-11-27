@@ -14,7 +14,7 @@ Quando si utilizza un link (tag `<a>`) è necessario aggiungere un valore all'at
 
 {% comment %}Example name: Link{% endcomment %}
 {% capture example %}
-<a href="#" class="go-back" data-bs-toggle="historyback"><svg class="icon icon-sm icon-primary me-2"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-left"></use></svg> Torna indietro</a>
+<a href="#" class="go-back" data-bs-toggle="historyback"><svg class="icon icon-sm icon-primary me-2"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-left"></use></svg>Torna indietro</a>
 {% endcapture %}{% include example.html content=example %}
 
 ## Pulsanti
@@ -23,7 +23,7 @@ Nel caso dell'utilizzo di un pulsante l'accorgimento sopraindicato non è necess
 
 {% comment %}Example name: Pulsanti con freccia{% endcomment %}
 {% capture example %}
-<button type="button" class="btn btn-primary go-back" data-bs-toggle="historyback"><svg class="icon icon-sm icon-white me-2"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-left"></use></svg> Torna indietro</button>
+<button type="button" class="btn btn-primary go-back" data-bs-toggle="historyback"><svg class="icon icon-sm icon-white me-2"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-left"></use></svg>Torna indietro</button>
 <button type="button" class="btn btn-primary go-back" data-bs-toggle="historyback"><svg class="icon icon-sm icon-white me-2"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-up"></use></svg> Livello superiore</button>
 {% endcapture %}{% include example.html content=example %}
 
