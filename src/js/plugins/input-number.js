@@ -12,6 +12,7 @@ const DATA_API_KEY = '.data-api'
 
 const EVENT_CLICK = `click${EVENT_KEY}`
 const EVENT_CHANGE = `change${EVENT_KEY}`
+const EVENT_INPUT = `input`
 
 //const EVENT_FOCUS_DATA_API = `focus${EVENT_KEY}${DATA_API_KEY}`
 const EVENT_CLICK_DATA_API = `click${EVENT_KEY}${DATA_API_KEY}`
@@ -102,6 +103,7 @@ class InputNumber extends BaseComponent {
 
       this._element.value = inputVal + step * (isDecr ? -1 : 1)
       EventHandler.trigger(this._element, EVENT_CHANGE)
+      EventHandler.trigger(this._element, EVENT_INPUT)
     }
   }
 
