@@ -2,8 +2,7 @@
   position: relative;
 
   &.input-number-adaptive {
-    width: auto;
-    display: inline;
+    width: fit-content;
     input[type='number'] {
       width: auto;
       transition: all 0.3s;
@@ -58,6 +57,13 @@
   }
 
   //add + sub buttons
+  .input-group-text.align-buttons {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+  }
   .input-group-text button {
     position: relative;
     transition: opacity 0.1s;

@@ -17,6 +17,7 @@ button:has(~ .focus--mouse:not(.btn)),
   outline: none !important;
 }
 
+//same border color for element in input-group
 .input-group-text:has(+ .is-invalid),
 .is-invalid + .input-group-text,
 button:has(~ .is-invalid),
@@ -37,6 +38,16 @@ button:has(~ .is-invalid),
 button:has(~ .just-validate-success-field),
 .just-validate-success-field + button {
   border-color: #008758;
+}
+
+//move buttons to make validation icon visible
+.just-validate-success-field + .input-group-text.align-buttons,
+.is-invalid + .input-group-text.align-buttons {
+  right: 30px;
+}
+
+.is-invalid + .input-group-text.align-buttons {
+  bottom: 22px; //height of the form-feedback element
 }
 
 textarea {
