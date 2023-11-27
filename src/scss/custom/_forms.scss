@@ -59,6 +59,13 @@ fieldset {
       font-size: $small-font-size;
       color: $input-label-color;
     }
+    &:not(.active) {
+      & + .input-number-currency {
+        .input-group-text {
+          display: none;
+        }
+      }
+    }
   }
 
   input:is([type='radio']),
