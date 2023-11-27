@@ -24,7 +24,7 @@ La larghezza del campo predefinita è quella del suo contenitore, per limitare l
     <label for="inputNumber" class="input-number-label active">Input Number inserito in una colonna a tutta larghezza</label>
     <div class="input-group input-number">
       <input type="number" class="form-control" data-bs-input id="inputNumber" name="inputNumber" value="100" step="any" />
-      <span class="input-group-text d-flex flex-column">
+      <span class="input-group-text align-buttons flex-column">
         <button class="input-number-add">
           <span class="visually-hidden">Aumenta valore</span>
         </button>
@@ -41,7 +41,7 @@ La larghezza del campo predefinita è quella del suo contenitore, per limitare l
     <label for="inputNumber1" class="input-number-label active">Input Number inserito in una colonna di larghezza 50%</label>
     <div class="input-group input-number">
       <input type="number" class="form-control" data-bs-input id="inputNumber1" name="inputNumber1" value="100" step="any" />
-      <span class="input-group-text d-flex flex-column">
+      <span class="input-group-text align-buttons flex-column">
         <button class="input-number-add">
           <span class="visually-hidden">Aumenta valore</span>
         </button>
@@ -65,7 +65,7 @@ Aggiungendo gli attributi HTML `min=""`, `max=""` e `step=""` all'input è possi
     <label for="inputNumber2" class="input-number-label active">Min, Max & Step</label>
     <div class="input-group input-number">
       <input type="number" class="form-control" data-bs-input id="inputNumber2" name="inputNumber2" value="100" min="-2000" max="15000" step="500" />
-      <span class="input-group-text d-flex flex-column">
+      <span class="input-group-text align-buttons flex-column">
         <button class="input-number-add">
           <span class="visually-hidden">Aumenta valore</span>
         </button>
@@ -91,7 +91,7 @@ Per anteporre il simbolo della valuta in Euro, aggiungere la classe `.input-numb
     <div class="input-group input-number input-number-currency">
       <span class="input-group-text fw-semibold">€</span>
       <input type="number" class="form-control" data-bs-input id="inputNumber3" name="inputNumber3" step="any" value="3.50" min="0" />
-      <span class="input-group-text d-flex flex-column">
+      <span class="input-group-text align-buttons flex-column">
         <button class="input-number-add">
           <span class="visually-hidden">Aumenta valore Euro</span>
         </button>
@@ -118,7 +118,7 @@ Si consiglia di impostare gli attributi `min=0` e `max="100"`.
     <div class="input-group input-number input-number-percentage">
       <span class="input-group-text fw-semibold">%</span>
       <input type="number" class="form-control" data-bs-input id="inputNumber4" name="inputNumber4" value="50" min="0" max="100" step="any" />
-      <span class="input-group-text d-flex flex-column">
+      <span class="input-group-text align-buttons flex-column">
         <button class="input-number-add">
           <span class="visually-hidden">Aumenta del 10%</span>
         </button>
@@ -143,7 +143,7 @@ Aggiungere anche l'attributo `disabled` al campo e ai pulsanti.
     <label for="inputNumber5" class="input-number-label active">Disabled</label>
     <div class="input-group input-number disabled">
       <input type="number" class="form-control" data-bs-input id="inputNumber5" name="inputNumber5" value="50" min="0" max="100" step="1" disabled />
-      <span class="input-group-text d-flex flex-column">
+      <span class="input-group-text align-buttons flex-column">
         <button class="input-number-add">
           <span class="visually-hidden">Aumenta valore</span>
         </button>
@@ -169,7 +169,7 @@ sufficiente aggiungere la classe `input-number-adaptive`.
     <label for="inputNumber6" class="input-number-label active">Adattivo</label>
     <div class="input-group input-number input-number-adaptive">
       <input type="number" class="form-control" data-bs-input id="inputNumber6" name="inputNumber6" value="99999" step="any">
-      <span class="input-group-text d-flex flex-column">
+      <span class="input-group-text align-buttons flex-column">
         <button class="input-number-add">
           <span class="visually-hidden">Aumenta valore</span>
         </button>
