@@ -61,6 +61,7 @@ class InputNumber extends BaseComponent {
         EventHandler.on(btn, EVENT_CLICK, (evt) => {
           evt.preventDefault()
           this._incrDecr(btn.classList.contains(CLASS_NAME_DECREMENT))
+          this._label._labelOut()
         })
       })
 
