@@ -12,9 +12,9 @@
 .focus--mouse:not(.btn) + .input-group-text,
 button:has(~ .focus--mouse:not(.btn)),
 .focus--mouse:not(.btn) + button {
-    border-color: inherit !important;
-    box-shadow: none !important;
-    outline: none !important;
+  border-color: inherit !important;
+  box-shadow: none !important;
+  outline: none !important;
 }
 
 .input-group-text:has(+ .is-invalid),
