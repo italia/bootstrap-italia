@@ -99,11 +99,11 @@ Scopri come gli aspetti della griglia di Bootstrap funzionano su più dispositiv
         <td>540px</td>
         <td>720px</td>
         <td>960px</td>
-        <td>1184px</td>
+        <td>1176px</td>
         <td>1320px</td>
       </tr>
       <tr>
-        <th class="text-nowrap" scope="row">Prefisso della classe</th>
+        <th class="text-nowrap" scope="row">Prefisso classi per le colonne</th>
         <td><code>.col-</code></td>
         <td><code>.col-sm-</code></td>
         <td><code>.col-md-</code></td>
@@ -112,7 +112,7 @@ Scopri come gli aspetti della griglia di Bootstrap funzionano su più dispositiv
         <td><code>.col-xxl-</code></td>
       </tr>
       <tr>
-        <th class="text-nowrap" scope="row"># di colonne</th>
+        <th class="text-nowrap" scope="row">Numero di colonne</th>
         <td colspan="6">12</td>
       </tr>
       <tr>

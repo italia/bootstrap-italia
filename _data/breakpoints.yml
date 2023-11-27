@@ -28,7 +28,7 @@
   abbr: -xl
   name: Extra large
   min-width: 1200px
-  container: 1140px
+  container: 1176px
 
 - breakpoint: xxl
   abbr: -xxl
