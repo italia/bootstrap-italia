@@ -10,10 +10,14 @@
   min-width: 100px;
   padding: 0 $v-gap * 2 2px $v-gap;
   transition: all 0.05s;
-  margin: $v-gap * 0.5 $v-gap * 0.5 $v-gap auto;
+  margin-top: $v-gap * 0.5;
+  margin-bottom: $v-gap;
+  &:not(:last-child) {
+    margin-right: $v-gap;
+  }
   //label
   .chip-label {
-    font-size: 0.875rem;
+    font-size: $chips-label-font-size;
     height: $v-gap * 2;
     font-weight: 600;
     color: $chips-label-color;
@@ -69,7 +73,7 @@
     padding: 2px $v-gap * 3 0 $v-gap * 2;
     //label
     .chip-label {
-      font-size: 1rem;
+      font-size: $chips-label-font-size-l;
       height: 12px;
       transform: translateY(-8px);
     }

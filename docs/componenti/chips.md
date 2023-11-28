@@ -153,7 +153,6 @@ I gruppi di chip vengono visualizzati in linea.
 <div class="chip chip-simple">
   <span class="chip-label">Label</span>
 </div>
-
 <div class="chip">
   <span class="chip-label">Label</span>
   <button>
@@ -161,7 +160,6 @@ I gruppi di chip vengono visualizzati in linea.
     <span class="visually-hidden">Elimina label</span>
   </button>
 </div>
-
 <div class="chip">
   <svg class="icon icon-xs"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-github"></use></svg>
   <span class="chip-label">Label</span>
@@ -170,7 +168,6 @@ I gruppi di chip vengono visualizzati in linea.
     <span class="visually-hidden">Elimina label</span>
   </button>
 </div>
-
 <div class="chip">
   <div class="avatar size-xs">
     <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Mario Rossi">
@@ -187,7 +184,6 @@ I gruppi di chip vengono visualizzati in linea.
 <div class="chip chip-lg chip-simple">
   <span class="chip-label">Label</span>
 </div>
-
 <div class="chip chip-lg">
   <span class="chip-label">Label</span>
   <button>
@@ -195,7 +191,6 @@ I gruppi di chip vengono visualizzati in linea.
     <span class="visually-hidden">Elimina label</span>
   </button>
 </div>
-
 <div class="chip chip-lg">
   <svg class="icon icon-xs"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-github"></use></svg>
   <span class="chip-label">Label</span>
@@ -204,7 +199,6 @@ I gruppi di chip vengono visualizzati in linea.
     <span class="visually-hidden">Elimina label</span>
   </button>
 </div>
-
 <div class="chip chip-lg">
   <div class="avatar size-xs">
     <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Mario Rossi">
