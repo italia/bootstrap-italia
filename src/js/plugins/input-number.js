@@ -20,8 +20,6 @@ const EVENT_MOUSEDOWN_DATA_API = `mousedown${EVENT_KEY}${DATA_API_KEY}`
 const EVENT_KEYUP_DATA_API = `keyup${EVENT_KEY}${DATA_API_KEY}`
 
 const CLASS_NAME_ADAPTIVE = 'input-number-adaptive'
-const CLASS_NAME_PERCENTAGE = 'input-number-percentage'
-const CLASS_NAME_CURRENCY = 'input-number-currency'
 //const CLASS_NAME_INCREMENT = 'input-number-add'
 const CLASS_NAME_DECREMENT = 'input-number-sub'
 
