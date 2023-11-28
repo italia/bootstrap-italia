@@ -30,30 +30,23 @@
   //disabled version
   &.disabled {
     input[type='number'] {
-      background-color: transparent;
-      color: $gray-label-disabled;
-      border-bottom-color: $gray-border-disabled;
+      background-color: $gray-disabled;
+      color: $gray-800;
       &:hover {
         cursor: not-allowed;
         color: $gray-label-disabled;
       }
     }
-    button {
-      pointer-events: none;
-      &:hover {
-        cursor: not-allowed;
-      }
-      &.input-number-add {
-        &:after {
-          border-color: transparent transparent $gray-border-disabled transparent;
+    .input-group-text {
+      background-color: $gray-disabled;
+      color: $gray-800;
+      button {
+        pointer-events: none;
+        &:hover {
+          cursor: not-allowed;
         }
       }
-      &.input-number-sub {
-        &:after {
-          border-color: $gray-border-disabled transparent transparent transparent;
-        }
-      }
-    }
+    } 
   }
 
   //add + sub buttons

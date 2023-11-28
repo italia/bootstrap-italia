@@ -74,14 +74,9 @@ class InputNumber extends BaseComponent {
     if (this._wrapperElement.classList.contains(CLASS_NAME_ADAPTIVE)) {
       let newWidth = null
       //let newWidthIE = null
-      if (!this._wrapperElement.classList.contains(CLASS_NAME_PERCENTAGE)) {
-        newWidth = 'calc(44px + ' + this._element.value.length + 'ch)'
-        //newWidthIE = 'calc(44px + (1.5 * ' + this._element.value.length + 'ch))'
-      }
-      if (this._wrapperElement.classList.contains(CLASS_NAME_CURRENCY)) {
-        newWidth = 'calc(40px + 44px + ' + this._element.value.length + 'ch)'
-        //newWidthIE = 'calc(40px + 44px + (1.5 * ' + this._element.value.length + 'ch))'
-      }
+      //74px - buttons (30px) and possible validation icon (40px)
+      newWidth = 'calc(70px + ' + this._element.value.length + 'ch)'
+      //newWidthIE = 'calc(44px + (1.5 * ' + this._element.value.length + 'ch))'
 
       if (newWidth) {
         this._element.style.width = newWidth
