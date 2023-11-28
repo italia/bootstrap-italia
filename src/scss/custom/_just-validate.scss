@@ -50,6 +50,12 @@ button:has(~ .just-validate-success-field),
   bottom: 22px; //height of the form-feedback element
 }
 
+.autocomplete__wrapper {
+  .form-feedback.just-validate-error-label {
+    position: absolute;
+  }
+}
+
 textarea {
   &.form-control {
     background-position: top 0.3em right 0.3em !important;
