@@ -364,17 +364,6 @@ title: Validazione Form
           errorMessage: 'Questo campo è richiesto',
         },
       ])
-      .addField('#importo', [
-        {
-          rule: 'required',
-          errorMessage: 'Questo campo è richiesto',
-        },
-        {
-          rule: 'minNumber',
-          value: 3.50,
-          errorMessage: 'Deve essere maggiore di 3.50',
-        }
-      ])
       .addField('#importo_input_group', [
         {
           rule: 'required',
