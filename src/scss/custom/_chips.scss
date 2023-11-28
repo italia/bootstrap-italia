@@ -10,11 +10,10 @@
   min-width: 100px;
   padding: 0 $v-gap * 2 2px $v-gap;
   transition: all 0.05s;
-  margin-top: $v-gap;
+  margin-top: $v-gap * 0.5;
   margin-bottom: $v-gap;
-
-  & + & {
-    margin-left: $v-gap;
+  &:not(:last-child) {
+    margin-right: $v-gap;
   }
   //label
   .chip-label {
