@@ -25,73 +25,669 @@ Essendo il megamenu un componente di navigazione critico dal punto di vista dell
 - Non devono essere presenti link con la medesima label che portino a destinazioni diverse. Nel caso dei link ["Vedi tutti"](#classico-con-link-vedi-tutti) è ad esempio importante ricordare di aggiungere uno `<span class="visually-hidden">` alla label per specificare a quale sezione si fa riferimento.
   {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
-## Megamenu classico
-
-Il megamenu ha una struttura colonnare, ogni colonna richiama al suo interno il componente **[Lista di link]({{ site.baseurl }}/docs/organizzare-i-contenuti/liste/#liste-per-menù-di-navigazione)** per comporre l'elenco di link desiderato
+## Megamenu accessibile
 
 {% comment %}Example name: Base{% endcomment %}
 {% capture example %}
-<nav class="navbar navbar-expand-lg has-megamenu">
-  <button class="custom-navbar-toggler" type="button" aria-controls="nav1" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#nav1">
-    <svg class="icon">
-      <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use>
-    </svg>
-  </button>
-  <div class="navbar-collapsable" id="nav1">
-    <div class="overlay"></div>
-    <div class="close-div">
-      <button class="btn close-menu" type="button">
-        <span class="visually-hidden">Nascondi la navigazione</span>
-        <svg class="icon">
-          <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-close-big"></use>
-        </svg>
-      </button>
-    </div>
-    <div class="menu-wrapper">
+<nav class="navbar navbar-expand-lg has-megamenu" aria-label="Menu principale"><button type="button"
+    aria-label="Mostra o nascondi il menu" class="custom-navbar-toggler" aria-controls="menu" aria-expanded="false"
+    data-bs-toggle="navbarcollapsible" data-bs-target="#menu"><span><svg role="img" class="icon">
+        <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use>
+      </svg></span></button>
+  <div class="navbar-collapsable" id="menu">
+    <div class="overlay fade"></div>
+    <div class="close-div"><button type="button" aria-label="Chiudi il menu" class="btn close-menu"><span><svg
+            role="img" class="icon">
+            <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-close-big"></use>
+          </svg></span></button></div>
+    <div class="menu-wrapper justify-content-lg-between">
       <ul class="navbar-nav">
-        <li class="nav-item dropdown megamenu">
-          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu1">
-            <span>Megamenu</span>
-            <svg class="icon icon-xs">
+        <li class="nav-item dropdown megamenu"><button type="button"
+            class="nav-link dropdown-toggle px-lg-2 px-xl-3 fw-semibold" data-bs-toggle="dropdown" aria-expanded="false"
+            id="menuA" data-focus-mouse="false"><span>Progetto</span><svg role="img" class="icon icon-xs ms-1">
               <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use>
-            </svg>
-          </a>
-          <div class="dropdown-menu" role="region" aria-labelledby="megamenu1">
-            <div class="row">
-              <div class="col-12 col-lg-4">
-                <div class="link-list-wrapper">
-                  <ul class="link-list">
-                    <li><a class="dropdown-item list-item" href="#"><span>Link lista 1</span></a>
-                    </li>
-                    <li><a class="dropdown-item list-item" href="#"><span>Link lista 2</span></a>
-                    </li>
-                    <li><a class="dropdown-item list-item" href="#"><span>Link lista 3</span></a>
-                    </li>
-                  </ul>
+            </svg></button>
+          <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="menuA">
+            <div class="megamenu pb-5 pb-lg-0">
+              <div class="row">
+                <div class="col-xs-12 col-lg-4 px-0">
+                  <div class="row">
+                    <div class="col-12 it-vertical it-description pb-lg-3">
+                      <div class="description-content img-max-megamenu ps-4 ps-sm-5 ms-3">
+                        <div class="ratio ratio-megamenu lightgrey-bg-a1 mb-4 rounded">
+                          <div data-gatsby-image-wrapper=""
+                            class="gatsby-image-wrapper gatsby-image-wrapper-constrained rounded">
+                            <div style="max-width:3200px;display:block"><img alt="" role="presentation"
+                                aria-hidden="true"
+                                src="data:image/svg+xml;charset=utf-8,%3Csvg%20height='2000'%20width='3200'%20xmlns='http://www.w3.org/2000/svg'%20version='1.1'%3E%3C/svg%3E"
+                                style="max-width:100%;display:block;position:static">
+                            </div>
+                            <div aria-hidden="true" data-placeholder-image=""
+                              style="opacity: 0; transition: opacity 500ms linear 0s; background-color: rgb(200, 120, 8); position: absolute; inset: 0px;">
+                            </div>
+                            <picture>
+                              <source type="image/avif"
+                                srcset="/static/0d973a0343157b10c739076c1a282b05/88738/home.avif 800w,/static/0d973a0343157b10c739076c1a282b05/4d6cb/home.avif 1600w,/static/0d973a0343157b10c739076c1a282b05/78b45/home.avif 3200w"
+                                sizes="(min-width: 3200px) 3200px, 100vw">
+                              <source type="image/webp"
+                                srcset="/static/0d973a0343157b10c739076c1a282b05/912d8/home.webp 800w,/static/0d973a0343157b10c739076c1a282b05/3f5e5/home.webp 1600w,/static/0d973a0343157b10c739076c1a282b05/1f83d/home.webp 3200w"
+                                sizes="(min-width: 3200px) 3200px, 100vw"><img data-main-image="" style="opacity: 1;"
+                                sizes="(min-width: 3200px) 3200px, 100vw" decoding="async" loading="eager"
+                                src="/static/0d973a0343157b10c739076c1a282b05/a1dee/home.jpg"
+                                srcset="/static/0d973a0343157b10c739076c1a282b05/032ba/home.jpg 800w,/static/0d973a0343157b10c739076c1a282b05/eea20/home.jpg 1600w,/static/0d973a0343157b10c739076c1a282b05/a1dee/home.jpg 3200w"
+                                alt="">
+                            </picture><noscript>
+                              <picture>
+                                <source type="image/avif"
+                                  srcSet="/static/0d973a0343157b10c739076c1a282b05/88738/home.avif 800w,/static/0d973a0343157b10c739076c1a282b05/4d6cb/home.avif 1600w,/static/0d973a0343157b10c739076c1a282b05/78b45/home.avif 3200w"
+                                  sizes="(min-width: 3200px) 3200px, 100vw" />
+                                <source type="image/webp"
+                                  srcSet="/static/0d973a0343157b10c739076c1a282b05/912d8/home.webp 800w,/static/0d973a0343157b10c739076c1a282b05/3f5e5/home.webp 1600w,/static/0d973a0343157b10c739076c1a282b05/1f83d/home.webp 3200w"
+                                  sizes="(min-width: 3200px) 3200px, 100vw" /><img data-gatsby-image-ssr=""
+                                  data-main-image="" style="opacity:0" sizes="(min-width: 3200px) 3200px, 100vw"
+                                  decoding="async" loading="eager"
+                                  src="/static/0d973a0343157b10c739076c1a282b05/a1dee/home.jpg"
+                                  srcSet="/static/0d973a0343157b10c739076c1a282b05/032ba/home.jpg 800w,/static/0d973a0343157b10c739076c1a282b05/eea20/home.jpg 1600w,/static/0d973a0343157b10c739076c1a282b05/a1dee/home.jpg 3200w"
+                                  alt="" />
+                              </picture>
+                            </noscript>
+                            <script
+                              type="module">const t = "undefined" != typeof HTMLImageElement && "loading" in HTMLImageElement.prototype; if (t) { const t = document.querySelectorAll("img[data-main-image]"); for (let e of t) { e.dataset.src && (e.setAttribute("src", e.dataset.src), e.removeAttribute("data-src")), e.dataset.srcset && (e.setAttribute("srcset", e.dataset.srcset), e.removeAttribute("data-srcset")); const t = e.parentNode.querySelectorAll("source[data-srcset]"); for (let e of t) e.setAttribute("srcset", e.dataset.srcset), e.removeAttribute("data-srcset"); e.complete && (e.style.opacity = 1, e.parentNode.parentNode.querySelector("[data-placeholder-image]").style.opacity = 0) } }</script>
+                          </div>
+                        </div>
+                        <p><strong>Designers Italia è il punto di riferimento per la
+                            progettazione</strong> dei servizi digitali della Pubblica
+                          Amministrazione.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-8">
+                  <div class="heading-link-wrapper"><a class="heading-link d-flex-inline align-items-center"
+                      href="/progetto/"><svg role="img" class="icon icon-sm icon-primary me-2">
+                        <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use>
+                      </svg><span>Esplora il progetto Designers Italia</span></a></div>
+                  <div class="row">
+                    <div class="col-12 col-lg-6">
+                      <div class="link-list-wrapper">
+                        <ul class="link-list">
+                          <li><a class="list-item     left-icon  dropdown-item "
+                              href="/progetto/visione-e-missione/"><svg role="img"
+                                class="icon icon-sm icon-primary align-middle me-2">
+                                <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle">
+                                </use>
+                              </svg><span>Visione e missione</span></a></li>
+                          <li><a class="list-item     left-icon  dropdown-item "
+                              href="/progetto/formazione-e-disseminazione/"><svg role="img"
+                                class="icon icon-sm icon-primary align-middle me-2">
+                                <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle">
+                                </use>
+                              </svg><span>Formazione e disseminazione</span></a></li>
+                          <li><a class="list-item     left-icon  dropdown-item " href="/progetto/storia/"><svg
+                                role="img" class="icon icon-sm icon-primary align-middle me-2">
+                                <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle">
+                                </use>
+                              </svg><span>Storia</span></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="col-12 col-lg-4">
-                <div class="link-list-wrapper">
-                  <ul class="link-list">
-                    <li><a class="dropdown-item list-item" href="#"><span>Link lista 4</span></a>
-                    </li>
-                    <li><a class="dropdown-item list-item" href="#"><span>Link lista 5</span></a>
-                    </li>
-                    <li><a class="dropdown-item list-item" href="#"><span>Link lista 6</span></a>
-                    </li>
-                  </ul>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item dropdown megamenu"><button type="button"
+            class="nav-link dropdown-toggle px-lg-2 px-xl-3 fw-semibold" data-bs-toggle="dropdown" aria-expanded="false"
+            id="menuB" data-focus-mouse="false"><span>Norme e riferimenti</span><svg role="img"
+              class="icon icon-xs ms-1">
+              <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use>
+            </svg></button>
+          <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="menuB">
+            <div class="megamenu pb-5 pb-lg-0">
+              <div class="row">
+                <div class="col-xs-12 col-lg-4 px-0">
+                  <div class="row">
+                    <div class="col-12 it-vertical it-description pb-lg-3">
+                      <div class="description-content img-max-megamenu ps-4 ps-sm-5 ms-3">
+                        <div class="ratio ratio-megamenu lightgrey-bg-a1 mb-4 rounded">
+                          <div data-gatsby-image-wrapper=""
+                            class="gatsby-image-wrapper gatsby-image-wrapper-constrained rounded">
+                            <div style="max-width:3840px;display:block"><img alt="" role="presentation"
+                                aria-hidden="true"
+                                src="data:image/svg+xml;charset=utf-8,%3Csvg%20height='1648'%20width='3840'%20xmlns='http://www.w3.org/2000/svg'%20version='1.1'%3E%3C/svg%3E"
+                                style="max-width:100%;display:block;position:static">
+                            </div>
+                            <div aria-hidden="true" data-placeholder-image=""
+                              style="opacity: 0; transition: opacity 500ms linear 0s; background-color: rgb(200, 120, 8); position: absolute; inset: 0px;">
+                            </div>
+                            <picture>
+                              <source type="image/avif"
+                                srcset="/static/ba50afab4951d4437df225ac40bc9760/2b1f4/manuale-operativo-di-design.avif 960w,/static/ba50afab4951d4437df225ac40bc9760/2ae3a/manuale-operativo-di-design.avif 1920w,/static/ba50afab4951d4437df225ac40bc9760/78b33/manuale-operativo-di-design.avif 3840w"
+                                sizes="(min-width: 3840px) 3840px, 100vw">
+                              <source type="image/webp"
+                                srcset="/static/ba50afab4951d4437df225ac40bc9760/e6899/manuale-operativo-di-design.webp 960w,/static/ba50afab4951d4437df225ac40bc9760/8644f/manuale-operativo-di-design.webp 1920w,/static/ba50afab4951d4437df225ac40bc9760/d6da2/manuale-operativo-di-design.webp 3840w"
+                                sizes="(min-width: 3840px) 3840px, 100vw"><img data-main-image="" style="opacity: 1;"
+                                sizes="(min-width: 3840px) 3840px, 100vw" decoding="async" loading="eager"
+                                src="/static/ba50afab4951d4437df225ac40bc9760/5fdb4/manuale-operativo-di-design.jpg"
+                                srcset="/static/ba50afab4951d4437df225ac40bc9760/c52da/manuale-operativo-di-design.jpg 960w,/static/ba50afab4951d4437df225ac40bc9760/eda89/manuale-operativo-di-design.jpg 1920w,/static/ba50afab4951d4437df225ac40bc9760/5fdb4/manuale-operativo-di-design.jpg 3840w"
+                                alt="">
+                            </picture><noscript>
+                              <picture>
+                                <source type="image/avif"
+                                  srcSet="/static/ba50afab4951d4437df225ac40bc9760/2b1f4/manuale-operativo-di-design.avif 960w,/static/ba50afab4951d4437df225ac40bc9760/2ae3a/manuale-operativo-di-design.avif 1920w,/static/ba50afab4951d4437df225ac40bc9760/78b33/manuale-operativo-di-design.avif 3840w"
+                                  sizes="(min-width: 3840px) 3840px, 100vw" />
+                                <source type="image/webp"
+                                  srcSet="/static/ba50afab4951d4437df225ac40bc9760/e6899/manuale-operativo-di-design.webp 960w,/static/ba50afab4951d4437df225ac40bc9760/8644f/manuale-operativo-di-design.webp 1920w,/static/ba50afab4951d4437df225ac40bc9760/d6da2/manuale-operativo-di-design.webp 3840w"
+                                  sizes="(min-width: 3840px) 3840px, 100vw" /><img data-gatsby-image-ssr=""
+                                  data-main-image="" style="opacity:0" sizes="(min-width: 3840px) 3840px, 100vw"
+                                  decoding="async" loading="eager"
+                                  src="/static/ba50afab4951d4437df225ac40bc9760/5fdb4/manuale-operativo-di-design.jpg"
+                                  srcSet="/static/ba50afab4951d4437df225ac40bc9760/c52da/manuale-operativo-di-design.jpg 960w,/static/ba50afab4951d4437df225ac40bc9760/eda89/manuale-operativo-di-design.jpg 1920w,/static/ba50afab4951d4437df225ac40bc9760/5fdb4/manuale-operativo-di-design.jpg 3840w"
+                                  alt="" />
+                              </picture>
+                            </noscript>
+                            <script
+                              type="module">const t = "undefined" != typeof HTMLImageElement && "loading" in HTMLImageElement.prototype; if (t) { const t = document.querySelectorAll("img[data-main-image]"); for (let e of t) { e.dataset.src && (e.setAttribute("src", e.dataset.src), e.removeAttribute("data-src")), e.dataset.srcset && (e.setAttribute("srcset", e.dataset.srcset), e.removeAttribute("data-srcset")); const t = e.parentNode.querySelectorAll("source[data-srcset]"); for (let e of t) e.setAttribute("srcset", e.dataset.srcset), e.removeAttribute("data-srcset"); e.complete && (e.style.opacity = 1, e.parentNode.parentNode.querySelector("[data-placeholder-image]").style.opacity = 0) } }</script>
+                          </div>
+                        </div>
+                        <p><strong>Scopri le principali norme e riferimenti ufficiali</strong>
+                          per progettare servizi digitali pubblici inclusivi, equi e
+                          accessibili.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-8">
+                  <div class="heading-link-wrapper"><a class="heading-link d-flex-inline align-items-center"
+                      href="/norme-e-riferimenti/"><svg role="img" class="icon icon-sm icon-primary me-2">
+                        <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use>
+                      </svg><span>Esplora le norme e i riferimenti</span></a></div>
+                  <div class="row">
+                    <div class="col-12 col-lg-6">
+                      <div class="link-list-wrapper">
+                        <ul class="link-list">
+                          <li><a class="list-item     left-icon  dropdown-item "
+                              href="/norme-e-riferimenti/linee-guida-di-design/"><svg role="img"
+                                class="icon icon-sm icon-primary align-middle me-2">
+                                <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle">
+                                </use>
+                              </svg><span>Linee guida di design</span></a></li>
+                          <li><a class="list-item     left-icon  dropdown-item "
+                              href="/norme-e-riferimenti/linee-guida-accessibilita/"><svg role="img"
+                                class="icon icon-sm icon-primary align-middle me-2">
+                                <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle">
+                                </use>
+                              </svg><span>Linee guida accessibilità</span></a></li>
+                          <li><a class="list-item     left-icon  dropdown-item "
+                              href="/norme-e-riferimenti/manuale-operativo-di-design/"><svg role="img"
+                                class="icon icon-sm icon-primary align-middle me-2">
+                                <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle">
+                                </use>
+                              </svg><span>Manuale operativo di design</span></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                      <div class="link-list-wrapper">
+                        <ul class="link-list">
+                          <li><a href="/norme-e-riferimenti#articoli-di-approfondimento"
+                              class="list-item     left-icon  dropdown-item "><svg role="img"
+                                class="icon icon-sm icon-primary align-middle me-2">
+                                <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle">
+                                </use>
+                              </svg><span>Articoli di approfondimento</span></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="col-12 col-lg-4">
-                <div class="link-list-wrapper">
-                  <ul class="link-list">
-                    <li><a class="dropdown-item list-item" href="#"><span>Link lista 7</span></a>
-                    </li>
-                    <li><a class="dropdown-item list-item" href="#"><span>Link lista 8</span></a>
-                    </li>
-                    <li><a class="dropdown-item list-item" href="#"><span>Link lista 9</span></a>
-                    </li>
-                  </ul>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown megamenu"><button type="button"
+            class="nav-link dropdown-toggle px-lg-2 px-xl-3 fw-semibold" data-bs-toggle="dropdown" aria-expanded="false"
+            id="menuC"><span>Modelli</span><svg role="img" class="icon icon-xs ms-1">
+              <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use>
+            </svg></button>
+          <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="menuC">
+            <div class="megamenu pb-5 pb-lg-0">
+              <div class="row">
+                <div class="col-xs-12 col-lg-4 px-0">
+                  <div class="row">
+                    <div class="col-12 it-vertical it-description pb-lg-3">
+                      <div class="description-content img-max-megamenu ps-4 ps-sm-5 ms-3">
+                        <div class="ratio ratio-megamenu lightgrey-bg-a1 mb-4 rounded">
+                          <div data-gatsby-image-wrapper=""
+                            class="gatsby-image-wrapper gatsby-image-wrapper-constrained rounded">
+                            <div style="max-width:1450px;display:block"><img alt="" role="presentation"
+                                aria-hidden="true"
+                                src="data:image/svg+xml;charset=utf-8,%3Csvg%20height='906'%20width='1450'%20xmlns='http://www.w3.org/2000/svg'%20version='1.1'%3E%3C/svg%3E"
+                                style="max-width:100%;display:block;position:static">
+                            </div>
+                            <div aria-hidden="true" data-placeholder-image=""
+                              style="opacity: 0; transition: opacity 500ms linear 0s; background-color: rgb(104, 216, 216); position: absolute; inset: 0px;">
+                            </div>
+                            <picture>
+                              <source type="image/avif"
+                                srcset="/static/70cecc5a0a63d4057163ac117e5feade/00221/comuni.avif 363w,/static/70cecc5a0a63d4057163ac117e5feade/11ecc/comuni.avif 725w,/static/70cecc5a0a63d4057163ac117e5feade/0ac32/comuni.avif 1450w"
+                                sizes="(min-width: 1450px) 1450px, 100vw">
+                              <source type="image/webp"
+                                srcset="/static/70cecc5a0a63d4057163ac117e5feade/7ff0d/comuni.webp 363w,/static/70cecc5a0a63d4057163ac117e5feade/99691/comuni.webp 725w,/static/70cecc5a0a63d4057163ac117e5feade/65c2b/comuni.webp 1450w"
+                                sizes="(min-width: 1450px) 1450px, 100vw"><img data-main-image="" style="opacity: 1;"
+                                sizes="(min-width: 1450px) 1450px, 100vw" decoding="async" loading="eager"
+                                src="/static/70cecc5a0a63d4057163ac117e5feade/8dc0e/comuni.png"
+                                srcset="/static/70cecc5a0a63d4057163ac117e5feade/5b008/comuni.png 363w,/static/70cecc5a0a63d4057163ac117e5feade/1ab17/comuni.png 725w,/static/70cecc5a0a63d4057163ac117e5feade/8dc0e/comuni.png 1450w"
+                                alt="">
+                            </picture><noscript>
+                              <picture>
+                                <source type="image/avif"
+                                  srcSet="/static/70cecc5a0a63d4057163ac117e5feade/00221/comuni.avif 363w,/static/70cecc5a0a63d4057163ac117e5feade/11ecc/comuni.avif 725w,/static/70cecc5a0a63d4057163ac117e5feade/0ac32/comuni.avif 1450w"
+                                  sizes="(min-width: 1450px) 1450px, 100vw" />
+                                <source type="image/webp"
+                                  srcSet="/static/70cecc5a0a63d4057163ac117e5feade/7ff0d/comuni.webp 363w,/static/70cecc5a0a63d4057163ac117e5feade/99691/comuni.webp 725w,/static/70cecc5a0a63d4057163ac117e5feade/65c2b/comuni.webp 1450w"
+                                  sizes="(min-width: 1450px) 1450px, 100vw" /><img data-gatsby-image-ssr=""
+                                  data-main-image="" style="opacity:0" sizes="(min-width: 1450px) 1450px, 100vw"
+                                  decoding="async" loading="eager"
+                                  src="/static/70cecc5a0a63d4057163ac117e5feade/8dc0e/comuni.png"
+                                  srcSet="/static/70cecc5a0a63d4057163ac117e5feade/5b008/comuni.png 363w,/static/70cecc5a0a63d4057163ac117e5feade/1ab17/comuni.png 725w,/static/70cecc5a0a63d4057163ac117e5feade/8dc0e/comuni.png 1450w"
+                                  alt="" />
+                              </picture>
+                            </noscript>
+                            <script
+                              type="module">const t = "undefined" != typeof HTMLImageElement && "loading" in HTMLImageElement.prototype; if (t) { const t = document.querySelectorAll("img[data-main-image]"); for (let e of t) { e.dataset.src && (e.setAttribute("src", e.dataset.src), e.removeAttribute("data-src")), e.dataset.srcset && (e.setAttribute("srcset", e.dataset.srcset), e.removeAttribute("data-srcset")); const t = e.parentNode.querySelectorAll("source[data-srcset]"); for (let e of t) e.setAttribute("srcset", e.dataset.srcset), e.removeAttribute("data-srcset"); e.complete && (e.style.opacity = 1, e.parentNode.parentNode.querySelector("[data-placeholder-image]").style.opacity = 0) } }</script>
+                          </div>
+                        </div>
+                        <p><strong>Usa i modelli di design per realizzare siti e servizi
+                            digitali</strong> validati dalla ricerca e progettati sui
+                          bisogni dei cittadini.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-8">
+                  <div class="heading-link-wrapper"><a class="heading-link d-flex-inline align-items-center"
+                      href="/modelli/"><svg role="img" class="icon icon-sm icon-primary me-2">
+                        <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use>
+                      </svg><span>Esplora i modelli di siti e servizi digitali per la
+                        PA</span></a></div>
+                  <div class="row">
+                    <div class="col-12 col-lg-6">
+                      <div class="link-list-wrapper">
+                        <ul class="link-list">
+                          <li><a class="list-item     left-icon  dropdown-item " href="/modelli/comuni/"><svg role="img"
+                                class="icon icon-sm icon-primary align-middle me-2">
+                                <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle">
+                                </use>
+                              </svg><span>Comuni</span></a></li>
+                          <li><a class="list-item     left-icon  dropdown-item " href="/modelli/scuole/"><svg role="img"
+                                class="icon icon-sm icon-primary align-middle me-2">
+                                <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle">
+                                </use>
+                              </svg><span>Scuole</span></a></li>
+                          <li><a class="list-item     left-icon  dropdown-item " href="/modelli/musei-civici/"><svg
+                                role="img" class="icon icon-sm icon-primary align-middle me-2">
+                                <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle">
+                                </use>
+                              </svg><span>Musei civici</span></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                      <div class="link-list-wrapper">
+                        <ul class="link-list">
+                          <li><a class="list-item     left-icon  dropdown-item "
+                              href="/modelli/aziende-sanitarie-locali/"><svg role="img"
+                                class="icon icon-sm icon-primary align-middle me-2">
+                                <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle">
+                                </use>
+                              </svg><span>Aziende sanitarie locali (ASL)</span></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item dropdown megamenu"><button type="button"
+            class="nav-link dropdown-toggle px-lg-2 px-xl-3 fw-semibold" data-bs-toggle="dropdown" aria-expanded="false"
+            id="menuD"><span>Design system</span><svg role="img" class="icon icon-xs ms-1">
+              <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use>
+            </svg></button>
+          <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="menuD">
+            <div class="megamenu pb-5 pb-lg-0">
+              <div class="row">
+                <div class="col-xs-12 col-lg-4 px-0">
+                  <div class="row">
+                    <div class="col-12 it-vertical it-description pb-lg-3">
+                      <div class="description-content img-max-megamenu ps-4 ps-sm-5 ms-3">
+                        <div class="ratio ratio-megamenu lightgrey-bg-a1 mb-4 rounded">
+                          <div data-gatsby-image-wrapper=""
+                            class="gatsby-image-wrapper gatsby-image-wrapper-constrained rounded">
+                            <div style="max-width:1920px;display:block"><img alt="" role="presentation"
+                                aria-hidden="true"
+                                src="data:image/svg+xml;charset=utf-8,%3Csvg%20height='824'%20width='1920'%20xmlns='http://www.w3.org/2000/svg'%20version='1.1'%3E%3C/svg%3E"
+                                style="max-width:100%;display:block;position:static">
+                            </div>
+                            <div aria-hidden="true" data-placeholder-image=""
+                              style="opacity: 0; transition: opacity 500ms linear 0s; background-color: rgb(136, 168, 200); position: absolute; inset: 0px;">
+                            </div>
+                            <picture>
+                              <source type="image/avif"
+                                srcset="/static/0d32f3f51a9597e2d678ec4945da6480/86651/fondamenti.avif 480w,/static/0d32f3f51a9597e2d678ec4945da6480/2b1f4/fondamenti.avif 960w,/static/0d32f3f51a9597e2d678ec4945da6480/2ae3a/fondamenti.avif 1920w"
+                                sizes="(min-width: 1920px) 1920px, 100vw">
+                              <source type="image/webp"
+                                srcset="/static/0d32f3f51a9597e2d678ec4945da6480/1cdd2/fondamenti.webp 480w,/static/0d32f3f51a9597e2d678ec4945da6480/e6899/fondamenti.webp 960w,/static/0d32f3f51a9597e2d678ec4945da6480/8644f/fondamenti.webp 1920w"
+                                sizes="(min-width: 1920px) 1920px, 100vw"><img data-main-image="" style="opacity: 1;"
+                                sizes="(min-width: 1920px) 1920px, 100vw" decoding="async" loading="eager"
+                                src="/static/0d32f3f51a9597e2d678ec4945da6480/eda89/fondamenti.jpg"
+                                srcset="/static/0d32f3f51a9597e2d678ec4945da6480/ad942/fondamenti.jpg 480w,/static/0d32f3f51a9597e2d678ec4945da6480/c52da/fondamenti.jpg 960w,/static/0d32f3f51a9597e2d678ec4945da6480/eda89/fondamenti.jpg 1920w"
+                                alt="">
+                            </picture><noscript>
+                              <picture>
+                                <source type="image/avif"
+                                  srcSet="/static/0d32f3f51a9597e2d678ec4945da6480/86651/fondamenti.avif 480w,/static/0d32f3f51a9597e2d678ec4945da6480/2b1f4/fondamenti.avif 960w,/static/0d32f3f51a9597e2d678ec4945da6480/2ae3a/fondamenti.avif 1920w"
+                                  sizes="(min-width: 1920px) 1920px, 100vw" />
+                                <source type="image/webp"
+                                  srcSet="/static/0d32f3f51a9597e2d678ec4945da6480/1cdd2/fondamenti.webp 480w,/static/0d32f3f51a9597e2d678ec4945da6480/e6899/fondamenti.webp 960w,/static/0d32f3f51a9597e2d678ec4945da6480/8644f/fondamenti.webp 1920w"
+                                  sizes="(min-width: 1920px) 1920px, 100vw" /><img data-gatsby-image-ssr=""
+                                  data-main-image="" style="opacity:0" sizes="(min-width: 1920px) 1920px, 100vw"
+                                  decoding="async" loading="eager"
+                                  src="/static/0d32f3f51a9597e2d678ec4945da6480/eda89/fondamenti.jpg"
+                                  srcSet="/static/0d32f3f51a9597e2d678ec4945da6480/ad942/fondamenti.jpg 480w,/static/0d32f3f51a9597e2d678ec4945da6480/c52da/fondamenti.jpg 960w,/static/0d32f3f51a9597e2d678ec4945da6480/eda89/fondamenti.jpg 1920w"
+                                  alt="" />
+                              </picture>
+                            </noscript>
+                            <script
+                              type="module">const t = "undefined" != typeof HTMLImageElement && "loading" in HTMLImageElement.prototype; if (t) { const t = document.querySelectorAll("img[data-main-image]"); for (let e of t) { e.dataset.src && (e.setAttribute("src", e.dataset.src), e.removeAttribute("data-src")), e.dataset.srcset && (e.setAttribute("srcset", e.dataset.srcset), e.removeAttribute("data-srcset")); const t = e.parentNode.querySelectorAll("source[data-srcset]"); for (let e of t) e.setAttribute("srcset", e.dataset.srcset), e.removeAttribute("data-srcset"); e.complete && (e.style.opacity = 1, e.parentNode.parentNode.querySelector("[data-placeholder-image]").style.opacity = 0) } }</script>
+                          </div>
+                        </div>
+                        <p><strong>Progetta e sviluppa interfacce e contenuti di siti e servizi
+                            digitali pubblici</strong> utilizzando gli strumenti del design
+                          system del Paese.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-8">
+                  <div class="heading-link-wrapper"><a class="heading-link d-flex-inline align-items-center"
+                      href="/design-system/"><svg role="img" class="icon icon-sm icon-primary me-2">
+                        <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use>
+                      </svg><span>Esplora il design system del Paese</span></a></div>
+                  <div class="row">
+                    <div class="col-12 col-lg-6">
+                      <div class="link-list-wrapper">
+                        <ul class="link-list">
+                          <li><a class="list-item     left-icon  dropdown-item "
+                              href="/design-system/come-iniziare/"><svg role="img"
+                                class="icon icon-sm icon-primary align-middle me-2">
+                                <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle">
+                                </use>
+                              </svg><span>Come iniziare</span></a></li>
+                          <li><a class="list-item     left-icon  dropdown-item "
+                              href="/design-system/come-contribuire/"><svg role="img"
+                                class="icon icon-sm icon-primary align-middle me-2">
+                                <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle">
+                                </use>
+                              </svg><span>Come contribuire</span></a></li>
+                          <li><a class="list-item     left-icon  dropdown-item " href="/design-system/fondamenti/"><svg
+                                role="img" class="icon icon-sm icon-primary align-middle me-2">
+                                <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle">
+                                </use>
+                              </svg><span>Fondamenti</span></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                      <div class="link-list-wrapper">
+                        <ul class="link-list">
+                          <li><a class="list-item     left-icon  dropdown-item " href="/design-system/componenti/"><svg
+                                role="img" class="icon icon-sm icon-primary align-middle me-2">
+                                <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle">
+                                </use>
+                              </svg><span>Componenti</span></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item dropdown megamenu"><button type="button"
+            class="nav-link dropdown-toggle px-lg-2 px-xl-3 fw-semibold" data-bs-toggle="dropdown" aria-expanded="false"
+            id="menuE"><span>Risorse per progettare</span><svg role="img" class="icon icon-xs ms-1">
+              <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use>
+            </svg></button>
+          <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="menuE">
+            <div class="megamenu pb-5 pb-lg-0">
+              <div class="row">
+                <div class="col-xs-12 col-lg-4 px-0">
+                  <div class="row">
+                    <div class="col-12 it-vertical it-description pb-lg-3">
+                      <div class="description-content img-max-megamenu ps-4 ps-sm-5 ms-3">
+                        <div class="ratio ratio-megamenu lightgrey-bg-a1 mb-4 rounded">
+                          <div data-gatsby-image-wrapper=""
+                            class="gatsby-image-wrapper gatsby-image-wrapper-constrained rounded">
+                            <div style="max-width:1200px;display:block"><img alt="" role="presentation"
+                                aria-hidden="true"
+                                src="data:image/svg+xml;charset=utf-8,%3Csvg%20height='800'%20width='1200'%20xmlns='http://www.w3.org/2000/svg'%20version='1.1'%3E%3C/svg%3E"
+                                style="max-width:100%;display:block;position:static">
+                            </div>
+                            <div aria-hidden="true" data-placeholder-image=""
+                              style="opacity: 0; transition: opacity 500ms linear 0s; background-color: rgb(8, 104, 200); position: absolute; inset: 0px;">
+                            </div>
+                            <picture>
+                              <source type="image/avif"
+                                srcset="/static/cc9475d7a9a22ca8bc80211f9f41d6b9/3f9d6/risorse-per-progettare.avif 300w,/static/cc9475d7a9a22ca8bc80211f9f41d6b9/aa40e/risorse-per-progettare.avif 600w,/static/cc9475d7a9a22ca8bc80211f9f41d6b9/39a95/risorse-per-progettare.avif 1200w"
+                                sizes="(min-width: 1200px) 1200px, 100vw">
+                              <source type="image/webp"
+                                srcset="/static/cc9475d7a9a22ca8bc80211f9f41d6b9/2177e/risorse-per-progettare.webp 300w,/static/cc9475d7a9a22ca8bc80211f9f41d6b9/60611/risorse-per-progettare.webp 600w,/static/cc9475d7a9a22ca8bc80211f9f41d6b9/ff8c4/risorse-per-progettare.webp 1200w"
+                                sizes="(min-width: 1200px) 1200px, 100vw"><img data-main-image="" style="opacity: 1;"
+                                sizes="(min-width: 1200px) 1200px, 100vw" decoding="async" loading="eager"
+                                src="/static/cc9475d7a9a22ca8bc80211f9f41d6b9/b0091/risorse-per-progettare.png"
+                                srcset="/static/cc9475d7a9a22ca8bc80211f9f41d6b9/c0735/risorse-per-progettare.png 300w,/static/cc9475d7a9a22ca8bc80211f9f41d6b9/6a2d8/risorse-per-progettare.png 600w,/static/cc9475d7a9a22ca8bc80211f9f41d6b9/b0091/risorse-per-progettare.png 1200w"
+                                alt="">
+                            </picture><noscript>
+                              <picture>
+                                <source type="image/avif"
+                                  srcSet="/static/cc9475d7a9a22ca8bc80211f9f41d6b9/3f9d6/risorse-per-progettare.avif 300w,/static/cc9475d7a9a22ca8bc80211f9f41d6b9/aa40e/risorse-per-progettare.avif 600w,/static/cc9475d7a9a22ca8bc80211f9f41d6b9/39a95/risorse-per-progettare.avif 1200w"
+                                  sizes="(min-width: 1200px) 1200px, 100vw" />
+                                <source type="image/webp"
+                                  srcSet="/static/cc9475d7a9a22ca8bc80211f9f41d6b9/2177e/risorse-per-progettare.webp 300w,/static/cc9475d7a9a22ca8bc80211f9f41d6b9/60611/risorse-per-progettare.webp 600w,/static/cc9475d7a9a22ca8bc80211f9f41d6b9/ff8c4/risorse-per-progettare.webp 1200w"
+                                  sizes="(min-width: 1200px) 1200px, 100vw" /><img data-gatsby-image-ssr=""
+                                  data-main-image="" style="opacity:0" sizes="(min-width: 1200px) 1200px, 100vw"
+                                  decoding="async" loading="eager"
+                                  src="/static/cc9475d7a9a22ca8bc80211f9f41d6b9/b0091/risorse-per-progettare.png"
+                                  srcSet="/static/cc9475d7a9a22ca8bc80211f9f41d6b9/c0735/risorse-per-progettare.png 300w,/static/cc9475d7a9a22ca8bc80211f9f41d6b9/6a2d8/risorse-per-progettare.png 600w,/static/cc9475d7a9a22ca8bc80211f9f41d6b9/b0091/risorse-per-progettare.png 1200w"
+                                  alt="" />
+                              </picture>
+                            </noscript>
+                            <script
+                              type="module">const t = "undefined" != typeof HTMLImageElement && "loading" in HTMLImageElement.prototype; if (t) { const t = document.querySelectorAll("img[data-main-image]"); for (let e of t) { e.dataset.src && (e.setAttribute("src", e.dataset.src), e.removeAttribute("data-src")), e.dataset.srcset && (e.setAttribute("srcset", e.dataset.srcset), e.removeAttribute("data-srcset")); const t = e.parentNode.querySelectorAll("source[data-srcset]"); for (let e of t) e.setAttribute("srcset", e.dataset.srcset), e.removeAttribute("data-srcset"); e.complete && (e.style.opacity = 1, e.parentNode.parentNode.querySelector("[data-placeholder-image]").style.opacity = 0) } }</script>
+                          </div>
+                        </div>
+                        <p><strong>Crea il tuo progetto digitale pubblico seguendo le cinque
+                            fasi di progettazione</strong> e utilizzando i kit di design
+                          pronti all'uso.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-8">
+                  <div class="heading-link-wrapper"><a class="heading-link d-flex-inline align-items-center"
+                      href="/risorse-per-progettare/"><svg role="img" class="icon icon-sm icon-primary me-2">
+                        <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use>
+                      </svg><span>Esplora le risorse per progettare servizi digitali della
+                        PA</span></a></div>
+                  <div class="row">
+                    <div class="col-12 col-lg-6">
+                      <div class="link-list-wrapper">
+                        <ul class="link-list">
+                          <li><a class="list-item     left-icon  dropdown-item "
+                              href="/risorse-per-progettare/organizzare/"><svg role="img"
+                                class="icon icon-sm icon-primary align-middle me-2">
+                                <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle">
+                                </use>
+                              </svg><span>Organizzare</span></a></li>
+                          <li><a class="list-item     left-icon  dropdown-item "
+                              href="/risorse-per-progettare/comprendere/"><svg role="img"
+                                class="icon icon-sm icon-primary align-middle me-2">
+                                <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle">
+                                </use>
+                              </svg><span>Comprendere</span></a></li>
+                          <li><a class="list-item     left-icon  dropdown-item "
+                              href="/risorse-per-progettare/progettare/"><svg role="img"
+                                class="icon icon-sm icon-primary align-middle me-2">
+                                <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle">
+                                </use>
+                              </svg><span>Progettare</span></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                      <div class="link-list-wrapper">
+                        <ul class="link-list">
+                          <li><a class="list-item     left-icon  dropdown-item "
+                              href="/risorse-per-progettare/realizzare/"><svg role="img"
+                                class="icon icon-sm icon-primary align-middle me-2">
+                                <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle">
+                                </use>
+                              </svg><span>Realizzare</span></a></li>
+                          <li><a class="list-item     left-icon  dropdown-item "
+                              href="/risorse-per-progettare/validare/"><svg role="img"
+                                class="icon icon-sm icon-primary align-middle me-2">
+                                <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle">
+                                </use>
+                              </svg><span>Validare</span></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown megamenu"><button type="button"
+            class="nav-link dropdown-toggle px-lg-2 px-xl-3 fw-semibold" data-bs-toggle="dropdown" aria-expanded="false"
+            id="menuF"><span>Community</span><svg role="img" class="icon icon-xs ms-1">
+              <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use>
+            </svg></button>
+          <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="menuF">
+            <div class="megamenu pb-5 pb-lg-0">
+              <div class="row">
+                <div class="col-xs-12 col-lg-4 px-0">
+                  <div class="row">
+                    <div class="col-12 it-vertical it-description pb-lg-3">
+                      <div class="description-content img-max-megamenu ps-4 ps-sm-5 ms-3">
+                        <div class="ratio ratio-megamenu lightgrey-bg-a1 mb-4 rounded">
+                          <div data-gatsby-image-wrapper=""
+                            class="gatsby-image-wrapper gatsby-image-wrapper-constrained rounded">
+                            <div style="max-width:1920px;display:block"><img alt="" role="presentation"
+                                aria-hidden="true"
+                                src="data:image/svg+xml;charset=utf-8,%3Csvg%20height='824'%20width='1920'%20xmlns='http://www.w3.org/2000/svg'%20version='1.1'%3E%3C/svg%3E"
+                                style="max-width:100%;display:block;position:static">
+                            </div>
+                            <div aria-hidden="true" data-placeholder-image=""
+                              style="opacity: 0; transition: opacity 500ms linear 0s; background-color: rgb(200, 120, 8); position: absolute; inset: 0px;">
+                            </div>
+                            <picture>
+                              <source type="image/avif"
+                                srcset="/static/605734f19fce81705f1d9284c2ea27b3/86651/community.avif 480w,/static/605734f19fce81705f1d9284c2ea27b3/2b1f4/community.avif 960w,/static/605734f19fce81705f1d9284c2ea27b3/2ae3a/community.avif 1920w"
+                                sizes="(min-width: 1920px) 1920px, 100vw">
+                              <source type="image/webp"
+                                srcset="/static/605734f19fce81705f1d9284c2ea27b3/1cdd2/community.webp 480w,/static/605734f19fce81705f1d9284c2ea27b3/e6899/community.webp 960w,/static/605734f19fce81705f1d9284c2ea27b3/8644f/community.webp 1920w"
+                                sizes="(min-width: 1920px) 1920px, 100vw"><img data-main-image="" style="opacity: 1;"
+                                sizes="(min-width: 1920px) 1920px, 100vw" decoding="async" loading="eager"
+                                src="/static/605734f19fce81705f1d9284c2ea27b3/eda89/community.jpg"
+                                srcset="/static/605734f19fce81705f1d9284c2ea27b3/ad942/community.jpg 480w,/static/605734f19fce81705f1d9284c2ea27b3/c52da/community.jpg 960w,/static/605734f19fce81705f1d9284c2ea27b3/eda89/community.jpg 1920w"
+                                alt="">
+                            </picture><noscript>
+                              <picture>
+                                <source type="image/avif"
+                                  srcSet="/static/605734f19fce81705f1d9284c2ea27b3/86651/community.avif 480w,/static/605734f19fce81705f1d9284c2ea27b3/2b1f4/community.avif 960w,/static/605734f19fce81705f1d9284c2ea27b3/2ae3a/community.avif 1920w"
+                                  sizes="(min-width: 1920px) 1920px, 100vw" />
+                                <source type="image/webp"
+                                  srcSet="/static/605734f19fce81705f1d9284c2ea27b3/1cdd2/community.webp 480w,/static/605734f19fce81705f1d9284c2ea27b3/e6899/community.webp 960w,/static/605734f19fce81705f1d9284c2ea27b3/8644f/community.webp 1920w"
+                                  sizes="(min-width: 1920px) 1920px, 100vw" /><img data-gatsby-image-ssr=""
+                                  data-main-image="" style="opacity:0" sizes="(min-width: 1920px) 1920px, 100vw"
+                                  decoding="async" loading="eager"
+                                  src="/static/605734f19fce81705f1d9284c2ea27b3/eda89/community.jpg"
+                                  srcSet="/static/605734f19fce81705f1d9284c2ea27b3/ad942/community.jpg 480w,/static/605734f19fce81705f1d9284c2ea27b3/c52da/community.jpg 960w,/static/605734f19fce81705f1d9284c2ea27b3/eda89/community.jpg 1920w"
+                                  alt="" />
+                              </picture>
+                            </noscript>
+                            <script
+                              type="module">const t = "undefined" != typeof HTMLImageElement && "loading" in HTMLImageElement.prototype; if (t) { const t = document.querySelectorAll("img[data-main-image]"); for (let e of t) { e.dataset.src && (e.setAttribute("src", e.dataset.src), e.removeAttribute("data-src")), e.dataset.srcset && (e.setAttribute("srcset", e.dataset.srcset), e.removeAttribute("data-srcset")); const t = e.parentNode.querySelectorAll("source[data-srcset]"); for (let e of t) e.setAttribute("srcset", e.dataset.srcset), e.removeAttribute("data-srcset"); e.complete && (e.style.opacity = 1, e.parentNode.parentNode.querySelector("[data-placeholder-image]").style.opacity = 0) } }</script>
+                          </div>
+                        </div>
+                        <p><strong>Scopri gli eventi, le notizie e gli approfondimenti</strong>
+                          su Designers Italia e contribuisci alla community italiana della
+                          progettazione digitale per la PA.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-8">
+                  <div class="heading-link-wrapper"><a class="heading-link d-flex-inline align-items-center"
+                      href="/community/"><svg role="img" class="icon icon-sm icon-primary me-2">
+                        <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use>
+                      </svg><span>Esplora i contenuti della community Designers Italia</span></a>
+                  </div>
+                  <div class="row">
+                    <div class="col-12 col-lg-6">
+                      <div class="link-list-wrapper">
+                        <ul class="link-list">
+                          <li><a class="list-item     left-icon  dropdown-item " href="/community/notizie/"><svg
+                                role="img" class="icon icon-sm icon-primary align-middle me-2">
+                                <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle">
+                                </use>
+                              </svg><span>Notizie</span></a></li>
+                          <li><a class="list-item     left-icon  dropdown-item " href="/community/eventi/"><svg
+                                role="img" class="icon icon-sm icon-primary align-middle me-2">
+                                <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle">
+                                </use>
+                              </svg><span>Eventi</span></a></li>
+                          <li><a href="/community#articoli-di-approfondimento"
+                              class="list-item     left-icon  dropdown-item "><svg role="img"
+                                class="icon icon-sm icon-primary align-middle me-2">
+                                <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle">
+                                </use>
+                              </svg><span>Articoli di approfondimento</span></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                      <div class="link-list-wrapper">
+                        <ul class="link-list">
+                          <li><a class="list-item     left-icon  dropdown-item " href="/community/media/"><svg
+                                role="img" class="icon icon-sm icon-primary align-middle me-2">
+                                <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle">
+                                </use>
+                              </svg><span>Media</span></a></li>
+                          <li><a class="list-item     left-icon  dropdown-item " href="/community/piano-attivita/"><svg
+                                role="img" class="icon icon-sm icon-primary align-middle me-2">
+                                <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle">
+                                </use>
+                              </svg><span>Piano attività</span></a></li>
+                          <li><a class="list-item     left-icon  dropdown-item " href="/community/contatti/"><svg
+                                role="img" class="icon icon-sm icon-primary align-middle me-2">
+                                <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle">
+                                </use>
+                              </svg><span>Contatti</span></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

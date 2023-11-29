@@ -17,6 +17,15 @@
                 ul.link-list {
                   width: 100%;
                   li {
+                    button {
+                      display: flex;
+                      justify-content: space-between;
+                      span {
+                        font-weight: 600;
+                        display: inline-flex;
+                        align-items: center;
+                      }
+                    }
                     a {
                       display: flex;
                       justify-content: space-between;
@@ -456,5 +465,63 @@
         }
       }
     }
+  }
+}
+
+// Classes added from designers.italia.it
+
+.dropdown-item {
+  white-space: normal;
+}
+
+.img-max-megamenu {
+  max-width:480px;
+}
+
+.ratio-megamenu {
+  --bs-aspect-ratio: 42.85%; // 21x9
+  @include media-breakpoint-up(lg) {
+  }
+}
+
+.heading-link-wrapper {
+  margin-left: 28px;
+  margin-right: 28px;
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #d9dadb !important;
+  a.heading-link {
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1.125rem;
+    line-height: 1.2;
+    text-decoration: none;
+    :hover {
+        text-decoration: underline;
+    }
+    &.active {
+      span {
+        text-decoration: underline;
+        color: var(--color-primary-active);
+      }
+    }
+  }
+}
+
+.menu-wrapper {
+  .link-list-wrapper ul li a {
+    display: flex;
+    align-items: center;
+    padding: 8px 16px!important;
+  }
+}
+
+
+
+//Tablet landscape --------------------------------------------------------------------------------------
+@include media-breakpoint-up(lg) {
+  .heading-link-wrapper {
+    margin: 0 0 24px;
+    padding: 16px 0 24px;
   }
 }
