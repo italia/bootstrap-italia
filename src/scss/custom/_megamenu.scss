@@ -525,3 +525,131 @@
     padding: 16px 0 24px;
   }
 }
+
+$navigation-link-color: var(--color-primary) !default;
+$navigation-link-color-desk: $white !default;
+$navbar-bg-color: var(--color-primary) !default;
+$navigation-bg-color: $white !default;
+$navigation-bg-color-desktop: var(--color-primary) !default;
+$navigation-link-active-bar-color: var(--color-primary) !default;
+$navigation-link-active-bar-color-desk: $white !default;
+$navigation-disabled-item-mobile-opacity: 0.6 !default;
+$navigation-disabled-item-opacity: 0.7 !default;
+
+$navigation-h-padding: 24px;
+$navigation-v-padding: 13px;
+$navigation-link-active-bar-size: 3px;
+
+// temp fix for menu a11y
+// button css could be removed once megamenu <button>s are implemented in Bootstrap Italia
+
+.nav-item {
+  & > button.nav-link {
+    border: none;
+    display: block;
+    background: none;
+    color: $navigation-link-color;
+    font-weight: 600;
+    padding: $navigation-v-padding $navigation-h-padding;
+    position: relative;
+
+    &.dropdown-toggle {
+      svg {
+        fill: $navbar-bg-color;
+        transition: all 0.3s;
+      }
+
+      &[aria-expanded="true"] {
+        .icon {
+          transform: scaleY(-1);
+        }
+      }
+    }
+
+    &.active {
+      border-left: $navigation-link-active-bar-size solid $navigation-link-active-bar-color;
+      color: $primary;
+    }
+
+    &.disabled {
+      span,
+      .icon {
+        opacity: $navigation-disabled-item-mobile-opacity;
+      }
+    }
+
+    &:hover:not(.active) {
+      text-decoration: underline;
+    }
+  }
+}
+
+//Tablet landscape --------------------------------------------------------------------------------------
+@include media-breakpoint-up(lg) {
+  .nav-item {
+    display: flex;
+    & > button.nav-link {
+      display: flex;
+      align-self: flex-end;
+      align-items: center;
+      font-weight: 400;
+      padding: $navigation-v-padding $navigation-h-padding;
+      color: $navigation-link-color-desk;
+      border-bottom: $navigation-link-active-bar-size solid transparent;
+      &.dropdown-toggle {
+        svg {
+          fill: $navigation-bg-color;
+          margin-top: 3px;
+        }
+      }
+
+      &.focus--mouse {
+        border-color: transparent !important;
+      }
+
+      &.active {
+        border-left: 0;
+        border-color: $navigation-link-active-bar-color-desk;
+        background: transparent;
+        color: $white;
+      }
+
+      &.disabled {
+        span,
+        .icon {
+          opacity: $navigation-disabled-item-opacity;
+        }
+      }
+
+      // megamenu white triangle
+      &:before {
+        content: "";
+        position: absolute;
+        top: auto;
+        bottom: -14px;
+        left: 24px;
+        width: 18px;
+        height: 18px;
+        border-radius: 4px;
+        background-color: $navigation-link-color-desk;
+        transform: rotate(45deg);
+        opacity: 0;
+        display: block;
+        transition: opacity 0.15s cubic-bezier(0.1, 0.57, 0.36, 0.99);
+      }
+      &.dropdown-toggle.show:before {
+        opacity: 1;
+      }
+    }
+  }
+  .it-header-sticky.is-sticky .nav-item button.nav-link {
+    font-size: 16px;
+  }
+}
+
+//Desktop  --------------------------------------------------------------------------------------
+@include media-breakpoint-up(xl) {
+  .it-header-sticky.is-sticky .nav-item button.nav-link {
+    font-size: 18px;
+  }
+}
