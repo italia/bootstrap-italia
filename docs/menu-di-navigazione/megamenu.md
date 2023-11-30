@@ -27,19 +27,24 @@ Essendo il megamenu un componente di navigazione critico dal punto di vista dell
 
 ## Megamenu accessibile
 
-{% comment %}Example name: Base{% endcomment %}
+{% comment %}Example name: Megamenu completo e accessibile{% endcomment %}
 {% capture example %}
-<nav class="navbar navbar-expand-lg has-megamenu" aria-label="Menu principale"><button type="button"
+<nav class="navbar navbar-expand-lg has-megamenu" aria-label="Menu principale">
+  <button type="button"
     aria-label="Mostra o nascondi il menu" class="custom-navbar-toggler" aria-controls="menu" aria-expanded="false"
     data-bs-toggle="navbarcollapsible" data-bs-target="#menu"><span><svg role="img" class="icon">
         <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use>
-      </svg></span></button>
+      </svg></span>
+  </button>
   <div class="navbar-collapsable" id="menu">
     <div class="overlay fade"></div>
-    <div class="close-div"><button type="button" aria-label="Chiudi il menu" class="btn close-menu"><span><svg
+    <div class="close-div">
+      <button type="button" aria-label="Chiudi il menu" class="btn close-menu"><span><svg
             role="img" class="icon">
             <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-close-big"></use>
-          </svg></span></button></div>
+          </svg></span>
+      </button>
+    </div>
     <div class="menu-wrapper justify-content-lg-between">
       <ul class="navbar-nav">
         <li class="nav-item dropdown megamenu">
@@ -57,79 +62,52 @@ Essendo il megamenu un componente di navigazione critico dal punto di vista dell
                     <div class="col-12 it-vertical it-description pb-lg-3">
                       <div class="description-content img-max-megamenu ps-4 ps-sm-5 ms-3">
                         <div class="ratio ratio-megamenu lightgrey-bg-a1 mb-4 rounded">
-                          <div data-gatsby-image-wrapper=""
-                            class="gatsby-image-wrapper gatsby-image-wrapper-constrained rounded">
-                            <div style="max-width:3200px;display:block"><img alt="" role="presentation"
-                                aria-hidden="true"
-                                src="data:image/svg+xml;charset=utf-8,%3Csvg%20height='2000'%20width='3200'%20xmlns='http://www.w3.org/2000/svg'%20version='1.1'%3E%3C/svg%3E"
-                                style="max-width:100%;display:block;position:static">
-                            </div>
-                            <div aria-hidden="true" data-placeholder-image=""
-                              style="opacity: 0; transition: opacity 500ms linear 0s; background-color: rgb(200, 120, 8); position: absolute; inset: 0px;">
-                            </div>
-                            <picture>
-                              <source type="image/avif"
-                                srcset="/static/0d973a0343157b10c739076c1a282b05/88738/home.avif 800w,/static/0d973a0343157b10c739076c1a282b05/4d6cb/home.avif 1600w,/static/0d973a0343157b10c739076c1a282b05/78b45/home.avif 3200w"
-                                sizes="(min-width: 3200px) 3200px, 100vw">
-                              <source type="image/webp"
-                                srcset="/static/0d973a0343157b10c739076c1a282b05/912d8/home.webp 800w,/static/0d973a0343157b10c739076c1a282b05/3f5e5/home.webp 1600w,/static/0d973a0343157b10c739076c1a282b05/1f83d/home.webp 3200w"
-                                sizes="(min-width: 3200px) 3200px, 100vw"><img data-main-image="" style="opacity: 1;"
-                                sizes="(min-width: 3200px) 3200px, 100vw" decoding="async" loading="eager"
-                                src="/static/0d973a0343157b10c739076c1a282b05/a1dee/home.jpg"
-                                srcset="/static/0d973a0343157b10c739076c1a282b05/032ba/home.jpg 800w,/static/0d973a0343157b10c739076c1a282b05/eea20/home.jpg 1600w,/static/0d973a0343157b10c739076c1a282b05/a1dee/home.jpg 3200w"
-                                alt="">
-                            </picture><noscript>
-                              <picture>
-                                <source type="image/avif"
-                                  srcSet="/static/0d973a0343157b10c739076c1a282b05/88738/home.avif 800w,/static/0d973a0343157b10c739076c1a282b05/4d6cb/home.avif 1600w,/static/0d973a0343157b10c739076c1a282b05/78b45/home.avif 3200w"
-                                  sizes="(min-width: 3200px) 3200px, 100vw" />
-                                <source type="image/webp"
-                                  srcSet="/static/0d973a0343157b10c739076c1a282b05/912d8/home.webp 800w,/static/0d973a0343157b10c739076c1a282b05/3f5e5/home.webp 1600w,/static/0d973a0343157b10c739076c1a282b05/1f83d/home.webp 3200w"
-                                  sizes="(min-width: 3200px) 3200px, 100vw" /><img data-gatsby-image-ssr=""
-                                  data-main-image="" style="opacity:0" sizes="(min-width: 3200px) 3200px, 100vw"
-                                  decoding="async" loading="eager"
-                                  src="/static/0d973a0343157b10c739076c1a282b05/a1dee/home.jpg"
-                                  srcSet="/static/0d973a0343157b10c739076c1a282b05/032ba/home.jpg 800w,/static/0d973a0343157b10c739076c1a282b05/eea20/home.jpg 1600w,/static/0d973a0343157b10c739076c1a282b05/a1dee/home.jpg 3200w"
-                                  alt="" />
-                              </picture>
-                            </noscript>
-                            <script
-                              type="module">const t = "undefined" != typeof HTMLImageElement && "loading" in HTMLImageElement.prototype; if (t) { const t = document.querySelectorAll("img[data-main-image]"); for (let e of t) { e.dataset.src && (e.setAttribute("src", e.dataset.src), e.removeAttribute("data-src")), e.dataset.srcset && (e.setAttribute("srcset", e.dataset.srcset), e.removeAttribute("data-srcset")); const t = e.parentNode.querySelectorAll("source[data-srcset]"); for (let e of t) e.setAttribute("srcset", e.dataset.srcset), e.removeAttribute("data-srcset"); e.complete && (e.style.opacity = 1, e.parentNode.parentNode.querySelector("[data-placeholder-image]").style.opacity = 0) } }</script>
-                          </div>
+                          <figure class="figure">
+                            <img src="https://via.placeholder.com/280x120/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
+                          </figure>
                         </div>
-                        <p><strong>Designers Italia è il punto di riferimento per la
-                            progettazione</strong> dei servizi digitali della Pubblica
-                          Amministrazione.</p>
+                        <p>
+                          <strong>Designers Italia è il punto di riferimento per la progettazione</strong> dei servizi digitali della Pubblica Amministrazione.
+                        </p>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="col-12 col-lg-8">
                   <div class="heading-link-wrapper"><a class="heading-link d-flex-inline align-items-center"
-                      href="/progetto/"><svg role="img" class="icon icon-sm icon-primary me-2">
+                      href="#"><svg role="img" class="icon icon-sm icon-primary me-2">
                         <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use>
                       </svg><span>Esplora il progetto Designers Italia</span></a></div>
                   <div class="row">
                     <div class="col-12 col-lg-6">
                       <div class="link-list-wrapper">
                         <ul class="link-list">
-                          <li><a class="list-item     left-icon  dropdown-item "
-                              href="/progetto/visione-e-missione/"><svg role="img"
+                          <li>
+                            <a class="list-item left-icon dropdown-item "
+                              href="#"><svg role="img"
                                 class="icon icon-sm icon-primary align-middle me-2">
                                 <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle">
                                 </use>
-                              </svg><span>Visione e missione</span></a></li>
-                          <li><a class="list-item     left-icon  dropdown-item "
-                              href="/progetto/formazione-e-disseminazione/"><svg role="img"
+                              </svg><span>Visione e missione</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a class="list-item left-icon dropdown-item "
+                              href="#"><svg role="img"
                                 class="icon icon-sm icon-primary align-middle me-2">
                                 <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle">
                                 </use>
-                              </svg><span>Formazione e disseminazione</span></a></li>
-                          <li><a class="list-item     left-icon  dropdown-item " href="/progetto/storia/"><svg
+                              </svg><span>Formazione e disseminazione</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a class="list-item left-icon dropdown-item " href="#"><svg
                                 role="img" class="icon icon-sm icon-primary align-middle me-2">
                                 <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle">
                                 </use>
-                              </svg><span>Storia</span></a></li>
+                              </svg><span>Storia</span>
+                            </a>
+                          </li>
                         </ul>
                       </div>
                     </div>
@@ -139,12 +117,14 @@ Essendo il megamenu un componente di navigazione critico dal punto di vista dell
             </div>
           </div>
         </li>
-        <li class="nav-item dropdown megamenu"><button type="button"
+        <li class="nav-item dropdown megamenu">
+          <button type="button"
             class="nav-link dropdown-toggle px-lg-2 px-xl-3 fw-semibold" data-bs-toggle="dropdown" aria-expanded="false"
             id="menuB" data-focus-mouse="false"><span>Norme e riferimenti</span><svg role="img"
               class="icon icon-xs ms-1">
               <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use>
-            </svg></button>
+            </svg>
+          </button>
           <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="menuB">
             <div class="megamenu pb-5 pb-lg-0">
               <div class="row">
@@ -153,92 +133,73 @@ Essendo il megamenu un componente di navigazione critico dal punto di vista dell
                     <div class="col-12 it-vertical it-description pb-lg-3">
                       <div class="description-content img-max-megamenu ps-4 ps-sm-5 ms-3">
                         <div class="ratio ratio-megamenu lightgrey-bg-a1 mb-4 rounded">
-                          <div data-gatsby-image-wrapper=""
-                            class="gatsby-image-wrapper gatsby-image-wrapper-constrained rounded">
-                            <div style="max-width:3840px;display:block"><img alt="" role="presentation"
-                                aria-hidden="true"
-                                src="data:image/svg+xml;charset=utf-8,%3Csvg%20height='1648'%20width='3840'%20xmlns='http://www.w3.org/2000/svg'%20version='1.1'%3E%3C/svg%3E"
-                                style="max-width:100%;display:block;position:static">
-                            </div>
-                            <div aria-hidden="true" data-placeholder-image=""
-                              style="opacity: 0; transition: opacity 500ms linear 0s; background-color: rgb(200, 120, 8); position: absolute; inset: 0px;">
-                            </div>
-                            <picture>
-                              <source type="image/avif"
-                                srcset="/static/ba50afab4951d4437df225ac40bc9760/2b1f4/manuale-operativo-di-design.avif 960w,/static/ba50afab4951d4437df225ac40bc9760/2ae3a/manuale-operativo-di-design.avif 1920w,/static/ba50afab4951d4437df225ac40bc9760/78b33/manuale-operativo-di-design.avif 3840w"
-                                sizes="(min-width: 3840px) 3840px, 100vw">
-                              <source type="image/webp"
-                                srcset="/static/ba50afab4951d4437df225ac40bc9760/e6899/manuale-operativo-di-design.webp 960w,/static/ba50afab4951d4437df225ac40bc9760/8644f/manuale-operativo-di-design.webp 1920w,/static/ba50afab4951d4437df225ac40bc9760/d6da2/manuale-operativo-di-design.webp 3840w"
-                                sizes="(min-width: 3840px) 3840px, 100vw"><img data-main-image="" style="opacity: 1;"
-                                sizes="(min-width: 3840px) 3840px, 100vw" decoding="async" loading="eager"
-                                src="/static/ba50afab4951d4437df225ac40bc9760/5fdb4/manuale-operativo-di-design.jpg"
-                                srcset="/static/ba50afab4951d4437df225ac40bc9760/c52da/manuale-operativo-di-design.jpg 960w,/static/ba50afab4951d4437df225ac40bc9760/eda89/manuale-operativo-di-design.jpg 1920w,/static/ba50afab4951d4437df225ac40bc9760/5fdb4/manuale-operativo-di-design.jpg 3840w"
-                                alt="">
-                            </picture><noscript>
-                              <picture>
-                                <source type="image/avif"
-                                  srcSet="/static/ba50afab4951d4437df225ac40bc9760/2b1f4/manuale-operativo-di-design.avif 960w,/static/ba50afab4951d4437df225ac40bc9760/2ae3a/manuale-operativo-di-design.avif 1920w,/static/ba50afab4951d4437df225ac40bc9760/78b33/manuale-operativo-di-design.avif 3840w"
-                                  sizes="(min-width: 3840px) 3840px, 100vw" />
-                                <source type="image/webp"
-                                  srcSet="/static/ba50afab4951d4437df225ac40bc9760/e6899/manuale-operativo-di-design.webp 960w,/static/ba50afab4951d4437df225ac40bc9760/8644f/manuale-operativo-di-design.webp 1920w,/static/ba50afab4951d4437df225ac40bc9760/d6da2/manuale-operativo-di-design.webp 3840w"
-                                  sizes="(min-width: 3840px) 3840px, 100vw" /><img data-gatsby-image-ssr=""
-                                  data-main-image="" style="opacity:0" sizes="(min-width: 3840px) 3840px, 100vw"
-                                  decoding="async" loading="eager"
-                                  src="/static/ba50afab4951d4437df225ac40bc9760/5fdb4/manuale-operativo-di-design.jpg"
-                                  srcSet="/static/ba50afab4951d4437df225ac40bc9760/c52da/manuale-operativo-di-design.jpg 960w,/static/ba50afab4951d4437df225ac40bc9760/eda89/manuale-operativo-di-design.jpg 1920w,/static/ba50afab4951d4437df225ac40bc9760/5fdb4/manuale-operativo-di-design.jpg 3840w"
-                                  alt="" />
-                              </picture>
-                            </noscript>
-                            <script
-                              type="module">const t = "undefined" != typeof HTMLImageElement && "loading" in HTMLImageElement.prototype; if (t) { const t = document.querySelectorAll("img[data-main-image]"); for (let e of t) { e.dataset.src && (e.setAttribute("src", e.dataset.src), e.removeAttribute("data-src")), e.dataset.srcset && (e.setAttribute("srcset", e.dataset.srcset), e.removeAttribute("data-srcset")); const t = e.parentNode.querySelectorAll("source[data-srcset]"); for (let e of t) e.setAttribute("srcset", e.dataset.srcset), e.removeAttribute("data-srcset"); e.complete && (e.style.opacity = 1, e.parentNode.parentNode.querySelector("[data-placeholder-image]").style.opacity = 0) } }</script>
-                          </div>
+                          <figure class="figure">
+                            <img src="https://via.placeholder.com/280x120/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
+                          </figure>
                         </div>
-                        <p><strong>Scopri le principali norme e riferimenti ufficiali</strong>
+                        <p>
+                          <strong>Scopri le principali norme e riferimenti ufficiali</strong>
                           per progettare servizi digitali pubblici inclusivi, equi e
-                          accessibili.</p>
+                          accessibili.
+                        </p>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="col-12 col-lg-8">
-                  <div class="heading-link-wrapper"><a class="heading-link d-flex-inline align-items-center"
-                      href="/norme-e-riferimenti/"><svg role="img" class="icon icon-sm icon-primary me-2">
+                  <div class="heading-link-wrapper">
+                    <a class="heading-link d-flex-inline align-items-center"
+                      href="#"><svg role="img" class="icon icon-sm icon-primary me-2">
                         <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use>
-                      </svg><span>Esplora le norme e i riferimenti</span></a></div>
+                      </svg><span>Esplora le norme e i riferimenti</span>
+                    </a>
+                  </div>
                   <div class="row">
                     <div class="col-12 col-lg-6">
                       <div class="link-list-wrapper">
                         <ul class="link-list">
-                          <li><a class="list-item     left-icon  dropdown-item "
-                              href="/norme-e-riferimenti/linee-guida-di-design/"><svg role="img"
+                          <li>
+                            <a class="list-item left-icon dropdown-item "
+                              href="#"><svg role="img"
                                 class="icon icon-sm icon-primary align-middle me-2">
                                 <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle">
                                 </use>
-                              </svg><span>Linee guida di design</span></a></li>
-                          <li><a class="list-item     left-icon  dropdown-item "
-                              href="/norme-e-riferimenti/linee-guida-accessibilita/"><svg role="img"
+                              </svg><span>Linee guida di design</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a class="list-item left-icon dropdown-item "
+                              href="#"><svg role="img"
                                 class="icon icon-sm icon-primary align-middle me-2">
                                 <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle">
                                 </use>
-                              </svg><span>Linee guida accessibilità</span></a></li>
-                          <li><a class="list-item     left-icon  dropdown-item "
-                              href="/norme-e-riferimenti/manuale-operativo-di-design/"><svg role="img"
+                              </svg><span>Linee guida accessibilità</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a class="list-item left-icon dropdown-item "
+                              href="#"><svg role="img"
                                 class="icon icon-sm icon-primary align-middle me-2">
                                 <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle">
                                 </use>
-                              </svg><span>Manuale operativo di design</span></a></li>
+                              </svg><span>Manuale operativo di design</span>
+                            </a>
+                          </li>
                         </ul>
                       </div>
                     </div>
                     <div class="col-12 col-lg-6">
                       <div class="link-list-wrapper">
                         <ul class="link-list">
-                          <li><a href="/norme-e-riferimenti#articoli-di-approfondimento"
-                              class="list-item     left-icon  dropdown-item "><svg role="img"
+                          <li>
+                            <a href="#"
+                              class="list-item left-icon dropdown-item "><svg role="img"
                                 class="icon icon-sm icon-primary align-middle me-2">
                                 <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle">
                                 </use>
-                              </svg><span>Articoli di approfondimento</span></a></li>
+                              </svg><span>Articoli di approfondimento</span>
+                            </a>
+                          </li>
                         </ul>
                       </div>
                     </div>
