@@ -32,17 +32,19 @@ Essendo il megamenu un componente di navigazione critico dal punto di vista dell
 <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Menu principale">
   <button type="button"
     aria-label="Mostra o nascondi il menu" class="custom-navbar-toggler" aria-controls="menu" aria-expanded="false"
-    data-bs-toggle="navbarcollapsible" data-bs-target="#menu"><span><svg role="img" class="icon">
-        <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use>
-      </svg></span>
+    data-bs-toggle="navbarcollapsible" data-bs-target="#menu">
+      <span>
+        <svg role="img" class="icon"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use></svg>
+      </span>
   </button>
   <div class="navbar-collapsable" id="menu">
     <div class="overlay fade"></div>
     <div class="close-div">
-      <button type="button" aria-label="Chiudi il menu" class="btn close-menu"><span><svg
-            role="img" class="icon">
-            <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-close-big"></use>
-          </svg></span>
+      <button type="button" aria-label="Chiudi il menu" class="btn close-menu">
+        <span>
+          <svg
+        role="img" class="icon"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-close-big"></use></svg>
+        </span>
       </button>
     </div>
     <div class="menu-wrapper justify-content-lg-between">
@@ -50,9 +52,8 @@ Essendo il megamenu un componente di navigazione critico dal punto di vista dell
         <li class="nav-item dropdown megamenu">
           <button type="button"
             class="nav-link dropdown-toggle px-lg-2 px-xl-3 fw-semibold" data-bs-toggle="dropdown" aria-expanded="false"
-            id="menuA" data-focus-mouse="false"><span>Progetto</span><svg role="img" class="icon icon-xs ms-1">
-              <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use>
-            </svg>
+            id="menuA" data-focus-mouse="false">
+              <span>Progetto</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
           </button>
           <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="menuA">
             <div class="megamenu pb-5 pb-lg-0">
@@ -74,10 +75,11 @@ Essendo il megamenu un componente di navigazione critico dal punto di vista dell
                   </div>
                 </div>
                 <div class="col-12 col-lg-8">
-                  <div class="heading-link-wrapper"><a class="heading-link d-flex-inline align-items-center"
-                      href="#"><svg role="img" class="icon icon-sm icon-primary me-2">
-                        <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use>
-                      </svg><span>Esplora il progetto Designers Italia</span></a></div>
+                  <div class="heading-link-wrapper">
+                    <a class="heading-link d-flex-inline align-items-center"
+                      href="#"><svg role="img" class="icon icon-sm icon-primary me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg><span>Esplora il progetto Designers Italia</span>
+                    </a>
+                  </div>
                   <div class="row">
                     <div class="col-12 col-lg-6">
                       <div class="link-list-wrapper">
@@ -85,27 +87,18 @@ Essendo il megamenu un componente di navigazione critico dal punto di vista dell
                           <li>
                             <a class="list-item left-icon dropdown-item "
                               href="#"><svg role="img"
-                                class="icon icon-sm icon-primary align-middle me-2">
-                                <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle">
-                                </use>
-                              </svg><span>Visione e missione</span>
+                                class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg><span>Visione e missione</span>
                             </a>
                           </li>
                           <li>
                             <a class="list-item left-icon dropdown-item "
                               href="#"><svg role="img"
-                                class="icon icon-sm icon-primary align-middle me-2">
-                                <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle">
-                                </use>
-                              </svg><span>Formazione e disseminazione</span>
+                                class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg><span>Formazione e disseminazione</span>
                             </a>
                           </li>
                           <li>
                             <a class="list-item left-icon dropdown-item " href="#"><svg
-                                role="img" class="icon icon-sm icon-primary align-middle me-2">
-                                <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle">
-                                </use>
-                              </svg><span>Storia</span>
+                                role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg><span>Storia</span>
                             </a>
                           </li>
                         </ul>
@@ -120,10 +113,9 @@ Essendo il megamenu un componente di navigazione critico dal punto di vista dell
         <li class="nav-item dropdown megamenu">
           <button type="button"
             class="nav-link dropdown-toggle px-lg-2 px-xl-3 fw-semibold" data-bs-toggle="dropdown" aria-expanded="false"
-            id="menuB" data-focus-mouse="false"><span>Norme e riferimenti</span><svg role="img"
-              class="icon icon-xs ms-1">
-              <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use>
-            </svg>
+            id="menuB" data-focus-mouse="false">
+              <span>Norme e riferimenti</span><svg role="img"
+              class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
           </button>
           <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="menuB">
             <div class="megamenu pb-5 pb-lg-0">
@@ -149,9 +141,7 @@ Essendo il megamenu un componente di navigazione critico dal punto di vista dell
                 <div class="col-12 col-lg-8">
                   <div class="heading-link-wrapper">
                     <a class="heading-link d-flex-inline align-items-center"
-                      href="#"><svg role="img" class="icon icon-sm icon-primary me-2">
-                        <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use>
-                      </svg><span>Esplora le norme e i riferimenti</span>
+                      href="#"><svg role="img" class="icon icon-sm icon-primary me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg><span>Esplora le norme e i riferimenti</span>
                     </a>
                   </div>
                   <div class="row">
@@ -161,28 +151,19 @@ Essendo il megamenu un componente di navigazione critico dal punto di vista dell
                           <li>
                             <a class="list-item left-icon dropdown-item "
                               href="#"><svg role="img"
-                                class="icon icon-sm icon-primary align-middle me-2">
-                                <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle">
-                                </use>
-                              </svg><span>Linee guida di design</span>
+                                class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg><span>Linee guida di design</span>
                             </a>
                           </li>
                           <li>
                             <a class="list-item left-icon dropdown-item "
                               href="#"><svg role="img"
-                                class="icon icon-sm icon-primary align-middle me-2">
-                                <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle">
-                                </use>
-                              </svg><span>Linee guida accessibilità</span>
+                                class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg><span>Linee guida accessibilità</span>
                             </a>
                           </li>
                           <li>
                             <a class="list-item left-icon dropdown-item "
                               href="#"><svg role="img"
-                                class="icon icon-sm icon-primary align-middle me-2">
-                                <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle">
-                                </use>
-                              </svg><span>Manuale operativo di design</span>
+                                class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg><span>Manuale operativo di design</span>
                             </a>
                           </li>
                         </ul>
@@ -194,10 +175,7 @@ Essendo il megamenu un componente di navigazione critico dal punto di vista dell
                           <li>
                             <a href="#"
                               class="list-item left-icon dropdown-item "><svg role="img"
-                                class="icon icon-sm icon-primary align-middle me-2">
-                                <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle">
-                                </use>
-                              </svg><span>Articoli di approfondimento</span>
+                                class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg><span>Articoli di approfondimento</span>
                             </a>
                           </li>
                         </ul>

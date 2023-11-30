@@ -466,13 +466,11 @@
 }
 
 .img-max-megamenu {
-  max-width:480px;
+  max-width: 480px;
 }
 
 .ratio-megamenu {
   --bs-aspect-ratio: 42.85%; // 21x9
-  @include media-breakpoint-up(lg) {
-  }
 }
 
 .heading-link-wrapper {
@@ -483,12 +481,11 @@
   border-bottom: 1px solid #d9dadb !important;
   a.heading-link {
     font-weight: 600;
-    text-decoration: none;
     font-size: 1.125rem;
     line-height: 1.2;
     text-decoration: none;
     :hover {
-        text-decoration: underline;
+      text-decoration: underline;
     }
     &.active {
       span {
@@ -503,11 +500,9 @@
   .link-list-wrapper ul li a {
     display: flex;
     align-items: center;
-    padding: 8px 16px!important;
+    padding: 8px 16px !important;
   }
 }
-
-
 
 //Tablet landscape --------------------------------------------------------------------------------------
 @include media-breakpoint-up(lg) {
@@ -550,7 +545,7 @@ $navigation-link-active-bar-size: 3px;
         transition: all 0.3s;
       }
 
-      &[aria-expanded="true"] {
+      &[aria-expanded='true'] {
         .icon {
           transform: scaleY(-1);
         }
@@ -614,7 +609,7 @@ $navigation-link-active-bar-size: 3px;
 
       // megamenu white triangle
       &:before {
-        content: "";
+        content: '';
         position: absolute;
         top: auto;
         bottom: -14px;
