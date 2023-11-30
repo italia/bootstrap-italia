@@ -53,11 +53,18 @@ fieldset {
     white-space: nowrap;
     padding: 0 $input-spacing-x;
     z-index: 1;
-    &.active:first-child {
+    &.active {
       transform: translateY(-75%);
       font-weight: 600;
       font-size: $small-font-size;
       color: $input-label-color;
+    }
+  }
+
+  input:is([type='radio']),
+  input:is([type='checkbox']) {
+    & + label.active {
+      transform: translateY(0%);
     }
   }
 
