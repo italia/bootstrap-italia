@@ -1,11 +1,11 @@
 [
     {
         "name": "Link",
-        "content": "\n<a href=\"#\" class=\"go-back\" data-bs-toggle=\"historyback\"><svg class=\"icon icon-sm icon-primary me-2\"><use href=\"/dist/svg/sprites.svg#it-arrow-left\"></use></svg> Torna indietro</a>\n"
+        "content": "\n<a href=\"#\" class=\"go-back\" data-bs-toggle=\"historyback\"><svg class=\"icon icon-sm icon-primary me-2\"><use href=\"/dist/svg/sprites.svg#it-arrow-left\"></use></svg>Torna indietro</a>\n"
     },
     {
         "name": "Pulsanti con freccia",
-        "content": "\n<button type=\"button\" class=\"btn btn-primary go-back\" data-bs-toggle=\"historyback\"><svg class=\"icon icon-sm icon-white me-2\"><use href=\"/dist/svg/sprites.svg#it-arrow-left\"></use></svg> Torna indietro</button>\n<button type=\"button\" class=\"btn btn-primary go-back\" data-bs-toggle=\"historyback\"><svg class=\"icon icon-sm icon-white me-2\"><use href=\"/dist/svg/sprites.svg#it-arrow-up\"></use></svg> Livello superiore</button>\n"
+        "content": "\n<button type=\"button\" class=\"btn btn-primary go-back\" data-bs-toggle=\"historyback\"><svg class=\"icon icon-sm icon-white me-2\"><use href=\"/dist/svg/sprites.svg#it-arrow-left\"></use></svg>Torna indietro</button>\n<button type=\"button\" class=\"btn btn-primary go-back\" data-bs-toggle=\"historyback\"><svg class=\"icon icon-sm icon-white me-2\"><use href=\"/dist/svg/sprites.svg#it-arrow-up\"></use></svg> Livello superiore</button>\n"
     },
     {
         "name": "Pulsanti, solo icona",
