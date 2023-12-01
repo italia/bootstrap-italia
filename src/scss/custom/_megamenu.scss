@@ -459,7 +459,7 @@
   }
 }
 
-// Classes added from designers.italia.it
+// Classes added from designers.italia.it XXX 
 
 .dropdown-item {
   white-space: normal;
@@ -467,10 +467,6 @@
 
 .img-max-megamenu {
   max-width: 480px;
-}
-
-.ratio-megamenu {
-  --bs-aspect-ratio: 42.85%; // 21x9
 }
 
 .heading-link-wrapper {
@@ -527,7 +523,7 @@ $navigation-v-padding: 13px;
 $navigation-link-active-bar-size: 3px;
 
 // temp fix for menu a11y
-// button css could be removed once megamenu <button>s are implemented in Bootstrap Italia
+// button css could be removed once megamenu <button>s are implemented in Bootstrap Italia XXX
 
 .nav-item {
   & > button.nav-link {
