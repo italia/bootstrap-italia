@@ -63,7 +63,6 @@ class Input extends BaseComponent {
  */
 const excludes = [
   'select',
-  'textarea',
   'input[data-bs-input][type="password"]',
   'input.input-password[data-bs-input]',
   'input[data-bs-autocomplete][type="search"]',
