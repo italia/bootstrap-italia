@@ -117,6 +117,7 @@ https://github.com/algolia/docsearch{% endcomment %}
       * ``` 
       */
       else if (node.nodeName == 'PRE') {
+        node.classList.remove("highlight");
         node.insertAdjacentElement('beforebegin', divContainer);
       }
     });
