@@ -40,13 +40,13 @@ Questa variante è utile per dare visibilità e accesso ai contenuti di una inte
 {% capture example %}
 <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Menu principale">
   <button type="button"
-    aria-label="Mostra o nascondi il menu" class="custom-navbar-toggler" aria-controls="menu" aria-expanded="false"
-    data-bs-toggle="navbarcollapsible" data-bs-target="#menu">
+    aria-label="Mostra o nascondi il menu" class="custom-navbar-toggler" aria-controls="menu-sezioni" aria-expanded="false"
+    data-bs-toggle="navbarcollapsible" data-bs-target="#menu-sezioni">
       <span>
         <svg role="img" class="icon"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use></svg>
       </span>
   </button>
-  <div class="navbar-collapsable" id="menu">
+  <div class="navbar-collapsable" id="menu-sezioni">
     <div class="overlay fade"></div>
     <div class="close-div">
       <button type="button" aria-label="Chiudi il menu" class="btn close-menu">
@@ -61,10 +61,10 @@ Questa variante è utile per dare visibilità e accesso ai contenuti di una inte
         <li class="nav-item dropdown megamenu">
           <button type="button"
             class="nav-link dropdown-toggle px-lg-2 px-xl-3 fw-semibold" data-bs-toggle="dropdown" aria-expanded="false"
-            id="menuA" data-focus-mouse="false">
+            id="menu-sezioni-A" data-focus-mouse="false">
               <span>Megamenu</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
           </button>
-          <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="menuA">
+          <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="menu-sezioni-A">
             <div class="megamenu pb-5 pb-lg-0">
               <div class="row">
                 <div class="col-xs-12 col-lg-4 px-0">
