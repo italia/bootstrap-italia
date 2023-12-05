@@ -71,7 +71,7 @@ Si possono accostare più megamenu di questo tipo per dare accesso a sezioni div
                 <div class="col-xs-12 col-lg-4 px-0">
                   <div class="row">
                     <div class="col-12 it-vertical it-description pb-lg-3">
-                      <div class="description-content img-max-megamenu ps-4 ps-sm-5 ms-3">
+                      <div class="description-content ps-4 ps-sm-5 ms-3">
                         <div class="ratio ratio-21x9 lightgrey-bg-a1 mb-4 rounded">
                           <figure class="figure">
                             <img src="https://via.placeholder.com/560x240/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Segnaposto">
