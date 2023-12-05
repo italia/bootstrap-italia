@@ -85,8 +85,8 @@ Si possono accostare più megamenu di questo tipo per dare accesso a sezioni div
                   </div>
                 </div>
                 <div class="col-12 col-lg-8">
-                  <div class="heading-link-wrapper">
-                    <a class="heading-link"
+                  <div class="it-heading-link-wrapper">
+                    <a class="it-heading-link"
                       href="#"><svg role="img" class="icon icon-sm icon-primary me-2 mb-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg><span>Esplora la sezione megamenu</span>
                     </a>
                   </div>
@@ -303,8 +303,8 @@ Come nella variante per sezioni del sito è possibile aggiungere un link "Esplor
             <div class="megamenu pb-5 pt-3 py-lg-0">
               <div class="row">
                 <div class="col-12">
-                  <div class="heading-link-wrapper">
-                    <a class="heading-link"
+                  <div class="it-heading-link-wrapper">
+                    <a class="it-heading-link"
                       href="#"><svg role="img" class="icon icon-sm icon-primary me-2 mb-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg><span>Esplora la sezione megamenu</span>
                     </a>
                   </div>
@@ -512,8 +512,8 @@ Nel caso le voci da mostrare fossero numerose, è possibile scegliere di aggiung
                       </div>
                     </div>
                   </div>
-                  <div class="footer-link-wrapper text-end">
-                    <a class="footer-link"
+                  <div class="it-footer-link-wrapper text-end">
+                    <a class="it-footer-link"
                       href="#"><span>Esplora tutti i contenuti del megamenu<svg role="img" class="icon icon-sm icon-primary ms-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right"></use></svg></span>
                     </a>
                   </div>
