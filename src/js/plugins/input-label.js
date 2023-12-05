@@ -39,7 +39,10 @@ class InputLabel {
       this._labelOut()
       this._labelOver()
     }
-    this._bindEvents()
+
+    if (label && label.getAttribute('it-bs-static') === null) {
+      this._bindEvents()
+    }
   }
 
   _bindEvents() {

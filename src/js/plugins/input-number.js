@@ -16,8 +16,6 @@ const EVENT_INPUT = `input`
 
 //const EVENT_FOCUS_DATA_API = `focus${EVENT_KEY}${DATA_API_KEY}`
 const EVENT_CLICK_DATA_API = `click${EVENT_KEY}${DATA_API_KEY}`
-const EVENT_MOUSEDOWN_DATA_API = `mousedown${EVENT_KEY}${DATA_API_KEY}`
-const EVENT_KEYUP_DATA_API = `keyup${EVENT_KEY}${DATA_API_KEY}`
 
 const CLASS_NAME_ADAPTIVE = 'input-number-adaptive'
 //const CLASS_NAME_INCREMENT = 'input-number-add'
@@ -165,17 +163,14 @@ const createInput = (element) => {
   return null
 }
 
-EventHandler.on(document, EVENT_MOUSEDOWN_DATA_API, SELECTOR_INPUT + ', label', function () {
-  const target = InputLabel.getInputFromLabel(this) || this
-  createInput(target)
+document.addEventListener('DOMContentLoaded', function () {
+  var frmel = document.querySelectorAll(SELECTOR_INPUT + ', label')
+  frmel.forEach(function (item) {
+    const target = InputLabel.getInputFromLabel(item) || item
+    createInput(target)
+  })
 })
-EventHandler.on(document, EVENT_KEYUP_DATA_API, SELECTOR_INPUT + ', label', function () {
-  const target = InputLabel.getInputFromLabel(this) || this
-  const element = createInput(target)
-  if (element && element._label) {
-    element._label._labelOut()
-  }
-})
+
 EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_BTN, function () {
   const wrapper = this.closest(SELECTOR_WRAPPER)
   if (wrapper) {
