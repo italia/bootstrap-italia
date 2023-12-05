@@ -459,7 +459,8 @@
   }
 }
 
-// Classes added from designers.italia.it XXX
+// Classes added from designers.italia.it 
+// XXX just modified but stilly to simplify and integrate 
 
 .dropdown-item {
   white-space: normal;
@@ -472,10 +473,35 @@
 .heading-link-wrapper {
   margin-left: 28px;
   margin-right: 28px;
+  padding-top: 24px;
   padding-bottom: 24px;
   margin-bottom: 24px;
   border-bottom: 1px solid #d9dadb !important;
   a.heading-link {
+    font-weight: 600;
+    font-size: 1.125rem;
+    line-height: 1.2;
+    text-decoration: none;
+    :hover {
+      text-decoration: underline;
+    }
+    &.active {
+      span {
+        text-decoration: underline;
+        color: var(--color-primary-active);
+      }
+    }
+  }
+}
+
+.footer-link-wrapper {
+  margin-left: 28px;
+  margin-right: 28px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  margin-top: 24px;
+  border-top: 1px solid #d9dadb !important;
+  a.footer-link {
     font-weight: 600;
     font-size: 1.125rem;
     line-height: 1.2;
@@ -504,7 +530,16 @@
 @include media-breakpoint-up(lg) {
   .heading-link-wrapper {
     margin: 0 0 24px;
-    padding: 16px 0 24px;
+    padding-top: 0;
+    padding-bottom: 24px;
+  }
+  .footer-link-wrapper {
+    margin: 24px 0 0 0;
+    padding-top: 24px;
+    padding-bottom: 0;
+    a.footer-link {
+      margin-right: 24px
+    }
   }
 }
 
