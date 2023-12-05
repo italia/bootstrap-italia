@@ -41,8 +41,8 @@ Si possono accostare più megamenu di questo tipo per dare accesso a sezioni div
 {% capture example %}
 <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Menu principale">
   <button type="button"
-    aria-label="Mostra o nascondi il menu" class="custom-navbar-toggler" aria-controls="megamenu-sezione-sito-A" aria-expanded="false"
-    data-bs-toggle="navbarcollapsible" data-bs-target="#megamenu-sezioni">
+    aria-label="Mostra o nascondi il menu" class="custom-navbar-toggler" aria-controls="menu" aria-expanded="false"
+    data-bs-toggle="navbarcollapsible" data-bs-target="#megamenu-sezione-sito-A">
       <span>
         <svg role="img" class="icon"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use></svg>
       </span>
