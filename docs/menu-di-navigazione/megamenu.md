@@ -31,7 +31,7 @@ Il megamenu è un componente di navigazione critico dal punto di vista dell'acce
  
 Questa è la variante più completa, è stata progettata curandone in particolar modo l'accessibilità. È utile per fornire visibilità e accesso a una intera sezione di contenuti di un sito con una alberatura ben strutturata, permettendo all'utente di comprendere l'organizzazione dei contenuti e navigare sia l'eventuale copertina di secondo livello che le pagine foglia.
 
-Ha una struttura asimmetrica che permette di mostrare una immagine e un testo descrittivo di introduzione alla sezione del sito.  
+Ha una struttura asimmetrica che permette di mostrare in apertura una immagine e un testo descrittivo di introduzione alla sezione del sito.  
 Può contenere un link "Esplora la sezione ..." per l'accesso a una pagina di copertina. Se il link ha la classe `active` è riferito alla pagina corrente.  
 Si possono accostare più megamenu nella `navbar` per dare accesso a sezioni diverse del sito. Se il pulsante ha la classe `active` è riferito alla sezione corrente del sito.  
 
@@ -151,7 +151,7 @@ Si possono accostare più megamenu nella `navbar` per dare accesso a sezioni div
 
 ## Megamenu base
  
-La variante base, senza immagine o descrizione, può contenere liste di link organizzate in tre colonne, con struttura colonnare simmetrica. 
+La variante base può contenere liste di link organizzate in tre colonne.
 
 {% comment %}Example name: Megamenu base{% endcomment %}
 {% capture example %}
@@ -392,7 +392,7 @@ Come nella variante per sezioni del sito è possibile aggiungere un link "Esplor
 
 ### Con link "Esplora tutti..."
 
-Nel caso le voci da mostrare fossero numerose, è possibile scegliere di aggiungere un link "Esplora tutti i contenuti del..." come ultimo link del contenitore, con la corretta gerarchia fuori dalle liste di link. Se il link ha la classe `active` è riferito alla pagina corrente.  
+Nel caso le voci da mostrare fossero numerose, è possibile aggiungere un link "Esplora tutti i contenuti del..." che porti a una lista completa, come ultimo link del contenitore, con la corretta gerarchia fuori dalle liste di link. Se il link ha la classe `active` è riferito alla pagina corrente.  
 
 {% comment %}Example name: Megamenu base, con link esplora tutti...{% endcomment %}
 {% capture example %}
