@@ -6,10 +6,6 @@ import InputLabel from './input-label.js';
 const NAME = 'input';
 const DATA_KEY = 'bs.input';
 const EVENT_KEY = `.${DATA_KEY}`;
-const DATA_API_KEY = '.data-api';
-
-const EVENT_MOUSEDOWN_DATA_API = `mousedown${EVENT_KEY}${DATA_API_KEY}`;
-const EVENT_KEYUP_DATA_API = `keyup${EVENT_KEY}${DATA_API_KEY}`;
 
 const EVENT_CHANGE = `change${EVENT_KEY}`;
 
@@ -65,25 +61,13 @@ class Input extends BaseComponent {
  */
 const excludes = [
   'select',
-  //'input[data-bs-input][type="number"]',
   'input[data-bs-input][type="password"]',
   'input.input-password[data-bs-input]',
   'input[data-bs-autocomplete][type="search"]',
   'input[type="time"]',
+  'input[type="radio"]',
+  'input[type="checkbox"]',
 ];
-
-/*const inputs = SelectorEngine.find('input, textarea').filter((input) => {
-  let result = true
-  excludes.forEach((selector) => {
-    if (input.matches(selector)) {
-      result = false
-    }
-  })
-  return result
-})
-inputs.forEach((input) => {
-  Input.getOrCreateInstance(input)
-})*/
 
 const createInput = (element) => {
   const toExclude = !!excludes.find((selector) => element.matches(selector));
@@ -94,16 +78,12 @@ const createInput = (element) => {
   return null
 };
 
-EventHandler.on(document, EVENT_MOUSEDOWN_DATA_API, 'input, textarea, label', function () {
-  const target = InputLabel.getInputFromLabel(this) || this;
-  createInput(target);
-});
-EventHandler.on(document, EVENT_KEYUP_DATA_API, 'input, textarea, label', function () {
-  const target = InputLabel.getInputFromLabel(this) || this;
-  const element = createInput(target);
-  if (element && element._label) {
-    element._label._labelOut();
-  }
+document.addEventListener('DOMContentLoaded', function () {
+  var frmel = document.querySelectorAll('input, textarea, label');
+  frmel.forEach(function (item) {
+    const target = InputLabel.getInputFromLabel(item) || item;
+    createInput(target);
+  });
 });
 
 export { Input as default };

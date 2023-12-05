@@ -10,15 +10,12 @@ const DATA_API_KEY = '.data-api';
 
 const EVENT_CLICK = `click${EVENT_KEY}`;
 const EVENT_CHANGE = `change${EVENT_KEY}`;
+const EVENT_INPUT = `input`;
 
 //const EVENT_FOCUS_DATA_API = `focus${EVENT_KEY}${DATA_API_KEY}`
 const EVENT_CLICK_DATA_API = `click${EVENT_KEY}${DATA_API_KEY}`;
-const EVENT_MOUSEDOWN_DATA_API = `mousedown${EVENT_KEY}${DATA_API_KEY}`;
-const EVENT_KEYUP_DATA_API = `keyup${EVENT_KEY}${DATA_API_KEY}`;
 
 const CLASS_NAME_ADAPTIVE = 'input-number-adaptive';
-const CLASS_NAME_PERCENTAGE = 'input-number-percentage';
-const CLASS_NAME_CURRENCY = 'input-number-currency';
 //const CLASS_NAME_INCREMENT = 'input-number-add'
 const CLASS_NAME_DECREMENT = 'input-number-sub';
 
@@ -59,6 +56,7 @@ class InputNumber extends BaseComponent {
         EventHandler.on(btn, EVENT_CLICK, (evt) => {
           evt.preventDefault();
           this._incrDecr(btn.classList.contains(CLASS_NAME_DECREMENT));
+          this._label._labelOut();
         });
       });
 
@@ -70,14 +68,9 @@ class InputNumber extends BaseComponent {
     if (this._wrapperElement.classList.contains(CLASS_NAME_ADAPTIVE)) {
       let newWidth = null;
       //let newWidthIE = null
-      if (!this._wrapperElement.classList.contains(CLASS_NAME_PERCENTAGE)) {
-        newWidth = 'calc(44px + ' + this._element.value.length + 'ch)';
-        //newWidthIE = 'calc(44px + (1.5 * ' + this._element.value.length + 'ch))'
-      }
-      if (this._wrapperElement.classList.contains(CLASS_NAME_CURRENCY)) {
-        newWidth = 'calc(40px + 44px + ' + this._element.value.length + 'ch)';
-        //newWidthIE = 'calc(40px + 44px + (1.5 * ' + this._element.value.length + 'ch))'
-      }
+      //74px - buttons (30px) and possible validation icon (40px)
+      newWidth = 'calc(70px + ' + this._element.value.length + 'ch)';
+      //newWidthIE = 'calc(44px + (1.5 * ' + this._element.value.length + 'ch))'
 
       if (newWidth) {
         this._element.style.width = newWidth;
@@ -87,7 +80,8 @@ class InputNumber extends BaseComponent {
   }
 
   _incrDecr(isDecr) {
-    const inputVal = parseFloat(this._element.value);
+    var inputVal = 0;
+    if (this._element.value !== '') inputVal = parseFloat(this._element.value);
 
     if (!isNaN(inputVal)) {
       //get step
@@ -98,6 +92,7 @@ class InputNumber extends BaseComponent {
 
       this._element.value = inputVal + step * (isDecr ? -1 : 1);
       EventHandler.trigger(this._element, EVENT_CHANGE);
+      EventHandler.trigger(this._element, EVENT_INPUT);
     }
   }
 
@@ -166,17 +161,14 @@ const createInput = (element) => {
   return null
 };
 
-EventHandler.on(document, EVENT_MOUSEDOWN_DATA_API, SELECTOR_INPUT + ', label', function () {
-  const target = InputLabel.getInputFromLabel(this) || this;
-  createInput(target);
+document.addEventListener('DOMContentLoaded', function () {
+  var frmel = document.querySelectorAll(SELECTOR_INPUT + ', label');
+  frmel.forEach(function (item) {
+    const target = InputLabel.getInputFromLabel(item) || item;
+    createInput(target);
+  });
 });
-EventHandler.on(document, EVENT_KEYUP_DATA_API, SELECTOR_INPUT + ', label', function () {
-  const target = InputLabel.getInputFromLabel(this) || this;
-  const element = createInput(target);
-  if (element && element._label) {
-    element._label._labelOut();
-  }
-});
+
 EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_BTN, function () {
   const wrapper = this.closest(SELECTOR_WRAPPER);
   if (wrapper) {
