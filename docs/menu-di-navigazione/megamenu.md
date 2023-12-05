@@ -96,17 +96,20 @@ Si possono accostare più megamenu nella `navbar` per dare accesso a sezioni div
                         <ul class="link-list">
                           <li>
                             <a class="list-item left-icon dropdown-item" href="#">
-                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg><span>Link lista 1</span>
+                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                              <span>Link lista 1</span>
                             </a>
                           </li>
                           <li>
                             <a class="list-item left-icon dropdown-item" href="#">
-                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg><span>Link lista 2</span>
+                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                              <span>Link lista 2</span>
                             </a>
                           </li>
                           <li>
                             <a class="list-item left-icon dropdown-item " href="#">
-                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg><span>Link lista 3</span>
+                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                              <span>Link lista 3</span>
                             </a>
                           </li>
                         </ul>
@@ -117,17 +120,20 @@ Si possono accostare più megamenu nella `navbar` per dare accesso a sezioni div
                         <ul class="link-list">
                           <li>
                             <a class="list-item left-icon dropdown-item" href="#">
-                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg><span>Link lista 4</span>
+                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                              <span>Link lista 4</span>
                             </a>
                           </li>
                           <li>
                             <a class="list-item left-icon dropdown-item" href="#">
-                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg><span>Link lista 5</span>
+                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                              <span>Link lista 5</span>
                             </a>
                           </li>
                           <li>
                             <a class="list-item left-icon dropdown-item " href="#">
-                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg><span>Link lista 6</span>
+                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                              <span>Link lista 6</span>
                             </a>
                           </li>
                         </ul>
@@ -180,17 +186,20 @@ La variante base può contenere liste di link organizzate in tre colonne.
                         <ul class="link-list">
                           <li>
                             <a class="list-item left-icon dropdown-item" href="#">
-                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg><span>Link lista 1</span>
+                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                              <span>Link lista 1</span>
                             </a>
                           </li>
                           <li>
                             <a class="list-item left-icon dropdown-item" href="#">
-                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg><span>Link lista 2</span>
+                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                              <span>Link lista 2</span>
                             </a>
                           </li>
                           <li>
                             <a class="list-item left-icon dropdown-item " href="#">
-                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg><span>Link lista 3</span>
+                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                              <span>Link lista 3</span>
                             </a>
                           </li>
                         </ul>
@@ -201,17 +210,20 @@ La variante base può contenere liste di link organizzate in tre colonne.
                         <ul class="link-list">
                           <li>
                             <a class="list-item left-icon dropdown-item" href="#">
-                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg><span>Link lista 4</span>
+                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                              <span>Link lista 4</span>
                             </a>
                           </li>
                           <li>
                             <a class="list-item left-icon dropdown-item" href="#">
-                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg><span>Link lista 5</span>
+                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                              <span>Link lista 5</span>
                             </a>
                           </li>
                           <li>
                             <a class="list-item left-icon dropdown-item " href="#">
-                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg><span>Link lista 6</span>
+                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                              <span>Link lista 6</span>
                             </a>
                           </li>
                         </ul>
@@ -222,17 +234,20 @@ La variante base può contenere liste di link organizzate in tre colonne.
                         <ul class="link-list">
                           <li>
                             <a class="list-item left-icon dropdown-item" href="#">
-                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg><span>Link lista 7</span>
+                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                              <span>Link lista 7</span>
                             </a>
                           </li>
                           <li>
                             <a class="list-item left-icon dropdown-item" href="#">
-                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg><span>Link lista 8</span>
+                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                              <span>Link lista 8</span>
                             </a>
                           </li>
                           <li>
                             <a class="list-item left-icon dropdown-item " href="#">
-                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg><span>Link lista 9</span>
+                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                              <span>Link lista 9</span>
                             </a>
                           </li>
                         </ul>
@@ -290,17 +305,20 @@ Come nella variante per sezioni del sito è possibile aggiungere un link "Esplor
                         <ul class="link-list">
                           <li>
                             <a class="list-item left-icon dropdown-item" href="#">
-                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg><span>Link lista 1</span>
+                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                              <span>Link lista 1</span>
                             </a>
                           </li>
                           <li>
                             <a class="list-item left-icon dropdown-item" href="#">
-                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg><span>Link lista 2</span>
+                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                              <span>Link lista 2</span>
                             </a>
                           </li>
                           <li>
                             <a class="list-item left-icon dropdown-item " href="#">
-                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg><span>Link lista 3</span>
+                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                              <span>Link lista 3</span>
                             </a>
                           </li>
                         </ul>
@@ -311,17 +329,20 @@ Come nella variante per sezioni del sito è possibile aggiungere un link "Esplor
                         <ul class="link-list">
                           <li>
                             <a class="list-item left-icon dropdown-item" href="#">
-                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg><span>Link lista 4</span>
+                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                              <span>Link lista 4</span>
                             </a>
                           </li>
                           <li>
                             <a class="list-item left-icon dropdown-item" href="#">
-                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg><span>Link lista 5</span>
+                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                              <span>Link lista 5</span>
                             </a>
                           </li>
                           <li>
                             <a class="list-item left-icon dropdown-item " href="#">
-                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg><span>Link lista 6</span>
+                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                              <span>Link lista 6</span>
                             </a>
                           </li>
                         </ul>
@@ -332,17 +353,20 @@ Come nella variante per sezioni del sito è possibile aggiungere un link "Esplor
                         <ul class="link-list">
                           <li>
                             <a class="list-item left-icon dropdown-item" href="#">
-                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg><span>Link lista 7</span>
+                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                              <span>Link lista 7</span>
                             </a>
                           </li>
                           <li>
                             <a class="list-item left-icon dropdown-item" href="#">
-                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg><span>Link lista 8</span>
+                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                              <span>Link lista 8</span>
                             </a>
                           </li>
                           <li>
                             <a class="list-item left-icon dropdown-item " href="#">
-                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg><span>Link lista 9</span>
+                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                              <span>Link lista 9</span>
                             </a>
                           </li>
                         </ul>
@@ -395,22 +419,26 @@ Nel caso le voci da mostrare fossero numerose, è possibile aggiungere un link "
                         <ul class="link-list">
                           <li>
                             <a class="list-item left-icon dropdown-item" href="#">
-                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg><span>Link lista 1</span>
+                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                              <span>Link lista 1</span>
                             </a>
                           </li>
                           <li>
                             <a class="list-item left-icon dropdown-item" href="#">
-                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg><span>Link lista 2</span>
+                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                              <span>Link lista 2</span>
                             </a>
                           </li>
                           <li>
                             <a class="list-item left-icon dropdown-item " href="#">
-                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg><span>Link lista 3</span>
+                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                              <span>Link lista 3</span>
                             </a>
                           </li>
                           <li>
                             <a class="list-item left-icon dropdown-item " href="#">
-                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg><span>Link lista 4</span>
+                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                              <span>Link lista 4</span>
                             </a>
                           </li>
                         </ul>
@@ -421,22 +449,26 @@ Nel caso le voci da mostrare fossero numerose, è possibile aggiungere un link "
                         <ul class="link-list">
                           <li>
                             <a class="list-item left-icon dropdown-item" href="#">
-                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg><span>Link lista 5</span>
+                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                              <span>Link lista 5</span>
                             </a>
                           </li>
                           <li>
                             <a class="list-item left-icon dropdown-item" href="#">
-                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg><span>Link lista 6</span>
+                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                              <span>Link lista 6</span>
                             </a>
                           </li>
                           <li>
                             <a class="list-item left-icon dropdown-item " href="#">
-                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg><span>Link lista 7</span>
+                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                              <span>Link lista 7</span>
                             </a>
                           </li>
                           <li>
                             <a class="list-item left-icon dropdown-item " href="#">
-                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg><span>Link lista 8</span>
+                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                              <span>Link lista 8</span>
                             </a>
                           </li>
                         </ul>
@@ -447,22 +479,26 @@ Nel caso le voci da mostrare fossero numerose, è possibile aggiungere un link "
                         <ul class="link-list">
                           <li>
                             <a class="list-item left-icon dropdown-item" href="#">
-                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg><span>Link lista 9</span>
+                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                              <span>Link lista 9</span>
                             </a>
                           </li>
                           <li>
                             <a class="list-item left-icon dropdown-item" href="#">
-                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg><span>Link lista 10</span>
+                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                              <span>Link lista 10</span>
                             </a>
                           </li>
                           <li>
                             <a class="list-item left-icon dropdown-item " href="#">
-                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg><span>Link lista 11</span>
+                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                              <span>Link lista 11</span>
                             </a>
                           </li>
                           <li>
                             <a class="list-item left-icon dropdown-item " href="#">
-                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg><span>Link lista 12</span>
+                              <svg role="img" class="icon icon-sm icon-primary align-middle me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                              <span>Link lista 12</span>
                             </a>
                           </li>
                         </ul>
