@@ -27,7 +27,7 @@ Il megamenu è un componente di navigazione critico dal punto di vista dell'acce
 {% endcapture %}{% include callout.html content=callout type="accessibility" %} 
 
 {% capture callout %}
-Dalla versione **2.8.0** della libreria:
+Dalla versione **2.10.0** della libreria:
 
 - il componente è stato riprogettato per essere accessibile by default, sia nella struttura che negli stili;
 - è cambiato il modo di aggiungere un link "Esplora tutti...", rimangono ad esempio disponibili negli stili le classi `it-external` e `it-more` per retrocompatibilità, ma non sono utilizzate nel nuovo componente;
