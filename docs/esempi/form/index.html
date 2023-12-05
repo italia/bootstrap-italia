@@ -363,6 +363,12 @@ title: Validazione Form
           rule: 'required',
           errorMessage: 'Questo campo è richiesto',
         },
+        {
+          validator: (value) => {
+            return ['Alessandria', 'Bergamo', 'Piacenza'].includes(value);
+          },
+          errorMessage: 'Puoi scegliere solo tra Alessandria, Piacenza o Bergamo',
+        },
       ])
       .addField('#importo_input_group', [
         {
