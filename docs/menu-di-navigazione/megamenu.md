@@ -65,7 +65,7 @@ Si possono accostare più megamenu di questo tipo per dare accesso a sezioni div
             id="megamenu-sezione-sito-A-link" data-focus-mouse="false">
               <span>Megamenu</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
           </button>
-          <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="menu-sezione-sito-A-link">
+          <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-sezione-sito-A-link">
             <div class="megamenu pb-5 pt-3 py-lg-0">
               <div class="row">
                 <div class="col-xs-12 col-lg-4 px-0">
