@@ -71,19 +71,6 @@ const excludes = [
   'input[type="checkbox"]',
 ]
 
-/*const inputs = SelectorEngine.find('input, textarea').filter((input) => {
-  let result = true
-  excludes.forEach((selector) => {
-    if (input.matches(selector)) {
-      result = false
-    }
-  })
-  return result
-})
-inputs.forEach((input) => {
-  Input.getOrCreateInstance(input)
-})*/
-
 const createInput = (element) => {
   const toExclude = !!excludes.find((selector) => element.matches(selector))
   const isInputNumber = !!(element.getAttribute('type') === 'number' && element.parentNode.querySelector('button[class^="input-number-"]')) //check if it's a InputNumber component
