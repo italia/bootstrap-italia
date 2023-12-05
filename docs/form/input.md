@@ -517,7 +517,7 @@ Includendo l'elemento all'interno di un `.form-group`, la label assumerà lo ste
 {% capture example %}
   <div class="form-group">
     <label for="exampleFormControlTextarea1">Esempio di area di testo</label>
-    <textarea id="exampleFormControlTextarea1" rows="3"></textarea>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
   </div>
 {% endcapture %}{% include example.html content=example %}
 
