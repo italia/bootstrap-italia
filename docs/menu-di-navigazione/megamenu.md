@@ -18,24 +18,24 @@ Gli elementi megamenu contenuti nelle navbar sono gestiti come elementi di tipo 
 
 #### Accessibilità
 
-Essendo il megamenu un componente di navigazione critico dal punto di vista dell'accessibilità se ne suggerisce un uso parsimonioso e attento laddove si ritenga necessario. In questi casi:
+Il megamenu è un componente di navigazione critico dal punto di vista dell'accessibilità. Si sugerisce particolare attenzione laddove si ritenga necessario usarlo:
 
-- svolgere test di accessibilità e test di usabilità, con particolare attenzione ai test di navigazione da tastiera e con Screen Reader;
+- svolgere verifiche di accessibilità e test di usabilità con utenti, ponendo particolare attenzione a verificare navigazione da tastiera e con tecnologie assistive;
 - prestare particolare attenzione agli attributi `ARIA` presenti negli esempi;
-- i pulsanti che aprono i megamenu devono avere corretta semantica `<button>`;
-- l'icona a sinistra dei link serve a contraddistinguerli come "voci di menu" anche nelle situazioni o condizioni in cui non sia possibile percepirne il colore, in particolar modo laddove sia presente anche del testo descrittivo nel megamenu; 
-- non devono essere presenti link con la medesima etichetta (label) che portino a destinazioni diverse. Nel caso di più link "Esplora tutti" si deve aggiungere " i contenuti della sezione X" all'etichetta, oppure, si può usare `<span class="visually-hidden"> i contenuti della sezione X</span>` per specificare alle sole tecnologie assistive a quale sezione di contenuti del sito si fa riferimento.
+- i pulsanti che aprono i megamenu devono avere corretta semantica, ovvero`<button>`;
+- l'icona a sinistra dei link serve a contraddistinguerli come "voci di menu" anche nelle situazioni o condizioni in cui non sia possibile percepirne il colore, in particolar modo laddove sia presente anche del testo descrittivo; 
+- non devono essere presenti in pagina link con la medesima etichetta (label) che portino a destinazioni diverse. Nel caso di più link "Esplora tutti", ad esempio accostando più megamenu, si deve aggiungere " i contenuti della sezione X" all'etichetta, oppure, si può usare `<span class="visually-hidden"> i contenuti della sezione X</span>` per specificare alle sole tecnologie assistive a quale sezione di contenuti del sito si fa riferimento.
   {% endcapture %}{% include callout.html content=callout type="accessibility" %} 
 
 ## Megamenu per sezioni del sito
  
-Questa variante è utile per dare visibilità e accesso a una intera sezione di contenuti di un sito con una alberatura ben definita, permettendo all'utente quindi di comprendere l'organizzazione dei contenuti e navigare sia l'eventuale copertina di secondo livello che le pagine foglia.
+Questa è la variante più completa, è stata progettata curandone in particolar modo l'accessibilità. È utile per fornire visibilità e accesso a una intera sezione di contenuti di un sito con una alberatura ben strutturata, permettendo all'utente di comprendere l'organizzazione dei contenuti e navigare sia l'eventuale copertina di secondo livello che le pagine foglia.
 
-Ha una struttura asimmetrica che permette di mostrare una immagine e un testo descrittivo. 
+Ha una struttura asimmetrica che permette di mostrare una immagine e un testo descrittivo di introduzione alla sezione del sito.  
 Può contenere un link "Esplora la sezione ..." per l'accesso a una pagina di copertina. Se il link ha la classe `active` è riferito alla pagina corrente.  
-Si possono accostare più megamenu di questo tipo per dare accesso a sezioni diverse del sito. 
+Si possono accostare più megamenu nella `navbar` per dare accesso a sezioni diverse del sito. Se il pulsante ha la classe `active` è riferito alla sezione corrente del sito.  
 
-È possibile navigare un esempio in produzione sul sito [Designers Italia](https://designers.italia.it).
+È possibile navigare un esempio validato in produzione sul sito [Designers Italia](https://designers.italia.it), per cui è stata progettata.
 
 {% comment %}Example name: Megamenu per sezioni del sito{% endcomment %}
 {% capture example %}
