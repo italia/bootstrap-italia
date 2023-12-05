@@ -526,8 +526,7 @@ Nel caso le voci da mostrare fossero numerose, è possibile aggiungere un link "
 
 _In stesura._
 
-<!--
-## Megamenu con call to action
+<!-- ## Megamenu con call to action
 
 I megamenu possono contenere delle liste di call to action, posizionate in fondo o a destra del megamenu.
 
@@ -743,4 +742,4 @@ All'interno dell'ultimo tag `<div class="col-xs-12 col-lg-4">` inseriremo il tag
     </div>
   </div>
 </nav>
-{% endcapture %}{% include example.html content=example %}
+{% endcapture %}{% include example.html content=example %} -->
