@@ -20,29 +20,37 @@ La larghezza del campo predefinita è quella del suo contenitore, per limitare l
 {% comment %}Example name: Base {% endcomment %}
 {% capture example %}
 <div class="w-100">
-  <label for="inputNumber" class="input-number-label">Input Number inserito in una colonna a tutta larghezza</label>
-  <span class="input-number">
-    <input type="number" data-bs-input id="inputNumber" name="inputNumber" value="100" step="any" />
-    <button class="input-number-add">
-      <span class="visually-hidden">Aumenta valore</span>
-    </button>
-    <button class="input-number-sub">
-      <span class="visually-hidden">Diminuisci valore</span>
-    </button>
-  </span>
+  <div class="form-group">
+    <label for="inputNumber" class="input-number-label active">Input Number inserito in una colonna a tutta larghezza</label>
+    <div class="input-group input-number">
+      <input type="number" class="form-control" data-bs-input id="inputNumber" name="inputNumber" value="100" step="any" />
+      <span class="input-group-text align-buttons flex-column">
+        <button class="input-number-add">
+          <span class="visually-hidden">Aumenta valore</span>
+        </button>
+        <button class="input-number-sub">
+          <span class="visually-hidden">Diminuisci valore</span>
+        </button>
+      </span>
+    </div>
+  </div>
 </div>
 
 <div class="w-50 mt-5">
-  <label for="inputNumber1" class="input-number-label">Input Number inserito in una colonna di larghezza 50%</label>
-  <span class="input-number">
-    <input type="number" data-bs-input id="inputNumber1" name="inputNumber1" value="100" step="any" />
-    <button class="input-number-add">
-      <span class="visually-hidden">Aumenta valore</span>
-    </button>
-    <button class="input-number-sub">
-      <span class="visually-hidden">Diminuisci valore</span>
-    </button>
-  </span>
+  <div class="form-group">
+    <label for="inputNumber1" class="input-number-label active">Input Number inserito in una colonna di larghezza 50%</label>
+    <div class="input-group input-number">
+      <input type="number" class="form-control" data-bs-input id="inputNumber1" name="inputNumber1" value="100" step="any" />
+      <span class="input-group-text align-buttons flex-column">
+        <button class="input-number-add">
+          <span class="visually-hidden">Aumenta valore</span>
+        </button>
+        <button class="input-number-sub">
+          <span class="visually-hidden">Diminuisci valore</span>
+        </button>
+      </span>
+    </div>
+  </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -53,16 +61,20 @@ Aggiungendo gli attributi HTML `min=""`, `max=""` e `step=""` all'input è possi
 {% comment %}Example name: Con limiti e incremento {% endcomment %}
 {% capture example %}
 <div>
-  <label for="inputNumber2" class="input-number-label">Min, Max & Step</label>
-  <span class="input-number">
-    <input type="number" data-bs-input id="inputNumber2" name="inputNumber2" value="100" min="-2000" max="15000" step="500" />
-    <button class="input-number-add">
-      <span class="visually-hidden">Aumenta valore di 500</span>
-    </button>
-    <button class="input-number-sub">
-      <span class="visually-hidden">Diminuisci valore di 500</span>
-    </button>
-  </span>
+  <div class="form-group">
+    <label for="inputNumber2" class="input-number-label active">Min, Max & Step</label>
+    <div class="input-group input-number">
+      <input type="number" class="form-control" data-bs-input id="inputNumber2" name="inputNumber2" value="100" min="-2000" max="15000" step="500" />
+      <span class="input-group-text align-buttons flex-column">
+        <button class="input-number-add">
+          <span class="visually-hidden">Aumenta valore</span>
+        </button>
+        <button class="input-number-sub">
+          <span class="visually-hidden">Diminuisci valore</span>
+        </button>
+      </span>
+    </div>
+  </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -72,17 +84,23 @@ Per anteporre il simbolo della valuta in Euro, aggiungere la classe `.input-numb
 
 {% comment %}Example name: Con valuta {% endcomment %}
 {% capture example %}
+
 <div>
-  <label for="inputNumber3" class="input-number-label">Currency</label>
-  <span class="input-number input-number-currency">
-    <input type="number" data-bs-input id="inputNumber3" name="inputNumber3" step="any" value="3.50" min="0" />
-    <button class="input-number-add">
-      <span class="visually-hidden">Aumenta valore Euro</span>
-    </button>
-    <button class="input-number-sub">
-      <span class="visually-hidden">Diminuisci valore Euro</span>
-    </button>
-  </span>
+  <div class="form-group">
+    <label for="inputNumber3" class="input-number-label active">Currency</label>
+    <div class="input-group input-number input-number-currency">
+      <span class="input-group-text fw-semibold">€</span>
+      <input type="number" class="form-control" data-bs-input id="inputNumber3" name="inputNumber3" step="any" value="3.50" min="0" />
+      <span class="input-group-text align-buttons flex-column">
+        <button class="input-number-add">
+          <span class="visually-hidden">Aumenta valore Euro</span>
+        </button>
+        <button class="input-number-sub">
+          <span class="visually-hidden">Diminuisci valore Euro</span>
+        </button>
+      </span>
+    </div>
+  </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -95,16 +113,21 @@ Si consiglia di impostare gli attributi `min=0` e `max="100"`.
 {% comment %}Example name: Con percentuale {% endcomment %}
 {% capture example %}
 <div>
-  <label for="inputNumber4" class="input-number-label">Percentage</label>
-  <span class="input-number input-number-percentage">
-    <input type="number" data-bs-input id="inputNumber4" name="inputNumber4" value="50" min="0" max="100" step="any" />
-    <button class="input-number-add">
-      <span class="visually-hidden">Aumenta del 10%</span>
-    </button>
-    <button class="input-number-sub">
-      <span class="visually-hidden">Diminuisci del 10%</span>
-    </button>
-  </span>
+  <div class="form-group">
+    <label for="inputNumber4" class="input-number-label active">Percentage</label>
+    <div class="input-group input-number input-number-percentage">
+      <span class="input-group-text fw-semibold">%</span>
+      <input type="number" class="form-control" data-bs-input id="inputNumber4" name="inputNumber4" value="50" min="0" max="100" step="any" />
+      <span class="input-group-text align-buttons flex-column">
+        <button class="input-number-add">
+          <span class="visually-hidden">Aumenta del 10%</span>
+        </button>
+        <button class="input-number-sub">
+          <span class="visually-hidden">Diminuisci del 10%</span>
+        </button>
+      </span>
+    </div>
+  </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -116,16 +139,20 @@ Aggiungere anche l'attributo `disabled` al campo e ai pulsanti.
 {% comment %}Example name: Disabilitato {% endcomment %}
 {% capture example %}
 <div>
-  <label for="inputNumber5" class="input-number-label">Disabled</label>
-  <span class="input-number disabled">
-    <input type="number" data-bs-input id="inputNumber5" name="inputNumber5" value="50" min="0" max="100" step="1" disabled />
-    <button class="input-number-add" disabled>
-      <span class="visually-hidden">Aumenta valore</span>
-    </button>
-    <button class="input-number-sub" disabled>
-      <span class="visually-hidden">Diminuisci valore</span>
-    </button>
-  </span>
+  <div class="form-group">
+    <label for="inputNumber5" class="input-number-label active">Disabled</label>
+    <div class="input-group input-number disabled">
+      <input type="number" class="form-control" data-bs-input id="inputNumber5" name="inputNumber5" value="50" min="0" max="100" step="1" disabled />
+      <span class="input-group-text align-buttons flex-column">
+        <button class="input-number-add">
+          <span class="visually-hidden">Aumenta valore</span>
+        </button>
+        <button class="input-number-sub">
+          <span class="visually-hidden">Diminuisci valore</span>
+        </button>
+      </span>
+    </div>
+  </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -138,16 +165,20 @@ sufficiente aggiungere la classe `input-number-adaptive`.
 {% comment %}Example name: Con ridimensionamento {% endcomment %}
 {% capture example %}
 <div class="w-100">
-  <label for="inputNumber6" class="input-number-label">Adattivo</label>
-  <span class="input-number input-number-adaptive">
-    <input type="number" data-bs-input id="inputNumber6" name="inputNumber6" value="99999" step="any">
-    <button class="input-number-add">
-      <span class="visually-hidden">Aumenta valore</span>
-    </button>
-    <button class="input-number-sub">
-      <span class="visually-hidden">Diminuisci valore</span>
-    </button>
-  </span>
+  <div class="form-group">
+    <label for="inputNumber6" class="input-number-label active">Adattivo</label>
+    <div class="input-group input-number input-number-adaptive">
+      <input type="number" class="form-control" data-bs-input id="inputNumber6" name="inputNumber6" value="99999" step="any">
+      <span class="input-group-text align-buttons flex-column">
+        <button class="input-number-add">
+          <span class="visually-hidden">Aumenta valore</span>
+        </button>
+        <button class="input-number-sub">
+          <span class="visually-hidden">Diminuisci valore</span>
+        </button>
+      </span>
+    </div>
+  </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
 

@@ -1,10 +1,8 @@
 .input-number {
   position: relative;
-  width: 100%;
 
   &.input-number-adaptive {
-    width: auto;
-    display: inline;
+    width: fit-content;
     input[type='number'] {
       width: auto;
       transition: all 0.3s;
@@ -23,80 +21,49 @@
     }
 
     // color: $color-text-muted;
-    padding-right: 32px;
-    padding-left: 12px;
-    min-width: 86px !important;
-    width: 100%;
 
     &:focus {
       color: $color-text-base;
     }
   }
 
-  //currency + percentage version
-  &.input-number-currency,
-  &.input-number-percentage {
-    &:before {
-      position: absolute;
-      left: 14px;
-      top: 0;
-      // color: $color-text-muted;
-      font-weight: bold;
-      font-size: 1rem;
-    }
-    input[type='number'] {
-      padding-left: 40px;
-    }
-  }
-  &.input-number-currency {
-    &:before {
-      content: '€';
-    }
-  }
-  &.input-number-percentage {
-    &:before {
-      content: '%';
-    }
-  }
-
   //disabled version
   &.disabled {
     input[type='number'] {
-      background-color: transparent;
-      color: $gray-label-disabled;
-      border-bottom-color: $gray-border-disabled;
+      background-color: $gray-disabled;
+      color: $gray-800;
       &:hover {
         cursor: not-allowed;
         color: $gray-label-disabled;
       }
     }
-    button {
-      pointer-events: none;
-      &:hover {
-        cursor: not-allowed;
-      }
-      &.input-number-add {
-        &:after {
-          border-color: transparent transparent $gray-border-disabled transparent;
-        }
-      }
-      &.input-number-sub {
-        &:after {
-          border-color: $gray-border-disabled transparent transparent transparent;
+    .input-group-text {
+      background-color: $gray-disabled;
+      color: $gray-800;
+      button {
+        pointer-events: none;
+        &:hover {
+          cursor: not-allowed;
         }
       }
     }
   }
 
   //add + sub buttons
-  button {
+  .input-group-text.align-buttons {
     position: absolute;
-    right: 2px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+  }
+  .input-group-text button {
+    position: relative;
     transition: opacity 0.1s;
     padding: 0;
     border: none;
-    height: 20px;
-    width: 24px;
+    height: 50%;
+    width: 16px;
     background: transparent;
     &:after {
       position: absolute;
@@ -126,14 +93,12 @@
     }
 
     &.input-number-add {
-      top: -6px;
       &:after {
         border-width: 0 5px 6px 5px;
         border-color: transparent transparent $neutral-1-a7 transparent; // TODO Check if still necessary
       }
     }
     &.input-number-sub {
-      bottom: -6px;
       &:after {
         border-width: 6px 5px 0 5px;
         border-color: $neutral-1-a7 transparent transparent transparent; // TODO Check if still necessary

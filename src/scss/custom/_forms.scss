@@ -59,6 +59,13 @@ fieldset {
       font-size: $small-font-size;
       color: $input-label-color;
     }
+    &:not(.active) {
+      & + .input-number-currency {
+        .input-group-text {
+          display: none;
+        }
+      }
+    }
   }
 
   input:is([type='radio']),
@@ -100,7 +107,6 @@ textarea {
   border-radius: 0;
   padding: $input-spacing-y $input-spacing-x;
   outline: 0;
-  height: $input-height;
   width: 100%;
   box-shadow: none;
   transition: none;
@@ -188,7 +194,7 @@ textarea {
   .input-group-text {
     padding: $input-spacing-y $input-spacing-x;
     border-bottom: 1px solid $input-border;
-    height: 100%;
+    border-radius: 0;
   }
 
   .input-group-prepend {
