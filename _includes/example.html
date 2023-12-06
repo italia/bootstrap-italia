@@ -17,7 +17,7 @@ optional: hide_markup - disabled (default)
 {%- endif -%}
 
 {%- if include.hide_markup == null -%}
-{%- highlight html -%}
+{%- highlight html linenos -%}
 {{- include.content | replace_regex: 'no_toc\s?', '' | replace_regex: '\sclass=""', '' | replace: 'data-src="holder.js', 'src="...' -}}
 {%- endhighlight -%}
 {%- endif -%}
