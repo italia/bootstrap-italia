@@ -64,7 +64,6 @@
       padding: $navigation-h-padding 0;
 
       li {
-
         > button.nav-link {
           border: none;
           display: block;
@@ -73,32 +72,32 @@
           font-weight: 600;
           padding: $navigation-v-padding $navigation-h-padding;
           position: relative;
-    
+
           &.dropdown-toggle {
             svg {
               fill: $navbar-bg-color;
               transition: all 0.3s;
             }
-    
+
             &[aria-expanded='true'] {
               .icon {
                 transform: scaleY(-1);
               }
             }
           }
-    
+
           &.active {
             border-left: $navigation-link-active-bar-size solid $navigation-link-active-bar-color;
             color: $primary;
           }
-    
+
           &.disabled {
             span,
             .icon {
               opacity: $navigation-disabled-item-mobile-opacity;
             }
           }
-    
+
           &:hover:not(.active) {
             text-decoration: underline;
           }
@@ -193,13 +192,14 @@
       display: none;
     }
 
-    a.it-heading-link, a.it-footer-link {
+    a.it-heading-link,
+    a.it-footer-link {
       color: $navigation-link-color;
       svg {
         fill: $navigation-link-color;
       }
       &.active {
-        span {
+        span {
           text-decoration: underline;
           color: $navigation-link-color;
         }

@@ -79,7 +79,8 @@
                 }
                 // vertical cta
                 .dropdown-menu {
-                  a.it-heading-link, a.it-footer-link {
+                  a.it-heading-link,
+                  a.it-footer-link {
                     color: $navigation-dark-text-color;
                     svg {
                       fill: $navigation-dark-text-color;
@@ -134,7 +135,8 @@
               color: $navigation-dark-text-color;
             }
           }
-          a.it-heading-link, a.it-footer-link {
+          a.it-heading-link,
+          a.it-footer-link {
             color: $navigation-dark-text-color;
             svg {
               fill: $navigation-dark-text-color;
@@ -243,7 +245,9 @@
                   background: $navigation-light-megamenu-footer-bg-color;
                 }
                 .dropdown-menu {
-                  .it-heading-link-wrapper, .it-footer-link-wrapper, .it-footer-link-wrapper-vertical {
+                  .it-heading-link-wrapper,
+                  .it-footer-link-wrapper,
+                  .it-footer-link-wrapper-vertical {
                     border-color: $navigation-light-megamenu-separator-color;
                   }
                   // asymettrical column
