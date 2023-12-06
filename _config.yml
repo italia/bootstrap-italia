@@ -3,6 +3,9 @@ markdown: kramdown
 highlighter: rouge
 kramdown:
   auto_ids: true
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
 
 permalink: pretty
 
