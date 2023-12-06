@@ -375,7 +375,7 @@ Il megamenu prende i colori scuri su mobile se è dentro un `<nav>` che usa il t
  
 La variante base può contenere liste di link organizzate in tre colonne e contenere o meno link aggiuntivi (esplora la sezione, esplora tutti, call to action).  
 
-Anche in queste varianti che seguono si attivano in automatico le versioni alternative scure su desktop o mobile se il `<nav>` contenitore usa uno dei due temi colore disponibili con le classi alternative `.teme-light-desk` e `.theme-dark-mobile`. 
+Anche in queste varianti che seguono si attivano in automatico le versioni scure su desktop e/o mobile se il `<nav>` contenitore usa i due temi colore disponibili con le classi `.theme-light-desk` e `.theme-dark-mobile`. 
 
 {% comment %}Example name: Base{% endcomment %}
 {% capture example %}
