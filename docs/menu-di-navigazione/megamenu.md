@@ -17,21 +17,21 @@ Gli elementi megamenu contenuti nelle navbar sono gestiti come elementi di tipo 
 {% capture callout %}
 #### Accessibilità
 
-Il megamenu è un componente di navigazione critico dal punto di vista dell'accessibilità. Si sugerisce particolare attenzione laddove si ritenga necessario usarlo:
+Il megamenu è un componente di navigazione critico dal punto di vista dell'accessibilità. Si suggerisce attenzione laddove si ritenga necessario usarlo:
 
-- svolgere verifiche di accessibilità e test di usabilità con utenti, ponendo particolare attenzione a verificare navigazione da tastiera e con tecnologie assistive;
+- svolgere verifiche di accessibilità e test di usabilità con utenti, verificare navigazione da tastiera e con tecnologie assistive;
 - prestare particolare attenzione agli attributi `ARIA` presenti negli esempi;
-- i pulsanti che aprono i megamenu devono avere corretta semantica, ovvero`<button>`;
+- i pulsanti che aprono i megamenu devono avere corretta semantica `<button>`;
 - l'icona a sinistra dei link serve a contraddistinguerli come "voci di menu" anche nelle situazioni o condizioni in cui non sia possibile percepirne il colore, in particolar modo laddove sia presente anche del testo descrittivo; 
-- non devono essere presenti in pagina link con la medesima etichetta (label) che portino a destinazioni diverse. Nel caso di più link "Esplora tutti", ad esempio accostando più megamenu, si deve aggiungere " i contenuti della sezione X" all'etichetta, oppure, si può usare `<span class="visually-hidden"> i contenuti della sezione X</span>` per specificare alle sole tecnologie assistive a quale sezione di contenuti del sito si fa riferimento.
+- non devono essere presenti in pagina link con la medesima etichetta (label) che portino a destinazioni diverse. Nel caso di più link "Esplora tutti", ad esempio accostando più megamenu, si deve aggiungere " i contenuti della sezione X" alle etichette, oppure, si può usare `<span class="visually-hidden"> i contenuti della sezione X</span>` per specificare alle sole tecnologie assistive a quale sezione di contenuti del sito si fa riferimento.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %} 
 
 {% capture callout %}
-Dalla versione **2.10.0** della libreria:
+Dalla versione **2.8.0** della libreria:
 
-- il componente è stato riprogettato per essere accessibile by default, sia nella struttura che negli stili;
-- è cambiato il modo di aggiungere un link "Esplora tutti...", rimangono ad esempio disponibili negli stili le classi `it-external` e `it-more` per retrocompatibilità, ma non sono utilizzate nel nuovo componente;
-- sono state deprecate le varianti con sezioni. 
+- il componente è stato riprogettato dalle fondamemta per essere accessibile by default, sia nella struttura che negli stili;
+- è cambiato il modo di aggiungere un link "Esplora tutti...", rimangono solo a titolo di esempio disponibili negli stili le classi `it-external` e `it-more` per retrocompatibilità, ma non sono utilizzate nel nuovo componente;
+- sono state deprecate tutte le varianti con sezioni. 
 
 {% endcapture %}{% include callout.html content=callout type="danger" %}
 
