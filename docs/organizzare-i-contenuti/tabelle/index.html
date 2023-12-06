@@ -11,13 +11,13 @@
 
 <title>Tabelle · Bootstrap Italia</title>
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202312051520" rel="stylesheet" />
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202312061409" rel="stylesheet" />
 
 <!-- Documentation extras -->
  
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.css" rel="stylesheet" />
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202312051520" rel="stylesheet" />
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202312061409" rel="stylesheet" />
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico" />
@@ -671,7 +671,37 @@
   </tbody>
 </table>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+</pre></td><td class="code"><pre><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;thead&gt;</span>
     <span class="nt">&lt;tr&gt;</span>
       <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>#<span class="nt">&lt;/th&gt;</span>
@@ -700,7 +730,8 @@
       <span class="nt">&lt;td&gt;</span>alessandro.rossi<span class="nt">&lt;/td&gt;</span>
     <span class="nt">&lt;/tr&gt;</span>
   <span class="nt">&lt;/tbody&gt;</span>
-<span class="nt">&lt;/table&gt;</span></code></pre></figure>
+<span class="nt">&lt;/table&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <h2 id="tabelle-responsive">Tabelle responsive</h2>
 
@@ -774,7 +805,63 @@
     </table>
   </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html">  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"table-responsive"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+</pre></td><td class="code"><pre>  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"table-responsive"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;thead&gt;</span>
         <span class="nt">&lt;tr&gt;</span>
@@ -829,7 +916,8 @@
         <span class="nt">&lt;/tr&gt;</span>
       <span class="nt">&lt;/tbody&gt;</span>
     <span class="nt">&lt;/table&gt;</span>
-  <span class="nt">&lt;/div&gt;</span></code></pre></figure>
+  <span class="nt">&lt;/div&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <h3 id="breakpoint-specifici">Breakpoint specifici</h3>
 
@@ -1050,7 +1138,215 @@
 
 
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html">  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"table-responsive-sm"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+</pre></td><td class="code"><pre>  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"table-responsive-sm"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;thead&gt;</span>
         <span class="nt">&lt;tr&gt;</span>
@@ -1257,7 +1553,8 @@
         <span class="nt">&lt;/tr&gt;</span>
       <span class="nt">&lt;/tbody&gt;</span>
     <span class="nt">&lt;/table&gt;</span>
-  <span class="nt">&lt;/div&gt;</span></code></pre></figure>
+  <span class="nt">&lt;/div&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <h2 id="varianti">Varianti</h2>
 
@@ -1346,7 +1643,86 @@
     </tbody>
   </table>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html">  <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-primary"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+</pre></td><td class="code"><pre>  <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-primary"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;tbody&gt;</span>
       <span class="nt">&lt;tr&gt;</span>
         <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>Default<span class="nt">&lt;/th&gt;</span>
@@ -1424,7 +1800,8 @@
         <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
       <span class="nt">&lt;/tr&gt;</span>
     <span class="nt">&lt;/tbody&gt;</span>
-  <span class="nt">&lt;/table&gt;</span></code></pre></figure>
+  <span class="nt">&lt;/table&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <h3 id="righe-colorate">Righe colorate</h3>
 
@@ -1486,7 +1863,63 @@
     </tbody>
   </table>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html">  <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+</pre></td><td class="code"><pre>  <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;thead&gt;</span>
       <span class="nt">&lt;tr&gt;</span>
         <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Classe<span class="nt">&lt;/th&gt;</span>
@@ -1541,7 +1974,8 @@
         <span class="nt">&lt;td&gt;</span>Cella<span class="nt">&lt;/td&gt;</span>
       <span class="nt">&lt;/tr&gt;</span>
     <span class="nt">&lt;/tbody&gt;</span>
-  <span class="nt">&lt;/table&gt;</span></code></pre></figure>
+  <span class="nt">&lt;/table&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <h3 id="celle-colorate">Celle colorate</h3>
 
@@ -1564,7 +1998,25 @@
     </table>
   </div>
   </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html">  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"table-responsive"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+</pre></td><td class="code"><pre>  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"table-responsive"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-primary"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;tbody&gt;</span>
         <span class="nt">&lt;tr&gt;</span>
@@ -1581,7 +2033,8 @@
       <span class="nt">&lt;/tbody&gt;</span>
     <span class="nt">&lt;/table&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-  </code></pre></figure>
+  
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <div class="bd-callout bd-callout-accessibility">
 <h4 id="trasmettere-significato-alle-tecnologie-assistive">Trasmettere significato alle tecnologie assistive</h4>
@@ -1625,7 +2078,37 @@
     </tbody>
   </table>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html">  <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-striped"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+</pre></td><td class="code"><pre>  <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-striped"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;thead&gt;</span>
       <span class="nt">&lt;tr&gt;</span>
         <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>#<span class="nt">&lt;/th&gt;</span>
@@ -1654,7 +2137,8 @@
         <span class="nt">&lt;td&gt;</span>alessandro.rossi<span class="nt">&lt;/td&gt;</span>
       <span class="nt">&lt;/tr&gt;</span>
     <span class="nt">&lt;/tbody&gt;</span>
-  <span class="nt">&lt;/table&gt;</span></code></pre></figure>
+  <span class="nt">&lt;/table&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <p>Queste classi sono applicabili anche alle varianti:</p>
 
@@ -1690,7 +2174,37 @@
     </tbody>
   </table>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html">  <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-dark table-striped"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+</pre></td><td class="code"><pre>  <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-dark table-striped"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;thead&gt;</span>
       <span class="nt">&lt;tr&gt;</span>
         <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>#<span class="nt">&lt;/th&gt;</span>
@@ -1719,7 +2233,8 @@
         <span class="nt">&lt;td&gt;</span>alessandro.rossi<span class="nt">&lt;/td&gt;</span>
       <span class="nt">&lt;/tr&gt;</span>
     <span class="nt">&lt;/tbody&gt;</span>
-  <span class="nt">&lt;/table&gt;</span></code></pre></figure>
+  <span class="nt">&lt;/table&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <h3 id="righe-e-hover">Righe e hover</h3>
 
@@ -1757,7 +2272,37 @@
     </tbody>
   </table>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html">  <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-hover"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+</pre></td><td class="code"><pre>  <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-hover"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;thead&gt;</span>
       <span class="nt">&lt;tr&gt;</span>
         <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>#<span class="nt">&lt;/th&gt;</span>
@@ -1786,7 +2331,8 @@
         <span class="nt">&lt;td&gt;</span>alessandro.rossi<span class="nt">&lt;/td&gt;</span>
       <span class="nt">&lt;/tr&gt;</span>
     <span class="nt">&lt;/tbody&gt;</span>
-  <span class="nt">&lt;/table&gt;</span></code></pre></figure>
+  <span class="nt">&lt;/table&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <p>Le tabelle con hover possono essere combinate con la variante striata.</p>
 
@@ -1822,7 +2368,37 @@
     </tbody>
   </table>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html">  <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-striped table-hover"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+</pre></td><td class="code"><pre>  <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-striped table-hover"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;thead&gt;</span>
       <span class="nt">&lt;tr&gt;</span>
         <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>#<span class="nt">&lt;/th&gt;</span>
@@ -1851,7 +2427,8 @@
         <span class="nt">&lt;td&gt;</span>alessandro.rossi<span class="nt">&lt;/td&gt;</span>
       <span class="nt">&lt;/tr&gt;</span>
     <span class="nt">&lt;/tbody&gt;</span>
-  <span class="nt">&lt;/table&gt;</span></code></pre></figure>
+  <span class="nt">&lt;/table&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <h3 id="tabelle-attive">Tabelle attive</h3>
 
@@ -1886,7 +2463,36 @@
   </tbody>
 </table>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+</pre></td><td class="code"><pre><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;thead&gt;</span>
     <span class="nt">&lt;tr&gt;</span>
       <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>#<span class="nt">&lt;/th&gt;</span>
@@ -1914,7 +2520,8 @@
       <span class="nt">&lt;td&gt;</span>@twitter<span class="nt">&lt;/td&gt;</span>
     <span class="nt">&lt;/tr&gt;</span>
   <span class="nt">&lt;/tbody&gt;</span>
-<span class="nt">&lt;/table&gt;</span></code></pre></figure>
+<span class="nt">&lt;/table&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <h2 id="tabella-con-bordi">Tabella con bordi</h2>
 
@@ -1951,7 +2558,36 @@
       </tbody>
   </table>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html">  <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-bordered"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+</pre></td><td class="code"><pre>  <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-bordered"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;thead&gt;</span>
         <span class="nt">&lt;tr&gt;</span>
           <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>#<span class="nt">&lt;/th&gt;</span>
@@ -1979,7 +2615,8 @@
           <span class="nt">&lt;td&gt;</span>@twitter<span class="nt">&lt;/td&gt;</span>
         <span class="nt">&lt;/tr&gt;</span>
       <span class="nt">&lt;/tbody&gt;</span>
-  <span class="nt">&lt;/table&gt;</span></code></pre></figure>
+  <span class="nt">&lt;/table&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <p>Le <a href="/bootstrap-italia/docs/organizzare-gli-spazi/bordi/#colore-dei-bordi">utilities di colorazione dei bordi</a> possono essere utilizzate per cambiarne i colori.</p>
 
@@ -2014,7 +2651,36 @@
       </tbody>
   </table>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html">  <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-bordered border-primary"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+</pre></td><td class="code"><pre>  <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-bordered border-primary"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;thead&gt;</span>
         <span class="nt">&lt;tr&gt;</span>
           <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>#<span class="nt">&lt;/th&gt;</span>
@@ -2042,7 +2708,8 @@
           <span class="nt">&lt;td&gt;</span>@twitter<span class="nt">&lt;/td&gt;</span>
         <span class="nt">&lt;/tr&gt;</span>
       <span class="nt">&lt;/tbody&gt;</span>
-  <span class="nt">&lt;/table&gt;</span></code></pre></figure>
+  <span class="nt">&lt;/table&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <h2 id="tabella-senza-bordi">Tabella senza bordi</h2>
 
@@ -2079,7 +2746,36 @@
       </tbody>
   </table>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html">  <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-borderless"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+</pre></td><td class="code"><pre>  <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-borderless"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;thead&gt;</span>
         <span class="nt">&lt;tr&gt;</span>
           <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>#<span class="nt">&lt;/th&gt;</span>
@@ -2107,7 +2803,8 @@
           <span class="nt">&lt;td&gt;</span>@twitter<span class="nt">&lt;/td&gt;</span>
         <span class="nt">&lt;/tr&gt;</span>
       <span class="nt">&lt;/tbody&gt;</span>
-  <span class="nt">&lt;/table&gt;</span></code></pre></figure>
+  <span class="nt">&lt;/table&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <div class="bd-example">
   <table class="table table-dark table-borderless">
@@ -2140,7 +2837,36 @@
       </tbody>
   </table>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html">  <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-dark table-borderless"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+</pre></td><td class="code"><pre>  <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-dark table-borderless"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;thead&gt;</span>
         <span class="nt">&lt;tr&gt;</span>
           <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>#<span class="nt">&lt;/th&gt;</span>
@@ -2168,7 +2894,8 @@
           <span class="nt">&lt;td&gt;</span>@twitter<span class="nt">&lt;/td&gt;</span>
         <span class="nt">&lt;/tr&gt;</span>
       <span class="nt">&lt;/tbody&gt;</span>
-  <span class="nt">&lt;/table&gt;</span></code></pre></figure>
+  <span class="nt">&lt;/table&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <h2 id="tabella-compatta">Tabella compatta</h2>
 
@@ -2205,7 +2932,36 @@
       </tbody>
   </table>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html">  <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-sm"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+</pre></td><td class="code"><pre>  <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-sm"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;thead&gt;</span>
         <span class="nt">&lt;tr&gt;</span>
           <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>#<span class="nt">&lt;/th&gt;</span>
@@ -2233,7 +2989,8 @@
           <span class="nt">&lt;td&gt;</span>@twitter<span class="nt">&lt;/td&gt;</span>
         <span class="nt">&lt;/tr&gt;</span>
       <span class="nt">&lt;/tbody&gt;</span>
-  <span class="nt">&lt;/table&gt;</span></code></pre></figure>
+  <span class="nt">&lt;/table&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <h2 id="allineamento-verticale">Allineamento verticale</h2>
 
@@ -2273,7 +3030,39 @@
     </table>
   </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html">  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"table-responsive"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+</pre></td><td class="code"><pre>  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"table-responsive"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table align-middle"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;thead&gt;</span>
         <span class="nt">&lt;tr&gt;</span>
@@ -2304,7 +3093,8 @@
         <span class="nt">&lt;/tr&gt;</span>
       <span class="nt">&lt;/tbody&gt;</span>
     <span class="nt">&lt;/table&gt;</span>
-  <span class="nt">&lt;/div&gt;</span></code></pre></figure>
+  <span class="nt">&lt;/div&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <h2 id="annidamento">Annidamento</h2>
 
@@ -2366,7 +3156,61 @@
     </tbody>
   </table>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html">  <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-striped table-bordered"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+</pre></td><td class="code"><pre>  <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-striped table-bordered"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;thead&gt;</span>
       <span class="nt">&lt;tr&gt;</span>
         <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>#<span class="nt">&lt;/th&gt;</span>
@@ -2419,7 +3263,8 @@
         <span class="nt">&lt;td&gt;</span>@twitter<span class="nt">&lt;/td&gt;</span>
       <span class="nt">&lt;/tr&gt;</span>
     <span class="nt">&lt;/tbody&gt;</span>
-  <span class="nt">&lt;/table&gt;</span></code></pre></figure>
+  <span class="nt">&lt;/table&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <h2 id="struttura">Struttura</h2>
 
@@ -2459,7 +3304,37 @@
     </tbody>
   </table>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html">  <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+</pre></td><td class="code"><pre>  <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;thead</span> <span class="na">class=</span><span class="s">"table-dark"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;tr&gt;</span>
         <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>#<span class="nt">&lt;/th&gt;</span>
@@ -2488,7 +3363,8 @@
         <span class="nt">&lt;td&gt;</span>alessandro.rossi<span class="nt">&lt;/td&gt;</span>
       <span class="nt">&lt;/tr&gt;</span>
     <span class="nt">&lt;/tbody&gt;</span>
-  <span class="nt">&lt;/table&gt;</span></code></pre></figure>
+  <span class="nt">&lt;/table&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <h3 id="footer">Footer</h3>
 
@@ -2532,7 +3408,45 @@
     </tfoot>
   </table>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html">  <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+</pre></td><td class="code"><pre>  <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;thead</span> <span class="na">class=</span><span class="s">"table-light"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;tr&gt;</span>
         <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>#<span class="nt">&lt;/th&gt;</span>
@@ -2569,7 +3483,8 @@
         <span class="nt">&lt;td&gt;</span>Footer<span class="nt">&lt;/td&gt;</span>
       <span class="nt">&lt;/tr&gt;</span>
     <span class="nt">&lt;/tfoot&gt;</span>
-  <span class="nt">&lt;/table&gt;</span></code></pre></figure>
+  <span class="nt">&lt;/table&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <h3 id="caption">Caption</h3>
 
@@ -2607,7 +3522,37 @@
     </tbody>
   </table>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html">  <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-sm"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+</pre></td><td class="code"><pre>  <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-sm"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;caption&gt;</span>Lista degli utenti<span class="nt">&lt;/caption&gt;</span>
     <span class="nt">&lt;thead&gt;</span>
       <span class="nt">&lt;tr&gt;</span>
@@ -2636,7 +3581,8 @@
         <span class="nt">&lt;td&gt;</span>@twitter<span class="nt">&lt;/td&gt;</span>
       <span class="nt">&lt;/tr&gt;</span>
     <span class="nt">&lt;/tbody&gt;</span>
-  <span class="nt">&lt;/table&gt;</span></code></pre></figure>
+  <span class="nt">&lt;/table&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <p>Per renderizzare la <code class="language-plaintext highlighter-rouge">&lt;caption&gt;</code> in cima alla tabella utilizza la classe <code class="language-plaintext highlighter-rouge">.caption-top</code>.</p>
 
@@ -2672,7 +3618,37 @@
     </tbody>
   </table>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html">  <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table sm caption-top"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+</pre></td><td class="code"><pre>  <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table sm caption-top"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;caption&gt;</span>Lista degli utenti<span class="nt">&lt;/caption&gt;</span>
     <span class="nt">&lt;thead&gt;</span>
       <span class="nt">&lt;tr&gt;</span>
@@ -2701,7 +3677,8 @@
         <span class="nt">&lt;td&gt;</span>@twitter<span class="nt">&lt;/td&gt;</span>
       <span class="nt">&lt;/tr&gt;</span>
     <span class="nt">&lt;/tbody&gt;</span>
-  <span class="nt">&lt;/table&gt;</span></code></pre></figure>
+  <span class="nt">&lt;/table&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 
         </main>
@@ -2709,15 +3686,15 @@
     </div>
 
     
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202312051520"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202312061409"></script>
 <script>
   bootstrap.loadFonts('/bootstrap-italia/dist/fonts')
-</script><script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202312051520"></script>
+</script><script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202312061409"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/anchor.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/clipboard.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tsparticles.min.js"></script>
 
-<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202312051520"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202312061409"></script>
 
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tweenjs.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/easeljs.min.js"></script>
@@ -2734,7 +3711,7 @@
     { src: '/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png', id: 'cover-7' },
   ]
 </script>
-<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202312051520"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202312061409"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/docsearch.min.js"></script>
 
 <script>
@@ -2782,7 +3759,9 @@
        * Snippet
        * <div class="bd-example">
        * </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html">       * </code></pre></figure>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+</pre></td><td class="code"><pre>       * 
+</pre></td></tr></tbody></table></code></pre></figure>
   
        */
       if (node.nodeName == 'FIGURE') { 
@@ -2794,6 +3773,7 @@
       * ``` 
       */
       else if (node.nodeName == 'PRE') {
+        node.classList.remove("highlight");
         node.insertAdjacentElement('beforebegin', divContainer);
       }
     });

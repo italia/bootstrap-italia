@@ -11,11 +11,11 @@
 
 <title>Template Home Page · Bootstrap Italia</title>
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202312051520" rel="stylesheet" />
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202312061409" rel="stylesheet" />
 
 <!-- Documentation extras -->
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202312051520" rel="stylesheet" />
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202312061409" rel="stylesheet" />
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico" />
@@ -1001,7 +1001,7 @@
   </svg>
 </a>
  
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202312051520"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202312061409"></script>
 <script>
   bootstrap.loadFonts('/bootstrap-italia/dist/fonts')
 </script><!-- Notification per tornare alla pagina principale -->
@@ -1061,7 +1061,9 @@
       /**
        * Snippet
        * <div class="bd-example">
-       * </div><figure class="highlight"><pre><code class="language-html" data-lang="html">       * </code></pre></figure>  
+       * </div><figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+</pre></td><td class="code"><pre>       * 
+</pre></td></tr></tbody></table></code></pre></figure>  
        */
       if (node.nodeName == 'FIGURE') { 
         node.insertBefore(divContainer, node.querySelector('pre')); 
@@ -1072,6 +1074,7 @@
       * ``` 
       */
       else if (node.nodeName == 'PRE') {
+        node.classList.remove("highlight");
         node.insertAdjacentElement('beforebegin', divContainer);
       }
     });

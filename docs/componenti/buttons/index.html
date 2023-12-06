@@ -11,13 +11,13 @@
 
 <title>Buttons · Bootstrap Italia</title>
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202312051520" rel="stylesheet" />
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202312061409" rel="stylesheet" />
 
 <!-- Documentation extras -->
  
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.css" rel="stylesheet" />
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202312051520" rel="stylesheet" />
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202312061409" rel="stylesheet" />
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico" />
@@ -618,7 +618,9 @@
 <div class="bd-example">
 <button type="button" class="btn">Link</button>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn"</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/button&gt;</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+</pre></td><td class="code"><pre><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn"</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/button&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <p>Le classi <code class="language-plaintext highlighter-rouge">.btn</code> sono state pensate per essere utilizzate con l’elemento <code class="language-plaintext highlighter-rouge">&lt;button&gt;</code>. Tuttavia, è possibile applicare lo stile per i pulsanti anche ad elementi di tipo <code class="language-plaintext highlighter-rouge">&lt;a&gt;</code> o <code class="language-plaintext highlighter-rouge">&lt;input&gt;</code>, anche se alcuni browser potrebbero mostrare un rendering lievemente diverso.</p>
 
@@ -639,11 +641,17 @@
 <input class="btn" type="submit" value="Submit" />
 <input class="btn" type="reset" value="Reset" />
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn"</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">role=</span><span class="s">"button"</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="code"><pre><span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn"</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">role=</span><span class="s">"button"</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;</span>
 <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn"</span> <span class="na">type=</span><span class="s">"submit"</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"btn"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">value=</span><span class="s">"Input"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"btn"</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">value=</span><span class="s">"Submit"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"btn"</span> <span class="na">type=</span><span class="s">"reset"</span> <span class="na">value=</span><span class="s">"Reset"</span><span class="nt">&gt;</span></code></pre></figure>
+<span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"btn"</span> <span class="na">type=</span><span class="s">"reset"</span> <span class="na">value=</span><span class="s">"Reset"</span><span class="nt">&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <h3 id="varianti-di-colore">Varianti di colore</h3>
 
@@ -684,7 +692,39 @@
 </div>
 </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"py-1"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+</pre></td><td class="code"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"py-1"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-example"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>Primary<span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-primary"</span><span class="nt">&gt;</span>Primary outline<span class="nt">&lt;/button&gt;</span>
@@ -715,7 +755,8 @@
   <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-warning disabled"</span><span class="nt">&gt;</span>Warning disabled<span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-warning disabled"</span><span class="nt">&gt;</span>Warning outline disabled<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+<span class="nt">&lt;/div&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <h4 id="note-sullo-stato-disabilitato">Note sullo stato disabilitato</h4>
 
@@ -727,7 +768,9 @@
 <div class="bd-example">
 <a href="#" class="btn btn-primary disabled" role="button" aria-disabled="true">Link disabilitato</a>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"btn btn-primary disabled"</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">aria-disabled=</span><span class="s">"true"</span><span class="nt">&gt;</span>Link disabilitato<span class="nt">&lt;/a&gt;</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+</pre></td><td class="code"><pre><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"btn btn-primary disabled"</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">aria-disabled=</span><span class="s">"true"</span><span class="nt">&gt;</span>Link disabilitato<span class="nt">&lt;/a&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <div class="bd-callout bd-callout-warning">
 <h5 id="disabilitazione-link">Disabilitazione link</h5>
@@ -753,7 +796,20 @@
   <button type="button" class="btn btn-outline-secondary disabled">Secondary outline disabled</button>
 </div></div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-dark py-1"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre></td><td class="code"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-dark py-1"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-example"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>Primary<span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-primary"</span><span class="nt">&gt;</span>Primary outline<span class="nt">&lt;/button&gt;</span>
@@ -765,7 +821,8 @@
   <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-secondary"</span><span class="nt">&gt;</span>Secondary outline<span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary disabled"</span><span class="nt">&gt;</span>Secondary disabled<span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-secondary disabled"</span><span class="nt">&gt;</span>Secondary outline disabled<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;/div&gt;&lt;/div&gt;</span></code></pre></figure>
+<span class="nt">&lt;/div&gt;&lt;/div&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <div class="bd-callout bd-callout-accessibility">
 <h4 id="trasmettere-significato-alle-tecnologie-assistive">Trasmettere significato alle tecnologie assistive</h4>
@@ -806,7 +863,42 @@
   </svg>
 </button>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-success btn-lg btn-icon btn-me"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+</pre></td><td class="code"><pre><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-success btn-lg btn-icon btn-me"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;span&gt;</span>Icon Button Lg<span class="nt">&lt;/span&gt;</span>
 <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-white ms-1"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;use</span>
@@ -840,7 +932,8 @@
         <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-star-full"</span>
       <span class="nt">&gt;&lt;/use&gt;</span>
   <span class="nt">&lt;/svg&gt;</span>
-<span class="nt">&lt;/button&gt;</span></code></pre></figure>
+<span class="nt">&lt;/button&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <div class="bd-callout bd-callout-warning">
 <h4 id="allineamento-e-spaziatura-dellicona">Allineamento e spaziatura dell’icona</h4>
@@ -889,7 +982,42 @@
 <span>Round Icon Xs</span>
 </button>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-success btn-lg btn-icon btn-me"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+</pre></td><td class="code"><pre><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-success btn-lg btn-icon btn-me"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"rounded-icon"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-success"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-user"</span><span class="nt">&gt;&lt;/use&gt;</span>
@@ -923,7 +1051,8 @@
 <span class="nt">&lt;/svg&gt;</span>
 <span class="nt">&lt;/span&gt;</span>
 <span class="nt">&lt;span&gt;</span>Round Icon Xs<span class="nt">&lt;/span&gt;</span>
-<span class="nt">&lt;/button&gt;</span></code></pre></figure>
+<span class="nt">&lt;/button&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <h3 id="varianti-di-dimensione">Varianti di dimensione</h3>
 
@@ -935,8 +1064,11 @@
 <button type="button" class="btn btn-primary btn-lg btn-me">Primary Large</button>
 <button type="button" class="btn btn-secondary btn-lg">Secondary Large</button>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-lg btn-me"</span><span class="nt">&gt;</span>Primary Large<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary btn-lg"</span><span class="nt">&gt;</span>Secondary Large<span class="nt">&lt;/button&gt;</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="code"><pre><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-lg btn-me"</span><span class="nt">&gt;</span>Primary Large<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary btn-lg"</span><span class="nt">&gt;</span>Secondary Large<span class="nt">&lt;/button&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <h4 id="small">Small</h4>
 
@@ -944,8 +1076,11 @@
 <button type="button" class="btn btn-primary btn-sm btn-me">Primary Small</button>
 <button type="button" class="btn btn-secondary btn-sm">Secondary Small</button>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-sm btn-me"</span><span class="nt">&gt;</span>Primary Small<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary btn-sm"</span><span class="nt">&gt;</span>Secondary Small<span class="nt">&lt;/button&gt;</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="code"><pre><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-sm btn-me"</span><span class="nt">&gt;</span>Primary Small<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary btn-sm"</span><span class="nt">&gt;</span>Secondary Small<span class="nt">&lt;/button&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <h4 id="mini">Mini</h4>
 
@@ -953,8 +1088,11 @@
 <button type="button" class="btn btn-primary btn-xs btn-me">Primary Mini</button>
 <button type="button" class="btn btn-secondary btn-xs">Secondary Mini</button>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-xs btn-me"</span><span class="nt">&gt;</span>Primary Mini<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary btn-xs"</span><span class="nt">&gt;</span>Secondary Mini<span class="nt">&lt;/button&gt;</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="code"><pre><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-xs btn-me"</span><span class="nt">&gt;</span>Primary Mini<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary btn-xs"</span><span class="nt">&gt;</span>Secondary Mini<span class="nt">&lt;/button&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <h4 id="a-tutta-larghezza">A tutta larghezza</h4>
 
@@ -967,10 +1105,15 @@
   <button class="btn btn-secondary" type="button">Secondary</button>
 </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-grid gap-2"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="code"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-grid gap-2"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Primary<span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Secondary<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+<span class="nt">&lt;/div&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <p>In questo caso è stata implementata una variante responsive che visualizza i tasti a tutta larghezza e sovrapposti in mobile per poi affiancarli dl breakpoint <code class="language-plaintext highlighter-rouge">md</code> in su.</p>
 
@@ -981,10 +1124,15 @@
   <button class="btn btn-secondary" type="button">Secondary</button>
 </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-grid gap-2 d-md-block"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="code"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"d-grid gap-2 d-md-block"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Primary<span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Secondary<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+<span class="nt">&lt;/div&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <h2 id="approfondimento">Approfondimento</h2>
 
@@ -995,15 +1143,15 @@
     </div>
 
     
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202312051520"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202312061409"></script>
 <script>
   bootstrap.loadFonts('/bootstrap-italia/dist/fonts')
-</script><script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202312051520"></script>
+</script><script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202312061409"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/anchor.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/clipboard.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tsparticles.min.js"></script>
 
-<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202312051520"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202312061409"></script>
 
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tweenjs.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/easeljs.min.js"></script>
@@ -1020,7 +1168,7 @@
     { src: '/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png', id: 'cover-7' },
   ]
 </script>
-<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202312051520"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202312061409"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/docsearch.min.js"></script>
 
 <script>
@@ -1068,7 +1216,9 @@
        * Snippet
        * <div class="bd-example">
        * </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html">       * </code></pre></figure>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+</pre></td><td class="code"><pre>       * 
+</pre></td></tr></tbody></table></code></pre></figure>
   
        */
       if (node.nodeName == 'FIGURE') { 
@@ -1080,6 +1230,7 @@
       * ``` 
       */
       else if (node.nodeName == 'PRE') {
+        node.classList.remove("highlight");
         node.insertAdjacentElement('beforebegin', divContainer);
       }
     });

@@ -11,13 +11,13 @@
 
 <title>Finestre modali · Bootstrap Italia</title>
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202312051520" rel="stylesheet" />
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202312061409" rel="stylesheet" />
 
 <!-- Documentation extras -->
  
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.css" rel="stylesheet" />
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202312051520" rel="stylesheet" />
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202312061409" rel="stylesheet" />
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico" />
@@ -672,13 +672,19 @@ e rimuovono lo scroll dal <code class="language-plaintext highlighter-rouge">&lt
 non ha effetto sulle modali di Bootstrap. Per ottenere lo stesso effetto, usa un codice JavaScript personalizzato:</li>
 </ul>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">myModal</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">myModal</span><span class="dl">'</span><span class="p">)</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre><span class="kd">var</span> <span class="nx">myModal</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">myModal</span><span class="dl">'</span><span class="p">)</span>
 <span class="kd">var</span> <span class="nx">myInput</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">myInput</span><span class="dl">'</span><span class="p">)</span>
 
 <span class="nx">myModal</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">shown.bs.modal</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
   <span class="nx">myInput</span><span class="p">.</span><span class="nx">focus</span><span class="p">()</span>
 <span class="p">})</span>
-</code></pre></div></div>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
 <h2 id="esempi">Esempi</h2>
 
@@ -710,7 +716,26 @@ richiesta l’inclusione di intestazioni o elementi con funzione di chiusura del
    </div>
 </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-example-modal"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+</pre></td><td class="code"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-example-modal"</span><span class="nt">&gt;</span>
    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">role=</span><span class="s">"dialog"</span> <span class="na">id=</span><span class="s">"modal1"</span> <span class="na">aria-labelledby=</span><span class="s">"modal1Title"</span> <span class="na">aria-describedby=</span><span class="s">"modal1Description"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-dialog"</span> <span class="na">role=</span><span class="s">"document"</span><span class="nt">&gt;</span>
          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-content"</span><span class="nt">&gt;</span>
@@ -728,7 +753,8 @@ richiesta l’inclusione di intestazioni o elementi con funzione di chiusura del
          <span class="nt">&lt;/div&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
    <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+<span class="nt">&lt;/div&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <h3 id="modale-con-pulsante-di-chiusura">Modale con pulsante di chiusura</h3>
 
@@ -747,11 +773,17 @@ richiesta l’inclusione di intestazioni o elementi con funzione di chiusura del
 </svg>
 </button>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn-close"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-bs-dismiss=</span><span class="s">"modal"</span> <span class="na">aria-label=</span><span class="s">"Chiudi finestra modale"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="code"><pre><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn-close"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-bs-dismiss=</span><span class="s">"modal"</span> <span class="na">aria-label=</span><span class="s">"Chiudi finestra modale"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-close"</span><span class="nt">&gt;&lt;/use&gt;</span>
 <span class="nt">&lt;/svg&gt;</span>
-<span class="nt">&lt;/button&gt;</span></code></pre></figure>
+<span class="nt">&lt;/button&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <p>Esempio completo:</p>
 
@@ -779,7 +811,29 @@ richiesta l’inclusione di intestazioni o elementi con funzione di chiusura del
    </div>
 </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-example-modal"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+</pre></td><td class="code"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-example-modal"</span><span class="nt">&gt;</span>
    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">role=</span><span class="s">"dialog"</span> <span class="na">id=</span><span class="s">"modal2"</span> <span class="na">aria-labelledby=</span><span class="s">"modal2Title"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-dialog"</span> <span class="na">role=</span><span class="s">"document"</span><span class="nt">&gt;</span>
          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-content"</span><span class="nt">&gt;</span>
@@ -800,7 +854,8 @@ richiesta l’inclusione di intestazioni o elementi con funzione di chiusura del
          <span class="nt">&lt;/div&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
    <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+<span class="nt">&lt;/div&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <h3 id="modale-con-icona">Modale con icona</h3>
 
@@ -829,7 +884,27 @@ Per formattare correttamente i contenuti della modale con icona, occorre aggiung
   </div>
 </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-example-modal"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+</pre></td><td class="code"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-example-modal"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal alert-modal"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">role=</span><span class="s">"dialog"</span> <span class="na">id=</span><span class="s">"modal3"</span> <span class="na">aria-labelledby=</span><span class="s">"modal3Title"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-dialog"</span> <span class="na">role=</span><span class="s">"document"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-content"</span><span class="nt">&gt;</span>
@@ -848,7 +923,8 @@ Per formattare correttamente i contenuti della modale con icona, occorre aggiung
       <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+<span class="nt">&lt;/div&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <h3 id="modale-con-elementi-form">Modale con elementi form</h3>
 
@@ -890,7 +966,40 @@ Di seguito una modale con un elenco di radio button.</p>
    </div>
 </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-example-modal"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+</pre></td><td class="code"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-example-modal"</span><span class="nt">&gt;</span>
    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">role=</span><span class="s">"dialog"</span> <span class="na">id=</span><span class="s">"modal4"</span> <span class="na">aria-labelledby=</span><span class="s">"modal4Title"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-dialog"</span> <span class="na">role=</span><span class="s">"document"</span><span class="nt">&gt;</span>
          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-content"</span><span class="nt">&gt;</span>
@@ -922,7 +1031,8 @@ Di seguito una modale con un elenco di radio button.</p>
          <span class="nt">&lt;/div&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
    <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+<span class="nt">&lt;/div&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <h3 id="modale-con-link-list">Modale con Link List</h3>
 
@@ -972,7 +1082,48 @@ Per formattare correttamente il contenuto di questa modale, aggiungere la classe
    </div>
 </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-example-modal"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+</pre></td><td class="code"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-example-modal"</span><span class="nt">&gt;</span>
    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal it-dialog-link-list"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">role=</span><span class="s">"dialog"</span> <span class="na">id=</span><span class="s">"modal5"</span> <span class="na">aria-labelledby=</span><span class="s">"modal5Title"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-dialog"</span> <span class="na">role=</span><span class="s">"document"</span><span class="nt">&gt;</span>
          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-content"</span><span class="nt">&gt;</span>
@@ -1012,7 +1163,8 @@ Per formattare correttamente il contenuto di questa modale, aggiungere la classe
          <span class="nt">&lt;/div&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
    <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+<span class="nt">&lt;/div&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <h3 id="modale-popconfirm">Modale popconfirm</h3>
 
@@ -1063,7 +1215,48 @@ Per formattare correttamente il contenuto di questa modale, aggiungere la classe
   </div>
 </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-example-modal"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+</pre></td><td class="code"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-example-modal"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-lg-6"</span><span class="nt">&gt;</span>
@@ -1103,7 +1296,8 @@ Per formattare correttamente il contenuto di questa modale, aggiungere la classe
       <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+<span class="nt">&lt;/div&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <h2 id="demo">Demo</h2>
 
@@ -1132,7 +1326,26 @@ Per formattare correttamente il contenuto di questa modale, aggiungere la classe
   </div>
 </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Button trigger modal --&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+</pre></td><td class="code"><pre><span class="c">&lt;!-- Button trigger modal --&gt;</span>
 <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">data-bs-toggle=</span><span class="s">"modal"</span> <span class="na">data-bs-target=</span><span class="s">"#exampleModal"</span><span class="nt">&gt;</span>Lancia la demo della modale<span class="nt">&lt;/button&gt;</span>
 
 <span class="c">&lt;!-- Modal --&gt;</span>
@@ -1150,7 +1363,8 @@ Per formattare correttamente il contenuto di questa modale, aggiungere la classe
       <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+<span class="nt">&lt;/div&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <h3 id="scroll-di-contenuti-lunghi">Scroll di contenuti lunghi</h3>
 
@@ -1208,7 +1422,54 @@ pagina stessa.</p>
   </div>
 </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Button trigger modal --&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+</pre></td><td class="code"><pre><span class="c">&lt;!-- Button trigger modal --&gt;</span>
 <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">data-bs-toggle=</span><span class="s">"modal"</span> <span class="na">data-bs-target=</span><span class="s">"#exampleModalLong"</span><span class="nt">&gt;</span>Lancia la demo della modale<span class="nt">&lt;/button&gt;</span>
 
 <span class="c">&lt;!-- Modal --&gt;</span>
@@ -1254,7 +1515,8 @@ pagina stessa.</p>
       <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+<span class="nt">&lt;/div&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <h3 id="scroll-di-contenuti-allinterno-della-modale">Scroll di contenuti all’interno della modale</h3>
 
@@ -1304,7 +1566,49 @@ pagina stessa.</p>
   </div>
 </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Button trigger modal --&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+</pre></td><td class="code"><pre><span class="c">&lt;!-- Button trigger modal --&gt;</span>
 <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">data-bs-toggle=</span><span class="s">"modal"</span> <span class="na">data-bs-target=</span><span class="s">"#exampleModalLongFixed"</span><span class="nt">&gt;</span>Lancia la demo della modale<span class="nt">&lt;/button&gt;</span>
 
 <span class="c">&lt;!-- Modal --&gt;</span>
@@ -1345,7 +1649,8 @@ pagina stessa.</p>
       <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+<span class="nt">&lt;/div&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <h3 id="posizionamento">Posizionamento</h3>
 
@@ -1379,7 +1684,31 @@ pagina stessa.</p>
   </div>
 </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Button trigger modal --&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+</pre></td><td class="code"><pre><span class="c">&lt;!-- Button trigger modal --&gt;</span>
 <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-bs-toggle=</span><span class="s">"modal"</span> <span class="na">data-bs-target=</span><span class="s">"#modalCenter"</span><span class="nt">&gt;</span>Lancia la demo della modale<span class="nt">&lt;/button&gt;</span>
 
 <span class="c">&lt;!-- Modal --&gt;</span>
@@ -1402,7 +1731,8 @@ pagina stessa.</p>
       <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+<span class="nt">&lt;/div&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <h4 id="allineamento-a-sinistra">Allineamento a sinistra</h4>
 
@@ -1458,7 +1788,53 @@ Aggiungi <code class="language-plaintext highlighter-rouge">.modal-dialog-left</
   </div>
 </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Button trigger modal --&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+</pre></td><td class="code"><pre><span class="c">&lt;!-- Button trigger modal --&gt;</span>
 <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-bs-toggle=</span><span class="s">"modal"</span> <span class="na">data-bs-target=</span><span class="s">"#modalLeft"</span><span class="nt">&gt;</span>Lancia la demo della modale<span class="nt">&lt;/button&gt;</span>
 
 <span class="c">&lt;!-- Modal --&gt;</span>
@@ -1503,7 +1879,8 @@ Aggiungi <code class="language-plaintext highlighter-rouge">.modal-dialog-left</
       <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+<span class="nt">&lt;/div&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <h4 id="allineamento-a-destra">Allineamento a destra</h4>
 
@@ -1559,7 +1936,53 @@ Aggiungi <code class="language-plaintext highlighter-rouge">.modal-dialog-right<
   </div>
 </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Button trigger modal --&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+</pre></td><td class="code"><pre><span class="c">&lt;!-- Button trigger modal --&gt;</span>
 <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-bs-toggle=</span><span class="s">"modal"</span> <span class="na">data-bs-target=</span><span class="s">"#modalright"</span><span class="nt">&gt;</span>Lancia la demo della modale<span class="nt">&lt;/button&gt;</span>
 
 <span class="c">&lt;!-- Modal --&gt;</span>
@@ -1604,14 +2027,16 @@ Aggiungi <code class="language-plaintext highlighter-rouge">.modal-dialog-right<
       <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+<span class="nt">&lt;/div&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <h3 id="rimuovere-lanimazione">Rimuovere l’animazione</h3>
 
 <p>Per avere modali che appaiono semplicemente senza dissolvenza, rimuovi la classe <code class="language-plaintext highlighter-rouge">.fade</code> dal codice della tua modale.</p>
 
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">role=</span><span class="s">"dialog"</span> <span class="na">id=</span><span class="s">"..."</span> <span class="na">aria-labelledby=</span><span class="s">"..."</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
-</code></pre></div></div>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">role=</span><span class="s">"dialog"</span> <span class="na">id=</span><span class="s">"..."</span> <span class="na">aria-labelledby=</span><span class="s">"..."</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
 <h3 id="dimensioni-opzionali">Dimensioni opzionali</h3>
 
@@ -1666,7 +2091,54 @@ Aggiungi <code class="language-plaintext highlighter-rouge">.modal-dialog-right<
   </div>
 </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Small modal --&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+</pre></td><td class="code"><pre><span class="c">&lt;!-- Small modal --&gt;</span>
 <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">data-bs-toggle=</span><span class="s">"modal"</span> <span class="na">data-bs-target=</span><span class="s">".bd-example-modal-sm"</span><span class="nt">&gt;</span>Modale piccola<span class="nt">&lt;/button&gt;</span>
 
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal fade bd-example-modal-sm"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">role=</span><span class="s">"dialog"</span> <span class="na">aria-labelledby=</span><span class="s">"mySmallModalLabel"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>
@@ -1712,7 +2184,8 @@ Aggiungi <code class="language-plaintext highlighter-rouge">.modal-dialog-right<
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-footer"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+<span class="nt">&lt;/div&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <h2 id="implementazione">Implementazione</h2>
 
@@ -1725,15 +2198,17 @@ per fornire un’area cliccabile per chiudere le modali mostrate quando si clicc
 <p>Attiva una modale senza scrivere codice JavaScript. Imposta <code class="language-plaintext highlighter-rouge">data-bs-toggle="modal"</code> su un elemento di controllo, come un
 pulsante, insieme a <code class="language-plaintext highlighter-rouge">data-bs-target="#foo"</code> o <code class="language-plaintext highlighter-rouge">href="#foo"</code> per attivare/disattivare una specifica modale.</p>
 
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-bs-toggle=</span><span class="s">"modal"</span> <span class="na">data-bs-target=</span><span class="s">"#myModal"</span><span class="nt">&gt;</span>Lancia la modale<span class="nt">&lt;/button&gt;</span>
-</code></pre></div></div>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-bs-toggle=</span><span class="s">"modal"</span> <span class="na">data-bs-target=</span><span class="s">"#myModal"</span><span class="nt">&gt;</span>Lancia la modale<span class="nt">&lt;/button&gt;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
 <h3 id="tramite-javascript">Tramite JavaScript</h3>
 
 <p>Richiama una modale con id <code class="language-plaintext highlighter-rouge">myModal</code> con una singola riga di JavaScript:</p>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">myModal</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Modal</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">myModal</span><span class="dl">'</span><span class="p">),</span> <span class="nx">options</span><span class="p">)</span>
-</code></pre></div></div>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="kd">var</span> <span class="nx">myModal</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Modal</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">myModal</span><span class="dl">'</span><span class="p">),</span> <span class="nx">options</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
 <h3 id="metodi">Metodi</h3>
 
@@ -1749,65 +2224,77 @@ pulsante, insieme a <code class="language-plaintext highlighter-rouge">data-bs-t
 
 <p>Attiva i tuoi contenuti come modali, configurabile con un oggetto (facoltativo).</p>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">myModal</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Modal</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">myModal</span><span class="dl">'</span><span class="p">),</span> <span class="p">{</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="kd">var</span> <span class="nx">myModal</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Modal</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">myModal</span><span class="dl">'</span><span class="p">),</span> <span class="p">{</span>
   <span class="na">keyboard</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
 <span class="p">})</span>
-</code></pre></div></div>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
 <h4 id="toggle"><code class="language-plaintext highlighter-rouge">toggle</code></h4>
 
 <p>Attiva/disattiva manualmente una modale. <strong>Ritorna al chiamante prima che la modale sia stata effettivamente mostrata o nascosta</strong>
 (cioè prima che si verifichi l’evento <code class="language-plaintext highlighter-rouge">shown.bs.modal</code> o l’evento <code class="language-plaintext highlighter-rouge">hidden.bs.modal</code>).</p>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">myModal</span><span class="p">.</span><span class="nx">toggle</span><span class="p">()</span>
-</code></pre></div></div>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nx">myModal</span><span class="p">.</span><span class="nx">toggle</span><span class="p">()</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
 <h4 id="show"><code class="language-plaintext highlighter-rouge">show</code></h4>
 
 <p>Apre manualmente una modale. <strong>Ritorna al chiamante prima che la modale sia stata effettivamente mostrata</strong>
 (cioè prima che si verifichi l’evento <code class="language-plaintext highlighter-rouge">shown.bs.modal</code>).</p>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">myModal</span><span class="p">.</span><span class="nx">show</span><span class="p">()</span>
-</code></pre></div></div>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nx">myModal</span><span class="p">.</span><span class="nx">show</span><span class="p">()</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
 <h4 id="hide"><code class="language-plaintext highlighter-rouge">hide</code></h4>
 
 <p>Nasconde manualmente una modale. <strong>Ritorna al chiamante prima che la modale sia stata effettivamente nascosta</strong>
 (cioè prima che si verifichi l’evento <code class="language-plaintext highlighter-rouge">hidden.bs.modal</code>).</p>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">myModal</span><span class="p">.</span><span class="nx">hide</span><span class="p">()</span>
-</code></pre></div></div>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nx">myModal</span><span class="p">.</span><span class="nx">hide</span><span class="p">()</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
 <h4 id="handleupdate"><code class="language-plaintext highlighter-rouge">handleUpdate</code></h4>
 
 <p>Riposiziona manualmente la modale se l’altezza della modale cambia nel momento in cui è aperta
 (nel caso appaia una barra di scorrimento).</p>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">myModal</span><span class="p">.</span><span class="nx">handleUpdate</span><span class="p">()</span>
-</code></pre></div></div>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nx">myModal</span><span class="p">.</span><span class="nx">handleUpdate</span><span class="p">()</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
 <h4 id="dispose"><code class="language-plaintext highlighter-rouge">dispose</code></h4>
 
 <p>Distrugge la modale di un elemento.</p>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">myModal</span><span class="p">.</span><span class="nx">dispose</span><span class="p">()</span>
-</code></pre></div></div>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nx">myModal</span><span class="p">.</span><span class="nx">dispose</span><span class="p">()</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
 <h4 id="getinstance"><code class="language-plaintext highlighter-rouge">getInstance</code></h4>
 
 <p>Metodo statico che consente di ottenere l’istanza di una modale associata ad un elemento del DOM.</p>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">myModalEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">myModal</span><span class="dl">'</span><span class="p">)</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="kd">var</span> <span class="nx">myModalEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">myModal</span><span class="dl">'</span><span class="p">)</span>
 <span class="kd">var</span> <span class="nx">modal</span> <span class="o">=</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Modal</span><span class="p">.</span><span class="nx">getInstance</span><span class="p">(</span><span class="nx">myModalEl</span><span class="p">)</span> <span class="c1">// Returns a Bootstrap modal instance</span>
-</code></pre></div></div>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
 <h4 id="getorcreateinstance"><code class="language-plaintext highlighter-rouge">getOrCreateInstance</code></h4>
 
 <p>Metodo statico che consente di ottenere l’istanza di una modale associata ad un elemento del DOM o di crearne una nuova nel caso non fosse stata inizializzata.</p>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">myModalEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">'</span><span class="s1">#myModal</span><span class="dl">'</span><span class="p">)</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="kd">var</span> <span class="nx">myModalEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">'</span><span class="s1">#myModal</span><span class="dl">'</span><span class="p">)</span>
 <span class="kd">var</span> <span class="nx">modal</span> <span class="o">=</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Modal</span><span class="p">.</span><span class="nx">getOrCreateInstance</span><span class="p">(</span><span class="nx">myModalEl</span><span class="p">)</span> <span class="c1">// Returns a Bootstrap modal instance</span>
-</code></pre></div></div>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
 <h3 id="eventi">Eventi</h3>
 
@@ -1845,26 +2332,30 @@ Tutti gli eventi vengono attivati dalla modale stessa (cioè <code class="langua
   </tbody>
 </table>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">myModalEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">myModal</span><span class="dl">'</span><span class="p">)</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre><span class="kd">var</span> <span class="nx">myModalEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">myModal</span><span class="dl">'</span><span class="p">)</span>
 <span class="nx">myModalEl</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">hidden.bs.modal</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
   <span class="c1">// do something...</span>
 <span class="p">})</span>
-</code></pre></div></div>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
         </main>
       </div>
     </div>
 
     
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202312051520"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202312061409"></script>
 <script>
   bootstrap.loadFonts('/bootstrap-italia/dist/fonts')
-</script><script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202312051520"></script>
+</script><script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202312061409"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/anchor.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/clipboard.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tsparticles.min.js"></script>
 
-<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202312051520"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202312061409"></script>
 
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tweenjs.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/easeljs.min.js"></script>
@@ -1881,7 +2372,7 @@ Tutti gli eventi vengono attivati dalla modale stessa (cioè <code class="langua
     { src: '/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png', id: 'cover-7' },
   ]
 </script>
-<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202312051520"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202312061409"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/docsearch.min.js"></script>
 
 <script>
@@ -1929,7 +2420,9 @@ Tutti gli eventi vengono attivati dalla modale stessa (cioè <code class="langua
        * Snippet
        * <div class="bd-example">
        * </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html">       * </code></pre></figure>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+</pre></td><td class="code"><pre>       * 
+</pre></td></tr></tbody></table></code></pre></figure>
   
        */
       if (node.nodeName == 'FIGURE') { 
@@ -1941,6 +2434,7 @@ Tutti gli eventi vengono attivati dalla modale stessa (cioè <code class="langua
       * ``` 
       */
       else if (node.nodeName == 'PRE') {
+        node.classList.remove("highlight");
         node.insertAdjacentElement('beforebegin', divContainer);
       }
     });

@@ -11,13 +11,13 @@
 
 <title>Personalizzazione della libreria · Bootstrap Italia</title>
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202312051520" rel="stylesheet" />
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202312061409" rel="stylesheet" />
 
 <!-- Documentation extras -->
  
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.css" rel="stylesheet" />
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202312051520" rel="stylesheet" />
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202312061409" rel="stylesheet" />
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico" />
@@ -612,10 +612,13 @@ Un esempio fra tutti è il valore del colore <code class="language-plaintext hig
 <div class="bd-callout bd-callout-info">
 <p>Questo colore e le altre tonalità vengono generate a partire dalla terna HSB, pertanto occorre modificare le variabili <strong>primary-h</strong>, <strong>primary-s</strong> e <strong>primary-b</strong>.</p>
 
-<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$primary-h</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="nv">$primary-h</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
 <span class="nv">$primary-s</span><span class="p">:</span> <span class="m">80</span><span class="p">;</span>
 <span class="nv">$primary-b</span><span class="p">:</span> <span class="m">100</span><span class="p">;</span>
-</code></pre></div></div>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>Per avere la corrispondenza tra valore esadecimale del colore e HSB si può utilizzare il portale <a href="https://rgb.to">rgb.to</a>, ad esempio <a href="https://rgb.to/0066CC">https://rgb.to/0066CC</a>.</p>
 </div>
@@ -643,7 +646,23 @@ Un esempio fra tutti è il valore del colore <code class="language-plaintext hig
 
 </div>
 
-<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// file: bootstrap-italia-custom.scss</span>
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+</pre></td><td class="rouge-code"><pre><span class="c1">// file: bootstrap-italia-custom.scss</span>
 
 <span class="c1">// modifica completa del template: è possibile ricompilare la libreria modificando alcune variabili SCSS</span>
 
@@ -659,11 +678,24 @@ Un esempio fra tutti è il valore del colore <code class="language-plaintext hig
 
 <span class="c1">// import libreria</span>
 <span class="k">@import</span> <span class="s1">'../../node_modules/bootstrap-italia/src/scss/bootstrap-italia.scss'</span><span class="p">;</span>
-</code></pre></div></div>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>Ad esempio, per una applicazione costruita con ReactJS attraverso <code class="language-plaintext highlighter-rouge">create-react-app</code>, è possibile <strong>importare bootstrap-italia-custom.scss</strong> laddove serva utilizzare la libreria <strong>Bootstrap-Italia</strong>.</p>
 
-<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span>
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre></td><td class="rouge-code"><pre><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span>
 <span class="k">import</span> <span class="dl">'</span><span class="s1">./scss/bootstrap-italia-custom.scss</span><span class="dl">'</span>
 <span class="k">import</span> <span class="dl">'</span><span class="s1">./App.css</span><span class="dl">'</span>
 
@@ -676,7 +708,7 @@ Un esempio fra tutti è il valore del colore <code class="language-plaintext hig
 <span class="p">}</span>
 
 <span class="k">export</span> <span class="k">default</span> <span class="nx">App</span>
-</code></pre></div></div>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>In questo semplice e veloce esempio, il pulsante con classe <strong>.btn-primary</strong> avrà lo sfondo di colore <strong>rosso</strong> anziché il default blu.</p>
 
@@ -685,15 +717,15 @@ Un esempio fra tutti è il valore del colore <code class="language-plaintext hig
     </div>
 
     
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202312051520"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202312061409"></script>
 <script>
   bootstrap.loadFonts('/bootstrap-italia/dist/fonts')
-</script><script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202312051520"></script>
+</script><script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202312061409"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/anchor.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/clipboard.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tsparticles.min.js"></script>
 
-<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202312051520"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202312061409"></script>
 
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tweenjs.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/easeljs.min.js"></script>
@@ -710,7 +742,7 @@ Un esempio fra tutti è il valore del colore <code class="language-plaintext hig
     { src: '/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png', id: 'cover-7' },
   ]
 </script>
-<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202312051520"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202312061409"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/docsearch.min.js"></script>
 
 <script>
@@ -758,7 +790,9 @@ Un esempio fra tutti è il valore del colore <code class="language-plaintext hig
        * Snippet
        * <div class="bd-example">
        * </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html">       * </code></pre></figure>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+</pre></td><td class="code"><pre>       * 
+</pre></td></tr></tbody></table></code></pre></figure>
   
        */
       if (node.nodeName == 'FIGURE') { 
@@ -770,6 +804,7 @@ Un esempio fra tutti è il valore del colore <code class="language-plaintext hig
       * ``` 
       */
       else if (node.nodeName == 'PRE') {
+        node.classList.remove("highlight");
         node.insertAdjacentElement('beforebegin', divContainer);
       }
     });

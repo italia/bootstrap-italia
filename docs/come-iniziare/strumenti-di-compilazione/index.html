@@ -11,13 +11,13 @@
 
 <title>Strumenti di compilazione e contribuzione · Bootstrap Italia</title>
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202312051520" rel="stylesheet" />
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202312061409" rel="stylesheet" />
 
 <!-- Documentation extras -->
  
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.css" rel="stylesheet" />
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202312051520" rel="stylesheet" />
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202312061409" rel="stylesheet" />
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico" />
@@ -646,16 +646,18 @@
 <p>Si consiglia per lo sviluppo l’utilizzo <a href="https://www.docker.com/get-started">Docker</a>.
 Grazie a Docker è possibile avere un ambiente di sviluppo pronto semplicemente lanciando il comando</p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose up
-</code></pre></div></div>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>docker-compose up
+</pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>Questo comando oltre ad installare le dipendenze in un container Docker, provvederà a compilare tutti i file necessari
 e visualizzare in modalità watch una preview all’indirizzo <a href="http://localhost:4000/">http://localhost:4000/</a>.</p>
 
 <p>Per lanciare un comando all’interno del container Docker sarà sufficiente utilizzare <code class="language-plaintext highlighter-rouge">docker exec</code>, ad esempio</p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker <span class="nb">exec</span> <span class="nt">-it</span> bootstrap-italia-dev-1 npm run lint-js
-</code></pre></div></div>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>docker <span class="nb">exec</span> <span class="nt">-it</span> bootstrap-italia-dev-1 npm run lint-js
+</pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>Se si decide di utilizzare Docker per lo sviluppo, è possibile ignorare le sezioni <code class="language-plaintext highlighter-rouge">Processo manuale</code> nella compilazione della documentazione e della libreria</p>
 
@@ -698,7 +700,18 @@ e visualizzare in modalità watch una preview all’indirizzo <a href="http://lo
 
 <p>Quando si utilizza Sass nella propria pipeline, si può ottimizzare Bootstrap Italia importando solo i componenti di cui si ha bisogno. Le ottimizzazioni maggiori proverranno probabilmente dalla sezione Layout e dai componenti del file principale <code class="language-plaintext highlighter-rouge">bootstrap-italia.scss</code>, ad esempio</p>
 
-<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// funzioni e variabili colore</span>
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="rouge-code"><pre><span class="c1">// funzioni e variabili colore</span>
 <span class="k">@import</span> <span class="s1">'bootstrap-italia/src/scss/functions'</span><span class="p">;</span>
 <span class="k">@import</span> <span class="s1">'bootstrap-italia/src/scss/utilities/colors_vars'</span><span class="p">;</span>
 
@@ -709,16 +722,19 @@ e visualizzare in modalità watch una preview all’indirizzo <a href="http://lo
 <span class="k">@import</span> <span class="s1">'bootstrap-italia/src/scss/utilities/colors'</span><span class="p">;</span>
 
 <span class="c1">// ...</span>
-</code></pre></div></div>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
 <h3 id="ottimizzare-i-file-javascript-da-importare">Ottimizzare i file JavaScript da importare</h3>
 
 <p>Si può ottimizzare l’inclusione del JavaScript utilizzando bundler come Webpack o Rollup, che permettono di importare solo i moduli JavaScript che si vogliono utilizzare. Nell’esempio seguente, mostriamo come includere solo il componente Carousel:</p>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">CarouselBI</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">bootstrap-italia</span><span class="dl">'</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="k">import</span> <span class="p">{</span> <span class="nx">CarouselBI</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">bootstrap-italia</span><span class="dl">'</span>
 
 <span class="kd">const</span> <span class="nx">carousel</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">CarouselBI</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">myCarousel</span><span class="dl">'</span><span class="p">))</span>
-</code></pre></div></div>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
 <h2 id="compilare-la-documentazione">Compilare la documentazione</h2>
 
@@ -783,8 +799,9 @@ e visualizzare in modalità watch una preview all’indirizzo <a href="http://lo
 
 <p>Per aggiornare il numero di versione e creare una nuova release, è necessario effettuare i due seguenti step manuali:</p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>npm version <span class="o">[</span>patch, minor, major]
-</code></pre></div></div>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nv">$ </span>npm version <span class="o">[</span>patch, minor, major]
+</pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>che produrrà:</p>
 
@@ -798,8 +815,9 @@ e visualizzare in modalità watch una preview all’indirizzo <a href="http://lo
 <p>Eseguire poi il seguente comando che produrrà il push della commit contenente l’avanzamento della versione ed il push della tag
 per far partire tutto il processo di deployment della nuova release.</p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git push <span class="nt">--follow-tags</span>
-</code></pre></div></div>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nv">$ </span>git push <span class="nt">--follow-tags</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
 <h3 id="continuous-integration-e-continuous-delivery">Continuous integration e continuous delivery</h3>
 
@@ -837,15 +855,15 @@ continua a leggere alla <a href="/bootstrap-italia/docs/come-iniziare/modificare
     </div>
 
     
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202312051520"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202312061409"></script>
 <script>
   bootstrap.loadFonts('/bootstrap-italia/dist/fonts')
-</script><script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202312051520"></script>
+</script><script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202312061409"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/anchor.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/clipboard.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tsparticles.min.js"></script>
 
-<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202312051520"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202312061409"></script>
 
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tweenjs.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/easeljs.min.js"></script>
@@ -862,7 +880,7 @@ continua a leggere alla <a href="/bootstrap-italia/docs/come-iniziare/modificare
     { src: '/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png', id: 'cover-7' },
   ]
 </script>
-<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202312051520"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202312061409"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/docsearch.min.js"></script>
 
 <script>
@@ -910,7 +928,9 @@ continua a leggere alla <a href="/bootstrap-italia/docs/come-iniziare/modificare
        * Snippet
        * <div class="bd-example">
        * </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html">       * </code></pre></figure>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+</pre></td><td class="code"><pre>       * 
+</pre></td></tr></tbody></table></code></pre></figure>
   
        */
       if (node.nodeName == 'FIGURE') { 
@@ -922,6 +942,7 @@ continua a leggere alla <a href="/bootstrap-italia/docs/come-iniziare/modificare
       * ``` 
       */
       else if (node.nodeName == 'PRE') {
+        node.classList.remove("highlight");
         node.insertAdjacentElement('beforebegin', divContainer);
       }
     });

@@ -11,13 +11,13 @@
 
 <title>Proporzioni · Bootstrap Italia</title>
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202312051520" rel="stylesheet" />
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202312061409" rel="stylesheet" />
 
 <!-- Documentation extras -->
  
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.css" rel="stylesheet" />
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202312051520" rel="stylesheet" />
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202312061409" rel="stylesheet" />
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico" />
@@ -662,9 +662,13 @@ richieste. L’elemento contenuto viene automaticamente ridimensionato grazie al
   <iframe title="Video YouTube" src="https://www.youtube-nocookie.com/embed/RaHmGbBOP84" allowfullscreen=""></iframe>
 </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ratio ratio-16x9"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="code"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ratio ratio-16x9"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;iframe</span> <span class="na">title=</span><span class="s">"Video YouTube"</span> <span class="na">src=</span><span class="s">"https://www.youtube-nocookie.com/embed/RaHmGbBOP84"</span> <span class="na">allowfullscreen</span><span class="nt">&gt;&lt;/iframe&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+<span class="nt">&lt;/div&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <h2 id="proporzioni-predefinite">Proporzioni predefinite</h2>
 
@@ -685,7 +689,19 @@ Vengono fornite le seguenti proporzioni pre-impostate:</p>
   <div>21x9</div>
 </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ratio ratio-1x1 ratio-example"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre></td><td class="code"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ratio ratio-1x1 ratio-example"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div&gt;</span>1x1<span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ratio ratio-4x3 ratio-example"</span><span class="nt">&gt;</span>
@@ -696,7 +712,8 @@ Vengono fornite le seguenti proporzioni pre-impostate:</p>
 <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ratio ratio-21x9 ratio-example"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div&gt;</span>21x9<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+<span class="nt">&lt;/div&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <h2 id="proporzioni-custom">Proporzioni custom</h2>
 
@@ -709,54 +726,73 @@ Vengono fornite le seguenti proporzioni pre-impostate:</p>
   <div>2x1</div>
 </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ratio ratio-example"</span> <span class="na">style=</span><span class="s">"--bs-aspect-ratio: 50%;"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="code"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ratio ratio-example"</span> <span class="na">style=</span><span class="s">"--bs-aspect-ratio: 50%;"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div&gt;</span>2x1<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+<span class="nt">&lt;/div&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <p>Questa variabile CSS rende semplice modificare la proporzione a seconda del breakpoint. Il seguente esempio è un 4x3 inizialmente ma cambia a 2x1 al breakpoint <code class="language-plaintext highlighter-rouge">md</code>.</p>
 
-<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.ratio-4x3</span> <span class="p">{</span>
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre><span class="nc">.ratio-4x3</span> <span class="p">{</span>
   <span class="k">@include</span> <span class="nd">media-breakpoint-up</span><span class="p">(</span><span class="n">md</span><span class="p">)</span> <span class="p">{</span>
     <span class="na">--bs-aspect-ratio</span><span class="p">:</span> <span class="m">50%</span><span class="p">;</span> <span class="c1">// 2x1</span>
   <span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
 <div class="bd-example">
 <div class="ratio ratio-4x3 ratio-example ratio-example-breakpoint">
   <div>4x3, poi 2x1</div>
 </div>
 </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ratio ratio-4x3 ratio-example ratio-example-breakpoint"</span><span class="nt">&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="code"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ratio ratio-4x3 ratio-example ratio-example-breakpoint"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div&gt;</span>4x3, poi 2x1<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+<span class="nt">&lt;/div&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <h2 id="sass-map">Sass map</h2>
 
 <p>All’interno del file <code class="language-plaintext highlighter-rouge">src\scss\_variables.scss</code> è possibile modificare e aggiungere proporzioni predefinite. Questa è la mappa utilizzata di default. Modifica la mappa a piacimento e ricompila il CSS per utilizzarla.</p>
 
-<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$aspect-ratios</span><span class="p">:</span> <span class="p">(</span>
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre><span class="nv">$aspect-ratios</span><span class="p">:</span> <span class="p">(</span>
   <span class="s1">'1x1'</span><span class="o">:</span> <span class="m">100%</span><span class="o">,</span>
   <span class="s1">'4x3'</span><span class="o">:</span> <span class="nf">calc</span><span class="p">(</span><span class="m">3</span> <span class="o">/</span> <span class="m">4</span> <span class="o">*</span> <span class="m">100%</span><span class="p">)</span><span class="o">,</span>
   <span class="s1">'16x9'</span><span class="o">:</span> <span class="nf">calc</span><span class="p">(</span><span class="m">9</span> <span class="o">/</span> <span class="m">16</span> <span class="o">*</span> <span class="m">100%</span><span class="p">)</span><span class="o">,</span>
   <span class="s1">'21x9'</span><span class="o">:</span> <span class="nf">calc</span><span class="p">(</span><span class="m">9</span> <span class="o">/</span> <span class="m">21</span> <span class="o">*</span> <span class="m">100%</span><span class="p">)</span><span class="o">,</span>
 <span class="p">);</span>
-</code></pre></div></div>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
         </main>
       </div>
     </div>
 
     
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202312051520"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202312061409"></script>
 <script>
   bootstrap.loadFonts('/bootstrap-italia/dist/fonts')
-</script><script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202312051520"></script>
+</script><script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202312061409"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/anchor.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/clipboard.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tsparticles.min.js"></script>
 
-<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202312051520"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202312061409"></script>
 
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tweenjs.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/easeljs.min.js"></script>
@@ -773,7 +809,7 @@ Vengono fornite le seguenti proporzioni pre-impostate:</p>
     { src: '/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png', id: 'cover-7' },
   ]
 </script>
-<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202312051520"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202312061409"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/docsearch.min.js"></script>
 
 <script>
@@ -821,7 +857,9 @@ Vengono fornite le seguenti proporzioni pre-impostate:</p>
        * Snippet
        * <div class="bd-example">
        * </div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html">       * </code></pre></figure>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+</pre></td><td class="code"><pre>       * 
+</pre></td></tr></tbody></table></code></pre></figure>
   
        */
       if (node.nodeName == 'FIGURE') { 
@@ -833,6 +871,7 @@ Vengono fornite le seguenti proporzioni pre-impostate:</p>
       * ``` 
       */
       else if (node.nodeName == 'PRE') {
+        node.classList.remove("highlight");
         node.insertAdjacentElement('beforebegin', divContainer);
       }
     });
