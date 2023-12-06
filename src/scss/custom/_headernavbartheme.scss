@@ -79,6 +79,12 @@
                 }
                 // vertical cta
                 .dropdown-menu {
+                  a.it-heading-link, a.it-footer-link {
+                    color: $navigation-dark-text-color;
+                    svg {
+                      fill: $navigation-dark-text-color;
+                    }
+                  }
                   .it-vertical {
                     background: $navigation-light-megamenu-footer-bg-color;
                     .link-list-wrapper {
@@ -128,6 +134,12 @@
               color: $navigation-dark-text-color;
             }
           }
+          a.it-heading-link, a.it-footer-link {
+            color: $navigation-dark-text-color;
+            svg {
+              fill: $navigation-dark-text-color;
+            }
+          }
           .link-list-wrapper {
             ul {
               li {
@@ -138,6 +150,9 @@
                     span {
                       color: $navigation-dark-text-color;
                     }
+                  }
+                  svg {
+                    fill: $navigation-dark-text-color;
                   }
                   span {
                     color: $navigation-dark-text-color;
@@ -228,6 +243,9 @@
                   background: $navigation-light-megamenu-footer-bg-color;
                 }
                 .dropdown-menu {
+                  .it-heading-link-wrapper, .it-footer-link-wrapper, .it-footer-link-wrapper-vertical {
+                    border-color: $navigation-light-megamenu-separator-color;
+                  }
                   // asymettrical column
                   .it-heading-megacolumn-wrapper {
                     .it-heading-megacolumn {
@@ -287,6 +305,9 @@
                     span {
                       color: $navigation-light-bg-color;
                     }
+                  }
+                  svg {
+                    fill: $navigation-light-bg-color;
                   }
                   span {
                     color: $navigation-light-bg-color;

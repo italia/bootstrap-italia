@@ -5,44 +5,6 @@
   .navbar-collapsable {
     .menu-wrapper {
       .nav-item {
-        & > button.nav-link {
-          border: none;
-          display: block;
-          background: none;
-          color: $navigation-link-color;
-          font-weight: 600;
-          padding: $navigation-v-padding $navigation-h-padding;
-          position: relative;
-
-          &.dropdown-toggle {
-            svg {
-              fill: $navbar-bg-color;
-              transition: all 0.3s;
-            }
-
-            &[aria-expanded='true'] {
-              .icon {
-                transform: scaleY(-1);
-              }
-            }
-          }
-
-          &.active {
-            border-left: $navigation-link-active-bar-size solid $navigation-link-active-bar-color;
-            color: $primary;
-          }
-
-          &.disabled {
-            span,
-            .icon {
-              opacity: $navigation-disabled-item-mobile-opacity;
-            }
-          }
-
-          &:hover:not(.active) {
-            text-decoration: underline;
-          }
-        }
         &.megamenu {
           .dropdown-menu {
             .it-vertical {
@@ -131,7 +93,7 @@
               // padding-top: 24px;
               padding-bottom: 24px;
               margin-bottom: 24px;
-              border-bottom: 1px solid #d9dadb !important;
+              border-bottom: 1px solid $color-border-subtle;
               a.it-heading-link {
                 font-weight: 600;
                 font-size: 1.125rem;
@@ -139,12 +101,6 @@
                 text-decoration: none;
                 :hover {
                   text-decoration: underline;
-                }
-                &.active {
-                  span {
-                    text-decoration: underline;
-                    color: var(--color-primary-active);
-                  }
                 }
               }
             }
@@ -155,7 +111,7 @@
               padding-top: 24px;
               padding-bottom: 24px;
               margin-top: 24px;
-              border-top: 1px solid #d9dadb;
+              border-top: 1px solid $color-border-subtle;
               a.it-footer-link {
                 flex: 1 1 auto;
               }
@@ -167,7 +123,7 @@
               padding-top: 24px;
               padding-bottom: 24px;
               margin-top: 24px;
-              border-top: 1px solid #d9dadb;
+              border-top: 1px solid $color-border-subtle;
             }
 
             a.it-footer-link {
@@ -181,12 +137,6 @@
               }
               :hover {
                 text-decoration: underline;
-              }
-              &.active {
-                span {
-                  text-decoration: underline;
-                  color: var(--color-primary-active);
-                }
               }
             }
 
@@ -276,59 +226,6 @@
     .navbar-collapsable {
       .menu-wrapper {
         .nav-item {
-          & > button.nav-link {
-            display: flex;
-            align-self: flex-end;
-            align-items: center;
-            font-weight: 400;
-            padding: $navigation-v-padding $navigation-h-padding;
-            color: $navigation-link-color-desk;
-            border-bottom: $navigation-link-active-bar-size solid transparent;
-            &.dropdown-toggle {
-              svg {
-                fill: $navigation-bg-color;
-                margin-top: 3px;
-              }
-            }
-
-            &.focus--mouse {
-              border-color: transparent !important;
-            }
-
-            &.active {
-              border-left: 0;
-              border-color: white; // $navigation-link-active-bar-color-desk;
-              background: transparent;
-              color: $white;
-            }
-
-            &.disabled {
-              span,
-              .icon {
-                opacity: $navigation-disabled-item-opacity;
-              }
-            }
-
-            // megamenu white triangle
-            &:before {
-              content: '';
-              position: absolute;
-              top: auto;
-              bottom: -14px;
-              left: 24px;
-              width: 18px;
-              height: 18px;
-              border-radius: 4px;
-              background-color: $navigation-link-color-desk;
-              transform: rotate(45deg);
-              opacity: 0;
-              display: block;
-              transition: opacity 0.15s cubic-bezier(0.1, 0.57, 0.36, 0.99);
-            }
-            &.dropdown-toggle.show:before {
-              opacity: 1;
-            }
-          }
           &.megamenu {
             .dropdown-menu {
               padding: $megamenu-padding-top-desktop $megamenu-column-gap;

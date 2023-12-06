@@ -84,9 +84,18 @@
                   }
                 }
               }
+              a.it-heading-link, a.it-footer-link {
+                color: $navigation-dark-text-color;
+                svg {
+                  fill: $navigation-dark-text-color;
+                }
+              }
             }
-            a.nav-link {
+            a.nav-link, button.nav-link{
               color: $navigation-dark-text-color;
+              svg {
+                fill: $navigation-dark-text-color;
+              }
               &.active {
                 border-left-color: $navigation-dark-text-color;
               }
@@ -118,6 +127,9 @@
                   span {
                     color: $navigation-dark-text-color;
                   }
+                }
+                svg {
+                  fill: $navigation-dark-text-color;
                 }
                 span {
                   color: $navigation-dark-text-color;
@@ -184,6 +196,12 @@
                   }
                 }
               }
+              > button.nav-link {
+                color: $navigation-light-text-color;
+                svg {
+                  fill: $navigation-light-text-color;
+                }
+              }
               a.nav-link {
                 &:before {
                   background-color: $navigation-light-text-color;
@@ -195,6 +213,15 @@
               }
               // vertical cta
               .dropdown-menu {
+                a.it-heading-link, a.it-footer-link {
+                  color: $navigation-light-bg-color;
+                  svg {
+                    fill: $navigation-light-bg-color;
+                  }
+                }
+                .it-heading-link-wrapper, .it-footer-link-wrapper, .it-footer-link-wrapper-vertical {
+                  border-color: $navigation-light-megamenu-separator-color;
+                }
                 .it-vertical {
                   background: $navigation-light-megamenu-footer-bg-color;
                   .link-list-wrapper {
@@ -225,7 +252,8 @@
           }
         }
       }
-      //dropdown
+      // megamenu
+      // dropdown
       .dropdown-menu {
         background: $navigation-light-text-color;
         h3 {
@@ -247,6 +275,9 @@
                   span {
                     color: $navigation-light-bg-color;
                   }
+                }
+                svg {
+                  fill: $navigation-light-bg-color;
                 }
                 span {
                   color: $navigation-light-bg-color;
