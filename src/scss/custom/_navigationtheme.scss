@@ -204,7 +204,7 @@
                   fill: $navigation-light-text-color;
                 }
                 &.active {
-                  border-color: $navigation-light-text-color;
+                  border-bottom-color: $navigation-light-text-color;
                 }
               }
               a.nav-link {
