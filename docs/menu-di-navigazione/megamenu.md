@@ -8,52 +8,46 @@ toc: true
 
 ## Introduzione
 
-Il megamenu, all'interno del `<nav>`, è una variazione del componente [dropdown]({{ site.baseurl }}/docs/componenti/dropdown/) contenente un elenco di link e altre informazioni correlate.
+Il megamenu è una variazione del componente [dropdown]({{ site.baseurl }}/docs/componenti/dropdown/) da usare nella navbar `<nav>` del sito che permette di esplorare un elenco di link e informazioni correlate.
 
-Per stilare correttamente il megamenu è sufficiente aggiungere la classe `.has-megamenu` al tag `<nav class="navbar">`. Ai dropdown dei quali si desidera modificare l'aspetto trasformandoli in megamenu si può aggiungere la classe `.has-megamenu` al tag `<li class="nav-item dropdown">`.
+Per stilare il megamenu si deve aggiungere la classe `.has-megamenu` al tag `<nav class="navbar">`. Ai dropdown che si desidera trasformare in megamenu si deve aggiungere la classe `.has-megamenu` al tag `<li class="nav-item dropdown">`.
 
-Gli elementi megamenu contenuti nelle navbar sono gestiti come elementi di tipo **collapse** nella loro versione mobile. 
+Il megamenu ha di default tema colori chiaro, si attivano le le versioni scure su desktop e/o mobile a seconda che il `<nav>` contenitore usi le classi `.theme-light-desk` e/o `.theme-dark-mobile`. 
 
 {% capture callout %}
 #### Accessibilità
+Il megamenu è un componente della navigazione principale del sito o servizio a cui si chiede di prestare attenzioni dal punto di vista dell'accessibilità. È indicato: 
 
-Il megamenu è un componente di navigazione critico dal punto di vista dell'accessibilità. Si suggerisce attenzione laddove si ritenga necessario usarlo:
-
-- svolgere verifiche di accessibilità e test di usabilità con utenti, verificare navigazione da tastiera e con tecnologie assistive;
-- prestare particolare attenzione agli attributi `ARIA` presenti negli esempi;
-- i pulsanti che aprono i megamenu devono avere corretta semantica `<button>`;
-- l'icona a sinistra dei link serve a contraddistinguerli come "voci di menu" anche nelle situazioni o condizioni in cui non sia possibile percepirne il colore, in particolar modo laddove sia presente anche del testo descrittivo; 
-- non devono essere presenti in pagina link con la medesima etichetta (label) che portino a destinazioni diverse. Nel caso di più link "Esplora tutti", ad esempio accostando più megamenu, si deve aggiungere " i contenuti della sezione X" alle etichette, oppure, si può usare `<span class="visually-hidden"> i contenuti della sezione X</span>` per specificare alle sole tecnologie assistive a quale sezione di contenuti del sito si fa riferimento.
+- svolgere con cura verifiche di accessibilità e test di usabilità;
+- prestare attenzione all'applicazione degli attributi `ARIA` presenti;
+- usare la corretta corretta semantica del tag `<button>` nei pulsanti di apertura;
+- usare icone per contraddistinguere i link come "voci di menu" anche nelle situazioni o condizioni in cui non sia possibile percepirne il colore, in particolar modo se presente del testo descrittivo o non cliccabile; 
+- distinguere le etichette dei link in modo chiaro: non devono essere presenti link con la stessa etichetta che portino a destinazioni diverse. Nel caso di più link "Esplora tutti" si può ad esempio aggiungere " i contenuti della sezione X", oppure, si può usare `<span class="visually-hidden"> i contenuti della sezione X</span>` per specificare la distinzione almeno alle tecnologie assistive.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %} 
 
 {% capture callout %}
-Dalla versione **2.8.0** della libreria:
-
-- il componente è stato riprogettato dalle fondamemta per essere accessibile by default, sia nella struttura che negli stili;
-- è cambiato il modo di aggiungere un link "Esplora tutti...", rimangono solo a titolo di esempio disponibili negli stili le classi `it-external` e `it-more` per retrocompatibilità, ma non sono utilizzate nel nuovo componente;
-- sono state deprecate tutte le varianti con sezioni. 
-
+#### Changelog
+Dalla versione **2.8.0** della libreria il componente è stato riprogettato per essere accessibile by default, sia nella struttura HTML che negli stili SCSS. In particolare sono state rimosse tutte le varianti dette "con sezioni" di link perché difficilmente accessibili. Sono state deprecate le classi `it-megamenu-footer` (rimossa), `it-external` e `it-more`. 
 {% endcapture %}{% include callout.html content=callout type="danger" %}
 
 ## Megamenu per sezioni del sito
  
-Questa è la variante più completa, è stata progettata curandone in particolar modo l'accessibilità. È utile per fornire visibilità e accesso a una intera sezione di contenuti di un sito con una alberatura ben strutturata, permettendo all'utente di comprendere l'organizzazione dei contenuti e navigare sia l'eventuale copertina di secondo livello che le pagine foglia.
+Variante utile per dare accesso a una intera sezione di un sito con una architettura dell'informazione ben strutturata. Permette all'utente di comprendere l'organizzazione dei contenuti e di saltare direttamente a pagine foglia di secondo livello. È possibile usare un **esempio in produzione** nel sito [Designers Italia](https://designers.italia.it), per cui questo componente è stato realizzato.
 
-Ha una struttura asimmetrica che permette di mostrare in apertura una immagine e un testo descrittivo di introduzione alla sezione del sito.  
-Può contenere un link "Esplora la sezione ..." per l'accesso a una pagina di copertina. Se il link ha la classe `active` è riferito alla pagina corrente.  
-Si possono accostare più megamenu nella `navbar` per dare accesso a sezioni diverse del sito. Se il pulsante ha la classe `active` è riferito alla sezione corrente del sito.  
+Permette di includere **immagine e testo descrittivo** di introduzione ai contenuti. Può contenere un link **"Esplora la sezione X"** per dare accesso a una pagina di copertina della sezione. Se il link ha la classe `active` è riferito alla pagina corrente.  
 
-È possibile navigare un esempio validato in produzione sul sito [Designers Italia](https://designers.italia.it), per cui è stata progettata.
+Si possono accostare più megamenu nella barra di navigazione per dare accesso a sezioni diverse del sito. Se il pulsante del megamenu ha la classe `active` è riferito alla sezione corrente del sito. 
 
 {% comment %}Example name: Per sezioni del sito{% endcomment %}
 {% capture example %}
+<!-- navbar -->
 <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Menu principale">
-  <button type="button" aria-label="Mostra o nascondi il menu" class="custom-navbar-toggler" aria-controls="menu" aria-expanded="false" data-bs-toggle="navbarcollapsible" data-bs-target="#megamenu-sezione-sito-A">
+  <button type="button" aria-label="Mostra o nascondi il menu" class="custom-navbar-toggler" aria-controls="menu" aria-expanded="false" data-bs-toggle="navbarcollapsible" data-bs-target="#navbar-A">
       <span>
         <svg role="img" class="icon"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use></svg>
       </span>
   </button>
-  <div class="navbar-collapsable" id="megamenu-sezione-sito-A">
+  <div class="navbar-collapsable" id="navbar-A">
     <div class="overlay fade"></div>
     <div class="close-div">
       <button type="button" aria-label="Chiudi il menu" class="btn close-menu">
@@ -62,11 +56,12 @@ Si possono accostare più megamenu nella `navbar` per dare accesso a sezioni div
     </div>
     <div class="menu-wrapper justify-content-lg-between">
       <ul class="navbar-nav">
+        <!-- megamenu 1 -->
         <li class="nav-item dropdown megamenu">
-          <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3 fw-semibold" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-sezione-sito-A-link" data-focus-mouse="false">
-              <span>Megamenu</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
+          <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3 fw-semibold" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-sezione-sito-A1-link" data-focus-mouse="false">
+              <span>Megamenu 1</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
           </button>
-          <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-sezione-sito-A-link">
+          <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-sezione-sito-A1-link">
             <div class="megamenu pb-5 pt-3 py-lg-0">
               <div class="row">
                 <div class="col-xs-12 col-lg-4 px-0">
@@ -79,7 +74,7 @@ Si possono accostare più megamenu nella `navbar` per dare accesso a sezioni div
                           </figure>
                         </div>
                         <p>
-                          Testo utile a fornire una descrizione dei contenuti della sezione <strong>megamenu</strong>.
+                          Testo utile a fornire una descrizione dei contenuti della sezione <strong>megamenu 1</strong>.
                         </p>
                       </div>
                     </div>
@@ -87,7 +82,8 @@ Si possono accostare più megamenu nella `navbar` per dare accesso a sezioni div
                 </div>
                 <div class="col-12 col-lg-8">
                   <div class="it-heading-link-wrapper">
-                    <a class="it-heading-link" href="#"><svg role="img" class="icon icon-sm me-2 mb-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg><span>Esplora la sezione megamenu</span>
+                    <a class="it-heading-link" href="#"><svg role="img" class="icon icon-sm me-2 mb-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                    <span>Esplora la sezione megamenu 1</span>
                     </a>
                   </div>
                   <div class="row">
@@ -145,25 +141,110 @@ Si possono accostare più megamenu nella `navbar` per dare accesso a sezioni div
             </div>
           </div>
         </li>
+        <!-- megamenu 2 -->
+        <li class="nav-item dropdown megamenu">
+          <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3 fw-semibold" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-sezione-sito-A2-link" data-focus-mouse="false">
+              <span>Megamenu 2</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
+          </button>
+          <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-sezione-sito-A2-link">
+            <div class="megamenu pb-5 pt-3 py-lg-0">
+              <div class="row">
+                <div class="col-xs-12 col-lg-4 px-0">
+                  <div class="row">
+                    <div class="col-12 it-vertical it-description pb-lg-3">
+                      <div class="description-content ps-4 ps-sm-5 ms-3">
+                        <div class="ratio ratio-21x9 lightgrey-bg-a1 mb-4 rounded">
+                          <figure class="figure">
+                            <img src="https://via.placeholder.com/560x240/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Segnaposto">
+                          </figure>
+                        </div>
+                        <p>
+                          Testo utile a fornire una descrizione dei contenuti della sezione <strong>megamenu 2</strong>.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-8">
+                  <div class="it-heading-link-wrapper">
+                    <a class="it-heading-link" href="#"><svg role="img" class="icon icon-sm me-2 mb-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                    <span>Esplora la sezione megamenu 2</span>
+                    </a>
+                  </div>
+                  <div class="row">
+                    <div class="col-12 col-lg-6">
+                      <div class="link-list-wrapper">
+                        <ul class="link-list">
+                          <li>
+                            <a class="list-item dropdown-item" href="#">
+                              <svg role="img" class="icon icon-sm me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                              <span>Link lista 7</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a class="list-item dropdown-item" href="#">
+                              <svg role="img" class="icon icon-sm me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                              <span>Link lista 8</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a class="list-item dropdown-item " href="#">
+                              <svg role="img" class="icon icon-sm me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                              <span>Link lista 9</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                      <div class="link-list-wrapper">
+                        <ul class="link-list">
+                          <li>
+                            <a class="list-item dropdown-item" href="#">
+                              <svg role="img" class="icon icon-sm me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                              <span>Link lista 10</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a class="list-item dropdown-item" href="#">
+                              <svg role="img" class="icon icon-sm me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                              <span>Link lista 11</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a class="list-item dropdown-item " href="#">
+                              <svg role="img" class="icon icon-sm me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                              <span>Link lista 12</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
       </ul>
     </div>
   </div>
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
-### Con navbar chiara desktop
+### Versione scura per desktop
 
-Il megamenu prende i colori scuri su desktop se è dentro un `<nav>` che usa il tema colore light su desktop usando la classe `.theme-light-desk`. 
+Il megamenu prende il tema colori dark su desktop se è dentro un `<nav>` che ha applicata la classe `theme-light-desk`. 
 
 {% comment %}Example name: Per sezioni del sito{% endcomment %}
 {% capture example %}
 <nav class="navbar navbar-expand-lg has-megamenu theme-light-desk" aria-label="Menu principale">
-  <button type="button" aria-label="Mostra o nascondi il menu" class="custom-navbar-toggler" aria-controls="menu" aria-expanded="false" data-bs-toggle="navbarcollapsible" data-bs-target="#megamenu-sezione-sito-B-light-desk">
+  <button type="button" aria-label="Mostra o nascondi il menu" class="custom-navbar-toggler" aria-controls="menu" aria-expanded="false" data-bs-toggle="navbarcollapsible" data-bs-target="#navbar-B">
       <span>
         <svg role="img" class="icon"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use></svg>
       </span>
   </button>
-  <div class="navbar-collapsable" id="megamenu-sezione-sito-B-light-desk">
+  <div class="navbar-collapsable" id="navbar-B">
     <div class="overlay fade"></div>
     <div class="close-div">
       <button type="button" aria-label="Chiudi il menu" class="btn close-menu">
@@ -261,19 +342,19 @@ Il megamenu prende i colori scuri su desktop se è dentro un `<nav>` che usa il 
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
-### Con navbar scura mobile
+### Versione scura per mobile
 
-Il megamenu prende i colori scuri su mobile se è dentro un `<nav>` che usa il tema colore dark su mobile usando la classe `.theme-dark-mobile`. 
+Il megamenu prende il tema colori dark su mobile se è dentro un `<nav>` che ha applicata la classe `theme-dark-mobile`. 
 
 {% comment %}Example name: Per sezioni del sito{% endcomment %}
 {% capture example %}
 <nav class="navbar navbar-expand-lg has-megamenu theme-dark-mobile" aria-label="Menu principale">
-  <button type="button" aria-label="Mostra o nascondi il menu" class="custom-navbar-toggler" aria-controls="menu" aria-expanded="false" data-bs-toggle="navbarcollapsible" data-bs-target="#megamenu-sezione-sito-C-dark-mobile">
+  <button type="button" aria-label="Mostra o nascondi il menu" class="custom-navbar-toggler" aria-controls="menu" aria-expanded="false" data-bs-toggle="navbarcollapsible" data-bs-target="#navbar-C">
       <span>
         <svg role="img" class="icon"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use></svg>
       </span>
   </button>
-  <div class="navbar-collapsable" id="megamenu-sezione-sito-C-dark-mobile">
+  <div class="navbar-collapsable" id="navbar-C">
     <div class="overlay fade"></div>
     <div class="close-div">
       <button type="button" aria-label="Chiudi il menu" class="btn close-menu">
@@ -373,19 +454,17 @@ Il megamenu prende i colori scuri su mobile se è dentro un `<nav>` che usa il t
 
 ## Megamenu base
  
-La variante base può contenere liste di link organizzate in tre colonne e contenere o meno link aggiuntivi (esplora la sezione, esplora tutti, call to action).  
-
-Anche in queste varianti che seguono si attivano in automatico le versioni scure su desktop e/o mobile se il `<nav>` contenitore usa i due temi colore disponibili con le classi `.theme-light-desk` e `.theme-dark-mobile`. 
+La variante base può contenere liste di link organizzate in tre colonne e contenere o meno link correlati come "Esplora la sezione X", "Esplora tutti i contenuti Y" o altre call to action.  
 
 {% comment %}Example name: Base{% endcomment %}
 {% capture example %}
 <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Menu principale">
-  <button type="button" aria-label="Mostra o nascondi il menu" class="custom-navbar-toggler" aria-controls="menu" aria-expanded="false" data-bs-toggle="navbarcollapsible" data-bs-target="#megamenu-base-A">
+  <button type="button" aria-label="Mostra o nascondi il menu" class="custom-navbar-toggler" aria-controls="menu" aria-expanded="false" data-bs-toggle="navbarcollapsible" data-bs-target="#navbar-D">
       <span>
         <svg role="img" class="icon"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use></svg>
       </span>
   </button>
-  <div class="navbar-collapsable" id="megamenu-base-A">
+  <div class="navbar-collapsable" id="navbar-D">
     <div class="overlay fade"></div>
     <div class="close-div">
       <button type="button" aria-label="Chiudi il menu" class="btn close-menu">
@@ -494,12 +573,12 @@ Come nella variante per sezioni del sito è possibile aggiungere un link "Esplor
 {% comment %}Example name: Con link esplora la sezione{% endcomment %}
 {% capture example %}
 <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Menu principale">
-  <button type="button" aria-label="Mostra o nascondi il menu" class="custom-navbar-toggler" aria-controls="menu" aria-expanded="false" data-bs-toggle="navbarcollapsible" data-bs-target="#megamenu-base-B">
+  <button type="button" aria-label="Mostra o nascondi il menu" class="custom-navbar-toggler" aria-controls="menu" aria-expanded="false" data-bs-toggle="navbarcollapsible" data-bs-target="#navbar-E">
       <span>
         <svg role="img" class="icon"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use></svg>
       </span>
   </button>
-  <div class="navbar-collapsable" id="megamenu-base-B">
+  <div class="navbar-collapsable" id="navbar-E">
     <div class="overlay fade"></div>
     <div class="close-div">
       <button type="button" aria-label="Chiudi il menu" class="btn close-menu">
@@ -613,12 +692,12 @@ Nel caso le voci da mostrare fossero numerose, è possibile aggiungere un link "
 {% comment %}Example name: Con link esplora tutti{% endcomment %}
 {% capture example %}
 <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Menu principale">
-  <button type="button" aria-label="Mostra o nascondi il menu" class="custom-navbar-toggler" aria-controls="menu" aria-expanded="false" data-bs-toggle="navbarcollapsible" data-bs-target="#megamenu-base-C">
+  <button type="button" aria-label="Mostra o nascondi il menu" class="custom-navbar-toggler" aria-controls="menu" aria-expanded="false" data-bs-toggle="navbarcollapsible" data-bs-target="#navbar-F">
       <span>
         <svg role="img" class="icon"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use></svg>
       </span>
   </button>
-  <div class="navbar-collapsable" id="megamenu-base-C">
+  <div class="navbar-collapsable" id="navbar-F">
     <div class="overlay fade"></div>
     <div class="close-div">
       <button type="button" aria-label="Chiudi il menu" class="btn close-menu">
@@ -752,12 +831,12 @@ Sono semanticamente a seguire delle liste di link, posizionati in basso o usando
 {% comment %}Example name: Con call to action in basso{% endcomment %}
 {% capture example %}
 <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Menu principale">
-  <button type="button" aria-label="Mostra o nascondi il menu" class="custom-navbar-toggler" aria-controls="menu" aria-expanded="false" data-bs-toggle="navbarcollapsible" data-bs-target="#megamenu-base-D">
+  <button type="button" aria-label="Mostra o nascondi il menu" class="custom-navbar-toggler" aria-controls="menu" aria-expanded="false" data-bs-toggle="navbarcollapsible" data-bs-target="#navbar-G">
       <span>
         <svg role="img" class="icon"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use></svg>
       </span>
   </button>
-  <div class="navbar-collapsable" id="megamenu-base-D">
+  <div class="navbar-collapsable" id="navbar-G">
     <div class="overlay fade"></div>
     <div class="close-div">
       <button type="button" aria-label="Chiudi il menu" class="btn close-menu">
@@ -876,12 +955,12 @@ Sono semanticamente a seguire delle liste di link, posizionati in basso o usando
 {% comment %}Example name: Megamenu per sezioni del sito{% endcomment %}
 {% capture example %}
 <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Menu principale">
-  <button type="button" aria-label="Mostra o nascondi il menu" class="custom-navbar-toggler" aria-controls="menu" aria-expanded="false" data-bs-toggle="navbarcollapsible" data-bs-target="#megamenu-base-E">
+  <button type="button" aria-label="Mostra o nascondi il menu" class="custom-navbar-toggler" aria-controls="menu" aria-expanded="false" data-bs-toggle="navbarcollapsible" data-bs-target="#navbar-H">
       <span>
         <svg role="img" class="icon"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use></svg>
       </span>
   </button>
-  <div class="navbar-collapsable" id="megamenu-base-E">
+  <div class="navbar-collapsable" id="navbar-H">
     <div class="overlay fade"></div>
     <div class="close-div">
       <button type="button" aria-label="Chiudi il menu" class="btn close-menu">
@@ -972,221 +1051,3 @@ Sono semanticamente a seguire delle liste di link, posizionati in basso o usando
   </div>
 </nav>
 {% endcapture %}{% include example.html content=example %}
-
-<!-- ## Megamenu con call to action
-
-I megamenu possono contenere delle liste di call to action, posizionate in fondo o a destra del megamenu.
-
-### Call to action in basso
-
-Per aggiungere un elenco di call to action è sufficiente aggiungere dopo il tag con classe `.row` contenente l'elenco primario, il tag `<div class="it-megamenu-footer">`. In questo inseriremo una struttura colonnare identica a quella della lista principale che ospiterà le liste delle call to action.
-
-{% comment %}Example name: Con call to action in basso{% endcomment %}
-{% capture example %}
-<nav class="navbar navbar-expand-lg has-megamenu">
-  <button class="custom-navbar-toggler" type="button" aria-controls="nav5" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#nav5">
-    <svg class="icon">
-      <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use>
-    </svg>
-  </button>
-  <div class="navbar-collapsable" id="nav5">
-    <div class="overlay"></div>
-    <div class="close-div">
-      <button class="btn close-menu" type="button">
-        <span class="visually-hidden">Nascondi la navigazione</span>
-        <svg class="icon">
-          <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-close-big"></use>
-        </svg>
-      </button>
-    </div>
-    <div class="menu-wrapper">
-      <ul class="navbar-nav">
-        <li class="nav-item dropdown megamenu">
-          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu5">
-            <span>Megamenu</span>
-            <svg class="icon icon-xs">
-              <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use>
-            </svg>
-          </a>
-          <div class="dropdown-menu" role="region" aria-labelledby="megamenu5">
-            <div class="row">
-              <div class="col-12 col-lg-4">
-                <div class="link-list-wrapper">
-                  <ul class="link-list">
-                    <li><a class="dropdown-item list-item" href="#"><span>Link lista 1</span></a>
-                    </li>
-                    <li><a class="dropdown-item list-item" href="#"><span>Link lista 2</span></a>
-                    </li>
-                    <li><a class="dropdown-item list-item" href="#"><span>Link lista 3</span></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-12 col-lg-4">
-                <div class="link-list-wrapper">
-                  <ul class="link-list">
-                    <li><a class="dropdown-item list-item" href="#"><span>Link lista 4</span></a>
-                    </li>
-                    <li><a class="dropdown-item list-item" href="#"><span>Link lista 5</span></a>
-                    </li>
-                    <li><a class="dropdown-item list-item" href="#"><span>Link lista 6</span></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-12 col-lg-4">
-                <div class="link-list-wrapper">
-                  <ul class="link-list">
-                    <li><a class="dropdown-item list-item" href="#"><span>Link lista 7</span></a>
-                    </li>
-                    <li><a class="dropdown-item list-item" href="#"><span>Link lista 8</span></a>
-                    </li>
-                    <li><a class="dropdown-item list-item" href="#"><span>Link lista 9</span></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="it-megamenu-footer">
-              <div class="row">
-                <div class="col-12 col-lg-4">
-                  <div class="link-list-wrapper">
-                    <ul class="link-list">
-                      <li><a class="dropdown-item list-item" href="#"><svg class="icon icon-sm left" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg><span>Call to action 1</span></a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="col-12 col-lg-4">
-                  <div class="link-list-wrapper">
-                    <ul class="link-list">
-                      <li><a class="dropdown-item list-item" href="#"><svg class="icon icon-sm left" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg><span>Call to action 2</span></a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="col-12 col-lg-4">
-                  <div class="link-list-wrapper">
-                    <ul class="link-list">
-                      <li><a class="dropdown-item list-item" href="#"><svg class="icon icon-sm left" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg><span>Call to action 3</span></a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-{% endcapture %}{% include example.html content=example %}
-
-### Call to action a destra
-
-Per aggiungere un elenco di call to action posizionato a destra, inseriremo una lista di link particolare all'interno dell'ultima colonna delle liste di link primarie.
-
-All'interno dell'ultimo tag `<div class="col-xs-12 col-lg-4">` inseriremo il tag `<div class="row max-height-col">` che a sua volta conterrà la colonna `<div class="col-12 it-vertical">` all'interno della quale andremo ad inserire la nostra lista di link contenente le call to action.
-
-{% comment %}Example name: Con call to action a destra{% endcomment %}
-{% capture example %}
-<nav class="navbar navbar-expand-lg has-megamenu">
-  <button class="custom-navbar-toggler" type="button" aria-controls="nav6" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#nav6">
-    <svg class="icon">
-      <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use>
-    </svg>
-  </button>
-  <div class="navbar-collapsable" id="nav6">
-    <div class="overlay"></div>
-    <div class="close-div">
-      <button class="btn close-menu" type="button">
-        <span class="visually-hidden">Nascondi la navigazione</span>
-        <svg class="icon">
-          <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-close-big"></use>
-        </svg>
-      </button>
-    </div>
-    <div class="menu-wrapper">
-      <ul class="navbar-nav">
-        <li class="nav-item dropdown megamenu">
-          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu6">
-            <span>Megamenu</span>
-            <svg class="icon icon-xs">
-              <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use>
-            </svg>
-          </a>
-          <div class="dropdown-menu" role="region" aria-labelledby="megamenu6">
-            <div class="row max-height-col">
-              <div class="col-xs-12 col-lg-8">
-                <div class="row margin-right-col">
-                  <div class="col-12 col-lg-4">
-                    <div class="link-list-wrapper">
-                      <ul class="link-list">
-                        <li><a class="dropdown-item list-item" href="#"><span>Link lista 1</span></a>
-                        </li>
-                        <li><a class="dropdown-item list-item" href="#"><span>Link lista 2</span></a>
-                        </li>
-                        <li><a class="dropdown-item list-item" href="#"><span>Link lista 3</span></a>
-                        </li>
-                        <li><a class="dropdown-item list-item" href="#"><span>Link lista 4</span></a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="col-12 col-lg-4">
-                    <div class="link-list-wrapper">
-                      <ul class="link-list">
-                        <li><a class="dropdown-item list-item" href="#"><span>Link lista 5</span></a>
-                        </li>
-                        <li><a class="dropdown-item list-item" href="#"><span>Link lista 6</span></a>
-                        </li>
-                        <li><a class="dropdown-item list-item" href="#"><span>Link lista 7</span></a>
-                        </li>
-                        <li><a class="dropdown-item list-item" href="#"><span>Link lista 8</span></a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="col-12 col-lg-4">
-                    <div class="link-list-wrapper">
-                      <ul class="link-list">
-                        <li><a class="dropdown-item list-item" href="#"><span>Link lista 9</span></a>
-                        </li>
-                        <li><a class="dropdown-item list-item" href="#"><span>Link lista 10</span></a>
-                        </li>
-                        <li><a class="dropdown-item list-item" href="#"><span>Link lista 11</span></a>
-                        </li>
-                        <li><a class="dropdown-item list-item" href="#"><span>Link lista 12</span></a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xs-12 col-lg-4">
-                <div class="row max-height-col">
-                  <div class="col-12 it-vertical">
-                    <div class="link-list-wrapper">
-                      <ul class="link-list">
-                        <li><a class="dropdown-item list-item" href="#"><span>Call to action 1</span><svg class="icon icon-sm right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg></a>
-                        </li>
-                        <li><a class="dropdown-item list-item" href="#"><span>Call to action 2</span><svg class="icon icon-sm right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg></a>
-                        </li>
-                        <li><a class="dropdown-item list-item" href="#"><span>Call to action 3</span><svg class="icon icon-sm right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg></a>
-                        </li>
-                        <li><a class="dropdown-item list-item" href="#"><span>Call to action 4</span><svg class="icon icon-sm right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg></a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-{% endcapture %}{% include example.html content=example %} -->
