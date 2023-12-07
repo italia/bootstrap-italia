@@ -51,9 +51,7 @@ Il cambio lingua è gestito con il componente [dropdown]({{ site.baseurl }}/docs
             <nav aria-label="Navigazione accessoria">
               <a class="it-opener d-lg-none" data-bs-toggle="collapse" href="#menu1a" role="button" aria-expanded="false" aria-controls="menu4">
                 <span>Ente appartenenza</span>
-                <svg class="icon" aria-hidden="true">
-                  <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use>
-                </svg>
+                <svg class="icon" aria-hidden="true"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
               </a>
               <div class="link-list-wrapper collapse" id="menu1a">
                 <ul class="link-list">
@@ -68,9 +66,7 @@ Il cambio lingua è gestito con il componente [dropdown]({{ site.baseurl }}/docs
               <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
                 <span class="visually-hidden">Selezione lingua: lingua selezionata</span>
                 <span>ITA</span>
-                <svg class="icon d-none d-lg-block">
-                  <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use>
-                </svg>
+                <svg class="icon d-none d-lg-block"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
               </a>
               <div class="dropdown-menu">
                 <div class="row">
@@ -116,9 +112,7 @@ Il modificatore `.btn-full` è disponibile anche con il tema chiaro attivato da 
               <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
                 <span class="visually-hidden">Selezione lingua: lingua selezionata</span>
                 <span>ITA</span>
-                <svg class="icon d-none d-lg-block">
-                  <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use>
-                </svg>
+                <svg class="icon d-none d-lg-block"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
               </a>
               <div class="dropdown-menu">
                 <div class="row">
@@ -165,9 +159,7 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
             <nav aria-label="Navigazione accessoria">
               <a class="it-opener d-lg-none" data-bs-toggle="collapse" href="#menu1b" role="button" aria-expanded="false" aria-controls="menu4">
                 <span>Ente appartenenza</span>
-                <svg class="icon" aria-hidden="true">
-                  <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use>
-                </svg>
+                <svg class="icon" aria-hidden="true"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
               </a>
               <div class="link-list-wrapper collapse" id="menu1b">
                 <ul class="link-list">
@@ -182,9 +174,7 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
               <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
                 <span class="visually-hidden">Selezione lingua: lingua selezionata</span>
                 <span>ITA</span>
-                <svg class="icon d-none d-lg-block">
-                  <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use>
-                </svg>
+                <svg class="icon d-none d-lg-block"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
               </a>
               <div class="dropdown-menu">
                 <div class="row">
@@ -407,7 +397,7 @@ Per cambiare tema all'header centrale è sufficiente aggiungere la classe `theme
 
 ## Header Nav
 
-**Header Nav**, per elencare le voci di navigazione, siano esse semplici link, [menu a tendina]({{ site.baseurl }}/docs/componenti/dropdown/) oppure [Megamenu]({{ site.baseurl }}/docs/menu-di-navigazione/megamenu/) a tutta larghezza.
+**Header Nav**, per elencare le voci di navigazione, siano esse semplici link, o pulsanti per [menu a tendina]({{ site.baseurl }}/docs/componenti/dropdown/) e [Megamenu]({{ site.baseurl }}/docs/menu-di-navigazione/megamenu/).
 
 {% comment %}Example name: Header navigazione{% endcomment %}
 {% capture example %}
@@ -418,18 +408,14 @@ Per cambiare tema all'header centrale è sufficiente aggiungere la classe `theme
         <!--start nav-->
         <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Navigazione principale">
           <button class="custom-navbar-toggler" type="button" aria-controls="nav1" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#nav1">
-            <svg class="icon bg-override">
-              <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use>
-            </svg>
+            <svg class="icon bg-override"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use></svg>
           </button>
           <div class="navbar-collapsable" id="nav1" style="display: none;">
             <div class="overlay" style="display: none;"></div>
             <div class="close-div">
               <button class="btn close-menu" type="button">
                 <span class="visually-hidden">Nascondi la navigazione</span>
-                <svg class="icon">
-                  <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-close-big"></use>
-                </svg>
+                <svg class="icon"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-close-big"></use></svg>
               </button>
             </div>
             <div class="menu-wrapper">
@@ -441,9 +427,7 @@ Per cambiare tema all'header centrale è sufficiente aggiungere la classe `theme
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="mainNavDropdown1">
                     <span>Menu Dropdown</span>
-                    <svg class="icon icon-xs">
-                      <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use>
-                    </svg>
+                    <svg class="icon icon-xs"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
                   </a>
                   <div class="dropdown-menu" role="region" aria-labelledby="mainNavDropdown1">
                     <div class="link-list-wrapper">
@@ -458,47 +442,86 @@ Per cambiare tema all'header centrale è sufficiente aggiungere la classe `theme
                     </div>
                   </div>
                 </li>
+                <!-- megamenu 1 -->
                 <li class="nav-item dropdown megamenu">
-                  <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="mainNavMegamenu1">
-                    <span>Megamenu</span>
-                    <svg class="icon icon-xs">
-                      <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use>
-                    </svg>
-                  </a>
-                  <div class="dropdown-menu" role="region" aria-labelledby="mainNavMegamenu1">
-                    <div class="row">
-                      <div class="col-12 col-lg-4">
-                        <div class="link-list-wrapper">
-                          <div class="link-list-heading">Sezione 1</div>
-                          <ul class="link-list">
-                            <li><a class="dropdown-item list-item" href="#"><span>Link lista 1</span></a></li>
-                            <li><a class="dropdown-item list-item" href="#"><span>Link lista 2</span></a></li>
-                            <li><a class="dropdown-item list-item" href="#"><span>Link lista 3</span></a></li>
-                          </ul>
+                  <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3 fw-semibold" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-sezione-sito-A1-link" data-focus-mouse="false">
+                      <span>Megamenu 1</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
+                  </button>
+                  <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-sezione-sito-A1-link">
+                    <div class="megamenu pb-5 pt-3 py-lg-0">
+                      <div class="row">
+                        <div class="col-xs-12 col-lg-4 px-0">
+                          <div class="row">
+                            <div class="col-12 it-vertical it-description pb-lg-3">
+                              <div class="description-content ps-4 ps-sm-5 ms-3">
+                                <div class="ratio ratio-21x9 lightgrey-bg-a1 mb-4 rounded">
+                                  <figure class="figure">
+                                    <img src="https://via.placeholder.com/560x240/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Segnaposto">
+                                  </figure>
+                                </div>
+                                <p>
+                                  Testo utile a fornire una descrizione dei contenuti della sezione <strong>megamenu 1</strong>.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
                         </div>
-                      </div>
-                      <div class="col-12 col-lg-4">
-                        <div class="link-list-wrapper">
-                          <ul class="link-list">
-                            <li>
-                              <div class="link-list-heading">Sezione 2</div>
-                            </li>
-                            <li><a class="dropdown-item list-item" href="#"><span>Link lista 4</span></a></li>
-                            <li><a class="dropdown-item list-item" href="#"><span>Link lista 5</span></a></li>
-                            <li><a class="dropdown-item list-item" href="#"><span>Link lista 6</span></a></li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div class="col-12 col-lg-4">
-                        <div class="link-list-wrapper">
-                          <ul class="link-list">
-                            <li>
-                              <div class="link-list-heading">Sezione 3</div>
-                            </li>
-                            <li><a class="dropdown-item list-item" href="#"><span>Link lista 7</span></a></li>
-                            <li><a class="dropdown-item list-item" href="#"><span>Link lista 8</span></a></li>
-                            <li><a class="dropdown-item list-item" href="#"><span>Link lista 9</span></a></li>
-                          </ul>
+                        <div class="col-12 col-lg-8">
+                          <div class="it-heading-link-wrapper">
+                            <a class="it-heading-link" href="#"><svg role="img" class="icon icon-sm me-2 mb-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                            <span>Esplora la sezione megamenu 1</span>
+                            </a>
+                          </div>
+                          <div class="row">
+                            <div class="col-12 col-lg-6">
+                              <div class="link-list-wrapper">
+                                <ul class="link-list">
+                                  <li>
+                                    <a class="list-item dropdown-item" href="#">
+                                      <svg role="img" class="icon icon-sm me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                                      <span>Link lista 1</span>
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a class="list-item dropdown-item" href="#">
+                                      <svg role="img" class="icon icon-sm me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                                      <span>Link lista 2</span>
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a class="list-item dropdown-item " href="#">
+                                      <svg role="img" class="icon icon-sm me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                                      <span>Link lista 3</span>
+                                    </a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="col-12 col-lg-6">
+                              <div class="link-list-wrapper">
+                                <ul class="link-list">
+                                  <li>
+                                    <a class="list-item dropdown-item" href="#">
+                                      <svg role="img" class="icon icon-sm me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                                      <span>Link lista 4</span>
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a class="list-item dropdown-item" href="#">
+                                      <svg role="img" class="icon icon-sm me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                                      <span>Link lista 5</span>
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a class="list-item dropdown-item " href="#">
+                                      <svg role="img" class="icon icon-sm me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                                      <span>Link lista 6</span>
+                                    </a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -537,18 +560,14 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
         <!--start nav-->
         <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Navigazione principale">
           <button class="custom-navbar-toggler" type="button" aria-controls="nav0" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#nav0">
-            <svg class="icon bg-override">
-              <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use>
-            </svg>
+            <svg class="icon bg-override"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use></svg>
           </button>
           <div class="navbar-collapsable" id="nav0" style="display: none;">
             <div class="overlay" style="display: none;"></div>
             <div class="close-div">
               <button class="btn close-menu" type="button">
                 <span class="visually-hidden">Nascondi la navigazione</span>
-                <svg class="icon">
-                  <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-close-big"></use>
-                </svg>
+                <svg class="icon"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-close-big"></use></svg>
               </button>
             </div>
             <div class="menu-wrapper">
@@ -560,9 +579,7 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="mainNavDropdown0">
                     <span>Menu Dropdown</span>
-                    <svg class="icon icon-xs">
-                      <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use>
-                    </svg>
+                    <svg class="icon icon-xs"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
                   </a>
                   <div class="dropdown-menu" role="region" aria-labelledby="mainNavDropdown0">
                     <div class="link-list-wrapper">
@@ -580,9 +597,7 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
                 <li class="nav-item dropdown megamenu">
                   <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="mainNavMegamenu0">
                     <span>Megamenu</span>
-                    <svg class="icon icon-xs">
-                      <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use>
-                    </svg>
+                    <svg class="icon icon-xs"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
                   </a>
                   <div class="dropdown-menu" role="region" aria-labelledby="mainNavMegamenu0">
                     <div class="row">
@@ -644,18 +659,14 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
         <!--start nav-->
         <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Navigazione principale">
           <button class="custom-navbar-toggler" type="button" aria-controls="nav2" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#nav2">
-            <svg class="icon bg-override">
-              <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use>
-            </svg>
+            <svg class="icon bg-override"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use></svg>
           </button>
           <div class="navbar-collapsable" id="nav2" style="display: none;">
             <div class="overlay" style="display: none;"></div>
             <div class="close-div">
               <button class="btn close-menu" type="button">
                 <span class="visually-hidden">Nascondi la navigazione</span>
-                <svg class="icon">
-                  <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-close-big"></use>
-                </svg>
+                <svg class="icon"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-close-big"></use></svg>
               </button>
             </div>
             <div class="menu-wrapper">
@@ -667,9 +678,7 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="mainNavDropdown2">
                     <span>Menu Dropdown</span>
-                    <svg class="icon icon-xs">
-                      <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use>
-                    </svg>
+                    <svg class="icon icon-xs"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
                   </a>
                   <div class="dropdown-menu" role="region" aria-labelledby="mainNavDropdown2">
                     <div class="link-list-wrapper">
@@ -687,9 +696,7 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
                 <li class="nav-item dropdown megamenu">
                   <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="mainNavMegamenu2">
                     <span>Megamenu</span>
-                    <svg class="icon icon-xs">
-                      <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use>
-                    </svg>
+                    <svg class="icon icon-xs"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
                   </a>
                   <div class="dropdown-menu" role="region" aria-labelledby="mainNavMegamenu2">
                     <div class="row">
@@ -760,9 +767,7 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
             <div class="close-div">
               <button class="btn close-menu" type="button">
                 <span class="visually-hidden">Nascondi la navigazione</span>
-                <svg class="icon">
-                  <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-close-big"></use>
-                </svg>
+                <svg class="icon"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-close-big"></use></svg>
               </button>
             </div>
             <div class="menu-wrapper">
@@ -774,9 +779,7 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="mainNavDropdown3">
                     <span>Menu Dropdown</span>
-                    <svg class="icon icon-xs">
-                      <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use>
-                    </svg>
+                    <svg class="icon icon-xs"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
                   </a>
                   <div class="dropdown-menu" role="region" aria-labelledby="mainNavDropdown3">
                     <div class="link-list-wrapper">
@@ -794,9 +797,7 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
                 <li class="nav-item dropdown megamenu">
                   <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="mainNavMegamenu3">
                     <span>Megamenu</span>
-                    <svg class="icon icon-xs">
-                      <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use>
-                    </svg>
+                    <svg class="icon icon-xs"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
                   </a>
                   <div class="dropdown-menu" role="region" aria-labelledby="mainNavMegamenu3">
                     <div class="row">
@@ -860,18 +861,14 @@ Al menù di navigazione principale può essere aggiunto anche un menù di naviga
         <!--start nav-->
         <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Navigazione principale">
           <button class="custom-navbar-toggler" type="button" aria-controls="nav4" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#nav4">
-            <svg class="icon bg-override">
-              <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use>
-            </svg>
+            <svg class="icon bg-override"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use></svg>
           </button>
           <div class="navbar-collapsable" id="nav4" style="display: none;">
             <div class="overlay" style="display: none;"></div>
             <div class="close-div">
               <button class="btn close-menu" type="button">
                 <span class="visually-hidden">Nascondi la navigazione</span>
-                <svg class="icon">
-                  <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-close-big"></use>
-                </svg>
+                <svg class="icon"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-close-big"></use></svg>
               </button>
             </div>
             <div class="menu-wrapper">
