@@ -53,7 +53,7 @@
     },
     {
         "name": "Area di testo ",
-        "content": "\n  <div class=\"form-group\">\n    <label for=\"exampleFormControlTextarea1\">Esempio di area di testo</label>\n    <textarea id=\"exampleFormControlTextarea1\" rows=\"3\"></textarea>\n  </div>\n"
+        "content": "\n  <div class=\"form-group\">\n    <label for=\"exampleFormControlTextarea1\">Esempio di area di testo</label>\n    <textarea class=\"form-control\" id=\"exampleFormControlTextarea1\" rows=\"3\"></textarea>\n  </div>\n"
     },
     {
         "name": "Varianti di dimensione ",

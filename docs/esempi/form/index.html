@@ -11,11 +11,11 @@
 
 <title>Validazione Form · Bootstrap Italia</title>
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202312061409" rel="stylesheet" />
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202312071547" rel="stylesheet" />
 
 <!-- Documentation extras -->
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202312061409" rel="stylesheet" />
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202312071547" rel="stylesheet" />
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico" />
@@ -104,16 +104,18 @@
         </div>
       </div>
       <div class="col-12 col-md-4">
-        <div class="select-wrapper">
-          <label for="defaultSelect">Select</label>
-          <select id="defaultSelect" title="Scegli una opzione" class="form-control" required>
-            <option selected value="">Scegli una opzione</option>
-            <option value="Value 1">Opzione 1</option>
-            <option value="Value 2">Opzione 2</option>
-            <option value="Value 3">Opzione 3</option>
-            <option value="Value 4">Opzione 4</option>
-            <option value="Value 5">Opzione 5</option>
-          </select>
+        <div class="form-group">
+          <div class="select-wrapper">
+            <label for="defaultSelect">Select</label>
+            <select id="defaultSelect" title="Scegli una opzione" class="form-control" required>
+              <option selected value="">Scegli una opzione</option>
+              <option value="Value 1">Opzione 1</option>
+              <option value="Value 2">Opzione 2</option>
+              <option value="Value 3">Opzione 3</option>
+              <option value="Value 4">Opzione 4</option>
+              <option value="Value 5">Opzione 5</option>
+            </select>
+          </div>
         </div>
       </div>
       <div class="col-12 col-md-4">
@@ -145,6 +147,23 @@
               </button>
             </span>
           </span>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="form-group">
+          <label for="perc_input_group" class="input-number-label active">Percentuale</label>
+          <div class="input-group input-number input-number-percentage">
+            <span class="input-group-text fw-semibold">%</span>
+            <input type="number" class="form-control" data-bs-input id="perc_input_group" name="perc_input_group" value="80" min="80" max="100" step="any" />
+            <span class="input-group-text align-buttons flex-column">
+              <button class="input-number-add">
+                <span class="visually-hidden">Aumenta del 10%</span>
+              </button>
+              <button class="input-number-sub">
+                <span class="visually-hidden">Diminuisci del 10%</span>
+              </button>
+            </span>
+          </div>
         </div>
       </div>
     </div>
@@ -441,6 +460,17 @@
           errorMessage: 'Deve essere maggiore di 3.50',
         }
       ])
+      .addField('#perc_input_group', [
+        {
+          rule: 'required',
+          errorMessage: 'Questo campo è richiesto',
+        },
+        {
+          rule: 'minNumber',
+          value: 80,
+          errorMessage: 'Deve essere maggiore di 80',
+        }
+      ])
       .addField('#age', [
         {
           rule: 'required',
@@ -559,7 +589,7 @@
   })
 </script>
  
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202312061409"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202312071547"></script>
 <script>
   bootstrap.loadFonts('/bootstrap-italia/dist/fonts')
 </script><!-- Notification per tornare alla pagina principale -->
