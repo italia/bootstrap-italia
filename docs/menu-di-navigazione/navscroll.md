@@ -49,15 +49,14 @@ In questo esempio, la linea che limita la barra di navigazione è posizionata a 
   <div class="navbar-collapsable" id="navbarNav">
     <div class="overlay"></div>
     <div class="close-div visually-hidden">
-      <button class="btn close-menu" type="button"><span class="it-close"></span>close
+      <button class="btn close-menu" type="button">
+        <span class="it-close"></span>Chiudi
       </button>
     </div>
-    <a class="it-back-button" href="#" role="button">
-      <svg class="icon icon-sm icon-primary align-top">
-        <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left" xlink:href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left"></use>
-      </svg>
-      <span>Back</span>
-    </a>
+    <button type="button" class="it-back-button btn w-100 text-start">
+      <svg class="icon icon-sm icon-primary align-top"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left" xlink:href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left"></use></svg>
+      <span>Indietro</span>
+    </button>
     <div class="menu-wrapper">
       <div class="link-list-wrapper">
         <h3 class="no_toc">header</h3>
@@ -117,10 +116,14 @@ In questo esempio, la linea che limita la barra di navigazione è posizionata a 
   <div class="navbar-collapsable" id="navbarNavB">
     <div class="overlay"></div>
     <div class="close-div visually-hidden">
-      <button class="btn close-menu" type="button"><span class="it-close"></span>close
+      <button class="btn close-menu" type="button">
+        <span class="it-close"></span>Chiudi
       </button>
     </div>
-    <a class="it-back-button" href="#"><svg class="icon icon-sm icon-primary align-top"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-left"></use></svg><span>Back </span></a>
+    <button type="button" class="it-back-button btn w-100 text-start">
+      <svg class="icon icon-sm icon-primary align-top"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left" xlink:href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left"></use></svg>
+      <span>Indietro</span>
+    </button>
     <div class="menu-wrapper">
       <div class="link-list-wrapper">
         <h3 class="no_toc">header</h3>
@@ -186,13 +189,10 @@ La Navscroll può mostrare una barra di avanzamento dello scorrimento del conten
   </div>
   <div class="navbar-collapsable" id="navbarNavProgress">
     <div class="overlay"></div>
-    <a class="it-back-button" href="#" role="button">
-      <svg class="icon icon-sm icon-primary align-top">
-        <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left"
-          xlink:href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left"></use>
-      </svg>
+    <button type="button" class="it-back-button btn w-100 text-start">
+      <svg class="icon icon-sm icon-primary align-top"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left" xlink:href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left"></use></svg>
       <span>Indietro</span>
-    </a>
+    </button>
     <div class="menu-wrapper">
       <div class="link-list-wrapper">
         <h3 class="no_toc">header</h3>
@@ -249,14 +249,14 @@ La Navscroll può mostrare una barra di avanzamento dello scorrimento del conten
 
 Il nav ha due versioni, light e dark.
 
-Lo stile di default è di background bianco con testo di colore primario su desktop e mobile.
+Lo stile di default è con sfondo bianco e testo di colore primario, su desktop e mobile.
 
 **Temi Navscroll**  
 Per cambiare il tema è sufficiente aggiungere le seguenti classi al tag `<nav class="navbar">`:
 
-**`.theme-dark-mobile`**: background scuro, testi e links bianco. (modifica unicamente la versione mobile del Navscroll).
+**`.theme-dark-mobile`**: sfondo scuro, testi e link bianco (modifica unicamente la versione mobile del Navscroll).
 
-**`.theme-dark-desktop`**: background scuro, testi e links di colore bianco. (modifica unicamente la versione desktop del Navscroll)
+**`.theme-dark-desktop`**: sfondo scuro, testi e link di colore bianco (modifica unicamente la versione desktop del Navscroll).
 
 {% comment %}Example name: Variante scura{% endcomment %}
 {% capture example %}
@@ -266,10 +266,14 @@ Per cambiare il tema è sufficiente aggiungere le seguenti classi al tag `<nav c
   <div class="navbar-collapsable" id="navbarNavC">
     <div class="overlay"></div>
     <div class="close-div visually-hidden">
-      <button class="btn close-menu" type="button"><span class="it-close"></span>close
+      <button class="btn close-menu" type="button">
+      <span class="it-close"></span>Chiudi
       </button>
     </div>
-    <a class="it-back-button" href="#"><svg class="icon icon-sm icon-white align-top"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-left"></use></svg><span>Back </span></a>
+    <button type="button" class="it-back-button btn w-100 text-start">
+      <svg class="icon icon-sm icon-white align-top"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left" xlink:href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left"></use></svg>
+      <span>Indietro</span>
+    </button>
     <div class="menu-wrapper">
       <div class="link-list-wrapper">
         <h3 class="no_toc">header</h3>
