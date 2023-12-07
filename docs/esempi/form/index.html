@@ -87,6 +87,23 @@ title: Validazione Form
           </span>
         </div>
       </div>
+      <div class="col-12 col-md-4">
+        <div class="form-group">
+          <label for="perc_input_group" class="input-number-label active">Percentuale</label>
+          <div class="input-group input-number input-number-percentage">
+            <span class="input-group-text fw-semibold">%</span>
+            <input type="number" class="form-control" data-bs-input id="perc_input_group" name="perc_input_group" value="80" min="80" max="100" step="any" />
+            <span class="input-group-text align-buttons flex-column">
+              <button class="input-number-add">
+                <span class="visually-hidden">Aumenta del 10%</span>
+              </button>
+              <button class="input-number-sub">
+                <span class="visually-hidden">Diminuisci del 10%</span>
+              </button>
+            </span>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="row">
@@ -379,6 +396,17 @@ title: Validazione Form
           rule: 'minNumber',
           value: 3.50,
           errorMessage: 'Deve essere maggiore di 3.50',
+        }
+      ])
+      .addField('#perc_input_group', [
+        {
+          rule: 'required',
+          errorMessage: 'Questo campo è richiesto',
+        },
+        {
+          rule: 'minNumber',
+          value: 80,
+          errorMessage: 'Deve essere maggiore di 80',
         }
       ])
       .addField('#age', [
