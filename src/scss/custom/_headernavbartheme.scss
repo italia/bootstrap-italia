@@ -247,6 +247,9 @@
                   }
                 }
                 > button.nav-link {
+                  &::before {
+                    background-color: $navigation-light-text-color
+                  }
                   color: $navigation-light-text-color;
                   svg {
                     fill: $navigation-light-text-color;
