@@ -87,7 +87,7 @@
                     }
                   }
                   .it-vertical {
-                    background: $navigation-light-megamenu-footer-bg-color;
+                    // background: $navigation-light-megamenu-footer-bg-color;
                     .link-list-wrapper {
                       .link-list {
                         li {
@@ -137,7 +137,6 @@
         }
         //dropdown
         .dropdown-menu {
-          h3,
           .link-list-heading {
             font-weight: 600;
             &.it-heading-megacolumn {
@@ -247,6 +246,15 @@
                     }
                   }
                 }
+                > button.nav-link {
+                  color: $navigation-light-text-color;
+                  svg {
+                    fill: $navigation-light-text-color;
+                  }
+                  &.active {
+                    border-bottom-color: $navigation-light-text-color;
+                  }
+                }        
                 a.nav-link {
                   &:before {
                     background-color: $navigation-light-text-color;
@@ -257,6 +265,13 @@
                   background: $navigation-light-megamenu-footer-bg-color;
                 }
                 .dropdown-menu {
+                  a.it-heading-link,
+                  a.it-footer-link {
+                    color: $navigation-light-bg-color;
+                    svg {
+                      fill: $navigation-light-bg-color;
+                    }
+                  }
                   .it-heading-link-wrapper,
                   .it-footer-link-wrapper,
                   .it-footer-link-wrapper-vertical {
@@ -270,7 +285,7 @@
                   }
                   // vertical cta
                   .it-vertical {
-                    background: $navigation-light-megamenu-footer-bg-color;
+                    // background: $navigation-light-megamenu-footer-bg-color;
                     .link-list-wrapper {
                       .link-list {
                         li {
