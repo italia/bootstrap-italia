@@ -111,6 +111,15 @@
                   }
                 }
               }
+              > button.nav-link {
+                color: $navigation-dark-text-color;
+                svg {
+                  fill: $navigation-dark-text-color;
+                }
+                &.active {
+                  border-left-color: $navigation-dark-text-color;
+                }
+              }
               a.nav-link {
                 color: $navigation-dark-text-color;
                 &.active {
@@ -192,6 +201,9 @@
       background: $navigation-light-bg-color;
       box-shadow: $dropdown-box-shadow;
       .navbar .navbar-collapsable .navbar-nav li a.nav-link.dropdown-toggle svg {
+        fill: $navigation-light-text-color;
+      }
+      .navbar .navbar-collapsable .navbar-nav li button.nav-link.dropdown-toggle svg {
         fill: $navigation-light-text-color;
       }
 
