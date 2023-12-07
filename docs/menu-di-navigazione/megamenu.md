@@ -58,7 +58,7 @@ Si possono accostare più megamenu nella barra di navigazione per dare accesso a
       <ul class="navbar-nav">
         <!-- megamenu 1 -->
         <li class="nav-item dropdown megamenu">
-          <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3 fw-semibold" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-sezione-sito-A1-link" data-focus-mouse="false">
+          <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-sezione-sito-A1-link" data-focus-mouse="false">
               <span>Megamenu 1</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
           </button>
           <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-sezione-sito-A1-link">
@@ -143,7 +143,7 @@ Si possono accostare più megamenu nella barra di navigazione per dare accesso a
         </li>
         <!-- megamenu 2 -->
         <li class="nav-item dropdown megamenu">
-          <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3 fw-semibold" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-sezione-sito-A2-link" data-focus-mouse="false">
+          <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-sezione-sito-A2-link" data-focus-mouse="false">
               <span>Megamenu 2</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
           </button>
           <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-sezione-sito-A2-link">
@@ -254,7 +254,7 @@ Il megamenu prende il tema colori dark su desktop se è dentro un `<nav>` che ha
     <div class="menu-wrapper justify-content-lg-between">
       <ul class="navbar-nav">
         <li class="nav-item dropdown megamenu">
-          <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3 fw-semibold" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-sezione-sito-B-link" data-focus-mouse="false">
+          <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-sezione-sito-B-link" data-focus-mouse="false">
               <span>Megamenu</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
           </button>
           <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-sezione-sito-B-link">
@@ -364,7 +364,7 @@ Il megamenu prende il tema colori dark su mobile se è dentro un `<nav>` che ha 
     <div class="menu-wrapper justify-content-lg-between">
       <ul class="navbar-nav">
         <li class="nav-item dropdown megamenu">
-          <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3 fw-semibold" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-sezione-sito-C-link" data-focus-mouse="false">
+          <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-sezione-sito-C-link" data-focus-mouse="false">
               <span>Megamenu</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
           </button>
           <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-sezione-sito-C-link">
@@ -474,7 +474,7 @@ La variante base può contenere liste di link organizzate in tre colonne e conte
     <div class="menu-wrapper justify-content-lg-between">
       <ul class="navbar-nav">
         <li class="nav-item dropdown megamenu">
-          <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3 fw-semibold" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-base-A-link" data-focus-mouse="false">
+          <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-base-A-link" data-focus-mouse="false">
               <span>Megamenu</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
           </button>
           <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-base-A-link">
@@ -588,7 +588,7 @@ Come nella variante per sezioni del sito è possibile aggiungere un link "Esplor
     <div class="menu-wrapper justify-content-lg-between">
       <ul class="navbar-nav">
         <li class="nav-item dropdown megamenu">
-          <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3 fw-semibold" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-base-B-link" data-focus-mouse="false">
+          <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-base-B-link" data-focus-mouse="false">
               <span>Megamenu</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
           </button>
           <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-base-B-link">
@@ -707,7 +707,7 @@ Nel caso le voci da mostrare fossero numerose, è possibile aggiungere un link "
     <div class="menu-wrapper justify-content-lg-between">
       <ul class="navbar-nav">
         <li class="nav-item dropdown megamenu">
-          <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3 fw-semibold" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-base-C-link" data-focus-mouse="false">
+          <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-base-C-link" data-focus-mouse="false">
               <span>Megamenu</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
           </button>
           <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-base-C-link">
@@ -846,7 +846,7 @@ Sono semanticamente a seguire delle liste di link, posizionati in basso o usando
     <div class="menu-wrapper justify-content-lg-between">
       <ul class="navbar-nav">
         <li class="nav-item dropdown megamenu">
-          <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3 fw-semibold" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-base-D-link" data-focus-mouse="false">
+          <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-base-D-link" data-focus-mouse="false">
               <span>Megamenu</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
           </button>
           <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-base-D-link">
@@ -970,7 +970,7 @@ Sono semanticamente a seguire delle liste di link, posizionati in basso o usando
     <div class="menu-wrapper justify-content-lg-between">
       <ul class="navbar-nav">
         <li class="nav-item dropdown megamenu">
-          <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3 fw-semibold" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-base-E-link" data-focus-mouse="false">
+          <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-base-E-link" data-focus-mouse="false">
               <span>Megamenu</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
           </button>
           <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-base-E-link">
