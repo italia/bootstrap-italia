@@ -18,20 +18,20 @@ toc: true
 
 L'header di un sito della Pubblica Amministrazione è solitamente composto di 3 elementi principali:
 
-- Un cosiddetto **Slim Header**, una sottile fascia dello stesso colore o, preferibilmente, di colore lievemente più scuro rispetto al tema principale del sito, che mostra alcuni link funzionali con impatto globale o esterno al sito stesso.
+- Un cosiddetto **Slim Header**, una sottile fascia dello stesso colore o, preferibilmente, di colore lievemente diverso rispetto al tema principale del sito, che mostra appartenenza e alcuni link funzionali con impatto globale o esterno al sito stesso.
 - Un **Header Centrale** che identifica in modo chiaro il sito attraverso logo, testo e social, e può contenere un link per effettuare ricerche sul sito.
-- Un **Header Nav** dedicato alla navigazione, visibile su schermi di grandi dimensioni ed accessibile attraverso il classico pulsante di tipo "burger menu"
-  (<svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-burger"></use></svg>) per dispositivi mobili.
+- Un **Header Nav** dedicato alla navigazione, visibile su schermi di grandi dimensioni e attraverso il classico pulsante di tipo "burger menu"
+  (<svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-burger"></use></svg>) su dispositivi mobili.
 
 {% capture callout %}
 
 #### Accessibilità
 
-Considerando l'importanza dell'Header per la navigazione di un sito, si consiglia di seguire attentamente gli esempi per quanto riguarda l'utilizzo di attributi `ARIA` e labelling accessibile.
+Considerando l'importanza dell'Header per la navigazione, si ricorda porre particolare attenzione all'utilizzo della corretta semantica HTML, alle etichette e agli attributi `ARIA`, oltre a validare e testare sempre con utenti il risultato.
 
-Il titolo del sito, "Nome dell'Istituzione" negli esempi, è contenuto in un `<div>` generico e non un tag `<h1>` per evitare conflitti con gli `<h1>` presenti nelle singole pagine. Nel caso in cui la home page fosse priva di un titolo relativo all'Istituzione (es: carousel con ultime notizie) è consigliabile applicare il tag `<h1>` al titolo dell'header unicamente in quella pagina.
+Il titolo del sito, "Nome dell'Istituzione" negli esempi, è contenuto in un `<div>` generico e non un tag `<h1>` per evitare conflitti con gli `<h1>` presenti nelle singole pagine. Nel caso in cui la home page fosse priva di un titolo (es: primo contenuto è una ultima notizia in evidenza) si può applicare il tag `<h1>` al titolo dell'header unicamente in quella pagina oppure creare un `h1` nei contenuti principali di pagina con attributo `visually-hidden`. Questa ultima soluzione sarà anche utile a dare focus direttamente al tag `<h1>` laddove siano presenti [skiplinks]({{ site.baseurl }}/docs/menu-di-navigazione/skiplinks/) che permettano agli utenti che navigano da tastiera o con tecnologie assistive di saltare i contenuti dell'Header. 
 
-Maggiori dettagli sull'accessibilità del **megamenu** sono presenti nella [relativa pagina]({{site.baseurl}}/docs/menu-di-navigazione/megamenu/).
+Maggiori dettagli sull'accessibilità del componente **megamenu** nella [relativa pagina]({{site.baseurl}}/docs/menu-di-navigazione/megamenu/).
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
 ## Slim Header
