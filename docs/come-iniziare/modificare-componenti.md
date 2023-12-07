@@ -24,7 +24,7 @@ In breve, gli elementi su cui intervenire per la creazione o la modifica di comp
 
 Ogni componente ha una pagina (o un paragrafo) nella documentazione alla cartella `/docs/componenti`. Tale documentazione è redatta in codice [`markdown`](https://it.wikipedia.org/wiki/Markdown) ed è comprensiva di una breve descrizione testuale, oltre ad eventuali varianti, comportamenti, esempi di codice `html` ed eventuali peculiarità in termini di codice Javascript.
 
-Nel caso di un nuovo componente, sarà necessario aggiungere un nuovo file `.md` dedicato e la rispettiva voce al menù principale nel file `_data/nav.yml`.
+Nel caso di un nuovo componente, sarà necessario aggiungere un nuovo file `.md` dedicato e la rispettiva voce al menu principale nel file `_data/nav.yml`.
 
 ### Personalizzazione di stile
 

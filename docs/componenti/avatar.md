@@ -204,7 +204,7 @@ Gli Avatar possono essere raggruppati in liste verticali ed orizzontali.
 
 ### Lista
 
-Utilizzando una <a href="{{ site.baseurl }}/docs/organizzare-i-contenuti/liste/#liste-per-menù-di-navigazione">Lista di link</a> con l'aggiunta della classe `.avatar-group` si ottiene una lista verticale con Avatar affiancati da link e testi.
+Utilizzando una <a href="{{ site.baseurl }}/docs/organizzare-i-contenuti/liste/#liste-per-menu-di-navigazione">Lista di link</a> con l'aggiunta della classe `.avatar-group` si ottiene una lista verticale con Avatar affiancati da link e testi.
 
 #### Lista piccola
 

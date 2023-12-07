@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Dropdown
-description: Attiva o disattiva overlay contestuali per visualizzare liste di link ed altro ancora con questi menù a tendina.
+description: Attiva o disattiva overlay contestuali per visualizzare liste di link ed altro ancora con questi menu a tendina.
 group: componenti
 toc: true
 ---
@@ -202,7 +202,7 @@ Per aprire le voci di menu verso sinistra aggiungere la classe `.dropstart` all'
 
 ### Dropdown menu
 
-Le voci del menu che viene aperto al click sul pulsante possono essere personalizzate, così come il menù stesso.
+Le voci del menu che viene aperto al click sul pulsante possono essere personalizzate, così come il menu stesso.
 
 #### Menu voci attive
 
@@ -283,7 +283,7 @@ Per aumentare la dimensione dei link contenuti nel dropdown è sufficiente aggiu
 
 #### Menu a tutta larghezza
 
-Per ottenere un dropdown menu largo quanto l'elemento che contiene il dropdown button è sufficiente aggiungere la classe`.full-width` al menù stesso. I link e testi contenuti al suo interno saranno disposti in orizzontale.
+Per ottenere un dropdown menu largo quanto l'elemento che contiene il dropdown button è sufficiente aggiungere la classe`.full-width` al menu stesso. I link e testi contenuti al suo interno saranno disposti in orizzontale.
 
 {% comment %}Example name: Menu a tutta larghezza{% endcomment %}
 {% capture example %}
@@ -303,7 +303,7 @@ Per ottenere un dropdown menu largo quanto l'elemento che contiene il dropdown b
 
 #### Menu con icona a destra
 
-Ai link contenuti nel menù può essere aggiunta un'icona illustrativa allineata a destra utilizzando le classi `.right-icon` sul link `<a>` e `.right` sul tag contenitore dell'icona.
+Ai link contenuti nel menu può essere aggiunta un'icona illustrativa allineata a destra utilizzando le classi `.right-icon` sul link `<a>` e `.right` sul tag contenitore dell'icona.
 
 {% comment %}Example name: Menu con icona a destra{% endcomment %}
 {% capture example %}
@@ -336,7 +336,7 @@ Ai link contenuti nel menù può essere aggiunta un'icona illustrativa allineata
 
 #### Menu con icona a sinistra
 
-Ai link contenuti nel menù può essere aggiunta un'icona illustrativa allineata a sinistra utilizzando le classi `.left-icon` sul link `<a>` e `.left` sul tag contenitore dell'icona.
+Ai link contenuti nel menu può essere aggiunta un'icona illustrativa allineata a sinistra utilizzando le classi `.left-icon` sul link `<a>` e `.left` sul tag contenitore dell'icona.
 
 {% comment %}Example name: Menu con icona a sinistra{% endcomment %}
 {% capture example %}

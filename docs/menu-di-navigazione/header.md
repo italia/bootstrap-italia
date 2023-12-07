@@ -849,7 +849,7 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
 
 #### Navigazione secondaria
 
-Al menù di navigazione principale può essere aggiunto anche un menù di navigazione secondario includendo a `.menu-wrapper` una seconda lista `<ul>` con classe `.navbar-nav.navbar-secondary` e la stessa struttura dati della lista `.navbar-nav` principale.
+Al menu di navigazione principale può essere aggiunto anche un menu di navigazione secondario includendo a `.menu-wrapper` una seconda lista `<ul>` con classe `.navbar-nav.navbar-secondary` e la stessa struttura dati della lista `.navbar-nav` principale.
 
 {% comment %}Example name: Header navigazione secondaria{% endcomment %}
 {% capture example %}
