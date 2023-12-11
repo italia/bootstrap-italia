@@ -72,8 +72,8 @@ maintenance:
 name: Bootstrap Italia
 platforms:
   - web
-releaseDate: '2023-12-05'
+releaseDate: '2023-12-07'
 roadmap: 'https://designers.italia.it/piano-attivita/'
 softwareType: library
-softwareVersion: v2.7.9
+softwareVersion: v2.7.10
 url: 'https://github.com/italia/bootstrap-italia'
