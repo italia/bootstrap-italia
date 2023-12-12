@@ -18,6 +18,8 @@ Bootstrap Italia applica automaticamente a tutti i form `display: block` e `widt
 
 Per raggruppare correttamente gli elementi di un modulo form è bene utilizzare la classe `.form-group` per ogni singolo blocco, in questo modo l'elemento input, l'etichetta, il testo di aiuto opzionale e la messaggistica di validazione otterranno lo stile grafico e le funzionalità per loro predisposte. Si può usare con `<fieldset>`, `<div>` o qualsiasi altro elemento.
 
+Gli elementi dei campi devono avere la classe `.form-control` applicata.
+
 ### Dimensionamento delle colonne
 
 Strutture più complesse possono essere costruite usando il sistema a griglia, da utilizzare per layout che richiedono più colonne, larghezze diverse e opzioni di allineamento aggiuntive. La classe `.row` ne assicura una corretta spaziatura.
