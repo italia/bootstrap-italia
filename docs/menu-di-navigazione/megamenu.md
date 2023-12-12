@@ -17,7 +17,7 @@ Il megamenu ha di default tema colori chiaro, si possono attivare i temi scuri s
 {% capture callout %}
 #### Aggiornamento importante
 
-Dalla versione **2.8.0** della libreria tutti gli esempi del componente megamenu e le sue applicazioni per l'uso nel componente Header Nav, sono stati ripensati per essere accessibili by default, sia nella struttura HTML che negli stili SCSS. In particolare sono state rimosse le varianti "con sezioni" e sono state rimosse le classi di stile dedicate `it-megamenu-footer`, `it-external` e `it-more`. 
+Dalla versione **2.8.0** della libreria tutti gli esempi del componente megamenu e le sue applicazioni per l'uso nel componente Header Nav, sono stati ripensati per essere accessibili by default, sia nella struttura HTML che negli stili SCSS. In particolare sono state rimosse le varianti "con sezioni" e sono state rimosse le classi di stile `it-megamenu-footer`, `it-external` e `it-more`. 
 {% endcapture %}{% include callout.html content=callout type="danger" %}
 
 {% capture callout %}
@@ -32,13 +32,15 @@ Il megamenu è un componente della navigazione principale del sito che richiede 
 - distinguere le etichette dei link in modo chiaro: non devono essere presenti link con la stessa etichetta che portino a destinazioni diverse. Nel caso di più link "Esplora tutti" si può ad esempio aggiungere " i contenuti della sezione X", oppure, si può usare `<span class="visually-hidden"> i contenuti della sezione X</span>` per comunicare la distinzione almeno alle tecnologie assistive.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %} 
 
-## Megamenu per sezioni del sito
+## Megamenu completo
  
-Variante per dare accesso a una intera sezione di un'architettura dell'informazione ben strutturata. Permette all'utente di comprendere l'organizzazione dei contenuti e di saltare direttamente a pagine foglia. È possibile usare un **esempio in produzione** nel sito [Designers Italia](https://designers.italia.it).
+Variante per dare accesso a una intera sezione di un'architettura dell'informazione ben strutturata. Permette all'utente di comprendere l'organizzazione dei contenuti e di saltare direttamente a pagine foglia. 
+
+È possibile navigare un **esempio di applicazione** nel sito [Designers Italia](https://designers.italia.it).
 
 Permette di includere **immagine e testo descrittivo** per una introduzione ai contenuti della sezione. Può contenere un link **"Esplora la sezione X"** per dare accesso a una copertina della sezione. Se il link ha la classe `active` è riferito alla pagina corrente. Si possono accostare più megamenu nella navbar per dare accesso a sezioni diverse del sito. Se il pulsante ha la classe `active` è riferito alla sezione corrente. 
 
-{% comment %}Example name: Per sezioni del sito{% endcomment %}
+{% comment %}Example name: Completo{% endcomment %}
 {% capture example %}
 <!-- navbar -->
 <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Menu principale">
@@ -232,11 +234,11 @@ Permette di includere **immagine e testo descrittivo** per una introduzione ai c
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
-### Versione scura per desktop
+### Completo scuro desktop
 
 Il megamenu prende il tema colori dark su desktop se è dentro un `<nav>` che ha applicata la classe `.theme-light-desk`. 
 
-{% comment %}Example name: Variante scura per desktop{% endcomment %}
+{% comment %}Example name: Completo scuro desktop{% endcomment %}
 {% capture example %}
 <nav class="navbar navbar-expand-lg has-megamenu theme-light-desk" aria-label="Menu principale">
   <button type="button" aria-label="Mostra o nascondi il menu" class="custom-navbar-toggler" aria-controls="menu" aria-expanded="false" data-bs-toggle="navbarcollapsible" data-bs-target="#navbar-B">
@@ -342,11 +344,11 @@ Il megamenu prende il tema colori dark su desktop se è dentro un `<nav>` che ha
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
-### Versione scura per mobile
+### Completo scuro mobile
 
 Il megamenu prende il tema colori dark su mobile se è dentro un `<nav>` che ha applicata la classe `.theme-dark-mobile`. 
 
-{% comment %}Example name: Variante scusa per mobile{% endcomment %}
+{% comment %}Example name: Completo scuro mobile{% endcomment %}
 {% capture example %}
 <nav class="navbar navbar-expand-lg has-megamenu theme-dark-mobile" aria-label="Menu principale">
   <button type="button" aria-label="Mostra o nascondi il menu" class="custom-navbar-toggler" aria-controls="menu" aria-expanded="false" data-bs-toggle="navbarcollapsible" data-bs-target="#navbar-C">
@@ -570,7 +572,7 @@ La variante base può contenere liste di link organizzate in tre colonne e conte
 
 Come nella variante per sezioni del sito è possibile aggiungere un link "Esplora la sezione X" come primo link. Se il link ha la classe `active` è riferito alla sezione corrente.  
 
-{% comment %}Example name: Con link esplora la sezione{% endcomment %}
+{% comment %}Example name: Base, con link esplora la sezione{% endcomment %}
 {% capture example %}
 <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Menu principale">
   <button type="button" aria-label="Mostra o nascondi il menu" class="custom-navbar-toggler" aria-controls="menu" aria-expanded="false" data-bs-toggle="navbarcollapsible" data-bs-target="#navbar-E">
@@ -689,7 +691,7 @@ Come nella variante per sezioni del sito è possibile aggiungere un link "Esplor
 
 Nel caso le voci da mostrare fossero numerose, è possibile aggiungere un link "Esplora tutti i contenuti di Y" che porti a una lista completa. Se il link ha la classe `active` è riferito alla pagina corrente.  
 
-{% comment %}Example name: Con link esplora tutti{% endcomment %}
+{% comment %}Example name: Base, con link esplora tutti{% endcomment %}
 {% capture example %}
 <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Menu principale">
   <button type="button" aria-label="Mostra o nascondi il menu" class="custom-navbar-toggler" aria-controls="menu" aria-expanded="false" data-bs-toggle="navbarcollapsible" data-bs-target="#navbar-F">
@@ -828,7 +830,7 @@ Nel caso le voci da mostrare fossero numerose, è possibile aggiungere un link "
 I megamenu possono contenere altri link correlati, che idealmente possono funzionare come "call to action" rispetto ai contenuti del megamenu.  
 Sono semanticamente a seguire delle liste di link, posizionati in basso o in una colonna destra, allineati in orizzontale o verticale usando le proprietà `d-flex`. 
 
-{% comment %}Example name: Con call to action in basso{% endcomment %}
+{% comment %}Example name: Base, con call to action in basso{% endcomment %}
 {% capture example %}
 <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Menu principale">
   <button type="button" aria-label="Mostra o nascondi il menu" class="custom-navbar-toggler" aria-controls="menu" aria-expanded="false" data-bs-toggle="navbarcollapsible" data-bs-target="#navbar-G">
@@ -952,7 +954,7 @@ Sono semanticamente a seguire delle liste di link, posizionati in basso o in una
 
 ### Con call to action a destra
 
-{% comment %}Example name: Con call to action a destra{% endcomment %}
+{% comment %}Example name: Base, con call to action a destra{% endcomment %}
 {% capture example %}
 <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Menu principale">
   <button type="button" aria-label="Mostra o nascondi il menu" class="custom-navbar-toggler" aria-controls="menu" aria-expanded="false" data-bs-toggle="navbarcollapsible" data-bs-target="#navbar-H">
