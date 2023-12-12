@@ -17,7 +17,7 @@ Il megamenu ha di default tema colori chiaro, si possono attivare i temi scuri s
 {% capture callout %}
 #### Aggiornamento importante
 
-Dalla versione **2.8.0** della libreria tutti gli esempi del componente megamenu e le sue applicazioni per l'uso nel componente Header Nav, sono stati ripensati per essere accessibili by default, sia nella struttura HTML che negli stili SCSS. In particolare sono state rimosse le varianti "con sezioni" e sono state rimosse le classi di stile `it-megamenu-footer`, `it-external` e `it-more`. 
+Dalla versione **2.8.0** della libreria tutti gli esempi del componente megamenu e le sue applicazioni per l'uso nel componente Header Nav, sono stati ripensati per essere accessibili by default, sia nella struttura HTML che negli stili SCSS. In particolare sono state rimosse le varianti "con sezioni" e sono state rimosse le classi di stile locali `it-megamenu-footer`, `it-external`, `it-more`, `divider`, `h3`, `link-list-heading`. 
 {% endcapture %}{% include callout.html content=callout type="danger" %}
 
 {% capture callout %}
