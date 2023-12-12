@@ -6,16 +6,6 @@
         // menu vrapper
         .menu-wrapper {
           background: $navigation-dark-bg-color;
-          // heading megacolumn
-          .nav-item.megamenu .dropdown-menu {
-            .col-12:not(:first-child) {
-              .it-heading-megacolumn {
-                &:before {
-                  background: $navigation-light-megamenu-separator-color;
-                }
-              }
-            }
-          }
           .navbar-nav {
             .dropdown-menu {
               .link-list {
@@ -38,20 +28,6 @@
         }
         /*lista menu*/
         .navbar-nav {
-          // external link
-          .it-external {
-            .link-list-wrapper {
-              .link-list {
-                li.it-more {
-                  a {
-                    &:before {
-                      background: $navigation-dark-separator-color;
-                    }
-                  }
-                }
-              }
-            }
-          }
           li {
             &.megamenu {
               // footer cta
@@ -113,12 +89,6 @@
       }
       //dropdown
       .dropdown-menu {
-        h3 {
-          font-weight: 600;
-          &.it-heading-megacolumn {
-            color: $navigation-dark-text-color;
-          }
-        }
         .link-list-wrapper {
           ul {
             li {
@@ -184,20 +154,6 @@
           li {
             // megamenu variation
             &.megamenu {
-              // external link
-              .it-external {
-                .link-list-wrapper {
-                  .link-list {
-                    li.it-more {
-                      a {
-                        &:before {
-                          background: $navigation-light-megamenu-separator-color;
-                        }
-                      }
-                    }
-                  }
-                }
-              }
               > button.nav-link {
                 &::before {
                   background-color: $navigation-light-text-color;
@@ -267,12 +223,6 @@
       // dropdown
       .dropdown-menu {
         background: $navigation-light-text-color;
-        h3 {
-          font-weight: 600;
-          &.it-heading-megacolumn {
-            color: $navigation-light-bg-color;
-          }
-        }
         &:before {
           background: $navigation-light-text-color;
         }

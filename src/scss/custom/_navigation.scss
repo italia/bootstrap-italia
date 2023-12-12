@@ -211,14 +211,6 @@
       padding-right: $navigation-h-padding;
       margin-bottom: $navigation-h-padding;
 
-      h3,
-      .link-list-heading {
-        text-transform: uppercase;
-        font-size: $megamenu-heading-text-size;
-        font-weight: $megamenu-heading-font-weight;
-        letter-spacing: $megamenu-heading-letter-spacing;
-      }
-
       ul li {
         a {
           &.list-item.active {
@@ -243,11 +235,6 @@
           }
         }
 
-        .divider {
-          width: $megamenu-link-small-line-width;
-          background: $neutral-2;
-          margin-left: $navigation-h-padding;
-        }
       }
     }
   }
@@ -529,18 +516,6 @@
         padding-left: 0;
         padding-right: 0;
         margin-bottom: 0;
-
-        h3,
-        .link-list-heading {
-          color: $neutral-1;
-        }
-
-        a {
-          h3,
-          .link-list-heading {
-            color: $primary;
-          }
-        }
 
         ul li {
           a {

@@ -26,9 +26,6 @@
                         align-items: center;
                       }
                     }
-                    .divider {
-                      display: none;
-                    }
                   }
                 }
               }
@@ -71,20 +68,6 @@
                   padding: 8px 16px !important;
                 }
               }
-            }
-
-            > .it-external {
-              padding: 0;
-            }
-
-            .margin-right-col {
-              .it-external {
-                padding: 0 $grid-gutter-width * 0.5;
-              }
-            }
-
-            .it-external {
-              width: 100%;
             }
 
             .it-heading-link-wrapper {
@@ -208,20 +191,6 @@
           }
         }
       }
-      .it-external {
-        width: 100%;
-        padding: 0;
-        .link-list-wrapper {
-          .link-list li.it-more a:before {
-            content: '';
-            display: block;
-            height: 1px;
-            width: $megamenu-link-small-line-width;
-            background: $color-border-subtle;
-            margin-bottom: $megamenu-link-small-line-margin-bottom;
-          }
-        }
-      }
     }
     .navbar-collapsable {
       .menu-wrapper {
@@ -283,15 +252,6 @@
                         span {
                           font-weight: 600;
                         }
-                      }
-                      .divider {
-                        height: 1px;
-                        display: block;
-                        background: $color-border-subtle;
-                        margin: 0 0 0 $megamenu-linklist-vertical-link-padding;
-                        width: $megamenu-link-small-line-width;
-                        margin-top: $megamenu-liklist-vertical-margin-top;
-                        margin-bottom: $megamenu-liklist-vertical-margin-bottom;
                       }
                     }
                   }

@@ -12,54 +12,9 @@
           // menu vrapper
           .menu-wrapper {
             background: $navigation-dark-bg-color;
-            // heading megacolumn
-            .nav-item.megamenu .dropdown-menu {
-              .col-12:not(:first-child) {
-                .it-heading-megacolumn {
-                  &:before {
-                    background: $navigation-light-megamenu-separator-color;
-                  }
-                }
-              }
-            }
-            .navbar-nav {
-              .dropdown-menu {
-                .link-list-wrapper {
-                  h3,
-                  .link-list-heading {
-                    color: $navigation-dark-text-color;
-                  }
-                }
-                // h3 separator
-                .col-12:not(:first-child) {
-                  .link-list-wrapper {
-                    h3,
-                    .link-list-heading {
-                      &:before {
-                        background: $navigation-dark-separator-color;
-                      }
-                    }
-                  }
-                }
-              }
-            }
           }
           /*lista menu*/
           .navbar-nav {
-            // external link
-            .it-external {
-              .link-list-wrapper {
-                .link-list {
-                  li.it-more {
-                    a {
-                      &:before {
-                        background: $navigation-dark-separator-color;
-                      }
-                    }
-                  }
-                }
-              }
-            }
             li {
               &.dropdown {
                 .icon {
@@ -71,12 +26,6 @@
                 .it-megamenu-footer {
                   background: $navigation-light-megamenu-footer-bg-color;
                 }
-                // asymettrical column
-                .it-heading-megacolumn-wrapper {
-                  .it-heading-megacolumn {
-                    color: $navigation-dark-text-color;
-                  }
-                }
                 // vertical cta
                 .dropdown-menu {
                   a.it-heading-link,
@@ -87,16 +36,6 @@
                     }
                   }
                   .it-vertical {
-                    // background: $navigation-light-megamenu-footer-bg-color;
-                    .link-list-wrapper {
-                      .link-list {
-                        li {
-                          .divider {
-                            background: $navigation-light-megamenu-separator-color;
-                          }
-                        }
-                      }
-                    }
                     // description content
                     &.it-description {
                       p {
@@ -137,12 +76,6 @@
         }
         //dropdown
         .dropdown-menu {
-          .link-list-heading {
-            font-weight: 600;
-            &.it-heading-megacolumn {
-              color: $navigation-dark-text-color;
-            }
-          }
           a.it-heading-link,
           a.it-footer-link {
             color: $navigation-dark-text-color;
@@ -170,17 +103,6 @@
                   i {
                     color: $navigation-dark-text-color;
                   }
-                  h3,
-                  .link-list-heading {
-                    color: $navigation-dark-text-color;
-                  }
-                }
-                h3,
-                .link-list-heading {
-                  color: $navigation-dark-text-color;
-                }
-                .divider {
-                  background: $navigation-dark-separator-color;
                 }
               }
             }
@@ -213,39 +135,12 @@
           // menu vrapper
           .menu-wrapper {
             background: $navigation-light-bg-color;
-            .navbar-nav {
-              .dropdown-menu {
-                h3,
-                .link-list-heading {
-                  color: $navigation-light-bg-color;
-                }
-                .link-list {
-                  h3 {
-                    color: $navigation-light-bg-color;
-                  }
-                }
-              }
-            }
           }
           /*lista menu*/
           .navbar-nav {
             li {
               // megamenu variation
               &.megamenu {
-                // external link
-                .it-external {
-                  .link-list-wrapper {
-                    .link-list {
-                      li.it-more {
-                        a {
-                          &:before {
-                            background: $navigation-light-megamenu-separator-color;
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
                 > button.nav-link {
                   &::before {
                     background-color: $navigation-light-text-color;
@@ -280,24 +175,9 @@
                   .it-footer-link-wrapper-vertical {
                     border-color: $navigation-light-megamenu-separator-color;
                   }
-                  // asymettrical column
-                  .it-heading-megacolumn-wrapper {
-                    .it-heading-megacolumn {
-                      color: $navigation-light-bg-color;
-                    }
-                  }
                   // vertical cta
                   .it-vertical {
                     // background: $navigation-light-megamenu-footer-bg-color;
-                    .link-list-wrapper {
-                      .link-list {
-                        li {
-                          .divider {
-                            background: $navigation-light-megamenu-separator-color;
-                          }
-                        }
-                      }
-                    }
                   }
                 }
                 // description content
@@ -320,12 +200,6 @@
         //dropdown
         .dropdown-menu {
           background: $navigation-light-text-color;
-          h3 {
-            font-weight: 600;
-            &.it-heading-megacolumn {
-              color: $navigation-light-bg-color;
-            }
-          }
           &:before {
             background: $navigation-light-text-color;
           }
@@ -349,15 +223,6 @@
                   i {
                     color: $navigation-light-bg-color;
                   }
-                  h3 {
-                    color: $navigation-light-bg-color;
-                  }
-                }
-                h3 {
-                  color: $navigation-light-bg-color;
-                }
-                .divider {
-                  background: $navigation-light-separator-color;
                 }
               }
             }
