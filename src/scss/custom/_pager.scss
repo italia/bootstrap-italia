@@ -24,6 +24,15 @@ nav.pagination-wrapper {
       font-weight: $pager-font-weight;
       text-align: center;
     }
+    &.justify-content-end {
+      display: grid;
+    }
+    &.justify-content-center {
+      width: 100%;
+      .pagination {
+        justify-content: center;
+      }
+    }
   }
 
   //jump to page
