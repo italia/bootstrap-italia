@@ -248,7 +248,6 @@ $navigation-dark-separator-color: $primary-c5 !default; // missing in UI kit
 // navigation light theme (desktop)
 $navigation-light-bg-color: $white !default;
 $navigation-light-text-color: $primary !default;
-$navigation-light-megamenu-footer-bg-color: $color-background-primary-lighter !default; // UI kit
 $navigation-light-separator-color: $neutral-1-a2 !default;
 $navigation-light-megamenu-separator-color: $gray-border !default; // UI kit
 
@@ -284,25 +283,17 @@ $megamenu-padding-top-desktop: $v-gap * 4;
 $megamenu-column-gap: $v-gap * 3;
 $megamenu-link-small-line-width: 65px;
 $megamenu-link-small-line-margin-bottom: $v-gap;
-$megamenu-heading-line-height: 1.5rem;
+$megamenu-heading-line-height: 1.2rem;
 $megamenu-heading-font-weight: 600;
-$megamenu-heading-bottom-margin: 0.5rem;
+$megamenu-heading-bottom-margin: 24px;
 $megamenu-heading-text-size: 1.125rem;
-$megamenu-heading-margin-top: 5px;
-$megamenu-heading-letter-spacing: 1px;
-$megamenu-link-arrow-size: 0.75rem;
-$megamenu-footer-bg-color: $color-background-primary-lighter !default; // UI kit
-$megamenu-link-more-link-list-distance-mobile: $v-gap;
-$megamenu-linklist-link-line-height: 1rem;
+$megamenu-heading-margin-x: 28px;
+$megamenu-linklist-link-line-height: inherit;
 $megamenu-linklist-link-v-padding: 0.5em;
-$megamenu-liklist-vertical-margin-top: 25px;
-$megamenu-liklist-vertical-margin-bottom: 16px;
 $megamenu-linklist-vertical-link-padding: 36px;
 $megamenu-vertical-description-font-size: 1rem;
 
 // Linklist footer megamenu
-$link-list-megamenu-footer-bg-color: $neutral-2 !default; // TODO: Not used, consider to remove it
-$link-list-megamenu-footer-link-padding: 16px;
 $link-list-footer-distance-bottom: 0.5rem;
 
 // Pager
