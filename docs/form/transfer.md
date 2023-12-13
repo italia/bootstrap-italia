@@ -109,24 +109,24 @@ Nell'esempio che segue la struttura è colonnare simmetrica nella versione deskt
     <div class="col-xs-12 col-md-2">
       <!-- transfer buttons-->
       <div class="it-transfer-buttons">
-        <a class="transfer" href="#" aria-label="Sposta avanti">
+        <a class="transfer" href="#" role="button" aria-label="Sposta avanti">
           <svg class="icon">
             <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
           </svg>
         </a>
-        <span class="visually-hidden">Label for aroow right</span>
-        <a class="backtransfer" href="#" aria-label="Sposta indietro">
+        <span class="visually-hidden">Etichetta per freccia destra</span>
+        <a class="backtransfer" href="#" role="button" aria-label="Sposta indietro">
           <svg class="icon">
             <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-left"></use>
           </svg>
         </a>
-        <span class="visually-hidden">Label for aroow left</span>
-        <a class="reset" href="#" aria-label="Reset">
+        <span class="visually-hidden">Etichetta for freccia sinistra</span>
+        <a class="reset" href="#" role="button" aria-label="Reset">
           <svg class="icon">
-            <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
+            <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-restore"></use>
           </svg>
         </a>
-        <span class="visually-hidden">Label for reset icon</span>
+        <span class="visually-hidden">Etichetta per icona di reset</span>
       </div>
     </div>
     <div class="col-xs-12 col-md-5">
