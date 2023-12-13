@@ -22,10 +22,6 @@
                 }
               }
               &.megamenu {
-                // footer cta
-                .it-megamenu-footer {
-                  background: $navigation-light-megamenu-footer-bg-color;
-                }
                 // vertical cta
                 .dropdown-menu {
                   a.it-heading-link,
@@ -157,10 +153,6 @@
                   &:before {
                     background-color: $navigation-light-text-color;
                   }
-                }
-                // footer cta
-                .it-megamenu-footer {
-                  background: $navigation-light-megamenu-footer-bg-color;
                 }
                 .dropdown-menu {
                   a.it-heading-link,
