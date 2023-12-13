@@ -201,6 +201,7 @@ textarea {
     padding: $input-spacing-y $input-spacing-x;
     border-bottom: 1px solid $input-border;
     border-radius: 0;
+    min-height: 2.5rem;
   }
 
   .input-group-prepend {
