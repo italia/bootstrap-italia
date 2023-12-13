@@ -355,11 +355,11 @@ Gruppo di Avatar sovrapposti di dimensione piccola con classe `.size-sm`.
   <li>
     <div class="avatar avatar-dropdown size-sm">
       <div class="dropdown">
-        <a class="btn btn-dropdown dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuToggle1" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <span class="visually-hidden">Visualizza altri 4 utenti</span>
           <span aria-hidden="true">+4</span>
-        </a>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuToggle1">
           <div class="link-list-wrapper">
             <ul class="link-list">
               <li>
@@ -440,11 +440,11 @@ Gruppo di Avatar sovrapposti di dimensione media con classe `.size-md`.
   <li>
     <div class="avatar avatar-dropdown size-md">
       <div class="dropdown">
-        <a class="btn btn-dropdown dropdown-toggle" href="#" role="button" id="dropdownMenuLink2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuToggle2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <span class="visually-hidden">Visualizza altri 4 utenti</span>
           <span aria-hidden="true">+4</span>
-        </a>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink2">
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuToggle2">
           <div class="link-list-wrapper">
             <ul class="link-list">
               <li>
