@@ -65,7 +65,7 @@ Il cambio lingua è gestito con il componente [dropdown]({{ site.baseurl }}/docs
           </div>
           <div class="it-header-slim-right-zone">
             <div class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <span class="visually-hidden">Selezione lingua: lingua selezionata</span>
                 <span>ITA</span>
                 <svg class="icon d-none d-lg-block">
@@ -113,7 +113,7 @@ Il modificatore `.btn-full` è disponibile anche con il tema chiaro attivato da 
           <a class="d-lg-block navbar-brand" href="#">Ente appartenenza</a>
           <div class="it-header-slim-right-zone">
             <div class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <span class="visually-hidden">Selezione lingua: lingua selezionata</span>
                 <span>ITA</span>
                 <svg class="icon d-none d-lg-block">
@@ -179,7 +179,7 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
           </div>
           <div class="it-header-slim-right-zone">
             <div class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <span class="visually-hidden">Selezione lingua: lingua selezionata</span>
                 <span>ITA</span>
                 <svg class="icon d-none d-lg-block">
@@ -439,7 +439,7 @@ Per cambiare tema all'header centrale è sufficiente aggiungere la classe `theme
                 <li class="nav-item"><a class="nav-link" href="#"><span>Link 3</span></a></li>
                 <li class="nav-item"><a class="nav-link" href="#"><span>Link 4</span></a></li>
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="mainNavDropdown1">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="mainNavDropdown1">
                     <span>Menu Dropdown</span>
                     <svg class="icon icon-xs">
                       <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use>
@@ -558,7 +558,7 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
                 <li class="nav-item"><a class="nav-link" href="#"><span>Link 3</span></a></li>
                 <li class="nav-item"><a class="nav-link" href="#"><span>Link 4</span></a></li>
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="mainNavDropdown0">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="mainNavDropdown0">
                     <span>Menu Dropdown</span>
                     <svg class="icon icon-xs">
                       <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use>
@@ -665,7 +665,7 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
                 <li class="nav-item"><a class="nav-link" href="#"><span>Link 3</span></a></li>
                 <li class="nav-item"><a class="nav-link" href="#"><span>Link 4</span></a></li>
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="mainNavDropdown2">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="mainNavDropdown2">
                     <span>Menu Dropdown</span>
                     <svg class="icon icon-xs">
                       <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use>
@@ -772,7 +772,7 @@ Per modificare la versione dell'Header Nav è sufficiente aggiungere le seguenti
                 <li class="nav-item"><a class="nav-link" href="#"><span>Link 3</span></a></li>
                 <li class="nav-item"><a class="nav-link" href="#"><span>Link 4</span></a></li>
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="mainNavDropdown3">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="mainNavDropdown3">
                     <span>Menu Dropdown</span>
                     <svg class="icon icon-xs">
                       <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use>
@@ -925,7 +925,7 @@ Al menu di navigazione principale può essere aggiunto anche un menu di navigazi
             </div>
             <div class="it-header-slim-right-zone">
               <div class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   <span class="visually-hidden">Selezione lingua: lingua selezionata</span>
                   <span>ITA</span>
                   <svg class="icon d-none d-lg-block">
@@ -1040,7 +1040,7 @@ Al menu di navigazione principale può essere aggiunto anche un menu di navigazi
                     <li class="nav-item"><a class="nav-link" href="#"><span>Link 3</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="#"><span>Link 4</span></a></li>
                     <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="mainNavDropdownC1">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="mainNavDropdownC1">
                         <span>Menu Dropdown</span>
                         <svg class="icon icon-xs">
                           <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use>
@@ -1150,7 +1150,7 @@ Verrà creata un'ombra per enfatizzare l'Header rispetto alla pagina in cui è c
             </div>
             <div class="it-header-slim-right-zone">
               <div class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   <span class="visually-hidden">Selezione lingua: lingua selezionata</span>
                   <span>ITA</span>
                   <svg class="icon d-none d-lg-block">
@@ -1265,7 +1265,7 @@ Verrà creata un'ombra per enfatizzare l'Header rispetto alla pagina in cui è c
                     <li class="nav-item"><a class="nav-link" href="#"><span>Link 3</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="#"><span>Link 4</span></a></li>
                     <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="mainNavDropdownC2">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="mainNavDropdownC2">
                         <span>Menu Dropdown</span>
                         <svg class="icon icon-xs">
                           <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use>
