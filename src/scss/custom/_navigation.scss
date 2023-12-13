@@ -258,7 +258,8 @@
 }
 
 //reset icon on megamenu
-.nav-item.megamenu > a:before {
+.nav-item.megamenu > a:before,
+.nav-item.megamenu > button:before {
   display: none;
 }
 

@@ -159,7 +159,8 @@
 @media (min-width: #{map-get($grid-breakpoints, lg)}) {
   .navbar-nav {
     .megamenu {
-      a.dropdown-toggle:before {
+      a.dropdown-toggle:before,
+      button.dropdown-toggle:before {
         z-index: 2;
       }
       .dropdown-menu {

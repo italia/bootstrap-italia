@@ -9,7 +9,8 @@
 @include media-breakpoint-up(lg) {
   .it-header-navbar-wrapper {
     background: $header-center-bg-color;
-    .nav-item.megamenu > a.dropdown-toggle:before {
+    .nav-item.megamenu > a.dropdown-toggle:before,
+    .nav-item.megamenu > button.dropdown-toggle:before {
       bottom: -$header-nav-icon-arrow-megamenu-distance;
     }
     nav {
