@@ -110,19 +110,6 @@
   }
 }
 
-//label
-label {
-  &.input-number-label {
-    display: block;
-    color: $color-text-base;
-    font-weight: 600;
-    font-size: $small-font-size;
-    cursor: text;
-    width: 100%;
-    padding: 0 $input-spacing-x;
-  }
-}
-
 //Desktop
 @include media-breakpoint-up(xl) {
   .input-number {
