@@ -978,7 +978,7 @@ Questi seguono le liste di link, posizionati in basso o in una colonna destra, a
           <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-base-H" data-focus-mouse="false">
               <span>Megamenu</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
           </button>
-          <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-base-H>
+          <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-base-H">
             <div class="megamenu pb-5 pt-3 py-lg-0">
               <div class="row">
                 <div class="col-12 col-lg-8">
