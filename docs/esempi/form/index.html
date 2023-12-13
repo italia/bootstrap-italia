@@ -11,11 +11,11 @@
 
 <title>Validazione Form · Bootstrap Italia</title>
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202312131542" rel="stylesheet" />
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202312131842" rel="stylesheet" />
 
 <!-- Documentation extras -->
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202312131542" rel="stylesheet" />
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202312131842" rel="stylesheet" />
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico" />
@@ -167,12 +167,16 @@
         </div>
       </div>
     </div>
-
     <div class="row">
       <div class="col-12">
         <div class="form-group">
-          <label for="description">Testo descrizione</label>
-          <textarea class="form-control" id="description" rows="3"></textarea>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <div class="input-group-text"><svg class="icon icon-sm"><use href="/dist/svg/sprites.svg#it-pencil"></use></svg></div>
+            </div>
+            <label class="active" for="etichetta_input_group">Con Etichetta e placeholder</label>
+            <input type="text" class="form-control" id="etichetta_input_group" name="etichetta_input_group" placeholder="Lorem Ipsum">
+          </div>
         </div>
       </div>
     </div>
@@ -471,6 +475,17 @@
           errorMessage: 'Deve essere maggiore di 80',
         }
       ])
+      .addField('#etichetta_input_group', [
+        {
+          rule: 'required',
+          errorMessage: 'Questo campo è richiesto',
+        },
+        {
+          rule: 'minNumber',
+          value: 80,
+          errorMessage: 'Deve essere maggiore di 80',
+        }
+      ])
       .addField('#age', [
         {
           rule: 'required',
@@ -534,12 +549,6 @@
           errorMessage: 'Questo campo è richiesto',
         },
       ])
-		  .addField('#description', [
-			{
-			  rule: 'required',
-			  errorMessage: 'Questo campo è richiesto'
-			},
-		  ])
       .addField('#toggleEsempio1a', [
         {
           rule: 'required',
@@ -589,7 +598,7 @@
   })
 </script>
  
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202312131542"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202312131842"></script>
 <script>
   bootstrap.loadFonts('/bootstrap-italia/dist/fonts')
 </script><!-- Notification per tornare alla pagina principale -->

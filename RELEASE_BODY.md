@@ -1,6 +1,5 @@
-## [2.7.11](https://github.com/italia/bootstrap-italia/compare/v2.7.10...v2.7.11) (2023-12-13)
+## [2.7.12](https://github.com/italia/bootstrap-italia/compare/v2.7.11...v2.7.12) (2023-12-13)
 
 ### Bug Fixes
 
-* input height ([287d8b9](https://github.com/italia/bootstrap-italia/commit/287d8b9a7dfe9485c806cf94551b13bb1dbded68))
-* label consistency ([1ecec9b](https://github.com/italia/bootstrap-italia/commit/1ecec9bae1be43cf93bed0d55dad66b8116417cc))
+* input group text height ([3f53e1a](https://github.com/italia/bootstrap-italia/commit/3f53e1a3bc826f22e753b5e8def97393c92a8acf))
