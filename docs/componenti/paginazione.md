@@ -273,10 +273,10 @@ La funzionalità di changer permette di scegliere da un dropdown la quantità di
     </li>
   </ul>
   <div class="dropdown">
-    <a class="btn btn-dropdown dropdown-toggle" href="#" role="button" id="pagerChanger" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Salta alla pagina">
+    <button class="btn btn-dropdown dropdown-toggle" type="button" id="pagerChanger" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Salta alla pagina">
     10/pagina
     <svg class="icon icon-primary icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
-    </a>
+    </button>
     <div class="dropdown-menu" aria-labelledby="pagerChanger">
       <div class="link-list-wrapper">
         <ul class="link-list">
