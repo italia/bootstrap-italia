@@ -65,6 +65,11 @@ fieldset {
           display: none;
         }
       }
+      & + .input-number-percentage {
+        .input-group-text {
+          display: none;
+        }
+      }
     }
   }
 
@@ -127,6 +132,7 @@ textarea {
   background-position: center right !important;
   background-repeat: no-repeat !important;
   background-size: 45px 45% !important;
+  min-height: 2.5rem;
   &:disabled,
   &[readonly] {
     cursor: not-allowed;
