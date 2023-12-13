@@ -37,7 +37,7 @@ Cosa cambia nel megamenu dalla versione **2.8.0** della libreria:
 
 ## Megamenu completo
  
-Variante per dare accesso a una intera sezione di un'architettura dell'informazione ben strutturata. Permette all'utente di comprendere l'organizzazione dei contenuti e di saltare direttamente a pagine foglia. 
+Variante completa per dare ad esempio accesso a una intera sezione di un sito con un'architettura dell'informazione ben strutturata. Permette all'utente di comprendere l'organizzazione dei contenuti e di saltare direttamente a pagine foglia. 
 
 È possibile navigare un **esempio di applicazione** nel sito [Designers Italia](https://designers.italia.it).
 
@@ -459,7 +459,7 @@ Il megamenu prende il tema colori dark su mobile se è dentro un `<nav>` che ha 
 
 ## Megamenu base
  
-La variante base può contenere liste di link organizzate in tre colonne e contenere o meno link correlati come "Esplora la sezione X", "Esplora tutti i contenuti Y" o altre call to action.  
+Variante base che può contenere liste di link organizzate in tre colonne ed eventuali link correlati come "Esplora la sezione X", "Esplora tutti i contenuti Y" o di altro tipo.  
 
 {% comment %}Example name: Base{% endcomment %}
 {% capture example %}
@@ -573,7 +573,7 @@ La variante base può contenere liste di link organizzate in tre colonne e conte
 
 ### Con link "Esplora la sezione"
 
-Come nella variante per sezioni del sito è possibile aggiungere un link "Esplora la sezione X" come primo link. Se il link ha la classe `active` è riferito alla sezione corrente.  
+Come nella variante completa è possibile aggiungere un link "Esplora la sezione X" come primo link. Se il link ha la classe `active` è riferito alla sezione corrente del sito.  
 
 {% comment %}Example name: Base, con link esplora la sezione{% endcomment %}
 {% capture example %}
@@ -692,7 +692,7 @@ Come nella variante per sezioni del sito è possibile aggiungere un link "Esplor
 
 ### Con link "Esplora tutti"
 
-Nel caso le voci da mostrare fossero numerose, è possibile aggiungere un link "Esplora tutti i contenuti di Y" che porti a una lista completa. Se il link ha la classe `active` è riferito alla pagina corrente.  
+Nel caso le voci da mostrare fossero numerose, è possibile aggiungere un link "Esplora tutti i contenuti Y" che porti a una lista completa. Se il link ha la classe `active` è riferito alla vista corrente.  
 
 {% comment %}Example name: Base, con link esplora tutti{% endcomment %}
 {% capture example %}
@@ -830,8 +830,8 @@ Nel caso le voci da mostrare fossero numerose, è possibile aggiungere un link "
 
 ### Con call to action in basso
 
-I megamenu possono contenere altri link correlati, che idealmente possono funzionare come "call to action" rispetto ai contenuti del megamenu.  
-Sono semanticamente a seguire delle liste di link, posizionati in basso o in una colonna destra, allineati in orizzontale o verticale usando le proprietà `d-flex`. 
+I megamenu possono contenere altri link correlati, che possono avere la funzione di "call to action" rispetto agli altri contenuti del megamenu.  
+Questi seguono le liste di link, posizionati in basso o in una colonna destra, allineati in orizzontale o verticale usando le proprietà `d-flex`. 
 
 {% comment %}Example name: Base, con call to action in basso{% endcomment %}
 {% capture example %}
