@@ -12,7 +12,7 @@
   }
 }
 
-.row.row-column-border>[class^='col-'] .navbar {
+.row.row-column-border > [class^='col-'] .navbar {
   padding: 8px 0;
 }
 
@@ -69,7 +69,7 @@
       padding: $navigation-h-padding 0;
 
       li {
-        >button.nav-link {
+        > button.nav-link {
           border: none;
           display: block;
           background: transparent;
@@ -96,7 +96,6 @@
           }
 
           &.disabled {
-
             span,
             .icon {
               opacity: $navigation-disabled-item-mobile-opacity;
@@ -132,7 +131,6 @@
           }
 
           &.disabled {
-
             span,
             .icon {
               opacity: $navigation-disabled-item-mobile-opacity;
@@ -268,8 +266,8 @@
 }
 
 //reset icon on megamenu
-.nav-item.megamenu>a:before,
-.nav-item.megamenu>button:before {
+.nav-item.megamenu > a:before,
+.nav-item.megamenu > button:before {
   display: none;
 }
 
@@ -338,7 +336,7 @@
 
 //Tablet horizontal / small desktop
 @media (min-width: #{map-get($grid-breakpoints, lg)}) {
-  .row.row-column-border>[class^='col-'] .navbar {
+  .row.row-column-border > [class^='col-'] .navbar {
     padding: 0;
   }
 
@@ -421,7 +419,6 @@
             }
 
             &.disabled {
-
               span,
               .icon {
                 opacity: $navigation-disabled-item-opacity;
@@ -506,8 +503,8 @@
   .nav-item.megamenu {
     position: static;
 
-    >a.dropdown-toggle,
-    >button.dropdown-toggle {
+    > a.dropdown-toggle,
+    > button.dropdown-toggle {
       position: relative;
 
       &:before {
@@ -527,7 +524,7 @@
       }
     }
 
-    >button.dropdown-toggle:before {
+    > button.dropdown-toggle:before {
       bottom: -$dropdown-menu-notch-base-size - 8;
     }
 
