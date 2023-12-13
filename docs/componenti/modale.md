@@ -99,9 +99,7 @@ Per chiudere la modale, si può utilizzare un pulsante con classe `.btn-close`.
 {% comment %}Example name: Pulsante di chiusura, dettaglio{% endcomment %}
 {% capture example %}
 <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Chiudi finestra modale">
-<svg class="icon">
-<use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use>
-</svg>
+  <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
 </button>
 {% endcapture %}{% include example.html content=example %}
 
