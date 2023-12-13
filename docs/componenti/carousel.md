@@ -73,9 +73,7 @@ Esempio di carousel con card semplici.
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span></span>
-                  <svg class="icon">
-                    <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
-                  </svg>
+                  <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg>
                 </a>
               </div>
             </div>
@@ -91,9 +89,7 @@ Esempio di carousel con card semplici.
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span></span>
-                  <svg class="icon">
-                    <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
-                  </svg>
+                  <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg>
                 </a>
               </div>
             </div>
@@ -109,9 +105,7 @@ Esempio di carousel con card semplici.
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span></span>
-                  <svg class="icon">
-                    <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
-                  </svg>
+                  <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg>
                 </a>
               </div>
             </div>
@@ -127,9 +121,7 @@ Esempio di carousel con card semplici.
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span></span>
-                  <svg class="icon">
-                    <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
-                  </svg>
+                  <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg>
                 </a>
               </div>
             </div>
@@ -145,9 +137,7 @@ Esempio di carousel con card semplici.
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span></span>
-                  <svg class="icon">
-                    <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
-                  </svg>
+                  <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg>
                 </a>
               </div>
             </div>
@@ -163,9 +153,7 @@ Esempio di carousel con card semplici.
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span></span>
-                  <svg class="icon">
-                    <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
-                  </svg>
+                  <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg>
                 </a>
               </div>
             </div>
@@ -203,9 +191,7 @@ Esempio di carousel con card semplici.
                 <span class="card-signature">di Federico De Paolis</span>
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
-                  <svg class="icon">
-                    <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
-                  </svg>
+                  <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg>
                 </a>
               </div>
             </div>
@@ -226,9 +212,7 @@ Esempio di carousel con card semplici.
                 <span class="card-signature">di Federico De Paolis</span>
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
-                  <svg class="icon">
-                    <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
-                  </svg>
+                  <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg>
                 </a>
               </div>
             </div>
@@ -249,9 +233,7 @@ Esempio di carousel con card semplici.
                 <span class="card-signature">di Federico De Paolis</span>
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
-                  <svg class="icon">
-                    <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
-                  </svg>
+                  <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg>
                 </a>
               </div>
             </div>
@@ -272,9 +254,7 @@ Esempio di carousel con card semplici.
                 <span class="card-signature">di Federico De Paolis</span>
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
-                  <svg class="icon">
-                    <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
-                  </svg>
+                  <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg>
                 </a>
               </div>
             </div>
@@ -322,9 +302,7 @@ Contiene un'immagine associata ad una card "articolo".
                   <span class="card-signature">di Federico De Paolis</span>
                   <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
-                    <svg class="icon">
-                      <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
-                    </svg>
+                    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg>
                   </a>
                 </div>
               </div>
@@ -354,9 +332,7 @@ Contiene un'immagine associata ad una card "articolo".
                   <span class="card-signature">di Federico De Paolis</span>
                   <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
-                    <svg class="icon">
-                      <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
-                    </svg>
+                    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg>
                   </a>
                 </div>
               </div>
@@ -386,9 +362,7 @@ Contiene un'immagine associata ad una card "articolo".
                   <span class="card-signature">di Federico De Paolis</span>
                   <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
-                    <svg class="icon">
-                      <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
-                    </svg>
+                    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg>
                   </a>
                 </div>
               </div>
@@ -426,9 +400,7 @@ Contiene un'immagine associata ad una card "articolo".
                 <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
-                  <svg class="icon">
-                    <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
-                  </svg>
+                  <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg>
                 </a>
               </div>
             </div>
@@ -448,9 +420,7 @@ Contiene un'immagine associata ad una card "articolo".
                 <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
-                  <svg class="icon">
-                    <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
-                  </svg>
+                  <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg>
                 </a>
               </div>
             </div>
@@ -470,9 +440,7 @@ Contiene un'immagine associata ad una card "articolo".
                 <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
-                  <svg class="icon">
-                    <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
-                  </svg>
+                  <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg>
                 </a>
               </div>
             </div>
@@ -492,9 +460,7 @@ Contiene un'immagine associata ad una card "articolo".
                 <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
-                  <svg class="icon">
-                    <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
-                  </svg>
+                  <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg>
                 </a>
               </div>
             </div>
@@ -514,9 +480,7 @@ Contiene un'immagine associata ad una card "articolo".
                 <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
-                  <svg class="icon">
-                    <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
-                  </svg>
+                  <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg>
                 </a>
               </div>
             </div>
@@ -536,9 +500,7 @@ Contiene un'immagine associata ad una card "articolo".
                 <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
-                  <svg class="icon">
-                    <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
-                  </svg>
+                  <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg>
                 </a>
               </div>
             </div>

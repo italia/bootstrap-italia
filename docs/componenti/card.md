@@ -121,9 +121,7 @@ Quando si utilizzano link con label generiche come “Leggi tutto” o “Leggi 
           <a class="read-more" href="#">
             <span class="text">Leggi di più</span>
             <span class="visually-hidden">su Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span>
-            <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
-            </svg>
+            <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg>
           </a>
         </div>
       </div>
@@ -147,9 +145,7 @@ Per inserire la categorizzazione con relativa icona, usare l'elemento `.category
       <div class="card">
         <div class="card-body">
           <div class="categoryicon-top">
-            <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use>
-            </svg>
+            <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
             <span class="text">Categoria<br>nome</span>
           </div>
           <a href="#">
@@ -181,9 +177,7 @@ segue il paragrafo.
       <div class="card">
         <div class="card-body">
           <div class="categoryicon-top">
-            <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-copy"></use>
-            </svg>
+            <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-copy"></use></svg>
             <span class="text">(2) File</span>
           </div>
           <a href="#">
@@ -220,9 +214,7 @@ Le card con ombreggiatura sono caratterizzate dalle classi:
           <a class="read-more" href="#">
             <span class="text">Leggi di più</span>
             <span class="visually-hidden">su Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span>
-            <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
-            </svg>
+            <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg>
           </a>
         </div>
       </div>
@@ -253,18 +245,14 @@ il div contenente l'icona è di classe `.top-icon`.
       <div class="card card-bg card-big">
         <div class="card-body">
           <div class="top-icon">
-            <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-card"></use>
-            </svg>
+            <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-card"></use></svg>
           </div>
           <h3 class="card-title h5 no_toc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h3>
           <p class="card-text font-serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           <a class="read-more" href="#">
             <span class="text">Leggi di più</span>
             <span class="visually-hidden">su Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span>
-            <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
-            </svg>
+            <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg>
           </a>
         </div>
       </div>
@@ -290,9 +278,7 @@ Per creare un bordo di colore primario a chiusura card, potete utilizzare la cla
       <div class="card card-bg card-big border-bottom-card">
         <div class="flag-icon"></div>
         <div class="etichetta">
-          <svg class="icon">
-            <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-settings"></use>
-          </svg>
+          <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-settings"></use></svg>
           <span>Sviluppo</span>
         </div>
         <div class="card-body">
@@ -301,9 +287,7 @@ Per creare un bordo di colore primario a chiusura card, potete utilizzare la cla
           <a class="read-more" href="#">
             <span class="text">Leggi di più</span>
             <span class="visually-hidden">su Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span>
-            <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
-            </svg>
+            <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg>
           </a>
         </div>
       </div>
@@ -375,9 +359,7 @@ Qualora le proporzioni non fossero esatte, l'immagine occuperà il massimo dell'
           <a class="read-more" href="#">
             <span class="text">Leggi di più</span>
             <span class="visually-hidden">su Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span>
-            <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
-            </svg>
+            <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg>
           </a>
         </div>
       </div>
@@ -401,9 +383,7 @@ Qualora le proporzioni non fossero esatte, l'immagine occuperà il massimo dell'
           <a class="read-more" href="#">
             <span class="text">Leggi di più</span>
             <span class="visually-hidden">su Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span>
-            <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
-            </svg></a>
+            <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg></a>
         </div>
       </div>
     </div>
@@ -430,9 +410,7 @@ Qualora le proporzioni non fossero esatte, l'immagine occuperà il massimo dell'
               <a class="read-more" href="#">
               <span class="text">Leggi di più</span>
               <span class="visually-hidden">su Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span>
-              <svg class="icon">
-                <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
-              </svg></a>
+              <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg></a>
           </div>
         </div>
       </div>
@@ -459,9 +437,7 @@ Qualora le proporzioni non fossero esatte, l'immagine occuperà il massimo dell'
               <a class="read-more" href="#">
               <span class="text">Leggi di più</span>
               <span class="visually-hidden">su Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span>
-              <svg class="icon">
-                <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
-              </svg></a>
+              <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg></a>
           </div>
         </div>
       </div>
@@ -531,9 +507,7 @@ Come per ogni elemento, è possibile aggiungere le classi `rounded` o `shadow` p
   <div class="card card-teaser rounded shadow">
     <div class="card-body">
       <h3 class="card-title h5 no_toc">
-        <svg class="icon">
-          <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-clip"></use>
-        </svg>
+        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-clip"></use></svg>
         <a href="#">Lorem ipsum dolor sit amet</a>
       </h3>
       <div class="card-text font-serif">

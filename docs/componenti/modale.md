@@ -116,9 +116,7 @@ Esempio completo:
             <div class="modal-header">
                <h2 class="modal-title h5 no_toc" id="modal2Title">Questo è un messaggio di notifica</h2>
                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Chiudi finestra modale">
-                  <svg class="icon">
-                     <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use>
-                  </svg>
+                  <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
                </button>
             </div>
             <div class="modal-body">
@@ -145,9 +143,7 @@ Per formattare correttamente i contenuti della modale con icona, occorre aggiung
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <svg class="icon">
-            <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-info-circle"></use>
-          </svg>
+          <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-info-circle"></use></svg>
           <h2 class="modal-title h5 no_toc" id="modal3Title">Questo è un messaggio di notifica più esteso del solito</h2>
         </div>
         <div class="modal-body">
@@ -176,9 +172,7 @@ Di seguito una modale con un elenco di radio button.
             <div class="modal-header">
                <h2 class="modal-title h5 no_toc" id="modal4Title">Scegli una opzione</h2>
                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Chiudi finestra modale">
-                  <svg class="icon">
-                     <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use>
-                  </svg>
+                  <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
                </button>
             </div>
             <div class="modal-body">
@@ -353,9 +347,7 @@ Per meglio distinguere l'elemento _footer_ con un'ombra è sufficiente aggiunger
       <div class="modal-header">
         <h2 class="modal-title h5 no_toc" id="exampleModalLongTitle">Intestazione modale</h2>
         <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Chiudi finestra modale">
-          <svg class="icon">
-            <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use>
-          </svg>
+          <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
         </button>
       </div>
       <div class="modal-body">
@@ -460,9 +452,7 @@ Aggiungi `.modal-dialog-centered` a `.modal-dialog` per centrare verticalmente l
       <div class="modal-header">
         <h2 class="modal-title h5 no_toc" id="modalCenterTitle">Questo è un messaggio di notifica</h2>
         <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Chiudi finestra modale">
-          <svg class="icon">
-            <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use>
-          </svg>
+          <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
         </button>
       </div>
       <div class="modal-body">
@@ -494,9 +484,7 @@ Aggiungi `.modal-dialog-left` a `.modal-dialog` per allineare a sinistra la moda
       <div class="modal-header">
         <h2 class="modal-title h5 no_toc" id="modalLeftTitle">Questo è un messaggio di notifica</h2>
         <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Chiudi finestra modale">
-          <svg class="icon">
-            <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use>
-          </svg>
+          <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
         </button>
       </div>
       <div class="modal-body">
@@ -550,9 +538,7 @@ Aggiungi `.modal-dialog-right` a `.modal-dialog` per allineare a sinistra la mod
       <div class="modal-header">
         <h2 class="modal-title h5 no_toc" id="modalrightTitle">Questo è un messaggio di notifica</h2>
         <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Chiudi finestra modale">
-          <svg class="icon">
-            <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use>
-          </svg>
+          <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
         </button>
       </div>
       <div class="modal-body">

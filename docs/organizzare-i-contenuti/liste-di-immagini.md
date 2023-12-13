@@ -40,9 +40,7 @@ Per utilizzare la didascalia sovrapposta è sufficiente aggiungere la classe `.i
         </div>
         <span class="it-griditem-text-wrapper">
           <span class="it-griditem-text">Didascalia</span>
-          <svg class="icon">
-            <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
-          </svg>
+          <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
         </span>
       </a>
     </div>
@@ -57,9 +55,7 @@ Per utilizzare la didascalia sovrapposta è sufficiente aggiungere la classe `.i
         </div>
         <span class="it-griditem-text-wrapper">
           <span class="it-griditem-text">Didascalia</span>
-          <svg class="icon">
-            <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
-          </svg>
+          <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
         </span>
       </a>
     </div>
@@ -166,9 +162,7 @@ Per la corretta formattazione degli spazi di questo tipo di griglia, occorre agg
           </div>
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
-            <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
-            </svg>
+            <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
           </span>
         </a>
       </div>
@@ -183,9 +177,7 @@ Per la corretta formattazione degli spazi di questo tipo di griglia, occorre agg
           </div>
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
-            <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
-            </svg>
+            <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
           </span>
         </a>
       </div>
@@ -200,9 +192,7 @@ Per la corretta formattazione degli spazi di questo tipo di griglia, occorre agg
           </div>
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
-            <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
-            </svg>
+            <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
           </span>
         </a>
       </div>
@@ -217,9 +207,7 @@ Per la corretta formattazione degli spazi di questo tipo di griglia, occorre agg
           </div>
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
-            <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
-            </svg>
+            <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
           </span>
         </a>
       </div>
@@ -234,9 +222,7 @@ Per la corretta formattazione degli spazi di questo tipo di griglia, occorre agg
           </div>
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
-            <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
-            </svg>
+            <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
           </span>
         </a>
       </div>
@@ -251,9 +237,7 @@ Per la corretta formattazione degli spazi di questo tipo di griglia, occorre agg
           </div>
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
-            <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
-            </svg>
+            <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
           </span>
         </a>
       </div>
@@ -289,9 +273,7 @@ Per utilizzare l'immagine orizzontale, occorre aggiungere la classe `.it-grid-it
           </div>
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
-            <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
-            </svg>
+            <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
           </span>
         </a>
       </div>
@@ -308,9 +290,7 @@ Per utilizzare l'immagine orizzontale, occorre aggiungere la classe `.it-grid-it
               </div>
               <span class="it-griditem-text-wrapper">
                 <span class="it-griditem-text">Didascalia</span>
-                <svg class="icon">
-                  <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
-                </svg>
+                <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
               </span>
             </a>
           </div>
@@ -325,9 +305,7 @@ Per utilizzare l'immagine orizzontale, occorre aggiungere la classe `.it-grid-it
               </div>
               <span class="it-griditem-text-wrapper">
                 <span class="it-griditem-text">Didascalia</span>
-                <svg class="icon">
-                  <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
-                </svg>
+                <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
               </span>
             </a>
           </div>
@@ -342,9 +320,7 @@ Per utilizzare l'immagine orizzontale, occorre aggiungere la classe `.it-grid-it
               </div>
               <span class="it-griditem-text-wrapper">
                 <span class="it-griditem-text">Didascalia</span>
-                <svg class="icon">
-                  <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
-                </svg>
+                <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
               </span>
             </a>
           </div>
@@ -377,9 +353,7 @@ Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'e
           </div>
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
-            <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
-            </svg>
+            <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
           </span>
         </a>
       </div>
@@ -394,9 +368,7 @@ Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'e
           </div>
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
-            <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
-            </svg>
+            <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
           </span>
         </a>
       </div>
@@ -411,9 +383,7 @@ Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'e
           </div>
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
-            <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
-            </svg>
+            <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
           </span>
         </a>
       </div>
@@ -428,9 +398,7 @@ Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'e
           </div>
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
-            <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
-            </svg>
+            <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
           </span>
         </a>
       </div>
@@ -445,9 +413,7 @@ Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'e
           </div>
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
-            <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
-            </svg>
+            <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
           </span>
         </a>
       </div>
@@ -462,9 +428,7 @@ Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'e
           </div>
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
-            <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
-            </svg>
+            <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
           </span>
         </a>
       </div>
@@ -479,9 +443,7 @@ Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'e
           </div>
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
-            <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
-            </svg>
+            <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
           </span>
         </a>
       </div>
@@ -496,9 +458,7 @@ Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'e
           </div>
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
-            <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
-            </svg>
+            <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
           </span>
         </a>
       </div>
@@ -513,9 +473,7 @@ Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'e
           </div>
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
-            <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
-            </svg>
+            <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
           </span>
         </a>
       </div>
@@ -530,9 +488,7 @@ Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'e
           </div>
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
-            <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
-            </svg>
+            <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
           </span>
         </a>
       </div>
@@ -547,9 +503,7 @@ Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'e
           </div>
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
-            <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
-            </svg>
+            <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
           </span>
         </a>
       </div>
@@ -564,9 +518,7 @@ Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'e
           </div>
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
-            <svg class="icon">
-              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
-            </svg>
+            <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
           </span>
         </a>
       </div>

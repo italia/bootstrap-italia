@@ -76,9 +76,7 @@ Clicca sul pulsante di chiusura per vedere la funzionalità di rimozione alert i
 <div class="alert alert-warning alert-dismissible fade show" role="alert">
   <strong>Attenzione</strong> Alcuni campi inseriti sono da controllare.
   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Chiudi avviso">
-    <svg class="icon">
-      <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use>
-    </svg>
+    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
   </button>
 </div>
 {% endcapture %}
