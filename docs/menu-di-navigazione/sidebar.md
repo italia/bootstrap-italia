@@ -6,6 +6,12 @@ group: menu-di-navigazione
 toc: true
 ---
 
+{% capture callout %}
+Breaking feature dalla versione **2.8.0**
+
+Gli elementi di tipo `<a>` dei collapse necessitano l'aggiunta dell'attributo `role="button"`.
+{% endcapture %}{% include callout.html content=callout type="danger" %}
+
 ## Semplice
 
 La sidebar semplice può contenere:

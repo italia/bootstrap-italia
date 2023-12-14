@@ -9,6 +9,12 @@ description: Un componente che consente la creazione di liste di checkbox.
 
 Il componente Transfer consente di trasferire gli elementi di una lista di checkbox ad un'altra lista di checkbox.
 
+{% capture callout %}
+Breaking feature dalla versione **2.8.0**
+
+Agli elementi di `<a>` occorre aggiungere l'attributo `role="button"`.
+{% endcapture %}{% include callout.html content=callout type="danger" %}
+
 **Il componente Transfer_contiene**
 
 - Lista checkbox di sinistra

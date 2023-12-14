@@ -11,6 +11,12 @@ toc: true
 I collegamenti della paginazione sono contenuti per praticità in un elemento `<nav class="pagination-wrapper">` per dare la possibilità agli screenreader, e altre tecnologie assistive, di identificarli come una sezione di navigazione.
 
 {% capture callout %}
+Breaking feature dalla versione **2.8.0**
+
+Il toggle del dropdown diventa `<button>` invece di `<a>`.
+{% endcapture %}{% include callout.html content=callout type="danger" %}
+
+{% capture callout %}
 
 #### Accessibilità
 

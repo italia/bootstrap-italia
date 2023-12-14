@@ -11,6 +11,12 @@ description: La lista è un componente flessibile per la visualizzazione di list
 
 Le liste, costituite da tag `<ul>` con classe `.it-list` all'interno di un wrapper con classe `.it-list-wrapper`, possono contenere testi, link, icone, avatar, immagini o una combinazione di questi elementi.
 
+{% capture callout %}
+Breaking feature dalla versione **2.8.0**
+
+Gli elementi di tipo `<a>` dei collapse necessitano l'aggiunta dell'attributo `role="button"`.
+{% endcapture %}{% include callout.html content=callout type="danger" %}
+
 ### Lista semplice solo testo
 
 {% comment %}Example name: Base, con testo{% endcomment %}
