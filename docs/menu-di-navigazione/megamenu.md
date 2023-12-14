@@ -27,6 +27,8 @@ Il megamenu è un componente della navigazione principale del sito che richiede 
 {% endcapture %}{% include callout.html content=callout type="accessibility" %} 
 
 {% capture callout %}
+Breaking feature dalla versione **2.8.0**
+
 Cosa cambia nel megamenu dalla versione **2.8.0** della libreria:
 
 - tutti gli esempi del componente, anche quelli integrati nel componente [header]({{ site.baseurl }}/docs/menu-di-navigazione/header/), sono stati rivisti: refactoring markup `HTML`, classi e stili nei file `_megamenu.scss`, `_navigation.scss`, `_headernavbar.scss`, `_headernavbartheme.scss`, `_navigationtheme.scss`
