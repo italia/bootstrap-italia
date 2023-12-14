@@ -11,7 +11,7 @@ _🇬🇧 [English version](README.EN.md)_
 
 _⚠️ [La versione 1.x di Bootstrap Italia (basata su Bootstrap 4) è deprecata](https://github.com/italia/bootstrap-italia/tree/1.x)_
 
-Bootstrap Italia è un tema basato su [Bootstrap 5](https://getbootstrap.com/docs/5.2/getting-started/introduction/).
+Bootstrap Italia è un framework basato su [Bootstrap 5](https://getbootstrap.com/docs/5.2/getting-started/introduction/).
 
 Bootstrap Italia eredita tutte le funzionalità, componenti, mixins, grid system, e altro già presenti in Bootstrap 5, personalizzandole per implementare soluzioni secondo le [Linee guida di design per i siti internet e i servizi digitali delle Pubbliche Amministrazioni](https://designers.italia.it/norme-e-riferimenti/).
 
