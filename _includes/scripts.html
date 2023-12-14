@@ -91,7 +91,7 @@ https://github.com/algolia/docsearch{% endcomment %}
       button.classList.add('btn', 'btn-primary', 'btn-xs');
       button.setAttribute('type', 'button');
       button.addEventListener('click', function () {
-        const code = node.querySelector('code').innerText.trim();
+        const code = node.querySelector('code td[class="code"] pre').innerText.trim();
         navigator.clipboard.writeText(code);
         button.innerText = 'Copiato';
         button.classList.remove('btn-primary');
@@ -108,8 +108,8 @@ https://github.com/algolia/docsearch{% endcomment %}
        * {% capture example %}
        * {% endcapture %}{% include example.html content=example %}  
        */
-      if (node.nodeName == 'FIGURE') { 
-        node.insertBefore(divContainer, node.querySelector('pre')); 
+      if (node.nodeName == 'FIGURE') {
+        node.insertBefore(divContainer, node.querySelector('pre'));
       }
       /*
       * Snippet
