@@ -24,6 +24,12 @@ L'header di un sito della Pubblica Amministrazione è solitamente composto di 3 
   (<svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-burger"></use></svg>) su dispositivi mobili.
 
 {% capture callout %}
+Breaking feature dalla versione **2.8.0**
+
+Il toggle del dropdown diventa `<button>` invece di `<a>`.
+{% endcapture %}{% include callout.html content=callout type="danger" %}
+
+{% capture callout %}
 
 #### Accessibilità
 
