@@ -11,13 +11,13 @@
 
 <title>Dropdown · Bootstrap Italia</title>
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202312131842" rel="stylesheet" />
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202312141355" rel="stylesheet" />
 
 <!-- Documentation extras -->
  
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.css" rel="stylesheet" />
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202312131842" rel="stylesheet" />
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202312141355" rel="stylesheet" />
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico" />
@@ -1543,15 +1543,15 @@ Il design di default dei dropdown richiede l’applicazione della classe <code c
     </div>
 
     
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202312131842"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202312141355"></script>
 <script>
   bootstrap.loadFonts('/bootstrap-italia/dist/fonts')
-</script><script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202312131842"></script>
+</script><script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202312141355"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/anchor.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/clipboard.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tsparticles.min.js"></script>
 
-<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202312131842"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202312141355"></script>
 
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tweenjs.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/easeljs.min.js"></script>
@@ -1568,7 +1568,7 @@ Il design di default dei dropdown richiede l’applicazione della classe <code c
     { src: '/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png', id: 'cover-7' },
   ]
 </script>
-<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202312131842"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202312141355"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/docsearch.min.js"></script>
 
 <script>
@@ -1600,8 +1600,8 @@ Il design di default dei dropdown richiede l’applicazione della classe <code c
       button.classList.add('btn', 'btn-primary', 'btn-xs');
       button.setAttribute('type', 'button');
       button.addEventListener('click', function () {
-        const code = node.querySelector('code').innerText.trim();
-        navigator.clipboard.writeText(code);
+        const code = node.querySelector('code td[class="code"] pre') ?? node.querySelector('code td[class="rouge-code"] pre');
+        navigator.clipboard.writeText(code.innerText.trim());
         button.innerText = 'Copiato';
         button.classList.remove('btn-primary');
         button.classList.add('btn-success');
@@ -1621,8 +1621,8 @@ Il design di default dei dropdown richiede l’applicazione della classe <code c
 </pre></td></tr></tbody></table></code></pre></figure>
   
        */
-      if (node.nodeName == 'FIGURE') { 
-        node.insertBefore(divContainer, node.querySelector('pre')); 
+      if (node.nodeName == 'FIGURE') {
+        node.insertBefore(divContainer, node.querySelector('pre'));
       }
       /*
       * Snippet
@@ -1635,6 +1635,5 @@ Il design di default dei dropdown richiede l’applicazione della classe <code c
       }
     });
 </script>
-
   </body>
 </html>
