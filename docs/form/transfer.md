@@ -110,21 +110,15 @@ Nell'esempio che segue la struttura è colonnare simmetrica nella versione deskt
       <!-- transfer buttons-->
       <div class="it-transfer-buttons">
         <a class="transfer" href="#" role="button" aria-label="Sposta avanti">
-          <svg class="icon">
-            <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use>
-          </svg>
+          <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg>
         </a>
         <span class="visually-hidden">Etichetta per freccia destra</span>
         <a class="backtransfer" href="#" role="button" aria-label="Sposta indietro">
-          <svg class="icon">
-            <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-left"></use>
-          </svg>
+          <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-left"></use></svg>
         </a>
         <span class="visually-hidden">Etichetta for freccia sinistra</span>
         <a class="reset" href="#" role="button" aria-label="Reset">
-          <svg class="icon">
-            <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-restore"></use>
-          </svg>
+          <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-restore"></use></svg>
         </a>
         <span class="visually-hidden">Etichetta per icona di reset</span>
       </div>

@@ -19,6 +19,7 @@ button:has(~ .focus--mouse:not(.btn)),
 
 //same border color for element in input-group
 .input-group-text:has(+ .is-invalid),
+.input-group-prepend:has(+ .is-invalid) .input-group-text,
 .is-invalid + .input-group-text,
 button:has(~ .is-invalid),
 .is-invalid + button {
