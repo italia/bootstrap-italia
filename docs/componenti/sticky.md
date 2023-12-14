@@ -156,18 +156,14 @@ In tal caso è necessario utilizzare l'attributo `data-bs-target`.
             <!--start nav-->
             <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Navigazione principale">
               <button class="custom-navbar-toggler" type="button" aria-controls="navC1" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#navC1">
-                <svg class="icon">
-                  <use href="/dist/svg/sprites.svg#it-burger"></use>
-                </svg>
+                <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-burger"></use></svg>
               </button>
               <div class="navbar-collapsable" id="navC1" style="display: none;">
                 <div class="overlay" style="display: none;"></div>
                 <div class="close-div">
                   <button class="btn close-menu" type="button">
                     <span class="visually-hidden">Nascondi la navigazione</span>
-                    <svg class="icon">
-                      <use href="/dist/svg/sprites.svg#it-close-big"></use>
-                    </svg>
+                    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close-big"></use></svg>
                   </button>
                 </div>
                 <div class="menu-wrapper">

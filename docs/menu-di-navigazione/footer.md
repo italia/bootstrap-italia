@@ -22,9 +22,7 @@ Potrebbe anche contenere riferimenti alle pagine social dell'amministrazione.
           <div class="col-sm-12">
             <div class="it-brand-wrapper">
               <a href="#" class="" data-focus-mouse="false">
-                <svg class="icon">
-                  <use xlink:href="{{site.baseurl}}/dist/svg/sprites.svg#it-code-circle"></use>
-                </svg>
+                <svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
                 <div class="it-brand-text">
                   <h2 class="no_toc">Lorem Ipsum</h2>
                   <h3 class="no_toc d-none d-md-block">Inserire qui la tag line</h3>
@@ -161,9 +159,7 @@ Potrebbe anche contenere riferimenti alle pagine social dell'amministrazione.
           <div class="col-sm-12">
             <div class="it-brand-wrapper">
               <a href="#" class="" data-focus-mouse="false">
-                <svg class="icon">
-                  <use xlink:href="{{site.baseurl}}/dist/svg/sprites.svg#it-code-circle"></use>
-                </svg>
+                <svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
                 <div class="it-brand-text">
                   <h2 class="no_toc">Lorem Ipsum</h2>
                   <h3 class="no_toc d-none d-md-block">Inserire qui la tag line</h3>
