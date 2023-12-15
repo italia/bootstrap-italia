@@ -28,6 +28,13 @@ Quando si utilizza l'attributo `placeholder` o l'input parte già valorizzato as
 
 {% endcapture %}{% include callout.html content=callout type="danger" %}
 
+{% capture callout %}
+Breaking feature dalla versione **2.8.0**
+
+Rimosso l'elemento con classe `.input-group-prepend` in favore dell'elemento 
+con classe `.input-group-text`.
+{% endcapture %}{% include callout.html content=callout type="danger" %}
+
 {% comment %}Example name: Varianti per tipo {% endcomment %}
 {% capture example %}
 <div>
@@ -107,27 +114,21 @@ Il testo di aiuto deve essere esplicitamente associato agli elementi del modulo 
 {% capture example %}
 <div class="form-group">
   <div class="input-group">
-    <div class="input-group-prepend">
-      <div class="input-group-text"><svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-pencil"></use></svg></div>
-    </div>
+    <span class="input-group-text"><svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-pencil"></use></svg></span>
     <label for="input-group-1">Con Etichetta</label>
     <input type="text" class="form-control" id="input-group-1" name="input-group-1">
   </div>
 </div>
 <div class="form-group">
   <div class="input-group">
-    <div class="input-group-prepend">
-      <div class="input-group-text"><svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-pencil"></use></svg></div>
-    </div>
+    <span class="input-group-text"><svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-pencil"></use></svg></span>
     <label class="active" for="input-group-2">Con Etichetta e placeholder</label>
     <input type="text" class="form-control" id="input-group-2" name="input-group-2" placeholder="Lorem Ipsum">
   </div>
 </div>
 <div class="form-group">
   <div class="input-group">
-      <div class="input-group-prepend">
-        <div class="input-group-text"><svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-pencil"></use></svg></div>
-      </div>
+      <span class="input-group-text"><svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-pencil"></use></svg></span>
       <label for="input-group-3">Con Etichetta e pulsante "primary"</label>
       <input type="text" class="form-control" id="input-group-3" name="input-group-3">
       <div class="input-group-append">

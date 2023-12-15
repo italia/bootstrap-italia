@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Dropdown
-description: Attiva o disattiva overlay contestuali per visualizzare liste di link ed altro ancora con questi menù a tendina.
+description: Attiva o disattiva overlay contestuali per visualizzare liste di link ed altro ancora con questi menu a tendina.
 group: componenti
 toc: true
 ---
@@ -18,11 +18,13 @@ Per l'attivazione di un dropdown è sufficiente racchiudere il link per l'apertu
 
 #### Accessibilità
 
-Lo standard [WAI ARIA](https://www.w3.org/TR/wai-aria/) definisce un widget [`role="menu"`](https://www.w3.org/TR/wai-aria/#menu), che però è specifico per i menu applicativi che attivano azioni o funzioni. I menu ARIA possono contenere solo voci di menu, voci di menu di caselle di controllo, voci di menu dei pulsanti di opzione, gruppi di pulsanti di opzione e sottomenu.
+Lo standard [WAI ARIA](https://www.w3.org/TR/wai-aria/) definisce un widget con proprietà [`role="menu"`](https://www.w3.org/TR/wai-aria/#menu), specifica per i menu applicativi con link o azioni. Questi menu possono contenere solo voci di menu, voci di menu di caselle di controllo, voci di menu dei pulsanti di opzione, gruppi di pulsanti di opzione e sottomenu.
 
-I dropdown di Bootstrap, al contrario, sono progettati per essere generici e applicabili a una varietà di situazioni e strutture di markup. Ad esempio, è possibile creare elenchi a discesa contenenti input e controlli di moduli aggiuntivi, ad esempio campi di ricerca o moduli di accesso. Per questo motivo, Bootstrap non si aspetta (né aggiunge automaticamente) alcuno degli attributi di aria e di ruolo richiesti per i veri menu ARIA. Gli autori dovranno includere questi attributi più specifici.
+I dropdown del framework Bootstrap sono progettati per essere invece generici e applicabili a una varietà di situazioni e strutture di markup. Per questo motivo, Bootstrap non si aspetta (né aggiunge automaticamente) alcuno degli attributi ARIA e di ruolo richiesti. Gli autori dovranno integrare nel proprio markup gli eventuali attributi specifici e, nel caso di sviluppo di soluzioni che non ricadano nello standard ARIA, porre particolare attenzione a verifiche di accessibilità e test con utenti.
 
-Tuttavia, Bootstrap aggiunge il supporto integrato per la maggior parte delle interazioni standard del menu della tastiera, come la possibilità di spostarsi tra i singoli elementi `.list-item` usando i tasti cursore e chiude il menu con il tasto ESC.
+Tuttavia, Bootstrap comprende di base il supporto per la maggior parte delle interazioni standard del menu della tastiera, come la possibilità di spostarsi tra i singoli elementi `.list-item` usando i tasti freccia, e chiude il menu con il tasto ESC.
+
+Si ricorda che link di navigazione semanticamente sono tag `<a>`, mentre link che attivano azioni in pagina sono tag `<button>`, seppur questi ultimi è possibile implementarli in casi molto particolari come tag `<a>` con proprietà `role="button"`.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
 ### Dropdown button
@@ -202,7 +204,7 @@ Per aprire le voci di menu verso sinistra aggiungere la classe `.dropstart` all'
 
 ### Dropdown menu
 
-Le voci del menu che viene aperto al click sul pulsante possono essere personalizzate, così come il menù stesso.
+Le voci del menu che viene aperto al click sul pulsante possono essere personalizzate, così come il menu stesso.
 
 #### Menu voci attive
 
@@ -240,9 +242,9 @@ Aggiungere la classe `.disabled` ai link del dropdown che si vogliono mostrare c
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-#### Menu con intestazioni e separatori
+<!-- #### Menu con intestazioni e separatori
 
-All'interno del menu dropdown possono essere inseriti header e separatori.
+All'interno del menu dropdown possono essere inseriti header e separatori. 
 
 {% comment %}Example name: Menu con intestazioni e separatori{% endcomment %}
 {% capture example %}
@@ -261,11 +263,11 @@ All'interno del menu dropdown possono essere inseriti header e separatori.
     </ul>
   </div>
 </div>
-{% endcapture %}{% include example.html content=example %}
+{% endcapture %}{% include example.html content=example %} -->
 
 #### Menu con voci grandi
 
-Per aumentare la dimensione dei link contenuti nel dropdown è sufficiente aggiungere agli stessi la classe `.large`.
+Per aumentare la dimensione dei link contenuti nel dropdown è sufficiente aggiungere agli stessi la classe `.large`. 
 
 {% comment %}Example name: Menu con voci grandi{% endcomment %}
 {% capture example %}
@@ -283,7 +285,7 @@ Per aumentare la dimensione dei link contenuti nel dropdown è sufficiente aggiu
 
 #### Menu a tutta larghezza
 
-Per ottenere un dropdown menu largo quanto l'elemento che contiene il dropdown button è sufficiente aggiungere la classe`.full-width` al menù stesso. I link e testi contenuti al suo interno saranno disposti in orizzontale.
+Per ottenere un dropdown menu largo quanto l'elemento che contiene il dropdown button è sufficiente aggiungere la classe`.full-width` al menu stesso. I link e testi contenuti al suo interno saranno disposti in orizzontale.
 
 {% comment %}Example name: Menu a tutta larghezza{% endcomment %}
 {% capture example %}
@@ -303,7 +305,7 @@ Per ottenere un dropdown menu largo quanto l'elemento che contiene il dropdown b
 
 #### Menu con icona a destra
 
-Ai link contenuti nel menù può essere aggiunta un'icona illustrativa allineata a destra utilizzando le classi `.right-icon` sul link `<a>` e `.right` sul tag contenitore dell'icona.
+Ai link contenuti nel menu può essere aggiunta un'icona illustrativa allineata a destra utilizzando le classi `.right-icon` sul link `<a>` e `.right` sul tag contenitore dell'icona.
 
 {% comment %}Example name: Menu con icona a destra{% endcomment %}
 {% capture example %}
@@ -336,7 +338,7 @@ Ai link contenuti nel menù può essere aggiunta un'icona illustrativa allineata
 
 #### Menu con icona a sinistra
 
-Ai link contenuti nel menù può essere aggiunta un'icona illustrativa allineata a sinistra utilizzando le classi `.left-icon` sul link `<a>` e `.left` sul tag contenitore dell'icona.
+Ai link contenuti nel menu può essere aggiunta un'icona illustrativa allineata a sinistra utilizzando le classi `.left-icon` sul link `<a>` e `.left` sul tag contenitore dell'icona.
 
 {% comment %}Example name: Menu con icona a sinistra{% endcomment %}
 {% capture example %}
@@ -396,7 +398,7 @@ Aggiungendo la classe`.dark` al dropdown menu si ottiene una versione in negativ
           <svg class="icon icon-sm icon-light right"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg>
         </a>
       </li>
-      <li><span class="divider"></span></li>
+      <!-- <li><span class="divider"></span></li> -->
       <li>
         <a class="list-item right-icon" href="#">
           <span>Azione 4</span>
@@ -404,7 +406,7 @@ Aggiungendo la classe`.dark` al dropdown menu si ottiene una versione in negativ
         </a>
       </li>
       <li>
-        <a class="list-item right-icon disabled" href="#">
+        <a class="list-item right-icon disabled" href="#" aria-disabled="true">
           <span>Azione 5 (disabilitato)</span>
           <svg class="icon icon-sm icon-light right"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg>
         </a>

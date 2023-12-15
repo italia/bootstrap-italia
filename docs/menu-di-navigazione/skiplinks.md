@@ -34,7 +34,7 @@ Per attivare la funzionalità si digita da tastiera il tasto: **TAB**.
 
 Per attivare la navigazione via **TAB** è necessario:
 
-1. Aprire il menù Safari > Preferenze
+1. Aprire il menu Safari > Preferenze
 2. Cliccare sulla tab Avanzate
 3. Selezionare “Premi tabulatore per evidenziare tutti gli elementi della pagina web”.
 

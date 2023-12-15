@@ -6,6 +6,12 @@ group: menu-di-navigazione
 toc: true
 ---
 
+{% capture callout %}
+Breaking feature dalla versione **2.8.0**
+
+Gli elementi di tipo `<a>` dei collapse necessitano l'aggiunta dell'attributo `role="button"`.
+{% endcapture %}{% include callout.html content=callout type="danger" %}
+
 ## Semplice
 
 La sidebar semplice può contenere:
@@ -14,7 +20,7 @@ La sidebar semplice può contenere:
 - Lista di link primaria
 - Lista di link secondaria
 
-Per differenziare a livello stilistico i link secondari, è sufficiente aggiungere la classe `.linklist-secondary` all'elemento `<div class="sidebar-linklist-wrapper">` contenente la [Lista di link]({{ site.baseurl }}/docs/organizzare-i-contenuti/liste/#liste-per-menù-di-navigazione).
+Per differenziare a livello stilistico i link secondari, è sufficiente aggiungere la classe `.linklist-secondary` all'elemento `<div class="sidebar-linklist-wrapper">` contenente la [Lista di link]({{ site.baseurl }}/docs/organizzare-i-contenuti/liste/#liste-per-menu-di-navigazione).
 
 {% comment %}Example name: Base{% endcomment %}
 {% capture example %}
@@ -200,7 +206,7 @@ La sidebar può contenere una Lista di link primaria annidata.
     <div class="link-list-wrapper">
       <ul class="link-list">
         <li>
-          <a class="list-item large medium right-icon active" href="#collapseOne" data-bs-toggle="collapse" aria-expanded="true" aria-controls="collapseOne">
+          <a class="list-item large medium right-icon active" href="#collapseOne" role="button" data-bs-toggle="collapse" aria-expanded="true" aria-controls="collapseOne">
           <span class="list-item-title-icon-wrapper">
             <span>Link lista 1 (selezionato)</span>
             <svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
@@ -216,7 +222,7 @@ La sidebar può contenere una Lista di link primaria annidata.
           </ul>
         </li>
         <li>
-          <a class="list-item large medium right-icon" href="#collapseTwo" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo">
+          <a class="list-item large medium right-icon" href="#collapseTwo" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo">
             <span class="list-item-title-icon-wrapper">
               <span>Link lista 2</span>
               <svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
@@ -232,7 +238,7 @@ La sidebar può contenere una Lista di link primaria annidata.
           </ul>
         </li>
         <li>
-          <a class="list-item large medium right-icon" href="#collapseThree" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseThree">
+          <a class="list-item large medium right-icon" href="#collapseThree" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseThree">
             <span class="list-item-title-icon-wrapper">
               <span>Link lista 3</span>
               <svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
@@ -277,7 +283,7 @@ Per cambiare il tema della sidebar e renderla scura è sufficiente aggiungere al
     <div class="link-list-wrapper">
       <ul class="link-list">
         <li>
-          <a class="list-item large medium right-icon active" href="#collapseFour" data-bs-toggle="collapse" aria-expanded="true" aria-controls="collapseOne">
+          <a class="list-item large medium right-icon active" href="#collapseFour" role="button" data-bs-toggle="collapse" aria-expanded="true" aria-controls="collapseOne">
             <span class="list-item-title-icon-wrapper">
               <span>Link lista 1 (selezionato)</span><svg class="icon icon-sm icon-white right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
             </span>
@@ -292,7 +298,7 @@ Per cambiare il tema della sidebar e renderla scura è sufficiente aggiungere al
           </ul>
         </li>
         <li>
-          <a class="list-item large medium right-icon" href="#collapseFive" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo">
+          <a class="list-item large medium right-icon" href="#collapseFive" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo">
           <span class="list-item-title-icon-wrapper">
               <span>Link lista 2</span><svg class="icon icon-sm icon-white right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
             </span>
@@ -307,7 +313,7 @@ Per cambiare il tema della sidebar e renderla scura è sufficiente aggiungere al
           </ul>
         </li>
         <li>
-          <a class="list-item large medium right-icon" href="#collapseSix" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseThree">
+          <a class="list-item large medium right-icon" href="#collapseSix" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseThree">
             <span class="list-item-title-icon-wrapper">
               <span>Link lista 3</span><svg class="icon icon-sm icon-white right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
             </span>
