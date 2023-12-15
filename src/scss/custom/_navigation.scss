@@ -5,16 +5,20 @@
     opacity: 0;
     margin-top: $dropdown-menu-vertical-shift;
   }
+
   100% {
     opacity: 1;
     margin-top: $dropdown-menu-vertical-shift;
   }
 }
+
 .row.row-column-border > [class^='col-'] .navbar {
   padding: 8px 0;
 }
+
 .navbar {
   background: $navbar-bg-color;
+
   // overlay div
   .overlay {
     position: fixed;
@@ -49,6 +53,7 @@
       transform: translateX(-100%);
       transition: all 0.2s cubic-bezier(0.29, 0.85, 0.5, 0.99);
       z-index: 5;
+
       .navbar-nav {
         padding: $navigation-h-padding 0 0;
         overflow: hidden;
@@ -64,6 +69,44 @@
       padding: $navigation-h-padding 0;
 
       li {
+        > button.nav-link {
+          border: none;
+          display: block;
+          background: transparent;
+          color: $navigation-link-color;
+          font-weight: 600;
+          padding: $navigation-v-padding $navigation-h-padding;
+          position: relative;
+
+          &.dropdown-toggle {
+            svg {
+              fill: $navbar-bg-color;
+              transition: all 0.3s;
+            }
+
+            &[aria-expanded='true'] {
+              .icon {
+                transform: scaleY(-1);
+              }
+            }
+          }
+
+          &.active {
+            border-left: $navigation-link-active-bar-size solid $navigation-link-active-bar-color;
+          }
+
+          &.disabled {
+            span,
+            .icon {
+              opacity: $navigation-disabled-item-mobile-opacity;
+            }
+          }
+
+          &:hover:not(.active) {
+            text-decoration: underline;
+          }
+        }
+
         a.nav-link {
           color: $navigation-link-color;
           font-weight: 600;
@@ -125,6 +168,7 @@
     z-index: 10;
     pointer-events: none;
     transition: all 0.3s cubic-bezier(0.1, 0.57, 0.4, 0.97);
+
     // pulsante di chiusura menu
     .close-menu {
       background: transparent;
@@ -137,6 +181,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+
       .icon {
         fill: $white;
       }
@@ -153,18 +198,26 @@
       display: none;
     }
 
+    a.it-heading-link,
+    a.it-footer-link {
+      color: $navigation-link-color;
+
+      svg {
+        fill: $navigation-link-color;
+      }
+
+      &.active {
+        span {
+          text-decoration: underline;
+          color: $navigation-link-color;
+        }
+      }
+    }
+
     .link-list-wrapper {
       padding-left: $navigation-h-padding;
       padding-right: $navigation-h-padding;
       margin-bottom: $navigation-h-padding;
-
-      h3,
-      .link-list-heading {
-        text-transform: uppercase;
-        font-size: $megamenu-heading-text-size;
-        font-weight: $megamenu-heading-font-weight;
-        letter-spacing: $megamenu-heading-letter-spacing;
-      }
 
       ul li {
         a {
@@ -177,6 +230,10 @@
             }
           }
 
+          svg {
+            fill: $navigation-link-color;
+          }
+
           span {
             color: $navigation-link-color;
           }
@@ -184,12 +241,6 @@
           i {
             color: $navigation-link-color;
           }
-        }
-
-        .divider {
-          width: $megamenu-link-small-line-width;
-          background: $neutral-2;
-          margin-left: $navigation-h-padding;
         }
       }
     }
@@ -215,7 +266,8 @@
 }
 
 //reset icon on megamenu
-.nav-item.megamenu > a:before {
+.nav-item.megamenu > a:before,
+.nav-item.megamenu > button:before {
   display: none;
 }
 
@@ -228,10 +280,12 @@
       li {
         a {
           position: relative;
+
           &.large {
             padding-top: $inline-menu-linklist-v-padding;
             padding-bottom: $inline-menu-linklist-v-padding;
           }
+
           i {
             color: $primary-a3;
           }
@@ -279,14 +333,17 @@
     }
   }
 }
+
 //Tablet horizontal / small desktop
 @media (min-width: #{map-get($grid-breakpoints, lg)}) {
   .row.row-column-border > [class^='col-'] .navbar {
     padding: 0;
   }
+
   .navbar {
     background: $navigation-bg-color-desktop;
     padding: 0;
+
     // navbar mobile
     .navbar-collapsable {
       position: relative;
@@ -303,7 +360,7 @@
         display: none !important;
       }
 
-      // menu vrapper
+      // menu wrapper
       .menu-wrapper {
         position: inherit;
         top: auto;
@@ -331,20 +388,14 @@
         margin-top: 0;
         padding: 0 $navigation-h-padding;
 
-        li {
-          // Desktop - compatta e allinea in basso link singoli in caso di label lunghe
-          @media (min-width: #{map-get($grid-breakpoints, lg)}) {
-            &.nav-item {
-              display: flex;
-              .nav-link {
-                display: flex;
-                align-self: flex-end;
-                align-items: center;
-              }
-            }
-          }
+        li.nav-item {
+          display: flex;
 
-          a.nav-link {
+          a.nav-link,
+          button.nav-link {
+            display: flex;
+            align-self: flex-end;
+            align-items: center;
             font-weight: 400;
             padding: $navigation-v-padding $navigation-h-padding;
             color: $navigation-link-color-desk;
@@ -420,20 +471,10 @@
         padding-right: 0;
         margin-bottom: 0;
 
-        h3,
-        .link-list-heading {
-          color: $neutral-1;
-        }
-
-        a {
-          h3,
-          .link-list-heading {
-            color: $primary;
-          }
-        }
-
         ul li {
           a {
+            color: $primary;
+
             span,
             i {
               color: $primary;
@@ -448,18 +489,22 @@
       justify-content: inherit;
     }
   }
+
   .custom-navbar-toggler {
     display: none;
   }
+
   .has-megamenu {
     .navbar-collapsable {
       width: 100%;
     }
   }
+
   .nav-item.megamenu {
     position: static;
 
-    > a.dropdown-toggle {
+    > a.dropdown-toggle,
+    > button.dropdown-toggle {
       position: relative;
 
       &:before {
@@ -479,7 +524,12 @@
       }
     }
 
-    a.dropdown-toggle {
+    > button.dropdown-toggle:before {
+      bottom: -$dropdown-menu-notch-base-size - 8;
+    }
+
+    a.dropdown-toggle,
+    button.dropdown-toggle {
       &.show {
         &:before {
           opacity: 1;
@@ -487,12 +537,14 @@
       }
     }
   }
+
   .megamenu {
     .dropdown-menu {
       min-width: auto;
       left: $navigation-h-padding;
       right: $navigation-h-padding;
       animation-timing-function: cubic-bezier(0.1, 0.57, 0.36, 0.99);
+
       //hide arrow
       &:before {
         display: none;
