@@ -20,12 +20,19 @@ toc: true
   }
 </style>
 
+{% capture callout %}
+Breaking feature dalla versione **2.8.0**
+
+Gli elementi con classe `.it-back-button` diventano di tipo `<button>` invece di `<a>`.
+Gli elementi di tipo `<a>` dei collapse necessitano l'aggiunta dell'attributo `role="button"`.
+{% endcapture %}{% include callout.html content=callout type="danger" %}
+
 ## Layout della Navscroll
 
 Il componente Navscroll è una declinazione del componente Navbar `<nav class="navbar navbar-expand-lg">` con l'aggiunta della classe `.it-navscroll-wrapper` e dell'attributo `data-bs-navscroll`.  
-Nella sua versione mobile, la navigazione viene collassata all'interno di un menù, posizionabile a inizio o fine viewport.
+Nella sua versione mobile, la navigazione viene collassata all'interno di un menu, posizionabile a inizio o fine viewport.
 
-Per posizionare tale menù in alto, è sufficiente aggiungere al tag `<nav>` la classe `.it-top-navscroll`. Al contrario, per posizionare il menù in basso, è sufficiente aggiungere la classe `.it-bottom-navscroll`.
+Per posizionare tale menu in alto, è sufficiente aggiungere al tag `<nav>` la classe `.it-top-navscroll`. Al contrario, per posizionare il menu in basso, è sufficiente aggiungere la classe `.it-bottom-navscroll`.
 
 La Navscroll può avere una linea-separatore a destra o a sinistra dell'elemento. Si ottiene aggiungendo al tag `<nav>` la classe `.it-left-side` per ottenere una linea a sinistra, e `.it-right-side` per ottenere una linea a destra.
 
@@ -49,15 +56,14 @@ In questo esempio, la linea che limita la barra di navigazione è posizionata a 
   <div class="navbar-collapsable" id="navbarNav">
     <div class="overlay"></div>
     <div class="close-div visually-hidden">
-      <button class="btn close-menu" type="button"><span class="it-close"></span>close
+      <button class="btn close-menu" type="button">
+        <span class="it-close"></span>Chiudi
       </button>
     </div>
-    <a class="it-back-button" href="#" role="button">
-      <svg class="icon icon-sm icon-primary align-top">
-        <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left" xlink:href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left"></use>
-      </svg>
-      <span>Back</span>
-    </a>
+    <button type="button" class="it-back-button btn w-100 text-start">
+      <svg class="icon icon-sm icon-primary align-top"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left" xlink:href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left"></use></svg>
+      <span>Indietro</span>
+    </button>
     <div class="menu-wrapper">
       <div class="link-list-wrapper">
         <h3 class="no_toc">header</h3>
@@ -117,10 +123,14 @@ In questo esempio, la linea che limita la barra di navigazione è posizionata a 
   <div class="navbar-collapsable" id="navbarNavB">
     <div class="overlay"></div>
     <div class="close-div visually-hidden">
-      <button class="btn close-menu" type="button"><span class="it-close"></span>close
+      <button class="btn close-menu" type="button">
+        <span class="it-close"></span>Chiudi
       </button>
     </div>
-    <a class="it-back-button" href="#"><svg class="icon icon-sm icon-primary align-top"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-left"></use></svg><span>Back </span></a>
+    <button type="button" class="it-back-button btn w-100 text-start">
+      <svg class="icon icon-sm icon-primary align-top"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left" xlink:href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left"></use></svg>
+      <span>Indietro</span>
+    </button>
     <div class="menu-wrapper">
       <div class="link-list-wrapper">
         <h3 class="no_toc">header</h3>
@@ -186,13 +196,10 @@ La Navscroll può mostrare una barra di avanzamento dello scorrimento del conten
   </div>
   <div class="navbar-collapsable" id="navbarNavProgress">
     <div class="overlay"></div>
-    <a class="it-back-button" href="#" role="button">
-      <svg class="icon icon-sm icon-primary align-top">
-        <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left"
-          xlink:href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left"></use>
-      </svg>
+    <button type="button" class="it-back-button btn w-100 text-start">
+      <svg class="icon icon-sm icon-primary align-top"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left" xlink:href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left"></use></svg>
       <span>Indietro</span>
-    </a>
+    </button>
     <div class="menu-wrapper">
       <div class="link-list-wrapper">
         <h3 class="no_toc">header</h3>
@@ -249,14 +256,14 @@ La Navscroll può mostrare una barra di avanzamento dello scorrimento del conten
 
 Il nav ha due versioni, light e dark.
 
-Lo stile di default è di background bianco con testo di colore primario su desktop e mobile.
+Lo stile di default è con sfondo bianco e testo di colore primario, su desktop e mobile.
 
 **Temi Navscroll**  
 Per cambiare il tema è sufficiente aggiungere le seguenti classi al tag `<nav class="navbar">`:
 
-**`.theme-dark-mobile`**: background scuro, testi e links bianco. (modifica unicamente la versione mobile del Navscroll).
+**`.theme-dark-mobile`**: sfondo scuro, testi e link bianco (modifica unicamente la versione mobile del Navscroll).
 
-**`.theme-dark-desktop`**: background scuro, testi e links di colore bianco. (modifica unicamente la versione desktop del Navscroll)
+**`.theme-dark-desktop`**: sfondo scuro, testi e link di colore bianco (modifica unicamente la versione desktop del Navscroll).
 
 {% comment %}Example name: Variante scura{% endcomment %}
 {% capture example %}
@@ -266,10 +273,14 @@ Per cambiare il tema è sufficiente aggiungere le seguenti classi al tag `<nav c
   <div class="navbar-collapsable" id="navbarNavC">
     <div class="overlay"></div>
     <div class="close-div visually-hidden">
-      <button class="btn close-menu" type="button"><span class="it-close"></span>close
+      <button class="btn close-menu" type="button">
+      <span class="it-close"></span>Chiudi
       </button>
     </div>
-    <a class="it-back-button" href="#"><svg class="icon icon-sm icon-white align-top"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-left"></use></svg><span>Back </span></a>
+    <button type="button" class="it-back-button btn w-100 text-start">
+      <svg class="icon icon-sm icon-white align-top"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left" xlink:href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left"></use></svg>
+      <span>Indietro</span>
+    </button>
     <div class="menu-wrapper">
       <div class="link-list-wrapper">
         <h3 class="no_toc">header</h3>
@@ -321,9 +332,9 @@ Per cambiare il tema è sufficiente aggiungere le seguenti classi al tag `<nav c
 
 La classe distintiva del wrapper esterno è `.inline-menu`.
 
-Gli inline menù possono contenere liste di link di ogni tipo; nell'esempio che segue è stata inserita una Lista di link collassabile.
+Gli inline menu possono contenere liste di link di ogni tipo; nell'esempio che segue è stata inserita una Lista di link collassabile.
 
-Per maggiori informazioni, si può fare riferimento alla [documentazione delle Liste di link]({{ site.baseurl }}/docs/organizzare-i-contenuti/liste/#liste-per-menù-di-navigazione).
+Per maggiori informazioni, si può fare riferimento alla [documentazione delle Liste di link]({{ site.baseurl }}/docs/organizzare-i-contenuti/liste/#liste-per-menu-di-navigazione).
 
 {% comment %}Example name: Menu in linea{% endcomment %}
 {% capture example %}
@@ -331,7 +342,7 @@ Per maggiori informazioni, si può fare riferimento alla [documentazione delle L
   <div class="link-list-wrapper">
     <ul class="link-list">
       <li>
-        <a class="list-item large medium right-icon" href="#collapseOne" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseOne">
+        <a class="list-item large medium right-icon" href="#collapseOne" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseOne">
           <span class="list-item-title-icon-wrapper">
             <span>Link lista 1</span>
             <svg class="icon icon-xs icon-primary right"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
@@ -347,7 +358,7 @@ Per maggiori informazioni, si può fare riferimento alla [documentazione delle L
         </ul>
       </li>
       <li>
-        <a class="list-item large medium right-icon" href="#collapseTwo" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo">
+        <a class="list-item large medium right-icon" href="#collapseTwo" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo">
           <span class="list-item-title-icon-wrapper">
             <span>Link lista 2</span>
             <svg class="icon icon-xs icon-primary right"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
@@ -363,7 +374,7 @@ Per maggiori informazioni, si può fare riferimento alla [documentazione delle L
         </ul>
       </li>
       <li>
-        <a class="list-item large medium right-icon" href="#collapseThree" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseThree">
+        <a class="list-item large medium right-icon" href="#collapseThree" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseThree">
           <span class="list-item-title-icon-wrapper">
             <span>Link lista 3</span>
             <svg class="icon icon-xs icon-primary right"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>

@@ -11,6 +11,12 @@ description: La lista è un componente flessibile per la visualizzazione di list
 
 Le liste, costituite da tag `<ul>` con classe `.it-list` all'interno di un wrapper con classe `.it-list-wrapper`, possono contenere testi, link, icone, avatar, immagini o una combinazione di questi elementi.
 
+{% capture callout %}
+Breaking feature dalla versione **2.8.0**
+
+Gli elementi di tipo `<a>` dei collapse necessitano l'aggiunta dell'attributo `role="button"`.
+{% endcapture %}{% include callout.html content=callout type="danger" %}
+
 ### Lista semplice solo testo
 
 {% comment %}Example name: Base, con testo{% endcomment %}
@@ -384,9 +390,9 @@ Per il testo aggiuntivo, utilizzare il tag `<em>` all'interno dell'elemento `.te
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-## Liste per menù di navigazione
+## Liste per menu di navigazione
 
-Le liste per menù di navigazione, costituite da tag `<ul>` con classe `.link-list` all'interno di un wrapper con classe `.link-list-wrapper`, vengono utilizzate per creare le voci dei menù [Dropdown]({{site.baseurl}}/docs/componenti/dropdown/), [Megamenu]({{site.baseurl}}/docs/menu-di-navigazione/megamenu/), [Sidebar]({{site.baseurl}}/docs/menu-di-navigazione/sidebar/) e [Navscroll]({{site.baseurl}}/docs/menu-di-navigazione/navscroll/).
+Le liste per menu di navigazione, costituite da tag `<ul>` con classe `.link-list` all'interno di un wrapper con classe `.link-list-wrapper`, vengono utilizzate per creare le voci dei menu [Dropdown]({{site.baseurl}}/docs/componenti/dropdown/), [Megamenu]({{site.baseurl}}/docs/menu-di-navigazione/megamenu/), [Sidebar]({{site.baseurl}}/docs/menu-di-navigazione/sidebar/) e [Navscroll]({{site.baseurl}}/docs/menu-di-navigazione/navscroll/).
 
 ### Linea singola
 
@@ -811,7 +817,7 @@ Per questo tipo di link list sono state utilizzate, oltre alle classi custom, le
 <div class="link-list-wrapper">
   <ul class="link-list">
     <li>
-      <a class="list-item large medium icon-right" href="#collapseOne" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseOne">
+      <a class="list-item large medium icon-right" href="#collapseOne" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseOne">
         <span class="list-item-title-icon-wrapper">
           <span class="list-item-title">Link lista 1</span>
           <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
@@ -827,7 +833,7 @@ Per questo tipo di link list sono state utilizzate, oltre alle classi custom, le
       </ul>
     </li>
     <li>
-      <a class="list-item large medium icon-right" href="#collapseTwo" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo">
+      <a class="list-item large medium icon-right" href="#collapseTwo" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo">
         <span class="list-item-title-icon-wrapper">
           <span class="list-item-title">Link lista 2</span>
           <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
@@ -843,7 +849,7 @@ Per questo tipo di link list sono state utilizzate, oltre alle classi custom, le
       </ul>
     </li>
     <li>
-      <a class="list-item large medium icon-right" href="#collapseThree" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseThree">
+      <a class="list-item large medium icon-right" href="#collapseThree" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseThree">
         <span class="list-item-title-icon-wrapper">
           <span class="list-item-title">Link lista 3</span>
           <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>

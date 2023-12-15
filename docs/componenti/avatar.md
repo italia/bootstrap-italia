@@ -31,6 +31,12 @@ Per ottenere un elemento grafico non interattivo, utilizza il tag `<div>`.
 Ogni Avatar può essere associato ad un'azione, utilizzando per esso il tag `<a>`.
 
 {% capture callout %}
+Breaking feature dalla versione **2.8.0**
+
+Il toggle del dropdown diventa `<button>` invece di `<a>`.
+{% endcapture %}{% include callout.html content=callout type="danger" %}
+
+{% capture callout %}
 
 #### Accessibilità delle immagini
 
@@ -204,7 +210,7 @@ Gli Avatar possono essere raggruppati in liste verticali ed orizzontali.
 
 ### Lista
 
-Utilizzando una <a href="{{ site.baseurl }}/docs/organizzare-i-contenuti/liste/#liste-per-menù-di-navigazione">Lista di link</a> con l'aggiunta della classe `.avatar-group` si ottiene una lista verticale con Avatar affiancati da link e testi.
+Utilizzando una <a href="{{ site.baseurl }}/docs/organizzare-i-contenuti/liste/#liste-per-menu-di-navigazione">Lista di link</a> con l'aggiunta della classe `.avatar-group` si ottiene una lista verticale con Avatar affiancati da link e testi.
 
 #### Lista piccola
 
@@ -355,11 +361,11 @@ Gruppo di Avatar sovrapposti di dimensione piccola con classe `.size-sm`.
   <li>
     <div class="avatar avatar-dropdown size-sm">
       <div class="dropdown">
-        <a class="btn btn-dropdown dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuToggle1" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <span class="visually-hidden">Visualizza altri 4 utenti</span>
           <span aria-hidden="true">+4</span>
-        </a>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuToggle1">
           <div class="link-list-wrapper">
             <ul class="link-list">
               <li>
@@ -440,11 +446,11 @@ Gruppo di Avatar sovrapposti di dimensione media con classe `.size-md`.
   <li>
     <div class="avatar avatar-dropdown size-md">
       <div class="dropdown">
-        <a class="btn btn-dropdown dropdown-toggle" href="#" role="button" id="dropdownMenuLink2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuToggle2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <span class="visually-hidden">Visualizza altri 4 utenti</span>
           <span aria-hidden="true">+4</span>
-        </a>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink2">
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuToggle2">
           <div class="link-list-wrapper">
             <ul class="link-list">
               <li>
