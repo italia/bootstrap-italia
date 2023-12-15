@@ -23,20 +23,6 @@ L'header di un sito della Pubblica Amministrazione è solitamente composto di 3 
 - Un **Header Nav** dedicato alla navigazione, visibile su schermi di grandi dimensioni e attraverso il classico pulsante di tipo "burger menu"
   (<svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-burger"></use></svg>) su dispositivi mobili.
 
-{% capture callout %}
-Breaking feature dalla versione **2.8.0**
-
-Il toggle del dropdown diventa `<button>` invece di `<a>`.
-{% endcapture %}{% include callout.html content=callout type="danger" %}
-
-{% capture callout %}
-Breaking feature dalla versione **2.8.0**
-
-Agli elementi di `<a>` occorre aggiungere l'attributo `role="button"`.
-{% endcapture %}{% include callout.html content=callout type="danger" %}
-
-{% capture callout %}
-
 #### Accessibilità
 
 Considerando l'importanza dell'Header per la navigazione, si ricorda porre particolare attenzione all'utilizzo della corretta semantica HTML, alle etichette e agli attributi `ARIA`, oltre a validare e testare sempre con utenti il risultato.
@@ -45,6 +31,16 @@ Il titolo del sito, "Nome dell'Istituzione" negli esempi, è contenuto in un `<d
 
 Maggiori dettagli sull'accessibilità del componente **megamenu** nella [relativa pagina]({{site.baseurl}}/docs/menu-di-navigazione/megamenu/).
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
+
+{% capture callout %}
+Breaking feature dalla versione **2.8.0**
+
+- Il toggle del dropdown diventa `<button>` invece di `<a>`. 
+- Gli altri elementi `<a>` che si comportano come toggle dropdown (eg. scelta Lingua), hanno l'aggiunta dell'attributo `role="button"`.
+- Il markup del Megamenu cambia come nel nuovo componente, per approfondire andare alla [relativa pagina]({{site.baseurl}}/docs/menu-di-navigazione/megamenu/).
+{% endcapture %}{% include callout.html content=callout type="danger" %}
+
+{% capture callout %}
 
 ## Slim Header
 
