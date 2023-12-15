@@ -28,6 +28,13 @@ Quando si utilizza l'attributo `placeholder` o l'input parte già valorizzato as
 
 {% endcapture %}{% include callout.html content=callout type="danger" %}
 
+{% capture callout %}
+Breaking feature dalla versione **2.8.0**
+
+Rimosso l'elemento con classe `.input-group-prepend` in favore dell'elemento 
+con classe `.input-group-text`.
+{% endcapture %}{% include callout.html content=callout type="danger" %}
+
 {% comment %}Example name: Varianti per tipo {% endcomment %}
 {% capture example %}
 <div>
