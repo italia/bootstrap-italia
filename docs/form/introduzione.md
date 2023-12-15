@@ -137,9 +137,7 @@ L'esempio seguente usa una delle [utilità di flexbox]({{ site.baseurl }}/docs/o
   <div class="col-12 col-md-6 col-lg-auto mb-3">
     <label class="visually-hidden" for="inlineFormInputGroup">Username</label>
     <div class="input-group">
-      <div class="input-group-prepend">
-        <div class="input-group-text">@</div>
-      </div>
+      <span class="input-group-text">@</span>
       <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username">
     </div>
   </div>
