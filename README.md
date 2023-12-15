@@ -9,19 +9,23 @@
 
 _🇬🇧 [English version](README.EN.md)_
 
-_⚠️ [La versione 1.x di Bootstrap Italia (basata su Bootstrap 4) è stata ufficialmente deprecata](https://github.com/italia/bootstrap-italia/tree/1.x)_
+_⚠️ [La versione 1.x di Bootstrap Italia (basata su Bootstrap 4) è deprecata](https://github.com/italia/bootstrap-italia/tree/1.x)_
 
-Bootstrap Italia è un tema basato su [Bootstrap 5](https://getbootstrap.com/docs/5.2/getting-started/introduction/) conforme alle [linee guida di design per i siti internet e i servizi digitali delle Pubbliche Amministrazioni](https://docs.italia.it/italia/design/lg-design-servizi-web/).
+Bootstrap Italia è un framework basato su [Bootstrap 5](https://getbootstrap.com/docs/5.2/getting-started/introduction/).
 
-Bootstrap Italia eredita tutte le funzionalità, componenti, mixins, grid system, e altro già presenti in Bootstrap 5, e le personalizza secondo le "Linee guida di design per i siti internet e i servizi digitali della PA" e le indicazioni presenti nel manuale operativo di design messo a disposizione da Designers Italia. Puoi scoprire di più tramite la [pagina dedicata di Designers Italia](https://designers.italia.it/linee-guida).
+Bootstrap Italia eredita tutte le funzionalità, componenti, mixins, grid system, e altro già presenti in Bootstrap 5, personalizzandole per implementare soluzioni secondo le [Linee guida di design per i siti internet e i servizi digitali delle Pubbliche Amministrazioni](https://designers.italia.it/norme-e-riferimenti/).
+
+Bootstrap Italia è la risorsa di sviluppo dell'ecosistema [design system del Paese](https://designers.italia.it/design-system/come-iniziare/) e implementa pattern e componenti di [UI Kit Italia](https://github.com/italia/design-ui-kit/) in codice pronto all'uso! 
 
 La roadmap del progetto è consultabile nel [piano attività di Designers Italia](https://designers.italia.it/piano-attivita/).
 
-**[Vedi la documentazione completa »](https://italia.github.io/bootstrap-italia/)**
+**[Esplora la documentazione di sviluppo »](https://italia.github.io/bootstrap-italia/)**
+
+**[Esplora la documentazione del design system del Paese »](https://designers.italia.it/design-system/come-iniziare/)**
 
 oppure
 
-**[Scarica l'ultima versione della libreria »](https://github.com/italia/bootstrap-italia/releases)**
+**[Scarica l'ultima versione del framework »](https://github.com/italia/bootstrap-italia/releases)**
 
 ## Indice
 
@@ -29,19 +33,17 @@ oppure
 - [Come contribuire](#come-contribuire)
 - [Licenze software dei componenti di terze parti](#licenze-software-dei-componenti-di-terze-parti)
 
-## Segnalazione bug e richieste di aiuto
+## Segnalazioni e richieste di aiuto
 
-Vuoi segnalare un bug o fare una richiesta?
+Vuoi fare una segnalazione o una richiesta?
 
-Prima di tutto assicurati che sia un problema relativo al tema Bootstrap Italia e non alla libreria Bootstrap da cui deriva
-(in tal caso puoi fare riferimento al [repository di Bootstrap](https://github.com/twbs/bootstrap)), poi
-dai un'occhiata a come [creare una issue](https://github.com/italia/bootstrap-italia/blob/main/CONTRIBUTING.md#creare-una-issue).
+Prima di tutto assicurati che sia un team relativo a Bootstrap Italia e non alla libreria Bootstrap da cui deriva (in tal caso puoi fare riferimento al [repository di Bootstrap](https://github.com/twbs/bootstrap)), scopri il [modello di contribuzione del design system del Paese](https://designers.italia.it/design-system/come-contribuire/), e poi dai un'occhiata alle indicazioni di dettaglio su [come creare una issue a Bootstrap italia](https://github.com/italia/bootstrap-italia/blob/main/CONTRIBUTING.md#creare-una-issue).
 
 ## Come contribuire
 
 Vorresti dare una mano su Bootstrap Italia? **Sei nel posto giusto!**
 
-Se non l'hai già fatto, inizia spendendo qualche minuto per approfondire la tua conoscenza sulle "Linee guida di design per i siti internet e i servizi digitali della PA" e del manuale operativo di design a supporto partendo dalla [pagina dedicata di Designers Italia](https://designers.italia.it/linee-guida), e fai riferimento alle [indicazioni su come contribuire a Bootstrap Italia](https://github.com/italia/bootstrap-italia/blob/main/CONTRIBUTING.md).
+Se non l'hai già fatto, inizia spendendo qualche minuto per approfondire la tua conoscenza sulle "Linee guida di design per i siti internet e i servizi digitali della PA" e del manuale operativo di design a supporto partendo dalla [pagina dedicata di Designers Italia](https://designers.italia.it/norme-e-riferimenti), scopri il [modello di contribuzione del design system del Paese](https://designers.italia.it/design-system/come-contribuire/), e fai riferimento alle [indicazioni di dettaglio su come contribuire a Bootstrap Italia](https://github.com/italia/bootstrap-italia/blob/main/CONTRIBUTING.md).
 
 A questo punto, è necessario impostare il tuo ambiente locale per la compilazione dei file sorgente e la generazione
 della documentazione. Puoi usare [Docker](https://docs.docker.com/get-started/) per far partire l'ambiente di sviluppo.
