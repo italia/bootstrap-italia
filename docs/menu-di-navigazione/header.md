@@ -40,8 +40,6 @@ Breaking feature dalla versione **2.8.0**
 - Il markup del Megamenu cambia come nel nuovo componente, per approfondire andare alla [relativa pagina]({{site.baseurl}}/docs/menu-di-navigazione/megamenu/).
 {% endcapture %}{% include callout.html content=callout type="danger" %}
 
-{% capture callout %}
-
 ## Slim Header
 
 Lo **Slim Header** mostra un'intestazione, solitamente con riferimento all'ente di appartenenza del progetto o riferimenti utili, oltre ad un eventuale menu per il cambio lingua e l'accesso ad area riservata.  
