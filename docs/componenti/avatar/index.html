@@ -11,13 +11,13 @@
 
 <title>Avatar · Bootstrap Italia</title>
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202312141705" rel="stylesheet" />
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202312151553" rel="stylesheet" />
 
 <!-- Documentation extras -->
  
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.css" rel="stylesheet" />
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202312141705" rel="stylesheet" />
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202312151553" rel="stylesheet" />
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico" />
@@ -139,8 +139,8 @@
 
     <ul class="navbar-nav flex-row ms-md-auto d-none d-md-flex">
       <li class="nav-item pe-2">
-        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v2.7.12/bootstrap-italia.zip" aria-label="Download">
-          <small class="pe-2 m-0">v2.7.12</small>
+        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v2.8.0/bootstrap-italia.zip" aria-label="Download">
+          <small class="pe-2 m-0">v2.8.0</small>
           <svg class="icon icon-sm icon-light"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-download" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-download"></use></svg><span class="visually-hidden">Download</span>
         </a>
       </li>
@@ -650,6 +650,12 @@
 <p>Per ottenere un elemento grafico non interattivo, utilizza il tag <code class="language-plaintext highlighter-rouge">&lt;div&gt;</code>.
 Ogni Avatar può essere associato ad un’azione, utilizzando per esso il tag <code class="language-plaintext highlighter-rouge">&lt;a&gt;</code>.</p>
 
+<div class="bd-callout bd-callout-danger">
+<p>Breaking feature dalla versione <strong>2.8.0</strong></p>
+
+<p>Il toggle del dropdown diventa <code class="language-plaintext highlighter-rouge">&lt;button&gt;</code> invece di <code class="language-plaintext highlighter-rouge">&lt;a&gt;</code>.</p>
+</div>
+
 <div class="bd-callout bd-callout-accessibility">
 <h4 id="accessibilità-delle-immagini">Accessibilità delle immagini</h4>
 
@@ -1021,7 +1027,7 @@ Oltre ai colori di default è possibile utilizzare uno sfondo a scelta fra:</p>
 
 <h3 id="lista">Lista</h3>
 
-<p>Utilizzando una <a href="/bootstrap-italia/docs/organizzare-i-contenuti/liste/#liste-per-menù-di-navigazione">Lista di link</a> con l’aggiunta della classe <code class="language-plaintext highlighter-rouge">.avatar-group</code> si ottiene una lista verticale con Avatar affiancati da link e testi.</p>
+<p>Utilizzando una <a href="/bootstrap-italia/docs/organizzare-i-contenuti/liste/#liste-per-menu-di-navigazione">Lista di link</a> con l’aggiunta della classe <code class="language-plaintext highlighter-rouge">.avatar-group</code> si ottiene una lista verticale con Avatar affiancati da link e testi.</p>
 
 <h4 id="lista-piccola">Lista piccola</h4>
 
@@ -1311,11 +1317,11 @@ Oltre ai colori di default è possibile utilizzare uno sfondo a scelta fra:</p>
   <li>
     <div class="avatar avatar-dropdown size-sm">
       <div class="dropdown">
-        <a class="btn btn-dropdown dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuToggle1" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <span class="visually-hidden">Visualizza altri 4 utenti</span>
           <span aria-hidden="true">+4</span>
-        </a>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuToggle1">
           <div class="link-list-wrapper">
             <ul class="link-list">
               <li>
@@ -1500,11 +1506,11 @@ Oltre ai colori di default è possibile utilizzare uno sfondo a scelta fra:</p>
   <span class="nt">&lt;li&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"avatar avatar-dropdown size-sm"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-dropdown dropdown-toggle"</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownMenuLink"</span> <span class="na">data-bs-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-dropdown dropdown-toggle"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownMenuToggle1"</span> <span class="na">data-bs-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"visually-hidden"</span><span class="nt">&gt;</span>Visualizza altri 4 utenti<span class="nt">&lt;/span&gt;</span>
           <span class="nt">&lt;span</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>+4<span class="nt">&lt;/span&gt;</span>
-        <span class="nt">&lt;/a&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span> <span class="na">aria-labelledby=</span><span class="s">"dropdownMenuLink"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span> <span class="na">aria-labelledby=</span><span class="s">"dropdownMenuToggle1"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"link-list-wrapper"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"link-list"</span><span class="nt">&gt;</span>
               <span class="nt">&lt;li&gt;</span>
@@ -1584,11 +1590,11 @@ Oltre ai colori di default è possibile utilizzare uno sfondo a scelta fra:</p>
   <li>
     <div class="avatar avatar-dropdown size-md">
       <div class="dropdown">
-        <a class="btn btn-dropdown dropdown-toggle" href="#" role="button" id="dropdownMenuLink2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuToggle2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <span class="visually-hidden">Visualizza altri 4 utenti</span>
           <span aria-hidden="true">+4</span>
-        </a>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink2">
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuToggle2">
           <div class="link-list-wrapper">
             <ul class="link-list">
               <li>
@@ -1741,11 +1747,11 @@ Oltre ai colori di default è possibile utilizzare uno sfondo a scelta fra:</p>
   <span class="nt">&lt;li&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"avatar avatar-dropdown size-md"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-dropdown dropdown-toggle"</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownMenuLink2"</span> <span class="na">data-bs-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-dropdown dropdown-toggle"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownMenuToggle2"</span> <span class="na">data-bs-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"visually-hidden"</span><span class="nt">&gt;</span>Visualizza altri 4 utenti<span class="nt">&lt;/span&gt;</span>
           <span class="nt">&lt;span</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>+4<span class="nt">&lt;/span&gt;</span>
-        <span class="nt">&lt;/a&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span> <span class="na">aria-labelledby=</span><span class="s">"dropdownMenuLink2"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span> <span class="na">aria-labelledby=</span><span class="s">"dropdownMenuToggle2"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"link-list-wrapper"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"link-list"</span><span class="nt">&gt;</span>
               <span class="nt">&lt;li&gt;</span>
@@ -2328,15 +2334,15 @@ Oltre ai colori di default è possibile utilizzare uno sfondo a scelta fra:</p>
     </div>
 
     
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202312141705"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202312151553"></script>
 <script>
   bootstrap.loadFonts('/bootstrap-italia/dist/fonts')
-</script><script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202312141705"></script>
+</script><script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202312151553"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/anchor.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/clipboard.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tsparticles.min.js"></script>
 
-<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202312141705"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202312151553"></script>
 
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tweenjs.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/easeljs.min.js"></script>
@@ -2353,7 +2359,7 @@ Oltre ai colori di default è possibile utilizzare uno sfondo a scelta fra:</p>
     { src: '/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png', id: 'cover-7' },
   ]
 </script>
-<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202312141705"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202312151553"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/docsearch.min.js"></script>
 
 <script>

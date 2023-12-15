@@ -11,13 +11,13 @@
 
 <title>Sidebar · Bootstrap Italia</title>
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202312141705" rel="stylesheet" />
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202312151553" rel="stylesheet" />
 
 <!-- Documentation extras -->
  
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.css" rel="stylesheet" />
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202312141705" rel="stylesheet" />
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202312151553" rel="stylesheet" />
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico" />
@@ -139,8 +139,8 @@
 
     <ul class="navbar-nav flex-row ms-md-auto d-none d-md-flex">
       <li class="nav-item pe-2">
-        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v2.7.12/bootstrap-italia.zip" aria-label="Download">
-          <small class="pe-2 m-0">v2.7.12</small>
+        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v2.8.0/bootstrap-italia.zip" aria-label="Download">
+          <small class="pe-2 m-0">v2.8.0</small>
           <svg class="icon icon-sm icon-light"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-download" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-download"></use></svg><span class="visually-hidden">Download</span>
         </a>
       </li>
@@ -612,7 +612,13 @@
         <main class="col-12 col-md-9 col-xl-8 py-md-3 px-md-3 bd-content">
           <h1 class="bd-title" id="content">Sidebar</h1>
           <p class="lead">Barra di navigazione laterale, include liste di link e liste di link annidate.</p>
-          <h2 id="semplice">Semplice</h2>
+          <div class="bd-callout bd-callout-danger">
+<p>Breaking feature dalla versione <strong>2.8.0</strong></p>
+
+<p>Gli elementi di tipo <code class="language-plaintext highlighter-rouge">&lt;a&gt;</code> dei collapse necessitano l’aggiunta dell’attributo <code class="language-plaintext highlighter-rouge">role="button"</code>.</p>
+</div>
+
+<h2 id="semplice">Semplice</h2>
 
 <p>La sidebar semplice può contenere:</p>
 
@@ -622,7 +628,7 @@
   <li>Lista di link secondaria</li>
 </ul>
 
-<p>Per differenziare a livello stilistico i link secondari, è sufficiente aggiungere la classe <code class="language-plaintext highlighter-rouge">.linklist-secondary</code> all’elemento <code class="language-plaintext highlighter-rouge">&lt;div class="sidebar-linklist-wrapper"&gt;</code> contenente la <a href="/bootstrap-italia/docs/organizzare-i-contenuti/liste/#liste-per-menù-di-navigazione">Lista di link</a>.</p>
+<p>Per differenziare a livello stilistico i link secondari, è sufficiente aggiungere la classe <code class="language-plaintext highlighter-rouge">.linklist-secondary</code> all’elemento <code class="language-plaintext highlighter-rouge">&lt;div class="sidebar-linklist-wrapper"&gt;</code> contenente la <a href="/bootstrap-italia/docs/organizzare-i-contenuti/liste/#liste-per-menu-di-navigazione">Lista di link</a>.</p>
 
 <div class="bd-example">
 <div class="sidebar-wrapper">
@@ -1095,7 +1101,7 @@
     <div class="link-list-wrapper">
       <ul class="link-list">
         <li>
-          <a class="list-item large medium right-icon active" href="#collapseOne" data-bs-toggle="collapse" aria-expanded="true" aria-controls="collapseOne">
+          <a class="list-item large medium right-icon active" href="#collapseOne" role="button" data-bs-toggle="collapse" aria-expanded="true" aria-controls="collapseOne">
           <span class="list-item-title-icon-wrapper">
             <span>Link lista 1 (selezionato)</span>
             <svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use></svg>
@@ -1111,7 +1117,7 @@
           </ul>
         </li>
         <li>
-          <a class="list-item large medium right-icon" href="#collapseTwo" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo">
+          <a class="list-item large medium right-icon" href="#collapseTwo" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo">
             <span class="list-item-title-icon-wrapper">
               <span>Link lista 2</span>
               <svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use></svg>
@@ -1127,7 +1133,7 @@
           </ul>
         </li>
         <li>
-          <a class="list-item large medium right-icon" href="#collapseThree" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseThree">
+          <a class="list-item large medium right-icon" href="#collapseThree" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseThree">
             <span class="list-item-title-icon-wrapper">
               <span>Link lista 3</span>
               <svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use></svg>
@@ -1234,7 +1240,7 @@
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"link-list-wrapper"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"link-list"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;li&gt;</span>
-          <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"list-item large medium right-icon active"</span> <span class="na">href=</span><span class="s">"#collapseOne"</span> <span class="na">data-bs-toggle=</span><span class="s">"collapse"</span> <span class="na">aria-expanded=</span><span class="s">"true"</span> <span class="na">aria-controls=</span><span class="s">"collapseOne"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"list-item large medium right-icon active"</span> <span class="na">href=</span><span class="s">"#collapseOne"</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">data-bs-toggle=</span><span class="s">"collapse"</span> <span class="na">aria-expanded=</span><span class="s">"true"</span> <span class="na">aria-controls=</span><span class="s">"collapseOne"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-title-icon-wrapper"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;span&gt;</span>Link lista 1 (selezionato)<span class="nt">&lt;/span&gt;</span>
             <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm icon-primary right"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-expand"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
@@ -1250,7 +1256,7 @@
           <span class="nt">&lt;/ul&gt;</span>
         <span class="nt">&lt;/li&gt;</span>
         <span class="nt">&lt;li&gt;</span>
-          <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"list-item large medium right-icon"</span> <span class="na">href=</span><span class="s">"#collapseTwo"</span> <span class="na">data-bs-toggle=</span><span class="s">"collapse"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"collapseTwo"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"list-item large medium right-icon"</span> <span class="na">href=</span><span class="s">"#collapseTwo"</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">data-bs-toggle=</span><span class="s">"collapse"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"collapseTwo"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-title-icon-wrapper"</span><span class="nt">&gt;</span>
               <span class="nt">&lt;span&gt;</span>Link lista 2<span class="nt">&lt;/span&gt;</span>
               <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm icon-primary right"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-expand"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
@@ -1266,7 +1272,7 @@
           <span class="nt">&lt;/ul&gt;</span>
         <span class="nt">&lt;/li&gt;</span>
         <span class="nt">&lt;li&gt;</span>
-          <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"list-item large medium right-icon"</span> <span class="na">href=</span><span class="s">"#collapseThree"</span> <span class="na">data-bs-toggle=</span><span class="s">"collapse"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"collapseThree"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"list-item large medium right-icon"</span> <span class="na">href=</span><span class="s">"#collapseThree"</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">data-bs-toggle=</span><span class="s">"collapse"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"collapseThree"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-title-icon-wrapper"</span><span class="nt">&gt;</span>
               <span class="nt">&lt;span&gt;</span>Link lista 3<span class="nt">&lt;/span&gt;</span>
               <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm icon-primary right"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-expand"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
@@ -1310,7 +1316,7 @@
     <div class="link-list-wrapper">
       <ul class="link-list">
         <li>
-          <a class="list-item large medium right-icon active" href="#collapseFour" data-bs-toggle="collapse" aria-expanded="true" aria-controls="collapseOne">
+          <a class="list-item large medium right-icon active" href="#collapseFour" role="button" data-bs-toggle="collapse" aria-expanded="true" aria-controls="collapseOne">
             <span class="list-item-title-icon-wrapper">
               <span>Link lista 1 (selezionato)</span><svg class="icon icon-sm icon-white right" aria-hidden="true"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use></svg>
             </span>
@@ -1325,7 +1331,7 @@
           </ul>
         </li>
         <li>
-          <a class="list-item large medium right-icon" href="#collapseFive" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo">
+          <a class="list-item large medium right-icon" href="#collapseFive" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo">
           <span class="list-item-title-icon-wrapper">
               <span>Link lista 2</span><svg class="icon icon-sm icon-white right" aria-hidden="true"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use></svg>
             </span>
@@ -1340,7 +1346,7 @@
           </ul>
         </li>
         <li>
-          <a class="list-item large medium right-icon" href="#collapseSix" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseThree">
+          <a class="list-item large medium right-icon" href="#collapseSix" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseThree">
             <span class="list-item-title-icon-wrapper">
               <span>Link lista 3</span><svg class="icon icon-sm icon-white right" aria-hidden="true"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use></svg>
             </span>
@@ -1443,7 +1449,7 @@
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"link-list-wrapper"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"link-list"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;li&gt;</span>
-          <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"list-item large medium right-icon active"</span> <span class="na">href=</span><span class="s">"#collapseFour"</span> <span class="na">data-bs-toggle=</span><span class="s">"collapse"</span> <span class="na">aria-expanded=</span><span class="s">"true"</span> <span class="na">aria-controls=</span><span class="s">"collapseOne"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"list-item large medium right-icon active"</span> <span class="na">href=</span><span class="s">"#collapseFour"</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">data-bs-toggle=</span><span class="s">"collapse"</span> <span class="na">aria-expanded=</span><span class="s">"true"</span> <span class="na">aria-controls=</span><span class="s">"collapseOne"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-title-icon-wrapper"</span><span class="nt">&gt;</span>
               <span class="nt">&lt;span&gt;</span>Link lista 1 (selezionato)<span class="nt">&lt;/span&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm icon-white right"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-expand"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
             <span class="nt">&lt;/span&gt;</span>
@@ -1458,7 +1464,7 @@
           <span class="nt">&lt;/ul&gt;</span>
         <span class="nt">&lt;/li&gt;</span>
         <span class="nt">&lt;li&gt;</span>
-          <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"list-item large medium right-icon"</span> <span class="na">href=</span><span class="s">"#collapseFive"</span> <span class="na">data-bs-toggle=</span><span class="s">"collapse"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"collapseTwo"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"list-item large medium right-icon"</span> <span class="na">href=</span><span class="s">"#collapseFive"</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">data-bs-toggle=</span><span class="s">"collapse"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"collapseTwo"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-title-icon-wrapper"</span><span class="nt">&gt;</span>
               <span class="nt">&lt;span&gt;</span>Link lista 2<span class="nt">&lt;/span&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm icon-white right"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-expand"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
             <span class="nt">&lt;/span&gt;</span>
@@ -1473,7 +1479,7 @@
           <span class="nt">&lt;/ul&gt;</span>
         <span class="nt">&lt;/li&gt;</span>
         <span class="nt">&lt;li&gt;</span>
-          <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"list-item large medium right-icon"</span> <span class="na">href=</span><span class="s">"#collapseSix"</span> <span class="na">data-bs-toggle=</span><span class="s">"collapse"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"collapseThree"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"list-item large medium right-icon"</span> <span class="na">href=</span><span class="s">"#collapseSix"</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">data-bs-toggle=</span><span class="s">"collapse"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"collapseThree"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-title-icon-wrapper"</span><span class="nt">&gt;</span>
               <span class="nt">&lt;span&gt;</span>Link lista 3<span class="nt">&lt;/span&gt;&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm icon-white right"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-expand"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
             <span class="nt">&lt;/span&gt;</span>
@@ -1511,15 +1517,15 @@
     </div>
 
     
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202312141705"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202312151553"></script>
 <script>
   bootstrap.loadFonts('/bootstrap-italia/dist/fonts')
-</script><script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202312141705"></script>
+</script><script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202312151553"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/anchor.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/clipboard.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tsparticles.min.js"></script>
 
-<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202312141705"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202312151553"></script>
 
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tweenjs.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/easeljs.min.js"></script>
@@ -1536,7 +1542,7 @@
     { src: '/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png', id: 'cover-7' },
   ]
 </script>
-<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202312141705"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202312151553"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/docsearch.min.js"></script>
 
 <script>

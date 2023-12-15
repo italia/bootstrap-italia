@@ -13,6 +13,6 @@
     },
     {
         "name": "Pulsante di chiusura",
-        "content": "\n\n<div class=\"alert alert-warning alert-dismissible fade show\" role=\"alert\">\n  <strong>Attenzione</strong> Alcuni campi inseriti sono da controllare.\n  <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\" aria-label=\"Chiudi avviso\">\n    <svg class=\"icon\">\n      <use href=\"/dist/svg/sprites.svg#it-close\"></use>\n    </svg>\n  </button>\n</div>\n"
+        "content": "\n\n<div class=\"alert alert-warning alert-dismissible fade show\" role=\"alert\">\n  <strong>Attenzione</strong> Alcuni campi inseriti sono da controllare.\n  <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\" aria-label=\"Chiudi avviso\">\n    <svg class=\"icon\"><use href=\"/dist/svg/sprites.svg#it-close\"></use></svg>\n  </button>\n</div>\n"
     }
 ]
