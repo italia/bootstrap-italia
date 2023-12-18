@@ -47,7 +47,6 @@ const SELECTOR_MEGAMENUNAVLINK = '.nav-item .list-item'
 const SELECTOR_HEADINGLINK = '.it-heading-link'
 const SELECTOR_FOOTERLINK = '.it-footer-link'
 
-
 class NavBarCollapsible extends BaseComponent {
   constructor(element) {
     super(element)
@@ -65,7 +64,10 @@ class NavBarCollapsible extends BaseComponent {
     this._menuWrapper = SelectorEngine.findOne(SELECTOR_MENU_WRAPPER, this._element)
     this._overlay = null
     this._setOverlay()
-    this._menuItems = SelectorEngine.find([SELECTOR_NAVLINK, SELECTOR_MEGAMENUNAVLINK, SELECTOR_HEADINGLINK, SELECTOR_FOOTERLINK, SELECTOR_BTN_MENU_CLOSE].join(','), this._element)
+    this._menuItems = SelectorEngine.find(
+      [SELECTOR_NAVLINK, SELECTOR_MEGAMENUNAVLINK, SELECTOR_HEADINGLINK, SELECTOR_FOOTERLINK, SELECTOR_BTN_MENU_CLOSE].join(','),
+      this._element
+    )
 
     this._bindEvents()
   }
