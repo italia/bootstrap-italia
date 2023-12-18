@@ -42,7 +42,7 @@ const SELECTOR_BTN_MENU_CLOSE = '.close-menu'
 const SELECTOR_BTN_BACK = '.it-back-button'
 const SELECTOR_OVERLAY = '.overlay'
 const SELECTOR_MENU_WRAPPER = '.menu-wrapper'
-const SELECTOR_NAVLINK = 'a.nav-link'
+const SELECTOR_NAVLINK = '.nav-link'
 const SELECTOR_MEGAMENUNAVLINK = '.nav-item .list-item'
 
 class NavBarCollapsible extends BaseComponent {
