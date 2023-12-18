@@ -213,8 +213,3 @@ small,
 .initialism {
   font-size: 90%;
 }
-
-// force text decoration for links with `.text-decoration-none` class
-a.text-decoration-none:hover {
-  text-decoration: underline;
-}
