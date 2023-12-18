@@ -23,8 +23,6 @@
     - name: Bootstrap Italia playground
       url: 'https://github.com/italia/bootstrap-italia-playground/tree/main'
       description: Il modo più semplice per iniziare a giocare con Bootstrap Italia. Un semplice HTML che mostra come includere tutti i file necessari.
-    - name: Template vuoto senza "sticky header"
-      url: template-vuoto
       description: Un esempio di impostazione per una pagina generica, punto di partenza per iniziare con Bootstrap Italia.
     - name: Template Comuni
       url: 'https://italia.github.io/design-comuni-pagine-statiche/'
