@@ -32,7 +32,7 @@ Il flow da seguire per lo sviluppo è semplificato rispetto a un git-flow standa
 
 I criteri da seguire durante il lavoro sulle feature e sulle issue sono i seguenti:
 
-- Utilizzare lo standard [Conventional Commit(https://www.conventionalcommits.org/en/v1.0.0/) per scrivere messaggi di commit leggibili e standardizzati
+- Utilizzare lo standard [Conventional Commit](https://www.conventionalcommits.org/en/v1.0.0/) per scrivere messaggi di commit leggibili e standardizzati
 - In caso di vari commit su un branch che non aggiungono informazione alla feature o al fix in questione (ad esempio fix: revert last work o chore: typo in documentation) meglio fare uno squash dei vari commit (o richiedere di farlo a chi mergerà la PR in questione)
 - Cercare di allinearsi a main prima di richiedere una review, utilizzando rebase o merge (https://amerlin.keantex.com/git-merge-vs-rebase/) e risolvendo eventuali conflitti.
 
