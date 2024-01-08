@@ -390,7 +390,7 @@ Di seguito un esempio di form validato con Just Validate.
         },
       ])
       .onSuccess(() => {
-        document.forms['justValidate'].submit()
+        document.forms['justValidateForm'].submit()
       })
       .onFail((fields) => {
         errorWrapper.innerHTML = '';
