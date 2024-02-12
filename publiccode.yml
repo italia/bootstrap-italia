@@ -58,7 +58,7 @@ it:
     codiceIPA: pcm
 landingURL: 'https://italia.github.io/bootstrap-italia'
 legal:
-  authorsFile: 'https://raw.githubusercontent.com/italia/bootstrap-italia/1.x/AUTHORS'
+  authorsFile: 'https://raw.githubusercontent.com/italia/bootstrap-italia/AUTHORS'
   license: BSD-3-Clause
   mainCopyrightOwner: Presidenza del Consiglio dei Ministri
 localisation:
