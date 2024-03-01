@@ -57,20 +57,20 @@ GEM
       rexml
     kramdown-parser-gfm (1.1.0)
       kramdown (~> 2.0)
-    liquid (4.0.3)
+    liquid (4.0.4)
     listen (3.7.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     mercenary (0.4.0)
-    mini_portile2 (2.8.1)
-    nokogiri (1.14.3)
-      mini_portile2 (~> 2.8.0)
+    mini_portile2 (2.8.5)
+    nokogiri (1.16.2)
+      mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
     parallel (1.21.0)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
     public_suffix (4.0.6)
-    racc (1.6.2)
+    racc (1.7.3)
     rainbow (3.1.1)
     rb-fsevent (0.11.1)
     rb-inotify (0.10.1)
@@ -87,8 +87,6 @@ GEM
     typhoeus (1.4.0)
       ethon (>= 0.9.0)
     unicode-display_width (1.8.0)
-    wdm (0.1.1)
-    webrick (1.7.0)
     yell (2.2.2)
 
 PLATFORMS
@@ -102,8 +100,6 @@ DEPENDENCIES
   jekyll-redirect-from (~> 0.16.0)
   jekyll-sitemap (~> 1.4.0)
   jekyll-toc (~> 0.17.1)
-  wdm (>= 0.1.0)
-  webrick (~> 1.7)
 
 BUNDLED WITH
    2.3.0
