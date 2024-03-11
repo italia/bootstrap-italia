@@ -137,6 +137,8 @@ platforms:
   - it-stackoverflow
   - it-stackoverflow-square
   - it-telegram
+  - it-threads
+  - it-threads-square
   - it-tiktok
   - it-tiktok-square
   - it-twitter
