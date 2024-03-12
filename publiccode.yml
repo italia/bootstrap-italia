@@ -58,7 +58,7 @@ it:
     codiceIPA: pcm
 landingURL: 'https://italia.github.io/bootstrap-italia'
 legal:
-  authorsFile: 'https://raw.githubusercontent.com/italia/bootstrap-italia/1.x/AUTHORS'
+  authorsFile: 'https://raw.githubusercontent.com/italia/bootstrap-italia/AUTHORS'
   license: BSD-3-Clause
   mainCopyrightOwner: Presidenza del Consiglio dei Ministri
 localisation:
@@ -72,8 +72,8 @@ maintenance:
 name: Bootstrap Italia
 platforms:
   - web
-releaseDate: '2023-12-18'
+releaseDate: '2024-01-10'
 roadmap: 'https://designers.italia.it/piano-attivita/'
 softwareType: library
-softwareVersion: v2.8.1
+softwareVersion: v2.8.2
 url: 'https://github.com/italia/bootstrap-italia'
