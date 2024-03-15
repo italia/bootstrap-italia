@@ -204,14 +204,13 @@
     font-weight: 600;
     text-transform: uppercase;
     font-size: 1rem;
-    margin-right: 2.222rem;
     color: $color-text-secondary; // UI kit
     @include media-breakpoint-up(lg) {
       font-size: 1.125rem;
     }
     .icon {
       fill: $color-text-secondary; // UI kit
-      margin-right: 0.444rem;
+      margin-right: .5rem;
     }
   }
 
@@ -219,15 +218,23 @@
   &:not(.callout-highlight):not(.callout-more) {
     .callout-title {
       position: relative;
-      padding: 0 1.389rem;
-      top: -2rem;
+      padding-left: 1.5rem;
+      top: -3rem;
+      .text {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        font-size: .875rem;
+        @include media-breakpoint-up(md) {
+          font-size: 1.15rem;
+        }
+      }
       .text:after {
         content: '';
         top: 0.78em;
         border-top: 2px solid;
         position: absolute;
         width: 200%;
-        margin-left: calc(10px + 0.7rem);
       }
       &:before {
         content: '';
