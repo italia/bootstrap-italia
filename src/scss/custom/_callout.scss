@@ -4,11 +4,11 @@
   overflow: hidden;
 
   .callout-inner {
-    padding: 1.1rem 2.222rem;
+    padding: 2rem;
     border: 2px solid;
     border-top: 0;
     border-color: $color-border-secondary;
-    margin: 1.75rem 0 1rem;
+    margin: 2.5rem 0;
   }
 
   // Highlights version
@@ -235,14 +235,15 @@
         border-top: 2px solid;
         position: absolute;
         width: 250%;
+        left: 100%;
       }
       &:before {
         content: '';
         top: 0.78em;
         border-top: 2px solid;
         position: absolute;
-        width: 3.222rem;
-        left: calc(-40px - 0.7rem);
+        width: 3rem;
+        left: -2.5rem;
       }
     }
   }
