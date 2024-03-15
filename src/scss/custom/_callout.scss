@@ -219,12 +219,13 @@
     .callout-title {
       position: relative;
       padding-left: 1.5rem;
-      top: -2rem;
+      top: -3rem;
       .text {
         position: relative;
         overflow: hidden;
         width: 100%;
         font-size: .875rem;
+        padding-right: 1.5rem;
         @include media-breakpoint-up(md) {
           font-size: 1.15rem;
         }
