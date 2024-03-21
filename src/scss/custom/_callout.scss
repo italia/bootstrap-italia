@@ -4,11 +4,11 @@
   overflow: hidden;
 
   .callout-inner {
-    padding: 1.1rem 2.222rem;
+    padding: 2rem;
     border: 2px solid;
     border-top: 0;
     border-color: $color-border-secondary;
-    margin: 1.75rem 0 1rem;
+    margin: 2.5rem 0;
   }
 
   // Highlights version
@@ -204,14 +204,13 @@
     font-weight: 600;
     text-transform: uppercase;
     font-size: 1rem;
-    margin-right: 2.222rem;
     color: $color-text-secondary; // UI kit
     @include media-breakpoint-up(lg) {
       font-size: 1.125rem;
     }
     .icon {
       fill: $color-text-secondary; // UI kit
-      margin-right: 0.444rem;
+      margin-right: 0.5rem;
     }
   }
 
@@ -219,23 +218,33 @@
   &:not(.callout-highlight):not(.callout-more) {
     .callout-title {
       position: relative;
-      padding: 0 1.389rem;
-      top: -2rem;
+      padding-left: 1.5rem;
+      top: -3rem;
+      .text {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        font-size: 0.875rem;
+        padding-right: 1.5rem;
+        @include media-breakpoint-up(md) {
+          font-size: 1.15rem;
+        }
+      }
       .text:after {
         content: '';
-        top: 0.78em;
+        top: 0.875em;
         border-top: 2px solid;
         position: absolute;
-        width: 200%;
-        margin-left: calc(10px + 0.7rem);
+        width: 250%;
+        left: 100%;
       }
       &:before {
         content: '';
-        top: 0.78em;
+        top: 0.875em;
         border-top: 2px solid;
         position: absolute;
-        width: 3.222rem;
-        left: calc(-40px - 0.7rem);
+        width: 3rem;
+        left: -2.5rem;
       }
     }
   }
