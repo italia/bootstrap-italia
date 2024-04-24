@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Rating
-description: Per esprimere una valutazione su un contenuto.
+description: Una scala di valori grafica a stelline, utile per esprimere una valutazione su un servizio o un contenuto.
 group: componenti
 toc: true
 ---
