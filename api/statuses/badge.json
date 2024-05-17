@@ -1,0 +1,17 @@
+{
+    "angular Kit": "DA RIVEDERE",
+    "bootstrap Italia": "DA RIVEDERE",
+    "content": {
+        "body": "https://designers.italia.it/design-system/componenti/badge/",
+        "id": "DI_lADOAOqloM4AcXblzgFT9WA",
+        "title": "Badge",
+        "type": "DraftIssue"
+    },
+    "id": "PVTI_lADOAOqloM4AcXblzgMjwUg",
+    "notes / Issue": "Segnalati problemi con uso di colori saturi per lo sfondo, che rendono elemento troppo simile a pulsante, quando invece non \u00e8 cliccabile. Uniformare spaziatura interna tra kit e librerie",
+    "react Kit ": "DA RIVEDERE",
+    "status": "Todo",
+    "status a11y check": "To do",
+    "title": "Badge",
+    "uI Kit Italia": "DA RIVEDERE"
+}
