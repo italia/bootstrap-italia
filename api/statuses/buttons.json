@@ -1,0 +1,24 @@
+{
+    "amichevole con lettori di schermo": "PRONTO",
+    "angular Kit": "DA RIVEDERE A11Y",
+    "assignees": [
+        "frmascia11y"
+    ],
+    "bootstrap Italia": "PRONTO",
+    "comprensibile": "PRONTO",
+    "content": {
+        "body": "https://designers.italia.it/design-system/componenti/buttons/",
+        "id": "DI_lADOAOqloM4AcXblzgFT9Ws",
+        "title": "Buttons",
+        "type": "DraftIssue"
+    },
+    "id": "PVTI_lADOAOqloM4AcXblzgMjwV0",
+    "navigabile": "PRONTO",
+    "notes / Issue": "Verificare in Angular la colorazione e la presenza del Focus corretto",
+    "react Kit ": "PRONTO",
+    "status": "Todo",
+    "status a11y check": "Done",
+    "title": "Buttons",
+    "uI Kit Italia": "PRONTO",
+    "visivamente accessibile": "PRONTO"
+}

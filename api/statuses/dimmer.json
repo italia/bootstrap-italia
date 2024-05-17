@@ -1,0 +1,17 @@
+{
+    "angular Kit": "PRONTO",
+    "bootstrap Italia": "DA RIVEDERE",
+    "content": {
+        "body": "https://designers.italia.it/design-system/componenti/dimmer/",
+        "id": "DI_lADOAOqloM4AcXblzgFT9YI",
+        "title": "Dimmer",
+        "type": "DraftIssue"
+    },
+    "id": "PVTI_lADOAOqloM4AcXblzgMjwYM",
+    "notes / Issue": "BSI issue #1106, React kit issue #1063",
+    "react Kit ": "DA RIVEDERE",
+    "status": "Todo",
+    "status a11y check": "To do",
+    "title": "Dimmer",
+    "uI Kit Italia": "PRONTO"
+}
