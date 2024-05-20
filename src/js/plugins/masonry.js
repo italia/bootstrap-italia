@@ -20,6 +20,7 @@ const Default = {
   percentPosition: true,
 }
 
+
 class Masonry extends BaseComponent {
   constructor(element, config) {
 
