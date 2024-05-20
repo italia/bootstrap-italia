@@ -4,7 +4,9 @@ const MEDIA_PHONE = ''
 const MEDIA_DESKTOP = ''*/
 
 const isScreenMobile = () => {
-  return window.matchMedia(MEDIA_MOBILE).matches
+  if (typeof window !== 'undefined') {
+    return window.matchMedia(MEDIA_MOBILE).matches
+  }
 }
 
 export { isScreenMobile }
