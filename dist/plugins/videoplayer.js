@@ -106,7 +106,9 @@ const DEFAULT_CONFIG = { languages: { it: itLang }, language: 'it' };
 
 const Default = {};
 
-window.videojs = videojs;
+if (typeof window !== 'undefined') {
+  window.videojs = videojs;
+}
 
 class VideoPlayer extends BaseComponent {
   constructor(element, config) {

@@ -1,5 +1,5 @@
-## [2.8.6](https://github.com/italia/bootstrap-italia/compare/v2.8.5...v2.8.6) (2024-05-20)
+## [2.8.7](https://github.com/italia/bootstrap-italia/compare/v2.8.6...v2.8.7) (2024-05-20)
 
 ### Bug Fixes
 
-* check document presence on ssr ([3e91b5d](https://github.com/italia/bootstrap-italia/commit/3e91b5d6d64ac19bf3997b31629be224567e2d84))
+* check window presence ([d5c16b8](https://github.com/italia/bootstrap-italia/commit/d5c16b871c379248257a3535313910b5eeb4592a))
