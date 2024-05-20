@@ -127,26 +127,23 @@ const createInput = (element) => {
   return null
 }
 
-if (typeof document === "undefined") {
-  return
-}
-
-document.addEventListener('DOMContentLoaded', function () {
-  var frmel = document.querySelectorAll(SELECTOR_INPUT + ', label')
-  frmel.forEach(function (item) {
-    const target = InputLabel.getInputFromLabel(item) || item
-    createInput(target)
+if (typeof document !== "undefined") {
+  document.addEventListener('DOMContentLoaded', function () {
+    var frmel = document.querySelectorAll(SELECTOR_INPUT + ', label')
+    frmel.forEach(function (item) {
+      const target = InputLabel.getInputFromLabel(item) || item
+      createInput(target)
+    })
   })
-})
-
-EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_BTN, function () {
-  const wrapper = this.closest(SELECTOR_WRAPPER)
-  if (wrapper) {
-    const input = SelectorEngine.findOne(SELECTOR_INPUT, wrapper)
-    if (input) {
-      InputNumber.getOrCreateInstance(input)
+  EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_BTN, function () {
+    const wrapper = this.closest(SELECTOR_WRAPPER)
+    if (wrapper) {
+      const input = SelectorEngine.findOne(SELECTOR_INPUT, wrapper)
+      if (input) {
+        InputNumber.getOrCreateInstance(input)
+      }
     }
-  }
-})
+  })
+}
 
 export default InputNumber
