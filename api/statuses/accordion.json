@@ -1,0 +1,24 @@
+{
+    "amichevole con lettori di schermo": "PRONTO",
+    "angular Kit": "PRONTO",
+    "assignees": [
+        "frmascia11y"
+    ],
+    "bootstrap Italia": "PRONTO",
+    "comprensibile": "PRONTO",
+    "content": {
+        "body": "https://designers.italia.it/design-system/componenti/accordion/",
+        "id": "DI_lADOAOqloM4AcXblzgFT8DA",
+        "title": "Accordion",
+        "type": "DraftIssue"
+    },
+    "id": "PVTI_lADOAOqloM4AcXblzgMjtRg",
+    "navigabile": "PRONTO",
+    "notes / Issue": "In Angular \u00e8 sotto il componente Collapse... ",
+    "react Kit ": "PRONTO",
+    "status": "Todo",
+    "status a11y check": "Done",
+    "title": "Accordion",
+    "uI Kit Italia": "PRONTO",
+    "visivamente accessibile": "PRONTO"
+}

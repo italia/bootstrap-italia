@@ -12,11 +12,9 @@ const EVENT_CLICK = `click${EVENT_KEY}`;
 const EVENT_CHANGE = `change${EVENT_KEY}`;
 const EVENT_INPUT = `input`;
 
-//const EVENT_FOCUS_DATA_API = `focus${EVENT_KEY}${DATA_API_KEY}`
 const EVENT_CLICK_DATA_API = `click${EVENT_KEY}${DATA_API_KEY}`;
 
 const CLASS_NAME_ADAPTIVE = 'input-number-adaptive';
-//const CLASS_NAME_INCREMENT = 'input-number-add'
 const CLASS_NAME_DECREMENT = 'input-number-sub';
 
 const SELECTOR_WRAPPER = '.input-number';
@@ -67,14 +65,10 @@ class InputNumber extends BaseComponent {
   _inputResize() {
     if (this._wrapperElement.classList.contains(CLASS_NAME_ADAPTIVE)) {
       let newWidth = null;
-      //let newWidthIE = null
-      //74px - buttons (30px) and possible validation icon (40px)
       newWidth = 'calc(70px + ' + this._element.value.length + 'ch)';
-      //newWidthIE = 'calc(44px + (1.5 * ' + this._element.value.length + 'ch))'
 
       if (newWidth) {
         this._element.style.width = newWidth;
-        //IE - this._element.style.width = calcIe
       }
     }
   }
@@ -125,35 +119,6 @@ class InputNumber extends BaseComponent {
  * ------------------------------------------------------------------------
  */
 
-/*const inputs = SelectorEngine.find(SELECTOR_INPUT)
-inputs.forEach((input) => {
-  EventHandler.one(input, EVENT_FOCUS_DATA_API, (evt) => {
-    evt.preventDefault()
-    InputNumber.getOrCreateInstance(input)
-    EventHandler.trigger(input, 'focus')
-  })
-})
-
-const inputsButtons = SelectorEngine.find(SELECTOR_WRAPPER + ' ' + SELECTOR_BTN)
-inputsButtons.forEach((button) => {
-  EventHandler.one(button, EVENT_CLICK_DATA_API, (evt) => {
-    if (button.classList.contains(CLASS_NAME_INCREMENT) || button.classList.contains(CLASS_NAME_DECREMENT)) {
-      const wrapper = button.closest(SELECTOR_WRAPPER)
-      if (wrapper) {
-        const input = SelectorEngine.findOne(SELECTOR_INPUT, wrapper)
-        if (input) {
-          const inputNumber = InputNumber.getInstance(input)
-          if (!inputNumber) {
-            evt.preventDefault()
-            InputNumber.getOrCreateInstance(input)
-            EventHandler.trigger(button, 'click')
-          }
-        }
-      }
-    }
-  })
-})*/
-
 const createInput = (element) => {
   if (element && element.matches(SELECTOR_INPUT) && element.parentNode.querySelector(SELECTOR_BTN)) {
     return InputNumber.getOrCreateInstance(element)
@@ -161,23 +126,24 @@ const createInput = (element) => {
   return null
 };
 
-document.addEventListener('DOMContentLoaded', function () {
-  var frmel = document.querySelectorAll(SELECTOR_INPUT + ', label');
-  frmel.forEach(function (item) {
-    const target = InputLabel.getInputFromLabel(item) || item;
-    createInput(target);
+if (typeof document !== 'undefined') {
+  document.addEventListener('DOMContentLoaded', function () {
+    var frmel = document.querySelectorAll(SELECTOR_INPUT + ', label');
+    frmel.forEach(function (item) {
+      const target = InputLabel.getInputFromLabel(item) || item;
+      createInput(target);
+    });
   });
-});
-
-EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_BTN, function () {
-  const wrapper = this.closest(SELECTOR_WRAPPER);
-  if (wrapper) {
-    const input = SelectorEngine.findOne(SELECTOR_INPUT, wrapper);
-    if (input) {
-      InputNumber.getOrCreateInstance(input);
+  EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_BTN, function () {
+    const wrapper = this.closest(SELECTOR_WRAPPER);
+    if (wrapper) {
+      const input = SelectorEngine.findOne(SELECTOR_INPUT, wrapper);
+      if (input) {
+        InputNumber.getOrCreateInstance(input);
+      }
     }
-  }
-});
+  });
+}
 
 export { InputNumber as default };
 //# sourceMappingURL=input-number.js.map

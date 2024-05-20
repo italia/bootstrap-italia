@@ -195,6 +195,9 @@ class NavScroll extends BaseComponent {
 
   _onScroll() {
     const sectionsContainerTop = this._sectionContainer ? this._sectionContainer.offsetTop : 0;
+    if (typeof document === 'undefined') {
+      return
+    }
     const scrollDistance = document.scrollingElement.scrollTop - sectionsContainerTop;
 
     const navItems = SelectorEngine.find(SELECTOR_LINK, this._element);

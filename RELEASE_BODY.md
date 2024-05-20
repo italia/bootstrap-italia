@@ -1,5 +1,5 @@
-## [2.8.5](https://github.com/italia/bootstrap-italia/compare/v2.8.4...v2.8.5) (2024-05-08)
+## [2.8.6](https://github.com/italia/bootstrap-italia/compare/v2.8.5...v2.8.6) (2024-05-20)
 
 ### Bug Fixes
 
-* remove deprecated declaration ([f6d391b](https://github.com/italia/bootstrap-italia/commit/f6d391bd0035c789da8ed593eab2c94962f160b7))
+* check document presence on ssr ([3e91b5d](https://github.com/italia/bootstrap-italia/commit/3e91b5d6d64ac19bf3997b31629be224567e2d84))

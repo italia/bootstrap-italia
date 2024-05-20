@@ -56,7 +56,7 @@ class BackToTop extends BaseComponent {
   }
 
   toggleShow() {
-    if (document.scrollingElement.scrollTop > this._config.scrollLimit) {
+    if (typeof document !== 'undefined' && document.scrollingElement.scrollTop > this._config.scrollLimit) {
       this.show();
     } else {
       this.hide();

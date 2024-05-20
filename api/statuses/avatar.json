@@ -1,0 +1,24 @@
+{
+    "amichevole con lettori di schermo": "PRONTO",
+    "angular Kit": "DA COMPLETARE VARIANTI",
+    "assignees": [
+        "frmascia11y"
+    ],
+    "bootstrap Italia": "DA RIVEDERE A11Y",
+    "comprensibile": "PRONTO",
+    "content": {
+        "body": "https://designers.italia.it/design-system/componenti/avatar/",
+        "id": "DI_lADOAOqloM4AcXblzgFT9VI",
+        "title": "Avatar",
+        "type": "DraftIssue"
+    },
+    "id": "PVTI_lADOAOqloM4AcXblzgMjwTI",
+    "navigabile": "PRONTO",
+    "notes / Issue": "Variante con testo: il link deve essere sottolineato (vedi UI Kit Italia), il bold non basta, equivale nelle altre varianti a parole in evidenza; in Angular \u00e8 assente la variante con testo",
+    "react Kit ": "DA RIVEDERE A11Y",
+    "status": "Todo",
+    "status a11y check": "Done",
+    "title": "Avatar",
+    "uI Kit Italia": "DA RIVEDERE A11Y",
+    "visivamente accessibile": "DA RIVEDERE"
+}
