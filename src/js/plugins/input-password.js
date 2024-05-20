@@ -89,7 +89,6 @@ class InputPassword extends BaseComponent {
 
   _init() {
     if (this._meter) {
-
       this._grayBarElement = this._meter.querySelector(SELECTOR_METER_GRAYBAR)
       this._colorBarElement = this._meter.querySelector(SELECTOR_METER_COLBAR)
       this._textElement = this._meter.querySelector(SELECTOR_TEXT)
@@ -99,7 +98,6 @@ class InputPassword extends BaseComponent {
       }
     }
     if (this._isCustom) {
-
       this._capsElement = this._element.parentNode.querySelector(SELECTOR_CAPS)
     }
 
