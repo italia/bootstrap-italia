@@ -134,6 +134,9 @@ const createInput = (element) => {
   return null
 }
 
+if (typeof document === "undefined") {
+  return
+}
 document.addEventListener('dragenter', function (evt) {
   createInput(evt.target)
 })

@@ -2,6 +2,10 @@
  * Prevents page scroll
  */
 
+if (typeof document === "undefined") {
+  return
+}
+
 const CLASS_SCROLL_DISABLED = 'pagescroll-scroll-disabled'
 
 let disabled = false

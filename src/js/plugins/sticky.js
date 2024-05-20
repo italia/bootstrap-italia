@@ -191,6 +191,9 @@ class Sticky extends BaseComponent {
   }
 
   _createWrapper() {
+    if (typeof document === "undefined") {
+      return
+    }
     const wrapper = document.createElement('div')
     wrapper.classList.add(CLASS_NAME_WRAPPER)
     wrapper.style.width = '100%' //this._element.getBoundingClientRect().width + 'px'
