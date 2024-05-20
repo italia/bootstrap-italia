@@ -140,15 +140,14 @@ const createInput = (element) => {
   return null
 }
 
-if (typeof document === "undefined") {
-  return
-}
-document.addEventListener('DOMContentLoaded', function () {
-  var frmel = document.querySelectorAll(SELECTOR_SEARCH + ', label')
-  frmel.forEach(function (item) {
-    const target = InputLabel.getInputFromLabel(item) || item
-    createInput(target)
+if (typeof document !== "undefined") {
+  document.addEventListener('DOMContentLoaded', function () {
+    var frmel = document.querySelectorAll(SELECTOR_SEARCH + ', label')
+    frmel.forEach(function (item) {
+      const target = InputLabel.getInputFromLabel(item) || item
+      createInput(target)
+    })
   })
-})
+}
 
 export default InputSearch
