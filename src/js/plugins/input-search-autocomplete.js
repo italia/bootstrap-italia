@@ -88,7 +88,7 @@ class InputSearch extends BaseComponent {
 
   _init() {
     if (this._element.classList.contains(CLASS_NAME_AUTOCOMPLETE)) {
-      if (typeof document === "undefined") {
+      if (typeof document === 'undefined') {
         return
       }
       this._items = this._getItems()
@@ -103,7 +103,7 @@ class InputSearch extends BaseComponent {
   }
 
   _createOption(link, text, label, icon) {
-    if (typeof document === "undefined") {
+    if (typeof document === 'undefined') {
       return
     }
     const option = document.createElement('li')
@@ -140,7 +140,7 @@ const createInput = (element) => {
   return null
 }
 
-if (typeof document !== "undefined") {
+if (typeof document !== 'undefined') {
   document.addEventListener('DOMContentLoaded', function () {
     var frmel = document.querySelectorAll(SELECTOR_SEARCH + ', label')
     frmel.forEach(function (item) {

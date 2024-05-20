@@ -80,7 +80,7 @@ const createInput = (element) => {
   return null
 }
 
-if (typeof document !== "undefined") {
+if (typeof document !== 'undefined') {
   document.addEventListener('DOMContentLoaded', function () {
     var frmel = document.querySelectorAll('input, textarea, label')
     frmel.forEach(function (item) {

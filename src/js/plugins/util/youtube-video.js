@@ -80,7 +80,7 @@ const initYoutubePlugin = (videojs) => {
     }
 
     createEl() {
-      if (typeof document === "undefined") {
+      if (typeof document === 'undefined') {
         return
       }
       var div = document.createElement('div');
@@ -651,7 +651,7 @@ const initYoutubePlugin = (videojs) => {
     }
 
     supportsFullScreen() {
-      if (typeof document === "undefined") {
+      if (typeof document === 'undefined') {
         return
       }
       return document.fullscreenEnabled ||
@@ -731,7 +731,7 @@ const initYoutubePlugin = (videojs) => {
   }
 
   function loadScript(src, callback) {
-    if (typeof document === "undefined") {
+    if (typeof document === 'undefined') {
       return
     }
     var loaded = false;
@@ -759,7 +759,7 @@ const initYoutubePlugin = (videojs) => {
   }
 
   function injectCss() {
-    if (typeof document === "undefined") {
+    if (typeof document === 'undefined') {
       return
     }
     var css = // iframe blocker to catch mouse events

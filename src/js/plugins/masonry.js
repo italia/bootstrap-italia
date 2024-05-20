@@ -92,7 +92,7 @@ class Masonry extends BaseComponent {
   }
 
   _createLoader() {
-    if (typeof document === "undefined") {
+    if (typeof document === 'undefined') {
       return
     }
     const loader = document.createElement('div')

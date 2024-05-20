@@ -12,7 +12,7 @@ class TrackFocus {
 
   // Private
   _bindEvents() {
-    if (typeof document === "undefined") {
+    if (typeof document === 'undefined') {
       return
     }
     const events = ['keydown', 'mousedown']

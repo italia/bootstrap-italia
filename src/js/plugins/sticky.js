@@ -191,7 +191,7 @@ class Sticky extends BaseComponent {
   }
 
   _createWrapper() {
-    if (typeof document === "undefined") {
+    if (typeof document === 'undefined') {
       return
     }
     const wrapper = document.createElement('div')

@@ -36,7 +36,7 @@ class SelectAutocomplete extends BaseComponent {
     accessibleAutocomplete.enhanceSelectElement(Object.assign({}, { selectElement: this._element }, this._config))
     setTimeout(() => {
       if (this._hasFormControl) {
-        if (typeof document === "undefined") {
+        if (typeof document === 'undefined') {
           return
         }
         const inputField = document.getElementById(this.element_original_id)

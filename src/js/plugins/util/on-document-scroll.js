@@ -25,7 +25,7 @@ const removeCallBack = (id) => {
 }
 
 const onDocumentScroll = (callback) => {
-  if (typeof document === "undefined") {
+  if (typeof document === 'undefined') {
     return
   }
   if (!callbacks.length) {
