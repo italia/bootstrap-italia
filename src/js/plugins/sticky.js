@@ -150,7 +150,7 @@ class Sticky extends BaseComponent {
       this._setLimit()
     }
     const limit = this._getLimit()
-    if (window.pageYOffset > limit) {
+    if (typeof window !== 'undefined' && window.pageYOffset > limit) {
       this._setSticky()
     } else {
       this._unsetSticky()

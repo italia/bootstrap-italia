@@ -177,7 +177,4 @@ const ValidatorSelectAutocomplete = (inputId, config = {}) => {
   }
 }
 
-//window.JustValidateIt = JustValidateIt
-//window.JustValidateItValidatorSelectAutocomplete = JustValidateItValidatorSelectAutocomplete
-
 export { FormValidate, ValidatorSelectAutocomplete }

@@ -28,7 +28,9 @@ class HistoryBack extends BaseComponent {
 
   // Public
   back() {
-    window.history.back()
+    if (typeof window !== 'undefined') {
+      window.history.back()
+    }
   }
 
   // Private
