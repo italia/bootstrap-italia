@@ -80,12 +80,14 @@ const createInput = (element) => {
   return null
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-  var frmel = document.querySelectorAll('input, textarea, label')
-  frmel.forEach(function (item) {
-    const target = InputLabel.getInputFromLabel(item) || item
-    createInput(target)
+if (typeof document !== 'undefined') {
+  document.addEventListener('DOMContentLoaded', function () {
+    var frmel = document.querySelectorAll('input, textarea, label')
+    frmel.forEach(function (item) {
+      const target = InputLabel.getInputFromLabel(item) || item
+      createInput(target)
+    })
   })
-})
+}
 
 export default Input

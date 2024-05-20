@@ -318,7 +318,7 @@
         "type": "DraftIssue"
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwYM",
-      "notes / Issue": "C'è un bug nell'uso della proprietà `opacity` su BS Italia che rende trasparente qualunque contenuto (testo, pulsanti) del dimmer",
+      "notes / Issue": "BSI issue #1106, React kit issue #1063",
       "react Kit ": "DA RIVEDERE",
       "status": "Todo",
       "status a11y check": "To do",

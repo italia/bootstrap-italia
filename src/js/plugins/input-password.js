@@ -89,38 +89,6 @@ class InputPassword extends BaseComponent {
 
   _init() {
     if (this._meter) {
-      /*this._grayBarElement = document.createElement('div')
-      this._grayBarElement.classList.add('password-meter', 'progress', 'rounded-0', 'position-absolute')
-      this._grayBarElement.innerHTML = `<div class="row position-absolute w-100 m-0">
-          <div class="col-3 border-start border-end border-white"></div>
-          <div class="col-3 border-start border-end border-white"></div>
-          <div class="col-3 border-start border-end border-white"></div>
-          <div class="col-3 border-start border-end border-white"></div>
-        </div>`
-
-      this._colorBarElement = document.createElement('div')
-      this._colorBarElement.classList.add('progress-bar')
-      this._colorBarElement.setAttribute('role', 'progressbar')
-      this._colorBarElement.setAttribute('aria-valuenow', '0')
-      this._colorBarElement.setAttribute('aria-valuemin', '0')
-      this._colorBarElement.setAttribute('aria-valuemax', '100')
-
-      const wrapper = document.createElement('div')
-      wrapper.classList.add('password-strength-meter')
-
-      this._grayBarElement.appendChild(this._colorBarElement)
-
-      if (this._config.showText) {
-        this._textElement = document.createElement('small')
-        this._textElement.classList.add('form-text', 'text-muted')
-        this._textElement.innerHTML = this._config.enterPass
-        wrapper.appendChild(this._textElement)
-      }
-
-      wrapper.appendChild(this._grayBarElement)
-
-      this._element.parentNode.insertBefore(wrapper, this._element.nextSibling)*/
-
       this._grayBarElement = this._meter.querySelector(SELECTOR_METER_GRAYBAR)
       this._colorBarElement = this._meter.querySelector(SELECTOR_METER_COLBAR)
       this._textElement = this._meter.querySelector(SELECTOR_TEXT)
@@ -130,13 +98,6 @@ class InputPassword extends BaseComponent {
       }
     }
     if (this._isCustom) {
-      /*this._capsElement = document.createElement('small')
-      this._capsElement.style.display = 'none'
-      this._capsElement.classList.add('password-caps', 'form-text', 'text-warning', 'position-absolute', 'bg-white', 'w-100')
-      this._capsElement.innerHTML = this._config.alertCaps
-
-      this._element.parentNode.appendChild(this._capsElement)*/
-
       this._capsElement = this._element.parentNode.querySelector(SELECTOR_CAPS)
     }
 

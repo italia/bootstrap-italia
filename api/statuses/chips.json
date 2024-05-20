@@ -1,0 +1,18 @@
+{
+    "amichevole con lettori di schermo": "PRONTO",
+    "assignees": [
+        "frmascia11y"
+    ],
+    "comprensibile": "PRONTO",
+    "content": {
+        "body": "https://designers.italia.it/design-system/componenti/chips/",
+        "id": "DI_lADOAOqloM4AcXblzgFT9Xs",
+        "title": "Chips",
+        "type": "DraftIssue"
+    },
+    "id": "PVTI_lADOAOqloM4AcXblzgMjwXQ",
+    "navigabile": "PRONTO",
+    "status": "Todo",
+    "status a11y check": "In progress",
+    "title": "Chips"
+}

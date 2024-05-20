@@ -1,0 +1,17 @@
+{
+    "angular Kit": "PRONTO",
+    "bootstrap Italia": "PRONTO",
+    "content": {
+        "body": "https://designers.italia.it/design-system/componenti/breadcrumbs/",
+        "id": "DI_lADOAOqloM4AcXblzgFT9Wg",
+        "title": "Breadcrumbs",
+        "type": "DraftIssue"
+    },
+    "id": "PVTI_lADOAOqloM4AcXblzgMjwVc",
+    "notes / Issue": "Allineare il naming tra le varie risorse, viene usato sia \"Breadcrumb\" che \"Breadcrumbs\"",
+    "react Kit ": "PRONTO",
+    "status": "Todo",
+    "status a11y check": "To do",
+    "title": "Breadcrumbs",
+    "uI Kit Italia": "PRONTO"
+}

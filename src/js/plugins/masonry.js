@@ -92,6 +92,9 @@ class Masonry extends BaseComponent {
   }
 
   _createLoader() {
+    if (typeof document === 'undefined') {
+      return
+    }
     const loader = document.createElement('div')
     loader.classList.add(CLASS_NAME_LOADER, 'fade', 'd-flex', 'justify-content-center', 'align-items-center')
     loader.innerHTML = '<div class="progress-spinner progress-spinner-active"><span class="visually-hidden">Caricamento...</span></div>'

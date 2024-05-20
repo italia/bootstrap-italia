@@ -11,6 +11,9 @@ const AnimeDefault = {
  * @param {Object} config - duration, easing, complete, update, ...
  */
 export const documentScrollTo = (scrollTop, config) => {
+  if (typeof document === 'undefined') {
+    return
+  }
   const onComplete = (typeof config === 'object' ? config : {}).complete
   const scrollElement = window.document.scrollingElement || window.document.body || window.document.documentElement
   const prevScrollBehavior = scrollElement.style.scrollBehavior
