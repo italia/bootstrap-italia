@@ -66,3 +66,20 @@ for path, subdirs, files in os.walk("docs"):
             examples = search_examples_in_file(file_path)
             if (examples):
                 generate_examples_json(file_path, examples)
+
+# Check components status
+
+STATUESE_API_DIR = os.path.join('api', 'statuses')
+
+resulted_json = {}
+
+os.makedirs(STATUESE_API_DIR, exist_ok=True)
+
+with open(os.path.join('api', 'components_status.json'), "r") as f:
+    resulted_json = json.loads(f.read())
+    for item in resulted_json['items']:
+        normalized_title = re.search(r'`(.*?)`.*', item['title']).group(1)
+        item['title'] = normalized_title
+        item['content']['title'] = normalized_title
+        with open(os.path.join(STATUESE_API_DIR, normalized_title.lower().replace(' ', '_') + '.json'), "w") as fapi:
+            fapi.write(json.dumps(item, indent=4))

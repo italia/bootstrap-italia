@@ -150,7 +150,7 @@ class Sticky extends BaseComponent {
       this._setLimit()
     }
     const limit = this._getLimit()
-    if (window.pageYOffset > limit) {
+    if (typeof window !== 'undefined' && window.pageYOffset > limit) {
       this._setSticky()
     } else {
       this._unsetSticky()
@@ -191,6 +191,9 @@ class Sticky extends BaseComponent {
   }
 
   _createWrapper() {
+    if (typeof document === 'undefined') {
+      return
+    }
     const wrapper = document.createElement('div')
     wrapper.classList.add(CLASS_NAME_WRAPPER)
     wrapper.style.width = '100%' //this._element.getBoundingClientRect().width + 'px'

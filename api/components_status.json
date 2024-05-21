@@ -1,0 +1,483 @@
+{
+  "items": [
+    {
+      "amichevole con lettori di schermo": "PRONTO",
+      "angular Kit": "PRONTO",
+      "assignees": [
+        "frmascia11y"
+      ],
+      "bootstrap Italia": "PRONTO",
+      "comprensibile": "PRONTO",
+      "content": {
+        "body": "https://designers.italia.it/design-system/componenti/accordion/",
+        "id": "DI_lADOAOqloM4AcXblzgFT8DA",
+        "title": "`Accordion` - check a11y e status",
+        "type": "DraftIssue"
+      },
+      "id": "PVTI_lADOAOqloM4AcXblzgMjtRg",
+      "navigabile": "PRONTO",
+      "notes / Issue": "In Angular è sotto il componente Collapse... ",
+      "react Kit ": "PRONTO",
+      "status": "Todo",
+      "status a11y check": "Done",
+      "title": "`Accordion` - check a11y e status",
+      "uI Kit Italia": "PRONTO",
+      "visivamente accessibile": "PRONTO"
+    },
+    {
+      "content": {
+        "body": "https://designers.italia.it/design-system/componenti/affix/\n",
+        "id": "DI_lADOAOqloM4AcXblzgFT8JY",
+        "title": "`Affix` - check a11y e status",
+        "type": "DraftIssue"
+      },
+      "id": "PVTI_lADOAOqloM4AcXblzgMjtas",
+      "status": "Todo",
+      "status a11y check": "To do",
+      "title": "`Affix` - check a11y e status"
+    },
+    {
+      "amichevole con lettori di schermo": "PRONTO",
+      "angular Kit": "DA RIVEDERE A11Y",
+      "assignees": [
+        "frmascia11y"
+      ],
+      "bootstrap Italia": "DA RIVEDERE A11Y",
+      "comprensibile": "PRONTO",
+      "content": {
+        "body": "https://designers.italia.it/design-system/componenti/alert/",
+        "id": "DI_lADOAOqloM4AcXblzgFT8Jg",
+        "title": "`Alert` - check a11y e status",
+        "type": "DraftIssue"
+      },
+      "id": "PVTI_lADOAOqloM4AcXblzgMjtbQ",
+      "navigabile": "PRONTO",
+      "notes / Issue": "Variante con Link evidenziato: il link deve essere sottolineato (vedi UI Kit Italia), il bold non basta, equivale nelle altre varianti a parole in evidenza",
+      "react Kit ": "DA RIVEDERE A11Y",
+      "status": "Todo",
+      "status a11y check": "Done",
+      "title": "`Alert` - check a11y e status",
+      "uI Kit Italia": "PRONTO",
+      "visivamente accessibile": "DA RIVEDERE"
+    },
+    {
+      "amichevole con lettori di schermo": "DA RIVEDERE",
+      "angular Kit": "DA RIVEDERE A11Y",
+      "assignees": [
+        "Fupete"
+      ],
+      "bootstrap Italia": "DA RIVEDERE A11Y",
+      "comprensibile": "DA RIVEDERE",
+      "content": {
+        "body": "https://designers.italia.it/design-system/componenti/autocomplete/\n",
+        "id": "DI_lADOAOqloM4AcXblzgFT8J0",
+        "title": "`Autocomplete` - check a11y e status",
+        "type": "DraftIssue"
+      },
+      "id": "PVTI_lADOAOqloM4AcXblzgMjtb4",
+      "navigabile": "PRONTO",
+      "notes / Issue": "Messaggi e hint per i lettori di schermo sono in inglese! Devono essere in italiano. Verificare presenza negli SR di messaggi 'weird' su campo non valido. In UI Kit Italia il componente non c'è (issue già aperta)",
+      "react Kit ": "DA RIVEDERE A11Y",
+      "status": "Todo",
+      "status a11y check": "Done",
+      "title": "`Autocomplete` - check a11y e status",
+      "uI Kit Italia": "DA FARE",
+      "visivamente accessibile": "PRONTO"
+    },
+    {
+      "amichevole con lettori di schermo": "PRONTO",
+      "angular Kit": "DA COMPLETARE VARIANTI",
+      "assignees": [
+        "frmascia11y"
+      ],
+      "bootstrap Italia": "DA RIVEDERE A11Y",
+      "comprensibile": "PRONTO",
+      "content": {
+        "body": "https://designers.italia.it/design-system/componenti/avatar/",
+        "id": "DI_lADOAOqloM4AcXblzgFT9VI",
+        "title": "`Avatar` - check a11y e status",
+        "type": "DraftIssue"
+      },
+      "id": "PVTI_lADOAOqloM4AcXblzgMjwTI",
+      "navigabile": "PRONTO",
+      "notes / Issue": "Variante con testo: il link deve essere sottolineato (vedi UI Kit Italia), il bold non basta, equivale nelle altre varianti a parole in evidenza; in Angular è assente la variante con testo",
+      "react Kit ": "DA RIVEDERE A11Y",
+      "status": "Todo",
+      "status a11y check": "Done",
+      "title": "`Avatar` - check a11y e status",
+      "uI Kit Italia": "DA RIVEDERE A11Y",
+      "visivamente accessibile": "DA RIVEDERE"
+    },
+    {
+      "assignees": [
+        "frmascia11y"
+      ],
+      "content": {
+        "body": "https://designers.italia.it/design-system/componenti/back/",
+        "id": "DI_lADOAOqloM4AcXblzgFT9Vw",
+        "title": "`Back` - check a11y e status",
+        "type": "DraftIssue"
+      },
+      "id": "PVTI_lADOAOqloM4AcXblzgMjwUQ",
+      "status": "Todo",
+      "status a11y check": "To do",
+      "title": "`Back` - check a11y e status"
+    },
+    {
+      "content": {
+        "body": "https://designers.italia.it/design-system/componenti/back-to-top/",
+        "id": "DI_lADOAOqloM4AcXblzgFT9V4",
+        "title": "`Back to top` - check a11y e status",
+        "type": "DraftIssue"
+      },
+      "id": "PVTI_lADOAOqloM4AcXblzgMjwUY",
+      "status": "Todo",
+      "status a11y check": "To do",
+      "title": "`Back to top` - check a11y e status"
+    },
+    {
+      "angular Kit": "DA RIVEDERE",
+      "bootstrap Italia": "DA RIVEDERE",
+      "content": {
+        "body": "https://designers.italia.it/design-system/componenti/badge/",
+        "id": "DI_lADOAOqloM4AcXblzgFT9WA",
+        "title": "`Badge` - check a11y e status",
+        "type": "DraftIssue"
+      },
+      "id": "PVTI_lADOAOqloM4AcXblzgMjwUg",
+      "notes / Issue": "Segnalati problemi con uso di colori saturi per lo sfondo, che rendono elemento troppo simile a pulsante, quando invece non è cliccabile. Uniformare spaziatura interna tra kit e librerie",
+      "react Kit ": "DA RIVEDERE",
+      "status": "Todo",
+      "status a11y check": "To do",
+      "title": "`Badge` - check a11y e status",
+      "uI Kit Italia": "DA RIVEDERE"
+    },
+    {
+      "angular Kit": "NON PRESENTE",
+      "bootstrap Italia": "PRONTO",
+      "content": {
+        "body": "https://designers.italia.it/design-system/componenti/bottomnav/",
+        "id": "DI_lADOAOqloM4AcXblzgFT9WU",
+        "title": "`Bottomnav`  - check a11y e status",
+        "type": "DraftIssue"
+      },
+      "id": "PVTI_lADOAOqloM4AcXblzgMjwVE",
+      "react Kit ": "PRONTO",
+      "status": "Todo",
+      "status a11y check": "To do",
+      "title": "`Bottomnav`  - check a11y e status",
+      "uI Kit Italia": "PRONTO"
+    },
+    {
+      "angular Kit": "PRONTO",
+      "bootstrap Italia": "PRONTO",
+      "content": {
+        "body": "https://designers.italia.it/design-system/componenti/breadcrumbs/",
+        "id": "DI_lADOAOqloM4AcXblzgFT9Wg",
+        "title": "`Breadcrumbs` - check a11y e status",
+        "type": "DraftIssue"
+      },
+      "id": "PVTI_lADOAOqloM4AcXblzgMjwVc",
+      "notes / Issue": "Allineare il naming tra le varie risorse, viene usato sia \"Breadcrumb\" che \"Breadcrumbs\"",
+      "react Kit ": "PRONTO",
+      "status": "Todo",
+      "status a11y check": "To do",
+      "title": "`Breadcrumbs` - check a11y e status",
+      "uI Kit Italia": "PRONTO"
+    },
+    {
+      "amichevole con lettori di schermo": "PRONTO",
+      "angular Kit": "DA RIVEDERE A11Y",
+      "assignees": [
+        "frmascia11y"
+      ],
+      "bootstrap Italia": "PRONTO",
+      "comprensibile": "PRONTO",
+      "content": {
+        "body": "https://designers.italia.it/design-system/componenti/buttons/",
+        "id": "DI_lADOAOqloM4AcXblzgFT9Ws",
+        "title": "`Buttons` - check a11y e status",
+        "type": "DraftIssue"
+      },
+      "id": "PVTI_lADOAOqloM4AcXblzgMjwV0",
+      "navigabile": "PRONTO",
+      "notes / Issue": "Verificare in Angular la colorazione e la presenza del Focus corretto",
+      "react Kit ": "PRONTO",
+      "status": "Todo",
+      "status a11y check": "Done",
+      "title": "`Buttons` - check a11y e status",
+      "uI Kit Italia": "PRONTO",
+      "visivamente accessibile": "PRONTO"
+    },
+    {
+      "angular Kit": "PRONTO",
+      "bootstrap Italia": "PRONTO",
+      "content": {
+        "body": "https://designers.italia.it/design-system/componenti/callout/",
+        "id": "DI_lADOAOqloM4AcXblzgFT9W4",
+        "title": "`Callout` - check a11y e status",
+        "type": "DraftIssue"
+      },
+      "id": "PVTI_lADOAOqloM4AcXblzgMjwWE",
+      "notes / Issue": "In UI kit Italia sono previsti angoli arrotondati per la variante base",
+      "react Kit ": "PRONTO",
+      "status": "Todo",
+      "status a11y check": "To do",
+      "title": "`Callout` - check a11y e status",
+      "uI Kit Italia": "PRONTO"
+    },
+    {
+      "amichevole con lettori di schermo": "DA RIVEDERE",
+      "angular Kit": "DA RIVEDERE A11Y",
+      "assignees": [
+        "frmascia11y"
+      ],
+      "bootstrap Italia": "DA RIVEDERE A11Y",
+      "comprensibile": "DA RIVEDERE",
+      "content": {
+        "body": "https://designers.italia.it/design-system/componenti/card/",
+        "id": "DI_lADOAOqloM4AcXblzgFT9XE",
+        "title": "`Card` - check a11y e status",
+        "type": "DraftIssue"
+      },
+      "id": "PVTI_lADOAOqloM4AcXblzgMjwWQ",
+      "navigabile": "PRONTO",
+      "notes / Issue": "Issue già aperte su BSI e UI Kit Italia per rivedere le card, ordine elementi e semantica, come già fatto su Designers Italia e altrove. Valutare di fare completamente nuova versione e deprecare le attuali.",
+      "react Kit ": "DA RIVEDERE A11Y",
+      "status": "Todo",
+      "status a11y check": "Done",
+      "title": "`Card` - check a11y e status",
+      "uI Kit Italia": "DA RIVEDERE A11Y",
+      "visivamente accessibile": "PRONTO"
+    },
+    {
+      "angular Kit": "DA RIVEDERE",
+      "bootstrap Italia": "DA RIVEDERE",
+      "content": {
+        "body": "https://designers.italia.it/design-system/componenti/carousel/",
+        "id": "DI_lADOAOqloM4AcXblzgFT9XU",
+        "title": "`Carousel` - check a11y e status",
+        "type": "DraftIssue"
+      },
+      "id": "PVTI_lADOAOqloM4AcXblzgMjwWs",
+      "react Kit ": "NON PRESENTE",
+      "status": "Todo",
+      "status a11y check": "To do",
+      "title": "`Carousel` - check a11y e status",
+      "uI Kit Italia": "PRONTO"
+    },
+    {
+      "amichevole con lettori di schermo": "PRONTO",
+      "assignees": [
+        "frmascia11y"
+      ],
+      "comprensibile": "PRONTO",
+      "content": {
+        "body": "https://designers.italia.it/design-system/componenti/chips/",
+        "id": "DI_lADOAOqloM4AcXblzgFT9Xs",
+        "title": "`Chips` - check a11y e status",
+        "type": "DraftIssue"
+      },
+      "id": "PVTI_lADOAOqloM4AcXblzgMjwXQ",
+      "navigabile": "PRONTO",
+      "status": "Todo",
+      "status a11y check": "In progress",
+      "title": "`Chips` - check a11y e status"
+    },
+    {
+      "content": {
+        "body": "https://designers.italia.it/design-system/componenti/collapse/",
+        "id": "DI_lADOAOqloM4AcXblzgFT9Xw",
+        "title": "`Collapse` - check a11y e status",
+        "type": "DraftIssue"
+      },
+      "id": "PVTI_lADOAOqloM4AcXblzgMjwXg",
+      "status": "Todo",
+      "status a11y check": "To do",
+      "title": "`Collapse` - check a11y e status"
+    },
+    {
+      "content": {
+        "body": "https://designers.italia.it/design-system/componenti/datepicker/",
+        "id": "DI_lADOAOqloM4AcXblzgFT9X0",
+        "title": "`Datepicker` - check a11y e status",
+        "type": "DraftIssue"
+      },
+      "id": "PVTI_lADOAOqloM4AcXblzgMjwXw",
+      "status": "Todo",
+      "status a11y check": "To do",
+      "title": "`Datepicker` - check a11y e status"
+    },
+    {
+      "angular Kit": "PRONTO",
+      "bootstrap Italia": "DA RIVEDERE",
+      "content": {
+        "body": "https://designers.italia.it/design-system/componenti/dimmer/",
+        "id": "DI_lADOAOqloM4AcXblzgFT9YI",
+        "title": "`Dimmer` - check a11y e status",
+        "type": "DraftIssue"
+      },
+      "id": "PVTI_lADOAOqloM4AcXblzgMjwYM",
+      "notes / Issue": "BSI issue #1106, React kit issue #1063",
+      "react Kit ": "DA RIVEDERE",
+      "status": "Todo",
+      "status a11y check": "To do",
+      "title": "`Dimmer` - check a11y e status",
+      "uI Kit Italia": "PRONTO"
+    },
+    {
+      "content": {
+        "body": "https://designers.italia.it/design-system/componenti/dropdown/",
+        "id": "DI_lADOAOqloM4AcXblzgFT9YU",
+        "title": "`Dropdown` - check a11y e status",
+        "type": "DraftIssue"
+      },
+      "id": "PVTI_lADOAOqloM4AcXblzgMjwYc",
+      "status": "Todo",
+      "status a11y check": "To do",
+      "title": "`Dropdown` - check a11y e status"
+    },
+    {
+      "content": {
+        "body": "https://designers.italia.it/design-system/componenti/footer/",
+        "id": "DI_lADOAOqloM4AcXblzgFT9Ys",
+        "title": "`Footer` - check a11y e status",
+        "type": "DraftIssue"
+      },
+      "id": "PVTI_lADOAOqloM4AcXblzgMjwZc",
+      "status": "Todo",
+      "status a11y check": "To do",
+      "title": "`Footer` - check a11y e status"
+    },
+    {
+      "content": {
+        "body": "https://designers.italia.it/design-system/componenti/form/",
+        "id": "DI_lADOAOqloM4AcXblzgFT9Y0",
+        "title": "`Form` - check a11y e status",
+        "type": "DraftIssue"
+      },
+      "id": "PVTI_lADOAOqloM4AcXblzgMjwZo",
+      "status": "Todo",
+      "status a11y check": "To do",
+      "title": "`Form` - check a11y e status"
+    },
+    {
+      "content": {
+        "body": "https://designers.italia.it/design-system/componenti/forward/",
+        "id": "DI_lADOAOqloM4AcXblzgFT9ZI",
+        "title": "`Forward` - check a11y e status",
+        "type": "DraftIssue"
+      },
+      "id": "PVTI_lADOAOqloM4AcXblzgMjwZ8",
+      "status": "Todo",
+      "status a11y check": "To do",
+      "title": "`Forward` - check a11y e status"
+    },
+    {
+      "content": {
+        "body": "https://designers.italia.it/design-system/componenti/header/",
+        "id": "DI_lADOAOqloM4AcXblzgFT9ZQ",
+        "title": "`Header` - check a11y e status",
+        "type": "DraftIssue"
+      },
+      "id": "PVTI_lADOAOqloM4AcXblzgMjwaI",
+      "status": "Todo",
+      "status a11y check": "To do",
+      "title": "`Header` - check a11y e status"
+    },
+    {
+      "content": {
+        "body": "https://designers.italia.it/design-system/componenti/hero/",
+        "id": "DI_lADOAOqloM4AcXblzgFT9Zc",
+        "title": "`Hero` - check a11y e status",
+        "type": "DraftIssue"
+      },
+      "id": "PVTI_lADOAOqloM4AcXblzgMjwaY",
+      "status": "Todo",
+      "status a11y check": "To do",
+      "title": "`Hero` - check a11y e status"
+    },
+    {
+      "content": {
+        "body": "https://designers.italia.it/design-system/componenti/input/",
+        "id": "DI_lADOAOqloM4AcXblzgFT9Zs",
+        "title": "`Input` - check a11y e status",
+        "type": "DraftIssue"
+      },
+      "id": "PVTI_lADOAOqloM4AcXblzgMjwas",
+      "status": "Todo",
+      "status a11y check": "To do",
+      "title": "`Input` - check a11y e status"
+    },
+    {
+      "content": {
+        "body": "https://designers.italia.it/design-system/componenti/list/",
+        "id": "DI_lADOAOqloM4AcXblzgFT9aI",
+        "title": "`List` - check a11y e status",
+        "type": "DraftIssue"
+      },
+      "id": "PVTI_lADOAOqloM4AcXblzgMjwbY",
+      "status": "Todo",
+      "status a11y check": "To do",
+      "title": "`List` - check a11y e status"
+    },
+    {
+      "amichevole con lettori di schermo": "PRONTO",
+      "angular Kit": "PRONTO",
+      "bootstrap Italia": "PRONTO",
+      "comprensibile": "PRONTO",
+      "content": {
+        "body": "https://designers.italia.it/design-system/componenti/megamenu/",
+        "id": "DI_lADOAOqloM4AcXblzgFT9aU",
+        "title": "`Megamenu` - check a11y e status",
+        "type": "DraftIssue"
+      },
+      "id": "PVTI_lADOAOqloM4AcXblzgMjwb8",
+      "navigabile": "PRONTO",
+      "notes / Issue": "UI Kit Italia c'è una issue già aperta sulle dimensioni varianti. E sugli spazi tra le voci. ",
+      "react Kit ": "PRONTO",
+      "status": "Todo",
+      "status a11y check": "To do",
+      "title": "`Megamenu` - check a11y e status",
+      "uI Kit Italia": "DA RIVEDERE",
+      "visivamente accessibile": "PRONTO"
+    },
+    {
+      "content": {
+        "body": "https://designers.italia.it/design-system/componenti/modal/",
+        "id": "DI_lADOAOqloM4AcXblzgFT9ac",
+        "title": "`Modal` - check a11y e status",
+        "type": "DraftIssue"
+      },
+      "id": "PVTI_lADOAOqloM4AcXblzgMjwcM",
+      "status": "Todo",
+      "status a11y check": "To do",
+      "title": "`Modal` - check a11y e status"
+    },
+    {
+      "content": {
+        "body": "https://designers.italia.it/design-system/componenti/navscroll/",
+        "id": "DI_lADOAOqloM4AcXblzgFT9as",
+        "title": "`Navscroll` - check a11y e status",
+        "type": "DraftIssue"
+      },
+      "id": "PVTI_lADOAOqloM4AcXblzgMjwcs",
+      "status": "Todo",
+      "status a11y check": "To do",
+      "title": "`Navscroll` - check a11y e status"
+    },
+    {
+      "content": {
+        "body": "https://designers.italia.it/design-system/componenti/notifications/",
+        "id": "DI_lADOAOqloM4AcXblzgFT9a8",
+        "title": "`Notifications` - check a11y e status",
+        "type": "DraftIssue"
+      },
+      "id": "PVTI_lADOAOqloM4AcXblzgMjwdM",
+      "status": "Todo",
+      "status a11y check": "To do",
+      "title": "`Notifications` - check a11y e status"
+    }
+  ],
+  "totalCount": 53
+}

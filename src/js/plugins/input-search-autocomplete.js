@@ -88,6 +88,9 @@ class InputSearch extends BaseComponent {
 
   _init() {
     if (this._element.classList.contains(CLASS_NAME_AUTOCOMPLETE)) {
+      if (typeof document === 'undefined') {
+        return
+      }
       this._items = this._getItems()
       this._autocompleteElement = document.createElement('ul')
       this._autocompleteElement.classList.add('autocomplete-list')
@@ -100,6 +103,9 @@ class InputSearch extends BaseComponent {
   }
 
   _createOption(link, text, label, icon) {
+    if (typeof document === 'undefined') {
+      return
+    }
     const option = document.createElement('li')
     option.innerHTML = `<a href="${link}">
         ${icon}
@@ -134,12 +140,14 @@ const createInput = (element) => {
   return null
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-  var frmel = document.querySelectorAll(SELECTOR_SEARCH + ', label')
-  frmel.forEach(function (item) {
-    const target = InputLabel.getInputFromLabel(item) || item
-    createInput(target)
+if (typeof document !== 'undefined') {
+  document.addEventListener('DOMContentLoaded', function () {
+    var frmel = document.querySelectorAll(SELECTOR_SEARCH + ', label')
+    frmel.forEach(function (item) {
+      const target = InputLabel.getInputFromLabel(item) || item
+      createInput(target)
+    })
   })
-})
+}
 
 export default InputSearch

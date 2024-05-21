@@ -112,17 +112,8 @@ class FormValidate {
       if (legend) {
         legend.setAttribute('aria-describedby', errIds.join(' '))
         legend.setAttribute('aria-invalid', 'true')
-
-        //not needed anymore
-        /*const span = document.createElement('span')
-        span.classList.add('sr-only')
-        span.classList.add(CLASS_NAME_SRONLY)
-        span.textContent = errTexts.join(' ')
-        legend.append(span)*/
       }
-    } /*else {
-      console.warn('[JustValidateIt] the element is invalid but no error message was found', { target })
-    }*/
+    }
   }
   /**
    * Removes the fieldset ARIA attributes
@@ -185,8 +176,5 @@ const ValidatorSelectAutocomplete = (inputId, config = {}) => {
     return result
   }
 }
-
-//window.JustValidateIt = JustValidateIt
-//window.JustValidateItValidatorSelectAutocomplete = JustValidateItValidatorSelectAutocomplete
 
 export { FormValidate, ValidatorSelectAutocomplete }

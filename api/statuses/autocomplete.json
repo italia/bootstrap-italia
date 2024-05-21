@@ -1,0 +1,24 @@
+{
+    "amichevole con lettori di schermo": "DA RIVEDERE",
+    "angular Kit": "DA RIVEDERE A11Y",
+    "assignees": [
+        "Fupete"
+    ],
+    "bootstrap Italia": "DA RIVEDERE A11Y",
+    "comprensibile": "DA RIVEDERE",
+    "content": {
+        "body": "https://designers.italia.it/design-system/componenti/autocomplete/\n",
+        "id": "DI_lADOAOqloM4AcXblzgFT8J0",
+        "title": "Autocomplete",
+        "type": "DraftIssue"
+    },
+    "id": "PVTI_lADOAOqloM4AcXblzgMjtb4",
+    "navigabile": "PRONTO",
+    "notes / Issue": "Messaggi e hint per i lettori di schermo sono in inglese! Devono essere in italiano. Verificare presenza negli SR di messaggi 'weird' su campo non valido. In UI Kit Italia il componente non c'\u00e8 (issue gi\u00e0 aperta)",
+    "react Kit ": "DA RIVEDERE A11Y",
+    "status": "Todo",
+    "status a11y check": "Done",
+    "title": "Autocomplete",
+    "uI Kit Italia": "DA FARE",
+    "visivamente accessibile": "PRONTO"
+}

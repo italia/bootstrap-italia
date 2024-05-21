@@ -20,14 +20,8 @@ const Default = {
   percentPosition: true,
 }
 
-//const MASONRY_EXISTS = !!window.Masonry
-
 class Masonry extends BaseComponent {
   constructor(element, config) {
-    /*if (!MASONRY_EXISTS) {
-      throw new Error("[Masonry] you can't instantiate Mesonry component without Masonry Library")
-    }*/
-
     super(element)
 
     this._config = this._getConfig(config)
@@ -92,6 +86,9 @@ class Masonry extends BaseComponent {
   }
 
   _createLoader() {
+    if (typeof document === 'undefined') {
+      return
+    }
     const loader = document.createElement('div')
     loader.classList.add(CLASS_NAME_LOADER, 'fade', 'd-flex', 'justify-content-center', 'align-items-center')
     loader.innerHTML = '<div class="progress-spinner progress-spinner-active"><span class="visually-hidden">Caricamento...</span></div>'

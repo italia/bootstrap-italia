@@ -17,6 +17,10 @@ jobs:
         python-version: '3.10' 
         cache: 'pip'
     - run: pip install -r requirements.txt
+    - name: Add components status
+      run: gh project item-list 32 --owner italia --format json | jq > api/components_status.json
+      env:
+        GH_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
     - run: python extract_examples.py
     - name: Setup Git
       uses: fregante/setup-git-user@v1
