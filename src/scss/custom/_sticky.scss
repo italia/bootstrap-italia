@@ -1,9 +1,9 @@
 .bs-is-sticky {
   position: sticky !important;
-  z-index: 9999 !important;
+  z-index: $zindex-sticky !important;
 }
 
 .bs-is-fixed {
   position: fixed !important;
-  z-index: 10000 !important; /* per fare in modo che uno sticky non finisca sopra un fixed (es. l'header) */
+  z-index: $zindex-fixed !important; /* per fare in modo che uno sticky non finisca sopra un fixed (es. l'header) */
 }
