@@ -235,7 +235,7 @@
         top: 0.875em;
         border-top: 2px solid;
         position: absolute;
-        width: 250%;
+        width: calc(100% + 23rem);
         left: 100%;
       }
       &:before {
