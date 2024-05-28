@@ -1,6 +1,5 @@
 .callout {
   position: relative;
-  max-width: 60ch;
   overflow: hidden;
 
   .callout-inner {
@@ -224,7 +223,6 @@
         position: relative;
         overflow: hidden;
         width: 100%;
-        font-size: 0.875rem;
         padding-right: 1.5rem;
         @include media-breakpoint-up(md) {
           font-size: 1.15rem;
@@ -235,7 +233,7 @@
         top: 0.775em;
         border-top: 2px solid;
         position: absolute;
-        width: 2400%;
+        width: calc(100vw - 100% - 20px);
         left: 100%;
       }
       &:before {
