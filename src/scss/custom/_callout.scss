@@ -24,13 +24,7 @@
       margin-bottom: 1.556rem;
     }
 
-    @each $color-name, $color-value in (
-      success: $success,
-      warning: $color-border-warning,
-      danger: $danger,
-      important: $success,
-      note: $primary
-    ) {
+    @each $color-name, $color-value in (success: $success, warning: $color-border-warning, danger: $danger, important: $success, note: $primary) {
       &.#{$color-name} {
         border-color: $color-value;
       }
@@ -89,13 +83,7 @@
     }
   }
 
-  @each $color-name, $color-value in (
-    success: $success,
-    warning: $warning,
-    danger: $danger,
-    important: $success,
-    note: $primary
-  ) {
+  @each $color-name, $color-value in (success: $success, warning: $warning, danger: $danger, important: $success, note: $primary) {
     &.#{$color-name} {
       border-color: $color-value;
 
