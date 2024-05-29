@@ -57,7 +57,7 @@
 
     &:before {
       border-width: 0 48px 48px 0;
-      border-color: transparent #ffffff transparent transparent;
+      border-color: transparent $white transparent transparent;
     }
 
     &:after {
@@ -68,7 +68,7 @@
     p {
       font-size: 1rem;
       line-height: 1.5rem;
-      color: #color-text-secondary;
+      color: $color-text-secondary;
     }
 
     .callout-title {
@@ -81,7 +81,7 @@
       }
 
       span {
-        border-bottom: 2px solid #body-color;
+        border-bottom: 2px solid $body-color;
         padding-bottom: 0.1rem;
         display: inline-block;
         margin-top: -0.111rem;
@@ -147,14 +147,14 @@
     font-weight: 600;
     text-transform: uppercase;
     font-size: 1rem;
-    color: #color-text-secondary;
+    color: $color-text-secondary;
 
     @include media-breakpoint-up(lg) {
       font-size: 1.125rem;
     }
 
     .icon {
-      fill: #color-text-secondary;
+      fill: $color-text-secondary;
       margin-right: 0.5rem;
     }
 
@@ -197,7 +197,7 @@
   p {
     font-family: $font-family-serif;
     font-size: 1rem;
-    color: #color-text-secondary;
+    color: $color-text-secondary;
 
     @include media-breakpoint-up(lg) {
       font-size: 1.125rem;
@@ -216,7 +216,7 @@
     .collapse-header {
       display: flex;
       justify-content: space-between;
-      border-top: 1px solid #gray-border-disabled;
+      border-top: 1px solid $gray-border-disabled;
       padding: 1.333rem 0 0;
       margin-top: 0;
 
@@ -227,7 +227,7 @@
         font-weight: normal;
         display: flex;
         align-items: center;
-        color: #primary;
+        color: $primary;
         background-color: transparent;
 
         &:hover,
@@ -237,20 +237,20 @@
         }
 
         &:hover {
-          color: #link-hover-color;
+          color: $link-hover-color;
 
           span {
-            border-color: #link-hover-color;
+            border-color: $link-hover-color;
 
             &:before,
             &:after {
-              background: #link-hover-color;
+              background: $link-hover-color;
             }
           }
         }
 
         &:active {
-          color: #primary;
+          color: $primary;
         }
 
         &:before,
@@ -264,7 +264,7 @@
           width: 15px;
           margin-left: 0.444rem;
           margin-top: 0.111rem;
-          border: 1px solid #primary;
+          border: 1px solid $primary;
           border-radius: 50%;
           display: inline-block;
 
@@ -272,7 +272,7 @@
           &:after {
             content: '';
             position: absolute;
-            background: #primary;
+            background: $primary;
           }
 
           &:before {
