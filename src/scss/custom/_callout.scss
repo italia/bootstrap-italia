@@ -5,14 +5,14 @@
 
   .callout-inner {
     padding: 2rem;
-    border: 2px solid #color-border-secondary;
+    border: 2px solid $color-border-secondary;
     border-top: 0;
     margin: 2.5rem 0;
   }
 
   &.callout-highlight {
     border: none;
-    border-left: 2px solid #color-border-secondary;
+    border-left: 2px solid $color-border-secondary;
     border-radius: 0;
     padding: 0 2.222rem;
 
