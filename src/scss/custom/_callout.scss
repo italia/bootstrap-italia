@@ -1,7 +1,6 @@
 .callout {
   position: relative;
   overflow: hidden;
-  max-width: none;
 
   .callout-inner {
     padding: 2rem;
@@ -145,8 +144,10 @@
       fill: $color-text-secondary;
       margin-right: 0.5rem;
     }
+  }
 
-    &:not(.callout-highlight):not(.callout-more) {
+  &:not(.callout-highlight):not(.callout-more) {
+    .callout-title {
       position: relative;
       padding-left: 1.5rem;
       top: -3rem;
@@ -155,6 +156,7 @@
         position: relative;
         overflow: hidden;
         width: 100%;
+        font-size: 0.875rem;
         padding-right: 1.5rem;
 
         @include media-breakpoint-up(md) {
@@ -163,7 +165,7 @@
 
         &:after {
           content: '';
-          top: 0.775em;
+          top: 0.875em;
           border-top: 2px solid;
           position: absolute;
           width: calc(100vw - 100% - 20px);
@@ -173,7 +175,7 @@
 
       &:before {
         content: '';
-        top: 0.775em;
+        top: 0.875em;
         border-top: 2px solid;
         position: absolute;
         width: 3rem;
