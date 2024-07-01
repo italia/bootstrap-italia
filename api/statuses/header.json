@@ -1,4 +1,6 @@
 {
+    "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/header",
+    "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/menu-di-navigazione/header/",
     "content": {
         "body": "https://designers.italia.it/design-system/componenti/header/",
         "id": "DI_lADOAOqloM4AcXblzgFT9ZQ",
@@ -6,7 +8,9 @@
         "type": "DraftIssue"
     },
     "id": "PVTI_lADOAOqloM4AcXblzgMjwaI",
+    "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-menu-di-navigazione-header--documentazione",
     "status": "Todo",
     "status a11y check": "To do",
-    "title": "Header"
+    "title": "Header",
+    "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920"
 }
