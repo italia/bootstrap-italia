@@ -1,4 +1,7 @@
 {
+    "angular Kit": "NON PRESENTE",
+    "bootstrap Italia": "PRONTO",
+    "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/componenti/affix/",
     "content": {
         "body": "https://designers.italia.it/design-system/componenti/affix/\n",
         "id": "DI_lADOAOqloM4AcXblzgFT8JY",
@@ -6,7 +9,10 @@
         "type": "DraftIssue"
     },
     "id": "PVTI_lADOAOqloM4AcXblzgMjtas",
+    "notes / Issue": "Funzionalit\u00e0 presente solo in BSI. Verificare.",
+    "react Kit ": "NON PRESENTE",
     "status": "Todo",
     "status a11y check": "To do",
-    "title": "Affix"
+    "title": "Affix",
+    "uI Kit Italia": "NON PRESENTE"
 }
