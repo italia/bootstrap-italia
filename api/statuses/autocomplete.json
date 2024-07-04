@@ -1,10 +1,12 @@
 {
     "amichevole con lettori di schermo": "DA RIVEDERE",
     "angular Kit": "DA RIVEDERE A11Y",
+    "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/autocomplete",
     "assignees": [
         "Fupete"
     ],
     "bootstrap Italia": "DA RIVEDERE A11Y",
+    "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/form/autocompletamento/",
     "comprensibile": "DA RIVEDERE",
     "content": {
         "body": "https://designers.italia.it/design-system/componenti/autocomplete/\n",
@@ -14,11 +16,13 @@
     },
     "id": "PVTI_lADOAOqloM4AcXblzgMjtb4",
     "navigabile": "PRONTO",
-    "notes / Issue": "Messaggi e hint per i lettori di schermo sono in inglese! Devono essere in italiano. Verificare presenza negli SR di messaggi 'weird' su campo non valido. In UI Kit Italia il componente non c'\u00e8 (issue gi\u00e0 aperta)",
+    "notes / Issue": "https://github.com/italia/bootstrap-italia/issues/1139 \u2014 https://github.com/italia/design-ui-kit/issues/114 \u2014\u00a0In React kit \u00e8 una variante dentro Input. Uniformare?",
     "react Kit ": "DA RIVEDERE A11Y",
+    "react Kit - url": "https://italia.github.io/design-react-kit/?path=/story/documentazione-form-input--input-autocomplete-con-dati-accessibile",
     "status": "Todo",
     "status a11y check": "Done",
     "title": "Autocomplete",
     "uI Kit Italia": "DA FARE",
+    "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920",
     "visivamente accessibile": "PRONTO"
 }

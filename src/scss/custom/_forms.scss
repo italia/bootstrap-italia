@@ -11,9 +11,6 @@ fieldset {
     display: block;
     max-width: 100%;
     width: auto;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
     padding: 0 $input-spacing-x;
     z-index: 1;
     font-size: $small-font-size;
@@ -48,9 +45,6 @@ fieldset {
     display: block;
     max-width: 100%;
     width: auto;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
     padding: 0 $input-spacing-x;
     z-index: 1;
     &.active {
