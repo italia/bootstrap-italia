@@ -71,19 +71,13 @@ class Forward extends BaseComponent {
  * Data Api implementation
  * ------------------------------------------------------------------------
  */
-/*const toggles = SelectorEngine.find(SELECTOR_TOGGLE)
-toggles.forEach((toggle) => {
-  EventHandler.one(toggle, EVENT_CLICK_DATA_API, (evt) => {
+
+if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+  EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_TOGGLE, function (evt) {
     evt.preventDefault()
-    const forward = Forward.getOrCreateInstance(toggle)
+    const forward = Forward.getOrCreateInstance(this)
     forward.goToTarget()
   })
-})*/
-
-EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_TOGGLE, function (evt) {
-  evt.preventDefault()
-  const forward = Forward.getOrCreateInstance(this)
-  forward.goToTarget()
-})
+}
 
 export default Forward

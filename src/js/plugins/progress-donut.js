@@ -103,8 +103,10 @@ class ProgressDonut extends BaseComponent {
  * ------------------------------------------------------------------------
  */
 
-SelectorEngine.find(SELECTOR_DONUT).forEach((donut) => {
-  ProgressDonut.getOrCreateInstance(donut)
-})
+if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+  SelectorEngine.find(SELECTOR_DONUT).forEach((donut) => {
+    ProgressDonut.getOrCreateInstance(donut)
+  })
+}
 
 export default ProgressDonut

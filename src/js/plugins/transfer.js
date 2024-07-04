@@ -260,15 +260,13 @@ class Transfer extends BaseComponent {
  * ------------------------------------------------------------------------
  */
 
-/*SelectorEngine.find(SELECTOR_BLOCK).forEach((block) => {
-  Transfer.getOrCreateInstance(block)
-})*/
-
-EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_BLOCK + ' .form-check label', function () {
-  Transfer.getOrCreateInstance(this.closest(SELECTOR_BLOCK))
-})
-EventHandler.on(document, EVENT_KEYUP_DATA_API, SELECTOR_BLOCK + ' .form-check label', function () {
-  Transfer.getOrCreateInstance(this.closest(SELECTOR_BLOCK))
-})
+if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+  EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_BLOCK + ' .form-check label', function () {
+    Transfer.getOrCreateInstance(this.closest(SELECTOR_BLOCK))
+  })
+  EventHandler.on(document, EVENT_KEYUP_DATA_API, SELECTOR_BLOCK + ' .form-check label', function () {
+    Transfer.getOrCreateInstance(this.closest(SELECTOR_BLOCK))
+  })
+}
 
 export default Transfer

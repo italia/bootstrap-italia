@@ -127,7 +127,7 @@ const createInput = (element) => {
   return null
 }
 
-if (typeof document !== 'undefined') {
+if (typeof window !== 'undefined' && typeof document !== 'undefined') {
   document.addEventListener('DOMContentLoaded', function () {
     var frmel = document.querySelectorAll(SELECTOR_INPUT + ', label')
     frmel.forEach(function (item) {

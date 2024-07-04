@@ -26,7 +26,9 @@ class InputLabel {
   }
 
   static getInputFromLabel = (labelElement) => {
-    return document.querySelector('#' + CSS.escape(labelElement.getAttribute('for')))
+    if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+      return document.querySelector('#' + CSS.escape(labelElement.getAttribute('for')))
+    }
   }
 
   // Public

@@ -63,16 +63,18 @@ class List extends BaseComponent {
  * ------------------------------------------------------------------------
  */
 
-SelectorEngine.find(SELECTOR_LIST).forEach((list) => {
-  SelectorEngine.find(SELECTOR_ITEM_CHECKBOX, list).forEach((checkbox) => {
-    EventHandler.one(checkbox.closest('a'), EVENT_CLICK_DATA_API, (evt) => {
-      if (!List.getInstance(list)) {
-        evt.preventDefault()
-        const listObj = List.getOrCreateInstance(list)
-        listObj.toggleCheckbox(evt.currentTarget)
-      }
+if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+  SelectorEngine.find(SELECTOR_LIST).forEach((list) => {
+    SelectorEngine.find(SELECTOR_ITEM_CHECKBOX, list).forEach((checkbox) => {
+      EventHandler.one(checkbox.closest('a'), EVENT_CLICK_DATA_API, (evt) => {
+        if (!List.getInstance(list)) {
+          evt.preventDefault()
+          const listObj = List.getOrCreateInstance(list)
+          listObj.toggleCheckbox(evt.currentTarget)
+        }
+      })
     })
   })
-})
+}
 
 export default List

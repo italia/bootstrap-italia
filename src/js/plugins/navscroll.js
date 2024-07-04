@@ -64,11 +64,9 @@ class NavScroll extends BaseComponent {
   }
 
   dispose() {
-    //EventHandler.off(window, EVENT_SCROLL, this._onScroll)
     if (this._scrollCb) {
       this._scrollCb.dispose()
     }
-
     super.dispose()
   }
 
@@ -83,8 +81,6 @@ class NavScroll extends BaseComponent {
   }
 
   _bindEvents() {
-    //EventHandler.on(window, EVENT_SCROLL, this._onScroll)
-
     this._scrollCb = onDocumentScroll(() => this._onScroll())
 
     if (this._collapsible) {
@@ -103,11 +99,12 @@ class NavScroll extends BaseComponent {
         }
       })
     })
-
-    EventHandler.on(window, 'load', () => {
-      //if page is already scrolled
-      setTimeout(() => this._onScroll(), 150)
-    })
+    if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+      EventHandler.on(window, 'load', () => {
+        //if page is already scrolled
+        setTimeout(() => this._onScroll(), 150)
+      })
+    }
   }
 
   _onCollapseOpened() {
@@ -247,9 +244,11 @@ class NavScroll extends BaseComponent {
  * ------------------------------------------------------------------------
  */
 
-const navs = SelectorEngine.find(SELECTOR_NAVSCROLL)
-navs.map((nav) => {
-  NavScroll.getOrCreateInstance(nav)
-})
+if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+  const navs = SelectorEngine.find(SELECTOR_NAVSCROLL)
+  navs.map((nav) => {
+    NavScroll.getOrCreateInstance(nav)
+  })
+}
 
 export default NavScroll

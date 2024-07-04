@@ -205,12 +205,13 @@ class CarouselBI extends BaseComponent {
  * Data Api implementation
  * ------------------------------------------------------------------------
  */
-
-EventHandler.on(window, EVENT_LOAD_DATA_API, () => {
-  const carousels = SelectorEngine.find(SELECTOR_CAROUSEL)
-  carousels.forEach((carousel) => {
-    CarouselBI.getOrCreateInstance(carousel)
+if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+  EventHandler.on(window, EVENT_LOAD_DATA_API, () => {
+    const carousels = SelectorEngine.find(SELECTOR_CAROUSEL)
+    carousels.forEach((carousel) => {
+      CarouselBI.getOrCreateInstance(carousel)
+    })
   })
-})
+}
 
 export default CarouselBI

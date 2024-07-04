@@ -105,11 +105,13 @@ class Dimmer extends BaseComponent {
  * ------------------------------------------------------------------------
  */
 
-EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function () {
-  const dimmerElement = getElementFromSelector(this)
-  const dimmer = Dimmer.getOrCreateInstance(dimmerElement)
+if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+  EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function () {
+    const dimmerElement = getElementFromSelector(this)
+    const dimmer = Dimmer.getOrCreateInstance(dimmerElement)
 
-  this.checked ? dimmer.show() : dimmer.hide()
-})
+    this.checked ? dimmer.show() : dimmer.hide()
+  })
+}
 
 export default Dimmer

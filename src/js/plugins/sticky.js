@@ -66,10 +66,12 @@ class Sticky extends BaseComponent {
   }
 
   dispose() {
-    EventHandler.off(window, EVENT_RESIZE)
-    this._scrollCb.dispose()
+    if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+      EventHandler.off(window, EVENT_RESIZE)
+      this._scrollCb.dispose()
 
-    super.dispose()
+      super.dispose()
+    }
   }
   // Getters
 
@@ -90,9 +92,10 @@ class Sticky extends BaseComponent {
   }
 
   _bindEvents() {
-    EventHandler.on(window, EVENT_RESIZE, () => this._onResize())
-    //EventHandler.on(window, EVENT_SCROLL, () => this._onScroll())
-    this._scrollCb = onDocumentScroll(() => this._onScroll())
+    if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+      EventHandler.on(window, EVENT_RESIZE, () => this._onResize())
+      this._scrollCb = onDocumentScroll(() => this._onScroll())
+    }
   }
 
   _onResize() {
@@ -246,11 +249,13 @@ class Sticky extends BaseComponent {
  * ------------------------------------------------------------------------
  */
 
-onDocumentScroll(() => {
-  const stickies = SelectorEngine.find(SELECTOR_DATA_TOGGLE)
-  stickies.map((sticky) => {
-    Sticky.getOrCreateInstance(sticky)
+if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+  onDocumentScroll(() => {
+    const stickies = SelectorEngine.find(SELECTOR_DATA_TOGGLE)
+    stickies.map((sticky) => {
+      Sticky.getOrCreateInstance(sticky)
+    })
   })
-})
+}
 
 export default Sticky

@@ -360,34 +360,31 @@ class InputPassword extends BaseComponent {
  * ------------------------------------------------------------------------
  */
 
-/*const inputs = SelectorEngine.find(SELECTOR_PASSWORD)
-inputs.forEach((input) => {
-  InputPassword.getOrCreateInstance(input)
-})*/
-
-const createInput = (element) => {
-  if (element && element.matches(SELECTOR_PASSWORD)) {
-    return InputPassword.getOrCreateInstance(element)
+if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+  const createInput = (element) => {
+    if (element && element.matches(SELECTOR_PASSWORD)) {
+      return InputPassword.getOrCreateInstance(element)
+    }
+    return null
   }
-  return null
+
+  EventHandler.on(document, EVENT_MOUSEDOWN_DATA_API, SELECTOR_PASSWORD + ', label', function () {
+    const target = InputLabel.getInputFromLabel(this) || this
+    createInput(target)
+  })
+  EventHandler.on(document, EVENT_KEYUP_DATA_API, SELECTOR_PASSWORD + ', label', function () {
+    const target = InputLabel.getInputFromLabel(this) || this
+    const element = createInput(target)
+    if (element && element._label) {
+      element._label._labelOut()
+    }
+  })
+  EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_BTN_SHOW_PWD, function () {
+    const target = this.parentNode && this.parentNode.querySelector(SELECTOR_PASSWORD)
+    if (target) {
+      InputPassword.getOrCreateInstance(target)
+    }
+  })
 }
-
-EventHandler.on(document, EVENT_MOUSEDOWN_DATA_API, SELECTOR_PASSWORD + ', label', function () {
-  const target = InputLabel.getInputFromLabel(this) || this
-  createInput(target)
-})
-EventHandler.on(document, EVENT_KEYUP_DATA_API, SELECTOR_PASSWORD + ', label', function () {
-  const target = InputLabel.getInputFromLabel(this) || this
-  const element = createInput(target)
-  if (element && element._label) {
-    element._label._labelOut()
-  }
-})
-EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_BTN_SHOW_PWD, function () {
-  const target = this.parentNode && this.parentNode.querySelector(SELECTOR_PASSWORD)
-  if (target) {
-    InputPassword.getOrCreateInstance(target)
-  }
-})
 
 export default InputPassword

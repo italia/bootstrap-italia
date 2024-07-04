@@ -123,18 +123,13 @@ class Masonry extends BaseComponent {
  * ------------------------------------------------------------------------
  */
 
-const masonries = SelectorEngine.find(SELECTOR_DATA_TOGGLE)
-if (masonries.length > 0) {
-  /*if (!MASONRY_EXISTS) {
-    console.warn('[Masonry] Masonry component needs Masonry library to work properly')
-  } else {
+if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+  const masonries = SelectorEngine.find(SELECTOR_DATA_TOGGLE)
+  if (masonries.length > 0) {
     masonries.forEach((masonry) => {
       Masonry.getOrCreateInstance(masonry)
     })
-  }*/
-  masonries.forEach((masonry) => {
-    Masonry.getOrCreateInstance(masonry)
-  })
+  }
 }
 
 export default Masonry
