@@ -1,0 +1,17 @@
+{
+    "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/form-input",
+    "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/form/input-numerico/",
+    "content": {
+        "body": "https://designers.italia.it/design-system/componenti/number-input/",
+        "id": "DI_lADOAOqloM4AcXblzgFT9bo",
+        "title": "Number input",
+        "type": "DraftIssue"
+    },
+    "id": "PVTI_lADOAOqloM4AcXblzgMjweI",
+    "notes / Issue": "In Angular cose sotto Form Input.",
+    "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-form-inputnumerico--documentazione",
+    "status": "Todo",
+    "status a11y check": "To do",
+    "title": "Number input",
+    "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920"
+}

@@ -603,7 +603,7 @@
       "content": {
         "body": "https://designers.italia.it/design-system/componenti/number-input/",
         "id": "DI_lADOAOqloM4AcXblzgFT9bo",
-        "title": "`Numer input` - check a11y e status",
+        "title": "`Number input` - check a11y e status",
         "type": "DraftIssue"
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjweI",
@@ -611,7 +611,7 @@
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-form-inputnumerico--documentazione",
       "status": "Todo",
       "status a11y check": "To do",
-      "title": "`Numer input` - check a11y e status",
+      "title": "`Number input` - check a11y e status",
       "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920"
     },
     {
