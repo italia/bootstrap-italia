@@ -18,7 +18,7 @@ jobs:
         cache: 'pip'
     - run: pip install -r requirements.txt
     - name: Add components status
-      run: gh project item-list 32 --owner italia --format json | jq > api/components_status.json
+      run: gh project item-list 32 --owner italia --format json --limit 100 | jq > api/components_status.json
       env:
         GH_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
     - run: python extract_examples.py
