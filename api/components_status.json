@@ -596,6 +596,381 @@
       "status a11y check": "To do",
       "title": "`Notifications` - check a11y e status",
       "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920"
+    },
+    {
+      "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/form-input",
+      "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/form/input-numerico/",
+      "content": {
+        "body": "https://designers.italia.it/design-system/componenti/number-input/",
+        "id": "DI_lADOAOqloM4AcXblzgFT9bo",
+        "title": "`Numer input` - check a11y e status",
+        "type": "DraftIssue"
+      },
+      "id": "PVTI_lADOAOqloM4AcXblzgMjweI",
+      "notes / Issue": "In Angular cose sotto Form Input.",
+      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-form-inputnumerico--documentazione",
+      "status": "Todo",
+      "status a11y check": "To do",
+      "title": "`Numer input` - check a11y e status",
+      "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920"
+    },
+    {
+      "angular Kit": "NON PRESENTE",
+      "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/componenti/overlay/",
+      "content": {
+        "body": "https://designers.italia.it/design-system/componenti/overlay/",
+        "id": "DI_lADOAOqloM4AcXblzgFT9bs",
+        "title": "`Overlay` - check a11y e status",
+        "type": "DraftIssue"
+      },
+      "id": "PVTI_lADOAOqloM4AcXblzgMjweU",
+      "notes / Issue": "https://github.com/italia/design-ui-kit/issues/123",
+      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/story/documentazione-componenti-thumbnav--overlay",
+      "status": "Todo",
+      "status a11y check": "To do",
+      "title": "`Overlay` - check a11y e status",
+      "uI Kit Italia": "NON PRESENTE",
+      "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920"
+    },
+    {
+      "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/pagination",
+      "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/componenti/paginazione/",
+      "content": {
+        "body": "https://designers.italia.it/design-system/componenti/pagination/",
+        "id": "DI_lADOAOqloM4AcXblzgFT9cI",
+        "title": "`Pagination` - check a11y e status",
+        "type": "DraftIssue"
+      },
+      "id": "PVTI_lADOAOqloM4AcXblzgMjwew",
+      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-pager--documentazione",
+      "status": "Todo",
+      "status a11y check": "To do",
+      "title": "`Pagination` - check a11y e status",
+      "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920"
+    },
+    {
+      "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/popover",
+      "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/componenti/popover/",
+      "content": {
+        "body": "https://designers.italia.it/design-system/componenti/popover/",
+        "id": "DI_lADOAOqloM4AcXblzgFT9cQ",
+        "title": "`Popover` - check a11y e status",
+        "type": "DraftIssue"
+      },
+      "id": "PVTI_lADOAOqloM4AcXblzgMjwfA",
+      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-popover--documentazione",
+      "status": "Todo",
+      "status a11y check": "To do",
+      "title": "`Popover` - check a11y e status",
+      "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920"
+    },
+    {
+      "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/progress-bar",
+      "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/componenti/progress-indicators/",
+      "content": {
+        "body": "https://designers.italia.it/design-system/componenti/progress-indicator/",
+        "id": "DI_lADOAOqloM4AcXblzgFT9cc",
+        "title": "`Progess indicator` - check a11y e status",
+        "type": "DraftIssue"
+      },
+      "id": "PVTI_lADOAOqloM4AcXblzgMjwf0",
+      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-progress--documentazione",
+      "status": "Todo",
+      "status a11y check": "To do",
+      "title": "`Progess indicator` - check a11y e status",
+      "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920"
+    },
+    {
+      "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/radio",
+      "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/form/radio-button/",
+      "content": {
+        "body": "https://designers.italia.it/design-system/componenti/radio-button/",
+        "id": "DI_lADOAOqloM4AcXblzgFT9c0",
+        "title": "`Radio button` - check a11y e status",
+        "type": "DraftIssue"
+      },
+      "id": "PVTI_lADOAOqloM4AcXblzgMjwgU",
+      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-form-radio--documentazione",
+      "status": "Todo",
+      "status a11y check": "To do",
+      "title": "`Radio button` - check a11y e status",
+      "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920"
+    },
+    {
+      "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/rating",
+      "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/componenti/rating/",
+      "content": {
+        "body": "https://designers.italia.it/design-system/componenti/rating/",
+        "id": "DI_lADOAOqloM4AcXblzgFT9dI",
+        "title": "`Rating` - check a11y e status",
+        "type": "DraftIssue"
+      },
+      "id": "PVTI_lADOAOqloM4AcXblzgMjwg0",
+      "notes / Issue": "Dovrebbe essere dentro la categoria Form nei framework di sviluppo BSI e React. Verificare.",
+      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-rating--documentazione",
+      "status": "Todo",
+      "status a11y check": "To do",
+      "title": "`Rating` - check a11y e status",
+      "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920"
+    },
+    {
+      "angular Kit": "NON PRESENTE",
+      "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/componenti/sections/",
+      "content": {
+        "body": "https://designers.italia.it/design-system/componenti/sections/",
+        "id": "DI_lADOAOqloM4AcXblzgFT9dM",
+        "title": "`Sections` - check a11y e status",
+        "type": "DraftIssue"
+      },
+      "id": "PVTI_lADOAOqloM4AcXblzgMjwhE",
+      "notes / Issue": "Da valutare se anche a UI KIt Italia aggiungere un componente container Sections che possa avere gi spaziature e auto-layout coerenti. ",
+      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-section--documentazione",
+      "status": "Todo",
+      "status a11y check": "To do",
+      "title": "`Sections` - check a11y e status",
+      "uI Kit Italia": "NON PRESENTE"
+    },
+    {
+      "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/select",
+      "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/form/select/",
+      "content": {
+        "body": "https://designers.italia.it/design-system/componenti/select/",
+        "id": "DI_lADOAOqloM4AcXblzgFT9dY",
+        "title": "`Select` - check a11y e status",
+        "type": "DraftIssue"
+      },
+      "id": "PVTI_lADOAOqloM4AcXblzgMjwhk",
+      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-form-select--documentazione",
+      "status": "Todo",
+      "status a11y check": "To do",
+      "title": "`Select` - check a11y e status",
+      "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920"
+    },
+    {
+      "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/sidebar",
+      "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/menu-di-navigazione/sidebar/",
+      "content": {
+        "body": "https://designers.italia.it/design-system/componenti/sidebar/",
+        "id": "DI_lADOAOqloM4AcXblzgFT9dg",
+        "title": "`Sidebar` - check a11y e status",
+        "type": "DraftIssue"
+      },
+      "id": "PVTI_lADOAOqloM4AcXblzgMjwh8",
+      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-sidebar--documentazione",
+      "status": "Todo",
+      "status a11y check": "To do",
+      "title": "`Sidebar` - check a11y e status",
+      "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920"
+    },
+    {
+      "angular Kit": "NON PRESENTE",
+      "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/menu-di-navigazione/skiplinks/",
+      "content": {
+        "body": "https://designers.italia.it/design-system/componenti/skiplinks/",
+        "id": "DI_lADOAOqloM4AcXblzgFT9ds",
+        "title": "`Skiplinks` - check a11y e status",
+        "type": "DraftIssue"
+      },
+      "id": "PVTI_lADOAOqloM4AcXblzgMjwiU",
+      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-skiplinks--documentazione",
+      "status": "Todo",
+      "status a11y check": "To do",
+      "title": "`Skiplinks` - check a11y e status",
+      "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920"
+    },
+    {
+      "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/steppers",
+      "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/componenti/steppers/",
+      "content": {
+        "body": "https://designers.italia.it/design-system/componenti/steppers/",
+        "id": "DI_lADOAOqloM4AcXblzgFT9d4",
+        "title": "`Steppers` - check a11y e status",
+        "type": "DraftIssue"
+      },
+      "id": "PVTI_lADOAOqloM4AcXblzgMjwi8",
+      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-stepper--documentazione",
+      "status": "Todo",
+      "status a11y check": "To do",
+      "title": "`Steppers` - check a11y e status",
+      "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920"
+    },
+    {
+      "angular Kit": "NON PRESENTE",
+      "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/componenti/sticky/",
+      "content": {
+        "body": "https://designers.italia.it/design-system/componenti/sticky/",
+        "id": "DI_lADOAOqloM4AcXblzgFT9eA",
+        "title": "`Sticky` - check a11y e status",
+        "type": "DraftIssue"
+      },
+      "id": "PVTI_lADOAOqloM4AcXblzgMjwjI",
+      "notes / Issue": "In React kit e Angular kit c'è la funzionalità Sticky per l'header ma non sembra una fuzionalità usabile altrove come in BSI. Verificare.",
+      "react Kit": "NON PRESENTE",
+      "status": "Todo",
+      "status a11y check": "To do",
+      "title": "`Sticky` - check a11y e status",
+      "uI Kit Italia": "NON PRESENTE"
+    },
+    {
+      "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/tabs",
+      "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/componenti/tab/",
+      "content": {
+        "body": "https://designers.italia.it/design-system/componenti/tabs/",
+        "id": "DI_lADOAOqloM4AcXblzgFT9eE",
+        "title": "`Tabs` - check a11y e status",
+        "type": "DraftIssue"
+      },
+      "id": "PVTI_lADOAOqloM4AcXblzgMjwjM",
+      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-tab--documentazione",
+      "status": "Todo",
+      "status a11y check": "To do",
+      "title": "`Tabs` - check a11y e status",
+      "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920"
+    },
+    {
+      "angular Kit": "NON PRESENTE",
+      "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/menu-di-navigazione/thumbnav/",
+      "content": {
+        "body": "https://designers.italia.it/design-system/componenti/thumbnav/",
+        "id": "DI_lADOAOqloM4AcXblzgFT9eQ",
+        "title": "`Thumbnav` - check a11y e status",
+        "type": "DraftIssue"
+      },
+      "id": "PVTI_lADOAOqloM4AcXblzgMjwjk",
+      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-thumbnav--documentazione",
+      "status": "Todo",
+      "status a11y check": "To do",
+      "title": "`Thumbnav` - check a11y e status",
+      "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920"
+    },
+    {
+      "angular Kit": "NON PRESENTE",
+      "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/componenti/timeline/",
+      "content": {
+        "body": "https://designers.italia.it/design-system/componenti/timeline/",
+        "id": "DI_lADOAOqloM4AcXblzgFT9eo",
+        "title": "`Timeline` - check a11y e status",
+        "type": "DraftIssue"
+      },
+      "id": "PVTI_lADOAOqloM4AcXblzgMjwj8",
+      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-timeline--documentazione",
+      "status": "Todo",
+      "status a11y check": "To do",
+      "title": "`Timeline` - check a11y e status",
+      "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920"
+    },
+    {
+      "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/form-input",
+      "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/form/input-ora/",
+      "content": {
+        "body": "https://designers.italia.it/design-system/componenti/timepicker/",
+        "id": "DI_lADOAOqloM4AcXblzgFT9ew",
+        "title": "`Timepicker` - check a11y e status",
+        "type": "DraftIssue"
+      },
+      "id": "PVTI_lADOAOqloM4AcXblzgMjwkE",
+      "notes / Issue": "In Angular kit cose sotto Form Input. In React kit sotto input.",
+      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/story/documentazione-form-input--input-hourpicker",
+      "status": "Todo",
+      "status a11y check": "To do",
+      "title": "`Timepicker` - check a11y e status",
+      "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920"
+    },
+    {
+      "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/toggle",
+      "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/form/toggles/",
+      "content": {
+        "body": "https://designers.italia.it/design-system/componenti/toggles/",
+        "id": "DI_lADOAOqloM4AcXblzgFT9fI",
+        "title": "`Toggles` - check a11y e status",
+        "type": "DraftIssue"
+      },
+      "id": "PVTI_lADOAOqloM4AcXblzgMjwkw",
+      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-form-toggles--documentazione",
+      "status": "Todo",
+      "status a11y check": "To do",
+      "title": "`Toggles` - check a11y e status",
+      "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920"
+    },
+    {
+      "angular Kit": "NON PRESENTE",
+      "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/menu-di-navigazione/toolbar/",
+      "content": {
+        "body": "https://designers.italia.it/design-system/componenti/toolbar/",
+        "id": "DI_lADOAOqloM4AcXblzgFT9fU",
+        "title": "`Toolbar` - check a11y e status",
+        "type": "DraftIssue"
+      },
+      "id": "PVTI_lADOAOqloM4AcXblzgMjwlA",
+      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-toolbar--documentazione",
+      "status": "Todo",
+      "status a11y check": "To do",
+      "title": "`Toolbar` - check a11y e status",
+      "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920"
+    },
+    {
+      "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/tooltip",
+      "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/componenti/tooltip/",
+      "content": {
+        "body": "https://designers.italia.it/design-system/componenti/tooltip/",
+        "id": "DI_lADOAOqloM4AcXblzgFT9gI",
+        "title": "`Tooltip` - check a11y e status",
+        "type": "DraftIssue"
+      },
+      "id": "PVTI_lADOAOqloM4AcXblzgMjwmo",
+      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-tooltip--documentazione",
+      "status": "Todo",
+      "status a11y check": "To do",
+      "title": "`Tooltip` - check a11y e status",
+      "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920"
+    },
+    {
+      "angular Kit": "NON PRESENTE",
+      "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/form/transfer/",
+      "content": {
+        "body": "https://designers.italia.it/design-system/componenti/transfer/",
+        "id": "DI_lADOAOqloM4AcXblzgFT9go",
+        "title": "`Transfer` - check a11y e status",
+        "type": "DraftIssue"
+      },
+      "id": "PVTI_lADOAOqloM4AcXblzgMjwng",
+      "react Kit": "NON PRESENTE",
+      "status": "Todo",
+      "status a11y check": "To do",
+      "title": "`Transfer` - check a11y e status",
+      "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920"
+    },
+    {
+      "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/upload",
+      "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/form/upload/",
+      "content": {
+        "body": "https://designers.italia.it/design-system/componenti/upload/",
+        "id": "DI_lADOAOqloM4AcXblzgFT9gs",
+        "title": "`Upload` - check a11y e status",
+        "type": "DraftIssue"
+      },
+      "id": "PVTI_lADOAOqloM4AcXblzgMjwnk",
+      "react Kit": "NON PRESENTE",
+      "status": "Todo",
+      "status a11y check": "To do",
+      "title": "`Upload` - check a11y e status",
+      "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920"
+    },
+    {
+      "angular Kit": "NON PRESENTE",
+      "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/componenti/video-player/",
+      "content": {
+        "body": "https://designers.italia.it/design-system/componenti/video-player/",
+        "id": "DI_lADOAOqloM4AcXblzgFT9g4",
+        "title": "`Video player` - check a11y e status",
+        "type": "DraftIssue"
+      },
+      "id": "PVTI_lADOAOqloM4AcXblzgMjwoU",
+      "react Kit": "NON PRESENTE",
+      "status": "Todo",
+      "status a11y check": "To do",
+      "title": "`Video player` - check a11y e status",
+      "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920"
     }
   ],
   "totalCount": 53
