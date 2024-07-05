@@ -1,0 +1,17 @@
+{
+    "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/rating",
+    "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/componenti/rating/",
+    "content": {
+        "body": "https://designers.italia.it/design-system/componenti/rating/",
+        "id": "DI_lADOAOqloM4AcXblzgFT9dI",
+        "title": "Rating",
+        "type": "DraftIssue"
+    },
+    "id": "PVTI_lADOAOqloM4AcXblzgMjwg0",
+    "notes / Issue": "Dovrebbe essere dentro la categoria Form nei framework di sviluppo BSI e React. Verificare.",
+    "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-rating--documentazione",
+    "status": "Todo",
+    "status a11y check": "To do",
+    "title": "Rating",
+    "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920"
+}

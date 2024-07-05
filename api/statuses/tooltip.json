@@ -1,0 +1,16 @@
+{
+    "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/tooltip",
+    "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/componenti/tooltip/",
+    "content": {
+        "body": "https://designers.italia.it/design-system/componenti/tooltip/",
+        "id": "DI_lADOAOqloM4AcXblzgFT9gI",
+        "title": "Tooltip",
+        "type": "DraftIssue"
+    },
+    "id": "PVTI_lADOAOqloM4AcXblzgMjwmo",
+    "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-tooltip--documentazione",
+    "status": "Todo",
+    "status a11y check": "To do",
+    "title": "Tooltip",
+    "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920"
+}

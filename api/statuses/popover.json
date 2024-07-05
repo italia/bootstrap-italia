@@ -1,0 +1,16 @@
+{
+    "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/popover",
+    "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/componenti/popover/",
+    "content": {
+        "body": "https://designers.italia.it/design-system/componenti/popover/",
+        "id": "DI_lADOAOqloM4AcXblzgFT9cQ",
+        "title": "Popover",
+        "type": "DraftIssue"
+    },
+    "id": "PVTI_lADOAOqloM4AcXblzgMjwfA",
+    "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-popover--documentazione",
+    "status": "Todo",
+    "status a11y check": "To do",
+    "title": "Popover",
+    "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920"
+}
