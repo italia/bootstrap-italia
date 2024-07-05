@@ -670,14 +670,14 @@
       "content": {
         "body": "https://designers.italia.it/design-system/componenti/progress-indicator/",
         "id": "DI_lADOAOqloM4AcXblzgFT9cc",
-        "title": "`Progess indicator` - check a11y e status",
+        "title": "`Progress indicator` - check a11y e status",
         "type": "DraftIssue"
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwf0",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-progress--documentazione",
       "status": "Todo",
       "status a11y check": "To do",
-      "title": "`Progess indicator` - check a11y e status",
+      "title": "`Progress indicator` - check a11y e status",
       "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920"
     },
     {
