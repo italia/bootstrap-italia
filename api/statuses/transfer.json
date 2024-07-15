@@ -1,5 +1,6 @@
 {
     "angular Kit": "NON PRESENTE",
+    "bootstrap Italia": "PRONTO",
     "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/form/transfer/",
     "content": {
         "body": "https://designers.italia.it/design-system/componenti/transfer/",
@@ -12,5 +13,6 @@
     "status": "Todo",
     "status a11y check": "To do",
     "title": "Transfer",
+    "uI Kit Italia": "NON PRESENTE",
     "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920"
 }
