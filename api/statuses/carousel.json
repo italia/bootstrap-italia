@@ -1,6 +1,8 @@
 {
     "angular Kit": "DA RIVEDERE",
+    "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/carousel",
     "bootstrap Italia": "DA RIVEDERE",
+    "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/componenti/carousel/",
     "content": {
         "body": "https://designers.italia.it/design-system/componenti/carousel/",
         "id": "DI_lADOAOqloM4AcXblzgFT9XU",
@@ -8,9 +10,10 @@
         "type": "DraftIssue"
     },
     "id": "PVTI_lADOAOqloM4AcXblzgMjwWs",
-    "react Kit ": "NON PRESENTE",
+    "react Kit": "NON PRESENTE",
     "status": "Todo",
     "status a11y check": "To do",
     "title": "Carousel",
-    "uI Kit Italia": "PRONTO"
+    "uI Kit Italia": "PRONTO",
+    "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920"
 }

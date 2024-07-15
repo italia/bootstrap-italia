@@ -1,0 +1,17 @@
+{
+    "angular Kit": "NON PRESENTE",
+    "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/componenti/sticky/",
+    "content": {
+        "body": "https://designers.italia.it/design-system/componenti/sticky/",
+        "id": "DI_lADOAOqloM4AcXblzgFT9eA",
+        "title": "Sticky",
+        "type": "DraftIssue"
+    },
+    "id": "PVTI_lADOAOqloM4AcXblzgMjwjI",
+    "notes / Issue": "In React kit e Angular kit c'\u00e8 la funzionalit\u00e0 Sticky per l'header ma non sembra una fuzionalit\u00e0 usabile altrove come in BSI. Verificare.",
+    "react Kit": "NON PRESENTE",
+    "status": "Todo",
+    "status a11y check": "To do",
+    "title": "Sticky",
+    "uI Kit Italia": "NON PRESENTE"
+}

@@ -1,10 +1,12 @@
 {
     "amichevole con lettori di schermo": "PRONTO",
     "angular Kit": "DA RIVEDERE A11Y",
+    "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/button",
     "assignees": [
         "frmascia11y"
     ],
     "bootstrap Italia": "PRONTO",
+    "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/componenti/buttons/",
     "comprensibile": "PRONTO",
     "content": {
         "body": "https://designers.italia.it/design-system/componenti/buttons/",
@@ -14,11 +16,13 @@
     },
     "id": "PVTI_lADOAOqloM4AcXblzgMjwV0",
     "navigabile": "PRONTO",
-    "notes / Issue": "Verificare in Angular la colorazione e la presenza del Focus corretto",
-    "react Kit ": "PRONTO",
+    "notes / Issue": "https://github.com/italia/design-angular-kit/issues/364",
+    "react Kit": "PRONTO",
+    "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-button--documentazione",
     "status": "Todo",
     "status a11y check": "Done",
     "title": "Buttons",
     "uI Kit Italia": "PRONTO",
+    "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920",
     "visivamente accessibile": "PRONTO"
 }

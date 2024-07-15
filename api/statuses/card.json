@@ -1,10 +1,12 @@
 {
     "amichevole con lettori di schermo": "DA RIVEDERE",
     "angular Kit": "DA RIVEDERE A11Y",
+    "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/card",
     "assignees": [
         "frmascia11y"
     ],
     "bootstrap Italia": "DA RIVEDERE A11Y",
+    "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/componenti/card/",
     "comprensibile": "DA RIVEDERE",
     "content": {
         "body": "https://designers.italia.it/design-system/componenti/card/",
@@ -14,11 +16,13 @@
     },
     "id": "PVTI_lADOAOqloM4AcXblzgMjwWQ",
     "navigabile": "PRONTO",
-    "notes / Issue": "Issue gi\u00e0 aperte su BSI e UI Kit Italia per rivedere le card, ordine elementi e semantica, come gi\u00e0 fatto su Designers Italia e altrove. Valutare di fare completamente nuova versione e deprecare le attuali.",
-    "react Kit ": "DA RIVEDERE A11Y",
+    "notes / Issue": "https://github.com/italia/bootstrap-italia/issues/1071 \u2014\u00a0https://github.com/italia/design-ui-kit/issues/115 \u2014\u00a0Valutare di fare completamente nuova versione e deprecare le attuali. Nomi e varianti nei diversi framework.",
+    "react Kit": "DA RIVEDERE A11Y",
+    "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-cards--documentazione",
     "status": "Todo",
     "status a11y check": "Done",
     "title": "Card",
     "uI Kit Italia": "DA RIVEDERE A11Y",
+    "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920",
     "visivamente accessibile": "PRONTO"
 }
