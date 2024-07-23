@@ -33,7 +33,9 @@ Per utilizzare la didascalia sovrapposta è sufficiente aggiungere la classe `.i
       <a href="#">
         <figure class="figure img-full w-100">
           <img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
-          <figcaption class="figure-caption">Una didascalia per l'immagine sopra.</figcaption>
+          <figcaption class="figure-caption">Una didascalia per l'immagine sopra. 
+            <svg class="icon"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-code-circle"></use></svg>
+          </figcaption>
         </figure>
       </a>
     </div>
