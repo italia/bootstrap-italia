@@ -29,9 +29,14 @@
       "visivamente accessibile": "PRONTO"
     },
     {
+      "amichevole con lettori di schermo": "PRONTO",
       "angular Kit": "NON PRESENTE",
+      "assignees": [
+        "Fupete"
+      ],
       "bootstrap Italia": "PRONTO",
       "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/componenti/affix/",
+      "comprensibile": "PRONTO",
       "content": {
         "body": "https://designers.italia.it/design-system/componenti/affix/\n",
         "id": "DI_lADOAOqloM4AcXblzgFT8JY",
@@ -39,12 +44,14 @@
         "type": "DraftIssue"
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjtas",
-      "notes / Issue": "Funzionalità presente solo in BSI. Verificare.",
+      "navigabile": "PRONTO",
+      "notes / Issue": "Funzionalità presente/documentata solo in BSI. Verificare.",
       "react Kit": "NON PRESENTE",
       "status": "Todo",
-      "status a11y check": "To do",
+      "status a11y check": "Done",
       "title": "`Affix` - check a11y e status",
-      "uI Kit Italia": "NON PRESENTE"
+      "uI Kit Italia": "NON PRESENTE",
+      "visivamente accessibile": "PRONTO"
     },
     {
       "amichevole con lettori di schermo": "PRONTO",
@@ -131,8 +138,15 @@
       "visivamente accessibile": "DA RIVEDERE"
     },
     {
+      "amichevole con lettori di schermo": "PRONTO",
+      "angular Kit": "DA RIVEDERE A11Y",
       "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/back-button",
+      "assignees": [
+        "Fupete"
+      ],
+      "bootstrap Italia": "DA RIVEDERE A11Y",
       "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/menu-di-navigazione/torna-indietro/",
+      "comprensibile": "PRONTO",
       "content": {
         "body": "https://designers.italia.it/design-system/componenti/back/",
         "id": "DI_lADOAOqloM4AcXblzgFT9Vw",
@@ -140,15 +154,27 @@
         "type": "DraftIssue"
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwUQ",
+      "navigabile": "DA RIVEDERE",
+      "notes / Issue": "https://github.com/italia/bootstrap-italia/issues/1155",
+      "react Kit": "DA RIVEDERE A11Y",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-goback--documentazione",
       "status": "Todo",
-      "status a11y check": "To do",
+      "status a11y check": "Done",
       "title": "`Back` - check a11y e status",
-      "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920"
+      "uI Kit Italia": "PRONTO",
+      "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920",
+      "visivamente accessibile": "PRONTO"
     },
     {
+      "amichevole con lettori di schermo": "IN REVIEW",
+      "angular Kit": "DA RIVEDERE A11Y",
       "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/back-to-top",
+      "assignees": [
+        "Fupete"
+      ],
+      "bootstrap Italia": "DA RIVEDERE A11Y",
       "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/menu-di-navigazione/torna-su/",
+      "comprensibile": "PRONTO",
       "content": {
         "body": "https://designers.italia.it/design-system/componenti/back-to-top/",
         "id": "DI_lADOAOqloM4AcXblzgFT9V4",
@@ -156,17 +182,27 @@
         "type": "DraftIssue"
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwUY",
+      "navigabile": "IN REVIEW",
+      "notes / Issue": "https://github.com/italia/bootstrap-italia/issues/1157",
+      "react Kit": "DA RIVEDERE A11Y",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-backtotop--documentazione",
       "status": "Todo",
-      "status a11y check": "To do",
+      "status a11y check": "Done",
       "title": "`Back to top` - check a11y e status",
-      "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920"
+      "uI Kit Italia": "PRONTO",
+      "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920",
+      "visivamente accessibile": "PRONTO"
     },
     {
-      "angular Kit": "DA RIVEDERE",
+      "amichevole con lettori di schermo": "PRONTO",
+      "angular Kit": "DA RIVEDERE A11Y",
       "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/badge",
-      "bootstrap Italia": "DA RIVEDERE",
+      "assignees": [
+        "Fupete"
+      ],
+      "bootstrap Italia": "PRONTO",
       "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/componenti/badge/",
+      "comprensibile": "PRONTO",
       "content": {
         "body": "https://designers.italia.it/design-system/componenti/badge/",
         "id": "DI_lADOAOqloM4AcXblzgFT9WA",
@@ -174,19 +210,26 @@
         "type": "DraftIssue"
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwUg",
-      "notes / Issue": "Segnalati problemi con uso di colori saturi per lo sfondo, che rendono elemento troppo simile a pulsante, quando invece non è cliccabile. Uniformare spaziatura interna tra UI Kit Italia e framework di sviluppo.",
-      "react Kit": "DA RIVEDERE",
+      "navigabile": "PRONTO",
+      "notes / Issue": "https://github.com/italia/design-angular-kit/issues/372 — Altri problemi evidenziati (future lavorazioni): Segnalati problemi con uso di colori saturi per lo sfondo, che rendono elemento troppo simile a pulsante, quando invece non è cliccabile. Manca variante \"Bianca\" in UI Kit Italia. Uniformare spaziatura interna tra UI Kit Italia e framework di sviluppo.",
+      "react Kit": "PRONTO",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-badge--documentazione",
       "status": "Todo",
-      "status a11y check": "To do",
+      "status a11y check": "Done",
       "title": "`Badge` - check a11y e status",
-      "uI Kit Italia": "DA RIVEDERE",
-      "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920"
+      "uI Kit Italia": "PRONTO",
+      "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920",
+      "visivamente accessibile": "PRONTO"
     },
     {
+      "amichevole con lettori di schermo": "PRONTO",
       "angular Kit": "NON PRESENTE",
+      "assignees": [
+        "Fupete"
+      ],
       "bootstrap Italia": "PRONTO",
       "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/menu-di-navigazione/bottomnav/",
+      "comprensibile": "PRONTO",
       "content": {
         "body": "https://designers.italia.it/design-system/componenti/bottomnav/",
         "id": "DI_lADOAOqloM4AcXblzgFT9WU",
@@ -194,19 +237,27 @@
         "type": "DraftIssue"
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwVE",
-      "react Kit": "PRONTO",
+      "navigabile": "PRONTO",
+      "notes / Issue": "https://github.com/italia/design-react-kit/issues/1083 — https://github.com/italia/design-react-kit/issues/1084",
+      "react Kit": "DA RIVEDERE",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-menu-di-navigazione-bottomnav--documentazione",
       "status": "Todo",
-      "status a11y check": "To do",
+      "status a11y check": "Done",
       "title": "`Bottomnav`  - check a11y e status",
       "uI Kit Italia": "PRONTO",
-      "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920"
+      "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920",
+      "visivamente accessibile": "PRONTO"
     },
     {
-      "angular Kit": "PRONTO",
+      "amichevole con lettori di schermo": "PRONTO",
+      "angular Kit": "DA RIVEDERE A11Y",
       "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/breadcrumb",
+      "assignees": [
+        "Fupete"
+      ],
       "bootstrap Italia": "PRONTO",
       "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/menu-di-navigazione/breadcrumbs/",
+      "comprensibile": "PRONTO",
       "content": {
         "body": "https://designers.italia.it/design-system/componenti/breadcrumbs/",
         "id": "DI_lADOAOqloM4AcXblzgFT9Wg",
@@ -214,13 +265,16 @@
         "type": "DraftIssue"
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwVc",
+      "navigabile": "PRONTO",
+      "notes / Issue": "https://github.com/italia/design-angular-kit/issues/373",
       "react Kit": "PRONTO",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-menu-di-navigazione-breadcrumbs--documentazione",
       "status": "Todo",
-      "status a11y check": "To do",
+      "status a11y check": "Done",
       "title": "`Breadcrumbs` - check a11y e status",
       "uI Kit Italia": "PRONTO",
-      "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920"
+      "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920",
+      "visivamente accessibile": "PRONTO"
     },
     {
       "amichevole con lettori di schermo": "PRONTO",
@@ -251,10 +305,15 @@
       "visivamente accessibile": "PRONTO"
     },
     {
-      "angular Kit": "PRONTO",
+      "amichevole con lettori di schermo": "IN REVIEW",
+      "angular Kit": "DA RIVEDERE A11Y",
       "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/callout",
-      "bootstrap Italia": "PRONTO",
+      "assignees": [
+        "Fupete"
+      ],
+      "bootstrap Italia": "DA RIVEDERE A11Y",
       "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/componenti/callout/",
+      "comprensibile": "PRONTO",
       "content": {
         "body": "https://designers.italia.it/design-system/componenti/callout/",
         "id": "DI_lADOAOqloM4AcXblzgFT9W4",
@@ -262,14 +321,16 @@
         "type": "DraftIssue"
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwWE",
-      "notes / Issue": "In UI kit Italia sono previsti angoli arrotondati per la variante base. Uniformare?",
-      "react Kit": "PRONTO",
+      "navigabile": "IN REVIEW",
+      "notes / Issue": "https://github.com/italia/bootstrap-italia/issues/1158 — In UI kit Italia sono previsti angoli arrotondati per le varianti base. Uniformare?",
+      "react Kit": "DA RIVEDERE A11Y",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-callout--documentazione",
       "status": "Todo",
-      "status a11y check": "To do",
+      "status a11y check": "Done",
       "title": "`Callout` - check a11y e status",
       "uI Kit Italia": "PRONTO",
-      "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920"
+      "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920",
+      "visivamente accessibile": "PRONTO"
     },
     {
       "amichevole con lettori di schermo": "DA RIVEDERE",
@@ -300,10 +361,15 @@
       "visivamente accessibile": "PRONTO"
     },
     {
-      "angular Kit": "DA RIVEDERE",
+      "amichevole con lettori di schermo": "IN REVIEW",
+      "angular Kit": "DA RIVEDERE A11Y",
       "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/carousel",
-      "bootstrap Italia": "DA RIVEDERE",
+      "assignees": [
+        "Fupete"
+      ],
+      "bootstrap Italia": "DA RIVEDERE A11Y",
       "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/componenti/carousel/",
+      "comprensibile": "PRONTO",
       "content": {
         "body": "https://designers.italia.it/design-system/componenti/carousel/",
         "id": "DI_lADOAOqloM4AcXblzgFT9XU",
@@ -311,16 +377,24 @@
         "type": "DraftIssue"
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwWs",
-      "react Kit": "NON PRESENTE",
+      "navigabile": "IN REVIEW",
+      "notes / Issue": "https://github.com/italia/bootstrap-italia/issues/1161 — Da fare in React Kit: c'è una precedente issue chiusa da Stale qui: https://github.com/italia/design-react-kit/issues/395",
+      "react Kit": "DA FARE",
       "status": "Todo",
-      "status a11y check": "To do",
+      "status a11y check": "Done",
       "title": "`Carousel` - check a11y e status",
       "uI Kit Italia": "PRONTO",
-      "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920"
+      "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920",
+      "visivamente accessibile": "PRONTO"
     },
     {
       "amichevole con lettori di schermo": "PRONTO",
+      "angular Kit": "DA RIVEDERE",
       "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/chip",
+      "assignees": [
+        "frmascia11y"
+      ],
+      "bootstrap Italia": "DA RIVEDERE",
       "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/componenti/chips/",
       "comprensibile": "PRONTO",
       "content": {
@@ -331,15 +405,26 @@
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwXQ",
       "navigabile": "PRONTO",
+      "notes / Issue": "https://github.com/italia/bootstrap-italia/issues/1024",
+      "react Kit": "DA RIVEDERE",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-chips--documentazione",
       "status": "Todo",
-      "status a11y check": "To do",
+      "status a11y check": "Done",
       "title": "`Chips` - check a11y e status",
-      "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920"
+      "uI Kit Italia": "PRONTO",
+      "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920",
+      "visivamente accessibile": "PRONTO"
     },
     {
+      "amichevole con lettori di schermo": "PRONTO",
+      "angular Kit": "PRONTO",
       "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/collapse",
+      "assignees": [
+        "Fupete"
+      ],
+      "bootstrap Italia": "PRONTO",
       "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/componenti/collapse/",
+      "comprensibile": "PRONTO",
       "content": {
         "body": "https://designers.italia.it/design-system/componenti/collapse/",
         "id": "DI_lADOAOqloM4AcXblzgFT9Xw",
@@ -347,12 +432,14 @@
         "type": "DraftIssue"
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwXg",
-      "notes / Issue": "In React kit c'è la sola funzionalità Accordion. Verificare.",
+      "navigabile": "PRONTO",
+      "notes / Issue": "In React kit c'è la sola funzionalità Accordion e un esempio collapse sotto List. Da verificare.",
       "react Kit": "NON PRESENTE",
       "status": "Todo",
-      "status a11y check": "To do",
+      "status a11y check": "Done",
       "title": "`Collapse` - check a11y e status",
-      "uI Kit Italia": "NON PRESENTE"
+      "uI Kit Italia": "NON PRESENTE",
+      "visivamente accessibile": "PRONTO"
     },
     {
       "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/form-input",
@@ -438,7 +525,7 @@
       "status": "Todo",
       "status a11y check": "To do",
       "title": "`Form` - check a11y e status",
-      "uI Kit Italia": "NON PRESENTE",
+      "uI Kit Italia": "DA FARE",
       "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920"
     },
     {
@@ -629,7 +716,7 @@
       "status": "Todo",
       "status a11y check": "To do",
       "title": "`Overlay` - check a11y e status",
-      "uI Kit Italia": "NON PRESENTE",
+      "uI Kit Italia": "DA FARE",
       "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920"
     },
     {
@@ -926,7 +1013,6 @@
     },
     {
       "angular Kit": "NON PRESENTE",
-      "bootstrap Italia": "PRONTO",
       "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/form/transfer/",
       "content": {
         "body": "https://designers.italia.it/design-system/componenti/transfer/",
