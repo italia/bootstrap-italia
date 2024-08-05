@@ -1,8 +1,13 @@
 {
-    "angular Kit": "PRONTO",
+    "amichevole con lettori di schermo": "IN REVIEW",
+    "angular Kit": "DA RIVEDERE A11Y",
     "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/callout",
-    "bootstrap Italia": "PRONTO",
+    "assignees": [
+        "Fupete"
+    ],
+    "bootstrap Italia": "DA RIVEDERE A11Y",
     "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/componenti/callout/",
+    "comprensibile": "PRONTO",
     "content": {
         "body": "https://designers.italia.it/design-system/componenti/callout/",
         "id": "DI_lADOAOqloM4AcXblzgFT9W4",
@@ -10,12 +15,14 @@
         "type": "DraftIssue"
     },
     "id": "PVTI_lADOAOqloM4AcXblzgMjwWE",
-    "notes / Issue": "In UI kit Italia sono previsti angoli arrotondati per la variante base. Uniformare?",
-    "react Kit": "PRONTO",
+    "navigabile": "IN REVIEW",
+    "notes / Issue": "https://github.com/italia/bootstrap-italia/issues/1158 \u2014 In UI kit Italia sono previsti angoli arrotondati per le varianti base. Uniformare?",
+    "react Kit": "DA RIVEDERE A11Y",
     "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-callout--documentazione",
     "status": "Todo",
-    "status a11y check": "To do",
+    "status a11y check": "Done",
     "title": "Callout",
     "uI Kit Italia": "PRONTO",
-    "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920"
+    "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920",
+    "visivamente accessibile": "PRONTO"
 }
