@@ -242,7 +242,7 @@ textarea {
   position: relative;
   margin-bottom: 0.5rem;
 
-  // add vertical spacing for consequential elements  
+  // add vertical spacing for consequential elements
   & + & {
     margin-top: 0.5rem;
   }
