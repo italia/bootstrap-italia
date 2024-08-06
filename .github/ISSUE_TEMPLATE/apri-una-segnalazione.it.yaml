@@ -1,0 +1,64 @@
+name: Apri una segnalazione - IT
+description: Per segnalare bug, aprire una discussione o inviare un contributo
+labels: []
+body:
+- type: checkboxes
+  attributes:
+    label: Esiste già una discussione sul tema che ti interessa, o su un tema simile?
+    description: |
+      Verifica nella [lista delle discussioni](https://github.com/italia/designers.italia.it/issues/). Se esiste, vai alla discussione esistente e partecipa lasciando un commento.
+    options:
+    - label: Ho verificato e non esiste
+      required: true
+- type: markdown
+  attributes:
+    value: "-------"
+- type: input
+  attributes:
+    label: Versione della libreria
+    description: |
+      Versione utilizzata sulla quale si riscontra un problema o si vuole avviare la discussione.
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Cosa
+    description: |
+      Descrivi in modo chiaro e conciso il tema della tua segnalazione indicando il link della pagina o delle pagine interessate.
+
+      Per segnalare un bug indica come riprodurlo per passi: es. (1) Vai a '...'; (2) Fai click su '...'; (3) Ora trovi il bug '...'.
+      Per proporre un contributo descrivi la soluzione che immagini, cosa ti aspetti e le eventuali alternative hai già valutato.
+
+      Puoi anche aggiungere catture di schermo per arricchire la segnalazione.
+      Assicurati di non condividere informazioni personali.
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Perché
+    description: |
+      Spiega perché ritieni rilevante la segnalazione.
+
+      Indica analisi, verifiche e test svolti a supporto (es. dati di analytics, analisi euristiche, test di usabilità, verifiche di accessibilità), se disponibili.
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Contesto
+    description: |
+      Se significative, inserisci informazioni su tipo di dispositivo, sistema operativo, browser.
+  validations:
+    required: false
+- type: textarea
+  attributes:
+    label: Altro
+    description: |
+      Inserisci link a esempi, ricerca, design o codice a corredo della segnalazione, se disponibili.
+  validations:
+    required: false
+- type: markdown
+  attributes:
+    value: |
+      -------
+
+      [Conosci il modello di contribuzione del design system del Paese?](https://designers.italia.it/design-system/come-contribuire/modello-di-contribuzione/)
