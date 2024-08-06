@@ -6,7 +6,7 @@ body:
   attributes:
     label: Esiste già una discussione sul tema che ti interessa, o su un tema simile?
     description: |
-      Verifica nella [lista delle discussioni](https://github.com/italia/designers.italia.it/issues/). Se esiste, vai alla discussione esistente e partecipa lasciando un commento.
+      Verifica nella [lista delle discussioni](https://github.com/italia/bootstrap-italia/issues/). Se esiste, vai alla discussione esistente e partecipa lasciando un commento.
     options:
     - label: Ho verificato e non esiste
       required: true

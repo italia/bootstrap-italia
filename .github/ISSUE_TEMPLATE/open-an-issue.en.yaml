@@ -6,7 +6,7 @@ body:
   attributes:
     label: Does a discussion already exist on the topic you are interested in, or on a similar topic?
     description: |
-      Please check [issue list](https://github.com/italia/designers.italia.it/issues/). If it exists, participate by posting a comment on the already existing issue.
+      Please check [issue list](https://github.com/italia/bootstrap-italia/issues/). If it exists, participate by posting a comment on the already existing issue.
     options:
     - label: I verified and it doesn't exist
       required: true
