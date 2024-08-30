@@ -241,8 +241,7 @@
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwVE",
       "navigabile": "PRONTO",
-      "notes / Issues": "https://github.com/italia/design-react-kit/issues/1083 — https://github.com/italia/design-react-kit/issues/1084",
-      "react Kit": "DA RIVEDERE",
+      "react Kit": "PRONTO",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-menu-di-navigazione-bottomnav--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
@@ -389,6 +388,34 @@
       "status": "Todo",
       "status a11y check": "Done",
       "title": "`Carousel` - check a11y e status",
+      "uI Kit Italia": "PRONTO",
+      "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920",
+      "visivamente accessibile": "PRONTO"
+    },
+    {
+      "amichevole con lettori di schermo": "IN REVIEW",
+      "angular Kit": "DA RIVEDERE A11Y",
+      "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/checkbox",
+      "assignees": [
+        "Fupete"
+      ],
+      "bootstrap Italia": "DA RIVEDERE A11Y",
+      "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/form/checkbox/",
+      "comprensibile": "PRONTO",
+      "content": {
+        "body": "",
+        "id": "DI_lADOAOqloM4AcXblzgHdJQc",
+        "title": "`Checkbox`- check a11y e status",
+        "type": "DraftIssue"
+      },
+      "id": "PVTI_lADOAOqloM4AcXblzgSeKRg",
+      "navigabile": "PRONTO",
+      "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1069 — https://github.com/italia/bootstrap-italia/issues/1068",
+      "notes / More": "In angular nella variante Gruppi è presente un link nella label da rimuovere.",
+      "react Kit": "DA RIVEDERE A11Y",
+      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-form-checkbox--documentazione",
+      "status a11y check": "Done",
+      "title": "`Checkbox`- check a11y e status",
       "uI Kit Italia": "PRONTO",
       "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920",
       "visivamente accessibile": "PRONTO"
@@ -608,8 +635,15 @@
       "visivamente accessibile": "PRONTO"
     },
     {
+      "amichevole con lettori di schermo": "PRONTO",
+      "angular Kit": "PRONTO",
       "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/header",
+      "assignees": [
+        "Fupete"
+      ],
+      "bootstrap Italia": "PRONTO",
       "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/menu-di-navigazione/header/",
+      "comprensibile": "PRONTO",
       "content": {
         "body": "https://designers.italia.it/design-system/componenti/header/",
         "id": "DI_lADOAOqloM4AcXblzgFT9ZQ",
@@ -617,11 +651,17 @@
         "type": "DraftIssue"
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwaI",
+      "navigabile": "PRONTO",
+      "notes / Issues": "https://github.com/italia/design-react-kit/issues/1099",
+      "notes / More": "In UI Kit Italia c'è anche la versione \"loggata\" dello slim header, non mi pare sia nei framework di sviluppo. ",
+      "react Kit": "DA RIVEDERE",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-menu-di-navigazione-header--documentazione",
       "status": "Todo",
-      "status a11y check": "To do",
+      "status a11y check": "Done",
       "title": "`Header` - check a11y e status",
-      "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920"
+      "uI Kit Italia": "PRONTO",
+      "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920",
+      "visivamente accessibile": "PRONTO"
     },
     {
       "amichevole con lettori di schermo": "PRONTO",
@@ -927,8 +967,15 @@
       "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920"
     },
     {
+      "amichevole con lettori di schermo": "IN REVIEW",
+      "angular Kit": "DA COMPLETARE VARIANTI",
       "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/radio",
+      "assignees": [
+        "Fupete"
+      ],
+      "bootstrap Italia": "DA RIVEDERE A11Y",
       "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/form/radio-button/",
+      "comprensibile": "PRONTO",
       "content": {
         "body": "https://designers.italia.it/design-system/componenti/radio-button/",
         "id": "DI_lADOAOqloM4AcXblzgFT9c0",
@@ -936,16 +983,28 @@
         "type": "DraftIssue"
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwgU",
+      "navigabile": "PRONTO",
       "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1069 — https://github.com/italia/bootstrap-italia/issues/1068",
+      "notes / More": "In Angular manca la variante \"gruppi\" con radio a destra, ma c'è una variante Radio con link nella label che non è altrove. Di quest'ultima è dubbia l'a11y. ",
+      "react Kit": "DA RIVEDERE A11Y",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-form-radio--documentazione",
       "status": "Todo",
-      "status a11y check": "To do",
+      "status a11y check": "Done",
       "title": "`Radio button` - check a11y e status",
-      "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920"
+      "uI Kit Italia": "PRONTO",
+      "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920",
+      "visivamente accessibile": "PRONTO"
     },
     {
+      "amichevole con lettori di schermo": "IN REVIEW",
+      "angular Kit": "DA RIVEDERE A11Y",
       "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/rating",
+      "assignees": [
+        "Fupete"
+      ],
+      "bootstrap Italia": "DA RIVEDERE A11Y",
       "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/componenti/rating/",
+      "comprensibile": "PRONTO",
       "content": {
         "body": "https://designers.italia.it/design-system/componenti/rating/",
         "id": "DI_lADOAOqloM4AcXblzgFT9dI",
@@ -953,15 +1012,20 @@
         "type": "DraftIssue"
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwg0",
-      "notes / More": "Dovrebbe essere dentro la categoria Form nei framework di sviluppo BSI e React. Verificare.",
+      "navigabile": "DA RIVEDERE",
+      "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1183",
+      "notes / More": "C'è una discrepanza con UI Kit Italia, lì cè anche stellina outline per non ancora filled, nei framework di sviluppo no — Dovrebbe essere dentro la categoria Form nei framework di sviluppo BSI e React. Verificare.",
+      "react Kit": "DA RIVEDERE A11Y",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-rating--documentazione",
       "status": "Todo",
-      "status a11y check": "To do",
+      "status a11y check": "Done",
       "title": "`Rating` - check a11y e status",
-      "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920"
+      "uI Kit Italia": "PRONTO",
+      "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920",
+      "visivamente accessibile": "PRONTO"
     },
     {
-      "amichevole con lettori di schermo": "PRONTO",
+      "amichevole con lettori di schermo": "IN REVIEW",
       "angular Kit": "NON PRESENTE",
       "assignees": [
         "Fupete"
@@ -977,7 +1041,8 @@
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwhE",
       "navigabile": "PRONTO",
-      "notes / More": "Da valutare se anche a UI KIt Italia e Angular kit aggiungere un componente container Sections che possa avere gi spaziature e auto-layout coerenti. ",
+      "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1199",
+      "notes / More": "Da valutare se anche a UI KIt Italia e Angular kit aggiungere un componente container Sections che possa avere gi spaziature e auto-layout coerenti.",
       "react Kit": "PRONTO",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-section--documentazione",
       "status": "Todo",
@@ -1132,7 +1197,7 @@
         "type": "DraftIssue"
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwjk",
-      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-thumbnav--documentazione",
+      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-menu-di-navigazione-thumbnav--documentazione",
       "status": "Todo",
       "status a11y check": "To do",
       "title": "`Thumbnav` - check a11y e status",
@@ -1249,8 +1314,15 @@
       "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920"
     },
     {
+      "amichevole con lettori di schermo": "PRONTO",
+      "angular Kit": "DA COMPLETARE VARIANTI",
       "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/upload",
+      "assignees": [
+        "Fupete"
+      ],
+      "bootstrap Italia": "DA RIVEDERE A11Y",
       "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/form/upload/",
+      "comprensibile": "PRONTO",
       "content": {
         "body": "https://designers.italia.it/design-system/componenti/upload/",
         "id": "DI_lADOAOqloM4AcXblzgFT9gs",
@@ -1258,11 +1330,16 @@
         "type": "DraftIssue"
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwnk",
+      "navigabile": "IN REVIEW",
+      "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1182 — https://github.com/italia/designers.italia.it/issues/1388",
+      "notes / More": "La versione con \"Animazione\" per simularne il funzionamento funziona solo al click del mouse, non via tastiera. — In Angular kit manca la versione Avatar",
       "react Kit": "NON PRESENTE",
       "status": "Todo",
-      "status a11y check": "To do",
+      "status a11y check": "Done",
       "title": "`Upload` - check a11y e status",
-      "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920"
+      "uI Kit Italia": "PRONTO",
+      "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920",
+      "visivamente accessibile": "PRONTO"
     },
     {
       "amichevole con lettori di schermo": "PRONTO",
@@ -1290,5 +1367,5 @@
       "visivamente accessibile": "PRONTO"
     }
   ],
-  "totalCount": 54
+  "totalCount": 55
 }

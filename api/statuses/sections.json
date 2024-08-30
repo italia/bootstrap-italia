@@ -1,5 +1,5 @@
 {
-    "amichevole con lettori di schermo": "PRONTO",
+    "amichevole con lettori di schermo": "IN REVIEW",
     "angular Kit": "NON PRESENTE",
     "assignees": [
         "Fupete"
@@ -15,7 +15,8 @@
     },
     "id": "PVTI_lADOAOqloM4AcXblzgMjwhE",
     "navigabile": "PRONTO",
-    "notes / More": "Da valutare se anche a UI KIt Italia e Angular kit aggiungere un componente container Sections che possa avere gi spaziature e auto-layout coerenti. ",
+    "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1199",
+    "notes / More": "Da valutare se anche a UI KIt Italia e Angular kit aggiungere un componente container Sections che possa avere gi spaziature e auto-layout coerenti.",
     "react Kit": "PRONTO",
     "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-section--documentazione",
     "status": "Todo",
