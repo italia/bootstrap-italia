@@ -1,6 +1,6 @@
 {
     "amichevole con lettori di schermo": "PRONTO",
-    "angular Kit": "NON PRESENTE",
+    "angular Kit": "DA FARE",
     "assignees": [
         "Fupete"
     ],
@@ -15,7 +15,8 @@
     },
     "id": "PVTI_lADOAOqloM4AcXblzgMjwoU",
     "navigabile": "PRONTO",
-    "react Kit": "NON PRESENTE",
+    "notes / Issues": "https://github.com/italia/design-react-kit/issues/1101 \u2014 https://github.com/italia/design-angular-kit/issues/378",
+    "react Kit": "DA FARE",
     "status": "Todo",
     "status a11y check": "Done",
     "title": "Video player",
