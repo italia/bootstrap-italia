@@ -1,5 +1,8 @@
 {
     "angular Kit": "NON PRESENTE",
+    "assignees": [
+        "Fupete"
+    ],
     "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/menu-di-navigazione/thumbnav/",
     "content": {
         "body": "https://designers.italia.it/design-system/componenti/thumbnav/",

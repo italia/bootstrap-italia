@@ -1,5 +1,8 @@
 {
     "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/form-input",
+    "assignees": [
+        "Fupete"
+    ],
     "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/form/introduzione/",
     "content": {
         "body": "https://designers.italia.it/design-system/componenti/form/",
@@ -14,6 +17,5 @@
     "status": "Todo",
     "status a11y check": "To do",
     "title": "Form",
-    "uI Kit Italia": "DA FARE",
-    "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920"
+    "uI Kit Italia": "DA FARE"
 }
