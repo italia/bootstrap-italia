@@ -296,6 +296,7 @@
       "id": "PVTI_lADOAOqloM4AcXblzgMjwV0",
       "navigabile": "PRONTO",
       "notes / Issues": "https://github.com/italia/design-angular-kit/issues/364",
+      "notes / More": "Da verificare uso solo colore per veicolare semantica nei pulsanti nelle varianti colore ",
       "react Kit": "PRONTO",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-button--documentazione",
       "status": "Todo",
@@ -1146,11 +1147,15 @@
       "visivamente accessibile": "PRONTO"
     },
     {
+      "amichevole con lettori di schermo": "IN REVIEW",
+      "angular Kit": "DA RIVEDERE A11Y",
       "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/steppers",
       "assignees": [
         "Fupete"
       ],
+      "bootstrap Italia": "DA RIVEDERE A11Y",
       "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/componenti/steppers/",
+      "comprensibile": "PRONTO",
       "content": {
         "body": "https://designers.italia.it/design-system/componenti/steppers/",
         "id": "DI_lADOAOqloM4AcXblzgFT9d4",
@@ -1158,11 +1163,17 @@
         "type": "DraftIssue"
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwi8",
+      "navigabile": "PRONTO",
+      "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1210",
+      "notes / More": "Angular ha il tick confermato in posizione sbagliata — UI Kit Italia ha meno varianti, più deciso nell'uso dei pulsanti. Da valutare di aggiornare i framework dev, specie a valle di un lavoro per il design pattern form multi-step da fare. ",
+      "react Kit": "DA RIVEDERE A11Y",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-stepper--documentazione",
       "status": "Todo",
-      "status a11y check": "To do",
+      "status a11y check": "Done",
       "title": "`Steppers` - check a11y e status",
-      "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920"
+      "uI Kit Italia": "DA COMPLETARE VARIANTI",
+      "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920",
+      "visivamente accessibile": "PRONTO"
     },
     {
       "amichevole con lettori di schermo": "PRONTO",
@@ -1191,11 +1202,15 @@
       "visivamente accessibile": "IN REVIEW"
     },
     {
+      "amichevole con lettori di schermo": "PRONTO",
+      "angular Kit": "DA RIVEDERE A11Y",
       "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/table",
       "assignees": [
         "Fupete"
       ],
+      "bootstrap Italia": "DA RIVEDERE A11Y",
       "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/organizzare-i-contenuti/tabelle/",
+      "comprensibile": "PRONTO",
       "content": {
         "body": "",
         "id": "DI_lADOAOqloM4AcXblzgHYym0",
@@ -1203,10 +1218,16 @@
         "type": "DraftIssue"
       },
       "id": "PVTI_lADOAOqloM4AcXblzgSKjNY",
+      "navigabile": "PRONTO",
+      "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1209",
+      "notes / More": "La variante con piede (usa tfoot) non ha styling particolare — In Angular kit è presente una Tabella con paginazione non disponibile altrove. Da verificarne a11y. ",
+      "react Kit": "DA RIVEDERE A11Y",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-tables--documentazione",
-      "status a11y check": "To do",
+      "status a11y check": "Done",
       "title": "`Tables`- check a11y e status",
-      "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920"
+      "uI Kit Italia": "PRONTO",
+      "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920",
+      "visivamente accessibile": "PRONTO"
     },
     {
       "amichevole con lettori di schermo": "PRONTO",
@@ -1238,11 +1259,14 @@
       "visivamente accessibile": "PRONTO"
     },
     {
+      "amichevole con lettori di schermo": "PRONTO",
       "angular Kit": "NON PRESENTE",
       "assignees": [
         "Fupete"
       ],
+      "bootstrap Italia": "PRONTO",
       "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/menu-di-navigazione/thumbnav/",
+      "comprensibile": "PRONTO",
       "content": {
         "body": "https://designers.italia.it/design-system/componenti/thumbnav/",
         "id": "DI_lADOAOqloM4AcXblzgFT9eQ",
@@ -1250,11 +1274,16 @@
         "type": "DraftIssue"
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwjk",
+      "navigabile": "PRONTO",
+      "notes / Issues": "https://github.com/italia/design-react-kit/issues/1102",
+      "notes / More": "Verificare in UI Kit Italia l'opportunità di ripensare le \"griglie\" immagine, di navigazione o meno. ",
+      "react Kit": "DA RIVEDERE",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-menu-di-navigazione-thumbnav--documentazione",
       "status": "Todo",
-      "status a11y check": "To do",
+      "status a11y check": "Done",
       "title": "`Thumbnav` - check a11y e status",
-      "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920"
+      "uI Kit Italia": "NON PRESENTE",
+      "visivamente accessibile": "PRONTO"
     },
     {
       "amichevole con lettori di schermo": "DA RIVEDERE",
