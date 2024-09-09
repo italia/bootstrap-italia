@@ -13,10 +13,10 @@ const CLASS_NAME_SRONLY = 'sr-only-justvalidate-bi'
 const SELECTOR_SPAN_SRONLY = `.${CLASS_NAME_SRONLY}`
 
 class FormValidate {
-  constructor(selector, config) {
+  constructor(selector, config, dictLocale) {
     this.formSelector = selector
     this.target = document.querySelector(selector)
-    this.validate = new JustValidate(selector, config)
+    this.validate = new JustValidate(selector, config, dictLocale)
     this.config = Object.assign({}, CONFIG_DEFAULT, this.validate.globalConfig)
     this.formItems = []
 
