@@ -16,7 +16,13 @@ class FormValidate {
   constructor(selector, config, dictLocale) {
     this.formSelector = selector
     this.target = document.querySelector(selector)
-    this.validate = new JustValidate(selector, config, dictLocale)
+
+    if(dictLocale != undefined)
+      this.validate = new JustValidate(selector, config, dictLocale)
+    else{
+      this.validate = new JustValidate(selector, config)
+    }
+
     this.config = Object.assign({}, CONFIG_DEFAULT, this.validate.globalConfig)
     this.formItems = []
 
