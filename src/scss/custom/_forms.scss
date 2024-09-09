@@ -239,8 +239,14 @@ textarea {
 
 .form-check {
   padding-left: 0;
-  margin-top: 0.5rem;
   position: relative;
+  margin-bottom: 0.5rem;
+
+  // add vertical spacing for consequential elements
+  & + & {
+    margin-top: 0.5rem;
+  }
+
   [type='checkbox'],
   [type='radio'] {
     position: absolute;
@@ -252,14 +258,12 @@ textarea {
 
     + label {
       position: relative;
-      padding-left: 36px;
+      padding-left: 2rem;
       cursor: pointer;
       display: inline-block;
-      height: 32px;
-      line-height: 32px;
       font-size: 1rem;
+      font-weight: $font-weight-semibold;
       user-select: none;
-      margin-bottom: 0.5rem;
       @include media-breakpoint-up(sm) {
         font-size: 1.125rem;
       }
@@ -293,7 +297,7 @@ textarea {
       height: 17px;
       border: 1px solid #e6e9f2;
       border-radius: 1px;
-      margin: 2px 5px;
+      margin: 2px 4px;
       transform: rotateZ(37deg);
       transform-origin: 100% 100%;
     }
@@ -302,12 +306,12 @@ textarea {
       border-radius: 4px;
       height: 20px;
       width: 20px;
-      margin: 6px 5px;
+      margin: 4px;
       top: 0;
     }
 
     &:checked + label::before {
-      top: 6px;
+      top: 4px;
       left: 1px;
       width: 8px;
       height: 13px;
@@ -367,8 +371,8 @@ textarea {
         left: 0;
         top: 0;
         margin: 5px;
-        width: 22px;
-        height: 22px;
+        width: 20px;
+        height: 20px;
         z-index: 0;
         border-radius: 50%;
         border-style: solid;
@@ -429,15 +433,15 @@ textarea {
 
   // gruppi
   &.form-check-group {
-    padding: 0 0 8px 0;
-    margin-bottom: 16px;
+    padding: 0 0 1rem 0;
+    margin-bottom: 1rem;
     box-shadow: inset 0 -1px 0 0 rgba(1, 1, 1, 0.1);
 
     [type='checkbox'] + label,
     [type='radio'] + label {
       position: static;
       padding-left: 0;
-      padding-right: 52px;
+      padding-right: 3.25rem;
 
       &::after,
       &::before {
@@ -455,22 +459,22 @@ textarea {
     }
 
     .form-text {
-      margin: 0;
-      padding-right: 52px;
       display: block;
-      margin-bottom: $v-gap * 2;
+      padding-right: 3.25rem;
+      margin-bottom: 0.5rem;
     }
 
-    label {
-      font-weight: 600;
-    }
+    // label {
+    //   font-weight: 600;
+    // }
+
     input.semi-checked:not(:checked) + label::before {
       right: 19px;
       left: auto;
     }
   }
   input.semi-checked:not(:checked) + label::before {
-    top: 13px;
+    top: 11px;
     left: 4px;
     width: 12px;
     height: 2px;

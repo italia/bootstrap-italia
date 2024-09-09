@@ -1,5 +1,8 @@
 {
     "angular Kit": "NON PRESENTE",
+    "assignees": [
+        "Fupete"
+    ],
     "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/menu-di-navigazione/thumbnav/",
     "content": {
         "body": "https://designers.italia.it/design-system/componenti/thumbnav/",
@@ -8,7 +11,7 @@
         "type": "DraftIssue"
     },
     "id": "PVTI_lADOAOqloM4AcXblzgMjwjk",
-    "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-thumbnav--documentazione",
+    "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-menu-di-navigazione-thumbnav--documentazione",
     "status": "Todo",
     "status a11y check": "To do",
     "title": "Thumbnav",

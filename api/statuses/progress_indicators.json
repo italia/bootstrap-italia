@@ -1,5 +1,8 @@
 {
     "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/progress-bar",
+    "assignees": [
+        "Fupete"
+    ],
     "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/componenti/progress-indicators/",
     "content": {
         "body": "https://designers.italia.it/design-system/componenti/progress-indicator/",

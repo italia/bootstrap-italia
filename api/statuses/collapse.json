@@ -1,6 +1,13 @@
 {
+    "amichevole con lettori di schermo": "PRONTO",
+    "angular Kit": "PRONTO",
     "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/collapse",
+    "assignees": [
+        "Fupete"
+    ],
+    "bootstrap Italia": "PRONTO",
     "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/componenti/collapse/",
+    "comprensibile": "PRONTO",
     "content": {
         "body": "https://designers.italia.it/design-system/componenti/collapse/",
         "id": "DI_lADOAOqloM4AcXblzgFT9Xw",
@@ -8,10 +15,12 @@
         "type": "DraftIssue"
     },
     "id": "PVTI_lADOAOqloM4AcXblzgMjwXg",
-    "notes / Issue": "In React kit c'\u00e8 la sola funzionalit\u00e0 Accordion. Verificare.",
+    "navigabile": "PRONTO",
+    "notes / More": "In React kit c'\u00e8 la sola funzionalit\u00e0 Accordion e un esempio collapse sotto List. Da verificare.",
     "react Kit": "NON PRESENTE",
     "status": "Todo",
-    "status a11y check": "To do",
+    "status a11y check": "Done",
     "title": "Collapse",
-    "uI Kit Italia": "NON PRESENTE"
+    "uI Kit Italia": "NON PRESENTE",
+    "visivamente accessibile": "PRONTO"
 }

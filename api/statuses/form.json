@@ -1,5 +1,8 @@
 {
     "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/form-input",
+    "assignees": [
+        "Fupete"
+    ],
     "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/form/introduzione/",
     "content": {
         "body": "https://designers.italia.it/design-system/componenti/form/",
@@ -8,11 +11,11 @@
         "type": "DraftIssue"
     },
     "id": "PVTI_lADOAOqloM4AcXblzgMjwZo",
-    "notes / Issue": "https://github.com/italia/design-ui-kit/issues/118 \u2014 In Angular kit ci sono cose sotto Form Input.",
+    "notes / Issues": "https://github.com/italia/design-ui-kit/issues/118",
+    "notes / More": "In Angular kit ci sono cose sotto Form Input.",
     "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-form--documentazione",
     "status": "Todo",
     "status a11y check": "To do",
     "title": "Form",
-    "uI Kit Italia": "NON PRESENTE",
-    "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920"
+    "uI Kit Italia": "DA FARE"
 }

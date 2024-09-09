@@ -1,6 +1,12 @@
 {
+    "amichevole con lettori di schermo": "IN REVIEW",
     "angular Kit": "NON PRESENTE",
+    "assignees": [
+        "Fupete"
+    ],
+    "bootstrap Italia": "DA RIVEDERE A11Y",
     "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/componenti/sections/",
+    "comprensibile": "PRONTO",
     "content": {
         "body": "https://designers.italia.it/design-system/componenti/sections/",
         "id": "DI_lADOAOqloM4AcXblzgFT9dM",
@@ -8,10 +14,14 @@
         "type": "DraftIssue"
     },
     "id": "PVTI_lADOAOqloM4AcXblzgMjwhE",
-    "notes / Issue": "Da valutare se anche a UI KIt Italia aggiungere un componente container Sections che possa avere gi spaziature e auto-layout coerenti. ",
+    "navigabile": "PRONTO",
+    "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1199",
+    "notes / More": "Da valutare se anche a UI KIt Italia e Angular kit aggiungere un componente container Sections che possa avere gi spaziature e auto-layout coerenti.",
+    "react Kit": "DA RIVEDERE A11Y",
     "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-section--documentazione",
     "status": "Todo",
-    "status a11y check": "To do",
+    "status a11y check": "Done",
     "title": "Sections",
-    "uI Kit Italia": "NON PRESENTE"
+    "uI Kit Italia": "NON PRESENTE",
+    "visivamente accessibile": "PRONTO"
 }

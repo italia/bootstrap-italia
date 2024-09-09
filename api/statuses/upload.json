@@ -1,6 +1,13 @@
 {
+    "amichevole con lettori di schermo": "PRONTO",
+    "angular Kit": "DA COMPLETARE VARIANTI",
     "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/upload",
+    "assignees": [
+        "Fupete"
+    ],
+    "bootstrap Italia": "DA RIVEDERE A11Y",
     "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/form/upload/",
+    "comprensibile": "PRONTO",
     "content": {
         "body": "https://designers.italia.it/design-system/componenti/upload/",
         "id": "DI_lADOAOqloM4AcXblzgFT9gs",
@@ -8,9 +15,14 @@
         "type": "DraftIssue"
     },
     "id": "PVTI_lADOAOqloM4AcXblzgMjwnk",
+    "navigabile": "IN REVIEW",
+    "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1182 \u2014\u00a0https://github.com/italia/designers.italia.it/issues/1388",
+    "notes / More": "La versione con \"Animazione\" per simularne il funzionamento funziona solo al click del mouse, non via tastiera. \u2014\u00a0In Angular kit manca la versione Avatar",
     "react Kit": "NON PRESENTE",
     "status": "Todo",
-    "status a11y check": "To do",
+    "status a11y check": "Done",
     "title": "Upload",
-    "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920"
+    "uI Kit Italia": "PRONTO",
+    "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920",
+    "visivamente accessibile": "PRONTO"
 }
