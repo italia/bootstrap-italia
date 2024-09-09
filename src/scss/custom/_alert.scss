@@ -11,8 +11,10 @@
   background-position: 20px 12px;
   background-repeat: no-repeat;
   background-size: 32px 32px;
+
   .alert-link {
     color: $link-color;
+    text-decoration: underline;
   }
 }
 
@@ -31,7 +33,6 @@
 
 // Dismissible alerts
 // Expand the right padding and account for the close button's positioning.
-
 .alert-dismissible {
   padding-right: ($alert-padding-x * 2);
   // Adjust close link position
@@ -47,7 +48,6 @@
 
 // Alternate styles
 // Generate contextual modifier classes for colorizing the alert.
-
 @each $color, $value in $theme-colors {
   @if ($color == 'danger' or $color == 'warning' or $color == 'success' or $color == 'info' or $color == 'primary') {
     .alert-#{$color} {
