@@ -17,9 +17,8 @@ class FormValidate {
     this.formSelector = selector
     this.target = document.querySelector(selector)
 
-    if(dictLocale != undefined)
-      this.validate = new JustValidate(selector, config, dictLocale)
-    else{
+    if (dictLocale != undefined) this.validate = new JustValidate(selector, config, dictLocale)
+    else {
       this.validate = new JustValidate(selector, config)
     }
 
