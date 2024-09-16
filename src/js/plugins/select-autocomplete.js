@@ -22,8 +22,9 @@ class SelectAutocomplete extends BaseComponent {
     this._hasFormControl = element.classList.contains('form-control')
     this.element_original_id = this._element.id
     this._config = config
-    this._config.tAssistiveHint = () => 'Quando i risultati del completamento automatico sono disponibili, usa le frecce su e giù per rivedere e Invio per selezionare. Utenti di dispositivi touch, esplora tramite tocco o con gesti di scorrimento.',
-    this._config.tNoResults = () => 'Nessun risultato trovato.',
+    this._config.tAssistiveHint = () =>
+      'Quando i risultati del completamento automatico sono disponibili, usa le frecce su e giù per rivedere e Invio per selezionare. Utenti di dispositivi touch, esplora tramite tocco o con gesti di scorrimento.'
+    this._config.tNoResults = () => 'Nessun risultato trovato.'
     this._enhance()
   }
 
