@@ -60,7 +60,7 @@
       "assignees": [
         "frmascia11y"
       ],
-      "bootstrap Italia": "DA RIVEDERE A11Y",
+      "bootstrap Italia": "PRONTO",
       "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/componenti/alert/",
       "comprensibile": "PRONTO",
       "content": {
@@ -71,7 +71,6 @@
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjtbQ",
       "navigabile": "PRONTO",
-      "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1140",
       "react Kit": "DA RIVEDERE A11Y",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-alert--documentazione",
       "status": "Todo",
@@ -422,12 +421,12 @@
     },
     {
       "amichevole con lettori di schermo": "PRONTO",
-      "angular Kit": "DA RIVEDERE",
+      "angular Kit": "PRONTO",
       "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/chip",
       "assignees": [
         "frmascia11y"
       ],
-      "bootstrap Italia": "DA RIVEDERE",
+      "bootstrap Italia": "PRONTO",
       "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/componenti/chips/",
       "comprensibile": "PRONTO",
       "content": {
@@ -438,13 +437,13 @@
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwXQ",
       "navigabile": "PRONTO",
-      "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1024",
-      "react Kit": "DA RIVEDERE",
+      "notes / Issues": "https://github.com/italia/design-ui-kit/issues/140",
+      "react Kit": "PRONTO",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-chips--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
       "title": "`Chips` - check a11y e status",
-      "uI Kit Italia": "PRONTO",
+      "uI Kit Italia": "DA RIVEDERE",
       "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920",
       "visivamente accessibile": "PRONTO"
     },
@@ -588,11 +587,15 @@
       "visivamente accessibile": "DA RIVEDERE"
     },
     {
+      "amichevole con lettori di schermo": "PRONTO",
+      "angular Kit": "PRONTO",
       "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/form-input",
       "assignees": [
         "Fupete"
       ],
+      "bootstrap Italia": "PRONTO",
       "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/form/introduzione/",
+      "comprensibile": "PRONTO",
       "content": {
         "body": "https://designers.italia.it/design-system/componenti/form/",
         "id": "DI_lADOAOqloM4AcXblzgFT9Y0",
@@ -600,13 +603,16 @@
         "type": "DraftIssue"
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwZo",
+      "navigabile": "PRONTO",
       "notes / Issues": "https://github.com/italia/design-ui-kit/issues/118",
-      "notes / More": "In Angular kit ci sono cose sotto Form Input.",
+      "notes / More": "La variante \"Autodimensionamento\" ha solo mb-3 ma dovrebbe avere anche qualcosa come mb-lg-0 per allinearsi correttamente su desktop — In Angular kit ci sono cose sotto Form Input. — Nel kit React la variante \"Auto dimensionamento\" non è responsive — La variante Angular kit \"Interazione con Form Input dotato di validazione Model Driven\" sarebbe utile anche in Bootstrap Italia e React kit",
+      "react Kit": "PRONTO",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-form--documentazione",
       "status": "Todo",
-      "status a11y check": "To do",
+      "status a11y check": "Done",
       "title": "`Form` - check a11y e status",
-      "uI Kit Italia": "DA FARE"
+      "uI Kit Italia": "DA FARE",
+      "visivamente accessibile": "PRONTO"
     },
     {
       "amichevole con lettori di schermo": "PRONTO",
@@ -693,11 +699,15 @@
       "visivamente accessibile": "PRONTO"
     },
     {
+      "amichevole con lettori di schermo": "IN REVIEW",
+      "angular Kit": "DA RIVEDERE A11Y",
       "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/form-input",
       "assignees": [
         "Fupete"
       ],
+      "bootstrap Italia": "DA RIVEDERE A11Y",
       "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/form/input/",
+      "comprensibile": "IN REVIEW",
       "content": {
         "body": "https://designers.italia.it/design-system/componenti/input/",
         "id": "DI_lADOAOqloM4AcXblzgFT9Zs",
@@ -705,12 +715,17 @@
         "type": "DraftIssue"
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwas",
+      "navigabile": "IN REVIEW",
+      "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1215 — https://github.com/italia/bootstrap-italia/issues/1216",
       "notes / More": "In UI Kit Italia è presente anche il componente \"To be\". Decidere roadmap. ",
+      "react Kit": "DA RIVEDERE A11Y",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-form-input--documentazione",
       "status": "Todo",
-      "status a11y check": "To do",
+      "status a11y check": "Done",
       "title": "`Input` - check a11y e status",
-      "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920"
+      "uI Kit Italia": "PRONTO",
+      "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920",
+      "visivamente accessibile": "PRONTO"
     },
     {
       "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/list",
@@ -966,12 +981,13 @@
       ],
       "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/componenti/progress-indicators/",
       "content": {
-        "body": "https://designers.italia.it/design-system/componenti/progress-indicator/",
+        "body": "https://designers.italia.it/design-system/componenti/progress-indicators/",
         "id": "DI_lADOAOqloM4AcXblzgFT9cc",
         "title": "`Progress indicators` - check a11y e status",
         "type": "DraftIssue"
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwf0",
+      "notes / Issues": "Ciambelle manca una descrizione dell'immagine, e testo che spieghi lo 0%, tipo \"Completamento: nn\" — ",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-progress--documentazione",
       "status": "Todo",
       "status a11y check": "To do",
@@ -1136,7 +1152,8 @@
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwiU",
       "navigabile": "PRONTO",
-      "notes / Issues": "https://github.com/italia/design-angular-kit/issues/376",
+      "notes / Issues": "https://github.com/italia/design-angular-kit/issues/376 ",
+      "notes / More": "Idea interessante: https://github.com/italia/bootstrap-italia/issues/1217",
       "react Kit": "PRONTO",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-skiplinks--documentazione",
       "status": "Todo",
