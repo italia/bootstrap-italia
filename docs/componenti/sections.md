@@ -18,15 +18,15 @@ Il contenuto di una Section va inserito nel `<div>` con classe `.section-content
 
 #### Accessibilità (draft)
 
-Il titolo `<h2>` dello snippet è solo indicativo. Il tag `<section>` contraddistingue una sezione semanticamente riconoscibile, associata all'id del titolo dall'attributo `aria-describedby`.
+Il titolo `<h2>` dello snippet è solo indicativo. Il tag `<section>` contraddistingue una sezione semanticamente riconoscibile, associata all'id del titolo dall'attributo `aria-labelledby`.
 
-Gli autori dovrebbero dividere la pagina in sezioni semantiche reali e non per solo scopo decorativo. Qualora si utilizzino sezioni al solo scopo decorativo sostituire `<section>` con `<div>` ed eliminare l'attributo `aria-describedby`.
+Gli autori dovrebbero dividere la pagina in sezioni semantiche reali e non per solo scopo decorativo. Qualora si utilizzino sezioni al solo scopo decorativo sostituire `<section>` con `<div>` ed eliminare l'attributo `aria-labelledby`.
 
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
 {% comment %}Example name: Base{% endcomment %}
 {% capture example %}
-<section class="section" aria-describedby="titleEx1">
+<section class="section" aria-labelledby="titleEx1">
   <div class="section-content">
     <!-- contenuto di esempio START -->
     <div class="container">
@@ -56,7 +56,7 @@ Al componente Section può essere applicato uno sfondo di colore tenue utilizzan
 
 {% comment %}Example name: Sfondo tenue{% endcomment %}
 {% capture example %}
-<section class="section section-muted" aria-describedby="titleEx2">
+<section class="section section-muted" aria-labelledby="titleEx2">
   <div class="section-content">
     <!-- contenuto di esempio START -->
     <div class="container">
@@ -84,7 +84,7 @@ Si consiglia di applicare la classe `.white-color` al contenuto (come da esempio
 
 {% comment %}Example name: Sfondo primario{% endcomment %}
 {% capture example %}
-<section class="section section-primary" aria-describedby="titleEx3">
+<section class="section section-primary" aria-labelledby="titleEx3">
   <div class="section-content">
     <!-- contenuto di esempio START -->
     <div class="container white-color">
@@ -112,7 +112,7 @@ Si consiglia di applicare la classe `.white-color` al contenuto (come da esempio
 
 {% comment %}Example name: Sfondo neutrale{% endcomment %}
 {% capture example %}
-<section class="section section-neutral" aria-describedby="titleEx4">
+<section class="section section-neutral" aria-labelledby="titleEx4">
   <div class="section-content">
     <!-- contenuto di esempio START -->
     <div class="container white-color">
@@ -140,7 +140,7 @@ A seconda della luminosità dell'immagine si consiglia di applicare la classe `.
 
 {% comment %}Example name: Con immagine di sfondo{% endcomment %}
 {% capture example %}
-<section class="section section-image" style="background-image: url('https://picsum.photos/1280/720?image=811')"  aria-describedby="titleEx5">
+<section class="section section-image" style="background-image: url('https://picsum.photos/1280/720?image=811')"  aria-labelledby="titleEx5">
   <div class="section-content">
     <!-- contenuto di esempio START -->
     <div class="container white-color">
@@ -166,7 +166,7 @@ Per aggiungere una serie di card all'interno di una Section si consiglia di util
 
 {% comment %}Example name: Con card{% endcomment %}
 {% capture example %}
-<section class="section section-muted"  aria-describedby="titleEx6">
+<section class="section section-muted"  aria-labelledby="titleEx6">
   <div class="section-content">
     <!-- contenuto di esempio START -->
     <div class="container">
