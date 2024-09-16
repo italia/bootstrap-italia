@@ -36,7 +36,7 @@ Come è evidente dall'esempio sottostante è sempre necessario includere informa
   <input type="file" name="upload1" id="upload1" class="upload" multiple="multiple" />
   <label for="upload1">
     <svg class="icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-upload"></use></svg>
-    <span>Upload</span>
+    <span>Carica file</span>
   </label>
   <ul class="upload-file-list">
     <li class="upload-file success">
@@ -104,7 +104,7 @@ Il componente ottimizza la visualizzazione delle immagini anche quando queste no
   <input type="file" name="upload2" id="upload2" class="upload" multiple="multiple" />
   <label for="upload2">
     <svg class="icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-upload"></use></svg>
-    <span>Upload</span>
+    <span>Carica file</span>
   </label>
   <ul class="upload-file-list upload-file-list-image">
     <li class="upload-file success">

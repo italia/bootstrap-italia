@@ -1,0 +1,28 @@
+{
+    "amichevole con lettori di schermo": "PRONTO",
+    "angular Kit": "DA RIVEDERE A11Y",
+    "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/table",
+    "assignees": [
+        "Fupete"
+    ],
+    "bootstrap Italia": "DA RIVEDERE A11Y",
+    "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/organizzare-i-contenuti/tabelle/",
+    "comprensibile": "PRONTO",
+    "content": {
+        "body": "",
+        "id": "DI_lADOAOqloM4AcXblzgHYym0",
+        "title": "Tables",
+        "type": "DraftIssue"
+    },
+    "id": "PVTI_lADOAOqloM4AcXblzgSKjNY",
+    "navigabile": "PRONTO",
+    "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1209",
+    "notes / More": "La variante con piede (usa tfoot) non ha styling particolare \u2014\u00a0In Angular kit \u00e8 presente una Tabella con paginazione non disponibile altrove. Da verificarne a11y. ",
+    "react Kit": "DA RIVEDERE A11Y",
+    "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-tables--documentazione",
+    "status a11y check": "Done",
+    "title": "Tables",
+    "uI Kit Italia": "PRONTO",
+    "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920",
+    "visivamente accessibile": "PRONTO"
+}

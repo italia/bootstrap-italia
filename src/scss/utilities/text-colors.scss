@@ -1,8 +1,13 @@
-//text-color
+// text-color
+// excluding `secondary` due to different colors used for background and text, using a direct class instead
 @each $color, $value in $theme-colors {
-  @if $color != 'white' {
+  @if $color != 'white' and $color != 'secondary' {
     .text-#{$color} {
       color: $value;
     }
   }
+}
+
+.text-secondary {
+  color: $color-text-secondary;
 }

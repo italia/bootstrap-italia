@@ -1,0 +1,29 @@
+{
+    "amichevole con lettori di schermo": "IN REVIEW",
+    "angular Kit": "DA RIVEDERE A11Y",
+    "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/steppers",
+    "assignees": [
+        "Fupete"
+    ],
+    "bootstrap Italia": "DA RIVEDERE A11Y",
+    "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/componenti/steppers/",
+    "comprensibile": "PRONTO",
+    "content": {
+        "body": "https://designers.italia.it/design-system/componenti/steppers/",
+        "id": "DI_lADOAOqloM4AcXblzgFT9d4",
+        "title": "Steppers",
+        "type": "DraftIssue"
+    },
+    "id": "PVTI_lADOAOqloM4AcXblzgMjwi8",
+    "navigabile": "PRONTO",
+    "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1210",
+    "notes / More": "Angular ha il tick confermato in posizione sbagliata \u2014 UI Kit Italia ha meno varianti, pi\u00f9 deciso nell'uso dei pulsanti. Da valutare di aggiornare i framework dev, specie a valle di un lavoro per il design pattern form multi-step da fare. ",
+    "react Kit": "DA RIVEDERE A11Y",
+    "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-stepper--documentazione",
+    "status": "Todo",
+    "status a11y check": "Done",
+    "title": "Steppers",
+    "uI Kit Italia": "DA COMPLETARE VARIANTI",
+    "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920",
+    "visivamente accessibile": "PRONTO"
+}

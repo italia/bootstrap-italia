@@ -1,0 +1,16 @@
+{
+    "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/progress-bar",
+    "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/componenti/progress-indicators/",
+    "content": {
+        "body": "https://designers.italia.it/design-system/componenti/progress-indicator/",
+        "id": "DI_lADOAOqloM4AcXblzgFT9cc",
+        "title": "Progess indicator",
+        "type": "DraftIssue"
+    },
+    "id": "PVTI_lADOAOqloM4AcXblzgMjwf0",
+    "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-progress--documentazione",
+    "status": "Todo",
+    "status a11y check": "To do",
+    "title": "Progess indicator",
+    "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920"
+}

@@ -15,7 +15,7 @@ Breaking feature dalla versione **2.8.0**
 Agli elementi di `<a>` occorre aggiungere l'attributo `role="button"`.
 {% endcapture %}{% include callout.html content=callout type="danger" %}
 
-**Il componente Transfer_contiene**
+**Il componente Transfer contiene**
 
 - Lista checkbox di sinistra
 - Pulsanti per il trasferimento dei contenuti da lista a lista

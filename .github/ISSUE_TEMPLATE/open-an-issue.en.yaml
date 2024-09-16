@@ -1,0 +1,64 @@
+name: Open an issue - EN
+description: To report bugs, open a discussion, or submit a contribution
+labels: []
+body:
+- type: checkboxes
+  attributes:
+    label: Does a discussion already exist on the topic you are interested in, or on a similar topic?
+    description: |
+      Please check [issue list](https://github.com/italia/bootstrap-italia/issues/). If it exists, participate by posting a comment on the already existing issue.
+    options:
+    - label: I verified and it doesn't exist
+      required: true
+- type: markdown
+  attributes:
+    value: "-------"
+- type: input
+  attributes:
+    label: Library version
+    description: |
+      Version on which you encounter a problem or want to start a discussion.
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: What
+    description: |
+      Please describe the theme of your issue in a clear and concise manner, and include the link to the page(s) of concern and screenshots.
+
+      To report a bug, specify how to reproduce it step by step. E.g. (1) Go to '...'; (2) Click '...'; (3) Notice the bug '...'.
+      To propose a novel contribution, describe the problem you want to solve and the solution you envision, what you expect, and any alternative solutions you've considered.
+
+      Consider adding screen captures to enhance your report.
+      Make sure you do not share any personal information in the process.
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Why
+    description: |
+      Explain why you consider this report relevant.
+
+      Highlight any analysis, verifications and tests you've conducted to support your issue or contribution (e.g., data analytics, heuristic analysis, usability tests, accessibility checks), if available.
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Context
+    description: |
+      If relevant, please provide details on the device type, operating system and browser.
+  validations:
+    required: false
+- type: textarea
+  attributes:
+    label: More
+    description: |
+      If available, provide links to related examples, research, designs or code.
+  validations:
+    required: false
+- type: markdown
+  attributes:
+    value: |
+      -------
+
+      [Do you know Italia's Design System contribution model?](https://designers.italia.it/design-system/come-contribuire/modello-di-contribuzione/) (Italian language)

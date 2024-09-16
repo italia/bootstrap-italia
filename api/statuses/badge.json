@@ -1,8 +1,13 @@
 {
-    "angular Kit": "DA RIVEDERE",
+    "amichevole con lettori di schermo": "PRONTO",
+    "angular Kit": "DA RIVEDERE A11Y",
     "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/badge",
-    "bootstrap Italia": "DA RIVEDERE",
+    "assignees": [
+        "Fupete"
+    ],
+    "bootstrap Italia": "PRONTO",
     "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/componenti/badge/",
+    "comprensibile": "PRONTO",
     "content": {
         "body": "https://designers.italia.it/design-system/componenti/badge/",
         "id": "DI_lADOAOqloM4AcXblzgFT9WA",
@@ -10,12 +15,15 @@
         "type": "DraftIssue"
     },
     "id": "PVTI_lADOAOqloM4AcXblzgMjwUg",
-    "notes / Issue": "Segnalati problemi con uso di colori saturi per lo sfondo, che rendono elemento troppo simile a pulsante, quando invece non \u00e8 cliccabile. Uniformare spaziatura interna tra UI Kit Italia e framework di sviluppo.",
-    "react Kit ": "DA RIVEDERE",
+    "navigabile": "PRONTO",
+    "notes / Issues": "https://github.com/italia/design-angular-kit/issues/372",
+    "notes / More": "Altri problemi evidenziati (future lavorazioni): Segnalati problemi con uso di colori saturi per lo sfondo, che rendono elemento troppo simile a pulsante, quando invece non \u00e8 cliccabile. Manca variante \"Bianca\" in UI Kit Italia. Uniformare spaziatura interna tra UI Kit Italia e framework di sviluppo.",
+    "react Kit": "PRONTO",
     "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-badge--documentazione",
     "status": "Todo",
-    "status a11y check": "To do",
+    "status a11y check": "Done",
     "title": "Badge",
-    "uI Kit Italia": "DA RIVEDERE",
-    "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920"
+    "uI Kit Italia": "PRONTO",
+    "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920",
+    "visivamente accessibile": "PRONTO"
 }

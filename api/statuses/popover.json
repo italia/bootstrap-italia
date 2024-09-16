@@ -1,0 +1,29 @@
+{
+    "amichevole con lettori di schermo": "PRONTO",
+    "angular Kit": "DA RIVEDERE A11Y",
+    "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/popover",
+    "assignees": [
+        "Fupete"
+    ],
+    "bootstrap Italia": "DA RIVEDERE A11Y",
+    "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/componenti/popover/",
+    "comprensibile": "PRONTO",
+    "content": {
+        "body": "https://designers.italia.it/design-system/componenti/popover/",
+        "id": "DI_lADOAOqloM4AcXblzgFT9cQ",
+        "title": "Popover",
+        "type": "DraftIssue"
+    },
+    "id": "PVTI_lADOAOqloM4AcXblzgMjwfA",
+    "navigabile": "IN REVIEW",
+    "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1180 \u2014 https://github.com/italia/bootstrap-italia/issues/1181",
+    "notes / More": "Sarebbe da capire se usare sul pulsante \"aria-expanded\" per settare la visibilit\u00e0 del popover e \"aria-controls\" per gestire la navigazione al contenuto (vedi carbon) \u2014\u00a0Su UI Kit Italia ci sono le varianti disabilitate, non necessarie \u2014\u00a0Il popover per link disabilitati, e pi\u00f9 che altro, il popover all'hover, non sono accessibili da tastiera. Valutare di integrare documentazione con un disclaimer. O deprecarli. \u2014 Le varianti in Angular kit non sono complete. ",
+    "react Kit": "PRONTO",
+    "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-popover--documentazione",
+    "status": "Todo",
+    "status a11y check": "Done",
+    "title": "Popover",
+    "uI Kit Italia": "PRONTO",
+    "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920",
+    "visivamente accessibile": "PRONTO"
+}
