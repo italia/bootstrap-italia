@@ -1,14 +1,11 @@
-# [2.9.0](https://github.com/italia/bootstrap-italia/compare/v2.8.8...v2.9.0) (2024-08-05)
+## [2.9.1](https://github.com/italia/bootstrap-italia/compare/v2.9.0...v2.9.1) (2024-09-17)
 
 ### Bug Fixes
 
-* checkbox and radio font-weight ([fc88721](https://github.com/italia/bootstrap-italia/commit/fc88721743c838cec67946f7b0865ee6aba809af))
-* form label ([c7393ea](https://github.com/italia/bootstrap-italia/commit/c7393ea9adaa946787b4e2ef97f87e6f07a8d77e))
-* remove legend properties ([81db5e2](https://github.com/italia/bootstrap-italia/commit/81db5e270471ba7d4a13013c3555f9ce61050c04))
-* secondary color ([c16470d](https://github.com/italia/bootstrap-italia/commit/c16470d89f05bf8a803a9d3552005c75a2549183))
-* typo ([9f1fecd](https://github.com/italia/bootstrap-italia/commit/9f1fecdcebb7a21d410dd81534fdfde439b0a17a))
-* upload label ([5850755](https://github.com/italia/bootstrap-italia/commit/58507552f37113c7ed591539c373c6ec4eede954))
+* **a11y:** change aria-describedby to aria-labelledby in section component ([a4ece2d](https://github.com/italia/bootstrap-italia/commit/a4ece2d97501b7443ec8db5dd611e8257add1910))
+* **a11y:** italian messages by default for select autocomplete ([3674652](https://github.com/italia/bootstrap-italia/commit/36746526a71b1dfaaa60b20ec7fafeba45c10aa2))
+* alert link underline ([9aa281d](https://github.com/italia/bootstrap-italia/commit/9aa281d95eea8d14587d728875f4a741789f2f5a))
 
 ### Features
 
-* add `!default` statement for footer ([521d775](https://github.com/italia/bootstrap-italia/commit/521d7757d9036e1b2bbf5043476bc655da96edce))
+* add parameter for localized generic validation messages ([5156681](https://github.com/italia/bootstrap-italia/commit/51566819109fe2e4e2790228dc70b7a443b66566))

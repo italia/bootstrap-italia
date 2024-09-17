@@ -1,6 +1,12 @@
 {
-    "angular Kit": "NON PRESENTE",
+    "amichevole con lettori di schermo": "PRONTO",
+    "angular Kit": "DA FARE",
+    "assignees": [
+        "Fupete"
+    ],
+    "bootstrap Italia": "PRONTO",
     "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/componenti/video-player/",
+    "comprensibile": "PRONTO",
     "content": {
         "body": "https://designers.italia.it/design-system/componenti/video-player/",
         "id": "DI_lADOAOqloM4AcXblzgFT9g4",
@@ -8,9 +14,13 @@
         "type": "DraftIssue"
     },
     "id": "PVTI_lADOAOqloM4AcXblzgMjwoU",
-    "react Kit": "NON PRESENTE",
+    "navigabile": "PRONTO",
+    "notes / Issues": "https://github.com/italia/design-react-kit/issues/1101 \u2014 https://github.com/italia/design-angular-kit/issues/378",
+    "react Kit": "DA FARE",
     "status": "Todo",
-    "status a11y check": "To do",
+    "status a11y check": "Done",
     "title": "Video player",
-    "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920"
+    "uI Kit Italia": "PRONTO",
+    "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920",
+    "visivamente accessibile": "PRONTO"
 }

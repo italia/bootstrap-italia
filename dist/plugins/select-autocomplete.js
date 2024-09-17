@@ -21,6 +21,25 @@ class SelectAutocomplete extends BaseComponent {
     this._hasFormControl = element.classList.contains('form-control');
     this.element_original_id = this._element.id;
     this._config = config;
+    if (!this._config.tAssistiveHint)
+      this._config.tAssistiveHint = () =>
+        'Quando i risultati del completamento automatico sono disponibili, usa le frecce su e giù per rivedere e Invio per selezionare. Utenti di dispositivi touch, esplora tramite tocco o con gesti di scorrimento';
+    if (!this._config.tNoResults) this._config.tNoResults = () => 'Nessun risultato trovato';
+    if (!this._config.tStatusQueryTooShort)
+      this._config.tStatusQueryTooShort = (minQueryLength) => `Digita ${minQueryLength} o più caratteri per mostrare le opzioni di ricerca`;
+    if (!this._config.tStatusNoResults) this._config.tStatusNoResults = () => 'Nessun risultato di ricerca';
+    if (!this._config.tStatusSelectedOption)
+      this._config.tStatusSelectedOption = (selectedOption, length, index) => `${selectedOption} ${index + 1} di ${length} è sottolineato`;
+    if (!this._config.tStatusResults)
+      this._config.tStatusResults = (length, contentSelectedOption) => {
+        const words = {
+          result: length === 1 ? 'risultato' : 'risultati',
+          is: length === 1 ? 'è' : 'sono',
+          available: length === 1 ? 'disponibile' : 'disponibili',
+        };
+
+        return `${length} ${words.result} ${words.is} ${words.available}. ${contentSelectedOption}`
+      };
     this._enhance();
   }
 
