@@ -35,11 +35,9 @@ class SelectAutocomplete extends BaseComponent {
         available: length === 1 ? 'disponibile' : 'disponibili',
       }
 
-      return (
-        <span>
-          {length} {words.result} {words.is} {words.available}. {contentSelectedOption}
-        </span>
-      )
+      return `<span>
+          ${length} ${words.result} ${words.is} ${words.available}. ${contentSelectedOption}
+        </span>`
     }
     this._enhance()
   }
