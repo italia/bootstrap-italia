@@ -23,9 +23,24 @@ class SelectAutocomplete extends BaseComponent {
     this.element_original_id = this._element.id
     this._config = config
     this._config.tAssistiveHint = () =>
-      this._config.tAssistiveHint ||
-      'Quando i risultati del completamento automatico sono disponibili, usa le frecce su e giù per rivedere e Invio per selezionare. Utenti di dispositivi touch, esplora tramite tocco o con gesti di scorrimento.'
-    this._config.tNoResults = () => this._config.tNoResults || 'Nessun risultato trovato.'
+      'Quando i risultati del completamento automatico sono disponibili, usa le frecce su e giù per rivedere e Invio per selezionare. Utenti di dispositivi touch, esplora tramite tocco o con gesti di scorrimento'
+    this._config.tNoResults = () => 'Nessun risultato trovato'
+    this._config.tStatusQueryTooShort = (minQueryLength) => `Digita ${minQueryLength} o più caratteri per mostrare le opzioni di ricerca`
+    this._config.tStatusNoResults = () => 'Nessun risultato di ricerca'
+    this._config.tStatusSelectedOption = (selectedOption, length, index) => `${selectedOption} ${index + 1} di ${length} è sottolineato`
+    this._config.tStatusResults = (length, contentSelectedOption) => {
+      const words = {
+        result: length === 1 ? 'risultato' : 'risultati',
+        is: length === 1 ? 'è' : 'sono',
+        available: length === 1 ? 'disponibile' : 'disponibili',
+      }
+
+      return (
+        <span>
+          {length} {words.result} {words.is} {words.available}. {contentSelectedOption}
+        </span>
+      )
+    }
     this._enhance()
   }
 
