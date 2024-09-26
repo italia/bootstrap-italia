@@ -116,6 +116,12 @@ textarea {
   }
 }
 
+input[type='date'],
+input[type='datetime-local'],
+input[type='time'] {
+  display: flex;
+}
+
 textarea {
   border: 1px solid $input-border;
   height: auto;
