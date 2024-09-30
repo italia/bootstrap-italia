@@ -218,38 +218,38 @@ class InputPassword extends BaseComponent {
     if (strengthMeter) {
       const requirements = this._getCompletedRequirements(this._element.value)
       const strengthText = this._scoreText(score)
-      let detailedMessage = `${strengthText}. ${requirements.completed} su ${requirements.total} requisiti soddisfatti. `;
+      let detailedMessage = `${strengthText}. ${requirements.completed} su ${requirements.total} requisiti soddisfatti. `
 
       if (requirements.completedDescriptions.length > 0) {
-        detailedMessage += `Requisiti soddisfatti: ${requirements.completedDescriptions.join(', ')}. `;
+        detailedMessage += `Requisiti soddisfatti: ${requirements.completedDescriptions.join(', ')}. `
       }
 
       if (requirements.missingDescriptions.length > 0) {
-        detailedMessage += `Requisiti mancanti: ${requirements.missingDescriptions.join(', ')}.`;
+        detailedMessage += `Requisiti mancanti: ${requirements.missingDescriptions.join(', ')}.`
       }
 
-      strengthMeter.textContent = detailedMessage;
+      strengthMeter.textContent = detailedMessage
     }
   }
 
   _getCompletedRequirements(password) {
     const requirements = [
-      { test: password.length >= 8, description: "Almeno 8 caratteri." },
-      { test: /[A-Z]/.test(password), description: "Almeno una lettera maiuscola." },
-      { test: /[a-z]/.test(password), description: "Almeno una lettera minuscola." },
-      { test: /[0-9]/.test(password), description: "Almeno un numero." },
-      { test: /[^A-Z-a-z0-9]/.test(password), description: "Almeno un carattere speciale." }
-    ];
+      { test: password.length >= 8, description: 'Almeno 8 caratteri.' },
+      { test: /[A-Z]/.test(password), description: 'Almeno una lettera maiuscola.' },
+      { test: /[a-z]/.test(password), description: 'Almeno una lettera minuscola.' },
+      { test: /[0-9]/.test(password), description: 'Almeno un numero.' },
+      { test: /[^A-Z-a-z0-9]/.test(password), description: 'Almeno un carattere speciale.' },
+    ]
 
-    const completedRequirements = requirements.filter(req => req.test);
-    const missingRequirements = requirements.filter(req => !req.test);
+    const completedRequirements = requirements.filter((req) => req.test)
+    const missingRequirements = requirements.filter((req) => !req.test)
 
     return {
       completed: completedRequirements.length,
       total: requirements.length,
-      completedDescriptions: completedRequirements.map(req => req.description),
-      missingDescriptions: missingRequirements.map(req => req.description)
-    };
+      completedDescriptions: completedRequirements.map((req) => req.description),
+      missingDescriptions: missingRequirements.map((req) => req.description),
+    }
   }
 
   /**
