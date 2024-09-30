@@ -12,12 +12,12 @@ const EVENT_KEY = `.${DATA_KEY}`
 const DATA_API_KEY = '.data-api'
 
 const Default = {
-  shortPass: 'Password molto debole',
-  badPass: 'Password debole',
-  goodPass: 'Password sicura',
-  strongPass: 'Password molto sicura',
-  enterPass: 'Inserisci almeno 8 caratteri e una lettera maiuscola',
-  alertCaps: 'CAPS LOCK inserito',
+  shortPass: 'Password molto debole. ',
+  badPass: 'Password debole. ',
+  goodPass: 'Password sicura. ',
+  strongPass: 'Password molto sicura. ',
+  enterPass: 'Inserisci almeno 8 caratteri e una lettera maiuscola. ',
+  alertCaps: 'Attenzione: CAPS LOCK inserito. ',
   showText: true,
   minimumLength: 4,
 }
@@ -25,7 +25,6 @@ const Default = {
 const EVENT_CLICK = `click${EVENT_KEY}`
 const EVENT_KEYUP = `keyup${EVENT_KEY}`
 const EVENT_KEYDOWN = `keydown${EVENT_KEY}`
-const EVENT_KEYPRESS = `keypress${EVENT_KEY}`
 const EVENT_SCORE = `score${EVENT_KEY}`
 const EVENT_TEXT = `text${EVENT_KEY}`
 
@@ -35,7 +34,6 @@ const EVENT_KEYUP_DATA_API = `keyup${EVENT_KEY}${DATA_API_KEY}`
 
 const CLASS_NAME_PASSWORD = 'input-password'
 //const CLASS_NAME_METER = 'input-password-strength-meter'
-const CLASS_NAME_SHOW = 'show'
 
 const SELECTOR_PASSWORD = 'input[data-bs-input][type="password"]'
 const SELECTOR_BTN_SHOW_PWD = '.password-icon'
@@ -99,6 +97,11 @@ class InputPassword extends BaseComponent {
     }
     if (this._isCustom) {
       this._capsElement = this._element.parentNode.querySelector(SELECTOR_CAPS)
+      if (this._capsElement) {
+        // Ensure the element is hidden and empty initially
+        this._capsElement.style.display = 'none'
+        this._capsElement.textContent = ''
+      }
     }
 
     this._showPwdElement = SelectorEngine.findOne(SELECTOR_BTN_SHOW_PWD, this._element.parentNode)
@@ -110,34 +113,8 @@ class InputPassword extends BaseComponent {
     }
 
     if (this._isCustom) {
-      EventHandler.on(this._element, EVENT_KEYDOWN, (evt) => {
-        if (evt.key === 'Shift') {
-          this._isShiftPressed = true
-        }
-      })
-      EventHandler.on(this._element, EVENT_KEYUP, (evt) => {
-        if (evt.key === 'Shift') {
-          this._isShiftPressed = false
-        }
-        if (evt.key === 'CapsLock') {
-          this._isCapsOn = !this._isCapsOn
-          if (this._isCapsOn) {
-            this._showCapsMsg()
-          } else {
-            this._hideCapsMsg()
-          }
-        }
-      })
-      EventHandler.on(this._element, EVENT_KEYPRESS, (evt) => {
-        const matches = evt.key.match(/[A-Z]$/) || []
-        if (matches.length > 0 && !this._isShiftPressed) {
-          this._isCapsOn = true
-          this._showCapsMsg()
-        } else if (this._isCapsOn) {
-          this._isCapsOn = false
-          this._hideCapsMsg()
-        }
-      })
+      EventHandler.on(this._element, EVENT_KEYDOWN, (evt) => this._handleKeyDown(evt))
+      EventHandler.on(this._element, EVENT_KEYUP, (evt) => this._handleKeyUp(evt))
     }
 
     if (this._showPwdElement) {
@@ -145,25 +122,63 @@ class InputPassword extends BaseComponent {
     }
   }
 
-  _showCapsMsg() {
-    if (this._capsElement) {
-      this._capsElement.classList.add(CLASS_NAME_SHOW)
+  _handleKeyDown(evt) {
+    if (evt.key === 'Shift') {
+      this._isShiftPressed = true
+    }
+    this._checkCapsLock(evt)
+  }
+
+  _handleKeyUp(evt) {
+    if (evt.key === 'Shift') {
+      this._isShiftPressed = false
+    }
+    this._checkCapsLock(evt)
+  }
+
+  _checkCapsLock(evt) {
+    if (!this._capsElement) return
+
+    const capsOn = this._isCapsLockOn(evt)
+    if (capsOn !== this._isCapsOn) {
+      this._isCapsOn = capsOn
+      this._toggleCapsLockWarning(this._isCapsOn)
     }
   }
-  _hideCapsMsg() {
+
+  _isCapsLockOn(evt) {
+    if (evt.getModifierState) {
+      return evt.getModifierState('CapsLock')
+    }
+    const charCode = evt.which || evt.keyCode
+    const isUpperCase = charCode >= 65 && charCode <= 90
+    const isLowerCase = charCode >= 97 && charCode <= 122
+    return (isUpperCase && !evt.shiftKey) || (isLowerCase && evt.shiftKey)
+  }
+
+  _toggleCapsLockWarning(show) {
     if (this._capsElement) {
-      this._capsElement.classList.remove(CLASS_NAME_SHOW)
+      if (show) {
+        this._capsElement.textContent = this._config.alertCaps || Default.alertCaps
+        this._capsElement.style.display = 'block'
+      } else {
+        this._capsElement.style.display = 'none'
+        setTimeout(() => {
+          if (this._capsElement.style.display === 'none') {
+            this._capsElement.textContent = ''
+          }
+        }, 100)
+      }
     }
   }
 
   _toggleShowPassword() {
     const toShow = this._element.getAttribute('type') === 'password'
+
     SelectorEngine.find('[class^="password-icon"]', this._showPwdElement).forEach((icon) => icon.classList.toggle('d-none'))
-    if (toShow) {
-      this._element.setAttribute('type', 'text')
-    } else {
-      this._element.setAttribute('type', 'password')
-    }
+
+    this._element.setAttribute('type', toShow ? 'text' : 'password')
+    this._showPwdElement.setAttribute('aria-checked', toShow.toString())
   }
 
   _checkPassword() {
@@ -198,6 +213,43 @@ class InputPassword extends BaseComponent {
         EventHandler.trigger(this._element, EVENT_TEXT)
       }
     }
+
+    const strengthMeter = this._element.parentNode.querySelector('#strengthMeter')
+    if (strengthMeter) {
+      const requirements = this._getCompletedRequirements(this._element.value)
+      const strengthText = this._scoreText(score)
+      let detailedMessage = `${strengthText}. ${requirements.completed} su ${requirements.total} requisiti soddisfatti. `;
+
+      if (requirements.completedDescriptions.length > 0) {
+        detailedMessage += `Requisiti soddisfatti: ${requirements.completedDescriptions.join(', ')}. `;
+      }
+
+      if (requirements.missingDescriptions.length > 0) {
+        detailedMessage += `Requisiti mancanti: ${requirements.missingDescriptions.join(', ')}.`;
+      }
+
+      strengthMeter.textContent = detailedMessage;
+    }
+  }
+
+  _getCompletedRequirements(password) {
+    const requirements = [
+      { test: password.length >= 8, description: "Almeno 8 caratteri." },
+      { test: /[A-Z]/.test(password), description: "Almeno una lettera maiuscola." },
+      { test: /[a-z]/.test(password), description: "Almeno una lettera minuscola." },
+      { test: /[0-9]/.test(password), description: "Almeno un numero." },
+      { test: /[^A-Z-a-z0-9]/.test(password), description: "Almeno un carattere speciale." }
+    ];
+
+    const completedRequirements = requirements.filter(req => req.test);
+    const missingRequirements = requirements.filter(req => !req.test);
+
+    return {
+      completed: completedRequirements.length,
+      total: requirements.length,
+      completedDescriptions: completedRequirements.map(req => req.description),
+      missingDescriptions: missingRequirements.map(req => req.description)
+    };
   }
 
   /**

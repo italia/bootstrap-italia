@@ -200,18 +200,19 @@ Per rendere più semplice l'inserimento della password, l'elemento è stato dota
 <div>
   <div class="form-group">
     <label for="exampleInputPassword">Password con label, placeholder e testo di aiuto</label>
-    <input type="password" data-bs-input class="form-control input-password" id="exampleInputPassword" aria-labelledby="infoPassword">
-    <span class="password-icon" aria-hidden="true">
-      <svg class="password-icon-visible icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-visible"></use></svg>
-      <svg class="password-icon-invisible icon icon-sm d-none"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-invisible"></use></svg>
-    </span>
+    <input type="password" data-bs-input class="form-control input-password" id="exampleInputPassword" aria-describedby="infoPassword">
+    <button type="button" class="password-icon btn" role="switch" aria-checked="false">
+      <span class="password-sr-text visually-hidden">Mostra/Nascondi Password</span>
+      <svg class="password-icon-visible icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-visible"></use></svg>
+      <svg class="password-icon-invisible icon icon-sm d-none" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-invisible"></use></svg>
+    </button>
     <small id="infoPassword" class="form-text">Inserisci almeno 8 caratteri e una lettera maiuscola</small>
   </div>
   <div class="form-group">
     <label for="exampleInputPassword3">Password con strength meter</label>
-    <input type="password" data-bs-input class="form-control input-password" id="exampleInputPassword3">
+    <input type="password" data-bs-input class="form-control input-password" id="exampleInputPassword3" aria-describedby="strengthMeter strengthInfo capsLockWarning">
     <div class="password-strength-meter">
-      <small class="form-text text-muted"
+      <small id="strengthInfo" class="form-text text-muted"
         data-bs-short-pass="Password molto debole"
         data-bs-bad-pas="Password debole"
         data-bs-good-pass="Password sicura"
@@ -227,11 +228,13 @@ Per rendere più semplice l'inserimento della password, l'elemento è stato dota
         <div class="progress-bar bg-muted" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
       </div>
     </div>
-    <span class="password-icon" aria-hidden="true">
-      <svg class="password-icon-visible icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-visible"></use></svg>
-      <svg class="password-icon-invisible icon icon-sm d-none"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-invisible"></use></svg>
-    </span>
-    <small class="password-caps form-text text-warning position-absolute bg-white w-100">CAPS LOCK inserito</small>
+    <button type="button" class="password-icon btn" role="switch" aria-checked="false">
+      <span class="password-sr-text visually-hidden">Mostra/Nascondi Password</span>
+      <svg class="password-icon-visible icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-visible"></use></svg>
+      <svg class="password-icon-invisible icon icon-sm d-none" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-invisible"></use></svg>
+    </button>
+    <small id="capsLockWarning" class="password-caps form-text text-warning position-absolute bg-white w-100" style="display: none;" aria-live="polite"></small>
+    <div id="strengthMeter" class="visually-hidden" aria-live="polite"></div>
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
