@@ -16,10 +16,10 @@ const Default = {
   badPass: 'Password debole. ',
   goodPass: 'Password sicura. ',
   strongPass: 'Password molto sicura. ',
-  enterPass: 'Inserisci almeno 8 caratteri e una lettera maiuscola. ',
+  enterPass: 'Inserisci almeno 8 caratteri, una lettera maiuscola e un carattere speciale. ',
   alertCaps: 'Attenzione: CAPS LOCK inserito. ',
   showText: true,
-  minimumLength: 4,
+  minimumLength: 8,
 }
 
 const EVENT_CLICK = `click${EVENT_KEY}`
@@ -108,6 +108,8 @@ class InputPassword extends BaseComponent {
   }
 
   _bindEvents() {
+    EventHandler.on(this._element, 'keypress', (evt) => this._preventSpace(evt))
+
     if (this._meter) {
       EventHandler.on(this._element, EVENT_KEYUP, () => this._checkPassword())
     }
@@ -119,6 +121,12 @@ class InputPassword extends BaseComponent {
 
     if (this._showPwdElement) {
       EventHandler.on(this._showPwdElement, EVENT_CLICK, () => this._toggleShowPassword())
+    }
+  }
+
+  _preventSpace(evt) {
+    if (evt.key === ' ' || evt.keyCode === 32) {
+      evt.preventDefault()
     }
   }
 
@@ -221,11 +229,11 @@ class InputPassword extends BaseComponent {
       let detailedMessage = `${strengthText}. ${requirements.completed} su ${requirements.total} requisiti soddisfatti. `
 
       if (requirements.completedDescriptions.length > 0) {
-        detailedMessage += `Requisiti soddisfatti: ${requirements.completedDescriptions.join(', ')}. `
+        detailedMessage += `Soddisfatti: ${requirements.completedDescriptions.join(' ')} `
       }
 
       if (requirements.missingDescriptions.length > 0) {
-        detailedMessage += `Requisiti mancanti: ${requirements.missingDescriptions.join(', ')}.`
+        detailedMessage += `Mancanti: ${requirements.missingDescriptions.join(' ')} `
       }
 
       strengthMeter.textContent = detailedMessage

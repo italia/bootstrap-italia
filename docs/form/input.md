@@ -156,7 +156,7 @@ Per rendere più semplice l'inserimento della password, l'elemento è stato dota
     <tr>
       <td><code>data-bs-minimum-length</code></td>
       <td>Lunghezza minima per il calcolo della forza della password (soglia password molto debole)</td>
-      <td>4</td>
+      <td>8</td>
     </tr>
   </tbody>
 </table>
@@ -175,22 +175,22 @@ Per rendere più semplice l'inserimento della password, l'elemento è stato dota
     <tr>
       <td><code>data-bs-short-pass</code></td>
       <td>Testo per il punteggio di forza della password minimo</td>
-      <td>Password molto debole</td>
+      <td>Password molto debole. </td>
     </tr>
     <tr>
       <td><code>data-bs-bad-pass</code></td>
       <td>Testo per punteggio di forza della password basso</td>
-      <td>Password debole</td>
+      <td>Password debole. </td>
     </tr>
     <tr>
       <td><code>data-bs-good-pass</code></td>
       <td>Testo per punteggio di forza della password buono</td>
-      <td>Password sicura</td>
+      <td>Password sicura. </td>
     </tr>
     <tr>
       <td><code>data-bs-strong-pass</code></td>
       <td>Testo per il punteggio di forza della password massimo</td>
-      <td>Password molto sicura</td>
+      <td>Password molto sicura. </td>
     </tr>   
   </tbody>
 </table>
@@ -206,18 +206,18 @@ Per rendere più semplice l'inserimento della password, l'elemento è stato dota
       <svg class="password-icon-visible icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-visible"></use></svg>
       <svg class="password-icon-invisible icon icon-sm d-none" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-invisible"></use></svg>
     </button>
-    <small id="infoPassword" class="form-text">Inserisci almeno 8 caratteri e una lettera maiuscola</small>
+    <small id="infoPassword" class="form-text">Inserisci almeno 8 caratteri, una lettera maiuscola e un carattere speciale.</small>
   </div>
   <div class="form-group">
     <label for="exampleInputPassword3">Password con strength meter</label>
     <input type="password" data-bs-input class="form-control input-password" id="exampleInputPassword3" aria-describedby="strengthMeter strengthInfo capsLockWarning">
     <div class="password-strength-meter">
       <small id="strengthInfo" class="form-text text-muted"
-        data-bs-short-pass="Password molto debole"
-        data-bs-bad-pas="Password debole"
-        data-bs-good-pass="Password sicura"
-        data-bs-strong-pass="Password molto sicura"
-      >Inserisci almeno 8 caratteri e una lettera maiuscola</small>
+        data-bs-short-pass="Password molto debole. "
+        data-bs-bad-pas="Password debole. "
+        data-bs-good-pass="Password sicura. "
+        data-bs-strong-pass="Password molto sicura. "
+      >Inserisci almeno 8 caratteri, una lettera maiuscola e un carattere speciale.</small>
       <div class="password-meter progress rounded-0 position-absolute">
         <div class="row position-absolute w-100 m-0">
           <div class="col-3 border-start border-end border-white"></div>
