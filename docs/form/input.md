@@ -140,9 +140,9 @@ Il testo di aiuto deve essere esplicitamente associato agli elementi del modulo 
 
 ### Input password
 
-Per rendere più semplice l'inserimento della password, l'elemento è stato dotato di un visualizzatore dei caratteri digitati. Inoltre è possibile abbinare un controllo <!--(grazie alla componente [strength meter](https://www.npmjs.com/package/password-strength-meter))--> per segnalare quanto la password che si sta inserendo sia sicura con l'aggiunta dell'HTML necessario.
+Per rendere più semplice l'inserimento della password, l'elemento è dotato di un pulsante che permette di mostrare i caratteri inseriti. 
 
-È possibile personalizzare la componente `strength meter` usando gli attributi data.
+Inoltre, nel caso di un campo Input password utilizzato per la scelta di una password, è possibile abbinare un controllo per segnalare quanto la password che si sta inserendo sia sicura, con l'aggiunta dell'HTML necessario. È possibile personalizzare alcuni messaggi di questa variante con `strength meter` usando specifici attributi `data`. 
 
 <table class="table table-bordered table-striped">
   <thead>
@@ -246,7 +246,7 @@ Abilitarlo manualmente con:
 ```js
 var inputElement = document.querySelector('#exampleInputPassword'))
 var passwordComponent = new bootstrap.InputPassword(inputElement, {
-  minimumLength: 4,
+  minimumLength: 8,
 })
 ```
 
@@ -264,7 +264,7 @@ var passwordComponent = new bootstrap.InputPassword(inputElement, {
     <tr>
       <td><code>minimumLength</code></td>
       <td>Lunghezza minima per il calcolo della forza della password (soglia password molto debole)</td>
-      <td>4</td>
+      <td>8</td>
     </tr>
   </tbody>
 </table>
