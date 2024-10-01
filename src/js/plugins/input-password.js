@@ -226,7 +226,7 @@ class InputPassword extends BaseComponent {
     if (strengthMeter) {
       const requirements = this._getCompletedRequirements(this._element.value)
       const strengthText = this._scoreText(score)
-      let detailedMessage = `${strengthText}. ${requirements.completed} su ${requirements.total} requisiti soddisfatti. `
+      let detailedMessage = `${strengthText} ${requirements.completed} su ${requirements.total} requisiti soddisfatti. `
 
       if (requirements.completedDescriptions.length > 0) {
         detailedMessage += `Soddisfatti: ${requirements.completedDescriptions.join(' ')} `
