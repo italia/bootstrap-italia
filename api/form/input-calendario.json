@@ -1,6 +1,6 @@
 [
     {
         "name": "Base ",
-        "content": "\n<div class=\"form-group\">\n    <label class=\"active\" for=\"dateStandard\">Datepicker</label>\n    <input type=\"date\" id=\"dateStandard\" name=\"dateStandard\">\n</div>\n"
+        "content": "\n<div class=\"form-group\">\n    <label class=\"active\" for=\"dateStandard\">Datepicker</label>\n    <input class=\"form-control\" type=\"date\" id=\"dateStandard\" name=\"dateStandard\">\n</div>\n"
     }
 ]
