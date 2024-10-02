@@ -24,6 +24,7 @@ const EVENT_KEYUP = `keyup${EVENT_KEY}`
 const EVENT_KEYDOWN = `keydown${EVENT_KEY}`
 const EVENT_SCORE = `score${EVENT_KEY}`
 const EVENT_TEXT = `text${EVENT_KEY}`
+const EVENT_REQS = `reqs${EVENT_KEY}`
 
 const EVENT_CLICK_DATA_API = `click${EVENT_KEY}${DATA_API_KEY}`
 const EVENT_MOUSEDOWN_DATA_API = `mousedown${EVENT_KEY}${DATA_API_KEY}`
@@ -37,7 +38,8 @@ const SELECTOR_METER = '.password-strength-meter'
 const SELECTOR_METER_GRAYBAR = '.password-meter'
 const SELECTOR_METER_COLBAR = '.progress-bar'
 const SELECTOR_CAPS = '.password-caps'
-const SELECTOR_TEXT = '.strength-meter-info'
+const SELECTOR_METER_TEXT = '.strength-meter-info'
+const SELECTOR_METER_REQS = '.strenght-meter-reqs'
 
 class InputPassword extends BaseComponent {
   constructor(element, config) {
@@ -53,6 +55,7 @@ class InputPassword extends BaseComponent {
     this._colorBarElement = null
     this._textElement = null
     this._capsElement = null
+    this._reqsElement = null
     this._showPwdElement = null
 
     this._text = {}
@@ -82,7 +85,8 @@ class InputPassword extends BaseComponent {
     if (this._meter) {
       this._grayBarElement = this._meter.querySelector(SELECTOR_METER_GRAYBAR)
       this._colorBarElement = this._meter.querySelector(SELECTOR_METER_COLBAR)
-      this._textElement = this._meter.querySelector(SELECTOR_TEXT)
+      this._textElement = this._meter.querySelector(SELECTOR_METER_TEXT)
+      this._reqsElement = this._meter.querySelector(SELECTOR_METER_REQS)
       if (this._textElement) {
         this._config = Object.assign({}, this._config, { ...Manipulator.getDataAttributes(this._textElement) })
       }
@@ -210,6 +214,41 @@ class InputPassword extends BaseComponent {
         this._textElement.classList.add('text-' + this._scoreColor(score))
         EventHandler.trigger(this._element, EVENT_TEXT)
       }
+    }
+
+    if (this._reqsElement) {
+      const requirements = this._getCompletedRequirements(this._element.value)
+      let detailedMessage = `<p class="small mb-0">${requirements.completed} su ${requirements.total} requisiti soddisfatti:</p>`
+      detailedMessage += `\n<ul class="small">`
+      if (requirements.missingDescriptions.length > 0) {
+        detailedMessage += `\n<li>Non soddisfatti: ${requirements.missingDescriptions.join('. ')}</li>`
+      }
+      if (requirements.completedDescriptions.length > 0) {
+        detailedMessage += `\n<li>Soddisfatti: ${requirements.completedDescriptions.join('. ')}</li>`
+      }
+      detailedMessage += `\n</ul>`
+      this._reqsElement.innerHTML = detailedMessage
+      EventHandler.trigger(this._element, EVENT_REQS)
+    }
+  }
+
+  _getCompletedRequirements(password) {
+    const requirements = [
+      { test: password.length >= 8, description: '8 caratteri' },
+      { test: /[A-Z]/.test(password), description: 'Una lettera maiuscola' },
+      { test: /[a-z]/.test(password), description: 'Una lettera minuscola' },
+      { test: /[0-9]/.test(password), description: 'Un numero' },
+      { test: /[^A-Z-a-z0-9]/.test(password), description: 'Un carattere speciale' },
+    ]
+
+    const completedRequirements = requirements.filter((req) => req.test)
+    const missingRequirements = requirements.filter((req) => !req.test)
+
+    return {
+      completed: completedRequirements.length,
+      total: requirements.length,
+      completedDescriptions: completedRequirements.map((req) => req.description),
+      missingDescriptions: missingRequirements.map((req) => req.description),
     }
   }
 
