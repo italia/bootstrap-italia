@@ -1,11 +1,9 @@
-## [2.9.1](https://github.com/italia/bootstrap-italia/compare/v2.9.0...v2.9.1) (2024-09-17)
+## [2.9.2](https://github.com/italia/bootstrap-italia/compare/v2.9.1...v2.9.2) (2024-10-02)
 
 ### Bug Fixes
 
-* **a11y:** change aria-describedby to aria-labelledby in section component ([a4ece2d](https://github.com/italia/bootstrap-italia/commit/a4ece2d97501b7443ec8db5dd611e8257add1910))
-* **a11y:** italian messages by default for select autocomplete ([3674652](https://github.com/italia/bootstrap-italia/commit/36746526a71b1dfaaa60b20ec7fafeba45c10aa2))
-* alert link underline ([9aa281d](https://github.com/italia/bootstrap-italia/commit/9aa281d95eea8d14587d728875f4a741789f2f5a))
-
-### Features
-
-* add parameter for localized generic validation messages ([5156681](https://github.com/italia/bootstrap-italia/commit/51566819109fe2e4e2790228dc70b7a443b66566))
+* added `form-control` class ([549fcba](https://github.com/italia/bootstrap-italia/commit/549fcba6354dc9e76bebd75aa9a70afeddb4aa4e))
+* extra space on webkit browsers ([0d7c04e](https://github.com/italia/bootstrap-italia/commit/0d7c04ec11d502252de0829f0c90fd8f3b3b1eb7))
+* remove duplicated properties ([0bf3801](https://github.com/italia/bootstrap-italia/commit/0bf3801be9c7f86485d008d9a8b27a1ec1ee45b1))
+* remove duplicated properties ([8539e6a](https://github.com/italia/bootstrap-italia/commit/8539e6a8b1e37f0a696c9a0507473e24e743ba23))
+* update icon minus ([2e45455](https://github.com/italia/bootstrap-italia/commit/2e45455d6f790d887a1558e5f4ae8d7ab87178f4))
