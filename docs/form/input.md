@@ -138,11 +138,74 @@ Il testo di aiuto deve essere esplicitamente associato agli elementi del modulo 
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Input password
+### Disabilitato
+
+Aggiungi l'attributo `disabled` ad un input per impedire la modifica del valore contenuto e non inviare i dati in esso contenuti.
+
+{% comment %}Example name: Disabilitato {% endcomment %}
+{% capture example %}
+<div class="form-group">
+  <label for="input-text-disabled">Contenuto disabilitato</label>
+  <input class="form-control" type="text" id="input-text-disabled" disabled>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+### Readonly
+
+Aggiungi l'attributo `readonly` ad un input per impedire la modifica del valore contenuto.
+
+{% comment %}Example name: Solo lettura {% endcomment %}
+{% capture example %}
+<div class="form-group">
+  <label class="active" for="input-text-read-only">Contenuto in sola lettura</label>
+  <input class="form-control" type="text" id="input-text-read-only" value="Sola lettura" readonly>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+#### Readonly normalizzato
+
+Se per qualche motivo vuoi avere gli elementi `<input readonly>` nella forma stilizzata come testo normale usa la classe `.form-control-plaintext` anziché `.form-control`.
+
+{% comment %}Example name: Solo lettura, normalizzato {% endcomment %}
+{% capture example %}
+<div>
+  <div class="form-group">
+    <label class="active" for="input-text-read-only-2">Contenuto in sola lettura</label>
+    <input class="form-control-plaintext" value="Sola lettura" type="text" id="input-text-read-only-2" readonly>
+  </div>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+## Input password
 
 Per rendere più semplice l'inserimento della password, l'elemento è dotato di un pulsante che permette di mostrare i caratteri inseriti. 
 
-Inoltre, nel caso di un campo Input password utilizzato per la scelta di una password, è possibile abbinare un controllo per segnalare quanto la password che si sta inserendo sia sicura, con l'aggiunta dell'HTML necessario. È possibile personalizzare alcuni messaggi di questa variante con `strength meter` usando specifici attributi `data`. 
+{% capture example %}
+<div class="form-group">
+  <label for="exampleInputPassword">Password base</label>
+  <input type="password" data-bs-input class="form-control input-password" id="exampleInputPassword">
+  <button type="button" class="password-icon btn" role="switch" aria-checked="false">
+    <span class="visually-hidden">Mostra/Nascondi Password</span>
+    <svg class="password-icon-visible icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-visible"></use></svg>
+    <svg class="password-icon-invisible icon icon-sm d-none" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-invisible"></use></svg>
+  </button>
+</div>
+
+<div class="form-group">
+  <label for="exampleInputPassword2">Password con descrizione</label>
+  <input type="password" data-bs-input class="form-control input-password" id="exampleInputPassword2" aria-describedby="infoPassword2">
+  <button type="button" class="password-icon btn" role="switch" aria-checked="false">
+    <span class="visually-hidden">Mostra/Nascondi Password</span>
+    <svg class="password-icon-visible icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-visible"></use></svg>
+    <svg class="password-icon-invisible icon icon-sm d-none" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-invisible"></use></svg>
+  </button>
+  <p id="infoPassword2" class="form-text pb-0">Inserisci almeno 8 caratteri.</p>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+### Password con misuratore sicurezza
+
+Inoltre, nel caso di un campo Input password utilizzato per la scelta di una password (es. in fase di registrazione account), è possibile abbinare un controllo per segnalare quanto la password che si sta inserendo sia sicura, con l'aggiunta dell'HTML necessario. È possibile personalizzare alcuni messaggi di questa variante usando specifici attributi `data`.  
 
 <table class="table table-bordered table-striped">
   <thead>
@@ -195,39 +258,55 @@ Inoltre, nel caso di un campo Input password utilizzato per la scelta di una pas
   </tbody>
 </table>
 
-{% comment %}Example name: Password base{% endcomment %}
-{% capture example %}
-<div class="form-group">
-  <label for="exampleInputPassword">Password base</label>
-  <input type="password" data-bs-input class="form-control input-password" id="exampleInputPassword" aria-describedby="infoPassword">
-  <button type="button" class="password-icon btn" role="switch" aria-checked="false">
-    <span class="visually-hidden">Mostra/Nascondi Password</span>
-    <svg class="password-icon-visible icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-visible"></use></svg>
-    <svg class="password-icon-invisible icon icon-sm d-none" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-invisible"></use></svg>
-  </button>
-  <p id="infoPassword" class="form-text pb-0">Inserisci almeno 8 caratteri.</p>
-</div>
-{% endcapture %}{% include example.html content=example %}
-
 {% comment %}Example name: Password con misuratore sicurezza{% endcomment %}
 {% capture example %}
 <div class="form-group">
-  <label for="exampleInputPassword2">Password con misuratore sicurezza</label>
-  <input type="password" data-bs-input class="form-control input-password" id="exampleInputPassword2" aria-describedby="strengthMeterInfo capsLockWarning infoPassword2">
+  <label for="exampleInputPassword3">Password con misuratore sicurezza</label>
+  <input type="password" data-bs-input class="form-control input-password" id="exampleInputPassword3" aria-describedby="strengthMeterInfo3 capsLockWarning3 infoPassword3">
   <button type="button" class="password-icon btn" role="switch" aria-checked="false">
     <span class="visually-hidden">Mostra/Nascondi Password</span>
     <svg class="password-icon-visible icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-visible"></use></svg>
     <svg class="password-icon-invisible icon icon-sm d-none" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-invisible"></use></svg>
   </button>
+  <p id="infoPassword3" class="form-text text-muted d-block small pb-0">Inserisci almeno 8 caratteri, combinando maiuscole, numeri e caratteri speciali.</p>
+  <p id="capsLockWarning3" class="password-caps small form-text text-warning py-0" style="display: none;" aria-live="polite"></p>
   <div class="password-strength-meter">
-    <p id="infoPassword2" class="form-text text-muted d-block small pb-0">Inserisci almeno 8 caratteri, combinando maiuscole, numeri e caratteri speciali.</p>
-        <p id="capsLockWarning" class="password-caps small form-text text-warning py-0" style="display: none;" aria-live="polite"></p>
-    <p id="strengthMeterInfo" class="strength-meter-info small form-text text-muted pt-0" aria-live="polite"
+    <p id="strengthMeterInfo3" class="strength-meter-info small form-text text-muted pt-0" aria-live="polite"
       data-bs-short-pass="Password molto debole."
       data-bs-bad-pas="Password debole."
       data-bs-good-pass="Password abbastanza sicura."
       data-bs-strong-pass="Password sicura."
     ></p>      
+    <div class="password-meter progress rounded-0 position-absolute">
+      <div class="row position-absolute w-100 m-0">
+        <div class="col-3 border-start border-end border-white"></div>
+        <div class="col-3 border-start border-end border-white"></div>
+        <div class="col-3 border-start border-end border-white"></div>
+        <div class="col-3 border-start border-end border-white"></div>
+      </div>
+      <div class="progress-bar bg-muted" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+  </div>
+</div>
+
+<div class="form-group">
+  <label for="exampleInputPassword4">Password con suggerimenti requisiti</label>
+  <input type="password" data-bs-input class="form-control input-password" id="exampleInputPassword4" aria-describedby="strengthMeterInfo4 capsLockWarning4 strengthRequirements4 infoPassword4">
+  <button type="button" class="password-icon btn" role="switch" aria-checked="false">
+    <span class="visually-hidden">Mostra/Nascondi Password</span>
+    <svg class="password-icon-visible icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-visible"></use></svg>
+    <svg class="password-icon-invisible icon icon-sm d-none" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-invisible"></use></svg>
+  </button>
+  <p id="infoPassword4" class="form-text text-muted d-block small pb-0">Inserisci almeno 8 caratteri, combinando maiuscole, numeri e caratteri speciali.</p>
+  <p id="capsLockWarning4" class="password-caps small form-text text-warning py-0" style="display: none;" aria-live="polite"></p>
+  <div class="password-strength-meter">
+    <p id="strengthMeterInfo4" class="strength-meter-info small form-text text-muted pt-0" aria-live="polite"
+      data-bs-short-pass="Password molto debole."
+      data-bs-bad-pas="Password debole."
+      data-bs-good-pass="Password abbastanza sicura."
+      data-bs-strong-pass="Password sicura."
+    ></p>      
+    <div id="strengthRequirements4" class="strenght-meter-reqs small form-text text-muted" aria-live="polite"></div>
     <div class="password-meter progress rounded-0 position-absolute">
       <div class="row position-absolute w-100 m-0">
         <div class="col-3 border-start border-end border-white"></div>
@@ -270,44 +349,6 @@ var passwordComponent = new bootstrap.InputPassword(inputElement, {
     </tr>
   </tbody>
 </table>
-
-### Disabilitato
-
-Aggiungi l'attributo `disabled` ad un input per impedire la modifica del valore contenuto e non inviare i dati in esso contenuti.
-
-{% comment %}Example name: Disabilitato {% endcomment %}
-{% capture example %}
-<div class="form-group">
-  <label for="input-text-disabled">Contenuto disabilitato</label>
-  <input class="form-control" type="text" id="input-text-disabled" disabled>
-</div>
-{% endcapture %}{% include example.html content=example %}
-
-### Readonly
-
-Aggiungi l'attributo `readonly` ad un input per impedire la modifica del valore contenuto.
-
-{% comment %}Example name: Solo lettura {% endcomment %}
-{% capture example %}
-<div class="form-group">
-  <label class="active" for="input-text-read-only">Contenuto in sola lettura</label>
-  <input class="form-control" type="text" id="input-text-read-only" value="Sola lettura" readonly>
-</div>
-{% endcapture %}{% include example.html content=example %}
-
-#### Readonly normalizzato
-
-Se per qualche motivo vuoi avere gli elementi `<input readonly>` nella forma stilizzata come testo normale usa la classe `.form-control-plaintext` anziché `.form-control`.
-
-{% comment %}Example name: Solo lettura, normalizzato {% endcomment %}
-{% capture example %}
-<div>
-  <div class="form-group">
-    <label class="active" for="input-text-read-only-2">Contenuto in sola lettura</label>
-    <input class="form-control-plaintext" value="Sola lettura" type="text" id="input-text-read-only-2" readonly>
-  </div>
-</div>
-{% endcapture %}{% include example.html content=example %}
 
 ## Ricerca con autocompletamento
 
