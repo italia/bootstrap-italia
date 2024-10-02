@@ -211,39 +211,7 @@ class InputPassword extends BaseComponent {
         EventHandler.trigger(this._element, EVENT_TEXT)
       }
     }
-
-    // requirement descriptions testing
-    // const strengthInfoDetails = this._element.parentNode.querySelector('#strengthInfoDetails')
-    // if (strengthInfoDetails) {
-    //   const requirements = this._getCompletedRequirements(this._element.value)
-    //   let detailedMessage = `${requirements.completed} su ${requirements.total} requisiti soddisfatti. `
-    //   if (requirements.missingDescriptions.length > 0) {
-    //     detailedMessage += `Mancanti: ${requirements.missingDescriptions.join('. ')} `
-    //   }
-    //   strengthInfoDetails.textContent = detailedMessage
-    // }
   }
-
-  // _getCompletedRequirements(password) {
-  //   const requirements = [
-  //     // requirement descriptions testing
-  //     { test: password.length >= 8, description: 'Almeno 8 caratteri' },
-  //     { test: /[A-Z]/.test(password), description: 'Almeno una lettera maiuscola' },
-  //     { test: /[a-z]/.test(password), description: 'Almeno una lettera minuscola' },
-  //     { test: /[0-9]/.test(password), description: 'Almeno un numero' },
-  //     { test: /[^A-Z-a-z0-9]/.test(password), description: 'Almeno un carattere speciale' },
-  //   ]
-
-  //   const completedRequirements = requirements.filter((req) => req.test)
-  //   const missingRequirements = requirements.filter((req) => !req.test)
-
-  //   return {
-  //     completed: completedRequirements.length,
-  //     total: requirements.length,
-  //     completedDescriptions: completedRequirements.map((req) => req.description),
-  //     missingDescriptions: missingRequirements.map((req) => req.description),
-  //   }
-  // }
 
   /**
    * Returns strings based on the score given.
@@ -404,11 +372,6 @@ class InputPassword extends BaseComponent {
  * Data Api implementation
  * ------------------------------------------------------------------------
  */
-
-/*const inputs = SelectorEngine.find(SELECTOR_PASSWORD)
-inputs.forEach((input) => {
-  InputPassword.getOrCreateInstance(input)
-})*/
 
 const createInput = (element) => {
   if (element && element.matches(SELECTOR_PASSWORD)) {
