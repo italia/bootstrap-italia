@@ -185,7 +185,7 @@ class InputPassword extends BaseComponent {
   _checkPassword() {
     const score = this._calculateScore(this._element.value)
     const perc = score < 0 ? 0 : score
-    const step = score < 25 ? 0 : score < 50 ? 25 : score < 75 ? 50 : score < 100 ? 75 : 100;
+    const step = score < 25 ? 0 : score < 50 ? 25 : score < 75 ? 50 : score < 100 ? 75 : 100
 
     this._colorBarElement.classList.forEach((className) => {
       if (className.match(/(^|\s)bg-\S+/g)) {
@@ -212,21 +212,21 @@ class InputPassword extends BaseComponent {
       }
     }
 
-    // requirement descriptions testing 
+    // requirement descriptions testing
     // const strengthInfoDetails = this._element.parentNode.querySelector('#strengthInfoDetails')
     // if (strengthInfoDetails) {
     //   const requirements = this._getCompletedRequirements(this._element.value)
     //   let detailedMessage = `${requirements.completed} su ${requirements.total} requisiti soddisfatti. `
     //   if (requirements.missingDescriptions.length > 0) {
     //     detailedMessage += `Mancanti: ${requirements.missingDescriptions.join('. ')} `
-    //   } 
+    //   }
     //   strengthInfoDetails.textContent = detailedMessage
     // }
   }
 
   // _getCompletedRequirements(password) {
   //   const requirements = [
-  //     // requirement descriptions testing 
+  //     // requirement descriptions testing
   //     { test: password.length >= 8, description: 'Almeno 8 caratteri' },
   //     { test: /[A-Z]/.test(password), description: 'Almeno una lettera maiuscola' },
   //     { test: /[a-z]/.test(password), description: 'Almeno una lettera minuscola' },
