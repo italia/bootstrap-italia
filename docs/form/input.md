@@ -195,46 +195,48 @@ Inoltre, nel caso di un campo Input password utilizzato per la scelta di una pas
   </tbody>
 </table>
 
-{% comment %}Example name: Password {% endcomment %}
+{% comment %}Example name: Password base{% endcomment %}
 {% capture example %}
-<div>
-  <div class="form-group">
-    <label for="exampleInputPassword">Password con label, placeholder e testo di aiuto</label>
-    <input type="password" data-bs-input class="form-control input-password" id="exampleInputPassword" aria-describedby="infoPassword">
-    <button type="button" class="password-icon btn" role="switch" aria-checked="false">
-      <span class="password-sr-text visually-hidden">Mostra/Nascondi Password</span>
-      <svg class="password-icon-visible icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-visible"></use></svg>
-      <svg class="password-icon-invisible icon icon-sm d-none" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-invisible"></use></svg>
-    </button>
-    <small id="infoPassword" class="form-text">Inserisci almeno 8 caratteri, una lettera maiuscola e un carattere speciale.</small>
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword3">Password con strength meter</label>
-    <input type="password" data-bs-input class="form-control input-password" id="exampleInputPassword3" aria-describedby="strengthMeter strengthInfo capsLockWarning">
-    <div class="password-strength-meter">
-      <small id="strengthInfo" class="form-text text-muted"
-        data-bs-short-pass="Password molto debole. "
-        data-bs-bad-pas="Password debole. "
-        data-bs-good-pass="Password sicura. "
-        data-bs-strong-pass="Password molto sicura. "
-      >Inserisci almeno 8 caratteri, una lettera maiuscola e un carattere speciale.</small>
-      <div class="password-meter progress rounded-0 position-absolute">
-        <div class="row position-absolute w-100 m-0">
-          <div class="col-3 border-start border-end border-white"></div>
-          <div class="col-3 border-start border-end border-white"></div>
-          <div class="col-3 border-start border-end border-white"></div>
-          <div class="col-3 border-start border-end border-white"></div>
-        </div>
-        <div class="progress-bar bg-muted" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+<div class="form-group">
+  <label for="exampleInputPassword">Password base</label>
+  <input type="password" data-bs-input class="form-control input-password" id="exampleInputPassword" aria-describedby="infoPassword">
+  <button type="button" class="password-icon btn" role="switch" aria-checked="false">
+    <span class="visually-hidden">Mostra/Nascondi Password</span>
+    <svg class="password-icon-visible icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-visible"></use></svg>
+    <svg class="password-icon-invisible icon icon-sm d-none" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-invisible"></use></svg>
+  </button>
+  <p id="infoPassword" class="form-text pb-0">Inserisci almeno 8 caratteri.</p>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+{% comment %}Example name: Password con misuratore sicurezza{% endcomment %}
+{% capture example %}
+<div class="form-group">
+  <label for="exampleInputPassword2">Password con misuratore sicurezza</label>
+  <input type="password" data-bs-input class="form-control input-password" id="exampleInputPassword2" aria-describedby="strengthMeterInfo capsLockWarning infoPassword2">
+  <button type="button" class="password-icon btn" role="switch" aria-checked="false">
+    <span class="visually-hidden">Mostra/Nascondi Password</span>
+    <svg class="password-icon-visible icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-visible"></use></svg>
+    <svg class="password-icon-invisible icon icon-sm d-none" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-invisible"></use></svg>
+  </button>
+  <div class="password-strength-meter">
+    <p id="infoPassword2" class="form-text text-muted d-block small pb-0">Inserisci almeno 8 caratteri, combinando maiuscole, numeri e caratteri speciali.</p>
+        <p id="capsLockWarning" class="password-caps small form-text text-warning py-0" style="display: none;" aria-live="polite"></p>
+    <p id="strengthMeterInfo" class="strength-meter-info small form-text text-muted pt-0" aria-live="polite"
+      data-bs-short-pass="Password molto debole."
+      data-bs-bad-pas="Password debole."
+      data-bs-good-pass="Password abbastanza sicura."
+      data-bs-strong-pass="Password sicura."
+    ></p>      
+    <div class="password-meter progress rounded-0 position-absolute">
+      <div class="row position-absolute w-100 m-0">
+        <div class="col-3 border-start border-end border-white"></div>
+        <div class="col-3 border-start border-end border-white"></div>
+        <div class="col-3 border-start border-end border-white"></div>
+        <div class="col-3 border-start border-end border-white"></div>
       </div>
+      <div class="progress-bar bg-muted" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
     </div>
-    <button type="button" class="password-icon btn" role="switch" aria-checked="false">
-      <span class="password-sr-text visually-hidden">Mostra/Nascondi Password</span>
-      <svg class="password-icon-visible icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-visible"></use></svg>
-      <svg class="password-icon-invisible icon icon-sm d-none" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-invisible"></use></svg>
-    </button>
-    <small id="capsLockWarning" class="password-caps form-text text-warning position-absolute bg-white w-100" style="display: none;" aria-live="polite"></small>
-    <div id="strengthMeter" class="visually-hidden" aria-live="polite"></div>
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
