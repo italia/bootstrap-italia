@@ -3,7 +3,6 @@ import EventHandler from 'bootstrap/js/src/dom/event-handler'
 import SelectorEngine from 'bootstrap/js/src/dom/selector-engine'
 import Manipulator from 'bootstrap/js/src/dom/manipulator'
 
-//import Input from './input'
 import InputLabel from './input-label'
 
 const NAME = 'inputpassword'
@@ -12,13 +11,11 @@ const EVENT_KEY = `.${DATA_KEY}`
 const DATA_API_KEY = '.data-api'
 
 const Default = {
-  shortPass: 'Password molto debole. ',
-  badPass: 'Password debole. ',
-  goodPass: 'Password sicura. ',
-  strongPass: 'Password molto sicura. ',
-  enterPass: 'Inserisci almeno 8 caratteri, una lettera maiuscola e un carattere speciale. ',
-  alertCaps: 'Attenzione: CAPS LOCK inserito. ',
-  showText: true,
+  shortPass: 'Password molto debole.',
+  badPass: 'Password debole.',
+  goodPass: 'Password abbastanza sicura.',
+  strongPass: 'Password sicura.',
+  alertCaps: 'Attenzione: CAPS LOCK inserito.',
   minimumLength: 8,
 }
 
@@ -33,7 +30,6 @@ const EVENT_MOUSEDOWN_DATA_API = `mousedown${EVENT_KEY}${DATA_API_KEY}`
 const EVENT_KEYUP_DATA_API = `keyup${EVENT_KEY}${DATA_API_KEY}`
 
 const CLASS_NAME_PASSWORD = 'input-password'
-//const CLASS_NAME_METER = 'input-password-strength-meter'
 
 const SELECTOR_PASSWORD = 'input[data-bs-input][type="password"]'
 const SELECTOR_BTN_SHOW_PWD = '.password-icon'
@@ -41,7 +37,7 @@ const SELECTOR_METER = '.password-strength-meter'
 const SELECTOR_METER_GRAYBAR = '.password-meter'
 const SELECTOR_METER_COLBAR = '.progress-bar'
 const SELECTOR_CAPS = '.password-caps'
-const SELECTOR_TEXT = '.form-text'
+const SELECTOR_TEXT = '.strength-meter-info'
 
 class InputPassword extends BaseComponent {
   constructor(element, config) {
@@ -68,12 +64,9 @@ class InputPassword extends BaseComponent {
   }
 
   // Getters
-
   static get NAME() {
     return NAME
   }
-
-  // Public
 
   // Private
   _getConfig(config) {
@@ -90,16 +83,15 @@ class InputPassword extends BaseComponent {
       this._grayBarElement = this._meter.querySelector(SELECTOR_METER_GRAYBAR)
       this._colorBarElement = this._meter.querySelector(SELECTOR_METER_COLBAR)
       this._textElement = this._meter.querySelector(SELECTOR_TEXT)
-
       if (this._textElement) {
-        this._config = Object.assign({}, this._config, { ...Manipulator.getDataAttributes(this._textElement) }, { enterPass: this._textElement.innerText })
+        this._config = Object.assign({}, this._config, { ...Manipulator.getDataAttributes(this._textElement) })
       }
     }
+
     if (this._isCustom) {
       this._capsElement = this._element.parentNode.querySelector(SELECTOR_CAPS)
       if (this._capsElement) {
-        // Ensure the element is hidden and empty initially
-        this._capsElement.style.display = 'none'
+        // this._capsElement.style.display = 'none'
         this._capsElement.textContent = ''
       }
     }
@@ -112,6 +104,7 @@ class InputPassword extends BaseComponent {
 
     if (this._meter) {
       EventHandler.on(this._element, EVENT_KEYUP, () => this._checkPassword())
+      EventHandler.on(this._element, 'input', () => this._checkPassword())
     }
 
     if (this._isCustom) {
@@ -192,6 +185,7 @@ class InputPassword extends BaseComponent {
   _checkPassword() {
     const score = this._calculateScore(this._element.value)
     const perc = score < 0 ? 0 : score
+    const step = score < 25 ? 0 : score < 50 ? 25 : score < 75 ? 50 : score < 100 ? 75 : 100;
 
     this._colorBarElement.classList.forEach((className) => {
       if (className.match(/(^|\s)bg-\S+/g)) {
@@ -199,17 +193,13 @@ class InputPassword extends BaseComponent {
       }
     })
     this._colorBarElement.classList.add('bg-' + this._scoreColor(score))
-    this._colorBarElement.style.width = perc + '%'
+    this._colorBarElement.style.width = step + '%'
     this._colorBarElement.setAttribute('aria-valuenow', perc)
 
     EventHandler.trigger(this._element, EVENT_SCORE)
 
     if (this._textElement) {
       let text = this._scoreText(score)
-      if (this._element.value.length === 0 && score <= 0) {
-        text = this._config.enterPass
-      }
-
       if (this._textElement.innerHTML.search(text) === -1) {
         this._textElement.innerHTML = text
         this._textElement.classList.forEach((className) => {
@@ -222,43 +212,38 @@ class InputPassword extends BaseComponent {
       }
     }
 
-    const strengthMeter = this._element.parentNode.querySelector('#strengthMeter')
-    if (strengthMeter) {
-      const requirements = this._getCompletedRequirements(this._element.value)
-      const strengthText = this._scoreText(score)
-      let detailedMessage = `${strengthText} ${requirements.completed} su ${requirements.total} requisiti soddisfatti. `
-
-      if (requirements.completedDescriptions.length > 0) {
-        detailedMessage += `Soddisfatti: ${requirements.completedDescriptions.join(' ')} `
-      }
-
-      if (requirements.missingDescriptions.length > 0) {
-        detailedMessage += `Mancanti: ${requirements.missingDescriptions.join(' ')} `
-      }
-
-      strengthMeter.textContent = detailedMessage
-    }
+    // requirement descriptions testing 
+    // const strengthInfoDetails = this._element.parentNode.querySelector('#strengthInfoDetails')
+    // if (strengthInfoDetails) {
+    //   const requirements = this._getCompletedRequirements(this._element.value)
+    //   let detailedMessage = `${requirements.completed} su ${requirements.total} requisiti soddisfatti. `
+    //   if (requirements.missingDescriptions.length > 0) {
+    //     detailedMessage += `Mancanti: ${requirements.missingDescriptions.join('. ')} `
+    //   } 
+    //   strengthInfoDetails.textContent = detailedMessage
+    // }
   }
 
-  _getCompletedRequirements(password) {
-    const requirements = [
-      { test: password.length >= 8, description: 'Almeno 8 caratteri.' },
-      { test: /[A-Z]/.test(password), description: 'Almeno una lettera maiuscola.' },
-      { test: /[a-z]/.test(password), description: 'Almeno una lettera minuscola.' },
-      { test: /[0-9]/.test(password), description: 'Almeno un numero.' },
-      { test: /[^A-Z-a-z0-9]/.test(password), description: 'Almeno un carattere speciale.' },
-    ]
+  // _getCompletedRequirements(password) {
+  //   const requirements = [
+  //     // requirement descriptions testing 
+  //     { test: password.length >= 8, description: 'Almeno 8 caratteri' },
+  //     { test: /[A-Z]/.test(password), description: 'Almeno una lettera maiuscola' },
+  //     { test: /[a-z]/.test(password), description: 'Almeno una lettera minuscola' },
+  //     { test: /[0-9]/.test(password), description: 'Almeno un numero' },
+  //     { test: /[^A-Z-a-z0-9]/.test(password), description: 'Almeno un carattere speciale' },
+  //   ]
 
-    const completedRequirements = requirements.filter((req) => req.test)
-    const missingRequirements = requirements.filter((req) => !req.test)
+  //   const completedRequirements = requirements.filter((req) => req.test)
+  //   const missingRequirements = requirements.filter((req) => !req.test)
 
-    return {
-      completed: completedRequirements.length,
-      total: requirements.length,
-      completedDescriptions: completedRequirements.map((req) => req.description),
-      missingDescriptions: missingRequirements.map((req) => req.description),
-    }
-  }
+  //   return {
+  //     completed: completedRequirements.length,
+  //     total: requirements.length,
+  //     completedDescriptions: completedRequirements.map((req) => req.description),
+  //     missingDescriptions: missingRequirements.map((req) => req.description),
+  //   }
+  // }
 
   /**
    * Returns strings based on the score given.
