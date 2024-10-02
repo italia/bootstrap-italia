@@ -83,14 +83,24 @@ Sono disponibili le classi `icon-*`, dove `*` può essere `xs`, `sm`, `lg`, `xl`
 
 ### Lista delle icone disponibili
 
-{% comment %}Example name: Icone disponibili{% endcomment %}
-{% capture example %}
-<div class="form-group">
+Di seguito sono visualizzate tutte le icone disponibili in Bootstrap Italia.
+Tramite la search box è possibile filtrare le icone per nome (in inglese). 
+Per copiare il nome di un'icona rapidamente, fare click su di essa.
+
+<hr/>
+
+<div class="mb-4">
   <label for="searchIcon">Filtra le icone</label>
   <input type="text" class="form-control" id="searchIcon">
   <small class="form-text">Esempio: per cercare le icone it-arrow-* occorre digitare "arrow"
 </small>
 </div>
+<div class="notification with-icon success" role="alert" aria-labelledby="copiednot-title" id="copiednot">
+  <h2 id="copiednot-title" class="h5 "><svg class="icon"><use href="/dist/svg/sprites.svg#it-check-circle"></use></svg>Nome dell'icona copiato negli appunti</h2>
+</div>
+
+{% comment %}Example name: Icone disponibili{% endcomment %}
+{% capture example %}
 <div class="row">
   {% for icona in site.data.icons.regular %}
   <div class="container-icon col-12 col-md-6 col-lg-4" id="container-{{icona}}">
@@ -118,9 +128,7 @@ Sono disponibili le classi `icon-*`, dove `*` può essere `xs`, `sm`, `lg`, `xl`
     <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#{{icona}}"></use></svg> <span>{{icona}}</span>
   </div>{% endfor %}
 </div>
-<div class="notification with-icon success" role="alert" aria-labelledby="copiednot-title" id="copiednot">
-  <h2 id="copiednot-title" class="h5 "><svg class="icon"><use href="/dist/svg/sprites.svg#it-check-circle"></use></svg>Nome dell'icona copiato negli appunti</h2>
-</div>
+{% endcapture %}{% include example.html content=example %}
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const searchInput = document.querySelector('#searchIcon');
@@ -148,4 +156,3 @@ document.addEventListener('DOMContentLoaded', function() {
   })
 })
 </script>
-{% endcapture %}{% include example.html content=example %}
