@@ -180,6 +180,7 @@ Se per qualche motivo vuoi avere gli elementi `<input readonly>` nella forma sti
 
 Per rendere più semplice l'inserimento della password, l'elemento è dotato di un pulsante che permette di mostrare i caratteri inseriti. 
 
+{% comment %}Example name: Password base{% endcomment %}
 {% capture example %}
 
 <p class="mt-4 pb-3">Base</p>
@@ -262,7 +263,7 @@ Inoltre, nel caso di un campo Input password utilizzato per la scelta di una pas
   </tbody>
 </table>
 
-{% comment %}Example name: Password con misuratore sicurezza{% endcomment %}
+{% comment %}Example name: Password con misuratore sicurezza e suggerimenti{% endcomment %}
 {% capture example %}
 
 <p class="mt-4 pb-3">Con descrizione e misuratore sicurezza</p>
