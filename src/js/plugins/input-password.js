@@ -11,13 +11,13 @@ const EVENT_KEY = `.${DATA_KEY}`
 const DATA_API_KEY = '.data-api'
 
 const Default = {
-  shortPass: 'Password molto debole.',
+  shortPass: 'Password troppo breve',
   badPass: 'Password debole.',
   goodPass: 'Password abbastanza sicura.',
   strongPass: 'Password sicura.',
   alertCaps: 'Attenzione: CAPS LOCK inserito.',
   minimumLength: 8,
-  requirementsLabel: 'Suggerimenti e requisiti della password:',
+  requirementsLabel: 'Suggerimenti per una buona password:',
   requirements: [
     {
       key: 'length',
@@ -26,22 +26,22 @@ const Default = {
     },
     {
       key: 'uppercase',
-      text: 'Una maiuscola.',
+      text: 'Una o più maiuscole.',
       test: (password) => /[A-Z]/.test(password),
     },
     {
       key: 'lowercase',
-      text: 'Una minuscola.',
+      text: 'Una o più maiuscole.',
       test: (password) => /[a-z]/.test(password),
     },
     {
       key: 'number',
-      text: 'Un numero.',
+      text: 'Uno o più numeri.',
       test: (password) => /[0-9]/.test(password),
     },
     {
       key: 'special',
-      text: 'Un carattere speciale.',
+      text: 'Uno o più caratteri speciali.',
       test: (password) => /[^A-Za-z0-9]/.test(password),
     },
   ],
@@ -50,6 +50,7 @@ const Default = {
 const EVENT_CLICK = `click${EVENT_KEY}`
 const EVENT_KEYUP = `keyup${EVENT_KEY}`
 const EVENT_KEYDOWN = `keydown${EVENT_KEY}`
+const EVENT_KEYPRESS = `keypress${EVENT_KEY}`
 const EVENT_SCORE = `score${EVENT_KEY}`
 const EVENT_TEXT = `text${EVENT_KEY}`
 const EVENT_REQS = `reqs${EVENT_KEY}`
@@ -120,25 +121,24 @@ class InputPassword extends BaseComponent {
       }
     }
 
-    if (this._reqsElement) {
-      this._createRequirementsList()
-    }
-
     if (this._isCustom) {
       this._capsElement = this._element.parentNode.querySelector(SELECTOR_CAPS)
       if (this._capsElement) {
-        // this._capsElement.style.display = 'none'
         this._capsElement.textContent = ''
       }
     }
 
     this._showPwdElement = SelectorEngine.findOne(SELECTOR_BTN_SHOW_PWD, this._element.parentNode)
 
+    if (this._reqsElement) {
+      this._createRequirementsList()
+    }
+
     this._checkPassword()
   }
 
   _bindEvents() {
-    EventHandler.on(this._element, 'keypress', (evt) => this._preventSpace(evt))
+    EventHandler.on(this._element, EVENT_KEYPRESS, (evt) => this._preventSpace(evt))
 
     if (this._meter) {
       EventHandler.on(this._element, EVENT_KEYUP, () => this._checkPassword())
@@ -197,11 +197,11 @@ class InputPassword extends BaseComponent {
 
   _toggleCapsLockWarning(show) {
     if (this._capsElement) {
+      this._capsElement.classList.toggle('d-block')
+      this._capsElement.classList.toggle('d-none')
       if (show) {
         this._capsElement.textContent = this._config.alertCaps || Default.alertCaps
-        this._capsElement.style.display = 'block'
       } else {
-        this._capsElement.style.display = 'none'
         setTimeout(() => {
           if (this._capsElement.style.display === 'none') {
             this._capsElement.textContent = ''
@@ -248,7 +248,7 @@ class InputPassword extends BaseComponent {
         this._config.requirements.forEach((req) => {
           if (req.test(password)) completedCount++
         })
-        text += ` ${completedCount} su ${totalCount} requisiti soddisfatti.`
+        text += ` ${completedCount} su ${totalCount} suggerimenti seguiti.`
       }
 
       if (this._textElement.innerHTML !== text) {
@@ -344,6 +344,10 @@ class InputPassword extends BaseComponent {
       return this._config.shortPass
     }
 
+    if (score === -2) {
+      return ''
+    }
+
     score = score < 0 ? 0 : score
 
     if (score < 26) {
@@ -404,8 +408,8 @@ class InputPassword extends BaseComponent {
       score += 5
     }
 
-    // password has at least 2 sybols
-    var symbols = '.*[!,@,#,$,%,^,&,*,?,_,~]'
+    // password has at least 2 symbols
+    var symbols = '.*[!,@,#,$,%,^,&,*,?,_,~]' // xxx solo questi?
     symbols = new RegExp('(' + symbols + symbols + ')')
     if (password.match(symbols)) {
       score += 5
