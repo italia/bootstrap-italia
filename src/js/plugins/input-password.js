@@ -17,6 +17,35 @@ const Default = {
   strongPass: 'Password sicura.',
   alertCaps: 'Attenzione: CAPS LOCK inserito.',
   minimumLength: 8,
+  reqPass: 'Soddisfatto: ',
+  reqBadPass: 'Non soddisfatto: ',
+  requirements: [
+    {
+      key: 'length',
+      text: 'Almeno 8 caratteri.',
+      test: (password) => password.length >= 8, // XXX < dato già sopra minimuLength
+    },
+    {
+      key: 'uppercase',
+      text: 'Una maiuscola.',
+      test: (password) => /[A-Z]/.test(password),
+    },
+    {
+      key: 'lowercase',
+      text: 'Una minuscola.',
+      test: (password) => /[a-z]/.test(password),
+    },
+    {
+      key: 'number',
+      text: 'Un numero.',
+      test: (password) => /[0-9]/.test(password),
+    },
+    {
+      key: 'special',
+      text: 'Un carattere speciale.',
+      test: (password) => /[^A-Za-z0-9]/.test(password),
+    },
+  ],
 }
 
 const EVENT_CLICK = `click${EVENT_KEY}`
@@ -90,6 +119,10 @@ class InputPassword extends BaseComponent {
       if (this._textElement) {
         this._config = Object.assign({}, this._config, { ...Manipulator.getDataAttributes(this._textElement) })
       }
+    }
+
+    if (this._reqsElement) {
+      this._createRequirementsList()
     }
 
     if (this._isCustom) {
@@ -187,7 +220,8 @@ class InputPassword extends BaseComponent {
   }
 
   _checkPassword() {
-    const score = this._calculateScore(this._element.value)
+    const password = this._element.value
+    const score = this._calculateScore(password)
     const perc = score < 0 ? 0 : score
     const step = score < 25 ? 0 : score < 50 ? 25 : score < 75 ? 50 : score < 100 ? 75 : 100
 
@@ -204,7 +238,7 @@ class InputPassword extends BaseComponent {
 
     if (this._textElement) {
       let text = this._scoreText(score)
-      if (this._textElement.innerHTML.search(text) === -1) {
+      if (this._textElement.innerHTML !== text) {
         this._textElement.innerHTML = text
         this._textElement.classList.forEach((className) => {
           if (className.match(/(^|\s)text-\S+/g)) {
@@ -217,38 +251,88 @@ class InputPassword extends BaseComponent {
     }
 
     if (this._reqsElement) {
-      const requirements = this._getCompletedRequirements(this._element.value)
-      let detailedMessage = `<p class="small mb-0">${requirements.completed} su ${requirements.total} requisiti soddisfatti:</p>`
-      detailedMessage += `\n<ul class="small">`
-      if (requirements.missingDescriptions.length > 0) {
-        detailedMessage += `\n<li>Non soddisfatti: ${requirements.missingDescriptions.join('. ')}</li>`
-      }
-      if (requirements.completedDescriptions.length > 0) {
-        detailedMessage += `\n<li>Soddisfatti: ${requirements.completedDescriptions.join('. ')}</li>`
-      }
-      detailedMessage += `\n</ul>`
-      this._reqsElement.innerHTML = detailedMessage
+      this._updateRequirementsList(password)
       EventHandler.trigger(this._element, EVENT_REQS)
     }
   }
 
-  _getCompletedRequirements(password) {
-    const requirements = [
-      { test: password.length >= 8, description: '8 caratteri' },
-      { test: /[A-Z]/.test(password), description: 'Una lettera maiuscola' },
-      { test: /[a-z]/.test(password), description: 'Una lettera minuscola' },
-      { test: /[0-9]/.test(password), description: 'Un numero' },
-      { test: /[^A-Z-a-z0-9]/.test(password), description: 'Un carattere speciale' },
-    ]
+  _createRequirementsList() {
+    const countContainer = document.createElement('div')
+    countContainer.className = 'password-requirements-count visually-hidden'
 
-    const completedRequirements = requirements.filter((req) => req.test)
-    const missingRequirements = requirements.filter((req) => !req.test)
+    const reqContainer = document.createElement('div')
+    reqContainer.className = 'password-requirements d-flex flex-wrap gap-2 mb-3'
 
-    return {
-      completed: completedRequirements.length,
-      total: requirements.length,
-      completedDescriptions: completedRequirements.map((req) => req.description),
-      missingDescriptions: missingRequirements.map((req) => req.description),
+    this._config.requirements.forEach((req) => {
+      const reqElement = document.createElement('div')
+      reqElement.className = 'requirement d-inline-flex align-items-center px-2 small'
+      reqElement.dataset.requirement = req.key
+
+      const checkIcon = this._createIcon('it-check', 'icon-success')
+      checkIcon.classList.add('me-1', 'd-none')
+
+      const visuallyHiddenSpan = document.createElement('span')
+      visuallyHiddenSpan.className = 'visually-hidden'
+      visuallyHiddenSpan.textContent = Default.reqBadPass
+
+      const textSpan = document.createElement('span')
+      textSpan.textContent = req.text
+
+      reqElement.appendChild(checkIcon)
+      reqElement.appendChild(visuallyHiddenSpan)
+      reqElement.appendChild(textSpan)
+
+      reqContainer.appendChild(reqElement)
+    })
+
+    this._reqsElement.appendChild(countContainer)
+    this._reqsElement.appendChild(reqContainer)
+  }
+
+  _createIcon(iconName, className) {
+    // XXX spostare nel markup?
+    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
+    svg.setAttribute('class', `icon icon-sm ${className}`)
+    svg.setAttribute('aria-hidden', 'true')
+    svg.style.width = '1em'
+    svg.style.height = '1em'
+
+    const use = document.createElementNS('http://www.w3.org/2000/svg', 'use')
+    use.setAttributeNS('http://www.w3.org/1999/xlink', 'href', `/dist/svg/sprites.svg#${iconName}`)
+
+    svg.appendChild(use)
+    return svg
+  }
+
+  _updateRequirementsList(password) {
+    if (!this._reqsElement) return
+
+    let completedCount = 0
+    const totalCount = this._config.requirements.length
+
+    this._config.requirements.forEach((req) => {
+      const isMet = req.test(password)
+      const reqElement = this._reqsElement.querySelector(`[data-requirement="${req.key}"]`)
+      if (reqElement) {
+        const checkIcon = reqElement.querySelector('.icon-success')
+        const visuallyHiddenSpan = reqElement.querySelector('.visually-hidden')
+
+        if (checkIcon) {
+          checkIcon.classList.toggle('d-none', !isMet)
+        }
+
+        if (visuallyHiddenSpan) {
+          visuallyHiddenSpan.textContent = isMet ? Default.reqPass : Default.reqBadPass
+        }
+
+        reqElement.classList.toggle('text-success', isMet)
+      }
+      if (isMet) completedCount++
+    })
+
+    const countContainer = this._reqsElement.querySelector('.password-requirements-count')
+    if (countContainer) {
+      countContainer.textContent = `${completedCount} su ${totalCount} requisiti soddisfatti.`
     }
   }
 
