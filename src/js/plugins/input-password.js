@@ -31,7 +31,7 @@ const Default = {
     },
     {
       key: 'lowercase',
-      text: 'Una o più maiuscole.',
+      text: 'Una o più minuscole.',
       test: (password) => /[a-z]/.test(password),
     },
     {
