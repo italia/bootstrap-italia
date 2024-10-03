@@ -386,7 +386,7 @@ class InputPassword extends BaseComponent {
   _calculateScore(password) {
     var score = 0
 
-    // xxx siamo sicuri dei calcoli di questo calcolatore che è stato "incorporato"? Ce ne sono altri oggi standard? 
+    // xxx siamo sicuri dei calcoli di questo calcolatore che è stato "incorporato"? Ce ne sono altri oggi standard?
     // xxx i suggerimenti sopra andrebbero tarati su questo? Ne mancano alcuni? Da verificare.
 
     // empty password
