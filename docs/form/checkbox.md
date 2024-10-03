@@ -66,7 +66,7 @@ Per poter raggruppare gli elementi `checkbox` occorrerà aggiungere al `.form-ch
 <div>
   <div class="row">
     <fieldset class="col-5">
-      <legend>Grouppo di checkbox</legend>
+      <legend>Gruppo di checkbox</legend>
       <div class="form-check form-check-group">
         <input id="checkbox6" type="checkbox" checked="checked">
         <label for="checkbox6">Checkbox selezionato</label>
@@ -84,17 +84,17 @@ Per poter raggruppare gli elementi `checkbox` occorrerà aggiungere al `.form-ch
     <fieldset class="col-5">
       <legend>Gruppo di checkbox</legend>
       <div class="form-check form-check-group">
-        <input id="checkbox9" type="checkbox" aria-labelledby="checkbox9-help" checked="checked">
+        <input id="checkbox9" type="checkbox" aria-describedby="checkbox9-help" checked="checked">
         <label for="checkbox9">Checkbox selezionato</label>
         <small id="checkbox9-help" class="form-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie libero</small>
       </div>
       <div class="form-check form-check-group">
-        <input id="checkbox10" type="checkbox" aria-labelledby="checkbox10-help">
+        <input id="checkbox10" type="checkbox" aria-describedby="checkbox10-help">
         <label for="checkbox10">Checkbox non selezionato</label>
         <small id="checkbox10-help" class="form-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie libero</small>
       </div>
       <div class="form-check form-check-group">
-        <input id="checkbox11" type="checkbox" aria-labelledby="checkbox11-help" disabled="disabled">
+        <input id="checkbox11" type="checkbox" aria-describedby="checkbox11-help" disabled="disabled">
         <label for="checkbox11" class="disabled">Checkbox disabilitato non selezionato</label>
         <small id="checkbox11-help" class="form-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie libero</small>
       </div>

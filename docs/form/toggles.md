@@ -22,15 +22,6 @@ Per ottenere un interruttore con levetta basterà usare la seguente sintassi HTM
         </label>
       </div>
     </div>
-    <div class="form-check col-6">
-      <div class="toggles">
-        <label for="toggleEsempio1b">
-          Label dell'interruttore 2
-          <input type="checkbox" id="toggleEsempio1b">
-          <span class="lever leverRight"></span>
-        </label>
-      </div>
-    </div>
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -52,15 +43,6 @@ Affinché l'interruttore risulti disabilitato occorrerà aggiungere l'attributo 
         </label>
       </div>
     </div>
-    <div class="form-check col-6">
-      <div class="toggles">
-        <label for="toggleEsempio2b">
-          Label dell'interruttore 2
-          <input disabled type="checkbox" id="toggleEsempio2b" checked>
-          <span class="lever leverRight"></span>
-        </label>
-      </div>
-    </div>
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -74,7 +56,7 @@ Per poter raggruppare gli elementi **toggle** occorrerà aggiungere al `.form-ch
 <div>
   <div class="row">
     <fieldset class="col-5">
-      <label>Gruppo di toggle</label>
+      <legend>Gruppo di toggle</legend>
       <div class="form-check form-check-group">
         <div class="toggles">
           <label for="toggleEsempio3a">
@@ -105,12 +87,12 @@ Per poter raggruppare gli elementi **toggle** occorrerà aggiungere al `.form-ch
     </fieldset>
     <div class="col-2"></div>
     <fieldset class="col-5">
-      <label>Gruppo di toggle</label>
+      <legend>Gruppo di toggle</legend>
       <div class="form-check form-check-group">
         <div class="toggles">
           <label for="toggleEsempio3d">
             Toggle acceso
-            <input type="checkbox" id="toggleEsempio3d" aria-labelledby="toggle3d-help" checked>
+            <input type="checkbox" id="toggleEsempio3d" aria-describedby="toggle3d-help" checked>
             <span class="lever"></span>
           </label>
         </div>
@@ -120,7 +102,7 @@ Per poter raggruppare gli elementi **toggle** occorrerà aggiungere al `.form-ch
         <div class="toggles">
           <label for="toggleEsempio3e">
             Toggle spento
-            <input type="checkbox" id="toggleEsempio3e" aria-labelledby="toggle3e-help">
+            <input type="checkbox" id="toggleEsempio3e" aria-describedby="toggle3e-help">
             <span class="lever"></span>
           </label>
         </div>
@@ -130,7 +112,7 @@ Per poter raggruppare gli elementi **toggle** occorrerà aggiungere al `.form-ch
         <div class="toggles">
           <label for="toggleEsempio3f">
             Toggle disabilitato
-            <input type="checkbox" id="toggleEsempio3f" aria-labelledby="toggle3f-help" disabled>
+            <input type="checkbox" id="toggleEsempio3f" aria-describedby="toggle3f-help" disabled>
             <span class="lever"></span>
           </label>
         </div>
