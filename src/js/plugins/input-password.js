@@ -17,8 +17,7 @@ const Default = {
   strongPass: 'Password sicura.',
   alertCaps: 'Attenzione: CAPS LOCK inserito.',
   minimumLength: 8,
-  reqPass: 'Soddisfatto: ',
-  reqBadPass: 'Non soddisfatto: ',
+  requirementsLabel: 'Suggerimenti e requisiti della password:',
   requirements: [
     {
       key: 'length',
@@ -134,6 +133,8 @@ class InputPassword extends BaseComponent {
     }
 
     this._showPwdElement = SelectorEngine.findOne(SELECTOR_BTN_SHOW_PWD, this._element.parentNode)
+
+    this._checkPassword()
   }
 
   _bindEvents() {
@@ -225,19 +226,31 @@ class InputPassword extends BaseComponent {
     const perc = score < 0 ? 0 : score
     const step = score < 25 ? 0 : score < 50 ? 25 : score < 75 ? 50 : score < 100 ? 75 : 100
 
-    this._colorBarElement.classList.forEach((className) => {
-      if (className.match(/(^|\s)bg-\S+/g)) {
-        this._colorBarElement.classList.remove(className)
-      }
-    })
-    this._colorBarElement.classList.add('bg-' + this._scoreColor(score))
-    this._colorBarElement.style.width = step + '%'
-    this._colorBarElement.setAttribute('aria-valuenow', perc)
+    if (this._colorBarElement) {
+      this._colorBarElement.classList.forEach((className) => {
+        if (className.match(/(^|\s)bg-\S+/g)) {
+          this._colorBarElement.classList.remove(className)
+        }
+      })
+      this._colorBarElement.classList.add('bg-' + this._scoreColor(score))
+      this._colorBarElement.style.width = step + '%'
+      this._colorBarElement.setAttribute('aria-valuenow', perc)
+    }
 
     EventHandler.trigger(this._element, EVENT_SCORE)
 
     if (this._textElement) {
       let text = this._scoreText(score)
+
+      if (this._reqsElement) {
+        let completedCount = 0
+        const totalCount = this._config.requirements.length
+        this._config.requirements.forEach((req) => {
+          if (req.test(password)) completedCount++
+        })
+        text += ` ${completedCount} su ${totalCount} requisiti soddisfatti.`
+      }
+
       if (this._textElement.innerHTML !== text) {
         this._textElement.innerHTML = text
         this._textElement.classList.forEach((className) => {
@@ -257,43 +270,44 @@ class InputPassword extends BaseComponent {
   }
 
   _createRequirementsList() {
-    const countContainer = document.createElement('div')
-    countContainer.className = 'password-requirements-count visually-hidden'
+    if (this._reqsElement.querySelector('.password-requirements')) {
+      return
+    }
+
+    const reqLabel = document.createElement('label')
+    reqLabel.className = 'visually-hidden'
+    reqLabel.htmlFor = 'Requirements'
+    reqLabel.textContent = Default.requirementsLabel
 
     const reqContainer = document.createElement('div')
-    reqContainer.className = 'password-requirements d-flex flex-wrap gap-2 mb-3'
+    reqContainer.id = 'Requirements'
+    reqContainer.className = 'password-requirements'
 
     this._config.requirements.forEach((req) => {
       const reqElement = document.createElement('div')
-      reqElement.className = 'requirement d-inline-flex align-items-center px-2 small'
+      reqElement.className = 'requirement'
       reqElement.dataset.requirement = req.key
 
-      const checkIcon = this._createIcon('it-check', 'icon-success')
+      const checkIcon = this._createIcon('it-check')
       checkIcon.classList.add('me-1', 'd-none')
-
-      const visuallyHiddenSpan = document.createElement('span')
-      visuallyHiddenSpan.className = 'visually-hidden'
-      visuallyHiddenSpan.textContent = Default.reqBadPass
 
       const textSpan = document.createElement('span')
       textSpan.textContent = req.text
 
       reqElement.appendChild(checkIcon)
-      reqElement.appendChild(visuallyHiddenSpan)
       reqElement.appendChild(textSpan)
 
       reqContainer.appendChild(reqElement)
     })
 
-    this._reqsElement.appendChild(countContainer)
+    this._reqsElement.appendChild(reqLabel)
     this._reqsElement.appendChild(reqContainer)
   }
 
-  _createIcon(iconName, className) {
-    // XXX spostare nel markup?
+  _createIcon(iconName) {
     const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
-    svg.setAttribute('class', `icon icon-sm ${className}`)
-    svg.setAttribute('aria-hidden', 'true')
+    svg.setAttribute('class', `icon icon-sm`)
+    svg.setAttribute('aria-label', 'Soddisfatto: ')
     svg.style.width = '1em'
     svg.style.height = '1em'
 
@@ -307,33 +321,16 @@ class InputPassword extends BaseComponent {
   _updateRequirementsList(password) {
     if (!this._reqsElement) return
 
-    let completedCount = 0
-    const totalCount = this._config.requirements.length
-
     this._config.requirements.forEach((req) => {
-      const isMet = req.test(password)
       const reqElement = this._reqsElement.querySelector(`[data-requirement="${req.key}"]`)
       if (reqElement) {
-        const checkIcon = reqElement.querySelector('.icon-success')
-        const visuallyHiddenSpan = reqElement.querySelector('.visually-hidden')
-
+        const isMet = req.test(password)
+        const checkIcon = reqElement.querySelector('.icon')
         if (checkIcon) {
           checkIcon.classList.toggle('d-none', !isMet)
         }
-
-        if (visuallyHiddenSpan) {
-          visuallyHiddenSpan.textContent = isMet ? Default.reqPass : Default.reqBadPass
-        }
-
-        reqElement.classList.toggle('text-success', isMet)
       }
-      if (isMet) completedCount++
     })
-
-    const countContainer = this._reqsElement.querySelector('.password-requirements-count')
-    if (countContainer) {
-      countContainer.textContent = `${completedCount} su ${totalCount} requisiti soddisfatti.`
-    }
   }
 
   /**
@@ -363,16 +360,7 @@ class InputPassword extends BaseComponent {
   }
 
   _scoreColor(score) {
-    if (score === -1) {
-      return 'danger'
-    }
-    if (score === -2) {
-      return 'muted'
-    }
-
-    score = score < 0 ? 0 : score
-
-    if (score < 26) {
+    if (score === -1 || score === -2 || score < 26) {
       return 'danger'
     }
     if (score < 51) {
@@ -381,7 +369,6 @@ class InputPassword extends BaseComponent {
     if (score < 76) {
       return 'success'
     }
-
     return 'success'
   }
 
