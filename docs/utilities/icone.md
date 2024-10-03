@@ -83,33 +83,76 @@ Sono disponibili le classi `icon-*`, dove `*` può essere `xs`, `sm`, `lg`, `xl`
 
 ### Lista delle icone disponibili
 
+Di seguito sono visualizzate tutte le icone disponibili in Bootstrap Italia.
+Tramite la search box è possibile filtrare le icone per nome (in inglese). 
+Per copiare il nome di un'icona rapidamente, fare click su di essa.
+
+<hr/>
+
+<div class="mb-4">
+  <label for="searchIcon">Filtra le icone</label>
+  <input type="text" class="form-control" id="searchIcon">
+  <small class="form-text">Esempio: per cercare le icone it-arrow-* occorre digitare "arrow"
+</small>
+</div>
+<div class="notification with-icon success" role="alert" aria-labelledby="copiednot-title" id="copiednot">
+  <h2 id="copiednot-title" class="h5 "><svg class="icon"><use href="/dist/svg/sprites.svg#it-check-circle"></use></svg>Nome dell'icona copiato negli appunti</h2>
+</div>
+
 {% comment %}Example name: Icone disponibili{% endcomment %}
 {% capture example %}
 <div class="row">
   {% for icona in site.data.icons.regular %}
-  <div class="col-12 col-md-6 col-lg-4">
-    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#{{icona}}"></use></svg> {{icona}}
+  <div class="container-icon col-12 col-md-6 col-lg-4" id="container-{{icona}}">
+    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#{{icona}}"></use></svg> <span>{{icona}}</span>
   </div>{% endfor %}
 </div>
-<h4 class="mt-4">File</h4>
+<h4 class="icon-divider mt-4">File</h4>
 <div class="row">
   {% for icona in site.data.icons.files %}
-  <div class="col-12 col-md-6 col-lg-4">
-    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#{{icona}}"></use></svg> {{icona}}
+  <div class="container-icon col-12 col-md-6 col-lg-4" id="container-{{icona}}">
+    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#{{icona}}"></use></svg> <span>{{icona}}</span>
   </div>{% endfor %}
 </div>
-<h4 class="mt-4">Piattaforme</h4>
+<h4 class="icon-divider mt-4">Piattaforme</h4>
 <div class="row">
   {% for icona in site.data.icons.platforms %}
-  <div class="col-12 col-md-6 col-lg-4">
-    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#{{icona}}"></use></svg> {{icona}}
+  <div class="container-icon col-12 col-md-6 col-lg-4" id="container-{{icona}}">
+    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#{{icona}}"></use></svg> <span>{{icona}}</span>
   </div>{% endfor %}
 </div>
-<h4 class="mt-4">Extra</h4>
+<h4 class="icon-divider mt-4">Extra</h4>
 <div class="row">
   {% for icona in site.data.icons.extra %}
-  <div class="col-12 col-md-6 col-lg-4">
-    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#{{icona}}"></use></svg> {{icona}}
+  <div class="container-icon col-12 col-md-6 col-lg-4" id="container-{{icona}}">
+    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#{{icona}}"></use></svg> <span>{{icona}}</span>
   </div>{% endfor %}
 </div>
 {% endcapture %}{% include example.html content=example %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const searchInput = document.querySelector('#searchIcon');
+  const iconContainers = document.querySelectorAll('.container-icon')
+  iconContainers.forEach((element) => {
+    element.style.cursor = 'pointer';
+    element.onclick = () => {
+      navigator.clipboard.writeText(element.id.replace('container-', '')).then(() => {
+        const copiedNotification = new bootstrap.Notification(
+          document.getElementById('copiednot'), {timeout: 2000,}
+        )
+        copiedNotification.show();
+      });
+    };
+  })
+  searchInput.addEventListener('input', function() {
+    const query = searchInput.value.toLowerCase();
+    iconContainers.forEach((element) => { 
+      if(!element.id.replace('container-it-', '').includes(query)) {
+        element.style.display = 'none';
+      } else {
+        element.style.display = 'block';
+      }
+    });
+  })
+})
+</script>
