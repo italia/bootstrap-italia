@@ -73,7 +73,8 @@ Per poter raggruppare gli elementi **toggle** occorrerà aggiungere al `.form-ch
 {% capture example %}
 <div>
   <div class="row">
-    <div class="col-5">
+    <fieldset class="col-5">
+      <label>Gruppo di toggle</label>
       <div class="form-check form-check-group">
         <div class="toggles">
           <label for="toggleEsempio3a">
@@ -101,9 +102,10 @@ Per poter raggruppare gli elementi **toggle** occorrerà aggiungere al `.form-ch
           </label>
         </div>
       </div>
-    </div>
+    </fieldset>
     <div class="col-2"></div>
-    <div class="col-5">
+    <fieldset class="col-5">
+      <label>Gruppo di toggle</label>
       <div class="form-check form-check-group">
         <div class="toggles">
           <label for="toggleEsempio3d">
@@ -134,7 +136,7 @@ Per poter raggruppare gli elementi **toggle** occorrerà aggiungere al `.form-ch
         </div>
         <small id="toggle3f-help" class="form-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie libero</small>
       </div>
-    </div>
+    </fieldset>
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}

@@ -67,7 +67,8 @@ Per poter raggruppare gli elementi `checkbox` e `radio` occorrerà aggiungere al
 {% capture example %}
 <div>
   <div class="row">
-    <div class="col-5">
+    <fieldset class="col-5">
+      <legend>Gruppo di radio</legend>
       <div class="form-check form-check-group">
         <input name="gruppo4" type="radio" id="radio10" checked>
         <label for="radio10">Opzione 1</label>
@@ -80,9 +81,10 @@ Per poter raggruppare gli elementi `checkbox` e `radio` occorrerà aggiungere al
         <input name="gruppo4" type="radio" id="radio12" disabled>
         <label for="radio12" class="disabled">Opzione 3</label>
       </div>
-    </div>
+    </fieldset>
     <div class="col-2"></div>
-    <div class="col-5">
+    <fieldset class="col-5">
+      <legend>Gruppo di radio</legend>
       <div class="form-check form-check-group">
         <input checked name="gruppo5" type="radio" id="radio13" aria-labelledby="radio13-help">
         <label for="radio13">Opzione 1</label>
@@ -98,7 +100,7 @@ Per poter raggruppare gli elementi `checkbox` e `radio` occorrerà aggiungere al
         <label for="radio15" class="disabled">Opzione 3</label>
         <small id="radio15-help" class="form-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie libero</small>
       </div>
-    </div>
+    </fieldset>
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
