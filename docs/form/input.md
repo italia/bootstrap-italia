@@ -290,16 +290,17 @@ Inoltre, nel caso di un campo Input password utilizzato per la scelta di una pas
 </div>
 
 <div class="form-group">
-  <label for="exampleInputPassword4">Password con suggerimenti requisiti</label>
-  <input type="password" data-bs-input class="form-control input-password" id="exampleInputPassword4" aria-describedby="strengthRequirements4 strengthMeterInfo4 capsLockWarning4">
+  <label for="exampleInputPassword4">Password con misuratore sicurezza e dettaglio requisiti</label>
+  <input type="password" data-bs-input class="form-control input-password" id="exampleInputPassword4" aria-describedby="strengthRequirements4 strengthMeterInfo4 capsLockWarning4 infoPassword4">
   <button type="button" class="password-icon btn" role="switch" aria-checked="false">
     <span class="visually-hidden">Mostra/Nascondi Password</span>
     <svg class="password-icon-visible icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-visible"></use></svg>
     <svg class="password-icon-invisible icon icon-sm d-none" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-invisible"></use></svg>
   </button>
+    <p id="infoPassword4" class="form-text text-muted d-block small pb-0"></p>
   <p id="capsLockWarning4" class="password-caps small form-text text-warning py-0" style="display: none;" aria-live="polite"></p>
   <div class="password-strength-meter">
-    <div id="strengthRequirements4" class="strenght-meter-reqs small form-text text-muted" aria-live="polite" aria-atomic="true"></div>
+    <div id="strengthRequirements4" class="strenght-meter-reqs small form-text text-muted"></div>
     <p id="strengthMeterInfo4" class="strength-meter-info small form-text text-muted pt-0" aria-live="polite"
       data-bs-short-pass="Password molto debole."
       data-bs-bad-pas="Password debole."
