@@ -224,7 +224,7 @@ class InputPassword extends BaseComponent {
     const password = this._element.value
     const score = this._calculateScore(password)
     const perc = score < 0 ? 0 : score
-    const step = score < 25 ? 0 : score < 50 ? 25 : score < 75 ? 50 : score < 100 ? 75 : 100
+    // const step = score < 25 ? 0 : score < 50 ? 25 : score < 75 ? 50 : score < 100 ? 75 : 100 // xxx better perc... meno possibilità di fraintendere
 
     if (this._colorBarElement) {
       this._colorBarElement.classList.forEach((className) => {
@@ -233,7 +233,7 @@ class InputPassword extends BaseComponent {
         }
       })
       this._colorBarElement.classList.add('bg-' + this._scoreColor(score))
-      this._colorBarElement.style.width = step + '%'
+      this._colorBarElement.style.width = perc + '%'
       this._colorBarElement.setAttribute('aria-valuenow', perc)
     }
 
@@ -351,7 +351,7 @@ class InputPassword extends BaseComponent {
     score = score < 0 ? 0 : score
 
     if (score < 26) {
-      return this._config.shortPass
+      return this._config.badPass
     }
     if (score < 51) {
       return this._config.badPass
@@ -385,6 +385,9 @@ class InputPassword extends BaseComponent {
    */
   _calculateScore(password) {
     var score = 0
+
+    // xxx siamo sicuri dei calcoli di questo calcolatore che è stato "incorporato"? Ce ne sono altri oggi standard? 
+    // xxx i suggerimenti sopra andrebbero tarati su questo? Ne mancano alcuni? Da verificare.
 
     // empty password
     if (password.trim().length === 0) {
