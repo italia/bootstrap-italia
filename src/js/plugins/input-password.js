@@ -15,7 +15,6 @@ const Default = {
   badPass: 'Password debole.',
   goodPass: 'Password abbastanza sicura.',
   strongPass: 'Password sicura.',
-  // alertCaps: 'Attenzione: CAPS LOCK inserito.',
   minimumLength: 8,
   requirementsLabel: 'Suggerimenti per una buona password:',
   requirements: [
@@ -49,8 +48,6 @@ const Default = {
 
 const EVENT_CLICK = `click${EVENT_KEY}`
 const EVENT_KEYUP = `keyup${EVENT_KEY}`
-// const EVENT_KEYDOWN = `keydown${EVENT_KEY}`
-// const EVENT_KEYPRESS = `keypress${EVENT_KEY}`
 const EVENT_SCORE = `score${EVENT_KEY}`
 const EVENT_TEXT = `text${EVENT_KEY}`
 const EVENT_REQS = `reqs${EVENT_KEY}`
@@ -66,7 +63,6 @@ const SELECTOR_BTN_SHOW_PWD = '.password-icon'
 const SELECTOR_METER = '.password-strength-meter'
 const SELECTOR_METER_GRAYBAR = '.password-meter'
 const SELECTOR_METER_COLBAR = '.progress-bar'
-// const SELECTOR_CAPS = '.password-caps'
 const SELECTOR_METER_TEXT = '.strength-meter-info'
 const SELECTOR_METER_REQS = '.strenght-meter-reqs'
 
@@ -77,13 +73,10 @@ class InputPassword extends BaseComponent {
     this._config = this._getConfig(config)
     this._isCustom = this._element.classList.contains(CLASS_NAME_PASSWORD)
     this._meter = this._element.parentNode.querySelector(SELECTOR_METER)
-    // this._isShiftPressed = false
-    // this._isCapsOn = false
 
     this._grayBarElement = null
     this._colorBarElement = null
     this._textElement = null
-    // this._capsElement = null
     this._reqsElement = null
     this._showPwdElement = null
 
@@ -111,6 +104,10 @@ class InputPassword extends BaseComponent {
   }
 
   _init() {
+    if (this._isCustom) {
+      this._showPwdElement = SelectorEngine.findOne(SELECTOR_BTN_SHOW_PWD, this._element.parentNode)
+    }
+
     if (this._meter) {
       this._grayBarElement = this._meter.querySelector(SELECTOR_METER_GRAYBAR)
       this._colorBarElement = this._meter.querySelector(SELECTOR_METER_COLBAR)
@@ -119,102 +116,30 @@ class InputPassword extends BaseComponent {
       if (this._textElement) {
         this._config = Object.assign({}, this._config, { ...Manipulator.getDataAttributes(this._textElement) })
       }
-    }
-
-    if (this._isCustom) {
-      // this._capsElement = this._element.parentNode.querySelector(SELECTOR_CAPS)
-      // if (this._capsElement) {
-      //   this._capsElement.textContent = ''
-      // }
-      this._showPwdElement = SelectorEngine.findOne(SELECTOR_BTN_SHOW_PWD, this._element.parentNode)
-    }
-
-    if (this._reqsElement) {
-      this._createRequirementsList()
+      if (this._reqsElement) {
+        this._createRequirementsList()
+      }
     }
 
     this._checkPassword()
   }
 
   _bindEvents() {
-    // EventHandler.on(this._element, EVENT_KEYPRESS, (evt) => this._preventSpace(evt))
-
-    if (this._meter) {
-      EventHandler.on(this._element, EVENT_KEYUP, () => this._checkPassword())
-      EventHandler.on(this._element, 'input', () => this._checkPassword())
-    }
-
     if (this._isCustom) {
-      // EventHandler.on(this._element, EVENT_KEYDOWN, (evt) => this._handleKeyDown(evt))
-      // EventHandler.on(this._element, EVENT_KEYUP, (evt) => this._handleKeyUp(evt))
       if (this._showPwdElement) {
         EventHandler.on(this._showPwdElement, EVENT_CLICK, () => this._toggleShowPassword())
       }
     }
 
+    if (this._meter) {
+      EventHandler.on(this._element, EVENT_KEYUP, () => this._checkPassword())
+      EventHandler.on(this._element, 'input', () => this._checkPassword())
+    }
   }
-
-  // _preventSpace(evt) {
-  //   if (evt.key === ' ' || evt.keyCode === 32) {
-  //     evt.preventDefault()
-  //   }
-  // }
-
-  // _handleKeyDown(evt) {
-  //   if (evt.key === 'Shift') {
-  //     this._isShiftPressed = true
-  //   }
-  //   this._checkCapsLock(evt)
-  // }
-
-  // _handleKeyUp(evt) {
-  //   if (evt.key === 'Shift') {
-  //     this._isShiftPressed = false
-  //   }
-  //   this._checkCapsLock(evt)
-  // }
-
-  // _checkCapsLock(evt) {
-  //   if (!this._capsElement) return
-
-  //   const capsOn = this._isCapsLockOn(evt)
-  //   if (capsOn !== this._isCapsOn) {
-  //     this._isCapsOn = capsOn
-  //     this._toggleCapsLockWarning(this._isCapsOn)
-  //   }
-  // }
-
-  // _isCapsLockOn(evt) {
-  //   if (evt.getModifierState) {
-  //     return evt.getModifierState('CapsLock')
-  //   }
-  //   const charCode = evt.which || evt.keyCode
-  //   const isUpperCase = charCode >= 65 && charCode <= 90
-  //   const isLowerCase = charCode >= 97 && charCode <= 122
-  //   return (isUpperCase && !evt.shiftKey) || (isLowerCase && evt.shiftKey)
-  // }
-
-  // _toggleCapsLockWarning(show) {
-  //   if (this._capsElement) {
-  //     this._capsElement.classList.toggle('d-block')
-  //     this._capsElement.classList.toggle('d-none')
-  //     if (show) {
-  //       this._capsElement.textContent = this._config.alertCaps || Default.alertCaps
-  //     } else {
-  //       // setTimeout(() => {
-  //       if (this._capsElement.style.display === 'none') {
-  //         this._capsElement.textContent = ''
-  //       }
-  //       // }, 100)
-  //     }
-  //   }
-  // }
 
   _toggleShowPassword() {
     const toShow = this._element.getAttribute('type') === 'password'
-
     SelectorEngine.find('[class^="password-icon"]', this._showPwdElement).forEach((icon) => icon.classList.toggle('d-none'))
-
     this._element.setAttribute('type', toShow ? 'text' : 'password')
     this._showPwdElement.setAttribute('aria-checked', toShow.toString())
   }
@@ -223,7 +148,6 @@ class InputPassword extends BaseComponent {
     const password = this._element.value
     const score = this._calculateScore(password)
     const perc = score < 0 ? 0 : score
-    // const step = score < 25 ? 0 : score < 50 ? 25 : score < 75 ? 50 : score < 100 ? 75 : 100 // xxx better perc... meno possibilità di fraintendere
 
     if (this._colorBarElement) {
       this._colorBarElement.classList.forEach((className) => {
@@ -235,12 +159,10 @@ class InputPassword extends BaseComponent {
       this._colorBarElement.style.width = perc + '%'
       this._colorBarElement.setAttribute('aria-valuenow', perc)
     }
-
     EventHandler.trigger(this._element, EVENT_SCORE)
 
     if (this._textElement) {
       let text = this._scoreText(score)
-
       if (this._reqsElement) {
         let completedCount = 0
         const totalCount = this._config.requirements.length
@@ -249,7 +171,6 @@ class InputPassword extends BaseComponent {
         })
         text += ` ${completedCount} su ${totalCount} suggerimenti seguiti.`
       }
-
       if (this._textElement.innerHTML !== text) {
         this._textElement.innerHTML = text
         this._textElement.classList.forEach((className) => {
@@ -272,12 +193,10 @@ class InputPassword extends BaseComponent {
     if (this._reqsElement.querySelector('.password-requirements')) {
       return
     }
-
     const reqLabel = document.createElement('label')
     reqLabel.className = 'visually-hidden'
     reqLabel.htmlFor = 'Requirements'
     reqLabel.textContent = Default.requirementsLabel
-
     const reqContainer = document.createElement('div')
     reqContainer.id = 'Requirements'
     reqContainer.className = 'password-requirements'
@@ -286,16 +205,12 @@ class InputPassword extends BaseComponent {
       const reqElement = document.createElement('div')
       reqElement.className = 'requirement'
       reqElement.dataset.requirement = req.key
-
       const checkIcon = this._createIcon('it-check')
       checkIcon.classList.add('me-1', 'd-none')
-
       const textSpan = document.createElement('span')
       textSpan.textContent = req.text
-
       reqElement.appendChild(checkIcon)
       reqElement.appendChild(textSpan)
-
       reqContainer.appendChild(reqElement)
     })
 
@@ -309,17 +224,14 @@ class InputPassword extends BaseComponent {
     svg.setAttribute('aria-label', 'Soddisfatto: ')
     svg.style.width = '1em'
     svg.style.height = '1em'
-
     const use = document.createElementNS('http://www.w3.org/2000/svg', 'use')
     use.setAttributeNS('http://www.w3.org/1999/xlink', 'href', `/dist/svg/sprites.svg#${iconName}`)
-
     svg.appendChild(use)
     return svg
   }
 
   _updateRequirementsList(password) {
     if (!this._reqsElement) return
-
     this._config.requirements.forEach((req) => {
       const reqElement = this._reqsElement.querySelector(`[data-requirement="${req.key}"]`)
       if (reqElement) {
@@ -384,9 +296,6 @@ class InputPassword extends BaseComponent {
    */
   _calculateScore(password) {
     var score = 0
-
-    // xxx siamo sicuri dei calcoli di questo calcolatore che è stato "incorporato"? Ce ne sono altri oggi standard?
-    // xxx i suggerimenti sopra andrebbero tarati su questo? Ne mancano alcuni? Da verificare.
 
     // empty password
     if (password.trim().length === 0) {
