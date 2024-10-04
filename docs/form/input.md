@@ -250,6 +250,7 @@ Nel caso del campo di tipo password, è molto importante configurare correttamen
       data-bs-bad-pas="Password debole."
       data-bs-good-pass="Password abbastanza sicura."
       data-bs-strong-pass="Password sicura."
+      data-bs-long-pass="Password troppo lunga."
     ></p>      
     <div class="password-meter progress rounded-0 position-absolute">
       <div class="row position-absolute w-100 m-0">
@@ -280,6 +281,7 @@ Nel caso del campo di tipo password, è molto importante configurare correttamen
       data-bs-bad-pas="Password debole."
       data-bs-good-pass="Password abbastanza sicura."
       data-bs-strong-pass="Password sicura."
+      data-bs-long-pass="Password troppo lunga."
     ></p>      
     <div class="password-meter progress rounded-0 position-absolute">
       <div class="row position-absolute w-100 m-0">
@@ -331,6 +333,11 @@ Nel caso del campo di tipo password, è molto importante configurare correttamen
       <td><code>data-bs-strong-pass</code></td>
       <td>Testo per il punteggio di forza della password massimo</td>
       <td>Password sicura. </td>
+    </tr>   
+    <tr>
+      <td><code>data-bs-long-pass</code></td>
+      <td>Testo per il punteggio di forza della password troppo lunga</td>
+      <td>Password troppo lunga. </td>
     </tr>   
   </tbody>
 </table>

@@ -15,13 +15,20 @@ const Default = {
   badPass: 'Password debole.',
   goodPass: 'Password abbastanza sicura.',
   strongPass: 'Password sicura.',
+  strongPass: 'Password troppo lunga.',
   minimumLength: 8,
+  maximumLength: 64,
   suggestionsLabel: 'Suggerimenti per una buona password:',
   suggestions: [
     {
       key: 'length',
       text: 'Almeno {minLength} caratteri.',
       test: (password, config) => password.length >= config.minimumLength,
+    },
+    {
+      key: 'mlength',
+      text: 'Fino a {maxLength} caratteri.',
+      test: (password, config) => password.length > 0 && password.length <= config.maximumLength,
     },
     {
       key: 'uppercase',
@@ -48,6 +55,10 @@ const Default = {
 const lengthSuggestion = Default.suggestions.find((suggestion) => suggestion.key === 'length')
 if (lengthSuggestion) {
   lengthSuggestion.text = lengthSuggestion.text.replace('{minLength}', Default.minimumLength.toString())
+}
+const maxLengthSuggestion = Default.suggestions.find((suggestion) => suggestion.key === 'mlength')
+if (maxLengthSuggestion) {
+  maxLengthSuggestion.text = maxLengthSuggestion.text.replace('{maxLength}', Default.maximumLength.toString())
 }
 
 const EVENT_CLICK = `click${EVENT_KEY}`
@@ -263,6 +274,10 @@ class InputPassword extends BaseComponent {
       return ''
     }
 
+    if (score === -3) {
+      return this._config.longPass
+    }
+
     score = score < 0 ? 0 : score
 
     if (score < 26) {
@@ -279,7 +294,7 @@ class InputPassword extends BaseComponent {
   }
 
   _scoreColor(score) {
-    if (score === -1 || score === -2 || score < 26) {
+    if (score === -1 || score === -2 || score === -3 || score < 26) {
       return 'danger'
     }
     if (score < 51) {
@@ -309,6 +324,11 @@ class InputPassword extends BaseComponent {
     // password < this._config.minimumLength
     if (password.length < this._config.minimumLength) {
       return -1
+    }
+
+    // password > this._config.maximumLength
+    if (password.length > this._config.maximumLength) {
+      return -3
     }
 
     // password length
