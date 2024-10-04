@@ -64,18 +64,18 @@ Per allineare orizzontalmente gli interruttori basterà aggiungere la classe `.f
   <legend>Gruppo di toggle</legend>
   <div class="form-check form-check-inline">
     <div class="toggles">
-      <label for="toggleEsempio3a">
+      <label for="toggleEsempio3ainline">
         Label dell'interruttore 1
-        <input type="checkbox" id="toggleEsempio3a">
+        <input type="checkbox" id="toggleEsempio3ainline">
         <span class="lever"></span>
       </label>
     </div>
   </div>
   <div class="form-check form-check-inline">
     <div class="toggles">
-      <label for="toggleEsempio3b">
+      <label for="toggleEsempio3binline">
         Label dell'interruttore 2
-        <input type="checkbox" id="toggleEsempio3b">
+        <input type="checkbox" id="toggleEsempio3binline">
         <span class="lever leverRight"></span>
       </label>
     </div>
