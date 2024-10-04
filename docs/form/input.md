@@ -44,7 +44,7 @@ Il campo di input di tipo Password è stato rivisto in chiave accessibilità e r
   - Rivisto l'ordine degli elementi nell'HTML per rispecchiare la struttura corretta degli elementi. 
   - Alcuni elementi `small` o `span` diventano `p`, ad esempio per la personalizzazione con attributi `data` delle varianti più avanzate ci si rivolgerà verso l'elemento `p.strength-meter-info` e non più al generico `small.form-text`. 
   - Rimosso il controllo per il Caps-lock inserito, per non interferire con i tasti modificatori delle tecnologie assistive.
-  - Aggiunta una variante con suggerimenti. 
+  - Aggiunta una variante con misuratore di sicurezza e suggerimenti. 
 {% endcapture %}{% include callout.html content=callout type="danger" %}
 
 {% comment %}Example name: Varianti per tipo {% endcomment %}
