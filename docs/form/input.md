@@ -36,7 +36,7 @@ con classe `.input-group-text`.
 {% endcapture %}{% include callout.html content=callout type="danger" %}
 
 {% capture callout %}
-Breaking feature dalla versione **2.X.0** XXX
+Breaking feature dalla versione **2.10.0**
 
 Il campo di input di tipo Password è stato rivisto in chiave accessibilità e robustezza. In particolare cosa cambia: 
   - L'elemento `input.input-password` ha ora il corretto attributo `aria-describedby` dove necessario.
