@@ -96,17 +96,17 @@ Per raggruppare visivamente gli elementi `checkbox` e `radio` occorrerà aggiung
     <fieldset class="col-5">
       <legend>Gruppo di radio</legend>
       <div class="form-check form-check-group">
-        <input checked name="gruppo5" type="radio" id="radio13" aria-labelledby="radio13-help">
+        <input checked name="gruppo5" type="radio" id="radio13" aria-describedby="radio13-help">
         <label for="radio13">Opzione 1</label>
         <small id="radio13-help" class="form-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie libero</small>
       </div>
       <div class="form-check form-check-group">
-        <input name="gruppo5" type="radio" id="radio14" aria-labelledby="radio14-help">
+        <input name="gruppo5" type="radio" id="radio14" aria-describedby="radio14-help">
         <label for="radio14">Opzione 2</label>
         <small id="radio14-help" class="form-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie libero</small>
       </div>
       <div class="form-check form-check-group">
-        <input name="gruppo5" type="radio" id="radio15" aria-labelledby="radio15-help" disabled="disabled">
+        <input name="gruppo5" type="radio" id="radio15" aria-describedby="radio15-help" disabled="disabled">
         <label for="radio15" class="disabled">Opzione 3</label>
         <small id="radio15-help" class="form-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie libero</small>
       </div>
