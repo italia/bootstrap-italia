@@ -194,17 +194,16 @@ Per rendere più semplice l'inserimento della password, l'elemento è dotato di 
   </button>
 </div>
 
-<p class="mt-4 pb-3">Con descrizione e alert capslock inserito</p>
+<p class="mt-4 pb-3">Con descrizione</p>
 <div class="form-group">
   <label for="exampleInputPassword2">Password</label>
-  <input type="password" data-bs-input class="form-control input-password" id="exampleInputPassword2" aria-describedby="capsLockWarning2 infoPassword2">
+  <input type="password" data-bs-input class="form-control input-password" id="exampleInputPassword2" aria-describedby="infoPassword2">
   <button type="button" class="password-icon btn" role="switch" aria-checked="false">
     <span class="visually-hidden">Mostra/Nascondi Password</span>
     <svg class="password-icon-visible icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-visible"></use></svg>
     <svg class="password-icon-invisible icon icon-sm d-none" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-invisible"></use></svg>
   </button>
   <p id="infoPassword2" class="form-text text-muted d-block small pb-0">Inserisci almeno 8 caratteri.</p>
-  <p id="capsLockWarning2" class="password-caps small form-text text-warning py-0 d-none" aria-live="polite"></p>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -269,14 +268,13 @@ Inoltre, nel caso di un campo Input password utilizzato per la scelta di una pas
 <p class="mt-4 pb-3">Con descrizione e misuratore sicurezza</p>
 <div class="form-group">
   <label for="exampleInputPassword3">Scegli password</label>
-  <input type="password" data-bs-input class="form-control input-password" id="exampleInputPassword3" aria-describedby="strengthMeterInfo3 capsLockWarning3 infoPassword3">
+  <input type="password" data-bs-input class="form-control input-password" id="exampleInputPassword3" aria-describedby="strengthMeterInfo3 infoPassword3">
   <button type="button" class="password-icon btn" role="switch" aria-checked="false">
     <span class="visually-hidden">Mostra/Nascondi Password</span>
     <svg class="password-icon-visible icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-visible"></use></svg>
     <svg class="password-icon-invisible icon icon-sm d-none" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-invisible"></use></svg>
   </button>
   <p id="infoPassword3" class="form-text text-muted d-block small pb-0">Inserisci almeno 8 caratteri, combinando maiuscole, numeri e caratteri speciali.</p>
-  <p id="capsLockWarning3" class="password-caps small form-text text-warning py-0 d-none" aria-live="polite"></p>
   <div class="password-strength-meter">
     <p id="strengthMeterInfo3" class="strength-meter-info small form-text text-muted pt-0" aria-live="polite"
       data-bs-short-pass="Password troppo breve."
@@ -299,14 +297,13 @@ Inoltre, nel caso di un campo Input password utilizzato per la scelta di una pas
 <p class="mt-4 pb-3">Con misuratore sicurezza e suggerimenti puntuali</p>
 <div class="form-group">
   <label for="exampleInputPassword4">Scegli password</label>
-  <input type="password" data-bs-input class="form-control input-password" id="exampleInputPassword4" aria-describedby="strengthRequirements4 strengthMeterInfo4 capsLockWarning4 infoPassword4">
+  <input type="password" data-bs-input class="form-control input-password" id="exampleInputPassword4" aria-describedby="strengthRequirements4 strengthMeterInfo4 infoPassword4">
   <button type="button" class="password-icon btn" role="switch" aria-checked="false">
     <span class="visually-hidden">Mostra/Nascondi Password</span>
     <svg class="password-icon-visible icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-visible"></use></svg>
     <svg class="password-icon-invisible icon icon-sm d-none" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-invisible"></use></svg>
   </button>
   <p id="infoPassword4" class="form-text text-muted d-block small pb-0"></p>
-  <p id="capsLockWarning4" class="password-caps small form-text text-warning py-0 d-none" aria-live="polite"></p>
   <div class="password-strength-meter">
     <div id="strengthRequirements4" class="strenght-meter-reqs small form-text text-muted"></div>
     <p id="strengthMeterInfo4" class="strength-meter-info small form-text text-muted pt-0" aria-live="polite"

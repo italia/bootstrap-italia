@@ -15,7 +15,7 @@ const Default = {
   badPass: 'Password debole.',
   goodPass: 'Password abbastanza sicura.',
   strongPass: 'Password sicura.',
-  alertCaps: 'Attenzione: CAPS LOCK inserito.',
+  // alertCaps: 'Attenzione: CAPS LOCK inserito.',
   minimumLength: 8,
   requirementsLabel: 'Suggerimenti per una buona password:',
   requirements: [
@@ -49,7 +49,7 @@ const Default = {
 
 const EVENT_CLICK = `click${EVENT_KEY}`
 const EVENT_KEYUP = `keyup${EVENT_KEY}`
-const EVENT_KEYDOWN = `keydown${EVENT_KEY}`
+// const EVENT_KEYDOWN = `keydown${EVENT_KEY}`
 // const EVENT_KEYPRESS = `keypress${EVENT_KEY}`
 const EVENT_SCORE = `score${EVENT_KEY}`
 const EVENT_TEXT = `text${EVENT_KEY}`
@@ -66,7 +66,7 @@ const SELECTOR_BTN_SHOW_PWD = '.password-icon'
 const SELECTOR_METER = '.password-strength-meter'
 const SELECTOR_METER_GRAYBAR = '.password-meter'
 const SELECTOR_METER_COLBAR = '.progress-bar'
-const SELECTOR_CAPS = '.password-caps'
+// const SELECTOR_CAPS = '.password-caps'
 const SELECTOR_METER_TEXT = '.strength-meter-info'
 const SELECTOR_METER_REQS = '.strenght-meter-reqs'
 
@@ -77,13 +77,13 @@ class InputPassword extends BaseComponent {
     this._config = this._getConfig(config)
     this._isCustom = this._element.classList.contains(CLASS_NAME_PASSWORD)
     this._meter = this._element.parentNode.querySelector(SELECTOR_METER)
-    this._isShiftPressed = false
-    this._isCapsOn = false
+    // this._isShiftPressed = false
+    // this._isCapsOn = false
 
     this._grayBarElement = null
     this._colorBarElement = null
     this._textElement = null
-    this._capsElement = null
+    // this._capsElement = null
     this._reqsElement = null
     this._showPwdElement = null
 
@@ -122,13 +122,12 @@ class InputPassword extends BaseComponent {
     }
 
     if (this._isCustom) {
-      this._capsElement = this._element.parentNode.querySelector(SELECTOR_CAPS)
-      if (this._capsElement) {
-        this._capsElement.textContent = ''
-      }
+      // this._capsElement = this._element.parentNode.querySelector(SELECTOR_CAPS)
+      // if (this._capsElement) {
+      //   this._capsElement.textContent = ''
+      // }
+      this._showPwdElement = SelectorEngine.findOne(SELECTOR_BTN_SHOW_PWD, this._element.parentNode)
     }
-
-    this._showPwdElement = SelectorEngine.findOne(SELECTOR_BTN_SHOW_PWD, this._element.parentNode)
 
     if (this._reqsElement) {
       this._createRequirementsList()
@@ -146,13 +145,13 @@ class InputPassword extends BaseComponent {
     }
 
     if (this._isCustom) {
-      EventHandler.on(this._element, EVENT_KEYDOWN, (evt) => this._handleKeyDown(evt))
-      EventHandler.on(this._element, EVENT_KEYUP, (evt) => this._handleKeyUp(evt))
+      // EventHandler.on(this._element, EVENT_KEYDOWN, (evt) => this._handleKeyDown(evt))
+      // EventHandler.on(this._element, EVENT_KEYUP, (evt) => this._handleKeyUp(evt))
+      if (this._showPwdElement) {
+        EventHandler.on(this._showPwdElement, EVENT_CLICK, () => this._toggleShowPassword())
+      }
     }
 
-    if (this._showPwdElement) {
-      EventHandler.on(this._showPwdElement, EVENT_CLICK, () => this._toggleShowPassword())
-    }
   }
 
   // _preventSpace(evt) {
@@ -161,55 +160,55 @@ class InputPassword extends BaseComponent {
   //   }
   // }
 
-  _handleKeyDown(evt) {
-    if (evt.key === 'Shift') {
-      this._isShiftPressed = true
-    }
-    this._checkCapsLock(evt)
-  }
+  // _handleKeyDown(evt) {
+  //   if (evt.key === 'Shift') {
+  //     this._isShiftPressed = true
+  //   }
+  //   this._checkCapsLock(evt)
+  // }
 
-  _handleKeyUp(evt) {
-    if (evt.key === 'Shift') {
-      this._isShiftPressed = false
-    }
-    this._checkCapsLock(evt)
-  }
+  // _handleKeyUp(evt) {
+  //   if (evt.key === 'Shift') {
+  //     this._isShiftPressed = false
+  //   }
+  //   this._checkCapsLock(evt)
+  // }
 
-  _checkCapsLock(evt) {
-    if (!this._capsElement) return
+  // _checkCapsLock(evt) {
+  //   if (!this._capsElement) return
 
-    const capsOn = this._isCapsLockOn(evt)
-    if (capsOn !== this._isCapsOn) {
-      this._isCapsOn = capsOn
-      this._toggleCapsLockWarning(this._isCapsOn)
-    }
-  }
+  //   const capsOn = this._isCapsLockOn(evt)
+  //   if (capsOn !== this._isCapsOn) {
+  //     this._isCapsOn = capsOn
+  //     this._toggleCapsLockWarning(this._isCapsOn)
+  //   }
+  // }
 
-  _isCapsLockOn(evt) {
-    if (evt.getModifierState) {
-      return evt.getModifierState('CapsLock')
-    }
-    const charCode = evt.which || evt.keyCode
-    const isUpperCase = charCode >= 65 && charCode <= 90
-    const isLowerCase = charCode >= 97 && charCode <= 122
-    return (isUpperCase && !evt.shiftKey) || (isLowerCase && evt.shiftKey)
-  }
+  // _isCapsLockOn(evt) {
+  //   if (evt.getModifierState) {
+  //     return evt.getModifierState('CapsLock')
+  //   }
+  //   const charCode = evt.which || evt.keyCode
+  //   const isUpperCase = charCode >= 65 && charCode <= 90
+  //   const isLowerCase = charCode >= 97 && charCode <= 122
+  //   return (isUpperCase && !evt.shiftKey) || (isLowerCase && evt.shiftKey)
+  // }
 
-  _toggleCapsLockWarning(show) {
-    if (this._capsElement) {
-      this._capsElement.classList.toggle('d-block')
-      this._capsElement.classList.toggle('d-none')
-      if (show) {
-        this._capsElement.textContent = this._config.alertCaps || Default.alertCaps
-      } else {
-        setTimeout(() => {
-          if (this._capsElement.style.display === 'none') {
-            this._capsElement.textContent = ''
-          }
-        }, 100)
-      }
-    }
-  }
+  // _toggleCapsLockWarning(show) {
+  //   if (this._capsElement) {
+  //     this._capsElement.classList.toggle('d-block')
+  //     this._capsElement.classList.toggle('d-none')
+  //     if (show) {
+  //       this._capsElement.textContent = this._config.alertCaps || Default.alertCaps
+  //     } else {
+  //       // setTimeout(() => {
+  //       if (this._capsElement.style.display === 'none') {
+  //         this._capsElement.textContent = ''
+  //       }
+  //       // }, 100)
+  //     }
+  //   }
+  // }
 
   _toggleShowPassword() {
     const toShow = this._element.getAttribute('type') === 'password'
