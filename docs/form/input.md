@@ -38,8 +38,13 @@ con classe `.input-group-text`.
 {% capture callout %}
 Breaking feature dalla versione **2.X.0** XXX
 
-- ... XXX
-- Rimosso il controllo Caps-lock inserito dal campo Input di tipo Password per non interferire con le tecnologie assistive.
+Il campo di input di tipo Password è stato rivisto in chiave accessibilità e robustezza. In particolare cosa cambia: 
+  - L'elemento `input.input-password` ha ora il corretto attributo `aria-describedby` dove necessario.
+  - L'elemento `.password-icon` diventa un `button` con `role=switch` e uso dell'attributo `aria-checked` per lo stato.
+  - Rivisto l'ordine degli elementi nell'HTML per rispecchiare la struttura corretta degli elementi. 
+  - Alcuni elementi `small` o `span` diventano `p`, ad esempio per la personalizzazione con attributi `data` delle varianti più avanzate ci si rivolgerà verso l'elemento `p.strength-meter-info` e non più al generico `small.form-text`. 
+  - Rimosso il controllo per il Caps-lock inserito, per non interferire con i tasti modificatori delle tecnologie assistive.
+  - Aggiunta una variante con suggerimenti. 
 {% endcapture %}{% include callout.html content=callout type="danger" %}
 
 {% comment %}Example name: Varianti per tipo {% endcomment %}
@@ -341,7 +346,7 @@ var passwordComponent = new bootstrap.InputPassword(inputElement, {
 })
 ```
 
-#### Opzioni
+Opzioni: 
 
 <table class="table table-bordered table-striped">
   <thead>
