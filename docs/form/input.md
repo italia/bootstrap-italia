@@ -266,7 +266,7 @@ Nel caso del campo di tipo password, è molto importante configurare correttamen
 <p class="mt-4 pb-3">Con misuratore sicurezza e suggerimenti puntuali</p>
 <div class="form-group">
   <label for="exampleInputPassword4">Scegli password</label>
-  <input type="password" data-bs-input class="form-control input-password" id="exampleInputPassword4" aria-describedby="strengthRequirements4 strengthMeterInfo4 infoPassword4">
+  <input type="password" data-bs-input class="form-control input-password" id="exampleInputPassword4" aria-describedby="strengthMeterSuggestions4 strengthMeterInfo4 infoPassword4">
   <button type="button" class="password-icon btn" role="switch" aria-checked="false">
     <span class="visually-hidden">Mostra/Nascondi Password</span>
     <svg class="password-icon-visible icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-visible"></use></svg>
@@ -274,7 +274,7 @@ Nel caso del campo di tipo password, è molto importante configurare correttamen
   </button>
   <p id="infoPassword4" class="form-text text-muted d-block small pb-0"></p>
   <div class="password-strength-meter">
-    <div id="strengthRequirements4" class="strenght-meter-reqs small form-text text-muted"></div>
+    <div id="strengthMeterSuggestions4" class="strenght-meter-suggestions small form-text text-muted"></div>
     <p id="strengthMeterInfo4" class="strength-meter-info small form-text text-muted pt-0" aria-live="polite"
       data-bs-short-pass="Password troppo breve."
       data-bs-bad-pas="Password debole."

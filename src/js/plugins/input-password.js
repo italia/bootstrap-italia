@@ -16,8 +16,8 @@ const Default = {
   goodPass: 'Password abbastanza sicura.',
   strongPass: 'Password sicura.',
   minimumLength: 8,
-  requirementsLabel: 'Suggerimenti per una buona password:',
-  requirements: [
+  suggestionsLabel: 'Suggerimenti per una buona password:',
+  suggestions: [
     {
       key: 'length',
       text: 'Almeno {minLength} caratteri.',
@@ -45,16 +45,16 @@ const Default = {
     },
   ],
 }
-const lengthRequirement = Default.requirements.find((requirement) => requirement.key === 'length')
-if (lengthRequirement) {
-  lengthRequirement.text = lengthRequirement.text.replace('{minLength}', Default.minimumLength.toString())
+const lengthSuggestion = Default.suggestions.find((suggestion) => suggestion.key === 'length')
+if (lengthSuggestion) {
+  lengthSuggestion.text = lengthSuggestion.text.replace('{minLength}', Default.minimumLength.toString())
 }
 
 const EVENT_CLICK = `click${EVENT_KEY}`
 const EVENT_KEYUP = `keyup${EVENT_KEY}`
 const EVENT_SCORE = `score${EVENT_KEY}`
 const EVENT_TEXT = `text${EVENT_KEY}`
-const EVENT_REQS = `reqs${EVENT_KEY}`
+const EVENT_SUGGS = `suggs${EVENT_KEY}`
 
 const EVENT_CLICK_DATA_API = `click${EVENT_KEY}${DATA_API_KEY}`
 const EVENT_MOUSEDOWN_DATA_API = `mousedown${EVENT_KEY}${DATA_API_KEY}`
@@ -68,7 +68,7 @@ const SELECTOR_METER = '.password-strength-meter'
 const SELECTOR_METER_GRAYBAR = '.password-meter'
 const SELECTOR_METER_COLBAR = '.progress-bar'
 const SELECTOR_METER_TEXT = '.strength-meter-info'
-const SELECTOR_METER_REQS = '.strenght-meter-reqs'
+const SELECTOR_METER_SUGGS = '.strenght-meter-suggestions'
 
 class InputPassword extends BaseComponent {
   constructor(element, config) {
@@ -81,7 +81,7 @@ class InputPassword extends BaseComponent {
     this._grayBarElement = null
     this._colorBarElement = null
     this._textElement = null
-    this._reqsElement = null
+    this._suggsElement = null
     this._showPwdElement = null
 
     this._text = {}
@@ -116,12 +116,12 @@ class InputPassword extends BaseComponent {
       this._grayBarElement = this._meter.querySelector(SELECTOR_METER_GRAYBAR)
       this._colorBarElement = this._meter.querySelector(SELECTOR_METER_COLBAR)
       this._textElement = this._meter.querySelector(SELECTOR_METER_TEXT)
-      this._reqsElement = this._meter.querySelector(SELECTOR_METER_REQS)
+      this._suggsElement = this._meter.querySelector(SELECTOR_METER_SUGGS)
       if (this._textElement) {
         this._config = Object.assign({}, this._config, { ...Manipulator.getDataAttributes(this._textElement) })
       }
-      if (this._reqsElement) {
-        this._createRequirementsList()
+      if (this._suggsElement) {
+        this._createsuggestionsList()
       }
     }
 
@@ -167,11 +167,11 @@ class InputPassword extends BaseComponent {
 
     if (this._textElement) {
       let text = this._scoreText(score)
-      if (this._reqsElement) {
+      if (this._suggsElement) {
         let completedCount = 0
-        const totalCount = this._config.requirements.length
-        this._config.requirements.forEach((req) => {
-          if (req.test(password, this._config)) completedCount++
+        const totalCount = this._config.suggestions.length
+        this._config.suggestions.forEach((sugg) => {
+          if (sugg.test(password, this._config)) completedCount++
         })
         text += ` ${completedCount} su ${totalCount} suggerimenti seguiti.`
       }
@@ -187,39 +187,39 @@ class InputPassword extends BaseComponent {
       }
     }
 
-    if (this._reqsElement) {
-      this._updateRequirementsList(password)
-      EventHandler.trigger(this._element, EVENT_REQS)
+    if (this._suggsElement) {
+      this._updatesuggestionsList(password)
+      EventHandler.trigger(this._element, EVENT_SUGGS)
     }
   }
 
-  _createRequirementsList() {
-    if (this._reqsElement.querySelector('.password-requirements')) {
+  _createsuggestionsList() {
+    if (this._suggsElement.querySelector('.password-suggestions')) {
       return
     }
-    const reqLabel = document.createElement('label')
-    reqLabel.className = 'visually-hidden'
-    reqLabel.htmlFor = 'Requirements'
-    reqLabel.textContent = Default.requirementsLabel
-    const reqContainer = document.createElement('div')
-    reqContainer.id = 'Requirements'
-    reqContainer.className = 'password-requirements'
+    const suggLabel = document.createElement('label')
+    suggLabel.className = 'visually-hidden'
+    suggLabel.htmlFor = 'suggestions'
+    suggLabel.textContent = Default.suggestionsLabel
+    const suggContainer = document.createElement('div')
+    suggContainer.id = 'suggestions'
+    suggContainer.className = 'password-suggestions'
 
-    this._config.requirements.forEach((req) => {
-      const reqElement = document.createElement('div')
-      reqElement.className = 'requirement'
-      reqElement.dataset.requirement = req.key
+    this._config.suggestions.forEach((sugg) => {
+      const suggElement = document.createElement('div')
+      suggElement.className = 'suggestion'
+      suggElement.dataset.suggestion = sugg.key
       const checkIcon = this._createIcon('it-check')
       checkIcon.classList.add('me-1', 'd-none')
       const textSpan = document.createElement('span')
-      textSpan.textContent = req.text
-      reqElement.appendChild(checkIcon)
-      reqElement.appendChild(textSpan)
-      reqContainer.appendChild(reqElement)
+      textSpan.textContent = sugg.text
+      suggElement.appendChild(checkIcon)
+      suggElement.appendChild(textSpan)
+      suggContainer.appendChild(suggElement)
     })
 
-    this._reqsElement.appendChild(reqLabel)
-    this._reqsElement.appendChild(reqContainer)
+    this._suggsElement.appendChild(suggLabel)
+    this._suggsElement.appendChild(suggContainer)
   }
 
   _createIcon(iconName) {
@@ -234,13 +234,13 @@ class InputPassword extends BaseComponent {
     return svg
   }
 
-  _updateRequirementsList(password) {
-    if (!this._reqsElement) return
-    this._config.requirements.forEach((req) => {
-      const reqElement = this._reqsElement.querySelector(`[data-requirement="${req.key}"]`)
-      if (reqElement) {
-        const isMet = req.test(password, this._config)
-        const checkIcon = reqElement.querySelector('.icon')
+  _updatesuggestionsList(password) {
+    if (!this._suggsElement) return
+    this._config.suggestions.forEach((sugg) => {
+      const suggElement = this._suggsElement.querySelector(`[data-suggestion="${sugg.key}"]`)
+      if (suggElement) {
+        const isMet = sugg.test(password, this._config)
+        const checkIcon = suggElement.querySelector('.icon')
         if (checkIcon) {
           checkIcon.classList.toggle('d-none', !isMet)
         }
