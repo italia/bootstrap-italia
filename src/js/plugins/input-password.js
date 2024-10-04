@@ -21,9 +21,8 @@ const Default = {
     {
       key: 'length',
       text: 'Almeno {minLength} caratteri.',
-      test: function (password) {
-        return password.length >= this.minimumLength
-      },
+      test: (password, config) => password.length >= config.minimumLength,
+
     },
     {
       key: 'uppercase',
@@ -173,7 +172,7 @@ class InputPassword extends BaseComponent {
         let completedCount = 0
         const totalCount = this._config.requirements.length
         this._config.requirements.forEach((req) => {
-          if (req.test(password)) completedCount++
+          if (req.test(password, this._config)) completedCount++
         })
         text += ` ${completedCount} su ${totalCount} suggerimenti seguiti.`
       }
@@ -241,7 +240,7 @@ class InputPassword extends BaseComponent {
     this._config.requirements.forEach((req) => {
       const reqElement = this._reqsElement.querySelector(`[data-requirement="${req.key}"]`)
       if (reqElement) {
-        const isMet = req.test(password)
+        const isMet = req.test(password, this._config)
         const checkIcon = reqElement.querySelector('.icon')
         if (checkIcon) {
           checkIcon.classList.toggle('d-none', !isMet)
