@@ -22,7 +22,6 @@ const Default = {
       key: 'length',
       text: 'Almeno {minLength} caratteri.',
       test: (password, config) => password.length >= config.minimumLength,
-
     },
     {
       key: 'uppercase',
