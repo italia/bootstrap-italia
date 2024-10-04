@@ -305,7 +305,7 @@ Inoltre, nel caso di un campo Input password utilizzato per la scelta di una pas
     <svg class="password-icon-visible icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-visible"></use></svg>
     <svg class="password-icon-invisible icon icon-sm d-none" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-invisible"></use></svg>
   </button>
-    <p id="infoPassword4" class="form-text text-muted d-block small pb-0"></p>
+  <p id="infoPassword4" class="form-text text-muted d-block small pb-0"></p>
   <p id="capsLockWarning4" class="password-caps small form-text text-warning py-0 d-none" aria-live="polite"></p>
   <div class="password-strength-meter">
     <div id="strengthRequirements4" class="strenght-meter-reqs small form-text text-muted"></div>
