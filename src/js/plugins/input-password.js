@@ -50,7 +50,7 @@ const Default = {
 const EVENT_CLICK = `click${EVENT_KEY}`
 const EVENT_KEYUP = `keyup${EVENT_KEY}`
 const EVENT_KEYDOWN = `keydown${EVENT_KEY}`
-const EVENT_KEYPRESS = `keypress${EVENT_KEY}`
+// const EVENT_KEYPRESS = `keypress${EVENT_KEY}`
 const EVENT_SCORE = `score${EVENT_KEY}`
 const EVENT_TEXT = `text${EVENT_KEY}`
 const EVENT_REQS = `reqs${EVENT_KEY}`
@@ -138,7 +138,7 @@ class InputPassword extends BaseComponent {
   }
 
   _bindEvents() {
-    EventHandler.on(this._element, EVENT_KEYPRESS, (evt) => this._preventSpace(evt))
+    // EventHandler.on(this._element, EVENT_KEYPRESS, (evt) => this._preventSpace(evt))
 
     if (this._meter) {
       EventHandler.on(this._element, EVENT_KEYUP, () => this._checkPassword())
@@ -155,11 +155,11 @@ class InputPassword extends BaseComponent {
     }
   }
 
-  _preventSpace(evt) {
-    if (evt.key === ' ' || evt.keyCode === 32) {
-      evt.preventDefault()
-    }
-  }
+  // _preventSpace(evt) {
+  //   if (evt.key === ' ' || evt.keyCode === 32) {
+  //     evt.preventDefault()
+  //   }
+  // }
 
   _handleKeyDown(evt) {
     if (evt.key === 'Shift') {
