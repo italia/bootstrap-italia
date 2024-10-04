@@ -69,11 +69,11 @@ Affinché i campi `checkbox` e `radio` risultino disabilitati occorrerà aggiung
 </fieldset>
 {% endcapture %}{% include example.html content=example %}
 
-### Gruppi
+### Raggruppati visivamente
 
 Per raggruppare visivamente gli elementi `checkbox` e `radio` occorrerà aggiungere al `.form-check` la classe `.form-check-group`. L'elemento grafico di spunta verrà allineato alla destra del contenuto testuale.
 
-{% comment %}Example name: Gruppi {% endcomment %}
+{% comment %}Example name: Raggruppati visivamente {% endcomment %}
 {% capture example %}
 <div>
   <div class="row">

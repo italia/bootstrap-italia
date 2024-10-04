@@ -84,11 +84,11 @@ Per allineare orizzontalmente gli interruttori basterà aggiungere la classe `.f
 {% endcapture %}{% include example.html content=example %}
 
 
-### Gruppi
+### Raggruppati visivamente
 
 Per raggruppare visivamente gli elementi **toggle** occorrerà aggiungere al `.form-check` la classe `.form-check-group`.
 
-{% comment %}Example name: Gruppi {% endcomment %}
+{% comment %}Example name: Raggruppati visivamente {% endcomment %}
 {% capture example %}
 <div>
   <div class="row">
