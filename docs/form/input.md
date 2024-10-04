@@ -39,7 +39,7 @@ con classe `.input-group-text`.
 Breaking feature dalla versione **2.10.0**
 
 Il campo di input di tipo Password è stato rivisto in chiave accessibilità e robustezza. In particolare cosa cambia: 
-  - L'elemento `input.input-password` ha ora il corretto attributo `aria-describedby` dove necessario.
+  - L'elemento `input.input-password` ha ora il corretto attributo `aria-describedby` al posto di `aria-labelledby`.
   - L'elemento `.password-icon` diventa un `button` con `role=switch` e uso dell'attributo `aria-checked` per lo stato.
   - Rivisto l'ordine degli elementi nell'HTML per rispecchiare la struttura corretta degli elementi. 
   - Alcuni elementi `small` o `span` diventano `p`, ad esempio per la personalizzazione con attributi `data` delle varianti più avanzate ci si rivolgerà verso l'elemento `p.strength-meter-info` e non più al generico `small.form-text`. 
