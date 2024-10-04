@@ -35,6 +35,13 @@ Rimosso l'elemento con classe `.input-group-prepend` in favore dell'elemento
 con classe `.input-group-text`.
 {% endcapture %}{% include callout.html content=callout type="danger" %}
 
+{% capture callout %}
+Breaking feature dalla versione **2.X.0** XXX
+
+- ... XXX
+- Rimosso il controllo Caps-lock inserito dal campo Input di tipo Password per non interferire con le tecnologie assistive.
+{% endcapture %}{% include callout.html content=callout type="danger" %}
+
 {% comment %}Example name: Varianti per tipo {% endcomment %}
 {% capture example %}
 <div>
@@ -86,11 +93,8 @@ Si può abbinare all'etichetta un _placeholder_ (testo di esempio) per ulteriore
 In caso di necessità, è anche possibile utilizzare un ulteriore contenuto testuale sotto il campo di testo, aggiungendo un elemento `<small>` con classe `.form-text` all'interno di `.form-group`.
 
 {% capture callout %}
-
-#### Associazione del testo di aiuto con gli elementi del modulo form
-
-Il testo di aiuto deve essere esplicitamente associato agli elementi del modulo form a cui si riferisce utilizzando l'attributo `aria-describedby`. Ciò garantirà che le tecnologie assistive, come gli screenreader, leggano questo testo di aiuto quando l'utente avrà il focus sull'elemento.
-
+#### Accessibilità: associazione del testo di aiuto con con i campi
+Il testo di aiuto deve essere esplicitamente associato ai campi a cui si riferisce utilizzando l'attributo `aria-describedby`. Ciò garantirà che le tecnologie assistive, come i lettori di schermo, leggano questo testo di aiuto quando l'utente avrà il focus sull'elemento.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
 {% comment %}Example name: Con testo di aiuto {% endcomment %}
@@ -178,12 +182,12 @@ Se per qualche motivo vuoi avere gli elementi `<input readonly>` nella forma sti
 
 ## Input password
 
-Per rendere più semplice l'inserimento della password, l'elemento è dotato di un pulsante che permette di mostrare i caratteri inseriti. 
+Per rendere più semplice l'inserimento della password, il campo Input di tipo password è dotato di un pulsante che permette di mostrare i caratteri inseriti. Inoltre, è possibile abbinare una descrizione estesa che ne aiuti la compilazine, ad esempio in fase di scelta di una nuova password.  
 
 {% comment %}Example name: Password base{% endcomment %}
 {% capture example %}
 
-<p class="mt-4 pb-3">Base</p>
+<p class="mt-4 pb-3">Base, login</p>
 <div class="form-group">
   <label for="exampleInputPassword">Password</label>
   <input type="password" data-bs-input class="form-control input-password" id="exampleInputPassword">
@@ -194,7 +198,7 @@ Per rendere più semplice l'inserimento della password, l'elemento è dotato di 
   </button>
 </div>
 
-<p class="mt-4 pb-3">Con descrizione</p>
+<p class="mt-4 pb-3">Con descrizione estesa</p>
 <div class="form-group">
   <label for="exampleInputPassword2">Password</label>
   <input type="password" data-bs-input class="form-control input-password" id="exampleInputPassword2" aria-describedby="infoPassword2">
@@ -203,64 +207,24 @@ Per rendere più semplice l'inserimento della password, l'elemento è dotato di 
     <svg class="password-icon-visible icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-visible"></use></svg>
     <svg class="password-icon-invisible icon icon-sm d-none" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-invisible"></use></svg>
   </button>
-  <p id="infoPassword2" class="form-text text-muted d-block small pb-0">Inserisci almeno 8 caratteri.</p>
+  <p id="infoPassword2" class="form-text text-muted d-block small pb-0">Inserisci almeno 8 caratteri e alcuni caratteri speciali.</p>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
 ### Password con misuratore sicurezza e suggerimenti
 
-Inoltre, nel caso di un campo Input password utilizzato per la scelta di una password (es. in fase di registrazione account), è possibile abbinare un controllo per segnalare quanto la password che si sta inserendo sia sicura, con l'aggiunta dell'HTML necessario. È possibile personalizzare alcuni messaggi di questa variante usando specifici attributi `data`.  
+Nel caso di un campo per la scelta di una nuova password, è possibile abbinare controlli per segnalare quanto la password che si sta inserendo segua alcuni suggerimenti di sicurezza, come la lunghezza minima o l'uso di caratteri speciali. 
 
-<table class="table table-bordered table-striped">
-  <thead>
-    <tr>
-      <th style="width: 220px;">Attributo data</th>
-      <th>Descrizione</th>
-      <th>Default</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>data-bs-minimum-length</code></td>
-      <td>Lunghezza minima per il calcolo della forza della password (soglia password troppo breve)</td>
-      <td>8</td>
-    </tr>
-  </tbody>
-</table>
+{% capture callout %}
+#### Accessibilità dei testi di aiuto
+Nel caso del campo di tipo password, è molto importante configurare correttamente l'attributo `aria-describedby` dell'elemento `input.input-password`, indicando non solo l'`id` del testo di aiuto alla compilazione se presente, ma tutti gli `id` di eventuali altri elementi con testi utili, come ad esempio i testi di suggerimento o di valutazione della forza della password presenti nelle varianti che seguono.
+{% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
-È possibile personalizzare i testi dei messaggi riguardanti la robustezza della password usando gli attributi data dell'elemento `small.form-text`.
+{% capture callout %}
+#### Accessibilità degli annunci di sicurezza
+È da notare che l'elemento `p.strength-meter-info` ha l'attributo `aria-live="polite"` per permettere di percepire gli annunci di cambio stato della valutazione sicurezza alle tecnologie assistive, come i lettori di schermo.
+{% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
-<table class="table table-bordered table-striped">
-  <thead>
-    <tr>
-      <th style="width: 220px;">Attributo data</th>
-      <th>Descrizione</th>
-      <th>Default</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>data-bs-short-pass</code></td>
-      <td>Testo per il punteggio di forza della password troppo breve</td>
-      <td>Password troppo breve. </td>
-    </tr>
-    <tr>
-      <td><code>data-bs-bad-pass</code></td>
-      <td>Testo per punteggio di forza della password basso</td>
-      <td>Password debole. </td>
-    </tr>
-    <tr>
-      <td><code>data-bs-good-pass</code></td>
-      <td>Testo per punteggio di forza della password buono</td>
-      <td>Password abbastanza sicura. </td>
-    </tr>
-    <tr>
-      <td><code>data-bs-strong-pass</code></td>
-      <td>Testo per il punteggio di forza della password massimo</td>
-      <td>Password sicura. </td>
-    </tr>   
-  </tbody>
-</table>
 
 {% comment %}Example name: Password con misuratore sicurezza e suggerimenti{% endcomment %}
 {% capture example %}
@@ -325,6 +289,47 @@ Inoltre, nel caso di un campo Input password utilizzato per la scelta di una pas
 </div>
 {% endcapture %}{% include example.html content=example %}
 
+#### Personalizzazione
+
+È possibile personalizzare le varianti con misuratore di sicurezza usando specifici attributi `data` dell'elemento `p.strength-meter-info`. 
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th style="width: 220px;">Attributo data</th>
+      <th>Descrizione</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>data-bs-minimum-length</code></td>
+      <td>Lunghezza minima per il calcolo della forza della password (soglia password troppo breve)</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td><code>data-bs-short-pass</code></td>
+      <td>Testo per il punteggio di forza della password troppo breve</td>
+      <td>Password troppo breve. </td>
+    </tr>
+    <tr>
+      <td><code>data-bs-bad-pass</code></td>
+      <td>Testo per punteggio di forza della password basso</td>
+      <td>Password debole. </td>
+    </tr>
+    <tr>
+      <td><code>data-bs-good-pass</code></td>
+      <td>Testo per punteggio di forza della password buono</td>
+      <td>Password abbastanza sicura. </td>
+    </tr>
+    <tr>
+      <td><code>data-bs-strong-pass</code></td>
+      <td>Testo per il punteggio di forza della password massimo</td>
+      <td>Password sicura. </td>
+    </tr>   
+  </tbody>
+</table>
+
 #### Attivazione tramite JavaScript
 
 Abilitarlo manualmente con:
@@ -349,7 +354,7 @@ var passwordComponent = new bootstrap.InputPassword(inputElement, {
   <tbody>
     <tr>
       <td><code>minimumLength</code></td>
-      <td>Lunghezza minima per il calcolo della forza della password (soglia password molto debole)</td>
+      <td>Lunghezza minima per il calcolo della forza della password (soglia password troppo breve)</td>
       <td>8</td>
     </tr>
   </tbody>
