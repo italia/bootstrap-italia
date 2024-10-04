@@ -222,7 +222,7 @@ Inoltre, nel caso di un campo Input password utilizzato per la scelta di una pas
   <tbody>
     <tr>
       <td><code>data-bs-minimum-length</code></td>
-      <td>Lunghezza minima per il calcolo della forza della password (soglia password molto debole)</td>
+      <td>Lunghezza minima per il calcolo della forza della password (soglia password troppo breve)</td>
       <td>8</td>
     </tr>
   </tbody>
@@ -241,8 +241,8 @@ Inoltre, nel caso di un campo Input password utilizzato per la scelta di una pas
   <tbody>
     <tr>
       <td><code>data-bs-short-pass</code></td>
-      <td>Testo per il punteggio di forza della password minimo</td>
-      <td>Password molto debole. </td>
+      <td>Testo per il punteggio di forza della password troppo breve</td>
+      <td>Password troppo breve. </td>
     </tr>
     <tr>
       <td><code>data-bs-bad-pass</code></td>
@@ -252,12 +252,12 @@ Inoltre, nel caso di un campo Input password utilizzato per la scelta di una pas
     <tr>
       <td><code>data-bs-good-pass</code></td>
       <td>Testo per punteggio di forza della password buono</td>
-      <td>Password sicura. </td>
+      <td>Password abbastanza sicura. </td>
     </tr>
     <tr>
       <td><code>data-bs-strong-pass</code></td>
       <td>Testo per il punteggio di forza della password massimo</td>
-      <td>Password molto sicura. </td>
+      <td>Password sicura. </td>
     </tr>   
   </tbody>
 </table>
