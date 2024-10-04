@@ -15,7 +15,6 @@ const Default = {
   badPass: 'Password debole.',
   goodPass: 'Password abbastanza sicura.',
   strongPass: 'Password sicura.',
-  strongPass: 'Password troppo lunga.',
   minimumLength: 8,
   suggestionsLabel: 'Suggerimenti per una buona password:',
   suggestions: [
