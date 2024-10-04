@@ -7,6 +7,13 @@ title: Toggles
 description: Campi di tipo "interruttore".
 ---
 
+{% capture callout %}
+Breaking feature dalla versione **2.10.0**
+
+- Il "raggruppamento" di campi di input deve prevedere l'elemento nativo `<fieldset>`. 
+- Sostituire `aria-labelledby` con `aria-describedby`.
+{% endcapture %}{% include callout.html content=callout type="danger" %}
+
 Per ottenere un interruttore con levetta basterà usare la seguente sintassi HTML, gli stili CSS penseranno al resto. Il contenitore padre dovrà avere la classe `.toggles`, mentre la label conterrà sia la checkbox che uno `<span>` con classe `.lever`.
 
 {% comment %}Example name: Base {% endcomment %}
@@ -47,9 +54,39 @@ Affinché l'interruttore risulti disabilitato occorrerà aggiungere l'attributo 
 </div>
 {% endcapture %}{% include example.html content=example %}
 
+### Inline
+
+Per allineare orizzontalmente gli interruttori basterà aggiungere la classe `.form-check-inline` a qualsiasi `.form-check`.
+
+{% comment %}Example name: In linea {% endcomment %}
+{% capture example %}
+<fieldset>
+  <legend>Gruppo di toggle</legend>
+  <div class="form-check form-check-inline">
+    <div class="toggles">
+      <label for="toggleEsempio3a">
+        Label dell'interruttore 1
+        <input type="checkbox" id="toggleEsempio3a">
+        <span class="lever"></span>
+      </label>
+    </div>
+  </div>
+  <div class="form-check form-check-inline">
+    <div class="toggles">
+      <label for="toggleEsempio3b">
+        Label dell'interruttore 2
+        <input type="checkbox" id="toggleEsempio3b">
+        <span class="lever leverRight"></span>
+      </label>
+    </div>
+  </div>
+</fieldset>
+{% endcapture %}{% include example.html content=example %}
+
+
 ### Gruppi
 
-Per poter raggruppare gli elementi **toggle** occorrerà aggiungere al `.form-check` la classe `.form-check-group`.
+Per raggruppare visivamente gli elementi **toggle** occorrerà aggiungere al `.form-check` la classe `.form-check-group`.
 
 {% comment %}Example name: Gruppi {% endcomment %}
 {% capture example %}

@@ -9,6 +9,13 @@ description: Elementi e stili per la creazione di checkbox accessibili.
 
 ## Checkbox
 
+{% capture callout %}
+Breaking feature dalla versione **2.10.0**
+
+- Il "raggruppamento" di campi di input deve prevedere l'elemento nativo `<fieldset>`. 
+- Sostituire `aria-labelledby` con `aria-describedby`.
+{% endcapture %}{% include callout.html content=callout type="danger" %}
+
 Per utilizzare i checkbox personalizzati è necessario inserire la classe `.form-check` nell'elemento padre.
 
 {% comment %}Example name: Base {% endcomment %}
@@ -27,16 +34,17 @@ Per allineare orizzontalmente le `checkbox` basterà aggiungere la classe `.form
 
 {% comment %}Example name: In linea {% endcomment %}
 {% capture example %}
-<div>
-    <div class="form-check form-check-inline">
-      <input id="checkbox2" type="checkbox">
-      <label for="checkbox2">Checkbox non selezionato</label>
-    </div>
-    <div class="form-check form-check-inline">
-      <input id="checkbox3" type="checkbox" checked="checked">
-      <label for="checkbox3">Checkbox selezionato</label>
-    </div>
-</div>
+<fieldset>
+  <legend>Gruppo di checkbox</legend>
+  <div class="form-check form-check-inline">
+    <input id="checkbox2" type="checkbox">
+    <label for="checkbox2">Checkbox non selezionato</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input id="checkbox3" type="checkbox" checked="checked">
+    <label for="checkbox3">Checkbox selezionato</label>
+  </div>
+</fieldset>
 {% endcapture %}{% include example.html content=example %}
 
 ### Disabilitato
@@ -45,7 +53,8 @@ Affinché i campi `checkbox` e `radio` risultino disabilitati occorrerà aggiung
 
 {% comment %}Example name: Disabilitato {% endcomment %}
 {% capture example %}
-<div>
+<fieldset>
+  <legend>Gruppo di checkbox</legend>
   <div class="form-check">
     <input id="checkbox4" type="checkbox" disabled>
     <label for="checkbox4" class="disabled">Checkbox disabilitato non selezionato</label>
@@ -54,12 +63,12 @@ Affinché i campi `checkbox` e `radio` risultino disabilitati occorrerà aggiung
     <input id="checkbox5" type="checkbox" disabled checked="checked">
     <label for="checkbox5" class="disabled">Checkbox disabilitato selezionato</label>
   </div>
-</div>
+</fieldset>
 {% endcapture %}{% include example.html content=example %}
 
 ### Gruppi
 
-Per poter raggruppare gli elementi `checkbox` occorrerà aggiungere al `.form-check` la classe `.form-check-group`. L'elemento grafico di spunta verrà allineato alla destra del contenuto testuale.
+Per raggruppare visivamente gli elementi `checkbox` occorrerà aggiungere al `.form-check` la classe `.form-check-group`. L'elemento grafico di spunta verrà allineato alla destra del contenuto testuale.
 
 {% comment %}Example name: Gruppi {% endcomment %}
 {% capture example %}
