@@ -20,8 +20,10 @@ const Default = {
   requirements: [
     {
       key: 'length',
-      text: 'Almeno 8 caratteri.',
-      test: (password) => password.length >= 8, // XXX < dato già sopra minimuLength
+      text: 'Almeno {minLength} caratteri.',
+      test: function (password) {
+        return password.length >= this.minimumLength
+      },
     },
     {
       key: 'uppercase',
@@ -44,6 +46,10 @@ const Default = {
       test: (password) => /[^A-Za-z0-9]/.test(password),
     },
   ],
+}
+const lengthRequirement = Default.requirements.find((requirement) => requirement.key === 'length')
+if (lengthRequirement) {
+  lengthRequirement.text = lengthRequirement.text.replace('{minLength}', Default.minimumLength.toString())
 }
 
 const EVENT_CLICK = `click${EVENT_KEY}`
