@@ -258,7 +258,7 @@ class InputPassword extends BaseComponent {
     return svg
   }
 
-  _updatesuggestionsList(password) {
+  _updateSuggestionsList(password) {
     if (!this._suggsElement) return
     this._suggestions.forEach((sugg) => {
       const suggElement = this._suggsElement.querySelector(`[data-suggestion="${sugg.key}"]`)
