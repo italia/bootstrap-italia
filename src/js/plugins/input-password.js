@@ -73,28 +73,28 @@ class InputPassword extends BaseComponent {
       {
         key: 'length',
         text: (config) => config.suggestionLength.replace('{minLength}', config.minimumLength.toString()),
-        test: (password, config) => password.length >= config.minimumLength,
+        test: (password, config) => password.length >= config.minimumLength
       },
       {
         key: 'uppercase',
         text: (config) => config.suggestionUppercase,
-        test: (password) => /[A-Z]/.test(password),
+        test: (password) => /[A-Z]/.test(password)
       },
       {
         key: 'lowercase',
         text: (config) => config.suggestionLowercase,
-        test: (password) => /[a-z]/.test(password),
+        test: (password) => /[a-z]/.test(password)
       },
       {
         key: 'number',
         text: (config) => config.suggestionNumber,
-        test: (password) => /[0-9]/.test(password),
+        test: (password) => /[0-9]/.test(password)
       },
       {
         key: 'special',
         text: (config) => config.suggestionSpecial,
-        test: (password) => /[^A-Za-z0-9]/.test(password),
-      },
+        test: (password) => /[^A-Za-z0-9]/.test(password)
+      }
     ]
 
     this._init()
