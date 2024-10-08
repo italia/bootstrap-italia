@@ -17,6 +17,13 @@ const Default = {
   strongPass: 'Password sicura.',
   minimumLength: 8,
   suggestionsLabel: 'Suggerimenti per una buona password:',
+  suggestionFollowed: 'suggerimento seguito',
+  suggestionFollowedPlural: 'suggerimenti seguiti',
+  suggestionOf: 'di',
+  suggestionMetLabel: 'Soddisfatto: ',
+  checkIcon: `
+    M9.6 16.9 4 11.4l.8-.7 4.8 4.8 8.5-8.4.7.7-9.2 9.1z
+  `,
   suggestions: [
     {
       key: 'length',
@@ -173,7 +180,8 @@ class InputPassword extends BaseComponent {
         this._config.suggestions.forEach((sugg) => {
           if (sugg.test(password, this._config)) completedCount++
         })
-        text += ` ${completedCount} su ${totalCount} suggerimenti seguiti.`
+        const suggestionText = completedCount === 1 ? this._config.suggestionFollowed : this._config.suggestionFollowedPlural
+        text += ` ${completedCount} ${this._config.suggestionOf} ${totalCount} ${suggestionText}.`
       }
       if (this._textElement.innerHTML !== text) {
         this._textElement.innerHTML = text
@@ -209,8 +217,7 @@ class InputPassword extends BaseComponent {
       const suggElement = document.createElement('div')
       suggElement.className = 'suggestion'
       suggElement.dataset.suggestion = sugg.key
-      const checkIcon = this._createIcon('it-check')
-      checkIcon.classList.add('me-1', 'd-none')
+      const checkIcon = this._createIcon('it-check') 
       const textSpan = document.createElement('span')
       textSpan.textContent = sugg.text
       suggElement.appendChild(checkIcon)
@@ -224,13 +231,14 @@ class InputPassword extends BaseComponent {
 
   _createIcon(iconName) {
     const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
-    svg.setAttribute('class', `icon icon-sm`)
-    svg.setAttribute('aria-label', 'Soddisfatto: ')
+    svg.setAttribute('class', `icon icon-xs me-1 d-none`)
+    svg.setAttribute('aria-label', this._config.suggestionMetLabel)
+    svg.setAttribute('viewBox', '0 0 24 24')
     svg.style.width = '1em'
     svg.style.height = '1em'
-    const use = document.createElementNS('http://www.w3.org/2000/svg', 'use')
-    use.setAttributeNS('http://www.w3.org/1999/xlink', 'href', `/dist/svg/sprites.svg#${iconName}`)
-    svg.appendChild(use)
+    const path = document.createElementNS('http://www.w3.org/2000/svg', 'path')
+    path.setAttribute('d', this._config.checkIcon.trim())
+    svg.appendChild(path)
     return svg
   }
 
