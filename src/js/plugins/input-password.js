@@ -201,8 +201,8 @@ class InputPassword extends BaseComponent {
         const suggestionText = completedCount === 1 ? this._config.suggestionFollowed : this._config.suggestionFollowedPlural
         text += ` ${completedCount} ${this._config.suggestionOf} ${totalCount} ${suggestionText}.`
       }
-      if (this._textElement.innerHTML !== text) {
-        this._textElement.innerHTML = text
+      if (this._textElement.textContent !== text) {
+        this._textElement.textContent = text
         this._textElement.classList.forEach((className) => {
           if (className.match(/(^|\s)text-\S+/g)) {
             this._textElement.classList.remove(className)
