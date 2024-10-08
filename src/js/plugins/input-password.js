@@ -21,40 +21,14 @@ const Default = {
   suggestionFollowedPlural: 'suggerimenti seguiti',
   suggestionOf: 'di',
   suggestionMetLabel: 'Soddisfatto: ',
-  checkIcon: `
+  suggestionMetIconPath: `
     M9.6 16.9 4 11.4l.8-.7 4.8 4.8 8.5-8.4.7.7-9.2 9.1z
   `,
-  suggestions: [
-    {
-      key: 'length',
-      text: 'Almeno {minLength} caratteri.',
-      test: (password, config) => password.length >= config.minimumLength,
-    },
-    {
-      key: 'uppercase',
-      text: 'Una o più maiuscole.',
-      test: (password) => /[A-Z]/.test(password),
-    },
-    {
-      key: 'lowercase',
-      text: 'Una o più minuscole.',
-      test: (password) => /[a-z]/.test(password),
-    },
-    {
-      key: 'number',
-      text: 'Uno o più numeri.',
-      test: (password) => /[0-9]/.test(password),
-    },
-    {
-      key: 'special',
-      text: 'Uno o più caratteri speciali.',
-      test: (password) => /[^A-Za-z0-9]/.test(password),
-    },
-  ],
-}
-const lengthSuggestion = Default.suggestions.find((suggestion) => suggestion.key === 'length')
-if (lengthSuggestion) {
-  lengthSuggestion.text = lengthSuggestion.text.replace('{minLength}', Default.minimumLength.toString())
+  suggestionLength: 'Almeno {minLength} caratteri.',
+  suggestionUppercase: 'Una o più maiuscole.',
+  suggestionLowercase: 'Una o più minuscole.',
+  suggestionNumber: 'Uno o più numeri.',
+  suggestionSpecial: 'Uno o più caratteri speciali.',
 }
 
 const EVENT_CLICK = `click${EVENT_KEY}`
@@ -94,6 +68,34 @@ class InputPassword extends BaseComponent {
     this._text = {}
 
     this._label = new InputLabel(element)
+
+    this._suggestions = [
+      {
+        key: 'length',
+        text: (config) => config.suggestionLength.replace('{minLength}', config.minimumLength.toString()),
+        test: (password, config) => password.length >= config.minimumLength,
+      },
+      {
+        key: 'uppercase',
+        text: (config) => config.suggestionUppercase,
+        test: (password) => /[A-Z]/.test(password),
+      },
+      {
+        key: 'lowercase',
+        text: (config) => config.suggestionLowercase,
+        test: (password) => /[a-z]/.test(password),
+      },
+      {
+        key: 'number',
+        text: (config) => config.suggestionNumber,
+        test: (password) => /[0-9]/.test(password),
+      },
+      {
+        key: 'special',
+        text: (config) => config.suggestionSpecial,
+        test: (password) => /[^A-Za-z0-9]/.test(password),
+      },
+    ]
 
     this._init()
     this._bindEvents()
@@ -176,8 +178,8 @@ class InputPassword extends BaseComponent {
       let text = this._scoreText(score)
       if (this._suggsElement) {
         let completedCount = 0
-        const totalCount = this._config.suggestions.length
-        this._config.suggestions.forEach((sugg) => {
+        const totalCount = this._suggestions.length
+        this._suggestions.forEach((sugg) => {
           if (sugg.test(password, this._config)) completedCount++
         })
         const suggestionText = completedCount === 1 ? this._config.suggestionFollowed : this._config.suggestionFollowedPlural
@@ -213,13 +215,13 @@ class InputPassword extends BaseComponent {
     suggContainer.id = 'suggestions'
     suggContainer.className = 'password-suggestions'
 
-    this._config.suggestions.forEach((sugg) => {
+    this._suggestions.forEach((sugg) => {
       const suggElement = document.createElement('div')
       suggElement.className = 'suggestion'
       suggElement.dataset.suggestion = sugg.key
       const checkIcon = this._createIconCheck()
       const textSpan = document.createElement('span')
-      textSpan.textContent = sugg.text
+      textSpan.textContent = sugg.text(this._config)
       suggElement.appendChild(checkIcon)
       suggElement.appendChild(textSpan)
       suggContainer.appendChild(suggElement)
@@ -237,14 +239,14 @@ class InputPassword extends BaseComponent {
     svg.style.width = '1em'
     svg.style.height = '1em'
     const path = document.createElementNS('http://www.w3.org/2000/svg', 'path')
-    path.setAttribute('d', this._config.checkIcon.trim())
+    path.setAttribute('d', this._config.suggestionMetIconPath.trim())
     svg.appendChild(path)
     return svg
   }
 
   _updatesuggestionsList(password) {
     if (!this._suggsElement) return
-    this._config.suggestions.forEach((sugg) => {
+    this._suggestions.forEach((sugg) => {
       const suggElement = this._suggsElement.querySelector(`[data-suggestion="${sugg.key}"]`)
       if (suggElement) {
         const isMet = sugg.test(password, this._config)
