@@ -35,6 +35,18 @@ Rimosso l'elemento con classe `.input-group-prepend` in favore dell'elemento
 con classe `.input-group-text`.
 {% endcapture %}{% include callout.html content=callout type="danger" %}
 
+{% capture callout %}
+Breaking feature dalla versione **2.10.0**
+
+Il campo di input di tipo Password è stato rivisto in chiave accessibilità e robustezza. In particolare cosa cambia: 
+  - L'elemento `input.input-password` ha ora il corretto attributo `aria-describedby` al posto di `aria-labelledby`.
+  - L'elemento `.password-icon` diventa un `button` con `role=switch` e uso dell'attributo `aria-checked` per lo stato.
+  - Rivisto l'ordine degli elementi nell'HTML per rispecchiare la struttura corretta degli elementi. 
+  - Alcuni elementi `small` o `span` diventano `p`, ad esempio per la personalizzazione con attributi `data` delle varianti più avanzate ci si rivolgerà verso l'elemento `p.strength-meter-info` e non più al generico `small.form-text`. 
+  - Rimosso il controllo per il Caps-lock inserito, per non interferire con i tasti modificatori delle tecnologie assistive.
+  - Aggiunta una variante con misuratore di sicurezza e suggerimenti. 
+{% endcapture %}{% include callout.html content=callout type="danger" %}
+
 {% comment %}Example name: Varianti per tipo {% endcomment %}
 {% capture example %}
 <div>
@@ -86,11 +98,8 @@ Si può abbinare all'etichetta un _placeholder_ (testo di esempio) per ulteriore
 In caso di necessità, è anche possibile utilizzare un ulteriore contenuto testuale sotto il campo di testo, aggiungendo un elemento `<small>` con classe `.form-text` all'interno di `.form-group`.
 
 {% capture callout %}
-
-#### Associazione del testo di aiuto con gli elementi del modulo form
-
-Il testo di aiuto deve essere esplicitamente associato agli elementi del modulo form a cui si riferisce utilizzando l'attributo `aria-describedby`. Ciò garantirà che le tecnologie assistive, come gli screenreader, leggano questo testo di aiuto quando l'utente avrà il focus sull'elemento.
-
+#### Accessibilità: associazione del testo di aiuto con con i campi
+Il testo di aiuto deve essere esplicitamente associato ai campi a cui si riferisce utilizzando l'attributo `aria-describedby`. Ciò garantirà che le tecnologie assistive, come i lettori di schermo, leggano questo testo di aiuto quando l'utente avrà il focus sull'elemento.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
 {% comment %}Example name: Con testo di aiuto {% endcomment %}
@@ -138,134 +147,6 @@ Il testo di aiuto deve essere esplicitamente associato agli elementi del modulo 
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Input password
-
-Per rendere più semplice l'inserimento della password, l'elemento è stato dotato di un visualizzatore dei caratteri digitati. Inoltre è possibile abbinare un controllo <!--(grazie alla componente [strength meter](https://www.npmjs.com/package/password-strength-meter))--> per segnalare quanto la password che si sta inserendo sia sicura con l'aggiunta dell'HTML necessario.
-
-È possibile personalizzare la componente `strength meter` usando gli attributi data.
-
-<table class="table table-bordered table-striped">
-  <thead>
-    <tr>
-      <th style="width: 220px;">Attributo data</th>
-      <th>Descrizione</th>
-      <th>Default</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>data-bs-minimum-length</code></td>
-      <td>Lunghezza minima per il calcolo della forza della password (soglia password molto debole)</td>
-      <td>4</td>
-    </tr>
-  </tbody>
-</table>
-
-È possibile personalizzare i testi dei messaggi riguardanti la robustezza della password usando gli attributi data dell'elemento `small.form-text`.
-
-<table class="table table-bordered table-striped">
-  <thead>
-    <tr>
-      <th style="width: 220px;">Attributo data</th>
-      <th>Descrizione</th>
-      <th>Default</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>data-bs-short-pass</code></td>
-      <td>Testo per il punteggio di forza della password minimo</td>
-      <td>Password molto debole</td>
-    </tr>
-    <tr>
-      <td><code>data-bs-bad-pass</code></td>
-      <td>Testo per punteggio di forza della password basso</td>
-      <td>Password debole</td>
-    </tr>
-    <tr>
-      <td><code>data-bs-good-pass</code></td>
-      <td>Testo per punteggio di forza della password buono</td>
-      <td>Password sicura</td>
-    </tr>
-    <tr>
-      <td><code>data-bs-strong-pass</code></td>
-      <td>Testo per il punteggio di forza della password massimo</td>
-      <td>Password molto sicura</td>
-    </tr>   
-  </tbody>
-</table>
-
-{% comment %}Example name: Password {% endcomment %}
-{% capture example %}
-<div>
-  <div class="form-group">
-    <label for="exampleInputPassword">Password con label, placeholder e testo di aiuto</label>
-    <input type="password" data-bs-input class="form-control input-password" id="exampleInputPassword" aria-labelledby="infoPassword">
-    <span class="password-icon" aria-hidden="true">
-      <svg class="password-icon-visible icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-visible"></use></svg>
-      <svg class="password-icon-invisible icon icon-sm d-none"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-invisible"></use></svg>
-    </span>
-    <small id="infoPassword" class="form-text">Inserisci almeno 8 caratteri e una lettera maiuscola</small>
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword3">Password con strength meter</label>
-    <input type="password" data-bs-input class="form-control input-password" id="exampleInputPassword3">
-    <div class="password-strength-meter">
-      <small class="form-text text-muted"
-        data-bs-short-pass="Password molto debole"
-        data-bs-bad-pas="Password debole"
-        data-bs-good-pass="Password sicura"
-        data-bs-strong-pass="Password molto sicura"
-      >Inserisci almeno 8 caratteri e una lettera maiuscola</small>
-      <div class="password-meter progress rounded-0 position-absolute">
-        <div class="row position-absolute w-100 m-0">
-          <div class="col-3 border-start border-end border-white"></div>
-          <div class="col-3 border-start border-end border-white"></div>
-          <div class="col-3 border-start border-end border-white"></div>
-          <div class="col-3 border-start border-end border-white"></div>
-        </div>
-        <div class="progress-bar bg-muted" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-      </div>
-    </div>
-    <span class="password-icon" aria-hidden="true">
-      <svg class="password-icon-visible icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-visible"></use></svg>
-      <svg class="password-icon-invisible icon icon-sm d-none"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-invisible"></use></svg>
-    </span>
-    <small class="password-caps form-text text-warning position-absolute bg-white w-100">CAPS LOCK inserito</small>
-  </div>
-</div>
-{% endcapture %}{% include example.html content=example %}
-
-#### Attivazione tramite JavaScript
-
-Abilitarlo manualmente con:
-
-```js
-var inputElement = document.querySelector('#exampleInputPassword'))
-var passwordComponent = new bootstrap.InputPassword(inputElement, {
-  minimumLength: 4,
-})
-```
-
-#### Opzioni
-
-<table class="table table-bordered table-striped">
-  <thead>
-    <tr>
-      <th style="width: 220px;">Attributo data</th>
-      <th>Descrizione</th>
-      <th>Default</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>minimumLength</code></td>
-      <td>Lunghezza minima per il calcolo della forza della password (soglia password molto debole)</td>
-      <td>4</td>
-    </tr>
-  </tbody>
-</table>
-
 ### Disabilitato
 
 Aggiungi l'attributo `disabled` ad un input per impedire la modifica del valore contenuto e non inviare i dati in esso contenuti.
@@ -303,6 +184,246 @@ Se per qualche motivo vuoi avere gli elementi `<input readonly>` nella forma sti
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
+
+## Input password
+
+Per rendere più semplice l'inserimento della password, il campo Input di tipo password è dotato di un pulsante che permette di mostrare i caratteri inseriti. Inoltre, è possibile abbinare una descrizione estesa che ne aiuti la compilazine, ad esempio in fase di scelta di una nuova password.  
+
+{% comment %}Example name: Password base{% endcomment %}
+{% capture example %}
+
+<p class="mt-4 pb-3">Base, login</p>
+<div class="form-group">
+  <label for="exampleInputPassword">Password</label>
+  <input type="password" data-bs-input class="form-control input-password" id="exampleInputPassword">
+  <button type="button" class="password-icon btn" role="switch" aria-checked="false">
+    <span class="visually-hidden">Mostra/Nascondi Password</span>
+    <svg class="password-icon-visible icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-visible"></use></svg>
+    <svg class="password-icon-invisible icon icon-sm d-none" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-invisible"></use></svg>
+  </button>
+</div>
+
+<p class="mt-4 pb-3">Con descrizione estesa</p>
+<div class="form-group">
+  <label for="exampleInputPassword2">Password</label>
+  <input type="password" data-bs-input class="form-control input-password" id="exampleInputPassword2" aria-describedby="infoPassword2">
+  <button type="button" class="password-icon btn" role="switch" aria-checked="false">
+    <span class="visually-hidden">Mostra/Nascondi Password</span>
+    <svg class="password-icon-visible icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-visible"></use></svg>
+    <svg class="password-icon-invisible icon icon-sm d-none" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-invisible"></use></svg>
+  </button>
+  <p id="infoPassword2" class="form-text text-muted d-block small pb-0">Inserisci almeno 8 caratteri e alcuni caratteri speciali.</p>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+### Password con misuratore sicurezza e suggerimenti
+
+Nel caso di un campo per la scelta di una nuova password, è possibile abbinare controlli per segnalare quanto la password che si sta inserendo segua alcuni suggerimenti di sicurezza, come la lunghezza minima o l'uso di caratteri speciali. Inoltre, è possibile restituire all'utente una lista dei suggerimenti, con indicati quelli che sono soddistatti. 
+
+{% capture callout %}
+#### Importante sulla sicurezza per l'uso in produzione
+Le due varianti del componente che seguono, con funzionalità avanzate di suggerimento e guida dell'utente nella scelta della password, sono da considerarsi esempi da usare per studio e ricerca. **Vi consigliamo di coinvolgere un esperto di sicurezza prima di implementarle in ambienti di produzione** e, in ogni caso, di valutate se riscrivere le funzioni di calcolo del punteggio, disponibili nel plugin `input-password.js`, adattandole al contesto o a cambiamenti negli standard internazionali riconosciuti. Ad esempio potreste voler cambiare i calcoli per la forza e aggiustare i relativi suggerimenti, oppure integrare con controlli per password più comuni od oggetto di leak conosciuti.
+{% endcapture %}{% include callout.html content=callout type="warning" %}
+
+{% capture callout %}
+#### Accessibilità dei testi di aiuto
+Nel caso del campo di tipo password, è molto importante configurare correttamente l'attributo `aria-describedby` dell'elemento `input.input-password`, indicando non solo l'`id` del testo di aiuto alla compilazione se presente, ma tutti gli `id` di eventuali altri elementi con testi utili, come ad esempio i testi di suggerimento o di valutazione della forza della password presenti nelle varianti che seguono.
+{% endcapture %}{% include callout.html content=callout type="accessibility" %}
+
+{% capture callout %}
+#### Accessibilità degli annunci di sicurezza
+È da notare che l'elemento `p.strength-meter-info` ha l'attributo `aria-live="polite"` per permettere di percepire gli annunci di cambio stato della valutazione sicurezza alle tecnologie assistive, come i lettori di schermo.
+{% endcapture %}{% include callout.html content=callout type="accessibility" %}
+
+
+{% comment %}Example name: Password con misuratore sicurezza e suggerimenti{% endcomment %}
+{% capture example %}
+
+<p class="mt-4 pb-3">Con descrizione e misuratore sicurezza</p>
+<div class="form-group">
+  <label for="exampleInputPassword3">Scegli password</label>
+  <input type="password" data-bs-input class="form-control input-password" id="exampleInputPassword3" aria-describedby="strengthMeterInfo3 infoPassword3">
+  <button type="button" class="password-icon btn" role="switch" aria-checked="false">
+    <span class="visually-hidden">Mostra/Nascondi Password</span>
+    <svg class="password-icon-visible icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-visible"></use></svg>
+    <svg class="password-icon-invisible icon icon-sm d-none" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-invisible"></use></svg>
+  </button>
+  <p id="infoPassword3" class="form-text text-muted d-block small pb-0">Inserisci almeno 8 caratteri, combinando maiuscole, numeri e caratteri speciali.</p>
+  <div class="password-strength-meter">
+    <p id="strengthMeterInfo3" class="strength-meter-info small form-text text-muted pt-0" aria-live="polite"
+      data-bs-short-pass="Password troppo breve."
+      data-bs-bad-pas="Password debole."
+      data-bs-good-pass="Password abbastanza sicura."
+      data-bs-strong-pass="Password sicura."
+    ></p>      
+    <div class="password-meter progress rounded-0 position-absolute">
+      <div class="row position-absolute w-100 m-0">
+        <div class="col-3 border-start border-end border-white"></div>
+        <div class="col-3 border-start border-end border-white"></div>
+        <div class="col-3 border-start border-end border-white"></div>
+        <div class="col-3 border-start border-end border-white"></div>
+      </div>
+      <div class="progress-bar bg-muted" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+  </div>
+</div>
+
+<p class="mt-4 pb-3">Con misuratore sicurezza e suggerimenti puntuali</p>
+<div class="form-group">
+  <label for="exampleInputPassword4">Scegli password</label>
+  <input type="password" data-bs-input class="form-control input-password" id="exampleInputPassword4" aria-describedby="strengthMeterSuggestions4 strengthMeterInfo4 infoPassword4">
+  <button type="button" class="password-icon btn" role="switch" aria-checked="false">
+    <span class="visually-hidden">Mostra/Nascondi Password</span>
+    <svg class="password-icon-visible icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-visible"></use></svg>
+    <svg class="password-icon-invisible icon icon-sm d-none" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-invisible"></use></svg>
+  </button>
+  <p id="infoPassword4" class="form-text text-muted d-block small pb-0"></p>
+  <div class="password-strength-meter">
+    <div id="strengthMeterSuggestions4" class="strenght-meter-suggestions small form-text text-muted"></div>
+    <p id="strengthMeterInfo4" class="strength-meter-info small form-text text-muted pt-0" aria-live="polite"
+      data-bs-short-pass="Password troppo breve."
+      data-bs-bad-pas="Password debole."
+      data-bs-good-pass="Password abbastanza sicura."
+      data-bs-strong-pass="Password sicura."
+    ></p>      
+    <div class="password-meter progress rounded-0 position-absolute">
+      <div class="row position-absolute w-100 m-0">
+        <div class="col-3 border-start border-end border-white"></div>
+        <div class="col-3 border-start border-end border-white"></div>
+        <div class="col-3 border-start border-end border-white"></div>
+        <div class="col-3 border-start border-end border-white"></div>
+      </div>
+      <div class="progress-bar bg-muted" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+  </div>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+#### Personalizzazione
+
+È possibile personalizzare le varianti con misuratore di sicurezza usando specifici attributi `data` dell'elemento `p.strength-meter-info`. 
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th style="width: 220px;">Attributo data</th>
+      <th>Descrizione</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>data-bs-minimum-length</code></td>
+      <td>Lunghezza minima per il calcolo della forza della password (soglia password troppo breve)</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td><code>data-bs-short-pass</code></td>
+      <td>Testo per il punteggio di forza della password troppo breve</td>
+      <td>Password troppo breve.</td>
+    </tr>
+    <tr>
+      <td><code>data-bs-bad-pass</code></td>
+      <td>Testo per punteggio di forza della password basso</td>
+      <td>Password debole.</td>
+    </tr>
+    <tr>
+      <td><code>data-bs-good-pass</code></td>
+      <td>Testo per punteggio di forza della password buono</td>
+      <td>Password abbastanza sicura.</td>
+    </tr>
+    <tr>
+      <td><code>data-bs-strong-pass</code></td>
+      <td>Testo per il punteggio di forza della password massimo</td>
+      <td>Password sicura.</td>
+    </tr>  
+    <tr>
+      <td><code>data-bs-suggestions-label</code></td>
+      <td>Testo nascosto visivamente che precede l'elenco di suggerimenti</td>
+      <td>Suggerimenti per una buona password:</td>
+    </tr>
+    <tr>
+      <td><code>data-bs-suggestion-followed</code></td>
+      <td>Testo singolare per la parte finale di "1 di 5 suggerimenti seguito"</td>
+      <td>suggerimenti seguito</td>
+    </tr>
+    <tr>
+      <td><code>data-bs-suggestion-followed-plural</code></td>
+      <td>Testo plurale per la parte finale di "2 di 5 suggerimenti seguiti"</td>
+      <td>suggerimenti seguiti</td>
+    </tr>
+    <tr>
+      <td><code>data-bs-suggestion-of</code></td>
+      <td>Preposizione centrale per "2 di 5"</td>
+      <td>di</td>
+    </tr>
+    <tr>
+      <td><code>data-bs-suggestion-met-label</code></td>
+      <td>Aria-label per l'icona di suggerimento soddisfatto</td>
+      <td>Soddisfatto: </td>
+    </tr>
+    <tr>
+      <td><code>data-bs-suggestion-met-icon-path</code></td>
+      <td>Path per la forma dell'icona di suggerimento soddisfatto</td>
+      <td>M9.6 16.9 4 11.4l.8-.7 4.8 4.8 8.5-8.4.7.7-9.2 9.1z</td>
+    </tr>
+    <tr>
+      <td><code>data-bs-suggestion-length</code></td>
+      <td>Lunghezza minima della password</td>
+      <td>Almeno {minLength} caratteri.</td>
+    </tr>
+    <tr>
+      <td><code>data-bs-suggestion-uppercase</code></td>
+      <td>Uso di lettere maiuscole</td>
+      <td>Una o più maiuscole.</td>
+    </tr>
+    <tr>
+      <td><code>data-bs-suggestion-lowercase</code></td>
+      <td>Uso di lettere minuscole</td>
+      <td>Una o più minuscole.</td>
+    </tr>
+    <tr>
+      <td><code>data-bs-suggestion-number</code></td>
+      <td>Uso di numeri</td>
+      <td>Una o più mumero.</td>
+    </tr>
+    <tr>
+      <td><code>data-bs-suggestion-special</code></td>
+      <td>Uso di caratteri speciali</td>
+      <td>Uno o più caratteri speciali.</td>
+    </tr>
+  </tbody>
+</table>
+
+#### Attivazione tramite JavaScript
+
+Abilitarlo manualmente con:
+
+```js
+var inputElement = document.querySelector('#exampleInputPassword'))
+var passwordComponent = new bootstrap.InputPassword(inputElement, {
+  minimumLength: 8,
+})
+```
+
+Opzioni: 
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th style="width: 220px;">Attributo data</th>
+      <th>Descrizione</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>minimumLength</code></td>
+      <td>Lunghezza minima per il calcolo della forza della password (soglia password troppo breve)</td>
+      <td>8</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Ricerca con autocompletamento
 
