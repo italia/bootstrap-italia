@@ -17,7 +17,7 @@ const Default = {
   strongPass: 'Password sicura.',
   minimumLength: 8,
   suggestionsLabel: 'Suggerimenti per una buona password:',
-  suggestionFollowed: 'suggerimento seguito',
+  suggestionFollowed: 'suggerimenti seguito',
   suggestionFollowedPlural: 'suggerimenti seguiti',
   suggestionOf: 'di',
   suggestionMetLabel: 'Soddisfatto: ',
