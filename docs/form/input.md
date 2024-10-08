@@ -222,7 +222,7 @@ Nel caso di un campo per la scelta di una nuova password, è possibile abbinare 
 
 {% capture callout %}
 #### Importante sulla sicurezza per l'uso in produzione
-Le due varianti del componente che seguono, con funzionalità avanzate di suggerimento e guida dell'utente nella scelta della password, sono da considerarsi esempi da usare per studio e ricerca. **Vi consigliamo di coinvolgere un esperto di sicurezza prima di implementarle in ambienti di produzione** e, in ogni caso, di valutate se riscrivere le funzioni di calcolo del punteggio, disponibili nel plugin `input-password.js`, adattandole al contesto o a cambiamenti negli standard internazionali riconosciuti. Ad esempio potreste voler cambiare i calcoli per la forza e aggiustare i relativi suggerimenti, oppure integrare con controlli per password più vulnerabili.
+Le due varianti del componente che seguono, con funzionalità avanzate di suggerimento e guida dell'utente nella scelta della password, sono da considerarsi esempi da usare per studio e ricerca. **Vi consigliamo di coinvolgere un esperto di sicurezza prima di implementarle in ambienti di produzione** e, in ogni caso, di valutate se riscrivere le funzioni di calcolo del punteggio, disponibili nel plugin `input-password.js`, adattandole al contesto o a cambiamenti negli standard internazionali riconosciuti. Ad esempio potreste voler cambiare i calcoli per la forza e aggiustare i relativi suggerimenti, oppure integrare con controlli per password più comuni od oggetto di leak conosciuti.
 {% endcapture %}{% include callout.html content=callout type="warning" %}
 
 {% capture callout %}
