@@ -118,23 +118,21 @@ class InputPassword extends BaseComponent {
 
   _init() {
     if (this._isCustom) {
+      this._handleAutofill()
       this._showPwdElement = SelectorEngine.findOne(SELECTOR_BTN_SHOW_PWD, this._element.parentNode)
-    }
-
-    if (this._meter) {
-      this._grayBarElement = this._meter.querySelector(SELECTOR_METER_GRAYBAR)
-      this._colorBarElement = this._meter.querySelector(SELECTOR_METER_COLBAR)
-      this._textElement = this._meter.querySelector(SELECTOR_METER_TEXT)
-      this._suggsElement = this._meter.querySelector(SELECTOR_METER_SUGGS)
-      if (this._textElement) {
-        this._config = Object.assign({}, this._config, { ...Manipulator.getDataAttributes(this._textElement) })
+      if (this._meter) {
+        this._grayBarElement = this._meter.querySelector(SELECTOR_METER_GRAYBAR)
+        this._colorBarElement = this._meter.querySelector(SELECTOR_METER_COLBAR)
+        this._textElement = this._meter.querySelector(SELECTOR_METER_TEXT)
+        this._suggsElement = this._meter.querySelector(SELECTOR_METER_SUGGS)
+        if (this._textElement) {
+          this._config = Object.assign({}, this._config, { ...Manipulator.getDataAttributes(this._textElement) })
+        }
+        if (this._suggsElement) {
+          this._createsuggestionsList()
+        }
       }
-      if (this._suggsElement) {
-        this._createsuggestionsList()
-      }
     }
-
-    this._checkPassword()
   }
 
   _bindEvents() {
@@ -142,12 +140,27 @@ class InputPassword extends BaseComponent {
       if (this._showPwdElement) {
         EventHandler.on(this._showPwdElement, EVENT_CLICK, () => this._toggleShowPassword())
       }
+      if (this._meter) {
+        EventHandler.on(this._element, EVENT_KEYUP, () => this._checkPassword())
+        EventHandler.on(this._element, 'input', () => this._checkPassword())
+      }
     }
+  }
 
-    if (this._meter) {
-      EventHandler.on(this._element, EVENT_KEYUP, () => this._checkPassword())
-      EventHandler.on(this._element, 'input', () => this._checkPassword())
+  _handleAutofill() {
+    const checkAndActivate = () => {
+      if (this._element.value !== '') {
+        this._label._labelOut()
+        this._checkPassword()
+      }
     }
+    checkAndActivate()
+    setTimeout(checkAndActivate, 100)
+    EventHandler.on(this._element, 'animationstart', (event) => {
+      if (event.animationName === 'onAutoFillStart') {
+        checkAndActivate()
+      }
+    })
   }
 
   _toggleShowPassword() {
@@ -431,6 +444,19 @@ const createInput = (element) => {
     return InputPassword.getOrCreateInstance(element)
   }
   return null
+}
+
+const initInputPassword = () => {
+  const element = SelectorEngine.findOne(SELECTOR_PASSWORD)
+  if (element) {
+    InputPassword.getOrCreateInstance(element)
+  }
+}
+
+if (document.readyState !== 'loading') {
+  initInputPassword()
+} else {
+  document.addEventListener('DOMContentLoaded', initInputPassword)
 }
 
 EventHandler.on(document, EVENT_MOUSEDOWN_DATA_API, SELECTOR_PASSWORD + ', label', function () {
