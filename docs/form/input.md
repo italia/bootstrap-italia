@@ -315,23 +315,78 @@ Nel caso del campo di tipo password, è molto importante configurare correttamen
     <tr>
       <td><code>data-bs-short-pass</code></td>
       <td>Testo per il punteggio di forza della password troppo breve</td>
-      <td>Password troppo breve. </td>
+      <td>Password troppo breve.</td>
     </tr>
     <tr>
       <td><code>data-bs-bad-pass</code></td>
       <td>Testo per punteggio di forza della password basso</td>
-      <td>Password debole. </td>
+      <td>Password debole.</td>
     </tr>
     <tr>
       <td><code>data-bs-good-pass</code></td>
       <td>Testo per punteggio di forza della password buono</td>
-      <td>Password abbastanza sicura. </td>
+      <td>Password abbastanza sicura.</td>
     </tr>
     <tr>
       <td><code>data-bs-strong-pass</code></td>
       <td>Testo per il punteggio di forza della password massimo</td>
-      <td>Password sicura. </td>
-    </tr>   
+      <td>Password sicura.</td>
+    </tr>  
+    <tr>
+      <td><code>data-bs-suggestions-label</code></td>
+      <td>Testo nascosto visivamente che precede l'elenco di suggerimenti</td>
+      <td>Suggerimenti per una buona password:</td>
+    </tr>
+    <tr>
+      <td><code>data-bs-suggestion-followed</code></td>
+      <td>Testo singolare per la parte finale di "1 di 5 suggerimenti seguito"</td>
+      <td>suggerimenti seguito</td>
+    </tr>
+    <tr>
+      <td><code>data-bs-suggestion-followed-plural</code></td>
+      <td>Testo plurale per la parte finale di "2 di 5 suggerimenti seguiti"</td>
+      <td>suggerimenti seguiti</td>
+    </tr>
+    <tr>
+      <td><code>data-bs-suggestion-of</code></td>
+      <td>Preposizione centrale per "2 di 5"</td>
+      <td>di</td>
+    </tr>
+    <tr>
+      <td><code>data-bs-suggestion-met-label</code></td>
+      <td>Aria-label per l'icona di suggerimento soddisfatto</td>
+      <td>Soddisfatto: </td>
+    </tr>
+    <tr>
+      <td><code>data-bs-suggestion-met-icon-path</code></td>
+      <td>Path per la forma dell'icona di suggerimento soddisfatto</td>
+      <td>M9.6 16.9 4 11.4l.8-.7 4.8 4.8 8.5-8.4.7.7-9.2 9.1z</td>
+    </tr>
+    <tr>
+      <td><code>data-bs-suggestion-length</code></td>
+      <td>Lunghezza minima della password</td>
+      <td>Almeno {minLength} caratteri.</td>
+    </tr>
+    <tr>
+      <td><code>data-bs-suggestion-uppercase</code></td>
+      <td>Uso di lettere maiuscole</td>
+      <td>Una o più maiuscole.</td>
+    </tr>
+    <tr>
+      <td><code>data-bs-suggestion-lowercase</code></td>
+      <td>Uso di lettere minuscole</td>
+      <td>Una o più minuscole.</td>
+    </tr>
+    <tr>
+      <td><code>data-bs-suggestion-number</code></td>
+      <td>Uso di numeri</td>
+      <td>Una o più mumero.</td>
+    </tr>
+    <tr>
+      <td><code>data-bs-suggestion-special</code></td>
+      <td>Uso di caratteri speciali</td>
+      <td>Uno o più caratteri speciali.</td>
+    </tr>
   </tbody>
 </table>
 
