@@ -217,7 +217,7 @@ class InputPassword extends BaseComponent {
       const suggElement = document.createElement('div')
       suggElement.className = 'suggestion'
       suggElement.dataset.suggestion = sugg.key
-      const checkIcon = this._createIcon('it-check') 
+      const checkIcon = this._createIconCheck()
       const textSpan = document.createElement('span')
       textSpan.textContent = sugg.text
       suggElement.appendChild(checkIcon)
@@ -229,7 +229,7 @@ class InputPassword extends BaseComponent {
     this._suggsElement.appendChild(suggContainer)
   }
 
-  _createIcon(iconName) {
+  _createIconCheck() {
     const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
     svg.setAttribute('class', `icon icon-xs me-1 d-none`)
     svg.setAttribute('aria-label', this._config.suggestionMetLabel)
@@ -332,7 +332,7 @@ class InputPassword extends BaseComponent {
     }
 
     // password has at least 2 symbols
-    var symbols = '.*[!,@,#,$,%,^,&,*,?,_,~]' 
+    var symbols = '.*[!,@,#,$,%,^,&,*,?,_,~]'
     symbols = new RegExp('(' + symbols + symbols + ')')
     if (password.match(symbols)) {
       score += 5
