@@ -332,7 +332,7 @@ class InputPassword extends BaseComponent {
     }
 
     // password has at least 2 symbols
-    var symbols = '.*[!,@,#,$,%,^,&,*,?,_,~]' // xxx solo questi?
+    var symbols = '.*[!,@,#,$,%,^,&,*,?,_,~]' 
     symbols = new RegExp('(' + symbols + symbols + ')')
     if (password.match(symbols)) {
       score += 5
