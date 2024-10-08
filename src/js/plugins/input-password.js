@@ -73,28 +73,28 @@ class InputPassword extends BaseComponent {
       {
         key: 'length',
         text: (config) => config.suggestionLength.replace('{minLength}', config.minimumLength.toString()),
-        test: (password, config) => password.length >= config.minimumLength
+        test: (password, config) => password.length >= config.minimumLength,
       },
       {
         key: 'uppercase',
         text: (config) => config.suggestionUppercase,
-        test: (password) => /[A-Z]/.test(password)
+        test: (password) => /[A-Z]/.test(password),
       },
       {
         key: 'lowercase',
         text: (config) => config.suggestionLowercase,
-        test: (password) => /[a-z]/.test(password)
+        test: (password) => /[a-z]/.test(password),
       },
       {
         key: 'number',
         text: (config) => config.suggestionNumber,
-        test: (password) => /[0-9]/.test(password)
+        test: (password) => /[0-9]/.test(password),
       },
       {
         key: 'special',
         text: (config) => config.suggestionSpecial,
-        test: (password) => /[^A-Za-z0-9]/.test(password)
-      }
+        test: (password) => /[^A-Za-z0-9]/.test(password),
+      },
     ]
 
     this._init()
@@ -160,8 +160,13 @@ class InputPassword extends BaseComponent {
   _checkPassword() {
     const password = this._element.value
     const score = this._calculateScore(password)
-    const perc = score < 0 ? 0 : score
+    this._updateMeter(score)
+    this._updateText(score, password)
+    this._updateSuggestions(password)
+  }
 
+  _updateMeter(score) {
+    const perc = score < 0 ? 0 : score
     if (this._colorBarElement) {
       this._colorBarElement.classList.forEach((className) => {
         if (className.match(/(^|\s)bg-\S+/g)) {
@@ -173,15 +178,13 @@ class InputPassword extends BaseComponent {
       this._colorBarElement.setAttribute('aria-valuenow', perc)
     }
     EventHandler.trigger(this._element, EVENT_SCORE)
+  }
 
+  _updateText(score, password) {
     if (this._textElement) {
       let text = this._scoreText(score)
       if (this._suggsElement) {
-        let completedCount = 0
-        const totalCount = this._suggestions.length
-        this._suggestions.forEach((sugg) => {
-          if (sugg.test(password, this._config)) completedCount++
-        })
+        const { completedCount, totalCount } = this._getCompletedSuggestions(password)
         const suggestionText = completedCount === 1 ? this._config.suggestionFollowed : this._config.suggestionFollowedPlural
         text += ` ${completedCount} ${this._config.suggestionOf} ${totalCount} ${suggestionText}.`
       }
@@ -196,11 +199,22 @@ class InputPassword extends BaseComponent {
         EventHandler.trigger(this._element, EVENT_TEXT)
       }
     }
+  }
 
+  _updateSuggestions(password) {
     if (this._suggsElement) {
-      this._updatesuggestionsList(password)
+      this._updateSuggestionsList(password)
       EventHandler.trigger(this._element, EVENT_SUGGS)
     }
+  }
+
+  _getCompletedSuggestions(password) {
+    let completedCount = 0
+    const totalCount = this._suggestions.length
+    this._suggestions.forEach((sugg) => {
+      if (sugg.test(password, this._config)) completedCount++
+    })
+    return { completedCount, totalCount }
   }
 
   _createsuggestionsList() {
