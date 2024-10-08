@@ -168,8 +168,8 @@ class InputPassword extends BaseComponent {
           this._colorBarElement.classList.remove(className)
         }
       })
-      this._colorBarElement.classList.add('bg-' + this._scoreColor(score))
-      this._colorBarElement.style.width = perc + '%'
+      this._colorBarElement.classList.add(`bg-${this._scoreColor(score)}`)
+      this._colorBarElement.style.width = `${perc}%`
       this._colorBarElement.setAttribute('aria-valuenow', perc)
     }
     EventHandler.trigger(this._element, EVENT_SCORE)
@@ -192,7 +192,7 @@ class InputPassword extends BaseComponent {
             this._textElement.classList.remove(className)
           }
         })
-        this._textElement.classList.add('text-' + this._scoreColor(score))
+        this._textElement.classList.add(`text-${this._scoreColor(score)}`)
         EventHandler.trigger(this._element, EVENT_TEXT)
       }
     }
