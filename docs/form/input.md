@@ -218,7 +218,12 @@ Per rendere più semplice l'inserimento della password, il campo Input di tipo p
 
 ### Password con misuratore sicurezza e suggerimenti
 
-Nel caso di un campo per la scelta di una nuova password, è possibile abbinare controlli per segnalare quanto la password che si sta inserendo segua alcuni suggerimenti di sicurezza, come la lunghezza minima o l'uso di caratteri speciali. 
+Nel caso di un campo per la scelta di una nuova password, è possibile abbinare controlli per segnalare quanto la password che si sta inserendo segua alcuni suggerimenti di sicurezza, come la lunghezza minima o l'uso di caratteri speciali. Inoltre, è possibile restituire all'utente una lista dei suggerimenti, con indicati quelli che sono soddistatti. 
+
+{% capture callout %}
+#### Importante sulla sicurezza per l'uso in produzione
+Le due varianti del componente che seguono, con funzionalità avanzate di suggerimento e guida dell'utente nella scelta della password, sono da considerarsi esempi da usare per studio e ricerca. **Vi consigliamo di coinvolgere un esperto di sicurezza prima di implementarle in ambienti di produzione** e, in ogni caso, di valutate se riscrivere le funzioni di calcolo del punteggio, disponibili nel plugin `input-password.js`, adattandole al contesto o a cambiamenti negli standard internazionali riconosciuti. Ad esempio potreste voler cambiare i calcoli per la forza e aggiustare i relativi suggerimenti, oppure integrare con controlli per password più vulnerabili.
+{% endcapture %}{% include callout.html content=callout type="warning" %}
 
 {% capture callout %}
 #### Accessibilità dei testi di aiuto
