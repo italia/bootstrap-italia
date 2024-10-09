@@ -1,0 +1,25 @@
+{
+    "amichevole con lettori di schermo": "IN REVIEW",
+    "angular Kit": "DA FARE",
+    "assignees": [
+        "Fupete"
+    ],
+    "bootstrap Italia": "DA RIVEDERE A11Y",
+    "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/form/transfer/",
+    "comprensibile": "PRONTO",
+    "content": {
+        "body": "https://designers.italia.it/design-system/componenti/transfer/",
+        "id": "DI_lADOAOqloM4AcXblzgFT9go",
+        "title": "Transfer",
+        "type": "DraftIssue"
+    },
+    "id": "PVTI_lADOAOqloM4AcXblzgMjwng",
+    "navigabile": "DA RIVEDERE",
+    "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1187 \u2014 https://github.com/italia/bootstrap-italia/issues/1188 \u2014\u00a0https://github.com/italia/bootstrap-italia/issues/1189 \u2014\u00a0https://github.com/italia/bootstrap-italia/issues/1190 \u2014\u00a0https://github.com/italia/design-ui-kit/issues/151 \u2014 https://github.com/italia/design-angular-kit/issues/310",
+    "react Kit": "NON PRESENTE",
+    "status": "Todo",
+    "status a11y check": "Done",
+    "title": "Transfer",
+    "uI Kit Italia": "DA FARE",
+    "visivamente accessibile": "PRONTO"
+}

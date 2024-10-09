@@ -1,4 +1,12 @@
 {
+    "amichevole con lettori di schermo": "PRONTO",
+    "angular Kit": "NON PRESENTE",
+    "assignees": [
+        "Fupete"
+    ],
+    "bootstrap Italia": "PRONTO",
+    "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/componenti/hero/",
+    "comprensibile": "PRONTO",
     "content": {
         "body": "https://designers.italia.it/design-system/componenti/hero/",
         "id": "DI_lADOAOqloM4AcXblzgFT9Zc",
@@ -6,7 +14,14 @@
         "type": "DraftIssue"
     },
     "id": "PVTI_lADOAOqloM4AcXblzgMjwaY",
+    "navigabile": "PRONTO",
+    "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1175 \u2014\u00a0https://github.com/italia/design-react-kit/issues/1092",
+    "react Kit": "DA RIVEDERE A11Y",
+    "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-menu-di-navigazione-hero--documentazione",
     "status": "Todo",
-    "status a11y check": "To do",
-    "title": "Hero"
+    "status a11y check": "Done",
+    "title": "Hero",
+    "uI Kit Italia": "PRONTO",
+    "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920",
+    "visivamente accessibile": "PRONTO"
 }

@@ -1,4 +1,12 @@
 {
+    "amichevole con lettori di schermo": "PRONTO",
+    "angular Kit": "NON PRESENTE",
+    "assignees": [
+        "Fupete"
+    ],
+    "bootstrap Italia": "DA RIVEDERE A11Y",
+    "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/menu-di-navigazione/footer/",
+    "comprensibile": "PRONTO",
     "content": {
         "body": "https://designers.italia.it/design-system/componenti/footer/",
         "id": "DI_lADOAOqloM4AcXblzgFT9Ys",
@@ -6,7 +14,15 @@
         "type": "DraftIssue"
     },
     "id": "PVTI_lADOAOqloM4AcXblzgMjwZc",
+    "navigabile": "PRONTO",
+    "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1172 \u2014\u00a0https://github.com/italia/design-ui-kit/issues/137",
+    "notes / More": "Manca in Angular Kit \u2014 Alcune incongruenze di contenuti e spazi da verificare: in UI Kit Italia ci sono cose in pi\u00f9 (es: newsletter, presente solo in React Kit ma non in BSI). \u2014 In UI Kit Italia c'\u00e8 anche una variante \"Alternate\" non presente in sviluppo. ",
+    "react Kit": "DA RIVEDERE A11Y",
+    "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-menu-di-navigazione-footer--documentazione",
     "status": "Todo",
-    "status a11y check": "To do",
-    "title": "Footer"
+    "status a11y check": "Done",
+    "title": "Footer",
+    "uI Kit Italia": "DA RIVEDERE",
+    "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920",
+    "visivamente accessibile": "DA RIVEDERE"
 }

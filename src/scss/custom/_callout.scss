@@ -1,67 +1,43 @@
 .callout {
   position: relative;
-  max-width: 60ch;
   overflow: hidden;
 
   .callout-inner {
     padding: 2rem;
-    border: 2px solid;
+    border: 2px solid $color-border-secondary;
     border-top: 0;
-    border-color: $color-border-secondary;
     margin: 2.5rem 0;
   }
 
-  // Highlights version
   &.callout-highlight {
     border: none;
     border-left: 2px solid $color-border-secondary;
     border-radius: 0;
     padding: 0 2.222rem;
-    p {
-      &:last-child {
-        margin: 0;
-      }
+
+    p:last-child {
+      margin: 0;
     }
+
     .callout-title {
       margin-bottom: 1.556rem;
     }
-    // color versions
-    &.success {
-      border-color: rgba($success, 1);
-    }
-    &.warning {
-      border-color: $color-border-warning;
-    }
-    &.danger {
-      border-color: rgba($danger, 1);
-    }
-    &.important {
-      border-color: $success;
-    }
-    &.note {
-      border-color: $primary;
+
+    @each $color-name, $color-value in (success: $success, warning: $color-border-warning, danger: $danger, important: $success, note: $primary) {
+      &.#{$color-name} {
+        border-color: $color-value;
+      }
     }
   }
 
-  // More version
   &.callout-more {
     background: #f9f9f5;
     border: none;
     border-radius: 0;
-    padding: 2.222rem 2.222rem;
+    padding: 2.222rem;
     position: relative;
-    // top triangle
-    &:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 0;
-      height: 0;
-      border-style: solid;
-      border-width: 0 48px 48px 0;
-      border-color: transparent $white transparent transparent;
-    }
+
+    &:before,
     &:after {
       content: '';
       position: absolute;
@@ -70,23 +46,33 @@
       width: 0;
       height: 0;
       border-style: solid;
+    }
+
+    &:before {
+      border-width: 0 48px 48px 0;
+      border-color: transparent $white transparent transparent;
+    }
+
+    &:after {
       border-width: 48px 0 0 48px;
       border-color: transparent transparent transparent #e4e4db;
     }
-    // text
+
     p {
       font-size: 1rem;
       line-height: 1.5rem;
-      color: $color-text-secondary; // UI kit
+      color: $color-text-secondary;
     }
-    // title
+
     .callout-title {
       display: flex;
       align-items: flex-start;
       margin-bottom: 2.222rem;
+
       i {
         font-size: 1.25rem;
       }
+
       span {
         border-bottom: 2px solid $body-color;
         padding-bottom: 0.1rem;
@@ -96,148 +82,97 @@
     }
   }
 
-  // color versions
-  &.success {
-    border-color: $success;
-    .callout-inner {
-      border-color: rgba($success, 1);
-    }
-    .callout-title {
-      color: $success;
-      .icon {
-        fill: $success;
+  @each $color-name, $color-value in (success: $success, warning: $warning, danger: $danger, important: $success, note: $primary) {
+    &.#{$color-name} {
+      border-color: $color-value;
+
+      .callout-inner {
+        border-color: rgba($color-value, 1);
       }
-      span {
-        border-color: $success;
-      }
-      .text:after {
-        border-color: $success;
-      }
-      &:before {
-        border-color: $success;
-      }
-    }
-  }
-  &.warning {
-    border-color: $warning;
-    .callout-inner {
-      border-color: $color-border-warning;
-    }
-    .callout-title {
-      color: $color-text-warning;
-      .icon {
-        fill: $warning;
-      }
-      span {
-        border-color: $warning;
-      }
-    }
-  }
-  &.danger {
-    border-color: $danger;
-    .callout-inner {
-      border-color: rgba($danger, 1);
-    }
-    .callout-title {
-      color: $danger;
-      .icon {
-        fill: $danger;
-      }
-      span {
-        border-color: $danger;
-      }
-    }
-  }
-  &.important {
-    border-color: $success;
-    .callout-inner {
-      border-color: $success;
-    }
-    .callout-title {
-      color: $success;
-      .icon {
-        fill: $success;
-      }
-      span {
-        border-color: $success;
-      }
-    }
-  }
-  &.note {
-    border-color: $primary;
-    .callout-inner {
-      border-color: $primary;
-    }
-    .callout-title {
-      color: $primary;
-      .icon {
-        fill: $primary;
-      }
-      span {
-        border-color: $primary;
-      }
-    }
-    .collapse-div .collapse-header .callout-more-toggle {
-      color: $primary;
-      &:active,
-      &:hover {
-        color: $primary;
-      }
-      span {
-        border-color: $primary;
-        &:before,
-        &:after {
-          background: $primary;
+
+      .callout-title {
+        color: $color-value;
+
+        .icon {
+          fill: $color-value;
+        }
+
+        span {
+          border-color: $color-value;
         }
       }
-    }
-    a {
-      color: $primary;
-    }
-    .icon {
-      fill: $primary;
+
+      .collapse-div .collapse-header .callout-more-toggle {
+        color: $color-value;
+
+        &:active,
+        &:hover {
+          color: $color-value;
+        }
+
+        span {
+          border-color: $color-value;
+
+          &:before,
+          &:after {
+            background: $color-value;
+          }
+        }
+      }
+
+      a {
+        color: $color-value;
+      }
+
+      .icon {
+        fill: $color-value;
+      }
     }
   }
 
-  //title
   .callout-title {
     font-weight: 600;
     text-transform: uppercase;
     font-size: 1rem;
-    color: $color-text-secondary; // UI kit
+    color: $color-text-secondary;
+
     @include media-breakpoint-up(lg) {
       font-size: 1.125rem;
     }
+
     .icon {
-      fill: $color-text-secondary; // UI kit
+      fill: $color-text-secondary;
       margin-right: 0.5rem;
     }
   }
 
-  // standard title
   &:not(.callout-highlight):not(.callout-more) {
     .callout-title {
       position: relative;
       padding-left: 1.5rem;
       top: -3rem;
+
       .text {
         position: relative;
         overflow: hidden;
         width: 100%;
         font-size: 0.875rem;
         padding-right: 1.5rem;
+
         @include media-breakpoint-up(md) {
           font-size: 1.15rem;
         }
+
+        &:after {
+          content: '';
+          top: 0.875em;
+          border-top: 2px solid;
+          position: absolute;
+          width: calc(100vw - 100% - 20px);
+          left: 100%;
+        }
       }
-      .text:after {
-        content: '';
-        top: 0.875em;
-        border-top: 2px solid;
-        position: absolute;
-        width: 250%;
-        left: 100%;
-      }
+
       &:before {
         content: '';
         top: 0.875em;
@@ -249,31 +184,32 @@
     }
   }
 
-  //text
   p {
     font-family: $font-family-serif;
     font-size: 1rem;
-    color: $color-text-secondary; // UI kit
+    color: $color-text-secondary;
+
     @include media-breakpoint-up(lg) {
       font-size: 1.125rem;
     }
+
     &.callout-big-text {
       font-size: 1.125rem;
     }
   }
 
-  //collapse
   .collapse-div {
     display: flex;
     flex-direction: column-reverse;
     border-bottom: none;
+
     .collapse-header {
       display: flex;
       justify-content: space-between;
       border-top: 1px solid $gray-border-disabled;
       padding: 1.333rem 0 0;
       margin-top: 0;
-      // toggle restyle
+
       .callout-more-toggle {
         padding: 0;
         border: none;
@@ -283,30 +219,35 @@
         align-items: center;
         color: $primary;
         background-color: transparent;
+
         &:hover,
         &:focus,
         &:active {
           background: none;
         }
+
         &:hover {
           color: $link-hover-color;
-          // plus sign
+
           span {
             border-color: $link-hover-color;
+
             &:before,
             &:after {
               background: $link-hover-color;
             }
           }
         }
+
         &:active {
           color: $primary;
         }
+
         &:before,
         &:after {
           display: none;
         }
-        // plus sign
+
         span {
           position: relative;
           height: 15px;
@@ -316,20 +257,21 @@
           border: 1px solid $primary;
           border-radius: 50%;
           display: inline-block;
+
           &:before,
           &:after {
             content: '';
             position: absolute;
             background: $primary;
           }
-          // plus h
+
           &:before {
             width: 9px;
             height: 1px;
             top: 6px;
             left: 2px;
           }
-          // plus v
+
           &:after {
             height: 9px;
             width: 1px;
@@ -339,11 +281,9 @@
             transition: transform 0.2s;
           }
         }
-        // expanded version
-        &[aria-expanded='true'] {
-          span:after {
-            transform: translateY(2px) rotate(90deg);
-          }
+
+        &[aria-expanded='true'] span:after {
+          transform: translateY(2px) rotate(90deg);
         }
       }
 
@@ -352,8 +292,10 @@
         font-weight: normal;
       }
     }
+
     .collapse-body {
       padding: 0;
+
       p:last-child {
         margin-bottom: 1rem;
       }
@@ -361,25 +303,14 @@
   }
 }
 
-//fix IE max width ch value (substitute with rem)
-/* stylelint-disable */
-_:-ms-fullscreen,
-.callout {
-  max-width: 32rem;
-}
-/* stylelint-enable */
-//Tablet vertical
-@include media-breakpoint-up(md) {
+@media (min-width: 768px) {
   .callout {
-    // Highlights version
     &.callout-highlight {
       padding: 0 0 0 2.222rem;
     }
-    // More version
-    &.callout-more {
-      p {
-        font-size: 0.875rem;
-      }
+
+    &.callout-more p {
+      font-size: 0.775rem;
     }
   }
 }

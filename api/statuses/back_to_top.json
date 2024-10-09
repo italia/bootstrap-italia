@@ -1,4 +1,13 @@
 {
+    "amichevole con lettori di schermo": "IN REVIEW",
+    "angular Kit": "DA RIVEDERE A11Y",
+    "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/back-to-top",
+    "assignees": [
+        "Fupete"
+    ],
+    "bootstrap Italia": "DA RIVEDERE A11Y",
+    "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/menu-di-navigazione/torna-su/",
+    "comprensibile": "PRONTO",
     "content": {
         "body": "https://designers.italia.it/design-system/componenti/back-to-top/",
         "id": "DI_lADOAOqloM4AcXblzgFT9V4",
@@ -6,7 +15,14 @@
         "type": "DraftIssue"
     },
     "id": "PVTI_lADOAOqloM4AcXblzgMjwUY",
+    "navigabile": "IN REVIEW",
+    "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1157",
+    "react Kit": "DA RIVEDERE A11Y",
+    "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-backtotop--documentazione",
     "status": "Todo",
-    "status a11y check": "To do",
-    "title": "Back to top"
+    "status a11y check": "Done",
+    "title": "Back to top",
+    "uI Kit Italia": "PRONTO",
+    "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920",
+    "visivamente accessibile": "PRONTO"
 }

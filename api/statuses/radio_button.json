@@ -1,0 +1,29 @@
+{
+    "amichevole con lettori di schermo": "IN REVIEW",
+    "angular Kit": "DA COMPLETARE VARIANTI",
+    "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/radio",
+    "assignees": [
+        "Fupete"
+    ],
+    "bootstrap Italia": "DA RIVEDERE A11Y",
+    "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/form/radio-button/",
+    "comprensibile": "PRONTO",
+    "content": {
+        "body": "https://designers.italia.it/design-system/componenti/radio-button/",
+        "id": "DI_lADOAOqloM4AcXblzgFT9c0",
+        "title": "Radio button",
+        "type": "DraftIssue"
+    },
+    "id": "PVTI_lADOAOqloM4AcXblzgMjwgU",
+    "navigabile": "PRONTO",
+    "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1069 \u2014\u00a0https://github.com/italia/bootstrap-italia/issues/1068",
+    "notes / More": "In Angular manca la variante \"gruppi\" con radio a destra, ma c'\u00e8 una variante Radio con link nella label che non \u00e8 altrove. Di quest'ultima \u00e8 dubbia l'a11y. ",
+    "react Kit": "DA RIVEDERE A11Y",
+    "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-form-radio--documentazione",
+    "status": "Todo",
+    "status a11y check": "Done",
+    "title": "Radio button",
+    "uI Kit Italia": "PRONTO",
+    "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920",
+    "visivamente accessibile": "PRONTO"
+}

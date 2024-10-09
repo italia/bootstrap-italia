@@ -1,4 +1,13 @@
 {
+    "amichevole con lettori di schermo": "PRONTO",
+    "angular Kit": "DA RIVEDERE",
+    "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/forward",
+    "assignees": [
+        "Fupete"
+    ],
+    "bootstrap Italia": "PRONTO",
+    "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/componenti/forward/",
+    "comprensibile": "PRONTO",
     "content": {
         "body": "https://designers.italia.it/design-system/componenti/forward/",
         "id": "DI_lADOAOqloM4AcXblzgFT9ZI",
@@ -6,7 +15,14 @@
         "type": "DraftIssue"
     },
     "id": "PVTI_lADOAOqloM4AcXblzgMjwZ8",
+    "navigabile": "PRONTO",
+    "notes / Issues": "https://github.com/italia/design-react-kit/issues/1089 \u2014\u00a0https://github.com/italia/design-angular-kit/issues/377",
+    "react Kit": "DA RIVEDERE A11Y",
+    "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-menu-di-navigazione-forward--documentazione",
     "status": "Todo",
-    "status a11y check": "To do",
-    "title": "Forward"
+    "status a11y check": "Done",
+    "title": "Forward",
+    "uI Kit Italia": "PRONTO",
+    "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920",
+    "visivamente accessibile": "PRONTO"
 }

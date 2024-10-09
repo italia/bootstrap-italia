@@ -1,6 +1,13 @@
 {
-    "angular Kit": "PRONTO",
-    "bootstrap Italia": "DA RIVEDERE",
+    "amichevole con lettori di schermo": "IN REVIEW",
+    "angular Kit": "DA RIVEDERE",
+    "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/dimmer",
+    "assignees": [
+        "Fupete"
+    ],
+    "bootstrap Italia": "DA RIVEDERE A11Y",
+    "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/componenti/dimmer/",
+    "comprensibile": "PRONTO",
     "content": {
         "body": "https://designers.italia.it/design-system/componenti/dimmer/",
         "id": "DI_lADOAOqloM4AcXblzgFT9YI",
@@ -8,10 +15,14 @@
         "type": "DraftIssue"
     },
     "id": "PVTI_lADOAOqloM4AcXblzgMjwYM",
-    "notes / Issue": "BSI issue #1106, React kit issue #1063",
-    "react Kit ": "DA RIVEDERE",
+    "navigabile": "PRONTO",
+    "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1165 \u2014\u00a0https://github.com/italia/design-angular-kit/issues/375 \u2014\u00a0https://github.com/italia/design-react-kit/issues/1088",
+    "react Kit": "DA RIVEDERE",
+    "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-dimmer--documentazione",
     "status": "Todo",
-    "status a11y check": "To do",
+    "status a11y check": "Done",
     "title": "Dimmer",
-    "uI Kit Italia": "PRONTO"
+    "uI Kit Italia": "PRONTO",
+    "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920",
+    "visivamente accessibile": "PRONTO"
 }

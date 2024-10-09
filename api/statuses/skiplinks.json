@@ -1,0 +1,28 @@
+{
+    "amichevole con lettori di schermo": "PRONTO",
+    "angular Kit": "DA FARE",
+    "assignees": [
+        "Fupete"
+    ],
+    "bootstrap Italia": "PRONTO",
+    "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/menu-di-navigazione/skiplinks/",
+    "comprensibile": "PRONTO",
+    "content": {
+        "body": "https://designers.italia.it/design-system/componenti/skiplinks/",
+        "id": "DI_lADOAOqloM4AcXblzgFT9ds",
+        "title": "Skiplinks",
+        "type": "DraftIssue"
+    },
+    "id": "PVTI_lADOAOqloM4AcXblzgMjwiU",
+    "navigabile": "PRONTO",
+    "notes / Issues": "https://github.com/italia/design-angular-kit/issues/376 ",
+    "notes / More": "Idea interessante: https://github.com/italia/bootstrap-italia/issues/1217",
+    "react Kit": "PRONTO",
+    "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-skiplinks--documentazione",
+    "status": "Todo",
+    "status a11y check": "Done",
+    "title": "Skiplinks",
+    "uI Kit Italia": "PRONTO",
+    "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920",
+    "visivamente accessibile": "PRONTO"
+}

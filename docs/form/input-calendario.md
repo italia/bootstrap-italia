@@ -20,6 +20,6 @@ Assicurarsi di aggiungere alla label la classe **`active`** per impedire la sovr
 {% capture example %}
 <div class="form-group">
     <label class="active" for="dateStandard">Datepicker</label>
-    <input type="date" id="dateStandard" name="dateStandard">
+    <input class="form-control" type="date" id="dateStandard" name="dateStandard">
 </div>
 {% endcapture %}{% include example.html content=example %}

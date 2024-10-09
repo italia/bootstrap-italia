@@ -1,0 +1,29 @@
+{
+    "amichevole con lettori di schermo": "IN REVIEW",
+    "angular Kit": "DA COMPLETARE VARIANTI",
+    "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/toggle",
+    "assignees": [
+        "Fupete"
+    ],
+    "bootstrap Italia": "DA RIVEDERE A11Y",
+    "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/form/toggles/",
+    "comprensibile": "PRONTO",
+    "content": {
+        "body": "https://designers.italia.it/design-system/componenti/toggles/",
+        "id": "DI_lADOAOqloM4AcXblzgFT9fI",
+        "title": "Toggles",
+        "type": "DraftIssue"
+    },
+    "id": "PVTI_lADOAOqloM4AcXblzgMjwkw",
+    "navigabile": "PRONTO",
+    "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1069 \u2014 https://github.com/italia/bootstrap-italia/issues/1068",
+    "notes / More": "In UI Kit Italia \u00e8 presente anche il componente \"To be\". Decidere roadmap. \u2014\u00a0In Angular kit manca la variante \"gruppi\"",
+    "react Kit": "DA RIVEDERE A11Y",
+    "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-form-toggles--documentazione",
+    "status": "Todo",
+    "status a11y check": "Done",
+    "title": "Toggles",
+    "uI Kit Italia": "PRONTO",
+    "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920",
+    "visivamente accessibile": "PRONTO"
+}

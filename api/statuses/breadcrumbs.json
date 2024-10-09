@@ -1,6 +1,13 @@
 {
-    "angular Kit": "PRONTO",
+    "amichevole con lettori di schermo": "PRONTO",
+    "angular Kit": "DA RIVEDERE A11Y",
+    "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/breadcrumb",
+    "assignees": [
+        "Fupete"
+    ],
     "bootstrap Italia": "PRONTO",
+    "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/menu-di-navigazione/breadcrumbs/",
+    "comprensibile": "PRONTO",
     "content": {
         "body": "https://designers.italia.it/design-system/componenti/breadcrumbs/",
         "id": "DI_lADOAOqloM4AcXblzgFT9Wg",
@@ -8,10 +15,14 @@
         "type": "DraftIssue"
     },
     "id": "PVTI_lADOAOqloM4AcXblzgMjwVc",
-    "notes / Issue": "Allineare il naming tra le varie risorse, viene usato sia \"Breadcrumb\" che \"Breadcrumbs\"",
-    "react Kit ": "PRONTO",
+    "navigabile": "PRONTO",
+    "notes / Issues": "https://github.com/italia/design-angular-kit/issues/373",
+    "react Kit": "PRONTO",
+    "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-menu-di-navigazione-breadcrumbs--documentazione",
     "status": "Todo",
-    "status a11y check": "To do",
+    "status a11y check": "Done",
     "title": "Breadcrumbs",
-    "uI Kit Italia": "PRONTO"
+    "uI Kit Italia": "PRONTO",
+    "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920",
+    "visivamente accessibile": "PRONTO"
 }

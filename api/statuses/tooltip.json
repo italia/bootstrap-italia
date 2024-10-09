@@ -1,0 +1,28 @@
+{
+    "amichevole con lettori di schermo": "PRONTO",
+    "angular Kit": "DA RIVEDERE A11Y",
+    "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/tooltip",
+    "assignees": [
+        "Fupete"
+    ],
+    "bootstrap Italia": "DA RIVEDERE A11Y",
+    "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/componenti/tooltip/",
+    "comprensibile": "PRONTO",
+    "content": {
+        "body": "https://designers.italia.it/design-system/componenti/tooltip/",
+        "id": "DI_lADOAOqloM4AcXblzgFT9gI",
+        "title": "Tooltip",
+        "type": "DraftIssue"
+    },
+    "id": "PVTI_lADOAOqloM4AcXblzgMjwmo",
+    "navigabile": "IN REVIEW",
+    "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1180 \u2014\u00a0https://github.com/italia/bootstrap-italia/issues/1181",
+    "react Kit": "PRONTO",
+    "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-tooltip--documentazione",
+    "status": "Todo",
+    "status a11y check": "Done",
+    "title": "Tooltip",
+    "uI Kit Italia": "PRONTO",
+    "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920",
+    "visivamente accessibile": "PRONTO"
+}

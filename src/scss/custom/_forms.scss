@@ -11,9 +11,6 @@ fieldset {
     display: block;
     max-width: 100%;
     width: auto;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
     padding: 0 $input-spacing-x;
     z-index: 1;
     font-size: $small-font-size;
@@ -48,9 +45,6 @@ fieldset {
     display: block;
     max-width: 100%;
     width: auto;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
     padding: 0 $input-spacing-x;
     z-index: 1;
     &.active {
@@ -109,17 +103,20 @@ input[type='url'],
 textarea {
   border: none;
   border-bottom: 1px solid $input-border;
-  border-radius: 0;
   padding: $input-spacing-y $input-spacing-x;
   outline: 0;
-  width: 100%;
   box-shadow: none;
   transition: none;
   -webkit-appearance: none;
-  -webkit-border-radius: 0;
   &::placeholder {
     color: $input-color-placeholder;
   }
+}
+
+input[type='date'],
+input[type='datetime-local'],
+input[type='time'] {
+  display: flex;
 }
 
 textarea {
@@ -148,12 +145,12 @@ textarea {
   }
   .was-validated &:valid,
   &.is-valid {
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%2300cc85' viewBox='0 0 192 512'%3E%3Cpath d='M435.848 83.466L172.804 346.51l-96.652-96.652c-4.686-4.686-12.284-4.686-16.971 0l-28.284 28.284c-4.686 4.686-4.686 12.284 0 16.971l133.421 133.421c4.686 4.686 12.284 4.686 16.971 0l299.813-299.813c4.686-4.686 4.686-12.284 0-16.971l-28.284-28.284c-4.686-4.686-12.284-4.686-16.97 0z'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%2300cc85' viewBox='0 0 192 512'%3E%3Cpath d='M435.848 83.466L172.804 346.51l-96.652-96.652c-4.686-4.686-12.284-4.686-16.971 0l-28.284 28.284c-4.686 4.686-4.686 12.284 0 16.971l133.421 133.421c4.686 4.686 12.284 4.686 16.971 0l299.813-299.813c4.686-4.686 4.686-12.284 0-16.971l-28.284-28.284c-4.686-4.686-12.284-4.686-16.97 0z'/%3E%3C/svg%3E");
   }
 
   .was-validated &:invalid,
   &.is-invalid {
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f73e5a' viewBox='0 0 384 512'%3E%3Cpath d='M231.6 256l130.1-130.1c4.7-4.7 4.7-12.3 0-17l-22.6-22.6c-4.7-4.7-12.3-4.7-17 0L192 216.4 61.9 86.3c-4.7-4.7-12.3-4.7-17 0l-22.6 22.6c-4.7 4.7-4.7 12.3 0 17L152.4 256 22.3 386.1c-4.7 4.7-4.7 12.3 0 17l22.6 22.6c4.7 4.7 12.3 4.7 17 0L192 295.6l130.1 130.1c4.7 4.7 12.3 4.7 17 0l22.6-22.6c4.7-4.7 4.7-12.3 0-17L231.6 256z'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f73e5a' viewBox='0 0 384 512'%3E%3Cpath d='M231.6 256l130.1-130.1c4.7-4.7 4.7-12.3 0-17l-22.6-22.6c-4.7-4.7-12.3-4.7-17 0L192 216.4 61.9 86.3c-4.7-4.7-12.3-4.7-17 0l-22.6 22.6c-4.7 4.7-4.7 12.3 0 17L152.4 256 22.3 386.1c-4.7 4.7-4.7 12.3 0 17l22.6 22.6c4.7 4.7 12.3 4.7 17 0L192 295.6l130.1 130.1c4.7 4.7 12.3 4.7 17 0l22.6-22.6c4.7-4.7 4.7-12.3 0-17L231.6 256z'/%3E%3C/svg%3E");
   }
 
   &.warning {
@@ -245,8 +242,14 @@ textarea {
 
 .form-check {
   padding-left: 0;
-  margin-top: 0.5rem;
   position: relative;
+  margin-bottom: 0.5rem;
+
+  // add vertical spacing for consequential elements
+  & + & {
+    margin-top: 0.5rem;
+  }
+
   [type='checkbox'],
   [type='radio'] {
     position: absolute;
@@ -258,14 +261,12 @@ textarea {
 
     + label {
       position: relative;
-      padding-left: 36px;
+      padding-left: 2rem;
       cursor: pointer;
       display: inline-block;
-      height: 32px;
-      line-height: 32px;
       font-size: 1rem;
+      font-weight: $font-weight-semibold;
       user-select: none;
-      margin-bottom: 0.5rem;
       @include media-breakpoint-up(sm) {
         font-size: 1.125rem;
       }
@@ -299,7 +300,7 @@ textarea {
       height: 17px;
       border: 1px solid #e6e9f2;
       border-radius: 1px;
-      margin: 2px 5px;
+      margin: 2px 4px;
       transform: rotateZ(37deg);
       transform-origin: 100% 100%;
     }
@@ -308,12 +309,12 @@ textarea {
       border-radius: 4px;
       height: 20px;
       width: 20px;
-      margin: 6px 5px;
+      margin: 4px;
       top: 0;
     }
 
     &:checked + label::before {
-      top: 6px;
+      top: 4px;
       left: 1px;
       width: 8px;
       height: 13px;
@@ -373,8 +374,8 @@ textarea {
         left: 0;
         top: 0;
         margin: 5px;
-        width: 22px;
-        height: 22px;
+        width: 20px;
+        height: 20px;
         z-index: 0;
         border-radius: 50%;
         border-style: solid;
@@ -435,15 +436,15 @@ textarea {
 
   // gruppi
   &.form-check-group {
-    padding: 0 0 8px 0;
-    margin-bottom: 16px;
+    padding: 0 0 1rem 0;
+    margin-bottom: 1rem;
     box-shadow: inset 0 -1px 0 0 rgba(1, 1, 1, 0.1);
 
     [type='checkbox'] + label,
     [type='radio'] + label {
       position: static;
       padding-left: 0;
-      padding-right: 52px;
+      padding-right: 3.25rem;
 
       &::after,
       &::before {
@@ -461,22 +462,22 @@ textarea {
     }
 
     .form-text {
-      margin: 0;
-      padding-right: 52px;
       display: block;
-      margin-bottom: $v-gap * 2;
+      padding-right: 3.25rem;
+      margin-bottom: 0.5rem;
     }
 
-    label {
-      font-weight: 600;
-    }
+    // label {
+    //   font-weight: 600;
+    // }
+
     input.semi-checked:not(:checked) + label::before {
       right: 19px;
       left: auto;
     }
   }
   input.semi-checked:not(:checked) + label::before {
-    top: 13px;
+    top: 11px;
     left: 4px;
     width: 12px;
     height: 2px;
