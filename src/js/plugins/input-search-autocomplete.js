@@ -125,14 +125,6 @@ class InputSearch extends BaseComponent {
  * ------------------------------------------------------------------------
  */
 
-/*const inputs = SelectorEngine.find(SELECTOR_SEARCH)
-inputs.forEach((input) => {
-  EventHandler.one(input, EVENT_KEYUP_DATA_API, () => {
-    const searchInput = InputSearch.getOrCreateInstance(input)
-    searchInput.search()
-  })
-})*/
-
 const createInput = (element) => {
   if (element && element.matches(SELECTOR_SEARCH)) {
     return InputSearch.getOrCreateInstance(element)

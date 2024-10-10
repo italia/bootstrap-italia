@@ -155,25 +155,26 @@ class Notification extends BaseComponent {
  * ------------------------------------------------------------------------
  */
 
-EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function (event) {
-  const target = getElementFromSelector(this)
+if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+  EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function (event) {
+    const target = getElementFromSelector(this)
 
-  if (['A', 'AREA'].includes(this.tagName)) {
-    event.preventDefault()
-  }
-
-  EventHandler.one(target, EVENT_SHOW, (showEvent) => {
-    if (showEvent.defaultPrevented) {
-      // only register focus restorer if modal will actually get shown
-      return
+    if (['A', 'AREA'].includes(this.tagName)) {
+      event.preventDefault()
     }
 
-    EventHandler.one(target, EVENT_HIDDEN, () => {
-      if (isVisible(this)) {
-        this.focus()
+    EventHandler.one(target, EVENT_SHOW, (showEvent) => {
+      if (showEvent.defaultPrevented) {
+        // only register focus restorer if modal will actually get shown
+        return
       }
+
+      EventHandler.one(target, EVENT_HIDDEN, () => {
+        if (isVisible(this)) {
+          this.focus()
+        }
+      })
     })
-  })
 
   const data = Notification.getOrCreateInstance(target)
 
@@ -181,5 +182,7 @@ EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function (
 })
 
 enableDismissTrigger(Notification)
+
+}
 
 export default Notification

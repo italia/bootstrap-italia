@@ -259,44 +259,35 @@ class Cookiebar extends BaseComponent {
  * ------------------------------------------------------------------------
  */
 
-//$(document).on(EVENT_CLICK_DATA_API, SELECTOR_ACCEPT, Cookiebar._handleAccept(new Cookiebar()))
+if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+  EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_ACCEPT, function (event) {
+    if (['A', 'AREA'].includes(this.tagName)) {
+      event.preventDefault()
+    }
 
-EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_ACCEPT, function (event) {
-  if (['A', 'AREA'].includes(this.tagName)) {
-    event.preventDefault()
-  }
-
-  if (isDisabled(this)) {
-    return
-  }
-
-  const target = getElementFromSelector(this) || this.closest(`.${NAME}`)
-  const instance = Cookiebar.getOrCreateInstance(target)
-  instance.accept()
-  //Cookiebar._handleAccept(new Cookiebar())
-})
-
-EventHandler.on(window, EVENT_LOAD_DATA_API, function () {
-  const consent = Cookiebar._getCookieEU()
-  if (!consent) {
-    if (typeof document === 'undefined') {
+    if (isDisabled(this)) {
       return
     }
-    const cookiebars = document.querySelectorAll(SELECTOR_COOKIE_BAR)
-    cookiebars.forEach((bar) => {
-      const instance = Cookiebar.getOrCreateInstance(bar)
-      instance.show()
-    })
-  }
-})
 
-/**
- * ------------------------------------------------------------------------
- * jQuery
- * ------------------------------------------------------------------------
- * add .Cookiebar to jQuery only if jQuery is present
- */
+    const target = getElementFromSelector(this) || this.closest(`.${NAME}`)
+    const instance = Cookiebar.getOrCreateInstance(target)
+    instance.accept()
+    //Cookiebar._handleAccept(new Cookiebar())
+  })
 
-//defineJQueryPlugin(Cookiebar)
+  EventHandler.on(window, EVENT_LOAD_DATA_API, function () {
+    const consent = Cookiebar._getCookieEU()
+    if (!consent) {
+      if (typeof document === 'undefined') {
+        return
+      }
+      const cookiebars = document.querySelectorAll(SELECTOR_COOKIE_BAR)
+      cookiebars.forEach((bar) => {
+        const instance = Cookiebar.getOrCreateInstance(bar)
+        instance.show()
+      })
+    }
+  })
+}
 
 export default Cookiebar

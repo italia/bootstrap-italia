@@ -29,15 +29,17 @@ const onDocumentScroll = (callback) => {
     return
   }
   if (!callbacks.length) {
-    document.addEventListener('scroll', (evt) => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          callbacks.forEach((cbObj) => cbObj.cb._execute(evt))
-          ticking = false
-        })
-        ticking = true
-      }
-    })
+    if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+      document.addEventListener('scroll', (evt) => {
+        if (!ticking) {
+          window.requestAnimationFrame(() => {
+            callbacks.forEach((cbObj) => cbObj.cb._execute(evt))
+            ticking = false
+          })
+          ticking = true
+        }
+      })
+    }
   }
 
   if (typeof callback === 'function') {

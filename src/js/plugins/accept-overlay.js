@@ -113,12 +113,12 @@ class AcceptOverlay extends BaseComponent {
  * Data Api implementation
  * ------------------------------------------------------------------------
  */
-
-const acceptOverlays = SelectorEngine.find(SELECTOR_DATA_TOGGLE)
-if (acceptOverlays.length > 0) {
-  acceptOverlays.forEach((element) => {
-    AcceptOverlay.getOrCreateInstance(element, { service: element.dataset.bsAcceptFrom })
-  })
+if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+  const acceptOverlays = SelectorEngine.find(SELECTOR_DATA_TOGGLE)
+  if (acceptOverlays.length > 0) {
+    acceptOverlays.forEach((element) => {
+      AcceptOverlay.getOrCreateInstance(element, { service: element.dataset.bsAcceptFrom })
+    })
+  }
 }
-
 export default AcceptOverlay

@@ -48,19 +48,12 @@ class HistoryBack extends BaseComponent {
  * ------------------------------------------------------------------------
  */
 
-/*const toggles = SelectorEngine.find(SELECTOR_TOGGLE)
-toggles.forEach((toggle) => {
-  EventHandler.one(toggle, EVENT_CLICK_DATA_API, (evt) => {
+if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+  EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_TOGGLE, function (evt) {
     evt.preventDefault()
-    const historyBack = HistoryBack.getOrCreateInstance(toggle)
+    const historyBack = HistoryBack.getOrCreateInstance(this)
     historyBack.back()
   })
-})*/
-
-EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_TOGGLE, function (evt) {
-  evt.preventDefault()
-  const historyBack = HistoryBack.getOrCreateInstance(this)
-  historyBack.back()
-})
+}
 
 export default HistoryBack
