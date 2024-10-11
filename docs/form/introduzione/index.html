@@ -11,13 +11,13 @@
 
 <title>Introduzione · Bootstrap Italia</title>
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202410021551" rel="stylesheet" />
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202410111153" rel="stylesheet" />
 
 <!-- Documentation extras -->
  
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.css" rel="stylesheet" />
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202410021551" rel="stylesheet" />
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202410111153" rel="stylesheet" />
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico" />
@@ -139,8 +139,8 @@
 
     <ul class="navbar-nav flex-row ms-md-auto d-none d-md-flex">
       <li class="nav-item pe-2">
-        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v2.9.2/bootstrap-italia.zip" aria-label="Download">
-          <small class="pe-2 m-0">v2.9.2</small>
+        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v2.10.0/bootstrap-italia.zip" aria-label="Download">
+          <small class="pe-2 m-0">v2.10.0</small>
           <svg class="icon icon-sm icon-light"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-download" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-download"></use></svg><span class="visually-hidden">Download</span>
         </a>
       </li>
@@ -727,12 +727,14 @@
       <input type="email" class="form-control" id="inputEmail4" placeholder="inserisci il tuo indirizzo email" />
     </div>
     <div class="form-group col-md-6">
-      <label class="active" for="exampleInputPassword">Password</label>
-      <input type="password" data-bs-input="" class="form-control input-password" id="exampleInputPassword" placeholder="inserisci la tua password" />
-      <span class="password-icon" aria-hidden="true">
-        <svg class="password-icon-visible icon icon-sm"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-password-visible"></use></svg>
-        <svg class="password-icon-invisible icon icon-sm d-none"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-password-invisible"></use></svg>
-      </span>
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" data-bs-input="" class="form-control input-password" id="exampleInputPassword1" aria-describedby="infoPassword1" />
+      <button type="button" class="password-icon btn" role="switch" aria-checked="false">
+        <span class="visually-hidden">Mostra/Nascondi Password</span>
+        <svg class="password-icon-visible icon icon-sm" aria-hidden="true"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-password-visible"></use></svg>
+        <svg class="password-icon-invisible icon icon-sm d-none" aria-hidden="true"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-password-invisible"></use></svg>
+      </button>
+      <p id="infoPassword1" class="form-text text-muted d-block small pb-0">Inserisci almeno 8 caratteri e alcuni caratteri speciali.</p>
     </div>
   </div>
   <div class="row">
@@ -843,6 +845,8 @@
 59
 60
 61
+62
+63
 </pre></td><td class="code"><pre><span class="nt">&lt;div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group col-md-6"</span><span class="nt">&gt;</span>
@@ -850,12 +854,14 @@
       <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"email"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"inputEmail4"</span> <span class="na">placeholder=</span><span class="s">"inserisci il tuo indirizzo email"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group col-md-6"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"active"</span> <span class="na">for=</span><span class="s">"exampleInputPassword"</span><span class="nt">&gt;</span>Password<span class="nt">&lt;/label&gt;</span>
-      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"password"</span> <span class="na">data-bs-input</span> <span class="na">class=</span><span class="s">"form-control input-password"</span> <span class="na">id=</span><span class="s">"exampleInputPassword"</span> <span class="na">placeholder=</span><span class="s">"inserisci la tua password"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"password-icon"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"password-icon-visible icon icon-sm"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-password-visible"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
-        <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"password-icon-invisible icon icon-sm d-none"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-password-invisible"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
-      <span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"exampleInputPassword1"</span><span class="nt">&gt;</span>Password<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"password"</span> <span class="na">data-bs-input</span> <span class="na">class=</span><span class="s">"form-control input-password"</span> <span class="na">id=</span><span class="s">"exampleInputPassword1"</span> <span class="na">aria-describedby=</span><span class="s">"infoPassword1"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"password-icon btn"</span> <span class="na">role=</span><span class="s">"switch"</span> <span class="na">aria-checked=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"visually-hidden"</span><span class="nt">&gt;</span>Mostra/Nascondi Password<span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"password-icon-visible icon icon-sm"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-password-visible"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+        <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"password-icon-invisible icon icon-sm d-none"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-password-invisible"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+      <span class="nt">&lt;/button&gt;</span>
+      <span class="nt">&lt;p</span> <span class="na">id=</span><span class="s">"infoPassword1"</span> <span class="na">class=</span><span class="s">"form-text text-muted d-block small pb-0"</span><span class="nt">&gt;</span>Inserisci almeno 8 caratteri e alcuni caratteri speciali.<span class="nt">&lt;/p&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
@@ -1631,15 +1637,15 @@
     </div>
 
     
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202410021551"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202410111153"></script>
 <script>
   bootstrap.loadFonts('/bootstrap-italia/dist/fonts')
-</script><script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202410021551"></script>
+</script><script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202410111153"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/anchor.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/clipboard.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tsparticles.min.js"></script>
 
-<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202410021551"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202410111153"></script>
 
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tweenjs.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/easeljs.min.js"></script>
@@ -1656,7 +1662,7 @@
     { src: '/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png', id: 'cover-7' },
   ]
 </script>
-<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202410021551"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202410111153"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/docsearch.min.js"></script>
 
 <script>
