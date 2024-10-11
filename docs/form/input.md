@@ -451,7 +451,7 @@ Il testo corrispondente alla ricerca (_"ite"_, nell'esempio) deve essere racchiu
 {% capture example %}
 <div class="form-group">
   <label for="autocomplete-one" class="visually-hidden">Cerca nel sito</label>
-  <input type="search" class="autocomplete" placeholder="Testo da cercare"
+  <input type="search" class="form-control autocomplete" placeholder="Testo da cercare"
     id="autocomplete-one"
     name="autocomplete-one"
     data-bs-autocomplete="[]">
@@ -522,7 +522,7 @@ Per ottenere una versione grande dell'Autocomplete, indicata ad esempio per inte
 {% capture example %}
 <div class="form-group autocomplete-wrapper-big">
   <label for="autocomplete-two" class="visually-hidden">Cerca nel sito</label>
-  <input type="search" class="autocomplete" placeholder="Testo da cercare"
+  <input type="search" class="form-control autocomplete" placeholder="Testo da cercare"
     id="autocomplete-two"
     name="autocomplete-two"
     data-bs-autocomplete="[]">
@@ -585,7 +585,7 @@ Cerca una regione italiana per verificarne il comportamento.
 {% capture example %}
 <div class="form-group">
   <label for="autocomplete-regioni" class="visually-hidden">Cerca nel sito</label>
-  <input type="search" class="autocomplete" placeholder="Testo da cercare"
+  <input type="search" class="form-control autocomplete" placeholder="Testo da cercare"
     id="autocomplete-regioni"
     name="autocomplete-regioni"
     data-bs-autocomplete='{{ site.data.autocomplete.regioni | jsonify }}'>
@@ -608,7 +608,7 @@ Cerca ad esempio _"Italia"_ per verificarne il comportamento.
 {% capture example %}
 <div class="form-group">
   <label for="autocomplete-test" class="visually-hidden">Cerca nel sito</label>
-  <input type="search" class="autocomplete" placeholder="Testo da cercare"
+  <input type="search" class="form-control autocomplete" placeholder="Testo da cercare"
     id="autocomplete-test"
     name="autocomplete-test"
     data-bs-autocomplete='{{ site.data.autocomplete.nazioni | jsonify }}'>
@@ -646,6 +646,14 @@ Includendo l'elemento all'interno di un `.form-group`, la label assumerà lo ste
 ### Dimensione
 
 È possibile modificare la dimensione dell'elemento utilizzando le classi `.form-control-lg` e `.form-control-sm`, che modificano la grandezza del carattere e la spaziatura interna.
+
+{% capture callout %}
+Breaking feature dalla versione **2.10.0**
+
+Quando si utilizza la classe `.form-control-lg` o `.form-control-sm` è necessario aggiungere anche la classe `rounded-0` al tag `<input>` per rimuovere i bordi arrotondati
+
+{% endcapture %}{% include callout.html content=callout type="danger" %}
+
 
 {% comment %}Example name: Varianti di dimensione {% endcomment %}
 {% capture example %}
