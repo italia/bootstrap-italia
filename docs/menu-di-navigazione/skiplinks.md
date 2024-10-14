@@ -31,10 +31,10 @@ Inserire come primi elementi della pagina alcuni collegamenti che portino ai con
 ## Come elenco
 Se la pagina è particolarmente complessa si possono inserire più collegamenti che permettano di saltare direttamente ai blocchi principali. 
 
-Nell'esempio che segue, oltre aiin salti diretti al menu di pagina, al contenuto principale e al piede, sono stati inseriti due collegamenti in più su cui è bene mettere attezione: 
+Nell'esempio che segue, sono stati inseriti due collegamenti su cui è bene mettere attezione: 
 
-- un salto al modulo di feedback per permettere al visitatore di esprimere un giudizio, presente in pagina prima del piede. Il testo dello skiplink anticipa già la domanda;
-- un salto al collegamento alla Dichirazione di accessibilità messo a disposizione nel piede, per permettere a chi naviga con strumenti assistivi di trovarlo facilmente senza dover scansionare tutti i contenuti. Cosa particolarmente importante per permettere alle persone di arrivare facilmente al metodo di feedback per effettuare eventuali segnalazioni.  
+- un salto ad un modulo per chiedere alle persone come stanno valutando l'esperienza d'uso. Il testo dello skiplink anticipa già la domanda;
+- un salto al collegamento alla Dichirazione di accessibilità nel piede, per permettere a chi naviga con strumenti assistivi di trovarlo senza dover scansionare tutta la pagina. 
 
 Si consiglia in ogni caso di non eccedere con il numero di elementi di questo elenco, utile se rimane entro le 3 o 4 voci. Diventerebbe altrimenti esso stesso bisognoso di poter essere saltato.  
 
