@@ -38,7 +38,7 @@ Il codice markup è stato rivisto in chiave accessibilità e robustezza. In part
       <div class="timeline-element">
         <div class="it-pin-wrapper it-evidence">
           <div class="pin-icon">
-            <svg class="icon" role="graphic-symbol"><title>Segnaposto</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-bookmark"></use></svg>
+            <svg class="icon" role="img"><title>Segnaposto</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-bookmark"></use></svg>
           </div>
           <h4 class="pin-text"><span>maggio {{'now' | date: "%Y"}}</span></h4>
         </div>
