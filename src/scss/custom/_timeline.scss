@@ -62,6 +62,8 @@
       background: $timeline-pin-background;
       border-radius: $border-radius;
       font-family: $font-family-monospace;
+      font-size: var(--bs-body-font-size);
+      line-height: var(--bs-body-line-height);
 
       span {
         padding: $v-gap * 0.5 $v-gap * 2;
