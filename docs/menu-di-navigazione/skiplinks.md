@@ -35,7 +35,7 @@ Nell'esempio che segue, implementato per il sito [Designers Italia](https://desi
 - un salto ad un **modulo per chiedere alle persone come stanno valutando l'esperienza d'uso** della pagina. Il testo dello skiplink anticipa già la domanda;
 - un **collegamento diretto alla Dichiarazione di accessibilità disponibile sul form AgID**, che accompagnerà il necessario link presente anche nel piede di pagina, per permettere a chi naviga con strumenti assistivi di trovarla facilmente senza dover scansionare tutti i contennuti. 
 
-Consigliamo di non eccedere con il numero di elementi scorciatoia, rimanendo entro le 3 o 4 voci. Altrimenti ci sarebbe il bisogno di poter saltare le stesse scorciatoie.  
+Consigliamo di non eccedere con il numero di elementi scorciatoia, altrimenti emergerebbe il bisogno di poter saltare le stesse scorciatoie.  
 
 {% capture callout %}
 #### Accessibilità
@@ -50,6 +50,7 @@ In questo caso è utile implementarlo come elemento `nav` con una `aria-label` d
     <li class="visually-hidden-focusable"><a href="#menu">Vai al menu</a></li>
     <li class="visually-hidden-focusable" ><a href="#main">Vai al contenuto</a></li>
     <li class="visually-hidden-focusable" ><a href="#feedback">Questa pagina ti è stata utile?</a></li>
+    <li class="visually-hidden-focusable" ><a href="#main">Vai al piede</a></li>
     <li class="visually-hidden-focusable" ><a href="https://form.agid.gov.it/view/xyz">Dichiarazione di accessibilità (link esterno su sito AgID)</a></li>
   </ul>
 </nav>
