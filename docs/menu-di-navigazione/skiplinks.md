@@ -1,23 +1,23 @@
 ---
 layout: docs
 title: Skiplinks
-description: Gli Skiplinks consentono agli utenti di accedere direttamente al contenuto principale della pagina saltando l'header e il menu di navigazione.
+description: Gli Skiplinks sono scorciatoie di navigazione che consentono agli utenti di andare direttamente ai contenuti principali della pagina.
 group: menu-di-navigazione
 toc: true
 ---
 
 ## Introduzione 
 
-È un componente che permette a persone che navigano sequenzialmente i contenuti di aver accesso più facile a tutti i contenuti principali della pagina. È particolarmente utile per coloro che per navigare usano la tastiera o tecnologie assistive come i lettori di schermo. 
+È un componente che permette a persone che navigano sequenzialmente i contenuti di aver accesso più facile a tutti i contenuti principali della pagina. È particolarmente utile per coloro che per navigare usano la tastiera o tecnologie assistive come i lettori di schermo.
 
-Deve essere il primo contenuto della pagina.
+Deve essere il primo contenuto che si incontra nella pagina. Se è presente l'elemento `<header` suggeriamo di integrarlo come primo suo elemento figlio, in modo da comprenderlo in ogni caso in un landmark di pagina. 
 
-Gli elementi del componente skiplinks possono essere  contraddistinti con la classe `visually-hidden-focusable` per mostrarli a schermo solo al focus. In questo caso, è importante racchiuderli in un elemento contenitore con classe `skiplinks` per avere lo stile corretto quando visibili. 
+Gli elementi del componente Skiplinks possono essere contraddistinti con la classe `.visually-hidden-focusable` per mostrarli a schermo solo al focus. In questo caso, è importante racchiuderli in un elemento contenitore con classe `.skiplinks` per avere lo stile corretto.
 
 Per navigare tra gli elementi digita da tastiera il tasto: **TAB** (tabulazione).
 
 ## Base 
-Inserire come primi elementi della pagina scorciatoie di navigazione che portino ai contenuti principali, permettendo di saltare blocchi ripetuti su ogni pagina come posso essere l'intestazione e il menu di navigazione. 
+Inserire come primo elemento della pagina alcune scorciatoie di navigazione che portino ai contenuti principali, permettendo di saltare blocchi ripetuti su ogni pagina come posso essere l'intestazione e il menu di navigazione. 
 
 {% comment %}Example name: Base{% endcomment %}
 {% capture example %}
@@ -27,15 +27,15 @@ Inserire come primi elementi della pagina scorciatoie di navigazione che portino
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-## Come elenco
+## Elenco
 Se la pagina è particolarmente complessa si possono inserire più collegamenti che permettano di saltare direttamente ai blocchi principali. 
 
-Nell'esempio che segue, sono stati inseriti due collegamenti su cui è bene mettere attezione: 
+Nell'esempio che segue, implementato per il sito [Designers Italia](https://designers.italia.it), sono inseriti due collegamenti che è utile approfondire: 
 
-- un salto ad un modulo per chiedere alle persone come stanno valutando l'esperienza d'uso. Il testo dello skiplink anticipa già la domanda;
-- un collegamento diretto alla Dichirazione di accessibilità sul form AgID, per permettere a chi naviga con strumenti assistivi di trovarla facilmente. 
+- un salto ad un **modulo per chiedere alle persone come stanno valutando l'esperienza d'uso** della pagina. Il testo dello skiplink anticipa già la domanda;
+- un **collegamento diretto alla Dichiarazione di accessibilità disponibile sul form AgID**, che accompagnerà il necessario link presente anche nel piede di pagina, per permettere a chi naviga con strumenti assistivi di trovarla facilmente senza dover scansionare tutti i contennuti. 
 
-Si consiglia in ogni caso di non eccedere con il numero di elementi di questo elenco, utile se rimane entro le 3 o 4 voci. Diventerebbe altrimenti esso stesso bisognoso di poter essere saltato.  
+Consigliamo di non eccedere con il numero di elementi scorciatoia, rimanendo entro le 3 o 4 voci. Altrimenti ci sarebbe il bisogno di poter saltare le stesse scorciatoie.  
 
 {% capture callout %}
 #### Accessibilità
