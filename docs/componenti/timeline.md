@@ -11,23 +11,32 @@ Contiene un elenco di `.timeline-element`.
 
 Ogni `.timeline-element` contiene:
 
-- **PIN**: ogni pin contiene un icona, ed una label indicante la data dell'evento.
+- **PIN**: ogni pin è un elemento contenitore `.it-pin-wrapper` di tipo heading `h` che contiene un0icona (`.pin-icon`) e una label (`.pin-text`) indicante la data dell'evento.
 
-Il **PIN** ha tre varianti di classe per il suo contenitore `.it-pin-wrapper`:
+Il **PIN** ha tre varianti di colore:
 
 - `.it-evidence` : per indicare nella timeline eventi del passato (colore blu scuro)
 - `.it-now` : per indicare nella timeline eventi collocati nel presente (azzurro)
 - Nessuna classe aggiuntiva: per collocare gli eventi nel futuro (bianco)
 
 {% capture callout %}
-Breaking feature dalla versione **2.x.y**
+#### Accessibilità
+
+- L'elemento contenitore del pin `.it-pin-wrapper`, nell'esempio un `h3`, dovrà avere il livello intestazione corretto a seconda della gerarchia in pagina. Così come il titolo della card `.it-card-title`, nell'esempio un `h4`. 
+- Se le icone svg `.pin-icon` non veicolassero significato, è possibile nasconderle alle tecnologie assistive aggiungendo a queste l'attributo `aria-hidden="true"`; in questo caso è possibile rimuovere `role="img"` e l'elemento `<title>`. 
+{% endcapture %}{% include callout.html content=callout type="accessibility" %}
+
+{% capture callout %}
+#### Breaking feature dalla versione **2.x.y**
 
 Il codice markup è stato rivisto in chiave accessibilità e robustezza. In particolare cosa cambia: 
   - L'elemento `.pin-wrapper` è ora implementato come heading `h` e non semplice `div`. Dovrà avere il livello intestazione corretto a seconda della gerarchia in pagina.
-  - L'elemento `.pin-icon` ha attributi `role="img"` e tag `title` che lo descrive.
+  - L'elemento `.pin-icon`, se semanticamente rilevante, deve avere attributo `role="img"` e contenere un tag `title` che lo descriva.
   - Gli elementi categoria e data hanno ora tag `span` `visually-hidden` che ne descrivono lo scopo.
   - L'elemento `.card-title` è ora implementato con heading `h4` per rispettare la gerarchia attuale. Dovrà avere il livello intestazione corretto a seconda della gerarchia in pagina.
 {% endcapture %}{% include callout.html content=callout type="danger" %}
+
+
 
 ## Esempio
 
