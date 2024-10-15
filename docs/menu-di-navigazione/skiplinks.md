@@ -6,13 +6,15 @@ group: menu-di-navigazione
 toc: true
 ---
 
+## Introduzione 
+
 È un componente che permette a persone che navigano sequenzialmente i contenuti di aver accesso più facile a tutti i contenuti principali della pagina. È particolarmente utile per coloro che per navigare usano la tastiera o tecnologie assistive come i lettori di schermo. 
 
 Deve essere il primo contenuto della pagina.
 
 Gli elementi del componente skiplinks possono essere  contraddistinti con la classe `visually-hidden-focusable` per mostrarli a schermo solo al focus. In questo caso, è importante racchiuderli in un elemento contenitore con classe `skiplinks` per avere lo stile corretto quando visibili. 
 
-Per navigare gli elementi si digita da tastiera il tasto: **TAB** (tabulazione).
+Per navigare tra gli elementi digita da tastiera il tasto: **TAB** (tabulazione).
 
 ## Base 
 Inserire come primi elementi della pagina scorciatoie di navigazione che portino ai contenuti principali, permettendo di saltare blocchi ripetuti su ogni pagina come posso essere l'intestazione e il menu di navigazione. 
