@@ -14,7 +14,7 @@ Deve essere il primo contenuto che si incontra nella pagina. Se è presente l'el
 
 Gli elementi del componente Skiplinks possono essere contraddistinti con la classe `.visually-hidden-focusable` per mostrarli a schermo solo al focus. In questo caso, è importante racchiuderli in un elemento contenitore con classe `.skiplinks` per avere lo stile corretto.
 
-Per navigare tra gli elementi digita da tastiera il tasto: **TAB** (tabulazione).
+Per navigare tra gli elementi puoi usare il tasto: **TAB** (tabulazione).
 
 ## Base 
 Inserire come primo elemento della pagina alcune scorciatoie di navigazione che portino ai contenuti principali, permettendo di saltare blocchi ripetuti su ogni pagina come posso essere l'intestazione e il menu di navigazione. 
