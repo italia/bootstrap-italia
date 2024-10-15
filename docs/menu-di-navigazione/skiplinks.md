@@ -6,25 +6,22 @@ group: menu-di-navigazione
 toc: true
 ---
 
-È un componente particolarmente utile per coloro che utilizzando screen reader e/o navigano utilizzando la tastiera.
+È un componente che permette a persone che navigano sequenzialmente i contenuti di aver accesso più facile a tutti i contenuti principali della pagina. È particolarmente utile per coloro che per navigare usano la tastiera o tecnologie assistive come i lettori di schermo. 
 
-Gli elementi Skiplinks sono contraddistinti dalle classi:
+Deve essere il primo contenuto della pagina.
 
-- `visually-hidden`: renderizzati solo per gli screen reader;
-- `visually-hidden-focusable`: renderizzati solo al focus.
+Gli elementi del componente skiplinks possono essere  contraddistinti con la classe `visually-hidden-focusable` per mostrarli a schermo solo al focus. In questo caso, è importante racchiuderli in un elemento contenitore con classe `skiplinks` per avere lo stile corretto quando visibili. 
 
-Per avere lo stile corretto quando visibili è importante racchiuderli in un elemento contenitore con classe `skiplinks`.
-
-Per attivare la funzionalità si digita da tastiera il tasto: **TAB**.
+Per navigare gli elementi si digita da tastiera il tasto: **TAB** (tabulazione).
 
 ## Base 
-Inserire come primi elementi della pagina alcuni collegamenti che portino ai contenuti principali, permettendo di saltare blocchi ripetuti su ogni pagina come posso essere l'intestazione e il menu di navigazione. 
+Inserire come primi elementi della pagina scorciatoie di navigazione che portino ai contenuti principali, permettendo di saltare blocchi ripetuti su ogni pagina come posso essere l'intestazione e il menu di navigazione. 
 
 {% comment %}Example name: Base{% endcomment %}
 {% capture example %}
 <div class="skiplinks">
-  <a class="visually-hidden-focusable" href="#">Vai al contenuto principale</a>
-  <a class="visually-hidden-focusable" href="#">Vai al piede di pagina</a>
+  <a class="visually-hidden-focusable" href="#main">Vai al contenuto principale</a>
+  <a class="visually-hidden-focusable" href="#footer">Vai al piede di pagina</a>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -34,7 +31,7 @@ Se la pagina è particolarmente complessa si possono inserire più collegamenti 
 Nell'esempio che segue, sono stati inseriti due collegamenti su cui è bene mettere attezione: 
 
 - un salto ad un modulo per chiedere alle persone come stanno valutando l'esperienza d'uso. Il testo dello skiplink anticipa già la domanda;
-- un salto al collegamento alla Dichirazione di accessibilità nel piede, per permettere a chi naviga con strumenti assistivi di trovarlo senza dover scansionare tutta la pagina. 
+- un collegamento diretto alla Dichirazione di accessibilità sul form AgID, per permettere a chi naviga con strumenti assistivi di trovarla facilmente. 
 
 Si consiglia in ogni caso di non eccedere con il numero di elementi di questo elenco, utile se rimane entro le 3 o 4 voci. Diventerebbe altrimenti esso stesso bisognoso di poter essere saltato.  
 
@@ -46,12 +43,12 @@ In questo caso è utile implementarlo come elemento `nav` con una `aria-label` d
 
 {% comment %}Example name: Elenco{% endcomment %}
 {% capture example %}
-<nav class="skiplinks" aria-label="Scorciatoie">
+<nav class="skiplinks" aria-label="Scorciatoie di navigazione">
   <ul>
-    <li class="visually-hidden-focusable"><a href="#">Vai al menu</a></li>
-    <li class="visually-hidden-focusable" ><a href="#">Vai al contenuto</a></li>
-    <li class="visually-hidden-focusable" ><a href="#">Questa pagina ti è stata utile?</a></li>
-    <li class="visually-hidden-focusable" ><a href="#">Vai al collegamento alla Dichiarazione di accessibilità</a></li>
+    <li class="visually-hidden-focusable"><a href="#menu">Vai al menu</a></li>
+    <li class="visually-hidden-focusable" ><a href="#main">Vai al contenuto</a></li>
+    <li class="visually-hidden-focusable" ><a href="#feedback">Questa pagina ti è stata utile?</a></li>
+    <li class="visually-hidden-focusable" ><a href="https://form.agid.gov.it/view/xyz">Dichiarazione di accessibilità (link esterno su sito AgID)</a></li>
   </ul>
 </nav>
 {% endcapture %}{% include example.html content=example %} 
