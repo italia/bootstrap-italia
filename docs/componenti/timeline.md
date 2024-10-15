@@ -37,7 +37,7 @@ Il codice markup è stato rivisto in chiave accessibilità e robustezza. In part
   <div class="row">
     <div class="col-12">
       <div class="timeline-element">
-        <h3 class="it-pin-wrapper it-evidence">
+        <h3 class="it-pin-wrapper it-evidence no_toc">
           <div class="pin-icon">
             <svg class="icon" role="img"><title>Segnaposto</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-bookmark"></use></svg>
           </div>
@@ -64,7 +64,7 @@ Il codice markup è stato rivisto in chiave accessibilità e robustezza. In part
     </div>
     <div class="col-12">
       <div class="timeline-element">
-        <h3 class="it-pin-wrapper it-evidence">
+        <h3 class="it-pin-wrapper it-evidence no_toc">
           <div class="pin-icon">
             <svg class="icon" role="img"><title>Segnaposto</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-bookmark"></use></svg>
           </div>
@@ -82,7 +82,7 @@ Il codice markup è stato rivisto in chiave accessibilità e robustezza. In part
     </div>
     <div class="col-12">
       <div class="timeline-element">
-        <h3 class="it-pin-wrapper it-evidence">
+        <h3 class="it-pin-wrapper it-evidence no_toc">
           <div class="pin-icon">
             <svg class="icon" role="img"><title>Risultato</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-flag"></use></svg>
           </div>
@@ -111,7 +111,7 @@ Il codice markup è stato rivisto in chiave accessibilità e robustezza. In part
     <div class="col-12">
       <div class="timeline-element">
         <span class="it-now-label d-none d-lg-flex">Oggi</span>
-        <h3 class="it-pin-wrapper it-now">
+        <h3 class="it-pin-wrapper it-now no_toc">
           <div class="pin-icon">
             <svg class="icon" role="img"><title>Successo</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg>
           </div>
@@ -129,7 +129,7 @@ Il codice markup è stato rivisto in chiave accessibilità e robustezza. In part
     </div>
     <div class="col-12">
       <div class="timeline-element">
-        <h3 class="it-pin-wrapper">
+        <h3 class="it-pin-wrapper no_toc">
           <div class="pin-icon">
             <svg class="icon" role="img"><title>Evento</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-calendar"></use></svg>
           </div>
@@ -157,7 +157,7 @@ Il codice markup è stato rivisto in chiave accessibilità e robustezza. In part
     </div>
     <div class="col-12">
       <div class="timeline-element">
-        <h3 class="it-pin-wrapper">
+        <h3 class="it-pin-wrapper no_toc">
           <div class="pin-icon">
             <svg class="icon" role="img"><title>Successo</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg>
           </div>
@@ -175,7 +175,7 @@ Il codice markup è stato rivisto in chiave accessibilità e robustezza. In part
     </div>
     <div class="col-12">
       <div class="timeline-element">
-        <h3 class="it-pin-wrapper">
+        <h3 class="it-pin-wrapper no_toc">
           <div class="pin-icon">
             <svg class="icon" role="img"><title>Milestone</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-flag"></use></svg>
           </div>
@@ -203,7 +203,7 @@ Il codice markup è stato rivisto in chiave accessibilità e robustezza. In part
     </div>
     <div class="col-12">
       <div class="timeline-element">
-        <h3 class="it-pin-wrapper">
+        <h3 class="it-pin-wrapper no_toc">
           <div class="pin-icon">
             <svg class="icon" role="img"><title>Milestone</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-flag"></use></svg>
           </div>
