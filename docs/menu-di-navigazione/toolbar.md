@@ -17,7 +17,7 @@ toc: true
   }
 </style>
 
-L'elemento Toolbar è un contenitore di link, pulsanti o dropdown. Consiste in un elenco `<ul>` con tanti elementi `<li>` quante sono le voci richieste.
+L'elemento Toolbar è un contenitore di link, pulsanti o dropdown. Consiste in un elenco `<ul>` con tanti elementi `<li>` quante sono le voci richieste.  
 
 ## Dimensioni
 
@@ -29,8 +29,8 @@ Per ottimizzare lo spazio disponibile l'elemento è fornito in tre versioni: gra
 
 La versione predefinita dell'elemento è quella con icone grandi e label.
 
-{% comment %}Example name: Grande{% endcomment %}
-{% capture example %}
+    {% comment %}Example name: Grande{% endcomment %}
+    {% capture example %}
 <nav class="toolbar">
   <ul>
     <li>
@@ -60,12 +60,13 @@ La versione predefinita dell'elemento è quella con icone grandi e label.
     <li>
       <a href="#" class="disabled" disabled aria-disabled="true">
         <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg>
-        <span class="toolbar-label">preferiti<span class="visually-hidden">elemento disabilitato</span></span>
+        <span class="toolbar-label">preferiti</span>
       </a>
     </li>
   </ul>
 </nav>
-{% endcapture %}{% include example.html content=example %}
+{% endcapture %}
+{% include example.html content=example %}  
 
 ### Toolbar media
 
@@ -73,8 +74,8 @@ Applicando una classe aggiuntiva `.toolbar-medium` alla Toolbar si ottiene una v
 
 In questo caso le label, nascoste visivamente, devono essere contenute in uno `<span>` con classe `.visually-hidden`, per rendere disponibile la descrizione agli screen reader.
 
-{% comment %}Example name: Media{% endcomment %}
-{% capture example %}
+      {% comment %}Example name: Media{% endcomment %}
+      {% capture example %}
 <nav class="toolbar toolbar-medium">
   <ul>
     <li>
@@ -115,16 +116,17 @@ In questo caso le label, nascoste visivamente, devono essere contenute in uno `<
     </li>
   </ul>
 </nav>
-{% endcapture %}{% include example.html content=example %}
+{% endcapture %}
+      {% include example.html content=example %}
 
-### Toolbar piccola
+      ### Toolbar piccola 
 
 Applicando una classe aggiuntiva `.toolbar-small` alla Toolbar si ottiene la versione più piccola.
 
 Anche in questo caso le label, non visibile, devono essere contenute in uno `<span>` con classe `.visually-hidden`, per rendere disponibile la descrizione agli screen reader.
 
-{% comment %}Example name: Piccola{% endcomment %}
-{% capture example %}
+        {% comment %}Example name: Piccola{% endcomment %}
+        {% capture example %}
 <nav class="toolbar toolbar-small">
   <ul>
     <li>
@@ -165,23 +167,24 @@ Anche in questo caso le label, non visibile, devono essere contenute in uno `<sp
     </li>
   </ul>
 </nav>
-{% endcapture %}{% include example.html content=example %}
+{% endcapture %}
+{% include example.html content=example %}  
 
 ## Stato degli elementi
 
-Al tag `<a>` dell'elemento attivo va applicata la classe `.active`.
+Al tag `<a>` dell'elemento attivo va applicata la classe `.active`.  
 
 Gli elementi disabilitati avranno invece una classe `.disabled` con ulteriori accorgimenti relativi all'accessibilità a seconda della tipologia:
 
-- **link, tag `<a>`:** aggiungere la proprietà HTML `disabled` al tag. Aggiungere uno span riservato agli screen reader all'interno della label. es.: `<span class="visually-hidden"> elemento disabilitato</span>`
-- **dropdown button, tag `<button>`:** aggiungere l'attributo `aria-disabled="true"`.
+- **link, tag `<a>`:** aggiungere la proprietà HTML `disabled` al tag.  
+- **dropdown button, tag `<button>`:** aggiungere l'attributo `aria-disabled="true"`.  
 
 ## Divisori
 
 Per aggiungere degli elementi divisori fra gli elementi utilizzare dei tag `<li>` con classe `.toolbar-divider`, aggiungendo il ruolo separatore `role="separator"` per indicarne la presenza agli screen reader e `aria-orientation="vertical"` per indicarne l'orientamento.
 
-{% comment %}Example name: Con divisori{% endcomment %}
-{% capture example %}
+                {% comment %}Example name: Con divisori{% endcomment %}
+                {% capture example %}
 <nav class="toolbar">
   <ul>
     <li>
@@ -218,7 +221,8 @@ Per aggiungere degli elementi divisori fra gli elementi utilizzare dei tag `<li>
     </li>
   </ul>
 </nav>
-{% endcapture %}{% include example.html content=example %}
+{% endcapture %}
+{% include example.html content=example %}  
 
 ## Toolbar con Badge
 
@@ -228,8 +232,8 @@ I Badge possono essere utilizzati per indicare contenuti non letti o alert di va
 
 Nella versione grande i Badge possono contenere dei numeri. Il numero dei contenuti non letti o nuovi va indicato anche all'interno della label in uno `<span>` con classe `.visually-hidden` riservato agli screen reader.
 
-{% comment %}Example name: Grande con badge{% endcomment %}
-{% capture example %}
+                  {% comment %}Example name: Grande con badge{% endcomment %}
+                  {% capture example %}
 <nav class="toolbar">
   <ul>
     <li>
@@ -266,14 +270,15 @@ Nella versione grande i Badge possono contenere dei numeri. Il numero dei conten
     </li>
   </ul>
 </nav>
-{% endcapture %}{% include example.html content=example %}
+{% endcapture %}
+{% include example.html content=example %}  
 
 ### Media con Badge
 
 Nella versione media i Badge non contengono numeri ma possono essere usati come alert generici. Il numero dei contenuti non letti o nuovi va indicato all'interno della label con classe `.visually-hidden` riservata agli screen reader.
 
-{% comment %}Example name: Media con badge{% endcomment %}
-{% capture example %}
+                  {% comment %}Example name: Media con badge{% endcomment %}
+                  {% capture example %}
 <nav class="toolbar toolbar-medium">
   <ul>
     <li>
@@ -322,14 +327,15 @@ Nella versione media i Badge non contengono numeri ma possono essere usati come 
     </li>
   </ul>
 </nav>
-{% endcapture %}{% include example.html content=example %}
+{% endcapture %}
+{% include example.html content=example %}  
 
 ### Piccola con Badge
 
 Nella versione piccola i Badge non contengono numeri ma possono essere usati come alert generici. Il numero dei contenuti non letti o nuovi va indicato all'interno della label con classe `.visually-hidden` riservata agli screen reader.
 
-{% comment %}Example name: Piccola con badge{% endcomment %}
-{% capture example %}
+                  {% comment %}Example name: Piccola con badge{% endcomment %}
+                  {% capture example %}
 <nav class="toolbar toolbar-small">
   <ul>
     <li>
@@ -378,7 +384,8 @@ Nella versione piccola i Badge non contengono numeri ma possono essere usati com
     </li>
   </ul>
 </nav>
-{% endcapture %}{% include example.html content=example %}
+{% endcapture %}
+{% include example.html content=example %}  
 
 ## Toolbar con Dropdown
 
@@ -386,8 +393,8 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
 
 ### Grande con Dropdown
 
-{% comment %}Example name: Grande con dropdown{% endcomment %}
-{% capture example %}
+                  {% comment %}Example name: Grande con dropdown{% endcomment %}
+                  {% capture example %}
 <nav class="toolbar">
   <ul>
     <li>
@@ -479,12 +486,13 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
     </li>
   </ul>
 </nav>
-{% endcapture %}{% include example.html content=example %}
+{% endcapture %}
+{% include example.html content=example %}  
 
 ### Media con Dropdown
 
-{% comment %}Example name: Media con dropdown{% endcomment %}
-{% capture example %}
+                  {% comment %}Example name: Media con dropdown{% endcomment %}
+                  {% capture example %}
 <nav class="toolbar toolbar-medium">
   <ul>
     <li>
@@ -599,12 +607,13 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
     </li>
   </ul>
 </nav>
-{% endcapture %}{% include example.html content=example %}
+{% endcapture %}
+{% include example.html content=example %}  
 
 ### Piccola con Dropdown
 
-{% comment %}Example name: Piccola con dropdown{% endcomment %}
-{% capture example %}
+                  {% comment %}Example name: Piccola con dropdown{% endcomment %}
+                  {% capture example %}
 <nav class="toolbar toolbar-small">
   <ul>
     <li>
@@ -719,7 +728,8 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
   </li>
   </ul>
 </nav>
-{% endcapture %}{% include example.html content=example %}
+{% endcapture %}
+{% include example.html content=example %}  
 
 ## Toolbar verticale
 
@@ -727,8 +737,8 @@ Applicando una classe aggiuntiva `.toolbar-vertical` alla Toolbar gli elementi v
 
 ### Grande verticale
 
-{% comment %}Example name: Grande verticale{% endcomment %}
-{% capture example %}
+                  {% comment %}Example name: Grande verticale{% endcomment %}
+                  {% capture example %}
 <nav class="toolbar toolbar-vertical">
   <ul>
     <li>
@@ -777,12 +787,13 @@ Applicando una classe aggiuntiva `.toolbar-vertical` alla Toolbar gli elementi v
     </li>
   </ul>
 </nav>
-{% endcapture %}{% include example.html content=example %}
+{% endcapture %}
+{% include example.html content=example %}  
 
 ### Media verticale
 
-{% comment %}Example name: Media verticale{% endcomment %}
-{% capture example %}
+                  {% comment %}Example name: Media verticale{% endcomment %}
+                  {% capture example %}
 <nav class="toolbar toolbar-medium toolbar-vertical">
   <ul>
     <li>
@@ -837,12 +848,13 @@ Applicando una classe aggiuntiva `.toolbar-vertical` alla Toolbar gli elementi v
     </li>
   </ul>
 </nav>
-{% endcapture %}{% include example.html content=example %}
+{% endcapture %}
+{% include example.html content=example %}  
 
 ### Piccola verticale
 
-{% comment %}Example name: Piccola verticale{% endcomment %}
-{% capture example %}
+                  {% comment %}Example name: Piccola verticale{% endcomment %}
+                  {% capture example %}
 <nav class="toolbar toolbar-small toolbar-vertical">
   <ul>
     <li>
@@ -903,4 +915,5 @@ Applicando una classe aggiuntiva `.toolbar-vertical` alla Toolbar gli elementi v
     </li>
   </ul>
 </nav>
-{% endcapture %}{% include example.html content=example %}
+{% endcapture %}
+{% include example.html content=example %}
