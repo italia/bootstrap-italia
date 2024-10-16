@@ -99,7 +99,6 @@
         .text {
           font-size: $list-font-size;
           font-weight: $font-weight-semibold;
-  
           @include media-breakpoint-up(lg) {
             font-size: 1.125rem;
           }
@@ -127,10 +126,8 @@
   }
 }
 
-//Desktop
+// Desktop
 @include media-breakpoint-up(xl) {
-
-  //mobile
   .it-list-wrapper {
     .it-list {
       .list-item {
@@ -141,7 +138,7 @@
           margin-left: $v-gap;
           margin-right: 0;
 
-          &+.it-right-zone {
+          & + .it-right-zone {
             margin-left: $v-gap * 2;
           }
         }
