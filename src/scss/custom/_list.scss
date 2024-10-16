@@ -74,7 +74,7 @@
           justify-content: flex-end;
           flex-wrap: wrap;
 
-          span.metadata {
+          .metadata {
             margin-right: 0;
             width: 100%;
             text-align: right;
@@ -90,7 +90,7 @@
           height: $v-gap * 4;
         }
 
-        span.metadata {
+        .metadata {
           color: $list-metadata-color;
           font-size: $list-metadata-size;
           letter-spacing: $list-metadata-space;
