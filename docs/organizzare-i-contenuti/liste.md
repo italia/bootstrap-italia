@@ -266,35 +266,47 @@ L'elemento `.metadata`, segue l'elemento `.text`.
     <li>
       <div class="list-item">
         <div class="avatar size-lg"><img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Anna Barbieri"></div>
-        <div class="it-right-zone"><span class="text">Testo</span><span class="metadata">metadata testo</span>
+        <div class="it-right-zone">
+          <span class="text">Testo</span>
+          <span class="metadata">metadata testo</span>
         </div>
       </div>
     </li>
     <li>
       <div class="list-item">
         <div class="avatar size-lg"><img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Anna Barbieri"></div>
-        <div class="it-right-zone"><span class="text">Testo 2</span><span class="metadata"><a href="#">metadata link</a></span>
+        <div class="it-right-zone">
+          <span class="text">Testo</span>
+          <span class="metadata"><a href="#">metadata link</a></span>
         </div>
       </div>
     </li>
     <li>
       <a href="#" class="list-item">
         <div class="avatar size-lg"><img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Anna Barbieri"></div>
-        <div class="it-right-zone"><span class="text">Link</span><span class="metadata">metadata testo</span>
+        <div class="it-right-zone">
+          <span class="text">Link</span>
+          <span class="metadata">metadata testo</span>
         </div>
       </a>
     </li>
     <li>
       <div class="list-item">
         <div class="avatar size-lg"><img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Anna Barbieri"></div>
-        <div class="it-right-zone"><a href="#"><span class="text">Link 2</span></a><span class="metadata"><a href="#">metadata link</a></span>
+        <div class="it-right-zone">
+          <a href="#">
+            <span class="text">Link</span>
+          </a>
+          <span class="metadata"><a href="#">metadata link</a></span>
         </div>
       </div>
     </li>
     <li>
       <a class="list-item" href="#">
         <div class="avatar size-lg"><img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Anna Barbieri"></div>
-        <div class="it-right-zone"><span class="text">Link attivo</span><span class="metadata">metadata testo</span>
+        <div class="it-right-zone">
+          <span class="text">Testo</span>
+          <span class="metadata">metadata testo</span>
         </div>
       </a>
     </li>
@@ -304,7 +316,8 @@ L'elemento `.metadata`, segue l'elemento `.text`.
 
 ### Con testo aggiuntivo, azioni multiple e metadata
 
-Per il testo aggiuntivo, utilizzare il tag `<em>` all'interno dell'elemento `.text`.
+Per avere una lista che permetta paragrafi di testo aggiuntivo per ogni elemento, bisogna utilizzare un approccio con titolo (heading) e paragrafo `<p>`, mantenendo la classe `.text` per l'elementi titolo. Entrambi devono essere inclusi in un `<div>` per il corretto allineamento.
+
 
 {% comment %}Example name: Con testo aggiuntivo, azioni multiple e metadata{% endcomment %}
 {% capture example %}
@@ -313,7 +326,10 @@ Per il testo aggiuntivo, utilizzare il tag `<em>` all'interno dell'elemento `.te
     <li>
       <div class="list-item">
         <div class="it-right-zone">
-          <span class="text">Testo<em>Lorem ipsum dolor sit amet.</em></span>
+          <div>
+            <h4 class="text m-0">Testo</h4>
+            <p class="small m-0">Lorem ipsum dolor sit amet.</p>
+          </div>
           <span class="it-multiple">
             <span class="metadata">metadata testo</span>
             <a href="#" aria-label="Testo - Azione 1">
@@ -332,7 +348,10 @@ Per il testo aggiuntivo, utilizzare il tag `<em>` all'interno dell'elemento `.te
     <li>
       <div  class="list-item">
         <div class="it-right-zone">
-          <span class="text">Testo 2<em>Lorem ipsum dolor sit amet.</em></span>
+          <div>
+            <h4 class="text m-0">Testo</h4>
+            <p class="small m-0">Lorem ipsum dolor sit amet.</p>
+          </div>
           <span class="it-multiple">
             <span class="metadata"><a href="#">metadata link</a></span>
             <a href="#" aria-label="Testo 2 - Azione 1">
@@ -351,7 +370,10 @@ Per il testo aggiuntivo, utilizzare il tag `<em>` all'interno dell'elemento `.te
     <li>
       <div  class="list-item">
         <div class="it-right-zone">
-          <a href="#"><span class="text">Link<em>Lorem ipsum dolor sit amet.</em></span></a>
+          <div>
+            <h4 class="text m-0"><a href="#">Testo</a>  </h4>
+            <p class="small m-0">Lorem ipsum dolor sit amet.</p>
+          </div>
           <span class="it-multiple">
             <span class="metadata"><a href="#">metadata link</a></span>
             <a href="#" aria-label="Link - Azione 1">
@@ -370,7 +392,10 @@ Per il testo aggiuntivo, utilizzare il tag `<em>` all'interno dell'elemento `.te
     <li>
       <div class="list-item">
         <div class="it-right-zone">
-          <a href="#"><span class="text">Link<em>Lorem ipsum dolor sit amet.</em></span></a>
+          <div>
+            <h4 class="text m-0"><a href="#">Testo</a></h4>
+            <p class="small m-0">Lorem ipsum dolor sit amet.</p>
+          </div>
           <span class="it-multiple">
             <span class="metadata">metadata testo</span>
             <a href="#" aria-label="Link - Azione 1">
