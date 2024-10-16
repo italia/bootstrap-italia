@@ -69,7 +69,7 @@
           height: $v-gap * 3;
         }
 
-        span.it-multiple {
+        .it-multiple {
           display: flex;
           justify-content: flex-end;
           flex-wrap: wrap;
@@ -95,22 +95,20 @@
           font-size: $list-metadata-size;
           letter-spacing: $list-metadata-space;
         }
-      }
 
-      .text {
-        font-size: $list-font-size;
-        font-weight: 600;
-
-        @include media-breakpoint-up(lg) {
-          font-size: 1.125rem;
+        .text {
+          font-size: $list-font-size;
+          font-weight: $font-weight-semibold;
+  
+          @include media-breakpoint-up(lg) {
+            font-size: 1.125rem;
+          }
         }
 
-        em {
-          display: block;
+        .text + p {
           font-size: $list-sub-size;
           color: $list-sub-color;
-          font-style: normal;
-          font-weight: normal;
+          font-weight: $font-weight-normal;
         }
       }
     }
