@@ -36,10 +36,10 @@ Gli elementi di tipo `<a>` dei collapse necessitano l'aggiunta dell'attributo `r
       </a>
     </li>
     <li>
-      <a class="list-item active" href="#">
-        <div class="it-right-zone"><span class="text">Link attivo</span>
+      <div class="list-item">
+        <div class="it-right-zone"><span class="text">Testo</span>
         </div>
-      </a>
+      </div>
     </li>
   </ul>
 </div>
@@ -68,7 +68,7 @@ L'elemento `.avatar` precede l'elemento `.it-right-zone` che contiene il testo.
       </a>
     </li>
     <li>
-      <a class="list-item active" href="#" >
+      <a class="list-item" href="#" >
         <div class="avatar size-lg"><img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Anna Barbieri"></div>
         <div class="it-right-zone"><span class="text">Link attivo</span>
         </div>
@@ -105,7 +105,7 @@ L'elemento `.it-rounded-icon` con all'interno la relativa icona, precede l'eleme
       </a>
     </li>
     <li>
-      <a class="list-item active" href="#">
+      <a class="list-item" href="#">
         <div class="it-rounded-icon">
           <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-folder"></use></svg>
         </div>
@@ -140,7 +140,7 @@ L'elemento `.it-thumb` con all'interno la relativa immagine, precede l'elemento 
       </a>
     </li>
     <li>
-      <a class="list-item active" href="#">
+      <a class="list-item" href="#">
         <div class="it-thumb"><img src="https://via.placeholder.com/40x40.png?text=40x40" alt="descrizione immagine"></div>
         <div class="it-right-zone"><span class="text">Link attivo</span>
         </div>
@@ -229,19 +229,19 @@ L'elemento `.it-multiple` con all'interno le relative icone, segue l'elemento `.
       </div>
     </li>
     <li>
-      <div class="list-item active" href="#">
+      <div class="list-item" href="#">
         <div class="it-right-zone">
           <a href="#">
-            <span class="text">Link attivo</span>
+            <span class="text">Link</span>
           </a>
           <span class="it-multiple">
-            <a href="#" aria-label="Link attivo - Azione 1">
+            <a href="#" aria-label="Link - Azione 1">
               <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
             </a>
-            <a href="#" aria-label="Link attivo - Azione 2">
+            <a href="#" aria-label="Link - Azione 2">
               <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
             </a>
-            <a href="#" aria-label="Link attivo - Azione 3">
+            <a href="#" aria-label="Link - Azione 3">
               <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
             </a>
           </span>
@@ -292,7 +292,7 @@ L'elemento `.metadata`, segue l'elemento `.text`.
       </div>
     </li>
     <li>
-      <a class="list-item active" href="#">
+      <a class="list-item" href="#">
         <div class="avatar size-lg"><img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Anna Barbieri"></div>
         <div class="it-right-zone"><span class="text">Link attivo</span><span class="metadata">metadata testo</span>
         </div>
@@ -368,18 +368,18 @@ Per il testo aggiuntivo, utilizzare il tag `<em>` all'interno dell'elemento `.te
       </div>
     </li>
     <li>
-      <div class="list-item active">
+      <div class="list-item">
         <div class="it-right-zone">
-          <a href="#"><span class="text">Link attivo<em>Lorem ipsum dolor sit amet.</em></span></a>
+          <a href="#"><span class="text">Link<em>Lorem ipsum dolor sit amet.</em></span></a>
           <span class="it-multiple">
             <span class="metadata">metadata testo</span>
-            <a href="#" aria-label="Link attivo - Azione 1">
+            <a href="#" aria-label="Link - Azione 1">
               <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
             </a>
-            <a href="#" aria-label="Link attivo - Azione 2">
+            <a href="#" aria-label="Link - Azione 2">
               <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
             </a>
-            <a href="#" aria-label="Link attivo - Azione 3">
+            <a href="#" aria-label="Link - Azione 3">
               <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
             </a>
           </span>
