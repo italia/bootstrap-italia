@@ -371,7 +371,7 @@ Per avere una lista che permetta paragrafi di testo aggiuntivo per ogni elemento
       <div  class="list-item">
         <div class="it-right-zone">
           <div>
-            <h4 class="text m-0"><a href="#">Testo</a>  </h4>
+            <h4 class="text m-0"><a href="#">Testo</a></h4>
             <p class="small m-0">Lorem ipsum dolor sit amet.</p>
           </div>
           <span class="it-multiple">
