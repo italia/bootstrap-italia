@@ -1,24 +1,29 @@
 //mobile
 .it-grid-item-wrapper {
   position: relative;
+
   // img default proportion
   .img-responsive-wrapper {
     border-radius: $border-radius;
+
     .img-responsive {
       padding-bottom: $grid-item-df-proportion;
     }
   }
+
   // text
   .it-griditem-text-wrapper {
     display: flex;
     justify-content: space-between;
     padding: $v-gap;
     align-items: center;
+
     .it-griditem-text {
       font-size: $grid-item-text-size-mob;
       color: $grid-item-text-color;
       font-weight: 600;
     }
+
     .icon {
       flex-shrink: 0;
       position: relative;
@@ -28,10 +33,14 @@
       height: $grid-item-icon-mob-size;
     }
   }
+
   // text overlay
   &.it-grid-item-overlay {
     position: relative;
+
     .img-responsive-wrapper {
+      position: relative;
+
       &:after {
         content: '';
         display: block;
@@ -43,6 +52,7 @@
         height: 100%;
       }
     }
+
     .it-griditem-text-wrapper {
       position: absolute;
       left: 0;
@@ -59,7 +69,18 @@
         fill: #fff;
       }
     }
+
+    .figure-img {
+      margin-bottom: 0;
+    }
+
+    .figure-caption {
+      position: absolute;
+      z-index: 10;
+      color: #fff;
+    }
   }
+
   a {
     display: block;
     text-decoration: none;
@@ -85,24 +106,29 @@
 .it-grid-list-wrapper {
   padding-left: $grid-list-default-gap * 2;
   padding-right: $grid-list-default-gap * 2;
+
   // grid changes
   div[class^='col-'] {
     padding: 0 $grid-list-default-gap $grid-list-default-gap * 2 $grid-list-default-gap;
   }
+
   .grid-row {
     display: flex;
     margin-left: -$grid-list-default-gap;
     margin-right: -$grid-list-default-gap;
     flex-wrap: wrap;
   }
+
   // grid with label
   &.it-image-label-grid {
     padding-left: $grid-list-text-gap * 2;
     padding-right: $grid-list-text-gap * 2;
+
     // grid changes
     div[class^='col-'] {
       padding: 0 $grid-list-text-gap $grid-list-text-gap * 2 $grid-list-text-gap;
     }
+
     .grid-row {
       margin-left: -(($grid-list-text-gap * 2) + ($grid-list-default-gap * 2));
       margin-right: -(($grid-list-text-gap * 2) + ($grid-list-default-gap * 2));
@@ -117,12 +143,14 @@
       .img-responsive {
         padding-bottom: initial;
         height: auto;
+
         .img-wrapper {
           position: inherit;
           left: initial;
           right: initial;
           width: initial;
           height: initial;
+
           img {
             height: auto;
             object-fit: initial;
@@ -139,16 +167,19 @@
     &.it-grid-item-overlay {
       .it-griditem-text-wrapper {
         padding: $v-gap * 2 $v-gap * 3;
+
         .it-griditem-text {
           font-size: $grid-item-text-size;
         }
       }
     }
+
     // text
     .it-griditem-text-wrapper {
       .it-griditem-text {
         font-size: $grid-item-text-size;
       }
+
       .icon {
         width: $grid-item-icon-size-desk;
         height: $grid-item-icon-size-desk;

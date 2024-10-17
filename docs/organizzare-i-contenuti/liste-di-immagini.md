@@ -43,10 +43,10 @@ Per utilizzare la didascalia sovrapposta è sufficiente aggiungere la classe `.i
   <div class="col-12 col-lg-4">
     <div class="it-grid-item-wrapper it-grid-item-overlay">
       <a href="#">
-        <figure class="figure img-full w-100">
-  <img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
-  <figcaption class="figure-caption">Una didascalia per l'immagine sopra.</figcaption>
-</figure>
+        <figure class="figure img-full w-100 img-responsive-wrapper">
+          <img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
+          <figcaption class="figure-caption it-griditem-text-wrapper">Una didascalia per l'immagine sopra.</figcaption>
+        </figure>
       </a>
     </div>
   </div>
