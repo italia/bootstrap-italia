@@ -1,3 +1,61 @@
+# [2.10.0](https://github.com/italia/bootstrap-italia/compare/v2.9.2...v2.10.0) (2024-10-11)
+
+
+### Features
+
+* **a11y:** add accessibility features to input password ([c2a7b22](https://github.com/italia/bootstrap-italia/commit/c2a7b22f31a9e86f49a3794c6a47afa47bbb5cf8))
+* checkbox toggle and radio groups rewrite ([d661b18](https://github.com/italia/bootstrap-italia/commit/d661b1884962fc52616a6ceba705fb2c6fefc39f))
+
+
+
+## [2.9.2](https://github.com/italia/bootstrap-italia/compare/v2.9.1...v2.9.2) (2024-10-02)
+
+
+### Bug Fixes
+
+* added `form-control` class ([549fcba](https://github.com/italia/bootstrap-italia/commit/549fcba6354dc9e76bebd75aa9a70afeddb4aa4e))
+* extra space on webkit browsers ([0d7c04e](https://github.com/italia/bootstrap-italia/commit/0d7c04ec11d502252de0829f0c90fd8f3b3b1eb7))
+* remove duplicated properties ([0bf3801](https://github.com/italia/bootstrap-italia/commit/0bf3801be9c7f86485d008d9a8b27a1ec1ee45b1))
+* remove duplicated properties ([8539e6a](https://github.com/italia/bootstrap-italia/commit/8539e6a8b1e37f0a696c9a0507473e24e743ba23))
+* update icon minus ([2e45455](https://github.com/italia/bootstrap-italia/commit/2e45455d6f790d887a1558e5f4ae8d7ab87178f4))
+
+
+
+## [2.9.1](https://github.com/italia/bootstrap-italia/compare/v2.9.0...v2.9.1) (2024-09-17)
+
+
+### Bug Fixes
+
+* **a11y:** change aria-describedby to aria-labelledby in section component ([a4ece2d](https://github.com/italia/bootstrap-italia/commit/a4ece2d97501b7443ec8db5dd611e8257add1910))
+* **a11y:** italian messages by default for select autocomplete ([3674652](https://github.com/italia/bootstrap-italia/commit/36746526a71b1dfaaa60b20ec7fafeba45c10aa2))
+* alert link underline ([9aa281d](https://github.com/italia/bootstrap-italia/commit/9aa281d95eea8d14587d728875f4a741789f2f5a))
+
+
+### Features
+
+* add parameter for localized generic validation messages ([5156681](https://github.com/italia/bootstrap-italia/commit/51566819109fe2e4e2790228dc70b7a443b66566))
+
+
+
+# [2.9.0](https://github.com/italia/bootstrap-italia/compare/v2.8.8...v2.9.0) (2024-08-05)
+
+
+### Bug Fixes
+
+* checkbox and radio font-weight ([fc88721](https://github.com/italia/bootstrap-italia/commit/fc88721743c838cec67946f7b0865ee6aba809af))
+* form label ([c7393ea](https://github.com/italia/bootstrap-italia/commit/c7393ea9adaa946787b4e2ef97f87e6f07a8d77e))
+* remove legend properties ([81db5e2](https://github.com/italia/bootstrap-italia/commit/81db5e270471ba7d4a13013c3555f9ce61050c04))
+* secondary color ([c16470d](https://github.com/italia/bootstrap-italia/commit/c16470d89f05bf8a803a9d3552005c75a2549183))
+* typo ([9f1fecd](https://github.com/italia/bootstrap-italia/commit/9f1fecdcebb7a21d410dd81534fdfde439b0a17a))
+* upload label ([5850755](https://github.com/italia/bootstrap-italia/commit/58507552f37113c7ed591539c373c6ec4eede954))
+
+
+### Features
+
+* add `!default` statement for footer ([521d775](https://github.com/italia/bootstrap-italia/commit/521d7757d9036e1b2bbf5043476bc655da96edce))
+
+
+
 ## [2.8.8](https://github.com/italia/bootstrap-italia/compare/v2.8.7...v2.8.8) (2024-06-04)
 
 

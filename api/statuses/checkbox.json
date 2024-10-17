@@ -1,0 +1,27 @@
+{
+    "amichevole con lettori di schermo": "PRONTO",
+    "angular Kit": "DA RIVEDERE A11Y",
+    "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/checkbox",
+    "assignees": [
+        "Fupete"
+    ],
+    "bootstrap Italia": "PRONTO",
+    "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/form/checkbox/",
+    "comprensibile": "PRONTO",
+    "content": {
+        "body": "",
+        "id": "DI_lADOAOqloM4AcXblzgHdJQc",
+        "title": "Checkbox",
+        "type": "DraftIssue"
+    },
+    "id": "PVTI_lADOAOqloM4AcXblzgSeKRg",
+    "navigabile": "PRONTO",
+    "notes / More": "In angular nella variante Gruppi \u00e8 presente un link nella label da rimuovere.",
+    "react Kit": "DA RIVEDERE A11Y",
+    "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-form-checkbox--documentazione",
+    "status a11y check": "Done",
+    "title": "Checkbox",
+    "uI Kit Italia": "PRONTO",
+    "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920",
+    "visivamente accessibile": "PRONTO"
+}

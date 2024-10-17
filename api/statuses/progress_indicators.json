@@ -1,16 +1,29 @@
 {
+    "amichevole con lettori di schermo": "DA RIVEDERE",
+    "angular Kit": "DA COMPLETARE VARIANTI",
     "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/progress-bar",
+    "assignees": [
+        "Fupete"
+    ],
+    "bootstrap Italia": "DA RIVEDERE A11Y",
     "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/componenti/progress-indicators/",
+    "comprensibile": "PRONTO",
     "content": {
-        "body": "https://designers.italia.it/design-system/componenti/progress-indicator/",
+        "body": "https://designers.italia.it/design-system/componenti/progress-indicators/",
         "id": "DI_lADOAOqloM4AcXblzgFT9cc",
         "title": "Progress indicators",
         "type": "DraftIssue"
     },
     "id": "PVTI_lADOAOqloM4AcXblzgMjwf0",
+    "navigabile": "PRONTO",
+    "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1219",
+    "notes / More": "In React e Angular kit non \u00e8 presente la variante Ciambelle \u2014\u00a0Integrare doc varianti di colore con callout sul tema colore semantico? ",
+    "react Kit": "DA COMPLETARE VARIANTI",
     "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-progress--documentazione",
     "status": "Todo",
-    "status a11y check": "To do",
+    "status a11y check": "Done",
     "title": "Progress indicators",
-    "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920"
+    "uI Kit Italia": "PRONTO",
+    "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920",
+    "visivamente accessibile": "PRONTO"
 }
