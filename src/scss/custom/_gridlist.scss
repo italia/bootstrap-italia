@@ -15,22 +15,19 @@
   .it-griditem-text-wrapper {
     display: flex;
     justify-content: space-between;
-    padding: $v-gap;
     align-items: center;
 
     .it-griditem-text {
-      font-size: $grid-item-text-size-mob;
-      color: $grid-item-text-color;
-      font-weight: 600;
+      font-size: $grid-item-text-size;
+      font-weight: $font-weight-semibold;
     }
 
     .icon {
       flex-shrink: 0;
       position: relative;
-      right: -$v-gap;
       fill: $primary;
-      width: $grid-item-icon-mob-size;
-      height: $grid-item-icon-mob-size;
+      width: $grid-item-icon-size;
+      height: $grid-item-icon-size;
     }
   }
 
@@ -44,7 +41,7 @@
       &:after {
         content: '';
         display: block;
-        background: rgba(0, 0, 0, 0.5);
+        background: $grid-item-overlay;
         position: absolute;
         left: 0;
         top: 0;
@@ -171,18 +168,6 @@
         .it-griditem-text {
           font-size: $grid-item-text-size;
         }
-      }
-    }
-
-    // text
-    .it-griditem-text-wrapper {
-      .it-griditem-text {
-        font-size: $grid-item-text-size;
-      }
-
-      .icon {
-        width: $grid-item-icon-size-desk;
-        height: $grid-item-icon-size-desk;
       }
     }
   }
