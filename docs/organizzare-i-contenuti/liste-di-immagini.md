@@ -33,7 +33,8 @@ Per utilizzare la didascalia sovrapposta è sufficiente aggiungere la classe `.i
       <a href="#">
         <figure class="figure img-full w-100">
           <img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
-          <figcaption class="figure-caption">Una didascalia per l'immagine sopra. 
+          <figcaption class="figure-caption it-griditem-text-wrapper">
+            <span class="it-griditem-text">Testo didascalia</span>
             <svg class="icon"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-code-circle"></use></svg>
           </figcaption>
         </figure>
@@ -45,7 +46,10 @@ Per utilizzare la didascalia sovrapposta è sufficiente aggiungere la classe `.i
       <a href="#">
         <figure class="figure img-full w-100 img-responsive-wrapper">
           <img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
-          <figcaption class="figure-caption it-griditem-text-wrapper">Una didascalia per l'immagine sopra.</figcaption>
+          <figcaption class="figure-caption it-griditem-text-wrapper">
+            <span class="it-griditem-text">Testo didascalia</span>
+            <svg class="icon"><use href="/dist/svg/sprites.svg#it-code-circle"></use></svg>
+          </figcaption>
         </figure>
       </a>
     </div>
@@ -145,90 +149,72 @@ Per la corretta formattazione degli spazi di questo tipo di griglia, occorre agg
     <div class="col-6 col-lg-4">
       <div class="it-grid-item-wrapper">
         <a href="#">
-          <div class="img-responsive-wrapper">
-            <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
-            </div>
-          </div>
-          <span class="it-griditem-text-wrapper">
-            <span class="it-griditem-text">Didascalia</span>
-            <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
-          </span>
+          <figure class="figure img-full w-100">
+            <img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
+            <figcaption class="figure-caption it-griditem-text-wrapper">Testo didascalia 
+              <svg class="icon"><use href="/dist/svg/sprites.svg#it-code-circle"></use></svg>
+            </figcaption>
+          </figure>
         </a>
       </div>
     </div>
     <div class="col-6 col-lg-4">
       <div class="it-grid-item-wrapper">
         <a href="#">
-          <div class="img-responsive-wrapper">
-            <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
-            </div>
-          </div>
-          <span class="it-griditem-text-wrapper">
-            <span class="it-griditem-text">Didascalia</span>
-            <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
-          </span>
+          <figure class="figure img-full w-100">
+            <img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
+            <figcaption class="figure-caption it-griditem-text-wrapper">Testo didascalia 
+              <svg class="icon"><use href="/dist/svg/sprites.svg#it-code-circle"></use></svg>
+            </figcaption>
+          </figure>
         </a>
       </div>
     </div>
     <div class="col-6 col-lg-4">
       <div class="it-grid-item-wrapper">
         <a href="#">
-          <div class="img-responsive-wrapper">
-            <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
-            </div>
-          </div>
-          <span class="it-griditem-text-wrapper">
-            <span class="it-griditem-text">Didascalia</span>
-            <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
-          </span>
+          <figure class="figure img-full w-100">
+            <img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
+            <figcaption class="figure-caption it-griditem-text-wrapper">Testo didascalia 
+              <svg class="icon"><use href="/dist/svg/sprites.svg#it-code-circle"></use></svg>
+            </figcaption>
+          </figure>
         </a>
       </div>
     </div>
     <div class="col-6 col-lg-4">
       <div class="it-grid-item-wrapper">
         <a href="#">
-          <div class="img-responsive-wrapper">
-            <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
-            </div>
-          </div>
-          <span class="it-griditem-text-wrapper">
-            <span class="it-griditem-text">Didascalia</span>
-            <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
-          </span>
+          <figure class="figure img-full w-100">
+            <img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
+            <figcaption class="figure-caption it-griditem-text-wrapper">Testo didascalia 
+              <svg class="icon"><use href="/dist/svg/sprites.svg#it-code-circle"></use></svg>
+            </figcaption>
+          </figure>
         </a>
       </div>
     </div>
     <div class="col-6 col-lg-4">
       <div class="it-grid-item-wrapper">
         <a href="#">
-          <div class="img-responsive-wrapper">
-            <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
-            </div>
-          </div>
-          <span class="it-griditem-text-wrapper">
-            <span class="it-griditem-text">Didascalia</span>
-            <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
-          </span>
+          <figure class="figure img-full w-100">
+            <img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
+            <figcaption class="figure-caption it-griditem-text-wrapper">Testo didascalia 
+              <svg class="icon"><use href="/dist/svg/sprites.svg#it-code-circle"></use></svg>
+            </figcaption>
+          </figure>
         </a>
       </div>
     </div>
     <div class="col-6 col-lg-4">
       <div class="it-grid-item-wrapper">
         <a href="#">
-          <div class="img-responsive-wrapper">
-            <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
-            </div>
-          </div>
-          <span class="it-griditem-text-wrapper">
-            <span class="it-griditem-text">Didascalia</span>
-            <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
-          </span>
+          <figure class="figure img-full w-100">
+            <img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
+            <figcaption class="figure-caption it-griditem-text-wrapper">Testo didascalia 
+              <svg class="icon"><use href="/dist/svg/sprites.svg#it-code-circle"></use></svg>
+            </figcaption>
+          </figure>
         </a>
       </div>
     </div>
@@ -255,16 +241,18 @@ Per utilizzare l'immagine orizzontale, occorre aggiungere la classe `.it-grid-it
   <div class="grid-row">
     <div class="col-12 col-md-6">
       <div class="it-grid-item-wrapper it-grid-item-overlay">
-        <a href="#" class="">
+        <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
+                <figure class="img-wrapper">
+                  <img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" class="rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
+                  <figcaption class="figure-caption it-griditem-text-wrapper">
+                    <span class="it-griditem-text">Testo didascalia</span>
+                    <svg class="icon"><use href="/dist/svg/sprites.svg#it-code-circle"></use></svg>
+                  </figcaption>
+                </figure>
             </div>
           </div>
-          <span class="it-griditem-text-wrapper">
-            <span class="it-griditem-text">Didascalia</span>
-            <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
-          </span>
         </a>
       </div>
     </div>
@@ -275,13 +263,15 @@ Per utilizzare l'immagine orizzontale, occorre aggiungere la classe `.it-grid-it
             <a href="#">
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
+                    <figure class="img-wrapper">
+                      <img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" class="rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
+                      <figcaption class="figure-caption it-griditem-text-wrapper">
+                        <span class="it-griditem-text">Testo didascalia</span>
+                        <svg class="icon"><use href="/dist/svg/sprites.svg#it-code-circle"></use></svg>
+                      </figcaption>
+                    </figure>
                 </div>
               </div>
-              <span class="it-griditem-text-wrapper">
-                <span class="it-griditem-text">Didascalia</span>
-                <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
-              </span>
             </a>
           </div>
         </div>
@@ -290,13 +280,15 @@ Per utilizzare l'immagine orizzontale, occorre aggiungere la classe `.it-grid-it
             <a href="#">
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
+                    <figure class="img-wrapper">
+                      <img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" class="rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
+                      <figcaption class="figure-caption it-griditem-text-wrapper">
+                        <span class="it-griditem-text">Testo didascalia</span>
+                        <svg class="icon"><use href="/dist/svg/sprites.svg#it-code-circle"></use></svg>
+                      </figcaption>
+                    </figure>
                 </div>
               </div>
-              <span class="it-griditem-text-wrapper">
-                <span class="it-griditem-text">Didascalia</span>
-                <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
-              </span>
             </a>
           </div>
         </div>
@@ -305,13 +297,15 @@ Per utilizzare l'immagine orizzontale, occorre aggiungere la classe `.it-grid-it
             <a href="#">
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
+                    <figure class="img-wrapper">
+                      <img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" class="rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
+                      <figcaption class="figure-caption it-griditem-text-wrapper">
+                        <span class="it-griditem-text">Testo didascalia</span>
+                        <svg class="icon"><use href="/dist/svg/sprites.svg#it-code-circle"></use></svg>
+                      </figcaption>
+                    </figure>
                 </div>
               </div>
-              <span class="it-griditem-text-wrapper">
-                <span class="it-griditem-text">Didascalia</span>
-                <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
-              </span>
             </a>
           </div>
         </div>
