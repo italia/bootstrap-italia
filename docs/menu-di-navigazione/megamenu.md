@@ -77,7 +77,7 @@ Permette di includere **immagine e testo descrittivo** per una introduzione ai c
                       <div class="description-content ps-4 ps-sm-5 ms-3">
                         <div class="ratio ratio-21x9 lightgrey-bg-a1 mb-4 rounded">
                           <figure class="figure">
-                            <img src="https://via.placeholder.com/560x240/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Segnaposto">
+                            <img src="https://placehold.co/560x240/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Segnaposto">
                           </figure>
                         </div>
                         <p>
@@ -162,7 +162,7 @@ Permette di includere **immagine e testo descrittivo** per una introduzione ai c
                       <div class="description-content ps-4 ps-sm-5 ms-3">
                         <div class="ratio ratio-21x9 lightgrey-bg-a1 mb-4 rounded">
                           <figure class="figure">
-                            <img src="https://via.placeholder.com/560x240/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Segnaposto">
+                            <img src="https://placehold.co/560x240/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Segnaposto">
                           </figure>
                         </div>
                         <p>
@@ -273,7 +273,7 @@ Il megamenu prende il tema colori dark su desktop se è dentro un `<nav>` che ha
                       <div class="description-content ps-4 ps-sm-5 ms-3">
                         <div class="ratio ratio-21x9 lightgrey-bg-a1 mb-4 rounded">
                           <figure class="figure">
-                            <img src="https://via.placeholder.com/560x240/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Segnaposto">
+                            <img src="https://placehold.co/560x240/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Segnaposto">
                           </figure>
                         </div>
                         <p>
@@ -383,7 +383,7 @@ Il megamenu prende il tema colori dark su mobile se è dentro un `<nav>` che ha 
                       <div class="description-content ps-4 ps-sm-5 ms-3">
                         <div class="ratio ratio-21x9 lightgrey-bg-a1 mb-4 rounded">
                           <figure class="figure">
-                            <img src="https://via.placeholder.com/560x240/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Segnaposto">
+                            <img src="https://placehold.co/560x240/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Segnaposto">
                           </figure>
                         </div>
                         <p>

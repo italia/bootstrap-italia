@@ -127,21 +127,21 @@ L'elemento `.it-thumb` con all'interno la relativa immagine, precede l'elemento 
   <ul class="it-list">
     <li>
       <div class="list-item">
-        <div class="it-thumb"><img src="https://via.placeholder.com/40x40.png?text=40x40" alt="descrizione immagine"></div>
+        <div class="it-thumb"><img src="https://placehold.co/40x40.png?text=40x40" alt="descrizione immagine"></div>
         <div class="it-right-zone"><span class="text">Testo</span>
         </div>
       </div>
     </li>
     <li>
       <a href="#" class="list-item">
-        <div class="it-thumb"><img src="https://via.placeholder.com/40x40.png?text=40x40" alt="descrizione immagine"></div>
+        <div class="it-thumb"><img src="https://placehold.co/40x40.png?text=40x40" alt="descrizione immagine"></div>
         <div class="it-right-zone"><span class="text">Link</span>
         </div>
       </a>
     </li>
     <li>
       <a class="list-item active" href="#">
-        <div class="it-thumb"><img src="https://via.placeholder.com/40x40.png?text=40x40" alt="descrizione immagine"></div>
+        <div class="it-thumb"><img src="https://placehold.co/40x40.png?text=40x40" alt="descrizione immagine"></div>
         <div class="it-right-zone"><span class="text">Link attivo</span>
         </div>
       </a>

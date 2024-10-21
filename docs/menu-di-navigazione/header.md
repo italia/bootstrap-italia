@@ -462,7 +462,7 @@ Per cambiare tema all'header centrale è sufficiente aggiungere la classe `theme
                               <div class="description-content ps-4 ps-sm-5 ms-3">
                                 <div class="ratio ratio-21x9 lightgrey-bg-a1 mb-4 rounded">
                                   <figure class="figure">
-                                    <img src="https://via.placeholder.com/560x240/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Segnaposto">
+                                    <img src="https://placehold.co/560x240/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Segnaposto">
                                   </figure>
                                 </div>
                                 <p>
@@ -613,7 +613,7 @@ Per modificare il tema dell'Header Nav è sufficiente aggiungere una o tutte e d
                               <div class="description-content ps-4 ps-sm-5 ms-3">
                                 <div class="ratio ratio-21x9 lightgrey-bg-a1 mb-4 rounded">
                                   <figure class="figure">
-                                    <img src="https://via.placeholder.com/560x240/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Segnaposto">
+                                    <img src="https://placehold.co/560x240/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Segnaposto">
                                   </figure>
                                 </div>
                                 <p>
@@ -752,7 +752,7 @@ Per modificare il tema dell'Header Nav è sufficiente aggiungere una o tutte e d
                               <div class="description-content ps-4 ps-sm-5 ms-3">
                                 <div class="ratio ratio-21x9 lightgrey-bg-a1 mb-4 rounded">
                                   <figure class="figure">
-                                    <img src="https://via.placeholder.com/560x240/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Segnaposto">
+                                    <img src="https://placehold.co/560x240/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Segnaposto">
                                   </figure>
                                 </div>
                                 <p>
@@ -893,7 +893,7 @@ Per modificare il tema dell'Header Nav è sufficiente aggiungere una o tutte e d
                               <div class="description-content ps-4 ps-sm-5 ms-3">
                                 <div class="ratio ratio-21x9 lightgrey-bg-a1 mb-4 rounded">
                                   <figure class="figure">
-                                    <img src="https://via.placeholder.com/560x240/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Segnaposto">
+                                    <img src="https://placehold.co/560x240/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Segnaposto">
                                   </figure>
                                 </div>
                                 <p>
@@ -1181,7 +1181,7 @@ Al menu di navigazione principale può essere aggiunto anche un menu di navigazi
                                   <div class="description-content ps-4 ps-sm-5 ms-3">
                                     <div class="ratio ratio-21x9 lightgrey-bg-a1 mb-4 rounded">
                                       <figure class="figure">
-                                        <img src="https://via.placeholder.com/560x240/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Segnaposto">
+                                        <img src="https://placehold.co/560x240/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Segnaposto">
                                       </figure>
                                     </div>
                                     <p>
@@ -1424,7 +1424,7 @@ Verrà creata un'ombra per enfatizzare l'Header rispetto alla pagina in cui è c
                                   <div class="description-content ps-4 ps-sm-5 ms-3">
                                     <div class="ratio ratio-21x9 lightgrey-bg-a1 mb-4 rounded">
                                       <figure class="figure">
-                                        <img src="https://via.placeholder.com/560x240/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Segnaposto">
+                                        <img src="https://placehold.co/560x240/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Segnaposto">
                                       </figure>
                                     </div>
                                     <p>

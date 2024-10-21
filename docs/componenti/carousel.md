@@ -285,7 +285,7 @@ Contiene un'immagine associata ad una card "articolo".
           <a href="#">
             <div class="img-responsive-wrapper">
               <div class="img-responsive">
-                <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine1" title="titolo immagine" alt="descrizione immagine"></div>
+                <div class="img-wrapper"><img src="https://placehold.co/480x360/ebebeb/808080/?text=Immagine1" title="titolo immagine" alt="descrizione immagine"></div>
               </div>
             </div>
           </a>
@@ -315,7 +315,7 @@ Contiene un'immagine associata ad una card "articolo".
           <a href="#">
             <div class="img-responsive-wrapper">
               <div class="img-responsive">
-                <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine1" title="titolo immagine" alt="descrizione immagine"></div>
+                <div class="img-wrapper"><img src="https://placehold.co/480x360/ebebeb/808080/?text=Immagine1" title="titolo immagine" alt="descrizione immagine"></div>
               </div>
             </div>
           </a>
@@ -345,7 +345,7 @@ Contiene un'immagine associata ad una card "articolo".
           <a href="#">
             <div class="img-responsive-wrapper">
               <div class="img-responsive">
-                <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine1" title="titolo immagine" alt="descrizione immagine"></div>
+                <div class="img-wrapper"><img src="https://placehold.co/480x360/ebebeb/808080/?text=Immagine1" title="titolo immagine" alt="descrizione immagine"></div>
               </div>
             </div>
           </a>
@@ -393,7 +393,7 @@ Contiene un'immagine associata ad una card "articolo".
             <div class="card card-img no-after">
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine1" title="titolo immagine" alt="descrizione immagine"></div>
+                  <div class="img-wrapper"><img src="https://placehold.co/480x360/ebebeb/808080/?text=Immagine1" title="titolo immagine" alt="descrizione immagine"></div>
                 </div>
               </div>
               <div class="card-body px-3 px-md-4">
@@ -413,7 +413,7 @@ Contiene un'immagine associata ad una card "articolo".
             <div class="card card-img no-after">
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine2" title="titolo immagine" alt="descrizione immagine"></div>
+                  <div class="img-wrapper"><img src="https://placehold.co/480x360/ebebeb/808080/?text=Immagine2" title="titolo immagine" alt="descrizione immagine"></div>
                 </div>
               </div>
               <div class="card-body px-3 px-md-4">
@@ -433,7 +433,7 @@ Contiene un'immagine associata ad una card "articolo".
             <div class="card card-img no-after">
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine3" title="titolo immagine" alt="descrizione immagine"></div>
+                  <div class="img-wrapper"><img src="https://placehold.co/480x360/ebebeb/808080/?text=Immagine3" title="titolo immagine" alt="descrizione immagine"></div>
                 </div>
               </div>
               <div class="card-body px-3 px-md-4">
@@ -453,7 +453,7 @@ Contiene un'immagine associata ad una card "articolo".
             <div class="card card-img no-after">
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine4" title="titolo immagine" alt="descrizione immagine"></div>
+                  <div class="img-wrapper"><img src="https://placehold.co/480x360/ebebeb/808080/?text=Immagine4" title="titolo immagine" alt="descrizione immagine"></div>
                 </div>
               </div>
               <div class="card-body px-3 px-md-4">
@@ -473,7 +473,7 @@ Contiene un'immagine associata ad una card "articolo".
             <div class="card card-img no-after">
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine5" title="titolo immagine" alt="descrizione immagine"></div>
+                  <div class="img-wrapper"><img src="https://placehold.co/480x360/ebebeb/808080/?text=Immagine5" title="titolo immagine" alt="descrizione immagine"></div>
                 </div>
               </div>
               <div class="card-body px-3 px-md-4">
@@ -493,7 +493,7 @@ Contiene un'immagine associata ad una card "articolo".
             <div class="card card-img no-after">
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine6" title="titolo immagine" alt="descrizione immagine"></div>
+                  <div class="img-wrapper"><img src="https://placehold.co/480x360/ebebeb/808080/?text=Immagine6" title="titolo immagine" alt="descrizione immagine"></div>
                 </div>
               </div>
               <div class="card-body px-3 px-md-4">
@@ -532,7 +532,7 @@ Contiene [Card di tipo speciale]({{ site.baseurl }}/docs/componenti/card/#card-s
             <a class="card card-img no-after special-card p-3 p-md-4" href="#">
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://via.placeholder.com/360x480/ebebeb/808080/?text=Immagine1" title="titolo immagine" alt="descrizione immagine"></div>
+                  <div class="img-wrapper"><img src="https://placehold.co/360x480/ebebeb/808080/?text=Immagine1" title="titolo immagine" alt="descrizione immagine"></div>
                 </div>
               </div>
               <div class="card-body">
@@ -551,7 +551,7 @@ Contiene [Card di tipo speciale]({{ site.baseurl }}/docs/componenti/card/#card-s
             <a class="card card-img no-after special-card p-3 p-md-4" href="#">
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://via.placeholder.com/360x480/ebebeb/808080/?text=Immagine2" title="titolo immagine" alt="descrizione immagine"></div>
+                  <div class="img-wrapper"><img src="https://placehold.co/360x480/ebebeb/808080/?text=Immagine2" title="titolo immagine" alt="descrizione immagine"></div>
                 </div>
               </div>
               <div class="card-body">
@@ -570,7 +570,7 @@ Contiene [Card di tipo speciale]({{ site.baseurl }}/docs/componenti/card/#card-s
             <a class="card card-img no-after special-card p-3 p-md-4" href="#">
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://via.placeholder.com/360x480/ebebeb/808080/?text=Immagine3" title="titolo immagine" alt="descrizione immagine"></div>
+                  <div class="img-wrapper"><img src="https://placehold.co/360x480/ebebeb/808080/?text=Immagine3" title="titolo immagine" alt="descrizione immagine"></div>
                 </div>
               </div>
               <div class="card-body">
@@ -589,7 +589,7 @@ Contiene [Card di tipo speciale]({{ site.baseurl }}/docs/componenti/card/#card-s
             <a class="card card-img no-after special-card p-3 p-md-4" href="#">
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://via.placeholder.com/360x480/ebebeb/808080/?text=Immagine4" title="titolo immagine" alt="descrizione immagine"></div>
+                  <div class="img-wrapper"><img src="https://placehold.co/360x480/ebebeb/808080/?text=Immagine4" title="titolo immagine" alt="descrizione immagine"></div>
                 </div>
               </div>
               <div class="card-body">
@@ -608,7 +608,7 @@ Contiene [Card di tipo speciale]({{ site.baseurl }}/docs/componenti/card/#card-s
             <a class="card card-img no-after special-card p-3 p-md-4" href="#">
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://via.placeholder.com/360x480/ebebeb/808080/?text=Immagine5" title="titolo immagine" alt="descrizione immagine"></div>
+                  <div class="img-wrapper"><img src="https://placehold.co/360x480/ebebeb/808080/?text=Immagine5" title="titolo immagine" alt="descrizione immagine"></div>
                 </div>
               </div>
               <div class="card-body">
@@ -627,7 +627,7 @@ Contiene [Card di tipo speciale]({{ site.baseurl }}/docs/componenti/card/#card-s
             <a class="card card-img no-after special-card p-3 p-md-4" href="#">
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://via.placeholder.com/360x480/ebebeb/808080/?text=Immagine6" title="titolo immagine" alt="descrizione immagine"></div>
+                  <div class="img-wrapper"><img src="https://placehold.co/360x480/ebebeb/808080/?text=Immagine6" title="titolo immagine" alt="descrizione immagine"></div>
                 </div>
               </div>
               <div class="card-body">
@@ -667,7 +667,7 @@ div **`it-carousel-wrapper`** :
             <div class="card card-img no-after">
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine1" title="titolo immagine" alt="descrizione immagine"></div>
+                  <div class="img-wrapper"><img src="https://placehold.co/480x360/ebebeb/808080/?text=Immagine1" title="titolo immagine" alt="descrizione immagine"></div>
                 </div>
               </div>
             </div>
@@ -680,7 +680,7 @@ div **`it-carousel-wrapper`** :
             <div class="card card-img no-after">
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine2" title="titolo immagine" alt="descrizione immagine"></div>
+                  <div class="img-wrapper"><img src="https://placehold.co/480x360/ebebeb/808080/?text=Immagine2" title="titolo immagine" alt="descrizione immagine"></div>
                 </div>
               </div>
             </div>
@@ -693,7 +693,7 @@ div **`it-carousel-wrapper`** :
             <div class="card card-img no-after">
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine3" title="titolo immagine" alt="descrizione immagine"></div>
+                  <div class="img-wrapper"><img src="https://placehold.co/480x360/ebebeb/808080/?text=Immagine3" title="titolo immagine" alt="descrizione immagine"></div>
                 </div>
               </div>
             </div>
@@ -706,7 +706,7 @@ div **`it-carousel-wrapper`** :
             <div class="card card-img no-after">
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine4" title="titolo immagine" alt="descrizione immagine"></div>
+                  <div class="img-wrapper"><img src="https://placehold.co/480x360/ebebeb/808080/?text=Immagine4" title="titolo immagine" alt="descrizione immagine"></div>
                 </div>
               </div>
             </div>
@@ -719,7 +719,7 @@ div **`it-carousel-wrapper`** :
             <div class="card card-img no-after">
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine5" title="titolo immagine" alt="descrizione immagine"></div>
+                  <div class="img-wrapper"><img src="https://placehold.co/480x360/ebebeb/808080/?text=Immagine5" title="titolo immagine" alt="descrizione immagine"></div>
                 </div>
               </div>
             </div>
@@ -732,7 +732,7 @@ div **`it-carousel-wrapper`** :
             <div class="card card-img no-after">
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine6" title="titolo immagine" alt="descrizione immagine"></div>
+                  <div class="img-wrapper"><img src="https://placehold.co/480x360/ebebeb/808080/?text=Immagine6" title="titolo immagine" alt="descrizione immagine"></div>
                 </div>
               </div>
             </div>
@@ -766,7 +766,7 @@ div **`it-carousel-wrapper`** :
             <div class="card card-img no-after">
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine1" title="titolo immagine" alt="descrizione immagine"></div>
+                  <div class="img-wrapper"><img src="https://placehold.co/480x360/ebebeb/808080/?text=Immagine1" title="titolo immagine" alt="descrizione immagine"></div>
                 </div>
               </div>
             </div>
@@ -779,7 +779,7 @@ div **`it-carousel-wrapper`** :
             <div class="card card-img no-after">
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine2" title="titolo immagine" alt="descrizione immagine"></div>
+                  <div class="img-wrapper"><img src="https://placehold.co/480x360/ebebeb/808080/?text=Immagine2" title="titolo immagine" alt="descrizione immagine"></div>
                 </div>
               </div>
             </div>
@@ -792,7 +792,7 @@ div **`it-carousel-wrapper`** :
             <div class="card card-img no-after">
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine3" title="titolo immagine" alt="descrizione immagine"></div>
+                  <div class="img-wrapper"><img src="https://placehold.co/480x360/ebebeb/808080/?text=Immagine3" title="titolo immagine" alt="descrizione immagine"></div>
                 </div>
               </div>
             </div>
@@ -805,7 +805,7 @@ div **`it-carousel-wrapper`** :
             <div class="card card-img no-after">
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine4" title="titolo immagine" alt="descrizione immagine"></div>
+                  <div class="img-wrapper"><img src="https://placehold.co/480x360/ebebeb/808080/?text=Immagine4" title="titolo immagine" alt="descrizione immagine"></div>
                 </div>
               </div>
             </div>
@@ -818,7 +818,7 @@ div **`it-carousel-wrapper`** :
             <div class="card card-img no-after">
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine5" title="titolo immagine" alt="descrizione immagine"></div>
+                  <div class="img-wrapper"><img src="https://placehold.co/480x360/ebebeb/808080/?text=Immagine5" title="titolo immagine" alt="descrizione immagine"></div>
                 </div>
               </div>
             </div>
@@ -831,7 +831,7 @@ div **`it-carousel-wrapper`** :
             <div class="card card-img no-after">
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://via.placeholder.com/480x360/ebebeb/808080/?text=Immagine6" title="titolo immagine" alt="descrizione immagine"></div>
+                  <div class="img-wrapper"><img src="https://placehold.co/480x360/ebebeb/808080/?text=Immagine6" title="titolo immagine" alt="descrizione immagine"></div>
                 </div>
               </div>
             </div>
