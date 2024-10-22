@@ -25,19 +25,22 @@ Gli elementi di tipo `<a>` dei collapse necessitano l'aggiunta dell'attributo `r
   <ul class="it-list">
     <li>
       <div class="list-item">
-        <div class="it-right-zone"><span class="text">Testo</span>
+        <div class="it-right-zone">
+          <span class="text">Testo</span>
         </div>
       </div>
     </li>
     <li>
       <a href="#" class="list-item">
-        <div class="it-right-zone"><span class="text">Link</span>
+        <div class="it-right-zone">
+          <span class="text">Link</span>
         </div>
       </a>
     </li>
     <li>
       <div class="list-item">
-        <div class="it-right-zone"><span class="text">Testo</span>
+        <div class="it-right-zone">
+          <span class="text">Testo</span>
         </div>
       </div>
     </li>
@@ -55,22 +58,31 @@ L'elemento `.avatar` precede l'elemento `.it-right-zone` che contiene il testo.
   <ul class="it-list">
     <li>
       <div class="list-item">
-        <div class="avatar size-lg"><img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Anna Barbieri"></div>
-        <div class="it-right-zone"><span class="text">Testo</span>
+        <div class="avatar size-lg">
+          <img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Anna Barbieri">
+        </div>
+        <div class="it-right-zone">
+          <span class="text">Testo</span>
         </div>
       </div>
     </li>
     <li>
       <a href="#" class="list-item">
-        <div class="avatar size-lg"><img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Anna Barbieri"></div>
-        <div class="it-right-zone"><span class="text">Link</span>
+        <div class="avatar size-lg">
+          <img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Anna Barbieri">
+        </div>
+        <div class="it-right-zone">
+          <span class="text">Link</span>
         </div>
       </a>
     </li>
     <li>
       <a class="list-item" href="#" >
-        <div class="avatar size-lg"><img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Anna Barbieri"></div>
-        <div class="it-right-zone"><span class="text">Link attivo</span>
+        <div class="avatar size-lg">
+          <img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Anna Barbieri">
+        </div>
+        <div class="it-right-zone">
+          <span class="text">Link attivo</span>
         </div>
       </a>
     </li>
@@ -91,7 +103,8 @@ L'elemento `.it-rounded-icon` con all'interno la relativa icona, precede l'eleme
         <div class="it-rounded-icon">
           <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-folder"></use></svg>
         </div>
-        <div class="it-right-zone"><span class="text">Testo</span>
+        <div class="it-right-zone">
+          <span class="text">Testo</span>
         </div>
       </div>
     </li>
@@ -100,7 +113,8 @@ L'elemento `.it-rounded-icon` con all'interno la relativa icona, precede l'eleme
         <div class="it-rounded-icon">
           <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-folder"></use></svg>
         </div>
-        <div class="it-right-zone"><span class="text">Link</span>
+        <div class="it-right-zone">
+          <span class="text">Link</span>
         </div>
       </a>
     </li>
@@ -109,7 +123,8 @@ L'elemento `.it-rounded-icon` con all'interno la relativa icona, precede l'eleme
         <div class="it-rounded-icon">
           <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-folder"></use></svg>
         </div>
-        <div class="it-right-zone"><span class="text">Link attivo</span>
+        <div class="it-right-zone">
+          <span class="text">Link attivo</span>
         </div>
       </a>
     </li>
@@ -127,22 +142,30 @@ L'elemento `.it-thumb` con all'interno la relativa immagine, precede l'elemento 
   <ul class="it-list">
     <li>
       <div class="list-item">
-        <div class="it-thumb"><img src="https://via.placeholder.com/40x40.png?text=40x40" alt="descrizione immagine"></div>
-        <div class="it-right-zone"><span class="text">Testo</span>
+        <div class="it-thumb">
+          <img src="https://via.placeholder.com/40x40.png?text=40x40" alt="descrizione immagine">
+        </div>
+        <div class="it-right-zone">
+          <span class="text">Testo</span>
         </div>
       </div>
     </li>
     <li>
       <a href="#" class="list-item">
-        <div class="it-thumb"><img src="https://via.placeholder.com/40x40.png?text=40x40" alt="descrizione immagine"></div>
+        <div class="it-thumb">
+          <img src="https://via.placeholder.com/40x40.png?text=40x40" alt="descrizione immagine">
+        </div>
         <div class="it-right-zone"><span class="text">Link</span>
         </div>
       </a>
     </li>
     <li>
       <a class="list-item" href="#">
-        <div class="it-thumb"><img src="https://via.placeholder.com/40x40.png?text=40x40" alt="descrizione immagine"></div>
-        <div class="it-right-zone"><span class="text">Link attivo</span>
+        <div class="it-thumb">
+          <img src="https://via.placeholder.com/40x40.png?text=40x40" alt="descrizione immagine">
+        </div>
+        <div class="it-right-zone">
+          <span class="text">Link attivo</span>
         </div>
       </a>
     </li>
@@ -265,7 +288,9 @@ L'elemento `.metadata`, segue l'elemento `.text`.
   <ul class="it-list">
     <li>
       <div class="list-item">
-        <div class="avatar size-lg"><img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Anna Barbieri"></div>
+        <div class="avatar size-lg">
+          <img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Anna Barbieri">
+        </div>
         <div class="it-right-zone">
           <span class="text">Testo</span>
           <span class="metadata">metadata testo</span>
@@ -274,7 +299,9 @@ L'elemento `.metadata`, segue l'elemento `.text`.
     </li>
     <li>
       <div class="list-item">
-        <div class="avatar size-lg"><img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Anna Barbieri"></div>
+        <div class="avatar size-lg">
+          <img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Anna Barbieri">
+        </div>
         <div class="it-right-zone">
           <span class="text">Testo</span>
           <span class="metadata"><a href="#">metadata link</a></span>
@@ -283,7 +310,9 @@ L'elemento `.metadata`, segue l'elemento `.text`.
     </li>
     <li>
       <a href="#" class="list-item">
-        <div class="avatar size-lg"><img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Anna Barbieri"></div>
+        <div class="avatar size-lg">
+          <img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Anna Barbieri">
+        </div>
         <div class="it-right-zone">
           <span class="text">Link</span>
           <span class="metadata">metadata testo</span>
@@ -292,7 +321,9 @@ L'elemento `.metadata`, segue l'elemento `.text`.
     </li>
     <li>
       <div class="list-item">
-        <div class="avatar size-lg"><img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Anna Barbieri"></div>
+        <div class="avatar size-lg">
+          <img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Anna Barbieri">
+        </div>
         <div class="it-right-zone">
           <a href="#">
             <span class="text">Link</span>
@@ -303,7 +334,9 @@ L'elemento `.metadata`, segue l'elemento `.text`.
     </li>
     <li>
       <a class="list-item" href="#">
-        <div class="avatar size-lg"><img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Anna Barbieri"></div>
+        <div class="avatar size-lg"
+          <img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Anna Barbieri">
+        </div>
         <div class="it-right-zone">
           <span class="text">Testo</span>
           <span class="metadata">metadata testo</span>
