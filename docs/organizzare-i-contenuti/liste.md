@@ -586,7 +586,7 @@ Per ogni elemento di una lista di link è possibile definire una variante di dim
       <a class="list-item large" href="#"><span>Link lista 3</span></a>
     </li>
     <li>
-      <span class="divider" role="separator></span>
+      <span class="divider" role="separator"></span>
     </li>
     <li>
       <a class="list-item large" href="#"><span>Link lista 4</span></a>
@@ -620,7 +620,7 @@ All'interno del tag `<span class="list-item-title-icon-wrapper">` subito dopo lo
       </a>
     </li>
     <li>
-      <span class="divider" role="separator></span>
+      <span class="divider" role="separator"></span>
     </li>
     <li>
       <a class="list-item icon-right" href="#">
