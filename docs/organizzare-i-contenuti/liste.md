@@ -464,7 +464,7 @@ Per disabilitare un elemento è sufficiente aggiungere la classe `.disabled` al 
       <a class="list-item" href="#"><span>Link lista 1</span></a>
     </li>
     <li>
-      <a class="list-item disabled" href="#"><span>Link lista 2 disabilitato</span></a>
+      <a class="list-item disabled" href="#" aria-disabled="true"><span>Link lista 2 disabilitato</span></a>
     </li>
     <li>
       <a class="list-item" href="#"><span>Link lista 3</span></a>
@@ -584,7 +584,7 @@ All'interno del tag `<span class="list-item-title-icon-wrapper">` subito dopo lo
     <li><span class="divider"></span>
     </li>
     <li>
-      <a class="list-item disabled icon-right" href="#">
+      <a class="list-item disabled icon-right" href="#" aria-disabled="true">
         <span class="list-item-title-icon-wrapper">
           <h4 class="list-item-title">Link lista 1 disabilitato</h4>
           <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use></svg>
@@ -633,7 +633,7 @@ Per posizionare correttamente l'icona a sinistra del testo bisogna aggiungere al
       </a>
     </li>
     <li>
-      <a class="list-item icon-left disabled" href="#">
+      <a class="list-item icon-left disabled" href="#" aria-disabled="true">
        <span class="list-item-title-icon-wrapper">
           <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use></svg>
           <span class="list-item-title">Link lista 3 disabilitata</span>
@@ -672,7 +672,7 @@ Per posizionare correttamente l'icona a destra del testo bisogna aggiungere al t
       </a>
     </li>
     <li>
-      <a class="list-item icon-right disabled" href="#">
+      <a class="list-item icon-right disabled" href="#" aria-disabled="true">
         <span class="list-item-title-icon-wrapper">
           <span class="list-item-title">Link lista 3 disabilitata</span>
           <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg>
@@ -716,7 +716,7 @@ Inserisci l'icona all'interno del tag `<span class="list-item-title-icon-wrapper
       </a>
     </li>
     <li>
-      <a class="list-item disabled icon-right" href="#">
+      <a class="list-item disabled icon-right" href="#" aria-disabled="true">
         <span class="list-item-title-icon-wrapper">
           <span class="list-item-title">Link lista 3 disabilitato con icona a destra</span>
           <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg>
@@ -745,7 +745,7 @@ Una lista di link può contenere anche elementi appartenenti ai form, di seguito
     <li>
       <div class="toggles">
         <label for="toggle2">Label per toggle disabilitato
-          <input type="checkbox" id="toggle2" disabled><span class="lever"></span>
+          <input type="checkbox" id="toggle2" disabled aria-disabled="true"><span class="lever"></span>
         </label>
       </div>
     </li>
@@ -774,8 +774,8 @@ Lista di link contenente un [checkbox]({{ site.baseurl }}/docs/form/checkbox/).
       </div>
     </li>
     <li>
-      <div class="form-check form-check-group disabled" aria-describedby="">
-        <input type="checkbox" id="checkbox8" disabled>
+      <div class="form-check form-check-group disabled" aria-describedby=" aria-disabled="true">
+        <input type="checkbox" id="checkbox8" disabled aria-disabled="true">
         <label for="checkbox8">Checkbox disabilitato non selezionato</label>
       </div>
     </li>
