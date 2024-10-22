@@ -424,9 +424,15 @@ Le liste per menu di navigazione, costituite da tag `<ul>` con classe `.link-lis
 {% capture example %}
 <div class="link-list-wrapper">
   <ul class="link-list">
-     <li><a class="list-item" href="#"><span>Link lista 1</span></a></li>
-     <li><a class="list-item" href="#"><span>Link lista 2</span></a></li>
-     <li><a class="list-item" href="#"><span>Link lista 3</span></a></li>
+    <li>
+      <a class="list-item" href="#"><span>Link lista 1</span></a>
+    </li>
+    <li>
+      <a class="list-item" href="#"><span>Link lista 2</span></a>
+    </li>
+   <li>
+      <a class="list-item" href="#"><span>Link lista 3</span></a>
+    </li>
   </ul>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -495,7 +501,7 @@ Il divisore è costituito dal tag `<span>` con classe `.divider` all'interno del
       <a class="list-item" href="#"><span>Link lista 3</span></a>
     </li>
     <li>
-      <span class="divider"></span>
+      <span class="divider" role="separator"></span>
     </li>
     <li>
       <a class="list-item" href="#"><span>Link lista 4</span></a>
@@ -509,15 +515,20 @@ Il divisore è costituito dal tag `<span>` con classe `.divider` all'interno del
 <div class="link-list-wrapper">
   <h4 class="link-list-heading"><a href="#">Intestazione con link</a></h4>
   <ul class="link-list">
-    <li><a class="list-item" href="#"><span>Link lista 1</span></a>
+    <li>
+      <a class="list-item" href="#"><span>Link lista 1</span></a>
     </li>
-    <li><a class="list-item" href="#"><span>Link lista 2</span></a>
+    <li>
+      <a class="list-item" href="#"><span>Link lista 2</span></a>
     </li>
-    <li><a class="list-item" href="#"><span>Link lista 3</span></a>
+    <li>
+      <a class="list-item" href="#"><span>Link lista 3</span></a>
     </li>
-    <li><span class="divider"></span>
+    <li>
+      <span class="divider" role="separator"></span>
     </li>
-    <li><a class="list-item" href="#"><span>Link lista 4</span></a>
+    <li>
+      <a class="list-item" href="#"><span>Link lista 4</span></a>
     </li>
   </ul>
 </div>
@@ -532,15 +543,20 @@ Per ogni elemento di una lista di link è possibile definire una variante di dim
 <div class="link-list-wrapper">
   <h4 class="link-list-heading">Intestazione</h4>
   <ul class="link-list">
-    <li><a class="list-item large" href="#"><span>Link lista 1</span></a>
+    <li>
+      <a class="list-item large" href="#"><span>Link lista 1</span></a>
     </li>
-    <li><a class="list-item large" href="#"><span>Link lista 2</span></a>
+    <li>
+      <a class="list-item large" href="#"><span>Link lista 2</span></a>
     </li>
-    <li><a class="list-item large" href="#"><span>Link lista 3</span></a>
+    <li>
+      <a class="list-item large" href="#"><span>Link lista 3</span></a>
     </li>
-    <li><span class="divider"></span>
+    <li>
+      <span class="divider" role="separator></span>
     </li>
-    <li><a class="list-item large" href="#"><span>Link lista 4</span></a>
+    <li>
+      <a class="list-item large" href="#"><span>Link lista 4</span></a>
     </li>
   </ul>
 </div>
@@ -570,7 +586,8 @@ All'interno del tag `<span class="list-item-title-icon-wrapper">` subito dopo lo
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit…</p>
       </a>
     </li>
-    <li><span class="divider"></span>
+    <li>
+      <span class="divider" role="separator></span>
     </li>
     <li>
       <a class="list-item icon-right" href="#">
@@ -592,7 +609,8 @@ All'interno del tag `<span class="list-item-title-icon-wrapper">` subito dopo lo
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit…</p>
       </a>
     </li>
-    <li><span class="divider"></span> 
+    <li>
+      <span class="divider"></span> 
     </li>
   </ul>
 </div>
