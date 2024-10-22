@@ -53,7 +53,9 @@ $small-font-size: 0.875rem !default;
 $link-decoration: underline;
 
 // Focus
-$focus-outline-color: $orange !default;
+$focus-outline-color-in: $white !default;
+$focus-outline-color-out: $black !default;
+$focus-outline-color: $focus-outline-color-out !default; // xxx retro-compatibility, ex $orange
 
 //skiplinks
 $skiplinks-color: $primary !default;

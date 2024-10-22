@@ -1,8 +1,17 @@
 :focus:not(.focus--mouse),
 %focus {
-  border-color: $focus-outline-color !important;
-  box-shadow: 0 0 0 2px $focus-outline-color !important;
-  outline: none !important;
+  border-color: $focus-outline-color-out !important;
+  box-shadow: 0 0 0 2px $focus-outline-color-in, 0 0 0 5px $focus-outline-color-out;
+  outline: 3px solid transparent;
+  outline-offset: 3px;
+}
+
+p a:focus:not(.focus--mouse) {
+  outline-offset: 0px;
+  outline: 3px $focus-outline-color-out solid;
+  background: $focus-outline-color-in;
+  box-shadow: none;
+  color: $link-color !important;
 }
 
 [tabindex='-1']:focus:not(:focus-visible) {
