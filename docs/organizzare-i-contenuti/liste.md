@@ -25,21 +25,24 @@ Gli elementi di tipo `<a>` dei collapse necessitano l'aggiunta dell'attributo `r
   <ul class="it-list">
     <li>
       <div class="list-item">
-        <div class="it-right-zone"><span class="text">Testo</span>
+        <div class="it-right-zone">
+          <span class="text">Testo</span>
         </div>
       </div>
     </li>
     <li>
       <a href="#" class="list-item">
-        <div class="it-right-zone"><span class="text">Link</span>
+        <div class="it-right-zone">
+          <span class="text">Link</span>
         </div>
       </a>
     </li>
     <li>
-      <a class="list-item active" href="#">
-        <div class="it-right-zone"><span class="text">Link attivo</span>
+      <div class="list-item">
+        <div class="it-right-zone">
+          <span class="text">Testo</span>
         </div>
-      </a>
+      </div>
     </li>
   </ul>
 </div>
@@ -55,22 +58,31 @@ L'elemento `.avatar` precede l'elemento `.it-right-zone` che contiene il testo.
   <ul class="it-list">
     <li>
       <div class="list-item">
-        <div class="avatar size-lg"><img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Anna Barbieri"></div>
-        <div class="it-right-zone"><span class="text">Testo</span>
+        <div class="avatar size-lg">
+          <img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Anna Barbieri">
+        </div>
+        <div class="it-right-zone">
+          <span class="text">Testo</span>
         </div>
       </div>
     </li>
     <li>
       <a href="#" class="list-item">
-        <div class="avatar size-lg"><img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Anna Barbieri"></div>
-        <div class="it-right-zone"><span class="text">Link</span>
+        <div class="avatar size-lg">
+          <img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Anna Barbieri">
+        </div>
+        <div class="it-right-zone">
+          <span class="text">Link</span>
         </div>
       </a>
     </li>
     <li>
-      <a class="list-item active" href="#" >
-        <div class="avatar size-lg"><img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Anna Barbieri"></div>
-        <div class="it-right-zone"><span class="text">Link attivo</span>
+      <a class="list-item" href="#" >
+        <div class="avatar size-lg">
+          <img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Anna Barbieri">
+        </div>
+        <div class="it-right-zone">
+          <span class="text">Link attivo</span>
         </div>
       </a>
     </li>
@@ -91,7 +103,8 @@ L'elemento `.it-rounded-icon` con all'interno la relativa icona, precede l'eleme
         <div class="it-rounded-icon">
           <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-folder"></use></svg>
         </div>
-        <div class="it-right-zone"><span class="text">Testo</span>
+        <div class="it-right-zone">
+          <span class="text">Testo</span>
         </div>
       </div>
     </li>
@@ -100,16 +113,18 @@ L'elemento `.it-rounded-icon` con all'interno la relativa icona, precede l'eleme
         <div class="it-rounded-icon">
           <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-folder"></use></svg>
         </div>
-        <div class="it-right-zone"><span class="text">Link</span>
+        <div class="it-right-zone">
+          <span class="text">Link</span>
         </div>
       </a>
     </li>
     <li>
-      <a class="list-item active" href="#">
+      <a class="list-item" href="#">
         <div class="it-rounded-icon">
           <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-folder"></use></svg>
         </div>
-        <div class="it-right-zone"><span class="text">Link attivo</span>
+        <div class="it-right-zone">
+          <span class="text">Link attivo</span>
         </div>
       </a>
     </li>
@@ -127,22 +142,30 @@ L'elemento `.it-thumb` con all'interno la relativa immagine, precede l'elemento 
   <ul class="it-list">
     <li>
       <div class="list-item">
-        <div class="it-thumb"><img src="https://via.placeholder.com/40x40.png?text=40x40" alt="descrizione immagine"></div>
-        <div class="it-right-zone"><span class="text">Testo</span>
+        <div class="it-thumb">
+          <img src="https://via.placeholder.com/40x40.png?text=40x40" alt="descrizione immagine">
+        </div>
+        <div class="it-right-zone">
+          <span class="text">Testo</span>
         </div>
       </div>
     </li>
     <li>
       <a href="#" class="list-item">
-        <div class="it-thumb"><img src="https://via.placeholder.com/40x40.png?text=40x40" alt="descrizione immagine"></div>
+        <div class="it-thumb">
+          <img src="https://via.placeholder.com/40x40.png?text=40x40" alt="descrizione immagine">
+        </div>
         <div class="it-right-zone"><span class="text">Link</span>
         </div>
       </a>
     </li>
     <li>
-      <a class="list-item active" href="#">
-        <div class="it-thumb"><img src="https://via.placeholder.com/40x40.png?text=40x40" alt="descrizione immagine"></div>
-        <div class="it-right-zone"><span class="text">Link attivo</span>
+      <a class="list-item" href="#">
+        <div class="it-thumb">
+          <img src="https://via.placeholder.com/40x40.png?text=40x40" alt="descrizione immagine">
+        </div>
+        <div class="it-right-zone">
+          <span class="text">Link attivo</span>
         </div>
       </a>
     </li>
@@ -229,19 +252,19 @@ L'elemento `.it-multiple` con all'interno le relative icone, segue l'elemento `.
       </div>
     </li>
     <li>
-      <div class="list-item active" href="#">
+      <div class="list-item" href="#">
         <div class="it-right-zone">
           <a href="#">
-            <span class="text">Link attivo</span>
+            <span class="text">Link</span>
           </a>
           <span class="it-multiple">
-            <a href="#" aria-label="Link attivo - Azione 1">
+            <a href="#" aria-label="Link - Azione 1">
               <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
             </a>
-            <a href="#" aria-label="Link attivo - Azione 2">
+            <a href="#" aria-label="Link - Azione 2">
               <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
             </a>
-            <a href="#" aria-label="Link attivo - Azione 3">
+            <a href="#" aria-label="Link - Azione 3">
               <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
             </a>
           </span>
@@ -265,36 +288,58 @@ L'elemento `.metadata`, segue l'elemento `.text`.
   <ul class="it-list">
     <li>
       <div class="list-item">
-        <div class="avatar size-lg"><img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Anna Barbieri"></div>
-        <div class="it-right-zone"><span class="text">Testo</span><span class="metadata">metadata testo</span>
+        <div class="avatar size-lg">
+          <img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Anna Barbieri">
+        </div>
+        <div class="it-right-zone">
+          <span class="text">Testo</span>
+          <span class="metadata">metadata testo</span>
         </div>
       </div>
     </li>
     <li>
       <div class="list-item">
-        <div class="avatar size-lg"><img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Anna Barbieri"></div>
-        <div class="it-right-zone"><span class="text">Testo 2</span><span class="metadata"><a href="#">metadata link</a></span>
+        <div class="avatar size-lg">
+          <img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Anna Barbieri">
+        </div>
+        <div class="it-right-zone">
+          <span class="text">Testo</span>
+          <span class="metadata"><a href="#">metadata link</a></span>
         </div>
       </div>
     </li>
     <li>
       <a href="#" class="list-item">
-        <div class="avatar size-lg"><img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Anna Barbieri"></div>
-        <div class="it-right-zone"><span class="text">Link</span><span class="metadata">metadata testo</span>
+        <div class="avatar size-lg">
+          <img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Anna Barbieri">
+        </div>
+        <div class="it-right-zone">
+          <span class="text">Link</span>
+          <span class="metadata">metadata testo</span>
         </div>
       </a>
     </li>
     <li>
       <div class="list-item">
-        <div class="avatar size-lg"><img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Anna Barbieri"></div>
-        <div class="it-right-zone"><a href="#"><span class="text">Link 2</span></a><span class="metadata"><a href="#">metadata link</a></span>
+        <div class="avatar size-lg">
+          <img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Anna Barbieri">
+        </div>
+        <div class="it-right-zone">
+          <a href="#">
+            <span class="text">Link</span>
+          </a>
+          <span class="metadata"><a href="#">metadata link</a></span>
         </div>
       </div>
     </li>
     <li>
-      <a class="list-item active" href="#">
-        <div class="avatar size-lg"><img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Anna Barbieri"></div>
-        <div class="it-right-zone"><span class="text">Link attivo</span><span class="metadata">metadata testo</span>
+      <a class="list-item" href="#">
+        <div class="avatar size-lg"
+          <img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Anna Barbieri">
+        </div>
+        <div class="it-right-zone">
+          <span class="text">Testo</span>
+          <span class="metadata">metadata testo</span>
         </div>
       </a>
     </li>
@@ -304,7 +349,7 @@ L'elemento `.metadata`, segue l'elemento `.text`.
 
 ### Con testo aggiuntivo, azioni multiple e metadata
 
-Per il testo aggiuntivo, utilizzare il tag `<em>` all'interno dell'elemento `.text`.
+Per avere una lista che permetta paragrafi di testo aggiuntivo per ogni elemento, bisogna utilizzare un approccio con titolo (heading) e paragrafo `<p>`, mantenendo la classe `.text` per l'elementi titolo. Entrambi devono essere inclusi in un elemento `<div>` per il corretto allineamento.
 
 {% comment %}Example name: Con testo aggiuntivo, azioni multiple e metadata{% endcomment %}
 {% capture example %}
@@ -313,7 +358,10 @@ Per il testo aggiuntivo, utilizzare il tag `<em>` all'interno dell'elemento `.te
     <li>
       <div class="list-item">
         <div class="it-right-zone">
-          <span class="text">Testo<em>Lorem ipsum dolor sit amet.</em></span>
+          <div>
+            <h4 class="text m-0">Testo</h4>
+            <p class="small m-0">Lorem ipsum dolor sit amet.</p>
+          </div>
           <span class="it-multiple">
             <span class="metadata">metadata testo</span>
             <a href="#" aria-label="Testo - Azione 1">
@@ -332,7 +380,10 @@ Per il testo aggiuntivo, utilizzare il tag `<em>` all'interno dell'elemento `.te
     <li>
       <div  class="list-item">
         <div class="it-right-zone">
-          <span class="text">Testo 2<em>Lorem ipsum dolor sit amet.</em></span>
+          <div>
+            <h4 class="text m-0">Testo</h4>
+            <p class="small m-0">Lorem ipsum dolor sit amet.</p>
+          </div>
           <span class="it-multiple">
             <span class="metadata"><a href="#">metadata link</a></span>
             <a href="#" aria-label="Testo 2 - Azione 1">
@@ -351,7 +402,10 @@ Per il testo aggiuntivo, utilizzare il tag `<em>` all'interno dell'elemento `.te
     <li>
       <div  class="list-item">
         <div class="it-right-zone">
-          <a href="#"><span class="text">Link<em>Lorem ipsum dolor sit amet.</em></span></a>
+          <div>
+            <h4 class="text m-0"><a href="#">Testo</a></h4>
+            <p class="small m-0">Lorem ipsum dolor sit amet.</p>
+          </div>
           <span class="it-multiple">
             <span class="metadata"><a href="#">metadata link</a></span>
             <a href="#" aria-label="Link - Azione 1">
@@ -368,18 +422,21 @@ Per il testo aggiuntivo, utilizzare il tag `<em>` all'interno dell'elemento `.te
       </div>
     </li>
     <li>
-      <div class="list-item active">
+      <div class="list-item">
         <div class="it-right-zone">
-          <a href="#"><span class="text">Link attivo<em>Lorem ipsum dolor sit amet.</em></span></a>
+          <div>
+            <h4 class="text m-0"><a href="#">Testo</a></h4>
+            <p class="small m-0">Lorem ipsum dolor sit amet.</p>
+          </div>
           <span class="it-multiple">
             <span class="metadata">metadata testo</span>
-            <a href="#" aria-label="Link attivo - Azione 1">
+            <a href="#" aria-label="Link - Azione 1">
               <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
             </a>
-            <a href="#" aria-label="Link attivo - Azione 2">
+            <a href="#" aria-label="Link - Azione 2">
               <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
             </a>
-            <a href="#" aria-label="Link attivo - Azione 3">
+            <a href="#" aria-label="Link - Azione 3">
               <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
             </a>
           </span>
@@ -400,9 +457,15 @@ Le liste per menu di navigazione, costituite da tag `<ul>` con classe `.link-lis
 {% capture example %}
 <div class="link-list-wrapper">
   <ul class="link-list">
-     <li><a class="list-item" href="#"><span>Link lista 1</span></a></li>
-     <li><a class="list-item" href="#"><span>Link lista 2</span></a></li>
-     <li><a class="list-item" href="#"><span>Link lista 3</span></a></li>
+    <li>
+      <a class="list-item" href="#"><span>Link lista 1</span></a>
+    </li>
+    <li>
+      <a class="list-item" href="#"><span>Link lista 2</span></a>
+    </li>
+   <li>
+      <a class="list-item" href="#"><span>Link lista 3</span></a>
+    </li>
   </ul>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -440,7 +503,7 @@ Per disabilitare un elemento è sufficiente aggiungere la classe `.disabled` al 
       <a class="list-item" href="#"><span>Link lista 1</span></a>
     </li>
     <li>
-      <a class="list-item disabled" href="#"><span>Link lista 2 disabilitato</span></a>
+      <a class="list-item disabled" href="#" aria-disabled="true"><span>Link lista 2 disabilitato</span></a>
     </li>
     <li>
       <a class="list-item" href="#"><span>Link lista 3</span></a>
@@ -459,7 +522,7 @@ Il divisore è costituito dal tag `<span>` con classe `.divider` all'interno del
 {% comment %}Example name: Per menu, con intestazione e divisore{% endcomment %}
 {% capture example %}
 <div class="link-list-wrapper">
-  <div class="link-list-heading">Intestazione senza link</div>
+  <h4 class="link-list-heading">Intestazione senza link</h4>
   <ul class="link-list">
     <li>
       <a class="list-item" href="#"><span>Link lista 1</span></a>
@@ -471,7 +534,7 @@ Il divisore è costituito dal tag `<span>` con classe `.divider` all'interno del
       <a class="list-item" href="#"><span>Link lista 3</span></a>
     </li>
     <li>
-      <span class="divider"></span>
+      <span class="divider" role="separator"></span>
     </li>
     <li>
       <a class="list-item" href="#"><span>Link lista 4</span></a>
@@ -483,17 +546,22 @@ Il divisore è costituito dal tag `<span>` con classe `.divider` all'interno del
 {% comment %}Example name: Per menu, con intestazione e link, e divisore{% endcomment %}
 {% capture example %}
 <div class="link-list-wrapper">
-  <div class="link-list-heading"><a href="#">Intestazione con link</a></div>
+  <h4 class="link-list-heading"><a href="#">Intestazione con link</a></h4>
   <ul class="link-list">
-    <li><a class="list-item" href="#"><span>Link lista 1</span></a>
+    <li>
+      <a class="list-item" href="#"><span>Link lista 1</span></a>
     </li>
-    <li><a class="list-item" href="#"><span>Link lista 2</span></a>
+    <li>
+      <a class="list-item" href="#"><span>Link lista 2</span></a>
     </li>
-    <li><a class="list-item" href="#"><span>Link lista 3</span></a>
+    <li>
+      <a class="list-item" href="#"><span>Link lista 3</span></a>
     </li>
-    <li><span class="divider"></span>
+    <li>
+      <span class="divider" role="separator"></span>
     </li>
-    <li><a class="list-item" href="#"><span>Link lista 4</span></a>
+    <li>
+      <a class="list-item" href="#"><span>Link lista 4</span></a>
     </li>
   </ul>
 </div>
@@ -506,17 +574,22 @@ Per ogni elemento di una lista di link è possibile definire una variante di dim
 {% comment %}Example name: Per menu, con dimensione grande{% endcomment %}
 {% capture example %}
 <div class="link-list-wrapper">
-  <div class="link-list-heading">Intestazione</div>
+  <h4 class="link-list-heading">Intestazione</h4>
   <ul class="link-list">
-    <li><a class="list-item large" href="#"><span>Link lista 1</span></a>
+    <li>
+      <a class="list-item large" href="#"><span>Link lista 1</span></a>
     </li>
-    <li><a class="list-item large" href="#"><span>Link lista 2</span></a>
+    <li>
+      <a class="list-item large" href="#"><span>Link lista 2</span></a>
     </li>
-    <li><a class="list-item large" href="#"><span>Link lista 3</span></a>
+    <li>
+      <a class="list-item large" href="#"><span>Link lista 3</span></a>
     </li>
-    <li><span class="divider"></span>
+    <li>
+      <span class="divider" role="separator"></span>
     </li>
-    <li><a class="list-item large" href="#"><span>Link lista 4</span></a>
+    <li>
+      <a class="list-item large" href="#"><span>Link lista 4</span></a>
     </li>
   </ul>
 </div>
@@ -540,18 +613,19 @@ All'interno del tag `<span class="list-item-title-icon-wrapper">` subito dopo lo
     <li>
       <a class="list-item active icon-right" href="#">
         <span class="list-item-title-icon-wrapper">
-          <span class="list-item-title">Link lista 1 attivo</span>
+          <h4 class="list-item-title">Link lista 1 attivo</h4>
           <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use></svg>
         </span>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit…</p>
       </a>
     </li>
-    <li><span class="divider"></span>
+    <li>
+      <span class="divider" role="separator"></span>
     </li>
     <li>
       <a class="list-item icon-right" href="#">
         <span class="list-item-title-icon-wrapper">
-          <span class="list-item-title">Link lista 1</span>
+          <h4 class="list-item-title">Link lista 1</h4>
           <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use></svg>
         </span>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit…</p>
@@ -560,15 +634,16 @@ All'interno del tag `<span class="list-item-title-icon-wrapper">` subito dopo lo
     <li><span class="divider"></span>
     </li>
     <li>
-      <a class="list-item disabled icon-right" href="#">
+      <a class="list-item disabled icon-right" href="#" aria-disabled="true">
         <span class="list-item-title-icon-wrapper">
-          <span class="list-item-title">Link lista 1 disabilitato</span>
+          <h4 class="list-item-title">Link lista 1 disabilitato</h4>
           <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use></svg>
         </span>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit…</p>
       </a>
     </li>
-    <li><span class="divider"></span> 
+    <li>
+      <span class="divider"></span> 
     </li>
   </ul>
 </div>
@@ -609,7 +684,7 @@ Per posizionare correttamente l'icona a sinistra del testo bisogna aggiungere al
       </a>
     </li>
     <li>
-      <a class="list-item icon-left disabled" href="#">
+      <a class="list-item icon-left disabled" href="#" aria-disabled="true">
        <span class="list-item-title-icon-wrapper">
           <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use></svg>
           <span class="list-item-title">Link lista 3 disabilitata</span>
@@ -648,7 +723,7 @@ Per posizionare correttamente l'icona a destra del testo bisogna aggiungere al t
       </a>
     </li>
     <li>
-      <a class="list-item icon-right disabled" href="#">
+      <a class="list-item icon-right disabled" href="#" aria-disabled="true">
         <span class="list-item-title-icon-wrapper">
           <span class="list-item-title">Link lista 3 disabilitata</span>
           <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg>
@@ -692,7 +767,7 @@ Inserisci l'icona all'interno del tag `<span class="list-item-title-icon-wrapper
       </a>
     </li>
     <li>
-      <a class="list-item disabled icon-right" href="#">
+      <a class="list-item disabled icon-right" href="#" aria-disabled="true">
         <span class="list-item-title-icon-wrapper">
           <span class="list-item-title">Link lista 3 disabilitato con icona a destra</span>
           <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg>
@@ -721,7 +796,7 @@ Una lista di link può contenere anche elementi appartenenti ai form, di seguito
     <li>
       <div class="toggles">
         <label for="toggle2">Label per toggle disabilitato
-          <input type="checkbox" id="toggle2" disabled><span class="lever"></span>
+          <input type="checkbox" id="toggle2" disabled aria-disabled="true"><span class="lever"></span>
         </label>
       </div>
     </li>
@@ -750,8 +825,8 @@ Lista di link contenente un [checkbox]({{ site.baseurl }}/docs/form/checkbox/).
       </div>
     </li>
     <li>
-      <div class="form-check form-check-group disabled" aria-describedby="">
-        <input type="checkbox" id="checkbox8" disabled>
+      <div class="form-check form-check-group disabled" aria-describedby=" aria-disabled="true">
+        <input type="checkbox" id="checkbox8" disabled aria-disabled="true">
         <label for="checkbox8">Checkbox disabilitato non selezionato</label>
       </div>
     </li>
