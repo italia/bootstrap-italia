@@ -20,6 +20,7 @@ Gli elementi di tipo `<a>` dei collapse necessitano l'aggiunta dell'attributo `r
 ### Lista semplice solo testo
 
 {% comment %}Example name: Base, con testo{% endcomment %}
+
 {% capture example %}
 <div class="it-list-wrapper">
   <ul class="it-list">
@@ -393,6 +394,13 @@ L'elemento `.metadata`, segue l'elemento `.text`.
 
 Per avere una lista che permetta paragrafi di testo aggiuntivo per ogni elemento, bisogna utilizzare un approccio con titolo (heading) e paragrafo `<p>`, mantenendo la classe `.text` per l'elementi titolo. Entrambi devono essere inclusi in un elemento `<div>` per il corretto allineamento.
 
+{% capture callout %}
+ #### Breaking feature dalla versione **2.10.y**
+
+ Il codice markup è stato rivisto in chiave accessibilità e robustezza. In particolare cosa cambia: 
+   - L'elemento `.text` è ora implementato come heading `h` e non semplice `<span>`. Dovrà avere il livello intestazione corretto a seconda della gerarchia in pagina.
+ {% endcapture %}{% include callout.html content=callout type="danger" %}
+
 {% comment %}Example name: Con testo aggiuntivo, azioni multiple e metadata{% endcomment %}
 {% capture example %}
 <div class="it-list-wrapper">
@@ -595,7 +603,14 @@ Per disabilitare un elemento è sufficiente aggiungere la classe `.disabled` al 
 Le liste di link possono avere un'intestazione (con o senza link) e/o divisori per separare gruppi di link.
 
 L'intestazione è costituita dall'elemento `.link-list-heading` che precede il tag `<ul>`.  
-Il divisore è costituito dal tag `<span>` con classe `.divider` all'interno del tag `<li>`.
+Il divisore è costituito dal tag `<span>` con classe `.divider` e attributo `role="separator"`  all'interno del tag `<li>`.
+
+{% capture callout %}
+ #### Breaking feature dalla versione **2.10.y**
+
+ Il codice markup è stato rivisto in chiave accessibilità e robustezza. In particolare cosa cambia: 
+   - L'elemento `.link-list-heading` è ora implementato come heading `h` e non semplice `<span>`. Dovrà avere il livello intestazione corretto a seconda della gerarchia in pagina.
+ {% endcapture %}{% include callout.html content=callout type="danger" %}
 
 {% comment %}Example name: Per menu, con intestazione e divisore{% endcomment %}
 {% capture example %}
@@ -684,6 +699,13 @@ Per includere un'icona bisogna aggiungere al tag `<a>` una delle seguenti classi
 
 All'interno del tag `<span class="list-item-title-icon-wrapper">` subito dopo lo `<span class="list-item-title">` contenente il testo, puoi inserire [l'icona necessaria]({{ site.baseurl }}/docs/utilities/icone/).
 
+{% capture callout %}
+ #### Breaking feature dalla versione **2.10.y**
+
+ Il codice markup è stato rivisto in chiave accessibilità e robustezza. In particolare cosa cambia: 
+   - L'elemento `.list-item-title` è ora implementato come heading `h` e non semplice `<span>`. Dovrà avere il livello intestazione corretto a seconda della gerarchia in pagina.
+ {% endcapture %}{% include callout.html content=callout type="danger" %}
+
 {% comment %}Example name: Per menu, multilinea con icona{% endcomment %}
 {% capture example %}
 <div class="link-list-wrapper multiline">
@@ -693,9 +715,9 @@ All'interno del tag `<span class="list-item-title-icon-wrapper">` subito dopo lo
         <span class="list-item-title-icon-wrapper">
           <h4 class="list-item-title">Link lista 1 attivo</h4>
           <svg class="icon icon-primary">
-                <title>Codice</title>
-                <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
-              </svg>
+            <title>Codice</title>
+            <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
+          </svg>
         </span>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit…</p>
       </a>
@@ -708,9 +730,9 @@ All'interno del tag `<span class="list-item-title-icon-wrapper">` subito dopo lo
         <span class="list-item-title-icon-wrapper">
           <h4 class="list-item-title">Link lista 1</h4>
           <svg class="icon icon-primary">
-                <title>Codice</title>
-                <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
-              </svg>
+            <title>Codice</title>
+            <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
+          </svg>
         </span>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit…</p>
       </a>
@@ -722,9 +744,9 @@ All'interno del tag `<span class="list-item-title-icon-wrapper">` subito dopo lo
         <span class="list-item-title-icon-wrapper">
           <h4 class="list-item-title">Link lista 1 disabilitato</h4>
           <svg class="icon icon-primary">
-                <title>Codice</title>
-                <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
-              </svg>
+            <title>Codice</title>
+            <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
+          </svg>
         </span>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit…</p>
       </a>
