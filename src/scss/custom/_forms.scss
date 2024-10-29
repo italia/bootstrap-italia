@@ -130,6 +130,9 @@ textarea {
   background-repeat: no-repeat !important;
   background-size: 45px 45% !important;
   min-height: 2.5rem;
+  &.form-control-lg {
+    border-radius: 0;
+  }
   &:disabled,
   &[readonly] {
     cursor: not-allowed;
