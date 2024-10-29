@@ -24,3 +24,12 @@ p a:focus:not(.focus--mouse) {
   box-shadow: none !important;
   outline: none !important;
 }
+
+.form-check {
+  &.form-check-group {
+    :focus:not(.focus--mouse),
+    %focus {
+      width: 100%;
+    }
+  }
+}
