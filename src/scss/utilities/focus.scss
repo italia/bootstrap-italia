@@ -1,5 +1,6 @@
 :focus:not(.focus--mouse),
-%focus {
+%focus,
+.it-carousel-wrapper .splide__pagination button:focus {
   border-color: $focus-outline-color-out !important;
   box-shadow: 0 0 0 2px $focus-outline-color-in, 0 0 0 5px $focus-outline-color-out;
   outline: 3px solid transparent;
