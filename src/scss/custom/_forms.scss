@@ -502,12 +502,6 @@ textarea {
 
 @media (prefers-reduced-motion: reduce) {
   fieldset legend, .form-group label, textarea, .form-check [type='checkbox'], .form-check [type='radio'], .form-check [type="checkbox"] + label::after, .form-check [type="checkbox"] + label::before, .form-check [type="radio"] + label::after, .form-check [type="radio"] + label::before, .toggles label input[type="checkbox"] + .lever::before, .toggles label input[type="checkbox"] + .lever::after {
-      transition: none
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  fieldset legend, .form-group label, textarea, .form-check [type='checkbox'], .form-check [type='radio'], .form-check [type="checkbox"] + label::after, .form-check [type="checkbox"] + label::before, .form-check [type="radio"] + label::after, .form-check [type="radio"] + label::before, .toggles label input[type="checkbox"] + .lever::before, .toggles label input[type="checkbox"] + .lever::after {
     transition: none !important;
   }
 }
