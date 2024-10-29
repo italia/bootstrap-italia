@@ -261,3 +261,9 @@
     }
   }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .it-carousel-wrapper .splide__pagination button {
+    transition: none !important;
+  }
+}
