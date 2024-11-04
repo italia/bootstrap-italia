@@ -24,7 +24,7 @@ Per utilizzare la didascalia sovrapposta è sufficiente aggiungere la classe `.i
       <a href="#">
         <div class="img-responsive-wrapper">
           <div class="img-responsive">
-            <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
+            <div class="img-wrapper"><img src="https://placehold.co/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
           </div>
         </div>
       </a>
@@ -35,7 +35,7 @@ Per utilizzare la didascalia sovrapposta è sufficiente aggiungere la classe `.i
       <a href="#">
         <div class="img-responsive-wrapper">
           <div class="img-responsive">
-            <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
+            <div class="img-wrapper"><img src="https://placehold.co/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
           </div>
         </div>
         <span class="it-griditem-text-wrapper">
@@ -50,7 +50,7 @@ Per utilizzare la didascalia sovrapposta è sufficiente aggiungere la classe `.i
       <a href="#">
         <div class="img-responsive-wrapper">
           <div class="img-responsive">
-            <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
+            <div class="img-wrapper"><img src="https://placehold.co/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
           </div>
         </div>
         <span class="it-griditem-text-wrapper">
@@ -79,7 +79,7 @@ Il contenitore della griglia è `.it-grid-list-wrapper`. Al posto della classe `
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
+              <div class="img-wrapper"><img src="https://placehold.co/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
             </div>
           </div>
         </a>
@@ -90,7 +90,7 @@ Il contenitore della griglia è `.it-grid-list-wrapper`. Al posto della classe `
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
+              <div class="img-wrapper"><img src="https://placehold.co/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
             </div>
           </div>
         </a>
@@ -101,7 +101,7 @@ Il contenitore della griglia è `.it-grid-list-wrapper`. Al posto della classe `
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
+              <div class="img-wrapper"><img src="https://placehold.co/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
             </div>
           </div>
         </a>
@@ -112,7 +112,7 @@ Il contenitore della griglia è `.it-grid-list-wrapper`. Al posto della classe `
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
+              <div class="img-wrapper"><img src="https://placehold.co/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
             </div>
           </div>
         </a>
@@ -123,7 +123,7 @@ Il contenitore della griglia è `.it-grid-list-wrapper`. Al posto della classe `
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
+              <div class="img-wrapper"><img src="https://placehold.co/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
             </div>
           </div>
         </a>
@@ -134,7 +134,7 @@ Il contenitore della griglia è `.it-grid-list-wrapper`. Al posto della classe `
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
+              <div class="img-wrapper"><img src="https://placehold.co/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
             </div>
           </div>
         </a>
@@ -157,7 +157,7 @@ Per la corretta formattazione degli spazi di questo tipo di griglia, occorre agg
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
+              <div class="img-wrapper"><img src="https://placehold.co/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
@@ -172,7 +172,7 @@ Per la corretta formattazione degli spazi di questo tipo di griglia, occorre agg
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
+              <div class="img-wrapper"><img src="https://placehold.co/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
@@ -187,7 +187,7 @@ Per la corretta formattazione degli spazi di questo tipo di griglia, occorre agg
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
+              <div class="img-wrapper"><img src="https://placehold.co/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
@@ -202,7 +202,7 @@ Per la corretta formattazione degli spazi di questo tipo di griglia, occorre agg
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
+              <div class="img-wrapper"><img src="https://placehold.co/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
@@ -217,7 +217,7 @@ Per la corretta formattazione degli spazi di questo tipo di griglia, occorre agg
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
+              <div class="img-wrapper"><img src="https://placehold.co/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
@@ -232,7 +232,7 @@ Per la corretta formattazione degli spazi di questo tipo di griglia, occorre agg
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
+              <div class="img-wrapper"><img src="https://placehold.co/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
@@ -268,7 +268,7 @@ Per utilizzare l'immagine orizzontale, occorre aggiungere la classe `.it-grid-it
         <a href="#" class="">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
+              <div class="img-wrapper"><img src="https://placehold.co/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
@@ -285,7 +285,7 @@ Per utilizzare l'immagine orizzontale, occorre aggiungere la classe `.it-grid-it
             <a href="#">
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
+                  <div class="img-wrapper"><img src="https://placehold.co/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
                 </div>
               </div>
               <span class="it-griditem-text-wrapper">
@@ -300,7 +300,7 @@ Per utilizzare l'immagine orizzontale, occorre aggiungere la classe `.it-grid-it
             <a href="#">
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
+                  <div class="img-wrapper"><img src="https://placehold.co/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
                 </div>
               </div>
               <span class="it-griditem-text-wrapper">
@@ -315,7 +315,7 @@ Per utilizzare l'immagine orizzontale, occorre aggiungere la classe `.it-grid-it
             <a href="#">
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
+                  <div class="img-wrapper"><img src="https://placehold.co/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
                 </div>
               </div>
               <span class="it-griditem-text-wrapper">
@@ -348,7 +348,7 @@ Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'e
         <a href="#" class="">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/400x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
+              <div class="img-wrapper"><img src="https://placehold.co/400x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
@@ -363,7 +363,7 @@ Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'e
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/400x500/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
+              <div class="img-wrapper"><img src="https://placehold.co/400x500/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
@@ -378,7 +378,7 @@ Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'e
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/400x700/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
+              <div class="img-wrapper"><img src="https://placehold.co/400x700/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
@@ -393,7 +393,7 @@ Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'e
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/400x600/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
+              <div class="img-wrapper"><img src="https://placehold.co/400x600/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
@@ -408,7 +408,7 @@ Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'e
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/400x500/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
+              <div class="img-wrapper"><img src="https://placehold.co/400x500/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
@@ -423,7 +423,7 @@ Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'e
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/400x400/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
+              <div class="img-wrapper"><img src="https://placehold.co/400x400/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
@@ -438,7 +438,7 @@ Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'e
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/400x600/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
+              <div class="img-wrapper"><img src="https://placehold.co/400x600/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
@@ -453,7 +453,7 @@ Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'e
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/400x500/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
+              <div class="img-wrapper"><img src="https://placehold.co/400x500/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
@@ -468,7 +468,7 @@ Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'e
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/400x400/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
+              <div class="img-wrapper"><img src="https://placehold.co/400x400/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
@@ -483,7 +483,7 @@ Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'e
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/400x600/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
+              <div class="img-wrapper"><img src="https://placehold.co/400x600/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
@@ -498,7 +498,7 @@ Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'e
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/400x500/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
+              <div class="img-wrapper"><img src="https://placehold.co/400x500/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
@@ -513,7 +513,7 @@ Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'e
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/400x400/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
+              <div class="img-wrapper"><img src="https://placehold.co/400x400/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
