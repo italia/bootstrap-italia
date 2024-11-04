@@ -47,10 +47,10 @@ In questo caso è utile implementarlo come elemento `nav` con una `aria-label` d
 {% capture example %}
 <nav class="skiplinks" aria-label="Scorciatoie di navigazione">
   <ul>
-    <li class="visually-hidden-focusable"><a href="#menu">Vai al menu</a></li>
-    <li class="visually-hidden-focusable" ><a href="#main">Vai al contenuto</a></li>
-    <li class="visually-hidden-focusable" ><a href="#feedback">Questa pagina ti è stata utile?</a></li>
-    <li class="visually-hidden-focusable" ><a href="#footer">Vai al piede</a></li>
+    <li class="visually-hidden-focusable"><a href="#">Vai al menu</a></li>
+    <li class="visually-hidden-focusable" ><a href="#">Vai al contenuto</a></li>
+    <li class="visually-hidden-focusable" ><a href="#">Questa pagina ti è stata utile?</a></li>
+    <li class="visually-hidden-focusable" ><a href="#">Vai al piede</a></li>
     <li class="visually-hidden-focusable" ><a href="https://form.agid.gov.it/view/xyz">Dichiarazione di accessibilità (link esterno su sito AgID)</a></li>
   </ul>
 </nav>
