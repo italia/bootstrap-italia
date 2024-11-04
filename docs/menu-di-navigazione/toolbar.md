@@ -119,7 +119,7 @@ In questo caso le label, nascoste visivamente, devono essere contenute in uno `<
 {% endcapture %}
 {% include example.html content=example %}
 
-### Toolbar piccola 
+### Toolbar piccola
 
 Applicando una classe aggiuntiva `.toolbar-small` alla Toolbar si ottiene la versione più piccola.
 
@@ -172,12 +172,12 @@ Anche in questo caso le label, non visibile, devono essere contenute in uno `<sp
 
 ## Stato degli elementi
 
-Al tag `<a>` dell'elemento attivo va applicata la classe `.active`.  
+Al tag `<a>` dell'elemento attivo va applicata la classe `.active`.
 
 Gli elementi disabilitati avranno invece una classe `.disabled` con ulteriori accorgimenti relativi all'accessibilità a seconda della tipologia:
 
-- **link, tag `<a>`:** aggiungere la proprietà HTML `disabled` al tag.  
-- **dropdown button, tag `<button>`:** aggiungere l'attributo `aria-disabled="true"`.  
+- **link, tag `<a>`:** aggiungere la proprietà HTML `disabled` al tag.
+- **dropdown button, tag `<button>`:** aggiungere l'attributo `aria-disabled="true"`.
 
 ## Divisori
 
@@ -277,8 +277,8 @@ Nella versione grande i Badge possono contenere dei numeri. Il numero dei conten
 
 Nella versione media i Badge non contengono numeri ma possono essere usati come alert generici. Il numero dei contenuti non letti o nuovi va indicato all'interno della label con classe `.visually-hidden` riservata agli screen reader.
 
-                  {% comment %}Example name: Media con badge{% endcomment %}
-                  {% capture example %}
+{% comment %}Example name: Media con badge{% endcomment %}
+{% capture example %}
 <nav class="toolbar toolbar-medium">
   <ul>
     <li>
@@ -334,8 +334,8 @@ Nella versione media i Badge non contengono numeri ma possono essere usati come 
 
 Nella versione piccola i Badge non contengono numeri ma possono essere usati come alert generici. Il numero dei contenuti non letti o nuovi va indicato all'interno della label con classe `.visually-hidden` riservata agli screen reader.
 
-                  {% comment %}Example name: Piccola con badge{% endcomment %}
-                  {% capture example %}
+{% comment %}Example name: Piccola con badge{% endcomment %}
+{% capture example %}
 <nav class="toolbar toolbar-small">
   <ul>
     <li>
