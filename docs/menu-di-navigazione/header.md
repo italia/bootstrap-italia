@@ -49,7 +49,7 @@ Il cambio lingua è gestito con il componente [dropdown]({{ site.baseurl }}/docs
 {% comment %}Example name: Slim header{% endcomment %}
 {% capture example %}
 <div class="it-header-slim-wrapper">
-  <div class="container">
+  <div class="container-xxl">
     <div class="row">
       <div class="col-12">
         <div class="it-header-slim-wrapper-content">
@@ -109,7 +109,7 @@ Il modificatore `.btn-full` è disponibile anche con il tema chiaro attivato da 
 {% comment %}Example name: Slim header con pulsante accedi full-responsive{% endcomment %}
 {% capture example %}
 <div class="it-header-slim-wrapper">
-  <div class="container">
+  <div class="container-xxl">
     <div class="row">
       <div class="col-12">
         <div class="it-header-slim-wrapper-content">
@@ -157,7 +157,7 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
 {% comment %}Example name: Slim header, variante chiara{% endcomment %}
 {% capture example %}
 <div class="it-header-slim-wrapper theme-light">
-  <div class="container">
+  <div class="container-xxl">
     <div class="row">
       <div class="col-12">
         <div class="it-header-slim-wrapper-content">
@@ -214,7 +214,7 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
 {% comment %}Example name: Header centrale{% endcomment %}
 {% capture example %}
 <div class="it-header-center-wrapper">
-  <div class="container">
+  <div class="container-xxl">
     <div class="row">
       <div class="col-12">
         <div class="it-header-center-content-wrapper">
@@ -279,7 +279,7 @@ Per utilizzare la versione più compatta in verticale dell'header centrale è su
 {% comment %}Example name: Header centrale, variante compatta{% endcomment %}
 {% capture example %}
 <div class="it-header-center-wrapper it-small-header">
-  <div class="container">
+  <div class="container-xxl">
     <div class="row">
       <div class="col-12">
         <div class="it-header-center-content-wrapper">
@@ -344,7 +344,7 @@ Per cambiare tema all'header centrale è sufficiente aggiungere la classe `theme
 {% comment %}Example name: Header centrale, variante chiara{% endcomment %}
 {% capture example %}
 <div class="it-header-center-wrapper theme-light">
-  <div class="container">
+  <div class="container-xxl">
     <div class="row">
       <div class="col-12">
         <div class="it-header-center-content-wrapper">
@@ -409,7 +409,7 @@ Per cambiare tema all'header centrale è sufficiente aggiungere la classe `theme
 {% comment %}Example name: Header navigazione{% endcomment %}
 {% capture example %}
 <div class="it-header-navbar-wrapper">
-  <div class="container">
+  <div class="container-xxl">
     <div class="row">
       <div class="col-12">
         <!--start nav-->
@@ -462,7 +462,7 @@ Per cambiare tema all'header centrale è sufficiente aggiungere la classe `theme
                               <div class="description-content ps-4 ps-sm-5 ms-3">
                                 <div class="ratio ratio-21x9 lightgrey-bg-a1 mb-4 rounded">
                                   <figure class="figure">
-                                    <img src="https://via.placeholder.com/560x240/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Segnaposto">
+                                    <img src="https://placehold.co/560x240/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Segnaposto">
                                   </figure>
                                 </div>
                                 <p>
@@ -560,7 +560,7 @@ Per modificare il tema dell'Header Nav è sufficiente aggiungere una o tutte e d
 {% comment %}Example name: Header navigazione standard{% endcomment %}
 {% capture example %}
 <div class="it-header-navbar-wrapper">
-  <div class="container">
+  <div class="container-xxl">
     <div class="row">
       <div class="col-12">
         <!--start nav-->
@@ -613,7 +613,7 @@ Per modificare il tema dell'Header Nav è sufficiente aggiungere una o tutte e d
                               <div class="description-content ps-4 ps-sm-5 ms-3">
                                 <div class="ratio ratio-21x9 lightgrey-bg-a1 mb-4 rounded">
                                   <figure class="figure">
-                                    <img src="https://via.placeholder.com/560x240/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Segnaposto">
+                                    <img src="https://placehold.co/560x240/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Segnaposto">
                                   </figure>
                                 </div>
                                 <p>
@@ -699,7 +699,7 @@ Per modificare il tema dell'Header Nav è sufficiente aggiungere una o tutte e d
 {% comment %}Example name: Header navigazione mobile scura{% endcomment %}
 {% capture example %}
 <div class="it-header-navbar-wrapper theme-dark-mobile">
-  <div class="container">
+  <div class="container-xxl">
     <div class="row">
       <div class="col-12">
         <!--start nav-->
@@ -752,7 +752,7 @@ Per modificare il tema dell'Header Nav è sufficiente aggiungere una o tutte e d
                               <div class="description-content ps-4 ps-sm-5 ms-3">
                                 <div class="ratio ratio-21x9 lightgrey-bg-a1 mb-4 rounded">
                                   <figure class="figure">
-                                    <img src="https://via.placeholder.com/560x240/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Segnaposto">
+                                    <img src="https://placehold.co/560x240/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Segnaposto">
                                   </figure>
                                 </div>
                                 <p>
@@ -838,7 +838,7 @@ Per modificare il tema dell'Header Nav è sufficiente aggiungere una o tutte e d
 {% comment %}Example name: Header navigazione desktop chiara{% endcomment %}
 {% capture example %}
 <div class="it-header-navbar-wrapper theme-light-desk">
-  <div class="container">
+  <div class="container-xxl">
     <div class="row">
       <div class="col-12">
         <!--start nav-->
@@ -893,7 +893,7 @@ Per modificare il tema dell'Header Nav è sufficiente aggiungere una o tutte e d
                               <div class="description-content ps-4 ps-sm-5 ms-3">
                                 <div class="ratio ratio-21x9 lightgrey-bg-a1 mb-4 rounded">
                                   <figure class="figure">
-                                    <img src="https://via.placeholder.com/560x240/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Segnaposto">
+                                    <img src="https://placehold.co/560x240/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Segnaposto">
                                   </figure>
                                 </div>
                                 <p>
@@ -981,7 +981,7 @@ Al menu di navigazione principale può essere aggiunto anche un menu di navigazi
 {% comment %}Example name: Header navigazione secondaria{% endcomment %}
 {% capture example %}
 <div class="it-header-navbar-wrapper">
-  <div class="container">
+  <div class="container-xxl">
     <div class="row">
       <div class="col-12">
         <!--start nav-->
@@ -1025,7 +1025,7 @@ Al menu di navigazione principale può essere aggiunto anche un menu di navigazi
 {% capture example %}
 <header class="it-header-wrapper">
   <div class="it-header-slim-wrapper">
-    <div class="container">
+    <div class="container-xxl">
       <div class="row">
         <div class="col-12">
           <div class="it-header-slim-wrapper-content">
@@ -1075,7 +1075,7 @@ Al menu di navigazione principale può essere aggiunto anche un menu di navigazi
   </div>
   <div class="it-nav-wrapper">
     <div class="it-header-center-wrapper">
-      <div class="container">
+      <div class="container-xxl">
         <div class="row">
           <div class="col-12">
             <div class="it-header-center-content-wrapper">
@@ -1122,7 +1122,7 @@ Al menu di navigazione principale può essere aggiunto anche un menu di navigazi
       </div>
     </div>
     <div class="it-header-navbar-wrapper">
-      <div class="container">
+      <div class="container-xxl">
         <div class="row">
           <div class="col-12">
             <!--start nav-->
@@ -1181,7 +1181,7 @@ Al menu di navigazione principale può essere aggiunto anche un menu di navigazi
                                   <div class="description-content ps-4 ps-sm-5 ms-3">
                                     <div class="ratio ratio-21x9 lightgrey-bg-a1 mb-4 rounded">
                                       <figure class="figure">
-                                        <img src="https://via.placeholder.com/560x240/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Segnaposto">
+                                        <img src="https://placehold.co/560x240/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Segnaposto">
                                       </figure>
                                     </div>
                                     <p>
@@ -1274,7 +1274,7 @@ Verrà creata un'ombra per enfatizzare l'Header rispetto alla pagina in cui è c
 {% capture example %}
 <header class="it-header-wrapper it-shadow">
   <div class="it-header-slim-wrapper theme-light">
-    <div class="container">
+    <div class="container-xxl">
       <div class="row">
         <div class="col-12">
           <div class="it-header-slim-wrapper-content">
@@ -1324,7 +1324,7 @@ Verrà creata un'ombra per enfatizzare l'Header rispetto alla pagina in cui è c
   </div>
   <div class="it-nav-wrapper">
     <div class="it-header-center-wrapper theme-light">
-      <div class="container">
+      <div class="container-xxl">
         <div class="row">
           <div class="col-12">
             <div class="it-header-center-content-wrapper">
@@ -1371,7 +1371,7 @@ Verrà creata un'ombra per enfatizzare l'Header rispetto alla pagina in cui è c
       </div>
     </div>
     <div class="it-header-navbar-wrapper theme-light-desk">
-      <div class="container">
+      <div class="container-xxl">
         <div class="row">
           <div class="col-12">
             <!--start nav-->
@@ -1424,7 +1424,7 @@ Verrà creata un'ombra per enfatizzare l'Header rispetto alla pagina in cui è c
                                   <div class="description-content ps-4 ps-sm-5 ms-3">
                                     <div class="ratio ratio-21x9 lightgrey-bg-a1 mb-4 rounded">
                                       <figure class="figure">
-                                        <img src="https://via.placeholder.com/560x240/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Segnaposto">
+                                        <img src="https://placehold.co/560x240/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Segnaposto">
                                       </figure>
                                     </div>
                                     <p>

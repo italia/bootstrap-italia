@@ -4,24 +4,28 @@
 .it-header-wrapper {
   position: relative;
   z-index: 5;
+
   .it-nav-wrapper {
     position: relative;
     z-index: auto;
+
     // se ha un menu
     .it-brand-wrapper {
       padding-left: $v-gap * 4;
     }
+
     .it-header-navbar-wrapper {
       transition: padding-top 0.3s ease;
-
       position: absolute;
       z-index: 3;
       left: 0;
       top: 50%;
       margin-top: -$header-nav-button-distance;
+
       nav {
         padding-left: $header-general-padding - ($grid-columns * 0.5);
         padding-right: $header-general-padding - ($grid-columns * 0.5);
+
         .custom-navbar-toggler {
           padding: 0;
           transform: translateX(-2px);
@@ -34,6 +38,7 @@
   &.it-header-sticky {
     &.is-sticky {
       width: 100%;
+
       .it-nav-wrapper {
         //position: fixed;
         top: 0;
@@ -72,9 +77,11 @@
 
                 a {
                   color: $header-center-text-color;
+
                   &:hover {
                     text-decoration: none;
                   }
+
                   .icon {
                     fill: $header-center-text-color;
                     width: $header-center-icon-size * 0.5;
@@ -93,6 +100,7 @@
               margin-left: math.div($header-center-search-distance, 3);
               font-size: $header-center-text-size;
               color: $header-center-text-color;
+
               a {
                 &.rounded-icon {
                   width: $header-center-search-size;
@@ -104,9 +112,11 @@
                   align-items: center;
                   margin-left: $v-gap * 2;
                   transition: all 0.3s;
+
                   &:hover {
                     background: shade-color($header-center-text-color, 5%);
                   }
+
                   svg {
                     fill: $header-center-bg-color;
                     width: $header-center-search-icon-size;
@@ -150,18 +160,22 @@
       .it-brand-wrapper {
         padding-left: 0;
       }
+
       position: relative;
+
       .it-header-navbar-wrapper {
         position: inherit;
         left: auto;
         top: inherit;
         margin-top: 0;
+
         nav {
           padding-left: $header-general-padding - ($grid-columns * 0.5);
           padding-right: $header-general-padding - ($grid-columns * 0.5);
         }
       }
     }
+
     .navbar .navbar-collapsable .menu-wrapper .nav-item.megamenu .dropdown-menu {
       left: 0;
       right: 0;

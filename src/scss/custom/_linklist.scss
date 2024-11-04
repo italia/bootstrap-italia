@@ -1,7 +1,10 @@
 //mobile
 .link-list-wrapper {
+  .list-item-title,
   .link-list-heading {
     font-size: $link-list-heading-size;
+  }
+  .link-list-heading {
     color: $color-text-base;
     padding: 0 $link-list-h-pad;
     font-weight: 600;

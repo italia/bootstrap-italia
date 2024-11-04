@@ -10,7 +10,7 @@ Le immagini in Bootstrap Italia sono rese responsive con la classe `.img-fluid`,
 
 {% comment %}Example name: Base{% endcomment %}
 {% capture example %}
-  <img src="https://via.placeholder.com/120x120/ebebeb/808080/?text=Immagine" class="img-fluid" alt="Immagine responsive generica">
+  <img src="https://placehold.co/120x120/ebebeb/808080/?text=Immagine" class="img-fluid" alt="Immagine responsive generica">
 {% endcapture %}{% include example.html content=example %}
 
 ### Thumbnails
@@ -19,7 +19,7 @@ Oltre alle [utilità sull'arrotondamento dei bordi]({{ site.baseurl }}/docs/orga
 
 {% comment %}Example name: Thumbnail{% endcomment %}
 {% capture example %}
-  <img src="https://via.placeholder.com/120x120/ebebeb/808080/?text=Immagine" class="img-thumbnail" alt="Una generica immagine segnaposto quadrata con un bordo bianco attorno ad essa, che la rende simile a una foto scattata con una vecchia macchina fotografica istantanea">
+  <img src="https://placehold.co/120x120/ebebeb/808080/?text=Immagine" class="img-thumbnail" alt="Una generica immagine segnaposto quadrata con un bordo bianco attorno ad essa, che la rende simile a una foto scattata con una vecchia macchina fotografica istantanea">
 {% endcapture %}{% include example.html content=example %}
 
 ### Allineamento
@@ -28,19 +28,19 @@ Puoi allineare le immagini con le [classi di supporto sul float]({{ site.baseurl
 
 {% comment %}Example name: Allineamenti start-end{% endcomment %}
 {% capture example %}
-  <img src="https://via.placeholder.com/120x120/ebebeb/808080/?text=Immagine" class="rounded float-start" alt="Un'immagine generica segnaposto con angoli arrotondati">
-  <img src="https://via.placeholder.com/120x120/ebebeb/808080/?text=Immagine" class="rounded float-end" alt="Un'immagine generica segnaposto con angoli arrotondati">
+  <img src="https://placehold.co/120x120/ebebeb/808080/?text=Immagine" class="rounded float-start" alt="Un'immagine generica segnaposto con angoli arrotondati">
+  <img src="https://placehold.co/120x120/ebebeb/808080/?text=Immagine" class="rounded float-end" alt="Un'immagine generica segnaposto con angoli arrotondati">
 {% endcapture %}{% include example.html content=example %}
 
 {% comment %}Example name: Allineamento centrato{% endcomment %}
 {% capture example %}
-  <img src="https://via.placeholder.com/120x120/ebebeb/808080/?text=Immagine" class="rounded mx-auto d-block" alt="Un'immagine generica segnaposto con angoli arrotondati">
+  <img src="https://placehold.co/120x120/ebebeb/808080/?text=Immagine" class="rounded mx-auto d-block" alt="Un'immagine generica segnaposto con angoli arrotondati">
 {% endcapture %}{% include example.html content=example %}
 
 {% comment %}Example name: Allineamento centrato, alternativa{% endcomment %}
 {% capture example %}
   <div class="text-center">
-    <img src="https://via.placeholder.com/120x120/ebebeb/808080/?text=Immagine" class="rounded" alt="Un'immagine generica segnaposto con angoli arrotondati">
+    <img src="https://placehold.co/120x120/ebebeb/808080/?text=Immagine" class="rounded" alt="Un'immagine generica segnaposto con angoli arrotondati">
   </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -64,7 +64,7 @@ Puoi usare le classi `.figure`, `.figure-img` e `.figure-caption` per fornire al
 {% comment %}Example name: Figure{% endcomment %}
 {% capture example %}
 <figure class="figure">
-  <img src="https://via.placeholder.com/280x120/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
+  <img src="https://placehold.co/280x120/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
   <figcaption class="figure-caption">Una didascalia per l'immagine sopra.</figcaption>
 </figure>
 {% endcapture %}{% include example.html content=example %}
@@ -74,7 +74,7 @@ Allineare la didascalia di una figura è semplice con le [utilità di testo]({{ 
 {% comment %}Example name: Figure con didascalia allineata a destra{% endcomment %}
 {% capture example %}
 <figure class="figure">
-  <img src="https://via.placeholder.com/280x120/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
+  <img src="https://placehold.co/280x120/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
   <figcaption class="figure-caption text-end">Una didascalia per l'immagine sopra.</figcaption>
 </figure>
 {% endcapture %}{% include example.html content=example %}
