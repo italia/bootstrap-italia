@@ -11,13 +11,13 @@
 
 <title>Timeline · Bootstrap Italia</title>
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202410222033" rel="stylesheet" />
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202411051717" rel="stylesheet" />
 
 <!-- Documentation extras -->
  
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.css" rel="stylesheet" />
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202410222033" rel="stylesheet" />
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202411051717" rel="stylesheet" />
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico" />
@@ -139,8 +139,8 @@
 
     <ul class="navbar-nav flex-row ms-md-auto d-none d-md-flex">
       <li class="nav-item pe-2">
-        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v2.10.0/bootstrap-italia.zip" aria-label="Download">
-          <small class="pe-2 m-0">v2.10.0</small>
+        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v2.11.0/bootstrap-italia.zip" aria-label="Download">
+          <small class="pe-2 m-0">v2.11.0</small>
           <svg class="icon icon-sm icon-light"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-download" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-download"></use></svg><span class="visually-hidden">Download</span>
         </a>
       </li>
@@ -610,16 +610,37 @@ Contiene un elenco di <code class="language-plaintext highlighter-rouge">.timeli
 <p>Ogni <code class="language-plaintext highlighter-rouge">.timeline-element</code> contiene:</p>
 
 <ul>
-  <li><strong>PIN</strong>: ogni pin contiene un icona, ed una label indicante la data dell’evento.</li>
+  <li><strong>PIN</strong>: ogni pin è un elemento contenitore <code class="language-plaintext highlighter-rouge">.it-pin-wrapper</code> di tipo heading <code class="language-plaintext highlighter-rouge">h</code> che contiene un0icona (<code class="language-plaintext highlighter-rouge">.pin-icon</code>) e una label (<code class="language-plaintext highlighter-rouge">.pin-text</code>) indicante la data dell’evento.</li>
 </ul>
 
-<p>Il <strong>PIN</strong> ha tre varianti di classe per il suo contenitore <code class="language-plaintext highlighter-rouge">.it-pin-wrapper</code>:</p>
+<p>Il <strong>PIN</strong> ha tre varianti di colore:</p>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">.it-evidence</code> : per indicare nella timeline eventi del passato (colore blu scuro)</li>
   <li><code class="language-plaintext highlighter-rouge">.it-now</code> : per indicare nella timeline eventi collocati nel presente (azzurro)</li>
-  <li>Nessuna classe aggiuntiva: per collocare gli eventi nel futuro. (azzurro chiaro)</li>
+  <li>Nessuna classe aggiuntiva: per collocare gli eventi nel futuro (bianco)</li>
 </ul>
+
+<div class="bd-callout bd-callout-accessibility">
+<h4 id="accessibilità">Accessibilità</h4>
+
+<ul>
+  <li>L’elemento contenitore del pin <code class="language-plaintext highlighter-rouge">.it-pin-wrapper</code>, nell’esempio un <code class="language-plaintext highlighter-rouge">h3</code>, dovrà avere il livello intestazione corretto a seconda della gerarchia in pagina. Così come il titolo della card <code class="language-plaintext highlighter-rouge">.it-card-title</code>, nell’esempio un <code class="language-plaintext highlighter-rouge">h4</code>.</li>
+  <li>Se le icone svg <code class="language-plaintext highlighter-rouge">.pin-icon</code> non veicolassero significato, è possibile nasconderle alle tecnologie assistive aggiungendo a queste l’attributo <code class="language-plaintext highlighter-rouge">aria-hidden="true"</code>; in questo caso è possibile rimuovere <code class="language-plaintext highlighter-rouge">role="img"</code> e l’elemento <code class="language-plaintext highlighter-rouge">&lt;title&gt;</code>.</li>
+</ul>
+</div>
+
+<div class="bd-callout bd-callout-danger">
+<h4 id="breaking-feature-dalla-versione-211">Breaking feature dalla versione <strong>2.11</strong></h4>
+
+<p>Il codice markup è stato rivisto in chiave accessibilità e robustezza. In particolare cosa cambia:</p>
+<ul>
+  <li>L’elemento <code class="language-plaintext highlighter-rouge">.pin-wrapper</code> è ora implementato come heading <code class="language-plaintext highlighter-rouge">h</code> e non semplice <code class="language-plaintext highlighter-rouge">div</code>. Dovrà avere il livello intestazione corretto a seconda della gerarchia in pagina.</li>
+  <li>L’elemento <code class="language-plaintext highlighter-rouge">.pin-icon</code>, se semanticamente rilevante, deve avere attributo <code class="language-plaintext highlighter-rouge">role="img"</code> e contenere un tag <code class="language-plaintext highlighter-rouge">title</code> che lo descriva.</li>
+  <li>Gli elementi categoria e data hanno ora tag <code class="language-plaintext highlighter-rouge">span</code> <code class="language-plaintext highlighter-rouge">visually-hidden</code> che ne descrivono lo scopo.</li>
+  <li>L’elemento <code class="language-plaintext highlighter-rouge">.card-title</code> è ora implementato con heading <code class="language-plaintext highlighter-rouge">h4</code> per rispettare la gerarchia attuale. Dovrà avere il livello intestazione corretto a seconda della gerarchia in pagina.</li>
+</ul>
+</div>
 
 <h2 id="esempio">Esempio</h2>
 
@@ -628,20 +649,20 @@ Contiene un elenco di <code class="language-plaintext highlighter-rouge">.timeli
   <div class="row">
     <div class="col-12">
       <div class="timeline-element">
-        <div class="it-pin-wrapper it-evidence">
+        <h3 class="it-pin-wrapper it-evidence no_toc">
           <div class="pin-icon">
-            <svg class="icon"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-code-circle"></use></svg>
+            <svg class="icon" role="img"><title>Segnaposto</title><use href="/bootstrap-italia/dist/svg/sprites.svg#it-bookmark"></use></svg>
           </div>
           <div class="pin-text"><span>maggio 2024</span></div>
-        </div>
+        </h3>
         <div class="card-wrapper">
           <div class="card">
             <div class="card-body">
+              <h4 class="card-title h5">Lorem ipsum dolor sit amet</h4>
               <div class="category-top">
-                <a class="category" href="#">Categoria</a>
-                <span class="data">10/12/2024</span>
+                <span class="visually-hidden">Categoria evento:</span> <a class="category" href="#">Categoria</a>
+                <span class="visually-hidden">Data evento:</span> <span class="data">10/12/2024</span>
               </div>
-              <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
               <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
               <span class="card-signature">di Federico De Paolis</span>
               <a class="read-more" href="#">
@@ -655,16 +676,16 @@ Contiene un elenco di <code class="language-plaintext highlighter-rouge">.timeli
     </div>
     <div class="col-12">
       <div class="timeline-element">
-        <div class="it-pin-wrapper it-evidence">
+        <h3 class="it-pin-wrapper it-evidence no_toc">
           <div class="pin-icon">
-            <svg class="icon"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-code-circle"></use></svg>
+            <svg class="icon" role="img"><title>Segnaposto</title><use href="/bootstrap-italia/dist/svg/sprites.svg#it-bookmark"></use></svg>
           </div>
           <div class="pin-text"><span>giugno 2024</span></div>
-        </div>
+        </h3>
         <div class="card-wrapper">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
+              <h4 class="card-title h5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</h4>
               <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
           </div>
@@ -673,25 +694,25 @@ Contiene un elenco di <code class="language-plaintext highlighter-rouge">.timeli
     </div>
     <div class="col-12">
       <div class="timeline-element">
-        <div class="it-pin-wrapper it-evidence">
+        <h3 class="it-pin-wrapper it-evidence no_toc">
           <div class="pin-icon">
-            <svg class="icon"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-code-circle"></use></svg>
+            <svg class="icon" role="img"><title>Risultato</title><use href="/bootstrap-italia/dist/svg/sprites.svg#it-flag"></use></svg>
           </div>
           <div class="pin-text"><span>luglio 2024</span></div>
-        </div>
+        </h3>
         <div class="card-wrapper">
           <div class="card">
             <div class="card-body">
+              <h4 class="card-title h5">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
               <div class="category-top">
-                <a class="category" href="#">Categoria</a>
-                <span class="data">10/12/2024</span>
+                <span class="visually-hidden">Categoria evento:</span> <a class="category" href="#">Categoria</a>
+                <span class="visually-hidden">Data evento:</span> <span class="data">10/12/2024</span>
               </div>
-              <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
               <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
               <span class="card-signature">di Federico De Paolis</span>
               <a class="read-more" href="#">
                 <span class="text">Leggi di più</span>
-                <span class="visually-hidden">su Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span>
+                <span class="visually-hidden">su Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
                 <svg class="icon"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-arrow-right"></use></svg>
               </a>
             </div>
@@ -702,16 +723,16 @@ Contiene un elenco di <code class="language-plaintext highlighter-rouge">.timeli
     <div class="col-12">
       <div class="timeline-element">
         <span class="it-now-label d-none d-lg-flex">Oggi</span>
-        <div class="it-pin-wrapper it-now">
+        <h3 class="it-pin-wrapper it-now no_toc">
           <div class="pin-icon">
-            <svg class="icon"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-code-circle"></use></svg>
+            <svg class="icon" role="img"><title>Successo</title><use href="/bootstrap-italia/dist/svg/sprites.svg#it-check"></use></svg>
           </div>
           <div class="pin-text"><span>agosto 2024</span></div>
-        </div>
+        </h3>
         <div class="card-wrapper">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
+              <h4 class="card-title h5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</h4>
               <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
           </div>
@@ -720,25 +741,25 @@ Contiene un elenco di <code class="language-plaintext highlighter-rouge">.timeli
     </div>
     <div class="col-12">
       <div class="timeline-element">
-        <div class="it-pin-wrapper">
+        <h3 class="it-pin-wrapper no_toc">
           <div class="pin-icon">
-            <svg class="icon"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-code-circle"></use></svg>
+            <svg class="icon" role="img"><title>Evento</title><use href="/bootstrap-italia/dist/svg/sprites.svg#it-calendar"></use></svg>
           </div>
           <div class="pin-text"><span>settembre 2024</span></div>
-        </div>
+        </h3>
         <div class="card-wrapper">
           <div class="card">
             <div class="card-body">
+              <h4 class="card-title h5">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
               <div class="category-top">
-                <a class="category" href="#">Categoria</a>
-                <span class="data">10/12/2024</span>
+                <span class="visually-hidden">Categoria evento:</span> <a class="category" href="#">Categoria</a>
+                <span class="visually-hidden">Data evento:</span> <span class="data">10/12/2024</span>
               </div>
-              <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
               <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
               <span class="card-signature">di Federico De Paolis</span>
               <a class="read-more" href="#">
                 <span class="text">Leggi di più</span>
-                <span class="visually-hidden">su Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span>
+                <span class="visually-hidden">su Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
                 <svg class="icon"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-arrow-right"></use></svg>
               </a>
             </div>
@@ -748,16 +769,16 @@ Contiene un elenco di <code class="language-plaintext highlighter-rouge">.timeli
     </div>
     <div class="col-12">
       <div class="timeline-element">
-        <div class="it-pin-wrapper">
+        <h3 class="it-pin-wrapper no_toc">
           <div class="pin-icon">
-            <svg class="icon"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-code-circle"></use></svg>
+            <svg class="icon" role="img"><title>Successo</title><use href="/bootstrap-italia/dist/svg/sprites.svg#it-check"></use></svg>
           </div>
           <div class="pin-text"><span>ottobre 2024</span></div>
-        </div>
+        </h3>
         <div class="card-wrapper">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
+              <h4 class="card-title h5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</h4>
               <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
           </div>
@@ -766,25 +787,25 @@ Contiene un elenco di <code class="language-plaintext highlighter-rouge">.timeli
     </div>
     <div class="col-12">
       <div class="timeline-element">
-        <div class="it-pin-wrapper">
+        <h3 class="it-pin-wrapper no_toc">
           <div class="pin-icon">
-            <svg class="icon"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-code-circle"></use></svg>
+            <svg class="icon" role="img"><title>Milestone</title><use href="/bootstrap-italia/dist/svg/sprites.svg#it-flag"></use></svg>
           </div>
           <div class="pin-text"><span>novembre 2024</span></div>
-        </div>
+        </h3>
         <div class="card-wrapper">
           <div class="card">
             <div class="card-body">
+              <h4 class="card-title h5">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
               <div class="category-top">
-                <a class="category" href="#">Categoria</a>
-                <span class="data">10/12/2024</span>
+                <span class="visually-hidden">Categoria evento:</span> <a class="category" href="#">Categoria</a>
+                <span class="visually-hidden">Data evento:</span> <span class="data">10/12/2024</span>
               </div>
-              <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
               <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
               <span class="card-signature">di Federico De Paolis</span>
               <a class="read-more" href="#">
                 <span class="text">Leggi di più</span>
-                <span class="visually-hidden">su Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span>
+                <span class="visually-hidden">su Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
                 <svg class="icon"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-arrow-right"></use></svg>
               </a>
             </div>
@@ -794,16 +815,16 @@ Contiene un elenco di <code class="language-plaintext highlighter-rouge">.timeli
     </div>
     <div class="col-12">
       <div class="timeline-element">
-        <div class="it-pin-wrapper">
+        <h3 class="it-pin-wrapper no_toc">
           <div class="pin-icon">
-            <svg class="icon"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-code-circle"></use></svg>
+            <svg class="icon" role="img"><title>Milestone</title><use href="/bootstrap-italia/dist/svg/sprites.svg#it-flag"></use></svg>
           </div>
           <div class="pin-text"><span>dicembre 2024</span></div>
-        </div>
+        </h3>
         <div class="card-wrapper">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
+              <h4 class="card-title h5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</h4>
               <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
           </div>
@@ -1005,20 +1026,20 @@ Contiene un elenco di <code class="language-plaintext highlighter-rouge">.timeli
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline-element"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-pin-wrapper it-evidence"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"it-pin-wrapper it-evidence "</span><span class="nt">&gt;</span>
           <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pin-icon"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-code-circle"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+            <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span> <span class="na">role=</span><span class="s">"img"</span><span class="nt">&gt;&lt;title&gt;</span>Segnaposto<span class="nt">&lt;/title&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-bookmark"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
           <span class="nt">&lt;/div&gt;</span>
           <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pin-text"</span><span class="nt">&gt;&lt;span&gt;</span>maggio 2024<span class="nt">&lt;/span&gt;&lt;/div&gt;</span>
-        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/h3&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"card-title h5"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet<span class="nt">&lt;/h4&gt;</span>
               <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"category-top"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"category"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Categoria<span class="nt">&lt;/a&gt;</span>
-                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"data"</span><span class="nt">&gt;</span>10/12/2024<span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"visually-hidden"</span><span class="nt">&gt;</span>Categoria evento:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"category"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Categoria<span class="nt">&lt;/a&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"visually-hidden"</span><span class="nt">&gt;</span>Data evento:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"data"</span><span class="nt">&gt;</span>10/12/2024<span class="nt">&lt;/span&gt;</span>
               <span class="nt">&lt;/div&gt;</span>
-              <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit…<span class="nt">&lt;/h5&gt;</span>
               <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="nt">&lt;/p&gt;</span>
               <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"card-signature"</span><span class="nt">&gt;</span>di Federico De Paolis<span class="nt">&lt;/span&gt;</span>
               <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"read-more"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
@@ -1032,16 +1053,16 @@ Contiene un elenco di <code class="language-plaintext highlighter-rouge">.timeli
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline-element"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-pin-wrapper it-evidence"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"it-pin-wrapper it-evidence "</span><span class="nt">&gt;</span>
           <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pin-icon"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-code-circle"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+            <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span> <span class="na">role=</span><span class="s">"img"</span><span class="nt">&gt;&lt;title&gt;</span>Segnaposto<span class="nt">&lt;/title&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-bookmark"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
           <span class="nt">&lt;/div&gt;</span>
           <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pin-text"</span><span class="nt">&gt;&lt;span&gt;</span>giugno 2024<span class="nt">&lt;/span&gt;&lt;/div&gt;</span>
-        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/h3&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
-              <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…<span class="nt">&lt;/h5&gt;</span>
+              <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"card-title h5"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<span class="nt">&lt;/h4&gt;</span>
               <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="nt">&lt;/p&gt;</span>
             <span class="nt">&lt;/div&gt;</span>
           <span class="nt">&lt;/div&gt;</span>
@@ -1050,25 +1071,25 @@ Contiene un elenco di <code class="language-plaintext highlighter-rouge">.timeli
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline-element"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-pin-wrapper it-evidence"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"it-pin-wrapper it-evidence "</span><span class="nt">&gt;</span>
           <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pin-icon"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-code-circle"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+            <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span> <span class="na">role=</span><span class="s">"img"</span><span class="nt">&gt;&lt;title&gt;</span>Risultato<span class="nt">&lt;/title&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-flag"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
           <span class="nt">&lt;/div&gt;</span>
           <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pin-text"</span><span class="nt">&gt;&lt;span&gt;</span>luglio 2024<span class="nt">&lt;/span&gt;&lt;/div&gt;</span>
-        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/h3&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"card-title h5"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit<span class="nt">&lt;/h4&gt;</span>
               <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"category-top"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"category"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Categoria<span class="nt">&lt;/a&gt;</span>
-                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"data"</span><span class="nt">&gt;</span>10/12/2024<span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"visually-hidden"</span><span class="nt">&gt;</span>Categoria evento:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"category"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Categoria<span class="nt">&lt;/a&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"visually-hidden"</span><span class="nt">&gt;</span>Data evento:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"data"</span><span class="nt">&gt;</span>10/12/2024<span class="nt">&lt;/span&gt;</span>
               <span class="nt">&lt;/div&gt;</span>
-              <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit…<span class="nt">&lt;/h5&gt;</span>
               <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="nt">&lt;/p&gt;</span>
               <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"card-signature"</span><span class="nt">&gt;</span>di Federico De Paolis<span class="nt">&lt;/span&gt;</span>
               <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"read-more"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
                 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text"</span><span class="nt">&gt;</span>Leggi di più<span class="nt">&lt;/span&gt;</span>
-                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"visually-hidden"</span><span class="nt">&gt;</span>su Lorem ipsum dolor sit amet, consectetur adipiscing elit…<span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"visually-hidden"</span><span class="nt">&gt;</span>su Lorem ipsum dolor sit amet, consectetur adipiscing elit<span class="nt">&lt;/span&gt;</span>
                 <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-arrow-right"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
               <span class="nt">&lt;/a&gt;</span>
             <span class="nt">&lt;/div&gt;</span>
@@ -1079,16 +1100,16 @@ Contiene un elenco di <code class="language-plaintext highlighter-rouge">.timeli
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline-element"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"it-now-label d-none d-lg-flex"</span><span class="nt">&gt;</span>Oggi<span class="nt">&lt;/span&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-pin-wrapper it-now"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"it-pin-wrapper it-now "</span><span class="nt">&gt;</span>
           <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pin-icon"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-code-circle"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+            <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span> <span class="na">role=</span><span class="s">"img"</span><span class="nt">&gt;&lt;title&gt;</span>Successo<span class="nt">&lt;/title&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-check"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
           <span class="nt">&lt;/div&gt;</span>
           <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pin-text"</span><span class="nt">&gt;&lt;span&gt;</span>agosto 2024<span class="nt">&lt;/span&gt;&lt;/div&gt;</span>
-        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/h3&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
-              <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…<span class="nt">&lt;/h5&gt;</span>
+              <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"card-title h5"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<span class="nt">&lt;/h4&gt;</span>
               <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="nt">&lt;/p&gt;</span>
             <span class="nt">&lt;/div&gt;</span>
           <span class="nt">&lt;/div&gt;</span>
@@ -1097,25 +1118,25 @@ Contiene un elenco di <code class="language-plaintext highlighter-rouge">.timeli
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline-element"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-pin-wrapper"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"it-pin-wrapper "</span><span class="nt">&gt;</span>
           <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pin-icon"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-code-circle"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+            <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span> <span class="na">role=</span><span class="s">"img"</span><span class="nt">&gt;&lt;title&gt;</span>Evento<span class="nt">&lt;/title&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-calendar"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
           <span class="nt">&lt;/div&gt;</span>
           <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pin-text"</span><span class="nt">&gt;&lt;span&gt;</span>settembre 2024<span class="nt">&lt;/span&gt;&lt;/div&gt;</span>
-        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/h3&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"card-title h5"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit<span class="nt">&lt;/h4&gt;</span>
               <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"category-top"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"category"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Categoria<span class="nt">&lt;/a&gt;</span>
-                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"data"</span><span class="nt">&gt;</span>10/12/2024<span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"visually-hidden"</span><span class="nt">&gt;</span>Categoria evento:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"category"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Categoria<span class="nt">&lt;/a&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"visually-hidden"</span><span class="nt">&gt;</span>Data evento:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"data"</span><span class="nt">&gt;</span>10/12/2024<span class="nt">&lt;/span&gt;</span>
               <span class="nt">&lt;/div&gt;</span>
-              <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit…<span class="nt">&lt;/h5&gt;</span>
               <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="nt">&lt;/p&gt;</span>
               <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"card-signature"</span><span class="nt">&gt;</span>di Federico De Paolis<span class="nt">&lt;/span&gt;</span>
               <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"read-more"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
                 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text"</span><span class="nt">&gt;</span>Leggi di più<span class="nt">&lt;/span&gt;</span>
-                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"visually-hidden"</span><span class="nt">&gt;</span>su Lorem ipsum dolor sit amet, consectetur adipiscing elit…<span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"visually-hidden"</span><span class="nt">&gt;</span>su Lorem ipsum dolor sit amet, consectetur adipiscing elit<span class="nt">&lt;/span&gt;</span>
                 <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-arrow-right"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
               <span class="nt">&lt;/a&gt;</span>
             <span class="nt">&lt;/div&gt;</span>
@@ -1125,16 +1146,16 @@ Contiene un elenco di <code class="language-plaintext highlighter-rouge">.timeli
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline-element"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-pin-wrapper"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"it-pin-wrapper "</span><span class="nt">&gt;</span>
           <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pin-icon"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-code-circle"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+            <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span> <span class="na">role=</span><span class="s">"img"</span><span class="nt">&gt;&lt;title&gt;</span>Successo<span class="nt">&lt;/title&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-check"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
           <span class="nt">&lt;/div&gt;</span>
           <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pin-text"</span><span class="nt">&gt;&lt;span&gt;</span>ottobre 2024<span class="nt">&lt;/span&gt;&lt;/div&gt;</span>
-        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/h3&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
-              <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…<span class="nt">&lt;/h5&gt;</span>
+              <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"card-title h5"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<span class="nt">&lt;/h4&gt;</span>
               <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="nt">&lt;/p&gt;</span>
             <span class="nt">&lt;/div&gt;</span>
           <span class="nt">&lt;/div&gt;</span>
@@ -1143,25 +1164,25 @@ Contiene un elenco di <code class="language-plaintext highlighter-rouge">.timeli
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline-element"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-pin-wrapper"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"it-pin-wrapper "</span><span class="nt">&gt;</span>
           <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pin-icon"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-code-circle"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+            <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span> <span class="na">role=</span><span class="s">"img"</span><span class="nt">&gt;&lt;title&gt;</span>Milestone<span class="nt">&lt;/title&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-flag"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
           <span class="nt">&lt;/div&gt;</span>
           <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pin-text"</span><span class="nt">&gt;&lt;span&gt;</span>novembre 2024<span class="nt">&lt;/span&gt;&lt;/div&gt;</span>
-        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/h3&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"card-title h5"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit<span class="nt">&lt;/h4&gt;</span>
               <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"category-top"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"category"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Categoria<span class="nt">&lt;/a&gt;</span>
-                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"data"</span><span class="nt">&gt;</span>10/12/2024<span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"visually-hidden"</span><span class="nt">&gt;</span>Categoria evento:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"category"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Categoria<span class="nt">&lt;/a&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"visually-hidden"</span><span class="nt">&gt;</span>Data evento:<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"data"</span><span class="nt">&gt;</span>10/12/2024<span class="nt">&lt;/span&gt;</span>
               <span class="nt">&lt;/div&gt;</span>
-              <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit…<span class="nt">&lt;/h5&gt;</span>
               <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="nt">&lt;/p&gt;</span>
               <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"card-signature"</span><span class="nt">&gt;</span>di Federico De Paolis<span class="nt">&lt;/span&gt;</span>
               <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"read-more"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
                 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"text"</span><span class="nt">&gt;</span>Leggi di più<span class="nt">&lt;/span&gt;</span>
-                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"visually-hidden"</span><span class="nt">&gt;</span>su Lorem ipsum dolor sit amet, consectetur adipiscing elit…<span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"visually-hidden"</span><span class="nt">&gt;</span>su Lorem ipsum dolor sit amet, consectetur adipiscing elit<span class="nt">&lt;/span&gt;</span>
                 <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-arrow-right"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
               <span class="nt">&lt;/a&gt;</span>
             <span class="nt">&lt;/div&gt;</span>
@@ -1171,16 +1192,16 @@ Contiene un elenco di <code class="language-plaintext highlighter-rouge">.timeli
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"timeline-element"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-pin-wrapper"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"it-pin-wrapper "</span><span class="nt">&gt;</span>
           <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pin-icon"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-code-circle"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+            <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span> <span class="na">role=</span><span class="s">"img"</span><span class="nt">&gt;&lt;title&gt;</span>Milestone<span class="nt">&lt;/title&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-flag"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
           <span class="nt">&lt;/div&gt;</span>
           <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pin-text"</span><span class="nt">&gt;&lt;span&gt;</span>dicembre 2024<span class="nt">&lt;/span&gt;&lt;/div&gt;</span>
-        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/h3&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
-              <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…<span class="nt">&lt;/h5&gt;</span>
+              <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"card-title h5"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<span class="nt">&lt;/h4&gt;</span>
               <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="nt">&lt;/p&gt;</span>
             <span class="nt">&lt;/div&gt;</span>
           <span class="nt">&lt;/div&gt;</span>
@@ -1197,15 +1218,15 @@ Contiene un elenco di <code class="language-plaintext highlighter-rouge">.timeli
     </div>
 
     
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202410222033"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202411051717"></script>
 <script>
   bootstrap.loadFonts('/bootstrap-italia/dist/fonts')
-</script><script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202410222033"></script>
+</script><script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202411051717"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/anchor.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/clipboard.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tsparticles.min.js"></script>
 
-<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202410222033"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202411051717"></script>
 
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tweenjs.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/easeljs.min.js"></script>
@@ -1222,7 +1243,7 @@ Contiene un elenco di <code class="language-plaintext highlighter-rouge">.timeli
     { src: '/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png', id: 'cover-7' },
   ]
 </script>
-<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202410222033"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202411051717"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/docsearch.min.js"></script>
 
 <script>
