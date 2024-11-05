@@ -16,6 +16,21 @@ Di seguito gli esempi di elemento singolo della lista di immagini:
 
 Per utilizzare la didascalia sovrapposta è sufficiente aggiungere la classe `.it-grid-item-overlay` al div `.it-grid-item-wrapper`.
 
+{% capture callout %}
+
+#### Utilizzo delle icone
+
+In caso di utilizzo delle icone si raccomanda di descriverne il senso ai lettori di schermo. Se sono solo decorative si può nasconderle con l'attributo `aria-hidden=true`.
+
+{% endcapture %}{% include callout.html content=callout type="warning" %}
+
+{% capture callout %}
+Breaking feature dalla versione **2.11.0**
+
+Utilizzare i tag `<figure>` e `<figcaption>` per liste di immagini con didascalia.
+
+{% endcapture %}{% include callout.html content=callout type="danger" %}
+
 {% comment %}Example name: Varianti didascalia{% endcomment %}
 {% capture example %}
 <div class="row">
@@ -35,7 +50,7 @@ Per utilizzare la didascalia sovrapposta è sufficiente aggiungere la classe `.i
           <img src="https://placehold.co/660x300/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
           <figcaption class="figure-caption it-griditem-text-wrapper">
             <span class="it-griditem-text">Testo didascalia</span>
-            <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
+            <svg role="img" class="icon"><title>Significato icona</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
           </figcaption>
         </figure>
       </a>
@@ -48,7 +63,7 @@ Per utilizzare la didascalia sovrapposta è sufficiente aggiungere la classe `.i
           <img src="https://placehold.co/660x300/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
           <figcaption class="figure-caption it-griditem-text-wrapper">
             <span class="it-griditem-text">Testo didascalia</span>
-            <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
+            <svg role="img" class="icon"><title>Significato icona</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
           </figcaption>
         </figure>
       </a>
@@ -152,7 +167,7 @@ Per la corretta formattazione degli spazi di questo tipo di griglia, occorre agg
           <figure class="figure img-full w-100">
             <img src="https://placehold.co/660x300/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
             <figcaption class="figure-caption it-griditem-text-wrapper">Testo didascalia 
-              <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
+              <svg role="img" class="icon"><title>Significato icona</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
             </figcaption>
           </figure>
         </a>
@@ -164,7 +179,7 @@ Per la corretta formattazione degli spazi di questo tipo di griglia, occorre agg
           <figure class="figure img-full w-100">
             <img src="https://placehold.co/660x300/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
             <figcaption class="figure-caption it-griditem-text-wrapper">Testo didascalia 
-              <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
+              <svg role="img" class="icon"><title>Significato icona</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
             </figcaption>
           </figure>
         </a>
@@ -176,7 +191,7 @@ Per la corretta formattazione degli spazi di questo tipo di griglia, occorre agg
           <figure class="figure img-full w-100">
             <img src="https://placehold.co/660x300/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
             <figcaption class="figure-caption it-griditem-text-wrapper">Testo didascalia 
-              <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
+              <svg role="img" class="icon"><title>Significato icona</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
             </figcaption>
           </figure>
         </a>
@@ -188,7 +203,7 @@ Per la corretta formattazione degli spazi di questo tipo di griglia, occorre agg
           <figure class="figure img-full w-100">
             <img src="https://placehold.co/660x300/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
             <figcaption class="figure-caption it-griditem-text-wrapper">Testo didascalia 
-              <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
+              <svg role="img" class="icon"><title>Significato icona</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
             </figcaption>
           </figure>
         </a>
@@ -200,7 +215,7 @@ Per la corretta formattazione degli spazi di questo tipo di griglia, occorre agg
           <figure class="figure img-full w-100">
             <img src="https://placehold.co/660x300/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
             <figcaption class="figure-caption it-griditem-text-wrapper">Testo didascalia 
-              <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
+              <svg role="img" class="icon"><title>Significato icona</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
             </figcaption>
           </figure>
         </a>
@@ -212,7 +227,7 @@ Per la corretta formattazione degli spazi di questo tipo di griglia, occorre agg
           <figure class="figure img-full w-100">
             <img src="https://placehold.co/660x300/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
             <figcaption class="figure-caption it-griditem-text-wrapper">Testo didascalia 
-              <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
+              <svg role="img" class="icon"><title>Significato icona</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
             </figcaption>
           </figure>
         </a>
@@ -248,7 +263,7 @@ Per utilizzare l'immagine orizzontale, occorre aggiungere la classe `.it-grid-it
                   <img src="https://placehold.co/660x300/ebebeb/808080/?text=Immagine" class="rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
                   <figcaption class="figure-caption it-griditem-text-wrapper">
                     <span class="it-griditem-text">Testo didascalia</span>
-                    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
+                    <svg role="img" class="icon"><title>Significato icona</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
                   </figcaption>
                 </figure>
             </div>
@@ -267,7 +282,7 @@ Per utilizzare l'immagine orizzontale, occorre aggiungere la classe `.it-grid-it
                       <img src="https://placehold.co/660x300/ebebeb/808080/?text=Immagine" class="rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
                       <figcaption class="figure-caption it-griditem-text-wrapper">
                         <span class="it-griditem-text">Testo didascalia</span>
-                        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
+                        <svg role="img" class="icon"><title>Significato icona</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
                       </figcaption>
                     </figure>
                 </div>
@@ -284,7 +299,7 @@ Per utilizzare l'immagine orizzontale, occorre aggiungere la classe `.it-grid-it
                       <img src="https://placehold.co/660x300/ebebeb/808080/?text=Immagine" class="rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
                       <figcaption class="figure-caption it-griditem-text-wrapper">
                         <span class="it-griditem-text">Testo didascalia</span>
-                        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
+                        <svg role="img" class="icon"><title>Significato icona</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
                       </figcaption>
                     </figure>
                 </div>
@@ -301,7 +316,7 @@ Per utilizzare l'immagine orizzontale, occorre aggiungere la classe `.it-grid-it
                       <img src="https://placehold.co/660x300/ebebeb/808080/?text=Immagine" class="rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
                       <figcaption class="figure-caption it-griditem-text-wrapper">
                         <span class="it-griditem-text">Testo didascalia</span>
-                        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
+                        <svg role="img" class="icon"><title>Significato icona</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
                       </figcaption>
                     </figure>
                 </div>
@@ -337,7 +352,7 @@ Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'e
           </div>
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
-            <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
+            <svg role="img" class="icon"><title>Significato icona</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
           </span>
         </a>
       </div>
@@ -352,7 +367,7 @@ Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'e
           </div>
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
-            <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
+            <svg role="img" class="icon"><title>Significato icona</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
           </span>
         </a>
       </div>
@@ -367,7 +382,7 @@ Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'e
           </div>
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
-            <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
+            <svg role="img" class="icon"><title>Significato icona</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
           </span>
         </a>
       </div>
@@ -382,7 +397,7 @@ Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'e
           </div>
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
-            <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
+            <svg role="img" class="icon"><title>Significato icona</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
           </span>
         </a>
       </div>
@@ -397,7 +412,7 @@ Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'e
           </div>
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
-            <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
+            <svg role="img" class="icon"><title>Significato icona</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
           </span>
         </a>
       </div>
@@ -412,7 +427,7 @@ Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'e
           </div>
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
-            <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
+            <svg role="img" class="icon"><title>Significato icona</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
           </span>
         </a>
       </div>
@@ -427,7 +442,7 @@ Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'e
           </div>
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
-            <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
+            <svg role="img" class="icon"><title>Significato icona</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
           </span>
         </a>
       </div>
@@ -442,7 +457,7 @@ Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'e
           </div>
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
-            <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
+            <svg role="img" class="icon"><title>Significato icona</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
           </span>
         </a>
       </div>
@@ -457,7 +472,7 @@ Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'e
           </div>
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
-            <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
+            <svg role="img" class="icon"><title>Significato icona</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
           </span>
         </a>
       </div>
@@ -472,7 +487,7 @@ Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'e
           </div>
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
-            <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
+            <svg role="img" class="icon"><title>Significato icona</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
           </span>
         </a>
       </div>
@@ -487,7 +502,7 @@ Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'e
           </div>
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
-            <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
+            <svg role="img" class="icon"><title>Significato icona</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
           </span>
         </a>
       </div>
@@ -502,7 +517,7 @@ Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'e
           </div>
           <span class="it-griditem-text-wrapper">
             <span class="it-griditem-text">Didascalia</span>
-            <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
+            <svg role="img" class="icon"><title>Significato icona</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
           </span>
         </a>
       </div>
