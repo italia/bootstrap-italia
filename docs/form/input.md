@@ -46,6 +46,12 @@ Il campo di input di tipo Password è stato rivisto in chiave accessibilità e r
   - Rimosso il controllo per il Caps-lock inserito, per non interferire con i tasti modificatori delle tecnologie assistive.
   - Aggiunta una variante con misuratore di sicurezza e suggerimenti. 
 {% endcapture %}{% include callout.html content=callout type="danger" %}
+{% capture callout %}
+Breaking feature dalla versione **2.11.0**
+
+Quando si utilizza la classe `.form-control-lg` o `.form-control-sm` è necessario aggiungere anche la classe `rounded-0` al tag `<input>` per rimuovere i bordi arrotondati
+
+{% endcapture %}{% include callout.html content=callout type="danger" %}
 
 {% comment %}Example name: Varianti per tipo {% endcomment %}
 {% capture example %}
@@ -646,14 +652,6 @@ Includendo l'elemento all'interno di un `.form-group`, la label assumerà lo ste
 ### Dimensione
 
 È possibile modificare la dimensione dell'elemento utilizzando le classi `.form-control-lg` e `.form-control-sm`, che modificano la grandezza del carattere e la spaziatura interna.
-
-{% capture callout %}
-Breaking feature dalla versione **2.10.0**
-
-Quando si utilizza la classe `.form-control-lg` o `.form-control-sm` è necessario aggiungere anche la classe `rounded-0` al tag `<input>` per rimuovere i bordi arrotondati
-
-{% endcapture %}{% include callout.html content=callout type="danger" %}
-
 
 {% comment %}Example name: Varianti di dimensione {% endcomment %}
 {% capture example %}
