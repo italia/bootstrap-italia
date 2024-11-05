@@ -346,7 +346,7 @@ Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'e
       <div class="it-grid-item-wrapper">
         <a href="#" class="">
           <figure class="figure img-full w-100">
-            <img src="https://placehold.co/400x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine">
+            <img class="figure-img" src="https://placehold.co/400x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine">
             <figcaption class="figure-caption it-griditem-text-wrapper">
               <span class="it-griditem-text">Didascalia</span>
               <svg role="img" class="icon"><title>Significato icona</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
@@ -359,7 +359,7 @@ Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'e
       <div class="it-grid-item-wrapper">
         <a href="#">
           <figure class="figure img-full w-100">
-            <img src="https://placehold.co/400x500/ebebeb/808080/?text=Immagine" alt="descrizione immagine">
+            <img class="figure-img" src="https://placehold.co/400x500/ebebeb/808080/?text=Immagine" alt="descrizione immagine">
             <figcaption class="figure-caption it-griditem-text-wrapper">
               <span class="it-griditem-text">Didascalia</span>
               <svg role="img" class="icon"><title>Significato icona</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
@@ -372,7 +372,7 @@ Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'e
       <div class="it-grid-item-wrapper">
         <a href="#">
           <figure class="figure img-full w-100">
-            <img src="https://placehold.co/400x700/ebebeb/808080/?text=Immagine" alt="descrizione immagine">
+            <img class="figure-img" src="https://placehold.co/400x700/ebebeb/808080/?text=Immagine" alt="descrizione immagine">
             <figcaption class="figure-caption it-griditem-text-wrapper">
               <span class="it-griditem-text">Didascalia</span>
               <svg role="img" class="icon"><title>Significato icona</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
@@ -385,7 +385,7 @@ Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'e
       <div class="it-grid-item-wrapper">
         <a href="#">
           <figure class="figure img-full w-100">
-            <img src="https://placehold.co/400x600/ebebeb/808080/?text=Immagine" alt="descrizione immagine">
+            <img class="figure-img" src="https://placehold.co/400x600/ebebeb/808080/?text=Immagine" alt="descrizione immagine">
             <figcaption class="figure-caption it-griditem-text-wrapper">
               <span class="it-griditem-text">Didascalia</span>
               <svg role="img" class="icon"><title>Significato icona</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
@@ -398,7 +398,7 @@ Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'e
       <div class="it-grid-item-wrapper">
         <a href="#">
           <figure class="figure img-full w-100">
-            <img src="https://placehold.co/400x500/ebebeb/808080/?text=Immagine" alt="descrizione immagine">
+            <img class="figure-img" src="https://placehold.co/400x500/ebebeb/808080/?text=Immagine" alt="descrizione immagine">
             <figcaption class="figure-caption it-griditem-text-wrapper">
               <span class="it-griditem-text">Didascalia</span>
               <svg role="img" class="icon"><title>Significato icona</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
@@ -411,7 +411,7 @@ Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'e
       <div class="it-grid-item-wrapper">
         <a href="#">
           <figure class="figure img-full w-100">
-            <img src="https://placehold.co/400x400/ebebeb/808080/?text=Immagine" alt="descrizione immagine">
+            <img class="figure-img" src="https://placehold.co/400x400/ebebeb/808080/?text=Immagine" alt="descrizione immagine">
             <figcaption class="figure-caption it-griditem-text-wrapper">
               <span class="it-griditem-text">Didascalia</span>
               <svg role="img" class="icon"><title>Significato icona</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
@@ -424,7 +424,7 @@ Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'e
       <div class="it-grid-item-wrapper">
         <a href="#">
           <figure class="figure img-full w-100">
-            <img src="https://placehold.co/400x600/ebebeb/808080/?text=Immagine" alt="descrizione immagine">
+            <img class="figure-img" src="https://placehold.co/400x600/ebebeb/808080/?text=Immagine" alt="descrizione immagine">
             <figcaption class="figure-caption it-griditem-text-wrapper">
               <span class="it-griditem-text">Didascalia</span>
               <svg role="img" class="icon"><title>Significato icona</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
@@ -437,7 +437,7 @@ Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'e
       <div class="it-grid-item-wrapper">
         <a href="#">
           <figure class="figure img-full w-100">
-            <img src="https://placehold.co/400x500/ebebeb/808080/?text=Immagine" alt="descrizione immagine">
+            <img class="figure-img" src="https://placehold.co/400x500/ebebeb/808080/?text=Immagine" alt="descrizione immagine">
             <figcaption class="figure-caption it-griditem-text-wrapper">
               <span class="it-griditem-text">Didascalia</span>
               <svg role="img" class="icon"><title>Significato icona</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
@@ -450,7 +450,7 @@ Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'e
       <div class="it-grid-item-wrapper">
         <a href="#">
           <figure class="figure img-full w-100">
-            <img src="https://placehold.co/400x400/ebebeb/808080/?text=Immagine" alt="descrizione immagine">
+            <img class="figure-img" src="https://placehold.co/400x400/ebebeb/808080/?text=Immagine" alt="descrizione immagine">
             <figcaption class="figure-caption it-griditem-text-wrapper">
               <span class="it-griditem-text">Didascalia</span>
               <svg role="img" class="icon"><title>Significato icona</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
@@ -463,7 +463,7 @@ Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'e
       <div class="it-grid-item-wrapper">
         <a href="#">
           <figure class="figure img-full w-100">
-            <img src="https://placehold.co/400x600/ebebeb/808080/?text=Immagine" alt="descrizione immagine">
+            <img class="figure-img" src="https://placehold.co/400x600/ebebeb/808080/?text=Immagine" alt="descrizione immagine">
             <figcaption class="figure-caption it-griditem-text-wrapper">
               <span class="it-griditem-text">Didascalia</span>
               <svg role="img" class="icon"><title>Significato icona</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
@@ -476,7 +476,7 @@ Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'e
       <div class="it-grid-item-wrapper">
         <a href="#">
           <figure class="figure img-full w-100">
-            <img src="https://placehold.co/400x500/ebebeb/808080/?text=Immagine" alt="descrizione immagine">
+            <img class="figure-img" src="https://placehold.co/400x500/ebebeb/808080/?text=Immagine" alt="descrizione immagine">
             <figcaption class="figure-caption it-griditem-text-wrapper">
               <span class="it-griditem-text">Didascalia</span>
               <svg role="img" class="icon"><title>Significato icona</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
@@ -489,7 +489,7 @@ Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'e
       <div class="it-grid-item-wrapper">
         <a href="#">
           <figure class="figure img-full w-100">
-            <img src="https://placehold.co/400x400/ebebeb/808080/?text=Immagine" alt="descrizione immagine">
+            <img class="figure-img" src="https://placehold.co/400x400/ebebeb/808080/?text=Immagine" alt="descrizione immagine">
             <figcaption class="figure-caption it-griditem-text-wrapper">
               <span class="it-griditem-text">Didascalia</span>
               <svg role="img" class="icon"><title>Significato icona</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
