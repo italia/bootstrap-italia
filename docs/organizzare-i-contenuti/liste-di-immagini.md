@@ -23,7 +23,7 @@ Per utilizzare la didascalia sovrapposta è sufficiente aggiungere la classe `.i
     <div class="it-grid-item-wrapper">
       <a href="#">
         <figure class="figure img-full w-100">
-          <img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
+          <img src="https://placehold.co/660x300/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
         </figure>
       </a>
     </div>
@@ -32,10 +32,10 @@ Per utilizzare la didascalia sovrapposta è sufficiente aggiungere la classe `.i
     <div class="it-grid-item-wrapper">
       <a href="#">
         <figure class="figure img-full w-100">
-          <img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
+          <img src="https://placehold.co/660x300/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
           <figcaption class="figure-caption it-griditem-text-wrapper">
             <span class="it-griditem-text">Testo didascalia</span>
-            <svg class="icon"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-code-circle"></use></svg>
+            <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
           </figcaption>
         </figure>
       </a>
@@ -45,10 +45,10 @@ Per utilizzare la didascalia sovrapposta è sufficiente aggiungere la classe `.i
     <div class="it-grid-item-wrapper it-grid-item-overlay">
       <a href="#">
         <figure class="figure img-full w-100 img-responsive-wrapper">
-          <img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
+          <img src="https://placehold.co/660x300/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
           <figcaption class="figure-caption it-griditem-text-wrapper">
             <span class="it-griditem-text">Testo didascalia</span>
-            <svg class="icon"><use href="/dist/svg/sprites.svg#it-code-circle"></use></svg>
+            <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
           </figcaption>
         </figure>
       </a>
@@ -73,7 +73,7 @@ Il contenitore della griglia è `.it-grid-list-wrapper`. Al posto della classe `
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
+              <div class="img-wrapper"><img src="https://placehold.co/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
             </div>
           </div>
         </a>
@@ -84,7 +84,7 @@ Il contenitore della griglia è `.it-grid-list-wrapper`. Al posto della classe `
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
+              <div class="img-wrapper"><img src="https://placehold.co/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
             </div>
           </div>
         </a>
@@ -95,7 +95,7 @@ Il contenitore della griglia è `.it-grid-list-wrapper`. Al posto della classe `
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
+              <div class="img-wrapper"><img src="https://placehold.co/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
             </div>
           </div>
         </a>
@@ -106,7 +106,7 @@ Il contenitore della griglia è `.it-grid-list-wrapper`. Al posto della classe `
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
+              <div class="img-wrapper"><img src="https://placehold.co/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
             </div>
           </div>
         </a>
@@ -117,7 +117,7 @@ Il contenitore della griglia è `.it-grid-list-wrapper`. Al posto della classe `
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
+              <div class="img-wrapper"><img src="https://placehold.co/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
             </div>
           </div>
         </a>
@@ -128,7 +128,7 @@ Il contenitore della griglia è `.it-grid-list-wrapper`. Al posto della classe `
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
+              <div class="img-wrapper"><img src="https://placehold.co/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
             </div>
           </div>
         </a>
@@ -150,9 +150,9 @@ Per la corretta formattazione degli spazi di questo tipo di griglia, occorre agg
       <div class="it-grid-item-wrapper">
         <a href="#">
           <figure class="figure img-full w-100">
-            <img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
+            <img src="https://placehold.co/660x300/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
             <figcaption class="figure-caption it-griditem-text-wrapper">Testo didascalia 
-              <svg class="icon"><use href="/dist/svg/sprites.svg#it-code-circle"></use></svg>
+              <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
             </figcaption>
           </figure>
         </a>
@@ -162,9 +162,9 @@ Per la corretta formattazione degli spazi di questo tipo di griglia, occorre agg
       <div class="it-grid-item-wrapper">
         <a href="#">
           <figure class="figure img-full w-100">
-            <img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
+            <img src="https://placehold.co/660x300/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
             <figcaption class="figure-caption it-griditem-text-wrapper">Testo didascalia 
-              <svg class="icon"><use href="/dist/svg/sprites.svg#it-code-circle"></use></svg>
+              <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
             </figcaption>
           </figure>
         </a>
@@ -174,9 +174,9 @@ Per la corretta formattazione degli spazi di questo tipo di griglia, occorre agg
       <div class="it-grid-item-wrapper">
         <a href="#">
           <figure class="figure img-full w-100">
-            <img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
+            <img src="https://placehold.co/660x300/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
             <figcaption class="figure-caption it-griditem-text-wrapper">Testo didascalia 
-              <svg class="icon"><use href="/dist/svg/sprites.svg#it-code-circle"></use></svg>
+              <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
             </figcaption>
           </figure>
         </a>
@@ -186,9 +186,9 @@ Per la corretta formattazione degli spazi di questo tipo di griglia, occorre agg
       <div class="it-grid-item-wrapper">
         <a href="#">
           <figure class="figure img-full w-100">
-            <img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
+            <img src="https://placehold.co/660x300/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
             <figcaption class="figure-caption it-griditem-text-wrapper">Testo didascalia 
-              <svg class="icon"><use href="/dist/svg/sprites.svg#it-code-circle"></use></svg>
+              <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
             </figcaption>
           </figure>
         </a>
@@ -198,9 +198,9 @@ Per la corretta formattazione degli spazi di questo tipo di griglia, occorre agg
       <div class="it-grid-item-wrapper">
         <a href="#">
           <figure class="figure img-full w-100">
-            <img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
+            <img src="https://placehold.co/660x300/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
             <figcaption class="figure-caption it-griditem-text-wrapper">Testo didascalia 
-              <svg class="icon"><use href="/dist/svg/sprites.svg#it-code-circle"></use></svg>
+              <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
             </figcaption>
           </figure>
         </a>
@@ -210,9 +210,9 @@ Per la corretta formattazione degli spazi di questo tipo di griglia, occorre agg
       <div class="it-grid-item-wrapper">
         <a href="#">
           <figure class="figure img-full w-100">
-            <img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
+            <img src="https://placehold.co/660x300/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
             <figcaption class="figure-caption it-griditem-text-wrapper">Testo didascalia 
-              <svg class="icon"><use href="/dist/svg/sprites.svg#it-code-circle"></use></svg>
+              <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
             </figcaption>
           </figure>
         </a>
@@ -245,10 +245,10 @@ Per utilizzare l'immagine orizzontale, occorre aggiungere la classe `.it-grid-it
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
                 <figure class="img-wrapper">
-                  <img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" class="rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
+                  <img src="https://placehold.co/660x300/ebebeb/808080/?text=Immagine" class="rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
                   <figcaption class="figure-caption it-griditem-text-wrapper">
                     <span class="it-griditem-text">Testo didascalia</span>
-                    <svg class="icon"><use href="/dist/svg/sprites.svg#it-code-circle"></use></svg>
+                    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
                   </figcaption>
                 </figure>
             </div>
@@ -264,10 +264,10 @@ Per utilizzare l'immagine orizzontale, occorre aggiungere la classe `.it-grid-it
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
                     <figure class="img-wrapper">
-                      <img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" class="rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
+                      <img src="https://placehold.co/660x300/ebebeb/808080/?text=Immagine" class="rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
                       <figcaption class="figure-caption it-griditem-text-wrapper">
                         <span class="it-griditem-text">Testo didascalia</span>
-                        <svg class="icon"><use href="/dist/svg/sprites.svg#it-code-circle"></use></svg>
+                        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
                       </figcaption>
                     </figure>
                 </div>
@@ -281,10 +281,10 @@ Per utilizzare l'immagine orizzontale, occorre aggiungere la classe `.it-grid-it
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
                     <figure class="img-wrapper">
-                      <img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" class="rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
+                      <img src="https://placehold.co/660x300/ebebeb/808080/?text=Immagine" class="rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
                       <figcaption class="figure-caption it-griditem-text-wrapper">
                         <span class="it-griditem-text">Testo didascalia</span>
-                        <svg class="icon"><use href="/dist/svg/sprites.svg#it-code-circle"></use></svg>
+                        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
                       </figcaption>
                     </figure>
                 </div>
@@ -298,10 +298,10 @@ Per utilizzare l'immagine orizzontale, occorre aggiungere la classe `.it-grid-it
               <div class="img-responsive-wrapper">
                 <div class="img-responsive">
                     <figure class="img-wrapper">
-                      <img src="https://via.placeholder.com/660x300/ebebeb/808080/?text=Immagine" class="rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
+                      <img src="https://placehold.co/660x300/ebebeb/808080/?text=Immagine" class="rounded" alt="Un'immagine generica segnaposto con angoli arrotondati in una figura.">
                       <figcaption class="figure-caption it-griditem-text-wrapper">
                         <span class="it-griditem-text">Testo didascalia</span>
-                        <svg class="icon"><use href="/dist/svg/sprites.svg#it-code-circle"></use></svg>
+                        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
                       </figcaption>
                     </figure>
                 </div>
@@ -332,7 +332,7 @@ Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'e
         <a href="#" class="">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/400x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
+              <div class="img-wrapper"><img src="https://placehold.co/400x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
@@ -347,7 +347,7 @@ Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'e
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/400x500/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
+              <div class="img-wrapper"><img src="https://placehold.co/400x500/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
@@ -362,7 +362,7 @@ Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'e
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/400x700/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
+              <div class="img-wrapper"><img src="https://placehold.co/400x700/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
@@ -377,7 +377,7 @@ Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'e
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/400x600/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
+              <div class="img-wrapper"><img src="https://placehold.co/400x600/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
@@ -392,7 +392,7 @@ Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'e
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/400x500/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
+              <div class="img-wrapper"><img src="https://placehold.co/400x500/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
@@ -407,7 +407,7 @@ Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'e
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/400x400/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
+              <div class="img-wrapper"><img src="https://placehold.co/400x400/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
@@ -422,7 +422,7 @@ Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'e
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/400x600/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
+              <div class="img-wrapper"><img src="https://placehold.co/400x600/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
@@ -437,7 +437,7 @@ Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'e
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/400x500/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
+              <div class="img-wrapper"><img src="https://placehold.co/400x500/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
@@ -452,7 +452,7 @@ Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'e
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/400x400/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
+              <div class="img-wrapper"><img src="https://placehold.co/400x400/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
@@ -467,7 +467,7 @@ Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'e
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/400x600/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
+              <div class="img-wrapper"><img src="https://placehold.co/400x600/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
@@ -482,7 +482,7 @@ Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'e
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/400x500/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
+              <div class="img-wrapper"><img src="https://placehold.co/400x500/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
@@ -497,7 +497,7 @@ Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'e
         <a href="#">
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://via.placeholder.com/400x400/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
+              <div class="img-wrapper"><img src="https://placehold.co/400x400/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
             </div>
           </div>
           <span class="it-griditem-text-wrapper">
