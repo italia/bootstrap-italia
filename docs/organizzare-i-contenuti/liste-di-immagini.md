@@ -345,180 +345,156 @@ Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'e
     <div class="col-sm-6 col-lg-4 mb-4">
       <div class="it-grid-item-wrapper">
         <a href="#" class="">
-          <div class="img-responsive-wrapper">
-            <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://placehold.co/400x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
-            </div>
-          </div>
-          <span class="it-griditem-text-wrapper">
-            <span class="it-griditem-text">Didascalia</span>
-            <svg role="img" class="icon"><title>Significato icona</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
-          </span>
+          <figure class="figure img-full w-100">
+            <img src="https://placehold.co/400x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine">
+            <figcaption class="figure-caption it-griditem-text-wrapper">
+              <span class="it-griditem-text">Didascalia</span>
+              <svg role="img" class="icon"><title>Significato icona</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
+            </figcaption>
+          </figure>
         </a>
       </div>
     </div>
     <div class="col-sm-6 col-lg-4 mb-4">
       <div class="it-grid-item-wrapper">
         <a href="#">
-          <div class="img-responsive-wrapper">
-            <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://placehold.co/400x500/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
-            </div>
-          </div>
-          <span class="it-griditem-text-wrapper">
-            <span class="it-griditem-text">Didascalia</span>
-            <svg role="img" class="icon"><title>Significato icona</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
-          </span>
+          <figure class="figure img-full w-100">
+            <img src="https://placehold.co/400x500/ebebeb/808080/?text=Immagine" alt="descrizione immagine">
+            <figcaption class="figure-caption it-griditem-text-wrapper">
+              <span class="it-griditem-text">Didascalia</span>
+              <svg role="img" class="icon"><title>Significato icona</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
+            </figcaption>
+          </figure>
         </a>
       </div>
     </div>
     <div class="col-sm-6 col-lg-4 mb-4">
       <div class="it-grid-item-wrapper">
         <a href="#">
-          <div class="img-responsive-wrapper">
-            <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://placehold.co/400x700/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
-            </div>
-          </div>
-          <span class="it-griditem-text-wrapper">
-            <span class="it-griditem-text">Didascalia</span>
-            <svg role="img" class="icon"><title>Significato icona</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
-          </span>
+          <figure class="figure img-full w-100">
+            <img src="https://placehold.co/400x700/ebebeb/808080/?text=Immagine" alt="descrizione immagine">
+            <figcaption class="figure-caption it-griditem-text-wrapper">
+              <span class="it-griditem-text">Didascalia</span>
+              <svg role="img" class="icon"><title>Significato icona</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
+            </figcaption>
+          </figure>
         </a>
       </div>
     </div>
     <div class="col-sm-6 col-lg-4 mb-4">
       <div class="it-grid-item-wrapper">
         <a href="#">
-          <div class="img-responsive-wrapper">
-            <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://placehold.co/400x600/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
-            </div>
-          </div>
-          <span class="it-griditem-text-wrapper">
-            <span class="it-griditem-text">Didascalia</span>
-            <svg role="img" class="icon"><title>Significato icona</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
-          </span>
+          <figure class="figure img-full w-100">
+            <img src="https://placehold.co/400x600/ebebeb/808080/?text=Immagine" alt="descrizione immagine">
+            <figcaption class="figure-caption it-griditem-text-wrapper">
+              <span class="it-griditem-text">Didascalia</span>
+              <svg role="img" class="icon"><title>Significato icona</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
+            </figcaption>
+          </figure>
         </a>
       </div>
     </div>
     <div class="col-sm-6 col-lg-4 mb-4">
       <div class="it-grid-item-wrapper">
         <a href="#">
-          <div class="img-responsive-wrapper">
-            <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://placehold.co/400x500/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
-            </div>
-          </div>
-          <span class="it-griditem-text-wrapper">
-            <span class="it-griditem-text">Didascalia</span>
-            <svg role="img" class="icon"><title>Significato icona</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
-          </span>
+          <figure class="figure img-full w-100">
+            <img src="https://placehold.co/400x500/ebebeb/808080/?text=Immagine" alt="descrizione immagine">
+            <figcaption class="figure-caption it-griditem-text-wrapper">
+              <span class="it-griditem-text">Didascalia</span>
+              <svg role="img" class="icon"><title>Significato icona</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
+            </figcaption>
+          </figure>
         </a>
       </div>
     </div>
     <div class="col-sm-6 col-lg-4 mb-4">
       <div class="it-grid-item-wrapper">
         <a href="#">
-          <div class="img-responsive-wrapper">
-            <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://placehold.co/400x400/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
-            </div>
-          </div>
-          <span class="it-griditem-text-wrapper">
-            <span class="it-griditem-text">Didascalia</span>
-            <svg role="img" class="icon"><title>Significato icona</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
-          </span>
+          <figure class="figure img-full w-100">
+            <img src="https://placehold.co/400x400/ebebeb/808080/?text=Immagine" alt="descrizione immagine">
+            <figcaption class="figure-caption it-griditem-text-wrapper">
+              <span class="it-griditem-text">Didascalia</span>
+              <svg role="img" class="icon"><title>Significato icona</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
+            </figcaption>
+          </figure>
         </a>
       </div>
     </div>
     <div class="col-sm-6 col-lg-4 mb-4">
       <div class="it-grid-item-wrapper">
         <a href="#">
-          <div class="img-responsive-wrapper">
-            <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://placehold.co/400x600/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
-            </div>
-          </div>
-          <span class="it-griditem-text-wrapper">
-            <span class="it-griditem-text">Didascalia</span>
-            <svg role="img" class="icon"><title>Significato icona</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
-          </span>
+          <figure class="figure img-full w-100">
+            <img src="https://placehold.co/400x600/ebebeb/808080/?text=Immagine" alt="descrizione immagine">
+            <figcaption class="figure-caption it-griditem-text-wrapper">
+              <span class="it-griditem-text">Didascalia</span>
+              <svg role="img" class="icon"><title>Significato icona</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
+            </figcaption>
+          </figure>
         </a>
       </div>
     </div>
     <div class="col-sm-6 col-lg-4 mb-4">
       <div class="it-grid-item-wrapper">
         <a href="#">
-          <div class="img-responsive-wrapper">
-            <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://placehold.co/400x500/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
-            </div>
-          </div>
-          <span class="it-griditem-text-wrapper">
-            <span class="it-griditem-text">Didascalia</span>
-            <svg role="img" class="icon"><title>Significato icona</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
-          </span>
+          <figure class="figure img-full w-100">
+            <img src="https://placehold.co/400x500/ebebeb/808080/?text=Immagine" alt="descrizione immagine">
+            <figcaption class="figure-caption it-griditem-text-wrapper">
+              <span class="it-griditem-text">Didascalia</span>
+              <svg role="img" class="icon"><title>Significato icona</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
+            </figcaption>
+          </figure>
         </a>
       </div>
     </div>
     <div class="col-sm-6 col-lg-4 mb-4">
       <div class="it-grid-item-wrapper">
         <a href="#">
-          <div class="img-responsive-wrapper">
-            <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://placehold.co/400x400/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
-            </div>
-          </div>
-          <span class="it-griditem-text-wrapper">
-            <span class="it-griditem-text">Didascalia</span>
-            <svg role="img" class="icon"><title>Significato icona</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
-          </span>
+          <figure class="figure img-full w-100">
+            <img src="https://placehold.co/400x400/ebebeb/808080/?text=Immagine" alt="descrizione immagine">
+            <figcaption class="figure-caption it-griditem-text-wrapper">
+              <span class="it-griditem-text">Didascalia</span>
+              <svg role="img" class="icon"><title>Significato icona</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
+            </figcaption>
+          </figure>
         </a>
       </div>
     </div>
     <div class="col-sm-6 col-lg-4 mb-4">
       <div class="it-grid-item-wrapper">
         <a href="#">
-          <div class="img-responsive-wrapper">
-            <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://placehold.co/400x600/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
-            </div>
-          </div>
-          <span class="it-griditem-text-wrapper">
-            <span class="it-griditem-text">Didascalia</span>
-            <svg role="img" class="icon"><title>Significato icona</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
-          </span>
+          <figure class="figure img-full w-100">
+            <img src="https://placehold.co/400x600/ebebeb/808080/?text=Immagine" alt="descrizione immagine">
+            <figcaption class="figure-caption it-griditem-text-wrapper">
+              <span class="it-griditem-text">Didascalia</span>
+              <svg role="img" class="icon"><title>Significato icona</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
+            </figcaption>
+          </figure>
         </a>
       </div>
     </div>
     <div class="col-sm-6 col-lg-4 mb-4">
       <div class="it-grid-item-wrapper">
         <a href="#">
-          <div class="img-responsive-wrapper">
-            <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://placehold.co/400x500/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
-            </div>
-          </div>
-          <span class="it-griditem-text-wrapper">
-            <span class="it-griditem-text">Didascalia</span>
-            <svg role="img" class="icon"><title>Significato icona</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
-          </span>
+          <figure class="figure img-full w-100">
+            <img src="https://placehold.co/400x500/ebebeb/808080/?text=Immagine" alt="descrizione immagine">
+            <figcaption class="figure-caption it-griditem-text-wrapper">
+              <span class="it-griditem-text">Didascalia</span>
+              <svg role="img" class="icon"><title>Significato icona</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
+            </figcaption>
+          </figure>
         </a>
       </div>
     </div>
     <div class="col-sm-6 col-lg-4 mb-4">
       <div class="it-grid-item-wrapper">
         <a href="#">
-          <div class="img-responsive-wrapper">
-            <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://placehold.co/400x400/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
-            </div>
-          </div>
-          <span class="it-griditem-text-wrapper">
-            <span class="it-griditem-text">Didascalia</span>
-            <svg role="img" class="icon"><title>Significato icona</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
-          </span>
+          <figure class="figure img-full w-100">
+            <img src="https://placehold.co/400x400/ebebeb/808080/?text=Immagine" alt="descrizione immagine">
+            <figcaption class="figure-caption it-griditem-text-wrapper">
+              <span class="it-griditem-text">Didascalia</span>
+              <svg role="img" class="icon"><title>Significato icona</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
+            </figcaption>
+          </figure>
         </a>
       </div>
     </div>
