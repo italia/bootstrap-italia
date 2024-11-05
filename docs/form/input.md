@@ -49,7 +49,7 @@ Il campo di input di tipo Password è stato rivisto in chiave accessibilità e r
 {% capture callout %}
 Breaking feature dalla versione **2.11.0**
 
-Quando si utilizza la classe `.form-control-lg` o `.form-control-sm` è necessario aggiungere anche la classe `rounded-0` al tag `<input>` per rimuovere i bordi arrotondati
+Quando si utilizza un campo input è necessario sempre applicare la classe `form-control`.
 
 {% endcapture %}{% include callout.html content=callout type="danger" %}
 
