@@ -2,5 +2,9 @@
     {
         "name": "Base",
         "content": "\n<div class=\"skiplinks\">\n  <a class=\"visually-hidden-focusable\" href=\"#\">Vai al contenuto principale</a>\n  <a class=\"visually-hidden-focusable\" href=\"#\">Vai al piede di pagina</a>\n</div>\n"
+    },
+    {
+        "name": "Elenco",
+        "content": "\n<nav class=\"skiplinks\" aria-label=\"Scorciatoie di navigazione\">\n  <ul>\n    <li class=\"visually-hidden-focusable\"><a href=\"#\">Vai al menu</a></li>\n    <li class=\"visually-hidden-focusable\" ><a href=\"#\">Vai al contenuto</a></li>\n    <li class=\"visually-hidden-focusable\" ><a href=\"#\">Questa pagina ti \u00e8 stata utile?</a></li>\n    <li class=\"visually-hidden-focusable\" ><a href=\"#\">Vai al piede</a></li>\n    <li class=\"visually-hidden-focusable\" ><a href=\"https://form.agid.gov.it/view/xyz\">Dichiarazione di accessibilit\u00e0 (link esterno su sito AgID)</a></li>\n  </ul>\n</nav>\n"
     }
 ]
