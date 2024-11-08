@@ -132,11 +132,11 @@ L'esempio seguente usa una delle [utilità di flexbox]({{ site.baseurl }}/docs/o
 {% comment %}Example name: Auto-dimensionamento {% endcomment %}
 {% capture example %}
 <div class="row align-items-center">
-  <div class="col-12 col-md-6 col-lg-auto mb-3">
+  <div class="col-12 col-md-6 col-lg-auto">
     <label class="visually-hidden" for="inlineFormInput">Nome</label>
     <input type="text" class="form-control" id="inlineFormInput" placeholder="Mario Rossi">
   </div>
-  <div class="col-12 col-md-6 col-lg-auto mb-3">
+  <div class="col-12 col-md-6 col-lg-auto">
     <label class="visually-hidden" for="inlineFormInputGroup">Username</label>
     <div class="input-group">
       <span class="input-group-text">@</span>
