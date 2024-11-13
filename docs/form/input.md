@@ -46,6 +46,12 @@ Il campo di input di tipo Password è stato rivisto in chiave accessibilità e r
   - Rimosso il controllo per il Caps-lock inserito, per non interferire con i tasti modificatori delle tecnologie assistive.
   - Aggiunta una variante con misuratore di sicurezza e suggerimenti. 
 {% endcapture %}{% include callout.html content=callout type="danger" %}
+{% capture callout %}
+Breaking feature dalla versione **2.11.0**
+
+Quando si utilizza un campo input è necessario sempre applicare la classe `form-control`.
+
+{% endcapture %}{% include callout.html content=callout type="danger" %}
 
 {% comment %}Example name: Varianti per tipo {% endcomment %}
 {% capture example %}
@@ -451,7 +457,7 @@ Il testo corrispondente alla ricerca (_"ite"_, nell'esempio) deve essere racchiu
 {% capture example %}
 <div class="form-group">
   <label for="autocomplete-one" class="visually-hidden">Cerca nel sito</label>
-  <input type="search" class="autocomplete" placeholder="Testo da cercare"
+  <input type="search" class="form-control autocomplete" placeholder="Testo da cercare"
     id="autocomplete-one"
     name="autocomplete-one"
     data-bs-autocomplete="[]">
@@ -522,7 +528,7 @@ Per ottenere una versione grande dell'Autocomplete, indicata ad esempio per inte
 {% capture example %}
 <div class="form-group autocomplete-wrapper-big">
   <label for="autocomplete-two" class="visually-hidden">Cerca nel sito</label>
-  <input type="search" class="autocomplete" placeholder="Testo da cercare"
+  <input type="search" class="form-control autocomplete" placeholder="Testo da cercare"
     id="autocomplete-two"
     name="autocomplete-two"
     data-bs-autocomplete="[]">
@@ -585,7 +591,7 @@ Cerca una regione italiana per verificarne il comportamento.
 {% capture example %}
 <div class="form-group">
   <label for="autocomplete-regioni" class="visually-hidden">Cerca nel sito</label>
-  <input type="search" class="autocomplete" placeholder="Testo da cercare"
+  <input type="search" class="form-control autocomplete" placeholder="Testo da cercare"
     id="autocomplete-regioni"
     name="autocomplete-regioni"
     data-bs-autocomplete='{{ site.data.autocomplete.regioni | jsonify }}'>
@@ -608,7 +614,7 @@ Cerca ad esempio _"Italia"_ per verificarne il comportamento.
 {% capture example %}
 <div class="form-group">
   <label for="autocomplete-test" class="visually-hidden">Cerca nel sito</label>
-  <input type="search" class="autocomplete" placeholder="Testo da cercare"
+  <input type="search" class="form-control autocomplete" placeholder="Testo da cercare"
     id="autocomplete-test"
     name="autocomplete-test"
     data-bs-autocomplete='{{ site.data.autocomplete.nazioni | jsonify }}'>

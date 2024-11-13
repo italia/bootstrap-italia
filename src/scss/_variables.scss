@@ -270,7 +270,7 @@ $link-list-divider-height: 1px;
 $link-list-divider-distance: 8px;
 $link-list-h-pad: 24px;
 $link-list-v-pad: 0.25em;
-$link-list-paragraph-size: 0.75rem;
+$link-list-paragraph-size: 0.875rem;
 $link-list-left-icon-space: 8px;
 $link-list-avatar-radius: 50px;
 $link-list-avatar-margin: 8px;
@@ -553,25 +553,24 @@ $crs-landcape-bottom: 5px;
 // Gridlist **************
 $grid-item-df-proportion: 66.81222707423581%;
 $grid-item-df-double-proportion: 33.4061135371179%;
-$grid-item-text-size: 1rem;
-$grid-item-text-size-mob: 0.8rem;
+$grid-item-text-size: 0.75rem;
 $grid-item-text-color: $neutral-1 !default; // Missing in the UI kit - need more attention
 $grid-item-text-overlay-bg: $neutral-1-a10 !default; // Missing in the UI kit - need more attention
 $grid-list-default-gap: 2px;
 $grid-list-text-gap: $v-gap;
 $grid-item-sm-col: 50%;
 $grid-item-lg-col: 33.333333%;
-$grid-item-icon-mob-size: 24px;
-$grid-item-icon-size-desk: 32px;
+$grid-item-icon-size: 24px;
+$grid-item-overlay: hsla(210%, 54%, 20, 0.85);
 
 // list
 $list-font-size: 1rem;
 $list-text-padding: $v-gap * 2 0 $v-gap * 2 0;
 $list-border-color: $gray-border !default; // UI kit
 $list-metadata-color: $color-text-muted !default; // Missing in the UI kit but token applicable
-$list-metadata-size: 12px;
+$list-metadata-size: 0.75rem;
 $list-metadata-space: 0.5px;
-$list-sub-size: 14px;
+$list-sub-size: 0.875rem;
 $list-sub-color: $color-text-muted !default; // UI kit
 
 //chips
