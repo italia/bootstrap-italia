@@ -7,14 +7,6 @@
   outline-offset: 3px;
 }
 
-p a:focus:not(.focus--mouse) {
-  outline-offset: 0px;
-  outline: 3px $focus-outline-color-out solid;
-  background: $focus-outline-color-in;
-  box-shadow: none;
-  color: $link-color !important;
-}
-
 [tabindex='-1']:focus:not(:focus-visible) {
   box-shadow: none;
 }
@@ -24,6 +16,22 @@ p a:focus:not(.focus--mouse) {
   border-color: inherit !important;
   box-shadow: none !important;
   outline: none !important;
+}
+
+p a:focus:not(.focus--mouse) {
+  outline-offset: 0px;
+  outline: 3px $focus-outline-color-out solid;
+  background: $focus-outline-color-in;
+  box-shadow: none;
+  color: $link-color !important;
+}
+
+.chip {
+  button {
+    &:focus:not(.focus--mouse) {
+      border-radius: 50%;
+    }
+  }
 }
 
 .form-check {

@@ -35,7 +35,7 @@
     background: transparent;
     border: none;
     margin-left: auto;
-    width: 22px;
+    width: 24px;
     height: 24px;
     position: relative;
     &:hover:not([disabled]) {
@@ -76,7 +76,7 @@
     }
     //close button
     button {
-      width: 28px;
+      width: 32px;
       height: 32px;
       .icon {
         width: 28px;
