@@ -26,11 +26,8 @@ p a:focus:not(.focus--mouse) {
   color: $link-color !important;
 }
 
-
 .bg-dark {
-
   .btn {
-
     &:focus:not(.focus--mouse),
     &%focus {
       box-shadow: 0 0 0 2px $focus-outline-color-out, 0 0 0 5px $focus-outline-color-in;
@@ -63,10 +60,9 @@ p a:focus:not(.focus--mouse) {
   }
 
   &.form-check-group {
-
     :focus:not(.focus--mouse),
-    [type='checkbox']:focus+label,
-    [type='radio']:focus+label {
+    [type='checkbox']:focus + label,
+    [type='radio']:focus + label {
       width: 100%;
     }
   }

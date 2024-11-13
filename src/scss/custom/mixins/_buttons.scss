@@ -1,9 +1,11 @@
-@mixin button-variant($background,
+@mixin button-variant(
+  $background,
   $border,
   $hover-background: shade-color($background, 19%),
   $hover-border: shade-color($border, 25%),
   $active-background: shade-color($background, 25%),
-  $active-border: shade-color($border, 31%)) {
+  $active-border: shade-color($border, 31%)
+) {
   color: color-contrast($background);
   @include gradient-bg($background);
   border-color: $border;
@@ -28,7 +30,7 @@
   &:not(:disabled):not(.disabled):active,
   &:not(:disabled):not(.disabled).active,
   &.dropdown-toggle.show,
-  .show>&.dropdown-toggle {
+  .show > &.dropdown-toggle {
     background-color: $hover-background;
     color: color-contrast($background);
     border-color: $hover-border;
@@ -56,7 +58,7 @@
   &:not(:disabled):not(.disabled):active,
   &:not(:disabled):not(.disabled).active,
   &.dropdown-toggle.show,
-  .show>&.dropdown-toggle {
+  .show > &.dropdown-toggle {
     color: $color-hover;
     background-color: transparent;
     background-image: none;
