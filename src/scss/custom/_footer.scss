@@ -12,15 +12,12 @@
   }
 
   .link-list-wrapper ul li {
-    a {
+    a:not(.disabled) {
       padding: 0;
       font-size: 1rem;
       line-height: 2rem;
       color: $white;
-
-      &:hover:not(.disabled) {
-        text-decoration: underline;
-      }
+      text-decoration: underline;
     }
   }
 
@@ -95,7 +92,6 @@
   a:hover:not(.disabled) {
     color: $white;
     font-size: 1rem;
-    text-decoration: none;
   }
 }
 
