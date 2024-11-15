@@ -18,12 +18,20 @@
   outline: none !important;
 }
 
-p a:focus:not(.focus--mouse, .btn) {
-  outline-offset: 0px;
-  outline: 3px $focus-outline-color-out solid;
-  background: $focus-outline-color-in;
-  box-shadow: none;
-  color: $link-color !important;
+p a {
+  &:focus:not(.focus--mouse, .btn) {
+    outline-offset: 0px;
+    outline: 3px $focus-outline-color-out solid;
+    background: $focus-outline-color-in;
+    box-shadow: none;
+    color: $link-color !important;
+  }
+}
+
+.shadow, .shadow-none, .shadow-sm, .shadow-lg {
+  &:focus:not(.focus--mouse) {
+    box-shadow: 0 0 0 2px $focus-outline-color-in, 0 0 0 5px $focus-outline-color-out !important;
+  }
 }
 
 .chip {
@@ -59,11 +67,9 @@ p a:focus:not(.focus--mouse, .btn) {
   }
 }
 
-.bg-dark {
-  .btn {
+.bg-dark .btn, .back-to-top.dark {
     &:focus:not(.focus--mouse),
     &%focus {
       box-shadow: 0 0 0 2px $focus-outline-color-out, 0 0 0 5px $focus-outline-color-in;
     }
-  }
 }
