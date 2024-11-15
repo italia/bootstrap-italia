@@ -18,7 +18,7 @@
   outline: none !important;
 }
 
-p a:focus:not(.focus--mouse) {
+p a:focus:not(.focus--mouse, .btn) {
   outline-offset: 0px;
   outline: 3px $focus-outline-color-out solid;
   background: $focus-outline-color-in;
