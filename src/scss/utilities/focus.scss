@@ -3,7 +3,8 @@
 .it-carousel-wrapper .splide__pagination button:focus:not(.focus--mouse),
 .upload:focus:not(.focus--mouse) + label, 
 .upload-dragdrop-input:focus[type="file"]:not(.focus--mouse) + label,
-.avatar-upload:focus-within:not(.focus--mouse) {
+.avatar-upload:focus-within:not(.focus--mouse),
+.rating input:focus:not(.focus--mouse) + label svg {
   border-color: $focus-outline-color-out !important;
   box-shadow: 0 0 0 2px $focus-outline-color-in, 0 0 0 5px $focus-outline-color-out;
   outline: 3px solid transparent;
