@@ -37,14 +37,6 @@
       margin-right: 10px;
     }
   }
-
-  //focus state
-  &:focus {
-    & + label {
-      background-color: shade-color($primary, 10%);
-      outline: auto 5px -webkit-focus-ring-color;
-    }
-  }
 }
 
 //pictures wall version
