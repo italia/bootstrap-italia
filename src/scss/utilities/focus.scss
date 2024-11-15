@@ -26,15 +26,6 @@ p a:focus:not(.focus--mouse, .btn) {
   color: $link-color !important;
 }
 
-.bg-dark {
-  .btn {
-    &:focus:not(.focus--mouse),
-    &%focus {
-      box-shadow: 0 0 0 2px $focus-outline-color-out, 0 0 0 5px $focus-outline-color-in;
-    }
-  }
-}
-
 .chip {
   button {
     &:focus:not(.focus--mouse) {
@@ -64,6 +55,15 @@ p a:focus:not(.focus--mouse, .btn) {
     [type='checkbox']:focus + label,
     [type='radio']:focus + label {
       width: 100%;
+    }
+  }
+}
+
+.bg-dark {
+  .btn {
+    &:focus:not(.focus--mouse),
+    &%focus {
+      box-shadow: 0 0 0 2px $focus-outline-color-out, 0 0 0 5px $focus-outline-color-in;
     }
   }
 }
