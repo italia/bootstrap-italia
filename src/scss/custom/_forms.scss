@@ -225,11 +225,7 @@ textarea {
       padding-bottom: 0;
       border-bottom: 1px solid $input-border;
       border-radius: 0 4px 4px 0;
-      // box-shadow: none;
       height: 100%;
-      // &:focus:not(.focus--mouse) {
-      //   box-shadow: inset 0 0 0 2px $focus-outline-color;
-      // }
     }
   }
 }
@@ -469,10 +465,6 @@ textarea {
       padding-right: 3.25rem;
       margin-bottom: 0.5rem;
     }
-
-    // label {
-    //   font-weight: 600;
-    // }
 
     input.semi-checked:not(:checked) + label::before {
       right: 4px;
