@@ -1,15 +1,17 @@
 //mobile
 .it-footer-main {
   --bs-border-opacity: 0.5;
-  
   background-color: $footer-top-background;
   color: $white;
   font-size: 1rem;
 
-  h4 a {
-    color: $white;
+  h4 {
     text-transform: uppercase;
     font-size: 1rem;
+  }
+
+  h4 a {
+    color: $white;
   }
 
   .link-list-wrapper ul li {
