@@ -12,6 +12,9 @@
 
   h4 a {
     color: $white;
+    &:hover {
+      color: color-hover($white);
+    }
   }
 
   .link-list-wrapper ul li {
