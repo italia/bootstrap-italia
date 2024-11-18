@@ -175,7 +175,7 @@ Potrebbe anche contenere riferimenti alle pagine social dell'amministrazione.
       <section class="py-4 border-white border-top">
         <div class="row">
           <div class="col-lg-4 col-md-4 pb-2">
-            <h4><a href="#">Contatti</a></h4>
+            <h4>Contatti</h4>
             <p>
               <strong>Comune di Lorem Ipsum</strong><br>
               Via Roma 0 - 00000 Lorem Ipsum Codice fiscale / P. IVA: 000000000
@@ -190,11 +190,11 @@ Potrebbe anche contenere riferimenti alle pagine social dell'amministrazione.
             </div>
           </div>
           <div class="col-lg-4 col-md-4 pb-2">
-            <h4><a href="#">Lorem Ipsum</a></h4>
+            <h4>Lorem Ipsum</h4>
           </div>
           <div class="col-lg-4 col-md-4 pb-2">
             <div class="pb-2">
-              <h4><a href="#">Seguici su</a></h4>
+              <h4>Seguici su</h4>
               <ul class="list-inline text-left social">
                 <li class="list-inline-item">
                   <a class="p-2 text-white" href="#"><svg class="icon icon-sm icon-white align-top"><use xlink:href="{{site.baseurl}}/dist/svg/sprites.svg#it-designers-italia"></use></svg><span class="visually-hidden">Designers Italia (link esterno)</span></a>
