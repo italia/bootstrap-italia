@@ -1,9 +1,11 @@
 .it-footer {
-
-  h4, ul, li, p {
+  h4,
+  ul,
+  li,
+  p {
     font-size: 1rem;
   }
-  
+
   a {
     color: $white;
     &:hover {
