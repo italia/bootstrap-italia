@@ -86,66 +86,54 @@ Il contenitore della griglia è `.it-grid-list-wrapper`. Al posto della classe `
     <div class="col-6 col-lg-4">
       <div class="it-grid-item-wrapper">
         <a href="#">
-          <div class="img-responsive-wrapper">
-            <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://placehold.co/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
-            </div>
-          </div>
+          <figure class="figure img-full w-100">
+            <img src="https://placehold.co/660x300/ebebeb/808080/?text=Immagine" alt="immagine segnaposto 1 della griglia standard">
+          </figure>
         </a>
       </div>
     </div>
     <div class="col-6 col-lg-4">
       <div class="it-grid-item-wrapper">
         <a href="#">
-          <div class="img-responsive-wrapper">
-            <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://placehold.co/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
-            </div>
-          </div>
+          <figure class="figure img-full w-100">
+            <img src="https://placehold.co/660x300/ebebeb/808080/?text=Immagine" alt="immagine segnaposto 2 della griglia standard">
+          </figure>
         </a>
       </div>
     </div>
     <div class="col-6 col-lg-4">
       <div class="it-grid-item-wrapper">
         <a href="#">
-          <div class="img-responsive-wrapper">
-            <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://placehold.co/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
-            </div>
-          </div>
+          <figure class="figure img-full w-100">
+            <img src="https://placehold.co/660x300/ebebeb/808080/?text=Immagine" alt="immagine segnaposto 3 della griglia standard">
+          </figure>
         </a>
       </div>
     </div>
     <div class="col-6 col-lg-4">
       <div class="it-grid-item-wrapper">
         <a href="#">
-          <div class="img-responsive-wrapper">
-            <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://placehold.co/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
-            </div>
-          </div>
+          <figure class="figure img-full w-100">
+            <img src="https://placehold.co/660x300/ebebeb/808080/?text=Immagine" alt="immagine segnaposto 4 della griglia standard">
+          </figure>
         </a>
       </div>
     </div>
     <div class="col-6 col-lg-4">
       <div class="it-grid-item-wrapper">
         <a href="#">
-          <div class="img-responsive-wrapper">
-            <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://placehold.co/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
-            </div>
-          </div>
+          <figure class="figure img-full w-100">
+            <img src="https://placehold.co/660x300/ebebeb/808080/?text=Immagine" alt="immagine segnaposto 5 della griglia standard">
+          </figure>
         </a>
       </div>
     </div>
     <div class="col-6 col-lg-4">
       <div class="it-grid-item-wrapper">
         <a href="#">
-          <div class="img-responsive-wrapper">
-            <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://placehold.co/660x300/ebebeb/808080/?text=Immagine" alt="descrizione immagine"></div>
-            </div>
-          </div>
+          <figure class="figure img-full w-100">
+            <img src="https://placehold.co/660x300/ebebeb/808080/?text=Immagine" alt="immagine segnaposto 7 della griglia standard">
+          </figure>
         </a>
       </div>
     </div>
