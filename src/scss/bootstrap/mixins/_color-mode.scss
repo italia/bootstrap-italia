@@ -1,6 +1,6 @@
 // scss-docs-start color-mode-mixin
 @mixin color-mode($mode: light, $root: false) {
-  @if $color-mode-type == "media-query" {
+  @if $color-mode-type == 'media-query' {
     @if $root == true {
       @media (prefers-color-scheme: $mode) {
         :root {
@@ -13,7 +13,7 @@
       }
     }
   } @else {
-    [data-bs-theme="#{$mode}"] {
+    [data-bs-theme='#{$mode}'] {
       @content;
     }
   }

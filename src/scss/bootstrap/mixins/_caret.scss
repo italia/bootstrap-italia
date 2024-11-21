@@ -26,18 +26,13 @@
   border-bottom: $width solid transparent;
 }
 
-@mixin caret(
-  $direction: down,
-  $width: $caret-width,
-  $spacing: $caret-spacing,
-  $vertical-align: $caret-vertical-align
-) {
+@mixin caret($direction: down, $width: $caret-width, $spacing: $caret-spacing, $vertical-align: $caret-vertical-align) {
   @if $enable-caret {
     &::after {
       display: inline-block;
       margin-left: $spacing;
       vertical-align: $vertical-align;
-      content: "";
+      content: '';
       @if $direction == down {
         @include caret-down($width);
       } @else if $direction == up {
@@ -56,7 +51,7 @@
         display: inline-block;
         margin-right: $spacing;
         vertical-align: $vertical-align;
-        content: "";
+        content: '';
         @include caret-start($width);
       }
     }

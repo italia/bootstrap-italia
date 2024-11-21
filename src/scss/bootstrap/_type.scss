@@ -25,7 +25,6 @@
   @extend h6;
 }
 
-
 .lead {
   @include font-size($lead-font-size);
   font-weight: $lead-font-weight;
@@ -73,7 +72,6 @@
   }
 }
 
-
 //
 // Misc
 //
@@ -101,6 +99,6 @@
   color: $blockquote-footer-color;
 
   &::before {
-    content: "\2014\00A0"; // em dash, nbsp
+    content: '\2014\00A0'; // em dash, nbsp
   }
 }

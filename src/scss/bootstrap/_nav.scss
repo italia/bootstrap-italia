@@ -98,7 +98,6 @@
   }
 }
 
-
 //
 // Pills
 //
@@ -126,7 +125,6 @@
     @include gradient-bg(var(--#{$prefix}nav-pills-link-active-bg));
   }
 }
-
 
 //
 // Underline
@@ -165,7 +163,6 @@
   }
 }
 
-
 //
 // Justified variants
 //
@@ -193,7 +190,6 @@
     width: 100%; // Make sure button will grow
   }
 }
-
 
 // Tabbable tabs
 //

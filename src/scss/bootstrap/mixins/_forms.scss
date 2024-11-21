@@ -3,7 +3,7 @@
 
 // scss-docs-start form-validation-mixins
 @mixin form-validation-state-selector($state) {
-  @if ($state == "valid" or $state == "invalid") {
+  @if ($state == 'valid' or $state == 'invalid') {
     .was-validated #{if(&, "&", "")}:#{$state},
     #{if(&, "&", "")}.is-#{$state} {
       @content;
@@ -40,7 +40,7 @@
     display: none;
     max-width: 100%; // Contain to parent when possible
     padding: $form-feedback-tooltip-padding-y $form-feedback-tooltip-padding-x;
-    margin-top: .1rem;
+    margin-top: 0.1rem;
     @include font-size($form-feedback-tooltip-font-size);
     line-height: $form-feedback-tooltip-line-height;
     color: $tooltip-color;
@@ -90,7 +90,7 @@
 
       @if $enable-validation-icons {
         &:not([multiple]):not([size]),
-        &:not([multiple])[size="1"] {
+        &:not([multiple])[size='1'] {
           --#{$prefix}form-select-bg-icon: #{escape-svg($icon)};
           padding-right: $form-select-feedback-icon-padding-end;
           background-position: $form-select-bg-position, $form-select-feedback-icon-position;
@@ -132,7 +132,7 @@
   }
   .form-check-inline .form-check-input {
     ~ .#{$state}-feedback {
-      margin-left: .5em;
+      margin-left: 0.5em;
     }
   }
 
@@ -141,9 +141,9 @@
     > .form-select:not(:focus),
     > .form-floating:not(:focus-within) {
       @include form-validation-state-selector($state) {
-        @if $state == "valid" {
+        @if $state == 'valid' {
           z-index: 3;
-        } @else if $state == "invalid" {
+        } @else if $state == 'invalid' {
           z-index: 4;
         }
       }

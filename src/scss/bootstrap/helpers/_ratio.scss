@@ -7,7 +7,7 @@
   &::before {
     display: block;
     padding-top: var(--#{$prefix}aspect-ratio);
-    content: "";
+    content: '';
   }
 
   > * {
