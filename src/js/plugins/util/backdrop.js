@@ -23,7 +23,7 @@ const Default = {
   clickCallback: null,
   isAnimated: false,
   isVisible: true, // if false, we use the backdrop helper without adding any element to the dom
-  rootElement: 'body' // give the choice to place backdrop under different elements
+  rootElement: 'body', // give the choice to place backdrop under different elements
 }
 
 const DefaultType = {
@@ -31,7 +31,7 @@ const DefaultType = {
   clickCallback: '(function|null)',
   isAnimated: 'boolean',
   isVisible: 'boolean',
-  rootElement: '(element|string)'
+  rootElement: '(element|string)',
 }
 
 /**

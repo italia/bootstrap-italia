@@ -41,7 +41,7 @@ const Default = {
   rootMargin: '0px 0px -25%',
   smoothScroll: false,
   target: null,
-  threshold: [0.1, 0.5, 1]
+  threshold: [0.1, 0.5, 1],
 }
 
 const DefaultType = {
@@ -49,7 +49,7 @@ const DefaultType = {
   rootMargin: 'string',
   smoothScroll: 'boolean',
   target: 'element',
-  threshold: 'array'
+  threshold: 'array',
 }
 
 /**
@@ -68,7 +68,7 @@ class ScrollSpy extends BaseComponent {
     this._observer = null
     this._previousScrollData = {
       visibleEntryTop: 0,
-      parentScrollTop: 0
+      parentScrollTop: 0,
     }
     this.refresh() // initialize
   }
@@ -116,7 +116,7 @@ class ScrollSpy extends BaseComponent {
     config.rootMargin = config.offset ? `${config.offset}px 0px -30%` : config.rootMargin
 
     if (typeof config.threshold === 'string') {
-      config.threshold = config.threshold.split(',').map(value => Number.parseFloat(value))
+      config.threshold = config.threshold.split(',').map((value) => Number.parseFloat(value))
     }
 
     return config
@@ -130,7 +130,7 @@ class ScrollSpy extends BaseComponent {
     // unregister any previous listeners
     EventHandler.off(this._config.target, EVENT_CLICK)
 
-    EventHandler.on(this._config.target, EVENT_CLICK, SELECTOR_TARGET_LINKS, event => {
+    EventHandler.on(this._config.target, EVENT_CLICK, SELECTOR_TARGET_LINKS, (event) => {
       const observableSection = this._observableSections.get(event.target.hash)
       if (observableSection) {
         event.preventDefault()
@@ -151,16 +151,16 @@ class ScrollSpy extends BaseComponent {
     const options = {
       root: this._rootElement,
       threshold: this._config.threshold,
-      rootMargin: this._config.rootMargin
+      rootMargin: this._config.rootMargin,
     }
 
-    return new IntersectionObserver(entries => this._observerCallback(entries), options)
+    return new IntersectionObserver((entries) => this._observerCallback(entries), options)
   }
 
   // The logic of selection
   _observerCallback(entries) {
-    const targetElement = entry => this._targetLinks.get(`#${entry.target.id}`)
-    const activate = entry => {
+    const targetElement = (entry) => this._targetLinks.get(`#${entry.target.id}`)
+    const activate = (entry) => {
       this._previousScrollData.visibleEntryTop = entry.target.offsetTop
       this._process(targetElement(entry))
     }
@@ -234,8 +234,7 @@ class ScrollSpy extends BaseComponent {
   _activateParents(target) {
     // Activate dropdown parents
     if (target.classList.contains(CLASS_NAME_DROPDOWN_ITEM)) {
-      SelectorEngine.findOne(SELECTOR_DROPDOWN_TOGGLE, target.closest(SELECTOR_DROPDOWN))
-        .classList.add(CLASS_NAME_ACTIVE)
+      SelectorEngine.findOne(SELECTOR_DROPDOWN_TOGGLE, target.closest(SELECTOR_DROPDOWN)).classList.add(CLASS_NAME_ACTIVE)
       return
     }
 

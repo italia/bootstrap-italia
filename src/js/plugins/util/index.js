@@ -10,19 +10,22 @@ const MILLISECONDS_MULTIPLIER = 1000
 const TRANSITION_END = 'transitionend'
 
 // Shout-out Angus Croll (https://goo.gl/pxwQGp)
-const toType = object => {
+const toType = (object) => {
   if (object === null || object === undefined) {
     return `${object}`
   }
 
-  return Object.prototype.toString.call(object).match(/\s([a-z]+)/i)[1].toLowerCase()
+  return Object.prototype.toString
+    .call(object)
+    .match(/\s([a-z]+)/i)[1]
+    .toLowerCase()
 }
 
 /**
  * Public Util API
  */
 
-const getUID = prefix => {
+const getUID = (prefix) => {
   do {
     prefix += Math.floor(Math.random() * MAX_UID)
   } while (document.getElementById(prefix))
@@ -30,7 +33,7 @@ const getUID = prefix => {
   return prefix
 }
 
-const getSelector = element => {
+const getSelector = (element) => {
   let selector = element.getAttribute('data-bs-target')
 
   if (!selector || selector === '#') {
@@ -55,7 +58,7 @@ const getSelector = element => {
   return selector
 }
 
-const getSelectorFromElement = element => {
+const getSelectorFromElement = (element) => {
   const selector = getSelector(element)
 
   if (selector) {
@@ -65,13 +68,13 @@ const getSelectorFromElement = element => {
   return null
 }
 
-const getElementFromSelector = element => {
+const getElementFromSelector = (element) => {
   const selector = getSelector(element)
 
   return selector ? document.querySelector(selector) : null
 }
 
-const getTransitionDurationFromElement = element => {
+const getTransitionDurationFromElement = (element) => {
   if (!element) {
     return 0
   }
@@ -94,11 +97,11 @@ const getTransitionDurationFromElement = element => {
   return (Number.parseFloat(transitionDuration) + Number.parseFloat(transitionDelay)) * MILLISECONDS_MULTIPLIER
 }
 
-const triggerTransitionEnd = element => {
+const triggerTransitionEnd = (element) => {
   element.dispatchEvent(new Event(TRANSITION_END))
 }
 
-const isElement = object => {
+const isElement = (object) => {
   if (!object || typeof object !== 'object') {
     return false
   }
@@ -110,7 +113,7 @@ const isElement = object => {
   return typeof object.nodeType !== 'undefined'
 }
 
-const getElement = object => {
+const getElement = (object) => {
   // it's a jQuery object or a node element
   if (isElement(object)) {
     return object.jquery ? object[0] : object
@@ -123,7 +126,7 @@ const getElement = object => {
   return null
 }
 
-const isVisible = element => {
+const isVisible = (element) => {
   if (!isElement(element) || element.getClientRects().length === 0) {
     return false
   }
@@ -150,7 +153,7 @@ const isVisible = element => {
   return elementIsVisible
 }
 
-const isDisabled = element => {
+const isDisabled = (element) => {
   if (!element || element.nodeType !== Node.ELEMENT_NODE) {
     return true
   }
@@ -166,7 +169,7 @@ const isDisabled = element => {
   return element.hasAttribute('disabled') && element.getAttribute('disabled') !== 'false'
 }
 
-const findShadowRoot = element => {
+const findShadowRoot = (element) => {
   if (!document.documentElement.attachShadow) {
     return null
   }
@@ -199,8 +202,8 @@ const noop = () => {}
  *
  * @see https://www.charistheo.io/blog/2021/02/restart-a-css-animation-with-javascript/#restarting-a-css-animation
  */
-const reflow = element => {
-  element.offsetHeight // eslint-disable-line no-unused-expressions
+const reflow = (element) => {
+  element.offsetHeight
 }
 
 const getjQuery = () => {
@@ -213,7 +216,7 @@ const getjQuery = () => {
 
 const DOMContentLoadedCallbacks = []
 
-const onDOMContentLoaded = callback => {
+const onDOMContentLoaded = (callback) => {
   if (document.readyState === 'loading') {
     // add listener on the first call when the document is in loading state
     if (!DOMContentLoadedCallbacks.length) {
@@ -232,7 +235,7 @@ const onDOMContentLoaded = callback => {
 
 const isRTL = () => document.documentElement.dir === 'rtl'
 
-const defineJQueryPlugin = plugin => {
+const defineJQueryPlugin = (plugin) => {
   onDOMContentLoaded(() => {
     const $ = getjQuery()
     /* istanbul ignore if */
@@ -249,7 +252,7 @@ const defineJQueryPlugin = plugin => {
   })
 }
 
-const execute = callback => {
+const execute = (callback) => {
   if (typeof callback === 'function') {
     callback()
   }
@@ -332,5 +335,5 @@ export {
   onDOMContentLoaded,
   reflow,
   triggerTransitionEnd,
-  toType
+  toType,
 }

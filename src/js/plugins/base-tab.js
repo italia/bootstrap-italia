@@ -66,7 +66,7 @@ class Tab extends BaseComponent {
     // Set up initial aria attributes
     this._setInitialAttributes(this._parent, this._getChildren())
 
-    EventHandler.on(this._element, EVENT_KEYDOWN, event => this._keydown(event))
+    EventHandler.on(this._element, EVENT_KEYDOWN, (event) => this._keydown(event))
   }
 
   // Getters
@@ -75,7 +75,8 @@ class Tab extends BaseComponent {
   }
 
   // Public
-  show() { // Shows this elem and deactivate the active sibling if exists
+  show() {
+    // Shows this elem and deactivate the active sibling if exists
     const innerElem = this._element
     if (this._elemIsActive(innerElem)) {
       return
@@ -84,9 +85,7 @@ class Tab extends BaseComponent {
     // Search for active tab on same parent to deactivate it
     const active = this._getActiveElem()
 
-    const hideEvent = active ?
-      EventHandler.trigger(active, EVENT_HIDE, { relatedTarget: innerElem }) :
-      null
+    const hideEvent = active ? EventHandler.trigger(active, EVENT_HIDE, { relatedTarget: innerElem }) : null
 
     const showEvent = EventHandler.trigger(innerElem, EVENT_SHOW, { relatedTarget: active })
 
@@ -118,7 +117,7 @@ class Tab extends BaseComponent {
       element.setAttribute('aria-selected', true)
       this._toggleDropDown(element, true)
       EventHandler.trigger(element, EVENT_SHOWN, {
-        relatedTarget: relatedElem
+        relatedTarget: relatedElem,
       })
     }
 
@@ -151,14 +150,19 @@ class Tab extends BaseComponent {
   }
 
   _keydown(event) {
-    if (!([ARROW_LEFT_KEY, ARROW_RIGHT_KEY, ARROW_UP_KEY, ARROW_DOWN_KEY].includes(event.key))) {
+    if (![ARROW_LEFT_KEY, ARROW_RIGHT_KEY, ARROW_UP_KEY, ARROW_DOWN_KEY].includes(event.key)) {
       return
     }
 
-    event.stopPropagation()// stopPropagation/preventDefault both added to support up/down keys without scrolling the page
+    event.stopPropagation() // stopPropagation/preventDefault both added to support up/down keys without scrolling the page
     event.preventDefault()
     const isNext = [ARROW_RIGHT_KEY, ARROW_DOWN_KEY].includes(event.key)
-    const nextActiveElement = getNextActiveElement(this._getChildren().filter(element => !isDisabled(element)), event.target, isNext, true)
+    const nextActiveElement = getNextActiveElement(
+      this._getChildren().filter((element) => !isDisabled(element)),
+      event.target,
+      isNext,
+      true
+    )
 
     if (nextActiveElement) {
       nextActiveElement.focus({ preventScroll: true })
@@ -166,12 +170,13 @@ class Tab extends BaseComponent {
     }
   }
 
-  _getChildren() { // collection of inner elements
+  _getChildren() {
+    // collection of inner elements
     return SelectorEngine.find(SELECTOR_INNER_ELEM, this._parent)
   }
 
   _getActiveElem() {
-    return this._getChildren().find(child => this._elemIsActive(child)) || null
+    return this._getChildren().find((child) => this._elemIsActive(child)) || null
   }
 
   _setInitialAttributes(parent, children) {

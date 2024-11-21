@@ -5,16 +5,7 @@
  * --------------------------------------------------------------------------
  */
 
-const uriAttributes = new Set([
-  'background',
-  'cite',
-  'href',
-  'itemtype',
-  'longdesc',
-  'poster',
-  'src',
-  'xlink:href'
-])
+const uriAttributes = new Set(['background', 'cite', 'href', 'itemtype', 'longdesc', 'poster', 'src', 'xlink:href'])
 
 const ARIA_ATTRIBUTE_PATTERN = /^aria-[\w-]*$/i
 
@@ -44,8 +35,7 @@ const allowedAttribute = (attribute, allowedAttributeList) => {
   }
 
   // Check if a regular expression validates the attribute.
-  return allowedAttributeList.filter(attributeRegex => attributeRegex instanceof RegExp)
-    .some(regex => regex.test(attributeName))
+  return allowedAttributeList.filter((attributeRegex) => attributeRegex instanceof RegExp).some((regex) => regex.test(attributeName))
 }
 
 export const DefaultAllowlist = {
@@ -79,7 +69,7 @@ export const DefaultAllowlist = {
   sup: [],
   strong: [],
   u: [],
-  ul: []
+  ul: [],
 }
 
 export function sanitizeHtml(unsafeHtml, allowList, sanitizeFunction) {

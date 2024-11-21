@@ -48,13 +48,13 @@ const SELECTOR_DATA_TOGGLE = '[data-bs-toggle="modal"]'
 const Default = {
   backdrop: true,
   focus: true,
-  keyboard: true
+  keyboard: true,
 }
 
 const DefaultType = {
   backdrop: '(boolean|string)',
   focus: 'boolean',
-  keyboard: 'boolean'
+  keyboard: 'boolean',
 }
 
 /**
@@ -99,7 +99,7 @@ class Modal extends BaseComponent {
     }
 
     const showEvent = EventHandler.trigger(this._element, EVENT_SHOW, {
-      relatedTarget
+      relatedTarget,
     })
 
     if (showEvent.defaultPrevented) {
@@ -156,13 +156,13 @@ class Modal extends BaseComponent {
   _initializeBackDrop() {
     return new Backdrop({
       isVisible: Boolean(this._config.backdrop), // 'static' option will be translated to true, and booleans will keep their value,
-      isAnimated: this._isAnimated()
+      isAnimated: this._isAnimated(),
     })
   }
 
   _initializeFocusTrap() {
     return new FocusTrap({
-      trapElement: this._element
+      trapElement: this._element,
     })
   }
 
@@ -194,7 +194,7 @@ class Modal extends BaseComponent {
 
       this._isTransitioning = false
       EventHandler.trigger(this._element, EVENT_SHOWN, {
-        relatedTarget
+        relatedTarget,
       })
     }
 
@@ -202,7 +202,7 @@ class Modal extends BaseComponent {
   }
 
   _addEventListeners() {
-    EventHandler.on(this._element, EVENT_KEYDOWN_DISMISS, event => {
+    EventHandler.on(this._element, EVENT_KEYDOWN_DISMISS, (event) => {
       if (event.key !== ESCAPE_KEY) {
         return
       }
@@ -222,9 +222,9 @@ class Modal extends BaseComponent {
       }
     })
 
-    EventHandler.on(this._element, EVENT_MOUSEDOWN_DISMISS, event => {
+    EventHandler.on(this._element, EVENT_MOUSEDOWN_DISMISS, (event) => {
       // a bad trick to segregate clicks that may start inside dialog but end outside, and avoid listen to scrollbar clicks
-      EventHandler.one(this._element, EVENT_CLICK_DISMISS, event2 => {
+      EventHandler.one(this._element, EVENT_CLICK_DISMISS, (event2) => {
         if (this._element !== event.target || this._element !== event2.target) {
           return
         }
@@ -342,7 +342,7 @@ EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function (
     event.preventDefault()
   }
 
-  EventHandler.one(target, EVENT_SHOW, showEvent => {
+  EventHandler.one(target, EVENT_SHOW, (showEvent) => {
     if (showEvent.defaultPrevented) {
       // only register focus restorer if modal will actually get shown
       return

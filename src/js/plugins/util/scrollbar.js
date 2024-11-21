@@ -38,10 +38,10 @@ class ScrollBarHelper {
     const width = this.getWidth()
     this._disableOverFlow()
     // give padding to element to balance the hidden scrollbar width
-    this._setElementAttributes(this._element, PROPERTY_PADDING, calculatedValue => calculatedValue + width)
+    this._setElementAttributes(this._element, PROPERTY_PADDING, (calculatedValue) => calculatedValue + width)
     // trick: We adjust positive paddingRight and negative marginRight to sticky-top elements to keep showing fullwidth
-    this._setElementAttributes(SELECTOR_FIXED_CONTENT, PROPERTY_PADDING, calculatedValue => calculatedValue + width)
-    this._setElementAttributes(SELECTOR_STICKY_CONTENT, PROPERTY_MARGIN, calculatedValue => calculatedValue - width)
+    this._setElementAttributes(SELECTOR_FIXED_CONTENT, PROPERTY_PADDING, (calculatedValue) => calculatedValue + width)
+    this._setElementAttributes(SELECTOR_STICKY_CONTENT, PROPERTY_MARGIN, (calculatedValue) => calculatedValue - width)
   }
 
   reset() {
@@ -63,7 +63,7 @@ class ScrollBarHelper {
 
   _setElementAttributes(selector, styleProperty, callback) {
     const scrollbarWidth = this.getWidth()
-    const manipulationCallBack = element => {
+    const manipulationCallBack = (element) => {
       if (element !== this._element && window.innerWidth > element.clientWidth + scrollbarWidth) {
         return
       }
@@ -84,7 +84,7 @@ class ScrollBarHelper {
   }
 
   _resetElementAttributes(selector, styleProperty) {
-    const manipulationCallBack = element => {
+    const manipulationCallBack = (element) => {
       const value = Manipulator.getDataAttribute(element, styleProperty)
       // We only want to remove the property if the value is `null`; the value can also be zero
       if (value === null) {

@@ -29,6 +29,4 @@ const enableDismissTrigger = (component, method = 'hide') => {
   })
 }
 
-export {
-  enableDismissTrigger
-}
+export { enableDismissTrigger }
