@@ -82,7 +82,7 @@
     },
     {
       "amichevole con lettori di schermo": "PRONTO",
-      "angular Kit": "PRONTO",
+      "angular Kit": "DA COMPLETARE VARIANTI",
       "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/autocomplete",
       "assignees": [
         "Fupete"
@@ -98,7 +98,7 @@
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjtb4",
       "navigabile": "PRONTO",
-      "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1139 — https://github.com/italia/design-ui-kit/issues/114",
+      "notes / Issues": "In React ancora messaggi di stato in inglese e in Angular kit manca la variante Autocomplete da gov.uk, c'è \"solo\" lo styling dell'input ricerca con autocompletamento",
       "notes / More": "In React kit è una variante dentro Input. Uniformare?",
       "react Kit": "DA RIVEDERE A11Y",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/story/documentazione-form-input--input-autocomplete-con-dati-accessibile",
@@ -126,14 +126,14 @@
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwTI",
       "navigabile": "PRONTO",
-      "notes / Issues": "https://github.com/italia/design-ui-kit/issues/134",
+      "notes / Issues": "In Bootstrap Italia e React kit ancora non sottolineati i link... ",
       "notes / More": "In Angular kit manca la variante con testo.",
       "react Kit": "DA RIVEDERE A11Y",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-avatar--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
       "title": "`Avatar` - check a11y e status",
-      "uI Kit Italia": "DA RIVEDERE A11Y",
+      "uI Kit Italia": "PRONTO",
       "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920",
       "visivamente accessibile": "DA RIVEDERE"
     },
@@ -195,7 +195,7 @@
     },
     {
       "amichevole con lettori di schermo": "PRONTO",
-      "angular Kit": "DA RIVEDERE A11Y",
+      "angular Kit": "PRONTO",
       "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/badge",
       "assignees": [
         "Fupete"
@@ -211,7 +211,6 @@
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwUg",
       "navigabile": "PRONTO",
-      "notes / Issues": "https://github.com/italia/design-angular-kit/issues/372",
       "notes / More": "Altri problemi evidenziati (future lavorazioni): Segnalati problemi con uso di colori saturi per lo sfondo, che rendono elemento troppo simile a pulsante, quando invece non è cliccabile. Manca variante \"Bianca\" in UI Kit Italia. Uniformare spaziatura interna tra UI Kit Italia e framework di sviluppo.",
       "react Kit": "PRONTO",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-badge--documentazione",
@@ -392,13 +391,13 @@
       "visivamente accessibile": "PRONTO"
     },
     {
-      "amichevole con lettori di schermo": "IN REVIEW",
-      "angular Kit": "DA RIVEDERE A11Y",
+      "amichevole con lettori di schermo": "PRONTO",
+      "angular Kit": "PRONTO",
       "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/checkbox",
       "assignees": [
         "Fupete"
       ],
-      "bootstrap Italia": "DA RIVEDERE A11Y",
+      "bootstrap Italia": "PRONTO",
       "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/form/checkbox/",
       "comprensibile": "PRONTO",
       "content": {
@@ -409,9 +408,8 @@
       },
       "id": "PVTI_lADOAOqloM4AcXblzgSeKRg",
       "navigabile": "PRONTO",
-      "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1069 — https://github.com/italia/bootstrap-italia/issues/1068",
       "notes / More": "In angular nella variante Gruppi è presente un link nella label da rimuovere.",
-      "react Kit": "DA RIVEDERE A11Y",
+      "react Kit": "PRONTO",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-form-checkbox--documentazione",
       "status a11y check": "Done",
       "title": "`Checkbox`- check a11y e status",
@@ -437,13 +435,12 @@
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwXQ",
       "navigabile": "PRONTO",
-      "notes / Issues": "https://github.com/italia/design-ui-kit/issues/140",
       "react Kit": "PRONTO",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-chips--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
       "title": "`Chips` - check a11y e status",
-      "uI Kit Italia": "DA RIVEDERE",
+      "uI Kit Italia": "PRONTO",
       "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920",
       "visivamente accessibile": "PRONTO"
     },
@@ -503,7 +500,7 @@
     },
     {
       "amichevole con lettori di schermo": "IN REVIEW",
-      "angular Kit": "DA RIVEDERE",
+      "angular Kit": "DA RIVEDERE A11Y",
       "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/dimmer",
       "assignees": [
         "Fupete"
@@ -519,8 +516,8 @@
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwYM",
       "navigabile": "PRONTO",
-      "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1165 — https://github.com/italia/design-angular-kit/issues/375 — https://github.com/italia/design-react-kit/issues/1088",
-      "react Kit": "DA RIVEDERE",
+      "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1165",
+      "react Kit": "DA RIVEDERE A11Y",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-dimmer--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
@@ -575,14 +572,14 @@
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwZc",
       "navigabile": "PRONTO",
-      "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1172 — https://github.com/italia/design-ui-kit/issues/137",
+      "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1172",
       "notes / More": "Manca in Angular Kit — Alcune incongruenze di contenuti e spazi da verificare: in UI Kit Italia ci sono cose in più (es: newsletter, presente solo in React Kit ma non in BSI). — In UI Kit Italia c'è anche una variante \"Alternate\" non presente in sviluppo. ",
       "react Kit": "DA RIVEDERE A11Y",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-menu-di-navigazione-footer--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
       "title": "`Footer` - check a11y e status",
-      "uI Kit Italia": "DA RIVEDERE",
+      "uI Kit Italia": "PRONTO",
       "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920",
       "visivamente accessibile": "DA RIVEDERE"
     },
@@ -616,7 +613,7 @@
     },
     {
       "amichevole con lettori di schermo": "PRONTO",
-      "angular Kit": "DA RIVEDERE",
+      "angular Kit": "PRONTO",
       "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/forward",
       "assignees": [
         "Fupete"
@@ -632,8 +629,7 @@
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwZ8",
       "navigabile": "PRONTO",
-      "notes / Issues": "https://github.com/italia/design-react-kit/issues/1089 — https://github.com/italia/design-angular-kit/issues/377",
-      "react Kit": "DA RIVEDERE A11Y",
+      "react Kit": "PRONTO",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-menu-di-navigazione-forward--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
@@ -688,8 +684,8 @@
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwaY",
       "navigabile": "PRONTO",
-      "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1175 — https://github.com/italia/design-react-kit/issues/1092",
-      "react Kit": "DA RIVEDERE A11Y",
+      "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1175",
+      "react Kit": "PRONTO",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-menu-di-navigazione-hero--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
@@ -699,7 +695,7 @@
       "visivamente accessibile": "PRONTO"
     },
     {
-      "amichevole con lettori di schermo": "DA RIVEDERE",
+      "amichevole con lettori di schermo": "IN REVIEW",
       "angular Kit": "DA RIVEDERE A11Y",
       "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/form-input",
       "assignees": [
@@ -707,7 +703,7 @@
       ],
       "bootstrap Italia": "DA RIVEDERE A11Y",
       "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/form/input/",
-      "comprensibile": "IN REVIEW",
+      "comprensibile": "PRONTO",
       "content": {
         "body": "https://designers.italia.it/design-system/componenti/input/",
         "id": "DI_lADOAOqloM4AcXblzgFT9Zs",
@@ -715,8 +711,8 @@
         "type": "DraftIssue"
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwas",
-      "navigabile": "DA RIVEDERE",
-      "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1215 — https://github.com/italia/bootstrap-italia/issues/1216",
+      "navigabile": "PRONTO",
+      "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1215",
       "notes / More": "In UI Kit Italia è presente anche il componente \"To be\". Decidere roadmap. ",
       "react Kit": "DA RIVEDERE A11Y",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-form-input--documentazione",
@@ -728,15 +724,15 @@
       "visivamente accessibile": "PRONTO"
     },
     {
-      "amichevole con lettori di schermo": "IN REVIEW",
+      "amichevole con lettori di schermo": "PRONTO",
       "angular Kit": "DA RIVEDERE A11Y",
       "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/list",
       "assignees": [
         "Fupete"
       ],
-      "bootstrap Italia": "DA RIVEDERE A11Y",
+      "bootstrap Italia": "PRONTO",
       "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/organizzare-i-contenuti/liste/",
-      "comprensibile": "DA RIVEDERE",
+      "comprensibile": "PRONTO",
       "content": {
         "body": "https://designers.italia.it/design-system/componenti/list/",
         "id": "DI_lADOAOqloM4AcXblzgFT9aI",
@@ -745,15 +741,14 @@
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwbY",
       "navigabile": "PRONTO",
-      "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1077 — https://github.com/italia/design-ui-kit/issues/119 — https://github.com/italia/bootstrap-italia/issues/1223 — https://github.com/italia/bootstrap-italia/issues/1224",
-      "react Kit": "DA RIVEDERE A11Y",
+      "react Kit": "PRONTO",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-organizzare-i-contenuti-liste--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
       "title": "`List` - check a11y e status",
-      "uI Kit Italia": "DA RIVEDERE A11Y",
+      "uI Kit Italia": "PRONTO",
       "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920",
-      "visivamente accessibile": "DA RIVEDERE"
+      "visivamente accessibile": "PRONTO"
     },
     {
       "amichevole con lettori di schermo": "PRONTO",
@@ -801,9 +796,9 @@
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwcM",
       "navigabile": "PRONTO",
-      "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1176 — https://github.com/italia/design-react-kit/issues/1093",
+      "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1176",
       "notes / More": "In UI Kit Italia probabilmente mancano le varianti di dimensioni (larghezza). ",
-      "react Kit": "DA RIVEDERE A11Y",
+      "react Kit": "PRONTO",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-modale--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
@@ -858,7 +853,7 @@
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwdM",
       "navigabile": "IN REVIEW",
-      "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1177 — https://github.com/italia/bootstrap-italia/issues/1178 — https://github.com/italia/design-ui-kit/issues/139 — https://github.com/italia/design-react-kit/issues/1094",
+      "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1177 — https://github.com/italia/bootstrap-italia/issues/1178 — https://github.com/italia/design-ui-kit/issues/139",
       "react Kit": "DA COMPLETARE VARIANTI",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-notification--documentazione",
       "status": "Todo",
@@ -1012,13 +1007,13 @@
       "visivamente accessibile": "PRONTO"
     },
     {
-      "amichevole con lettori di schermo": "IN REVIEW",
+      "amichevole con lettori di schermo": "PRONTO",
       "angular Kit": "DA COMPLETARE VARIANTI",
       "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/radio",
       "assignees": [
         "Fupete"
       ],
-      "bootstrap Italia": "DA RIVEDERE A11Y",
+      "bootstrap Italia": "PRONTO",
       "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/form/radio-button/",
       "comprensibile": "PRONTO",
       "content": {
@@ -1029,9 +1024,8 @@
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwgU",
       "navigabile": "PRONTO",
-      "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1069 — https://github.com/italia/bootstrap-italia/issues/1068",
       "notes / More": "In Angular manca la variante \"gruppi\" con radio a destra, ma c'è una variante Radio con link nella label che non è altrove. Di quest'ultima è dubbia l'a11y. ",
-      "react Kit": "DA RIVEDERE A11Y",
+      "react Kit": "PRONTO",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-form-radio--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
@@ -1086,9 +1080,8 @@
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwhE",
       "navigabile": "PRONTO",
-      "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1199",
       "notes / More": "Da valutare se anche a UI KIt Italia e Angular kit aggiungere un componente container Sections che possa avere gi spaziature e auto-layout coerenti.",
-      "react Kit": "DA RIVEDERE A11Y",
+      "react Kit": "PRONTO",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-section--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
@@ -1309,9 +1302,8 @@
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwjk",
       "navigabile": "PRONTO",
-      "notes / Issues": "https://github.com/italia/design-react-kit/issues/1102",
       "notes / More": "Verificare in UI Kit Italia l'opportunità di ripensare le \"griglie\" immagine, di navigazione o meno. ",
-      "react Kit": "DA RIVEDERE",
+      "react Kit": "PRONTO",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-menu-di-navigazione-thumbnav--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
@@ -1325,7 +1317,7 @@
       "assignees": [
         "Fupete"
       ],
-      "bootstrap Italia": "DA RIVEDERE A11Y",
+      "bootstrap Italia": "PRONTO",
       "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/componenti/timeline/",
       "comprensibile": "PRONTO",
       "content": {
@@ -1336,9 +1328,8 @@
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwj8",
       "navigabile": "DA RIVEDERE",
-      "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1195",
       "notes / More": "< ! Tracciate diverse cose nella stessa issue 1195, da capire se poi frammentarla. — Nel template su Designers Italia la classe h-100 applicata al body fa sì che si \"rompa\" la visualizzazione fullscreen di BSI — Sarebbe utile la versione orizzontale sviluppata per innovazione.gov.it",
-      "react Kit": "DA RIVEDERE A11Y",
+      "react Kit": "PRONTO",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-timeline--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
@@ -1376,13 +1367,13 @@
       "visivamente accessibile": "PRONTO"
     },
     {
-      "amichevole con lettori di schermo": "IN REVIEW",
+      "amichevole con lettori di schermo": "PRONTO",
       "angular Kit": "DA COMPLETARE VARIANTI",
       "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/toggle",
       "assignees": [
         "Fupete"
       ],
-      "bootstrap Italia": "DA RIVEDERE A11Y",
+      "bootstrap Italia": "PRONTO",
       "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/form/toggles/",
       "comprensibile": "PRONTO",
       "content": {
@@ -1393,9 +1384,8 @@
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwkw",
       "navigabile": "PRONTO",
-      "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1069 — https://github.com/italia/bootstrap-italia/issues/1068",
       "notes / More": "In UI Kit Italia è presente anche il componente \"To be\". Decidere roadmap. — In Angular kit manca la variante \"gruppi\"",
-      "react Kit": "DA RIVEDERE A11Y",
+      "react Kit": "PRONTO",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-form-toggles--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
@@ -1421,7 +1411,7 @@
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwlA",
       "navigabile": "PRONTO",
-      "notes / Issues": "https://github.com/italia/design-ui-kit/issues/135 — https://github.com/italia/bootstrap-italia/issues/1202 — https://github.com/italia/bootstrap-italia/issues/1192 — https://github.com/italia/design-react-kit/issues/1097 ",
+      "notes / Issues": "https://github.com/italia/design-ui-kit/issues/135 — https://github.com/italia/bootstrap-italia/issues/1202 — https://github.com/italia/bootstrap-italia/issues/1192 ",
       "react Kit": "DA RIVEDERE A11Y",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-toolbar--documentazione",
       "status": "Todo",

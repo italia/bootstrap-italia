@@ -176,13 +176,12 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
       })
     })
 
-  const data = Notification.getOrCreateInstance(target)
+    const data = Notification.getOrCreateInstance(target)
 
-  data.toggle(this)
-})
+    data.toggle(this)
+  })
 
-enableDismissTrigger(Notification)
-
+  enableDismissTrigger(Notification)
 }
 
 export default Notification

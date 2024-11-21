@@ -17,7 +17,7 @@ toc: true
   }
 </style>
 
-L'elemento Toolbar è un contenitore di link, pulsanti o dropdown. Consiste in un elenco `<ul>` con tanti elementi `<li>` quante sono le voci richieste.
+L'elemento Toolbar è un contenitore di link, pulsanti o dropdown. Consiste in un elenco `<ul>` con tanti elementi `<li>` quante sono le voci richieste.  
 
 ## Dimensioni
 
@@ -60,12 +60,13 @@ La versione predefinita dell'elemento è quella con icone grandi e label.
     <li>
       <a href="#" class="disabled" disabled aria-disabled="true">
         <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg>
-        <span class="toolbar-label">preferiti<span class="visually-hidden">elemento disabilitato</span></span>
+        <span class="toolbar-label">preferiti</span>
       </a>
     </li>
   </ul>
 </nav>
-{% endcapture %}{% include example.html content=example %}
+{% endcapture %}
+{% include example.html content=example %}  
 
 ### Toolbar media
 
@@ -115,7 +116,8 @@ In questo caso le label, nascoste visivamente, devono essere contenute in uno `<
     </li>
   </ul>
 </nav>
-{% endcapture %}{% include example.html content=example %}
+{% endcapture %}
+{% include example.html content=example %}
 
 ### Toolbar piccola
 
@@ -165,7 +167,8 @@ Anche in questo caso le label, non visibile, devono essere contenute in uno `<sp
     </li>
   </ul>
 </nav>
-{% endcapture %}{% include example.html content=example %}
+{% endcapture %}
+{% include example.html content=example %}  
 
 ## Stato degli elementi
 
@@ -173,7 +176,7 @@ Al tag `<a>` dell'elemento attivo va applicata la classe `.active`.
 
 Gli elementi disabilitati avranno invece una classe `.disabled` con ulteriori accorgimenti relativi all'accessibilità a seconda della tipologia:
 
-- **link, tag `<a>`:** aggiungere la proprietà HTML `disabled` al tag. Aggiungere uno span riservato agli screen reader all'interno della label. es.: `<span class="visually-hidden"> elemento disabilitato</span>`
+- **link, tag `<a>`:** aggiungere la proprietà HTML `disabled` al tag.
 - **dropdown button, tag `<button>`:** aggiungere l'attributo `aria-disabled="true"`.
 
 ## Divisori
@@ -218,7 +221,8 @@ Per aggiungere degli elementi divisori fra gli elementi utilizzare dei tag `<li>
     </li>
   </ul>
 </nav>
-{% endcapture %}{% include example.html content=example %}
+{% endcapture %}
+{% include example.html content=example %}  
 
 ## Toolbar con Badge
 
@@ -266,7 +270,8 @@ Nella versione grande i Badge possono contenere dei numeri. Il numero dei conten
     </li>
   </ul>
 </nav>
-{% endcapture %}{% include example.html content=example %}
+{% endcapture %}
+{% include example.html content=example %}  
 
 ### Media con Badge
 
@@ -322,7 +327,8 @@ Nella versione media i Badge non contengono numeri ma possono essere usati come 
     </li>
   </ul>
 </nav>
-{% endcapture %}{% include example.html content=example %}
+{% endcapture %}
+{% include example.html content=example %}  
 
 ### Piccola con Badge
 
@@ -378,7 +384,8 @@ Nella versione piccola i Badge non contengono numeri ma possono essere usati com
     </li>
   </ul>
 </nav>
-{% endcapture %}{% include example.html content=example %}
+{% endcapture %}
+{% include example.html content=example %}  
 
 ## Toolbar con Dropdown
 
@@ -479,7 +486,8 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
     </li>
   </ul>
 </nav>
-{% endcapture %}{% include example.html content=example %}
+{% endcapture %}
+{% include example.html content=example %}  
 
 ### Media con Dropdown
 
@@ -599,7 +607,8 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
     </li>
   </ul>
 </nav>
-{% endcapture %}{% include example.html content=example %}
+{% endcapture %}
+{% include example.html content=example %}  
 
 ### Piccola con Dropdown
 
@@ -719,7 +728,8 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
   </li>
   </ul>
 </nav>
-{% endcapture %}{% include example.html content=example %}
+{% endcapture %}
+{% include example.html content=example %}  
 
 ## Toolbar verticale
 
@@ -777,7 +787,8 @@ Applicando una classe aggiuntiva `.toolbar-vertical` alla Toolbar gli elementi v
     </li>
   </ul>
 </nav>
-{% endcapture %}{% include example.html content=example %}
+{% endcapture %}
+{% include example.html content=example %}  
 
 ### Media verticale
 
@@ -837,7 +848,8 @@ Applicando una classe aggiuntiva `.toolbar-vertical` alla Toolbar gli elementi v
     </li>
   </ul>
 </nav>
-{% endcapture %}{% include example.html content=example %}
+{% endcapture %}
+{% include example.html content=example %}  
 
 ### Piccola verticale
 
@@ -903,4 +915,5 @@ Applicando una classe aggiuntiva `.toolbar-vertical` alla Toolbar gli elementi v
     </li>
   </ul>
 </nav>
-{% endcapture %}{% include example.html content=example %}
+{% endcapture %}
+{% include example.html content=example %}

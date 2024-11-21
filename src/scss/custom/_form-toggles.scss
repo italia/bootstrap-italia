@@ -48,7 +48,10 @@
         border-radius: 50%;
         top: -5px;
         left: -3px;
-        transition: left 0.3s ease, background 0.1s ease, transform 0.1s ease;
+        transition:
+          left 0.3s ease,
+          background 0.1s ease,
+          transform 0.1s ease;
       }
 
       &:before {

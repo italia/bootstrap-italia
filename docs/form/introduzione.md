@@ -67,12 +67,14 @@ Ecco l'esempio di una struttura più complessa creata con il sistema a griglie.
       <input type="email" class="form-control" id="inputEmail4" placeholder="inserisci il tuo indirizzo email">
     </div>
     <div class="form-group col-md-6">
-      <label class="active" for="exampleInputPassword">Password</label>
-      <input type="password" data-bs-input class="form-control input-password" id="exampleInputPassword" placeholder="inserisci la tua password">
-      <span class="password-icon" aria-hidden="true">
-        <svg class="password-icon-visible icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-visible"></use></svg>
-        <svg class="password-icon-invisible icon icon-sm d-none"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-invisible"></use></svg>
-      </span>
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" data-bs-input class="form-control input-password" id="exampleInputPassword1" aria-describedby="infoPassword1">
+      <button type="button" class="password-icon btn" role="switch" aria-checked="false">
+        <span class="visually-hidden">Mostra/Nascondi Password</span>
+        <svg class="password-icon-visible icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-visible"></use></svg>
+        <svg class="password-icon-invisible icon icon-sm d-none" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-invisible"></use></svg>
+      </button>
+      <p id="infoPassword1" class="form-text text-muted d-block small pb-0">Inserisci almeno 8 caratteri e alcuni caratteri speciali.</p>
     </div>
   </div>
   <div class="row">
@@ -130,11 +132,11 @@ L'esempio seguente usa una delle [utilità di flexbox]({{ site.baseurl }}/docs/o
 {% comment %}Example name: Auto-dimensionamento {% endcomment %}
 {% capture example %}
 <div class="row align-items-center">
-  <div class="col-12 col-md-6 col-lg-auto mb-3">
+  <div class="col-12 col-md-6 col-lg-auto">
     <label class="visually-hidden" for="inlineFormInput">Nome</label>
     <input type="text" class="form-control" id="inlineFormInput" placeholder="Mario Rossi">
   </div>
-  <div class="col-12 col-md-6 col-lg-auto mb-3">
+  <div class="col-12 col-md-6 col-lg-auto">
     <label class="visually-hidden" for="inlineFormInputGroup">Username</label>
     <div class="input-group">
       <span class="input-group-text">@</span>
