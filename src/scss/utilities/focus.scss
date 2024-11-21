@@ -6,7 +6,9 @@
 .avatar-upload:focus-within:not(.focus--mouse),
 .rating input:focus:not(.focus--mouse) + label svg {
   border-color: $focus-outline-color-out !important;
-  box-shadow: 0 0 0 2px $focus-outline-color-in, 0 0 0 5px $focus-outline-color-out;
+  box-shadow:
+    0 0 0 2px $focus-outline-color-in,
+    0 0 0 5px $focus-outline-color-out;
   outline: 3px solid transparent;
   outline-offset: 3px;
 }
@@ -37,7 +39,9 @@ p a {
 .shadow-sm,
 .shadow-lg {
   &:focus:not(.focus--mouse) {
-    box-shadow: 0 0 0 2px $focus-outline-color-in, 0 0 0 5px $focus-outline-color-out !important;
+    box-shadow:
+      0 0 0 2px $focus-outline-color-in,
+      0 0 0 5px $focus-outline-color-out !important;
   }
 }
 
@@ -78,6 +82,8 @@ p a {
 .back-to-top.dark {
   &:focus:not(.focus--mouse),
   &%focus {
-    box-shadow: 0 0 0 2px $focus-outline-color-out, 0 0 0 5px $focus-outline-color-in;
+    box-shadow:
+      0 0 0 2px $focus-outline-color-out,
+      0 0 0 5px $focus-outline-color-in;
   }
 }

@@ -16,7 +16,9 @@
       z-index: 10;
       visibility: hidden;
       opacity: 0;
-      transition: opacity 0.3s 0s, visibility 0s 0.3s;
+      transition:
+        opacity 0.3s 0s,
+        visibility 0s 0.3s;
       i {
         transform: scale(0.8);
         transform-origin: center;
@@ -24,7 +26,9 @@
         margin-right: $v-gap;
       }
       &.show {
-        transition: opacity 0.3s 0s, visibility 0s 0s;
+        transition:
+          opacity 0.3s 0s,
+          visibility 0s 0s;
         visibility: visible;
         opacity: 1;
       }

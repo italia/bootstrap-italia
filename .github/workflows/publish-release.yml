@@ -7,7 +7,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     container:
-      image: timbru31/ruby-node:3.0-16
+      image: timbru31/ruby-node:3.0-20
     permissions:
       contents: write
     steps:

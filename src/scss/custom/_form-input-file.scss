@@ -27,7 +27,6 @@ input[type='file'] + label {
     z-index: 5;
     &::before {
       background-color: $white;
-      border-color: $primary;
       bottom: -1px;
       color: $primary;
       content: 'Sfoglia';

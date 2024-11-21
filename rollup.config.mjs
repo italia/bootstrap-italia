@@ -2,7 +2,7 @@ import { babel } from '@rollup/plugin-babel'
 import copy from 'rollup-plugin-copy'
 import svgSprite from 'rollup-plugin-svg-sprite-deterministic'
 import scss from 'rollup-plugin-scss'
-import uglify from '@lopatnov/rollup-plugin-uglify'
+import terser from '@rollup/plugin-terser';
 import legacy from '@rollup/plugin-legacy'
 import nodeResolve from '@rollup/plugin-node-resolve'
 import injectProcessEnv from 'rollup-plugin-inject-process-env'
@@ -43,7 +43,7 @@ export default [
       injectProcessEnv({
         NODE_ENV: 'production',
       }),
-      uglify(),
+      terser(),
     ],
   },
   // Non-bundled version
@@ -96,7 +96,7 @@ export default [
       injectProcessEnv({
         NODE_ENV: 'production',
       }),
-      uglify(),
+      terser(),
     ],
   },
   // ESM version
