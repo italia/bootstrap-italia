@@ -42,7 +42,7 @@
 }
 
 .table-group-divider {
-  border-top: calc($table-border-width * 2) solid $table-group-separator-color; // stylelint-disable-line function-disallowed-list
+  border-top: ($table-border-width * 2) solid $table-group-separator-color;
 }
 
 //
@@ -52,6 +52,7 @@
 .caption-top {
   caption-side: top;
 }
+
 
 //
 // Condensed table w/ half padding
@@ -63,6 +64,7 @@
     padding: $table-cell-padding-y-sm $table-cell-padding-x-sm;
   }
 }
+
 
 // Border versions
 //
@@ -134,6 +136,7 @@
     color: var(--#{$prefix}table-hover-color);
   }
 }
+
 
 // Table variants
 //

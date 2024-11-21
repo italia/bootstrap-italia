@@ -8,17 +8,17 @@
 
   &.btn::before {
     display: inline-block;
-    content: '';
+    content: "";
   }
 }
 
 // Sizing
 .placeholder-xs {
-  min-height: 0.6em;
+  min-height: .6em;
 }
 
 .placeholder-sm {
-  min-height: 0.8em;
+  min-height: .8em;
 }
 
 .placeholder-lg {

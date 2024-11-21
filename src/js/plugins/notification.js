@@ -1,5 +1,5 @@
 import BaseComponent from './base-component.js'
-import { getElementFromSelector, isVisible, reflow } from './util'
+import { getElementFromSelector, isVisible, reflow } from './util/index'
 import Manipulator from './dom/manipulator'
 import EventHandler from './dom/event-handler'
 import { enableDismissTrigger } from './util/component-functions'

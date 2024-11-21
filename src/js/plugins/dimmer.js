@@ -1,6 +1,6 @@
 import BaseComponent from './base-component.js'
 
-import { reflow, getElementFromSelector } from './util'
+import { reflow, getElementFromSelector } from './util/index'
 import EventHandler from './dom/event-handler'
 
 const NAME = 'dimmer'

@@ -3,7 +3,7 @@
 
 // scss-docs-start form-validation-mixins
 @mixin form-validation-state-selector($state) {
-  @if ($state == 'valid' or $state == 'invalid') {
+  @if ($state == "valid" or $state == "invalid") {
     .was-validated #{if(&, "&", "")}:#{$state},
     #{if(&, "&", "")}.is-#{$state} {
       @content;
@@ -21,8 +21,7 @@
   $icon,
   $tooltip-color: color-contrast($color),
   $tooltip-bg-color: rgba($color, $form-feedback-tooltip-opacity),
-  $focus-box-shadow: 0 0 $input-btn-focus-blur $input-focus-width rgba($color, $input-btn-focus-color-opacity),
-  $border-color: $color
+  $focus-box-shadow: 0 0 $input-btn-focus-blur $input-focus-width rgba($color, $input-btn-focus-color-opacity)
 ) {
   .#{$state}-feedback {
     display: none;
@@ -40,7 +39,7 @@
     display: none;
     max-width: 100%; // Contain to parent when possible
     padding: $form-feedback-tooltip-padding-y $form-feedback-tooltip-padding-x;
-    margin-top: 0.1rem;
+    margin-top: .1rem;
     @include font-size($form-feedback-tooltip-font-size);
     line-height: $form-feedback-tooltip-line-height;
     color: $tooltip-color;
@@ -57,7 +56,7 @@
 
   .form-control {
     @include form-validation-state-selector($state) {
-      border-color: $border-color;
+      border-color: $color;
 
       @if $enable-validation-icons {
         padding-right: $input-height-inner;
@@ -68,7 +67,7 @@
       }
 
       &:focus {
-        border-color: $border-color;
+        border-color: $color;
         box-shadow: $focus-box-shadow;
       }
     }
@@ -86,20 +85,20 @@
 
   .form-select {
     @include form-validation-state-selector($state) {
-      border-color: $border-color;
+      border-color: $color;
 
       @if $enable-validation-icons {
         &:not([multiple]):not([size]),
-        &:not([multiple])[size='1'] {
-          --#{$prefix}form-select-bg-icon: #{escape-svg($icon)};
+        &:not([multiple])[size="1"] {
           padding-right: $form-select-feedback-icon-padding-end;
+          background-image: escape-svg($form-select-indicator), escape-svg($icon);
           background-position: $form-select-bg-position, $form-select-feedback-icon-position;
           background-size: $form-select-bg-size, $form-select-feedback-icon-size;
         }
       }
 
       &:focus {
-        border-color: $border-color;
+        border-color: $color;
         box-shadow: $focus-box-shadow;
       }
     }
@@ -115,7 +114,7 @@
 
   .form-check-input {
     @include form-validation-state-selector($state) {
-      border-color: $border-color;
+      border-color: $color;
 
       &:checked {
         background-color: $color;
@@ -132,7 +131,7 @@
   }
   .form-check-inline .form-check-input {
     ~ .#{$state}-feedback {
-      margin-left: 0.5em;
+      margin-left: .5em;
     }
   }
 
@@ -141,9 +140,9 @@
     > .form-select:not(:focus),
     > .form-floating:not(:focus-within) {
       @include form-validation-state-selector($state) {
-        @if $state == 'valid' {
+        @if $state == "valid" {
           z-index: 3;
-        } @else if $state == 'invalid' {
+        } @else if $state == "invalid" {
           z-index: 4;
         }
       }

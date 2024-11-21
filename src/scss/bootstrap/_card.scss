@@ -7,8 +7,6 @@
   --#{$prefix}card-spacer-y: #{$card-spacer-y};
   --#{$prefix}card-spacer-x: #{$card-spacer-x};
   --#{$prefix}card-title-spacer-y: #{$card-title-spacer-y};
-  --#{$prefix}card-title-color: #{$card-title-color};
-  --#{$prefix}card-subtitle-color: #{$card-subtitle-color};
   --#{$prefix}card-border-width: #{$card-border-width};
   --#{$prefix}card-border-color: #{$card-border-color};
   --#{$prefix}card-border-radius: #{$card-border-radius};
@@ -51,7 +49,7 @@
       @include border-top-radius(var(--#{$prefix}card-inner-border-radius));
     }
 
-    &:last-child {
+    &:last-child  {
       border-bottom-width: 0;
       @include border-bottom-radius(var(--#{$prefix}card-inner-border-radius));
     }
@@ -75,13 +73,11 @@
 
 .card-title {
   margin-bottom: var(--#{$prefix}card-title-spacer-y);
-  color: var(--#{$prefix}card-title-color);
 }
 
 .card-subtitle {
-  margin-top: calc(-0.5 * var(--#{$prefix}card-title-spacer-y)); // stylelint-disable-line function-disallowed-list
+  margin-top: calc(-.5 * var(--#{$prefix}card-title-spacer-y)); // stylelint-disable-line function-disallowed-list
   margin-bottom: 0;
-  color: var(--#{$prefix}card-subtitle-color);
 }
 
 .card-text:last-child {
@@ -125,14 +121,15 @@
   }
 }
 
+
 //
 // Header navs
 //
 
 .card-header-tabs {
-  margin-right: calc(-0.5 * var(--#{$prefix}card-cap-padding-x)); // stylelint-disable-line function-disallowed-list
+  margin-right: calc(-.5 * var(--#{$prefix}card-cap-padding-x)); // stylelint-disable-line function-disallowed-list
   margin-bottom: calc(-1 * var(--#{$prefix}card-cap-padding-y)); // stylelint-disable-line function-disallowed-list
-  margin-left: calc(-0.5 * var(--#{$prefix}card-cap-padding-x)); // stylelint-disable-line function-disallowed-list
+  margin-left: calc(-.5 * var(--#{$prefix}card-cap-padding-x)); // stylelint-disable-line function-disallowed-list
   border-bottom: 0;
 
   .nav-link.active {
@@ -142,8 +139,8 @@
 }
 
 .card-header-pills {
-  margin-right: calc(-0.5 * var(--#{$prefix}card-cap-padding-x)); // stylelint-disable-line function-disallowed-list
-  margin-left: calc(-0.5 * var(--#{$prefix}card-cap-padding-x)); // stylelint-disable-line function-disallowed-list
+  margin-right: calc(-.5 * var(--#{$prefix}card-cap-padding-x)); // stylelint-disable-line function-disallowed-list
+  margin-left: calc(-.5 * var(--#{$prefix}card-cap-padding-x)); // stylelint-disable-line function-disallowed-list
 }
 
 // Card image
@@ -172,6 +169,7 @@
 .card-img-bottom {
   @include border-bottom-radius(var(--#{$prefix}card-inner-border-radius));
 }
+
 
 //
 // Card groups

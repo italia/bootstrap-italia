@@ -7,7 +7,7 @@ import {
   //reflow,
   //typeCheckConfig,
   getSelectorFromElement, //in base al bs-target
-} from './util'
+} from './util/index'
 import EventHandler from './dom/event-handler'
 import SelectorEngine from './dom/selector-engine'
 import Manipulator from './dom/manipulator'

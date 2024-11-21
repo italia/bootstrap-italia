@@ -77,6 +77,7 @@
     > li:last-child .dropdown-item {
       @include border-bottom-radius(var(--#{$prefix}dropdown-inner-border-radius));
     }
+
   }
 }
 
@@ -158,6 +159,7 @@
   }
 }
 
+
 // Dividers (basically an `<hr>`) within the dropdown
 .dropdown-divider {
   height: 0;
@@ -182,7 +184,6 @@
   white-space: nowrap; // prevent links from randomly breaking onto new lines
   background-color: transparent; // For `<button>`s
   border: 0; // For `<button>`s
-  @include border-radius(var(--#{$prefix}dropdown-item-border-radius, 0));
 
   &:hover,
   &:focus {

@@ -1,5 +1,5 @@
 import SelectorEngine from './dom/selector-engine'
-import { isVisible } from './util'
+import { isVisible } from './util/index'
 
 import Sticky from './sticky'
 

@@ -61,7 +61,7 @@
     width: var(--#{$prefix}accordion-btn-icon-width);
     height: var(--#{$prefix}accordion-btn-icon-width);
     margin-left: auto;
-    content: '';
+    content: "";
     background-image: var(--#{$prefix}accordion-btn-icon);
     background-repeat: no-repeat;
     background-size: var(--#{$prefix}accordion-btn-icon-width);
@@ -121,6 +121,7 @@
   padding: var(--#{$prefix}accordion-body-padding-y) var(--#{$prefix}accordion-body-padding-x);
 }
 
+
 // Flush accordion items
 //
 // Remove borders and border-radius to keep accordion items edge-to-edge.
@@ -135,27 +136,14 @@
     border-left: 0;
     @include border-radius(0);
 
-    &:first-child {
-      border-top: 0;
-    }
-    &:last-child {
-      border-bottom: 0;
-    }
+    &:first-child { border-top: 0; }
+    &:last-child { border-bottom: 0; }
 
     .accordion-button {
       &,
       &.collapsed {
         @include border-radius(0);
       }
-    }
-  }
-}
-
-@if $enable-dark-mode {
-  @include color-mode(dark) {
-    .accordion-button::after {
-      --#{$prefix}accordion-btn-icon: #{escape-svg($accordion-button-icon-dark)};
-      --#{$prefix}accordion-btn-active-icon: #{escape-svg($accordion-button-active-icon-dark)};
     }
   }
 }

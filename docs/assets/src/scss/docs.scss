@@ -26,11 +26,11 @@
 // here to be available to "variables"
 @import '../../../../src/scss/utilities/colors_vars';
 @import '../../../../src/scss/variables';
-@import '../../../../node_modules/bootstrap/scss/functions';
+@import '../../../../src/scss/bootstrap/functions';
 @import '../../../../src/scss/custom/mixins/buttons';
-// here to override any conflicting "node_modules/bootstrap/scss/functions" definitions
-@import '../../../../node_modules/bootstrap/scss/variables';
-@import '../../../../node_modules/bootstrap/scss/mixins';
+// here to override any conflicting "bootstrap/scss/functions" definitions
+@import '../../../../src/scss/bootstrap/variables';
+@import '../../../../src/scss/bootstrap/mixins';
 // Load docs components
 @import 'colors';
 @import 'nav';

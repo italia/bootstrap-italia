@@ -1,6 +1,6 @@
 import BaseComponent from './base-component.js'
 
-import { reflow } from './util'
+import { reflow } from './util/index'
 import { cookies } from './util/cookies'
 import SelectorEngine from './dom/selector-engine'
 
