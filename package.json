@@ -99,7 +99,6 @@
     "@types/bootstrap": "^5.2.6",
     "accessible-autocomplete": "^2.0.4",
     "animejs": "^3.2.1",
-    "bootstrap": "5.2.3",
     "design-tokens-italia": "^1.1.1",
     "just-validate": "^3.10.0",
     "masonry-layout": "^4.2.2",
