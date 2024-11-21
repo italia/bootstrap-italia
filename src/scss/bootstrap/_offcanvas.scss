@@ -91,7 +91,7 @@
       }
     }
 
-    @if not ($infix == "") {
+    @if not($infix == '') {
       @include media-breakpoint-up($next) {
         --#{$prefix}offcanvas-height: auto;
         --#{$prefix}offcanvas-border-width: 0;
@@ -125,10 +125,10 @@
   padding: var(--#{$prefix}offcanvas-padding-y) var(--#{$prefix}offcanvas-padding-x);
 
   .btn-close {
-    padding: calc(var(--#{$prefix}offcanvas-padding-y) * .5) calc(var(--#{$prefix}offcanvas-padding-x) * .5);
-    margin-top: calc(-.5 * var(--#{$prefix}offcanvas-padding-y));
-    margin-right: calc(-.5 * var(--#{$prefix}offcanvas-padding-x));
-    margin-bottom: calc(-.5 * var(--#{$prefix}offcanvas-padding-y));
+    padding: calc(var(--#{$prefix}offcanvas-padding-y) * 0.5) calc(var(--#{$prefix}offcanvas-padding-x) * 0.5);
+    margin-top: calc(-0.5 * var(--#{$prefix}offcanvas-padding-y));
+    margin-right: calc(-0.5 * var(--#{$prefix}offcanvas-padding-x));
+    margin-bottom: calc(-0.5 * var(--#{$prefix}offcanvas-padding-y));
   }
 }
 

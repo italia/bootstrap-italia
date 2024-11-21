@@ -36,7 +36,7 @@
   }
 
   &[multiple],
-  &[size]:not([size="1"]) {
+  &[size]:not([size='1']) {
     padding-right: $form-select-padding-x;
     background-image: none;
   }
