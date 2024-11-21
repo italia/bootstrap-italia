@@ -478,7 +478,9 @@
     align-items: center;
     opacity: 0;
     transform: scale(0.6);
-    transition: opacity 0.2s, transform 0.5s cubic-bezier(0.75, -0.5, 0, 1.75);
+    transition:
+      opacity 0.2s,
+      transform 0.5s cubic-bezier(0.75, -0.5, 0, 1.75);
 
     svg {
       fill: $white;
