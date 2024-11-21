@@ -13,54 +13,54 @@
 @import 'utilities/colors';
 
 // BS5 Configuration
-@import 'bootstrap/scss/functions';
-@import 'bootstrap/scss/variables';
-//@import 'bootstrap/scss/maps';
-@import 'bootstrap/scss/mixins';
+@import 'bootstrap/functions';
+@import 'bootstrap/variables';
+//@import 'bootstrap/maps';
+@import 'bootstrap/mixins';
 // mixins custom
 @import 'custom/mixins/buttons';
 @import 'custom/mixins/text-emphasis';
 //
-@import 'bootstrap/scss/maps';
-@import 'bootstrap/scss/utilities';
+@import 'bootstrap/maps';
+@import 'bootstrap/utilities';
 
 // BS5 Layout & components
-@import 'bootstrap/scss/root';
-@import 'bootstrap/scss/reboot';
-@import 'bootstrap/scss/type';
-@import 'bootstrap/scss/images';
-@import 'bootstrap/scss/containers';
-@import 'bootstrap/scss/grid';
-@import 'bootstrap/scss/tables';
-@import 'bootstrap/scss/forms';
-@import 'bootstrap/scss/buttons';
-@import 'bootstrap/scss/transitions';
-@import 'bootstrap/scss/dropdown';
-@import 'bootstrap/scss/button-group';
-@import 'bootstrap/scss/nav';
-@import 'bootstrap/scss/navbar';
-@import 'bootstrap/scss/card';
-@import 'bootstrap/scss/accordion';
-@import 'bootstrap/scss/breadcrumb';
-@import 'bootstrap/scss/pagination';
-@import 'bootstrap/scss/badge';
-@import 'bootstrap/scss/progress';
-@import 'bootstrap/scss/list-group';
-@import 'bootstrap/scss/close';
-@import 'bootstrap/scss/toasts';
-@import 'bootstrap/scss/modal';
-@import 'bootstrap/scss/tooltip';
-@import 'bootstrap/scss/popover';
-@import 'bootstrap/scss/carousel';
-@import 'bootstrap/scss/spinners';
-@import 'bootstrap/scss/offcanvas';
-@import 'bootstrap/scss/placeholders';
+@import 'bootstrap/root';
+@import 'bootstrap/reboot';
+@import 'bootstrap/type';
+@import 'bootstrap/images';
+@import 'bootstrap/containers';
+@import 'bootstrap/grid';
+@import 'bootstrap/tables';
+@import 'bootstrap/forms';
+@import 'bootstrap/buttons';
+@import 'bootstrap/transitions';
+@import 'bootstrap/dropdown';
+@import 'bootstrap/button-group';
+@import 'bootstrap/nav';
+@import 'bootstrap/navbar';
+@import 'bootstrap/card';
+@import 'bootstrap/accordion';
+@import 'bootstrap/breadcrumb';
+@import 'bootstrap/pagination';
+@import 'bootstrap/badge';
+@import 'bootstrap/progress';
+@import 'bootstrap/list-group';
+@import 'bootstrap/close';
+@import 'bootstrap/toasts';
+@import 'bootstrap/modal';
+@import 'bootstrap/tooltip';
+@import 'bootstrap/popover';
+@import 'bootstrap/carousel';
+@import 'bootstrap/spinners';
+@import 'bootstrap/offcanvas';
+@import 'bootstrap/placeholders';
 
 // Helpers
-@import 'bootstrap/scss/helpers';
+@import 'bootstrap/helpers';
 
 // Utilities
-@import 'bootstrap/scss/utilities/api';
+@import 'bootstrap/utilities/api';
 // scss-docs-end import-stack
 
 // Customizzazioni e nuovi componenti
