@@ -1,7 +1,7 @@
-import BaseComponent from 'bootstrap/js/src/base-component.js'
+import BaseComponent from './base-component.js'
 
-import { /*defineJQueryPlugin,*/ isDisabled, getElementFromSelector, reflow } from 'bootstrap/js/src/util/index'
-import EventHandler from 'bootstrap/js/src/dom/event-handler'
+import { /*defineJQueryPlugin,*/ isDisabled, getElementFromSelector, reflow } from './util/index'
+import EventHandler from './dom/event-handler'
 
 /**
  * ------------------------------------------------------------------------

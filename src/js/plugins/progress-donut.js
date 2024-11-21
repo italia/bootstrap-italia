@@ -1,9 +1,9 @@
 import ProgressBar from 'progressbar.js'
-import BaseComponent from 'bootstrap/js/src/base-component.js'
+import BaseComponent from './base-component.js'
 
-//import EventHandler from 'bootstrap/js/src/dom/event-handler'
-import SelectorEngine from 'bootstrap/js/src/dom/selector-engine'
-import Manipulator from 'bootstrap/js/src/dom/manipulator'
+//import EventHandler from './dom/event-handler'
+import SelectorEngine from './dom/selector-engine'
+import Manipulator from './dom/manipulator'
 
 const NAME = 'progressdonut'
 //const DATA_KEY = 'bs.progressdonut'

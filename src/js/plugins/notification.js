@@ -1,8 +1,8 @@
-import BaseComponent from 'bootstrap/js/src/base-component.js'
-import { getElementFromSelector, isVisible, reflow } from 'bootstrap/js/src/util'
-import Manipulator from 'bootstrap/js/src/dom/manipulator'
-import EventHandler from 'bootstrap/js/src/dom/event-handler'
-import { enableDismissTrigger } from 'bootstrap/js/src/util/component-functions'
+import BaseComponent from './base-component.js'
+import { getElementFromSelector, isVisible, reflow } from './util'
+import Manipulator from './dom/manipulator'
+import EventHandler from './dom/event-handler'
+import { enableDismissTrigger } from './util/component-functions'
 
 const NAME = 'notification'
 const DATA_KEY = 'bs.notification'

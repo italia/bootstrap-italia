@@ -1,5 +1,5 @@
-import EventHandler from 'bootstrap/js/src/dom/event-handler'
-import SelectorEngine from 'bootstrap/js/src/dom/selector-engine'
+import EventHandler from './dom/event-handler'
+import SelectorEngine from './dom/selector-engine'
 
 const NAME = 'inputlabel'
 const DATA_KEY = 'bs.inputlabel'

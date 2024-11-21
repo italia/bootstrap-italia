@@ -1,7 +1,7 @@
-import BaseComponent from 'bootstrap/js/src/base-component.js'
+import BaseComponent from './base-component.js'
 
-import SelectorEngine from 'bootstrap/js/src/dom/selector-engine'
-import Manipulator from 'bootstrap/js/src/dom/manipulator'
+import SelectorEngine from './dom/selector-engine'
+import Manipulator from './dom/manipulator'
 import videojs from 'video.js'
 import { initYoutubePlugin } from './util/youtube-video'
 

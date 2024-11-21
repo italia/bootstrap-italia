@@ -1,9 +1,9 @@
-import BaseComponent from 'bootstrap/js/src/base-component.js'
+import BaseComponent from './base-component.js'
 
-import EventHandler from 'bootstrap/js/src/dom/event-handler'
-//import SelectorEngine from 'bootstrap/js/src/dom/selector-engine'
-import Manipulator from 'bootstrap/js/src/dom/manipulator'
-import { getElementFromSelector } from 'bootstrap/js/src/util/index'
+import EventHandler from './dom/event-handler'
+//import SelectorEngine from './dom/selector-engine'
+import Manipulator from './dom/manipulator'
+import { getElementFromSelector } from './util/index'
 
 import { documentScrollTo } from './util/tween'
 

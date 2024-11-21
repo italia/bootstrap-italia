@@ -1,5 +1,5 @@
-import SelectorEngine from 'bootstrap/js/src/dom/selector-engine'
-import { isVisible } from 'bootstrap/js/src/util'
+import SelectorEngine from './dom/selector-engine'
+import { isVisible } from './util'
 
 import Sticky from './sticky'
 

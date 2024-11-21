@@ -1,8 +1,8 @@
 import Splide from '@splidejs/splide'
 
-import BaseComponent from 'bootstrap/js/src/base-component.js'
-import SelectorEngine from 'bootstrap/js/src/dom/selector-engine'
-import EventHandler from 'bootstrap/js/src/dom/event-handler'
+import BaseComponent from './base-component.js'
+import SelectorEngine from './dom/selector-engine'
+import EventHandler from './dom/event-handler'
 
 const NAME = 'carousel'
 const DATA_KEY = 'bs.carousel'

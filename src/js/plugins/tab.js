@@ -1,7 +1,7 @@
-import { default as BSTab } from 'bootstrap/js/src/tab'
-import { defineJQueryPlugin, getNextActiveElement, isDisabled } from 'bootstrap/js/src/util/index.js'
-import EventHandler from 'bootstrap/js/src/dom/event-handler.js'
-import SelectorEngine from 'bootstrap/js/src/dom/selector-engine.js'
+import { default as BSTab } from './base-tab'
+import { defineJQueryPlugin, getNextActiveElement, isDisabled } from './util/index.js'
+import EventHandler from './dom/event-handler.js'
+import SelectorEngine from './dom/selector-engine.js'
 
 const DATA_KEY = 'bs.tab'
 const EVENT_KEY = `.${DATA_KEY}`

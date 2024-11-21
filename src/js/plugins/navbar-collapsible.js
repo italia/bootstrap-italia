@@ -1,4 +1,4 @@
-import BaseComponent from 'bootstrap/js/src/base-component.js'
+import BaseComponent from './base-component.js'
 
 import {
   //defineJQueryPlugin,
@@ -7,9 +7,9 @@ import {
   reflow,
   //typeCheckConfig,
   //getSelectorFromElement,
-} from 'bootstrap/js/src/util'
-import EventHandler from 'bootstrap/js/src/dom/event-handler'
-import SelectorEngine from 'bootstrap/js/src/dom/selector-engine'
+} from './util'
+import EventHandler from './dom/event-handler'
+import SelectorEngine from './dom/selector-engine'
 
 import { isScreenMobile } from './util/device'
 import { getElementIndex } from './util/dom'

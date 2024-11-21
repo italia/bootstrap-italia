@@ -1,8 +1,8 @@
-import BaseComponent from 'bootstrap/js/src/base-component.js'
+import BaseComponent from './base-component.js'
 
-import { reflow } from 'bootstrap/js/src/util'
+import { reflow } from './util'
 import { cookies } from './util/cookies'
-import SelectorEngine from 'bootstrap/js/src/dom/selector-engine'
+import SelectorEngine from './dom/selector-engine'
 
 const NAME = 'acceptoverlay'
 

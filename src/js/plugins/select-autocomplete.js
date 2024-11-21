@@ -1,6 +1,6 @@
 import accessibleAutocomplete from 'accessible-autocomplete'
 
-import BaseComponent from 'bootstrap/js/src/base-component.js'
+import BaseComponent from './base-component.js'
 
 const NAME = 'selectautocomplete'
 

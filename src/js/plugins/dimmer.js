@@ -1,7 +1,7 @@
-import BaseComponent from 'bootstrap/js/src/base-component.js'
+import BaseComponent from './base-component.js'
 
-import { reflow, getElementFromSelector } from 'bootstrap/js/src/util'
-import EventHandler from 'bootstrap/js/src/dom/event-handler'
+import { reflow, getElementFromSelector } from './util'
+import EventHandler from './dom/event-handler'
 
 const NAME = 'dimmer'
 const DATA_KEY = 'bs.dimmer'
