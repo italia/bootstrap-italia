@@ -94,7 +94,7 @@
     "stylelint-scss": "^6.10.0"
   },
   "dependencies": {
-    "@popperjs/core": "^2.11.2",
+    "@popperjs/core": "^2.11.6",
     "@splidejs/splide": "^3.6.12",
     "@types/bootstrap": "^5.2.6",
     "accessible-autocomplete": "^2.0.4",
