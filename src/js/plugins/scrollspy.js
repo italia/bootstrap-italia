@@ -9,7 +9,7 @@
  * --------------------------------------------------------------------------
  */
 
-import { defineJQueryPlugin, getElement, isDisabled, isVisible } from './util/index'
+import { getElement, isDisabled, isVisible } from './util/index'
 import EventHandler from './dom/event-handler'
 import SelectorEngine from './dom/selector-engine'
 import BaseComponent from './base-component'
@@ -259,23 +259,6 @@ class ScrollSpy extends BaseComponent {
       node.classList.remove(CLASS_NAME_ACTIVE)
     }
   }
-
-  // Static
-  static jQueryInterface(config) {
-    return this.each(function () {
-      const data = ScrollSpy.getOrCreateInstance(this, config)
-
-      if (typeof config !== 'string') {
-        return
-      }
-
-      if (data[config] === undefined || config.startsWith('_') || config === 'constructor') {
-        throw new TypeError(`No method named "${config}"`)
-      }
-
-      data[config]()
-    })
-  }
 }
 
 /**
@@ -287,11 +270,5 @@ EventHandler.on(window, EVENT_LOAD_DATA_API, () => {
     ScrollSpy.getOrCreateInstance(spy)
   }
 })
-
-/**
- * jQuery
- */
-
-defineJQueryPlugin(ScrollSpy)
 
 export default ScrollSpy

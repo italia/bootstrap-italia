@@ -10,7 +10,7 @@
  */
 
 import * as Popper from '@popperjs/core'
-import { defineJQueryPlugin, getElement, getNextActiveElement, isDisabled, isElement, isRTL, isVisible, noop } from './util/index'
+import { getElement, getNextActiveElement, isDisabled, isElement, isRTL, isVisible, noop } from './util/index'
 import EventHandler from './dom/event-handler'
 import Manipulator from './dom/manipulator'
 import SelectorEngine from './dom/selector-engine'
@@ -333,23 +333,6 @@ class Dropdown extends BaseComponent {
     getNextActiveElement(items, target, key === ARROW_DOWN_KEY, !items.includes(target)).focus()
   }
 
-  // Static
-  static jQueryInterface(config) {
-    return this.each(function () {
-      const data = Dropdown.getOrCreateInstance(this, config)
-
-      if (typeof config !== 'string') {
-        return
-      }
-
-      if (typeof data[config] === 'undefined') {
-        throw new TypeError(`No method named "${config}"`)
-      }
-
-      data[config]()
-    })
-  }
-
   static clearMenus(event) {
     if (event.button === RIGHT_MOUSE_BUTTON || (event.type === 'keyup' && event.key !== TAB_KEY)) {
       return
@@ -446,11 +429,5 @@ EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function (
   event.preventDefault()
   Dropdown.getOrCreateInstance(this).toggle()
 })
-
-/**
- * jQuery
- */
-
-defineJQueryPlugin(Dropdown)
 
 export default Dropdown

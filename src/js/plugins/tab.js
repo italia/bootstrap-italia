@@ -7,7 +7,7 @@
  */
 
 import { default as BSTab } from './base-tab'
-import { defineJQueryPlugin, getNextActiveElement, isDisabled } from './util/index.js'
+import { getNextActiveElement, isDisabled } from './util/index.js'
 import EventHandler from './dom/event-handler.js'
 import SelectorEngine from './dom/selector-engine.js'
 
@@ -86,10 +86,5 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
     }
   })
 }
-/**
- * jQuery
- */
-
-defineJQueryPlugin(Tab)
 
 export default Tab

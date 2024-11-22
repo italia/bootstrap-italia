@@ -9,7 +9,6 @@
  * --------------------------------------------------------------------------
  */
 
-import { defineJQueryPlugin } from './util/index'
 import EventHandler from './dom/event-handler'
 import BaseComponent from './base-component'
 import { enableDismissTrigger } from './util/component-functions'
@@ -57,23 +56,6 @@ class Alert extends BaseComponent {
     EventHandler.trigger(this._element, EVENT_CLOSED)
     this.dispose()
   }
-
-  // Static
-  static jQueryInterface(config) {
-    return this.each(function () {
-      const data = Alert.getOrCreateInstance(this)
-
-      if (typeof config !== 'string') {
-        return
-      }
-
-      if (data[config] === undefined || config.startsWith('_') || config === 'constructor') {
-        throw new TypeError(`No method named "${config}"`)
-      }
-
-      data[config](this)
-    })
-  }
 }
 
 /**
@@ -81,11 +63,5 @@ class Alert extends BaseComponent {
  */
 
 enableDismissTrigger(Alert, 'close')
-
-/**
- * jQuery
- */
-
-defineJQueryPlugin(Alert)
 
 export default Alert

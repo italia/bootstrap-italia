@@ -9,8 +9,6 @@
  * --------------------------------------------------------------------------
  */
 
-import { getjQuery } from '../util/index'
-
 /**
  * Constants
  */
@@ -264,23 +262,9 @@ const EventHandler = {
       return null
     }
 
-    const $ = getjQuery()
-    const typeEvent = getTypeEvent(event)
-    const inNamespace = event !== typeEvent
-
-    let jQueryEvent = null
     let bubbles = true
     let nativeDispatch = true
     let defaultPrevented = false
-
-    if (inNamespace && $) {
-      jQueryEvent = $.Event(event, args)
-
-      $(element).trigger(jQueryEvent)
-      bubbles = !jQueryEvent.isPropagationStopped()
-      nativeDispatch = !jQueryEvent.isImmediatePropagationStopped()
-      defaultPrevented = jQueryEvent.isDefaultPrevented()
-    }
 
     let evt = new Event(event, { bubbles, cancelable: true })
     evt = hydrateObj(evt, args)
@@ -291,10 +275,6 @@ const EventHandler = {
 
     if (nativeDispatch) {
       element.dispatchEvent(evt)
-    }
-
-    if (evt.defaultPrevented && jQueryEvent) {
-      jQueryEvent.preventDefault()
     }
 
     return evt

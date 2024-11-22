@@ -9,7 +9,7 @@
  * --------------------------------------------------------------------------
  */
 
-import { defineJQueryPlugin, getElement, getElementFromSelector, getSelectorFromElement, reflow } from './util/index'
+import { getElement, getElementFromSelector, getSelectorFromElement, reflow } from './util/index'
 import EventHandler from './dom/event-handler'
 import SelectorEngine from './dom/selector-engine'
 import BaseComponent from './base-component'
@@ -250,26 +250,6 @@ class Collapse extends BaseComponent {
       element.setAttribute('aria-expanded', isOpen)
     }
   }
-
-  // Static
-  static jQueryInterface(config) {
-    const _config = {}
-    if (typeof config === 'string' && /show|hide/.test(config)) {
-      _config.toggle = false
-    }
-
-    return this.each(function () {
-      const data = Collapse.getOrCreateInstance(this, _config)
-
-      if (typeof config === 'string') {
-        if (typeof data[config] === 'undefined') {
-          throw new TypeError(`No method named "${config}"`)
-        }
-
-        data[config]()
-      }
-    })
-  }
 }
 
 /**
@@ -289,11 +269,5 @@ EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function (
     Collapse.getOrCreateInstance(element, { toggle: false }).toggle()
   }
 })
-
-/**
- * jQuery
- */
-
-defineJQueryPlugin(Collapse)
 
 export default Collapse

@@ -110,17 +110,12 @@ const isElement = (object) => {
     return false
   }
 
-  if (typeof object.jquery !== 'undefined') {
-    object = object[0]
-  }
-
   return typeof object.nodeType !== 'undefined'
 }
 
 const getElement = (object) => {
-  // it's a jQuery object or a node element
   if (isElement(object)) {
-    return object.jquery ? object[0] : object
+    return object
   }
 
   if (typeof object === 'string' && object.length > 0) {
@@ -210,14 +205,6 @@ const reflow = (element) => {
   element.offsetHeight
 }
 
-const getjQuery = () => {
-  if (window.jQuery && !document.body.hasAttribute('data-bs-no-jquery')) {
-    return window.jQuery
-  }
-
-  return null
-}
-
 const DOMContentLoadedCallbacks = []
 
 const onDOMContentLoaded = (callback) => {
@@ -238,23 +225,6 @@ const onDOMContentLoaded = (callback) => {
 }
 
 const isRTL = () => document.documentElement.dir === 'rtl'
-
-const defineJQueryPlugin = (plugin) => {
-  onDOMContentLoaded(() => {
-    const $ = getjQuery()
-    /* istanbul ignore if */
-    if ($) {
-      const name = plugin.NAME
-      const JQUERY_NO_CONFLICT = $.fn[name]
-      $.fn[name] = plugin.jQueryInterface
-      $.fn[name].Constructor = plugin
-      $.fn[name].noConflict = () => {
-        $.fn[name] = JQUERY_NO_CONFLICT
-        return plugin.jQueryInterface
-      }
-    }
-  })
-}
 
 const execute = (callback) => {
   if (typeof callback === 'function') {
@@ -320,13 +290,11 @@ const getNextActiveElement = (list, activeElement, shouldGetNext, isCycleAllowed
 }
 
 export {
-  defineJQueryPlugin,
   execute,
   executeAfterTransition,
   findShadowRoot,
   getElement,
   getElementFromSelector,
-  getjQuery,
   getNextActiveElement,
   getSelectorFromElement,
   getTransitionDurationFromElement,

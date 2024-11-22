@@ -8,7 +8,7 @@
 
 import BaseComponent from './base-component.js'
 
-import { /*defineJQueryPlugin,*/ isDisabled, getElementFromSelector, reflow } from './util/index'
+import { isDisabled, getElementFromSelector, reflow } from './util/index'
 import EventHandler from './dom/event-handler'
 
 /**
@@ -22,7 +22,6 @@ const VERSION = '5.0.0'
 const DATA_KEY = 'bs.cookiebar'
 const EVENT_KEY = `.${DATA_KEY}`
 const DATA_API_KEY = '.data-api'
-//const JQUERY_NO_CONFLICT = $.fn[NAME]
 const COOKIE_NAME = 'cookies_consent'
 const COOKIE_VALUE = 'true'
 const COOKIE_EXPIRE = 30
@@ -200,27 +199,6 @@ class Cookiebar extends BaseComponent {
 
     this.dispose()
   }
-
-  // Static
-
-  /*static _jQueryInterface(config) {
-    return this.each(function () {
-      const $element = $(this)
-      let data = $element.data(DATA_KEY)
-
-      if (!data) {
-        data = new Cookiebar(this)
-        $element.data(DATA_KEY, data)
-      }
-
-      if (typeof config === 'string') {
-        if (typeof data[config] === 'undefined') {
-          throw new TypeError(`No method named "${config}"`)
-        }
-        data[config](this)
-      }
-    })
-  }*/
 
   static _handleAccept(cookiebarInstance) {
     return function (event) {

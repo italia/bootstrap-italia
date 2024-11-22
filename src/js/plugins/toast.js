@@ -9,7 +9,7 @@
  * --------------------------------------------------------------------------
  */
 
-import { defineJQueryPlugin, reflow } from './util/index'
+import { reflow } from './util/index'
 import EventHandler from './dom/event-handler'
 import BaseComponent from './base-component'
 import { enableDismissTrigger } from './util/component-functions'
@@ -197,21 +197,6 @@ class Toast extends BaseComponent {
     clearTimeout(this._timeout)
     this._timeout = null
   }
-
-  // Static
-  static jQueryInterface(config) {
-    return this.each(function () {
-      const data = Toast.getOrCreateInstance(this, config)
-
-      if (typeof config === 'string') {
-        if (typeof data[config] === 'undefined') {
-          throw new TypeError(`No method named "${config}"`)
-        }
-
-        data[config](this)
-      }
-    })
-  }
 }
 
 /**
@@ -219,11 +204,5 @@ class Toast extends BaseComponent {
  */
 
 enableDismissTrigger(Toast)
-
-/**
- * jQuery
- */
-
-defineJQueryPlugin(Toast)
 
 export default Toast
