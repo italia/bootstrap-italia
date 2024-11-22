@@ -1,3 +1,11 @@
+/**
+ * --------------------------------------------------------------------------
+ * Bootstrap Italia (https://italia.github.io/bootstrap-italia/)
+ * Authors: https://github.com/italia/bootstrap-italia/blob/main/AUTHORS
+ * Licensed under BSD-3-Clause license (https://github.com/italia/bootstrap-italia/blob/main/LICENSE)
+ * --------------------------------------------------------------------------
+ */
+
 export { default as CarouselBI } from './plugins/carousel-bi'
 export { default as InputNumber } from './plugins/input-number'
 export { default as Dimmer } from './plugins/dimmer'

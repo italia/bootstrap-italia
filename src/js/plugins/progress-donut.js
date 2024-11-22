@@ -1,15 +1,17 @@
+/**
+ * --------------------------------------------------------------------------
+ * Bootstrap Italia (https://italia.github.io/bootstrap-italia/)
+ * Authors: https://github.com/italia/bootstrap-italia/blob/main/AUTHORS
+ * Licensed under BSD-3-Clause license (https://github.com/italia/bootstrap-italia/blob/main/LICENSE)
+ * --------------------------------------------------------------------------
+ */
+
 import ProgressBar from 'progressbar.js'
 import BaseComponent from './base-component.js'
-
-//import EventHandler from './dom/event-handler'
 import SelectorEngine from './dom/selector-engine'
 import Manipulator from './dom/manipulator'
 
 const NAME = 'progressdonut'
-//const DATA_KEY = 'bs.progressdonut'
-//const EVENT_KEY = `.${DATA_KEY}`
-//const DATA_API_KEY = '.data-api'
-
 const SELECTOR_DONUT = '[data-bs-progress-donut]'
 
 const Default = {

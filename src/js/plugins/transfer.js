@@ -1,16 +1,7 @@
 import BaseComponent from './base-component.js'
 
-/*import {
-  //defineJQueryPlugin,
-  //getElementFromSelector,
-  //isVisible,
-  //reflow,
-  //typeCheckConfig,
-  getSelectorFromElement, //in base al bs-target
-} from './util'*/
 import EventHandler from './dom/event-handler'
 import SelectorEngine from './dom/selector-engine'
-//import Manipulator from './dom/manipulator'
 
 const NAME = 'transfer'
 const DATA_KEY = 'bs.transfer'
@@ -19,7 +10,6 @@ const DATA_API_KEY = '.data-api'
 
 const EVENT_CLICK_DATA_API = `click${EVENT_KEY}${DATA_API_KEY}`
 const EVENT_KEYUP_DATA_API = `keyup${EVENT_KEY}${DATA_API_KEY}`
-//const EVENT_SCROLL = `scroll${EVENT_KEY}`
 const EVENT_CLICK = `click${EVENT_KEY}`
 
 const CLASS_NAME_ACTIVE = 'active'

@@ -1,7 +1,14 @@
+/**
+ * --------------------------------------------------------------------------
+ * Bootstrap Italia (https://italia.github.io/bootstrap-italia/)
+ * Authors: https://github.com/italia/bootstrap-italia/blob/main/AUTHORS
+ * Licensed under BSD-3-Clause license (https://github.com/italia/bootstrap-italia/blob/main/LICENSE)
+ * --------------------------------------------------------------------------
+ */
+
 import BaseComponent from './base-component.js'
 
 import EventHandler from './dom/event-handler'
-//import SelectorEngine from './dom/selector-engine'
 
 const NAME = 'historyback'
 const DATA_KEY = 'bs.historyback'

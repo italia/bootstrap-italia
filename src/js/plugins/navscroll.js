@@ -10,17 +10,11 @@ import NavBarCollapsible from './navbar-collapsible'
 import { documentScrollTo } from './util/tween'
 
 const NAME = 'navscroll'
-//const DATA_KEY = 'bs.navscroll'
-//const EVENT_KEY = `.${DATA_KEY}`
-//const DATA_API_KEY = '.data-api'
-
-//const EVENT_SCROLL = `scroll${EVENT_KEY}`
 
 const CLASS_NAME_ACTIVE = 'active'
 
 const SELECTOR_NAVSCROLL = '[data-bs-navscroll]' //'.it-navscroll-wrapper'
 const SELECTOR_LIST = 'ul.link-list'
-//const SELECTOR_ITEM = '.nav-item'
 const SELECTOR_LINK_CONTAINER = 'li.nav-link, li.nav-item'
 const SELECTOR_LINK = 'a.nav-link'
 const SELECTOR_LINK_ACTIVE = `${SELECTOR_LINK}.${CLASS_NAME_ACTIVE}`

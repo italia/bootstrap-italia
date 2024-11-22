@@ -1,11 +1,6 @@
 import BaseComponent from './base-component.js'
 
 import {
-  //defineJQueryPlugin,
-  //getElementFromSelector,
-  //isVisible,
-  //reflow,
-  //typeCheckConfig,
   getSelectorFromElement, //in base al bs-target
 } from './util/index'
 import EventHandler from './dom/event-handler'
@@ -18,9 +13,7 @@ import onDocumentScroll from './util/on-document-scroll'
 const NAME = 'sticky'
 const DATA_KEY = 'bs.sticky'
 const EVENT_KEY = `.${DATA_KEY}`
-//const DATA_API_KEY = '.data-api'
 
-//const EVENT_SCROLL = `scroll${EVENT_KEY}`
 const EVENT_RESIZE = `resize${EVENT_KEY}`
 const EVENT_STICKY_ON = `on${EVENT_KEY}`
 const EVENT_STICKY_OFF = `off${EVENT_KEY}`
