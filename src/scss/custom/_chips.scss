@@ -8,7 +8,7 @@
   border-radius: $v-gap * 1.5;
   height: $v-gap * 3;
   min-width: 100px;
-  padding: 0 $v-gap * 2 2px $v-gap;
+  padding: 0 $v-gap / 2 2px $v-gap;
   transition: all 0.05s;
   margin-top: $v-gap * 0.5;
   margin-bottom: $v-gap;
@@ -35,8 +35,8 @@
     background: transparent;
     border: none;
     margin-left: auto;
-    width: $v-gap;
-    height: $v-gap;
+    width: 24px;
+    height: 24px;
     position: relative;
     &:hover:not([disabled]) {
       cursor: pointer;
@@ -48,9 +48,6 @@
       width: 22px;
       height: 22px;
       fill: $gray-secondary;
-      position: absolute;
-      top: -6px;
-      left: 0;
       transition: fill 0.05s;
     }
   }
@@ -70,7 +67,7 @@
     height: $v-gap * 4;
     min-width: 120px;
     border-radius: $v-gap * 2;
-    padding: 2px $v-gap * 3 0 $v-gap * 2;
+    padding: 2px $v-gap / 2 0 $v-gap * 2;
     //label
     .chip-label {
       font-size: $chips-label-font-size-l;
@@ -79,11 +76,11 @@
     }
     //close button
     button {
+      width: 32px;
+      height: 32px;
       .icon {
         width: 28px;
         height: 28px;
-        top: -12px;
-        left: 0;
       }
     }
     //left icon
