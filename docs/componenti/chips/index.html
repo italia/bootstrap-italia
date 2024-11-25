@@ -11,13 +11,13 @@
 
 <title>Chips · Bootstrap Italia</title>
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202411191451" rel="stylesheet" />
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202411251043" rel="stylesheet" />
 
 <!-- Documentation extras -->
  
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.css" rel="stylesheet" />
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202411191451" rel="stylesheet" />
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202411251043" rel="stylesheet" />
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico" />
@@ -139,8 +139,8 @@
 
     <ul class="navbar-nav flex-row ms-md-auto d-none d-md-flex">
       <li class="nav-item pe-2">
-        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v2.11.2/bootstrap-italia.zip" aria-label="Download">
-          <small class="pe-2 m-0">v2.11.2</small>
+        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v2.12.0/bootstrap-italia.zip" aria-label="Download">
+          <small class="pe-2 m-0">v2.12.0</small>
           <svg class="icon icon-sm icon-light"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-download" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-download"></use></svg><span class="visually-hidden">Download</span>
         </a>
       </li>
@@ -598,7 +598,11 @@
 <li class="toc-entry toc-h3"><a href="#varianti-standard-e-grandi">Varianti standard e grandi</a></li>
 <li class="toc-entry toc-h3"><a href="#varianti-di-colore">Varianti di colore</a></li>
 <li class="toc-entry toc-h2"><a href="#chip-disabilitata">Chip Disabilitata</a></li>
-<li class="toc-entry toc-h2"><a href="#gruppi-di-chip">Gruppi di Chip</a></li>
+<li class="toc-entry toc-h2"><a href="#gruppi-di-chip">Gruppi di Chip</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#gruppi-di-chip-link">Gruppi di Chip link</a></li>
+</ul>
+</li>
 </ul>
   </div>
 </div>
@@ -900,6 +904,85 @@
 <span class="nt">&lt;/div&gt;</span>
 </pre></td></tr></tbody></table></code></pre></figure>
 
+<h4 id="varianti-di-colore-link">Varianti di colore link</h4>
+
+<div class="bd-example">
+
+
+
+<a class="chip chip-primary chip-lg chip-simple" href="#">
+  <span class="chip-label">Primary</span>
+</a>
+
+
+<a class="chip chip-secondary chip-lg chip-simple" href="#">
+  <span class="chip-label">Secondary</span>
+</a>
+
+
+<a class="chip chip-success chip-lg chip-simple" href="#">
+  <span class="chip-label">Success</span>
+</a>
+
+
+<a class="chip chip-danger chip-lg chip-simple" href="#">
+  <span class="chip-label">Danger</span>
+</a>
+
+
+<a class="chip chip-warning chip-lg chip-simple" href="#">
+  <span class="chip-label">Warning</span>
+</a>
+
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+</pre></td><td class="code"><pre><span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"chip chip-primary chip-lg chip-simple"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"chip-label"</span><span class="nt">&gt;</span>Primary<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/a&gt;</span>
+
+
+<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"chip chip-secondary chip-lg chip-simple"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"chip-label"</span><span class="nt">&gt;</span>Secondary<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/a&gt;</span>
+
+
+<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"chip chip-success chip-lg chip-simple"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"chip-label"</span><span class="nt">&gt;</span>Success<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/a&gt;</span>
+
+
+<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"chip chip-danger chip-lg chip-simple"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"chip-label"</span><span class="nt">&gt;</span>Danger<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/a&gt;</span>
+
+
+<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"chip chip-warning chip-lg chip-simple"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"chip-label"</span><span class="nt">&gt;</span>Warning<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/a&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
 <h2 id="chip-disabilitata">Chip Disabilitata</h2>
 
 <p>Aggiungendo la classe <code class="language-plaintext highlighter-rouge">.chip-disabled</code> al contenitore e l’attributo <code class="language-plaintext highlighter-rouge">disabled</code> al <code class="language-plaintext highlighter-rouge">&lt;button&gt;</code> si ottiene una chip disabilitata.</p>
@@ -1186,21 +1269,203 @@
 <span class="nt">&lt;/div&gt;</span>
 </pre></td></tr></tbody></table></code></pre></figure>
 
+<h3 id="gruppi-di-chip-link">Gruppi di Chip link</h3>
+
+<div class="bd-example">
+<a href="#" class="chip chip-simple chip-primary">
+  <span class="chip-label">Label</span>
+</a>
+<a href="#" class="chip chip-primary">
+  <span class="chip-label">Label</span>
+  <button>
+    <svg class="icon"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-close"></use></svg>
+    <span class="visually-hidden">Elimina label</span>
+  </button>
+</a>
+<a href="#" class="chip chip-primary">
+  <svg class="icon icon-xs"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-github"></use></svg>
+  <span class="chip-label">Label</span>
+  <button>
+    <svg class="icon"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-close"></use></svg>
+    <span class="visually-hidden">Elimina label</span>
+  </button>
+</a>
+<a href="#" class="chip chip-primary">
+  <div class="avatar size-xs">
+    <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Mario Rossi" />
+  </div>
+  <span class="chip-label">Label</span>
+  <button>
+    <svg class="icon"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-close"></use></svg>
+    <span class="visually-hidden">Elimina label</span>
+  </button>
+</a>
+
+<hr />
+
+<a href="#" class="chip chip-lg chip-simple chip-primary">
+  <span class="chip-label">Label</span>
+</a>
+<a href="#" class="chip chip-lg chip-primary">
+  <span class="chip-label">Label</span>
+  <button>
+    <svg class="icon"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-close"></use></svg>
+    <span class="visually-hidden">Elimina label</span>
+  </button>
+</a>
+<a href="#" class="chip chip-lg chip-primary">
+  <svg class="icon icon-xs"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-github"></use></svg>
+  <span class="chip-label">Label</span>
+  <button>
+    <svg class="icon"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-close"></use></svg>
+    <span class="visually-hidden">Elimina label</span>
+  </button>
+</a>
+<a href="#" class="chip chip-lg chip-primary">
+  <div class="avatar size-xs">
+    <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Mario Rossi" />
+  </div>
+  <span class="chip-label">Label</span>
+  <button>
+    <svg class="icon"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-close"></use></svg>
+    <span class="visually-hidden">Elimina label</span>
+  </button>
+</a>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+</pre></td><td class="code"><pre><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"chip chip-simple chip-primary"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"chip-label"</span><span class="nt">&gt;</span>Label<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"chip chip-primary"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"chip-label"</span><span class="nt">&gt;</span>Label<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;button&gt;</span>
+    <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-close"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"visually-hidden"</span><span class="nt">&gt;</span>Elimina label<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"chip chip-primary"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-xs"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-github"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"chip-label"</span><span class="nt">&gt;</span>Label<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;button&gt;</span>
+    <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-close"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"visually-hidden"</span><span class="nt">&gt;</span>Elimina label<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"chip chip-primary"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"avatar size-xs"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://randomuser.me/api/portraits/men/46.jpg"</span> <span class="na">alt=</span><span class="s">"Mario Rossi"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"chip-label"</span><span class="nt">&gt;</span>Label<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;button&gt;</span>
+    <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-close"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"visually-hidden"</span><span class="nt">&gt;</span>Elimina label<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/a&gt;</span>
+
+<span class="nt">&lt;hr/&gt;</span>
+
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"chip chip-lg chip-simple chip-primary"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"chip-label"</span><span class="nt">&gt;</span>Label<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"chip chip-lg chip-primary"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"chip-label"</span><span class="nt">&gt;</span>Label<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;button&gt;</span>
+    <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-close"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"visually-hidden"</span><span class="nt">&gt;</span>Elimina label<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"chip chip-lg chip-primary"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-xs"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-github"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"chip-label"</span><span class="nt">&gt;</span>Label<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;button&gt;</span>
+    <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-close"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"visually-hidden"</span><span class="nt">&gt;</span>Elimina label<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"chip chip-lg chip-primary"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"avatar size-xs"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://randomuser.me/api/portraits/men/46.jpg"</span> <span class="na">alt=</span><span class="s">"Mario Rossi"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"chip-label"</span><span class="nt">&gt;</span>Label<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;button&gt;</span>
+    <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-close"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"visually-hidden"</span><span class="nt">&gt;</span>Elimina label<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/a&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
 
         </main>
       </div>
     </div>
 
     
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202411191451"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202411251043"></script>
 <script>
   bootstrap.loadFonts('/bootstrap-italia/dist/fonts')
-</script><script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202411191451"></script>
+</script><script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202411251043"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/anchor.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/clipboard.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tsparticles.min.js"></script>
 
-<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202411191451"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202411251043"></script>
 
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tweenjs.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/easeljs.min.js"></script>
@@ -1217,7 +1482,7 @@
     { src: '/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png', id: 'cover-7' },
   ]
 </script>
-<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202411191451"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202411251043"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/docsearch.min.js"></script>
 
 <script>

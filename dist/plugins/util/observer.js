@@ -98,8 +98,8 @@ class ContentObserver {
       actionRemove && typeof this.contentRemovedCallback === 'function'
         ? this.contentRemovedCallback
         : typeof this.contentAddedCallback === 'function'
-        ? this.contentAddedCallback
-        : null;
+          ? this.contentAddedCallback
+          : null;
     if (foundNodes && callback) {
       foundNodes.forEach((node) => callback(node));
     }

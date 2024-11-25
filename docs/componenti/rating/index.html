@@ -11,13 +11,13 @@
 
 <title>Rating · Bootstrap Italia</title>
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202411191451" rel="stylesheet" />
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202411251043" rel="stylesheet" />
 
 <!-- Documentation extras -->
  
 <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.css" rel="stylesheet" />
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202411191451" rel="stylesheet" />
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202411251043" rel="stylesheet" />
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico" />
@@ -139,8 +139,8 @@
 
     <ul class="navbar-nav flex-row ms-md-auto d-none d-md-flex">
       <li class="nav-item pe-2">
-        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v2.11.2/bootstrap-italia.zip" aria-label="Download">
-          <small class="pe-2 m-0">v2.11.2</small>
+        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v2.12.0/bootstrap-italia.zip" aria-label="Download">
+          <small class="pe-2 m-0">v2.12.0</small>
           <svg class="icon icon-sm icon-light"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-download" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-download"></use></svg><span class="visually-hidden">Download</span>
         </a>
       </li>
@@ -615,33 +615,41 @@
 
 <p>Le <code class="language-plaintext highlighter-rouge">&lt;label&gt;</code> contengono le icone delle stelle e la descrizione per Screen Reader.</p>
 
+<div class="bd-callout bd-callout-danger">
+<p>Breaking feature dalla versione <strong>2.12.0</strong></p>
+
+<ul>
+  <li>Aggiunto attributo <code class="language-plaintext highlighter-rouge">aria-hidden="true"</code> sulle icone perché lo scopo è già trasmesso agli strumenti assistivi dal testo con classe <code class="language-plaintext highlighter-rouge">.visually-hidden</code>.</li>
+</ul>
+</div>
+
 <div class="bd-example">
 <fieldset class="rating">
   <legend>Rating</legend>
   <input type="radio" id="star5a" name="ratingA" value="5" />
   <label class="full" for="star5a">
-    <svg class="icon icon-sm"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-star-full"></use></svg>
+    <svg class="icon icon-sm" aria-hidden="true"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-star-full"></use></svg>
     <span class="visually-hidden">Valuta 5 stelle su 5</span>
   </label>
   <input type="radio" id="star4a" name="ratingA" value="4" />
   <label class="full" for="star4a">
-    <svg class="icon icon-sm"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-star-full"></use></svg>
+    <svg class="icon icon-sm" aria-hidden="true"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-star-full"></use></svg>
     <span class="visually-hidden">Valuta 4 stelle su 5</span>
   </label>
   <input type="radio" id="star3a" name="ratingA" value="3" />
   <label class="full" for="star3a">
-    <svg class="icon icon-sm"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-star-full"></use></svg>
+    <svg class="icon icon-sm" aria-hidden="true"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-star-full"></use></svg>
     <span class="visually-hidden">Valuta 3 stelle su 5</span>
   </label>
   <input type="radio" id="star2a" name="ratingA" value="2" />
   <label class="full" for="star2a">
-    <svg class="icon icon-sm"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-star-full"></use></svg>
+    <svg class="icon icon-sm" aria-hidden="true"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-star-full"></use></svg>
     <span class="visually-hidden">Valuta 2 stelle su 5</span>
   </label>
   <input type="radio" id="star1a" name="ratingA" value="1" />
   <label class="full" for="star1a">
-    <svg class="icon icon-sm"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-star-full"></use></svg>
-    <span class="visually-hidden">Valuta 1 stelle su 5</span>
+    <svg class="icon icon-sm" aria-hidden="true"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-star-full"></use></svg>
+    <span class="visually-hidden">Valuta 1 stella su 5</span>
   </label>
 </fieldset>
 </div>
@@ -677,28 +685,28 @@
   <span class="nt">&lt;legend&gt;</span>Rating<span class="nt">&lt;/legend&gt;</span>
   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"star5a"</span> <span class="na">name=</span><span class="s">"ratingA"</span> <span class="na">value=</span><span class="s">"5"</span> <span class="nt">/&gt;</span>
   <span class="nt">&lt;label</span> <span class="na">class = </span><span class="s">"full"</span> <span class="na">for=</span><span class="s">"star5a"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-star-full"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+    <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-star-full"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"visually-hidden"</span><span class="nt">&gt;</span>Valuta 5 stelle su 5<span class="nt">&lt;/span&gt;</span>
   <span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"star4a"</span> <span class="na">name=</span><span class="s">"ratingA"</span> <span class="na">value=</span><span class="s">"4"</span><span class="nt">/&gt;</span>
   <span class="nt">&lt;label</span> <span class="na">class = </span><span class="s">"full"</span> <span class="na">for=</span><span class="s">"star4a"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-star-full"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+    <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-star-full"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"visually-hidden"</span><span class="nt">&gt;</span>Valuta 4 stelle su 5<span class="nt">&lt;/span&gt;</span>
   <span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"star3a"</span> <span class="na">name=</span><span class="s">"ratingA"</span> <span class="na">value=</span><span class="s">"3"</span> <span class="nt">/&gt;</span>
   <span class="nt">&lt;label</span> <span class="na">class = </span><span class="s">"full"</span> <span class="na">for=</span><span class="s">"star3a"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-star-full"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+    <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-star-full"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"visually-hidden"</span><span class="nt">&gt;</span>Valuta 3 stelle su 5<span class="nt">&lt;/span&gt;</span>
   <span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"star2a"</span> <span class="na">name=</span><span class="s">"ratingA"</span> <span class="na">value=</span><span class="s">"2"</span> <span class="nt">/&gt;</span>
   <span class="nt">&lt;label</span> <span class="na">class = </span><span class="s">"full"</span> <span class="na">for=</span><span class="s">"star2a"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-star-full"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+    <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-star-full"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"visually-hidden"</span><span class="nt">&gt;</span>Valuta 2 stelle su 5<span class="nt">&lt;/span&gt;</span>
   <span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"star1a"</span> <span class="na">name=</span><span class="s">"ratingA"</span> <span class="na">value=</span><span class="s">"1"</span> <span class="nt">/&gt;</span>
   <span class="nt">&lt;label</span> <span class="na">class = </span><span class="s">"full"</span> <span class="na">for=</span><span class="s">"star1a"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-star-full"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"visually-hidden"</span><span class="nt">&gt;</span>Valuta 1 stelle su 5<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-star-full"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"visually-hidden"</span><span class="nt">&gt;</span>Valuta 1 stella su 5<span class="nt">&lt;/span&gt;</span>
   <span class="nt">&lt;/label&gt;</span>
 <span class="nt">&lt;/fieldset&gt;</span>
 </pre></td></tr></tbody></table></code></pre></figure>
@@ -720,28 +728,28 @@
   <legend><span class="visually-hidden">Valutazione</span> <span>4 stelle</span> <span class="visually-hidden">su 5</span></legend>
   <input type="radio" id="star5b" name="ratingB" value="5" />
   <label class="full" for="star5b">
-    <svg class="icon icon-sm"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-star-full"></use></svg>
+    <svg class="icon icon-sm" aria-hidden="true"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-star-full"></use></svg>
     <span class="visually-hidden">Valuta 5 stelle su 5</span>
   </label>
   <input type="radio" id="star4b" name="ratingB" value="4" checked="" />
   <label class="full" for="star4b">
-    <svg class="icon icon-sm"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-star-full"></use></svg>
+    <svg class="icon icon-sm" aria-hidden="true"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-star-full"></use></svg>
     <span class="visually-hidden">Valuta 4 stelle su 5</span>
   </label>
   <input type="radio" id="star3b" name="ratingB" value="3" />
   <label class="full" for="star3b">
-    <svg class="icon icon-sm"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-star-full"></use></svg>
+    <svg class="icon icon-sm" aria-hidden="true"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-star-full"></use></svg>
     <span class="visually-hidden">Valuta 3 stelle su 5</span>
   </label>
   <input type="radio" id="star2b" name="ratingB" value="2" />
   <label class="full" for="star2b">
-    <svg class="icon icon-sm"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-star-full"></use></svg>
+    <svg class="icon icon-sm" aria-hidden="true"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-star-full"></use></svg>
     <span class="visually-hidden">Valuta 2 stelle su 5</span>
   </label>
   <input type="radio" id="star1b" name="ratingB" value="1" />
   <label class="full" for="star1b">
-    <svg class="icon icon-sm"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-star-full"></use></svg>
-    <span class="visually-hidden">Valuta 1 stelle su 5</span>
+    <svg class="icon icon-sm" aria-hidden="true"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-star-full"></use></svg>
+    <span class="visually-hidden">Valuta 1 stella su 5</span>
   </label>
 </fieldset>
 
@@ -778,28 +786,28 @@
   <span class="nt">&lt;legend&gt;&lt;span</span> <span class="na">class=</span><span class="s">"visually-hidden"</span><span class="nt">&gt;</span>Valutazione<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span&gt;</span>4 stelle<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"visually-hidden"</span><span class="nt">&gt;</span>su 5<span class="nt">&lt;/span&gt;&lt;/legend&gt;</span>
   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"star5b"</span> <span class="na">name=</span><span class="s">"ratingB"</span> <span class="na">value=</span><span class="s">"5"</span> <span class="nt">/&gt;</span>
   <span class="nt">&lt;label</span> <span class="na">class = </span><span class="s">"full"</span> <span class="na">for=</span><span class="s">"star5b"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-star-full"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+    <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-star-full"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"visually-hidden"</span><span class="nt">&gt;</span>Valuta 5 stelle su 5<span class="nt">&lt;/span&gt;</span>
   <span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"star4b"</span> <span class="na">name=</span><span class="s">"ratingB"</span> <span class="na">value=</span><span class="s">"4"</span> <span class="na">checked</span><span class="nt">/&gt;</span>
   <span class="nt">&lt;label</span> <span class="na">class = </span><span class="s">"full"</span> <span class="na">for=</span><span class="s">"star4b"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-star-full"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+    <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-star-full"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"visually-hidden"</span><span class="nt">&gt;</span>Valuta 4 stelle su 5<span class="nt">&lt;/span&gt;</span>
   <span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"star3b"</span> <span class="na">name=</span><span class="s">"ratingB"</span> <span class="na">value=</span><span class="s">"3"</span> <span class="nt">/&gt;</span>
   <span class="nt">&lt;label</span> <span class="na">class = </span><span class="s">"full"</span> <span class="na">for=</span><span class="s">"star3b"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-star-full"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+    <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-star-full"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"visually-hidden"</span><span class="nt">&gt;</span>Valuta 3 stelle su 5<span class="nt">&lt;/span&gt;</span>
   <span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"star2b"</span> <span class="na">name=</span><span class="s">"ratingB"</span> <span class="na">value=</span><span class="s">"2"</span> <span class="nt">/&gt;</span>
   <span class="nt">&lt;label</span> <span class="na">class = </span><span class="s">"full"</span> <span class="na">for=</span><span class="s">"star2b"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-star-full"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+    <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-star-full"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"visually-hidden"</span><span class="nt">&gt;</span>Valuta 2 stelle su 5<span class="nt">&lt;/span&gt;</span>
   <span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"star1b"</span> <span class="na">name=</span><span class="s">"ratingB"</span> <span class="na">value=</span><span class="s">"1"</span> <span class="nt">/&gt;</span>
   <span class="nt">&lt;label</span> <span class="na">class = </span><span class="s">"full"</span> <span class="na">for=</span><span class="s">"star1b"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-star-full"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"visually-hidden"</span><span class="nt">&gt;</span>Valuta 1 stelle su 5<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-star-full"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"visually-hidden"</span><span class="nt">&gt;</span>Valuta 1 stella su 5<span class="nt">&lt;/span&gt;</span>
   <span class="nt">&lt;/label&gt;</span>
 <span class="nt">&lt;/fieldset&gt;</span>
 </pre></td></tr></tbody></table></code></pre></figure>
@@ -821,28 +829,28 @@
   <legend class="visually-hidden">Valutazione 4 stelle su 5</legend>
   <input type="radio" id="star5c" name="ratingC" value="5" aria-hidden="true" disabled="" />
   <label class="full" for="star5c">
-    <svg class="icon icon-sm"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-star-full"></use></svg>
+    <svg class="icon icon-sm" aria-hidden="true"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-star-full"></use></svg>
     <span class="visually-hidden">Valuta 5 stelle su 5</span>
   </label>
   <input type="radio" id="star4c" name="ratingC" value="4" checked="" aria-hidden="true" disabled="" />
   <label class="full" for="star4c">
-    <svg class="icon icon-sm"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-star-full"></use></svg>
+    <svg class="icon icon-sm" aria-hidden="true"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-star-full"></use></svg>
     <span class="visually-hidden">Valuta 4 stelle su 5</span>
   </label>
   <input type="radio" id="star3c" name="ratingC" value="3" aria-hidden="true" disabled="" />
   <label class="full" for="star3c">
-    <svg class="icon icon-sm"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-star-full"></use></svg>
+    <svg class="icon icon-sm" aria-hidden="true"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-star-full"></use></svg>
     <span class="visually-hidden">Valuta 3 stelle su 5</span>
   </label>
   <input type="radio" id="star2c" name="ratingC" value="2" aria-hidden="true" disabled="" />
   <label class="full" for="star2c">
-    <svg class="icon icon-sm"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-star-full"></use></svg>
+    <svg class="icon icon-sm" aria-hidden="true"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-star-full"></use></svg>
     <span class="visually-hidden">Valuta 2 stelle su 5</span>
   </label>
   <input type="radio" id="star1c" name="ratingC" value="1" aria-hidden="true" disabled="" />
   <label class="full" for="star1c">
-    <svg class="icon icon-sm"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-star-full"></use></svg>
-    <span class="visually-hidden">Valuta 1 stelle su 5</span>
+    <svg class="icon icon-sm" aria-hidden="true"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-star-full"></use></svg>
+    <span class="visually-hidden">Valuta 1 stella su 5</span>
   </label>
 </fieldset>
 </div>
@@ -878,28 +886,28 @@
   <span class="nt">&lt;legend</span> <span class="na">class=</span><span class="s">"visually-hidden"</span><span class="nt">&gt;</span>Valutazione 4 stelle su 5<span class="nt">&lt;/legend&gt;</span>
   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"star5c"</span> <span class="na">name=</span><span class="s">"ratingC"</span> <span class="na">value=</span><span class="s">"5"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span> <span class="na">disabled</span> <span class="nt">/&gt;</span>
   <span class="nt">&lt;label</span> <span class="na">class = </span><span class="s">"full"</span> <span class="na">for=</span><span class="s">"star5c"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-star-full"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+    <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-star-full"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"visually-hidden"</span><span class="nt">&gt;</span>Valuta 5 stelle su 5<span class="nt">&lt;/span&gt;</span>
   <span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"star4c"</span> <span class="na">name=</span><span class="s">"ratingC"</span> <span class="na">value=</span><span class="s">"4"</span> <span class="na">checked</span> <span class="na">aria-hidden=</span><span class="s">"true"</span> <span class="na">disabled</span> <span class="nt">/&gt;</span>
   <span class="nt">&lt;label</span> <span class="na">class = </span><span class="s">"full"</span> <span class="na">for=</span><span class="s">"star4c"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-star-full"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+    <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-star-full"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"visually-hidden"</span><span class="nt">&gt;</span>Valuta 4 stelle su 5<span class="nt">&lt;/span&gt;</span>
   <span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"star3c"</span> <span class="na">name=</span><span class="s">"ratingC"</span> <span class="na">value=</span><span class="s">"3"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span> <span class="na">disabled</span> <span class="nt">/&gt;</span>
   <span class="nt">&lt;label</span> <span class="na">class = </span><span class="s">"full"</span> <span class="na">for=</span><span class="s">"star3c"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-star-full"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+    <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-star-full"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"visually-hidden"</span><span class="nt">&gt;</span>Valuta 3 stelle su 5<span class="nt">&lt;/span&gt;</span>
   <span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"star2c"</span> <span class="na">name=</span><span class="s">"ratingC"</span> <span class="na">value=</span><span class="s">"2"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span> <span class="na">disabled</span> <span class="nt">/&gt;</span>
   <span class="nt">&lt;label</span> <span class="na">class = </span><span class="s">"full"</span> <span class="na">for=</span><span class="s">"star2c"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-star-full"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+    <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-star-full"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"visually-hidden"</span><span class="nt">&gt;</span>Valuta 2 stelle su 5<span class="nt">&lt;/span&gt;</span>
   <span class="nt">&lt;/label&gt;</span>
   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"star1c"</span> <span class="na">name=</span><span class="s">"ratingC"</span> <span class="na">value=</span><span class="s">"1"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span> <span class="na">disabled</span> <span class="nt">/&gt;</span>
   <span class="nt">&lt;label</span> <span class="na">class = </span><span class="s">"full"</span> <span class="na">for=</span><span class="s">"star1c"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-star-full"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"visually-hidden"</span><span class="nt">&gt;</span>Valuta 1 stelle su 5<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-sm"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-star-full"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"visually-hidden"</span><span class="nt">&gt;</span>Valuta 1 stella su 5<span class="nt">&lt;/span&gt;</span>
   <span class="nt">&lt;/label&gt;</span>
 <span class="nt">&lt;/fieldset&gt;</span>
 </pre></td></tr></tbody></table></code></pre></figure>
@@ -910,15 +918,15 @@
     </div>
 
     
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202411191451"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202411251043"></script>
 <script>
   bootstrap.loadFonts('/bootstrap-italia/dist/fonts')
-</script><script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202411191451"></script>
+</script><script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202411251043"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/anchor.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/clipboard.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tsparticles.min.js"></script>
 
-<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202411191451"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202411251043"></script>
 
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tweenjs.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/easeljs.min.js"></script>
@@ -935,7 +943,7 @@
     { src: '/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png', id: 'cover-7' },
   ]
 </script>
-<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202411191451"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202411251043"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/docsearch.min.js"></script>
 
 <script>

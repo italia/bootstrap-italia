@@ -4,6 +4,7 @@ import InputLabel from './input-label.js';
 
 //import BaseComponent from 'bootstrap/js/src/base-component.js'
 
+
 const NAME = 'inputsearchautocomplete';
 const DATA_KEY = 'bs.inputsearchautocomplete';
 const EVENT_KEY = `.${DATA_KEY}`;

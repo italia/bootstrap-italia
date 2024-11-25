@@ -15,7 +15,6 @@ const SELECTOR_SEARCH_WRAPPER = '.it-search-wrapper';
 const SELECTOR_USER_WRAPPER = '.it-user-wrapper';
 const SELECTOR_CLONED = `.${CLASS_NAME_CLONED_HEADER}`;
 
-// eslint-disable-next-line no-undef
 const dataSet = new Map();
 
 class HeaderSticky {
