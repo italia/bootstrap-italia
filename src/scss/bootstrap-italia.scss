@@ -1,3 +1,6 @@
+@import 'bootstrap/mixins/banner';
+@include bsBanner('');
+
 // bootstrap italia version variable
 // useful to check for the current version
 @import 'custom/version';
