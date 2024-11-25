@@ -220,8 +220,14 @@
       margin-top: -$v-gap * 2;
     }
     a {
+      display: inline-block;
       h5.card-title {
         color: $card-link-color;
+      }
+      &:hover {
+        h5.card-title {
+          color: var(--bs-link-hover-color);
+        }
       }
     }
     .card-text {
@@ -429,11 +435,13 @@
         font-weight: normal;
       }
     }
+    h5.card-title {
+      color: $card-link-color;
+    }
     &:hover {
-      text-decoration: none;
-      h5 {
-        text-decoration: underline;
-        color: $primary;
+      text-decoration: underline;
+      h5.card-title {
+        color: var(--bs-link-hover-color);
       }
       .img-responsive-wrapper {
         &:before {

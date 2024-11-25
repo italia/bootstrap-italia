@@ -105,6 +105,19 @@ Gli stili definiti da Bootstrap Italia utilizzano un naming consistente con i te
 </div>{% endfor %}
 {% endcapture %}{% include example.html content=example %}
 
+#### Varianti di colore link
+
+{% comment %}Example name: Varianti di colore link{% endcomment %}
+{% capture example %}
+
+{% for color in site.data.theme-colors %}
+
+<a class="chip chip-{{ color.name }} chip-lg chip-simple" href="#">
+  <span class="chip-label">{{ color.name | capitalize }}</span>
+</a>
+{% endfor %}
+{% endcapture %}{% include example.html content=example %}
+
 ## Chip Disabilitata
 
 Aggiungendo la classe `.chip-disabled` al contenitore e l'attributo `disabled` al `<button>` si ottiene una chip disabilitata.
@@ -209,4 +222,69 @@ I gruppi di chip vengono visualizzati in linea.
     <span class="visually-hidden">Elimina label</span>
   </button>
 </div>
+{% endcapture %}{% include example.html content=example %}
+
+### Gruppi di Chip link
+
+{% comment %}Example name: Gruppi{% endcomment %}
+{% capture example %}
+<a href="#" class="chip chip-simple chip-primary">
+  <span class="chip-label">Label</span>
+</a>
+<a href="#" class="chip chip-primary">
+  <span class="chip-label">Label</span>
+  <button>
+    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
+    <span class="visually-hidden">Elimina label</span>
+  </button>
+</a>
+<a href="#" class="chip chip-primary">
+  <svg class="icon icon-xs"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-github"></use></svg>
+  <span class="chip-label">Label</span>
+  <button>
+    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
+    <span class="visually-hidden">Elimina label</span>
+  </button>
+</a>
+<a href="#" class="chip chip-primary">
+  <div class="avatar size-xs">
+    <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Mario Rossi">
+  </div>
+  <span class="chip-label">Label</span>
+  <button>
+    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
+    <span class="visually-hidden">Elimina label</span>
+  </button>
+</a>
+
+<hr/>
+
+<a href="#" class="chip chip-lg chip-simple chip-primary">
+  <span class="chip-label">Label</span>
+</a>
+<a href="#" class="chip chip-lg chip-primary">
+  <span class="chip-label">Label</span>
+  <button>
+    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
+    <span class="visually-hidden">Elimina label</span>
+  </button>
+</a>
+<a href="#" class="chip chip-lg chip-primary">
+  <svg class="icon icon-xs"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-github"></use></svg>
+  <span class="chip-label">Label</span>
+  <button>
+    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
+    <span class="visually-hidden">Elimina label</span>
+  </button>
+</a>
+<a href="#" class="chip chip-lg chip-primary">
+  <div class="avatar size-xs">
+    <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Mario Rossi">
+  </div>
+  <span class="chip-label">Label</span>
+  <button>
+    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
+    <span class="visually-hidden">Elimina label</span>
+  </button>
+</a>
 {% endcapture %}{% include example.html content=example %}

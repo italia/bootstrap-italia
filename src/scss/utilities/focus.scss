@@ -1,8 +1,16 @@
 :focus:not(.focus--mouse),
-%focus {
-  border-color: $focus-outline-color !important;
-  box-shadow: 0 0 0 2px $focus-outline-color !important;
-  outline: none !important;
+%focus,
+.it-carousel-wrapper .splide__pagination button:focus:not(.focus--mouse),
+.upload:focus:not(.focus--mouse) + label,
+.upload-dragdrop-input:focus[type='file']:not(.focus--mouse) + label,
+.avatar-upload:focus-within:not(.focus--mouse),
+.rating input:focus:not(.focus--mouse) + label svg {
+  border-color: $focus-outline-color-out !important;
+  box-shadow:
+    0 0 0 2px $focus-outline-color-in,
+    0 0 0 5px $focus-outline-color-out;
+  outline: 3px solid transparent;
+  outline-offset: 3px;
 }
 
 [tabindex='-1']:focus:not(:focus-visible) {
@@ -14,4 +22,68 @@
   border-color: inherit !important;
   box-shadow: none !important;
   outline: none !important;
+}
+
+p a {
+  &:focus:not(.focus--mouse, .btn) {
+    outline-offset: 0px;
+    outline: 3px $focus-outline-color-out solid;
+    background: $focus-outline-color-in;
+    box-shadow: none;
+    color: $link-color !important;
+  }
+}
+
+.shadow,
+.shadow-none,
+.shadow-sm,
+.shadow-lg {
+  &:focus:not(.focus--mouse) {
+    box-shadow:
+      0 0 0 2px $focus-outline-color-in,
+      0 0 0 5px $focus-outline-color-out !important;
+  }
+}
+
+.chip {
+  button {
+    &:focus:not(.focus--mouse) {
+      border-radius: 50%;
+    }
+  }
+}
+
+.form-check {
+  .toggles label:has(input[type='checkbox']:focus:not(.focus--mouse)) {
+    @extend %focus;
+
+    input,
+    .lever {
+      border-color: inherit !important;
+      box-shadow: none !important;
+      outline: none !important;
+    }
+  }
+
+  .toggles label:has(input[type='checkbox']:focus.focus--mouse) {
+    @extend %focusmouse;
+  }
+
+  &.form-check-group {
+    :focus:not(.focus--mouse),
+    [type='checkbox']:focus + label,
+    [type='radio']:focus + label {
+      width: 100%;
+    }
+  }
+}
+
+.bg-dark .btn,
+.back-to-top.dark {
+  &:focus:not(.focus--mouse),
+  &%focus {
+    box-shadow:
+      0 0 0 2px $focus-outline-color-out,
+      0 0 0 5px $focus-outline-color-in;
+  }
 }

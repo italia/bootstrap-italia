@@ -48,7 +48,7 @@ fieldset {
     padding: 0 $input-spacing-x;
     z-index: 1;
     &.active {
-      transform: translateY(-75%);
+      transform: translateY(-85%);
       font-weight: 600;
       font-size: $small-font-size;
       color: $input-label-color;
@@ -131,6 +131,9 @@ textarea {
   background-size: 45px 45% !important;
   border-radius: 0 !important;
   min-height: 2.5rem;
+  &.form-control-lg {
+    border-radius: 0;
+  }
   &:disabled,
   &[readonly] {
     cursor: not-allowed;
@@ -140,7 +143,6 @@ textarea {
       cursor: not-allowed;
     }
   }
-  &:focus,
   &:active {
     box-shadow: none !important;
   }
@@ -223,11 +225,7 @@ textarea {
       padding-bottom: 0;
       border-bottom: 1px solid $input-border;
       border-radius: 0 4px 4px 0;
-      box-shadow: none;
       height: 100%;
-      &:focus:not(.focus--mouse) {
-        box-shadow: inset 0 0 0 2px $focus-outline-color;
-      }
     }
   }
 }
@@ -449,17 +447,17 @@ textarea {
 
       &::after,
       &::before {
-        right: 15px;
+        right: 0px;
         left: auto;
       }
     }
 
     [type='checkbox']:checked + label::before {
-      right: 26px;
+      right: 11px;
     }
 
     [type='radio']:checked + label::before {
-      right: 15px;
+      right: 0px;
     }
 
     .form-text {
@@ -468,12 +466,8 @@ textarea {
       margin-bottom: 0.5rem;
     }
 
-    // label {
-    //   font-weight: 600;
-    // }
-
     input.semi-checked:not(:checked) + label::before {
-      right: 19px;
+      right: 4px;
       left: auto;
     }
   }
@@ -495,5 +489,21 @@ textarea {
     border-color: $primary-a5; // TODO: Not found
     background-color: $primary-a5; // TODO: Not found
     z-index: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  fieldset legend,
+  .form-group label,
+  textarea,
+  .form-check [type='checkbox'],
+  .form-check [type='radio'],
+  .form-check [type='checkbox'] + label::after,
+  .form-check [type='checkbox'] + label::before,
+  .form-check [type='radio'] + label::after,
+  .form-check [type='radio'] + label::before,
+  .toggles label input[type='checkbox'] + .lever::before,
+  .toggles label input[type='checkbox'] + .lever::after {
+    transition: none !important;
   }
 }
