@@ -1,7 +1,3 @@
-.autocomplete__wrapper {
-  position: relative;
-}
-
 .autocomplete__hint,
 .autocomplete__input {
   appearance: none;
@@ -127,9 +123,6 @@
   .autocomplete__option--focused,
   .autocomplete__option:hover {
     forced-color-adjust: none; /* prevent backplate from obscuring text */
-    background-color: Highlight;
-    border-color: Highlight;
-    color: HighlightText;
 
     /* Prefer SelectedItem / SelectedItemText in browsers that support it */
     background-color: SelectedItem;
@@ -167,6 +160,7 @@
 }
 
 .autocomplete__wrapper {
+  position: relative;
   .autocomplete__menu {
     border: $autocomplete-border;
     border-top: none;
