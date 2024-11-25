@@ -1,0 +1,126 @@
+// Disable animation if transitions are disabled
+
+// scss-docs-start progress-keyframes
+@if $enable-transitions {
+  @keyframes progress-bar-stripes {
+    0% {
+      background-position-x: $progress-height;
+    }
+  }
+}
+// scss-docs-end progress-keyframes
+
+.progress-bar-striped {
+  @include gradient-striped();
+  background-size: var(--#{$prefix}progress-height) var(--#{$prefix}progress-height);
+}
+
+@if $enable-transitions {
+  .progress-bar-animated {
+    animation: $progress-bar-animation-timing progress-bar-stripes;
+
+    @if $enable-reduced-motion {
+      @media (prefers-reduced-motion: reduce) {
+        animation: none;
+      }
+    }
+  }
+}
+
+//mobile
+
+//indetrminate animation
+@keyframes progressBarIndeterminate {
+  0% {
+    left: -5%;
+  }
+  50% {
+    width: 66%;
+  }
+  100% {
+    left: 100%;
+    width: 33%;
+  }
+}
+
+//background bar
+.progress {
+  // scss-docs-start progress-css-vars
+  --#{$prefix}progress-height: #{$progress-height};
+  @include rfs($progress-font-size, --#{$prefix}progress-font-size);
+  --#{$prefix}progress-bg: #{$progress-bg};
+  --#{$prefix}progress-border-radius: #{$progress-border-radius};
+  --#{$prefix}progress-box-shadow: #{$progress-box-shadow};
+  --#{$prefix}progress-bar-color: #{$progress-bar-color};
+  --#{$prefix}progress-bar-bg: #{$progress-bar-bg};
+  --#{$prefix}progress-bar-transition: #{$progress-bar-transition};
+  // scss-docs-end progress-css-vars
+
+  display: flex;
+  // height: var(--#{$prefix}progress-height);
+  overflow: hidden; // force rounded corners by cropping it
+  @include font-size(var(--#{$prefix}progress-font-size));
+  background-color: var(--#{$prefix}progress-bg);
+  @include border-radius(var(--#{$prefix}progress-border-radius));
+  @include box-shadow(var(--#{$prefix}progress-box-shadow));
+  height: 4px;
+  box-shadow: none;
+  &.progress-color {
+    background-color: $color-background-secondary-lighter; // UI Kit
+  }
+  &.progress-indeterminate {
+    position: relative;
+    .progress-bar {
+      width: 0;
+      animation: progressBarIndeterminate 1.4s cubic-bezier(0.77, 0, 0.175, 1) infinite forwards;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+    }
+  }
+}
+
+//progress bar
+.progress-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  color: var(--#{$prefix}progress-bar-color);
+  text-align: center;
+  white-space: nowrap;
+  // background-color: var(--#{$prefix}progress-bar-bg);
+  @include transition(var(--#{$prefix}progress-bar-transition));
+  background-color: $secondary; // UI Kit
+}
+
+//label
+.progress-bar-label {
+  text-align: right;
+  font-size: 0.75rem;
+  color: $color-text-base;
+  font-weight: 500;
+}
+
+//button version
+.btn-progress {
+  .progress {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    border-radius: 0 0 $btn-border-radius $btn-border-radius;
+  }
+  .progress-bar {
+    height: 4px;
+  }
+}
+
+//small - tablet
+@include media-breakpoint-up(sm) {
+  //label
+  .progress-bar-label {
+    font-size: 0.75rem;
+  }
+}

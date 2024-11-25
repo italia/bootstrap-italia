@@ -1,171 +1,171 @@
-@import 'bootstrap/mixins/banner';
+@import 'base/mixins/banner';
 @include bsBanner('');
 
-// bootstrap italia version variable
-// useful to check for the current version
-@import 'custom/version';
+// Versione del kit
+@import 'base/version';
+// ------------------------------
 
-// funzioni e variabili colore
+// Funzioni
 @import 'functions';
+// ------------------------------
+
+// Variabili
 @import 'utilities/colors_vars';
-
-//variables
 @import 'variables';
+// ------------------------------
 
-//classi colore
+// Colori
 @import 'utilities/colors';
+// ------------------------------
 
-// BS5 Configuration
-@import 'bootstrap/functions';
-@import 'bootstrap/variables';
-//@import 'bootstrap/maps';
-@import 'bootstrap/mixins';
-// mixins custom
-@import 'custom/mixins/buttons';
-@import 'custom/mixins/text-emphasis';
-//
-@import 'bootstrap/maps';
-@import 'bootstrap/utilities';
+// Configurazione
+@import 'base/functions';
+@import 'base/variables';
+@import 'base/mixins';
+@import 'base/maps';
+@import 'base/utilities';
+// ------------------------------
 
-// BS5 Layout & components
-@import 'bootstrap/root';
-@import 'bootstrap/reboot';
-@import 'bootstrap/type';
-@import 'bootstrap/images';
-@import 'bootstrap/containers';
-@import 'bootstrap/grid';
-@import 'bootstrap/tables';
-@import 'bootstrap/forms';
-@import 'bootstrap/buttons';
-@import 'bootstrap/transitions';
-@import 'bootstrap/dropdown';
-@import 'bootstrap/button-group';
-@import 'bootstrap/nav';
-@import 'bootstrap/navbar';
-@import 'bootstrap/card';
-@import 'bootstrap/accordion';
-@import 'bootstrap/breadcrumb';
-@import 'bootstrap/pagination';
-@import 'bootstrap/badge';
-@import 'bootstrap/progress';
-@import 'bootstrap/list-group';
-@import 'bootstrap/close';
-@import 'bootstrap/toasts';
-@import 'bootstrap/modal';
-@import 'bootstrap/tooltip';
-@import 'bootstrap/popover';
-@import 'bootstrap/carousel';
-@import 'bootstrap/spinners';
-@import 'bootstrap/offcanvas';
-@import 'bootstrap/placeholders';
+// Layout
+@import 'base/root';
+@import 'base/reboot';
+@import 'base/containers';
+@import 'base/transitions';
+@import 'base/offcanvas';
+@import 'base/placeholders';
+// ------------------------------
 
 // Helpers
-@import 'bootstrap/helpers';
+@import 'base/helpers';
+// ------------------------------
 
 // Utilities
-@import 'bootstrap/utilities/api';
-// scss-docs-end import-stack
+@import 'base/utilities/api';
+// ------------------------------
 
-// Customizzazioni e nuovi componenti
 @import 'utilities/text-colors';
-@import 'custom/type';
-@import 'custom/grid';
-@import 'custom/tables';
-@import 'custom/breadcrumb';
-@import 'custom/modal';
-@import 'custom/accordion';
-@import 'custom/carousel';
-@import 'custom/calendar';
-@import 'custom/alert';
-@import 'custom/buttons';
-@import 'custom/font';
-@import 'custom/forms';
-@import 'custom/form-input-file';
-@import 'custom/form-input-number';
-@import 'custom/form-input-upload';
-@import 'custom/form-toggles';
-@import 'custom/form-password';
-@import 'custom/form-select';
-@import 'custom/form-transfer';
-@import 'custom/dropdown';
-@import 'custom/pager';
-@import 'custom/tab';
-@import 'custom/cookiebar';
-@import 'custom/hero';
-@import 'custom/forward';
-@import 'custom/back-to-top';
-@import 'custom/autocomplete';
-@import 'custom/linklist';
-@import 'custom/navigation';
-@import 'custom/skiplinks';
-@import 'custom/affix';
-@import 'custom/sidebar';
-@import 'custom/sidebarthemes';
-@import 'custom/megamenu';
-@import 'custom/bottomnav';
-@import 'custom/navscroll';
-@import 'custom/navscrolltheme';
-@import 'custom/callout';
-@import 'custom/toolbar';
-@import 'custom/sections';
-@import 'custom/notifications';
-@import 'custom/avatar';
-@import 'custom/thumbnav';
-@import 'custom/steppers';
-@import 'custom/card';
-@import 'custom/imgresponsive';
-@import 'custom/overlay-panel';
-@import 'custom/progress-donuts';
-@import 'custom/progress-bars';
-@import 'custom/progress-spinners';
-@import 'custom/gridlist';
-@import 'custom/popover';
-@import 'custom/tooltip';
-@import 'custom/videoplayer';
-@import 'custom/list';
-@import 'custom/chips';
-@import 'custom/rating';
-@import 'custom/dimmer';
-@import 'custom/accept-overlay';
-@import 'custom/timeline';
-@import 'custom/anchor';
-@import 'custom/map';
-@import 'custom/point-list';
-@import 'custom/rating-list';
-@import 'custom/badge';
-@import 'custom/figcaption';
-@import 'custom/sticky';
-@import 'custom/print';
-@import 'custom/code';
-@import 'custom/images';
-@import 'custom/just-validate';
-@import 'custom/accessible-autocomplete';
-@import 'custom/page-scroll';
 
-// datepicker
-@import 'custom/form-datepicker';
+// Componenti
+@import 'components/type';
+@import 'components/grid';
+@import 'components/tables';
+@import 'components/breadcrumb';
+@import 'components/modal';
+@import 'components/accordion';
+@import 'components/carousel';
+@import 'components/calendar';
+@import 'components/alert';
+@import 'components/button-group';
+@import 'components/buttons';
+@import 'components/font';
+@import 'components/dropdown';
+@import 'components/pager';
+@import 'components/tab';
+@import 'components/cookiebar';
+@import 'components/hero';
+@import 'components/forward';
+@import 'components/back-to-top';
+@import 'components/autocomplete';
+@import 'components/list-group';
+@import 'components/linklist';
+@import 'components/navigation';
+@import 'components/skiplinks';
+@import 'components/affix';
+@import 'components/sidebar';
+@import 'components/sidebarthemes';
+@import 'components/megamenu';
+@import 'components/bottomnav';
+@import 'components/navscroll';
+@import 'components/navscrolltheme';
+@import 'components/callout';
+@import 'components/toolbar';
+@import 'components/sections';
+@import 'components/notifications';
+@import 'components/avatar';
+@import 'components/thumbnav';
+@import 'components/steppers';
+@import 'components/card';
+@import 'components/imgresponsive';
+@import 'components/overlay-panel';
+@import 'components/progress-donuts';
+@import 'components/progress-bars';
+@import 'components/progress-spinners';
+@import 'components/gridlist';
+@import 'components/popover';
+@import 'components/tooltip';
+@import 'components/videoplayer';
+@import 'components/list';
+@import 'components/chips';
+@import 'components/rating';
+@import 'components/dimmer';
+@import 'components/accept-overlay';
+@import 'components/timeline';
+@import 'components/anchor';
+@import 'components/map';
+@import 'components/point-list';
+@import 'components/rating-list';
+@import 'components/badge';
+@import 'components/figcaption';
+@import 'components/sticky';
+@import 'components/print';
+@import 'components/code';
+@import 'components/images';
+@import 'components/just-validate';
+@import 'components/accessible-autocomplete';
+@import 'components/page-scroll';
+@import 'components/pagination';
+@import 'components/toasts';
+// ------------------------------
 
-// timepicker
-@import 'custom/timepicker';
+// Form
+@import 'forms/forms';
+@import 'forms/labels';
+@import 'forms/form-text';
+@import 'forms/form-control';
+@import 'forms/form-check';
+@import 'forms/form-range';
+@import 'forms/floating-labels';
+@import 'forms/input-group';
+@import 'forms/validation';
+@import 'forms/form-input-file';
+@import 'forms/form-input-number';
+@import 'forms/form-input-upload';
+@import 'forms/form-toggles';
+@import 'forms/form-password';
+@import 'forms/form-select';
+@import 'forms/form-transfer';
+@import 'forms/form-datepicker';
+// ------------------------------
 
-// header
-@import 'custom/headerslim';
-@import 'custom/headerslimtheme';
-@import 'custom/headercenter';
-@import 'custom/headercentertheme';
-@import 'custom/headernavbar';
-@import 'custom/headernavbartheme';
-@import 'custom/header';
+// Timepicker
+@import 'components/timepicker';
+// ------------------------------
 
-// footer
-@import 'custom/footer';
+// Nav & Header
+@import 'components/nav';
+@import 'components/navbar';
+@import 'components/headerslim';
+@import 'components/headerslimtheme';
+@import 'components/headercenter';
+@import 'components/headercentertheme';
+@import 'components/headernavbar';
+@import 'components/headernavbartheme';
+@import 'components/header';
+// ------------------------------
 
-// navigation theme
-@import 'custom/navigationtheme';
+// Footer
+@import 'components/footer';
+// ------------------------------
 
-// componente di esempio
-@import 'custom/componente-base';
+// Navigation theme
+@import 'components/navigationtheme';
+// ------------------------------
 
-//gestione dei focus
+// Componente di esempio
+@import 'components/componente-base';
+// ------------------------------
+
+// Gestione dei focus
 @import 'utilities/focus';
 @import 'utilities/icons';
+// ------------------------------
