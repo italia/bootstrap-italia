@@ -269,7 +269,6 @@ class Tab extends BaseComponent {
  */
 
 if (typeof window !== 'undefined' && typeof document !== 'undefined') {
-
   EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function (event) {
     if (['A', 'AREA'].includes(this.tagName)) {
       event.preventDefault()

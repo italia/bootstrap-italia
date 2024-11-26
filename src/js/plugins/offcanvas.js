@@ -213,7 +213,6 @@ class Offcanvas extends BaseComponent {
  */
 
 if (typeof window !== 'undefined' && typeof document !== 'undefined') {
-
   EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function (event) {
     const target = getElementFromSelector(this)
 
@@ -257,7 +256,6 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
   })
 
   enableDismissTrigger(Offcanvas)
-
 }
 
 export default Offcanvas
