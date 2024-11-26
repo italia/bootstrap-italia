@@ -322,37 +322,40 @@ class Modal extends BaseComponent {
  * Data API implementation
  */
 
-EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function (event) {
-  const target = getElementFromSelector(this)
+if (typeof window !== 'undefined' && typeof document !== 'undefined') {
 
-  if (['A', 'AREA'].includes(this.tagName)) {
-    event.preventDefault()
-  }
+  EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function (event) {
+    const target = getElementFromSelector(this)
 
-  EventHandler.one(target, EVENT_SHOW, (showEvent) => {
-    if (showEvent.defaultPrevented) {
-      // only register focus restorer if modal will actually get shown
-      return
+    if (['A', 'AREA'].includes(this.tagName)) {
+      event.preventDefault()
     }
 
-    EventHandler.one(target, EVENT_HIDDEN, () => {
-      if (isVisible(this)) {
-        this.focus()
+    EventHandler.one(target, EVENT_SHOW, (showEvent) => {
+      if (showEvent.defaultPrevented) {
+        // only register focus restorer if modal will actually get shown
+        return
       }
+
+      EventHandler.one(target, EVENT_HIDDEN, () => {
+        if (isVisible(this)) {
+          this.focus()
+        }
+      })
     })
+
+    // avoid conflict when clicking modal toggler while another one is open
+    const alreadyOpen = SelectorEngine.findOne(OPEN_SELECTOR)
+    if (alreadyOpen) {
+      Modal.getInstance(alreadyOpen).hide()
+    }
+
+    const data = Modal.getOrCreateInstance(target)
+
+    data.toggle(this)
   })
 
-  // avoid conflict when clicking modal toggler while another one is open
-  const alreadyOpen = SelectorEngine.findOne(OPEN_SELECTOR)
-  if (alreadyOpen) {
-    Modal.getInstance(alreadyOpen).hide()
-  }
-
-  const data = Modal.getOrCreateInstance(target)
-
-  data.toggle(this)
-})
-
-enableDismissTrigger(Modal)
+  enableDismissTrigger(Modal)
+}
 
 export default Modal

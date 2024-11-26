@@ -268,25 +268,28 @@ class Tab extends BaseComponent {
  * Data API implementation
  */
 
-EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function (event) {
-  if (['A', 'AREA'].includes(this.tagName)) {
-    event.preventDefault()
-  }
+if (typeof window !== 'undefined' && typeof document !== 'undefined') {
 
-  if (isDisabled(this)) {
-    return
-  }
+  EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function (event) {
+    if (['A', 'AREA'].includes(this.tagName)) {
+      event.preventDefault()
+    }
 
-  Tab.getOrCreateInstance(this).show()
-})
+    if (isDisabled(this)) {
+      return
+    }
 
-/**
- * Initialize on focus
- */
-EventHandler.on(window, EVENT_LOAD_DATA_API, () => {
-  for (const element of SelectorEngine.find(SELECTOR_DATA_TOGGLE_ACTIVE)) {
-    Tab.getOrCreateInstance(element)
-  }
-})
+    Tab.getOrCreateInstance(this).show()
+  })
+
+  /**
+   * Initialize on focus
+   */
+  EventHandler.on(window, EVENT_LOAD_DATA_API, () => {
+    for (const element of SelectorEngine.find(SELECTOR_DATA_TOGGLE_ACTIVE)) {
+      Tab.getOrCreateInstance(element)
+    }
+  })
+}
 
 export default Tab

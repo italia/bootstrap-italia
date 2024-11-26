@@ -212,48 +212,52 @@ class Offcanvas extends BaseComponent {
  * Data API implementation
  */
 
-EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function (event) {
-  const target = getElementFromSelector(this)
+if (typeof window !== 'undefined' && typeof document !== 'undefined') {
 
-  if (['A', 'AREA'].includes(this.tagName)) {
-    event.preventDefault()
-  }
+  EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function (event) {
+    const target = getElementFromSelector(this)
 
-  if (isDisabled(this)) {
-    return
-  }
+    if (['A', 'AREA'].includes(this.tagName)) {
+      event.preventDefault()
+    }
 
-  EventHandler.one(target, EVENT_HIDDEN, () => {
-    // focus on trigger when it is closed
-    if (isVisible(this)) {
-      this.focus()
+    if (isDisabled(this)) {
+      return
+    }
+
+    EventHandler.one(target, EVENT_HIDDEN, () => {
+      // focus on trigger when it is closed
+      if (isVisible(this)) {
+        this.focus()
+      }
+    })
+
+    // avoid conflict when clicking a toggler of an offcanvas, while another is open
+    const alreadyOpen = SelectorEngine.findOne(OPEN_SELECTOR)
+    if (alreadyOpen && alreadyOpen !== target) {
+      Offcanvas.getInstance(alreadyOpen).hide()
+    }
+
+    const data = Offcanvas.getOrCreateInstance(target)
+    data.toggle(this)
+  })
+
+  EventHandler.on(window, EVENT_LOAD_DATA_API, () => {
+    for (const selector of SelectorEngine.find(OPEN_SELECTOR)) {
+      Offcanvas.getOrCreateInstance(selector).show()
     }
   })
 
-  // avoid conflict when clicking a toggler of an offcanvas, while another is open
-  const alreadyOpen = SelectorEngine.findOne(OPEN_SELECTOR)
-  if (alreadyOpen && alreadyOpen !== target) {
-    Offcanvas.getInstance(alreadyOpen).hide()
-  }
-
-  const data = Offcanvas.getOrCreateInstance(target)
-  data.toggle(this)
-})
-
-EventHandler.on(window, EVENT_LOAD_DATA_API, () => {
-  for (const selector of SelectorEngine.find(OPEN_SELECTOR)) {
-    Offcanvas.getOrCreateInstance(selector).show()
-  }
-})
-
-EventHandler.on(window, EVENT_RESIZE, () => {
-  for (const element of SelectorEngine.find('[aria-modal][class*=show][class*=offcanvas-]')) {
-    if (getComputedStyle(element).position !== 'fixed') {
-      Offcanvas.getOrCreateInstance(element).hide()
+  EventHandler.on(window, EVENT_RESIZE, () => {
+    for (const element of SelectorEngine.find('[aria-modal][class*=show][class*=offcanvas-]')) {
+      if (getComputedStyle(element).position !== 'fixed') {
+        Offcanvas.getOrCreateInstance(element).hide()
+      }
     }
-  }
-})
+  })
 
-enableDismissTrigger(Offcanvas)
+  enableDismissTrigger(Offcanvas)
+
+}
 
 export default Offcanvas

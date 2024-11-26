@@ -264,11 +264,12 @@ class ScrollSpy extends BaseComponent {
 /**
  * Data API implementation
  */
-
-EventHandler.on(window, EVENT_LOAD_DATA_API, () => {
-  for (const spy of SelectorEngine.find(SELECTOR_DATA_SPY)) {
-    ScrollSpy.getOrCreateInstance(spy)
-  }
-})
+if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+  EventHandler.on(window, EVENT_LOAD_DATA_API, () => {
+    for (const spy of SelectorEngine.find(SELECTOR_DATA_SPY)) {
+      ScrollSpy.getOrCreateInstance(spy)
+    }
+  })
+}
 
 export default ScrollSpy

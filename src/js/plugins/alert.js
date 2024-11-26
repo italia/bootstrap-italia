@@ -62,6 +62,8 @@ class Alert extends BaseComponent {
  * Data API implementation
  */
 
-enableDismissTrigger(Alert, 'close')
+if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+  enableDismissTrigger(Alert, 'close')
+}
 
 export default Alert

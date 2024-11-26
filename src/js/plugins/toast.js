@@ -202,7 +202,8 @@ class Toast extends BaseComponent {
 /**
  * Data API implementation
  */
-
-enableDismissTrigger(Toast)
+if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+  enableDismissTrigger(Toast)
+}
 
 export default Toast

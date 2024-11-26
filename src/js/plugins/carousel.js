@@ -406,40 +406,42 @@ class Carousel extends BaseComponent {
  * Data API implementation
  */
 
-EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_SLIDE, function (event) {
-  const target = getElementFromSelector(this)
+if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+  EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_SLIDE, function (event) {
+    const target = getElementFromSelector(this)
 
-  if (!target || !target.classList.contains(CLASS_NAME_CAROUSEL)) {
-    return
-  }
+    if (!target || !target.classList.contains(CLASS_NAME_CAROUSEL)) {
+      return
+    }
 
-  event.preventDefault()
+    event.preventDefault()
 
-  const carousel = Carousel.getOrCreateInstance(target)
-  const slideIndex = this.getAttribute('data-bs-slide-to')
+    const carousel = Carousel.getOrCreateInstance(target)
+    const slideIndex = this.getAttribute('data-bs-slide-to')
 
-  if (slideIndex) {
-    carousel.to(slideIndex)
+    if (slideIndex) {
+      carousel.to(slideIndex)
+      carousel._maybeEnableCycle()
+      return
+    }
+
+    if (Manipulator.getDataAttribute(this, 'slide') === 'next') {
+      carousel.next()
+      carousel._maybeEnableCycle()
+      return
+    }
+
+    carousel.prev()
     carousel._maybeEnableCycle()
-    return
-  }
+  })
 
-  if (Manipulator.getDataAttribute(this, 'slide') === 'next') {
-    carousel.next()
-    carousel._maybeEnableCycle()
-    return
-  }
+  EventHandler.on(window, EVENT_LOAD_DATA_API, () => {
+    const carousels = SelectorEngine.find(SELECTOR_DATA_RIDE)
 
-  carousel.prev()
-  carousel._maybeEnableCycle()
-})
-
-EventHandler.on(window, EVENT_LOAD_DATA_API, () => {
-  const carousels = SelectorEngine.find(SELECTOR_DATA_RIDE)
-
-  for (const carousel of carousels) {
-    Carousel.getOrCreateInstance(carousel)
-  }
-})
+    for (const carousel of carousels) {
+      Carousel.getOrCreateInstance(carousel)
+    }
+  })
+}
 
 export default Carousel

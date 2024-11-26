@@ -256,18 +256,20 @@ class Collapse extends BaseComponent {
  * Data API implementation
  */
 
-EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function (event) {
-  // preventDefault only for <a> elements (which change the URL) not inside the collapsible element
-  if (event.target.tagName === 'A' || (event.delegateTarget && event.delegateTarget.tagName === 'A')) {
-    event.preventDefault()
-  }
+if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+  EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function (event) {
+    // preventDefault only for <a> elements (which change the URL) not inside the collapsible element
+    if (event.target.tagName === 'A' || (event.delegateTarget && event.delegateTarget.tagName === 'A')) {
+      event.preventDefault()
+    }
 
-  const selector = getSelectorFromElement(this)
-  const selectorElements = SelectorEngine.find(selector)
+    const selector = getSelectorFromElement(this)
+    const selectorElements = SelectorEngine.find(selector)
 
-  for (const element of selectorElements) {
-    Collapse.getOrCreateInstance(element, { toggle: false }).toggle()
-  }
-})
+    for (const element of selectorElements) {
+      Collapse.getOrCreateInstance(element, { toggle: false }).toggle()
+    }
+  })
+}
 
 export default Collapse

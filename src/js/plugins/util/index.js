@@ -224,7 +224,13 @@ const onDOMContentLoaded = (callback) => {
   }
 }
 
-const isRTL = () => document.documentElement.dir === 'rtl'
+const isRTL = () => {
+  if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+    return document.documentElement.dir === 'rtl'
+  } else {
+    return false
+  }
+}
 
 const execute = (callback) => {
   if (typeof callback === 'function') {
