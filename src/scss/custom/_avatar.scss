@@ -418,7 +418,7 @@ a.avatar {
     &:last-child {
       margin-bottom: 0;
     }
-    // link
+
     .list-item {
       display: inline-flex;
       align-items: center;
@@ -426,25 +426,32 @@ a.avatar {
       line-height: 1em;
       .avatar {
         margin-right: 12px;
-        //reset color & font size for avatar
+
         p {
           font-size: 1rem;
         }
+
         &.avatar-primary,
         &.avatar-secondary,
         &.avatar-green,
         &.avatar-orange,
         &.avatar-red {
+
           p {
             color: $white;
             line-height: 0;
           }
         }
       }
+
       span {
         margin: 0;
         font-size: 0.875rem;
         font-weight: 600;
+      }
+
+      a span {
+        text-decoration: underline;
       }
     }
   }
