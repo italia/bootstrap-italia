@@ -65,7 +65,6 @@
 @import 'components/hero';
 @import 'components/forward';
 @import 'components/back-to-top';
-@import 'components/autocomplete';
 @import 'components/list-group';
 @import 'components/linklist';
 @import 'components/navigation';
@@ -111,7 +110,6 @@
 @import 'components/code';
 @import 'components/images';
 @import 'components/just-validate';
-@import 'components/accessible-autocomplete';
 @import 'components/page-scroll';
 @import 'components/pagination';
 @import 'components/toasts';
@@ -133,6 +131,9 @@
 @import 'forms/form-toggles';
 @import 'forms/form-password';
 @import 'forms/form-select';
+@import 'forms/form-transfer';
+@import 'forms/accessible-autocomplete';
+@import 'forms/autocomplete';
 // ------------------------------
 
 // Nav & Header
