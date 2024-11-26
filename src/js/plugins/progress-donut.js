@@ -6,7 +6,7 @@
  * --------------------------------------------------------------------------
  */
 
-import ProgressBar from 'progressbar.js'
+import Circle from 'progressbar.js/src/circle.js'
 import BaseComponent from './base-component.js'
 import SelectorEngine from './dom/selector-engine'
 import Manipulator from './dom/manipulator'
@@ -91,7 +91,7 @@ class ProgressDonut extends BaseComponent {
   }
 
   _init() {
-    this._bar = new ProgressBar.Circle(this._element, this._config)
+    this._bar = new Circle(this._element, this._config)
 
     if (this._config.value > 0) {
       this.set(this._config.value)
