@@ -222,14 +222,14 @@ Lista verticale di Avatar di dimensione piccola con classe `.size-sm`.
 <div class="link-list-wrapper">
   <ul class="link-list avatar-group">
     <li>
-      <a class="dropdown-item list-item" href="#">
+      <a class="list-item" href="#">
         <div class="avatar size-sm"><img src="https://randomuser.me/api/portraits/men/43.jpg" alt="" aria-hidden="true">
         </div>
         <span>Mario Rossi</span>
       </a>
     </li>
     <li>
-      <a class="dropdown-item list-item" href="#">
+      <a class="list-item" href="#">
         <div class="avatar avatar-orange size-sm complementary-3-bg">
           <p aria-hidden="true">A</p>
         </div>
