@@ -8,7 +8,7 @@ toc: true
 
 ## Struttura di un componente
 
-Ogni componente può avere una personalizzazione di stile e di funzionalità, preferibilmente attraverso l'utilizzo di un singolo file `scss` nella cartella `src/scss/custom/` e, opzionalmente, di un file `javascript` nella cartella `src/js/plugins/`. Questo permette di avere una struttura dei file semplice da comprendere e di più facile manutenzione.
+Ogni componente può avere una personalizzazione di stile e di funzionalità, preferibilmente attraverso l'utilizzo di un singolo file `scss` nella cartella `src/scss/components/` e, opzionalmente, di un file `javascript` nella cartella `src/js/plugins/`. Questo permette di avere una struttura dei file semplice da comprendere e di più facile manutenzione.
 
 Queste due cartelle, assieme alla cartella `docs` per la stesura della documentazione, sono le uniche cartelle dove avviene l'editing dei componenti.
 
@@ -30,7 +30,7 @@ Nel caso di un nuovo componente, sarà necessario aggiungere un nuovo file `.md`
 
 I componenti base ereditano ovviamente stili e funzionalità da [Bootstrap {{ site.bootstrap_version }}][documentazione-bootstrap], di cui si può trovare il codice sorgente all'interno di `node_modules/bootstrap/`. Ovviamente, la consultazione di tale codice servirà soltanto come riferimento e nessun file all'interno di `node_modules` andrà modificato, ma esteso utilizzando quanto più possibile le variabili che Bootstrap {{ site.bootstrap_version }} mette a disposizione.
 
-Per la personalizzazione dello stile di tali componenti, andranno infatti sovrascritte o aggiunte variabili nella cartella `src/scss/_variables.scss`; oppure, in caso non sia sufficiente sovrascrivere variabili, aggiungere o modificare classi e proprietà nella cartella `src/scss/custom/`. Si può notare le modalità con cui il file `bootstrap-italia.scss` importa ed estende secondo un preciso ordine gli stili e le funzioni di base di Bootstrap {{ site.bootstrap_version }}.
+Per la personalizzazione dello stile di tali componenti, andranno infatti sovrascritte o aggiunte variabili nella cartella `src/scss/_variables.scss`; oppure, in caso non sia sufficiente sovrascrivere variabili, aggiungere o modificare classi e proprietà nella cartella `src/scss/components/`. Si può notare le modalità con cui il file `bootstrap-italia.scss` importa ed estende secondo un preciso ordine gli stili e le funzioni di base di Bootstrap {{ site.bootstrap_version }}.
 
 Il componente dovrebbe utilizzare una classe base `.nome-componente`, che ne definisce gli stili, e dei modificatori (se necessari) che ne possano alterare alcune proprietà (es.: `.nome-componente-sm`, `.nome-componente-primary`, ecc.).
 

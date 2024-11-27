@@ -22,7 +22,7 @@ Il file `docs/come-iniziare/componente-base.md` è il codice `markdown` sorgente
 
 ### Stile
 
-Il file `src/scss/custom/_componente-base.scss` permette al componente di avere sfondo e padding personalizzati. Si può notare in questo file l'utilizzo di variabili definite all'interno della libreria Bootstrap {{ site.bootstrap_version }} o Bootstrap Italia.
+Il file `src/scss/components/_componente-base.scss` permette al componente di avere sfondo e padding personalizzati. Si può notare in questo file l'utilizzo di variabili definite all'interno della libreria Bootstrap {{ site.bootstrap_version }} o Bootstrap Italia.
 
 ### Comportamento dinamico
 

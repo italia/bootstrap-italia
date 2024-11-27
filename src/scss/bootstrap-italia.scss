@@ -6,7 +6,7 @@
 // ------------------------------
 
 // Funzioni
-@import 'base/functions'; // merge with base/functions?
+@import 'base/functions';
 // ------------------------------
 
 // Variabili
@@ -15,11 +15,11 @@
 // ------------------------------
 
 // Colori
-@import 'utilities/colors';
+@import 'utilities/colors'; // move to base/utilities?
 // ------------------------------
 
 // Funzioni, mixin e variabili
-@import 'base/variables';
+@import 'base/variables'; // merge with base/variables or variables?
 @import 'base/mixins';
 @import 'base/maps';
 @import 'base/utilities';
@@ -30,17 +30,22 @@
 @import 'base/reboot';
 @import 'base/containers';
 @import 'base/transitions';
-@import 'base/offcanvas';
-@import 'base/placeholders';
+@import 'base/offcanvas'; // what is this?
+@import 'base/placeholders'; // what is this? is it used?
 // ------------------------------
 
 // Helpers
 @import 'base/helpers';
 // ------------------------------
 
-// Utilities
+// Dev utilities
 @import 'base/utilities/api';
-@import 'utilities/text-colors';
+@import 'utilities/text-colors'; // move to base/utilities?
+// ------------------------------
+
+// Utilities
+@import 'utilities/focus';
+@import 'utilities/icons';
 // ------------------------------
 
 // Componenti
@@ -156,9 +161,4 @@
 
 // Componente di esempio
 @import 'components/componente-base';
-// ------------------------------
-
-// Gestione dei focus
-@import 'utilities/focus';
-@import 'utilities/icons';
 // ------------------------------
