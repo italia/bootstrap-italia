@@ -334,7 +334,7 @@ Per utilizzare l'immagine orizzontale, occorre aggiungere la classe `.it-grid-it
 
 Masonry è incluso in Bootstrap Italia.
 
-Per un elenco di tutti i possibili parametri di configurazione consultare la [documentazione completa](https://masonry.desandro.com/).
+Per un elenco di tutti i possibili parametri di configurazione consultare la [documentazione completa](https://github.com/Spope/MiniMasonry.js).
 
 Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'effetto Masonry sulla griglia responsiva.
 

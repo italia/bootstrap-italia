@@ -133,6 +133,13 @@
   }
 }
 
+.it-masonry {
+  position: relative;
+  & > div {
+    position: absolute;
+  }
+}
+
 //small - tablet
 @include media-breakpoint-up(sm) {
   .it-masonry {
