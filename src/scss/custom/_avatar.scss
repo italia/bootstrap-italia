@@ -29,7 +29,7 @@
     line-height: 1em;
     position: absolute;
   }
-  
+
   .icon {
     height: 16px; // default size equals to md
     width: 16px;
@@ -42,19 +42,19 @@
   &.avatar-secondary {
     background: $secondary;
   }
-  
+
   &.avatar-green {
     background: $green;
   }
-  
+
   &.avatar-orange {
     background: $orange;
   }
-  
+
   &.avatar-red {
     background: $red;
   }
-  
+
   &.avatar-primary,
   &.avatar-secondary,
   &.avatar-green,
@@ -78,42 +78,42 @@
       align-items: center;
       height: 100%;
     }
-    
+
     .btn-dropdown {
       color: inherit;
       padding: 0;
       line-height: 0;
       font-size: 0.75rem;
     }
-    
+
     .list-item {
       display: flex;
       align-items: center;
       padding: 0 16px;
       font-size: 0.875rem;
     }
-    
+
     .link-list {
       white-space: nowrap;
-      
+
       span {
         line-height: 1em;
       }
-      
+
       li {
         margin-bottom: 16px;
         &:last-child {
           margin-bottom: 0;
         }
       }
-      
+
       .avatar {
         margin-right: 16px;
-      
+
         &.size-sm {
           margin-right: 12px;
         }
-      
+
         p {
           color: $white !important;
         }
@@ -128,137 +128,137 @@
   &.size-xs {
     width: $avatar-base-size * 2;
     height: $avatar-base-size * 2;
-    
+
     p {
       font-size: 0.625rem;
     }
-    
+
     .icon {
       height: 10px;
       width: 10px;
     }
   }
-  
+
   &.size-sm {
     width: $avatar-base-size * 3;
     height: $avatar-base-size * 3;
-  
+
     p {
       font-size: 0.875rem;
     }
-  
+
     .icon {
       height: 12px;
       width: 12px;
     }
   }
-  
+
   &.size-md {
     width: $avatar-base-size * 4;
     height: $avatar-base-size * 4;
-  
+
     p {
       font-size: 1rem;
     }
-  
+
     .icon {
       height: 16px;
       width: 16px;
     }
-  
+
     .avatar-presence,
     .avatar-status {
       border-width: 1px;
-   
+
       .icon {
         display: none;
       }
     }
   }
-  
+
   &.size-lg {
     width: $avatar-base-size * 5;
     height: $avatar-base-size * 5;
-  
+
     p {
       font-size: 1.125rem;
     }
-  
+
     .icon {
       height: 20px;
       width: 20px;
     }
-  
+
     .avatar-presence,
     .avatar-status {
       right: -2px;
       width: 15px;
       height: 15px;
     }
-  
+
     .avatar-status {
       top: math.div($avatar-base-size, 48);
     }
   }
-  
+
   &.size-xl {
     width: $avatar-base-size * 10;
     height: $avatar-base-size * 10;
-  
+
     p {
       font-size: 2.25rem;
     }
-  
+
     .icon {
       height: 40px;
       width: 40px;
     }
-  
+
     .avatar-presence,
     .avatar-status {
       right: 6px;
       width: 18px;
       height: 18px;
     }
-  
+
     .avatar-presence {
       bottom: $avatar-base-size;
     }
-  
+
     .avatar-status {
       top: $avatar-base-size * 0.25;
     }
   }
-  
+
   &.size-xxl {
     width: $avatar-base-size * 16;
     height: $avatar-base-size * 16;
-  
+
     p {
       font-size: 58px;
     }
-  
+
     .icon {
       height: 62px;
       width: 62px;
     }
-  
+
     .avatar-presence,
     .avatar-status {
       right: 4px;
       width: 24px;
       height: 24px;
-  
+
       .icon {
         width: 20px;
         height: 20px;
       }
     }
-  
+
     .avatar-presence {
       bottom: $avatar-base-size * 2;
     }
-  
+
     .avatar-status {
       top: $avatar-base-size;
     }
@@ -270,27 +270,27 @@ a.avatar {
 
   &:hover {
     background: shade-color($color-background-secondary-lighter, 5%);
-  
+
     img {
       filter: brightness(90%);
     }
-  
+
     &.avatar-primary {
       background: shade-color($primary, 5%);
     }
-  
+
     &.avatar-secondary {
       background: shade-color($secondary, 5%);
     }
-  
+
     &.avatar-green {
       background: shade-color($green, 5%);
     }
-  
+
     &.avatar-orange {
       background: shade-color($orange, 5%);
     }
-  
+
     &.avatar-red {
       background: shade-color($red, 12%);
     }
@@ -298,12 +298,11 @@ a.avatar {
 }
 
 .avatar-dropdown {
-  
   &:hover,
   &:focus-within {
     background: shade-color($color-background-secondary-lighter, 5%);
   }
-  
+
   .btn-dropdown:focus {
     box-shadow: none;
   }
@@ -336,15 +335,15 @@ a.avatar {
 
   .avatar-presence {
     bottom: $avatar-base-size;
-    
+
     &.active {
       background: $green;
     }
-    
+
     &.busy {
       background: $red;
     }
-    
+
     &.hidden {
       &:after {
         content: '';
@@ -362,15 +361,15 @@ a.avatar {
 
   .avatar-status {
     top: 0;
-    
+
     &.approved {
       background: $green;
     }
-    
+
     &.declined {
       background: $red;
     }
-    
+
     &.notify {
       background: $primary-b1;
     }
@@ -400,7 +399,7 @@ a.avatar {
           display: inline-block;
         }
       }
-      
+
       p,
       time {
         margin: 0;
@@ -436,7 +435,6 @@ a.avatar {
         &.avatar-green,
         &.avatar-orange,
         &.avatar-red {
-
           p {
             color: $white;
             line-height: 0;
