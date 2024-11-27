@@ -6,20 +6,19 @@
 // ------------------------------
 
 // Funzioni
-@import 'functions';
+@import 'base/functions'; // merge with base/functions?
 // ------------------------------
 
 // Variabili
-@import 'utilities/colors_vars';
-@import 'variables';
+@import 'utilities/colors_vars'; // merge with base/variables or variables?
+@import 'variables'; // merge with base/variables or variables?
 // ------------------------------
 
 // Colori
 @import 'utilities/colors';
 // ------------------------------
 
-// Configurazione
-@import 'base/functions';
+// Funzioni, mixin e variabili
 @import 'base/variables';
 @import 'base/mixins';
 @import 'base/maps';
@@ -41,9 +40,8 @@
 
 // Utilities
 @import 'base/utilities/api';
-// ------------------------------
-
 @import 'utilities/text-colors';
+// ------------------------------
 
 // Componenti
 @import 'components/type';
