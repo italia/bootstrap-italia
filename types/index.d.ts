@@ -36,6 +36,8 @@ import { Tooltip } from './plugins/tooltip'
 import { TrackFocus } from './plugins/track-focus'
 import { Transfer } from './plugins/transfer'
 import { UploadDragDrop } from './plugins/upload-dragdrop'
+import { VideoPlayer } from './plugins/video'
+
 import { loadFonts } from './plugins/fonts-loader'
 
 export {
@@ -78,5 +80,6 @@ export {
   TrackFocus,
   Transfer,
   UploadDragDrop,
+  VideoPlayer,
   loadFonts
 }
