@@ -29,6 +29,7 @@
 // here to override any conflicting "bootstrap/scss/functions" definitions
 @import '../../../../src/scss/base/mixins';
 // Load docs components
+@import '../../../../src/scss/utilities/focus';
 @import 'colors';
 @import 'nav';
 @import 'masthead';
