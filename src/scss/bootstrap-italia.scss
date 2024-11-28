@@ -10,16 +10,16 @@
 // ------------------------------
 
 // Variabili
-@import 'utilities/colors_vars'; // merge with base/variables or variables?
-@import 'variables'; // merge with base/variables or variables?
+@import 'utilities/colors_vars'; // 1️⃣ merge with base/variables or variables?
+@import 'variables'; // 1️⃣ merge with base/variables or variables?
 // ------------------------------
 
 // Colori
-@import 'utilities/colors'; // move to base/utilities?
+@import 'utilities/colors'; // 2️⃣ move to base/utilities?
 // ------------------------------
 
 // Funzioni, mixin e variabili
-@import 'base/variables'; // merge with base/variables or variables?
+@import 'base/variables'; // 1️⃣ merge with base/variables or variables?
 @import 'base/mixins';
 @import 'base/maps';
 @import 'base/utilities';
@@ -30,8 +30,6 @@
 @import 'base/reboot';
 @import 'base/containers';
 @import 'base/transitions';
-@import 'base/offcanvas'; // what is this?
-@import 'base/placeholders'; // what is this? is it used?
 // ------------------------------
 
 // Helpers
@@ -40,7 +38,7 @@
 
 // Dev utilities
 @import 'base/utilities/api';
-@import 'utilities/text-colors'; // move to base/utilities?
+@import 'utilities/text-colors'; // 2️⃣ move to base/utilities?
 // ------------------------------
 
 // Utilities
@@ -70,6 +68,7 @@
 @import 'components/back-to-top';
 @import 'components/list-group';
 @import 'components/linklist';
+@import 'components/offcanvas';  // Keep?
 @import 'components/navigation';
 @import 'components/skiplinks';
 @import 'components/affix';
@@ -115,6 +114,7 @@
 @import 'components/just-validate';
 @import 'components/page-scroll';
 @import 'components/pagination';
+@import 'components/placeholders'; // Keep?
 @import 'components/toasts';
 // ------------------------------
 
