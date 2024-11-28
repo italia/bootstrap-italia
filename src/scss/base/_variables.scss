@@ -149,7 +149,6 @@ $theme-colors: map-merge(
 // Characters which are escaped by the escape-svg function
 $escaped-characters: (('<', '%3c'), ('>', '%3e'), ('#', '%23'), ('(', '%28'), (')', '%29')) !default;
 
-
 // ACCENT COLORS DEFINITIONS
 // analoghi
 $analogue-1-h: 243;
@@ -632,7 +631,6 @@ $display-font-style: null !default;
 $display-font-weight: 300 !default;
 $display-line-height: $headings-line-height !default;
 
-
 // Border Radius - using pixels instead or rems as it has to be consistent across devices
 $border-radius: 4px !default;
 $border-radius-sm: 2px !default;
@@ -641,8 +639,6 @@ $border-radius-xl: 1rem !default;
 $border-radius-2xl: 2rem !default;
 $border-radius-pill: 50rem !default;
 $radius-rounded: 40px;
-
-
 
 // =======
 
@@ -813,7 +809,7 @@ $btn-transition:
 $btn-link-color: var(--#{$prefix}link-color) !default;
 $btn-link-hover-color: var(--#{$prefix}link-hover-color) !default;
 $btn-link-disabled-color: $gray-600 !default;
-  
+
 // Forms
 
 // scss-docs-start form-text-variables
@@ -1065,7 +1061,6 @@ $form-validation-states: (
   ),
 ) !default;
 // scss-docs-end form-validation-states
-
 
 // Close
 
@@ -1332,7 +1327,6 @@ $carousel-caption-color: $white !default;
 $carousel-caption-padding-y: 1.25rem !default;
 $carousel-caption-spacer: 1.25rem !default;
 
-
 $carousel-transition-duration: 0.6s !default;
 $carousel-transition: transform $carousel-transition-duration ease-in-out !default; // Define transform transition first if using multiple transitions (e.g., `transform 2s ease, opacity .5s ease-out`)
 
@@ -1392,7 +1386,6 @@ $pagination-border-radius-lg: $border-radius-lg !default;
 $placeholder-opacity-max: 0.5 !default;
 $placeholder-opacity-min: 0.2 !default;
 // scss-docs-end placeholders
-
 
 // Cards
 $card-cap-bg: transparent !default;
@@ -1556,7 +1549,6 @@ $dropdown-menu-notch-base-size: 6px;
 $dropdown-menu-notch-position-x: 24px;
 $dropdown-menu-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.1);
 
-
 // Dropddown dark
 
 $dropdown-dark-color: $gray-300 !default;
@@ -1571,7 +1563,6 @@ $dropdown-dark-link-active-color: $dropdown-link-active-color !default;
 $dropdown-dark-link-active-bg: $dropdown-link-active-bg !default;
 $dropdown-dark-link-disabled-color: $gray-500 !default;
 $dropdown-dark-header-color: $gray-500 !default;
-
 
 // Navs
 
@@ -1647,7 +1638,6 @@ $navbar-dark-toggler-border-color: rgba($white, 0.1) !default;
 $navbar-dark-brand-color: $navbar-dark-active-color !default;
 $navbar-dark-brand-hover-color: $navbar-dark-active-color !default;
 // scss-docs-end navbar-dark-variables
-
 
 $navigation-bg-color: $white !default;
 $navigation-bg-color-desktop: $primary !default;
@@ -2065,7 +2055,6 @@ $container-max-widths: (
 
 $container-padding-x: $grid-gutter-width !default;
 
-
 // Popovers
 
 // scss-docs-start popover-variables
@@ -2126,7 +2115,6 @@ $badge-color: $white !default;
 $badge-padding-y: 0.25em;
 $badge-padding-x: 0.4em;
 $badge-border-radius: $border-radius !default;
-
 
 //Autocomplete
 $autocomplete-border: 1px solid $gray-400 !default;
