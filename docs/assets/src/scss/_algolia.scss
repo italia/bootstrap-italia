@@ -2,6 +2,10 @@
   display: block !important;
   flex: 1;
 
+  & > input:focus:not(.focus--mouse) {
+    @extend %focus;
+  }
+
   .ds-dropdown-menu {
     width: 100%;
     min-width: 0 !important;
