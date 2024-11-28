@@ -1,3 +1,11 @@
+/**
+ * --------------------------------------------------------------------------
+ * Bootstrap Italia (https://italia.github.io/bootstrap-italia/)
+ * Authors: https://github.com/italia/bootstrap-italia/blob/main/AUTHORS
+ * Licensed under BSD-3-Clause license (https://github.com/italia/bootstrap-italia/blob/main/LICENSE)
+ * --------------------------------------------------------------------------
+ */
+
 import { v4 as uuidv4 } from 'uuid'
 
 let ticking = false
@@ -29,15 +37,17 @@ const onDocumentScroll = (callback) => {
     return
   }
   if (!callbacks.length) {
-    document.addEventListener('scroll', (evt) => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          callbacks.forEach((cbObj) => cbObj.cb._execute(evt))
-          ticking = false
-        })
-        ticking = true
-      }
-    })
+    if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+      document.addEventListener('scroll', (evt) => {
+        if (!ticking) {
+          window.requestAnimationFrame(() => {
+            callbacks.forEach((cbObj) => cbObj.cb._execute(evt))
+            ticking = false
+          })
+          ticking = true
+        }
+      })
+    }
   }
 
   if (typeof callback === 'function') {

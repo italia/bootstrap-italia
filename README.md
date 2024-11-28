@@ -64,7 +64,7 @@ Vengono di seguito elencati i componenti distribuiti con Bootstrap Italia che ha
 - [Accessible Autocomplete](https://alphagov.github.io/accessible-autocomplete) © Crown Copyright (Government Digital Service), licenza MIT
 - [AnimeJS](https://animejs.com) © Julian Garnier, licenza MIT
 - [Just Validate](https://just-validate.dev) © Horprogs, licenza MIT
-- [Masonry Layout](https://masonry.desandro.com) © David DeSandro, licenza MIT
+- [Mini Masonry](https://github.com/Spope/MiniMasonry.js) © Spope, licenza MIT
 - [Progressbar.js](https://kimmobrunfeldt.github.io/progressbar.js) © Kimmo Brunfeldt, licenza MIT
 
 ### Principali dipendenze per la fase di compilazione e sviluppo

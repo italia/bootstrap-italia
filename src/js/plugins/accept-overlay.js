@@ -1,8 +1,16 @@
-import BaseComponent from 'bootstrap/js/src/base-component.js'
+/**
+ * --------------------------------------------------------------------------
+ * Bootstrap Italia (https://italia.github.io/bootstrap-italia/)
+ * Authors: https://github.com/italia/bootstrap-italia/blob/main/AUTHORS
+ * Licensed under BSD-3-Clause license (https://github.com/italia/bootstrap-italia/blob/main/LICENSE)
+ * --------------------------------------------------------------------------
+ */
 
-import { reflow } from 'bootstrap/js/src/util'
+import BaseComponent from './base-component.js'
+
+import { reflow } from './util/index'
 import { cookies } from './util/cookies'
-import SelectorEngine from 'bootstrap/js/src/dom/selector-engine'
+import SelectorEngine from './dom/selector-engine'
 
 const NAME = 'acceptoverlay'
 
@@ -113,12 +121,12 @@ class AcceptOverlay extends BaseComponent {
  * Data Api implementation
  * ------------------------------------------------------------------------
  */
-
-const acceptOverlays = SelectorEngine.find(SELECTOR_DATA_TOGGLE)
-if (acceptOverlays.length > 0) {
-  acceptOverlays.forEach((element) => {
-    AcceptOverlay.getOrCreateInstance(element, { service: element.dataset.bsAcceptFrom })
-  })
+if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+  const acceptOverlays = SelectorEngine.find(SELECTOR_DATA_TOGGLE)
+  if (acceptOverlays.length > 0) {
+    acceptOverlays.forEach((element) => {
+      AcceptOverlay.getOrCreateInstance(element, { service: element.dataset.bsAcceptFrom })
+    })
+  }
 }
-
 export default AcceptOverlay

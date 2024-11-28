@@ -60,7 +60,7 @@ Software components distributed with Bootstrap Italia that have their own differ
 - [Accessible Autocomplete](https://alphagov.github.io/accessible-autocomplete) © Crown Copyright (Government Digital Service), MIT license
 - [AnimeJS](https://animejs.com) © Julian Garnier, MIT license
 - [Just Validate](https://just-validate.dev) © Horprogs, MIT license
-- [Masonry Layout](https://masonry.desandro.com) © David DeSandro, MIT license
+- [Mini Masonry](https://github.com/Spope/MiniMasonry.js) © Spope, licenza MIT
 - [Progressbar.js](https://kimmobrunfeldt.github.io/progressbar.js) © Kimmo Brunfeldt, MIT license
 
 ### Main dependencies for the compilation and development phase

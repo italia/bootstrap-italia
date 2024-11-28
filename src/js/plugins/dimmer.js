@@ -1,7 +1,15 @@
-import BaseComponent from 'bootstrap/js/src/base-component.js'
+/**
+ * --------------------------------------------------------------------------
+ * Bootstrap Italia (https://italia.github.io/bootstrap-italia/)
+ * Authors: https://github.com/italia/bootstrap-italia/blob/main/AUTHORS
+ * Licensed under BSD-3-Clause license (https://github.com/italia/bootstrap-italia/blob/main/LICENSE)
+ * --------------------------------------------------------------------------
+ */
 
-import { reflow, getElementFromSelector } from 'bootstrap/js/src/util'
-import EventHandler from 'bootstrap/js/src/dom/event-handler'
+import BaseComponent from './base-component.js'
+
+import { reflow, getElementFromSelector } from './util/index'
+import EventHandler from './dom/event-handler'
 
 const NAME = 'dimmer'
 const DATA_KEY = 'bs.dimmer'
@@ -105,11 +113,13 @@ class Dimmer extends BaseComponent {
  * ------------------------------------------------------------------------
  */
 
-EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function () {
-  const dimmerElement = getElementFromSelector(this)
-  const dimmer = Dimmer.getOrCreateInstance(dimmerElement)
+if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+  EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function () {
+    const dimmerElement = getElementFromSelector(this)
+    const dimmer = Dimmer.getOrCreateInstance(dimmerElement)
 
-  this.checked ? dimmer.show() : dimmer.hide()
-})
+    this.checked ? dimmer.show() : dimmer.hide()
+  })
+}
 
 export default Dimmer

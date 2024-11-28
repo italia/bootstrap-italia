@@ -1,7 +1,15 @@
-import BaseComponent from 'bootstrap/js/src/base-component'
-import EventHandler from 'bootstrap/js/src/dom/event-handler'
-import SelectorEngine from 'bootstrap/js/src/dom/selector-engine'
-import Manipulator from 'bootstrap/js/src/dom/manipulator'
+/**
+ * --------------------------------------------------------------------------
+ * Bootstrap Italia (https://italia.github.io/bootstrap-italia/)
+ * Authors: https://github.com/italia/bootstrap-italia/blob/main/AUTHORS
+ * Licensed under BSD-3-Clause license (https://github.com/italia/bootstrap-italia/blob/main/LICENSE)
+ * --------------------------------------------------------------------------
+ */
+
+import BaseComponent from './base-component'
+import EventHandler from './dom/event-handler'
+import SelectorEngine from './dom/selector-engine'
+import Manipulator from './dom/manipulator'
 
 import InputLabel from './input-label'
 
@@ -439,42 +447,44 @@ class InputPassword extends BaseComponent {
  * ------------------------------------------------------------------------
  */
 
-const createInput = (element) => {
-  if (element && element.matches(SELECTOR_PASSWORD)) {
-    return InputPassword.getOrCreateInstance(element)
+if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+  const createInput = (element) => {
+    if (element && element.matches(SELECTOR_PASSWORD)) {
+      return InputPassword.getOrCreateInstance(element)
+    }
+    return null
   }
-  return null
-}
 
-const initInputPassword = () => {
-  const element = SelectorEngine.findOne(SELECTOR_PASSWORD)
-  if (element) {
-    InputPassword.getOrCreateInstance(element)
+  const initInputPassword = () => {
+    const element = SelectorEngine.findOne(SELECTOR_PASSWORD)
+    if (element) {
+      InputPassword.getOrCreateInstance(element)
+    }
   }
-}
 
-if (document.readyState !== 'loading') {
-  initInputPassword()
-} else {
-  document.addEventListener('DOMContentLoaded', initInputPassword)
-}
+  if (document.readyState !== 'loading') {
+    initInputPassword()
+  } else {
+    document.addEventListener('DOMContentLoaded', initInputPassword)
+  }
 
-EventHandler.on(document, EVENT_MOUSEDOWN_DATA_API, SELECTOR_PASSWORD + ', label', function () {
-  const target = InputLabel.getInputFromLabel(this) || this
-  createInput(target)
-})
-EventHandler.on(document, EVENT_KEYUP_DATA_API, SELECTOR_PASSWORD + ', label', function () {
-  const target = InputLabel.getInputFromLabel(this) || this
-  const element = createInput(target)
-  if (element && element._label) {
-    element._label._labelOut()
-  }
-})
-EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_BTN_SHOW_PWD, function () {
-  const target = this.parentNode && this.parentNode.querySelector(SELECTOR_PASSWORD)
-  if (target) {
-    InputPassword.getOrCreateInstance(target)
-  }
-})
+  EventHandler.on(document, EVENT_MOUSEDOWN_DATA_API, SELECTOR_PASSWORD + ', label', function () {
+    const target = InputLabel.getInputFromLabel(this) || this
+    createInput(target)
+  })
+  EventHandler.on(document, EVENT_KEYUP_DATA_API, SELECTOR_PASSWORD + ', label', function () {
+    const target = InputLabel.getInputFromLabel(this) || this
+    const element = createInput(target)
+    if (element && element._label) {
+      element._label._labelOut()
+    }
+  })
+  EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_BTN_SHOW_PWD, function () {
+    const target = this.parentNode && this.parentNode.querySelector(SELECTOR_PASSWORD)
+    if (target) {
+      InputPassword.getOrCreateInstance(target)
+    }
+  })
+}
 
 export default InputPassword

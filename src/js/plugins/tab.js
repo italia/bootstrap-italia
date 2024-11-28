@@ -1,7 +1,15 @@
-import { default as BSTab } from 'bootstrap/js/src/tab'
-import { defineJQueryPlugin, getNextActiveElement, isDisabled } from 'bootstrap/js/src/util/index.js'
-import EventHandler from 'bootstrap/js/src/dom/event-handler.js'
-import SelectorEngine from 'bootstrap/js/src/dom/selector-engine.js'
+/**
+ * --------------------------------------------------------------------------
+ * Bootstrap Italia (https://italia.github.io/bootstrap-italia/)
+ * Authors: https://github.com/italia/bootstrap-italia/blob/main/AUTHORS
+ * Licensed under BSD-3-Clause license (https://github.com/italia/bootstrap-italia/blob/main/LICENSE)
+ * --------------------------------------------------------------------------
+ */
+
+import { default as BSTab } from './base-tab'
+import { getNextActiveElement, isDisabled } from './util/index.js'
+import EventHandler from './dom/event-handler.js'
+import SelectorEngine from './dom/selector-engine.js'
 
 const DATA_KEY = 'bs.tab'
 const EVENT_KEY = `.${DATA_KEY}`
@@ -52,35 +60,31 @@ class Tab extends BSTab {
     }
   }
 }
+if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+  EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function (event) {
+    if (['A', 'AREA'].includes(this.tagName)) {
+      event.preventDefault()
+    }
 
-EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function (event) {
-  if (['A', 'AREA'].includes(this.tagName)) {
-    event.preventDefault()
-  }
+    if (isDisabled(this)) {
+      return
+    }
 
-  if (isDisabled(this)) {
-    return
-  }
-
-  const t = Tab.getOrCreateInstance(this)
-  t.dispose()
-  Tab.getOrCreateInstance(this).show()
-})
-
-/**
- * Initialize on focus
- */
-EventHandler.on(window, EVENT_LOAD_DATA_API, () => {
-  for (const element of SelectorEngine.find(SELECTOR_DATA_TOGGLE_ACTIVE)) {
-    const t = Tab.getOrCreateInstance(element)
+    const t = Tab.getOrCreateInstance(this)
     t.dispose()
-    Tab.getOrCreateInstance(element)
-  }
-})
-/**
- * jQuery
- */
+    Tab.getOrCreateInstance(this).show()
+  })
 
-defineJQueryPlugin(Tab)
+  /**
+   * Initialize on focus
+   */
+  EventHandler.on(window, EVENT_LOAD_DATA_API, () => {
+    for (const element of SelectorEngine.find(SELECTOR_DATA_TOGGLE_ACTIVE)) {
+      const t = Tab.getOrCreateInstance(element)
+      t.dispose()
+      Tab.getOrCreateInstance(element)
+    }
+  })
+}
 
 export default Tab

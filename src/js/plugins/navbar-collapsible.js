@@ -1,15 +1,16 @@
-import BaseComponent from 'bootstrap/js/src/base-component.js'
+/**
+ * --------------------------------------------------------------------------
+ * Bootstrap Italia (https://italia.github.io/bootstrap-italia/)
+ * Authors: https://github.com/italia/bootstrap-italia/blob/main/AUTHORS
+ * Licensed under BSD-3-Clause license (https://github.com/italia/bootstrap-italia/blob/main/LICENSE)
+ * --------------------------------------------------------------------------
+ */
 
-import {
-  //defineJQueryPlugin,
-  getElementFromSelector,
-  isVisible,
-  reflow,
-  //typeCheckConfig,
-  //getSelectorFromElement,
-} from 'bootstrap/js/src/util'
-import EventHandler from 'bootstrap/js/src/dom/event-handler'
-import SelectorEngine from 'bootstrap/js/src/dom/selector-engine'
+import BaseComponent from './base-component.js'
+
+import { getElementFromSelector, isVisible, reflow } from './util/index'
+import EventHandler from './dom/event-handler'
+import SelectorEngine from './dom/selector-engine'
 
 import { isScreenMobile } from './util/device'
 import { getElementIndex } from './util/dom'
@@ -139,33 +140,36 @@ class NavBarCollapsible extends BaseComponent {
   }
 
   dispose() {
-    EventHandler.off(window, EVENT_RESIZE)
-
-    super.dispose()
+    if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+      EventHandler.off(window, EVENT_RESIZE)
+      super.dispose()
+    }
   }
 
   // Private
 
   _bindEvents() {
-    EventHandler.on(window, EVENT_RESIZE, () => this._onResize())
+    if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+      EventHandler.on(window, EVENT_RESIZE, () => this._onResize())
 
-    if (this._overlay) {
-      EventHandler.on(this._overlay, EVENT_CLICK, () => this.hide())
+      if (this._overlay) {
+        EventHandler.on(this._overlay, EVENT_CLICK, () => this.hide())
+      }
+      EventHandler.on(this._btnClose, EVENT_CLICK, (evt) => {
+        evt.preventDefault()
+        this.hide()
+      })
+      EventHandler.on(this._btnBack, EVENT_CLICK, (evt) => {
+        evt.preventDefault()
+        this.hide()
+      })
+
+      this._menuItems.forEach((item) => {
+        EventHandler.on(item, EVENT_KEYDOWN, (evt) => this._isMobile && this._onMenuItemKeyDown(evt))
+        EventHandler.on(item, EVENT_KEYUP, (evt) => this._isMobile && this._onMenuItemKeyUp(evt))
+        EventHandler.on(item, EVENT_CLICK, (evt) => this._isMobile && this._onMenuItemClick(evt))
+      })
     }
-    EventHandler.on(this._btnClose, EVENT_CLICK, (evt) => {
-      evt.preventDefault()
-      this.hide()
-    })
-    EventHandler.on(this._btnBack, EVENT_CLICK, (evt) => {
-      evt.preventDefault()
-      this.hide()
-    })
-
-    this._menuItems.forEach((item) => {
-      EventHandler.on(item, EVENT_KEYDOWN, (evt) => this._isMobile && this._onMenuItemKeyDown(evt))
-      EventHandler.on(item, EVENT_KEYUP, (evt) => this._isMobile && this._onMenuItemKeyUp(evt))
-      EventHandler.on(item, EVENT_CLICK, (evt) => this._isMobile && this._onMenuItemClick(evt))
-    })
   }
 
   _onResize() {
@@ -313,34 +317,32 @@ class NavBarCollapsible extends BaseComponent {
  * Data Api implementation
  * ------------------------------------------------------------------------
  */
-/*const navs = SelectorEngine.find(SELECTOR_NAVBAR)
-navs.forEach((nav) => {
-  NavBarCollapsible.getOrCreateInstance(nav)
-})*/
 
-EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function (event) {
-  const target = getElementFromSelector(this)
+if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+  EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function (event) {
+    const target = getElementFromSelector(this)
 
-  if (['A', 'AREA'].includes(this.tagName)) {
-    event.preventDefault()
-  }
-
-  EventHandler.one(target, EVENT_SHOW, (showEvent) => {
-    if (showEvent.defaultPrevented) {
-      // only register focus restorer if modal will actually get shown
-      return
+    if (['A', 'AREA'].includes(this.tagName)) {
+      event.preventDefault()
     }
 
-    EventHandler.one(target, EVENT_HIDDEN, () => {
-      if (isVisible(this)) {
-        this.focus()
+    EventHandler.one(target, EVENT_SHOW, (showEvent) => {
+      if (showEvent.defaultPrevented) {
+        // only register focus restorer if modal will actually get shown
+        return
       }
+
+      EventHandler.one(target, EVENT_HIDDEN, () => {
+        if (isVisible(this)) {
+          this.focus()
+        }
+      })
     })
+
+    const data = NavBarCollapsible.getOrCreateInstance(target)
+
+    data.toggle(this)
   })
-
-  const data = NavBarCollapsible.getOrCreateInstance(target)
-
-  data.toggle(this)
-})
+}
 
 export default NavBarCollapsible

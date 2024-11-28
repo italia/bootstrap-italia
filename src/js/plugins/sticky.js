@@ -1,16 +1,11 @@
-import BaseComponent from 'bootstrap/js/src/base-component.js'
+import BaseComponent from './base-component.js'
 
 import {
-  //defineJQueryPlugin,
-  //getElementFromSelector,
-  //isVisible,
-  //reflow,
-  //typeCheckConfig,
   getSelectorFromElement, //in base al bs-target
-} from 'bootstrap/js/src/util'
-import EventHandler from 'bootstrap/js/src/dom/event-handler'
-import SelectorEngine from 'bootstrap/js/src/dom/selector-engine'
-import Manipulator from 'bootstrap/js/src/dom/manipulator'
+} from './util/index'
+import EventHandler from './dom/event-handler'
+import SelectorEngine from './dom/selector-engine'
+import Manipulator from './dom/manipulator'
 
 import { isScreenMobile } from './util/device'
 import onDocumentScroll from './util/on-document-scroll'
@@ -18,9 +13,7 @@ import onDocumentScroll from './util/on-document-scroll'
 const NAME = 'sticky'
 const DATA_KEY = 'bs.sticky'
 const EVENT_KEY = `.${DATA_KEY}`
-//const DATA_API_KEY = '.data-api'
 
-//const EVENT_SCROLL = `scroll${EVENT_KEY}`
 const EVENT_RESIZE = `resize${EVENT_KEY}`
 const EVENT_STICKY_ON = `on${EVENT_KEY}`
 const EVENT_STICKY_OFF = `off${EVENT_KEY}`
@@ -66,10 +59,12 @@ class Sticky extends BaseComponent {
   }
 
   dispose() {
-    EventHandler.off(window, EVENT_RESIZE)
-    this._scrollCb.dispose()
+    if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+      EventHandler.off(window, EVENT_RESIZE)
+      this._scrollCb.dispose()
 
-    super.dispose()
+      super.dispose()
+    }
   }
   // Getters
 
@@ -90,9 +85,10 @@ class Sticky extends BaseComponent {
   }
 
   _bindEvents() {
-    EventHandler.on(window, EVENT_RESIZE, () => this._onResize())
-    //EventHandler.on(window, EVENT_SCROLL, () => this._onScroll())
-    this._scrollCb = onDocumentScroll(() => this._onScroll())
+    if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+      EventHandler.on(window, EVENT_RESIZE, () => this._onResize())
+      this._scrollCb = onDocumentScroll(() => this._onScroll())
+    }
   }
 
   _onResize() {
@@ -246,11 +242,13 @@ class Sticky extends BaseComponent {
  * ------------------------------------------------------------------------
  */
 
-onDocumentScroll(() => {
-  const stickies = SelectorEngine.find(SELECTOR_DATA_TOGGLE)
-  stickies.map((sticky) => {
-    Sticky.getOrCreateInstance(sticky)
+if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+  onDocumentScroll(() => {
+    const stickies = SelectorEngine.find(SELECTOR_DATA_TOGGLE)
+    stickies.map((sticky) => {
+      Sticky.getOrCreateInstance(sticky)
+    })
   })
-})
+}
 
 export default Sticky

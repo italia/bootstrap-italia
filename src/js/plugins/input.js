@@ -1,7 +1,15 @@
-import BaseComponent from 'bootstrap/js/src/base-component.js'
+/**
+ * --------------------------------------------------------------------------
+ * Bootstrap Italia (https://italia.github.io/bootstrap-italia/)
+ * Authors: https://github.com/italia/bootstrap-italia/blob/main/AUTHORS
+ * Licensed under BSD-3-Clause license (https://github.com/italia/bootstrap-italia/blob/main/LICENSE)
+ * --------------------------------------------------------------------------
+ */
 
-import EventHandler from 'bootstrap/js/src/dom/event-handler'
-import SelectorEngine from 'bootstrap/js/src/dom/selector-engine'
+import BaseComponent from './base-component.js'
+
+import EventHandler from './dom/event-handler'
+import SelectorEngine from './dom/selector-engine'
 
 import InputLabel from './input-label'
 
