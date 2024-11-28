@@ -642,9 +642,6 @@ $radius-rounded: 40px;
 
 // =======
 
-// Spacer
-$spacer: 1rem !default;
-
 // Grid columns
 // Set the number of columns and specify the width of the gutters.
 $grid-columns: 12 !default;
@@ -696,10 +693,6 @@ $list-inline-padding: 0.5rem !default;
 
 $mark-bg: $analogue-2-a1;
 $mark-padding: 0.1875em !default;
-
-$legend-margin-bottom: 0.5rem !default;
-$legend-font-size: 1.5rem !default;
-$legend-font-weight: null !default;
 
 $lead-font-size: $font-size-base * 1.25 !default;
 $lead-font-weight: 300 !default;
@@ -1277,17 +1270,15 @@ $modal-backdrop-opacity: 0.8 !default;
 $modal-max-width: 32rem !default;
 $modal-dialog-margin: 0.5rem !default;
 $modal-dialog-margin-y-sm-up: 1.5rem !default;
-$modal-inner-padding: $spacer !default;
+$modal-inner-padding: 1.5rem !default;
 
 $modal-header-border-color: var(--#{$prefix}border-color) !default;
 $modal-header-border-width: 0 !default;
 $modal-header-padding-y: $modal-inner-padding !default;
 $modal-header-padding-x: $modal-inner-padding !default;
 $modal-header-padding: 1.5rem !default;
-$modal-inner-padding: 1.5rem !default;
 $modal-show-transform: none !default;
 $modal-fade-transform: translate(0, -50px) !default;
-$modal-show-transform: none !default;
 $modal-transition: transform 0.3s ease-out !default;
 $modal-scale-transform: scale(1.02) !default;
 $modal-title-line-height: $line-height-base !default;
@@ -1395,7 +1386,6 @@ $card-border-radius: 0 !default;
 $card-body-spacer: 1rem !default;
 $card-title-spacer-y: $spacer * 0.5 !default;
 $card-border-width: $border-width !default;
-$card-border-color: var(--#{$prefix}border-color-translucent) !default;
 $card-box-shadow: null !default;
 $card-inner-border-radius: subtract($card-border-radius, $card-border-width) !default;
 $card-cap-padding-y: $card-spacer-y * 0.5 !default;
@@ -1604,8 +1594,6 @@ $navbar-padding-x: null !default;
 
 $navbar-nav-link-padding-x: 0.5rem !default;
 
-$navbar-brand-font-size: $font-size-lg !default;
-
 $nav-link-height: $font-size-base * $line-height-base + $nav-link-padding-y * 2 !default;
 $navbar-brand-height: $navbar-brand-font-size * $line-height-base !default;
 $navbar-brand-padding-y: ($nav-link-height - $navbar-brand-height) * 0.5 !default;
@@ -1614,7 +1602,6 @@ $navbar-brand-margin-end: 1rem !default;
 $navbar-toggler-padding-y: 0.25rem !default;
 $navbar-toggler-padding-x: 0.75rem !default;
 $navbar-toggler-font-size: $font-size-lg !default;
-$navbar-toggler-border-radius: $btn-border-radius !default;
 $navbar-toggler-focus-width: $btn-focus-width !default;
 $navbar-toggler-transition: box-shadow 0.15s ease-in-out !default;
 
@@ -1634,7 +1621,6 @@ $navbar-dark-hover-color: rgba($white, 0.75) !default;
 $navbar-dark-active-color: $white !default;
 $navbar-dark-disabled-color: rgba($white, 0.25) !default;
 $navbar-dark-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$navbar-dark-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
-$navbar-dark-toggler-border-color: rgba($white, 0.1) !default;
 $navbar-dark-brand-color: $navbar-dark-active-color !default;
 $navbar-dark-brand-hover-color: $navbar-dark-active-color !default;
 // scss-docs-end navbar-dark-variables
