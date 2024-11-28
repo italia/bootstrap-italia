@@ -8,7 +8,7 @@ toc: true
 
 ## Struttura di un componente
 
-Ogni componente può avere una personalizzazione di stile e di funzionalità, preferibilmente attraverso l'utilizzo di un singolo file `scss` nella cartella `src/scss/custom/` e, opzionalmente, di un file `javascript` nella cartella `src/js/plugins/`. Questo permette di avere una struttura dei file semplice da comprendere e di più facile manutenzione.
+Ogni componente può avere una personalizzazione di stile e di funzionalità, preferibilmente attraverso l'utilizzo di un singolo file `scss` nella cartella `src/scss/components/` e, opzionalmente, di un file `javascript` nella cartella `src/js/plugins/`. Questo permette di avere una struttura dei file semplice da comprendere e di più facile manutenzione.
 
 Queste due cartelle, assieme alla cartella `docs` per la stesura della documentazione, sono le uniche cartelle dove avviene l'editing dei componenti.
 
@@ -28,17 +28,13 @@ Nel caso di un nuovo componente, sarà necessario aggiungere un nuovo file `.md`
 
 ### Personalizzazione di stile
 
-I componenti base ereditano ovviamente stili e funzionalità da [Bootstrap {{ site.bootstrap_version }}][documentazione-bootstrap], di cui si può trovare il codice sorgente all'interno di `node_modules/bootstrap/`. Ovviamente, la consultazione di tale codice servirà soltanto come riferimento e nessun file all'interno di `node_modules` andrà modificato, ma esteso utilizzando quanto più possibile le variabili che Bootstrap {{ site.bootstrap_version }} mette a disposizione.
-
-Per la personalizzazione dello stile di tali componenti, andranno infatti sovrascritte o aggiunte variabili nella cartella `src/scss/_variables.scss`; oppure, in caso non sia sufficiente sovrascrivere variabili, aggiungere o modificare classi e proprietà nella cartella `src/scss/custom/`. Si può notare le modalità con cui il file `bootstrap-italia.scss` importa ed estende secondo un preciso ordine gli stili e le funzioni di base di Bootstrap {{ site.bootstrap_version }}.
+Per la personalizzazione dello stile dei componenti, andranno sovrascritte o aggiunte variabili nella cartella `src/scss/base/_variables.scss`; oppure, in caso non sia sufficiente sovrascrivere variabili, aggiungere o modificare classi e proprietà nella cartella `src/scss/components/`. Si può notare le modalità con cui il file `bootstrap-italia.scss` importa ed estende secondo un preciso ordine gli stili e le funzioni di base di Bootstrap {{ site.bootstrap_version }}.
 
 Il componente dovrebbe utilizzare una classe base `.nome-componente`, che ne definisce gli stili, e dei modificatori (se necessari) che ne possano alterare alcune proprietà (es.: `.nome-componente-sm`, `.nome-componente-primary`, ecc.).
 
 ### Personalizzazione di comportamento
 
 Per l'implementazione di funzionalità dinamiche che richiedano l'uso di `javascript`, si può invece fare riferimento alla cartella `src/js/plugins/`.
-
-Anche in questo caso, è bene seguire la struttura per la creazione di Plugin secondo quanto è già presente nella cartella `node_modules/bootstrap/js/` e la [pagina relativa all'utilizzo di Javascript](https://getbootstrap.com/docs/{{ site.bootstrap_minor }}/getting-started/javascript/) sul sito Bootstrap {{ site.bootstrap_version }}.
 
 ### Test di accessibilità
 
@@ -62,15 +58,13 @@ per ricevere feedback sui problemi e avviare il processo di auto fix.
 
 #### Esempio
 
-Attraverso questo comando è possibile effettuare il test di accessibilità per il componente di esempio "[componente base]({{ site.baseurl }}/docs/come-iniziare/componente-base/)".
+Attraverso questo comando è possibile effettuare il test di accessibilità per il componente "[Button]({{ site.baseurl }}/docs/componenti/buttons/)".
 
-`npm run test-a11y-one http://localhost:4000/docs/come-iniziare/componente-base/`
+`npm run test-a11y-one http://localhost:4000/docs/componenti/buttons//`
 
 ---
 
 ###### Continua la lettura >
-
-Per analizzare un componente di esempio da cui partire per lo sviluppo di componenti avanzati personalizzati, puoi fare riferimento alla pagina descrittiva del [componente base]({{ site.baseurl }}/docs/come-iniziare/componente-base/).
 
 [documentazione-bootstrap]: https://getbootstrap.com/docs/{{ site.bootstrap_minor }}/getting-started/introduction/ 
 [documentazione-bootstrap-theming]: https://getbootstrap.com/docs/{{ site.bootstrap_minor }}/getting-started/theming/ 
