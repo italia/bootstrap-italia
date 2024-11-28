@@ -27,19 +27,16 @@
 @import 'base/transitions';
 // ------------------------------
 
-// Helpers
+// Helpers & utilities
 @import 'base/helpers';
-// ------------------------------
-
-// Dev utilities
 @import 'base/utilities/api';
-@import 'utilities/colors'; 
-@import 'utilities/text-colors'; // 2️⃣ move to base/utilities?
 // ------------------------------
 
 // Utilities
 @import 'utilities/focus';
 @import 'utilities/icons';
+@import 'utilities/colors';
+@import 'utilities/text-colors';
 // ------------------------------
 
 // Componenti
@@ -64,7 +61,7 @@
 @import 'components/back-to-top';
 @import 'components/list-group';
 @import 'components/linklist';
-@import 'components/offcanvas';  // Keep?
+@import 'components/offcanvas'; // Keep?
 @import 'components/navigation';
 @import 'components/skiplinks';
 @import 'components/affix';
