@@ -24,11 +24,10 @@
 // Load Bootstrap variables and mixins
 @import '../../../../src/scss/base/functions';
 // here to be available to "variables"
-@import '../../../../src/scss/utilities/colors_vars';
-@import '../../../../src/scss/variables';
+@import '../../../../src/scss/base/variables';
 @import '../../../../src/scss/base/mixins/buttons';
 // here to override any conflicting "bootstrap/scss/functions" definitions
-@import '../../../../src/scss/base/variables';
+@import '../../../../src/scss/base/oldvariables';
 @import '../../../../src/scss/base/mixins';
 // Load docs components
 @import 'colors';

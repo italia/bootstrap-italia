@@ -10,16 +10,11 @@
 // ------------------------------
 
 // Variabili
-@import 'utilities/colors_vars'; // 1️⃣ merge with base/variables or variables?
-@import 'variables'; // 1️⃣ merge with base/variables or variables?
-// ------------------------------
-
-// Colori
-@import 'utilities/colors'; // 2️⃣ move to base/utilities?
+@import 'base/variables';
 // ------------------------------
 
 // Funzioni, mixin e variabili
-@import 'base/variables'; // 1️⃣ merge with base/variables or variables?
+@import 'base/oldvariables'; // TODO: merge variable in base/variables deleting duplicated vars
 @import 'base/mixins';
 @import 'base/maps';
 @import 'base/utilities';
@@ -38,6 +33,7 @@
 
 // Dev utilities
 @import 'base/utilities/api';
+@import 'utilities/colors'; 
 @import 'utilities/text-colors'; // 2️⃣ move to base/utilities?
 // ------------------------------
 
