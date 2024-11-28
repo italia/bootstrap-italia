@@ -1,20 +1,19 @@
 @import 'base/mixins/banner';
 @include bsBanner('');
 
-// Versione del kit
+// Bootstrap Italia version
 @import 'base/version';
 // ------------------------------
 
-// Funzioni
+// Functions
 @import 'base/functions';
 // ------------------------------
 
-// Variabili
+// Variables
 @import 'base/variables';
 // ------------------------------
 
-// Funzioni, mixin e variabili
-@import 'base/oldvariables'; // TODO: merge variable in base/variables deleting duplicated vars
+// Functions, maps and mixins
 @import 'base/mixins';
 @import 'base/maps';
 @import 'base/utilities';
@@ -32,14 +31,14 @@
 @import 'base/utilities/api';
 // ------------------------------
 
-// Utilities
+// Class utilities
 @import 'utilities/focus';
 @import 'utilities/icons';
 @import 'utilities/colors';
 @import 'utilities/text-colors';
 // ------------------------------
 
-// Componenti
+// Components
 @import 'components/type';
 @import 'components/grid';
 @import 'components/tables';
@@ -142,16 +141,9 @@
 @import 'components/headernavbar';
 @import 'components/headernavbartheme';
 @import 'components/header';
+@import 'components/navigationtheme';
 // ------------------------------
 
 // Footer
 @import 'components/footer';
-// ------------------------------
-
-// Navigation theme
-@import 'components/navigationtheme';
-// ------------------------------
-
-// Componente di esempio
-@import 'components/componente-base';
 // ------------------------------
