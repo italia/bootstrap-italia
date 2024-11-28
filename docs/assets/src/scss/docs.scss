@@ -31,6 +31,8 @@
 // here to override any conflicting "node_modules/bootstrap/scss/functions" definitions
 @import '../../../../node_modules/bootstrap/scss/variables';
 @import '../../../../node_modules/bootstrap/scss/mixins';
+// focus
+@import '../../../../src/scss/utilities/focus';
 // Load docs components
 @import 'colors';
 @import 'nav';
