@@ -880,6 +880,11 @@ $input-transition:
   border-color 0.15s ease-in-out,
   box-shadow 0.15s ease-in-out !default;
 
+$input-border: $gray-secondary !default;
+$input-label-color: $color-text-base !default; // UI kit
+$input-color-placeholder: $color-text-muted !default; // UI Kit
+$input-focus-border-color: $gray-secondary !default;
+
 $form-color-width: 3rem !default;
 // scss-docs-end form-input-variables
 
@@ -1334,12 +1339,6 @@ $carousel-transition: transform $carousel-transition-duration ease-in-out !defau
 $carousel-dark-indicator-active-bg: $black !default;
 $carousel-dark-caption-color: $black !default;
 $carousel-dark-control-icon-filter: invert(1) grayscale(100) !default;
-
-// Inputs
-$input-border: $gray-secondary !default;
-$input-label-color: $color-text-base !default; // UI kit
-$input-color-placeholder: $color-text-muted !default; // UI Kit
-$input-focus-border-color: $gray-secondary !default;
 
 // Pagination
 
