@@ -334,7 +334,7 @@ Lo stato dell'upload è rappresentato graficamente dall'elemento `<div class="pr
   <input value="Submit" type="submit" class="d-none" />
 </form>
 
-<p class="mt-5"><strong>Process completed</strong></p>
+<p class="mt-5"><strong>Processo completato</strong></p>
 
 <form class="upload-dragdrop success" method="post" action="" enctype="multipart/form-data" data-bs-upload-dragdrop>
   <div class="upload-dragdrop-image">
