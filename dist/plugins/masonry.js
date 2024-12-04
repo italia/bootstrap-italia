@@ -1,12 +1,18 @@
-import BaseComponent from 'bootstrap/js/src/base-component.js';
-import SelectorEngine from 'bootstrap/js/src/dom/selector-engine';
-import Manipulator from 'bootstrap/js/src/dom/manipulator';
-import MasonryPlugin from 'masonry-layout';
+import BaseComponent from './base-component.js';
+import SelectorEngine from './dom/selector-engine.js';
+import Manipulator from './dom/manipulator.js';
+import MiniMasonry from 'minimasonry/src/minimasonry';
+
+/**
+ * --------------------------------------------------------------------------
+ * Bootstrap Italia (https://italia.github.io/bootstrap-italia/)
+ * Authors: https://github.com/italia/bootstrap-italia/blob/main/AUTHORS
+ * Licensed under BSD-3-Clause license (https://github.com/italia/bootstrap-italia/blob/main/LICENSE)
+ * --------------------------------------------------------------------------
+ */
+
 
 const NAME = 'masonry';
-//const DATA_KEY = 'bs.masonry'
-//const EVENT_KEY = `.${DATA_KEY}`
-//const DATA_API_KEY = '.data-api'
 
 const CLASS_NAME_SHOW = 'show';
 const CLASS_NAME_LOADER = 'masonry-loader';
@@ -22,13 +28,13 @@ class Masonry extends BaseComponent {
   constructor(element, config) {
     super(element);
 
-    this._config = this._getConfig(config);
-    this._masonry = null;
-
-    this._images = SelectorEngine.find('img', this._element);
-    this._loadCounter = 0;
-
-    this._init();
+    if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+      this._config = this._getConfig(config);
+      this._masonry = null;
+      this._images = SelectorEngine.find('img', this._element);
+      this._loadCounter = 0;
+      this._init();
+    }
   }
 
   // Getters
@@ -59,8 +65,6 @@ class Masonry extends BaseComponent {
 
   _init() {
     if (this._images.length > 0) {
-      //this._showLoader()
-
       this._images.forEach((img) => {
         const imgDummy = new Image();
         imgDummy.onload = () => this._onLoadEnd();
@@ -74,13 +78,14 @@ class Masonry extends BaseComponent {
   _onLoadEnd() {
     this._loadCounter++;
     if (this._loadCounter >= this._images.length) {
-      //this._hideLoader()
       this._initMasonry();
     }
   }
 
   _initMasonry() {
-    this._masonry = new MasonryPlugin(this._element, this._config);
+    const config = this._config;
+    config.container = this._element;
+    this._masonry = new MiniMasonry(config); //new MasonryPlugin(this._element, this._config)
   }
 
   _createLoader() {
@@ -121,18 +126,13 @@ class Masonry extends BaseComponent {
  * ------------------------------------------------------------------------
  */
 
-const masonries = SelectorEngine.find(SELECTOR_DATA_TOGGLE);
-if (masonries.length > 0) {
-  /*if (!MASONRY_EXISTS) {
-    console.warn('[Masonry] Masonry component needs Masonry library to work properly')
-  } else {
+if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+  const masonries = SelectorEngine.find(SELECTOR_DATA_TOGGLE);
+  if (masonries.length > 0) {
     masonries.forEach((masonry) => {
-      Masonry.getOrCreateInstance(masonry)
-    })
-  }*/
-  masonries.forEach((masonry) => {
-    Masonry.getOrCreateInstance(masonry);
-  });
+      Masonry.getOrCreateInstance(masonry);
+    });
+  }
 }
 
 export { Masonry as default };

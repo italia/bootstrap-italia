@@ -1,8 +1,14 @@
-import BaseComponent from 'bootstrap/js/src/base-component';
-import EventHandler from 'bootstrap/js/src/dom/event-handler';
+import BaseComponent from './base-component.js';
+import EventHandler from './dom/event-handler.js';
 import InputLabel from './input-label.js';
 
-//import BaseComponent from 'bootstrap/js/src/base-component.js'
+/**
+ * --------------------------------------------------------------------------
+ * Bootstrap Italia (https://italia.github.io/bootstrap-italia/)
+ * Authors: https://github.com/italia/bootstrap-italia/blob/main/AUTHORS
+ * Licensed under BSD-3-Clause license (https://github.com/italia/bootstrap-italia/blob/main/LICENSE)
+ * --------------------------------------------------------------------------
+ */
 
 
 const NAME = 'inputsearchautocomplete';
@@ -123,14 +129,6 @@ class InputSearch extends BaseComponent {
  * Data Api implementation
  * ------------------------------------------------------------------------
  */
-
-/*const inputs = SelectorEngine.find(SELECTOR_SEARCH)
-inputs.forEach((input) => {
-  EventHandler.one(input, EVENT_KEYUP_DATA_API, () => {
-    const searchInput = InputSearch.getOrCreateInstance(input)
-    searchInput.search()
-  })
-})*/
 
 const createInput = (element) => {
   if (element && element.matches(SELECTOR_SEARCH)) {

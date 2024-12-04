@@ -1,7 +1,16 @@
 import Splide from '@splidejs/splide';
-import BaseComponent from 'bootstrap/js/src/base-component.js';
-import SelectorEngine from 'bootstrap/js/src/dom/selector-engine';
-import EventHandler from 'bootstrap/js/src/dom/event-handler';
+import BaseComponent from './base-component.js';
+import SelectorEngine from './dom/selector-engine.js';
+import EventHandler from './dom/event-handler.js';
+
+/**
+ * --------------------------------------------------------------------------
+ * Bootstrap Italia (https://italia.github.io/bootstrap-italia/)
+ * Authors: https://github.com/italia/bootstrap-italia/blob/main/AUTHORS
+ * Licensed under BSD-3-Clause license (https://github.com/italia/bootstrap-italia/blob/main/LICENSE)
+ * --------------------------------------------------------------------------
+ */
+
 
 const NAME = 'carousel';
 const DATA_KEY = 'bs.carousel';
@@ -204,13 +213,14 @@ class CarouselBI extends BaseComponent {
  * Data Api implementation
  * ------------------------------------------------------------------------
  */
-
-EventHandler.on(window, EVENT_LOAD_DATA_API, () => {
-  const carousels = SelectorEngine.find(SELECTOR_CAROUSEL);
-  carousels.forEach((carousel) => {
-    CarouselBI.getOrCreateInstance(carousel);
+if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+  EventHandler.on(window, EVENT_LOAD_DATA_API, () => {
+    const carousels = SelectorEngine.find(SELECTOR_CAROUSEL);
+    carousels.forEach((carousel) => {
+      CarouselBI.getOrCreateInstance(carousel);
+    });
   });
-});
+}
 
 export { CarouselBI as default };
 //# sourceMappingURL=carousel-bi.js.map

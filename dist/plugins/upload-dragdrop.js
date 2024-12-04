@@ -1,7 +1,16 @@
-import BaseComponent from 'bootstrap/js/src/base-component.js';
-import EventHandler from 'bootstrap/js/src/dom/event-handler';
-import SelectorEngine from 'bootstrap/js/src/dom/selector-engine';
+import BaseComponent from './base-component.js';
+import EventHandler from './dom/event-handler.js';
+import SelectorEngine from './dom/selector-engine.js';
 import ProgressDonut from './progress-donut.js';
+
+/**
+ * --------------------------------------------------------------------------
+ * Bootstrap Italia (https://italia.github.io/bootstrap-italia/)
+ * Authors: https://github.com/italia/bootstrap-italia/blob/main/AUTHORS
+ * Licensed under BSD-3-Clause license (https://github.com/italia/bootstrap-italia/blob/main/LICENSE)
+ * --------------------------------------------------------------------------
+ */
+
 
 const NAME = 'upload';
 const DATA_KEY = 'bs.upload';
@@ -132,7 +141,7 @@ const createInput = (element) => {
   return null
 };
 
-if (typeof document !== 'undefined') {
+if (typeof window !== 'undefined' && typeof document !== 'undefined') {
   document.addEventListener('dragenter', function (evt) {
     createInput(evt.target);
   });

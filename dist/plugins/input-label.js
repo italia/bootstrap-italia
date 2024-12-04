@@ -1,5 +1,14 @@
-import EventHandler from 'bootstrap/js/src/dom/event-handler';
-import SelectorEngine from 'bootstrap/js/src/dom/selector-engine';
+import EventHandler from './dom/event-handler.js';
+import SelectorEngine from './dom/selector-engine.js';
+
+/**
+ * --------------------------------------------------------------------------
+ * Bootstrap Italia (https://italia.github.io/bootstrap-italia/)
+ * Authors: https://github.com/italia/bootstrap-italia/blob/main/AUTHORS
+ * Licensed under BSD-3-Clause license (https://github.com/italia/bootstrap-italia/blob/main/LICENSE)
+ * --------------------------------------------------------------------------
+ */
+
 
 const NAME = 'inputlabel';
 const DATA_KEY = 'bs.inputlabel';
@@ -26,7 +35,9 @@ class InputLabel {
   }
 
   static getInputFromLabel = (labelElement) => {
-    return document.querySelector('#' + CSS.escape(labelElement.getAttribute('for')))
+    if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+      return document.querySelector('#' + CSS.escape(labelElement.getAttribute('for')))
+    }
   }
 
   // Public

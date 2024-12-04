@@ -1,3 +1,11 @@
+/**
+ * --------------------------------------------------------------------------
+ * Bootstrap Italia (https://italia.github.io/bootstrap-italia/)
+ * Authors: https://github.com/italia/bootstrap-italia/blob/main/AUTHORS
+ * Licensed under BSD-3-Clause license (https://github.com/italia/bootstrap-italia/blob/main/LICENSE)
+ * --------------------------------------------------------------------------
+ */
+
 const DATA_MOUSE_FOCUS = 'data-focus-mouse';
 const CLASS_NAME_MOUSE_FOCUS = 'focus--mouse';
 

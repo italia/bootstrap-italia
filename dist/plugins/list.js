@@ -1,6 +1,15 @@
-import BaseComponent from 'bootstrap/js/src/base-component.js';
-import SelectorEngine from 'bootstrap/js/src/dom/selector-engine';
-import EventHandler from 'bootstrap/js/src/dom/event-handler';
+import BaseComponent from './base-component.js';
+import SelectorEngine from './dom/selector-engine.js';
+import EventHandler from './dom/event-handler.js';
+
+/**
+ * --------------------------------------------------------------------------
+ * Bootstrap Italia (https://italia.github.io/bootstrap-italia/)
+ * Authors: https://github.com/italia/bootstrap-italia/blob/main/AUTHORS
+ * Licensed under BSD-3-Clause license (https://github.com/italia/bootstrap-italia/blob/main/LICENSE)
+ * --------------------------------------------------------------------------
+ */
+
 
 const NAME = 'list';
 const DATA_KEY = 'bs.list';
@@ -62,17 +71,19 @@ class List extends BaseComponent {
  * ------------------------------------------------------------------------
  */
 
-SelectorEngine.find(SELECTOR_LIST).forEach((list) => {
-  SelectorEngine.find(SELECTOR_ITEM_CHECKBOX, list).forEach((checkbox) => {
-    EventHandler.one(checkbox.closest('a'), EVENT_CLICK_DATA_API, (evt) => {
-      if (!List.getInstance(list)) {
-        evt.preventDefault();
-        const listObj = List.getOrCreateInstance(list);
-        listObj.toggleCheckbox(evt.currentTarget);
-      }
+if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+  SelectorEngine.find(SELECTOR_LIST).forEach((list) => {
+    SelectorEngine.find(SELECTOR_ITEM_CHECKBOX, list).forEach((checkbox) => {
+      EventHandler.one(checkbox.closest('a'), EVENT_CLICK_DATA_API, (evt) => {
+        if (!List.getInstance(list)) {
+          evt.preventDefault();
+          const listObj = List.getOrCreateInstance(list);
+          listObj.toggleCheckbox(evt.currentTarget);
+        }
+      });
     });
   });
-});
+}
 
 export { List as default };
 //# sourceMappingURL=list.js.map

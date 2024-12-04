@@ -1,8 +1,17 @@
-import BaseComponent from 'bootstrap/js/src/base-component';
-import EventHandler from 'bootstrap/js/src/dom/event-handler';
-import SelectorEngine from 'bootstrap/js/src/dom/selector-engine';
-import Manipulator from 'bootstrap/js/src/dom/manipulator';
+import BaseComponent from './base-component.js';
+import EventHandler from './dom/event-handler.js';
+import SelectorEngine from './dom/selector-engine.js';
+import Manipulator from './dom/manipulator.js';
 import InputLabel from './input-label.js';
+
+/**
+ * --------------------------------------------------------------------------
+ * Bootstrap Italia (https://italia.github.io/bootstrap-italia/)
+ * Authors: https://github.com/italia/bootstrap-italia/blob/main/AUTHORS
+ * Licensed under BSD-3-Clause license (https://github.com/italia/bootstrap-italia/blob/main/LICENSE)
+ * --------------------------------------------------------------------------
+ */
+
 
 const NAME = 'inputpassword';
 const DATA_KEY = 'bs.inputpassword';
@@ -438,43 +447,45 @@ class InputPassword extends BaseComponent {
  * ------------------------------------------------------------------------
  */
 
-const createInput = (element) => {
-  if (element && element.matches(SELECTOR_PASSWORD)) {
-    return InputPassword.getOrCreateInstance(element)
-  }
-  return null
-};
+if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+  const createInput = (element) => {
+    if (element && element.matches(SELECTOR_PASSWORD)) {
+      return InputPassword.getOrCreateInstance(element)
+    }
+    return null
+  };
 
-const initInputPassword = () => {
-  const element = SelectorEngine.findOne(SELECTOR_PASSWORD);
-  if (element) {
-    InputPassword.getOrCreateInstance(element);
-  }
-};
+  const initInputPassword = () => {
+    const element = SelectorEngine.findOne(SELECTOR_PASSWORD);
+    if (element) {
+      InputPassword.getOrCreateInstance(element);
+    }
+  };
 
-if (document.readyState !== 'loading') {
-  initInputPassword();
-} else {
-  document.addEventListener('DOMContentLoaded', initInputPassword);
+  if (document.readyState !== 'loading') {
+    initInputPassword();
+  } else {
+    document.addEventListener('DOMContentLoaded', initInputPassword);
+  }
+
+  EventHandler.on(document, EVENT_MOUSEDOWN_DATA_API, SELECTOR_PASSWORD + ', label', function () {
+    const target = InputLabel.getInputFromLabel(this) || this;
+    createInput(target);
+  });
+  EventHandler.on(document, EVENT_KEYUP_DATA_API, SELECTOR_PASSWORD + ', label', function () {
+    const target = InputLabel.getInputFromLabel(this) || this;
+    const element = createInput(target);
+    if (element && element._label) {
+      element._label._labelOut();
+    }
+  });
+  EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_BTN_SHOW_PWD, function () {
+    const target = this.parentNode && this.parentNode.querySelector(SELECTOR_PASSWORD);
+    if (target) {
+      InputPassword.getOrCreateInstance(target);
+    }
+  });
 }
-
-EventHandler.on(document, EVENT_MOUSEDOWN_DATA_API, SELECTOR_PASSWORD + ', label', function () {
-  const target = InputLabel.getInputFromLabel(this) || this;
-  createInput(target);
-});
-EventHandler.on(document, EVENT_KEYUP_DATA_API, SELECTOR_PASSWORD + ', label', function () {
-  const target = InputLabel.getInputFromLabel(this) || this;
-  const element = createInput(target);
-  if (element && element._label) {
-    element._label._labelOut();
-  }
-});
-EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_BTN_SHOW_PWD, function () {
-  const target = this.parentNode && this.parentNode.querySelector(SELECTOR_PASSWORD);
-  if (target) {
-    InputPassword.getOrCreateInstance(target);
-  }
-});
 
 export { InputPassword as default };
 //# sourceMappingURL=input-password.js.map

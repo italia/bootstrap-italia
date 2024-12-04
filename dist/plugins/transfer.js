@@ -1,8 +1,6 @@
-import BaseComponent from 'bootstrap/js/src/base-component.js';
-import EventHandler from 'bootstrap/js/src/dom/event-handler';
-import SelectorEngine from 'bootstrap/js/src/dom/selector-engine';
-
-//import Manipulator from 'bootstrap/js/src/dom/manipulator'
+import BaseComponent from './base-component.js';
+import EventHandler from './dom/event-handler.js';
+import SelectorEngine from './dom/selector-engine.js';
 
 const NAME = 'transfer';
 const DATA_KEY = 'bs.transfer';
@@ -11,7 +9,6 @@ const DATA_API_KEY = '.data-api';
 
 const EVENT_CLICK_DATA_API = `click${EVENT_KEY}${DATA_API_KEY}`;
 const EVENT_KEYUP_DATA_API = `keyup${EVENT_KEY}${DATA_API_KEY}`;
-//const EVENT_SCROLL = `scroll${EVENT_KEY}`
 const EVENT_CLICK = `click${EVENT_KEY}`;
 
 const CLASS_NAME_ACTIVE = 'active';
@@ -252,16 +249,14 @@ class Transfer extends BaseComponent {
  * ------------------------------------------------------------------------
  */
 
-/*SelectorEngine.find(SELECTOR_BLOCK).forEach((block) => {
-  Transfer.getOrCreateInstance(block)
-})*/
-
-EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_BLOCK + ' .form-check label', function () {
-  Transfer.getOrCreateInstance(this.closest(SELECTOR_BLOCK));
-});
-EventHandler.on(document, EVENT_KEYUP_DATA_API, SELECTOR_BLOCK + ' .form-check label', function () {
-  Transfer.getOrCreateInstance(this.closest(SELECTOR_BLOCK));
-});
+if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+  EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_BLOCK + ' .form-check label', function () {
+    Transfer.getOrCreateInstance(this.closest(SELECTOR_BLOCK));
+  });
+  EventHandler.on(document, EVENT_KEYUP_DATA_API, SELECTOR_BLOCK + ' .form-check label', function () {
+    Transfer.getOrCreateInstance(this.closest(SELECTOR_BLOCK));
+  });
+}
 
 export { Transfer as default };
 //# sourceMappingURL=transfer.js.map

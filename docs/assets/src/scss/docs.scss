@@ -22,18 +22,14 @@
 //
 // Happy Bootstrapping!
 // Load Bootstrap variables and mixins
-@import '../../../../src/scss/functions';
+@import '../../../../src/scss/base/functions';
 // here to be available to "variables"
-@import '../../../../src/scss/utilities/colors_vars';
-@import '../../../../src/scss/variables';
-@import '../../../../node_modules/bootstrap/scss/functions';
-@import '../../../../src/scss/custom/mixins/buttons';
-// here to override any conflicting "node_modules/bootstrap/scss/functions" definitions
-@import '../../../../node_modules/bootstrap/scss/variables';
-@import '../../../../node_modules/bootstrap/scss/mixins';
-// focus
-@import '../../../../src/scss/utilities/focus';
+@import '../../../../src/scss/base/variables';
+@import '../../../../src/scss/base/mixins/buttons';
+// here to override any conflicting "bootstrap/scss/functions" definitions
+@import '../../../../src/scss/base/mixins';
 // Load docs components
+@import '../../../../src/scss/utilities/focus';
 @import 'colors';
 @import 'nav';
 @import 'masthead';

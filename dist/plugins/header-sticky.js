@@ -1,7 +1,16 @@
-import SelectorEngine from 'bootstrap/js/src/dom/selector-engine';
-import { isVisible } from 'bootstrap/js/src/util';
+import SelectorEngine from './dom/selector-engine.js';
+import { isVisible } from './util/index.js';
 import Sticky from './sticky.js';
 import onDocumentScroll from './util/on-document-scroll.js';
+
+/**
+ * --------------------------------------------------------------------------
+ * Bootstrap Italia (https://italia.github.io/bootstrap-italia/)
+ * Authors: https://github.com/italia/bootstrap-italia/blob/main/AUTHORS
+ * Licensed under BSD-3-Clause license (https://github.com/italia/bootstrap-italia/blob/main/LICENSE)
+ * --------------------------------------------------------------------------
+ */
+
 
 const CLASS_NAME_CLONED_HEADER = 'cloned-element';
 const CLASS_NAME_SHOW = 'show';

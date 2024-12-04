@@ -1,9 +1,18 @@
-import BaseComponent from 'bootstrap/js/src/base-component.js';
-import EventHandler from 'bootstrap/js/src/dom/event-handler';
-import SelectorEngine from 'bootstrap/js/src/dom/selector-engine';
-import Manipulator from 'bootstrap/js/src/dom/manipulator';
+import BaseComponent from './base-component.js';
+import EventHandler from './dom/event-handler.js';
+import SelectorEngine from './dom/selector-engine.js';
+import Manipulator from './dom/manipulator.js';
 import onDocumentScroll from './util/on-document-scroll.js';
 import { documentScrollTo } from './util/tween.js';
+
+/**
+ * --------------------------------------------------------------------------
+ * Bootstrap Italia (https://italia.github.io/bootstrap-italia/)
+ * Authors: https://github.com/italia/bootstrap-italia/blob/main/AUTHORS
+ * Licensed under BSD-3-Clause license (https://github.com/italia/bootstrap-italia/blob/main/LICENSE)
+ * --------------------------------------------------------------------------
+ */
+
 
 const NAME = 'backtotop';
 const DATA_KEY = 'bs.backtotop';

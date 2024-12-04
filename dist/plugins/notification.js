@@ -1,8 +1,17 @@
-import BaseComponent from 'bootstrap/js/src/base-component.js';
-import { getElementFromSelector, isVisible, reflow } from 'bootstrap/js/src/util';
-import Manipulator from 'bootstrap/js/src/dom/manipulator';
-import EventHandler from 'bootstrap/js/src/dom/event-handler';
-import { enableDismissTrigger } from 'bootstrap/js/src/util/component-functions';
+import BaseComponent from './base-component.js';
+import { getElementFromSelector, isVisible, reflow } from './util/index.js';
+import Manipulator from './dom/manipulator.js';
+import EventHandler from './dom/event-handler.js';
+import { enableDismissTrigger } from './util/component-functions.js';
+
+/**
+ * --------------------------------------------------------------------------
+ * Bootstrap Italia (https://italia.github.io/bootstrap-italia/)
+ * Authors: https://github.com/italia/bootstrap-italia/blob/main/AUTHORS
+ * Licensed under BSD-3-Clause license (https://github.com/italia/bootstrap-italia/blob/main/LICENSE)
+ * --------------------------------------------------------------------------
+ */
+
 
 const NAME = 'notification';
 const DATA_KEY = 'bs.notification';
@@ -155,32 +164,34 @@ class Notification extends BaseComponent {
  * ------------------------------------------------------------------------
  */
 
-EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function (event) {
-  const target = getElementFromSelector(this);
+if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+  EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function (event) {
+    const target = getElementFromSelector(this);
 
-  if (['A', 'AREA'].includes(this.tagName)) {
-    event.preventDefault();
-  }
-
-  EventHandler.one(target, EVENT_SHOW, (showEvent) => {
-    if (showEvent.defaultPrevented) {
-      // only register focus restorer if modal will actually get shown
-      return
+    if (['A', 'AREA'].includes(this.tagName)) {
+      event.preventDefault();
     }
 
-    EventHandler.one(target, EVENT_HIDDEN, () => {
-      if (isVisible(this)) {
-        this.focus();
+    EventHandler.one(target, EVENT_SHOW, (showEvent) => {
+      if (showEvent.defaultPrevented) {
+        // only register focus restorer if modal will actually get shown
+        return
       }
+
+      EventHandler.one(target, EVENT_HIDDEN, () => {
+        if (isVisible(this)) {
+          this.focus();
+        }
+      });
     });
+
+    const data = Notification.getOrCreateInstance(target);
+
+    data.toggle(this);
   });
 
-  const data = Notification.getOrCreateInstance(target);
-
-  data.toggle(this);
-});
-
-enableDismissTrigger(Notification);
+  enableDismissTrigger(Notification);
+}
 
 export { Notification as default };
 //# sourceMappingURL=notification.js.map

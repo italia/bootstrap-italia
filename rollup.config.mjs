@@ -57,7 +57,6 @@ export default [
       globals: {
         '@popperjs/core' : 'Popper', 
         '@splidejs/splide' : 'Splide', 
-        'masonry-layout' : 'MasonryPlugin', 
         'accessible-autocomplete' : 'accessibleAutocomplete',
         'animejs/lib/anime.es.js' : 'anime',
         'video.js' : 'videojs'
@@ -66,7 +65,6 @@ export default [
     external: [
       '@popperjs/core', 
       '@splidejs/splide', 
-      'masonry-layout', 
       'accessible-autocomplete',
       'animejs/lib/anime.es.js',
       'video.js'

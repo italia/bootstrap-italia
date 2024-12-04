@@ -1,23 +1,17 @@
-import BaseComponent from 'bootstrap/js/src/base-component.js';
-import EventHandler from 'bootstrap/js/src/dom/event-handler';
-import SelectorEngine from 'bootstrap/js/src/dom/selector-engine';
-import Manipulator from 'bootstrap/js/src/dom/manipulator';
+import BaseComponent from './base-component.js';
+import EventHandler from './dom/event-handler.js';
+import SelectorEngine from './dom/selector-engine.js';
+import Manipulator from './dom/manipulator.js';
 import onDocumentScroll from './util/on-document-scroll.js';
 import NavBarCollapsible from './navbar-collapsible.js';
 import { documentScrollTo } from './util/tween.js';
 
 const NAME = 'navscroll';
-//const DATA_KEY = 'bs.navscroll'
-//const EVENT_KEY = `.${DATA_KEY}`
-//const DATA_API_KEY = '.data-api'
-
-//const EVENT_SCROLL = `scroll${EVENT_KEY}`
 
 const CLASS_NAME_ACTIVE = 'active';
 
 const SELECTOR_NAVSCROLL = '[data-bs-navscroll]'; //'.it-navscroll-wrapper'
 const SELECTOR_LIST = 'ul.link-list';
-//const SELECTOR_ITEM = '.nav-item'
 const SELECTOR_LINK_CONTAINER = 'li.nav-link, li.nav-item';
 const SELECTOR_LINK = 'a.nav-link';
 const SELECTOR_LINK_ACTIVE = `${SELECTOR_LINK}.${CLASS_NAME_ACTIVE}`;
@@ -61,11 +55,9 @@ class NavScroll extends BaseComponent {
   }
 
   dispose() {
-    //EventHandler.off(window, EVENT_SCROLL, this._onScroll)
     if (this._scrollCb) {
       this._scrollCb.dispose();
     }
-
     super.dispose();
   }
 
@@ -80,8 +72,6 @@ class NavScroll extends BaseComponent {
   }
 
   _bindEvents() {
-    //EventHandler.on(window, EVENT_SCROLL, this._onScroll)
-
     this._scrollCb = onDocumentScroll(() => this._onScroll());
 
     if (this._collapsible) {
@@ -100,11 +90,12 @@ class NavScroll extends BaseComponent {
         }
       });
     });
-
-    EventHandler.on(window, 'load', () => {
-      //if page is already scrolled
-      setTimeout(() => this._onScroll(), 150);
-    });
+    if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+      EventHandler.on(window, 'load', () => {
+        //if page is already scrolled
+        setTimeout(() => this._onScroll(), 150);
+      });
+    }
   }
 
   _onCollapseOpened() {
@@ -244,10 +235,12 @@ class NavScroll extends BaseComponent {
  * ------------------------------------------------------------------------
  */
 
-const navs = SelectorEngine.find(SELECTOR_NAVSCROLL);
-navs.map((nav) => {
-  NavScroll.getOrCreateInstance(nav);
-});
+if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+  const navs = SelectorEngine.find(SELECTOR_NAVSCROLL);
+  navs.map((nav) => {
+    NavScroll.getOrCreateInstance(nav);
+  });
+}
 
 export { NavScroll as default };
 //# sourceMappingURL=navscroll.js.map

@@ -1,6 +1,15 @@
 import JustValidate from 'just-validate';
 import { CssClassObserver, ContentObserver } from './util/observer.js';
 
+/**
+ * --------------------------------------------------------------------------
+ * Bootstrap Italia (https://italia.github.io/bootstrap-italia/)
+ * Authors: https://github.com/italia/bootstrap-italia/blob/main/AUTHORS
+ * Licensed under BSD-3-Clause license (https://github.com/italia/bootstrap-italia/blob/main/LICENSE)
+ * --------------------------------------------------------------------------
+ */
+
+
 const CONFIG_DEFAULT = {
   errorFieldCssClass: 'is-invalid',
   errorLabelCssClass: 'just-validate-error-label',
@@ -15,6 +24,9 @@ const SELECTOR_SPAN_SRONLY = `.${CLASS_NAME_SRONLY}`;
 class FormValidate {
   constructor(selector, config, dictLocale) {
     this.formSelector = selector;
+    if (typeof window === 'undefined' || typeof document === 'undefined') {
+      return
+    }
     this.target = document.querySelector(selector);
 
     if (dictLocale != undefined) this.validate = new JustValidate(selector, config, dictLocale);
@@ -165,14 +177,16 @@ const ValidatorSelectAutocomplete = (inputId, config = {}) => {
       if (!config.required && !value) {
         result = true;
       } else {
-        document
-          .querySelector('#' + field.elem.id + '-select')
-          .querySelectorAll('option')
-          .forEach((option) => {
-            if (option.text === value) {
-              result = true;
-            }
-          });
+        if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+          document
+            .querySelector('#' + field.elem.id + '-select')
+            .querySelectorAll('option')
+            .forEach((option) => {
+              if (option.text === value) {
+                result = true;
+              }
+            });
+        }
       }
     } else {
       throw new Error('ValidatorSelectAutocomplete: ' + inputId + ' not found as form field')

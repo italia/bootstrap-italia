@@ -1,13 +1,18 @@
-import ProgressBar from 'progressbar.js';
-import BaseComponent from 'bootstrap/js/src/base-component.js';
-import SelectorEngine from 'bootstrap/js/src/dom/selector-engine';
-import Manipulator from 'bootstrap/js/src/dom/manipulator';
+import Circle from 'progressbar.js/src/circle.js';
+import BaseComponent from './base-component.js';
+import SelectorEngine from './dom/selector-engine.js';
+import Manipulator from './dom/manipulator.js';
+
+/**
+ * --------------------------------------------------------------------------
+ * Bootstrap Italia (https://italia.github.io/bootstrap-italia/)
+ * Authors: https://github.com/italia/bootstrap-italia/blob/main/AUTHORS
+ * Licensed under BSD-3-Clause license (https://github.com/italia/bootstrap-italia/blob/main/LICENSE)
+ * --------------------------------------------------------------------------
+ */
+
 
 const NAME = 'progressdonut';
-//const DATA_KEY = 'bs.progressdonut'
-//const EVENT_KEY = `.${DATA_KEY}`
-//const DATA_API_KEY = '.data-api'
-
 const SELECTOR_DONUT = '[data-bs-progress-donut]';
 
 const Default = {
@@ -87,7 +92,7 @@ class ProgressDonut extends BaseComponent {
   }
 
   _init() {
-    this._bar = new ProgressBar.Circle(this._element, this._config);
+    this._bar = new Circle(this._element, this._config);
 
     if (this._config.value > 0) {
       this.set(this._config.value);
@@ -101,9 +106,11 @@ class ProgressDonut extends BaseComponent {
  * ------------------------------------------------------------------------
  */
 
-SelectorEngine.find(SELECTOR_DONUT).forEach((donut) => {
-  ProgressDonut.getOrCreateInstance(donut);
-});
+if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+  SelectorEngine.find(SELECTOR_DONUT).forEach((donut) => {
+    ProgressDonut.getOrCreateInstance(donut);
+  });
+}
 
 export { ProgressDonut as default };
 //# sourceMappingURL=progress-donut.js.map

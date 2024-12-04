@@ -1,6 +1,15 @@
-import BaseComponent from 'bootstrap/js/src/base-component.js';
-import { isDisabled, getElementFromSelector, reflow } from 'bootstrap/js/src/util/index';
-import EventHandler from 'bootstrap/js/src/dom/event-handler';
+import BaseComponent from './base-component.js';
+import { isDisabled, getElementFromSelector, reflow } from './util/index.js';
+import EventHandler from './dom/event-handler.js';
+
+/**
+ * --------------------------------------------------------------------------
+ * Bootstrap Italia (https://italia.github.io/bootstrap-italia/)
+ * Authors: https://github.com/italia/bootstrap-italia/blob/main/AUTHORS
+ * Licensed under BSD-3-Clause license (https://github.com/italia/bootstrap-italia/blob/main/LICENSE)
+ * --------------------------------------------------------------------------
+ */
+
 
 /**
  * ------------------------------------------------------------------------
@@ -13,7 +22,6 @@ const VERSION = '5.0.0';
 const DATA_KEY = 'bs.cookiebar';
 const EVENT_KEY = `.${DATA_KEY}`;
 const DATA_API_KEY = '.data-api';
-//const JQUERY_NO_CONFLICT = $.fn[NAME]
 const COOKIE_NAME = 'cookies_consent';
 const COOKIE_VALUE = 'true';
 const COOKIE_EXPIRE = 30;
@@ -192,27 +200,6 @@ class Cookiebar extends BaseComponent {
     this.dispose();
   }
 
-  // Static
-
-  /*static _jQueryInterface(config) {
-    return this.each(function () {
-      const $element = $(this)
-      let data = $element.data(DATA_KEY)
-
-      if (!data) {
-        data = new Cookiebar(this)
-        $element.data(DATA_KEY, data)
-      }
-
-      if (typeof config === 'string') {
-        if (typeof data[config] === 'undefined') {
-          throw new TypeError(`No method named "${config}"`)
-        }
-        data[config](this)
-      }
-    })
-  }*/
-
   static _handleAccept(cookiebarInstance) {
     return function (event) {
       if (event) {
@@ -258,36 +245,36 @@ class Cookiebar extends BaseComponent {
  * ------------------------------------------------------------------------
  */
 
-//$(document).on(EVENT_CLICK_DATA_API, SELECTOR_ACCEPT, Cookiebar._handleAccept(new Cookiebar()))
+if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+  EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_ACCEPT, function (event) {
+    if (['A', 'AREA'].includes(this.tagName)) {
+      event.preventDefault();
+    }
 
-EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_ACCEPT, function (event) {
-  if (['A', 'AREA'].includes(this.tagName)) {
-    event.preventDefault();
-  }
-
-  if (isDisabled(this)) {
-    return
-  }
-
-  const target = getElementFromSelector(this) || this.closest(`.${NAME}`);
-  const instance = Cookiebar.getOrCreateInstance(target);
-  instance.accept();
-  //Cookiebar._handleAccept(new Cookiebar())
-});
-
-EventHandler.on(window, EVENT_LOAD_DATA_API, function () {
-  const consent = Cookiebar._getCookieEU();
-  if (!consent) {
-    if (typeof document === 'undefined') {
+    if (isDisabled(this)) {
       return
     }
-    const cookiebars = document.querySelectorAll(SELECTOR_COOKIE_BAR);
-    cookiebars.forEach((bar) => {
-      const instance = Cookiebar.getOrCreateInstance(bar);
-      instance.show();
-    });
-  }
-});
+
+    const target = getElementFromSelector(this) || this.closest(`.${NAME}`);
+    const instance = Cookiebar.getOrCreateInstance(target);
+    instance.accept();
+    //Cookiebar._handleAccept(new Cookiebar())
+  });
+
+  EventHandler.on(window, EVENT_LOAD_DATA_API, function () {
+    const consent = Cookiebar._getCookieEU();
+    if (!consent) {
+      if (typeof document === 'undefined') {
+        return
+      }
+      const cookiebars = document.querySelectorAll(SELECTOR_COOKIE_BAR);
+      cookiebars.forEach((bar) => {
+        const instance = Cookiebar.getOrCreateInstance(bar);
+        instance.show();
+      });
+    }
+  });
+}
 
 export { Cookiebar as default };
 //# sourceMappingURL=cookiebar.js.map

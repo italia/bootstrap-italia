@@ -1,7 +1,16 @@
-import BaseComponent from 'bootstrap/js/src/base-component.js';
-import EventHandler from 'bootstrap/js/src/dom/event-handler';
-import SelectorEngine from 'bootstrap/js/src/dom/selector-engine';
+import BaseComponent from './base-component.js';
+import EventHandler from './dom/event-handler.js';
+import SelectorEngine from './dom/selector-engine.js';
 import { focusSimbling } from './util/dom.js';
+
+/**
+ * --------------------------------------------------------------------------
+ * Bootstrap Italia (https://italia.github.io/bootstrap-italia/)
+ * Authors: https://github.com/italia/bootstrap-italia/blob/main/AUTHORS
+ * Licensed under BSD-3-Clause license (https://github.com/italia/bootstrap-italia/blob/main/LICENSE)
+ * --------------------------------------------------------------------------
+ */
+
 
 const NAME = 'accordion';
 const DATA_KEY = 'bs.accordion';
@@ -80,29 +89,15 @@ class Accordion extends BaseComponent {
  * Data Api implementation
  * ------------------------------------------------------------------------
  */
-/*const accordions = SelectorEngine.find(SELECTOR_HEADBTN_WRAPPER)
-accordions.forEach((acc) => {
-  Accordion.getOrCreateInstance(acc)
-})*/
-
-/*const accordionToggles = SelectorEngine.find(SELECTOR_HEADBTN)
-accordionToggles.forEach((toggle) => {
-  EventHandler.one(toggle, EVENT_KEYDOWN_DATA_API, (evt) => {
-    const parent = toggle.closest(SELECTOR_HEADBTN_WRAPPER)
+if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+  EventHandler.on(document, EVENT_KEYDOWN_DATA_API, SELECTOR_HEADBTN, function (evt) {
+    const parent = this.closest(SELECTOR_HEADBTN_WRAPPER);
     if (parent) {
-      const accordion = Accordion.getOrCreateInstance(parent)
-      accordion.handleKeyDown(evt.key, toggle, evt)
+      const accordion = Accordion.getOrCreateInstance(parent);
+      accordion.handleKeyDown(evt.key, this, evt);
     }
-  })
-})*/
-
-EventHandler.on(document, EVENT_KEYDOWN_DATA_API, SELECTOR_HEADBTN, function (evt) {
-  const parent = this.closest(SELECTOR_HEADBTN_WRAPPER);
-  if (parent) {
-    const accordion = Accordion.getOrCreateInstance(parent);
-    accordion.handleKeyDown(evt.key, this, evt);
-  }
-});
+  });
+}
 
 export { Accordion as default };
 //# sourceMappingURL=accordion.js.map

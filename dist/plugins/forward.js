@@ -1,8 +1,17 @@
-import BaseComponent from 'bootstrap/js/src/base-component.js';
-import EventHandler from 'bootstrap/js/src/dom/event-handler';
-import Manipulator from 'bootstrap/js/src/dom/manipulator';
-import { getElementFromSelector } from 'bootstrap/js/src/util/index';
+import BaseComponent from './base-component.js';
+import EventHandler from './dom/event-handler.js';
+import Manipulator from './dom/manipulator.js';
+import { getElementFromSelector } from './util/index.js';
 import { documentScrollTo } from './util/tween.js';
+
+/**
+ * --------------------------------------------------------------------------
+ * Bootstrap Italia (https://italia.github.io/bootstrap-italia/)
+ * Authors: https://github.com/italia/bootstrap-italia/blob/main/AUTHORS
+ * Licensed under BSD-3-Clause license (https://github.com/italia/bootstrap-italia/blob/main/LICENSE)
+ * --------------------------------------------------------------------------
+ */
+
 
 const NAME = 'historyback';
 const DATA_KEY = 'bs.historyback';
@@ -68,20 +77,14 @@ class Forward extends BaseComponent {
  * Data Api implementation
  * ------------------------------------------------------------------------
  */
-/*const toggles = SelectorEngine.find(SELECTOR_TOGGLE)
-toggles.forEach((toggle) => {
-  EventHandler.one(toggle, EVENT_CLICK_DATA_API, (evt) => {
-    evt.preventDefault()
-    const forward = Forward.getOrCreateInstance(toggle)
-    forward.goToTarget()
-  })
-})*/
 
-EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_TOGGLE, function (evt) {
-  evt.preventDefault();
-  const forward = Forward.getOrCreateInstance(this);
-  forward.goToTarget();
-});
+if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+  EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_TOGGLE, function (evt) {
+    evt.preventDefault();
+    const forward = Forward.getOrCreateInstance(this);
+    forward.goToTarget();
+  });
+}
 
 export { Forward as default };
 //# sourceMappingURL=forward.js.map
