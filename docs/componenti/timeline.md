@@ -11,7 +11,7 @@ Contiene un elenco di `.timeline-element`.
 
 Ogni `.timeline-element` contiene:
 
-- **PIN**: ogni pin è un elemento contenitore `.it-pin-wrapper` di tipo heading `h` che contiene un0icona (`.pin-icon`) e una label (`.pin-text`) indicante la data dell'evento.
+- **PIN**: ogni pin è un elemento contenitore `.it-pin-wrapper` di tipo heading `h` che contiene un'icona (`.pin-icon`) e una label (`.pin-text`) indicante la data dell'evento.
 
 Il **PIN** ha tre varianti di colore:
 
