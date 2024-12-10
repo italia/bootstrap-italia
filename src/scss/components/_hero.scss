@@ -5,7 +5,7 @@
   background-color: $hero-bg-color;
   display: flex;
   align-items: flex-end;
-  // img -------------------------------------------
+  // Img -------------------------------------------
   .img-responsive-wrapper {
     position: absolute;
     width: 100%;
@@ -23,13 +23,10 @@
   }
   // Text container ----------------------------
   .it-hero-text-wrapper {
-    padding: 96px 12px;
-    max-width: 50vw;
+    padding: 3rem 0.75rem;
     background: transparent !important;
     position: relative;
-    :last-child {
-      margin-bottom: 0;
-    }
+
     span,
     h1,
     h2,
@@ -46,7 +43,7 @@
       font-size: $hero-cat-size;
       text-transform: uppercase;
       font-weight: 600;
-      // letter-spacing: $hero-cat-spacing;
+      margin-bottom: $v-gap;
     }
     h1 {
       font-size: $hero-heading-size;
@@ -59,11 +56,15 @@
       margin-top: 1.5rem;
     }
   }
+  // Small size container ----------------------------
+  &.it-hero-small-size .it-hero-text-wrapper {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
   // Text container centered----------------------------
-  &.it-text-centered {
-    .it-hero-text-wrapper {
-      text-align: center;
-    }
+  &.it-text-centered .it-hero-text-wrapper {
+    margin: 0 auto;
+    text-align: center;   
   }
   // overlay color--------------------------------------
   &.it-overlay {
@@ -193,20 +194,10 @@
     &.it-hero-small-size {
       min-height: $hero-height-sm-tab;
     }
-    // Text container ----------------------------
-    .it-hero-text-wrapper {
-      // padding: $v-gap * 6 40% $v-gap * 6 ($v-gap * 5)-6;
-    }
-    // Text container centered----------------------------
-    &.it-text-centered {
-      .it-hero-text-wrapper {
-        // padding: $v-gap * 6 20% $v-gap * 6 20%;
-      }
-    }
   }
 }
 
-//Tablet horizontal / small desktop
+// Tablet horizontal / small desktop
 @include media-breakpoint-up(lg) {
   .it-hero-wrapper {
     position: relative;
@@ -218,47 +209,23 @@
     }
     // Text container ----------------------------
     .it-hero-text-wrapper {
-      padding: $v-gap * 12;
+      padding: $v-gap * 12 0;
       max-width: 50vw;
 
       h1 {
         font-size: $hero-heding-size-desk;
       }
+    }
 
-      p {
-        margin-bottom: 0;
-      }
-      
-      .it-btn-container {
-        margin-top: $v-gap * 6;
-      }
-    }
-    // Text container centered----------------------------
-    &.it-text-centered {
-      .it-hero-text-wrapper {
-        // padding: $hero-text-padding-desk 20% $hero-text-padding-desk + ($v-gap * 3) 20%;
-        span.it-category {
-          left: 20%;
-          right: 20%;
-        }
-        .it-btn-container {
-          left: 20%;
-          right: 20%;
-        }
-      }
-    }
     // negative bottom
     &.it-bottom-overlapping-content {
       margin-bottom: -$hero-negative-margin-desk;
       .it-hero-text-wrapper {
-        padding-bottom: $hero-negative-bottom-padding;
-        padding-top: $hero-text-padding-desk + $hero-negative-margin-desk * 0.5;
+        padding-bottom: $hero-negative-bottom-padding * 2;
       }
-      & + .container {
-        .card-wrapper {
-          .card-body {
-            padding-top: $card-padding * 2;
-          }
+    & .card-wrapper {
+        .card-body {
+          padding-top: 48px;
         }
       }
     }

@@ -1931,17 +1931,17 @@ $hero-height-sm-mob: 230px;
 $hero-text-padding: $v-gap * 3;
 $hero-text-color: $white !default;
 $hero-cat-size: 1rem;
-$hero-heading-size: 2rem;
+$hero-heading-size: 2.5rem;
 $hero-heding-size-desk: 3rem;
 $hero-p-size: 1rem;
 $hero-cat-spacing: $card-category-l-spacing !default;
 $hero-text-padding-desk: 120px;
 $hero-dark-bg: rgba($neutral-1-a10, 0.80) !default; // Missing in the UI kit
 $hero-primary-bg: rgba($primary, 0.80) !default;
-$hero-negative-margin: 80px;
-$hero-negative-margin-desk: 80px;
-$hero-negative-bottom-padding: 240px;
-$hero-negative-bottom-padding-mob: 136px;
+$hero-negative-margin: 2rem;
+$hero-negative-margin-desk: 3rem;
+$hero-negative-bottom-padding: 48px;
+$hero-negative-bottom-padding-mob: 96px;
 
 // Carousel
 $crs-margin-bottom: $v-gap * 3;
