@@ -1,6 +1,6 @@
 import { Alert } from './plugins/alert'
 import { Accordion } from './plugins/accordion'
-import { BackToTop } from './plugins/backToTop'
+import { BackToTop } from './plugins/back-to-top'
 import { Button } from './plugins/button'
 import { Carousel } from './plugins/carousel'
 import { CarouselBI } from './plugins/carousel-bi'

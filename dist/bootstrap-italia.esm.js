@@ -15,7 +15,7 @@ export { default as InputSearchAutocomplete } from './plugins/input-search-autoc
 export { default as InputPassword } from './plugins/input-password.js';
 export { default as ProgressDonut } from './plugins/progress-donut.js';
 export { default as UploadDragDrop } from './plugins/upload-dragdrop.js';
-export { default as BackToTop } from './plugins/backToTop.js';
+export { default as BackToTop } from './plugins/back-to-top.js';
 export { default as HistoryBack } from './plugins/history-back.js';
 export { default as Forward } from './plugins/forward.js';
 export { default as Masonry } from './plugins/masonry.js';
