@@ -1,6 +1,6 @@
 //mobile
 .it-hero-wrapper {
-  min-height: $hero-height-mob;
+  // min-height: $hero-height-mob;
   position: relative;
   background-color: $hero-bg-color;
   display: flex;
@@ -23,7 +23,8 @@
   }
   // Text container ----------------------------
   .it-hero-text-wrapper {
-    padding: $hero-text-padding * 2 $hero-text-padding + ($v-gap * 2)-6;
+    padding: 96px 12px;
+    max-width: 50vw;
     background: transparent !important;
     position: relative;
     :last-child {
@@ -40,23 +41,22 @@
       color: $hero-text-color;
       margin-bottom: $v-gap * 3;
     }
-    span.it-category {
+    .it-category {
       display: block;
       font-size: $hero-cat-size;
       text-transform: uppercase;
       font-weight: 600;
-      letter-spacing: $hero-cat-spacing;
+      // letter-spacing: $hero-cat-spacing;
     }
     h1 {
       font-size: $hero-heading-size;
-      letter-spacing: unset;
     }
     p {
       font-size: $hero-p-size;
       font-family: $font-family-serif;
     }
     .it-btn-container {
-      margin-top: $v-gap;
+      margin-top: 1.5rem;
     }
   }
   // Text container centered----------------------------
@@ -195,12 +195,12 @@
     }
     // Text container ----------------------------
     .it-hero-text-wrapper {
-      padding: $v-gap * 6 40% $v-gap * 6 ($v-gap * 5)-6;
+      // padding: $v-gap * 6 40% $v-gap * 6 ($v-gap * 5)-6;
     }
     // Text container centered----------------------------
     &.it-text-centered {
       .it-hero-text-wrapper {
-        padding: $v-gap * 6 20% $v-gap * 6 20%;
+        // padding: $v-gap * 6 20% $v-gap * 6 20%;
       }
     }
   }
@@ -210,7 +210,7 @@
 @include media-breakpoint-up(lg) {
   .it-hero-wrapper {
     position: relative;
-    min-height: $hero-height-desk;
+    // min-height: $hero-height-desk;
     align-items: center;
     // img small size --------------------------------
     &.it-hero-small-size {
@@ -218,26 +218,25 @@
     }
     // Text container ----------------------------
     .it-hero-text-wrapper {
-      padding: $hero-text-padding-desk 40% $hero-text-padding-desk + ($v-gap * 6) ($v-gap * 4)-6;
-      span.it-category {
-        position: absolute;
-        margin-top: -$v-gap * 7;
-      }
+      padding: $v-gap * 12;
+      max-width: 50vw;
+
       h1 {
         font-size: $hero-heding-size-desk;
       }
+
       p {
         margin-bottom: 0;
       }
+      
       .it-btn-container {
-        position: absolute;
         margin-top: $v-gap * 6;
       }
     }
     // Text container centered----------------------------
     &.it-text-centered {
       .it-hero-text-wrapper {
-        padding: $hero-text-padding-desk 20% $hero-text-padding-desk + ($v-gap * 3) 20%;
+        // padding: $hero-text-padding-desk 20% $hero-text-padding-desk + ($v-gap * 3) 20%;
         span.it-category {
           left: 20%;
           right: 20%;
