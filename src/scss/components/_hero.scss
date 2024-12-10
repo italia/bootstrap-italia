@@ -1,6 +1,6 @@
 //mobile
 .it-hero-wrapper {
-  // min-height: $hero-height-mob;
+  min-height: $hero-height-mob;
   position: relative;
   background-color: $hero-bg-color;
   display: flex;
@@ -201,7 +201,7 @@
 @include media-breakpoint-up(lg) {
   .it-hero-wrapper {
     position: relative;
-    // min-height: $hero-height-desk;
+    min-height: $hero-height-desk;
     align-items: center;
     // img small size --------------------------------
     &.it-hero-small-size {
