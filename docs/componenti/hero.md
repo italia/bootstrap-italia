@@ -9,13 +9,15 @@ toc: true
 La hero è un componente leggero e flessibile che può facoltativamente estendere l'intera finestra per mostrare i messaggi in evidenza sul tuo sito.
 Di seguito una serie di esempi con la descrizione degli elementi e delle classi applicabili.
 
-Il componente Hero può contenere:
+Gli elementi da cui è composto sono:
 
-- Sub head
-- Heading (titolo)
+- Titolo occhiello
+- Titolo principale (heading)
 - Paragrafo
-- Call to action
+- Uno o più pulsanti (call to action)
 - Immagine di background
+
+Poiché il componente occupa in larghezza l'intera pagina, consulta la **[pagina di esempio]**({{ site.baseurl }}/docs/esempi/hero/){:target="\_blank"} per visualizzare tutte le varianti in un contesto reale.
 
 {% capture callout %}
 
@@ -24,11 +26,6 @@ Il componente Hero può contenere:
 Valutare attentamente l'opportunità di utilizzare più hero nella stessa pagina.
 
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
-
-{% capture callout %}
-Il componente Hero è un componente full-width.
-Per la visualizzazione reale a schermo fate riferimento alla [pagina di esempio]({{ site.baseurl }}/docs/esempi/hero/){:target="\_blank"}.
-{% endcapture %}{% include callout.html content=callout type="info" %}
 
 ## Con immagine
 
