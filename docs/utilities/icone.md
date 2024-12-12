@@ -96,7 +96,7 @@ Per copiare il nome di un'icona rapidamente, fare click su di essa.
 </small>
 </div>
 <div class="notification with-icon success" role="alert" aria-labelledby="copiednot-title" id="copiednot">
-  <h2 id="copiednot-title" class="h5 "><svg class="icon"><use href="/dist/svg/sprites.svg#it-check-circle"></use></svg>Nome dell'icona copiato negli appunti</h2>
+  <h2 id="copiednot-title" class="h5 no_toc"><svg class="icon"><use href="/dist/svg/sprites.svg#it-check-circle"></use></svg>Nome dell'icona copiato negli appunti</h2>
 </div>
 
 {% comment %}Example name: Icone disponibili{% endcomment %}
