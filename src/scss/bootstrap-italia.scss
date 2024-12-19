@@ -9,7 +9,11 @@
 @import 'base/functions';
 // ------------------------------
 
-// Variables
+// Settings & Variables
+// Variables from the design tokens are imported here.
+@use "../../../node_modules/design-tokens-italia/css/_variables.css" as cssToken;
+@use '../../../node_modules/design-tokens-italia/scss/_variables' as sassToken;
+@import 'base/root';
 @import 'base/variables';
 // ------------------------------
 
@@ -20,7 +24,6 @@
 // ------------------------------
 
 // Layout
-@import 'base/root';
 @import 'base/reboot';
 @import 'base/containers';
 @import 'base/transitions';
