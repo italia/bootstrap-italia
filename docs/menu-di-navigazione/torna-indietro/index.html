@@ -11,13 +11,13 @@
 
 <title>Torna indietro · Bootstrap Italia</title>
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202412120958" rel="stylesheet" />
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202412311033" rel="stylesheet" />
 
 <!-- Documentation extras -->
  
-<link href="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.2/dist/cdn/docsearch.min.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" rel="stylesheet" />
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202412120958" rel="stylesheet" />
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202412311033" rel="stylesheet" />
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico" />
@@ -114,8 +114,9 @@
   </div>
 </nav>
  <header class="navbar-main navbar navbar-dark bd-navbar px-3 bd-navbar--slim">
-  <div class="container-fluid">
-    <a class="navbar-brand py-2 text-decoration-none" href="/bootstrap-italia/" aria-label="Bootstrap Italia Homepage" title="Bootstrap Italia Homepage">
+  <div class="container">
+    <a class="navbar-brand py-2 text-decoration-none" href="/bootstrap-italia/" aria-label="Bootstrap Italia Homepage"
+      title="Bootstrap Italia Homepage">
       <div class="d-flex flex-row"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92 74"
   
    height="48"
@@ -126,40 +127,58 @@
 </svg>
 <div class="d-flex flex-column ps-3 ps-sm-4">
           <h1 class="bd-logo-title">Bootstrap Italia</h1>
-          <h2 class="bd-logo-subtitle">Il tema Bootstrap 5 per <span class="d-none d-sm-inline">lo sviluppo di applicazioni web per </span>la PA</h2>
+          <h2 class="bd-logo-subtitle">Il tema Bootstrap 5 per <span class="d-none d-sm-inline">lo sviluppo di
+              applicazioni web per </span>la PA</h2>
         </div>
       </div>
     </a>
 
     
-    <button class="btn btn-xs btn-primary d-md-none px-2 text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+    <button class="btn btn-xs btn-primary d-md-none px-2 text-uppercase" type="button" data-bs-toggle="collapse"
+      data-bs-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false"
+      aria-label="Toggle docs navigation">
       menu
     </button>
     
 
     <ul class="navbar-nav flex-row ms-md-auto d-none d-md-flex">
       <li class="nav-item pe-2">
-        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/releases/download/v2.12.1/bootstrap-italia.zip" aria-label="Download">
+        <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center"
+          href="https://github.com/italia/bootstrap-italia/releases/download/v2.12.1/bootstrap-italia.zip"
+          aria-label="Download">
           <small class="pe-2 m-0">v2.12.1</small>
-          <svg class="icon icon-sm icon-light"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-download" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-download"></use></svg><span class="visually-hidden">Download</span>
+          <svg class="icon icon-sm icon-light">
+            <use href="/bootstrap-italia/dist/svg/sprites.svg#it-download"
+              xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-download"></use>
+          </svg><span class="visually-hidden">Download</span>
         </a>
       </li>
       <li class="nav-item pe-2">
-        <a title="Repository GitHub di Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-          <svg class="icon icon-sm icon-light"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-github" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-github"></use></svg><span class="visually-hidden">GitHub</span>
+        <a title="Repository GitHub di Bootstrap Italia" data-toggle="tooltip"
+          class="nav-link d-flex align-items-center" href="https://github.com/italia/bootstrap-italia/" target="_blank" rel="noopener noreferrer"
+          aria-label="GitHub">
+          <svg class="icon icon-sm icon-light">
+            <use href="/bootstrap-italia/dist/svg/sprites.svg#it-github"
+              xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-github"></use>
+          </svg><span class="visually-hidden">GitHub</span>
         </a>
       </li>
     </ul>
 
     
-    <div class="bd-search w-100">
-      <label for="search-input" class="visually-hidden">Cerca:</label>
-      <input type="search" class="form-control" id="search-input" name="search-input" placeholder="Cerca componenti, classi, informazioni..." aria-label="Cerca..." autocomplete="off" />
+
+    
+    <div onclick="document.querySelector('#search-input > button').click()" class="search-in-docs">
+      <a aria-current="page" href="#" class="search-link rounded-icon" aria-label="Cerca nel sito"
+         data-focus-mouse="false"><svg role="img" class="icon icon-sm icon-primary">
+          <use href="/bootstrap-italia/dist/svg/sprites.svg#it-search"></use>
+        </svg><span class="search-in-docs--label">Cerca nella documentazione</span></a>
     </div>
+    
+    <div id="search-input"></div>
     
   </div>
 </header>
-
 
     <div class="container-fluid">
       <div class="row flex-xl-nowrap">
@@ -692,15 +711,15 @@
     </div>
 
     
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202412120958"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202412311033"></script>
 <script>
   bootstrap.loadFonts('/bootstrap-italia/dist/fonts')
-</script><script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202412120958"></script>
+</script><script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202412311033"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/anchor.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/clipboard.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tsparticles.min.js"></script>
 
-<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202412120958"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202412311033"></script>
 
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tweenjs.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/easeljs.min.js"></script>
@@ -717,21 +736,61 @@
     { src: '/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png', id: 'cover-7' },
   ]
 </script>
-<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202412120958"></script>
-<script src="/bootstrap-italia/docs/assets/src/js/vendor/docsearch.min.js"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202412311033"></script>
+<script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
 
 <script>
   docsearch({
-    apiKey: 'a755e381c276458251a59282bae6ee93',
-    indexName: 'bootstrap_italia',
-    inputSelector: '#search-input',
-    handleSelected: function (input, event, suggestion) {
-      var url = suggestion.url
-      url = suggestion.isLvl1 ? url.split('#')[0] : url
-      // If it's a title we remove the anchor so it does not jump.
-      window.location.href = url
-    },
-    debug: false, // Set debug to true if you want to inspect the dropdown
+    appId: "V0EOJ2MHD5",
+    apiKey: "7f7c26d560b352162a23c9d1476e195d",
+    indexName: "italiaio",
+    container: "#search-input",
+    placeholder: "Cerca nella documentazione",
+    debug: false, 
+    translations: {
+      button: {
+        buttonText: 'Cerca componenti, classi, informazioni...',
+        buttonAriaLabel: 'Cerca nella documentazione componenti, classi, informazioni',
+      },
+      modal: {
+        searchBox: {
+          resetButtonTitle: 'Cancella la query',
+          resetButtonAriaLabel: 'Cancella la query',
+          cancelButtonText: 'Annulla',
+          cancelButtonAriaLabel: 'Annulla',
+          searchInputLabel: 'Cerca',
+        },
+        startScreen: {
+          recentSearchesTitle: 'Recenti',
+          noRecentSearchesText: 'Nessuna ricerca recente',
+          saveRecentSearchButtonTitle: 'Salva questa ricerca',
+          removeRecentSearchButtonTitle: 'Rimuovi questa ricerca dalla cronologia',
+          favoriteSearchesTitle: 'Preferiti',
+          removeFavoriteSearchButtonTitle: 'Rimuovi questa ricerca dai preferiti',
+        },
+        errorScreen: {
+          titleText: 'Impossibile recuperare i risultati',
+          helpText: 'Controlla la tua connessione di rete.',
+        },
+        footer: {
+          selectText: 'per selezionare',
+          selectKeyAriaLabel: 'Tasto Invio',
+          navigateText: 'per navigare',
+          navigateUpKeyAriaLabel: 'Freccia su',
+          navigateDownKeyAriaLabel: 'Freccia giù',
+          closeText: 'per chiudere',
+          closeKeyAriaLabel: 'Tasto Esc',
+          searchByText: 'Powered by',
+        },
+        noResultsScreen: {
+          noResultsText: 'Nessun risultato per',
+          suggestedQueryText: 'Prova a cercare',
+          reportMissingResultsText: 'Pensi che questa query dovrebbe restituire risultati?',
+          reportMissingResultsLinkText: 'Faccelo sapere.',
+        },
+      }
+
+    }
   })
 </script><script>
   /**
