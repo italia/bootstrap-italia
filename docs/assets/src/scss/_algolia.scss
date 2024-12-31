@@ -54,19 +54,29 @@
   display: none;
 }
 
-.search-in-docs > a {
-  cursor: pointer;
-  align-items: center;
-  background: #fff;
-  border-radius: 24px;
-  display: flex;
-  height: 48px;
-  justify-content: center;
-  margin-left: 16px;
-  transition: all .3s;
-  width: 48px;
-  &:hover {
-    background: shade-color(white, 5%);
+.search-in-docs {
+  & > a {
+    height: 48px;
+    min-width: 48px;
+    background: #fff;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  @include media-breakpoint-up(md) {
+    &--label {
+      display: none;
+    }
+    & > a {
+      border-radius: 24px;
+      display: flex;
+      justify-content: center;
+      margin-left: 16px;
+      transition: all .3s;
+      &:hover {
+        background: shade-color(white, 5%);
+      }
+    }
   }
 }
 

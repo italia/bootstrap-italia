@@ -48,10 +48,10 @@
 
     
     <div onclick="document.querySelector('#search-input > button').click()" class="search-in-docs">
-      <a aria-current="page" class="search-link rounded-icon" aria-label="Cerca nel sito"
+      <a aria-current="page" href="#" class="search-link rounded-icon" aria-label="Cerca nel sito"
          data-focus-mouse="false"><svg role="img" class="icon icon-sm icon-primary">
           <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-search"></use>
-        </svg></a>
+        </svg><span class="search-in-docs--label">Cerca nella documentazione</span></a>
     </div>
     
     <div id="search-input"></div>
