@@ -6,72 +6,6 @@
   // 2. they reference the “theme italia“ palette in the design system .italia.
   // 3. change the $prefix cssToken.variable in "_variables.scss" to customize the theme name in the CSS custom properties.
   // 4. customize these values to change the theme colors throughout your project.
-  --bsi-theme-primary: cssToken.var(--theme-italia-base);
-  --bsi-theme-primary-muted: cssToken.var(--theme-italia-muted);
-  --bsi-theme-primary-dark: cssToken.var(--theme-italia-dark);
-  --bsi-theme-primary-light: cssToken.var(--theme-italia-light);
-  --bsi-theme-primary-lighter: cssToken.var(--theme-italia-lighter);
-  // spacing
-  --bsi-spacing-inset-3xl: cssToken.var(--spacing-inset-3xl);
-  --bsi-spacing-inset-xxl: cssToken.var(--spacing-inset-xxl);
-  --bsi-spacing-inset-xl: cssToken.var(--spacing-inset-xl);
-  --bsi-spacing-inset-l: cssToken.var(--spacing-inset-l);
-  --bsi-spacing-inset-m: cssToken.var(--spacing-inset-m);
-  --bsi-spacing-inset-s: cssToken.var(--spacing-inset-s);
-  --bsi-spacing-inset-xs: cssToken.var(--spacing-inset-xs);
-  --bsi-spacing-inline-l: cssToken.var(--spacing-inline-l);
-  --bsi-spacing-inline-m: cssToken.var(--spacing-inline-m);
-  --bsi-spacing-inline-s: cssToken.var(--spacing-inline-s);
-  --bsi-spacing-inline-xs: cssToken.var(--spacing-inline-xs);
-  --bsi-spacing-inline-xxs: cssToken.var(--spacing-inline-xxs);
-  --bsi-spacing-stack-xxl: cssToken.var(--spacing-stack-xxl);
-  --bsi-spacing-stack-xl: cssToken.var(--spacing-stack-xl);
-  --bsi-spacing-stack-l: cssToken.var(--spacing-stack-l);
-  --bsi-spacing-stack-m: cssToken.var(--spacing-stack-m);
-  --bsi-spacing-stack-s: cssToken.var(--spacing-stack-s);
-  --bsi-spacing-stack-xs: cssToken.var(--spacing-stack-xs);
-  // typography
-  --bsi-font-mono: cssToken.var(--font-mono);
-  --bsi-font-serif: cssToken.var(--font-serif);
-  --bsi-font-sans: cssToken.var(--font-sans);
-  --bsi-font-weight-bold: cssToken.var(--font-weight-bold);
-  --bsi-font-weight-semibold: cssToken.var(--font-weight-semibold);
-  --bsi-font-weight-regular: cssToken.var(--font-weight-regular);
-  --bsi-font-weight-light: cssToken.var(--font-weight-light);
-  --bsi-font-weight-extra-light: cssToken.var(--font-weight-extra-light);
-  --bsi-font-size-10: cssToken.var(--font-size-10);
-  --bsi-font-size-9: cssToken.var(--font-size-9);
-  --bsi-font-size-8: cssToken.var(--font-size-8);
-  --bsi-font-size-7: cssToken.var(--font-size-7);
-  --bsi-font-size-6: cssToken.var(--font-size-6);
-  --bsi-font-size-5: cssToken.var(--font-size-5);
-  --bsi-font-size-4: cssToken.var(--font-size-4);
-  --bsi-font-size-3: cssToken.var(--font-size-3);
-  --bsi-font-size-2: cssToken.var(--font-size-2);
-  --bsi-font-size-1: cssToken.var(--font-size-1);
-  --bsi-font-line-height-5: cssToken.var(--font-line-height-5);
-  --bsi-font-line-height-4: cssToken.var(--font-line-height-4);
-  --bsi-font-line-height-3: cssToken.var(--font-line-height-3);
-  --bsi-font-line-height-2: cssToken.var(--font-line-height-2);
-  --bsi-font-line-height-1: cssToken.var(--font-line-height-1);
-  --bsi-font-tracking-normal: cssToken.var(--font-tracking-normal);
-  --bsi-font-tracking-tight: cssToken.var(--font-tracking-tight);
-  --bsi-font-tracking-narrow: cssToken.var(--font-tracking-narrow);
-  --bsi-font-tracking-short: cssToken.var(--font-tracking-short);
-  // --bsi-lead-line-height-l: cssToken.var(--lead-line-height-l);
-  // --bsi-body-line-height-l: cssToken.var(--body-line-height-l);
-  // --bsi-heading-6-line-height-l: cssToken.var(--heading-6-line-height-l);
-  // --bsi-heading-5-line-height-l: cssToken.var(--heading-5-line-height-l);
-  // --bsi-heading-4-line-height-l: cssToken.var(--heading-4-line-height-l);
-  // --bsi-heading-3-line-height-l: cssToken.var(--heading-3-line-height-l);
-  // --bsi-heading-2-line-height-l: cssToken.var(--heading-2-line-height-l);
-  // --bsi-heading-1-line-height-l: cssToken.var(--heading-1-line-height-l);
-  // --bsi-heading-6-line-height: cssToken.var(--heading-6-line-height);
-  // --bsi-heading-5-line-height: cssToken.var(--heading-5-line-height);
-  // --bsi-heading-4-line-height: cssToken.var(--heading-4-line-height);
-  // --bsi-heading-3-line-height: cssToken.var(--heading-3-line-height);
-  // --bsi-heading-2-line-height: cssToken.var(--heading-2-line-height);
-  // --bsi-heading-1-line-height: cssToken.var(--heading-1-line-height);
 
   // Colors
   //
@@ -349,7 +283,7 @@
   --#{$prefix}color-background-primary-lighter: var(--color-background-primary-lighter);
   --#{$prefix}color-background-primary-light: var(--color-background-primary-light);
   --#{$prefix}color-background-primary: var(--color-background-primary);
-  // status colors
+  // status colors - reference the background category colors only
   --#{$prefix}color-status-danger: var(--color-background-danger);
   --#{$prefix}color-status-danger-hover: var(--color-background-danger-hover);
   --#{$prefix}color-status-danger-active: var(--color-background-danger-active);
