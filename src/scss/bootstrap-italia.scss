@@ -10,11 +10,8 @@
 // ------------------------------
 
 // Settings & Variables
-// Variables from the design tokens are imported here.
-@use "../../../node_modules/design-tokens-italia/css/_variables.css" as cssToken;
-@use '../../../node_modules/design-tokens-italia/scss/_variables' as sassToken;
-@import 'base/root';
 @import 'base/variables';
+@import 'base/root';
 // ------------------------------
 
 // Functions, maps and mixins
