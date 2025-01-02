@@ -15,8 +15,8 @@
 $min-contrast-ratio: 4.5 !default;
 
 // Customize the light and dark text colors for use in our color contrast function.
-$color-contrast-dark: cssToken.var(--color-black) !default;
-$color-contrast-light: cssToken.var(--color-white) !default;
+$color-contrast-dark: var(--color-black) !default;
+$color-contrast-light: var(--color-white) !default;
 
 $yiq-text-light: sassToken.$color-text-inverse !default;
 $yiq-text-dark: sassToken.$color-text-base !default;
@@ -1824,12 +1824,9 @@ $offcanvas-backdrop-opacity: $modal-backdrop-opacity !default;
 
 // Variables used in _maps.scss
 $color-theme-primary: var(--#{$prefix}theme-primary);
-// $color-theme-secondary: var(--#{$prefix}primary);
-// $color-theme-accent: var(--#{$prefix}accent);
-
-$color-status-info: var(--color-text-secondary);
-$color-status-success: var(--color-status-success);
-$color-status-warning: var(--color-status-warning);
-$color-status-danger: var(--color-status-danger);
+$color-status-info: var(---#{$prefix}color-background-secondary);
+$color-status-success: var(---#{$prefix}color-status-success);
+$color-status-warning: var(---#{$prefix}color-status-warning);
+$color-status-danger: var(---#{$prefix}color-status-danger);
 
 
