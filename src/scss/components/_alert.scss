@@ -1,54 +1,55 @@
 // CSS Custom Properties
-:root {
-  --alert-spacing-inset: var(--spacing-inset-s);
-  --alert-color-background: var(--color-background-inverse);
-  --alert-color-border: var(--color-border-secondary);
-  --alert-color-text: var(--color-text-base);
-  --alert-color-heading: var(--color-text-base);
-  --alert-margin: var(--spacing-stack-m);
+.alert {
+  --#{$prefix}alert-color-background: var(--#{prefix}color-background-inverse);
+  --#{$prefix}alert-color-border: var(--#{prefix}color-border-secondary);
+  --#{$prefix}alert-color-text: var(--#{prefix}color-text-base);
+  --#{$prefix}alert-color-heading: var(--#{prefix}color-text-base);
+  --#{$prefix}alert-sizing-border: 0.5rem;
+  --#{$prefix}alert-spacing-inset: var(--#{prefix}spacing-inset-s);
+  --#{$prefix}alert-spacing-inset-extra: var(--#{$prefix}spacing-16x); // TODO: replace with semantic token
+  --#{$prefix}alert-spacing-outside: var(--#{prefix}spacing-stack-m);
 }
 
 // Base styles
 .alert {
   position: relative;
-  padding: var(--alert-spacing-inset);
-  margin-bottom: var(--alert-margin);
-  border: 1px solid var(--alert-color-border);
-  padding-left: 4em;
-  background-color: var(--alert-color-background);
-  color: var(--alert-color-text);
+  padding: var(--#{$prefix}alert-spacing-inset);
+  margin-bottom: var(--#{$prefix}alert-margin);
+  border: 1px solid var(--#{$prefix}alert-color-border);
+  background-color: var(--#{$prefix}alert-color-background);
+  color: var(--#{$prefix}alert-color-text);
   background-position: 20px 12px;
   background-repeat: no-repeat;
-  background-size: 32px 32px;
+  background-size: 2rem 2rem;
 
   @include media-breakpoint-up(lg) {
-    --alert-spacing-inset: var(--spacing-inset-m);
+    --#{$prefix}alert-spacing-inset: var(--spacing-inset-m);
+    padding-left: calc(var(--#{$prefix}alert-spacing-inset) * 4);
   }
 }
 
 // Headings for larger alerts
 .alert-heading {
   // Specified to prevent conflicts of changing $headings-color
-  color: var(--alert-color-heading);
+  color: var(--#{$prefix}alert-color-heading);
 }
 
 // Provide class for links that match alerts
 .alert-link {
-  font-weight: var(--font-weight-semibold);
-  text-decoration: underline;
+  font-weight: var(--#{prefix}font-weight-solid);
 }
 
 // Dismissible alerts
 // Expand the right padding and account for the close button's positioning.
 .alert-dismissible {
-  padding-right: var(--alert-spacing-inset);
+  padding-right: var(--#{$prefix}alert-spacing-inset);
   // Adjust close link position
   .btn-close {
     position: absolute;
     top: 50%;
     right: 0;
     transform: translateY(-50%);
-    padding: var(--alert-spacing-inset);
+    padding: var(--#{$prefix}alert-spacing-inset);
     color: inherit;
   }
 }
@@ -56,10 +57,10 @@
 // Alternate styles
 // Generate contextual modifier classes for colorizing the alert.
 // Loop through theme colors to generate contextual modifier classes for colorizing the alert
-@each $color, $value in $status {
-  @if ($color == 'danger' or $color == 'warning' or $color == 'success' or $color == 'info' or $color == 'primary') {
-    .alert-#{$color} {
-      border-left: 8px solid #{$value};
+@each $type, $value in $status {
+  @if index(('danger', 'warning', 'success', 'info', 'primary'), $type) {
+    .alert-#{$type} {
+      border-left: var(--#{$prefix}alert-sizing-border) solid #{$value};
     }
   }
 }
