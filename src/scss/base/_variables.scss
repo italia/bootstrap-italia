@@ -1,11 +1,41 @@
-// OLD VARIABLES ============================================================
+// Import Design Tokens Italia
+@import '~design-tokens-italia/scss/dsi-tokens';
+
 // Color vars
 // HSB (https://it.wikipedia.org/wiki/Hue_Saturation_Brightness, coincidente con il modello HSV)
 // è lo spazio colore scelto per ottenere le varianti colore della tonalità primaria.
 
 // Color system ==============================================================
 
-// TODO: What does this do?
+$black: hsl(0, 0%, 0%) !default;
+$white: hsl(0, 0%, 100%) !default;
+
+$gray-100: hsl(0, 0%, 96%) !default; // color-gray-96
+$gray-200: hsl(0, 0%, 90%) !default; // color-gray-90
+$gray-300: hsl(0, 0%, 83%) !default; // color-gray-83
+$gray-400: hsl(0, 0%, 64%) !default; // color-gray-64
+$gray-500: hsl(0, 0%, 45%) !default; // color-gray-45
+$gray-600: hsl(0, 0%, 32%) !default; // color-gray-32
+$gray-700: hsl(0, 0%, 25%) !default; // color-gray-25
+$gray-800: hsl(0, 0%, 15%) !default; // color-gray-15
+$gray-900: hsl(0, 0%, 10%) !default; // color-gray-10
+
+$grays: () !default;
+$grays: map-merge(
+  (
+    '100': $gray-100,
+    '200': $gray-200,
+    '300': $gray-300,
+    '400': $gray-400,
+    '500': $gray-500,
+    '600': $gray-600,
+    '700': $gray-700,
+    '800': $gray-800,
+    '900': $gray-900,
+  ),
+  $grays
+);
+
 @function main($key: '80') {
   @return map-get($mains, $key);
 }
@@ -15,11 +45,14 @@
 $min-contrast-ratio: 4.5 !default;
 
 // Customize the light and dark text colors for use in our color contrast function.
-$color-contrast-dark: var(--color-black) !default;
-$color-contrast-light: var(--color-white) !default;
+$color-contrast-dark: $black !default;
+$color-contrast-light: $white !default;
 
-$yiq-text-light: sassToken.$color-text-inverse !default;
-$yiq-text-dark: sassToken.$color-text-base !default;
+// PRIMARY COLORS DEFINITION //
+$primary-h: 210 !default;
+$primary-s: 100 !default;
+$primary-b: 80 !default;
+$primary-l: 40 !default; // Kit UI
 
 $primary: hsb($primary-h, $primary-s, $primary-b) !default; // color-blue-40
 
@@ -55,7 +88,7 @@ $gray-border-disabled: $gray-disabled !default; // color-border-disabled
 
 $secondary: $gray-secondary !default;
 
-$colors: () !default; // Ensure $colors is defined
+$colors: () !default;
 $colors: map-merge(
   (
     'indigo': $indigo,
@@ -79,7 +112,7 @@ $colors: map-merge(
 );
 
 // Border Color
-// $border-color: $gray-border !default; // Replaced with --#{$prefix}-color-border
+$border-color: $gray-border !default;
 
 // Info Colors
 $success: $green-accessible !default;
@@ -87,8 +120,68 @@ $info: $secondary !default;
 $warning: $orange-accessible !default;
 $danger: $red-accessible !default;
 
+$theme-colors: () !default;
+$theme-colors: map-merge(
+  (
+    'primary': $primary,
+    'secondary': $secondary,
+    'success': $success,
+    'info': $info,
+    'warning': $warning,
+    'danger': $danger,
+    'light': $light,
+    'dark': $dark,
+    'black': $black,
+    'white': $white,
+    '100': $gray-100,
+    '200': $gray-200,
+    '300': $gray-300,
+    '400': $gray-400,
+    '500': $gray-500,
+    '600': $gray-600,
+    '700': $gray-700,
+    '800': $gray-800,
+    '900': $gray-900,
+  ),
+  $theme-colors
+);
+
 // Characters which are escaped by the escape-svg function
 $escaped-characters: (('<', '%3c'), ('>', '%3e'), ('#', '%23'), ('(', '%28'), (')', '%29')) !default;
+
+// ACCENT COLORS DEFINITIONS
+// analoghi
+$analogue-1-h: 243;
+$analogue-1-s: 85;
+$analogue-1-b: 100;
+$analogue-1: hsb($analogue-1-h, $analogue-1-s, $analogue-1-b) !default;
+$analogue-2-h: 178;
+$analogue-2-s: 95;
+$analogue-2-b: 85;
+$analogue-2: hsb($analogue-2-h, $analogue-2-s, $analogue-2-b) !default;
+// Complementari e triadici
+$complementary-1-h: 351;
+$complementary-1-s: 75;
+$complementary-1-b: 97;
+$complementary-1: hsb($complementary-1-h, $complementary-1-s, $complementary-1-b) !default;
+$complementary-2-h: 36;
+$complementary-2-s: 100;
+$complementary-2-b: 100;
+$complementary-2: hsb($complementary-2-h, $complementary-2-s, $complementary-2-b) !default;
+$complementary-3-h: 159;
+$complementary-3-s: 100;
+$complementary-3-b: 81;
+$complementary-3: hsb($complementary-3-h, $complementary-3-s, $complementary-3-b) !default;
+
+// NEUTRAL COLORS DEFINITIONS
+$neutral-1-h: 210;
+$neutral-1-s: 70;
+$neutral-1-b: 30;
+$neutral-1: hsb($neutral-1-h, $neutral-1-s, $neutral-1-b) !default;
+$neutral-2-h: 210;
+$neutral-2-s: 5;
+$neutral-2-b: 95;
+$neutral-2: hsb($neutral-2-h, $neutral-2-s, $neutral-2-b) !default;
 
 // Light Greys A
 $lightgrey-a1: hsl(210, 3%, 85%); // progress-background-default
@@ -105,6 +198,214 @@ $lightgrey-b4: #f2f6fa;
 // Light Greys C
 $lightgrey-c1: #f7f9fa;
 $lightgrey-c2: hsl(210, 62%, 97%); // color-background-primary-lighter;
+
+//***********************************************************************
+//********************Primary color variations***************************
+//***********************************************************************
+
+//-------------------------Tinta e ombre---------------------------------
+$primary-a12: hsb($primary-h, $primary-s, 20) !default;
+$primary-a11: hsb($primary-h, $primary-s, 30) !default;
+$primary-a10: hsb($primary-h, $primary-s, 40) !default;
+$primary-a9: hsb($primary-h, $primary-s, 50) !default;
+$primary-a8: hsb($primary-h, $primary-s, 60) !default;
+$primary-a7: hsb($primary-h, $primary-s, 70) !default;
+$primary-a6: hsb($primary-h, $primary-s, 80) !default;
+$primary-a5: hsb($primary-h, $primary-s - 15, 84) !default;
+$primary-a4: hsb($primary-h, $primary-s - 30, 88) !default;
+$primary-a3: hsb($primary-h, $primary-s - 45, 92) !default;
+$primary-a2: hsb($primary-h + 1, $primary-s - 60, 96) !default;
+$primary-a1: hsb($primary-h, $primary-s - 75, 99) !default;
+
+//-------------------------Toni------------------------------------------
+$primary-b1: hsb($primary-h, $primary-s, $primary-b) !default;
+$primary-b2: hsb($primary-h, $primary-s - 10, $primary-b - 10) !default;
+$primary-b3: hsb($primary-h, $primary-s - 20, $primary-b - 20) !default;
+$primary-b4: hsb($primary-h, $primary-s - 30, $primary-b - 30) !default;
+$primary-b5: hsb($primary-h, $primary-s - 40, $primary-b - 40) !default;
+$primary-b6: hsb($primary-h, $primary-s - 50, $primary-b - 50) !default;
+$primary-b7: hsb($primary-h, $primary-s - 60, $primary-b - 60) !default;
+$primary-b8: hsb($primary-h, $primary-s - 70, $primary-b - 70) !default;
+
+//-------------------------Saturazione------------------------------------------
+$primary-c1: hsb($primary-h, $primary-s - calc($primary-s * 90 / 100), $primary-b + calc($primary-b * 20 / 100)) !default;
+$primary-c2: hsb($primary-h, $primary-s - calc($primary-s * 80 / 100), $primary-b + calc($primary-b * 20 / 100)) !default;
+$primary-c3: hsb($primary-h, $primary-s - calc($primary-s * 70 / 100), $primary-b + calc($primary-b * 20 / 100)) !default;
+$primary-c4: hsb($primary-h, $primary-s - calc($primary-s * 60 / 100), $primary-b + calc($primary-b * 20 / 100)) !default;
+$primary-c5: hsb($primary-h, $primary-s - calc($primary-s * 50 / 100), $primary-b + calc($primary-b * 20 / 100)) !default;
+$primary-c6: hsb($primary-h, $primary-s - calc($primary-s * 40 / 100), $primary-b + calc($primary-b * 20 / 100)) !default;
+$primary-c7: hsb($primary-h, $primary-s - calc($primary-s * 30 / 100), $primary-b + calc($primary-b * 20 / 100)) !default;
+$primary-c8: hsb($primary-h, $primary-s - calc($primary-s * 20 / 100), $primary-b + calc($primary-b * 20 / 100)) !default;
+$primary-c9: hsb($primary-h, $primary-s - calc($primary-s * 10 / 100), $primary-b + calc($primary-b * 20 / 100)) !default;
+$primary-c10: hsb($primary-h, $primary-s, $primary-b + calc($primary-b * 20 / 100)) !default;
+$primary-c11: hsb($primary-h, $primary-s, $primary-b + calc($primary-b * 10 / 100)) !default;
+$primary-c12: hsb($primary-h, $primary-s, $primary-b) !default;
+
+//***********************************************************************
+//********************Accent colors variations***************************
+//***********************************************************************
+// analoghi
+// tinte e ombre
+/***************************** 1 ****************************************/
+$analogue-1-a12: hsb($analogue-1-h, $analogue-1-s, 20) !default;
+$analogue-1-a11: hsb($analogue-1-h, $analogue-1-s, 30) !default;
+$analogue-1-a10: hsb($analogue-1-h, $analogue-1-s, 40) !default;
+$analogue-1-a9: hsb($analogue-1-h, $analogue-1-s, 50) !default;
+$analogue-1-a8: hsb($analogue-1-h, $analogue-1-s, 60) !default;
+$analogue-1-a7: hsb($analogue-1-h, $analogue-1-s, 70) !default;
+$analogue-1-a6: hsb($analogue-1-h, $analogue-1-s, 80) !default;
+$analogue-1-a5: hsb($analogue-1-h, $analogue-1-s - 15, 84) !default;
+$analogue-1-a4: hsb($analogue-1-h, $analogue-1-s - 30, 88) !default;
+$analogue-1-a3: hsb($analogue-1-h, $analogue-1-s - 45, 92) !default;
+$analogue-1-a2: hsb($analogue-1-h, $analogue-1-s - 60, 96) !default;
+$analogue-1-a1: hsb($analogue-1-h, $analogue-1-s - 75, 100) !default;
+
+/***************************** 2 ****************************************/
+$analogue-2-a12: hsb($analogue-2-h, $analogue-2-s, 20) !default;
+$analogue-2-a11: hsb($analogue-2-h, $analogue-2-s, 30) !default;
+$analogue-2-a10: hsb($analogue-2-h, $analogue-2-s, 40) !default;
+$analogue-2-a9: hsb($analogue-2-h, $analogue-2-s, 50) !default;
+$analogue-2-a8: hsb($analogue-2-h, $analogue-2-s, 60) !default;
+$analogue-2-a7: hsb($analogue-2-h, $analogue-2-s, 70) !default;
+$analogue-2-a6: hsb($analogue-2-h, $analogue-2-s, 80) !default;
+$analogue-2-a5: hsb($analogue-2-h, $analogue-2-s - 15, 84) !default;
+$analogue-2-a4: hsb($analogue-2-h, $analogue-2-s - 30, 88) !default;
+$analogue-2-a3: hsb($analogue-2-h, $analogue-2-s - 45, 92) !default;
+$analogue-2-a2: hsb($analogue-2-h, $analogue-2-s - 60, 96) !default;
+$analogue-2-a1: hsb($analogue-2-h, $analogue-2-s - 75, 100) !default;
+
+// toni
+/***************************** 1 ****************************************/
+$analogue-1-b1: hsb($analogue-1-h, $analogue-1-s, $analogue-1-b) !default;
+$analogue-1-b2: hsb($analogue-1-h, $analogue-1-s - 10, $analogue-1-b - 10) !default;
+$analogue-1-b3: hsb($analogue-1-h, $analogue-1-s - 20, $analogue-1-b - 20) !default;
+$analogue-1-b4: hsb($analogue-1-h, $analogue-1-s - 30, $analogue-1-b - 30) !default;
+$analogue-1-b5: hsb($analogue-1-h, $analogue-1-s - 40, $analogue-1-b - 40) !default;
+$analogue-1-b6: hsb($analogue-1-h, $analogue-1-s - 50, $analogue-1-b - 50) !default;
+$analogue-1-b7: hsb($analogue-1-h, $analogue-1-s - 60, $analogue-1-b - 60) !default;
+$analogue-1-b8: hsb($analogue-1-h, $analogue-1-s - 70, $analogue-1-b - 70) !default;
+
+/***************************** 2 ****************************************/
+$analogue-2-b1: hsb($analogue-2-h, $analogue-2-s, $analogue-2-b) !default;
+$analogue-2-b2: hsb($analogue-2-h, $analogue-2-s - 10, $analogue-2-b - 10) !default;
+$analogue-2-b3: hsb($analogue-2-h, $analogue-2-s - 20, $analogue-2-b - 20) !default;
+$analogue-2-b4: hsb($analogue-2-h, $analogue-2-s - 30, $analogue-2-b - 30) !default;
+$analogue-2-b5: hsb($analogue-2-h, $analogue-2-s - 40, $analogue-2-b - 40) !default;
+$analogue-2-b6: hsb($analogue-2-h, $analogue-2-s - 50, $analogue-2-b - 50) !default;
+$analogue-2-b7: hsb($analogue-2-h, $analogue-2-s - 60, $analogue-2-b - 60) !default;
+$analogue-2-b8: hsb($analogue-2-h, $analogue-2-s - 70, $analogue-2-b - 70) !default;
+
+// complementari
+// tinte e ombre
+/***************************** 1 ****************************************/
+$complementary-1-a12: hsb($complementary-1-h, $complementary-1-s, 20) !default;
+$complementary-1-a11: hsb($complementary-1-h, $complementary-1-s, 30) !default;
+$complementary-1-a10: hsb($complementary-1-h, $complementary-1-s, 40) !default;
+$complementary-1-a9: hsb($complementary-1-h, $complementary-1-s, 50) !default;
+$complementary-1-a8: hsb($complementary-1-h, $complementary-1-s, 60) !default;
+$complementary-1-a7: hsb($complementary-1-h, $complementary-1-s, 70) !default;
+$complementary-1-a6: hsb($complementary-1-h, $complementary-1-s, 80) !default;
+$complementary-1-a5: hsb($complementary-1-h, $complementary-1-s - 15, 84) !default;
+$complementary-1-a4: hsb($complementary-1-h, $complementary-1-s - 30, 88) !default;
+$complementary-1-a3: hsb($complementary-1-h, $complementary-1-s - 45, 92) !default;
+$complementary-1-a2: hsb($complementary-1-h, $complementary-1-s - 60, 96) !default;
+$complementary-1-a1: hsb($complementary-1-h, $complementary-1-s - 75, 100) !default;
+
+/***************************** 2 ****************************************/
+$complementary-2-a12: hsb($complementary-2-h, $complementary-2-s, 20) !default;
+$complementary-2-a11: hsb($complementary-2-h, $complementary-2-s, 30) !default;
+$complementary-2-a10: hsb($complementary-2-h, $complementary-2-s, 40) !default;
+$complementary-2-a9: hsb($complementary-2-h, $complementary-2-s, 50) !default;
+$complementary-2-a8: hsb($complementary-2-h, $complementary-2-s, 60) !default;
+$complementary-2-a7: hsb($complementary-2-h, $complementary-2-s, 70) !default;
+$complementary-2-a6: hsb($complementary-2-h, $complementary-2-s, 80) !default;
+$complementary-2-a5: hsb($complementary-2-h, $complementary-2-s - 15, 84) !default;
+$complementary-2-a4: hsb($complementary-2-h, $complementary-2-s - 30, 88) !default;
+$complementary-2-a3: hsb($complementary-2-h, $complementary-2-s - 45, 92) !default;
+$complementary-2-a2: hsb($complementary-2-h, $complementary-2-s - 60, 96) !default;
+$complementary-2-a1: hsb($complementary-2-h, $complementary-2-s - 75, 100) !default;
+
+/***************************** 3 ****************************************/
+$complementary-3-a12: hsb($complementary-3-h, $complementary-3-s, 20) !default;
+$complementary-3-a11: hsb($complementary-3-h, $complementary-3-s, 30) !default;
+$complementary-3-a10: hsb($complementary-3-h, $complementary-3-s, 40) !default;
+$complementary-3-a9: hsb($complementary-3-h, $complementary-3-s, 50) !default;
+$complementary-3-a8: hsb($complementary-3-h, $complementary-3-s, 60) !default;
+$complementary-3-a7: hsb($complementary-3-h, $complementary-3-s, 70) !default;
+$complementary-3-a6: hsb($complementary-3-h, $complementary-3-s, 80) !default;
+$complementary-3-a5: hsb($complementary-3-h, $complementary-3-s - 15, 84) !default;
+$complementary-3-a4: hsb($complementary-3-h, $complementary-3-s - 30, 88) !default;
+$complementary-3-a3: hsb($complementary-3-h, $complementary-3-s - 45, 92) !default;
+$complementary-3-a2: hsb($complementary-3-h, $complementary-3-s - 60, 96) !default;
+$complementary-3-a1: hsb($complementary-3-h, $complementary-3-s - 75, 100) !default;
+
+//-------------------------- toni -----------------------------------------
+/***************************** 1 ****************************************/
+$complementary-1-b1: hsb($complementary-1-h, $complementary-1-s, $complementary-1-b) !default;
+$complementary-1-b2: hsb($complementary-1-h, $complementary-1-s - 10, $complementary-1-b - 10) !default;
+$complementary-1-b3: hsb($complementary-1-h, $complementary-1-s - 20, $complementary-1-b - 20) !default;
+$complementary-1-b4: hsb($complementary-1-h, $complementary-1-s - 30, $complementary-1-b - 30) !default;
+$complementary-1-b5: hsb($complementary-1-h, $complementary-1-s - 40, $complementary-1-b - 40) !default;
+$complementary-1-b6: hsb($complementary-1-h, $complementary-1-s - 50, $complementary-1-b - 50) !default;
+$complementary-1-b7: hsb($complementary-1-h, $complementary-1-s - 60, $complementary-1-b - 60) !default;
+$complementary-1-b8: hsb($complementary-1-h, $complementary-1-s - 70, $complementary-1-b - 70) !default;
+
+/***************************** 2 ****************************************/
+$complementary-2-b1: hsb($complementary-2-h, $complementary-2-s, $complementary-2-b) !default;
+$complementary-2-b2: hsb($complementary-2-h, $complementary-2-s - 10, $complementary-2-b - 10) !default;
+$complementary-2-b3: hsb($complementary-2-h, $complementary-2-s - 20, $complementary-2-b - 20) !default;
+$complementary-2-b4: hsb($complementary-2-h, $complementary-2-s - 30, $complementary-2-b - 30) !default;
+$complementary-2-b5: hsb($complementary-2-h, $complementary-2-s - 40, $complementary-2-b - 40) !default;
+$complementary-2-b6: hsb($complementary-2-h, $complementary-2-s - 50, $complementary-2-b - 50) !default;
+$complementary-2-b7: hsb($complementary-2-h, $complementary-2-s - 60, $complementary-2-b - 60) !default;
+$complementary-2-b8: hsb($complementary-2-h, $complementary-2-s - 70, $complementary-2-b - 70) !default;
+
+/***************************** 3 ****************************************/
+$complementary-3-b1: hsb($complementary-3-h, $complementary-3-s, $complementary-3-b) !default;
+$complementary-3-b2: hsb($complementary-3-h, $complementary-3-s - 10, $complementary-3-b - 10) !default;
+$complementary-3-b3: hsb($complementary-3-h, $complementary-3-s - 20, $complementary-3-b - 20) !default;
+$complementary-3-b4: hsb($complementary-3-h, $complementary-3-s - 30, $complementary-3-b - 30) !default;
+$complementary-3-b5: hsb($complementary-3-h, $complementary-3-s - 40, $complementary-3-b - 40) !default;
+$complementary-3-b6: hsb($complementary-3-h, $complementary-3-s - 50, $complementary-3-b - 50) !default;
+$complementary-3-b7: hsb($complementary-3-h, $complementary-3-s - 60, $complementary-3-b - 60) !default;
+$complementary-3-b8: hsb($complementary-3-h, $complementary-3-s - 70, $complementary-3-b - 70) !default;
+
+//***********************************************************************
+//********************Neutral color variations***************************
+//***********************************************************************
+
+// tinte e ombre
+/***************************** NEUTRAL 1 ****************************************/
+$neutral-1-a10: hsb($neutral-1-h, $neutral-1-s, $neutral-1-b) !default;
+$neutral-1-a9: hsb($neutral-1-h, $neutral-1-s - 20, $neutral-1-b + 7) !default;
+$neutral-1-a8: hsb($neutral-1-h, $neutral-1-s - 30, $neutral-1-b + 14) !default;
+$neutral-1-a7: hsb($neutral-1-h, $neutral-1-s - 40, $neutral-1-b + 21) !default;
+$neutral-1-a6: hsb($neutral-1-h, $neutral-1-s - 50, $neutral-1-b + 28) !default;
+$neutral-1-a5: hsb($neutral-1-h, $neutral-1-s - 60, $neutral-1-b + 35) !default;
+$neutral-1-a4: hsb($neutral-1-h, $neutral-1-s - 64, $neutral-1-b + 42) !default;
+$neutral-1-a3: hsb($neutral-1-h, $neutral-1-s - 68, $neutral-1-b + 49) !default;
+$neutral-1-a2: hsb($neutral-1-h, $neutral-1-s - 71, $neutral-1-b + 56) !default;
+$neutral-1-a1: hsb($neutral-1-h, $neutral-1-s - 73, $neutral-1-b + 63) !default;
+
+/***************************** NEUTRAL 2 ****************************************/
+$neutral-2-b1: hsb($neutral-2-h, $neutral-2-s, $neutral-2-b) !default;
+$neutral-2-b2: hsb($neutral-2-h, $neutral-2-s, $neutral-2-b - 15) !default;
+$neutral-2-b3: hsb($neutral-2-h, $neutral-2-s, $neutral-2-b - 30) !default;
+$neutral-2-b4: hsb($neutral-2-h, $neutral-2-s, $neutral-2-b - 45) !default;
+$neutral-2-b5: hsb($neutral-2-h, $neutral-2-s - 1, $neutral-2-b - 60) !default;
+$neutral-2-b6: hsb($neutral-2-h, $neutral-2-s + 2, $neutral-2-b - 75) !default;
+$neutral-2-b7: hsb($neutral-2-h, $neutral-2-s + 4, $neutral-2-b - 90) !default;
+
+/***************************** NEUTRAL 2 / 3 ****************************************/
+$neutral-2-a1: hsb($neutral-2-h, $neutral-2-s, $neutral-2-b) !default;
+$neutral-2-a2: hsb($neutral-2-h, $neutral-2-s + 3, $neutral-2-b - 15) !default;
+$neutral-2-a3: hsb($neutral-2-h, $neutral-2-s + 2, $neutral-2-b - 30) !default;
+$neutral-2-a4: hsb($neutral-2-h, $neutral-2-s + 2, $neutral-2-b - 45) !default;
+$neutral-2-a5: hsb($neutral-2-h, $neutral-2-s + 2, $neutral-2-b - 60) !default;
+$neutral-2-a6: hsb($neutral-2-h, $neutral-2-s + 2, $neutral-2-b - 75) !default;
+$neutral-2-a7: hsb($neutral-2-h, $neutral-2-s + 4, $neutral-2-b - 85) !default;
+
+//==================== DESIGN TOKENS VARIABLES ============================//
 
 // SEMANTIC TOKENS =========================================================
 
@@ -164,7 +465,7 @@ $enable-deprecation-messages: true !default;
 $enable-important-utilities: true !default;
 
 // Prefix for :root CSS variables
-$prefix: bsi- !default;
+$prefix: bs- !default;
 
 // Spacing
 //
@@ -192,7 +493,7 @@ $box-shadow-inset: inset 0 1px 2px rgba($black, 0.075) !default;
 // scss-docs-end box-shadow-variables
 
 $component-active-color: $white !default;
-$component-active-bg: var(--#{$prefix}-primary) !default;
+$component-active-bg: $primary !default;
 
 $caret-width: 0.3em !default;
 $caret-vertical-align: $caret-width * 0.85 !default;
@@ -245,6 +546,7 @@ $border-widths: (
 ) !default;
 
 $border-style: solid !default;
+$border-color-translucent: rgba($black, 0.175) !default;
 
 // Typography
 
@@ -410,7 +712,7 @@ $focus-outline-color-out: $black !default;
 $focus-outline-color: $focus-outline-color-out !default; // xxx retro-compatibility, ex $orange
 
 //skiplinks
-$skiplinks-color: var(--#{$prefix}-primary) !default;
+$skiplinks-color: $primary !default;
 $skiplinks-bg: $color-background-primary-lighter !default;
 
 // Input
@@ -833,7 +1135,7 @@ $progress-font-size: $font-size-base * 0.75 !default;
 $progress-bg: $gray-200 !default;
 $progress-box-shadow: $box-shadow-inset !default;
 $progress-bar-color: $white !default;
-$progress-bar-bg: var(--#{$prefix}-primary) !default;
+$progress-bar-bg: $primary !default;
 $progress-bar-animation-timing: 1s linear infinite !default;
 $progress-bar-transition: width 0.6s ease !default;
 
@@ -856,9 +1158,9 @@ $zindex-toast: 1090 !default;
 // scss-docs-end zindex-stack
 
 // Link and button colors
-$btn-primary-bg: var(--#{$prefix}-primary) !default;
-$btn-primary-border: var(--#{$prefix}-primary) !default;
-$link-color: var(--#{$prefix}-primary) !default;
+$btn-primary-bg: $primary !default;
+$btn-primary-border: $primary !default;
+$link-color: $primary !default;
 $link-shade-percentage: 20% !default;
 $link-hover-color: shift-color($link-color, $link-shade-percentage) !default;
 $link-hover-decoration: null !default;
@@ -1151,7 +1453,7 @@ $list-group-active-border-color: $list-group-active-bg !default;
 $list-group-disabled-color: $gray-600 !default;
 $list-group-disabled-bg: $list-group-bg !default;
 
-$list-group-action-color: var(--#{$prefix}-primary) !default;
+$list-group-action-color: $primary !default;
 $list-group-action-hover-color: $list-group-action-color !default;
 
 $list-group-action-active-color: $body-color !default;
@@ -1224,7 +1526,7 @@ $dropdown-link-active-bg: $component-active-bg !default;
 
 // Dropdown custom
 $dropdown-custom-button-padding: 0 4px;
-$dropdown-custom-button-color: var(--#{$prefix}-primary) !default;
+$dropdown-custom-button-color: $primary !default;
 $dropdown-custom-button-background: transparent !default;
 $dropdown-custom-button-caret-font-size: 0.5rem;
 $dropdown-custom-button-caret-distance: $v-gap;
@@ -1280,7 +1582,7 @@ $nav-pills-link-active-bg: $component-active-bg !default;
 
 //Navigation
 
-$navbar-bg-color: var(--#{$prefix}-primary) !default;
+$navbar-bg-color: $primary !default;
 $navbar-brand-font-size: 1rem !default;
 $navbar-toggler-border-radius: 0 !default;
 $navbar-dark-toggler-icon-bg: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTkuMnB4IiBoZWlnaHQ9IjE2cHgiIHZpZXdCb3g9IjAgMCAxMiAxMCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICAgIDxkZWZzPjwvZGVmcz4KICAgIDxnIGlkPSIxMDI0dXAiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSItLWhvbWUtLS1wYXJhbGxheC0tLW1vYmlsZSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTI0LjAwMDAwMCwgLTIwLjAwMDAwMCkiIGZpbGw9IiNGRkZGRkYiPgogICAgICAgICAgICA8ZyBpZD0iLW5ldHdvcmstc2xpbS1oZWFkZXIiPgogICAgICAgICAgICAgICAgPHBhdGggZD0iTTI0LDI0IEwzNiwyNCBMMzYsMjYgTDI0LDI2IEwyNCwyNCBaIE0yNCwyMCBMMzIsMjAgTDMyLDIyIEwyNCwyMiBMMjQsMjAgWiBNMjQsMjggTDMyLDI4IEwzMiwzMCBMMjQsMzAgTDI0LDI4IFoiIGlkPSJpY29uLXNtYWxsLWJ1cmdlciI+PC9wYXRoPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=') !default;
@@ -1322,20 +1624,20 @@ $navbar-dark-brand-hover-color: $navbar-dark-active-color !default;
 // scss-docs-end navbar-dark-variables
 
 $navigation-bg-color: $white !default;
-$navigation-bg-color-desktop: var(--#{$prefix}-primary) !default;
+$navigation-bg-color-desktop: $primary !default;
 
 $navigation-h-padding: 24px;
 $navigation-v-padding: 13px;
 $navigation-sidebar-bg-color-mobile: rgba(0, 0, 0, 0.6) !default;
 $navigation-close-button-size: 44px !default;
-$navigation-close-button-text-color: var(--#{$prefix}-primary) !default;
+$navigation-close-button-text-color: $primary !default;
 $navigation-close-button-text-size: 0.75rem;
 $navigation-close-button-icon-size: 2rem;
 $navigation-links-margin-top: 102px;
-$navigation-link-color: var(--#{$prefix}-primary) !default;
+$navigation-link-color: $primary !default;
 $navigation-link-color-desk: $white !default;
 $navigation-link-active-bar-size: 3px;
-$navigation-link-active-bar-color: var(--#{$prefix}-primary) !default;
+$navigation-link-active-bar-color: $primary !default;
 $navigation-link-active-bar-color-desk: $white !default;
 $navigation-toggle-button-icon-color: $white !default;
 $navigation-toggle-button-icon-size: 1.5rem;
@@ -1347,14 +1649,14 @@ $navigation-disabled-item-mobile-opacity: 0.6 !default;
 $navigation-hamburger-size: 24px;
 
 // navigation dark theme (mobile)
-$navigation-dark-bg-color: var(--#{$prefix}-primary) !default; // missing in UI kit
+$navigation-dark-bg-color: $primary !default; // missing in UI kit
 $navigation-dark-text-color: $white !default; // missing in UI kit
 $navigation-dark-bg-color: $primary-b1 !default; // missing in UI kit
 $navigation-dark-separator-color: $primary-c5 !default; // missing in UI kit
 
 // navigation light theme (desktop)
 $navigation-light-bg-color: $white !default;
-$navigation-light-text-color: var(--#{$prefix}-primary) !default;
+$navigation-light-text-color: $primary !default;
 $navigation-light-separator-color: $neutral-1-a2 !default;
 $navigation-light-megamenu-separator-color: $gray-border !default; // UI kit
 
@@ -1405,13 +1707,13 @@ $pager-item-size-mobile: 2.5rem; // 40px
 $pager-item-size-tablet: 3rem; // 48px
 $pager-item-border-radius: 4px;
 $pager-item-margin-right: 5px;
-$pager-item-current-color: var(--#{$prefix}-primary) !default;
-$pager-item-current-border: 1px solid var(--#{$prefix}-primary) !default;
+$pager-item-current-color: $primary !default;
+$pager-item-current-border: 1px solid $primary !default;
 $pager-font-size: 1rem;
 $pager-font-weight: 700;
 $pager-font-color: $secondary !default;
-$pager-hover-color: var(--#{$prefix}-primary) !default;
-$pager-icon-color: var(--#{$prefix}-primary) !default;
+$pager-hover-color: $primary !default;
+$pager-icon-color: $primary !default;
 $pager-icon-size: 1rem;
 $pager-disabled-color: $gray-label-disabled !default;
 $pager-jump-to-width: 4.5rem;
@@ -1431,7 +1733,7 @@ $sidebar-link-small-line-width: 65px;
 $sidebar-link-size: 1rem;
 $sidebar-dropdown-icon-size: 1.5rem;
 $sidebar-dropdown-line-selection-width: 2px;
-$sidebar-dropdown-line-selection-color: var(--#{$prefix}-primary) !default;
+$sidebar-dropdown-line-selection-color: $primary !default;
 $sidebar-submenu-font-size: 1rem;
 $sidebar-submenu-link-v-padding: 0.45em;
 $sidebar-border-color: $gray-border !default;
@@ -1443,7 +1745,7 @@ $sidebar-dark-separator-color: rgba(229, 229, 229, 0.3) !default; // Missing in 
 
 // Navscroll
 $navscroll-bg-color: $white !default;
-$navscroll-toggler-color: var(--#{$prefix}-primary) !default;
+$navscroll-toggler-color: $primary !default;
 $navscroll-button-text-weight: 600;
 $navscroll-top-box-shadow: 0 0px 30px 5px rgba(0, 0, 0, 0.05) !default;
 $navscroll-bottom-box-shadow: 0 0px 30px 5px rgba(0, 0, 0, 0.05) !default;
@@ -1469,7 +1771,7 @@ $modal-padding: $v-gap * 3;
 $modal-margin: $v-gap * 6;
 $modal-padding-close: $v-gap * 2;
 $modal-heading-color: $color-text-base !default; // UI kit
-$modal-icon-color: var(--#{$prefix}-primary) !default;
+$modal-icon-color: $primary !default;
 $modal-icon-distance: $v-gap * 2;
 $modal-alert-p-distance: 32px + $v-gap * 2;
 $modal-heading-border: 1px solid $color-border-subtle !default;
@@ -1501,12 +1803,12 @@ $header-slim-h-padding: 18px;
 $header-slim-v-padding-mob: 6.5px;
 // Header Slim theme light
 $header-slim-theme-light-bg-color: $white !default;
-$header-slim-theme-light-text-color: var(--#{$prefix}-primary) !default;
-$header-slim-theme-light-button-color: var(--#{$prefix}-primary) !default;
-$header-slim-theme-light-button-hover-color: var(--#{$prefix}-primary) !default;
+$header-slim-theme-light-text-color: $primary !default;
+$header-slim-theme-light-button-color: $primary !default;
+$header-slim-theme-light-button-hover-color: $primary !default;
 
 // Header Center
-$header-center-bg-color: var(--#{$prefix}-primary) !default;
+$header-center-bg-color: $primary !default;
 $header-center-text-color: $white !default;
 $header-center-max-height: 120px;
 $header-center-max-height-mob: 80px;
@@ -1536,7 +1838,7 @@ $header-center-small-h2-size: 1.25rem;
 $header-center-small-h3-size: 0.75rem;
 // Header Center theme light
 $header-center-theme-light-bg-color: $white !default;
-$header-center-theme-light-text-color: var(--#{$prefix}-primary) !default;
+$header-center-theme-light-text-color: $primary !default;
 
 // Anchors vertical offset:
 $anchor-v-offset-lg: 72px;
@@ -1563,7 +1865,7 @@ $card-category-m-bottom: $v-gap * 2;
 $card-big-head-size: 1.5rem;
 $card-big-head-l-h: 1.75rem;
 $card-signature-size: 0.875rem;
-$card-link-color: var(--#{$prefix}-primary) !default;
+$card-link-color: $primary !default;
 $card-link-icon-size: $v-gap * 2;
 $card-cat-icon-block-margin: $v-gap * 2;
 $card-cat-icon-size: $v-gap * 5;
@@ -1579,7 +1881,7 @@ $card-img-heading-size: 1.1111111111111112rem; // FIXME
 $card-img-heading-l-h: 1.5555555555555556rem;
 $special-card-img-width: 174px;
 // flag icon
-$flag-icon-color: var(--#{$prefix}-primary) !default;
+$flag-icon-color: $primary !default;
 $flag-icon-h: $v-gap * 6;
 $flag-icon-w: $v-gap * 4;
 // tag
@@ -1594,7 +1896,7 @@ $select-button-padding: $v-gap !default;
 $select-button-text-size: 1rem;
 $select-dd-shadow: $dialog-shadow !default;
 $select-dd-text-size: 1rem;
-$select-dd-link-color: var(--#{$prefix}-primary) !default;
+$select-dd-link-color: $primary !default;
 $select-dd-link-color-active: $color-text-primary-active !default; // UI kit
 $select-dd-small-separator-width: 65px;
 $select-dd-small-separator-bg: $gray-border !default; // UI kit
@@ -1618,7 +1920,7 @@ $dp-grid-size: 0.75rem;
 $dp-current-size: $v-gap * 4;
 
 //hero
-$hero-bg-color: var(--#{$prefix}-primary) !default;
+$hero-bg-color: $primary !default;
 $hero-height-desk: 620px;
 $hero-height-mob: 380px;
 $hero-height-sm-desk: 400px;
@@ -1817,16 +2119,15 @@ $offcanvas-color: $modal-content-color !default;
 $offcanvas-box-shadow: $modal-content-box-shadow-xs !default;
 $offcanvas-backdrop-bg: $modal-backdrop-bg !default;
 $offcanvas-backdrop-opacity: $modal-backdrop-opacity !default;
-
 // ============================================================
 
 // NEW VARIABLES
 
-// Variables used in _maps.scss
+// Variables used in _maps.scss inside the $status map
 $color-theme-primary: var(--#{$prefix}theme-primary);
-$color-status-info: var(---#{$prefix}color-background-secondary);
-$color-status-success: var(---#{$prefix}color-status-success);
-$color-status-warning: var(---#{$prefix}color-status-warning);
-$color-status-danger: var(---#{$prefix}color-status-danger);
+$color-status-info: var(--#{$prefix}color-background-secondary);
+$color-status-success: var(--#{$prefix}color-status-success);
+$color-status-warning: var(--#{$prefix}color-status-warning);
+$color-status-danger: var(--#{$prefix}color-status-danger);
 
 
