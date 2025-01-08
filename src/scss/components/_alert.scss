@@ -26,6 +26,21 @@
   }
 }
 
+// Alternate styles
+// Generate contextual modifier classes for colorizing the alert.
+// Loop through theme colors to generate contextual modifier classes for colorizing the alert
+@each $type, $value in $status {
+  @if index(('danger', 'warning', 'success', 'info', 'primary'), $type) {
+    .alert-#{$type} {
+      border-left: var(--#{$prefix}alert-sizing-border) solid #{$value};
+    }
+
+    .alert-#{$type} .alert-icon {
+      fill: #{$value};
+    }
+  }
+}
+
 // Headings for larger alerts
 .alert-heading {
   // Specified to prevent conflicts of changing $headings-color
@@ -53,20 +68,5 @@
     transform: translateY(-50%);
     padding: var(--#{$prefix}alert-spacing-inset);
     color: inherit;
-  }
-}
-
-// Alternate styles
-// Generate contextual modifier classes for colorizing the alert.
-// Loop through theme colors to generate contextual modifier classes for colorizing the alert
-@each $type, $value in $status {
-  @if index(('danger', 'warning', 'success', 'info', 'primary'), $type) {
-    .alert-#{$type} {
-      border-left: var(--#{$prefix}alert-sizing-border) solid #{$value};
-    }
-
-    .alert-#{$type} .alert-icon {
-      fill: #{$value};
-    }
   }
 }
