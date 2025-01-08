@@ -12,14 +12,6 @@ Gli avvisi sono disponibili in quattro tipologie diverse e sono adatti a qualsia
 
 {% comment %}Example name: Varianti per tipologia{% endcomment %}
 {% capture example %}
-<!-- {% assign colors = "primary,info,success,warning,danger" | split: ','%}
-{% for color in colors %}
-
-<div class="alert alert-{{color}}" role="alert">
-  <svg class="icon"><use href="/dist/svg/sprites.svg#it-info-circle"></use></svg>
-  Questo è un alert di tipo "<b>{{ color }}</b>".
-</div>
-{% endfor %} -->
 
 <div class="alert alert-primary" role="alert">
   <p class="mb-0"><svg class="alert-icon icon"><use href="/dist/svg/sprites.svg#it-info-circle"></use></svg> Questo è un alert di tipo "<strong>primary</strong>".</p>
