@@ -294,7 +294,7 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
     for (const element of SelectorEngine.find(SELECTOR_DATA_TOGGLE)) {
       const t = Tab.getOrCreateInstance(element)
       t.dispose()
-      Tab.getOrCreateInstance(element)  
+      Tab.getOrCreateInstance(element)
     }
   })
 }
