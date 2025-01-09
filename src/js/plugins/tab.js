@@ -284,7 +284,8 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
     if (isDisabled(this)) {
       return
     }
-
+    const t = Tab.getOrCreateInstance(this)
+    t.dispose()
     Tab.getOrCreateInstance(this).show()
   })
 
@@ -292,8 +293,10 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
    * Initialize on focus
    */
   EventHandler.on(window, EVENT_LOAD_DATA_API, () => {
-    for (const element of SelectorEngine.find(SELECTOR_DATA_TOGGLE_ACTIVE)) {
-      Tab.getOrCreateInstance(element)
+    for (const element of SelectorEngine.find(SELECTOR_DATA_TOGGLE)) {
+      const t = Tab.getOrCreateInstance(element)
+      t.dispose()
+      Tab.getOrCreateInstance(element)  
     }
   })
 }
