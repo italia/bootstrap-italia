@@ -20,7 +20,7 @@ L'elemento Avatar è la rappresentazione grafica di un utente e può includere u
 
 Gli Avatar sono disponibili in sei diverse dimensioni:
 
-- **xs** con classe `size-xs`
+<!-- - **xs** con classe `size-xs` -->
 - **sm** con classe `size-sm`
 - **md** (dimensioni di default) `size-md`
 - **lg** con classe `size-lg`
@@ -59,9 +59,6 @@ L'Avatar ridimensiona automaticamente l'immagine adattandola al formato circolar
 {% capture example %}
 
 <div class="d-flex align-items-center justify-content-around flex-wrap flex-sm-nowrap">
-  <div class="avatar size-xs">
-    <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Mario Rossi">
-  </div>
   <div class="avatar size-sm">
     <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Luisa Neri">
   </div>
@@ -75,7 +72,7 @@ L'Avatar ridimensiona automaticamente l'immagine adattandola al formato circolar
     <img src="https://randomuser.me/api/portraits/men/33.jpg" alt="Carlo Poli">
   </div>
   <div class="avatar size-xxl">
-    <img src="https://randomuser.me/api/portraits/women/24.jpg" alt="Giovanna Ferrero">
+    <img src="https://randomuser.me/api/portraits/women/90.jpg" alt="Giovanna Ferrero">
   </div>
 </div>
 
@@ -98,10 +95,6 @@ In questi casi il testo sarà di colore bianco.
 {% capture example %}
 
 <div class="d-flex align-items-center justify-content-around flex-wrap flex-sm-nowrap">
-  <div class="avatar size-xs">
-    <p aria-hidden="true">M</p>
-    <span class="visually-hidden">Mario Rossi</span>
-  </div>
   <div class="avatar avatar-primary size-sm">
     <p aria-hidden="true">M</p>
     <span class="visually-hidden">Mario Rossi</span>
@@ -133,28 +126,24 @@ Per utilizzare un'icona all'interno degli Avatar è sufficiente includere il cod
 {% capture example %}
 
 <div class="d-flex align-items-center justify-content-around flex-wrap flex-sm-nowrap">
-  <div class="avatar size-xs">
-    <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-search"></use></svg>
-    <span class="visually-hidden">Cerca</span>
-  </div>
   <div class="avatar size-sm">
-    <svg class="icon icon-secondary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-search"></use></svg>
+    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-user"></use></svg>
     <span class="visually-hidden">Cerca</span>
   </div>
   <div class="avatar">
-    <svg class="icon icon-success"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-search"></use></svg>
+    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-user"></use></svg>
     <span class="visually-hidden">Cerca</span>
   </div>
   <div class="avatar size-lg">
-    <svg class="icon icon-warning"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-search"></use></svg>
+    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-user"></use></svg>
     <span class="visually-hidden">Cerca</span>
   </div>
   <div class="avatar size-xl">
-    <svg class="icon icon-danger"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-search"></use></svg>
+    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-user"></use></svg>
     <span class="visually-hidden">Cerca</span>
   </div>
   <div class="avatar size-xxl">
-    <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-search"></use></svg>
+    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-user"></use></svg>
     <span class="visually-hidden">Cerca</span>
   </div>
 </div>
@@ -176,7 +165,7 @@ Per associare un Avatar ad un'azione o un link, utilizzare il tag `<a>` con rela
     <span class="visually-hidden">Mario Rossi</span>
   </a>
   <a class="avatar size-xl" href="#">
-    <svg class="icon icon-secondary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-search"></use></svg>
+    <svg class="icon icon-secondary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-user"></use></svg>
     <span class="visually-hidden">Cerca</span>
   </a>
 </div>
