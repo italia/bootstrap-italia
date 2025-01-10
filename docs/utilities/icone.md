@@ -44,7 +44,7 @@ Sono disponibili le classi `icon-*`, dove `*` può essere `xs`, `sm`, `lg`, `xl`
 <svg class="bg-light icon icon-xl"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>
 {% endcapture %}{% include example.html content=example %}
 
-È anche possibile applicare la classe `icon-padded` all'icona per creare un padding proporzionale alla dimensione dell'icona attorno ad essa.
+È anche possibile applicare la classe `icon-padded` all'icona per creare uno spazio esterno proporzionale alla dimensione dell'icona attorno ad essa.
 
 {% comment %}Example name: Varianti dimensioni, con padding{% endcomment %}
 {% capture example %}
