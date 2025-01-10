@@ -1,43 +1,46 @@
+$icon-colors: (
+  primary: var(--#{$prefix}icon-primary),
+  secondary: var(--#{$prefix}icon-secondary),
+  success: var(--#{$prefix}icon-success),
+  warning: var(--#{$prefix}icon-warning),
+  danger: var(--#{$prefix}icon-danger),
+  inverse: var(--#{$prefix}icon-inverse)
+);
+
 .icon {
-  width: 32px;
-  height: 32px;
+  width: var(--#{$prefix}icon-size-m);
+  height: var(--#{$prefix}icon-size-m);
+  fill: var(--#{$prefix}icon-default);
   vertical-align: middle;
+
   &.icon-padded {
-    padding: 8px;
+    margin: 8px;
   }
+
   &.icon-xs {
-    width: 16px;
-    height: 16px;
-    &.icon-padded {
-      padding: 4px;
-    }
+    width: var(--#{$prefix}icon-size-xs);
+    height: var(--#{$prefix}icon-size-xs);
   }
+
   &.icon-sm {
-    width: 24px;
-    height: 24px;
-    &.icon-padded {
-      padding: 6px;
-    }
+    width: var(--#{$prefix}icon-size-s);
+    height: var(--#{$prefix}icon-size-s);
   }
+
   &.icon-lg {
-    width: 48px;
-    height: 48px;
-    &.icon-padded {
-      padding: 12px;
-    }
+    width: var(--#{$prefix}icon-size-l);
+    height: var(--#{$prefix}icon-size-l);
   }
+
   &.icon-xl {
-    width: 64px;
-    height: 64px;
-    &.icon-padded {
-      padding: 16px;
-    }
+    width: var(--#{$prefix}icon-size-xl);
+    height: var(--#{$prefix}icon-size-xl);
   }
 }
 
 // Force color when icon-color class is explicitly used
-@each $color, $value in $theme-colors {
-  .icon-#{$color} {
-    fill: $value !important;
+@each $icon-color, $icon-color-value in $icon-colors {
+  .icon-#{$icon-color} {
+    fill: $icon-color-value;
   }
 }

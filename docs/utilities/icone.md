@@ -64,8 +64,8 @@ Sono disponibili le classi `icon-*`, dove `*` può essere `xs`, `sm`, `lg`, `xl`
 <svg class="icon icon-success bg-light"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>
 <svg class="icon icon-warning bg-light"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>
 <svg class="icon icon-danger bg-light"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>
-<svg class="icon icon-light bg-dark"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>
-<svg class="icon icon-white bg-dark"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>
+<svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>
+<svg class="icon icon-inverse bg-dark"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>
 {% endcapture %}{% include example.html content=example %}
 
 ### Allineamenti
