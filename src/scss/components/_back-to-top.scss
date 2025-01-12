@@ -1,13 +1,19 @@
-/*back to top*/
+.back-to-top {
+  --#{$prefix}back-to-top-bg: var(--#{$prefix}color-background-primary);
+  --#{$prefix}back-to-top-bg-position: 1rem;
+  --#{$prefix}back-to-top-radius: var(--#{$prefix}radius-circle);
+  --#{$prefix}back-to-top-sizing: 40px;
+}
+
 .back-to-top {
   position: fixed;
-  bottom: 16px;
-  right: 16px;
-  background: $primary;
-  width: 40px;
-  height: 40px;
+  bottom: var(--#{$prefix}back-to-top-bg-position);
+  right: var(--#{$prefix}back-to-top-bg-position);
+  background: var(--#{$prefix}color-background-primary);
+  width: var(--#{$prefix}back-to-top-sizing);
+  height: var(--#{$prefix}back-to-top-sizing);
   text-decoration: none;
-  border-radius: 50%;
+  border-radius: var(--#{$prefix}back-to-top-radius);
   display: block;
   visibility: hidden;
   opacity: 0;
@@ -20,7 +26,24 @@
   z-index: 1;
   transform: scale(0.7);
   transform-origin: center center;
-  //fade in
+
+  // Tablet vertical
+  @include media-breakpoint-up(md) {
+    --#{$prefix}back-top-sizing: 3.5rem; // 56px
+  }
+
+  // Desktop
+  @include media-breakpoint-up(xl) {
+    --#{$prefix}back-to-top-position: 2rem; // 32px
+  }
+
+  &:hover {
+    --back-to-top-bg: var(--#{$prefix}color-background-primary-hover  );
+    text-decoration: none;
+  }
+
+
+  // Fade in
   &.back-to-top-show {
     visibility: visible;
     opacity: 1;
@@ -31,72 +54,53 @@
       opacity 0.1s ease-in-out;
     transform: scale(1);
   }
-  &:hover {
-    background: shade-color($primary, 10%);
-    text-decoration: none;
-  }
-  //caret
+
+  // Icon
   .icon {
     margin: 0;
     position: relative;
     transform: scale(0.75);
     top: 4px;
+
+    @include media-breakpoint-up(md) {
+      transform: scale(1);
+      top: 10px;
+    }
+
     &:before {
       margin: 0;
-      color: $white;
+      color: var(--#{$prefix}icon-inverse);
     }
   }
 
-  //shadow
+  // Shadow
   &.shadow {
     &:hover {
       box-shadow: 0 0.3rem 0.75rem rgba(0, 0, 0, 0.3) !important;
     }
   }
 
-  //dark version
+  // Dark version
   &.dark {
-    background: #fff;
+    --#{$prefix}back-to-top-bg: var(--#{$prefix}color-background-inverse);
     &:hover {
-      background: $neutral-1-a1; // TODO Missing in the UI kit
+      --#{$prefix}back-to-top-bg: var(--dsi-color-slate-93);
     }
 
-    //caret
     .icon {
       &:before {
-        color: $neutral-1-a8; // TODO Missing in the UI kit
+        color: var(--#{$prefix}icon-secondary);
       }
     }
   }
-}
 
-//Tablet vertical
-@include media-breakpoint-up(md) {
-  /*back to top*/
-  .back-to-top {
-    width: 56px;
-    height: 56px;
+  // Small version
+  &.back-to-top-small {
+    --#{$prefix}back-top-sizing: 2.5rem; // 40px
     .icon {
-      transform: scale(1);
-      top: 10px;
-    }
-    //small version
-    &.back-to-top-small {
-      width: 40px;
-      height: 40px;
-      //caret
-      .icon {
-        transform: scale(0.75);
-        top: 4px;
-      }
+      transform: scale(0.75);
+      top: 4px;
     }
   }
 }
 
-//Desktop
-@include media-breakpoint-up(xl) {
-  .back-to-top {
-    bottom: 32px;
-    right: 32px;
-  }
-}
