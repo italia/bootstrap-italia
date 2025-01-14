@@ -130,6 +130,10 @@
     .toolbar-badge {
       right: -10px;
     }
+
+    .badge-wrapper {
+      width: 100%;
+    }
   }
   // toolbar vertical ----------------- END
 
@@ -362,6 +366,7 @@
 
   // icon badges ------------------
   .badge-wrapper {
+    width: calc(50% + 28px);
     position: relative;
   }
 
