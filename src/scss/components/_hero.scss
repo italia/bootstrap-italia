@@ -64,7 +64,7 @@
   // Text container centered----------------------------
   &.it-text-centered .it-hero-text-wrapper {
     margin: 0 auto;
-    text-align: center;   
+    text-align: center;
   }
   // overlay color--------------------------------------
   &.it-overlay {
@@ -223,7 +223,7 @@
       .it-hero-text-wrapper {
         padding-bottom: $hero-negative-bottom-padding * 2;
       }
-    & .card-wrapper {
+      & .card-wrapper {
         .card-body {
           padding-top: 48px;
         }
