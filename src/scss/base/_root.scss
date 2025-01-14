@@ -144,11 +144,11 @@
   --#{$prefix}caption-line-height: var(--dsi-caption-line-height);
   --#{$prefix}caption-font-weight-regular: var(--dsi-caption-font-weight-regular);
   --#{$prefix}caption-font-weight-semibold: var(--dsi-caption-font-weight-semibold);
-  --#{$prefix}icon-size-xxl: var(--dsi-icon-size-xxl);
-  --#{$prefix}icon-size-xl: var(--dsi-icon-size-xl);
-  --#{$prefix}icon-size-l: var(--dsi-icon-size-l);
-  --#{$prefix}icon-size-m: var(--dsi-icon-size-m);
-  --#{$prefix}icon-size-s: var(--dsi-icon-size-s);
+  --#{$prefix}icon-size-xl: var(--dsi-icon-size-xxl);
+  --#{$prefix}icon-size-l: var(--dsi-icon-size-xl);
+  --#{$prefix}icon-size-m: var(--dsi-icon-size-l);
+  --#{$prefix}icon-size-s: var(--dsi-icon-size-m);
+  --#{$prefix}icon-size-xs: var(--dsi-icon-size-s);
   --#{$prefix}border-broad: var(--dsi-border-broad);
   --#{$prefix}border-thick: var(--dsi-border-thick);
   --#{$prefix}border-double: var(--dsi-border-double);
