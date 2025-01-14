@@ -78,14 +78,14 @@ L'elemento `.avatar` precede l'elemento `.it-right-zone` che contiene il testo.
       </a>
     </li>
     <li>
-      <a class="list-item" href="#" >
+      <div class="list-item">
         <div class="avatar size-lg">
           <img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Anna Barbieri">
         </div>
         <div class="it-right-zone">
-          <span class="text">Link attivo</span>
+          <span class="text">Testo</span>
         </div>
-      </a>
+      </div>
     </li>
   </ul>
 </div>
@@ -126,7 +126,7 @@ L'elemento `.it-rounded-icon` con all'interno la relativa icona, precede l'eleme
       </a>
     </li>
     <li>
-      <a class="list-item" href="#">
+      <div class="list-item">
         <div class="it-rounded-icon">
           <svg class="icon">
             <title>Cartella</title>
@@ -134,9 +134,9 @@ L'elemento `.it-rounded-icon` con all'interno la relativa icona, precede l'eleme
           </svg>
         </div>
         <div class="it-right-zone">
-          <span class="text">Link attivo</span>
+          <span class="text">Testo</span>
         </div>
-      </a>
+      </div>
     </li>
   </ul>
 </div>
@@ -171,14 +171,14 @@ L'elemento `.it-thumb` con all'interno la relativa immagine, precede l'elemento 
       </a>
     </li>
     <li>
-      <a class="list-item" href="#">
+      <div class="list-item">
         <div class="it-thumb">
           <img src="https://placehold.co/40x40.png?text=40x40" alt="descrizione immagine">
         </div>
         <div class="it-right-zone">
-          <span class="text">Link attivo</span>
+          <span class="text">Testo</span>
         </div>
-      </a>
+      </div>
     </li>
   </ul>
 </div>
@@ -208,9 +208,9 @@ L'elemento `.icon` con all'interno la relativa icona segue l'elemento `.text` ch
       </a>
     </li>
     <li>
-      <a class="active list-item" href="#">
+      <a href="#" class="list-item">
         <div class="it-right-zone">
-          <span class="text">Link attivo</span>
+          <span class="text">Link</span>
           <svg class="icon">
             <title>Freccia destra</title>
             <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use>
@@ -382,7 +382,7 @@ L'elemento `.metadata`, segue l'elemento `.text`.
           <img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Anna Barbieri">
         </div>
         <div class="it-right-zone">
-          <span class="text">Testo</span>
+          <span class="text">Link</span>
           <span class="metadata">metadata testo</span>
         </div>
       </a>
@@ -472,7 +472,7 @@ Il codice markup è stato rivisto in chiave accessibilità e robustezza. In part
       <div  class="list-item">
         <div class="it-right-zone">
           <div>
-            <h4 class="text m-0"><a href="#">Testo</a></h4>
+            <h4 class="text m-0"><a href="#">Link</a></h4>
             <p class="small m-0">Lorem ipsum dolor sit amet.</p>
           </div>
           <span class="it-multiple">
@@ -503,7 +503,7 @@ Il codice markup è stato rivisto in chiave accessibilità e robustezza. In part
       <div class="list-item">
         <div class="it-right-zone">
           <div>
-            <h4 class="text m-0"><a href="#">Testo</a></h4>
+            <h4 class="text m-0"><a href="#">Link</a></h4>
             <p class="small m-0">Lorem ipsum dolor sit amet.</p>
           </div>
           <span class="it-multiple">
@@ -729,7 +729,7 @@ All'interno del tag `<span class="list-item-title-icon-wrapper">` subito dopo lo
     <li>
       <a class="list-item icon-right" href="#">
         <span class="list-item-title-icon-wrapper">
-          <h4 class="list-item-title">Link lista 1</h4>
+          <h4 class="list-item-title">Link lista 2</h4>
           <svg class="icon icon-primary">
             <title>Codice</title>
             <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
@@ -743,7 +743,7 @@ All'interno del tag `<span class="list-item-title-icon-wrapper">` subito dopo lo
     <li>
       <a class="list-item disabled icon-right" href="#" aria-disabled="true">
         <span class="list-item-title-icon-wrapper">
-          <h4 class="list-item-title">Link lista 1 disabilitato</h4>
+          <h4 class="list-item-title">Link lista 3 disabilitato</h4>
           <svg class="icon icon-primary">
             <title>Codice</title>
             <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
@@ -806,7 +806,7 @@ Per posizionare correttamente l'icona a sinistra del testo bisogna aggiungere al
             <title>Freccia destra</title>
             <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use>
           </svg>
-          <span class="list-item-title">Link lista 3 disabilitata</span>
+          <span class="list-item-title">Link lista 3 disabilitato</span>
         </span>
       </a>
     </li>
@@ -850,7 +850,7 @@ Per posizionare correttamente l'icona a destra del testo bisogna aggiungere al t
     <li>
       <a class="list-item icon-right disabled" href="#" aria-disabled="true">
         <span class="list-item-title-icon-wrapper">
-          <span class="list-item-title">Link lista 3 disabilitata</span>
+          <span class="list-item-title">Link lista 3 disabilitato</span>
           <svg class="icon icon-primary">
             <title>Link</title>
             <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use>
