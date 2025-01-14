@@ -1,5 +1,5 @@
 // Import Design Tokens Italia
-@import '~design-tokens-italia/scss/dsi-tokens';
+// @import '~design-tokens-italia/scss/dsi-tokens';
 
 // Color vars
 // HSB (https://it.wikipedia.org/wiki/Hue_Saturation_Brightness, coincidente con il modello HSV)
@@ -2123,8 +2123,11 @@ $offcanvas-backdrop-opacity: $modal-backdrop-opacity !default;
 
 // NEW VARIABLES
 
+// Global colors used inside sass loops and maps
+$color-primary: var(--#{$prefix}theme-primary);
+$color-secondary: var(--#{$prefix}color-background-secondary);
+
 // Variables used in _maps.scss inside the $status map
-$color-theme-primary: var(--#{$prefix}theme-primary);
 $color-status-info: var(--#{$prefix}color-background-secondary);
 $color-status-success: var(--#{$prefix}color-status-success);
 $color-status-warning: var(--#{$prefix}color-status-warning);
