@@ -161,6 +161,7 @@
 textarea {
   &.form-control {
     min-height: $input-height;
+    border: 1px solid $input-border;
   }
 
   &.form-control-sm {
