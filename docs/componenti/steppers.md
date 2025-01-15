@@ -226,7 +226,7 @@ I pallini sono elementi `<li>` contenuti in una lista `.steppers-dots` situato f
 
 {% capture callout %}
 
-#### Accessibilità
+#### Accessibilità liste
 
 Per ragioni di accessibilità, i `<li>` devono contenere uno `<span>` con classe `.visually-hidden `riservato agli screen reader con un testo indicante il numero di step e lo stato.
 
