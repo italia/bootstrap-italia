@@ -94,7 +94,7 @@ I passi visibili nell'intestazione possono essere corredati da tre classi aggiun
 <div class="steppers">
   <div class="steppers-header">
     <ul>
-      <li class="confirmed">Primo contenuto <svg class="icon steppers-success"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg><span class="visually-hidden">Confermato</span></li>
+      <li class="confirmed">Primo contenuto <svg class="icon steppers-success" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg><span class="visually-hidden">Confermato</span></li>
       <li class="active">Secondo contenuto <span class="visually-hidden">Attivo</span></li>
       <li>Terzo contenuto</li>
     </ul>
@@ -112,9 +112,9 @@ Le label presenti negli step dell'intestazione possono essere anticipate da un'i
 <div class="steppers">
   <div class="steppers-header">
     <ul>
-      <li class="confirmed"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-calendar"></use></svg>Primo contenuto <svg class="icon steppers-success"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg><span class="visually-hidden">Confermato</span></li>
-      <li class="active"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-lock"></use></svg>Secondo contenuto <span class="visually-hidden">Attivo</span></li>
-      <li><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-settings"></use></svg>Terzo contenuto</li>
+      <li class="confirmed"><svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-calendar"></use></svg>Primo contenuto <svg class="icon steppers-success" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg><span class="visually-hidden">Confermato</span></li>
+      <li class="active"><svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-lock"></use></svg>Secondo contenuto <span class="visually-hidden">Attivo</span></li>
+      <li><svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-settings"></use></svg>Terzo contenuto</li>
     </ul>
     <span class="steppers-index" aria-hidden="true">2/6</span>
   </div>
@@ -132,7 +132,7 @@ Le label presenti negli steps dell'header possono essere anticipate dal numero o
 <div class="steppers">
   <div class="steppers-header">
     <ul>
-      <li class="confirmed"><span class="steppers-number"><svg class="icon steppers-success"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg><span class="visually-hidden">Confermato</span></span>Primo contenuto</li>
+      <li class="confirmed"><span class="steppers-number"><svg class="icon steppers-success" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg><span class="visually-hidden">Confermato</span></span>Primo contenuto</li>
       <li class="active no-line"><span class="steppers-number"><span class="visually-hidden">Step </span>2</span>Secondo contenuto <span class="visually-hidden">Attivo</span></li>
       <li><span class="steppers-number"><span class="visually-hidden">Step </span>3</span>Terzo contenuto</li>
     </ul>
@@ -160,7 +160,7 @@ Nel caso si stia sviluppando una _Single page application_ oppure una sequenza d
 <div class="steppers">
   <div class="steppers-header">
     <ul>
-      <li class="confirmed">Primo contenuto <svg class="icon steppers-success"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg><span class="visually-hidden">Confermato</span></li>
+      <li class="confirmed">Primo contenuto <svg class="icon steppers-success" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg><span class="visually-hidden">Confermato</span></li>
       <li class="active">Secondo contenuto <span class="visually-hidden">Attivo</span></li>
       <li>Terzo contenuto</li>
     </ul>
@@ -286,7 +286,7 @@ Per ottenere una versione scura degli Stepper è sufficiente aggiungere la class
 <div class="steppers bg-dark">
   <div class="steppers-header">
     <ul>
-      <li class="confirmed">Primo contenuto <svg class="icon steppers-success"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg><span class="visually-hidden">Confermato</span></li>
+      <li class="confirmed">Primo contenuto <svg class="icon steppers-success" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg><span class="visually-hidden">Confermato</span></li>
       <li class="active">Secondo contenuto <span class="visually-hidden">Attivo</span></li>
       <li>Terzo contenuto</li>
     </ul>
@@ -313,7 +313,7 @@ Per ottenere una versione scura degli Stepper è sufficiente aggiungere la class
 <div class="steppers bg-dark">
   <div class="steppers-header">
     <ul>
-      <li class="confirmed">Primo contenuto <svg class="icon steppers-success"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg><span class="visually-hidden">Confermato</span></li>
+      <li class="confirmed">Primo contenuto <svg class="icon steppers-success" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg><span class="visually-hidden">Confermato</span></li>
       <li class="active">Secondo contenuto <span class="visually-hidden">Attivo</span></li>
       <li>Terzo contenuto</li>
     </ul>
@@ -325,9 +325,9 @@ Per ottenere una versione scura degli Stepper è sufficiente aggiungere la class
 <div class="steppers bg-dark">
   <div class="steppers-header">
     <ul>
-      <li class="confirmed"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-calendar"></use></svg>Primo contenuto <svg class="icon steppers-success"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg><span class="visually-hidden">Confermato</span></li>
-      <li class="active"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-lock"></use></svg>Secondo contenuto <span class="visually-hidden">Attivo</span></li>
-      <li><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-settings"></use></svg>Terzo contenuto</li>
+      <li class="confirmed"><svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-calendar"></use></svg>Primo contenuto <svg class="icon steppers-success" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg><span class="visually-hidden">Confermato</span></li>
+      <li class="active"><svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-lock"></use></svg>Secondo contenuto <span class="visually-hidden">Attivo</span></li>
+      <li><svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-settings"></use></svg>Terzo contenuto</li>
     </ul>
     <span class="steppers-index" aria-hidden="true">2/6</span>
   </div>
@@ -337,7 +337,7 @@ Per ottenere una versione scura degli Stepper è sufficiente aggiungere la class
 <div class="steppers bg-dark">
   <div class="steppers-header">
     <ul>
-      <li class="confirmed"><span class="steppers-number"><svg class="icon steppers-success"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg><span class="visually-hidden">Confermato Step 1</span></span>Primo contenuto</li>
+      <li class="confirmed"><span class="steppers-number"><svg class="icon steppers-success" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg><span class="visually-hidden">Confermato Step 1</span></span>Primo contenuto</li>
       <li class="active no-line"><span class="steppers-number"><span class="visually-hidden">Attivo Step </span>2</span>Secondo contenuto</li>
       <li><span class="steppers-number"><span class="visually-hidden">Step </span>3</span>Terzo contenuto</li>
     </ul>
