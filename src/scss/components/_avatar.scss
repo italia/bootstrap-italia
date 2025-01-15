@@ -1,12 +1,10 @@
 @use 'sass:math';
 
 // Avatar variants map
+// Edit the colors to match your theme or add more variants
 $avatar-variants: (
   primary: $color-primary,
-  secondary: $color-secondary,
-  green: $green, // TODO: replace with different color
-  orange: $orange, // TODO: replace with different color
-  red: $red // TODO: replace with different color
+  secondary: $color-secondary
 );
 
 // Avatar local variables
