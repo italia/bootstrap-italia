@@ -107,6 +107,14 @@ I passi visibili nell'intestazione possono essere corredati da tre classi aggiun
 
 Le label presenti negli step dell'intestazione possono essere anticipate da un'icona.
 
+{% capture callout %}
+
+#### Accessibilità
+
+Nel caso in cui l'icona è semanticamente rilevante e non spiegata dal testo che la segue, aggiungere `role="img"` sul tag `<svg>` e inserire all'interno il tag `<title>` con il titolo .
+
+{% endcapture %}{% include callout.html content=callout type="accessibility" %}
+
 {% comment %}Example name: Intestazione testo e icone{% endcomment %}
 {% capture example %}
 <div class="steppers">
@@ -213,7 +221,13 @@ La Progress bar è quella nativa di Bootstrap 5 ed è contenuta in un elemento `
 
 I pallini sono elementi `<li>` contenuti in una lista `.steppers-dots` situato fra i pulsanti "Indietro" e "Avanti".
 
+{% capture callout %}
+
+#### Accessibilità
+
 Per ragioni di accessibilità, i `<li>` devono contenere uno `<span>` con classe `.visually-hidden `riservato agli screen reader con un testo indicante il numero di step e lo stato.
+
+{% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
 {% comment %}Example name: Con navigazione mobile pallini{% endcomment %}
 {% capture example %}
