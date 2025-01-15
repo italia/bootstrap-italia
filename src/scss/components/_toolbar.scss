@@ -16,7 +16,7 @@
     & > ul {
       height: 100%;
       flex-direction: column;
-      width: 64px;
+      width: 72px;
       & > li {
         margin: 8px 0;
         display: flex;
@@ -44,12 +44,12 @@
     &.toolbar-medium {
       width: 84px;
       & > ul {
-        width: 48px;
+        width: 56px;
       }
 
       // badge
       .toolbar-badge {
-        right: -4px;
+        right: 0px;
       }
 
       // dropdown
@@ -68,12 +68,12 @@
     &.toolbar-small {
       width: 72px;
       & > ul {
-        width: 40px;
+        width: 48px;
       }
 
       // badge
       .toolbar-badge {
-        right: -4px;
+        right: 0px;
       }
 
       // dropdown
@@ -91,6 +91,7 @@
 
     // dropdown
     .btn-dropdown {
+      padding: 0;
       &:after {
         right: -12px;
         transform: rotate(-90deg);
@@ -128,7 +129,7 @@
     }
 
     .toolbar-badge {
-      right: -10px;
+      right: 0px;
     }
 
     .badge-wrapper {
@@ -169,8 +170,8 @@
       height: 10px;
       width: 10px;
       min-width: 10px;
-      right: 8px;
-      top: 4px;
+      right: 0px;
+      top: -2px;
       padding: 0;
     }
   }
@@ -202,7 +203,7 @@
       height: 8px;
       width: 8px;
       min-width: 8px;
-      right: 10px;
+      right: 0px;
       top: 2px;
       padding: 0;
     }
@@ -242,7 +243,6 @@
       list-style-type: none;
       margin: 0 8px;
       text-align: center;
-      flex: 1 100%;
       // divider
       &.toolbar-divider {
         margin: 0;
@@ -312,6 +312,8 @@
     padding: 0;
     width: 100%;
     position: relative;
+    padding-left: 10px;
+    padding-right: 10px ;
     &.toolbar-more {
       &:after {
         display: none;
@@ -366,7 +368,7 @@
 
   // icon badges ------------------
   .badge-wrapper {
-    width: calc(50% + 28px);
+    // width: calc(50% + 28px);
     position: relative;
   }
 
@@ -380,8 +382,8 @@
 
   // icon badge
   .toolbar-badge {
-    top: 0;
-    right: 6px;
+    top: -4px;
+    right: 0px;
     min-width: 18px;
     height: 18px;
     padding: 0 4px;
