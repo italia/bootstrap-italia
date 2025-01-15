@@ -109,9 +109,12 @@ Le label presenti negli step dell'intestazione possono essere anticipate da un'i
 
 {% capture callout %}
 
-#### Accessibilità
+#### Accessibilità delle icone
 
-Nel caso in cui l'icona è semanticamente rilevante e non spiegata dal testo che la segue, aggiungere `role="img"` sul tag `<svg>` e inserire all'interno il tag `<title>` con il titolo .
+Nel caso in cui l'icona è semanticamente rilevante e non spiegata dal testo che la segue, occorre:
+- rimuovere `aria-hidden="true"`
+- aggiungere `role="img"` sul tag `<svg>`
+- inserire all'interno il tag `<title>` con un titolo per l'icona che ne spieghi il significato (nel formato `<title>significato icona</title>"`)
 
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
