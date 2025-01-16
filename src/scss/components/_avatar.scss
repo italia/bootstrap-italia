@@ -7,17 +7,16 @@ $avatar-variants: (
   secondary: $color-secondary
 );
 
-// Avatar local variables
+// Avatar properties
 .avatar {
   --#{$prefix}avatar-background: var(--#{$prefix}color-background-secondary-lighter);
   --#{$prefix}avatar-text-color: var(--#{$prefix}color-text-secondary);
   --#{$prefix}avatar-font-size: var(--#{$prefix}font-size-2);
-  --#{$prefix}avatar-font-weight: var(--#{$prefix}font-weight-base);
   --#{$prefix}avatar-icon-size: var(--#{$prefix}icon-size-s);
   --#{$prefix}avatar-radius: var(--#{$prefix}radius-circle);
   --#{$prefix}avatar-size: 2.5rem; // default size - see '.size-' classes for other sizes
-  --#{$prefix}avatar-dot-size: 10px;
-  --#{$prefix}avatar-dot-border-size: 1.5px;
+  --#{$prefix}avatar-dot-size: 12px;
+  --#{$prefix}avatar-dot-border-size: 2px;
   --#{$prefix}avatar-dot-border-color: var(--#{$prefix}color-border-inverse);
   --#{$prefix}avatar-dot-offset-right: 0;
   --#{$prefix}avatar-dot-offset-top: 0;
@@ -25,16 +24,16 @@ $avatar-variants: (
 }
 
 .avatar {
+  position: relative;
+  z-index: 1;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: var(--#{$prefix}avatar-size);
   height: var(--#{$prefix}avatar-size);
-  overflow: hidden;
   border-radius: var(--#{$prefix}avatar-radius);
   background: var(--#{$prefix}avatar-background);
   color: var(--#{$prefix}avatar-text-color);
-  font-weight: var(--#{$prefix}avatar-font-weight);
   transition: background-color 0.2s;
 
   // Avatar color variants
@@ -46,6 +45,7 @@ $avatar-variants: (
   }
 
   &.size-sm {
+    --#{$prefix}avatar-dot-border-size: 1px;
     --#{$prefix}avatar-font-size: 12px;
     --#{$prefix}avatar-font-weight: var(--#{$prefix}font-weight-solid);
     --#{$prefix}avatar-size: 1.5rem;
@@ -82,97 +82,16 @@ $avatar-variants: (
     --#{$prefix}avatar-dot-size: 20px;
   }
 
-  // Avatar image
-  img {
-    width: 100%;
-    height: 100%;
-    transition: filter 0.2s;
-    object-fit: cover;
-    object-position: center;
-  }
-
-  // Avatar first letters
-  p {
-    margin: 0;
-    font-size: var(--#{$prefix}avatar-font-size); 
-  }
-
-  // Avatar icons
-  .icon {
-    width: var(--#{$prefix}avatar-icon-size);
-    height: var(--#{$prefix}avatar-icon-size);
-  }
-
-  &.avatar-dropdown {
-    position: relative;
-    overflow: visible;
-
-    .dropdown {
-      position: absolute;
-      top: 0;
-      right: 0;
-      left: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100%;
-      border: 0;
-    }
-
-    .btn-dropdown {
-      padding: 0;
-      color: inherit;
-      font-size: 0.75rem;
-      line-height: 0;
-    }
-
-    .list-item {
-      display: flex;
-      align-items: center;
-      padding: 0 16px;
-      font-size: 0.875rem;
-    }
-
-    .link-list {
-      white-space: nowrap;
-
-      span {
-        line-height: 1em;
-      }
-
-      li {
-        margin-bottom: 16px;
-        &:last-child {
-          margin-bottom: 0;
-        }
-      }
-
-      .avatar {
-        margin-right: 16px;
-
-        &.size-sm {
-          margin-right: 12px;
-        }
-
-        p {
-          color: $white !important;
-        }
-      }
-    }
-
-    .dropdown-menu {
-      margin-left: -27px !important;
-    }
-  }
-
   &-wrapper {
     position: relative;
+    z-index: 1;
   }
 
   &-presence,
   &-status {
     position: absolute;
     right: var(--#{$prefix}avatar-dot-offset-right);
+    z-index: 10;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -224,93 +143,152 @@ $avatar-variants: (
   &-status.notify {
     background: var(--#{$prefix}theme-primary);
   }
-}
 
+  // Avatar image
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--#{$prefix}avatar-radius);
+    object-fit: cover;
+    object-position: center;
+  }
 
-a.avatar {
-  filter: brightness(100%);
+  // Avatar first letters
+  p {
+    margin: 0;
+    color: var(--#{$prefix}avatar-text-color);
+    font-size: var(--#{$prefix}avatar-font-size);
+  }
 
-  &:hover {
-    background: shade-color($color-background-secondary-lighter, 5%);
+    // Avatar icon
+  .icon {
+    width: var(--#{$prefix}avatar-icon-size);
+    height: var(--#{$prefix}avatar-icon-size);
+  }
 
-    img {
-      filter: brightness(90%);
-    }
-
-    &.avatar-primary {
-      background: shade-color($primary, 5%);
-    }
-
-    &.avatar-secondary {
-      background: shade-color($secondary, 5%);
-    }
-
-    &.avatar-green {
-      background: shade-color($green, 5%);
-    }
-
-    &.avatar-orange {
-      background: shade-color($orange, 5%);
-    }
-
-    &.avatar-red {
-      background: shade-color($red, 12%);
-    }
+// Avatar sibling span text
+  & ~ span {
+    margin-left: var(--#{$prefix}spacing-inline-xs);
   }
 }
 
+// Hover on avatar
+a.avatar,
+a .avatar {
+  text-decoration: none;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--#{$prefix}avatar-radius);
+    opacity: 0;
+    background: var(--#{$prefix}color-background-emphasis);
+    transition: opacity 0.2s;
+  }
+
+  &:hover p {
+    color: var(--bs-avatar-text-color);
+  }
+
+  &:hover::after {
+    opacity: 0.5;
+  }
+}
+
+// Avatar dropdown
 .avatar-dropdown {
-  &:hover,
-  &:focus-within {
-    background: shade-color($color-background-secondary-lighter, 5%);
+  position: relative;
+  overflow: visible;
+
+  .dropdown {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    border: 0;
   }
 
-  .btn-dropdown:focus {
-    box-shadow: none;
+  .dropdown-menu {
+    margin-left: -27px;
+  }
+  
+  .btn-dropdown {
+    padding: 0;
+    color: inherit;
+    font-size: var(--#{$prefix}label-font-size-xs);
+    line-height: 0;
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  .list-item {
+    display: flex;
+    align-items: center;
+    font-size: var(--#{$prefix}font-size-1);
+  }
+
+  .link-list {
+    white-space: nowrap;
+
+    li {
+      margin-bottom: 16px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
 }
 
-.avatar-wrapper {
+.avatar-extra-text {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 16px;
 
-  &.avatar-extra-text {
-    display: inline-flex;
-    align-items: center;
-    justify-content: flex-start;
-    margin-bottom: 16px;
+  .avatar {
+    flex-shrink: 0;
+  }
 
-    .avatar {
-      flex-shrink: 0;
+  .extra-text {
+    margin-left: var(--#{$prefix}spacing-inline-s);
+
+    h3,
+    h4 {
+      margin: 0;
+      font-size: var(--#{$prefix}font-size-2);
+
+      a {
+        display: inline-block;
+      }
     }
 
-    .extra-text {
-      margin-left: 16px;
-      line-height: 1.2em;
-
-      h3,
-      h4 {
-        margin: 0;
-        font-size: 1.125rem;
-        font-weight: 600;
-
-        a {
-          display: inline-block;
-        }
-      }
-
-      p,
-      time {
-        margin: 0;
-        font-size: 0.75rem;
-        text-transform: uppercase;
-      }
+    p,
+    time {
+      margin: 0;
+      color: var(--#{$prefix}color-text-secondary);
+      font-size: var(--#{$prefix}caption-font-size);
+      text-transform: uppercase;
     }
   }
 }
 
 .avatar-group {
   & > li {
-    margin-bottom: 16px;
-    line-height: 1;
+    margin-bottom: var(--#{$prefix}spacing-stack-s);
+    line-height: auto;
+
     &:last-child {
       margin-bottom: 0;
     }
@@ -319,35 +297,6 @@ a.avatar {
       display: inline-flex;
       align-items: center;
       padding: 0;
-      line-height: 1em;
-      .avatar {
-        margin-right: 12px;
-
-        p {
-          font-size: 1rem;
-        }
-
-        &.avatar-primary,
-        &.avatar-secondary,
-        &.avatar-green,
-        &.avatar-orange,
-        &.avatar-red {
-          p {
-            color: $white;
-            line-height: 0;
-          }
-        }
-      }
-
-      span {
-        margin: 0;
-        font-size: 0.875rem;
-        font-weight: 600;
-      }
-    }
-
-    a.list-item span {
-      text-decoration: underline;
     }
   }
 }
@@ -359,9 +308,11 @@ a.avatar {
   justify-content: flex-start;
   margin: 0;
   padding: 0;
+
   li {
     list-style-type: none;
     line-height: 0;
+
     & > .avatar {
       margin-left: -6px;
       border: 2px solid $white;
