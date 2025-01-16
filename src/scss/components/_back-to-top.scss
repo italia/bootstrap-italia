@@ -1,15 +1,15 @@
 .back-to-top {
-  --#{$prefix}back-to-top-bg: var(--#{$prefix}color-background-primary);
-  --#{$prefix}back-to-top-bg-position: 1rem;
+  --#{$prefix}back-to-top-background: var(--#{$prefix}color-background-primary);
+  --#{$prefix}back-to-top-position: 1rem;
   --#{$prefix}back-to-top-radius: var(--#{$prefix}radius-circle);
   --#{$prefix}back-to-top-sizing: 2.5rem;
 }
 
 .back-to-top {
   position: fixed;
-  bottom: var(--#{$prefix}back-to-top-bg-position);
-  right: var(--#{$prefix}back-to-top-bg-position);
-  background: var(--#{$prefix}color-background-primary);
+  bottom: var(--#{$prefix}back-to-top-position);
+  right: var(--#{$prefix}back-to-top-position);
+  background: var(--#{$prefix}back-to-top-background);
   width: var(--#{$prefix}back-to-top-sizing);
   height: var(--#{$prefix}back-to-top-sizing);
   text-decoration: none;
@@ -38,7 +38,7 @@
   }
 
   &:hover {
-    --back-to-top-bg: var(--#{$prefix}color-background-primary-hover  );
+    --back-to-top-background: var(--#{$prefix}color-background-primary-hover  );
     text-decoration: none;
   }
 
@@ -82,9 +82,9 @@
 
   // Dark version
   &.dark {
-    --#{$prefix}back-to-top-bg: var(--#{$prefix}color-background-inverse);
+    --#{$prefix}back-to-top-background: var(--#{$prefix}color-background-inverse);
     &:hover {
-      --#{$prefix}back-to-top-bg: var(--dsi-color-slate-93);
+      --#{$prefix}back-to-top-background: var(--#{$prefix}color-background-inverse-hover);
     }
 
     .icon {
