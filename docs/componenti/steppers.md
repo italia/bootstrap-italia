@@ -74,6 +74,12 @@ L'elemento con classe `.steppers-index` adesso è diventato uno `<span>` colloca
 {% endcapture %}{% include callout.html content=callout type="danger" %}
 
 {% capture callout %}
+Breaking feature dalla versione **2.13.0**
+
+Gli elementi di tipo `<svg>` non interattivi necessitano dell'aggiunta di `aria-hidden="true"`.
+{% endcapture %}{% include callout.html content=callout type="danger" %}
+
+{% capture callout %}
 L'aspetto della modalità mobile degli Steppers è differente rispetto a quello desktop. Se si sta consultando questa documentazione su un PC desktop, per visualizzare correttamente gli esempi seguenti in formato mobile sarà necessario ridimensionare la finestra del browser al di sotto dei 992 pixel.
 {% endcapture %}{% include callout.html content=callout type="info" %}
 

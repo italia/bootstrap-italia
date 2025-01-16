@@ -607,10 +607,10 @@ L'intestazione è costituita dall'elemento `.link-list-heading` che precede il t
 Il divisore è costituito dal tag `<span>` con classe `.divider` e attributo `role="separator"`  all'interno del tag `<li>`.
 
 {% capture callout %}
- #### Breaking feature dalla versione **2.10.y**
+Breaking feature dalla versione **2.10.0**
 
- Il codice markup è stato rivisto in chiave accessibilità e robustezza. In particolare cosa cambia: 
-   - L'elemento `.link-list-heading` è ora implementato come heading `h` e non semplice `<span>`. Dovrà avere il livello intestazione corretto a seconda della gerarchia in pagina.
+Il codice markup è stato rivisto in chiave accessibilità e robustezza. In particolare cosa cambia: 
+- L'elemento `.link-list-heading` è ora implementato come heading `h` e non semplice `<span>`. Dovrà avere il livello intestazione corretto a seconda della gerarchia in pagina.
  {% endcapture %}{% include callout.html content=callout type="danger" %}
 
 {% comment %}Example name: Per menu, con intestazione e divisore{% endcomment %}
@@ -701,10 +701,10 @@ Per includere un'icona bisogna aggiungere al tag `<a>` una delle seguenti classi
 All'interno del tag `<span class="list-item-title-icon-wrapper">` subito dopo lo `<span class="list-item-title">` contenente il testo, puoi inserire [l'icona necessaria]({{ site.baseurl }}/docs/utilities/icone/).
 
 {% capture callout %}
- #### Breaking feature dalla versione **2.10.y**
+Breaking feature dalla versione **2.10.0**
 
- Il codice markup è stato rivisto in chiave accessibilità e robustezza. In particolare cosa cambia: 
-   - L'elemento `.list-item-title` è ora implementato come heading `h` e non semplice `<span>`. Dovrà avere il livello intestazione corretto a seconda della gerarchia in pagina.
+Il codice markup è stato rivisto in chiave accessibilità e robustezza. In particolare cosa cambia: 
+- L'elemento `.list-item-title` è ora implementato come heading `h` e non semplice `<span>`. Dovrà avere il livello intestazione corretto a seconda della gerarchia in pagina.
  {% endcapture %}{% include callout.html content=callout type="danger" %}
 
 {% comment %}Example name: Per menu, multilinea con icona{% endcomment %}
