@@ -38,9 +38,9 @@
       padding-left: $link-list-h-pad;
     }
     li {
+      font-size: $link-list-font-size;
+      line-height: $link-list-line-height;
       a {
-        font-size: $link-list-font-size;
-        line-height: $link-list-line-height;
         display: block;
         padding: 0.25rem $link-list-h-pad;
         text-decoration: none;
