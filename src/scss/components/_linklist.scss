@@ -1,172 +1,210 @@
 //mobile
 .link-list-wrapper {
+
   .list-item-title,
   .link-list-heading {
     font-size: $link-list-heading-size;
   }
+
   .link-list-heading {
-    color: $color-text-base;
-    padding: 0 $link-list-h-pad;
-    font-weight: 600;
     margin-bottom: $link-list-divider-distance;
+    padding: 0 $link-list-h-pad;
+    color: $color-text-base;
+    font-weight: 600;
     line-height: 1.25;
+
     a {
+      position: relative;
+      display: block;
       padding: 0;
       font-size: $link-list-font-size;
       line-height: $link-list-line-height;
-      display: block;
-      position: relative;
       text-decoration: none;
     }
   }
+
   h3 {
-    font-size: $link-list-heading-size;
-    color: $color-text-base;
     padding: 0 $link-list-h-pad;
+    color: $color-text-base;
+    font-size: $link-list-heading-size;
     font-weight: 600;
+
     a {
-      line-height: inherit;
-      font-size: 1rem;
       padding: 0;
+      font-size: 1rem;
+      line-height: inherit;
     }
   }
+
   ul {
     padding: 0;
     list-style-type: none;
+
     // sottolista
     &.link-sublist {
       padding-left: $link-list-h-pad;
     }
+
     li {
       font-size: $link-list-font-size;
       line-height: $link-list-line-height;
+
       a {
+        position: relative;
         display: block;
         padding: 0.25rem $link-list-h-pad;
         text-decoration: none;
-        position: relative;
+
         &.icon-right,
         &.icon-left {
-          padding-left: 0;
-          padding-right: 0;
           padding-top: $link-list-v-pad;
+          padding-right: 0;
           padding-bottom: $link-list-v-pad;
-          & + ul {
+          padding-left: 0;
+
+          &+ul {
             padding-left: 0;
           }
         }
+
         &.icon-right {
           .list-item-title-icon-wrapper {
             justify-content: space-between;
             margin-right: 0;
           }
         }
+
         &[data-bs-toggle] {
           .icon {
             transition: transform 0.3s;
           }
         }
+
         &[aria-expanded='true'] {
           .icon {
             transform: scale(-1);
           }
         }
+
         // hover state
         &:hover:not(.disabled) {
           text-decoration: none;
+
           span {
             color: $primary;
             text-decoration: underline;
           }
+
           p {
             color: $color-text-secondary;
             text-decoration: none;
           }
+
           .icon {
             fill: $primary;
           }
         }
+
         &.disabled:hover {
           text-decoration: none;
         }
+
         // weight variation
         &.medium {
           font-weight: 600;
         }
+
         span {
-          color: $primary;
           display: inline-block;
           margin-right: $link-list-h-pad;
+          color: $primary;
           line-height: normal;
         }
+
         .icon {
           display: inline-block;
           flex-shrink: 0;
         }
+
         .list-item-title-icon-wrapper {
           display: flex;
           align-items: center;
+
           .list-item-title {
             margin-right: $link-list-h-pad;
           }
         }
+
         // icone destre dentro link
         &.right-icon {
           .list-item-title-icon-wrapper {
-            padding-right: 0;
-            margin-right: 0;
             justify-content: space-between;
+            margin-right: 0;
+            padding-right: 0;
           }
+
           .icon {
             transition: transform $dropdown-menu-animation-speed;
+
             &.secondary {
               color: $icon-secondary;
             }
           }
         }
+
         // variazione icone a collapse aperto
         &.right-icon[aria-expanded='true'] {
           .icon.right {
             transform: scaleY(-1);
           }
         }
+
         &.active {
           span {
             color: $color-text-primary-active;
           }
+
           .icon {
             color: $color-text-primary-active;
           }
         }
+
         &.disabled {
           cursor: not-allowed;
+
           span {
             color: $gray-label-disabled;
           }
+
           svg {
             fill: $gray-disabled;
+
             &.secondary {
               fill: $gray-disabled;
             }
           }
         }
+
         &.large {
           font-size: $link-list-font-size-l;
         }
+
         // paragrafo dentro link
         p {
+          color: $color-text-secondary;
           font-size: $link-list-paragraph-size;
           line-height: initial;
-          color: $color-text-secondary;
         }
+
         //avatar
         &.avatar {
           display: flex;
           margin-bottom: $link-list-avatar-margin;
+
           .avatar {
             display: block;
-            border-radius: $link-list-avatar-radius;
             margin-right: $link-list-left-icon-space;
+            border-radius: $link-list-avatar-radius;
           }
         }
 
@@ -176,38 +214,43 @@
               margin-right: $v-gap;
             }
           }
+
           &.icon-left,
           &.left-icon {
             p {
               width: 100%;
             }
+
             .icon {
               left: 0;
-              margin-left: 0;
               flex-shrink: 0;
+              margin-left: 0;
             }
           }
         }
       }
     }
+
     .divider {
       display: block;
       height: $link-list-divider-height;
-      background: $color-border-subtle;
       margin: $link-list-divider-distance 0;
+      background: $color-border-subtle;
     }
+
     //toggles
     .toggles {
       label {
-        padding: 0 $link-list-h-pad;
-        font-size: $link-list-font-size;
-        line-height: $link-list-line-height;
         justify-content: space-between;
         height: auto;
-        font-weight: inherit;
         margin: 0;
+        padding: 0 $link-list-h-pad;
+        font-size: $link-list-font-size;
+        font-weight: inherit;
+        line-height: $link-list-line-height;
       }
-      input[type='checkbox'] + .lever {
+
+      input[type='checkbox']+.lever {
         margin: $link-list-toggle-margin 0 0;
       }
     }
@@ -217,31 +260,37 @@
       &.form-check-group {
         padding: 0 $link-list-h-pad;
         box-shadow: none;
-        [type='checkbox'] + label {
+
+        [type='checkbox']+label {
+          height: inherit;
+          margin-bottom: 0;
           padding-left: 0;
           font-size: $link-list-font-size;
           line-height: $link-list-line-height;
-          height: inherit;
-          margin-bottom: 0;
+
           &:after {
             right: $link-list-h-pad;
           }
+
           &:before {
             right: $link-list-checkbox-icon-right;
           }
         }
-        [type='checkbox'][disabled] + label {
+
+        [type='checkbox'][disabled]+label {
           color: $color-text-secondary;
         }
       }
     }
   }
+
   &.multiline {
     .list-item-title-icon-wrapper {
       justify-content: space-between;
       margin-bottom: calc($v-gap / 2);
       padding: 0;
     }
+
     .list-item {
       &.icon-right {
         .list-item-title-icon-wrapper {
@@ -251,6 +300,7 @@
     }
   }
 }
+
 //small - tablet
 @include media-breakpoint-up(sm) {
   .link-list-wrapper ul li a.large {
@@ -263,6 +313,7 @@
 //Tablet vertical
 @include media-breakpoint-up(md) {
   .link-list-wrapper ul li a.large {
+
     &.icon-left,
     &.icon-right {
       padding-top: $link-list-v-padding-l;
@@ -274,6 +325,7 @@
 //Tablet horizontal / small desktop
 @include media-breakpoint-up(lg) {
   .link-list-wrapper {
+
     // classe modificatore per menu laterale
     &.menu-link-list {
       position: relative;
@@ -281,14 +333,15 @@
       h3,
       h4 {
         position: relative;
-        padding: 1rem;
         margin-top: 0;
+        padding: 1rem;
         border-bottom: 4px solid $color-border-subtle;
+
         &:after {
-          content: '';
           position: absolute;
-          left: 0;
           bottom: -4px;
+          left: 0;
+          content: '';
           width: 40px;
           height: 4px;
           background-color: $warning;
