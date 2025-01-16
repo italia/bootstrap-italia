@@ -107,7 +107,7 @@
   --#{$prefix}font-size-4: var(--dsi-font-size-4);
   --#{$prefix}font-size-3: var(--dsi-font-size-3);
   --#{$prefix}font-size-2: var(--dsi-font-size-2);
-  --#{$prefix}font-size-1: var(--dsi-font-size-1);
+  --#{$prefix}font-size-1: var(--dsi-font-size-1); 
   --#{$prefix}font-line-height-5: var(--dsi-font-line-height-5);
   --#{$prefix}font-line-height-4: var(--dsi-font-line-height-4);
   --#{$prefix}font-line-height-3: var(--dsi-font-line-height-3);
@@ -237,6 +237,7 @@
   --#{$prefix}color-background-subtle: var(--dsi-color-background-subtle);
   --#{$prefix}color-background-disabled: var(--dsi-color-background-disabled);
   --#{$prefix}color-background-inverse: var(--dsi-color-background-inverse);
+  --#{$prefix}color-background-inverse-hover: var(--dsi-color-slate-93); // TODO: replace with semantic token
   --#{$prefix}color-background-muted: var(--dsi-color-background-muted);
   --#{$prefix}color-background-accent-hover: var(--dsi-color-background-accent-hover);
   --#{$prefix}color-background-accent: var(--dsi-color-background-accent);
