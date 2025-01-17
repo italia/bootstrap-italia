@@ -37,35 +37,35 @@ Sono disponibili le classi `icon-*`, dove `*` può essere `xs`, `sm`, `lg`, `xl`
 
 {% comment %}Example name: Varianti dimensioni{% endcomment %}
 {% capture example %}
-<svg class="bg-light icon icon-xs"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>
-<svg class="bg-light icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>
-<svg class="bg-light icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>
-<svg class="bg-light icon icon-lg"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>
-<svg class="bg-light icon icon-xl"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>
+<svg class="icon icon-xs"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>
+<svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>
+<svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>
+<svg class="icon icon-lg"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>
+<svg class="icon icon-xl"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>
 {% endcapture %}{% include example.html content=example %}
 
-È anche possibile applicare la classe `icon-padded` all'icona per creare un padding proporzionale alla dimensione dell'icona attorno ad essa.
+È anche possibile applicare la classe `icon-padded` all'icona per creare uno spazio esterno proporzionale alla dimensione dell'icona attorno ad essa.
 
 {% comment %}Example name: Varianti dimensioni, con padding{% endcomment %}
 {% capture example %}
-<svg class="bg-light icon icon-xs icon-padded"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>
-<svg class="bg-light icon icon-sm icon-padded"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>
-<svg class="bg-light icon icon-padded"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>
-<svg class="bg-light icon icon-lg icon-padded"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>
-<svg class="bg-light icon icon-xl icon-padded"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>
+<svg class="icon icon-xs icon-padded"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>
+<svg class="icon icon-sm icon-padded"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>
+<svg class="icon icon-padded"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>
+<svg class="icon icon-lg icon-padded"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>
+<svg class="icon icon-xl icon-padded"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>
 {% endcapture %}{% include example.html content=example %}
 
 ### Colori
 
 {% comment %}Example name: Varianti colori{% endcomment %}
 {% capture example %}
-<svg class="icon icon-primary bg-light"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>
-<svg class="icon icon-secondary bg-light"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>
-<svg class="icon icon-success bg-light"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>
-<svg class="icon icon-warning bg-light"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>
-<svg class="icon icon-danger bg-light"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>
-<svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>
-<svg class="icon icon-inverse bg-dark"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>
+<svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>
+<svg class="icon icon-secondary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>
+<svg class="icon icon-success"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>
+<svg class="icon icon-warning"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>
+<svg class="icon icon-danger"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>
+<svg class="icon icon-light"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>
+<svg class="icon icon-white"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>
 {% endcapture %}{% include example.html content=example %}
 
 ### Allineamenti
@@ -75,9 +75,9 @@ Sono disponibili le classi `icon-*`, dove `*` può essere `xs`, `sm`, `lg`, `xl`
 {% comment %}Example name: Allineamenti{% endcomment %}
 {% capture example %}
 <div style="line-height: 4em;">
-  <svg class="bg-light icon align-bottom"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>
-  <svg class="bg-light icon align-middle"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>
-  <svg class="bg-light icon align-top"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>
+  <svg class="icon align-bottom"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>
+  <svg class="icon align-middle"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>
+  <svg class="icon align-top"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>
 </div>
 {% endcapture %}{% include example.html content=example %}
 

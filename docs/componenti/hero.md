@@ -9,13 +9,15 @@ toc: true
 La hero è un componente leggero e flessibile che può facoltativamente estendere l'intera finestra per mostrare i messaggi in evidenza sul tuo sito.
 Di seguito una serie di esempi con la descrizione degli elementi e delle classi applicabili.
 
-Il componente Hero può contenere:
+Gli elementi da cui è composto sono:
 
-- Sub head
-- Heading (titolo)
+- Titolo occhiello
+- Titolo principale (heading)
 - Paragrafo
-- Call to action
+- Uno o più pulsanti (call to action)
 - Immagine di background
+
+Poiché il componente occupa in larghezza l'intera pagina, consulta la **[pagina di esempio]**({{ site.baseurl }}/docs/esempi/hero/){:target="\_blank"} per visualizzare tutte le varianti in un contesto reale.
 
 {% capture callout %}
 
@@ -24,11 +26,6 @@ Il componente Hero può contenere:
 Valutare attentamente l'opportunità di utilizzare più hero nella stessa pagina.
 
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
-
-{% capture callout %}
-Il componente Hero è un componente full-width.
-Per la visualizzazione reale a schermo fate riferimento alla [pagina di esempio]({{ site.baseurl }}/docs/esempi/hero/){:target="\_blank"}.
-{% endcapture %}{% include callout.html content=callout type="info" %}
 
 ## Con immagine
 
@@ -87,10 +84,10 @@ Nei casi in cui fossero presenti contenuti testuali utilizzare per il titolo il 
     <div class="row">
         <div class="col-12">
           <div class="it-hero-text-wrapper bg-dark">
-              <span class="it-Categoria">Categoria</span>
-              <h1 class="no_toc">Heading lorem ipsum dolor sit amet, consetetur sadipscing.</h1>
+              <span class="it-category">Titolo occhiello</span>
+              <h1 class="no_toc">Titolo della sezione</h1>
               <p class="d-none d-lg-block">Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.</p>
-              <div class="it-btn-container"><a class="btn btn-sm btn-outline-primary" href="#">Label CTA</a></div>
+              <div class="it-btn-container"><a class="btn btn-sm btn-outline-primary" href="#">Azione primaria </a></div>
           </div>
         </div>
     </div>
@@ -110,10 +107,10 @@ aggiungere alla section `.it-hero-wrapper` la classe `.it-text-centered`.
       <div class="row">
          <div class="col-12">
             <div class="it-hero-text-wrapper bg-dark">
-               <span class="it-Categoria">Categoria</span>
-               <h2 class="no_toc">Heading lorem ipsum dolor sit amet, consetetur sadipscing.</h2>
+               <span class="it-category">Titolo occhiello</span>
+               <h2 class="no_toc">Titolo della sezione</h2>
                <p class="d-none d-lg-block">Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.</p>
-               <div class="it-btn-container"><a class="btn btn-sm btn-outline-primary" href="#">Label CTA</a></div>
+               <div class="it-btn-container"><a class="btn btn-sm btn-outline-primary" href="#">Azione primaria</a></div>
             </div>
          </div>
       </div>
@@ -151,10 +148,10 @@ Verificare che l'immagine utilizzata assicuri sempre un adeguato contrasto rispe
     <div class="row">
         <div class="col-12">
           <div class="it-hero-text-wrapper bg-dark">
-              <span class="it-Categoria">Categoria</span>
-              <h2 class="no_toc">Heading lorem ipsum dolor sit amet, consetetur sadipscing.</h2>
+              <span class="it-category">Titolo occhiello</span>
+              <h2 class="no_toc">Titolo della sezione</h2>
               <p class="d-none d-lg-block">Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.</p>
-              <div class="it-btn-container"><a class="btn btn-sm btn-secondary" href="#">Label CTA</a></div>
+              <div class="it-btn-container"><a class="btn btn-sm btn-secondary" href="#">Azione primaria</a></div>
           </div>
         </div>
     </div>
@@ -183,10 +180,10 @@ Per un div opaco di colore primario, aggiungere alla section `.it-hero-wrapper` 
       <div class="row">
          <div class="col-12">
             <div class="it-hero-text-wrapper bg-dark">
-               <span class="it-Categoria">Categoria</span>
-               <h2 class="no_toc">Heading lorem ipsum dolor sit amet, consetetur sadipscing.</h2>
+               <span class="it-category">Titolo occhiello</span>
+               <h2 class="no_toc">Titolo della sezione</h2>
                <p class="d-none d-lg-block">Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.</p>
-               <div class="it-btn-container"><a class="btn btn-sm btn-outline-primary" href="#">Label CTA</a></div>
+               <div class="it-btn-container"><a class="btn btn-sm btn-outline-primary" href="#">Azione primaria</a></div>
             </div>
          </div>
       </div>
@@ -229,10 +226,10 @@ Aggiungere alla section `.it-hero-wrapper` la classe `.it-bottom-overlapping-con
       <div class="row">
          <div class="col-12">
             <div class="it-hero-text-wrapper bg-dark">
-               <span class="it-Categoria">Categoria</span>
-               <h2 class="no_toc">Heading lorem ipsum dolor sit amet, consetetur sadipscing.</h2>
+               <span class="it-category">Titolo occhiello</span>
+               <h2 class="no_toc">Titolo della sezione</h2>
                <p class="d-none d-lg-block">Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.</p>
-               <div class="it-btn-container"><a class="btn btn-sm btn-secondary" href="#">Label CTA</a></div>
+               <div class="it-btn-container"><a class="btn btn-sm btn-secondary" href="#">Azione primaria</a></div>
             </div>
          </div>
       </div>

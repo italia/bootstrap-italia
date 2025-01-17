@@ -20,21 +20,33 @@ $icon-colors: (
   &.icon-xs {
     width: var(--#{$prefix}icon-size-xs);
     height: var(--#{$prefix}icon-size-xs);
+    &.icon-padded {
+      margin: 4px;
+    }
   }
 
   &.icon-sm {
     width: var(--#{$prefix}icon-size-s);
     height: var(--#{$prefix}icon-size-s);
+    &.icon-padded {
+      margin: 6px;
+    }
   }
 
   &.icon-lg {
     width: var(--#{$prefix}icon-size-l);
     height: var(--#{$prefix}icon-size-l);
+    &.icon-padded {
+      margin: 12px;
+    }
   }
 
   &.icon-xl {
     width: var(--#{$prefix}icon-size-xl);
     height: var(--#{$prefix}icon-size-xl);
+    &.icon-padded {
+      margin: 16px;
+    }
   }
 }
 

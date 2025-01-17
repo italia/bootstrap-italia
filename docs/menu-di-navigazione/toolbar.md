@@ -662,7 +662,7 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
       <div class="dropdown">
         <span class="visually-hidden">documenti</span>
         <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton3-sml" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
-          <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
+          <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton3-sml">
           <div class="link-list-wrapper">
@@ -679,7 +679,7 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
       <div class="dropdown">
         <span class="visually-hidden">privacy</span>
         <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton4-sml" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
-          <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-locked"></use></svg>
+          <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-locked"></use></svg>
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton4-sml">
           <div class="link-list-wrapper">
@@ -696,7 +696,7 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
       <div class="dropdown">
         <span class="visually-hidden">preferiti</span>
         <button class="btn btn-dropdown dropdown-toggle disabled" type="button" id="dropdownMenuButton5-sml" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-disabled="true" title="Azione">
-          <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg>
+          <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg>
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton5-sml">
           <div class="link-list-wrapper">
@@ -713,14 +713,14 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
       <div class="dropdown">
         <span class="visually-hidden">altro</span>
         <button class="btn btn-dropdown dropdown-toggle toolbar-more" type="button" id="dropdownMenuButton6-sml" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
-          <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-more-actions"></use></svg>
+          <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-more-actions"></use></svg>
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton6-sml">
           <div class="link-list-wrapper">
             <ul class="link-list">
-              <li><a class="list-item left-icon" href="#"><svg class="icon me-2 left" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg><span>Label</span></a></li>
-              <li><a class="list-item left-icon" href="#"><svg class="icon me-2 left" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-mail"></use></svg><span>Label</span></a></li>
-              <li><a class="list-item left-icon" href="#"><svg class="icon me-2 left" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-settings"></use></svg><span>Label</span></a></li>
+              <li><a class="list-item left-icon" href="#"><svg class="icon icon-sm me-2 left" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg><span>Label</span></a></li>
+              <li><a class="list-item left-icon" href="#"><svg class="icon icon-sm me-2 left" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-mail"></use></svg><span>Label</span></a></li>
+              <li><a class="list-item left-icon" href="#"><svg class="icon icon-sm me-2 left" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-settings"></use></svg><span>Label</span></a></li>
             </ul>
           </div>
         </div>
