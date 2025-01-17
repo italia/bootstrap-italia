@@ -80,15 +80,15 @@ Aggiungendo gli attributi HTML `min=""`, `max=""` e `step=""` all'input è possi
 
 ### Valuta
 
-Per anteporre il simbolo della valuta in Euro, aggiungere la classe `.input-number-currency` al wrapper `.input-number`.
+Per anteporre il simbolo percentuale, aggiungere la classe `.input-symbol-label` all'elemento `<label>`.
 
 {% comment %}Example name: Con valuta {% endcomment %}
 {% capture example %}
 
 <div>
   <div class="form-group">
-    <label for="inputNumber3" class="input-number-label active">Currency</label>
-    <div class="input-group input-number input-number-currency">
+    <label for="inputNumber3" class="input-symbol-label active">Currency</label>
+    <div class="input-group input-number">
       <span class="input-group-text fw-semibold">€</span>
       <input type="number" class="form-control" data-bs-input id="inputNumber3" name="inputNumber3" step="any" value="3.50" min="0" />
       <span class="input-group-text align-buttons flex-column">
@@ -106,7 +106,7 @@ Per anteporre il simbolo della valuta in Euro, aggiungere la classe `.input-numb
 
 ### Percentuale
 
-Per anteporre il simbolo percentuale, aggiungere la classe `.input-number-percentage` al wrapper `.input-number`.
+Per anteporre il simbolo percentuale, aggiungere la classe `.input-symbol-label` all'elemento `<label>`.
 
 Si consiglia di impostare gli attributi `min=0` e `max="100"`.
 
@@ -114,8 +114,8 @@ Si consiglia di impostare gli attributi `min=0` e `max="100"`.
 {% capture example %}
 <div>
   <div class="form-group">
-    <label for="inputNumber4" class="input-number-label active">Percentage</label>
-    <div class="input-group input-number input-number-percentage">
+    <label for="inputNumber4" class="input-symbol-label active">Percentage</label>
+    <div class="input-group input-number">
       <span class="input-group-text fw-semibold">%</span>
       <input type="number" class="form-control" data-bs-input id="inputNumber4" name="inputNumber4" value="50" min="0" max="100" step="any" />
       <span class="input-group-text align-buttons flex-column">

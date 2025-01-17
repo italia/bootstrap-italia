@@ -53,16 +53,9 @@ fieldset {
       font-size: $small-font-size;
       color: $input-label-color;
     }
-    &:not(.active) {
-      & + .input-number-currency {
-        .input-group-text {
-          display: none;
-        }
-      }
-      & + .input-number-percentage {
-        .input-group-text {
-          display: none;
-        }
+    &.input-symbol-label {
+      &:not(.active) {
+        left: 2.25rem;
       }
     }
   }
@@ -202,6 +195,7 @@ textarea {
     border-bottom: 1px solid $input-border;
     border-radius: 0;
     min-height: 2.5rem;
+    min-width: 40px;
     margin-right: 0;
 
     .icon {
@@ -209,7 +203,9 @@ textarea {
     }
 
     & ~ label {
-      left: 2.25rem;
+      &:not(.active) {
+        left: 2.25rem;
+      }
       max-width: calc(100% - 2.25rem);
     }
 
