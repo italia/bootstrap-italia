@@ -80,7 +80,7 @@ Aggiungendo gli attributi HTML `min=""`, `max=""` e `step=""` all'input è possi
 
 ### Valuta
 
-Per anteporre il simbolo percentuale, aggiungere la classe `.input-symbol-label` all'elemento `<label>`.
+Per anteporre il simbolo della valuta in Euro, aggiungere la classe `.input-symbol-label` all'elemento `<label>`.
 
 {% comment %}Example name: Con valuta {% endcomment %}
 {% capture example %}
