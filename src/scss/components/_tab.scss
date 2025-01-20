@@ -210,7 +210,9 @@
     border-bottom: none;
 
     //grey fullwidth bottom border for ul
-    .nav-item-filler {
+    &::after
+    {
+      content:'';
       flex-grow: 1;
       border-bottom: 1px solid $color-border-subtle;
     }
@@ -235,11 +237,6 @@
       &:last-of-type {
         border-bottom: 1px solid $color-border-subtle;
       }
-    }
-
-    //grey fullwidth bottom border for ul
-    .nav-item-filler {
-      width: 2em;
     }
 
     //add button
