@@ -230,12 +230,12 @@
       }
 
       &:before {
-        right: $link-list-checkbox-icon-right;
+        right: var(--#{$prefix}spacing-inset-m);
       }
     }
 
     [type='checkbox'][disabled]+label {
-      color: $color-text-secondary;
+      color: var(--#{$prefix}color-text-disabled);
     }
   }
 }
@@ -256,6 +256,10 @@
     @include media-breakpoint-up(lg) {
       font-size: var(--#{$prefix}label-font-size-m);
     }
+  }
+
+  p {
+    margin-bottom: 0;
   }
 }
 
