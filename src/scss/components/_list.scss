@@ -5,13 +5,17 @@
     margin: 0;
     padding: 0;
 
+    a.list-item span {
+      text-decoration: underline;
+    }
+   
     .list-item {
-      transition: all 0.3s;
+      // transition: all 0.3s;
       margin-top: -1px;
       display: flex;
       align-items: center;
       text-decoration: none;
-      border-bottom: 1px solid $list-border-color;
+      // border-bottom: 1px solid $list-border-color;
       overflow-wrap: anywhere;
 
       .avatar,
@@ -25,7 +29,7 @@
         width: $v-gap * 5;
 
         svg {
-          fill: $primary-a5;
+          fill: var(--#{$prefix}icon-primary);
         }
       }
 
@@ -112,17 +116,21 @@
       }
     }
 
-    li:last-child {
-      .list-item {
-        span.text {
-          border-bottom: 1px solid transparent;
-        }
-      }
+   li:not(:last-child) .list-item {
+      border-bottom: 1px solid var(--#{$prefix}color-border-subtle);
     }
 
-    a .text {
-      text-decoration: underline;
-    }
+    // li:last-child {
+    //   .list-item {
+    //     span.text {
+    //       border-bottom: 1px solid transparent;
+    //     }
+    //   }
+    // }
+
+    // a .text {
+    //   text-decoration: underline;
+    // }
   }
 }
 
@@ -162,7 +170,7 @@
 
               &:hover {
                 svg {
-                  fill: $primary-a10;
+                  fill: var(--#{$prefix}icon-primary-hover);
                 }
               }
             }
@@ -179,14 +187,14 @@
       }
 
       a.list-item:hover {
-        box-shadow: $card-shadow;
-        color: $color-text-primary-hover;
-        text-decoration: none;
-        background: $white;
-        position: relative;
-        z-index: 1;
-        transition: none;
-        border-bottom: 1px solid transparent;
+        color: var(--#{$prefix}color-text-primary-hover);
+        // box-shadow: $card-shadow;
+        // text-decoration: none;
+        // background: $white;
+        // position: relative;
+        // z-index: 1;
+        // transition: none;
+        // border-bottom: 1px solid transparent;
       }
     }
   }
