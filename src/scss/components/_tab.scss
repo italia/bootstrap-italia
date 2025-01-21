@@ -210,9 +210,8 @@
     border-bottom: none;
 
     //grey fullwidth bottom border for ul
-    &::after
-    {
-      content:'';
+    &::after {
+      content: '';
       flex-grow: 1;
       border-bottom: 1px solid $color-border-subtle;
     }
