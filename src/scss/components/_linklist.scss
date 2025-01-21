@@ -1,352 +1,291 @@
-//mobile
 .link-list-wrapper {
+  --#{$prefix}list-divider-size: 1px;
+  --#{$prefix}list-heading-font-size: var(--#{$prefix}heading-6-font-size);
+  --#{$prefix}list-item-font-size: var(--#{$prefix}label-font-size);
+  --#{$prefix}list-item-line-height: var(--#{$prefix}label-line-height);
+  --#{$prefix}list-item-spacing: var(--#{$prefix}spacing-inset-s)  var(--#{$prefix}spacing-inline-xs);
+  --#{$prefix}list-nested-spacing: var(--#{$prefix}spacing-inset-s);
+  // --#{$prefix}list-item-spacing-stack: var(--#{$prefix}spacing-stack-s);
 
-  .list-item-title,
-  .link-list-heading {
-    font-size: $link-list-heading-size;
-  }
-
-  .link-list-heading {
-    margin-bottom: $link-list-divider-distance;
-    padding: 0 $link-list-h-pad;
-    color: $color-text-base;
-    font-weight: 600;
-    line-height: 1.25;
-
-    a {
-      position: relative;
-      display: block;
-      padding: 0;
-      font-size: $link-list-font-size;
-      line-height: $link-list-line-height;
-      text-decoration: none;
-    }
+  .link-list-heading,
+  h3 {
+    margin-bottom: var(--#{$prefix}spacing-stack-xs);
+    padding: 0 var(--#{$prefix}spacing-stack-xs);
+    color: var(--#{$prefix}color-text-base);
+    font-size: var(--#{$prefix}list-heading-font-size);
+    font-weight: var(--#{$prefix}heading-font-weight-weak);
+    line-height: var(--#{$prefix}heading-line-height);
   }
 
   h3 {
-    padding: 0 $link-list-h-pad;
-    color: $color-text-base;
-    font-size: $link-list-heading-size;
-    font-weight: 600;
-
-    a {
-      padding: 0;
-      font-size: 1rem;
-      line-height: inherit;
-    }
+    padding: 0 var(--#{$prefix}spacing-inset-m);
+    color: var(--#{$prefix}color-text-base);
   }
 
   ul {
     padding: 0;
     list-style-type: none;
 
-    // sottolista
     &.link-sublist {
-      padding-left: $link-list-h-pad;
+      padding-left: var(--#{$prefix}list-nested-spacing);
+    }
+  }
+
+  li a {
+    position: relative;
+    display: block;
+    padding: var(--#{$prefix}list-item-spacing);
+    font-size: var(--#{$prefix}list-item-font-size);
+    line-height: var(--#{$prefix}list-item-line-height);
+    text-decoration: none;
+
+    &.active span,
+    &:hover:not(.disable) span {
+      text-decoration: underline;
     }
 
-    li {
-      font-size: $link-list-font-size;
-      line-height: $link-list-line-height;
+    // List item active state
+    &.active {      
+      span {
+        color: var(--#{$prefix}color-text-primary-active);
+      }
 
-      a {
-        position: relative;
-        display: block;
-        padding: 0.25rem $link-list-h-pad;
+      .icon {
+        color: var(--#{$prefix}color-icon-primary-active);
+      }
+    }
+
+    // Hover on list item
+    &:hover:not(.disabled) {
+      span {
+        color: var(--#{$prefix}color-text-primary-hover);
+      }
+
+      p {
+        color: var(--#{$prefix}color-text-secondary);
+      }
+
+      .icon {
+        fill: var(--#{$prefix}icon-primary-hover);
+      }
+    }
+
+    // List item disabled state
+    &.disabled {
+      cursor: not-allowed;
+
+      &:hover span {
         text-decoration: none;
+      }
 
-        &.icon-right,
-        &.icon-left {
-          padding-top: $link-list-v-pad;
-          padding-right: 0;
-          padding-bottom: $link-list-v-pad;
-          padding-left: 0;
+      span {
+        color: var(--#{$prefix}color-text-disabled);
+      }
 
-          &+ul {
-            padding-left: 0;
-          }
-        }
+      svg {
+        fill: var(--#{$prefix}icon-disabled);
 
-        &.icon-right {
-          .list-item-title-icon-wrapper {
-            justify-content: space-between;
-            margin-right: 0;
-          }
-        }
-
-        &[data-bs-toggle] {
-          .icon {
-            transition: transform 0.3s;
-          }
-        }
-
-        &[aria-expanded='true'] {
-          .icon {
-            transform: scale(-1);
-          }
-        }
-
-        // hover state
-        &:hover:not(.disabled) {
-          text-decoration: none;
-
-          span {
-            color: $primary;
-            text-decoration: underline;
-          }
-
-          p {
-            color: $color-text-secondary;
-            text-decoration: none;
-          }
-
-          .icon {
-            fill: $primary;
-          }
-        }
-
-        &.disabled:hover {
-          text-decoration: none;
-        }
-
-        // weight variation
-        &.medium {
-          font-weight: 600;
-        }
-
-        span {
-          display: inline-block;
-          margin-right: $link-list-h-pad;
-          color: $primary;
-          line-height: normal;
-        }
-
-        .icon {
-          display: inline-block;
-          flex-shrink: 0;
-        }
-
-        .list-item-title-icon-wrapper {
-          display: flex;
-          align-items: center;
-
-          .list-item-title {
-            margin-right: $link-list-h-pad;
-          }
-        }
-
-        // icone destre dentro link
-        &.right-icon {
-          .list-item-title-icon-wrapper {
-            justify-content: space-between;
-            margin-right: 0;
-            padding-right: 0;
-          }
-
-          .icon {
-            transition: transform $dropdown-menu-animation-speed;
-
-            &.secondary {
-              color: $icon-secondary;
-            }
-          }
-        }
-
-        // variazione icone a collapse aperto
-        &.right-icon[aria-expanded='true'] {
-          .icon.right {
-            transform: scaleY(-1);
-          }
-        }
-
-        &.active {
-          span {
-            color: $color-text-primary-active;
-          }
-
-          .icon {
-            color: $color-text-primary-active;
-          }
-        }
-
-        &.disabled {
-          cursor: not-allowed;
-
-          span {
-            color: $gray-label-disabled;
-          }
-
-          svg {
-            fill: $gray-disabled;
-
-            &.secondary {
-              fill: $gray-disabled;
-            }
-          }
-        }
-
-        &.large {
-          font-size: $link-list-font-size-l;
-        }
-
-        // paragrafo dentro link
-        p {
-          color: $color-text-secondary;
-          font-size: $link-list-paragraph-size;
-          line-height: initial;
-        }
-
-        //avatar
-        &.avatar {
-          display: flex;
-          margin-bottom: $link-list-avatar-margin;
-
-          .avatar {
-            display: block;
-            margin-right: $link-list-left-icon-space;
-            border-radius: $link-list-avatar-radius;
-          }
-        }
-
-        &.list-item {
-          &.icon-left {
-            .icon {
-              margin-right: $v-gap;
-            }
-          }
-
-          &.icon-left,
-          &.left-icon {
-            p {
-              width: 100%;
-            }
-
-            .icon {
-              left: 0;
-              flex-shrink: 0;
-              margin-left: 0;
-            }
-          }
+        &.secondary {
+          fill: var(--#{$prefix}icon-disabled);
         }
       }
     }
 
-    .divider {
-      display: block;
-      height: $link-list-divider-height;
-      margin: $link-list-divider-distance 0;
-      background: $color-border-subtle;
+    // Change the list item link font weight
+    &.medium,
+    .list-item-title {
+      font-weight: var(--#{$prefix}font-weight-solid);
     }
 
-    //toggles
-    .toggles {
-      label {
+    // Increase font-size and spacing for list item link with large class
+    &.large {
+      --#{$prefix}list-item-font-size: var(--#{$prefix}label-font-size-m);
+    }
+
+    // Avatar position inside the list item
+    &.avatar {
+      display: flex;
+      margin-bottom: var(--#{$prefix}spacing-stack-xs);
+
+      .avatar {
+        display: block;
+        margin-right: var(--#{$prefix}spacing-inline-s);
+      }
+    }
+
+    // Icon left and right inside list item
+    &.icon-right,
+    &.icon-left {
+      padding-right: 0;
+      padding-left: 0;
+    }
+
+    // Icon left inside list item
+    &.list-item.icon-left {
+      .icon {
+        left: 0;
+        flex-shrink: 0;
+        margin-right: var(--#{$prefix}spacing-inline-xs);
+      }
+
+      p {
+        width: 100%;
+      }
+    }
+
+    &.list-item.icon-right {
+      .list-item-title-icon-wrapper {
         justify-content: space-between;
-        height: auto;
-        margin: 0;
-        padding: 0 $link-list-h-pad;
-        font-size: $link-list-font-size;
-        font-weight: inherit;
-        line-height: $link-list-line-height;
-      }
-
-      input[type='checkbox']+.lever {
-        margin: $link-list-toggle-margin 0 0;
       }
     }
-
-    //checkboxes
-    .form-check {
-      &.form-check-group {
-        padding: 0 $link-list-h-pad;
-        box-shadow: none;
-
-        [type='checkbox']+label {
-          height: inherit;
-          margin-bottom: 0;
-          padding-left: 0;
-          font-size: $link-list-font-size;
-          line-height: $link-list-line-height;
-
-          &:after {
-            right: $link-list-h-pad;
-          }
-
-          &:before {
-            right: $link-list-checkbox-icon-right;
-          }
-        }
-
-        [type='checkbox'][disabled]+label {
-          color: $color-text-secondary;
+    
+    &.right-icon {
+      .list-item-title-icon-wrapper {
+        justify-content: space-between;
+      }
+  
+      .icon {
+        transition: transform $dropdown-menu-animation-speed;
+  
+        &.secondary {
+          color: var(--#{$prefix}icon-secondary);
         }
       }
     }
-  }
 
-  &.multiline {
+    &[data-bs-toggle] .icon {
+      transition: transform 0.3s;
+    }
+
+    &[aria-expanded='true'] .icon {
+      transform: scale(-1);
+    }
+
+    
+
+    .icon {
+      display: inline-block;
+      flex-shrink: 0;
+    }
+
+    // TODO: Not used anywhere
+    // &.right-icon[aria-expanded='true'] .icon.right {
+    //   transform: scaleY(-1);
+    // }
+
     .list-item-title-icon-wrapper {
-      justify-content: space-between;
-      margin-bottom: calc($v-gap / 2);
-      padding: 0;
-    }
+      display: flex;
+      align-items: center;
 
-    .list-item {
-      &.icon-right {
-        .list-item-title-icon-wrapper {
-          margin-right: 0;
-        }
+      .list-item-title {
+        margin-right: var(--#{$prefix}spacing-inline-m);
       }
     }
+
+    // Text paragraph inside multiline list item
+    p {
+      color: var(--#{$prefix}color-text-secondary);
+      font-size: var(--#{$prefix}caption-font-size);
+      line-height: var(--#{$prefix}caption-line-height);
+    }
+
+    // Listed item label wrapped in the <a> tag 
+    span {
+      display: inline-block;
+      color: var(--#{$prefix}color-text-primary);
+    }
+  }
+
+  // Divider between list items
+  .divider {
+    display: block;
+    height: var(--#{$prefix}list-divider-size);
+    margin: var(--#{$prefix}spacing-stack-xs) 0;
+    background: var(--#{$prefix}color-border-subtle);
+  }
+
+  .toggles label {
+    justify-content: space-between;
+    margin: 0;
+    padding: 0 var(--#{$prefix}spacing-inset-m);
+    font-size: var(--#{$prefix}body-font-size);
+  }
+
+  .toggles input[type='checkbox']+.lever {
+    margin-top: var(--#{$prefix}spacing-stack-xs);
+  }
+
+  .form-check.form-check-group {
+    padding: 0 var(--#{$prefix}spacing-inset-m);
+    box-shadow: none;
+
+    [type='checkbox']+label {
+      height: inherit;
+      margin-bottom: 0;
+      padding-left: 0;
+      font-size: var(--#{$prefix}body-font-size);
+
+      &:after {
+        right: var(--#{$prefix}spacing-inset-m);
+      }
+
+      &:before {
+        right: $link-list-checkbox-icon-right;
+      }
+    }
+
+    [type='checkbox'][disabled]+label {
+      color: $color-text-secondary;
+    }
   }
 }
 
-//small - tablet
-@include media-breakpoint-up(sm) {
-  .link-list-wrapper ul li a.large {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    font-size: $link-list-font-size-l;
+// Multiline list item
+.multiline {
+  .list-item-title-icon-wrapper {
+    margin-bottom: var(--#{$prefix}spacing-stack-xxs);
+  }
+
+  .list-item.icon-right .list-item-title-icon-wrapper {
+    margin-right: 0;
+  }
+
+  // List item label inside a multiline list item
+  .list-item-title {
+    font-size: var(--#{$prefix}label-font-size);
+    @include media-breakpoint-up(lg) {
+      font-size: var(--#{$prefix}label-font-size-m);
+    }
   }
 }
 
-//Tablet vertical
 @include media-breakpoint-up(md) {
-  .link-list-wrapper ul li a.large {
-
-    &.icon-left,
-    &.icon-right {
-      padding-top: $link-list-v-padding-l;
-      padding-bottom: $link-list-v-padding-l;
-    }
+  .link-list-wrapper ul li a.large.icon-left,
+  .link-list-wrapper ul li a.large.icon-right {
+    --#{$prefix}list-item-spacing: var(--#{$prefix}spacing-inset-s);
   }
 }
 
-//Tablet horizontal / small desktop
-@include media-breakpoint-up(lg) {
-  .link-list-wrapper {
+// @include media-breakpoint-up(lg) {
+//   .link-list-wrapper.menu-link-list {
+//     position: relative;
 
-    // classe modificatore per menu laterale
-    &.menu-link-list {
-      position: relative;
+//     h3,
+//     h4 {
+//       position: relative;
+//       margin-top: 0;
+//       padding: 1rem;
+//       border-bottom: 4px solid var(--#{$prefix}color-border-subtle);
 
-      h3,
-      h4 {
-        position: relative;
-        margin-top: 0;
-        padding: 1rem;
-        border-bottom: 4px solid $color-border-subtle;
-
-        &:after {
-          position: absolute;
-          bottom: -4px;
-          left: 0;
-          content: '';
-          width: 40px;
-          height: 4px;
-          background-color: $warning;
-        }
-      }
-    }
-  }
-}
+//       &:after {
+//         position: absolute;
+//         bottom: -4px;
+//         left: 0;
+//         content: '';
+//         width: 40px;
+//         height: 4px;
+//         background-color: $warning;
+//       }
+//     }
+//   }
+// }
