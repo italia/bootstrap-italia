@@ -694,6 +694,13 @@ Per posizionare i tab verticali a destra contenuto è necessario applicare la cl
 
 ## Tab tipo Card
 
+{% capture callout %}
+Breaking feature dalla versione **2.13.0**
+
+Sono stati rimossi gli elementi delle liste con classe `nav-item-filler` per 
+tutte le tab di tipo `Card`.
+{% endcapture %}{% include callout.html content=callout type="danger" %}
+
 Aggiungere la classe `.nav-tabs-cards` al tag `ul` per ottenere un design tipo card.
 
 {% comment %}Example name: Con controllo pannelli, tipo card{% endcomment %}
