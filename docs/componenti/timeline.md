@@ -488,7 +488,7 @@ La sezione secondaria del componente supporta le varianti colore modificando opp
 
 {% endcapture %}{% include example.html content=example %}
 
-## Esempio complesso
+### Esempio complesso
 Di seguito un esempio un po' più complesso.
 
 {% comment %}Example name: Point list, esempio complesso{% endcomment %}
