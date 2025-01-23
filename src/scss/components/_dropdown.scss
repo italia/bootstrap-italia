@@ -34,13 +34,13 @@
   --#{$prefix}dropdown-divider-margin-y: #{$dropdown-divider-margin-y};
   --#{$prefix}dropdown-box-shadow: #{$dropdown-box-shadow};
   --#{$prefix}dropdown-link-color: #{$dropdown-link-color};
-  --#{$prefix}dropdown-link-hover-color: #{$dropdown-link-hover-color};
+  --#{$prefix}dropdown-link-hover-color: var(--#{$prefix}color-text-primary-hover);
   --#{$prefix}dropdown-link-hover-bg: #{$dropdown-link-hover-bg};
   --#{$prefix}dropdown-link-active-color: #{$dropdown-link-active-color};
   --#{$prefix}dropdown-link-active-bg: #{$dropdown-link-active-bg};
   --#{$prefix}dropdown-link-disabled-color: #{$dropdown-link-disabled-color};
-  --#{$prefix}dropdown-item-padding-x: #{$dropdown-item-padding-x};
-  --#{$prefix}dropdown-item-padding-y: #{$dropdown-item-padding-y};
+  --#{$prefix}dropdown-item-padding-x: var(--#{$prefix}spacing-inset-s);
+  --#{$prefix}dropdown-item-padding-y: 12px;
   --#{$prefix}dropdown-header-color: #{$dropdown-header-color};
   --#{$prefix}dropdown-header-padding-x: #{$dropdown-header-padding-x};
   --#{$prefix}dropdown-header-padding-y: #{$dropdown-header-padding-y};
@@ -293,9 +293,8 @@
 // Links, buttons, and more within the dropdown menu
 //
 // `<button>`-specific styles are denoted with `// For <button>s`
-.dropdown-item {
-  display: block;
-  width: 100%; // For `<button>`s
+.dropdown-item.list-item {
+  width: auto; // For `<button>`s
   padding: var(--#{$prefix}dropdown-item-padding-y) var(--#{$prefix}dropdown-item-padding-x);
   clear: both;
   font-weight: $font-weight-normal;
@@ -308,16 +307,14 @@
 
   &:hover,
   &:focus {
-    background-color: transparent;
+    // background-color: var(--#{$prefix}dropdown-link-hover-bg);
     color: var(--#{$prefix}dropdown-link-hover-color);
     text-decoration: if($link-hover-decoration == underline, none, null);
   }
 
   &.active,
   &:active {
-    background-color: transparent;
     color: var(--#{$prefix}dropdown-link-active-color);
-    text-decoration: none;
   }
 
   &.disabled,

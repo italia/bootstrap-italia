@@ -3,14 +3,13 @@
   --#{$prefix}list-heading-font-size: var(--#{$prefix}heading-6-font-size);
   --#{$prefix}list-item-font-size: var(--#{$prefix}label-font-size);
   --#{$prefix}list-item-line-height: var(--#{$prefix}label-line-height);
-  --#{$prefix}list-item-spacing: var(--#{$prefix}spacing-inset-s)  var(--#{$prefix}spacing-inline-xs);
+  --#{$prefix}list-item-spacing: var(--#{$prefix}spacing-inset-xs);
   --#{$prefix}list-nested-spacing: var(--#{$prefix}spacing-inset-s);
   // --#{$prefix}list-item-spacing-stack: var(--#{$prefix}spacing-stack-s);
 
   .link-list-heading,
   h3 {
     margin-bottom: var(--#{$prefix}spacing-stack-xs);
-    padding: 0 var(--#{$prefix}spacing-stack-xs);
     color: var(--#{$prefix}color-text-base);
     font-size: var(--#{$prefix}list-heading-font-size);
     font-weight: var(--#{$prefix}heading-font-weight-weak);
@@ -31,12 +30,17 @@
     }
   }
 
-  li a {
-    position: relative;
-    display: block;
-    padding: var(--#{$prefix}list-item-spacing);
+  li span,
+  .list-item {
     font-size: var(--#{$prefix}list-item-font-size);
     line-height: var(--#{$prefix}list-item-line-height);
+  }
+
+  .list-item {
+    position: relative;
+    display: inline-block;
+    padding-top: var(--#{$prefix}list-item-spacing);
+    padding-bottom: var(--#{$prefix}list-item-spacing);
     text-decoration: none;
 
     &.active span,
@@ -121,7 +125,7 @@
     }
 
     // Icon left inside list item
-    &.list-item.icon-left {
+    &.icon-left {
       .icon {
         left: 0;
         flex-shrink: 0;
@@ -133,7 +137,7 @@
       }
     }
 
-    &.list-item.icon-right {
+    &.icon-right {
       .list-item-title-icon-wrapper {
         justify-content: space-between;
       }
@@ -161,8 +165,6 @@
       transform: scale(-1);
     }
 
-    
-
     .icon {
       display: inline-block;
       flex-shrink: 0;
@@ -183,14 +185,14 @@
     }
 
     // Text paragraph inside multiline list item
-    p {
+    > p {
       color: var(--#{$prefix}color-text-secondary);
       font-size: var(--#{$prefix}caption-font-size);
       line-height: var(--#{$prefix}caption-line-height);
     }
 
     // Listed item label wrapped in the <a> tag 
-    span {
+    > span {
       display: inline-block;
       color: var(--#{$prefix}color-text-primary);
     }

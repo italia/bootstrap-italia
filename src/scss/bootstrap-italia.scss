@@ -54,9 +54,18 @@
 // ------------------------------
 
 // Components
-@import 'components/type';
+@import 'components/avatar';
+@import 'components/code';
+@import 'components/figcaption';
 @import 'components/grid';
+@import 'components/gridlist';
+@import 'components/images';
+@import 'components/linklist';
+@import 'components/list';
+@import 'components/list-group';
 @import 'components/tables';
+@import 'components/type';
+
 @import 'components/breadcrumb';
 @import 'components/modal';
 @import 'components/accordion';
@@ -73,8 +82,6 @@
 @import 'components/hero';
 @import 'components/forward';
 @import 'components/back-to-top';
-@import 'components/list-group';
-@import 'components/linklist';
 @import 'components/offcanvas'; // Keep?
 @import 'components/navigation';
 @import 'components/skiplinks';
@@ -89,7 +96,6 @@
 @import 'components/toolbar';
 @import 'components/sections';
 @import 'components/notifications';
-@import 'components/avatar';
 @import 'components/thumbnav';
 @import 'components/steppers';
 @import 'components/card';
@@ -98,11 +104,9 @@
 @import 'components/progress-donuts';
 @import 'components/progress-bars';
 @import 'components/progress-spinners';
-@import 'components/gridlist';
 @import 'components/popover';
 @import 'components/tooltip';
 @import 'components/videoplayer';
-@import 'components/list';
 @import 'components/chips';
 @import 'components/rating';
 @import 'components/dimmer';
@@ -113,11 +117,9 @@
 @import 'components/point-list';
 @import 'components/rating-list';
 @import 'components/badge';
-@import 'components/figcaption';
 @import 'components/sticky';
 @import 'components/print';
-@import 'components/code';
-@import 'components/images';
+
 @import 'components/page-scroll';
 @import 'components/pagination';
 @import 'components/placeholders'; // Keep?
