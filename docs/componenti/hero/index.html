@@ -11,13 +11,13 @@
 
 <title>Hero · Bootstrap Italia</title>
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202501101426" rel="stylesheet" />
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202501231458" rel="stylesheet" />
 
 <!-- Documentation extras -->
  
 <link href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" rel="stylesheet" />
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202501101426" rel="stylesheet" />
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202501231458" rel="stylesheet" />
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico" />
@@ -144,9 +144,9 @@
     <ul class="navbar-nav flex-row ms-md-auto d-none d-md-flex">
       <li class="nav-item pe-2">
         <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center"
-          href="https://github.com/italia/bootstrap-italia/releases/download/v2.12.1/bootstrap-italia.zip"
+          href="https://github.com/italia/bootstrap-italia/releases/download/v2.13.0/bootstrap-italia.zip"
           aria-label="Download">
-          <small class="pe-2 m-0">v2.12.1</small>
+          <small class="pe-2 m-0">v2.13.0</small>
           <svg class="icon icon-sm icon-light">
             <use href="/bootstrap-italia/dist/svg/sprites.svg#it-download"
               xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-download"></use>
@@ -639,26 +639,23 @@
           <p>La hero è un componente leggero e flessibile che può facoltativamente estendere l’intera finestra per mostrare i messaggi in evidenza sul tuo sito.
 Di seguito una serie di esempi con la descrizione degli elementi e delle classi applicabili.</p>
 
-<p>Il componente Hero può contenere:</p>
+<p>Gli elementi da cui è composto sono:</p>
 
 <ul>
-  <li>Sub head</li>
-  <li>Heading (titolo)</li>
+  <li>Titolo occhiello</li>
+  <li>Titolo principale (heading)</li>
   <li>Paragrafo</li>
-  <li>Call to action</li>
+  <li>Uno o più pulsanti (call to action)</li>
   <li>Immagine di background</li>
 </ul>
+
+<p>Poiché il componente occupa in larghezza l’intera pagina, consulta la <strong>[pagina di esempio]</strong>(/bootstrap-italia/docs/esempi/hero/){:target=”_blank”} per visualizzare tutte le varianti in un contesto reale.</p>
 
 <div class="bd-callout bd-callout-accessibility">
 <h4 id="accessibilità">Accessibilità</h4>
 
 <p>Valutare attentamente l’opportunità di utilizzare più hero nella stessa pagina.</p>
 
-</div>
-
-<div class="bd-callout bd-callout-info">
-<p>Il componente Hero è un componente full-width.
-Per la visualizzazione reale a schermo fate riferimento alla <a href="/bootstrap-italia/docs/esempi/hero/" target="\_blank">pagina di esempio</a>.</p>
 </div>
 
 <h2 id="con-immagine">Con immagine</h2>
@@ -743,10 +740,10 @@ aggiungere alla section <code class="language-plaintext highlighter-rouge">.it-h
     <div class="row">
         <div class="col-12">
           <div class="it-hero-text-wrapper bg-dark">
-              <span class="it-Categoria">Categoria</span>
-              <h1 class="no_toc">Heading lorem ipsum dolor sit amet, consetetur sadipscing.</h1>
+              <span class="it-category">Titolo occhiello</span>
+              <h1 class="no_toc">Titolo della sezione</h1>
               <p class="d-none d-lg-block">Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.</p>
-              <div class="it-btn-container"><a class="btn btn-sm btn-outline-primary" href="#">Label CTA</a></div>
+              <div class="it-btn-container"><a class="btn btn-sm btn-outline-primary" href="#">Azione primaria </a></div>
           </div>
         </div>
     </div>
@@ -772,10 +769,10 @@ aggiungere alla section <code class="language-plaintext highlighter-rouge">.it-h
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-hero-text-wrapper bg-dark"</span><span class="nt">&gt;</span>
-              <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"it-Categoria"</span><span class="nt">&gt;</span>Categoria<span class="nt">&lt;/span&gt;</span>
-              <span class="nt">&lt;h1&gt;</span>Heading lorem ipsum dolor sit amet, consetetur sadipscing.<span class="nt">&lt;/h1&gt;</span>
+              <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"it-category"</span><span class="nt">&gt;</span>Titolo occhiello<span class="nt">&lt;/span&gt;</span>
+              <span class="nt">&lt;h1&gt;</span>Titolo della sezione<span class="nt">&lt;/h1&gt;</span>
               <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"d-none d-lg-block"</span><span class="nt">&gt;</span>Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.<span class="nt">&lt;/p&gt;</span>
-              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-btn-container"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-sm btn-outline-primary"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Label CTA<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-btn-container"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-sm btn-outline-primary"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Azione primaria <span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
           <span class="nt">&lt;/div&gt;</span>
         <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
@@ -794,10 +791,10 @@ aggiungere alla section <code class="language-plaintext highlighter-rouge">.it-h
       <div class="row">
          <div class="col-12">
             <div class="it-hero-text-wrapper bg-dark">
-               <span class="it-Categoria">Categoria</span>
-               <h2 class="no_toc">Heading lorem ipsum dolor sit amet, consetetur sadipscing.</h2>
+               <span class="it-category">Titolo occhiello</span>
+               <h2 class="no_toc">Titolo della sezione</h2>
                <p class="d-none d-lg-block">Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.</p>
-               <div class="it-btn-container"><a class="btn btn-sm btn-outline-primary" href="#">Label CTA</a></div>
+               <div class="it-btn-container"><a class="btn btn-sm btn-outline-primary" href="#">Azione primaria</a></div>
             </div>
          </div>
       </div>
@@ -823,10 +820,10 @@ aggiungere alla section <code class="language-plaintext highlighter-rouge">.it-h
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-hero-text-wrapper bg-dark"</span><span class="nt">&gt;</span>
-               <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"it-Categoria"</span><span class="nt">&gt;</span>Categoria<span class="nt">&lt;/span&gt;</span>
-               <span class="nt">&lt;h2&gt;</span>Heading lorem ipsum dolor sit amet, consetetur sadipscing.<span class="nt">&lt;/h2&gt;</span>
+               <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"it-category"</span><span class="nt">&gt;</span>Titolo occhiello<span class="nt">&lt;/span&gt;</span>
+               <span class="nt">&lt;h2&gt;</span>Titolo della sezione<span class="nt">&lt;/h2&gt;</span>
                <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"d-none d-lg-block"</span><span class="nt">&gt;</span>Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.<span class="nt">&lt;/p&gt;</span>
-               <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-btn-container"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-sm btn-outline-primary"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Label CTA<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
+               <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-btn-container"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-sm btn-outline-primary"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Azione primaria<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
             <span class="nt">&lt;/div&gt;</span>
          <span class="nt">&lt;/div&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
@@ -864,10 +861,10 @@ Aggiungere alla section <code class="language-plaintext highlighter-rouge">.it-h
     <div class="row">
         <div class="col-12">
           <div class="it-hero-text-wrapper bg-dark">
-              <span class="it-Categoria">Categoria</span>
-              <h2 class="no_toc">Heading lorem ipsum dolor sit amet, consetetur sadipscing.</h2>
+              <span class="it-category">Titolo occhiello</span>
+              <h2 class="no_toc">Titolo della sezione</h2>
               <p class="d-none d-lg-block">Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.</p>
-              <div class="it-btn-container"><a class="btn btn-sm btn-secondary" href="#">Label CTA</a></div>
+              <div class="it-btn-container"><a class="btn btn-sm btn-secondary" href="#">Azione primaria</a></div>
           </div>
         </div>
     </div>
@@ -907,10 +904,10 @@ Aggiungere alla section <code class="language-plaintext highlighter-rouge">.it-h
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-hero-text-wrapper bg-dark"</span><span class="nt">&gt;</span>
-              <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"it-Categoria"</span><span class="nt">&gt;</span>Categoria<span class="nt">&lt;/span&gt;</span>
-              <span class="nt">&lt;h2&gt;</span>Heading lorem ipsum dolor sit amet, consetetur sadipscing.<span class="nt">&lt;/h2&gt;</span>
+              <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"it-category"</span><span class="nt">&gt;</span>Titolo occhiello<span class="nt">&lt;/span&gt;</span>
+              <span class="nt">&lt;h2&gt;</span>Titolo della sezione<span class="nt">&lt;/h2&gt;</span>
               <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"d-none d-lg-block"</span><span class="nt">&gt;</span>Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.<span class="nt">&lt;/p&gt;</span>
-              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-btn-container"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-sm btn-secondary"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Label CTA<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-btn-container"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-sm btn-secondary"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Azione primaria<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
           <span class="nt">&lt;/div&gt;</span>
         <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
@@ -940,10 +937,10 @@ Aggiungere alla section <code class="language-plaintext highlighter-rouge">.it-h
       <div class="row">
          <div class="col-12">
             <div class="it-hero-text-wrapper bg-dark">
-               <span class="it-Categoria">Categoria</span>
-               <h2 class="no_toc">Heading lorem ipsum dolor sit amet, consetetur sadipscing.</h2>
+               <span class="it-category">Titolo occhiello</span>
+               <h2 class="no_toc">Titolo della sezione</h2>
                <p class="d-none d-lg-block">Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.</p>
-               <div class="it-btn-container"><a class="btn btn-sm btn-outline-primary" href="#">Label CTA</a></div>
+               <div class="it-btn-container"><a class="btn btn-sm btn-outline-primary" href="#">Azione primaria</a></div>
             </div>
          </div>
       </div>
@@ -983,10 +980,10 @@ Aggiungere alla section <code class="language-plaintext highlighter-rouge">.it-h
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-hero-text-wrapper bg-dark"</span><span class="nt">&gt;</span>
-               <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"it-Categoria"</span><span class="nt">&gt;</span>Categoria<span class="nt">&lt;/span&gt;</span>
-               <span class="nt">&lt;h2&gt;</span>Heading lorem ipsum dolor sit amet, consetetur sadipscing.<span class="nt">&lt;/h2&gt;</span>
+               <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"it-category"</span><span class="nt">&gt;</span>Titolo occhiello<span class="nt">&lt;/span&gt;</span>
+               <span class="nt">&lt;h2&gt;</span>Titolo della sezione<span class="nt">&lt;/h2&gt;</span>
                <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"d-none d-lg-block"</span><span class="nt">&gt;</span>Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.<span class="nt">&lt;/p&gt;</span>
-               <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-btn-container"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-sm btn-outline-primary"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Label CTA<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
+               <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-btn-container"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-sm btn-outline-primary"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Azione primaria<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
             <span class="nt">&lt;/div&gt;</span>
          <span class="nt">&lt;/div&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
@@ -1044,10 +1041,10 @@ Aggiungere alla section <code class="language-plaintext highlighter-rouge">.it-h
       <div class="row">
          <div class="col-12">
             <div class="it-hero-text-wrapper bg-dark">
-               <span class="it-Categoria">Categoria</span>
-               <h2 class="no_toc">Heading lorem ipsum dolor sit amet, consetetur sadipscing.</h2>
+               <span class="it-category">Titolo occhiello</span>
+               <h2 class="no_toc">Titolo della sezione</h2>
                <p class="d-none d-lg-block">Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.</p>
-               <div class="it-btn-container"><a class="btn btn-sm btn-secondary" href="#">Label CTA</a></div>
+               <div class="it-btn-container"><a class="btn btn-sm btn-secondary" href="#">Azione primaria</a></div>
             </div>
          </div>
       </div>
@@ -1129,10 +1126,10 @@ Aggiungere alla section <code class="language-plaintext highlighter-rouge">.it-h
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-hero-text-wrapper bg-dark"</span><span class="nt">&gt;</span>
-               <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"it-Categoria"</span><span class="nt">&gt;</span>Categoria<span class="nt">&lt;/span&gt;</span>
-               <span class="nt">&lt;h2&gt;</span>Heading lorem ipsum dolor sit amet, consetetur sadipscing.<span class="nt">&lt;/h2&gt;</span>
+               <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"it-category"</span><span class="nt">&gt;</span>Titolo occhiello<span class="nt">&lt;/span&gt;</span>
+               <span class="nt">&lt;h2&gt;</span>Titolo della sezione<span class="nt">&lt;/h2&gt;</span>
                <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"d-none d-lg-block"</span><span class="nt">&gt;</span>Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.<span class="nt">&lt;/p&gt;</span>
-               <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-btn-container"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-sm btn-secondary"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Label CTA<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
+               <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-btn-container"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-sm btn-secondary"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Azione primaria<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
             <span class="nt">&lt;/div&gt;</span>
          <span class="nt">&lt;/div&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
@@ -1169,15 +1166,15 @@ Aggiungere alla section <code class="language-plaintext highlighter-rouge">.it-h
     </div>
 
     
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202501101426"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202501231458"></script>
 <script>
   bootstrap.loadFonts('/bootstrap-italia/dist/fonts')
-</script><script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202501101426"></script>
+</script><script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202501231458"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/anchor.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/clipboard.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tsparticles.min.js"></script>
 
-<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202501101426"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202501231458"></script>
 
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tweenjs.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/easeljs.min.js"></script>
@@ -1194,7 +1191,7 @@ Aggiungere alla section <code class="language-plaintext highlighter-rouge">.it-h
     { src: '/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png', id: 'cover-7' },
   ]
 </script>
-<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202501101426"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202501231458"></script>
 <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
 
 <script>
