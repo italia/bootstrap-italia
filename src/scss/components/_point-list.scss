@@ -8,7 +8,7 @@
       position: relative;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
       padding: 0.5rem 1rem;
       color: $primary;
@@ -22,22 +22,31 @@
         width: 9px;
         height: 9px;
 
-        top: 50%;
+        top: 2rem;
         right: -5px;
         transform: translateY(-5px);
         border-radius: 50%;
         background-color: $primary;
       }
+      &:has(.point-year):not(:has(.point-month)),
+      &:has(.point-month):not(:has(.point-year)) {
+        &:after {
+          top: 2.4rem;
+        }
+      }
+      &:has(.point-year):has(.point-month) {
+        &:after {
+          top: 3.872rem;
+        }
+      }
 
       .point-date {
-        flex: 1;
         font-size: 2.75rem;
         line-height: 1.1;
       }
 
       .point-month,
       .point-year {
-        flex: 1;
         font-size: 1rem;
         text-transform: uppercase;
       }
@@ -68,6 +77,21 @@
       .point-list-aside {
         min-width: 54px;
         padding: 0.3rem 1rem 0.3rem 0;
+
+        &:after {
+          top: 1.3rem;
+        }
+        &:has(.point-year):not(:has(.point-month)),
+        &:has(.point-month):not(:has(.point-year)) {
+          &:after {
+            top: 2rem;
+          }
+        }
+        &:has(.point-year):has(.point-month) {
+          &:after {
+            top: 2.867rem;
+          }
+        }
 
         .point-date {
           flex: 0;
