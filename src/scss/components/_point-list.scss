@@ -22,17 +22,11 @@
         width: 9px;
         height: 9px;
 
-        top: 2rem;
+        top: 2.4rem;
         right: -5px;
         transform: translateY(-5px);
         border-radius: 50%;
         background-color: $primary;
-      }
-      &:has(.point-year):not(:has(.point-month)),
-      &:has(.point-month):not(:has(.point-year)) {
-        &:after {
-          top: 2.4rem;
-        }
       }
       &:has(.point-year):has(.point-month) {
         &:after {
@@ -43,6 +37,9 @@
       .point-date {
         font-size: 2.75rem;
         line-height: 1.1;
+
+        // keep width in case of icon
+        min-width: 53px;
       }
 
       .point-month,
