@@ -332,7 +332,7 @@ L'elemento `.metadata`, segue l'elemento `.text`.
   <ul class="it-list">
     <li>
       <div class="list-item">
-        <div class="avatar size-lg">
+        <div class="avatar">
           <img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Anna Barbieri">
         </div>
         <div class="it-right-zone">
@@ -343,7 +343,7 @@ L'elemento `.metadata`, segue l'elemento `.text`.
     </li>
     <li>
       <div class="list-item">
-        <div class="avatar size-lg">
+        <div class="avatar">
           <img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Anna Barbieri">
         </div>
         <div class="it-right-zone">
@@ -354,7 +354,7 @@ L'elemento `.metadata`, segue l'elemento `.text`.
     </li>
     <li>
       <a href="#" class="list-item">
-        <div class="avatar size-lg">
+        <div class="avatar">
           <img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Anna Barbieri">
         </div>
         <div class="it-right-zone">
@@ -365,7 +365,7 @@ L'elemento `.metadata`, segue l'elemento `.text`.
     </li>
     <li>
       <div class="list-item">
-        <div class="avatar size-lg">
+        <div class="avatar">
           <img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Anna Barbieri">
         </div>
         <div class="it-right-zone">
@@ -378,7 +378,7 @@ L'elemento `.metadata`, segue l'elemento `.text`.
     </li>
     <li>
       <a class="list-item" href="#">
-        <div class="avatar size-lg">
+        <div class="avatar">
           <img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Anna Barbieri">
         </div>
         <div class="it-right-zone">
