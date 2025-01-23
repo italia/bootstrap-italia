@@ -1,3 +1,7 @@
+.it-list {
+  --#{$prefix}list-item-spacing: var(--#{$prefix}spacing-inset-s) var(--#{$prefix}spacing-inset-xs);
+  --#{$prefix}list-item-thumb-size: 5rem;
+}
 //mobile
 .it-list-wrapper {
   .it-list {
@@ -50,8 +54,8 @@
       }
 
       .it-thumb {
-        width: $v-gap * 5;
-        height: $v-gap * 5;
+        width: var(--#{$prefix}list-item-thumb-size);
+        // height: var(--#{$prefix}list-item-thumb-size);
 
         img {
           object-fit: cover;

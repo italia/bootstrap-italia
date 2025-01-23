@@ -144,7 +144,7 @@ L'elemento `.it-rounded-icon` con all'interno la relativa icona, precede l'eleme
 
 ### Lista con immagine
 
-L'elemento `.it-thumb` con all'interno la relativa immagine, precede l'elemento `.it-right-zone` che contiene il testo.
+L'elemento `.it-thumb` con all'interno la relativa immagine, precede l'elemento `.it-right-zone` che contiene il testo. Ha una dimensione massima di `5rem` che corrispondono a `80px`. La proporzione dell'immagine può essere modificata utilizzando le classi specifiche per le <a href="{{ site.baseurl }}/docs/componenti/organizzare-gli-spazi/proporzioni/">proporzioni</a>
 
 {% comment %}Example name: Base, con immagine{% endcomment %}
 {% capture example %}
@@ -152,8 +152,8 @@ L'elemento `.it-thumb` con all'interno la relativa immagine, precede l'elemento 
   <ul class="it-list">
     <li>
       <div class="list-item">
-        <div class="it-thumb">
-          <img src="https://placehold.co/40x40.png?text=40x40" alt="descrizione immagine">
+        <div class="it-thumb ratio ratio-16x9">
+          <img src="https://placehold.co/400x300.png?text=thumb" alt="descrizione immagine">
         </div>
         <div class="it-right-zone">
           <span class="text">Testo</span>
@@ -162,8 +162,8 @@ L'elemento `.it-thumb` con all'interno la relativa immagine, precede l'elemento 
     </li>
     <li>
       <a href="#" class="list-item">
-        <div class="it-thumb">
-          <img src="https://placehold.co/40x40.png?text=40x40" alt="descrizione immagine">
+        <div class="it-thumb ratio ratio-4x3">
+          <img src="https://placehold.co/400x300.png?text=thumb" alt="descrizione immagine">
         </div>
         <div class="it-right-zone">
           <span class="text">Link</span>
@@ -172,8 +172,8 @@ L'elemento `.it-thumb` con all'interno la relativa immagine, precede l'elemento 
     </li>
     <li>
       <div class="list-item">
-        <div class="it-thumb">
-          <img src="https://placehold.co/40x40.png?text=40x40" alt="descrizione immagine">
+        <div class="it-thumb ratio ratio-1x1">
+          <img src="https://placehold.co/400x300.png?text=thumb" alt="descrizione immagine">
         </div>
         <div class="it-right-zone">
           <span class="text">Testo</span>
