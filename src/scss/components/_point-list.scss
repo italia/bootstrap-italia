@@ -1,4 +1,7 @@
 .point-list-wrapper {
+  @at-root ul#{&} {
+    padding-left: 0;
+  }
   .point-list {
     display: flex;
     flex-direction: row;
