@@ -6,6 +6,7 @@ group: componenti
 toc: true
 ---
 
+## Timeline classica
 Il componente _Timeline_ è caratterizzato dalla classe `.it-timeline-wrapper`.  
 Contiene un elenco di `.timeline-element`.
 
@@ -38,7 +39,7 @@ Il codice markup è stato rivisto in chiave accessibilità e robustezza. In part
 
 
 
-## Esempio
+### Esempio
 
 {% comment %}Example name: Base, verticale{% endcomment %}
 {% capture example %}
@@ -230,4 +231,98 @@ Il codice markup è stato rivisto in chiave accessibilità e robustezza. In part
     </div>
   </div>
 </div>
+{% endcapture %}{% include example.html content=example %}
+
+
+## Point list
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dictum at ante eu suscipit. 
+Mauris sed maximus tellus, commodo lobortis ante. Suspendisse potenti.
+
+### Calendario
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dictum at ante eu suscipit.
+Mauris sed maximus tellus, commodo lobortis ante. Suspendisse potenti.
+
+#### Esempio base
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dictum at ante eu suscipit.
+Mauris sed maximus tellus, commodo lobortis ante. Suspendisse potenti.
+
+{% comment %}Example name: Point list, calendario{% endcomment %}
+{% capture example %}
+<div class="point-list-wrapper">
+  <div class="point-list" role="list">
+    <div class="point-list-aside point-list-primary">
+      <div class="point-date font-monospace">14</div>
+      <div class="point-month font-monospace">OTT</div>
+    </div>
+    <div class="point-list-content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  </div>
+</div>
+
+{% endcapture %}{% include example.html content=example %}
+
+#### Con anno
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dictum at ante eu suscipit.
+Mauris sed maximus tellus, commodo lobortis ante. Suspendisse potenti.
+
+{% comment %}Example name: Point list, calendario completo{% endcomment %}
+{% capture example %}
+<div class="point-list-wrapper">
+  <div class="point-list" role="list">
+    <div class="point-list-aside point-list-primary">
+      <div class="point-year font-monospace">2025</div>
+      <div class="point-date font-monospace">14</div>
+      <div class="point-month font-monospace">OTT</div>
+    </div>
+    <div class="point-list-content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  </div>
+</div>
+
+{% endcapture %}{% include example.html content=example %}
+
+### Passo passo (step-by-step)
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dictum at ante eu suscipit.
+Mauris sed maximus tellus, commodo lobortis ante. Suspendisse potenti.
+
+#### Step con testo
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dictum at ante eu suscipit.
+Mauris sed maximus tellus, commodo lobortis ante. Suspendisse potenti.
+
+{% comment %}Example name: Point list, con testo{% endcomment %}
+{% capture example %}
+<div class="point-list-wrapper">
+  <div class="point-list point-list-step" role="list">
+    <div class="point-list-aside point-list-primary">
+      <div class="point-date font-monospace">1</div>
+    </div>
+    <div class="point-list-content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  </div>
+</div>
+
+{% endcapture %}{% include example.html content=example %}
+
+#### Step con icona
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dictum at ante eu suscipit.
+Mauris sed maximus tellus, commodo lobortis ante. Suspendisse potenti.
+
+{% comment %}Example name: Point list, con icona{% endcomment %}
+{% capture example %}
+<div class="point-list-wrapper">
+  <div class="point-list point-list-step" role="list">
+    <div class="point-list-aside point-list-primary">
+      <div class="point-date font-monospace">
+        <svg class="icon icon-primary" role="img"><title>Milestone</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-flag"></use></svg>
+      </div>
+    </div>
+    <div class="point-list-content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  </div>
+</div>
+
 {% endcapture %}{% include example.html content=example %}
