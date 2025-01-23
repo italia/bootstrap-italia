@@ -2,6 +2,8 @@
   --#{$prefix}list-item-spacing: var(--#{$prefix}spacing-inset-s) var(--#{$prefix}spacing-inset-xs);
   --#{$prefix}list-item-thumb-size: 5rem;
 }
+
+
 //mobile
 .it-list-wrapper {
   .it-list {
@@ -15,27 +17,27 @@
    
     .list-item {
       // transition: all 0.3s;
-      margin-top: -1px;
+      // margin-top: -1px;
+      padding: var(--#{$prefix}list-item-spacing);
       display: flex;
       align-items: center;
       text-decoration: none;
       // border-bottom: 1px solid $list-border-color;
+      word-break: break-word;
       overflow-wrap: anywhere;
 
       .avatar,
       .it-rounded-icon,
       .it-thumb {
         flex-shrink: 0;
-        margin-right: $v-gap * 2;
+        margin-right: var(--#{$prefix}icon-spacing);
       }
 
-      .it-rounded-icon {
-        width: $v-gap * 5;
-
-        svg {
-          fill: var(--#{$prefix}icon-primary);
-        }
-      }
+      // .it-rounded-icon {
+      //   svg {
+      //     fill: var(--#{$prefix}icon-primary);
+      //   }
+      // }
 
       .form-check {
         margin-right: $v-gap;
@@ -43,9 +45,9 @@
         height: $v-gap * 4;
         text-align: left;
 
-        & + .it-right-zone {
-          margin-left: $v-gap * 2;
-        }
+        // & + .it-right-zone {
+        //   margin-left: $v-gap * 2;
+        // }
 
         label {
           padding-left: 0;
@@ -65,7 +67,7 @@
       }
 
       .it-right-zone {
-        padding: $list-text-padding;
+        // padding: $list-text-padding;
         flex-grow: 1;
         display: flex;
         justify-content: space-between;
@@ -146,12 +148,12 @@
         .avatar,
         .it-rounded-icon,
         .it-thumb {
-          margin-left: $v-gap;
+          // margin-left: $v-gap;
           margin-right: 0;
 
-          & + .it-right-zone {
-            margin-left: $v-gap * 2;
-          }
+          // & + .it-right-zone {
+          //   margin-left: $v-gap * 2;
+          // }
         }
 
         .form-check {
