@@ -16,9 +16,9 @@ description: Rappresentazione grafica di un utente.
   })
 </script>
 
-L'elemento Avatar è la rappresentazione grafica di un utente e può includere un'immagine, un testo, un'icona o un dropdown con ulteriori contenuti.
+L'elemento avatar è la rappresentazione grafica di un utente e può includere un'immagine, un testo, un'icona o un dropdown con ulteriori contenuti.
 
-Gli Avatar sono disponibili in sei diverse dimensioni:
+Sono disponibili sei dimensioni:
 
 <!-- - **xs** con classe `size-xs` -->
 - **xs** con classe `size-xs`
@@ -29,7 +29,7 @@ Gli Avatar sono disponibili in sei diverse dimensioni:
 - **xxl** con classe `size-xxl`
 
 Per ottenere un elemento grafico non interattivo, utilizza il tag `<div>`.
-Ogni Avatar può essere associato ad un'azione, utilizzando per esso il tag `<a>`.
+Ogni avatar può essere associato ad un'azione, utilizzando per esso il tag `<a>`.
 
 {% capture callout %}
 Breaking feature dalla versione **2.8.0**
@@ -41,20 +41,20 @@ Il toggle del dropdown diventa `<button>` invece di `<a>`.
 
 #### Accessibilità delle immagini
 
-Per ragioni di accessibilità è importante indicare all'interno dell'Avatar il nome dell'utente associato allo stesso.
+Per ragioni di accessibilità è importante indicare all'interno dell'avatar il nome dell'utente associato allo stesso.
 
-Nel caso di Avatar con immagine è utilizzare l'attributo `alt=""` della stessa inserendo in esso il nome dell'utente.
+Nel caso di avatar con immagine è utilizzare l'attributo `alt=""` della stessa inserendo in esso il nome dell'utente.
 
-Per Avatar com testo e immagine nascondere l'immagine agli screen reader con l'attributo `aria-hidden="true"` e utilizzare un attributo alt vuoto: `alt=""`.
+Per avatar com testo e immagine nascondere l'immagine agli screen reader con l'attributo `aria-hidden="true"` e utilizzare un attributo alt vuoto: `alt=""`.
 
-Un Avatar con testo conterrà uno `<span>` per soli screen reader con il nome dell'utente indicato per esteso: `<span class="visually-hidden">Nome Utente</span>`.
+Un avatar con testo conterrà uno `<span>` per soli screen reader con il nome dell'utente indicato per esteso: `<span class="visually-hidden">Nome Utente</span>`.
 
-Per gli Avatar con icona inserire un testo alternativo: `<span class="visually-hidden">Testo icona</span>`
+Per gli avatar con icona inserire un testo alternativo: `<span class="visually-hidden">Testo icona</span>`
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
 ## Avatar con immagine
 
-L'Avatar ridimensiona automaticamente l'immagine adattandola al formato circolare e centrandola. Si consiglia in ogni caso di utilizzare immagini delle dimensioni corrette.
+Il componente avatar ridimensiona automaticamente l'immagine adattandola al formato circolare e centrandola. Si consiglia in ogni caso di utilizzare immagini delle dimensioni corrette.
 
 {% comment %}Example name: Immagine{% endcomment %}
 {% capture example %}
@@ -126,7 +126,7 @@ In questi casi il testo sarà di colore bianco.
 
 ## Avatar con icona
 
-Per utilizzare un'icona all'interno degli Avatar è sufficiente includere il codice dell'icona prescelta dalla [libreria icone]({{ site.baseurl }}/docs/utilities/icone/) e indicarne il colore con una delle [classi disponibili]({{ site.baseurl}}/docs/utilities/icone/#colori).
+Per utilizzare un'icona all'interno di un avatar è sufficiente includere il codice dell'icona prescelta dalla [libreria icone]({{ site.baseurl }}/docs/utilities/icone/) e indicarne il colore con una delle [classi disponibili]({{ site.baseurl}}/docs/utilities/icone/#colori).
 
 {% comment %}Example name: Icona{% endcomment %}
 {% capture example %}
@@ -161,7 +161,7 @@ Per utilizzare un'icona all'interno degli Avatar è sufficiente includere il cod
 
 ## Avatar Link
 
-Per associare un Avatar ad un'azione o un link, utilizzare il tag `<a>` con relativo link o chiamata JavaScript.
+Per associare un avatar ad un'azione o un link, utilizzare il tag `<a>` con relativo link o chiamata JavaScript.
 
 {% comment %}Example name: Link{% endcomment %}
 {% capture example %}
@@ -185,9 +185,9 @@ Per associare un Avatar ad un'azione o un link, utilizzare il tag `<a>` con rela
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Avatar Link con Tooltip
+### Avatar link con tooltip
 
-È possibile associare un Tooltip con maggiori informazioni relative all'utente o all'azione associata utilizzando i <a href="{{ site.baseurl }}/docs/componenti/tooltip/">Tooltip di Bootstrap</a>.
+È possibile associare un tooltip con maggiori informazioni relative all'utente o all'azione associata utilizzando il <a href="{{ site.baseurl }}/docs/componenti/tooltip/">componente tooltip</a>.
 
 {% comment %}Example name: Link con tooltip{% endcomment %}
 {% capture example %}
@@ -207,17 +207,17 @@ Per associare un Avatar ad un'azione o un link, utilizzare il tag `<a>` con rela
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-## Gruppi di Avatar
+## Gruppi di avatar
 
-Gli Avatar possono essere raggruppati in liste verticali ed orizzontali.
+Gli avatar possono essere raggruppati in liste verticali ed orizzontali.
 
 ### Lista
 
-Utilizzando una <a href="{{ site.baseurl }}/docs/organizzare-i-contenuti/liste/#liste-per-menu-di-navigazione">Lista di link</a> con l'aggiunta della classe `.avatar-group` si ottiene una lista verticale con Avatar affiancati da link e testi.
+Utilizzando una <a href="{{ site.baseurl }}/docs/organizzare-i-contenuti/liste/#liste-per-menu-di-navigazione">lista di link</a> con l'aggiunta della classe `.avatar-group` si ottiene una lista verticale con avatar affiancati da link e testi.
 
 #### Lista piccola
 
-Lista verticale di Avatar di dimensione piccola con classe `.size-sm`.
+Lista verticale di avatar di dimensione piccola con classe `.size-sm`.
 
 {% comment %}Example name: Gruppo, lista piccola{% endcomment %}
 {% capture example %}
@@ -305,11 +305,11 @@ Lista verticale di Avatar di dimensione media con classe `.size-md`.
 
 ### Avatar Sovrapposti
 
-Racchiudendo una serie di Avatar in una lista di tipo `<ul>` con classe `.avatar-group-stacked` questi verranno visualizzati come una lista orizzontale in cui i singoli elementi sono parzialmente sovrapposti. In questo tipo di gruppo è possibile inserire dei <a href="/docs/componenti/dropdown/">Dropdown</a> per racchiudere ulteriori elementi Avatar.
+Racchiudendo una serie di avatar in una lista di tipo `<ul>` con classe `.avatar-group-stacked` questi verranno visualizzati come una lista orizzontale in cui i singoli elementi sono parzialmente sovrapposti. In questo tipo di gruppo è possibile inserire dei <a href="/docs/componenti/dropdown/">Dropdown</a> per racchiudere ulteriori elementi avatar.
 
 #### Avatar Sovrapposti Piccoli
 
-Gruppo di Avatar sovrapposti di dimensione piccola con classe `.size-sm`.
+Gruppo di avatar sovrapposti di dimensione piccola con classe `.size-sm`.
 
 {% comment %}Example name: Gruppo, sovrapposti piccoli{% endcomment %}
 {% capture example %}
@@ -412,7 +412,7 @@ Gruppo di Avatar sovrapposti di dimensione piccola con classe `.size-sm`.
 
 #### Avatar Sovrapposti Medi
 
-Gruppo di Avatar sovrapposti di dimensione media con classe `.size-md`.
+Gruppo di avatar sovrapposti di dimensione media con classe `.size-md`.
 
 {% comment %}Example name: Gruppo, sovrapposti medi{% endcomment %}
 {% capture example %}
@@ -668,7 +668,7 @@ Inserire un `<span>` riservato agli screen reader con indicazione dello stato de
 
 ## Avatar con testo aggiuntivo
 
-Per ottenere una versione più completa dell'Avatar con nome esteso ed eventuale testo accessorio racchiudere l'Avatar all'interno di un contenitore `.avatar-wrapper` con classe `.avatar-extra-text` e aggiungere il testo esteso in un `<div>` con classe `.extra-text`.
+Per ottenere una versione del componente con nome esteso ed eventuale testo accessorio, è necessario racchiudere un avatar all'interno di un contenitore `.avatar-wrapper` con classe `.avatar-extra-text` e aggiungere il testo esteso in un `<div>` con classe `.extra-text`.
 
 Per il nome è possibile utilizzare i tag `<h3>` o `<h4>`. Il testo esteso può essere contenuto in un `<p>` o in un tag `<time>` nel caso di date/orari.
 
