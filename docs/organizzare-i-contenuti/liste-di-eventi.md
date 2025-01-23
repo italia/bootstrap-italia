@@ -7,9 +7,9 @@ title: Liste di eventi
 description: La lista di eventi è un componente flessibile per la visualizzazione di liste ordinate cronologicamente.
 ---
 
+## Introduzione
 La lista di eventi o **point list** è un componente che organizza i contenuti cronologicamente.
 
-## Introduzione
 Il componente ha due layout: calendario e passo passo (step-by-step). In entrambi i 
 layout il componente è composto da una sezione primaria `.point-list-content` e 
 da una sezione secondaria `.point-list-aside`. La sezione primaria è preposta alla 
@@ -279,20 +279,24 @@ Di seguito un esempio un po' più complesso.
         <div class="point-month font-monospace" aria-label="mese"><span aria-hidden="true">OTT</span><span class="visually-hidden">Ottobre</span></div>
       </div>
       <div class="point-list-content">
-        <div class="card-wrapper w-50 mb-5">
-          <div class="card">
-            <div class="card-body">
-              <h4 class="card-title h5">Lorem ipsum dolor sit amet</h4>
-              <div class="category-top">
-                <span class="visually-hidden">Categoria evento:</span> <a class="category" href="#">Categoria</a>
-                <span class="visually-hidden">Data evento:</span> <span class="data">10/12/2025</span>
+        <div class="row mb-5">
+          <div class="col-lg-7">
+            <div class="card-wrapper">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title h5">Lorem ipsum dolor sit amet</h4>
+                  <div class="category-top">
+                    <span class="visually-hidden">Categoria evento:</span> <a class="category" href="#">Categoria</a>
+                    <span class="visually-hidden">Data evento:</span> <span class="data">10/12/2025</span>
+                  </div>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <span class="card-signature">di Federico De Paolis</span>
+                  <a class="read-more" href="#">
+                    <span class="text">Leggi di più</span>
+                    <svg class="icon"><use href="/dist/svg/sprites.svg#it-arrow-right"></use></svg>
+                  </a>
+                </div>
               </div>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <span class="card-signature">di Federico De Paolis</span>
-              <a class="read-more" href="#">
-                <span class="text">Leggi di più</span>
-                <svg class="icon"><use href="/dist/svg/sprites.svg#it-arrow-right"></use></svg>
-              </a>
             </div>
           </div>
         </div>
@@ -304,20 +308,24 @@ Di seguito un esempio un po' più complesso.
         <div class="point-month font-monospace" aria-label="mese"><span aria-hidden="true">OTT</span><span class="visually-hidden">Ottobre</span></div>
       </div>
       <div class="point-list-content">
-        <div class="card-wrapper w-50 mb-5">
-          <div class="card">
-            <div class="card-body">
-              <h4 class="card-title h5">Lorem ipsum dolor sit amet</h4>
-              <div class="category-top">
-                <span class="visually-hidden">Categoria evento:</span> <a class="category" href="#">Categoria</a>
-                <span class="visually-hidden">Data evento:</span> <span class="data">10/12/2025</span>
+        <div class="row mb-5">
+          <div class="col-lg-7">
+            <div class="card-wrapper">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title h5">Lorem ipsum dolor sit amet</h4>
+                  <div class="category-top">
+                    <span class="visually-hidden">Categoria evento:</span> <a class="category" href="#">Categoria</a>
+                    <span class="visually-hidden">Data evento:</span> <span class="data">10/12/2025</span>
+                  </div>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <span class="card-signature">di Federico De Paolis</span>
+                  <a class="read-more" href="#">
+                    <span class="text">Leggi di più</span>
+                    <svg class="icon"><use href="/dist/svg/sprites.svg#it-arrow-right"></use></svg>
+                  </a>
+                </div>
               </div>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <span class="card-signature">di Federico De Paolis</span>
-              <a class="read-more" href="#">
-                <span class="text">Leggi di più</span>
-                <svg class="icon"><use href="/dist/svg/sprites.svg#it-arrow-right"></use></svg>
-              </a>
             </div>
           </div>
         </div>
@@ -330,20 +338,24 @@ Di seguito un esempio un po' più complesso.
         </div>
       </div>
       <div class="point-list-content">
-        <div class="card-wrapper w-75 mb-5">
-          <div class="card">
-            <div class="card-body">
-              <h4 class="card-title h5">Lorem ipsum dolor sit amet</h4>
-              <div class="category-top">
-                <span class="visually-hidden">Categoria evento:</span> <a class="category" href="#">Categoria</a>
-                <span class="visually-hidden">Data evento:</span> <span class="data">10/12/2025</span>
+        <div class="row mb-5">
+          <div class="col-lg-7">
+            <div class="card-wrapper">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title h5">Lorem ipsum dolor sit amet</h4>
+                  <div class="category-top">
+                    <span class="visually-hidden">Categoria evento:</span> <a class="category" href="#">Categoria</a>
+                    <span class="visually-hidden">Data evento:</span> <span class="data">10/12/2025</span>
+                  </div>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <span class="card-signature">di Federico De Paolis</span>
+                  <a class="read-more" href="#">
+                    <span class="text">Leggi di più</span>
+                    <svg class="icon"><use href="/dist/svg/sprites.svg#it-arrow-right"></use></svg>
+                  </a>
+                </div>
               </div>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <span class="card-signature">di Federico De Paolis</span>
-              <a class="read-more" href="#">
-                <span class="text">Leggi di più</span>
-                <svg class="icon"><use href="/dist/svg/sprites.svg#it-arrow-right"></use></svg>
-              </a>
             </div>
           </div>
         </div>
@@ -356,20 +368,24 @@ Di seguito un esempio un po' più complesso.
         </div>
       </div>
       <div class="point-list-content">
-        <div class="card-wrapper w-75 mb-5">
-          <div class="card">
-            <div class="card-body">
-              <h4 class="card-title h5">Lorem ipsum dolor sit amet</h4>
-              <div class="category-top">
-                <span class="visually-hidden">Categoria evento:</span> <a class="category" href="#">Categoria</a>
-                <span class="visually-hidden">Data evento:</span> <span class="data">10/12/2025</span>
+        <div class="row mb-5">
+          <div class="col-lg-7">
+            <div class="card-wrapper">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title h5">Lorem ipsum dolor sit amet</h4>
+                  <div class="category-top">
+                    <span class="visually-hidden">Categoria evento:</span> <a class="category" href="#">Categoria</a>
+                    <span class="visually-hidden">Data evento:</span> <span class="data">10/12/2025</span>
+                  </div>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <span class="card-signature">di Federico De Paolis</span>
+                  <a class="read-more" href="#">
+                    <span class="text">Leggi di più</span>
+                    <svg class="icon"><use href="/dist/svg/sprites.svg#it-arrow-right"></use></svg>
+                  </a>
+                </div>
               </div>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <span class="card-signature">di Federico De Paolis</span>
-              <a class="read-more" href="#">
-                <span class="text">Leggi di più</span>
-                <svg class="icon"><use href="/dist/svg/sprites.svg#it-arrow-right"></use></svg>
-              </a>
             </div>
           </div>
         </div>
