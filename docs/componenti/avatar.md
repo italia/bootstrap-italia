@@ -21,6 +21,7 @@ L'elemento Avatar è la rappresentazione grafica di un utente e può includere u
 Gli Avatar sono disponibili in sei diverse dimensioni:
 
 <!-- - **xs** con classe `size-xs` -->
+- **xs** con classe `size-xs`
 - **sm** con classe `size-sm`
 - **md** (dimensioni di default) `size-md`
 - **lg** con classe `size-lg`
@@ -59,6 +60,9 @@ L'Avatar ridimensiona automaticamente l'immagine adattandola al formato circolar
 {% capture example %}
 
 <div class="d-flex align-items-center justify-content-around flex-wrap flex-sm-nowrap">
+  <div class="avatar size-xs">
+    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Luisa Neri">
+  </div>
   <div class="avatar size-sm">
     <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Luisa Neri">
   </div>
@@ -85,9 +89,6 @@ Oltre ai colori di default è possibile utilizzare uno sfondo a scelta fra:
 
 - Primario: aggiungendo la classe `avatar-primary`
 - Secondario: aggiungendo la classe `avatar-secondary`
-- Verde: aggiungendo la classe `avatar-green`
-- Arancione: aggiungendo la classe `avatar-orange`
-- Rosso: aggiungendo la classe `avatar-red`
 
 In questi casi il testo sarà di colore bianco.
 
@@ -95,6 +96,11 @@ In questi casi il testo sarà di colore bianco.
 {% capture example %}
 
 <div class="d-flex align-items-center justify-content-around flex-wrap flex-sm-nowrap">
+
+  <div class="avatar avatar-primary size-xs">
+    <p aria-hidden="true">M</p>
+    <span class="visually-hidden">Mario Rossi</span>
+  </div>
   <div class="avatar avatar-primary size-sm">
     <p aria-hidden="true">M</p>
     <span class="visually-hidden">Mario Rossi</span>
@@ -103,15 +109,15 @@ In questi casi il testo sarà di colore bianco.
     <p aria-hidden="true">MR</p>
     <span class="visually-hidden">Mario Rossi</span>
   </div>
-  <div class="avatar avatar-green size-lg">
+  <div class="avatar size-lg">
     <p aria-hidden="true">MR</p>
     <span class="visually-hidden">Mario Rossi</span>
   </div>
-  <div class="avatar avatar-orange size-xl">
+  <div class="avatar size-xl">
     <p aria-hidden="true">MR</p>
     <span class="visually-hidden">Mario Rossi</span>
   </div>
-  <div class="avatar avatar-red size-xxl">
+  <div class="avatar size-xxl">
     <p aria-hidden="true">MR</p>
     <span class="visually-hidden">Mario Rossi</span>
   </div>
@@ -120,12 +126,16 @@ In questi casi il testo sarà di colore bianco.
 
 ## Avatar con icona
 
-Per utilizzare un'icona all'interno degli Avatar è sufficiente includere il codice dell'icona prescelta dalla [libreria icone]({{ site.baseurl }}/docs/utilities/icone/) e indicarne il colore con una delle classi disponibili.
+Per utilizzare un'icona all'interno degli Avatar è sufficiente includere il codice dell'icona prescelta dalla [libreria icone]({{ site.baseurl }}/docs/utilities/icone/) e indicarne il colore con una delle [classi disponibili]({{ site.baseurl}}/docs/utilities/icone/#colori).
 
 {% comment %}Example name: Icona{% endcomment %}
 {% capture example %}
 
 <div class="d-flex align-items-center justify-content-around flex-wrap flex-sm-nowrap">
+  <div class="avatar size-xs">
+    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-user"></use></svg>
+    <span class="visually-hidden">Cerca</span>
+  </div>
   <div class="avatar size-sm">
     <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-user"></use></svg>
     <span class="visually-hidden">Cerca</span>
@@ -160,12 +170,16 @@ Per associare un Avatar ad un'azione o un link, utilizzare il tag `<a>` con rela
   <a class="avatar size-xl" href="#">
     <img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Anna Barbieri">
   </a>
-  <a class="avatar avatar-red size-xl" href="#">
+  <a class="avatar size-xl" href="#">
     <p aria-hidden="true">MR</p>
     <span class="visually-hidden">Mario Rossi</span>
   </a>
   <a class="avatar size-xl" href="#">
-    <svg class="icon icon-secondary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-user"></use></svg>
+    <p aria-hidden="true">MR</p>
+    <span class="visually-hidden">Mario Rossi</span>
+  </a>
+  <a class="avatar size-xl" href="#">
+    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-user"></use></svg>
     <span class="visually-hidden">Cerca</span>
   </a>
 </div>
@@ -182,7 +196,7 @@ Per associare un Avatar ad un'azione o un link, utilizzare il tag `<a>` con rela
   <a class="avatar size-xl" href="#" data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="left" title="<strong>Anna Barbieri</strong><br/><em>Amministratore</em>">
     <img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Anna Barbieri">
   </a>
-  <a class="avatar avatar-red size-xl" href="#" data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="top" title="<strong>Mario Rossi</strong><br/><em>Editor</em>">
+  <a class="avatar size-xl" href="#" data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="top" title="<strong>Mario Rossi</strong><br/><em>Editor</em>">
     <p aria-hidden="true">MR</p>
     <span class="visually-hidden">Mario Rossi</span>
   </a>
@@ -219,7 +233,7 @@ Lista verticale di Avatar di dimensione piccola con classe `.size-sm`.
     </li>
     <li>
       <a class="list-item" href="#">
-        <div class="avatar avatar-orange size-sm complementary-3-bg">
+        <div class="avatar size-sm">
           <p aria-hidden="true">A</p>
         </div>
         <span>Arianna Gallo</span>
@@ -227,7 +241,7 @@ Lista verticale di Avatar di dimensione piccola con classe `.size-sm`.
     </li>
     <li>
       <div class="list-item">
-        <div class="avatar avatar-red size-sm complementary-3-bg">
+        <div class="avatar size-sm">
           <p aria-hidden="true">S</p>
         </div>
         <span>Sara Ghione</span>
@@ -255,31 +269,31 @@ Lista verticale di Avatar di dimensione media con classe `.size-md`.
 <div class="link-list-wrapper">
   <ul class="link-list avatar-group">
     <li>
-      <a class="dropdown-item list-item" href="#">
+      <a class="list-item" href="#">
         <div class="avatar size-md"><img src="https://randomuser.me/api/portraits/men/46.jpg" alt="" aria-hidden="true">
         </div>
         <span>Mario Rossi</span>
       </a>
     </li>
     <li>
-      <a class="list-item size-md" href="#">
-        <div class="avatar avatar-green complementary-3-bg">
+      <a class="list-item" href="#">
+        <div class="avatar size-md">
           <p aria-hidden="true">AG</p>
         </div>
         <span>Arianna Gallo</span>
       </a>
     </li>
     <li>
-      <div class="list-item size-md">
-        <div class="avatar avatar-primary complementary-3-bg">
+      <div class="list-item">
+        <div class="avatar avatar-primary size-md">
           <p aria-hidden="true">SG</p>
         </div>
         <span>Sara Ghione</span>
       </div>
     </li>
     <li>
-      <div class="list-item size-md">
-        <div class="avatar">
+      <div class="list-item">
+        <div class="avatar size-md">
           <svg class="icon icon-secondary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-user"></use></svg>
         </div>
         <span>Antonio Esposito</span>
@@ -324,19 +338,19 @@ Gruppo di Avatar sovrapposti di dimensione piccola con classe `.size-sm`.
     </a>
   </li>
   <li>
-    <a class="avatar avatar-green size-sm" href="#">
+    <a class="avatar size-sm" href="#">
       <p aria-hidden="true">T</p>
       <span class="visually-hidden">Tommaso Sordi</span>
     </a>
   </li>
   <li>
-    <a class="avatar avatar-orange size-sm" href="#">
+    <a class="avatar size-sm" href="#">
       <p aria-hidden="true">B</p>
       <span class="visually-hidden">Barbara Tosi</span>
     </a>
   </li>
   <li>
-    <a class="avatar avatar-red size-sm" href="#">
+    <a class="avatar size-sm" href="#">
       <p aria-hidden="true">R</p>
       <span class="visually-hidden">Roberto Milano</span>
     </a>
@@ -365,22 +379,22 @@ Gruppo di Avatar sovrapposti di dimensione piccola con classe `.size-sm`.
               </li>
               <li>
                 <a class="dropdown-item list-item" href="#">
-                  <div class="avatar avatar-green size-sm complementary-3-bg">
+                  <div class="avatar size-sm">
                     <p aria-hidden="true">A</p>
                   </div>
                   <span>Arianna Gallo</span>
                 </a>
               </li>
               <li>
-                <div class="list-item">
-                  <div class="avatar avatar-primary size-sm complementary-3-bg">
+                <div class="dropdown-item list-item">
+                  <div class="avatar avatar-primary size-sm">
                     <p aria-hidden="true">S</p>
                   </div>
                   <span>Sara Ghione</span>
                 </div>
               </li>
               <li>
-                <div class="list-item">
+                <div class="dropdown-item list-item">
                   <div class="avatar size-sm">
                     <svg class="icon icon-secondary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-user"></use></svg>
                   </div>
@@ -415,13 +429,13 @@ Gruppo di Avatar sovrapposti di dimensione media con classe `.size-md`.
     </a>
   </li>
   <li>
-    <a class="avatar avatar-orange size-md" href="#">
+    <a class="avatar size-md" href="#">
       <p aria-hidden="true">AM</p>
       <span class="visually-hidden">Angelica Mola</span>
     </a>
   </li>
   <li>
-    <a class="avatar avatar-red size-md" href="#">
+    <a class="avatar size-md" href="#">
       <p aria-hidden="true">SP</p>
       <span class="visually-hidden">Sandro Penna</span>
     </a>
@@ -452,14 +466,14 @@ Gruppo di Avatar sovrapposti di dimensione media con classe `.size-md`.
               </li>
               <li>
                 <a class="dropdown-item list-item" href="#">
-                  <div class="avatar avatar-green size-md">
+                  <div class="avatar size-md">
                     <p aria-hidden="true">AG</p>
                   </div>
                   <span>Arianna Gallo</span>
                 </a>
               </li>
               <li>
-                <div class="list-item">
+                <div class="dropdown-item list-item">
                   <div class="avatar avatar-primary size-md">
                     <p aria-hidden="true">SG</p>
                   </div>
@@ -467,7 +481,7 @@ Gruppo di Avatar sovrapposti di dimensione media con classe `.size-md`.
                 </div>
               </li>
               <li>
-                <div class="list-item">
+                <div class="dropdown-item list-item">
                   <div class="avatar size-md">
                     <svg class="icon icon-secondary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-user"></use></svg>
                   </div>
