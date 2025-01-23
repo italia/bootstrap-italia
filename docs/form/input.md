@@ -49,7 +49,7 @@ Il campo di input di tipo Password è stato rivisto in chiave accessibilità e r
 {% capture callout %}
 Breaking feature dalla versione **2.11.0**
 
-Quando si utilizza un campo input è necessario sempre applicare la classe `form-control`.
+Quando si utilizza un campo input diverso da `submit`, `file`, `radio` e `checkbox` è necessario sempre applicare la classe `form-control`.
 
 {% endcapture %}{% include callout.html content=callout type="danger" %}
 
