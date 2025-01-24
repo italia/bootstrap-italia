@@ -82,7 +82,7 @@
     },
     {
       "amichevole con lettori di schermo": "PRONTO",
-      "angular Kit": "DA COMPLETARE VARIANTI",
+      "angular Kit": "DA FARE",
       "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/autocomplete",
       "assignees": [
         "Fupete"
@@ -98,9 +98,9 @@
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjtb4",
       "navigabile": "PRONTO",
-      "notes / Issues": "In React ancora messaggi di stato in inglese e in Angular kit manca la variante Autocomplete da gov.uk, c'è \"solo\" lo styling dell'input ricerca con autocompletamento",
+      "notes / Issues": "https://github.com/italia/design-ui-kit/issues/114 — https://github.com/italia/design-angular-kit/issues/404",
       "notes / More": "In React kit è una variante dentro Input. Uniformare?",
-      "react Kit": "DA RIVEDERE A11Y",
+      "react Kit": "PRONTO",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/story/documentazione-form-input--input-autocomplete-con-dati-accessibile",
       "status": "Todo",
       "status a11y check": "Done",
@@ -113,9 +113,9 @@
       "angular Kit": "DA COMPLETARE VARIANTI",
       "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/avatar",
       "assignees": [
-        "frmascia11y"
+        "Fupete"
       ],
-      "bootstrap Italia": "DA RIVEDERE A11Y",
+      "bootstrap Italia": "PRONTO",
       "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/componenti/avatar/",
       "comprensibile": "PRONTO",
       "content": {
@@ -126,25 +126,24 @@
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwTI",
       "navigabile": "PRONTO",
-      "notes / Issues": "In Bootstrap Italia e React kit ancora non sottolineati i link... ",
       "notes / More": "In Angular kit manca la variante con testo.",
-      "react Kit": "DA RIVEDERE A11Y",
+      "react Kit": "PRONTO",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-avatar--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
       "title": "`Avatar` - check a11y e status",
       "uI Kit Italia": "PRONTO",
       "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920",
-      "visivamente accessibile": "DA RIVEDERE"
+      "visivamente accessibile": "PRONTO"
     },
     {
       "amichevole con lettori di schermo": "PRONTO",
-      "angular Kit": "DA RIVEDERE A11Y",
+      "angular Kit": "PRONTO",
       "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/back-button",
       "assignees": [
         "Fupete"
       ],
-      "bootstrap Italia": "DA RIVEDERE A11Y",
+      "bootstrap Italia": "PRONTO",
       "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/menu-di-navigazione/torna-indietro/",
       "comprensibile": "PRONTO",
       "content": {
@@ -154,9 +153,8 @@
         "type": "DraftIssue"
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwUQ",
-      "navigabile": "DA RIVEDERE",
-      "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1155",
-      "react Kit": "DA RIVEDERE A11Y",
+      "navigabile": "PRONTO",
+      "react Kit": "PRONTO",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-goback--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
@@ -166,13 +164,13 @@
       "visivamente accessibile": "PRONTO"
     },
     {
-      "amichevole con lettori di schermo": "IN REVIEW",
-      "angular Kit": "DA RIVEDERE A11Y",
+      "amichevole con lettori di schermo": "PRONTO",
+      "angular Kit": "PRONTO",
       "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/back-to-top",
       "assignees": [
         "Fupete"
       ],
-      "bootstrap Italia": "DA RIVEDERE A11Y",
+      "bootstrap Italia": "PRONTO",
       "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/menu-di-navigazione/torna-su/",
       "comprensibile": "PRONTO",
       "content": {
@@ -182,9 +180,8 @@
         "type": "DraftIssue"
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwUY",
-      "navigabile": "IN REVIEW",
-      "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1157",
-      "react Kit": "DA RIVEDERE A11Y",
+      "navigabile": "PRONTO",
+      "react Kit": "PRONTO",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-backtotop--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
@@ -249,7 +246,7 @@
     },
     {
       "amichevole con lettori di schermo": "PRONTO",
-      "angular Kit": "DA RIVEDERE A11Y",
+      "angular Kit": "PRONTO",
       "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/breadcrumb",
       "assignees": [
         "Fupete"
@@ -265,7 +262,6 @@
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwVc",
       "navigabile": "PRONTO",
-      "notes / Issues": "https://github.com/italia/design-angular-kit/issues/373",
       "react Kit": "PRONTO",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-menu-di-navigazione-breadcrumbs--documentazione",
       "status": "Todo",
@@ -277,10 +273,10 @@
     },
     {
       "amichevole con lettori di schermo": "PRONTO",
-      "angular Kit": "DA RIVEDERE A11Y",
+      "angular Kit": "PRONTO",
       "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/button",
       "assignees": [
-        "frmascia11y"
+        "Fupete"
       ],
       "bootstrap Italia": "PRONTO",
       "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/componenti/buttons/",
@@ -293,7 +289,7 @@
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwV0",
       "navigabile": "PRONTO",
-      "notes / Issues": "https://github.com/italia/design-angular-kit/issues/364",
+      "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1259",
       "notes / More": "Da verificare uso solo colore per veicolare semantica nei pulsanti nelle varianti colore ",
       "react Kit": "PRONTO",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-button--documentazione",
@@ -561,7 +557,7 @@
       "assignees": [
         "Fupete"
       ],
-      "bootstrap Italia": "DA RIVEDERE A11Y",
+      "bootstrap Italia": "PRONTO",
       "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/menu-di-navigazione/footer/",
       "comprensibile": "PRONTO",
       "content": {
@@ -572,16 +568,15 @@
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwZc",
       "navigabile": "PRONTO",
-      "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1172",
       "notes / More": "Manca in Angular Kit — Alcune incongruenze di contenuti e spazi da verificare: in UI Kit Italia ci sono cose in più (es: newsletter, presente solo in React Kit ma non in BSI). — In UI Kit Italia c'è anche una variante \"Alternate\" non presente in sviluppo. ",
-      "react Kit": "DA RIVEDERE A11Y",
+      "react Kit": "PRONTO",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-menu-di-navigazione-footer--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
       "title": "`Footer` - check a11y e status",
       "uI Kit Italia": "PRONTO",
       "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920",
-      "visivamente accessibile": "DA RIVEDERE"
+      "visivamente accessibile": "PRONTO"
     },
     {
       "amichevole con lettori di schermo": "PRONTO",
@@ -656,16 +651,15 @@
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwaI",
       "navigabile": "PRONTO",
-      "notes / Issues": "https://github.com/italia/design-react-kit/issues/1099 — https://github.com/italia/bootstrap-italia/issues/978",
-      "notes / More": "In UI Kit Italia c'è anche la versione \"loggata\" dello slim header, non mi pare sia nei framework di sviluppo. ",
-      "react Kit": "DA RIVEDERE",
+      "notes / More": "https://github.com/italia/bootstrap-italia/issues/978 — In UI Kit Italia c'è anche la versione \"loggata\" dello slim header, non mi pare sia nei framework di sviluppo. ",
+      "react Kit": "PRONTO",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-menu-di-navigazione-header--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
       "title": "`Header` - check a11y e status",
       "uI Kit Italia": "PRONTO",
       "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920",
-      "visivamente accessibile": "IN REVIEW"
+      "visivamente accessibile": "PRONTO"
     },
     {
       "amichevole con lettori di schermo": "PRONTO",
@@ -695,13 +689,13 @@
       "visivamente accessibile": "PRONTO"
     },
     {
-      "amichevole con lettori di schermo": "IN REVIEW",
-      "angular Kit": "DA RIVEDERE A11Y",
+      "amichevole con lettori di schermo": "PRONTO",
+      "angular Kit": "PRONTO",
       "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/form-input",
       "assignees": [
         "Fupete"
       ],
-      "bootstrap Italia": "DA RIVEDERE A11Y",
+      "bootstrap Italia": "PRONTO",
       "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/form/input/",
       "comprensibile": "PRONTO",
       "content": {
@@ -712,20 +706,19 @@
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwas",
       "navigabile": "PRONTO",
-      "notes / Issues": "g",
       "notes / More": "In UI Kit Italia è presente anche il componente \"To be\". Decidere roadmap. ",
-      "react Kit": "DA RIVEDERE A11Y",
+      "react Kit": "PRONTO",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-form-input--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
       "title": "`Input` - check a11y e status",
       "uI Kit Italia": "PRONTO",
       "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920",
-      "visivamente accessibile": "IN REVIEW"
+      "visivamente accessibile": "PRONTO"
     },
     {
       "amichevole con lettori di schermo": "PRONTO",
-      "angular Kit": "DA RIVEDERE A11Y",
+      "angular Kit": "PRONTO",
       "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/list",
       "assignees": [
         "Fupete"
@@ -768,24 +761,23 @@
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwb8",
       "navigabile": "PRONTO",
-      "notes / Issues": "https://github.com/italia/design-ui-kit/issues/128",
       "react Kit": "PRONTO",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-menu-di-navigazione-megamenu--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
       "title": "`Megamenu` - check a11y e status",
-      "uI Kit Italia": "DA RIVEDERE",
+      "uI Kit Italia": "PRONTO",
       "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920",
       "visivamente accessibile": "PRONTO"
     },
     {
-      "amichevole con lettori di schermo": "PRONTO",
+      "amichevole con lettori di schermo": "IN REVIEW",
       "angular Kit": "PRONTO",
       "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/modal",
       "assignees": [
         "Fupete"
       ],
-      "bootstrap Italia": "PRONTO",
+      "bootstrap Italia": "DA RIVEDERE A11Y",
       "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/componenti/modale/",
       "comprensibile": "PRONTO",
       "content": {
@@ -798,7 +790,7 @@
       "navigabile": "PRONTO",
       "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1176",
       "notes / More": "In UI Kit Italia probabilmente mancano le varianti di dimensioni (larghezza). ",
-      "react Kit": "PRONTO",
+      "react Kit": "DA RIVEDERE A11Y",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-modale--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
@@ -809,7 +801,8 @@
     },
     {
       "amichevole con lettori di schermo": "IN REVIEW",
-      "angular Kit": "NON PRESENTE",
+      "angular Kit": "DA RIVEDERE A11Y",
+      "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/navscroll",
       "assignees": [
         "Fupete"
       ],
@@ -824,9 +817,9 @@
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwcs",
       "navigabile": "IN REVIEW",
-      "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1179 — https://github.com/italia/design-react-kit/issues/1095",
+      "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1179",
       "notes / More": "Da verificare issue chiuse su BSI da stale: https://github.com/italia/bootstrap-italia/issues?q=is%3Aissue+navscroll+is%3Aclosed",
-      "react Kit": "DA RIVEDERE",
+      "react Kit": "DA RIVEDERE A11Y",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-menu-di-navigazione-navscroll--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
@@ -912,7 +905,6 @@
       "notes / Issues": "https://github.com/italia/design-ui-kit/issues/123",
       "notes / More": "In React Kit c'è un \"overlay\" sotto Thumbnav, ma si intende altro. ",
       "react Kit": "NON PRESENTE",
-      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/story/documentazione-componenti-thumbnav--overlay",
       "status": "Todo",
       "status a11y check": "Done",
       "title": "`Overlay` - check a11y e status",
@@ -1035,13 +1027,13 @@
       "visivamente accessibile": "PRONTO"
     },
     {
-      "amichevole con lettori di schermo": "IN REVIEW",
-      "angular Kit": "DA RIVEDERE A11Y",
+      "amichevole con lettori di schermo": "PRONTO",
+      "angular Kit": "PRONTO",
       "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/rating",
       "assignees": [
         "Fupete"
       ],
-      "bootstrap Italia": "DA RIVEDERE A11Y",
+      "bootstrap Italia": "PRONTO",
       "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/componenti/rating/",
       "comprensibile": "PRONTO",
       "content": {
@@ -1051,10 +1043,9 @@
         "type": "DraftIssue"
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwg0",
-      "navigabile": "DA RIVEDERE",
-      "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1183",
+      "navigabile": "PRONTO",
       "notes / More": "C'è una discrepanza con UI Kit Italia, lì cè anche stellina outline per non ancora filled, nei framework di sviluppo no — Dovrebbe essere dentro la categoria Form nei framework di sviluppo BSI e React. Verificare.",
-      "react Kit": "DA RIVEDERE A11Y",
+      "react Kit": "PRONTO",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-rating--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
@@ -1147,7 +1138,8 @@
     },
     {
       "amichevole con lettori di schermo": "PRONTO",
-      "angular Kit": "DA FARE",
+      "angular Kit": "PRONTO",
+      "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/skiplink",
       "assignees": [
         "Fupete"
       ],
@@ -1162,7 +1154,6 @@
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwiU",
       "navigabile": "PRONTO",
-      "notes / Issues": "https://github.com/italia/design-angular-kit/issues/376 ",
       "notes / More": "Idea interessante: https://github.com/italia/bootstrap-italia/issues/1217",
       "react Kit": "PRONTO",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-skiplinks--documentazione",
@@ -1174,13 +1165,13 @@
       "visivamente accessibile": "PRONTO"
     },
     {
-      "amichevole con lettori di schermo": "IN REVIEW",
-      "angular Kit": "DA RIVEDERE A11Y",
+      "amichevole con lettori di schermo": "PRONTO",
+      "angular Kit": "PRONTO",
       "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/steppers",
       "assignees": [
         "Fupete"
       ],
-      "bootstrap Italia": "DA RIVEDERE A11Y",
+      "bootstrap Italia": "PRONTO",
       "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/componenti/steppers/",
       "comprensibile": "PRONTO",
       "content": {
@@ -1191,9 +1182,8 @@
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwi8",
       "navigabile": "PRONTO",
-      "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1210",
       "notes / More": "Angular ha il tick confermato in posizione sbagliata — UI Kit Italia ha meno varianti, più deciso nell'uso dei pulsanti. Da valutare di aggiornare i framework dev, specie a valle di un lavoro per il design pattern form multi-step da fare. ",
-      "react Kit": "DA RIVEDERE A11Y",
+      "react Kit": "PRONTO",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-stepper--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
@@ -1263,7 +1253,7 @@
       "assignees": [
         "Fupete"
       ],
-      "bootstrap Italia": "DA RIVEDERE A11Y",
+      "bootstrap Italia": "PRONTO",
       "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/componenti/tab/",
       "comprensibile": "PRONTO",
       "content": {
@@ -1273,10 +1263,9 @@
         "type": "DraftIssue"
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwjM",
-      "navigabile": "IN REVIEW",
-      "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1173 — https://github.com/italia/design-react-kit/issues/1090 ",
+      "navigabile": "PRONTO",
       "notes / More": "In Angular kit non ci sono tab verticali e variante card. In React kit non c'è variante card e c'è una variante in più Pulsanti. Ne in Angular ne in React kit ci sono varianti bottom o right.",
-      "react Kit": "DA RIVEDERE A11Y",
+      "react Kit": "PRONTO",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-tab--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
@@ -1312,8 +1301,9 @@
       "visivamente accessibile": "PRONTO"
     },
     {
-      "amichevole con lettori di schermo": "DA RIVEDERE",
-      "angular Kit": "NON PRESENTE",
+      "amichevole con lettori di schermo": "PRONTO",
+      "angular Kit": "PRONTO",
+      "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/timeline",
       "assignees": [
         "Fupete"
       ],
@@ -1327,7 +1317,7 @@
         "type": "DraftIssue"
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwj8",
-      "navigabile": "DA RIVEDERE",
+      "navigabile": "PRONTO",
       "notes / More": "< ! Tracciate diverse cose nella stessa issue 1195, da capire se poi frammentarla. — Nel template su Designers Italia la classe h-100 applicata al body fa sì che si \"rompa\" la visualizzazione fullscreen di BSI — Sarebbe utile la versione orizzontale sviluppata per innovazione.gov.it",
       "react Kit": "PRONTO",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-timeline--documentazione",
@@ -1395,12 +1385,12 @@
       "visivamente accessibile": "PRONTO"
     },
     {
-      "amichevole con lettori di schermo": "IN REVIEW",
+      "amichevole con lettori di schermo": "PRONTO",
       "angular Kit": "NON PRESENTE",
       "assignees": [
         "Fupete"
       ],
-      "bootstrap Italia": "DA RIVEDERE A11Y",
+      "bootstrap Italia": "PRONTO",
       "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/menu-di-navigazione/toolbar/",
       "comprensibile": "PRONTO",
       "content": {
@@ -1411,8 +1401,8 @@
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwlA",
       "navigabile": "PRONTO",
-      "notes / Issues": "https://github.com/italia/design-ui-kit/issues/135 — https://github.com/italia/bootstrap-italia/issues/1202 — https://github.com/italia/bootstrap-italia/issues/1192 ",
-      "react Kit": "DA RIVEDERE A11Y",
+      "notes / Issues": "https://github.com/italia/design-ui-kit/issues/135",
+      "react Kit": "PRONTO",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-toolbar--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
@@ -1480,7 +1470,7 @@
       "assignees": [
         "Fupete"
       ],
-      "bootstrap Italia": "DA RIVEDERE A11Y",
+      "bootstrap Italia": "PRONTO",
       "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/form/upload/",
       "comprensibile": "PRONTO",
       "content": {
@@ -1490,8 +1480,8 @@
         "type": "DraftIssue"
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwnk",
-      "navigabile": "IN REVIEW",
-      "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1182 — https://github.com/italia/designers.italia.it/issues/1388",
+      "navigabile": "PRONTO",
+      "notes / Issues": "https://github.com/italia/designers.italia.it/issues/1388",
       "notes / More": "La versione con \"Animazione\" per simularne il funzionamento funziona solo al click del mouse, non via tastiera. — In Angular kit manca la versione Avatar",
       "react Kit": "NON PRESENTE",
       "status": "Todo",

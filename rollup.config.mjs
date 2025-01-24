@@ -49,6 +49,7 @@ export default [
   // Non-bundled version
   {
     input: 'src/js/bootstrap-italia.entry.js',
+    watch: false,
     output: {
       file: 'dist/js/bootstrap-italia.min.js',
       format: 'umd',
@@ -100,6 +101,7 @@ export default [
   // ESM version
   {
     input: 'src/js/bootstrap-italia.esm.js',
+    watch: false,
     output: [
       {
         format: 'es',

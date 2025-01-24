@@ -5,19 +5,19 @@
     },
     {
         "name": "Varianti dimensioni",
-        "content": "\n<svg class=\"bg-light icon icon-xs\"><use href=\"/dist/svg/sprites.svg#it-check-circle\"></use></svg>\n<svg class=\"bg-light icon icon-sm\"><use href=\"/dist/svg/sprites.svg#it-check-circle\"></use></svg>\n<svg class=\"bg-light icon\"><use href=\"/dist/svg/sprites.svg#it-check-circle\"></use></svg>\n<svg class=\"bg-light icon icon-lg\"><use href=\"/dist/svg/sprites.svg#it-check-circle\"></use></svg>\n<svg class=\"bg-light icon icon-xl\"><use href=\"/dist/svg/sprites.svg#it-check-circle\"></use></svg>\n"
+        "content": "\n<svg class=\"icon icon-xs\"><use href=\"/dist/svg/sprites.svg#it-check-circle\"></use></svg>\n<svg class=\"icon icon-sm\"><use href=\"/dist/svg/sprites.svg#it-check-circle\"></use></svg>\n<svg class=\"icon\"><use href=\"/dist/svg/sprites.svg#it-check-circle\"></use></svg>\n<svg class=\"icon icon-lg\"><use href=\"/dist/svg/sprites.svg#it-check-circle\"></use></svg>\n<svg class=\"icon icon-xl\"><use href=\"/dist/svg/sprites.svg#it-check-circle\"></use></svg>\n"
     },
     {
         "name": "Varianti dimensioni, con padding",
-        "content": "\n<svg class=\"bg-light icon icon-xs icon-padded\"><use href=\"/dist/svg/sprites.svg#it-check-circle\"></use></svg>\n<svg class=\"bg-light icon icon-sm icon-padded\"><use href=\"/dist/svg/sprites.svg#it-check-circle\"></use></svg>\n<svg class=\"bg-light icon icon-padded\"><use href=\"/dist/svg/sprites.svg#it-check-circle\"></use></svg>\n<svg class=\"bg-light icon icon-lg icon-padded\"><use href=\"/dist/svg/sprites.svg#it-check-circle\"></use></svg>\n<svg class=\"bg-light icon icon-xl icon-padded\"><use href=\"/dist/svg/sprites.svg#it-check-circle\"></use></svg>\n"
+        "content": "\n<svg class=\"icon icon-xs icon-padded\"><use href=\"/dist/svg/sprites.svg#it-check-circle\"></use></svg>\n<svg class=\"icon icon-sm icon-padded\"><use href=\"/dist/svg/sprites.svg#it-check-circle\"></use></svg>\n<svg class=\"icon icon-padded\"><use href=\"/dist/svg/sprites.svg#it-check-circle\"></use></svg>\n<svg class=\"icon icon-lg icon-padded\"><use href=\"/dist/svg/sprites.svg#it-check-circle\"></use></svg>\n<svg class=\"icon icon-xl icon-padded\"><use href=\"/dist/svg/sprites.svg#it-check-circle\"></use></svg>\n"
     },
     {
         "name": "Varianti colori",
-        "content": "\n<svg class=\"icon icon-primary bg-light\"><use href=\"/dist/svg/sprites.svg#it-check-circle\"></use></svg>\n<svg class=\"icon icon-secondary bg-light\"><use href=\"/dist/svg/sprites.svg#it-check-circle\"></use></svg>\n<svg class=\"icon icon-success bg-light\"><use href=\"/dist/svg/sprites.svg#it-check-circle\"></use></svg>\n<svg class=\"icon icon-warning bg-light\"><use href=\"/dist/svg/sprites.svg#it-check-circle\"></use></svg>\n<svg class=\"icon icon-danger bg-light\"><use href=\"/dist/svg/sprites.svg#it-check-circle\"></use></svg>\n<svg class=\"icon icon-light bg-dark\"><use href=\"/dist/svg/sprites.svg#it-check-circle\"></use></svg>\n<svg class=\"icon icon-white bg-dark\"><use href=\"/dist/svg/sprites.svg#it-check-circle\"></use></svg>\n"
+        "content": "\n<svg class=\"icon icon-primary\"><use href=\"/dist/svg/sprites.svg#it-check-circle\"></use></svg>\n<svg class=\"icon icon-secondary\"><use href=\"/dist/svg/sprites.svg#it-check-circle\"></use></svg>\n<svg class=\"icon icon-success\"><use href=\"/dist/svg/sprites.svg#it-check-circle\"></use></svg>\n<svg class=\"icon icon-warning\"><use href=\"/dist/svg/sprites.svg#it-check-circle\"></use></svg>\n<svg class=\"icon icon-danger\"><use href=\"/dist/svg/sprites.svg#it-check-circle\"></use></svg>\n<svg class=\"icon icon-light\"><use href=\"/dist/svg/sprites.svg#it-check-circle\"></use></svg>\n<svg class=\"icon icon-white\"><use href=\"/dist/svg/sprites.svg#it-check-circle\"></use></svg>\n"
     },
     {
         "name": "Allineamenti",
-        "content": "\n<div style=\"line-height: 4em;\">\n  <svg class=\"bg-light icon align-bottom\"><use href=\"/dist/svg/sprites.svg#it-check-circle\"></use></svg>\n  <svg class=\"bg-light icon align-middle\"><use href=\"/dist/svg/sprites.svg#it-check-circle\"></use></svg>\n  <svg class=\"bg-light icon align-top\"><use href=\"/dist/svg/sprites.svg#it-check-circle\"></use></svg>\n</div>\n"
+        "content": "\n<div style=\"line-height: 4em;\">\n  <svg class=\"icon align-bottom\"><use href=\"/dist/svg/sprites.svg#it-check-circle\"></use></svg>\n  <svg class=\"icon align-middle\"><use href=\"/dist/svg/sprites.svg#it-check-circle\"></use></svg>\n  <svg class=\"icon align-top\"><use href=\"/dist/svg/sprites.svg#it-check-circle\"></use></svg>\n</div>\n"
     },
     {
         "name": "Icone disponibili",
