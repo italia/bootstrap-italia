@@ -1,8 +1,8 @@
+// Properties
 .it-list {
   --#{$prefix}list-item-spacing: var(--#{$prefix}spacing-inset-s) var(--#{$prefix}spacing-inset-xs);
   --#{$prefix}list-item-thumb-size: 5rem;
 }
-
 
 //mobile
 .it-list-wrapper {
@@ -22,7 +22,6 @@
       display: flex;
       align-items: center;
       text-decoration: none;
-      // border-bottom: 1px solid $list-border-color;
       word-break: break-word;
       overflow-wrap: anywhere;
 
@@ -33,21 +32,11 @@
         margin-right: var(--#{$prefix}icon-spacing);
       }
 
-      // .it-rounded-icon {
-      //   svg {
-      //     fill: var(--#{$prefix}icon-primary);
-      //   }
-      // }
-
       .form-check {
         margin-right: $v-gap;
         width: $v-gap;
         height: $v-gap * 4;
         text-align: left;
-
-        // & + .it-right-zone {
-        //   margin-left: $v-gap * 2;
-        // }
 
         label {
           padding-left: 0;
@@ -57,7 +46,6 @@
 
       .it-thumb {
         width: var(--#{$prefix}list-item-thumb-size);
-        // height: var(--#{$prefix}list-item-thumb-size);
 
         img {
           object-fit: cover;
@@ -67,17 +55,10 @@
       }
 
       .it-right-zone {
-        // padding: $list-text-padding;
         flex-grow: 1;
         display: flex;
         justify-content: space-between;
         align-items: center;
-
-        svg {
-          fill: $primary;
-          width: $v-gap * 3;
-          height: $v-gap * 3;
-        }
 
         .it-multiple {
           display: flex;
@@ -125,18 +106,6 @@
    li:not(:last-child) .list-item {
       border-bottom: 1px solid var(--#{$prefix}color-border-subtle);
     }
-
-    // li:last-child {
-    //   .list-item {
-    //     span.text {
-    //       border-bottom: 1px solid transparent;
-    //     }
-    //   }
-    // }
-
-    // a .text {
-    //   text-decoration: underline;
-    // }
   }
 }
 
@@ -148,12 +117,7 @@
         .avatar,
         .it-rounded-icon,
         .it-thumb {
-          // margin-left: $v-gap;
           margin-right: 0;
-
-          // & + .it-right-zone {
-          //   margin-left: $v-gap * 2;
-          // }
         }
 
         .form-check {
@@ -194,13 +158,6 @@
 
       a.list-item:hover {
         color: var(--#{$prefix}color-text-primary-hover);
-        // box-shadow: $card-shadow;
-        // text-decoration: none;
-        // background: $white;
-        // position: relative;
-        // z-index: 1;
-        // transition: none;
-        // border-bottom: 1px solid transparent;
       }
     }
   }
