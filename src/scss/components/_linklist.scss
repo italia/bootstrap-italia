@@ -175,7 +175,7 @@
       align-items: center;
 
       .list-item-title {
-        margin-right: var(--#{$prefix}spacing-inline-m);
+        margin-right: var(--#{$prefix}spacing-inline-xs);
       }
     }
 
@@ -222,6 +222,10 @@
     @include media-breakpoint-up(lg) {
       font-size: var(--#{$prefix}label-font-size-m);
     }
+  }
+
+  .list-item {
+    width: 100%
   }
 
   p {
