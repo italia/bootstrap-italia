@@ -11,13 +11,17 @@
     margin: 0;
     padding: 0;
 
+    a.list-item:hover {
+      background-color: var(--#{$prefix}color-background-inverse);
+      box-shadow: var(--#{$prefix}shadow-s);
+    }
+
     a.list-item span {
       text-decoration: underline;
     }
    
     .list-item {
-      // transition: all 0.3s;
-      // margin-top: -1px;
+      transition: all 0.2s;
       padding: var(--#{$prefix}list-item-spacing);
       display: flex;
       align-items: center;
