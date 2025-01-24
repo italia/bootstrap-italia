@@ -76,7 +76,7 @@
           }
 
           svg {
-            margin-left: $v-gap * 2;
+            margin-left: var(--#{$prefix}icon-spacing);
             margin-right: 0;
           }
         }
