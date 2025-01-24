@@ -200,7 +200,7 @@ L'elemento `.icon` con all'interno la relativa icona segue l'elemento `.text` ch
       <a href="#" class="list-item">
         <div class="it-right-zone">
           <span class="text">Link</span>
-          <svg class="icon">
+          <svg class="icon icon-primary icon-sm">
             <title>Freccia destra</title>
             <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use>
           </svg>
@@ -211,7 +211,7 @@ L'elemento `.icon` con all'interno la relativa icona segue l'elemento `.text` ch
       <a href="#" class="list-item">
         <div class="it-right-zone">
           <span class="text">Link</span>
-          <svg class="icon">
+          <svg class="icon icon-primary icon-sm">
             <title>Freccia destra</title>
             <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use>
           </svg>
@@ -829,7 +829,7 @@ Per posizionare correttamente l'icona a destra del testo bisogna aggiungere al t
       <a class="list-item active icon-right" href="#">
         <span class="list-item-title-icon-wrapper">
           <span class="list-item-title">Link lista 1 attivo</span>
-          <svg class="icon icon-primary">
+          <svg class="icon icon-primary icon-sm">
             <title>Link</title>
             <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use>
           </svg>
@@ -840,7 +840,7 @@ Per posizionare correttamente l'icona a destra del testo bisogna aggiungere al t
       <a class="list-item icon-right" href="#">
         <span class="list-item-title-icon-wrapper">
           <span class="list-item-title">Link lista 2</span>
-          <svg class="icon icon-primary">
+          <svg class="icon icon-primary icon-sm">
             <title>Link</title>
             <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use>
           </svg>
@@ -851,7 +851,7 @@ Per posizionare correttamente l'icona a destra del testo bisogna aggiungere al t
       <a class="list-item icon-right disabled" href="#" aria-disabled="true">
         <span class="list-item-title-icon-wrapper">
           <span class="list-item-title">Link lista 3 disabilitato</span>
-          <svg class="icon icon-primary">
+          <svg class="icon icon-primary icon-sm">
             <title>Link</title>
             <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use>
           </svg>
@@ -881,7 +881,7 @@ Inserisci l'icona all'interno del tag `<span class="list-item-title-icon-wrapper
     <li>
       <a class="list-item active icon-left" href="#">
         <span class="list-item-title-icon-wrapper">
-          <svg class="icon icon-primary">
+          <svg class="icon icon-primary icon-sm">
             <title>Link</title>
             <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use>
           </svg>
@@ -892,7 +892,7 @@ Inserisci l'icona all'interno del tag `<span class="list-item-title-icon-wrapper
     <li>
       <a class="list-item icon-left" href="#">
         <span class="list-item-title-icon-wrapper">
-          <svg class="icon icon-primary">
+          <svg class="icon icon-primar icon-sm">
             <title>Link</title>
             <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use>
           </svg>
@@ -904,7 +904,7 @@ Inserisci l'icona all'interno del tag `<span class="list-item-title-icon-wrapper
       <a class="list-item disabled icon-right" href="#" aria-disabled="true">
         <span class="list-item-title-icon-wrapper">
           <span class="list-item-title">Link lista 3 disabilitato con icona a destra</span>
-          <svg class="icon icon-primary">
+          <svg class="icon icon-primary icon-sm">
             <title>Link</title>
             <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use>
           </svg>
@@ -962,7 +962,7 @@ Lista di link contenente un [checkbox]({{ site.baseurl }}/docs/form/checkbox/).
       </div>
     </li>
     <li>
-      <div class="form-check form-check-group disabled" aria-describedby=" aria-disabled="true">
+      <div class="form-check form-check-group disabled" aria-describedby="" aria-disabled="true">
         <input type="checkbox" id="checkbox8" disabled aria-disabled="true">
         <label for="checkbox8">Checkbox disabilitato non selezionato</label>
       </div>
@@ -987,7 +987,7 @@ Di seguito un esempio di navigazione annidata espansa.
       <a class="list-item large medium icon-right" href="#">
         <span class="list-item-title-icon-wrapper">
           <span class="list-item-title">Link lista 1</span>
-          <svg class="icon icon-primary">
+          <svg class="icon icon-primary icon-sm">
             <title>Link</title>
             <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use>
           </svg>
@@ -998,7 +998,7 @@ Di seguito un esempio di navigazione annidata espansa.
       <a class="list-item large medium icon-right" href="#">
         <span class="list-item-title-icon-wrapper">
           <span class="list-item-title">Link lista 2</span>
-          <svg class="icon icon-primary">
+          <svg class="icon icon-primary icon-sm">
             <title>Link</title>
             <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use>
           </svg>
@@ -1017,7 +1017,7 @@ Di seguito un esempio di navigazione annidata espansa.
       <a class="list-item large medium icon-right" href="#">
         <span class="list-item-title-icon-wrapper">
           <span class="list-item-title">Link lista 3</span>
-          <svg class="icon icon-primary">
+          <svg class="icon icon-primary icon-sm">
             <title>Link</title>
             <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use>
           </svg>
