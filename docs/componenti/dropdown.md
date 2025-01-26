@@ -216,7 +216,7 @@ Aggiungere la classe `.active` ai link del dropdown che si vogliono mostrare com
 <div class="dropdown-menu">
   <div class="link-list-wrapper">
       <ul class="link-list">
-        <li><a class="list-item active" href="#"><span>Azione 1</span><span class="visually-hidden"> attivo</span></a></li>
+        <li><a class="dropdown-item list-item active" href="#"><span>Azione 1</span><span class="visually-hidden"> attivo</span></a></li>
         <li><a class="dropdown-item list-item" href="#"><span>Azione 2</span></a></li>
         <li><a class="dropdown-item list-item" href="#"><span>Azione 3</span></a></li>
       </ul>
@@ -275,9 +275,9 @@ Per aumentare la dimensione dei link contenuti nel dropdown è sufficiente aggiu
 <div class="dropdown-menu">
   <div class="link-list-wrapper">
     <ul class="link-list">
-      <li><a class="list-item large" href="#"><span>Azione 1</span></a></li>
-      <li><a class="list-item large" href="#"><span>Azione 2</span></a></li>
-      <li><a class="list-item large" href="#"><span>Azione 3</span></a></li>
+      <li><a class="dropdown-item list-item large" href="#"><span>Azione 1</span></a></li>
+      <li><a class="dropdown-item list-item large" href="#"><span>Azione 2</span></a></li>
+      <li><a class="dropdown-item list-item large" href="#"><span>Azione 3</span></a></li>
     </ul>
   </div>
 </div>
@@ -293,11 +293,11 @@ Per ottenere un dropdown menu largo quanto l'elemento che contiene il dropdown b
 <div class="dropdown-menu full-width">
   <div class="link-list-wrapper">
     <ul class="link-list">
-      <li><a class="list-item large" href="#"><span>Azione 1</span></a></li>
-      <li><a class="list-item large" href="#"><span>Azione 2</span></a></li>
-      <li><a class="list-item large" href="#"><span>Azione 3</span></a></li>
-      <li><a class="list-item large" href="#"><span>Azione 4</span></a></li>
-      <li><a class="list-item large" href="#"><span>Azione 5</span></a></li>
+      <li><a class="dropdown-item list-item large" href="#"><span>Azione 1</span></a></li>
+      <li><a class="dropdown-item list-item large" href="#"><span>Azione 2</span></a></li>
+      <li><a class="dropdown-item list-item large" href="#"><span>Azione 3</span></a></li>
+      <li><a class="dropdown-item list-item large" href="#"><span>Azione 4</span></a></li>
+      <li><a class="dropdown-item list-item large" href="#"><span>Azione 5</span></a></li>
     </ul>
   </div>
 </div>
@@ -314,19 +314,19 @@ Ai link contenuti nel menu può essere aggiunta un'icona illustrativa allineata 
   <div class="link-list-wrapper">
     <ul class="link-list">
       <li>
-        <a class="list-item right-icon" href="#">
+        <a class="dropdown-item list-item right-icon" href="#">
           <span>Azione 1</span>
           <svg class="icon icon-sm icon-primary right"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg>
         </a>
       </li>
       <li>
-        <a class="list-item right-icon" href="#">
+        <a class="dropdown-item list-item right-icon" href="#">
           <span>Azione 2</span>
           <svg class="icon icon-sm icon-primary right"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg>
         </a>
       </li>
       <li>
-        <a class="list-item right-icon" href="#">
+        <a class="dropdown-item list-item right-icon" href="#">
           <span>Azione 3</span>
           <svg class="icon icon-sm icon-primary right"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg>
         </a>
@@ -347,19 +347,19 @@ Ai link contenuti nel menu può essere aggiunta un'icona illustrativa allineata 
   <div class="link-list-wrapper">
     <ul class="link-list">
       <li>
-        <a class="list-item left-icon" href="#">
+        <a class="dropdown-item list-item left-icon" href="#">
           <svg class="icon icon-sm icon-primary left"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg>
           <span>Azione 1</span>
         </a>
       </li>
       <li>
-        <a class="list-item left-icon" href="#">
+        <a class="dropdown-item list-item left-icon" href="#">
           <svg class="icon icon-sm icon-primary left"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg>
           <span>Azione 2</span>
         </a>
       </li>
       <li>
-        <a class="list-item left-icon" href="#">
+        <a class="dropdown-item list-item left-icon" href="#">
           <svg class="icon icon-sm icon-primary left"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg>
           <span>Azione 3</span>
         </a>
@@ -381,32 +381,32 @@ Aggiungendo la classe`.dark` al dropdown menu si ottiene una versione in negativ
     <div class="link-list-heading">Intestazione</div>
     <ul class="link-list">
       <li>
-        <a class="list-item right-icon active" href="#">
+        <a class="dropdown-item list-item right-icon active" href="#">
           <span>Azione 1 (attivo)</span>
           <svg class="icon icon-sm icon-light right"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg>
         </a>
       </li>
       <li>
-        <a class="list-item right-icon" href="#">
+        <a class="dropdown-item list-item right-icon" href="#">
           <span>Azione 2</span>
           <svg class="icon icon-sm icon-light right"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg>
         </a>
       </li>
       <li>
-        <a class="list-item right-icon" href="#">
+        <a class="dropdown-item list-item right-icon" href="#">
           <span>Azione 3</span>
           <svg class="icon icon-sm icon-light right"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg>
         </a>
       </li>
       <!-- <li><span class="divider"></span></li> -->
       <li>
-        <a class="list-item right-icon" href="#">
+        <a class="dropdown-item list-item right-icon" href="#">
           <span>Azione 4</span>
           <svg class="icon icon-sm icon-light right"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg>
         </a>
       </li>
       <li>
-        <a class="list-item right-icon disabled" href="#" aria-disabled="true">
+        <a class="dropdown-item list-item right-icon disabled" href="#" aria-disabled="true">
           <span>Azione 5 (disabilitato)</span>
           <svg class="icon icon-sm icon-light right"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg>
         </a>
