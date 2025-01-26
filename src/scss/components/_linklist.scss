@@ -1,17 +1,17 @@
 .link-list-wrapper {
-  --#{$prefix}list-divider-size: 1px;
-  --#{$prefix}list-heading-font-size: var(--#{$prefix}heading-6-font-size);
-  --#{$prefix}list-item-font-size: var(--#{$prefix}label-font-size);
-  --#{$prefix}list-item-line-height: var(--#{$prefix}label-line-height);
-  --#{$prefix}list-item-spacing: var(--#{$prefix}spacing-inset-xs);
-  --#{$prefix}list-nested-spacing: var(--#{$prefix}spacing-inset-s);
-  // --#{$prefix}list-item-spacing-stack: var(--#{$prefix}spacing-stack-s);
+  --#{$prefix}linklist-divider-size: 1px;
+  --#{$prefix}linklist-heading-font-size: var(--#{$prefix}heading-6-font-size);
+  --#{$prefix}linklist-item-font-size: var(--#{$prefix}label-font-size);
+  --#{$prefix}linklist-item-line-height: var(--#{$prefix}label-line-height);
+  --#{$prefix}linklist-item-spacing: var(--#{$prefix}spacing-inset-xs);
+  --#{$prefix}linklist-nested-spacing: var(--#{$prefix}spacing-inset-s);
+  // --#{$prefix}linklist-item-spacing-stack: var(--#{$prefix}spacing-stack-s);
 
   .link-list-heading,
   h3 {
     margin-bottom: var(--#{$prefix}spacing-stack-xs);
     color: var(--#{$prefix}color-text-base);
-    font-size: var(--#{$prefix}list-heading-font-size);
+    font-size: var(--#{$prefix}linklist-heading-font-size);
     font-weight: var(--#{$prefix}heading-font-weight-weak);
     line-height: var(--#{$prefix}heading-line-height);
   }
@@ -26,21 +26,21 @@
     list-style-type: none;
 
     &.link-sublist {
-      padding-left: var(--#{$prefix}list-nested-spacing);
+      padding-left: var(--#{$prefix}linklist-nested-spacing);
     }
   }
 
   li span,
   .list-item {
-    font-size: var(--#{$prefix}list-item-font-size);
-    line-height: var(--#{$prefix}list-item-line-height);
+    font-size: var(--#{$prefix}linklist-item-font-size);
+    line-height: var(--#{$prefix}linklist-item-line-height);
   }
 
   .list-item {
     position: relative;
     display: inline-block;
-    padding-top: var(--#{$prefix}list-item-spacing);
-    padding-bottom: var(--#{$prefix}list-item-spacing);
+    padding-top: var(--#{$prefix}linklist-item-spacing);
+    padding-bottom: var(--#{$prefix}linklist-item-spacing);
     text-decoration: none;
 
     &.active span,
@@ -103,7 +103,7 @@
 
     // Increase font-size and spacing for list item link with large class
     &.large {
-      --#{$prefix}list-item-font-size: var(--#{$prefix}label-font-size-m);
+      --#{$prefix}linklist-item-font-size: var(--#{$prefix}label-font-size-m);
     }
 
     // Avatar position inside the list item
@@ -138,6 +138,7 @@
     }
 
     &.icon-right {
+      width: 100%;
       .list-item-title-icon-wrapper {
         justify-content: space-between;
       }
@@ -170,17 +171,13 @@
       flex-shrink: 0;
     }
 
-    // TODO: Not used anywhere
-    // &.right-icon[aria-expanded='true'] .icon.right {
-    //   transform: scaleY(-1);
-    // }
-
     .list-item-title-icon-wrapper {
       display: flex;
       align-items: center;
+      justify-content: space-between;
 
       .list-item-title {
-        margin-right: var(--#{$prefix}spacing-inline-m);
+        margin-right: var(--#{$prefix}spacing-inline-xs);
       }
     }
 
@@ -201,44 +198,13 @@
   // Divider between list items
   .divider {
     display: block;
-    height: var(--#{$prefix}list-divider-size);
+    height: var(--#{$prefix}linklist-divider-size);
     margin: var(--#{$prefix}spacing-stack-xs) 0;
     background: var(--#{$prefix}color-border-subtle);
   }
 
-  .toggles label {
-    justify-content: space-between;
-    margin: 0;
+  .form-check {
     padding: 0 var(--#{$prefix}spacing-inset-m);
-    font-size: var(--#{$prefix}body-font-size);
-  }
-
-  .toggles input[type='checkbox']+.lever {
-    margin-top: var(--#{$prefix}spacing-stack-xs);
-  }
-
-  .form-check.form-check-group {
-    padding: 0 var(--#{$prefix}spacing-inset-m);
-    box-shadow: none;
-
-    [type='checkbox']+label {
-      height: inherit;
-      margin-bottom: 0;
-      padding-left: 0;
-      font-size: var(--#{$prefix}body-font-size);
-
-      &:after {
-        right: var(--#{$prefix}spacing-inset-m);
-      }
-
-      &:before {
-        right: var(--#{$prefix}spacing-inset-m);
-      }
-    }
-
-    [type='checkbox'][disabled]+label {
-      color: var(--#{$prefix}color-text-disabled);
-    }
   }
 }
 
@@ -260,6 +226,10 @@
     }
   }
 
+  .list-item {
+    width: 100%
+  }
+
   p {
     margin-bottom: 0;
   }
@@ -268,30 +238,6 @@
 @include media-breakpoint-up(md) {
   .link-list-wrapper ul li a.large.icon-left,
   .link-list-wrapper ul li a.large.icon-right {
-    --#{$prefix}list-item-spacing: var(--#{$prefix}spacing-inset-s);
+    --#{$prefix}linklist-item-spacing: var(--#{$prefix}spacing-inset-s);
   }
 }
-
-// @include media-breakpoint-up(lg) {
-//   .link-list-wrapper.menu-link-list {
-//     position: relative;
-
-//     h3,
-//     h4 {
-//       position: relative;
-//       margin-top: 0;
-//       padding: 1rem;
-//       border-bottom: 4px solid var(--#{$prefix}color-border-subtle);
-
-//       &:after {
-//         position: absolute;
-//         bottom: -4px;
-//         left: 0;
-//         content: '';
-//         width: 40px;
-//         height: 4px;
-//         background-color: $warning;
-//       }
-//     }
-//   }
-// }

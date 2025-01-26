@@ -210,7 +210,8 @@
     border-bottom: none;
 
     //grey fullwidth bottom border for ul
-    .nav-item-filler {
+    &::after {
+      content: '';
       flex-grow: 1;
       border-bottom: 1px solid $color-border-subtle;
     }
@@ -237,11 +238,6 @@
       }
     }
 
-    //grey fullwidth bottom border for ul
-    .nav-item-filler {
-      width: 2em;
-    }
-
     //add button
     .nav-tab-add {
       margin: -0.2em 1em 0;
@@ -249,7 +245,7 @@
       width: 1.444rem;
       height: 1.444rem;
       top: 0.8rem;
-      border: 1px solid $color-border-subtle;
+      border: 1px solid $primary;
       border-radius: 50%;
       right: 0;
       //plus sign
