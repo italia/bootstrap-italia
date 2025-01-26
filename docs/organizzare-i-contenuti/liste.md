@@ -236,19 +236,19 @@ L'elemento `.it-multiple` con all'interno le relative icone, segue l'elemento `.
           <span class="text">Testo</span>
           <span class="it-multiple">
             <a href="#" aria-label="Testo - Azione 1">
-              <svg class="icon">
+              <svg class="icon icon-primary">
                 <title>Codice</title>
                 <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
               </svg>
             </a>
             <a href="#" aria-label="Testo - Azione 2">
-              <svg class="icon">
+              <svg class="icon icon-primary">
                 <title>Codice</title>
                 <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
               </svg>
             </a>
             <a href="#" aria-label="Testo - Azione 3">
-              <svg class="icon">
+              <svg class="icon icon-primary">
                 <title>Codice</title>
                 <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
               </svg>
@@ -265,19 +265,19 @@ L'elemento `.it-multiple` con all'interno le relative icone, segue l'elemento `.
           </a>
           <span class="it-multiple">
             <a href="#" aria-label="Link - Azione 1">
-              <svg class="icon">
+              <svg class="icon icon-primary">
                 <title>Codice</title>
                 <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
               </svg>
             </a>
             <a href="#" aria-label="Link - Azione 2">
-              <svg class="icon">
+              <svg class="icon icon-primary">
                 <title>Codice</title>
                 <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
               </svg>
             </a>
             <a href="#" aria-label="Link - Azione 3">
-              <svg class="icon">
+              <svg class="icon icon-primary">
                 <title>Codice</title>
                 <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
               </svg>
@@ -294,19 +294,19 @@ L'elemento `.it-multiple` con all'interno le relative icone, segue l'elemento `.
           </a>
           <span class="it-multiple">
             <a href="#" aria-label="Link - Azione 1">
-              <svg class="icon">
+              <svg class="icon icon-primary">
                 <title>Codice</title>
                 <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
               </svg>
             </a>
             <a href="#" aria-label="Link - Azione 2">
-              <svg class="icon">
+              <svg class="icon icon-primary">
                 <title>Codice</title>
                 <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
               </svg>
             </a>
             <a href="#" aria-label="Link - Azione 3">
-              <svg class="icon">
+              <svg class="icon icon-primary">
                 <title>Codice</title>
                 <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
               </svg>
@@ -416,19 +416,19 @@ Il codice markup è stato rivisto in chiave accessibilità e robustezza. In part
           <span class="it-multiple">
             <span class="metadata">metadata testo</span>
             <a href="#" aria-label="Testo - Azione 1">
-              <svg class="icon">
+              <svg class="icon icon-primary">
                 <title>Codice</title>
                 <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
               </svg>
             </a>
             <a href="#" aria-label="Testo - Azione 2">
-              <svg class="icon">
+              <svg class="icon icon-primary">
                 <title>Codice</title>
                 <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
               </svg>
             </a>
             <a href="#" aria-label="Testo - Azione 3">
-              <svg class="icon">
+              <svg class="icon icon-primary">
                 <title>Codice</title>
                 <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
               </svg>
