@@ -8,20 +8,15 @@
   --dsi-sizing-two-thirds: 75%;
   --dsi-sizing-half: 50%;
   --dsi-sizing-quarter: 25%;
-  --dsi-shadow-l-type: '';
-  --dsi-shadow-l-color: rgba(0,0,0,.15);
+  --dsi-shadow-color: rgba(0,0,0,.05); // FIXME: remove
   --dsi-shadow-l-spread: 0;
   --dsi-shadow-l-blur: 48px;
   --dsi-shadow-l-y: 16px;
   --dsi-shadow-l-x: 0;
-  --dsi-shadow-m-type: '';
-  --dsi-shadow-m-color: rgba(0,0,0,.15);
   --dsi-shadow-m-spread: 0;
   --dsi-shadow-m-blur: 16px;
   --dsi-shadow-m-y: 8px;
   --dsi-shadow-m-x: 0;
-  --dsi-shadow-s-type: '';
-  --dsi-shadow-s-color: rgba(0,0,0,.15);
   --dsi-shadow-s-spread: 0;
   --dsi-shadow-s-blur: 4px;
   --dsi-shadow-s-y: 4px;
@@ -466,24 +461,10 @@
   --#{$prefix}sizing-two-thirds: var(--dsi-sizing-two-thirds);
   --#{$prefix}sizing-half: var(--dsi-sizing-half);
   --#{$prefix}sizing-quarter: var(--dsi-sizing-quarter);
-  --#{$prefix}shadow-l-type: var(--dsi-shadow-l-type);
-  --#{$prefix}shadow-l-color: var(--dsi-shadow-l-color);
-  --#{$prefix}shadow-l-spread: var(--dsi-shadow-l-spread);
-  --#{$prefix}shadow-l-blur: var(--dsi-shadow-l-blur);
-  --#{$prefix}shadow-l-y: var(--dsi-shadow-l-y);
-  --#{$prefix}shadow-l-x: var(--dsi-shadow-l-x);
-  --#{$prefix}shadow-m-type: var(--dsi-shadow-m-type);
-  --#{$prefix}shadow-m-color: var(--dsi-shadow-m-color);
-  --#{$prefix}shadow-m-spread: var(--dsi-shadow-m-spread);
-  --#{$prefix}shadow-m-blur: var(--dsi-shadow-m-blur);
-  --#{$prefix}shadow-m-y: var(--dsi-shadow-m-y);
-  --#{$prefix}shadow-m-x: var(--dsi-shadow-m-x);
-  --#{$prefix}shadow-s-type: var(--dsi-shadow-s-type);
-  --#{$prefix}shadow-s-color: var(--dsi-shadow-s-color);
-  --#{$prefix}shadow-s-spread: var(--dsi-shadow-s-spread);
-  --#{$prefix}shadow-s-blur: var(--dsi-shadow-s-blur);
-  --#{$prefix}shadow-s-y: var(--dsi-shadow-s-y);
-  --#{$prefix}shadow-s-x: var(--dsi-shadow-s-x);
+  --#{$prefix}shadow-color: var(--dsi-shadow-color);
+  --#{$prefix}shadow-l: var(--#{$prefix}shadow-coloor) var(--dsi-shadow-l-x) var(--dsi-shadow-l-y) var(--dsi-shadow-l-blur) var(--dsi-shadow-l-spread); // TODO: update with real tokens
+  --#{$prefix}shadow-m: var(--#{$prefix}shadow-color) var(--dsi-shadow-m-x) var(--dsi-shadow-m-y) var(--dsi-shadow-m-blur) var(--dsi-shadow-m-spread); // TODO: update with real tokens
+  --#{$prefix}shadow-s: var(--#{$prefix}shadow-color) var(--dsi-shadow-s-x) var(--dsi-shadow-s-y) var(--dsi-shadow-s-blur)  var(--dsi-shadow-s-spread); // TODO: update with real tokens
   // text colors
   --#{$prefix}color-text-accent: var(--dsi-color-text-accent);
   --#{$prefix}color-text-inverse: var(--dsi-color-text-inverse);
