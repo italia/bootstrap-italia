@@ -11,7 +11,8 @@ $avatar-variants: (
 .avatar {
   --#{$prefix}avatar-background: var(--#{$prefix}color-background-secondary-lighter);
   --#{$prefix}avatar-text-color: var(--#{$prefix}color-text-secondary);
-  --#{$prefix}avatar-font-size: var(--#{$prefix}font-size-2);
+  --#{$prefix}avatar-font-size: var(--#{$prefix}font-size-3);
+  --#{$prefix}avatar-font-weight: var(--#{$prefix}font-weight-solid);
   --#{$prefix}avatar-icon-size: var(--#{$prefix}icon-size-s);
   --#{$prefix}avatar-radius: var(--#{$prefix}radius-circle);
   --#{$prefix}avatar-size: 2.5rem; // default size - see '.size-' classes for other sizes
@@ -19,7 +20,7 @@ $avatar-variants: (
   --#{$prefix}avatar-dot-border-size: 2px;
   --#{$prefix}avatar-dot-border-color: var(--#{$prefix}color-border-inverse);
   --#{$prefix}avatar-dot-offset-right: 0;
-  --#{$prefix}avatar-dot-offset-top: 0;
+  --#{$prefix}avatar-dot-offset-top: 4px;
   --#{$prefix}avatar-dot-offset-bottom: 0;
 }
 
@@ -34,7 +35,7 @@ $avatar-variants: (
   border-radius: var(--#{$prefix}avatar-radius);
   background: var(--#{$prefix}avatar-background);
   color: var(--#{$prefix}avatar-text-color);
-  transition: background-color 0.2s;
+  transition: background-color var(--#{$prefix}transition-instant);
 
   // Avatar color variants
   @each $avatar-variant, $avatar-variant-color in $avatar-variants {
@@ -44,10 +45,16 @@ $avatar-variants: (
     }
   }
 
+  &.size-xs {
+    --#{$prefix}avatar-dot-border-size: 1px;
+    --#{$prefix}avatar-font-size: 0.625rem;
+    --#{$prefix}avatar-size: 1rem;
+    --#{$prefix}avatar-icon-size: 0.625rem;
+  }
+
   &.size-sm {
     --#{$prefix}avatar-dot-border-size: 1px;
-    --#{$prefix}avatar-font-size: 12px;
-    --#{$prefix}avatar-font-weight: var(--#{$prefix}font-weight-solid);
+    --#{$prefix}avatar-font-size: var(--#{$prefix}font-size-1);
     --#{$prefix}avatar-size: 1.5rem;
     --#{$prefix}avatar-icon-size: var(--#{$prefix}icon-size-xs);
   }
@@ -56,10 +63,11 @@ $avatar-variants: (
     --#{$prefix}avatar-font-size: var(--#{$prefix}font-size-4);
     --#{$prefix}avatar-size: 2.5rem;
     --#{$prefix}avatar-icon-size: var(--#{$prefix}icon-size-s);
+    --#{$prefix}avatar-dot-offset-right: -2px;
   }
 
   &.size-lg {
-    --#{$prefix}avatar-font-size: var(--#{$prefix}font-size-5);
+    --#{$prefix}avatar-font-size: var(--#{$prefix}font-size-6);
     --#{$prefix}avatar-size: 3.5rem;
     --#{$prefix}avatar-icon-size: var(--#{$prefix}icon-size-m);
     --#{$prefix}avatar-dot-offset-right: -2px;
@@ -67,19 +75,18 @@ $avatar-variants: (
   }
 
   &.size-xl {
-    --#{$prefix}avatar-font-size: var(--#{$prefix}font-size-8);
+    --#{$prefix}avatar-font-size: var(--#{$prefix}font-size-9);
     --#{$prefix}avatar-size: 5rem;
     --#{$prefix}avatar-icon-size: var(--#{$prefix}icon-size-l);
-    --#{$prefix}avatar-dot-offset-right: 6px;
     --#{$prefix}avatar-dot-size: 16px;
   }
 
   &.size-xxl {
-    --#{$prefix}avatar-font-size: var(--#{$prefix}font-size-10);
+    --#{$prefix}avatar-font-size: var(--#{$prefix}font-size-11);
     --#{$prefix}avatar-size: 7rem;
     --#{$prefix}avatar-icon-size: var(--#{$prefix}icon-size-xl);
-    --#{$prefix}avatar-dot-offset-right: 10px;
     --#{$prefix}avatar-dot-size: 20px;
+    --#{$prefix}avatar-dot-offset-right: 4px;
   }
 
   &-wrapper {
@@ -100,7 +107,7 @@ $avatar-variants: (
     border: var(--#{$prefix}avatar-dot-border-size) solid var(--#{$prefix}avatar-dot-border-color);
     border-radius: var(--#{$prefix}avatar-radius);
     background: $color-background-secondary-lighter;
-    color: $white;
+    color: var(--#{$prefix}color-text-inverse);
 
     .icon {
       stroke-width: 2px;
@@ -137,7 +144,7 @@ $avatar-variants: (
   }
 
   &-status {
-    top: 0;
+    top: var(--#{$prefix}avatar-dot-offset-top);
   }
 
   &-status.notify {
@@ -158,6 +165,8 @@ $avatar-variants: (
     margin: 0;
     color: var(--#{$prefix}avatar-text-color);
     font-size: var(--#{$prefix}avatar-font-size);
+    font-weight: var(--#{$prefix}avatar-font-weight);
+    line-height: 1;
   }
 
     // Avatar icon
@@ -192,9 +201,9 @@ a .avatar {
     transition: opacity 0.2s;
   }
 
-  &:hover p {
-    color: var(--bs-avatar-text-color);
-  }
+  // &:hover p {
+  //   color: var(--bs-avatar-text-color);
+  // }
 
   &:hover::after {
     opacity: 0.5;
@@ -236,18 +245,15 @@ a .avatar {
   .list-item {
     display: flex;
     align-items: center;
-    font-size: var(--#{$prefix}font-size-1);
+    // font-size: var(--#{$prefix}font-size-1);
   }
 
   .link-list {
     white-space: nowrap;
 
-    li {
-      margin-bottom: 16px;
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
+    // li:not(:last-child) {
+    //   margin-bottom: var(--#{$prefix}spacing-stack-s);
+    // }
   }
 }
 
@@ -267,7 +273,7 @@ a .avatar {
     h3,
     h4 {
       margin: 0;
-      font-size: var(--#{$prefix}font-size-2);
+      font-size: var(--#{$prefix}heading-6-font-size);
 
       a {
         display: inline-block;
@@ -315,7 +321,7 @@ a .avatar {
 
     & > .avatar {
       margin-left: -6px;
-      border: 2px solid $white;
+      border: 2px solid var(--#{$prefix}color-border-inverse);
     }
   }
 }

@@ -394,6 +394,7 @@
   --#{$prefix}font-weight-solid: var(--dsi-font-weight-semibold);
   --#{$prefix}font-weight-base: var(--dsi-font-weight-regular);
   --#{$prefix}font-weight-thin: var(--dsi-font-weight-light);
+  --#{$prefix}font-size-11: var(--dsi-font-size-11);
   --#{$prefix}font-size-10: var(--dsi-font-size-10);
   --#{$prefix}font-size-9: var(--dsi-font-size-9);
   --#{$prefix}font-size-8: var(--dsi-font-size-8);
@@ -574,4 +575,6 @@
   --#{$prefix}icon-default: var(--dsi-icon-default);
   --#{$prefix}icon-disabled: var(--dsi-icon-disabled);
   --#{$prefix}icon-spacing: var(--dsi-spacing-inline-xs);
+  // transitions
+  --#{$prefix}transition-instant: 0.2s;
 }
