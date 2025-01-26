@@ -138,6 +138,7 @@
     }
 
     &.icon-right {
+      width: 100%;
       .list-item-title-icon-wrapper {
         justify-content: space-between;
       }
@@ -173,6 +174,7 @@
     .list-item-title-icon-wrapper {
       display: flex;
       align-items: center;
+      justify-content: space-between;
 
       .list-item-title {
         margin-right: var(--#{$prefix}spacing-inline-xs);
