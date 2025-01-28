@@ -8,9 +8,9 @@
   border-color: $focus-outline-color-out !important;
   box-shadow:
     0 0 0 2px $focus-outline-color-in,
-    0 0 0 5px $focus-outline-color-out;
-  outline: 3px solid transparent;
-  outline-offset: 3px;
+    0 0 0 5px $focus-outline-color-out !important;
+  outline: 3px solid transparent !important;
+  outline-offset: 3px !important;
 }
 
 [tabindex='-1']:focus:not(:focus-visible) {
