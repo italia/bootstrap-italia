@@ -14,7 +14,7 @@
 }
 
 [tabindex='-1']:focus:not(:focus-visible) {
-  box-shadow: none;
+  box-shadow: none !important;
 }
 
 .focus--mouse:not(.btn),
@@ -26,10 +26,10 @@
 
 p a {
   &:focus:not(.focus--mouse, .btn) {
-    outline-offset: 0px;
-    outline: 3px $focus-outline-color-out solid;
+    outline-offset: 0px !important;
+    outline: 3px $focus-outline-color-out solid !important;
     background: $focus-outline-color-in;
-    box-shadow: none;
+    box-shadow: none !important;
     color: $link-color !important;
   }
 }
@@ -84,6 +84,6 @@ p a {
   &%focus {
     box-shadow:
       0 0 0 2px $focus-outline-color-out,
-      0 0 0 5px $focus-outline-color-in;
+      0 0 0 5px $focus-outline-color-in !important;
   }
 }
