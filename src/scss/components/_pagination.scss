@@ -49,6 +49,8 @@
     z-index: 3;
     color: var(--#{$prefix}pagination-focus-color);
     background-color: var(--#{$prefix}pagination-focus-bg);
+    outline: $pagination-focus-outline;
+    box-shadow: var(--#{$prefix}pagination-focus-box-shadow);
   }
 
   &.active,

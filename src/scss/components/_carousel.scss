@@ -106,6 +106,7 @@
   &:focus {
     color: $carousel-control-color;
     text-decoration: none;
+    outline: 0;
     opacity: $carousel-control-hover-opacity;
   }
 }

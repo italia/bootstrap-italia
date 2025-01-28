@@ -328,6 +328,10 @@
       }
     }
 
+    &:focus {
+      box-shadow: $btn-focus-box-shadow;
+    }
+
     // dropdown caret
     &:after {
       content: '';

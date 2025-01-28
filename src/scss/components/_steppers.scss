@@ -332,6 +332,7 @@
         &:active {
           background: transparent !important;
           color: $primary !important;
+          box-shadow: $btn-focus-box-shadow !important;
         }
         .icon {
           margin: 0 0.333rem;
