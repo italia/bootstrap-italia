@@ -62,30 +62,6 @@
     border-color: var(--#{$prefix}btn-border-color);
   }
 
-  &:focus-visible {
-    color: var(--#{$prefix}btn-hover-color);
-    @include gradient-bg(var(--#{$prefix}btn-hover-bg));
-    border-color: var(--#{$prefix}btn-hover-border-color);
-    outline: 0;
-    // Avoid using mixin so we can pass custom focus shadow properly
-    @if $enable-shadows {
-      box-shadow: var(--#{$prefix}btn-box-shadow), var(--#{$prefix}btn-focus-box-shadow);
-    } @else {
-      box-shadow: var(--#{$prefix}btn-focus-box-shadow);
-    }
-  }
-
-  .btn-check:focus-visible + & {
-    border-color: var(--#{$prefix}btn-hover-border-color);
-    outline: 0;
-    // Avoid using mixin so we can pass custom focus shadow properly
-    @if $enable-shadows {
-      box-shadow: var(--#{$prefix}btn-box-shadow), var(--#{$prefix}btn-focus-box-shadow);
-    } @else {
-      box-shadow: var(--#{$prefix}btn-focus-box-shadow);
-    }
-  }
-
   .btn-check:checked + &,
   :not(.btn-check) + &:active,
   &:first-child:active,
@@ -97,15 +73,6 @@
     background-image: if($enable-gradients, none, null);
     border-color: var(--#{$prefix}btn-active-border-color);
     @include box-shadow(var(--#{$prefix}btn-active-shadow));
-
-    &:focus-visible {
-      // Avoid using mixin so we can pass custom focus shadow properly
-      @if $enable-shadows {
-        box-shadow: var(--#{$prefix}btn-active-shadow), var(--#{$prefix}btn-focus-box-shadow);
-      } @else {
-        box-shadow: var(--#{$prefix}btn-focus-box-shadow);
-      }
-    }
   }
 
   &:disabled,
@@ -449,8 +416,6 @@
   }
 
   &:focus {
-    outline: 0;
-    box-shadow: $btn-close-focus-shadow;
     opacity: $btn-close-focus-opacity;
   }
 
