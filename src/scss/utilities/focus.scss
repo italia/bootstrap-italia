@@ -45,6 +45,21 @@ p a {
   }
 }
 
+.avatar-group-stacked .avatar {
+  &:focus:not(.focus--mouse) {
+    border: 0;
+    margin-left: -4px;
+    margin-top: 2px;
+    margin-right: 2px;
+  }
+
+  &.avatar-dropdown .btn-dropdown:focus:not(.focus--mouse) {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+  }
+}
+
 .chip {
   button {
     &:focus:not(.focus--mouse) {
