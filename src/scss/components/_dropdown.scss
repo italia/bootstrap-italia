@@ -161,7 +161,7 @@
       color: #fff;
     }
 
-    .link-list-wrapper ul {
+    .link-list {
       span.divider {
         background: #2e465e; // Missing in the UI kit
       }
@@ -182,7 +182,8 @@
         }
       }
     }
-    //notch
+
+    // Dropdown Notch
     &:before {
       background-color: var(--#{$prefix}dropdown-background);
     }
