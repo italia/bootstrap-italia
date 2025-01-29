@@ -72,6 +72,10 @@
       .icon {
         fill: var(--#{$prefix}icon-primary-hover);
       }
+
+      .icon.icon-inverse {
+        fill: var(--#{$prefix}icon-inverse);
+      }
     }
 
     // List item disabled state
