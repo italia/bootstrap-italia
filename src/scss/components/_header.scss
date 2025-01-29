@@ -23,9 +23,6 @@
       margin-top: -$header-nav-button-distance;
 
       nav {
-        padding-left: $header-general-padding - ($grid-columns * 0.5);
-        padding-right: $header-general-padding - ($grid-columns * 0.5);
-
         .custom-navbar-toggler {
           padding: 0;
           transform: translateX(-2px);
