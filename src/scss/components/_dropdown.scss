@@ -35,7 +35,6 @@
   --#{$prefix}dropdown-link-color: var(--#{$prefix}color-text-primary);
   --#{$prefix}dropdown-link-hover-color: var(--#{$prefix}color-text-primary-hover);
   --#{$prefix}dropdown-link-active-color: var(--#{$prefix}color-text-primary-active);
-  // --#{$prefix}dropdown-link-disabled-color: var(--#{$prefix}color-text-disabled);
   --#{$prefix}dropdown-item-padding-x: var(--#{$prefix}spacing-inset-s);
   --#{$prefix}dropdown-item-padding-y: 12px;
   --#{$prefix}dropdown-header-color: var(--#{$prefix}color-text-secondary);
@@ -49,7 +48,6 @@
   --#{$prefix}dropdown-vertical-shift: 10px;
 
   position: absolute;
-  // box-shadow: $dropdown-menu-shadow;
   z-index: var(--#{$prefix}dropdown-zindex);
   display: none; // none by default, but block on "open" of the menu
   min-width: var(--#{$prefix}dropdown-min-width);
@@ -63,8 +61,6 @@
   text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
   background-clip: padding-box;
   @include font-size(var(--#{$prefix}dropdown-font-size));
-  // border-radius: var(--#{$prefix}dropdown-border-radius);
-  // @include border-radius(var(--#{$prefix}dropdown-border-radius));
   @include box-shadow(var(--#{$prefix}dropdown-box-shadow));
 
   @if $dropdown-padding-y == 0 {
@@ -98,17 +94,8 @@
     }
   }
 
-  // Header
-  // .link-list-wrapper {
-  //   .link-list-heading {
-  //     // line-height: 2rem;
-  //     margin-bottom: 0;
-  //   }
-  // }
-
-  // link list finetuning
   .link-list {
-    margin-bottom: 0;
+    margin-bottom: 0; // Remove margin bottom from default list
   }
 
   // notch
@@ -124,7 +111,7 @@
     transform: rotate(45deg);
   }
 
-  //top position
+  // Top position
   &[data-popper-placement='top-start'] {
     border-radius: var(--#{$prefix}dropdown-border-radius) var(--#{$prefix}dropdown-border-radius) 0 0;
     //notch
@@ -134,7 +121,7 @@
     }
   }
 
-  //bottom end position
+  // Bottom end position
   &[data-popper-placement='bottom-end'] {
     &:before {
       right: calc(var(--#{$prefix}dropdown-notch-position-x) / 2);
@@ -142,52 +129,41 @@
     }
   }
 
-  //dark version
+  // Dropdown on dark background
   &.dark {
     --#{$prefix}dropdown-text-color: #{$dropdown-dark-color};
     --#{$prefix}dropdown-background: var(--#{$prefix}color-background-primary-muted);
-    // --#{$prefix}dropdown-border-color: var(--#{$prefix}color-border-secondary);
     --#{$prefix}dropdown-link-color: #{$dropdown-dark-link-color};
-    // --#{$prefix}dropdown-link-hover-color: #{$dropdown-dark-link-hover-color};
     --#{$prefix}dropdown-divider-bg: #{$dropdown-dark-divider-bg};
-    // --#{$prefix}dropdown-link-hover-bg: #{$dropdown-dark-link-hover-bg};
     --#{$prefix}dropdown-link-active-color: var(--#{$prefix}color-text-inverses);
-    // --#{$prefix}dropdown-link-active-bg: #{$dropdown-dark-link-active-bg};
-    // --#{$prefix}dropdown-link-disabled-color: #{$dropdown-dark-link-disabled-color};
     --#{$prefix}dropdown-header-color: #{$dropdown-dark-header-color};
 
-    // background-color: var(--#{$prefix}dropdown-background);
-    .link-list-wrapper .link-list-heading {
-      color: #fff;
+    // Notch element
+    &:before {
+      background-color: var(--#{$prefix}dropdown-background);
+    }
+
+    .link-list-heading {
+      color: var(--#{$prefix}color-text-inverse);
     }
 
     .link-list {
       span.divider {
-        background: #2e465e; // Missing in the UI kit
+        background: #2e465e;
       }
 
-      li {
-        //link list colors and hovers
-        a span,
-        a:hover span,
-        h3,
-        i {
-          color: var(--#{$prefix}color-text-inverse);
-        }
-        // a.disabled span {
-        //   color: var(--#{$prefix}color-text-disabled);
-        // }
-        a.active span {
-          text-decoration: underline;
-        }
+    // Link list colors and hovers
+      a span,
+      a:hover span {
+        color: var(--#{$prefix}color-text-inverse);
       }
-    }
 
-    // Dropdown Notch
-    &:before {
-      background-color: var(--#{$prefix}dropdown-background);
+      a.active span {
+        text-decoration: underline;
+      }
     }
   }
+
   &.show {
     display: block;
     //menu on bottom
@@ -306,31 +282,15 @@
 .dropdown-item.list-item {
   width: auto; // For `<button>`s
   padding: var(--#{$prefix}dropdown-item-padding-y) var(--#{$prefix}dropdown-item-padding-x);
-  // clear: both;
   border: 0; // For `<button>`s
   background-color: transparent; // For `<button>`s
-  // color: var(--#{$prefix}dropdown-link-color);
-  // font-weight: $font-weight-normal;
   text-align: inherit; // For `<button>`s
   text-decoration: if($link-decoration == none, null, none);
   white-space: nowrap; // prevent links from randomly breaking onto new lines
 
   &:hover,
   &:focus {
-    // background-color: var(--#{$prefix}dropdown-link-hover-bg);
-    // color: var(--#{$prefix}dropdown-link-hover-color);
     text-decoration: if($link-hover-decoration == underline, none, null);
-  }
-
-  &.active,
-  &:active {
-    // color: var(--#{$prefix}dropdown-link-active-color);
-  }
-
-  &.disabled,
-  &:disabled {
-    // color: var(--#{$prefix}dropdown-link-disabled-color);
-    pointer-events: none;
   }
 }
 
@@ -351,7 +311,7 @@
   color: var(--#{$prefix}dropdown-link-color);
 }
 
-//menu on bottom animation
+// Menu on bottom animation
 @keyframes dropdownFadeIn {
   0% {
     margin-top: 0;
@@ -362,7 +322,8 @@
     opacity: 1;
   }
 }
-//menu on top animation
+
+// Menu on top animation
 @keyframes dropdownFadeInTop {
   0% {
     margin-top: 0;
@@ -376,7 +337,6 @@
 
 .dropdown,
 .btn-group {
-  //dropup
   &.dropup {
     .dropdown-toggle {
       &:after {
@@ -392,7 +352,6 @@
       }
     }
   }
-  //dropend
   &.dropend {
     .dropdown-toggle {
       &:after {
@@ -408,7 +367,6 @@
       }
     }
   }
-  //dropstart
   &.dropstart {
     .dropdown-toggle {
       &:before {
@@ -426,6 +384,7 @@
   }
 }
 
+// Dropdown button
 .btn-dropdown {
   --#{$prefix}dropdown-button-color: var(--#{$prefix}color-text-primary);
   --#{$prefix}dropdown-button-padding: 10px;
