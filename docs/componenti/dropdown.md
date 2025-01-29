@@ -369,46 +369,46 @@ Ai link contenuti nel menu può essere aggiunta un'icona illustrativa allineata 
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-#### Menu dark
+#### Menu scuro
 
-Aggiungendo la classe`.dark` al dropdown menu si ottiene una versione in negativo dello stesso, con link ed elementi interni declinati di conseguenza.
+Aggiungendo la classe`.dark` al dropdown menu si ottiene una versione con un colore primario scuro. Link ed elementi interni vengono declinati di conseguenza.
 
 {% comment %}Example name: Menu dark{% endcomment %}
 {% capture example %}
 
 <div class="dropdown-menu dark">
   <div class="link-list-wrapper">
-    <div class="link-list-heading">Intestazione</div>
+    <div class="link-list-heading dropdown-header">Intestazione</div>
     <ul class="link-list">
       <li>
         <a class="dropdown-item list-item right-icon active" href="#">
           <span>Azione 1 (attivo)</span>
-          <svg class="icon icon-sm icon-light right"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg>
+          <svg class="icon icon-sm icon-inverse right"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg>
         </a>
       </li>
       <li>
         <a class="dropdown-item list-item right-icon" href="#">
           <span>Azione 2</span>
-          <svg class="icon icon-sm icon-light right"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg>
+          <svg class="icon icon-sm icon-inverse right"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg>
         </a>
       </li>
       <li>
         <a class="dropdown-item list-item right-icon" href="#">
           <span>Azione 3</span>
-          <svg class="icon icon-sm icon-light right"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg>
+          <svg class="icon icon-sm icon-inverse right"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg>
         </a>
       </li>
       <!-- <li><span class="divider"></span></li> -->
       <li>
         <a class="dropdown-item list-item right-icon" href="#">
           <span>Azione 4</span>
-          <svg class="icon icon-sm icon-light right"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg>
+          <svg class="icon icon-sm icon-inverse right"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg>
         </a>
       </li>
       <li>
         <a class="dropdown-item list-item right-icon disabled" href="#" aria-disabled="true">
           <span>Azione 5 (disabilitato)</span>
-          <svg class="icon icon-sm icon-light right"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg>
+          <svg class="icon icon-sm icon-disabled right"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg>
         </a>
       </li>
     </ul>
