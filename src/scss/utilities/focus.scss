@@ -1,10 +1,10 @@
 :focus:not(.focus--mouse),
 %focus,
 .it-carousel-wrapper .splide__pagination button:focus:not(.focus--mouse),
-.upload:focus:not(.focus--mouse)+label,
-.upload-dragdrop-input:focus[type='file']:not(.focus--mouse)+label,
+.upload:focus:not(.focus--mouse) + label,
+.upload-dragdrop-input:focus[type='file']:not(.focus--mouse) + label,
 .avatar-upload:focus-within:not(.focus--mouse),
-.rating input:focus:not(.focus--mouse)+label svg {
+.rating input:focus:not(.focus--mouse) + label svg {
   border-color: $focus-outline-color-out !important;
   box-shadow:
     0 0 0 2px $focus-outline-color-in,
@@ -85,10 +85,9 @@ p a {
   }
 
   &.form-check-group {
-
     :focus:not(.focus--mouse),
-    [type='checkbox']:focus+label,
-    [type='radio']:focus+label {
+    [type='checkbox']:focus + label,
+    [type='radio']:focus + label {
       width: 100%;
     }
   }
@@ -96,7 +95,6 @@ p a {
 
 .bg-dark .btn,
 .back-to-top.dark {
-
   &:focus:not(.focus--mouse),
   &%focus {
     box-shadow:
