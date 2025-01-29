@@ -242,7 +242,7 @@ Aggiungere la classe `.disabled` ai link del dropdown che si vogliono mostrare c
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-<!-- #### Menu con intestazioni e separatori
+#### Menu con intestazioni e separatori
 
 All'interno del menu dropdown possono essere inseriti header e separatori. 
 
@@ -251,19 +251,19 @@ All'interno del menu dropdown possono essere inseriti header e separatori.
 
 <div class="dropdown-menu">
   <div class="link-list-wrapper">
-    <div class="link-list-heading">Intestazione</div>
+    <h4 class="link-list-heading dropdown-header">Intestazione</h4>
     <ul class="link-list">
       <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
       <li><a class="dropdown-item list-item" href="#"><span>Azione 2</span></a></li>
       <li><a class="dropdown-item list-item" href="#"><span>Azione 3</span></a></li>
       <li>
-        <span class="divider"></span>
+        <span class="divider" role="separator"></span>
       </li>
       <li><a class="dropdown-item list-item" href="#"><span>Azione 4</span></a></li>
     </ul>
   </div>
 </div>
-{% endcapture %}{% include example.html content=example %} -->
+{% endcapture %}{% include example.html content=example %}
 
 #### Menu con voci grandi
 
