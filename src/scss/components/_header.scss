@@ -78,7 +78,7 @@
       transition: padding-top var(--#{$prefix}transition-instant) ease;
       position: absolute;
       z-index: 3;
-      left: 0;
+      left: 12px; // TODO: apply gutter variable when ready
       top: 50%;
       margin-top: -20px;
 
