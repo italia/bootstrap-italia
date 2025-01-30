@@ -64,17 +64,22 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: var(--#{$prefix}header-search-size);
-    height: var(--#{$prefix}header-search-size);
+    width: var(--#{$prefix}header-search-button-size);
+    height: var(--#{$prefix}header-search-button-size);
+    border-radius: var(--#{$prefix}radius-rounded);
     @include media-breakpoint-up(md) {
       margin-left: var(--#{$prefix}spacing-inline-xxs);
-      background-color: var(--#{$prefix}header-search-color);
+      background-color: var(--#{$prefix}header-search-button-background);
+    }
+    @include media-breakpoint-up(lg) {
+      width: 3.5rem; // 56px
+      height: 3.5rem; // 56px
     }
 
     svg {
       width: var(--#{$prefix}header-search-icon-size);
       height: var(--#{$prefix}header-search-icon-size);
-      fill: var(--#{$prefix}header-search-color);
+      fill: var(--#{$prefix}header-search-icon-color);
       @include media-breakpoint-up(md) {
         width: $header-center-search-icon-size * 0.8;
         height: $header-center-search-icon-size * 0.8;
