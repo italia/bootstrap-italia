@@ -42,8 +42,8 @@
     }
 
     .icon {
-      width: 1.5rem;
-      height: 1.5rem;
+      width: var(--#{$prefix}icon-size-s);
+      height: var(--#{$prefix}icon-size-s);
       margin-left: var(--#{$prefix}spacing-inline-s);
       fill: var(--#{$prefix}icon-inverse);
       &:hover {
