@@ -2,19 +2,18 @@
 .it-header-center-wrapper {
   display: flex;
   align-items: center;
-  height: 5rem; // 80px
+  height: var(--#{$prefix}header-center-height); 
   background: var(--#{$prefix}header-center-background);
   @include media-breakpoint-up(lg) {
-    height: 7.5rem; // 120px
-    padding-top: 6px;
-    padding-right: 0;
-    padding-left: 0;
+    --#{$prefix}header-center-height: 7.5rem; // 120px
+    padding: 0 var(--#{$prefix}header-spacing-inset);
   }
-
+  
   &.it-small-header {
-    height: 4rem; // 64px
+    --#{$prefix}header-center-height: 4rem; // 64px
     @include media-breakpoint-up(lg) {
-      height: 6.5rem; // 104px
+      --#{$prefix}header-center-height: 6.5rem; // 104px
+    }
   }
 }
 
@@ -47,6 +46,9 @@
       height: 1.5rem;
       margin-left: var(--#{$prefix}spacing-inline-s);
       fill: var(--#{$prefix}icon-inverse);
+      &:hover {
+        fill: var(--#{$prefix}color-background-inverse-hover);
+      }
     }
   }
 }
@@ -68,12 +70,15 @@
     height: var(--#{$prefix}header-search-button-size);
     border-radius: var(--#{$prefix}radius-rounded);
     @include media-breakpoint-up(md) {
-      margin-left: var(--#{$prefix}spacing-inline-xxs);
+      margin-left: var(--#{$prefix}icon-spacing);
       background-color: var(--#{$prefix}header-search-button-background);
     }
     @include media-breakpoint-up(lg) {
       width: 3.5rem; // 56px
       height: 3.5rem; // 56px
+      &:hover {
+        background: var(--#{$prefix}color-background-inverse-hover);
+      }
     }
 
     svg {
@@ -81,11 +86,7 @@
       height: var(--#{$prefix}header-search-icon-size);
       fill: var(--#{$prefix}header-search-icon-color);
       @include media-breakpoint-up(md) {
-        width: $header-center-search-icon-size * 0.8;
-        height: $header-center-search-icon-size * 0.8;
-      }
-      @include media-breakpoint-up(lg) {
-       --#{$prefix}header-search-color: var(--#{$prefix}icon-primary);
+       --#{$prefix}header-search-icon-color: var(--#{$prefix}icon-primary);
       }
     }
   }
@@ -93,9 +94,9 @@
 
 // Brand
 .it-brand-wrapper {
-  // Brand text wraps the brand title and tagline
+
   .it-brand-text {
-    margin-right: var(--#{$prefix}spacing-inline-s);
+    margin-right: var(--#{$prefix}spacing-inline-xs);
   }
 
   a {
@@ -111,146 +112,38 @@
     h2,
     .it-brand-title {
       margin-bottom: 0;
-      font-size: $header-center-h2-size-mob;
-      font-weight: $header-center-h2-weight;
+      font-size: var(--#{$prefix}header-brand-title-size);
+      font-weight: var(--#{$prefix}heading-font-weight);
       letter-spacing: unset;
-      line-height: 1.1;
+      line-height: var(--#{$prefix}heading-line-height);
       @include media-breakpoint-up(lg) {
-        font-size: $header-center-small-h2-size;
+        margin-bottom: var(--#{$prefix}spacing-stack-xxs);
+        --#{$prefix}header-brand-title-size: var(--#{$prefix}heading-3-font-size-l);
       }
     }
 
     h3,
     .it-brand-tagline {
       margin-bottom: 0;
-      font-size: $header-center-h3-size;
-      font-weight: normal;
+      font-size: var(--#{$prefix}header-brand-tagline-size);
+      font-weight: var(--#{$prefix}body-font-weight);
       @include media-breakpoint-up(lg) {
-        margin-top: $v-gap * 0.5;
-        font-size: $header-center-small-h3-size;
+        --#{$prefix}header-brand-tagline-size: var(--#{$prefix}body-font-size-l);
       }
     }
   }
 
   // Brand icon
   .icon {
-    flex-shrink: 0;
     width: var(--#{$prefix}header-brand-size);
     height: var(--#{$prefix}header-brand-size);
-    margin-right: $header-center-icon-margin-mob;
-    fill: $header-center-text-color;
+    margin-right: var(--#{$prefix}spacing-inline-xs);
+    fill: var(--#{$prefix}header-brand-icon-color);
     @include media-breakpoint-up(md) {
       --#{$prefix}header-brand-size: 3.5rem; // 56px - enlarge the brand size on medium screens
     }
     @include media-breakpoint-up(lg) {
       --#{$prefix}header-brand-size: 4.5rem; // 72px - enlarge the brand size on large screens
-    }
-  }
-}
-
-
-// Tablet horizontal / small desktop
-@include media-breakpoint-up(lg) {
-  .it-header-center-wrapper {
-    // height: $header-center-max-height;
-    // padding-top: 6px;
-    // padding-right: 0;
-    // padding-left: 0;
-    // &.it-small-header {
-      // height: $header-center-small-height;
-      // .it-header-center-content-wrapper .it-brand-wrapper a h2 {
-      //   font-size: $header-center-small-h2-size;
-      // }
-      // .it-header-center-content-wrapper .it-brand-wrapper a h3 {
-      //   margin-top: $v-gap * 0.5;
-      //   font-size: $header-center-small-h3-size;
-      // }
-    // }
-    // .it-header-center-content-wrapper {
-      // padding-left: $header-general-padding - ($grid-columns * 0.5);
-      // padding-right: $header-general-padding - ($grid-columns * 0.5);
-      // display: flex;
-      // flex-basis: 100%;
-      // align-items: center;
-      // justify-content: space-between;
-      // .it-brand-wrapper {
-      //   margin-left: 0;
-      //   a {
-      //     display: flex;
-      //     align-items: center;
-      //     h2,
-      //     .it-brand-title {
-      //       margin-bottom: 0;
-      //       font-size: $header-center-h2-size;
-      //       font-weight: $header-center-h2-weight;
-      //     }
-      //     h3,
-      //     .it-brand-tagline {
-      //       margin-bottom: 0;
-      //       font-size: $header-center-h3-size;
-      //       font-weight: normal;
-      //     }
-      //     &:hover {
-      //       text-decoration: none;
-      //     }
-      //   }
-      // }
-
-      //right zone
-      .it-right-zone {
-        display: flex;
-        align-items: center;
-        .it-socials {
-          align-items: center;
-          font-size: var(--#{$prefix}header-center-text-size);
-          ul {
-            display: flex;
-            margin: 0;
-            padding: 0;
-            list-style-type: none;
-            .icon {
-              width: $header-center-social-size;
-              height: $header-center-social-size;
-              margin-left: $header-center-social-distance;
-            }
-            a {
-              &:hover {
-                svg {
-                  fill: darken($header-center-text-color, 5%);
-                }
-              }
-            }
-          }
-        }
-      }
-      //-search
-      .it-search-wrapper {
-        display: flex;
-        align-items: center;
-        margin-left: $header-center-search-distance;
-        font-size: var(--#{$prefix}header-center-text-size);
-        a {
-          &.rounded-icon {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: $header-center-search-size;
-            height: $header-center-search-size;
-            margin-left: $v-gap * 2;
-            border-radius: $header-center-search-radius;
-            background: $header-center-text-color;
-            transition: all 0.3s;
-            &:hover {
-              background: darken($header-center-text-color, 5%);
-            }
-            svg {
-              width: $header-center-search-icon-size;
-              height: $header-center-search-icon-size;
-              // fill: $header-center-bg-color;
-            }
-          }
-        }
-      }
     }
   }
 }
