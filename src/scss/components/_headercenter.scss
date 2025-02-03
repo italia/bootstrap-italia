@@ -1,14 +1,13 @@
-//mobile
 .it-header-center-wrapper {
   display: flex;
   align-items: center;
   height: var(--#{$prefix}header-center-height); 
   background: var(--#{$prefix}header-center-background);
   @include media-breakpoint-up(lg) {
-    --#{$prefix}header-center-height: 7.5rem; // 120px
     padding: 0 var(--#{$prefix}header-spacing-inset);
   }
   
+  // Header Center Small
   &.it-small-header {
     --#{$prefix}header-center-height: 4rem; // 64px
     @include media-breakpoint-up(lg) {
@@ -45,9 +44,9 @@
       width: var(--#{$prefix}icon-size-s);
       height: var(--#{$prefix}icon-size-s);
       margin-left: var(--#{$prefix}spacing-inline-s);
-      fill: var(--#{$prefix}icon-inverse);
+      fill: var(--#{$prefix}header-social-color);
       &:hover {
-        fill: var(--#{$prefix}color-background-inverse-hover);
+        --#{$prefix}header-social-color: var(--#{$prefix}color-background-inverse-hover);
       }
     }
   }
@@ -85,9 +84,6 @@
       width: var(--#{$prefix}header-search-icon-size);
       height: var(--#{$prefix}header-search-icon-size);
       fill: var(--#{$prefix}header-search-icon-color);
-      @include media-breakpoint-up(md) {
-       --#{$prefix}header-search-icon-color: var(--#{$prefix}icon-primary);
-      }
     }
   }
 }
@@ -118,7 +114,6 @@
       line-height: var(--#{$prefix}heading-line-height);
       @include media-breakpoint-up(lg) {
         margin-bottom: var(--#{$prefix}spacing-stack-xxs);
-        --#{$prefix}header-brand-title-size: var(--#{$prefix}heading-3-font-size-l);
       }
     }
 
@@ -127,9 +122,6 @@
       margin-bottom: 0;
       font-size: var(--#{$prefix}header-brand-tagline-size);
       font-weight: var(--#{$prefix}body-font-weight);
-      @include media-breakpoint-up(lg) {
-        --#{$prefix}header-brand-tagline-size: var(--#{$prefix}body-font-size-l);
-      }
     }
   }
 
@@ -139,11 +131,5 @@
     height: var(--#{$prefix}header-brand-size);
     margin-right: var(--#{$prefix}spacing-inline-xs);
     fill: var(--#{$prefix}header-brand-icon-color);
-    @include media-breakpoint-up(md) {
-      --#{$prefix}header-brand-size: 3.5rem; // 56px - enlarge the brand size on medium screens
-    }
-    @include media-breakpoint-up(lg) {
-      --#{$prefix}header-brand-size: 4.5rem; // 72px - enlarge the brand size on large screens
-    }
   }
 }

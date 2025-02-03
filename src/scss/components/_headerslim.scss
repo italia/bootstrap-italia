@@ -3,6 +3,10 @@
   background: var(--#{$prefix}header-slim-background);
   @extend .nav;
 
+  &.theme-light {
+    border-bottom: 1px solid var(--#{$prefix}header-slim-border-color);
+  }
+
   // Header slim sticky
   @include media-breakpoint-up(lg) {
     .is-sticky {
@@ -100,8 +104,8 @@
         display: flex;
         align-items: center;
         padding: 0 var(--#{$prefix}spacing-inset-m);
-        border-right: 1px solid hsla(0, 0%, 100%, 0.2);
-        border-left: 1px solid hsla(0, 0%, 100%, 0.2);
+        border-right: 1px solid var(--#{$prefix}header-slim-border-color);
+        border-left: 1px solid var(--#{$prefix}header-slim-border-color);
       }
     }
 
@@ -117,8 +121,6 @@
         color: var(--#{$prefix}color-text-inverse);
         box-shadow: inset 0 -2px 0 var(--#{$prefix}header-slim-text-color);
         cursor: default;
-        @include media-breakpoint-up(lg) {
-        }
       }
       &:hover:not(.active) {
         text-decoration: underline;

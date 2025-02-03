@@ -2,31 +2,55 @@
 @use 'sass:math';
 
 .it-header-wrapper {
-  --#{$prefix}header-slim-height: 3rem; // 48px
-  --#{$prefix}header-slim-text-color: var(--#{$prefix}color-text-inverse);
-  --#{$prefix}header-slim-text-size: var(--#{$prefix}label-font-size);
-  --#{$prefix}header-slim-background: var(--dsi-color-blue-30); // TODO: use variable when ready
-
-  --#{$prefix}header-center-background: var(--#{$prefix}color-background-primary);
-  --#{$prefix}header-center-text-color: var(--#{$prefix}color-text-inverse);
-  --#{$prefix}header-center-text-size: var(--#{$prefix}label-font-size-s);
-  --#{$prefix}header-center-theme-light-bg-color: var(--white);
-  --#{$prefix}header-center-theme-light-text-color: var(--primary);
-  --#{$prefix}header-nav-icon-arrow-megamenu-distance: 14px;
-  --#{$prefix}header-center-height: 4.5rem; // 72px - responsive property
-
-  --#{$prefix}header-spacing-inset: var(--#{$prefix}spacing-inset-xs);
   --#{$prefix}header-brand-spacing: var(--dsi-spacing-14x);
   --#{$prefix}header-brand-color: var(--#{$prefix}color-text-inverse);
   --#{$prefix}header-brand-icon-color: var(--#{$prefix}icon-inverse);
-  --#{$prefix}header-brand-size: 2.5rem; // responsive property
-  --#{$prefix}header-brand-title-size: var(--#{$prefix}heading-5-font-size); // responsive property
-  --#{$prefix}header-brand-tagline-size: var(--#{$prefix}body-font-size); // responsive property
+  --#{$prefix}header-brand-size: 2.5rem;
+  --#{$prefix}header-brand-title-size: var(--#{$prefix}heading-5-font-size);
+  --#{$prefix}header-brand-tagline-size: var(--#{$prefix}body-font-size);
+  --#{$prefix}header-center-background: var(--#{$prefix}color-background-primary);
+  --#{$prefix}header-center-height: 4.5rem; // 72px
+  --#{$prefix}header-center-text-color: var(--#{$prefix}color-text-inverse);
+  --#{$prefix}header-center-text-size: var(--#{$prefix}label-font-size-s);
+  --#{$prefix}header-nav-icon-arrow-megamenu-distance: 14px;
+  --#{$prefix}header-spacing-inset: var(--#{$prefix}spacing-inset-xs);
   --#{$prefix}header-search-button-color: var(--#{$prefix}icon-inverse);
   --#{$prefix}header-search-button-background: var(--#{$prefix}color-background-inverse);
   --#{$prefix}header-search-button-size: 3rem;
   --#{$prefix}header-search-icon-size: 1.5rem;
   --#{$prefix}header-search-icon-color: var(--#{$prefix}icon-inverse);
+  --#{$prefix}header-slim-background: var(--dsi-color-blue-30); // TODO: use variable when ready
+  --#{$prefix}header-slim-border-color: hsla(0, 0%, 100%, 0.2);
+  --#{$prefix}header-slim-height: 3rem; // 48px
+  --#{$prefix}header-slim-text-color: var(--#{$prefix}color-text-inverse);
+  --#{$prefix}header-slim-text-size: var(--#{$prefix}label-font-size-s);
+  --#{$prefix}header-social-color: var(--#{$prefix}icon-inverse);
+  @include media-breakpoint-up(md) {
+    --#{$prefix}header-brand-size: 3.5rem; // 56px
+    --#{$prefix}header-search-icon-color: var(--#{$prefix}icon-primary);
+  }
+  @include media-breakpoint-up(lg) {
+    --#{$prefix}header-brand-size: 4.5rem; // 72px
+    --#{$prefix}header-brand-title-size: var(--#{$prefix}heading-3-font-size-l);
+    --#{$prefix}header-brand-tagline-size: var(--#{$prefix}body-font-size-l);
+    --#{$prefix}header-center-height: 7.5rem; // 120px
+  }
+}
+
+// Theme Light
+.it-header-wrapper .theme-light {
+  --#{$prefix}header-center-background: var(--#{$prefix}color-background-inverse);
+  --#{$prefix}header-center-text-color: var(--#{$prefix}color-text-primary);
+  --#{$prefix}header-slim-background: var(--#{$prefix}color-background-inverse);
+  --#{$prefix}header-brand-icon-color: var(--#{$prefix}icon-primary);
+  --#{$prefix}header-brand-color: var(--#{$prefix}color-text-primary);
+  --#{$prefix}header-search-button-background: var(--#{$prefix}color-background-primary);
+  --#{$prefix}header-search-icon-color: var(--#{$prefix}icon-primary);
+  --#{$prefix}header-social-color: var(--#{$prefix}icon-primary);
+  --#{$prefix}header-slim-border-color: hsla(210, 100%, 40%, 0.2);
+  @include media-breakpoint-up(md) {
+    --#{$prefix}header-search-icon-color: var(--#{$prefix}icon-inverse);
+  }
 }
 
 .it-header-wrapper {
