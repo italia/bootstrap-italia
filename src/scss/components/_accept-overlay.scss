@@ -90,6 +90,8 @@
 
   .acceptoverlay-buttons {
     display: flex;
+    align-items: center;
+    gap: 1rem;
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: var(--#{$prefix}acceptoverlay-buttons-spacing);

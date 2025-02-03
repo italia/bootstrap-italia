@@ -8,13 +8,13 @@
   border-color: $focus-outline-color-out !important;
   box-shadow:
     0 0 0 2px $focus-outline-color-in,
-    0 0 0 5px $focus-outline-color-out;
-  outline: 3px solid transparent;
-  outline-offset: 3px;
+    0 0 0 5px $focus-outline-color-out !important;
+  outline: 3px solid transparent !important;
+  outline-offset: 3px !important;
 }
 
 [tabindex='-1']:focus:not(:focus-visible) {
-  box-shadow: none;
+  box-shadow: none !important;
 }
 
 .focus--mouse:not(.btn),
@@ -26,10 +26,10 @@
 
 p a {
   &:focus:not(.focus--mouse, .btn) {
-    outline-offset: 0px;
-    outline: 3px $focus-outline-color-out solid;
+    outline-offset: 0px !important;
+    outline: 3px $focus-outline-color-out solid !important;
     background: $focus-outline-color-in;
-    box-shadow: none;
+    box-shadow: none !important;
     color: $link-color !important;
   }
 }
@@ -42,6 +42,21 @@ p a {
     box-shadow:
       0 0 0 2px $focus-outline-color-in,
       0 0 0 5px $focus-outline-color-out !important;
+  }
+}
+
+.avatar-group-stacked .avatar {
+  &:focus:not(.focus--mouse) {
+    border: 0;
+    margin-left: -4px;
+    margin-top: 2px;
+    margin-right: 2px;
+  }
+
+  &.avatar-dropdown .btn-dropdown:focus:not(.focus--mouse) {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
   }
 }
 
@@ -84,6 +99,6 @@ p a {
   &%focus {
     box-shadow:
       0 0 0 2px $focus-outline-color-out,
-      0 0 0 5px $focus-outline-color-in;
+      0 0 0 5px $focus-outline-color-in !important;
   }
 }

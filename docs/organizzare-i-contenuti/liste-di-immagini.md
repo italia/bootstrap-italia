@@ -79,6 +79,14 @@ Utilizzare i tag `<figure>` e `<figcaption>` per liste di immagini con didascali
 La griglia utilizzata è una variante delle classi di Bootstrap, con margini modificati.  
 Il contenitore della griglia è `.it-grid-list-wrapper`. Al posto della classe `.row` di Bootstrap viene utilizzata la classe custom `.grid-row`.
 
+{% capture callout %}
+
+### Attenzione
+
+In questo esempio, non essendo presente alcuna caption, utilizziamo i `<div>` al posto di `<figure>`.
+
+{% endcapture %}{% include callout.html content=callout type="alert" %}
+
 {% comment %}Example name: Griglia standard{% endcomment %}
 {% capture example %}
 <div class="it-grid-list-wrapper">
