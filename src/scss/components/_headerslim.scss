@@ -3,19 +3,25 @@
   background: var(--#{$prefix}header-slim-background);
   @extend .nav;
 
+  // Header slim sticky
+  @include media-breakpoint-up(lg) {
+    .is-sticky {
+      .it-user-wrapper .dropdown-menu.show {
+        padding-bottom: 0.5rem;
+        transform: translate3d(0, 6px, 0);
+      }
+    }
+  }
+
   .it-header-slim-wrapper-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: var(--#{$prefix}spacing-inset-xxs) 0;
     @include media-breakpoint-up(lg) {
       padding: 0 var(--#{$prefix}header-spacing-inset);
     }
 
-    .dropdown-menu {
-      top: -1rem; // position of dropdown menu from the top
-    }
-
+    // Link style for header slim
     a {
       color: var(--#{$prefix}header-slim-text-color);
       text-decoration: none;
@@ -23,20 +29,13 @@
         text-decoration: underline;
       }
 
-      .icon {
-        width: var(--#{$prefix}icon-size-xs);
-        height: var(--#{$prefix}icon-size-xs);
-        // set default text color to icon
-        fill: $header-slim-text-color;
-        transform-origin: center;
-        transition: all 0.3s;
-      }
-
+      // Language dropdown
       &.dropdown-toggle {
         display: flex;
         align-items: center;
         font-size: var(--#{$prefix}header-slim-text-size);
         text-transform: uppercase;
+
         &[aria-expanded='true'] {
           & > .icon:last-of-type {
             transform: scaleY(-1);
@@ -44,6 +43,7 @@
         }
       }
 
+      // Secondary nav opener
       &.it-opener {
         display: block;
         padding: 0.5rem 0;
@@ -54,104 +54,82 @@
           }
         }
       }
-    }
 
-    .navbar-brand {
-      padding: 0;
-      color: var(--#{$prefix}header-slim-text-color);
-      font-size: var(--#{$prefix}header-slim-text-size);
-    }
-
-    .it-header-slim-right-zone,
-    .header-slim-right-zone {
-      // header-slim-right-zone is it-header-slim-right-zone now - We're keeping old class here for retrocompatibility
-      display: flex;
-      align-items: center;
-      align-self: flex-start;
-    }
-
-    .nav-mobile {
-      ul.link-list {
-        margin-bottom: 0;
-
-        a.list-item {
-          &.active {
-            color: $white;
-            text-decoration: none;
-            cursor: default;
-          }
-          &:hover:not(.active) {
-            text-decoration: underline;
-          }
+      .icon {
+        width: var(--#{$prefix}icon-size-xs);
+        height: var(--#{$prefix}icon-size-xs);
+        // set default text color to icon
+        fill: currentColor;
+        transform-origin: center;
+        transition: transform var(--#{$prefix}transition-instant);
+        @include media-breakpoint-up(lg) {
+          margin-left: var(--#{$prefix}icon-spacing);
         }
       }
     }
   }
-}
 
-//Tablet horizontal / small desktop
-@include media-breakpoint-up(lg) {
-
-
-  .dropdown-menu {
-    top: -$header-slim-dropdown-distance !important;
+  .navbar-brand {
+    padding: 0;
+    color: var(--#{$prefix}header-slim-text-color);
+    font-size: var(--#{$prefix}header-slim-text-size);
   }
 
+  .it-header-slim-right-zone,
+  .header-slim-right-zone {
+    // Keeping old class for retrocompatibility
+    display: flex;
+    align-items: center;
+    align-self: flex-start;
+  }
+
+  // Secondary nav
   .nav-mobile {
-    width: 100%;
+    @include media-breakpoint-up(lg) {
+      flex-grow: 2; // Take all available space
 
-    ul.link-list {
-      display: flex;
-      margin-right: var(--#{$prefix}spacing-inline-m);
-      padding: 0 var(--#{$prefix}spacing-inset-m);
-      border-right: 1px solid hsla(0, 0%, 100%, 0.2);
-      border-left: 1px solid hsla(0, 0%, 100%, 0.2);
+      .link-list-wrapper.collapse:not(.show) {
+        display: flex;
+        justify-content: flex-end; // Align to the right
+      }
+    }
 
-      a {
+    .link-list {
+      margin-bottom: 0;
+      @include media-breakpoint-up(lg) {
+        display: flex;
+        align-items: center;
+        padding: 0 var(--#{$prefix}spacing-inset-m);
+        border-right: 1px solid hsla(0, 0%, 100%, 0.2);
+        border-left: 1px solid hsla(0, 0%, 100%, 0.2);
+      }
+    }
+
+    .list-item {
+      @include media-breakpoint-up(lg) {
         display: flex;
         align-items: center;
         padding: var(--#{$prefix}spacing-inset-s);
+        padding: var(--#{$prefix}spacing-inset-s);
         text-decoration: none;
-
-        &.active {
+      }
+      &.active {
+        color: var(--#{$prefix}color-text-inverse);
+        text-decoration: none;
+        cursor: default;
+        @include media-breakpoint-up(lg) {
           box-shadow: inset 0 -2px 0 var(--#{$prefix}header-slim-text-color);
         }
       }
-    }
-  }
-  a {
-    &.dropdown-toggle {
-      padding-top: $header-slim-lang-v-padding;
-      padding-bottom: $header-slim-lang-v-padding;
-      text-decoration: none;
-      .icon {
-        margin-left: $v-gap * 0.5;
+      &:hover:not(.active) {
+        text-decoration: underline;
       }
     }
-    &.navbar-brand {
-      padding-top: $header-slim-brand-padding;
-      padding-bottom: $header-slim-brand-padding;
-    }
-  }
-  .it-header-slim-right-zone,
-  .header-slim-right-zone {
-    // .header-slim-right-zone is .it-header-slim-right-zone now. We're keeping old class here for retrocompatibility
-    height: var(--#{$prefix}header-slim-height);
-  }
-
-  .collapse:not(.show) {
-    display: flex;
-    justify-content: flex-end;
   }
 }
 
-.is-sticky {
-  .it-user-wrapper .dropdown-menu.show {
-    padding-bottom: 0.5rem;
-    transform: translate3d(0, 6px, 0) !important;
-  }
-  .link-list-wrapper ul li a .icon {
-    width: $header-slim-icon-size;
-    height: $header-slim-icon-size;
-  }
+.it-header-slim-right-zone,
+.header-slim-right-zone {
+  // .header-slim-right-zone is .it-header-slim-right-zone now. We're keeping old class here for retrocompatibility
+  height: var(--#{$prefix}header-slim-height);
 }
