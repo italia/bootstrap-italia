@@ -106,19 +106,18 @@
     }
 
     .list-item {
+      padding: var(--#{$prefix}spacing-inset-s) 0;
       @include media-breakpoint-up(lg) {
         display: flex;
         align-items: center;
-        padding: var(--#{$prefix}spacing-inset-s);
-        padding: var(--#{$prefix}spacing-inset-s);
         text-decoration: none;
+        padding: var(--#{$prefix}spacing-inset-s);
       }
       &.active {
         color: var(--#{$prefix}color-text-inverse);
-        text-decoration: none;
+        box-shadow: inset 0 -2px 0 var(--#{$prefix}header-slim-text-color);
         cursor: default;
         @include media-breakpoint-up(lg) {
-          box-shadow: inset 0 -2px 0 var(--#{$prefix}header-slim-text-color);
         }
       }
       &:hover:not(.active) {
