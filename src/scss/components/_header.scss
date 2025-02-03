@@ -12,7 +12,7 @@
   --#{$prefix}header-center-height: 4.5rem; // 72px
   --#{$prefix}header-center-text-color: var(--#{$prefix}color-text-inverse);
   --#{$prefix}header-center-text-size: var(--#{$prefix}label-font-size-s);
-  --#{$prefix}header-nav-icon-arrow-megamenu-distance: 14px;
+  --#{$prefix}header-nav-background: var(--#{$prefix}color-background-primary);
   --#{$prefix}header-spacing-inset: var(--#{$prefix}spacing-inset-xs);
   --#{$prefix}header-search-button-color: var(--#{$prefix}icon-inverse);
   --#{$prefix}header-search-button-background: var(--#{$prefix}color-background-inverse);
@@ -41,13 +41,15 @@
 .it-header-wrapper .theme-light {
   --#{$prefix}header-center-background: var(--#{$prefix}color-background-inverse);
   --#{$prefix}header-center-text-color: var(--#{$prefix}color-text-primary);
-  --#{$prefix}header-slim-background: var(--#{$prefix}color-background-inverse);
   --#{$prefix}header-brand-icon-color: var(--#{$prefix}icon-primary);
   --#{$prefix}header-brand-color: var(--#{$prefix}color-text-primary);
+  --#{$prefix}header-nav-background: var(--#{$prefix}color-background-inverse);
   --#{$prefix}header-search-button-background: var(--#{$prefix}color-background-primary);
   --#{$prefix}header-search-icon-color: var(--#{$prefix}icon-primary);
   --#{$prefix}header-social-color: var(--#{$prefix}icon-primary);
+  --#{$prefix}header-slim-background: var(--#{$prefix}color-background-inverse);
   --#{$prefix}header-slim-border-color: hsla(210, 100%, 40%, 0.2);
+  --#{$prefix}header-slim-text-color: var(--#{$prefix}color-text-primary);
   @include media-breakpoint-up(md) {
     --#{$prefix}header-search-icon-color: var(--#{$prefix}icon-inverse);
   }
@@ -60,10 +62,6 @@
   .it-nav-wrapper {
     position: relative;
     z-index: auto;
-
-    .it-brand-wrapper {
-      padding-left: var(--#{$prefix}header-brand-spacing);
-    }
 
     .it-header-navbar-wrapper {
       transition: padding-top var(--#{$prefix}transition-instant) ease;
@@ -124,7 +122,6 @@
 
                 a {
                   color: var(--#{$prefix}header-brand-color);
-
                   &:hover {
                     text-decoration: none;
                   }
@@ -145,32 +142,32 @@
               align-items: center;
               align-self: center;
               margin-left: 4rem;
-              font-size: $header-center-text-size;
-              color: $header-center-text-color;
+              font-size: var(--#{$prefix}header-center-text-size);
+              color: var(--#{$prefix}header-center-text-color);
 
-              a {
-                &.rounded-icon {
-                  width: $header-center-search-size;
-                  height: $header-center-search-size;
-                  border-radius: $header-center-search-radius;
-                  background: $header-center-text-color;
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  margin-left: $v-gap * 2;
-                  transition: all 0.3s;
+              // a {
+              //   &.rounded-icon {
+              //     width: $header-center-search-size;
+              //     height: $header-center-search-size;
+              //     border-radius: $header-center-search-radius;
+              //     background: $header-center-text-color;
+              //     display: flex;
+              //     justify-content: center;
+              //     align-items: center;
+              //     margin-left: $v-gap * 2;
+              //     transition: all 0.3s;
 
-                  &:hover {
-                    background: shade-color($header-center-text-color, 5%);
-                  }
+              //     &:hover {
+              //       background: shade-color($header-center-text-color, 5%);
+              //     }
 
-                  svg {
-                    fill: $header-center-bg-color;
-                    width: $header-center-search-icon-size;
-                    height: $header-center-search-icon-size;
-                  }
-                }
-              }
+              //     svg {
+              //       fill: $header-center-bg-color;
+              //       width: $header-center-search-icon-size;
+              //       height: $header-center-search-icon-size;
+              //     }
+              //   }
+              // }
 
               &.cloned-element {
                 a {
@@ -204,10 +201,6 @@
 @include media-breakpoint-up(lg) {
   .it-header-wrapper {
     .it-nav-wrapper {
-      .it-brand-wrapper {
-        padding-left: 0;
-      }
-
       position: relative;
 
       .it-header-navbar-wrapper {

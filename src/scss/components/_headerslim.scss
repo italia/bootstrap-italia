@@ -3,10 +3,6 @@
   background: var(--#{$prefix}header-slim-background);
   @extend .nav;
 
-  &.theme-light {
-    border-bottom: 1px solid var(--#{$prefix}header-slim-border-color);
-  }
-
   // Header slim sticky
   @include media-breakpoint-up(lg) {
     .is-sticky {
@@ -15,6 +11,10 @@
         transform: translate3d(0, 6px, 0);
       }
     }
+  }
+
+  &.theme-light {
+    border-bottom: 1px solid var(--#{$prefix}header-slim-border-color);
   }
 
   .it-header-slim-wrapper-content {
@@ -27,7 +27,6 @@
 
     // Link style for header slim
     a {
-      color: var(--#{$prefix}header-slim-text-color);
       text-decoration: none;
       &:hover {
         text-decoration: underline;
@@ -37,6 +36,7 @@
       &.dropdown-toggle {
         display: flex;
         align-items: center;
+        color: var(--#{$prefix}header-slim-text-color);
         font-size: var(--#{$prefix}header-slim-text-size);
         text-transform: uppercase;
 
@@ -51,6 +51,7 @@
       &.it-opener {
         display: block;
         padding: 0.5rem 0;
+        color: var(--#{$prefix}header-slim-text-color);
         font-size: var(--#{$prefix}header-slim-text-size);
         &[aria-expanded='true'] {
           & > .icon:last-of-type {
@@ -103,7 +104,7 @@
       @include media-breakpoint-up(lg) {
         display: flex;
         align-items: center;
-        padding: 0 var(--#{$prefix}spacing-inset-m);
+        padding: 0 var(--#{$prefix}spacing-inset-s);
         border-right: 1px solid var(--#{$prefix}header-slim-border-color);
         border-left: 1px solid var(--#{$prefix}header-slim-border-color);
       }
@@ -111,16 +112,17 @@
 
     .list-item {
       padding: var(--#{$prefix}spacing-inset-s) 0;
+      color: var(--#{$prefix}header-slim-text-color);
       @include media-breakpoint-up(lg) {
         display: flex;
         align-items: center;
-        text-decoration: none;
         padding: var(--#{$prefix}spacing-inset-s);
+        text-decoration: none;
       }
       &.active {
-        color: var(--#{$prefix}color-text-inverse);
         box-shadow: inset 0 -2px 0 var(--#{$prefix}header-slim-text-color);
-        cursor: default;
+        color: var(--#{$prefix}header-slim-text-color);
+        // cursor: default;
       }
       &:hover:not(.active) {
         text-decoration: underline;

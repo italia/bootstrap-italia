@@ -90,6 +90,11 @@
 
 // Brand
 .it-brand-wrapper {
+  padding-left: var(--#{$prefix}header-brand-spacing);
+
+  @include media-breakpoint-up(lg) {
+    padding-left: 0;
+  }
 
   .it-brand-text {
     margin-right: var(--#{$prefix}spacing-inline-xs);
