@@ -4,10 +4,11 @@
 // `<nav>`s, `<ul>`s or `<ol>`s.
 
 .nav {
-  --#{$prefix}nav-link-padding-x: #{$nav-link-padding-x};
-  --#{$prefix}nav-link-padding-y: #{$nav-link-padding-y};
+  --#{$prefix}nav-link-padding-x: var(--#{$prefix}spacing-inset-s);
+  --#{$prefix}nav-link-padding-y: var(--#{$prefix}spacing-inset-s);
   --#{$prefix}nav-link-font-size: var(--#{$prefix}label-font-size);
-  --#{$prefix}nav-link-font-weight: #{$nav-link-font-weight};
+  --#{$prefix}nav-link-font-weight: var(--#{$prefix}font-weight-base);
+  --#{$prefix}nav-link-line-height: var(--#{$prefix}label-line-height);
   --#{$prefix}nav-link-color: var(--#{$prefix}color-text-primary);
   --#{$prefix}nav-link-hover-color: var(--#{$prefix}color-text-primary-hover);
   --#{$prefix}nav-link-disabled-color:var(--#{$prefix}color-text-disabled);
@@ -27,6 +28,7 @@
   padding: var(--#{$prefix}nav-link-padding-y) var(--#{$prefix}nav-link-padding-x);
   @include font-size(var(--#{$prefix}nav-link-font-size));
   font-weight: var(--#{$prefix}nav-link-font-weight);
+  line-height: var(--#{$prefix}nav-link-line-height);
   color: var(--#{$prefix}nav-link-color);
   text-decoration: if($link-decoration == none, null, none);
   @include transition($nav-link-transition);
