@@ -188,6 +188,48 @@ diverse lingue.
 Approfondisci l'argomento consultando la documentazione di 
 [VideoJS (Inglese)](https://videojs.com/guides/text-tracks/)
 
+## Immagine di anteprima
+
+Per aggiungere un'immagine di anteprima al video occorre utilizzare l'attributo
+`poster` inizializzato con la url dell'anteprima.
+
+{% capture callout %}
+
+##### Attenzione
+
+Le immagini caricate devono rispettare il formato `16:9` per la corretta 
+visualizzazione dell'anteprima.
+
+{% endcapture %}{% include callout.html content=callout type="warning" %}
+
+{% comment %}Example name: Con anteprima del video{% endcomment %}
+{% capture example %}
+<div class="row">
+  <video 
+    controls
+    data-bs-video
+    poster="https://italia.github.io/bootstrap-italia/docs/assets/video/ElephantsDream.mp4-poster21.jpg"
+  >
+    <source src="//vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+    <source src="//vjs.zencdn.net/v/oceans.webm" type="video/webm">
+  </video>
+  <div class="vjs-transcription accordion">
+    <div class="accordion-item">
+      <h2 class="accordion-header no_toc" id="transcription-head6">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#transcription6" aria-expanded="true" aria-controls="transcription">
+          Trascrizione
+        </button>
+      </h2>
+      <div id="transcription6" class="accordion-collapse collapse" role="region" aria-labelledby="transcription-head6">
+        <div class="accordion-body">
+          Vestibulum hendrerit ultrices nibh, sed pharetra lacus ultrices eget. Morbi et ipsum et sapien dapibus facilisis. Integer eget semper nibh. Proin enim nulla, egestas ac rutrum eget, ullamcorper nec turpis.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
 ## Streaming
 
 Servire i video tramite dei file in formato `mp4` o `webm` (che sono i formati 
