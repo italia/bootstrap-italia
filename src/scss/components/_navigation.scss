@@ -21,6 +21,7 @@
   --#{$prefix}navbar-disabled-item-mobile-opacity: 0.6;
   --#{$prefix}navbar-hamburger-size: 1.5rem;
   --#{$prefix}navbar-background: var(--#{$prefix}color-background-primary);
+}
 
 //mobile
 //menu on bottom animation
@@ -359,7 +360,7 @@
 }
 
 //Tablet horizontal / small desktop
-@media (min-width: #{map-get($grid-breakpoints, lg)}) {
+@include media-breakpoint-up(lg) {
   .row.row-column-border > [class^='col-'] .navbar {
     padding: 0;
   }
@@ -427,7 +428,7 @@
 
             &.dropdown-toggle {
               svg {
-                fill: var(--#{$prefix}icon-primary);
+                fill: var(--#{$prefix}icon-inverse);
                 margin-top: 3px;
               }
             }
