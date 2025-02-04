@@ -1,6 +1,6 @@
 .navbar {
-  --#{$prefix}navbar-h-padding: 24px;
-  --#{$prefix}navbar-v-padding: 13px;
+  --#{$prefix}navbar-spacing-inset: var(--#{$prefix}spacing-inset-m);
+  --#{$prefix}navbar-spacing-stack: var(--#{$prefix}spacing-stack-s);
   --#{$prefix}navbar-sidebar-bg-color-mobile: rgba(0, 0, 0, 0.6);
   --#{$prefix}navbar-close-button-size: 44px;
   --#{$prefix}navbar-close-button-text-color: var(--#{$prefix}color-text-secondary);
@@ -9,7 +9,7 @@
   --#{$prefix}navbar-links-margin-top: 102px;
   --#{$prefix}navbar-link-color: var(--#{$prefix}color-text-primary);
   --#{$prefix}navbar-link-color-desk: var(--#{$prefix}color-text-inverse);
-  --#{$prefix}navbar-link-active-bar-size: 3px;
+  --#{$prefix}navbar-link-active-bar-size: var(--#{$prefix}border-thick);
   --#{$prefix}navbar-link-active-bar-color: var(--#{$prefix}color-text-primary);
   --#{$prefix}navbar-link-active-bar-color-desk: var(--#{$prefix}color-text-inverse);
   --#{$prefix}navbar-toggle-button-icon-color: var(--#{$prefix}icon-inverse);
@@ -17,9 +17,9 @@
   --#{$prefix}navbar-dropdown-icon-size: 0.75rem;
   --#{$prefix}navbar-dropdown-icon-line-height: 1rem;
   --#{$prefix}navbar-dropdown-icon-width: 1rem;
-  --#{$prefix}navbar-disabled-item-opacity: 0.7;
+  --#{$prefix}navbar-disabled-item-opacity: 0.6;
   --#{$prefix}navbar-disabled-item-mobile-opacity: 0.6;
-  --#{$prefix}navbar-hamburger-size: 24px;
+  --#{$prefix}navbar-hamburger-size: 1.5rem;
   --#{$prefix}navbar-background: var(--#{$prefix}color-background-primary);
 }
 
@@ -71,7 +71,7 @@
       position: absolute;
       top: 0;
       bottom: 0;
-      right: calc(var(--#{$prefix}navbar-h-padding) * 2);
+      right: calc(var(--#{$prefix}navbar-spacing-inset) * 2);
       left: 0;
       pointer-events: all;
       overflow-y: auto;
@@ -80,7 +80,7 @@
       z-index: 5;
 
       .navbar-nav {
-        padding: var(--#{$prefix}navbar-h-padding) 0 0;
+        padding: var(--#{$prefix}navbar-spacing-inset) 0 0;
         overflow: hidden;
 
         .dropdown-menu {
@@ -91,7 +91,7 @@
 
     /*lista menu*/
     .navbar-nav {
-      padding: var(--#{$prefix}navbar-h-padding) 0;
+      padding: var(--#{$prefix}navbar-spacing-inset) 0;
 
       li {
         > button.nav-link {
@@ -100,7 +100,7 @@
           background: transparent;
           color: var(--#{$prefix}color-text-primary);
           font-weight: 600;
-          padding: var(--#{$prefix}navbar-v-padding) var(--#{$prefix}navbar-h-padding);
+          padding: var(--#{$prefix}navbar-spacing-stack) var(--#{$prefix}navbar-spacing-inset);
           position: relative;
 
           &.dropdown-toggle {
@@ -135,7 +135,7 @@
         a.nav-link {
           color: var(--#{$prefix}color-text-primary);
           font-weight: 600;
-          padding: var(--#{$prefix}navbar-v-padding) var(--#{$prefix}navbar-h-padding);
+          padding: var(--#{$prefix}navbar-spacing-stack) var(--#{$prefix}navbar-spacing-inset);
           position: relative;
 
           &.dropdown-toggle {
@@ -188,7 +188,7 @@
     position: fixed;
     left: auto;
     right: 2px;
-    top: var(--#{$prefix}navbar-h-padding);
+    top: var(--#{$prefix}navbar-spacing-inset);
     background: transparent;
     z-index: 10;
     pointer-events: none;
@@ -240,9 +240,9 @@
     }
 
     .link-list-wrapper {
-      padding-left: var(--#{$prefix}navbar-h-padding);
-      padding-right: var(--#{$prefix}navbar-h-padding);
-      margin-bottom: var(--#{$prefix}navbar-h-padding);
+      padding-left: var(--#{$prefix}navbar-spacing-inset);
+      padding-right: var(--#{$prefix}navbar-spacing-inset);
+      margin-bottom: var(--#{$prefix}navbar-spacing-inset);
 
       ul li {
         a {
@@ -399,7 +399,7 @@
 
         .navbar-nav {
           margin-top: 0;
-          padding: 0 var(--#{$prefix}navbar-h-padding);
+          padding: 0 var(--#{$prefix}navbar-spacing-inset);
           overflow: inherit;
 
           .dropdown-menu {
@@ -411,7 +411,7 @@
       /*lista menu*/
       .navbar-nav {
         margin-top: 0;
-        padding: 0 var(--#{$prefix}navbar-h-padding);
+        padding: 0 var(--#{$prefix}navbar-spacing-inset);
 
         li.nav-item {
           display: flex;
@@ -422,7 +422,7 @@
             align-self: flex-end;
             align-items: center;
             font-weight: 400;
-            padding: var(--#{$prefix}navbar-v-padding) var(--#{$prefix}navbar-h-padding);
+            padding: var(--#{$prefix}navbar-spacing-stack) var(--#{$prefix}navbar-spacing-inset);
             color: var(--#{$prefix}navbar-link-color-desk);
             border-bottom: var(--#{$prefix}navbar-link-active-bar-size) solid transparent;
 
@@ -566,8 +566,8 @@
   .megamenu {
     .dropdown-menu {
       min-width: auto;
-      left: var(--#{$prefix}navbar-h-padding);
-      right: var(--#{$prefix}navbar-h-padding);
+      left: var(--#{$prefix}navbar-spacing-inset);
+      right: var(--#{$prefix}navbar-spacing-inset);
       animation-timing-function: cubic-bezier(0.1, 0.57, 0.36, 0.99);
 
       //hide arrow
