@@ -1,14 +1,39 @@
+.navbar {
+  --#{$prefix}navbar-h-padding: 24px;
+  --#{$prefix}navbar-v-padding: 13px;
+  --#{$prefix}navbar-sidebar-bg-color-mobile: rgba(0, 0, 0, 0.6);
+  --#{$prefix}navbar-close-button-size: 44px;
+  --#{$prefix}navbar-close-button-text-color: var(--#{$prefix}color-text-secondary);
+  --#{$prefix}navbar-close-button-text-size: 0.75rem;
+  --#{$prefix}navbar-close-button-icon-size: 2rem;
+  --#{$prefix}navbar-links-margin-top: 102px;
+  --#{$prefix}navbar-link-color: var(--#{$prefix}color-text-primary);
+  --#{$prefix}navbar-link-color-desk: var(--#{$prefix}color-text-inverse);
+  --#{$prefix}navbar-link-active-bar-size: 3px;
+  --#{$prefix}navbar-link-active-bar-color: var(--#{$prefix}color-text-primary);
+  --#{$prefix}navbar-link-active-bar-color-desk: var(--#{$prefix}color-text-inverse);
+  --#{$prefix}navbar-toggle-button-icon-color: var(--#{$prefix}icon-inverse);
+  --#{$prefix}navbar-toggle-button-icon-size: 1.5rem;
+  --#{$prefix}navbar-dropdown-icon-size: 0.75rem;
+  --#{$prefix}navbar-dropdown-icon-line-height: 1rem;
+  --#{$prefix}navbar-dropdown-icon-width: 1rem;
+  --#{$prefix}navbar-disabled-item-opacity: 0.7;
+  --#{$prefix}navbar-disabled-item-mobile-opacity: 0.6;
+  --#{$prefix}navbar-hamburger-size: 24px;
+  --#{$prefix}navbar-background: var(--#{$prefix}color-background-primary);
+}
+
 //mobile
 //menu on bottom animation
 @keyframes megamenuFadeIn {
   0% {
     opacity: 0;
-    margin-top: $dropdown-menu-vertical-shift;
+    margin-top: 1rem;
   }
 
   100% {
     opacity: 1;
-    margin-top: $dropdown-menu-vertical-shift;
+    margin-top: 1rem;
   }
 }
 
@@ -17,7 +42,7 @@
 }
 
 .navbar {
-  background: $navbar-bg-color;
+  background: var(--#{$prefix}navbar-background);
 
   // overlay div
   .overlay {
@@ -26,7 +51,7 @@
     right: 0;
     left: 0;
     bottom: 0;
-    background: $navigation-sidebar-bg-color-mobile;
+    background: var(--#{$prefix}navbar-sidebar-bg-color-mobile);
     display: none;
   }
 
@@ -42,11 +67,11 @@
     width: 100%; //-occupa sempre tutta lo spazio orizzontale disponibile
 
     .menu-wrapper {
-      background: $navigation-bg-color;
+      background: var(--#{$prefix}color-background-inverse);
       position: absolute;
       top: 0;
       bottom: 0;
-      right: $navigation-h-padding * 2;
+      right: calc(var(--#{$prefix}navbar-h-padding) * 2);
       left: 0;
       pointer-events: all;
       overflow-y: auto;
@@ -55,7 +80,7 @@
       z-index: 5;
 
       .navbar-nav {
-        padding: $navigation-h-padding 0 0;
+        padding: var(--#{$prefix}navbar-h-padding) 0 0;
         overflow: hidden;
 
         .dropdown-menu {
@@ -66,21 +91,21 @@
 
     /*lista menu*/
     .navbar-nav {
-      padding: $navigation-h-padding 0;
+      padding: var(--#{$prefix}navbar-h-padding) 0;
 
       li {
         > button.nav-link {
           border: none;
           display: block;
           background: transparent;
-          color: $navigation-link-color;
+          color: var(--#{$prefix}color-text-primary);
           font-weight: 600;
-          padding: $navigation-v-padding $navigation-h-padding;
+          padding: var(--#{$prefix}navbar-v-padding) var(--#{$prefix}navbar-h-padding);
           position: relative;
 
           &.dropdown-toggle {
             svg {
-              fill: $navbar-bg-color;
+              fill: var(--#{$prefix}icon-primary);
               transition: all 0.3s;
             }
 
@@ -92,13 +117,13 @@
           }
 
           &.active {
-            border-left: $navigation-link-active-bar-size solid $navigation-link-active-bar-color;
+            border-left: var(--#{$prefix}navbar-link-active-bar-size) solid var(--#{$prefix}navbar-link-active-bar-color);
           }
 
           &.disabled {
             span,
             .icon {
-              opacity: $navigation-disabled-item-mobile-opacity;
+              opacity: var(--#{$prefix}navbar-disabled-item-mobile-opacity);
             }
           }
 
@@ -108,14 +133,14 @@
         }
 
         a.nav-link {
-          color: $navigation-link-color;
+          color: var(--#{$prefix}color-text-primary);
           font-weight: 600;
-          padding: $navigation-v-padding $navigation-h-padding;
+          padding: var(--#{$prefix}navbar-v-padding) var(--#{$prefix}navbar-h-padding);
           position: relative;
 
           &.dropdown-toggle {
             svg {
-              fill: $navbar-bg-color;
+              fill: var(--#{$prefix}icon-inverse);
               transition: all 0.3s;
             }
 
@@ -127,13 +152,13 @@
           }
 
           &.active {
-            border-left: $navigation-link-active-bar-size solid $navigation-link-active-bar-color;
+            border-left: var(--#{$prefix}navbar-link-active-bar-size) solid var(--#{$prefix}navbar-link-active-bar-color);
           }
 
           &.disabled {
             span,
             .icon {
-              opacity: $navigation-disabled-item-mobile-opacity;
+              opacity: var(--#{$prefix}navbar-disabled-item-mobile-opacity);
             }
           }
 
@@ -163,7 +188,7 @@
     position: fixed;
     left: auto;
     right: 2px;
-    top: $navigation-h-padding;
+    top: var(--#{$prefix}navbar-h-padding);
     background: transparent;
     z-index: 10;
     pointer-events: none;
@@ -173,17 +198,17 @@
     .close-menu {
       background: transparent;
       pointer-events: all;
-      color: $navigation-close-button-text-color;
-      font-size: $navigation-close-button-text-size;
+      color: var(--#{$prefix}navbar-close-button-text-color);
+      font-size: var(--#{$prefix}navbar-close-button-text-size);
       padding: 0;
-      width: $navigation-close-button-size;
-      height: $navigation-close-button-size;
+      width: var(--#{$prefix}navbar-close-button-size);
+      height: var(--#{$prefix}navbar-close-button-size);
       display: flex;
       align-items: center;
       justify-content: center;
 
       .icon {
-        fill: $white;
+        fill: var(--#{$prefix}icon-inverse);
       }
     }
   }
@@ -200,46 +225,46 @@
 
     a.it-heading-link,
     a.it-footer-link {
-      color: $navigation-link-color;
+      color: var(--#{$prefix}navbar-link-color);
 
       svg {
-        fill: $navigation-link-color;
+        fill: var(--#{$prefix}navbar-link-color);
       }
 
       &.active {
         span {
           text-decoration: underline;
-          color: $navigation-link-color;
+          color: var(--#{$prefix}navbar-link-color);
         }
       }
     }
 
     .link-list-wrapper {
-      padding-left: $navigation-h-padding;
-      padding-right: $navigation-h-padding;
-      margin-bottom: $navigation-h-padding;
+      padding-left: var(--#{$prefix}navbar-h-padding);
+      padding-right: var(--#{$prefix}navbar-h-padding);
+      margin-bottom: var(--#{$prefix}navbar-h-padding);
 
       ul li {
         a {
           &.list-item.active {
-            color: $primary-b3;
+            color: var(--#{$prefix}color-text-primary);
             text-decoration: underline;
 
             span {
-              color: $primary-b3;
+              color: var(--#{$prefix}color-text-primary);
             }
           }
 
           svg {
-            fill: $navigation-link-color;
+            fill: var(--#{$prefix}navbar-link-color);
           }
 
           span {
-            color: $navigation-link-color;
+            color: var(--#{$prefix}navbar-link-color);
           }
 
           i {
-            color: $navigation-link-color;
+            color: var(--#{$prefix}navbar-link-color);
           }
         }
       }
@@ -253,14 +278,14 @@
   cursor: pointer;
 
   span {
-    color: $navigation-toggle-button-icon-color;
-    font-size: $navigation-toggle-button-icon-size;
+    color: var(--#{$prefix}navbar-toggle-button-icon-color);
+    font-size: var(--#{$prefix}navbar-toggle-button-icon-size);
   }
 
   svg {
-    fill: $navigation-toggle-button-icon-color;
-    width: $navigation-hamburger-size;
-    height: $navigation-hamburger-size;
+    fill: var(--#{$prefix}navbar-toggle-button-icon-color);
+    width: var(--#{$prefix}navbar-hamburger-size);
+    height: var(--#{$prefix}navbar-hamburger-size);
     display: block;
   }
 }
@@ -282,19 +307,19 @@
           position: relative;
 
           &.large {
-            padding-top: $inline-menu-linklist-v-padding;
-            padding-bottom: $inline-menu-linklist-v-padding;
+            padding-top: var(--inline-menu-linklist-v-padding);
+            padding-bottom: var(--inline-menu-linklist-v-padding);
           }
 
           i {
-            color: $primary-a3;
+            color: var(--#{$prefix}color-text-primary-a3);
           }
 
           &:after {
             content: '';
             display: block;
-            width: $inline-menu-line-width;
-            background: $primary;
+            width: var(--inline-menu-line-width);
+            background: var(--#{$prefix}color-text-primary);
             position: absolute;
             right: 0;
             top: 0;
@@ -307,7 +332,7 @@
 
           &.active {
             span {
-              color: $primary;
+              color: var(--#{$prefix}color-text-primary);
               text-decoration: none;
             }
           }
@@ -323,8 +348,8 @@
       &:after {
         content: '';
         display: block;
-        width: $inline-menu-line-width;
-        background: linear-gradient(to bottom, rgba($neutral-2-a1, 1) 0%, rgba($neutral-2-a1, 0.3) 100%);
+        width: var(--inline-menu-line-width);
+        background: linear-gradient(to bottom, rgba(var(--#{$prefix}-neutral-2-a1), 1) 0%, rgba(var(--#{$prefix}-neutral-2-a1), 0.3) 100%);
         position: absolute;
         right: 0;
         top: 0;
@@ -341,7 +366,7 @@
   }
 
   .navbar {
-    background: $navigation-bg-color-desktop;
+    background: var(--#{$prefix}navbar-background);
     padding: 0;
 
     // navbar mobile
@@ -370,15 +395,15 @@
         overflow-y: visible;
         transform: none;
         transition: none;
-        background: $navigation-bg-color-desktop;
+        background: var(--#{$prefix}navbar-bg-color-desktop);
 
         .navbar-nav {
           margin-top: 0;
-          padding: 0 $navigation-h-padding;
+          padding: 0 var(--#{$prefix}navbar-h-padding);
           overflow: inherit;
 
           .dropdown-menu {
-            padding-bottom: $link-list-footer-distance-bottom;
+            padding-bottom: var(--link-list-footer-distance-bottom);
           }
         }
       }
@@ -386,7 +411,7 @@
       /*lista menu*/
       .navbar-nav {
         margin-top: 0;
-        padding: 0 $navigation-h-padding;
+        padding: 0 var(--#{$prefix}navbar-h-padding);
 
         li.nav-item {
           display: flex;
@@ -397,13 +422,13 @@
             align-self: flex-end;
             align-items: center;
             font-weight: 400;
-            padding: $navigation-v-padding $navigation-h-padding;
-            color: $navigation-link-color-desk;
-            border-bottom: $navigation-link-active-bar-size solid transparent;
+            padding: var(--#{$prefix}navbar-v-padding) var(--#{$prefix}navbar-h-padding);
+            color: var(--#{$prefix}navbar-link-color-desk);
+            border-bottom: var(--#{$prefix}navbar-link-active-bar-size) solid transparent;
 
             &.dropdown-toggle {
               svg {
-                fill: $navigation-bg-color;
+                fill: var(--#{$prefix}icon-primary);
                 margin-top: 3px;
               }
             }
@@ -414,14 +439,14 @@
 
             &.active {
               border-left: 0;
-              border-color: $navigation-link-active-bar-color-desk;
+              border-color: var(--#{$prefix}navbar-link-active-bar-color-desk);
               background: transparent;
             }
 
             &.disabled {
               span,
               .icon {
-                opacity: $navigation-disabled-item-opacity;
+                opacity: var(--#{$prefix}navbar-disabled-item-opacity);
               }
             }
           }
@@ -439,27 +464,27 @@
       position: absolute;
       top: 100%;
       left: 0;
-      z-index: $zindex-dropdown;
+      z-index: var(--zindex-dropdown);
       //display: none; // none by default, but block on "open" of the menu
       float: left;
-      min-width: $dropdown-min-width;
-      padding: $dropdown-padding-y 0 0;
-      margin: $dropdown-spacer 0 0; // override default ul
-      font-size: $font-size-base; // Redeclare because nesting can cause inheritance issues
-      color: $body-color;
+      min-width: var(--dropdown-min-width);
+      padding: var(--dropdown-padding-y) 0 0;
+      margin: var(--dropdown-spacer) 0 0; // override default ul
+      font-size: var(--font-size-base); // Redeclare because nesting can cause inheritance issues
+      color: var(--body-color);
       text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
       list-style: none;
-      background-color: $dropdown-bg;
+      background-color: var(--dropdown-bg);
       background-clip: padding-box;
-      border: $dropdown-border-width solid $dropdown-border-color;
-      @include border-radius($dropdown-border-radius);
-      @include box-shadow($dropdown-box-shadow);
+      border: var(--dropdown-border-width) solid var(--dropdown-border-color);
+      @include border-radius(var(--dropdown-border-radius));
+      @include box-shadow(var(--dropdown-box-shadow));
       border-top-left-radius: 0;
       border-top-right-radius: 0;
 
       &.show {
-        animation: dropdownFadeIn forwards $dropdown-menu-animation-speed;
-        top: calc(100% - #{$dropdown-menu-vertical-shift});
+        animation: dropdownFadeIn forwards var(--dropdown-menu-animation-speed);
+        top: calc(100% - var(--dropdown-menu-vertical-shift));
       }
 
       &:before {
@@ -473,11 +498,11 @@
 
         ul li {
           a {
-            color: $primary;
+            color: var(--#{$prefix}color-text-primary);
 
             span,
             i {
-              color: $primary;
+              color: var(--#{$prefix}color-text-primary);
             }
           }
         }
@@ -511,21 +536,21 @@
         content: '';
         position: absolute;
         top: auto;
-        bottom: -$dropdown-menu-notch-base-size - 6;
-        left: $dropdown-menu-notch-position-x;
-        width: $dropdown-menu-notch-base-size * 3;
-        height: $dropdown-menu-notch-base-size * 3;
-        border-radius: $dropdown-menu-radius;
-        background-color: $dropdown-bg;
+        bottom: calc(var(--dropdown-menu-notch-base-size) * -1 - 6);
+        left: var(--dropdown-menu-notch-position-x);
+        width: calc(var(--dropdown-menu-notch-base-size) * 3);
+        height: calc(var(--dropdown-menu-notch-base-size) * 3);
+        border-radius: var(--dropdown-menu-radius);
+        background-color: var(--dropdown-bg);
         transform: rotate(45deg);
         opacity: 0;
         display: block;
-        transition: opacity $dropdown-menu-animation-speed * 0.5 cubic-bezier(0.1, 0.57, 0.36, 0.99);
+        transition: opacity calc(var(--dropdown-menu-animation-speed) * 0.5) cubic-bezier(0.1, 0.57, 0.36, 0.99);
       }
     }
 
     > button.dropdown-toggle:before {
-      bottom: -$dropdown-menu-notch-base-size - 8;
+      bottom: calc(var(--dropdown-menu-notch-base-size) * -1 - 8);
     }
 
     a.dropdown-toggle,
@@ -541,8 +566,8 @@
   .megamenu {
     .dropdown-menu {
       min-width: auto;
-      left: $navigation-h-padding;
-      right: $navigation-h-padding;
+      left: var(--#{$prefix}navbar-h-padding);
+      right: var(--#{$prefix}navbar-h-padding);
       animation-timing-function: cubic-bezier(0.1, 0.57, 0.36, 0.99);
 
       //hide arrow
@@ -551,7 +576,7 @@
       }
 
       &.show {
-        animation: megamenuFadeIn forwards $dropdown-menu-animation-speed * 0.5;
+        animation: megamenuFadeIn forwards calc(var(--dropdown-menu-animation-speed) * 0.5);
       }
     }
   }
