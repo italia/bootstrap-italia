@@ -8,6 +8,8 @@
   --#{$prefix}navbar-close-button-icon-size: 2rem;
   --#{$prefix}navbar-links-margin-top: 102px;
   --#{$prefix}navbar-link-color: var(--#{$prefix}color-text-primary);
+  --#{$prefix}navbar-link-line-height: var(--#{$prefix}label-line-height);
+  --#{$prefix}navbar-link-font-weight: var(--#{$prefix}font-weight-solid);
   --#{$prefix}navbar-link-color-desk: var(--#{$prefix}color-text-inverse);
   --#{$prefix}navbar-link-active-bar-size: var(--#{$prefix}border-thick);
   --#{$prefix}navbar-link-active-bar-color: var(--#{$prefix}color-text-primary);
@@ -99,7 +101,7 @@
           display: block;
           background: transparent;
           color: var(--#{$prefix}color-text-primary);
-          font-weight: 600;
+          font-weight: var(--#{$prefix}navbar-link-font-weight);
           padding: var(--#{$prefix}navbar-spacing-stack) var(--#{$prefix}navbar-spacing-inset);
           position: relative;
 
@@ -421,6 +423,7 @@
             display: flex;
             align-self: flex-end;
             align-items: center;
+            line-height: var(--#{$prefix}navbar-link-line-height);
             font-weight: var(--#{$prefix}nav-link-font-weight);
             padding: var(--#{$prefix}navbar-spacing-stack) var(--#{$prefix}navbar-spacing-inset);
             color: var(--#{$prefix}navbar-link-color-desk);
