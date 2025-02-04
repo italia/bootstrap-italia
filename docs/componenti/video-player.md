@@ -151,20 +151,20 @@ diverse lingue.
 {% capture example %}
 <div class="row">
   <video controls data-bs-video>
-    <source src="https://italia.github.io/bootstrap-italia/docs/assets/video/ElephantsDream.mp4" type="video/mp4">
+    <source src="{{site.baseurl}}/docs/assets/video/ElephantsDream.mp4" type="video/mp4">
     <track 
       kind="captions" 
-      src="https://italia.github.io/bootstrap-italia/docs/assets/video/subtitles-it.vtt" 
+      src="{{site.baseurl}}/docs/assets/video/subtitles-it.vtt" 
       srclang="it" 
       label="Italiano" default>
     <track 
       kind="captions" 
-      src="https://italia.github.io/bootstrap-italia/docs/assets/video/subtitles-en.vtt" 
+      src="{{site.baseurl}}/docs/assets/video/subtitles-en.vtt" 
       srclang="en" 
       label="English">
     <track 
       kind="captions" 
-      src="https://italia.github.io/bootstrap-italia/docs/assets/video/subtitles-es.vtt" 
+      src="{{site.baseurl}}/docs/assets/video/subtitles-es.vtt" 
       srclang="es" 
       label="Español">
   </video>
@@ -190,15 +190,15 @@ Approfondisci l'argomento consultando la documentazione di
 
 ## Immagine di anteprima
 
-Per aggiungere un'immagine di anteprima al video occorre utilizzare l'attributo
-`poster` inizializzato con la url dell'anteprima.
+Per aggiungere un'immagine di anteprima come copertina al video occorre 
+utilizzare l'attributo `poster` inizializzato con la url dell'anteprima.
 
 {% capture callout %}
 
 ##### Attenzione
 
-Le immagini caricate devono rispettare il formato `16:9` per la corretta 
-visualizzazione dell'anteprima.
+Le immagini caricate come copertina devono rispettare la stessa `aspect ratio` 
+del video per una corretta visualizzazione.
 
 {% endcapture %}{% include callout.html content=callout type="warning" %}
 
@@ -206,9 +206,12 @@ visualizzazione dell'anteprima.
 {% capture example %}
 <div class="row">
   <video 
-    controls
     data-bs-video
-    poster="https://italia.github.io/bootstrap-italia/docs/assets/video/ElephantsDream.mp4-poster21.jpg"
+    poster="{{site.baseurl}}/docs/assets/video/video_cover_seagulls.png"
+    data-setup='{
+      "controls": true,
+      "fluid": true
+    }'
   >
     <source src="//vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
     <source src="//vjs.zencdn.net/v/oceans.webm" type="video/webm">
@@ -262,7 +265,7 @@ Di seguito un esempio in formato MPEG-DASH
 <div class="row">
   <video 
     data-bs-video
-    poster="https://italia.github.io/bootstrap-italia/docs/assets/video/ElephantsDream.mp4-poster16.gif"
+    poster="{{site.baseurl}}/docs/assets/video/ElephantsDream.mp4-poster16.gif"
     preload="auto"
     data-setup='{
       "controls": true,
@@ -270,35 +273,35 @@ Di seguito un esempio in formato MPEG-DASH
       "fluid": true
     }'
   >
-    <source src="https://italia.github.io/bootstrap-italia/docs/assets/video/ElephantsDreamDASH/ElephantsDream.mp4.mpd" type="application/dash+xml">
+    <source src="{{site.baseurl}}/docs/assets/video/ElephantsDreamDASH/ElephantsDream.mp4.mpd" type="application/dash+xml">
     <track 
       kind="captions" 
-      src="https://italia.github.io/bootstrap-italia/docs/assets/video/subtitles-it.vtt" 
+      src="{{site.baseurl}}/docs/assets/video/subtitles-it.vtt" 
       srclang="it" 
       label="Italiano" default>
     <track 
       kind="captions" 
-      src="https://italia.github.io/bootstrap-italia/docs/assets/video/subtitles-en.vtt" 
+      src="{{site.baseurl}}/docs/assets/video/subtitles-en.vtt" 
       srclang="en" 
       label="English">
     <track 
       kind="captions" 
-      src="https://italia.github.io/bootstrap-italia/docs/assets/video/subtitles-es.vtt" 
+      src="{{site.baseurl}}/docs/assets/video/subtitles-es.vtt" 
       srclang="es" 
       label="Español">
     <track 
       kind="chapters"
-      src="https://italia.github.io/bootstrap-italia/docs/assets/video/chapters-en.vtt" 
+      src="{{site.baseurl}}/docs/assets/video/chapters-en.vtt" 
       srclang="en" 
       label="English">
     <track 
       kind="chapters"
-      src="https://italia.github.io/bootstrap-italia/docs/assets/video/chapters-es.vtt" 
+      src="{{site.baseurl}}/docs/assets/video/chapters-es.vtt" 
       srclang="es" 
       label="Español">
     <track 
       kind="chapters"
-      src="https://italia.github.io/bootstrap-italia/docs/assets/video/chapters-it.vtt" 
+      src="{{site.baseurl}}/docs/assets/video/chapters-it.vtt" 
       srclang="it" 
       label="Italiano" default>
   </video>
@@ -344,7 +347,7 @@ Di seguito un esempio in formato HLS multilingua.
 <div class="row">
   <video
     data-bs-video
-    poster="https://italia.github.io/bootstrap-italia/docs/assets/video/ElephantsDream.mp4-poster21.jpg"
+    poster="{{site.baseurl}}/docs/assets/video/ElephantsDream.mp4-poster21.jpg"
     preload="auto"
     data-setup='{
       "controls": true,
@@ -352,7 +355,7 @@ Di seguito un esempio in formato HLS multilingua.
       "fluid": true
     }'
   >
-    <source src="https://italia.github.io/bootstrap-italia/docs/assets/video/ElephantsDreamHLS/ElephantsDream.mp4.m3u8" type="application/x-mpegURL">
+    <source src="{{site.baseurl}}/docs/assets/video/ElephantsDreamHLS/ElephantsDream.mp4.m3u8" type="application/x-mpegURL">
   </video>
   <div class="vjs-transcription accordion">
     <div class="accordion-item">
