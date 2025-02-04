@@ -421,7 +421,7 @@
             display: flex;
             align-self: flex-end;
             align-items: center;
-            font-weight: 400;
+            font-weight: var(--#{$prefix}nav-link-font-weight);
             padding: var(--#{$prefix}navbar-spacing-stack) var(--#{$prefix}navbar-spacing-inset);
             color: var(--#{$prefix}navbar-link-color-desk);
             border-bottom: var(--#{$prefix}navbar-link-active-bar-size) solid transparent;
