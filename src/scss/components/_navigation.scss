@@ -429,7 +429,8 @@
             &.dropdown-toggle {
               svg {
                 fill: var(--#{$prefix}icon-inverse);
-                margin-top: 3px;
+                margin-left: var(--#{$prefix}icon-spacing);
+                margin-top: 4px;
               }
             }
 
