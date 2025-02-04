@@ -21,7 +21,6 @@
   --#{$prefix}navbar-disabled-item-mobile-opacity: 0.6;
   --#{$prefix}navbar-hamburger-size: 1.5rem;
   --#{$prefix}navbar-background: var(--#{$prefix}color-background-primary);
-}
 
 //mobile
 //menu on bottom animation
@@ -395,7 +394,7 @@
         overflow-y: visible;
         transform: none;
         transition: none;
-        background: var(--#{$prefix}navbar-bg-color-desktop);
+        background: var(--#{$prefix}navbar-background);
 
         .navbar-nav {
           margin-top: 0;
@@ -464,27 +463,27 @@
       position: absolute;
       top: 100%;
       left: 0;
-      z-index: var(--zindex-dropdown);
+      z-index: var($zindex-dropdown);
       //display: none; // none by default, but block on "open" of the menu
       float: left;
-      min-width: var(--dropdown-min-width);
-      padding: var(--dropdown-padding-y) 0 0;
-      margin: var(--dropdown-spacer) 0 0; // override default ul
+      min-width: var($dropdown-min-width);
+      padding: var($dropdown-padding-y) 0 0;
+      margin: var($dropdown-spacer) 0 0; // override default ul
       font-size: var(--font-size-base); // Redeclare because nesting can cause inheritance issues
       color: var(--body-color);
       text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
       list-style: none;
-      background-color: var(--dropdown-bg);
+      background-color: var($dropdown-bg);
       background-clip: padding-box;
-      border: var(--dropdown-border-width) solid var(--dropdown-border-color);
-      @include border-radius(var(--dropdown-border-radius));
-      @include box-shadow(var(--dropdown-box-shadow));
+      border: var($dropdown-border-width) solid var($dropdown-border-color);
+      @include border-radius(var($dropdown-border-radius));
+      @include box-shadow(var($dropdown-box-shadow));
       border-top-left-radius: 0;
       border-top-right-radius: 0;
 
       &.show {
-        animation: dropdownFadeIn forwards var(--dropdown-menu-animation-speed);
-        top: calc(100% - var(--dropdown-menu-vertical-shift));
+        animation: dropdownFadeIn forwards var($dropdown-menu-animation-speed);
+        top: calc(100% - var($dropdown-menu-vertical-shift));
       }
 
       &:before {
@@ -536,21 +535,21 @@
         content: '';
         position: absolute;
         top: auto;
-        bottom: calc(var(--dropdown-menu-notch-base-size) * -1 - 6);
-        left: var(--dropdown-menu-notch-position-x);
-        width: calc(var(--dropdown-menu-notch-base-size) * 3);
-        height: calc(var(--dropdown-menu-notch-base-size) * 3);
-        border-radius: var(--dropdown-menu-radius);
-        background-color: var(--dropdown-bg);
+        bottom: calc(var($dropdown-menu-notch-base-size) * -1 - 6);
+        left: var($dropdown-menu-notch-position-x);
+        width: calc(var($dropdown-menu-notch-base-size) * 3);
+        height: calc(var($dropdown-menu-notch-base-size) * 3);
+        border-radius: var($dropdown-menu-radius);
+        background-color: var($dropdown-bg);
         transform: rotate(45deg);
         opacity: 0;
         display: block;
-        transition: opacity calc(var(--dropdown-menu-animation-speed) * 0.5) cubic-bezier(0.1, 0.57, 0.36, 0.99);
+        transition: opacity calc(var($dropdown-menu-animation-speed) * 0.5) cubic-bezier(0.1, 0.57, 0.36, 0.99);
       }
     }
 
     > button.dropdown-toggle:before {
-      bottom: calc(var(--dropdown-menu-notch-base-size) * -1 - 8);
+      bottom: calc(var($dropdown-menu-notch-base-size) * -1 - 8);
     }
 
     a.dropdown-toggle,
@@ -576,7 +575,7 @@
       }
 
       &.show {
-        animation: megamenuFadeIn forwards calc(var(--dropdown-menu-animation-speed) * 0.5);
+        animation: megamenuFadeIn forwards calc(var($dropdown-menu-animation-speed) * 0.5);
       }
     }
   }
