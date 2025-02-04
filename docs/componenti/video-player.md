@@ -215,12 +215,12 @@ visualizzazione dell'anteprima.
   </video>
   <div class="vjs-transcription accordion">
     <div class="accordion-item">
-      <h2 class="accordion-header no_toc" id="transcription-head6">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#transcription6" aria-expanded="true" aria-controls="transcription">
+      <h2 class="accordion-header no_toc" id="transcription-headcover">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#transcriptioncover" aria-expanded="true" aria-controls="transcription">
           Trascrizione
         </button>
       </h2>
-      <div id="transcription6" class="accordion-collapse collapse" role="region" aria-labelledby="transcription-head6">
+      <div id="transcriptioncover" class="accordion-collapse collapse" role="region" aria-labelledby="transcription-headcover">
         <div class="accordion-body">
           Vestibulum hendrerit ultrices nibh, sed pharetra lacus ultrices eget. Morbi et ipsum et sapien dapibus facilisis. Integer eget semper nibh. Proin enim nulla, egestas ac rutrum eget, ullamcorper nec turpis.
         </div>
