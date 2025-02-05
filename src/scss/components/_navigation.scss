@@ -478,7 +478,7 @@
       color: var(--body-color);
       text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
       list-style: none;
-      background-color: var($dropdown-bg);
+      background-color: $dropdown-bg;
       background-clip: padding-box;
       border: var($dropdown-border-width) solid var($dropdown-border-color);
       @include border-radius(var($dropdown-border-radius));
