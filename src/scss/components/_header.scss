@@ -1,7 +1,10 @@
 //mobile
 @use 'sass:math';
 
-.it-header-wrapper {
+.it-header-wrapper,
+.it-header-slim-wrapper,
+.it-header-center-wrapper,
+.it-header-navbar-wrapper {
   --#{$prefix}header-brand-spacing: var(--dsi-spacing-14x);
   --#{$prefix}header-brand-color: var(--#{$prefix}color-text-inverse);
   --#{$prefix}header-brand-icon-color: var(--#{$prefix}icon-inverse);
@@ -38,7 +41,9 @@
 }
 
 // Theme Light
-.it-header-wrapper .theme-light {
+.it-header-slim-wrapper.theme-light,
+.it-header-center-wrapper.theme-light,
+.it-header-navbar-wrapper.theme-light {
   --#{$prefix}header-center-background: var(--#{$prefix}color-background-inverse);
   --#{$prefix}header-center-text-color: var(--#{$prefix}color-text-primary);
   --#{$prefix}header-brand-icon-color: var(--#{$prefix}icon-primary);
