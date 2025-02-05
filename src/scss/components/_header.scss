@@ -16,6 +16,7 @@
   --#{$prefix}header-center-text-color: var(--#{$prefix}color-text-inverse);
   --#{$prefix}header-center-text-size: var(--#{$prefix}label-font-size-s);
   --#{$prefix}header-nav-background: var(--#{$prefix}color-background-primary);
+  --#{$prefix}header-nav-secondary-text-size: var(--#{$prefix}label-font-size);
   --#{$prefix}header-spacing-inset: var(--#{$prefix}spacing-inset-xs);
   --#{$prefix}header-search-button-color: var(--#{$prefix}icon-inverse);
   --#{$prefix}header-search-button-background: var(--#{$prefix}color-background-inverse);
@@ -43,7 +44,8 @@
 // Theme Light
 .it-header-slim-wrapper.theme-light,
 .it-header-center-wrapper.theme-light,
-.it-header-navbar-wrapper.theme-light {
+.it-header-navbar-wrapper.theme-light,
+.it-header-navbar-wrapper.theme-light-desk {
   --#{$prefix}header-center-background: var(--#{$prefix}color-background-inverse);
   --#{$prefix}header-center-text-color: var(--#{$prefix}color-text-primary);
   --#{$prefix}header-brand-icon-color: var(--#{$prefix}icon-primary);
@@ -82,11 +84,6 @@
 
       nav {
         background: transparent;
-
-        .custom-navbar-toggler {
-          padding: 0;
-          cursor: pointer;
-        }
       }
     }
   }
@@ -250,7 +247,7 @@
               justify-content: flex-end;
 
               a {
-                font-size: 0.875rem;
+                font-size: var(--#{$prefix}header-nav-secondary-text-size);
                 line-height: 1.6;
               }
             }
