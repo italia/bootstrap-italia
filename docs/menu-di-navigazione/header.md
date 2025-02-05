@@ -89,7 +89,7 @@ Il cambio lingua è gestito con il componente [dropdown]({{ site.baseurl }}/docs
               </div>
             </div>
             <div class="it-access-top-wrapper">
-              <a class="btn btn-primary btn-sm" href="#">Accedi</a>
+              <a class="btn btn-primary btn-xs" href="#">Accedi</a>
             </div>
           </div>
         </div>
@@ -197,7 +197,7 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
               </div>
             </div>
             <div class="it-access-top-wrapper">
-              <a class="btn btn-primary btn-sm" href="#">Accedi</a>
+              <a class="btn btn-primary btn-xs" href="#">Accedi</a>
             </div>
           </div>
         </div>
@@ -1065,7 +1065,7 @@ Al menu di navigazione principale può essere aggiunto anche un menu di navigazi
                 </div>
               </div>
               <div class="it-access-top-wrapper">
-                <a class="btn btn-primary btn-sm" href="#">Accedi</a>
+                <a class="btn btn-primary btn-xs" href="#">Accedi</a>
               </div>
             </div>
           </div>
@@ -1314,7 +1314,7 @@ Verrà creata un'ombra per enfatizzare l'Header rispetto alla pagina in cui è c
                 </div>
               </div>
               <div class="it-access-top-wrapper">
-                <a class="btn btn-primary btn-sm" href="#">Accedi</a>
+                <a class="btn btn-primary btn-xs" href="#">Accedi</a>
               </div>
             </div>
           </div>
