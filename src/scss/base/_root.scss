@@ -1,9 +1,9 @@
 :root {
-  --dsi-icon-size-xl: 64px;
-  --dsi-icon-size-l: 48px;
-  --dsi-icon-size-m: 32px;
-  --dsi-icon-size-s: 24px;
-  --dsi-icon-size-xs: 16px;
+  --dsi-icon-size-xl: 4rem;
+  --dsi-icon-size-l: 3px;
+  --dsi-icon-size-m: 2rem;
+  --dsi-icon-size-s: 1.5rem;
+  --dsi-icon-size-xs: 1rem;
   --dsi-sizing-full: 100%;
   --dsi-sizing-two-thirds: 75%;
   --dsi-sizing-half: 50%;
@@ -192,6 +192,7 @@
   --dsi-spacing-inset-m: var(--dsi-spacing-6x);
   --dsi-spacing-inset-s: var(--dsi-spacing-4x);
   --dsi-spacing-inset-xs: var(--dsi-spacing-2x);
+  --dsi-spacing-inset-xxs: var(--dsi-spacing-1x);
   --dsi-spacing-inline-l: var(--dsi-spacing-8x);
   --dsi-spacing-inline-m: var(--dsi-spacing-6x);
   --dsi-spacing-inline-s: var(--dsi-spacing-4x);
@@ -375,6 +376,7 @@
   --#{$prefix}spacing-inset-m: var(--dsi-spacing-inset-m);
   --#{$prefix}spacing-inset-s: var(--dsi-spacing-inset-s);
   --#{$prefix}spacing-inset-xs: var(--dsi-spacing-inset-xs);
+  --#{$prefix}spacing-inset-xxs: var(--dsi-spacing-inset-xxs);
   --#{$prefix}spacing-inline-l: var(--dsi-spacing-inline-l);
   --#{$prefix}spacing-inline-m: var(--dsi-spacing-inline-m); 
   --#{$prefix}spacing-inline-s: var(--dsi-spacing-inline-s); 

@@ -1,20 +1,20 @@
-//mobile
 .it-header-navbar-wrapper {
   nav {
     background: transparent;
+  }
+
+  @include media-breakpoint-up(lg) {
+    background: var(--#{$prefix}header-nav-background);
+
   }
 }
 
 //Tablet horizontal / small desktop
 @include media-breakpoint-up(lg) {
   .it-header-navbar-wrapper {
-    background: $header-center-bg-color;
-    .nav-item.megamenu > a.dropdown-toggle:before,
-    .nav-item.megamenu > button.dropdown-toggle:before {
-      bottom: -$header-nav-icon-arrow-megamenu-distance;
-    }
-    nav {
-      a {
+    .navbar {
+      .nav-link {
+        color: var(--#{$prefix}header-nav-text-color);
         text-decoration: none;
       }
       .navbar-collapsable {
