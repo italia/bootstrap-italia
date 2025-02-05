@@ -3,9 +3,6 @@
   align-items: center;
   height: var(--#{$prefix}header-center-height); 
   background: var(--#{$prefix}header-center-background);
-  @include media-breakpoint-up(lg) {
-    padding: 0 var(--#{$prefix}header-spacing-inset);
-  }
   
   // Header Center Small
   &.it-small-header {
@@ -21,6 +18,9 @@
   flex-basis: 100%;
   align-items: center;
   justify-content: space-between;
+  @include media-breakpoint-up(lg) {
+    padding: 0 var(--#{$prefix}header-spacing-inset);
+  }
 }
 
 // Right zone
@@ -31,7 +31,7 @@
 
   .it-socials {
     align-items: center;
-    font-size: var(--#{$prefix}header-center-text-size);
+    font-size: var(--#{$prefix}header-center-font-size);
 
     ul {
       display: flex;
@@ -56,9 +56,9 @@
 .it-search-wrapper {
   display: flex;
   align-items: center;
-  font-size: var(--#{$prefix}header-center-text-size);
+  font-size: var(--#{$prefix}header-center-font-size);
   @include media-breakpoint-up(md) {
-    margin-left: 1.25rem; // 20px
+    margin-left: 3rem; // 48px 
   }
 
   a.rounded-icon {

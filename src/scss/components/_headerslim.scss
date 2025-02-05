@@ -17,6 +17,11 @@
     border-bottom: 1px solid var(--#{$prefix}header-slim-border-color);
   }
 
+  // Text decoration for links inside header slim except buttons
+  a:not(.btn):hover {
+    text-decoration: underline;
+  }
+
   .it-header-slim-wrapper-content {
     display: flex;
     align-items: center;
@@ -25,64 +30,46 @@
       padding: 0 var(--#{$prefix}header-spacing-inset);
     }
 
-    // Link style for header slim
-    a {
-      text-decoration: none;
-      &:hover {
-        text-decoration: underline;
-      }
+    // Language dropdown
+    .dropdown-toggle {
+      display: flex;
+      align-items: center;
+      color: var(--#{$prefix}header-slim-text-color);
+      font-size: var(--#{$prefix}header-slim-font-size);
+      text-transform: uppercase;
 
-      // Language dropdown
-      &.dropdown-toggle {
-        display: flex;
-        align-items: center;
-        color: var(--#{$prefix}header-slim-text-color);
-        font-size: var(--#{$prefix}header-slim-text-size);
-        text-transform: uppercase;
-
-        &[aria-expanded='true'] {
-          & > .icon:last-of-type {
-            transform: scaleY(-1);
-          }
+      &[aria-expanded='true'] {
+        & > .icon:last-of-type {
+          transform: scaleY(-1);
         }
       }
 
-      // Secondary nav opener
-      &.it-opener {
-        display: block;
-        padding: 0.5rem 0;
-        color: var(--#{$prefix}header-slim-text-color);
-        font-size: var(--#{$prefix}header-slim-text-size);
-        &[aria-expanded='true'] {
-          & > .icon:last-of-type {
-            transform: scaleY(-1);
-          }
-        }
-      }
+    }
 
-      .icon {
-        width: var(--#{$prefix}icon-size-xs);
-        height: var(--#{$prefix}icon-size-xs);
-        // set default text color to icon
-        fill: currentColor;
-        transform-origin: center;
-        transition: transform var(--#{$prefix}transition-instant);
-        @include media-breakpoint-up(lg) {
-          margin-left: var(--#{$prefix}icon-spacing);
+    // Secondary nav opener
+    .it-opener {
+      display: block;
+      padding: 0.5rem 0;
+      color: var(--#{$prefix}header-slim-text-color);
+      font-size: var(--#{$prefix}header-slim-font-size);
+      &[aria-expanded='true'] {
+        & > .icon:last-of-type {
+          transform: scaleY(-1);
         }
       }
     }
+      
   }
 
+  // Overrides default navbar styles located in '_navbar.scss' 
   .navbar-brand {
     padding: 0;
     color: var(--#{$prefix}header-slim-text-color);
-    font-size: var(--#{$prefix}header-slim-text-size);
+    font-size: var(--#{$prefix}header-slim-font-size);
   }
 
   .it-header-slim-right-zone,
   .header-slim-right-zone {
-    // Keeping old class for retrocompatibility
     display: flex;
     align-items: center;
     align-self: flex-start;
@@ -104,7 +91,7 @@
       @include media-breakpoint-up(lg) {
         display: flex;
         align-items: center;
-        padding: 0 var(--#{$prefix}spacing-inset-s);
+        padding: 0 var(--#{$prefix}spacing-inset-xs);
         border-right: 1px solid var(--#{$prefix}header-slim-border-color);
         border-left: 1px solid var(--#{$prefix}header-slim-border-color);
       }
@@ -119,20 +106,39 @@
         padding: var(--#{$prefix}spacing-inset-s);
         text-decoration: none;
       }
+      &:hover {
+        color: var(--#{$prefix}header-slim-text-color);
+      }
       &.active {
         box-shadow: inset 0 -2px 0 var(--#{$prefix}header-slim-text-color);
         color: var(--#{$prefix}header-slim-text-color);
-        // cursor: default;
-      }
-      &:hover:not(.active) {
-        text-decoration: underline;
       }
     }
   }
+
+  // Style for the dropdown and opener icon inside header slim
+  .dropdown-toggle .icon,
+  .it-opener .icon  {
+    width: var(--#{$prefix}icon-size-xs);
+    height: var(--#{$prefix}icon-size-xs);
+    margin-left: var(--#{$prefix}icon-spacing);
+    fill: currentColor; // set default text color to icon
+    transform-origin: center;
+    transition: transform var(--#{$prefix}transition-instant);
+  }
 }
 
+// Header slim right zone height
 .it-header-slim-right-zone,
 .header-slim-right-zone {
-  // .header-slim-right-zone is .it-header-slim-right-zone now. We're keeping old class here for retrocompatibility
   height: var(--#{$prefix}header-slim-height);
 }
+
+// Spacing between language dropdown and login button
+.it-header-slim-right-zone,
+.header-slim-right-zone,
+.it-access-top-wrapper {
+  margin-left: var(--#{$prefix}spacing-inline-m);
+}
+
+
