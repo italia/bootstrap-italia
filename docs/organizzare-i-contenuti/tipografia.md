@@ -83,9 +83,8 @@ spazio quando lo schermo lo permette.
 Tutte le intestazioni HTML, da `<h1>` fino a `<h6>`, sono disponibili, anche se
 è buona norma non utilizzare più di 4 livelli di intestazione.
 
-Nel caso in cui si voglia presentare il testo nello stesso stile delle
-intestazioni, ma non sia possibile utilizzare l'elemento HTML appropriato,
-sono disponibili anche classi di tipo `.h1`, `.h2`, ecc.
+L'interlinea è impostata con il rapporto di  `1.2`.
+
 
 {% comment %}Example name: Intestazioni{% endcomment %}
 {% capture example %}
@@ -95,18 +94,26 @@ sono disponibili anche classi di tipo `.h1`, `.h2`, ecc.
 <h4 class="no_toc">Intestazione di tipo h4</h4>
 <h5 class="no_toc">Intestazione di tipo h5</h5>
 <h6 class="no_toc">Intestazione di tipo h6</h6>
+{% endcapture %}{% include example.html content=example %}
 
-<p class="h1">Stile h1</p>
-<p class="h2">Stile h2</p>
-<p class="h3">Stile h3</p>
-<p class="h4">Stile h4</p>
-<p class="h5">Stile h5</p>
-<p class="h6">Stile h6</p>
+
+Nel caso in cui si voglia presentare il testo nello stesso stile delle
+intestazioni, ma non sia possibile utilizzare l'elemento HTML appropriato,
+sono disponibili anche classi di tipo `.h1`, `.h2`, ecc.
+
+{% comment %}Example name: Stili intestazioni{% endcomment %}
+{% capture example %}
+<p class="h1">Testo con classe .h1</p>
+<p class="h2">Testo con classe .h2</p>
+<p class="h3">Testo con classe .h3</p>
+<p class="h4">Testo con classe .h4</p>
+<p class="h5">Testo con classe .h5</p>
+<p class="h6">Testo con classe .h6</p>
 {% endcapture %}{% include example.html content=example %}
 
 Queste le dimensioni nel dettaglio:
 
-<table>
+<table class="mb-5">
   <thead>
     <tr>
       <th>Intestazione</th>
@@ -117,50 +124,50 @@ Queste le dimensioni nel dettaglio:
   <tbody>
     <tr>
       <td>
-        <p class="h1">h1</p>
+        <p class="h1 mb-0">h1</p>
       </td>
-      <td>Bold, 40px/48px</td>
-      <td>Bold, 48px/60px</td>
+      <td>40px (2.5rem)</td>
+      <td>48px (3rem)</td>
     </tr>
     <tr>
       <td>
-        <p class="h2">h2</p>
+        <p class="h2 mb-0">h2</p>
       </td>
-      <td>Bold, 32px/40px</td>
-      <td>Bold, 40px/48px</td>
+      <td>32px (2rem)</td>
+      <td>40px (2.5rem)</td>
     </tr>
     <tr>
       <td>
-        <p class="h3">h3</p>
+        <p class="h3 mb-0">h3</p>
       </td>
-      <td>Bold, 28px/32px</td>
-      <td>Bold, 32px/40px</td>
+      <td>28px (1.75rem)</td>
+      <td>32px (2rem)</td>
     </tr>
     <tr>
       <td>
-        <p class="h4">h4</p>
+        <p class="h4 mb-0">h4</p>
       </td>
-      <td>SemiBold, 24px/28px</td>
-      <td>SemiBold, 28px/40px</td>
+      <td>24px (1.5rem)</td>
+      <td>28px (1.75rem)</td>
     </tr>
     <tr>
       <td>
-        <p class="h5">h5</p>
+        <p class="h5 mb-0">h5</p>
       </td>
-      <td>Regular, 20px/24px</td>
-      <td>Regular, 24px/40px</td>
+      <td>20px (1.25rem)</td>
+      <td>24px (1.5rem)</td>
     </tr>
     <tr>
       <td>
-        <p class="h6">h6</p>
+        <p class="h6 mb-0">h6</p>
       </td>
-      <td>SemiBold, 16px/24px</td>
-      <td>SemiBold, 18px/28px</td>
+      <td>16px (1rem)</td>
+      <td>18px (1.125rem)</td>
     </tr>
   </tbody>
 </table>
 
-### Intestazione h1 in evidenza
+### Intestazione in evidenza
 
 Gli elementi di intestazione tradizionali sono progettati per funzionare al
 meglio nel contesto della pagina. Nel caso sia necessario mettere in ulteriore
@@ -187,9 +194,11 @@ dare uno stile diverso per testi di intestazione secondaria.
 
 ## Paragrafi
 
-Il semplice paragrafo prevede una dimensione di testo e un'interlinea di
-`16px/24px` per dispositivi mobili, e di `18px/28px` per schermi con dimensioni
-maggiori di 576px.
+Il semplice paragrafo prevede una dimensione di testo di
+`16px/1rem` per dispositivi mobili e di `18px/1.125rem` per schermi con dimensioni
+maggiori di 576px. 
+
+L'interlinea è impostata con il rapporto di  `1.5`.
 
 {% comment %}Example name: Paragrafi contenuti{% endcomment %}
 {% capture example %}
