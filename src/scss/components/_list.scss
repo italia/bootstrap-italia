@@ -1,10 +1,30 @@
-// Properties
+//
+// Global Lists
+
+.list-unstyled {
+  @include list-unstyled();
+}
+
+// Inline turns list items into inline-block
+.list-inline {
+  @include list-unstyled();
+}
+.list-inline-item {
+  display: inline-block;
+
+  &:not(:last-child) {
+    margin-right: $list-inline-padding;
+  }
+}
+
+//
+// Custom Lists
+
 .it-list {
   --#{$prefix}list-item-spacing: var(--#{$prefix}spacing-inset-s) var(--#{$prefix}spacing-inset-xs);
   --#{$prefix}list-item-thumb-size: 5rem;
 }
 
-//mobile
 .it-list-wrapper {
   .it-list {
     list-style-type: none;
