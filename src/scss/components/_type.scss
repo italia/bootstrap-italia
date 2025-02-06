@@ -52,28 +52,21 @@
   > :last-child {
     margin-bottom: 0;
   }
-}
-
-// Headings
 
 h1,
 .h1 {
   font-size: 2.5rem;
-  line-height: 3rem;
   letter-spacing: -1px;
   @include media-breakpoint-up(sm) {
     font-size: 3rem;
-    line-height: 3.5rem;
   }
 }
 
 h2,
 .h2 {
   font-size: 2rem;
-  line-height: 2.5rem;
   @include media-breakpoint-up(sm) {
     font-size: 2.5rem;
-    line-height: 3rem;
   }
 }
 
@@ -90,27 +83,22 @@ h3,
 h4,
 .h4 {
   font-size: 1.5rem;
-  line-height: 2rem;
   @include media-breakpoint-up(sm) {
     font-size: 1.75rem;
-    line-height: 2rem;
   }
 }
 
 h5,
 .h5 {
   font-size: 1.25rem;
-  line-height: 1.5rem;
   @include media-breakpoint-up(sm) {
     font-size: 1.5rem;
-    line-height: 2rem;
   }
 }
 
 h6,
 .h6 {
   font-size: 1rem;
-  line-height: 1.5rem;
   @include media-breakpoint-up(sm) {
     font-size: 1.125rem;
   }
@@ -119,10 +107,25 @@ h6,
 h1,
 h2,
 h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3
+.h4,
+.h5,
+.h6 {
+  line-height: var(--#{$prefix}heading-line-height);
+}
+
+h1,
+h2,
+h3,
 .h1,
 .h2,
 .h3 {
-  font-weight: 700;
+  font-weight: var(--#{$prefix}heading-font-weight);
 }
 
 h4,
@@ -131,7 +134,9 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-weight: 600;
+  font-weight: var(--#{$prefix}heading-font-weight-weak);
+}
+
 }
 
 // Display heading
