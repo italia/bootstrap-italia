@@ -422,12 +422,20 @@
   --#{$prefix}heading-3-font-size: var(--dsi-heading-3-font-size);
   --#{$prefix}heading-2-font-size: var(--dsi-heading-2-font-size);
   --#{$prefix}heading-1-font-size: var(--dsi-heading-1-font-size);
-  --#{$prefix}heading-6-font-size-l: var(--dsi-heading-6-font-size-l);
-  --#{$prefix}heading-5-font-size-l: var(--dsi-heading-5-font-size-l);
-  --#{$prefix}heading-4-font-size-l: var(--dsi-heading-4-font-size-l);
-  --#{$prefix}heading-3-font-size-l: var(--dsi-heading-3-font-size-l);
-  --#{$prefix}heading-2-font-size-l: var(--dsi-heading-2-font-size-l);
-  --#{$prefix}heading-1-font-size-l: var(--dsi-heading-1-font-size-l);
+  @include media-breakpoint-up(sm) {
+    --#{$prefix}heading-1-font-size: var(--dsi-heading-1-font-size-l);
+    --#{$prefix}heading-2-font-size: var(--dsi-heading-2-font-size-l);
+    --#{$prefix}heading-3-font-size: var(--dsi-heading-3-font-size-l);
+    --#{$prefix}heading-4-font-size: var(--dsi-heading-4-font-size-l);
+    --#{$prefix}heading-5-font-size: var(--dsi-heading-5-font-size-l);
+    --#{$prefix}heading-6-font-size: var(--dsi-heading-6-font-size-l);
+  }
+  // --#{$prefix}heading-6-font-size-l: var(--dsi-heading-6-font-size-l);
+  // --#{$prefix}heading-5-font-size-l: var(--dsi-heading-5-font-size-l);
+  // --#{$prefix}heading-4-font-size-l: var(--dsi-heading-4-font-size-l);
+  // --#{$prefix}heading-3-font-size-l: var(--dsi-heading-3-font-size-l);
+  // --#{$prefix}heading-2-font-size-l: var(--dsi-heading-2-font-size-l);
+  // --#{$prefix}heading-1-font-size-l: var(--dsi-heading-1-font-size-l);
   --#{$prefix}heading-font-weight: var(--dsi-heading-font-weight);
   --#{$prefix}heading-font-weight-weak: var(--dsi-heading-font-weight-weak);
   --#{$prefix}heading-line-height: var(--dsi-heading-line-height);
