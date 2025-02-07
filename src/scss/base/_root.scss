@@ -350,7 +350,6 @@
   --#{$prefix}border-radius-pill: #{$border-radius-pill};
   --#{$prefix}link-color: #{$link-color};
   --#{$prefix}link-hover-color: #{$link-hover-color};
-  --#{$prefix}code-color: #{$code-color};
   // ----------------------------------------------------------- //
 
   // Theme colors 
@@ -435,6 +434,7 @@
   --#{$prefix}label-font-size-xs: var(--dsi-label-font-size-xs);
   --#{$prefix}label-font-size-m: var(--dsi-label-font-size-m);
   --#{$prefix}label-line-height: var(--dsi-font-line-height-tight);
+  --#{$prefix}code-font-size: var(--dsi-font-size-3);
 
   // Typography responsive properties
   @include media-breakpoint-up(sm) {
@@ -497,6 +497,7 @@
   --#{$prefix}color-text-primary-hover: var(--dsi-color-text-primary-hover);
   --#{$prefix}color-text-primary: var(--dsi-color-text-primary);
   --#{$prefix}color-text-base: var(--dsi-color-text-base);
+  --#{$prefix}code-color: var(--dsi-color-text-secondary);
   
   // Border colors
   --#{$prefix}color-border-danger-active: var(--dsi-color-border-danger-active);
@@ -551,7 +552,10 @@
   --#{$prefix}color-background-primary-lighter: var(--dsi-color-background-primary-lighter);
   --#{$prefix}color-background-primary-light: var(--dsi-color-background-primary-light);
   --#{$prefix}color-background-primary: var(--dsi-color-background-primary);
-  --#{$prefix}highlight-background: var(--dsi-color-teal-80);
+  --#{$prefix}highlight-background: var(--dsi-color-teal-80); // TODO: replace with semantic token
+  --#{$prefix}code-background: var(--dsi-color-background-subtle);
+  --#{$prefix}ins-background: var(--dsi-color-emerald-67);
+  --#{$prefix}del-background: var(--dsi-color-red-70);
   
   // Status colors - reference the background category colors only
   --#{$prefix}color-status-danger: var(--dsi-color-background-danger);

@@ -24,11 +24,88 @@ strong {
   font-weight: var(--#{$prefix}font-weight-strong);
 }
 
+kbd,
+mark,
+code {
+  padding: 0 2px;
+}
+
 mark {
-  padding: 2px;
   background-color: var(--#{$prefix}highlight-background);
 }
 
+pre,
+code,
+kbd,
+samp {
+  font-family: var(--#{$prefix}font-mono);
+  border-radius: var(--#{$prefix}radius-smooth);
+}
+
+pre {
+  font-size: var(--#{$prefix}code-font-size);
+  color: $pre-color;
+
+  code {
+    font-size: inherit;
+    color: inherit;
+    word-break: normal;
+  }
+}
+
+ins,
+del {
+  padding: var(--#{$prefix}spacing-inset-xxs) var(--#{$prefix}spacing-inset-m);
+  display: flex;
+  align-items: center;
+  font: var(--#{$prefix}body-font-size);
+  text-decoration: none;
+  position: relative;
+}
+
+ins {
+  background-color: var(--#{$prefix}ins-background);
+  text-decoration: none;
+}
+
+del {
+  background-color: var(--#{$prefix}del-background);
+}
+
+del::before,
+ins::before {
+  position: absolute;
+  left: 0.5rem;
+}
+
+del::before {
+  content: '−';
+}
+
+ins::before {
+  content: '+';
+}
+
+code {
+  font-size: var(--#{$prefix}code-font-size);
+  color: var(--#{$prefix}code-color);
+  word-wrap: break-word;
+
+  p & {
+    background-color: var(--#{$prefix}code-background);
+  }
+}
+
+kbd {
+  font-size: var(--#{$prefix}code-font-size);
+  color: var(--#{$prefix}color-text-base);
+  background-color: var(--#{$prefix}color-background-subtle);
+
+  kbd {
+    padding: 0;
+    font-size: var(--#{$prefix}code-font-size);
+  }
+}
 
 small,
 .small {

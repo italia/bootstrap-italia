@@ -38,4 +38,6 @@ title: Stili tipografici
   <li>Voce lista 4</li>
 </ol>
 
+<p>Premi<kbd>Ctrl</kbd>+<kbd>Shift</kbd> per evidenziare il testo</p>
+
 </div>

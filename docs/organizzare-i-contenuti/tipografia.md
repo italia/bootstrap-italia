@@ -232,9 +232,9 @@ semplicemente gli elementi HTML5 per il trattamento di testo.
 <p>Esempio di testo <em>corsivo</em>.</p>
 <p>Esempio di testo <strong>in grassetto</strong>.</p>
 <p>Esempio di testo <small>rimpicciolito</small>.</p>
-<p>Esempio di testo <ins>aggiuntivo</ins>.</p>
-<p>Esempio di testo <del>cancellato</del> o <s>invalido</s>.</p>
-<p>Esempio di testo <code>monospace</code>.</p>
+<p>Esempio di <code>codice</code> in un paragrafo di testo.</p>
+<ins>Testo aggiunto</ins>
+<del>Testo rimosso</del>
 {% endcapture %}{% include example.html content=example %}
 
 Le classi `.mark` e `.small` sono disponibili anche per applicare gli stessi
