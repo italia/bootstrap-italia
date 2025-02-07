@@ -379,7 +379,8 @@
   --#{$prefix}spacing-stack-m: var(--dsi-spacing-stack-m);
   --#{$prefix}spacing-stack-s: var(--dsi-spacing-stack-s);
   --#{$prefix}spacing-stack-xs: var(--dsi-spacing-stack-xs);
-  --#{$prefix}paragraph-spacing: var(--dsi-spacing-stack-m);
+  --#{$prefix}heading-spacing: var(--dsi-spacing-stack-s);
+  --#{$prefix}paragraph-spacing: var(--dsi-spacing-stack-l);
   
   // Typography
   --#{$prefix}font-mono: var(--dsi-font-mono);

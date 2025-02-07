@@ -153,7 +153,15 @@ h4, .h4,
 h5, .h5,
 h6, .h6 {
   line-height: var(--#{$prefix}heading-line-height);
+  margin-top: 0;
+  margin-bottom: var(--#{$prefix}heading-spacing);
+
+   // Heading top spacing
+  * + & {
+    margin-top: var(--#{$prefix}paragraph-spacing); // Use the paragraph spacing variable when available
+  }
 }
+
 
 h1,
 h2,
@@ -176,11 +184,12 @@ h6,
 h1,
 .h1,
 .display-1 {
-  letter-spacing: -1px;
+  letter-spacing: -1px; // Reduce letter spacing on first or display headings
 }
 
 //
 // Font Family
+// Use !important to override the default font-family
 
 .font-serif {
   font-family: var(--#{$prefix}font-serif) !important;
@@ -197,14 +206,6 @@ h1,
 //
 // Misc
 
-.blockquote {
-  margin-bottom: $blockquote-margin-y;
-  @include font-size($blockquote-font-size);
-
-  > :last-child {
-    margin-bottom: 0;
-  }
-}
 
 // Display heading
 .display-1 {
@@ -229,6 +230,10 @@ blockquote,
   border-left: var(--#{$prefix}border-thick) solid var(--#{$prefix}border-color-secondary);
   font-size: var(--#{$prefix}body-font-size);
   line-height: var(--#{$prefix}body-line-height);
+
+  > :last-child {
+    margin-bottom: 0;
+  }
 
   &.text-end {
     margin-right: var(--#{$prefix}spacin-inline-xs);
