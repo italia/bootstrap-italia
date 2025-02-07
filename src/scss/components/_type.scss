@@ -1,121 +1,80 @@
-// Type display classes
-@each $display, $font-size in $display-font-sizes {
-  .display-#{$display} {
-    @include font-size($font-size);
-    font-family: $display-font-family;
-    font-style: $display-font-style;
-    font-weight: $display-font-weight;
-    line-height: $display-line-height;
-  }
+//
+// Global typography elements
+
+body {
+  font-family: var(--#{$prefix}font-sans);
 }
 
-//
-// Emphasis
-//
+p,
+ul,
+ol,
+dl {
+  font-size: var(--#{$prefix}body-font-size);
+  line-height: var(--#{$prefix}body-line-height);
+}
+
+caption,
+figcaption {
+  font-size: var(--#{$prefix}caption-font-size);
+  line-height: var(--#{$prefix}caption-line-height);
+}
+
+b,
+strong {
+  font-weight: var(--#{$prefix}font-weight-strong);
+}
+
+mark {
+  padding: 2px;
+  background-color: var(--#{$prefix}highlight-background);
+}
+
+
+small,
 .small {
-  @extend small;
+  font-size: var(--#{$prefix}caption-font-size);
 }
 
-.mark {
-  @extend mark;
+.x-small {
+  font-size: var(--#{$prefix}font-size-1);
 }
-
-//
-// Lists
-//
-
-.list-unstyled {
-  @include list-unstyled();
-}
-
-// Inline turns list items into inline-block
-.list-inline {
-  @include list-unstyled();
-}
-.list-inline-item {
-  display: inline-block;
-
-  &:not(:last-child) {
-    margin-right: $list-inline-padding;
-  }
-}
-
-//
-// Misc
-//
-
-// Blockquotes
-.blockquote {
-  margin-bottom: $blockquote-margin-y;
-  @include font-size($blockquote-font-size);
-
-  > :last-child {
-    margin-bottom: 0;
-  }
 
 h1,
 .h1 {
-  font-size: 2.5rem;
-  letter-spacing: -1px;
-  @include media-breakpoint-up(sm) {
-    font-size: 3rem;
-  }
+  font-size: var(--#{$prefix}heading-1-font-size); 
 }
 
 h2,
 .h2 {
-  font-size: 2rem;
-  @include media-breakpoint-up(sm) {
-    font-size: 2.5rem;
-  }
+  font-size: var(--#{$prefix}heading-2-font-size); 
 }
 
 h3,
 .h3 {
-  font-size: 1.75rem;
-  line-height: 2rem;
-  @include media-breakpoint-up(sm) {
-    font-size: 2rem;
-    line-height: 2.5rem;
-  }
+  font-size: var(--#{$prefix}heading-3-font-size); 
 }
 
 h4,
 .h4 {
-  font-size: 1.5rem;
-  @include media-breakpoint-up(sm) {
-    font-size: 1.75rem;
-  }
+  font-size: var(--#{$prefix}heading-4-font-size); 
 }
 
 h5,
 .h5 {
-  font-size: 1.25rem;
-  @include media-breakpoint-up(sm) {
-    font-size: 1.5rem;
-  }
+  font-size: var(--#{$prefix}heading-5-font-size); 
 }
 
 h6,
 .h6 {
-  font-size: 1rem;
-  @include media-breakpoint-up(sm) {
-    font-size: 1.125rem;
-  }
+  font-size: var(--#{$prefix}heading-6-font-size); 
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.h1,
-.h2,
-.h3
-.h4,
-.h5,
-.h6 {
+h1, .h1, 
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
   line-height: var(--#{$prefix}heading-line-height);
 }
 
@@ -137,69 +96,81 @@ h6,
   font-weight: var(--#{$prefix}heading-font-weight-weak);
 }
 
+h1,
+.h1,
+.display-1 {
+  letter-spacing: -1px;
+}
+
+//
+// Font Family
+
+.font-serif {
+  font-family: var(--#{$prefix}font-serif) !important;
+}
+
+.font-sans-serif {
+  font-family: var(--#{$prefix}font-sans) !important;
+}
+
+.font-monospace {
+  font-family: var(--#{$prefix}font-mono) !important;
+}
+
+//
+// Misc
+
+.blockquote {
+  margin-bottom: $blockquote-margin-y;
+  @include font-size($blockquote-font-size);
+
+  > :last-child {
+    margin-bottom: 0;
+  }
 }
 
 // Display heading
-
 .display-1 {
-  font-size: 3rem;
-  font-weight: 700;
-
-  @include media-breakpoint-up(sm) {
-    font-size: 3.5rem;
-    line-height: 1.25;
-  }
+  font-size: var(--#{$prefix}display-font-size);
+  font-weight: var(--#{$prefix}heading-font-weight);
+  line-height: var(--#{$prefix}heading-line-height);
 }
 
-// Text elements
-
-p,
-ul,
-ol,
-dl {
-  font-size: 1rem;
-  line-height: 1.5rem;
-  @include media-breakpoint-up(sm) {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-  }
-}
-
+// Lead
 .lead {
-  @include font-size($lead-font-size);
-  font-weight: $lead-font-weight;
-  font-size: 1.25rem;
-  line-height: 2rem;
-  @include media-breakpoint-up(sm) {
-    font-size: 1.5rem;
-  }
+  font-size: var(--#{$prefix}lead-font-size);
+  font-weight: var(--#{$prefix}lead-font-weight);
+  line-height: var(--#{$prefix}lead-line-height);
 }
 
 // Blockquote
-
 blockquote,
 .blockquote {
-  font-size: 1.125rem;
-  line-height: 1.5rem;
-  margin: 1.5rem 0;
-  margin-left: calc($spacer / 2);
-  border-left: 4px solid $analogue-2;
-  padding: calc($spacer / 4) $spacer;
+  margin: var(--#{$prefix}spacing-stack-m) 0;
+  margin-left: var(--#{$prefix}spacin-inline-xs);
+  padding: var(--#{$prefix}spacing-inset-s);
+  border-left: var(--#{$prefix}border-thick) solid var(--#{$prefix}border-color-secondary);
+  font-size: var(--#{$prefix}body-font-size);
+  line-height: var(--#{$prefix}body-line-height);
+
   &.text-end {
-    margin-right: calc($spacer / 2);
-    border-right: 4px solid $analogue-2;
+    margin-right: var(--#{$prefix}spacin-inline-xs);
+    border-right: var(--#{$prefix}border-thick) solid var(--#{$prefix}border-color-secondary);
   }
+  
   &.text-center,
   &.text-end,
   &.blockquote-simple {
     margin-left: 0;
-    border-left: none;
     border-right: none;
+    border-left: none;
   }
+  
   &.text-center,
   &.blockquote-simple {
     padding: 0;
   }
+  
   &.blockquote-simple {
     font-style: italic;
   }
@@ -207,79 +178,44 @@ blockquote,
   // Card version
   &.blockquote-card {
     margin-left: 0;
-    padding: 16px 40px 24px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: var(--#{$prefix}spacing-inset-m);
+    box-shadow: var(--#{$prefix}shadow-s);
+    background-color: var(--#{$prefix}color-background-inverse); // TODO: Use a card background variable when available
+
     .blockquote-footer {
       font-size: inherit;
       &:before {
         content: none;
       }
     }
+    
     &.dark {
-      background-color: $primary;
       border-left: none;
-      color: $white;
-      padding: 40px;
+      background-color: var(--#{$prefix}color-background-primary);
+      color: var(--#{$prefix}color-text-inverse);
       .blockquote-footer {
-        color: $white;
+        color: var(--#{$prefix}color-text-inverse);
       }
     }
   }
 }
 
 .blockquote-footer {
+  margin-top: 0;
   margin-bottom: $blockquote-margin-y;
+  color: $blockquote-small-color;
   @include font-size($blockquote-footer-font-size);
   &::before {
     content: '\2014\00A0'; // em dash, nbsp
   }
-  color: $blockquote-small-color;
-  margin-top: 0;
   .bg-dark & {
     color: $blockquote-small-color-dark;
   }
 }
 
-// Global typography elements
-
-caption,
-figcaption {
-  font-size: 0.875rem;
-  line-height: 1rem;
-}
-
-b,
-strong {
-  font-weight: 700;
-}
-
-small,
-.small {
-  font-size: 0.875rem;
-}
-
-.x-small {
-  font-size: 0.75rem;
-}
-
-// Font Family
-
-.font-serif {
-  font-family: $font-family-serif !important;
-}
-
-.font-sans-serif {
-  font-family: $font-family-sans-serif !important;
-}
-
-.font-monospace {
-  font-family: $font-family-monospace !important;
-}
-
 // Abbreviations
-
 .initialism {
-  @include font-size($initialism-font-size);
-  text-transform: uppercase;
   font-size: 90%;
+  text-transform: uppercase;
+  @include font-size($initialism-font-size);
 }
