@@ -24,7 +24,6 @@ strong {
   font-weight: var(--#{$prefix}font-weight-strong);
 }
 
-kbd,
 mark,
 code {
   padding: 0 2px;
@@ -97,9 +96,14 @@ code {
 }
 
 kbd {
-  font-size: var(--#{$prefix}code-font-size);
-  color: var(--#{$prefix}color-text-base);
-  background-color: var(--#{$prefix}color-background-subtle);
+  padding: 2px var(--#{$prefix}spacing-inset-xxs);
+  font-size: var(--#{$prefix}font-size-1);
+  font-weight: var(--#{$prefix}font-weight-solid);
+  color: var(--#{$prefix}color-text-secondary);
+  background-color: var(--#{$prefix}color-background-secondary-lighter);
+  border: 1px solid var(--#{$prefix}color-border-secondary);
+  box-shadow: var(--#{$prefix}shadow-s), 0 2px 0 0 hsla(255, 0%, 100%, 0.7) inset;
+  white-space: nowrap;
 
   kbd {
     padding: 0;
