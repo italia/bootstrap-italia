@@ -97,11 +97,12 @@ code {
 
 kbd {
   padding: 2px var(--#{$prefix}spacing-inset-xxs);
+  margin: 0 2px;
   font-size: var(--#{$prefix}font-size-1);
   font-weight: var(--#{$prefix}font-weight-solid);
   color: var(--#{$prefix}color-text-secondary);
   background-color: var(--#{$prefix}color-background-secondary-lighter);
-  border: 1px solid var(--#{$prefix}color-border-secondary);
+  border: 1px solid var(--#{$prefix}color-border-subtle);
   box-shadow: var(--#{$prefix}shadow-s), 0 2px 0 0 hsla(255, 0%, 100%, 0.7) inset;
   white-space: nowrap;
 
