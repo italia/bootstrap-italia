@@ -37,29 +37,29 @@ pre,
 code,
 kbd,
 samp {
-  font-family: var(--#{$prefix}font-mono);
   border-radius: var(--#{$prefix}radius-smooth);
+  font-family: var(--#{$prefix}font-mono);
 }
 
 pre {
-  font-size: var(--#{$prefix}code-font-size);
   color: $pre-color;
+  font-size: var(--#{$prefix}code-font-size);
 
   code {
-    font-size: inherit;
     color: inherit;
+    font-size: inherit;
     word-break: normal;
   }
 }
 
 ins,
 del {
-  padding: var(--#{$prefix}spacing-inset-xxs) var(--#{$prefix}spacing-inset-m);
+  position: relative;
   display: flex;
   align-items: center;
+  padding: var(--#{$prefix}spacing-inset-xxs) var(--#{$prefix}spacing-inset-m);
   font: var(--#{$prefix}body-font-size);
   text-decoration: none;
-  position: relative;
 }
 
 ins {
@@ -86,8 +86,8 @@ ins::before {
 }
 
 code {
-  font-size: var(--#{$prefix}code-font-size);
   color: var(--#{$prefix}code-color);
+  font-size: var(--#{$prefix}code-font-size);
   word-wrap: break-word;
 
   p & {
@@ -96,14 +96,14 @@ code {
 }
 
 kbd {
-  padding: 2px var(--#{$prefix}spacing-inset-xxs);
   margin: 0 2px;
+  padding: 2px var(--#{$prefix}spacing-inset-xxs);
+  border: 1px solid var(--#{$prefix}color-border-subtle);
+  background-color: var(--#{$prefix}color-background-secondary-lighter);
+  box-shadow: var(--#{$prefix}shadow-s), 0 2px 0 0 hsla(255, 0%, 100%, 0.7) inset;
+  color: var(--#{$prefix}color-text-secondary);
   font-size: var(--#{$prefix}font-size-1);
   font-weight: var(--#{$prefix}font-weight-solid);
-  color: var(--#{$prefix}color-text-secondary);
-  background-color: var(--#{$prefix}color-background-secondary-lighter);
-  border: 1px solid var(--#{$prefix}color-border-subtle);
-  box-shadow: var(--#{$prefix}shadow-s), 0 2px 0 0 hsla(255, 0%, 100%, 0.7) inset;
   white-space: nowrap;
 
   kbd {
@@ -157,9 +157,9 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-  line-height: var(--#{$prefix}heading-line-height);
   margin-top: 0;
   margin-bottom: var(--#{$prefix}heading-spacing);
+  line-height: var(--#{$prefix}heading-line-height);
 
   // Adds top spacing when two heading tags or classes are adiacent or follow a paragraph
   :is(h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6) + &,
@@ -267,8 +267,8 @@ blockquote,
   &.blockquote-card {
     margin-left: 0;
     padding: var(--#{$prefix}spacing-inset-m);
-    box-shadow: var(--#{$prefix}shadow-s);
     background-color: var(--#{$prefix}color-background-inverse); // TODO: Use a card background variable when available
+    box-shadow: var(--#{$prefix}shadow-s);
 
     .blockquote-footer {
       font-size: inherit;
@@ -290,20 +290,19 @@ blockquote,
 
 .blockquote-footer {
   margin-top: 0;
-  margin-bottom: $blockquote-margin-y;
-  color: $blockquote-small-color;
-  @include font-size($blockquote-footer-font-size);
+  margin-bottom: var(--#{$prefix}spacing-stack-s);
+  color: var(--#{$prefix}color-text-secondary);
+  font-size: var(--#{$prefix}label-font-size-s);
   &::before {
     content: '\2014\00A0'; // em dash, nbsp
   }
   .bg-dark & {
-    color: $blockquote-small-color-dark;
+    color: var(--#{$prefix}color-text-muted);
   }
 }
 
 // Abbreviations
 .initialism {
-  font-size: 90%;
+  font-size: var(--#{$prefix}label-font-size-s);
   text-transform: uppercase;
-  @include font-size($initialism-font-size);
 }
