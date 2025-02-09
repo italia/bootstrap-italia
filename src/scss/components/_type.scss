@@ -159,7 +159,7 @@ h6, .h6 {
   // Adds top spacing when two heading tags or classes are adiacent or follow a paragraph
   :is(h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6) + &,
   p + & {
-    margin-top: var(--#{$prefix}paragraph-spacing); // Use the paragraph spacing variable when available
+    padding-top: var(--#{$prefix}spacing-stack-s); // Use the paragraph spacing variable when available
   }
 }
 
