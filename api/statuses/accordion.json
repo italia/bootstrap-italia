@@ -1,6 +1,6 @@
 {
     "amichevole con lettori di schermo": "PRONTO",
-    "angular Kit": "PRONTO",
+    "angular Kit": "DA RIVEDERE",
     "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/collapse",
     "assignees": [
         "frmascia11y"
@@ -16,7 +16,7 @@
     },
     "id": "PVTI_lADOAOqloM4AcXblzgMjtRg",
     "navigabile": "PRONTO",
-    "notes / More": "In Angular kit \u00e8 sotto il componente Collapse. Uniformare? ",
+    "notes / Issues": "https://github.com/italia/design-angular-kit/issues/426",
     "react Kit": "PRONTO",
     "react Kit - url": "https://italia.github.io/design-react-kit/?path=/story/documentazione-componenti-accordion--accordion",
     "status": "Todo",
