@@ -1,5 +1,6 @@
-## [2.13.3](https://github.com/italia/bootstrap-italia/compare/v2.13.2...v2.13.3) (2025-02-03)
+## [2.13.4](https://github.com/italia/bootstrap-italia/compare/v2.13.3...v2.13.4) (2025-02-10)
 
 ### Bug Fixes
 
-* **types:** type only import for bootstrap factory methods ([f01bea8](https://github.com/italia/bootstrap-italia/commit/f01bea8ce558968c37b0629e4422d34fe5e5a899))
+* button text and icon space ([36a6c33](https://github.com/italia/bootstrap-italia/commit/36a6c3399520ca2dd40e35204be9ed8c12a26da3))
+* show big button on mobile for youtube videos ([b25a3fe](https://github.com/italia/bootstrap-italia/commit/b25a3fef8a8de7fe635ddd85617350f40584ee68))
