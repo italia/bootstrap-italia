@@ -12,7 +12,7 @@ Per aggiungere un pulsante personalizzato, è sufficiente utilizzare la classe `
 
 {% comment %}Example name: Base{% endcomment %}
 {% capture example %}
-<button type="button" class="btn">Link</button>
+<button type="button" class="btn btn-primary">Link</button>
 {% endcapture %}{% include example.html content=example %}
 
 Le classi `.btn` sono state pensate per essere utilizzate con l'elemento `<button>`. Tuttavia, è possibile applicare lo stile per i pulsanti anche ad elementi di tipo `<a>` o `<input>`, anche se alcuni browser potrebbero mostrare un rendering lievemente diverso.
