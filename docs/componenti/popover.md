@@ -114,6 +114,16 @@ Popover con icona e link
 </button>
 {% endcapture %}{% include example.html content=example %}
 
+Prestare attenzione alla inizializzazione del Popover contenente le icone
+come nel caso sopra: per la corretta visualizzazione del componente occorre 
+disabilitare l'opzione di `sanitize`.
+
+```js
+var popover = new bootstrap.Popover(document.querySelector('.example-popover'), {
+  sanitize: false,
+})
+```
+
 ### Modalità Hover
 
 Per aprire il Popover all'hover del mouse sull'elemento, aggiungere l'attributo `data-bs-trigger="hover"` al tag dello stesso.

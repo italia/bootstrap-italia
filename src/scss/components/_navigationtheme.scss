@@ -1,187 +1,111 @@
-@media (max-width: #{map-get($grid-breakpoints, lg)}) {
-  .navbar {
-    &.theme-dark-mobile {
-      // navbar mobile
-      .navbar-collapsable {
-        // menu vrapper
-        .menu-wrapper {
-          background: $navigation-dark-bg-color;
-        }
-        /*lista menu*/
-        .navbar-nav {
-          li {
-            &.megamenu {
-              // vertical cta
-              .dropdown-menu {
-                .it-vertical {
-                  // description content
-                  &.it-description {
-                    p {
-                      color: $navigation-dark-text-color;
-                    }
-                    .description-content {
-                      &:before {
-                        background: $navigation-light-megamenu-separator-color;
-                      }
-                    }
-                  }
-                }
-              }
-              a.it-heading-link,
-              a.it-footer-link {
-                color: $navigation-dark-text-color;
-                svg {
-                  fill: $navigation-dark-text-color;
-                }
-              }
-            }
-            a.nav-link,
-            button.nav-link {
-              color: $navigation-dark-text-color;
-              svg {
-                fill: $navigation-dark-text-color;
-              }
-              &.active {
-                border-left-color: $navigation-dark-text-color;
-              }
-            }
-          }
-        }
-      }
-      //wrapper pulsante di chiusura menu
-      .close-div {
-        .close-menu {
-          color: $navigation-dark-text-color;
-        }
-      }
-      //dropdown
-      .dropdown-menu {
-        .link-list-wrapper {
-          ul {
-            li {
-              a {
-                &.list-item.active {
-                  color: $navigation-dark-text-color;
-
-                  span {
-                    color: $navigation-dark-text-color;
-                  }
-                }
-                svg {
-                  fill: $navigation-dark-text-color;
-                }
-                span {
-                  color: $navigation-dark-text-color;
-                }
-                i {
-                  color: $navigation-dark-text-color;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
+:root {
+  --navigation-dark-bg-color: #000000;
+  --navigation-dark-text-color: #ffffff;
+  --navigation-light-megamenu-separator-color: #e0e0e0;
+  --navigation-light-bg-color: #f8f9fa;
+  --navigation-light-text-color: #333333;
+  --dropdown-box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 6px;
 }
-/*
-++++++++++++++++++++++++++++++Desktop light Theme+++++++++++++++++++++++++++++++++++++++++++++++++
-*/
+
 @include media-breakpoint-up(lg) {
   .navbar {
+    &.theme-dark-mobile,
     &.theme-light-desk {
-      background: $navigation-light-bg-color;
-      box-shadow: $dropdown-box-shadow;
-      // navbar mobile
-      .navbar-collapsable {
-        // menu vrapper
-        .menu-wrapper {
-          background: $navigation-light-bg-color;
+      .navbar-collapsable .menu-wrapper {
+        background: var(--navigation-dark-bg-color);
+      }
+      
+      .navbar-nav li {
+        a.nav-link,
+        button.nav-link,
+        &.megamenu a.it-heading-link,
+        &.megamenu a.it-footer-link,
+        .dropdown-menu .link-list-wrapper ul li a.list-item.active,
+        .dropdown-menu .link-list-wrapper ul li a span,
+        .dropdown-menu .link-list-wrapper ul li a i {
+          color: var(--navigation-dark-text-color);
         }
-        /*lista menu*/
-        .navbar-nav {
-          li {
-            // megamenu variation
-            &.megamenu {
-              > button.nav-link {
-                &::before {
-                  background-color: $navigation-light-text-color;
-                }
-                color: $navigation-light-text-color;
-                svg {
-                  fill: $navigation-light-text-color;
-                }
-                &.active {
-                  border-bottom-color: $navigation-light-text-color;
-                }
-              }
-              a.nav-link {
-                &:before {
-                  background-color: $navigation-light-text-color;
-                }
-              }
-              // vertical cta
-              .dropdown-menu {
-                a.it-heading-link,
-                a.it-footer-link {
-                  color: $navigation-light-bg-color;
-                  svg {
-                    fill: $navigation-light-bg-color;
-                  }
-                }
-                .it-heading-link-wrapper,
-                .it-footer-link-wrapper,
-                .it-footer-link-wrapper-vertical {
-                  border-color: $navigation-light-megamenu-separator-color;
-                }
-              }
-              // description content
-              .it-description {
-                p {
-                  color: $navigation-light-bg-color;
-                }
-              }
-            }
-
-            a.nav-link {
-              color: $navigation-light-text-color;
-              &.active {
-                border-bottom-color: $navigation-light-text-color;
-              }
-            }
+        
+        a.nav-link svg,
+        button.nav-link svg,
+        &.megamenu a.it-heading-link svg,
+        &.megamenu a.it-footer-link svg,
+        .dropdown-menu .link-list-wrapper ul li a svg {
+          fill: var(--navigation-dark-text-color);
+        }
+        
+        &.megamenu .dropdown-menu .it-vertical.it-description p {
+          color: var(--navigation-dark-text-color);
+        }
+        
+        &.megamenu .dropdown-menu .it-vertical.it-description .description-content:before {
+          background: var(--navigation-light-megamenu-separator-color);
+        }
+      }
+      
+      .close-div .close-menu {
+        color: var(--navigation-dark-text-color);
+      }
+    }
+    
+    &.theme-light-desk {
+      background: var(--navigation-light-bg-color);
+      box-shadow: var(--dropdown-box-shadow);
+      
+      .navbar-nav li {
+        a.nav-link,
+        &.megamenu > button.nav-link {
+          color: var(--navigation-light-text-color);
+        }
+        
+        a.nav-link::before,
+        &.megamenu > button.nav-link::before {
+          background-color: var(--navigation-light-text-color);
+        }
+        
+        a.nav-link.active,
+        &.megamenu > button.nav-link.active {
+          border-bottom-color: var(--navigation-light-text-color);
+        }
+        
+        a.nav-link svg,
+        &.megamenu > button.nav-link svg {
+          fill: var(--navigation-light-text-color);
+        }
+        
+        &.megamenu .dropdown-menu {
+          a.it-heading-link,
+          a.it-footer-link {
+            color: var(--navigation-light-bg-color);
+          }
+          
+          a.it-heading-link svg,
+          a.it-footer-link svg {
+            fill: var(--navigation-light-bg-color);
+          }
+          
+          .it-heading-link-wrapper,
+          .it-footer-link-wrapper,
+          .it-footer-link-wrapper-vertical {
+            border-color: var(--navigation-light-megamenu-separator-color);
           }
         }
       }
-      // megamenu
-      // dropdown
-      .dropdown-menu {
-        background: $navigation-light-text-color;
-        &:before {
-          background: $navigation-light-text-color;
+      
+      .dropdown-menu,
+      .dropdown-menu:before {
+        background: var(--navigation-light-text-color);
+      }
+      
+      .link-list-wrapper ul li a {
+        &.list-item.active,
+        span,
+        i {
+          color: var(--navigation-light-bg-color);
         }
-        .link-list-wrapper {
-          ul {
-            li {
-              a {
-                &.list-item.active {
-                  color: $navigation-light-bg-color;
-
-                  span {
-                    color: $navigation-light-bg-color;
-                  }
-                }
-                svg {
-                  fill: $navigation-light-bg-color;
-                }
-                span {
-                  color: $navigation-light-bg-color;
-                }
-                i {
-                  color: $navigation-light-bg-color;
-                }
-              }
-            }
-          }
+        
+        svg {
+          fill: var(--navigation-light-bg-color);
         }
       }
     }
