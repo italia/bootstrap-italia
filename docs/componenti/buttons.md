@@ -31,7 +31,7 @@ In questo esempio viene utilizzata la variante `.btn-link` che conferisce al pul
 {% capture callout %}
 #### Accessibilità
 
-Le classi `.btn` e `.btn-` conferiscono agli elementi html l'aspetto visivo di un pulsante. Anche elementi `<a>` o `<span>` possono subire questa trasformazionei provocando discrepanza tra ciò che si rappresenta e la funzione semantica dell'elemento. Questo può provocare complesse problematiche di accessibilità.
+Le classi `.btn` e `.btn-` conferiscono agli elementi html l'aspetto visivo di un pulsante. Anche elementi `<a>` o `<span>` possono subire questa trasformazione provocando discrepanza tra ciò che si rappresenta e la funzione semantica dell'elemento. Questo può provocare complesse problematiche di accessibilità.
 
 Dove il click sul pulsante non genera un cambio di pagina utilizzare esclusivamente il tag `<button>`.
 
