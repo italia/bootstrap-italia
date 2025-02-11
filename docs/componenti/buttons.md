@@ -10,9 +10,11 @@ toc: true
 
 Per aggiungere un pulsante personalizzato, è necessario utilizzare la classe `.btn` associandola a classi di tipo `.btn-` per applicarne le varianti di stile, dimensione, ecc.
 
+La variante più semplice è quella di tipo "link".
+
 {% comment %}Example name: Button link{% endcomment %}
 {% capture example %}
-<button type="button" class="btn btn-link">Etichetta link</button>
+<button type="button" class="btn btn-link">Pulsante link</button>
 {% endcapture %}{% include example.html content=example %}
 
 Le classi `.btn` sono state pensate per essere utilizzate con l'elemento `<button>`. Tuttavia, è possibile applicare lo stile per i pulsanti anche ad elementi di tipo `<a>` o `<input>`, anche se alcuni browser potrebbero mostrare un rendering lievemente diverso.
@@ -33,8 +35,8 @@ Qualora non fosse possibile, è necessario applicare in modo appropriato l'attri
 <a class="btn btn-link" href="#" role="button">Link</a>
 <button class="btn btn-link" type="submit">Button</button>
 <input class="btn btn-link" type="button" value="Input">
-<input class="btn btn-link " type="submit" value="Submit">
-<input class="btn btn-link " type="reset" value="Reset">
+<input class="btn btn-link" type="submit" value="Submit">
+<input class="btn btn-link" type="reset" value="Reset">
 {% endcapture %}{% include example.html content=example %}
 
 ### Varianti di colore
