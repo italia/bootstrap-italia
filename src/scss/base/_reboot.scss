@@ -158,7 +158,7 @@ a {
 
   &:hover {
     color: var(--#{$prefix}link-hover-color);
-    text-decoration: $link-hover-decoration;
+    text-decoration: underline;
   }
 }
 
@@ -191,41 +191,20 @@ samp {
 pre {
   display: block;
   margin-top: 0; // 1
-  margin-bottom: 1rem; // 2
+  margin-bottom: var(--#{$prefix}paragraph-spacing); // 2
   overflow: auto; // 3
-  @include font-size($code-font-size);
-  color: $pre-color;
 
   // Account for some code outputs that place code tags in pre tags
   code {
-    @include font-size(inherit);
-    color: inherit;
     word-break: normal;
   }
 }
 
 code {
-  @include font-size($code-font-size);
-  color: var(--#{$prefix}code-color);
-  word-wrap: break-word;
 
   // Streamline the style when inside anchors to avoid broken underline and more
   a > & {
     color: inherit;
-  }
-}
-
-kbd {
-  padding: $kbd-padding-y $kbd-padding-x;
-  @include font-size($kbd-font-size);
-  color: $kbd-color;
-  background-color: $kbd-bg;
-  @include border-radius($border-radius-sm);
-
-  kbd {
-    padding: 0;
-    @include font-size(1em);
-    font-weight: $nested-kbd-font-weight;
   }
 }
 
