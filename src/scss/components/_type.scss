@@ -41,16 +41,6 @@ samp {
   font-family: var(--#{$prefix}font-mono);
 }
 
-pre {
-  color: var(--#{$prefix}code-color);
-  font-size: var(--#{$prefix}code-font-size);
-
-  code {
-    color: inherit;
-    font-size: inherit;
-  }
-}
-
 ins,
 del {
   position: relative;
@@ -82,16 +72,6 @@ del::before {
 
 ins::before {
   content: '+';
-}
-
-code {
-  color: var(--#{$prefix}code-color);
-  font-size: var(--#{$prefix}code-font-size);
-  word-wrap: break-word;
-
-  p & {
-    background-color: var(--#{$prefix}code-background);
-  }
 }
 
 kbd {
