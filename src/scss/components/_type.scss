@@ -162,7 +162,7 @@ h6, .h6 {
   line-height: var(--#{$prefix}heading-line-height);
 
   // Adds top spacing when two heading tags or classes are adiacent or follow a paragraph
-  :is(h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6) + &,
+  :is(h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6) + &,
   p + & {
     padding-top: var(--#{$prefix}spacing-stack-s); // Use the paragraph spacing variable when available
   }
@@ -292,7 +292,7 @@ blockquote,
   margin-top: 0;
   margin-bottom: var(--#{$prefix}spacing-stack-s);
   color: var(--#{$prefix}color-text-secondary);
-  font-size: var(--#{$prefix}label-font-size-s);
+  font-size: var(--#{$prefix}label-font-size);
   &::before {
     content: '\2014\00A0'; // em dash, nbsp
   }
