@@ -88,7 +88,7 @@ In questo esempio è stata implementata una variante responsive che visualizza i
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Varianti colore
+### Varianti di colore
 
 Gli stili definiti da Bootstrap Italia utilizzano un naming consistente con Bootstrap, con alcune personalizzazioni:
 
