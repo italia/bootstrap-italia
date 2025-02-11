@@ -42,13 +42,12 @@ samp {
 }
 
 pre {
-  color: $pre-color;
+  color: var(--#{$prefix}code-color);
   font-size: var(--#{$prefix}code-font-size);
 
   code {
     color: inherit;
     font-size: inherit;
-    word-break: normal;
   }
 }
 
@@ -98,7 +97,7 @@ code {
 kbd {
   margin: 0 2px;
   padding: 2px var(--#{$prefix}spacing-inset-xxs);
-  border: 1px solid var(--#{$prefix}color-border-subtle);
+  border: var(--#{$prefix}border-base) solid var(--#{$prefix}color-border-subtle);
   background-color: var(--#{$prefix}color-background-secondary-lighter);
   box-shadow: var(--#{$prefix}shadow-s), 0 2px 0 0 hsla(255, 0%, 100%, 0.7) inset;
   color: var(--#{$prefix}color-text-secondary);
