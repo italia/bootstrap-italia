@@ -8,19 +8,25 @@ toc: true
 
 ## Utilizzo
 
-Per aggiungere un pulsante personalizzato, è necessario utilizzare la classe `.btn` associandola a classi di tipo `.btn-` per applicarne le varianti di stile, dimensione, ecc.
+Il pulsante necessita della classe `.btn` e delle classi `.btn-` per applicare le varianti di stile, dimensione e altri attributi.
 
-La variante più semplice è quella di tipo "link".
-
-{% comment %}Example name: Button link{% endcomment %}
+{% comment %}Example name: Button base{% endcomment %}
 {% capture example %}
-<button type="button" class="btn btn-link">Pulsante link</button>
+<button type="button" class="btn btn-primary">Etichetta pulsante</button>
 {% endcapture %}{% include example.html content=example %}
 
 Le classi `.btn` sono state pensate per essere utilizzate con l'elemento `<button>`. Tuttavia, è possibile applicare lo stile per i pulsanti anche ad elementi di tipo `<a>` o `<input>`, anche se alcuni browser potrebbero mostrare un rendering lievemente diverso.
 
-{% capture callout %}
+{% comment %}Example name: Button link{% endcomment %}
+{% capture example %}
+<a class="btn btn-link" href="#" role="button">Link</a>
+<button class="btn btn-link" type="submit">Button</button>
+<input class="btn btn-link" type="button" value="Input">
+<input class="btn btn-link" type="submit" value="Submit">
+<input class="btn btn-link" type="reset" value="Reset">
+{% endcapture %}{% include example.html content=example %}
 
+{% capture callout %}
 #### Accessibilità
 
 Le classi `.btn` e `.btn-` conferiscono agli elementi html l'aspetto visivo di un pulsante. Anche elementi `<a>` o `<span>` possono subire questa trasformazionei provocando discrepanza tra ciò che si rappresenta e la funzione semantica dell'elemento. Questo può provocare complesse problematiche di accessibilità.
@@ -30,13 +36,56 @@ Dove il click sul pulsante non genera un cambio di pagina utilizzare esclusivame
 Qualora non fosse possibile, è necessario applicare in modo appropriato l'attributo `role="button"` per trasmetterne lo scopo alle tecnologie assistive.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
-{% comment %}Example name: Varianti button link{% endcomment %}
+### Varianti di dimensione
+
+Per ottenere pulsanti di dimensione più grande o più piccola, è sufficiente utilizzare le classi `.btn-lg`, `.btn-sm` e `.btn-xs`.
+
+#### Large
+
+{% comment %}Example name: Button large{% endcomment %}
 {% capture example %}
-<a class="btn btn-link" href="#" role="button">Link</a>
-<button class="btn btn-link" type="submit">Button</button>
-<input class="btn btn-link" type="button" value="Input">
-<input class="btn btn-link" type="submit" value="Submit">
-<input class="btn btn-link" type="reset" value="Reset">
+<button type="button" class="btn btn-primary btn-lg btn-me">Primary Large</button>
+<button type="button" class="btn btn-secondary btn-lg">Secondary Large</button>
+{% endcapture %}{% include example.html content=example %}
+
+#### Small
+
+{% comment %}Example name: Button small{% endcomment %}
+{% capture example %}
+<button type="button" class="btn btn-primary btn-sm btn-me">Primary Small</button>
+<button type="button" class="btn btn-secondary btn-sm">Secondary Small</button>
+{% endcapture %}{% include example.html content=example %}
+
+#### Mini
+
+{% comment %}Example name: Button mini{% endcomment %}
+{% capture example %}
+<button type="button" class="btn btn-primary btn-xs btn-me">Primary Mini</button>
+<button type="button" class="btn btn-secondary btn-xs">Secondary Mini</button>
+{% endcapture %}{% include example.html content=example %}
+
+#### A tutta larghezza
+
+Per creare pulsanti o gruppi di pulsanti a tutta larghezza, come i _block buttons_ di Bootstrap 4, utilizzare un mix delle utilities **display** e **gap**. Con queste utilities abbiamo più controllo su spaziature, allineamento e comportamento responsive rispetto al classico _block button_.
+
+{% comment %}Example name: Button full width{% endcomment %}
+{% capture example %}
+
+<div class="d-grid gap-2">
+  <button class="btn btn-primary" type="button">Primary</button>
+  <button class="btn btn-secondary" type="button">Secondary</button>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+In questo caso è stata implementata una variante responsive che visualizza i tasti a tutta larghezza e sovrapposti in mobile per poi affiancarli dl breakpoint `md` in su.
+
+{% comment %}Example name: Button full width su mobile{% endcomment %}
+{% capture example %}
+
+<div class="d-grid gap-2 d-md-block">
+  <button class="btn btn-primary" type="button">Primary</button>
+  <button class="btn btn-secondary" type="button">Secondary</button>
+</div>
 {% endcapture %}{% include example.html content=example %}
 
 ### Varianti di colore
@@ -73,21 +122,6 @@ Gli stili definiti da Bootstrap Italia utilizzano un naming consistente con Boot
 La classe `.disabled` usa `pointer-events: none` per provare a disabilitare l'attivazione dei comportamenti di default dei link `<a>`, ma tale funzionalità non è gestita in alcuni browsers. Oltre a questo, la navigazione attraverso tastiera rimane abilitata, per cui utenti che utilizzano tecnologie assistive saranno comunque in grado di attivare tali link. Per ovviare a questo problema, è possibile aggiungere l'attributo `tabindex="-1"` e utilizzare JavaScript per disabilitare le loro funzionalità.
 {% endcapture %}{% include callout.html content=callout type="warning" %}
 
-#### Su sfondo scuro
-
-{% comment %}Example name: Button su fondo scuro{% endcomment %}
-{% capture example %}
-
-<div class="bg-dark py-1">{% for color in site.data.theme-colors %}{% if color.name == "primary" or color.name == "secondary" %}
-<div class="btn-example">
-  <button type="button" class="btn btn-{{ color.name }}">{{ color.name | capitalize }}</button>
-  <button type="button" class="btn btn-outline-{{ color.name }}">{{ color.name | capitalize }} outline</button>
-  <button type="button" class="btn btn-{{ color.name }} disabled">{{ color.name | capitalize }} disabled</button>
-  <button type="button" class="btn btn-outline-{{ color.name }} disabled">{{ color.name | capitalize }} outline disabled</button>
-</div>{% endif %}{% endfor %}</div>
-{% endcapture %}{% include example.html content=example %}
-
-{% include callout-warning-color-assistive-technologies.md %}
 
 ### Pulsanti con icona
 
@@ -153,57 +187,21 @@ Inoltre è possibile applicare un contorno cerchiato dell'icona utilizzando un c
 </button>
 {% endcapture %}{% include example.html content=example %}
 
-### Varianti di dimensione
+#### Su sfondo scuro
 
-Per ottenere pulsanti di dimensione più grande o più piccola, è sufficiente utilizzare le classi `.btn-lg`, `.btn-sm` e `.btn-xs`.
-
-#### Large
-
-{% comment %}Example name: Button large{% endcomment %}
-{% capture example %}
-<button type="button" class="btn btn-primary btn-lg btn-me">Primary Large</button>
-<button type="button" class="btn btn-secondary btn-lg">Secondary Large</button>
-{% endcapture %}{% include example.html content=example %}
-
-#### Small
-
-{% comment %}Example name: Button small{% endcomment %}
-{% capture example %}
-<button type="button" class="btn btn-primary btn-sm btn-me">Primary Small</button>
-<button type="button" class="btn btn-secondary btn-sm">Secondary Small</button>
-{% endcapture %}{% include example.html content=example %}
-
-#### Mini
-
-{% comment %}Example name: Button mini{% endcomment %}
-{% capture example %}
-<button type="button" class="btn btn-primary btn-xs btn-me">Primary Mini</button>
-<button type="button" class="btn btn-secondary btn-xs">Secondary Mini</button>
-{% endcapture %}{% include example.html content=example %}
-
-#### A tutta larghezza
-
-Per creare pulsanti o gruppi di pulsanti a tutta larghezza, come i _block buttons_ di Bootstrap 4, utilizzare un mix delle utilities **display** e **gap**. Con queste utilities abbiamo più controllo su spaziature, allineamento e comportamento responsive rispetto al classico _block button_.
-
-{% comment %}Example name: Button full width{% endcomment %}
+{% comment %}Example name: Button su sfondo scuro{% endcomment %}
 {% capture example %}
 
-<div class="d-grid gap-2">
-  <button class="btn btn-primary" type="button">Primary</button>
-  <button class="btn btn-secondary" type="button">Secondary</button>
-</div>
+<div class="bg-dark py-1">{% for color in site.data.theme-colors %}{% if color.name == "primary" or color.name == "secondary" %}
+<div class="btn-example">
+  <button type="button" class="btn btn-{{ color.name }}">{{ color.name | capitalize }}</button>
+  <button type="button" class="btn btn-outline-{{ color.name }}">{{ color.name | capitalize }} outline</button>
+  <button type="button" class="btn btn-{{ color.name }} disabled">{{ color.name | capitalize }} disabled</button>
+  <button type="button" class="btn btn-outline-{{ color.name }} disabled">{{ color.name | capitalize }} outline disabled</button>
+</div>{% endif %}{% endfor %}</div>
 {% endcapture %}{% include example.html content=example %}
 
-In questo caso è stata implementata una variante responsive che visualizza i tasti a tutta larghezza e sovrapposti in mobile per poi affiancarli dl breakpoint `md` in su.
-
-{% comment %}Example name: Button full width su mobile{% endcomment %}
-{% capture example %}
-
-<div class="d-grid gap-2 d-md-block">
-  <button class="btn btn-primary" type="button">Primary</button>
-  <button class="btn btn-secondary" type="button">Secondary</button>
-</div>
-{% endcapture %}{% include example.html content=example %}
+{% include callout-warning-color-assistive-technologies.md %}
 
 ## Approfondimento
 
