@@ -178,7 +178,7 @@ $grid-item-overlay: hsla(210%, 54%, 20, 0.85);
   .it-grid-item-wrapper {
     &.it-grid-item-overlay {
       .it-griditem-text-wrapper {
-        padding: var(--#{$prefix}spacing-inset-s) var(--#{$prefix}spacing-inset-m));
+        padding: var(--#{$prefix}spacing-inset-s) var(--#{$prefix}spacing-inset-m);
 
         .it-griditem-text {
           font-size: $grid-item-text-size;

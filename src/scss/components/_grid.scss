@@ -184,7 +184,7 @@
     @include media-breakpoint-up(sm) {
       border-bottom: var(--#{$prefix}border-base) solid var(--#{$prefix}color-border-subtle);
       padding-bottom: var(--#{$prefix}spacing-inset-s);
-      margin-bottom: var(--#{$prefix}spacing-stack-s;
+      margin-bottom: var(--#{$prefix}spacing-stack-s);
 
       @for $i from 1 through 6 {
         h#{$i} {
