@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-italia",
-  "version": "2.13.2",
+  "version": "2.13.4",
   "keywords": [
     "css",
     "sass",
@@ -104,6 +104,6 @@
     "minimasonry": "^1.3.2",
     "progressbar.js": "^1.1.0",
     "uuid": "^8.3.2",
-    "video.js": "^8.0.4"
+    "video.js": "^8.21.0"
   }
 }
