@@ -295,7 +295,6 @@
 }
 
 :root {
-  
   @each $color, $value in $colors {
     --#{$prefix}#{$color}: #{$value};
   }
@@ -435,7 +434,6 @@
   --#{$prefix}label-font-size-m: var(--dsi-label-font-size-m);
   --#{$prefix}label-line-height: var(--dsi-font-line-height-tight);
   --#{$prefix}code-font-size: var(--dsi-font-size-3);
-
   // Typography responsive properties
   @include media-breakpoint-up(sm) {
     --#{$prefix}heading-1-font-size: var(--dsi-heading-1-font-size-l);

@@ -67,9 +67,9 @@
 .row {
   &.row-column-border {
     & > [class^='col-'] {
-      padding-top: 2rem;
-      padding-bottom: 2rem;
-      border-top: 1px solid $border-color;
+      padding-top: var(--#{$prefix}spacing-inset-l);
+      padding-bottom: var(--#{$prefix}spacing-inset-l);
+      border-top: var(--#{$prefix}border-base) solid var(--#{$prefix}color-border-subtle);
 
       &:first-child {
         border: none;
@@ -89,30 +89,30 @@
 
   &.row-column-menu-left {
     & > [class^='col-']:first-child {
-      padding: 1rem 0;
+      padding: var(--#{$prefix}spacing-inset-s) 0;
     }
   }
 
   &.row-column-menu-right {
     & > [class^='col-']:last-child {
-      padding: 1rem 0;
+      padding: var(--#{$prefix}spacing-inset-s) 0;
     }
   }
 
   &.row-card {
-    background-color: $white;
+    background-color: var(--#{$prefix}color-background-inverse);
   }
 
   // Desktop
   @include media-breakpoint-up(lg) {
     &.row-column-border {
       margin-top: 1rem;
-      border-top: 1px solid $border-color;
+      border-top: var(--#{$prefix}border-base) solid var(--#{$prefix}color-border-subtle);
 
       & > [class^='col-'] {
         padding: 3rem 3rem;
         border-top: none;
-        border-left: 1px solid $border-color;
+        border-left: var(--#{$prefix}border-base) solid var(--#{$prefix}color-border-subtle);
 
         &:first-child {
           border: none;
@@ -175,16 +175,16 @@
   &.row-border {
     @for $i from 1 through 6 {
       h#{$i} {
-        border-bottom: 1px solid $border-color;
-        padding-bottom: 1rem;
-        margin-bottom: 1rem;
+        border-bottom: var(--#{$prefix}border-base) solid var(--#{$prefix}color-border-subtle);
+        padding-bottom: var(--#{$prefix}spacing-inset-s);
+        margin-bottom: var(--#{$prefix}spacing-stack-s);
       }
     }
 
     @include media-breakpoint-up(sm) {
-      border-bottom: 1px solid $border-color;
-      padding-bottom: 1rem;
-      margin-bottom: 1rem;
+      border-bottom: var(--#{$prefix}border-base) solid var(--#{$prefix}color-border-subtle);
+      padding-bottom: var(--#{$prefix}spacing-inset-s);
+      margin-bottom: var(--#{$prefix}spacing-stack-s;
 
       @for $i from 1 through 6 {
         h#{$i} {
@@ -214,14 +214,9 @@
       width: auto;
 
       .navbar {
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-        // border-bottom: 1px solid $border-color;
-
-        // &.it-bottom-navscroll {
-        border-top: 1px solid $border-color;
-        // border-bottom: none;
-        // }
+        padding-top: var(--#{$prefix}spacing-inset-s);
+        padding-bottom: var(--#{$prefix}spacing-inset-s);
+        border-top: var(--#{$prefix}border-base) solid var(--#{$prefix}color-border-subtle);
       }
 
       &.sticky-expanded {
