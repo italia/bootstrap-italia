@@ -38,7 +38,7 @@
           }
 
           i {
-            color: var(--#{$prefix}color-text-primary);
+            color: var(--#{$prefix}link-primary);
           }
 
           &:after {
@@ -50,7 +50,7 @@
             display: block;
             width: var(--inline-menu-line-width);
             height: 100%;
-            background: var(--#{$prefix}color-text-primary);
+            background: var(--#{$prefix}link-primary);
             transform: scaleY(0);
             transform-origin: center;
             transition: all 0.3s;
@@ -58,7 +58,7 @@
 
           &.active {
             span {
-              color: var(--#{$prefix}color-text-primary);
+              color: var(--#{$prefix}link-primary);
               text-decoration: none;
             }
           }

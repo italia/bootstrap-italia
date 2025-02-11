@@ -62,7 +62,7 @@
     // Hover on list item
     &:hover:not(.disabled) {
       span {
-        color: var(--#{$prefix}color-text-primary-hover);
+        color: var(--#{$prefix}link-hover);
       }
 
       p {
@@ -191,7 +191,7 @@
     // Listed item label wrapped in the <a> tag 
     > span {
       display: inline-block;
-      color: var(--#{$prefix}color-text-primary);
+      color: var(--#{$prefix}link-primary);
     }
   }
 

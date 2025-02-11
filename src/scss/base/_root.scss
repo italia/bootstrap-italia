@@ -498,11 +498,9 @@
   --#{$prefix}color-text-primary: var(--dsi-color-text-primary);
   --#{$prefix}color-text-base: var(--dsi-color-text-base);
   --#{$prefix}code-color: var(--dsi-color-text-secondary);
-
-  // Links
   --#{$prefix}link-color: var(--#{$prefix}color-text-primary);
   --#{$prefix}link-hover-color: var(--#{$prefix}color-text-primary-hover);
-  
+ 
   // Border colors
   --#{$prefix}color-border-danger-active: var(--dsi-color-border-danger-active);
   --#{$prefix}color-border-danger-hover: var(--dsi-color-border-danger-hover);
