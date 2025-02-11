@@ -499,7 +499,8 @@
   --#{$prefix}color-text-base: var(--dsi-color-text-base);
   --#{$prefix}code-color: var(--dsi-color-text-secondary);
   --#{$prefix}link-color: var(--#{$prefix}color-text-primary);
-  --#{$prefix}link-hover-color: var(--#{$prefix}color-text-primary-hover);
+  --#{$prefix}link-hover-color: var(--dsi-color-text-primary-hover);
+  --#{$prefix}link-hover-active: var(--dsi-color-text-primary-active);
  
   // Border colors
   --#{$prefix}color-border-danger-active: var(--dsi-color-border-danger-active);
@@ -558,6 +559,8 @@
   --#{$prefix}code-background: var(--dsi-color-background-subtle);
   --#{$prefix}ins-background: var(--dsi-color-emerald-67);
   --#{$prefix}del-background: var(--dsi-color-red-70);
+  --#{$prefix}page-background: var(--dsi-color-background-inverse);
+  --#{$prefix}color-outline-focus: var(--dsi-color-outline-focus);
   
   // Status colors - reference the background category colors only
   --#{$prefix}color-status-danger: var(--dsi-color-background-danger);
@@ -572,10 +575,6 @@
   --#{$prefix}color-status-warning: var(--dsi-color-background-warning);
   --#{$prefix}color-status-warning-hover: var(--dsi-color-background-warning-hover);
   --#{$prefix}color-status-warning-active: var(--dsi-color-background-warning-active);
-  
-  // Global colors
-  --#{$prefix}color-outline-focus: var(--dsi-color-outline-focus);
-  --#{$prefix}color-page-background: var(--dsi-color-background-inverse);
   
   // Icons colors
   --#{$prefix}icon-danger-active: var(--dsi-icon-danger-active);
