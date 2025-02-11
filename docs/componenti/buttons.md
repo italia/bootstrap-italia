@@ -19,11 +19,11 @@ Le classi `.btn` sono state pensate per essere utilizzate con l'elemento `<butto
 
 {% comment %}Example name: Button link{% endcomment %}
 {% capture example %}
-<a class="btn btn-link" href="#" role="button">Pulsante Link</a>
-<button class="btn btn-link" type="submit">Button</button>
-<input class="btn btn-link" type="button" value="Input">
-<input class="btn btn-link" type="submit" value="Submit">
-<input class="btn btn-link" type="reset" value="Reset">
+<a class="btn btn-link" href="#" role="button">Pulsante link</a>
+<button class="btn btn-link" type="submit">Pulsante button</button>
+<input class="btn btn-link" type="button" value="Pulsante input">
+<input class="btn btn-link" type="submit" value="Pulsante submit">
+<input class="btn btn-link" type="reset" value="Pulsante reset">
 {% endcapture %}{% include example.html content=example %}
 
 In questo esempio viene utilizzata la variante `.btn-link` che conferisce al pulsante l'aspetto di un normale link testuale.
@@ -46,24 +46,24 @@ Per ottenere pulsanti di dimensione più grande o più piccola, è sufficiente u
 
 {% comment %}Example name: Button large{% endcomment %}
 {% capture example %}
-<button type="button" class="btn btn-primary btn-lg btn-me">Primary Large</button>
-<button type="button" class="btn btn-secondary btn-lg">Secondary Large</button>
+<button type="button" class="btn btn-primary btn-lg btn-me">Primary large</button>
+<button type="button" class="btn btn-secondary btn-lg">Secondary large</button>
 {% endcapture %}{% include example.html content=example %}
 
 #### Small
 
 {% comment %}Example name: Button small{% endcomment %}
 {% capture example %}
-<button type="button" class="btn btn-primary btn-sm btn-me">Primary Small</button>
-<button type="button" class="btn btn-secondary btn-sm">Secondary Small</button>
+<button type="button" class="btn btn-primary btn-sm btn-me">Primary small</button>
+<button type="button" class="btn btn-secondary btn-sm">Secondary small</button>
 {% endcapture %}{% include example.html content=example %}
 
 #### Mini
 
 {% comment %}Example name: Button mini{% endcomment %}
 {% capture example %}
-<button type="button" class="btn btn-primary btn-xs btn-me">Primary Mini</button>
-<button type="button" class="btn btn-secondary btn-xs">Secondary Mini</button>
+<button type="button" class="btn btn-primary btn-xs btn-me">Primary mini</button>
+<button type="button" class="btn btn-secondary btn-xs">Secondary mini</button>
 {% endcapture %}{% include example.html content=example %}
 
 #### Larghezza fluida
