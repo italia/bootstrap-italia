@@ -326,7 +326,6 @@
   --#{$prefix}gradient: #{$gradient};
 
   // Root and body
-  // scss-docs-start root-body-variables
   @if $font-size-root != null {
     --#{$prefix}root-font-size: #{$font-size-root};
   }
@@ -339,36 +338,27 @@
     --#{$prefix}body-text-align: #{$body-text-align};
   }
   --#{$prefix}body-bg: #{$body-bg};
-  // scss-docs-end root-body-variables
-
-  // scss-docs-start root-border-var
   --#{$prefix}border-width: #{$border-width};
   --#{$prefix}border-style: #{$border-style};
   --#{$prefix}border-color: #{$border-color};
   --#{$prefix}border-color-translucent: #{$border-color-translucent};
-
   --#{$prefix}border-radius: #{$border-radius};
   --#{$prefix}border-radius-sm: #{$border-radius-sm};
   --#{$prefix}border-radius-lg: #{$border-radius-lg};
   --#{$prefix}border-radius-xl: #{$border-radius-xl};
   --#{$prefix}border-radius-2xl: #{$border-radius-2xl};
   --#{$prefix}border-radius-pill: #{$border-radius-pill};
-  // scss-docs-end root-border-var
 
-  --#{$prefix}link-color: #{$link-color};
-  --#{$prefix}link-hover-color: #{$link-hover-color};
+  // ----------------------------------------------------------- //
 
-  --#{$prefix}code-color: #{$code-color};
-
-  --#{$prefix}highlight-bg: #{$mark-bg};
-
-  // theme colors 
+  // Theme colors 
   --#{$prefix}theme-primary: var(--dsi-theme-italia-base);
   --#{$prefix}theme-primary-muted: var(--dsi-theme-italia-muted);
   --#{$prefix}theme-primary-deep: var(--dsi-theme-italia-deep);
   --#{$prefix}theme-primary-light: var(--dsi-theme-italia-light);
   --#{$prefix}theme-primary-lighter: var(--dsi-theme-italia-lighter);
-  // spacing
+  
+  // Spacing
   --#{$prefix}spacing-inset-3xl: var(--dsi-spacing-inset-3xl);
   --#{$prefix}spacing-inset-xxl: var(--dsi-spacing-inset-xxl);
   --#{$prefix}spacing-inset-xl: var(--dsi-spacing-inset-xl);
@@ -388,7 +378,10 @@
   --#{$prefix}spacing-stack-m: var(--dsi-spacing-stack-m);
   --#{$prefix}spacing-stack-s: var(--dsi-spacing-stack-s);
   --#{$prefix}spacing-stack-xs: var(--dsi-spacing-stack-xs);
-  // typography
+  --#{$prefix}heading-spacing: var(--dsi-spacing-stack-s);
+  --#{$prefix}paragraph-spacing: var(--dsi-spacing-stack-m);
+  
+  // Typography
   --#{$prefix}font-mono: var(--dsi-font-mono);
   --#{$prefix}font-serif: var(--dsi-font-serif);
   --#{$prefix}font-sans: var(--dsi-font-sans);
@@ -416,27 +409,20 @@
   --#{$prefix}font-tracking-tight: var(--dsi-font-tracking-tight);
   --#{$prefix}font-tracking-narrow: var(--dsi-font-tracking-narrow);
   --#{$prefix}font-tracking-short: var(--dsi-font-tracking-short);
+  --#{$prefix}display-font-size: var(--dsi-font-size-11);
   --#{$prefix}heading-6-font-size: var(--dsi-heading-6-font-size);
   --#{$prefix}heading-5-font-size: var(--dsi-heading-5-font-size);
   --#{$prefix}heading-4-font-size: var(--dsi-heading-4-font-size);
   --#{$prefix}heading-3-font-size: var(--dsi-heading-3-font-size);
   --#{$prefix}heading-2-font-size: var(--dsi-heading-2-font-size);
   --#{$prefix}heading-1-font-size: var(--dsi-heading-1-font-size);
-  --#{$prefix}heading-6-font-size-l: var(--dsi-heading-6-font-size-l);
-  --#{$prefix}heading-5-font-size-l: var(--dsi-heading-5-font-size-l);
-  --#{$prefix}heading-4-font-size-l: var(--dsi-heading-4-font-size-l);
-  --#{$prefix}heading-3-font-size-l: var(--dsi-heading-3-font-size-l);
-  --#{$prefix}heading-2-font-size-l: var(--dsi-heading-2-font-size-l);
-  --#{$prefix}heading-1-font-size-l: var(--dsi-heading-1-font-size-l);
   --#{$prefix}heading-font-weight: var(--dsi-heading-font-weight);
   --#{$prefix}heading-font-weight-weak: var(--dsi-heading-font-weight-weak);
   --#{$prefix}heading-line-height: var(--dsi-heading-line-height);
   --#{$prefix}body-font-size: var(--dsi-body-font-size);
-  --#{$prefix}body-font-size-l: var(--dsi-body-font-size-l);
   --#{$prefix}body-line-height: var(--dsi-body-line-height);
   --#{$prefix}body-font-weight: var(--dsi-body-font-weight);
   --#{$prefix}lead-font-size: var(--dsi-lead-font-size);
-  --#{$prefix}lead-font-size-l: var(--dsi-lead-font-size-l);
   --#{$prefix}lead-line-height: var(--dsi-lead-line-height);
   --#{$prefix}lead-font-weight: var(--dsi-lead-font-weight);
   --#{$prefix}caption-font-size: var(--dsi-caption-font-size);
@@ -448,11 +434,28 @@
   --#{$prefix}label-font-size-xs: var(--dsi-label-font-size-xs);
   --#{$prefix}label-font-size-m: var(--dsi-label-font-size-m);
   --#{$prefix}label-line-height: var(--dsi-font-line-height-tight);
+  --#{$prefix}code-font-size: var(--dsi-font-size-2);
+
+  // Typography responsive properties
+  @include media-breakpoint-up(sm) {
+    --#{$prefix}heading-1-font-size: var(--dsi-heading-1-font-size-l);
+    --#{$prefix}heading-2-font-size: var(--dsi-heading-2-font-size-l);
+    --#{$prefix}heading-3-font-size: var(--dsi-heading-3-font-size-l);
+    --#{$prefix}heading-4-font-size: var(--dsi-heading-4-font-size-l);
+    --#{$prefix}heading-5-font-size: var(--dsi-heading-5-font-size-l);
+    --#{$prefix}heading-6-font-size: var(--dsi-heading-6-font-size-l);
+    --#{$prefix}lead-font-size: var(--dsi-lead-font-size-l);
+    --#{$prefix}body-font-size: var(--dsi-body-font-size-l);
+  }
+
+  // Icons
   --#{$prefix}icon-size-xl: var(--dsi-icon-size-xl);
   --#{$prefix}icon-size-l: var(--dsi-icon-size-l);
   --#{$prefix}icon-size-m: var(--dsi-icon-size-m);
   --#{$prefix}icon-size-s: var(--dsi-icon-size-s);
   --#{$prefix}icon-size-xs: var(--dsi-icon-size-xs);
+  
+  // Border
   --#{$prefix}border-broad: var(--dsi-border-broad);
   --#{$prefix}border-thick: var(--dsi-border-thick);
   --#{$prefix}border-double: var(--dsi-border-double);
@@ -460,15 +463,20 @@
   --#{$prefix}radius-rounded: var(--dsi-radius-rounded);
   --#{$prefix}radius-circle: var(--dsi-radius-circle);
   --#{$prefix}radius-smooth: var(--dsi-radius-smooth);
+  
+  // Sizing
   --#{$prefix}sizing-full: var(--dsi-sizing-full);
   --#{$prefix}sizing-two-thirds: var(--dsi-sizing-two-thirds);
   --#{$prefix}sizing-half: var(--dsi-sizing-half);
   --#{$prefix}sizing-quarter: var(--dsi-sizing-quarter);
+  
+  // Shadow
   --#{$prefix}shadow-color: var(--dsi-shadow-color);
   --#{$prefix}shadow-l: var(--#{$prefix}shadow-coloor) var(--dsi-shadow-l-x) var(--dsi-shadow-l-y) var(--dsi-shadow-l-blur) var(--dsi-shadow-l-spread); // TODO: update with real tokens
   --#{$prefix}shadow-m: var(--#{$prefix}shadow-color) var(--dsi-shadow-m-x) var(--dsi-shadow-m-y) var(--dsi-shadow-m-blur) var(--dsi-shadow-m-spread); // TODO: update with real tokens
   --#{$prefix}shadow-s: var(--#{$prefix}shadow-color) var(--dsi-shadow-s-x) var(--dsi-shadow-s-y) var(--dsi-shadow-s-blur)  var(--dsi-shadow-s-spread); // TODO: update with real tokens
-  // text colors
+  
+  // Text colors
   --#{$prefix}color-text-accent: var(--dsi-color-text-accent);
   --#{$prefix}color-text-inverse: var(--dsi-color-text-inverse);
   --#{$prefix}color-text-danger-active: var(--dsi-color-text-danger-active);
@@ -489,7 +497,12 @@
   --#{$prefix}color-text-primary-hover: var(--dsi-color-text-primary-hover);
   --#{$prefix}color-text-primary: var(--dsi-color-text-primary);
   --#{$prefix}color-text-base: var(--dsi-color-text-base);
-  // border colors
+  --#{$prefix}code-color: var(--dsi-color-text-inverse);
+  --#{$prefix}link-color: var(--#{$prefix}color-text-primary);
+  --#{$prefix}link-hover-color: var(--dsi-color-text-primary-hover);
+  --#{$prefix}link-hover-active: var(--dsi-color-text-primary-active);
+ 
+  // Border colors
   --#{$prefix}color-border-danger-active: var(--dsi-color-border-danger-active);
   --#{$prefix}color-border-danger-hover: var(--dsi-color-border-danger-hover);
   --#{$prefix}color-border-danger: var(--dsi-color-border-danger);
@@ -508,7 +521,8 @@
   --#{$prefix}color-border-primary-active: var(--dsi-color-border-primary-active);
   --#{$prefix}color-border-primary-hover: var(--dsi-color-border-primary-hover);
   --#{$prefix}color-border-primary: var(--dsi-color-border-primary);
-  // background colors
+  
+  // Background colors
   --#{$prefix}color-background-primary-dark: var(--dsi-color-background-primary-dark);
   --#{$prefix}color-background-primary-muted: var(--dsi-color-background-primary-muted);
   --#{$prefix}color-background-danger-active: var(--dsi-color-background-danger-active);
@@ -541,7 +555,14 @@
   --#{$prefix}color-background-primary-lighter: var(--dsi-color-background-primary-lighter);
   --#{$prefix}color-background-primary-light: var(--dsi-color-background-primary-light);
   --#{$prefix}color-background-primary: var(--dsi-color-background-primary);
-  // status colors - reference the background category colors only
+  --#{$prefix}highlight-background: var(--dsi-color-teal-80); // TODO: replace with semantic token
+  --#{$prefix}code-background: var(--dsi-color-background-secondary);
+  --#{$prefix}ins-background: var(--dsi-color-emerald-67);
+  --#{$prefix}del-background: var(--dsi-color-red-70);
+  --#{$prefix}page-background: var(--dsi-color-background-inverse);
+  --#{$prefix}color-outline-focus: var(--dsi-color-outline-focus);
+  
+  // Status colors - reference the background category colors only
   --#{$prefix}color-status-danger: var(--dsi-color-background-danger);
   --#{$prefix}color-status-danger-hover: var(--dsi-color-background-danger-hover);
   --#{$prefix}color-status-danger-active: var(--dsi-color-background-danger-active);
@@ -554,10 +575,8 @@
   --#{$prefix}color-status-warning: var(--dsi-color-background-warning);
   --#{$prefix}color-status-warning-hover: var(--dsi-color-background-warning-hover);
   --#{$prefix}color-status-warning-active: var(--dsi-color-background-warning-active);
-  // global colors
-  --#{$prefix}color-outline-focus: var(--dsi-color-outline-focus);
-  --#{$prefix}color-page-background: var(--dsi-color-background-inverse);
-  // icons
+  
+  // Icons colors
   --#{$prefix}icon-danger-active: var(--dsi-icon-danger-active);
   --#{$prefix}icon-danger-hover: var(--dsi-icon-danger-hover);
   --#{$prefix}icon-danger: var(--dsi-icon-danger);
@@ -577,6 +596,7 @@
   --#{$prefix}icon-default: var(--dsi-icon-default);
   --#{$prefix}icon-disabled: var(--dsi-icon-disabled);
   --#{$prefix}icon-spacing: var(--dsi-spacing-inline-xs);
-  // transitions
+  
+  // Transitions
   --#{$prefix}transition-instant: 0.2s;
 }
