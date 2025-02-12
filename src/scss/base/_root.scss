@@ -295,7 +295,6 @@
 }
 
 :root {
-  
   @each $color, $value in $colors {
     --#{$prefix}#{$color}: #{$value};
   }
