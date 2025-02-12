@@ -72,6 +72,10 @@
       .icon {
         fill: var(--#{$prefix}icon-primary-hover);
       }
+
+      .icon.icon-inverse {
+        fill: var(--#{$prefix}icon-inverse);
+      }
     }
 
     // List item disabled state
@@ -239,5 +243,12 @@
   .link-list-wrapper ul li a.large.icon-left,
   .link-list-wrapper ul li a.large.icon-right {
     --#{$prefix}linklist-item-spacing: var(--#{$prefix}spacing-inset-s);
+  }
+}
+
+.dark {
+  .link-list li a.disabled,
+  .link-list li a.disabled span {
+    color: hsla(0, 0%, 100%, 0.35); // TODO: Add color variable for dark variant
   }
 }

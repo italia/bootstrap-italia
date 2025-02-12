@@ -1,9 +1,20 @@
-code,
-pre,
-kbd {
-  font-size: 1rem;
+pre {
+  background-color: var(--#{$prefix}color-background-emphasis);
+  padding: var(--#{$prefix}spacing-inset-s);
+  overflow-x: auto;
+  color: var(--#{$prefix}code-color);
+  font-size: var(--#{$prefix}code-font-size);
+
+  code {
+    color: inherit;
+    font-size: inherit;
+  }
 }
 
-pre code {
-  font-size: 1rem;
+
+code {
+  color: var(--#{$prefix}code-color);
+  font-size: var(--#{$prefix}code-font-size);
+  word-wrap: break-word;
+  background-color: var(--#{$prefix}code-background);
 }

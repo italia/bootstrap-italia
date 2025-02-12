@@ -36,10 +36,13 @@ title: Stili tipografici
 
 <p class="font-serif">Et sed dolor et rebum kasd labore. Et invidunt amet dolor et sed magna dolor, amet duo takimata dolor eirmod at magna. Ipsum lorem et diam accusam nonumy sit ipsum. Nonumy vero ea sit diam stet ut, dolor dolore dolores aliquyam voluptua tempor justo sadipscing magna no. Labore sit dolor.</p>
 
+<p>
+  <caption>Breve didascalia di testo</caption>  
+</p>
 
-<caption>Breve didascalia di testo</caption>
-
-<small>Testo small</small>
+<p>
+  <small>Testo small</small>
+</p>
 
 <ul>
   <li>Voce lista 1</li>
@@ -56,5 +59,15 @@ title: Stili tipografici
 </ol>
 
 <p>Premi<kbd>Ctrl</kbd>+<kbd>Shift</kbd> per evidenziare il testo</p>
+
+
+<pre>
+  <code>
+    // Codice di esempio
+    function hello() {
+      console.log('Hello, world!');
+    }
+  </code>
+</pre>
 
 </div>

@@ -4,7 +4,9 @@ $icon-colors: (
   success: var(--#{$prefix}icon-success),
   warning: var(--#{$prefix}icon-warning),
   danger: var(--#{$prefix}icon-danger),
-  inverse: var(--#{$prefix}icon-inverse)
+  inverse: var(--#{$prefix}icon-inverse),
+  light: var(--#{$prefix}icon-inverse),
+  disabled: var(--#{$prefix}icon-disabled),
 );
 
 .icon {

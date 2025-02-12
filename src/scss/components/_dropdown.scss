@@ -1,4 +1,4 @@
-// The dropdown wrapper (`<div>`)
+// Dropdown wrapper (`<div>`)
 .dropup,
 .dropend,
 .dropdown,
@@ -15,57 +15,53 @@
   @include caret();
 }
 
-// The dropdown menu
+// Dropdown menu
 .dropdown-menu {
-  // scss-docs-start dropdown-css-vars
-  --#{$prefix}dropdown-zindex: #{$zindex-dropdown};
-  --#{$prefix}dropdown-min-width: #{$dropdown-min-width};
-  --#{$prefix}dropdown-padding-x: #{$dropdown-padding-x};
-  --#{$prefix}dropdown-padding-y: #{$dropdown-padding-y};
-  --#{$prefix}dropdown-spacer: #{$dropdown-spacer};
-  @include rfs($dropdown-font-size, --#{$prefix}dropdown-font-size);
-  --#{$prefix}dropdown-color: #{$dropdown-color};
-  --#{$prefix}dropdown-bg: #{$dropdown-bg};
-  --#{$prefix}dropdown-border-color: #{$dropdown-border-color};
-  --#{$prefix}dropdown-border-radius: #{$dropdown-border-radius};
-  --#{$prefix}dropdown-border-width: #{$dropdown-border-width};
-  --#{$prefix}dropdown-inner-border-radius: #{$dropdown-inner-border-radius};
-  --#{$prefix}dropdown-divider-bg: #{$dropdown-divider-bg};
-  --#{$prefix}dropdown-divider-margin-y: #{$dropdown-divider-margin-y};
-  --#{$prefix}dropdown-box-shadow: #{$dropdown-box-shadow};
-  --#{$prefix}dropdown-link-color: #{$dropdown-link-color};
-  --#{$prefix}dropdown-link-hover-color: var(--#{$prefix}link-hover);
-  --#{$prefix}dropdown-link-hover-bg: #{$dropdown-link-hover-bg};
-  --#{$prefix}dropdown-link-active-color: #{$dropdown-link-active-color};
-  --#{$prefix}dropdown-link-active-bg: #{$dropdown-link-active-bg};
-  --#{$prefix}dropdown-link-disabled-color: #{$dropdown-link-disabled-color};
+  --#{$prefix}dropdown-zindex: 8; // TODO review zindex usage
+  --#{$prefix}dropdown-min-width: 10rem;
+  --#{$prefix}dropdown-padding-x: 0;
+  --#{$prefix}dropdown-padding-y: var(--#{$prefix}spacing-inset-xs);
+  --#{$prefix}dropdown-spacer: 0.125rem;
+  --#{$prefix}dropdown-font-size: var(--#{$prefix}label-font-size);
+  --#{$prefix}dropdown-color: var(--#{$prefix}color-text-base);
+  --#{$prefix}dropdown-background: var(--#{$prefix}color-background-inverse);
+  --#{$prefix}dropdown-border-color: transparent;
+  --#{$prefix}dropdown-border-radius: var(--#{$prefix}radius-smooth);
+  --#{$prefix}dropdown-border-width: 0;
+  --#{$prefix}dropdown-inner-border-radius: var(--#{$prefix}radius-smooth);
+  --#{$prefix}dropdown-divider-bg: var(--#{$prefix}color-border-subtle);
+  --#{$prefix}dropdown-divider-margin-y: var(--#{$prefix}spacing-stack-xs);
+  --#{$prefix}dropdown-box-shadow: 0 20px 30px 5px hsla(0, 0%, 0%, 0.05);
+  --#{$prefix}dropdown-link-color: var(--#{$prefix}color-text-primary);
+  --#{$prefix}dropdown-link-hover-color: var(--#{$prefix}color-text-primary-hover);
+  --#{$prefix}dropdown-link-active-color: var(--#{$prefix}color-text-primary-active);
   --#{$prefix}dropdown-item-padding-x: var(--#{$prefix}spacing-inset-s);
   --#{$prefix}dropdown-item-padding-y: 12px;
-  --#{$prefix}dropdown-header-color: #{$dropdown-header-color};
-  --#{$prefix}dropdown-header-padding-x: #{$dropdown-header-padding-x};
-  --#{$prefix}dropdown-header-padding-y: #{$dropdown-header-padding-y};
-  // scss-docs-end dropdown-css-vars
+  --#{$prefix}dropdown-header-color: var(--#{$prefix}color-text-secondary);
+  --#{$prefix}dropdown-header-font-size: var(--#{$prefix}label-font-size);
+  --#{$prefix}dropdown-header-padding-x: var(--#{$prefix}spacing-inset-s);
+  --#{$prefix}dropdown-header-padding-y: var(--#{$prefix}spacing-inset-xs);
+  --#{$prefix}dropdown-notch-base-size: 1.125rem;
+  --#{$prefix}dropdown-notch-position-x: 20px;
+  --#{$prefix}dropdown-notch-position-y: -8px;
+  --#{$prefix}dropdown-animation-speed: var(--#{$prefix}transition-instant);
+  --#{$prefix}dropdown-vertical-shift: 10px;
 
   position: absolute;
+  z-index: var(--#{$prefix}dropdown-zindex);
   display: none; // none by default, but block on "open" of the menu
   min-width: var(--#{$prefix}dropdown-min-width);
-  padding: var(--#{$prefix}dropdown-padding-y) var(--#{$prefix}dropdown-padding-x);
   margin: 0; // Override default margin of ul
-  @include font-size(var(--#{$prefix}dropdown-font-size));
-  color: var(--#{$prefix}dropdown-color);
-  text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
-  list-style: none;
-  background-color: var(--#{$prefix}dropdown-bg);
-  background-clip: padding-box;
+  padding: var(--#{$prefix}dropdown-padding-y) var(--#{$prefix}dropdown-padding-x);
   border: var(--#{$prefix}dropdown-border-width) solid var(--#{$prefix}dropdown-border-color);
-  @include border-radius(var(--#{$prefix}dropdown-border-radius));
+  border-radius: 0 0 var(--#{$prefix}dropdown-border-radius) var(--#{$prefix}dropdown-border-radius);
+  background-color: var(--#{$prefix}dropdown-background);
+  color: var(--#{$prefix}dropdown-color);
+  list-style: none;
+  text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
+  background-clip: padding-box;
+  @include font-size(var(--#{$prefix}dropdown-font-size));
   @include box-shadow(var(--#{$prefix}dropdown-box-shadow));
-
-  &[data-bs-popper] {
-    top: 100%;
-    left: 0;
-    margin-top: var(--#{$prefix}dropdown-spacer);
-  }
 
   @if $dropdown-padding-y == 0 {
     > .dropdown-item:first-child,
@@ -77,10 +73,14 @@
       @include border-bottom-radius(var(--#{$prefix}dropdown-inner-border-radius));
     }
   }
-  border-radius: 0 0 $dropdown-menu-radius $dropdown-menu-radius;
-  box-shadow: $dropdown-menu-shadow;
-  z-index: 8;
-  //fullwidth menu
+
+  &[data-bs-popper] {
+    top: 100%;
+    left: 0;
+    margin-top: var(--#{$prefix}dropdown-spacer);
+  }
+
+  // Fullwidth menu
   &.full-width {
     width: 100%;
     .link-list li {
@@ -94,98 +94,89 @@
     }
   }
 
-  //header
-  .link-list-wrapper {
-    .link-list-heading {
-      line-height: 2rem;
-      margin-bottom: 0;
-    }
-  }
-
-  //link list finetuning
   .link-list {
-    margin-bottom: 0;
+    margin-bottom: 0; // Remove margin bottom from default list
   }
 
-  //notch
+  // notch
   &:before {
-    content: '';
     position: absolute;
-    top: -$dropdown-menu-notch-base-size;
-    left: $dropdown-menu-notch-position-x;
-    width: $dropdown-menu-notch-base-size * 3;
-    height: $dropdown-menu-notch-base-size * 3;
-    border-radius: $dropdown-menu-radius;
-    background-color: $dropdown-bg;
+    top: var(--#{$prefix}dropdown-notch-position-y);
+    left: var(--#{$prefix}dropdown-notch-position-x);
+    content: '';
+    width: var(--#{$prefix}dropdown-notch-base-size);
+    height: var(--#{$prefix}dropdown-notch-base-size);
+    border-radius: var(--#{$prefix}dropdown-border-radius);
+    background-color: var(--#{$prefix}dropdown-background);
     transform: rotate(45deg);
   }
 
-  //top position
+  // Top position
   &[data-popper-placement='top-start'] {
-    border-radius: $dropdown-menu-radius $dropdown-menu-radius 0 0;
+    border-radius: var(--#{$prefix}dropdown-border-radius) var(--#{$prefix}dropdown-border-radius) 0 0;
     //notch
     &:before {
-      bottom: -$dropdown-menu-notch-base-size;
       top: auto;
+      bottom: var(--#{$prefix}dropdown-notch-position-y);
     }
   }
 
-  //bottom end position
+  // Bottom end position
   &[data-popper-placement='bottom-end'] {
     &:before {
+      right: calc(var(--#{$prefix}dropdown-notch-position-x) / 2);
       left: auto;
-      right: calc($dropdown-menu-notch-position-x / 2);
     }
   }
 
-  //dark version
+  // Dropdown on dark background
   &.dark {
-    background-color: $neutral-1-a8; // Missing in the UI kit
-    .link-list-wrapper .link-list-heading {
-      color: #fff;
+    --#{$prefix}dropdown-text-color: #{$dropdown-dark-color};
+    --#{$prefix}dropdown-background: var(--#{$prefix}color-background-primary-muted);
+    --#{$prefix}dropdown-link-color: #{$dropdown-dark-link-color};
+    --#{$prefix}dropdown-divider-bg: #{$dropdown-dark-divider-bg};
+    --#{$prefix}dropdown-link-active-color: var(--#{$prefix}color-text-inverses);
+    --#{$prefix}dropdown-header-color: #{$dropdown-dark-header-color};
+
+    // Notch element
+    &:before {
+      background-color: var(--#{$prefix}dropdown-background);
     }
-    .link-list-wrapper ul {
+
+    .link-list-heading {
+      color: var(--#{$prefix}color-text-inverse);
+    }
+
+    .link-list {
       span.divider {
-        background: #2e465e; // Missing in the UI kit
+        background: #2e465e;
       }
 
-      li {
-        //link list colors and hovers
-        a span,
-        a:hover span,
-        h3,
-        i {
-          color: #fff;
-        }
-        a:not(.active):not(.disabled):hover i {
-          color: $analogue-2-a4; // Missing in the UI kit
-        }
-        a.disabled span {
-          color: $neutral-1-a4; // Missing in the UI kit
-        }
-        a.active span {
-          color: $cyan; // Missing in the UI kit
-        }
+    // Link list colors and hovers
+      a span,
+      a:hover span {
+        color: var(--#{$prefix}color-text-inverse);
+      }
+
+      a.active span {
+        text-decoration: underline;
       }
     }
-    //notch
-    &:before {
-      background-color: $neutral-1-a8; // Missing in the UI kit
-    }
   }
+
   &.show {
     display: block;
     //menu on bottom
     &[data-popper-placement='bottom-start'] {
-      animation: dropdownFadeIn forwards $dropdown-menu-animation-speed;
+      animation: dropdownFadeIn forwards var(--#{$prefix}dropdown-animation-speed);
     }
     //menu on top
     &[data-popper-placement='top-start'] {
-      animation: dropdownFadeInTop forwards $dropdown-menu-animation-speed;
+      animation: dropdownFadeInTop forwards var(--#{$prefix}dropdown-animation-speed);
     }
     //-menu on left
     &[data-popper-placement='left-start'] {
-      animation: dropdownFadeInTop forwards $dropdown-menu-animation-speed;
+      animation: dropdownFadeInTop forwards var(--#{$prefix}dropdown-animation-speed);
       &:before {
         top: 20px;
         right: -6px;
@@ -194,7 +185,7 @@
     }
     //-menu on right
     &[data-popper-placement='right-start'] {
-      animation: dropdownFadeInTop forwards $dropdown-menu-animation-speed;
+      animation: dropdownFadeInTop forwards var(--#{$prefix}dropdown-animation-speed);
       &:before {
         top: 20px;
         left: -6px;
@@ -202,10 +193,6 @@
     }
   }
 }
-
-// scss-docs-start responsive-breakpoints
-// We deliberately hardcode the `bs-` prefix because we check
-// this custom property in JS to determine Popper's positioning
 
 @each $breakpoint in map-keys($grid-breakpoints) {
   @include media-breakpoint-up($breakpoint) {
@@ -230,7 +217,6 @@
     }
   }
 }
-// scss-docs-end responsive-breakpoints
 
 // Allow for dropdowns to go bottom up (aka, dropup-menu)
 // Just add .dropup after the standard .dropdown class and you're set.
@@ -296,44 +282,25 @@
 .dropdown-item.list-item {
   width: auto; // For `<button>`s
   padding: var(--#{$prefix}dropdown-item-padding-y) var(--#{$prefix}dropdown-item-padding-x);
-  clear: both;
-  font-weight: $font-weight-normal;
-  color: var(--#{$prefix}dropdown-link-color);
+  border: 0; // For `<button>`s
+  background-color: transparent; // For `<button>`s
   text-align: inherit; // For `<button>`s
   text-decoration: if($link-decoration == none, null, none);
   white-space: nowrap; // prevent links from randomly breaking onto new lines
-  background-color: transparent; // For `<button>`s
-  border: 0; // For `<button>`s
 
   &:hover,
   &:focus {
-    // background-color: var(--#{$prefix}dropdown-link-hover-bg);
-    color: var(--#{$prefix}dropdown-link-hover-color);
     text-decoration: if($link-hover-decoration == underline, none, null);
-  }
-
-  &.active,
-  &:active {
-    color: var(--#{$prefix}dropdown-link-active-color);
-  }
-
-  &.disabled,
-  &:disabled {
-    color: var(--#{$prefix}dropdown-link-disabled-color);
-    pointer-events: none;
-    background-color: transparent;
-    // Remove CSS gradients if they're enabled
-    background-image: if($enable-gradients, none, null);
   }
 }
 
 // Dropdown section headers
 .dropdown-header {
   display: block;
-  padding: var(--#{$prefix}dropdown-header-padding-y) var(--#{$prefix}dropdown-header-padding-x);
   margin-bottom: 0; // for use with heading elements
-  @include font-size($font-size-sm);
+  padding: var(--#{$prefix}dropdown-header-padding-y) var(--#{$prefix}dropdown-header-padding-x);
   color: var(--#{$prefix}dropdown-header-color);
+  font-size: var(--#{$prefix}dropdown-header-font-size);
   white-space: nowrap; // as with > li > a
 }
 
@@ -344,50 +311,32 @@
   color: var(--#{$prefix}dropdown-link-color);
 }
 
-// Dark dropdowns
-.dropdown-menu-dark {
-  // scss-docs-start dropdown-dark-css-vars
-  --#{$prefix}dropdown-color: #{$dropdown-dark-color};
-  --#{$prefix}dropdown-bg: #{$dropdown-dark-bg};
-  --#{$prefix}dropdown-border-color: #{$dropdown-dark-border-color};
-  --#{$prefix}dropdown-box-shadow: #{$dropdown-dark-box-shadow};
-  --#{$prefix}dropdown-link-color: #{$dropdown-dark-link-color};
-  --#{$prefix}dropdown-link-hover-color: #{$dropdown-dark-link-hover-color};
-  --#{$prefix}dropdown-divider-bg: #{$dropdown-dark-divider-bg};
-  --#{$prefix}dropdown-link-hover-bg: #{$dropdown-dark-link-hover-bg};
-  --#{$prefix}dropdown-link-active-color: #{$dropdown-dark-link-active-color};
-  --#{$prefix}dropdown-link-active-bg: #{$dropdown-dark-link-active-bg};
-  --#{$prefix}dropdown-link-disabled-color: #{$dropdown-dark-link-disabled-color};
-  --#{$prefix}dropdown-header-color: #{$dropdown-dark-header-color};
-  // scss-docs-end dropdown-dark-css-vars
-}
-
-//menu on bottom animation
+// Menu on bottom animation
 @keyframes dropdownFadeIn {
   0% {
-    opacity: 0;
     margin-top: 0;
+    opacity: 0;
   }
   100% {
+    margin-top: var(--#{$prefix}dropdown-vertical-shift);
     opacity: 1;
-    margin-top: $dropdown-menu-vertical-shift;
   }
 }
-//menu on top animation
+
+// Menu on top animation
 @keyframes dropdownFadeInTop {
   0% {
-    opacity: 0;
     margin-top: 0;
+    opacity: 0;
   }
   100% {
+    margin-top: -var(--#{$prefix}dropdown-vertical-shift);
     opacity: 1;
-    margin-top: -$dropdown-menu-vertical-shift;
   }
 }
 
 .dropdown,
 .btn-group {
-  //dropup
   &.dropup {
     .dropdown-toggle {
       &:after {
@@ -403,7 +352,6 @@
       }
     }
   }
-  //dropend
   &.dropend {
     .dropdown-toggle {
       &:after {
@@ -419,7 +367,6 @@
       }
     }
   }
-  //dropstart
   &.dropstart {
     .dropdown-toggle {
       &:before {
@@ -437,16 +384,24 @@
   }
 }
 
+// Dropdown button
 .btn-dropdown {
-  color: $dropdown-custom-button-color;
-  padding: $dropdown-custom-button-padding;
-  background-color: $dropdown-custom-button-background;
+  --#{$prefix}dropdown-button-color: var(--#{$prefix}color-text-primary);
+  --#{$prefix}dropdown-button-padding: 10px;
+  --#{$prefix}dropdown-button-background: #fff;
+  // padding: var(--#{$prefix}dropdown-button-padding);
   border-radius: 0;
   box-shadow: none;
+
+  color: var(--#{$prefix}dropdown-button-color);
   @include media-breakpoint-up(lg) {
-    font-size: 1.125rem;
+    font-size: var(--#{$prefix}label-font-size-m);
   }
-  &:not(:disabled):not(.disabled):active {
+  &:hover {
+    --#{$prefix}dropdown-button-color: var(--#{$prefix}color-text-primary-hover);
+    text-decoration: underline;
+  }
+  &:not(:disabled):active {
     box-shadow: none;
   }
 }
@@ -455,21 +410,19 @@
 .dropdown-toggle {
   &:after {
     content: '';
-    border: none;
     display: inline;
-    margin: 0;
-    vertical-align: bottom;
     width: auto;
     height: auto;
+    margin: 0;
+    border: none;
+    vertical-align: bottom;
   }
   .icon-expand {
-    transition: transform $dropdown-menu-animation-speed;
+    transition: transform var(--#{$prefix}dropdown-animation-speed);
   }
   .icon.icon-xs {
-    transition: transform $dropdown-menu-animation-speed;
-    width: 18px;
-    height: 18px;
     transform: translateY(-1px);
+    transition: transform var(--#{$prefix}dropdown-animation-speed);
   }
   &[aria-expanded='true'] .icon-expand {
     transform: scaleY(-1);
