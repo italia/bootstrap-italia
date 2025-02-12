@@ -26,7 +26,7 @@ strong {
 
 mark,
 code {
-  padding: 0 2px;
+  padding: 0 var(--#{$prefix}spacing-inset-xxs);
 }
 
 mark {
