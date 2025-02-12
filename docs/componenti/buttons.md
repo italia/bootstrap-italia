@@ -15,18 +15,18 @@ Il pulsante necessita della classe `.btn` e delle classi `.btn-` per applicare l
 <button type="button" class="btn btn-primary">Etichetta pulsante</button>
 {% endcapture %}{% include example.html content=example %}
 
-Le classi `.btn` sono state pensate per essere utilizzate con l'elemento `<button>`. Tuttavia, è possibile applicare lo stile per i pulsanti anche ad elementi di tipo `<a>` o `<input>`, anche se alcuni browser potrebbero mostrare un rendering lievemente diverso.
+Le classi `.btn` sono state pensate per essere utilizzate con l'elemento `<button>`. Tuttavia, è possibile applicare lo stile di un pulsante anche ad elementi di tipo `<a>` o `<input>`, anche se alcuni browser potrebbero mostrare un rendering lievemente diverso.
 
 {% comment %}Example name: Button link{% endcomment %}
 {% capture example %}
 <a class="btn btn-link" href="#" role="button">Pulsante link</a>
-<button class="btn btn-link" type="submit">Pulsante button</button>
-<input class="btn btn-link" type="button" value="Pulsante input">
-<input class="btn btn-link" type="submit" value="Pulsante submit">
-<input class="btn btn-link" type="reset" value="Pulsante reset">
+<button class="btn btn-secondary" type="submit">Pulsante button</button>
+<input class="btn btn-outline-secondary" type="button" value="Pulsante input">
+<input class="btn btn-outline-success" type="submit" value="Pulsante submit">
+<input class="btn btn-danger" type="reset" value="Pulsante reset">
 {% endcapture %}{% include example.html content=example %}
 
-In questo esempio viene utilizzata la variante `.btn-link` che conferisce al pulsante l'aspetto di un normale link testuale.
+In questo esempio vengono utilizzate diverse varianti di stile, come `.btn-link`,`.btn-outline-secondary` e `.btn-danger`, che conferiscono a ciascun elemento un aspetto visivo unico.
 
 {% capture callout %}
 #### Accessibilità
