@@ -554,6 +554,9 @@
   --#{$prefix}color-background-primary-lighter: var(--dsi-color-background-primary-lighter);
   --#{$prefix}color-background-primary-light: var(--dsi-color-background-primary-light);
   --#{$prefix}color-background-primary: var(--dsi-color-background-primary);
+  --#{$prefix}overlay-background-light: hsla(0, 0%, 0%, 0.5);
+  --#{$prefix}overlay-background-primary: hsla(210, 100%, 40%, 0.8);
+  --#{$prefix}overlay-background-primary-muted: hsla(210, 54%, 20%, 0.8);
   --#{$prefix}highlight-background: var(--dsi-color-teal-80); // TODO: replace with semantic token
   --#{$prefix}code-background: var(--dsi-color-background-secondary);
   --#{$prefix}ins-background: var(--dsi-color-emerald-67);
