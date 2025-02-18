@@ -32,6 +32,10 @@ const CONFIG_DEFAULT = {
     pageX: 'Vai a pagina %s',
     play: 'Attiva autoplay',
     pause: 'Pausa autoplay',
+    carousel: 'carosello',
+    select: 'Seleziona una slide da mostrare',
+    slide: 'slide',
+    slideLabel: '%s di %s'
   },
 }
 const CONFIGS = {
