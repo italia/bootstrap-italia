@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Tue, 18 Feb 2025 16:12:20 GMT
+ * Generated on Tue, 18 Feb 2025 17:54:38 GMT
  */
 
 :root {
@@ -167,11 +167,6 @@
   --it-label-font-size: var(--it-font-size-3);
   --it-label-font-size-s: var(--it-font-size-2);
   --it-label-font-size-xs: var(--it-font-size-1);
-  --it-theme-italia-deep: var(--it-color-blue-20);
-  --it-theme-italia-muted: var(--it-color-blue-25);
-  --it-theme-italia-lighter: var(--it-color-blue-97);
-  --it-theme-italia-light: var(--it-color-blue-87);
-  --it-theme-italia-base: var(--it-color-blue-40);
   --it-lead-font-size-l: var(--it-font-size-6);
   --it-lead-font-size: var(--it-font-size-5);
   --it-caption-font-size: var(--it-font-size-2);
@@ -204,6 +199,12 @@
   --it-elevation-low-blur: var(--it-shadow-blur-s);
   --it-elevation-low-y: var(--it-shadow-offest-s);
   --it-font-line-height-tight: var(--it-font-line-height-1);
+  --it-theme-italia-subtle: var(--it-color-blue-30);
+  --it-theme-italia-deep: var(--it-color-blue-20);
+  --it-theme-italia-muted: var(--it-color-blue-25);
+  --it-theme-italia-lighter: var(--it-color-blue-97);
+  --it-theme-italia-light: var(--it-color-blue-87);
+  --it-theme-italia-base: var(--it-color-blue-40);
   --it-spacing-3xl: var(--it-spacing-24x);
   --it-spacing-xxl: var(--it-spacing-12x);
   --it-spacing-xl: var(--it-spacing-10x);
@@ -216,12 +217,6 @@
   --it-color-shadow-dark: var(--it-color-black-15);
   --it-color-shadow-soft: var(--it-color-black-10);
   --it-color-shadow-whisper: var(--it-color-black-05);
-  --it-color-theme-italia-subtle: var(--it-color-blue-30);
-  --it-color-theme-italia-deep: var(--it-color-blue-20);
-  --it-color-theme-italia-muted: var(--it-color-blue-25);
-  --it-color-theme-italia-lighter: var(--it-color-blue-97);
-  --it-color-theme-italia-light: var(--it-color-blue-87);
-  --it-color-theme-italia-base: var(--it-color-blue-40);
   --it-color-outline-focus: var(--it-color-gray-10);
   --it-color-link-accent-hover: var(--it-color-teal-26);
   --it-color-link-accent: var(--it-color-teal-32);
@@ -291,7 +286,7 @@
   --it-color-background-secondary-active: var(--it-color-slate-20);
   --it-color-background-secondary-hover: var(--it-color-slate-28);
   --it-color-background-secondary: var(--it-color-slate-44);
-  --it-color-background-primary-dark: var(--it-color-blue-20);
+  --it-color-background-primary-deep: var(--it-color-blue-20);
   --it-color-background-primary-muted: var(--it-color-blue-30);
   --it-color-background-primary-active: var(--it-color-blue-20);
   --it-color-background-primary-hover: var(--it-color-blue-30);

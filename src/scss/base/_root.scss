@@ -58,10 +58,11 @@
 
   // Theme colors 
   --#{$prefix}theme-primary: var(--it-theme-italia-base);
-  --#{$prefix}theme-primary-muted: var(--it-theme-italia-muted);
-  --#{$prefix}theme-primary-deep: var(--it-theme-italia-deep);
   --#{$prefix}theme-primary-light: var(--it-theme-italia-light);
   --#{$prefix}theme-primary-lighter: var(--it-theme-italia-lighter);
+  --#{$prefix}theme-primary-subtle: var(--it-theme-italia-subtle);
+  --#{$prefix}theme-primary-muted: var(--it-theme-italia-muted);
+  --#{$prefix}theme-primary-deep: var(--it-theme-italia-deep);
   
   // Spacing
   --#{$prefix}spacing-inset-3xl: var(--it-spacing-inset-3xl);
