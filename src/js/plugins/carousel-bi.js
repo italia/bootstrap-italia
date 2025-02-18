@@ -17,14 +17,12 @@ const DATA_KEY = 'bs.carousel'
 const EVENT_KEY = `.${DATA_KEY}`
 const DATA_API_KEY = '.data-api'
 
-//const EVENT_SCROLL = `scroll${EVENT_KEY}`
-
 const EVENT_LOAD_DATA_API = `load${EVENT_KEY}${DATA_API_KEY}`
 
 const SELECTOR_CAROUSEL = '[data-bs-carousel-splide]'
 
 const CONFIG_DEFAULT = {
-  slideFocus: true,
+  slideFocus: false,
   i18n: {
     prev: 'Slide precedente',
     next: 'Slide successiva',
