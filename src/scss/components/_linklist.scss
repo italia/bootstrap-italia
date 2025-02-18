@@ -3,13 +3,13 @@
   --#{$prefix}linklist-heading-font-size: var(--#{$prefix}heading-6-font-size);
   --#{$prefix}linklist-item-font-size: var(--#{$prefix}label-font-size);
   --#{$prefix}linklist-item-line-height: var(--#{$prefix}label-line-height);
-  --#{$prefix}linklist-item-spacing: var(--#{$prefix}spacing-inset-xs);
-  --#{$prefix}linklist-nested-spacing: var(--#{$prefix}spacing-inset-s);
-  // --#{$prefix}linklist-item-spacing-stack: var(--#{$prefix}spacing-stack-s);
+  --#{$prefix}linklist-item-spacing: var(--#{$prefix}spacing-xxs);
+  --#{$prefix}linklist-nested-spacing: var(--#{$prefix}spacing-s);
+  // --#{$prefix}linklist-item-spacing-stack: var(--#{$prefix}spacing-s);
 
   .link-list-heading,
   h3 {
-    margin-bottom: var(--#{$prefix}spacing-stack-xs);
+    margin-bottom: var(--#{$prefix}spacing-xxs);
     color: var(--#{$prefix}color-text-base);
     font-size: var(--#{$prefix}linklist-heading-font-size);
     font-weight: var(--#{$prefix}heading-font-weight-weak);
@@ -17,7 +17,7 @@
   }
 
   h3 {
-    padding: 0 var(--#{$prefix}spacing-inset-m);
+    padding: 0 var(--#{$prefix}spacing-m);
     color: var(--#{$prefix}color-text-base);
   }
 
@@ -113,11 +113,11 @@
     // Avatar position inside the list item
     &.avatar {
       display: flex;
-      margin-bottom: var(--#{$prefix}spacing-stack-xs);
+      margin-bottom: var(--#{$prefix}spacing-xxs);
 
       .avatar {
         display: block;
-        margin-right: var(--#{$prefix}spacing-inline-s);
+        margin-right: var(--#{$prefix}spacing-s);
       }
     }
 
@@ -133,7 +133,7 @@
       .icon {
         left: 0;
         flex-shrink: 0;
-        margin-right: var(--#{$prefix}spacing-inline-xs);
+        margin-right: var(--#{$prefix}spacing-xxs);
       }
 
       p {
@@ -181,7 +181,7 @@
       justify-content: space-between;
 
       .list-item-title {
-        margin-right: var(--#{$prefix}spacing-inline-xs);
+        margin-right: var(--#{$prefix}spacing-xxs);
       }
     }
 
@@ -203,19 +203,19 @@
   .divider {
     display: block;
     height: var(--#{$prefix}linklist-divider-size);
-    margin: var(--#{$prefix}spacing-stack-xs) 0;
+    margin: var(--#{$prefix}spacing-xxs) 0;
     background: var(--#{$prefix}color-border-subtle);
   }
 
   .form-check {
-    padding: 0 var(--#{$prefix}spacing-inset-m);
+    padding: 0 var(--#{$prefix}spacing-m);
   }
 }
 
 // Multiline list item
 .multiline {
   .list-item-title-icon-wrapper {
-    margin-bottom: var(--#{$prefix}spacing-stack-xxs);
+    margin-bottom: var(--#{$prefix}spacing-3xs);
   }
 
   .list-item.icon-right .list-item-title-icon-wrapper {
@@ -242,7 +242,7 @@
 @include media-breakpoint-up(md) {
   .link-list-wrapper ul li a.large.icon-left,
   .link-list-wrapper ul li a.large.icon-right {
-    --#{$prefix}linklist-item-spacing: var(--#{$prefix}spacing-inset-s);
+    --#{$prefix}linklist-item-spacing: var(--#{$prefix}spacing-s);
   }
 }
 

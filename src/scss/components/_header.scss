@@ -15,7 +15,7 @@
   --#{$prefix}header-nav-background: var(--#{$prefix}color-background-primary);
   --#{$prefix}header-nav-text-color: var(--#{$prefix}link-primary);
   --#{$prefix}header-nav-secondary-font-size: var(--#{$prefix}label-font-size);
-  --#{$prefix}header-spacing-inset: var(--#{$prefix}spacing-inset-xs);
+  --#{$prefix}header-spacing-inset: var(--#{$prefix}spacing-xxs);
   --#{$prefix}header-search-button-color: var(--#{$prefix}icon-inverse);
   --#{$prefix}header-search-button-background: var(--#{$prefix}color-background-inverse);
   --#{$prefix}header-search-button-size: 3rem;
@@ -114,7 +114,7 @@
                   flex-shrink: 0;
                   width: var(--#{$prefix}header-brand-size);
                   height: var(--#{$prefix}header-brand-size);
-                  margin-right: var(--#{$prefix}spacing-inline-xs);
+                  margin-right: var(--#{$prefix}spacing-xxs);
                   fill: var(--#{$prefix}header-brand-icon-color);
                 }
               }

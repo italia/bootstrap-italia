@@ -21,7 +21,7 @@
 // Custom Lists
 
 .it-list {
-  --#{$prefix}list-item-spacing: var(--#{$prefix}spacing-inset-s) var(--#{$prefix}spacing-inset-xs);
+  --#{$prefix}list-item-spacing: var(--#{$prefix}spacing-s) var(--#{$prefix}spacing-xxs);
   --#{$prefix}list-item-thumb-size: 5rem;
 }
 

@@ -43,7 +43,7 @@
     .icon {
       width: var(--#{$prefix}icon-size-s);
       height: var(--#{$prefix}icon-size-s);
-      margin-left: var(--#{$prefix}spacing-inline-s);
+      margin-left: var(--#{$prefix}spacing-s);
       fill: var(--#{$prefix}header-social-color);
       &:hover {
         --#{$prefix}header-social-color: var(--#{$prefix}color-background-inverse-hover);
@@ -97,7 +97,7 @@
   }
 
   .it-brand-text {
-    margin-right: var(--#{$prefix}spacing-inline-xs);
+    margin-right: var(--#{$prefix}spacing-xxs);
   }
 
   a {
@@ -118,7 +118,7 @@
       letter-spacing: unset;
       line-height: var(--#{$prefix}heading-line-height);
       @include media-breakpoint-up(lg) {
-        margin-bottom: var(--#{$prefix}spacing-stack-xxs);
+        margin-bottom: var(--#{$prefix}spacing-3xs);
       }
     }
 
@@ -134,7 +134,7 @@
   .icon {
     width: var(--#{$prefix}header-brand-size);
     height: var(--#{$prefix}header-brand-size);
-    margin-right: var(--#{$prefix}spacing-inline-xs);
+    margin-right: var(--#{$prefix}spacing-xxs);
     fill: var(--#{$prefix}header-brand-icon-color);
   }
 }

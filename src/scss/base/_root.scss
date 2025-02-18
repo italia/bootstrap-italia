@@ -65,27 +65,18 @@
   --#{$prefix}theme-primary-deep: var(--it-theme-italia-deep);
   
   // Spacing
-  --#{$prefix}spacing-inset-3xl: var(--it-spacing-inset-3xl);
-  --#{$prefix}spacing-inset-xxl: var(--it-spacing-inset-xxl);
-  --#{$prefix}spacing-inset-xl: var(--it-spacing-inset-xl);
-  --#{$prefix}spacing-inset-l: var(--it-spacing-inset-l);
-  --#{$prefix}spacing-inset-m: var(--it-spacing-inset-m);
-  --#{$prefix}spacing-inset-s: var(--it-spacing-inset-s);
-  --#{$prefix}spacing-inset-xs: var(--it-spacing-inset-xs);
-  --#{$prefix}spacing-inset-xxs: var(--it-spacing-inset-xxs);
-  --#{$prefix}spacing-inline-l: var(--it-spacing-inline-l);
-  --#{$prefix}spacing-inline-m: var(--it-spacing-inline-m); 
-  --#{$prefix}spacing-inline-s: var(--it-spacing-inline-s); 
-  --#{$prefix}spacing-inline-xs: var(--it-spacing-inline-xs);
-  --#{$prefix}spacing-inline-xxs: var(--it-spacing-inline-xxs);
-  --#{$prefix}spacing-stack-xxl: var(--it-spacing-stack-xxl);
-  --#{$prefix}spacing-stack-xl: var(--it-spacing-stack-xl);
-  --#{$prefix}spacing-stack-l: var(--it-spacing-stack-l);
-  --#{$prefix}spacing-stack-m: var(--it-spacing-stack-m);
-  --#{$prefix}spacing-stack-s: var(--it-spacing-stack-s);
-  --#{$prefix}spacing-stack-xs: var(--it-spacing-stack-xs);
-  --#{$prefix}heading-spacing: var(--it-spacing-stack-s);
-  --#{$prefix}paragraph-spacing: var(--it-spacing-stack-m);
+  --#{$prefix}spacing-3xl: var(--it-spacing-3xl);
+  --#{$prefix}spacing-xxl: var(--it-spacing-xxl);
+  --#{$prefix}spacing-xl: var(--it-spacing-xl);
+  --#{$prefix}spacing-l: var(--it-spacing-l);
+  --#{$prefix}spacing-m: var(--it-spacing-m);
+  --#{$prefix}spacing-s: var(--it-spacing-s);
+  --#{$prefix}spacing-xxs: var(--it-spacing-xs);
+  --#{$prefix}spacing-xxs: var(--it-spacing-xxs);
+  --#{$prefix}spacing-3xs: var(--it-spacing-3xs);
+
+  --#{$prefix}heading-spacing: var(--it-spacing-s);
+  --#{$prefix}paragraph-spacing: var(--it-spacing-m);
   
   // Typography
   --#{$prefix}font-mono: var(--it-font-mono);

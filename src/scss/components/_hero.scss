@@ -46,7 +46,7 @@
   .it-hero-text-wrapper h6,
   .it-hero-text-wrapper p {
     color: var(--#{$prefix}hero-text-color);
-    margin-bottom: var(--#{$prefix}spacing-stack-m);
+    margin-bottom: var(--#{$prefix}spacing-m);
   }
 
   .it-hero-text-wrapper .it-category {
@@ -54,7 +54,7 @@
     font-size: var(--#{$prefix}hero-cat-size);
     text-transform: uppercase;
     font-weight: 600;
-    margin-bottom: var(--#{$prefix}spacing-stack-xs);
+    margin-bottom: var(--#{$prefix}spacing-xxs);
   }
 
   .it-hero-text-wrapper p {
@@ -87,7 +87,7 @@
   }
 
   @media (max-width: 575px) {
-    --#{$prefix}hero-overlap-negative-spacing: calc(var(--#{$prefix}spacing-stack-l) * -1);
+    --#{$prefix}hero-overlap-negative-spacing: calc(var(--#{$prefix}spacing-l) * -1);
     &.it-wrapped-container {
       display: flex;
       flex-direction: column;
@@ -112,7 +112,7 @@
     align-items: center;
 
     .it-hero-text-wrapper {
-      padding: var(--#{$prefix}spacing-inset-3xl) 0;
+      padding: var(--#{$prefix}spacing-3xl) 0;
       max-width: 50vw;
     }
   }
