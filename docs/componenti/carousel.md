@@ -279,8 +279,8 @@ Contiene un'immagine associata ad una card "articolo".
 
 <div class="it-carousel-wrapper it-carousel-landscape-abstract splide" data-bs-carousel-splide>
   <div class="splide__track">
-		<ul class="splide__list">
-			<li class="splide__slide">
+    <ul class="splide__list">
+      <li class="splide__slide">
         <div class="it-single-slide-wrapper">
           <a href="#">
             <div class="img-responsive-wrapper">
