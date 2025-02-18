@@ -35,7 +35,7 @@ const CONFIG_DEFAULT = {
     carousel: 'carosello',
     select: 'Seleziona una slide da mostrare',
     slide: 'slide',
-    slideLabel: '%s di %s'
+    slideLabel: '%s di %s',
   },
 }
 const CONFIGS = {
