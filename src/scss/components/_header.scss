@@ -2,7 +2,7 @@
 .it-header-slim-wrapper,
 .it-header-center-wrapper,
 .it-header-navbar-wrapper {
-  --#{$prefix}header-brand-spacing: var(--dsi-spacing-14x);
+  --#{$prefix}header-brand-spacing: var(--it-spacing-14x);
   --#{$prefix}header-brand-color: var(--#{$prefix}color-text-inverse);
   --#{$prefix}header-brand-icon-color: var(--#{$prefix}icon-inverse);
   --#{$prefix}header-brand-size: 2.5rem;
@@ -21,7 +21,7 @@
   --#{$prefix}header-search-button-size: 3rem;
   --#{$prefix}header-search-icon-size: 1.5rem;
   --#{$prefix}header-search-icon-color: var(--#{$prefix}icon-inverse);
-  --#{$prefix}header-slim-background: var(--dsi-color-blue-30); // TODO: use variable when ready
+  --#{$prefix}header-slim-background: var(--it-color-blue-30); // TODO: use variable when ready
   --#{$prefix}header-slim-border-color: hsla(0, 0%, 100%, 0.2);
   --#{$prefix}header-slim-height: 3rem; // 48px
   --#{$prefix}header-slim-text-color: var(--#{$prefix}color-text-inverse);

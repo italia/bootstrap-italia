@@ -80,7 +80,7 @@
     margin-bottom: var(--#{$prefix}acceptoverlay-icon-spacing);
     text-align: center;
     @include media-breakpoint-up(md) {
-      --#{$prefix}acceptoverlay-icon-margin-bottom: var(--dsi-spacing-12x); // TODO: apply semantic token
+      --#{$prefix}acceptoverlay-icon-margin-bottom: var(--it-spacing-12x); // TODO: apply semantic token
     }
 
     .icon {
