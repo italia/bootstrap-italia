@@ -69,7 +69,7 @@ Esempio di carousel con card semplici.
           <div class="card-wrapper card-space">
             <div class="card card-bg">
               <div class="card-body">
-                <h5 class="card-title">1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
+                <h3 class="card-title h5 no_toc">1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h3>
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span></span>
@@ -85,7 +85,7 @@ Esempio di carousel con card semplici.
           <div class="card-wrapper card-space">
             <div class="card card-bg">
               <div class="card-body">
-                <h5 class="card-title">2. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
+                <h3 class="card-title h5 no_toc">2. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h3>
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">2. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span></span>
@@ -101,7 +101,7 @@ Esempio di carousel con card semplici.
           <div class="card-wrapper card-space">
             <div class="card card-bg">
               <div class="card-body">
-                <h5 class="card-title">3. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
+                <h3 class="card-title h5 no_toc">3. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h3>
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">3. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span></span>
@@ -117,7 +117,7 @@ Esempio di carousel con card semplici.
           <div class="card-wrapper card-space">
             <div class="card card-bg">
               <div class="card-body">
-                <h5 class="card-title">4. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
+                <h3 class="card-title h5 no_toc">4. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h3>
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">4. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span></span>
@@ -133,7 +133,7 @@ Esempio di carousel con card semplici.
           <div class="card-wrapper card-space">
             <div class="card card-bg">
               <div class="card-body">
-                <h5 class="card-title">5. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
+                <h3 class="card-title h5 no_toc">5. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h3>
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">5. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span></span>
@@ -149,7 +149,7 @@ Esempio di carousel con card semplici.
           <div class="card-wrapper card-space">
             <div class="card card-bg">
               <div class="card-body">
-                <h5 class="card-title">6. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
+                <h3 class="card-title h5 no_toc">6. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h3>
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">6. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span></span>
@@ -186,7 +186,7 @@ Esempio di carousel con card semplici.
                   <a class="category" href="#">Categoria</a>
                   <span class="data">10/12/{{'now' | date: "%Y"}}</span>
                 </div>
-                <h5 class="card-title big-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+                <h3 class="card-title big-heading h5 no_toc">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h3>
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <span class="card-signature">di Federico De Paolis</span>
                 <a class="read-more" href="#">
@@ -207,7 +207,7 @@ Esempio di carousel con card semplici.
                   <a class="category" href="#">Categoria</a>
                   <span class="data">10/12/{{'now' | date: "%Y"}}</span>
                 </div>
-                <h5 class="card-title big-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+                <h3 class="card-title big-heading h5 no_toc">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h3>
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <span class="card-signature">di Federico De Paolis</span>
                 <a class="read-more" href="#">
@@ -228,7 +228,7 @@ Esempio di carousel con card semplici.
                   <a class="category" href="#">Categoria</a>
                   <span class="data">10/12/{{'now' | date: "%Y"}}</span>
                 </div>
-                <h5 class="card-title big-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+                <h3 class="card-title big-heading h5 no_toc">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h3>
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <span class="card-signature">di Federico De Paolis</span>
                 <a class="read-more" href="#">
@@ -249,7 +249,7 @@ Esempio di carousel con card semplici.
                   <a class="category" href="#">Categoria</a>
                   <span class="data">10/12/{{'now' | date: "%Y"}}</span>
                 </div>
-                <h5 class="card-title big-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+                <h3 class="card-title big-heading h5 no_toc">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h3>
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <span class="card-signature">di Federico De Paolis</span>
                 <a class="read-more" href="#">
@@ -297,7 +297,7 @@ Contiene un'immagine associata ad una card "articolo".
                     <a class="category" href="#">Categoria</a>
                     <span class="data">10/12/{{'now' | date: "%Y"}}</span>
                   </div>
-                  <h5 class="card-title big-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+                  <h3 class="card-title big-heading h5 no_toc">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h3>
                   <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                   <span class="card-signature">di Federico De Paolis</span>
                   <a class="read-more" href="#">
@@ -327,7 +327,7 @@ Contiene un'immagine associata ad una card "articolo".
                     <a class="category" href="#">Categoria</a>
                     <span class="data">10/12/{{'now' | date: "%Y"}}</span>
                   </div>
-                  <h5 class="card-title big-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+                  <h3 class="card-title big-heading h5 no_toc">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h3>
                   <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                   <span class="card-signature">di Federico De Paolis</span>
                   <a class="read-more" href="#">
@@ -357,7 +357,7 @@ Contiene un'immagine associata ad una card "articolo".
                     <a class="category" href="#">Categoria</a>
                     <span class="data">10/12/{{'now' | date: "%Y"}}</span>
                   </div>
-                  <h3 class="card-title big-heading h5">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h3>
+                  <h3 class="card-title big-heading h5 no_toc">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h3>
                   <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                   <span class="card-signature">di Federico De Paolis</span>
                   <a class="read-more" href="#">
@@ -397,7 +397,7 @@ Contiene un'immagine associata ad una card "articolo".
                 </div>
               </div>
               <div class="card-body px-3 px-md-4">
-                <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+                <h3 class="card-title h5 no_toc">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h3>
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
                   <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg>
@@ -417,7 +417,7 @@ Contiene un'immagine associata ad una card "articolo".
                 </div>
               </div>
               <div class="card-body px-3 px-md-4">
-                <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+                <h3 class="card-title h5 no_toc">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h3>
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
                   <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg>
@@ -437,7 +437,7 @@ Contiene un'immagine associata ad una card "articolo".
                 </div>
               </div>
               <div class="card-body px-3 px-md-4">
-                <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+                <h3 class="card-title h5 no_toc">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h3>
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
                   <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg>
@@ -457,7 +457,7 @@ Contiene un'immagine associata ad una card "articolo".
                 </div>
               </div>
               <div class="card-body px-3 px-md-4">
-                <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+                <h3 class="card-title h5 no_toc">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h3>
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
                   <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg>
@@ -477,7 +477,7 @@ Contiene un'immagine associata ad una card "articolo".
                 </div>
               </div>
               <div class="card-body px-3 px-md-4">
-                <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+                <h3 class="card-title h5 no_toc">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h3>
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
                   <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg>
@@ -497,7 +497,7 @@ Contiene un'immagine associata ad una card "articolo".
                 </div>
               </div>
               <div class="card-body px-3 px-md-4">
-                <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+                <h3 class="card-title h5 no_toc">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h3>
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
                   <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg>
@@ -538,7 +538,7 @@ Contiene [Card di tipo speciale]({{ site.baseurl }}/docs/componenti/card/#card-s
               <div class="card-body">
                 <div class="head-tags"><span class="data">10/10/{{'now' | date: "%Y"}}</span>
                 </div>
-                <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+                <h3 class="card-title h5 no_toc">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h3>
                 <p class="card-text"></p>
               </div>
             </a>
@@ -557,7 +557,7 @@ Contiene [Card di tipo speciale]({{ site.baseurl }}/docs/componenti/card/#card-s
               <div class="card-body">
                 <div class="head-tags"><span class="data">10/10/{{'now' | date: "%Y"}}</span>
                 </div>
-                <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+                <h3 class="card-title h5 no_toc">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h3>
                 <p class="card-text"></p>
               </div>
             </a>
@@ -576,7 +576,7 @@ Contiene [Card di tipo speciale]({{ site.baseurl }}/docs/componenti/card/#card-s
               <div class="card-body">
                 <div class="head-tags"><span class="data">10/10/{{'now' | date: "%Y"}}</span>
                 </div>
-                <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+                <h3 class="card-title h5 no_toc">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h3>
                 <p class="card-text"></p>
               </div>
             </a>
@@ -595,7 +595,7 @@ Contiene [Card di tipo speciale]({{ site.baseurl }}/docs/componenti/card/#card-s
               <div class="card-body">
                 <div class="head-tags"><span class="data">10/10/{{'now' | date: "%Y"}}</span>
                 </div>
-                <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+                <h3 class="card-title h5 no_toc">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h3>
                 <p class="card-text"></p>
               </div>
             </a>
@@ -614,7 +614,7 @@ Contiene [Card di tipo speciale]({{ site.baseurl }}/docs/componenti/card/#card-s
               <div class="card-body">
                 <div class="head-tags"><span class="data">10/10/{{'now' | date: "%Y"}}</span>
                 </div>
-                <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+                <h3 class="card-title h5 no_toc">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h3>
                 <p class="card-text"></p>
               </div>
             </a>
@@ -633,7 +633,7 @@ Contiene [Card di tipo speciale]({{ site.baseurl }}/docs/componenti/card/#card-s
               <div class="card-body">
                 <div class="head-tags"><span class="data">10/10/{{'now' | date: "%Y"}}</span>
                 </div>
-                <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+                <h3 class="card-title h5 no_toc">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h3>
                 <p class="card-text"></p>
               </div>
             </a>
