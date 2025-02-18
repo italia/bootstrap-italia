@@ -171,7 +171,7 @@ const CONFIGS = {
   },
 }
 
-class CarouselBI extends BaseComponent {
+class Carousel extends BaseComponent {
   constructor(element) {
     super(element)
     this._config = this._getConfig()
@@ -217,9 +217,9 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
   EventHandler.on(window, EVENT_LOAD_DATA_API, () => {
     const carousels = SelectorEngine.find(SELECTOR_CAROUSEL)
     carousels.forEach((carousel) => {
-      CarouselBI.getOrCreateInstance(carousel)
+      Carousel.getOrCreateInstance(carousel)
     })
   })
 }
 
-export default CarouselBI
+export default Carousel
