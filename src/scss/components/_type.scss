@@ -79,7 +79,7 @@ kbd {
   padding: 2px var(--#{$prefix}spacing-inset-xxs);
   border: var(--#{$prefix}border-base) solid var(--#{$prefix}color-border-subtle);
   background-color: var(--#{$prefix}color-background-secondary-lighter);
-  box-shadow: var(--#{$prefix}shadow-s), 0 2px 0 0 hsla(255, 0%, 100%, 0.7) inset;
+  box-shadow: var(--#{$prefix}elevation-low), 0 2px 0 0 hsla(255, 0%, 100%, 0.7) inset;
   color: var(--#{$prefix}color-text-secondary);
   font-size: var(--#{$prefix}font-size-1);
   font-weight: var(--#{$prefix}font-weight-solid);
@@ -246,7 +246,7 @@ blockquote,
     margin-left: 0;
     padding: var(--#{$prefix}spacing-inset-m);
     background-color: var(--#{$prefix}color-background-inverse); // TODO: Use a card background variable when available
-    box-shadow: var(--#{$prefix}shadow-s);
+    box-shadow: var(--#{$prefix}elevation-low);
 
     .blockquote-footer {
       font-size: inherit;

@@ -177,10 +177,9 @@
   --#{$prefix}sizing-quarter: var(--it-sizing-quarter);
   
   // Shadow
-  --#{$prefix}shadow-color: var(--it-shadow-color);
-  --#{$prefix}shadow-l: var(--#{$prefix}shadow-coloor) var(--it-shadow-l-x) var(--it-shadow-l-y) var(--it-shadow-l-blur) var(--it-shadow-l-spread); // TODO: update with real tokens
-  --#{$prefix}shadow-m: var(--#{$prefix}shadow-color) var(--it-shadow-m-x) var(--it-shadow-m-y) var(--it-shadow-m-blur) var(--it-shadow-m-spread); // TODO: update with real tokens
-  --#{$prefix}shadow-s: var(--#{$prefix}shadow-color) var(--it-shadow-s-x) var(--it-shadow-s-y) var(--it-shadow-s-blur)  var(--it-shadow-s-spread); // TODO: update with real tokens
+  --#{$prefix}elevation-high: var(--it-elevation-high-color) var(--it-elevation-high-x) var(--it-elevation-high-y) var(--it-elevation-high-blur) var(--it-elevation-high-spread);
+  --#{$prefix}elevation-medium: var(--it-elevation-medium-color) var(--it-elevation-medium-x) var(--it-elevation-medium-y) var(--it-elevation-medium-blur) var(--it-elevation-medium-spread);
+  --#{$prefix}elevation-low: var(--it-elevation-low-color) var(--it-elevation-low-x) var(--it-elevation-low-y) var(--it-elevation-low-blur)  var(--it-elevation-low-spread);
   
   // Text colors
   --#{$prefix}color-text-accent: var(--it-color-text-accent);
