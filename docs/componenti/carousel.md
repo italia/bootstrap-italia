@@ -850,7 +850,7 @@ div **`it-carousel-wrapper`** :
 ```js
 var elementList = [].slice.call(document.querySelectorAll('.splide'))
 var masonryList = elementList.map(function (element) {
-  return new bootstrap.CarouselBI(element)
+  return new bootstrap.Carousel(element)
 })
 ```
 
@@ -866,15 +866,15 @@ var masonryList = elementList.map(function (element) {
   <tbody>
     <tr>
       <td>dispose</td>
-      <td>Rimuove le funzionalità di CarouselBI</td>
+      <td>Rimuove le funzionalità di Carousel</td>
     </tr>
     <tr>
       <td>getInstance</td>
-      <td>Metodo statico che restituisce l'istanza CarouselBI associata ad un elemento del DOM. Esempio: <code>bootstrap.CarouselBI.getInstance(element)</code></td>
+      <td>Metodo statico che restituisce l'istanza Carousel associata ad un elemento del DOM. Esempio: <code>bootstrap.Carousel.getInstance(element)</code></td>
     </tr>
     <tr>
       <td>getOrCreateInstance</td>
-      <td>Metodo statico che restituisce un'istanza CarouselBI associata ad un elemento del DOM o ne crea una nuova nel caso non fosse stata inizializzata. Esempio: <code>bootstrap.CarouselBI.getOrCreateInstance(element)</code></td>
+      <td>Metodo statico che restituisce un'istanza Carousel associata ad un elemento del DOM o ne crea una nuova nel caso non fosse stata inizializzata. Esempio: <code>bootstrap.Carousel.getOrCreateInstance(element)</code></td>
     </tr>
   </tbody>
 </table>
