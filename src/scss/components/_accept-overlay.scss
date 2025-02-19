@@ -4,12 +4,12 @@
   --#{$prefix}acceptoverlay-label-color: var(--#{$prefix}color-text-secondary);
   --#{$prefix}acceptoverlay-label-border-color: var(--#{$prefix}color-border-subtle);
   --#{$prefix}acceptoverlay-opacity: 0.9;
-  --#{$prefix}acceptoverlay-spacing-inset: var(--#{$prefix}spacing-inset-s);
+  --#{$prefix}acceptoverlay-spacing-inset: var(--#{$prefix}spacing-s);
   --#{$prefix}acceptoverlay-primary-opacity: 0.95;
   --#{$prefix}acceptoverlay-inner-width: 600px;
-  --#{$prefix}acceptoverlay-icon-spacing: var(--#{$prefix}spacing-stack-s);
+  --#{$prefix}acceptoverlay-icon-spacing: var(--#{$prefix}spacing-s);
   --#{$prefix}acceptoverlay-icon-fill: var(--#{$prefix}icon-primary);
-  --#{$prefix}acceptoverlay-buttons-spacing: var(--#{$prefix}spacing-stack-s);
+  --#{$prefix}acceptoverlay-buttons-spacing: var(--#{$prefix}spacing-s);
   --#{$prefix}acceptoverlay-buttons-last-child-margin-top: ;
   position: absolute;
   top: 0;
@@ -27,7 +27,7 @@
   background-color: var(--#{$prefix}acceptoverlay-background-color);
   // Change spacing on medium devices
   @include media-breakpoint-up(md) {
-    --#{$prefix}acceptoverlay-spacing-inset: var(--#{$prefix}spacing-inset-m);
+    --#{$prefix}acceptoverlay-spacing-inset: var(--#{$prefix}spacing-m);
   }
   // Change alignment on large devices
   @include media-breakpoint-up(lg) {
@@ -80,7 +80,7 @@
     margin-bottom: var(--#{$prefix}acceptoverlay-icon-spacing);
     text-align: center;
     @include media-breakpoint-up(md) {
-      --#{$prefix}acceptoverlay-icon-margin-bottom: var(--dsi-spacing-12x); // TODO: apply semantic token
+      --#{$prefix}acceptoverlay-icon-margin-bottom: var(--it-spacing-12x); // TODO: apply semantic token
     }
 
     .icon {
@@ -100,7 +100,7 @@
     button {
       width: 100%;
       &:last-child {
-        --#{$prefix}acceptoverlay-buttons-spacing: var(--#{$prefix}spacing-stack-xs);
+        --#{$prefix}acceptoverlay-buttons-spacing: var(--#{$prefix}spacing-xxs);
       }
     }
 
@@ -119,7 +119,7 @@
       width: 50%;
       margin-top: 0 !important;
       &:last-child {
-        margin-left: var(--#{$prefix}spacing-inline-m);
+        margin-left: var(--#{$prefix}spacing-m);
       }
     }
     &.single-button {

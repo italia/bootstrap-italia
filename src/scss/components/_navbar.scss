@@ -23,8 +23,8 @@
   --#{$prefix}navbar-toggler-border-radius: #{$navbar-toggler-border-radius};
   --#{$prefix}navbar-toggler-focus-width: #{$navbar-toggler-focus-width};
   --#{$prefix}navbar-toggler-transition: #{$navbar-toggler-transition};
-  --#{$prefix}navbar-spacing-inset: var(--#{$prefix}spacing-inset-m);
-  --#{$prefix}navbar-spacing-stack: var(--#{$prefix}spacing-stack-s);
+  --#{$prefix}navbar-spacing-inset: var(--#{$prefix}spacing-m);
+  --#{$prefix}navbar-spacing-stack: var(--#{$prefix}spacing-s);
   --#{$prefix}navbar-sidebar-bg-color-mobile: rgba(0, 0, 0, 0.6);
   --#{$prefix}navbar-close-button-size: 44px;
   --#{$prefix}navbar-close-button-text-color: var(--#{$prefix}color-text-secondary);
@@ -471,7 +471,7 @@
 }
 
 .custom-navbar-toggler {
-  margin-top: var(--#{$prefix}spacing-stack-xs);
+  margin-top: var(--#{$prefix}spacing-xxs);
   padding: 0;
   border: none;
   background: none;

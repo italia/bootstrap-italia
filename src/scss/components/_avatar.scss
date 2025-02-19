@@ -177,7 +177,7 @@ $avatar-variants: (
 
 // Avatar sibling span text
   & ~ span {
-    margin-left: var(--#{$prefix}spacing-inline-xs);
+    margin-left: var(--#{$prefix}spacing-xxs);
   }
 }
 
@@ -252,7 +252,7 @@ a .avatar {
     white-space: nowrap;
 
     // li:not(:last-child) {
-    //   margin-bottom: var(--#{$prefix}spacing-stack-s);
+    //   margin-bottom: var(--#{$prefix}spacing-s);
     // }
   }
 }
@@ -268,7 +268,7 @@ a .avatar {
   }
 
   .extra-text {
-    margin-left: var(--#{$prefix}spacing-inline-s);
+    margin-left: var(--#{$prefix}spacing-s);
 
     h3,
     h4 {
@@ -292,7 +292,7 @@ a .avatar {
 
 .avatar-group {
   & > li {
-    margin-bottom: var(--#{$prefix}spacing-stack-s);
+    margin-bottom: var(--#{$prefix}spacing-s);
     line-height: auto;
 
     &:last-child {

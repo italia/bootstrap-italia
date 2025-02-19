@@ -21,7 +21,7 @@
 // Custom Lists
 
 .it-list {
-  --#{$prefix}list-item-spacing: var(--#{$prefix}spacing-inset-s) var(--#{$prefix}spacing-inset-xs);
+  --#{$prefix}list-item-spacing: var(--#{$prefix}spacing-s) var(--#{$prefix}spacing-xxs);
   --#{$prefix}list-item-thumb-size: 5rem;
 }
 
@@ -34,7 +34,7 @@
     // Hover effect
     a.list-item:hover {
       background-color: var(--#{$prefix}color-background-inverse);
-      box-shadow: var(--#{$prefix}shadow-s);
+      box-shadow: var(--#{$prefix}elevation-low);
       color: var(--#{$prefix}link-hover);
     }
 

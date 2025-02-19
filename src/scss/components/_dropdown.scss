@@ -20,7 +20,7 @@
   --#{$prefix}dropdown-zindex: 8; // TODO review zindex usage
   --#{$prefix}dropdown-min-width: 10rem;
   --#{$prefix}dropdown-padding-x: 0;
-  --#{$prefix}dropdown-padding-y: var(--#{$prefix}spacing-inset-xs);
+  --#{$prefix}dropdown-padding-y: var(--#{$prefix}spacing-xxs);
   --#{$prefix}dropdown-spacer: 0.125rem;
   --#{$prefix}dropdown-font-size: var(--#{$prefix}label-font-size);
   --#{$prefix}dropdown-color: var(--#{$prefix}color-text-base);
@@ -30,17 +30,17 @@
   --#{$prefix}dropdown-border-width: 0;
   --#{$prefix}dropdown-inner-border-radius: var(--#{$prefix}radius-smooth);
   --#{$prefix}dropdown-divider-bg: var(--#{$prefix}color-border-subtle);
-  --#{$prefix}dropdown-divider-margin-y: var(--#{$prefix}spacing-stack-xs);
+  --#{$prefix}dropdown-divider-margin-y: var(--#{$prefix}spacing-xxs);
   --#{$prefix}dropdown-box-shadow: 0 20px 30px 5px hsla(0, 0%, 0%, 0.05);
   --#{$prefix}dropdown-link-color: var(--#{$prefix}color-text-primary);
   --#{$prefix}dropdown-link-hover-color: var(--#{$prefix}color-text-primary-hover);
   --#{$prefix}dropdown-link-active-color: var(--#{$prefix}color-text-primary-active);
-  --#{$prefix}dropdown-item-padding-x: var(--#{$prefix}spacing-inset-s);
+  --#{$prefix}dropdown-item-padding-x: var(--#{$prefix}spacing-s);
   --#{$prefix}dropdown-item-padding-y: 12px;
   --#{$prefix}dropdown-header-color: var(--#{$prefix}color-text-secondary);
   --#{$prefix}dropdown-header-font-size: var(--#{$prefix}label-font-size);
-  --#{$prefix}dropdown-header-padding-x: var(--#{$prefix}spacing-inset-s);
-  --#{$prefix}dropdown-header-padding-y: var(--#{$prefix}spacing-inset-xs);
+  --#{$prefix}dropdown-header-padding-x: var(--#{$prefix}spacing-s);
+  --#{$prefix}dropdown-header-padding-y: var(--#{$prefix}spacing-xxs);
   --#{$prefix}dropdown-notch-base-size: 1.125rem;
   --#{$prefix}dropdown-notch-position-x: 20px;
   --#{$prefix}dropdown-notch-position-y: -8px;
