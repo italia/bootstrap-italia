@@ -6,12 +6,13 @@ import terser from '@rollup/plugin-terser';
 import legacy from '@rollup/plugin-legacy'
 import nodeResolve from '@rollup/plugin-node-resolve'
 import injectProcessEnv from 'rollup-plugin-inject-process-env'
-import commonjs from 'rollup-plugin-commonjs'
+import commonjs from '@rollup/plugin-commonjs'
 
 export default [
   // Bundle version
   {
     input: 'src/js/bootstrap-italia.entry.js',
+    jsx: 'preserve-react',
     output: {
       file: 'dist/js/bootstrap-italia.bundle.min.js',
       format: 'umd',
@@ -21,7 +22,7 @@ export default [
     plugins: [
       babel({
         babelHelpers: 'bundled',
-        exclude: 'node_modules/**',
+        include: 'node_modules/accessible-autocomplete/**',
       }),
       copy({
         targets: [
@@ -73,7 +74,7 @@ export default [
     plugins: [
       babel({
         babelHelpers: 'bundled',
-        exclude: 'node_modules/**',
+        include: 'node_modules/accessible-autocomplete/**',
       }),
       copy({
         targets: [
@@ -124,7 +125,7 @@ export default [
     plugins: [
       babel({
         babelHelpers: 'bundled',
-        exclude: 'node_modules/**',
+        include: 'node_modules/accessible-autocomplete/**',
       }),
       legacy({
         './cover-animation.js': {

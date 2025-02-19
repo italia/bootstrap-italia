@@ -6,7 +6,7 @@
  * --------------------------------------------------------------------------
  */
 
-import accessibleAutocomplete from 'accessible-autocomplete'
+import accessibleAutocomplete from 'accessible-autocomplete/src/wrapper'
 
 import BaseComponent from './base-component.js'
 
