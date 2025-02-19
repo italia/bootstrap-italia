@@ -1509,10 +1509,10 @@ Verrà creata un'ombra per enfatizzare l'Header rispetto alla pagina in cui è c
 
 ## Header Sticky
 
-Affinché la testata rimanga visibile in formato ridotto anche allo scorrere della pagina, è sufficiente utilizzare la classe `.it-header-sticky` nell'elemento identificato con la classe `.it-header-wrapper`.
+Affinché la testata rimanga visibile in formato ridotto anche allo scorrere della pagina, è sufficiente utilizzare la classe `.it-header-sticky` nell'elemento identificato con la classe `.it-header-wrapper` insieme all'attributo `data-bs-toggle="sticky"` (per maggiori informazioni vedere il componente [Sticky]({{ site.baseurl }}/docs/componenti/sticky/)).
 
 ```html
-<div class="it-header-wrapper it-header-sticky">...</div>
+<div class="it-header-wrapper it-header-sticky" data-bs-toggle="sticky">...</div>
 ```
 
 È disponibile una <a href="{{ site.baseurl }}/docs/esempi/comuni/template-homepage/">pagina di esempio</a> dedicata a questa funzionalità per comprenderne appieno significato ed utilizzo.
