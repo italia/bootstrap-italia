@@ -85,7 +85,7 @@ abbr[title] {
 // Address
 
 address {
-  margin-bottom: var(--#{$prefix}spacing-stack-s);
+  margin-bottom: var(--#{$prefix}spacing-s);
   font-style: normal;
   line-height: inherit;
 }
@@ -94,14 +94,14 @@ address {
 
 ol,
 ul {
-  padding-left: var(--#{$prefix}spacing-inset-l);
+  padding-left: var(--#{$prefix}spacing-l);
 }
 
 ol,
 ul,
 dl {
   margin-top: 0;
-  margin-bottom: var(--#{$prefix}spacing-stack-s);
+  margin-bottom: var(--#{$prefix}spacing-s);
 }
 
 ol ol,
@@ -118,14 +118,14 @@ dt {
 // 1. Undo browser default
 
 dd {
-  margin-bottom: var(--#{$prefix}spacing-stack-xs);
+  margin-bottom: var(--#{$prefix}spacing-xxs);
   margin-left: 0; // 1
 }
 
 // Blockquote
 
 blockquote {
-  margin: 0 0 var(--#{$prefix}spacing-stack-s);
+  margin: 0 0 var(--#{$prefix}spacing-s);
 }
 
 // Sub and Sup

@@ -26,7 +26,7 @@ strong {
 
 mark,
 code {
-  padding: 0 var(--#{$prefix}spacing-inset-xxs);
+  padding: 0 var(--#{$prefix}spacing-3xs);
 }
 
 mark {
@@ -46,7 +46,7 @@ del {
   position: relative;
   display: flex;
   align-items: center;
-  padding: var(--#{$prefix}spacing-inset-xxs) var(--#{$prefix}spacing-inset-m);
+  padding: var(--#{$prefix}spacing-3xs) var(--#{$prefix}spacing-m);
   font: var(--#{$prefix}body-font-size);
   text-decoration: none;
 }
@@ -76,10 +76,10 @@ ins::before {
 
 kbd {
   margin: 0 2px;
-  padding: 2px var(--#{$prefix}spacing-inset-xxs);
+  padding: 2px var(--#{$prefix}spacing-3xs);
   border: var(--#{$prefix}border-base) solid var(--#{$prefix}color-border-subtle);
   background-color: var(--#{$prefix}color-background-secondary-lighter);
-  box-shadow: var(--#{$prefix}shadow-s), 0 2px 0 0 hsla(255, 0%, 100%, 0.7) inset;
+  box-shadow: var(--#{$prefix}elevation-low), 0 2px 0 0 hsla(255, 0%, 100%, 0.7) inset;
   color: var(--#{$prefix}color-text-secondary);
   font-size: var(--#{$prefix}font-size-1);
   font-weight: var(--#{$prefix}font-weight-solid);
@@ -143,7 +143,7 @@ h6, .h6 {
   // Adds top spacing when two heading tags or classes are adiacent or follow a paragraph
   :is(h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6) + &,
   p + & {
-    padding-top: var(--#{$prefix}spacing-stack-s); // Use the paragraph spacing variable when available
+    padding-top: var(--#{$prefix}spacing-s); // Use the paragraph spacing variable when available
   }
 }
 
@@ -208,9 +208,9 @@ h1,
 // Blockquote
 blockquote,
 .blockquote {
-  margin: var(--#{$prefix}spacing-stack-m) 0;
+  margin: var(--#{$prefix}spacing-m) 0;
   margin-left: var(--#{$prefix}spacin-inline-xs);
-  padding: var(--#{$prefix}spacing-inset-s);
+  padding: var(--#{$prefix}spacing-s);
   border-left: var(--#{$prefix}border-thick) solid var(--#{$prefix}border-color-secondary);
   font-size: var(--#{$prefix}body-font-size);
   line-height: var(--#{$prefix}body-line-height);
@@ -244,9 +244,9 @@ blockquote,
   // Card version
   &.blockquote-card {
     margin-left: 0;
-    padding: var(--#{$prefix}spacing-inset-m);
+    padding: var(--#{$prefix}spacing-m);
     background-color: var(--#{$prefix}color-background-inverse); // TODO: Use a card background variable when available
-    box-shadow: var(--#{$prefix}shadow-s);
+    box-shadow: var(--#{$prefix}elevation-low);
 
     .blockquote-footer {
       font-size: inherit;
@@ -268,7 +268,7 @@ blockquote,
 
 .blockquote-footer {
   margin-top: 0;
-  margin-bottom: var(--#{$prefix}spacing-stack-s);
+  margin-bottom: var(--#{$prefix}spacing-s);
   color: var(--#{$prefix}color-text-secondary);
   font-size: var(--#{$prefix}label-font-size);
   &::before {

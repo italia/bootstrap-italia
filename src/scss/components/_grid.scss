@@ -67,8 +67,8 @@
 .row {
   &.row-column-border {
     & > [class^='col-'] {
-      padding-top: var(--#{$prefix}spacing-inset-l);
-      padding-bottom: var(--#{$prefix}spacing-inset-l);
+      padding-top: var(--#{$prefix}spacing-l);
+      padding-bottom: var(--#{$prefix}spacing-l);
       border-top: var(--#{$prefix}border-base) solid var(--#{$prefix}color-border-subtle);
 
       &:first-child {
@@ -89,13 +89,13 @@
 
   &.row-column-menu-left {
     & > [class^='col-']:first-child {
-      padding: var(--#{$prefix}spacing-inset-s) 0;
+      padding: var(--#{$prefix}spacing-s) 0;
     }
   }
 
   &.row-column-menu-right {
     & > [class^='col-']:last-child {
-      padding: var(--#{$prefix}spacing-inset-s) 0;
+      padding: var(--#{$prefix}spacing-s) 0;
     }
   }
 
@@ -176,15 +176,15 @@
     @for $i from 1 through 6 {
       h#{$i} {
         border-bottom: var(--#{$prefix}border-base) solid var(--#{$prefix}color-border-subtle);
-        padding-bottom: var(--#{$prefix}spacing-inset-s);
-        margin-bottom: var(--#{$prefix}spacing-stack-s);
+        padding-bottom: var(--#{$prefix}spacing-s);
+        margin-bottom: var(--#{$prefix}spacing-s);
       }
     }
 
     @include media-breakpoint-up(sm) {
       border-bottom: var(--#{$prefix}border-base) solid var(--#{$prefix}color-border-subtle);
-      padding-bottom: var(--#{$prefix}spacing-inset-s);
-      margin-bottom: var(--#{$prefix}spacing-stack-s);
+      padding-bottom: var(--#{$prefix}spacing-s);
+      margin-bottom: var(--#{$prefix}spacing-s);
 
       @for $i from 1 through 6 {
         h#{$i} {
@@ -214,8 +214,8 @@
       width: auto;
 
       .navbar {
-        padding-top: var(--#{$prefix}spacing-inset-s);
-        padding-bottom: var(--#{$prefix}spacing-inset-s);
+        padding-top: var(--#{$prefix}spacing-s);
+        padding-bottom: var(--#{$prefix}spacing-s);
         border-top: var(--#{$prefix}border-base) solid var(--#{$prefix}color-border-subtle);
       }
 

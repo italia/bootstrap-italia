@@ -70,7 +70,7 @@ $grid-item-overlay: hsla(210%, 54%, 20, 0.85);
       right: 0;
       bottom: 0;
       background: transparent;
-      padding: var(--#{$prefix}spacing-inset-xs) calc(var(--#{$prefix}spacing-inset-xs) * 2);
+      padding: var(--#{$prefix}spacing-xxs) calc(var(--#{$prefix}spacing-xxs) * 2);
       color: $white;
       text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
       .it-griditem-text {
@@ -178,7 +178,7 @@ $grid-item-overlay: hsla(210%, 54%, 20, 0.85);
   .it-grid-item-wrapper {
     &.it-grid-item-overlay {
       .it-griditem-text-wrapper {
-        padding: var(--#{$prefix}spacing-inset-s) var(--#{$prefix}spacing-inset-m);
+        padding: var(--#{$prefix}spacing-s) var(--#{$prefix}spacing-m);
 
         .it-griditem-text {
           font-size: $grid-item-text-size;
