@@ -91,9 +91,9 @@ Quando si utilizza Sass nella propria pipeline, si può ottimizzare Bootstrap It
 Si può ottimizzare l'inclusione del JavaScript utilizzando bundler come Webpack o Rollup, che permettono di importare solo i moduli JavaScript che si vogliono utilizzare. Nell'esempio seguente, mostriamo come includere solo il componente Carousel:
 
 ```js
-import { CarouselBI } from 'bootstrap-italia'
+import { Carousel } from 'bootstrap-italia'
 
-const carousel = new CarouselBI(document.getElementById('myCarousel'))
+const carousel = new Carousel(document.getElementById('myCarousel'))
 ```
 
 ## Compilare la documentazione

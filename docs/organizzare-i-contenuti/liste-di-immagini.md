@@ -510,14 +510,16 @@ Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'e
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-#### Abilitare Masonry via JavaScript
+## Attivazione tramite codice
 
 È possibile abilitare Masonry manualmente utilizzando questo script:
 
 ```js
-var elementList = [].slice.call(document.querySelectorAll('.it-masonry'))
-var masonryList = elementList.map(function (element) {
-  return new bootstrap.Masonry(element)
+import { Masonry } from 'bootstrap-italia';
+
+const elementList = [].slice.call(document.querySelectorAll('.it-masonry'));
+const masonryList = elementList.map(function (element) {
+  return new Masonry(element);
 })
 ```
 

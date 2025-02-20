@@ -186,7 +186,7 @@ In tal caso è necessario utilizzare l'attributo `data-bs-target`.
 
 È disponibile una <a href="{{ site.baseurl }}/docs/esempi/sticky-target/">pagina di esempio</a> dedicata a questa funzionalità per comprenderne appieno significato ed utilizzo.
 
-## Attivazione tramite JavaScript
+## Attivazione tramite codice
 
 È possibile creare un'istanza con il constructor, ad esempio:
 

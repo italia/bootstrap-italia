@@ -412,7 +412,7 @@ Nel caso del campo di tipo password, è molto importante configurare correttamen
   </tbody>
 </table>
 
-#### Attivazione tramite JavaScript
+## Attivazione tramite codice
 
 Abilitarlo manualmente con:
 

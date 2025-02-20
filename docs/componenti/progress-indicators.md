@@ -35,7 +35,7 @@ Nel seguente esempio sono presenti un Donut appena inizializzato ed un Donut al 
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Attivazione tramite JavaScript
+## Attivazione tramite codice
 
 È possibile creare un'istanza con il constructor, ad esempio:
 
@@ -46,7 +46,7 @@ var progDonut = new bootstrap.ProgressDonut(progElement, {
 })
 ```
 
-#### Opzioni
+### Opzioni
 
 Le opzioni possono essere passate tramite gli attributi data o tramite JavaScript. Per quanto riguarda gli attributi data, aggiungi il nome dell'opzione a `data-bs`, come in `data-bs-value=""`.
 

@@ -650,7 +650,7 @@ pulsante, insieme a `data-bs-target="#foo"` o `href="#foo"` per attivare/disatti
 <button type="button" data-bs-toggle="modal" data-bs-target="#myModal">Lancia la modale</button>
 ```
 
-### Tramite JavaScript
+## Attivazione tramite codice
 
 Richiama una modale con id `myModal` con una singola riga di JavaScript:
 

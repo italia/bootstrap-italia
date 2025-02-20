@@ -37,13 +37,15 @@ Nel caso dell'utilizzo di un pulsante l'accorgimento sopraindicato non è necess
 <button type="button" class="btn btn-primary go-back" data-bs-toggle="historyback"><svg class="icon icon-sm icon-white"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-up"></use></svg><span class="visually-hidden">Livello superiore</span></button>
 {% endcapture %}{% include example.html content=example %}
 
-## Attivazione tramite JavaScript
+## Attivazione tramite codice
 
 È possibile creare un'istanza con il constructor, ad esempio:
 
 ```js
-var backButtonElement = document.getElementById('backButton')
-var historyBack = new bootstrap.HistoryBack(backButtonElement)
+import { HistoryBack } from 'bootstrap-italia';
+
+const backButtonElement = document.getElementById('backButton');
+const historyBack = new HistoryBack(backButtonElement);
 ```
 
 ### Metodi

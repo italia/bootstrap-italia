@@ -170,7 +170,7 @@ Per gli eventi dei popover disabilitati, potresti preferire `data-bs-trigger="ho
 </span>
 {% endcapture %}{% include example.html content=example %}
 
-## Implementazione
+## Attivazione tramite codice
 
 Abilita i popover tramite JavaScript:
 

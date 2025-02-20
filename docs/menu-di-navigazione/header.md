@@ -1507,33 +1507,49 @@ Verrà creata un'ombra per enfatizzare l'Header rispetto alla pagina in cui è c
 </header>
 {% endcapture %}{% include example.html content=example %}
 
-## Header Sticky
+## Attivazione tramite codice
 
-Affinché la testata rimanga visibile in formato ridotto anche allo scorrere della pagina, è sufficiente utilizzare la classe `.it-header-sticky` nell'elemento identificato con la classe `.it-header-wrapper` insieme all'attributo `data-bs-toggle="sticky"` (per maggiori informazioni vedere il componente [Sticky]({{ site.baseurl }}/docs/componenti/sticky/)).
+L'unica funzionalità del componente `Header` che necessita l'attivazione tramite
+codice è quella in cui si desidera che lo stesso si comporti in maniera `sticky`
+ovvero con la testata sempre visibile in formato ridotto anche allo scorrere 
+della pagina.
+
+{% include callout-bundle-methods.md %}
+
+### Inizializzazione automatica
+
+Per rendere `sticky` il componente `Header` automaticamente, è sufficiente 
+utilizzare la classe `.it-header-sticky` nell'elemento identificato con la 
+classe `.it-header-wrapper` insieme all'attributo `data-bs-toggle="sticky"`.
 
 ```html
-<div class="it-header-wrapper it-header-sticky" data-bs-toggle="sticky">...</div>
+<div 
+  class="it-header-wrapper it-header-sticky" data-bs-toggle="sticky "
+  >
+  ...
+</div>
 ```
 
-È disponibile una <a href="{{ site.baseurl }}/docs/esempi/comuni/template-homepage/">pagina di esempio</a> dedicata a questa funzionalità per comprenderne appieno significato ed utilizzo.
+Per maggiori informazioni e ulteriori opzioni vedere il componente [Sticky]({{ site.baseurl }}/docs/componenti/sticky/) e l'[esempio]({{ site.baseurl }}/docs/esempi/navscroll/).
 
-### Tramite JavaScript
+### Inizializzazione manuale
 
-È possibile inizializzare il componente tramite JavaScript:
+Il componente `Header` solitamente contiene al suo interno i componenti `Dropdown` 
+e `Collapse`, si rimanda alle sezioni specifiche per l'attivazione di questi componenti:
 
-```js
-var headerSticky = new bootstrap.HeaderSticky(document.getElementById('myHeaderSticky'), options)
-```
+- [Attivazione Dropdown tramite codice]()
+- [Attivazione Collapse tramite codice]()
 
-### Metodi
-
-{% include callout-danger-async-methods.md %}
-
-#### `getOrCreateInstance`
-
-Metodo statico che consente di ottenere l'istanza di un HeaderSticky associata ad un elemento del DOM o di crearne una nuova nel caso non fosse stata inizializzata.
+Per rendere `sticky` il componente `Header` è  possibile inizializzare il 
+componente manualmente utilizzando la classe `HeaderSticky`:
 
 ```js
-var headerStickyElement = document.querySelector('#myHeaderSticky')
-var headerSticky = bootstrap.HeaderSticky.getOrCreateInstance(headerStickyElement) // Returns a Bootstrap modal instance
+import { HeaderSticky } from 'bootstrap-italia';
+
+const headerStickyElement = document.querySelector('#myHeaderSticky')
+const headerSticky = new HeaderSticky(headerStickyElement);
+
+// Oppure
+
+const headerSticky = HeaderSticky.getOrCreateInstance(headerStickyElement);
 ```

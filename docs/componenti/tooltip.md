@@ -130,7 +130,7 @@ E con codice HTML personalizzato:
 
 Il plugin del tooltip genera contenuto e markup su richiesta, e in modo predefinito posiziona i tooltip dopo i loro elementi attivati.
 
-### Attivazione tramite JavaScript
+## Attivazione tramite codice
 
 È possibile attivare un tooltip tramite JavaScript:
 
@@ -249,8 +249,10 @@ var tooltip = bootstrap.Tooltip.getInstance(exampleTriggerEl) // Returns a Boots
 Metodo statico che consente di ottenere l'istanza di un tooltip associata ad un elemento del DOM o di crearne una nuova nel caso non fosse stata inizializzata.
 
 ```js
-var exampleTriggerEl = document.getElementById('example')
-var tooltip = bootstrap.Tooltip.getOrCreateInstance(exampleTriggerEl) // Returns a Bootstrap tooltip instance
+import { Tooltip } from 'bootstrap-italia';
+
+const exampleTriggerEl = document.getElementById('example');
+const tooltip = Tooltip.getOrCreateInstance(exampleTriggerEl);
 ```
 
 ### Eventi

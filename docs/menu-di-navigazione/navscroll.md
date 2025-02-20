@@ -394,13 +394,15 @@ Per maggiori informazioni, si può fare riferimento alla [documentazione delle L
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
-## Attivazione tramite JavaScript
+## Attivazione tramite codice
 
 È possibile creare un'istanza di Navscroll manualmente con il constructor:
 
 ```js
-var navscrollElement = document.querySelector('.it-navscroll-wrapper')
-var navscroll = new bootstrap.NavScroll(navscrollElement, config)
+import { NavScroll } from 'bootstrap-italia';
+
+const navscrollElement = document.querySelector('.it-navscroll-wrapper');
+const navscroll = new NavScroll(navscrollElement, config);
 ```
 
 ### Opzioni

@@ -357,13 +357,15 @@ Lo stato dell'upload è rappresentato graficamente dall'elemento `<div class="pr
 </form>
 {% endcapture %}{% include example.html content=example %}
 
-### Attivazione tramite JavaScript
+## Attivazione tramite codice
 
 È possibile creare un'istanza con il constructor, ad esempio:
 
 ```js
-var uploadElement = document.getElementById('uploadChangeStateTarget')
-var uploadDragDrop = new bootstrap.UploadDragDrop(uploadElement)
+import { UploadDragDrop } from 'bootstrap-italia';
+
+const uploadElement = document.getElementById('uploadChangeStateTarget');
+const uploadDragDrop = new UploadDragDrop(uploadElement);
 ```
 
 ### Metodi

@@ -109,13 +109,15 @@ Aggiungendo le classi `.dark` e `.shadow` al link si ottiene un pulsante con omb
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-## Attivazione tramite JavaScript
+## Attivazione tramite codice
 
 È possibile creare un'istanza con il constructor, ad esempio:
 
 ```js
-var backToTopElement = document.getElementById('#backToTop')
-var backToTop = new bootstrap.BackToTop(backToTopElement, {
+import { BackToTop } from 'bootstrap-italia';
+
+const backToTopElement = document.getElementById('#backToTop')
+const backToTop = new BackToTop(backToTopElement, {
   scrollLimit: 100,
 })
 ```

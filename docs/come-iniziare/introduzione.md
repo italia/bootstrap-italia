@@ -62,6 +62,8 @@ Per includere questo file all'interno del proprio progetto sarà sufficiente agg
 
 All'interno della cartella `js` saranno invece presenti il file di bundle, il file non bundle e i componenti suddivisi in moduli.
 
+I vari componenti sono inizializzati (salvo casi particolari specificati nella documentazione del singolo componente) grazie all'utilizzo dell'attributo `data-bs-target` specifico per ogni componente. Questo attributo deve essere utilizzato esclusivamente nel caso in cui si desidera che i componenti siano inizializzati in maniera automatica, in caso contrario questo attributo deve essere omesso.
+
 #### Versione bundle
 
 In questo caso, dopo aver copiato i file all'interno del progetto, sarà sufficiente inserire una versione dei tag `<script>` di seguito riportati alla fine della pagina HTML, giusto prima della chiusura del tag `</body>`. Si potrà quindi includere la libreria in questo modo:
@@ -85,13 +87,13 @@ Per la versione non bundle, dopo aver copiato i file all'interno del progetto, s
 
 #### Moduli
 
-In alternativa se si vogliono utilizzare i moduli, è possibile importare e utilizzare singolarmente i vari componenti. Di seguito un esempio di cui potete trovare l'intero esempio completo [qui](https://github.com/astagi/demo-bsitalia-2).
+In alternativa se si vogliono utilizzare i moduli, è possibile importare e utilizzare singolarmente i vari componenti. Di seguito un esempio (potete trovare [qui](https://github.com/astagi/demo-communitylabs-bsi) un esempio completo con l'utilzzo di Rollup).
 
 ```js
-import { CarouselBI, Alert, Notification, Tooltip, Sticky, loadFonts } from 'bootstrap-italia'
+import { Carousel, Alert, Notification, Tooltip, Sticky, loadFonts } from 'bootstrap-italia'
 
 
-new CarouselBI(document.getElementById('myCarousel'))
+const carousel = new Carousel(document.getElementById('myCarousel'))
 
 const alert = new Alert(document.getElementsByClassName('alert')[0])
 
@@ -118,6 +120,8 @@ notification.show()
 
 loadFonts()
 ```
+
+{% include callout-danger-async-methods.md %}
 
 ### Fonts
 

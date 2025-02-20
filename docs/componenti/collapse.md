@@ -87,14 +87,16 @@ Basta aggiungere `data-bs-toggle="collapse"` e un `data-bs-target` all'elemento 
 
 Per aggiungere un'impostazione tipo accordion ad un'area richiudibile, aggiungi l'attributo `data-bs-parent="#selector"`.
 
-### Tramite JavaScript
+## Attivazione tramite codice
 
 È possibile abilitare manualmente un collapse con:
 
 ```js
-var collapseElementList = [].slice.call(document.querySelectorAll('.collapse'))
-var collapseList = collapseElementList.map(function (collapseEl) {
-  return new bootstrap.Collapse(collapseEl)
+import { Collapse } from 'bootstrap-italia';
+
+const collapseElementList = [].slice.call(document.querySelectorAll('.collapse'));
+const collapseElements = collapseElementList.map(function (collapseEl) {
+  return new Collapse(collapseEl)
 })
 ```
 
