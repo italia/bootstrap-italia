@@ -3,64 +3,63 @@
 //
 
 .btn {
-  // scss-docs-start btn-css-vars
-  --#{$prefix}btn-padding-x: #{$btn-padding-x};
-  --#{$prefix}btn-padding-y: #{$btn-padding-y};
-  --#{$prefix}btn-font-family: #{$btn-font-family};
-  --#{$prefix}btn-font-weight: #{$btn-font-weight};
-  --#{$prefix}btn-line-height: #{$btn-line-height};
-  --#{$prefix}btn-color: #{$body-color};
-  --#{$prefix}btn-bg: transparent;
-  --#{$prefix}btn-border-width: #{$btn-border-width};
+  --#{$prefix}btn-spacing-inset-x: var(--#{$prefix}spacing-m);
+  --#{$prefix}btn-spacing-inset-y: var(--#{$prefix}spacing-xs);
+  --#{$prefix}btn-font-family: var(--#{$prefix}font-sans);
+  --#{$prefix}btn-font-weight: var(--#{$prefix}font-weight-solid);
+  --#{$prefix}btn-line-height: var(--#{$prefix}line-height-base);
+  --#{$prefix}btn-text-color: var(--#{$prefix}color-text-primary);
+  --#{$prefix}btn-background: transparent; // default to transparent
+  --#{$prefix}btn-border-size: 0; // default to 0
   --#{$prefix}btn-border-color: transparent;
-  --#{$prefix}btn-border-radius: #{$btn-border-radius};
-  --#{$prefix}btn-hover-border-color: transparent;
-  --#{$prefix}btn-box-shadow: #{$btn-box-shadow};
-  --#{$prefix}btn-disabled-opacity: #{$btn-disabled-opacity};
+  --#{$prefix}btn-border-radius: var(--#{$prefix}radius-smooth);
+  --#{$prefix}btn-outline-border-size: 2px;
+  --#{$prefix}btn-outline-border-color: transparent;
+  --#{$prefix}btn-disabled-opacity: 0.5;
   --#{$prefix}btn-focus-box-shadow: 0 0 0 #{$btn-focus-width} rgba(var(--#{$prefix}btn-focus-shadow-rgb), 0.5);
-
-  //btn-css-vars
-  --bs-btn-color: $primary;
   --bs-btn-hover-color: $color-background-primary-hover;
   --bs-btn-active-color: #003366; // TODO change with tokens when available
-  // scss-docs-end btn-css-vars
 
   display: inline-block;
-  //btn-css-vars-end
-  padding: 12px 24px;
+  padding: var(--#{$prefix}btn-spacing-inset-y) var(--#{$prefix}btn-spacing-inset-x);
   border: var(--#{$prefix}btn-border-width) solid var(--#{$prefix}btn-border-color);
-  box-shadow: none;
-  color: var(--#{$prefix}btn-color);
+  border-radius: var(--#{$prefix}btn-border-radius);
+  background: var(--#{$prefix}btn-background);
+  box-shadow: var(--#{$prefix}btn-box-shadow, none);
+  color: var(--#{$prefix}btn-text-color);
   font-family: var(--#{$prefix}btn-font-family);
-  font-size: $btn-font-size;
+  font-size: var(--#{$prefix}button-font-size);
   font-weight: var(--#{$prefix}btn-font-weight);
   line-height: var(--#{$prefix}btn-line-height);
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
   white-space: initial;
+  // @include box-shadow(var(--#{$prefix}btn-box-shadow));
+  transition: all var(--#{$prefix}transition-instant) ease-in-out;
   cursor: if($enable-button-pointers, pointer, null);
   user-select: none;
-  @include rfs($btn-font-size, --#{$prefix}btn-font-size);
-  @include font-size(var(--#{$prefix}btn-font-size));
-  @include border-radius(var(--#{$prefix}btn-border-radius));
-  @include gradient-bg(var(--#{$prefix}btn-bg));
-  @include box-shadow(var(--#{$prefix}btn-box-shadow));
-  @include transition($btn-transition);
 
-  &:hover {
-    border-color: var(--#{$prefix}btn-hover-border-color);
-    background-color: var(--#{$prefix}btn-hover-bg);
-    color: var(--#{$prefix}btn-hover-color);
-    text-decoration: if($link-hover-decoration == underline, none, null);
+  // &:hover {
+  //   // border-color: var(--#{$prefix}btn-hover-border-color);
+  //   // background-color: var(--#{$prefix}btn-hover-bg);
+  //   // color: var(--#{$prefix}btn-hover-color);
+  //   // text-decoration: if($link-hover-decoration == underline, none, null);
+  // }
+
+  &:disabled,
+  &.disabled {
+    opacity: var(--#{$prefix}btn-disabled-opacity);
+    cursor: not-allowed;
+    pointer-events: none;
   }
 
-  .btn-check + &:hover {
-    border-color: var(--#{$prefix}btn-border-color);
-    background-color: var(--#{$prefix}btn-bg);
-    // override for the checkbox/radio buttons
-    color: var(--#{$prefix}btn-color);
-  }
+  // .btn-check + &:hover {
+  //   border-color: var(--#{$prefix}btn-border-color);
+  //   background-color: var(--#{$prefix}btn-background);
+  //   // override for the checkbox/radio buttons
+  //   color: var(--#{$prefix}btn-text-color);
+  // }
 
   &:focus-visible {
     border-color: var(--#{$prefix}btn-hover-border-color);
@@ -107,18 +106,6 @@
       }
     }
   }
-
-  &:disabled,
-  &.disabled,
-  fieldset:disabled & {
-    border-color: var(--#{$prefix}btn-disabled-border-color);
-    opacity: var(--#{$prefix}btn-disabled-opacity);
-    background-color: var(--#{$prefix}btn-disabled-bg);
-    background-image: if($enable-gradients, none, null);
-    color: var(--#{$prefix}btn-disabled-color);
-    pointer-events: none;
-    @include box-shadow(none);
-  }
 }
 
 //
@@ -126,37 +113,37 @@
 //
 
 // scss-docs-start btn-variant-loops
-@each $color, $value in $theme-colors {
-  .btn-#{$color} {
-    @if $color == 'light' {
-      @include button-variant(
-        $value,
-        $value,
-        $hover-background: shade-color($value, $btn-hover-bg-shade-amount),
-        $hover-border: shade-color($value, $btn-hover-border-shade-amount),
-        $active-background: shade-color($value, $btn-active-bg-shade-amount),
-        $active-border: shade-color($value, $btn-active-border-shade-amount)
-      );
-    } @else if $color == 'dark' {
-      @include button-variant(
-        $value,
-        $value,
-        $hover-background: tint-color($value, $btn-hover-bg-tint-amount),
-        $hover-border: tint-color($value, $btn-hover-border-tint-amount),
-        $active-background: tint-color($value, $btn-active-bg-tint-amount),
-        $active-border: tint-color($value, $btn-active-border-tint-amount)
-      );
-    } @else {
-      @include button-variant($value, $value);
-    }
-  }
-}
+// @each $color, $value in $theme-colors {
+//   .btn-#{$color} {
+//     @if $color == 'light' {
+//       @include button-variant(
+//         $value,
+//         $value,
+//         $hover-background: shade-color($value, $btn-hover-bg-shade-amount),
+//         $hover-border: shade-color($value, $btn-hover-border-shade-amount),
+//         $active-background: shade-color($value, $btn-active-bg-shade-amount),
+//         $active-border: shade-color($value, $btn-active-border-shade-amount)
+//       );
+//     } @else if $color == 'dark' {
+//       @include button-variant(
+//         $value,
+//         $value,
+//         $hover-background: tint-color($value, $btn-hover-bg-tint-amount),
+//         $hover-border: tint-color($value, $btn-hover-border-tint-amount),
+//         $active-background: tint-color($value, $btn-active-bg-tint-amount),
+//         $active-border: tint-color($value, $btn-active-border-tint-amount)
+//       );
+//     } @else {
+//       @include button-variant($value, $value);
+//     }
+//   }
+// }
 
-@each $color, $value in $theme-colors {
-  .btn-outline-#{$color} {
-    @include button-outline-variant($value);
-  }
-}
+// @each $color, $value in $theme-colors {
+//   .btn-outline-#{$color} {
+//     @include button-outline-variant($value);
+//   }
+// }
 // scss-docs-end btn-variant-loops
 
 //
@@ -165,17 +152,10 @@
 
 // Make a button look and behave like a link
 .btn-link {
-  --#{$prefix}btn-font-weight: #{$font-weight-normal};
-  --#{$prefix}btn-color: #{$btn-link-color};
-  --#{$prefix}btn-bg: transparent;
+  --#{$prefix}btn-background: transparent;
   --#{$prefix}btn-border-color: transparent;
-  --#{$prefix}btn-hover-color: #{$btn-link-hover-color};
-  --#{$prefix}btn-hover-border-color: transparent;
-  --#{$prefix}btn-active-color: #{$btn-link-hover-color};
-  --#{$prefix}btn-active-border-color: transparent;
   --#{$prefix}btn-disabled-color: #{$btn-link-disabled-color};
   --#{$prefix}btn-disabled-border-color: transparent;
-  --#{$prefix}btn-box-shadow: none;
   --#{$prefix}btn-focus-shadow-rgb: #{to-rgb(mix(color-contrast($primary), $primary, 15%))};
 
   text-decoration: $link-decoration;
@@ -189,14 +169,12 @@
   }
 
   &:focus-visible {
-    color: var(--#{$prefix}btn-color);
+    color: var(--#{$prefix}btn-text-color);
   }
 
   &:hover {
     color: var(--#{$prefix}btn-hover-color);
   }
-
-  // No need for an active state here
 }
 
 //
@@ -321,22 +299,36 @@
 }
 
 .btn-primary {
-  &:disabled,
-  &.disabled {
-    // color: $gray-label-disabled;
-    // background-color: $gray-disabled;
-    // border-color: $gray-border-disabled;
-    //progress bar button
-    &.btn-progress {
-      border-color: hsl(210, 76%, 67%); // UI kit - missing token
-      opacity: 1;
-      background-color: hsl(210, 76%, 67%); // UI kit - missing token
-      color: $white;
-    }
+  --#{$prefix}btn-text-color: var(--#{$prefix}color-text-inverse);
+  --#{$prefix}btn-background: var(--#{$prefix}color-background-primary);
+
+  &:hover {
+    --#{$prefix}btn-background: var(--#{$prefix}color-background-primary-hover);
+  }
+
+  &:active {
+  --#{$prefix}btn-background: var(--#{$prefix}color-background-primary-active);
+  }
+
+  &.btn-progress {
+    border-color: hsl(210, 76%, 67%); // UI kit - missing token
+    opacity: 1;
+    background-color: hsl(210, 76%, 67%); // UI kit - missing token
   }
 }
 
 .btn-secondary {
+  --#{$prefix}btn-text-color: var(--#{$prefix}color-text-inverse);
+  --#{$prefix}btn-background: var(--#{$prefix}color-background-secondary);
+
+  &:hover {
+    --#{$prefix}btn-background: var(--#{$prefix}color-background-secondary-hover);
+  }
+
+  &:active {
+  --#{$prefix}btn-background: var(--#{$prefix}color-background-secondary-active);
+  }
+
   &:disabled,
   &.disabled {
     //progress bar button
@@ -348,58 +340,108 @@
   }
 }
 
-.btn-outline {
+.btn-success {
+  --#{$prefix}btn-text-color: var(--#{$prefix}color-text-inverse);
+  --#{$prefix}btn-background: var(--#{$prefix}color-background-success);
+}
+
+.btn-warning {
+  --#{$prefix}btn-text-color: var(--#{$prefix}color-text-inverse);
+  --#{$prefix}btn-background: var(--#{$prefix}color-background-warning);
+}
+
+.btn-danger {
+  --#{$prefix}btn-text-color: var(--#{$prefix}color-text-inverse);
+  --#{$prefix}btn-background: var(--#{$prefix}color-background-danger);
+}
+
+// Button Outline
+//
+
+.btn[class*="btn-outline-"] {
+  --#{$prefix}btn-box-shadow: inset 0 0 0 var(--#{$prefix}btn-outline-border-size) var(--#{$prefix}btn-outline-border-color);
+}
+
+.btn-outline { 
+  // Outline Primary
   &-primary {
-    box-shadow: inset 0 0 0 2px $primary;
-    &.disabled {
-      box-shadow: inset 0 0 0 2px color-hover($primary);
+    --#{$prefix}btn-outline-border-color: var(--#{$prefix}color-border-primary);
+    --#{$prefix}btn-text-color: var(--#{$prefix}color-text-primary);
+    &:hover {
+      --#{$prefix}btn-outline-border-color: var(--#{$prefix}color-border-primary-hover); 
+      --#{$prefix}btn-text-color: var(--#{$prefix}color-link-hover);
+    }
+    &:active {
+      --#{$prefix}btn-outline-border-color: var(--#{$prefix}color-border-primary-active); 
+      --#{$prefix}btn-text-color: var(--#{$prefix}color-link-active);
     }
   }
+
+  // Outline Secondary
   &-secondary {
-    box-shadow: inset 0 0 0 2px $secondary;
-    &.disabled,
-    &:hover,
+    --#{$prefix}btn-outline-border-color: var(--#{$prefix}color-border-secondary);
+    --#{$prefix}btn-text-color: var(--#{$prefix}color-text-secondary);
+
+    &:hover {
+      --#{$prefix}btn-outline-border-color: var(--#{$prefix}color-border-secondary-hover); 
+      --#{$prefix}btn-text-color: var(--#{$prefix}color-text-secondary-hover);
+    }
     &:active {
-      box-shadow: inset 0 0 0 2px color-hover($secondary);
+      --#{$prefix}btn-outline-border-color: var(--#{$prefix}color-border-secondary-active);
+      --#{$prefix}btn-text-color: var(--#{$prefix}color-text-secondary-active); 
     }
   }
+
+  // Outline Success
   &-success {
-    box-shadow: inset 0 0 0 2px $success;
-    &.disabled,
-    &:hover,
+    --#{$prefix}btn-outline-border-color: var(--#{$prefix}color-border-success);
+    --#{$prefix}btn-text-color: var(--#{$prefix}color-text-success);
+
+    &:hover {
+      --#{$prefix}btn-outline-border-color: var(--#{$prefix}color-border-success-hover); 
+      --#{$prefix}btn-text-color: var(--#{$prefix}color-text-success-hover);
+    }
     &:active {
-      box-shadow: inset 0 0 0 2px color-hover($success);
+      --#{$prefix}btn-outline-border-color: var(--#{$prefix}color-border-success-active);
+      --#{$prefix}btn-text-color: var(--#{$prefix}color-text-success-active);
     }
   }
+
+  // Outline Warning
   &-warning {
-    box-shadow: inset 0 0 0 2px $color-border-warning;
-    &.disabled,
-    &:hover,
+    --#{$prefix}btn-outline-border-color: var(--#{$prefix}color-border-warning);
+    --#{$prefix}btn-text-color: var(--#{$prefix}color-text-warning);
+
+    &:hover {
+      --#{$prefix}btn-outline-border-color: var(--#{$prefix}color-border-warning-hover); 
+      --#{$prefix}btn-text-color: var(--#{$prefix}color-text-warning-hover);
+    }
     &:active {
-      box-shadow: inset 0 0 0 2px color-hover($color-border-warning);
+      --#{$prefix}btn-outline-border-color: var(--#{$prefix}color-border-warning-active); 
+      --#{$prefix}btn-text-color: var(--#{$prefix}color-text-warning-active);
     }
   }
+
+  // Outline Danger
   &-danger {
-    box-shadow: inset 0 0 0 2px $danger;
-    &.disabled,
-    &:hover,
+    --#{$prefix}btn-outline-border-color: var(--#{$prefix}color-border-danger);
+    --#{$prefix}btn-text-color: var(--#{$prefix}color-text-danger);
+
+    &:hover {
+      --#{$prefix}btn-outline-border-color: var(--#{$prefix}color-border-danger-hover); 
+      --#{$prefix}btn-text-color: var(--#{$prefix}color-text-danger-hover);
+    }
     &:active {
-      box-shadow: inset 0 0 0 2px color-hover($danger);
+      --#{$prefix}btn-outline-border-color: var(--#{$prefix}color-border-danger-active); 
+     --#{$prefix}btn-text-color: var(--#{$prefix}color-text-danger-active);
     }
   }
 }
 
 .bg-dark {
   .btn-link {
-    color: $white;
-  }
-  .btn-primary {
-    color: $primary;
-    @include button-variant($white, $primary, tint-color($white, 7.5%), shade-color($primary, 10%), tint-color($white, 10%), shade-color($primary, 12.5%));
-    &.disabled,
-    &:disabled {
-      color: shade-color($primary, 10%);
-    }
+    --#{$prefix}btn-text-color: var(--#{$prefix}color-text-inverse);
+    text-decoration: underline;
   }
   .btn-outline-primary {
     box-shadow: inset 0 0 0 2px $white;
@@ -407,10 +449,6 @@
     &:hover {
       box-shadow: inset 0 0 0 2px color-hover($white);
     }
-  }
-  .btn-secondary {
-    color: $white;
-    @include button-variant($primary, $white, tint-color($primary, 7.5%), shade-color($white, 10%), tint-color($primary, 10%), shade-color($white, 12.5%));
   }
   .btn-outline-secondary {
     @include button-outline-variant($white, color-hover($white), transparent, color-hover($white));
