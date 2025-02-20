@@ -17,8 +17,6 @@
   --#{$prefix}btn-outline-border-color: transparent;
   --#{$prefix}btn-disabled-opacity: 0.5;
   --#{$prefix}btn-focus-box-shadow: 0 0 0 #{$btn-focus-width} rgba(var(--#{$prefix}btn-focus-shadow-rgb), 0.5);
-  --bs-btn-hover-color: $color-background-primary-hover;
-  --bs-btn-active-color: #003366; // TODO change with tokens when available
 
   display: inline-block;
   padding: var(--#{$prefix}btn-spacing-inset-y) var(--#{$prefix}btn-spacing-inset-x);
@@ -109,44 +107,6 @@
 }
 
 //
-// Alternate buttons
-//
-
-// scss-docs-start btn-variant-loops
-// @each $color, $value in $theme-colors {
-//   .btn-#{$color} {
-//     @if $color == 'light' {
-//       @include button-variant(
-//         $value,
-//         $value,
-//         $hover-background: shade-color($value, $btn-hover-bg-shade-amount),
-//         $hover-border: shade-color($value, $btn-hover-border-shade-amount),
-//         $active-background: shade-color($value, $btn-active-bg-shade-amount),
-//         $active-border: shade-color($value, $btn-active-border-shade-amount)
-//       );
-//     } @else if $color == 'dark' {
-//       @include button-variant(
-//         $value,
-//         $value,
-//         $hover-background: tint-color($value, $btn-hover-bg-tint-amount),
-//         $hover-border: tint-color($value, $btn-hover-border-tint-amount),
-//         $active-background: tint-color($value, $btn-active-bg-tint-amount),
-//         $active-border: tint-color($value, $btn-active-border-tint-amount)
-//       );
-//     } @else {
-//       @include button-variant($value, $value);
-//     }
-//   }
-// }
-
-// @each $color, $value in $theme-colors {
-//   .btn-outline-#{$color} {
-//     @include button-outline-variant($value);
-//   }
-// }
-// scss-docs-end btn-variant-loops
-
-//
 // Link buttons
 //
 
@@ -165,7 +125,7 @@
 
   &:hover,
   &:focus-visible {
-    text-decoration: $link-hover-decoration;
+    text-decoration: underline;
   }
 
   &:focus-visible {
@@ -228,7 +188,6 @@
     width: 1.5em;
     height: 1.5em;
     background-color: $white;
-
     @include border-radius(12px);
 
     @each $color, $value in $theme-colors {
@@ -343,16 +302,40 @@
 .btn-success {
   --#{$prefix}btn-text-color: var(--#{$prefix}color-text-inverse);
   --#{$prefix}btn-background: var(--#{$prefix}color-background-success);
+
+  &:hover {
+    --#{$prefix}btn-background: var(--#{$prefix}color-background-success-hover);
+  }
+
+  &:active {
+  --#{$prefix}btn-background: var(--#{$prefix}color-background-success-active);
+  }
 }
 
 .btn-warning {
   --#{$prefix}btn-text-color: var(--#{$prefix}color-text-inverse);
   --#{$prefix}btn-background: var(--#{$prefix}color-background-warning);
+
+  &:hover {
+    --#{$prefix}btn-background: var(--#{$prefix}color-background-warning-hover);
+  }
+
+  &:active {
+  --#{$prefix}btn-background: var(--#{$prefix}color-background-warning-active);
+  }
 }
 
 .btn-danger {
   --#{$prefix}btn-text-color: var(--#{$prefix}color-text-inverse);
   --#{$prefix}btn-background: var(--#{$prefix}color-background-danger);
+
+  &:hover {
+    --#{$prefix}btn-background: var(--#{$prefix}color-background-danger-hover);
+  }
+
+  &:active {
+  --#{$prefix}btn-background: var(--#{$prefix}color-background-danger-active);
+  }
 }
 
 // Button Outline
