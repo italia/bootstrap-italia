@@ -797,7 +797,7 @@ $btn-transition:
   border-color 0.15s ease-in-out,
   box-shadow 0.15s ease-in-out !default;
 
-$btn-link-color: var(--#{$prefix}link-color) !default;
+$btn-link-color: var(--#{$prefix}color-link) !default;
 $btn-link-hover-color: var(--#{$prefix}link-hover-color) !default;
 $btn-link-disabled-color: $gray-600 !default;
 
@@ -1335,7 +1335,7 @@ $pagination-padding-x-lg: 1.5rem !default;
 
 $pagination-font-size: $font-size-base !default;
 
-$pagination-color: var(--#{$prefix}link-color) !default;
+$pagination-color: var(--#{$prefix}color-link) !default;
 $pagination-bg: $white !default;
 $pagination-border-radius: $border-radius !default;
 $pagination-border-width: $border-width !default;
@@ -1559,7 +1559,7 @@ $nav-link-padding-y: 0.5rem !default;
 $nav-link-padding-x: 1rem !default;
 $nav-link-font-size: null !default;
 $nav-link-font-weight: null !default;
-$nav-link-color: var(--#{$prefix}link-color) !default;
+$nav-link-color: var(--#{$prefix}color-link) !default;
 $nav-link-hover-color: var(--#{$prefix}link-hover-color) !default;
 $nav-link-transition:
   color 0.15s ease-in-out,
