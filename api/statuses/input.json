@@ -1,11 +1,11 @@
 {
     "amichevole con lettori di schermo": "PRONTO",
-    "angular Kit": "PRONTO",
+    "angular Kit": "DA RIVEDERE",
     "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/form-input",
     "assignees": [
         "Fupete"
     ],
-    "bootstrap Italia": "PRONTO",
+    "bootstrap Italia": "DA RIVEDERE",
     "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/form/input/",
     "comprensibile": "PRONTO",
     "content": {
@@ -16,13 +16,14 @@
     },
     "id": "PVTI_lADOAOqloM4AcXblzgMjwas",
     "navigabile": "PRONTO",
+    "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1387",
     "notes / More": "In UI Kit Italia \u00e8 presente anche il componente \"To be\". Decidere roadmap. ",
-    "react Kit": "PRONTO",
+    "react Kit": "DA RIVEDERE",
     "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-form-input--documentazione",
     "status": "Todo",
     "status a11y check": "Done",
     "title": "Input",
-    "uI Kit Italia": "PRONTO",
+    "uI Kit Italia": "DA RIVEDERE",
     "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920",
     "visivamente accessibile": "PRONTO"
 }
