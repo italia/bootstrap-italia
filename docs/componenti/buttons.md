@@ -145,7 +145,7 @@ La classe `.disabled` usa `pointer-events: none` per provare a disabilitare l'at
 
 {% comment %}Example name: Button con icona{% endcomment %}
 {% capture example %}
-<button class="btn btn-success btn-lg btn-icon">
+<button class="btn btn-success btn-icon">
   <span>Etichetta pulsante</span>
   <svg class="icon icon-white ms-1"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-full"></use></svg>
 </button>
@@ -155,12 +155,12 @@ La classe `.disabled` usa `pointer-events: none` per provare a disabilitare l'at
   <svg class="icon icon-white ms-1"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-full"></use></svg>
 </button>
 
-<button class="btn btn-danger btn-sm btn-icon">
+<button class="btn btn-danger btn-icon">
   <span>Etichetta pulsante</span>
   <svg class="icon icon-white ms-1"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-full"></use></svg>
 </button>
 
-<button class="btn btn-info btn-xs btn-icon">
+<button class="btn btn-secondary btn-icon">
   <span>Etichetta pulsante</span>
   <svg class="icon icon-white ms-1"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-full"></use></svg>
 </button>
