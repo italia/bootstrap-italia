@@ -778,24 +778,24 @@ $btn-active-box-shadow: inset 0 3px 5px rgba($black, 0.125) !default;
 $btn-disabled-opacity: 0.65 !default;
 $btn-focus-width: $input-btn-focus-width !default;
 
-$btn-hover-bg-shade-amount: 15% !default;
-$btn-hover-bg-tint-amount: 15% !default;
-$btn-hover-border-shade-amount: 20% !default;
-$btn-hover-border-tint-amount: 10% !default;
-$btn-active-bg-shade-amount: 20% !default;
-$btn-active-bg-tint-amount: 20% !default;
-$btn-active-border-shade-amount: 25% !default;
-$btn-active-border-tint-amount: 10% !default;
+// $btn-hover-bg-shade-amount: 15% !default;
+// $btn-hover-bg-tint-amount: 15% !default;
+// $btn-hover-border-shade-amount: 20% !default;
+// $btn-hover-border-tint-amount: 10% !default;
+// $btn-active-bg-shade-amount: 20% !default;
+// $btn-active-bg-tint-amount: 20% !default;
+// $btn-active-border-shade-amount: 25% !default;
+// $btn-active-border-tint-amount: 10% !default;
 
-$btn-box-shadow:
-  inset 0 1px 0 rgba($white, 0.15),
-  0 1px 1px rgba($black, 0.075) !default;
+// $btn-box-shadow:
+//   inset 0 1px 0 rgba($white, 0.15),
+//   0 1px 1px rgba($black, 0.075) !default;
 
-$btn-transition:
-  color 0.15s ease-in-out,
-  background-color 0.15s ease-in-out,
-  border-color 0.15s ease-in-out,
-  box-shadow 0.15s ease-in-out !default;
+// $btn-transition:
+//   color 0.15s ease-in-out,
+//   background-color 0.15s ease-in-out,
+//   border-color 0.15s ease-in-out,
+//   box-shadow 0.15s ease-in-out !default;
 
 $btn-link-color: var(--#{$prefix}link-color) !default;
 $btn-link-hover-color: var(--#{$prefix}link-hover-color) !default;
@@ -2097,6 +2097,7 @@ $offcanvas-backdrop-opacity: $modal-backdrop-opacity !default;
 // Global colors used inside sass loops and maps
 $color-primary: var(--#{$prefix}theme-primary);
 $color-secondary: var(--#{$prefix}color-background-secondary);
+$color-accent: var(--#{$prefix}color-background-accent);
 
 // Variables used in _maps.scss inside the $status map
 $color-status-info: var(--#{$prefix}color-background-secondary);
