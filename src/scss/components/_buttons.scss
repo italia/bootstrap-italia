@@ -470,7 +470,7 @@
   opacity: $btn-close-opacity;
   background: transparent escape-svg($btn-close-bg) center / $btn-close-width auto no-repeat; // include transparent for button elements
   background-color: transparent;
-  color: $btn-close-color;
+  color: var(--#{$prefix}color-text-base);
   @include border-radius();
   .icon {
     position: absolute;
