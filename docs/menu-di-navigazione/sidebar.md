@@ -6,12 +6,6 @@ group: menu-di-navigazione
 toc: true
 ---
 
-{% capture callout %}
-Breaking feature dalla versione **2.8.0**
-
-Gli elementi di tipo `<a>` dei collapse necessitano l'aggiunta dell'attributo `role="button"`.
-{% endcapture %}{% include callout.html content=callout type="danger" %}
-
 ## Semplice
 
 La sidebar semplice può contenere:
@@ -344,3 +338,9 @@ Per cambiare il tema della sidebar e renderla scura è sufficiente aggiungere al
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
+
+## Breaking change
+
+{% capture callout %}
+Gli elementi di tipo `<a>` dei collapse necessitano l'aggiunta dell'attributo `role="button"`.
+{% endcapture %}{% include callout-breaking.html content=callout version="2.8.0" type="danger" %}

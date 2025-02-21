@@ -11,12 +11,6 @@ description: La lista è un componente flessibile per la visualizzazione di list
 
 Le liste, costituite da tag `<ul>` con classe `.it-list` all'interno di un wrapper con classe `.it-list-wrapper`, possono contenere testi, link, icone, avatar, immagini o una combinazione di questi elementi.
 
-{% capture callout %}
-Breaking feature dalla versione **2.8.0**
-
-Gli elementi di tipo `<a>` dei collapse necessitano l'aggiunta dell'attributo `role="button"`.
-{% endcapture %}{% include callout.html content=callout type="danger" %}
-
 ### Lista semplice solo testo
 
 {% comment %}Example name: Base, con testo{% endcomment %}
@@ -395,13 +389,6 @@ L'elemento `.metadata`, segue l'elemento `.text`.
 
 Per avere una lista che permetta paragrafi di testo aggiuntivo per ogni elemento, bisogna utilizzare un approccio con titolo (heading) e paragrafo `<p>`, mantenendo la classe `.text` per l'elementi titolo. Entrambi devono essere inclusi in un elemento `<div>` per il corretto allineamento.
 
-{% capture callout %}
-Breaking feature dalla versione **2.11.0**
-
-Il codice markup è stato rivisto in chiave accessibilità e robustezza. In particolare cosa cambia: 
-   - L'elemento `.text` è ora implementato come heading `h` e non semplice `<span>`. Dovrà avere il livello intestazione corretto a seconda della gerarchia in pagina.
- {% endcapture %}{% include callout.html content=callout type="danger" %}
-
 {% comment %}Example name: Con testo aggiuntivo, azioni multiple e metadata{% endcomment %}
 {% capture example %}
 <div class="it-list-wrapper">
@@ -606,13 +593,6 @@ Le liste di link possono avere un'intestazione (con o senza link) e/o divisori p
 L'intestazione è costituita dall'elemento `.link-list-heading` che precede il tag `<ul>`.  
 Il divisore è costituito dal tag `<span>` con classe `.divider` e attributo `role="separator"`  all'interno del tag `<li>`.
 
-{% capture callout %}
-Breaking feature dalla versione **2.10.0**
-
-Il codice markup è stato rivisto in chiave accessibilità e robustezza. In particolare cosa cambia: 
-- L'elemento `.link-list-heading` è ora implementato come heading `h` e non semplice `<span>`. Dovrà avere il livello intestazione corretto a seconda della gerarchia in pagina.
- {% endcapture %}{% include callout.html content=callout type="danger" %}
-
 {% comment %}Example name: Per menu, con intestazione e divisore{% endcomment %}
 {% capture example %}
 <div class="link-list-wrapper">
@@ -699,13 +679,6 @@ Per includere un'icona bisogna aggiungere al tag `<a>` una delle seguenti classi
 - `icon-left`: se si vuole posizionare l'icona a sinistra del testo
 
 All'interno del tag `<span class="list-item-title-icon-wrapper">` subito dopo lo `<span class="list-item-title">` contenente il testo, puoi inserire [l'icona necessaria]({{ site.baseurl }}/docs/utilities/icone/).
-
-{% capture callout %}
-Breaking feature dalla versione **2.10.0**
-
-Il codice markup è stato rivisto in chiave accessibilità e robustezza. In particolare cosa cambia: 
-- L'elemento `.list-item-title` è ora implementato come heading `h` e non semplice `<span>`. Dovrà avere il livello intestazione corretto a seconda della gerarchia in pagina.
- {% endcapture %}{% include callout.html content=callout type="danger" %}
 
 {% comment %}Example name: Per menu, multilinea con icona{% endcomment %}
 {% capture example %}
@@ -1088,3 +1061,20 @@ Per questo tipo di link list sono state utilizzate, oltre alle classi custom, le
   </ul>
 </div>
 {% endcapture %}{% include example.html content=example %}
+
+## Breaking change
+
+{% capture callout %}
+Gli elementi di tipo `<a>` dei collapse necessitano l'aggiunta dell'attributo `role="button"`.
+{% endcapture %}{% include callout-breaking.html content=callout version="2.8.0" type="danger" %}
+
+{% capture callout %}
+Il codice markup è stato rivisto in chiave accessibilità e robustezza. In particolare cosa cambia: 
+  - L'elemento `.link-list-heading` è ora implementato come heading `h` e non semplice `<span>`. Dovrà avere il livello intestazione corretto a seconda della gerarchia in pagina.
+  - L'elemento `.list-item-title` è ora implementato come heading `h` e non semplice `<span>`. Dovrà avere il livello intestazione corretto a seconda della gerarchia in pagina.
+{% endcapture %}{% include callout-breaking.html content=callout version="2.10.0" type="danger" %}
+
+{% capture callout %}
+Il codice markup è stato rivisto in chiave accessibilità e robustezza. In particolare cosa cambia: 
+  - L'elemento `.text` è ora implementato come heading `h` e non semplice `<span>`. Dovrà avere il livello intestazione corretto a seconda della gerarchia in pagina.
+{% endcapture %}{% include callout-breaking.html content=callout version="2.11.0" type="danger" %}

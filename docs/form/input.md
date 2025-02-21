@@ -21,38 +21,6 @@ Per il corretto funzionamento degli elementi di tipo `<input>` è di fondamental
 
 Per l'inserimento guidato di campi di tipo numerico si può anche utilizzare l'elemento dedicato che fornisce migliorie per la validazione e per l'esperienza complessiva, descritto alla [pagina dedicata all'input numerico]({{ site.baseurl }}/docs/form/input-numerico/).
 
-{% capture callout %}
-Breaking feature dalla versione **2.2.0**
-
-Quando si utilizza l'attributo `placeholder` o l'input parte già valorizzato assicurarsi di aggiungere alla label la classe **`active`** per impedire la sovrapposizione della label al campo.
-
-{% endcapture %}{% include callout.html content=callout type="danger" %}
-
-{% capture callout %}
-Breaking feature dalla versione **2.8.0**
-
-Rimosso l'elemento con classe `.input-group-prepend` in favore dell'elemento 
-con classe `.input-group-text`.
-{% endcapture %}{% include callout.html content=callout type="danger" %}
-
-{% capture callout %}
-Breaking feature dalla versione **2.10.0**
-
-Il campo di input di tipo Password è stato rivisto in chiave accessibilità e robustezza. In particolare cosa cambia: 
-  - L'elemento `input.input-password` ha ora il corretto attributo `aria-describedby` al posto di `aria-labelledby`.
-  - L'elemento `.password-icon` diventa un `button` con `role=switch` e uso dell'attributo `aria-checked` per lo stato.
-  - Rivisto l'ordine degli elementi nell'HTML per rispecchiare la struttura corretta degli elementi. 
-  - Alcuni elementi `small` o `span` diventano `p`, ad esempio per la personalizzazione con attributi `data` delle varianti più avanzate ci si rivolgerà verso l'elemento `p.strength-meter-info` e non più al generico `small.form-text`. 
-  - Rimosso il controllo per il Caps-lock inserito, per non interferire con i tasti modificatori delle tecnologie assistive.
-  - Aggiunta una variante con misuratore di sicurezza e suggerimenti. 
-{% endcapture %}{% include callout.html content=callout type="danger" %}
-{% capture callout %}
-Breaking feature dalla versione **2.11.0**
-
-Quando si utilizza un campo input diverso da `submit`, `file`, `radio` e `checkbox` è necessario sempre applicare la classe `form-control`.
-
-{% endcapture %}{% include callout.html content=callout type="danger" %}
-
 {% comment %}Example name: Varianti per tipo {% endcomment %}
 {% capture example %}
 <div>
@@ -679,3 +647,28 @@ Includendo l'elemento all'interno di un `.form-group`, la label assumerà lo ste
     <input type="text" class="form-control form-control-sm" id="input-text-sm" placeholder="Inserisci il tuo nome">
   </div>
 {% endcapture %}{% include example.html content=example %}
+
+## Breaking change
+
+{% capture callout %}
+Quando si utilizza l'attributo `placeholder` o l'input parte già valorizzato assicurarsi di aggiungere alla label la classe **`active`** per impedire la sovrapposizione della label al campo.
+{% endcapture %}{% include callout-breaking.html content=callout version="2.2.0" type="danger" %}
+
+{% capture callout %}
+Rimosso l'elemento con classe `.input-group-prepend` in favore dell'elemento 
+con classe `.input-group-text`.
+{% endcapture %}{% include callout-breaking.html content=callout version="2.8.0" type="danger" %}
+
+{% capture callout %}
+Il campo di input di tipo Password è stato rivisto in chiave accessibilità e robustezza. In particolare cosa cambia: 
+  - L'elemento `input.input-password` ha ora il corretto attributo `aria-describedby` al posto di `aria-labelledby`.
+  - L'elemento `.password-icon` diventa un `button` con `role=switch` e uso dell'attributo `aria-checked` per lo stato.
+  - Rivisto l'ordine degli elementi nell'HTML per rispecchiare la struttura corretta degli elementi. 
+  - Alcuni elementi `small` o `span` diventano `p`, ad esempio per la personalizzazione con attributi `data` delle varianti più avanzate ci si rivolgerà verso l'elemento `p.strength-meter-info` e non più al generico `small.form-text`. 
+  - Rimosso il controllo per il Caps-lock inserito, per non interferire con i tasti modificatori delle tecnologie assistive.
+  - Aggiunta una variante con misuratore di sicurezza e suggerimenti. 
+{% endcapture %}{% include callout-breaking.html content=callout version="2.10.0" type="danger" %}
+
+{% capture callout %}
+Quando si utilizza un campo input diverso da `submit`, `file`, `radio` e `checkbox` è necessario sempre applicare la classe `form-control`.
+{% endcapture %}{% include callout-breaking.html content=callout version="2.11.0" type="danger" %}

@@ -7,13 +7,6 @@ title: Toggles
 description: Campi di tipo "interruttore".
 ---
 
-{% capture callout %}
-Breaking feature dalla versione **2.10.0**
-
-- Il "raggruppamento" di campi di input deve prevedere l'elemento nativo `<fieldset>`. 
-- Sostituire `aria-labelledby` con `aria-describedby`.
-{% endcapture %}{% include callout.html content=callout type="danger" %}
-
 Per ottenere un interruttore con levetta basterà usare la seguente sintassi HTML, gli stili CSS penseranno al resto. Il contenitore padre dovrà avere la classe `.toggles`, mentre la label conterrà sia la checkbox che uno `<span>` con classe `.lever`.
 
 {% comment %}Example name: Base {% endcomment %}
@@ -159,3 +152,10 @@ Per raggruppare visivamente gli elementi **toggle** occorrerà aggiungere al `.f
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
+
+## Breaking change
+
+{% capture callout %}
+- Il "raggruppamento" di campi di input deve prevedere l'elemento nativo `<fieldset>`. 
+- Sostituire `aria-labelledby` con `aria-describedby`.
+{% endcapture %}{% include callout-breaking.html content=callout version="2.10.0" type="danger" %}

@@ -11,13 +11,6 @@ L'input di tipo numerico va racchiuso in uno `<span>` con classe `.input-number`
 Tale input emetterà l'evento `change` anche all'incremento/decremento tramite i pulsanti di step.
 L'attributo `value=""` deve contenere un valore di default.
 
-{% capture callout %}
-Breaking feature dalla versione **2.13.0**
-
-Le `label` degli input `percentuale` e `valuta` richiedono la classe `input-symbol-label`. 
-Le precedenti classi `input-number-percentage` e `input-number-currency` sono state rimosse.
-{% endcapture %}{% include callout.html content=callout type="danger" %}
-
 ## Esempi
 
 La label va posizionata prima del wrapper e, per garantire l'accessibilità del campo, dovrà avere un attributo `for=""` corrispondente al nome e id del campo input.
@@ -197,3 +190,10 @@ sufficiente aggiungere la classe `input-number-adaptive`.
 var inputElement = document.getElementById('inputNumber6')
 var inputNumber = new bootstrap.InputNumber(inputElement)
 ```
+
+## Breaking change
+
+{% capture callout %}
+Le `label` degli input `percentuale` e `valuta` richiedono la classe `input-symbol-label`. 
+Le precedenti classi `input-number-percentage` e `input-number-currency` sono state rimosse.
+{% endcapture %}{% include callout-breaking.html content=callout version="2.13.0" type="danger" %}

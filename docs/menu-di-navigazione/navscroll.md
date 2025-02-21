@@ -20,13 +20,6 @@ toc: true
   }
 </style>
 
-{% capture callout %}
-Breaking feature dalla versione **2.8.0**
-
-Gli elementi con classe `.it-back-button` diventano di tipo `<button>` invece di `<a>`.
-Gli elementi di tipo `<a>` dei collapse necessitano l'aggiunta dell'attributo `role="button"`.
-{% endcapture %}{% include callout.html content=callout type="danger" %}
-
 ## Layout della Navscroll
 
 Il componente Navscroll è una declinazione del componente Navbar `<nav class="navbar navbar-expand-lg">` con l'aggiunta della classe `.it-navscroll-wrapper` e dell'attributo `data-bs-navscroll`.  
@@ -468,3 +461,10 @@ Le opzioni possono essere passate tramite gli attributi data o tramite Javascrip
     </tr>
   </tbody>
 </table>
+
+## Breaking change
+
+{% capture callout %}
+Gli elementi con classe `.it-back-button` diventano di tipo `<button>` invece di `<a>`.
+Gli elementi di tipo `<a>` dei collapse necessitano l'aggiunta dell'attributo `role="button"`.
+{% endcapture %}{% include callout-breaking.html content=callout version="2.8.0" type="danger" %}

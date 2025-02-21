@@ -24,13 +24,6 @@ In caso di utilizzo delle icone si raccomanda di descriverne il senso ai lettori
 
 {% endcapture %}{% include callout.html content=callout type="warning" %}
 
-{% capture callout %}
-Breaking feature dalla versione **2.11.0**
-
-Utilizzare i tag `<figure>` e `<figcaption>` per liste di immagini con didascalia.
-
-{% endcapture %}{% include callout.html content=callout type="danger" %}
-
 {% comment %}Example name: Varianti didascalia{% endcomment %}
 {% capture example %}
 <div class="row">
@@ -547,3 +540,9 @@ const masonryList = elementList.map(function (element) {
     </tr>
   </tbody>
 </table>
+
+## Breaking change
+
+{% capture callout %}
+Utilizzare i tag `<figure>` e `<figcaption>` per liste di immagini con didascalia.
+{% endcapture %}{% include callout-breaking.html content=callout version="2.11.0" type="danger" %}

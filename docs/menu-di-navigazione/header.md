@@ -33,14 +33,6 @@ Il titolo del sito, "Nome dell'Istituzione" negli esempi, è contenuto in un `<d
 Maggiori dettagli sull'accessibilità del componente **megamenu** nella [relativa pagina]({{site.baseurl}}/docs/menu-di-navigazione/megamenu/).
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
-{% capture callout %}
-Breaking feature dalla versione **2.8.0**
-
-- Il toggle del dropdown diventa `<button>` invece di `<a>`. 
-- Gli altri elementi `<a>` che si comportano come toggle dropdown (eg. scelta Lingua), hanno l'aggiunta dell'attributo `role="button"`.
-- Il markup del Megamenu cambia come nel nuovo componente, per approfondire andare alla [relativa pagina]({{site.baseurl}}/docs/menu-di-navigazione/megamenu/).
-{% endcapture %}{% include callout.html content=callout type="danger" %}
-
 ## Slim Header
 
 Lo **Slim Header** mostra un'intestazione, solitamente con riferimento all'ente di appartenenza del progetto o riferimenti utili, oltre ad un eventuale menu per il cambio lingua e l'accesso ad area riservata.  
@@ -1553,3 +1545,11 @@ const headerSticky = new HeaderSticky(headerStickyElement);
 
 const headerSticky = HeaderSticky.getOrCreateInstance(headerStickyElement);
 ```
+
+## Breaking change
+
+{% capture callout %}
+- Il toggle del dropdown diventa `<button>` invece di `<a>`. 
+- Gli altri elementi `<a>` che si comportano come toggle dropdown (eg. scelta Lingua), hanno l'aggiunta dell'attributo `role="button"`.
+- Il markup del Megamenu cambia come nel nuovo componente, per approfondire andare alla [relativa pagina]({{site.baseurl}}/docs/menu-di-navigazione/megamenu/).
+{% endcapture %}{% include callout-breaking.html content=callout version="2.8.0" type="danger" %}

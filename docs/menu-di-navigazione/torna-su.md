@@ -9,13 +9,6 @@ toc: true
 Per aggiungere un pulsante che si abilita automaticamente allo scorrimento della pagina, e che aiuta l'utente a tornare in alto con un solo click su di esso, è sufficiente usare un link con attributo `data-bs-toggle="backtotop"` e con una classe `.back-to-top` che lo posiziona nella parte inferiore destra nella pagina.
 Le animazioni sono state realizzate con il plugin javascript [AnimeJs](https://animejs.com).
 
-{% capture callout %}
-Breaking feature dalla versione **2.12.0**
-
-- Rimossi gli attributi `tabindex="-1"` e `aria-hidden="true"` per permettere il focus da tastiera e l'interazione da strumenti assistivi. 
-- Aggiunto attributo `aria-label="Torna su"` per comunicare lo scopo a strumenti assistivi.
-{% endcapture %}{% include callout.html content=callout type="danger" %}
-
 <style>
   /* Style override for Documentation purposes */
   .back-to-top:not(#example) {
@@ -212,3 +205,10 @@ const backToTop = BackToTop.getOrCreateInstance(backToTopEl)
 
 const backToTop = new BackToTop(backToTopEl)
 ```
+
+## Breaking change
+
+{% capture callout %}
+- Rimossi gli attributi `tabindex="-1"` e `aria-hidden="true"` per permettere il focus da tastiera e l'interazione da strumenti assistivi. 
+- Aggiunto attributo `aria-label="Torna su"` per comunicare lo scopo a strumenti assistivi.
+{% endcapture %}{% include callout-breaking.html content=callout version="2.12.0" type="danger" %}
