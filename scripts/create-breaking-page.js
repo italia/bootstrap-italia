@@ -50,13 +50,17 @@ const getBreaking = (filepath, _) => {
   }
 }
 
+const compareVersions = (v1, v2) => {
+  return parseInt(v2.replaceAll('.', '')) - parseInt(v1.replaceAll('.', ''))
+}
+
 const writeBreakings = (breakings) => {
   let markDown = ''
-  for (const [version, components] of Object.entries(breakings)) {
+  for (const version of Object.keys(breakings).sort(compareVersions)) {
     markDown += `## ${version}\n\n`;
-    for (const [component, breaks] of Object.entries(components)) {
+    for (const component of Object.keys(breakings[version]).sort()) {
       markDown += `### ${component}\n`;
-      for (const br of breaks) {
+      for (const br of breakings[version][component]) {
         markDown += `${br}\n\n`;
       }
     }
