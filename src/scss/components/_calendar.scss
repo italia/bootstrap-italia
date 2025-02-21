@@ -39,7 +39,7 @@
         text-decoration: none;
         color: $color-text-base;
         font-family: $font-family-sans-serif;
-        font-size: $link-list-font-size-l;
+        font-size: var(--#{$prefix}body-font-size)-l;
 
         &:hover {
           text-decoration: underline;

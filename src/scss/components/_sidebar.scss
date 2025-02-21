@@ -22,12 +22,14 @@
         text-transform: uppercase;
       }
       ul {
-        li {
+        li { // TODO: Add width: 100% to the li
           a {
             line-height: $sidebar-linklist-link-line-height;
             padding-top: $sidebar-linklist-link-v-padding;
             padding-bottom: $sidebar-linklist-link-v-padding;
+            padding-left: 24px; // FIXME: use a variable
             font-size: $sidebar-link-size;
+            text-decoration: none;
             i.it-expand {
               font-size: $sidebar-dropdown-icon-size;
               top: 50%;
