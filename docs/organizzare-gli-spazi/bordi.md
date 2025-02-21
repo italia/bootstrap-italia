@@ -50,13 +50,13 @@ Cambia il colore del bordo usando la palette del tema in uso.
 Tutte le classi per arrotondare facilmente gli angoli di un elemento.
 
 <div class="bd-example bd-example-images">
-  <img src="https://via.placeholder.com/75x75/ebebeb/808080/?text=Immagine" class="rounded" alt="Esempio di immagine arrotondata">
-  <img src="https://via.placeholder.com/75x75/ebebeb/808080/?text=Immagine" class="rounded-top" alt="Esempio di immagine arrotondata in alto">
-  <img src="https://via.placeholder.com/75x75/ebebeb/808080/?text=Immagine" class="rounded-right" alt="Esempio di immagine arrotondata a destra">
-  <img src="https://via.placeholder.com/75x75/ebebeb/808080/?text=Immagine" class="rounded-bottom" alt="Esempio di immagine arrotondata in basso">
-  <img src="https://via.placeholder.com/75x75/ebebeb/808080/?text=Immagine" class="rounded-left" alt="Esempio di immagine arrotondata a sinistra">
-  <img src="https://via.placeholder.com/75x75/ebebeb/808080/?text=Immagine" class="rounded-circle" alt="Esempio di immagine arrotondata a cerchio">
-  <img src="https://via.placeholder.com/75x75/ebebeb/808080/?text=Immagine" class="rounded-0" alt="Esempio di immagine non arrotondata (sovrascrive l'eventuale arrotondamento applicato precedentemente)">
+  <img src="https://placehold.co/75x75/ebebeb/808080/?text=Immagine" class="rounded" alt="Esempio di immagine arrotondata">
+  <img src="https://placehold.co/75x75/ebebeb/808080/?text=Immagine" class="rounded-top" alt="Esempio di immagine arrotondata in alto">
+  <img src="https://placehold.co/75x75/ebebeb/808080/?text=Immagine" class="rounded-right" alt="Esempio di immagine arrotondata a destra">
+  <img src="https://placehold.co/75x75/ebebeb/808080/?text=Immagine" class="rounded-bottom" alt="Esempio di immagine arrotondata in basso">
+  <img src="https://placehold.co/75x75/ebebeb/808080/?text=Immagine" class="rounded-left" alt="Esempio di immagine arrotondata a sinistra">
+  <img src="https://placehold.co/75x75/ebebeb/808080/?text=Immagine" class="rounded-circle" alt="Esempio di immagine arrotondata a cerchio">
+  <img src="https://placehold.co/75x75/ebebeb/808080/?text=Immagine" class="rounded-0" alt="Esempio di immagine non arrotondata (sovrascrive l'eventuale arrotondamento applicato precedentemente)">
 </div>
 
 ```html

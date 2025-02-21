@@ -343,7 +343,7 @@ Qualora le proporzioni non fossero esatte, l'immagine occuperà il massimo dell'
         <div class="img-responsive-wrapper">
           <div class="img-responsive">
             <figure class="img-wrapper">
-              <img src="https://via.placeholder.com/310x190/0066cc/FFFFFF/?text=IMMAGINE%20DI%20ESEMPIO" title="img title" alt="imagealt">
+              <img src="https://placehold.co/310x190/0066cc/FFFFFF/?text=IMMAGINE%20DI%20ESEMPIO" title="img title" alt="imagealt">
             </figure>
           </div>
         </div>
@@ -365,7 +365,7 @@ Qualora le proporzioni non fossero esatte, l'immagine occuperà il massimo dell'
         <div class="img-responsive-wrapper">
           <div class="img-responsive img-responsive-panoramic">
             <figure class="img-wrapper">
-              <img src="https://via.placeholder.com/310x94/0066cc/FFFFFF/?text=IMMAGINE%20DI%20ESEMPIO" title="img title" alt="imagealt">
+              <img src="https://placehold.co/310x94/0066cc/FFFFFF/?text=IMMAGINE%20DI%20ESEMPIO" title="img title" alt="imagealt">
             </figure>
           </div>
         </div>
@@ -387,7 +387,7 @@ Qualora le proporzioni non fossero esatte, l'immagine occuperà il massimo dell'
           <div class="img-responsive-wrapper">
             <div class="img-responsive">
               <figure class="img-wrapper">
-                <img src="https://via.placeholder.com/310x190/0066cc/FFFFFF/?text=IMMAGINE%20DI%20ESEMPIO" title="img title" alt="imagealt">
+                <img src="https://placehold.co/310x190/0066cc/FFFFFF/?text=IMMAGINE%20DI%20ESEMPIO" title="img title" alt="imagealt">
               </figure>
               <div class="card-calendar d-flex flex-column justify-content-center">
                 <span class="card-date">31</span>
@@ -413,7 +413,7 @@ Qualora le proporzioni non fossero esatte, l'immagine occuperà il massimo dell'
           <div class="img-responsive-wrapper">
             <div class="img-responsive img-responsive-panoramic">
               <figure class="img-wrapper">
-                <img src="https://via.placeholder.com/310x94/0066cc/FFFFFF/?text=IMMAGINE%20DI%20ESEMPIO" title="img title" alt="imagealt">
+                <img src="https://placehold.co/310x94/0066cc/FFFFFF/?text=IMMAGINE%20DI%20ESEMPIO" title="img title" alt="imagealt">
               </figure>
               <div class="card-calendar d-flex flex-column justify-content-center">
                 <span class="card-date">31</span>
@@ -451,7 +451,7 @@ Le proporzioni ottimali dell'immagine per questa card sono 17:21.
         <div class="img-responsive-wrapper">
           <div class="img-responsive">
             <figure class="img-wrapper">
-              <img src="https://via.placeholder.com/174x214/F9F9FE/0066CC/?text=IMMAGINE%20DI%20ESEMPIO" title="img title" alt="imagealt">
+              <img src="https://placehold.co/174x214/F9F9FE/0066CC/?text=IMMAGINE%20DI%20ESEMPIO" title="img title" alt="imagealt">
             </figure>
           </div>
         </div>

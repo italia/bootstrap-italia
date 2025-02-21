@@ -289,11 +289,11 @@ All'interno del tag `<a>` subito prima dello `<span>` contenente il testo, andre
 {% capture example %}
 <div class="link-list-wrapper">
   <ul class="link-list">
-    <li><a class="list-item active avatar" href="#"><img class="avatar" src="https://via.placeholder.com/40x40" alt="avatar"><span>Link list 1 active</span></a>
+    <li><a class="list-item active avatar" href="#"><img class="avatar" src="https://placehold.co/40x40" alt="avatar"><span>Link list 1 active</span></a>
     </li>
-    <li><a class="list-item avatar" href="#"><img class="avatar" src="https://via.placeholder.com/40x40" alt="avatar"><span>Link list 1</span></a>
+    <li><a class="list-item avatar" href="#"><img class="avatar" src="https://placehold.co/40x40" alt="avatar"><span>Link list 1</span></a>
     </li>
-    <li><a class="list-item disabled avatar" href="#"><img class="avatar" src="https://via.placeholder.com/40x40" alt="avatar"><span>Link list 1 disabled</span></a>
+    <li><a class="list-item disabled avatar" href="#"><img class="avatar" src="https://placehold.co/40x40" alt="avatar"><span>Link list 1 disabled</span></a>
     </li>
   </ul>
 </div>

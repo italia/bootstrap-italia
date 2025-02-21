@@ -35,7 +35,7 @@ Le grandezze di default presenti sono: `25%`, `50%`, `75%` e `100%`.
 Sono previste anche le classi `mw-100` e `mh-100` per i corrispettivi `max-width: 100%;` e `max-height: 100%;`.
 
 {% capture example %}
-<img class="mw-100" src="https://via.placeholder.com/64x64/ebebeb/808080/?text=Immagine" alt="Max-width 100%">
+<img class="mw-100" src="https://placehold.co/64x64/ebebeb/808080/?text=Immagine" alt="Max-width 100%">
 {% endcapture %}{% include example.html content=example %}
 
 {% capture example %}

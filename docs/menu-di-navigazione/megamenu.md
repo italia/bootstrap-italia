@@ -750,7 +750,7 @@ Di seguito un esempio:
                 <div class="row">
                   <div class="col-12 it-vertical it-description">
                     <div class="description-content">
-                      <img src="https://via.placeholder.com/225x110/ebebeb/808080/?text=Immagine" alt="Descrizione immagine">
+                      <img src="https://placehold.co/225x110/ebebeb/808080/?text=Immagine" alt="Descrizione immagine">
                       <p>Omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
                     </div>
                   </div>

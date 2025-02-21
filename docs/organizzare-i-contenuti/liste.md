@@ -127,21 +127,21 @@ L'elemento **`.it-thumb`** con all'interno il relativo svg, precede l'elemento *
   <ul class="it-list">
     <li>
       <a href="#">
-        <div class="it-thumb"><img src="https://via.placeholder.com/40x40.png?text=40x40" alt="image alt" title="image title"></div>
+        <div class="it-thumb"><img src="https://placehold.co/40x40.png?text=40x40" alt="image alt" title="image title"></div>
         <div class="it-right-zone"><span class="text">Label 1</span>
         </div>
       </a>
     </li>
     <li>
       <a href="#">
-        <div class="it-thumb"><img src="https://via.placeholder.com/40x40.png?text=40x40" alt="image alt" title="image title"></div>
+        <div class="it-thumb"><img src="https://placehold.co/40x40.png?text=40x40" alt="image alt" title="image title"></div>
         <div class="it-right-zone"><span class="text">Label 2</span>
         </div>
       </a>
     </li>
     <li>
       <a class="active" href="#">
-        <div class="it-thumb"><img src="https://via.placeholder.com/40x40.png?text=40x40" alt="image alt" title="image title"></div>
+        <div class="it-thumb"><img src="https://placehold.co/40x40.png?text=40x40" alt="image alt" title="image title"></div>
         <div class="it-right-zone"><span class="text">Active Label</span>
         </div>
       </a>
@@ -401,7 +401,7 @@ Per attivare il javascript che attiva il funzionamento dei toggles è necessario
   <ul class="it-list">
     <li>
       <a class="it-has-checkbox" href="#">
-        <div class="it-thumb"><img src="https://via.placeholder.com/40x40.png?text=40x40" alt="image alt" title="image title"></div>
+        <div class="it-thumb"><img src="https://placehold.co/40x40.png?text=40x40" alt="image alt" title="image title"></div>
         <div class="it-right-zone">
           <span class="text">Label 1</span>
           <div class="toggles">
@@ -414,7 +414,7 @@ Per attivare il javascript che attiva il funzionamento dei toggles è necessario
     </li>
     <li>
       <a class="it-has-checkbox" href="#">
-        <div class="it-thumb"><img src="https://via.placeholder.com/40x40.png?text=40x40" alt="image alt" title="image title"></div>
+        <div class="it-thumb"><img src="https://placehold.co/40x40.png?text=40x40" alt="image alt" title="image title"></div>
         <div class="it-right-zone">
           <span class="text">Label 2</span>
           <div class="toggles">
@@ -427,7 +427,7 @@ Per attivare il javascript che attiva il funzionamento dei toggles è necessario
     </li>
     <li>
       <a class="it-has-checkbox" href="#">
-        <div class="it-thumb"><img src="https://via.placeholder.com/40x40.png?text=40x40" alt="image alt" title="image title"></div>
+        <div class="it-thumb"><img src="https://placehold.co/40x40.png?text=40x40" alt="image alt" title="image title"></div>
         <div class="it-right-zone">
           <span class="text">Label</span>
           <div class="toggles">
