@@ -1,5 +1,7 @@
 ## 2.13.0
 
+[Changelog completo](https://github.com/italia/bootstrap-italia/releases/tag/v2.13.0) <svg class="icon steppers-success" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
+
 ### Input numerico
 
 Le `label` degli input `percentuale` e `valuta` richiedono la classe `input-symbol-label`. 
@@ -14,6 +16,8 @@ tutte le tab di tipo `Card`.
 
 ## 2.12.0
 
+[Changelog completo](https://github.com/italia/bootstrap-italia/releases/tag/v2.12.0) <svg class="icon steppers-success" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
+
 ### Rating
 
 - Aggiunto attributo `aria-hidden="true"` sulle icone perché lo scopo è già trasmesso agli strumenti assistivi dal testo con classe `.visually-hidden`.
@@ -26,6 +30,8 @@ tutte le tab di tipo `Card`.
 
 
 ## 2.11.0
+
+[Changelog completo](https://github.com/italia/bootstrap-italia/releases/tag/v2.11.0) <svg class="icon steppers-success" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
 
 ### Liste di immagini
 
@@ -42,6 +48,8 @@ Il codice markup è stato rivisto in chiave accessibilità e robustezza. In part
 
 
 ## 2.10.0
+
+[Changelog completo](https://github.com/italia/bootstrap-italia/releases/tag/v2.10.0) <svg class="icon steppers-success" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
 
 ### Checkbox
 
@@ -62,6 +70,8 @@ Il codice markup è stato rivisto in chiave accessibilità e robustezza. In part
 
 
 ## 2.8.0
+
+[Changelog completo](https://github.com/italia/bootstrap-italia/releases/tag/v2.8.0) <svg class="icon steppers-success" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
 
 ### Avatar
 
@@ -111,6 +121,8 @@ Agli elementi di `<a>` occorre aggiungere l'attributo `role="button"`.
 
 ## 2.4.0
 
+[Changelog completo](https://github.com/italia/bootstrap-italia/releases/tag/v2.4.0) <svg class="icon steppers-success" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
+
 ### Callout
 
 Il contenitore `<div>` con classe `.callout` deve essere seguito da un ulteriore contenitore `<div>` con classe `.callout-inner`. Seguire gli esempi e la successiva descrizione per capire la composizione del nuovo componente.
@@ -118,12 +130,16 @@ Il contenitore `<div>` con classe `.callout` deve essere seguito da un ulteriore
 
 ## 2.3.0
 
+[Changelog completo](https://github.com/italia/bootstrap-italia/releases/tag/v2.3.0) <svg class="icon steppers-success" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
+
 ### Steppers
 
 L'elemento con classe `.steppers-index` adesso è diventato uno `<span>` collocato fuori dalla lista `<ul>`.
 
 
 ## 2.2.0
+
+[Changelog completo](https://github.com/italia/bootstrap-italia/releases/tag/v2.2.0) <svg class="icon steppers-success" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
 
 ### Input
 

@@ -58,6 +58,7 @@ const writeBreakings = (breakings) => {
   let markDown = ''
   for (const version of Object.keys(breakings).sort(compareVersions)) {
     markDown += `## ${version}\n\n`;
+    markDown += `[Changelog completo](https://github.com/italia/bootstrap-italia/releases/tag/v${version}) <svg class="icon steppers-success" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>\n\n`
     for (const component of Object.keys(breakings[version]).sort()) {
       markDown += `### ${component  === 'Introduzione' ? 'Generale' : component}\n`;
       for (const br of breakings[version][component]) {

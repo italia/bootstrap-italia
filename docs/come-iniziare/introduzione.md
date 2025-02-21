@@ -466,3 +466,10 @@ continua a leggere alla pagina [strumenti di compilazione e contribuzione]({{ si
 {% capture callout %}
 Per caricare i font utilizzando JavaScript occorre chiamare **esplicitamente** la funzione `loadFonts` passando il percorso della cartella dove si trovano i font.
 {% endcapture %}{% include callout-breaking.html version="2.2.0" content=callout type="danger" %}
+
+{% capture callout %}
+Il `focus` con la tastiera viene adesso settato con l'attributo `datadata-focus-mouse`
+invece che con la classe `focus--mouse`. Da tenere presente nel caso di un 
+precedente utilizzo della classe `focus--mouse` per un controllo e/o un' implementazione 
+ulteriore di accessibilità. 
+{% endcapture %}{% include callout-breaking.html version="2.14.0" content=callout type="danger" %}
