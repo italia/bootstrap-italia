@@ -2,7 +2,7 @@ pre {
   background-color: var(--#{$prefix}color-background-emphasis);
   padding: var(--#{$prefix}spacing-s);
   overflow-x: auto;
-  color: var(--#{$prefix}code-color);
+  color: var(--#{$prefix}color-code);
   font-size: var(--#{$prefix}code-font-size);
 
   code {
@@ -13,7 +13,7 @@ pre {
 
 
 code {
-  color: var(--#{$prefix}code-color);
+  color: var(--#{$prefix}color-code);
   font-size: var(--#{$prefix}code-font-size);
   word-wrap: break-word;
   background-color: var(--#{$prefix}code-background);

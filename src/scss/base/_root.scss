@@ -13,9 +13,9 @@
     --#{$prefix}#{$color}: #{$value};
   }
 
-  // @each $color, $value in $theme-colors-rgb {
-  //   --#{$prefix}#{$color}-rgb: #{$value};
-  // }
+  @each $color, $value in $theme-colors-rgb {
+    --#{$prefix}#{$color}-rgb: #{$value};
+  }
   
   --#{$prefix}white-rgb: #{to-rgb($white)};
   --#{$prefix}black-rgb: #{to-rgb($black)};
@@ -71,7 +71,7 @@
   --#{$prefix}spacing-l: var(--it-spacing-l);
   --#{$prefix}spacing-m: var(--it-spacing-m);
   --#{$prefix}spacing-s: var(--it-spacing-s);
-  --#{$prefix}spacing-xxs: var(--it-spacing-xs);
+  --#{$prefix}spacing-xs: var(--it-spacing-xs);
   --#{$prefix}spacing-xxs: var(--it-spacing-xxs);
   --#{$prefix}spacing-3xs: var(--it-spacing-3xs);
 
@@ -193,10 +193,10 @@
   --#{$prefix}color-text-primary-hover: var(--it-color-text-primary-hover);
   --#{$prefix}color-text-primary: var(--it-color-text-primary);
   --#{$prefix}color-text-base: var(--it-color-text-base);
-  --#{$prefix}code-color: var(--it-color-text-inverse);
-  --#{$prefix}link-color: var(--#{$prefix}color-text-primary);
-  --#{$prefix}link-hover-color: var(--it-color-text-primary-hover);
-  --#{$prefix}link-hover-active: var(--it-color-text-primary-active);
+  --#{$prefix}color-code: var(--it-color-text-inverse);
+  --#{$prefix}color-link: var(--#{$prefix}color-text-primary);
+  --#{$prefix}color-link-hover: var(--it-color-link-hover);
+  --#{$prefix}color-link-active: var(--it-color-link-active);
  
   // Border colors
   --#{$prefix}color-border-danger-active: var(--it-color-border-danger-active);
@@ -219,8 +219,13 @@
   --#{$prefix}color-border-primary: var(--it-color-border-primary);
   
   // Background colors
+  --#{$prefix}color-background-primary: var(--it-color-background-primary);
+  --#{$prefix}color-background-primary-lighter: var(--it-color-background-primary-lighter);
+  --#{$prefix}color-background-primary-light: var(--it-color-background-primary-light);
   --#{$prefix}color-background-primary-dark: var(--it-color-background-primary-dark);
   --#{$prefix}color-background-primary-muted: var(--it-color-background-primary-muted);
+  --#{$prefix}color-background-primary-active: var(--it-color-background-primary-active);
+  --#{$prefix}color-background-primary-hover: var(--it-color-background-primary-hover);
   --#{$prefix}color-background-danger-active: var(--it-color-background-danger-active);
   --#{$prefix}color-background-danger-hover: var(--it-color-background-danger-hover);
   --#{$prefix}color-background-danger-light: var(--it-color-background-danger-light);
@@ -246,11 +251,6 @@
   --#{$prefix}color-background-secondary-active: var(--it-color-background-secondary-active);
   --#{$prefix}color-background-secondary-hover: var(--it-color-background-secondary-hover);
   --#{$prefix}color-background-secondary: var(--it-color-background-secondary);
-  --#{$prefix}color-background-primary-active: var(--it-color-background-primary-active);
-  --#{$prefix}color-background-primary-hover: var(--it-color-background-primary-hover);
-  --#{$prefix}color-background-primary-lighter: var(--it-color-background-primary-lighter);
-  --#{$prefix}color-background-primary-light: var(--it-color-background-primary-light);
-  --#{$prefix}color-background-primary: var(--it-color-background-primary);
   --#{$prefix}overlay-background-light: hsla(0, 0%, 0%, 0.5);
   --#{$prefix}overlay-background-primary: hsla(210, 100%, 40%, 0.8);
   --#{$prefix}overlay-background-primary-muted: hsla(210, 54%, 20%, 0.8);
