@@ -382,10 +382,6 @@ $font-path: "/fonts";
 
 #### Via JavaScript
 
-{% capture callout %}
-Per caricare i font utilizzando JavaScript occorre chiamare **esplicitamente** la funzione `loadFonts` passando il percorso della cartella dove si trovano i font.
-{% endcapture %}{% include callout-breaking.html version="2.2.0" content=callout type="danger" %}
-
 ```html
 <script>
   bootstrap.loadFonts('/bootstrap-italia/dist/fonts');
@@ -463,3 +459,10 @@ Infine, per _normalizzare_ alcuni comportamenti cross-browser, Bootstrap Italia 
 
 Se ti interessa contribuire alla libreria e sapere come funziona il processo di compilazione dei file e la creazione della documentazione di Bootstrap Italia,
 continua a leggere alla pagina [strumenti di compilazione e contribuzione]({{ site.baseurl }}/docs/come-iniziare/strumenti-di-compilazione/).
+
+
+## Breaking change
+
+{% capture callout %}
+Per caricare i font utilizzando JavaScript occorre chiamare **esplicitamente** la funzione `loadFonts` passando il percorso della cartella dove si trovano i font.
+{% endcapture %}{% include callout-breaking.html version="2.2.0" content=callout type="danger" %}

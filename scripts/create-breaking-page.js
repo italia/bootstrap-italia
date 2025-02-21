@@ -59,7 +59,7 @@ const writeBreakings = (breakings) => {
   for (const version of Object.keys(breakings).sort(compareVersions)) {
     markDown += `## ${version}\n\n`;
     for (const component of Object.keys(breakings[version]).sort()) {
-      markDown += `### ${component}\n`;
+      markDown += `### ${component  === 'Introduzione' ? 'Generale' : component}\n`;
       for (const br of breakings[version][component]) {
         markDown += `${br}\n\n`;
       }

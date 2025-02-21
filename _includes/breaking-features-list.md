@@ -130,3 +130,8 @@ L'elemento con classe `.steppers-index` adesso è diventato uno `<span>` colloca
 Quando si utilizza l'attributo `placeholder` o l'input parte già valorizzato assicurarsi di aggiungere alla label la classe **`active`** per impedire la sovrapposizione della label al campo.
 
 
+### Generale
+
+Per caricare i font utilizzando JavaScript occorre chiamare **esplicitamente** la funzione `loadFonts` passando il percorso della cartella dove si trovano i font.
+
+
