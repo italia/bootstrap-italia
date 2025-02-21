@@ -2,11 +2,11 @@
 // Accordion custom properties
 //
 
-$arrow-size: $font-size-base * 0.5;
+// $arrow-size: $font-size-base * 0.5;
 
 .accordion {
   --#{$prefix}accordion-color: var(--#{$prefix}color-text-base, #{$accordion-color});
-  --#{$prefix}accordion-bg: #{$accordion-bg};
+  --#{$prefix}accordion-background: #{$accordion-bg};
   --#{$prefix}accordion-transition: #{$accordion-transition};
   --#{$prefix}accordion-border-color: #{$accordion-border-color};
   --#{$prefix}accordion-border-width: #{$accordion-border-width};
@@ -39,20 +39,20 @@ $arrow-size: $font-size-base * 0.5;
   align-items: center;
   width: 100%;
   padding: var(--#{$prefix}accordion-btn-padding-y) var(--#{$prefix}accordion-btn-padding-x);
-  @include font-size($font-size-base);
+  border: 0;
+  background-color: var(--#{$prefix}accordion-btn-bg);
   color: var(--#{$prefix}accordion-btn-color);
   text-align: left; // Reset button style
-  background-color: var(--#{$prefix}accordion-btn-bg);
-  border: 0;
-  @include border-radius(0);
   overflow-anchor: none;
+  @include font-size($font-size-base);
+  @include border-radius(0);
   @include transition(var(--#{$prefix}accordion-transition));
 
   &:not(.collapsed) {
-    color: var(--#{$prefix}accordion-active-color);
     background-color: var(--#{$prefix}accordion-active-bg);
     // stylelint-disable-line function-disallowed-list
     box-shadow: inset 0 calc(-1 * var(--#{$prefix}accordion-border-width)) 0 var(--#{$prefix}accordion-border-color);
+    color: var(--#{$prefix}accordion-active-color);
 
     &::after {
       background-image: var(--#{$prefix}accordion-btn-active-icon);
@@ -62,11 +62,11 @@ $arrow-size: $font-size-base * 0.5;
 
   // Accordion icon
   &::after {
+    content: '';
     flex-shrink: 0;
     width: var(--#{$prefix}accordion-btn-icon-width);
     height: var(--#{$prefix}accordion-btn-icon-width);
     margin-left: auto;
-    content: '';
     background-image: var(--#{$prefix}accordion-btn-icon);
     background-repeat: no-repeat;
     background-size: var(--#{$prefix}accordion-btn-icon-width);
@@ -127,9 +127,9 @@ $arrow-size: $font-size-base * 0.5;
   &.accordion-background-active {
     .accordion-header {
       .accordion-button[aria-expanded='true'] {
+        border-color: $primary;
         background-color: $primary;
         color: $white;
-        border-color: $primary;
         &:before {
           color: $white;
         }
@@ -144,9 +144,9 @@ $arrow-size: $font-size-base * 0.5;
   &.accordion-background-hover {
     .accordion-header {
       .accordion-button:hover {
+        border-color: $primary;
         background-color: $primary;
         color: $white;
-        border-color: $primary;
         &:before {
           color: $white;
         }
@@ -165,16 +165,16 @@ $arrow-size: $font-size-base * 0.5;
           content: none;
         }
         &:before {
-          font-weight: 300;
           content: '-';
-          float: left;
-          margin: 0 1rem 0.3333333333333333rem 0;
           width: 1.5rem;
-          font-size: 1.5rem;
-          line-height: 1.2rem;
-          font-family: $font-family-sans-serif;
-          transform: none;
+          margin: 0 1rem 0.3333333333333333rem 0;
+          float: left;
           overflow: hidden;
+          font-family: $font-family-sans-serif;
+          font-size: 1.5rem;
+          font-weight: 300;
+          line-height: 1.2rem;
+          transform: none;
         }
         &[aria-expanded='false'] {
           &:before {
@@ -188,9 +188,9 @@ $arrow-size: $font-size-base * 0.5;
 
 //item
 .accordion-item {
-  color: var(--#{$prefix}accordion-color);
-  background-color: var(--#{$prefix}accordion-bg);
   border: var(--#{$prefix}accordion-border-width) solid var(--#{$prefix}accordion-border-color);
+  background-color: var(--#{$prefix}accordion-background);
+  color: var(--#{$prefix}accordion-color);
 
   &:first-of-type {
     @include border-top-radius(var(--#{$prefix}accordion-border-radius));
@@ -230,22 +230,22 @@ $arrow-size: $font-size-base * 0.5;
 
 //header
 .accordion-header {
-  margin-bottom: 0;
   position: relative;
+  margin-bottom: 0;
 
   .accordion-button {
     width: 100%;
-    text-align: left;
-    border: 0;
-    background-color: transparent;
-    border-top: 1px solid $gray-border; // UI kit;
-    box-shadow: none;
     padding: 14px 24px;
-    cursor: pointer;
+    border: 0;
+    border-top: 1px solid $gray-border; // UI kit;
+    background-color: transparent;
+    box-shadow: none;
     color: $primary;
     font-size: 1rem;
     font-weight: 600;
     line-height: 1.5rem;
+    text-align: left;
+    cursor: pointer;
     @include media-breakpoint-up(lg) {
       font-size: 1.125rem;
     }
@@ -261,14 +261,14 @@ $arrow-size: $font-size-base * 0.5;
     }
     &:after {
       content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 24 24' %3E%3Cg%3E%3Cpath fill='#{url-friendly-color($primary)}' d='M12,10.3l4.8,4.8c0.3,0.3,0.8,0.3,1.1,0c0.3-0.3,0.3-0.8,0-1c0,0,0,0,0,0l-4.8-4.8c-0.6-0.6-1.5-0.6-2.1,0L6.2,14c-0.3,0.3-0.3,0.8,0,1c0,0,0,0,0,0c0.3,0.3,0.8,0.3,1.1,0L12,10.3z'/%3E%3C/g%3E%3C/svg%3E");
-      float: right;
       width: 1.5rem;
       height: auto;
-      line-height: 0.1rem;
-      color: $primary; // UI kit
-      transition: transform 0.3s;
+      float: right;
       background-image: none;
+      color: $primary; // UI kit
+      line-height: 0.1rem;
       transform: scaleY(-1);
+      transition: transform 0.3s;
     }
     &:hover {
       background: none;
@@ -297,7 +297,7 @@ $arrow-size: $font-size-base * 0.5;
   }
 
   .accordion-header button[aria-expanded='true']:before {
-    height: 0;
     width: 0;
+    height: 0;
   }
 }
