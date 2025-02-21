@@ -396,7 +396,7 @@ L'elemento `.metadata`, segue l'elemento `.text`.
 Per avere una lista che permetta paragrafi di testo aggiuntivo per ogni elemento, bisogna utilizzare un approccio con titolo (heading) e paragrafo `<p>`, mantenendo la classe `.text` per l'elementi titolo. Entrambi devono essere inclusi in un elemento `<div>` per il corretto allineamento.
 
 {% capture callout %}
-Breaking feature dalla versione **2.11**
+Breaking feature dalla versione **2.11.0**
 
 Il codice markup è stato rivisto in chiave accessibilità e robustezza. In particolare cosa cambia: 
    - L'elemento `.text` è ora implementato come heading `h` e non semplice `<span>`. Dovrà avere il livello intestazione corretto a seconda della gerarchia in pagina.

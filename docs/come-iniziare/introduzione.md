@@ -384,9 +384,9 @@ $font-path: "/fonts";
 
 {% capture callout %}
 Breaking feature dalla versione **2.2.0**
-{% endcapture %}{% include callout.html content=callout type="danger" %}
 
 Per caricare i font utilizzando JavaScript occorre chiamare **esplicitamente** la funzione `loadFonts` passando il percorso della cartella dove si trovano i font.
+{% endcapture %}{% include callout.html content=callout type="danger" %}
 
 ```html
 <script>
