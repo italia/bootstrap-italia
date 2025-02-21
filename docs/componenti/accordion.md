@@ -365,7 +365,7 @@ Aggiungendo la classe `.accordion-left-icon` ad `.accordion` si ottiene una vari
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-# Implementazione
+## Attivazione tramite codice
 
 Il componente Accordion si basa su quello nativo di [Bootstrap {{ site.bootstrap_version }}](https://getbootstrap.com/docs/{{ site.bootstrap_minor }}/components/accordion/){:target="\_blank"}, a sua volta basato sul componente [Collapse](https://getbootstrap.com/docs/{{ site.bootstrap_minor }}/components/collapse/){:target="\_blank"}.
 

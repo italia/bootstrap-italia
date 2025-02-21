@@ -260,7 +260,7 @@ Esempi delle quattro posizioni fisse possibili.
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-## Implementazione
+## Attivazione tramite codice
 
 Il plugin per le notifiche attiva/disattiva il suo contenuto nascosto su richiesta, tramite attributi data o tramite JavaScript.
 
@@ -287,7 +287,9 @@ L'attributo `data-bs-timeout` può essere assegnato anche direttamente al compon
 Richiama una notifica con id `myNotification` con una singola riga di JavaScript:
 
 ```js
-const myNotification = new bootstrap.Notification(document.getElementById('myNotification'), options)
+import { Notification } from 'bootstrap-italia';
+
+const myNotification = new Notification(document.getElementById('myNotification'), options)
 ```
 
 ### Metodi
@@ -299,7 +301,9 @@ const myNotification = new bootstrap.Notification(document.getElementById('myNot
 Durante la creazione di un'istanza Notification è possibile passare un oggetto per la configurazione (opzionale).
 
 ```js
-const myNotification = new bootstrap.Notification(document.getElementById('myNotification'), {
+import { Notification } from 'bootstrap-italia';
+
+const myNotification = new Notification(document.getElementById('myNotification'), {
   timeout: 2000,
 })
 ```

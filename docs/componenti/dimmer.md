@@ -335,3 +335,17 @@ Aggiungendo la classe `.dimmer-primary` al wrapper del dimmer si ottiene una ver
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
+
+
+## Attivazione tramite codice
+
+```js
+import { Dimmer } from 'bootstrap-italia';
+
+const dimmerEl = document.getElementById('myDimmer');
+const dimmer = Dimmer.getOrCreateInstance(dimmerEl)
+
+// Oppure 
+
+const dimmer = new Dimmer(dimmerEl)
+```

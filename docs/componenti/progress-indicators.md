@@ -40,10 +40,18 @@ Nel seguente esempio sono presenti un Donut appena inizializzato ed un Donut al 
 È possibile creare un'istanza con il constructor, ad esempio:
 
 ```js
-var progElement = document.getElementById('prog-donut-1')
-var progDonut = new bootstrap.ProgressDonut(progElement, {
+import { ProgressDonut } from 'bootstrap-italia';
+const progElement = document.getElementById('prog-donut-1')
+const progDonut = new ProgressDonut(progElement, {
   value: 0.25,
 })
+
+// Oppure
+
+const progDonut = ProgressDonut.getOrCreateInstance(progElement, {
+  value: 0.25,
+})
+
 ```
 
 ### Opzioni

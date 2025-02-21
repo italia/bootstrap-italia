@@ -199,3 +199,16 @@ Le opzioni possono essere passate tramite gli attributi data o tramite Javascrip
     </tr>
   </tbody>
 </table>
+
+## Attivazione tramite codice
+
+```js
+import { BackToTop } from 'bootstrap-italia';
+
+const backToTopEl = document.getElementById('myBackToTop');
+const backToTop = BackToTop.getOrCreateInstance(backToTopEl)
+
+// Oppure 
+
+const backToTop = new BackToTop(backToTopEl)
+```

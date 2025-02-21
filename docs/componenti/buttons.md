@@ -206,3 +206,16 @@ In questo caso è stata implementata una variante responsive che visualizza i ta
 ## Approfondimento
 
 Per ulteriori informazioni sui pulsanti si rimanda alla sezione [buttons](https://getbootstrap.com/docs/{{ site.bootstrap_minor }}/components/buttons/) del sito di Bootstrap.
+
+## Attivazione tramite codice
+
+```js
+import { Button } from 'bootstrap-italia';
+
+const buttonEl = document.getElementById('myButton');
+const button = Button.getOrCreateInstance(buttonEl)
+
+// Oppure 
+
+const button = new Button(buttonEl)
+```

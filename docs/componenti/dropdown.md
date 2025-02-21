@@ -416,6 +416,17 @@ Aggiungendo la classe`.dark` al dropdown menu si ottiene una versione in negativ
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-## Informazioni aggiuntive
+## Attivazione tramite codice
+
+```js
+import { Dropdown } from 'bootstrap-italia';
+
+const dropdownEl = document.getElementById('myDropdown');
+const dropdown = Dropdown.getOrCreateInstance(dropdownEl)
+
+// Oppure 
+
+const dropdown = new Dropdown(dropdownEl)
+```
 
 Per consultare altri esempi, vedere l'utilizzo di un dropdown con interi form al suo interno, capire meglio come utilizzare attributi `data-` per l'attivazione o come estendere il funzionamento del plugin JavaScript del dropdown di Bootstrap {{ site.bootstrap_version }} , si rimanda alla [documentazione](https://getbootstrap.com/docs/{{ site.bootstrap_minor }}/components/dropdowns/) sul sito di Bootstrap.

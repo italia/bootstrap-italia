@@ -655,7 +655,14 @@ pulsante, insieme a `data-bs-target="#foo"` o `href="#foo"` per attivare/disatti
 Richiama una modale con id `myModal` con una singola riga di JavaScript:
 
 ```js
-var myModal = new bootstrap.Modal(document.getElementById('myModal'), options)
+import { Modal } from 'bootstrap-italia';
+
+const myModal = new Modal(document.getElementById('myModal'), options)
+
+// Oppure
+
+const myModal = Modal.getOrCreateInstance(document.getElementById('myModal'), options)
+
 ```
 
 ### Metodi
@@ -667,7 +674,9 @@ var myModal = new bootstrap.Modal(document.getElementById('myModal'), options)
 Attiva i tuoi contenuti come modali, configurabile con un oggetto (facoltativo).
 
 ```js
-var myModal = new bootstrap.Modal(document.getElementById('myModal'), {
+import { Modal } from 'bootstrap-italia';
+
+const myModal = new Modal(document.getElementById('myModal'), {
   keyboard: false,
 })
 ```
@@ -721,8 +730,8 @@ myModal.dispose()
 Metodo statico che consente di ottenere l'istanza di una modale associata ad un elemento del DOM.
 
 ```js
-var myModalEl = document.getElementById('myModal')
-var modal = bootstrap.Modal.getInstance(myModalEl) // Returns a Bootstrap modal instance
+const myModalEl = document.getElementById('myModal')
+const modal = Modal.getInstance(myModalEl)
 ```
 
 #### `getOrCreateInstance`
@@ -730,8 +739,8 @@ var modal = bootstrap.Modal.getInstance(myModalEl) // Returns a Bootstrap modal 
 Metodo statico che consente di ottenere l'istanza di una modale associata ad un elemento del DOM o di crearne una nuova nel caso non fosse stata inizializzata.
 
 ```js
-var myModalEl = document.querySelector('#myModal')
-var modal = bootstrap.Modal.getOrCreateInstance(myModalEl) // Returns a Bootstrap modal instance
+const myModalEl = document.querySelector('#myModal')
+const modal = Modal.getOrCreateInstance(myModalEl) // Returns a Bootstrap modal instance
 ```
 
 ### Eventi
@@ -771,7 +780,7 @@ Tutti gli eventi vengono attivati dalla modale stessa (cioè `<div class="modal"
 </table>
 
 ```js
-var myModalEl = document.getElementById('myModal')
+const myModalEl = document.getElementById('myModal')
 myModalEl.addEventListener('hidden.bs.modal', function (event) {
   // do something...
 })

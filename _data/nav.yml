@@ -82,7 +82,6 @@
     - title: Sticky
     - title: Tab
     - title: Timeline
-    # - title: Toasts # TODO To be merged with our "Notifiche"?
     - title: Tooltip
     - title: Video Player
 

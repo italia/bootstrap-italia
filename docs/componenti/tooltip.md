@@ -44,9 +44,15 @@ Cose da sapere quando usi il plugin tooltip:
 Un modo per inizializzare tutti i tooltip su una pagina è quello di selezionarli tramite il loro attributo `data-bs-toggle`:
 
 ```js
-var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-  return new bootstrap.Tooltip(tooltipTriggerEl)
+import { Tooltip } from 'bootstrap-italia'
+
+const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new Tooltip(tooltipTriggerEl)
+
+  // Oppure
+
+  return Tooltip.getOrCreateInstance(tooltipTriggerEl)
 })
 ```
 
@@ -126,17 +132,18 @@ E con codice HTML personalizzato:
 </button>
 ```
 
-## Implementazione
+## Attivazione tramite codice
 
 Il plugin del tooltip genera contenuto e markup su richiesta, e in modo predefinito posiziona i tooltip dopo i loro elementi attivati.
-
-## Attivazione tramite codice
 
 È possibile attivare un tooltip tramite JavaScript:
 
 ```js
-var exampleEl = document.getElementById('example')
-var tooltip = new bootstrap.Tooltip(exampleEl, options)
+import { Tooltip } from 'bootstrap-italia'
+
+document.querySelectorAll('.tooltipEl').forEach(el => {
+  new Tooltip(el);
+});
 ```
 
 ### Markup
@@ -241,7 +248,7 @@ Metodo statico che consente di ottenere l'istanza di un tooltip associata ad un 
 
 ```js
 var exampleTriggerEl = document.getElementById('example')
-var tooltip = bootstrap.Tooltip.getInstance(exampleTriggerEl) // Returns a Bootstrap tooltip instance
+var tooltip = Tooltip.getInstance(exampleTriggerEl) // Returns a Bootstrap tooltip instance
 ```
 
 #### `getOrCreateInstance`
@@ -287,14 +294,3 @@ const tooltip = Tooltip.getOrCreateInstance(exampleTriggerEl);
     </tr>
   </tbody>
 </table>
-
-```js
-var myTooltipEl = document.getElementById('myTooltip')
-var tooltip = new bootstrap.Tooltip(myTooltipEl)
-
-myTooltipEl.addEventListener('hidden.bs.tooltip', function () {
-  // do something...
-})
-
-tooltip.hide()
-```

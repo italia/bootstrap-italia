@@ -82,14 +82,16 @@ Clicca sul pulsante di chiusura per vedere la funzionalità di rimozione alert i
 {% endcapture %}
 {% include example.html content=example %}
 
-#### Tramite JavaScript
+## Attivazione tramite codice
 
 Abilita la chiusura di un alert tramite JavaScript:
 
 ```js
-var alertList = document.querySelectorAll('.alert')
-alertList.forEach(function (alert) {
-  new bootstrap.Alert(alert)
+import { Alert } from 'bootstrap-italia';
+
+const alertList = document.querySelectorAll('.alert')
+alertList.forEach((alert) => {
+  new Alert(alert);
 })
 ```
 
@@ -113,9 +115,13 @@ Nota che chiudendo un alert lo rimuoverai dal DOM.
 | `getOrCreateInstance` | Static method which returns an alert instance associated to a DOM element or create a new one in case it wasn't initialised. You can use it like this: bootstrap.Alert.getOrCreateInstance(element) |
 
 ```js
-var alertNode = document.querySelector('.alert')
-var alert = bootstrap.Alert.getInstance(alertNode)
-alert.close()
+import { Alert } from 'bootstrap-italia';
+
+const alertNode = document.querySelector('#myAlert')
+const alert = Alert.getOrCreateInstance(alertNode)
+setTimeout(() => {
+  alert.close()
+}, 15000);
 ```
 
 #### Eventi

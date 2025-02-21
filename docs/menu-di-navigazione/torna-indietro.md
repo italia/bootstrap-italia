@@ -72,3 +72,16 @@ const historyBack = new HistoryBack(backButtonElement);
     </tr>
   </tbody>
 </table>
+
+## Attivazione tramite codice
+
+```js
+import { HistoryBack } from 'bootstrap-italia';
+
+const historyBackEl = document.getElementById('myHistoryBack');
+const historyBack = HistoryBack.getOrCreateInstance(historyBackEl)
+
+// Oppure 
+
+const historyBack = new HistoryBack(historyBackEl)
+```

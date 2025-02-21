@@ -32,10 +32,6 @@ Agli elementi di `<a>` occorre aggiungere l'attributo `role="button"`.
 - `a.backtransfer`: Traferisce i campi selezionati a destra nella colonna sinistra
 - `a.reset`: Ripristina lo stato iniziale delle liste
 
-{% capture callout %}
-Per l'attivazione del relativo JavaScript è importante che il componente che contiene la struttura, abbia l'attributo `data-bs-transfer`
-{% endcapture %}{% include callout.html content=callout type="info" %}
-
 Nell'esempio che segue la struttura è colonnare simmetrica nella versione desktop (5 / 2 / 5), l'utente potrà scegliere i tipi di colonna da utilizzare, usando le regole di bootstrap.
 
 {% comment %}Example name: Base {% endcomment %}
@@ -202,3 +198,20 @@ Nell'esempio che segue la struttura è colonnare simmetrica nella versione deskt
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
+
+### Attivazione tramite codice
+
+{% capture callout %}
+Per l'attivazione del relativo JavaScript è importante che il componente che contiene la struttura, abbia l'attributo `data-bs-transfer`
+{% endcapture %}{% include callout.html content=callout type="info" %}
+
+```js
+import { Transfer } from 'bootstrap-italia';
+
+const transferElement = document.querySelector('.it-transfer-wrapper');
+const transfer = new Transfer(transferElement, config);
+
+// Oppure
+
+const transfer = Transfer.getOrCreateInstance(transferElement);
+```

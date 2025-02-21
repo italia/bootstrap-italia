@@ -95,7 +95,7 @@ Per aggiungere un'impostazione tipo accordion ad un'area richiudibile, aggiungi 
 import { Collapse } from 'bootstrap-italia';
 
 const collapseElementList = [].slice.call(document.querySelectorAll('.collapse'));
-const collapseElements = collapseElementList.map(function (collapseEl) {
+const collapseElements = collapseElementList.map((collapseEl) => {
   return new Collapse(collapseEl)
 })
 ```
