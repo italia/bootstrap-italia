@@ -1,3 +1,15 @@
+## 2.14.0
+
+[Changelog completo](https://github.com/italia/bootstrap-italia/releases/tag/v2.14.0) <svg class="icon steppers-success" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
+
+### Generale
+
+Il `focus` con la tastiera viene adesso settato con l'attributo `datadata-focus-mouse`
+invece che con la classe `focus--mouse`. Da tenere presente nel caso di un 
+precedente utilizzo della classe `focus--mouse` per un controllo e/o un' implementazione 
+ulteriore di accessibilità. 
+
+
 ## 2.13.0
 
 [Changelog completo](https://github.com/italia/bootstrap-italia/releases/tag/v2.13.0) <svg class="icon steppers-success" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
@@ -6,6 +18,11 @@
 
 Le `label` degli input `percentuale` e `valuta` richiedono la classe `input-symbol-label`. 
 Le precedenti classi `input-number-percentage` e `input-number-currency` sono state rimosse.
+
+
+### Steppers
+
+Gli elementi di tipo `<svg>` non interattivi necessitano dell'aggiunta di `aria-hidden="true"`.
 
 
 ### Tab
@@ -33,6 +50,17 @@ tutte le tab di tipo `Card`.
 
 [Changelog completo](https://github.com/italia/bootstrap-italia/releases/tag/v2.11.0) <svg class="icon steppers-success" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
 
+### Input
+
+Quando si utilizza un campo input diverso da `submit`, `file`, `radio` e `checkbox` è necessario sempre applicare la classe `form-control`.
+
+
+### Liste
+
+Il codice markup è stato rivisto in chiave accessibilità e robustezza. In particolare cosa cambia: 
+  - L'elemento `.text` è ora implementato come heading `h` e non semplice `<span>`. Dovrà avere il livello intestazione corretto a seconda della gerarchia in pagina.
+
+
 ### Liste di immagini
 
 Utilizzare i tag `<figure>` e `<figcaption>` per liste di immagini con didascalia.
@@ -55,6 +83,24 @@ Il codice markup è stato rivisto in chiave accessibilità e robustezza. In part
 
 - Il "raggruppamento" di campi di input deve prevedere l'elemento nativo `<fieldset>`. 
 - Sostituire `aria-labelledby` con `aria-describedby`.
+
+
+### Input
+
+Il campo di input di tipo Password è stato rivisto in chiave accessibilità e robustezza. In particolare cosa cambia: 
+  - L'elemento `input.input-password` ha ora il corretto attributo `aria-describedby` al posto di `aria-labelledby`.
+  - L'elemento `.password-icon` diventa un `button` con `role=switch` e uso dell'attributo `aria-checked` per lo stato.
+  - Rivisto l'ordine degli elementi nell'HTML per rispecchiare la struttura corretta degli elementi. 
+  - Alcuni elementi `small` o `span` diventano `p`, ad esempio per la personalizzazione con attributi `data` delle varianti più avanzate ci si rivolgerà verso l'elemento `p.strength-meter-info` e non più al generico `small.form-text`. 
+  - Rimosso il controllo per il Caps-lock inserito, per non interferire con i tasti modificatori delle tecnologie assistive.
+  - Aggiunta una variante con misuratore di sicurezza e suggerimenti. 
+
+
+### Liste
+
+Il codice markup è stato rivisto in chiave accessibilità e robustezza. In particolare cosa cambia: 
+  - L'elemento `.link-list-heading` è ora implementato come heading `h` e non semplice `<span>`. Dovrà avere il livello intestazione corretto a seconda della gerarchia in pagina.
+  - L'elemento `.list-item-title` è ora implementato come heading `h` e non semplice `<span>`. Dovrà avere il livello intestazione corretto a seconda della gerarchia in pagina.
 
 
 ### Radio button
@@ -83,6 +129,12 @@ Il toggle del dropdown diventa `<button>` invece di `<a>`.
 - Il toggle del dropdown diventa `<button>` invece di `<a>`. 
 - Gli altri elementi `<a>` che si comportano come toggle dropdown (eg. scelta Lingua), hanno l'aggiunta dell'attributo `role="button"`.
 - Il markup del Megamenu cambia come nel nuovo componente, per approfondire andare alla [relativa pagina]({{site.baseurl}}/docs/menu-di-navigazione/megamenu/).
+
+
+### Input
+
+Rimosso l'elemento con classe `.input-group-prepend` in favore dell'elemento 
+con classe `.input-group-text`.
 
 
 ### Liste

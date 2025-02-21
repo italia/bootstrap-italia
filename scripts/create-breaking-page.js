@@ -26,7 +26,7 @@ const walk = (dir, callback) => {
 }
 
 const getBreaking = (filepath, _) => {
-  const reFilter = /## Breaking change(.|\n)*/gm
+  const reFilter = /## Breaking change(.|\n)*/gm;
   const reBreak = /{% capture callout %}((.|\n)*?){% endcapture %}{% include .* version="(.*)" .* %}/gm;
   const [filename, ext] = getExtension(filepath)
   const component = capitalizeFirstLetter(filename.replaceAll('-', ' '))
@@ -35,7 +35,7 @@ const getBreaking = (filepath, _) => {
     filteredBreaking = reFilter.exec(data)
     if (filteredBreaking) {
       singleBreakings = reBreak.exec(filteredBreaking[0])
-      if (singleBreakings) {
+      while (singleBreakings) {
         const version = singleBreakings[3]
         const text = singleBreakings[1]
         if (!breakings[version]) {
@@ -45,6 +45,7 @@ const getBreaking = (filepath, _) => {
           breakings[version][component] = []
         }
         breakings[version][component].push(text)
+        singleBreakings = reBreak.exec(filteredBreaking[0])
       }
     }
   }
