@@ -510,7 +510,7 @@ Contiene un'immagine associata ad una card "articolo".
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Card speciali
+<!-- ### Card speciali
 
 Contiene [Card di tipo speciale]({{ site.baseurl }}/docs/componenti/card/#card-speciali).
 
@@ -518,7 +518,6 @@ Contiene [Card di tipo speciale]({{ site.baseurl }}/docs/componenti/card/#card-s
 
 - div **`it-carousel-wrapper`**: viene aggiunta la classe `it-carousel-landscape-abstract-three-cols` per la visualizzazione a 3 colonne.
 
-{% comment %}Example name: Card speciali{% endcomment %}
 {% capture example %}
 
 <div class="it-carousel-wrapper it-carousel-landscape-abstract-three-cols splide" data-bs-carousel-splide>
@@ -641,7 +640,7 @@ Contiene [Card di tipo speciale]({{ site.baseurl }}/docs/componenti/card/#card-s
     </ul>
   </div>
 </div>
-{% endcapture %}{% include example.html content=example %}
+{% endcapture %}{% include example.html content=example %} -->
 
 ### Fullscreen di immagini
 
