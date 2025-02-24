@@ -286,13 +286,11 @@ Contiene un'immagine associata ad una card "articolo".
     <ul class="splide__list">
       <li class="splide__slide">
         <div class="it-single-slide-wrapper">
-          <a href="#">
-            <div class="img-responsive-wrapper">
-              <div class="img-responsive">
-                <div class="img-wrapper"><img src="https://placehold.co/480x360/ebebeb/808080/?text=Immagine1" title="titolo immagine" alt="descrizione immagine"></div>
-              </div>
+          <div class="img-responsive-wrapper">
+            <div class="img-responsive">
+              <div class="img-wrapper"><img src="https://placehold.co/480x360/ebebeb/808080/?text=Immagine1" title="titolo immagine" alt="descrizione immagine"></div>
             </div>
-          </a>
+          </div>
           <div class="it-text-slider-wrapper-outside">
             <div class="card-wrapper">
               <div class="card">
@@ -316,13 +314,11 @@ Contiene un'immagine associata ad una card "articolo".
       </li>
       <li class="splide__slide">
         <div class="it-single-slide-wrapper">
-          <a href="#">
-            <div class="img-responsive-wrapper">
-              <div class="img-responsive">
-                <div class="img-wrapper"><img src="https://placehold.co/480x360/ebebeb/808080/?text=Immagine2" title="titolo immagine" alt="descrizione immagine"></div>
-              </div>
+          <div class="img-responsive-wrapper">
+            <div class="img-responsive">
+              <div class="img-wrapper"><img src="https://placehold.co/480x360/ebebeb/808080/?text=Immagine2" title="titolo immagine" alt="descrizione immagine"></div>
             </div>
-          </a>
+          </div>
           <div class="it-text-slider-wrapper-outside">
             <div class="card-wrapper">
               <div class="card">
@@ -346,13 +342,11 @@ Contiene un'immagine associata ad una card "articolo".
       </li>
       <li class="splide__slide">
         <div class="it-single-slide-wrapper">
-          <a href="#">
-            <div class="img-responsive-wrapper">
-              <div class="img-responsive">
-                <div class="img-wrapper"><img src="https://placehold.co/480x360/ebebeb/808080/?text=Immagine3" title="titolo immagine" alt="descrizione immagine"></div>
-              </div>
+          <div class="img-responsive-wrapper">
+            <div class="img-responsive">
+              <div class="img-wrapper"><img src="https://placehold.co/480x360/ebebeb/808080/?text=Immagine3" title="titolo immagine" alt="descrizione immagine"></div>
             </div>
-          </a>
+          </div>
           <div class="it-text-slider-wrapper-outside">
             <div class="card-wrapper">
               <div class="card">
