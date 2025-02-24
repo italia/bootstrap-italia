@@ -798,6 +798,8 @@ Puoi attivare una navigazione a tab senza scrivere JavaScript, semplicemente uti
 
 ### Attivazione tramite codice
 
+Abilita le tab tramite JavaScript (ogni tab deve essere attivata individualmente):
+
 ```js
 import { Tab } from 'bootstrap-italia';
 
@@ -814,16 +816,6 @@ triggerTabList.forEach(function (triggerEl) {
     tabTrigger.show()
   })
 })
-```
-
-È possibile attivare tab individualmente in diversi modi:
-
-```js
-var triggerEl = document.querySelector('#myTab a[href="#profile"]')
-Tab.getInstance(triggerEl).show() // Select tab by name
-
-var triggerFirstTabEl = document.querySelector('#myTab li:first-child a')
-Tab.getInstance(triggerFirstTabEl).show() // Select first tab
 ```
 
 ## Breaking change

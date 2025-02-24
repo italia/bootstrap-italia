@@ -191,18 +191,31 @@ In tal caso è necessario utilizzare l'attributo `data-bs-target`.
 È possibile creare un'istanza con il constructor, ad esempio:
 
 ```js
-var stickyElement = document.getElementById('sticky')
-var sticky = new bootstrap.Sticky(stickyElement, {
-  positionType: 'sticky',
-  stickyClassName: 'is-sticky',
-  stackable: true,
-  paddingTop: 0,
-})
+import { Sticky } from 'bootstrap-italia';
+
+const stickyElement = document.getElementById('sticky');
+const sticky = new Sticky(stickyElement, options);
+
+// Oppure
+
+const sticky = Sticky.getOrCreateInstance(stickyElement, options);
 ```
 
 ### Opzioni
 
 Le opzioni possono essere passate tramite gli attributi data o tramite JavaScript. Per quanto riguarda gli attributi data, aggiungi il nome dell'opzione a `data-bs`, come in `data-bs-position-type=""`.
+
+```js
+import { Sticky } from 'bootstrap-italia';
+
+const stickyElement = document.getElementById('sticky');
+const sticky = new Sticky(stickyElement, {
+  positionType: 'sticky',
+  stickyClassName: 'is-sticky',
+  stackable: true,
+  paddingTop: 0,
+});
+```
 
 <table class="table table-bordered table-striped">
   <thead>
@@ -290,8 +303,8 @@ La classe `Sticky` di Bootstrap espone alcuni eventi per agganciare comportament
 </table>
 
 ```js
-var stickyElement = document.getElementById('sticky')
-stickyElement.addEventListener('on.bs.sticky', function () {
+var stickyElement = document.getElementById('sticky');
+stickyElement.addEventListener('on.bs.sticky', () => {
   // do something...
 })
 ```

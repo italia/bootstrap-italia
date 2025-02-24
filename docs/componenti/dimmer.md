@@ -349,3 +349,24 @@ const dimmer = Dimmer.getOrCreateInstance(dimmerEl)
 
 const dimmer = new Dimmer(dimmerEl)
 ```
+
+### Metodi
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th style="width: 150px;">Metodo</th>
+      <th>Descrizione</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>show</td>
+      <td>Mostra il componente.</td>
+    </tr>
+    <tr>
+      <td>hide</td>
+      <td>Nasconde il componente.</td>
+    </tr>
+  </tbody>
+</table>
