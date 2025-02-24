@@ -26,14 +26,18 @@ Splide segue le [indicazioni del W3C](https://www.w3.org/WAI/tutorials/carousels
 Il plugin, attraverso l'opzione `i18n`, offre la possibilità di tradurre le `aria-label` utilizzate per gli elementi di interfaccia.  
 Bootstrap Italia fornisce le label già tradotte in italiano come segue:
 
-- prev: 'Slide precedente'
-- next: 'Slide successiva'
-- first: 'Vai alla prima slide'
-- last: 'Vai all’ultima slide'
-- slideX: 'Vai alla slide %s'
-- pageX: 'Vai a pagina %s'
-- play: 'Attiva autoplay'
-- pause: 'Pausa autoplay'
+- prev: 'Slide precedente',
+- next: 'Slide successiva',
+- first: 'Vai alla prima slide',
+- last: 'Vai all’ultima slide',
+- slideX: 'Vai alla slide %s',
+- pageX: 'Vai a pagina %s',
+- play: 'Attiva autoplay',
+- pause: 'Pausa autoplay',
+- carousel: 'carosello',
+- select: 'Seleziona una slide da mostrare',
+- slide: 'slide',
+- slideLabel: '%s di %s',
 
 Per tradurre le label in altre lingue è sufficiente utilizzare l'attributo opzionale `data-splide` sul div `it-carousel-wrapper splide` come nell'esempio seguente:
 
