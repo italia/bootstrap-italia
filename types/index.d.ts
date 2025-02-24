@@ -3,7 +3,6 @@ import { Accordion } from './plugins/accordion'
 import { BackToTop } from './plugins/back-to-top'
 import { Button } from './plugins/button'
 import { Carousel } from './plugins/carousel'
-import { CarouselBI } from './plugins/carousel-bi'
 import { Collapse } from './plugins/collapse'
 import { Cookiebar } from './plugins/cookiebar'
 import { Dimmer } from './plugins/dimmer'
@@ -46,7 +45,6 @@ export {
   BackToTop,
   Button,
   Carousel,
-  CarouselBI,
   Collapse,
   Cookiebar,
   Dimmer,

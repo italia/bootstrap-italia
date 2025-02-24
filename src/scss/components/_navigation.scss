@@ -408,7 +408,7 @@
               }
             }
 
-            &.focus--mouse {
+            &[data-focus-mouse='true'] {
               border-color: transparent !important;
             }
 
