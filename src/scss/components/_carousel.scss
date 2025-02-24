@@ -162,16 +162,14 @@
         display: flex;
         flex-basis: 100%;
         width: 100%;
-        > a {
+        // img
+        .img-responsive-wrapper {
           flex-basis: 50%;
-          // img
-          .img-responsive-wrapper {
-            .img-responsive {
-              padding-bottom: inherit;
-              position: absolute;
-              width: 100%;
-              height: 100%;
-            }
+          .img-responsive {
+            padding-bottom: inherit;
+            position: absolute;
+            width: 100%;
+            height: 100%;
           }
         }
         .it-text-slider-wrapper-outside {
