@@ -42,6 +42,7 @@
     - title: Introduzione
     - title: BottomNav
     - title: Breadcrumbs
+    - title: Forward
     - title: Header # TODO Rewiew mobile version
     - title: Megamenu # TODO Review mobile version
     - title: Footer
@@ -70,7 +71,6 @@
     - title: Cookiebar
     - title: Dimmer
     - title: Dropdown
-    - title: Forward
     - title: Hero
     - title: Modale
     - title: Notifiche

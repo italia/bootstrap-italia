@@ -1,6 +1,6 @@
 ---
 layout: docs
-group: componenti
+group: menu-di-navigazione
 toc: true
 title: Forward
 description: Consente all'utente di far scorrere automaticamente a una parte specifica della pagina.
@@ -37,3 +37,49 @@ const forward = Forward.getOrCreateInstance(forwardEl)
 
 const forward = new Forward(forwardEl)
 ```
+
+### Metodi
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th style="width: 150px;">Metodo</th>
+      <th>Descrizione</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>goToTarget</td>
+      <td>Vai al target dell'elemento</td>
+    </tr>
+  </tbody>
+</table>
+
+### Opzioni
+
+Le opzioni possono essere passate tramite gli attributi data o tramite Javascript. Per quanto riguarda gli attributi data, aggiungi il nome dell'opzione a `data-bs`.
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th style="width: 100px;">Nome</th>
+      <th style="width: 50px;">Tipo</th>
+      <th style="width: 50px;">Predefinito</th>
+      <th>Descrizione</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>duration</td>
+      <td>number</td>
+      <td>800</td>
+      <td>durata dell'animazione di scroll espressa in millisecondi</td>
+    </tr>
+    <tr>
+      <td>easing</td>
+      <td>string</td>
+      <td>easeInOutSine</td>
+      <td>inerzia dell'animazione di scroll. Per i valori fare riferimento alla [documentazione di AnimeJs](https://animejs.com/documentation/#linearEasing).</td>
+    </tr>
+  </tbody>
+</table>

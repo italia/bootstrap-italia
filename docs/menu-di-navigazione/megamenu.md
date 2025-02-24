@@ -1048,6 +1048,11 @@ Questi seguono le liste di link, posizionati in basso o in una colonna destra, a
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
+## Attivazione tramite codice
+
+Il componente Megamenu deriva dal componente Dropdown, si rimanda dunque alla 
+sezione [attivazione Dropdown tramite codice]({{ site.baseurl }}/docs/componenti/dropdown/#attivazione-tramite-codice)
+
 ## Breaking change
 
 {% capture callout %}

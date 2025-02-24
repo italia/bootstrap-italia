@@ -115,6 +115,31 @@ const backToTop = new BackToTop(backToTopElement, {
 })
 ```
 
+### Metodi
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th style="width: 150px;">Metodo</th>
+      <th>Descrizione</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>show</td>
+      <td>mostra il pulsante</td>
+    </tr>
+    <tr>
+      <td>hide</td>
+      <td>nasconde nasconde il pulsante</td>
+    </tr>
+    <tr>
+      <td>scrollToTop</td>
+      <td>attiva l'animazione di scroll verso la coordinata Y indicata dall'opzione <code>positionTop</code></td>
+    </tr>
+  </tbody>
+</table>
+
 ### Opzioni
 
 Le opzioni possono essere passate tramite gli attributi data o tramite Javascript. Per quanto riguarda gli attributi data, aggiungi il nome dell'opzione a `data-bs`, come in `data-bs-scroll-limit=""`.
@@ -155,56 +180,6 @@ Le opzioni possono essere passate tramite gli attributi data o tramite Javascrip
     </tr>
   </tbody>
 </table>
-
-### Metodi
-
-<table class="table table-bordered table-striped">
-  <thead>
-    <tr>
-      <th style="width: 150px;">Metodo</th>
-      <th>Descrizione</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>show</td>
-      <td>mostra il pulsante</td>
-    </tr>
-    <tr>
-      <td>hide</td>
-      <td>nasconde nasconde il pulsante</td>
-    </tr>
-    <tr>
-      <td>scrollToTop</td>
-      <td>attiva l'animazione di scroll verso la coordinata Y indicata dall'opzione <code>positionTop</code></td>
-    </tr>
-    <tr>
-      <td>dispose</td>
-      <td>Elimina le funzionalità del componente</td>
-    </tr>
-    <tr>
-      <td>getInstance</td>
-      <td>Metodo statico che restituisce l'istanza BackToTop associata ad un elemento del DOM. Esempio: <code>bootstrap.BackToTop.getInstance(element)</code></td>
-    </tr>
-    <tr>
-      <td>getOrCreateInstance</td>
-      <td>Metodo statico che restituisce un'istanza BackToTop associata ad un elemento del DOM o ne crea una nuova nel caso non fosse stata inizializzata. Esempio: <code>bootstrap.BackToTop.getOrCreateInstance(element)</code></td>
-    </tr>
-  </tbody>
-</table>
-
-## Attivazione tramite codice
-
-```js
-import { BackToTop } from 'bootstrap-italia';
-
-const backToTopEl = document.getElementById('myBackToTop');
-const backToTop = BackToTop.getOrCreateInstance(backToTopEl)
-
-// Oppure 
-
-const backToTop = new BackToTop(backToTopEl)
-```
 
 ## Breaking change
 
