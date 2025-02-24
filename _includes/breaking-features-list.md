@@ -2,6 +2,12 @@
 
 [Changelog completo](https://github.com/italia/bootstrap-italia/releases/tag/v2.14.0) <svg class="icon steppers-success" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
 
+### Carousel
+
+Lato JavaScript il componente Carousel deve essere importato tramite la classe 
+`Carousel` e non più `CarouselBI`.
+
+
 ### Generale
 
 Il `focus` con la tastiera viene adesso settato con l'attributo `datadata-focus-mouse`

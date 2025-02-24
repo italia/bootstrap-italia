@@ -880,3 +880,11 @@ const carouselElements = elementList.map(function (element) {
     </tr>
   </tbody>
 </table>
+
+
+## Breaking change
+
+{% capture callout %}
+Lato JavaScript il componente Carousel deve essere importato tramite la classe 
+`Carousel` e non più `CarouselBI`.
+{% endcapture %}{% include callout-breaking.html version="2.14.0" content=callout type="danger" %}
