@@ -367,12 +367,17 @@ Aggiungendo la classe `.accordion-left-icon` ad `.accordion` si ottiene una vari
 
 ## Attivazione tramite codice
 
-Il componente Accordion si basa su quello nativo di [Bootstrap {{ site.bootstrap_version }}](https://getbootstrap.com/docs/{{ site.bootstrap_minor }}/components/accordion/){:target="\_blank"}, a sua volta basato sul componente [Collapse](https://getbootstrap.com/docs/{{ site.bootstrap_minor }}/components/collapse/){:target="\_blank"}.
+Il componente Accordion si basa sul componente [Collapse]({{ site.baseurl }}/docs/componenti/dropdown/#attivazione-tramite-codice).
 
-Bootstrap Italia migliora l'accessibilità dell'Accordion implementando la navigazione via tastiera degli header con le frecce cursore (su/giù) e con i tasti <kbd>Home</kbd> (primo elemento) ed <kbd>End</kbd> (ultimo elemento).
+```js
+import { Accordion } from 'bootstrap-italia';
 
-Le funzionalità aggiuntive del componente vengono implementate nei seguenti file:
+const accordionEl = document.getElementById('myAccordion');
+const accordion = new Accordion(accordionEl)
 
-- [src/js/plugins/accordion.js](https://github.com/italia/bootstrap-italia/blob/main/src/js/plugins/accordion.js){:target="\_blank"}
+// Oppure 
 
-Seguendo l'approccio utilizzato nel resto della libreria il componente è sviluppato in vanilla JS ed estende il `BaseComponent` di Bootstrap.
+const accordion = Accordion.getOrCreateInstance(accordionEl);
+```
+
+Bootstrap Italia migliora l'accessibilità dell'Accordion implementando la navigazione via tastiera degli header con le frecce cursore (`su`/`giù`) e con i tasti <kbd>Home</kbd> (primo elemento) ed <kbd>End</kbd> (ultimo elemento).

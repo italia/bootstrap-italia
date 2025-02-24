@@ -89,7 +89,7 @@ Abilita la chiusura di un alert tramite JavaScript:
 ```js
 import { Alert } from 'bootstrap-italia';
 
-const alertList = document.querySelectorAll('.alert')
+const alertList = document.querySelectorAll('.alert');
 alertList.forEach((alert) => {
   new Alert(alert);
 })
@@ -107,12 +107,33 @@ Nota che chiudendo un alert lo rimuoverai dal DOM.
 
 #### Metodi
 
-| Metodo                | Descrizione                                                                                                                                                                                         |
-| --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `close`               | Chiude un alert rimuovendolo dal DOM. Se le classi `.fade` e `.show` sono presenti nell'elemento, l'avviso verrà chiuso con effetto scomparsa.                                                      |
-| `dispose`             | L'alert viene rimosso.                                                                                                                                                                              |
-| `getInstance`         | Static method which allows you to get the alert instance associated to a DOM element, you can use it like this: bootstrap.Alert.getInstance(alert)                                                  |
-| `getOrCreateInstance` | Static method which returns an alert instance associated to a DOM element or create a new one in case it wasn't initialised. You can use it like this: bootstrap.Alert.getOrCreateInstance(element) |
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Metodo</th>
+      <th>Descrizione</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>close</td>
+      <td>Chiude un alert rimuovendolo dal DOM. Se le classi .fade e .show sono presenti nell’elemento, l’avviso verrà chiuso con effetto scomparsa.</td>
+    </tr>
+    <tr>
+      <td>dispose</td>
+      <td>L’alert viene rimosso.</td>
+    </tr>
+    <tr>
+      <td>getInstance</td>
+      <td>Static method which allows you to get the alert instance associated to a DOM element, you can use it like this: bootstrap.Alert.getInstance(alert)</td>
+    </tr>
+    <tr>
+      <td>getOrCreateInstance</td>
+      <td>Static method which returns an alert instance associated to a DOM element or create a new one in case it wasn’t initialised. You can use it like this: bootstrap.Alert.getOrCreateInstance(element)</td>
+    </tr>
+  </tbody>
+</table>
+
 
 ```js
 import { Alert } from 'bootstrap-italia';
@@ -128,13 +149,27 @@ setTimeout(() => {
 
 Il plugin alert di Bootstrap mette a disposizione alcuni eventi per agganciare la funzionalità di avviso.
 
-| Evento            | Descrizione                                                                                                     |
-| ----------------- | --------------------------------------------------------------------------------------------------------------- |
-| `close.bs.alert`  | Questo evento si attiva immediatamente quando viene chiamato il metodo di istanza <code>close</code>.           |
-| `closed.bs.alert` | Questo evento viene attivato quando l'avviso è stato chiuso (attenderà il completamento delle transizioni CSS). |
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Evento</th>
+      <th>Descrizione</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>close.bs.alert</td>
+      <td>Questo evento si attiva immediatamente quando viene chiamato il metodo di istanza close.</td>
+    </tr>
+    <tr>
+      <td>closed.bs.alert</td>
+      <td>Questo evento viene attivato quando l’avviso è stato chiuso (attenderà il completamento delle transizioni CSS).</td>
+    </tr>
+  </tbody>
+</table>
 
 ```js
-var myAlert = document.getElementById('myAlert')
+const myAlert = document.getElementById('myAlert')
 myAlert.addEventListener('closed.bs.alert', function () {
   // do something, for instance, explicitly move focus to the most appropriate element,
   // so it doesn't get lost/reset to the start of the page
