@@ -50,10 +50,10 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
   EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, (event) => {
     event.preventDefault()
 
-    const button = event.target.closest(SELECTOR_DATA_TOGGLE)
-    const data = Button.getOrCreateInstance(button)
+    const buttonEl = event.target.closest(SELECTOR_DATA_TOGGLE)
+    const button = Button.getOrCreateInstance(buttonEl)
 
-    data.toggle()
+    button.toggle()
   })
 }
 
