@@ -88,10 +88,10 @@ Per la versione non bundle, dopo aver copiato i file all'interno del progetto, s
 In alternativa se si vogliono utilizzare i moduli, è possibile importare e utilizzare singolarmente i vari componenti. Di seguito un esempio di cui potete trovare l'intero esempio completo [qui](https://github.com/astagi/demo-bsitalia-2).
 
 ```js
-import { CarouselBI, Alert, Notification, Tooltip, Sticky, loadFonts } from 'bootstrap-italia'
+import { Carousel, Alert, Notification, Tooltip, Sticky, loadFonts } from 'bootstrap-italia'
 
 
-new CarouselBI(document.getElementById('myCarousel'))
+new Carousel(document.getElementById('myCarousel'))
 
 const alert = new Alert(document.getElementsByClassName('alert')[0])
 
