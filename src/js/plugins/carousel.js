@@ -24,6 +24,7 @@ const SELECTOR_CAROUSEL = '[data-bs-carousel-splide]'
 const CONFIG_DEFAULT = {
   slideFocus: false,
   rewind: true,
+  perMove: 1,
   i18n: {
     prev: 'Slide precedente',
     next: 'Slide successiva',
