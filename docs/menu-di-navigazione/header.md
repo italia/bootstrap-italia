@@ -1516,8 +1516,7 @@ classe `.it-header-wrapper` insieme all'attributo `data-bs-toggle="sticky"`.
 
 ```html
 <div 
-  class="it-header-wrapper it-header-sticky" data-bs-toggle="sticky "
-  >
+  class="it-header-wrapper it-header-sticky" data-bs-toggle="sticky" data-bs-position-type="fixed" data-bs-sticky-class-name="is-sticky">
   ...
 </div>
 ```
@@ -1529,8 +1528,8 @@ Per maggiori informazioni e ulteriori opzioni vedere il componente [Sticky]({{ s
 Il componente `Header` solitamente contiene al suo interno i componenti `Dropdown` 
 e `Collapse`, si rimanda alle sezioni specifiche per l'attivazione di questi componenti:
 
-- [Attivazione Dropdown tramite codice]()
-- [Attivazione Collapse tramite codice]()
+- [Attivazione Dropdown tramite codice]({{ site.baseurl }}/docs/componenti/dropdown/#attivazione-tramite-codice)
+- [Attivazione Collapse tramite codice]({{ site.baseurl }}/docs/componenti/collapse/#attivazione-tramite-codice)
 
 Per rendere `sticky` il componente `Header` è  possibile inizializzare il 
 componente manualmente utilizzando la classe `HeaderSticky`:
