@@ -14,8 +14,8 @@
 // Base styles
 .alert {
   position: relative;
-  padding: var(--#{$prefix}alert-spacing-inset);
   margin-bottom: var(--#{$prefix}alert-margin);
+  padding: var(--#{$prefix}alert-spacing-inset);
   border: 1px solid var(--#{$prefix}alert-color-border);
   background-color: var(--#{$prefix}alert-color-background);
   color: var(--#{$prefix}alert-color-text);
@@ -65,8 +65,8 @@
     position: absolute;
     top: 50%;
     right: 0;
-    transform: translateY(-50%);
     padding: var(--#{$prefix}alert-spacing-inset);
     color: inherit;
+    transform: translateY(-50%);
   }
 }

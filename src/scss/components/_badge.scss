@@ -2,45 +2,45 @@
   // scss-docs-start badge-css-vars
   --#{$prefix}badge-padding-x: #{$badge-padding-x};
   --#{$prefix}badge-padding-y: #{$badge-padding-y};
-  @include rfs($badge-font-size, --#{$prefix}badge-font-size);
   --#{$prefix}badge-font-weight: #{$badge-font-weight};
   --#{$prefix}badge-color: #{$badge-color};
   --#{$prefix}badge-border-radius: #{$badge-border-radius};
+  --bs-badge-font-size: 0.875em;
+  --bs-badge-font-weight: #{$font-weight-semibold};
   // scss-docs-end badge-css-vars
 
   display: inline-block;
   padding: var(--#{$prefix}badge-padding-y) var(--#{$prefix}badge-padding-x);
-  @include font-size(var(--#{$prefix}badge-font-size));
+  color: var(--#{$prefix}badge-color);
   font-weight: var(--#{$prefix}badge-font-weight);
   line-height: 1;
-  color: var(--#{$prefix}badge-color);
   text-align: center;
-  white-space: nowrap;
   vertical-align: baseline;
-  @include border-radius(var(--#{$prefix}badge-border-radius));
-  @include gradient-bg();
-
-  // Empty badges collapse automatically
-  &:empty {
-    display: none;
-  }
-  --bs-badge-font-size: 0.875em;
-  --bs-badge-font-weight: #{$font-weight-semibold};
+  white-space: nowrap;
   transition:
     color 0.15s ease-in-out,
     background-color 0.15s ease-in-out,
     border-color 0.15s ease-in-out,
     box-shadow 0.15s ease-in-out;
+  @include rfs($badge-font-size, --#{$prefix}badge-font-size);
+  @include font-size(var(--#{$prefix}badge-font-size));
+  @include border-radius(var(--#{$prefix}badge-border-radius));
+  @include gradient-bg();
   @each $color, $value in $theme-colors {
     &.badge-outline-#{$color} {
+      border: 1px solid $value;
       background-color: transparent !important;
       color: $value;
-      border: 1px solid $value;
     }
   }
+
+  // Empty badges collapse automatically
+  &:empty {
+    display: none;
+  }
   &.rounded-pill {
-    padding-left: 0.6em;
     padding-right: 0.6em;
+    padding-left: 0.6em;
   }
 }
 

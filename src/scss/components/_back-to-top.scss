@@ -7,25 +7,25 @@
 
 .back-to-top {
   position: fixed;
-  bottom: var(--#{$prefix}back-to-top-position);
   right: var(--#{$prefix}back-to-top-position);
-  background: var(--#{$prefix}back-to-top-background);
-  width: var(--#{$prefix}back-to-top-sizing);
-  height: var(--#{$prefix}back-to-top-sizing);
-  text-decoration: none;
-  border-radius: var(--#{$prefix}back-to-top-radius);
+  bottom: var(--#{$prefix}back-to-top-position);
+  z-index: 1;
   display: block;
   visibility: hidden;
+  width: var(--#{$prefix}back-to-top-sizing);
+  height: var(--#{$prefix}back-to-top-sizing);
+  border-radius: var(--#{$prefix}back-to-top-radius);
   opacity: 0;
+  background: var(--#{$prefix}back-to-top-background);
   text-align: center;
+  text-decoration: none;
+  transform: scale(0.7);
+  transform-origin: center center;
   transition:
     $transition-base,
     transform 0.25s cubic-bezier(0.75, -0.5, 0, 1.75),
     visibility 0.3s linear,
     opacity 0.3s ease-in-out;
-  z-index: 1;
-  transform: scale(0.7);
-  transform-origin: center center;
 
   // Tablet vertical
   @include media-breakpoint-up(md) {
@@ -47,24 +47,24 @@
   &.back-to-top-show {
     visibility: visible;
     opacity: 1;
+    transform: scale(1);
     transition:
       $transition-base,
       transform 0.05s ease-out,
       visibility 0s linear,
       opacity 0.1s ease-in-out;
-    transform: scale(1);
   }
 
   // Icon
   .icon {
-    margin: 0;
     position: relative;
-    transform: scale(0.75);
     top: 4px;
+    margin: 0;
+    transform: scale(0.75);
 
     @include media-breakpoint-up(md) {
-      transform: scale(1);
       top: 10px;
+      transform: scale(1);
     }
 
     &:before {
@@ -98,8 +98,8 @@
   &.back-to-top-small {
     --#{$prefix}back-top-sizing: 2.5rem; // 40px
     .icon {
-      transform: scale(0.75);
       top: 4px;
+      transform: scale(0.75);
     }
   }
 }
