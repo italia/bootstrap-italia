@@ -17,14 +17,14 @@ const DATA_KEY = 'bs.carousel'
 const EVENT_KEY = `.${DATA_KEY}`
 const DATA_API_KEY = '.data-api'
 
-//const EVENT_SCROLL = `scroll${EVENT_KEY}`
-
 const EVENT_LOAD_DATA_API = `load${EVENT_KEY}${DATA_API_KEY}`
 
 const SELECTOR_CAROUSEL = '[data-bs-carousel-splide]'
 
 const CONFIG_DEFAULT = {
-  slideFocus: true,
+  slideFocus: false,
+  rewind: true,
+  perMove: 1,
   i18n: {
     prev: 'Slide precedente',
     next: 'Slide successiva',
@@ -34,6 +34,10 @@ const CONFIG_DEFAULT = {
     pageX: 'Vai a pagina %s',
     play: 'Attiva autoplay',
     pause: 'Pausa autoplay',
+    carousel: 'Carosello',
+    select: 'Seleziona una slide da mostrare',
+    slide: 'slide',
+    slideLabel: '%s di %s',
   },
 }
 const CONFIGS = {
@@ -171,7 +175,7 @@ const CONFIGS = {
   },
 }
 
-class Carousel extends BaseComponent {
+class CarouselBI extends BaseComponent {
   constructor(element) {
     super(element)
     this._config = this._getConfig()
@@ -217,9 +221,9 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
   EventHandler.on(window, EVENT_LOAD_DATA_API, () => {
     const carousels = SelectorEngine.find(SELECTOR_CAROUSEL)
     carousels.forEach((carousel) => {
-      Carousel.getOrCreateInstance(carousel)
+      CarouselBI.getOrCreateInstance(carousel)
     })
   })
 }
 
-export default Carousel
+export default CarouselBI

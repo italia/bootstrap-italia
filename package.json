@@ -95,7 +95,7 @@
   },
   "dependencies": {
     "@popperjs/core": "^2.11.6",
-    "@splidejs/splide": "^3.6.12",
+    "@splidejs/splide": "^4.1.4",
     "@types/bootstrap": "^5.2.6",
     "accessible-autocomplete": "^3.0.1",
     "animejs": "^3.2.1",
