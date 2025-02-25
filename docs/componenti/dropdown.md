@@ -429,7 +429,7 @@ const dropdown = new Dropdown(dropdownEl, options)
 const dropdown = Dropdown.getOrCreateInstance(dropdownEl, options);
 ```
 
-### Opzioni
+#### Opzioni
 
 Le opzioni possono essere passate tramite gli attributi data o tramite JavaScript. Per quanto riguarda gli attributi data, aggiungi il nome dell'opzione a `data-bs`, come in `data-bs-parent=""`.
 
@@ -496,7 +496,7 @@ Nota: il menu a discesa può sempre essere chiuso con il tasto ESC.
   </tbody>
 </table>
 
-### Metodi
+#### Metodi
 
 <table class="table table-bordered table-striped">
   <thead>
@@ -521,7 +521,7 @@ Nota: il menu a discesa può sempre essere chiuso con il tasto ESC.
   </tbody>
 </table>
 
-### Eventi
+#### Eventi
 
 <table class="table table-bordered table-striped">
   <thead>
