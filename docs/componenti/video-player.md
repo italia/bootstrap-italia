@@ -118,22 +118,6 @@ Nota l'uso delle virgolette singole, `data-setup` si aspetta di ricevere un JSON
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-Per vedere tutte le opzioni disponibili, consultare la documentazione di
-[VideoJS](https://videojs.com/guides/options/).
-
-### Controllare il player con JavaScript
-
-Puoi anche controllare il player tramite javascript, di seguito un esempio.
-
-```js
-const videoEl = document.getElementById("albatrosvideo");
-const player = bootstrap.VideoPlayer.getOrCreateInstance(videoEl).player;
-player.pause();
-```
-
-Per vedere tutte le opzioni disponibili, consultare la documentazione di 
-[VideoJS](https://docs.videojs.com/player).
-
 ## Sottotitoli, didascalie, capitoli e descrizioni
 
 Tramite il tag `track` puoi aggiungere del testo accessibile presente
@@ -385,6 +369,29 @@ audio. L'unico modo per fornire l'audio multi-traccia cross-browser è l'uso dei
 HLS e/o DASH. 
 Approfondisci su [Video.js](https://videojs.com/guides/audio-tracks/)  
 {% endcapture %}{% include callout.html content=callout type="info" %}
+
+Per vedere tutte le opzioni disponibili, consultare la documentazione di
+[VideoJS](https://videojs.com/guides/options/).
+
+## Attivazione tramite codice
+
+Puoi anche controllare il player tramite javascript, di seguito un esempio.
+
+```js
+import { VideoPlayer } from 'bootstrap-italia';
+
+const videoEl = document.getElementById("myVideo");
+const video = new VideoPlayer(el);
+
+// Oppure
+
+const video = VideoPlayer.getOrCreateInstance(el);
+
+video.player.pause();
+```
+
+Per vedere tutte le opzioni disponibili, consultare la documentazione di 
+[VideoJS](https://docs.videojs.com/player).
 
 ## Embed da piattaforme terze
 
