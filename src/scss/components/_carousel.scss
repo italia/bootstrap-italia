@@ -8,8 +8,8 @@
     margin-left: 0;
     padding-left: 0;
     button {
-      width: 16px;
-      height: 16px;
+      width: $crs-dots-dimension;
+      height: $crs-dots-dimension;
       background: $crs-dots-color;
       display: inline-block;
       transition: all 0.3s;
