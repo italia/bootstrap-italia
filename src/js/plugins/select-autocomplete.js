@@ -18,20 +18,25 @@ function onClassChange(element, callback) {
   const observer = new MutationObserver((mutations) => {
     mutations.forEach((mutation) => {
       if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
-        callback(mutation.target)
+        callback(mutation.oldValue, mutation.target)
       }
     })
   })
-  observer.observe(element, { attributes: true })
+  observer.observe(element, { attributes: true, attributeOldValue: true })
   return observer.disconnect
 }
 
 class SelectAutocomplete extends BaseComponent {
   constructor(element, config) {
     super(element)
+    this._extraClasses = []
     this._hasFormControl = element.classList.contains('form-control')
     this.element_original_id = this._element.id
     this._config = config
+    this._config.inputClasses = 'form-control'
+    this._config.onConfirm = () => {
+      this._inputField.dispatchEvent(new Event("input"))
+    }
     if (!this._config.tAssistiveHint)
       this._config.tAssistiveHint = () =>
         'Quando i risultati del completamento automatico sono disponibili, usa le frecce su e giù per rivedere e Invio per selezionare. Utenti di dispositivi touch, esplora tramite tocco o con gesti di scorrimento'
@@ -69,15 +74,31 @@ class SelectAutocomplete extends BaseComponent {
         if (typeof document === 'undefined') {
           return
         }
-        const inputField = document.getElementById(this.element_original_id)
-        this._label = new InputLabel(inputField)
-        this._label._getLabel().parentElement.classList.add('form-group');
-        inputField.classList.remove(...inputField.classList);
-        inputField.classList.add('form-control');
-        onClassChange(inputField, (node) => {
-          if (!node.classList.contains('form-control')) {
-            node.classList.add('form-control')
+        this._inputField = document.getElementById(this.element_original_id)
+        this._inputField.addEventListener("focus", (event) => {
+          this._extraClasses.forEach((cls) => {
+            this._inputField.classList.add(cls)
+          })
+          this._extraClasses = []
+        });
+        this._inputField.addEventListener("blur", (event) => {
+          this._extraClasses.forEach((cls) => {
+            this._inputField.classList.add(cls)
+          })
+          this._extraClasses = []
+        });
+
+        this._label = new InputLabel(this._inputField)
+        onClassChange(this._inputField, (oldClasses, node) => {
+          this._extraClasses = []
+          if (JSON.stringify(oldClasses.split(' ')) === JSON.stringify(this._inputField.classList.value.split(' '))) {
+            return;
           }
+          oldClasses.split(' ').forEach((cls) => {
+            if (!cls.startsWith('autocomplete')) {
+              this._extraClasses.push(cls)
+            }
+          })
         })
       }
     }, 100)
