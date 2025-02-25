@@ -17,7 +17,7 @@ Per una corretta implementazione si consiglia di consultare la [documentazione](
 
 {% comment %}Example name: Base {% endcomment %}
 {% capture example %}
-<div class="select-wrapper">
+<div class="form-group">
   <label for="accessibleAutocomplete">Provincia</label>
   <select class="form-control" id="accessibleAutocomplete" title="Scegli una provincia" required>
     <option selected value="">Scegli una opzione</option>
@@ -166,17 +166,19 @@ Per maggiori informazioni si rimanda alla [documentazione ufficiale](https://alp
 {% comment %}Example name: Cambiare i valori dinamicamente {% endcomment %}
 {% capture example %}
 <div class="row">
-  <div class="col-12 mt-5">
-    <div class="select-wrapper">
-      <label for="category">Categoria alimento</label>
-      <select id="category" name="category">
-        <option value="frutta" selected>Frutta</option>
-        <option value="verdura">Verdura</option>
-      </select>
+  <div class="col-12">
+    <div class="form-group">
+      <div class="select-wrapper">
+        <label for="category">Categoria alimento</label>
+        <select id="category" name="category">
+          <option value="frutta" selected>Frutta</option>
+          <option value="verdura">Verdura</option>
+        </select>
+      </div>
     </div>
   </div>
-  <div class="col-12 mt-5">
-    <div class="select-wrapper">
+  <div class="col-12">
+    <div class="form-group">
       <label for="productAutocomplete">Alimento</label>
       <select class="form-control" id="productAutocomplete" title="Scegli un prodotto">
       </select>

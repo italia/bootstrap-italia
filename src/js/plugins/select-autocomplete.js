@@ -10,6 +10,8 @@ import accessibleAutocomplete from 'accessible-autocomplete'
 
 import BaseComponent from './base-component.js'
 
+import InputLabel from './input-label'
+
 const NAME = 'selectautocomplete'
 
 function onClassChange(element, callback) {
@@ -49,6 +51,7 @@ class SelectAutocomplete extends BaseComponent {
 
         return `${length} ${words.result} ${words.is} ${words.available}. ${contentSelectedOption}`
       }
+
     this._enhance()
   }
 
@@ -67,7 +70,10 @@ class SelectAutocomplete extends BaseComponent {
           return
         }
         const inputField = document.getElementById(this.element_original_id)
-        inputField.classList.add('form-control')
+        this._label = new InputLabel(inputField)
+        this._label._getLabel().parentElement.classList.add('form-group');
+        inputField.classList.remove(...inputField.classList);
+        inputField.classList.add('form-control');
         onClassChange(inputField, (node) => {
           if (!node.classList.contains('form-control')) {
             node.classList.add('form-control')
