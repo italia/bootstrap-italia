@@ -6,7 +6,9 @@ group: componenti
 toc: true
 ---
 
-La grandezza di ogni badge si adatta come dimensione a quella del font (misurato in unità `em`) dell'elemento in cui è contenuto.
+## Variazioni contestuali
+
+La dimensione e il carattere di ogni badge si adattano automaticamente a quelli dell'elemento che lo contiene.
 
 {% comment %}Example name: Base{% endcomment %}
 {% capture example %}
@@ -18,12 +20,12 @@ La grandezza di ogni badge si adatta come dimensione a quella del font (misurato
 <div class="h6">Titolo di esempio h6<span class="badge bg-secondary">New</span></div>
 {% endcapture %}{% include example.html content=example %}
 
-I badge possono essere utilizzati come parte di link o pulsanti per fornire un contatore.
+I badge possono essere utilizzati come contatori all'interno di link o pulsanti. Per questi casi, si consiglia di utilizzare la classe .badge-sm che riduce la spaziatura laterale interna.
 
 {% comment %}Example name: In pulsante{% endcomment %}
 {% capture example %}
 <button type="button" class="btn btn-primary">
-Notifiche <span class="badge bg-white text-secondary">4</span>
+Notifiche <span class="badge badge-sm bg-white text-secondary">4</span>
 </button>
 {% endcapture %}{% include example.html content=example %}
 
@@ -40,12 +42,12 @@ A meno che il contesto non sia chiaro (come con l'esempio "Notifiche", dove si c
 {% comment %}Example name: In pulsante, per screen reader{% endcomment %}
 {% capture example %}
 <button type="button" class="btn btn-primary">
-Profilo <span class="badge bg-white text-primary">9</span>
+Profilo <span class="badge badge-sm bg-white text-primary">9</span>
 <span class="visually-hidden">Messaggi non letti</span>
 </button>
 {% endcapture %}{% include example.html content=example %}
 
-## Variazioni contestuali
+## Variazioni colore
 
 Aggiungi una delle seguenti classi per modificare l'aspetto di un badge.
 
@@ -69,7 +71,7 @@ Per rendere i badge arrotondati puoi usare la classe `.rounded-pill`.
 
 ## Link
 
-Se hai bisogno che un badge sia anche un link, aggiungi una delle classi contestuali `.badge-*` sull'elemento `<a>`. Di conseguenza anche gli stati **hover** e **focus** saranno attivi sul badge.
+Se hai bisogno di trasformare un badge in un link, aggiungi una delle classi contestuali .badge-* all'elemento <a>. In questo modo, il badge risponderà agli stati hover e focus.
 
 {% comment %}Example name: Link{% endcomment %}
 {% capture example %}
