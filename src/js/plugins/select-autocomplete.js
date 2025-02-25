@@ -35,7 +35,7 @@ class SelectAutocomplete extends BaseComponent {
     this._config = config
     this._config.inputClasses = 'form-control'
     this._config.onConfirm = () => {
-      this._inputField.dispatchEvent(new Event("input"))
+      this._inputField.dispatchEvent(new Event('input'))
     }
     if (!this._config.tAssistiveHint)
       this._config.tAssistiveHint = () =>
@@ -75,24 +75,24 @@ class SelectAutocomplete extends BaseComponent {
           return
         }
         this._inputField = document.getElementById(this.element_original_id)
-        this._inputField.addEventListener("focus", (event) => {
+        this._inputField.addEventListener('focus', () => {
           this._extraClasses.forEach((cls) => {
             this._inputField.classList.add(cls)
           })
           this._extraClasses = []
-        });
-        this._inputField.addEventListener("blur", (event) => {
+        })
+        this._inputField.addEventListener('blur', () => {
           this._extraClasses.forEach((cls) => {
             this._inputField.classList.add(cls)
           })
           this._extraClasses = []
-        });
+        })
 
         this._label = new InputLabel(this._inputField)
-        onClassChange(this._inputField, (oldClasses, node) => {
+        onClassChange(this._inputField, (oldClasses) => {
           this._extraClasses = []
           if (JSON.stringify(oldClasses.split(' ')) === JSON.stringify(this._inputField.classList.value.split(' '))) {
-            return;
+            return
           }
           oldClasses.split(' ').forEach((cls) => {
             if (!cls.startsWith('autocomplete')) {

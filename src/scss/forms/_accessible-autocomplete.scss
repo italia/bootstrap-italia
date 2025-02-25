@@ -138,22 +138,8 @@
 }
 
 .autocomplete__hint,
-.autocomplete__input,
-.autocomplete__option {
-
-}
-
-.autocomplete__hint,
 .autocomplete__option {
   padding: 5px;
-}
-
-@media (min-width: 641px) {
-  .autocomplete__hint,
-  .autocomplete__input,
-  .autocomplete__option {
-
-  }
 }
 
 .autocomplete__wrapper {
