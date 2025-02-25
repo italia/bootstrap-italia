@@ -1,22 +1,22 @@
-.back-to-top {
-  --#{$prefix}back-to-top-background: var(--#{$prefix}color-background-primary);
-  --#{$prefix}back-to-top-position: 1rem;
-  --#{$prefix}back-to-top-radius: var(--#{$prefix}radius-circle);
-  --#{$prefix}back-to-top-sizing: 2.5rem;
+.backtop {
+  --#{$prefix}backtop-background: var(--#{$prefix}color-background-primary);
+  --#{$prefix}backtop-position: 1rem;
+  --#{$prefix}backtop-radius: var(--#{$prefix}radius-circle);
+  --#{$prefix}backtop-sizing: 2.5rem;
 }
 
-.back-to-top {
+.backtop {
   position: fixed;
-  right: var(--#{$prefix}back-to-top-position);
-  bottom: var(--#{$prefix}back-to-top-position);
+  right: var(--#{$prefix}backtop-position);
+  bottom: var(--#{$prefix}backtop-position);
   z-index: 1;
   display: block;
   visibility: hidden;
-  width: var(--#{$prefix}back-to-top-sizing);
-  height: var(--#{$prefix}back-to-top-sizing);
-  border-radius: var(--#{$prefix}back-to-top-radius);
+  width: var(--#{$prefix}backtop-sizing);
+  height: var(--#{$prefix}backtop-sizing);
+  border-radius: var(--#{$prefix}backtop-radius);
   opacity: 0;
-  background: var(--#{$prefix}back-to-top-background);
+  background: var(--#{$prefix}backtop-background);
   text-align: center;
   text-decoration: none;
   transform: scale(0.7);
@@ -29,22 +29,22 @@
 
   // Tablet vertical
   @include media-breakpoint-up(md) {
-    --#{$prefix}back-top-sizing: 3.5rem; // 56px
+    --#{$prefix}backtop-sizing: 3.5rem; // 56px
   }
 
   // Desktop
   @include media-breakpoint-up(xl) {
-    --#{$prefix}back-to-top-position: 2rem; // 32px
+    --#{$prefix}backtop-position: 2rem; // 32px
   }
 
   &:hover {
-    --back-to-top-background: var(--#{$prefix}color-background-primary-hover  );
+    --backtop-background: var(--#{$prefix}color-background-primary-hover  );
     text-decoration: none;
   }
 
 
   // Fade in
-  &.back-to-top-show {
+  &.backtop-show {
     visibility: visible;
     opacity: 1;
     transform: scale(1);
@@ -82,9 +82,9 @@
 
   // Dark version
   &.dark {
-    --#{$prefix}back-to-top-background: var(--#{$prefix}color-background-inverse);
+    --#{$prefix}backtop-background: var(--#{$prefix}color-background-inverse);
     &:hover {
-      --#{$prefix}back-to-top-background: var(--#{$prefix}color-background-inverse-hover);
+      --#{$prefix}backtop-background: var(--#{$prefix}color-background-inverse-hover);
     }
 
     .icon {
@@ -95,8 +95,8 @@
   }
 
   // Small version
-  &.back-to-top-small {
-    --#{$prefix}back-top-sizing: 2.5rem; // 40px
+  &.backtop-small {
+    --#{$prefix}backtop-top-sizing: 2.5rem; // 40px
     .icon {
       top: 4px;
       transform: scale(0.75);
