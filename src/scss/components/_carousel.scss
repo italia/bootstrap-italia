@@ -8,8 +8,8 @@
     margin-left: 0;
     padding-left: 0;
     button {
-      width: $crs-dots-simension;
-      height: $crs-dots-simension;
+      width: $crs-dots-dimension;
+      height: $crs-dots-dimension;
       background: $crs-dots-color;
       display: inline-block;
       transition: all 0.3s;
@@ -162,16 +162,11 @@
         display: flex;
         flex-basis: 100%;
         width: 100%;
-        > a {
+        // img
+        .img-responsive-wrapper {
           flex-basis: 50%;
-          // img
-          .img-responsive-wrapper {
-            .img-responsive {
-              padding-bottom: inherit;
-              position: absolute;
-              width: 100%;
-              height: 100%;
-            }
+          .img-responsive {
+            height: 100%;
           }
         }
         .it-text-slider-wrapper-outside {
@@ -210,6 +205,7 @@
         bottom: $crs-landcape-bottom;
         text-align: left;
         justify-content: left;
+        margin-bottom: 8px;
       }
     }
     &.it-carousel-landscape-abstract-three-cols-arrow-visible {

@@ -26,14 +26,18 @@ Splide segue le [indicazioni del W3C](https://www.w3.org/WAI/tutorials/carousels
 Il plugin, attraverso l'opzione `i18n`, offre la possibilità di tradurre le `aria-label` utilizzate per gli elementi di interfaccia.  
 Bootstrap Italia fornisce le label già tradotte in italiano come segue:
 
-- prev: 'Slide precedente'
-- next: 'Slide successiva'
-- first: 'Vai alla prima slide'
-- last: 'Vai all’ultima slide'
-- slideX: 'Vai alla slide %s'
-- pageX: 'Vai a pagina %s'
-- play: 'Attiva autoplay'
-- pause: 'Pausa autoplay'
+- prev: 'Slide precedente',
+- next: 'Slide successiva',
+- first: 'Vai alla prima slide',
+- last: 'Vai all’ultima slide',
+- slideX: 'Vai alla slide %s',
+- pageX: 'Vai a pagina %s',
+- play: 'Attiva autoplay',
+- pause: 'Pausa autoplay',
+- carousel: 'carosello',
+- select: 'Seleziona una slide da mostrare',
+- slide: 'slide',
+- slideLabel: '%s di %s',
 
 Per tradurre le label in altre lingue è sufficiente utilizzare l'attributo opzionale `data-splide` sul div `it-carousel-wrapper splide` come nell'esempio seguente:
 
@@ -69,7 +73,7 @@ Esempio di carousel con card semplici.
           <div class="card-wrapper card-space">
             <div class="card card-bg">
               <div class="card-body">
-                <h5 class="card-title">1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
+                <h3 class="card-title h5 no_toc">1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h3>
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span></span>
@@ -85,10 +89,10 @@ Esempio di carousel con card semplici.
           <div class="card-wrapper card-space">
             <div class="card card-bg">
               <div class="card-body">
-                <h5 class="card-title">2. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
+                <h3 class="card-title h5 no_toc">2. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h3>
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <a class="read-more" href="#">
-                  <span class="text">Leggi di più <span class="visually-hidden">1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span></span>
+                  <span class="text">Leggi di più <span class="visually-hidden">2. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span></span>
                   <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg>
                 </a>
               </div>
@@ -101,10 +105,10 @@ Esempio di carousel con card semplici.
           <div class="card-wrapper card-space">
             <div class="card card-bg">
               <div class="card-body">
-                <h5 class="card-title">3. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
+                <h3 class="card-title h5 no_toc">3. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h3>
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <a class="read-more" href="#">
-                  <span class="text">Leggi di più <span class="visually-hidden">1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span></span>
+                  <span class="text">Leggi di più <span class="visually-hidden">3. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span></span>
                   <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg>
                 </a>
               </div>
@@ -117,10 +121,10 @@ Esempio di carousel con card semplici.
           <div class="card-wrapper card-space">
             <div class="card card-bg">
               <div class="card-body">
-                <h5 class="card-title">4. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
+                <h3 class="card-title h5 no_toc">4. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h3>
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <a class="read-more" href="#">
-                  <span class="text">Leggi di più <span class="visually-hidden">1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span></span>
+                  <span class="text">Leggi di più <span class="visually-hidden">4. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span></span>
                   <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg>
                 </a>
               </div>
@@ -133,10 +137,10 @@ Esempio di carousel con card semplici.
           <div class="card-wrapper card-space">
             <div class="card card-bg">
               <div class="card-body">
-                <h5 class="card-title">5. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
+                <h3 class="card-title h5 no_toc">5. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h3>
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <a class="read-more" href="#">
-                  <span class="text">Leggi di più <span class="visually-hidden">1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span></span>
+                  <span class="text">Leggi di più <span class="visually-hidden">5. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span></span>
                   <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg>
                 </a>
               </div>
@@ -149,10 +153,10 @@ Esempio di carousel con card semplici.
           <div class="card-wrapper card-space">
             <div class="card card-bg">
               <div class="card-body">
-                <h5 class="card-title">6. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
+                <h3 class="card-title h5 no_toc">6. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h3>
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <a class="read-more" href="#">
-                  <span class="text">Leggi di più <span class="visually-hidden">1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span></span>
+                  <span class="text">Leggi di più <span class="visually-hidden">6. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span></span>
                   <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg>
                 </a>
               </div>
@@ -186,7 +190,7 @@ Esempio di carousel con card semplici.
                   <a class="category" href="#">Categoria</a>
                   <span class="data">10/12/{{'now' | date: "%Y"}}</span>
                 </div>
-                <h5 class="card-title big-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+                <h3 class="card-title big-heading h5 no_toc">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h3>
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <span class="card-signature">di Federico De Paolis</span>
                 <a class="read-more" href="#">
@@ -207,7 +211,7 @@ Esempio di carousel con card semplici.
                   <a class="category" href="#">Categoria</a>
                   <span class="data">10/12/{{'now' | date: "%Y"}}</span>
                 </div>
-                <h5 class="card-title big-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+                <h3 class="card-title big-heading h5 no_toc">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h3>
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <span class="card-signature">di Federico De Paolis</span>
                 <a class="read-more" href="#">
@@ -228,7 +232,7 @@ Esempio di carousel con card semplici.
                   <a class="category" href="#">Categoria</a>
                   <span class="data">10/12/{{'now' | date: "%Y"}}</span>
                 </div>
-                <h5 class="card-title big-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+                <h3 class="card-title big-heading h5 no_toc">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h3>
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <span class="card-signature">di Federico De Paolis</span>
                 <a class="read-more" href="#">
@@ -249,7 +253,7 @@ Esempio di carousel con card semplici.
                   <a class="category" href="#">Categoria</a>
                   <span class="data">10/12/{{'now' | date: "%Y"}}</span>
                 </div>
-                <h5 class="card-title big-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+                <h3 class="card-title big-heading h5 no_toc">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h3>
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <span class="card-signature">di Federico De Paolis</span>
                 <a class="read-more" href="#">
@@ -279,16 +283,14 @@ Contiene un'immagine associata ad una card "articolo".
 
 <div class="it-carousel-wrapper it-carousel-landscape-abstract splide" data-bs-carousel-splide>
   <div class="splide__track">
-		<ul class="splide__list">
-			<li class="splide__slide">
+    <ul class="splide__list">
+      <li class="splide__slide">
         <div class="it-single-slide-wrapper">
-          <a href="#">
-            <div class="img-responsive-wrapper">
-              <div class="img-responsive">
-                <div class="img-wrapper"><img src="https://placehold.co/480x360/ebebeb/808080/?text=Immagine1" title="titolo immagine" alt="descrizione immagine"></div>
-              </div>
+          <div class="img-responsive-wrapper">
+            <div class="img-responsive">
+              <div class="img-wrapper"><img src="https://placehold.co/480x360/ebebeb/808080/?text=Immagine1" title="titolo immagine" alt="descrizione immagine"></div>
             </div>
-          </a>
+          </div>
           <div class="it-text-slider-wrapper-outside">
             <div class="card-wrapper">
               <div class="card">
@@ -297,7 +299,7 @@ Contiene un'immagine associata ad una card "articolo".
                     <a class="category" href="#">Categoria</a>
                     <span class="data">10/12/{{'now' | date: "%Y"}}</span>
                   </div>
-                  <h5 class="card-title big-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+                  <h3 class="card-title big-heading h5 no_toc">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h3>
                   <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                   <span class="card-signature">di Federico De Paolis</span>
                   <a class="read-more" href="#">
@@ -312,13 +314,11 @@ Contiene un'immagine associata ad una card "articolo".
       </li>
       <li class="splide__slide">
         <div class="it-single-slide-wrapper">
-          <a href="#">
-            <div class="img-responsive-wrapper">
-              <div class="img-responsive">
-                <div class="img-wrapper"><img src="https://placehold.co/480x360/ebebeb/808080/?text=Immagine1" title="titolo immagine" alt="descrizione immagine"></div>
-              </div>
+          <div class="img-responsive-wrapper">
+            <div class="img-responsive">
+              <div class="img-wrapper"><img src="https://placehold.co/480x360/ebebeb/808080/?text=Immagine2" title="titolo immagine" alt="descrizione immagine"></div>
             </div>
-          </a>
+          </div>
           <div class="it-text-slider-wrapper-outside">
             <div class="card-wrapper">
               <div class="card">
@@ -327,7 +327,7 @@ Contiene un'immagine associata ad una card "articolo".
                     <a class="category" href="#">Categoria</a>
                     <span class="data">10/12/{{'now' | date: "%Y"}}</span>
                   </div>
-                  <h5 class="card-title big-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+                  <h3 class="card-title big-heading h5 no_toc">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h3>
                   <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                   <span class="card-signature">di Federico De Paolis</span>
                   <a class="read-more" href="#">
@@ -342,13 +342,11 @@ Contiene un'immagine associata ad una card "articolo".
       </li>
       <li class="splide__slide">
         <div class="it-single-slide-wrapper">
-          <a href="#">
-            <div class="img-responsive-wrapper">
-              <div class="img-responsive">
-                <div class="img-wrapper"><img src="https://placehold.co/480x360/ebebeb/808080/?text=Immagine1" title="titolo immagine" alt="descrizione immagine"></div>
-              </div>
+          <div class="img-responsive-wrapper">
+            <div class="img-responsive">
+              <div class="img-wrapper"><img src="https://placehold.co/480x360/ebebeb/808080/?text=Immagine3" title="titolo immagine" alt="descrizione immagine"></div>
             </div>
-          </a>
+          </div>
           <div class="it-text-slider-wrapper-outside">
             <div class="card-wrapper">
               <div class="card">
@@ -357,7 +355,7 @@ Contiene un'immagine associata ad una card "articolo".
                     <a class="category" href="#">Categoria</a>
                     <span class="data">10/12/{{'now' | date: "%Y"}}</span>
                   </div>
-                  <h5 class="card-title big-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+                  <h3 class="card-title big-heading h5 no_toc">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h3>
                   <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                   <span class="card-signature">di Federico De Paolis</span>
                   <a class="read-more" href="#">
@@ -397,7 +395,7 @@ Contiene un'immagine associata ad una card "articolo".
                 </div>
               </div>
               <div class="card-body px-3 px-md-4">
-                <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+                <h3 class="card-title h5 no_toc">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h3>
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
                   <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg>
@@ -417,7 +415,7 @@ Contiene un'immagine associata ad una card "articolo".
                 </div>
               </div>
               <div class="card-body px-3 px-md-4">
-                <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+                <h3 class="card-title h5 no_toc">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h3>
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
                   <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg>
@@ -437,7 +435,7 @@ Contiene un'immagine associata ad una card "articolo".
                 </div>
               </div>
               <div class="card-body px-3 px-md-4">
-                <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+                <h3 class="card-title h5 no_toc">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h3>
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
                   <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg>
@@ -457,7 +455,7 @@ Contiene un'immagine associata ad una card "articolo".
                 </div>
               </div>
               <div class="card-body px-3 px-md-4">
-                <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+                <h3 class="card-title h5 no_toc">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h3>
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
                   <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg>
@@ -477,7 +475,7 @@ Contiene un'immagine associata ad una card "articolo".
                 </div>
               </div>
               <div class="card-body px-3 px-md-4">
-                <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+                <h3 class="card-title h5 no_toc">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h3>
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
                   <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg>
@@ -497,7 +495,7 @@ Contiene un'immagine associata ad una card "articolo".
                 </div>
               </div>
               <div class="card-body px-3 px-md-4">
-                <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
+                <h3 class="card-title h5 no_toc">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h3>
                 <a class="read-more" href="#">
                   <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
                   <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg>
@@ -512,138 +510,7 @@ Contiene un'immagine associata ad una card "articolo".
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Card speciali
-
-Contiene [Card di tipo speciale]({{ site.baseurl }}/docs/componenti/card/#card-speciali).
-
-**Classi da applicare**:
-
-- div **`it-carousel-wrapper`**: viene aggiunta la classe `it-carousel-landscape-abstract-three-cols` per la visualizzazione a 3 colonne.
-
-{% comment %}Example name: Card speciali{% endcomment %}
-{% capture example %}
-
-<div class="it-carousel-wrapper it-carousel-landscape-abstract-three-cols splide" data-bs-carousel-splide>
-  <div class="splide__track">
-    <ul class="splide__list">
-      <li class="splide__slide">
-        <div class="it-single-slide-wrapper">
-          <div class="card-wrapper">
-            <a class="card card-img no-after special-card p-3 p-md-4" href="#">
-              <div class="img-responsive-wrapper">
-                <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://placehold.co/360x480/ebebeb/808080/?text=Immagine1" title="titolo immagine" alt="descrizione immagine"></div>
-                </div>
-              </div>
-              <div class="card-body">
-                <div class="head-tags"><span class="data">10/10/{{'now' | date: "%Y"}}</span>
-                </div>
-                <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
-                <p class="card-text"></p>
-              </div>
-            </a>
-          </div>
-        </div>
-      </li>
-      <li class="splide__slide">
-        <div class="it-single-slide-wrapper">
-          <div class="card-wrapper">
-            <a class="card card-img no-after special-card p-3 p-md-4" href="#">
-              <div class="img-responsive-wrapper">
-                <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://placehold.co/360x480/ebebeb/808080/?text=Immagine2" title="titolo immagine" alt="descrizione immagine"></div>
-                </div>
-              </div>
-              <div class="card-body">
-                <div class="head-tags"><span class="data">10/10/{{'now' | date: "%Y"}}</span>
-                </div>
-                <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
-                <p class="card-text"></p>
-              </div>
-            </a>
-          </div>
-        </div>
-      </li>
-      <li class="splide__slide">
-        <div class="it-single-slide-wrapper">
-          <div class="card-wrapper">
-            <a class="card card-img no-after special-card p-3 p-md-4" href="#">
-              <div class="img-responsive-wrapper">
-                <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://placehold.co/360x480/ebebeb/808080/?text=Immagine3" title="titolo immagine" alt="descrizione immagine"></div>
-                </div>
-              </div>
-              <div class="card-body">
-                <div class="head-tags"><span class="data">10/10/{{'now' | date: "%Y"}}</span>
-                </div>
-                <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
-                <p class="card-text"></p>
-              </div>
-            </a>
-          </div>
-        </div>
-      </li>
-      <li class="splide__slide">
-        <div class="it-single-slide-wrapper">
-          <div class="card-wrapper">
-            <a class="card card-img no-after special-card p-3 p-md-4" href="#">
-              <div class="img-responsive-wrapper">
-                <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://placehold.co/360x480/ebebeb/808080/?text=Immagine4" title="titolo immagine" alt="descrizione immagine"></div>
-                </div>
-              </div>
-              <div class="card-body">
-                <div class="head-tags"><span class="data">10/10/{{'now' | date: "%Y"}}</span>
-                </div>
-                <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
-                <p class="card-text"></p>
-              </div>
-            </a>
-          </div>
-        </div>
-      </li>
-      <li class="splide__slide">
-        <div class="it-single-slide-wrapper">
-          <div class="card-wrapper">
-            <a class="card card-img no-after special-card p-3 p-md-4" href="#">
-              <div class="img-responsive-wrapper">
-                <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://placehold.co/360x480/ebebeb/808080/?text=Immagine5" title="titolo immagine" alt="descrizione immagine"></div>
-                </div>
-              </div>
-              <div class="card-body">
-                <div class="head-tags"><span class="data">10/10/{{'now' | date: "%Y"}}</span>
-                </div>
-                <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
-                <p class="card-text"></p>
-              </div>
-            </a>
-          </div>
-        </div>
-      </li>
-      <li class="splide__slide">
-        <div class="it-single-slide-wrapper">
-          <div class="card-wrapper">
-            <a class="card card-img no-after special-card p-3 p-md-4" href="#">
-              <div class="img-responsive-wrapper">
-                <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://placehold.co/360x480/ebebeb/808080/?text=Immagine6" title="titolo immagine" alt="descrizione immagine"></div>
-                </div>
-              </div>
-              <div class="card-body">
-                <div class="head-tags"><span class="data">10/10/{{'now' | date: "%Y"}}</span>
-                </div>
-                <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h5>
-                <p class="card-text"></p>
-              </div>
-            </a>
-          </div>
-        </div>
-      </li>
-    </ul>
-  </div>
-</div>
-{% endcapture %}{% include example.html content=example %}
+<!-- Restore special cards in future https://github.com/italia/bootstrap-italia/commit/8fe9b1b9477b7429c5143d92cf436d1302dcca97#diff-18f7a9cbd5b0f47de01cfe512e233476a291fbe36556b743483a5f1580a156f2 --->
 
 ### Fullscreen di immagini
 
