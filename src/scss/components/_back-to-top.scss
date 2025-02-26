@@ -1,11 +1,9 @@
-.backtop {
+.back-to-top {
   --#{$prefix}backtop-background: var(--#{$prefix}color-background-primary);
   --#{$prefix}backtop-position: 1rem;
   --#{$prefix}backtop-radius: var(--#{$prefix}radius-circle);
   --#{$prefix}backtop-sizing: 2.5rem;
-}
 
-.backtop {
   position: fixed;
   right: var(--#{$prefix}backtop-position);
   bottom: var(--#{$prefix}backtop-position);
@@ -44,7 +42,7 @@
 
 
   // Fade in
-  &.backtop-show {
+  &.back-to-top-show {
     visibility: visible;
     opacity: 1;
     transform: scale(1);
@@ -95,8 +93,8 @@
   }
 
   // Small version
-  &.backtop-small {
-    --#{$prefix}backtop-top-sizing: 2.5rem; // 40px
+  &.back-to-top-small {
+    --#{$prefix}backtop-sizing: 2.5rem; // 40px
     .icon {
       top: 4px;
       transform: scale(0.75);
