@@ -1,11 +1,11 @@
 // CSS Custom Properties
 .alert {
-  --#{$prefix}alert-color-background: var(--#{$prefix}color-background-inverse);
-  --#{$prefix}alert-color-border: var(--#{$prefix}color-border-secondary);
-  --#{$prefix}alert-color-text: var(--#{$prefix}color-text-base);
-  --#{$prefix}alert-color-heading: var(--#{$prefix}color-text-base);
+  --#{$prefix}alert-background-color: var(--#{$prefix}color-background-inverse);
+  --#{$prefix}alert-border-color: var(--#{$prefix}color-border-secondary);
+  --#{$prefix}alert-text-color: var(--#{$prefix}color-text-base);
+  --#{$prefix}alert-heading-color: var(--#{$prefix}color-text-base);
   --#{$prefix}alert-icon-spacing: var(--#{$prefix}icon-spacing);
-  --#{$prefix}alert-sizing-border: 0.5rem;
+  --#{$prefix}alert-border-size: 0.5rem;
   --#{$prefix}alert-spacing-inset: var(--#{$prefix}spacing-s);
   --#{$prefix}alert-spacing-inset-extra: var(--#{$prefix}spacing-16x); // TODO: replace with semantic token
   --#{$prefix}alert-spacing-outside: var(--#{$prefix}spacing-m);
@@ -14,11 +14,11 @@
 // Base styles
 .alert {
   position: relative;
-  padding: var(--#{$prefix}alert-spacing-inset);
   margin-bottom: var(--#{$prefix}alert-margin);
-  border: 1px solid var(--#{$prefix}alert-color-border);
-  background-color: var(--#{$prefix}alert-color-background);
-  color: var(--#{$prefix}alert-color-text);
+  padding: var(--#{$prefix}alert-spacing-inset);
+  border: 1px solid var(--#{$prefix}alert-border-color);
+  background-color: var(--#{$prefix}alert-background-color);
+  color: var(--#{$prefix}alert-text-color);
 
   @include media-breakpoint-up(lg) {
     --#{$prefix}alert-spacing-inset: var(-#{$prefix}spacing-inset-m);
@@ -29,13 +29,13 @@
 // Alternate styles
 // Generate contextual modifier classes for colorizing the alert.
 // Loop through theme colors to generate contextual modifier classes for colorizing the alert
-@each $type, $value in $status {
-  @if index(('danger', 'warning', 'success', 'info', 'primary'), $type) {
-    .alert-#{$type} {
-      border-left: var(--#{$prefix}alert-sizing-border) solid #{$value};
+@each $color, $value in $colors-palette {
+  @if index(('danger', 'warning', 'success', 'secondary', 'primary'), $color) {
+    .alert-#{$color} {
+      border-left: var(--#{$prefix}alert-border-size) solid #{$value};
     }
 
-    .alert-#{$type} .alert-icon {
+    .alert-#{$color} .alert-icon {
       fill: #{$value};
     }
   }
@@ -44,7 +44,7 @@
 // Headings for larger alerts
 .alert-heading {
   // Specified to prevent conflicts of changing $headings-color
-  color: var(--#{$prefix}alert-color-heading);
+  color: var(--#{$prefix}alert-heading-color);
 }
 
 .alert-icon {
@@ -65,8 +65,8 @@
     position: absolute;
     top: 50%;
     right: 0;
-    transform: translateY(-50%);
     padding: var(--#{$prefix}alert-spacing-inset);
     color: inherit;
+    transform: translateY(-50%);
   }
 }

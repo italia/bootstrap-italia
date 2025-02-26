@@ -1,60 +1,77 @@
 .badge {
-  // scss-docs-start badge-css-vars
-  --#{$prefix}badge-padding-x: #{$badge-padding-x};
-  --#{$prefix}badge-padding-y: #{$badge-padding-y};
-  @include rfs($badge-font-size, --#{$prefix}badge-font-size);
-  --#{$prefix}badge-font-weight: #{$badge-font-weight};
-  --#{$prefix}badge-color: #{$badge-color};
-  --#{$prefix}badge-border-radius: #{$badge-border-radius};
-  // scss-docs-end badge-css-vars
+  --#{$prefix}badge-padding-x: var(--#{$prefix}spacing-xs);
+  --#{$prefix}badge-padding-y: var(--#{$prefix}spacing-3xs);
+  --#{$prefix}badge-font-weight: var(--#{$prefix}font-weight-solid);
+  --#{$prefix}badge-text-color: var(--#{$prefix}color-text-inverse);
+  --#{$prefix}badge-border-radius: var(--#{$prefix}radius-smooth);
+  --#{$prefix}badge-font-size: var(--#{$prefix}label-font-size-s);
+  --#{$prefix}badge-font-size-relative: 0.75em;
 
   display: inline-block;
   padding: var(--#{$prefix}badge-padding-y) var(--#{$prefix}badge-padding-x);
-  @include font-size(var(--#{$prefix}badge-font-size));
+  color: var(--#{$prefix}badge-text-color);
+  // font-size: var(--#{$prefix}badge-font-size-relative);
   font-weight: var(--#{$prefix}badge-font-weight);
   line-height: 1;
-  color: var(--#{$prefix}badge-color);
   text-align: center;
-  white-space: nowrap;
   vertical-align: baseline;
+  white-space: nowrap;
+  transition:
+    color var(--#{$prefix}transition-instant) ease-in-out,
+    background-color var(--#{$prefix}transition-instant) ease-in-out,
+    border-color var(--#{$prefix}transition-instant) ease-in-out,
+    box-shadow var(--#{$prefix}transition-instant) ease-in-out;
+  @include rfs($badge-font-size, --#{$prefix}badge-font-size);
   @include border-radius(var(--#{$prefix}badge-border-radius));
-  @include gradient-bg();
 
   // Empty badges collapse automatically
   &:empty {
     display: none;
   }
-  --bs-badge-font-size: 0.875em;
-  --bs-badge-font-weight: #{$font-weight-semibold};
-  transition:
-    color 0.15s ease-in-out,
-    background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out,
-    box-shadow 0.15s ease-in-out;
-  @each $color, $value in $theme-colors {
-    &.badge-outline-#{$color} {
-      background-color: transparent !important;
-      color: $value;
-      border: 1px solid $value;
+
+  // Add a small padding to badges in buttons
+  &-sm {
+    --#{$prefix}badge-padding-x: var(--#{$prefix}spacing-3xs);
+  }
+
+  // Color Variants
+  @each $color, $value in $colors-palette {
+    &.badge-#{$color} {
+      background-color: #{$value};
     }
   }
-  &.rounded-pill {
-    padding-left: 0.6em;
-    padding-right: 0.6em;
+
+  // Inverse Variant
+  &-inverse {
+    background-color: var(--#{$prefix}color-background-inverse);
+    color: var(--#{$prefix}color-text-primary);
+  }
+
+  // Quick fix for badges in buttons
+  .btn & {
+    position: relative;
+    top: -1px;
   }
 }
 
-// Quick fix for badges in buttons
-.btn .badge {
-  position: relative;
-  top: -1px;
-}
-
+// Hover state
 a.badge:hover {
-  color: $white;
-  @each $color, $value in $theme-colors {
-    &.bg-#{$color} {
-      background-color: shade-color($value, 20%) !important;
+  color: var(--#{$prefix}badge-text-color);
+
+  // Loop through theme colors to generate contextual modifier classes for colorizing the badge
+  @each $color, $value in $colors-palette {
+    &.badge-#{$color} {
+      @if $color == 'primary' {
+        background-color: var(--#{$prefix}color-background-primary-hover)
+      } @else if $color == 'secondary' {
+        background-color: var(--#{$prefix}color-background-secondary-hover)
+      } @else if $color == 'success' {
+        background-color: var(--#{$prefix}color-background-success-hover)
+      } @else if $color == 'warning' {
+        background-color: var(--#{$prefix}color-background-warning-hover)
+      } @else if $color == 'danger' {
+        background-color: var(--#{$prefix}color-background-danger-hover)
+      }
     }
   }
 }

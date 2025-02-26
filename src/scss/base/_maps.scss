@@ -53,11 +53,11 @@ $negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) 
 
 $gutters: $spacers !default;
 
-// Global status colors
-$status: (
+// Colors Palette
+$colors-palette: (
   'primary': $color-primary,
-  'info': $color-status-info,
-  'success': $color-status-success,
-  'warning': $color-status-warning,
-  'danger': $color-status-danger,
+  'secondary': $color-secondary,
+  'success': $color-success,
+  'warning': $color-warning,
+  'danger': $color-danger,
 ) !default;
