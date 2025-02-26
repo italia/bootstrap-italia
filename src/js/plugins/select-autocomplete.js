@@ -37,6 +37,9 @@ class SelectAutocomplete extends BaseComponent {
     this._config.onConfirm = () => {
       this._inputField.dispatchEvent(new Event('input'))
     }
+    this._config.showNoOptionsFound = true
+    this._config.hintClasses = 'app-hint'
+    this._config.confirmOnBlur = true 
     if (!this._config.tAssistiveHint)
       this._config.tAssistiveHint = () =>
         'Quando i risultati del completamento automatico sono disponibili, usa le frecce su e giù per rivedere e Invio per selezionare. Utenti di dispositivi touch, esplora tramite tocco o con gesti di scorrimento'
