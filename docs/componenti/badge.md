@@ -25,7 +25,7 @@ I badge possono essere utilizzati come contatori all'interno di link o pulsanti.
 {% comment %}Example name: In pulsante{% endcomment %}
 {% capture example %}
 <button type="button" class="btn btn-primary">
-Notifiche <span class="badge badge-sm badge-inverse text-secondary">4</span>
+Notifiche <span class="badge badge-sm badge-inverse">4</span>
 </button>
 {% endcapture %}{% include example.html content=example %}
 
