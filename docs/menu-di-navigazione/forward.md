@@ -27,37 +27,19 @@ Sint sit mollit irure quis est nostrud cillum consequat Lorem esse do quis dolor
 
 ## Attivazione tramite codice
 
+{% include callout-bundle-methods.md %}
+
 ```js
 import { Forward } from 'bootstrap-italia';
 
 const forwardEl = document.getElementById('myForward');
-const forward = Forward.getOrCreateInstance(forwardEl)
-
-// Oppure 
-
-const forward = new Forward(forwardEl)
+const forward = new Forward(forwardEl, options);
 ```
 
-### Metodi
+#### Opzioni
 
-<table class="table table-bordered table-striped">
-  <thead>
-    <tr>
-      <th style="width: 150px;">Metodo</th>
-      <th>Descrizione</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>goToTarget</td>
-      <td>Vai al target dell'elemento</td>
-    </tr>
-  </tbody>
-</table>
-
-### Opzioni
-
-Le opzioni possono essere passate tramite gli attributi data o tramite Javascript. Per quanto riguarda gli attributi data, aggiungi il nome dell'opzione a `data-bs`.
+Le opzioni possono essere passate tramite gli attributi data o tramite Javascript. 
+Per quanto riguarda gli attributi data, aggiungi il nome dell'opzione a `data-bs`.
 
 <table class="table table-bordered table-striped">
   <thead>
@@ -73,13 +55,31 @@ Le opzioni possono essere passate tramite gli attributi data o tramite Javascrip
       <td>duration</td>
       <td>number</td>
       <td>800</td>
-      <td>durata dell'animazione di scroll espressa in millisecondi</td>
+      <td>Durata dell'animazione di scroll espressa in millisecondi.</td>
     </tr>
     <tr>
       <td>easing</td>
       <td>string</td>
       <td>easeInOutSine</td>
-      <td>inerzia dell'animazione di scroll. Per i valori fare riferimento alla [documentazione di AnimeJs](https://animejs.com/documentation/#linearEasing).</td>
+      <td>Inerzia dell'animazione di scroll. Per i valori fare riferimento alla <a href="https://animejs.com/documentation/#linearEasing">documentazione di AnimeJs</a>.</td>
+    </tr>
+  </tbody>
+</table>
+
+#### Metodi
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th style="width: 150px;">Metodo</th>
+      <th>Descrizione</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% include standard-methods.html class="Forward" %}
+    <tr>
+      <td>goToTarget</td>
+      <td>Vai al target dell'elemento.</td>
     </tr>
   </tbody>
 </table>

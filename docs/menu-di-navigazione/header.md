@@ -1525,11 +1525,13 @@ Per maggiori informazioni e ulteriori opzioni vedere il componente [Sticky]({{ s
 
 ### Inizializzazione manuale
 
-Il componente `Header` solitamente contiene al suo interno i componenti `Dropdown` 
-e `Collapse`, si rimanda alle sezioni specifiche per l'attivazione di questi componenti:
+Il componente `Header` solitamente contiene al suo interno i componenti `Dropdown`, 
+`NavScroll` e `Collapse`, si rimanda alle sezioni specifiche per l'attivazione di questi componenti:
 
 - [Attivazione Dropdown tramite codice]({{ site.baseurl }}/docs/componenti/dropdown/#attivazione-tramite-codice)
 - [Attivazione Collapse tramite codice]({{ site.baseurl }}/docs/componenti/collapse/#attivazione-tramite-codice)
+- [Attivazione NavScroll tramite codice]({{ site.baseurl }}/docs/componenti/navscroll/#attivazione-tramite-codice)
+
 
 Per rendere `sticky` il componente `Header` è  possibile inizializzare il 
 componente manualmente utilizzando la classe `HeaderSticky`:
@@ -1537,13 +1539,25 @@ componente manualmente utilizzando la classe `HeaderSticky`:
 ```js
 import { HeaderSticky } from 'bootstrap-italia';
 
-const headerStickyElement = document.querySelector('#myHeaderSticky')
+const headerStickyElement = document.querySelector('#myHeaderSticky');
 const headerSticky = new HeaderSticky(headerStickyElement);
-
-// Oppure
-
-const headerSticky = HeaderSticky.getOrCreateInstance(headerStickyElement);
 ```
+
+#### Metodi
+
+<div class="table-responsive">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th style="width: 150px;">Metodo</th>
+        <th>Descrizione</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% include standard-methods.html class="HeaderSticky" %}
+    </tbody>
+  </table>
+</div>
 
 ## Breaking change
 

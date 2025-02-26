@@ -505,6 +505,8 @@ Gli attributi utilizzati nella sezione successiva possono essere passati tramite
 
 ## Attivazione tramite codice
 
+{% include callout-bundle-methods.md %}
+
 È possibile abilitare Masonry manualmente utilizzando questo script:
 
 ```js
@@ -596,10 +598,7 @@ const masonry = new Masonry(masonryElement, options);
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>dispose</td>
-        <td>Rimuove le funzionalità Masonry</td>
-      </tr>
+      {% include standard-methods.html class="Masonry" %}
       <tr>
         <td>layout</td>
         <td>Se l'elenco è cambiato, attiva un relayout del componente.</td>

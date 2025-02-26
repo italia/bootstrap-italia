@@ -389,16 +389,23 @@ Per maggiori informazioni, si può fare riferimento alla [documentazione delle L
 
 ## Attivazione tramite codice
 
+{% include callout-bundle-methods.md %}
+
 È possibile creare un'istanza di Navscroll manualmente con il constructor:
 
 ```js
 import { NavScroll } from 'bootstrap-italia';
 
 const navscrollElement = document.querySelector('.it-navscroll-wrapper');
-const navscroll = new NavScroll(navscrollElement, config);
+const navscroll = new NavScroll(navscrollElement, options);
 ```
 
-### Opzioni
+Il componente nella sua versione `Menu Inline` utilizza al suo interno il componente 
+`Collapse`, si rimanda alle sezioni specifiche per l'attivazione:
+
+- [Attivazione Collapse tramite codice]({{ site.baseurl }}/docs/componenti/collapse/#attivazione-tramite-codice)
+
+#### Opzioni
 
 Le opzioni possono essere passate tramite gli attributi data o tramite Javascript. Per quanto riguarda gli attributi data, aggiungi il nome dell'opzione a `data-bs`, come in `data-bs-parent=""`.
 
@@ -416,24 +423,24 @@ Le opzioni possono essere passate tramite gli attributi data o tramite Javascrip
       <td>scrollPadding</td>
       <td>number | function </td>
       <td>10</td>
-      <td>uno spazio (in pixel) per consentire allo scroll di fermarsi prima o dopo (se viene fornito un valore negativo) rispetto alla posizione del bersaglio. Nel caso in cui ci siano degli elementi fixed dinamici è possibile fornire una funzione per calcolare di volta in volta lo spazio.</td>
+      <td>Uno spazio (in pixel) per consentire allo scroll di fermarsi prima o dopo (se viene fornito un valore negativo) rispetto alla posizione del bersaglio. Nel caso in cui ci siano degli elementi fixed dinamici è possibile fornire una funzione per calcolare di volta in volta lo spazio.</td>
     </tr>
     <tr>
       <td>duration</td>
       <td>number</td>
       <td>800</td>
-      <td>durata dell'animazione di scroll espressa in millisecondi</td>
+      <td>Durata dell'animazione di scroll espressa in millisecondi.</td>
     </tr>
     <tr>
       <td>easing</td>
       <td>string</td>
       <td>easeInOutSine</td>
-      <td>inerzia dell'animazione di scroll. Per i valori fare riferimento alla [documentazione di AnimeJs](https://animejs.com/documentation/#linearEasing).<</td>
+      <td>Inerzia dell'animazione di scroll. Per i valori fare riferimento alla <a href="https://animejs.com/documentation/#linearEasing">documentazione di AnimeJs</a>.</td>
     </tr>
   </tbody>
 </table>
 
-### Metodi
+#### Metodi
 
 <table class="table table-bordered table-striped table-responsive">
   <thead>
@@ -443,21 +450,10 @@ Le opzioni possono essere passate tramite gli attributi data o tramite Javascrip
     </tr>
   </thead>
   <tbody>
+    {% include standard-methods.html class="NavScroll" %}
     <tr>
       <td>setScrollPadding</td>
-      <td>modfica il valore dell'opzione <code>scrollPadding</code>.</td>
-    </tr>
-    <tr>
-      <td>dispose</td>
-      <td>Elimina le funzionalità del componente.</td>
-    </tr>
-    <tr>
-      <td>getInstance</td>
-      <td>Metodo statico che restituisce l'istanza NavScroll associata ad un elemento del DOM. Esempio: <code>bootstrap.NavScroll.getInstance(element)</code></td>
-    </tr>
-    <tr>
-      <td>getOrCreateInstance</td>
-      <td>Metodo statico che restituisce un'istanza NavScroll associata ad un elemento del DOM o ne crea una nuova nel caso non fosse stata inizializzata. Esempio: <code>bootstrap.NavScroll.getOrCreateInstance(element)</code></td>
+      <td>Modfica il valore dell'opzione <code>scrollPadding</code>.</td>
     </tr>
   </tbody>
 </table>
