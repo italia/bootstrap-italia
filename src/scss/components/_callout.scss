@@ -2,86 +2,6 @@
   position: relative;
   overflow: hidden;
 
-  .callout-inner {
-    padding: 2rem;
-    border: 2px solid $color-border-secondary;
-    border-top: 0;
-    margin: 2.5rem 0;
-  }
-
-  &.callout-highlight {
-    border: none;
-    border-left: 2px solid $color-border-secondary;
-    border-radius: 0;
-    padding: 0 2.222rem;
-
-    p:last-child {
-      margin: 0;
-    }
-
-    .callout-title {
-      margin-bottom: 1.556rem;
-    }
-
-    @each $color-name, $color-value in (success: $success, warning: $color-border-warning, danger: $danger, important: $success, note: $primary) {
-      &.#{$color-name} {
-        border-color: $color-value;
-      }
-    }
-  }
-
-  &.callout-more {
-    background: #f9f9f5;
-    border: none;
-    border-radius: 0;
-    padding: 2.222rem;
-    position: relative;
-
-    &:before,
-    &:after {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 0;
-      height: 0;
-      border-style: solid;
-    }
-
-    &:before {
-      border-width: 0 48px 48px 0;
-      border-color: transparent $white transparent transparent;
-    }
-
-    &:after {
-      border-width: 48px 0 0 48px;
-      border-color: transparent transparent transparent #e4e4db;
-    }
-
-    p {
-      font-size: 1rem;
-      line-height: 1.5rem;
-      color: $color-text-secondary;
-    }
-
-    .callout-title {
-      display: flex;
-      align-items: flex-start;
-      margin-bottom: 2.222rem;
-
-      i {
-        font-size: 1.25rem;
-      }
-
-      span {
-        border-bottom: 2px solid $body-color;
-        padding-bottom: 0.1rem;
-        display: inline-block;
-        margin-top: -0.111rem;
-      }
-    }
-  }
-
   @each $color-name, $color-value in (success: $success, warning: $warning, danger: $danger, important: $success, note: $primary) {
     &.#{$color-name} {
       border-color: $color-value;
@@ -130,64 +50,144 @@
     }
   }
 
+  .callout-inner {
+    margin: 2.5rem 0;
+    padding: 2rem;
+    border: 2px solid $color-border-secondary;
+    border-top: 0;
+  }
+
+  &.callout-highlight {
+    padding: 0 2.222rem;
+    border: none;
+    border-left: 2px solid $color-border-secondary;
+    border-radius: 0;
+
+    @each $color-name, $color-value in (success: $success, warning: $color-border-warning, danger: $danger, important: $success, note: $primary) {
+      &.#{$color-name} {
+        border-color: $color-value;
+      }
+    }
+
+    p:last-child {
+      margin: 0;
+    }
+
+    .callout-title {
+      margin-bottom: 1.556rem;
+    }
+  }
+
+  &.callout-more {
+    position: relative;
+    padding: 2.222rem;
+    border: none;
+    border-radius: 0;
+    background: #f9f9f5;
+
+    &:before,
+    &:after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      content: '';
+      width: 0;
+      height: 0;
+      border-style: solid;
+    }
+
+    &:before {
+      border-width: 0 48px 48px 0;
+      border-color: transparent $white transparent transparent;
+    }
+
+    &:after {
+      border-width: 48px 0 0 48px;
+      border-color: transparent transparent transparent #e4e4db;
+    }
+
+    p {
+      color: $color-text-secondary;
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+
+    .callout-title {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 2.222rem;
+
+      i {
+        font-size: 1.25rem;
+      }
+
+      span {
+        display: inline-block;
+        margin-top: -0.111rem;
+        padding-bottom: 0.1rem;
+        border-bottom: 2px solid $body-color;
+      }
+    }
+  }
+
   .callout-title {
+    color: $color-text-secondary;
+    font-size: 1rem;
     font-weight: 600;
     text-transform: uppercase;
-    font-size: 1rem;
-    color: $color-text-secondary;
 
     @include media-breakpoint-up(lg) {
       font-size: 1.125rem;
     }
 
     .icon {
-      fill: $color-text-secondary;
       margin-right: 0.5rem;
+      fill: $color-text-secondary;
     }
   }
 
   &:not(.callout-highlight):not(.callout-more) {
     .callout-title {
       position: relative;
-      padding-left: 1.5rem;
       top: -3rem;
+      padding-left: 1.5rem;
 
       .text {
         position: relative;
-        overflow: hidden;
         width: 100%;
-        font-size: 0.875rem;
         padding-right: 1.5rem;
+        overflow: hidden;
+        font-size: 0.875rem;
 
         @include media-breakpoint-up(md) {
           font-size: 1.15rem;
         }
 
         &:after {
-          content: '';
-          top: 0.875em;
-          border-top: 2px solid;
           position: absolute;
-          width: calc(100vw - 100% - 20px);
+          top: 0.875em;
           left: 100%;
+          content: '';
+          width: calc(100vw - 100% - 20px);
+          border-top: 2px solid;
         }
       }
 
       &:before {
-        content: '';
-        top: 0.875em;
-        border-top: 2px solid;
         position: absolute;
-        width: 3rem;
+        top: 0.875em;
         left: -2.5rem;
+        content: '';
+        width: 3rem;
+        border-top: 2px solid;
       }
     }
   }
 
   p {
+    color: $color-text-secondary;
     font-family: $font-family-serif;
     font-size: 1rem;
-    color: $color-text-secondary;
 
     @include media-breakpoint-up(lg) {
       font-size: 1.125rem;
@@ -206,19 +206,19 @@
     .collapse-header {
       display: flex;
       justify-content: space-between;
-      border-top: 1px solid $gray-border-disabled;
-      padding: 1.333rem 0 0;
       margin-top: 0;
+      padding: 1.333rem 0 0;
+      border-top: 1px solid $gray-border-disabled;
 
       .callout-more-toggle {
-        padding: 0;
-        border: none;
-        width: auto;
-        font-weight: normal;
         display: flex;
         align-items: center;
-        color: $primary;
+        width: auto;
+        padding: 0;
+        border: none;
         background-color: transparent;
+        color: $primary;
+        font-weight: normal;
 
         &:hover,
         &:focus,
@@ -250,33 +250,33 @@
 
         span {
           position: relative;
-          height: 15px;
+          display: inline-block;
           width: 15px;
-          margin-left: 0.444rem;
+          height: 15px;
           margin-top: 0.111rem;
+          margin-left: 0.444rem;
           border: 1px solid $primary;
           border-radius: 50%;
-          display: inline-block;
 
           &:before,
           &:after {
-            content: '';
             position: absolute;
+            content: '';
             background: $primary;
           }
 
           &:before {
-            width: 9px;
-            height: 1px;
             top: 6px;
             left: 2px;
+            width: 9px;
+            height: 1px;
           }
 
           &:after {
-            height: 9px;
-            width: 1px;
             top: 0;
             left: 6px;
+            width: 1px;
+            height: 9px;
             transform: translateY(2px);
             transition: transform 0.2s;
           }
