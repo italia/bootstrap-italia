@@ -2098,9 +2098,6 @@ $offcanvas-backdrop-opacity: $modal-backdrop-opacity !default;
 $color-primary: var(--#{$prefix}theme-primary);
 $color-secondary: var(--#{$prefix}color-background-secondary);
 $color-accent: var(--#{$prefix}color-background-accent);
-
-// Variables used in _maps.scss inside the $status map
-$color-status-info: var(--#{$prefix}color-background-secondary);
-$color-status-success: var(--#{$prefix}color-status-success);
-$color-status-warning: var(--#{$prefix}color-status-warning);
-$color-status-danger: var(--#{$prefix}color-status-danger);
+$color-success: var(--#{$prefix}color-background-success);
+$color-warning: var(--#{$prefix}color-background-warning);
+$color-danger: var(--#{$prefix}color-background-danger);

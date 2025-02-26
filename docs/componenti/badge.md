@@ -12,12 +12,12 @@ La dimensione e il carattere di ogni badge si adattano automaticamente a quelli 
 
 {% comment %}Example name: Base{% endcomment %}
 {% capture example %}
-<div class="h1">Titolo di esempio h1<span class="badge badge-info">New</span></div>
-<div class="h2">Titolo di esempio h2<span class="badge badge-info">New</span></div>
-<div class="h3">Titolo di esempio h3<span class="badge badge-info">New</span></div>
-<div class="h4">Titolo di esempio h4<span class="badge badge-info">New</span></div>
-<div class="h5">Titolo di esempio h5<span class="badge badge-info">New</span></div>
-<div class="h6">Titolo di esempio h6<span class="badge badge-info">New</span></div>
+<div class="h1">Titolo di esempio h1<span class="badge badge-secondary">New</span></div>
+<div class="h2">Titolo di esempio h2<span class="badge badge-secondary">New</span></div>
+<div class="h3">Titolo di esempio h3<span class="badge badge-secondary">New</span></div>
+<div class="h4">Titolo di esempio h4<span class="badge badge-secondary">New</span></div>
+<div class="h5">Titolo di esempio h5<span class="badge badge-secondary">New</span></div>
+<div class="h6">Titolo di esempio h6<span class="badge badge-secondary">New</span></div>
 {% endcapture %}{% include example.html content=example %}
 
 I badge possono essere utilizzati come contatori all'interno di link o pulsanti. Per questi casi, si consiglia di utilizzare la classe .badge-sm che riduce la spaziatura laterale interna.
@@ -25,7 +25,7 @@ I badge possono essere utilizzati come contatori all'interno di link o pulsanti.
 {% comment %}Example name: In pulsante{% endcomment %}
 {% capture example %}
 <button type="button" class="btn btn-primary">
-Notifiche <span class="badge badge-sm badge-white text-info">4</span>
+Notifiche <span class="badge badge-sm badge-inverse text-secondary">4</span>
 </button>
 {% endcapture %}{% include example.html content=example %}
 
@@ -42,7 +42,7 @@ A meno che il contesto non sia chiaro (come con l'esempio "Notifiche", dove si c
 {% comment %}Example name: In pulsante, per screen reader{% endcomment %}
 {% capture example %}
 <button type="button" class="btn btn-primary">
-Profilo <span class="badge badge-sm badge-white text-primary">9</span>
+Profilo <span class="badge badge-sm badge-inverse text-primary">9</span>
 <span class="visually-hidden">Messaggi non letti</span>
 </button>
 {% endcapture %}{% include example.html content=example %}
@@ -58,6 +58,8 @@ Aggiungi una delle seguenti classi per modificare l'aspetto di un badge.
 {% endcapture %}{% include example.html content=example %}
 
 {% include callout-warning-color-assistive-technologies.md %}
+
+Le varianti di colore corrispondono agli stessi status disponibili per il componente [alert]({{ site.baseurl }}/docs/componenti/alert).
 
 ## Badges arrotondati
 

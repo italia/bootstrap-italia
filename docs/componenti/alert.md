@@ -16,7 +16,7 @@ Gli avvisi sono disponibili in quattro tipologie diverse e sono adatti a qualsia
 <div class="alert alert-primary" role="alert">
   <p class="mb-0"><svg class="alert-icon icon"><use href="/dist/svg/sprites.svg#it-info-circle"></use></svg> Questo è un alert di tipo "<strong>primary</strong>".</p>
 </div>
-<div class="alert alert-info" role="alert">
+<div class="alert alert-secondary" role="alert">
   <p class="mb-0"><svg class="alert-icon icon"><use href="/dist/svg/sprites.svg#it-info-circle"></use></svg> Questo è un alert di tipo "<strong>info</strong>".</p>
 </div>
 <div class="alert alert-success" role="alert">

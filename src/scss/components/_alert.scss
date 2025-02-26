@@ -29,13 +29,13 @@
 // Alternate styles
 // Generate contextual modifier classes for colorizing the alert.
 // Loop through theme colors to generate contextual modifier classes for colorizing the alert
-@each $type, $value in $status {
-  @if index(('danger', 'warning', 'success', 'info', 'primary'), $type) {
-    .alert-#{$type} {
+@each $color, $value in $colors-palette {
+  @if index(('danger', 'warning', 'success', 'secondary', 'primary'), $color) {
+    .alert-#{$color} {
       border-left: var(--#{$prefix}alert-border-size) solid #{$value};
     }
 
-    .alert-#{$type} .alert-icon {
+    .alert-#{$color} .alert-icon {
       fill: #{$value};
     }
   }
