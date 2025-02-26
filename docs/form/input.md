@@ -312,16 +312,15 @@ Nel caso del campo di tipo password, è molto importante configurare correttamen
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-## Attivazione tramite codice
+### Attivazione tramite codice
 
-Abilitarlo manualmente con:
-
+Per abilitare l'input password manualmente utilizzare il seguente codice:
 
 ```js
 import { InputPassword } from 'bootstrap-italia';
 
 const inputPswElement = document.querySelector('#my-input-psw');
-const inputPsw = new Masonry(inputPswElement, options);
+const inputPsw = new InputPassword(inputPswElement, options);
 ```
 
 #### Opzioni
@@ -644,16 +643,68 @@ Cerca ad esempio _"Italia"_ per verificarne il comportamento.
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Attivazione tramite JavaScript
+### Attivazione tramite codice
 
 È possibile creare un'istanza con il constructor, ad esempio:
 
 ```js
-var inputElement = document.getElementById('autocomplete-test')
-var inputSearch = new bootstrap.InputSearch(inputElement, {
-  autocomplete: '{{ site.data.autocomplete.regioni | jsonify }}',
-})
+import { InputSearch } from 'bootstrap-italia';
+
+const inputElement = document.querySelector('#my-input-search');
+const inputSearch = new InputSearch(inputElement, options);
 ```
+
+#### Opzioni
+
+```js
+import { InputSearch } from 'bootstrap-italia';
+
+const inputElement = document.querySelector('#my-input-search');
+const inputSearch = new InputSearch(inputElement, {
+  autocomplete: '{{ site.data.autocomplete.regioni | jsonify }}'
+});
+```
+
+<div class="table-responsive">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Tipo</th>
+        <th>Predefinito</th>
+        <th>Descrizione</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>autocomplete</td>
+        <td>string</td>
+        <td></td>
+        <td>Stringa in formato JSON contenente i dati per la ricerca.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+#### Metodi
+
+<div class="table-responsive">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th style="width: 150px;">Metodo</th>
+        <th>Descrizione</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% include standard-methods.html class="InputSearch" %}
+      <tr>
+        <td>search</td>
+        <td>Richiama la funzionalità di ricerca.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 ## Area di testo
 
