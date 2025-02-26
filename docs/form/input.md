@@ -170,6 +170,34 @@ Se per qualche motivo vuoi avere gli elementi `<input readonly>` nella forma sti
 </div>
 {% endcapture %}{% include example.html content=example %}
 
+### Attivazione tramite codice
+
+È possibile abilitare l'input con la label associata manualmente utilizzando 
+questo script:
+
+```js
+import { Input } from 'bootstrap-italia';
+
+const inputElement = document.querySelector('#my-input');
+const input = new Input(inputElement);
+```
+
+#### Metodi
+
+<div class="table-responsive">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th style="width: 150px;">Metodo</th>
+        <th>Descrizione</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% include standard-methods.html class="Input" %}
+    </tbody>
+  </table>
+</div>
+
 ## Input password
 
 Per rendere più semplice l'inserimento della password, il campo Input di tipo password è dotato di un pulsante che permette di mostrare i caratteri inseriti. Inoltre, è possibile abbinare una descrizione estesa che ne aiuti la compilazine, ad esempio in fase di scelta di una nuova password.  
@@ -284,131 +312,144 @@ Nel caso del campo di tipo password, è molto importante configurare correttamen
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-#### Personalizzazione
-
-È possibile personalizzare le varianti con misuratore di sicurezza usando specifici attributi `data` dell'elemento `p.strength-meter-info`. 
-
-<table class="table table-bordered table-striped">
-  <thead>
-    <tr>
-      <th style="width: 220px;">Attributo data</th>
-      <th>Descrizione</th>
-      <th>Default</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>data-bs-minimum-length</code></td>
-      <td>Lunghezza minima per il calcolo della forza della password (soglia password troppo breve)</td>
-      <td>8</td>
-    </tr>
-    <tr>
-      <td><code>data-bs-short-pass</code></td>
-      <td>Testo per il punteggio di forza della password troppo breve</td>
-      <td>Password troppo breve.</td>
-    </tr>
-    <tr>
-      <td><code>data-bs-bad-pass</code></td>
-      <td>Testo per punteggio di forza della password basso</td>
-      <td>Password debole.</td>
-    </tr>
-    <tr>
-      <td><code>data-bs-good-pass</code></td>
-      <td>Testo per punteggio di forza della password buono</td>
-      <td>Password abbastanza sicura.</td>
-    </tr>
-    <tr>
-      <td><code>data-bs-strong-pass</code></td>
-      <td>Testo per il punteggio di forza della password massimo</td>
-      <td>Password sicura.</td>
-    </tr>  
-    <tr>
-      <td><code>data-bs-suggestions-label</code></td>
-      <td>Testo nascosto visivamente che precede l'elenco di suggerimenti</td>
-      <td>Suggerimenti per una buona password:</td>
-    </tr>
-    <tr>
-      <td><code>data-bs-suggestion-followed</code></td>
-      <td>Testo singolare per la parte finale di "1 di 5 suggerimenti seguito"</td>
-      <td>suggerimenti seguito</td>
-    </tr>
-    <tr>
-      <td><code>data-bs-suggestion-followed-plural</code></td>
-      <td>Testo plurale per la parte finale di "2 di 5 suggerimenti seguiti"</td>
-      <td>suggerimenti seguiti</td>
-    </tr>
-    <tr>
-      <td><code>data-bs-suggestion-of</code></td>
-      <td>Preposizione centrale per "2 di 5"</td>
-      <td>di</td>
-    </tr>
-    <tr>
-      <td><code>data-bs-suggestion-met-label</code></td>
-      <td>Aria-label per l'icona di suggerimento soddisfatto</td>
-      <td>Soddisfatto: </td>
-    </tr>
-    <tr>
-      <td><code>data-bs-suggestion-met-icon-path</code></td>
-      <td>Path per la forma dell'icona di suggerimento soddisfatto</td>
-      <td>M9.6 16.9 4 11.4l.8-.7 4.8 4.8 8.5-8.4.7.7-9.2 9.1z</td>
-    </tr>
-    <tr>
-      <td><code>data-bs-suggestion-length</code></td>
-      <td>Lunghezza minima della password</td>
-      <td>Almeno {minLength} caratteri.</td>
-    </tr>
-    <tr>
-      <td><code>data-bs-suggestion-uppercase</code></td>
-      <td>Uso di lettere maiuscole</td>
-      <td>Una o più maiuscole.</td>
-    </tr>
-    <tr>
-      <td><code>data-bs-suggestion-lowercase</code></td>
-      <td>Uso di lettere minuscole</td>
-      <td>Una o più minuscole.</td>
-    </tr>
-    <tr>
-      <td><code>data-bs-suggestion-number</code></td>
-      <td>Uso di numeri</td>
-      <td>Una o più mumero.</td>
-    </tr>
-    <tr>
-      <td><code>data-bs-suggestion-special</code></td>
-      <td>Uso di caratteri speciali</td>
-      <td>Uno o più caratteri speciali.</td>
-    </tr>
-  </tbody>
-</table>
-
 ## Attivazione tramite codice
 
 Abilitarlo manualmente con:
 
+
 ```js
-var inputElement = document.querySelector('#exampleInputPassword'))
-var passwordComponent = new bootstrap.InputPassword(inputElement, {
-  minimumLength: 8,
-})
+import { InputPassword } from 'bootstrap-italia';
+
+const inputPswElement = document.querySelector('#my-input-psw');
+const inputPsw = new Masonry(inputPswElement, options);
 ```
 
-Opzioni: 
+#### Opzioni
 
 <table class="table table-bordered table-striped">
   <thead>
     <tr>
-      <th style="width: 220px;">Attributo data</th>
+      <th>Nome</th>
+      <th>Tipo</th>
+      <th>Predefinito</th>
       <th>Descrizione</th>
-      <th>Default</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><code>minimumLength</code></td>
-      <td>Lunghezza minima per il calcolo della forza della password (soglia password troppo breve)</td>
+      <td>minimumLength</td>
+      <td>number</td>
       <td>8</td>
+      <td>Lunghezza minima per il calcolo della forza della password (soglia password troppo breve)</td>
+    </tr>
+    <tr>
+      <td>shortPass</td>
+      <td>string</td>
+      <td>Password troppo breve.</td>
+      <td>Testo per il punteggio di forza della password troppo breve</td>
+    </tr>
+    <tr>
+      <td>badPass</td>
+      <td>string</td>
+      <td>Password debole.</td>
+      <td>Testo per punteggio di forza della password basso</td>
+    </tr>
+    <tr>
+      <td>goodPass</td>
+      <td>string</td>
+      <td>Password abbastanza sicura.</td>
+      <td>Testo per punteggio di forza della password buono</td>
+    </tr>
+    <tr>
+      <td>strongPass</td>
+      <td>string</td>
+      <td>Password sicura.</td>
+      <td>Testo per il punteggio di forza della password massimo</td>
+    </tr>  
+    <tr>
+      <td>suggestionsLabel</td>
+      <td>string</td>
+      <td>Suggerimenti per una buona password:</td>
+      <td>Testo nascosto visivamente che precede l'elenco di suggerimenti</td>
+    </tr>
+    <tr>
+      <td>suggestionFollowed</td>
+      <td>string</td>
+      <td>suggerimenti seguito</td>
+      <td>Testo singolare per la parte finale di "1 di 5 suggerimenti seguito"</td>
+    </tr>
+    <tr>
+      <td>suggestionFollowedPlural</td>
+      <td>string</td>
+      <td>suggerimenti seguiti</td>
+      <td>Testo plurale per la parte finale di "2 di 5 suggerimenti seguiti"</td>
+    </tr>
+    <tr>
+      <td>suggestionOf</td>
+      <td>string</td>
+      <td>di</td>
+      <td>Preposizione centrale per "2 di 5"</td>
+    </tr>
+    <tr>
+      <td>suggestionMetLabel</td>
+      <td>string</td>
+      <td>Soddisfatto: </td>
+      <td>Aria-label per l'icona di suggerimento soddisfatto</td>
+    </tr>
+    <tr>
+      <td>suggestionMetIconPath</td>
+      <td>string</td>
+      <td>M9.6 16.9 4 11.4l.8-.7 4.8 4.8 8.5-8.4.7.7-9.2 9.1z</td>
+      <td>Path per la forma dell'icona di suggerimento soddisfatto</td>
+    </tr>
+    <tr>
+      <td>suggestionLength</td>
+      <td>string</td>
+      <td>Almeno {minLength} caratteri.</td>
+      <td>Lunghezza minima della password</td>
+    </tr>
+    <tr>
+      <td>suggestionUppercase</td>
+      <td>string</td>
+      <td>Una o più maiuscole.</td>
+      <td>Uso di lettere maiuscole</td>
+    </tr>
+    <tr>
+      <td>suggestionLowerCase</td>
+      <td>string</td>
+      <td>Una o più minuscole.</td>
+      <td>Uso di lettere minuscole</td>
+    </tr>
+    <tr>
+      <td>suggestionNumber</td>
+      <td>string</td>
+      <td>Una o più mumero.</td>
+      <td>Uso di numeri</td>
+    </tr>
+    <tr>
+      <td>suggestionSpecial</td>
+      <td>string</td>
+      <td>Uno o più caratteri speciali.</td>
+      <td>Uso di caratteri speciali</td>
     </tr>
   </tbody>
 </table>
+
+#### Metodi
+
+<div class="table-responsive">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th style="width: 150px;">Metodo</th>
+        <th>Descrizione</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% include standard-methods.html class="InputPassword" %}
+    </tbody>
+  </table>
+</div>
 
 ## Ricerca con autocompletamento
 
