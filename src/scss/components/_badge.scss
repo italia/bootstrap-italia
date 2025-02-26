@@ -2,35 +2,27 @@
   --#{$prefix}badge-padding-x: var(--#{$prefix}spacing-xs);
   --#{$prefix}badge-padding-y: var(--#{$prefix}spacing-3xs);
   --#{$prefix}badge-font-weight: var(--#{$prefix}font-weight-solid);
-  --#{$prefix}badge-color: var(--#{$prefix}color-text-inverse);
+  --#{$prefix}badge-text-color: var(--#{$prefix}color-text-inverse);
   --#{$prefix}badge-border-radius: var(--#{$prefix}radius-smooth);
   --#{$prefix}badge-font-size: var(--#{$prefix}label-font-size-s);
   --#{$prefix}badge-font-size-relative: 0.75em;
 
   display: inline-block;
   padding: var(--#{$prefix}badge-padding-y) var(--#{$prefix}badge-padding-x);
-  color: var(--#{$prefix}badge-color);
-  // font-size: var(--#{$prefix}badge-font-size);
+  color: var(--#{$prefix}badge-text-color);
+  // font-size: var(--#{$prefix}badge-font-size-relative);
   font-weight: var(--#{$prefix}badge-font-weight);
   line-height: 1;
   text-align: center;
   vertical-align: baseline;
   white-space: nowrap;
   transition:
-    color 0.15s ease-in-out,
-    background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out,
-    box-shadow 0.15s ease-in-out;
+    color var(--#{$prefix}transition-instant) ease-in-out,
+    background-color var(--#{$prefix}transition-instant) ease-in-out,
+    border-color var(--#{$prefix}transition-instant) ease-in-out,
+    box-shadow var(--#{$prefix}transition-instant) ease-in-out;
   @include rfs($badge-font-size, --#{$prefix}badge-font-size);
   @include border-radius(var(--#{$prefix}badge-border-radius));
-  // @include gradient-bg();
-  // @each $color, $value in $status {
-  //   &.badge-outline-#{$color} {
-  //     border: 1px solid $value;
-  //     background-color: transparent !important;
-  //     color: $value;
-  //   }
-  // }
 
   // Empty badges collapse automatically
   &:empty {
@@ -62,10 +54,24 @@
   }
 }
 
-// a.badge:hover {
-//   @each $color, $value in $status {
-//     &.badge-#{$color} {
-//       background-color: shade-color($value, 20%) !important;
-//     }
-//   }
-// }
+// Hover state
+a.badge:hover {
+  color: var(--#{$prefix}badge-text-color);
+
+  // Loop through theme colors to generate contextual modifier classes for colorizing the badge
+  @each $color, $value in $colors-palette {
+    &.badge-#{$color} {
+      @if $color == 'primary' {
+        background-color: var(--#{$prefix}color-background-primary-hover)
+      } @else if $color == 'secondary' {
+        background-color: var(--#{$prefix}color-background-secondary-hover)
+      } @else if $color == 'success' {
+        background-color: var(--#{$prefix}color-background-success-hover)
+      } @else if $color == 'warning' {
+        background-color: var(--#{$prefix}color-background-warning-hover)
+      } @else if $color == 'danger' {
+        background-color: var(--#{$prefix}color-background-danger-hover)
+      }
+    }
+  }
+}
