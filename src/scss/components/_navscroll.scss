@@ -4,44 +4,44 @@
     background: $navscroll-bg-color;
 
     .it-back-button {
-      padding: $navscroll-backbutton-padding;
-      font-weight: $navscroll-backbutton-weight;
-      box-shadow: $navscroll-bottom-box-shadow;
-      text-decoration: none;
       position: fixed;
       top: 0;
-      left: 0;
       right: 0;
-      background: $navscroll-bg-color;
+      left: 0;
       z-index: 10;
       visibility: hidden;
+      padding: $navscroll-backbutton-padding;
       opacity: 0;
+      background: $navscroll-bg-color;
+      box-shadow: $navscroll-bottom-box-shadow;
+      font-weight: $navscroll-backbutton-weight;
+      text-decoration: none;
       transition:
         opacity 0.3s 0s,
         visibility 0s 0.3s;
       i {
-        transform: scale(0.8);
-        transform-origin: center;
         display: inline-block;
         margin-right: $v-gap;
+        transform: scale(0.8);
+        transform-origin: center;
       }
       &.show {
+        visibility: visible;
+        opacity: 1;
         transition:
           opacity 0.3s 0s,
           visibility 0s 0s;
-        visibility: visible;
-        opacity: 1;
       }
     }
     .link-list-wrapper {
       ul {
         li {
           a {
+            padding-top: $navscroll-links-padding;
+            padding-bottom: $navscroll-links-padding;
             font-size: $navscroll-font-size;
             font-weight: $navscroll-primary-font-weight;
             line-height: $navscroll-font-size;
-            padding-top: $navscroll-links-padding;
-            padding-bottom: $navscroll-links-padding;
             &.active {
               border-left: $navscroll-selection-link-left;
               span {
@@ -57,11 +57,11 @@
               a {
                 font-weight: 400;
                 &.active {
-                  font-weight: normal;
                   border-left: none;
+                  font-weight: normal;
                   span {
-                    text-decoration: underline;
                     color: $navscroll-secondary-active-color;
+                    text-decoration: underline;
                   }
                 }
               }
@@ -71,56 +71,56 @@
       }
     }
     h3 {
-      font-weight: $sidebar-heading-font-weight;
-      margin-bottom: $sidebar-heading-bottom-margin;
-      font-size: $sidebar-heading-text-size;
       margin-top: $sidebar-heading-margin-top;
+      margin-bottom: $sidebar-heading-bottom-margin;
+      padding-right: $v-gap * 3;
+      padding-left: $v-gap * 3;
+      font-size: $sidebar-heading-text-size;
+      font-weight: $sidebar-heading-font-weight;
       letter-spacing: $sidebar-heading-letter-spacing;
       text-transform: uppercase;
-      padding-left: $v-gap * 3;
-      padding-right: $v-gap * 3;
     }
     .custom-navbar-toggler {
       display: flex;
-      color: $navscroll-toggler-color;
       align-items: center;
+      color: $navscroll-toggler-color;
       font-weight: $navscroll-button-text-weight;
       cursor: pointer;
       span.it-list {
-        color: $navscroll-toggler-color;
         margin-right: $v-gap;
+        color: $navscroll-toggler-color;
       }
     }
     .custom-navbar-progressbar {
       position: absolute;
-      left: 0;
       right: 0;
       bottom: 0;
+      left: 0;
     }
     .menu-wrapper {
-      padding: $v-gap * 10 0 $v-gap * 3;
       right: 0;
+      padding: $v-gap * 10 0 $v-gap * 3;
     }
   }
   // bottom position
   &.it-bottom-navscroll {
-    box-shadow: $navscroll-bottom-box-shadow;
     position: fixed;
+    top: auto;
+    right: 0;
     bottom: 0;
     left: 0;
-    right: 0;
-    top: auto;
     z-index: 99999;
+    box-shadow: $navscroll-bottom-box-shadow;
   }
   // top position
   &.it-top-navscroll {
-    box-shadow: $navscroll-top-box-shadow;
     position: fixed;
     top: 0;
-    left: 0;
     right: 0;
     bottom: auto;
+    left: 0;
     z-index: 8;
+    box-shadow: $navscroll-top-box-shadow;
   }
 }
 //Tablet horizontal / small desktop
@@ -138,11 +138,11 @@
         ul {
           li {
             a {
+              padding-top: $navscroll-links-padding;
+              padding-bottom: $navscroll-links-padding;
               font-size: $navscroll-font-size;
               font-weight: $navscroll-primary-font-weight;
               line-height: $navscroll-font-size;
-              padding-top: $navscroll-links-padding;
-              padding-bottom: $navscroll-links-padding;
               &.active {
                 border-left: $navscroll-selection-link-left;
                 span {
@@ -158,11 +158,11 @@
                 a {
                   font-weight: 400;
                   &.active {
-                    font-weight: normal;
                     border-left: none;
+                    font-weight: normal;
                     span {
-                      text-decoration: underline;
                       color: $navscroll-secondary-active-color;
+                      text-decoration: underline;
                     }
                   }
                 }
@@ -172,14 +172,14 @@
         }
       }
       h3 {
-        font-weight: $sidebar-heading-font-weight;
-        margin-bottom: $sidebar-heading-bottom-margin;
-        font-size: $sidebar-heading-text-size;
         margin-top: $sidebar-heading-margin-top;
+        margin-bottom: $sidebar-heading-bottom-margin;
+        padding-right: $v-gap * 3;
+        padding-left: $v-gap * 3;
+        font-size: $sidebar-heading-text-size;
+        font-weight: $sidebar-heading-font-weight;
         letter-spacing: $sidebar-heading-letter-spacing;
         text-transform: uppercase;
-        padding-left: $v-gap * 3;
-        padding-right: $v-gap * 3;
       }
       .custom-navbar-toggler {
         display: none;
@@ -191,25 +191,25 @@
     }
     // bottom position
     &.it-bottom-navscroll {
-      box-shadow: none;
       position: inherit;
       z-index: 9;
+      box-shadow: none;
       &.affix-top {
         position: sticky;
         top: 0;
-        left: inherit;
         right: inherit;
+        left: inherit;
       }
     }
     // top position
     &.it-top-navscroll {
-      box-shadow: none;
       position: inherit;
+      box-shadow: none;
       &.affix-top {
         position: sticky;
         top: 0;
-        left: inherit;
         right: inherit;
+        left: inherit;
       }
     }
     // left line
