@@ -196,7 +196,11 @@ Nell'esempio che segue la struttura è colonnare simmetrica nella versione deskt
 ### Attivazione tramite codice
 
 {% capture callout %}
-Per l'attivazione del relativo JavaScript è importante che il componente che contiene la struttura, abbia l'attributo `data-bs-transfer`
+Per l'attivazione automatica del relativo JavaScript è importante 
+che il componente che contiene la struttura abbia l'attributo `data-bs-transfer`.
+
+In alternativa si può istanziare il componente utilizzando il costruttore come nel
+seguente esempio.
 {% endcapture %}{% include callout.html content=callout type="info" %}
 
 ```js
@@ -209,6 +213,20 @@ const transfer = new Transfer(transferElement, config);
 
 const transfer = Transfer.getOrCreateInstance(transferElement);
 ```
+
+#### Metodi
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th style="width: 150px;">Metodo</th>
+      <th>Descrizione</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% include standard-methods.html class="Transfer" %}
+  </tbody>
+</table>
 
 ## Breaking change
 

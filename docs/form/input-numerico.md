@@ -182,14 +182,33 @@ sufficiente aggiungere la classe `input-number-adaptive`.
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Attivazione tramite JavaScript
+### Attivazione tramite codice
 
 È possibile creare un'istanza con il constructor, ad esempio:
 
 ```js
-var inputElement = document.getElementById('inputNumber6')
-var inputNumber = new bootstrap.InputNumber(inputElement)
+import { InputNumber } from 'bootstrap-italia';
+
+const inputNumberEl = document.querySelector('#my-input-numbber');
+const inputNumber = new InputNumberEl(inputNumberEl, options);
 ```
+
+#### Metodi
+
+<div class="table-responsive">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th style="width: 150px;">Metodo</th>
+        <th>Descrizione</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% include standard-methods.html class="InputNumber" %}
+    </tbody>
+  </table>
+</div>
+
 
 ## Breaking change
 
