@@ -694,13 +694,6 @@ Per posizionare i tab verticali a destra contenuto è necessario applicare la cl
 
 ## Tab tipo Card
 
-{% capture callout %}
-Breaking feature dalla versione **2.13.0**
-
-Sono stati rimossi gli elementi delle liste con classe `nav-item-filler` per 
-tutte le tab di tipo `Card`.
-{% endcapture %}{% include callout.html content=callout type="danger" %}
-
 Aggiungere la classe `.nav-tabs-cards` al tag `ul` per ottenere un design tipo card.
 
 {% comment %}Example name: Con controllo pannelli, tipo card{% endcomment %}
@@ -803,28 +796,41 @@ Puoi attivare una navigazione a tab senza scrivere JavaScript, semplicemente uti
 </div>
 ```
 
-### Tramite JavaScript
+### Attivazione tramite codice
 
-Alternativamente, è possibile attivare i tab utilizzando JavaScript:
+Abilita le tab tramite JavaScript (ogni tab deve essere attivata individualmente):
 
 ```js
-var triggerTabList = [].slice.call(document.querySelectorAll('#myTab a'))
-triggerTabList.forEach(function (triggerEl) {
-  var tabTrigger = new bootstrap.Tab(triggerEl)
+import { Tab } from 'bootstrap-italia';
 
-  triggerEl.addEventListener('click', function (event) {
+const triggerTabList = [].slice.call(document.querySelectorAll('#myTab a'))
+triggerTabList.forEach(function (triggerEl) {
+  const tabTrigger = new Tab(triggerEl)
+
+  triggerEl.addEventListener('click', (event) => {
     event.preventDefault()
     tabTrigger.show()
   })
 })
 ```
 
-È possibile attivare tab individualmente in diversi modi:
+#### Metodi
 
-```js
-var triggerEl = document.querySelector('#myTab a[href="#profile"]')
-bootstrap.Tab.getInstance(triggerEl).show() // Select tab by name
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th style="width: 150px;">Metodo</th>
+      <th>Descrizione</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% include standard-methods.html class="Tab" %}
+  </tbody>
+</table>
 
-var triggerFirstTabEl = document.querySelector('#myTab li:first-child a')
-bootstrap.Tab.getInstance(triggerFirstTabEl).show() // Select first tab
-```
+## Breaking change
+
+{% capture callout %}
+Sono stati rimossi gli elementi delle liste con classe `nav-item-filler` per 
+tutte le tab di tipo `Card`.
+{% endcapture %}{% include callout-breaking.html content=callout version="2.13.0" type="danger" %}

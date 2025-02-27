@@ -186,23 +186,32 @@ In tal caso è necessario utilizzare l'attributo `data-bs-target`.
 
 È disponibile una <a href="{{ site.baseurl }}/docs/esempi/sticky-target/">pagina di esempio</a> dedicata a questa funzionalità per comprenderne appieno significato ed utilizzo.
 
-## Attivazione tramite JavaScript
+## Attivazione tramite codice
 
 È possibile creare un'istanza con il constructor, ad esempio:
 
 ```js
-var stickyElement = document.getElementById('sticky')
-var sticky = new bootstrap.Sticky(stickyElement, {
-  positionType: 'sticky',
-  stickyClassName: 'is-sticky',
-  stackable: true,
-  paddingTop: 0,
-})
+import { Sticky } from 'bootstrap-italia';
+
+const stickyElement = document.getElementById('sticky');
+const sticky = new Sticky(stickyElement, options);
 ```
 
 ### Opzioni
 
 Le opzioni possono essere passate tramite gli attributi data o tramite JavaScript. Per quanto riguarda gli attributi data, aggiungi il nome dell'opzione a `data-bs`, come in `data-bs-position-type=""`.
+
+```js
+import { Sticky } from 'bootstrap-italia';
+
+const stickyElement = document.getElementById('sticky');
+const sticky = new Sticky(stickyElement, {
+  positionType: 'sticky',
+  stickyClassName: 'is-sticky',
+  stackable: true,
+  paddingTop: 0,
+});
+```
 
 <table class="table table-bordered table-striped">
   <thead>
@@ -251,18 +260,7 @@ Le opzioni possono essere passate tramite gli attributi data o tramite JavaScrip
     </tr>
   </thead>
   <tbody>
-    <tr>    
-      <td>dispose</td>
-      <td>Elimina la funzionalità sticky dell'elemento.</td>
-    </tr>
-    <tr>
-      <td>getInstance</td>
-      <td>Metodo statico che restituisce l'istanza Sticky associata ad un elemento del DOM. Esempio: <code>bootstrap.Sticky.getInstance(element)</code></td>
-    </tr>
-    <tr>
-      <td>getOrCreateInstance</td>
-      <td>Metodo statico che restituisce un'istanza Sticky associata ad un elemento del DOM o ne crea una nuova nel caso non fosse stata inizializzata. Esempio: <code>bootstrap.Sticky.getOrCreateInstance(element)</code></td>
-    </tr>
+    {% include standard-methods.html class="Sticky" %}
   </tbody>
 </table>
 
@@ -290,8 +288,8 @@ La classe `Sticky` di Bootstrap espone alcuni eventi per agganciare comportament
 </table>
 
 ```js
-var stickyElement = document.getElementById('sticky')
-stickyElement.addEventListener('on.bs.sticky', function () {
+var stickyElement = document.getElementById('sticky');
+stickyElement.addEventListener('on.bs.sticky', () => {
   // do something...
 })
 ```

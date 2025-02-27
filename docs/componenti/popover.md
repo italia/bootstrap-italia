@@ -170,110 +170,281 @@ Per gli eventi dei popover disabilitati, potresti preferire `data-bs-trigger="ho
 </span>
 {% endcapture %}{% include example.html content=example %}
 
-## Implementazione
+## Attivazione tramite codice
 
 Abilita i popover tramite JavaScript:
 
 ```js
-var exampleEl = document.getElementById('example')
-var popover = new bootstrap.Popover(exampleEl, options)
+import { Popover } from 'bootstrap-italia';
+
+const exampleEl = document.getElementById('example');
+const popover = new Popover(exampleEl, options);
 ```
 
 ### Opzioni
 
 Le opzioni possono essere passate tramite attributi data o tramite JavaScript. Per gli attributi data, aggiungi l'opzione nome a `data-bs-`, come in `data-bs-animation=""`.
 
-Per ulteriori informazioni si rimanda alla sezione [popovers](https://getbootstrap.com/docs/{{ site.bootstrap_minor }}/components/popovers/) del sito di Bootstrap.
-
-Inizializza i popover per una raccolta di elementi.
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Tipo</th>
+            <th>Predefinito</th>
+            <th>Descrizione</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>allowList</code></td>
+            <td>oggetto</td>
+            <td><a href="https://getbootstrap.com/docs/{{ site.bootstrap_minor }}/getting-started/javascript/#sanitizer">Valore predefinito</a></td>
+            <td>Oggetto che contiene attributi e tag consentiti.</td>
+        </tr>
+        <tr>
+            <td><code>animazione</code></td>
+            <td>booleano</td>
+            <td><code>vero</code></td>
+            <td>Applica una transizione di dissolvenza CSS al popover.</td>
+        </tr>
+        <tr>
+            <td><code>boundary</code></td>
+            <td>string, element</td>
+            <td><code>'clippingParents'</code></td>
+            <td>Limite di vincolo di overflow del popover (si applica solo al modificatore preventOverflow di Popper).
+                Per impostazione predefinita, è <code>'clippingParents'</code> e può accettare un riferimento
+                HTMLElement (solo tramite JavaScript). Per maggiori informazioni, fare riferimento alla <a
+                    href="https://popper.js.org/docs/v2/utils/detect-overflow/#boundary">documentazione
+                    detectOverflow</a> di Popper.</td>
+        </tr>
+        <tr>
+            <td><code>contenitore</code></td>
+            <td>stringa, elemento, false</td>
+            <td><code>false</code></td>
+            <td>Aggiunge il popover a un elemento specifico. Esempio: <code>contenitore: 'corpo'</code>. Questa opzione
+                è particolarmente utile in quanto consente di posizionare il popover nel flusso del documento vicino
+                all'elemento di attivazione, il che impedirà al popover di allontanarsi dall'elemento di attivazione
+                durante il ridimensionamento della finestra.</td>
+        </tr>
+        <tr>
+            <td><code>content</code></td>
+            <td>stringa, elemento, funzione</td>
+            <td><code>''</code></td>
+            <td>Valore del contenuto predefinito se l'attributo <code>data-bs-content</code> non è presente. Se viene
+                specificata una funzione,
+                verrà chiamata con il suo riferimento <code>this</code> impostato sull'elemento a cui è collegato il
+                popover.</td>
+        </tr>
+        <tr>
+            <td><code>customClass</code></td>
+            <td>stringa, funzione</td>
+            <td><code>''</code></td>
+            <td>Aggiungi classi al popover quando viene visualizzato. Nota che queste classi saranno aggiunte in
+                aggiunta a qualsiasi classe specificata nel modello. Per aggiungere più classi, separale con spazi:
+                <code>'class-1 class-2'</code>. Puoi anche passare una funzione che dovrebbe restituire una singola
+                stringa contenente nomi di classi aggiuntivi.
+            </td>
+        </tr>
+        <tr>
+            <td><code>delay</code></td>
+            <td>number, object</td>
+            <td><code>0</code></td>
+            <td>Ritardo nella visualizzazione e nell'occultamento del popover (ms): non si applica al tipo di trigger
+                manuale. Se viene fornito un numero, il ritardo viene applicato sia a hide/show. La struttura
+                dell'oggetto è: <code>delay: { "show": 500, "hide": 100 }</code>.
+            </td>
+        </tr>
+        <tr>
+            <td><code>fallbackPlacements</code></td>
+            <td>string, array</td>
+            <td><code>['top', 'right', 'bottom', 'left']</code></td>
+            <td>Definisci i posizionamenti di fallback fornendo un elenco di posizionamenti in array (in ordine di
+                preferenza). Per maggiori informazioni, fare riferimento alla <a
+                    href="https://popper.js.org/docs/v2/modifiers/flip/#fallbackplacements">documentazione sul
+                    comportamento</a> di Popper.</td>
+        </tr>
+        <tr>
+            <td><code>html</code></td>
+            <td>booleano</td>
+            <td><code>false</code></td>
+            <td>Consenti HTML nel popover. Se è vero, i tag HTML nel <code>title</code> del popover verranno
+                renderizzati nel popover. Se è falso, verrà utilizzata la proprietà <code>innerText</code> per inserire
+                il contenuto nel DOM. Usa
+                text se sei preoccupato per gli attacchi XSS.</td>
+        </tr>
+        <tr>
+            <td><code>offset</code></td>
+            <td>numero, stringa, funzione</td>
+            <td><code>[0, 0]</code></td>
+            <td>Offset del popover rispetto al suo target. Puoi passare una stringa negli attributi dati con valori
+                separati da virgole come: <code>data-bs-offset="10,20"</code>. Quando una funzione viene utilizzata per
+                determinare l'offset, viene chiamata con un oggetto contenente il posizionamento del popper, il
+                riferimento e i rettangoli del popper come
+                primo argomento. Il nodo DOM dell'elemento di attivazione viene passato come secondo argomento. La
+                funzione deve restituire un array con due numeri: <a
+                    href="https://popper.js.org/docs/v2/modifiers/offset/#skidding-1">skidding</a>, <a
+                    href="https://popper.js.org/docs/v2/modifiers/offset/#distance-1">distance</a>. Per maggiori
+                informazioni, fare riferimento a <a
+                    href="https://popper.js.org/docs/v2/modifiers/offset/#options">offset docs</a>.
+            </td>
+        </tr>
+        <tr>
+            <td><code>posizionamento</code></td>
+            <td>stringa, funzione</td>
+            <td><code>'top'</code></td>
+            <td>Come posizionare il popover: auto, top, bottom, left, right. Quando viene specificato <code>auto</code>,
+                riorienterà dinamicamente il popover. Quando viene utilizzata una funzione per determinare il
+                posizionamento, viene chiamata
+                con il nodo DOM del popover come primo argomento e il nodo DOM dell'elemento di attivazione come
+                secondo. Il contesto
+                <code>this</code> è impostato sull'istanza del popover.
+            </td>
+        </tr>
+        <tr>
+            <td><code>popperConfig</code></td>
+            <td>null, oggetto, function</td>
+            <td><code>null</code></td>
+            <td>Per modificare la configurazione Popper predefinita di Bootstrap, vedere <a
+                    href="https://popper.js.org/docs/v2/constructors/#options">Configurazione di Popper</a>. Quando una
+                funzione viene utilizzata per creare la configurazione Popper, viene chiamata con un oggetto che
+                contiene la
+                configurazione Popper predefinita di Bootstrap. Ti aiuta a utilizzare e unire la configurazione
+                predefinita con la tua
+                configurazione. La funzione deve restituire un oggetto di configurazione per Popper.</td>
+        </tr>
+        <tr>
+            <td><code>sanitize</code></td>
+            <td>boolean</td>
+            <td><code>true</code></td>
+            <td>Abilita o disabilita la sanificazione. Se attivate le opzioni <code>'template'</code>,
+                <code>'content'</code> e
+                <code>'title'</code> verranno sanificate.
+            </td>
+        </tr>
+        <tr>
+            <td><code>sanitizeFn</code></td>
+            <td>null, function</td>
+            <td><code>null</code></td>
+            <td>Qui puoi fornire la tua funzione di sanificazione. Ciò può essere utile se preferisci utilizzare una
+                libreria dedicata per eseguire la sanificazione.</td>
+        </tr>
+        <tr>
+            <td><code>selector</code></td>
+            <td>string, false</td>
+            <td><code>false</code></td>
+            <td>Se viene fornito un selettore, gli oggetti popover verranno delegati ai target specificati. In pratica,
+                questo
+                viene utilizzato anche per applicare popover agli elementi DOM aggiunti dinamicamente (supporto
+                <code>jQuery.on</code>). Vedere
+                <a href="https://github.com/twbs/bootstrap/issues/4215">questo problema</a> e <a
+                    href="https://codepen.io/Johann-S/pen/djJYPb">un esempio informativo</a>. <strong>Nota</strong>:
+                l'attributo <code>title</code> non deve essere utilizzato come selettore.
+            </td>
+        </tr>
+        <tr>
+            <td><code>template</code></td>
+            <td>string</td>
+            <td><code>'&lt;div class="popover" role="popover"&gt;&lt;div class="popover-arrow"&gt;&lt;/div&gt;&lt;div class="popover-inner"&gt;&lt;/div&gt;&lt;/div&gt;'</code>
+            </td>
+            <td>HTML di base da utilizzare durante la creazione del popover. Il <code>title</code> del popover verrà
+                iniettato in
+                <code>.popover-inner</code>. <code>.popover-arrow</code> diventerà la freccia del popover. L'elemento
+                wrapper più esterno dovrebbe avere la classe <code>.popover</code> e <code>role="popover"</code>.
+            </td>
+        </tr>
+        <tr>
+            <td><code>title</code></td>
+            <td>stringa, elemento, funzione</td>
+            <td><code>''</code></td>
+            <td>Valore predefinito del titolo se l'attributo <code>title</code> non è presente. Se viene fornita una
+                funzione, verrà
+                chiamata con il suo riferimento <code>this</code> impostato sull'elemento a cui è collegato il popover.
+            </td>
+        </tr>
+        <tr>
+            <td><code>trigger</code></td>
+            <td>stringa</td>
+            <td><code>'hover focus'</code></td>
+            <td>Come viene attivato il popover: clic, hover, focus, manuale. Puoi passare più trigger; separali
+                con uno spazio. <code>'manual'</code> indica che il popover verrà attivato a livello di programmazione
+                tramite
+                i metodi <code>.popover('show')</code>, <code>.popover('hide')</code> e <code>.popover('toggle')</code>;
+                questo valore non può essere combinato con nessun altro trigger. <code>'hover'</code> da solo
+                genererà popover che non possono essere attivati ​​tramite la tastiera e dovrebbe essere utilizzato solo
+                se sono presenti metodi alternativi per trasmettere le stesse informazioni agli utenti della tastiera.
+            </td>
+        </tr>
+    </tbody>
+</table>
 
 ### Metodi
 
 {% include callout-danger-async-methods.md %}
 
-#### `show`
-
-Mostra il popover di un elemento. **Ritorna al chiamante prima che il popover sia stato effettivamente mostrato** (prima che si verifichi l'evento `shown.bs.popover`). Questo è considerato un'attivazione "manuale" del popover. I popover senza nè titoli nè contenuto non vengono mai visualizzati.
-
-```js
-myPopover.show()
-```
-
-#### `hide`
-
-Nasconde il popover di un elemento. **Ritorna al chiamante prima che il popover sia stato effettivamente nascosto** (prima che si verifichi l'evento `hidden.bs.popover`). Questo è considerato un'attivazione "manuale" del popover.
-
-```js
-myPopover.hide()
-```
-
-#### `toggle`
-
-Attiva/disattiva il popover di un elemento. **Ritorna al chiamante prima che il popover sia stato effettivamente mostrato o nascosto** (prima che si verifichi l'evento `shown.bs.popover` o l'evento `hidden.bs.popover`). Questo è considerato un'attivazione "manuale" del popover.
-
-```js
-myPopover.toggle()
-```
-
-#### `dispose`
-
-Nasconde e distrugge il popover di un elemento.
-
-```js
-myPopover.dispose()
-```
-
-#### `enable`
-
-Fornisce al popover di un elemento la possibilità di essere mostrato. **I popover sono abilitati in modo predefinito.**
-
-```js
-myPopover.enable()
-```
-
-#### `disable`
-
-Rimuove la capacità di mostrare il popover di un elemento. Il popover potrà essere mostrato solo se è riattivato.
-
-```js
-myPopover.disable()
-```
-
-#### `toggleEnabled`
-
-Attiva/disattiva la possibilità che il popover di un elemento sia mostrato o nascosto.
-
-```js
-myPopover.toggleEnabled()
-```
-
-#### `update`
-
-Aggiorna la posizione del popover di un elemento.
-
-```js
-myPopover.update()
-```
-
-#### `getInstance`
-
-Static method which allows you to get the popover instance associated with a DOM element
-
-```js
-var exampleTriggerEl = document.getElementById('example')
-var popover = bootstrap.Popover.getInstance(exampleTriggerEl) // Returns a Bootstrap popover instance
-```
-
-#### `getOrCreateInstance`
-
-Static method which allows you to get the popover instance associated with a DOM element, or create a new one in case it wasn’t initialised
-
-```js
-var exampleTriggerEl = document.getElementById('example')
-var popover = bootstrap.Popover.getOrCreateInstance(exampleTriggerEl) // Returns a Bootstrap popover instance
-```
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Metodo</th>
+      <th>Descrizione</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% include standard-methods.html class="Popover" %}
+    <tr>
+      <td><code>disable</code></td>
+      <td>Rimuove la possibilità di mostrare il popover di un elemento. Il popover potrà essere mostrato solo se
+        viene riattivato.</td>
+    </tr>
+    <tr>
+      <td><code>enable</code></td>
+      <td>Conferisce al popover di un elemento la possibilità di essere visualizzato. <strong>I popover sono abilitati
+          per impostazione predefinita.</strong>
+      </td>
+    </tr>
+    <tr>
+      <td><code>hide</code></td>
+      <td>Nasconde il popover di un elemento. <strong>Torna al chiamante prima che il popover sia stato effettivamente
+          nascosto</strong> (ad esempio prima che si verifichi l'evento <code>hidden.bs.popover</code>). Questo è
+        considerato un trigger "manuale" del popover.</td>
+    </tr>
+    <tr>
+      <td><code>setContent</code></td>
+      <td>Fornisce un modo per modificare il contenuto del popover dopo la sua inizializzazione.</td>
+    </tr>
+    <tr>
+      <td><code>show</code></td>
+      <td>Rivela il popover di un elemento. <strong>Ritorna al chiamante prima che il popover sia stato effettivamente
+          mostrato</strong> (ad esempio prima che si verifichi l'evento <code>shown.bs.popover</code>). Questo è
+        considerato un trigger "manuale" del popover. I popover il cui titolo e contenuto sono entrambi di lunghezza
+        zero non vengono mai
+        visualizzati.</td>
+    </tr>
+    <tr>
+      <td><code>toggle</code></td>
+      <td>Attiva/disattiva il popover di un elemento. <strong>Ritorna al chiamante prima che il popover sia stato
+          effettivamente mostrato
+          o nascosto</strong> (ad esempio prima che si verifichi l'evento <code>shown.bs.popover</code> o
+        <code>hidden.bs.popover</code>). Questo è considerato un'attivazione "manuale" del popover.</td>
+    </tr>
+    <tr>
+      <td><code>toggleEnabled</code></td>
+      <td>Attiva o disattiva la possibilità che il popover di un elemento venga mostrato o nascosto.</td>
+    </tr>
+    <tr>
+      <td><code>update</code></td>
+      <td>Aggiorna la posizione del popover di un elemento.</td>
+    </tr>
+  </tbody>
+</table>
 
 ### Eventi
+
+```js
+const myPopoverTrigger = document.getElementById('myPopover')
+myPopoverTrigger.addEventListener('hidden.bs.popover', function () {
+  // do something...
+})
+```
 
 <table class="table table-bordered table-striped">
   <thead>
@@ -306,9 +477,3 @@ var popover = bootstrap.Popover.getOrCreateInstance(exampleTriggerEl) // Returns
   </tbody>
 </table>
 
-```js
-var myPopoverTrigger = document.getElementById('myPopover')
-myPopoverTrigger.addEventListener('hidden.bs.popover', function () {
-  // do something...
-})
-```

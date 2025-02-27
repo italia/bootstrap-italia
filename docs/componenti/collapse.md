@@ -87,14 +87,25 @@ Basta aggiungere `data-bs-toggle="collapse"` e un `data-bs-target` all'elemento 
 
 Per aggiungere un'impostazione tipo accordion ad un'area richiudibile, aggiungi l'attributo `data-bs-parent="#selector"`.
 
-### Tramite JavaScript
+## Attivazione tramite codice
 
 È possibile abilitare manualmente un collapse con:
 
 ```js
-var collapseElementList = [].slice.call(document.querySelectorAll('.collapse'))
-var collapseList = collapseElementList.map(function (collapseEl) {
-  return new bootstrap.Collapse(collapseEl)
+import { Collapse } from 'bootstrap-italia';
+
+const collapseElementList = document.querySelectorAll('.collapse');
+collapseElementList.forEach((collapseEl) => {
+  return new Collapse(collapseEl);
+})
+```
+
+Un esempio con le opzioni di configurazione
+
+```js
+const collapseEl = document.getElementById('myCollapse')
+const collapse = new Collapse(collapseEl, {
+  toggle: false,
 })
 ```
 
@@ -114,7 +125,7 @@ Le opzioni possono essere passate tramite gli attributi data o tramite JavaScrip
   <tbody>
     <tr>
       <td>parent</td>
-      <td>selector | jQuery object | DOM element </td>
+      <td>selector | DOM element </td>
       <td>false</td>
       <td>Se presente un genitore, allora tutti gli elementi comprimibili sotto il genitore specificato verranno chiusi quando viene mostrato questo elemento richiudibile. (simile al tradizionale comportamento dell'accordion - questo dipende dalla classe <code>card</code> class). L'attributo deve essere impostato sull'area collassabile associata.</td>
     </tr>
@@ -130,19 +141,6 @@ Le opzioni possono essere passate tramite gli attributi data o tramite JavaScrip
 ### Metodi
 
 {% include callout-danger-async-methods.md %}
-
-#### `.collapse(options)`
-
-Attiva i tuoi contenuti come elementi richiudibili. Accetta un'opzione facoltativa `object`.
-
-È possibile creare un'istanza con il constructor, ad esempio:
-
-```js
-var myCollapse = document.getElementById('myCollapse')
-var bsCollapse = new bootstrap.Collapse(myCollapse, {
-  toggle: false,
-})
-```
 
 <table class="table table-bordered table-striped">
   <thead>
@@ -168,20 +166,19 @@ var bsCollapse = new bootstrap.Collapse(myCollapse, {
       <td>dispose</td>
       <td>Elimina la possibilità di un elemento di essere richiudibile.</td>
     </tr>
-    <tr>
-      <td>getInstance</td>
-      <td>Metodo statico che restituisce l'istanza collapse associata ad un elemento del DOM. Esempio: <code>bootstrap.Collapse.getInstance(element)</code></td>
-    </tr>
-    <tr>
-      <td>getOrCreateInstance</td>
-      <td>Metodo statico che restituisce un'istanza collapse associata ad un elemento del DOM o ne crea una nuova nel caso non fosse stata inizializzata. Esempio: <code>bootstrap.Collapse.getOrCreateInstance(element)</code></td>
-    </tr>
   </tbody>
 </table>
 
 ### Eventi
 
-La classe `.collapse` di Bootstrap espone alcuni eventi per agganciare comportamenti alla funzionalità di apertura/chiusura attraverso JavaScript.
+Sono disponibili alcuni eventi per agganciare comportamenti alla funzionalità di apertura/chiusura attraverso JavaScript.
+
+```js
+const collapsible = document.getElementById('myCollapsible')
+collapsible.addEventListener('hidden.bs.collapse', () => {
+  // do something...
+})
+```
 
 <table class="table table-bordered table-striped">
   <thead>
@@ -209,10 +206,3 @@ La classe `.collapse` di Bootstrap espone alcuni eventi per agganciare comportam
     </tr>
   </tbody>
 </table>
-
-```js
-var myCollapsible = document.getElementById('myCollapsible')
-myCollapsible.addEventListener('hidden.bs.collapse', function () {
-  // do something...
-})
-```

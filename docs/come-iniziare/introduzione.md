@@ -62,6 +62,8 @@ Per includere questo file all'interno del proprio progetto sarà sufficiente agg
 
 All'interno della cartella `js` saranno invece presenti il file di bundle, il file non bundle e i componenti suddivisi in moduli.
 
+I vari componenti sono inizializzati (salvo casi particolari specificati nella documentazione del singolo componente) grazie all'utilizzo dell'attributo `data-bs-target` specifico per ogni componente. Questo attributo deve essere utilizzato esclusivamente nel caso in cui si desidera che i componenti siano inizializzati in maniera automatica, in caso contrario questo attributo deve essere omesso.
+
 #### Versione bundle
 
 In questo caso, dopo aver copiato i file all'interno del progetto, sarà sufficiente inserire una versione dei tag `<script>` di seguito riportati alla fine della pagina HTML, giusto prima della chiusura del tag `</body>`. Si potrà quindi includere la libreria in questo modo:
@@ -85,13 +87,13 @@ Per la versione non bundle, dopo aver copiato i file all'interno del progetto, s
 
 #### Moduli
 
-In alternativa se si vogliono utilizzare i moduli, è possibile importare e utilizzare singolarmente i vari componenti. Di seguito un esempio di cui potete trovare l'intero esempio completo [qui](https://github.com/astagi/demo-bsitalia-2).
+In alternativa se si vogliono utilizzare i moduli, è possibile importare e utilizzare singolarmente i vari componenti. Di seguito un esempio (potete trovare [qui](https://github.com/astagi/demo-communitylabs-bsi) un esempio completo con l'utilzzo di Rollup).
 
 ```js
 import { Carousel, Alert, Notification, Tooltip, Sticky, loadFonts } from 'bootstrap-italia'
 
 
-new Carousel(document.getElementById('myCarousel'))
+const carousel = new Carousel(document.getElementById('myCarousel'))
 
 const alert = new Alert(document.getElementsByClassName('alert')[0])
 
@@ -118,6 +120,8 @@ notification.show()
 
 loadFonts()
 ```
+
+{% include callout-danger-async-methods.md %}
 
 ### Fonts
 
@@ -378,12 +382,6 @@ $font-path: "/fonts";
 
 #### Via JavaScript
 
-{% capture callout %}
-Breaking feature dalla versione **2.2.0**
-{% endcapture %}{% include callout.html content=callout type="danger" %}
-
-Per caricare i font utilizzando JavaScript occorre chiamare **esplicitamente** la funzione `loadFonts` passando il percorso della cartella dove si trovano i font.
-
 ```html
 <script>
   bootstrap.loadFonts('/bootstrap-italia/dist/fonts');
@@ -461,3 +459,17 @@ Infine, per _normalizzare_ alcuni comportamenti cross-browser, Bootstrap Italia 
 
 Se ti interessa contribuire alla libreria e sapere come funziona il processo di compilazione dei file e la creazione della documentazione di Bootstrap Italia,
 continua a leggere alla pagina [strumenti di compilazione e contribuzione]({{ site.baseurl }}/docs/come-iniziare/strumenti-di-compilazione/).
+
+
+## Breaking change
+
+{% capture callout %}
+Per caricare i font utilizzando JavaScript occorre chiamare **esplicitamente** la funzione `loadFonts` passando il percorso della cartella dove si trovano i font.
+{% endcapture %}{% include callout-breaking.html version="2.2.0" content=callout type="danger" %}
+
+{% capture callout %}
+Il `focus` con la tastiera viene adesso settato con l'attributo `datadata-focus-mouse`
+invece che con la classe `focus--mouse`. Da tenere presente nel caso di un 
+precedente utilizzo della classe `focus--mouse` per un controllo e/o un' implementazione 
+ulteriore di accessibilità. 
+{% endcapture %}{% include callout-breaking.html version="2.14.0" content=callout type="danger" %}

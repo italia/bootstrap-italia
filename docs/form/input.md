@@ -21,38 +21,6 @@ Per il corretto funzionamento degli elementi di tipo `<input>` è di fondamental
 
 Per l'inserimento guidato di campi di tipo numerico si può anche utilizzare l'elemento dedicato che fornisce migliorie per la validazione e per l'esperienza complessiva, descritto alla [pagina dedicata all'input numerico]({{ site.baseurl }}/docs/form/input-numerico/).
 
-{% capture callout %}
-Breaking feature dalla versione **2.2.0**
-
-Quando si utilizza l'attributo `placeholder` o l'input parte già valorizzato assicurarsi di aggiungere alla label la classe **`active`** per impedire la sovrapposizione della label al campo.
-
-{% endcapture %}{% include callout.html content=callout type="danger" %}
-
-{% capture callout %}
-Breaking feature dalla versione **2.8.0**
-
-Rimosso l'elemento con classe `.input-group-prepend` in favore dell'elemento 
-con classe `.input-group-text`.
-{% endcapture %}{% include callout.html content=callout type="danger" %}
-
-{% capture callout %}
-Breaking feature dalla versione **2.10.0**
-
-Il campo di input di tipo Password è stato rivisto in chiave accessibilità e robustezza. In particolare cosa cambia: 
-  - L'elemento `input.input-password` ha ora il corretto attributo `aria-describedby` al posto di `aria-labelledby`.
-  - L'elemento `.password-icon` diventa un `button` con `role=switch` e uso dell'attributo `aria-checked` per lo stato.
-  - Rivisto l'ordine degli elementi nell'HTML per rispecchiare la struttura corretta degli elementi. 
-  - Alcuni elementi `small` o `span` diventano `p`, ad esempio per la personalizzazione con attributi `data` delle varianti più avanzate ci si rivolgerà verso l'elemento `p.strength-meter-info` e non più al generico `small.form-text`. 
-  - Rimosso il controllo per il Caps-lock inserito, per non interferire con i tasti modificatori delle tecnologie assistive.
-  - Aggiunta una variante con misuratore di sicurezza e suggerimenti. 
-{% endcapture %}{% include callout.html content=callout type="danger" %}
-{% capture callout %}
-Breaking feature dalla versione **2.11.0**
-
-Quando si utilizza un campo input diverso da `submit`, `file`, `radio` e `checkbox` è necessario sempre applicare la classe `form-control`.
-
-{% endcapture %}{% include callout.html content=callout type="danger" %}
-
 {% comment %}Example name: Varianti per tipo {% endcomment %}
 {% capture example %}
 <div>
@@ -202,6 +170,34 @@ Se per qualche motivo vuoi avere gli elementi `<input readonly>` nella forma sti
 </div>
 {% endcapture %}{% include example.html content=example %}
 
+### Attivazione tramite codice
+
+È possibile abilitare l'input con la label associata manualmente utilizzando 
+questo script:
+
+```js
+import { Input } from 'bootstrap-italia';
+
+const inputElement = document.querySelector('#my-input');
+const input = new Input(inputElement);
+```
+
+#### Metodi
+
+<div class="table-responsive">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th style="width: 150px;">Metodo</th>
+        <th>Descrizione</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% include standard-methods.html class="Input" %}
+    </tbody>
+  </table>
+</div>
+
 ## Input password
 
 Per rendere più semplice l'inserimento della password, il campo Input di tipo password è dotato di un pulsante che permette di mostrare i caratteri inseriti. Inoltre, è possibile abbinare una descrizione estesa che ne aiuti la compilazine, ad esempio in fase di scelta di una nuova password.  
@@ -316,131 +312,143 @@ Nel caso del campo di tipo password, è molto importante configurare correttamen
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-#### Personalizzazione
+### Attivazione tramite codice
 
-È possibile personalizzare le varianti con misuratore di sicurezza usando specifici attributi `data` dell'elemento `p.strength-meter-info`. 
-
-<table class="table table-bordered table-striped">
-  <thead>
-    <tr>
-      <th style="width: 220px;">Attributo data</th>
-      <th>Descrizione</th>
-      <th>Default</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>data-bs-minimum-length</code></td>
-      <td>Lunghezza minima per il calcolo della forza della password (soglia password troppo breve)</td>
-      <td>8</td>
-    </tr>
-    <tr>
-      <td><code>data-bs-short-pass</code></td>
-      <td>Testo per il punteggio di forza della password troppo breve</td>
-      <td>Password troppo breve.</td>
-    </tr>
-    <tr>
-      <td><code>data-bs-bad-pass</code></td>
-      <td>Testo per punteggio di forza della password basso</td>
-      <td>Password debole.</td>
-    </tr>
-    <tr>
-      <td><code>data-bs-good-pass</code></td>
-      <td>Testo per punteggio di forza della password buono</td>
-      <td>Password abbastanza sicura.</td>
-    </tr>
-    <tr>
-      <td><code>data-bs-strong-pass</code></td>
-      <td>Testo per il punteggio di forza della password massimo</td>
-      <td>Password sicura.</td>
-    </tr>  
-    <tr>
-      <td><code>data-bs-suggestions-label</code></td>
-      <td>Testo nascosto visivamente che precede l'elenco di suggerimenti</td>
-      <td>Suggerimenti per una buona password:</td>
-    </tr>
-    <tr>
-      <td><code>data-bs-suggestion-followed</code></td>
-      <td>Testo singolare per la parte finale di "1 di 5 suggerimenti seguito"</td>
-      <td>suggerimenti seguito</td>
-    </tr>
-    <tr>
-      <td><code>data-bs-suggestion-followed-plural</code></td>
-      <td>Testo plurale per la parte finale di "2 di 5 suggerimenti seguiti"</td>
-      <td>suggerimenti seguiti</td>
-    </tr>
-    <tr>
-      <td><code>data-bs-suggestion-of</code></td>
-      <td>Preposizione centrale per "2 di 5"</td>
-      <td>di</td>
-    </tr>
-    <tr>
-      <td><code>data-bs-suggestion-met-label</code></td>
-      <td>Aria-label per l'icona di suggerimento soddisfatto</td>
-      <td>Soddisfatto: </td>
-    </tr>
-    <tr>
-      <td><code>data-bs-suggestion-met-icon-path</code></td>
-      <td>Path per la forma dell'icona di suggerimento soddisfatto</td>
-      <td>M9.6 16.9 4 11.4l.8-.7 4.8 4.8 8.5-8.4.7.7-9.2 9.1z</td>
-    </tr>
-    <tr>
-      <td><code>data-bs-suggestion-length</code></td>
-      <td>Lunghezza minima della password</td>
-      <td>Almeno {minLength} caratteri.</td>
-    </tr>
-    <tr>
-      <td><code>data-bs-suggestion-uppercase</code></td>
-      <td>Uso di lettere maiuscole</td>
-      <td>Una o più maiuscole.</td>
-    </tr>
-    <tr>
-      <td><code>data-bs-suggestion-lowercase</code></td>
-      <td>Uso di lettere minuscole</td>
-      <td>Una o più minuscole.</td>
-    </tr>
-    <tr>
-      <td><code>data-bs-suggestion-number</code></td>
-      <td>Uso di numeri</td>
-      <td>Una o più mumero.</td>
-    </tr>
-    <tr>
-      <td><code>data-bs-suggestion-special</code></td>
-      <td>Uso di caratteri speciali</td>
-      <td>Uno o più caratteri speciali.</td>
-    </tr>
-  </tbody>
-</table>
-
-#### Attivazione tramite JavaScript
-
-Abilitarlo manualmente con:
+Per abilitare l'input password manualmente utilizzare il seguente codice:
 
 ```js
-var inputElement = document.querySelector('#exampleInputPassword'))
-var passwordComponent = new bootstrap.InputPassword(inputElement, {
-  minimumLength: 8,
-})
+import { InputPassword } from 'bootstrap-italia';
+
+const inputPswElement = document.querySelector('#my-input-psw');
+const inputPsw = new InputPassword(inputPswElement, options);
 ```
 
-Opzioni: 
+#### Opzioni
 
 <table class="table table-bordered table-striped">
   <thead>
     <tr>
-      <th style="width: 220px;">Attributo data</th>
+      <th>Nome</th>
+      <th>Tipo</th>
+      <th>Predefinito</th>
       <th>Descrizione</th>
-      <th>Default</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><code>minimumLength</code></td>
-      <td>Lunghezza minima per il calcolo della forza della password (soglia password troppo breve)</td>
+      <td>minimumLength</td>
+      <td>number</td>
       <td>8</td>
+      <td>Lunghezza minima per il calcolo della forza della password (soglia password troppo breve)</td>
+    </tr>
+    <tr>
+      <td>shortPass</td>
+      <td>string</td>
+      <td>Password troppo breve.</td>
+      <td>Testo per il punteggio di forza della password troppo breve</td>
+    </tr>
+    <tr>
+      <td>badPass</td>
+      <td>string</td>
+      <td>Password debole.</td>
+      <td>Testo per punteggio di forza della password basso</td>
+    </tr>
+    <tr>
+      <td>goodPass</td>
+      <td>string</td>
+      <td>Password abbastanza sicura.</td>
+      <td>Testo per punteggio di forza della password buono</td>
+    </tr>
+    <tr>
+      <td>strongPass</td>
+      <td>string</td>
+      <td>Password sicura.</td>
+      <td>Testo per il punteggio di forza della password massimo</td>
+    </tr>  
+    <tr>
+      <td>suggestionsLabel</td>
+      <td>string</td>
+      <td>Suggerimenti per una buona password:</td>
+      <td>Testo nascosto visivamente che precede l'elenco di suggerimenti</td>
+    </tr>
+    <tr>
+      <td>suggestionFollowed</td>
+      <td>string</td>
+      <td>suggerimenti seguito</td>
+      <td>Testo singolare per la parte finale di "1 di 5 suggerimenti seguito"</td>
+    </tr>
+    <tr>
+      <td>suggestionFollowedPlural</td>
+      <td>string</td>
+      <td>suggerimenti seguiti</td>
+      <td>Testo plurale per la parte finale di "2 di 5 suggerimenti seguiti"</td>
+    </tr>
+    <tr>
+      <td>suggestionOf</td>
+      <td>string</td>
+      <td>di</td>
+      <td>Preposizione centrale per "2 di 5"</td>
+    </tr>
+    <tr>
+      <td>suggestionMetLabel</td>
+      <td>string</td>
+      <td>Soddisfatto: </td>
+      <td>Aria-label per l'icona di suggerimento soddisfatto</td>
+    </tr>
+    <tr>
+      <td>suggestionMetIconPath</td>
+      <td>string</td>
+      <td>M9.6 16.9 4 11.4l.8-.7 4.8 4.8 8.5-8.4.7.7-9.2 9.1z</td>
+      <td>Path per la forma dell'icona di suggerimento soddisfatto</td>
+    </tr>
+    <tr>
+      <td>suggestionLength</td>
+      <td>string</td>
+      <td>Almeno {minLength} caratteri.</td>
+      <td>Lunghezza minima della password</td>
+    </tr>
+    <tr>
+      <td>suggestionUppercase</td>
+      <td>string</td>
+      <td>Una o più maiuscole.</td>
+      <td>Uso di lettere maiuscole</td>
+    </tr>
+    <tr>
+      <td>suggestionLowerCase</td>
+      <td>string</td>
+      <td>Una o più minuscole.</td>
+      <td>Uso di lettere minuscole</td>
+    </tr>
+    <tr>
+      <td>suggestionNumber</td>
+      <td>string</td>
+      <td>Una o più mumero.</td>
+      <td>Uso di numeri</td>
+    </tr>
+    <tr>
+      <td>suggestionSpecial</td>
+      <td>string</td>
+      <td>Uno o più caratteri speciali.</td>
+      <td>Uso di caratteri speciali</td>
     </tr>
   </tbody>
 </table>
+
+#### Metodi
+
+<div class="table-responsive">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th style="width: 150px;">Metodo</th>
+        <th>Descrizione</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% include standard-methods.html class="InputPassword" %}
+    </tbody>
+  </table>
+</div>
 
 ## Ricerca con autocompletamento
 
@@ -635,16 +643,68 @@ Cerca ad esempio _"Italia"_ per verificarne il comportamento.
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Attivazione tramite JavaScript
+### Attivazione tramite codice
 
 È possibile creare un'istanza con il constructor, ad esempio:
 
 ```js
-var inputElement = document.getElementById('autocomplete-test')
-var inputSearch = new bootstrap.InputSearch(inputElement, {
-  autocomplete: '{{ site.data.autocomplete.regioni | jsonify }}',
-})
+import { InputSearch } from 'bootstrap-italia';
+
+const inputElement = document.querySelector('#my-input-search');
+const inputSearch = new InputSearch(inputElement, options);
 ```
+
+#### Opzioni
+
+```js
+import { InputSearch } from 'bootstrap-italia';
+
+const inputElement = document.querySelector('#my-input-search');
+const inputSearch = new InputSearch(inputElement, {
+  autocomplete: '{{ site.data.autocomplete.regioni | jsonify }}'
+});
+```
+
+<div class="table-responsive">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Tipo</th>
+        <th>Predefinito</th>
+        <th>Descrizione</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>autocomplete</td>
+        <td>string</td>
+        <td></td>
+        <td>Stringa in formato JSON contenente i dati per la ricerca.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+#### Metodi
+
+<div class="table-responsive">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th style="width: 150px;">Metodo</th>
+        <th>Descrizione</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% include standard-methods.html class="InputSearch" %}
+      <tr>
+        <td>search</td>
+        <td>Richiama la funzionalità di ricerca.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 ## Area di testo
 
@@ -679,3 +739,28 @@ Includendo l'elemento all'interno di un `.form-group`, la label assumerà lo ste
     <input type="text" class="form-control form-control-sm" id="input-text-sm" placeholder="Inserisci il tuo nome">
   </div>
 {% endcapture %}{% include example.html content=example %}
+
+## Breaking change
+
+{% capture callout %}
+Quando si utilizza l'attributo `placeholder` o l'input parte già valorizzato assicurarsi di aggiungere alla label la classe **`active`** per impedire la sovrapposizione della label al campo.
+{% endcapture %}{% include callout-breaking.html content=callout version="2.2.0" type="danger" %}
+
+{% capture callout %}
+Rimosso l'elemento con classe `.input-group-prepend` in favore dell'elemento 
+con classe `.input-group-text`.
+{% endcapture %}{% include callout-breaking.html content=callout version="2.8.0" type="danger" %}
+
+{% capture callout %}
+Il campo di input di tipo Password è stato rivisto in chiave accessibilità e robustezza. In particolare cosa cambia: 
+  - L'elemento `input.input-password` ha ora il corretto attributo `aria-describedby` al posto di `aria-labelledby`.
+  - L'elemento `.password-icon` diventa un `button` con `role=switch` e uso dell'attributo `aria-checked` per lo stato.
+  - Rivisto l'ordine degli elementi nell'HTML per rispecchiare la struttura corretta degli elementi. 
+  - Alcuni elementi `small` o `span` diventano `p`, ad esempio per la personalizzazione con attributi `data` delle varianti più avanzate ci si rivolgerà verso l'elemento `p.strength-meter-info` e non più al generico `small.form-text`. 
+  - Rimosso il controllo per il Caps-lock inserito, per non interferire con i tasti modificatori delle tecnologie assistive.
+  - Aggiunta una variante con misuratore di sicurezza e suggerimenti. 
+{% endcapture %}{% include callout-breaking.html content=callout version="2.10.0" type="danger" %}
+
+{% capture callout %}
+Quando si utilizza un campo input diverso da `submit`, `file`, `radio` e `checkbox` è necessario sempre applicare la classe `form-control`.
+{% endcapture %}{% include callout-breaking.html content=callout version="2.11.0" type="danger" %}

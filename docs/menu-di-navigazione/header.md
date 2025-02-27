@@ -33,14 +33,6 @@ Il titolo del sito, "Nome dell'Istituzione" negli esempi, è contenuto in un `<d
 Maggiori dettagli sull'accessibilità del componente **megamenu** nella [relativa pagina]({{site.baseurl}}/docs/menu-di-navigazione/megamenu/).
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
-{% capture callout %}
-Breaking feature dalla versione **2.8.0**
-
-- Il toggle del dropdown diventa `<button>` invece di `<a>`. 
-- Gli altri elementi `<a>` che si comportano come toggle dropdown (eg. scelta Lingua), hanno l'aggiunta dell'attributo `role="button"`.
-- Il markup del Megamenu cambia come nel nuovo componente, per approfondire andare alla [relativa pagina]({{site.baseurl}}/docs/menu-di-navigazione/megamenu/).
-{% endcapture %}{% include callout.html content=callout type="danger" %}
-
 ## Slim Header
 
 Lo **Slim Header** mostra un'intestazione, solitamente con riferimento all'ente di appartenenza del progetto o riferimenti utili, oltre ad un eventuale menu per il cambio lingua e l'accesso ad area riservata.  
@@ -1507,33 +1499,70 @@ Verrà creata un'ombra per enfatizzare l'Header rispetto alla pagina in cui è c
 </header>
 {% endcapture %}{% include example.html content=example %}
 
-## Header Sticky
+## Attivazione tramite codice
 
-Affinché la testata rimanga visibile in formato ridotto anche allo scorrere della pagina, è sufficiente utilizzare la classe `.it-header-sticky` nell'elemento identificato con la classe `.it-header-wrapper`.
+L'unica funzionalità del componente `Header` che necessita l'attivazione tramite
+codice è quella in cui si desidera che lo stesso si comporti in maniera `sticky`
+ovvero con la testata sempre visibile in formato ridotto anche allo scorrere 
+della pagina.
+
+{% include callout-bundle-methods.md %}
+
+### Inizializzazione automatica
+
+Per rendere `sticky` il componente `Header` automaticamente, è sufficiente 
+utilizzare la classe `.it-header-sticky` nell'elemento identificato con la 
+classe `.it-header-wrapper` insieme all'attributo `data-bs-toggle="sticky"`.
 
 ```html
-<div class="it-header-wrapper it-header-sticky">...</div>
+<div 
+  class="it-header-wrapper it-header-sticky" data-bs-toggle="sticky" data-bs-position-type="fixed" data-bs-sticky-class-name="is-sticky">
+  ...
+</div>
 ```
 
-È disponibile una <a href="{{ site.baseurl }}/docs/esempi/comuni/template-homepage/">pagina di esempio</a> dedicata a questa funzionalità per comprenderne appieno significato ed utilizzo.
+Per maggiori informazioni e ulteriori opzioni vedere il componente [Sticky]({{ site.baseurl }}/docs/componenti/sticky/) e l'[esempio]({{ site.baseurl }}/docs/esempi/navscroll/).
 
-### Tramite JavaScript
+### Inizializzazione manuale
 
-È possibile inizializzare il componente tramite JavaScript:
+Il componente `Header` solitamente contiene al suo interno i componenti `Dropdown`, 
+`NavScroll` e `Collapse`, si rimanda alle sezioni specifiche per l'attivazione di questi componenti:
+
+- [Attivazione Dropdown tramite codice]({{ site.baseurl }}/docs/componenti/dropdown/#attivazione-tramite-codice)
+- [Attivazione Collapse tramite codice]({{ site.baseurl }}/docs/componenti/collapse/#attivazione-tramite-codice)
+- [Attivazione NavScroll tramite codice]({{ site.baseurl }}/docs/menu-di-navigazione/navscroll/#attivazione-tramite-codice)
+
+
+Per rendere `sticky` il componente `Header` è  possibile inizializzare il 
+componente manualmente utilizzando la classe `HeaderSticky`:
 
 ```js
-var headerSticky = new bootstrap.HeaderSticky(document.getElementById('myHeaderSticky'), options)
+import { HeaderSticky } from 'bootstrap-italia';
+
+const headerStickyElement = document.querySelector('#myHeaderSticky');
+const headerSticky = new HeaderSticky(headerStickyElement);
 ```
 
-### Metodi
+#### Metodi
 
-{% include callout-danger-async-methods.md %}
+<div class="table-responsive">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th style="width: 150px;">Metodo</th>
+        <th>Descrizione</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% include standard-methods.html class="HeaderSticky" %}
+    </tbody>
+  </table>
+</div>
 
-#### `getOrCreateInstance`
+## Breaking change
 
-Metodo statico che consente di ottenere l'istanza di un HeaderSticky associata ad un elemento del DOM o di crearne una nuova nel caso non fosse stata inizializzata.
-
-```js
-var headerStickyElement = document.querySelector('#myHeaderSticky')
-var headerSticky = bootstrap.HeaderSticky.getOrCreateInstance(headerStickyElement) // Returns a Bootstrap modal instance
-```
+{% capture callout %}
+- Il toggle del dropdown diventa `<button>` invece di `<a>`. 
+- Gli altri elementi `<a>` che si comportano come toggle dropdown (eg. scelta Lingua), hanno l'aggiunta dell'attributo `role="button"`.
+- Il markup del Megamenu cambia come nel nuovo componente, per approfondire andare alla [relativa pagina]({{site.baseurl}}/docs/menu-di-navigazione/megamenu/).
+{% endcapture %}{% include callout-breaking.html content=callout version="2.8.0" type="danger" %}

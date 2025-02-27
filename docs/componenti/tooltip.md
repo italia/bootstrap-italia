@@ -44,9 +44,11 @@ Cose da sapere quando usi il plugin tooltip:
 Un modo per inizializzare tutti i tooltip su una pagina è quello di selezionarli tramite il loro attributo `data-bs-toggle`:
 
 ```js
-var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-  return new bootstrap.Tooltip(tooltipTriggerEl)
+import { Tooltip } from 'bootstrap-italia'
+
+const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new Tooltip(tooltipTriggerEl);
 })
 ```
 
@@ -126,17 +128,18 @@ E con codice HTML personalizzato:
 </button>
 ```
 
-## Implementazione
+## Attivazione tramite codice
 
 Il plugin del tooltip genera contenuto e markup su richiesta, e in modo predefinito posiziona i tooltip dopo i loro elementi attivati.
-
-### Attivazione tramite JavaScript
 
 È possibile attivare un tooltip tramite JavaScript:
 
 ```js
-var exampleEl = document.getElementById('example')
-var tooltip = new bootstrap.Tooltip(exampleEl, options)
+import { Tooltip } from 'bootstrap-italia';
+
+document.querySelectorAll('.tooltipEl').forEach(el => {
+  new Tooltip(el);
+});
 ```
 
 ### Markup
@@ -165,93 +168,223 @@ Nel momento in cui tale elemento riceve focus da tastiera (o c'è un evento `hov
 
 Le opzioni possono essere passate tramite attributi data o tramite JavaScript. Per gli attributi data, aggiungi l'opzione nome a `data-bs-`, come in `data-bs-animation=""`.
 
-Per ulteriori informazioni si rimanda alla sezione [tooltip](https://getbootstrap.com/docs/{{ site.bootstrap_minor }}/components/tooltips/#options) del sito di Bootstrap.
+<table class="table">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Tipo</th>
+      <th>Predefinito</th>
+      <th>Descrizione</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>allowList</code></td>
+      <td>oggetto</td>
+      <td><a href="https://getbootstrap.com/docs/{{ site.bootstrap_minor }}/getting-started/javascript/#sanitizer">Valore predefinito</a></td>
+      <td>Oggetto che contiene attributi e tag consentiti.</td>
+    </tr>
+    <tr>
+      <td><code>animazione</code></td>
+      <td>booleano</td>
+      <td><code>vero</code></td>
+      <td>Applica una transizione di dissolvenza CSS al tooltip.</td>
+    </tr>
+    <tr>
+      <td><code>boundary</code></td>
+      <td>string, element</td>
+      <td><code>'clippingParents'</code></td>
+      <td>Limite del vincolo di overflow del tooltip (si applica solo al modificatore preventOverflow di Popper).
+        Per impostazione predefinita, è <code>'clippingParents'</code> e può accettare un riferimento
+        HTMLElement (solo tramite JavaScript). Per maggiori informazioni, consulta la documentazione di Popper
+        su <a href="https://popper.js.org/docs/v2/utils/detect-overflow/#boundary">detectOverflow</a>.</td>
+    </tr>
+    <tr>
+      <td><code>contenitore</code></td>
+      <td>stringa, elemento, false</td>
+      <td><code>false</code></td>
+      <td>Aggiunge il suggerimento a un elemento specifico. Esempio: <code>contenitore: 'corpo'</code>. Questa
+        opzione è particolarmente utile in quanto consente di posizionare il tooltip nel flusso del documento
+        vicino all'elemento di attivazione, il che impedirà al tooltip di allontanarsi dall'elemento di
+        attivazione durante il ridimensionamento di una finestra.</td>
+    </tr>
+    <tr>
+      <td><code>customClass</code></td>
+      <td>stringa, funzione</td>
+      <td><code>''</code></td>
+      <td>Aggiungi classi al tooltip quando viene visualizzato. Nota che queste classi verranno aggiunte in
+        aggiunta a tutte le classi specificate nel modello. Per aggiungere più classi, separale con spazi:
+        <code>'class-1 class-2'</code>. Puoi anche passare una funzione che dovrebbe restituire una singola
+        stringa contenente nomi di classi aggiuntivi.
+      </td>
+    </tr>
+    <tr>
+      <td><code>delay</code></td>
+      <td>number, object</td>
+      <td><code>0</code></td>
+      <td>Ritardo nella visualizzazione e nell'occultamento del tooltip (ms): non si applica al tipo di trigger
+        manuale. Se viene fornito un numero, il ritardo viene applicato sia a hide/show. La struttura
+        dell'oggetto è: <code>delay: { "show": 500, "hide": 100 }</code>.</td>
+    </tr>
+    <tr>
+      <td><code>fallbackPlacements</code></td>
+      <td>array</td>
+      <td><code>['top', 'right', 'bottom', 'left']</code></td>
+      <td>Definisci i posizionamenti di fallback fornendo un elenco di posizionamenti nell'array (in ordine di
+        preferenza). Per maggiori informazioni, consulta la <a
+          href="https://popper.js.org/docs/v2/modifiers/flip/#fallbackplacements">documentazione sul
+          comportamento</a> di Popper.</td>
+    </tr>
+    <tr>
+      <td><code>html</code></td>
+      <td>booleano</td>
+      <td><code>false</code></td>
+      <td>Consenti HTML nella descrizione comando. Se è vero, i tag HTML nel <code>titolo</code> della descrizione
+        comando verranno renderizzati nella descrizione comando. Se è falso, verrà utilizzata la proprietà
+        <code>innerText</code> per inserire contenuto nel DOM. Usa il testo se sei preoccupato per gli attacchi
+        XSS.
+      </td>
+    </tr>
+    <tr>
+      <td><code>offset</code></td>
+      <td>array, stringa, funzione</td>
+      <td><code>[0, 0]</code></td>
+      <td>Offset del tooltip rispetto al suo target. Puoi passare una stringa negli attributi dati con valori
+        separati da virgole come: <code>data-bs-offset="10,20"</code>. Quando una funzione viene utilizzata per
+        determinare l'offset, viene chiamata con un oggetto contenente il posizionamento del popper, il
+        riferimento e i rettangoli del popper come primo argomento. Il nodo DOM dell'elemento di attivazione
+        viene passato come secondo argomento. La funzione deve restituire un array con due numeri: <a
+          href="https://popper.js.org/docs/v2/modifiers/offset/#skidding-1">skidding</a>, <a
+          href="https://popper.js.org/docs/v2/modifiers/offset/#distance-1">distance</a>. Per maggiori
+        informazioni, consulta la <a href="https://popper.js.org/docs/v2/modifiers/offset/#options">documentazione
+          offset</a> di Popper.
+      </td>
+    </tr>
+    <tr>
+      <td><code>placement</code></td>
+      <td>string, function</td>
+      <td><code>'top'</code></td>
+      <td>Come posizionare il tooltip: auto, top, bottom, left, right. Quando viene specificato <code>auto</code>,
+        il tooltip verrà riorientato dinamicamente. Quando una funzione viene utilizzata per determinare il
+        posizionamento, viene chiamata con il nodo DOM tooltip come primo argomento e il nodo DOM elemento di
+        attivazione come secondo. Il contesto <code>this</code> è impostato sull'istanza tooltip.</td>
+    </tr>
+    <tr>
+      <td><code>popperConfig</code></td>
+      <td>null, object, function</td>
+      <td><code>null</code></td>
+      <td>Per modificare la configurazione Popper predefinita di Bootstrap, vedere <a
+          href="https://popper.js.org/docs/v2/constructors/#options">Configurazione di Popper</a>. Quando una
+        funzione viene utilizzata per creare la configurazione Popper, viene chiamata con un oggetto che
+        contiene la configurazione Popper predefinita di Bootstrap. Ti aiuta a utilizzare e unire la
+        configurazione predefinita con la tua. La funzione deve restituire un oggetto di configurazione per
+        Popper.</td>
+    </tr>
+    <tr>
+      <td><code>sanitize</code></td>
+      <td>boolean</td>
+      <td><code>true</code></td>
+      <td>Abilita o disabilita la sanificazione. Se attivate, le opzioni <code>'template'</code>,
+        <code>'content'</code> e <code>'title'</code> verranno sanificate.
+      </td>
+    </tr>
+    <tr>
+      <td><code>sanitizeFn</code></td>
+      <td>null, function</td>
+      <td><code>null</code></td>
+      <td>Qui puoi specificare la tua funzione di sanificazione. Può essere utile se preferisci usare una libreria
+        dedicata per eseguire la sanificazione.</td>
+    </tr>
+    <tr>
+      <td><code>selector</code></td>
+      <td>string, false</td>
+      <td><code>false</code></td>
+      <td>Se viene fornito un selettore, gli oggetti tooltip saranno delegati ai target specificati. In pratica,
+        questo viene usato anche per applicare tooltip agli elementi DOM aggiunti dinamicamente (supporto
+        <code>jQuery.on</code>). Guarda <a href="https://github.com/twbs/bootstrap/issues/4215">questo
+          problema</a> e <a href="https://codepen.io/Johann-S/pen/djJYPb">un esempio informativo</a>.
+        <strong>Nota</strong>: l'attributo <code>title</code> non deve essere utilizzato come selettore.
+      </td>
+    </tr>
+    <tr>
+      <td><code>template</code></td>
+      <td>string</td>
+      <td>
+        <code>'&lt;div class="tooltip" role="tooltip"&gt;&lt;div class="tooltip-arrow"&gt;&lt;/div&gt;&lt;div class="tooltip-inner"&gt;&lt;/div&gt;&lt;/div&gt;'</code>
+      </td>
+      <td>HTML di base da utilizzare durante la creazione del tooltip. Il <code>title</code> del tooltip verrà
+        inserito in <code>.tooltip-inner</code>. <code>.tooltip-arrow</code> diventerà la freccia del tooltip.
+        L'elemento wrapper più esterno dovrebbe avere la classe <code>.tooltip</code> e
+        <code>role="tooltip"</code>.
+      </td>
+    </tr>
+    <tr>
+      <td><code>title</code></td>
+      <td>stringa, elemento, funzione</td>
+      <td><code>''</code></td>
+      <td>Valore predefinito del titolo se l'attributo <code>title</code> non è presente. Se viene fornita una
+        funzione, verrà chiamata con il suo riferimento <code>this</code> impostato sull'elemento a cui è
+        collegato il popover.</td>
+    </tr>
+    <tr>
+      <td><code>trigger</code></td>
+      <td>stringa</td>
+      <td><code>'hover focus'</code></td>
+      <td>Come viene attivato il tooltip: clic, passaggio del mouse, focus, manuale. Puoi passare più trigger;
+        separali con uno spazio. <code>'manual'</code> indica che il tooltip verrà attivato a livello di
+        programmazione tramite i metodi <code>.tooltip('show')</code>, <code>.tooltip('hide')</code> e
+        <code>.tooltip('toggle')</code>; questo valore non può essere combinato con nessun altro trigger.
+        <code>'hover'</code> da solo genererà tooltip che non possono essere attivati ​​tramite la tastiera e
+        dovrebbe essere utilizzato solo se sono presenti metodi alternativi per trasmettere le stesse
+        informazioni agli utenti della tastiera.
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-### Metodi
+#### Metodi
 
 {% include callout-danger-async-methods.md %}
 
-#### `show`
-
-Mostra il tootlip di un elemento. **Ritorna al chiamante prima che il tooltip sia stato effettivamente mostrato** (i.e. prima che si verifichi l'evento `shown.bs.tooltip`). Questo è considerato un'attivazione "manuale" del tooltip. I tooltip senza titoli non vengono mai visualizzati.
-
-```js
-tooltip.show()
-```
-
-#### `hide`
-
-Nascondi il tootltip di un elemento. **Ritorna al chiamante prima che il tooltip sia stato effettivamente nascosto** (i.e. prima che si verifichi l'evento `hidden.bs.tooltip`). Questo è considerato un'attivazione "manuale" del tooltip.
-
-```js
-tooltip.hide()
-```
-
-#### `toggle`
-
-Attiva/Disattiva il tooltip di un elemento. **Ritorna al chiamante prima che il tooltip sia stato effettivamente mostrato o nascosto** (i.e. prima che si verifichi l'evento `shown.bs.tooltip` o l'evento `hidden.bs.tooltip`). Questo è considerato un'attivazione "manuale" del tooltip.
-
-```js
-tooltip.toggle()
-```
-
-#### `dispose`
-
-Nasconde e distrugge il tooltip di un elemento.
-
-```js
-tooltip.dispose()
-```
-
-#### `enable`
-
-Fornisce al tooltip di un elemento la possibilità di essere mostrato. **I tooltip sono abilitati in modo predefinito.**
-
-```js
-tooltip.enable()
-```
-
-#### `disable`
-
-Rimuove la capacità di mostrare il tooltip di un elemento. Il tooltip potrà essere mostrato solo se è riattivato.
-
-```js
-tooltip.disable()
-```
-
-#### `toggleEnabled`
-
-Attiva/disattiva la possibilità che il tooltip di un elemento sia mostrato o nascosto.
-
-```js
-tooltip.toggleEnabled()
-```
-
-#### `update`
-
-Aggiorna la posizione del tooltip di un elemento.
-
-```js
-tooltip.update()
-```
-
-#### `getInstance`
-
-Metodo statico che consente di ottenere l'istanza di un tooltip associata ad un elemento del DOM.
-
-```js
-var exampleTriggerEl = document.getElementById('example')
-var tooltip = bootstrap.Tooltip.getInstance(exampleTriggerEl) // Returns a Bootstrap tooltip instance
-```
-
-#### `getOrCreateInstance`
-
-Metodo statico che consente di ottenere l'istanza di un tooltip associata ad un elemento del DOM o di crearne una nuova nel caso non fosse stata inizializzata.
-
-```js
-var exampleTriggerEl = document.getElementById('example')
-var tooltip = bootstrap.Tooltip.getOrCreateInstance(exampleTriggerEl) // Returns a Bootstrap tooltip instance
-```
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th style="width: 150px;">Metodo</th>
+      <th>Descrizione</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% include standard-methods.html class="Tooltip" %}
+    <tr>
+      <td>show</td>
+      <td>Mostra il tootlip di un elemento. Ritorna al chiamante prima che il tooltip sia stato effettivamente mostrato (i.e. prima che si verifichi l'evento "shown.bs.tooltip"). Questo è considerato un'attivazione "manuale" del tooltip. I tooltip senza titoli non vengono mai visualizzati.</td>
+    </tr>
+    <tr>
+      <td>hide</td>
+      <td>Nascondi il tootltip di un elemento. Ritorna al chiamante prima che il tooltip sia stato effettivamente nascosto (i.e. prima che si verifichi l'evento "hidden.bs.tooltip"). Questo è considerato un'attivazione "manuale" del tooltip.</td>
+    </tr>
+    <tr>
+      <td>toggle</td>
+      <td>Attiva/Disattiva il tooltip di un elemento. Ritorna al chiamante prima che il tooltip sia stato effettivamente mostrato o nascosto (i.e. prima che si verifichi l'evento "shown.bs.tooltip" o l'evento "hidden.bs.tooltip"). Questo è considerato un'attivazione "manuale" del tooltip.</td>
+    </tr>
+    <tr>
+      <td>enable</td>
+      <td>Fornisce al tooltip di un elemento la possibilità di essere mostrato. I tooltip sono abilitati in modo predefinito.</td>
+    </tr>
+    <tr>
+      <td>disable</td>
+      <td>Rimuove la capacità di mostrare il tooltip di un elemento. Il tooltip potrà essere mostrato solo se è riattivato.</td>
+    </tr>
+    <tr>
+      <td>toggleEnabled</td>
+      <td>Attiva/disattiva la possibilità che il tooltip di un elemento sia mostrato o nascosto.</td>
+    </tr>
+    <tr>
+      <td>update</td>
+      <td>Aggiorna la posizione del tooltip di un elemento.</td>
+    </tr>
+  </tbody>
+</table>
 
 ### Eventi
 
@@ -285,14 +418,3 @@ var tooltip = bootstrap.Tooltip.getOrCreateInstance(exampleTriggerEl) // Returns
     </tr>
   </tbody>
 </table>
-
-```js
-var myTooltipEl = document.getElementById('myTooltip')
-var tooltip = new bootstrap.Tooltip(myTooltipEl)
-
-myTooltipEl.addEventListener('hidden.bs.tooltip', function () {
-  // do something...
-})
-
-tooltip.hide()
-```

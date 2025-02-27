@@ -6,27 +6,6 @@ group: componenti
 toc: true
 ---
 
-<script>
-  window.addEventListener('load', function() {
-    /*$('.dimmer').css("display", "flex").hide().fadeIn(200);
-    $('[id^=toggleDimmer]').on('click', function() {
-      var dimmer = '#' + $(this).data('dimmer');
-      $(this).is(':checked') ? $(dimmer).dimmerShow() : $(dimmer).dimmerHide();
-    })*/
-
-    /*var toggles = document.querySelectorAll('[id^=toggleDimmer]')
-    toggles.forEach(function(toggle) {
-      toggle.addEventListener('click', function() {
-        var dimmer = document.querySelector('#' + toggle.getAttribute('data-bs-target'))
-        if (dimmer) {
-          var bsDimmer = new bootstrap.Dimmer(dimmer)          
-          toggle.checked ? bsDimmer.show() : bsDimmer.hide()
-        }
-      })
-    })*/
-  });
-</script>
-
 Un dimmer occupa tutta l'altezza e la larghezza dell'elemento all'interno del quale è contenuto.
 
 L'elemento contenitore deve avere la classe `.dimmable` mentre il dimmer avrà un ID univoco che sarà utilizzato per l'attivazione e l'occultamento attraverso i seguenti comandi:
@@ -356,3 +335,35 @@ Aggiungendo la classe `.dimmer-primary` al wrapper del dimmer si ottiene una ver
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
+
+
+## Attivazione tramite codice
+
+```js
+import { Dimmer } from 'bootstrap-italia';
+
+const dimmerEl = document.getElementById('myDimmer');
+const dimmer = new Dimmer(dimmerEl)
+```
+
+### Metodi
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th style="width: 150px;">Metodo</th>
+      <th>Descrizione</th>
+    </tr>
+  </thead>
+  <tbody>
+     {% include standard-methods.html class="Dimmer" %}
+    <tr>
+      <td>show</td>
+      <td>Mostra il componente.</td>
+    </tr>
+    <tr>
+      <td>hide</td>
+      <td>Nasconde il componente.</td>
+    </tr>
+  </tbody>
+</table>

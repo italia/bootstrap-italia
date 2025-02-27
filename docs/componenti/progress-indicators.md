@@ -35,18 +35,19 @@ Nel seguente esempio sono presenti un Donut appena inizializzato ed un Donut al 
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Attivazione tramite JavaScript
+## Attivazione tramite codice
 
 È possibile creare un'istanza con il constructor, ad esempio:
 
 ```js
-var progElement = document.getElementById('prog-donut-1')
-var progDonut = new bootstrap.ProgressDonut(progElement, {
+import { ProgressDonut } from 'bootstrap-italia';
+const progElement = document.getElementById('prog-donut-1')
+const progDonut = new ProgressDonut(progElement, {
   value: 0.25,
 })
 ```
 
-#### Opzioni
+### Opzioni
 
 Le opzioni possono essere passate tramite gli attributi data o tramite JavaScript. Per quanto riguarda gli attributi data, aggiungi il nome dell'opzione a `data-bs`, come in `data-bs-value=""`.
 
@@ -115,21 +116,10 @@ Le opzioni possono essere passate tramite gli attributi data o tramite JavaScrip
     </tr>
   </thead>
   <tbody>
+    {% include standard-methods.html class="ProgressDonut" %}
     <tr>
       <td>set</td>
       <td>modifica lo stato di progressione della barra. È necessario inserire un numero compreso tra 0 e 1.0</td>
-    </tr>
-    <tr>
-      <td>dispose</td>
-      <td>Elimina la funzionalità del progressive donut.</td>
-    </tr>
-    <tr>
-      <td>getInstance</td>
-      <td>Metodo statico che restituisce l'istanza collapse associata ad un elemento del DOM. Esempio: <code>bootstrap.ProgressDonut.getInstance(element)</code></td>
-    </tr>
-    <tr>
-      <td>getOrCreateInstance</td>
-      <td>Metodo statico che restituisce un'istanza collapse associata ad un elemento del DOM o ne crea una nuova nel caso non fosse stata inizializzata. Esempio: <code>bootstrap.ProgressDonut.getOrCreateInstance(element)</code></td>
     </tr>
   </tbody>
 </table>

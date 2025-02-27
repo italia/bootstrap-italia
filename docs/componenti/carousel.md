@@ -710,14 +710,16 @@ div **`it-carousel-wrapper`** :
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-## Attivazione tramite JavaScript
+## Attivazione tramite codice
 
 È possibile abilitare un Carousel manualmente con:
 
 ```js
-var elementList = [].slice.call(document.querySelectorAll('.splide'))
-var masonryList = elementList.map(function (element) {
-  return new bootstrap.Carousel(element)
+import { Carousel } from 'bootstrap-italia';
+
+const elementList = [].slice.call(document.querySelectorAll('.splide'));
+const carouselElements = elementList.map(function (element) {
+  return new Carousel(element)
 })
 ```
 
@@ -745,3 +747,11 @@ var masonryList = elementList.map(function (element) {
     </tr>
   </tbody>
 </table>
+
+
+## Breaking change
+
+{% capture callout %}
+Lato JavaScript il componente Carousel deve essere importato tramite la classe 
+`Carousel` e non più `CarouselBI`.
+{% endcapture %}{% include callout-breaking.html version="2.14.0" content=callout type="danger" %}
