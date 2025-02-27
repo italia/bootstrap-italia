@@ -374,10 +374,21 @@ import { Accordion } from 'bootstrap-italia';
 
 const accordionEl = document.getElementById('myAccordion');
 const accordion = new Accordion(accordionEl)
-
-// Oppure 
-
-const accordion = Accordion.getOrCreateInstance(accordionEl);
 ```
 
 Bootstrap Italia migliora l'accessibilità dell'Accordion implementando la navigazione via tastiera degli header con le frecce cursore (`su`/`giù`) e con i tasti <kbd>Home</kbd> (primo elemento) ed <kbd>End</kbd> (ultimo elemento).
+
+
+#### Metodi
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th style="width: 150px;">Metodo</th>
+      <th>Descrizione</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% include standard-methods.html class="Accordion" %}
+  </tbody>
+</table>

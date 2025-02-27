@@ -807,16 +807,26 @@ const triggerTabList = [].slice.call(document.querySelectorAll('#myTab a'))
 triggerTabList.forEach(function (triggerEl) {
   const tabTrigger = new Tab(triggerEl)
 
-  // Oppure
-
-  const tabTrigger = Tab.getOrCreateInstance(triggerEl)
-
   triggerEl.addEventListener('click', (event) => {
     event.preventDefault()
     tabTrigger.show()
   })
 })
 ```
+
+#### Metodi
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th style="width: 150px;">Metodo</th>
+      <th>Descrizione</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% include standard-methods.html class="Tab" %}
+  </tbody>
+</table>
 
 ## Breaking change
 

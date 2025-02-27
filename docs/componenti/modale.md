@@ -656,10 +656,6 @@ pulsante, insieme a `data-bs-target="#foo"` o `href="#foo"` per attivare/disatti
 import { Modal } from 'bootstrap-italia';
 
 const myModal = new Modal(document.getElementById('myModal'), options)
-
-// Oppure
-
-const myModal = Modal.getOrCreateInstance(document.getElementById('myModal'), options)
 ```
 
 ### Opzioni
@@ -718,6 +714,7 @@ const myModal = new Modal(document.getElementById('myModal'), {
     </tr>
   </thead>
   <tbody>
+    {% include standard-methods.html class="Modal" %}
     <tr>
       <td>show</td>
       <td>Apre manualmente una modale. Ritorna al chiamante prima che la modale sia stata effettivamente mostrata (cioè prima che si verifichi l'evento "shown.bs.modal").</td>

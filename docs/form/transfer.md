@@ -208,10 +208,6 @@ import { Transfer } from 'bootstrap-italia';
 
 const transferElement = document.querySelector('.it-transfer-wrapper');
 const transfer = new Transfer(transferElement, config);
-
-// Oppure
-
-const transfer = Transfer.getOrCreateInstance(transferElement);
 ```
 
 #### Metodi

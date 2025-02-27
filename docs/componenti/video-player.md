@@ -383,10 +383,6 @@ import { VideoPlayer } from 'bootstrap-italia';
 const videoEl = document.getElementById("myVideo");
 const video = new VideoPlayer(el);
 
-// Oppure
-
-const video = VideoPlayer.getOrCreateInstance(el);
-
 video.player.pause();
 ```
 

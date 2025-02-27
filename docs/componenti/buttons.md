@@ -213,14 +213,10 @@ Per ulteriori informazioni sui pulsanti si rimanda alla sezione [buttons](https:
 import { Button } from 'bootstrap-italia';
 
 const buttonEl = document.getElementById('myButton');
-const button = Button.getOrCreateInstance(buttonEl);
-
-// Oppure 
-
 const button = new Button(buttonEl)
 ```
 
-### Metodi
+#### Metodi
 
 <table class="table table-bordered table-striped">
   <thead>
@@ -230,6 +226,7 @@ const button = new Button(buttonEl)
     </tr>
   </thead>
   <tbody>
+     {% include standard-methods.html class="Button" %}
     <tr>
       <td>toggle</td>
       <td>Attiva/disattiva la classe e sincronizza l'attributo "aria-pressed" con il valore restituito dal metodo `.toggle()`</td>

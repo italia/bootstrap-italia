@@ -423,10 +423,6 @@ import { Dropdown } from 'bootstrap-italia';
 
 const dropdownEl = document.getElementById('myDropdown');
 const dropdown = new Dropdown(dropdownEl, options)
-
-// Oppure 
-
-const dropdown = Dropdown.getOrCreateInstance(dropdownEl, options);
 ```
 
 #### Opzioni
@@ -506,6 +502,7 @@ Nota: il menu a discesa può sempre essere chiuso con il tasto ESC.
     </tr>
   </thead>
   <tbody>
+     {% include standard-methods.html class="Dropdown" %}
     <tr>
       <td>show</td>
       <td>Mostra la tendina del dropdown.</td>

@@ -179,11 +179,6 @@ import { Popover } from 'bootstrap-italia';
 
 const exampleEl = document.getElementById('example');
 const popover = new Popover(exampleEl, options);
-
-// Oppure
-
-const popover = Popover.getOrCreateInstance(exampleEl, options);
-
 ```
 
 ### Opzioni
@@ -394,32 +389,17 @@ Le opzioni possono essere passate tramite attributi data o tramite JavaScript. P
     </tr>
   </thead>
   <tbody>
+    {% include standard-methods.html class="Popover" %}
     <tr>
       <td><code>disable</code></td>
       <td>Rimuove la possibilità di mostrare il popover di un elemento. Il popover potrà essere mostrato solo se
         viene riattivato.</td>
     </tr>
     <tr>
-      <td><code>dispose</code></td>
-      <td>Nasconde e distrugge il popover di un elemento (rimuove i dati archiviati nell'elemento DOM). I popover che
-        utilizzano la delega (creati utilizzando l'opzione "selector") non possono
-        essere
-        distrutti individualmente sugli elementi trigger discendenti.</td>
-    </tr>
-    <tr>
       <td><code>enable</code></td>
       <td>Conferisce al popover di un elemento la possibilità di essere visualizzato. <strong>I popover sono abilitati
           per impostazione predefinita.</strong>
       </td>
-    </tr>
-    <tr>
-      <td><code>getInstance</code></td>
-      <td>Metodo <em>statico</em> che consente di ottenere l'istanza del popover associata a un elemento DOM.</td>
-    </tr>
-    <tr>
-      <td><code>getOrCreateInstance</code></td>
-      <td>Metodo <em>statico</em> che consente di ottenere l'istanza del popover associata a un elemento DOM o di
-        crearne una nuova nel caso in cui non fosse stata inizializzata.</td>
     </tr>
     <tr>
       <td><code>hide</code></td>

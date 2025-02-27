@@ -48,11 +48,7 @@ import { Tooltip } from 'bootstrap-italia'
 
 const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
 const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-  return new Tooltip(tooltipTriggerEl)
-
-  // Oppure
-
-  return Tooltip.getOrCreateInstance(tooltipTriggerEl)
+  return new Tooltip(tooltipTriggerEl);
 })
 ```
 
@@ -346,7 +342,7 @@ Le opzioni possono essere passate tramite attributi data o tramite JavaScript. P
   </tbody>
 </table>
 
-### Metodi
+#### Metodi
 
 {% include callout-danger-async-methods.md %}
 
@@ -358,6 +354,7 @@ Le opzioni possono essere passate tramite attributi data o tramite JavaScript. P
     </tr>
   </thead>
   <tbody>
+    {% include standard-methods.html class="Tooltip" %}
     <tr>
       <td>show</td>
       <td>Mostra il tootlip di un elemento. Ritorna al chiamante prima che il tooltip sia stato effettivamente mostrato (i.e. prima che si verifichi l'evento "shown.bs.tooltip"). Questo è considerato un'attivazione "manuale" del tooltip. I tooltip senza titoli non vengono mai visualizzati.</td>

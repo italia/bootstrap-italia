@@ -195,10 +195,6 @@ import { Sticky } from 'bootstrap-italia';
 
 const stickyElement = document.getElementById('sticky');
 const sticky = new Sticky(stickyElement, options);
-
-// Oppure
-
-const sticky = Sticky.getOrCreateInstance(stickyElement, options);
 ```
 
 ### Opzioni
@@ -264,18 +260,7 @@ const sticky = new Sticky(stickyElement, {
     </tr>
   </thead>
   <tbody>
-    <tr>    
-      <td>dispose</td>
-      <td>Elimina la funzionalità sticky dell'elemento.</td>
-    </tr>
-    <tr>
-      <td>getInstance</td>
-      <td>Metodo statico che restituisce l'istanza Sticky associata ad un elemento del DOM. Esempio: <code>bootstrap.Sticky.getInstance(element)</code></td>
-    </tr>
-    <tr>
-      <td>getOrCreateInstance</td>
-      <td>Metodo statico che restituisce un'istanza Sticky associata ad un elemento del DOM o ne crea una nuova nel caso non fosse stata inizializzata. Esempio: <code>bootstrap.Sticky.getOrCreateInstance(element)</code></td>
-    </tr>
+    {% include standard-methods.html class="Sticky" %}
   </tbody>
 </table>
 

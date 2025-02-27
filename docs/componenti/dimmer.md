@@ -343,10 +343,6 @@ Aggiungendo la classe `.dimmer-primary` al wrapper del dimmer si ottiene una ver
 import { Dimmer } from 'bootstrap-italia';
 
 const dimmerEl = document.getElementById('myDimmer');
-const dimmer = Dimmer.getOrCreateInstance(dimmerEl)
-
-// Oppure 
-
 const dimmer = new Dimmer(dimmerEl)
 ```
 
@@ -360,6 +356,7 @@ const dimmer = new Dimmer(dimmerEl)
     </tr>
   </thead>
   <tbody>
+     {% include standard-methods.html class="Dimmer" %}
     <tr>
       <td>show</td>
       <td>Mostra il componente.</td>
