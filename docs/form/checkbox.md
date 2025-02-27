@@ -67,7 +67,7 @@ Per raggruppare visivamente gli elementi `checkbox` occorrerà aggiungere al `.f
 {% capture example %}
 <div>
   <div class="row">
-    <fieldset class="col-5">
+    <fieldset class="col-12 col-md-6">
       <legend>Gruppo di checkbox</legend>
       <div class="form-check form-check-group">
         <input id="checkbox6" type="checkbox" checked="checked">
@@ -82,8 +82,7 @@ Per raggruppare visivamente gli elementi `checkbox` occorrerà aggiungere al `.f
         <label for="checkbox8" class="disabled">Checkbox disabilitato non selezionato</label>
       </div>
     </fieldset>
-    <div class="col-2"></div>
-    <fieldset class="col-5">
+    <fieldset class="col-12 col-md-6">
       <legend>Gruppo di checkbox</legend>
       <div class="form-check form-check-group">
         <input id="checkbox9" type="checkbox" aria-describedby="checkbox9-help" checked="checked">
