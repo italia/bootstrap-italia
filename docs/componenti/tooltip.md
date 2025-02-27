@@ -185,7 +185,7 @@ Le opzioni possono essere passate tramite attributi data o tramite JavaScript. P
     <tr>
       <td><code>allowList</code></td>
       <td>oggetto</td>
-      <td><a href="/docs/5.2/getting-started/javascript/#sanitizer">Valore predefinito</a></td>
+      <td><a href="https://getbootstrap.com/docs/{{ site.bootstrap_minor }}/getting-started/javascript/#sanitizer">Valore predefinito</a></td>
       <td>Oggetto che contiene attributi e tag consentiti.</td>
     </tr>
     <tr>

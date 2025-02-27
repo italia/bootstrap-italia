@@ -203,7 +203,7 @@ Le opzioni possono essere passate tramite attributi data o tramite JavaScript. P
         <tr>
             <td><code>allowList</code></td>
             <td>oggetto</td>
-            <td><a href="/docs/5.2/getting-started/javascript/#sanitizer">Valore predefinito</a></td>
+            <td><a href="https://getbootstrap.com/docs/{{ site.bootstrap_minor }}/getting-started/javascript/#sanitizer">Valore predefinito</a></td>
             <td>Oggetto che contiene attributi e tag consentiti.</td>
         </tr>
         <tr>
@@ -247,8 +247,7 @@ Le opzioni possono essere passate tramite attributi data o tramite JavaScript. P
             <td>Aggiungi classi al popover quando viene visualizzato. Nota che queste classi saranno aggiunte in
                 aggiunta a qualsiasi classe specificata nel modello. Per aggiungere più classi, separale con spazi:
                 <code>'class-1 class-2'</code>. Puoi anche passare una funzione che dovrebbe restituire una singola
-                stringa
-                contenente nomi di classi aggiuntivi.
+                stringa contenente nomi di classi aggiuntivi.
             </td>
         </tr>
         <tr>
@@ -257,8 +256,7 @@ Le opzioni possono essere passate tramite attributi data o tramite JavaScript. P
             <td><code>0</code></td>
             <td>Ritardo nella visualizzazione e nell'occultamento del popover (ms): non si applica al tipo di trigger
                 manuale. Se viene fornito un numero, il ritardo viene applicato sia a hide/show. La struttura
-                dell'oggetto è:
-                <code>delay: { "show": 500, "hide": 100 </code>.
+                dell'oggetto è: <code>delay: { "show": 500, "hide": 100 }</code>.
             </td>
         </tr>
         <tr>
@@ -416,11 +414,11 @@ Le opzioni possono essere passate tramite attributi data o tramite JavaScript. P
     </tr>
     <tr>
       <td><code>getInstance</code></td>
-      Metodo <td><em>statico</em> che consente di ottenere l'istanza del popover associata a un elemento DOM.</td>
+      <td>Metodo <em>statico</em> che consente di ottenere l'istanza del popover associata a un elemento DOM.</td>
     </tr>
     <tr>
       <td><code>getOrCreateInstance</code></td>
-      Metodo <td><em>statico</em> che consente di ottenere l'istanza del popover associata a un elemento DOM o di
+      <td>Metodo <em>statico</em> che consente di ottenere l'istanza del popover associata a un elemento DOM o di
         crearne una nuova nel caso in cui non fosse stata inizializzata.</td>
     </tr>
     <tr>
