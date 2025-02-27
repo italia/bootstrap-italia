@@ -1530,7 +1530,7 @@ Il componente `Header` solitamente contiene al suo interno i componenti `Dropdow
 
 - [Attivazione Dropdown tramite codice]({{ site.baseurl }}/docs/componenti/dropdown/#attivazione-tramite-codice)
 - [Attivazione Collapse tramite codice]({{ site.baseurl }}/docs/componenti/collapse/#attivazione-tramite-codice)
-- [Attivazione NavScroll tramite codice]({{ site.baseurl }}/docs/componenti/navscroll/#attivazione-tramite-codice)
+- [Attivazione NavScroll tramite codice]({{ site.baseurl }}/docs/menu-di-navigazione/navscroll/#attivazione-tramite-codice)
 
 
 Per rendere `sticky` il componente `Header` è  possibile inizializzare il 
