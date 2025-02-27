@@ -32,15 +32,15 @@ class SelectAutocomplete extends BaseComponent {
     this._extraClasses = []
     this._hasFormControl = element.classList.contains('form-control')
     this.element_original_id = this._element.id
-    this._config = config
+    this._config = config || {}
     this._config.inputClasses = 'form-control'
-    this._config.onConfirm = () => {
-      this._inputField.dispatchEvent(new Event('input'))
-    }
+    // this._config.onConfirm = (confirmed) => {
+    //   console.log(confirmed);
+    //   //this._inputField.dispatchEvent(new Event('input'))
+    // }
     this._config.showNoOptionsFound = true
     this._config.hintClasses = 'app-hint'
     this._config.confirmOnBlur = true
-    this._config.autoselect = true
     if (!this._config.tAssistiveHint)
       this._config.tAssistiveHint = () =>
         'Quando i risultati del completamento automatico sono disponibili, usa le frecce su e giù per rivedere e Invio per selezionare. Utenti di dispositivi touch, esplora tramite tocco o con gesti di scorrimento'
@@ -72,13 +72,19 @@ class SelectAutocomplete extends BaseComponent {
 
   // Private
   _enhance() {
-    accessibleAutocomplete.enhanceSelectElement(Object.assign({}, { selectElement: this._element }, this._config))
+    const inputId = this.element_original_id
+    accessibleAutocomplete(
+      Object.assign({}, {
+        element: this._element,
+        id: inputId,
+      }, this._config)
+    )
     setTimeout(() => {
       if (this._hasFormControl) {
         if (typeof document === 'undefined') {
           return
         }
-        this._inputField = document.getElementById(this.element_original_id)
+        this._inputField = document.getElementById(inputId)
         this._inputField.addEventListener('focus', () => {
           this._extraClasses.forEach((cls) => {
             this._inputField.classList.add(cls)
