@@ -30,17 +30,11 @@ class SelectAutocomplete extends BaseComponent {
   constructor(element, config) {
     super(element)
     this._extraClasses = []
-    this._hasFormControl = element.classList.contains('form-control')
-    this.element_original_id = this._element.id
     this._config = config || {}
     this._config.inputClasses = 'form-control'
-    // this._config.onConfirm = (confirmed) => {
-    //   console.log(confirmed);
-    //   //this._inputField.dispatchEvent(new Event('input'))
-    // }
     this._config.showNoOptionsFound = true
     this._config.hintClasses = 'app-hint'
-    this._config.confirmOnBlur = true
+    // this._config.confirmOnBlur = true
     if (!this._config.tAssistiveHint)
       this._config.tAssistiveHint = () =>
         'Quando i risultati del completamento automatico sono disponibili, usa le frecce su e giù per rivedere e Invio per selezionare. Utenti di dispositivi touch, esplora tramite tocco o con gesti di scorrimento'
@@ -50,7 +44,7 @@ class SelectAutocomplete extends BaseComponent {
     if (!this._config.tStatusNoResults) this._config.tStatusNoResults = () => 'Nessun risultato di ricerca'
     if (!this._config.tStatusSelectedOption)
       this._config.tStatusSelectedOption = (selectedOption, length, index) => `${selectedOption} ${index + 1} di ${length} è sottolineato`
-    if (!this._config.tStatusResults)
+    if (!this._config.tStatusResults) {
       this._config.tStatusResults = (length, contentSelectedOption) => {
         const words = {
           result: length === 1 ? 'risultato' : 'risultati',
@@ -60,8 +54,10 @@ class SelectAutocomplete extends BaseComponent {
 
         return `${length} ${words.result} ${words.is} ${words.available}. ${contentSelectedOption}`
       }
-
-    this._enhance()
+    }
+    if (typeof document !== 'undefined') {
+      this._enhance()
+    }
   }
 
   // Getters
@@ -72,45 +68,50 @@ class SelectAutocomplete extends BaseComponent {
 
   // Private
   _enhance() {
-    const inputId = this.element_original_id
+    const inputId = this._config.id
+    const originalConfirm = this._config.onConfirm
+
+    this._config.onConfirm = (value) => {
+      document.getElementById(inputId).value = value;
+      document.getElementById(inputId).dispatchEvent(new Event('input'));
+      if (originalConfirm) {
+        originalConfirm(value);
+      }
+    }
+
     accessibleAutocomplete(
       Object.assign({}, {
         element: this._element,
-        id: inputId,
+        id: inputId
       }, this._config)
     )
     setTimeout(() => {
-      if (this._hasFormControl) {
-        if (typeof document === 'undefined') {
+      this._inputField = document.getElementById(inputId)
+      this._label = new InputLabel(this._inputField)
+      this._inputField.addEventListener('focus', () => {
+        this._extraClasses.forEach((cls) => {
+          this._inputField.classList.add(cls)
+        })
+        this._extraClasses = []
+      })
+      this._inputField.addEventListener('blur', () => {
+        this._extraClasses.forEach((cls) => {
+          this._inputField.classList.add(cls)
+        })
+        this._extraClasses = []
+      })
+
+      onClassChange(this._inputField, (oldClasses) => {
+        this._extraClasses = []
+        if (JSON.stringify(oldClasses.split(' ')) === JSON.stringify(this._inputField.classList.value.split(' '))) {
           return
         }
-        this._inputField = document.getElementById(inputId)
-        this._inputField.addEventListener('focus', () => {
-          this._extraClasses.forEach((cls) => {
-            this._inputField.classList.add(cls)
-          })
-          this._extraClasses = []
-        })
-        this._inputField.addEventListener('blur', () => {
-          this._extraClasses.forEach((cls) => {
-            this._inputField.classList.add(cls)
-          })
-          this._extraClasses = []
-        })
-
-        this._label = new InputLabel(this._inputField)
-        onClassChange(this._inputField, (oldClasses) => {
-          this._extraClasses = []
-          if (JSON.stringify(oldClasses.split(' ')) === JSON.stringify(this._inputField.classList.value.split(' '))) {
-            return
+        oldClasses.split(' ').forEach((cls) => {
+          if (!cls.startsWith('autocomplete')) {
+            this._extraClasses.push(cls)
           }
-          oldClasses.split(' ').forEach((cls) => {
-            if (!cls.startsWith('autocomplete')) {
-              this._extraClasses.push(cls)
-            }
-          })
         })
-      }
+      })
     }, 100)
   }
 }

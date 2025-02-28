@@ -239,7 +239,17 @@ title: Validazione Form
     const selectElement = document.querySelector('#accessibleAutocompleteWrapper');
     const selectAutocomplete = new bootstrap.SelectAutocomplete(selectElement, {
       source: italianRegions,
-      id: 'accessibleAutocomplete'
+      id: 'accessibleAutocomplete',
+      confirmOnBlur: false,
+      onConfirm: (cc) => {
+        // const el = document.getElementById('accessibleAutocomplete');
+        // el.value = cc
+        // console.log(el)
+        //el.dispatchEvent(new Event('input', { bubbles: true }));
+        validate.revalidateField('#accessibleAutocomplete').then((isValid) => {
+          //console.log(isValid)
+        })
+      }
     });
 
     validate
