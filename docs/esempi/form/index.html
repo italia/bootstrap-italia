@@ -236,19 +236,12 @@ title: Validazione Form
       focusInvalidField: false,
     })
     const italianRegions =  ["Abruzzo","Basilicata","Calabria","Campania","Emilia Romagna","Friuli Venezia Giulia","Lazio","Liguria","Lombardia","Marche","Molise","Piemonte","Puglia","Sardegna","Sicilia","Toscana","Trentino Alto Adige","Umbria","Valle d’Aosta","Veneto"];
-    const selectElement = document.querySelector('#accessibleAutocompleteWrapper');
-    const selectAutocomplete = new bootstrap.SelectAutocomplete(selectElement, {
+    const selectAutocompleteWrapper = document.querySelector('#accessibleAutocompleteWrapper');
+    const selectAutocomplete = new bootstrap.SelectAutocomplete(selectAutocompleteWrapper, {
       source: italianRegions,
       id: 'accessibleAutocomplete',
-      confirmOnBlur: false,
-      onConfirm: (cc) => {
-        // const el = document.getElementById('accessibleAutocomplete');
-        // el.value = cc
-        // console.log(el)
-        //el.dispatchEvent(new Event('input', { bubbles: true }));
-        validate.revalidateField('#accessibleAutocomplete').then((isValid) => {
-          //console.log(isValid)
-        })
+      onConfirm: () => {
+        validate.revalidateField('#accessibleAutocomplete')
       }
     });
 

@@ -33,13 +33,6 @@ Per una corretta implementazione si consiglia di consultare la [documentazione](
 </script>
 {% endcapture %}{% include example.html content=example %}
 
-Per ottenere il valore della option che siamo andati a selezionare occorre agire su `_element` dell'oggetto `SelectAutocomplete`
-
-```js
-const e = selectAutocomplete._element;
-const value = e.options[e.selectedIndex].value;
-```
-
 ## Cambiare i valori dinamicamente
 
 In questo esempio viene mostrato come popolare il componente con dati che 
@@ -66,8 +59,7 @@ Per maggiori informazioni si rimanda alla [documentazione ufficiale](https://alp
   <div class="col-12">
     <div class="form-group">
       <label for="productAutocomplete">Alimento</label>
-      <select class="form-control" id="productAutocomplete" title="Scegli un prodotto">
-      </select>
+      <div id="productAutocompleteWrapper" class="autocomplete-wrapper"></div>
     </div>
   </div>
   <script>
@@ -87,16 +79,9 @@ Per maggiori informazioni si rimanda alla [documentazione ufficiale](https://alp
     }
     document.addEventListener('DOMContentLoaded', function () {
       const categorySelect = document.getElementById("category");
-      const selectElement = document.getElementById("productAutocomplete");
-      const selectAutocomplete = new bootstrap.SelectAutocomplete(selectElement, {
-        required: true,
-        name: 'productAutocomplete',
-        confirmOnBlur: false,
-        showAllValues: true,
-        defaultValue: '',
-        autoselect: false,
-        showNoOptionsFound: false,
-        dropdownArrow: () => '',
+      const selectWrapperElement = document.getElementById("productAutocompleteWrapper");
+      const selectAutocomplete = new bootstrap.SelectAutocomplete(selectWrapperElement, {
+        id: 'productAutocomplete',
         source: (query, populateResults) => {
           const results = form_data[categorySelect.value]
           const filteredResults = results.filter(result => result.indexOf(query) !== -1)

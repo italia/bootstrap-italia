@@ -34,7 +34,7 @@ class SelectAutocomplete extends BaseComponent {
     this._config.inputClasses = 'form-control'
     this._config.showNoOptionsFound = true
     this._config.hintClasses = 'app-hint'
-    // this._config.confirmOnBlur = true
+    this._config.confirmOnBlur = false
     if (!this._config.tAssistiveHint)
       this._config.tAssistiveHint = () =>
         'Quando i risultati del completamento automatico sono disponibili, usa le frecce su e giù per rivedere e Invio per selezionare. Utenti di dispositivi touch, esplora tramite tocco o con gesti di scorrimento'
@@ -72,18 +72,22 @@ class SelectAutocomplete extends BaseComponent {
     const originalConfirm = this._config.onConfirm
 
     this._config.onConfirm = (value) => {
-      document.getElementById(inputId).value = value;
-      document.getElementById(inputId).dispatchEvent(new Event('input'));
+      document.getElementById(inputId).value = value
+      document.getElementById(inputId).dispatchEvent(new Event('input'))
       if (originalConfirm) {
-        originalConfirm(value);
+        originalConfirm(value)
       }
     }
 
     accessibleAutocomplete(
-      Object.assign({}, {
-        element: this._element,
-        id: inputId
-      }, this._config)
+      Object.assign(
+        {},
+        {
+          element: this._element,
+          id: inputId,
+        },
+        this._config
+      )
     )
     setTimeout(() => {
       this._inputField = document.getElementById(inputId)
@@ -103,7 +107,7 @@ class SelectAutocomplete extends BaseComponent {
 
       onClassChange(this._inputField, (oldClasses) => {
         this._extraClasses = []
-        if (JSON.stringify(oldClasses.split(' ')) === JSON.stringify(this._inputField.classList.value.split(' '))) {
+        if (oldClasses === this._inputField.classList.value) {
           return
         }
         oldClasses.split(' ').forEach((cls) => {
