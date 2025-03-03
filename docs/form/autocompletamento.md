@@ -97,7 +97,55 @@ Per maggiori informazioni si rimanda alla [documentazione ufficiale](https://alp
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Validazione
+### Esempio Regioni e Comuni
+
+{% capture example %}
+<div class="row">
+  <div class="col-12">
+    <div class="form-group">
+      <div class="select-wrapper">
+        <label for="regione">Regione</label>
+        <select id="regione" name="regione">
+          {% for region in site.data.autocomplete.regioniplain %}
+          <option value="{{region}}">{{region}}</option>
+          {% endfor %}
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="col-12">
+    <div class="form-group">
+      <label for="comuniAutocomplete">Comune</label>
+      <div id="comuniAutocompleteWrapper" class="autocomplete-wrapper"></div>
+    </div>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', async function () {
+      const italianRegions = {{ site.data.autocomplete.regioniplain | jsonify }};
+      const data = {}
+      italianRegions.forEach(region => { data[region] = [] })
+      const comuniJson = await (await fetch('{{ site.baseurl }}/docs/esempi/form/comuni.json')).json();
+      comuniJson.forEach(comune => data[comune.regione].push(comune.comune))
+      console.log(data)
+      const regioniSelect = document.getElementById("regione");
+      const selectWrapperElement = document.getElementById("comuniAutocompleteWrapper");
+      const selectAutocomplete = new bootstrap.SelectAutocomplete(selectWrapperElement, {
+        id: 'comuniAutocomplete',
+        source: (query, populateResults) => {
+          const results = data[regioniSelect.value]
+          const filteredResults = results.filter(result => result.indexOf(query) !== -1)
+          populateResults(filteredResults)
+        }
+      });
+      regioniSelect.addEventListener('change', (event) => {
+        document.getElementById("comuniAutocomplete").value = '';
+      });
+    })
+  </script>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+## Validazione
 
 Per la validazione del campo con autocompletamento, si consiglia di utilizzare il plugin Just Validate come da [guida]({{ site.baseurl }}/docs/form/introduzione/#validazione).
 
