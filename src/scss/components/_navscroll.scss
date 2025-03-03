@@ -1,25 +1,22 @@
 .it-navscroll-wrapper {
-  --navscroll-bg-color: var(--#{$prefix}page-background);
-  --navscroll-backbutton-padding: 10px;
+  --navscroll-background: var(--#{$prefix}page-background);
+  --navscroll-backbutton-padding: var(--#{$prefix}spacing-xs);
   --navscroll-bottom-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   --navscroll-backbutton-weight: var(--#{$prefix}font-weight-solid);
   --navscroll-item-spacing: var(--#{$prefix}spacing-xs);
   --navscroll-item-font-size: var(--#{$prefix}label-font-size);
-  --navscroll-selection-link-left: 4px solid #007bff;
-  --navscroll-secondary-active-color: #0056b3;
+  --navscroll-item-border-active: var(--#{$prefix}border-thick) solid var(--#{$prefix}color-border-primary);
   --navscroll-heading-spacing-top: var(--#{$prefix}spacing-s);
   --navscroll-heading-spacing-bottom: var(--#{$prefix}spacing-xs);
   --navscroll-heading-spacing-x: var(--#{$prefix}spacing-m);
   --navscroll-heading-font-size: var(--#{$prefix}heading-6-font-size);
   --navscroll-heading-font-weight: var(--#{$prefix}heading-font-weight);
-  --navscroll-toggler-color: #333;
-  --navscroll-button-text-weight: 600;
-  --navscroll-line-color: #ddd;
-  --navscroll-bg-color-desk: #f8f9fa;
+  --navscroll-toggler-color: var(--#{$prefix}color-text-base);
+  --navscroll-divider-color: var(--#{$prefix}color-border-subtle);
 }
 
 .navbar.it-navscroll-wrapper {
-  background: var(--navscroll-bg-color);
+  background: var(--navscroll-background);
 }
 
 .navbar.it-navscroll-wrapper .it-back-button {
@@ -31,7 +28,7 @@
   visibility: hidden;
   padding: var(--navscroll-backbutton-padding);
   opacity: 0;
-  background: var(--navscroll-bg-color);
+  background: var(--navscroll-background);
   box-shadow: var(--navscroll-bottom-box-shadow);
   font-weight: var(--navscroll-backbutton-weight);
   text-decoration: none;
@@ -56,11 +53,11 @@
   padding-bottom: var(--navscroll-item-spacing);
   font-size: var(--navscroll-item-font-size);
   font-weight: var(--#{$prefix}font-weight-solid);
-  line-height: var(--navscroll-item-text-size);
+  divider-height: var(--navscroll-item-text-size);
 }
 
 .navbar.it-navscroll-wrapper .link-list-wrapper ul li a.active {
-  border-left: var(--navscroll-selection-link-left);
+  border-left: var(--navscroll-item-border-active);
 }
 
 .navbar.it-navscroll-wrapper .link-list-wrapper ul li a.active span {
@@ -82,7 +79,7 @@
   display: flex;
   align-items: center;
   color: var(--navscroll-toggler-color);
-  font-weight: var(--navscroll-button-text-weight);
+  font-weight: var(--#{$prefix}font-weight-solid);
   cursor: pointer;
 }
 
@@ -106,18 +103,11 @@
 }
 
 .navbar.it-left-side {
-  border-left: 1px solid var(--navscroll-line-color);
+  border-left: 1px solid var(--navscroll-divider-color);
 }
 
 .navbar.it-right-side {
-  border-right: 1px solid var(--navscroll-line-color);
-}
-
-.navbar.it-navscroll-wrapper {
-  @media (min-width: 992px) {
-    --navscroll-bg-color: var(--navscroll-bg-color-desk);
-    background: var(--navscroll-bg-color);
-  }
+  border-right: 1px solid var(--navscroll-divider-color);
 }
 
 @media (min-width: 992px) {
@@ -129,7 +119,7 @@
 
   .navbar.it-navscroll-wrapper .menu-wrapper {
     padding: var(--#{$prefix}spacing-s) 0 var(--#{$prefix}spacing-m);
-    background: var(--navscroll-bg-color);
+    background: var(--navscroll-background);
   }
 
   .navbar.it-bottom-navscroll,
