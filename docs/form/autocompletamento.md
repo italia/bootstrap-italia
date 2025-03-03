@@ -126,7 +126,6 @@ Per maggiori informazioni si rimanda alla [documentazione ufficiale](https://alp
       italianRegions.forEach(region => { data[region] = [] })
       const comuniJson = await (await fetch('{{ site.baseurl }}/docs/esempi/form/comuni.json')).json();
       comuniJson.forEach(comune => data[comune.regione].push(comune.comune))
-      console.log(data)
       const regioniSelect = document.getElementById("regione");
       const selectWrapperElement = document.getElementById("comuniAutocompleteWrapper");
       const selectAutocomplete = new bootstrap.SelectAutocomplete(selectWrapperElement, {
@@ -147,6 +146,103 @@ Per maggiori informazioni si rimanda alla [documentazione ufficiale](https://alp
 
 ## Validazione
 
-Per la validazione del campo con autocompletamento, si consiglia di utilizzare il plugin Just Validate come da [guida]({{ site.baseurl }}/docs/form/introduzione/#validazione).
+{% capture callout %}
+Per la validazione del campo con autocompletamento, si consiglia di utilizzare 
+il plugin Just Validate come da [guida]({{ site.baseurl }}/docs/form/introduzione/#validazione). 
+È possibile testare la validazione del campo con autocompletamento sulla 
+[pagina di esempio validazione]({{ site.baseurl }}/docs/esempi/form/).
+{% endcapture %}{% include callout.html content=callout type="warning" %}
 
-È possibile testare la validazione del campo con autocompletamento sulla [pagina di esempio validazione]({{ site.baseurl }}/docs/esempi/form/).
+
+Quando l'utente seleziona un valore dalla tendinda di Autocomplete occorre
+richiamare nuovamente la funzione di validazione. Questa chiamata può essere
+effettuata all'interno del metodo `onConfirm` che viene passato in configurazione 
+e verrà chiamata ogni volta che l'utente seleziona un opzione.
+
+Ad esempio con JustValidate occorrerà istanziare il componente in questo modo
+
+```js
+const selectAutocomplete = new SelectAutocomplete(selectAutocompleteWrapper, {
+  source: myData,
+  id: 'idAutocomplete',
+  onConfirm: () => {
+    validate.revalidateField('#accessibleAutocomplete')
+  }
+});
+```
+
+Il campo verrà validato così anche nel caso in cui l'utente seleziona un'opzione.
+Nel caso in cui è stato impostato che JustValidate validi il form solo dopo la
+submit occorre controllare il suo stato
+
+```js
+  onConfirm: () => {
+    if (!validate.isSubmitted && !validate.validateBeforeSubmitting)
+      return
+    validate.revalidateField('#accessibleAutocomplete')
+  }
+```
+
+Nell'esempio seguente si può provare questo comportamento (si noti che tra le 
+configurazioni è stato passato anche `minLength: 3`, vista la grande mole di dati 
+questa opzione impedirà la visualizzazione dei suggerimenti se vengono digitati 
+meno di 3 caratteri)
+
+{% capture example %}
+<div>
+  <form id="justValidate" action="" method="post">
+    <div class="row">
+      <div class="col-12">
+        <div class="form-group">
+          <label for="comuneJVAutocomplete">Comune di residenza</label>
+          <div id="comuneJVAutocompleteWrapper" class="autocomplete-wrapper"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <button class="btn btn-primary mt-3" type="submit">Invia form</button>
+      </div>
+    </div>
+  </form>
+  <script>
+    document.addEventListener('DOMContentLoaded', async function () {
+      const validate = new bootstrap.FormValidate('#justValidate', {
+        errorFieldCssClass: 'is-invalid',
+        errorLabelCssClass: 'form-feedback',
+        errorLabelStyle: '',
+        focusInvalidField: false,
+      })
+      const comuniJson = await (await fetch('{{ site.baseurl }}/docs/esempi/form/comuni.json')).json();
+      const comuni = comuniJson.map(comune => comune.comune)
+      const selectAutocompleteWrapper = document.querySelector('#comuneJVAutocompleteWrapper');
+      const selectAutocomplete = new bootstrap.SelectAutocomplete(selectAutocompleteWrapper, {
+        source: comuni,
+        id: 'comuneJVAutocomplete',
+        minLength: 3,
+        onConfirm: () => {
+          if (!validate.isSubmitted && !validate.validateBeforeSubmitting)
+            return
+          validate.revalidateField('#comuneJVAutocomplete')
+        }
+      });
+      validate
+        .addField('#comuneJVAutocomplete', [
+          {
+            rule: 'required',
+            errorMessage: 'Questo campo è richiesto',
+          },
+          {
+            validator: (value) => {
+              return comuni.includes(value);
+            },
+            errorMessage: 'Scegli una città valida',
+          },
+        ])
+        .onSuccess((event) => {
+          document.forms['justValidate'].submit()
+        })
+      })
+  </script>
+</div>
+{% endcapture %}{% include example.html content=example %}
