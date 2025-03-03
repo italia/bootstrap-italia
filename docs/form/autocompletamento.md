@@ -10,10 +10,7 @@ description: Elementi e stili per la creazione di input con autocompletamento.
 ## Esempio di autocompletamento
 
 Il completamento automatico è un componente che aiuta gli utenti a scegliere le risposte da un elenco fornito.
-
 Per la creazione del componente, è stato utilizzato il plugin [Accessible autocomplete](https://github.com/alphagov/accessible-autocomplete).
-
-Per una corretta implementazione si consiglia di consultare la [documentazione](https://alphagov.github.io/accessible-autocomplete/).
 
 {% comment %}Example name: Base {% endcomment %}
 {% capture example %}
@@ -38,9 +35,9 @@ Per una corretta implementazione si consiglia di consultare la [documentazione](
 In questo esempio viene mostrato come popolare il componente con dati che 
 cambiano a fronte di un altro input, ad esempio il valore di un altro elemento
 di un form (come una select nell'esempio che segue). 
-Per far fronte a questa esigenza è sufficiente passare al parametro `source`
-del costruttore una funzione per filtrare i dati e popolare il componente.
-Per maggiori informazioni si rimanda alla [documentazione ufficiale](https://alphagov.github.io/accessible-autocomplete/#source).
+Per far fronte a questa esigenza è sufficiente passare come opzione `source` 
+una funzione per filtrare i dati e popolare il componente
+([Tutte le opzioni disponibili del componente](#attivazione-tramite-codice)).
 
 {% comment %}Example name: Cambiare i valori dinamicamente {% endcomment %}
 {% capture example %}
@@ -246,3 +243,116 @@ meno di 3 caratteri)
   </script>
 </div>
 {% endcapture %}{% include example.html content=example %}
+
+## Attivazione tramite codice
+
+È possibile abilitare l'autocomplete manualmente utilizzando l'oggetto `SelectAutocomplete`.
+
+```js
+import { SelectAutocomplete } from 'bootstrap-italia';
+
+const autocompleteWrapperElement = document.querySelector('#wrapper-autocomplete');
+const autocomplete = new SelectAutocomplete(autocompleteWrapperElement, options);
+```
+
+#### Opzioni
+
+```js
+import { SelectAutocomplete } from 'bootstrap-italia';
+
+const selectAutocompleteWrapper = document.querySelector('#accessibleAutocompleteWrapper');
+const selectAutocomplete = new SelectAutocomplete(selectAutocompleteWrapper, {
+  source: ['Option 1', 'Option 2', 'Option 3'],
+  id: 'accessibleAutocomplete',
+  minLength: 3,
+  onConfirm: (selectedElement) => {
+    console.log(selectedElement);
+  }
+});
+```
+
+<div class="table-responsive">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Tipo</th>
+        <th>Predefinito</th>
+        <th>Descrizione</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>source</td>
+        <td>Array | Function</td>
+        <td>-</td>
+        <td>Sorgente di dati dell'autocomplete. Se "source è una funzione, gli argomenti sono: (query: string, populateResults: Funzione): "query" è ciò che viene digitato nel campo di input, che richiamerà la funzione "populateResults" in modo sincrono con l'array di risultati da visualizzare nel menu (esempi sopra).</td>
+      </tr>
+      <tr>
+        <td>id</td>
+        <td>string</td>
+        <td>-</td>
+        <td>Id dell'elemento input che verrà generato dall' Autocomplete.</td>
+      </tr>
+      <tr>
+        <td>name</td>
+        <td>string</td>
+        <td>input-autocomplete</td>
+        <td>Nome del campo di input di completamento automatico, da utilizzare con un form padre.</td>
+      </tr>
+      <tr>
+        <td>minLength</td>
+        <td>number</td>
+        <td>0</td>
+        <td>Questa opzione impedisce la visualizzazione dei suggerimenti se vengono digitati meno di N caratteri.</td>
+      </tr>
+      <tr>
+        <td>defaultValue</td>
+        <td>string</td>
+        <td>-</td>
+        <td>Valore di default inserito nell'input.</td>
+      </tr>
+      <tr>
+        <td>required</td>
+        <td>boolean</td>
+        <td>false</td>
+        <td>Il campo di input verrà renderizzato con un attributo obbligatorio.</td>
+      </tr>
+      <tr>
+        <td>onConfirm</td>
+        <td>function</td>
+        <td>{}</td>
+        <td>Questa funzione viene chiamata quando l'utente conferma un'opzione, con l'opzione che ha confermato come argomento (si vedano gli esempi precedenti).</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+#### Metodi
+
+<div class="table-responsive">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th style="width: 150px;">Metodo</th>
+        <th>Descrizione</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% include standard-methods.html class="SelectAutocomplete" %}
+    </tbody>
+  </table>
+</div>
+
+## Internazionalizzazione (i18n)
+
+Il componente è internazionalizzabile tramite alcuni parametri della configurazione.
+La configurazione per Bootstrap Italia è stata settata in italiano.
+Per maggiori dettagli sulle stringhe che possono essere passate al componente
+fare riferimento alla [guida ufficiale](https://github.com/alphagov/accessible-autocomplete?tab=readme-ov-file#internationalization).
+
+## Breaking change
+
+{% capture callout %}
+Nuova modalità di utilizzo del componente Autocomplete via codice.
+{% endcapture %}{% include callout-breaking.html content=callout version="2.14.0" type="danger" %}

@@ -29,12 +29,20 @@ function onClassChange(element, callback) {
 class SelectAutocomplete extends BaseComponent {
   constructor(element, config) {
     super(element)
-    this._extraClasses = []
+
     this._config = config || {}
     this._config.inputClasses = 'form-control'
     this._config.showNoOptionsFound = true
     this._config.hintClasses = 'app-hint'
+    this._config.autoselect = false
+    this._config.showAllValues = false
+    this._config.templates = undefined
     this._config.confirmOnBlur = false
+    this._config.menuAttributes = {}
+    this._config.menuClasses = null
+
+    this._extraClasses = []
+
     if (!this._config.tAssistiveHint)
       this._config.tAssistiveHint = () =>
         'Quando i risultati del completamento automatico sono disponibili, usa le frecce su e giù per rivedere e Invio per selezionare. Utenti di dispositivi touch, esplora tramite tocco o con gesti di scorrimento'
