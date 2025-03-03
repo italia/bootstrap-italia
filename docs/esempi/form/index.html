@@ -128,7 +128,7 @@ title: Validazione Form
     <div class="row mb-4">
       <div class="col-12 col-md-4">
         <div class="form-group">
-          <label for="accessibleAutocomplete">Regione</label>
+          <label for="accessibleAutocomplete">Comune di residenza</label>
           <div id="accessibleAutocompleteWrapper" class="autocomplete-wrapper"></div>
         </div>
       </div>
@@ -225,7 +225,7 @@ title: Validazione Form
   </div>
 </div>
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
+  document.addEventListener('DOMContentLoaded', async function () {
     const errorMessage =
       '<div class="alert alert-danger alert-dismissible fade show" role="alert"><strong>Attenzione</strong> Alcuni campi inseriti sono da controllare.<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Chiudi avviso"></div>'
     const errorWrapper = document.querySelector('#errorMsgContainer')
@@ -235,10 +235,12 @@ title: Validazione Form
       errorLabelStyle: '',
       focusInvalidField: false,
     })
-    const italianRegions =  ["Abruzzo","Basilicata","Calabria","Campania","Emilia Romagna","Friuli Venezia Giulia","Lazio","Liguria","Lombardia","Marche","Molise","Piemonte","Puglia","Sardegna","Sicilia","Toscana","Trentino Alto Adige","Umbria","Valle d’Aosta","Veneto"];
+    const italianRegions = ["Abruzzo","Basilicata","Calabria","Campania","Emilia Romagna","Friuli Venezia Giulia","Lazio","Liguria","Lombardia","Marche","Molise","Piemonte","Puglia","Sardegna","Sicilia","Toscana","Trentino Alto Adige","Umbria","Valle d’Aosta","Veneto"];
+    const comuniJson = await (await fetch('./comuni.json')).json();
+    const comuni = comuniJson.map(comune => comune.comune)
     const selectAutocompleteWrapper = document.querySelector('#accessibleAutocompleteWrapper');
     const selectAutocomplete = new bootstrap.SelectAutocomplete(selectAutocompleteWrapper, {
-      source: italianRegions,
+      source: comuni,
       id: 'accessibleAutocomplete',
       onConfirm: () => {
         validate.revalidateField('#accessibleAutocomplete')
@@ -259,9 +261,9 @@ title: Validazione Form
         },
         {
           validator: (value) => {
-            return ['Abruzzo', 'Toscana', 'Piemonte'].includes(value);
+            return comuni.includes(value);
           },
-          errorMessage: 'Puoi scegliere solo tra Abruzzo, Toscana o Piemonte',
+          errorMessage: 'Scegli una città valida',
         },
       ])
       .addField('#importo_input_group', [
