@@ -104,11 +104,11 @@ p a {
 }
 
 .autocomplete__wrapper .autocomplete__menu {
-    .autocomplete__hint,
-    .autocomplete__option {
-      &:focus {
-        border: 3px solid $focus-outline-color-out !important;
-        box-shadow: none !important;
-      }
+  .autocomplete__hint,
+  .autocomplete__option {
+    &:focus {
+      border: 3px solid $focus-outline-color-out !important;
+      box-shadow: none !important;
+    }
   }
 }

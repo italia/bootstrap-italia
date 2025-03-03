@@ -235,7 +235,7 @@ title: Validazione Form
       errorLabelStyle: '',
       focusInvalidField: false,
     })
-    const italianRegions = ["Abruzzo","Basilicata","Calabria","Campania","Emilia Romagna","Friuli Venezia Giulia","Lazio","Liguria","Lombardia","Marche","Molise","Piemonte","Puglia","Sardegna","Sicilia","Toscana","Trentino Alto Adige","Umbria","Valle d’Aosta","Veneto"];
+
     const comuniJson = await (await fetch('./comuni.json')).json();
     const comuni = comuniJson.map(comune => comune.comune)
     const selectAutocompleteWrapper = document.querySelector('#accessibleAutocompleteWrapper');
