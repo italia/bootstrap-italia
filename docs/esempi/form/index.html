@@ -242,6 +242,7 @@ title: Validazione Form
     const selectAutocomplete = new bootstrap.SelectAutocomplete(selectAutocompleteWrapper, {
       source: comuni,
       id: 'accessibleAutocomplete',
+      name: 'comune-residenza',
       minLength: 3,
       onConfirm: () => {
         if (!validate.isSubmitted && !validate.validateBeforeSubmitting)

@@ -24,6 +24,7 @@ Per la creazione del componente, è stato utilizzato il plugin [Accessible autoc
     const selectElement = document.querySelector('#accessibleAutocompleteWrapper');
     const selectAutocomplete = new bootstrap.SelectAutocomplete(selectElement, {
       id: 'accessibleAutocomplete',
+      name: 'regioni',
       source: italianRegions
     });
   })
@@ -79,6 +80,7 @@ una funzione per filtrare i dati e popolare il componente
       const selectWrapperElement = document.getElementById("productAutocompleteWrapper");
       const selectAutocomplete = new bootstrap.SelectAutocomplete(selectWrapperElement, {
         id: 'productAutocomplete',
+        name: 'prodotto',
         source: (query, populateResults) => {
           const results = form_data[categorySelect.value]
           const filteredResults = results.filter(result => result.indexOf(query) !== -1)
@@ -127,6 +129,7 @@ una funzione per filtrare i dati e popolare il componente
       const selectWrapperElement = document.getElementById("comuniAutocompleteWrapper");
       const selectAutocomplete = new bootstrap.SelectAutocomplete(selectWrapperElement, {
         id: 'comuniAutocomplete',
+        name: 'comuni',
         source: (query, populateResults) => {
           const results = data[regioniSelect.value]
           const filteredResults = results.filter(result => result.indexOf(query) !== -1)
@@ -163,7 +166,7 @@ const selectAutocomplete = new SelectAutocomplete(selectAutocompleteWrapper, {
   source: myData,
   id: 'idAutocomplete',
   onConfirm: () => {
-    validate.revalidateField('#accessibleAutocomplete')
+    validate.revalidateField('#idAutocomplete')
   }
 });
 ```
@@ -176,7 +179,7 @@ submit occorre controllare il suo stato
   onConfirm: () => {
     if (!validate.isSubmitted && !validate.validateBeforeSubmitting)
       return
-    validate.revalidateField('#accessibleAutocomplete')
+    validate.revalidateField('#idAutocomplete')
   }
 ```
 
@@ -216,6 +219,7 @@ meno di 3 caratteri)
       const selectAutocomplete = new bootstrap.SelectAutocomplete(selectAutocompleteWrapper, {
         source: comuni,
         id: 'comuneJVAutocomplete',
+        name: 'comuni',
         minLength: 3,
         onConfirm: () => {
           if (!validate.isSubmitted && !validate.validateBeforeSubmitting)
