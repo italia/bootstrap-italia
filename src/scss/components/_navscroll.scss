@@ -1,18 +1,17 @@
 .it-navscroll-wrapper {
-  --navscroll-bg-color: #fff;
+  --navscroll-bg-color: var(--#{$prefix}page-background);
   --navscroll-backbutton-padding: 10px;
   --navscroll-bottom-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  --navscroll-backbutton-weight: 600;
-  --navscroll-links-padding: 12px;
-  --navscroll-font-size: 14px;
-  --navscroll-primary-font-weight: 500;
+  --navscroll-backbutton-weight: var(--#{$prefix}font-weight-solid);
+  --navscroll-item-spacing: var(--#{$prefix}spacing-xs);
+  --navscroll-item-font-size: var(--#{$prefix}label-font-size);
   --navscroll-selection-link-left: 4px solid #007bff;
   --navscroll-secondary-active-color: #0056b3;
-  --sidebar-heading-margin-top: 16px;
-  --sidebar-heading-bottom-margin: 12px;
-  --sidebar-heading-text-size: 16px;
-  --sidebar-heading-font-weight: 700;
-  --sidebar-heading-letter-spacing: 1px;
+  --navscroll-heading-spacing-top: var(--#{$prefix}spacing-s);
+  --navscroll-heading-spacing-bottom: var(--#{$prefix}spacing-xs);
+  --navscroll-heading-spacing-x: var(--#{$prefix}spacing-m);
+  --navscroll-heading-font-size: var(--#{$prefix}heading-6-font-size);
+  --navscroll-heading-font-weight: var(--#{$prefix}heading-font-weight);
   --navscroll-toggler-color: #333;
   --navscroll-button-text-weight: 600;
   --navscroll-line-color: #ddd;
@@ -53,11 +52,11 @@
 }
 
 .navbar.it-navscroll-wrapper .link-list-wrapper ul li a {
-  padding-top: var(--navscroll-links-padding);
-  padding-bottom: var(--navscroll-links-padding);
-  font-size: var(--navscroll-font-size);
-  font-weight: var(--navscroll-primary-font-weight);
-  line-height: var(--navscroll-font-size);
+  padding-top: var(--navscroll-item-spacing);
+  padding-bottom: var(--navscroll-item-spacing);
+  font-size: var(--navscroll-item-font-size);
+  font-weight: var(--#{$prefix}font-weight-solid);
+  line-height: var(--navscroll-item-text-size);
 }
 
 .navbar.it-navscroll-wrapper .link-list-wrapper ul li a.active {
@@ -70,13 +69,12 @@
 }
 
 .navbar.it-navscroll-wrapper h3 {
-  margin-top: var(--sidebar-heading-margin-top);
-  margin-bottom: var(--sidebar-heading-bottom-margin);
-  padding-right: calc(var(--#{$prefix}spacing-xxs) * 3);
-  padding-left: calc(var(--#{$prefix}spacing-xxs) * 3);
-  font-size: var(--sidebar-heading-text-size);
-  font-weight: var(--sidebar-heading-font-weight);
-  letter-spacing: var(--sidebar-heading-letter-spacing);
+  margin-top: var(--navscroll-heading-spacing-top);
+  margin-bottom: var(--navscroll-heading-spacing-bottom);
+  padding-right: var(--navscroll-heading-spacing-x);
+  padding-left: var(--navscroll-heading-spacing-x);
+  font-size: var(--navscroll-heading-font-size);
+  font-weight: var(--navscroll-heading-font-weight);
   text-transform: uppercase;
 }
 
