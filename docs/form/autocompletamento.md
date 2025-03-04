@@ -83,7 +83,9 @@ una funzione per filtrare i dati e popolare il componente
         name: 'prodotto',
         source: (query, populateResults) => {
           const results = form_data[categorySelect.value]
-          const filteredResults = results.filter(result => result.indexOf(query) !== -1)
+          const filteredResults = results.filter(
+            result => result.toLowerCase() .indexOf(query.toLowerCase()) !== -1
+          )
           populateResults(filteredResults)
         }
       });
@@ -132,7 +134,9 @@ una funzione per filtrare i dati e popolare il componente
         name: 'comuni',
         source: (query, populateResults) => {
           const results = data[regioniSelect.value]
-          const filteredResults = results.filter(result => result.indexOf(query) !== -1)
+          const filteredResults = results.filter(
+            result => result.toLowerCase() .indexOf(query.toLowerCase()) !== -1
+          )          
           populateResults(filteredResults)
         }
       });
