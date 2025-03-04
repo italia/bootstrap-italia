@@ -207,7 +207,7 @@ La Navscroll può mostrare una barra di avanzamento dello scorrimento del conten
           <div class="progress-bar it-navscroll-progressbar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
         </div>
         <ul class="link-list">
-          <li class="nav-item">
+          <li class="nav-item active">
             <a class="nav-link active" href="#">
               <span>1. Introduzione </span>
             </a>
