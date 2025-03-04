@@ -102,3 +102,13 @@ p a {
       0 0 0 5px $focus-outline-color-in !important;
   }
 }
+
+.autocomplete__wrapper .autocomplete__menu {
+  .autocomplete__hint,
+  .autocomplete__option {
+    &:focus {
+      border: 3px solid $focus-outline-color-out !important;
+      box-shadow: none !important;
+    }
+  }
+}
