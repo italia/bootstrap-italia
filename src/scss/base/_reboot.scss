@@ -157,7 +157,7 @@ a {
   text-underline-offset: 2px;
 
   &:hover {
-    color: var(--#{$prefix}link-hover-color);
+    color: var(--#{$prefix}color-link-hover);
     text-decoration: underline;
   }
 }
