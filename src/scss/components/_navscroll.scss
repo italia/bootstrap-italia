@@ -19,11 +19,6 @@
 .navbar.it-navscroll-wrapper {
   background: var(--#{$prefix}navscroll-background);
 
-  &.theme-dark-desktop,
-  &.theme-dark-mobile {
-    --#{$prefix}navscroll-background: var(--#{$prefix}color-background-secondary);
-  }
-
   .it-back-button {
     position: fixed;
     top: 0;
@@ -64,10 +59,6 @@
   .link-list-wrapper ul li a.active {
     --#{$prefix}navscroll-item-border-color: var(--#{$prefix}color-border-primary);
     --#{$prefix}navscroll-item-font-color: var(--#{$prefix}color-link-active);
-    .theme-dark-mobile &,
-    .theme-dark-desktop & {
-      --#{$prefix}navscroll-item-border-color: var(--#{$prefix}color-border-inverse);
-    }
   }
   
   .link-list-wrapper ul li ul li a {
@@ -96,21 +87,11 @@
     color: var(--#{$prefix}navscroll-toggler-color);
     font-weight: var(--#{$prefix}font-weight-solid);
     cursor: pointer;
-  
-    .theme-dark-desktop &,
-    .theme-dark-mobile & {
-      --#{$prefix}navscroll-toggler-color: var(--#{$prefix}color-text-inverse);
-    }
   }
   
   .custom-navbar-toggler span.it-list {
     margin-right: var(--#{$prefix}spacing-xxs);
     color: var(--#{$prefix}navscroll-toggler-color);
-  
-    .theme-dark-desktop &,
-    .theme-dark-mobile & {
-      --#{$prefix}navscroll-toggler-color: var(--#{$prefix}color-text-inverse);
-    }
   }
 }
 
@@ -136,7 +117,58 @@
   border-right: 1px solid var(--#{$prefix}navscroll-divider-color);
 }
 
-@media (min-width: 992px) {
+// Theme Dark Mobile
+@include media-breakpoint-down(lg) {
+  .it-navscroll-wrapper.theme-dark-mobile {
+    --#{$prefix}navscroll-background: var(--#{$prefix}color-background-secondary);
+
+    .link-list-wrapper h3 {
+      color: var(--#{$prefix}color-text-muted);
+    }
+
+    .link-list-wrapper ul li a,
+    .link-list-wrapper ul li a.active {
+      --#{$prefix}navscroll-item-font-color: var(--#{$prefix}color-text-inverse);
+    }
+    
+    .custom-navbar-toggler,
+    .custom-navbar-toggler span.it-list {
+      --#{$prefix}navscroll-toggler-color: var(--#{$prefix}color-text-inverse);
+    }
+
+    .link-list-wrapper ul li a.active {
+      --#{$prefix}navscroll-item-border-color: var(--#{$prefix}color-border-inverse);
+    }
+  }
+}
+
+// Theme Dark Desktop
+@include media-breakpoint-up(lg) {
+  .it-navscroll-wrapper.theme-dark-desk {
+    --#{$prefix}navscroll-background: var(--#{$prefix}color-background-secondary);
+
+    .link-list-wrapper h3 {
+      color: var(--#{$prefix}color-text-inverse);
+    }
+
+    .link-list-wrapper ul li a,
+    .link-list-wrapper ul li a.active {
+      --#{$prefix}navscroll-item-font-color: var(--#{$prefix}color-text-inverse);
+    }
+    
+    .custom-navbar-toggler,
+    .custom-navbar-toggler span.it-list {
+      --#{$prefix}navscroll-toggler-color: var(--#{$prefix}color-text-inverse);
+    }
+
+    .link-list-wrapper ul li a.active {
+      --#{$prefix}navscroll-item-border-color: var(--#{$prefix}color-border-inverse);
+    }
+  }
+}
+
+// Desktop Only
+@include media-breakpoint-up(lg) {
   .navbar.it-navscroll-wrapper .it-back-button,
   .navbar.it-navscroll-wrapper .custom-navbar-progressbar,
   .navbar.it-navscroll-wrapper .custom-navbar-toggler {
