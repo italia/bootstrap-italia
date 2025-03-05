@@ -46,8 +46,6 @@ class InputNumber extends BaseComponent {
     return NAME
   }
 
-  // Public
-
   // Private
   _init() {
     if (this._wrapperElement) {
@@ -56,10 +54,10 @@ class InputNumber extends BaseComponent {
   }
 
   _bindEvents() {
-    this._element.addEventListener('focus', (evt) => {
+    this._element.addEventListener('focus', () => {
       this._element.type = 'text'
     })
-    this._element.addEventListener('blur', (evt) => {
+    this._element.addEventListener('blur', () => {
       this._element.type = 'number'
       setTimeout(() => {
         this._label._labelToggle()
@@ -108,7 +106,10 @@ class InputNumber extends BaseComponent {
   }
 
   _incrDecr(isDecr) {
-    var inputVal = 0
+    let inputVal = 0
+    if (this._element.disabled) {
+      return
+    }
     if (this._element.value !== '') inputVal = parseFloat(this._element.value)
 
     if (!isNaN(inputVal)) {
@@ -162,7 +163,7 @@ const createInput = (element) => {
 
 if (typeof window !== 'undefined' && typeof document !== 'undefined') {
   document.addEventListener('DOMContentLoaded', function () {
-    var frmel = document.querySelectorAll(SELECTOR_INPUT + ', label')
+    let frmel = document.querySelectorAll(SELECTOR_INPUT + ', label')
     frmel.forEach(function (item) {
       const target = InputLabel.getInputFromLabel(item) || item
       createInput(target)
