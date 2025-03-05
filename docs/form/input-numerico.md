@@ -165,9 +165,9 @@ e `disabled` ai pulsanti.
 {% capture example %}
 <div>
   <div class="form-group">
-    <label for="inputNumber5" class="input-number-label active">Contenuto in sola lettura</label>
+    <label for="inputNumberReadOnly" class="input-number-label active">Contenuto in sola lettura</label>
     <div class="input-group input-number">
-      <input type="number" class="form-control" data-bs-input id="inputNumber5" name="inputNumber5" value="50" min="0" max="100" step="1" readonly />
+      <input type="number" class="form-control" data-bs-input id="inputNumberReadOnly" name="inputNumberReadOnly" value="50" min="0" max="100" step="1" readonly />
       <span class="input-group-text align-buttons flex-column">
         <button class="input-number-add" disabled>
           <span class="visually-hidden">Aumenta valore</span>
