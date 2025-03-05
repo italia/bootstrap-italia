@@ -381,14 +381,16 @@ Bootstrap Italia migliora l'accessibilità dell'Accordion implementando la navig
 
 #### Metodi
 
-<table class="table table-bordered table-striped">
-  <thead>
-    <tr>
-      <th style="width: 150px;">Metodo</th>
-      <th>Descrizione</th>
-    </tr>
-  </thead>
-  <tbody>
-    {% include standard-methods.html class="Accordion" %}
-  </tbody>
-</table>
+<div class="table-responsive">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th style="width: 150px;">Metodo</th>
+        <th>Descrizione</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% include standard-methods.html class="Accordion" %}
+    </tbody>
+  </table>
+</div>

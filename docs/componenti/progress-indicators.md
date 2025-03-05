@@ -47,82 +47,86 @@ const progDonut = new ProgressDonut(progElement, {
 })
 ```
 
-### Opzioni
+#### Opzioni
 
 Le opzioni possono essere passate tramite gli attributi data o tramite JavaScript. Per quanto riguarda gli attributi data, aggiungi il nome dell'opzione a `data-bs`, come in `data-bs-value=""`.
 
-<table class="table table-bordered table-striped">
-  <thead>
-    <tr>
-      <th style="width: 100px;">Nome</th>
-      <th style="width: 50px;">Tipo</th>
-      <th style="width: 50px;">Predefinito</th>
-      <th>Descrizione</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>color</td>
-      <td>string</td>
-      <td>#0073E6</td>
-      <td>colore della barra</td>
-    </tr>
-    <tr>
-      <td>trailColor</td>
-      <td>string</td>
-      <td>#D4E9FF</td>
-      <td>colore della guida della barra</td>
-    </tr>
-    <tr>
-      <td>strokeWidth</td>
-      <td>number</td>
-      <td>24</td>
-      <td>spessore della barra</td>
-    </tr>
-    <tr>
-      <td>trailWidth</td>
-      <td>number</td>
-      <td>6</td>
-      <td>spessore della guida barra</td>
-    </tr>
-    <tr>
-      <td>easing</td>
-      <td>string</td>
-      <td>easeInOut</td>
-      <td>inerzia dell'animazione</td>
-    </tr>
-    <tr>
-      <td>animate</td>
-      <td>boolean</td>
-      <td>true</td>
-      <td>attiva/disattiva l'animazione</td>
-    </tr>
-    <tr>
-      <td>value</td>
-      <td>number</td>
-      <td>0</td>
-      <td>valore che indica la percentuale di completamento. Deve essere compreso tra 0 e 1.0</td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-responsive">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th style="width: 100px;">Nome</th>
+        <th style="width: 50px;">Tipo</th>
+        <th style="width: 50px;">Predefinito</th>
+        <th>Descrizione</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>color</td>
+        <td>string</td>
+        <td>#0073E6</td>
+        <td>colore della barra</td>
+      </tr>
+      <tr>
+        <td>trailColor</td>
+        <td>string</td>
+        <td>#D4E9FF</td>
+        <td>colore della guida della barra</td>
+      </tr>
+      <tr>
+        <td>strokeWidth</td>
+        <td>number</td>
+        <td>24</td>
+        <td>spessore della barra</td>
+      </tr>
+      <tr>
+        <td>trailWidth</td>
+        <td>number</td>
+        <td>6</td>
+        <td>spessore della guida barra</td>
+      </tr>
+      <tr>
+        <td>easing</td>
+        <td>string</td>
+        <td>easeInOut</td>
+        <td>inerzia dell'animazione</td>
+      </tr>
+      <tr>
+        <td>animate</td>
+        <td>boolean</td>
+        <td>true</td>
+        <td>attiva/disattiva l'animazione</td>
+      </tr>
+      <tr>
+        <td>value</td>
+        <td>number</td>
+        <td>0</td>
+        <td>valore che indica la percentuale di completamento. Deve essere compreso tra 0 e 1.0</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-### Metodi
+#### Metodi
 
-<table class="table table-bordered table-striped">
-  <thead>
-    <tr>
-      <th style="width: 150px;">Metodo</th>
-      <th>Descrizione</th>
-    </tr>
-  </thead>
-  <tbody>
-    {% include standard-methods.html class="ProgressDonut" %}
-    <tr>
-      <td>set</td>
-      <td>modifica lo stato di progressione della barra. È necessario inserire un numero compreso tra 0 e 1.0</td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-responsive">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th style="width: 150px;">Metodo</th>
+        <th>Descrizione</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% include standard-methods.html class="ProgressDonut" %}
+      <tr>
+        <td>set</td>
+        <td>modifica lo stato di progressione della barra. È necessario inserire un numero compreso tra 0 e 1.0</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 ## Progress Bar
 

@@ -764,9 +764,11 @@ Per fare in modo che i tab appaiano con un'animazione "a comparsa" (fade in), è
 
 Si possono trovare dettagli aggiuntivi sulla gestione attraverso JavaScript di metodi ed eventi sui tab alla [pagina corrispondente](https://getbootstrap.com/docs/{{ site.bootstrap_minor }}/components/navs-tabs/#methods) sul sito di Bootstrap.
 
-## Implementazione
+## Attivazione tramite codice
 
-### Tramite data attributes
+{% include callout-bundle-methods.md %}
+
+#### Tramite data attributes
 
 Puoi attivare una navigazione a tab senza scrivere JavaScript, semplicemente utilizzando la proprietà `data-bs-toggle="tab"` nel link all'interno di liste di tipo `.nav-tabs`:
 
@@ -796,7 +798,7 @@ Puoi attivare una navigazione a tab senza scrivere JavaScript, semplicemente uti
 </div>
 ```
 
-### Attivazione tramite codice
+#### Tramite JavaScript
 
 Abilita le tab tramite JavaScript (ogni tab deve essere attivata individualmente):
 
@@ -816,17 +818,19 @@ triggerTabList.forEach(function (triggerEl) {
 
 #### Metodi
 
-<table class="table table-bordered table-striped">
-  <thead>
-    <tr>
-      <th style="width: 150px;">Metodo</th>
-      <th>Descrizione</th>
-    </tr>
-  </thead>
-  <tbody>
-    {% include standard-methods.html class="Tab" %}
-  </tbody>
-</table>
+<div class="table-responsive">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th style="width: 150px;">Metodo</th>
+        <th>Descrizione</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% include standard-methods.html class="Tab" %}
+    </tbody>
+  </table>
+</div>
 
 ## Breaking change
 

@@ -418,6 +418,8 @@ Aggiungendo la classe`.dark` al dropdown menu si ottiene una versione in negativ
 
 ## Attivazione tramite codice
 
+{% include callout-bundle-methods.md %}
+
 ```js
 import { Dropdown } from 'bootstrap-italia';
 
@@ -429,122 +431,128 @@ const dropdown = new Dropdown(dropdownEl, options)
 
 Le opzioni possono essere passate tramite gli attributi data o tramite JavaScript. Per quanto riguarda gli attributi data, aggiungi il nome dell'opzione a `data-bs`, come in `data-bs-parent=""`.
 
-<table class="table table-bordered table-striped">
-  <thead>
-    <tr>
-      <th style="width: 100px;">Nome</th>
-      <th style="width: 50px;">Tipo</th>
-      <th style="width: 50px;">Predefinito</th>
-      <th>Descrizione</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>autoClose</td>
-      <td>true | 'inside' | 'outside'</td>
-      <td>true</td>
-      <td>Configura il comportamento di chiusura automatica del menu a discesa:
-      <br>
-true - il menu a discesa verrà chiuso cliccando all'esterno o all'interno del menu a discesa.
-<br>
-false - il menu a discesa verrà chiuso cliccando sul pulsante di attivazione/disattivazione e richiamando manualmente il metodo hide o toggle. (Inoltre, non verrà chiuso premendo il tasto esc)
-<br>
-'inside' - il menu a discesa verrà chiuso (solo) cliccando all'interno del menu a discesa.
-<br>
-'outside' - il menu a discesa verrà chiuso (solo) cliccando all'esterno del menu a discesa.
-<br>
-Nota: il menu a discesa può sempre essere chiuso con il tasto ESC.
-</td>
-    </tr>
-    <tr>
-      <td>boundary</td>
-      <td>string | element</td>
-      <td>"clippingParents"</td>
-      <td>Limite di vincolo di overflow del menu a discesa (si applica solo al modificatore preventOverflow di Popper). Di default è clippingParents e può accettare un riferimento HTMLElement (solo tramite JavaScript). Per maggiori informazioni, fare riferimento alla documentazione <a href="https://popper.js.org/docs/v2/utils/detect-overflow/#boundary">detectOverflow di Popper</a>.</td>
-    </tr>
-    <tr>
-      <td>display</td>
-      <td>string</td>
-      <td>"dynamic"</td>
-      <td>Di default, viene utilizzato Popper per il posizionamento dinamico. 
-      Questo comportament è disattivabile con il valore "static".</td>
-    </tr>
-    <tr>
-      <td>offset</td>
-      <td>array|string|function</td>
-      <td>[0, 2]</td>
-      <td>Offset del menu a discesa rispetto al suo target. Puoi passare una stringa negli attributi dati con valori separati da virgole. Quando una funzione viene utilizzata per determinare l'offset, viene chiamata con un oggetto contenente il posizionamento del popper, il riferimento e i rettangoli del popper come primo argomento. Il nodo DOM dell'elemento di attivazione viene passato come secondo argomento. La funzione deve restituire un array con due numeri: <a href="https://popper.js.org/docs/v2/modifiers/offset/#skidding-1">skidding</a>,  <a href="https://popper.js.org/docs/v2/modifiers/offset/#distance-1">distance</a>. Per maggiori informazioni, fai riferimento alla <a href="https://popper.js.org/docs/v2/modifiers/offset/#options">documentazione offset di Popper</a>.</td>
-    </tr>
-    <tr>
-      <td>popperConfig</td>
-      <td>null|object|function</td>
-      <td>null</td>
-      <td>Configurazione aggiuntiva per l'oggetto Popper.js presente nel componente
-      dropdown. Per maggiori informazioni si rimanda alla <a href="https://popper.js.org/docs/v2/constructors/#options"> documentazione della
-      configurazione Popper</a></td>
-    </tr>
-    <tr>
-      <td>reference</td>
-      <td>string|element|object</td>
-      <td>"toggle"</td>
-      <td>Elemento di riferimento del menu a discesa. Accetta i valori di 'toggle', 'parent', un riferimento HTMLElement o un oggetto che fornisce getBoundingClientRect. Per maggiori informazioni si rimanda alla <a href="https://popper.js.org/docs/v2/virtual-elements/"> documentazione di Popper</a>.</td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-responsive">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th style="width: 100px;">Nome</th>
+        <th style="width: 50px;">Tipo</th>
+        <th style="width: 50px;">Predefinito</th>
+        <th>Descrizione</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>autoClose</td>
+        <td>true | 'inside' | 'outside'</td>
+        <td>true</td>
+        <td>Configura il comportamento di chiusura automatica del menu a discesa:
+        <br>
+  true - il menu a discesa verrà chiuso cliccando all'esterno o all'interno del menu a discesa.
+  <br>
+  false - il menu a discesa verrà chiuso cliccando sul pulsante di attivazione/disattivazione e richiamando manualmente il metodo hide o toggle. (Inoltre, non verrà chiuso premendo il tasto esc)
+  <br>
+  'inside' - il menu a discesa verrà chiuso (solo) cliccando all'interno del menu a discesa.
+  <br>
+  'outside' - il menu a discesa verrà chiuso (solo) cliccando all'esterno del menu a discesa.
+  <br>
+  Nota: il menu a discesa può sempre essere chiuso con il tasto ESC.
+  </td>
+      </tr>
+      <tr>
+        <td>boundary</td>
+        <td>string | element</td>
+        <td>"clippingParents"</td>
+        <td>Limite di vincolo di overflow del menu a discesa (si applica solo al modificatore preventOverflow di Popper). Di default è clippingParents e può accettare un riferimento HTMLElement (solo tramite JavaScript). Per maggiori informazioni, fare riferimento alla documentazione <a href="https://popper.js.org/docs/v2/utils/detect-overflow/#boundary">detectOverflow di Popper</a>.</td>
+      </tr>
+      <tr>
+        <td>display</td>
+        <td>string</td>
+        <td>"dynamic"</td>
+        <td>Di default, viene utilizzato Popper per il posizionamento dinamico. 
+        Questo comportament è disattivabile con il valore "static".</td>
+      </tr>
+      <tr>
+        <td>offset</td>
+        <td>array|string|function</td>
+        <td>[0, 2]</td>
+        <td>Offset del menu a discesa rispetto al suo target. Puoi passare una stringa negli attributi dati con valori separati da virgole. Quando una funzione viene utilizzata per determinare l'offset, viene chiamata con un oggetto contenente il posizionamento del popper, il riferimento e i rettangoli del popper come primo argomento. Il nodo DOM dell'elemento di attivazione viene passato come secondo argomento. La funzione deve restituire un array con due numeri: <a href="https://popper.js.org/docs/v2/modifiers/offset/#skidding-1">skidding</a>,  <a href="https://popper.js.org/docs/v2/modifiers/offset/#distance-1">distance</a>. Per maggiori informazioni, fai riferimento alla <a href="https://popper.js.org/docs/v2/modifiers/offset/#options">documentazione offset di Popper</a>.</td>
+      </tr>
+      <tr>
+        <td>popperConfig</td>
+        <td>null|object|function</td>
+        <td>null</td>
+        <td>Configurazione aggiuntiva per l'oggetto Popper.js presente nel componente
+        dropdown. Per maggiori informazioni si rimanda alla <a href="https://popper.js.org/docs/v2/constructors/#options"> documentazione della
+        configurazione Popper</a></td>
+      </tr>
+      <tr>
+        <td>reference</td>
+        <td>string|element|object</td>
+        <td>"toggle"</td>
+        <td>Elemento di riferimento del menu a discesa. Accetta i valori di 'toggle', 'parent', un riferimento HTMLElement o un oggetto che fornisce getBoundingClientRect. Per maggiori informazioni si rimanda alla <a href="https://popper.js.org/docs/v2/virtual-elements/"> documentazione di Popper</a>.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 #### Metodi
 
-<table class="table table-bordered table-striped">
-  <thead>
-    <tr>
-      <th style="width: 150px;">Metodo</th>
-      <th>Descrizione</th>
-    </tr>
-  </thead>
-  <tbody>
-     {% include standard-methods.html class="Dropdown" %}
-    <tr>
-      <td>show</td>
-      <td>Mostra la tendina del dropdown.</td>
-    </tr>
-    <tr>
-      <td>hide</td>
-      <td>Nasconde la tendina del dropdown.</td>
-    </tr>
-    <tr>
-      <td>toggle</td>
-      <td>Mostra/nasconde la tendina del dropdown.</td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-responsive">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th style="width: 150px;">Metodo</th>
+        <th>Descrizione</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% include standard-methods.html class="Dropdown" %}
+      <tr>
+        <td>show</td>
+        <td>Mostra la tendina del dropdown.</td>
+      </tr>
+      <tr>
+        <td>hide</td>
+        <td>Nasconde la tendina del dropdown.</td>
+      </tr>
+      <tr>
+        <td>toggle</td>
+        <td>Mostra/nasconde la tendina del dropdown.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 #### Eventi
 
-<table class="table table-bordered table-striped">
-  <thead>
-    <tr>
-      <th>Evento</th>
-      <th>Descrizione</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>hide.bs.dropdown</code></td>
-      <td>Viene attivato immediatamente quando viene chiamato il metodo di istanza <code>hide</code>.</td>
-    </tr>
-    <tr>
-      <td><code>hidden.bs.dropdown</code></td>
-      <td>Viene attivato quando il menu a discesa non è più nascosto all'utente e le transizioni CSS sono state
-        completate.</td>
-    </tr>
-    <tr>
-      <td><code>show.bs.dropdown</code></td>
-      <td>Viene attivato immediatamente quando viene chiamato il metodo di istanza <code>show</code>. chiamato.
-      </td>
-    </tr>
-    <tr>
-      <td><code>shown.bs.dropdown</code></td>
-      <td>Attivato quando il menu a discesa è stato reso visibile all'utente e le transizioni CSS sono state completate.</td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-responsive">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>Evento</th>
+        <th>Descrizione</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>hide.bs.dropdown</code></td>
+        <td>Viene attivato immediatamente quando viene chiamato il metodo di istanza <code>hide</code>.</td>
+      </tr>
+      <tr>
+        <td><code>hidden.bs.dropdown</code></td>
+        <td>Viene attivato quando il menu a discesa non è più nascosto all'utente e le transizioni CSS sono state
+          completate.</td>
+      </tr>
+      <tr>
+        <td><code>show.bs.dropdown</code></td>
+        <td>Viene attivato immediatamente quando viene chiamato il metodo di istanza <code>show</code>. chiamato.
+        </td>
+      </tr>
+      <tr>
+        <td><code>shown.bs.dropdown</code></td>
+        <td>Attivato quando il menu a discesa è stato reso visibile all'utente e le transizioni CSS sono state completate.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

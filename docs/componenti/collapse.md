@@ -89,6 +89,8 @@ Per aggiungere un'impostazione tipo accordion ad un'area richiudibile, aggiungi 
 
 ## Attivazione tramite codice
 
+{% include callout-bundle-methods.md %}
+
 È possibile abilitare manualmente un collapse con:
 
 ```js
@@ -109,67 +111,71 @@ const collapse = new Collapse(collapseEl, {
 })
 ```
 
-### Opzioni
+#### Opzioni
 
 Le opzioni possono essere passate tramite gli attributi data o tramite JavaScript. Per quanto riguarda gli attributi data, aggiungi il nome dell'opzione a `data-bs`, come in `data-bs-parent=""`.
 
-<table class="table table-bordered table-striped">
-  <thead>
-    <tr>
-      <th style="width: 100px;">Nome</th>
-      <th style="width: 50px;">Tipo</th>
-      <th style="width: 50px;">Predefinito</th>
-      <th>Descrizione</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>parent</td>
-      <td>selector | DOM element </td>
-      <td>false</td>
-      <td>Se presente un genitore, allora tutti gli elementi comprimibili sotto il genitore specificato verranno chiusi quando viene mostrato questo elemento richiudibile. (simile al tradizionale comportamento dell'accordion - questo dipende dalla classe <code>card</code> class). L'attributo deve essere impostato sull'area collassabile associata.</td>
-    </tr>
-    <tr>
-      <td>toggle</td>
-      <td>boolean</td>
-      <td>true</td>
-      <td>Attiva/disattiva l'elemento richiudibile su richiesta</td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-responsive">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th style="width: 100px;">Nome</th>
+        <th style="width: 50px;">Tipo</th>
+        <th style="width: 50px;">Predefinito</th>
+        <th>Descrizione</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>parent</td>
+        <td>selector | DOM element </td>
+        <td>false</td>
+        <td>Se presente un genitore, allora tutti gli elementi comprimibili sotto il genitore specificato verranno chiusi quando viene mostrato questo elemento richiudibile. (simile al tradizionale comportamento dell'accordion - questo dipende dalla classe <code>card</code> class). L'attributo deve essere impostato sull'area collassabile associata.</td>
+      </tr>
+      <tr>
+        <td>toggle</td>
+        <td>boolean</td>
+        <td>true</td>
+        <td>Attiva/disattiva l'elemento richiudibile su richiesta</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-### Metodi
+#### Metodi
 
 {% include callout-danger-async-methods.md %}
 
-<table class="table table-bordered table-striped">
-  <thead>
-    <tr>
-      <th style="width: 150px;">Metodo</th>
-      <th>Descrizione</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>toggle</td>
-      <td>Attiva/disattiva un elemento richiudibile per mostrarlo o nasconderlo. **Ritorna al chiamante prima che l'elemento richiudibile sia stato effettivamente mostrato o nascosto** (i.e. si verifica prima dell'evento <code>shown.bs.collapse</code> o <code>hidden.bs.collapse</code>).</td>
-    </tr>
-    <tr>
-      <td>show</td>
-      <td>Mostra un elemento richiudibile. **Ritorna al chiamante prima che l'elemento richiudibile sia stato effettivamente mostrato** (i.e. si verifica prima dell'evento <code>shown.bs.collapse</code>).</td>
-    </tr>
-    <tr>
-      <td>hide</td>
-      <td>Nasconde un elemento richiudibile. **Ritorna al chiamante prima che l'elemento richiudibile sia stato effettivamente nascosto** (i.e. si verifica prima dell'evento <code>hidden.bs.collapse</code>).</td>
-    </tr>
-    <tr>
-      <td>dispose</td>
-      <td>Elimina la possibilità di un elemento di essere richiudibile.</td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-responsive">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th style="width: 150px;">Metodo</th>
+        <th>Descrizione</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>toggle</td>
+        <td>Attiva/disattiva un elemento richiudibile per mostrarlo o nasconderlo. **Ritorna al chiamante prima che l'elemento richiudibile sia stato effettivamente mostrato o nascosto** (i.e. si verifica prima dell'evento <code>shown.bs.collapse</code> o <code>hidden.bs.collapse</code>).</td>
+      </tr>
+      <tr>
+        <td>show</td>
+        <td>Mostra un elemento richiudibile. **Ritorna al chiamante prima che l'elemento richiudibile sia stato effettivamente mostrato** (i.e. si verifica prima dell'evento <code>shown.bs.collapse</code>).</td>
+      </tr>
+      <tr>
+        <td>hide</td>
+        <td>Nasconde un elemento richiudibile. **Ritorna al chiamante prima che l'elemento richiudibile sia stato effettivamente nascosto** (i.e. si verifica prima dell'evento <code>hidden.bs.collapse</code>).</td>
+      </tr>
+      <tr>
+        <td>dispose</td>
+        <td>Elimina la possibilità di un elemento di essere richiudibile.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-### Eventi
+#### Eventi
 
 Sono disponibili alcuni eventi per agganciare comportamenti alla funzionalità di apertura/chiusura attraverso JavaScript.
 
@@ -180,29 +186,31 @@ collapsible.addEventListener('hidden.bs.collapse', () => {
 })
 ```
 
-<table class="table table-bordered table-striped">
-  <thead>
-    <tr>
-      <th style="width: 150px;">Tipo di evento</th>
-      <th>Descrizione</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>show.bs.collapse</td>
-      <td>Questo evento si attiva immediatamente quando il metodo di istanza <code>show</code> viene richiamato.</td>
-    </tr>
-    <tr>
-      <td>shown.bs.collapse</td>
-      <td>Questo evento viene attivato quando un elemento richiudibile è stato reso visibile all'utente (attenderà il completamento delle transizioni CSS).</td>
-    </tr>
-    <tr>
-      <td>hide.bs.collapse</td>
-      <td>Questo evento si attiva immediatamente quando il metodo <code>hide</code> viene richiamato.</td>
-    </tr>
-    <tr>
-      <td>hidden.bs.collapse</td>
-      <td>Questo evento viene attivato quando un elemento richiudibile è stato nascosto all'utente (attenderà il completamento delle transizioni CSS).</td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-responsive">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th style="width: 150px;">Tipo di evento</th>
+        <th>Descrizione</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>show.bs.collapse</td>
+        <td>Questo evento si attiva immediatamente quando il metodo di istanza <code>show</code> viene richiamato.</td>
+      </tr>
+      <tr>
+        <td>shown.bs.collapse</td>
+        <td>Questo evento viene attivato quando un elemento richiudibile è stato reso visibile all'utente (attenderà il completamento delle transizioni CSS).</td>
+      </tr>
+      <tr>
+        <td>hide.bs.collapse</td>
+        <td>Questo evento si attiva immediatamente quando il metodo <code>hide</code> viene richiamato.</td>
+      </tr>
+      <tr>
+        <td>hidden.bs.collapse</td>
+        <td>Questo evento viene attivato quando un elemento richiudibile è stato nascosto all'utente (attenderà il completamento delle transizioni CSS).</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
