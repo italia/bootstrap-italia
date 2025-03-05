@@ -1,7 +1,7 @@
 .it-navscroll-wrapper {
   --#{$prefix}navscroll-background: var(--#{$prefix}page-background);
   --#{$prefix}navscroll-backbutton-padding: var(--#{$prefix}spacing-xs);
-  --#{$prefix}navscroll-bottom-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --#{$prefix}navscroll-bottom-box-shadow: 0 0px 30px 5px rgba(0,0,0,.05);
   --#{$prefix}navscroll-backbutton-weight: var(--#{$prefix}font-weight-solid);
   --#{$prefix}navscroll-item-spacing: var(--#{$prefix}spacing-xs) var(--#{$prefix}spacing-m);
   --#{$prefix}navscroll-item-font-size: var(--#{$prefix}label-font-size);
@@ -12,7 +12,7 @@
   --#{$prefix}navscroll-heading-spacing-x: var(--#{$prefix}spacing-m);
   --#{$prefix}navscroll-heading-font-size: var(--#{$prefix}heading-6-font-size);
   --#{$prefix}navscroll-heading-font-weight: var(--#{$prefix}heading-font-weight);
-  --#{$prefix}navscroll-toggler-color: var(--#{$prefix}color-text-base);
+  --#{$prefix}navscroll-toggler-color: var(--#{$prefix}color-text-primary);
   --#{$prefix}navscroll-divider-color: var(--#{$prefix}color-border-subtle);
 }
 
@@ -95,18 +95,23 @@
   }
 }
 
-.navbar.it-bottom-navscroll {
+.navbar.it-bottom-navscroll,
+.navbar.it-top-navscroll {
   position: fixed;
-  bottom: 0;
+  left: 0;
+  right: 0;
   z-index: 99999;
+  padding-top: var(--#{$prefix}spacing-xxs);
+  padding-bottom: var(--#{$prefix}spacing-xxs);
   box-shadow: var(--#{$prefix}navscroll-bottom-box-shadow);
 }
 
+.navbar.it-bottom-navscroll {
+  bottom: 0;
+}
+
 .navbar.it-top-navscroll {
-  position: fixed;
   top: 0;
-  z-index: 8;
-  box-shadow: var(--#{$prefix}navscroll-bottom-box-shadow);
 }
 
 .navbar.it-left-side {
