@@ -1,113 +1,139 @@
 .it-navscroll-wrapper {
-  --navscroll-background: var(--#{$prefix}page-background);
-  --navscroll-backbutton-padding: var(--#{$prefix}spacing-xs);
-  --navscroll-bottom-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  --navscroll-backbutton-weight: var(--#{$prefix}font-weight-solid);
-  --navscroll-item-spacing: var(--#{$prefix}spacing-xs);
-  --navscroll-item-font-size: var(--#{$prefix}label-font-size);
-  --navscroll-item-border-active: var(--#{$prefix}border-thick) solid var(--#{$prefix}color-border-primary);
-  --navscroll-heading-spacing-top: var(--#{$prefix}spacing-s);
-  --navscroll-heading-spacing-bottom: var(--#{$prefix}spacing-xs);
-  --navscroll-heading-spacing-x: var(--#{$prefix}spacing-m);
-  --navscroll-heading-font-size: var(--#{$prefix}heading-6-font-size);
-  --navscroll-heading-font-weight: var(--#{$prefix}heading-font-weight);
-  --navscroll-toggler-color: var(--#{$prefix}color-text-base);
-  --navscroll-divider-color: var(--#{$prefix}color-border-subtle);
+  --#{$prefix}navscroll-background: var(--#{$prefix}page-background);
+  --#{$prefix}navscroll-backbutton-padding: var(--#{$prefix}spacing-xs);
+  --#{$prefix}navscroll-bottom-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --#{$prefix}navscroll-backbutton-weight: var(--#{$prefix}font-weight-solid);
+  --#{$prefix}navscroll-item-spacing: var(--#{$prefix}spacing-xs) var(--#{$prefix}spacing-m);
+  --#{$prefix}navscroll-item-font-size: var(--#{$prefix}label-font-size);
+  --#{$prefix}navscroll-item-font-color: var(--#{$prefix}color-text-primary);
+  --#{$prefix}navscroll-item-border-color: transparent;
+  --#{$prefix}navscroll-heading-spacing-top: var(--#{$prefix}spacing-s);
+  --#{$prefix}navscroll-heading-spacing-bottom: var(--#{$prefix}spacing-xs);
+  --#{$prefix}navscroll-heading-spacing-x: var(--#{$prefix}spacing-m);
+  --#{$prefix}navscroll-heading-font-size: var(--#{$prefix}heading-6-font-size);
+  --#{$prefix}navscroll-heading-font-weight: var(--#{$prefix}heading-font-weight);
+  --#{$prefix}navscroll-toggler-color: var(--#{$prefix}color-text-base);
+  --#{$prefix}navscroll-divider-color: var(--#{$prefix}color-border-subtle);
 }
 
 .navbar.it-navscroll-wrapper {
-  background: var(--navscroll-background);
-}
+  background: var(--#{$prefix}navscroll-background);
 
-.navbar.it-navscroll-wrapper .it-back-button {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 10;
-  visibility: hidden;
-  padding: var(--navscroll-backbutton-padding);
-  opacity: 0;
-  background: var(--navscroll-background);
-  box-shadow: var(--navscroll-bottom-box-shadow);
-  font-weight: var(--navscroll-backbutton-weight);
-  text-decoration: none;
-  transition: opacity 0.3s 0s, visibility 0s 0.3s;
-}
+  &.theme-dark-desktop,
+  &.theme-dark-mobile {
+    --#{$prefix}navscroll-background: var(--#{$prefix}color-background-secondary);
+  }
 
-.navbar.it-navscroll-wrapper .it-back-button i {
-  display: inline-block;
-  margin-right: var(--#{$prefix}spacing-xxs);
-  transform: scale(0.8);
-  transform-origin: center;
-}
+  .it-back-button {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    visibility: hidden;
+    padding: var(--#{$prefix}navscroll-backbutton-padding);
+    opacity: 0;
+    background: var(--#{$prefix}navscroll-background);
+    box-shadow: var(--#{$prefix}navscroll-bottom-box-shadow);
+    font-weight: var(--#{$prefix}navscroll-backbutton-weight);
+    text-decoration: none;
+    transition: opacity 0.3s 0s, visibility 0s 0.3s;
+  
+    &.show {
+      visibility: visible;
+      opacity: 1;
+      transition: opacity 0.3s 0s, visibility 0s 0s;
+    }
+    
+    i {
+      display: inline-block;
+      margin-right: var(--#{$prefix}spacing-xxs);
+      transform: scale(0.8);
+      transform-origin: center;
+    }
+  }
+  
+  .link-list-wrapper ul li a {
+    padding: var(--#{$prefix}navscroll-item-spacing);
+    color: var(--#{$prefix}navscroll-item-font-color);
+    font-size: var(--#{$prefix}navscroll-item-font-size);
+    font-weight: var(--#{$prefix}font-weight-solid);
+    border-left: var(--#{$prefix}border-thick) solid var(--#{$prefix}navscroll-item-border-color);
+  }
 
-.navbar.it-navscroll-wrapper .it-back-button.show {
-  visibility: visible;
-  opacity: 1;
-  transition: opacity 0.3s 0s, visibility 0s 0s;
-}
-
-.navbar.it-navscroll-wrapper .link-list-wrapper ul li a {
-  padding-top: var(--navscroll-item-spacing);
-  padding-bottom: var(--navscroll-item-spacing);
-  font-size: var(--navscroll-item-font-size);
-  font-weight: var(--#{$prefix}font-weight-solid);
-  divider-height: var(--navscroll-item-text-size);
-}
-
-.navbar.it-navscroll-wrapper .link-list-wrapper ul li a.active {
-  border-left: var(--navscroll-item-border-active);
-}
-
-.navbar.it-navscroll-wrapper .link-list-wrapper ul li a.active span {
-  color: var(--#{$prefix}color-text-primary-active);
-  text-decoration: none;
-}
-
-.navbar.it-navscroll-wrapper h3 {
-  margin-top: var(--navscroll-heading-spacing-top);
-  margin-bottom: var(--navscroll-heading-spacing-bottom);
-  padding-right: var(--navscroll-heading-spacing-x);
-  padding-left: var(--navscroll-heading-spacing-x);
-  font-size: var(--navscroll-heading-font-size);
-  font-weight: var(--navscroll-heading-font-weight);
-  text-transform: uppercase;
-}
-
-.navbar.it-navscroll-wrapper .custom-navbar-toggler {
-  display: flex;
-  align-items: center;
-  color: var(--navscroll-toggler-color);
-  font-weight: var(--#{$prefix}font-weight-solid);
-  cursor: pointer;
-}
-
-.navbar.it-navscroll-wrapper .custom-navbar-toggler span.it-list {
-  margin-right: var(--#{$prefix}spacing-xxs);
-  color: var(--navscroll-toggler-color);
+  .link-list-wrapper ul li a.active {
+    --#{$prefix}navscroll-item-border-color: var(--#{$prefix}color-border-primary);
+    --#{$prefix}navscroll-item-font-color: var(--#{$prefix}color-link-active);
+    .theme-dark-mobile &,
+    .theme-dark-desktop & {
+      --#{$prefix}navscroll-item-border-color: var(--#{$prefix}color-border-inverse);
+    }
+  }
+  
+  .link-list-wrapper ul li ul li a {
+    font-weight: var(--#{$prefix}font-weight-base);
+  }
+  
+  .link-list-wrapper ul li ul li a.active {
+    --#{$prefix}navscroll-item-border-color: transparent;
+  }
+  
+  // Navscroll Heading
+  h3 {
+    margin-top: var(--#{$prefix}navscroll-heading-spacing-top);
+    margin-bottom: var(--#{$prefix}navscroll-heading-spacing-bottom);
+    padding-right: var(--#{$prefix}navscroll-heading-spacing-x);
+    padding-left: var(--#{$prefix}navscroll-heading-spacing-x);
+    font-size: var(--#{$prefix}navscroll-heading-font-size);
+    font-weight: var(--#{$prefix}navscroll-heading-font-weight);
+    text-transform: uppercase;
+  }
+  
+  // Navscroll Toggler
+  .custom-navbar-toggler {
+    display: flex;
+    align-items: center;
+    color: var(--#{$prefix}navscroll-toggler-color);
+    font-weight: var(--#{$prefix}font-weight-solid);
+    cursor: pointer;
+  
+    .theme-dark-desktop &,
+    .theme-dark-mobile & {
+      --#{$prefix}navscroll-toggler-color: var(--#{$prefix}color-text-inverse);
+    }
+  }
+  
+  .custom-navbar-toggler span.it-list {
+    margin-right: var(--#{$prefix}spacing-xxs);
+    color: var(--#{$prefix}navscroll-toggler-color);
+  
+    .theme-dark-desktop &,
+    .theme-dark-mobile & {
+      --#{$prefix}navscroll-toggler-color: var(--#{$prefix}color-text-inverse);
+    }
+  }
 }
 
 .navbar.it-bottom-navscroll {
   position: fixed;
   bottom: 0;
   z-index: 99999;
-  box-shadow: var(--navscroll-bottom-box-shadow);
+  box-shadow: var(--#{$prefix}navscroll-bottom-box-shadow);
 }
 
 .navbar.it-top-navscroll {
   position: fixed;
   top: 0;
   z-index: 8;
-  box-shadow: var(--navscroll-bottom-box-shadow);
+  box-shadow: var(--#{$prefix}navscroll-bottom-box-shadow);
 }
 
 .navbar.it-left-side {
-  border-left: 1px solid var(--navscroll-divider-color);
+  border-left: 1px solid var(--#{$prefix}navscroll-divider-color);
 }
 
 .navbar.it-right-side {
-  border-right: 1px solid var(--navscroll-divider-color);
+  border-right: 1px solid var(--#{$prefix}navscroll-divider-color);
 }
 
 @media (min-width: 992px) {
@@ -119,7 +145,7 @@
 
   .navbar.it-navscroll-wrapper .menu-wrapper {
     padding: var(--#{$prefix}spacing-s) 0 var(--#{$prefix}spacing-m);
-    background: var(--navscroll-background);
+    background: var(--#{$prefix}navscroll-background);
   }
 
   .navbar.it-bottom-navscroll,
