@@ -52,16 +52,16 @@
   display: flex;
   flex-direction: column;
   width: 100%; // Ensure `.modal-content` extends the full width of the parent `.modal-dialog`
+  border: var(--#{$prefix}modal-border-width) solid var(--#{$prefix}modal-border-color);
+  // Remove focus outline from opened modal
+  outline: 0;
+  background-color: var(--#{$prefix}modal-bg);
   // counteract the pointer-events: none; in the .modal-dialog
   color: var(--#{$prefix}modal-color);
   pointer-events: auto;
-  background-color: var(--#{$prefix}modal-bg);
   background-clip: padding-box;
-  border: var(--#{$prefix}modal-border-width) solid var(--#{$prefix}modal-border-color);
   @include border-radius(var(--#{$prefix}modal-border-radius));
   @include box-shadow(var(--#{$prefix}modal-box-shadow));
-  // Remove focus outline from opened modal
-  outline: 0;
 }
 
 // Modal background
@@ -87,9 +87,9 @@
   @include border-top-radius(var(--#{$prefix}modal-inner-border-radius));
 
   .btn-close {
-    padding: calc(var(--#{$prefix}modal-header-padding-y) * 0.5) calc(var(--#{$prefix}modal-header-padding-x) * 0.5);
     margin: calc(-0.5 * var(--#{$prefix}modal-header-padding-y)) calc(-0.5 * var(--#{$prefix}modal-header-padding-x))
       calc(-0.5 * var(--#{$prefix}modal-header-padding-y)) auto;
+    padding: calc(var(--#{$prefix}modal-header-padding-y) * 0.5) calc(var(--#{$prefix}modal-header-padding-x) * 0.5);
   }
 }
 
@@ -195,15 +195,15 @@
   display: none;
   width: 100%;
   height: 100%;
+  // We deliberately don't use `-webkit-overflow-scrolling: touch;` due to a
+  // gnarly iOS Safari bug: https://bugs.webkit.org/show_bug.cgi?id=158342
+  // See also https://github.com/twbs/bootstrap/issues/17695
+  padding-right: 0 !important;
   overflow-x: hidden;
   overflow-y: auto;
   // Prevent Chrome on Windows from adding a focus outline. For details, see
   // https://github.com/twbs/bootstrap/pull/10951.
   outline: 0;
-  // We deliberately don't use `-webkit-overflow-scrolling: touch;` due to a
-  // gnarly iOS Safari bug: https://bugs.webkit.org/show_bug.cgi?id=158342
-  // See also https://github.com/twbs/bootstrap/issues/17695
-  padding-right: 0 !important;
   .modal-dialog {
     margin: $modal-margin;
     .modal-content {
@@ -233,12 +233,12 @@
     .modal-dialog {
       .modal-content {
         .modal-header {
-          justify-content: left;
           align-items: start;
+          justify-content: left;
           .icon {
-            fill: $modal-icon-color;
-            margin-right: $modal-icon-distance;
             flex-shrink: 0;
+            margin-right: $modal-icon-distance;
+            fill: $modal-icon-color;
           }
         }
       }
@@ -249,16 +249,16 @@
     .modal-dialog {
       .modal-content {
         .modal-header {
-          border-bottom: $modal-heading-border;
           padding-bottom: $modal-padding;
+          border-bottom: $modal-heading-border;
           h5 {
-            text-transform: none;
             font-weight: 700;
             letter-spacing: inherit;
+            text-transform: none;
 
             span {
-              color: $primary;
               margin-right: $v-gap * 0.5;
+              color: $primary;
             }
           }
         }
@@ -283,14 +283,14 @@
         border-radius: $border-radius;
       }
       .modal-header {
-        padding-top: $v-gap * 2;
         margin-bottom: -$v-gap * 0.5;
+        padding-top: $v-gap * 2;
       }
       .modal-body {
         padding-top: $v-gap * 2;
         p {
-          font-size: $modal-popconfirm-p-size-mobile;
           margin-bottom: $v-gap * 1.5;
+          font-size: $modal-popconfirm-p-size-mobile;
         }
       }
       .modal-footer {
@@ -307,9 +307,9 @@
         flex-direction: column;
         height: calc(100vh - #{$v-gap * 26});
         .modal-header {
+          flex-shrink: 0;
           padding-bottom: $modal-padding;
           background: $modal-sticky-bg;
-          flex-shrink: 0;
         }
         .modal-body {
           padding-top: 0;
@@ -390,8 +390,8 @@
 @include media-breakpoint-up(md) {
   .modal {
     .modal-dialog {
-      margin-left: auto;
       margin-right: auto;
+      margin-left: auto;
       &.modal-dialog-left {
         margin: 0;
         .modal-content {
@@ -459,8 +459,8 @@
   align-items: center; // vertically center
   justify-content: flex-end; // Right align buttons with flex property because text-align doesn't work on flex items
   padding: calc(var(--#{$prefix}modal-padding) - var(--#{$prefix}modal-footer-gap) * 0.5);
-  background-color: var(--#{$prefix}modal-footer-bg);
   border-top: var(--#{$prefix}modal-footer-border-width) solid var(--#{$prefix}modal-footer-border-color);
+  background-color: var(--#{$prefix}modal-footer-bg);
   @include border-bottom-radius(var(--#{$prefix}modal-inner-border-radius));
 
   // Place margin between footer elements
