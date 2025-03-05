@@ -144,10 +144,35 @@ Aggiungere anche l'attributo `disabled` al campo e ai pulsanti.
     <div class="input-group input-number disabled">
       <input type="number" class="form-control" data-bs-input id="inputNumber5" name="inputNumber5" value="50" min="0" max="100" step="1" disabled />
       <span class="input-group-text align-buttons flex-column">
-        <button class="input-number-add">
+        <button class="input-number-add" disabled>
           <span class="visually-hidden">Aumenta valore</span>
         </button>
-        <button class="input-number-sub">
+        <button class="input-number-sub" disabled>
+          <span class="visually-hidden">Diminuisci valore</span>
+        </button>
+      </span>
+    </div>
+  </div>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+### Readonly
+
+Per rendere un Input number `readonly`, aggiungere l'attributo `readonly` al campo
+e `disabled` ai pulsanti.
+
+{% comment %}Example name: Sola lettura {% endcomment %}
+{% capture example %}
+<div>
+  <div class="form-group">
+    <label for="inputNumber5" class="input-number-label active">Contenuto in sola lettura</label>
+    <div class="input-group input-number">
+      <input type="number" class="form-control" data-bs-input id="inputNumber5" name="inputNumber5" value="50" min="0" max="100" step="1" readonly />
+      <span class="input-group-text align-buttons flex-column">
+        <button class="input-number-add" disabled>
+          <span class="visually-hidden">Aumenta valore</span>
+        </button>
+        <button class="input-number-sub" disabled>
           <span class="visually-hidden">Diminuisci valore</span>
         </button>
       </span>
