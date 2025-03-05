@@ -107,7 +107,7 @@ class InputNumber extends BaseComponent {
 
   _incrDecr(isDecr) {
     let inputVal = 0
-    if (this._element.disabled) {
+    if (this._element.disabled || this._element.readonly) {
       return
     }
     if (this._element.value !== '') inputVal = parseFloat(this._element.value)
