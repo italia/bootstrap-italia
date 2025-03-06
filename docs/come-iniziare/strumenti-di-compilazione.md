@@ -64,38 +64,6 @@ Per iniziare a modificare la libreria, la cartella d'interesse è `/src`, che co
 - `/src/js/bootstrap-italia.entry.js` (che genera il bundle)
 - `/src/js/bootstrap-italia.js` (che include i moduli)
 
-## Ottimizzare la libreria
-
-È possibile ottimizzare le dimensioni della libreria compilata rimuovendo i moduli JavaScript e/o i file scss che non sono di interesse.
-
-### Ottimizzare i file Sass da importare
-
-Quando si utilizza Sass nella propria pipeline, si può ottimizzare Bootstrap Italia importando solo i componenti di cui si ha bisogno. Le ottimizzazioni maggiori proverranno probabilmente dalla sezione Layout e dai componenti del file principale `bootstrap-italia.scss`, ad esempio
-
-```scss
-// funzioni e variabili colore
-@import 'bootstrap-italia/src/scss/functions';
-@import 'bootstrap-italia/src/scss/utilities/colors_vars';
-
-//variables
-@import 'bootstrap-italia/src/scss/variables';
-
-//classi colore
-@import 'bootstrap-italia/src/scss/utilities/colors';
-
-// ...
-```
-
-### Ottimizzare i file JavaScript da importare
-
-Si può ottimizzare l'inclusione del JavaScript utilizzando bundler come Webpack o Rollup, che permettono di importare solo i moduli JavaScript che si vogliono utilizzare. Nell'esempio seguente, mostriamo come includere solo il componente Carousel:
-
-```js
-import { Carousel } from 'bootstrap-italia'
-
-const carousel = new Carousel(document.getElementById('myCarousel'))
-```
-
 ## Compilare la documentazione
 
 La documentazione di Bootstrap Italia è gestita con [**GitHub Pages**](https://pages.github.com/) attraverso [Jekyll][jekyll]: per questo è composta di file statici che risiedono sul branch `gh-pages`. I file presenti a questo branch corrispondono esattamente ai file generati con il comando `jekyll build` nella cartella locale `_site`. Se si utilizza [Docker](https://www.docker.com/get-started) ignorare la sezione successiva `Processo manuale` che spiega come installare le dipendenze manualmente nel sistema.
@@ -143,7 +111,9 @@ Il flusso di sviluppo da seguire per contribuire alla libreria è semplificato r
 
 Il rilascio di una nuova versione della libreria avverrà unicamente alla creazione di un tag e alla conseguente creazione di una release su GitHub, come vedremo nella sezione seguente.
 
-## Creare una nuova release
+## Per i maintainer
+
+### Creare una nuova release
 
 Per aggiornare il numero di versione e creare una nuova release, è necessario effettuare i due seguenti step manuali:
 
