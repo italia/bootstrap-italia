@@ -2077,8 +2077,8 @@ $autocomplete-box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.05) !default;
 
 // Offcanvas
 
-$offcanvas-padding-y: $modal-inner-padding !default;
-$offcanvas-padding-x: $modal-inner-padding !default;
+$offcanvas-padding-y: 1.5rem !default;
+$offcanvas-padding-x: 1.5rem !default;
 $offcanvas-horizontal-width: 400px !default;
 $offcanvas-vertical-height: 30vh !default;
 $offcanvas-transition-duration: 0.3s !default;
