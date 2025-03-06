@@ -65,12 +65,10 @@
   flex-direction: column;
   width: 100%; // Ensure `.modal-content` extends the full width of the parent `.modal-dialog`
   border: var(--#{$prefix}modal-border-width) solid var(--#{$prefix}modal-border-color);
-  // Remove focus outline from opened modal
-  outline: 0;
+  outline: 0; // Remove focus outline from opened modal
   background-color: var(--#{$prefix}modal-bg);
-  // counteract the pointer-events: none; in the .modal-dialog
   color: var(--#{$prefix}modal-color);
-  pointer-events: auto;
+  pointer-events: auto; // counteract the pointer-events: none; in the .modal-dialog
   background-clip: padding-box;
   @include border-radius(var(--#{$prefix}modal-border-radius));
   @include box-shadow(var(--#{$prefix}modal-box-shadow));
@@ -122,8 +120,8 @@
   // Automatically set modal's width for larger viewports
   .modal-dialog {
     max-width: var(--#{$prefix}modal-width);
-    margin-right: auto;
-    margin-left: auto;
+    // margin-right: auto;
+    // margin-left: auto;
   }
 
   .modal-sm {
