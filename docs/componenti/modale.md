@@ -69,7 +69,7 @@ richiesta l'inclusione di intestazioni o elementi con funzione di chiusura della
       <div class="modal-dialog" role="document">
          <div class="modal-content">
             <div class="modal-header">
-               <h2 class="modal title no_toc" id="modal1Title">Intestazione modale</h2>
+               <h2 class="modal-title no_toc" id="modal1Title">Intestazione modale</h2>
             </div>
             <div class="modal-body">
                <p id="modal1Description">Descrizione scopo della modale.</p>
@@ -112,7 +112,7 @@ Esempio completo:
       <div class="modal-dialog" role="document">
          <div class="modal-content">
             <div class="modal-header">
-               <h2 class="modal title no_toc" id="modal2Title">Questo è un messaggio di notifica</h2>
+               <h2 class="modal-title no_toc" id="modal2Title">Questo è un messaggio di notifica</h2>
                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Chiudi finestra modale">
                   <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
                </button>
@@ -142,7 +142,7 @@ Per formattare correttamente i contenuti della modale con icona, occorre aggiung
       <div class="modal-content">
         <div class="modal-header">
           <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-info-circle"></use></svg>
-          <h2 class="modal title no_toc" id="modal3Title">Questo è un messaggio di notifica più esteso del solito</h2>
+          <h2 class="modal-title no_toc" id="modal3Title">Questo è un messaggio di notifica più esteso del solito</h2>
         </div>
         <div class="modal-body">
           <p>In questo caso viene fornito solo un pulsante di conferma della modale.</p>
@@ -168,7 +168,7 @@ Di seguito una modale con un elenco di radio button.
       <div class="modal-dialog" role="document">
          <div class="modal-content">
             <div class="modal-header">
-               <h2 class="modal title no_toc" id="modal4Title">Scegli una opzione</h2>
+               <h2 class="modal-title no_toc" id="modal4Title">Scegli una opzione</h2>
                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Chiudi finestra modale">
                   <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
                </button>
@@ -208,7 +208,7 @@ Per formattare correttamente il contenuto di questa modale, aggiungere la classe
       <div class="modal-dialog" role="document">
          <div class="modal-content">
             <div class="modal-header">
-               <h2 class="modal title no_toc" id="modal5Title"><span>1.</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</h2>
+               <h2 class="modal-title no_toc" id="modal5Title"><span>1.</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</h2>
             </div>
             <div class="modal-body">
                <div class="link-list-wrapper">
@@ -313,7 +313,7 @@ Attiva o disattiva la demo di una modale facendo clic sul pulsante qui sotto.
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h2 class="modal title no_toc" id="exampleModalTitle">Intestazione modale</h2>
+        <h2 class="modal-title no_toc" id="exampleModalTitle">Intestazione modale</h2>
       </div>
       <div class="modal-body">
         <p>Font Titillium 16px. Leading 24px. omnis iste natus error.</p>
@@ -343,7 +343,7 @@ Per meglio distinguere l'elemento _footer_ con un'ombra è sufficiente aggiunger
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h2 class="modal title no_toc" id="exampleModalLongTitle">Intestazione modale</h2>
+        <h2 class="modal-title no_toc" id="exampleModalLongTitle">Intestazione modale</h2>
         <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Chiudi finestra modale">
           <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
         </button>
@@ -396,7 +396,7 @@ Si può scegliere di utilizzare uno scroll interno alla modale, mantenendo sempr
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h2 class="modal title no_toc" id="exampleModalLongFixedTitle">Intestazione modale</h2>
+        <h2 class="modal-title no_toc" id="exampleModalLongFixedTitle">Intestazione modale</h2>
       </div>
       <div class="modal-body">
         <p>
@@ -448,7 +448,7 @@ Aggiungi `.modal-dialog-centered` a `.modal-dialog` per centrare verticalmente l
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h2 class="modal title no_toc" id="modalCenterTitle">Questo è un messaggio di notifica</h2>
+        <h2 class="modal-title no_toc" id="modalCenterTitle">Questo è un messaggio di notifica</h2>
         <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Chiudi finestra modale">
           <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
         </button>
@@ -480,7 +480,7 @@ Aggiungi `.modal-dialog-left` a `.modal-dialog` per allineare a sinistra la moda
   <div class="modal-dialog modal-dialog-left" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h2 class="modal title no_toc" id="modalLeftTitle">Questo è un messaggio di notifica</h2>
+        <h2 class="modal-title no_toc" id="modalLeftTitle">Questo è un messaggio di notifica</h2>
         <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Chiudi finestra modale">
           <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
         </button>
@@ -534,7 +534,7 @@ Aggiungi `.modal-dialog-right` a `.modal-dialog` per allineare a sinistra la mod
   <div class="modal-dialog modal-dialog-right" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h2 class="modal title no_toc" id="modalrightTitle">Questo è un messaggio di notifica</h2>
+        <h2 class="modal-title no_toc" id="modalrightTitle">Questo è un messaggio di notifica</h2>
         <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Chiudi finestra modale">
           <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
         </button>
@@ -593,7 +593,7 @@ Le modali hanno due dimensioni opzionali, disponibili tramite classi da posizion
   <div class="modal-dialog modal-sm">
     <div class="modal-content">
       <div class="modal-header">
-        <h2 class="modal title no_toc" id="mySmallModalLabel">Modale piccola</h2>
+        <h2 class="modal-title no_toc" id="mySmallModalLabel">Modale piccola</h2>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi finestra modale"></button>
       </div>
       <div class="modal-body">...</div>
@@ -609,7 +609,7 @@ Le modali hanno due dimensioni opzionali, disponibili tramite classi da posizion
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <h2 class="modal title no_toc" id="myLargeModalLabel">Modale grande</h2>
+        <h2 class="modal-title no_toc" id="myLargeModalLabel">Modale grande</h2>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi finestra modale"></button>
       </div>
       <div class="modal-body">...</div>
@@ -625,7 +625,7 @@ Le modali hanno due dimensioni opzionali, disponibili tramite classi da posizion
   <div class="modal-dialog modal-xl">
     <div class="modal-content">
       <div class="modal-header">
-        <h2 class="modal title no_toc" id="myExtraLargeModalLabel">Modale molto grande</h2>
+        <h2 class="modal-title no_toc" id="myExtraLargeModalLabel">Modale molto grande</h2>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi finestra modale"></button>
       </div>
       <div class="modal-body">...</div>
