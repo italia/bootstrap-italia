@@ -76,7 +76,7 @@ Per includere questo file all'interno del proprio progetto sarà sufficiente agg
 
 ## JavaScript
 
-I vari componenti sono inizializzati (salvo casi particolari specificati nella documentazione del singolo componente) grazie all'utilizzo dell'attributo `data-bs-target` specifico per ogni componente. Questo attributo deve essere utilizzato esclusivamente nel caso in cui si desidera che i componenti siano inizializzati in maniera automatica, in caso contrario questo attributo deve essere omesso.
+I vari componenti sono inizializzati (salvo casi particolari specificati nella documentazione del singolo componente) grazie all'utilizzo dell'attributo `data-bs-toggle` o in generale di uno specifico attributo `data`. Questi attributi devono essere utilizzati esclusivamente nel caso in cui si desidera che i componenti siano inizializzati in maniera automatica, in caso contrario questo attributo deve essere omesso.
 
 ### Moduli
 
