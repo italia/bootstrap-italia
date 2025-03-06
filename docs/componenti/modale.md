@@ -69,11 +69,11 @@ richiesta l'inclusione di intestazioni o elementi con funzione di chiusura della
       <div class="modal-dialog" role="document">
          <div class="modal-content">
             <div class="modal-header">
-               <h2 class="modal-title no_toc" id="modal1Title">Intestazione modale</h2>
+               <h2 class="modal-title no_toc" id="modal1Title">Titolo modale</h2>
             </div>
             <div class="modal-body">
-               <p id="modal1Description">Descrizione scopo della modale.</p>
-               <p>Font Titillium 16px. Leading 24px. omnis iste natus error.</p>
+               <p id="modal1Description">Testo che descrive lo scopo della modale e quali sono le azioni richieste all'utente</p>
+               <p>Può essere presente anche un <a href="#">link</a> di approfondimento.</p>
             </div>
             <div class="modal-footer">
                <button class="btn btn-outline-primary btn-sm" type="button" data-bs-dismiss="modal">Azione 2</button>
@@ -279,7 +279,7 @@ Il titolo della modale è facoltativo, nel caso non fosse necessario è sufficie
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="modal7Title">Intestazione Popconfirm</h5>
+                    <h5 class="modal-title" id="modal7Title">Titolo modale</h5>
                   </div>
                   <div class="modal-body">
                     <p>Font Titillium 14px. Leading 21px.</p>
@@ -313,7 +313,7 @@ Attiva o disattiva la demo di una modale facendo clic sul pulsante qui sotto.
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h2 class="modal-title no_toc" id="exampleModalTitle">Intestazione modale</h2>
+        <h2 class="modal-title no_toc" id="exampleModalTitle">Titolo modale</h2>
       </div>
       <div class="modal-body">
         <p>Font Titillium 16px. Leading 24px. omnis iste natus error.</p>
@@ -343,7 +343,7 @@ Per meglio distinguere l'elemento _footer_ con un'ombra è sufficiente aggiunger
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h2 class="modal-title no_toc" id="exampleModalLongTitle">Intestazione modale</h2>
+        <h2 class="modal-title no_toc" id="exampleModalLongTitle">Titolo modale</h2>
         <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Chiudi finestra modale">
           <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
         </button>
@@ -396,7 +396,7 @@ Si può scegliere di utilizzare uno scroll interno alla modale, mantenendo sempr
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h2 class="modal-title no_toc" id="exampleModalLongFixedTitle">Intestazione modale</h2>
+        <h2 class="modal-title no_toc" id="exampleModalLongFixedTitle">Titolo modale</h2>
       </div>
       <div class="modal-body">
         <p>
