@@ -195,6 +195,8 @@ Nell'esempio che segue la struttura è colonnare simmetrica nella versione deskt
 
 ### Attivazione tramite codice
 
+{% include callout-bundle-methods.md toggle="`data-bs-transfer`" %}
+
 {% capture callout %}
 Per l'attivazione automatica del relativo JavaScript è importante 
 che il componente che contiene la struttura abbia l'attributo `data-bs-transfer`.

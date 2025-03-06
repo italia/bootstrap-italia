@@ -417,6 +417,8 @@ Lo stato dell'upload è rappresentato graficamente dall'elemento `<div class="pr
 
 ## Attivazione tramite codice
 
+{% include callout-bundle-methods.md toggle="`data-bs-upload-dragdrop`" %}
+
 {% capture callout %}
 Per l'attivazione automatica del relativo JavaScript è importante 
 che il componente che contiene la struttura abbia l'attributo `data-bs-upload-dragdrop`.

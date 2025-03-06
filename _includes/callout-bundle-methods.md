@@ -1,7 +1,7 @@
 {%- assign toggle-specific = include.toggle | default: "`data-bs-toggle` specifico" -%}
 {% capture callout %}
 Nel caso in cui si desidera che il componente sia inizializzato in maniera automatica 
-utilizzare l'attributo {{toggle-specific}} per la sua inizializzazione automatica.
+utilizzare l'attributo {{toggle-specific}} per la sua inizializzazione.
 
 Nel caso in cui si desidera importare e inizializzare autonomamente il componente
 l'attributo {{toggle-specific}} *non* deve essere incluso così da evitare 

@@ -367,6 +367,8 @@ Aggiungendo la classe `.accordion-left-icon` ad `.accordion` si ottiene una vari
 
 ## Attivazione tramite codice
 
+{% include callout-bundle-methods.md %}
+
 Il componente Accordion si basa sul componente [Collapse]({{ site.baseurl }}/docs/componenti/dropdown/#attivazione-tramite-codice).
 
 ```js

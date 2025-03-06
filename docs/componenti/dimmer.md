@@ -339,6 +339,8 @@ Aggiungendo la classe `.dimmer-primary` al wrapper del dimmer si ottiene una ver
 
 ## Attivazione tramite codice
 
+{% include callout-bundle-methods.md %}
+
 ```js
 import { Dimmer } from 'bootstrap-italia';
 

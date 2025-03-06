@@ -37,7 +37,9 @@ Nel seguente esempio sono presenti un Donut appena inizializzato ed un Donut al 
 
 ## Attivazione tramite codice
 
-È possibile creare un'istanza con il constructor, ad esempio:
+{% include callout-bundle-methods.md toggle="`data-bs-progress-donut`" %}
+
+È possibile creare un'istanza di `ProgressDonut` con il constructor, ad esempio:
 
 ```js
 import { ProgressDonut } from 'bootstrap-italia';
