@@ -97,15 +97,15 @@
   flex-shrink: 0;
   align-items: center;
   justify-content: space-between; // Put modal header elements (title and dismiss) on opposite ends
-  padding: var(--#{$prefix}modal-header-padding);
+  padding: var(--#{$prefix}modal-padding) var(--#{$prefix}modal-padding) 0;
   border-bottom: var(--#{$prefix}modal-header-border-width) solid var(--#{$prefix}modal-header-border-color);
   @include border-top-radius(var(--#{$prefix}modal-inner-border-radius));
 
-  .btn-close {
-    margin: calc(-0.5 * var(--#{$prefix}modal-header-padding-y)) calc(-0.5 * var(--#{$prefix}modal-header-padding-x))
-      calc(-0.5 * var(--#{$prefix}modal-header-padding-y)) auto;
-    padding: calc(var(--#{$prefix}modal-header-padding-y) * 0.5) calc(var(--#{$prefix}modal-header-padding-x) * 0.5);
-  }
+  // .btn-close {
+  //   margin: calc(-0.5 * var(--#{$prefix}modal-header-padding-y)) calc(-0.5 * var(--#{$prefix}modal-header-padding-x))
+  //     calc(-0.5 * var(--#{$prefix}modal-header-padding-y)) auto;
+  //   padding: calc(var(--#{$prefix}modal-header-padding-y) * 0.5) calc(var(--#{$prefix}modal-header-padding-x) * 0.5);
+  // }
 }
 
 // Title text within header
@@ -199,8 +199,6 @@
       border: none;
       box-shadow: $dialog-shadow;
       .modal-header {
-        padding: $modal-padding;
-        padding-bottom: 0;
         .close {
           padding: $modal-padding-close;
         }
@@ -238,7 +236,7 @@
     .modal-dialog {
       .modal-content {
         .modal-header {
-          padding-bottom: $modal-padding;
+          padding-bottom: var(--#{$prefix}modal-header-padding);
           border-bottom: $modal-heading-border;
           h5 {
             font-weight: 700;
