@@ -712,6 +712,8 @@ div **`it-carousel-wrapper`** :
 
 ## Attivazione tramite codice
 
+{% include callout-bundle-methods.md toggle="`data-bs-carousel-splide`" %}
+
 È possibile abilitare un Carousel manualmente con:
 
 ```js
