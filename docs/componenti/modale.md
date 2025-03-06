@@ -121,7 +121,7 @@ Esempio completo:
                <p>In questo caso vengono forniti un pulsante di conferma e uno di chiusura della modale.</p>
             </div>
             <div class="modal-footer">
-               <button class="btn btn-primary btn-sm" type="button">Ok</button>
+               <button class="btn btn-primary btn-sm" type="button">Conferma</button>
             </div>
          </div>
       </div>
@@ -148,7 +148,7 @@ Per formattare correttamente i contenuti della modale con icona, occorre aggiung
           <p>In questo caso viene fornito solo un pulsante di conferma della modale.</p>
         </div>
         <div class="modal-footer">
-          <button class="btn btn-primary btn-sm" type="button">Ok</button>
+          <button class="btn btn-primary btn-sm" type="button">Conferma</button>
         </div>
       </div>
     </div>
@@ -188,7 +188,7 @@ Di seguito una modale con un elenco di radio button.
                </div>
             </div>
             <div class="modal-footer">
-               <button class="btn btn-primary btn-sm" type="button" disabled="">Ok</button>
+               <button class="btn btn-primary btn-sm" type="button">Invia</button>
             </div>
          </div>
       </div>
@@ -263,11 +263,11 @@ Il titolo della modale è facoltativo, nel caso non fosse necessario è sufficie
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                   <div class="modal-body">
-                    <p>Font Titillium 14px. Leading 21px.</p>
+                    <p>Breve messaggio di conferma inserito nella modale</p>
                   </div>
                   <div class="modal-footer">
-                    <button class="btn btn-primary btn-sm" type="button">Azione 1</button>
-                    <button class="btn btn-outline-secondary btn-sm" type="button" data-bs-dismiss="modal">Azione 2</button>
+                    <button class="btn btn-primary btn-xs" type="button">Azione 1</button>
+                    <button class="btn btn-outline-secondary btn-xs" type="button" data-bs-dismiss="modal">Azione 2</button>
                   </div>
               </div>
             </div>
@@ -282,7 +282,7 @@ Il titolo della modale è facoltativo, nel caso non fosse necessario è sufficie
                     <h5 class="modal-title" id="modal7Title">Titolo modale</h5>
                   </div>
                   <div class="modal-body">
-                    <p>Font Titillium 14px. Leading 21px.</p>
+                    <p>Breve messaggio di conferma inserito nella modale</p>
                   </div>
                   <div class="modal-footer">
                     <button class="btn btn-primary btn-sm" type="button">Azione 1</button>
@@ -457,7 +457,7 @@ Aggiungi `.modal-dialog-centered` a `.modal-dialog` per centrare verticalmente l
         <p>In questo caso vengono forniti un pulsante di conferma e uno di chiusura della modale.</p>
       </div>
       <div class="modal-footer">
-        <button class="btn btn-primary btn-sm" data-bs-dismiss="modal" type="button">Ok</button>
+        <button class="btn btn-primary btn-sm" data-bs-dismiss="modal" type="button">Conferma</button>
       </div>
     </div>
   </div>
@@ -511,7 +511,7 @@ Aggiungi `.modal-dialog-left` a `.modal-dialog` per allineare a sinistra la moda
         </p>
       </div>
       <div class="modal-footer">
-        <button class="btn btn-primary btn-sm" type="button">Ok</button>
+        <button class="btn btn-primary btn-sm" type="button">Conferma</button>
       </div>
     </div>
   </div>
@@ -565,7 +565,7 @@ Aggiungi `.modal-dialog-right` a `.modal-dialog` per allineare a sinistra la mod
         </p>
       </div>
       <div class="modal-footer">
-        <button class="btn btn-primary btn-sm" type="button">Ok</button>
+        <button class="btn btn-primary btn-sm" type="button">Conferma</button>
       </div>
     </div>
   </div>
