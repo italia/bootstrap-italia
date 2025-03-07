@@ -126,7 +126,7 @@ loadFonts()
 
 ### Versione bundle
 
-In questo caso, dopo aver copiato i file all'interno del progetto, sarà sufficiente inserire una versione dei tag `<script>` di seguito riportati alla fine della pagina HTML, giusto prima della chiusura del tag `</body>`. Si potrà quindi includere la libreria in questo modo:
+Per un uso bundle, dopo aver copiato i file all'interno del progetto, sarà sufficiente inserire una versione dei tag `<script>` di seguito riportati alla fine della pagina HTML, giusto prima della chiusura del tag `</body>`. Si potrà quindi includere la libreria in questo modo:
 
 ```html
 <script src="<path-a-bootstrap-italia>/dist/js/bootstrap-italia.bundle.min.js"></script>
