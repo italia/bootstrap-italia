@@ -88,7 +88,7 @@ import { Carousel } from 'bootstrap-italia'
 const carousel = new Carousel(document.getElementById('myCarousel'))
 ```
 
-Di seguito un esempio con diversi componenti importati (potete trovare [qui](https://github.com/astagi/demo-communitylabs-bsi) un esempio completo con l'utilzzo di Rollup).
+È disponibile [un esempio completo utilizzando Rollup](https://github.com/astagi/demo-communitylabs-bsi) ([video del Community Lab](https://designers.italia.it/community/media/20241217-community-lab/)) e, di seguito, un esempio con alcuni componenti importati.
 
 ```js
 import { Carousel, Alert, Notification, Tooltip, Sticky, loadFonts } from 'bootstrap-italia'
