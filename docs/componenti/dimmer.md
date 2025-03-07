@@ -339,6 +339,8 @@ Aggiungendo la classe `.dimmer-primary` al wrapper del dimmer si ottiene una ver
 
 ## Attivazione tramite codice
 
+{% include callout-bundle-methods.md %}
+
 ```js
 import { Dimmer } from 'bootstrap-italia';
 
@@ -346,24 +348,26 @@ const dimmerEl = document.getElementById('myDimmer');
 const dimmer = new Dimmer(dimmerEl)
 ```
 
-### Metodi
+#### Metodi
 
-<table class="table table-bordered table-striped">
-  <thead>
-    <tr>
-      <th style="width: 150px;">Metodo</th>
-      <th>Descrizione</th>
-    </tr>
-  </thead>
-  <tbody>
-     {% include standard-methods.html class="Dimmer" %}
-    <tr>
-      <td>show</td>
-      <td>Mostra il componente.</td>
-    </tr>
-    <tr>
-      <td>hide</td>
-      <td>Nasconde il componente.</td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-responsive">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th style="width: 150px;">Metodo</th>
+        <th>Descrizione</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% include standard-methods.html class="Dimmer" %}
+      <tr>
+        <td>show</td>
+        <td>Mostra il componente.</td>
+      </tr>
+      <tr>
+        <td>hide</td>
+        <td>Nasconde il componente.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

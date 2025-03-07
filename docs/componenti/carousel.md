@@ -712,42 +712,45 @@ div **`it-carousel-wrapper`** :
 
 ## Attivazione tramite codice
 
+{% include callout-bundle-methods.md toggle="`data-bs-carousel-splide`" %}
+
 È possibile abilitare un Carousel manualmente con:
 
 ```js
 import { Carousel } from 'bootstrap-italia';
 
-const elementList = [].slice.call(document.querySelectorAll('.splide'));
-const carouselElements = elementList.map(function (element) {
+const elementList = document.querySelectorAll('.splide');
+const carouselElements = elementList.forEach((element) => {
   return new Carousel(element)
 })
 ```
 
-### Metodi
+#### Metodi
 
-<table class="table table-bordered table-striped">
-  <thead>
-    <tr>
-      <th style="width: 150px;">Metodo</th>
-      <th>Descrizione</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>dispose</td>
-      <td>Rimuove le funzionalità di Carousel</td>
-    </tr>
-    <tr>
-      <td>getInstance</td>
-      <td>Metodo statico che restituisce l'istanza Carousel associata ad un elemento del DOM. Esempio: <code>bootstrap.Carousel.getInstance(element)</code></td>
-    </tr>
-    <tr>
-      <td>getOrCreateInstance</td>
-      <td>Metodo statico che restituisce un'istanza Carousel associata ad un elemento del DOM o ne crea una nuova nel caso non fosse stata inizializzata. Esempio: <code>bootstrap.Carousel.getOrCreateInstance(element)</code></td>
-    </tr>
-  </tbody>
-</table>
-
+<div class="table-responsive">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th style="width: 150px;">Metodo</th>
+        <th>Descrizione</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>dispose</td>
+        <td>Rimuove le funzionalità di Carousel</td>
+      </tr>
+      <tr>
+        <td>getInstance</td>
+        <td>Metodo statico che restituisce l'istanza Carousel associata ad un elemento del DOM. Esempio: <code>bootstrap.Carousel.getInstance(element)</code></td>
+      </tr>
+      <tr>
+        <td>getOrCreateInstance</td>
+        <td>Metodo statico che restituisce un'istanza Carousel associata ad un elemento del DOM o ne crea una nuova nel caso non fosse stata inizializzata. Esempio: <code>bootstrap.Carousel.getOrCreateInstance(element)</code></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 ## Breaking change
 

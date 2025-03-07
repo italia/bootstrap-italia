@@ -652,13 +652,15 @@ pulsante, insieme a `data-bs-target="#foo"` o `href="#foo"` per attivare/disatti
 
 ## Attivazione tramite codice
 
+{% include callout-bundle-methods.md %}
+
 ```js
 import { Modal } from 'bootstrap-italia';
 
 const myModal = new Modal(document.getElementById('myModal'), options)
 ```
 
-### Opzioni
+#### Opzioni
 
 Attiva i tuoi contenuti come modali, configurabile con un oggetto (facoltativo).
 
@@ -670,71 +672,75 @@ const myModal = new Modal(document.getElementById('myModal'), {
 })
 ```
 
-<table class="table table-bordered table-striped">
-  <thead>
-    <tr>
-      <th style="width: 100px;">Nome</th>
-      <th style="width: 50px;">Tipo</th>
-      <th style="width: 50px;">Predefinito</th>
-      <th>Descrizione</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>backdrop</td>
-      <td>boolean | 'static'</td>
-      <td>true</td>
-      <td>Include un elemento modal-backdrop. In alternativa, specificare "static" 
-      per uno sfondo che non chiuda il modal quando cliccato.</td>
-    </tr>
-    <tr>
-      <td>focus</td>
-      <td>boolean</td>
-      <td>true</td>
-      <td>Focus sulla modale quando viene inizializzata.</td>
-    </tr>
-    <tr>
-      <td>keyboard</td>
-      <td>boolean</td>
-      <td>true</td>
-      <td>Abilita la chisura della modale con il tasto escape.</td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-responsive">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th style="width: 100px;">Nome</th>
+        <th style="width: 50px;">Tipo</th>
+        <th style="width: 50px;">Predefinito</th>
+        <th>Descrizione</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>backdrop</td>
+        <td>boolean | 'static'</td>
+        <td>true</td>
+        <td>Include un elemento modal-backdrop. In alternativa, specificare "static" 
+        per uno sfondo che non chiuda il modal quando cliccato.</td>
+      </tr>
+      <tr>
+        <td>focus</td>
+        <td>boolean</td>
+        <td>true</td>
+        <td>Focus sulla modale quando viene inizializzata.</td>
+      </tr>
+      <tr>
+        <td>keyboard</td>
+        <td>boolean</td>
+        <td>true</td>
+        <td>Abilita la chisura della modale con il tasto escape.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-### Metodi
+#### Metodi
 
 {% include callout-danger-async-methods.md %}
 
-<table class="table table-bordered table-striped">
-  <thead>
-    <tr>
-      <th style="width: 150px;">Metodo</th>
-      <th>Descrizione</th>
-    </tr>
-  </thead>
-  <tbody>
-    {% include standard-methods.html class="Modal" %}
-    <tr>
-      <td>show</td>
-      <td>Apre manualmente una modale. Ritorna al chiamante prima che la modale sia stata effettivamente mostrata (cioè prima che si verifichi l'evento "shown.bs.modal").</td>
-    </tr>
-    <tr>
-      <td>hide</td>
-      <td>Nasconde manualmente una modale. Ritorna al chiamante prima che la modale sia stata effettivamente nascosta (cioè prima che si verifichi l'evento "hidden.bs.modal").</td>
-    </tr>
-    <tr>
-      <td>toggle</td>
-      <td>Attiva/disattiva manualmente una modale. Ritorna al chiamante prima che la modale sia stata effettivamente mostrata o nascosta (cioè prima che si verifichi l'evento "shown.bs.modal" o l'evento "hidden.bs.modal").</td>
-    </tr>
-    <tr>
-      <td>handleUpdate</td>
-      <td>Riposiziona manualmente la modale se l'altezza della modale cambia nel momento in cui è aperta (nel caso appaia una barra di scorrimento).</td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-responsive">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th style="width: 150px;">Metodo</th>
+        <th>Descrizione</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% include standard-methods.html class="Modal" %}
+      <tr>
+        <td>show</td>
+        <td>Apre manualmente una modale. Ritorna al chiamante prima che la modale sia stata effettivamente mostrata (cioè prima che si verifichi l'evento "shown.bs.modal").</td>
+      </tr>
+      <tr>
+        <td>hide</td>
+        <td>Nasconde manualmente una modale. Ritorna al chiamante prima che la modale sia stata effettivamente nascosta (cioè prima che si verifichi l'evento "hidden.bs.modal").</td>
+      </tr>
+      <tr>
+        <td>toggle</td>
+        <td>Attiva/disattiva manualmente una modale. Ritorna al chiamante prima che la modale sia stata effettivamente mostrata o nascosta (cioè prima che si verifichi l'evento "shown.bs.modal" o l'evento "hidden.bs.modal").</td>
+      </tr>
+      <tr>
+        <td>handleUpdate</td>
+        <td>Riposiziona manualmente la modale se l'altezza della modale cambia nel momento in cui è aperta (nel caso appaia una barra di scorrimento).</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-### Eventi
+#### Eventi
 
 La classe della modale di Bootstrap espone alcuni eventi per l'aggancio alla funzionalità modale.
 Tutti gli eventi vengono attivati dalla modale stessa (cioè `<div class="modal">`).
@@ -746,33 +752,35 @@ myModalEl.addEventListener('hidden.bs.modal', function (event) {
 })
 ```
 
-<table class="table table-bordered table-striped">
-  <thead>
-    <tr>
-      <th style="width: 150px;">Tipo di evento</th>
-      <th>Descrizione</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>show.bs.modal</td>
-      <td>Questo evento si attiva immediatamente quando il metodo di istanza <code>show</code> viene chiamato. Se causato da un click, l'elemento selezionato è disponibile come proprietà <code>relatedTarget</code> dell'evento.</td>
-    </tr>
-    <tr>
-      <td>shown.bs.modal</td>
-      <td>Questo evento viene attivato quando la modale è stata resa visibile all'utente (attenderà il completamento delle transizioni CSS). l'elemento selezionato è disponibile come proprietà <code>relatedTarget</code> dell'evento.</td>
-    </tr>
-    <tr>
-      <td>hide.bs.modal</td>
-      <td>Questo evento viene generato immediatamente quando il metodo di istanza <code>hide</code> è stato chiamato.</td>
-    </tr>
-    <tr>
-      <td>hidden.bs.modal</td>
-      <td>Questo evento viene attivato quando la modale ha finito di essere nascosta all'utente (attenderà il completamento delle transizioni CSS).</td>
-    </tr>
-    <tr>
-      <td>hidePrevented.bs.modal</td>
-      <td>Questo evento viene attivato quando la modale viene mostrata, il suo sfondo è <code>static</code> e un click fuori dalla modale o la pressione del tasto esc avvengono e il <code>data-bs-keyboard</code> è settato a  <code>false</code>.</td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-responsive">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th style="width: 150px;">Tipo di evento</th>
+        <th>Descrizione</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>show.bs.modal</td>
+        <td>Questo evento si attiva immediatamente quando il metodo di istanza <code>show</code> viene chiamato. Se causato da un click, l'elemento selezionato è disponibile come proprietà <code>relatedTarget</code> dell'evento.</td>
+      </tr>
+      <tr>
+        <td>shown.bs.modal</td>
+        <td>Questo evento viene attivato quando la modale è stata resa visibile all'utente (attenderà il completamento delle transizioni CSS). l'elemento selezionato è disponibile come proprietà <code>relatedTarget</code> dell'evento.</td>
+      </tr>
+      <tr>
+        <td>hide.bs.modal</td>
+        <td>Questo evento viene generato immediatamente quando il metodo di istanza <code>hide</code> è stato chiamato.</td>
+      </tr>
+      <tr>
+        <td>hidden.bs.modal</td>
+        <td>Questo evento viene attivato quando la modale ha finito di essere nascosta all'utente (attenderà il completamento delle transizioni CSS).</td>
+      </tr>
+      <tr>
+        <td>hidePrevented.bs.modal</td>
+        <td>Questo evento viene attivato quando la modale viene mostrata, il suo sfondo è <code>static</code> e un click fuori dalla modale o la pressione del tasto esc avvengono e il <code>data-bs-keyboard</code> è settato a  <code>false</code>.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

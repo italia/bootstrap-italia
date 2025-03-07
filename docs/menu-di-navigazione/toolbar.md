@@ -920,5 +920,5 @@ Applicando una classe aggiuntiva `.toolbar-vertical` alla Toolbar gli elementi v
 
 ## Attivazione tramite codice
 
-Il componente Toolbar utilizza al suo interno il componente Dropdown, si rimanda dunque alla 
+Il componente Toolbar utilizza al suo interno il componente `Dropdown`, si rimanda dunque alla 
 sezione [attivazione Dropdown tramite codice]({{ site.baseurl }}/docs/componenti/dropdown/#attivazione-tramite-codice)

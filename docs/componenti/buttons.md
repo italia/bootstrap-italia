@@ -213,23 +213,25 @@ Per ulteriori informazioni sui pulsanti si rimanda alla sezione [buttons](https:
 import { Button } from 'bootstrap-italia';
 
 const buttonEl = document.getElementById('myButton');
-const button = new Button(buttonEl)
+const button = new Button(buttonEl);
 ```
 
 #### Metodi
 
-<table class="table table-bordered table-striped">
-  <thead>
-    <tr>
-      <th style="width: 150px;">Metodo</th>
-      <th>Descrizione</th>
-    </tr>
-  </thead>
-  <tbody>
-     {% include standard-methods.html class="Button" %}
-    <tr>
-      <td>toggle</td>
-      <td>Attiva/disattiva la classe e sincronizza l'attributo "aria-pressed" con il valore restituito dal metodo `.toggle()`</td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-responsive">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th style="width: 150px;">Metodo</th>
+        <th>Descrizione</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% include standard-methods.html class="Button" %}
+      <tr>
+        <td>toggle</td>
+        <td>Attiva/disattiva la classe e sincronizza l'attributo "aria-pressed" con il valore restituito dal metodo `.toggle()`</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -341,7 +341,7 @@ Per cambiare il tema della sidebar e renderla scura è sufficiente aggiungere al
 
 ## Attivazione tramite codice
 
-Il componente Sidebar utilizza al suo interno il componente Collapse, si rimanda dunque alla 
+Il componente Sidebar utilizza al suo interno il componente `Collapse`, si rimanda dunque alla 
 sezione [attivazione Collapse tramite codice]({{ site.baseurl }}/docs/componenti/collapse/#attivazione-tramite-codice)
 
 ## Breaking change
