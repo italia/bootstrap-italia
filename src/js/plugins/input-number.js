@@ -35,7 +35,6 @@ class InputNumber extends BaseComponent {
     super(element)
     this._wrapperElement = this._element.closest(SELECTOR_WRAPPER)
     this._label = new InputLabel(element)
-    this._meta = false
     this._init()
     this._bindEvents()
   }
@@ -54,35 +53,6 @@ class InputNumber extends BaseComponent {
   }
 
   _bindEvents() {
-    this._element.addEventListener('focus', () => {
-      setTimeout(() => {
-        this._element.type = 'text'
-      }, 10)
-    })
-    this._element.addEventListener('blur', () => {
-      this._element.type = 'number'
-      setTimeout(() => {
-        this._label._labelToggle()
-      }, 10)
-    })
-    this._element.addEventListener('keyup', (evt) => {
-      if (['Meta', 'Control'].includes(evt.key)) {
-        this._meta = false
-      }
-    })
-    this._element.addEventListener('keydown', (evt) => {
-      if (['Meta', 'Control'].includes(evt.key)) {
-        this._meta = true
-      }
-      if (this._meta || ['ArrowRight', 'ArrowLeft', 'ArrowUp', 'ArrowDown', 'Backspace', 'Tab'].includes(evt.key)) {
-        return
-      }
-      if (this._element.value.indexOf('.') > 0 && evt.key === '.') {
-        evt.preventDefault()
-      } else {
-        !/[0-9.e\-]/.test(evt.key) && evt.preventDefault()
-      }
-    })
     if (this._wrapperElement) {
       SelectorEngine.find(SELECTOR_BTN, this._wrapperElement).forEach((btn) => {
         EventHandler.on(btn, EVENT_CLICK, (evt) => {
