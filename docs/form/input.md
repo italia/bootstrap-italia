@@ -148,7 +148,7 @@ Aggiungi l'attributo `disabled` ad un input per impedire la modifica del valore 
 
 Aggiungi l'attributo `readonly` ad un input per impedire la modifica del valore contenuto.
 
-{% comment %}Example name: Solo lettura {% endcomment %}
+{% comment %}Example name: Sola lettura {% endcomment %}
 {% capture example %}
 <div class="form-group">
   <label class="active" for="input-text-read-only">Contenuto in sola lettura</label>
