@@ -55,7 +55,9 @@ class InputNumber extends BaseComponent {
 
   _bindEvents() {
     this._element.addEventListener('focus', () => {
-      this._element.type = 'text'
+      setTimeout(() => {
+        this._element.type = 'text'
+      }, 10)
     })
     this._element.addEventListener('blur', () => {
       this._element.type = 'number'
@@ -78,7 +80,7 @@ class InputNumber extends BaseComponent {
       if (this._element.value.indexOf('.') > 0 && evt.key === '.') {
         evt.preventDefault()
       } else {
-        !/[0-9.]/.test(evt.key) && evt.preventDefault()
+        !/[0-9.e\-]/.test(evt.key) && evt.preventDefault()
       }
     })
     if (this._wrapperElement) {
