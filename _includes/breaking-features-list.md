@@ -2,6 +2,11 @@
 
 [Changelog completo](https://github.com/italia/bootstrap-italia/releases/tag/v2.14.0) <svg class="icon steppers-success" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
 
+### Autocompletamento
+
+Nuova modalità di utilizzo del componente Autocomplete via codice.
+
+
 ### Carousel
 
 Lato JavaScript il componente Carousel deve essere importato tramite la classe 
