@@ -56,17 +56,15 @@ export default [
       generatedCode: 'es2015',
       name: "bootstrap",
       globals: {
-        '@popperjs/core' : 'Popper', 
-        '@splidejs/splide' : 'Splide', 
-        'accessible-autocomplete' : 'accessibleAutocomplete',
+        '@popperjs/core' : 'Popper',
+        '@splidejs/splide' : 'Splide',
         'animejs/lib/anime.es.js' : 'anime',
         'video.js' : 'videojs'
       },
     },
     external: [
-      '@popperjs/core', 
-      '@splidejs/splide', 
-      'accessible-autocomplete',
+      '@popperjs/core',
+      '@splidejs/splide',
       'animejs/lib/anime.es.js',
       'video.js'
     ],
