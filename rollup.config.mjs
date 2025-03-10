@@ -110,7 +110,6 @@ export default [
       },
     ],
     plugins: [
-      nodeResolve(),
       commonjs(),
     ],
   },
