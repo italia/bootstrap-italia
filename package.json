@@ -97,7 +97,6 @@
     "@popperjs/core": "^2.11.6",
     "@splidejs/splide": "^4.1.4",
     "@types/bootstrap": "^5.2.6",
-    "accessible-autocomplete": "^3.0.1",
     "animejs": "^3.2.1",
     "design-tokens-italia": "^1.1.1",
     "just-validate": "^4.3.0",
