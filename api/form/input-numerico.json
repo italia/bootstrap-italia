@@ -17,7 +17,11 @@
     },
     {
         "name": "Disabilitato ",
-        "content": "\n<div>\n  <div class=\"form-group\">\n    <label for=\"inputNumber5\" class=\"input-number-label active\">Disabled</label>\n    <div class=\"input-group input-number disabled\">\n      <input type=\"number\" class=\"form-control\" data-bs-input id=\"inputNumber5\" name=\"inputNumber5\" value=\"50\" min=\"0\" max=\"100\" step=\"1\" disabled />\n      <span class=\"input-group-text align-buttons flex-column\">\n        <button class=\"input-number-add\">\n          <span class=\"visually-hidden\">Aumenta valore</span>\n        </button>\n        <button class=\"input-number-sub\">\n          <span class=\"visually-hidden\">Diminuisci valore</span>\n        </button>\n      </span>\n    </div>\n  </div>\n</div>\n"
+        "content": "\n<div>\n  <div class=\"form-group\">\n    <label for=\"inputNumber5\" class=\"input-number-label active\">Disabled</label>\n    <div class=\"input-group input-number disabled\">\n      <input type=\"number\" class=\"form-control\" data-bs-input id=\"inputNumber5\" name=\"inputNumber5\" value=\"50\" min=\"0\" max=\"100\" step=\"1\" disabled />\n      <span class=\"input-group-text align-buttons flex-column\">\n        <button class=\"input-number-add\" disabled>\n          <span class=\"visually-hidden\">Aumenta valore</span>\n        </button>\n        <button class=\"input-number-sub\" disabled>\n          <span class=\"visually-hidden\">Diminuisci valore</span>\n        </button>\n      </span>\n    </div>\n  </div>\n</div>\n"
+    },
+    {
+        "name": "Sola lettura ",
+        "content": "\n<div>\n  <div class=\"form-group\">\n    <label for=\"inputNumberReadOnly\" class=\"input-number-label active\">Contenuto in sola lettura</label>\n    <div class=\"input-group input-number\">\n      <input type=\"number\" class=\"form-control\" data-bs-input id=\"inputNumberReadOnly\" name=\"inputNumberReadOnly\" value=\"50\" min=\"0\" max=\"100\" step=\"1\" readonly />\n      <span class=\"input-group-text align-buttons flex-column\">\n        <button class=\"input-number-add\" disabled>\n          <span class=\"visually-hidden\">Aumenta valore</span>\n        </button>\n        <button class=\"input-number-sub\" disabled>\n          <span class=\"visually-hidden\">Diminuisci valore</span>\n        </button>\n      </span>\n    </div>\n  </div>\n</div>\n"
     },
     {
         "name": "Con ridimensionamento ",
