@@ -1,43 +1,43 @@
 //mobile
 .chip {
   display: inline-flex;
-  justify-content: space-evenly;
   align-items: center;
-  background: $chips-background;
-  border: 1px solid $chips-border;
-  border-radius: $v-gap * 1.5;
-  height: $v-gap * 3;
+  justify-content: space-evenly;
   min-width: 100px;
-  padding: 0 $v-gap / 2 2px $v-gap;
-  transition: all 0.05s;
+  height: $v-gap * 3;
   margin-top: $v-gap * 0.5;
   margin-bottom: $v-gap;
+  padding: 0 $v-gap / 2 2px $v-gap;
+  border: 1px solid $chips-border;
+  border-radius: $v-gap * 1.5;
+  background: $chips-background;
+  transition: all 0.05s;
   &:not(:last-child) {
     margin-right: $v-gap;
   }
   //label
   .chip-label {
-    font-size: $chips-label-font-size;
     height: $v-gap * 2;
-    font-weight: 600;
-    color: $chips-label-color;
     margin-bottom: 0;
+    color: $chips-label-color;
+    font-size: $chips-label-font-size;
+    font-weight: 600;
+    text-decoration: none;
     transform: translateY(-2px);
     transition: color 0.05s;
-    text-decoration: none;
     &:hover {
       text-decoration: none;
     }
   }
   //close button
   button {
-    padding: 0;
-    background: transparent;
-    border: none;
-    margin-left: auto;
+    position: relative;
     width: 24px;
     height: 24px;
-    position: relative;
+    margin-left: auto;
+    padding: 0;
+    border: none;
+    background: transparent;
     &:hover:not([disabled]) {
       cursor: pointer;
     }
@@ -64,14 +64,14 @@
 
   //large version-------------------------------
   &.chip-lg {
-    height: $v-gap * 4;
     min-width: 120px;
-    border-radius: $v-gap * 2;
+    height: $v-gap * 4;
     padding: 2px $v-gap / 2 0 $v-gap * 2;
+    border-radius: $v-gap * 2;
     //label
     .chip-label {
-      font-size: $chips-label-font-size-l;
       height: 12px;
+      font-size: $chips-label-font-size-l;
       transform: translateY(-8px);
     }
     //close button
@@ -85,8 +85,8 @@
     }
     //left icon
     & > .icon {
-      height: 24px;
       width: 24px;
+      height: 24px;
       margin-right: -8px;
       transform: translateX(-13px) translateY(-1px);
     }
@@ -111,8 +111,8 @@
 
   //hover state--------------------------------
   &:hover:not(.chip-disabled) {
-    background: $chips-background-hover;
     border-color: $chips-background-hover;
+    background: $chips-background-hover;
     transition: background-color 0.1s;
     //label
     .chip-label {
@@ -162,8 +162,8 @@
   }
 
   &.chip-primary {
-    background-color: transparent;
     border-color: $primary;
+    background-color: transparent;
     color: $primary;
 
     & > .chip-label {
@@ -171,8 +171,8 @@
     }
 
     &:hover {
-      background-color: $primary;
       border-color: $primary;
+      background-color: $primary;
 
       & > .chip-label {
         color: $white;
@@ -181,8 +181,8 @@
   }
 
   &.chip-secondary {
-    background-color: transparent;
     border-color: $secondary;
+    background-color: transparent;
     color: $primary;
 
     & > .chip-label {
@@ -190,8 +190,8 @@
     }
 
     &:hover {
-      background-color: $secondary;
       border-color: $secondary;
+      background-color: $secondary;
 
       & > .chip-label {
         color: $white;
@@ -200,8 +200,8 @@
   }
 
   &.chip-success {
-    background-color: transparent;
     border-color: $success;
+    background-color: transparent;
     color: $success;
 
     & > .chip-label {
@@ -209,8 +209,8 @@
     }
 
     &:hover {
-      background-color: $success;
       border-color: $success;
+      background-color: $success;
 
       & > .chip-label {
         color: $white;
@@ -219,8 +219,8 @@
   }
 
   &.chip-danger {
-    background-color: transparent;
     border-color: $danger;
+    background-color: transparent;
     color: $danger;
 
     & > .chip-label {
@@ -228,8 +228,8 @@
     }
 
     &:hover {
-      background-color: $danger;
       border-color: $danger;
+      background-color: $danger;
 
       & > .chip-label {
         color: $white;
@@ -238,8 +238,8 @@
   }
 
   &.chip-info {
-    background-color: transparent;
     border-color: $info;
+    background-color: transparent;
     color: $info;
 
     & > .chip-label {
@@ -247,8 +247,8 @@
     }
 
     &:hover {
-      background-color: $info;
       border-color: $info;
+      background-color: $info;
 
       & > .chip-label {
         color: $white;
@@ -257,8 +257,8 @@
   }
 
   &.chip-warning {
-    background-color: transparent;
     border-color: $warning;
+    background-color: transparent;
     color: $warning;
 
     & > .chip-label {
@@ -266,8 +266,8 @@
     }
 
     &:hover {
-      background-color: $warning;
       border-color: $warning;
+      background-color: $warning;
 
       & > .chip-label {
         color: $white;
