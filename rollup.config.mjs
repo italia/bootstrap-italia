@@ -109,6 +109,10 @@ export default [
         preserveModules: true
       },
     ],
+    plugins: [
+      nodeResolve(),
+      commonjs(),
+    ],
   },
   // Entry for documentation
   {
