@@ -1,4 +1,4 @@
-export { default as CarouselBI } from './plugins/carousel-bi.js';
+export { default as Carousel } from './plugins/carousel.js';
 export { default as InputNumber } from './plugins/input-number.js';
 export { default as Dimmer } from './plugins/dimmer.js';
 export { default as Notification } from './plugins/notification.js';
@@ -23,7 +23,6 @@ export { default as List } from './plugins/list.js';
 export { default as Transfer } from './plugins/transfer.js';
 export { default as Alert } from './plugins/alert.js';
 export { default as Button } from './plugins/button.js';
-export { default as Carousel } from './plugins/carousel.js';
 export { default as Collapse } from './plugins/collapse.js';
 export { default as Dropdown } from './plugins/dropdown.js';
 export { default as Modal } from './plugins/modal.js';

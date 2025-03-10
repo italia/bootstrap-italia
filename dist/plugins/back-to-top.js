@@ -17,9 +17,7 @@ import { documentScrollTo } from './util/tween.js';
 const NAME = 'backtotop';
 const DATA_KEY = 'bs.backtotop';
 const EVENT_KEY = `.${DATA_KEY}`;
-//const DATA_API_KEY = '.data-api'
 
-//const EVENT_SCROLL = `scroll${EVENT_KEY}`
 const EVENT_CLICK = `click${EVENT_KEY}`;
 
 const CLASS_NAME_SHOW = 'back-to-top-show';
@@ -118,10 +116,6 @@ class BackToTop extends BaseComponent {
  * Data Api implementation
  * ------------------------------------------------------------------------
  */
-/*const toggles = SelectorEngine.find(SELECTOR_TOGGLE)
-toggles.forEach((toggle) => {
-  BackToTop.getOrCreateInstance(toggle)
-})*/
 
 onDocumentScroll(() => {
   const toggles = SelectorEngine.find(SELECTOR_TOGGLE);

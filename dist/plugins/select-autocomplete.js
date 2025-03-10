@@ -1,5 +1,6 @@
-import accessibleAutocomplete from 'accessible-autocomplete';
+import accessibleAutocomplete from './vendor/accessible-autocomplete.js';
 import BaseComponent from './base-component.js';
+import InputLabel from './input-label.js';
 
 /**
  * --------------------------------------------------------------------------
@@ -16,20 +17,31 @@ function onClassChange(element, callback) {
   const observer = new MutationObserver((mutations) => {
     mutations.forEach((mutation) => {
       if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
-        callback(mutation.target);
+        callback(mutation.oldValue, mutation.target);
       }
     });
   });
-  observer.observe(element, { attributes: true });
+  observer.observe(element, { attributes: true, attributeOldValue: true });
   return observer.disconnect
 }
 
 class SelectAutocomplete extends BaseComponent {
   constructor(element, config) {
     super(element);
-    this._hasFormControl = element.classList.contains('form-control');
-    this.element_original_id = this._element.id;
-    this._config = config;
+
+    this._config = config || {};
+    this._config.inputClasses = 'form-control';
+    this._config.showNoOptionsFound = true;
+    this._config.hintClasses = 'app-hint';
+    this._config.autoselect = false;
+    this._config.showAllValues = false;
+    this._config.templates = undefined;
+    this._config.confirmOnBlur = false;
+    this._config.menuAttributes = {};
+    this._config.menuClasses = null;
+
+    this._extraClasses = [];
+
     if (!this._config.tAssistiveHint)
       this._config.tAssistiveHint = () =>
         'Quando i risultati del completamento automatico sono disponibili, usa le frecce su e giù per rivedere e Invio per selezionare. Utenti di dispositivi touch, esplora tramite tocco o con gesti di scorrimento';
@@ -39,7 +51,7 @@ class SelectAutocomplete extends BaseComponent {
     if (!this._config.tStatusNoResults) this._config.tStatusNoResults = () => 'Nessun risultato di ricerca';
     if (!this._config.tStatusSelectedOption)
       this._config.tStatusSelectedOption = (selectedOption, length, index) => `${selectedOption} ${index + 1} di ${length} è sottolineato`;
-    if (!this._config.tStatusResults)
+    if (!this._config.tStatusResults) {
       this._config.tStatusResults = (length, contentSelectedOption) => {
         const words = {
           result: length === 1 ? 'risultato' : 'risultati',
@@ -49,7 +61,10 @@ class SelectAutocomplete extends BaseComponent {
 
         return `${length} ${words.result} ${words.is} ${words.available}. ${contentSelectedOption}`
       };
-    this._enhance();
+    }
+    if (typeof document !== 'undefined') {
+      this._enhance();
+    }
   }
 
   // Getters
@@ -60,20 +75,54 @@ class SelectAutocomplete extends BaseComponent {
 
   // Private
   _enhance() {
-    accessibleAutocomplete.enhanceSelectElement(Object.assign({}, { selectElement: this._element }, this._config));
+    const inputId = this._config.id;
+    const originalConfirm = this._config.onConfirm;
+
+    this._config.onConfirm = (value) => {
+      document.getElementById(inputId).value = value;
+      document.getElementById(inputId).dispatchEvent(new Event('input'));
+      if (originalConfirm) {
+        originalConfirm(value);
+      }
+    };
+
+    accessibleAutocomplete(
+      Object.assign(
+        {},
+        {
+          element: this._element,
+          id: inputId,
+        },
+        this._config
+      )
+    );
     setTimeout(() => {
-      if (this._hasFormControl) {
-        if (typeof document === 'undefined') {
+      this._inputField = document.getElementById(inputId);
+      this._label = new InputLabel(this._inputField);
+      this._inputField.addEventListener('focus', () => {
+        this._extraClasses.forEach((cls) => {
+          this._inputField.classList.add(cls);
+        });
+        this._extraClasses = [];
+      });
+      this._inputField.addEventListener('blur', () => {
+        this._extraClasses.forEach((cls) => {
+          this._inputField.classList.add(cls);
+        });
+        this._extraClasses = [];
+      });
+
+      onClassChange(this._inputField, (oldClasses) => {
+        this._extraClasses = [];
+        if (oldClasses === this._inputField.classList.value) {
           return
         }
-        const inputField = document.getElementById(this.element_original_id);
-        inputField.classList.add('form-control');
-        onClassChange(inputField, (node) => {
-          if (!node.classList.contains('form-control')) {
-            node.classList.add('form-control');
+        oldClasses.split(' ').forEach((cls) => {
+          if (!cls.startsWith('autocomplete')) {
+            this._extraClasses.push(cls);
           }
         });
-      }
+      });
     }, 100);
   }
 }

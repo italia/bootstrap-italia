@@ -13,7 +13,7 @@
 const CLASS_SCROLL_DISABLED = 'pagescroll-scroll-disabled';
 
 let disabled = false;
-let currentScrollPos = typeof document === 'undefined' ? 0 : document.scrollingElement.scrollTop;
+let currentScrollPos = typeof document === 'undefined' ? 0 : document.scrollingElement ? document.scrollingElement.scrollTop : 0;
 const htmlContainer = typeof document === 'undefined' ? null : document.querySelector('html');
 
 function disablePageScroll() {

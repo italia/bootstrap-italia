@@ -227,6 +227,16 @@ class Tooltip extends BaseComponent {
       }
     }
 
+    document.addEventListener(
+      'keyup',
+      (event) => {
+        if (event.key === 'Escape') {
+          this.hide();
+        }
+      },
+      { once: true }
+    );
+
     const complete = () => {
       EventHandler.trigger(this._element, this.constructor.eventName(EVENT_SHOWN));
 

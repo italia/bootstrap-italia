@@ -53,6 +53,13 @@ class Masonry extends BaseComponent {
     super.dispose();
   }
 
+  // Public
+  layout() {
+    if (this._masonry) {
+      this._masonry.layout();
+    }
+  }
+
   // Private
   _getConfig(config) {
     config = {
@@ -85,7 +92,7 @@ class Masonry extends BaseComponent {
   _initMasonry() {
     const config = this._config;
     config.container = this._element;
-    this._masonry = new MiniMasonry(config); //new MasonryPlugin(this._element, this._config)
+    this._masonry = new MiniMasonry(config);
   }
 
   _createLoader() {
