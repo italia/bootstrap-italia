@@ -24,7 +24,7 @@
         "content": "\n<div class=\"form-group\">\n  <label for=\"input-text-disabled\">Contenuto disabilitato</label>\n  <input class=\"form-control\" type=\"text\" id=\"input-text-disabled\" disabled>\n</div>\n"
     },
     {
-        "name": "Solo lettura ",
+        "name": "Sola lettura ",
         "content": "\n<div class=\"form-group\">\n  <label class=\"active\" for=\"input-text-read-only\">Contenuto in sola lettura</label>\n  <input class=\"form-control\" type=\"text\" id=\"input-text-read-only\" value=\"Sola lettura\" readonly>\n</div>\n"
     },
     {
@@ -53,7 +53,7 @@
     },
     {
         "name": "Ricerca con autocompletamento e dati, cerca una nazione ",
-        "content": "\n<div class=\"form-group\">\n  <label for=\"autocomplete-test\" class=\"visually-hidden\">Cerca nel sito</label>\n  <input type=\"search\" class=\"form-control autocomplete\" placeholder=\"Testo da cercare\"\n    id=\"autocomplete-test\"\n    name=\"autocomplete-test\"\n    data-bs-autocomplete='[{\"icon\": \"<div class=\\\"avatar size-sm\\\"><img src=\\\"https://raw.githubusercontent.com/lipis/flag-icons/main/flags/4x3/it.svg\\\" alt=\\\"Italia\\\"></div>\", \"text\": \"Italia\", \"label\": \"Label 1\", \"link\": \"#\"}, {\"icon\": \"<div class=\\\"avatar size-sm\\\"><img src=\\\"https://raw.githubusercontent.com/lipis/flag-icons/main/flags/4x3/fr.svg\\\" alt=\\\"Francia\\\"></div>\", \"text\": \"Francia\", \"label\": \"Label 2\", \"link\": \"#\"}]'>\n  <span class=\"autocomplete-icon\" aria-hidden=\"true\">\n    <svg class=\"icon icon-sm\"><use href=\"/dist/svg/sprites.svg#it-search\"></use></svg>\n  </span>\n</div>\n"
+        "content": "\n<div class=\"form-group\">\n  <label for=\"autocomplete-test\" class=\"visually-hidden\">Cerca nel sito</label>\n  <input type=\"search\" class=\"form-control autocomplete\" placeholder=\"Testo da cercare\"\n    id=\"autocomplete-test\"\n    name=\"autocomplete-test\"\n    data-bs-autocomplete='[{\"icon\": \"<div class=\\\"avatar size-sm\\\"><img src=\\\"https://raw.githubusercontent.com/lipis/flag-icons/main/flags/4x3/it.svg\\\" alt=\\\"Italia\\\"></div>\", \"text\": \"Italia\", \"label\": \"Label 1\"}, {\"icon\": \"<div class=\\\"avatar size-sm\\\"><img src=\\\"https://raw.githubusercontent.com/lipis/flag-icons/main/flags/4x3/fr.svg\\\" alt=\\\"Francia\\\"></div>\", \"text\": \"Francia\", \"label\": \"Label 2\", \"link\": \"#\"}]'>\n  <span class=\"autocomplete-icon\" aria-hidden=\"true\">\n    <svg class=\"icon icon-sm\"><use href=\"/dist/svg/sprites.svg#it-search\"></use></svg>\n  </span>\n</div>\n"
     },
     {
         "name": "Area di testo ",

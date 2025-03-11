@@ -1,6 +1,6 @@
 {
     "amichevole con lettori di schermo": "PRONTO",
-    "angular Kit": "PRONTO",
+    "angular Kit": "DA RIVEDERE",
     "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/form-input",
     "assignees": [
         "Fupete"
@@ -17,7 +17,7 @@
     "id": "PVTI_lADOAOqloM4AcXblzgMjweI",
     "navigabile": "DA RIVEDERE",
     "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1166 \u2014 https://github.com/italia/bootstrap-italia/issues/1167",
-    "notes / More": "In Angular cose sotto Form Input. \u2014 In Angular sembra che nel primo esempio anche usando Readonly si possa poi usare le freccie a destra per incrementare o decrementare il numero. Sia da mouse/touch che da tastiera.",
+    "notes / More": "In Angular cose sotto Form Input.",
     "react Kit": "PRONTO",
     "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-form-inputnumerico--documentazione",
     "status": "Todo",
