@@ -12,7 +12,7 @@ description: Elementi e stili per la creazione di input con autocompletamento.
 Il completamento automatico è un componente che aiuta gli utenti a scegliere le risposte da un elenco fornito.
 Per la creazione del componente, è stato utilizzato il plugin [Accessible autocomplete](https://github.com/alphagov/accessible-autocomplete).
 
-{% comment %}Example name: Base {% endcomment %}
+{% comment %}Example name: Base{% endcomment %}
 {% capture example %}
 <div class="form-group">
   <label for="accessibleAutocomplete">Regione</label>
@@ -40,7 +40,7 @@ Per far fronte a questa esigenza è sufficiente passare come opzione `source`
 una funzione per filtrare i dati e popolare il componente
 ([Tutte le opzioni disponibili del componente](#attivazione-tramite-codice)).
 
-{% comment %}Example name: Cambiare i valori dinamicamente {% endcomment %}
+{% comment %}Example name: Cambiare i valori dinamicamente{% endcomment %}
 {% capture example %}
 <div class="row">
   <div class="col-12">
@@ -100,6 +100,7 @@ una funzione per filtrare i dati e popolare il componente
 
 ### Esempio Regioni e Comuni
 
+{% comment %}Example name: Regioni e Comuni{% endcomment %}
 {% capture example %}
 <div class="row">
   <div class="col-12">
@@ -192,6 +193,7 @@ configurazioni è stato passato anche `minLength: 3`, vista la grande mole di da
 questa opzione impedirà la visualizzazione dei suggerimenti se vengono digitati 
 meno di 3 caratteri)
 
+{% comment %}Example name: Validazione{% endcomment %}
 {% capture example %}
 <div>
   <form id="justValidate" action="" method="post">
