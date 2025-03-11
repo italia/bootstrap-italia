@@ -29,6 +29,7 @@ def get_globals(path):
 def parse_liquid_template(template):
     globals = get_globals(os.path.join("_data"))
     liquid_tpl = env.from_string(template)
+    globals['baseurl'] = 'https://italia.github.io/bootstrap-italia'
     rendered = liquid_tpl.render(site=globals)
     rendered = re.sub("\s?no_toc\s?", "", rendered)
     rendered = re.sub("\s?class=\"\s?\"", "", rendered)
