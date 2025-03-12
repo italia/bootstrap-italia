@@ -120,7 +120,7 @@ Aggiungere la classe `.callout-danger` per indicare un errore o una procedura pe
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-## Callout Highlights
+## Callout Highlight
 
 Aggiungendo la classe `.callout-highlight` si ottiene una differente versione del Callout, con bordo solo sul lato sinistro.
 
@@ -131,6 +131,17 @@ Per aumentare la dimensione di un paragrafo contenuto nel Callout applicare la c
 {% comment %}Example name: Testo, in evidenza{% endcomment %}
 {% capture example %}
 <div class="callout callout-highlight">
+  <div class="callout-title">Titolo callout</div>
+  <p class="callout-big-text">Maecenas at erat id sem interdum efficitur eu sed nunc. Mauris sit amet erat eget augue molestie malesuada ut sed ex. In sed dignissim elit.</p>
+  <p>Maecenas vulputate ante dictum vestibulum volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non augue non purus vestibulum varius. Maecenas ullamcorper <a href="#">tincidunt nulla quis laoreet.</a></p>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+### Highlight Primario
+
+{% comment %}Example name: Testo, in evidenza{% endcomment %}
+{% capture example %}
+<div class="callout callout-primary">
   <div class="callout-title">Titolo callout</div>
   <p class="callout-big-text">Maecenas at erat id sem interdum efficitur eu sed nunc. Mauris sit amet erat eget augue molestie malesuada ut sed ex. In sed dignissim elit.</p>
   <p>Maecenas vulputate ante dictum vestibulum volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non augue non purus vestibulum varius. Maecenas ullamcorper <a href="#">tincidunt nulla quis laoreet.</a></p>
