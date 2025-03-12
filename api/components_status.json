@@ -289,7 +289,7 @@
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwV0",
       "navigabile": "PRONTO",
-      "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1259 — https://github.com/italia/bootstrap-italia/issues/1388",
+      "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1388",
       "react Kit": "PRONTO",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-button--documentazione",
       "status": "Todo",
@@ -357,13 +357,13 @@
       "visivamente accessibile": "PRONTO"
     },
     {
-      "amichevole con lettori di schermo": "IN REVIEW",
+      "amichevole con lettori di schermo": "PRONTO",
       "angular Kit": "DA RIVEDERE A11Y",
       "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/carousel",
       "assignees": [
         "Fupete"
       ],
-      "bootstrap Italia": "DA RIVEDERE A11Y",
+      "bootstrap Italia": "PRONTO",
       "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/componenti/carousel/",
       "comprensibile": "PRONTO",
       "content": {
@@ -373,8 +373,8 @@
         "type": "DraftIssue"
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwWs",
-      "navigabile": "IN REVIEW",
-      "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1161 — https://github.com/italia/design-react-kit/issues/1148",
+      "navigabile": "PRONTO",
+      "notes / Issues": "https://github.com/italia/design-react-kit/issues/1148",
       "react Kit": "DA FARE",
       "status": "Todo",
       "status a11y check": "Done",
@@ -401,8 +401,7 @@
       },
       "id": "PVTI_lADOAOqloM4AcXblzgSeKRg",
       "navigabile": "PRONTO",
-      "notes / Issues": "https://github.com/italia/design-angular-kit/issues/428 — https://github.com/italia/design-react-kit/issues/1151",
-      "react Kit": "DA RIVEDERE",
+      "react Kit": "PRONTO",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-form-checkbox--documentazione",
       "status a11y check": "Done",
       "title": "`Checkbox`- check a11y e status",
@@ -855,14 +854,14 @@
     },
     {
       "amichevole con lettori di schermo": "PRONTO",
-      "angular Kit": "DA RIVEDERE",
+      "angular Kit": "PRONTO",
       "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/form-input",
       "assignees": [
         "Fupete"
       ],
-      "bootstrap Italia": "DA RIVEDERE",
+      "bootstrap Italia": "PRONTO",
       "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/form/input-numerico/",
-      "comprensibile": "DA RIVEDERE",
+      "comprensibile": "PRONTO",
       "content": {
         "body": "https://designers.italia.it/design-system/componenti/number-input/",
         "id": "DI_lADOAOqloM4AcXblzgFT9bo",
@@ -870,8 +869,7 @@
         "type": "DraftIssue"
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjweI",
-      "navigabile": "DA RIVEDERE",
-      "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1166 — https://github.com/italia/bootstrap-italia/issues/1167",
+      "navigabile": "PRONTO",
       "notes / More": "In Angular cose sotto Form Input.",
       "react Kit": "PRONTO",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-form-inputnumerico--documentazione",
@@ -880,7 +878,7 @@
       "title": "`Number input` - check a11y e status",
       "uI Kit Italia": "PRONTO",
       "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920",
-      "visivamente accessibile": "IN REVIEW"
+      "visivamente accessibile": "PRONTO"
     },
     {
       "amichevole con lettori di schermo": "PRONTO",
@@ -1013,9 +1011,8 @@
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwgU",
       "navigabile": "PRONTO",
-      "notes / Issues": "https://github.com/italia/design-react-kit/issues/1151",
       "notes / More": "In Angular manca la variante \"gruppi\" con radio a destra, ma c'è una variante Radio con link nella label che non è altrove. Di quest'ultima è dubbia l'a11y. ",
-      "react Kit": "DA RIVEDERE",
+      "react Kit": "PRONTO",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-form-radio--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
@@ -1261,9 +1258,8 @@
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwjM",
       "navigabile": "PRONTO",
-      "notes / Issues": "https://github.com/italia/design-react-kit/issues/1150",
       "notes / More": "In Angular kit non ci sono tab verticali e variante card. In React kit non c'è variante card e c'è una variante in più Pulsanti. Ne in Angular ne in React kit ci sono varianti bottom o right.",
-      "react Kit": "DA RIVEDERE",
+      "react Kit": "PRONTO",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-tab--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
@@ -1410,7 +1406,7 @@
     },
     {
       "amichevole con lettori di schermo": "PRONTO",
-      "angular Kit": "DA RIVEDERE A11Y",
+      "angular Kit": "PRONTO",
       "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/tooltip",
       "assignees": [
         "Fupete"
@@ -1426,7 +1422,7 @@
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwmo",
       "navigabile": "IN REVIEW",
-      "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1180 — https://github.com/italia/bootstrap-italia/issues/1181",
+      "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1180 ",
       "react Kit": "PRONTO",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-tooltip--documentazione",
       "status": "Todo",
@@ -1438,7 +1434,7 @@
     },
     {
       "amichevole con lettori di schermo": "IN REVIEW",
-      "angular Kit": "DA FARE",
+      "angular Kit": "PRONTO",
       "assignees": [
         "Fupete"
       ],
@@ -1453,7 +1449,7 @@
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwng",
       "navigabile": "DA RIVEDERE",
-      "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1187 — https://github.com/italia/bootstrap-italia/issues/1188 — https://github.com/italia/bootstrap-italia/issues/1189 — https://github.com/italia/bootstrap-italia/issues/1190 — https://github.com/italia/design-ui-kit/issues/151 — https://github.com/italia/design-angular-kit/issues/310",
+      "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1187 — https://github.com/italia/bootstrap-italia/issues/1188 — https://github.com/italia/bootstrap-italia/issues/1189 — https://github.com/italia/bootstrap-italia/issues/1190 — https://github.com/italia/design-ui-kit/issues/151",
       "react Kit": "NON PRESENTE",
       "status": "Todo",
       "status a11y check": "Done",
@@ -1479,7 +1475,6 @@
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwnk",
       "navigabile": "PRONTO",
-      "notes / Issues": "https://github.com/italia/designers.italia.it/issues/1388",
       "notes / More": "La versione con \"Animazione\" per simularne il funzionamento funziona solo al click del mouse, non via tastiera. — In Angular kit manca la versione Avatar",
       "react Kit": "NON PRESENTE",
       "status": "Todo",
