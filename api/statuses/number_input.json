@@ -1,13 +1,13 @@
 {
     "amichevole con lettori di schermo": "PRONTO",
-    "angular Kit": "DA RIVEDERE",
+    "angular Kit": "PRONTO",
     "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/form-input",
     "assignees": [
         "Fupete"
     ],
-    "bootstrap Italia": "DA RIVEDERE",
+    "bootstrap Italia": "PRONTO",
     "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/form/input-numerico/",
-    "comprensibile": "DA RIVEDERE",
+    "comprensibile": "PRONTO",
     "content": {
         "body": "https://designers.italia.it/design-system/componenti/number-input/",
         "id": "DI_lADOAOqloM4AcXblzgFT9bo",
@@ -15,8 +15,7 @@
         "type": "DraftIssue"
     },
     "id": "PVTI_lADOAOqloM4AcXblzgMjweI",
-    "navigabile": "DA RIVEDERE",
-    "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1166 \u2014 https://github.com/italia/bootstrap-italia/issues/1167",
+    "navigabile": "PRONTO",
     "notes / More": "In Angular cose sotto Form Input.",
     "react Kit": "PRONTO",
     "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-form-inputnumerico--documentazione",
@@ -25,5 +24,5 @@
     "title": "Number input",
     "uI Kit Italia": "PRONTO",
     "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920",
-    "visivamente accessibile": "IN REVIEW"
+    "visivamente accessibile": "PRONTO"
 }
