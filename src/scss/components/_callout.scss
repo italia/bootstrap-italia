@@ -24,58 +24,6 @@
     border-top: 0;
   }
 
-  &.callout-more {
-    position: relative;
-    padding: 2.222rem;
-    border: none;
-    border-radius: 0;
-    background: #f9f9f5;
-
-    &:before,
-    &:after {
-      position: absolute;
-      top: 0;
-      right: 0;
-      content: '';
-      width: 0;
-      height: 0;
-      border-style: solid;
-    }
-
-    &:before {
-      border-width: 0 48px 48px 0;
-      border-color: transparent $white transparent transparent;
-    }
-
-    &:after {
-      border-width: 48px 0 0 48px;
-      border-color: transparent transparent transparent #e4e4db;
-    }
-
-    p {
-      color: $color-text-secondary;
-      font-size: 1rem;
-      line-height: 1.5rem;
-    }
-
-    .callout-title {
-      display: flex;
-      align-items: flex-start;
-      margin-bottom: 2.222rem;
-
-      i {
-        font-size: 1.25rem;
-      }
-
-      span {
-        display: inline-block;
-        margin-top: -0.111rem;
-        padding-bottom: 0.1rem;
-        border-bottom: 2px solid $body-color;
-      }
-    }
-  }
-
   .callout-title {
     color: var(--#{$prefix}callout-title-color);
     font-size: var(--#{$prefix}callout-title-font-size);
@@ -149,8 +97,98 @@
   .icon {
     fill: var(--#{$prefix}callout-icon-color);
   }
+
+  // Color Variants
+  &-primary {
+    --#{$prefix}callout-border-color: var(--#{$prefix}color-border-primary);
+    --#{$prefix}callout-title-color: var(--#{$prefix}color-text-primary);
+    --#{$prefix}callout-icon-color: var(--#{$prefix}icon-primary);
+  }
   
-  .collapse-div {
+  &-success {
+    --#{$prefix}callout-border-color: var(--#{$prefix}color-border-success);
+    --#{$prefix}callout-title-color: var(--#{$prefix}color-text-success);
+    --#{$prefix}callout-icon-color: var(--#{$prefix}icon-success);
+  }
+  
+  &-warning {
+    --#{$prefix}callout-border-color: var(--#{$prefix}color-border-warning);
+    --#{$prefix}callout-title-color: var(--#{$prefix}color-text-warning);
+    --#{$prefix}callout-icon-color: var(--#{$prefix}icon-warning);
+  }
+  
+  &-danger {
+    --#{$prefix}callout-border-color: var(--#{$prefix}color-border-danger);
+    --#{$prefix}callout-title-color: var(--#{$prefix}color-text-danger);
+    --#{$prefix}callout-icon-color: var(--#{$prefix}icon-danger);
+  }
+
+  // Highlight Variant
+  &-highlight {
+    --#{$prefix}callout-border-radius: 0;
+    padding: 0 var(--#{$prefix}spacing-m);
+    border: none;
+    border-left: var(--#{$prefix}callout-border-size) solid var(--#{$prefix}callout-border-color);
+
+    .callout-title {
+      margin-bottom: var(--#{$prefix}spacing-s);
+    }
+  }
+
+  // In Depth Variant
+  &-more {
+    position: relative;
+    padding: var(--#{$prefix}spacing-l);
+    border: none;
+    border-radius: 0;
+    background: #f9f9f5;
+
+    &:before,
+    &:after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      content: '';
+      width: 0;
+      height: 0;
+      border-style: solid;
+    }
+
+    &:before {
+      border-width: 0 48px 48px 0;
+      border-color: transparent var(--#{$prefix}page-background) transparent transparent;
+    }
+
+    &:after {
+      border-width: 48px 0 0 48px;
+      border-color: transparent transparent transparent #e4e4db;
+    }
+
+    p {
+      color: var(--#{$prefix}color-text-secondary);
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+
+    .callout-title {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 2.222rem;
+
+      i {
+        font-size: 1.25rem;
+      }
+
+      span {
+        display: inline-block;
+        margin-top: -0.111rem;
+        padding-bottom: 0.1rem;
+        border-bottom: 2px solid var(--#{$prefix}color-border-subtle);
+      }
+    }
+  }
+
+    .collapse-div {
     display: flex;
     flex-direction: column-reverse;
     border-bottom: none;
@@ -159,8 +197,8 @@
       display: flex;
       justify-content: space-between;
       margin-top: 0;
-      padding: 1.333rem 0 0;
-      border-top: 1px solid $gray-border-disabled;
+      padding: var(--#{$prefix}spacing-m) 0 0;
+      border-top: 1px solid var(--#{$prefix}color-border-subtle);
 
       .callout-more-toggle {
         display: flex;
@@ -169,7 +207,7 @@
         padding: 0;
         border: none;
         background-color: transparent;
-        color: $primary;
+        color: var(--#{$prefix}color-link);
         font-weight: normal;
 
         &:hover,
@@ -179,20 +217,20 @@
         }
 
         &:hover {
-          color: $link-hover-color;
+          color: var(--#{$prefix}color-link-hover);
 
           span {
-            border-color: $link-hover-color;
+            border-color: var(--#{$prefix}color-link-hover);
 
             &:before,
             &:after {
-              background: $link-hover-color;
+              background: var(--#{$prefix}color-link-hover)
             }
           }
         }
 
         &:active {
-          color: $primary;
+          color: var(--#{$prefix}color-link-active)
         }
 
         &:before,
@@ -207,14 +245,14 @@
           height: 15px;
           margin-top: 0.111rem;
           margin-left: 0.444rem;
-          border: 1px solid $primary;
+          border: 1px solid var(--#{$prefix}color-text-primary);
           border-radius: 50%;
 
           &:before,
           &:after {
             position: absolute;
             content: '';
-            background: $primary;
+            background: var(--#{$prefix}color-background-primary);
           }
 
           &:before {
@@ -251,43 +289,6 @@
       p:last-child {
         margin-bottom: 1rem;
       }
-    }
-  }
-
-  // Color Variants
-  &-primary {
-    --#{$prefix}callout-border-color: var(--#{$prefix}color-border-primary);
-    --#{$prefix}callout-title-color: var(--#{$prefix}color-text-primary);
-    --#{$prefix}callout-icon-color: var(--#{$prefix}icon-primary);
-  }
-  
-  &-success {
-    --#{$prefix}callout-border-color: var(--#{$prefix}color-border-success);
-    --#{$prefix}callout-title-color: var(--#{$prefix}color-text-success);
-    --#{$prefix}callout-icon-color: var(--#{$prefix}icon-success);
-  }
-  
-  &-warning {
-    --#{$prefix}callout-border-color: var(--#{$prefix}color-border-warning);
-    --#{$prefix}callout-title-color: var(--#{$prefix}color-text-warning);
-    --#{$prefix}callout-icon-color: var(--#{$prefix}icon-warning);
-  }
-  
-  &-danger {
-    --#{$prefix}callout-border-color: var(--#{$prefix}color-border-danger);
-    --#{$prefix}callout-title-color: var(--#{$prefix}color-text-danger);
-    --#{$prefix}callout-icon-color: var(--#{$prefix}icon-danger);
-  }
-
-  // Highlight Variant
-  &-highlight {
-    --#{$prefix}callout-border-radius: 0;
-    padding: 0 var(--#{$prefix}spacing-m);
-    border: none;
-    border-left: var(--#{$prefix}callout-border-size) solid var(--#{$prefix}callout-border-color);
-
-    .callout-title {
-      margin-bottom: var(--#{$prefix}spacing-s);
     }
   }
 }
