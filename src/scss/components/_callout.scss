@@ -1,81 +1,27 @@
 .callout {
+  --#{$prefix}callout-border-color: var(--#{$prefix}color-border-secondary);
+  --#{$prefix}callout-border-size: 2px;
+  --#{$prefix}callout-background-color: var(--#{$prefix}page-background-color);
+  --#{$prefix}callout-font-family: var(--#{$prefix}font-sans);
+  --#{$prefix}callout-icon-color: var(--#{$prefix}icon-secondary);
+  --#{$prefix}callout-inner-spacing: var(--#{$prefix}spacing-m);
+  --#{$prefix}callout-outer-spacing: var(--#{$prefix}spacing-l);
+  --#{$prefix}callout-text-font-size: var(--#{$prefix}body-font-size);
+  --#{$prefix}callout-text-color: var(--#{$prefix}color-text-secondary);
+  --#{$prefix}callout-title-font-size: var(--#{$prefix}heading-6-font-size);
+  --#{$prefix}callout-title-font-weight: var(--#{$prefix}heading-font-weight-weak);
+  --#{$prefix}callout-title-color: var(--#{$prefix}color-text-secondary);
+
   position: relative;
   overflow: hidden;
-
-  @each $color-name, $color-value in (success: $success, warning: $warning, danger: $danger, important: $success, note: $primary) {
-    &.#{$color-name} {
-      border-color: $color-value;
-
-      .callout-inner {
-        border-color: rgba($color-value, 1);
-      }
-
-      .callout-title {
-        color: $color-value;
-
-        .icon {
-          fill: $color-value;
-        }
-
-        span {
-          border-color: $color-value;
-        }
-      }
-
-      .collapse-div .collapse-header .callout-more-toggle {
-        color: $color-value;
-
-        &:active,
-        &:hover {
-          color: $color-value;
-        }
-
-        span {
-          border-color: $color-value;
-
-          &:before,
-          &:after {
-            background: $color-value;
-          }
-        }
-      }
-
-      a {
-        color: $color-value;
-      }
-
-      .icon {
-        fill: $color-value;
-      }
-    }
-  }
+  background-color: var(--#{$prefix}callout-background-color);
+  color: var(--#{$prefix}callout-text-color);
 
   .callout-inner {
-    margin: 2.5rem 0;
-    padding: 2rem;
-    border: 2px solid $color-border-secondary;
+    margin: var(--#{$prefix}callout-outer-spacing) 0;
+    padding: 8px var(--#{$prefix}callout-inner-spacing) var(--#{$prefix}callout-inner-spacing);
+    border: var(--#{$prefix}callout-border-size) solid var(--#{$prefix}callout-border-color);
     border-top: 0;
-  }
-
-  &.callout-highlight {
-    padding: 0 2.222rem;
-    border: none;
-    border-left: 2px solid $color-border-secondary;
-    border-radius: 0;
-
-    @each $color-name, $color-value in (success: $success, warning: $color-border-warning, danger: $danger, important: $success, note: $primary) {
-      &.#{$color-name} {
-        border-color: $color-value;
-      }
-    }
-
-    p:last-child {
-      margin: 0;
-    }
-
-    .callout-title {
-      margin-bottom: 1.556rem;
-    }
   }
 
   &.callout-more {
@@ -131,73 +77,79 @@
   }
 
   .callout-title {
-    color: $color-text-secondary;
-    font-size: 1rem;
-    font-weight: 600;
+    color: var(--#{$prefix}callout-title-color);
+    font-size: var(--#{$prefix}callout-title-font-size);
+    font-weight: var(--#{$prefix}callout-title-font-weight);
     text-transform: uppercase;
 
-    @include media-breakpoint-up(lg) {
-      font-size: 1.125rem;
+    .icon {
+      margin-right: var(--#{$prefix}spacing-xxs);
+      fill: var(--#{$prefix}callout-icon-color);
     }
 
-    .icon {
-      margin-right: 0.5rem;
-      fill: $color-text-secondary;
+    span {
+      border-color: var(--#{$prefix}callout-border-color);
+
+      &:before,
+      &:after {
+        background: var(--#{$prefix}callout-border-color);
+      }
     }
   }
 
   &:not(.callout-highlight):not(.callout-more) {
     .callout-title {
       position: relative;
-      top: -3rem;
-      padding-left: 1.5rem;
-
+      top: -1.5rem; // Must be equal to the inner spacing
+      display: flex;
+      align-items: center;
+      padding-left: var(--#{$prefix}spacing-xs);
+      
       .text {
         position: relative;
-        width: 100%;
-        padding-right: 1.5rem;
-        overflow: hidden;
-        font-size: 0.875rem;
-
-        @include media-breakpoint-up(md) {
-          font-size: 1.15rem;
-        }
+        display: flex;
+        align-items: center;
+        padding-right: var(--#{$prefix}spacing-xs);
 
         &:after {
           position: absolute;
-          top: 0.875em;
           left: 100%;
           content: '';
-          width: calc(100vw - 100% - 20px);
-          border-top: 2px solid;
+          width: calc(100vw - 100% - 24px);
+          border-top: var(--#{$prefix}callout-border-size) solid var(--#{$prefix}callout-border-color);
         }
       }
 
       &:before {
         position: absolute;
         top: 0.875em;
-        left: -2.5rem;
+        left: -1.5rem; // Equal to the inner spacing
         content: '';
-        width: 3rem;
-        border-top: 2px solid;
+        display: block;
+        width: 1.5rem;
+        border-top: var(--#{$prefix}callout-border-size) solid var(--#{$prefix}callout-border-color);
       }
     }
   }
 
   p {
-    color: $color-text-secondary;
-    font-family: $font-family-serif;
-    font-size: 1rem;
-
-    @include media-breakpoint-up(lg) {
-      font-size: 1.125rem;
-    }
+    color: var(--#{$prefix}callout-text-color);
+    font-family: var(--#{$prefix}callout-font-family);
+    font-size: var(--#{$prefix}callout-text-size);
 
     &.callout-big-text {
-      font-size: 1.125rem;
+      font-size: var(--it-body-font-size-l);
+    }
+
+    &:last-child {
+      margin: 0; // Remove margin from last paragraph, even if it's the only one
     }
   }
 
+  .icon {
+    fill: var(--#{$prefix}callout-icon-color);
+  }
+  
   .collapse-div {
     display: flex;
     flex-direction: column-reverse;
@@ -301,16 +253,41 @@
       }
     }
   }
-}
 
-@media (min-width: 768px) {
-  .callout {
-    &.callout-highlight {
-      padding: 0 0 0 2.222rem;
-    }
+  // Color Variants
+  &-primary {
+    --#{$prefix}callout-border-color: var(--#{$prefix}color-border-primary);
+    --#{$prefix}callout-title-color: var(--#{$prefix}color-text-primary);
+    --#{$prefix}callout-icon-color: var(--#{$prefix}icon-primary);
+  }
+  
+  &-success {
+    --#{$prefix}callout-border-color: var(--#{$prefix}color-border-success);
+    --#{$prefix}callout-title-color: var(--#{$prefix}color-text-success);
+    --#{$prefix}callout-icon-color: var(--#{$prefix}icon-success);
+  }
+  
+  &-warning {
+    --#{$prefix}callout-border-color: var(--#{$prefix}color-border-warning);
+    --#{$prefix}callout-title-color: var(--#{$prefix}color-text-warning);
+    --#{$prefix}callout-icon-color: var(--#{$prefix}icon-warning);
+  }
+  
+  &-danger {
+    --#{$prefix}callout-border-color: var(--#{$prefix}color-border-danger);
+    --#{$prefix}callout-title-color: var(--#{$prefix}color-text-danger);
+    --#{$prefix}callout-icon-color: var(--#{$prefix}icon-danger);
+  }
 
-    &.callout-more p {
-      font-size: 0.775rem;
+  // Highlight Variant
+  &-highlight {
+    --#{$prefix}callout-border-radius: 0;
+    padding: 0 var(--#{$prefix}spacing-m);
+    border: none;
+    border-left: var(--#{$prefix}callout-border-size) solid var(--#{$prefix}callout-border-color);
+
+    .callout-title {
+      margin-bottom: var(--#{$prefix}spacing-s);
     }
   }
 }
