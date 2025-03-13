@@ -6,7 +6,7 @@ title: Callout
 description: Componente per evidenziare contenuti testuali.
 ---
 
-I Callout posso essere utilizzati per evidenziare alcune parti del testo che richiedono particolare attenzione. Possono contenere messaggi di errore, avvertimento, suggerimenti, ecc.
+I callout posso essere utilizzati per evidenziare alcune parti del testo che richiedono particolare attenzione. Possono contenere messaggi di errore, avvertimento, suggerimenti, ecc.
 
 ## Esempi
 
@@ -16,7 +16,7 @@ Breaking feature dalla versione **2.4.0**
 Il contenitore `<div>` con classe `.callout` deve essere seguito da un ulteriore contenitore `<div>` con classe `.callout-inner`. Seguire gli esempi e la successiva descrizione per capire la composizione del nuovo componente.
 {% endcapture %}{% include callout.html content=callout type="danger" %}
 
-Il Callout basico è costituito da un contenitore `<div>` con classe `.callout`, un contenitore `<div>` con classe `.callout-inner` contenente a sua volta un titolo contenuto in un `<div>` con classe `.callout-title`. A seguire il testo del contenuto principale del Callout incluso in uno o più tag `<p>`.
+Il callout basico è costituito da un contenitore `<div>` con classe `.callout`, un contenitore `<div>` con classe `.callout-inner` contenente a sua volta un titolo contenuto in un `<div>` con classe `.callout-title`. A seguire il testo del contenuto principale del callout incluso in uno o più tag `<p>`.
 
 Al titolo può essere aggiunta un'icona a scelta fra quelle disponibili, avendo cura di nasconderla agli screen reader con la proprietà `aria-hidden="true"`.
 {% capture callout %}
@@ -38,6 +38,22 @@ Nel caso l'icona comunicasse visivamente contenuti non disponibili nel testo (ad
       <span class="text">Titolo callout</span>
     </div>
     <p>Maecenas vulputate ante dictum vestibulum volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non augue non purus vestibulum varius.</p>
+  </div>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+Per aumentare la dimensione di un paragrafo contenuto nel callout applicare la classe `.callout-big-text` allo stesso.
+
+{% comment %}Example name: Testo{% endcomment %}
+{% capture example %}
+<div class="callout">
+  <div class="callout-inner">
+    <div class="callout-title">
+      <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-info-circle"></use></svg>
+      <span class="visually-hidden">Confermato</span> 
+      <span class="text">Titolo callout</span>
+    </div>
+    <p class="callout-big-text">Maecenas vulputate ante dictum vestibulum volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non augue non purus vestibulum varius.</p>
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -122,9 +138,7 @@ Aggiungere la classe `.callout-danger` per indicare un errore o una procedura pe
 
 ## Callout Highlight
 
-Aggiungendo la classe `.callout-highlight` si ottiene una differente versione del Callout, con bordo solo sul lato sinistro.
-
-Per aumentare la dimensione di un paragrafo contenuto nel Callout applicare la classe `.callout-big-text` allo stesso.
+Aggiungendo la classe `.callout-highlight` si ottiene una differente versione del callout, con bordo solo sul lato sinistro.
 
 ### Highlight Base
 
@@ -132,7 +146,6 @@ Per aumentare la dimensione di un paragrafo contenuto nel Callout applicare la c
 {% capture example %}
 <div class="callout callout-highlight">
   <div class="callout-title">Titolo callout</div>
-  <p class="callout-big-text">Maecenas at erat id sem interdum efficitur eu sed nunc. Mauris sit amet erat eget augue molestie malesuada ut sed ex. In sed dignissim elit.</p>
   <p>Maecenas vulputate ante dictum vestibulum volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non augue non purus vestibulum varius. Maecenas ullamcorper <a href="#">tincidunt nulla quis laoreet.</a></p>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -141,9 +154,8 @@ Per aumentare la dimensione di un paragrafo contenuto nel Callout applicare la c
 
 {% comment %}Example name: Testo, in evidenza{% endcomment %}
 {% capture example %}
-<div class="callout callout-primary">
+<div class="callout callout-highlight callout-primary">
   <div class="callout-title">Titolo callout</div>
-  <p class="callout-big-text">Maecenas at erat id sem interdum efficitur eu sed nunc. Mauris sit amet erat eget augue molestie malesuada ut sed ex. In sed dignissim elit.</p>
   <p>Maecenas vulputate ante dictum vestibulum volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non augue non purus vestibulum varius. Maecenas ullamcorper <a href="#">tincidunt nulla quis laoreet.</a></p>
 </div>
 {% endcapture %}{% include example.html content=example %}
