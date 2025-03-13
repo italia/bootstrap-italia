@@ -16,14 +16,13 @@
     },
     "id": "PVTI_lADOAOqloM4AcXblzgMjwYc",
     "navigabile": "PRONTO",
-    "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1168 ",
-    "notes / More": "Le varianti con intestazioni non esistono in UI Kit Italia",
+    "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1168 \u2014 https://github.com/italia/design-ui-kit/issues/182",
     "react Kit": "PRONTO",
     "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-dropdown--documentazione",
     "status": "Todo",
     "status a11y check": "Done",
     "title": "Dropdown",
-    "uI Kit Italia": "PRONTO",
+    "uI Kit Italia": "DA COMPLETARE VARIANTI",
     "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920",
     "visivamente accessibile": "PRONTO"
 }

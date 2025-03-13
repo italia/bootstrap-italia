@@ -11,13 +11,13 @@
 
 <title>Autocompletamento · Bootstrap Italia</title>
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202503101658" rel="stylesheet" />
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202503131014" rel="stylesheet" />
 
 <!-- Documentation extras -->
  
 <link href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" rel="stylesheet" />
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202503101658" rel="stylesheet" />
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202503131014" rel="stylesheet" />
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico" />
@@ -1172,7 +1172,7 @@ meno di 3 caratteri)</p>
 
 <div class="bd-example">
 <div>
-  <form id="justValidate" action="" method="post">
+  <form id="justValidate">
     <div class="row">
       <div class="col-12">
         <div class="form-group">
@@ -1183,7 +1183,7 @@ meno di 3 caratteri)</p>
     </div>
     <div class="row">
       <div class="col-12">
-        <button class="btn btn-primary mt-3" type="submit">Invia form</button>
+        <button class="btn btn-primary mt-3" type="submit" id="submitform">Invia form</button>
       </div>
     </div>
   </form>
@@ -1223,7 +1223,8 @@ meno di 3 caratteri)</p>
           },
         ])
         .onSuccess((event) => {
-          document.forms['justValidate'].submit()
+          // Inserire qua l'azione nel caso di input valido, ad es.
+          // document.forms['justValidate'].submit()
         })
       })
   </script>
@@ -1286,8 +1287,9 @@ meno di 3 caratteri)</p>
 55
 56
 57
+58
 </pre></td><td class="code"><pre><span class="nt">&lt;div&gt;</span>
-  <span class="nt">&lt;form</span> <span class="na">id=</span><span class="s">"justValidate"</span> <span class="na">action=</span><span class="s">""</span> <span class="na">method=</span><span class="s">"post"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;form</span> <span class="na">id=</span><span class="s">"justValidate"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
@@ -1298,7 +1300,7 @@ meno di 3 caratteri)</p>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary mt-3"</span> <span class="na">type=</span><span class="s">"submit"</span><span class="nt">&gt;</span>Invia form<span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary mt-3"</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">id=</span><span class="s">"submitform"</span><span class="nt">&gt;</span>Invia form<span class="nt">&lt;/button&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/form&gt;</span>
@@ -1338,7 +1340,8 @@ meno di 3 caratteri)</p>
           <span class="p">},</span>
         <span class="p">])</span>
         <span class="p">.</span><span class="nx">onSuccess</span><span class="p">((</span><span class="nx">event</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-          <span class="nb">document</span><span class="p">.</span><span class="nx">forms</span><span class="p">[</span><span class="dl">'</span><span class="s1">justValidate</span><span class="dl">'</span><span class="p">].</span><span class="nx">submit</span><span class="p">()</span>
+          <span class="c1">// Inserire qua l'azione nel caso di input valido, ad es.</span>
+          <span class="c1">// document.forms['justValidate'].submit()</span>
         <span class="p">})</span>
       <span class="p">})</span>
   <span class="nt">&lt;/script&gt;</span>
@@ -1500,15 +1503,15 @@ fare riferimento alla <a href="https://github.com/alphagov/accessible-autocomple
     </div>
 
     
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202503101658"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202503131014"></script>
 <script>
   bootstrap.loadFonts('/bootstrap-italia/dist/fonts')
-</script><script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202503101658"></script>
+</script><script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202503131014"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/anchor.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/clipboard.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tsparticles.min.js"></script>
 
-<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202503101658"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202503131014"></script>
 
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tweenjs.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/easeljs.min.js"></script>
@@ -1525,7 +1528,7 @@ fare riferimento alla <a href="https://github.com/alphagov/accessible-autocomple
     { src: '/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png', id: 'cover-7' },
   ]
 </script>
-<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202503101658"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202503131014"></script>
 <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
 
 <script>
