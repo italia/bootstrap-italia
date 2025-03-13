@@ -27,10 +27,10 @@
 
 .card-link {
   &:hover {
-    text-decoration: if($link-hover-decoration ==underline, none, null);
+    text-decoration: if($link-hover-decoration == underline, none, null);
   }
 
-  +.card-link {
+  + .card-link {
     margin-left: var(--#{$prefix}card-spacer-x);
   }
 }
@@ -115,10 +115,9 @@
 //
 
 .card-group {
-
   // The child selector allows nested `.card` within `.card-group`
   // to display properly.
-  >.card {
+  > .card {
     margin-bottom: var(--#{$prefix}card-group-margin);
   }
 
@@ -128,12 +127,12 @@
 
     // The child selector allows nested `.card` within `.card-group`
     // to display properly.
-    >.card {
+    > .card {
       // Flexbugs #4: https://github.com/philipwalton/flexbugs#flexbug-4
       flex: 1 0 0%;
       margin-bottom: 0;
 
-      +.card {
+      + .card {
         margin-left: 0;
         border-left: 0;
       }
@@ -186,7 +185,7 @@
     .card {
       height: auto !important;
 
-      &+.card {
+      & + .card {
         margin-top: 1rem;
       }
     }
@@ -202,7 +201,7 @@
       align-items: stretch;
     }
 
-    &>.card-teaser {
+    & > .card-teaser {
       flex: 0 0 100%;
       margin: $v-gap * 2 0;
       display: flex;
@@ -215,7 +214,7 @@
       &.card-teaser-image {
         padding: 0 !important;
 
-        &>.card-image-wrapper {
+        & > .card-image-wrapper {
           flex: 1;
           display: flex;
           flex-direction: row;
@@ -260,11 +259,11 @@
           padding: 0.5em 1em;
           z-index: 1;
 
-          &>*:first-child {
+          & > *:first-child {
             font-size: 120%;
           }
 
-          &>*:last-child {
+          & > *:last-child {
             font-size: 80%;
           }
         }
@@ -286,7 +285,7 @@
         width: 100%;
         justify-content: space-between;
 
-        &>.card-teaser {
+        & > .card-teaser {
           flex: 0 0 49%;
         }
       }
@@ -295,7 +294,7 @@
         width: 100%;
         justify-content: space-between;
 
-        &>.card-teaser {
+        & > .card-teaser {
           flex: 0 0 32%;
         }
       }
@@ -303,7 +302,7 @@
       &.card-teaser-start {
         justify-content: flex-start !important;
 
-        .card-teaser+.card-teaser {
+        .card-teaser + .card-teaser {
           margin-left: 1.35rem;
         }
       }
@@ -311,7 +310,7 @@
       &.card-teaser-end {
         justify-content: flex-end !important;
 
-        .card-teaser+.card-teaser {
+        .card-teaser + .card-teaser {
           margin-left: 1.35rem;
         }
       }
@@ -324,7 +323,7 @@
       width: 100%;
       justify-content: space-between;
 
-      &>.card-teaser {
+      & > .card-teaser {
         flex: 0 0 24%;
       }
     }
@@ -366,12 +365,12 @@
   @include border-radius(var(--#{$prefix}card-border-radius));
   @include box-shadow(var(--#{$prefix}card-box-shadow));
 
-  >hr {
+  > hr {
     margin-right: 0;
     margin-left: 0;
   }
 
-  >.list-group {
+  > .list-group {
     border-top: inherit;
     border-bottom: inherit;
 
@@ -388,8 +387,8 @@
 
   // Due to specificity of the above selector (`.card > .list-group`), we must
   // use a child selector here to prevent double borders.
-  >.card-header+.list-group,
-  >.list-group+.card-footer {
+  > .card-header + .list-group,
+  > .list-group + .card-footer {
     border-top: 0;
   }
 
@@ -403,7 +402,6 @@
       background-color: $value;
 
       .card-body {
-
         .card-title,
         .card-text {
           color: $white;
@@ -417,7 +415,7 @@
 
     h4 {
       &.card-title {
-        &+.card-text {
+        & + .card-text {
           padding-top: 16px;
         }
       }
@@ -650,7 +648,7 @@
       display: none;
     }
 
-    &>.read-more {
+    & > .read-more {
       &::before {
         content: '';
         height: $v-gap * 3;
@@ -866,10 +864,10 @@
       flex: auto;
 
       .card-text,
-      .card-text>p {
+      .card-text > p {
         margin: 0;
 
-        &+.card-text {
+        & + .card-text {
           margin-top: 16px;
         }
       }
@@ -878,7 +876,7 @@
     .icon {
       min-width: 32px;
 
-      &+.card-body {
+      & + .card-body {
         margin-left: 1em;
       }
     }
@@ -904,7 +902,7 @@
         min-width: $avatar-base-size * 10;
       }
 
-      &+.card-body {
+      & + .card-body {
         flex: 1;
       }
     }
@@ -987,12 +985,11 @@ a.read-more {
 // Contextual variation
 .row {
   [class*='col-'] {
-
     //car variation inside cols
-    >.card-wrapper {
+    > .card-wrapper {
       height: 100%;
 
-      >.card {
+      > .card {
         height: 100%;
       }
     }
@@ -1022,8 +1019,6 @@ a.read-more {
     }
   }
 }
-
-
 
 // XXX
 // Card To be
@@ -1069,7 +1064,6 @@ a.read-more {
         background-color: $value;
 
         .card-body {
-
           .card-title,
           .card-text {
             color: $white;
@@ -1085,7 +1079,7 @@ a.read-more {
       h4,
       h5 {
         &.card-title {
-          &+.card-text {
+          & + .card-text {
             padding-top: 16px;
           }
         }
@@ -1293,7 +1287,7 @@ a.read-more {
         display: none;
       }
 
-      &>.read-more {
+      & > .read-more {
         &::before {
           content: '';
           height: $v-gap * 3;
@@ -1326,7 +1320,6 @@ a.read-more {
       border-radius: $tag-radius;
       border: 1px solid $primary;
     }
-
   }
 
   // read more text
@@ -1347,31 +1340,26 @@ a.read-more {
       height: $card-link-icon-size;
       flex-shrink: 0;
     }
-
   }
 
   // Contextual variation
   .row {
     [class*='col-'] {
-
       //car variation inside cols
-      >.card-wrapper {
+      > .card-wrapper {
         height: 100%;
 
-        >.card {
+        > .card {
           height: 100%;
         }
       }
     }
   }
-
 }
 
 //Tablet horizontal / small desktop
 @include media-breakpoint-up(lg) {
-
   .cart-to-be {
-
     .card-wrapper {
       padding-bottom: 0;
 
@@ -1392,6 +1380,5 @@ a.read-more {
         margin: 0;
       }
     }
-
   }
 }
