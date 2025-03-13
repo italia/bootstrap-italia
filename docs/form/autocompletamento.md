@@ -196,7 +196,7 @@ meno di 3 caratteri)
 {% comment %}Example name: Validazione{% endcomment %}
 {% capture example %}
 <div>
-  <form id="justValidate" action="" method="post">
+  <form id="justValidate">
     <div class="row">
       <div class="col-12">
         <div class="form-group">
@@ -207,7 +207,7 @@ meno di 3 caratteri)
     </div>
     <div class="row">
       <div class="col-12">
-        <button class="btn btn-primary mt-3" type="submit">Invia form</button>
+        <button class="btn btn-primary mt-3" type="submit" id="submitform">Invia form</button>
       </div>
     </div>
   </form>
@@ -247,7 +247,8 @@ meno di 3 caratteri)
           },
         ])
         .onSuccess((event) => {
-          document.forms['justValidate'].submit()
+          // Inserire qua l'azione nel caso di input valido, ad es.
+          // document.forms['justValidate'].submit()
         })
       })
   </script>
