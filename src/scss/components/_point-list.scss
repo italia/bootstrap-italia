@@ -1,4 +1,7 @@
 .point-list-wrapper {
+  @at-root ul#{&} {
+    padding-left: 0;
+  }
   .point-list {
     display: flex;
     flex-direction: row;
@@ -8,7 +11,7 @@
       position: relative;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
       padding: 0.5rem 1rem;
       color: $primary;
@@ -22,21 +25,28 @@
         width: 9px;
         height: 9px;
 
-        top: 50%;
+        top: 2.4rem;
         right: -5px;
         transform: translateY(-5px);
         border-radius: 50%;
         background-color: $primary;
       }
-
-      .point-date {
-        flex: 1;
-        font-size: 2.75rem;
-        line-height: 1.1;
+      &:has(.point-year):has(.point-month) {
+        &:after {
+          top: 3.872rem;
+        }
       }
 
-      .point-month {
-        flex: 1;
+      .point-date {
+        font-size: 2.75rem;
+        line-height: 1.1;
+
+        // keep width in case of icon
+        min-width: 53px;
+      }
+
+      .point-month,
+      .point-year {
         font-size: 1rem;
         text-transform: uppercase;
       }
@@ -67,6 +77,21 @@
       .point-list-aside {
         min-width: 54px;
         padding: 0.3rem 1rem 0.3rem 0;
+
+        &:after {
+          top: 1.3rem;
+        }
+        &:has(.point-year):not(:has(.point-month)),
+        &:has(.point-month):not(:has(.point-year)) {
+          &:after {
+            top: 2rem;
+          }
+        }
+        &:has(.point-year):has(.point-month) {
+          &:after {
+            top: 2.867rem;
+          }
+        }
 
         .point-date {
           flex: 0;
