@@ -22,74 +22,84 @@ L'azione richiesta per l'eliminazione della chip andrà associata al `<button>`.
 <div class="row">
   <div class="col-12 col-md-6">
     <p class="mt-4 mb-2">Solo testo</p>
-    <div class="chip chip-simple">
-      <span class="chip-label">Label</span>
+    <div class="chip">
+      <span class="chip-label">Etichetta</span>
     </div>
     <p class="mt-4 mb-2">Testo e chiusura</p>
-    <div class="chip alert">
-      <span class="chip-label">Label</span>
-      <button  data-bs-dismiss='alert'>
-        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
-        <span class="visually-hidden">Elimina label</span>
+    <div class="chip">
+      <span class="chip-label">Etichetta</span>
+      <button  data-bs-dismiss='chip'>
+        <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
+        <span class="visually-hidden">Elimina etichetta</span>
       </button>
     </div>
-    <p class="mt-4 mb-2">Icona, testo e chiusura</p>
-    <div class="chip alert">
+    <p class="mt-4 mb-2">Icona, etichetta e pulsante</p>
+    <div class="chip">
       <svg class="icon icon-xs"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-github"></use></svg>
-      <span class="chip-label">Label</span>
-      <button data-bs-dismiss='alert'>
-        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
-        <span class="visually-hidden">Elimina label</span>
+      <span class="chip-label">Etichetta</span>
+      <button data-bs-dismiss='chip'>
+        <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
+        <span class="visually-hidden">Elimina etichetta</span>
       </button>
     </div>
-    <p class="mt-4 mb-2">Avatar, testo e chiusura</p>
-    <div class="chip alert">
+    <p class="mt-4 mb-2">Avatar, etichetta e chiusura</p>
+    <div class="chip">
       <div class="avatar size-xs">
         <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Mario Rossi">
       </div>
-      <span class="chip-label">Label</span>
-      <button data-bs-dismiss='alert'>
-        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
-        <span class="visually-hidden">Elimina label</span>
+      <span class="chip-label">Etichetta</span>
+      <button data-bs-dismiss='chip'>
+        <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
+        <span class="visually-hidden">Elimina etichetta</span>
       </button>
     </div>
   </div>
   <div class="col-12 col-md-6">
     <p class="mt-4 mb-2">Solo testo grande</p>
-    <div class="chip chip-simple chip-lg">
-      <span class="chip-label">Label</span>
+    <div class="chip chip-lg">
+      <span class="chip-label">Etichetta</span>
     </div>
     <p class="mt-4 mb-2">Testo e chiusura grande</p>
     <div class="chip chip-lg alert">
-      <span class="chip-label">Label</span>
+      <span class="chip-label">Etichetta</span>
       <button data-bs-dismiss='alert'>
-        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
-        <span class="visually-hidden">Elimina label</span>
+        <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
+        <span class="visually-hidden">Elimina etichetta</span>
       </button>
     </div>
     <p class="mt-4 mb-2">Icona, testo e chiusura grande</p>
     <div class="chip chip-lg alert">
-      <svg class="icon icon-xs"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-github"></use></svg>
-      <span class="chip-label">Label</span>
+      <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-github"></use></svg>
+      <span class="chip-label">Etichetta</span>
       <button data-bs-dismiss='alert'>
-        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
-        <span class="visually-hidden">Elimina label</span>
+        <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
+        <span class="visually-hidden">Elimina etichetta</span>
       </button>
     </div>
     <p class="mt-4 mb-2">Avatar, testo e chiusura grande</p>
     <div class="chip chip-lg alert">
-      <div class="avatar size-xs">
+      <div class="avatar size-sm">
         <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Mario Rossi">
       </div>
-      <span class="chip-label">Label</span>
+      <span class="chip-label">Etichetta</span>
       <button data-bs-dismiss='alert'>
-        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
-        <span class="visually-hidden">Elimina label</span>
+        <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
+        <span class="visually-hidden">Elimina etichetta</span>
       </button>
     </div>
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
+
+### Variante con link
+
+{% comment %}Example name: Standard e grandi{% endcomment %}
+{% capture example %}
+  <a href="#" class="chip">
+    <span class="chip-label">Etichetta con link</span>
+  </a>
+{% endcapture %}{% include example.html content=example %}
+
 
 ### Varianti di colore
 
@@ -100,7 +110,7 @@ Gli stili definiti da Bootstrap Italia utilizzano un naming consistente con i te
 
 {% for color in site.data.theme-colors %}
 
-<div class="chip chip-{{ color.name }} chip-lg chip-simple">
+<div class="chip chip-{{ color.name }}">
   <span class="chip-label">{{ color.name | capitalize }}</span>
 </div>{% endfor %}
 {% endcapture %}{% include example.html content=example %}
@@ -112,7 +122,7 @@ Gli stili definiti da Bootstrap Italia utilizzano un naming consistente con i te
 
 {% for color in site.data.theme-colors %}
 
-<a class="chip chip-{{ color.name }} chip-lg chip-simple" href="#">
+<a class="chip chip-{{ color.name }}" href="#">
   <span class="chip-label">{{ color.name | capitalize }}</span>
 </a>
 {% endfor %}
@@ -124,35 +134,35 @@ Aggiungendo la classe `.chip-disabled` al contenitore e l'attributo `disabled` a
 
 {% comment %}Example name: Disabilitata{% endcomment %}
 {% capture example %}
-<div class="chip chip-simple chip-lg chip-disabled">
-  <span class="chip-label">Label disabilitata</span>
+<div class="chip chip-disabled">
+  <span class="chip-label">Etichetta</span>
 </div>
 
-<div class="chip chip-lg chip-disabled">
-  <label class="chip-label" for="chip-01">Label disabilitata</label>
-  <button id="chip-01" disabled>
-    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
-    <span class="visually-hidden">Elimina label</span>
+<div class="chip chip-disabled">
+  <span class="chip-label">Etichetta</span>
+  <button  data-bs-dismiss='chip'>
+    <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
+    <span class="visually-hidden">Elimina etichetta</span>
   </button>
 </div>
 
-<div class="chip chip-lg chip-disabled">
+<div class="chip chip-disabled">
   <svg class="icon icon-xs"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-github"></use></svg>
-  <label class="chip-label" for="chip-02">Label disabilitata</label>
-  <button id="chip-02" disabled>
-    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
-    <span class="visually-hidden">Elimina label</span>
+  <span class="chip-label">Etichetta</span>
+  <button data-bs-dismiss='chip'>
+    <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
+    <span class="visually-hidden">Elimina etichetta</span>
   </button>
 </div>
 
-<div class="chip chip-lg chip-disabled">
+<div class="chip chip-disabled">
   <div class="avatar size-xs">
     <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Mario Rossi">
   </div>
-  <label class="chip-label" for="chip-03">Label disabilitata</label>
-  <button id="chip-03" disabled>
-    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
-    <span class="visually-hidden">Elimina label</span>
+  <span class="chip-label">Etichetta</span>
+  <button data-bs-dismiss='chip'>
+    <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
+    <span class="visually-hidden">Elimina etichetta</span>
   </button>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -163,13 +173,13 @@ I gruppi di chip vengono visualizzati in linea.
 
 {% comment %}Example name: Gruppi di Chip{% endcomment %}
 {% capture example %}
-<div class="chip chip-simple">
+<div class="chip">
   <span class="chip-label">Label</span>
 </div>
 <div class="chip">
   <span class="chip-label">Label</span>
   <button>
-    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
+    <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
     <span class="visually-hidden">Elimina label</span>
   </button>
 </div>
@@ -177,7 +187,7 @@ I gruppi di chip vengono visualizzati in linea.
   <svg class="icon icon-xs"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-github"></use></svg>
   <span class="chip-label">Label</span>
   <button>
-    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
+    <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
     <span class="visually-hidden">Elimina label</span>
   </button>
 </div>
@@ -187,20 +197,20 @@ I gruppi di chip vengono visualizzati in linea.
   </div>
   <span class="chip-label">Label</span>
   <button>
-    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
+    <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
     <span class="visually-hidden">Elimina label</span>
   </button>
 </div>
 
 <hr/>
 
-<div class="chip chip-lg chip-simple">
+<div class="chip chip-lg">
   <span class="chip-label">Label</span>
 </div>
 <div class="chip chip-lg">
   <span class="chip-label">Label</span>
   <button>
-    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
+    <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
     <span class="visually-hidden">Elimina label</span>
   </button>
 </div>
@@ -208,7 +218,7 @@ I gruppi di chip vengono visualizzati in linea.
   <svg class="icon icon-xs"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-github"></use></svg>
   <span class="chip-label">Label</span>
   <button>
-    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
+    <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
     <span class="visually-hidden">Elimina label</span>
   </button>
 </div>
@@ -218,7 +228,7 @@ I gruppi di chip vengono visualizzati in linea.
   </div>
   <span class="chip-label">Label</span>
   <button>
-    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
+    <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
     <span class="visually-hidden">Elimina label</span>
   </button>
 </div>
@@ -228,63 +238,44 @@ I gruppi di chip vengono visualizzati in linea.
 
 {% comment %}Example name: Gruppi di Chip con link{% endcomment %}
 {% capture example %}
-<a href="#" class="chip chip-simple chip-primary">
+<a href="#" class="chip chip-primary">
   <span class="chip-label">Label</span>
 </a>
 <a href="#" class="chip chip-primary">
   <span class="chip-label">Label</span>
-  <button>
-    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
-    <span class="visually-hidden">Elimina label</span>
-  </button>
 </a>
 <a href="#" class="chip chip-primary">
-  <svg class="icon icon-xs"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-github"></use></svg>
   <span class="chip-label">Label</span>
-  <button>
-    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
-    <span class="visually-hidden">Elimina label</span>
-  </button>
 </a>
 <a href="#" class="chip chip-primary">
-  <div class="avatar size-xs">
-    <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Mario Rossi">
-  </div>
   <span class="chip-label">Label</span>
-  <button>
-    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
-    <span class="visually-hidden">Elimina label</span>
-  </button>
 </a>
 
 <hr/>
 
-<a href="#" class="chip chip-lg chip-simple chip-primary">
-  <span class="chip-label">Label</span>
-</a>
 <a href="#" class="chip chip-lg chip-primary">
-  <span class="chip-label">Label</span>
+  <span class="chip-label">Etichetta</span>
   <button>
-    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
-    <span class="visually-hidden">Elimina label</span>
+    <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
+    <span class="visually-hidden">Etichetta</span>
   </button>
 </a>
 <a href="#" class="chip chip-lg chip-primary">
   <svg class="icon icon-xs"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-github"></use></svg>
-  <span class="chip-label">Label</span>
+  <span class="chip-label">Etichetta</span>
   <button>
-    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
-    <span class="visually-hidden">Elimina label</span>
+    <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
+    <span class="visually-hidden">Elimina etichetta</span>
   </button>
 </a>
 <a href="#" class="chip chip-lg chip-primary">
   <div class="avatar size-xs">
     <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Mario Rossi">
   </div>
-  <span class="chip-label">Label</span>
+  <span class="chip-label">Etichetta</span>
   <button>
-    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
-    <span class="visually-hidden">Elimina label</span>
+    <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
+    <span class="visually-hidden">Elimina etichetta</span>
   </button>
 </a>
 {% endcapture %}{% include example.html content=example %}
