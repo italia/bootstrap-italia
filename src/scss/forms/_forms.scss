@@ -3,20 +3,20 @@ label {
 }
 fieldset {
   legend {
+    z-index: 1;
+    display: block;
+    width: auto;
+    max-width: 100%;
+    margin-bottom: 0;
+    padding: 0 $input-spacing-x;
+    float: none;
     background-color: transparent;
+    color: $input-label-color;
+    font-size: $small-font-size;
     font-weight: 700;
     line-height: calc(#{$input-height} - 1px);
     transition: 0.2s ease-out;
     cursor: text;
-    display: block;
-    max-width: 100%;
-    width: auto;
-    padding: 0 $input-spacing-x;
-    z-index: 1;
-    font-size: $small-font-size;
-    color: $input-label-color;
-    margin-bottom: 0;
-    float: none;
   }
 }
 .form-text {
@@ -24,8 +24,8 @@ fieldset {
 }
 .form-group {
   position: relative;
-  margin-bottom: $form-group-margin-bottom;
   margin-top: $form-group-margin-top;
+  margin-bottom: $form-group-margin-bottom;
 
   input,
   optgroup,
@@ -34,24 +34,24 @@ fieldset {
   }
 
   label {
-    background-color: transparent;
     position: absolute;
+    top: 0;
+    z-index: 5;
+    display: block;
+    width: auto;
+    max-width: 100%;
+    padding: 0 $input-spacing-x;
+    background-color: transparent;
+    color: $input-color-placeholder;
+    font-size: 1rem;
     line-height: calc(#{$input-height} - 1px);
     transition: 0.2s ease-out;
-    top: 0;
-    font-size: 1rem;
     cursor: text;
-    color: $input-color-placeholder;
-    display: block;
-    max-width: 100%;
-    width: auto;
-    padding: 0 $input-spacing-x;
-    z-index: 5;
     &.active {
-      transform: translateY(-85%);
-      font-weight: 600;
-      font-size: $small-font-size;
       color: $input-label-color;
+      font-size: $small-font-size;
+      font-weight: 600;
+      transform: translateY(-85%);
     }
     &.input-symbol-label {
       &:not(.active) {
@@ -74,8 +74,8 @@ fieldset {
   }
 
   input[type='time'] ~ label {
-    transform: translateY(-75%);
     font-size: $small-font-size;
+    transform: translateY(-75%);
   }
 }
 
@@ -94,9 +94,9 @@ input[type='text'],
 input[type='time'],
 input[type='url'],
 textarea {
+  padding: $input-spacing-y $input-spacing-x;
   border: none;
   border-bottom: 1px solid $input-border;
-  padding: $input-spacing-y $input-spacing-x;
   outline: 0;
   box-shadow: none;
   transition: none;
@@ -113,17 +113,17 @@ input[type='time'] {
 }
 
 textarea {
-  border: 1px solid $input-border;
   height: auto;
+  border: 1px solid $input-border;
   font-size: 1rem;
 }
 
 .form-control {
-  background-position: center right !important;
-  background-repeat: no-repeat !important;
-  background-size: 45px 45% !important;
-  border-radius: 0 !important;
   min-height: 2.5rem;
+  border-radius: 0 !important;
+  background-repeat: no-repeat !important;
+  background-position: center right !important;
+  background-size: 45px 45% !important;
   &.form-control-lg {
     border-radius: 0;
   }
@@ -150,9 +150,9 @@ textarea {
   }
 
   &.warning {
-    background-size: 25px 45% !important;
     border-color: $warning;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ff9900' viewBox='0 0 192 512'%3E%3Cpath d='M176 432c0 44.112-35.888 80-80 80s-80-35.888-80-80 35.888-80 80-80 80 35.888 80 80zM25.26 25.199l13.6 272C39.499 309.972 50.041 320 62.83 320h66.34c12.789 0 23.331-10.028 23.97-22.801l13.6-272C167.425 11.49 156.496 0 142.77 0H49.23C35.504 0 24.575 11.49 25.26 25.199z'/%3E%3C/svg%3E");
+    background-size: 25px 45% !important;
   }
 
   &.is-valid ~ .warning-feedback {
@@ -178,8 +178,8 @@ textarea {
   display: none;
   width: 100%;
   margin-top: 0.25rem;
-  font-size: 0.75rem;
   color: $warning;
+  font-size: 0.75rem;
 }
 
 .valid-feedback,
@@ -191,22 +191,22 @@ textarea {
 // Input group
 .input-group {
   .input-group-text {
+    min-width: 40px;
+    min-height: 2.5rem;
+    margin-right: 0;
     padding: $input-spacing-y $input-spacing-x;
     border-bottom: 1px solid $input-border;
     border-radius: 0;
-    min-height: 2.5rem;
-    min-width: 40px;
-    margin-right: 0;
 
     .icon {
       fill: $icon-secondary;
     }
 
     & ~ label {
+      max-width: calc(100% - 2.25rem);
       &:not(.active) {
         left: 2.25rem;
       }
-      max-width: calc(100% - 2.25rem);
     }
 
     .btn {
@@ -217,11 +217,11 @@ textarea {
   .input-group-append {
     margin-left: 0;
     .btn {
+      height: 100%;
       padding-top: 0;
       padding-bottom: 0;
       border-bottom: 1px solid $input-border;
       border-radius: 0 4px 4px 0;
-      height: 100%;
     }
   }
 }
@@ -236,9 +236,9 @@ textarea {
 }
 
 .form-check {
-  padding-left: 0;
   position: relative;
   margin-bottom: 0.5rem;
+  padding-left: 0;
 
   // add vertical spacing for consequential elements
   & + & {
@@ -248,19 +248,19 @@ textarea {
   [type='checkbox'],
   [type='radio'] {
     position: absolute;
-    opacity: 0;
-    left: 9px;
     top: 9px;
-    margin-left: 0;
+    left: 9px;
     margin-top: 0;
+    margin-left: 0;
+    opacity: 0;
 
     + label {
       position: relative;
-      padding-left: 2rem;
-      cursor: pointer;
       display: inline-block;
+      padding-left: 2rem;
       font-size: 1rem;
       font-weight: $font-weight-semibold;
+      cursor: pointer;
       user-select: none;
       @include media-breakpoint-up(sm) {
         font-size: 1.125rem;
@@ -280,32 +280,32 @@ textarea {
   [type='checkbox'] {
     + label::after,
     + label::before {
-      content: '';
-      left: 0;
       position: absolute;
-      transition: 0.2s ease-out;
+      left: 0;
       z-index: 1;
-      border-style: solid;
+      content: '';
       border-width: 2px;
+      border-style: solid;
+      transition: 0.2s ease-out;
     }
 
     + label::before {
       top: 0;
       width: 17px;
       height: 17px;
+      margin: 2px 4px;
       border: 1px solid #e6e9f2;
       border-radius: 1px;
-      margin: 2px 4px;
       transform: rotateZ(37deg);
       transform-origin: 100% 100%;
     }
 
     + label::after {
-      border-radius: 4px;
-      height: 20px;
-      width: 20px;
-      margin: 4px;
       top: 0;
+      width: 20px;
+      height: 20px;
+      margin: 4px;
+      border-radius: 4px;
     }
 
     &:checked + label::before {
@@ -313,38 +313,38 @@ textarea {
       left: 1px;
       width: 8px;
       height: 13px;
-      border-style: solid;
       border-width: 2px;
+      border-style: solid;
       border-color: transparent #fff #fff transparent;
-      transform: rotate(40deg);
-      backface-visibility: hidden;
-      transform-origin: 100% 100%;
       opacity: 0.8;
+      transform: rotate(40deg);
+      transform-origin: 100% 100%;
+      backface-visibility: hidden;
     }
 
     &:checked + label::after {
+      z-index: 0;
       border-color: $primary;
       background-color: $primary;
-      z-index: 0;
     }
 
     &:not(:checked) + label::after {
-      background-color: transparent;
-      border-color: $neutral-1-a7;
       z-index: 0;
+      border-color: $neutral-1-a7;
+      background-color: transparent;
     }
 
     &:not(:checked) + label::before {
+      top: 10px;
+      left: 6px;
       width: 0;
       height: 0;
       border-color: transparent;
-      left: 6px;
-      top: 10px;
     }
 
     &:disabled + label {
-      cursor: not-allowed;
       opacity: 1;
+      cursor: not-allowed;
     }
 
     &:disabled:not(:checked) + label::after {
@@ -353,8 +353,8 @@ textarea {
     }
 
     &:disabled:checked + label::after {
-      background-color: #e6e9f2;
       border-color: #e6e9f2;
+      background-color: #e6e9f2;
     }
   }
 
@@ -364,17 +364,17 @@ textarea {
 
       &::after,
       &::before {
-        content: '';
         position: absolute;
-        left: 0;
         top: 0;
-        margin: 5px;
+        left: 0;
+        z-index: 0;
+        content: '';
         width: 20px;
         height: 20px;
-        z-index: 0;
-        border-radius: 50%;
-        border-style: solid;
+        margin: 5px;
         border-width: 2px;
+        border-style: solid;
+        border-radius: 50%;
         transition: 0.2s ease-out;
       }
     }
@@ -393,9 +393,9 @@ textarea {
 
     &:checked + label {
       &::after {
+        z-index: 0;
         border-color: $primary;
         background-color: $primary;
-        z-index: 0;
         transform: scale(0.64);
       }
 
@@ -431,15 +431,15 @@ textarea {
 
   // gruppi
   &.form-check-group {
-    padding: 0 0 1rem 0;
     margin-bottom: 1rem;
+    padding: 0 0 1rem 0;
     box-shadow: inset 0 -1px 0 0 rgba(1, 1, 1, 0.1);
 
     [type='checkbox'] + label,
     [type='radio'] + label {
       position: static;
-      padding-left: 0;
       padding-right: 3.25rem;
+      padding-left: 0;
 
       &::after,
       &::before {
@@ -458,8 +458,8 @@ textarea {
 
     .form-text {
       display: block;
-      padding-right: 3.25rem;
       margin-bottom: 0.5rem;
+      padding-right: 3.25rem;
     }
 
     input.semi-checked:not(:checked) + label::before {
@@ -472,19 +472,19 @@ textarea {
     left: 4px;
     width: 12px;
     height: 2px;
-    border-style: none;
     border-width: 0;
+    border-style: none;
     border-color: transparent;
-    transform: none;
-    backface-visibility: hidden;
     opacity: 1;
     background: $white;
+    transform: none;
+    backface-visibility: hidden;
   }
 
   input.semi-checked:not(:checked) + label::after {
+    z-index: 0;
     border-color: $primary-a5; // TODO: Not found
     background-color: $primary-a5; // TODO: Not found
-    z-index: 0;
   }
 }
 
