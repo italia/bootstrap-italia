@@ -798,7 +798,7 @@ $btn-transition:
   box-shadow 0.15s ease-in-out !default;
 
 $btn-link-color: var(--#{$prefix}color-link) !default;
-$btn-link-hover-color: var(--#{$prefix}link-hover-color) !default;
+$btn-link-hover-color: var(--#{$prefix}color-link-hover) !default;
 $btn-link-disabled-color: $gray-600 !default;
 
 // Forms
@@ -1268,23 +1268,23 @@ $modal-backdrop-opacity: 0.8 !default;
 $modal-max-width: 32rem !default;
 $modal-dialog-margin: 0.5rem !default;
 $modal-dialog-margin-y-sm-up: 1.5rem !default;
-$modal-inner-padding: 1.5rem !default;
+// $modal-inner-padding: 1.5rem !default;
 
-$modal-header-border-color: var(--#{$prefix}border-color) !default;
-$modal-header-border-width: 0 !default;
-$modal-header-padding-y: $modal-inner-padding !default;
-$modal-header-padding-x: $modal-inner-padding !default;
-$modal-header-padding: 1.5rem !default;
+// $modal-header-border-color: var(--#{$prefix}border-color) !default;
+// $modal-header-border-width: 0 !default;
+// $modal-header-padding-y: $modal-inner-padding !default;
+// $modal-header-padding-x: $modal-inner-padding !default;
+// $modal-header-padding: 1.5rem !default;
 $modal-show-transform: none !default;
 $modal-fade-transform: translate(0, -50px) !default;
 $modal-transition: transform 0.3s ease-out !default;
 $modal-scale-transform: scale(1.02) !default;
 $modal-title-line-height: $line-height-base !default;
 
-$modal-footer-bg: null !default;
-$modal-footer-border-color: $modal-header-border-color !default;
+// $modal-footer-bg: null !default;
+// $modal-footer-border-color: $modal-header-border-color !default;
 $modal-footer-margin-between: 0.5rem !default;
-$modal-footer-border-width: 0 !default;
+// $modal-footer-border-width: 0 !default;
 
 $modal-backdrop-bg: $black !default;
 
@@ -1342,12 +1342,12 @@ $pagination-border-width: $border-width !default;
 $pagination-margin-start: ($pagination-border-width * -1) !default;
 $pagination-border-color: $gray-300 !default;
 
-$pagination-focus-color: var(--#{$prefix}link-hover-color) !default;
+$pagination-focus-color: var(--#{$prefix}color-link-hover) !default;
 $pagination-focus-bg: $gray-200 !default;
 $pagination-focus-box-shadow: $input-btn-focus-box-shadow !default;
 $pagination-focus-outline: 0 !default;
 
-$pagination-hover-color: var(--#{$prefix}link-hover-color) !default;
+$pagination-hover-color: var(--#{$prefix}color-link-hover) !default;
 $pagination-hover-bg: $gray-200 !default;
 $pagination-hover-border-color: $gray-300 !default;
 
@@ -1560,7 +1560,7 @@ $nav-link-padding-x: 1rem !default;
 $nav-link-font-size: null !default;
 $nav-link-font-weight: null !default;
 $nav-link-color: var(--#{$prefix}color-link) !default;
-$nav-link-hover-color: var(--#{$prefix}link-hover-color) !default;
+$nav-link-hover-color: var(--#{$prefix}color-link-hover) !default;
 $nav-link-transition:
   color 0.15s ease-in-out,
   background-color 0.15s ease-in-out,
@@ -2077,8 +2077,8 @@ $autocomplete-box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.05) !default;
 
 // Offcanvas
 
-$offcanvas-padding-y: $modal-inner-padding !default;
-$offcanvas-padding-x: $modal-inner-padding !default;
+$offcanvas-padding-y: 1.5rem !default;
+$offcanvas-padding-x: 1.5rem !default;
 $offcanvas-horizontal-width: 400px !default;
 $offcanvas-vertical-height: 30vh !default;
 $offcanvas-transition-duration: 0.3s !default;

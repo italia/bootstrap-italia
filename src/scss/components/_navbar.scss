@@ -31,7 +31,7 @@
   --#{$prefix}navbar-close-button-font-size: 0.75rem;
   --#{$prefix}navbar-close-button-icon-size: 2rem;
   --#{$prefix}navbar-links-margin-top: 102px;
-  --#{$prefix}navbar-link-color: var(--#{$prefix}link-primary); // nav link color default - mobile
+  --#{$prefix}navbar-link-color: var(--#{$prefix}color-link); // nav link color default - mobile
   --#{$prefix}navbar-link-font-size: var(--#{$prefix}label-font-size);
   --#{$prefix}navbar-link-line-height: var(--#{$prefix}label-line-height);
   --#{$prefix}navbar-link-font-weight: var(--#{$prefix}font-weight-solid);
@@ -52,7 +52,7 @@
   .theme-light &,
   .theme-light-desk & {
     --#{$prefix}navbar-background: var(--#{$prefix}color-background-inverse);
-    --#{$prefix}navbar-link-color: var(--#{$prefix}link-primary); // nav link color theme light
+    --#{$prefix}navbar-link-color: var(--#{$prefix}color-link); // nav link color theme light
     --#{$prefix}navbar-toggle-button-icon-color: var(--#{$prefix}icon-primary);
     --#{$prefix}navbar-link-active-border-color: var(--#{$prefix}color-border-primary);
   }
@@ -174,11 +174,11 @@
 
       ul li a {
         &.list-item.active {
-          color: var(--#{$prefix}link-primary);
+          color: var(--#{$prefix}color-link);
           text-decoration: underline;
 
           span {
-            color: var(--#{$prefix}link-primary);
+            color: var(--#{$prefix}color-link);
           }
         }
 

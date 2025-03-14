@@ -13,7 +13,7 @@
   --#{$prefix}header-center-text-color: var(--#{$prefix}color-text-inverse);
   --#{$prefix}header-center-font-size: var(--#{$prefix}label-font-size-s);
   --#{$prefix}header-nav-background: var(--#{$prefix}color-background-primary);
-  --#{$prefix}header-nav-text-color: var(--#{$prefix}link-primary);
+  --#{$prefix}header-nav-text-color: var(--#{$prefix}color-link);
   --#{$prefix}header-nav-secondary-font-size: var(--#{$prefix}label-font-size);
   --#{$prefix}header-spacing-inset: var(--#{$prefix}spacing-xxs);
   --#{$prefix}header-search-button-color: var(--#{$prefix}icon-inverse);
@@ -46,17 +46,17 @@
 .it-header-navbar-wrapper.theme-light,
 .it-header-navbar-wrapper.theme-light-desk {
   --#{$prefix}header-center-background: var(--#{$prefix}color-background-inverse);
-  --#{$prefix}header-center-text-color: var(--#{$prefix}link-primary);
+  --#{$prefix}header-center-text-color: var(--#{$prefix}color-link);
   --#{$prefix}header-brand-icon-color: var(--#{$prefix}icon-primary);
   --#{$prefix}header-brand-color: var(--#{$prefix}color-text-primary);
   --#{$prefix}header-nav-background: var(--#{$prefix}color-background-inverse);
-  --#{$prefix}header-nav-text-color: var(--#{$prefix}link-primary);
+  --#{$prefix}header-nav-text-color: var(--#{$prefix}color-link);
   --#{$prefix}header-search-button-background: var(--#{$prefix}color-background-primary);
   --#{$prefix}header-search-icon-color: var(--#{$prefix}icon-primary);
   --#{$prefix}header-social-color: var(--#{$prefix}icon-primary);
   --#{$prefix}header-slim-background: var(--#{$prefix}color-background-inverse);
   --#{$prefix}header-slim-border-color: hsla(210, 100%, 40%, 0.2);
-  --#{$prefix}header-slim-text-color: var(--#{$prefix}link-primary);
+  --#{$prefix}header-slim-text-color: var(--#{$prefix}color-link);
   @include media-breakpoint-up(md) {
     --#{$prefix}header-search-icon-color: var(--#{$prefix}icon-inverse);
   }

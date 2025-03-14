@@ -207,7 +207,7 @@ La Navscroll può mostrare una barra di avanzamento dello scorrimento del conten
           <div class="progress-bar it-navscroll-progressbar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
         </div>
         <ul class="link-list">
-          <li class="nav-item">
+          <li class="nav-item active">
             <a class="nav-link active" href="#">
               <span>1. Introduzione </span>
             </a>
@@ -254,16 +254,11 @@ La Navscroll può mostrare una barra di avanzamento dello scorrimento del conten
 
 ### Variante scura
 
-Il nav ha due versioni, light e dark.
+Per attivare la variante scura è necessario aggiungere le seguenti classi all'elemento `<nav class="navbar">`:
 
-Lo stile di default è con sfondo bianco e testo di colore primario, su desktop e mobile.
+**`.theme-dark-mobile`**: sfondo scuro, testi e link bianco (modifica unicamente la versione mobile del navscroll).
 
-**Temi Navscroll**  
-Per cambiare il tema è sufficiente aggiungere le seguenti classi al tag `<nav class="navbar">`:
-
-**`.theme-dark-mobile`**: sfondo scuro, testi e link bianco (modifica unicamente la versione mobile del Navscroll).
-
-**`.theme-dark-desktop`**: sfondo scuro, testi e link di colore bianco (modifica unicamente la versione desktop del Navscroll).
+**`.theme-dark-desktop`**: sfondo scuro, testi e link di colore bianco (modifica unicamente la versione desktop del navscroll).
 
 {% comment %}Example name: Variante scura{% endcomment %}
 {% capture example %}
