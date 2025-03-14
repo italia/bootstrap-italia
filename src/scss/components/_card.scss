@@ -30,7 +30,7 @@
     text-decoration: if($link-hover-decoration ==underline, none, null);
   }
 
-  +.card-link {
+  + .card-link {
     margin-left: var(--#{$prefix}card-spacer-x);
   }
 }
@@ -186,7 +186,7 @@
     .card {
       height: auto !important;
 
-      &+.card {
+      & + .card {
         margin-top: 1rem;
       }
     }
@@ -1068,7 +1068,6 @@
         background-color: $value;
 
         .card-body {
-
           .card-title,
           .card-text {
             color: $white;
@@ -1086,9 +1085,7 @@
     }
 
     .card-body {
-
       .card-title {
-
         &.card-title-icon {
           display: flex;
           flex-direction: row;
@@ -1300,7 +1297,7 @@
         display: none;
       }
 
-      &>.read-more {
+      & > .read-more {
         &::before {
           content: '';
           height: $v-gap * 3;
@@ -1320,7 +1317,7 @@
         right: 0;
         height: 4px;
         top: 0;
-        background: #fff; // XXX default white? 
+        background: #fff; // XXX default white?
       }
 
       &.rounded {
@@ -1342,13 +1339,11 @@
       }
 
       &.card-border-top-test {
-
         // xxx
         &::after {
           background: red; // xxx
         }
       }
-
     }
   }
 
@@ -1375,12 +1370,11 @@
   // Contextual variation
   .row {
     [class*='col-'] {
-
       //car variation inside cols
-      >.card-wrapper {
+      > .card-wrapper {
         height: 100%;
 
-        >.card {
+        > .card {
           height: 100%;
         }
       }
