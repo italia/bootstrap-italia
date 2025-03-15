@@ -17,8 +17,8 @@
 }
 
 .card-subtitle {
-  margin-top: calc(-0.5 * var(--#{$prefix}card-title-spacer-y)); // stylelint-disable-line function-disallowed-list
-  margin-bottom: 0;
+  // margin-top: calc(-0.5 * var(--#{$prefix}card-title-spacer-y)); // stylelint-disable-line function-disallowed-list
+  margin-bottom: var(--#{$prefix}card-title-spacer-y);
 }
 
 .card-text:last-child {
@@ -27,10 +27,10 @@
 
 .card-link {
   &:hover {
-    text-decoration: if($link-hover-decoration == underline, none, null);
+    text-decoration: if($link-hover-decoration ==underline, none, null);
   }
 
-  + .card-link {
+  +.card-link {
     margin-left: var(--#{$prefix}card-spacer-x);
   }
 }
@@ -186,7 +186,7 @@
     .card {
       height: auto !important;
 
-      & + .card {
+      &+.card {
         margin-top: 1rem;
       }
     }
@@ -1031,9 +1031,9 @@
 .card-to-be {
   .card {
     // scss-docs-start card-css-vars
-    --#{$prefix}card-spacer-y: #{$card-spacer-y};
+    --#{$prefix}card-spacer-y: 8px; // #{$card-spacer-y};
     --#{$prefix}card-spacer-x: 16px; // #{$card-spacer-x}; // XXX
-    // --#{$prefix}card-title-spacer-y: #{$card-title-spacer-y};
+    --#{$prefix}card-title-spacer-y: 8px; // #{$card-title-spacer-y};
     --#{$prefix}card-border-width: #{$card-border-width};
     --#{$prefix}card-border-color: #{$card-border-color};
     --#{$prefix}card-border-radius: #{$card-border-radius};
@@ -1068,6 +1068,7 @@
         background-color: $value;
 
         .card-body {
+
           .card-title,
           .card-text {
             color: $white;
@@ -1107,6 +1108,7 @@
       footer {
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
         justify-content: space-between;
         align-items: last baseline;
 
@@ -1123,6 +1125,7 @@
           list-style-type: none;
           padding-left: 0;
           line-height: 1.5;
+          margin-bottom: 0;
         }
 
         a.chip {
@@ -1297,7 +1300,7 @@
         display: none;
       }
 
-      & > .read-more {
+      &>.read-more {
         &::before {
           content: '';
           height: $v-gap * 3;
@@ -1339,6 +1342,7 @@
       }
 
       &.card-border-top-test {
+
         // xxx
         &::after {
           background: red; // xxx
@@ -1370,11 +1374,12 @@
   // Contextual variation
   .row {
     [class*='col-'] {
+
       //car variation inside cols
-      > .card-wrapper {
+      >.card-wrapper {
         height: 100%;
 
-        > .card {
+        >.card {
           height: 100%;
         }
       }
