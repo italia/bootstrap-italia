@@ -27,10 +27,10 @@
 
 .card-link {
   &:hover {
-    text-decoration: if($link-hover-decoration ==underline, none, null);
+    text-decoration: if($link-hover-decoration == underline, none, null);
   }
 
-  +.card-link {
+  + .card-link {
     margin-left: var(--#{$prefix}card-spacer-x);
   }
 }
@@ -186,7 +186,7 @@
     .card {
       height: auto !important;
 
-      &+.card {
+      & + .card {
         margin-top: 1rem;
       }
     }
@@ -1068,7 +1068,6 @@
         background-color: $value;
 
         .card-body {
-
           .card-title,
           .card-text {
             color: $white;
@@ -1206,7 +1205,7 @@
       display: none; // XXX <<< rimuovere al merge?
     }
 
-    >.list-group {
+    > .list-group {
       border-top: inherit;
       border-bottom: inherit;
 
@@ -1230,8 +1229,8 @@
 
     // Due to specificity of the above selector (`.card > .list-group`), we must
     // use a child selector here to prevent double borders.
-    >.card-header+.list-group,
-    >.list-group+.card-footer {
+    > .card-header + .list-group,
+    > .list-group + .card-footer {
       border-top: 0;
     }
 
@@ -1353,7 +1352,7 @@
         display: none;
       }
 
-      &>.read-more {
+      & > .read-more {
         &::before {
           content: '';
           height: $v-gap * 3;
@@ -1395,7 +1394,6 @@
       }
 
       &.card-border-top-test {
-
         // xxx
         &::after {
           background: red; // xxx
@@ -1427,12 +1425,11 @@
   // Contextual variation
   .row {
     [class*='col-'] {
-
       //car variation inside cols
-      >.card-wrapper {
+      > .card-wrapper {
         height: 100%;
 
-        >.card {
+        > .card {
           height: 100%;
         }
       }
