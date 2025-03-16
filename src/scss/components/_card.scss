@@ -27,10 +27,10 @@
 
 .card-link {
   &:hover {
-    text-decoration: if($link-hover-decoration == underline, none, null);
+    text-decoration: if($link-hover-decoration ==underline, none, null);
   }
 
-  + .card-link {
+  +.card-link {
     margin-left: var(--#{$prefix}card-spacer-x);
   }
 }
@@ -186,7 +186,7 @@
     .card {
       height: auto !important;
 
-      & + .card {
+      &+.card {
         margin-top: 1rem;
       }
     }
@@ -1068,6 +1068,7 @@
         background-color: $value;
 
         .card-body {
+
           .card-title,
           .card-text {
             color: $white;
@@ -1086,11 +1087,14 @@
 
     .card-header {
       .card-header-tabs {
+        overflow-x: auto;
+        flex-wrap: nowrap;
         margin-right: calc(-1 * var(--bs-card-cap-padding-x));
         margin-left: calc(-1 * var(--bs-card-cap-padding-x));
 
         &::before {
           width: var(--#{$prefix}card-spacer-x);
+          min-width: var(--#{$prefix}card-spacer-x);
           border-bottom: 1px solid #c5c7c9;
           content: '';
           flex-grow: 0;
@@ -1118,51 +1122,14 @@
         color: $card-p-color;
       }
 
-      footer {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: last baseline;
-        margin-top: calc(2 * var(--#{$prefix}card-spacer-y));
-
-        .card-category {
-          display: inline-block;
-          color: $secondary;
-          text-transform: uppercase;
-          font-size: $card-category-size;
-          letter-spacing: $card-category-l-spacing;
-          margin-bottom: 8px;
-        }
-
-        ul.card-chips {
-          list-style-type: none;
-          padding-left: 0;
-          line-height: 1.5;
-          margin-bottom: 0;
-        }
-
-        a.chip {
-          color: hsl(210, 33%, 28%); // xxx colore sottolineatura chip se visibile
-          text-decoration: none;
-        }
-
-        .card-date {
-          color: $secondary;
-          font-size: $card-category-size;
-          margin-bottom: 8px;
-        }
+      .card-signature {
+        font-family: $font-family-monospace;
+        color: $card-p-color;
+        // font-weight: 700;
+        font-size: $card-signature-size;
+        // margin-bottom: 16px;
+        // display: block;
       }
-
-      // .card-signature {
-      //   font-style: italic;
-      //   font-family: $font-family-serif;
-      //   color: $card-p-color;
-      //   font-weight: 700;
-      //   font-size: $card-signature-size;
-      //   margin-bottom: 0;
-      //   display: block;
-      // }
 
       // .category-top {
       //   font-size: $card-category-size;
@@ -1193,13 +1160,53 @@
       // }
     }
 
+    footer {
+      margin-top: calc(2 * var(--#{$prefix}card-spacer-y));
+
+      &.card-related {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: last baseline;
+      }
+
+      .card-category {
+        display: inline-block;
+        color: $secondary;
+        text-transform: uppercase;
+        font-size: $card-category-size;
+        letter-spacing: $card-category-l-spacing;
+        margin-bottom: 8px;
+      }
+
+      ul.card-chips {
+        list-style-type: none;
+        padding-left: 0;
+        line-height: 1.5;
+        margin-bottom: 0;
+      }
+
+      a.chip {
+        color: hsl(210, 33%, 28%); // xxx colore sottolineatura chip se visibile
+        text-decoration: none;
+        margin: 4px 8px 8px 0; // xxx perché non funziona il margine automatco delle chip?
+      }
+
+      .card-date {
+        color: $secondary;
+        font-size: $card-category-size;
+        margin-bottom: 8px;
+      }
+    }
+
     // line
     &:after {
       content: '';
       display: none; // XXX <<< rimuovere al merge?
     }
 
-    > .list-group {
+    >.list-group {
       border-top: inherit;
       border-bottom: inherit;
 
@@ -1223,8 +1230,8 @@
 
     // Due to specificity of the above selector (`.card > .list-group`), we must
     // use a child selector here to prevent double borders.
-    > .card-header + .list-group,
-    > .list-group + .card-footer {
+    >.card-header+.list-group,
+    >.list-group+.card-footer {
       border-top: 0;
     }
 
@@ -1304,9 +1311,11 @@
       }
 
       &.rounded .img-responsive-wrapper {
-        // XXX SOLO IL PRIMO FIGLIO... NON PER FORZA IMMAGINE...
-        border-top-left-radius: $border-radius;
-        border-top-right-radius: $border-radius;
+        &:is(:first-child) {
+          // XXX SOLO IL PRIMO FIGLIO... NON PER FORZA IMMAGINE...
+          border-top-left-radius: $border-radius;
+          border-top-right-radius: $border-radius;
+        }
       }
     }
 
@@ -1344,7 +1353,7 @@
         display: none;
       }
 
-      & > .read-more {
+      &>.read-more {
         &::before {
           content: '';
           height: $v-gap * 3;
@@ -1386,6 +1395,7 @@
       }
 
       &.card-border-top-test {
+
         // xxx
         &::after {
           background: red; // xxx
@@ -1417,11 +1427,12 @@
   // Contextual variation
   .row {
     [class*='col-'] {
+
       //car variation inside cols
-      > .card-wrapper {
+      >.card-wrapper {
         height: 100%;
 
-        > .card {
+        >.card {
           height: 100%;
         }
       }

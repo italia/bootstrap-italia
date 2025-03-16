@@ -75,11 +75,14 @@ Appunti to do extra: pseudo element trick for full focus on main link/click/touc
       </ul>
       </div>
       <div class="card-body">
-        <h3 class="card-title card-title-icon h3 no_toc">
-          <a href="#">Titolo contenuto può essere anche lungo così o andare oltre</a>
-          <div><svg class="icon icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg></div>
-        </h3>
-        <h4 class="card-subtitle h4 no_toc">Sottotitolo o periodo</h4>
+        <header>
+          <h3 class="card-title card-title-icon h3 no_toc">
+            <a href="#">Titolo contenuto può essere anche lungo così o andare oltre</a>
+            <div><svg class="icon icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg></div>
+          </h3>
+          <h4 class="card-subtitle h4 no_toc">Sottotitolo o periodo</h4>
+          <address class="card-signature">di Maria Verde</address>
+        </header>
         <p class="card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
         <p class="card-text">Se ci fosse un secondo paragrafo <a href="#" class="card-link">Card body link</a> questa è la resa visiva.</p>
         <a href="#" class="card-link">Card body link</a>
@@ -94,25 +97,28 @@ Appunti to do extra: pseudo element trick for full focus on main link/click/touc
           <a href="#" class="card-link">Card link</a>
           <a href="#" class="card-link">Another link</a>
           <a href="#" class="btn btn-primary">Go somewhere</a>
-        <footer>
-          <div class="card-related">
+        <footer class="card-related">
+          <div class="card-taxonomy">
             <a href="#" class="card-category card-link"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
             <ul class="card-chips chips-list" aria-label="Argomenti correlati: ">
               <li class="list-item"><a class="chip chip-simple chip-sm" href="#">
-                <span class="chip-label">Sviluppo interfaccia</span>
+                <span class="visually-hidden">Argomento: </span><span class="chip-label">Sviluppo interfaccia</span>
               </a></li>
               <li class="list-item"><a class="chip chip-simple chip-sm" href="#">
-                <span class="chip-label">Open source</span>
+                <span class="visually-hidden">Argomento: </span><span class="chip-label">Open source</span>
+              </a></li>
+              <li class="list-item"><a class="chip chip-simple chip-sm" href="#">
+                <span class="visually-hidden">Argomento: </span><span class="chip-label">Progettazione interfaccia</span>
               </a></li>
             </ul>
           </div>
           <time class="card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
         </footer>
       </div>
-      <div class="card-footer">
+      <aside class="card-footer" aria-label="Azioni correlate:">
         <a href="#" class="btn btn-outline-primary">Azione secondaria</a>
         <a href="#" class="card-link">Link secondario</a>
-      </div>
+      </aside>
     </article>
     <!--end card-->
   </div>
@@ -127,25 +133,37 @@ Appunti to do extra: pseudo element trick for full focus on main link/click/touc
         </div>
       </div>
       <div class="card-body">
-        <h3 class="card-title h3 no_toc">
-          <a href="#">Titolo h3</a>
-        </h3>
-        <h4 class="card-subtitle h4 no_toc">Sottotitolo o periodo h4</h4>
+        <header>
+          <h3 class="card-title h3 no_toc">
+            <a href="#">Titolo h3</a>
+          </h3>
+          <h4 class="card-subtitle h4 no_toc">Sottotitolo o periodo h4</h4>
+        </header>
         <p class="card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
-        <footer>
-          <div class="card-related">
-            <ul class="card-chips chips-list" aria-label="Argomenti correlati: ">
-              <li class="list-item"><a class="chip chip-simple chip-sm" href="#">
-                <span class="chip-label">Art direction</span>
-              </a></li>
-            </ul>
+        <footer class="card-related">
+          <div class="card-taxonomy">
+              <ul class="card-chips chips-list" aria-label="Argomenti correlati: ">
+                <li class="list-item"><a class="chip chip-simple chip-sm" href="#">
+                  <span class="visually-hidden">Argomento: </span><span class="chip-label">Art direction</span>
+                </a></li>
+              </ul>
           </div>
           <time class="card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
         </footer>
       </div>
-      <div class="card-footer">
+      <footer class="card-related card-footer">
+        <div class="card-taxonomy">
+            <ul class="card-chips chips-list" aria-label="Argomenti correlati: ">
+              <li class="list-item"><a class="chip chip-simple chip-sm" href="#">
+                <span class="visually-hidden">Argomento: </span><span class="chip-label">Art direction</span>
+              </a></li>
+            </ul>
+        </div>
+        <time class="card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
+      </footer>
+      <aside class="card-footer" aria-label="Link correlati:">
         <a href="#" class="card-link">Link secondario</a>
-      </div>
+      </aside>
     </article>
     <!--end card-->
   </div>
@@ -160,11 +178,14 @@ Appunti to do extra: pseudo element trick for full focus on main link/click/touc
         </div>
       </div>
       <div class="card-body">
-        <h3 class="card-title h3 no_toc">
-          <a href="#">Titolo h3</a>
-        </h3>
+        <header>
+          <h3 class="card-title h3 no_toc">
+            <a href="#">Titolo h3</a>
+          </h3>
+          <address class="card-signature">di Maria Verde</address>
+        </header>
         <p class="card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
-        <footer>
+        <footer class="card-related">
           <time class="card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
         </footer>
       </div>
@@ -173,28 +194,26 @@ Appunti to do extra: pseudo element trick for full focus on main link/click/touc
     <!--start card-->
     <article class="card rounded shadow-sm border">
       <div class="card-body">
-        <h4 class="card-title card-title-icon h5 no_toc">
-          <a href="#">Titolo un po' lungo ad esempio di un bando a cui poter partecipare h4 visto h5</a>
-          <div><svg class="icon icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg></div>
-        </h4>
-        <h5 class="card-subtitle h6 no_toc">Sottotitolo o periodo h5 visto h6</h5>
-        <footer>
-          <div class="card-related">
-            <ul class="card-chips chips-list" aria-label="Stato della lavorazione: ">
-              <li class="list-item"><a class="chip chip-simple chip-sm chip-success" href="#">
-                <span class="chip-label">Aperto</span>
-              </a></li>
-            </ul>
-          </div>
+        <header>
+          <h4 class="card-title card-title-icon h5 no_toc">
+            <a href="#">Titolo un po' lungo ad esempio di un bando a cui poter partecipare h4 visto h5</a>
+            <div><svg class="icon icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg></div>
+          </h4>
+          <h5 class="card-subtitle h6 no_toc">Sottotitolo o periodo h5 visto h6</h5>
+        </header>
+        <footer class="card-related">
+          <a class="chip chip-simple chip-sm chip-success" href="#">
+           <span class="visually-hidden">Stato della lavorazione: </span><span class="chip-label">Aperto</span>
+          </a>
           <span class="card-date text-warning"><strong>Scadenza: </strong><time class="card-date text-warning" datetime="10/12/{{ 'now' | date: "%Y" }}">31 gennaio, {{ 'now' | date: "%Y" }}</time></span>
         </footer>
       </div>
-      <div class="card-footer">
+      <aside class="card-footer" aria-label="Azioni correlate:">
         <a href="#" class="btn btn-outline-primary btn-xs btn-icon Zd-md-block">
           <span>Etichetta pulsante</span>
           <svg class="icon icon-primary ms-2"><use href="/dist/svg/sprites.svg#it-arrow-right"></use></svg>
         </a>
-      </div>
+      </aside>
     </article>
     <!--end card-->
   </div>
