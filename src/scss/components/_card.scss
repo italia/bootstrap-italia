@@ -30,7 +30,7 @@
     text-decoration: if($link-hover-decoration == underline, none, null);
   }
 
-  +.card-link {
+  + .card-link {
     margin-left: var(--#{$prefix}card-spacer-x);
   }
 }
@@ -186,7 +186,7 @@
     .card {
       height: auto !important;
 
-      &+.card {
+      & + .card {
         margin-top: 1rem;
       }
     }
@@ -1068,7 +1068,6 @@
         background-color: $value;
 
         .card-body {
-
           .card-title,
           .card-text {
             color: $white;
@@ -1087,13 +1086,13 @@
 
     .card-header {
       .card-header-tabs {
-        margin-right: calc(-1*var(--bs-card-cap-padding-x));
-        margin-left: calc(-1*var(--bs-card-cap-padding-x));
+        margin-right: calc(-1 * var(--bs-card-cap-padding-x));
+        margin-left: calc(-1 * var(--bs-card-cap-padding-x));
 
         &::before {
           width: var(--#{$prefix}card-spacer-x);
           border-bottom: 1px solid #c5c7c9;
-          content: "";
+          content: '';
           flex-grow: 0;
         }
       }
@@ -1200,7 +1199,7 @@
       display: none; // XXX <<< rimuovere al merge?
     }
 
-    >.list-group {
+    > .list-group {
       border-top: inherit;
       border-bottom: inherit;
 
@@ -1224,8 +1223,8 @@
 
     // Due to specificity of the above selector (`.card > .list-group`), we must
     // use a child selector here to prevent double borders.
-    >.card-header+.list-group,
-    >.list-group+.card-footer {
+    > .card-header + .list-group,
+    > .list-group + .card-footer {
       border-top: 0;
     }
 
@@ -1304,7 +1303,8 @@
         }
       }
 
-      &.rounded .img-responsive-wrapper { // XXX SOLO IL PRIMO FIGLIO... NON PER FORZA IMMAGINE... 
+      &.rounded .img-responsive-wrapper {
+        // XXX SOLO IL PRIMO FIGLIO... NON PER FORZA IMMAGINE...
         border-top-left-radius: $border-radius;
         border-top-right-radius: $border-radius;
       }
@@ -1344,7 +1344,7 @@
         display: none;
       }
 
-      &>.read-more {
+      & > .read-more {
         &::before {
           content: '';
           height: $v-gap * 3;
@@ -1386,7 +1386,6 @@
       }
 
       &.card-border-top-test {
-
         // xxx
         &::after {
           background: red; // xxx
@@ -1418,12 +1417,11 @@
   // Contextual variation
   .row {
     [class*='col-'] {
-
       //car variation inside cols
-      >.card-wrapper {
+      > .card-wrapper {
         height: 100%;
 
-        >.card {
+        > .card {
           height: 100%;
         }
       }
