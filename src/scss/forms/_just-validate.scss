@@ -8,10 +8,10 @@
   }
 }
 
-.input-group-text:has(~ .focus--mouse:not(.btn)),
-.focus--mouse:not(.btn) ~ .input-group-text,
-button:has(~ .focus--mouse:not(.btn)),
-.focus--mouse:not(.btn) + button {
+.input-group-text:has(~ [data-focus-mouse='true']:not(.btn)),
+[data-focus-mouse='true']:not(.btn) ~ .input-group-text,
+button:has(~ [data-focus-mouse='true']:not(.btn)),
+[data-focus-mouse='true']:not(.btn) + button {
   border-color: inherit !important;
   box-shadow: none !important;
   outline: none !important;

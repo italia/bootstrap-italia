@@ -1,11 +1,11 @@
 {
-    "amichevole con lettori di schermo": "IN REVIEW",
+    "amichevole con lettori di schermo": "PRONTO",
     "angular Kit": "DA RIVEDERE A11Y",
     "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/carousel",
     "assignees": [
         "Fupete"
     ],
-    "bootstrap Italia": "DA RIVEDERE A11Y",
+    "bootstrap Italia": "PRONTO",
     "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/componenti/carousel/",
     "comprensibile": "PRONTO",
     "content": {
@@ -15,9 +15,8 @@
         "type": "DraftIssue"
     },
     "id": "PVTI_lADOAOqloM4AcXblzgMjwWs",
-    "navigabile": "IN REVIEW",
-    "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1161",
-    "notes / More": "Da fare in React Kit: c'\u00e8 una precedente issue chiusa da Stale qui: https://github.com/italia/design-react-kit/issues/395",
+    "navigabile": "PRONTO",
+    "notes / Issues": "https://github.com/italia/design-react-kit/issues/1148",
     "react Kit": "DA FARE",
     "status": "Todo",
     "status a11y check": "Done",

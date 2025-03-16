@@ -1,10 +1,10 @@
 {
     "amichevole con lettori di schermo": "PRONTO",
-    "angular Kit": "NON PRESENTE",
+    "angular Kit": "DA FARE",
     "assignees": [
         "Fupete"
     ],
-    "bootstrap Italia": "DA RIVEDERE A11Y",
+    "bootstrap Italia": "PRONTO",
     "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/menu-di-navigazione/footer/",
     "comprensibile": "PRONTO",
     "content": {
@@ -15,14 +15,14 @@
     },
     "id": "PVTI_lADOAOqloM4AcXblzgMjwZc",
     "navigabile": "PRONTO",
-    "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1172",
-    "notes / More": "Manca in Angular Kit \u2014 Alcune incongruenze di contenuti e spazi da verificare: in UI Kit Italia ci sono cose in pi\u00f9 (es: newsletter, presente solo in React Kit ma non in BSI). \u2014 In UI Kit Italia c'\u00e8 anche una variante \"Alternate\" non presente in sviluppo. ",
-    "react Kit": "DA RIVEDERE A11Y",
+    "notes / Issues": "https://github.com/italia/design-angular-kit/issues/435",
+    "notes / More": "Alcune incongruenze di contenuti e spazi da verificare: in UI Kit Italia ci sono cose in pi\u00f9 (es: newsletter, presente solo in React Kit ma non in BSI). \u2014 In UI Kit Italia c'\u00e8 anche una variante \"Alternate\" non presente in sviluppo. ",
+    "react Kit": "PRONTO",
     "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-menu-di-navigazione-footer--documentazione",
     "status": "Todo",
     "status a11y check": "Done",
     "title": "Footer",
     "uI Kit Italia": "PRONTO",
     "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920",
-    "visivamente accessibile": "DA RIVEDERE"
+    "visivamente accessibile": "PRONTO"
 }

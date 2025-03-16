@@ -8,6 +8,8 @@
     - title: Modificare Componenti
     - title: Migrazione dalla versione 1
 
+- title: Breaking change
+
 - title: Organizzare gli spazi
   pages:
     - title: Introduzione
@@ -41,6 +43,7 @@
     - title: Introduzione
     - title: BottomNav
     - title: Breadcrumbs
+    - title: Forward
     - title: Header # TODO Rewiew mobile version
     - title: Megamenu # TODO Review mobile version
     - title: Footer
@@ -69,7 +72,6 @@
     - title: Cookiebar
     - title: Dimmer
     - title: Dropdown
-    - title: Forward
     - title: Hero
     - title: Modale
     - title: Notifiche
@@ -83,7 +85,6 @@
     - title: Sticky
     - title: Tab
     - title: Timeline
-    # - title: Toasts # TODO To be merged with our "Notifiche"?
     - title: Tooltip
     - title: Video Player
 

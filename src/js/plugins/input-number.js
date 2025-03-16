@@ -33,11 +33,8 @@ const SELECTOR_BTN = 'button[class^="input-number-"]'
 class InputNumber extends BaseComponent {
   constructor(element) {
     super(element)
-
     this._wrapperElement = this._element.closest(SELECTOR_WRAPPER)
-
     this._label = new InputLabel(element)
-
     this._init()
     this._bindEvents()
   }
@@ -47,8 +44,6 @@ class InputNumber extends BaseComponent {
   static get NAME() {
     return NAME
   }
-
-  // Public
 
   // Private
   _init() {
@@ -83,7 +78,10 @@ class InputNumber extends BaseComponent {
   }
 
   _incrDecr(isDecr) {
-    var inputVal = 0
+    let inputVal = 0
+    if (this._element.disabled || this._element.readonly) {
+      return
+    }
     if (this._element.value !== '') inputVal = parseFloat(this._element.value)
 
     if (!isNaN(inputVal)) {
@@ -137,7 +135,7 @@ const createInput = (element) => {
 
 if (typeof window !== 'undefined' && typeof document !== 'undefined') {
   document.addEventListener('DOMContentLoaded', function () {
-    var frmel = document.querySelectorAll(SELECTOR_INPUT + ', label')
+    let frmel = document.querySelectorAll(SELECTOR_INPUT + ', label')
     frmel.forEach(function (item) {
       const target = InputLabel.getInputFromLabel(item) || item
       createInput(target)

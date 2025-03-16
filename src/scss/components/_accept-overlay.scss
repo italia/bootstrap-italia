@@ -79,7 +79,8 @@
     background-color: transparent !important;
     margin-top: $v-gap * 4;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
     flex-wrap: wrap;
     button {
       width: 100%;

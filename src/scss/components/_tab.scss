@@ -65,7 +65,7 @@
       border-right: 2px solid transparent;
       white-space: normal;
       position: relative;
-      &:focus:not(.focus--mouse) {
+      &:focus:not([data-focus-mouse='true']) {
         box-shadow: inset 0 0px 0 2px $focus-outline-color !important;
       }
       &:hover {
@@ -117,7 +117,7 @@
       border-bottom-color: transparent;
     }
 
-    &:focus:not(.focus--mouse) {
+    &:focus:not([data-focus-mouse='true']) {
       box-shadow: inset 0 1px 0 2px $focus-outline-color !important;
     }
 
@@ -210,7 +210,8 @@
     border-bottom: none;
 
     //grey fullwidth bottom border for ul
-    .nav-item-filler {
+    &::after {
+      content: '';
       flex-grow: 1;
       border-bottom: 1px solid $color-border-subtle;
     }
@@ -237,11 +238,6 @@
       }
     }
 
-    //grey fullwidth bottom border for ul
-    .nav-item-filler {
-      width: 2em;
-    }
-
     //add button
     .nav-tab-add {
       margin: -0.2em 1em 0;
@@ -249,7 +245,7 @@
       width: 1.444rem;
       height: 1.444rem;
       top: 0.8rem;
-      border: 1px solid $color-border-subtle;
+      border: 1px solid $primary;
       border-radius: 50%;
       right: 0;
       //plus sign
@@ -330,7 +326,7 @@
     .nav-link {
       border-bottom: none;
       border-top: 2px solid transparent;
-      &:focus:not(.focus--mouse) {
+      &:focus:not([data-focus-mouse='true']) {
         box-shadow: inset 0 -1px 0 2px $focus-outline-color !important;
       }
     }
@@ -360,7 +356,7 @@
         border-bottom: none;
         border-right: none;
         border-left: 2px solid transparent;
-        &:focus:not(.focus--mouse) {
+        &:focus:not([data-focus-mouse='true']) {
           box-shadow: inset 0px 0px 0 2px $focus-outline-color !important;
         }
         &:hover {

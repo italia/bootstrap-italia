@@ -703,7 +703,6 @@ Aggiungere la classe `.nav-tabs-cards` al tag `ul` per ottenere un design tipo c
   <li class="nav-item"><a class="nav-link" id="card-simple2-tab" data-bs-toggle="tab" href="#card-simpletab2" role="tab" aria-controls="card-simpletab2" aria-selected="false">Tab 2</a></li>
   <li class="nav-item"><a class="nav-link" id="card-simple3-tab" data-bs-toggle="tab" href="#card-simpletab3" role="tab" aria-controls="card-simpletab3" aria-selected="false">Tab 3</a></li>
   <li class="nav-item"><a class="nav-link disabled" id="card-simple4-tab" data-bs-toggle="tab" href="#card-simpletab4" role="tab" aria-controls="card-simpletab4" aria-selected="false" aria-disabled="true"  tabindex="-1">Tab 4 Disabilitato</a></li>
-  <li class="nav-item-filler"></li>
 </ul>
 <div class="tab-content" id="card-simpleContent">
   <div class="tab-pane p-4 fade show active" id="card-simpletab1" role="tabpanel" aria-labelledby="card-simple1-tab">Contenuto 1</div>
@@ -737,7 +736,6 @@ Aggiungere le classi `.nav-tabs-editable` e `.nav-tabs-cards` al tag `ul` per ot
         <a class="nav-link disabled" id="card-simple-btn4-tab" data-bs-toggle="tab" href="#card-simple-btntab4" role="tab" aria-controls="card-simple-btntab4" aria-selected="false" aria-disabled="true"  tabindex="-1">Tab 4 Disabilitato</a>
         <a class="nav-link-close disabled" href="#"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg><span class="visually-hidden"> Chiudi tab 4</span></a>
       </li>
-      <li class="nav-item-filler"></li>
       <li class="nav-item">
         <a class="nav-tab-add"><span class="visually-hidden"> Aggiungi un tab</span></a>
       </li>
@@ -766,9 +764,11 @@ Per fare in modo che i tab appaiano con un'animazione "a comparsa" (fade in), è
 
 Si possono trovare dettagli aggiuntivi sulla gestione attraverso JavaScript di metodi ed eventi sui tab alla [pagina corrispondente](https://getbootstrap.com/docs/{{ site.bootstrap_minor }}/components/navs-tabs/#methods) sul sito di Bootstrap.
 
-## Implementazione
+## Attivazione tramite codice
 
-### Tramite data attributes
+{% include callout-bundle-methods.md %}
+
+#### Tramite data attributes
 
 Puoi attivare una navigazione a tab senza scrivere JavaScript, semplicemente utilizzando la proprietà `data-bs-toggle="tab"` nel link all'interno di liste di tipo `.nav-tabs`:
 
@@ -798,28 +798,43 @@ Puoi attivare una navigazione a tab senza scrivere JavaScript, semplicemente uti
 </div>
 ```
 
-### Tramite JavaScript
+#### Tramite JavaScript
 
-Alternativamente, è possibile attivare i tab utilizzando JavaScript:
+Abilita le tab tramite JavaScript (ogni tab deve essere attivata individualmente):
 
 ```js
-var triggerTabList = [].slice.call(document.querySelectorAll('#myTab a'))
-triggerTabList.forEach(function (triggerEl) {
-  var tabTrigger = new bootstrap.Tab(triggerEl)
+import { Tab } from 'bootstrap-italia';
 
-  triggerEl.addEventListener('click', function (event) {
+const triggerTabList = [].slice.call(document.querySelectorAll('#myTab a'))
+triggerTabList.forEach(function (triggerEl) {
+  const tabTrigger = new Tab(triggerEl)
+
+  triggerEl.addEventListener('click', (event) => {
     event.preventDefault()
     tabTrigger.show()
   })
 })
 ```
 
-È possibile attivare tab individualmente in diversi modi:
+#### Metodi
 
-```js
-var triggerEl = document.querySelector('#myTab a[href="#profile"]')
-bootstrap.Tab.getInstance(triggerEl).show() // Select tab by name
+<div class="table-responsive">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th style="width: 150px;">Metodo</th>
+        <th>Descrizione</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% include standard-methods.html class="Tab" %}
+    </tbody>
+  </table>
+</div>
 
-var triggerFirstTabEl = document.querySelector('#myTab li:first-child a')
-bootstrap.Tab.getInstance(triggerFirstTabEl).show() // Select first tab
-```
+## Breaking change
+
+{% capture callout %}
+Sono stati rimossi gli elementi delle liste con classe `nav-item-filler` per 
+tutte le tab di tipo `Card`.
+{% endcapture %}{% include callout-breaking.html content=callout version="2.13.0" type="danger" %}

@@ -16,14 +16,14 @@
     },
     "id": "PVTI_lADOAOqloM4AcXblzgMjwaI",
     "navigabile": "PRONTO",
-    "notes / Issues": "https://github.com/italia/design-react-kit/issues/1099 \u2014 https://github.com/italia/bootstrap-italia/issues/978",
+    "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/978 ",
     "notes / More": "In UI Kit Italia c'\u00e8 anche la versione \"loggata\" dello slim header, non mi pare sia nei framework di sviluppo. ",
-    "react Kit": "DA RIVEDERE",
+    "react Kit": "PRONTO",
     "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-menu-di-navigazione-header--documentazione",
     "status": "Todo",
     "status a11y check": "Done",
     "title": "Header",
     "uI Kit Italia": "PRONTO",
     "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920",
-    "visivamente accessibile": "IN REVIEW"
+    "visivamente accessibile": "PRONTO"
 }

@@ -24,13 +24,6 @@ In caso di utilizzo delle icone si raccomanda di descriverne il senso ai lettori
 
 {% endcapture %}{% include callout.html content=callout type="warning" %}
 
-{% capture callout %}
-Breaking feature dalla versione **2.11.0**
-
-Utilizzare i tag `<figure>` e `<figcaption>` per liste di immagini con didascalia.
-
-{% endcapture %}{% include callout.html content=callout type="danger" %}
-
 {% comment %}Example name: Varianti didascalia{% endcomment %}
 {% capture example %}
 <div class="row">
@@ -78,6 +71,14 @@ Utilizzare i tag `<figure>` e `<figcaption>` per liste di immagini con didascali
 
 La griglia utilizzata è una variante delle classi di Bootstrap, con margini modificati.  
 Il contenitore della griglia è `.it-grid-list-wrapper`. Al posto della classe `.row` di Bootstrap viene utilizzata la classe custom `.grid-row`.
+
+{% capture callout %}
+
+### Attenzione
+
+In questo esempio, non essendo presente alcuna caption, utilizziamo i `<div>` al posto di `<figure>`.
+
+{% endcapture %}{% include callout.html content=callout type="alert" %}
 
 {% comment %}Example name: Griglia standard{% endcomment %}
 {% capture example %}
@@ -332,11 +333,11 @@ Per utilizzare l'immagine orizzontale, occorre aggiungere la classe `.it-grid-it
 
 ### Masonry
 
-Masonry è incluso in Bootstrap Italia.
+Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, 
+verrà attivato l'effetto Masonry sulla griglia responsiva.
 
-Per un elenco di tutti i possibili parametri di configurazione consultare la [documentazione completa](https://github.com/Spope/MiniMasonry.js).
-
-Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'effetto Masonry sulla griglia responsiva.
+Gli attributi utilizzati nella sezione successiva possono essere passati tramite
+`data-bs-{nome-attributo}` (ad esempio `data-bs-gutter="100"`).
 
 {% comment %}Example name: Griglia Masonry{% endcomment %}
 {% capture example %}
@@ -502,38 +503,112 @@ Aggiungendo `data-bs-toggle="masonry"` al contenitore `row`, verrà attivato l'e
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-#### Abilitare Masonry via JavaScript
+## Attivazione tramite codice
+
+{% include callout-bundle-methods.md %}
 
 È possibile abilitare Masonry manualmente utilizzando questo script:
 
 ```js
-var elementList = [].slice.call(document.querySelectorAll('.it-masonry'))
-var masonryList = elementList.map(function (element) {
-  return new bootstrap.Masonry(element)
-})
+import { Masonry } from 'bootstrap-italia';
+
+const masonryElement = document.querySelector('#my-masonry');
+const masonry = new Masonry(masonryElement, options);
 ```
 
-#### Elenco dei metodi disponibili
+#### Opzioni
 
-<table class="table table-bordered table-striped">
-  <thead>
-    <tr>
-      <th style="width: 150px;">Metodo</th>
-      <th>Descrizione</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>dispose</td>
-      <td>Rimuove le funzionalità Masonry</td>
-    </tr>
-    <tr>
-      <td>getInstance</td>
-      <td>Metodo statico che restituisce l'istanza Masonry associata ad un elemento del DOM. Esempio: <code>bootstrap.Masonry.getInstance(element)</code></td>
-    </tr>
-    <tr>
-      <td>getOrCreateInstance</td>
-      <td>Metodo statico che restituisce un'istanza Masonry associata ad un elemento del DOM o ne crea una nuova nel caso non fosse stata inizializzata. Esempio: <code>bootstrap.Masonry.getOrCreateInstance(element)</code></td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-responsive">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Tipo</th>
+        <th>Predefinito</th>
+        <th>Descrizione</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>baseWidth</td>
+        <td>number</td>
+        <td>255</td>
+        <td>Larghezza target degli elementi.</td>
+      </tr>
+      <tr>
+        <td>gutter</td>
+        <td>number</td>
+        <td>10</td>
+        <td>Larghezza/altezza dello spazio tra gli elementi. Usa gutterX/gutterY per impostare valori diversi.</td>
+      </tr>
+      <tr>
+        <td>gutterX</td>
+        <td>number</td>
+        <td>null</td>
+        <td>Larghezza dello spazio tra gli elementi. Serve gutterY per funzionare, fallback su "gutter".</td>
+      </tr>
+      <tr>
+        <td>gutterY</td>
+        <td>number</td>
+        <td>null</td>
+        <td>Altezza dello spazio tra gli elementi. Serve gutterX per funzionare, fallback su "gutter".</td>
+      </tr>
+      <tr>
+        <td>minify</td>
+        <td>boolean</td>
+        <td>true</td>
+        <td>Se MiniMasonry posiziona gli elementi nella colonna più corta o mantiene l'ordine esatto dell'elenco.</td>
+      </tr>
+      <tr>
+        <td>surroundingGutter</td>
+        <td>boolean</td>
+        <td>true</td>
+        <td>Imposta lo spazio a sinistra sulla prima colonna e lo spazio a destra sull'ultima.</td>
+      </tr>
+      <tr>
+        <td>ultimateGutter</td>
+        <td>number</td>
+        <td>5</td>
+        <td>Gutter applicato quando può essere visualizzata solo 1 colonna.</td>
+      </tr>
+      <tr>
+        <td>direction</td>
+        <td>'ltr' o 'rtl'</td>
+        <td>'ltr'</td>
+        <td>Direzione di ordinamento, "ltr" o "rtl".</td>
+      </tr>
+      <tr>
+        <td>wedge</td>
+        <td>boolean</td>
+        <td>false</td>
+        <td>"false" inizierà l'ordinamento dal centro, "true" inizierà da sinistra o da destra in base al parametro "direction".</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+#### Metodi
+
+<div class="table-responsive">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th style="width: 150px;">Metodo</th>
+        <th>Descrizione</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% include standard-methods.html class="Masonry" %}
+      <tr>
+        <td>layout</td>
+        <td>Se l'elenco è cambiato, attiva un relayout del componente.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+## Breaking change
+
+{% capture callout %}
+Utilizzare i tag `<figure>` e `<figcaption>` per liste di immagini con didascalia.
+{% endcapture %}{% include callout-breaking.html content=callout version="2.11.0" type="danger" %}

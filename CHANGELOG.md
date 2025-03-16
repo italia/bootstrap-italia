@@ -1,3 +1,108 @@
+# [2.14.0](https://github.com/italia/bootstrap-italia/compare/v2.13.4...v2.14.0) (2025-03-10)
+
+
+### Bug Fixes
+
+* accessible autocomplete ssr ([c3c8db3](https://github.com/italia/bootstrap-italia/commit/c3c8db3ddda128243d1447be632ead92bf4984dc))
+* button default color ([352984e](https://github.com/italia/bootstrap-italia/commit/352984e5985ba3f6e07e16f7c30af6a4e282dc33))
+* form-check radio and checkbox items line height ([abfc48c](https://github.com/italia/bootstrap-italia/commit/abfc48cadd74a39868c3c7ce6ae9db5e013fb7e4))
+* input number in firefox ([f171fb8](https://github.com/italia/bootstrap-italia/commit/f171fb829254b21f128cde249bd72632a7fbb876))
+* use data to set focus instead of class ([7350bf4](https://github.com/italia/bootstrap-italia/commit/7350bf486ec6ef9bc8f1f075b411827511b7f12e))
+
+
+### Features
+
+* new autocomplete component ([5295cb4](https://github.com/italia/bootstrap-italia/commit/5295cb4a63d584102119e8dddab6489d2cc77d47))
+* new docs with breaking changes ([980a0d8](https://github.com/italia/bootstrap-italia/commit/980a0d85f5ef1cfb99df2ba2c1e25e11b6cc5d53))
+* new icons ([46907e4](https://github.com/italia/bootstrap-italia/commit/46907e4c62aad7f13131ba31b40f997b6195b4d3))
+* remove old bootstrap carousel ([8fe9b1b](https://github.com/italia/bootstrap-italia/commit/8fe9b1b9477b7429c5143d92cf436d1302dcca97))
+* upgrade splide ([f86a45d](https://github.com/italia/bootstrap-italia/commit/f86a45d5d1d9e1c9bb4a29320e92abb3f6723f3a))
+
+
+### BREAKING CHANGES
+
+* new autocomplete component
+* carousel component is now Carousel instead of CarouselBI
+* global focus is set by data attribute instead of class
+
+
+
+## [2.13.4](https://github.com/italia/bootstrap-italia/compare/v2.13.3...v2.13.4) (2025-02-10)
+
+
+### Bug Fixes
+
+* button text and icon space ([36a6c33](https://github.com/italia/bootstrap-italia/commit/36a6c3399520ca2dd40e35204be9ed8c12a26da3))
+* show big button on mobile for youtube videos ([b25a3fe](https://github.com/italia/bootstrap-italia/commit/b25a3fef8a8de7fe635ddd85617350f40584ee68))
+
+
+
+## [2.13.3](https://github.com/italia/bootstrap-italia/compare/v2.13.2...v2.13.3) (2025-02-03)
+
+
+### Bug Fixes
+
+* **types:** type only import for bootstrap factory methods ([f01bea8](https://github.com/italia/bootstrap-italia/commit/f01bea8ce558968c37b0629e4422d34fe5e5a899))
+
+
+
+## [2.13.2](https://github.com/italia/bootstrap-italia/compare/v2.13.1...v2.13.2) (2025-01-29)
+
+
+### Bug Fixes
+
+* focus management on specific elements ([55360e8](https://github.com/italia/bootstrap-italia/commit/55360e85696fc2e02939f913e6b39bc97d4d6126))
+* focus on input and buttons ([af4503a](https://github.com/italia/bootstrap-italia/commit/af4503a2caf86d2ae848429cc3d8fd3d48349fe2))
+* more focus adjustments ([0e842eb](https://github.com/italia/bootstrap-italia/commit/0e842eb36daf83981736d28b7601f5aa24dfcf7e))
+
+
+
+## [2.13.1](https://github.com/italia/bootstrap-italia/compare/v2.13.0...v2.13.1) (2025-01-24)
+
+
+### Bug Fixes
+
+* form check margin ([9573eb7](https://github.com/italia/bootstrap-italia/commit/9573eb7a71959fb1442d5bd32ca40bebc5a59498))
+* navbar padding ([b7fd3d5](https://github.com/italia/bootstrap-italia/commit/b7fd3d59c57cf56cf3743ff8f83e0f7ceaca1deb))
+
+
+
+# [2.13.0](https://github.com/italia/bootstrap-italia/compare/v2.12.1...v2.13.0) (2025-01-23)
+
+
+### Bug Fixes
+
+* **a11y:** add aria hidden to icons and warnings ([63e775f](https://github.com/italia/bootstrap-italia/commit/63e775f47fc439bc507a9fe46dd23f19bd1747ba))
+* **a11y:** change steppers icons attributes ([2f78c2b](https://github.com/italia/bootstrap-italia/commit/2f78c2bd53d0e3ba0b68c252709a0b424088539a))
+* add input-symbol-label class ([ae84917](https://github.com/italia/bootstrap-italia/commit/ae84917d2d8d8da7aebdd1ab49766be0c318ce31))
+* badge position in toolbar ([d4593e5](https://github.com/italia/bootstrap-italia/commit/d4593e556fb0c448347a4c891a3a3221ace68c32))
+* dropdown hover and active background ([7a042ff](https://github.com/italia/bootstrap-italia/commit/7a042ffd42454d5b1cf21f94f6c86b934a225965))
+* hero updates for typography, spacing and content ([b1850b8](https://github.com/italia/bootstrap-italia/commit/b1850b832c1f985ca0d6902d02f03f5ae699fcbc))
+* **icon:** replace padding with margin ([2090397](https://github.com/italia/bootstrap-italia/commit/20903979025a03206b378a129ce798d0f19b23a4))
+* just validate style ([ba0c273](https://github.com/italia/bootstrap-italia/commit/ba0c273ea123584715472beb03420252d042d131))
+* link list active state ([01f0f4e](https://github.com/italia/bootstrap-italia/commit/01f0f4e0474ee550f47f93194b4c40542b6d7674))
+* modal position ([39e4edd](https://github.com/italia/bootstrap-italia/commit/39e4eddcc13509758bee82c7dbfa365785f122bc))
+* remove filler from card tabs ([89537f0](https://github.com/italia/bootstrap-italia/commit/89537f0b0db1e07c547281a84de5f7381800381c))
+* show label on invalid empty input ([f352b18](https://github.com/italia/bootstrap-italia/commit/f352b186dcc9a09af8c90b71ebe003bd0f6172dc))
+* tab selection and styles ([f7af494](https://github.com/italia/bootstrap-italia/commit/f7af49440bb00ec4ce96b8caa799a95e0540db8f))
+* text area border ([da0ef0b](https://github.com/italia/bootstrap-italia/commit/da0ef0bbc85999151189b9464c109ca09b689043))
+* toggle appearance in forms ([f989f8d](https://github.com/italia/bootstrap-italia/commit/f989f8db6a2d093adccf83a26f37581d4a689ec2))
+
+
+### Features
+
+* new codebase with bootstrap  ([6856ac5](https://github.com/italia/bootstrap-italia/commit/6856ac5df43186575decd3a42f3286c394f8f0c3))
+* **types:** add video type ([4a5c555](https://github.com/italia/bootstrap-italia/commit/4a5c5556f2bba2f6b1f2977d1601ffaf967117c9))
+
+
+### BREAKING CHANGES
+
+* div filler has been removed in card tabs
+* use class input-symbol-label for percentage and currency
+* **a11y:** hide non-interactive Steppers icons from the accessibility API
+
+
+
 ## [2.12.1](https://github.com/italia/bootstrap-italia/compare/v2.12.0...v2.12.1) (2024-11-27)
 
 

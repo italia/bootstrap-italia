@@ -1,6 +1,7 @@
 {
     "amichevole con lettori di schermo": "IN REVIEW",
-    "angular Kit": "NON PRESENTE",
+    "angular Kit": "DA RIVEDERE A11Y",
+    "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/navscroll",
     "assignees": [
         "Fupete"
     ],
@@ -15,9 +16,8 @@
     },
     "id": "PVTI_lADOAOqloM4AcXblzgMjwcs",
     "navigabile": "IN REVIEW",
-    "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1179 \u2014 https://github.com/italia/design-react-kit/issues/1095",
-    "notes / More": "Da verificare issue chiuse su BSI da stale: https://github.com/italia/bootstrap-italia/issues?q=is%3Aissue+navscroll+is%3Aclosed",
-    "react Kit": "DA RIVEDERE",
+    "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1179 \u2014\u00a0https://github.com/italia/bootstrap-italia/issues/1350",
+    "react Kit": "DA RIVEDERE A11Y",
     "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-menu-di-navigazione-navscroll--documentazione",
     "status": "Todo",
     "status a11y check": "Done",

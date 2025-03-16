@@ -6,7 +6,7 @@
  * --------------------------------------------------------------------------
  */
 
-export { default as CarouselBI } from './plugins/carousel-bi'
+export { default as Carousel } from './plugins/carousel'
 export { default as InputNumber } from './plugins/input-number'
 export { default as Dimmer } from './plugins/dimmer'
 export { default as Notification } from './plugins/notification'
@@ -33,7 +33,6 @@ export { default as Transfer } from './plugins/transfer'
 /* Bootstrap */
 export { default as Alert } from './plugins/alert'
 export { default as Button } from './plugins/button'
-export { default as Carousel } from './plugins/carousel'
 export { default as Collapse } from './plugins/collapse'
 export { default as Dropdown } from './plugins/dropdown'
 export { default as Modal } from './plugins/modal'

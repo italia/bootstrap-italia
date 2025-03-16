@@ -9,7 +9,6 @@
 import BaseComponent from './base-component.js'
 
 import EventHandler from './dom/event-handler'
-//import SelectorEngine from './dom/selector-engine'
 import Manipulator from './dom/manipulator'
 import { getElementFromSelector } from './util/index'
 
