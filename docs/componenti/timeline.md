@@ -231,8 +231,8 @@ Il codice markup è stato rivisto in chiave accessibilità e robustezza. In part
   - L'elemento `.card-title` è ora implementato con heading `h4` per rispettare la gerarchia attuale. Dovrà avere il livello intestazione corretto a seconda della gerarchia in pagina.
 {% endcapture %}{% include callout-breaking.html content=callout version="2.11.0" type="danger" %}
 
-## Timeline Point List
-La timeline **point list** permette la rappresentazione di una sequenza di eventi o
+## Timeline point List
+La _Timeline point list_ permette la rappresentazione di una sequenza di eventi o
 informazioni in maniera più compatta rispetto alla timeline classica.
 
 Il componente è composto da una sezione primaria `.point-list-content` e da una
@@ -289,7 +289,7 @@ oppure usando il contenitore generico `div`.
 
 
 ### Date specifiche
-Per esplicitare delle date si usano dei contenitori annidati nella sezione secondaria
+Per esplicitare le date si usano dei contenitori annidati nella sezione secondaria
 `.point-list-aside`.
 
 #### Esempio base
@@ -354,7 +354,7 @@ timeline.
 
 ### Traguardi
 Nella sezione secondaria è possibile evidenziare l'ordine temporale dei contenuti
-tramite icone o con del breve testo (2 caratteri massimo) o un'icona.
+tramite icone o con del breve testo (2 caratteri massimo).
 
 #### Traguardi con testo
 Viene usato il contenitore `.point-date` per inserire un testo brevissimo (2 caratteri
