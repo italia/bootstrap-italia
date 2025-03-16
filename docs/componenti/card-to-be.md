@@ -42,12 +42,37 @@ Appunti to do extra: pseudo element trick for full focus on main link/click/touc
   <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
     <!--start card-->
     <article class="card card-img card-height-full card-border-top card-border-top-test rounded shadow-sm border">
+      <div class="card-header">
+        Featured
+      </div>
       <div class="img-responsive-wrapper">
         <div class="img-responsive Zimg-responsive-panoramic">
           <figure class="img-wrapper">
             <img src="https://placehold.co/357x190/0066cc/FFFFFF/?text=IMMAGINE%20DI%20ESEMPIO" title="titolo immagine" alt="Descrizione immagine se ha senso nel contesto, sennò marcare con decorativa lasciando l'alt applicato ma vuoto.">
           </figure>
         </div>
+      </div>
+      <div class="card-header">
+        Featured
+      </div>
+      <h2 class="card-header h6">
+        Featured
+      </h2>
+      <h2 class="card-header">
+        Featured
+      </h2>
+      <div class="card-header border-bottom-0">
+      <ul class="nav nav-tabs nav-tabs-cards card-header-tabs">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Disabled</a>
+        </li>
+      </ul>
       </div>
       <div class="card-body">
         <h3 class="card-title card-title-icon h3 no_toc">
@@ -56,7 +81,19 @@ Appunti to do extra: pseudo element trick for full focus on main link/click/touc
         </h3>
         <h4 class="card-subtitle h4 no_toc">Sottotitolo o periodo</h4>
         <p class="card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
-        <p class="card-text">Se ci fosse un secondo paragrafo questa è la resa visiva.</p>
+        <p class="card-text">Se ci fosse un secondo paragrafo <a href="#" class="card-link">Card body link</a> questa è la resa visiva.</p>
+        <a href="#" class="card-link">Card body link</a>
+        <a href="#" class="card-link">Another card body link</a>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><a href="#" class="card-link">Card link</a></li>
+          <li class="list-group-item"><a href="#" class="card-link">Another link</a></li>
+          <li class="list-group-item">Vestibulum at eros</li>
+        </ul>
+        <div class="card-body">
+          <a href="#" class="card-link">Card link</a>
+          <a href="#" class="card-link">Another link</a>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
         <footer>
           <div class="card-related">
             <a href="#" class="card-category card-link"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>

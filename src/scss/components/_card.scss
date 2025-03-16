@@ -13,11 +13,11 @@
 }
 
 .card-title {
+  margin-top: var(--#{$prefix}card-title-spacer-y);
   margin-bottom: var(--#{$prefix}card-title-spacer-y);
 }
 
 .card-subtitle {
-  // margin-top: calc(-0.5 * var(--#{$prefix}card-title-spacer-y)); // stylelint-disable-line function-disallowed-list
   margin-bottom: var(--#{$prefix}card-title-spacer-y);
 }
 
@@ -30,7 +30,7 @@
     text-decoration: if($link-hover-decoration == underline, none, null);
   }
 
-  + .card-link {
+  +.card-link {
     margin-left: var(--#{$prefix}card-spacer-x);
   }
 }
@@ -186,7 +186,7 @@
     .card {
       height: auto !important;
 
-      & + .card {
+      &+.card {
         margin-top: 1rem;
       }
     }
@@ -1068,6 +1068,7 @@
         background-color: $value;
 
         .card-body {
+
           .card-title,
           .card-text {
             color: $white;
@@ -1082,6 +1083,20 @@
 
     &.card-height-full {
       height: 100%;
+    }
+
+    .card-header {
+      .card-header-tabs {
+        margin-right: calc(-1*var(--bs-card-cap-padding-x));
+        margin-left: calc(-1*var(--bs-card-cap-padding-x));
+
+        &::before {
+          width: var(--#{$prefix}card-spacer-x);
+          border-bottom: 1px solid #c5c7c9;
+          content: "";
+          flex-grow: 0;
+        }
+      }
     }
 
     .card-body {
@@ -1110,6 +1125,7 @@
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: last baseline;
+        margin-top: calc(2 * var(--#{$prefix}card-spacer-y));
 
         .card-category {
           display: inline-block;
@@ -1182,6 +1198,35 @@
     &:after {
       content: '';
       display: none; // XXX <<< rimuovere al merge?
+    }
+
+    >.list-group {
+      border-top: inherit;
+      border-bottom: inherit;
+
+      margin-top: calc(2 * var(--#{$prefix}card-spacer-y));
+      margin-bottom: calc(2 * var(--#{$prefix}card-spacer-y));
+
+      font-size: $card-p-size;
+      line-height: $card-p-l-h;
+      color: $card-p-color;
+
+      &:first-child {
+        border-top-width: 0;
+        @include border-top-radius(var(--#{$prefix}card-inner-border-radius));
+      }
+
+      &:last-child {
+        border-bottom-width: 0;
+        @include border-bottom-radius(var(--#{$prefix}card-inner-border-radius));
+      }
+    }
+
+    // Due to specificity of the above selector (`.card > .list-group`), we must
+    // use a child selector here to prevent double borders.
+    >.card-header+.list-group,
+    >.list-group+.card-footer {
+      border-top: 0;
     }
 
     // a.read-more {
@@ -1259,7 +1304,7 @@
         }
       }
 
-      &.rounded .img-responsive-wrapper {
+      &.rounded .img-responsive-wrapper { // XXX SOLO IL PRIMO FIGLIO... NON PER FORZA IMMAGINE... 
         border-top-left-radius: $border-radius;
         border-top-right-radius: $border-radius;
       }
@@ -1299,7 +1344,7 @@
         display: none;
       }
 
-      & > .read-more {
+      &>.read-more {
         &::before {
           content: '';
           height: $v-gap * 3;
@@ -1341,6 +1386,7 @@
       }
 
       &.card-border-top-test {
+
         // xxx
         &::after {
           background: red; // xxx
@@ -1372,11 +1418,12 @@
   // Contextual variation
   .row {
     [class*='col-'] {
+
       //car variation inside cols
-      > .card-wrapper {
+      >.card-wrapper {
         height: 100%;
 
-        > .card {
+        >.card {
           height: 100%;
         }
       }
