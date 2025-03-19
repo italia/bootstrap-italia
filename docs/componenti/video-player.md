@@ -118,22 +118,6 @@ Nota l'uso delle virgolette singole, `data-setup` si aspetta di ricevere un JSON
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-Per vedere tutte le opzioni disponibili, consultare la documentazione di
-[VideoJS](https://videojs.com/guides/options/).
-
-### Controllare il player con JavaScript
-
-Puoi anche controllare il player tramite javascript, di seguito un esempio.
-
-```js
-const videoEl = document.getElementById("albatrosvideo");
-const player = bootstrap.VideoPlayer.getOrCreateInstance(videoEl).player;
-player.pause();
-```
-
-Per vedere tutte le opzioni disponibili, consultare la documentazione di 
-[VideoJS](https://docs.videojs.com/player).
-
 ## Sottotitoli, didascalie, capitoli e descrizioni
 
 Tramite il tag `track` puoi aggiungere del testo accessibile presente
@@ -386,6 +370,9 @@ HLS e/o DASH.
 Approfondisci su [Video.js](https://videojs.com/guides/audio-tracks/)  
 {% endcapture %}{% include callout.html content=callout type="info" %}
 
+Per vedere tutte le opzioni disponibili, consultare la documentazione di
+[VideoJS](https://videojs.com/guides/options/).
+
 ## Embed da piattaforme terze
 
 Oltre a consentire la riproduzione di video direttamente sulle proprie pagine web, 
@@ -472,6 +459,40 @@ In questo la Pubblica Amministrazione che fa uso di servizi di terze parti come 
 </div>
 {% endcapture %}{% include example.html content=example %}
 
+## Attivazione tramite codice
+
+Puoi anche controllare il player tramite javascript, di seguito un esempio.
+
+```js
+import { VideoPlayer } from 'bootstrap-italia';
+
+const videoEl = document.getElementById("myVideo");
+const video = new VideoPlayer(el);
+
+video.player.pause();
+```
+
+Per vedere tutte le opzioni disponibili, consultare la documentazione di 
+[VideoJS](https://docs.videojs.com/player).
+
+### Overlay di consenso
+
+Per istanziare l'overlay di consenso occorre utilizzare la classe `AcceptOverlay`
+che accetta come opzioni il servizio utilizzato (in questo caso `youtube.com`). 
+
+```js
+import { VideoPlayer, AcceptOverlay } from 'bootstrap-italia';
+
+const overlayEl = document.getElementById("myVideoOverlay");
+const overlay = new AcceptOverlay(overlayEl, {
+  service: "youtube.com",
+});
+const videoEl = document.getElementById("myVideo");
+const video = new VideoPlayer(el);
+
+video.player.pause();
+```
+
 ### Gestione delle preferenze con JavaScript
 
 La gestione delle preferenze viene effettuata in maniera automatica dal componente
@@ -486,9 +507,9 @@ utente
 
 Le funzioni viste sopra possono essere importate lato JavaScript
 ```js
-import { cookies } from './util/cookies'
+import { cookies } from 'bootstrap-italia';
 
-cookies.clearAllRememberedChoices()
+cookies.clearAllRememberedChoices();
 ```
 
 oppure utilizzate con il bundle di Bootstrap Italia

@@ -1,6 +1,6 @@
 [
     {
         "name": "immagini-sostitutive-1",
-        "content": "\n\n<p class=\"text-hide\" style=\"background-image: url('/docs/assets/img/favicons/favicon-32x32.png'); width: 32px; height: 32px;\">Bootstrap Italia</p>\n"
+        "content": "\n\n<p class=\"text-hide\" style=\"background-image: url('https://italia.github.io/bootstrap-italia/docs/assets/img/favicons/favicon-32x32.png'); width: 32px; height: 32px;\">Bootstrap Italia</p>\n"
     }
 ]

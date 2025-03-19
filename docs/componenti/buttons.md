@@ -145,7 +145,7 @@ La classe `.disabled` usa `pointer-events: none` per provare a disabilitare l'at
 
 {% comment %}Example name: Button con icona{% endcomment %}
 {% capture example %}
-<button class="btn btn-success btn-icon">
+<button class="btn btn-success btn-lg btn-icon">
   <span>Etichetta pulsante</span>
   <svg class="icon icon-white ms-1"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-full"></use></svg>
 </button>
@@ -155,12 +155,12 @@ La classe `.disabled` usa `pointer-events: none` per provare a disabilitare l'at
   <svg class="icon icon-white ms-1"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-full"></use></svg>
 </button>
 
-<button class="btn btn-danger btn-icon">
+<button class="btn btn-danger btn-sm btn-icon">
   <span>Etichetta pulsante</span>
   <svg class="icon icon-white ms-1"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-full"></use></svg>
 </button>
 
-<button class="btn btn-secondary btn-icon">
+<button class="btn btn-info btn-xs btn-icon">
   <span>Etichetta pulsante</span>
   <svg class="icon icon-white ms-1"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-full"></use></svg>
 </button>
@@ -206,3 +206,32 @@ La classe `.disabled` usa `pointer-events: none` per provare a disabilitare l'at
 ## Approfondimento
 
 Per ulteriori informazioni sui pulsanti si rimanda alla sezione [buttons](https://getbootstrap.com/docs/{{ site.bootstrap_minor }}/components/buttons/) del sito di Bootstrap.
+
+## Attivazione tramite codice
+
+```js
+import { Button } from 'bootstrap-italia';
+
+const buttonEl = document.getElementById('myButton');
+const button = new Button(buttonEl);
+```
+
+#### Metodi
+
+<div class="table-responsive">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th style="width: 150px;">Metodo</th>
+        <th>Descrizione</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% include standard-methods.html class="Button" %}
+      <tr>
+        <td>toggle</td>
+        <td>Attiva/disattiva la classe e sincronizza l'attributo "aria-pressed" con il valore restituito dal metodo `.toggle()`</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

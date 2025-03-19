@@ -1927,7 +1927,7 @@ $dp-current-size: $v-gap * 4;
 // Carousel
 $crs-margin-bottom: $v-gap * 3;
 $crs-mob-live-padding: $v-gap * 2;
-$crs-dots-simension: $v-gap;
+$crs-dots-dimension: $v-gap * 2;
 $crs-dots-color: hsl(210, 83%, 77%) !default;
 $crs-dots-margin-left: 38px;
 $crs-dots-margin-left-desk: $v-gap * 2;

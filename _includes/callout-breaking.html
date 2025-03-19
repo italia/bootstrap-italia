@@ -1,0 +1,19 @@
+{%- comment -%} Usage: {% include callout.html content=callout type="type" %}, where content is a capture with the content and type is one of: info (default),
+danger, warning {%- endcomment -%}
+{%- assign css_class = include.type | default: "info" -%}
+{%- assign id_collapse = include.version | replace: ".", "-"  -%}
+<div class="accordion p-0 bd-callout bd-callout-{{ css_class }}">
+  <div class="accordion-item">
+    <h4 class="accordion-header" id="#bsbrh{{id_collapse}}">
+      <button class="accordion-button text-black collapsed" type="button" style="border-top: none;" data-bs-toggle="collapse" data-bs-target="#bsbrc{{id_collapse}}"
+      aria-controls="#bsbrc{{id_collapse}}">
+      Breaking change dalla versione&nbsp;<b>{{include.version}}</b>
+      </button>
+    </h4>
+    <div id="bsbrc{{id_collapse}}" class="accordion-collapse collapse" role="region" aria-labelledby="bsbrh{{id_collapse}}">
+      <div class="accordion-body">
+        {{- include.content | markdownify -}}
+      </div>
+    </div>
+  </div>
+</div>

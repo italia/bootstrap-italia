@@ -345,17 +345,17 @@
   --#{$prefix}btn-box-shadow: inset 0 0 0 var(--#{$prefix}btn-outline-border-size) var(--#{$prefix}btn-outline-border-color);
 }
 
-.btn-outline { 
+.btn-outline {
   // Outline Primary
   &-primary {
     --#{$prefix}btn-outline-border-color: var(--#{$prefix}color-border-primary);
     --#{$prefix}btn-text-color: var(--#{$prefix}color-text-primary);
     &:hover {
-      --#{$prefix}btn-outline-border-color: var(--#{$prefix}color-border-primary-hover); 
+      --#{$prefix}btn-outline-border-color: var(--#{$prefix}color-border-primary-hover);
       --#{$prefix}btn-text-color: var(--#{$prefix}color-link-hover);
     }
     &:active {
-      --#{$prefix}btn-outline-border-color: var(--#{$prefix}color-border-primary-active); 
+      --#{$prefix}btn-outline-border-color: var(--#{$prefix}color-border-primary-active);
       --#{$prefix}btn-text-color: var(--#{$prefix}color-link-active);
     }
   }
@@ -366,12 +366,12 @@
     --#{$prefix}btn-text-color: var(--#{$prefix}color-text-secondary);
 
     &:hover {
-      --#{$prefix}btn-outline-border-color: var(--#{$prefix}color-border-secondary-hover); 
+      --#{$prefix}btn-outline-border-color: var(--#{$prefix}color-border-secondary-hover);
       --#{$prefix}btn-text-color: var(--#{$prefix}color-text-secondary-hover);
     }
     &:active {
       --#{$prefix}btn-outline-border-color: var(--#{$prefix}color-border-secondary-active);
-      --#{$prefix}btn-text-color: var(--#{$prefix}color-text-secondary-active); 
+      --#{$prefix}btn-text-color: var(--#{$prefix}color-text-secondary-active);
     }
   }
 
@@ -381,7 +381,7 @@
     --#{$prefix}btn-text-color: var(--#{$prefix}color-text-success);
 
     &:hover {
-      --#{$prefix}btn-outline-border-color: var(--#{$prefix}color-border-success-hover); 
+      --#{$prefix}btn-outline-border-color: var(--#{$prefix}color-border-success-hover);
       --#{$prefix}btn-text-color: var(--#{$prefix}color-text-success-hover);
     }
     &:active {
@@ -396,11 +396,11 @@
     --#{$prefix}btn-text-color: var(--#{$prefix}color-text-warning);
 
     &:hover {
-      --#{$prefix}btn-outline-border-color: var(--#{$prefix}color-border-warning-hover); 
+      --#{$prefix}btn-outline-border-color: var(--#{$prefix}color-border-warning-hover);
       --#{$prefix}btn-text-color: var(--#{$prefix}color-text-warning-hover);
     }
     &:active {
-      --#{$prefix}btn-outline-border-color: var(--#{$prefix}color-border-warning-active); 
+      --#{$prefix}btn-outline-border-color: var(--#{$prefix}color-border-warning-active);
       --#{$prefix}btn-text-color: var(--#{$prefix}color-text-warning-active);
     }
   }
@@ -411,11 +411,11 @@
     --#{$prefix}btn-text-color: var(--#{$prefix}color-text-danger);
 
     &:hover {
-      --#{$prefix}btn-outline-border-color: var(--#{$prefix}color-border-danger-hover); 
+      --#{$prefix}btn-outline-border-color: var(--#{$prefix}color-border-danger-hover);
       --#{$prefix}btn-text-color: var(--#{$prefix}color-text-danger-hover);
     }
     &:active {
-      --#{$prefix}btn-outline-border-color: var(--#{$prefix}color-border-danger-active); 
+      --#{$prefix}btn-outline-border-color: var(--#{$prefix}color-border-danger-active);
      --#{$prefix}btn-text-color: var(--#{$prefix}color-text-danger-active);
     }
   }

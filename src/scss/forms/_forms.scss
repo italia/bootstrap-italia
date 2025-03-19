@@ -261,6 +261,7 @@ textarea {
       display: inline-block;
       font-size: 1rem;
       font-weight: $font-weight-semibold;
+      line-height: var(--bs-body-line-height);
       user-select: none;
       @include media-breakpoint-up(sm) {
         font-size: 1.125rem;
@@ -272,7 +273,7 @@ textarea {
       @extend %focus;
     }
 
-    &:focus.focus--mouse + label {
+    &:focus[data-focus-mouse='true'] + label {
       @extend %focusmouse;
     }
   }

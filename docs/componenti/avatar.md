@@ -32,12 +32,6 @@ Per ottenere un elemento grafico non interattivo, utilizza il tag `<div>`.
 Ogni avatar può essere associato ad un'azione, utilizzando per esso il tag `<a>`.
 
 {% capture callout %}
-Breaking feature dalla versione **2.8.0**
-
-Il toggle del dropdown diventa `<button>` invece di `<a>`.
-{% endcapture %}{% include callout.html content=callout type="danger" %}
-
-{% capture callout %}
 
 #### Accessibilità delle immagini
 
@@ -706,3 +700,10 @@ Per il nome è possibile utilizzare i tag `<h3>` o `<h4>`. Il testo esteso può 
 </div>
 
 {% endcapture %}{% include example.html content=example %}
+
+
+## Breaking change
+
+{% capture callout %}
+Il toggle del dropdown diventa `<button>` invece di `<a>`.
+{% endcapture %}{% include callout-breaking.html content=callout version="2.8.0" type="danger" %}

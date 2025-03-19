@@ -68,18 +68,6 @@ description: Gli "Stepper" mostrano l'avanzamento del progresso di una procedura
 Il contenitore degli Stepper ha sempre una classe `.steppers`. La sua intestazione è contenuta in una lista `<ul>` all'interno della quale i singoli passi (o _step_) sono rappresentati da elementi `<li>`.
 
 {% capture callout %}
-Breaking feature dalla versione **2.3.0**
-
-L'elemento con classe `.steppers-index` adesso è diventato uno `<span>` collocato fuori dalla lista `<ul>`.
-{% endcapture %}{% include callout.html content=callout type="danger" %}
-
-{% capture callout %}
-Breaking feature dalla versione **2.13.0**
-
-Gli elementi di tipo `<svg>` non interattivi necessitano dell'aggiunta di `aria-hidden="true"`.
-{% endcapture %}{% include callout.html content=callout type="danger" %}
-
-{% capture callout %}
 L'aspetto della modalità mobile degli Steppers è differente rispetto a quello desktop. Se si sta consultando questa documentazione su un PC desktop, per visualizzare correttamente gli esempi seguenti in formato mobile sarà necessario ridimensionare la finestra del browser al di sotto dei 992 pixel.
 {% endcapture %}{% include callout.html content=callout type="info" %}
 
@@ -454,3 +442,13 @@ Si raccomanda la visualizzazione in un viewport ridotto per ottenere un esempio 
   </nav>
 </div>
 {% endcapture %}{% include example.html content=example %}
+
+## Breaking change
+
+{% capture callout %}
+L'elemento con classe `.steppers-index` adesso è diventato uno `<span>` collocato fuori dalla lista `<ul>`.
+{% endcapture %}{% include callout-breaking.html content=callout version="2.3.0" type="danger" %}
+
+{% capture callout %}
+Gli elementi di tipo `<svg>` non interattivi necessitano dell'aggiunta di `aria-hidden="true"`.
+{% endcapture %}{% include callout-breaking.html content=callout version="2.13.0" type="danger" %}
