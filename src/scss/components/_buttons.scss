@@ -206,7 +206,6 @@
   }
 
   .icon {
-
     width: 1.2em;
     height: 1.2em;
     border: none;
@@ -266,7 +265,7 @@
   }
 
   &:active {
-  --#{$prefix}btn-background: var(--#{$prefix}color-background-primary-active);
+    --#{$prefix}btn-background: var(--#{$prefix}color-background-primary-active);
   }
 
   &.btn-progress {
@@ -285,7 +284,7 @@
   }
 
   &:active {
-  --#{$prefix}btn-background: var(--#{$prefix}color-background-secondary-active);
+    --#{$prefix}btn-background: var(--#{$prefix}color-background-secondary-active);
   }
 
   &:disabled,
@@ -308,7 +307,7 @@
   }
 
   &:active {
-  --#{$prefix}btn-background: var(--#{$prefix}color-background-success-active);
+    --#{$prefix}btn-background: var(--#{$prefix}color-background-success-active);
   }
 }
 
@@ -321,7 +320,7 @@
   }
 
   &:active {
-  --#{$prefix}btn-background: var(--#{$prefix}color-background-warning-active);
+    --#{$prefix}btn-background: var(--#{$prefix}color-background-warning-active);
   }
 }
 
@@ -334,14 +333,14 @@
   }
 
   &:active {
-  --#{$prefix}btn-background: var(--#{$prefix}color-background-danger-active);
+    --#{$prefix}btn-background: var(--#{$prefix}color-background-danger-active);
   }
 }
 
 // Button Outline
 //
 
-.btn[class*="btn-outline-"] {
+.btn[class*='btn-outline-'] {
   --#{$prefix}btn-box-shadow: inset 0 0 0 var(--#{$prefix}btn-outline-border-size) var(--#{$prefix}btn-outline-border-color);
 }
 
@@ -416,7 +415,7 @@
     }
     &:active {
       --#{$prefix}btn-outline-border-color: var(--#{$prefix}color-border-danger-active);
-     --#{$prefix}btn-text-color: var(--#{$prefix}color-text-danger-active);
+      --#{$prefix}btn-text-color: var(--#{$prefix}color-text-danger-active);
     }
   }
 }

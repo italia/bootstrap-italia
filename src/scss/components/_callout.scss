@@ -52,7 +52,7 @@
       display: flex;
       align-items: center;
       padding-left: var(--#{$prefix}spacing-xs);
-      
+
       .text {
         position: relative;
         display: flex;
@@ -104,19 +104,19 @@
     --#{$prefix}callout-title-color: var(--#{$prefix}color-text-primary);
     --#{$prefix}callout-icon-color: var(--#{$prefix}icon-primary);
   }
-  
+
   &-success {
     --#{$prefix}callout-border-color: var(--#{$prefix}color-border-success);
     --#{$prefix}callout-title-color: var(--#{$prefix}color-text-success);
     --#{$prefix}callout-icon-color: var(--#{$prefix}icon-success);
   }
-  
+
   &-warning {
     --#{$prefix}callout-border-color: var(--#{$prefix}color-border-warning);
     --#{$prefix}callout-title-color: var(--#{$prefix}color-text-warning);
     --#{$prefix}callout-icon-color: var(--#{$prefix}icon-warning);
   }
-  
+
   &-danger {
     --#{$prefix}callout-border-color: var(--#{$prefix}color-border-danger);
     --#{$prefix}callout-title-color: var(--#{$prefix}color-text-danger);
@@ -187,7 +187,7 @@
     }
   }
 
-    .collapse-div {
+  .collapse-div {
     display: flex;
     flex-direction: column-reverse;
     border-bottom: none;
@@ -223,13 +223,13 @@
 
             &:before,
             &:after {
-              background: var(--#{$prefix}color-link-hover)
+              background: var(--#{$prefix}color-link-hover);
             }
           }
         }
 
         &:active {
-          color: var(--#{$prefix}color-link-active)
+          color: var(--#{$prefix}color-link-active);
         }
 
         &:before,

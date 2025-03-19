@@ -1,9 +1,9 @@
 .it-header-center-wrapper {
   display: flex;
   align-items: center;
-  height: var(--#{$prefix}header-center-height); 
+  height: var(--#{$prefix}header-center-height);
   background: var(--#{$prefix}header-center-background);
-  
+
   // Header Center Small
   &.it-small-header {
     --#{$prefix}header-center-height: 4rem; // 64px
@@ -58,7 +58,7 @@
   align-items: center;
   font-size: var(--#{$prefix}header-center-font-size);
   @include media-breakpoint-up(md) {
-    margin-left: 3rem; // 48px 
+    margin-left: 3rem; // 48px
   }
 
   a.rounded-icon {

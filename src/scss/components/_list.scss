@@ -42,7 +42,7 @@
     a.list-item span {
       text-decoration: underline;
     }
-   
+
     // List item
     .list-item {
       transition: all 0.2s;
@@ -115,7 +115,7 @@
     }
 
     // List item border on every item except the last one
-   li:not(:last-child) .list-item {
+    li:not(:last-child) .list-item {
       border-bottom: 1px solid var(--#{$prefix}color-border-subtle);
     }
   }

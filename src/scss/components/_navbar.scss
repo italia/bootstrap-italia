@@ -285,14 +285,13 @@
     transform: translateX(-100%);
     transition: all 0.2s cubic-bezier(0.29, 0.85, 0.5, 0.99);
     pointer-events: all;
-    @include media-breakpoint-up(lg){
+    @include media-breakpoint-up(lg) {
       position: inherit;
       top: auto;
       right: auto;
       bottom: auto;
       left: auto;
       overflow-y: visible;
-      background: var(--#{$prefix}navbar-background);
       transform: none;
       transition: none;
       display: flex;
@@ -306,7 +305,7 @@
   .navbar-nav {
     padding-top: var(--#{$prefix}navbar-spacing-inset);
     overflow: hidden;
-    @include media-breakpoint-up(lg){
+    @include media-breakpoint-up(lg) {
       margin-top: 0;
       padding-top: 0;
       overflow: inherit;
@@ -328,7 +327,7 @@
         border: none;
         background: transparent;
         font-weight: var(--#{$prefix}navbar-link-font-weight);
-        @include media-breakpoint-up(lg){
+        @include media-breakpoint-up(lg) {
           display: flex;
           align-items: center;
           align-self: flex-end;
@@ -344,7 +343,7 @@
           svg {
             fill: var(--#{$prefix}icon-primary);
             transition: all 0.3s;
-            @include media-breakpoint-up(lg){
+            @include media-breakpoint-up(lg) {
               margin-top: 4px;
               margin-left: var(--#{$prefix}icon-spacing);
               fill: var(--#{$prefix}icon-inverse);
@@ -429,7 +428,7 @@
 
     .dropdown-menu {
       padding-bottom: 0;
-      @include media-breakpoint-up(lg){
+      @include media-breakpoint-up(lg) {
         padding-bottom: var(--link-list-footer-distance-bottom);
       }
     }

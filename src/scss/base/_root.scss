@@ -16,7 +16,7 @@
   @each $color, $value in $theme-colors-rgb {
     --#{$prefix}#{$color}-rgb: #{$value};
   }
-  
+
   --#{$prefix}white-rgb: #{to-rgb($white)};
   --#{$prefix}black-rgb: #{to-rgb($black)};
   --#{$prefix}body-color-rgb: #{to-rgb($body-color)};
@@ -56,14 +56,14 @@
 
   // ----------------------------------------------------------- //
 
-  // Theme colors 
+  // Theme colors
   --#{$prefix}theme-primary: var(--it-theme-italia-base);
   --#{$prefix}theme-primary-light: var(--it-theme-italia-light);
   --#{$prefix}theme-primary-lighter: var(--it-theme-italia-lighter);
   --#{$prefix}theme-primary-subtle: var(--it-theme-italia-subtle);
   --#{$prefix}theme-primary-muted: var(--it-theme-italia-muted);
   --#{$prefix}theme-primary-deep: var(--it-theme-italia-deep);
-  
+
   // Spacing
   --#{$prefix}spacing-3xl: var(--it-spacing-3xl);
   --#{$prefix}spacing-xxl: var(--it-spacing-xxl);
@@ -77,7 +77,7 @@
 
   --#{$prefix}heading-spacing: var(--it-spacing-s);
   --#{$prefix}paragraph-spacing: var(--it-spacing-m);
-  
+
   // Typography
   --#{$prefix}font-mono: var(--it-font-mono);
   --#{$prefix}font-serif: var(--it-font-serif);
@@ -96,7 +96,7 @@
   --#{$prefix}font-size-4: var(--it-font-size-4);
   --#{$prefix}font-size-3: var(--it-font-size-3);
   --#{$prefix}font-size-2: var(--it-font-size-2);
-  --#{$prefix}font-size-1: var(--it-font-size-1); 
+  --#{$prefix}font-size-1: var(--it-font-size-1);
   --#{$prefix}font-line-height-5: var(--it-font-line-height-5);
   --#{$prefix}font-line-height-4: var(--it-font-line-height-4);
   --#{$prefix}font-line-height-3: var(--it-font-line-height-3);
@@ -151,7 +151,7 @@
   --#{$prefix}icon-size-m: var(--it-icon-size-m);
   --#{$prefix}icon-size-s: var(--it-icon-size-s);
   --#{$prefix}icon-size-xs: var(--it-icon-size-xs);
-  
+
   // Border
   --#{$prefix}border-broad: var(--it-border-broad);
   --#{$prefix}border-thick: var(--it-border-thick);
@@ -160,18 +160,21 @@
   --#{$prefix}radius-rounded: var(--it-radius-rounded);
   --#{$prefix}radius-circle: var(--it-radius-circle);
   --#{$prefix}radius-smooth: var(--it-radius-smooth);
-  
+
   // Sizing
   --#{$prefix}sizing-full: var(--it-sizing-full);
   --#{$prefix}sizing-two-thirds: var(--it-sizing-two-thirds);
   --#{$prefix}sizing-half: var(--it-sizing-half);
   --#{$prefix}sizing-quarter: var(--it-sizing-quarter);
-  
+
   // Shadow
-  --#{$prefix}elevation-high: var(--it-elevation-high-color) var(--it-elevation-high-x) var(--it-elevation-high-y) var(--it-elevation-high-blur) var(--it-elevation-high-spread);
-  --#{$prefix}elevation-medium: var(--it-elevation-medium-color) var(--it-elevation-medium-x) var(--it-elevation-medium-y) var(--it-elevation-medium-blur) var(--it-elevation-medium-spread);
-  --#{$prefix}elevation-low: var(--it-elevation-low-color) var(--it-elevation-low-x) var(--it-elevation-low-y) var(--it-elevation-low-blur)  var(--it-elevation-low-spread);
-  
+  --#{$prefix}elevation-high: var(--it-elevation-high-color) var(--it-elevation-high-x) var(--it-elevation-high-y) var(--it-elevation-high-blur)
+    var(--it-elevation-high-spread);
+  --#{$prefix}elevation-medium: var(--it-elevation-medium-color) var(--it-elevation-medium-x) var(--it-elevation-medium-y) var(--it-elevation-medium-blur)
+    var(--it-elevation-medium-spread);
+  --#{$prefix}elevation-low: var(--it-elevation-low-color) var(--it-elevation-low-x) var(--it-elevation-low-y) var(--it-elevation-low-blur)
+    var(--it-elevation-low-spread);
+
   // Text colors
   --#{$prefix}color-text-accent: var(--it-color-text-accent);
   --#{$prefix}color-text-inverse: var(--it-color-text-inverse);
@@ -197,7 +200,7 @@
   --#{$prefix}color-link: var(--#{$prefix}color-text-primary);
   --#{$prefix}color-link-hover: var(--it-color-link-hover);
   --#{$prefix}color-link-active: var(--it-color-link-active);
- 
+
   // Border colors
   --#{$prefix}color-border-danger-active: var(--it-color-border-danger-active);
   --#{$prefix}color-border-danger-hover: var(--it-color-border-danger-hover);
@@ -217,7 +220,7 @@
   --#{$prefix}color-border-primary-active: var(--it-color-border-primary-active);
   --#{$prefix}color-border-primary-hover: var(--it-color-border-primary-hover);
   --#{$prefix}color-border-primary: var(--it-color-border-primary);
-  
+
   // Background colors
   --#{$prefix}color-background-primary: var(--it-color-background-primary);
   --#{$prefix}color-background-primary-lighter: var(--it-color-background-primary-lighter);
@@ -260,7 +263,7 @@
   --#{$prefix}del-background: var(--it-color-red-70);
   --#{$prefix}page-background: var(--it-color-background-inverse);
   --#{$prefix}color-outline-focus: var(--it-color-outline-focus);
-  
+
   // Status colors - reference the background category colors only
   --#{$prefix}color-status-danger: var(--it-color-background-danger);
   --#{$prefix}color-status-danger-hover: var(--it-color-background-danger-hover);
@@ -274,7 +277,7 @@
   --#{$prefix}color-status-warning: var(--it-color-background-warning);
   --#{$prefix}color-status-warning-hover: var(--it-color-background-warning-hover);
   --#{$prefix}color-status-warning-active: var(--it-color-background-warning-active);
-  
+
   // Icons colors
   --#{$prefix}icon-danger-active: var(--it-icon-danger-active);
   --#{$prefix}icon-danger-hover: var(--it-icon-danger-hover);
@@ -295,7 +298,7 @@
   --#{$prefix}icon-default: var(--it-icon-default);
   --#{$prefix}icon-disabled: var(--it-icon-disabled);
   --#{$prefix}icon-spacing: var(--it-spacing-inline-xs);
-  
+
   // Transitions
   --#{$prefix}transition-instant: 0.2s;
 }

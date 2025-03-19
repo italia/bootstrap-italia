@@ -4,7 +4,7 @@
 // Edit the colors to match your theme or add more variants
 $avatar-variants: (
   primary: $color-primary,
-  secondary: $color-secondary
+  secondary: $color-secondary,
 );
 
 // Avatar properties
@@ -169,13 +169,13 @@ $avatar-variants: (
     line-height: 1;
   }
 
-    // Avatar icon
+  // Avatar icon
   .icon {
     width: var(--#{$prefix}avatar-icon-size);
     height: var(--#{$prefix}avatar-icon-size);
   }
 
-// Avatar sibling span text
+  // Avatar sibling span text
   & ~ span {
     margin-left: var(--#{$prefix}spacing-xxs);
   }
@@ -230,7 +230,7 @@ a .avatar {
   .dropdown-menu {
     margin-left: -27px;
   }
-  
+
   .btn-dropdown {
     padding: 0;
     color: inherit;
