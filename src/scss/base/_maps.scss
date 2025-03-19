@@ -52,3 +52,12 @@ $utilities-border-colors: map-loop($utilities-border, rgba-css-var, '$key', 'bor
 $negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) !default;
 
 $gutters: $spacers !default;
+
+// Colors Palette
+$colors-palette: (
+  'primary': $color-primary,
+  'secondary': $color-secondary,
+  'success': $color-success,
+  'warning': $color-warning,
+  'danger': $color-danger,
+) !default;

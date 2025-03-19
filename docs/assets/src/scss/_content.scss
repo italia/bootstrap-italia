@@ -44,9 +44,9 @@
   margin-bottom: 0.5rem;
 }
 
-code.highlighter-rouge {
-  background-color: #efc;
-  a > & {
-    color: $neutral-1;
-  }
-}
+// code.highlighter-rouge {
+//   background-color: #efc;
+//   a > & {
+//     color: var(--#{$prefix}color-text-base);
+//   }
+// }
