@@ -19,43 +19,43 @@
 //search icon
 .autocomplete-icon {
   position: absolute;
-  left: var(--#{$prefix}spacing-3xs);
   top: var(--#{$prefix}spacing-xxs);
+  left: var(--#{$prefix}spacing-3xs);
   padding: 0 var(--#{$prefix}form-control-spacing);
 }
 
 //results list
 .autocomplete-list {
   position: absolute;
-  left: 0;
   right: 0;
-  width: 100%;
-  background-color: $white;
-  padding: var(--#{$prefix}form-control-spacing) 0;
-  box-shadow: $dropdown-box-shadow;
-  border-top: 1px solid var(--#{$prefix}color-bordr-subtle);
-  transition: opacity var(--#{$prefix}transition-instant);
+  left: 0;
   display: none;
+  width: 100%;
+  padding: var(--#{$prefix}form-control-spacing) 0;
+  border-top: 1px solid var(--#{$prefix}color-bordr-subtle);
+  background-color: $white;
+  box-shadow: $dropdown-box-shadow;
+  transition: opacity var(--#{$prefix}transition-instant);
 
   &.autocomplete-list-show {
-    display: block;
     z-index: 10;
+    display: block;
   }
 
   li {
-    list-style-type: none;
     padding: 0;
+    list-style-type: none;
   }
 
   // Single item
   a {
-    padding: var(--#{$prefix}spacing-xs) var(--#{$prefix}spacing-s);
     display: flex;
-    justify-content: flex-start;
     align-items: flex-start;
+    justify-content: flex-start;
+    padding: var(--#{$prefix}spacing-xs) var(--#{$prefix}spacing-s);
     color: var(--#{$prefix}color-text-secondary);
-    line-height: 1.2;
     font-size: var(--#{$prefix}body-font-size);
+    line-height: 1.2;
     text-decoration: none;
 
     &:hover {
@@ -78,17 +78,13 @@
         }
       }
 
-      //search highlight
-      mark {
-        color: var(--#{$prefix}colore-text-primay);
-      }
     }
 
     //item icon + avatar
     .icon,
     .avatar {
-      margin-right: $v-gap * 2;
       flex-shrink: 0;
+      margin-right: $v-gap * 2;
     }
 
     .icon {
@@ -98,16 +94,21 @@
     //item text
     .autocomplete-list-text {
       margin-top: 2px;
+ 
       //item label
       em {
-        font-style: normal;
-        text-transform: uppercase;
-        font-size: 0.75rem;
-        color: $color-text-secondary; // UI kit
-        font-weight: 600;
-        letter-spacing: 0.1em;
         display: block;
-        margin-top: $v-gap * 0.5;
+        margin-top: var(--#{$prefix}spacing-3xs);
+        color: var(--#{$prefix}color-text-secondary);
+        font-size: var(--#{$prefix}label-font-size-xs);
+        font-style: normal;
+        font-weight: var(--#{$prefix}font-weight-solid);
+        text-transform: uppercase;
+      }
+  
+      //search highlight
+      mark {
+        color: var(--#{$prefix}colore-text-primay);
       }
     }
   }
@@ -147,8 +148,8 @@
   //results list
   .autocomplete-list {
     a {
-      font-size: var(--#{$prefix}label-font-size-s);
       align-items: flex-start;
+      font-size: var(--#{$prefix}label-font-size-s);
 
       .autocomplete-list-text {
         //item text
@@ -159,8 +160,8 @@
         //item label
         em {
           display: inline-block;
-          font-size: var(--#{$prefix}label-font-size-xs);
           margin-top: 0;
+          font-size: var(--#{$prefix}label-font-size-xs);
         }
       }
     }
@@ -170,8 +171,8 @@
   .autocomplete-wrapper-big {
     //search field
     .autocomplete-icon {
-      left: var(--#{$prefix}spacing-3xs);
       top: var(--#{$prefix}spacing-xs);
+      left: var(--#{$prefix}spacing-3xs);
       padding: 0 var(--#{$prefix}form-control-spacing);
     }
 
