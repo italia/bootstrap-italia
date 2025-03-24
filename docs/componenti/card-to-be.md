@@ -163,7 +163,7 @@ Appunti to do extra: pseudo element trick for full focus on main link/click/touc
     </article>
     <!--end card-->
     <!--start card-->
-    <article class="card rounded shadow-sm border">
+    <article class="card rounded shadow-sm border mb-3">
       <h4 class="card-title card-title-icon h5 no_toc">
         <a href="#">Titolo un po' lungo ad esempio di un bando a cui poter partecipare h4 visto h5</a>
         <div><svg class="icon icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg></div>
@@ -184,6 +184,18 @@ Appunti to do extra: pseudo element trick for full focus on main link/click/touc
           <span>Azione secondaria</span>
           <svg class="icon icon-primary ms-2" aria-hidden="true"><use href="/dist/svg/sprites.svg#it-arrow-right"></use></svg>
         </a>
+      </div>
+    </article>
+    <!--end card-->
+    <!--start card-->
+    <article class="card rounded shadow-sm border">
+      <h4 class="card-title card-title-icon no_toc">
+        Titolo solo descrittivo un po' lungo ad esempio h4
+        <div><svg class="icon icon-secondary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg></div>
+      </h4>
+      <div class="card-body">
+        <p class="card-subtitle no_toc">Sottotitolo o periodo</p>
+        <p class="card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
       </div>
     </article>
     <!--end card-->
