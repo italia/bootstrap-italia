@@ -1068,11 +1068,10 @@
       &.card-bg-#{$color} {
         background-color: $value;
 
-        .card-title, 
+        .card-title,
         .card-body .card-text {
           color: $white;
         }
-
       }
     }
 
@@ -1115,7 +1114,6 @@
     }
 
     .card-body {
-
       .card-text {
         font-size: $card-p-size;
         line-height: $card-p-l-h;
@@ -1160,7 +1158,8 @@
       // }
     }
 
-    footer {  //XXX anche card-footer?
+    footer {
+      //XXX anche card-footer?
       margin-top: calc(2 * var(--#{$prefix}card-spacer-y));
 
       &.card-related {
