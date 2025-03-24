@@ -2,31 +2,26 @@
 
 //search field
 .autocomplete {
-  padding: 0.375rem $v-gap * 6 0.375rem $v-gap * 3;
-
-  &::placeholder {
-    color: $color-text-muted; // UI kit
-  }
-
-  &:disabled {
-    background-color: #cacacc;
-
-    &::placeholder {
-      color: $gray-secondary;
-    }
-  }
+  padding-left: var(--#{$prefix}spacing-xxl);
 }
+//   &::placeholder {
+//     color: $color-text-muted; // UI kit
+//   }
+
+//   &:disabled {
+//     background-color: #cacacc;
+
+//     &::placeholder {
+//       color: $gray-secondary;
+//     }
+//   }
 
 //search icon
 .autocomplete-icon {
   position: absolute;
-  right: 0;
-  top: 0.5rem;
-  padding: 0 $spacer * 0.5;
-  background-color: $white;
-  .icon {
-    fill: $gray-secondary;
-  }
+  left: var(--#{$prefix}spacing-3xs);
+  top: var(--#{$prefix}spacing-xxs);
+  padding: 0 var(--#{$prefix}form-control-spacing);
 }
 
 //results list
@@ -36,10 +31,10 @@
   right: 0;
   width: 100%;
   background-color: $white;
-  padding: $v-gap 0;
+  padding: var(--#{$prefix}form-control-spacing) 0;
   box-shadow: $dropdown-box-shadow;
-  border-top: 1px solid $gray-secondary;
-  transition: opacity 0.3s;
+  border-top: 1px solid var(--#{$prefix}color-bordr-subtle);
+  transition: opacity var(--#{$prefix}transition-instant);
   display: none;
 
   &.autocomplete-list-show {
@@ -52,40 +47,40 @@
     padding: 0;
   }
 
-  //single item
+  // Single item
   a {
-    padding: 12px $v-gap * 3;
+    padding: var(--#{$prefix}spacing-xs) var(--#{$prefix}spacing-s);
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    color: $gray-primary;
+    color: var(--#{$prefix}color-text-secondary);
     line-height: 1.2;
-    font-size: 1rem;
+    font-size: var(--#{$prefix}body-font-size);
     text-decoration: none;
-    //hover state
+
     &:hover {
-      color: $primary;
+      color: var(--#{$prefix}color-text-primary);
       text-decoration: none;
 
       .icon {
-        fill: $primary;
+        fill: var(--#{$prefix}icon-primary);
       }
 
       .autocomplete-list-text {
-        //item text
+
         span {
           text-decoration: underline;
         }
 
         //item label
         em {
-          color: $primary;
+          color: var(--#{$prefix}color-link-hover);
         }
       }
 
       //search highlight
       mark {
-        color: $primary;
+        color: var(--#{$prefix}colore-text-primay);
       }
     }
 
@@ -121,7 +116,7 @@
   mark {
     padding: 0;
     background: transparent;
-    font-weight: bold;
+    font-weight: var(--#{$prefix}font-weight-strong);
   }
 }
 
@@ -129,31 +124,13 @@
 .autocomplete-wrapper-big {
   //search field
   .autocomplete {
-    height: $v-gap * 7;
-    font-size: 1.5rem;
-    font-weight: normal;
-    padding-left: $spacer * 4;
-    padding-right: $v-gap * 3;
-  }
-
-  //search icon
-  .autocomplete-icon {
-    position: absolute;
-    left: 0.5rem;
-    right: auto;
-    top: 1rem;
-
-    .icon {
-      fill: $primary;
-      width: 24px;
-      height: 24px;
-    }
+    @extend .form-control-lg;
   }
 
   //results list
   .autocomplete-list {
     a {
-      font-size: 1.125rem;
+      font-size: var(--#{$prefix}body-font-size-l);
 
       .autocomplete-list-text {
         margin-top: 0;
@@ -164,44 +141,40 @@
 
 //small - tablet
 @include media-breakpoint-up(sm) {
+  .autocomplete {
+    padding-left: var(--#{$prefix}spacing-xl);
+  }
   //results list
   .autocomplete-list {
     a {
-      font-size: 0.875rem;
+      font-size: var(--#{$prefix}label-font-size-s);
       align-items: flex-start;
 
       .autocomplete-list-text {
         //item text
         span {
-          margin-right: $v-gap;
+          margin-right: var(--#{$prefix}spacing-xxs);
         }
 
         //item label
         em {
           display: inline-block;
-          font-size: 0.75rem;
+          font-size: var(--#{$prefix}label-font-size-xs);
           margin-top: 0;
         }
       }
     }
   }
 
-  //big version
+  // big version
   .autocomplete-wrapper-big {
     //search field
-    .autocomplete {
-      height: $v-gap * 9;
-      font-size: 2.25rem;
-      padding-left: $v-gap * 8;
+    .autocomplete-icon {
+      left: var(--#{$prefix}spacing-3xs);
+      top: var(--#{$prefix}spacing-xs);
+      padding: 0 var(--#{$prefix}form-control-spacing);
     }
 
-    //search icon
-    .autocomplete-icon {
-      .icon {
-        width: 40px;
-        height: 40px;
-      }
-    }
 
     //results list
     .autocomplete-list {
@@ -210,7 +183,7 @@
         //item text
         .autocomplete-list-text {
           span {
-            margin-right: $v-gap * 2;
+            margin-right: var(--#{$prefix}spacing-s);
           }
         }
       }
