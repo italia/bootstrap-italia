@@ -6,6 +6,14 @@ group: componenti
 toc: true
 ---
 
+{% capture callout %}
+
+Sono in corso le lavorazioni del nuovo componente Card — come da progetto disponibile in un prossimo rilascio di UI Kit Italia — per standardizzarne le varianti a valle dei lavori sul sito Designers Italia e sui modelli standard per enti specifici, con un occhio di riguardo sul profilo dell'accessibilità by design. Una volta completate le lavorazioni il componente descritto in questa pagina verrà deprecato. 
+
+Puoi nel frattempo esplorarne lo stato dell'arte nella scheda: [Card To Be](../card-to-be/). 
+
+{% endcapture %}{% include callout.html content=callout type="warning" %}
+
 Le card sono contenitori flessibili ed estendibili. Costruite con flexbox, offrono un facile posizionamento nella griglia e si combinano bene con altri componenti.
 
 Di default le card occupano l'intero spazio orizzontale del loro elemento contenitore.
