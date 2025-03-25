@@ -6,40 +6,47 @@ group: componenti
 toc: true
 ---
 
-## Card struttura
+{% capture callout %}
+#### Lavori in corso 
 
-{% comment %}Example name: Struttura base `.card-img`{% endcomment %}
+Durante le lavorazione in questa PR il componente Card classico è rotto, in tutte le sue varianti. È stato infatti commentato il CSS per intero in modo da lavorare per semplificare. A fine lavorazioni l’obiettivo è far convivere per un po’ di tempo i CSS per le nuove Card To Be insieme alle vecchie, per permettere passaggio graduale.
+{% endcapture %}{% include callout.html content=callout type="warning" %}
 
-ATTENZIONE: durante le lavorazione in questa PR il componente Card classico è rotto, in tutte le sue varianti. È stato infatti commentato il CSS per intero in modo da lavorare per semplificare. A fine lavorazioni l'obiettivo è far convivere per un po' di tempo i CSS per le nuove Card To Be insieme alle vecchie, per permettere un graduale passaggio. 
+## Strutture card
 
-Appunti: da sinistra a destra: con bordo e ombra `shadow-sm`; con solo ombra `shadow`; con ombra `shadow-lg` e immagine panoramica `.img-responsive-panoramic`. 
+La **card** è un elemento `article` con come primo figlio il titolo heading `.card-title`.
+Sono disponibili le classi `.card-height-full` e `.card-height-auto` per gestire le altezze, per esempio nel caso di più card affiancate.
 
-Appunti: i titoli sono `h3` e i sottotitoli o periodi semplici paragrafi stilati, per evitare ridondanza. La gerarchia del titolo è corretta se il gruppo di card è contenuto dentro un livello `h2`. Andrà quindi aggiustata rispetto al contesto.
+Se è possibile si consiglia di usare il **titolo** come elemento cliccabile, senza demandare a collegamenti suggessivi.
+Per usare titoli con l'icona a lato si usa la classe `.card-title-icon` sull'elemento `.card-title`.
 
-Appunti: classi utilità: 
-- `.card-height-full` e `card-height-auto` per gestire le altezze, per es. quando più card affiancate (auto da verificarne l'utilità)
-- `.card-border-top` e relativo colore `card-border-top-COLORE`, può essere solo decorativo questo elemento
-- `.card-img` per card con immagini, occhio alla posizione dell'immagine sotto il titolo, invertita con `order: -1`
-- `.card-title-icon` per titoli con icona a lato
-- `.card-footer` per racchiudere una eventuale azione o link secondari nel piede 
-- `.card-title` esce dal `.card-body` per poter permetttere "l'inversione dell'ordine" dell'immagine
+Se è presente un'**immagine** è disponibile la classe `.card-img`. L'immagine deve essere inserita di seguito all'elemento `.card-title`, l'ordine di visualizzazione viene di fatto invertito via CSS applicando `order: -1;` al contenitore dell'immagine, ma rimane corretto nel DOM. 
 
-Appunti: occhio alla semantica: 
-- `article` è la card stessa
-  - se il primo child non è un `h` avrà bisogno di aria-labelledby che punti all'`h` che segue
-  - `footer` è il piede della card, con le cose correlate (data, categoria, argomenti, status, ...) 
-  - `time` si usa per le date, abbastanza standard attributo `datetime` per gli SR
-  - i link secondari della card sono ora in un `div` `.card-footer`, forse dovrebbe cambiare il nome della classe per evitare confusione con il footer dell'article che precede? 
+Il **corpo dell'elemento** vive nell'elemento `.card-body` che applica le corrette spaziature. È possibile usare più `.card-body`, ad esempio per permettere di separare un blocco lista `.list-group` utile per riprodurre per esempio un elenco di collegamenti correlati.
 
-Appunti: occhio alle info necessarie per Lettori schermo, in particolar modo sui metadati: 
-- nascoste con `.visually-hidden` (es. "Categoria correlata: ", "Argomento correlato: ") o applicate con `aria-label` (es. "Argomenti correlati: ")
+Gli elementi di **metadati** della Card (tassonomie, stato e data) sono compresi in un elemento `footer` per facilitarne l'individuazione nel markup.
+L'elemento `footer`, con classe `.card-related`, può vivere dentro il `.card-body` o, in alternativa, è possibile associargli la classe `.card-footer` per separarlo da questo visivamente e, nel caso di card a tutta altezza, averlo sempre attaccato al bordo inferiore.
+Le tassonomie vivono nell'elemento `.card-taxonomy` e, laddove necessario, sono implementate come liste (esempio lista argomenti correlati).
+Le date nell'elemento `time` a cui va associato il corretto attributo `datetime`. 
 
-Appunti: griglia base a 3 colonne su `lg`.
+La classe `.card-footer` inoltre è utile per creare uno **spazio secondario** che può ospitare un eventuale collegamento o pulsante secondario.  
 
-Appunti to do extra: pseudo element trick for full focus on main link/click/touch come opzionale?  
+Per l'elemento `article` è disponibile la classe `.card-border-top` (e relativo colore `card-border-top-COLORE`) come mero elemento decorativo. Se utilizzato per trasmettere valore semantico alla Card che lo adotta non sarebbe corretto. 
 
+
+{% capture callout %}
+#### Accessibilità
+Se il titolo **`.card-title`** non fosse il primo elemento dell'`article`, sarebbe opportuno collegarlo con `aria-labelledby="ID_TITOLO"` e avendo premura di aggiungere `id="ID_TITOLO"` al titolo.
+
+I titoli sono **`h3`** e i sottotitoli o periodi semplici paragrafi stilati, per evitare ridondanza. La gerarchia del titolo è corretta se la Card è contenuta dentro un livello `h2`. Andrà quindi aggiustata rispetto al contesto.
+
+La scelta di usare l'elemento **`article`** e non un semplice `div` è una scelta ponderata attentamente, ma certamente non l'unica possibile. Siamo consapevoli che alcune tipologie di lettori di schermo e browser non ne beneficiano. È vero però che alcuni tra i più diffusi lettori di schermo lo supportano (JAWS, VoiceOver, ...) o lo possono fare previa scelta nella configurazione (NVDA, ...). È altresì vero che l'uso di `article` e `footer` rendono il markup molto più comprensibile e dovrebbero portare a una più facile applicazione di markup semantico.  
+
+Attenzione alle info necessarie per lettori schermo, in particolar modo sui **metadati** sono nascoste con `.visually-hidden` (es. “Categoria correlata: “, “Argomento correlato: “) o applicate con `aria-label` (es. “Argomenti correlati: “).
+{% endcapture %}{% include callout.html content=callout type="accessibility" %}
+
+{% comment %}Example name: Strutture complete card{% endcomment %}
 {% capture example %}
-
 <div class="row card-to-be">
   <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
     <!--start card-->
@@ -90,16 +97,46 @@ Appunti to do extra: pseudo element trick for full focus on main link/click/touc
           <time class="card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
         </footer>
       </div>
+      <footer class="card-related card-footer">
+          <div class="card-taxonomy">
+            <a href="#" class="card-category card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
+            <ul class="card-chips chips-list" aria-label="Argomenti correlati: ">
+              <li class="list-item"><a class="chip chip-simple chip-sm" href="#">
+                <span class="visually-hidden">Argomento: </span><span class="chip-label">Sviluppo interfaccia</span>
+              </a></li>
+              <li class="list-item"><a class="chip chip-simple chip-sm" href="#">
+                <span class="visually-hidden">Argomento: </span><span class="chip-label">Open source</span>
+              </a></li>
+              <li class="list-item"><a class="chip chip-simple chip-sm" href="#">
+                <span class="visually-hidden">Argomento: </span><span class="chip-label">Progettazione interfaccia</span>
+              </a></li>
+            </ul>
+          </div>
+          <time class="card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
+        </footer>
       <div class="card-footer" aria-label="Azioni correlate:">
-        <a href="#" class="btn btn-outline-primary">Azione secondaria</a>
+        <button href="#" type="button" class="btn btn-outline-primary btn-xs btn-icon Zd-md-block">Azione secondaria</button>
         <a href="#" class="card-link">Link secondario</a>
       </div>
     </article>
     <!--end card-->
   </div>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+## Esempi applicazione (per ora per provare la flessibilità del markup)
+
+- Una card con un collegamento secondario nel piede.
+- Una card con classe `.card-height-full` con due esempi di `footer` dove è presenta la data: dentro l'elemento `.card-body` e con classe `.card-footer`.  
+- Una card "servizio o bando" con elemento `.card-title` la cui dimensione è fissata con classe `.h5`, con nei metadati lo stato delle lavorazioni e un pulsante di azione secondaria. 
+- Una card senza collegamento, di presentazione. 
+
+{% comment %}Example name: Strutture card{% endcomment %}
+{% capture example %}
+<div class="row card-to-be">
   <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
     <!--start card-->
-    <article class="card card-img card-height-full rounded shadow">
+    <article class="card card-img card-height-full rounded border shadow-sm">
       <h3 class="card-title no_toc">
         <a href="#">Titolo h3</a>
       </h3>
@@ -115,25 +152,11 @@ Appunti to do extra: pseudo element trick for full focus on main link/click/touc
         <p class="card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
         <footer class="card-related">
           <div class="card-taxonomy">
-              <ul class="card-chips chips-list" aria-label="Argomenti correlati: ">
-                <li class="list-item"><a class="chip chip-simple chip-sm" href="#">
-                  <span class="visually-hidden">Argomento: </span><span class="chip-label">Art direction</span>
-                </a></li>
-              </ul>
+            <a href="#" class="card-category card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
           </div>
           <time class="card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
         </footer>
       </div>
-      <footer class="card-related card-footer">
-        <div class="card-taxonomy">
-            <ul class="card-chips chips-list" aria-label="Argomenti correlati: ">
-              <li class="list-item"><a class="chip chip-simple chip-sm" href="#">
-                <span class="visually-hidden">Argomento: </span><span class="chip-label">Art direction</span>
-              </a></li>
-            </ul>
-        </div>
-        <time class="card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
-      </footer>
       <div class="card-footer" aria-label="Link correlati:">
         <a href="#" class="card-link">Link secondario</a>
       </div>
@@ -142,7 +165,7 @@ Appunti to do extra: pseudo element trick for full focus on main link/click/touc
   </div>
   <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
     <!--start card-->
-    <article class="card card-img rounded shadow-lg mb-3">
+    <article class="card card-img card-height-full rounded border shadow-sm">
       <h3 class="card-title no_toc">
         <a href="#">Titolo h3</a>
       </h3>
@@ -160,8 +183,13 @@ Appunti to do extra: pseudo element trick for full focus on main link/click/touc
           <time class="card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
         </footer>
       </div>
+      <footer class="card-related card-footer">
+        <time class="card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
+      </footer>
     </article>
     <!--end card-->
+  </div>
+  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
     <!--start card-->
     <article class="card rounded shadow-sm border mb-3">
       <h4 class="card-title card-title-icon h5 no_toc">
@@ -180,10 +208,10 @@ Appunti to do extra: pseudo element trick for full focus on main link/click/touc
         </footer>
       </div>
       <div class="card-footer" aria-label="Azioni correlate:">
-        <a href="#" class="btn btn-outline-primary btn-xs btn-icon Zd-md-block">
+        <button href="#" type="button" class="btn btn-outline-primary btn-xs btn-icon Zd-md-block">
           <span>Azione secondaria</span>
           <svg class="icon icon-primary ms-2" aria-hidden="true"><use href="/dist/svg/sprites.svg#it-arrow-right"></use></svg>
-        </a>
+        </button>
       </div>
     </article>
     <!--end card-->
@@ -196,6 +224,70 @@ Appunti to do extra: pseudo element trick for full focus on main link/click/touc
       <div class="card-body">
         <p class="card-subtitle no_toc">Sottotitolo o periodo</p>
         <p class="card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
+      </div>
+    </article>
+    <!--end card-->
+  </div>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+## Bordi e ombre
+
+La configurazione di base del componente Card prevede un bordo applicato con la classe `.border` e un'ombra `.shadow.sm`. 
+Per scelte di elevazione rispetto al contesto si possono usare le versioni con ombre `.shadow` e `.shadow-lg`, valutando di rimuovere il bordo se è chiara la distinzione con lo sfondo.
+
+{% capture callout %}
+
+#### Accessibilità
+
+È necessario avere un rapporto di contrasto colore di almeno 3:1 tra gli elementi grafici e con lo sfondo. 
+
+{% endcapture %}{% include callout.html content=callout type="accessibility" %}
+
+{% comment %}Example name: Strutture card{% endcomment %}
+{% capture example %}
+<div class="row card-to-be">
+  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+    <!--start card-->
+    <article class="card rounded shadow-sm border">
+      <h3 class="card-title no_toc">
+        <a href="#">Titolo h3</a>
+      </h3>
+      <div class="card-body">
+        <p class="card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
+        <footer class="card-related">
+          <time class="card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
+        </footer>
+      </div>
+    </article>
+    <!--end card-->
+  </div>
+  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+    <!--start card-->
+    <article class="card rounded shadow border">
+      <h3 class="card-title no_toc">
+        <a href="#">Titolo h3</a>
+      </h3>
+      <div class="card-body">
+        <p class="card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
+        <footer class="card-related">
+          <time class="card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
+        </footer>
+      </div>
+    </article>
+    <!--end card-->
+  </div>
+  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+    <!--start card-->
+    <article class="card rounded shadow-lg border">
+      <h3 class="card-title no_toc">
+        <a href="#">Titolo h3</a>
+      </h3>
+      <div class="card-body">
+        <p class="card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
+        <footer class="card-related">
+          <time class="card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
+        </footer>
       </div>
     </article>
     <!--end card-->
