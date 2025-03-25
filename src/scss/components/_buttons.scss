@@ -33,8 +33,7 @@
   text-decoration: none;
   vertical-align: middle;
   white-space: initial;
-  width: auto;
-  // @include box-shadow(var(--#{$prefix}btn-box-shadow));
+  width: auto; // prevent buttons from stretching full width
   transition: all var(--#{$prefix}transition-instant) ease-in-out;
   cursor: if($enable-button-pointers, pointer, null);
   user-select: none;
