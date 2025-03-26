@@ -235,7 +235,7 @@ Per scelte di elevazione rispetto al contesto si possono usare le versioni con o
 
 {% capture callout %}
 
-#### Accessibilità
+#### Accessibilità contrasto
 
 È necessario avere un rapporto di contrasto colore di almeno 3:1 tra gli elementi grafici e con lo sfondo. 
 
