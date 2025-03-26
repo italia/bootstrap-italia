@@ -22,7 +22,7 @@ Per usare titoli con l'icona a lato si usa la classe `.card-title-icon` sull'ele
 
 Se è presente un'**immagine** è disponibile la classe `.card-img`. L'immagine deve essere inserita di seguito all'elemento `.card-title`, l'ordine di visualizzazione viene di fatto invertito via CSS applicando `order: -1;` al contenitore dell'immagine, ma rimane corretto nel DOM. 
 
-Il **corpo dell'elemento** vive nell'elemento `.card-body` che applica le corrette spaziature. È possibile usare più `.card-body`, ad esempio per permettere di separare un blocco lista `.list-group` utile per riprodurre per esempio un elenco di collegamenti correlati.
+Il **corpo dell'elemento** vive nell'elemento `.card-body` che applica le corrette spaziature. È possibile usare più `.card-body`, ad esempio per permettere di separare un blocco lista `.list-group` utile per riprodurre per esempio un elenco di collegamenti correlati. 
 
 Gli elementi di **metadati** della Card (tassonomie, stato e data) sono compresi in un elemento `footer` per facilitarne l'individuazione nel markup.
 L'elemento `footer`, con classe `.card-related`, può vivere dentro il `.card-body` o, in alternativa, è possibile associargli la classe `.card-footer` per separarlo da questo visivamente e, nel caso di card a tutta altezza, averlo sempre attaccato al bordo inferiore.
@@ -51,10 +51,12 @@ Attenzione alle info necessarie per lettori schermo, in particolar modo sui **me
   <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
     <!--start card-->
     <article class="card card-img card-height-full card-border-top card-border-top-test rounded shadow-sm border">
+      <!--first element is the title-->
       <h3 class="card-title card-title-icon no_toc">
         <a href="#">Titolo contenuto può essere anche lungo così o andare oltre</a>
         <div><svg class="icon icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg></div>
       </h3>
+      <!--second element is the image if present-->
       <div class="img-responsive-wrapper">
         <div class="img-responsive Zimg-responsive-panoramic">
           <figure class="img-wrapper">
@@ -62,6 +64,7 @@ Attenzione alle info necessarie per lettori schermo, in particolar modo sui **me
           </figure>
         </div>
       </div>
+      <!--follow the body-->
       <div class="card-body">
         <p class="card-subtitle no_toc">Sottotitolo o periodo</p>
         <address class="card-signature">di Maria Verde</address>
@@ -69,16 +72,14 @@ Attenzione alle info necessarie per lettori schermo, in particolar modo sui **me
         <p class="card-text">Se ci fosse un secondo paragrafo <a href="#" class="card-link">con un link</a> questa è la resa visiva.</p>
         <a href="#" class="card-link">Un link</a>
         <a href="#" class="card-link">Un altro link</a>
-        </div>
         <ul class="list-group list-group-flush">
           <li class="list-group-item"><a href="#" class="card-link">Un link in elenco</a></li>
           <li class="list-group-item"><a href="#" class="card-link">Un altro link in elenco</a></li>
           <li class="list-group-item">Un item elenco senza link</li>
         </ul>
-        <div class="card-body">
-          <a href="#" class="card-link">Un link</a>
-          <a href="#" class="card-link">Un altro link</a>
-          <a href="#" class="btn btn-primary">Una azione</a>
+        <a href="#" class="card-link">Un link</a>
+        <a href="#" class="card-link">Un altro link</a>
+        <a href="#" class="btn btn-primary">Una azione</a>
         <footer class="card-related">
           <div class="card-taxonomy">
             <a href="#" class="card-category card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
@@ -94,28 +95,28 @@ Attenzione alle info necessarie per lettori schermo, in particolar modo sui **me
               </a></li>
             </ul>
           </div>
-          <time class="card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
+         <time class="card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
         </footer>
       </div>
       <footer class="card-related card-footer">
-          <div class="card-taxonomy">
-            <a href="#" class="card-category card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
-            <ul class="card-chips chips-list" aria-label="Argomenti correlati: ">
-              <li class="list-item"><a class="chip chip-simple chip-sm" href="#">
-                <span class="visually-hidden">Argomento: </span><span class="chip-label">Sviluppo interfaccia</span>
-              </a></li>
-              <li class="list-item"><a class="chip chip-simple chip-sm" href="#">
-                <span class="visually-hidden">Argomento: </span><span class="chip-label">Open source</span>
-              </a></li>
-              <li class="list-item"><a class="chip chip-simple chip-sm" href="#">
-                <span class="visually-hidden">Argomento: </span><span class="chip-label">Progettazione interfaccia</span>
-              </a></li>
-            </ul>
-          </div>
-          <time class="card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
-        </footer>
+        <div class="card-taxonomy">
+          <a href="#" class="card-category card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
+          <ul class="card-chips chips-list" aria-label="Argomenti correlati: ">
+            <li class="list-item"><a class="chip chip-simple chip-sm" href="#">
+              <span class="visually-hidden">Argomento: </span><span class="chip-label">Sviluppo interfaccia</span>
+            </a></li>
+            <li class="list-item"><a class="chip chip-simple chip-sm" href="#">
+              <span class="visually-hidden">Argomento: </span><span class="chip-label">Open source</span>
+            </a></li>
+            <li class="list-item"><a class="chip chip-simple chip-sm" href="#">
+              <span class="visually-hidden">Argomento: </span><span class="chip-label">Progettazione interfaccia</span>
+            </a></li>
+          </ul>
+        </div>
+        <time class="card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
+      </footer>
       <div class="card-footer" aria-label="Azioni correlate:">
-        <button href="#" type="button" class="btn btn-outline-primary btn-xs btn-icon Zd-md-block">Azione secondaria</button>
+        <button href="#" type="button" class="btn btn-outline-secondary btn-icon Zd-md-block">Azione secondaria</button>
         <a href="#" class="card-link">Link secondario</a>
       </div>
     </article>
@@ -150,15 +151,10 @@ Attenzione alle info necessarie per lettori schermo, in particolar modo sui **me
       <div class="card-body">
         <p class="card-subtitle no_toc">Sottotitolo o periodo</p>
         <p class="card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
-        <footer class="card-related">
-          <div class="card-taxonomy">
-            <a href="#" class="card-category card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
-          </div>
-          <time class="card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
-        </footer>
       </div>
       <div class="card-footer" aria-label="Link correlati:">
         <a href="#" class="card-link">Link secondario</a>
+        <a href="#" class="card-link">Altro link secondario</a>
       </div>
     </article>
     <!--end card-->
@@ -192,12 +188,13 @@ Attenzione alle info necessarie per lettori schermo, in particolar modo sui **me
   <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
     <!--start card-->
     <article class="card rounded shadow-sm border mb-3">
-      <h4 class="card-title card-title-icon h5 no_toc">
-        <a href="#">Titolo un po' lungo ad esempio di un bando a cui poter partecipare h4 visto h5</a>
+      <h4 class="card-title card-title-icon no_toc">
+        <a href="#">Titolo lungo ad esempio di bando a cui poter partecipare h4</a>
         <div><svg class="icon icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg></div>
       </h4>
       <div class="card-body">
         <p class="card-subtitle no_toc">Sottotitolo o periodo</p>
+        <p class="card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
         <footer class="card-related">
           <div class="card-taxonomy">
             <div class="chip chip-simple chip-sm chip-success">
@@ -208,9 +205,9 @@ Attenzione alle info necessarie per lettori schermo, in particolar modo sui **me
         </footer>
       </div>
       <div class="card-footer" aria-label="Azioni correlate:">
-        <button href="#" type="button" class="btn btn-outline-primary btn-xs btn-icon Zd-md-block">
+        <button href="#" type="button" class="btn btn-outline-secondary btn-icon Zd-md-block">
           <span>Azione secondaria</span>
-          <svg class="icon icon-primary ms-2" aria-hidden="true"><use href="/dist/svg/sprites.svg#it-arrow-right"></use></svg>
+          <svg class="icon icon-secondary ms-2" aria-hidden="true"><use href="/dist/svg/sprites.svg#it-arrow-right"></use></svg>
         </button>
       </div>
     </article>

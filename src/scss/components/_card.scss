@@ -26,12 +26,26 @@
   margin-bottom: 0;
 }
 
-.card-link {
-  &:hover {
-    text-decoration: if($link-hover-decoration == underline, none, null);
-  }
+.card-footer {
 
-  + .card-link {
+  margin-left: var(--#{$prefix}card-spacer-x);
+  margin-right: var(--#{$prefix}card-spacer-x);
+
+  .card-link {
+    color: $secondary;
+
+    &:hover {
+      color: color-hover($secondary);
+    }
+  }
+}
+
+.card-link {
+  // &:hover {
+  //   text-decoration: if($link-hover-decoration == underline, none, null);
+  // }
+
+  +.card-link {
     margin-left: var(--#{$prefix}card-spacer-x);
   }
 }
@@ -53,7 +67,7 @@
 }
 
 .card-footer {
-  padding: var(--#{$prefix}card-cap-padding-y) var(--#{$prefix}card-cap-padding-x);
+  padding: var(--#{$prefix}card-cap-padding-y) 0;
   color: var(--#{$prefix}card-cap-color);
   background-color: var(--#{$prefix}card-cap-bg);
   border-top: var(--#{$prefix}card-border-width) solid var(--#{$prefix}card-border-color);
@@ -187,7 +201,7 @@
     .card {
       height: auto !important;
 
-      & + .card {
+      &+.card {
         margin-top: 1rem;
       }
     }
@@ -1055,6 +1069,7 @@
     min-width: 0; // See https://github.com/twbs/bootstrap/pull/22740#issuecomment-305868106
     height: var(--#{$prefix}card-height);
     padding: 0;
+    padding-bottom: var(--#{$prefix}card-spacer-y);
     position: relative;
     width: 100%;
     word-wrap: break-word;
@@ -1168,6 +1183,7 @@
         flex-wrap: wrap;
         justify-content: flex-end;
         align-items: flex-end;
+        padding-bottom: var(--bs-card-cap-padding-y);
       }
 
       .card-taxonomy {
@@ -1210,9 +1226,10 @@
       display: none; // XXX <<< rimuovere al merge?
     }
 
-    > .list-group {
-      border-top: inherit;
-      border-bottom: inherit;
+    >.list-group,
+    .card-body>.list-group {
+      border-top: 1px solid var(--bs-list-group-border-color);
+      border-bottom: 1px solid var(--bs-list-group-border-color);
 
       margin-top: calc(2 * var(--#{$prefix}card-spacer-y));
       margin-bottom: calc(2 * var(--#{$prefix}card-spacer-y));
@@ -1232,10 +1249,19 @@
       }
     }
 
+    .card-body>.list-group {
+      margin-top: calc(4 * var(--#{$prefix}card-spacer-y));
+      margin-bottom: calc(4 * var(--#{$prefix}card-spacer-y));
+
+      .list-group-item {
+        padding: var(--bs-list-group-item-padding-y) 0;
+      }
+    }
+
     // Due to specificity of the above selector (`.card > .list-group`), we must
     // use a child selector here to prevent double borders.
-    > .card-header + .list-group,
-    > .list-group + .card-footer {
+    >.card-header+.list-group,
+    >.list-group+.card-footer {
       border-top: 0;
     }
 
@@ -1303,12 +1329,12 @@
       // }
 
       .img-responsive-wrapper {
-        order: -1;
+        order: -1; // XXX a11y
 
         .img-responsive {
           padding-bottom: 61.29%;
-
           /* image proportion 310 x 190 */
+
           &.img-responsive-panoramic {
             padding-bottom: 30.645%;
             /* image proportion 310 x 95 */
@@ -1317,10 +1343,13 @@
       }
 
       &.rounded .img-responsive-wrapper {
-        &:is(:first-child) {
-          // XXX SOLO IL PRIMO FIGLIO... NON PER FORZA IMMAGINE...
-          border-top-left-radius: $border-radius;
-          border-top-right-radius: $border-radius;
+
+        &:is(:first-child),
+        &:is(:nth-child(2)) {
+          // XXX SOLO IL PRIMO FIGLIO... O IL SECONDO DOPO H... XXX
+          // MA SE C'È BORDER-TOP? XXX
+          border-top-left-radius: 3px;
+          border-top-right-radius: 3px;
         }
       }
     }
@@ -1359,7 +1388,7 @@
         display: none;
       }
 
-      & > .read-more {
+      &>.read-more {
         &::before {
           content: '';
           height: $v-gap * 3;
@@ -1371,6 +1400,8 @@
     }
 
     &.card-border-top {
+      // XXX spostare sotto di 4 px tutto se presente... per evitare sovrapposizioni!
+
       &::after {
         content: '';
         display: block;
@@ -1384,7 +1415,7 @@
 
       &.rounded {
         &::after {
-          border-radius: 4px 4px 0 0;
+          border-radius: 3px 3px 0 0;
         }
       }
 
@@ -1401,6 +1432,7 @@
       }
 
       &.card-border-top-test {
+
         // xxx
         &::after {
           background: red; // xxx
@@ -1432,11 +1464,12 @@
   // Contextual variation
   .row {
     [class*='col-'] {
+
       //car variation inside cols
-      > .card-wrapper {
+      >.card-wrapper {
         height: 100%;
 
-        > .card {
+        >.card {
           height: 100%;
         }
       }
