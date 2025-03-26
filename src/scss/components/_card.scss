@@ -26,26 +26,12 @@
   margin-bottom: 0;
 }
 
-.card-footer {
-
-  margin-left: var(--#{$prefix}card-spacer-x);
-  margin-right: var(--#{$prefix}card-spacer-x);
-
-  .card-link {
-    color: $secondary;
-
-    &:hover {
-      color: color-hover($secondary);
-    }
-  }
-}
-
 .card-link {
   // &:hover {
   //   text-decoration: if($link-hover-decoration == underline, none, null);
   // }
 
-  +.card-link {
+  + .card-link {
     margin-left: var(--#{$prefix}card-spacer-x);
   }
 }
@@ -67,13 +53,21 @@
 }
 
 .card-footer {
-  padding: var(--#{$prefix}card-cap-padding-y) 0;
+  padding: var(--#{$prefix}card-cap-padding-y) var(--#{$prefix}card-cap-padding-x);
   color: var(--#{$prefix}card-cap-color);
   background-color: var(--#{$prefix}card-cap-bg);
   border-top: var(--#{$prefix}card-border-width) solid var(--#{$prefix}card-border-color);
 
   &:last-child {
     @include border-radius(0 0 var(--#{$prefix}card-inner-border-radius) var(--#{$prefix}card-inner-border-radius));
+  }
+
+  .card-link {
+    color: $secondary;
+
+    &:hover {
+      color: color-hover($secondary);
+    }
   }
 }
 
@@ -201,7 +195,7 @@
     .card {
       height: auto !important;
 
-      &+.card {
+      & + .card {
         margin-top: 1rem;
       }
     }
@@ -1041,6 +1035,9 @@
 
 // XXX
 // Card To be
+// più alcuni hacks all'inizio da riportare qui una volta finite le lavorazioni
+// ricordarsi di fare refactor finale e pulizia
+// sistemare e razionalizzare spaziature
 // XXX
 
 .card-to-be {
@@ -1226,8 +1223,8 @@
       display: none; // XXX <<< rimuovere al merge?
     }
 
-    >.list-group,
-    .card-body>.list-group {
+    > .list-group,
+    .card-body > .list-group {
       border-top: 1px solid var(--bs-list-group-border-color);
       border-bottom: 1px solid var(--bs-list-group-border-color);
 
@@ -1249,7 +1246,7 @@
       }
     }
 
-    .card-body>.list-group {
+    .card-body > .list-group {
       margin-top: calc(4 * var(--#{$prefix}card-spacer-y));
       margin-bottom: calc(4 * var(--#{$prefix}card-spacer-y));
 
@@ -1260,8 +1257,8 @@
 
     // Due to specificity of the above selector (`.card > .list-group`), we must
     // use a child selector here to prevent double borders.
-    >.card-header+.list-group,
-    >.list-group+.card-footer {
+    > .card-header + .list-group,
+    > .list-group + .card-footer {
       border-top: 0;
     }
 
@@ -1343,7 +1340,6 @@
       }
 
       &.rounded .img-responsive-wrapper {
-
         &:is(:first-child),
         &:is(:nth-child(2)) {
           // XXX SOLO IL PRIMO FIGLIO... O IL SECONDO DOPO H... XXX
@@ -1388,7 +1384,7 @@
         display: none;
       }
 
-      &>.read-more {
+      & > .read-more {
         &::before {
           content: '';
           height: $v-gap * 3;
@@ -1432,7 +1428,6 @@
       }
 
       &.card-border-top-test {
-
         // xxx
         &::after {
           background: red; // xxx
@@ -1464,12 +1459,11 @@
   // Contextual variation
   .row {
     [class*='col-'] {
-
       //car variation inside cols
-      >.card-wrapper {
+      > .card-wrapper {
         height: 100%;
 
-        >.card {
+        > .card {
           height: 100%;
         }
       }
