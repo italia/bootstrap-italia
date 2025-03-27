@@ -1,10 +1,11 @@
 @use 'sass:math';
 
-.card-to-be { // XXX
+.card-to-be {
+  // XXX
   .card {
     // scss-docs-start card-css-vars
     --#{$prefix}card-spacer-y: 8px; // #{$card-spacer-y};
-    --#{$prefix}card-spacer-x: 16px; // #{$card-spacer-x}; 
+    --#{$prefix}card-spacer-x: 16px; // #{$card-spacer-x};
     --#{$prefix}card-title-spacer-y: 8px; // #{$card-title-spacer-y};
     --#{$prefix}card-border-width: #{$card-border-width};
     --#{$prefix}card-border-color: #{$card-border-color};
@@ -62,7 +63,7 @@
     }
 
     .card-img {
-      width: 100%; 
+      width: 100%;
       @include border-top-radius(var(--#{$prefix}card-inner-border-radius));
       @include border-bottom-radius(var(--#{$prefix}card-inner-border-radius));
     }
@@ -209,21 +210,23 @@
           padding-bottom: 61.29%; // image proportion 310 x 190
 
           &.img-responsive-panoramic {
-            padding-bottom: 30.645%; // image proportion 310 x 95 
+            padding-bottom: 30.645%; // image proportion 310 x 95
           }
         }
       }
 
       &.rounded .img-responsive-wrapper {
         &:is(:first-child),
-        &:is(:nth-child(2)) {  // XXX SOLO IL PRIMO FIGLIO... O IL SECONDO DOPO H... XXX MA SE C'È BORDER-TOP? XXX
+        &:is(:nth-child(2)) {
+          // XXX SOLO IL PRIMO FIGLIO... O IL SECONDO DOPO H... XXX MA SE C'È BORDER-TOP? XXX
           border-top-left-radius: 3px;
           border-top-right-radius: 3px;
         }
       }
     }
 
-    &.card-border-top {       // XXX spostare sotto di 4 px tutto se presente... per evitare sovrapposizioni!
+    &.card-border-top {
+      // XXX spostare sotto di 4 px tutto se presente... per evitare sovrapposizioni!
       &::after {
         content: '';
         display: block;
