@@ -59,7 +59,7 @@ Attenzione alle info necessarie per lettori schermo, in particolar modo sui **me
 <div class="row card-to-be">
   <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
     <!--start card-->
-    <article class="card card-img card-height-full card-border-top card-border-top-test rounded shadow-sm border">
+    <article class="card card-img card-height-full card-border-top card-border-top-danger rounded shadow-sm border">
       <!--first element is the title-->
       <h3 class="card-title card-title-icon no_toc">
         <a href="#">Titolo contenuto può essere anche lungo così o andare oltre</a>
