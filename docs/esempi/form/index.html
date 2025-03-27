@@ -20,7 +20,7 @@ title: Validazione Form
       <div class="col-12 col-md-4">
         <div class="form-group">
           <label for="nome">Campo testo</label>
-          <input type="text" class="form-control" id="nome" required />
+          <input type="text" class="form-control" id="nome" placeholder="Inserisci un testo" required />
         </div>
       </div>
       <div class="col-12 col-md-4">
@@ -110,13 +110,59 @@ title: Validazione Form
     <div class="row">
       <div class="col-12">
         <div class="form-group">
-          <div class="input-group">
+          <label class="active" for="etichetta_input_group">Input group lg</label>
+          <div class="input-group input-group-lg">
             <span class="input-group-text"><svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-pencil"></use></svg></span>
-            <label class="active" for="etichetta_input_group">Con Etichetta e placeholder</label>
             <input type="text" class="form-control" id="etichetta_input_group" name="etichetta_input_group" placeholder="Lorem Ipsum">
           </div>
         </div>
       </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="form-group">
+          <label class="active" for="etichetta_input_group">Input group sm</label>
+          <div class="input-group input-group-sm">
+            <span class="input-group-text"><svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-pencil"></use></svg></span>
+            <input type="text" class="form-control" id="etichetta_input_group" name="etichetta_input_group" placeholder="Lorem Ipsum">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-md-4">
+        <div class="form-group">
+          <label for="nome">Campo testo</label>
+          <input type="text" class="form-control" id="nome" placeholder="Inserisci un testo" required disabled />
+        </div>
+      </div>
+    </div>
+    <div class="row mt-5 mb-4">
+      <div class="col-12">
+        <h2>Dimensioni</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-md-4">
+         <div class="form-group">
+          <label class="active" for="input-text-lg">Grande</label>
+          <input type="text" class="form-control form-control-lg" id="input-text-lg" placeholder="Inserisci il tuo nome">
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="form-group">
+          <label class="active" for="input-text-normal">Normale</label>
+          <input type="text" class="form-control" id="input-text-normal" placeholder="Inserisci il tuo nome">
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="form-group">
+          <label class="active" for="input-text-sm">Piccolo</label>
+          <input type="text" class="form-control form-control-sm" id="input-text-sm" placeholder="Inserisci il tuo nome">
+        </div>
+      </div>
+
+        
     </div>
 
     <div class="row mb-4">
