@@ -1,15 +1,13 @@
 @use 'sass:math';
 
-.card-to-be {
+.card-to-be { // XXX
   .card {
     // scss-docs-start card-css-vars
     --#{$prefix}card-spacer-y: 8px; // #{$card-spacer-y};
-    --#{$prefix}card-spacer-x: 16px; // #{$card-spacer-x}; // XXX
+    --#{$prefix}card-spacer-x: 16px; // #{$card-spacer-x}; 
     --#{$prefix}card-title-spacer-y: 8px; // #{$card-title-spacer-y};
     --#{$prefix}card-border-width: #{$card-border-width};
     --#{$prefix}card-border-color: #{$card-border-color};
-    --#{$prefix}card-border-radius: #{$card-border-radius};
-    // --#{$prefix}card-box-shadow: #{$card-box-shadow};
     --#{$prefix}card-inner-border-radius: #{$card-inner-border-radius};
     --#{$prefix}card-cap-padding-y: 16px; // #{$card-cap-padding-y}; // XXX
     --#{$prefix}card-cap-padding-x: 16px; // #{$card-cap-padding-x}; // XXX
@@ -18,8 +16,6 @@
     --#{$prefix}card-height: #{$card-height};
     --#{$prefix}card-color: #{$card-color};
     --#{$prefix}card-bg: #{$card-bg};
-    // --#{$prefix}card-img-overlay-padding: #{$card-img-overlay-padding};
-    // --#{$prefix}card-group-margin: #{$card-group-margin};
     // scss-docs-end card-css-vars
     display: flex;
     flex-direction: column;
@@ -32,20 +28,7 @@
     word-wrap: break-word;
     background-color: var(--#{$prefix}card-bg);
     background-clip: border-box;
-    // border: var(--#{$prefix}card-border-width) solid var(--#{$prefix}card-border-color); // XXX
-    @include border-radius(var(--#{$prefix}card-border-radius));
     @include box-shadow(var(--#{$prefix}card-box-shadow));
-
-    @each $color, $value in $theme-colors {
-      &.card-bg-#{$color} {
-        background-color: $value;
-
-        .card-title,
-        .card-body .card-text {
-          color: $white;
-        }
-      }
-    }
 
     &.card-height-auto {
       height: auto;
@@ -79,7 +62,7 @@
     }
 
     .card-img {
-      width: 100%; // Required because we use flexbox and this inherently applies align-self: stretch
+      width: 100%; 
       @include border-top-radius(var(--#{$prefix}card-inner-border-radius));
       @include border-bottom-radius(var(--#{$prefix}card-inner-border-radius));
     }
@@ -213,42 +196,34 @@
       }
     }
 
-    // Due to specificity of the above selector (`.card > .list-group`), we must
-    // use a child selector here to prevent double borders.
     > .card-header + .list-group,
     > .list-group + .card-footer {
       border-top: 0;
     }
 
-    // cards with img top
     &.card-img {
       .img-responsive-wrapper {
         order: -1;
 
         .img-responsive {
-          padding-bottom: 61.29%;
-          /* image proportion 310 x 190 */
+          padding-bottom: 61.29%; // image proportion 310 x 190
 
           &.img-responsive-panoramic {
-            padding-bottom: 30.645%;
-            /* image proportion 310 x 95 */
+            padding-bottom: 30.645%; // image proportion 310 x 95 
           }
         }
       }
 
       &.rounded .img-responsive-wrapper {
         &:is(:first-child),
-        &:is(:nth-child(2)) {
-          // XXX SOLO IL PRIMO FIGLIO... O IL SECONDO DOPO H... XXX MA SE C'È BORDER-TOP? XXX
+        &:is(:nth-child(2)) {  // XXX SOLO IL PRIMO FIGLIO... O IL SECONDO DOPO H... XXX MA SE C'È BORDER-TOP? XXX
           border-top-left-radius: 3px;
           border-top-right-radius: 3px;
         }
       }
     }
 
-    &.card-border-top {
-      // XXX spostare sotto di 4 px tutto se presente... per evitare sovrapposizioni!
-
+    &.card-border-top {       // XXX spostare sotto di 4 px tutto se presente... per evitare sovrapposizioni!
       &::after {
         content: '';
         display: block;
@@ -279,7 +254,7 @@
       }
 
       &.card-border-top-test {
-        // xxx tutti i colori? utility?
+        // xxx tutti i colori? creare utility?
         &::after {
           background: red; // xxx
         }

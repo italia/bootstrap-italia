@@ -12,6 +12,15 @@ toc: true
 Durante le lavorazione in questa PR il componente Card classico è stato raccolto in `.row` con classe `.card-old-one`, in tutte le sue varianti. La nuova versione "to be" è raccolta in righe con classi `.card-to-be`. Questo è stato fatto per semplificare il refactoring dei SCSS. A fine lavorazioni l’obiettivo è far convivere per un po’ di tempo i CSS per le nuove Card To Be insieme alle vecchie, per permettere un passaggio graduale. **Al momento è tutto in corso d'opera, be polite.** 
 {% endcapture %}{% include callout.html content=callout type="warning" %}
 
+## To do
+
+1. rifinire gestione spaziature e dimensioni con variabili e resa visiva
+2. aggiungere modalità ed esempi per gestione gruppi di card (colonne, flex, etc.)
+3. aggiungere strutture per card varianti editoriali "mini" e "large"
+4. preparare una pagina di documentazione divisa per le varianti corrette (editoriali, servizio, ...) e con le "utility" a margine (ombre, gruppi, ...)
+5. sistemare file SCSS per far sì che anche togliendo `.card-old-one` dalle row delle Card classiche non si rompa il lavoro su queste `.card-to-be`, per permettere la convivenza delle due versioni per un po' di tempo. Avremo probabilmente bisogno di alcuni "reset" in testa al nuovo `card-to-be.scss`, da rimuovere alla rimozione delle Card classiche. 
+5. ... 
+
 ## Strutture card
 
 La **card** è un elemento `article` con come primo figlio il titolo heading `.card-title`.
@@ -235,9 +244,9 @@ Per scelte di elevazione rispetto al contesto si possono usare le versioni con o
 
 {% capture callout %}
 
-#### Accessibilità contrasto
+#### Accessibilità contrasto con lo sfondo
 
-È necessario avere un rapporto di contrasto colore di almeno 3:1 tra gli elementi grafici e con lo sfondo. 
+In un mondo ideale, se la "Card" è una struttura visiva e semantica, sarebbe auspicabile avere un rapporto di contrasto colore di almeno 3:1 tra questa e lo sfondo. Si suggerisce di usare bordi, livelli di ombre e anche il colore di sfondo retrostante per evidenziarle.   
 
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
@@ -277,6 +286,53 @@ Per scelte di elevazione rispetto al contesto si possono usare le versioni con o
   <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
     <!--start card-->
     <article class="card rounded shadow-lg border">
+      <h3 class="card-title no_toc">
+        <a href="#">Titolo h3</a>
+      </h3>
+      <div class="card-body">
+        <p class="card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
+        <footer class="card-related">
+          <time class="card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
+        </footer>
+      </div>
+    </article>
+    <!--end card-->
+  </div>
+</div>
+<div class="row card-to-be">
+  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+    <!--start card-->
+    <article class="card rounded shadow-sm">
+      <h3 class="card-title no_toc">
+        <a href="#">Titolo h3</a>
+      </h3>
+      <div class="card-body">
+        <p class="card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
+        <footer class="card-related">
+          <time class="card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
+        </footer>
+      </div>
+    </article>
+    <!--end card-->
+  </div>
+  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+    <!--start card-->
+    <article class="card rounded shadow">
+      <h3 class="card-title no_toc">
+        <a href="#">Titolo h3</a>
+      </h3>
+      <div class="card-body">
+        <p class="card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
+        <footer class="card-related">
+          <time class="card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
+        </footer>
+      </div>
+    </article>
+    <!--end card-->
+  </div>
+  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+    <!--start card-->
+    <article class="card rounded shadow-lg">
       <h3 class="card-title no_toc">
         <a href="#">Titolo h3</a>
       </h3>
