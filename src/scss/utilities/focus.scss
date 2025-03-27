@@ -1,4 +1,4 @@
-:focus:not(.focus--mouse),
+:focus:not([data-focus-mouse='true']),
 %focus,
 .it-carousel-wrapper .splide__pagination button:focus:not(.focus--mouse),
 .upload:focus:not(.focus--mouse) + label,
@@ -7,8 +7,8 @@
 .rating input:focus:not(.focus--mouse) + label svg {
   border-color: $focus-outline-color-out !important;
   box-shadow:
-    0 0 0 2px $focus-outline-color-in,
-    0 0 0 5px $focus-outline-color-out !important;
+    0 0 0 2px var(--#{$prefix}color-border-inverse),
+    0 0 0 5px var(--#{$prefix}color-outline-focus) !important;
   outline: 3px solid transparent !important;
   outline-offset: 3px !important;
 }
@@ -17,7 +17,6 @@
   box-shadow: none !important;
 }
 
-.focus--mouse:not(.btn),
 %focusmouse {
   border-color: inherit !important;
   box-shadow: none !important;
