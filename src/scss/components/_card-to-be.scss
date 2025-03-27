@@ -144,7 +144,11 @@ article.card {
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: flex-end;
-      align-items: flex-end;
+      align-items: last baseline;
+    }
+
+    &.card-footer:not(:last-child) {
+      padding-bottom: 8px;
     }
 
     .card-taxonomy {
@@ -161,12 +165,17 @@ article.card {
 
     // If more than one Tag, use a list
     ul.card-chips {
-      list-style-type: none;
-      padding-left: 0;
-      line-height: 1.5;
-      margin-bottom: 0;
       display: flex;
       flex-wrap: wrap;
+      gap: 8px; 
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      line-height: 1.5;
+    }
+
+    .chip {
+      margin:0;
     }
 
     a.chip {
@@ -175,17 +184,10 @@ article.card {
         text-decoration: none;
     }
 
-    .chip {
-      margin-top: 6px;
-      margin-bottom: 6px;
-      margin-right: 12px;
-    }
-
     // Card date, use <time> if possible
     .card-date {
       color: $secondary;
       // font-size: $card-category-size;
-      align-self: center;
     }
   }
 
