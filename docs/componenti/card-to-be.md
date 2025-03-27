@@ -89,23 +89,6 @@ Attenzione alle info necessarie per lettori schermo, in particolar modo sui **me
         <a href="#" class="card-link">Un link</a>
         <a href="#" class="card-link">Un altro link</a>
         <a href="#" class="btn btn-primary">Una azione</a>
-        <footer class="card-related">
-          <div class="card-taxonomy">
-            <a href="#" class="card-category card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
-            <ul class="card-chips chips-list" aria-label="Argomenti correlati: ">
-              <li class="list-item"><a class="chip chip-simple chip-sm" href="#">
-                <span class="visually-hidden">Argomento: </span><span class="chip-label">Sviluppo interfaccia</span>
-              </a></li>
-              <li class="list-item"><a class="chip chip-simple chip-sm" href="#">
-                <span class="visually-hidden">Argomento: </span><span class="chip-label">Open source</span>
-              </a></li>
-              <li class="list-item"><a class="chip chip-simple chip-sm" href="#">
-                <span class="visually-hidden">Argomento: </span><span class="chip-label">Progettazione interfaccia</span>
-              </a></li>
-            </ul>
-          </div>
-         <time class="card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
-        </footer>
       </div>
       <footer class="card-related card-footer">
         <div class="card-taxonomy">
@@ -184,9 +167,6 @@ Attenzione alle info necessarie per lettori schermo, in particolar modo sui **me
       <div class="card-body">
         <address class="card-signature">di Maria Verde</address>
         <p class="card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
-        <footer class="card-related">
-          <time class="card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
-        </footer>
       </div>
       <footer class="card-related card-footer">
         <time class="card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
@@ -204,15 +184,15 @@ Attenzione alle info necessarie per lettori schermo, in particolar modo sui **me
       <div class="card-body">
         <p class="card-subtitle no_toc">Sottotitolo o periodo</p>
         <p class="card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
-        <footer class="card-related">
-          <div class="card-taxonomy">
-            <div class="chip chip-simple chip-sm chip-success">
-              <span class="visually-hidden">Stato della lavorazione: </span><span class="chip-label">Aperto</span>
-           </div>
-          </div>
-          <span class="card-date text-warning"><strong>Scadenza: </strong><time class="card-date text-warning" datetime="10/12/{{ 'now' | date: "%Y" }}">31 gennaio, {{ 'now' | date: "%Y" }}</time></span>
-        </footer>
       </div>
+      <footer class="card-related card-footer">
+        <div class="card-taxonomy">
+          <div class="chip chip-simple chip-sm chip-success">
+            <span class="visually-hidden">Stato della lavorazione: </span><span class="chip-label">Aperto</span>
+          </div>
+        </div>
+        <span class="card-date text-warning"><strong>Scadenza: </strong><time class="card-date text-warning" datetime="10/12/{{ 'now' | date: "%Y" }}">31 gennaio, {{ 'now' | date: "%Y" }}</time></span>
+      </footer>
       <div class="card-footer" aria-label="Azioni correlate:">
         <button href="#" type="button" class="btn btn-outline-secondary btn-icon Zd-md-block">
           <span>Azione secondaria</span>
@@ -261,10 +241,10 @@ In un mondo ideale, se la "Card" è una struttura visiva e semantica, sarebbe au
       </h3>
       <div class="card-body">
         <p class="card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
-        <footer class="card-related">
-          <time class="card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
-        </footer>
       </div>
+      <footer class="card-related card-footer">
+        <time class="card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
+      </footer>
     </article>
     <!--end card-->
   </div>
@@ -276,10 +256,10 @@ In un mondo ideale, se la "Card" è una struttura visiva e semantica, sarebbe au
       </h3>
       <div class="card-body">
         <p class="card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
-        <footer class="card-related">
-          <time class="card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
-        </footer>
       </div>
+      <footer class="card-related card-footer">
+        <time class="card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
+      </footer>
     </article>
     <!--end card-->
   </div>
@@ -291,10 +271,10 @@ In un mondo ideale, se la "Card" è una struttura visiva e semantica, sarebbe au
       </h3>
       <div class="card-body">
         <p class="card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
-        <footer class="card-related">
-          <time class="card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
-        </footer>
       </div>
+      <footer class="card-related card-footer">
+        <time class="card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
+      </footer>
     </article>
     <!--end card-->
   </div>
@@ -308,10 +288,10 @@ In un mondo ideale, se la "Card" è una struttura visiva e semantica, sarebbe au
       </h3>
       <div class="card-body">
         <p class="card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
-        <footer class="card-related">
-          <time class="card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
-        </footer>
       </div>
+      <footer class="card-related card-footer">
+        <time class="card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
+      </footer>
     </article>
     <!--end card-->
   </div>
@@ -323,10 +303,10 @@ In un mondo ideale, se la "Card" è una struttura visiva e semantica, sarebbe au
       </h3>
       <div class="card-body">
         <p class="card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
-        <footer class="card-related">
-          <time class="card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
-        </footer>
       </div>
+      <footer class="card-related card-footer">
+        <time class="card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
+      </footer>
     </article>
     <!--end card-->
   </div>
@@ -338,10 +318,10 @@ In un mondo ideale, se la "Card" è una struttura visiva e semantica, sarebbe au
       </h3>
       <div class="card-body">
         <p class="card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
-        <footer class="card-related">
-          <time class="card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
-        </footer>
       </div>
+      <footer class="card-related card-footer">
+        <time class="card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
+      </footer>
     </article>
     <!--end card-->
   </div>
