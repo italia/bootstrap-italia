@@ -6,7 +6,19 @@
   .card-group {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+
+    // gap and fallback
+    margin: -0.5rem;
+    > .card {
+      margin: 0.5rem;
+    }
+    @supports (gap: 1rem) {
+      margin: 0;
+      gap: 1rem;
+      > .card {
+        margin: 0;
+      }
+    }
 
     >.card {
       // Default stacked on mobile
@@ -215,7 +227,12 @@ article.card {
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: flex-end;
-      align-items: last baseline;
+
+      // Align items baseline and fallback
+      align-items: flex-end;
+      @supports (align-items: last baseline) {
+        align-items: last baseline;
+      }
 
       &.card-footer {
         padding-bottom: 16px;
@@ -320,8 +337,8 @@ article.card {
     &.rounded {
       .img-responsive-wrapper {
 
-        &:is(:first-child),
-        &:is(:nth-child(2)) {
+        &:first-child,
+        &:nth-child(2) {
           border-top-left-radius: var(--#{$prefix}card-inner-border-radius);
           border-top-right-radius: var(--#{$prefix}card-inner-border-radius);
         }
@@ -330,8 +347,8 @@ article.card {
       &.card-border-top {
         .img-responsive-wrapper {
 
-          &:is(:first-child),
-          &:is(:nth-child(2)) {
+          &:first-child,
+          &:nth-child(2) {
             border-top-left-radius: 0;
             border-top-right-radius: 0;
           }
@@ -427,8 +444,8 @@ article.card {
         &.rounded {
           .img-responsive-wrapper {
 
-            &:is(:first-child),
-            &:is(:nth-child(2)) {
+            &:first-child,
+            &:nth-child(2) {
               border-top-right-radius: 0 !important;
               border-bottom-left-radius: var(--bs-card-inner-border-radius);
             }
@@ -437,8 +454,8 @@ article.card {
           &.card-inline-reverse {
             .img-responsive-wrapper {
 
-              &:is(:first-child),
-              &:is(:nth-child(2)) {
+              &:first-child,
+              &:nth-child(2) {
                 border-top-left-radius: 0 !important;
                 border-bottom-left-radius: 0 !important;
                 border-top-right-radius: var(--bs-card-inner-border-radius) !important;
