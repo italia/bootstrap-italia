@@ -24,289 +24,339 @@
     'danger': $danger,
     'info': $info,
   );
-  // scss-docs-end card-css-vars
+// scss-docs-end card-css-vars
 
-  //
-  // Base card structure
-  //
-  .card,
-  article.card {
-    display: flex;
-    flex-direction: column;
-    min-width: 0; // See https://github.com/twbs/bootstrap/pull/22740#issuecomment-305868106
-    height: var(--#{$prefix}card-height);
-    padding: 0;
-    padding-bottom: var(--#{$prefix}card-spacer-y);
-    position: relative;
+//
+// Base card structure
+//
+.card,
+article.card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0; // See https://github.com/twbs/bootstrap/pull/22740#issuecomment-305868106
+  height: var(--#{$prefix}card-height);
+  padding: 0;
+  padding-bottom: var(--#{$prefix}card-spacer-y);
+  position: relative;
+  width: 100%;
+  word-wrap: break-word;
+  background-color: var(--#{$prefix}card-bg);
+  background-clip: border-box;
+  @include box-shadow(var(--#{$prefix}card-box-shadow));
+
+  &.card-height-auto {
+    height: auto;
+  }
+
+  &.card-height-full {
+    height: 100%;
+  }
+
+  .card-link {
+    +.card-link {
+      margin-left: var(--#{$prefix}card-spacer-x);
+    }
+  }
+
+  // Card title styles
+  .card-title {
+    margin-top: calc(2 * var(--#{$prefix}card-title-spacer-y));
+    margin-bottom: 0;
+    padding: 0 var(--#{$prefix}card-spacer-x);
+
+    &.card-title-icon {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .icon {
+        margin-right: -8px;
+        margin-left: 8px;
+      }
+    }
+  }
+
+  // Card image
+  .card-img {
     width: 100%;
-    word-wrap: break-word;
-    background-color: var(--#{$prefix}card-bg);
-    background-clip: border-box;
-    @include box-shadow(var(--#{$prefix}card-box-shadow));
+    @include border-top-radius(var(--#{$prefix}card-inner-border-radius));
+    @include border-bottom-radius(var(--#{$prefix}card-inner-border-radius));
+  }
 
-    &.card-height-auto {
-      height: auto;
+  // Card body and content
+  .card-body {
+    flex: 1 1 auto;
+    padding: var(--#{$prefix}card-spacer-y) var(--#{$prefix}card-spacer-x);
+    color: var(--#{$prefix}card-color);
+
+    // Card subtitle or event timeframe
+    .card-subtitle {
+      margin-bottom: var(--#{$prefix}card-title-spacer-y);
     }
 
-    &.card-height-full {
-      height: 100%;
-    }
-
-    .card-link {
-      + .card-link {
-        margin-left: var(--#{$prefix}card-spacer-x);
-      }
-    }
-
-    // Card title styles
-    .card-title {
-      margin-top: calc(2 * var(--#{$prefix}card-title-spacer-y));
-      margin-bottom: 0;
-      padding: 0 var(--#{$prefix}card-spacer-x);
-
-      &.card-title-icon {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-
-        .icon {
-          margin-right: -8px;
-          margin-left: 8px;
-        }
-      }
-    }
-
-    // Card image
-    .card-img {
-      width: 100%;
-      @include border-top-radius(var(--#{$prefix}card-inner-border-radius));
-      @include border-bottom-radius(var(--#{$prefix}card-inner-border-radius));
-    }
-
-    // Card body and content
-    .card-body {
-      flex: 1 1 auto;
-      padding: var(--#{$prefix}card-spacer-y) var(--#{$prefix}card-spacer-x);
-      color: var(--#{$prefix}card-color);
-
-      // Card subtitle or event timeframe
-      .card-subtitle {
-        margin-bottom: var(--#{$prefix}card-title-spacer-y);
-      }
-
-      // Card description
-      .card-text {
-        font-size: $card-p-size;
-        line-height: $card-p-l-h;
-        color: $card-p-color;
-
-        &:last-child {
-          margin-bottom: 0;
-        }
-      }
-
-      // Card author
-      .card-signature {
-        font-family: $font-family-monospace;
-        color: $card-p-color;
-        font-size: $card-signature-size;
-      }
-    }
-
-    // Card footer cap
-    .card-footer {
-      margin: 0 var(--#{$prefix}card-cap-padding-x);
-      padding: var(--#{$prefix}card-cap-padding-y) 0;
-      color: var(--#{$prefix}card-cap-color);
-      background-color: var(--#{$prefix}card-cap-bg);
-      border-top: var(--#{$prefix}card-border-width) solid var(--#{$prefix}card-border-color);
-
-      &:last-child {
-        @include border-radius(0 0 var(--#{$prefix}card-inner-border-radius) var(--#{$prefix}card-inner-border-radius));
-      }
-
-      .card-link {
-        color: $secondary;
-        font-size: 16px;
-
-        &:hover {
-          color: color-hover($secondary);
-        }
-      }
-    }
-
-    // Card metadata holder <footer>
-    footer {
-      margin-top: calc(2 * var(--#{$prefix}card-spacer-y));
-
-      &.card-related {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: flex-end;
-        align-items: last baseline;
-
-        &.card-footer {
-          padding-bottom: 16px;
-          padding-top: 8px;
-          border-top: none;
-        }
-      }
-
-      .card-taxonomy {
-        flex-grow: 1;
-      }
-
-      .card-category {
-        display: inline-block;
-        text-transform: uppercase;
-        font-size: 16px;
-        font-weight: 600;
-        letter-spacing: 0.5px;
-        margin-bottom: 8px;
-      }
-
-      // If more than one Tag, use a list
-      ul.card-chips {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-        margin: 0;
-        padding: 0;
-        list-style-type: none;
-        line-height: 1.5;
-      }
-
-      .chip {
-        margin: 0;
-      }
-
-      a.chip {
-        // XXX default?
-        color: $secondary;
-        text-decoration: none;
-      }
-
-      // Card date, use <time> if possible
-      .card-date {
-        color: $secondary;
-        font-size: 14px;
-      }
-    }
-
-    // Card can contain special lists, example: Related articles to a main Tag card
-    > .list-group,
-    .card-body > .list-group {
-      border-top: 1px solid var(--bs-list-group-border-color);
-      border-bottom: 1px solid var(--bs-list-group-borders-color);
-
-      margin-top: calc(2 * var(--#{$prefix}card-spacer-y));
-      margin-bottom: calc(2 * var(--#{$prefix}card-spacer-y));
-
+    // Card description
+    .card-text {
       font-size: $card-p-size;
       line-height: $card-p-l-h;
       color: $card-p-color;
 
-      &:first-child {
-        border-top-width: 0;
-        @include border-top-radius(var(--#{$prefix}card-inner-border-radius));
-      }
-
       &:last-child {
-        border-bottom-width: 0;
-        @include border-bottom-radius(var(--#{$prefix}card-inner-border-radius));
+        margin-bottom: 0;
       }
     }
 
-    .card-body > .list-group {
-      margin-top: calc(4 * var(--#{$prefix}card-spacer-y));
-      margin-bottom: calc(2 * var(--#{$prefix}card-spacer-y));
+    // Card author
+    .card-signature {
+      font-family: $font-family-monospace;
+      color: $card-p-color;
+      font-size: $card-signature-size;
+    }
+  }
 
-      .list-group-item {
-        padding: var(--bs-list-group-item-padding-y) 0;
+  // Card footer cap
+  .card-footer {
+    margin: 0 var(--#{$prefix}card-cap-padding-x);
+    padding: var(--#{$prefix}card-cap-padding-y) 0;
+    color: var(--#{$prefix}card-cap-color);
+    background-color: var(--#{$prefix}card-cap-bg);
+    border-top: var(--#{$prefix}card-border-width) solid var(--#{$prefix}card-border-color);
+
+    &:last-child {
+      @include border-radius(0 0 var(--#{$prefix}card-inner-border-radius) var(--#{$prefix}card-inner-border-radius));
+    }
+
+    .card-link {
+      color: $secondary;
+      font-size: 16px;
+
+      &:hover {
+        color: color-hover($secondary);
+      }
+    }
+  }
+
+  // Card metadata holder <footer>
+  footer {
+    margin-top: calc(2 * var(--#{$prefix}card-spacer-y));
+
+    &.card-related {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      align-items: last baseline;
+
+      &.card-footer {
+        padding-bottom: 16px;
+        padding-top: 8px;
+        border-top: none;
       }
     }
 
-    > .card-header + .list-group,
-    > .list-group + .card-footer {
-      border-top: 0;
+    .card-taxonomy {
+      flex-grow: 1;
     }
 
-    // Card image responsive wrapper and a11y DOM order hack
-    &.card-img {
+    .card-category {
+      display: inline-block;
+      text-transform: uppercase;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+    }
+
+    // If more than one Tag, use a list
+    ul.card-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      line-height: 1.5;
+    }
+
+    .chip {
+      margin: 0;
+    }
+
+    a.chip {
+      // XXX default?
+      color: $secondary;
+      text-decoration: none;
+    }
+
+    // Card date, use <time> if possible
+    .card-date {
+      color: $secondary;
+      font-size: 14px;
+    }
+  }
+
+  // Card can contain special lists, example: Related articles to a main Tag card
+  >.list-group,
+  .card-body>.list-group {
+    border-top: 1px solid var(--bs-list-group-border-color);
+    border-bottom: 1px solid var(--bs-list-group-borders-color);
+
+    margin-top: calc(2 * var(--#{$prefix}card-spacer-y));
+    margin-bottom: calc(2 * var(--#{$prefix}card-spacer-y));
+
+    font-size: $card-p-size;
+    line-height: $card-p-l-h;
+    color: $card-p-color;
+
+    &:first-child {
+      border-top-width: 0;
+      @include border-top-radius(var(--#{$prefix}card-inner-border-radius));
+    }
+
+    &:last-child {
+      border-bottom-width: 0;
+      @include border-bottom-radius(var(--#{$prefix}card-inner-border-radius));
+    }
+  }
+
+  .card-body>.list-group {
+    margin-top: calc(4 * var(--#{$prefix}card-spacer-y));
+    margin-bottom: calc(2 * var(--#{$prefix}card-spacer-y));
+
+    .list-group-item {
+      padding: var(--bs-list-group-item-padding-y) 0;
+    }
+  }
+
+  >.card-header+.list-group,
+  >.list-group+.card-footer {
+    border-top: 0;
+  }
+
+  // Card image responsive wrapper and a11y DOM order hack
+  &.card-img {
+    .img-responsive-wrapper {
+      order: -1;
+
+      .img-responsive {
+        padding-bottom: 61.29%; // image proportion 310 x 190
+
+        &.img-responsive-panoramic {
+          padding-bottom: 30.645%; // image proportion 310 x 95
+        }
+      }
+    }
+
+    &.rounded {
       .img-responsive-wrapper {
-        order: -1;
 
-        .img-responsive {
-          padding-bottom: 61.29%; // image proportion 310 x 190
+        &:is(:first-child),
+        &:is(:nth-child(2)) {
+          border-top-left-radius: var(--#{$prefix}card-inner-border-radius);
+          border-top-right-radius: var(--#{$prefix}card-inner-border-radius);
+        }
+      }
 
-          &.img-responsive-panoramic {
-            padding-bottom: 30.645%; // image proportion 310 x 95
+      &.card-border-top {
+        .img-responsive-wrapper {
+
+          &:is(:first-child),
+          &:is(:nth-child(2)) {
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
           }
+        }
+      }
+    }
+  }
+
+  // Card special colored 4px border-top, mere aestethic, don't use for semantic meaning
+  &.card-border-top {
+    padding-top: 4px;
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 4px;
+      top: 0;
+      background: var(--#{$prefix}card-border-top-default-bg);
+    }
+
+    &.rounded {
+      &::after {
+        border-radius: 3px 3px 0 0;
+      }
+    }
+
+    @each $name, $color in $card-border-top-colors {
+      --#{$prefix}card-border-top-#{$name}: #{$color};
+    }
+
+    @each $name, $color in $card-border-top-colors {
+      &.card-border-top-#{$name}::after {
+        background: var(--#{$prefix}card-border-top-#{$name});
+      }
+    }
+  }
+
+  // Size Mini
+  &.card-mini {
+    flex-direction: row !important;
+    padding-bottom: 0 !important;
+
+    &.card-img {
+
+      .img-responsive {
+        height: 100% !important;
+        width: 30rem;
+
+        .img-wrapper {
+          margin-left: -50%;
+          height: 100%;
+        }
+      }
+
+      &.card-mini-reverse {
+        .img-responsive-wrapper {
+          order: 1;
         }
       }
 
       &.rounded {
         .img-responsive-wrapper {
+
           &:is(:first-child),
           &:is(:nth-child(2)) {
-            border-top-left-radius: var(--#{$prefix}card-inner-border-radius);
-            border-top-right-radius: var(--#{$prefix}card-inner-border-radius);
+            border-top-right-radius: 0 !important;
+            border-bottom-left-radius: var(--bs-card-inner-border-radius);
           }
         }
 
-        &.card-border-top {
+        &.card-mini-reverse {
           .img-responsive-wrapper {
+
             &:is(:first-child),
             &:is(:nth-child(2)) {
-              border-top-left-radius: 0;
-              border-top-right-radius: 0;
+              border-top-left-radius: 0 !important;
+              border-bottom-left-radius: 0 !important;
+              border-top-right-radius: var(--bs-card-inner-border-radius) !important;
+              border-bottom-right-radius: var(--bs-card-inner-border-radius) !important;
             }
           }
         }
       }
     }
 
-    // Card special colored 4px border-top, mere aestethic, don't use for semantic meaning
-    &.card-border-top {
-      padding-top: 4px;
 
-      &::after {
-        content: '';
-        display: block;
-        position: absolute;
-        left: 0;
-        right: 0;
-        height: 4px;
-        top: 0;
-        background: var(--#{$prefix}card-border-top-default-bg);
-      }
-
-      &.rounded {
-        &::after {
-          border-radius: 3px 3px 0 0;
-        }
-      }
-
-      @each $name, $color in $card-border-top-colors {
-        --#{$prefix}card-border-top-#{$name}: #{$color};
-      }
-
-      @each $name, $color in $card-border-top-colors {
-        &.card-border-top-#{$name}::after {
-          background: var(--#{$prefix}card-border-top-#{$name});
-        }
-      }
-    }
-
-    // Size Mini
-    // &.card-mini {
-    // XXX
-    // }
-
-    // Size Large
-    // &.card-large {
-    // XXX
-    // }
   }
+
+  // }
+
+  // Size Large
+  // &.card-large {
+  // XXX
+  // }
+}
 }
