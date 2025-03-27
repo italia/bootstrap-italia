@@ -454,3 +454,105 @@ In un mondo ideale, se la "Card" è una struttura visiva e semantica, sarebbe au
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
+
+## Gruppi di card
+
+Gruppi di card con layout responsive usando `.card-group` in un `div` contenitore.
+
+{% comment %}Example name: Gruppi di card responsive{% endcomment %}
+{% capture example %}
+<div class="card-to-be">
+  <div class="card-group">
+    <article class="card rounded shadow-sm border">
+      <h3 class="card-title no_toc">
+        <a href="#">Titolo della prima card</a>
+      </h3>
+      <div class="card-body">
+        <p class="card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione.</p>
+      </div>
+      <footer class="card-related card-footer">
+        <div class="card-taxonomy">
+          <a href="#" class="card-category card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
+        </div>
+        <time class="card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
+      </footer>
+    </article>
+    <article class="card rounded shadow-sm border">
+      <h3 class="card-title no_toc">
+        <a href="#">Titolo della seconda card</a>
+      </h3>
+      <div class="card-body">
+        <p class="card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione.</p>
+      </div>
+      <footer class="card-related card-footer">
+        <div class="card-taxonomy">
+          <a href="#" class="card-category card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
+        </div>
+        <time class="card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
+      </footer>
+    </article>
+    <article class="card rounded shadow-sm border">
+      <h3 class="card-title no_toc">
+        <a href="#">Titolo della terza card</a>
+      </h3>
+      <div class="card-body">
+        <p class="card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione.</p>
+      </div>
+      <footer class="card-related card-footer">
+        <time class="card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
+      </footer>
+    </article>
+  </div>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+Numero di colonne specifico usando `.card-group-N-cols`.
+  
+{% comment %}Example name: Gruppi di card con colonne specifiche{% endcomment %}
+{% capture example %}
+<div class="card-to-be">
+  <div class="card-group card-group-3-cols">
+    <article class="card rounded shadow-sm border">
+      <h3 class="card-title no_toc">
+        <a href="#">Card in due colonne</a>
+      </h3>
+      <div class="card-body">
+        <p class="card-text">Questo gruppo mostra sempre due colonne su schermi medi e grandi.</p>
+      </div>
+    </article>
+    <article class="card card-img rounded shadow-sm border">
+      <h3 class="card-title no_toc">
+        <a href="#">Card in due colonne</a>
+      </h3>
+      <div class="card-body">
+        <p class="card-text">Questo gruppo mostra sempre due colonne su schermi medi e grandi.</p>
+      </div>
+    </article>
+  </div>
+</div>
+{% endcapture %}{% include example.html content=example %}
+Centrate orizzontalmente con `.card-group-center`.
+
+{% comment %}Example name: Gruppi di card centrate{% endcomment %}
+{% capture example %}  
+<div class="card-to-be">
+  <div class="card-group card-group-3-cols card-group-center">
+    <article class="card rounded shadow-sm border">
+      <h3 class="card-title no_toc">
+        <a href="#">Card centrata</a>
+      </h3>
+      <div class="card-body">
+        <p class="card-text">Questo gruppo ha le card centrate nella pagina.</p>
+      </div>
+    </article>
+    <article class="card rounded shadow-sm border">
+      <h3 class="card-title no_toc">
+        <a href="#">Card centrata</a>
+      </h3>
+      <div class="card-body">
+        <p class="card-text">Questo gruppo ha le card centrate nella pagina.</p>
+      </div>
+    </article>
+  </div>
+</div>
+{% endcapture %}{% include example.html content=example %}
