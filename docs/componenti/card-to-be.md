@@ -9,7 +9,7 @@ toc: true
 {% capture callout %}
 #### Lavori in corso 
 
-Durante le lavorazione in questa PR il componente Card classico è rotto, in tutte le sue varianti. È stato infatti commentato il CSS per intero in modo da lavorare per semplificare. A fine lavorazioni l’obiettivo è far convivere per un po’ di tempo i CSS per le nuove Card To Be insieme alle vecchie, per permettere passaggio graduale.
+Durante le lavorazione in questa PR il componente Card classico è stato raccolto in `.row` con classe `.card-old-one`, in tutte le sue varianti. La nuova versione "to be" è raccolta in righe con classi `.card-to-be`. Questo è stato fatto per semplificare il refactoring dei SCSS. A fine lavorazioni l’obiettivo è far convivere per un po’ di tempo i CSS per le nuove Card To Be insieme alle vecchie, per permettere un passaggio graduale. **Al momento è tutto in corso d'opera, be polite.** 
 {% endcapture %}{% include callout.html content=callout type="warning" %}
 
 ## Strutture card

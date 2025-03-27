@@ -8,7 +8,7 @@ toc: true
 
 {% capture callout %}
 
-Sono in corso le lavorazioni del nuovo componente Card — come da progetto disponibile in un prossimo rilascio di UI Kit Italia — per standardizzarne le varianti a valle dei lavori sul sito Designers Italia e sui modelli standard per enti specifici, con un occhio di riguardo sul profilo dell'accessibilità by design. Una volta completate le lavorazioni il componente descritto in questa pagina verrà deprecato. 
+Sono in corso le lavorazioni del nuovo componente Card — come da progetto disponibile in un prossimo rilascio di UI Kit Italia — per standardizzarne le varianti a valle dei lavori sul sito Designers Italia e sui modelli standard per enti specifici, con un occhio di riguardo sul profilo dell'accessibilità by design. Durante le lavorazione in questa PR questo componente Card classico è stato raccolto in `.row` con classe `.card-old-one`, in tutte le sue varianti. Questo è stato fatto per semplificare il refactoring dei SCSS. Una volta completate le lavorazioni il componente descritto in questa pagina verrà deprecato. **Al momento è tutto in corso d'opera, be polite.** 
 
 Puoi nel frattempo esplorarne lo stato dell'arte nella scheda: [Card To Be](../card-to-be/). 
 
@@ -37,7 +37,7 @@ Esempio di card semplice con titolo e testo:
 {% comment %}Example name: Base{% endcomment %}
 {% capture example %}
 
-<div class="row">
+<div class="row card-old-one">
   <div class="col-12 col-lg-4">
     <!--start card-->
     <div class="card-wrapper">
@@ -58,7 +58,7 @@ Esempio di card semplice con titolo e testo:
 {% comment %}Example name: Base, su più colonne{% endcomment %}
 {% capture example %}
 
-<div class="row">
+<div class="row card-old-one">
   <div class="col-12 col-lg-4">
     <!--start card-->
     <div class="card-wrapper">
@@ -113,7 +113,7 @@ Quando si utilizzano link con label generiche come “Leggi tutto” o “Leggi 
 
 {% comment %}Example name: Base, articolo{% endcomment %}
 {% capture example %}
-<div class="row">
+<div class="row card-old-one">
   <div class="col-12 col-lg-6">
     <!--start card-->
     <div class="card-wrapper">
@@ -146,7 +146,7 @@ Per inserire la categorizzazione con relativa icona, usare l'elemento `.category
 
 {% comment %}Example name: Con icona{% endcomment %}
 {% capture example %}
-<div class="row">
+<div class="row card-old-one">
   <div class="col-12 col-lg-6">
     <!--start card-->
     <div class="card-wrapper">
@@ -178,7 +178,7 @@ segue il paragrafo.
 
 {% comment %}Example name: Con icona, sottotitolo e link{% endcomment %}
 {% capture example %}
-<div class="row">
+<div class="row card-old-one">
   <div class="col-12 col-lg-6">
     <!--start card-->
     <div class="card-wrapper">
@@ -211,7 +211,7 @@ Le card con ombreggiatura sono caratterizzate dalle classi:
 
 {% comment %}Example name: Con ombra{% endcomment %}
 {% capture example %}
-<div class="row">
+<div class="row card-old-one">
   <div class="col-12 col-lg-6">
     <!--start card-->
     <div class="card-wrapper card-space">
@@ -246,7 +246,7 @@ il div contenente l'icona è di classe `.top-icon`.
 
 {% comment %}Example name: Con ombra, grande{% endcomment %}
 {% capture example %}
-<div class="row">
+<div class="row card-old-one">
   <div class="col-12 col-lg-8">
     <!--start card-->
     <div class="card-wrapper card-space">
@@ -279,7 +279,7 @@ Per creare un bordo di colore primario a chiusura card, potete utilizzare la cla
 
 {% comment %}Example name: Con ombra, grande, con categoria ed in evidenza{% endcomment %}
 {% capture example %}
-<div class="row">
+<div class="row card-old-one">
   <div class="col-12 col-lg-8">
     <!--start card-->
     <div class="card-wrapper card-space">
@@ -314,7 +314,7 @@ Utilizzate la classe `.no-after` applicata al div `.card` se volete ridurre lo s
 
 {% comment %}Example name: Con ombra, grande, con tag, data e call to action{% endcomment %}
 {% capture example %}
-<div class="row">
+<div class="row card-old-one">
   <div class="col-12 col-lg-6">
     <!--start card-->
     <div class="card-wrapper card-space">
@@ -349,7 +349,7 @@ Qualora le proporzioni non fossero esatte, l'immagine occuperà il massimo dell'
 
 {% comment %}Example name: Con immagine{% endcomment %}
 {% capture example %}
-<div class="row">
+<div class="row card-old-one">
   <div class="col-12 col-lg-6">
     <!--start card-->
     <div class="card-wrapper">
@@ -462,7 +462,7 @@ Le proporzioni ottimali dell'immagine per questa card sono 17:21.
 
 {% comment %}Example name: Speciale{% endcomment %}
 {% capture example %}
-<div class="row">
+<div class="row card-old-one">
   <div class="col-12 col-lg-6">
     <!--start card-->
     <div class="card-wrapper">
@@ -494,35 +494,37 @@ Come per ogni elemento, è possibile aggiungere le classi `rounded` o `shadow` p
 
 {% comment %}Example name: Teaser{% endcomment %}
 {% capture example %}
-<div class="card-wrapper card-teaser-wrapper">
-  <!--start card-->
-  <div class="card card-teaser">
-    <div class="card-body">
-      <h3 class="card-title h5 no_toc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h3>
-      <p class="card-text font-serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-  </div>
-  <!--end card-->
-  <!--start card-->
-  <div class="card card-teaser rounded shadow">
-    <div class="card-body">
-      <h3 class="card-title h5 no_toc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h3>
-      <p class="card-text font-serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-  </div>
-  <!--end card-->
-  <!--start card-->
-  <div class="card card-teaser rounded shadow">
-    <div class="card-body">
-      <h3 class="card-title h5 no_toc">
-        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-clip"></use></svg>
-        <a href="#">Lorem ipsum dolor sit amet</a>
-      </h3>
-      <div class="card-text font-serif">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</p>
+<div class="row card-old-one">
+  <div class="card-wrapper card-teaser-wrapper">
+    <!--start card-->
+    <div class="card card-teaser">
+      <div class="card-body">
+        <h3 class="card-title h5 no_toc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h3>
+        <p class="card-text font-serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       </div>
     </div>
+    <!--end card-->
+    <!--start card-->
+    <div class="card card-teaser rounded shadow">
+      <div class="card-body">
+        <h3 class="card-title h5 no_toc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h3>
+        <p class="card-text font-serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+    </div>
+    <!--end card-->
+    <!--start card-->
+    <div class="card card-teaser rounded shadow">
+      <div class="card-body">
+        <h3 class="card-title h5 no_toc">
+          <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-clip"></use></svg>
+          <a href="#">Lorem ipsum dolor sit amet</a>
+        </h3>
+        <div class="card-text font-serif">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</p>
+        </div>
+      </div>
+    </div>
+    <!--end card-->
   </div>
-  <!--end card-->
 </div>
 {% endcapture %}{% include example.html content=example %}
