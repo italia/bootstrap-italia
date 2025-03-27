@@ -59,7 +59,77 @@ Attenzione alle info necessarie per lettori schermo, in particolar modo sui **me
 <div class="row card-to-be">
   <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
     <!--start card-->
-    <article class="card card-img card-height-full card-border-top card-border-top-danger rounded shadow-sm border">
+    <article class="card card-img rounded shadow-sm border mb-3">
+      <!--first element is the content-->
+      <h3 class="card-title no_toc">
+        <a href="#">Titolo contenuto può essere anche lungo così o andare oltre</a>
+      </h3>
+      <!--second element is the image if present-->
+      <div class="img-responsive-wrapper">
+        <div class="img-responsive Zimg-responsive-panoramic">
+          <figure class="img-wrapper">
+            <img src="https://placehold.co/357x190/0066cc/FFFFFF/?text=IMMAGINE%20DI%20ESEMPIO" title="titolo immagine" alt="Descrizione immagine se ha senso nel contesto, sennò marcare con decorativa lasciando l'alt applicato ma vuoto.">
+          </figure>
+        </div>
+      </div>
+      <footer class="card-related card-footer">
+        <div class="card-taxonomy">
+          <a href="#" class="card-category card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
+        </div>
+        <time class="card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
+      </footer>
+    </article>
+    <!--end card-->
+    <!--start card-->
+    <article class="card card-mini card-img rounded shadow-sm border mb-3">
+     <!--first element is all the card content: title + footer-->
+      <div>
+        <h3 class="card-title no_toc">
+          <a href="#">Titolo contenuto può essere anche lungo così o andare oltre</a>
+        </h3>
+        <footer class="card-related card-footer">
+          <div class="card-taxonomy">
+            <a href="#" class="card-category card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
+          </div>
+          <time class="card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
+        </footer>
+      </div>
+      <!--second element is the image if present-->
+      <div class="img-responsive-wrapper">
+        <div class="img-responsive Zimg-responsive-panoramic">
+          <figure class="img-wrapper">
+            <img src="https://placehold.co/357x190/0066cc/FFFFFF/?text=IMMAGINE%20DI%20ESEMPIO" title="titolo immagine" alt="Descrizione immagine se ha senso nel contesto, sennò marcare con decorativa lasciando l'alt applicato ma vuoto.">
+          </figure>
+        </div>
+      </div>
+    </article>
+    <!--end card-->
+    <!--start card-->
+    <article class="card card-mini card-mini-reverse card-img rounded shadow-sm border mb-3">
+     <!--first element is all the card content: title + footer-->
+      <div>
+        <h3 class="card-title no_toc">
+          <a href="#">Titolo contenuto può essere anche lungo così o andare oltre</a>
+        </h3>
+        <footer class="card-related card-footer">
+          <div class="card-taxonomy">
+            <a href="#" class="card-category card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
+          </div>
+          <time class="card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
+        </footer>
+      </div>
+      <!--second element is the image if present-->
+      <div class="img-responsive-wrapper">
+        <div class="img-responsive Zimg-responsive-panoramic">
+          <figure class="img-wrapper">
+            <img src="https://placehold.co/357x190/0066cc/FFFFFF/?text=IMMAGINE%20DI%20ESEMPIO" title="titolo immagine" alt="Descrizione immagine se ha senso nel contesto, sennò marcare con decorativa lasciando l'alt applicato ma vuoto.">
+          </figure>
+        </div>
+      </div>
+    </article>
+    <!--end card-->
+    <!--start card-->
+    <article class="card card-img card-border-top card-border-top-danger rounded shadow-sm border">
       <!--first element is the title-->
       <h3 class="card-title card-title-icon no_toc">
         <a href="#">Titolo contenuto può essere anche lungo così o andare oltre</a>
@@ -110,6 +180,56 @@ Attenzione alle info necessarie per lettori schermo, in particolar modo sui **me
       <div class="card-footer" aria-label="Azioni correlate:">
         <button href="#" type="button" class="btn btn-outline-secondary btn-icon Zd-md-block">Azione secondaria</button>
         <a href="#" class="card-link">Link secondario</a>
+      </div>
+    </article>
+    <!--end card-->
+  </div>
+  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-8">
+    <!--start card-->
+    <article class="card card-mini card-img rounded shadow-sm border mb-3">
+     <!--first element is all the card content: title + footer-->
+      <div>
+        <h3 class="card-title no_toc">
+          <a href="#">Titolo contenuto può essere anche lungo così o andare oltre</a>
+        </h3>
+        <footer class="card-related card-footer">
+          <div class="card-taxonomy">
+            <a href="#" class="card-category card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
+          </div>
+          <time class="card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
+        </footer>
+      </div>
+      <!--second element is the image if present-->
+      <div class="img-responsive-wrapper">
+        <div class="img-responsive Zimg-responsive-panoramic">
+          <figure class="img-wrapper">
+            <img src="https://placehold.co/357x190/0066cc/FFFFFF/?text=IMMAGINE%20DI%20ESEMPIO" title="titolo immagine" alt="Descrizione immagine se ha senso nel contesto, sennò marcare con decorativa lasciando l'alt applicato ma vuoto.">
+          </figure>
+        </div>
+      </div>
+    </article>
+    <!--end card-->
+    <!--start card-->
+    <article class="card card-mini card-mini-reverse card-img rounded shadow-sm border mb-3">
+     <!--first element is all the card content: title + footer-->
+      <div>
+        <h3 class="card-title no_toc">
+          <a href="#">Titolo contenuto può essere anche lungo così o andare oltre</a>
+        </h3>
+        <footer class="card-related card-footer">
+          <div class="card-taxonomy">
+            <a href="#" class="card-category card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
+          </div>
+          <time class="card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
+        </footer>
+      </div>
+      <!--second element is the image if present-->
+      <div class="img-responsive-wrapper">
+        <div class="img-responsive Zimg-responsive-panoramic">
+          <figure class="img-wrapper">
+            <img src="https://placehold.co/357x190/0066cc/FFFFFF/?text=IMMAGINE%20DI%20ESEMPIO" title="titolo immagine" alt="Descrizione immagine se ha senso nel contesto, sennò marcare con decorativa lasciando l'alt applicato ma vuoto.">
+          </figure>
+        </div>
       </div>
     </article>
     <!--end card-->
