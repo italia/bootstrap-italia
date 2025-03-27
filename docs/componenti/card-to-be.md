@@ -186,7 +186,7 @@ Attenzione alle info necessarie per lettori schermo, in particolar modo sui **me
   </div>
   <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-8">
     <!--start card-->
-    <article class="card card-mini card-img rounded shadow-sm border mb-3">
+    <article class="card card-large card-img rounded shadow-sm border mb-3">
      <!--first element is all the card content: title + footer-->
       <div>
         <h3 class="card-title no_toc">
@@ -210,7 +210,7 @@ Attenzione alle info necessarie per lettori schermo, in particolar modo sui **me
     </article>
     <!--end card-->
     <!--start card-->
-    <article class="card card-mini card-mini-reverse card-img rounded shadow-sm border mb-3">
+    <article class="card card-large card-large-reverse card-img rounded shadow-sm border mb-3">
      <!--first element is all the card content: title + footer-->
       <div>
         <h3 class="card-title no_toc">
