@@ -41,7 +41,7 @@ Si consiglia di implementare il **titolo** (`.it-card-title`) come elemento clic
 
 Per aggiungere un'icona a fianco del titolo, utilizzare la classe `.it-card-title-icon`.
 
-Quando è presente un'immagine, applicare la classe `.it-card-img` alla card. L'immagine deve seguire l'elemento `.it-card-title` nel markup. L'ordine di visualizzazione viene invertito tramite CSS (applicando `order: -1` al contenitore dell'immagine), mantenendo però la corretta struttura semantica nel DOM.
+Quando è presente un'immagine, applicare la classe `.it-card-image` alla card. L'immagine deve seguire l'elemento `.it-card-title` nel markup. L'ordine di visualizzazione viene invertito tramite CSS (applicando `order: -1` al contenitore dell'immagine), mantenendo però la corretta struttura semantica nel DOM.
 
 Il corpo della card deve essere contenuto in un elemento con classe `.it-card-body`, che applica le opportune spaziature. È possibile utilizzare più elementi `.it-card-body` per separare blocchi di contenuto, come ad esempio liste `.list-group`.
 
@@ -80,23 +80,23 @@ Questa card dimostra la struttura completa con tutti gli elementi: titolo con ic
 <div class="row">
   <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
     <!--start it-card-->
-    <article class="it-card it-card-img it-card-border-top it-card-border-top-danger rounded shadow-sm border">
+    <article class="it-card it-card-image it-card-border-top it-card-border-top-danger rounded shadow-sm border">
       <!--first element is the title-->
       <h3 class="it-card-title it-card-title-icon no_toc">
         <a href="#">Titolo contenuto può essere anche lungo così o andare oltre</a>
         <div><svg class="icon icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg></div>
       </h3>
       <!--second element is the image if present-->
-      <div class="img-responsive-wrapper">
-        <div class="img-responsive Zimg-responsive-panoramic">
-          <figure class="img-wrapper">
-            <img src="https://placehold.co/357x190/0066cc/FFFFFF/?text=IMMAGINE%20DI%20ESEMPIO" alt="Descrizione immagine se ha senso nel contesto, sennò marcare con decorativa lasciando l'alt applicato ma vuoto.">
+      <div class="it-card-image-wrapper">
+        <div class="ratio ratio-16x9">
+          <figure class="figure img-full">
+            <img src="https://placehold.co/357x190/0066cc/FFFFFF/?text=16x9" alt="Descrizione immagine se ha senso nel contesto, sennò marcare con decorativa lasciando l'alt applicato ma vuoto.">
           </figure>
         </div>
       </div>
       <!--follow the body-->
       <div class="it-card-body">
-        <p class="it-card-subtitle no_toc">Sottotitolo o periodo</p>
+        <p class="it-card-subtitle">Sottotitolo o periodo</p>
         <address class="it-card-signature">di Maria Verde</address>
         <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
         <p class="it-card-text">Se ci fosse un secondo paragrafo <a href="#" class="it-card-link">con un link</a> questa è la resa visiva.</p>
@@ -152,19 +152,19 @@ Ecco alcuni esempi di configurazioni frequenti per le card:
 <div class="row">
   <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
     <!--start it-card-->
-    <article class="it-card it-card-img it-card-height-full rounded border shadow-sm">
+    <article class="it-card it-card-image rounded border shadow-sm mb-3">
       <h3 class="it-card-title no_toc">
         <a href="#">Titolo h3</a>
       </h3>
-      <div class="img-responsive-wrapper">
-        <div class="img-responsive Zimg-responsive-panoramic">
-          <figure class="img-wrapper">
-            <img src="https://placehold.co/357x190/0066cc/FFFFFF/?text=IMMAGINE%20DI%20ESEMPIO" alt="descrizione immagine">
+      <div class="it-card-image-wrapper">
+        <div class="ratio ratio-16x9">
+          <figure class="figure img-full">
+            <img src="https://placehold.co/357x190/0066cc/FFFFFF/?text=16x9" alt="Descrizione immagine se ha senso nel contesto, sennò marcare con decorativa lasciando l'alt applicato ma vuoto.">
           </figure>
         </div>
       </div>
       <div class="it-card-body">
-        <p class="it-card-subtitle no_toc">Sottotitolo o periodo</p>
+        <p class="it-card-subtitle">Sottotitolo o periodo</p>
         <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
       </div>
       <div class="it-card-footer" aria-label="Link correlati:">
@@ -173,17 +173,34 @@ Ecco alcuni esempi di configurazioni frequenti per le card:
       </div>
     </article>
     <!--end it-card-->
-  </div>
-  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
     <!--start it-card-->
-    <article class="it-card it-card-img it-card-height-full rounded border shadow-sm">
+    <article class="it-card it-card-image rounded border shadow-sm">
       <h3 class="it-card-title no_toc">
         <a href="#">Titolo h3</a>
       </h3>
-      <div class="img-responsive-wrapper">
-        <div class="img-responsive img-responsive-panoramic">
-          <figure class="img-wrapper">
-            <img src="https://placehold.co/357x190/0066cc/FFFFFF/?text=IMMAGINE%20DI%20ESEMPIO" alt="descrizione immagine">
+      <div class="it-card-image-wrapper">
+        <div class="ratio ratio-custom" style="--bs-aspect-ratio: 20%;">
+          <figure class="figure img-full">
+            <img src="https://placehold.co/357x190/0066cc/FFFFFF/?text=Custom-5x1" alt="Descrizione immagine se ha senso nel contesto, sennò marcare con decorativa lasciando l'alt applicato ma vuoto.">
+          </figure>
+        </div>
+      </div>
+      <div class="it-card-body">
+        <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
+      </div>
+    </article>
+    <!--end it-card-->
+  </div>
+  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+    <!--start it-card-->
+    <article class="it-card it-card-image it-card-height-full rounded border shadow-sm">
+      <h3 class="it-card-title no_toc">
+        <a href="#">Titolo h3</a>
+      </h3>
+      <div class="it-card-image-wrapper">
+        <div class="ratio ratio-21x9">
+          <figure class="figure img-full">
+            <img src="https://placehold.co/357x190/0066cc/FFFFFF/?text=21x9" alt="Descrizione immagine se ha senso nel contesto, sennò marcare con decorativa lasciando l'alt applicato ma vuoto.">
           </figure>
         </div>
       </div>
@@ -205,7 +222,7 @@ Ecco alcuni esempi di configurazioni frequenti per le card:
         <div><svg class="icon icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg></div>
       </h4>
       <div class="it-card-body">
-        <p class="it-card-subtitle no_toc">Sottotitolo o periodo</p>
+        <p class="it-card-subtitle">Sottotitolo o periodo</p>
         <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
       </div>
       <footer class="it-card-related it-card-footer">
@@ -231,13 +248,48 @@ Ecco alcuni esempi di configurazioni frequenti per le card:
         <div><svg class="icon icon-secondary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg></div>
       </h4>
       <div class="it-card-body">
-        <p class="it-card-subtitle no_toc">Sottotitolo o periodo</p>
+        <p class="it-card-subtitle">Sottotitolo o periodo</p>
         <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
       </div>
     </article>
     <!--end it-card-->
   </div>
 </div>
+
+<h1>Work in progress on the profile card...</h1>
+
+<div class="row">
+  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+    <!--start it-card-->
+    <article class="it-card it-card-profile rounded shadow-sm border">
+      <div class="it-card-profile-header">
+        <div class="it-card-profile">
+          <h4 class="it-card-name no_toc">
+            <a href="#">Nome della persona</a>
+          </h4>
+          <p class="it-card-profile-role">Ruolo nell'organizzazione</p>
+        </div>
+        <div class="avatar avatar-green size-lg">
+          <p aria-hidden="true">MR</p>
+        </div>
+      </div>
+      <div class="it-card-body">
+        <dl class="it-card-description-list border-top">
+          <dt>Area:</dt>
+          <dd><a href="#">Nome dell'area di appartenenza</a></dd>
+          <dt>Email:</dt>
+          <dd>me@mail.com</dd>
+          <dt>Tel:</dt>
+          <dd>340.4050600</dd>
+          <dt>Indirizzo:</dt>
+          <dd>Via della città, 5 - 00100 Città</dd>
+        </dl>
+      </div>
+    </article>
+    <!--end it-card-->
+  </div>
+</div>
+
 {% endcapture %}{% include example.html content=example %}
 
 ## Varianti inline
@@ -254,7 +306,7 @@ Le varianti inline sono ideali per presentazioni editoriali, come in contesti di
 <div class="row">
   <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
     <!--start it-card-->
-    <article class="it-card it-card-inline it-card-inline-mini it-card-img rounded shadow-sm border mb-3">
+    <article class="it-card it-card-inline it-card-inline-mini it-card-image rounded shadow-sm border mb-3">
      <!--first element is all the card content: title + footer-->
       <div class="it-card-inline-content">
         <h3 class="it-card-title no_toc">
@@ -268,17 +320,17 @@ Le varianti inline sono ideali per presentazioni editoriali, come in contesti di
         </footer>
       </div>
       <!--second element is the image if present-->
-      <div class="img-responsive-wrapper">
-        <div class="img-responsive Zimg-responsive-panoramic">
-          <figure class="img-wrapper">
-            <img src="https://placehold.co/357x190/0066cc/FFFFFF/?text=IMMAGINE%20DI%20ESEMPIO" alt="Descrizione immagine se ha senso nel contesto, sennò marcare con decorativa lasciando l'alt applicato ma vuoto.">
+      <div class="it-card-image-wrapper">
+        <div class="ratio ratio-1x1">
+          <figure class="figure img-full">
+            <img src="https://placehold.co/357x190/0066cc/FFFFFF/?text=I" alt="Descrizione immagine se ha senso nel contesto, sennò marcare con decorativa lasciando l'alt applicato ma vuoto.">
           </figure>
         </div>
       </div>
     </article>
     <!--end it-card-->
     <!--start it-card-->
-    <article class="it-card it-card-inline it-card-inline-mini it-card-inline-reverse it-card-img rounded shadow-sm border">
+    <article class="it-card it-card-inline it-card-inline-mini it-card-inline-reverse it-card-image rounded shadow-sm border">
      <!--first element is all the card content: title + footer-->
       <div class="it-card-inline-content">
         <h3 class="it-card-title no_toc">
@@ -292,10 +344,10 @@ Le varianti inline sono ideali per presentazioni editoriali, come in contesti di
         </footer>
       </div>
       <!--second element is the image if present-->
-      <div class="img-responsive-wrapper">
-        <div class="img-responsive Zimg-responsive-panoramic">
-          <figure class="img-wrapper">
-            <img src="https://placehold.co/357x190/0066cc/FFFFFF/?text=IMMAGINE%20DI%20ESEMPIO" alt="Descrizione immagine se ha senso nel contesto, sennò marcare con decorativa lasciando l'alt applicato ma vuoto.">
+      <div class="it-card-image-wrapper">
+        <div class="ratio ratio-1x1">
+          <figure class="figure img-full">
+            <img src="https://placehold.co/357x190/0066cc/FFFFFF/?text=I" alt="Descrizione immagine se ha senso nel contesto, sennò marcare con decorativa lasciando l'alt applicato ma vuoto.">
           </figure>
         </div>
       </div>
@@ -304,14 +356,14 @@ Le varianti inline sono ideali per presentazioni editoriali, come in contesti di
   </div>
   <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-8">
     <!--start it-card-->
-    <article class="it-card it-card-inline it-card-img rounded shadow-sm border mb-3">
+    <article class="it-card it-card-inline it-card-image rounded shadow-sm border mb-3">
      <!--first element is all the card content-->
       <div class="it-card-inline-content">
         <h3 class="it-card-title no_toc">
           <a href="#">Titolo contenuto può essere anche lungo così o andare oltre</a>
         </h3>
         <div class="it-card-body">
-          <p class="it-card-subtitle no_toc">Sottotitolo o periodo</p>
+          <p class="it-card-subtitle">Sottotitolo o periodo</p>
           <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
         </div>
         <footer class="it-card-related it-card-footer">
@@ -326,24 +378,24 @@ Le varianti inline sono ideali per presentazioni editoriali, come in contesti di
         </div>
       </div>
       <!--second element is the image if present-->
-      <div class="img-responsive-wrapper">
-        <div class="img-responsive Zimg-responsive-panoramic">
-          <figure class="img-wrapper">
-            <img src="https://placehold.co/357x190/0066cc/FFFFFF/?text=IMMAGINE%20DI%20ESEMPIO" alt="Descrizione immagine se ha senso nel contesto, sennò marcare con decorativa lasciando l'alt applicato ma vuoto.">
+      <div class="it-card-image-wrapper">
+        <div class="ratio ratio-1x">
+          <figure class="figure img-full">
+            <img src="https://placehold.co/357x190/0066cc/FFFFFF/?text=Img" alt="Descrizione immagine se ha senso nel contesto, sennò marcare con decorativa lasciando l'alt applicato ma vuoto.">
           </figure>
         </div>
       </div>
     </article>
     <!--end it-card-->
     <!--start it-card-->
-    <article class="it-card it-card-inline it-card-inline-reverse it-card-img rounded shadow-sm border">
+    <article class="it-card it-card-inline it-card-inline-reverse it-card-image rounded shadow-sm border">
      <!--first element is all the card content-->
       <div class="it-card-inline-content">
         <h3 class="it-card-title no_toc">
           <a href="#">Titolo breve</a>
         </h3>
         <div class="it-card-body">
-          <p class="it-card-subtitle no_toc">Sottotitolo o periodo</p>
+          <p class="it-card-subtitle">Sottotitolo o periodo</p>
           <p class="it-card-text">Questo è un testo breve.</p>
         </div>
         <footer class="it-card-related it-card-footer">
@@ -358,10 +410,10 @@ Le varianti inline sono ideali per presentazioni editoriali, come in contesti di
         </div>
       </div>
       <!--second element is the image if present-->
-      <div class="img-responsive-wrapper">
-        <div class="img-responsive Zimg-responsive-panoramic">
-          <figure class="img-wrapper">
-            <img src="https://placehold.co/357x190/0066cc/FFFFFF/?text=IMMAGINE%20DI%20ESEMPIO" alt="Descrizione immagine se ha senso nel contesto, sennò marcare con decorativa lasciando l'alt applicato ma vuoto.">
+      <div class="it-card-image-wrapper">
+        <div class="ratio ratio-1x1">
+          <figure class="figure img-full">
+            <img src="https://placehold.co/357x190/0066cc/FFFFFF/?text=Img" alt="Descrizione immagine se ha senso nel contesto, sennò marcare con decorativa lasciando l'alt applicato ma vuoto.">
           </figure>
         </div>
       </div>
@@ -556,7 +608,7 @@ Usando `.it-card-group-N-cols`.
         <p class="it-card-text">Questo gruppo mostra sempre due colonne su schermi medi e grandi.</p>
       </div>
     </article>
-    <article class="it-card it-card-img rounded shadow-sm border">
+    <article class="it-card it-card-image rounded shadow-sm border">
       <h3 class="it-card-title no_toc">
         <a href="#">Card in due colonne</a>
       </h3>
