@@ -1,141 +1,156 @@
 @use 'sass:math';
 
-.card-to-be {
+// It-Cards (2025) variables
+$it-card-spacer-y: 0.5rem !default;
+$it-card-spacer-x: 1rem !default;
+$it-card-height: null !default;
+$it-card-inline-min-height: 240px !default;
+$it-card-inline-mini-min-height: 160px !default;
+$it-card-color: null !default;
+$it-card-bg: $white !default;
+$it-card-border-color: $gray-border !default; 
+$it-card-border-width: $border-width !default;
+$it-card-border-radius: 4px !default;
+$it-card-inner-border-radius: subtract($it-card-border-radius, $it-card-border-width) !default;
+$it-card-title-spacer-y: $it-card-spacer-y !default;
+$it-card-body-spacer: 1rem !default;
+$it-card-cap-bg: transparent !default;
+$it-card-cap-padding-y: $card-spacer-y !default;
+$it-card-cap-padding-x: $card-spacer-x * 0.5 !default;
+$it-card-cap-color: null !default;
+$it-card-group-gap: $grid-gutter-width !default;
+$it-card-border-top-default-bg: $white !default;
+$it-card-border-top-colors: (
+  'primary': $primary,
+  'secondary': $secondary,
+  'success': $success,
+  'warning': $warning,
+  'danger': $danger,
+  'info': $info,
+);
+$it-card-p-size: 1rem !default;
+$it-card-p-l-h: 1.5rem !default;
+$it-card-p-color: $color-text-base !default;
+$it-card-category-size: 0.875rem !default;
+$it-card-category-fw: 600 !default;
+$it-card-category-l-spacing: 0.5px !default;
+$it-card-category-m-bottom: 0 !default;
+$it-card-date-size: 0.875rem !default;
+$it-card-date-color: $secondary !default;
+$it-card-chips-gap: 1rem !default;
+$it-card-chips-a-color: $secondary !default;
+$it-card-signature-size: 0.875rem !default;
+$it-card-link-color: $secondary !default;
+// scss-docs-end card-variables
 
-  // Improved responsive card-group
-  .card-group {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
+// Improved responsive card-group
+.it-card-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $it-card-group-gap;
 
-    >.card {
-      // Default stacked on mobile
-      flex: 0 0 100%;
+  >.it-card {
+    // Default stacked on mobile
+    flex: 0 0 100%;
 
-      // Responsive breakpoints
-      @include media-breakpoint-up(sm) {
-        flex: 0 0 calc(50% - 0.5rem);
-      }
-
-      @include media-breakpoint-up(md) {
-        flex: 0 0 calc(33.333% - 0.667rem);
-      }
-
-      @include media-breakpoint-up(lg) {
-        flex: 0 0 calc(25% - 0.75rem);
-      }
+    // Responsive breakpoints
+    @include media-breakpoint-up(sm) {
+      flex: 0 0 calc(50% - 0.5rem);
     }
 
-    // Predefined column layouts
-    &.card-group-2-cols>.card {
-      @include media-breakpoint-up(sm) {
-        flex: 0 0 calc(50% - 0.5rem);
-      }
+    @include media-breakpoint-up(md) {
+      flex: 0 0 calc(33.333% - 0.667rem);
     }
 
-    &.card-group-3-cols>.card {
-      @include media-breakpoint-up(sm) {
-        flex: 0 0 calc(50% - 0.5rem);
-      }
-
-      @include media-breakpoint-up(md) {
-        flex: 0 0 calc(33.333% - 0.667rem);
-      }
-    }
-
-    &.card-group-4-cols>.card {
-      @include media-breakpoint-up(sm) {
-        flex: 0 0 calc(50% - 0.5rem);
-      }
-
-      @include media-breakpoint-up(md) {
-        flex: 0 0 calc(33.333% - 0.667rem);
-      }
-
-      @include media-breakpoint-up(lg) {
-        flex: 0 0 calc(25% - 0.75rem);
-      }
-    }
-
-    // Option for equal height cards
-    &.card-group-equal-height>.card {
-      height: 100%;
-    }
-
-    // Options for alignments
-    &.card-group-center {
-      justify-content: center;
-    }
-
-    &.card-group-end {
-      justify-content: flex-end;
+    @include media-breakpoint-up(lg) {
+      flex: 0 0 calc(25% - 0.75rem);
     }
   }
 
-  // scss-docs-start card-css-vars
-  --#{$prefix}card-spacer-y: 8px; // #{$card-spacer-y}; // XXX
-  --#{$prefix}card-spacer-x: 16px; // #{$card-spacer-x}; // XXX
-  --#{$prefix}card-title-spacer-y: 8px; // #{$card-title-spacer-y}; // XXX
-  --#{$prefix}card-border-width: #{$card-border-width};
-  --#{$prefix}card-border-color: #{$card-border-color};
-  --#{$prefix}card-inner-border-radius: 3px; //#{$card-inner-border-radius}; // XXX
-  --#{$prefix}card-cap-padding-y: 16px; // #{$card-cap-padding-y}; // XXX
-  --#{$prefix}card-cap-padding-x: 16px; // #{$card-cap-padding-x}; // XXX
-  --#{$prefix}card-cap-bg: #{$card-cap-bg};
-  --#{$prefix}card-cap-color: #{$card-cap-color};
-  --#{$prefix}card-height: #{$card-height};
-  --#{$prefix}card-color: #{$card-color};
-  --#{$prefix}card-bg: #{$card-bg};
-  --#{$prefix}card-border-top-default-bg: white; // XXX
-  $card-border-top-colors: (
-    'primary': $primary,
-    'secondary': $secondary,
-    'success': $success,
-    'warning': $warning,
-    'danger': $danger,
-    'info': $info,
-  );
-// scss-docs-end card-css-vars
+  // Predefined column layouts
+  &.it-card-group-2-cols>.it-card {
+    @include media-breakpoint-up(sm) {
+      flex: 0 0 calc(50% - 0.5rem);
+    }
+  }
+
+  &.it-card-group-3-cols>.it-card {
+    @include media-breakpoint-up(sm) {
+      flex: 0 0 calc(50% - 0.5rem);
+    }
+
+    @include media-breakpoint-up(md) {
+      flex: 0 0 calc(33.333% - 0.667rem);
+    }
+  }
+
+  &.it-card-group-4-cols>.it-card {
+    @include media-breakpoint-up(sm) {
+      flex: 0 0 calc(50% - 0.5rem);
+    }
+
+    @include media-breakpoint-up(md) {
+      flex: 0 0 calc(33.333% - 0.667rem);
+    }
+
+    @include media-breakpoint-up(lg) {
+      flex: 0 0 calc(25% - 0.75rem);
+    }
+  }
+
+  // Option for equal height cards
+  &.it-card-group-equal-height>.it-card {
+    height: 100%;
+  }
+
+  // Options for alignments
+  &.it-card-group-center {
+    justify-content: center;
+  }
+
+  &.it-card-group-end {
+    justify-content: flex-end;
+  }
+}
 
 //
 // Base card structure
 //
-.card,
-article.card {
+.it-card,
+article.it-card {
   display: flex;
   flex-direction: column;
   min-width: 0; // See https://github.com/twbs/bootstrap/pull/22740#issuecomment-305868106
-  height: var(--#{$prefix}card-height);
+  height: $it-card-height;
   padding: 0;
-  padding-bottom: var(--#{$prefix}card-spacer-y);
+  padding-bottom: $it-card-spacer-y;
   position: relative;
   width: 100%;
   word-wrap: break-word;
-  background-color: var(--#{$prefix}card-bg);
+  background-color: $it-card-bg;
   background-clip: border-box;
-  @include box-shadow(var(--#{$prefix}card-box-shadow));
 
-  &.card-height-auto {
+  &.it-card-height-auto {
     height: auto;
   }
 
-  &.card-height-full {
+  &.it-card-height-full {
     height: 100%;
   }
 
-  .card-link {
-    +.card-link {
-      margin-left: var(--#{$prefix}card-spacer-x);
+  .it-card-link {
+    +.it-card-link {
+      margin-left: $it-card-spacer-x;
     }
   }
 
   // Card title styles
-  .card-title {
-    margin-top: calc(2 * var(--#{$prefix}card-title-spacer-y));
+  .it-card-title {
+    margin-top: 2 * $it-card-title-spacer-y;
     margin-bottom: 0;
-    padding: 0 var(--#{$prefix}card-spacer-x);
+    padding: 0 $it-card-spacer-x;
 
-    &.card-title-icon {
+    &.it-card-title-icon {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
@@ -148,28 +163,28 @@ article.card {
   }
 
   // Card image
-  .card-img {
+  .it-card-img {
     width: 100%;
-    @include border-top-radius(var(--#{$prefix}card-inner-border-radius));
-    @include border-bottom-radius(var(--#{$prefix}card-inner-border-radius));
+    @include border-top-radius($it-card-inner-border-radius);
+    @include border-bottom-radius($it-card-inner-border-radius);
   }
 
   // Card body and content
-  .card-body {
+  .it-card-body {
     flex: 1 1 auto;
-    padding: var(--#{$prefix}card-spacer-y) var(--#{$prefix}card-spacer-x);
-    color: var(--#{$prefix}card-color);
+    padding: $it-card-spacer-y $it-card-spacer-x;
+    color: $it-card-color;
 
     // Card subtitle or event timeframe
-    .card-subtitle {
-      margin-bottom: var(--#{$prefix}card-title-spacer-y);
+    .it-card-subtitle {
+      margin-bottom: $it-card-spacer-y;
     }
 
     // Card description
-    .card-text {
-      font-size: $card-p-size;
-      line-height: $card-p-l-h;
-      color: $card-p-color;
+    .it-card-text {
+      font-size: $it-card-p-size;
+      line-height: $it-card-p-l-h;
+      color: $it-card-p-color;
 
       &:last-child {
         margin-bottom: 0;
@@ -177,68 +192,68 @@ article.card {
     }
 
     // Card author
-    .card-signature {
+    .it-card-signature {
       font-family: $font-family-monospace;
-      color: $card-p-color;
-      font-size: $card-signature-size;
+      color: $it-card-p-color;
+      font-size: $it-card-signature-size;
     }
   }
 
   // Card footer cap
-  .card-footer {
-    margin: 0 var(--#{$prefix}card-cap-padding-x);
-    padding: var(--#{$prefix}card-cap-padding-y) 0;
-    color: var(--#{$prefix}card-cap-color);
-    background-color: var(--#{$prefix}card-cap-bg);
-    border-top: var(--#{$prefix}card-border-width) solid var(--#{$prefix}card-border-color);
+  .it-card-footer {
+    margin: 0 $it-card-cap-padding-x;
+    padding: $it-card-cap-padding-y 0;
+    color: $it-card-cap-color;
+    background-color: $it-card-cap-bg;
+    border-top: $it-card-border-width solid $it-card-border-color;
 
     &:last-child {
-      @include border-radius(0 0 var(--#{$prefix}card-inner-border-radius) var(--#{$prefix}card-inner-border-radius));
+      @include border-radius(0 0 $it-card-inner-border-radius $it-card-inner-border-radius);
     }
 
-    .card-link {
-      color: $secondary;
+    .it-card-link {
+      color: $it-card-link-color;
       font-size: 16px;
 
       &:hover {
-        color: color-hover($secondary);
+        color: color-hover($it-card-link-color);
       }
     }
   }
 
   // Card metadata holder <footer>
   footer {
-    margin-top: calc(2 * var(--#{$prefix}card-spacer-y));
+    margin-top: 2 * $it-card-spacer-y;
 
-    &.card-related {
+    &.it-card-related {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: flex-end;
       align-items: last baseline;
 
-      &.card-footer {
-        padding-bottom: 16px;
-        padding-top: 8px;
+      &.it-card-footer {
+        padding-bottom: $it-card-cap-padding-y;
+        padding-top: $it-card-cap-padding-y * 0.5;
         border-top: none;
       }
     }
 
-    .card-taxonomy {
+    .it-card-taxonomy {
       flex-grow: 1;
     }
 
-    .card-category {
+    .it-card-category {
       display: inline-block;
       text-transform: uppercase;
-      font-size: 16px;
-      font-weight: 600;
-      letter-spacing: 0.5px;
-      margin-bottom: 8px;
+      font-size: $it-card-category-size;
+      font-weight: $it-card-category-fw;
+      letter-spacing: $it-card-category-l-spacing;
+      margin-bottom: $it-card-category-m-bottom;
     }
 
     // If more than one Tag, use a list
-    ul.card-chips {
+    ul.it-card-chips {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
@@ -253,58 +268,57 @@ article.card {
     }
 
     a.chip {
-      // XXX default?
-      color: $secondary;
+      color: $it-card-chips-a-color;
       text-decoration: none;
     }
 
     // Card date, use <time> if possible
-    .card-date {
-      color: $secondary;
-      font-size: 14px;
+    .it-card-date {
+      color: $it-card-date-color;
+      font-size: $it-card-date-size;
     }
   }
 
   // Card can contain special lists, example: Related articles to a main Tag card
   >.list-group,
-  .card-body>.list-group {
+  .it-card-body>.list-group {
     border-top: 1px solid var(--bs-list-group-border-color);
     border-bottom: 1px solid var(--bs-list-group-borders-color);
 
-    margin-top: calc(2 * var(--#{$prefix}card-spacer-y));
-    margin-bottom: calc(2 * var(--#{$prefix}card-spacer-y));
+    margin-top: 2 * $it-card-spacer-y;
+    margin-bottom: 2 * $it-card-spacer-y;
 
-    font-size: $card-p-size;
-    line-height: $card-p-l-h;
-    color: $card-p-color;
+    font-size: $it-card-p-size;
+    line-height: $it-card-p-l-h;
+    color: $it-card-p-color;
 
     &:first-child {
       border-top-width: 0;
-      @include border-top-radius(var(--#{$prefix}card-inner-border-radius));
+      @include border-top-radius($it-card-inner-border-radius);
     }
 
     &:last-child {
       border-bottom-width: 0;
-      @include border-bottom-radius(var(--#{$prefix}card-inner-border-radius));
+      @include border-bottom-radius($it-card-inner-border-radius);
     }
   }
 
-  .card-body>.list-group {
-    margin-top: calc(4 * var(--#{$prefix}card-spacer-y));
-    margin-bottom: calc(2 * var(--#{$prefix}card-spacer-y));
+  .it-card-body>.list-group {
+    margin-top: 4 * $it-card-spacer-y;
+    margin-bottom: 2 * $it-card-spacer-y;
 
     .list-group-item {
       padding: var(--bs-list-group-item-padding-y) 0;
     }
   }
 
-  >.card-header+.list-group,
-  >.list-group+.card-footer {
+  >.it-card-header+.list-group,
+  >.list-group+.it-card-footer {
     border-top: 0;
   }
 
   // Card image responsive wrapper and a11y DOM order hack
-  &.card-img {
+  &.it-card-img {
     .img-responsive-wrapper {
       order: -1;
 
@@ -320,18 +334,18 @@ article.card {
     &.rounded {
       .img-responsive-wrapper {
 
-        &:is(:first-child),
-        &:is(:nth-child(2)) {
-          border-top-left-radius: var(--#{$prefix}card-inner-border-radius);
-          border-top-right-radius: var(--#{$prefix}card-inner-border-radius);
+        &:first-child,
+        &:nth-child(2) {
+          border-top-left-radius: $it-card-inner-border-radius;
+          border-top-right-radius: $it-card-inner-border-radius;
         }
       }
 
-      &.card-border-top {
+      &.it-card-border-top {
         .img-responsive-wrapper {
 
-          &:is(:first-child),
-          &:is(:nth-child(2)) {
+          &:first-child,
+          &:nth-child(2) {
             border-top-left-radius: 0;
             border-top-right-radius: 0;
           }
@@ -341,7 +355,7 @@ article.card {
   }
 
   // Card special colored 4px border-top, mere aestethic, don't use for semantic meaning
-  &.card-border-top {
+  &.it-card-border-top {
     padding-top: 4px;
 
     &::after {
@@ -352,7 +366,7 @@ article.card {
       right: 0;
       height: 4px;
       top: 0;
-      background: var(--#{$prefix}card-border-top-default-bg);
+      background: $it-card-border-top-default-bg;
     }
 
     &.rounded {
@@ -361,39 +375,35 @@ article.card {
       }
     }
 
-    @each $name, $color in $card-border-top-colors {
-      --#{$prefix}card-border-top-#{$name}: #{$color};
-    }
-
-    @each $name, $color in $card-border-top-colors {
-      &.card-border-top-#{$name}::after {
-        background: var(--#{$prefix}card-border-top-#{$name});
+    @each $name, $color in $it-card-border-top-colors {
+      &.it-card-border-top-#{$name}::after {
+        background: $color;
       }
     }
   }
 
   // Layout inline
-  &.card-inline {
+  &.it-card-inline {
     @mixin inline-layout {
       flex-direction: row !important;
       padding-bottom: 0 !important;
 
-      .card-inline-content {
+      .it-card-inline-content {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
 
-        .card-footer {
-          margin-bottom: 8px; // +8 tolti dall'article... XXX
+        .it-card-footer {
+          margin-bottom: $it-card-cap-padding-y * 0.5; // +8 tolti dall'article... XXX
         }
 
-        .card-related.card-footer {
+        .it-card-related.it-card-footer {
           margin-bottom: 0;
-          padding-bottom: 8px; // XXX < da verificare
+          padding-bottom: $it-card-cap-padding-y; 
         }
       }
 
-      &.card-img {
+      &.it-card-img {
         .img-responsive-wrapper {
           display: flex;
           align-items: center;
@@ -418,7 +428,7 @@ article.card {
           }
         }
 
-        &.card-inline-reverse {
+        &.it-card-inline-reverse {
           .img-responsive-wrapper {
             order: 1;
           }
@@ -427,22 +437,22 @@ article.card {
         &.rounded {
           .img-responsive-wrapper {
 
-            &:is(:first-child),
-            &:is(:nth-child(2)) {
+            &:first-child,
+            &:nth-child(2) {
               border-top-right-radius: 0 !important;
-              border-bottom-left-radius: var(--bs-card-inner-border-radius);
+              border-bottom-left-radius: $it-card-inner-border-radius;
             }
           }
 
-          &.card-inline-reverse {
+          &.it-card-inline-reverse {
             .img-responsive-wrapper {
 
-              &:is(:first-child),
-              &:is(:nth-child(2)) {
+              &:first-child,
+              &:nth-child(2) {
                 border-top-left-radius: 0 !important;
                 border-bottom-left-radius: 0 !important;
-                border-top-right-radius: var(--bs-card-inner-border-radius) !important;
-                border-bottom-right-radius: var(--bs-card-inner-border-radius) !important;
+                border-top-right-radius: $it-card-inner-border-radius !important;
+                border-bottom-right-radius: $it-card-inner-border-radius !important;
               }
             }
           }
@@ -450,33 +460,32 @@ article.card {
       }
     }
 
-    &.card-inline-mini {
+    &.it-card-inline-mini {
       @include inline-layout;
-      min-height: 160px; // XXX in UI Kit da verificare
+      min-height: $it-card-inline-mini-min-height;
 
-      &.card-img .img-responsive-wrapper {
+      &.it-card-img .img-responsive-wrapper {
         width: 25%;
       }
 
-      &.card-img .card-inline-content {
+      &.it-card-img .it-card-inline-content {
         width: 75%;
       }
     }
 
     @include media-breakpoint-up(sm) {
-      &:not(.card-inline-mini) {
+      &:not(.it-card-inline-mini) {
         @include inline-layout;
-        min-height: 240px; // XXX in UI Kit da verificare
+        min-height: $it-card-inline-min-height; 
 
-        &.card-img .img-responsive-wrapper {
+        &.it-card-img .img-responsive-wrapper {
           width: 50%;
         }
 
-        &.card-img .card-inline-content {
+        &.it-card-img .it-card-inline-content {
           width: 50%;
         }
       }
     }
   }
-}
 }

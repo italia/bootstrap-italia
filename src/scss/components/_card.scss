@@ -1,6 +1,5 @@
 @use 'sass:math';
 
-.card-old-one {
   //
   // Base styles
   //
@@ -929,7 +928,6 @@
       }
     }
   }
-} // XXX card-old-one
 
 //Tablet horizontal / small desktop
 @include media-breakpoint-up(lg) {
