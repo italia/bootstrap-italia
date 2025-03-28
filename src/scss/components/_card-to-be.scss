@@ -43,7 +43,7 @@ $it-card-signature-size: 0.875rem !default;
 $it-card-link-color: $secondary !default;
 // scss-docs-end card-variables
 
-// Improved responsive card-group
+// Improved responsive card-group with a @container aware twist 
 .it-card-group {
   display: flex;
   flex-wrap: wrap;
@@ -51,7 +51,7 @@ $it-card-link-color: $secondary !default;
   // gap and fallback
   margin: -0.5 * $it-card-group-gap;
 
-  >.it-card {
+  > .it-card {
     margin: 0.5 * $it-card-group-gap;
     // Default stacked on mobile
     flex: 0 0 calc(100% - #{$it-card-group-gap});
@@ -61,14 +61,14 @@ $it-card-link-color: $secondary !default;
     margin: 0;
     gap: $it-card-group-gap;
 
-    >.it-card {
+    > .it-card {
       margin: 0;
       flex: 0 0 100%;
     }
   }
 
-  >.it-card {
-
+  // Base layout with Media Queries (fully supported)
+  > .it-card {
     // Responsive breakpoints
     @include media-breakpoint-up(sm) {
       flex: 0 0 calc(50% - 0.5 * #{$it-card-group-gap});
@@ -84,13 +84,13 @@ $it-card-link-color: $secondary !default;
   }
 
   // Predefined column layouts
-  &.it-card-group-2-cols>.it-card {
+  &.it-card-group-2-cols > .it-card {
     @include media-breakpoint-up(sm) {
       flex: 0 0 calc(50% - 0.5 * #{$it-card-group-gap});
     }
   }
 
-  &.it-card-group-3-cols>.it-card {
+  &.it-card-group-3-cols > .it-card {
     @include media-breakpoint-up(sm) {
       flex: 0 0 calc(50% - 0.5 * #{$it-card-group-gap});
     }
@@ -100,7 +100,7 @@ $it-card-link-color: $secondary !default;
     }
   }
 
-  &.it-card-group-4-cols>.it-card {
+  &.it-card-group-4-cols > .it-card {
     @include media-breakpoint-up(sm) {
       flex: 0 0 calc(50% - 0.5 * #{$it-card-group-gap});
     }
@@ -114,8 +114,59 @@ $it-card-link-color: $secondary !default;
     }
   }
 
+  // Progressive enhancement with Container Queries
+  @supports (container-type: inline-size) {
+    // Only with .it-card-group-container-aware class
+    &.it-card-group-container-aware {
+      container-type: inline-size;
+      
+      > .it-card {
+        // Reset Media Queries
+        @include media-breakpoint-up(sm) {
+          flex: auto; 
+        }
+        
+        @include media-breakpoint-up(md) {
+          flex: auto;
+        }
+        
+        @include media-breakpoint-up(lg) {
+          flex: auto;
+        }
+        
+        // Container Queries
+        flex: 1 0 100%;
+        
+        @container (min-width: 500px) {
+          flex: 0 0 calc(50% - 0.5 * #{$it-card-group-gap});
+        }
+        
+        @container (min-width: 800px) {
+          flex: 0 0 calc(33.333% - 0.667 * #{$it-card-group-gap});
+        }
+        
+        @container (min-width: 1100px) {
+          flex: 0 0 calc(25% - 0.75 * #{$it-card-group-gap});
+        }
+      }
+      
+      // Override specific coulmns in container mode
+      &.it-card-group-2-cols > .it-card {
+        @container (min-width: 500px) {
+          flex: 0 0 calc(50% - 0.5 * #{$it-card-group-gap});
+        }
+      }
+      
+      &.it-card-group-3-cols > .it-card {
+        @container (min-width: 800px) {
+          flex: 0 0 calc(33.333% - 0.667 * #{$it-card-group-gap});
+        }
+      }
+    }
+  }
+
   // Option for equal height cards
-  &.it-card-group-equal-height>.it-card {
+  &.it-card-group-equal-height > .it-card {
     height: 100%;
   }
 

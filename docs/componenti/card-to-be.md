@@ -557,3 +557,146 @@ Centrate orizzontalmente con `.it-card-group-center`.
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
+
+### Con @container queries
+
+Work in progress
+
+{% comment %}Example name: Gruppi di card con Container Queries{% endcomment %}
+{% capture example %}
+<div>
+  <h3>Gruppi di card con Container Queries</h3>
+  <p class="mb-3">Questo gruppo di card utilizza Container Queries per adattarsi alla dimensione del contenitore invece che alla viewport. Ridimensiona la finestra del browser o prova a visualizzare questa pagina su dispositivi di diverse dimensioni per vedere la differenza.</p>
+  
+  <div class="it-card-group it-card-group-container-aware">
+    <article class="it-card rounded shadow-sm border">
+      <h3 class="it-card-title no_toc">
+        <a href="#">Card con Container Queries</a>
+      </h3>
+      <div class="it-card-body">
+        <p class="it-card-text">Questa card si adatta alla dimensione del suo contenitore, non della viewport.</p>
+      </div>
+      <footer class="it-card-related it-card-footer">
+        <div class="it-card-taxonomy">
+          <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
+        </div>
+        <time class="it-card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
+      </footer>
+    </article>
+    <article class="it-card rounded shadow-sm border">
+      <h3 class="it-card-title no_toc">
+        <a href="#">Card con Container Queries</a>
+      </h3>
+      <div class="it-card-body">
+        <p class="it-card-text">Questa card si adatta alla dimensione del suo contenitore, non della viewport.</p>
+      </div>
+      <footer class="it-card-related it-card-footer">
+        <div class="it-card-taxonomy">
+          <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
+        </div>
+        <time class="it-card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
+      </footer>
+    </article>
+    <article class="it-card rounded shadow-sm border">
+      <h3 class="it-card-title no_toc">
+        <a href="#">Card con Container Queries</a>
+      </h3>
+      <div class="it-card-body">
+        <p class="it-card-text">Questa card si adatta alla dimensione del suo contenitore, non della viewport.</p>
+      </div>
+      <footer class="it-card-related it-card-footer">
+        <div class="it-card-taxonomy">
+          <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
+        </div>
+        <time class="it-card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
+      </footer>
+    </article>
+    <article class="it-card rounded shadow-sm border">
+      <h3 class="it-card-title no_toc">
+        <a href="#">Card con Container Queries</a>
+      </h3>
+      <div class="it-card-body">
+        <p class="it-card-text">Questa card si adatta alla dimensione del suo contenitore, non della viewport.</p>
+      </div>
+      <footer class="it-card-related it-card-footer">
+        <div class="it-card-taxonomy">
+          <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
+        </div>
+        <time class="it-card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
+      </footer>
+    </article>
+  </div>
+
+  <h3 class="mt-5">Confronto in colonne diverse</h3>
+  <p class="mb-3">Qui puoi vedere come lo stesso gruppo di card container-aware si adatta a diverse larghezze di colonna:</p>
+
+  <div class="row">
+    <div class="col-12 col-lg-8 mb-4">
+      <div class="p-3 bg-light">
+        <h4>Colonna larga (8/12)</h4>
+        <div class="it-card-group it-card-group-container-aware">
+          <article class="it-card rounded shadow-sm border">
+            <h3 class="it-card-title no_toc">
+              <a href="#">Card in colonna larga</a>
+            </h3>
+            <div class="it-card-body">
+              <p class="it-card-text">In questa colonna larga, le card si distribuiscono su più colonne.</p>
+            </div>
+          </article>
+          <article class="it-card rounded shadow-sm border">
+            <h3 class="it-card-title no_toc">
+              <a href="#">Card in colonna larga</a>
+            </h3>
+            <div class="it-card-body">
+              <p class="it-card-text">In questa colonna larga, le card si distribuiscono su più colonne.</p>
+            </div>
+          </article>
+          <article class="it-card rounded shadow-sm border">
+            <h3 class="it-card-title no_toc">
+              <a href="#">Card in colonna larga</a>
+            </h3>
+            <div class="it-card-body">
+              <p class="it-card-text">In questa colonna larga, le card si distribuiscono su più colonne.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-lg-4 mb-4">
+      <div class="p-3 bg-light">
+        <h4>Colonna stretta (4/12)</h4>
+        <div class="it-card-group it-card-group-container-aware">
+          <article class="it-card rounded shadow-sm border">
+            <h3 class="it-card-title no_toc">
+              <a href="#">Card in colonna stretta</a>
+            </h3>
+            <div class="it-card-body">
+              <p class="it-card-text">In questa colonna stretta, le card si dispongono su una singola colonna.</p>
+            </div>
+          </article>
+          <article class="it-card rounded shadow-sm border">
+            <h3 class="it-card-title no_toc">
+              <a href="#">Card in colonna stretta</a>
+            </h3>
+            <div class="it-card-body">
+              <p class="it-card-text">In questa colonna stretta, le card si dispongono su una singola colonna.</p>
+            </div>
+          </article>
+          <article class="it-card rounded shadow-sm border">
+            <h3 class="it-card-title no_toc">
+              <a href="#">Card in colonna stretta</a>
+            </h3>
+            <div class="it-card-body">
+              <p class="it-card-text">In questa colonna stretta, le card si dispongono su una singola colonna.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="alert alert-info">
+    <strong>Nota:</strong> Le Container Queries sono una tecnologia CSS moderna supportata nella maggior parte dei browser recenti. Per i browser che non supportano questa funzionalità, viene automaticamente applicato un fallback basato su Media Queries standard.
+  </div>
+</div>
+{% endcapture %}{% include example.html content=example %}
