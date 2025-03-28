@@ -43,11 +43,23 @@ $it-card-signature-size: 0.875rem !default;
 $it-card-link-color: $secondary !default;
 // scss-docs-end card-variables
 
-// Improved responsive card-group
-.it-card-group {
-  display: flex;
-  flex-wrap: wrap;
-  gap: $it-card-group-gap;
+  // Improved responsive card-group
+  .card-group {
+    display: flex;
+    flex-wrap: wrap;
+
+    // gap and fallback
+    margin: -0.5rem;
+    > .card {
+      margin: 0.5rem;
+    }
+    @supports (gap: 1rem) {
+      margin: 0;
+      gap: 1rem;
+      > .card {
+        margin: 0;
+      }
+    }
 
   >.it-card {
     // Default stacked on mobile
@@ -230,7 +242,12 @@ article.it-card {
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: flex-end;
-      align-items: last baseline;
+
+      // Align items baseline and fallback
+      align-items: flex-end;
+      @supports (align-items: last baseline) {
+        align-items: last baseline;
+      }
 
       &.it-card-footer {
         padding-bottom: $it-card-cap-padding-y;
@@ -344,6 +361,8 @@ article.it-card {
       &.it-card-border-top {
         .img-responsive-wrapper {
 
+          &:first-child,
+          &:nth-child(2) {
           &:first-child,
           &:nth-child(2) {
             border-top-left-radius: 0;
@@ -484,8 +503,9 @@ article.it-card {
 
         &.it-card-img .it-card-inline-content {
           width: 50%;
-        }
+        
       }
     }
   }
+}
 }
