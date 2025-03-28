@@ -6,10 +6,13 @@ group: componenti
 toc: true
 ---
 
-{% capture callout %}
-#### Lavori in corso 
+## Introduzione
+Le card sono contenitori flessibili e versatili per organizzare e presentare contenuti strutturati in modo consistente. Questo componente utilizza la classe base `.it-card` con vari modificatori per adattarsi a diversi contesti e necessità.
 
-Il nuovo componente Card di Bootstrap Italia usa la nuova classe di stile dedicata `.it-card`, e tutte le combinazioni di modificatori come `.it-card-title` e `.it-card-body`. La versione precedente, che utilizzava e modificava le classi originali di Bootstrap `.card`, a fine lavorazioni della presente PR saranno deprecate, in tutte le varianti. Gli stili CSS delle precedenti versioni saranno salvaguardati fino al prossimo rilascio maggiore di Bootstrap Italia, per permettere un passaggio graduale. **Al momento è tutto in corso d'opera, be polite.** 
+{% capture callout %}
+#### Aggiornamento componente
+Le nuove card di Bootstrap Italia utilizzano la classe `.it-card` e relativi modificatori come `.it-card-title` e `.it-card-body`. Le classi legacy originarie di Bootstrap `.card` saranno deprecate nelle prossime versioni.
+Gli stili per le versioni precedenti saranno mantenuti fino al prossimo rilascio maggiore per permettere una migrazione graduale.
 {% endcapture %}{% include callout.html content=callout type="warning" %}
 
 ## To do
@@ -26,38 +29,51 @@ Il nuovo componente Card di Bootstrap Italia usa la nuova classe di stile dedica
 8. 🔮 preparare una pagina di documentazione divisa per le varianti corrette (editoriali, servizio, ...) e con le "utility" a margine (ombre, gruppi, ...)
 8. ... 
 
-## Strutture card
+## Struttura base
+La **card** è implementata come elemento `article` con un titolo (heading) `.it-card-title` come primo elemento figlio.
 
-La **card** è un elemento `article` con come primo figlio il titolo heading `.it-card-title`.
-Sono disponibili le classi `.it-card-height-full` e `.it-card-height-auto` per gestire le altezze, per esempio nel caso di più card affiancate.
+Per la gestione delle altezze, specialmente in layout affiancati, sono disponibili le classi: 
+- `.it-card-height-auto` (altezza basata sul contenuto) 
+- `.it-card-height-full` (occupa tutto lo spazio disponibile)
 
-Se è possibile si consiglia di usare il **titolo** come elemento cliccabile, senza demandare a collegamenti suggessivi.
-Per usare titoli con l'icona a lato si usa la classe `.it-card-title-icon` sull'elemento `.it-card-title`.
+### Titolo ed elementi principali
+Si consiglia di implementare il **titolo** (`.it-card-title`) come elemento cliccabile principale, evitando di distribuire collegamenti in tutta la card.
 
-Se è presente un'**immagine** è disponibile la classe `.it-card-img`. L'immagine deve essere inserita di seguito all'elemento `.it-card-title`, l'ordine di visualizzazione viene di fatto invertito via CSS applicando `order: -1;` al contenitore dell'immagine, ma rimane corretto nel DOM. 
+Per aggiungere un'icona a fianco del titolo, utilizzare la classe `.it-card-title-icon`.
 
-Il **corpo dell'elemento** vive nell'elemento `.it-card-body` che applica le corrette spaziature. È possibile usare più `.it-card-body`, ad esempio per permettere di separare un blocco lista `.list-group` utile per riprodurre per esempio un elenco di collegamenti correlati. 
+Quando è presente un'immagine, applicare la classe `.it-card-img` alla card. L'immagine deve seguire l'elemento `.it-card-title` nel markup. L'ordine di visualizzazione viene invertito tramite CSS (applicando `order: -1` al contenitore dell'immagine), mantenendo però la corretta struttura semantica nel DOM.
 
-Gli elementi di **metadati** della Card (tassonomie, stato e data) sono compresi in un elemento `footer` per facilitarne l'individuazione nel markup.
-L'elemento `footer`, con classe `.it-card-related`, può vivere dentro il `.it-card-body` o, in alternativa, è possibile associargli la classe `.it-card-footer` per separarlo da questo visivamente e, nel caso di card a tutta altezza, averlo sempre attaccato al bordo inferiore.
-Le tassonomie vivono nell'elemento `.it-card-taxonomy` e, laddove necessario, sono implementate come liste (esempio lista argomenti correlati).
-Le date nell'elemento `time` a cui va associato il corretto attributo `datetime`. 
+Il corpo della card deve essere contenuto in un elemento con classe `.it-card-body`, che applica le opportune spaziature. È possibile utilizzare più elementi `.it-card-body` per separare blocchi di contenuto, come ad esempio liste `.list-group`.
 
-La classe `.it-card-footer` inoltre è utile per creare uno **spazio secondario** che può ospitare un eventuale collegamento o pulsante secondario.  
+### Metadati e piè di pagina
 
-Per l'elemento `article` è disponibile la classe `.it-card-border-top` (e relativo colore `it-card-border-top-COLORE`) come mero elemento decorativo. Se utilizzato per trasmettere valore semantico alla Card che lo adotta non sarebbe corretto. 
+I **metadati** della card (categorie, tag e date) devono essere raggruppati in un elmento `footer`con classe `.it-card-related`. Questo elemento può essere contenuto all'interno di `.it-card-body` oppure, aggiungendo la classe `.it-card-footer`, può essere visualizzato separatamente in fondo alla card.
 
+La struttura dei metadati include:
+
+- Categorie nell'elemento `.it-card-taxonomy`
+- Tag/argomenti in liste quando necessario
+- Date in elementi `time` con il corretto attributo `datetime`
+
+La classe `.it-card-footer` può essere usata anche per creare uno spazio dedicato a collegamenti o pulsanti secondari.
+
+Per un effetto decorativo, è disponibile la classe `.it-card-border-top` (con varianti di colore `.it-card-border-top-COLORE`). Questa classe non deve essere utilizzata per comunicare significato semantico, ma solo come elemento visivo.
 
 {% capture callout %}
 #### Accessibilità
-Se il titolo **`.it-card-title`** non fosse il primo elemento dell'`article`, sarebbe opportuno collegarlo con `aria-labelledby="ID_TITOLO"` e avendo premura di aggiungere `id="ID_TITOLO"` al titolo.
+Se il titolo `.it-card-title` non è il primo elemento dell'`article`, è necessario collegarlo con `aria-labelledby="ID_TITOLO"` e aggiungere `id="ID_TITOLO"` al titolo stesso.
 
-I titoli sono **`h3`** e i sottotitoli o periodi semplici paragrafi stilati, per evitare ridondanza. La gerarchia del titolo è corretta se la Card è contenuta dentro un livello `h2`. Andrà quindi aggiustata rispetto al contesto.
+I titoli sono preferibilmente `h3`, mentre sottotitoli o testi brevi dovrebbero essere paragrafi semplici. La gerarchia dei titoli deve adattarsi al contesto in cui la card è inserita.
 
-La scelta di usare l'elemento **`article`** e non un semplice `div` è una scelta ponderata attentamente, ma certamente non l'unica possibile. Siamo consapevoli che alcune tipologie di lettori di schermo e browser non ne beneficiano. È vero però che alcuni tra i più diffusi lettori di schermo lo supportano (JAWS, VoiceOver, ...) o lo possono fare previa scelta nella configurazione (NVDA, ...). È altresì vero che l'uso di `article` e `footer` rendono il markup molto più comprensibile e dovrebbero portare a una più facile applicazione di markup semantico.  
+L'uso dell'elemento **`article`** è una scelta semantica ponderata. Anche se non tutti i lettori di schermo lo supportano allo stesso modo, i più diffusi (JAWS, VoiceOver) lo interpretano correttamente, e altri (come NVDA) possono essere configurati per farlo. L'utilizzo di `article` e footer rende il markup più comprensibile e semanticamente strutturato.
 
-Attenzione alle info necessarie per lettori schermo, in particolar modo sui **metadati** sono nascoste con `.visually-hidden` (es. “Categoria correlata: “, “Argomento correlato: “) o applicate con `aria-label` (es. “Argomenti correlati: “).
+Per i lettori di schermo, è importante aggiungere testi descrittivi per i **metadati**, nasconti con `.visually-hidden` (es. "Categoria correlata: ", "Argomento correlato: ") o applicati con `aria-label` (es. "Argomenti correlati: ").
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
+
+### Esempi di card completa
+
+Questa card dimostra la struttura completa con tutti gli elementi: titolo con icona, immagine, corpo del testo, autore, collegamenti, lista e metadati.
+
 
 {% comment %}Example name: Strutture complete card{% endcomment %}
 {% capture example %}
@@ -122,12 +138,14 @@ Attenzione alle info necessarie per lettori schermo, in particolar modo sui **me
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-## Esempi applicazione (per ora per provare la flessibilità del markup)
+## Varianti comuni
 
-- Una card con un collegamento secondario nel piede.
-- Una card con classe `.it-card-height-full` con due esempi di `footer` dove è presenta la data: dentro l'elemento `.it-card-body` e con classe `.it-card-footer`.  
-- Una card "servizio o bando" con elemento `.it-card-title` la cui dimensione è fissata con classe `.h5`, con nei metadati lo stato delle lavorazioni e un pulsante di azione secondaria. 
-- Una card senza collegamento, di presentazione. 
+Ecco alcuni esempi di configurazioni frequenti per le card:
+
+1. Card con collegamento secondario nel piede
+2. Card a tutta altezza (`.it-card-height-full`) con metadati a fine card
+3. Card "servizio/bando" con stato delle lavorazioni e pulsante di azione secondaria
+4. Card semplice di presentazione senza collegamenti
 
 {% comment %}Example name: Strutture card{% endcomment %}
 {% capture example %}
@@ -224,8 +242,12 @@ Attenzione alle info necessarie per lettori schermo, in particolar modo sui **me
 
 ## Varianti inline
 
-Due varianti di tipo editoriale che si possono usare per esempio in contesti di presentazione di gruppi di notizie. È possibile combinare il formato di default con i formati inline. La variante `.it-card-inline-mini` rimane inline anche su mobile. Le altre varianti solo `.it-card-inline` su mobile prendono il layout standard. 
-Nell'esempio che segue è presente anche la card semplice, la prima a sinistra. 
+Le varianti inline sono ideali per presentazioni editoriali, come in contesti di notizie o articoli correlati. Esistono due principali configurazioni:
+
+- `.it-card-inline` - Layout orizzontale su schermi medio-grandi, verticale su mobile
+- `.it-card-inline-mini` - Layout orizzontale mantenuto anche su dispositivi mobili
+
+È possibile combinare questi formati con il layout standard e applicare `.it-card-inline-reverse` per invertire l'ordine degli elementi (con l'immagine a destra anziché a sinistra).
 
 {% comment %}Example name: Varianti inline{% endcomment %}
 {% capture example %}
@@ -349,16 +371,23 @@ Nell'esempio che segue è presente anche la card semplice, la prima a sinistra.
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-## Bordi e ombre
+## Stili di presentazione
 
-La configurazione di base del componente Card prevede un bordo applicato con la classe `.border` e un'ombra `.shadow.sm`. 
-Per scelte di elevazione rispetto al contesto si possono usare le versioni con ombre `.shadow` e `.shadow-lg`, valutando di rimuovere il bordo se è chiara la distinzione con lo sfondo.
+### Bordi e ombre
+
+La configurazione base delle card prevede un bordo (`.border`) e un'ombra leggera (`.shadow-sm`).
+Per aumentare la separazione visiva dal contesto, è possibile utilizzare ombre più evidenti:
+
+- `.shadow` - ombra media
+- `.shadow-lg` - ombra pronunciata
+
+Quando si utilizzano ombre più evidenti, è possibile rimuovere il bordo se la distinzione dallo sfondo è sufficientemente chiara.
 
 {% capture callout %}
 
-#### Accessibilità contrasto con lo sfondo
+#### Accessibilità: contrasto con lo sfondo
 
-In un mondo ideale, se la "it-card" è una struttura visiva e semantica, sarebbe auspicabile avere un rapporto di contrasto colore di almeno 3:1 tra questa e lo sfondo. Si suggerisce di usare bordi, livelli di ombre e anche il colore di sfondo retrostante per evidenziarle.   
+Per garantire una buona accessibilità, è consigliabile mantenere un rapporto di contrasto di almeno 3:1 tra la card e lo sfondo. Le combinazioni di bordi, ombre e colori di sfondo aiutano a raggiungere questo obiettivo. 
 
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
