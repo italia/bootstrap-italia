@@ -43,7 +43,7 @@ $it-card-signature-size: 0.875rem !default;
 $it-card-link-color: $secondary !default;
 // scss-docs-end card-variables
 
-// Improved responsive card-group with a @container aware twist 
+// Improved responsive card-group with a @container aware twist
 .it-card-group {
   display: flex;
   flex-wrap: wrap;
@@ -55,21 +55,8 @@ $it-card-link-color: $secondary !default;
     margin: 0.5 * $it-card-group-gap;
     // Default stacked on mobile
     flex: 0 0 calc(100% - #{$it-card-group-gap});
-  }
 
-  @supports (gap: $it-card-group-gap) {
-    margin: 0;
-    gap: $it-card-group-gap;
-
-    > .it-card {
-      margin: 0;
-      flex: 0 0 100%;
-    }
-  }
-
-  // Base layout with Media Queries (fully supported)
-  > .it-card {
-    // Responsive breakpoints
+    // Responsive breakpoints - AGGIUNGI QUI DIRETTAMENTE
     @include media-breakpoint-up(sm) {
       flex: 0 0 calc(50% - 0.5 * #{$it-card-group-gap});
     }
@@ -80,6 +67,16 @@ $it-card-link-color: $secondary !default;
 
     @include media-breakpoint-up(lg) {
       flex: 0 0 calc(25% - 0.75 * #{$it-card-group-gap});
+    }
+  }
+
+  @supports (gap: $it-card-group-gap) {
+    margin: 0;
+    gap: $it-card-group-gap;
+
+    > .it-card {
+      margin: 0;
+      flex: 0 0 100%;
     }
   }
 
@@ -119,44 +116,44 @@ $it-card-link-color: $secondary !default;
     // Only with .it-card-group-container-aware class
     &.it-card-group-container-aware {
       container-type: inline-size;
-      
+
       > .it-card {
         // Reset Media Queries
         @include media-breakpoint-up(sm) {
-          flex: auto; 
+          flex: auto;
         }
-        
+
         @include media-breakpoint-up(md) {
           flex: auto;
         }
-        
+
         @include media-breakpoint-up(lg) {
           flex: auto;
         }
-        
+
         // Container Queries
         flex: 1 0 100%;
-        
+
         @container (min-width: 500px) {
           flex: 0 0 calc(50% - 0.5 * #{$it-card-group-gap});
         }
-        
+
         @container (min-width: 800px) {
           flex: 0 0 calc(33.333% - 0.667 * #{$it-card-group-gap});
         }
-        
+
         @container (min-width: 1100px) {
           flex: 0 0 calc(25% - 0.75 * #{$it-card-group-gap});
         }
       }
-      
+
       // Override specific coulmns in container mode
       &.it-card-group-2-cols > .it-card {
         @container (min-width: 500px) {
           flex: 0 0 calc(50% - 0.5 * #{$it-card-group-gap});
         }
       }
-      
+
       &.it-card-group-3-cols > .it-card {
         @container (min-width: 800px) {
           flex: 0 0 calc(33.333% - 0.667 * #{$it-card-group-gap});
@@ -206,7 +203,7 @@ article.it-card {
   }
 
   .it-card-link {
-    +.it-card-link {
+    + .it-card-link {
       margin-left: $it-card-spacer-x;
     }
   }
@@ -353,8 +350,8 @@ article.it-card {
   }
 
   // Card can contain special lists, example: Related articles to a main Tag card
-  >.list-group,
-  .it-card-body>.list-group {
+  > .list-group,
+  .it-card-body > .list-group {
     border-top: 1px solid var(--bs-list-group-border-color);
     border-bottom: 1px solid var(--bs-list-group-borders-color);
 
@@ -376,7 +373,7 @@ article.it-card {
     }
   }
 
-  .it-card-body>.list-group {
+  .it-card-body > .list-group {
     margin-top: 4 * $it-card-spacer-y;
     margin-bottom: 2 * $it-card-spacer-y;
 
@@ -385,8 +382,8 @@ article.it-card {
     }
   }
 
-  >.it-card-header+.list-group,
-  >.list-group+.it-card-footer {
+  > .it-card-header + .list-group,
+  > .list-group + .it-card-footer {
     border-top: 0;
   }
 
@@ -406,7 +403,6 @@ article.it-card {
 
     &.rounded {
       .img-responsive-wrapper {
-
         &:first-child,
         &:nth-child(2) {
           border-top-left-radius: $it-card-inner-border-radius;
@@ -416,7 +412,6 @@ article.it-card {
 
       &.it-card-border-top {
         .img-responsive-wrapper {
-
           &:first-child,
           &:nth-child(2) {
             border-top-left-radius: 0;
@@ -424,7 +419,6 @@ article.it-card {
           }
         }
       }
-
     }
   }
 
@@ -510,7 +504,6 @@ article.it-card {
 
         &.rounded {
           .img-responsive-wrapper {
-
             &:first-child,
             &:nth-child(2) {
               border-top-right-radius: 0 !important;
@@ -520,7 +513,6 @@ article.it-card {
 
           &.it-card-inline-reverse {
             .img-responsive-wrapper {
-
               &:first-child,
               &:nth-child(2) {
                 border-top-left-radius: 0 !important;
