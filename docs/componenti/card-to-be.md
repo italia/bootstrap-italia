@@ -15,12 +15,16 @@ Il nuovo componente Card di Bootstrap Italia usa la nuova classe di stile dedica
 ## To do
 
 1. ✅ rifinire gestione spaziature e dimensioni con variabili e resa visiva
-2. 🚧 aggiungere modalità ed esempi per gestione gruppi di card (colonne, flex, etc.) e validare soluzione @container per le varianti responsive
+2. ✅ aggiungere modalità ed esempi per gestione gruppi di card (colonne, flex, etc.) e validare soluzione @container per le varianti responsive
 3. ✅ aggiungere strutture per card varianti editoriali "mini" e "large"
-4. 🚧 implementare strategie di fallback per eventuali proprietà "moderne" in ottica supporto browser >1% IT (vedi config browserlist dedicato)
-5. 🔮 riscrivere documentazione esempi con i nuovi gruppi, eliminare uso colonne classiche
-6. 🔮 preparare una pagina di documentazione divisa per le varianti corrette (editoriali, servizio, ...) e con le "utility" a margine (ombre, gruppi, ...)
-5. ... 
+4. ✅ implementare strategie di fallback per eventuali proprietà "moderne" in ottica supporto browser >1% IT (vedi config browserlist dedicato)
+5. ✅ riscrivere documentazione esempi con i nuovi gruppi
+6. ✅ refactoring classi css con approccio enhancement progressivo `it-card`
+7. ✅ refactoring e raggruppamento variabili dedicate nel componente 
+6. 🔮 aggiungere varianti che mancano da To Be UI Kit Italia
+7. 🔮 review col team e fix
+8. 🔮 preparare una pagina di documentazione divisa per le varianti corrette (editoriali, servizio, ...) e con le "utility" a margine (ombre, gruppi, ...)
+8. ... 
 
 ## Strutture card
 
@@ -109,7 +113,7 @@ Attenzione alle info necessarie per lettori schermo, in particolar modo sui **me
         <time class="it-card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
       </footer>
       <div class="it-card-footer" aria-label="Azioni correlate:">
-        <button href="#" type="button" class="btn btn-outline-secondary btn-icon Zd-md-block">Azione secondaria</button>
+        <button type="button" class="btn btn-outline-secondary btn-iconk">Azione secondaria</button>
         <a href="#" class="it-card-link">Link secondario</a>
       </div>
     </article>
@@ -195,7 +199,7 @@ Attenzione alle info necessarie per lettori schermo, in particolar modo sui **me
         <span class="it-card-date text-warning"><strong>Scadenza: </strong><time class="it-card-date text-warning" datetime="10/12/{{ 'now' | date: "%Y" }}">31 gennaio, {{ 'now' | date: "%Y" }}</time></span>
       </footer>
       <div class="it-card-footer" aria-label="Azioni correlate:">
-        <button href="#" type="button" class="btn btn-outline-secondary btn-icon Zd-md-block">
+        <button type="button" class="btn btn-outline-secondary btn-iconk">
           <span>Azione secondaria</span>
           <svg class="icon icon-secondary ms-2" aria-hidden="true"><use href="/dist/svg/sprites.svg#it-arrow-right"></use></svg>
         </button>
@@ -507,7 +511,9 @@ Gruppi di card con layout responsive usando `.it-card-group` in un `div` conteni
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-Numero di colonne specifico usando `.it-card-group-N-cols`.
+### Numero di colonne specifiche
+
+Usando `.it-card-group-N-cols`.
   
 {% comment %}Example name: Gruppi di card con colonne specifiche{% endcomment %}
 {% capture example %}
@@ -532,7 +538,10 @@ Numero di colonne specifico usando `.it-card-group-N-cols`.
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
-Centrate orizzontalmente con `.it-card-group-center`.
+
+### Centrate orizzontalmente
+
+Usando `.it-card-group-center`.
 
 {% comment %}Example name: Gruppi di card centrate{% endcomment %}
 {% capture example %}  
@@ -558,16 +567,15 @@ Centrate orizzontalmente con `.it-card-group-center`.
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Con @container queries
+## Gruppi di card con Container Queries (Sperimentale)
 
-Work in progress
+Questo gruppo di card utilizza Container Queries `.it-card-group-container-aware` per adattarsi alla dimensione del contenitore invece che alla viewport. Ridimensiona la finestra del browser o prova a visualizzare questa pagina su dispositivi di diverse dimensioni per vedere la differenza.
+
+Le Container Queries sono una tecnologia CSS moderna supportata nella maggior parte dei browser recenti. Per i browser che non supportano questa funzionalità, viene automaticamente applicato un fallback basato su Media Queries standard.
 
 {% comment %}Example name: Gruppi di card con Container Queries{% endcomment %}
 {% capture example %}
 <div>
-  <h3>Gruppi di card con Container Queries</h3>
-  <p class="mb-3">Questo gruppo di card utilizza Container Queries per adattarsi alla dimensione del contenitore invece che alla viewport. Ridimensiona la finestra del browser o prova a visualizzare questa pagina su dispositivi di diverse dimensioni per vedere la differenza.</p>
-  
   <div class="it-card-group it-card-group-container-aware">
     <article class="it-card rounded shadow-sm border">
       <h3 class="it-card-title no_toc">
@@ -626,14 +634,18 @@ Work in progress
       </footer>
     </article>
   </div>
+</div>
+{% endcapture %}{% include example.html content=example %}
 
-  <h3 class="mt-5">Confronto in colonne diverse</h3>
-  <p class="mb-3">Qui puoi vedere come lo stesso gruppo di card container-aware si adatta a diverse larghezze di colonna:</p>
+#### Confronto in colonne diverse
 
+Qui puoi esplorare come lo stesso gruppo di card "container-aware" si adatta a diverse larghezze di colonna, permettendo di realizzare layout complessi:
+
+{% comment %}Example name: Gruppi di card con Container Queries in colonne diverse{% endcomment %}
+{% capture example %}
   <div class="row">
     <div class="col-12 col-lg-8 mb-4">
       <div class="p-3 bg-light">
-        <h4>Colonna larga (8/12)</h4>
         <div class="it-card-group it-card-group-container-aware">
           <article class="it-card rounded shadow-sm border">
             <h3 class="it-card-title no_toc">
@@ -664,7 +676,6 @@ Work in progress
     </div>
     <div class="col-12 col-lg-4 mb-4">
       <div class="p-3 bg-light">
-        <h4>Colonna stretta (4/12)</h4>
         <div class="it-card-group it-card-group-container-aware">
           <article class="it-card rounded shadow-sm border">
             <h3 class="it-card-title no_toc">
@@ -694,9 +705,4 @@ Work in progress
       </div>
     </div>
   </div>
-
-  <div class="alert alert-info">
-    <strong>Nota:</strong> Le Container Queries sono una tecnologia CSS moderna supportata nella maggior parte dei browser recenti. Per i browser che non supportano questa funzionalità, viene automaticamente applicato un fallback basato su Media Queries standard.
-  </div>
-</div>
 {% endcapture %}{% include example.html content=example %}

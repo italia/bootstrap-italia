@@ -6,7 +6,7 @@ $it-card-spacer-x: 1rem !default;
 $it-card-height: null !default;
 $it-card-inline-min-height: 240px !default;
 $it-card-inline-mini-min-height: 160px !default;
-$it-card-color: null !default;
+$it-card-color: $color-text-secondary !default;
 $it-card-bg: $white !default;
 $it-card-border-color: $gray-border !default;
 $it-card-border-width: $border-width !default;
@@ -30,7 +30,7 @@ $it-card-border-top-colors: (
 );
 $it-card-p-size: 1rem !default;
 $it-card-p-l-h: 1.5rem !default;
-$it-card-p-color: $color-text-base !default;
+$it-card-p-color: $color-text-secondary !default;
 $it-card-category-size: 0.875rem !default;
 $it-card-category-fw: 600 !default;
 $it-card-category-l-spacing: 0.5px !default;
@@ -48,76 +48,78 @@ $it-card-link-color: $secondary !default;
   display: flex;
   flex-wrap: wrap;
 
-  // gap and fallback
-  margin: -0.5 * $it-card-group-gap;
+  // gap fallback
+  margin: calc(-0.5 * $it-card-group-gap);
 
-  > .it-card {
-    margin: 0.5 * $it-card-group-gap;
+  >.it-card {
+    margin: calc(0.5 * $it-card-group-gap);
     // Default stacked on mobile
-    flex: 0 0 calc(100% - #{$it-card-group-gap});
+    flex: 0 0 calc(100% - $it-card-group-gap);
 
-    // Responsive breakpoints - AGGIUNGI QUI DIRETTAMENTE
+    // Responsive breakpoints 
     @include media-breakpoint-up(sm) {
-      flex: 0 0 calc(50% - 0.5 * #{$it-card-group-gap});
+      flex: 0 0 calc(50% - 0.5 * $it-card-group-gap);
     }
 
     @include media-breakpoint-up(md) {
-      flex: 0 0 calc(33.333% - 0.667 * #{$it-card-group-gap});
+      flex: 0 0 calc(33.333% - 0.667 * $it-card-group-gap);
     }
 
     @include media-breakpoint-up(lg) {
-      flex: 0 0 calc(25% - 0.75 * #{$it-card-group-gap});
+      flex: 0 0 calc(25% - 0.75 * $it-card-group-gap);
     }
   }
 
+  // gap if supported
   @supports (gap: $it-card-group-gap) {
     margin: 0;
     gap: $it-card-group-gap;
 
-    > .it-card {
+    >.it-card {
       margin: 0;
-      flex: 0 0 100%;
     }
   }
 
   // Predefined column layouts
-  &.it-card-group-2-cols > .it-card {
+  &.it-card-group-2-cols>.it-card {
     @include media-breakpoint-up(sm) {
-      flex: 0 0 calc(50% - 0.5 * #{$it-card-group-gap});
+      flex: 0 0 calc(50% - 0.5 * $it-card-group-gap);
     }
   }
 
-  &.it-card-group-3-cols > .it-card {
+  &.it-card-group-3-cols>.it-card {
     @include media-breakpoint-up(sm) {
-      flex: 0 0 calc(50% - 0.5 * #{$it-card-group-gap});
+      flex: 0 0 calc(50% - 0.5 * $it-card-group-gap);
     }
 
     @include media-breakpoint-up(md) {
-      flex: 0 0 calc(33.333% - 0.667 * #{$it-card-group-gap});
+      flex: 0 0 calc(33.333% - 0.667 * $it-card-group-gap);
     }
   }
 
-  &.it-card-group-4-cols > .it-card {
+  &.it-card-group-4-cols>.it-card {
     @include media-breakpoint-up(sm) {
-      flex: 0 0 calc(50% - 0.5 * #{$it-card-group-gap});
+      flex: 0 0 calc(50% - 0.5 * $it-card-group-gap);
     }
 
     @include media-breakpoint-up(md) {
-      flex: 0 0 calc(33.333% - 0.667 * #{$it-card-group-gap});
+      flex: 0 0 calc(33.333% - 0.667 * $it-card-group-gap);
     }
 
     @include media-breakpoint-up(lg) {
-      flex: 0 0 calc(25% - 0.75 * #{$it-card-group-gap});
+      flex: 0 0 calc(25% - 0.75 * $it-card-group-gap);
     }
   }
 
   // Progressive enhancement with Container Queries
   @supports (container-type: inline-size) {
+
     // Only with .it-card-group-container-aware class
     &.it-card-group-container-aware {
       container-type: inline-size;
 
-      > .it-card {
+      >.it-card {
+
         // Reset Media Queries
         @include media-breakpoint-up(sm) {
           flex: auto;
@@ -135,35 +137,35 @@ $it-card-link-color: $secondary !default;
         flex: 1 0 100%;
 
         @container (min-width: 500px) {
-          flex: 0 0 calc(50% - 0.5 * #{$it-card-group-gap});
+          flex: 0 0 calc(50% - 0.5 * $it-card-group-gap);
         }
 
         @container (min-width: 800px) {
-          flex: 0 0 calc(33.333% - 0.667 * #{$it-card-group-gap});
+          flex: 0 0 calc(33.333% - 0.667 * $it-card-group-gap);
         }
 
         @container (min-width: 1100px) {
-          flex: 0 0 calc(25% - 0.75 * #{$it-card-group-gap});
+          flex: 0 0 calc(25% - 0.75 * $it-card-group-gap);
         }
       }
 
       // Override specific coulmns in container mode
-      &.it-card-group-2-cols > .it-card {
+      &.it-card-group-2-cols>.it-card {
         @container (min-width: 500px) {
-          flex: 0 0 calc(50% - 0.5 * #{$it-card-group-gap});
+          flex: 0 0 calc(50% - 0.5 * $it-card-group-gap);
         }
       }
 
-      &.it-card-group-3-cols > .it-card {
+      &.it-card-group-3-cols>.it-card {
         @container (min-width: 800px) {
-          flex: 0 0 calc(33.333% - 0.667 * #{$it-card-group-gap});
+          flex: 0 0 calc(33.333% - 0.667 * $it-card-group-gap);
         }
       }
     }
   }
 
   // Option for equal height cards
-  &.it-card-group-equal-height > .it-card {
+  &.it-card-group-equal-height>.it-card {
     height: 100%;
   }
 
@@ -203,14 +205,14 @@ article.it-card {
   }
 
   .it-card-link {
-    + .it-card-link {
+    +.it-card-link {
       margin-left: $it-card-spacer-x;
     }
   }
 
   // Card title styles
   .it-card-title {
-    margin-top: 2 * $it-card-title-spacer-y;
+    margin-top: calc(2 * $it-card-title-spacer-y);
     margin-bottom: 0;
     padding: 0 $it-card-spacer-x;
 
@@ -287,13 +289,14 @@ article.it-card {
 
   // Card metadata holder <footer>
   footer {
-    margin-top: 2 * $it-card-spacer-y;
+    margin-top: calc(2 * $it-card-spacer-y);
 
     &.it-card-related {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: flex-end;
+      gap: 0.5rem;
 
       // Align items baseline and fallback
       align-items: flex-end;
@@ -304,7 +307,7 @@ article.it-card {
 
       &.it-card-footer {
         padding-bottom: $it-card-cap-padding-y;
-        padding-top: $it-card-cap-padding-y * 0.5;
+        padding-top: calc($it-card-cap-padding-y * 0.5);
         border-top: none;
       }
     }
@@ -327,8 +330,9 @@ article.it-card {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
-      margin: 0;
       padding: 0;
+      margin: 0;
+      margin-top: 0.5rem;
       list-style-type: none;
       line-height: 1.5;
     }
@@ -350,13 +354,13 @@ article.it-card {
   }
 
   // Card can contain special lists, example: Related articles to a main Tag card
-  > .list-group,
-  .it-card-body > .list-group {
+  >.list-group,
+  .it-card-body>.list-group {
     border-top: 1px solid var(--bs-list-group-border-color);
     border-bottom: 1px solid var(--bs-list-group-borders-color);
 
-    margin-top: 2 * $it-card-spacer-y;
-    margin-bottom: 2 * $it-card-spacer-y;
+    margin-top: calc(2 * $it-card-spacer-y);
+    margin-bottom: calc(2 * $it-card-spacer-y);
 
     font-size: $it-card-p-size;
     line-height: $it-card-p-l-h;
@@ -373,17 +377,17 @@ article.it-card {
     }
   }
 
-  .it-card-body > .list-group {
-    margin-top: 4 * $it-card-spacer-y;
-    margin-bottom: 2 * $it-card-spacer-y;
+  .it-card-body>.list-group {
+    margin-top: calc(4 * $it-card-spacer-y);
+    margin-bottom: calc(2 * $it-card-spacer-y);
 
     .list-group-item {
       padding: var(--bs-list-group-item-padding-y) 0;
     }
   }
 
-  > .it-card-header + .list-group,
-  > .list-group + .it-card-footer {
+  >.it-card-header+.list-group,
+  >.list-group+.it-card-footer {
     border-top: 0;
   }
 
@@ -403,6 +407,7 @@ article.it-card {
 
     &.rounded {
       .img-responsive-wrapper {
+
         &:first-child,
         &:nth-child(2) {
           border-top-left-radius: $it-card-inner-border-radius;
@@ -412,6 +417,7 @@ article.it-card {
 
       &.it-card-border-top {
         .img-responsive-wrapper {
+
           &:first-child,
           &:nth-child(2) {
             border-top-left-radius: 0;
@@ -462,7 +468,7 @@ article.it-card {
         justify-content: space-between;
 
         .it-card-footer {
-          margin-bottom: $it-card-cap-padding-y * 0.5; // +8 tolti dall'article... XXX
+          margin-bottom: calc($it-card-cap-padding-y * 0.5); // +8 tolti dall'article... XXX
         }
 
         .it-card-related.it-card-footer {
@@ -504,6 +510,7 @@ article.it-card {
 
         &.rounded {
           .img-responsive-wrapper {
+
             &:first-child,
             &:nth-child(2) {
               border-top-right-radius: 0 !important;
@@ -513,6 +520,7 @@ article.it-card {
 
           &.it-card-inline-reverse {
             .img-responsive-wrapper {
+
               &:first-child,
               &:nth-child(2) {
                 border-top-left-radius: 0 !important;
