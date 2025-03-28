@@ -6,6 +6,14 @@ group: componenti
 toc: true
 ---
 
+{% capture callout %}
+
+Sono in corso le lavorazioni del nuovo componente Card — come da progetto disponibile in un prossimo rilascio di UI Kit Italia — per standardizzarne le varianti a valle dei lavori sul sito Designers Italia e sui modelli standard per enti specifici, con un occhio di riguardo sul profilo dell'accessibilità by design. Una volta completate le lavorazioni il componente descritto in questa pagina verrà deprecato. **Al momento è tutto in corso d'opera, be polite.** 
+
+[Esplora le lavorazioni in corso per le nuove Card](../card-to-be/). 
+
+{% endcapture %}{% include callout.html content=callout type="warning" %}
+
 Le card sono contenitori flessibili ed estendibili. Costruite con flexbox, offrono un facile posizionamento nella griglia e si combinano bene con altri componenti.
 
 Di default le card occupano l'intero spazio orizzontale del loro elemento contenitore.
@@ -486,35 +494,37 @@ Come per ogni elemento, è possibile aggiungere le classi `rounded` o `shadow` p
 
 {% comment %}Example name: Teaser{% endcomment %}
 {% capture example %}
-<div class="card-wrapper card-teaser-wrapper">
-  <!--start card-->
-  <div class="card card-teaser">
-    <div class="card-body">
-      <h3 class="card-title h5 no_toc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h3>
-      <p class="card-text font-serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-  </div>
-  <!--end card-->
-  <!--start card-->
-  <div class="card card-teaser rounded shadow">
-    <div class="card-body">
-      <h3 class="card-title h5 no_toc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h3>
-      <p class="card-text font-serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-  </div>
-  <!--end card-->
-  <!--start card-->
-  <div class="card card-teaser rounded shadow">
-    <div class="card-body">
-      <h3 class="card-title h5 no_toc">
-        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-clip"></use></svg>
-        <a href="#">Lorem ipsum dolor sit amet</a>
-      </h3>
-      <div class="card-text font-serif">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</p>
+<div class="row">
+  <div class="card-wrapper card-teaser-wrapper">
+    <!--start card-->
+    <div class="card card-teaser">
+      <div class="card-body">
+        <h3 class="card-title h5 no_toc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h3>
+        <p class="card-text font-serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       </div>
     </div>
+    <!--end card-->
+    <!--start card-->
+    <div class="card card-teaser rounded shadow">
+      <div class="card-body">
+        <h3 class="card-title h5 no_toc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h3>
+        <p class="card-text font-serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+    </div>
+    <!--end card-->
+    <!--start card-->
+    <div class="card card-teaser rounded shadow">
+      <div class="card-body">
+        <h3 class="card-title h5 no_toc">
+          <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-clip"></use></svg>
+          <a href="#">Lorem ipsum dolor sit amet</a>
+        </h3>
+        <div class="card-text font-serif">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</p>
+        </div>
+      </div>
+    </div>
+    <!--end card-->
   </div>
-  <!--end card-->
 </div>
 {% endcapture %}{% include example.html content=example %}
