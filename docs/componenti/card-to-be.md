@@ -265,12 +265,12 @@ Ecco alcuni esempi di configurazioni frequenti per le card:
       <div class="it-card-profile-header">
         <div class="it-card-profile">
           <h4 class="it-card-name no_toc">
-            <a href="#">Nome della persona</a>
+            <a href="#">Nome Personale</a>
           </h4>
-          <p class="it-card-profile-role">Ruolo nell'organizzazione</p>
+          <p class="it-card-profile-role">Profilo ruolo nell'organizzazione</p>
         </div>
         <div class="avatar avatar-green size-lg">
-          <p aria-hidden="true">MR</p>
+          <p aria-hidden="true">NP</p>
         </div>
       </div>
       <div class="it-card-body">
