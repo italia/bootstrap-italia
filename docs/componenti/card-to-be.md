@@ -129,7 +129,7 @@ Questa card dimostra la struttura completa con tutti gli elementi: titolo con ic
         <time class="it-card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
       </footer>
       <div class="it-card-footer" aria-label="Azioni correlate:">
-        <button type="button" class="btn btn-outline-secondary btn-iconk">Azione secondaria</button>
+        <button type="button" class="btn btn-outline-secondary">Azione secondaria</button>
         <a href="#" class="it-card-link">Link secondario</a>
       </div>
     </article>
@@ -217,9 +217,9 @@ Ecco alcuni esempi di configurazioni frequenti per le card:
         <span class="it-card-date text-warning"><strong>Scadenza: </strong><time class="it-card-date text-warning" datetime="10/12/{{ 'now' | date: "%Y" }}">31 gennaio, {{ 'now' | date: "%Y" }}</time></span>
       </footer>
       <div class="it-card-footer" aria-label="Azioni correlate:">
-        <button type="button" class="btn btn-outline-secondary btn-iconk">
+        <button type="button" class="btn btn-outline-secondary btn-icon">
           <span>Azione secondaria</span>
-          <svg class="icon icon-secondary ms-2" aria-hidden="true"><use href="/dist/svg/sprites.svg#it-arrow-right"></use></svg>
+          <svg class="icon icon-secondary ms-1" aria-hidden="true"><use href="/dist/svg/sprites.svg#it-arrow-right"></use></svg>
         </button>
       </div>
     </article>
