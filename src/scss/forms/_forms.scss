@@ -10,6 +10,9 @@
   --#{$prefix}form-control-text-color: var(--#{$prefix}color-text-base);
   --#{$prefix}form-control-font-size: var(--#{$prefix}body-font-size);
   --#{$prefix}form-group-spacing-y: var(--#{$prefix}spacing-m);
+  --#{$prefix}form-checkbox-border-color: var(--#{$prefix}color-border-secondary);
+  --#{$prefix}form-checkbox-border-radius: var(--#{$prefix}radius-smooth);
+  --#{$prefix}form-checked-color: var(--#{$prefix}color-background-primary);
 }
 
 input[readonly],
@@ -27,47 +30,46 @@ select {
   width: 100%;
   padding: var(--#{$prefix}form-control-spacing);
   border: 1px solid var(--#{$prefix}form-control-border-color);
-  background-color: var(--#{$prefix}form-control-background-color);
-  color: var(--#{$prefix}form-control-text-color);
-  font-size: var(--#{$prefix}form-control-font-size); 
   // Note: This has no effect on <select>s in some browsers, due to the limited stylability of `<select>`s in CSS.
   border-radius: var(--#{$prefix}form-control-border-radius);
+  background-color: var(--#{$prefix}form-control-background-color);
+  color: var(--#{$prefix}form-control-text-color);
+  font-size: var(--#{$prefix}form-control-font-size);
 
   &.disabled,
   &:disabled {
-    color: var(--#{$prefix}color-text-disabled);
-    background-color: var(--#{$prefix}color-background-disabled);
     border-color: var(--#{$prefix}color-border-disabled);
     // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655.
     opacity: 1;
+    background-color: var(--#{$prefix}color-background-disabled);
+    color: var(--#{$prefix}color-text-disabled);
   }
 }
 
 input,
 textarea {
   &:focus {
-    box-shadow:
-      0 0 0 2px var(--#{$prefix}color-border-inverse),
-      0 0 0 5px var(--#{$prefix}color-outline-focus) !important;
     outline: 3px solid transparent;
     outline-offset: 3px;
+    box-shadow: 0 0 0 2px var(--#{$prefix}color-border-inverse),
+    0 0 0 5px var(--#{$prefix}color-outline-focus) !important;
   }
 }
 
 input {
   // File input buttons theming //TODO: CHECK
   &::file-selector-button {
-    padding: $input-padding-y $input-padding-x;
     margin: (-$input-padding-y) (-$input-padding-x);
-    margin-inline-end: $input-padding-x;
-    color: $form-file-button-color;
-    @include gradient-bg($form-file-button-bg);
-    pointer-events: none;
-    border-color: inherit;
-    border-style: solid;
+    padding: $input-padding-y $input-padding-x;
     border-width: 0;
-    border-inline-end-width: $input-border-width;
+    border-style: solid;
     border-radius: 0; // stylelint-disable-line property-disallowed-list
+    border-color: inherit;
+    color: $form-file-button-color;
+    pointer-events: none;
+    margin-inline-end: $input-padding-x;
+    border-inline-end-width: $input-border-width;
+    @include gradient-bg($form-file-button-bg);
     @include transition($btn-transition);
   }
 
@@ -78,6 +80,7 @@ input {
 
   &[type='file'] {
     overflow: hidden; // prevent pseudo element button overlap
+
     &:not(:disabled):not([readonly]) {
       cursor: pointer;
     }
@@ -87,7 +90,7 @@ input {
   // https://github.com/twbs/bootstrap/issues/23307
   &::-webkit-date-and-time-value {
     // Multiply line-height by 1em if it has no unit
-    height: if(unit($input-line-height) == '', $input-line-height * 1em, $input-line-height);
+    height: if(unit($input-line-height)=='', $input-line-height * 1em, $input-line-height);
   }
 }
 
@@ -113,9 +116,12 @@ select {
   &:focus {
     border-color: $form-select-focus-border-color;
     outline: 0;
+
     @if $enable-shadows {
       @include box-shadow($form-select-box-shadow, $form-select-focus-box-shadow);
-    } @else {
+    }
+
+    @else {
       // Avoid using mixin so we can pass custom focus shadow properly
       box-shadow: $form-select-focus-box-shadow;
     }
@@ -128,9 +134,10 @@ select {
   }
 
   &:disabled {
-    color: $form-select-disabled-color;
-    background-color: $form-select-disabled-bg;
     border-color: $form-select-disabled-border-color;
+    background-color: $form-select-disabled-bg;
+    color: $form-select-disabled-color;
+
     &:hover {
       cursor: not-allowed;
     }
@@ -147,8 +154,8 @@ select {
   }
 
   &:disabled {
-    background-color: $input-disabled-bg;
     opacity: 1;
+    background-color: $input-disabled-bg;
   }
 }
 
@@ -162,11 +169,11 @@ label {
   display: inline-block;
   width: auto;
   max-width: 100%;
+  margin-bottom: var(--#{$prefix}spacing-xxs);
   color: var(--#{$prefix}form-control-label-color);
   font-size: var(--#{$prefix}label-font-size-s);
   font-weight: var(--#{$prefix}font-weight-solid);
   line-height: var(--#{$prefix}label-line-height);
-  margin-bottom: var(--#{$prefix}spacing-xxs);
 }
 
 input,
@@ -213,7 +220,8 @@ input::-webkit-datetime-edit {
   color: var(--#{$prefix}form-contro-text-color);
 }
 
-// Move these styles to partials //TODO: move to _form-control.scss
+//
+// Form Group
 
 .form-group {
   position: relative;
@@ -225,13 +233,11 @@ input::-webkit-datetime-edit {
 
   small.form-text {
     margin: 0;
-    // padding: var(--#{$prefix}form-input-spacing-x) * 0.5 var(--#{$prefix}form-input-spacing-x);
     font-size: $small-font-size;
   }
 
   input[type='time']~label {
     font-size: $small-font-size;
-    // transform: translateY(-75%);
   }
 }
 
@@ -255,7 +261,7 @@ input::-webkit-datetime-edit {
   display: none;
   width: 100%;
   margin-top: 0.25rem;
-  color: $warning;
+  color: var(--#{$prefix}color-text-warning);
   font-size: 0.75rem;
 }
 
@@ -268,8 +274,8 @@ input::-webkit-datetime-edit {
 // Input group
 .input-group {
   .input-group-text .btn {
-      border-radius: var(--#{$prefix}form-control-border-radius) 0 0 var(--#{$prefix}form-control-border-radius);
-    }
+    border-radius: var(--#{$prefix}form-control-border-radius) 0 0 var(--#{$prefix}form-control-border-radius);
+  }
 
   .input-group-append {
     margin-left: 0;
@@ -284,40 +290,45 @@ input::-webkit-datetime-edit {
   }
 }
 
+//
+// Form check class valid for checkbox and radio
+
 .form-check {
   position: relative;
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--#{$prefix}spacing-s);
   padding-left: 0;
 
-  // add vertical spacing for consequential elements
-  & + & {
-    margin-top: 0.5rem;
+  // Add vertical spacing for consequential elements
+  &+& {
+    margin-top: var(--#{$prefix}spacing-s);
   }
 
   [type='checkbox'],
   [type='radio'] {
     position: absolute;
-    top: 9px;
-    left: 9px;
+    // top: 9px;
+    // left: 9px;
+    height: 100%;
     margin-top: 0;
     margin-left: 0;
     opacity: 0;
 
     +label {
       position: relative;
-      display: inline-block;
-      padding-left: 2rem;
-      font-size: 1rem;
-      font-weight: $font-weight-semibold;
+      display: flex;
+      align-items: center;
+      padding-left: var(--#{$prefix}spacing-m);
+      font-size: var(--#{$prefix}label-font-size);
+      font-weight: var(--#{$prefix}font-weight-solid);
+      line-height: 1;
       cursor: pointer;
       user-select: none;
 
       @include media-breakpoint-up(sm) {
-        font-size: 1.125rem;
+        font-size: var(--#{$prefix}label-font-size-m);
       }
     }
 
-    //focus
     &:focus+label {
       @extend %focus;
     }
@@ -327,8 +338,7 @@ input::-webkit-datetime-edit {
     }
   }
 
-  [type='checkbox'] {
-
+  input[type='checkbox'] {
     +label::after,
     +label::before {
       position: absolute;
@@ -337,37 +347,26 @@ input::-webkit-datetime-edit {
       content: '';
       border-width: 2px;
       border-style: solid;
-      transition: 0.2s ease-out;
+      transition: all var(--#{$prefix}transition-instant) ease-out;
     }
 
-    +label::before {
-      top: 0;
-      width: 17px;
-      height: 17px;
-      margin: 2px 4px;
-      border: 1px solid #e6e9f2;
-      border-radius: 1px;
-      transform: rotateZ(37deg);
-      transform-origin: 100% 100%;
-    }
-
+    // Checkbox shape
     +label::after {
       top: 0;
       width: 20px;
       height: 20px;
-      margin: 4px;
-      border-radius: 4px;
+      border-radius: var(--#{$prefix}form-control-border-radius);
     }
 
     &:checked+label::before {
-      top: 4px;
-      left: 1px;
-      width: 8px;
-      height: 13px;
+      top: 3px;
+      left: 3px;
+      width: 6px;
+      height: 12px;
       border-width: 2px;
       border-style: solid;
-      border-color: transparent #fff #fff transparent;
-      opacity: 0.8;
+      border-color: transparent var(--#{$prefix}color-border-inverse) var(--#{$prefix}color-border-inverse) transparent;
+      opacity: 1;
       transform: rotate(40deg);
       transform-origin: 100% 100%;
       backface-visibility: hidden;
@@ -375,13 +374,13 @@ input::-webkit-datetime-edit {
 
     &:checked+label::after {
       z-index: 0;
-      border-color: $primary;
-      background-color: $primary;
+      border-color: var(--#{$prefix}form-checked-color);
+      background-color: var(--#{$prefix}form-checked-color);
     }
 
     &:not(:checked)+label::after {
       z-index: 0;
-      border-color: $neutral-1-a7;
+      border-color: var(--#{$prefix}form-checkbox-border-color);
       background-color: transparent;
     }
 
@@ -399,20 +398,23 @@ input::-webkit-datetime-edit {
     }
 
     &:disabled:not(:checked)+label::after {
-      border-color: #e6e9f2;
-      background-color: #fff;
+      border-color: var(--#{$prefix}color-border-disabled);
+      background-color: transparent;
     }
 
     &:disabled:checked+label::after {
-      border-color: #e6e9f2;
-      background-color: #e6e9f2;
+      border-color: var(--#{$prefix}color-border-disabled);
+      background-color: var(--#{$prefix}color-border-disabled);
     }
   }
 
-  [type='radio'] {
-    +label {
-      transition: 0.2s ease-out;
+  //
+  // Radio button
 
+  input[type='radio'] {
+    +label {
+
+      // Radio button shape
       &::after,
       &::before {
         position: absolute;
@@ -422,19 +424,17 @@ input::-webkit-datetime-edit {
         content: '';
         width: 20px;
         height: 20px;
-        margin: 5px;
         border-width: 2px;
         border-style: solid;
-        border-radius: 50%;
-        transition: 0.2s ease-out;
+        border-radius: var(--#{$prefix}radius-rounded);
+        transition: all var(--#{$prefix}transition-instant) ease-out;
       }
     }
 
     &:not(:checked)+label {
-
       &::after,
       &::before {
-        border-color: $input-border;
+        border-color: var(var(--#{$prefix}form-checkbox-border-color));
       }
 
       &:after {
@@ -446,13 +446,13 @@ input::-webkit-datetime-edit {
     &:checked+label {
       &::after {
         z-index: 0;
-        border-color: $primary;
-        background-color: $primary;
+        border-color: var(--#{$prefix}form-checked-color);
+        background-color: var(--#{$prefix}form-checked-color);
         transform: scale(0.64);
       }
 
       &::before {
-        border-color: $primary;
+        border-color: var(--#{$prefix}form-checked-color);
       }
     }
 
@@ -462,35 +462,35 @@ input::-webkit-datetime-edit {
       }
 
       &:not(:checked)+label {
-
         &::after,
         &::before {
-          border-color: $gray-border-disabled;
+          border-color: var(--#{$prefix}color-border-disabled);
         }
       }
 
       &:checked+label {
         &::after {
-          border-color: $gray-border-disabled;
-          background-color: $gray-disabled;
+          border-color: var(--#{$prefix}color-border-disabled);
+          background-color: var(--#{$prefix}color-border-disabled);
         }
 
         &::before {
-          border-color: $gray-border-disabled;
+          border-color: var(--#{$prefix}color-border-disabled);
         }
       }
     }
   }
 
-  // gruppi
+  //
+  // Checkbox group
+
   &.form-check-group {
     margin-bottom: 1rem;
     padding: 0 0 1rem 0;
     box-shadow: inset 0 -1px 0 0 rgba(1, 1, 1, 0.1);
 
-    [type='checkbox']+label,
-    [type='radio']+label {
-      position: static;
+    input[type='checkbox']+label,
+    input[type='radio']+label {
       padding-right: 3.25rem;
       padding-left: 0;
 
@@ -501,11 +501,11 @@ input::-webkit-datetime-edit {
       }
     }
 
-    [type='checkbox']:checked+label::before {
+    input[type='checkbox']:checked+label::before {
       right: 11px;
     }
 
-    [type='radio']:checked+label::before {
+    input[type='radio']:checked+label::before {
       right: 0;
     }
 
@@ -522,7 +522,7 @@ input::-webkit-datetime-edit {
   }
 
   input.semi-checked:not(:checked)+label::before {
-    top: 11px;
+    top: 9px;
     left: 4px;
     width: 12px;
     height: 2px;
@@ -530,18 +530,23 @@ input::-webkit-datetime-edit {
     border-style: none;
     border-color: transparent;
     opacity: 1;
-    background: $white;
+    background: var(--#{$prefix}color-background-inverse);
     transform: none;
     backface-visibility: hidden;
   }
 
   input.semi-checked:not(:checked)+label::after {
     z-index: 0;
-    border-color: $primary-a5; // TODO: Not found
-    background-color: $primary-a5; // TODO: Not found
+    border-color: var(--#{$prefix}form-checked-color);
+    background-color: var(--#{$prefix}form-checked-color);
   }
 }
 
+//
+// Form check reduce motion
+// This is a workaround for the fact that the transition property is not inherited
+// by pseudo-elements. This means that if the user has set the prefers-reduced-motion
+// media query, the transition will not be applied to the pseudo-elements.
 @media (prefers-reduced-motion: reduce) {
   fieldset legend,
   .form-group label,
