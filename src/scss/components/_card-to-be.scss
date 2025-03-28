@@ -8,7 +8,7 @@ $it-card-inline-min-height: 240px !default;
 $it-card-inline-mini-min-height: 160px !default;
 $it-card-color: null !default;
 $it-card-bg: $white !default;
-$it-card-border-color: $gray-border !default; 
+$it-card-border-color: $gray-border !default;
 $it-card-border-width: $border-width !default;
 $it-card-border-radius: 4px !default;
 $it-card-inner-border-radius: subtract($it-card-border-radius, $it-card-border-width) !default;
@@ -43,70 +43,74 @@ $it-card-signature-size: 0.875rem !default;
 $it-card-link-color: $secondary !default;
 // scss-docs-end card-variables
 
-  // Improved responsive card-group
-  .card-group {
-    display: flex;
-    flex-wrap: wrap;
+// Improved responsive card-group
+.it-card-group {
+  display: flex;
+  flex-wrap: wrap;
 
-    // gap and fallback
-    margin: -0.5rem;
-    > .card {
-      margin: 0.5rem;
-    }
-    @supports (gap: 1rem) {
-      margin: 0;
-      gap: 1rem;
-      > .card {
-        margin: 0;
-      }
-    }
+  // gap and fallback
+  margin: -0.5 * $it-card-group-gap;
 
   >.it-card {
+    margin: 0.5 * $it-card-group-gap;
     // Default stacked on mobile
-    flex: 0 0 100%;
+    flex: 0 0 calc(100% - #{$it-card-group-gap});
+  }
+
+  @supports (gap: $it-card-group-gap) {
+    margin: 0;
+    gap: $it-card-group-gap;
+
+    >.it-card {
+      margin: 0;
+      flex: 0 0 100%;
+    }
+  }
+
+  >.it-card {
 
     // Responsive breakpoints
     @include media-breakpoint-up(sm) {
-      flex: 0 0 calc(50% - 0.5rem);
+      flex: 0 0 calc(50% - 0.5 * #{$it-card-group-gap});
     }
 
     @include media-breakpoint-up(md) {
-      flex: 0 0 calc(33.333% - 0.667rem);
+      flex: 0 0 calc(33.333% - 0.667 * #{$it-card-group-gap});
     }
 
     @include media-breakpoint-up(lg) {
-      flex: 0 0 calc(25% - 0.75rem);
+      flex: 0 0 calc(25% - 0.75 * #{$it-card-group-gap});
     }
   }
 
   // Predefined column layouts
   &.it-card-group-2-cols>.it-card {
     @include media-breakpoint-up(sm) {
-      flex: 0 0 calc(50% - 0.5rem);
+      flex: 0 0 calc(50% - 0.5 * #{$it-card-group-gap});
     }
   }
 
   &.it-card-group-3-cols>.it-card {
     @include media-breakpoint-up(sm) {
-      flex: 0 0 calc(50% - 0.5rem);
+      flex: 0 0 calc(50% - 0.5 * #{$it-card-group-gap});
     }
 
     @include media-breakpoint-up(md) {
-      flex: 0 0 calc(33.333% - 0.667rem);
+      flex: 0 0 calc(33.333% - 0.667 * #{$it-card-group-gap});
     }
   }
 
   &.it-card-group-4-cols>.it-card {
     @include media-breakpoint-up(sm) {
-      flex: 0 0 calc(50% - 0.5rem);
+      flex: 0 0 calc(50% - 0.5 * #{$it-card-group-gap});
     }
 
     @include media-breakpoint-up(md) {
-      flex: 0 0 calc(33.333% - 0.667rem);
+      flex: 0 0 calc(33.333% - 0.667 * #{$it-card-group-gap});
     }
 
     @include media-breakpoint-up(lg) {
-      flex: 0 0 calc(25% - 0.75rem);
+      flex: 0 0 calc(25% - 0.75 * #{$it-card-group-gap});
     }
   }
 
@@ -245,6 +249,7 @@ article.it-card {
 
       // Align items baseline and fallback
       align-items: flex-end;
+
       @supports (align-items: last baseline) {
         align-items: last baseline;
       }
@@ -363,13 +368,12 @@ article.it-card {
 
           &:first-child,
           &:nth-child(2) {
-          &:first-child,
-          &:nth-child(2) {
             border-top-left-radius: 0;
             border-top-right-radius: 0;
           }
         }
       }
+
     }
   }
 
@@ -418,7 +422,7 @@ article.it-card {
 
         .it-card-related.it-card-footer {
           margin-bottom: 0;
-          padding-bottom: $it-card-cap-padding-y; 
+          padding-bottom: $it-card-cap-padding-y;
         }
       }
 
@@ -495,7 +499,7 @@ article.it-card {
     @include media-breakpoint-up(sm) {
       &:not(.it-card-inline-mini) {
         @include inline-layout;
-        min-height: $it-card-inline-min-height; 
+        min-height: $it-card-inline-min-height;
 
         &.it-card-img .img-responsive-wrapper {
           width: 50%;
@@ -503,9 +507,8 @@ article.it-card {
 
         &.it-card-img .it-card-inline-content {
           width: 50%;
-        
+        }
       }
     }
   }
-}
 }
