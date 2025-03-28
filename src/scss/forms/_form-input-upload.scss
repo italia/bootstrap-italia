@@ -1,6 +1,4 @@
-//mobile
-
-//input file/button
+// Input file/button
 .upload,
 .upload-avatar {
   width: 0.1px;
@@ -11,9 +9,9 @@
   z-index: -1;
 }
 
-//input file
+// Input file
 .upload {
-  //button styling
+  // button styling
   &[type='file'] + label {
     max-width: 80%;
     font-size: 1rem;
@@ -21,25 +19,25 @@
     cursor: pointer;
     display: inline-block;
     overflow: hidden;
-    padding: 7px 24px;
-    border-radius: $border-radius;
-    color: $white;
-    background-color: $primary;
-    transition: background-color 0.15s;
+    padding: var(--#{$prefix}spacing-xs) var(--#{$prefix}spacing-m);
+    border-radius: var(--#{$prefix}form-control-border-radius);
+    color: var(--#{$prefix}color-text-inverse);
+    background-color: var(--#{$prefix}color-background-primary);
+    transition: background-color var(--#{$prefix}transition-instant);
 
     &:hover {
-      background-color: shade-color($primary, 10%);
+      background-color: var(--#{$prefix}color-background-primary-hover);
     }
 
     //icon
     svg {
-      fill: $white;
-      margin-right: 10px;
+      fill: var(--#{$prefix}icon-inverse);
+      margin-right: var(--#{$prefix}spacing-xxs);
     }
   }
 }
 
-//pictures wall version
+// Pictures wall version
 .upload-pictures-wall {
   padding: 0;
   display: flex;
@@ -47,15 +45,15 @@
   //grid list element
   & > li {
     list-style-type: none;
-    margin-right: $v-gap;
-    margin-bottom: $v-gap;
+    margin-right: var(--#{$prefix}spacing-xxs);
+    margin-bottom: var(--#{$prefix}spacing-xxs);
 
     &:last-child {
       margin-right: 0;
     }
   }
 
-  //input file
+  // input file
   .upload {
     //button styling
     &[type='file'] + label {
@@ -64,17 +62,17 @@
       width: 128px;
       border-radius: 0;
       padding: 0;
-      border: 2px dashed $primary-a1;
-      background-color: tint-color($primary-a1, 10%);
-      color: $primary-a7;
+      border: 2px dashed var(--#{$prefix}color-border-primary);
+      background-color: var(--#{$prefix}color-border-primary-lighter);
+      color: var(--#{$prefix}color-text-primary);
       text-align: center;
       display: table-cell;
       vertical-align: middle;
-      transition: border-color 0.2s;
+      transition: border-color var(--#{$prefix}transition-instant);
 
       .icon {
         display: block;
-        fill: $primary;
+        fill: var(--#{$prefix}icon-primary);
         margin: 0 auto;
         width: 48px;
         height: 48px;
@@ -82,7 +80,7 @@
       }
 
       &:hover {
-        border: 2px dashed $primary;
+        border: 2px dashed var(--#{$prefix}color-border-primary);
       }
     }
 
@@ -108,7 +106,7 @@
   }
 }
 
-//files list
+// files list
 .upload-file-list {
   margin-top: 5px;
   padding: 0;
@@ -124,9 +122,9 @@
     display: flex;
     align-items: center;
     max-width: 375px;
-    margin-bottom: 16px;
+    margin-bottom: var(--#{$prefix}spacing-s);
     position: relative;
-    //states
+    // states
     &.uploading {
       .icon {
         fill: $neutral-1-a7;
@@ -229,7 +227,9 @@
   }
 }
 
-//avatar version -------------------------------- START
+// Upload Avatar
+//
+
 .upload-avatar-container {
   position: absolute;
   left: 0;
@@ -256,15 +256,13 @@
   }
 }
 
+.avatar-upload {
+  overflow: hidden; // mask the upload icon and background
+}
+
 .avatar-upload-wrapper {
-  position: relative;
-  display: inline-block;
-  //avatar version
-  .avatar {
-    &.avatar-upload {
-      position: relative;
-    }
-  }
+  // position: relative;
+  // display: inline-block;
 
   .avatar-upload-icon {
     position: absolute;
@@ -306,9 +304,9 @@
   }
 }
 
-//avatar version -------------------------------- END
+//
+// Upload Drag and Drop
 
-//drag/drop version ----------------------------- START
 .upload-dragdrop {
   display: inline-flex;
   align-items: center;
@@ -349,7 +347,7 @@
   }
 }
 
-//drag and drop text
+// Drag and drop text
 .upload-dragdrop-text {
   p {
     margin: 0;
@@ -482,11 +480,8 @@
   }
 }
 
-//drag/drop version ----------------------------- END
-
-//small - tablet
+// Media quert small - tablet
 @include media-breakpoint-up(sm) {
-  //input file
   .upload {
     &[type='file'] + label {
       font-size: 0.875rem;
@@ -494,9 +489,8 @@
   }
 }
 
-//Tablet vertical
+// Media query medium - tablet vertical
 @include media-breakpoint-up(md) {
-  //drag and drop version
   .upload-dragdrop-image {
     width: 180px;
     height: 180px;
@@ -520,15 +514,14 @@
   }
 }
 
-//Desktop
+// Media query - desktop
+
 @include media-breakpoint-up(xl) {
-  //avatar version -------------------------------- START
+
   .avatar-upload:hover,
   .avatar-upload:focus-within {
     .upload-avatar-container {
       opacity: 1;
-      //fade in speed
-      transition: opacity 0.25s;
     }
   }
 
@@ -539,16 +532,15 @@
     top: auto;
     width: 100%;
     height: 60%;
-    background-color: rgba(0, 0, 0, 0.6);
-    //fade out speed
-    transition: opacity 0.15s;
+    background-color: var(--#{$prefix}overlay-background-primary-muted);
+    transition: opacity var(--#{$prefix}transition-instant);
     opacity: 0;
 
     .upload-avatar {
       &[type='file'] + label {
         margin: 0;
-        padding-top: 10px;
-        color: $white;
+        padding-top: var(--#{$prefix}spacing-xxs);
+        color: var(--#{$prefix}color-text-inverse);
         text-align: center;
         width: 100%;
         height: 100%;
@@ -595,5 +587,4 @@
       }
     }
   }
-  //avatar version -------------------------------- END
 }
