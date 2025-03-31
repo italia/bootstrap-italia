@@ -9,10 +9,10 @@
           .dropdown-menu {
             .it-vertical {
               width: 100%;
-              background: $color-background-primary-lighter;
+              margin-top: $v-gap * 2;
               padding-top: $v-gap * 2;
               padding-bottom: $v-gap * 2;
-              margin-top: $v-gap * 2;
+              background: $color-background-primary-lighter;
               .link-list-wrapper {
                 ul.link-list {
                   width: 100%;
@@ -21,9 +21,9 @@
                       display: flex;
                       justify-content: space-between;
                       span {
-                        font-weight: 600;
                         display: inline-flex;
                         align-items: center;
+                        font-weight: 600;
                       }
                     }
                   }
@@ -34,15 +34,15 @@
                 background: transparent;
                 .description-content {
                   max-width: 480px;
-                  padding-left: 48px;
                   padding-right: 48px;
+                  padding-left: 48px;
                   &:before {
                     content: '';
                     display: block;
-                    height: 1px;
                     width: $megamenu-link-small-line-width;
-                    background: $color-border-subtle;
+                    height: 1px;
                     margin-bottom: $megamenu-link-small-line-margin-bottom * 2;
+                    background: $color-border-subtle;
                   }
                   img {
                     display: block;
@@ -62,23 +62,23 @@
               margin-bottom: 0;
               ul.link-list li {
                 a {
-                  white-space: normal;
                   display: flex;
                   align-items: center;
                   padding: 8px 16px !important;
+                  white-space: normal;
                 }
               }
             }
 
             .it-heading-link-wrapper {
-              margin-left: $megamenu-heading-margin-x;
               margin-right: $megamenu-heading-margin-x;
-              padding-bottom: $megamenu-heading-bottom-margin;
               margin-bottom: $megamenu-heading-bottom-margin; // 24
+              margin-left: $megamenu-heading-margin-x;
+              padding-bottom: $megamenu-heading-bottom-margin;
               border-bottom: 1px solid $color-border-subtle;
               a.it-heading-link {
-                font-weight: $megamenu-heading-font-weight;
                 font-size: $megamenu-heading-text-size;
+                font-weight: $megamenu-heading-font-weight;
                 line-height: $megamenu-heading-line-height;
                 text-decoration: none;
                 :hover {
@@ -88,11 +88,11 @@
             }
 
             .it-footer-link-wrapper {
-              margin-left: 28px;
+              margin-top: 24px;
               margin-right: 28px;
+              margin-left: 28px;
               padding-top: 24px;
               padding-bottom: 24px;
-              margin-top: 24px;
               border-top: 1px solid $color-border-subtle;
               a.it-footer-link {
                 flex: 1 1 auto;
@@ -100,20 +100,20 @@
             }
 
             .it-footer-link-wrapper-vertical {
-              margin-left: 28px;
+              margin-top: 24px;
               margin-right: 28px;
+              margin-left: 28px;
               padding-top: 24px;
               padding-bottom: 24px;
-              margin-top: 24px;
               border-top: 1px solid $color-border-subtle;
             }
 
             a.it-footer-link {
-              font-weight: 600;
+              margin-bottom: 24px;
               font-size: 1.125rem;
+              font-weight: 600;
               line-height: 1.2;
               text-decoration: none;
-              margin-bottom: 24px;
               &:last-of-type {
                 margin-bottom: 0;
               }
@@ -189,12 +189,12 @@
                 }
               }
               .it-vertical {
-                background: $lightgrey-c2;
-                padding-top: $megamenu-padding-top-desktop;
                 margin-top: -$megamenu-padding-top-desktop;
-                margin-bottom: -$megamenu-padding-top-desktop;
                 margin-right: -$megamenu-column-gap;
+                margin-bottom: -$megamenu-padding-top-desktop;
                 margin-left: math.div($grid-gutter-width, -2);
+                padding-top: $megamenu-padding-top-desktop;
+                background: $lightgrey-c2;
                 .link-list-wrapper {
                   ul.link-list {
                     width: 100%;
@@ -214,8 +214,8 @@
                 &.it-description {
                   background: transparent;
                   .description-content {
-                    padding-left: $megamenu-linklist-vertical-link-padding;
                     padding-right: $megamenu-linklist-vertical-link-padding;
+                    padding-left: $megamenu-linklist-vertical-link-padding;
                     &:before {
                       display: none;
                     }
@@ -238,12 +238,12 @@
               }
 
               .it-footer-link-wrapper-vertical {
+                height: 100%;
                 margin: 0;
                 padding: 0;
                 padding-left: 24px;
                 border-top: none;
                 border-left: 1px solid #d9dadb;
-                height: 100%;
                 .d-flex {
                   height: 100%;
                 }
@@ -254,8 +254,8 @@
                 padding-top: 24px;
                 padding-bottom: 0;
                 a.it-footer-link {
-                  margin-bottom: 0;
                   margin-right: 16px;
+                  margin-bottom: 0;
                   &:last-child {
                     margin-right: 0px;
                   }
