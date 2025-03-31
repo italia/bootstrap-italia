@@ -24,7 +24,8 @@ Gli stili per le versioni precedenti saranno mantenuti fino al prossimo rilascio
 5. ✅ riscrivere documentazione esempi con i nuovi gruppi
 6. ✅ refactoring classi css con approccio enhancement progressivo `it-card`
 7. ✅ refactoring e raggruppamento variabili dedicate nel componente 
-6. 🔮 aggiungere varianti che mancano da To Be UI Kit Italia
+6. ✅ aggiungere varianti che mancano da To Be UI Kit Italia
+  - 🔮 rimangono futuribili e da discutere "solo" Card Presentation e Card Selectable. 
 7. 🔮 review col team e fix
 8. 🔮 preparare una pagina di documentazione divisa per le varianti corrette (editoriali, servizio, ...) e con le "utility" a margine (ombre, gruppi, ...)
 8. ... 
