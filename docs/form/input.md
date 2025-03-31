@@ -197,6 +197,17 @@ Se per qualche motivo vuoi avere gli elementi `<input readonly>` nella forma sti
 </div>
 {% endcapture %}{% include example.html content=example %}
 
+### Attivazione tramite codice
+
+È possibile abilitare l'input con la label associata manualmente utilizzando 
+questo script:
+
+```js
+import { Input } from 'bootstrap-italia';
+
+const inputElement = document.querySelector('#my-input');
+const input = new Input(inputElement);
+
 ### Password
 
 Per semplificare l'inserimento della password, il campo Input di tipo password include un pulsante che mostra i caratteri digitati. È inoltre possibile aggiungere un testo di supporto che aiuti nella compilazione.
