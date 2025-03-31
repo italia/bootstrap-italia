@@ -9,6 +9,7 @@ $it-card-height: null !default;
 $it-card-inline-min-height: 240px !default;
 $it-card-inline-mini-min-height: 160px !default;
 $it-card-color: $color-text-secondary !default;
+$it-card-p-color: $color-text-secondary !default;
 $it-card-bg: $white !default;
 $it-card-border-color: $gray-border !default;
 $it-card-border-width: $border-width !default;
@@ -21,7 +22,7 @@ $it-card-cap-padding-y: $card-spacer-y !default;
 $it-card-cap-padding-x: $card-spacer-x * 0.5 !default;
 $it-card-cap-color: null !default;
 $it-card-group-gap: $grid-gutter-width !default;
-$it-card-border-top-width: 4px !default;
+$it-card-border-top-width: 8px !default;
 $it-card-border-top-default-bg: $white !default;
 $it-card-border-top-colors: (
   'primary': $primary,
@@ -31,10 +32,7 @@ $it-card-border-top-colors: (
   'danger': $danger,
   'info': $info,
 );
-$it-card-p-size: 1rem !default;
-$it-card-p-l-h: 1.5rem !default;
-$it-card-p-color: $color-text-secondary !default;
-$it-card-category-size: 0.875rem !default;
+$it-card-category-size: 1rem !default;
 $it-card-category-fw: 600 !default;
 $it-card-category-l-spacing: 0.5px !default;
 $it-card-category-m-bottom: 0 !default;
@@ -42,8 +40,8 @@ $it-card-date-size: 0.875rem !default;
 $it-card-date-color: $secondary !default;
 $it-card-chips-gap: 1rem !default;
 $it-card-chips-a-color: $secondary !default;
-$it-card-signature-size: 0.875rem !default;
-$it-card-link-color: $secondary !default;
+$it-card-signature-size: 1rem !default;
+$it-card-link-color: $color-text-secondary !default;
 // scss-docs-end card-variables
 
 // Improved responsive card-group with a @container aware twist
@@ -54,7 +52,7 @@ $it-card-link-color: $secondary !default;
   // gap fallback
   margin: calc(-0.5 * $it-card-group-gap);
 
-  > .it-card {
+  >.it-card {
     margin: calc(0.5 * $it-card-group-gap);
     // Default stacked on mobile
     flex: 0 0 calc(100% - $it-card-group-gap);
@@ -77,19 +75,19 @@ $it-card-link-color: $secondary !default;
     margin: 0;
     gap: $it-card-group-gap;
 
-    > .it-card {
+    >.it-card {
       margin: 0;
     }
   }
 
   // Predefined column layouts
-  &.it-card-group-2-cols > .it-card {
+  &.it-card-group-2-cols>.it-card {
     @include media-breakpoint-up(sm) {
       flex: 0 0 calc(50% - 0.5 * $it-card-group-gap);
     }
   }
 
-  &.it-card-group-3-cols > .it-card {
+  &.it-card-group-3-cols>.it-card {
     @include media-breakpoint-up(sm) {
       flex: 0 0 calc(50% - 0.5 * $it-card-group-gap);
     }
@@ -99,7 +97,7 @@ $it-card-link-color: $secondary !default;
     }
   }
 
-  &.it-card-group-4-cols > .it-card {
+  &.it-card-group-4-cols>.it-card {
     @include media-breakpoint-up(sm) {
       flex: 0 0 calc(50% - 0.5 * $it-card-group-gap);
     }
@@ -115,11 +113,13 @@ $it-card-link-color: $secondary !default;
 
   // Progressive enhancement with Container Queries
   @supports (container-type: inline-size) {
+
     // Only with .it-card-group-container-aware class
     &.it-card-group-container-aware {
       container-type: inline-size;
 
-      > .it-card {
+      >.it-card {
+
         // Reset Media Queries
         @include media-breakpoint-up(sm) {
           flex: auto;
@@ -150,13 +150,13 @@ $it-card-link-color: $secondary !default;
       }
 
       // Override specific coulmns in container mode
-      &.it-card-group-2-cols > .it-card {
+      &.it-card-group-2-cols>.it-card {
         @container (min-width: 500px) {
           flex: 0 0 calc(50% - 0.5 * $it-card-group-gap);
         }
       }
 
-      &.it-card-group-3-cols > .it-card {
+      &.it-card-group-3-cols>.it-card {
         @container (min-width: 800px) {
           flex: 0 0 calc(33.333% - 0.667 * $it-card-group-gap);
         }
@@ -165,7 +165,7 @@ $it-card-link-color: $secondary !default;
   }
 
   // Option for equal height cards
-  &.it-card-group-equal-height > .it-card {
+  &.it-card-group-equal-height>.it-card {
     height: 100%;
   }
 
@@ -195,6 +195,7 @@ article.it-card {
   word-wrap: break-word;
   background-color: $it-card-bg;
   background-clip: border-box;
+  color: $it-card-color;
 
   &.it-card-height-auto {
     height: auto;
@@ -205,20 +206,84 @@ article.it-card {
   }
 
   .it-card-link {
-    + .it-card-link {
+    +.it-card-link {
       margin-left: $it-card-spacer-x;
     }
   }
 
+  // Profile card
   &.it-card-profile {
     .it-card-profile-header {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
 
-      margin-top: calc(2 * $it-card-title-spacer-y);
+      margin-top: calc(3 * $it-card-title-spacer-y);
       margin-bottom: 0;
       padding: 0 $it-card-spacer-x;
+
+      .it-card-profile-name {
+        margin-bottom: 0.25rem;
+      }
+
+      .avatar {
+        margin-left: 1rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .it-card-profile-role {
+        // XXX var
+        font-weight: 600;
+        font-size: 1rem;
+        line-height: 1.5rem;
+      }
+    }
+  }
+
+  // Place card
+  &.it-card-place {
+    .it-card-place-header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      margin-top: calc(3 * $it-card-title-spacer-y);
+      margin-bottom: 0;
+      padding: 0 $it-card-spacer-x;
+
+      .it-card-place-name {
+        margin-bottom: 0.25rem;
+      }
+
+      .it-card-place-image {
+        // XXX
+        max-width: 80px;
+        max-height: 80px;
+        margin-left: 1rem;
+        margin-bottom: 0.5rem;
+
+        .it-card-place-image-icon-wrapper {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+
+      .it-card-place-type,
+      .it-card-place-address {
+        // XXX var
+        font-size: 1rem;
+        line-height: 1.5rem;
+      }
+
+      .it-card-place-type {
+        font-weight: 600;
+
+        &:not(:last-child) {
+          margin-bottom: 0;
+        }
+      }
+
     }
   }
 
@@ -236,13 +301,6 @@ article.it-card {
       .icon {
         margin-right: -8px;
         margin-left: 8px;
-      }
-    }
-
-    &.it-card-title-icon-profile {
-      .icon {
-        margin-right: -16px;
-        margin-left: 16px;
       }
     }
   }
@@ -263,12 +321,11 @@ article.it-card {
     // Card subtitle or event timeframe
     .it-card-subtitle {
       margin-bottom: $it-card-spacer-y;
+      font-weight: 600;
     }
 
     // Card description
     .it-card-text {
-      font-size: $it-card-p-size;
-      line-height: $it-card-p-l-h;
       color: $it-card-p-color;
 
       &:last-child {
@@ -279,7 +336,7 @@ article.it-card {
     // Card author
     .it-card-signature {
       font-family: $font-family-monospace;
-      color: $it-card-p-color;
+      color: $it-card-color;
       font-size: $it-card-signature-size;
     }
   }
@@ -291,6 +348,8 @@ article.it-card {
     color: $it-card-cap-color;
     background-color: $it-card-cap-bg;
     border-top: $it-card-border-width solid $it-card-border-color;
+    font-size: 1rem;
+    line-height: 1.5rem;
 
     &:last-child {
       @include border-radius(0 0 $it-card-inner-border-radius $it-card-inner-border-radius);
@@ -298,7 +357,6 @@ article.it-card {
 
     .it-card-link {
       color: $it-card-link-color;
-      font-size: 16px;
 
       &:hover {
         color: color-hover($it-card-link-color);
@@ -317,14 +375,14 @@ article.it-card {
       justify-content: flex-end;
 
       // Gap fallback
-      > * {
+      >* {
         margin: 0.25rem;
       }
 
       @supports (gap: 0.5rem) {
         gap: 0.5rem;
 
-        > * {
+        >* {
           margin: 0;
         }
       }
@@ -362,14 +420,14 @@ article.it-card {
       flex-wrap: wrap;
 
       // Gap fallback
-      > li {
+      >li {
         margin: 4px;
       }
 
       @supports (gap: 8px) {
         gap: 8px;
 
-        > li {
+        >li {
           margin: 0;
         }
       }
@@ -382,6 +440,7 @@ article.it-card {
 
     .chip {
       margin: 0;
+      line-height: 1.5; // reset default chip l-h
     }
 
     a.chip {
@@ -397,17 +456,39 @@ article.it-card {
   }
 
   // Card can contain description lists, example: personal datas
-  .it-card-description-list,
+  .it-card-description-list, // XXX DOVREBBERO ESSERE LISTE URL NORMALI??? INVEDE DI DL?
   .it-card-body .it-card-description-list {
-    font-size: $it-card-p-size;
-    line-height: $it-card-p-l-h;
+    border-top: $it-card-border-width solid $it-card-border-color;
+    border-bottom: $it-card-border-width solid $it-card-border-color;
+
     color: $it-card-p-color;
 
     padding-top: calc(2 * $it-card-spacer-y);
+    padding-bottom: calc(2 * $it-card-spacer-y);
+
+    &:last-child {
+      margin-bottom: 0;
+      padding-bottom: $it-card-spacer-y;
+      border-bottom: none;
+    }
 
     display: grid; // XXX
     grid-template-columns: 6rem 1fr;
-    gap: 0.5rem;
+    gap: 0.5rem; // XXX NEED FALLBACK?
+
+    &.it-card-description-list-compact {
+      display: flex; 
+      flex-direction: column;
+      
+      dd {
+        display: inline-block;
+      }
+
+      dt {
+        display: inline;
+        margin-right: 0.125rem; // XXX
+      }
+    }
 
     @include media-breakpoint-down(sm) {
       display: flex;
@@ -424,16 +505,14 @@ article.it-card {
   }
 
   // Card can contain special lists, example: Related articles to a main Tag card
-  > .list-group,
-  .it-card-body > .list-group {
-    border-top: $it-card-border-width solid var(--bs-list-group-border-color);
-    border-bottom: $it-card-border-width solid var(--bs-list-group-borders-color);
+  >.list-group,
+  .it-card-body>.list-group {
+    border-top: $it-card-border-width solid $it-card-border-color;
+    border-bottom: $it-card-border-width solid $it-card-border-color;
 
     margin-top: calc(2 * $it-card-spacer-y);
     margin-bottom: calc(2 * $it-card-spacer-y);
-
-    font-size: $it-card-p-size;
-    line-height: $it-card-p-l-h;
+    
     color: $it-card-p-color;
 
     &:first-child {
@@ -447,7 +526,7 @@ article.it-card {
     }
   }
 
-  .it-card-body > .list-group {
+  .it-card-body>.list-group {
     margin-top: calc(4 * $it-card-spacer-y);
     margin-bottom: calc(2 * $it-card-spacer-y);
 
@@ -456,8 +535,8 @@ article.it-card {
     }
   }
 
-  > .it-card-header + .list-group,
-  > .list-group + .it-card-footer {
+  >.it-card-header+.list-group,
+  >.list-group+.it-card-footer {
     border-top: 0;
   }
 
@@ -469,6 +548,7 @@ article.it-card {
 
     &.rounded {
       .it-card-image-wrapper {
+
         &:first-child,
         &:nth-child(2) {
           border-top-left-radius: $it-card-inner-border-radius;
@@ -478,6 +558,7 @@ article.it-card {
 
       &.it-card-border-top {
         .it-card-image-wrapper {
+
           &:first-child,
           &:nth-child(2) {
             border-top-left-radius: 0;
@@ -555,6 +636,7 @@ article.it-card {
 
         &.it-card-inline-reverse {
           order: inherit;
+
           .it-card-image-wrapper {
             order: 1;
           }
@@ -562,6 +644,7 @@ article.it-card {
 
         &.rounded {
           .it-card-image-wrapper {
+
             &:first-child,
             &:nth-child(2) {
               border-top-right-radius: 0 !important;
@@ -571,6 +654,7 @@ article.it-card {
 
           &.it-card-inline-reverse {
             .it-card-image-wrapper {
+
               &:first-child,
               &:nth-child(2) {
                 border-top-left-radius: 0 !important;
