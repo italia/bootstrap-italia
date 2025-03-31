@@ -463,7 +463,7 @@ La lista di metadati del luogo è costruita utilizzando liste descrittive `.it-c
 
 Le varianti inline sono ideali per presentazioni editoriali, come in contesti di notizie o articoli correlati. Esistono due principali configurazioni:
 
-- `.it-card-inline` - Layout orizzontale su schermi medio-grandi, verticale su mobile. Su mobile l'immagine prende le proporzioni definite con le classi `.ratio-`. 
+- `.it-card-inline` - Layout orizzontale su schermi medio-grandi, verticale su mobile. Su mobile l'immagine prende le proporzioni definite con le classi `.ratio-`. È consigliabile utilizzare queries sensibili al @container piuttosto che al viewport, per permetterne lo sviluppo orizzontale solo se lo spazio a disposizione è sufficiente. 
 - `.it-card-inline-mini` - Layout orizzontale mantenuto anche su dispositivi mobili. Utile per piccole card editoriali secondarie. 
 
 È possibile combinare questi formati con il layout standard e applicare `.it-card-inline-reverse` per invertire l'ordine degli elementi (con l'immagine a destra anziché a sinistra).
