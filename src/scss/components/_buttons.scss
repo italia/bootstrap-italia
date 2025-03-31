@@ -38,13 +38,6 @@
   cursor: if($enable-button-pointers, pointer, null);
   user-select: none;
 
-  // &:hover {
-  //   // border-color: var(--#{$prefix}btn-hover-border-color);
-  //   // background-color: var(--#{$prefix}btn-hover-bg);
-  //   // color: var(--#{$prefix}btn-hover-color);
-  //   // text-decoration: if($link-hover-decoration == underline, none, null);
-  // }
-
   &:disabled,
   &.disabled {
     opacity: var(--#{$prefix}btn-disabled-opacity);
@@ -52,18 +45,9 @@
     pointer-events: none;
   }
 
-  // .btn-check + &:hover {
-  //   border-color: var(--#{$prefix}btn-border-color);
-  //   background-color: var(--#{$prefix}btn-background);
-  //   // override for the checkbox/radio buttons
-  //   color: var(--#{$prefix}btn-text-color);
-  // }
-
   &:focus-visible {
     border-color: var(--#{$prefix}btn-hover-border-color);
     outline: 0;
-    color: var(--#{$prefix}btn-hover-color);
-    @include gradient-bg(var(--#{$prefix}btn-hover-bg));
     // Avoid using mixin so we can pass custom focus shadow properly
     @if $enable-shadows {
       box-shadow: var(--#{$prefix}btn-box-shadow), var(--#{$prefix}btn-focus-box-shadow);
