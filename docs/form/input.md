@@ -207,6 +207,7 @@ import { Input } from 'bootstrap-italia';
 
 const inputElement = document.querySelector('#my-input');
 const input = new Input(inputElement);
+```
 
 ### Password
 
