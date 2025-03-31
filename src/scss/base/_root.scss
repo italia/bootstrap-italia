@@ -56,11 +56,11 @@
 
   // ----------------------------------------------------------- //
 
-  // Theme colors
-  --#{$prefix}theme-primary: var(--it-theme-italia-base);
-  --#{$prefix}theme-primary-light: var(--it-theme-italia-light);
+  // Theme colors 
+  --#{$prefix}theme-primary: var(--it-theme-italia-base); // Theme base color
+  --#{$prefix}theme-primary-light: var(--it-theme-italia-light); 
   --#{$prefix}theme-primary-lighter: var(--it-theme-italia-lighter);
-  --#{$prefix}theme-primary-subtle: var(--it-theme-italia-subtle);
+  --#{$prefix}theme-primary-subtle: var(--it-theme-italia-subtle); 
   --#{$prefix}theme-primary-muted: var(--it-theme-italia-muted);
   --#{$prefix}theme-primary-deep: var(--it-theme-italia-deep);
 
@@ -220,6 +220,7 @@
   --#{$prefix}color-border-primary-active: var(--it-color-border-primary-active);
   --#{$prefix}color-border-primary-hover: var(--it-color-border-primary-hover);
   --#{$prefix}color-border-primary: var(--it-color-border-primary);
+  --#{$prefix}color-outline-focus: var(--it-color-outline-focus);
 
   // Background colors
   --#{$prefix}color-background-primary: var(--it-color-background-primary);
@@ -262,8 +263,7 @@
   --#{$prefix}ins-background: var(--it-color-emerald-67);
   --#{$prefix}del-background: var(--it-color-red-70);
   --#{$prefix}page-background: var(--it-color-background-inverse);
-  --#{$prefix}color-outline-focus: var(--it-color-outline-focus);
-
+  
   // Status colors - reference the background category colors only
   --#{$prefix}color-status-danger: var(--it-color-background-danger);
   --#{$prefix}color-status-danger-hover: var(--it-color-background-danger-hover);
