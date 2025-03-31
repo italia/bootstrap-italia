@@ -204,6 +204,12 @@ article.it-card {
   }
 
   .it-card-link {
+    color: $it-card-link-color;
+
+    &:hover {
+      color: color-hover($it-card-link-color);
+    }
+
     + .it-card-link {
       margin-left: $it-card-spacer-x;
     }
@@ -264,6 +270,8 @@ article.it-card {
           display: flex;
           justify-content: center;
           align-items: center;
+
+          background-color: $color-background-primary-lighter;
         }
       }
 
@@ -318,7 +326,15 @@ article.it-card {
     // Card subtitle or event timeframe
     .it-card-subtitle {
       margin-bottom: $it-card-spacer-y;
+
       font-weight: 600;
+      font-size: 1.25rem; // equal h5
+      line-height: 1.5rem;
+
+      @include media-breakpoint-up(sm) {
+        font-size: 1.5rem;
+        line-height: 2rem;
+      }
     }
 
     // Card description
@@ -351,14 +367,6 @@ article.it-card {
     &:last-child {
       @include border-radius(0 0 $it-card-inner-border-radius $it-card-inner-border-radius);
     }
-
-    .it-card-link {
-      color: $it-card-link-color;
-
-      &:hover {
-        color: color-hover($it-card-link-color);
-      }
-    }
   }
 
   // Card metadata holder <footer>
@@ -373,11 +381,11 @@ article.it-card {
 
       // Gap fallback
       > * {
-        margin: 0.25rem;
+        margin: 0.5rem;
       }
 
-      @supports (gap: 0.5rem) {
-        gap: 0.5rem;
+      @supports (gap: 1rem) {
+        gap: 1rem;
 
         > * {
           margin: 0;
@@ -418,11 +426,11 @@ article.it-card {
 
       // Gap fallback
       > li {
-        margin: 4px;
+        margin: 0.25rem;
       }
 
-      @supports (gap: 8px) {
-        gap: 8px;
+      @supports (gap: 0.5rem) {
+        gap: 0.5rem;
 
         > li {
           margin: 0;
@@ -452,8 +460,9 @@ article.it-card {
     }
   }
 
-  // Card can contain description lists, example: personal datas
-  .it-card-description-list, // XXX DOVREBBERO ESSERE LISTE URL NORMALI??? INVEDE DI DL?
+  // Card can contain description lists, example: personal or place data
+  .it-card-description-list,
+  // XXX DOVREBBERO ESSERE LISTE URL NORMALI??? INVEDE DI DL?
   .it-card-body .it-card-description-list {
     border-top: $it-card-border-width solid $it-card-border-color;
     border-bottom: $it-card-border-width solid $it-card-border-color;
@@ -469,35 +478,24 @@ article.it-card {
       border-bottom: none;
     }
 
-    display: grid; // XXX
-    grid-template-columns: 6rem 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 0.5rem; // XXX NEED FALLBACK?
 
-    &.it-card-description-list-compact {
-      display: flex;
-      flex-direction: column;
+    dt {
+      display: inline;
+      font-weight: bold;
+      margin-right: 0.125rem; // XXX
+    }
 
-      dd {
-        display: inline-block;
-      }
-
-      dt {
-        display: inline;
-        margin-right: 0.125rem; // XXX
-      }
+    dd {
+      display: inline-block;
+      margin: 0;
     }
 
     @include media-breakpoint-down(sm) {
       display: flex;
       flex-direction: column;
-    }
-
-    dt {
-      font-weight: bold;
-    }
-
-    dd {
-      margin: 0;
     }
   }
 

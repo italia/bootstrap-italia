@@ -98,26 +98,31 @@ Questa card dimostra la struttura completa con tutti gli elementi: titolo con ic
       </div>
       <!--follow the body-->
       <div class="it-card-body">
-        <p class="it-card-subtitle h5">Sottotitolo o periodo</p>
+        <p class="it-card-subtitle">Sottotitolo o periodo</p>
         <address class="it-card-signature">di Maria Verde</address>
         <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
         <p class="it-card-text">Se ci fosse un secondo paragrafo <a href="#" class="it-card-link">con un link</a> questa è la resa visiva.</p>
         <dl class="it-card-description-list">
-          <dt>Email:</dt>
-          <dd>me@mail.com</dd>
-          <dt>Tel:</dt>
-          <dd>340.4050600</dd>
-          <dt>Indirizzo:</dt>
-          <dd>Via della città, 5 - 00100 Città</dd>
+          <div>
+            <dt>Email:</dt>
+            <dd>me@mail.com</dd>
+          </div>
+          <div>
+            <dt>Tel:</dt>
+            <dd>340.4050600</dd>
+          </div>
+          <div>
+            <dt>Indirizzo:</dt>
+            <dd>Via della città, 5 - 00100 Città</dd>
+          </div>
         </dl>
-        <a href="#" class="it-card-link">Un link</a>
-        <a href="#" class="it-card-link">Un altro link</a>
+        <p><a href="#" class="it-card-link">Un link dentro un `p` con tipografia responsive</a></p>
         <ul role="list" class="list-group list-group-flush">
-          <li class="list-group-item"><a href="#" class="it-card-link">Un link in elenco</a></li>
-          <li class="list-group-item"><a href="#" class="it-card-link">Un altro link in elenco</a></li>
-          <li class="list-group-item">Un item elenco senza link</li>
+          <li class="list-group-item"><a href="#" class="it-card-link">Un link `.it-card-link in una lista</a></li>
+          <li class="list-group-item"><a href="#">Un link normale sempre in lista</a></li>
+          <li class="list-group-item">Un item lista senza link</li>
         </ul>
-        <a href="#" class="it-card-link">Un link</a>
+        <a href="#" class="it-card-link">Un link sparso</a>
         <a href="#" class="it-card-link">Un altro link</a>
         <a href="#" class="btn btn-primary">Una azione</a>
       </div>
@@ -174,7 +179,7 @@ Ecco alcuni esempi di configurazioni frequenti per le card:
         </div>
       </div>
       <div class="it-card-body">
-        <p class="it-card-subtitle h5">Sottotitolo o periodo</p>
+        <p class="it-card-subtitle">Sottotitolo o periodo</p>
         <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
       </div>
       <div class="it-card-footer" aria-label="Link correlati:">
@@ -232,7 +237,7 @@ Ecco alcuni esempi di configurazioni frequenti per le card:
         <div><svg class="icon icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg></div>
       </h4>
       <div class="it-card-body">
-        <p class="it-card-subtitle h5">Sottotitolo o periodo</p>
+        <p class="it-card-subtitle">Sottotitolo o periodo</p>
         <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
       </div>
       <footer class="it-card-related it-card-footer">
@@ -258,7 +263,7 @@ Ecco alcuni esempi di configurazioni frequenti per le card:
         <div><svg class="icon icon-secondary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg></div>
       </h4>
       <div class="it-card-body">
-        <p class="it-card-subtitle h5">Sottotitolo o periodo</p>
+        <p class="it-card-subtitle">Sottotitolo o periodo</p>
         <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
       </div>
     </article>
@@ -271,9 +276,7 @@ Ecco alcuni esempi di configurazioni frequenti per le card:
 
 Utili ad esempio per indicare schede personale. Si attivano con la classe `.it-card-profile`. È da notare che la testata della card è costruita con classi di stile dedicate come `.it-card-profile-header` per nome e ruolo. L'immagine di profilo sulla destra è visualizzata integrando il componente avatar in una delle sue varianti. 
 
-La lista di metadati del profilo è costruita utilizzando liste descrittive `.it-card-description-list`. 
-
-Per ottenere una visualizzazione dei metadati della card con un layout semplificato, è sufficiente aggiungere la classe `.it-description-list-compact` alla lista e racchiudere ogni coppia di item`dd`-`dt` dentro un `div` contenitore. 
+La lista di metadati del profilo è costruita utilizzando liste descrittive `.it-card-description-list` con ogni coppia di item`dd`-`dt` raccolta in un `div` contenitore. 
 
 {% comment %}Example name: Card profilo{% endcomment %}
 {% capture example %}
@@ -296,68 +299,6 @@ Per ottenere una visualizzazione dei metadati della card con un layout semplific
       </div>
       <div class="it-card-body">
         <dl class="it-card-description-list">
-          <dt>Area:</dt>
-          <dd><a href="#">Nome dell'area di appartenenza</a></dd>
-          <dt>Email:</dt>
-          <dd>me@mail.com</dd>
-          <dt>Tel:</dt>
-          <dd>340.4050600</dd>
-          <dt>Indirizzo:</dt>
-          <dd>Via della città, 5 - 00100 Città</dd>
-        </dl>
-      </div>
-    </article>
-    <!--end it-card-->
-  </div>
-  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
-    <!--start it-card-->
-    <article class="it-card it-card-profile it-card-border-top it-card-border-top-secondary rounded shadow-sm border">
-      <div class="it-card-profile-header">
-        <div class="it-card-profile">
-          <h4 class="it-card-profile-name no_toc">
-            <a href="#">Nome Personale</a>
-          </h4>
-          <p class="it-card-profile-role">Ruolo nell'organizzazione</p>
-        </div>
-        <div class="avatar size-xl">
-          <p aria-hidden="true">NP</p>
-        </div>
-      </div>
-      <div class="it-card-body">
-        <dl class="it-card-description-list">
-          <dt>Area:</dt>
-          <dd><a href="#">Nome dell'area di appartenenza</a></dd>
-          <dt>Email:</dt>
-          <dd>me@mail.com</dd>
-          <dt>Tel:</dt>
-          <dd>340.4050600</dd>
-          <dt>Indirizzo:</dt>
-          <dd>Via della città, 5 - 00100 Città</dd>
-        </dl>
-      </div>
-    </article>
-    <!--end it-card-->
-  </div>
-</div>
-
-<p class="mt-4 mb-2">Layout compatto</p>
-<div class="row">
-  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
-    <!--start it-card-->
-    <article class="it-card it-card-profile rounded shadow-sm border">
-      <div class="it-card-profile-header">
-        <div class="it-card-profile">
-          <h4 class="it-card-profile-name no_toc">
-            <a href="#">Nome Personale</a>
-          </h4>
-          <p class="it-card-profile-role">Ruolo nell'organizzazione</p>
-        </div>
-        <div class="avatar size-lg">
-          <p aria-hidden="true">NP</p>
-        </div>
-      </div>
-      <div class="it-card-body">
-        <dl class="it-card-description-list it-card-description-list-compact">
           <div>
             <dt>Area:</dt>
             <dd><a href="#">Nome dell'area di appartenenza</a></dd>
@@ -394,7 +335,7 @@ Per ottenere una visualizzazione dei metadati della card con un layout semplific
         </div>
       </div>
       <div class="it-card-body">
-        <dl class="it-card-description-list it-card-description-list-compact">
+        <dl class="it-card-description-list">
           <div>
             <dt>Area:</dt>
             <dd><a href="#">Nome dell'area di appartenenza</a></dd>
@@ -423,16 +364,15 @@ Per ottenere una visualizzazione dei metadati della card con un layout semplific
 
 Utili ad esempio per indicare schede località. Si attivano con la classe `.it-card-site`. È da notare che la testata della card è costruita con classi di stile dedicate come `.it-card-place-header` per nome, tipologia ed eventuale indirizzo. 
 
-Lo spazio per l'immagine sulla destra `.it-card-place-image` può essere usato anche per contenere un'icona. L'accortezza è racchiuderna dentro un `div` contenitore con wrapper `.it-card-place-icon-wrapper` che ne permetta i corretti allineamenti. È possibile mettere uno sfondo di default per questa area usando le classi modificatori di colore, nell'esempio con icona è `.lightgrey-bg-b1`
+Lo spazio per l'immagine sulla destra `.it-card-place-image` può essere usato anche per contenere un'icona. L'accortezza è racchiuderna dentro un `div` contenitore con wrapper `.it-card-place-icon-wrapper` che ne permetta i corretti allineamenti. 
 
-La lista di metadati del luogo è costruita utilizzando liste descrittive `.it-card-description-list`. 
+La lista di metadati del luogo è costruita utilizzando liste descrittive `.it-card-description-list` con ogni coppia di item`dd`-`dt` raccolta in un `div` contenitore. 
 
 È possibile combinare un piede con eventuali collegamenti o dettagli della mappa usando l'elemento `footer` con le classi dedicate `.it-card-related` e `it-card-footer`. Negli esempi è stato poi applicato un `.border-top` a questo elemento, opzionale.  
 
 {% comment %}Example name: Card luogo{% endcomment %}
 {% capture example %}
 
-<p class="mt-4 mb-2">Layout default</p>
 <div class="row">
   <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
     <!--start it-card-->
@@ -446,88 +386,13 @@ La lista di metadati del luogo è costruita utilizzando liste descrittive `.it-c
           <p class="it-card-place-address">Via della città, 5 - 00100 Città</p>
         </div>
         <div class="it-card-place-image ratio ratio-1x1">
-          <div class="it-card-place-image-icon-wrapper lightgrey-bg-b1">
+          <div class="it-card-place-image-icon-wrapper">
             <svg class="icon icon-lg icon-padded icon-primary" aria-hidden="true"><use href="/dist/svg/sprites.svg#it-pa"></use></svg>
           </div>
         </div>
       </div>
       <div class="it-card-body">
         <dl class="it-card-description-list">
-          <dt>Email:</dt>
-          <dd>me@mail.com</dd>
-          <dt>Tel:</dt>
-          <dd>340.4050600</dd>
-          <dt>Indirizzo:</dt>
-          <dd>Via della città, 5 - 00100 Città</dd>
-        </dl>
-      </div>
-    </article>
-    <!--end it-card-->
-  </div>
-  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
-    <!--start it-card-->
-    <article class="it-card it-card-place it-card-border-top it-card-border-top-secondary rounded shadow-sm border mb-3">
-      <div class="it-card-place-header">
-        <div class="it-card-place">
-          <h4 class="it-card-place-name no_toc">
-            <a href="#">Toponimo o luogo</a>
-          </h4>
-          <p class="it-card-place-type">Tipologia di luogo</p>
-          <p class="it-card-place-address">Via della città, 5 - 00100 Città</p>
-        </div>
-        <div class="it-card-place-image ratio ratio-1x1">
-          <figure class="figure img-full">
-            <img src="https://placehold.co/357x190/F4FAFB/0066cc/?text=1x1" alt="Descrizione immagine se ha senso nel contesto, sennò marcare con decorativa lasciando l'alt applicato ma vuoto.">
-          </figure>
-        </div>
-      </div>
-      <div class="it-card-body">
-        <dl class="it-card-description-list">
-          <dt>Email:</dt>
-          <dd>me@mail.com</dd>
-          <dt>Tel:</dt>
-          <dd>340.4050600</dd>
-          <dt>Indirizzo:</dt>
-          <dd>Via della città, 5 - 00100 Città</dd>
-        </dl>
-      </div>
-      <footer class="it-card-related it-card-footer border-top pt-3">
-        <div style="flex-grow:1">
-          <svg class="icon icon-sm icon-secondary" aria-hidden="true"><use href="/dist/svg/sprites.svg#it-map-marker"></use></svg>
-          <strong>Distanza:</strong> 900 metri
-        </div>
-        <a href="#" target="_blank" class="it-card-link">
-          Apri in mappa
-          <span class="visually-hidden"> Toponimo o Luogo (si apre in una nuova finestra)</span>
-          <svg class="icon icon-sm icon-secondary ms-2" aria-hidden="true"><use href="/dist/svg/sprites.svg#it-external-link"></use></svg>
-        </a>
-      </footer>
-    </article>
-    <!--end it-card-->
-  </div>
-</div>
-
-<p class="mt-4 mb-2">Layout compatto</p>
-<div class="row">
-  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
-    <!--start it-card-->
-    <article class="it-card it-card-place rounded shadow-sm border">
-      <div class="it-card-place-header">
-        <div class="it-card-place">
-          <h4 class="it-card-place-name no_toc">
-            <a href="#">Toponimo o luogo</a>
-          </h4>
-          <p class="it-card-place-type">Tipologia di luogo</p>
-          <p class="it-card-place-address">Via della città, 5 - 00100 Città</p>
-        </div>
-        <div class="it-card-place-image ratio ratio-1x1">
-          <div class="it-card-place-image-icon-wrapper lightgrey-bg-b1">
-            <svg class="icon icon-lg icon-padded icon-primary" aria-hidden="true"><use href="/dist/svg/sprites.svg#it-pa"></use></svg>
-          </div>
-        </div>
-      </div>
-      <div class="it-card-body">
-        <dl class="it-card-description-list it-card-description-list-compact">
           <div>
             <dt>Email:</dt>
             <dd>me@mail.com</dd>
@@ -563,7 +428,7 @@ La lista di metadati del luogo è costruita utilizzando liste descrittive `.it-c
         </div>
       </div>
       <div class="it-card-body">
-        <dl class="it-card-description-list it-card-description-list-compact">
+        <dl class="it-card-description-list">
           <div>
             <dt>Email:</dt>
             <dd>me@mail.com</dd>
@@ -666,7 +531,7 @@ Le varianti inline sono ideali per presentazioni editoriali, come in contesti di
           <a href="#">Titolo breve</a>
         </h3>
         <div class="it-card-body">
-          <p class="it-card-subtitle h5">Sottotitolo o periodo</p>
+          <p class="it-card-subtitle">Sottotitolo o periodo</p>
           <p class="it-card-text">Questo è un testo breve.</p>
         </div>
         <footer class="it-card-related it-card-footer">
@@ -698,7 +563,7 @@ Le varianti inline sono ideali per presentazioni editoriali, come in contesti di
           <a href="#">Titolo contenuto può essere anche lungo così o andare oltre</a>
         </h3>
         <div class="it-card-body">
-          <p class="it-card-subtitle h5">Sottotitolo o periodo</p>
+          <p class="it-card-subtitle">Sottotitolo o periodo</p>
           <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
         </div>
         <footer class="it-card-related it-card-footer">
