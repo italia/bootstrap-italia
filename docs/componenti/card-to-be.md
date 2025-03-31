@@ -281,7 +281,6 @@ La lista di metadati del profilo è costruita utilizzando liste descrittive `.it
 {% comment %}Example name: Card profilo{% endcomment %}
 {% capture example %}
 
-<p class="mt-4 mb-2">Layout default</p>
 <div class="row">
   <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
     <!--start it-card-->
