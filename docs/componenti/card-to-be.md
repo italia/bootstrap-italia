@@ -477,7 +477,7 @@ La lista di metadati del luogo è costruita utilizzando liste descrittive `.it-c
         </div>
         <div class="it-card-place-image ratio ratio-1x1">
           <figure class="figure img-full">
-            <img src="https://placehold.co/357x190/F4FAFB/0066cc/?text=1x1" alt="">
+            <img src="https://placehold.co/357x190/F4FAFB/0066cc/?text=1x1" alt="Descrizione immagine se ha senso nel contesto, sennò marcare con decorativa lasciando l'alt applicato ma vuoto.">
           </figure>
         </div>
       </div>
@@ -558,7 +558,7 @@ La lista di metadati del luogo è costruita utilizzando liste descrittive `.it-c
         </div>
         <div class="it-card-place-image ratio ratio-1x1">
           <figure class="figure img-full">
-            <img src="https://placehold.co/357x190/F4FAFB/0066cc/?text=1x1" alt="">
+            <img src="https://placehold.co/357x190/F4FAFB/0066cc/?text=1x1" alt="Descrizione immagine se ha senso nel contesto, sennò marcare con decorativa lasciando l'alt applicato ma vuoto.">
           </figure>
         </div>
       </div>
