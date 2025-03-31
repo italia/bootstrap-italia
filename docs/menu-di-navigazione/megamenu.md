@@ -26,17 +26,6 @@ Il megamenu è un componente della navigazione principale del sito che richiede 
 - distinguere le etichette dei link in modo chiaro: non devono essere presenti link con la stessa etichetta che portino a destinazioni diverse. Nel caso di più link "Esplora tutti" si può ad esempio aggiungere " i contenuti della sezione X", oppure, si può usare `<span class="visually-hidden"> i contenuti della sezione X</span>` per comunicare la distinzione almeno alle tecnologie assistive.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %} 
 
-{% capture callout %}
-Breaking feature dalla versione **2.8.0**
-
-Cosa cambia nel megamenu dalla versione **2.8.0** della libreria:
-
-- tutti gli esempi del componente, anche quelli integrati nel componente [header]({{ site.baseurl }}/docs/menu-di-navigazione/header/), sono stati rivisti: refactoring markup `HTML`, classi e stili nei file `_megamenu.scss`, `_navigation.scss`, `_headernavbar.scss`, `_headernavbartheme.scss`, `_navigationtheme.scss`
-- rimossi esempi "con sezioni"
-- rimosse classi `.it-megamenu-footer`, `.it-external`, `.it-more`, `.divider`, `h3`, `.link-list-heading` 
-- rimosse variabili obsolete e inutilizzate da `_variables.scss`
-{% endcapture %}{% include callout.html content=callout type="danger" %}
-
 ## Megamenu completo
  
 Variante completa per dare ad esempio accesso a una intera sezione di un sito con un'architettura dell'informazione ben strutturata. Permette all'utente di comprendere l'organizzazione dei contenuti e di saltare direttamente a pagine foglia. 
@@ -1058,3 +1047,17 @@ Questi seguono le liste di link, posizionati in basso o in una colonna destra, a
   </div>
 </nav>
 {% endcapture %}{% include example.html content=example %}
+
+## Attivazione tramite codice
+
+Il componente Megamenu deriva dal componente Dropdown, si rimanda dunque alla 
+sezione [attivazione Dropdown tramite codice]({{ site.baseurl }}/docs/componenti/dropdown/#attivazione-tramite-codice)
+
+## Breaking change
+
+{% capture callout %}
+- tutti gli esempi del componente, anche quelli integrati nel componente [header]({{ site.baseurl }}/docs/menu-di-navigazione/header/), sono stati rivisti: refactoring markup `HTML`, classi e stili nei file `_megamenu.scss`, `_navigation.scss`, `_headernavbar.scss`, `_headernavbartheme.scss`, `_navigationtheme.scss`
+- rimossi esempi "con sezioni"
+- rimosse classi `.it-megamenu-footer`, `.it-external`, `.it-more`, `.divider`, `h3`, `.link-list-heading` 
+- rimosse variabili obsolete e inutilizzate da `_variables.scss`
+{% endcapture %}{% include callout-breaking.html content=callout version="2.8.0" type="danger" %}

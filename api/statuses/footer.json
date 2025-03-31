@@ -1,6 +1,6 @@
 {
     "amichevole con lettori di schermo": "PRONTO",
-    "angular Kit": "NON PRESENTE",
+    "angular Kit": "DA FARE",
     "assignees": [
         "Fupete"
     ],
@@ -15,7 +15,8 @@
     },
     "id": "PVTI_lADOAOqloM4AcXblzgMjwZc",
     "navigabile": "PRONTO",
-    "notes / More": "Manca in Angular Kit \u2014 Alcune incongruenze di contenuti e spazi da verificare: in UI Kit Italia ci sono cose in pi\u00f9 (es: newsletter, presente solo in React Kit ma non in BSI). \u2014 In UI Kit Italia c'\u00e8 anche una variante \"Alternate\" non presente in sviluppo. ",
+    "notes / Issues": "https://github.com/italia/design-angular-kit/issues/435",
+    "notes / More": "Alcune incongruenze di contenuti e spazi da verificare: in UI Kit Italia ci sono cose in pi\u00f9 (es: newsletter, presente solo in React Kit ma non in BSI). \u2014 In UI Kit Italia c'\u00e8 anche una variante \"Alternate\" non presente in sviluppo. ",
     "react Kit": "PRONTO",
     "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-menu-di-navigazione-footer--documentazione",
     "status": "Todo",

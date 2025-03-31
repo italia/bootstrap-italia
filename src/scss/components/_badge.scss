@@ -62,15 +62,15 @@ a.badge:hover {
   @each $color, $value in $colors-palette {
     &.badge-#{$color} {
       @if $color == 'primary' {
-        background-color: var(--#{$prefix}color-background-primary-hover)
+        background-color: var(--#{$prefix}color-background-primary-hover);
       } @else if $color == 'secondary' {
-        background-color: var(--#{$prefix}color-background-secondary-hover)
+        background-color: var(--#{$prefix}color-background-secondary-hover);
       } @else if $color == 'success' {
-        background-color: var(--#{$prefix}color-background-success-hover)
+        background-color: var(--#{$prefix}color-background-success-hover);
       } @else if $color == 'warning' {
-        background-color: var(--#{$prefix}color-background-warning-hover)
+        background-color: var(--#{$prefix}color-background-warning-hover);
       } @else if $color == 'danger' {
-        background-color: var(--#{$prefix}color-background-danger-hover)
+        background-color: var(--#{$prefix}color-background-danger-hover);
       }
     }
   }

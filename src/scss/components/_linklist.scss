@@ -49,7 +49,7 @@
     }
 
     // List item active state
-    &.active {      
+    &.active {
       span {
         color: var(--#{$prefix}color-text-primary-active);
       }
@@ -147,15 +147,15 @@
         justify-content: space-between;
       }
     }
-    
+
     &.right-icon {
       .list-item-title-icon-wrapper {
         justify-content: space-between;
       }
-  
+
       .icon {
         transition: transform $dropdown-menu-animation-speed;
-  
+
         &.secondary {
           color: var(--#{$prefix}icon-secondary);
         }
@@ -192,7 +192,7 @@
       line-height: var(--#{$prefix}caption-line-height);
     }
 
-    // Listed item label wrapped in the <a> tag 
+    // Listed item label wrapped in the <a> tag
     > span {
       display: inline-block;
       color: var(--#{$prefix}color-link);
@@ -231,7 +231,7 @@
   }
 
   .list-item {
-    width: 100%
+    width: 100%;
   }
 
   p {

@@ -127,24 +127,8 @@
 }
 
 .autocomplete__hint,
-.autocomplete__input,
-.autocomplete__option {
-  font-size: 1rem;
-  font-weight: 400;
-}
-
-.autocomplete__hint,
 .autocomplete__option {
   padding: 5px;
-}
-
-@media (min-width: 641px) {
-  .autocomplete__hint,
-  .autocomplete__input,
-  .autocomplete__option {
-    font-size: 1.1875rem;
-    line-height: 1.3157894737;
-  }
 }
 
 .autocomplete__wrapper {

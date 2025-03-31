@@ -36,10 +36,9 @@
   }
 
   &:hover {
-    --backtop-background: var(--#{$prefix}color-background-primary-hover  );
+    --backtop-background: var(--#{$prefix}color-background-primary-hover);
     text-decoration: none;
   }
-
 
   // Fade in
   &.back-to-top-show {
@@ -101,4 +100,3 @@
     }
   }
 }
-

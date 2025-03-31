@@ -79,7 +79,9 @@ kbd {
   padding: 2px var(--#{$prefix}spacing-3xs);
   border: var(--#{$prefix}border-base) solid var(--#{$prefix}color-border-subtle);
   background-color: var(--#{$prefix}color-background-secondary-lighter);
-  box-shadow: var(--#{$prefix}elevation-low), 0 2px 0 0 hsla(255, 0%, 100%, 0.7) inset;
+  box-shadow:
+    var(--#{$prefix}elevation-low),
+    0 2px 0 0 hsla(255, 0%, 100%, 0.7) inset;
   color: var(--#{$prefix}color-text-secondary);
   font-size: var(--#{$prefix}font-size-1);
   font-weight: var(--#{$prefix}font-weight-solid);
@@ -102,40 +104,46 @@ small,
 
 h1,
 .h1 {
-  font-size: var(--#{$prefix}heading-1-font-size); 
+  font-size: var(--#{$prefix}heading-1-font-size);
 }
 
 h2,
 .h2 {
-  font-size: var(--#{$prefix}heading-2-font-size); 
+  font-size: var(--#{$prefix}heading-2-font-size);
 }
 
 h3,
 .h3 {
-  font-size: var(--#{$prefix}heading-3-font-size); 
+  font-size: var(--#{$prefix}heading-3-font-size);
 }
 
 h4,
 .h4 {
-  font-size: var(--#{$prefix}heading-4-font-size); 
+  font-size: var(--#{$prefix}heading-4-font-size);
 }
 
 h5,
 .h5 {
-  font-size: var(--#{$prefix}heading-5-font-size); 
+  font-size: var(--#{$prefix}heading-5-font-size);
 }
 
 h6,
 .h6 {
-  font-size: var(--#{$prefix}heading-6-font-size); 
+  font-size: var(--#{$prefix}heading-6-font-size);
 }
 
-h1, .h1, 
-h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5,
-h6, .h6 {
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
   margin-top: 0;
   margin-bottom: var(--#{$prefix}heading-spacing);
   line-height: var(--#{$prefix}heading-line-height);
@@ -146,7 +154,6 @@ h6, .h6 {
     padding-top: var(--#{$prefix}spacing-s); // Use the paragraph spacing variable when available
   }
 }
-
 
 h1,
 h2,
@@ -223,7 +230,7 @@ blockquote,
     margin-right: var(--#{$prefix}spacin-inline-xs);
     border-right: var(--#{$prefix}border-thick) solid var(--#{$prefix}border-color-secondary);
   }
-  
+
   &.text-center,
   &.text-end,
   &.blockquote-simple {
@@ -231,12 +238,12 @@ blockquote,
     border-right: none;
     border-left: none;
   }
-  
+
   &.text-center,
   &.blockquote-simple {
     padding: 0;
   }
-  
+
   &.blockquote-simple {
     font-style: italic;
   }
@@ -254,7 +261,7 @@ blockquote,
         content: none;
       }
     }
-    
+
     &.dark {
       border-left: none;
       background-color: var(--#{$prefix}color-background-primary);

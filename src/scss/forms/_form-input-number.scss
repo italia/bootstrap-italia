@@ -77,7 +77,7 @@
         }
       }
     }
-    &:focus:not(.focus--mouse) {
+    &:focus:not([data-focus-mouse='true']) {
       opacity: 1;
     }
 

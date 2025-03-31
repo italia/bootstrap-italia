@@ -12,12 +12,6 @@ Il Rating è composto da un `<fieldset>` con classe `.rating` contenente 5 `<inp
 
 Le `<label>` contengono le icone delle stelle e la descrizione per Screen Reader.
 
-{% capture callout %}
-Breaking feature dalla versione **2.12.0**
-
-- Aggiunto attributo `aria-hidden="true"` sulle icone perché lo scopo è già trasmesso agli strumenti assistivi dal testo con classe `.visually-hidden`.
-{% endcapture %}{% include callout.html content=callout type="danger" %}
-
 {% comment %}Example name: Base{% endcomment %}
 {% capture example %}
 <fieldset class="rating">
@@ -140,3 +134,9 @@ Per rendere accessibile il contenuto è necessario aggiungere un tag `<legend>` 
   </label>
 </fieldset>
 {% endcapture %}{% include example.html content=example %}
+
+## Breaking change
+
+{% capture callout %}
+- Aggiunto attributo `aria-hidden="true"` sulle icone perché lo scopo è già trasmesso agli strumenti assistivi dal testo con classe `.visually-hidden`.
+{% endcapture %}{% include callout-breaking.html content=callout version="2.12.0" type="danger" %}

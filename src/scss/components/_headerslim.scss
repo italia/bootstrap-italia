@@ -43,7 +43,6 @@
           transform: scaleY(-1);
         }
       }
-
     }
 
     // Secondary nav opener
@@ -58,10 +57,9 @@
         }
       }
     }
-      
   }
 
-  // Overrides default navbar styles located in '_navbar.scss' 
+  // Overrides default navbar styles located in '_navbar.scss'
   .navbar-brand {
     padding: 0;
     color: var(--#{$prefix}header-slim-text-color);
@@ -118,7 +116,7 @@
 
   // Style for the dropdown and opener icon inside header slim
   .dropdown-toggle .icon,
-  .it-opener .icon  {
+  .it-opener .icon {
     width: var(--#{$prefix}icon-size-xs);
     height: var(--#{$prefix}icon-size-xs);
     margin-left: var(--#{$prefix}icon-spacing);
@@ -140,5 +138,3 @@
 .it-access-top-wrapper {
   margin-left: var(--#{$prefix}spacing-m);
 }
-
-

@@ -6,7 +6,7 @@
 .nav {
   --#{$prefix}nav-link-padding-x: var(--#{$prefix}spacing-s);
   --#{$prefix}nav-link-padding-y: var(--#{$prefix}spacing-s);
-  --#{$prefix}nav-link-disabled-color:var(--#{$prefix}color-text-disabled);
+  --#{$prefix}nav-link-disabled-color: var(--#{$prefix}color-text-disabled);
 
   display: flex;
   flex-wrap: wrap;

@@ -1,7 +1,7 @@
 .it-navscroll-wrapper {
   --#{$prefix}navscroll-background: var(--#{$prefix}page-background);
   --#{$prefix}navscroll-backbutton-padding: var(--#{$prefix}spacing-xs);
-  --#{$prefix}navscroll-bottom-box-shadow: 0 0px 30px 5px rgba(0,0,0,.05);
+  --#{$prefix}navscroll-bottom-box-shadow: 0 0px 30px 5px rgba(0, 0, 0, 0.05);
   --#{$prefix}navscroll-backbutton-weight: var(--#{$prefix}font-weight-solid);
   --#{$prefix}navscroll-item-spacing: var(--#{$prefix}spacing-xs) var(--#{$prefix}spacing-m);
   --#{$prefix}navscroll-item-font-size: var(--#{$prefix}label-font-size);
@@ -32,14 +32,18 @@
     box-shadow: var(--#{$prefix}navscroll-bottom-box-shadow);
     font-weight: var(--#{$prefix}navscroll-backbutton-weight);
     text-decoration: none;
-    transition: opacity 0.3s 0s, visibility 0s 0.3s;
-  
+    transition:
+      opacity 0.3s 0s,
+      visibility 0s 0.3s;
+
     &.show {
       visibility: visible;
       opacity: 1;
-      transition: opacity 0.3s 0s, visibility 0s 0s;
+      transition:
+        opacity 0.3s 0s,
+        visibility 0s 0s;
     }
-    
+
     i {
       display: inline-block;
       margin-right: var(--#{$prefix}spacing-xxs);
@@ -47,7 +51,7 @@
       transform-origin: center;
     }
   }
-  
+
   .link-list-wrapper ul li a {
     padding: var(--#{$prefix}navscroll-item-spacing);
     color: var(--#{$prefix}navscroll-item-font-color);
@@ -60,15 +64,15 @@
     --#{$prefix}navscroll-item-border-color: var(--#{$prefix}color-border-primary);
     --#{$prefix}navscroll-item-font-color: var(--#{$prefix}color-link-active);
   }
-  
+
   .link-list-wrapper ul li ul li a {
     font-weight: var(--#{$prefix}font-weight-base);
   }
-  
+
   .link-list-wrapper ul li ul li a.active {
     --#{$prefix}navscroll-item-border-color: transparent;
   }
-  
+
   // Navscroll Heading
   h3 {
     margin-top: var(--#{$prefix}navscroll-heading-spacing-top);
@@ -79,7 +83,7 @@
     font-weight: var(--#{$prefix}navscroll-heading-font-weight);
     text-transform: uppercase;
   }
-  
+
   // Navscroll Toggler
   .custom-navbar-toggler {
     display: flex;
@@ -88,7 +92,7 @@
     font-weight: var(--#{$prefix}font-weight-solid);
     cursor: pointer;
   }
-  
+
   .custom-navbar-toggler span.it-list {
     margin-right: var(--#{$prefix}spacing-xxs);
     color: var(--#{$prefix}navscroll-toggler-color);
@@ -135,7 +139,7 @@
     .link-list-wrapper ul li a.active {
       --#{$prefix}navscroll-item-font-color: var(--#{$prefix}color-text-inverse);
     }
-    
+
     .custom-navbar-toggler,
     .custom-navbar-toggler span.it-list {
       --#{$prefix}navscroll-toggler-color: var(--#{$prefix}color-text-inverse);
@@ -160,7 +164,7 @@
     .link-list-wrapper ul li a.active {
       --#{$prefix}navscroll-item-font-color: var(--#{$prefix}color-text-inverse);
     }
-    
+
     .custom-navbar-toggler,
     .custom-navbar-toggler span.it-list {
       --#{$prefix}navscroll-toggler-color: var(--#{$prefix}color-text-inverse);

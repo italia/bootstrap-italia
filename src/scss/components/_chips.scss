@@ -3,7 +3,7 @@
   --#{$prefix}chip-border: $gray-secondary;
   --#{$prefix}chip-background-hover: $gray-light;
   --#{$prefix}chip-label-color: $gray-secondary;
-  --#{$prefix}chip-label-font-size: 0.875rem;;
+  --#{$prefix}chip-label-font-size: 0.875rem;
   --#{$prefix}chip-border-width: 1px;
   --#{$prefix}chip-border-radius: var(--#{$prefix}radius-rounded);
   --#{$prefix}chip-border-color: var(--#{$prefix}color-border-subtle);
@@ -25,7 +25,8 @@
   color: var(--#{$prefix}chip-text-color);
   gap: var(--#{$prefix}spacing-xxs);
 
-  & + & { // adjacent sibling selector
+  & + & {
+    // adjacent sibling selector
     margin-left: var(--#{$prefix}spacing-s);
   }
 
@@ -48,15 +49,15 @@
     border: none;
     background: transparent;
     line-height: 1; // Reset default button line-height
-    
+
     &:hover:not([disabled]) {
       cursor: pointer;
     }
-    
+
     &:hover[disabled] {
       cursor: not-allowed;
     }
-    
+
     .icon {
       fill: var(--#{$prefix}chip-icon-color);
       &:hover {
@@ -76,7 +77,7 @@
     margin-left: 0;
   }
 
-  // Variant Large 
+  // Variant Large
   &-lg {
     --#{$prefix}chip-padding-x: var(--#{$prefix}spacing-s);
     --#{$prefix}chip-text-size: var(--#{$prefix}label-font-size-m);
@@ -119,8 +120,8 @@
 
   // State disabled
   &.chip-disabled {
-    --#{$prefix}chip-background-color: var(--#{$prefix}color-background-disabled); 
-    --#{$prefix}chip-text-color: var(--#{$prefix}color-text-disabled); 
+    --#{$prefix}chip-background-color: var(--#{$prefix}color-background-disabled);
+    --#{$prefix}chip-text-color: var(--#{$prefix}color-text-disabled);
 
     &:hover {
       cursor: not-allowed;
@@ -128,7 +129,7 @@
 
     button {
       cursor: not-allowed;
-      
+
       .icon {
         fill: var(--#{$prefix}icon-disabled);
       }

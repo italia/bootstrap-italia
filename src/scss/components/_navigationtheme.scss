@@ -14,7 +14,7 @@
       .navbar-collapsable .menu-wrapper {
         background: var(--navigation-dark-bg-color);
       }
-      
+
       .navbar-nav li {
         a.nav-link,
         button.nav-link,
@@ -25,7 +25,7 @@
         .dropdown-menu .link-list-wrapper ul li a i {
           color: var(--navigation-dark-text-color);
         }
-        
+
         a.nav-link svg,
         button.nav-link svg,
         &.megamenu a.it-heading-link svg,
@@ -33,57 +33,57 @@
         .dropdown-menu .link-list-wrapper ul li a svg {
           fill: var(--navigation-dark-text-color);
         }
-        
+
         &.megamenu .dropdown-menu .it-vertical.it-description p {
           color: var(--navigation-dark-text-color);
         }
-        
+
         &.megamenu .dropdown-menu .it-vertical.it-description .description-content:before {
           background: var(--navigation-light-megamenu-separator-color);
         }
       }
-      
+
       .close-div .close-menu {
         color: var(--navigation-dark-text-color);
       }
     }
-    
+
     &.theme-light-desk {
       background: var(--navigation-light-bg-color);
       box-shadow: var(--dropdown-box-shadow);
-      
+
       .navbar-nav li {
         a.nav-link,
         &.megamenu > button.nav-link {
           color: var(--navigation-light-text-color);
         }
-        
+
         a.nav-link::before,
         &.megamenu > button.nav-link::before {
           background-color: var(--navigation-light-text-color);
         }
-        
+
         a.nav-link.active,
         &.megamenu > button.nav-link.active {
           border-bottom-color: var(--navigation-light-text-color);
         }
-        
+
         a.nav-link svg,
         &.megamenu > button.nav-link svg {
           fill: var(--navigation-light-text-color);
         }
-        
+
         &.megamenu .dropdown-menu {
           a.it-heading-link,
           a.it-footer-link {
             color: var(--navigation-light-bg-color);
           }
-          
+
           a.it-heading-link svg,
           a.it-footer-link svg {
             fill: var(--navigation-light-bg-color);
           }
-          
+
           .it-heading-link-wrapper,
           .it-footer-link-wrapper,
           .it-footer-link-wrapper-vertical {
@@ -91,19 +91,19 @@
           }
         }
       }
-      
+
       .dropdown-menu,
       .dropdown-menu:before {
         background: var(--navigation-light-text-color);
       }
-      
+
       .link-list-wrapper ul li a {
         &.list-item.active,
         span,
         i {
           color: var(--navigation-light-bg-color);
         }
-        
+
         svg {
           fill: var(--navigation-light-bg-color);
         }

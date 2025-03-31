@@ -22,7 +22,8 @@
         text-transform: uppercase;
       }
       ul {
-        li { // TODO: Add width: 100% to the li
+        li {
+          // TODO: Add width: 100% to the li
           a {
             line-height: $sidebar-linklist-link-line-height;
             padding-top: $sidebar-linklist-link-v-padding;

@@ -37,16 +37,61 @@ Nel caso dell'utilizzo di un pulsante l'accorgimento sopraindicato non è necess
 <button type="button" class="btn btn-primary go-back" data-bs-toggle="historyback"><svg class="icon icon-sm icon-white"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-up"></use></svg><span class="visually-hidden">Livello superiore</span></button>
 {% endcapture %}{% include example.html content=example %}
 
-## Attivazione tramite JavaScript
+## Attivazione tramite codice
+
+{% include callout-bundle-methods.md %}
 
 È possibile creare un'istanza con il constructor, ad esempio:
 
 ```js
-var backButtonElement = document.getElementById('backButton')
-var historyBack = new bootstrap.HistoryBack(backButtonElement)
+import { HistoryBack } from 'bootstrap-italia';
+
+const backButtonElement = document.getElementById('backButton');
+const historyBack = new HistoryBack(backButtonElement, options);
 ```
 
-### Metodi
+#### Opzioni
+
+Le opzioni possono essere passate tramite gli attributi data o tramite Javascript. Per quanto riguarda gli attributi data, aggiungi il nome dell'opzione a `data-bs`, come in `data-bs-scroll-limit=""`.
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th style="width: 100px;">Nome</th>
+      <th style="width: 50px;">Tipo</th>
+      <th style="width: 50px;">Predefinito</th>
+      <th>Descrizione</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>positionTop</td>
+      <td>number </td>
+      <td>0</td>
+      <td>Posizione Y espressa in pixel alla quale ritornarne al click sull'elemento.</td>
+    </tr>
+    <tr>
+      <td>scrollLimit</td>
+      <td>number </td>
+      <td>100</td>
+      <td>Posizione Y espressa in pixel alla quale far comparire l'elemento.</td>
+    </tr>
+    <tr>
+      <td>duration</td>
+      <td>number</td>
+      <td>800</td>
+      <td>Durata dell'animazione di scroll espressa in millisecondi.</td>
+    </tr>
+    <tr>
+      <td>easing</td>
+      <td>string</td>
+      <td>easeInOutSine</td>
+      <td>Inerzia dell'animazione di scroll. Per i valori fare riferimento alla <a href="https://animejs.com/documentation/#linearEasing">documentazione di AnimeJs</a>.</td>
+    </tr>
+  </tbody>
+</table>
+
+#### Metodi
 
 <table class="table table-bordered table-striped">
   <thead>
@@ -56,17 +101,10 @@ var historyBack = new bootstrap.HistoryBack(backButtonElement)
     </tr>
   </thead>
   <tbody>
+    {% include standard-methods.html class="HistoryBack" %}
     <tr>
       <td>back</td>
-      <td>Attiva la funzionalità <code>back</code> dell'history del browser</td>
-    </tr>
-    <tr>
-      <td>getInstance</td>
-      <td>Metodo statico che restituisce l'istanza HistoryBack associata ad un elemento del DOM. Esempio: <code>bootstrap.HistoryBack.getInstance(element)</code></td>
-    </tr>
-    <tr>
-      <td>getOrCreateInstance</td>
-      <td>Metodo statico che restituisce un'istanza HistoryBack associata ad un elemento del DOM o ne crea una nuova nel caso non fosse stata inizializzata. Esempio: <code>bootstrap.HistoryBack.getOrCreateInstance(element)</code></td>
+      <td>Attiva la funzionalità <code>back</code> dell'history del browser.</td>
     </tr>
   </tbody>
 </table>

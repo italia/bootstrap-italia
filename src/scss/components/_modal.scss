@@ -1,4 +1,4 @@
-// Properties 
+// Properties
 .modal {
   --#{$prefix}modal-zindex: 1055;
   --#{$prefix}modal-width: 500px;
@@ -240,7 +240,7 @@
           .link-list-wrapper {
             .link-list {
               margin-bottom: 0;
-              padding-bottom:  var(--#{$prefix}modal-padding);
+              padding-bottom: var(--#{$prefix}modal-padding);
             }
           }
         }

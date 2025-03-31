@@ -1,10 +1,10 @@
 :focus:not([data-focus-mouse='true']),
 %focus,
-.it-carousel-wrapper .splide__pagination button:focus:not(.focus--mouse),
-.upload:focus:not(.focus--mouse) + label,
-.upload-dragdrop-input:focus[type='file']:not(.focus--mouse) + label,
-.avatar-upload:focus-within:not(.focus--mouse),
-.rating input:focus:not(.focus--mouse) + label svg {
+.it-carousel-wrapper .splide__pagination button:focus:not([data-focus-mouse='true']),
+.upload:focus:not([data-focus-mouse='true']) + label,
+.upload-dragdrop-input:focus[type='file']:not([data-focus-mouse='true']) + label,
+.avatar-upload:focus-within:not([data-focus-mouse='true']),
+.rating input:focus:not([data-focus-mouse='true']) + label svg {
   border-color: $focus-outline-color-out !important;
   box-shadow:
     0 0 0 2px var(--#{$prefix}color-border-inverse),
@@ -17,6 +17,7 @@
   box-shadow: none !important;
 }
 
+[data-focus-mouse='true']:not(.btn),
 %focusmouse {
   border-color: inherit !important;
   box-shadow: none !important;
@@ -24,7 +25,7 @@
 }
 
 p a {
-  &:focus:not(.focus--mouse, .btn) {
+  &:focus:not([data-focus-mouse='true'], .btn) {
     outline-offset: 0px !important;
     outline: 3px $focus-outline-color-out solid !important;
     background: $focus-outline-color-in;
@@ -37,7 +38,7 @@ p a {
 .shadow-none,
 .shadow-sm,
 .shadow-lg {
-  &:focus:not(.focus--mouse) {
+  &:focus:not([data-focus-mouse='true']) {
     box-shadow:
       0 0 0 2px $focus-outline-color-in,
       0 0 0 5px $focus-outline-color-out !important;
@@ -45,14 +46,14 @@ p a {
 }
 
 .avatar-group-stacked .avatar {
-  &:focus:not(.focus--mouse) {
+  &:focus:not([data-focus-mouse='true']) {
     border: 0;
     margin-left: -4px;
     margin-top: 2px;
     margin-right: 2px;
   }
 
-  &.avatar-dropdown .btn-dropdown:focus:not(.focus--mouse) {
+  &.avatar-dropdown .btn-dropdown:focus:not([data-focus-mouse='true']) {
     height: 100%;
     width: 100%;
     border-radius: 50%;
@@ -61,14 +62,14 @@ p a {
 
 .chip {
   button {
-    &:focus:not(.focus--mouse) {
+    &:focus:not([data-focus-mouse='true']) {
       border-radius: 50%;
     }
   }
 }
 
 .form-check {
-  .toggles label:has(input[type='checkbox']:focus:not(.focus--mouse)) {
+  .toggles label:has(input[type='checkbox']:focus:not([data-focus-mouse='true'])) {
     @extend %focus;
 
     input,
@@ -79,12 +80,12 @@ p a {
     }
   }
 
-  .toggles label:has(input[type='checkbox']:focus.focus--mouse) {
+  .toggles label:has(input[type='checkbox']:focus[data-focus-mouse='true']) {
     @extend %focusmouse;
   }
 
   &.form-check-group {
-    :focus:not(.focus--mouse),
+    :focus:not([data-focus-mouse='true']),
     [type='checkbox']:focus + label,
     [type='radio']:focus + label {
       width: 100%;
@@ -94,10 +95,20 @@ p a {
 
 .bg-dark .btn,
 .back-to-top.dark {
-  &:focus:not(.focus--mouse),
+  &:focus:not([data-focus-mouse='true']),
   &%focus {
     box-shadow:
       0 0 0 2px $focus-outline-color-out,
       0 0 0 5px $focus-outline-color-in !important;
+  }
+}
+
+.autocomplete__wrapper .autocomplete__menu {
+  .autocomplete__hint,
+  .autocomplete__option {
+    &:focus {
+      border: 3px solid $focus-outline-color-out !important;
+      box-shadow: none !important;
+    }
   }
 }
