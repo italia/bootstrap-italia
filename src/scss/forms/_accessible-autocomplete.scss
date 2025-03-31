@@ -157,7 +157,7 @@
     position: absolute;
     top: 100%;
     z-index: 10;
-    box-shadow: $autocomplete-box-shadow;
+    box-shadow: var(--#{$prefix}elevation-low);
 
     .autocomplete__hint,
     .autocomplete__option {
