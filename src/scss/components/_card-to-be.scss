@@ -554,6 +554,7 @@ article.it-card {
         }
 
         &.it-card-inline-reverse {
+          order: inherit;
           .it-card-image-wrapper {
             order: 1;
           }

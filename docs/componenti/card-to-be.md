@@ -296,8 +296,8 @@ Ecco alcuni esempi di configurazioni frequenti per le card:
 
 Le varianti inline sono ideali per presentazioni editoriali, come in contesti di notizie o articoli correlati. Esistono due principali configurazioni:
 
-- `.it-card-inline` - Layout orizzontale su schermi medio-grandi, verticale su mobile
-- `.it-card-inline-mini` - Layout orizzontale mantenuto anche su dispositivi mobili
+- `.it-card-inline` - Layout orizzontale su schermi medio-grandi, verticale su mobile. Su mobile l'immagine prende le proporzioni definite con le classi `.ratio-`. 
+- `.it-card-inline-mini` - Layout orizzontale mantenuto anche su dispositivi mobili. Utile per piccole card editoriali secondarie. 
 
 È possibile combinare questi formati con il layout standard e applicare `.it-card-inline-reverse` per invertire l'ordine degli elementi (con l'immagine a destra anziché a sinistra).
 
@@ -360,11 +360,11 @@ Le varianti inline sono ideali per presentazioni editoriali, come in contesti di
      <!--first element is all the card content-->
       <div class="it-card-inline-content">
         <h3 class="it-card-title no_toc">
-          <a href="#">Titolo contenuto può essere anche lungo così o andare oltre</a>
+          <a href="#">Titolo breve</a>
         </h3>
         <div class="it-card-body">
           <p class="it-card-subtitle">Sottotitolo o periodo</p>
-          <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
+          <p class="it-card-text">Questo è un testo breve.</p>
         </div>
         <footer class="it-card-related it-card-footer">
           <div class="it-card-taxonomy">
@@ -379,7 +379,7 @@ Le varianti inline sono ideali per presentazioni editoriali, come in contesti di
       </div>
       <!--second element is the image if present-->
       <div class="it-card-image-wrapper">
-        <div class="ratio ratio-1x">
+        <div class="ratio ratio-16x9">
           <figure class="figure img-full">
             <img src="https://placehold.co/357x190/0066cc/FFFFFF/?text=Img" alt="Descrizione immagine se ha senso nel contesto, sennò marcare con decorativa lasciando l'alt applicato ma vuoto.">
           </figure>
@@ -392,11 +392,11 @@ Le varianti inline sono ideali per presentazioni editoriali, come in contesti di
      <!--first element is all the card content-->
       <div class="it-card-inline-content">
         <h3 class="it-card-title no_toc">
-          <a href="#">Titolo breve</a>
+          <a href="#">Titolo contenuto può essere anche lungo così o andare oltre</a>
         </h3>
         <div class="it-card-body">
           <p class="it-card-subtitle">Sottotitolo o periodo</p>
-          <p class="it-card-text">Questo è un testo breve.</p>
+          <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
         </div>
         <footer class="it-card-related it-card-footer">
           <div class="it-card-taxonomy">
