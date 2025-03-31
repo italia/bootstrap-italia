@@ -80,16 +80,16 @@
       }
 
       &:hover {
-        border: 2px dashed var(--#{$prefix}color-border-primary);
+        border: 2px dashed var(--#{$prefix}color-border-primary-hover);
       }
     }
 
-    &:focus,
-    &:active {
-      &[type='file'] + label {
-        border: 2px dashed $primary-a3;
-      }
-    }
+    // &:focus,
+    // &:active {
+    //   &[type='file'] + label {
+    //     border: 2px dashed $primary-a3;
+    //   }
+    // }
   }
 
   //image
@@ -127,21 +127,21 @@
     // states
     &.uploading {
       .icon {
-        fill: $neutral-1-a7;
+        fill: var(--#{$prefix}icon-secondary);
       }
 
       p {
-        color: $neutral-1-a7;
+        color: var(--#{$prefix}color-text-secondary);
       }
     }
 
     &.success {
       svg {
-        fill: $primary;
+        fill: var(--#{$prefix}icon-success);
       }
 
       p {
-        color: $primary;
+        color: var(--#{$prefix}color-text-success);
 
         .upload-file-weight {
           display: inline-block;
@@ -151,11 +151,11 @@
 
     &.error {
       svg {
-        fill: $danger;
+        fill: var(--#{$prefix}icon-danger);
       }
 
       p {
-        color: $danger;
+        color: var(--#{$prefix}color-text-danger);
       }
     }
 
@@ -186,9 +186,9 @@
       white-space: nowrap;
       margin-left: 12px;
       overflow: hidden;
+
       .upload-file-weight {
-        color: $neutral-1-a7;
-        // font-size: 0.75em;
+        color: var(--#{$prefix}color-text-secondary);
         margin-left: 10px;
         display: none;
       }
@@ -198,14 +198,14 @@
     button {
       background: transparent;
       border: 0;
-      padding: 0px;
+      padding: 0;
       margin-left: auto;
 
       &:hover {
         cursor: pointer;
 
         svg {
-          fill: $primary;
+          fill: var(--#{$prefix}icon-primary);
         }
       }
     }
@@ -214,7 +214,7 @@
   //file upload progress
   .progress {
     position: absolute;
-    bottom: -10px;
+    bottom: -4px;
     left: 36px;
     width: calc(100% - 45px);
     height: 4px;
@@ -272,7 +272,7 @@
     height: 26px;
     background: $neutral-1-a1;
     border-radius: 50%;
-    border: 2px solid $white;
+    border: 2px solid var(--#{$prefix}color-border-inverse);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -286,8 +286,8 @@
 
   &.size-sm {
     .avatar {
-      width: $avatar-base-size * 10;
-      height: $avatar-base-size * 10;
+      width: 80px;
+      height: 80px;
     }
 
     .avatar-upload-icon {
@@ -352,25 +352,22 @@
   p {
     margin: 0;
     font-size: 0.875rem;
-    color: $secondary;
+    color: var(--#{$prefix}color-text-secondary);
 
     &.upload-dragdrop-weight {
-      color: $neutral-1-a7;
+      color: var(--#{$prefix}color-text-secondary);
       font-size: 0.75rem;
       visibility: hidden;
 
       svg {
-        fill: $neutral-1-a7;
+        fill: var(--#{$prefix}icon-secondary);
       }
     }
   }
 
   h5 {
     margin: 0;
-    font-size: 1.25rem;
-    font-weight: 600;
-    line-height: 1.75rem;
-    color: $neutral-1;
+    color: var(--#{$prefix}color-text-base);
   }
 }
 
@@ -384,7 +381,7 @@
 
   &[type='file'] + label {
     text-decoration: underline;
-    color: $primary;
+    color: var(--#{$prefix}color-text-primary);
     cursor: pointer;
   }
 
@@ -407,18 +404,23 @@
   opacity: 0;
   transition: opacity 0.2s;
   border-radius: 50%;
+
   .progress-donut {
     position: relative;
+  
     .progressbar-text {
       color: #000 !important;
       font-weight: 700;
     }
+  
     svg {
       position: relative;
+  
       path:first-child {
         display: none;
       }
     }
+  
     &:before {
       content: '';
       background: #fff;
@@ -439,7 +441,7 @@
   height: 128px;
   flex-shrink: 0;
   position: relative;
-  margin-right: 16px;
+  margin-right: var(--#{$prefix}spacing-s);
 
   img {
     display: block;
@@ -461,7 +463,7 @@
     position: absolute;
     top: calc(50% - 18px);
     left: 20px;
-    background: $primary;
+    background: var(--#{$prefix}color-background-success);
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -473,9 +475,14 @@
       transform 0.5s cubic-bezier(0.75, -0.5, 0, 1.75);
 
     svg {
-      fill: $white;
+      fill: var(--#{$prefix}icon-inverse);
       width: 30px;
       height: 30px;
+    }
+
+    .upload-dragdrop-text h5 + p {
+      color: var(--#{$prefix}color-text-success);
+      font-weight: var(--#{$prefix}font-weight-solid);
     }
   }
 }
@@ -557,7 +564,7 @@
 
         svg {
           display: block;
-          fill: $white;
+          fill: var(--#{$prefix}icon-inverse);
           width: 20px;
           height: 20px;
         }
