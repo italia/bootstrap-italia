@@ -15,21 +15,6 @@ Le nuove card di Bootstrap Italia utilizzano la classe `.it-card` e relativi mod
 Gli stili per le versioni precedenti saranno mantenuti fino al prossimo rilascio maggiore per permettere una migrazione graduale.
 {% endcapture %}{% include callout.html content=callout type="warning" %}
 
-## To do
-
-1. ✅ rifinire gestione spaziature e dimensioni con variabili e resa visiva
-2. ✅ aggiungere modalità ed esempi per gestione gruppi di card (colonne, flex, etc.) e validare soluzione @container per le varianti responsive
-3. ✅ aggiungere strutture per card varianti editoriali "mini" e "large"
-4. ✅ implementare strategie di fallback per eventuali proprietà "moderne" in ottica supporto browser >1% IT (vedi config browserlist dedicato)
-5. ✅ riscrivere documentazione esempi con i nuovi gruppi
-6. ✅ refactoring classi css con approccio enhancement progressivo `it-card`
-7. ✅ refactoring e raggruppamento variabili dedicate nel componente 
-6. ✅ aggiungere varianti che mancano da To Be UI Kit Italia
-  - 🔮 rimangono futuribili e da discutere "solo" Card Presentation e Card Selectable. 
-7. 🔮 review col team e fix
-8. 🔮 preparare una pagina di documentazione divisa per le varianti corrette (editoriali, servizio, ...) e con le "utility" a margine (ombre, gruppi, ...)
-8. ... 
-
 ## Struttura base
 La **card** è implementata come elemento `article` con un titolo (heading) `.it-card-title` come primo elemento figlio.
 
@@ -278,6 +263,11 @@ Utili ad esempio per indicare schede personale. Si attivano con la classe `.it-c
 
 La lista di metadati del profilo è costruita utilizzando liste descrittive `.it-card-description-list` con ogni coppia di item`dd`-`dt` raccolta in un `div` contenitore. 
 
+{% capture callout %}
+#### Accessibilità
+I titoli `.it-card-profile-name` in questi esempi sono `h4`. La gerarchia dei titoli deve adattarsi ovviamente al contesto in cui la card è inserita.
+{% endcapture %}{% include callout.html content=callout type="accessibility" %}
+
 {% comment %}Example name: Card profilo{% endcomment %}
 {% capture example %}
 
@@ -368,6 +358,11 @@ Lo spazio per l'immagine sulla destra `.it-card-place-image` può essere usato a
 La lista di metadati del luogo è costruita utilizzando liste descrittive `.it-card-description-list` con ogni coppia di item`dd`-`dt` raccolta in un `div` contenitore. 
 
 È possibile combinare un piede con eventuali collegamenti o dettagli della mappa usando l'elemento `footer` con le classi dedicate `.it-card-related` e `it-card-footer`. Negli esempi è stato poi applicato un `.border-top` a questo elemento, opzionale.  
+
+{% capture callout %}
+#### Accessibilità
+I titoli `.it-card-place-name` in questi esempi sono `h4`. La gerarchia dei titoli deve adattarsi ovviamente al contesto in cui la card è inserita.
+{% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
 {% comment %}Example name: Card luogo{% endcomment %}
 {% capture example %}
