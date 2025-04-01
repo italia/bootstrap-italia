@@ -4,7 +4,6 @@
 // other navbar variations.
 
 .navbar {
-  // scss-docs-start navbar-css-vars
   --#{$prefix}navbar-background: var(--#{$prefix}color-background-primary);
   --#{$prefix}navbar-color: #{$navbar-light-color};
   --#{$prefix}navbar-hover-color: #{$navbar-light-hover-color};
@@ -23,13 +22,13 @@
   --#{$prefix}navbar-toggler-border-radius: #{$navbar-toggler-border-radius};
   --#{$prefix}navbar-toggler-focus-width: #{$navbar-toggler-focus-width};
   --#{$prefix}navbar-toggler-transition: #{$navbar-toggler-transition};
-  --#{$prefix}navbar-spacing-inset: var(--#{$prefix}spacing-m);
-  --#{$prefix}navbar-spacing-stack: var(--#{$prefix}spacing-s);
   --#{$prefix}navbar-sidebar-bg-color-mobile: rgba(0, 0, 0, 0.6);
   --#{$prefix}navbar-close-button-size: 44px;
   --#{$prefix}navbar-close-button-text-color: var(--#{$prefix}color-text-secondary);
   --#{$prefix}navbar-close-button-font-size: 0.75rem;
   --#{$prefix}navbar-close-button-icon-size: 2rem;
+  --#{$prefix}navbar-link-padding-x: var(--#{$prefix}spacing-m);
+  --#{$prefix}navbar-link-padding-y: var(--#{$prefix}spacing-s);
   --#{$prefix}navbar-links-margin-top: 102px;
   --#{$prefix}navbar-link-color: var(--#{$prefix}color-link); // nav link color default - mobile
   --#{$prefix}navbar-link-font-size: var(--#{$prefix}label-font-size);
@@ -64,7 +63,6 @@
     --#{$prefix}navbar-toggle-button-icon-color: var(--#{$prefix}icon-inverse);
     --#{$prefix}navbar-link-active-border-color: var(--#{$prefix}color-border-inverse);
   }
-  // scss-docs-end navbar-css-vars
 
   position: relative;
   display: flex;
@@ -114,7 +112,7 @@
   // Close button
   .close-div {
     position: fixed;
-    top: var(--#{$prefix}navbar-spacing-inset);
+    top: var(--#{$prefix}spacing-m);
     right: 2px;
     left: auto;
     z-index: 10;
@@ -147,12 +145,6 @@
   // Dropdown menu
   .dropdown-menu {
     padding-top: 0;
-    background: transparent;
-    box-shadow: none;
-
-    &:before {
-      display: none;
-    }
 
     a.it-heading-link,
     a.it-footer-link {
@@ -160,17 +152,15 @@
         fill: currentColor;
       }
 
-      &.active {
-        span {
-          text-decoration: underline;
-        }
+      &.active span {
+        text-decoration: underline;
       }
     }
 
     .link-list-wrapper {
-      margin-bottom: var(--#{$prefix}navbar-spacing-inset);
-      padding-right: var(--#{$prefix}navbar-spacing-inset);
-      padding-left: var(--#{$prefix}navbar-spacing-inset);
+      margin-bottom: var(--#{$prefix}spacing-m);
+      padding-right: var(--#{$prefix}spacing-m);
+      padding-left: var(--#{$prefix}spacing-m);
 
       ul li a {
         &.list-item.active {
@@ -192,7 +182,6 @@
 
 // Navbar brand
 //
-// Used for brand, project, or site names.
 
 .navbar-brand {
   margin-right: var(--#{$prefix}navbar-brand-margin-end);
@@ -215,14 +204,6 @@
 // Custom navbar navigation (doesn't require `.nav`, but does make use of `.nav-link`).
 
 .navbar-nav {
-  // scss-docs-start navbar-nav-css-vars
-  // --#{$prefix}nav-link-padding-x: 0;
-  // --#{$prefix}nav-link-padding-y: #{$nav-link-padding-y};
-  // --#{$prefix}nav-link-font-weight: #{$nav-link-font-weight};
-  // --#{$prefix}nav-link-color: var(--#{$prefix}navbar-color);
-  // --#{$prefix}nav-link-hover-color: var(--#{$prefix}navbar-hover-color);
-  // --#{$prefix}nav-link-disabled-color: var(--#{$prefix}navbar-disabled-color);
-  // scss-docs-end navbar-nav-css-vars
   display: flex;
   flex-direction: column; // cannot use `inherit` to get the `.navbar`s value
   margin-bottom: 0;
@@ -268,7 +249,7 @@
     bottom: auto;
     left: auto;
     z-index: auto;
-    display: block !important; //-sovrascrive l'inline style di jquery
+    display: block !important; // overrides jquery inline style 
     background: none;
     transition: none;
   }
@@ -276,7 +257,7 @@
   .menu-wrapper {
     position: absolute;
     top: 0;
-    right: calc(var(--#{$prefix}navbar-spacing-inset) * 2);
+    right: calc(var(--#{$prefix}spacing-m) * 2);
     bottom: 0;
     left: 0;
     z-index: 5;
@@ -303,7 +284,7 @@
 
   // Navbar Nav
   .navbar-nav {
-    padding-top: var(--#{$prefix}navbar-spacing-inset);
+    padding-top: var(--#{$prefix}spacing-m);
     overflow: hidden;
     @include media-breakpoint-up(lg) {
       margin-top: 0;
@@ -313,17 +294,41 @@
 
     .nav-item {
       display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      @include media-breakpoint-up(lg) {
+        flex-direction: row;
+      }
     }
 
     li {
-      // @include media-breakpoint-up(lg){
-      //   display: flex;
-      // }
+      .nav-link[data-focus-mouse="true"] {
+        border-color: transparent !important;
+      }
+      
+      .nav-link {
+        position: relative;
+        font-weight: var(--#{$prefix}navbar-link-font-weight);
+        padding: var(--#{$prefix}navbar-link-padding-y) var(--#{$prefix}navbar-link-padding-x);
+        &.disabled span,
+        &.disabled .icon {
+          opacity: var(--#{$prefix}navbar-disabled-item-opacity);
+        }
+        &.dropdown-toggle {
+          svg {
+            transition: all var(--#{$prefix}transition-instant);
+            fill: currentColor;
+          }
+          &[aria-expanded='true'] {
+            svg {
+              transform: scaleY(-1);
+            }
+          }
+        }
+      }
 
       button.nav-link {
-        position: relative;
         display: block;
-        padding: var(--#{$prefix}navbar-spacing-stack) var(--#{$prefix}navbar-spacing-inset);
         border: none;
         background: transparent;
         font-weight: var(--#{$prefix}navbar-link-font-weight);
@@ -335,73 +340,29 @@
           line-height: var(--#{$prefix}navbar-link-line-height);
         }
 
-        &.focus--mouse {
-          border-color: transparent !important;
-        }
-
-        &.dropdown-toggle {
-          svg {
-            fill: var(--#{$prefix}icon-primary);
-            transition: all 0.3s;
-            @include media-breakpoint-up(lg) {
-              margin-top: 4px;
-              margin-left: var(--#{$prefix}icon-spacing);
-              fill: var(--#{$prefix}icon-inverse);
-            }
-          }
-
-          &[aria-expanded='true'] {
-            .icon {
-              transform: scaleY(-1);
-            }
-          }
-        }
+        // &.dropdown-toggle {
+        //   svg {
+        //     @include media-breakpoint-up(lg) {
+        //       margin-top: 4px;
+        //       margin-left: var(--#{$prefix}icon-spacing);
+        //       fill: var(--#{$prefix}icon-inverse);
+        //     }
+        //   }
+        // }
 
         &.active {
           border-left: var(--#{$prefix}navbar-link-active-bar-size) solid var(--#{$prefix}navbar-link-active-bar-color);
         }
-
-        &.disabled {
-          span,
-          .icon {
-            opacity: var(--#{$prefix}navbar-disabled-item-opacity);
-          }
-        }
-
-        // &:hover:not(.active) {
-        //   text-decoration: underline;
-        // }
       }
 
       a.nav-link {
-        position: relative;
-        padding: var(--#{$prefix}navbar-spacing-stack) var(--#{$prefix}navbar-spacing-inset);
-        // color: var(--#{$prefix}color-text-primary);
         font-weight: var(--#{$prefix}navbar-link-font-weight);
         line-height: var(--#{$prefix}navbar-link-line-height);
         @include media-breakpoint-up(lg) {
           display: flex;
           align-items: center;
           align-self: flex-end;
-          padding: var(--#{$prefix}navbar-spacing-stack) var(--#{$prefix}navbar-spacing-inset);
-          // color: var(--#{$prefix}navbar-link-color-desk);
           border-bottom: var(--#{$prefix}navbar-link-active-bar-size) solid transparent;
-        }
-        &.focus--mouse {
-          border-color: transparent !important;
-        }
-
-        &.dropdown-toggle {
-          svg {
-            fill: currentColor;
-            transition: all var(--#{$prefix}transition-instant);
-          }
-
-          &[aria-expanded='true'] {
-            .icon {
-              transform: scaleY(-1);
-            }
-          }
         }
 
         &.active {
@@ -419,14 +380,11 @@
             opacity: var(--#{$prefix}navbar-disabled-item-opacity);
           }
         }
-
-        // &:hover:not(.active) {
-        //   text-decoration: underline;
-        // }
       }
     }
 
     .dropdown-menu {
+      width: 100%; // make sure it is full width
       padding-bottom: 0;
       @include media-breakpoint-up(lg) {
         padding-bottom: var(--link-list-footer-distance-bottom);
@@ -586,7 +544,6 @@
 }
 
 .navbar-dark {
-  // scss-docs-start navbar-dark-css-vars
   --#{$prefix}navbar-color: var(--#{$prefix}color-text-inverse);
   --#{$prefix}navbar-hover-color: var(--#{$prefix}$color-text-inverse);
   --#{$prefix}navbar-active-color: var(--#{$prefix}color-text-inverse);
@@ -594,10 +551,10 @@
   --#{$prefix}navbar-brand-hover-color: var(--#{$prefix}color-text-inverse);
   --#{$prefix}navbar-toggler-border-color: #{$navbar-dark-toggler-border-color};
   --#{$prefix}navbar-toggler-icon-bg: #{escape-svg($navbar-dark-toggler-icon-bg)};
-  // scss-docs-end navbar-dark-css-vars
 }
 
 // Nav secondary
+//
 
 .navbar-secondary {
   display: flex;
