@@ -34,7 +34,7 @@
   --#{$prefix}navbar-link-font-size: var(--#{$prefix}label-font-size);
   --#{$prefix}navbar-link-line-height: var(--#{$prefix}label-line-height);
   --#{$prefix}navbar-link-font-weight: var(--#{$prefix}font-weight-solid);
-  --#{$prefix}navbar-link-active-bar-size: var(--#{$prefix}border-thick);
+  --#{$prefix}navbar-link-border-size: var(--#{$prefix}border-thick);
   --#{$prefix}navbar-link-active-border-color: var(--#{$prefix}color-border-primary);
   --#{$prefix}navbar-toggle-button-icon-color: var(--#{$prefix}icon-inverse);
   --#{$prefix}navbar-toggle-button-icon-size: 1.5rem;
@@ -316,6 +316,7 @@
         }
         &.dropdown-toggle {
           svg {
+            margin-left: var(--#{$prefix}icon-spacing);
             transition: all var(--#{$prefix}transition-instant);
             fill: currentColor;
           }
@@ -335,8 +336,7 @@
         @include media-breakpoint-up(lg) {
           display: flex;
           align-items: center;
-          align-self: flex-end;
-          border-bottom: var(--#{$prefix}navbar-link-active-bar-size) solid transparent;
+          border-bottom: var(--#{$prefix}navbar-link-border-size) solid transparent;
           line-height: var(--#{$prefix}navbar-link-line-height);
         }
 
@@ -351,7 +351,7 @@
         // }
 
         &.active {
-          border-left: var(--#{$prefix}navbar-link-active-bar-size) solid var(--#{$prefix}navbar-link-active-bar-color);
+          border-left: var(--#{$prefix}navbar-link-border-size) solid var(--#{$prefix}navbar-link-active-bar-color);
         }
       }
 
@@ -362,11 +362,11 @@
           display: flex;
           align-items: center;
           align-self: flex-end;
-          border-bottom: var(--#{$prefix}navbar-link-active-bar-size) solid transparent;
+          border-bottom: var(--#{$prefix}navbar-link-border-size) solid transparent;
         }
 
         &.active {
-          border-left: var(--#{$prefix}navbar-link-active-bar-size) solid var(--#{$prefix}navbar-link-active-bar-color);
+          border-left: var(--#{$prefix}navbar-link-border-size) solid var(--#{$prefix}navbar-link-active-bar-color);
           @include media-breakpoint-up(lg) {
             border-left: 0;
             border-color: var(--#{$prefix}navbar-link-active-border-color);
