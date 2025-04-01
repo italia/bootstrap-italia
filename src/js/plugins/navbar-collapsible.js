@@ -16,6 +16,8 @@ import { isScreenMobile } from './util/device'
 import { getElementIndex } from './util/dom'
 import { disablePageScroll, enablePageScroll } from './util/pageScroll'
 
+import FocusTrap from './util/focustrap'
+
 const NAME = 'navbarcollapsible'
 const DATA_KEY = 'bs.navbarcollapsible'
 const EVENT_KEY = `.${DATA_KEY}`
@@ -69,6 +71,8 @@ class NavBarCollapsible extends BaseComponent {
       [SELECTOR_NAVLINK, SELECTOR_MEGAMENUNAVLINK, SELECTOR_HEADINGLINK, SELECTOR_FOOTERLINK, SELECTOR_BTN_MENU_CLOSE].join(','),
       this._element
     )
+    
+    this._focustrap = this._initializeFocusTrap()
 
     this._bindEvents()
   }
@@ -131,6 +135,8 @@ class NavBarCollapsible extends BaseComponent {
 
     this._element.classList.remove(CLASS_NAME_EXPANDED)
 
+    this._focustrap.deactivate()
+
     enablePageScroll()
     this._queueCallback(() => this._hideElement(), this._menuWrapper, isAnimated)
   }
@@ -143,7 +149,14 @@ class NavBarCollapsible extends BaseComponent {
     if (typeof window !== 'undefined' && typeof document !== 'undefined') {
       EventHandler.off(window, EVENT_RESIZE)
       super.dispose()
+      this._focustrap.deactivate()
     }
+  }
+
+  _initializeFocusTrap() {
+    return new FocusTrap({
+      trapElement: this._element,
+    })
   }
 
   // Private
@@ -164,11 +177,13 @@ class NavBarCollapsible extends BaseComponent {
         this.hide()
       })
 
-      this._menuItems.forEach((item) => {
-        EventHandler.on(item, EVENT_KEYDOWN, (evt) => this._isMobile && this._onMenuItemKeyDown(evt))
-        EventHandler.on(item, EVENT_KEYUP, (evt) => this._isMobile && this._onMenuItemKeyUp(evt))
-        EventHandler.on(item, EVENT_CLICK, (evt) => this._isMobile && this._onMenuItemClick(evt))
-      })
+      // manca anche ESC per chiudere l'offcanvas? 
+
+      // this._menuItems.forEach((item) => {
+      //   EventHandler.on(item, EVENT_KEYDOWN, (evt) => this._isMobile && this._onMenuItemKeyDown(evt))
+      //   EventHandler.on(item, EVENT_KEYUP, (evt) => this._isMobile && this._onMenuItemKeyUp(evt))
+      //   EventHandler.on(item, EVENT_CLICK, (evt) => this._isMobile && this._onMenuItemClick(evt))
+      // })
     }
   }
 
@@ -210,9 +225,8 @@ class NavBarCollapsible extends BaseComponent {
     const isAnimated = this._isAnimated()
 
     this._element.style.display = 'block'
-    this._element.removeAttribute('aria-hidden')
-    this._element.setAttribute('aria-expanded', true)
-    //this._element.setAttribute('role', 'dialog')
+    this._element.setAttribute('aria-modal', true)
+    this._element.setAttribute('role', 'dialog')
     if (this._overlay) {
       this._overlay.style.display = 'block'
     }
@@ -227,6 +241,13 @@ class NavBarCollapsible extends BaseComponent {
     }
 
     const transitionComplete = () => {
+
+      // if (this._config.focus) {
+        this._focustrap.activate()
+        console.log("focustrap!!! :-)\n")
+        console.log(this._element);
+      // }
+
       this._isTransitioning = false
       const firstItem = this._getNextVisibleItem(0) //at pos 0 there's the close button
       if (firstItem.item) {
@@ -245,10 +266,8 @@ class NavBarCollapsible extends BaseComponent {
     }
 
     this._element.style.display = 'none'
-    this._element.setAttribute('aria-hidden', true)
-    this._element.removeAttribute('aria-expanded')
-    //this._element.removeAttribute('aria-modal')
-    //this._element.removeAttribute('role')
+    this._element.removeAttribute('aria-modal')
+    this._element.removeAttribute('role')
     this._isTransitioning = false
     EventHandler.trigger(this._element, EVENT_HIDDEN)
   }
@@ -346,3 +365,4 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
 }
 
 export default NavBarCollapsible
+

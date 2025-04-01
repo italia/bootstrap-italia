@@ -455,12 +455,12 @@ Variante base che può contenere liste di link organizzate in tre colonne ed eve
 {% comment %}Example name: Base{% endcomment %}
 {% capture example %}
 <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Menu principale">
-  <button type="button" aria-label="Mostra o nascondi il menu" class="custom-navbar-toggler" aria-controls="menu" aria-expanded="false" data-bs-toggle="navbarcollapsible" data-bs-target="#navbar-D">
+  <button type="button" aria-label="Mostra o nascondi il menu" class="custom-navbar-toggler" aria-controls="navbar-D" data-bs-toggle="navbarcollapsible" data-bs-target="#navbar-D" data-bs-scroll="false" > <!-- <<< PULSANTE APETURA -->
       <span>
         <svg role="img" class="icon"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use></svg>
       </span>
   </button>
-  <div class="navbar-collapsable" id="navbar-D">
+  <div class="navbar-collapsable" id="navbar-D" tabindex="-1"> <!-- <<< INIZIO MODALE APERTA -->
     <div class="overlay fade"></div>
     <div class="close-div">
       <button type="button" aria-label="Chiudi il menu" class="btn close-menu">
