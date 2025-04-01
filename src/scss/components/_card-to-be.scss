@@ -1,6 +1,7 @@
 @use 'sass:math';
 
 // Improved responsive it-card-group with a @container aware twist
+// XXXX prendere dimensioni griglie? 
 .it-card-group {
   --#{$prefix}it-card-group-gap: #{$grid-gutter-width};
 
@@ -162,7 +163,7 @@ article.it-card {
   --#{$prefix}it-card-cap-color: null;
   --#{$prefix}it-card-border-top-width: 8px;
   --#{$prefix}it-card-border-top-default-bg: #{$white};
-  --#{$prefix}it-card-border-top-primary: #{$primary};
+  --#{$prefix}it-card-border-top-primary: #{$primary}; // XXXXXX Better...
   --#{$prefix}it-card-border-top-secondary: #{$secondary};
   --#{$prefix}it-card-border-top-success: #{$success};
   --#{$prefix}it-card-border-top-warning: #{$warning};
@@ -173,7 +174,7 @@ article.it-card {
   --#{$prefix}it-card-category-l-spacing: 0.5px;
   --#{$prefix}it-card-category-m-bottom: 0;
   --#{$prefix}it-card-date-size: 0.875rem;
-  --#{$prefix}it-card-date-color: #{$secondary};
+  --#{$prefix}it-card-date-color: #{$color-text-muted};
   --#{$prefix}it-card-chips-gap: 1rem;
   --#{$prefix}it-card-chips-a-color: #{$color-text-secondary};
   --#{$prefix}it-card-signature-size: 1rem;
@@ -376,7 +377,7 @@ article.it-card {
       flex-wrap: wrap;
       justify-content: flex-end;
 
-      // Gap fallback
+      // Gap fallback XXXXXX?
       > * {
         margin: 0.5rem;
       }
@@ -389,7 +390,7 @@ article.it-card {
         }
       }
 
-      // Align items baseline and fallback
+      // Align items baseline and fallback XXXXXXX
       align-items: flex-end;
 
       @supports (align-items: last baseline) {
@@ -408,6 +409,7 @@ article.it-card {
     }
 
     .it-card-category {
+      color: $color-text-muted; // XXX var?
       display: inline-block;
       text-transform: uppercase;
       font-size: var(--#{$prefix}it-card-category-size);
@@ -460,12 +462,12 @@ article.it-card {
 
   // Card can contain description lists, example: personal or place data
   .it-card-description-list,
-  // XXX DOVREBBERO ESSERE LISTE URL NORMALI??? INVEDE DI DL?
   .it-card-body .it-card-description-list {
     border-top: var(--#{$prefix}it-card-border-width) solid var(--#{$prefix}it-card-border-color);
     border-bottom: var(--#{$prefix}it-card-border-width) solid var(--#{$prefix}it-card-border-color);
 
-    color: var(--#{$prefix}it-card-p-color);
+    // color: var(--#{$prefix}it-card-p-color);
+    color: $color-text-muted; //XXX < muted? 
 
     padding-top: calc(2 * var(--#{$prefix}it-card-spacer-y));
     padding-bottom: calc(2 * var(--#{$prefix}it-card-spacer-y));
@@ -478,7 +480,7 @@ article.it-card {
 
     display: flex;
     flex-direction: column;
-    gap: 0.5rem; // XXX NEED FALLBACK?
+    gap: 0.5rem; // XXX NEED FALLBACK? YES?
 
     dt {
       display: inline;
@@ -524,7 +526,7 @@ article.it-card {
     margin-bottom: calc(2 * var(--#{$prefix}it-card-spacer-y));
 
     .list-group-item {
-      padding: var(--bs-list-group-item-padding-y) 0; // XXX
+      padding: var(--bs-list-group-item-padding-y) 0; // XXXXXX > riportare a noi
     }
   }
 
