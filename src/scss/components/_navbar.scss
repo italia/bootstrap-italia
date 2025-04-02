@@ -142,7 +142,10 @@
     }
   }
 
-  // Dropdown menu
+  // Dropdown menu inside navbar
+  // This is a special case for the dropdown menu inside the navbar
+  //
+  
   .dropdown-menu {
     padding-top: 0;
 
@@ -316,7 +319,8 @@
         }
         &.dropdown-toggle {
           svg {
-            margin-left: var(--#{$prefix}icon-spacing);
+            margin-top: 2px;
+            margin-left: var(--#{$prefix}spacing-3xs);
             transition: all var(--#{$prefix}transition-instant);
             fill: currentColor;
           }
