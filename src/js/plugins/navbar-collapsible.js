@@ -13,7 +13,6 @@ import EventHandler from './dom/event-handler'
 import SelectorEngine from './dom/selector-engine'
 
 import { isScreenMobile } from './util/device'
-import { getElementIndex } from './util/dom'
 import { disablePageScroll, enablePageScroll } from './util/pageScroll'
 
 import FocusTrap from './util/focustrap'
@@ -25,7 +24,6 @@ const DATA_API_KEY = '.data-api'
 
 const EVENT_CLICK_DATA_API = `click${EVENT_KEY}${DATA_API_KEY}`
 const EVENT_CLICK = `click${EVENT_KEY}`
-const EVENT_KEYUP = `keyup${EVENT_KEY}`
 const EVENT_KEYDOWN = `keydown${EVENT_KEY}`
 const EVENT_HIDE = `hide${EVENT_KEY}`
 const EVENT_HIDDEN = `hidden${EVENT_KEY}`
@@ -39,7 +37,6 @@ const CLASS_NAME_EXPANDED = 'expanded'
 
 const SELECTOR_DATA_TOGGLE = '[data-bs-toggle="navbarcollapsible"]'
 
-//const SELECTOR_NAVBAR = '.navbar-collapsable'
 const SELECTOR_BTN_CLOSE = '.close-div button'
 const SELECTOR_BTN_MENU_CLOSE = '.close-menu'
 const SELECTOR_BTN_BACK = '.it-back-button'
@@ -58,9 +55,6 @@ class NavBarCollapsible extends BaseComponent {
     this._isTransitioning = false
 
     this._isMobile = isScreenMobile()
-    this._isKeyShift = false
-
-    this._currItemIdx = 0
 
     this._btnClose = SelectorEngine.findOne(SELECTOR_BTN_CLOSE, this._element)
     this._btnBack = SelectorEngine.findOne(SELECTOR_BTN_BACK, this._element)
@@ -71,11 +65,12 @@ class NavBarCollapsible extends BaseComponent {
       [SELECTOR_NAVLINK, SELECTOR_MEGAMENUNAVLINK, SELECTOR_HEADINGLINK, SELECTOR_FOOTERLINK, SELECTOR_BTN_MENU_CLOSE].join(','),
       this._element
     )
-    
+
     this._focustrap = this._initializeFocusTrap()
 
     this._bindEvents()
   }
+
   // Getters
 
   static get NAME() {
@@ -148,6 +143,7 @@ class NavBarCollapsible extends BaseComponent {
   dispose() {
     if (typeof window !== 'undefined' && typeof document !== 'undefined') {
       EventHandler.off(window, EVENT_RESIZE)
+      EventHandler.off(document, EVENT_KEYDOWN)
       super.dispose()
       this._focustrap.deactivate()
     }
@@ -156,6 +152,7 @@ class NavBarCollapsible extends BaseComponent {
   _initializeFocusTrap() {
     return new FocusTrap({
       trapElement: this._element,
+      initialFocus: () => this._btnClose || this._element.querySelector('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'),
     })
   }
 
@@ -164,6 +161,12 @@ class NavBarCollapsible extends BaseComponent {
   _bindEvents() {
     if (typeof window !== 'undefined' && typeof document !== 'undefined') {
       EventHandler.on(window, EVENT_RESIZE, () => this._onResize())
+
+      EventHandler.on(document, EVENT_KEYDOWN, (evt) => {
+        if (this._isShown && evt.key === 'Escape') {
+          this.hide()
+        }
+      })
 
       if (this._overlay) {
         EventHandler.on(this._overlay, EVENT_CLICK, () => this.hide())
@@ -177,13 +180,9 @@ class NavBarCollapsible extends BaseComponent {
         this.hide()
       })
 
-      // manca anche ESC per chiudere l'offcanvas? 
-
-      // this._menuItems.forEach((item) => {
-      //   EventHandler.on(item, EVENT_KEYDOWN, (evt) => this._isMobile && this._onMenuItemKeyDown(evt))
-      //   EventHandler.on(item, EVENT_KEYUP, (evt) => this._isMobile && this._onMenuItemKeyUp(evt))
-      //   EventHandler.on(item, EVENT_CLICK, (evt) => this._isMobile && this._onMenuItemClick(evt))
-      // })
+      this._menuItems.forEach((item) => {
+        EventHandler.on(item, EVENT_KEYDOWN, (evt) => this._isMobile && this._onMenuItemKeyDown(evt))
+      })
     }
   }
 
@@ -191,25 +190,10 @@ class NavBarCollapsible extends BaseComponent {
     this._isMobile = isScreenMobile()
   }
 
-  _onMenuItemKeyUp(evt) {
-    if (evt.key === 'Shift') {
-      this._isKeyShift = false
-    }
-  }
   _onMenuItemKeyDown(evt) {
-    if (evt.key === 'Shift') {
-      this._isKeyShift = true
+    if (evt.key === 'Escape') {
+      this.hide()
     }
-    if (evt.key === 'Tab') {
-      evt.preventDefault()
-      this._focusNext()
-    }
-  }
-  /**
-   * Update the last focused element when an interactive element is clicked
-   */
-  _onMenuItemClick(evt) {
-    this.currItemIdx = getElementIndex(evt.currentTarget, this._menuItems)
   }
 
   _isAnimated() {
@@ -241,19 +225,18 @@ class NavBarCollapsible extends BaseComponent {
     }
 
     const transitionComplete = () => {
-
-      // if (this._config.focus) {
-        this._focustrap.activate()
-        console.log("focustrap!!! :-)\n")
-        console.log(this._element);
-      // }
-
       this._isTransitioning = false
-      const firstItem = this._getNextVisibleItem(0) //at pos 0 there's the close button
-      if (firstItem.item) {
-        firstItem.item.focus()
-        this._currItemIdx = firstItem.index
-      }
+
+      console.log('Close button exists:', !!this._btnClose)
+      console.log('Close button:', this._btnClose)
+
+      this._focustrap.activate()
+
+      // Add a slight delay to check where focus ends up
+      setTimeout(() => {
+        console.log('Active element after focus trap:', document.activeElement)
+      }, 100)
+
       EventHandler.trigger(this._element, EVENT_SHOWN)
     }
 
@@ -276,57 +259,6 @@ class NavBarCollapsible extends BaseComponent {
     this._overlay = SelectorEngine.findOne(SELECTOR_OVERLAY, this._element)
     if (this._isAnimated) {
       this._overlay.classList.add(CLASS_NAME_FADE)
-    }
-  }
-
-  /**
-   * Moves focus to the next focusable element based on the DOM exploration direction
-   */
-  _focusNext() {
-    let nextIdx = this._currItemIdx + (this._isKeyShift ? -1 : 1)
-    if (nextIdx < 0) {
-      nextIdx = this._menuItems.length - 1
-    } else if (nextIdx >= this._menuItems.length) {
-      nextIdx = 0
-    }
-    const target = this._getNextVisibleItem(nextIdx, this._isKeyShift)
-    if (target.item) {
-      target.item.focus()
-      this._currItemIdx = target.index
-    }
-  }
-  /**
-   * Get the next focusable element from a starting point
-   * @param {int} start - the index of the array of the elements as starting point (included)
-   * @param {boolean} wayTop - the array search direction (true: bottom to top, false: top to bottom)
-   * @returns {Object} the item found and its index in the array
-   */
-  _getNextVisibleItem(start, wayTop) {
-    let found = null
-    let foundIdx = null
-
-    let i = start
-    let incr = wayTop ? -1 : 1
-    let firstCheck = false
-    while (!found && (i != start || !firstCheck)) {
-      if (i == start) {
-        firstCheck = true
-      }
-      if (!this._isElementHidden(this._menuItems[i])) {
-        found = this._menuItems[i]
-        foundIdx = i
-      }
-      i = i + incr
-      if (i < 0) {
-        i = this._menuItems.length - 1
-      } else if (i >= this._menuItems.length) {
-        i = 0
-      }
-    }
-
-    return {
-      item: found,
-      index: foundIdx,
     }
   }
 }
@@ -365,4 +297,3 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
 }
 
 export default NavBarCollapsible
-
