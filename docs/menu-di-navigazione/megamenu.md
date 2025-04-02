@@ -1057,7 +1057,7 @@ sezione [attivazione Dropdown tramite codice]({{ site.baseurl }}/docs/componenti
 
 {% capture callout %}
 - tutti gli esempi di `.navbar`, anche quelli integrati nel componente [header]({{ site.baseurl }}/docs/menu-di-navigazione/header/), sono stati rivisti per permettere una corretta implementazione come modale nella versione mobile: rimuovendo l'attributo `aria-expanded` dal pulsante di apertura mobile e aggiungendo l'attributo `tabindex="-1"` al contenitore del menu
-- il javascript `navbar-collapsible.js` gestisce ora il focus usando l'utility `focus-trap.js`
+- il javascript `navbar-collapsible.js` gestisce ora il focus usando l'utility `focus-trap.js`, a cui è stato aggiunta la possibilità di gestire il valore di focus iniziale
 {% endcapture %}{% include callout-breaking.html content=callout version="2.15.0" type="danger" %}
 
 {% capture callout %}
