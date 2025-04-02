@@ -1,7 +1,7 @@
 @use 'sass:math';
 
 // Improved responsive it-card-group with a @container aware twist
-// XXXX prendere dimensioni griglie? 
+// XXXX prendere dimensioni griglie?
 .it-card-group {
   --#{$prefix}it-card-group-gap: #{$grid-gutter-width};
 
@@ -467,7 +467,7 @@ article.it-card {
     border-bottom: var(--#{$prefix}it-card-border-width) solid var(--#{$prefix}it-card-border-color);
 
     // color: var(--#{$prefix}it-card-p-color);
-    color: $color-text-muted; //XXX < muted? 
+    color: $color-text-muted; //XXX < muted?
 
     padding-top: calc(2 * var(--#{$prefix}it-card-spacer-y));
     padding-bottom: calc(2 * var(--#{$prefix}it-card-spacer-y));
