@@ -67,27 +67,25 @@
     }
   }
 
-  .btn-check:checked + &,
-  :not(.btn-check) + &:active,
-  &:first-child:active,
-  &.active,
-  &.show {
-    border-color: var(--#{$prefix}btn-active-border-color);
-    background-color: var(--#{$prefix}btn-active-bg);
-    // Remove CSS gradients if they're enabled
-    background-image: if($enable-gradients, none, null);
-    color: var(--#{$prefix}btn-active-color);
-    @include box-shadow(var(--#{$prefix}btn-active-shadow));
+  // .btn-check:checked + &,
+  // :not(.btn-check) + &:active,
+  // &:first-child:active,
+  // &.active,
+  // &.show {
+  //   border-color: var(--#{$prefix}btn-active-border-color);
+  //   background-color: var(--#{$prefix}btn-active-bg);
+  //   color: var(--#{$prefix}btn-active-color);
+  //   @include box-shadow(var(--#{$prefix}btn-active-shadow));
 
-    &:focus-visible {
-      // Avoid using mixin so we can pass custom focus shadow properly
-      @if $enable-shadows {
-        box-shadow: var(--#{$prefix}btn-active-shadow), var(--#{$prefix}btn-focus-box-shadow);
-      } @else {
-        box-shadow: var(--#{$prefix}btn-focus-box-shadow);
-      }
-    }
-  }
+  //   &:focus-visible {
+  //     // Avoid using mixin so we can pass custom focus shadow properly
+  //     @if $enable-shadows {
+  //       box-shadow: var(--#{$prefix}btn-active-shadow), var(--#{$prefix}btn-focus-box-shadow);
+  //     } @else {
+  //       box-shadow: var(--#{$prefix}btn-focus-box-shadow);
+  //     }
+  //   }
+  // }
 }
 
 //
