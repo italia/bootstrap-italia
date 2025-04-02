@@ -27,21 +27,16 @@ const TAB_KEY = 'Tab'
 const TAB_NAV_FORWARD = 'forward'
 const TAB_NAV_BACKWARD = 'backward'
 
-const ARIA_ATTR = 'aria-hidden'
-const DATA_ORIGINAL_ARIA = 'data-original-aria-hidden'
-
 const Default = {
   autofocus: true,
   trapElement: null, // The element to trap focus inside of
   initialFocus: null, // The element (if passed) to initialize the focus after trapped
-  setAriaHidden: true, // Whether to set aria-hidden on outside elements
 }
 
 const DefaultType = {
   autofocus: 'boolean',
   trapElement: 'element',
   initialFocus: '(null|element|string|function)',
-  setAriaHidden: 'boolean',
 }
 
 /**
@@ -76,11 +71,6 @@ class FocusTrap extends Config {
       return
     }
 
-    // Apply aria-hidden to other elements behind the curtain
-    if (this._config.setAriaHidden) {
-      this._setAriaHiddenOnOutsideElements()
-    }
-
     if (this._config.autofocus) {
       this._setInitialFocus()
     }
@@ -97,10 +87,6 @@ class FocusTrap extends Config {
       return
     }
     this._isActive = false
-
-    if (this._config.setAriaHidden) {
-      this._removeAriaHidden()
-    }
 
     EventHandler.off(document, EVENT_KEY)
   }
@@ -147,74 +133,6 @@ class FocusTrap extends Config {
     }
 
     this._lastTabNavDirection = event.shiftKey ? TAB_NAV_BACKWARD : TAB_NAV_FORWARD
-  }
-
-  _setAriaHiddenOnOutsideElements() {
-    const { trapElement } = this._config
-
-    // Build array of trap element and all parents up to body
-    const trapPath = []
-    let currentEl = trapElement
-    while (currentEl && currentEl !== document.body) {
-      trapPath.push(currentEl)
-      currentEl = currentEl.parentElement
-    }
-
-    // For each container parent in the path, we need to hide all siblings
-    // but keep the parent itself accessible
-    trapPath.forEach((pathElement) => {
-      if (pathElement.parentElement) {
-        // Hide all siblings of this path element
-        Array.from(pathElement.parentElement.children).forEach((sibling) => {
-          // Skip the element that is in our path
-          if (sibling === pathElement || sibling.tagName === 'SCRIPT' || sibling.tagName === 'STYLE' || sibling.tagName === 'LINK') {
-            return
-          }
-
-          const originalValue = sibling.getAttribute(ARIA_ATTR)
-          if (originalValue !== null) {
-            sibling.setAttribute(DATA_ORIGINAL_ARIA, originalValue)
-          } else {
-            sibling.setAttribute(DATA_ORIGINAL_ARIA, 'false')
-          }
-
-          sibling.setAttribute(ARIA_ATTR, 'true')
-          this._affectedElements.push(sibling)
-        })
-      }
-    })
-
-    // Additionally, hide all top-level elements that aren't in our path
-    const topLevelElements = document.querySelectorAll('body > *')
-    topLevelElements.forEach((element) => {
-      if (!trapPath.includes(element) && element.tagName !== 'SCRIPT' && element.tagName !== 'STYLE' && element.tagName !== 'LINK') {
-        const originalValue = element.getAttribute(ARIA_ATTR)
-        if (originalValue !== null) {
-          element.setAttribute(DATA_ORIGINAL_ARIA, originalValue)
-        } else {
-          element.setAttribute(DATA_ORIGINAL_ARIA, 'false')
-        }
-
-        element.setAttribute(ARIA_ATTR, 'true')
-        this._affectedElements.push(element)
-      }
-    })
-  }
-
-  _removeAriaHidden() {
-    this._affectedElements.forEach((element) => {
-      const originalValue = element.getAttribute(DATA_ORIGINAL_ARIA)
-
-      if (originalValue === 'false') {
-        element.removeAttribute(ARIA_ATTR)
-      } else if (originalValue !== null) {
-        element.setAttribute(ARIA_ATTR, originalValue)
-      }
-
-      element.removeAttribute(DATA_ORIGINAL_ARIA)
-    })
-
-    this._affectedElements = []
   }
 }
 
