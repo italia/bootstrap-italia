@@ -30,11 +30,13 @@ const TAB_NAV_BACKWARD = 'backward'
 const Default = {
   autofocus: true,
   trapElement: null, // The element to trap focus inside of
+  initialFocus: null, // The element (if passed) to initialize the focus after trapped
 }
 
 const DefaultType = {
   autofocus: 'boolean',
   trapElement: 'element',
+  initialFocus: '(null|element|string|function)'
 }
 
 /**
@@ -69,7 +71,25 @@ class FocusTrap extends Config {
     }
 
     if (this._config.autofocus) {
+
       this._config.trapElement.focus()
+      if (this._config.initialFocus) {
+        let target;
+
+        if (typeof this._config.initialFocus === 'function') {
+          target = this._config.initialFocus();
+        } else {
+          target = this._config.initialFocus;
+        }
+
+        if (target && typeof target.focus === 'function') {
+          target.focus();
+        } else {
+          this._config.trapElement.focus();
+        }
+      } else {
+        this._config.trapElement.focus();
+      }
     }
 
     EventHandler.off(document, EVENT_KEY) // guard against infinite focus loop
