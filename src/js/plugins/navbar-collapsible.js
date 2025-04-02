@@ -108,7 +108,6 @@ class NavBarCollapsible extends BaseComponent {
     }
 
     const hideEvent = EventHandler.trigger(this._element, EVENT_HIDE)
-
     if (hideEvent.defaultPrevented) {
       return
     }
@@ -116,7 +115,6 @@ class NavBarCollapsible extends BaseComponent {
     this._isShown = false
 
     const isAnimated = this._isAnimated()
-
     if (isAnimated) {
       this._isTransitioning = true
     }
@@ -131,7 +129,6 @@ class NavBarCollapsible extends BaseComponent {
     this._element.classList.remove(CLASS_NAME_EXPANDED)
 
     this._focustrap.deactivate()
-
     enablePageScroll()
     this._queueCallback(() => this._hideElement(), this._menuWrapper, isAnimated)
   }
@@ -161,13 +158,11 @@ class NavBarCollapsible extends BaseComponent {
   _bindEvents() {
     if (typeof window !== 'undefined' && typeof document !== 'undefined') {
       EventHandler.on(window, EVENT_RESIZE, () => this._onResize())
-
       EventHandler.on(document, EVENT_KEYDOWN, (evt) => {
         if (this._isShown && evt.key === 'Escape') {
           this.hide()
         }
       })
-
       if (this._overlay) {
         EventHandler.on(this._overlay, EVENT_CLICK, () => this.hide())
       }
@@ -179,7 +174,6 @@ class NavBarCollapsible extends BaseComponent {
         evt.preventDefault()
         this.hide()
       })
-
       this._menuItems.forEach((item) => {
         EventHandler.on(item, EVENT_KEYDOWN, (evt) => this._isMobile && this._onMenuItemKeyDown(evt))
       })
@@ -207,10 +201,10 @@ class NavBarCollapsible extends BaseComponent {
 
   _showElement() {
     const isAnimated = this._isAnimated()
-
     this._element.style.display = 'block'
     this._element.setAttribute('aria-modal', true)
     this._element.setAttribute('role', 'dialog')
+
     if (this._overlay) {
       this._overlay.style.display = 'block'
     }
@@ -226,9 +220,7 @@ class NavBarCollapsible extends BaseComponent {
 
     const transitionComplete = () => {
       this._isTransitioning = false
-
       this._focustrap.activate()
-
       EventHandler.trigger(this._element, EVENT_SHOWN)
     }
 
