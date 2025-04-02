@@ -36,7 +36,7 @@ const Default = {
 const DefaultType = {
   autofocus: 'boolean',
   trapElement: 'element',
-  initialFocus: '(null|element|string|function)'
+  initialFocus: '(null|element|string|function)',
 }
 
 /**
@@ -71,24 +71,23 @@ class FocusTrap extends Config {
     }
 
     if (this._config.autofocus) {
-
       this._config.trapElement.focus()
       if (this._config.initialFocus) {
-        let target;
+        let target
 
         if (typeof this._config.initialFocus === 'function') {
-          target = this._config.initialFocus();
+          target = this._config.initialFocus()
         } else {
-          target = this._config.initialFocus;
+          target = this._config.initialFocus
         }
 
         if (target && typeof target.focus === 'function') {
-          target.focus();
+          target.focus()
         } else {
-          this._config.trapElement.focus();
+          this._config.trapElement.focus()
         }
       } else {
-        this._config.trapElement.focus();
+        this._config.trapElement.focus()
       }
     }
 
