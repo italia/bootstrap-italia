@@ -44,10 +44,10 @@ In questo esempio, la linea che limita la barra di navigazione è posizionata a 
 {% comment %}Example name: Posizionata a fondo pagina con linea a sinistra{% endcomment %}
 {% capture example %}
 <nav class="navbar it-navscroll-wrapper navbar-expand-lg it-bottom-navscroll it-left-side" data-bs-navscroll>
-  <button class="custom-navbar-toggler" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" data-bs-toggle="navbarcollapsible" data-bs-target="#navbarNav"><span class="it-list"></span>1. Introduzione
+  <button class="custom-navbar-toggler" type="button" aria-controls="navbarNav" aria-label="Apri/Chiudi indice" data-bs-toggle="navbarcollapsible" data-bs-target="#navbarNav"><span class="it-list"></span>1. Introduzione
   </button>
-  <div class="navbar-collapsable" id="navbarNav">
-    <div class="overlay"></div>
+  <div class="navbar-collapsable" id="navbarNav" tabindex="-1">
+    <div class="overlay fade"></div>
     <div class="close-div visually-hidden">
       <button class="btn close-menu" type="button">
         <span class="it-close"></span>Chiudi
@@ -111,10 +111,10 @@ In questo esempio, la linea che limita la barra di navigazione è posizionata a 
 {% comment %}Example name: Posizionata in testa pagina con linea a destra{% endcomment %}
 {% capture example %}
 <nav class="navbar it-navscroll-wrapper navbar-expand-lg it-top-navscroll it-right-side" data-bs-navscroll>
-  <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavB" aria-expanded="false" aria-label="Toggle navigation" data-bs-toggle="navbarcollapsible" data-bs-target="#navbarNavB"><span class="it-list"></span>1. Introduzione
+  <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavB" aria-label="Apri/Chiudi indice" data-bs-toggle="navbarcollapsible" data-bs-target="#navbarNavB"><span class="it-list"></span>1. Introduzione
   </button>
-  <div class="navbar-collapsable" id="navbarNavB">
-    <div class="overlay"></div>
+  <div class="navbar-collapsable" id="navbarNavB" tabindex="-1">
+    <div class="overlay fade"></div>
     <div class="close-div visually-hidden">
       <button class="btn close-menu" type="button">
         <span class="it-close"></span>Chiudi
@@ -180,15 +180,15 @@ La Navscroll può mostrare una barra di avanzamento dello scorrimento del conten
 {% comment %}Example name: Con barra progresso{% endcomment %}
 {% capture example %}
 <nav class="navbar it-navscroll-wrapper navbar-expand-lg it-bottom-navscroll it-right-side" data-bs-navscroll>
-  <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavProgress" aria-expanded="false"
-    aria-label="Toggle navigation" data-bs-toggle="navbarcollapsible" data-bs-target="#navbarNavProgress">
+  <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavProgress"
+    aria-label="Apri/Chiudi indice" data-bs-toggle="navbarcollapsible" data-bs-target="#navbarNavProgress">
     <span class="it-list"></span>1. Introduzione
   </button>
   <div class="progress custom-navbar-progressbar">
     <div class="progress-bar it-navscroll-progressbar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
   </div>
-  <div class="navbar-collapsable" id="navbarNavProgress">
-    <div class="overlay"></div>
+  <div class="navbar-collapsable" id="navbarNavProgress" tabindex="-1">
+    <div class="overlay fade"></div>
     <button type="button" class="it-back-button btn w-100 text-start">
       <svg class="icon icon-sm icon-primary align-top"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left" xlink:href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left"></use></svg>
       <span>Indietro</span>
@@ -261,10 +261,10 @@ Per cambiare il tema è sufficiente aggiungere le seguenti classi al tag `<nav c
 {% comment %}Example name: Variante scura{% endcomment %}
 {% capture example %}
 <nav class="navbar it-navscroll-wrapper navbar-expand-lg it-top-navscroll it-right-side theme-dark-mobile theme-dark-desk" data-bs-navscroll>
-  <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavC" aria-expanded="false" aria-label="Toggle navigation" data-bs-toggle="navbarcollapsible" data-bs-target="#navbarNavC"><span class="it-list"></span>1. Introduzione
+  <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavC" aria-label="Toggle navigation" data-bs-toggle="navbarcollapsible" data-bs-target="#navbarNavC"><span class="it-list"></span>1. Introduzione
   </button>
-  <div class="navbar-collapsable" id="navbarNavC">
-    <div class="overlay"></div>
+  <div class="navbar-collapsable" id="navbarNavC" tabindex="-1">
+    <div class="overlay fade"></div>
     <div class="close-div visually-hidden">
       <button class="btn close-menu" type="button">
       <span class="it-close"></span>Chiudi
