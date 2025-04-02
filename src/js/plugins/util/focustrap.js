@@ -162,10 +162,10 @@ class FocusTrap extends Config {
 
     // For each container parent in the path, we need to hide all siblings
     // but keep the parent itself accessible
-    trapPath.forEach(pathElement => {
+    trapPath.forEach((pathElement) => {
       if (pathElement.parentElement) {
         // Hide all siblings of this path element
-        Array.from(pathElement.parentElement.children).forEach(sibling => {
+        Array.from(pathElement.parentElement.children).forEach((sibling) => {
           // Skip the element that is in our path
           if (sibling === pathElement || sibling.tagName === 'SCRIPT' || sibling.tagName === 'STYLE' || sibling.tagName === 'LINK') {
             return
@@ -186,12 +186,8 @@ class FocusTrap extends Config {
 
     // Additionally, hide all top-level elements that aren't in our path
     const topLevelElements = document.querySelectorAll('body > *')
-    topLevelElements.forEach(element => {
-      if (!trapPath.includes(element) &&
-        element.tagName !== 'SCRIPT' &&
-        element.tagName !== 'STYLE' &&
-        element.tagName !== 'LINK') {
-
+    topLevelElements.forEach((element) => {
+      if (!trapPath.includes(element) && element.tagName !== 'SCRIPT' && element.tagName !== 'STYLE' && element.tagName !== 'LINK') {
         const originalValue = element.getAttribute(ARIA_ATTR)
         if (originalValue !== null) {
           element.setAttribute(DATA_ORIGINAL_ARIA, originalValue)
@@ -206,7 +202,7 @@ class FocusTrap extends Config {
   }
 
   _removeAriaHidden() {
-    this._affectedElements.forEach(element => {
+    this._affectedElements.forEach((element) => {
       const originalValue = element.getAttribute(DATA_ORIGINAL_ARIA)
 
       if (originalValue === 'false') {
@@ -221,6 +217,5 @@ class FocusTrap extends Config {
     this._affectedElements = []
   }
 }
-
 
 export default FocusTrap
