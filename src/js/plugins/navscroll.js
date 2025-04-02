@@ -5,7 +5,7 @@ import SelectorEngine from './dom/selector-engine'
 import Manipulator from './dom/manipulator'
 
 import onDocumentScroll from './util/on-document-scroll'
-import NavBarCollapsible from './navbar-collapsible' 
+import NavBarCollapsible from './navbar-collapsible'
 
 import { documentScrollTo } from './util/tween'
 
