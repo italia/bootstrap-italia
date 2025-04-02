@@ -38,12 +38,12 @@ Permette di includere **immagine e testo descrittivo** per una introduzione ai c
 {% capture example %}
 <!-- navbar -->
 <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Menu principale">
-  <button type="button" aria-label="Mostra o nascondi il menu" class="custom-navbar-toggler" aria-controls="menu" aria-expanded="false" data-bs-toggle="navbarcollapsible" data-bs-target="#navbar-A">
+  <button type="button" aria-label="Mostra o nascondi il menu" class="custom-navbar-toggler" aria-controls="navbar-A" data-bs-toggle="navbarcollapsible" data-bs-target="#navbar-A">
       <span>
         <svg role="img" class="icon"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use></svg>
       </span>
   </button>
-  <div class="navbar-collapsable" id="navbar-A">
+  <div class="navbar-collapsable" id="navbar-A" tabindex="-1">
     <div class="overlay fade"></div>
     <div class="close-div">
       <button type="button" aria-label="Chiudi il menu" class="btn close-menu">
@@ -235,12 +235,12 @@ Il megamenu prende il tema colori dark su desktop se è dentro un `<nav>` che ha
 {% comment %}Example name: Completo scuro desktop{% endcomment %}
 {% capture example %}
 <nav class="navbar navbar-expand-lg has-megamenu theme-light-desk" aria-label="Menu principale">
-  <button type="button" aria-label="Mostra o nascondi il menu" class="custom-navbar-toggler" aria-controls="menu" aria-expanded="false" data-bs-toggle="navbarcollapsible" data-bs-target="#navbar-B">
+  <button type="button" aria-label="Mostra o nascondi il menu" class="custom-navbar-toggler" aria-controls="navbar-B" data-bs-toggle="navbarcollapsible" data-bs-target="#navbar-B">
       <span>
         <svg role="img" class="icon"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use></svg>
       </span>
   </button>
-  <div class="navbar-collapsable" id="navbar-B">
+  <div class="navbar-collapsable" id="navbar-B" tabindex="-1">
     <div class="overlay fade"></div>
     <div class="close-div">
       <button type="button" aria-label="Chiudi il menu" class="btn close-menu">
@@ -345,12 +345,12 @@ Il megamenu prende il tema colori dark su mobile se è dentro un `<nav>` che ha 
 {% comment %}Example name: Completo scuro mobile{% endcomment %}
 {% capture example %}
 <nav class="navbar navbar-expand-lg has-megamenu theme-dark-mobile" aria-label="Menu principale">
-  <button type="button" aria-label="Mostra o nascondi il menu" class="custom-navbar-toggler" aria-controls="menu" aria-expanded="false" data-bs-toggle="navbarcollapsible" data-bs-target="#navbar-C">
+  <button type="button" aria-label="Mostra o nascondi il menu" class="custom-navbar-toggler" aria-controls="navbar-C" data-bs-toggle="navbarcollapsible" data-bs-target="#navbar-C">
       <span>
         <svg role="img" class="icon"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use></svg>
       </span>
   </button>
-  <div class="navbar-collapsable" id="navbar-C">
+  <div class="navbar-collapsable" id="navbar-C" tabindex="-1">
     <div class="overlay fade"></div>
     <div class="close-div">
       <button type="button" aria-label="Chiudi il menu" class="btn close-menu">
@@ -455,12 +455,12 @@ Variante base che può contenere liste di link organizzate in tre colonne ed eve
 {% comment %}Example name: Base{% endcomment %}
 {% capture example %}
 <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Menu principale">
-  <button type="button" aria-label="Mostra o nascondi il menu" class="custom-navbar-toggler" aria-controls="navbar-D" data-bs-toggle="navbarcollapsible" data-bs-target="#navbar-D" data-bs-scroll="false" > <!-- <<< PULSANTE APETURA -->
+  <button type="button" aria-label="Mostra o nascondi il menu" class="custom-navbar-toggler" aria-controls="navbar-D" data-bs-toggle="navbarcollapsible" data-bs-target="#navbar-D" >
       <span>
         <svg role="img" class="icon"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use></svg>
       </span>
   </button>
-  <div class="navbar-collapsable" id="navbar-D" tabindex="-1"> <!-- <<< INIZIO MODALE APERTA -->
+  <div class="navbar-collapsable" id="navbar-D" tabindex="-1">
     <div class="overlay fade"></div>
     <div class="close-div">
       <button type="button" aria-label="Chiudi il menu" class="btn close-menu">
@@ -569,12 +569,12 @@ Come nella variante completa è possibile aggiungere un link "Esplora la sezione
 {% comment %}Example name: Base, con link esplora la sezione{% endcomment %}
 {% capture example %}
 <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Menu principale">
-  <button type="button" aria-label="Mostra o nascondi il menu" class="custom-navbar-toggler" aria-controls="menu" aria-expanded="false" data-bs-toggle="navbarcollapsible" data-bs-target="#navbar-E">
+  <button type="button" aria-label="Mostra o nascondi il menu" class="custom-navbar-toggler" aria-controls="navbar-E" data-bs-toggle="navbarcollapsible" data-bs-target="#navbar-E">
       <span>
         <svg role="img" class="icon"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use></svg>
       </span>
   </button>
-  <div class="navbar-collapsable" id="navbar-E">
+  <div class="navbar-collapsable" id="navbar-E" tabindex="-1">
     <div class="overlay fade"></div>
     <div class="close-div">
       <button type="button" aria-label="Chiudi il menu" class="btn close-menu">
@@ -688,12 +688,12 @@ Nel caso le voci da mostrare fossero numerose, è possibile aggiungere un link "
 {% comment %}Example name: Base, con link esplora tutti{% endcomment %}
 {% capture example %}
 <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Menu principale">
-  <button type="button" aria-label="Mostra o nascondi il menu" class="custom-navbar-toggler" aria-controls="menu" aria-expanded="false" data-bs-toggle="navbarcollapsible" data-bs-target="#navbar-F">
+  <button type="button" aria-label="Mostra o nascondi il menu" class="custom-navbar-toggler" aria-controls="navbar-F" data-bs-toggle="navbarcollapsible" data-bs-target="#navbar-F">
       <span>
         <svg role="img" class="icon"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use></svg>
       </span>
   </button>
-  <div class="navbar-collapsable" id="navbar-F">
+  <div class="navbar-collapsable" id="navbar-F" tabindex="-1">
     <div class="overlay fade"></div>
     <div class="close-div">
       <button type="button" aria-label="Chiudi il menu" class="btn close-menu">
@@ -827,12 +827,12 @@ Questi seguono le liste di link, posizionati in basso o in una colonna destra, a
 {% comment %}Example name: Base, con call to action in basso{% endcomment %}
 {% capture example %}
 <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Menu principale">
-  <button type="button" aria-label="Mostra o nascondi il menu" class="custom-navbar-toggler" aria-controls="menu" aria-expanded="false" data-bs-toggle="navbarcollapsible" data-bs-target="#navbar-G">
+  <button type="button" aria-label="Mostra o nascondi il menu" class="custom-navbar-toggler" aria-controls="navbar-G" data-bs-toggle="navbarcollapsible" data-bs-target="#navbar-G">
       <span>
         <svg role="img" class="icon"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use></svg>
       </span>
   </button>
-  <div class="navbar-collapsable" id="navbar-G">
+  <div class="navbar-collapsable" id="navbar-G" tabindex="-1">
     <div class="overlay fade"></div>
     <div class="close-div">
       <button type="button" aria-label="Chiudi il menu" class="btn close-menu">
@@ -951,12 +951,12 @@ Questi seguono le liste di link, posizionati in basso o in una colonna destra, a
 {% comment %}Example name: Base, con call to action a destra{% endcomment %}
 {% capture example %}
 <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Menu principale">
-  <button type="button" aria-label="Mostra o nascondi il menu" class="custom-navbar-toggler" aria-controls="menu" aria-expanded="false" data-bs-toggle="navbarcollapsible" data-bs-target="#navbar-H">
+  <button type="button" aria-label="Mostra o nascondi il menu" class="custom-navbar-toggler" aria-controls="navbar-H" data-bs-toggle="navbarcollapsible" data-bs-target="#navbar-H">
       <span>
         <svg role="img" class="icon"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use></svg>
       </span>
   </button>
-  <div class="navbar-collapsable" id="navbar-H">
+  <div class="navbar-collapsable" id="navbar-H" tabindex="-1">
     <div class="overlay fade"></div>
     <div class="close-div">
       <button type="button" aria-label="Chiudi il menu" class="btn close-menu">
@@ -1054,6 +1054,11 @@ Il componente Megamenu deriva dal componente Dropdown, si rimanda dunque alla
 sezione [attivazione Dropdown tramite codice]({{ site.baseurl }}/docs/componenti/dropdown/#attivazione-tramite-codice)
 
 ## Breaking change
+
+{% capture callout %}
+- tutti gli esempi di `.navbar`, anche quelli integrati nel componente [header]({{ site.baseurl }}/docs/menu-di-navigazione/header/), sono stati rivisti per permettere una corretta implementazione come modale nella versione mobile: rimuovendo l'attributo `aria-expanded` dal pulsante di apertura mobile e aggiungendo l'attributo `tabindex="-1"` al contenitore del menu
+- il javascript `navbar-collapsible.js` gestisce ora il focus usando l'utility `focus-trap.js`
+{% endcapture %}{% include callout-breaking.html content=callout version="2.15.0" type="danger" %}
 
 {% capture callout %}
 - tutti gli esempi del componente, anche quelli integrati nel componente [header]({{ site.baseurl }}/docs/menu-di-navigazione/header/), sono stati rivisti: refactoring markup `HTML`, classi e stili nei file `_megamenu.scss`, `_navigation.scss`, `_headernavbar.scss`, `_headernavbartheme.scss`, `_navigationtheme.scss`
