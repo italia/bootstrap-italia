@@ -490,7 +490,7 @@ Per caricare i font utilizzando JavaScript occorre chiamare **esplicitamente** l
 {% endcapture %}{% include callout-breaking.html version="2.2.0" content=callout type="danger" %}
 
 {% capture callout %}
-Il `focus` con la tastiera viene adesso settato con l'attributo `datadata-focus-mouse`
+Il `focus` con la tastiera viene adesso settato con l'attributo `data-focus-mouse`
 invece che con la classe `focus--mouse`. Da tenere presente nel caso di un 
 precedente utilizzo della classe `focus--mouse` per un controllo e/o un' implementazione 
 ulteriore di accessibilità. 
