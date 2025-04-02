@@ -227,15 +227,7 @@ class NavBarCollapsible extends BaseComponent {
     const transitionComplete = () => {
       this._isTransitioning = false
 
-      console.log('Close button exists:', !!this._btnClose)
-      console.log('Close button:', this._btnClose)
-
       this._focustrap.activate()
-
-      // Add a slight delay to check where focus ends up
-      setTimeout(() => {
-        console.log('Active element after focus trap:', document.activeElement)
-      }, 100)
 
       EventHandler.trigger(this._element, EVENT_SHOWN)
     }
