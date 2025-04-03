@@ -65,8 +65,7 @@
     left: 0;
     bottom: 0;
     z-index: #{$zindex-modal}; // 100
-    // display: none;
-    visibility: hidden; // XXX
+    display: none; // XXX
     width: 100%; //-occupa sempre tutta lo spazio orizzontale disponibile
 
     .menu-wrapper {
