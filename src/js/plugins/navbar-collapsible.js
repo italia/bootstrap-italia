@@ -11,9 +11,10 @@ import BaseComponent from './base-component.js'
 import { getElementFromSelector, isVisible, reflow } from './util/index'
 import EventHandler from './dom/event-handler'
 import SelectorEngine from './dom/selector-engine'
-
 import { isScreenMobile } from './util/device'
-import { disablePageScroll, enablePageScroll } from './util/pageScroll'
+// import { disablePageScroll, enablePageScroll } from './util/pageScroll'
+
+import ScrollBarHelper from './util/scrollbar'
 
 import FocusTrap from './util/focustrap'
 import Backdrop from './util/backdrop'
@@ -32,7 +33,8 @@ const EVENT_SHOW = `show${EVENT_KEY}`
 const EVENT_SHOWN = `shown${EVENT_KEY}`
 const EVENT_RESIZE = `resize${EVENT_KEY}`
 
-// const CLASS_NAME_FADE = 'fade'
+const CLASS_NAME_FADE = 'fade'
+const CLASS_NAME_OPEN = 'navbar-open'
 const CLASS_NAME_SHOW = 'show'
 const CLASS_NAME_EXPANDED = 'expanded'
 
@@ -53,7 +55,10 @@ class NavBarCollapsible extends BaseComponent {
     super(element)
 
     this._isShown = this._element.classList.contains(CLASS_NAME_EXPANDED)
+    this._backdrop = this._initializeBackDrop()
+    this._focustrap = this._initializeFocusTrap()
     this._isTransitioning = false
+    this._scrollBar = new ScrollBarHelper()
 
     this._isMobile = isScreenMobile()
 
@@ -63,14 +68,13 @@ class NavBarCollapsible extends BaseComponent {
 
     // this._overlay = null
     // this._setOverlay()
-    this._backdrop = this._initializeBackDrop()
 
     this._menuItems = SelectorEngine.find(
       [SELECTOR_NAVLINK, SELECTOR_MEGAMENUNAVLINK, SELECTOR_HEADINGLINK, SELECTOR_FOOTERLINK, SELECTOR_BTN_MENU_CLOSE].join(','),
       this._element
     )
 
-    this._focustrap = this._initializeFocusTrap()
+
 
     this._bindEvents()
   }
@@ -82,6 +86,9 @@ class NavBarCollapsible extends BaseComponent {
   }
 
   // Public
+  toggle(relatedTarget) {
+    this._isShown ? this.hide() : this.show(relatedTarget)
+  }
 
   show(relatedTarget) {
     if (this._isShown || this._isTransitioning) {
@@ -97,13 +104,16 @@ class NavBarCollapsible extends BaseComponent {
     }
 
     this._isShown = true
+    this._isTransitioning = true
+
+    this._scrollBar.hide()
 
     if (this._btnBack) {
       this._btnBack.classList.add(CLASS_NAME_SHOW)
     }
 
-    // document.body.classList.add('navbar-open')
-    disablePageScroll()
+    document.body.classList.add(CLASS_NAME_OPEN)
+    // disablePageScroll()
 
     // this._showElement()
     this._backdrop.show(() => this._showElement())
@@ -115,16 +125,18 @@ class NavBarCollapsible extends BaseComponent {
     }
 
     const hideEvent = EventHandler.trigger(this._element, EVENT_HIDE)
+
     if (hideEvent.defaultPrevented) {
       return
     }
 
     this._isShown = false
 
-    const isAnimated = this._isAnimated()
-    if (isAnimated) {
-      this._isTransitioning = true
-    }
+    // const isAnimated = this._isAnimated()
+    // if (isAnimated) {
+    this._isTransitioning = true
+    // }
+    this._focustrap.deactivate()
 
     if (this._btnBack) {
       this._btnBack.classList.remove(CLASS_NAME_SHOW)
@@ -134,34 +146,26 @@ class NavBarCollapsible extends BaseComponent {
     //   this._overlay.classList.remove(CLASS_NAME_SHOW)
     // }
 
-    this._focustrap.deactivate()
-
-    // document.body.classList.remove('navbar-open')
     this._element.classList.remove(CLASS_NAME_EXPANDED)
 
     // enablePageScroll()
-    this._backdrop.hide(() => {
-      enablePageScroll()
-      this._queueCallback(() => this._hideElement(), this._menuWrapper, isAnimated)
-    })
+    // this._backdrop.hide(() => {
+    // enablePageScroll()
+    this._queueCallback(() => this._hideElement(), this._menuWrapper, this._isAnimated())
+    // })
 
     // this._queueCallback(() => this._hideElement(), this._menuWrapper, isAnimated)
-  }
-
-  toggle(relatedTarget) {
-    this._isShown ? this.hide() : this.show(relatedTarget)
   }
 
   dispose() {
     if (typeof window !== 'undefined' && typeof document !== 'undefined') {
       EventHandler.off(window, EVENT_RESIZE)
       EventHandler.off(document, EVENT_KEYDOWN)
-
-      this._backdrop.dispose()
-
-      this._focustrap.deactivate()
-      super.dispose()
     }
+    this._backdrop.dispose()
+
+    this._focustrap.deactivate()
+    super.dispose()
   }
 
   _initializeBackDrop() {
@@ -221,8 +225,7 @@ class NavBarCollapsible extends BaseComponent {
   }
 
   _isAnimated() {
-    //there's no an animation css class you can toggle with a "show" css class, so it is supposed true
-    return true //this._element.classList.contains(CLASS_NAME_EXPANDED)
+    return true // this._element.classList.contains(CLASS_NAME_FADE) // XXX
   }
 
   _isElementHidden(element) {
@@ -230,8 +233,9 @@ class NavBarCollapsible extends BaseComponent {
   }
 
   _showElement() {
-    const isAnimated = this._isAnimated()
-    this._element.style.display = 'block'
+    // const isAnimated = this._isAnimated()
+    // this._element.style.display = 'block'
+    this._element.style.visibility = "visible"
     // this._element.setAttribute('aria-label', 'Menu di navigazione'); // XXX
     this._element.setAttribute('aria-modal', true)
     this._element.setAttribute('role', 'dialog')
@@ -240,9 +244,9 @@ class NavBarCollapsible extends BaseComponent {
     //   this._overlay.style.display = 'block'
     // }
 
-    if (isAnimated) {
-      reflow(this._element)
-    }
+    // if (isAnimated) {
+    reflow(this._element)
+    // }
 
     this._element.classList.add(CLASS_NAME_EXPANDED)
 
@@ -251,24 +255,31 @@ class NavBarCollapsible extends BaseComponent {
     // }
 
     const transitionComplete = () => {
-      this._isTransitioning = false
       this._focustrap.activate()
+      this._isTransitioning = false
       EventHandler.trigger(this._element, EVENT_SHOWN)
     }
 
-    this._queueCallback(transitionComplete, this._menuWrapper, isAnimated)
+    this._queueCallback(transitionComplete, this._menuWrapper, this._isAnimated())
   }
 
   _hideElement() {
     // if (this._overlay) {
     //   this._overlay.style.display = 'none'
     // }
-
-    this._element.style.display = 'none'
+    // this._element.style.display = 'none'
+    this._element.style.visibility = 'hidden'
     this._element.removeAttribute('aria-modal')
     this._element.removeAttribute('role')
     this._isTransitioning = false
-    EventHandler.trigger(this._element, EVENT_HIDDEN)
+
+    this._backdrop.hide(() => {
+      document.body.classList.remove(CLASS_NAME_OPEN) // XXX
+      this._scrollBar.reset()
+      EventHandler.trigger(this._element, EVENT_HIDDEN)
+    })
+    // this._isTransitioning = false
+    // EventHandler.trigger(this._element, EVENT_HIDDEN)
   }
 
   // _setOverlay() {

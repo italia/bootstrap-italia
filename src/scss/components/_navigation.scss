@@ -65,7 +65,8 @@
     left: 0;
     bottom: 0;
     z-index: #{$zindex-modal}; // 100
-    display: none;
+    // display: none;
+    visibility: hidden; // XXX
     width: 100%; //-occupa sempre tutta lo spazio orizzontale disponibile
 
     .menu-wrapper {
@@ -380,7 +381,8 @@
       bottom: auto;
       z-index: auto;
       background: none;
-      display: block !important; //-sovrascrive l'inline style di jquery
+      // display: block !important;
+      visibility: visible !important;
       transition: none;
 
       .overlay {

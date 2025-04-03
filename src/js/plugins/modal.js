@@ -115,7 +115,7 @@ class Modal extends BaseComponent {
 
     this._scrollBar.hide()
 
-    document.body.classList.add(CLASS_NAME_OPEN)
+    document.body.classList.add(CLASS_NAME_OPEN) 
 
     this._adjustDialog()
 
@@ -253,7 +253,7 @@ class Modal extends BaseComponent {
     this._isTransitioning = false
 
     this._backdrop.hide(() => {
-      document.body.classList.remove(CLASS_NAME_OPEN)
+      document.body.classList.remove(CLASS_NAME_OPEN) // XXX
       this._resetAdjustments()
       this._scrollBar.reset()
       EventHandler.trigger(this._element, EVENT_HIDDEN)
