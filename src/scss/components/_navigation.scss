@@ -12,8 +12,21 @@
   }
 }
 
-.row.row-column-border > [class^='col-'] .navbar {
+.row.row-column-border>[class^='col-'] .navbar {
   padding: 8px 0;
+}
+
+// Navbar mobile backdrop
+// New custom navbar backdrop, inspired by "modal" approach for SR mobile
+// Modal background
+.navbar-backdrop {
+  // scss-docs-start modal-backdrop-css-vars
+  --#{$prefix}backdrop-zindex: #{$zindex-modal-backdrop};
+  --#{$prefix}backdrop-bg: #{$modal-backdrop-bg};
+  --#{$prefix}backdrop-opacity: #{$modal-backdrop-opacity};
+  // scss-docs-end modal-backdrop-css-vars
+
+  @include overlay-backdrop(var(--#{$prefix}backdrop-zindex), var(--#{$prefix}backdrop-bg), var(--#{$prefix}backdrop-opacity));
 }
 
 .navbar {
@@ -31,13 +44,27 @@
   }
 
   // navbar mobile
+  body.navbar-open {
+    overflow: hidden;
+    padding-right: 0 !important;
+  }
+
+  /* This may help with screen readers */
+  body.navbar-open *:not(.navbar-collapsable):not(.navbar-backdrop):not(.navbar-collapsable *) {
+    visibility: hidden !important;
+  }
+
+  body.navbar-open .navbar-collapsable {
+    visibility: visible !important;
+  }
+
   .navbar-collapsable {
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
     bottom: 0;
-    z-index: 100;
+    z-index: #{$zindex-modal}; // 100
     display: none;
     width: 100%; //-occupa sempre tutta lo spazio orizzontale disponibile
 
@@ -69,7 +96,7 @@
       padding: $navigation-h-padding 0;
 
       li {
-        > button.nav-link {
+        >button.nav-link {
           border: none;
           display: block;
           background: transparent;
@@ -96,6 +123,7 @@
           }
 
           &.disabled {
+
             span,
             .icon {
               opacity: $navigation-disabled-item-mobile-opacity;
@@ -131,6 +159,7 @@
           }
 
           &.disabled {
+
             span,
             .icon {
               opacity: $navigation-disabled-item-mobile-opacity;
@@ -266,8 +295,8 @@
 }
 
 //reset icon on megamenu
-.nav-item.megamenu > a:before,
-.nav-item.megamenu > button:before {
+.nav-item.megamenu>a:before,
+.nav-item.megamenu>button:before {
   display: none;
 }
 
@@ -336,7 +365,7 @@
 
 //Tablet horizontal / small desktop
 @media (min-width: #{map-get($grid-breakpoints, lg)}) {
-  .row.row-column-border > [class^='col-'] .navbar {
+  .row.row-column-border>[class^='col-'] .navbar {
     padding: 0;
   }
 
@@ -419,6 +448,7 @@
             }
 
             &.disabled {
+
               span,
               .icon {
                 opacity: $navigation-disabled-item-opacity;
@@ -503,8 +533,8 @@
   .nav-item.megamenu {
     position: static;
 
-    > a.dropdown-toggle,
-    > button.dropdown-toggle {
+    >a.dropdown-toggle,
+    >button.dropdown-toggle {
       position: relative;
 
       &:before {
@@ -524,7 +554,7 @@
       }
     }
 
-    > button.dropdown-toggle:before {
+    >button.dropdown-toggle:before {
       bottom: -$dropdown-menu-notch-base-size - 8;
     }
 

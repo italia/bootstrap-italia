@@ -6,6 +6,8 @@ group: menu-di-navigazione
 toc: true
 ---
 
+[navbar-test](/docs/menu-di-navigazione/navbar-test/)
+
 ## Introduzione
 
 Il megamenu è una variazione del componente [dropdown]({{ site.baseurl }}/docs/componenti/dropdown/) per la navbar `<nav>` del sito, che permette di esplorare elenchi di link e informazioni correlate.
@@ -43,186 +45,188 @@ Permette di includere **immagine e testo descrittivo** per una introduzione ai c
         <svg role="img" class="icon"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use></svg>
       </span>
   </button>
-  <div class="navbar-collapsable" id="navbar-A" tabindex="-1">
-    <div class="overlay fade"></div>
-    <div class="close-div">
-      <button type="button" aria-label="Chiudi il menu" class="btn close-menu">
-        <span><svg role="img" class="icon"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-close-big"></use></svg></span>
-      </button>
-    </div>
-    <div class="menu-wrapper justify-content-lg-between">
-      <ul class="navbar-nav">
-        <!-- megamenu 1 -->
-        <li class="nav-item dropdown megamenu">
-          <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3 active" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-completo-A1" data-focus-mouse="false">
-              <span>Megamenu 1 (attivo)</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
-          </button>
-          <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-completo-A1">
-            <div class="megamenu pb-5 pt-3 py-lg-0">
-              <div class="row">
-                <div class="col-xs-12 col-lg-4 px-0">
-                  <div class="row">
-                    <div class="col-12 it-vertical it-description pb-lg-3">
-                      <div class="description-content ps-4 ps-sm-5 ms-3">
-                        <div class="ratio ratio-21x9 lightgrey-bg-a1 mb-4 rounded">
-                          <figure class="figure">
-                            <img src="https://placehold.co/560x240/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Segnaposto">
-                          </figure>
+  <div class="navbar-collapsable" id="navbar-A" tabindex="-1" aria-label="Spazio per menu di navigazione">
+    <!-- <div class="overlay fade"></div> -->
+    <div class="navbar-dialog" role="document" aria-label="Menu di navigazione">
+      <div class="close-div">
+        <button type="button" aria-label="Chiudi il menu" class="btn close-menu">
+          <span><svg role="img" class="icon"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-close-big"></use></svg></span>
+        </button>
+      </div>
+      <div class="menu-wrapper justify-content-lg-between">
+        <ul class="navbar-nav">
+          <!-- megamenu 1 -->
+          <li class="nav-item dropdown megamenu">
+            <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3 active" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-completo-A1" data-focus-mouse="false">
+                <span>Megamenu 1 (attivo)</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
+            </button>
+            <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-completo-A1">
+              <div class="megamenu pb-5 pt-3 py-lg-0">
+                <div class="row">
+                  <div class="col-xs-12 col-lg-4 px-0">
+                    <div class="row">
+                      <div class="col-12 it-vertical it-description pb-lg-3">
+                        <div class="description-content ps-4 ps-sm-5 ms-3">
+                          <div class="ratio ratio-21x9 lightgrey-bg-a1 mb-4 rounded">
+                            <figure class="figure">
+                              <img src="https://placehold.co/560x240/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Segnaposto">
+                            </figure>
+                          </div>
+                          <p>
+                            Testo utile a fornire una descrizione dei contenuti della sezione <strong>megamenu 1</strong>.
+                          </p>
                         </div>
-                        <p>
-                          Testo utile a fornire una descrizione dei contenuti della sezione <strong>megamenu 1</strong>.
-                        </p>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="col-12 col-lg-8">
-                  <div class="it-heading-link-wrapper">
-                    <a class="it-heading-link" href="#"><svg role="img" class="icon icon-sm me-2 mb-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
-                    <span>Esplora la sezione megamenu 1</span>
-                    </a>
-                  </div>
-                  <div class="row">
-                    <div class="col-12 col-lg-6">
-                      <div class="link-list-wrapper">
-                        <ul class="link-list">
-                          <li>
-                            <a class="list-item dropdown-item" href="#">
-                              <svg role="img" class="icon icon-sm me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
-                              <span>Link lista 1</span>
-                            </a>
-                          </li>
-                          <li>
-                            <a class="list-item dropdown-item" href="#">
-                              <svg role="img" class="icon icon-sm me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
-                              <span>Link lista 2</span>
-                            </a>
-                          </li>
-                          <li>
-                            <a class="list-item dropdown-item " href="#">
-                              <svg role="img" class="icon icon-sm me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
-                              <span>Link lista 3</span>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
+                  <div class="col-12 col-lg-8">
+                    <div class="it-heading-link-wrapper">
+                      <a class="it-heading-link" href="#"><svg role="img" class="icon icon-sm me-2 mb-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                      <span>Esplora la sezione megamenu 1</span>
+                      </a>
                     </div>
-                    <div class="col-12 col-lg-6">
-                      <div class="link-list-wrapper">
-                        <ul class="link-list">
-                          <li>
-                            <a class="list-item dropdown-item" href="#">
-                              <svg role="img" class="icon icon-sm me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
-                              <span>Link lista 4</span>
-                            </a>
-                          </li>
-                          <li>
-                            <a class="list-item dropdown-item" href="#">
-                              <svg role="img" class="icon icon-sm me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
-                              <span>Link lista 5</span>
-                            </a>
-                          </li>
-                          <li>
-                            <a class="list-item dropdown-item " href="#">
-                              <svg role="img" class="icon icon-sm me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
-                              <span>Link lista 6</span>
-                            </a>
-                          </li>
-                        </ul>
+                    <div class="row">
+                      <div class="col-12 col-lg-6">
+                        <div class="link-list-wrapper">
+                          <ul class="link-list">
+                            <li>
+                              <a class="list-item dropdown-item" href="#">
+                                <svg role="img" class="icon icon-sm me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                                <span>Link lista 1</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a class="list-item dropdown-item" href="#">
+                                <svg role="img" class="icon icon-sm me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                                <span>Link lista 2</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a class="list-item dropdown-item " href="#">
+                                <svg role="img" class="icon icon-sm me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                                <span>Link lista 3</span>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="col-12 col-lg-6">
+                        <div class="link-list-wrapper">
+                          <ul class="link-list">
+                            <li>
+                              <a class="list-item dropdown-item" href="#">
+                                <svg role="img" class="icon icon-sm me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                                <span>Link lista 4</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a class="list-item dropdown-item" href="#">
+                                <svg role="img" class="icon icon-sm me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                                <span>Link lista 5</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a class="list-item dropdown-item " href="#">
+                                <svg role="img" class="icon icon-sm me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                                <span>Link lista 6</span>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </li>
-        <!-- megamenu 2 -->
-        <li class="nav-item dropdown megamenu">
-          <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-completo-A2" data-focus-mouse="false">
-              <span>Megamenu 2</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
-          </button>
-          <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-completo-A2">
-            <div class="megamenu pb-5 pt-3 py-lg-0">
-              <div class="row">
-                <div class="col-xs-12 col-lg-4 px-0">
-                  <div class="row">
-                    <div class="col-12 it-vertical it-description pb-lg-3">
-                      <div class="description-content ps-4 ps-sm-5 ms-3">
-                        <div class="ratio ratio-21x9 lightgrey-bg-a1 mb-4 rounded">
-                          <figure class="figure">
-                            <img src="https://placehold.co/560x240/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Segnaposto">
-                          </figure>
+          </li>
+          <!-- megamenu 2 -->
+          <li class="nav-item dropdown megamenu">
+            <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-completo-A2" data-focus-mouse="false">
+                <span>Megamenu 2</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
+            </button>
+            <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-completo-A2">
+              <div class="megamenu pb-5 pt-3 py-lg-0">
+                <div class="row">
+                  <div class="col-xs-12 col-lg-4 px-0">
+                    <div class="row">
+                      <div class="col-12 it-vertical it-description pb-lg-3">
+                        <div class="description-content ps-4 ps-sm-5 ms-3">
+                          <div class="ratio ratio-21x9 lightgrey-bg-a1 mb-4 rounded">
+                            <figure class="figure">
+                              <img src="https://placehold.co/560x240/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Segnaposto">
+                            </figure>
+                          </div>
+                          <p>
+                            Testo utile a fornire una descrizione dei contenuti della sezione <strong>megamenu 2</strong>.
+                          </p>
                         </div>
-                        <p>
-                          Testo utile a fornire una descrizione dei contenuti della sezione <strong>megamenu 2</strong>.
-                        </p>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="col-12 col-lg-8">
-                  <div class="it-heading-link-wrapper">
-                    <a class="it-heading-link" href="#"><svg role="img" class="icon icon-sm me-2 mb-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
-                    <span>Esplora la sezione megamenu 2</span>
-                    </a>
-                  </div>
-                  <div class="row">
-                    <div class="col-12 col-lg-6">
-                      <div class="link-list-wrapper">
-                        <ul class="link-list">
-                          <li>
-                            <a class="list-item dropdown-item" href="#">
-                              <svg role="img" class="icon icon-sm me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
-                              <span>Link lista 7</span>
-                            </a>
-                          </li>
-                          <li>
-                            <a class="list-item dropdown-item" href="#">
-                              <svg role="img" class="icon icon-sm me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
-                              <span>Link lista 8</span>
-                            </a>
-                          </li>
-                          <li>
-                            <a class="list-item dropdown-item " href="#">
-                              <svg role="img" class="icon icon-sm me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
-                              <span>Link lista 9</span>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
+                  <div class="col-12 col-lg-8">
+                    <div class="it-heading-link-wrapper">
+                      <a class="it-heading-link" href="#"><svg role="img" class="icon icon-sm me-2 mb-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                      <span>Esplora la sezione megamenu 2</span>
+                      </a>
                     </div>
-                    <div class="col-12 col-lg-6">
-                      <div class="link-list-wrapper">
-                        <ul class="link-list">
-                          <li>
-                            <a class="list-item dropdown-item" href="#">
-                              <svg role="img" class="icon icon-sm me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
-                              <span>Link lista 10</span>
-                            </a>
-                          </li>
-                          <li>
-                            <a class="list-item dropdown-item" href="#">
-                              <svg role="img" class="icon icon-sm me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
-                              <span>Link lista 11</span>
-                            </a>
-                          </li>
-                          <li>
-                            <a class="list-item dropdown-item " href="#">
-                              <svg role="img" class="icon icon-sm me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
-                              <span>Link lista 12</span>
-                            </a>
-                          </li>
-                        </ul>
+                    <div class="row">
+                      <div class="col-12 col-lg-6">
+                        <div class="link-list-wrapper">
+                          <ul class="link-list">
+                            <li>
+                              <a class="list-item dropdown-item" href="#">
+                                <svg role="img" class="icon icon-sm me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                                <span>Link lista 7</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a class="list-item dropdown-item" href="#">
+                                <svg role="img" class="icon icon-sm me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                                <span>Link lista 8</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a class="list-item dropdown-item " href="#">
+                                <svg role="img" class="icon icon-sm me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                                <span>Link lista 9</span>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="col-12 col-lg-6">
+                        <div class="link-list-wrapper">
+                          <ul class="link-list">
+                            <li>
+                              <a class="list-item dropdown-item" href="#">
+                                <svg role="img" class="icon icon-sm me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                                <span>Link lista 10</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a class="list-item dropdown-item" href="#">
+                                <svg role="img" class="icon icon-sm me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                                <span>Link lista 11</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a class="list-item dropdown-item " href="#">
+                                <svg role="img" class="icon icon-sm me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                                <span>Link lista 12</span>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </li>
-      </ul>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </nav>
