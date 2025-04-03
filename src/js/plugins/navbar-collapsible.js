@@ -95,12 +95,12 @@ class NavBarCollapsible extends BaseComponent {
 
   // Public
   toggle(relatedTarget) {
-    console.log("toggle")
+    console.log('toggle')
     this._isShown ? this.hide() : this.show(relatedTarget)
   }
 
   show(relatedTarget) {
-    console.log("show")
+    console.log('show')
     if (this._isShown || this._isTransitioning) {
       return
     }
@@ -127,7 +127,7 @@ class NavBarCollapsible extends BaseComponent {
   }
 
   hide() {
-    console.log("hide")
+    console.log('hide')
     if (!this._isShown || this._isTransitioning) {
       return
     }
@@ -153,7 +153,7 @@ class NavBarCollapsible extends BaseComponent {
   }
 
   dispose() {
-    console.log("dispose")
+    console.log('dispose')
     if (typeof window !== 'undefined' && typeof document !== 'undefined') {
       EventHandler.off(window, EVENT_RESIZE)
       EventHandler.off(document, EVENT_KEYDOWN)
@@ -165,7 +165,7 @@ class NavBarCollapsible extends BaseComponent {
   }
 
   _initializeBackDrop() {
-    console.log("initializeBackDrop")
+    console.log('initializeBackDrop')
     return new Backdrop({
       isVisible: Boolean(this._config.backdrop), // 'static' option will be translated to true, and booleans will keep their value,
       isAnimated: this._isAnimated(),
@@ -179,7 +179,7 @@ class NavBarCollapsible extends BaseComponent {
   }
 
   _initializeFocusTrap() {
-    console.log("initializeFocusTrap")
+    console.log('initializeFocusTrap')
     return new FocusTrap({
       trapElement: this._element,
       initialFocus: () => this._btnClose || this._element.querySelector('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'),
@@ -188,7 +188,7 @@ class NavBarCollapsible extends BaseComponent {
 
   // Private
   _bindEvents() {
-    console.log("bindEvents")
+    console.log('bindEvents')
     if (typeof window !== 'undefined' && typeof document !== 'undefined') {
       EventHandler.on(window, EVENT_RESIZE, () => this._onResize())
       EventHandler.on(document, EVENT_KEYDOWN, (evt) => {
@@ -230,7 +230,7 @@ class NavBarCollapsible extends BaseComponent {
   }
 
   _showElement() {
-    console.log("showElement")
+    console.log('showElement')
     this._element.style.display = 'block'
     this._element.setAttribute('aria-modal', true)
     this._element.setAttribute('role', 'dialog')
@@ -249,7 +249,7 @@ class NavBarCollapsible extends BaseComponent {
   }
 
   _hideElement() {
-    console.log("hideElement")
+    console.log('hideElement')
     this._element.style.display = 'none'
     this._element.removeAttribute('aria-modal')
     this._element.removeAttribute('role')
