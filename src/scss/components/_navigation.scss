@@ -66,14 +66,14 @@
     bottom: 0;
     z-index: #{$zindex-modal}; // 100
     display: none; // XXX
-    width: 100%; //-occupa sempre tutta lo spazio orizzontale disponibile
+    width: calc(100% - 48px); //-occupa sempre tutta lo spazio orizzontale disponibile XXX meno 48px backdrop...
 
     .menu-wrapper {
       background: $navigation-bg-color;
       position: absolute;
       top: 0;
       bottom: 0;
-      right: $navigation-h-padding * 2;
+      right: 0; // $navigation-h-padding * 2;
       left: 0;
       pointer-events: all;
       overflow-y: auto;
