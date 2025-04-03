@@ -17,8 +17,8 @@ Lorem ipsum.
         <svg role="img" class="icon"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use></svg>
       </span>
   </button>
-  <div class="navbar-collapsable" id="navbar-A" tabindex="-1" aria-label="Spazio per menu di navigazione">
-    <!-- <div class="overlay fade"></div> -->
+  <div class="navbar-collapsable" id="navbar-A" tabindex="-1" aria-labelledby="navbar-A-menu-name">
+    <h2 class="visually-hidden" id="navbar-A-menu-name">Test h menu</h2>
     <div class="navbar-dialog" role="document" aria-label="Menu di navigazione">
       <div class="close-div">
         <button type="button" aria-label="Chiudi il menu" class="btn close-menu">
