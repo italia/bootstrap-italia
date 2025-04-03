@@ -163,7 +163,7 @@ article.it-card {
   --#{$prefix}it-card-cap-color: null;
   --#{$prefix}it-card-border-top-width: 8px;
   --#{$prefix}it-card-border-top-default-bg: #{$white};
-  --#{$prefix}it-card-border-top-primary: #{$primary}; // XXXXXX Better...
+  --#{$prefix}it-card-border-top-primary: #{$primary}; 
   --#{$prefix}it-card-border-top-secondary: #{$secondary};
   --#{$prefix}it-card-border-top-success: #{$success};
   --#{$prefix}it-card-border-top-warning: #{$warning};
@@ -205,7 +205,7 @@ article.it-card {
     color: var(--#{$prefix}it-card-link-color);
 
     &:hover {
-      color: color-hover($color-text-secondary); // XXXXXX HACK, hover helpers works only with sass variables?
+      color: color-hover($color-text-secondary); 
     }
 
     + .it-card-link {
@@ -234,7 +234,6 @@ article.it-card {
       }
 
       .it-card-profile-role {
-        // XXX var
         font-weight: 600;
         font-size: 1rem;
         line-height: 1.5rem;
@@ -258,7 +257,6 @@ article.it-card {
       }
 
       .it-card-place-image {
-        // XXX
         max-width: 80px;
         max-height: 80px;
         margin-left: 1rem;
@@ -269,13 +267,12 @@ article.it-card {
           justify-content: center;
           align-items: center;
 
-          background-color: $color-background-primary-lighter; // XXXXXX
+          background-color: $color-background-primary-lighter; 
         }
       }
 
       .it-card-place-type,
       .it-card-place-address {
-        // XXX var
         font-size: 1rem;
         line-height: 1.5rem;
       }
@@ -346,7 +343,7 @@ article.it-card {
 
     // Card author
     .it-card-signature {
-      font-family: $font-family-monospace; // XXXXXX
+      font-family: $font-family-monospace; 
       color: var(--#{$prefix}it-card-color);
       font-size: var(--#{$prefix}it-card-signature-size);
     }
@@ -466,7 +463,6 @@ article.it-card {
     border-top: var(--#{$prefix}it-card-border-width) solid var(--#{$prefix}it-card-border-color);
     border-bottom: var(--#{$prefix}it-card-border-width) solid var(--#{$prefix}it-card-border-color);
 
-    // color: var(--#{$prefix}it-card-p-color);
     color: $color-text-muted; //XXX < muted?
 
     padding-top: calc(2 * var(--#{$prefix}it-card-spacer-y));
@@ -485,7 +481,7 @@ article.it-card {
     dt {
       display: inline;
       font-weight: bold;
-      margin-right: 0.125rem; // XXX
+      margin-right: 0.125rem; 
     }
 
     dd {
