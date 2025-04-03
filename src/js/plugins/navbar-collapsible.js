@@ -33,7 +33,7 @@ const EVENT_SHOW = `show${EVENT_KEY}`
 const EVENT_SHOWN = `shown${EVENT_KEY}`
 const EVENT_RESIZE = `resize${EVENT_KEY}`
 
-const CLASS_NAME_FADE = 'fade'
+// const CLASS_NAME_FADE = 'fade'
 const CLASS_NAME_OPEN = 'navbar-open'
 const CLASS_NAME_SHOW = 'show'
 const CLASS_NAME_EXPANDED = 'expanded'
@@ -73,8 +73,6 @@ class NavBarCollapsible extends BaseComponent {
       [SELECTOR_NAVLINK, SELECTOR_MEGAMENUNAVLINK, SELECTOR_HEADINGLINK, SELECTOR_FOOTERLINK, SELECTOR_BTN_MENU_CLOSE].join(','),
       this._element
     )
-
-
 
     this._bindEvents()
   }
@@ -235,7 +233,7 @@ class NavBarCollapsible extends BaseComponent {
   _showElement() {
     // const isAnimated = this._isAnimated()
     // this._element.style.display = 'block'
-    this._element.style.visibility = "visible"
+    this._element.style.visibility = 'visible'
     // this._element.setAttribute('aria-label', 'Menu di navigazione'); // XXX
     this._element.setAttribute('aria-modal', true)
     this._element.setAttribute('role', 'dialog')

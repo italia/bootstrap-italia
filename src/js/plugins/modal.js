@@ -115,7 +115,7 @@ class Modal extends BaseComponent {
 
     this._scrollBar.hide()
 
-    document.body.classList.add(CLASS_NAME_OPEN) 
+    document.body.classList.add(CLASS_NAME_OPEN)
 
     this._adjustDialog()
 
