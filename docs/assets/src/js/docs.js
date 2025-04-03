@@ -76,7 +76,7 @@
     })
   })
 
-  // anchors.options = { // XXX This add complexity for SR (navbar mobile) 
+  // anchors.options = { // XXX This add complexity for SR (navbar mobile)
   //   icon: '#',
   // }
   // anchors.add('.bd-content > h2, .bd-content > h3, .bd-content > h4, .bd-content > h5')

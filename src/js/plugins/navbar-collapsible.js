@@ -32,7 +32,7 @@ const EVENT_SHOW = `show${EVENT_KEY}`
 const EVENT_SHOWN = `shown${EVENT_KEY}`
 const EVENT_RESIZE = `resize${EVENT_KEY}`
 
-const CLASS_NAME_FADE = 'fade'
+// const CLASS_NAME_FADE = 'fade'
 const CLASS_NAME_SHOW = 'show'
 const CLASS_NAME_EXPANDED = 'expanded'
 
@@ -102,7 +102,7 @@ class NavBarCollapsible extends BaseComponent {
       this._btnBack.classList.add(CLASS_NAME_SHOW)
     }
 
-    document.body.classList.add('navbar-open');
+    document.body.classList.add('navbar-open')
     disablePageScroll()
 
     // this._showElement()
@@ -136,7 +136,7 @@ class NavBarCollapsible extends BaseComponent {
 
     this._focustrap.deactivate()
 
-    document.body.classList.remove('navbar-open');
+    document.body.classList.remove('navbar-open')
     this._element.classList.remove(CLASS_NAME_EXPANDED)
 
     // enablePageScroll()
@@ -170,7 +170,7 @@ class NavBarCollapsible extends BaseComponent {
       isVisible: true,
       isAnimated: this._isAnimated(),
       rootElement: 'body', // Important: attaches to body
-      clickCallback: () => this.hide()
+      clickCallback: () => this.hide(),
     })
   }
 
@@ -235,7 +235,6 @@ class NavBarCollapsible extends BaseComponent {
     // this._element.setAttribute('aria-label', 'Menu di navigazione'); // XXX
     this._element.setAttribute('aria-modal', true)
     this._element.setAttribute('role', 'dialog')
-
 
     // if (this._overlay) {
     //   this._overlay.style.display = 'block'
