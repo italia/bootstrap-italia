@@ -102,7 +102,7 @@ class NavBarCollapsible extends BaseComponent {
       this._btnBack.classList.add(CLASS_NAME_SHOW)
     }
 
-    document.body.classList.add('navbar-open')
+    // document.body.classList.add('navbar-open')
     disablePageScroll()
 
     // this._showElement()
@@ -136,7 +136,7 @@ class NavBarCollapsible extends BaseComponent {
 
     this._focustrap.deactivate()
 
-    document.body.classList.remove('navbar-open')
+    // document.body.classList.remove('navbar-open')
     this._element.classList.remove(CLASS_NAME_EXPANDED)
 
     // enablePageScroll()

@@ -43,21 +43,6 @@
     display: none;
   }
 
-  // navbar mobile
-  body.navbar-open {
-    overflow: hidden;
-    padding-right: 0 !important;
-  }
-
-  /* This may help with screen readers */
-  body.navbar-open *:not(.navbar-collapsable):not(.navbar-backdrop):not(.navbar-collapsable *) {
-    visibility: hidden !important;
-  }
-
-  body.navbar-open .navbar-collapsable {
-    visibility: visible !important;
-  }
-
   .navbar-collapsable {
     position: fixed;
     top: 0;
