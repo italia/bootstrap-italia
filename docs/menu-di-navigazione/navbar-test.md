@@ -24,8 +24,8 @@ Da notare che la navbar mobile può apparire anche a risoluzioni desktop ingrand
         <svg role="img" class="icon"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use></svg>
       </span>
   </button>
-  <div class="navbar-collapsable" id="navbar-A" tabindex="-1">
-    <div class="navbar-dialog" role="document">
+  <div class="navbar-collapsable" id="navbar-A" tabindex="-1"> <!-- <<< do we need aria-label here? like what? menu? we don't have a title... we set it via JS? | can we set tabindex="-1" if not present? -->
+    <!-- <div class="navbar-dialog" role="document"> --> <!-- <<< do we still need this? was an old NVDA bug? -->
       <div class="close-div">
         <button type="button" aria-label="Chiudi il menu" class="btn close-menu">
           <span><svg role="img" class="icon"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-close-big"></use></svg></span>
@@ -120,7 +120,7 @@ Da notare che la navbar mobile può apparire anche a risoluzioni desktop ingrand
           </li>
           </ul>
       </div>
-    </div>
+    <!-- </div> -->
   </div>
 </nav>
 {% endcapture %}{% include example.html content=example %}
