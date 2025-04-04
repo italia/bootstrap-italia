@@ -134,3 +134,15 @@ Lorem ipsum secondo titoletto.
 E poi questo è il contesto. 
 
 E un link: [Modale](/docs/componenti/modale/)
+
+
+{% capture callout %}
+La navbar quando aperta in versione mobile è stata ora reimplementata come un vero e proprio dialog modale per migliorare l'accessibilità con i lettori di schermo. Se hai personalizzato la navbar, in particolare quella mobile, nel tuo progetto, potresti dover aggiornare il tuo codice. 
+
+**Modifiche principali:**
+- Struttura: la navbar ora utilizza un pattern dialog con backdrop 
+- Gerarchia visiva: la gestione `z-index` è allineata al componente Modale
+- Gestione del focus: implementato `focus-trap.js` per utenti da tastiera e lettori di schermo
+
+Se hai personalizzato il CSS della navbar, rivedi le tue modifiche per verificarne la compatibilità. Se hai modificato il comportamento JavaScript, assicurati che funzioni con il nuovo pattern dialog. Testa la tua implementazione con lettori di schermo per verificare i miglioramenti di accessibilità
+{% endcapture %}{% include callout-breaking.html content=callout version="2.15.0" type="danger" %}
