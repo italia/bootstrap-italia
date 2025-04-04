@@ -45,8 +45,7 @@ Permette di includere **immagine e testo descrittivo** per una introduzione ai c
         <svg role="img" class="icon"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use></svg>
       </span>
   </button>
-  <div class="navbar-collapsable" id="navbar-A" tabindex="-1" aria-label="Spazio per menu di navigazione">
-    <div class="navbar-dialog" role="document" aria-label="Menu di navigazione">
+  <div class="navbar-collapsable" id="navbar-A" tabindex="-1">
       <div class="close-div">
         <button type="button" aria-label="Chiudi il menu" class="btn close-menu">
           <span><svg role="img" class="icon"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-close-big"></use></svg></span>
@@ -225,7 +224,6 @@ Permette di includere **immagine e testo descrittivo** per una introduzione ai c
             </div>
           </li>
         </ul>
-      </div>
     </div>
   </div>
 </nav>
