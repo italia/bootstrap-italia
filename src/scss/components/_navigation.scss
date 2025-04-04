@@ -27,7 +27,7 @@
   @include overlay-backdrop(var(--#{$prefix}backdrop-zindex), var(--#{$prefix}backdrop-bg), var(--#{$prefix}backdrop-opacity));
 
   @media (min-width: #{map-get($grid-breakpoints, lg)}) {
-    display: none; // to handle resize from md to lg when open 
+    display: none; // to handle resize from md to lg when open
   }
 }
 
