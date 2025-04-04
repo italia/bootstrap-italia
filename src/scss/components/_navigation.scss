@@ -52,16 +52,16 @@
     right: 0;
     left: 0;
     bottom: 0;
-    z-index: #{$zindex-modal}; // xxx what happen if I open a menu on a modal opened? let's test it
+    z-index: #{$zindex-modal};
     display: none;
-    width: calc(100% - 48px); //-occupa sempre tutta lo spazio orizzontale disponibile XXX meno 48px backdrop... < compabilità? let's test it
+    width: calc(100% - 48px); // occupa sempre tutta lo spazio orizzontale disponibile (BSI v2.15:) meno 48px a destra per il close e backdrop
 
     .menu-wrapper {
       background: $navigation-bg-color;
       position: absolute;
       top: 0;
       bottom: 0;
-      right: 0; // $navigation-h-padding * 2;
+      right: 0; // $navigation-h-padding * 2; < removed in BSI v2.15
       left: 0;
       pointer-events: all;
       overflow-y: auto;
