@@ -89,12 +89,12 @@ class NavBarCollapsible extends BaseComponent {
       this._element
     )
 
-    this._toggleButton = document.querySelector(
-      `[data-bs-toggle="navbarcollapsible"][data-bs-target="#${this._element.id}"], [data-bs-toggle="navbarcollapsible"][href="#${this._element.id}"]`
-    )
-    if (this._toggleButton) {
-      this._toggleButton.setAttribute('aria-expanded', this._isShown ? 'true' : 'false')
-    }
+    // this._toggleButton = document.querySelector(
+    //   `[data-bs-toggle="navbarcollapsible"][data-bs-target="#${this._element.id}"], [data-bs-toggle="navbarcollapsible"][href="#${this._element.id}"]`
+    // )
+    // if (this._toggleButton) {
+    //   this._toggleButton.setAttribute('aria-expanded', this._isShown ? 'true' : 'false')
+    // }
 
     this._bindEvents()
   }
@@ -143,9 +143,9 @@ class NavBarCollapsible extends BaseComponent {
     this._backdrop.show()
     this._showElement()
 
-    if (this._toggleButton) {
-      this._toggleButton.setAttribute('aria-expanded', 'true')
-    }
+    // if (this._toggleButton) {
+    //   this._toggleButton.setAttribute('aria-expanded', 'true')
+    // }
   }
 
   hide() {
@@ -174,9 +174,9 @@ class NavBarCollapsible extends BaseComponent {
 
     this._queueCallback(() => this._hideElement(), this._menuWrapper, this._isAnimated())
 
-    if (this._toggleButton) {
-      this._toggleButton.setAttribute('aria-expanded', 'false')
-    }
+    // if (this._toggleButton) {
+    //   this._toggleButton.setAttribute('aria-expanded', 'false')
+    // }
   }
 
   dispose() {
