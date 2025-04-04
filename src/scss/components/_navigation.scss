@@ -65,8 +65,8 @@
       left: 0;
       pointer-events: all;
       overflow-y: auto;
-      // transform: translateX(-100%); /// XXX WORKING ON TESTING
-      // transition: all 0.2s cubic-bezier(0.29, 0.85, 0.5, 0.99);
+      transform: translateX(-100%);
+      transition: all 0.2s cubic-bezier(0.29, 0.85, 0.5, 0.99);
       z-index: 5;
 
       .navbar-nav {
