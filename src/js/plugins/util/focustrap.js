@@ -9,6 +9,13 @@
  * --------------------------------------------------------------------------
  */
 
+/**
+ * FocusTrap Util (BREAKING CHANGES in Bootstrap Italia v2.15)
+ *
+ * - New initialFocus config default: the inside element (optional) to set the focus after trapped
+ *
+ */
+
 import EventHandler from '../dom/event-handler'
 import SelectorEngine from '../dom/selector-engine'
 import Config from './config'
@@ -30,7 +37,7 @@ const TAB_NAV_BACKWARD = 'backward'
 const Default = {
   autofocus: true,
   trapElement: null, // The element to trap focus inside of
-  initialFocus: null, // The element (if passed) to initialize the focus after trapped
+  initialFocus: null, // The inside element (optional) to set the focus after trapped
 }
 
 const DefaultType = {

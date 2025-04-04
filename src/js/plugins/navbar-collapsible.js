@@ -7,7 +7,7 @@
  */
 
 /**
- * NavBarCollapsible Component (BREAKING CHANGES in v2.15)
+ * NavBarCollapsible Component (BREAKING CHANGES in Bootstrap Italia v2.15)
  *
  * This component has been reimplemented to follow proper modal/dialog patterns for improved
  * accessibility with screen readers. Key changes:
