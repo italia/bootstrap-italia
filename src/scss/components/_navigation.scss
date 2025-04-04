@@ -54,7 +54,7 @@
     bottom: 0;
     z-index: #{$zindex-modal}; // 100
     display: none; // XXX
-    width: calc(100% - 48px); //-occupa sempre tutta lo spazio orizzontale disponibile XXX meno 48px backdrop...
+    width: calc(100% - 48px); //-occupa sempre tutta lo spazio orizzontale disponibile XXX meno 48px backdrop... < compabilità? let's test it
 
     .menu-wrapper {
       background: $navigation-bg-color;
