@@ -52,8 +52,8 @@
     right: 0;
     left: 0;
     bottom: 0;
-    z-index: #{$zindex-modal}; // 100
-    display: none; // XXX
+    z-index: #{$zindex-modal}; // xxx what happen if I open a menu on a modal opened? let's test it
+    display: none;
     width: calc(100% - 48px); //-occupa sempre tutta lo spazio orizzontale disponibile XXX meno 48px backdrop... < compabilità? let's test it
 
     .menu-wrapper {
