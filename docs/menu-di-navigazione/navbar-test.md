@@ -3,10 +3,17 @@ layout: docs
 title: Navbar test sandbox 
 description: Sandbox per testare l'implementazione su screen reader della navbar mobile 
 group: menu-di-navigazione
-toc: true
+toc: false
 ---
 
-Lorem ipsum.
+## Sto sperimentando diversi fix & feat markup HTML/JS/SCSS.   
+[Approfondisci nella issue GitHub #1438](https://github.com/italia/bootstrap-italia/issues/1438#issuecomment-2774795746)
+
+Tutte le soluzioni implementate in questa PR sono in lavorazione. 
+
+Da notare che la navbar mobile può apparire anche a risoluzioni desktop ingrandite. Per questo i test anche con screen reader e device desktop.
+
+### Testa l'implementazione che segue a risoluzione mobile (appare il Burger) nella barra blu
 
 {% comment %}Example name: Completo{% endcomment %}
 {% capture example %}
@@ -17,9 +24,8 @@ Lorem ipsum.
         <svg role="img" class="icon"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use></svg>
       </span>
   </button>
-  <div class="navbar-collapsable" id="navbar-A" tabindex="-1" aria-labelledby="navbar-A-menu-name">
-    <h2 class="visually-hidden" id="navbar-A-menu-name">Test h menu</h2>
-    <div class="navbar-dialog" role="document" aria-label="Menu di navigazione">
+  <div class="navbar-collapsable" id="navbar-A" tabindex="-1">
+    <div class="navbar-dialog" role="document">
       <div class="close-div">
         <button type="button" aria-label="Chiudi il menu" class="btn close-menu">
           <span><svg role="img" class="icon"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-close-big"></use></svg></span>

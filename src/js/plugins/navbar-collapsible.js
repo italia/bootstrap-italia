@@ -14,7 +14,6 @@ import { isScreenMobile } from './util/device'
 import ScrollBarHelper from './util/scrollbar'
 import FocusTrap from './util/focustrap'
 import Backdrop from './util/backdrop'
-import { enableDismissTrigger } from './util/component-functions'
 
 const NAME = 'navbarcollapsible'
 const DATA_KEY = 'bs.navbarcollapsible'
@@ -46,14 +45,12 @@ const SELECTOR_FOOTERLINK = '.it-footer-link'
 
 const Default = {
   backdrop: true,
-  // focus: true,
-  // keyboard: true,
+  focus: true,
 }
 
 const DefaultType = {
   backdrop: '(boolean|string)',
-  // focus: 'boolean',
-  // keyboard: 'boolean',
+  focus: 'boolean',
 }
 
 class NavBarCollapsible extends BaseComponent {
@@ -62,7 +59,9 @@ class NavBarCollapsible extends BaseComponent {
 
     this._isShown = this._element.classList.contains(CLASS_NAME_EXPANDED)
     this._backdrop = this._initializeBackDrop()
+
     this._focustrap = this._initializeFocusTrap()
+
     this._isTransitioning = false
     this._scrollBar = new ScrollBarHelper()
 
@@ -95,12 +94,10 @@ class NavBarCollapsible extends BaseComponent {
 
   // Public
   toggle(relatedTarget) {
-    console.log('toggle')
     this._isShown ? this.hide() : this.show(relatedTarget)
   }
 
   show(relatedTarget) {
-    console.log('show')
     if (this._isShown || this._isTransitioning) {
       return
     }
@@ -123,11 +120,11 @@ class NavBarCollapsible extends BaseComponent {
 
     document.body.classList.add(CLASS_NAME_OPEN)
 
-    this._backdrop.show(() => this._showElement())
+    this._backdrop.show()
+    this._showElement()
   }
 
   hide() {
-    console.log('hide')
     if (!this._isShown || this._isTransitioning) {
       return
     }
@@ -149,11 +146,12 @@ class NavBarCollapsible extends BaseComponent {
 
     this._element.classList.remove(CLASS_NAME_EXPANDED)
 
+    this._backdrop.hide()
+
     this._queueCallback(() => this._hideElement(), this._menuWrapper, this._isAnimated())
   }
 
   dispose() {
-    console.log('dispose')
     if (typeof window !== 'undefined' && typeof document !== 'undefined') {
       EventHandler.off(window, EVENT_RESIZE)
       EventHandler.off(document, EVENT_KEYDOWN)
@@ -165,21 +163,17 @@ class NavBarCollapsible extends BaseComponent {
   }
 
   _initializeBackDrop() {
-    console.log('initializeBackDrop')
     return new Backdrop({
       isVisible: Boolean(this._config.backdrop), // 'static' option will be translated to true, and booleans will keep their value,
       isAnimated: this._isAnimated(),
       className: 'navbar-backdrop',
-      // rootElement: 'body', // Important: attaches to body
       clickCallback: () => {
-        console.log('Backdrop clicked!')
         this.hide()
       },
     })
   }
 
   _initializeFocusTrap() {
-    console.log('initializeFocusTrap')
     return new FocusTrap({
       trapElement: this._element,
       initialFocus: () => this._btnClose || this._element.querySelector('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'),
@@ -188,7 +182,6 @@ class NavBarCollapsible extends BaseComponent {
 
   // Private
   _bindEvents() {
-    console.log('bindEvents')
     if (typeof window !== 'undefined' && typeof document !== 'undefined') {
       EventHandler.on(window, EVENT_RESIZE, () => this._onResize())
       EventHandler.on(document, EVENT_KEYDOWN, (evt) => {
@@ -230,8 +223,10 @@ class NavBarCollapsible extends BaseComponent {
   }
 
   _showElement() {
-    console.log('showElement')
     this._element.style.display = 'block'
+    if (!this._element.getAttribute('aria-label') && !this._element.getAttribute('aria-labelledby')) { // XXX
+      this._element.setAttribute('aria-label', "Menu")
+    }
     this._element.setAttribute('aria-modal', true)
     this._element.setAttribute('role', 'dialog')
 
@@ -240,7 +235,9 @@ class NavBarCollapsible extends BaseComponent {
     this._element.classList.add(CLASS_NAME_EXPANDED)
 
     const transitionComplete = () => {
-      this._focustrap.activate()
+      if (this._config.focus) {
+        this._focustrap.activate()
+      }
       this._isTransitioning = false
       EventHandler.trigger(this._element, EVENT_SHOWN)
     }
@@ -249,17 +246,16 @@ class NavBarCollapsible extends BaseComponent {
   }
 
   _hideElement() {
-    console.log('hideElement')
     this._element.style.display = 'none'
     this._element.removeAttribute('aria-modal')
     this._element.removeAttribute('role')
 
-    this._backdrop.hide(() => {
-      this._isTransitioning = false
-      document.body.classList.remove(CLASS_NAME_OPEN) // XXX
-      this._scrollBar.reset()
-      EventHandler.trigger(this._element, EVENT_HIDDEN)
-    })
+    document.body.classList.remove(CLASS_NAME_OPEN)
+
+    this._scrollBar.reset()
+    this._isTransitioning = false
+
+    EventHandler.trigger(this._element, EVENT_HIDDEN)
   }
 }
 
@@ -294,8 +290,6 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
 
     data.toggle(this)
   })
-
-  enableDismissTrigger(NavBarCollapsible)
 }
 
 export default NavBarCollapsible

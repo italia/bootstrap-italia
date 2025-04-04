@@ -16,9 +16,7 @@
   padding: 8px 0;
 }
 
-// Navbar mobile backdrop
-// New custom navbar backdrop, inspired by "modal" approach for SR mobile
-// Modal background
+// Navbar mobile backdrop, inspired by "modal" approach
 .navbar-backdrop {
   // scss-docs-start modal-backdrop-css-vars
   --#{$prefix}backdrop-zindex: #{$zindex-modal-backdrop};
@@ -27,23 +25,13 @@
   // scss-docs-end modal-backdrop-css-vars
 
   @include overlay-backdrop(var(--#{$prefix}backdrop-zindex), var(--#{$prefix}backdrop-bg), var(--#{$prefix}backdrop-opacity));
+
+  @media (min-width: #{map-get($grid-breakpoints, lg)}) {
+    display: none; // to handle resize from md to lg when open 
+  }
 }
 
 // navbar mobile
-// body.navbar-open {
-//   overflow: hidden;
-//   padding-right: 0 !important;
-// }
-
-/* This may help with screen readers on Firefox */
-// body.navbar-open *:not(.navbar-collapsable):not(.navbar-backdrop):not(.navbar-collapsable *) {
-//   visibility: hidden !important;
-// }
-
-// body.navbar-open .navbar-collapsable {
-//   visibility: visible !important;
-// }
-
 .navbar {
   background: $navbar-bg-color;
 
@@ -77,8 +65,8 @@
       left: 0;
       pointer-events: all;
       overflow-y: auto;
-      transform: translateX(-100%);
-      transition: all 0.2s cubic-bezier(0.29, 0.85, 0.5, 0.99);
+      // transform: translateX(-100%); /// XXX WORKING ON TESTING
+      // transition: all 0.2s cubic-bezier(0.29, 0.85, 0.5, 0.99);
       z-index: 5;
 
       .navbar-nav {
@@ -378,10 +366,9 @@
       right: auto;
       left: auto;
       bottom: auto;
-      z-index: auto;
+      z-index: 1; // auto; xxx auto doesn't handle resize from md to lg when open
       background: none;
       display: block !important;
-      // visibility: visible !important;
       transition: none;
 
       .overlay {
