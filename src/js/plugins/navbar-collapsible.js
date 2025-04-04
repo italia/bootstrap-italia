@@ -89,7 +89,8 @@ class NavBarCollapsible extends BaseComponent {
       this._element
     )
 
-    this._toggleButton = SelectorEngine.findOne(`${SELECTOR_DATA_TOGGLE}[data-bs-target="#${this._element.id}"]`) ||
+    this._toggleButton =
+      SelectorEngine.findOne(`${SELECTOR_DATA_TOGGLE}[data-bs-target="#${this._element.id}"]`) ||
       SelectorEngine.findOne(`${SELECTOR_DATA_TOGGLE}[href="#${this._element.id}"]`)
 
     if (this._toggleButton) {
@@ -237,7 +238,7 @@ class NavBarCollapsible extends BaseComponent {
   _onResize() {
     this._isMobile = isScreenMobile()
 
-    // TO DO do we need to check if pass from mobile to desktop when open? es. to set aria-expanded on toggle button etc. 
+    // TO DO do we need to check if pass from mobile to desktop when open? es. to set aria-expanded on toggle button etc.
   }
 
   _onMenuItemKeyDown(evt) {
