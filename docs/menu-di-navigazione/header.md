@@ -560,7 +560,6 @@ Per modificare il tema dell'Header Nav è sufficiente aggiungere una o tutte e d
             <svg class="icon bg-override"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use></svg>
           </button>
           <div class="navbar-collapsable" id="nav0" tabindex="-1">
-            <div class="overlay fade"></div>
             <div class="close-div">
               <button class="btn close-menu" type="button">
                 <span class="visually-hidden">Nascondi la navigazione</span>
@@ -699,7 +698,6 @@ Per modificare il tema dell'Header Nav è sufficiente aggiungere una o tutte e d
             <svg class="icon bg-override"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use></svg>
           </button>
           <div class="navbar-collapsable" id="nav2" tabindex="-1">
-            <div class="overlay fade"></div>
             <div class="close-div">
               <button class="btn close-menu" type="button">
                 <span class="visually-hidden">Nascondi la navigazione</span>
@@ -840,7 +838,6 @@ Per modificare il tema dell'Header Nav è sufficiente aggiungere una o tutte e d
             </svg>
           </button>
           <div class="navbar-collapsable" id="nav3" tabindex="-1">
-            <div class="overlay fade"></div>
             <div class="close-div">
               <button class="btn close-menu" type="button">
                 <span class="visually-hidden">Nascondi la navigazione</span>
@@ -1123,7 +1120,6 @@ Al menu di navigazione principale può essere aggiunto anche un menu di navigazi
                 </svg>
               </button>
               <div class="navbar-collapsable" id="navC1" tabindex="-1">
-                <div class="overlay fade"></div>
                 <div class="close-div">
                   <button class="btn close-menu" type="button">
                     <span class="visually-hidden">Nascondi la navigazione</span>
@@ -1370,7 +1366,6 @@ Verrà creata un'ombra per enfatizzare l'Header rispetto alla pagina in cui è c
                 <svg class="icon"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use></svg>
               </button>
               <div class="navbar-collapsable" id="navC2" tabindex="-1">
-                <div class="overlay fade"></div>
                 <div class="close-div">
                   <button class="btn close-menu" type="button">
                     <span class="visually-hidden">Nascondi la navigazione</span>

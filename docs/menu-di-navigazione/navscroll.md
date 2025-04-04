@@ -47,7 +47,6 @@ In questo esempio, la linea che limita la barra di navigazione è posizionata a 
   <button class="custom-navbar-toggler" type="button" aria-controls="navbarNav" aria-label="Apri/Chiudi indice" data-bs-toggle="navbarcollapsible" data-bs-target="#navbarNav"><span class="it-list"></span>1. Introduzione
   </button>
   <div class="navbar-collapsable" id="navbarNav" tabindex="-1">
-    <div class="overlay fade"></div>
     <div class="close-div visually-hidden">
       <button class="btn close-menu" type="button">
         <span class="it-close"></span>Chiudi
@@ -114,7 +113,6 @@ In questo esempio, la linea che limita la barra di navigazione è posizionata a 
   <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavB" aria-label="Apri/Chiudi indice" data-bs-toggle="navbarcollapsible" data-bs-target="#navbarNavB"><span class="it-list"></span>1. Introduzione
   </button>
   <div class="navbar-collapsable" id="navbarNavB" tabindex="-1">
-    <div class="overlay fade"></div>
     <div class="close-div visually-hidden">
       <button class="btn close-menu" type="button">
         <span class="it-close"></span>Chiudi
@@ -188,7 +186,6 @@ La Navscroll può mostrare una barra di avanzamento dello scorrimento del conten
     <div class="progress-bar it-navscroll-progressbar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
   </div>
   <div class="navbar-collapsable" id="navbarNavProgress" tabindex="-1">
-    <div class="overlay fade"></div>
     <button type="button" class="it-back-button btn w-100 text-start">
       <svg class="icon icon-sm icon-primary align-top"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left" xlink:href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left"></use></svg>
       <span>Indietro</span>

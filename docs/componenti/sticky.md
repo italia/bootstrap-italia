@@ -159,7 +159,6 @@ In tal caso è necessario utilizzare l'attributo `data-bs-target`.
                 <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-burger"></use></svg>
               </button>
               <div class="navbar-collapsable" id="navC1" tabindex="-1">
-                <div class="overlay fade"></div>
                 <div class="close-div">
                   <button class="btn close-menu" type="button">
                     <span class="visually-hidden">Nascondi la navigazione</span>

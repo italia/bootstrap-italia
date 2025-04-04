@@ -46,7 +46,6 @@ Permette di includere **immagine e testo descrittivo** per una introduzione ai c
       </span>
   </button>
   <div class="navbar-collapsable" id="navbar-A" tabindex="-1" aria-label="Spazio per menu di navigazione">
-    <!-- <div class="overlay fade"></div> -->
     <div class="navbar-dialog" role="document" aria-label="Menu di navigazione">
       <div class="close-div">
         <button type="button" aria-label="Chiudi il menu" class="btn close-menu">
@@ -245,7 +244,6 @@ Il megamenu prende il tema colori dark su desktop se è dentro un `<nav>` che ha
       </span>
   </button>
   <div class="navbar-collapsable" id="navbar-B" tabindex="-1">
-    <div class="overlay fade"></div>
     <div class="close-div">
       <button type="button" aria-label="Chiudi il menu" class="btn close-menu">
         <span><svg role="img" class="icon"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-close-big"></use></svg></span>
@@ -355,7 +353,6 @@ Il megamenu prende il tema colori dark su mobile se è dentro un `<nav>` che ha 
       </span>
   </button>
   <div class="navbar-collapsable" id="navbar-C" tabindex="-1">
-    <div class="overlay fade"></div>
     <div class="close-div">
       <button type="button" aria-label="Chiudi il menu" class="btn close-menu">
         <span><svg role="img" class="icon"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-close-big"></use></svg></span>
@@ -579,7 +576,6 @@ Come nella variante completa è possibile aggiungere un link "Esplora la sezione
       </span>
   </button>
   <div class="navbar-collapsable" id="navbar-E" tabindex="-1">
-    <div class="overlay fade"></div>
     <div class="close-div">
       <button type="button" aria-label="Chiudi il menu" class="btn close-menu">
         <span><svg role="img" class="icon"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-close-big"></use></svg></span>
@@ -698,7 +694,6 @@ Nel caso le voci da mostrare fossero numerose, è possibile aggiungere un link "
       </span>
   </button>
   <div class="navbar-collapsable" id="navbar-F" tabindex="-1">
-    <div class="overlay fade"></div>
     <div class="close-div">
       <button type="button" aria-label="Chiudi il menu" class="btn close-menu">
         <span><svg role="img" class="icon"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-close-big"></use></svg></span>
@@ -837,7 +832,6 @@ Questi seguono le liste di link, posizionati in basso o in una colonna destra, a
       </span>
   </button>
   <div class="navbar-collapsable" id="navbar-G" tabindex="-1">
-    <div class="overlay fade"></div>
     <div class="close-div">
       <button type="button" aria-label="Chiudi il menu" class="btn close-menu">
         <span><svg role="img" class="icon"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-close-big"></use></svg></span>
@@ -961,7 +955,6 @@ Questi seguono le liste di link, posizionati in basso o in una colonna destra, a
       </span>
   </button>
   <div class="navbar-collapsable" id="navbar-H" tabindex="-1">
-    <div class="overlay fade"></div>
     <div class="close-div">
       <button type="button" aria-label="Chiudi il menu" class="btn close-menu">
         <span><svg role="img" class="icon"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-close-big"></use></svg></span>
