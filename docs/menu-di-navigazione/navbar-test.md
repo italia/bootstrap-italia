@@ -121,6 +121,7 @@ Da notare che la navbar mobile può apparire anche a risoluzioni desktop ingrand
       </div>
   </div>
 </nav>
+{% endcapture %}{% include example.html content=example %}
 
 ## Altro titoletto sotto
 
