@@ -264,7 +264,6 @@ Per cambiare il tema è sufficiente aggiungere le seguenti classi al tag `<nav c
   <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavC" aria-label="Toggle navigation" data-bs-toggle="navbarcollapsible" data-bs-target="#navbarNavC"><span class="it-list"></span>1. Introduzione
   </button>
   <div class="navbar-collapsable" id="navbarNavC" tabindex="-1">
-    <div class="overlay fade"></div>
     <div class="close-div visually-hidden">
       <button class="btn close-menu" type="button">
       <span class="it-close"></span>Chiudi
