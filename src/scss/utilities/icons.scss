@@ -1,3 +1,4 @@
+// Icon Colors Map - TODO: Leave it here or move to _maps.scss?
 $icon-colors: (
   primary: var(--#{$prefix}icon-primary),
   secondary: var(--#{$prefix}icon-secondary),
@@ -56,5 +57,30 @@ $icon-colors: (
 @each $icon-color, $icon-color-value in $icon-colors {
   .icon-#{$icon-color} {
     fill: $icon-color-value;
+  }
+}
+
+// Rounded icon
+// This is a utility class for icons that are used in a rounded background.
+// It is used in the buttons.
+//
+.rounded-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--#{$prefix}icon-size-s);
+  height: var(--#{$prefix}icon-size-s);
+  background-color: var(--#{$prefix}icon-inverse);
+  border-radius: var(--#{$prefix}radius-circle);
+
+  // TODO: remove this when we have a proper icon color map 
+  @each $color, $value in $icon-colors {
+    &.rounded-#{$color} {
+      background-color: $value;
+    }
+  }
+
+  .icon {
+    margin-right: 0;
   }
 }
