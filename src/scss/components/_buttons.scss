@@ -41,7 +41,7 @@
   &.disabled {
     opacity: var(--#{$prefix}btn-disabled-opacity);
     cursor: not-allowed;
-    // pointer-events: none;
+    pointer-events: none;
   }
 
   &:focus-visible {
