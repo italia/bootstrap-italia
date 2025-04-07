@@ -1,13 +1,13 @@
 //
 // Base styles
-//
 
 .btn {
-  --#{$prefix}btn-spacing-inset-x: var(--#{$prefix}spacing-m);
-  --#{$prefix}btn-spacing-inset-y: var(--#{$prefix}spacing-xs);
+  --#{$prefix}btn-padding-x: var(--#{$prefix}spacing-s);
+  --#{$prefix}btn-padding-y: var(--#{$prefix}spacing-xs);
   --#{$prefix}btn-font-family: var(--#{$prefix}font-sans);
   --#{$prefix}btn-font-weight: var(--#{$prefix}font-weight-solid);
-  --#{$prefix}btn-line-height: var(--#{$prefix}line-height-base);
+  --#{$prefix}btn-font-size: var(--#{$prefix}label-font-size);
+  --#{$prefix}btn-line-height: var(--#{$prefix}font-line-height-3);
   --#{$prefix}btn-text-color: var(--#{$prefix}color-text-primary);
   --#{$prefix}btn-background: transparent; // default to transparent
   --#{$prefix}btn-border-size: 0; // default to 0
@@ -19,14 +19,14 @@
   --#{$prefix}btn-focus-box-shadow: 0 0 0 #{$btn-focus-width} rgba(var(--#{$prefix}btn-focus-shadow-rgb), 0.5);
 
   display: inline-block;
-  padding: var(--#{$prefix}btn-spacing-inset-y) var(--#{$prefix}btn-spacing-inset-x);
+  padding: var(--#{$prefix}btn-padding-y) var(--#{$prefix}btn-padding-x);
   border: var(--#{$prefix}btn-border-width) solid var(--#{$prefix}btn-border-color);
   border-radius: var(--#{$prefix}btn-border-radius);
   background: var(--#{$prefix}btn-background);
   box-shadow: var(--#{$prefix}btn-box-shadow, none);
   color: var(--#{$prefix}btn-text-color);
   font-family: var(--#{$prefix}btn-font-family);
-  font-size: var(--#{$prefix}button-font-size);
+  font-size: var(--#{$prefix}btn-font-size);
   font-weight: var(--#{$prefix}btn-font-weight);
   line-height: var(--#{$prefix}btn-line-height);
   text-align: center;
@@ -41,7 +41,7 @@
   &.disabled {
     opacity: var(--#{$prefix}btn-disabled-opacity);
     cursor: not-allowed;
-    pointer-events: none;
+    // pointer-events: none;
   }
 
   &:focus-visible {
@@ -116,101 +116,57 @@
   }
 }
 
-//
 // Button Sizes
+//
 
 .btn-me {
   margin-right: $v-gap * 1.5 !important;
 }
 
-.btn-xs,
-.btn-sm,
-.btn-lg {
-  border-radius: $btn-border-radius;
-}
-
 .btn-xs {
-  padding: 12px 16px;
-  font-size: $btn-font-size-xs;
-  line-height: $input-btn-line-height-xs;
-}
-
-.btn-sm {
-  padding: 12px 24px;
-  font-size: $btn-font-size-sm;
-  line-height: $input-btn-line-height-sm;
-  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-border-radius-sm);
+  --#{$prefix}btn-padding-x: var(--#{$prefix}spacing-xs);
+  --#{$prefix}btn-padding-y: var(--#{$prefix}spacing-xs);
+  --#{$prefix}btn-font-size: var(--#{$prefix}label-font-size-s);
+  --#{$prefix}btn-line-height: var(--#{$prefix}font-line-height-1);
 }
 
 .btn-lg {
-  padding: 16px 24px;
-  font-size: $btn-font-size-lg;
-  line-height: $input-btn-line-height-lg;
-  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-border-radius-lg);
+  --#{$prefix}btn-padding-x: var(--#{$prefix}spacing-m);
+  --#{$prefix}btn-padding-y: var(--#{$prefix}spacing-s);
+  --#{$prefix}btn-font-size: var(--#{$prefix}label-font-size-m);
+  --#{$prefix}btn-line-height: var(--#{$prefix}font-line-height-5);
 }
 
 .btn-progress {
   position: relative;
 }
 
+// Button with icon
+//
+
 .btn-icon {
   display: inline-flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-
-  .rounded-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 1.5em;
-    height: 1.5em;
-    background-color: $white;
-    @include border-radius(12px);
-
-    @each $color, $value in $theme-colors {
-      &.rounded-#{$color} {
-        background-color: $value;
-      }
-    }
-
-    .icon {
-      margin-right: 0;
-    }
-
-    & + * {
-      margin-left: 0.5em;
-    }
-  }
-
-  .icon {
-    width: 1.2em;
-    height: 1.2em;
-    border: none;
-
-    & + * {
-      margin-left: 0.25em;
-    }
-  }
+  gap: var(--#{$prefix}icon-spacing);
 }
 
 .btn-full {
   align-self: stretch;
   width: inherit;
-  margin-top: -$header-slim-button-v-padding;
-  margin-right: -$header-slim-button-v-padding;
-  margin-bottom: -$header-slim-button-v-padding;
-  padding-right: 8px;
-  padding-left: 8px;
+  // margin-top: -$header-slim-button-v-padding;
+  // margin-right: -$header-slim-button-v-padding;
+  // margin-bottom: -$header-slim-button-v-padding;
+  // padding-right: 8px;
+  // padding-left: 8px;
   border: none;
   box-shadow: none;
-  line-height: 1.5;
-  @include border-radius(0);
 
   // Tablet vertical
-  @include media-breakpoint-up(sm) {
-    padding: 16px;
-  }
+  // @include media-breakpoint-up(sm) {
+  //   padding: 16px;
+  // }
 
   // Desktop
   @include media-breakpoint-up(lg) {
@@ -220,10 +176,7 @@
     align-items: center;
     justify-content: center;
     margin: 0;
-    padding: 12px 24px !important;
-  }
-  &:hover {
-    text-decoration: none !important;
+    // padding: 12px 24px !important;
   }
 }
 
