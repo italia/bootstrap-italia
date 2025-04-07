@@ -35,7 +35,6 @@
   white-space: initial;
   width: auto; // prevent buttons from stretching full width
   transition: all var(--#{$prefix}transition-instant) ease-in-out;
-  cursor: if($enable-button-pointers, pointer, null);
   user-select: none;
 
   &:disabled,
@@ -90,11 +89,10 @@
   }
 }
 
-//
 // Link buttons
+// Make a button look and behave like a link
 //
 
-// Make a button look and behave like a link
 .btn-link {
   --#{$prefix}btn-background: transparent;
   --#{$prefix}btn-border-color: transparent;
@@ -103,9 +101,6 @@
   --#{$prefix}btn-focus-shadow-rgb: #{to-rgb(mix(color-contrast($primary), $primary, 15%))};
 
   text-decoration: $link-decoration;
-  @if $enable-gradients {
-    background-image: none;
-  }
 
   &:hover,
   &:focus-visible {
@@ -123,7 +118,6 @@
 
 //
 // Button Sizes
-//
 
 .btn-me {
   margin-right: $v-gap * 1.5 !important;
@@ -201,9 +195,7 @@
 }
 
 .btn-full {
-  // allow height 100%
   align-self: stretch;
-  // height: 100%;
   width: inherit;
   margin-top: -$header-slim-button-v-padding;
   margin-right: -$header-slim-button-v-padding;
@@ -212,7 +204,7 @@
   padding-left: 8px;
   border: none;
   box-shadow: none;
-  line-height: 1.555;
+  line-height: 1.5;
   @include border-radius(0);
 
   // Tablet vertical
@@ -240,7 +232,8 @@
   cursor: not-allowed;
 }
 
-.btn-primary {
+.btn-primary,
+a.btn-primary {
   --#{$prefix}btn-text-color: var(--#{$prefix}color-text-inverse);
   --#{$prefix}btn-background: var(--#{$prefix}color-background-primary);
 
@@ -259,7 +252,8 @@
   }
 }
 
-.btn-secondary {
+.btn-secondary,
+a.btn-secondary {
   --#{$prefix}btn-text-color: var(--#{$prefix}color-text-inverse);
   --#{$prefix}btn-background: var(--#{$prefix}color-background-secondary);
 
@@ -282,7 +276,8 @@
   }
 }
 
-.btn-success {
+.btn-success,
+a.btn-success {
   --#{$prefix}btn-text-color: var(--#{$prefix}color-text-inverse);
   --#{$prefix}btn-background: var(--#{$prefix}color-background-success);
 
@@ -295,7 +290,8 @@
   }
 }
 
-.btn-warning {
+.btn-warning,
+a.btn-warning {
   --#{$prefix}btn-text-color: var(--#{$prefix}color-text-inverse);
   --#{$prefix}btn-background: var(--#{$prefix}color-background-warning);
 
@@ -308,7 +304,8 @@
   }
 }
 
-.btn-danger {
+.btn-danger,
+a.btn-danger {
   --#{$prefix}btn-text-color: var(--#{$prefix}color-text-inverse);
   --#{$prefix}btn-background: var(--#{$prefix}color-background-danger);
 
@@ -328,7 +325,8 @@
   --#{$prefix}btn-box-shadow: inset 0 0 0 var(--#{$prefix}btn-outline-border-size) var(--#{$prefix}btn-outline-border-color);
 }
 
-.btn-outline {
+.btn-outline,
+a.btn-outline {
   // Outline Primary
   &-primary {
     --#{$prefix}btn-outline-border-color: var(--#{$prefix}color-border-primary);
@@ -409,14 +407,16 @@
     --#{$prefix}btn-text-color: var(--#{$prefix}color-text-inverse);
     text-decoration: underline;
   }
-  .btn-outline-primary {
+  .btn-outline-primary,
+  a.btn-outline-primary {
     box-shadow: inset 0 0 0 2px $white;
     @include button-outline-variant($white, color-hover($white), transparent, color-hover($white));
     &:hover {
       box-shadow: inset 0 0 0 2px color-hover($white);
     }
   }
-  .btn-outline-secondary {
+  .btn-outline-secondary,
+  a.btn-outline-secondary {
     @include button-outline-variant($white, color-hover($white), transparent, color-hover($white));
   }
 }
