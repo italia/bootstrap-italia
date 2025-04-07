@@ -54,10 +54,12 @@ $negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) 
 $gutters: $spacers !default;
 
 // Colors Palette
+// TODO: Use css variables instead of Sass maps
 $colors-palette: (
   'primary': $color-primary,
   'secondary': $color-secondary,
   'success': $color-success,
   'warning': $color-warning,
   'danger': $color-danger,
+  'inverse': $color-inverse
 ) !default;
