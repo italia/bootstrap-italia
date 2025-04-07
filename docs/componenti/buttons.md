@@ -46,7 +46,7 @@ Per ottenere pulsanti di dimensione più grande o più piccola, è sufficiente u
 
 {% comment %}Example name: Button grande{% endcomment %}
 {% capture example %}
-<button type="button" class="btn btn-primary btn-lg btn-me">Etichetta pulsante</button>
+<button type="button" class="btn btn-primary btn-lg me-2">Etichetta pulsante</button>
 <button type="button" class="btn btn-secondary btn-lg">Etichetta pulsante</button>
 {% endcapture %}{% include example.html content=example %}
 
@@ -54,7 +54,7 @@ Per ottenere pulsanti di dimensione più grande o più piccola, è sufficiente u
 
 {% comment %}Example name: Button base{% endcomment %}
 {% capture example %}
-<button type="button" class="btn btn-primary btn-me">Etichetta pulsante</button>
+<button type="button" class="btn btn-primary me-2">Etichetta pulsante</button>
 <button type="button" class="btn btn-secondary">Etichetta pulsante</button>
 {% endcapture %}{% include example.html content=example %}
 
@@ -62,7 +62,7 @@ Per ottenere pulsanti di dimensione più grande o più piccola, è sufficiente u
 
 {% comment %}Example name: Button piccolo{% endcomment %}
 {% capture example %}
-<button type="button" class="btn btn-primary btn-xs btn-me">Etichetta pulsante</button>
+<button type="button" class="btn btn-primary btn-xs me-2">Etichetta pulsante</button>
 <button type="button" class="btn btn-secondary btn-xs">Etichetta pulsante</button>
 {% endcapture %}{% include example.html content=example %}
 
@@ -176,21 +176,21 @@ Per modificare la dimensione dell'icona, è possibile utilizzare le classi `.ico
 
 {% comment %}Example name: Con icona, cerchiata{% endcomment %}
 {% capture example %}
-<button class="btn btn-success btn-lg btn-icon btn-me">
+<button class="btn btn-success btn-lg btn-icon me-2">
   <span class="rounded-icon me-2">
     <svg class="icon icon-xs icon-success"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-user"></use></svg>
   </span>
   <span>Etichetta pulsante</span>
 </button>
 
-<button class="btn btn-primary btn-icon btn-me">
+<button class="btn btn-primary btn-icon me-2">
   <span class="rounded-icon me-2">
     <svg class="icon icon-xs icon-primary"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-user"></use></svg>
   </span>
   <span>Etichetta pulsante</span>
 </button>
 
-<button class="btn btn-danger btn-icon btn-me">
+<button class="btn btn-danger btn-icon me-2">
   <span class="rounded-icon me-2">
     <svg class="icon icon-xs icon-danger"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-user"></use></svg>
   </span>
@@ -234,3 +234,11 @@ const button = new Button(buttonEl);
     </tbody>
   </table>
 </div>
+
+## Breaking change
+{% capture callout %}
+- Modificato il nome delle varianti di dimensione per coincidere con UI Kit Italia
+- Sostituite negli esempi le classi `.btn-me` con `.me-2`. 
+- La class `.btn-sm` è stata rimossa dagli esempi, perché coincide con la versione base.
+- La dimensione delle icone non dipendono dalle dimensioni dei pulsanti.
+{% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}
