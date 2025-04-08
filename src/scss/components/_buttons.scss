@@ -47,23 +47,11 @@
   &:focus-visible {
     border-color: var(--#{$prefix}btn-hover-border-color);
     outline: 0;
-    // Avoid using mixin so we can pass custom focus shadow properly
-    @if $enable-shadows {
-      box-shadow: var(--#{$prefix}btn-box-shadow), var(--#{$prefix}btn-focus-box-shadow);
-    } @else {
-      box-shadow: var(--#{$prefix}btn-focus-box-shadow);
-    }
   }
 
   .btn-check:focus-visible + & {
     border-color: var(--#{$prefix}btn-hover-border-color);
     outline: 0;
-    // Avoid using mixin so we can pass custom focus shadow properly
-    @if $enable-shadows {
-      box-shadow: var(--#{$prefix}btn-box-shadow), var(--#{$prefix}btn-focus-box-shadow);
-    } @else {
-      box-shadow: var(--#{$prefix}btn-focus-box-shadow);
-    }
   }
 
   .btn-check:checked + &,
@@ -73,7 +61,6 @@
   &.show {
     border-color: var(--#{$prefix}btn-active-border-color);
     background-color: var(--#{$prefix}btn-active-bg);
-    // Remove CSS gradients if they're enabled
     background-image: if($enable-gradients, none, null);
     color: var(--#{$prefix}btn-active-color);
     @include box-shadow(var(--#{$prefix}btn-active-shadow));
@@ -100,7 +87,7 @@
   --#{$prefix}btn-disabled-border-color: transparent;
   --#{$prefix}btn-focus-shadow-rgb: #{to-rgb(mix(color-contrast($primary), $primary, 15%))};
 
-  text-decoration: $link-decoration;
+  text-decoration: underline;
 
   &:hover,
   &:focus-visible {
@@ -112,16 +99,12 @@
   }
 
   &:hover {
-    color: var(--#{$prefix}btn-hover-color);
+    color: var(--#{$prefix}color-link-hover);
   }
 }
 
 // Button Sizes
 //
-
-.btn-me {
-  margin-right: $v-gap * 1.5 !important;
-}
 
 .btn-xs {
   --#{$prefix}btn-padding-x: var(--#{$prefix}spacing-xs);
