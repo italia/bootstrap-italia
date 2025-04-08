@@ -1,9 +1,9 @@
 // Variables
-// The sass variables for the buttons component
+// Used for Sass functions
 //
+
 $btn-close-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$btn-close-color}'><path d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/></svg>") !default;
 $btn-close-white-filter: invert(1) grayscale(100%) brightness(200%) !default;
-
 
 // Component properties
 // The CSS properties for the buttons component
@@ -117,16 +117,11 @@ $btn-close-white-filter: invert(1) grayscale(100%) brightness(200%) !default;
   gap: var(--#{$prefix}icon-spacing);
 }
 
-// Button full
+// Button full TODO: Is this needed?
 // 
 .btn-full {
   align-self: stretch;
   width: inherit;
-  // margin-top: -$header-slim-button-v-padding;
-  // margin-right: -$header-slim-button-v-padding;
-  // margin-bottom: -$header-slim-button-v-padding;
-  // padding-right: 8px;
-  // padding-left: 8px;
   border: none;
   box-shadow: none;
   @include media-breakpoint-up(lg) {
@@ -314,6 +309,9 @@ a.btn-outline {
   }
 }
 
+// Button in a dark background
+//
+
 .bg-dark {
   .btn-link {
     --#{$prefix}btn-text-color: var(--#{$prefix}color-text-inverse);
@@ -327,10 +325,10 @@ a.btn-outline {
   }
 }
 
-// Transparent background and border properties included for button version.
-// iOS requires the button element instead of an anchor tag.
-// If you want the anchor version, it requires `href="#"`.
-// See https://developer.mozilla.org/en-US/docs/Web/Events/click#Safari_Mobile
+// Button close
+// The close button is used to close modals, alerts, and other components.
+// It is a small button with an "X" icon.
+// The close button is a special case of the button component.
 
 .btn-close {
   position: relative;
