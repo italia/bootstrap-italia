@@ -1,5 +1,13 @@
+// Variables
+// The sass variables for the buttons component
 //
-// Base styles
+$btn-close-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$btn-close-color}'><path d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/></svg>") !default;
+$btn-close-white-filter: invert(1) grayscale(100%) brightness(200%) !default;
+
+
+// Component properties
+// The CSS properties for the buttons component
+//
 
 .btn {
   --#{$prefix}btn-padding-x: var(--#{$prefix}spacing-s);
@@ -16,7 +24,15 @@
   --#{$prefix}btn-outline-border-size: 2px;
   --#{$prefix}btn-outline-border-color: transparent;
   --#{$prefix}btn-disabled-opacity: 0.5;
-  --#{$prefix}btn-focus-box-shadow: 0 0 0 #{$btn-focus-width} rgba(var(--#{$prefix}btn-focus-shadow-rgb), 0.5);
+}
+
+// Button
+// The base button class
+// This class is used for all buttons in the application.
+// It is used to set the default styles for all buttons.
+//
+
+.btn {
 
   display: inline-block;
   padding: var(--#{$prefix}btn-padding-y) var(--#{$prefix}btn-padding-x);
@@ -53,27 +69,6 @@
     border-color: var(--#{$prefix}btn-hover-border-color);
     outline: 0;
   }
-
-  .btn-check:checked + &,
-  :not(.btn-check) + &:active,
-  &:first-child:active,
-  &.active,
-  &.show {
-    border-color: var(--#{$prefix}btn-active-border-color);
-    background-color: var(--#{$prefix}btn-active-bg);
-    background-image: if($enable-gradients, none, null);
-    color: var(--#{$prefix}btn-active-color);
-    @include box-shadow(var(--#{$prefix}btn-active-shadow));
-
-    &:focus-visible {
-      // Avoid using mixin so we can pass custom focus shadow properly
-      @if $enable-shadows {
-        box-shadow: var(--#{$prefix}btn-active-shadow), var(--#{$prefix}btn-focus-box-shadow);
-      } @else {
-        box-shadow: var(--#{$prefix}btn-focus-box-shadow);
-      }
-    }
-  }
 }
 
 // Link buttons
@@ -83,20 +78,7 @@
 .btn-link {
   --#{$prefix}btn-background: transparent;
   --#{$prefix}btn-border-color: transparent;
-  --#{$prefix}btn-disabled-color: #{$btn-link-disabled-color};
-  --#{$prefix}btn-disabled-border-color: transparent;
-  --#{$prefix}btn-focus-shadow-rgb: #{to-rgb(mix(color-contrast($primary), $primary, 15%))};
-
   text-decoration: underline;
-
-  &:hover,
-  &:focus-visible {
-    text-decoration: underline;
-  }
-
-  &:focus-visible {
-    color: var(--#{$prefix}btn-text-color);
-  }
 
   &:hover {
     color: var(--#{$prefix}color-link-hover);
@@ -135,6 +117,8 @@
   gap: var(--#{$prefix}icon-spacing);
 }
 
+// Button full
+// 
 .btn-full {
   align-self: stretch;
   width: inherit;
@@ -145,13 +129,6 @@
   // padding-left: 8px;
   border: none;
   box-shadow: none;
-
-  // Tablet vertical
-  // @include media-breakpoint-up(sm) {
-  //   padding: 16px;
-  // }
-
-  // Desktop
   @include media-breakpoint-up(lg) {
     display: flex;
     flex: 1;
@@ -159,7 +136,6 @@
     align-items: center;
     justify-content: center;
     margin: 0;
-    // padding: 12px 24px !important;
   }
 }
 
@@ -341,19 +317,13 @@ a.btn-outline {
 .bg-dark {
   .btn-link {
     --#{$prefix}btn-text-color: var(--#{$prefix}color-text-inverse);
-    text-decoration: underline;
   }
   .btn-outline-primary,
-  a.btn-outline-primary {
-    box-shadow: inset 0 0 0 2px $white;
-    @include button-outline-variant($white, color-hover($white), transparent, color-hover($white));
-    &:hover {
-      box-shadow: inset 0 0 0 2px color-hover($white);
-    }
-  }
+  a.btn-outline-primary,
   .btn-outline-secondary,
   a.btn-outline-secondary {
-    @include button-outline-variant($white, color-hover($white), transparent, color-hover($white));
+    --#{$prefix}btn-outline-border-color: var(--#{$prefix}color-border-inverse);
+    --#{$prefix}btn-text-color: var(--#{$prefix}color-text-inverse);
   }
 }
 
@@ -365,15 +335,14 @@ a.btn-outline {
 .btn-close {
   position: relative;
   box-sizing: content-box;
-  width: $btn-close-width;
-  height: $btn-close-height;
-  padding: $btn-close-padding-y $btn-close-padding-x;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
   border: 0; // for button elements
-  opacity: $btn-close-opacity;
-  background: transparent escape-svg($btn-close-bg) center / $btn-close-width auto no-repeat; // include transparent for button elements
+  opacity: 0.5;
   background-color: transparent;
   color: var(--#{$prefix}color-text-base);
-  @include border-radius();
+
   .icon {
     position: absolute;
     top: 50%;
@@ -383,20 +352,17 @@ a.btn-outline {
 
   // Override <a>'s hover style
   &:hover {
-    opacity: $btn-close-hover-opacity;
-    color: $btn-close-color;
+    opacity: 1;
     text-decoration: none;
   }
 
   &:focus {
-    outline: 0;
-    opacity: $btn-close-focus-opacity;
-    box-shadow: $btn-close-focus-shadow;
+    opacity: 1;
   }
 
   &:disabled,
   &.disabled {
-    opacity: $btn-close-disabled-opacity;
+    opacity: var(--#{$prefix}btn-disabled-opacity);
     pointer-events: none;
     user-select: none;
   }

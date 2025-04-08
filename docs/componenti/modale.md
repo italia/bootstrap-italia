@@ -99,7 +99,7 @@ Per chiudere la modale, si può utilizzare un pulsante con classe `.btn-close`.
 {% comment %}Example name: Pulsante di chiusura, dettaglio{% endcomment %}
 {% capture example %}
 <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Chiudi finestra modale">
-  <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
+  <svg class="icon icon-lg"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
 </button>
 {% endcapture %}{% include example.html content=example %}
 
@@ -114,7 +114,7 @@ Esempio completo:
             <div class="modal-header">
                <h2 class="modal-title no_toc" id="modal2Title">Questo è un messaggio di notifica</h2>
                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Chiudi finestra modale">
-                  <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
+                  <svg class="icon icon-lg"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
                </button>
             </div>
             <div class="modal-body">
@@ -170,7 +170,7 @@ Di seguito una modale con un elenco di radio button.
             <div class="modal-header">
                <h2 class="modal-title no_toc" id="modal4Title">Scegli una opzione</h2>
                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Chiudi finestra modale">
-                  <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
+                  <svg class="icon icon-lg"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
                </button>
             </div>
             <div class="modal-body">
@@ -345,7 +345,7 @@ Per meglio distinguere l'elemento _footer_ con un'ombra è sufficiente aggiunger
       <div class="modal-header">
         <h2 class="modal-title no_toc" id="exampleModalLongTitle">Titolo modale</h2>
         <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Chiudi finestra modale">
-          <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
+          <svg class="icon icon-lg"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
         </button>
       </div>
       <div class="modal-body">
@@ -450,7 +450,7 @@ Aggiungi `.modal-dialog-centered` a `.modal-dialog` per centrare verticalmente l
       <div class="modal-header">
         <h2 class="modal-title no_toc" id="modalCenterTitle">Questo è un messaggio di notifica</h2>
         <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Chiudi finestra modale">
-          <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
+          <svg class="icon icon-lg"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
         </button>
       </div>
       <div class="modal-body">
@@ -482,7 +482,7 @@ Aggiungi `.modal-dialog-left` a `.modal-dialog` per allineare a sinistra la moda
       <div class="modal-header">
         <h2 class="modal-title no_toc" id="modalLeftTitle">Questo è un messaggio di notifica</h2>
         <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Chiudi finestra modale">
-          <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
+          <svg class="icon icon-lg"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
         </button>
       </div>
       <div class="modal-body">
@@ -536,7 +536,7 @@ Aggiungi `.modal-dialog-right` a `.modal-dialog` per allineare a sinistra la mod
       <div class="modal-header">
         <h2 class="modal-title no_toc" id="modalrightTitle">Questo è un messaggio di notifica</h2>
         <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Chiudi finestra modale">
-          <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
+          <svg class="icon icon-lg"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
         </button>
       </div>
       <div class="modal-body">
@@ -594,7 +594,9 @@ Le modali hanno due dimensioni opzionali, disponibili tramite classi da posizion
     <div class="modal-content">
       <div class="modal-header">
         <h2 class="modal-title no_toc" id="mySmallModalLabel">Modale piccola</h2>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi finestra modale"></button>
+       <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Chiudi finestra modale">
+          <svg class="icon icon-lg"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
+        </button>
       </div>
       <div class="modal-body">...</div>
       <div class="modal-footer">...</div>
@@ -610,7 +612,9 @@ Le modali hanno due dimensioni opzionali, disponibili tramite classi da posizion
     <div class="modal-content">
       <div class="modal-header">
         <h2 class="modal-title no_toc" id="myLargeModalLabel">Modale grande</h2>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi finestra modale"></button>
+        <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Chiudi finestra modale">
+          <svg class="icon icon-lg"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
+        </button>
       </div>
       <div class="modal-body">...</div>
       <div class="modal-footer">...</div>
@@ -626,7 +630,9 @@ Le modali hanno due dimensioni opzionali, disponibili tramite classi da posizion
     <div class="modal-content">
       <div class="modal-header">
         <h2 class="modal-title no_toc" id="myExtraLargeModalLabel">Modale molto grande</h2>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi finestra modale"></button>
+        <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Chiudi finestra modale">
+          <svg class="icon icon-lg"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
+        </button>
       </div>
       <div class="modal-body">...</div>
       <div class="modal-footer">...</div>
