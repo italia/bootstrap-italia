@@ -36,7 +36,7 @@
   --#{$prefix}dropdown-link-hover-color: var(--#{$prefix}color-text-primary-hover);
   --#{$prefix}dropdown-link-active-color: var(--#{$prefix}color-text-primary-active);
   --#{$prefix}dropdown-item-padding-x: var(--#{$prefix}spacing-s);
-  --#{$prefix}dropdown-item-padding-y: 12px;
+  --#{$prefix}dropdown-item-padding-y: var(--#{$prefix}spacing-xs);
   --#{$prefix}dropdown-header-color: var(--#{$prefix}color-text-secondary);
   --#{$prefix}dropdown-header-font-size: var(--#{$prefix}label-font-size);
   --#{$prefix}dropdown-header-padding-x: var(--#{$prefix}spacing-s);
