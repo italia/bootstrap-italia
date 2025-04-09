@@ -258,7 +258,7 @@ Per cambiare il tema è sufficiente aggiungere le seguenti classi al tag `<nav c
 {% comment %}Example name: Variante scura{% endcomment %}
 {% capture example %}
 <nav class="navbar it-navscroll-wrapper navbar-expand-lg it-top-navscroll it-right-side theme-dark-mobile theme-dark-desk" data-bs-navscroll>
-  <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavC" aria-label="Toggle navigation" data-bs-toggle="navbarcollapsible" data-bs-target="#navbarNavC"><span class="it-list"></span>1. Introduzione
+  <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavC" aria-label="Apri/Chiudi indice" data-bs-toggle="navbarcollapsible" data-bs-target="#navbarNavC"><span class="it-list"></span>1. Introduzione
   </button>
   <div class="navbar-collapsable" id="navbarNavC" tabindex="-1">
     <div class="close-div visually-hidden">
