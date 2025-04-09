@@ -317,7 +317,7 @@ input::-webkit-datetime-edit {
       position: relative;
       display: flex;
       align-items: center;
-      padding-left: var(--#{$prefix}spacing-m);
+      padding-left: 26px; // not using variable because of the pseudo element
       font-size: var(--#{$prefix}label-font-size);
       font-weight: var(--#{$prefix}font-weight-solid);
       line-height: 1;
