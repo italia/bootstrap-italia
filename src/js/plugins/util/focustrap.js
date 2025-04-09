@@ -9,6 +9,13 @@
  * --------------------------------------------------------------------------
  */
 
+/**
+ * FocusTrap Util (BREAKING CHANGES in Bootstrap Italia v2.15)
+ *
+ * - New initialFocus config default: the inside element (optional) to set the focus after trapped
+ *
+ */
+
 import EventHandler from '../dom/event-handler'
 import SelectorEngine from '../dom/selector-engine'
 import Config from './config'
@@ -30,11 +37,13 @@ const TAB_NAV_BACKWARD = 'backward'
 const Default = {
   autofocus: true,
   trapElement: null, // The element to trap focus inside of
+  initialFocus: null, // The inside element (optional) to set the focus after trapped
 }
 
 const DefaultType = {
   autofocus: 'boolean',
   trapElement: 'element',
+  initialFocus: '(null|element|string|function)',
 }
 
 /**
@@ -47,6 +56,7 @@ class FocusTrap extends Config {
     this._config = this._getConfig(config)
     this._isActive = false
     this._lastTabNavDirection = null
+    this._affectedElements = []
   }
 
   // Getters
@@ -69,7 +79,7 @@ class FocusTrap extends Config {
     }
 
     if (this._config.autofocus) {
-      this._config.trapElement.focus()
+      this._setInitialFocus()
     }
 
     EventHandler.off(document, EVENT_KEY) // guard against infinite focus loop
@@ -83,12 +93,30 @@ class FocusTrap extends Config {
     if (!this._isActive) {
       return
     }
-
     this._isActive = false
+
     EventHandler.off(document, EVENT_KEY)
   }
 
   // Private
+  _setInitialFocus() {
+    if (this._config.initialFocus) {
+      let target
+      if (typeof this._config.initialFocus === 'function') {
+        target = this._config.initialFocus()
+      } else {
+        target = this._config.initialFocus
+      }
+      if (target && typeof target.focus === 'function') {
+        target.focus()
+      } else {
+        this._config.trapElement.focus()
+      }
+    } else {
+      this._config.trapElement.focus()
+    }
+  }
+
   _handleFocusin(event) {
     const { trapElement } = this._config
 
@@ -97,7 +125,6 @@ class FocusTrap extends Config {
     }
 
     const elements = SelectorEngine.focusableChildren(trapElement)
-
     if (elements.length === 0) {
       trapElement.focus()
     } else if (this._lastTabNavDirection === TAB_NAV_BACKWARD) {
