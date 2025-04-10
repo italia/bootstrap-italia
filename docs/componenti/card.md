@@ -265,7 +265,7 @@ Utili ad esempio per indicare schede personale. Si attivano con la classe `.it-c
 La lista di metadati del profilo è costruita utilizzando liste descrittive `.it-card-description-list` con ogni coppia di item`dd`-`dt` raccolta in un `div` contenitore. 
 
 {% capture callout %}
-#### Accessibilità
+#### Accessibilità titoli
 I titoli `.it-card-profile-name` in questi esempi sono `h4`. La gerarchia dei titoli deve adattarsi ovviamente al contesto in cui la card è inserita.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
