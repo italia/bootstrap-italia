@@ -163,7 +163,7 @@ article.it-card {
   --#{$prefix}it-card-cap-color: null;
   --#{$prefix}it-card-border-top-width: 8px;
   --#{$prefix}it-card-border-top-default-bg: #{$white};
-  --#{$prefix}it-card-border-top-primary: #{$primary}; 
+  --#{$prefix}it-card-border-top-primary: #{$primary};
   --#{$prefix}it-card-border-top-secondary: #{$secondary};
   --#{$prefix}it-card-border-top-success: #{$success};
   --#{$prefix}it-card-border-top-warning: #{$warning};
@@ -205,7 +205,7 @@ article.it-card {
     color: var(--#{$prefix}it-card-link-color);
 
     &:hover {
-      color: color-hover($color-text-secondary); 
+      color: color-hover($color-text-secondary);
     }
 
     + .it-card-link {
@@ -267,7 +267,7 @@ article.it-card {
           justify-content: center;
           align-items: center;
 
-          background-color: $color-background-primary-lighter; 
+          background-color: $color-background-primary-lighter;
         }
       }
 
@@ -343,7 +343,7 @@ article.it-card {
 
     // Card author
     .it-card-signature {
-      font-family: $font-family-monospace; 
+      font-family: $font-family-monospace;
       color: var(--#{$prefix}it-card-color);
       font-size: var(--#{$prefix}it-card-signature-size);
     }
@@ -481,7 +481,7 @@ article.it-card {
     dt {
       display: inline;
       font-weight: bold;
-      margin-right: 0.125rem; 
+      margin-right: 0.125rem;
     }
 
     dd {
