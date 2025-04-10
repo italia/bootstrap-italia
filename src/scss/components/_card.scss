@@ -1,950 +1,699 @@
 @use 'sass:math';
 
-//
-// Base styles
-//
+// Improved responsive it-card-group with a @container aware twist
+// XXXX prendere dimensioni griglie?
+.it-card-group {
+  --#{$prefix}it-card-group-gap: #{$grid-gutter-width};
 
-.card-body {
-  // Enable `flex-grow: 1` for decks and groups so that card blocks take up
-  // as much space as possible, ensuring footers are aligned to the bottom.
-  flex: 1 1 auto;
-  padding: var(--#{$prefix}card-spacer-y) var(--#{$prefix}card-spacer-x);
-  color: var(--#{$prefix}card-color);
-}
-
-.card-title {
-  margin-bottom: var(--#{$prefix}card-title-spacer-y);
-}
-
-.card-subtitle {
-  margin-top: calc(-0.5 * var(--#{$prefix}card-title-spacer-y)); // stylelint-disable-line function-disallowed-list
-  margin-bottom: 0;
-}
-
-.card-text:last-child {
-  margin-bottom: 0;
-}
-
-.card-link {
-  &:hover {
-    text-decoration: if($link-hover-decoration == underline, none, null);
-  }
-
-  + .card-link {
-    margin-left: var(--#{$prefix}card-spacer-x);
-  }
-}
-
-//
-// Optional textual caps
-//
-
-.card-header {
-  padding: var(--#{$prefix}card-cap-padding-y) var(--#{$prefix}card-cap-padding-x);
-  margin-bottom: 0; // Removes the default margin-bottom of <hN>
-  color: var(--#{$prefix}card-cap-color);
-  background-color: var(--#{$prefix}card-cap-bg);
-  border-bottom: var(--#{$prefix}card-border-width) solid var(--#{$prefix}card-border-color);
-
-  &:first-child {
-    @include border-radius(var(--#{$prefix}card-inner-border-radius) var(--#{$prefix}card-inner-border-radius) 0 0);
-  }
-}
-
-.card-footer {
-  padding: var(--#{$prefix}card-cap-padding-y) var(--#{$prefix}card-cap-padding-x);
-  color: var(--#{$prefix}card-cap-color);
-  background-color: var(--#{$prefix}card-cap-bg);
-  border-top: var(--#{$prefix}card-border-width) solid var(--#{$prefix}card-border-color);
-
-  &:last-child {
-    @include border-radius(0 0 var(--#{$prefix}card-inner-border-radius) var(--#{$prefix}card-inner-border-radius));
-  }
-}
-
-//
-// Header navs
-//
-
-.card-header-tabs {
-  margin-right: calc(-0.5 * var(--#{$prefix}card-cap-padding-x)); // stylelint-disable-line function-disallowed-list
-  margin-bottom: calc(-1 * var(--#{$prefix}card-cap-padding-y)); // stylelint-disable-line function-disallowed-list
-  margin-left: calc(-0.5 * var(--#{$prefix}card-cap-padding-x)); // stylelint-disable-line function-disallowed-list
-  border-bottom: 0;
-
-  .nav-link.active {
-    background-color: var(--#{$prefix}card-bg);
-    border-bottom-color: var(--#{$prefix}card-bg);
-  }
-}
-
-.card-header-pills {
-  margin-right: calc(-0.5 * var(--#{$prefix}card-cap-padding-x)); // stylelint-disable-line function-disallowed-list
-  margin-left: calc(-0.5 * var(--#{$prefix}card-cap-padding-x)); // stylelint-disable-line function-disallowed-list
-}
-
-// Card image
-.card-img-overlay {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: var(--#{$prefix}card-img-overlay-padding);
-  @include border-radius(var(--#{$prefix}card-inner-border-radius));
-}
-
-.card-img,
-.card-img-top,
-.card-img-bottom {
-  width: 100%; // Required because we use flexbox and this inherently applies align-self: stretch
-}
-
-.card-img,
-.card-img-top {
-  @include border-top-radius(var(--#{$prefix}card-inner-border-radius));
-}
-
-.card-img,
-.card-img-bottom {
-  @include border-bottom-radius(var(--#{$prefix}card-inner-border-radius));
-}
-
-//
-// Card groups
-//
-
-.card-group {
-  // The child selector allows nested `.card` within `.card-group`
-  // to display properly.
-  > .card {
-    margin-bottom: var(--#{$prefix}card-group-margin);
-  }
-
-  @include media-breakpoint-up(sm) {
-    display: flex;
-    flex-flow: row wrap;
-    // The child selector allows nested `.card` within `.card-group`
-    // to display properly.
-    > .card {
-      // Flexbugs #4: https://github.com/philipwalton/flexbugs#flexbug-4
-      flex: 1 0 0%;
-      margin-bottom: 0;
-
-      + .card {
-        margin-left: 0;
-        border-left: 0;
-      }
-
-      // Handle rounded corners
-      @if $enable-rounded {
-        &:not(:last-child) {
-          @include border-end-radius(0);
-
-          .card-img-top,
-          .card-header {
-            // stylelint-disable-next-line property-disallowed-list
-            border-top-right-radius: 0;
-          }
-          .card-img-bottom,
-          .card-footer {
-            // stylelint-disable-next-line property-disallowed-list
-            border-bottom-right-radius: 0;
-          }
-        }
-
-        &:not(:first-child) {
-          @include border-start-radius(0);
-
-          .card-img-top,
-          .card-header {
-            // stylelint-disable-next-line property-disallowed-list
-            border-top-left-radius: 0;
-          }
-          .card-img-bottom,
-          .card-footer {
-            // stylelint-disable-next-line property-disallowed-list
-            border-bottom-left-radius: 0;
-          }
-        }
-      }
-    }
-  }
-}
-
-.card-wrapper {
-  padding-bottom: $v-gap * 3;
   display: flex;
+  flex-wrap: wrap;
 
-  &.card-column {
-    flex-direction: column;
+  // gap fallback
+  margin: calc(-0.5 * var(--#{$prefix}it-card-group-gap));
 
-    .card {
-      height: auto !important;
+  > .it-card {
+    margin: calc(0.5 * var(--#{$prefix}it-card-group-gap));
+    // Default stacked on mobile
+    flex: 0 0 calc(100% - var(--#{$prefix}it-card-group-gap));
 
-      & + .card {
-        margin-top: 1rem;
+    // Responsive breakpoints
+    @include media-breakpoint-up(sm) {
+      flex: 0 0 calc(50% - 0.5 * var(--#{$prefix}it-card-group-gap));
+    }
+
+    @include media-breakpoint-up(md) {
+      flex: 0 0 calc(33.333% - 0.667 * var(--#{$prefix}it-card-group-gap));
+    }
+
+    @include media-breakpoint-up(lg) {
+      flex: 0 0 calc(25% - 0.75 * var(--#{$prefix}it-card-group-gap));
+    }
+  }
+
+  @supports (gap: var(--#{$prefix}it-card-group-gap)) {
+    margin: 0;
+    gap: var(--#{$prefix}it-card-group-gap);
+
+    > .it-card {
+      margin: 0;
+    }
+  }
+
+  // Predefined column layouts
+  &.it-card-group-2-cols > .it-card {
+    @include media-breakpoint-up(sm) {
+      flex: 0 0 calc(50% - 0.5 * var(--#{$prefix}it-card-group-gap));
+    }
+  }
+
+  &.it-card-group-3-cols > .it-card {
+    @include media-breakpoint-up(sm) {
+      flex: 0 0 calc(50% - 0.5 * var(--#{$prefix}it-card-group-gap));
+    }
+
+    @include media-breakpoint-up(md) {
+      flex: 0 0 calc(33.333% - 0.667 * var(--#{$prefix}it-card-group-gap));
+    }
+  }
+
+  &.it-card-group-4-cols > .it-card {
+    @include media-breakpoint-up(sm) {
+      flex: 0 0 calc(50% - 0.5 * var(--#{$prefix}it-card-group-gap));
+    }
+
+    @include media-breakpoint-up(md) {
+      flex: 0 0 calc(33.333% - 0.667 * var(--#{$prefix}it-card-group-gap));
+    }
+
+    @include media-breakpoint-up(lg) {
+      flex: 0 0 calc(25% - 0.75 * var(--#{$prefix}it-card-group-gap));
+    }
+  }
+
+  // Progressive enhancement with Container Queries
+  @supports (container-type: inline-size) {
+    // Only with .it-card-group-container-aware class
+    &.it-card-group-container-aware {
+      container-type: inline-size;
+
+      > .it-card {
+        // Reset Media Queries
+        @include media-breakpoint-up(sm) {
+          flex: auto;
+        }
+
+        @include media-breakpoint-up(md) {
+          flex: auto;
+        }
+
+        @include media-breakpoint-up(lg) {
+          flex: auto;
+        }
+
+        // Container Queries
+        flex: 1 0 100%;
+
+        @container (min-width: 500px) {
+          flex: 0 0 calc(50% - 0.5 * var(--#{$prefix}it-card-group-gap));
+        }
+
+        @container (min-width: 800px) {
+          flex: 0 0 calc(33.333% - 0.667 * var(--#{$prefix}it-card-group-gap));
+        }
+
+        @container (min-width: 1100px) {
+          flex: 0 0 calc(25% - 0.75 * var(--#{$prefix}it-card-group-gap));
+        }
+      }
+
+      // Override specific coulmns in container mode
+      &.it-card-group-2-cols > .it-card {
+        @container (min-width: 500px) {
+          flex: 0 0 calc(50% - 0.5 * var(--#{$prefix}it-card-group-gap));
+        }
+      }
+
+      &.it-card-group-3-cols > .it-card {
+        @container (min-width: 800px) {
+          flex: 0 0 calc(33.333% - 0.667 * var(--#{$prefix}it-card-group-gap));
+        }
       }
     }
   }
 
-  &.card-teaser-wrapper {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
+  // Option for equal height cards
+  &.it-card-group-equal-height > .it-card {
+    height: 100%;
+  }
 
-    &.card-teaser-wrapper-equal {
-      align-items: stretch;
+  // Options for alignments
+  &.it-card-group-center {
+    justify-content: center;
+  }
+
+  &.it-card-group-end {
+    justify-content: flex-end;
+  }
+}
+
+//
+// Base card structure It Card 2025
+//
+.it-card,
+article.it-card {
+  // to do: variabili intermedia per i calcoli più complessi?
+
+  --#{$prefix}it-card-spacer-y: 0.5rem;
+  --#{$prefix}it-card-spacer-x: 1rem;
+  --#{$prefix}it-card-height: null;
+  --#{$prefix}it-card-inline-min-height: 240px;
+  --#{$prefix}it-card-inline-mini-min-height: 160px;
+  --#{$prefix}it-card-color: #{$color-text-secondary};
+  --#{$prefix}it-card-p-color: #{$color-text-secondary};
+  --#{$prefix}it-card-bg: #{$white};
+  --#{$prefix}it-card-border-color: #{$gray-border};
+  --#{$prefix}it-card-border-width: 1px;
+  --#{$prefix}it-card-border-radius: 4px;
+  --#{$prefix}it-card-inner-border-radius: subtract(var(--#{$prefix}it-card-border-radius), var(--#{$prefix}it-card-border-width));
+  --#{$prefix}it-card-title-spacer-y: var(--#{$prefix}it-card-spacer-y);
+  --#{$prefix}it-card-body-spacer: 1rem;
+  --#{$prefix}it-card-cap-bg: transparent;
+  --#{$prefix}it-card-cap-padding-y: calc(var(--#{$prefix}it-card-spacer-y) * 2);
+  --#{$prefix}it-card-cap-padding-x: var(--#{$prefix}it-card-spacer-x);
+  --#{$prefix}it-card-cap-color: null;
+  --#{$prefix}it-card-border-top-width: 8px;
+  --#{$prefix}it-card-border-top-default-bg: #{$white};
+  --#{$prefix}it-card-border-top-primary: #{$primary}; 
+  --#{$prefix}it-card-border-top-secondary: #{$secondary};
+  --#{$prefix}it-card-border-top-success: #{$success};
+  --#{$prefix}it-card-border-top-warning: #{$warning};
+  --#{$prefix}it-card-border-top-danger: #{$danger};
+  --#{$prefix}it-card-border-top-info: #{$info};
+  --#{$prefix}it-card-category-size: 1rem;
+  --#{$prefix}it-card-category-fw: 600;
+  --#{$prefix}it-card-category-l-spacing: 0.5px;
+  --#{$prefix}it-card-category-m-bottom: 0;
+  --#{$prefix}it-card-date-size: 0.875rem;
+  --#{$prefix}it-card-date-color: #{$color-text-muted};
+  --#{$prefix}it-card-chips-gap: 1rem;
+  --#{$prefix}it-card-chips-a-color: #{$color-text-secondary};
+  --#{$prefix}it-card-signature-size: 1rem;
+  --#{$prefix}it-card-link-color: #{$color-text-secondary};
+
+  display: flex;
+  flex-direction: column;
+  min-width: 0; // See https://github.com/twbs/bootstrap/pull/22740#issuecomment-305868106
+  height: var(--#{$prefix}it-card-height);
+  padding: 0;
+  padding-bottom: var(--#{$prefix}it-card-spacer-y);
+  position: relative;
+  width: 100%;
+  word-wrap: break-word;
+  background-color: var(--#{$prefix}it-card-bg);
+  background-clip: border-box;
+  color: var(--#{$prefix}it-card-color);
+
+  &.it-card-height-auto {
+    height: auto;
+  }
+
+  &.it-card-height-full {
+    height: 100%;
+  }
+
+  .it-card-link {
+    color: var(--#{$prefix}it-card-link-color);
+
+    &:hover {
+      color: color-hover($color-text-secondary); 
     }
 
-    & > .card-teaser {
-      flex: 0 0 100%;
-      margin: $v-gap * 2 0;
+    + .it-card-link {
+      margin-left: var(--#{$prefix}it-card-spacer-x);
+    }
+  }
+
+  // Profile card
+  &.it-card-profile {
+    .it-card-profile-header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      margin-top: calc(3 * var(--#{$prefix}it-card-title-spacer-y));
+      margin-bottom: 0;
+      padding: 0 var(--#{$prefix}it-card-spacer-x);
+
+      .it-card-profile-name {
+        margin-bottom: 0.25rem;
+      }
+
+      .avatar {
+        margin-left: 1rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .it-card-profile-role {
+        font-weight: 600;
+        font-size: 1rem;
+        line-height: 1.5rem;
+      }
+    }
+  }
+
+  // Place card
+  &.it-card-place {
+    .it-card-place-header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      margin-top: calc(3 * var(--#{$prefix}it-card-title-spacer-y));
+      margin-bottom: 0;
+      padding: 0 var(--#{$prefix}it-card-spacer-x);
+
+      .it-card-place-name {
+        margin-bottom: 0.25rem;
+      }
+
+      .it-card-place-image {
+        max-width: 80px;
+        max-height: 80px;
+        margin-left: 1rem;
+        margin-bottom: 0.5rem;
+
+        .it-card-place-image-icon-wrapper {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          background-color: $color-background-primary-lighter; 
+        }
+      }
+
+      .it-card-place-type,
+      .it-card-place-address {
+        font-size: 1rem;
+        line-height: 1.5rem;
+      }
+
+      .it-card-place-type {
+        font-weight: 600;
+
+        &:not(:last-child) {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  // Card title styles
+  .it-card-title {
+    margin-top: calc(2 * var(--#{$prefix}it-card-title-spacer-y));
+    margin-bottom: 0;
+    padding: 0 var(--#{$prefix}it-card-spacer-x);
+
+    &.it-card-title-icon {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .icon {
+        margin-right: -8px;
+        margin-left: 8px;
+      }
+    }
+  }
+
+  // Card image
+  .it-card-image {
+    width: 100%;
+    @include border-top-radius(var(--#{$prefix}it-card-inner-border-radius));
+    @include border-bottom-radius(var(--#{$prefix}it-card-inner-border-radius));
+  }
+
+  // Card body and content
+  .it-card-body {
+    flex: 1 1 auto;
+    padding: var(--#{$prefix}it-card-spacer-y) var(--#{$prefix}it-card-spacer-x);
+    color: var(--#{$prefix}it-card-color);
+
+    // Card subtitle or event timeframe
+    .it-card-subtitle {
+      margin-bottom: var(--#{$prefix}it-card-spacer-y);
+
+      font-weight: 600;
+      font-size: 1.25rem; // equal h5
+      line-height: 1.5rem;
+
+      @include media-breakpoint-up(sm) {
+        font-size: 1.5rem;
+        line-height: 2rem;
+      }
+    }
+
+    // Card description
+    .it-card-text {
+      color: var(--#{$prefix}it-card-p-color);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    // Card author
+    .it-card-signature {
+      font-family: $font-family-monospace; 
+      color: var(--#{$prefix}it-card-color);
+      font-size: var(--#{$prefix}it-card-signature-size);
+    }
+  }
+
+  // Card footer cap
+  .it-card-footer {
+    margin: 0 var(--#{$prefix}it-card-cap-padding-x);
+    padding: var(--#{$prefix}it-card-cap-padding-y) 0;
+    color: var(--#{$prefix}it-card-cap-color);
+    background-color: var(--#{$prefix}it-card-cap-bg);
+    border-top: var(--#{$prefix}it-card-border-width) solid var(--#{$prefix}it-card-border-color);
+    font-size: 1rem;
+    line-height: 1.5rem;
+
+    &:last-child {
+      @include border-radius(0 0 var(--#{$prefix}it-card-inner-border-radius) var(--#{$prefix}it-card-inner-border-radius));
+    }
+  }
+
+  // Card metadata holder <footer>
+  footer {
+    margin-top: calc(2 * var(--#{$prefix}it-card-spacer-y));
+
+    &.it-card-related {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+
+      // Gap fallback XXXXXX?
+      > * {
+        margin: 0.5rem;
+      }
+
+      @supports (gap: 1rem) {
+        gap: 1rem;
+
+        > * {
+          margin: 0;
+        }
+      }
+
+      // Align items baseline and fallback XXXXXXX
+      align-items: flex-end;
+
+      @supports (align-items: last baseline) {
+        align-items: last baseline;
+      }
+
+      &.it-card-footer {
+        padding-bottom: var(--#{$prefix}it-card-cap-padding-y);
+        padding-top: calc(var(--#{$prefix}it-card-cap-padding-y) * 0.5);
+        border-top: none;
+      }
+    }
+
+    .it-card-taxonomy {
+      flex-grow: 1;
+    }
+
+    .it-card-category {
+      color: $color-text-muted; // XXX var?
+      display: inline-block;
+      text-transform: uppercase;
+      font-size: var(--#{$prefix}it-card-category-size);
+      font-weight: var(--#{$prefix}it-card-category-fw);
+      letter-spacing: var(--#{$prefix}it-card-category-l-spacing);
+      margin-bottom: var(--#{$prefix}it-card-category-m-bottom);
+    }
+
+    // If more than one Tag, use a list
+    ul.it-card-chips {
       display: flex;
       flex-wrap: wrap;
 
-      &.border {
-        border-color: $border-color;
+      // Gap fallback
+      > li {
+        margin: 0.25rem;
       }
 
-      &.card-teaser-image {
-        padding: 0 !important;
+      @supports (gap: 0.5rem) {
+        gap: 0.5rem;
 
-        & > .card-image-wrapper {
-          flex: 1;
+        > li {
+          margin: 0;
+        }
+      }
+
+      padding: 0;
+      margin-top: 0.5rem;
+      margin-bottom: 0;
+      list-style-type: none;
+      line-height: 1.5;
+    }
+
+    .chip {
+      margin: 0;
+      line-height: 1.5; // reset default chip l-h
+    }
+
+    a.chip {
+      color: var(--#{$prefix}it-card-chips-a-color);
+      text-decoration: none;
+    }
+
+    // Card date, use <time> if possible
+    .it-card-date {
+      color: var(--#{$prefix}it-card-date-color);
+      font-size: var(--#{$prefix}it-card-date-size);
+    }
+  }
+
+  // Card can contain description lists, example: personal or place data
+  .it-card-description-list,
+  .it-card-body .it-card-description-list {
+    border-top: var(--#{$prefix}it-card-border-width) solid var(--#{$prefix}it-card-border-color);
+    border-bottom: var(--#{$prefix}it-card-border-width) solid var(--#{$prefix}it-card-border-color);
+
+    color: $color-text-muted; //XXX < muted?
+
+    padding-top: calc(2 * var(--#{$prefix}it-card-spacer-y));
+    padding-bottom: calc(2 * var(--#{$prefix}it-card-spacer-y));
+
+    &:last-child {
+      margin-bottom: 0;
+      padding-bottom: var(--#{$prefix}it-card-spacer-y);
+      border-bottom: none;
+    }
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; // XXX NEED FALLBACK? YES?
+
+    dt {
+      display: inline;
+      font-weight: bold;
+      margin-right: 0.125rem; 
+    }
+
+    dd {
+      display: inline-block;
+      margin: 0;
+    }
+
+    @include media-breakpoint-down(sm) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  // Card can contain special lists, example: Related articles to a main Tag card
+  > .list-group,
+  .it-card-body > .list-group {
+    border-top: var(--#{$prefix}it-card-border-width) solid var(--#{$prefix}it-card-border-color);
+    border-bottom: var(--#{$prefix}it-card-border-width) solid var(--#{$prefix}it-card-border-color);
+
+    margin-top: calc(2 * var(--#{$prefix}it-card-spacer-y));
+    margin-bottom: calc(2 * var(--#{$prefix}it-card-spacer-y));
+
+    color: var(--#{$prefix}it-card-p-color);
+
+    &:first-child {
+      border-top-width: 0;
+      @include border-top-radius(var(--#{$prefix}it-card-inner-border-radius));
+    }
+
+    &:last-child {
+      border-bottom-width: 0;
+      @include border-bottom-radius(var(--#{$prefix}it-card-inner-border-radius));
+    }
+  }
+
+  .it-card-body > .list-group {
+    margin-top: calc(4 * var(--#{$prefix}it-card-spacer-y));
+    margin-bottom: calc(2 * var(--#{$prefix}it-card-spacer-y));
+
+    .list-group-item {
+      padding: var(--bs-list-group-item-padding-y) 0; // XXXXXX > riportare a noi
+    }
+  }
+
+  > .it-card-header + .list-group,
+  > .list-group + .it-card-footer {
+    border-top: 0;
+  }
+
+  // Card image responsive wrapper and a11y DOM order hack
+  &.it-card-image {
+    .it-card-image-wrapper {
+      order: -1;
+    }
+
+    &.rounded {
+      .it-card-image-wrapper {
+        &:first-child,
+        &:nth-child(2) {
+          border-top-left-radius: var(--#{$prefix}it-card-inner-border-radius);
+          border-top-right-radius: var(--#{$prefix}it-card-inner-border-radius);
+        }
+      }
+
+      &.it-card-border-top {
+        .it-card-image-wrapper {
+          &:first-child,
+          &:nth-child(2) {
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+          }
+        }
+      }
+    }
+  }
+
+  // Card special colored 4px border-top, mere aestethic, don't use for semantic meaning
+  &.it-card-border-top {
+    padding-top: var(--#{$prefix}it-card-border-top-width);
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: var(--#{$prefix}it-card-border-top-width);
+      top: 0;
+      background: var(--#{$prefix}it-card-border-top-default-bg);
+    }
+
+    &.rounded {
+      &::after {
+        border-radius: 3px 3px 0 0;
+      }
+    }
+
+    &.it-card-border-top-primary::after {
+      background: var(--#{$prefix}it-card-border-top-primary);
+    }
+    &.it-card-border-top-secondary::after {
+      background: var(--#{$prefix}it-card-border-top-secondary);
+    }
+    &.it-card-border-top-success::after {
+      background: var(--#{$prefix}it-card-border-top-success);
+    }
+    &.it-card-border-top-warning::after {
+      background: var(--#{$prefix}it-card-border-top-warning);
+    }
+    &.it-card-border-top-danger::after {
+      background: var(--#{$prefix}it-card-border-top-danger);
+    }
+    &.it-card-border-top-info::after {
+      background: var(--#{$prefix}it-card-border-top-info);
+    }
+  }
+
+  // Layout inline
+  &.it-card-inline {
+    @mixin inline-layout {
+      flex-direction: row !important;
+      padding-bottom: 0 !important;
+
+      .it-card-inline-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .it-card-footer {
+          margin-bottom: calc(var(--#{$prefix}it-card-cap-padding-y) * 0.5);
+        }
+
+        .it-card-related.it-card-footer {
+          margin-bottom: 0;
+          padding-bottom: var(--#{$prefix}it-card-cap-padding-y);
+        }
+      }
+
+      &.it-card-image {
+        .it-card-image-wrapper {
           display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          align-items: flex-start;
 
-          &.with-read-more {
-            .card-image-rounded img {
-              border-bottom-right-radius: 0 !important;
+          .ratio {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+          }
+
+          position: relative;
+          overflow: hidden;
+        }
+
+        &.it-card-inline-reverse {
+          order: inherit;
+
+          .it-card-image-wrapper {
+            order: 1;
+          }
+        }
+
+        &.rounded {
+          .it-card-image-wrapper {
+            &:first-child,
+            &:nth-child(2) {
+              border-top-right-radius: 0 !important;
+              border-bottom-left-radius: var(--#{$prefix}it-card-inner-border-radius);
+            }
+          }
+
+          &.it-card-inline-reverse {
+            .it-card-image-wrapper {
+              &:first-child,
+              &:nth-child(2) {
+                border-top-left-radius: 0 !important;
+                border-bottom-left-radius: 0 !important;
+                border-top-right-radius: var(--#{$prefix}it-card-inner-border-radius) !important;
+                border-bottom-right-radius: var(--#{$prefix}it-card-inner-border-radius) !important;
+              }
             }
           }
         }
       }
     }
 
-    .card-flex {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: stretch;
-      position: relative;
+    &.it-card-inline-mini {
+      @include inline-layout;
+      min-height: var(--#{$prefix}it-card-inline-mini-min-height);
 
-      .card-image {
-        position: relative;
-        // background-color: $gray-border;
-        background-color: transparent;
+      &.it-card-image .it-card-image-wrapper {
+        width: 25%;
+      }
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
+      &.it-card-image .it-card-inline-content {
+        width: 75%;
+      }
+    }
 
-        &.card-image-rounded {
-          border-radius: 0 $border-radius $border-radius 0;
+    @include media-breakpoint-up(sm) {
+      &:not(.it-card-inline-mini) {
+        @include inline-layout;
+        min-height: var(--#{$prefix}it-card-inline-min-height);
 
-          img {
-            border-radius: 0 $border-radius $border-radius 0;
-          }
+        &.it-card-image .it-card-image-wrapper {
+          width: 50%;
         }
 
-        .card-date {
-          background-color: $white;
-          padding: 0.5em 1em;
-          z-index: 1;
-
-          & > *:first-child {
-            font-size: 120%;
-          }
-
-          & > *:last-child {
-            font-size: 80%;
-          }
-        }
-
-        img {
-          z-index: auto;
-          object-fit: cover;
+        &.it-card-image .it-card-inline-content {
+          width: 50%;
         }
       }
-    }
-
-    //Landscape
-    @include media-breakpoint-up(md) {
-      .card-teaser {
-        flex: 0 0 49%;
-      }
-
-      &.card-teaser-block-2 {
-        width: 100%;
-        justify-content: space-between;
-
-        & > .card-teaser {
-          flex: 0 0 49%;
-        }
-      }
-
-      &.card-teaser-block-3 {
-        width: 100%;
-        justify-content: space-between;
-
-        & > .card-teaser {
-          flex: 0 0 32%;
-        }
-      }
-
-      &.card-teaser-start {
-        justify-content: flex-start !important;
-
-        .card-teaser + .card-teaser {
-          margin-left: 1.35rem;
-        }
-      }
-
-      &.card-teaser-end {
-        justify-content: flex-end !important;
-
-        .card-teaser + .card-teaser {
-          margin-left: 1.35rem;
-        }
-      }
-    }
-  }
-
-  //Desktop
-  @include media-breakpoint-up(xl) {
-    &.card-teaser-block-4 {
-      width: 100%;
-      justify-content: space-between;
-
-      & > .card-teaser {
-        flex: 0 0 24%;
-      }
-    }
-
-    &.card-overlapping {
-      margin-top: -32px;
-    }
-  }
-}
-
-.card {
-  // scss-docs-start card-css-vars
-  --#{$prefix}card-spacer-y: #{$card-spacer-y};
-  --#{$prefix}card-spacer-x: #{$card-spacer-x};
-  --#{$prefix}card-title-spacer-y: #{$card-title-spacer-y};
-  --#{$prefix}card-border-width: #{$card-border-width};
-  --#{$prefix}card-border-color: #{$card-border-color};
-  --#{$prefix}card-border-radius: #{$card-border-radius};
-  --#{$prefix}card-box-shadow: #{$card-box-shadow};
-  --#{$prefix}card-inner-border-radius: #{$card-inner-border-radius};
-  --#{$prefix}card-cap-padding-y: #{$card-cap-padding-y};
-  --#{$prefix}card-cap-padding-x: #{$card-cap-padding-x};
-  --#{$prefix}card-cap-bg: #{$card-cap-bg};
-  --#{$prefix}card-cap-color: #{$card-cap-color};
-  --#{$prefix}card-height: #{$card-height};
-  --#{$prefix}card-color: #{$card-color};
-  --#{$prefix}card-bg: #{$card-bg};
-  --#{$prefix}card-img-overlay-padding: #{$card-img-overlay-padding};
-  --#{$prefix}card-group-margin: #{$card-group-margin};
-  // scss-docs-end card-css-vars
-  display: flex;
-  flex-direction: column;
-  min-width: 0; // See https://github.com/twbs/bootstrap/pull/22740#issuecomment-305868106
-  height: var(--#{$prefix}card-height);
-  word-wrap: break-word;
-  background-color: var(--#{$prefix}card-bg);
-  background-clip: border-box;
-  border: var(--#{$prefix}card-border-width) solid var(--#{$prefix}card-border-color);
-  @include border-radius(var(--#{$prefix}card-border-radius));
-  @include box-shadow(var(--#{$prefix}card-box-shadow));
-
-  > hr {
-    margin-right: 0;
-    margin-left: 0;
-  }
-
-  > .list-group {
-    border-top: inherit;
-    border-bottom: inherit;
-
-    &:first-child {
-      border-top-width: 0;
-      @include border-top-radius(var(--#{$prefix}card-inner-border-radius));
-    }
-
-    &:last-child {
-      border-bottom-width: 0;
-      @include border-bottom-radius(var(--#{$prefix}card-inner-border-radius));
-    }
-  }
-
-  // Due to specificity of the above selector (`.card > .list-group`), we must
-  // use a child selector here to prevent double borders.
-  > .card-header + .list-group,
-  > .list-group + .card-footer {
-    border-top: 0;
-  }
-  border: none;
-  padding: 0;
-  position: relative;
-  width: 100%;
-
-  @each $color, $value in $theme-colors {
-    &.card-bg-#{$color} {
-      background-color: $value;
-
-      .card-body {
-        .card-title,
-        .card-text {
-          color: $white;
-        }
-      }
-    }
-  }
-
-  .card-body {
-    padding: $card-padding;
-
-    h4 {
-      &.card-title {
-        & + .card-text {
-          padding-top: 16px;
-        }
-      }
-    }
-
-    h5 {
-      &.card-title {
-        font-size: $card-h5-size;
-        line-height: $card-h5-line-height;
-        font-weight: $card-h5-fw;
-        color: $card-h5-color;
-        margin-bottom: $v-gap * 2;
-        transition: all 0.3s;
-        &.big-heading {
-          font-size: $card-big-head-size;
-          line-height: $card-big-head-l-h;
-        }
-
-        &.card-title-icon {
-          display: flex;
-          flex-direction: row;
-          justify-content: flex-start;
-          align-items: center;
-
-          .icon {
-            margin-right: 0.5em;
-          }
-        }
-      }
-    }
-    h6.card-subtitle {
-      font-weight: normal;
-      margin-bottom: $v-gap * 2;
-      margin-top: -$v-gap * 2;
-    }
-    a {
-      display: inline-block;
-      h5.card-title {
-        color: $card-link-color;
-      }
-      &:hover {
-        h5.card-title {
-          color: var(--bs-link-hover-color);
-        }
-      }
-    }
-    .card-text {
-      font-family: $font-family-serif;
-      font-size: $card-p-size;
-      line-height: $card-p-l-h;
-      color: $card-p-color;
-    }
-    .card-signature {
-      font-style: italic;
-      font-family: $font-family-serif;
-      color: $card-p-color;
-      font-weight: 700;
-      font-size: $card-signature-size;
-      margin-bottom: 0;
-      display: block;
-    }
-    .category-top {
-      font-size: $card-category-size;
-      text-transform: uppercase;
-      color: $card-p-color;
-      margin-bottom: $card-category-m-bottom;
-      a.category {
-        color: $primary;
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-      .category {
-        font-weight: 600;
-        letter-spacing: $card-category-l-spacing;
-      }
-      .data {
-        &:before {
-          content: '—';
-          display: inline-block;
-          margin: 0 $v-gap;
-        }
-      }
-    }
-  }
-  // line
-  &:after {
-    content: '';
-    // height: $card-small-line-height;
-    // width: $card-small-line-w;
-    // background: $card-small-line-color;
-    display: block;
-    margin-top: $card-small-line-margin;
-    margin-left: $card-padding;
-  }
-  a.read-more {
-    position: absolute;
-    bottom: $v-gap * 3;
-  }
-  .categoryicon-top {
-    margin-bottom: $card-cat-icon-block-margin;
-    display: flex;
-    align-items: center;
-    .text {
-      font-size: $card-category-size;
-      text-transform: uppercase;
-      letter-spacing: $card-category-l-spacing;
-      color: $card-p-color;
-      line-height: 1rem;
-    }
-    .icon {
-      width: $card-cat-icon-size;
-      height: $card-cat-icon-size;
-      fill: $card-link-color;
-      margin-right: $v-gap * 1;
-      flex-shrink: 0;
-    }
-  }
-  // simple link
-  .simple-link {
-    font-weight: 600;
-    font-size: $card-signature-size;
-    margin-top: $card-simple-link-margin;
-    display: block;
-  }
-  // cards with background
-  &.card-bg {
-    margin-left: math.div($card-padding, 3);
-    margin-right: math.div($card-padding, 3);
-    box-shadow: $card-shadow;
-    background: $card-shadow-bg;
-    &:after {
-      background: transparent;
-    }
-    border-right: none;
-  }
-  // cards with img top
-  &.card-img {
-    // Why the margin?
-    // margin-left: $card-padding/3;
-    // margin-right: $card-padding/3;
-
-    &.shadow .card-body,
-    &.border .card-body,
-    &.border-start .card-body,
-    &.border-end .card-body {
-      padding-left: $card-padding;
-      padding-right: $card-padding;
-    }
-    h5.card-title {
-      font-size: $card-img-heading-size;
-      line-height: $card-img-heading-l-h;
-      margin-bottom: $v-gap * 5;
-    }
-    border-right: none;
-
-    .img-responsive-wrapper {
-      .img-responsive {
-        padding-bottom: 61.29%; /* image proportion 310 x 190 */
-        &.img-responsive-panoramic {
-          padding-bottom: 30.645%; /* image proportion 310 x 95 */
-        }
-      }
-    }
-
-    &.rounded .img-responsive-wrapper {
-      border-top-left-radius: $border-radius;
-      border-top-right-radius: $border-radius;
-    }
-  }
-  .card-calendar {
-    height: 80%;
-    max-height: 80px;
-    width: 80px;
-    border-radius: 4px;
-    background-color: $white;
-    box-shadow:
-      0 1px 4px 0 rgba(0, 0, 0, 0.1),
-      0 4px 8px 0 rgba(0, 0, 0, 0.1);
-    position: absolute;
-    right: 32px;
-    top: 10%;
-    color: #455a64;
-    text-align: center;
-    font-size: 0.875rem;
-    font-weight: 600;
-    line-height: 1.3;
-    text-transform: capitalize;
-    .card-date {
-      font-size: 1.667em;
-      font-weight: 700;
-      display: block;
-    }
-  }
-
-  &.no-after {
-    content: none;
-    position: relative;
-    &:after {
-      display: none;
-    }
-
-    & > .read-more {
-      &::before {
-        content: '';
-        height: $v-gap * 3;
-        display: block;
-      }
-      padding-top: $v-gap * 2;
-    }
-  }
-
-  // special card
-  &.special-card {
-    .img-responsive-wrapper {
-      overflow: visible;
-      position: relative;
-      width: $special-card-img-width;
-      margin-bottom: $card-padding;
-      &::before,
-      &::after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        display: block;
-      }
-      &:before {
-        background: $primary-a3;
-        left: $card-padding;
-        top: $card-padding;
-        opacity: 0.3;
-        transition: all 0.3s;
-      }
-      &:after {
-        background: $primary-a3;
-        left: $card-padding * 0.5;
-        top: $card-padding * 0.5;
-        transition: all 0.3s;
-      }
-      .img-responsive {
-        padding-bottom: 122.98%; /* image proportion 214 x 174 */
-        z-index: 1;
-      }
-    }
-    .head-tags {
-      margin-bottom: $card-padding;
-      span.data {
-        font-weight: normal;
-      }
-    }
-    h5.card-title {
-      color: $card-link-color;
-    }
-    &:hover {
-      text-decoration: underline;
-      h5.card-title {
-        color: var(--bs-link-hover-color);
-      }
-      .img-responsive-wrapper {
-        &:before {
-          background: $primary;
-          opacity: 0.3;
-        }
-        &:after {
-          background: $primary;
-        }
-      }
-    }
-  }
-  // card big
-  &.card-big {
-    .card-body {
-      padding: $card-padding * 2;
-      .top-icon {
-        margin-bottom: $card-padding;
-        .icon {
-          width: $card-big-top-icon-size;
-          height: $card-big-top-icon-size;
-          fill: $primary;
-        }
-      }
-
-      h5.card-title {
-        font-size: $card-big-h5-size;
-        line-height: $card-big-h5-l-h;
-      }
-      .card-text {
-        font-size: $card-big-p-size;
-        line-height: $card-big-p-l-h;
-      }
-    }
-    .flag-icon {
-      margin-left: $card-padding * 2;
-    }
-    .etichetta {
-      position: absolute;
-      right: $card-padding * 2;
-      top: $card-padding + $v-gap;
-      //left: $card-padding * 6;
-      justify-content: flex-end;
-    }
-  }
-  &.border-bottom-card {
-    &::before {
-      content: '';
-      display: block;
-      position: absolute;
-      left: 0;
-      right: 0;
-      height: 4px;
-      bottom: 0;
-      background: $primary;
-    }
-  }
-  //head tag
-  .head-tags {
-    justify-content: space-between;
-    display: flex;
-    margin-bottom: $card-padding * 2;
-    .data {
-      font-size: $card-category-size;
-      text-transform: uppercase;
-      color: $card-p-color;
-    }
-  }
-  .card-tag {
-    color: $primary;
-    font-size: $card-category-size;
-    font-weight: bold;
-    letter-spacing: $card-category-l-spacing;
-    padding: 0 $v-gap * 4;
-    border-radius: $tag-radius;
-    border: 1px solid $primary;
-  }
-  // card footer
-  .it-card-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: $card-padding * 2;
-    .card-signature {
-      font-style: italic;
-      font-family: $font-family-serif;
-      color: $card-p-color;
-      font-weight: 700;
-      font-size: $card-signature-size;
-      display: block;
-      margin-bottom: 0;
-    }
-  }
-
-  &.card-teaser {
-    display: inline-flex;
-    // width: auto;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 24px;
-
-    &:after {
-      content: none;
-    }
-
-    &.card-column {
-      flex-direction: column;
-    }
-
-    .card-header {
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-start;
-      align-items: flex-start;
-
-      padding: 1em;
-      width: 100%;
-
-      .icon {
-        margin-right: 0.5rem;
-      }
-
-      @for $i from 1 through 6 {
-        h#{$i} {
-          line-height: 1.5;
-          margin-bottom: 0;
-        }
-      }
-    }
-
-    .card-body {
-      padding: 0;
-      flex: auto;
-
-      .card-text,
-      .card-text > p {
-        margin: 0;
-
-        & + .card-text {
-          margin-top: 16px;
-        }
-      }
-    }
-
-    .icon {
-      min-width: 32px;
-
-      & + .card-body {
-        margin-left: 1em;
-      }
-    }
-
-    .avatar {
-      &.size-xs {
-        min-width: $avatar-base-size * 2;
-      }
-
-      &.size-sm {
-        min-width: $avatar-base-size * 3;
-      }
-
-      &.size-md {
-        min-width: $avatar-base-size * 4;
-      }
-
-      &.size-lg {
-        min-width: $avatar-base-size * 5;
-      }
-
-      &.size-xl {
-        min-width: $avatar-base-size * 10;
-      }
-
-      & + .card-body {
-        flex: 1;
-      }
-    }
-  }
-
-  @each $color, $value in $theme-colors {
-    &.card-teaser-#{$color} {
-      border-left: 8px solid $value;
-    }
-  }
-}
-// flag
-.flag-icon {
-  width: $flag-icon-w;
-  height: $flag-icon-h;
-  box-sizing: content-box;
-  position: relative;
-  background: $flag-icon-color;
-  color: $card-shadow-bg;
-  text-align: center;
-  text-transform: uppercase;
-}
-.flag-icon:after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0;
-  height: 0;
-  border-bottom: 13px solid $card-shadow-bg;
-  border-left: $flag-icon-w * 0.5 solid transparent;
-  border-right: $flag-icon-w * 0.5 solid transparent;
-}
-
-// read more text
-a.read-more {
-  display: flex;
-  align-items: center;
-  color: $card-link-color;
-  text-transform: uppercase;
-  font-weight: bold;
-  letter-spacing: $card-category-l-spacing;
-  font-size: $card-category-size;
-  text-decoration: none;
-  .icon {
-    margin-left: $v-gap;
-    fill: $card-link-color;
-    width: $card-link-icon-size;
-    height: $card-link-icon-size;
-    flex-shrink: 0;
-  }
-  &:hover {
-    text-decoration: underline;
-  }
-}
-//.etichetta
-.etichetta {
-  display: flex;
-  align-items: center;
-  font-size: $card-category-size;
-  text-transform: uppercase;
-  font-weight: bold;
-  letter-spacing: $card-category-l-spacing;
-  color: $card-p-color;
-  .icon {
-    fill: $card-p-color;
-    width: $v-gap * 3;
-    height: $v-gap * 3;
-    margin-right: $v-gap;
-    flex-shrink: 0;
-  }
-}
-// Contextual variation
-.row {
-  [class*='col-'] {
-    //car variation inside cols
-    > .card-wrapper {
-      height: 100%;
-      > .card {
-        height: 100%;
-      }
-    }
-  }
-}
-
-//Tablet horizontal / small desktop
-@include media-breakpoint-up(lg) {
-  .card-wrapper {
-    padding-bottom: 0;
-    &.card-space {
-      padding-bottom: $card-padding * 0.5;
-    }
-    &.card-offset {
-      margin-top: 90px;
-    }
-  }
-  .card {
-    border: none;
-    &.card-bg,
-    &.card-img {
-      margin: 0;
     }
   }
 }
