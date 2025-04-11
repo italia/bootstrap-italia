@@ -148,7 +148,7 @@ Da notare che la struttura dei metadati include:
       <div class="it-card-image-wrapper">
         <div class="ratio ratio-16x9">
           <figure class="figure img-full">
-            <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+            <img src="https://placeholderimage.eu/api/nature/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
           </figure>
         </div>
       </div>
@@ -161,13 +161,13 @@ Da notare che la struttura dei metadati include:
         <div class="it-card-taxonomy">
           <ul class="it-card-chips chips-list" aria-label="Argomenti correlati: ">
             <li class="list-item"><a class="chip chip-simple chip-sm" href="#">
-              <span class="visually-hidden">Argomento: </span><span class="chip-label">Sviluppo interfaccia</span>
+              <span class="visually-hidden">Argomento: </span><span class="chip-label">Argomento 1</span>
             </a></li>
             <li class="list-item"><a class="chip chip-simple chip-sm" href="#">
-              <span class="visually-hidden">Argomento: </span><span class="chip-label">Open source</span>
+              <span class="visually-hidden">Argomento: </span><span class="chip-label">Argomento 2</span>
             </a></li>
             <li class="list-item"><a class="chip chip-simple chip-sm" href="#">
-              <span class="visually-hidden">Argomento: </span><span class="chip-label">Progettazione interfaccia</span>
+              <span class="visually-hidden">Argomento: </span><span class="chip-label">Argomento 3</span>
             </a></li>
           </ul>
         </div>
@@ -178,6 +178,124 @@ Da notare che la struttura dei metadati include:
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
+
+### Card editoriali featured
+
+Le card possono essere usate anche per presentare contenuti di approfondimento che vivono su altre piattaforme terze. 
+In questo caso è bene comunicare dove si trova il contenuto e l'uscita dal sito stesso. Per farlo è possibile anche aggiungere un'icona a fianco del titolo, usando la classe `.it-card-title-icon` come negli esempi che seguono. 
+
+{% capture callout %}
+
+#### Accessibilità link esterni
+
+Negli esempi il `target` del link non è usato, nell'ottica di favorire la normale navigazione del browser. Se si rimanda a nuovi tab o finestre si deve comunicare all'utente in modo chiaro con un'icona di link esterno e un testo alternativo o nascosto che ne comunichi l'intento anche ai lettori di schermo.  
+
+{% endcapture %}{% include callout.html content=callout type="accessibility" %}
+
+È possibile mostrare un sottotitolo per le card applicando la classe `.it-card-subtitle` su un elemento paragrafo.
+
+È possibile inoltre indicare l'autore del contenuto usando l'elemento semantico `address` con classe `.it-card-signature`. 
+
+{% comment %}Example name: Card editoriale standard{% endcomment %}
+{% capture example %}
+<div class="row">
+  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+    <!--start it-card-->
+    <article class="it-card rounded shadow-sm border">
+      <!--card first child is the title (link)-->
+      <h3 class="it-card-title it-card-title-icon no_toc">
+        <a href="#">Titolo contenuto featured <span class="visually-hidden">(link esterno)</span></a>
+        <div><svg class="icon icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-external-link"></use></svg></div>
+      </h3>
+      <!--card body content-->
+      <div class="it-card-body">
+        <address class="it-card-signature">di Maria Verde</address>
+        <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
+      </div>
+      <!--finally the card footer metadata-->
+      <footer class="it-card-related it-card-footer">
+        <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
+      </footer>
+    </article>
+    <!--end it-card-->
+  </div>
+  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+    <!--start it-card-->
+    <article class="it-card it-card-image rounded shadow-sm border">
+      <!--card first child is the title (link)-->
+      <h3 class="it-card-title it-card-title-icon no_toc">
+        <a href="#">Titolo contenuto featured <span class="visually-hidden">(link esterno su piattaforma XYZ)</span></a>
+        <div><svg class="icon icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg></div>
+      </h3>
+      <!--card second child is the image (optional)-->
+      <div class="it-card-image-wrapper">
+        <div class="ratio ratio-16x9">
+          <figure class="figure img-full">
+            <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+          </figure>
+        </div>
+      </div>
+      <!--card body content-->
+      <div class="it-card-body">
+        <p class="it-card-subtitle">Sottotitolo del contenuto</p>
+        <address class="it-card-signature">di Maria Verde</address>
+        <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
+      </div>
+      <!--finally the card footer metadata-->
+      <footer class="it-card-related it-card-footer">
+        <div class="it-card-taxonomy">
+          <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
+        </div>
+        <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
+      </footer>
+    </article>
+    <!--end it-card-->
+  </div>
+  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+    <!--start it-card-->
+    <article class="it-card it-card-image rounded shadow-sm border">
+      <!--card first child is the title (link)-->
+      <h3 class="it-card-title it-card-title-icon no_toc">
+        <a href="#">Titolo contenuto featured <span class="visually-hidden">(link esterno su Designers Italia)</span></a>
+        <div><svg class="icon icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-designers-italia"></use></svg></div>
+      </h3>
+      <!--card second child is the image (optional)-->
+      <div class="it-card-image-wrapper">
+        <div class="ratio ratio-16x9">
+          <figure class="figure img-full">
+            <img src="https://placeholderimage.eu/api/nature/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+          </figure>
+        </div>
+      </div>
+      <!--card body content-->
+      <div class="it-card-body">
+        <p class="it-card-subtitle">Sottotitolo del contenuto</p>
+        <address class="it-card-signature">di Maria Verde</address>
+        <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
+      </div>
+      <!--finally the card footer metadata-->
+      <footer class="it-card-related it-card-footer">
+        <div class="it-card-taxonomy">
+          <ul class="it-card-chips chips-list" aria-label="Argomenti correlati: ">
+            <li class="list-item"><a class="chip chip-simple chip-sm" href="#">
+              <span class="visually-hidden">Argomento: </span><span class="chip-label">Argomento 1</span>
+            </a></li>
+            <li class="list-item"><a class="chip chip-simple chip-sm" href="#">
+              <span class="visually-hidden">Argomento: </span><span class="chip-label">Argomento 2</span>
+            </a></li>
+            <li class="list-item"><a class="chip chip-simple chip-sm" href="#">
+              <span class="visually-hidden">Argomento: </span><span class="chip-label">Argomento 3</span>
+            </a></li>
+          </ul>
+        </div>
+        <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
+      </footer>
+    </article>
+    <!--end it-card-->
+  </div>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
 
 ### Card inline orizzontali
 
@@ -194,7 +312,7 @@ Per invertire il solo ordine visivo tra destra e sinistra è possibile applicare
 {% comment %}Example name: Card inline orizzontali{% endcomment %}
 {% capture example %}
 <div class="row">
-  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-8">
+  <div class="col-12 col-md-12 mb-3 mb-md-4 col-lg-10 col-xl-8">
     <!--start it-card-->
     <article class="it-card it-card-inline it-card-image rounded shadow-sm border">
      <!--card first child is all the card content: title (link) + body + footer -->
@@ -225,7 +343,7 @@ Per invertire il solo ordine visivo tra destra e sinistra è possibile applicare
   </div>
 </div>
 <div class="row">
-  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-8">
+  <div class="col-12 col-md-12 mb-3 mb-md-4 col-lg-10 col-xl-8">
     <!--start it-card-->
     <article class="it-card it-card-inline it-card-inline-reverse it-card-image rounded shadow-sm border">
      <!--card first child is all the card content: title (link) + body + footer -->
@@ -247,7 +365,7 @@ Per invertire il solo ordine visivo tra destra e sinistra è possibile applicare
       <div class="it-card-image-wrapper">
         <div class="ratio ratio-1x1">
           <figure class="figure img-full">
-            <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+            <img src="https://placeholderimage.eu/api/nature/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
           </figure>
         </div>
       </div>
@@ -331,7 +449,7 @@ L'immagine è opzionale e per invertire il solo ordine visivo tra destra e sinis
       <div class="it-card-image-wrapper">
         <div class="ratio ratio-1x1">
           <figure class="figure img-full">
-            <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+            <img src="https://placeholderimage.eu/api/nature/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
           </figure>
         </div>
       </div>
@@ -370,22 +488,15 @@ La classe `.it-card-footer` può essere usata anche per creare un ulteriore spaz
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
 
-{% comment %}Example name: Card per eventi{% endcomment %}
+{% comment %}Example name: Card eventi{% endcomment %}
 {% capture example %}
 <div class="row">
   <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
     <!--start it-card-->
-    <article class="it-card it-card-image rounded border shadow-sm mb-3">
+    <article class="it-card rounded border shadow-sm mb-3">
       <h3 class="it-card-title no_toc">
         <a href="#">Titolo evento</a>
       </h3>
-      <div class="it-card-image-wrapper">
-        <div class="ratio ratio-16x9">
-          <figure class="figure img-full">
-            <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
-          </figure>
-        </div>
-      </div>
       <div class="it-card-body">
         <p class="it-card-subtitle"><span class="visually-hidden">Data evento:</span> <time datetime="08-19">19 agosto</time>, <span class="visually-hidden">Orario:</span>  <time>11:30</time>–<time>13:00</time></p>
         <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
@@ -437,7 +548,7 @@ La classe `.it-card-footer` può essere usata anche per creare un ulteriore spaz
       <div class="it-card-image-wrapper">
         <div class="ratio ratio-16x9">
           <figure class="figure img-full">
-            <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+            <img src="https://placeholderimage.eu/api/nature/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
           </figure>
         </div>
       </div>
@@ -447,6 +558,86 @@ La classe `.it-card-footer` può essere usata anche per creare un ulteriore spaz
       </div>
       <div class="it-card-footer" aria-label="Link correlati:">
         <button type="button" class="btn btn-outline-secondary">Compila il form di iscrizione</button>
+      </div>
+    </article>
+    <!--end it-card-->
+  </div>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+#### Card per eventi inline
+
+È possibile disporre le card eventi in orizzontale usando la classe `.it-card-inline` e avendo cura di raccogliere tutti i contenuti di testo e interattivi in un contenitore `.it-card-inline-content`. 
+
+Come negli altri casi l'immagine segue sempre questo contenitore, ed è possibile invertirne l'ordine solo visivo usando la classe `.it-card-inline-reverse`
+
+{% comment %}Example name: Card eventi inline orizzontali{% endcomment %}
+{% capture example %}
+<div class="row">
+  <div class="col-12 col-md-12 mb-3 mb-md-4 col-lg-10 col-xl-8">
+    <!--start it-card-->
+    <article class="it-card it-card-inline it-card-image rounded shadow-sm border">
+     <!--card first child is all the card content: title (link) + body + footer -->
+      <div class="it-card-inline-content">
+        <h3 class="it-card-title no_toc">
+          <a href="#">Titolo evento</a>
+        </h3>
+        <div class="it-card-body">
+        <p class="it-card-subtitle"><span class="visually-hidden">Data evento:</span> <time datetime="08-19">19 agosto</time>, <span class="visually-hidden">Orario:</span>  <time>11:30</time>–<time>13:00</time></p>
+          <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
+        </div>
+        <footer class="it-card-related it-card-footer">
+          <div class="it-card-taxonomy">
+            <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
+          </div>
+          <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
+        </footer>
+        <div class="it-card-footer" aria-label="Link correlati:">
+          <a href="#" class="it-card-link">Iscriviti all'evento</a>
+        </div>
+      </div>
+      <!--card second child is the image (optional)-->
+      <div class="it-card-image-wrapper">
+        <div class="ratio ratio-1x1">
+          <figure class="figure img-full">
+            <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+          </figure>
+        </div>
+      </div>
+    </article>
+    <!--end it-card-->
+  </div>
+</div>
+<div class="row">
+  <div class="col-12 col-md-12 mb-3 mb-md-4 col-lg-10 col-xl-8">
+    <!--start it-card-->
+    <article class="it-card it-card-inline it-card-inline-reverse it-card-image rounded shadow-sm border">
+     <!--card first child is all the card content: title (link) + body + footer -->
+      <div class="it-card-inline-content">
+        <h3 class="it-card-title no_toc">
+          <a href="#">Titolo evento</a>
+        </h3>
+        <div class="it-card-body">
+        <p class="it-card-subtitle">Dal 4 al 6 agosto</p>
+          <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
+        </div>
+        <footer class="it-card-related it-card-footer">
+          <div class="it-card-taxonomy">
+            <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
+          </div>
+          <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
+        </footer>
+        <div class="it-card-footer" aria-label="Link correlati:">
+          <button type="button" class="btn btn-outline-secondary">Compila il form di iscrizione</button>
+        </div>
+      </div>
+      <!--card second child is the image (optional)-->
+      <div class="it-card-image-wrapper">
+        <div class="ratio ratio-1x1">
+          <figure class="figure img-full">
+            <img src="https://placeholderimage.eu/api/nature/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+          </figure>
+        </div>
       </div>
     </article>
     <!--end it-card-->
@@ -508,7 +699,7 @@ Per la gestione delle **altezze** in caso di gruppi di card, sono disponibili le
 ## Appendice: Migrazione dalla vecchia sintassi
 
 
-## —————
+## ————— DA QUI È ANCORA DA SISTEMARE ————  
 
 
 
@@ -592,13 +783,13 @@ Questa card dimostra la struttura completa con tutti gli elementi: titolo con ic
           <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
           <ul class="it-card-chips chips-list" aria-label="Argomenti correlati: ">
             <li class="list-item"><a class="chip chip-simple chip-sm" href="#">
-              <span class="visually-hidden">Argomento: </span><span class="chip-label">Sviluppo interfaccia</span>
+              <span class="visually-hidden">Argomento: </span><span class="chip-label">Argomento 1</span>
             </a></li>
             <li class="list-item"><a class="chip chip-simple chip-sm" href="#">
-              <span class="visually-hidden">Argomento: </span><span class="chip-label">Open source</span>
+              <span class="visually-hidden">Argomento: </span><span class="chip-label">Argomento 2</span>
             </a></li>
             <li class="list-item"><a class="chip chip-simple chip-sm" href="#">
-              <span class="visually-hidden">Argomento: </span><span class="chip-label">Progettazione interfaccia</span>
+              <span class="visually-hidden">Argomento: </span><span class="chip-label">Argomento 3</span>
             </a></li>
           </ul>
         </div>
