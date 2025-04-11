@@ -7,10 +7,10 @@ toc: true
 ---
 
 {% capture callout %}
-#### Nuovo componente Card
-È disponibile il nuovo componente Card — previsto dal prossimo rilascio di UI Kit Italia — utile per standardizzare le varianti a valle dei lavori sul sito Designers Italia e sui modelli standard per enti specifici, con un occhio di riguardo sul profilo dell'accessibilità by design. **Il componente descritto in questa pagina è deprecato e gli stili CSS/SCSS saranno rimossi dalla prossima versione maggiore.** 
+#### Deprecato: c'è un nuovo componente card
+È disponibile una nuova versione del componente, realizzata a valle dei lavori sul sito Designers Italia e sui modelli standard per enti specifici, con un occhio di riguardo a curarne il profilo dell'accessibilità by design. **Il componente descritto in questa pagina è quindi deprecato in tutte le sue varianti, le classi di stile saranno rimosse dalla prossima versione maggiore.** 
 
-[Scopri le nuove Card](../card/)
+[Usa le nuove card](../card/)
 
 {% endcapture %}{% include callout.html content=callout type="danger" %}
 

@@ -7,34 +7,130 @@ toc: true
 ---
 
 ## Introduzione
-Le card sono contenitori flessibili e versatili per organizzare e presentare contenuti strutturati in modo coerente. Questo componente utilizza la classe base `.it-card` con vari modificatori per adattarsi a diversi contesti e necessità.
+Le card sono contenitori flessibili e versatili per organizzare e presentare contenuti strutturati in modo coerente, adattabili a diversi contesti e necessità.
+
+Aiutano a presentare un gruppo di contenuti correlati, come articoli o sezioni di un sito web e permettono di continuare la navigazione verso le rispettive pagine di dettaglio.
 
 {% capture callout %}
-#### Nuovo componente Card
-Le nuove card di Bootstrap Italia utilizzano la classe `.it-card` e relativi modificatori come `.it-card-title` e `.it-card-body`. Le classi di stile legacy originarie di Bootstrap `.card`, `.card-...`, **saranno mantenuti solo fino al prossimo rilascio maggiore per permettere una migrazione graduale**. 
+#### Questo è un nuovo componente card
+Queste card usano la classe `.it-card` e relativi modificatori. Le classi legacy originarie di Bootstrap `.card` **saranno mantenute fino al prossimo rilascio maggiore per permettere una migrazione graduale**. 
 
 [Vai alla documentazione legacy](../card-old/)
 {% endcapture %}{% include callout.html content=callout type="warning" %}
 
-## Struttura base
-La **card** è implementata come elemento `article` con un titolo (heading) `.it-card-title` come primo elemento figlio.
+## La struttura base della card
+Nota bene: negli esempi seguenti le card sono all’interno di colonne Bootstrap. 
+L’inizio della card vera e propria è segnalato dal commento `<!--start it-card-->`.
 
-Per la gestione delle altezze, specialmente in layout affiancati, sono disponibili le classi: 
+Esempio base con immagine, descrizione e data:
+
+{% comment %}Example name: Card semplice{% endcomment %}
+{% capture example %}
+<div class="row">
+  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+    <!--start it-card-->
+    <article class="it-card it-card-image rounded shadow-sm border">
+      <!--card first child is the title (link)-->
+      <h3 class="it-card-title no_toc">
+        <a href="#">Titolo del contenuto</a>
+      </h3>
+      <!--card second child is the image (optional)-->
+      <div class="it-card-image-wrapper">
+        <div class="ratio ratio-16x9">
+          <figure class="figure img-full">
+            <img src="https://images.unsplash.com/photo-1595878715977-2e8f8df18ea8?q=80&w=1200" alt="Descrizione immagine se ha senso nel contesto, sennò marcare con decorativa lasciando l'alt applicato ma vuoto.">
+          </figure>
+        </div>
+      </div>
+      <!--card body content-->
+      <div class="it-card-body">
+        <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
+      </div>
+      <!--finally the card footer metadata-->
+      <footer class="it-card-related it-card-footer">
+        <time class="it-card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">22 aprile, {{ 'now' | date: "%Y" }}</time>
+      </footer>
+    </article>
+    <!--end it-card-->
+  </div>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+La card è un contenitore con **semantica** `article`, con un titolo (heading) con classe `.it-card-title` come primo elemento figlio.
+
+{% capture callout %}
+
+#### Accessibilità titoli
+
+Negli esempi è stato utilizzato il tag `h3` per il titolo delle card. <br>
+Utilizzare il tag `h` corretto a seconda del contesto.
+
+{% endcapture %}{% include callout.html content=callout type="accessibility" %}
+
+Per inserire un'**immagine** è disponibile la classe `.it-card-image` da applicare alla card. L'immagine segue sempre l'elemento titolo, l'ordine di visualizzazione è invertito in automatico. 
+
+Segue il **corpo** della card `.it-card-body`, che può contenere diversi contenuti di approfondimento a seconda del contesto d'uso. 
+
+Gli eventuali **metadati** (ad esempio categorie, argomenti e date) sono presentati in un elemento `footer` con classe `.it-card-related`. Questo può vivere nel corpo della card, oppure, seguirlo aggiungendo la classe `.it-card-footer` in modo da attaccarlo al bordo inferiore nei casi di card con altezza fissa.
+
+## Card per la pubblicazione di contenuti
+
+### Card editoriali standard
+
+### Card inline orizzontali
+
+### Card per eventi
+
+## Card informative e di servizio
+
+### Card per servizi e bandi
+
+### Card per documenti e allegati
+
+### Card per media (video, audio)
+
+## Card per entità
+
+### Card per profili personali
+
+### Card per luoghi
+
+## Personalizzazioni e stili
+
+### Bordi e ombre
+
+### Immagini e icone
+
+### ...
+
+## Organizzazione e layout
+
+### Gruppi di card
+
+### Layout responsive
+
+## Accessibilità
+
+### Struttura semantica
+
+### Metadati accessibili
+
+### Interazioni accessibili
+
+## Struttura completa di riferimento
+
+## Funzionalità future (coming soon)
+
+## Appendice: Migrazione dalla vecchia sintassi
+
+
+## —————
+
+
+Per la gestione delle **altezze** in caso di gruppi di card, sono disponibili le classi: 
 - `.it-card-height-auto` (altezza basata sul contenuto) 
 - `.it-card-height-full` (occupa tutto lo spazio disponibile)
 
-### Titolo ed elementi principali
-Si consiglia di implementare il **titolo** (`.it-card-title`) come elemento cliccabile principale, evitando di distribuire collegamenti in tutta la card.
-
-Per aggiungere un'icona a fianco del titolo, utilizzare la classe `.it-card-title-icon`.
-
-Quando è presente un'immagine, applicare la classe `.it-card-image` alla card. L'immagine deve seguire l'elemento `.it-card-title` nel markup. L'ordine di visualizzazione viene invertito tramite CSS (applicando `order: -1` al contenitore dell'immagine), mantenendo però la corretta struttura semantica nel DOM.
-
-Il corpo della card deve essere contenuto in un elemento con classe `.it-card-body`, che applica le opportune spaziature. È possibile utilizzare più elementi `.it-card-body` per separare blocchi di contenuto, come ad esempio liste `.list-group`.
-
-### Metadati e piè di pagina
-
-I **metadati** della card (categorie, tag e date) devono essere raggruppati in un elmento `footer`con classe `.it-card-related`. Questo elemento può essere contenuto all'interno di `.it-card-body` oppure, aggiungendo la classe `.it-card-footer`, può essere visualizzato separatamente in fondo alla card.
 
 La struttura dei metadati include:
 
@@ -45,6 +141,21 @@ La struttura dei metadati include:
 La classe `.it-card-footer` può essere usata anche per creare uno spazio dedicato a collegamenti o pulsanti secondari.
 
 Per un effetto decorativo, è disponibile la classe `.it-card-border-top` (con varianti di colore `.it-card-border-top-COLORE`). Questa classe non deve essere utilizzata per comunicare significato semantico, ma solo come elemento visivo.
+
+
+
+
+
+### Titolo ed elementi principali
+Si consiglia di implementare il **titolo** (`.it-card-title`) come elemento cliccabile principale, evitando di distribuire collegamenti in tutta la card.
+
+Per aggiungere un'icona a fianco del titolo, utilizzare la classe `.it-card-title-icon`.
+
+Quando è presente un'immagine, applicare la classe `.it-card-image` alla card. L'immagine deve seguire l'elemento `.it-card-title` nel markup. L'ordine di visualizzazione viene invertito tramite CSS (applicando `order: -1` al contenitore dell'immagine), mantenendo però la corretta struttura semantica nel DOM.
+
+Il corpo della card deve essere contenuto in un elemento con classe `.it-card-body`, che applica le opportune spaziature. È possibile utilizzare più elementi `.it-card-body` per separare blocchi di contenuto, come ad esempio liste `.list-group`.
+
+
 
 {% capture callout %}
 #### Accessibilità
