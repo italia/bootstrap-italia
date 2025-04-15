@@ -36,7 +36,6 @@ Permette di includere **immagine e testo descrittivo** per una introduzione ai c
 
 {% comment %}Example name: Completo{% endcomment %}
 {% capture example %}
-<!-- navbar -->
 <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Menu principale">
   <button type="button" aria-label="Mostra o nascondi il menu" class="custom-navbar-toggler" aria-controls="menu" aria-expanded="false" data-bs-toggle="navbarcollapsible" data-bs-target="#navbar-A">
       <span>
@@ -143,12 +142,12 @@ Permette di includere **immagine e testo descrittivo** per una introduzione ai c
               <span>Megamenu 2</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
           </button>
           <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-completo-A2">
-            <div class="megamenu pb-5 pt-3 py-lg-0">
+            <div class="megamenu">
               <div class="row">
-                <div class="col-xs-12 col-lg-4 px-0">
+                <div class="col-xs-12 col-lg-4">
                   <div class="row">
-                    <div class="col-12 it-vertical it-description pb-lg-3">
-                      <div class="description-content ps-4 ps-sm-5 ms-3">
+                    <div class="col-12 it-vertical it-description">
+                      <div class="description-content">
                         <div class="ratio ratio-21x9 lightgrey-bg-a1 mb-4 rounded">
                           <figure class="figure">
                             <img src="https://placehold.co/560x240/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Segnaposto">
@@ -227,6 +226,8 @@ Permette di includere **immagine e testo descrittivo** per una introduzione ai c
   </div>
 </nav>
 {% endcapture %}{% include example.html content=example %}
+
+<!--
 
 ### Completo scuro desktop
 
@@ -447,6 +448,8 @@ Il megamenu prende il tema colori dark su mobile se è dentro un `<nav>` che ha 
   </div>
 </nav>
 {% endcapture %}{% include example.html content=example %}
+
+-->
 
 ## Megamenu base
  
