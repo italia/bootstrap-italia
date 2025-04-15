@@ -31,7 +31,7 @@
   --#{$prefix}dropdown-inner-border-radius: var(--#{$prefix}radius-smooth);
   --#{$prefix}dropdown-divider-bg: var(--#{$prefix}color-border-subtle);
   --#{$prefix}dropdown-divider-margin-y: var(--#{$prefix}spacing-xxs);
-  --#{$prefix}dropdown-box-shadow: 0 20px 30px 5px hsla(0, 0%, 0%, 0.05);
+  --#{$prefix}dropdown-box-shadow: var(--#{$prefix}elevation-medium);
   --#{$prefix}dropdown-link-color: var(--#{$prefix}color-text-primary);
   --#{$prefix}dropdown-link-hover-color: var(--#{$prefix}color-text-primary-hover);
   --#{$prefix}dropdown-link-active-color: var(--#{$prefix}color-text-primary-active);
@@ -62,6 +62,7 @@
   background-clip: padding-box;
   @include font-size(var(--#{$prefix}dropdown-font-size));
   @include box-shadow(var(--#{$prefix}dropdown-box-shadow));
+  box-shadow: var(--#{$prefix}dropdown-box-shadow);
 
   @if $dropdown-padding-y == 0 {
     > .dropdown-item:first-child,

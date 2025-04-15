@@ -147,7 +147,6 @@
   //
   
   .dropdown-menu {
-    padding-top: 0;
 
     a.it-heading-link,
     a.it-footer-link {
@@ -161,9 +160,9 @@
     }
 
     .link-list-wrapper {
-      margin-bottom: var(--#{$prefix}spacing-m);
-      padding-right: var(--#{$prefix}spacing-m);
-      padding-left: var(--#{$prefix}spacing-m);
+      // margin-bottom: var(--#{$prefix}spacing-m);
+      // padding-right: var(--#{$prefix}spacing-m);
+      // padding-left: var(--#{$prefix}spacing-m);
 
       ul li a {
         &.list-item.active {
@@ -191,14 +190,14 @@
   padding-top: var(--#{$prefix}navbar-brand-padding-y);
   padding-bottom: var(--#{$prefix}navbar-brand-padding-y);
   color: var(--#{$prefix}navbar-brand-color);
-  text-decoration: if($link-decoration == none, null, none);
+  text-decoration: none;
   white-space: nowrap;
   @include font-size(var(--#{$prefix}navbar-brand-font-size));
 
   &:hover,
   &:focus {
     color: var(--#{$prefix}navbar-brand-hover-color);
-    text-decoration: if($link-hover-decoration == underline, none, null);
+    text-decoration: underline;
   }
 }
 
@@ -369,6 +368,12 @@
           border-bottom: var(--#{$prefix}navbar-link-border-size) solid transparent;
         }
 
+        @include media-breakpoint-up(lg) {
+          &:hover {
+            color: var(--#{$prefix}color-text-inverse);
+          }
+        }
+
         &.active {
           border-left: var(--#{$prefix}navbar-link-border-size) solid var(--#{$prefix}navbar-link-active-bar-color);
           @include media-breakpoint-up(lg) {
@@ -389,10 +394,6 @@
 
     .dropdown-menu {
       width: 100%; // make sure it is full width
-      padding-bottom: 0;
-      @include media-breakpoint-up(lg) {
-        padding-bottom: var(--link-list-footer-distance-bottom);
-      }
     }
   }
 
