@@ -68,6 +68,7 @@
     width: var(--#{$prefix}header-search-button-size);
     height: var(--#{$prefix}header-search-button-size);
     border-radius: var(--#{$prefix}radius-rounded);
+    background-color: transparent;
     @include media-breakpoint-up(md) {
       margin-left: var(--#{$prefix}icon-spacing);
       background-color: var(--#{$prefix}header-search-button-background);
