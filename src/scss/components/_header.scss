@@ -33,8 +33,7 @@
   }
   @include media-breakpoint-up(lg) {
     --#{$prefix}header-brand-size: 4.5rem; // 72px
-    --#{$prefix}header-brand-title-size: var(--#{$prefix}heading-3-font-size-l);
-    --#{$prefix}header-brand-tagline-size: var(--#{$prefix}body-font-size-l);
+    --#{$prefix}header-brand-title-size: var(--#{$prefix}heading-3-font-size);
     --#{$prefix}header-center-height: 7.5rem; // 120px
     --#{$prefix}header-nav-text-color: var(--#{$prefix}color-text-inverse);
   }

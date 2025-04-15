@@ -51,6 +51,7 @@
       padding: 0.5rem 0;
       color: var(--#{$prefix}header-slim-text-color);
       font-size: var(--#{$prefix}header-slim-font-size);
+      text-decoration: none;
       &[aria-expanded='true'] {
         & > .icon:last-of-type {
           transform: scaleY(-1);
@@ -70,7 +71,6 @@
   .header-slim-right-zone {
     display: flex;
     align-items: center;
-    align-self: flex-start;
   }
 
   // Secondary nav
@@ -137,4 +137,11 @@
 .header-slim-right-zone,
 .it-access-top-wrapper {
   margin-left: var(--#{$prefix}spacing-m);
+}
+
+.it-header-slim-right-zone {
+  .btn-primary:hover,
+  a.btn-primary:hover {
+    --#{$prefix}btn-background: var(--#{$prefix}color-background-primary-deep); // Override default hover color
+  }
 }

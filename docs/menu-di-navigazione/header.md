@@ -441,7 +441,7 @@ Per cambiare tema all'header centrale è sufficiente aggiungere la classe `theme
                 <!-- megamenu -->
                 <li class="nav-item dropdown megamenu">
                   <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-1" data-focus-mouse="false">
-                      <span>Megamenu</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
+                      <span>Megamenu</span><svg role="img" class="icon icon-xs"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
                   </button>
                   <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-1">
                     <div class="megamenu pb-5 pt-3 py-lg-0">
@@ -590,7 +590,7 @@ Per modificare il tema dell'Header Nav è sufficiente aggiungere una o tutte e d
                 <!-- megamenu -->
                 <li class="nav-item dropdown megamenu">
                   <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-2" data-focus-mouse="false">
-                      <span>Megamenu</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
+                      <span>Megamenu</span><svg role="img" class="icon icon-xs"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
                   </button>
                   <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-2">
                     <div class="megamenu pb-5 pt-3 py-lg-0">
@@ -727,7 +727,7 @@ Per modificare il tema dell'Header Nav è sufficiente aggiungere una o tutte e d
                 <!-- megamenu -->
                 <li class="nav-item dropdown megamenu">
                   <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-3" data-focus-mouse="false">
-                      <span>Megamenu</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
+                      <span>Megamenu</span><svg role="img" class="icon icon-xs"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
                   </button>
                   <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-3">
                     <div class="megamenu pb-5 pt-3 py-lg-0">
@@ -866,7 +866,7 @@ Per modificare il tema dell'Header Nav è sufficiente aggiungere una o tutte e d
                 <!-- megamenu -->
                 <li class="nav-item dropdown megamenu">
                   <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-4" data-focus-mouse="false">
-                      <span>Megamenu</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
+                      <span>Megamenu</span><svg role="img" class="icon icon-xs"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
                   </button>
                   <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-4">
                     <div class="megamenu pb-5 pt-3 py-lg-0">
@@ -1149,7 +1149,7 @@ Al menu di navigazione principale può essere aggiunto anche un menu di navigazi
                     <!-- megamenu -->
                     <li class="nav-item dropdown megamenu">
                       <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-5" data-focus-mouse="false">
-                          <span>Megamenu</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
+                          <span>Megamenu</span><svg role="img" class="icon icon-xs"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
                       </button>
                       <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-5">
                         <div class="megamenu pb-5 pt-3 py-lg-0">
@@ -1390,7 +1390,7 @@ Verrà creata un'ombra per enfatizzare l'Header rispetto alla pagina in cui è c
                     <!-- megamenu -->
                     <li class="nav-item dropdown megamenu">
                       <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-6" data-focus-mouse="false">
-                          <span>Megamenu</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
+                          <span>Megamenu</span><svg role="img" class="icon icon-xs"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
                       </button>
                       <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-6">
                         <div class="megamenu pb-5 pt-3 py-lg-0">
