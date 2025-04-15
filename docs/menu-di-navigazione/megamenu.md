@@ -58,13 +58,13 @@ Permette di includere **immagine e testo descrittivo** per una introduzione ai c
               <span>Megamenu 1 (attivo)</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
           </button>
           <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-completo-A1">
-            <div class="megamenu pb-5 pt-3 py-lg-0">
+            <div class="megamenu">
               <div class="row">
-                <div class="col-xs-12 col-lg-4 px-0">
+                <div class="col-xs-12 col-lg-4">
                   <div class="row">
-                    <div class="col-12 it-vertical it-description pb-lg-3">
-                      <div class="description-content ps-4 ps-sm-5 ms-3">
-                        <div class="ratio ratio-21x9 lightgrey-bg-a1 mb-4 rounded">
+                    <div class="col-12 it-vertical it-description">
+                      <div class="description-content">
+                        <div class="ratio ratio-21x9 mb-4 rounded">
                           <figure class="figure">
                             <img src="https://placehold.co/560x240/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Segnaposto">
                           </figure>
@@ -254,13 +254,13 @@ Il megamenu prende il tema colori dark su desktop se è dentro un `<nav>` che ha
               <span>Megamenu</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
           </button>
           <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-completo-B">
-            <div class="megamenu pb-5 pt-3 py-lg-0">
+            <div class="megamenu">
               <div class="row">
-                <div class="col-xs-12 col-lg-4 px-0">
+                <div class="col-xs-12 col-lg-4">
                   <div class="row">
-                    <div class="col-12 it-vertical it-description pb-lg-3">
-                      <div class="description-content ps-4 ps-sm-5 ms-3">
-                        <div class="ratio ratio-21x9 lightgrey-bg-a1 mb-4 rounded">
+                    <div class="col-12 it-vertical it-description">
+                      <div class="description-content">
+                        <div class="ratio ratio-21x9 mb-4 rounded">
                           <figure class="figure">
                             <img src="https://placehold.co/560x240/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Segnaposto">
                           </figure>
@@ -364,13 +364,13 @@ Il megamenu prende il tema colori dark su mobile se è dentro un `<nav>` che ha 
               <span>Megamenu</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
           </button>
           <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-completo-C">
-            <div class="megamenu pb-5 pt-3 py-lg-0">
+            <div class="megamenu">
               <div class="row">
-                <div class="col-xs-12 col-lg-4 px-0">
+                <div class="col-xs-12 col-lg-4">
                   <div class="row">
-                    <div class="col-12 it-vertical it-description pb-lg-3">
-                      <div class="description-content ps-4 ps-sm-5 ms-3">
-                        <div class="ratio ratio-21x9 lightgrey-bg-a1 mb-4 rounded">
+                    <div class="col-12 it-vertical it-description">
+                      <div class="description-content">
+                        <div class="ratio ratio-21x9 mb-4 rounded">
                           <figure class="figure">
                             <img src="https://placehold.co/560x240/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Segnaposto">
                           </figure>
@@ -474,7 +474,7 @@ Variante base che può contenere liste di link organizzate in tre colonne ed eve
               <span>Megamenu</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
           </button>
           <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-base-D">
-            <div class="megamenu pb-5 pt-3 py-lg-0">
+            <div class="megamenu">
               <div class="row">
                 <div class="col-12">
                   <div class="row">
@@ -588,7 +588,7 @@ Come nella variante completa è possibile aggiungere un link "Esplora la sezione
               <span>Megamenu</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
           </button>
           <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-base-E">
-            <div class="megamenu pb-5 pt-3 py-lg-0">
+            <div class="megamenu">
               <div class="row">
                 <div class="col-12">
                   <div class="it-heading-link-wrapper">
@@ -707,7 +707,7 @@ Nel caso le voci da mostrare fossero numerose, è possibile aggiungere un link "
               <span>Megamenu</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
           </button>
           <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-base-F">
-            <div class="megamenu pb-5 pt-3 py-lg-0">
+            <div class="megamenu">
               <div class="row">
                 <div class="col-12">
                   <div class="row">
@@ -846,7 +846,7 @@ Questi seguono le liste di link, posizionati in basso o in una colonna destra, a
               <span>Megamenu</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
           </button>
           <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-base-G">
-            <div class="megamenu pb-5 pt-3 py-lg-0">
+            <div class="megamenu">
               <div class="row">
                 <div class="col-12">
                   <div class="row">
@@ -924,12 +924,12 @@ Questi seguono le liste di link, posizionati in basso o in una colonna destra, a
                     </div>
                   </div>
                   <div class="it-footer-link-wrapper">
-                    <div class="d-flex flex-column flex-lg-row justify-content-around">
-                      <a class="it-footer-link" href="#">
+                    <div class="d-flex flex-column flex-lg-row">
+                      <a class="it-footer-link flex-grow-1" href="#">
                         <svg class="icon icon-sm me-2" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-bookmark"></use></svg>
                         <span>Call to action 1</span>
                       </a>
-                      <a class="it-footer-link" href="#">
+                      <a class="it-footer-link flex-grow-1" href="#">
                         <svg class="icon icon-sm me-2" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-bookmark"></use></svg>
                         <span>Call to action 2</span>
                       </a>
@@ -970,7 +970,7 @@ Questi seguono le liste di link, posizionati in basso o in una colonna destra, a
               <span>Megamenu</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
           </button>
           <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-base-H">
-            <div class="megamenu pb-5 pt-3 py-lg-0">
+            <div class="megamenu">
               <div class="row">
                 <div class="col-12 col-lg-8">
                   <div class="row">
