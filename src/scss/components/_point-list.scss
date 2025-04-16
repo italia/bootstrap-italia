@@ -41,7 +41,8 @@
         text-transform: uppercase;
       }
 
-      @each $color, $value in $theme-colors {
+      @each $color,
+      $value in $theme-colors {
         &.point-list-#{$color} {
           color: $value;
           border-color: $value;
@@ -58,7 +59,7 @@
       margin-left: 2em;
       align-self: center;
 
-      & > * {
+      &>* {
         width: 100%;
       }
     }
@@ -89,6 +90,7 @@
       }
     }
   }
+
   //Tablet horizontal / small desktop
   @include media-breakpoint-up(lg) {
     &.point-list-step-wrapper {
