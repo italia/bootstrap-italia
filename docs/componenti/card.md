@@ -645,142 +645,75 @@ Come negli altri casi l'immagine segue sempre questo contenitore, ed è possibil
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-## Card informative e di servizio
-
-### Card per servizi e bandi
-
-Per aggiungere un'icona a fianco del titolo, utilizzare la classe `.it-card-title-icon`.
-
-### Card per documenti e allegati
-
 ### Card per media (video, audio)
 
-## Card per entità
-
-Per un effetto decorativo, è disponibile la classe `.it-card-border-top` (con varianti di colore `.it-card-border-top-COLORE`). Questa classe non deve essere utilizzata per comunicare significato semantico, ma solo come elemento visivo.
-
-### Card per profili personali
-
-### Card per luoghi
-
-## Personalizzazioni e stili
-
-### Bordi e ombre
-
-### Immagini e icone
-
-### Altezze delle card
-
-Per la gestione delle **altezze** in caso di gruppi di card, sono disponibili le classi: 
-- `.it-card-height-auto` (altezza basata sul contenuto) 
-- `.it-card-height-full` (occupa tutto lo spazio disponibile)
-
-### ...
-
-## Organizzazione e layout
-
-### Gruppi di card
-
-
-### Layout responsive
-
-## Accessibilità
-
-### Struttura semantica
-
-### Metadati accessibili
-
-### Interazioni accessibili
-
-## Struttura completa di riferimento
-
-## Funzionalità future (coming soon)
-
-## Appendice: Migrazione dalla vecchia sintassi
-
-
-## ————— DA QUI È ANCORA DA SISTEMARE ————  
-
-
-
-
-
-
-
-
-
+Le card possono essere usate anche per presentare contenuti media tipo video o audio, che rimandano a pagine di dettaglio oppure direttamente su piattaforme terze. 
+Anche in questo caso è bene comunicare la tipologia del contenuto e l'eventuale uscita dal sito stesso. Per farlo è possibile anche aggiungere un'icona a fianco del titolo, usando la classe `.it-card-title-icon`.
 
 {% capture callout %}
-#### Accessibilità
-Se il titolo `.it-card-title` non è il primo elemento dell'`article`, è necessario collegarlo con `aria-labelledby="ID_TITOLO"` e aggiungere `id="ID_TITOLO"` al titolo stesso.
 
-I titoli sono preferibilmente `h3`, mentre sottotitoli o testi brevi dovrebbero essere paragrafi semplici. La gerarchia dei titoli deve adattarsi al contesto in cui la card è inserita.
+#### Accessibilità link esterni
 
-L'uso dell'elemento **`article`** è una scelta semantica ponderata. Anche se non tutti i lettori di schermo lo supportano allo stesso modo, i più diffusi (JAWS, VoiceOver) lo interpretano correttamente, e altri (come NVDA) possono essere configurati per farlo. L'utilizzo di `article` e footer rende il markup più comprensibile e semanticamente strutturato.
+Negli esempi il `target` del link non è usato, nell'ottica di favorire la normale navigazione del browser. Se si rimanda a nuovi tab o finestre si deve comunicare all'utente in modo chiaro con un'icona di link esterno e un testo alternativo o nascosto che ne comunichi l'intento anche ai lettori di schermo.  
 
-Per i lettori di schermo, è importante aggiungere testi descrittivi per i **metadati**, nasconti con `.visually-hidden` (es. "Categoria correlata: ", "Argomento correlato: ") o applicati con `aria-label` (es. "Argomenti correlati: ").
-Valuta infine sempre attentamente nel contesto se gli elementi come le liste abbiano o meno bisogno di etichette `aria-label` o `aria-labelledby` per descriverne la funzione.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
-
-
-### Esempi di card completa
-
-Questa card dimostra la struttura completa con tutti gli elementi: titolo con icona, immagine, corpo del testo, autore, collegamenti, lista e metadati.
-
-
-{% comment %}Example name: Strutture complete card{% endcomment %}
+{% comment %}Example name: Card media video{% endcomment %}
 {% capture example %}
 <div class="row">
   <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
     <!--start it-card-->
-    <article class="it-card it-card-image it-card-border-top it-card-border-top-danger rounded shadow-sm border">
-      <!--first element is the title-->
+    <article class="it-card it-card-image rounded shadow-sm border">
+      <!--card first child is the title (link)-->
       <h3 class="it-card-title it-card-title-icon no_toc">
-        <a href="#">Titolo contenuto può essere anche lungo così o andare oltre</a>
-        <div><svg class="icon icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg></div>
+        <a href="#">Titolo contenuto video</a>
+        <div><svg class="icon icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-video"></use></svg></div>
       </h3>
-      <!--second element is the image if present-->
+      <!--card second child is the image (optional)-->
       <div class="it-card-image-wrapper">
         <div class="ratio ratio-16x9">
           <figure class="figure img-full">
-            <img src="https://placehold.co/357x190/0066cc/FFFFFF/?text=16x9" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+            <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
           </figure>
         </div>
       </div>
-      <!--follow the body-->
+      <!--card body content-->
       <div class="it-card-body">
-        <p class="it-card-subtitle">Sottotitolo o periodo</p>
-        <address class="it-card-signature">di Maria Verde</address>
         <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
-        <p class="it-card-text">Se ci fosse un secondo paragrafo <a href="#" class="it-card-link">con un link</a> questa è la resa visiva.</p>
-        <dl class="it-card-description-list">
-          <div>
-            <dt>Email:</dt>
-            <dd>me@mail.com</dd>
-          </div>
-          <div>
-            <dt>Tel:</dt>
-            <dd>340.4050600</dd>
-          </div>
-          <div>
-            <dt>Indirizzo:</dt>
-            <dd>Via della città, 5 - 00100 Città</dd>
-          </div>
-        </dl>
-        <p><a href="#" class="it-card-link">Un link dentro un `p` con tipografia responsive</a></p>
-        <ul role="list" class="list-group list-group-flush">
-          <li class="list-group-item"><a href="#" class="it-card-link">Un link `.it-card-link in una lista</a></li>
-          <li class="list-group-item"><a href="#">Un link normale sempre in lista</a></li>
-          <li class="list-group-item">Un item lista senza link</li>
-        </ul>
-        <a href="#" class="it-card-link">Un link sparso</a>
-        <a href="#" class="it-card-link">Un altro link</a>
-        <a href="#" class="btn btn-primary">Una azione</a>
       </div>
+      <!--finally the card footer metadata-->
       <footer class="it-card-related it-card-footer">
         <div class="it-card-taxonomy">
           <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
+        </div>
+        <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
+      </footer>
+    </article>
+    <!--end it-card-->
+  </div>
+  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+    <!--start it-card-->
+    <article class="it-card it-card-image rounded shadow-sm border">
+      <!--card first child is the title (link)-->
+      <h3 class="it-card-title it-card-title-icon no_toc">
+        <a href="#">Titolo contenuto video</a>
+        <div><svg class="icon icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-video"></use></svg></div>
+      </h3>
+      <!--card second child is the image (optional)-->
+      <div class="it-card-image-wrapper">
+        <div class="ratio ratio-16x9">
+          <figure class="figure img-full">
+            <img src="https://placeholderimage.eu/api/nature/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+          </figure>
+        </div>
+      </div>
+      <!--card body content-->
+      <div class="it-card-body">
+        <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
+      </div>
+      <!--finally the card footer metadata-->
+      <footer class="it-card-related it-card-footer">
+        <div class="it-card-taxonomy">
           <ul class="it-card-chips chips-list" aria-label="Argomenti correlati: ">
             <li class="list-item"><a class="chip chip-simple chip-sm" href="#">
               <span class="visually-hidden">Argomento: </span><span class="chip-label">Argomento 1</span>
@@ -793,11 +726,138 @@ Questa card dimostra la struttura completa con tutti gli elementi: titolo con ic
             </a></li>
           </ul>
         </div>
-        <time class="it-card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
+        <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
       </footer>
-      <div class="it-card-footer" aria-label="Azioni correlate:">
-        <button type="button" class="btn btn-outline-secondary">Azione secondaria</button>
-        <a href="#" class="it-card-link">Link secondario</a>
+    </article>
+    <!--end it-card-->
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+    <!--start it-card-->
+    <article class="it-card rounded shadow-sm border">
+      <!--card first child is the title (link)-->
+      <h3 class="it-card-title it-card-title-icon no_toc">
+        <a href="#">Titolo contenuto audio</a>
+        <div><svg class="icon icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-horn"></use></svg></div>
+      </h3>
+      <!--card body content-->
+      <div class="it-card-body">
+        <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
+      </div>
+      <!--finally the card footer metadata-->
+      <footer class="it-card-related it-card-footer">
+        <div class="it-card-taxonomy">
+          <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
+        </div>
+        <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
+      </footer>
+    </article>
+    <!--end it-card-->
+  </div>
+  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+    <!--start it-card-->
+    <article class="it-card rounded shadow-sm border">
+      <!--card first child is the title (link)-->
+      <h3 class="it-card-title it-card-title-icon no_toc">
+        <a href="#">Titolo contenuto audio</a>
+        <div><svg class="icon icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-horn"></use></svg></div>
+      </h3>
+      <!--card body content-->
+      <div class="it-card-body">
+        <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
+      </div>
+      <!--finally the card footer metadata-->
+      <footer class="it-card-related it-card-footer">
+        <div class="it-card-taxonomy">
+          <ul class="it-card-chips chips-list" aria-label="Argomenti correlati: ">
+            <li class="list-item"><a class="chip chip-simple chip-sm" href="#">
+              <span class="visually-hidden">Argomento: </span><span class="chip-label">Argomento 1</span>
+            </a></li>
+            <li class="list-item"><a class="chip chip-simple chip-sm" href="#">
+              <span class="visually-hidden">Argomento: </span><span class="chip-label">Argomento 2</span>
+            </a></li>
+            <li class="list-item"><a class="chip chip-simple chip-sm" href="#">
+              <span class="visually-hidden">Argomento: </span><span class="chip-label">Argomento 3</span>
+            </a></li>
+          </ul>
+        </div>
+        <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
+      </footer>
+    </article>
+    <!--end it-card-->
+  </div>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+#### Card per media video inline
+
+È possibile disporre le card media di tipo video in orizzontale usando la classe `.it-card-inline` e avendo cura di raccogliere tutti i contenuti di testo e interattivi in un contenitore `.it-card-inline-content`. 
+
+Come negli altri casi l'immagine segue sempre questo contenitore, ed è possibile invertirne l'ordine solo visivo usando la classe `.it-card-inline-reverse`
+
+{% comment %}Example name: Card eventi inline orizzontali{% endcomment %}
+{% capture example %}
+<div class="row">
+  <div class="col-12 col-md-12 mb-3 mb-md-4 col-lg-10 col-xl-8">
+    <!--start it-card-->
+    <article class="it-card it-card-inline it-card-image rounded shadow-sm border">
+     <!--card first child is all the card content: title (link) + body + footer -->
+      <div class="it-card-inline-content">
+        <h3 class="it-card-title it-card-title-icon no_toc">
+          <a href="#">Titolo contenuto video</a>
+          <div><svg class="icon icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-video"></use></svg></div>
+        </h3>
+        <div class="it-card-body">
+          <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
+        </div>
+        <footer class="it-card-related it-card-footer">
+          <div class="it-card-taxonomy">
+            <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
+          </div>
+          <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
+        </footer>
+      </div>
+      <!--card second child is the image (optional)-->
+      <div class="it-card-image-wrapper">
+        <div class="ratio ratio-1x1">
+          <figure class="figure img-full">
+            <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+          </figure>
+        </div>
+      </div>
+    </article>
+    <!--end it-card-->
+  </div>
+</div>
+<div class="row">
+  <div class="col-12 col-md-12 mb-3 mb-md-4 col-lg-10 col-xl-8">
+    <!--start it-card-->
+    <article class="it-card it-card-inline it-card-inline-reverse it-card-image rounded shadow-sm border">
+     <!--card first child is all the card content: title (link) + body + footer -->
+      <div class="it-card-inline-content">
+        <h3 class="it-card-title it-card-title-icon no_toc">
+          <a href="#">Titolo contenuto video</a>
+          <div><svg class="icon icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-video"></use></svg></div>
+        </h3>
+        <div class="it-card-body">
+          <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
+        </div>
+        <footer class="it-card-related it-card-footer">
+          <div class="it-card-taxonomy">
+            <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
+          </div>
+          <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
+        </footer>
+      </div>
+      <!--card second child is the image (optional)-->
+      <div class="it-card-image-wrapper">
+        <div class="ratio ratio-1x1">
+          <figure class="figure img-full">
+            <img src="https://placeholderimage.eu/api/nature/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+          </figure>
+        </div>
       </div>
     </article>
     <!--end it-card-->
@@ -805,120 +865,104 @@ Questa card dimostra la struttura completa con tutti gli elementi: titolo con ic
 </div>
 {% endcapture %}{% include example.html content=example %}
 
+## Card informative e di servizio
 
+Utili a fornire un’anteprima per pagine di dettaglio per servizi e bandi, oppure per rappresentare documenti e altri tipi di allegati. 
 
-## Varianti comuni
+{% capture callout %}
+#### Accessibilità titoli
+I titoli `.it-card-title` negli esempi di questo tipo sono `h4`. La gerarchia dei titoli deve adattarsi ovviamente al contesto in cui la card è inserita.
+{% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
-Ecco alcuni esempi di configurazioni frequenti per le card:
+### Card per servizi e bandi
 
-1. Card con collegamento secondario nel piede
-2. Card a tutta altezza (`.it-card-height-full`) con metadati a fine card
-3. Card "servizio/bando" con stato delle lavorazioni e pulsante di azione secondaria
-4. Card semplice di presentazione senza collegamenti
+Si consiglia di usare alternativamente un breve testo descrittivo `.it-card-text` o sottotitolo `.it-card-subtitle` per descrivere il contesto della card. 
 
-{% comment %}Example name: Strutture card{% endcomment %}
+È possibile integrare nell'elemento `footer` lo stato del servizio o bando con un componente chip, e l'eventuale data di scadenza usando lo spazio `it-card-date` e integrandolo con eventuale testo descrittivo come negli esempi che seguono. 
+
+{% capture callout %}
+
+#### Accessibilità date e orari
+
+Quando si presentano date di scadenza può essere indicato usare l'elemento `time` con l'appropriato attributo `datetime`. È in questo caso importante indicare a tutte le persone il loro ruolo di "Scadenza" dichiarandolo nel testo come negli esempi che seguono. Non usare solo il colore (negli esempi `.text-warning`) per veicolarne l'importanza. 
+
+È inoltre sempre consigliabile svolgere test di usabilità anche con utenti che utilizzato tecnologie assistive. 
+
+{% endcapture %}{% include callout.html content=callout type="accessibility" %}
+
+La classe `.it-card-footer` può essere usata anche per creare un ulteriore spazio dedicato a **collegamenti o pulsanti secondari** come negli esempi che seguono. Possono essere utili per quelle situazioni dove il collegamento principale della card, il titolo, porta a una pagina di approfondimento, ma è auspicabile dare direttamente l'accesso dalla card per esempio a iscrizioni o azioni dirette rispetto al contenuto. 
+
+È disponibile la classe `.it-card-link` per i collegamenti `a` usati nel corpo o nel footer della card. Questa classe applica il colore secondario.
+
+{% capture callout %}
+
+#### Accessibilità collegamenti secondari
+
+È importante ricordare di usare link con semantica `a` per presentare collegamenti di navigazione, e pulsanti con semantica `button` per azioni che avvengono in pagina come l'apertura di modali. 
+
+{% endcapture %}{% include callout.html content=callout type="accessibility" %}
+
+{% comment %}Example name: Card servizi{% endcomment %}
 {% capture example %}
 <div class="row">
   <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
     <!--start it-card-->
-    <article class="it-card it-card-image rounded border shadow-sm mb-3">
-      <h3 class="it-card-title no_toc">
-        <a href="#">Titolo h3</a>
-      </h3>
-      <div class="it-card-image-wrapper">
-        <div class="ratio ratio-16x9">
-          <figure class="figure img-full">
-            <img src="https://placehold.co/357x190/0066cc/FFFFFF/?text=16x9" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
-          </figure>
-        </div>
-      </div>
+    <article class="it-card rounded border shadow-sm mb-3">
+      <h4 class="it-card-title no_toc">
+        <a href="#">Titolo del servizio</a>
+      </h4>
       <div class="it-card-body">
-        <p class="it-card-subtitle">Sottotitolo o periodo</p>
         <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
+        <footer class="it-card-related">
+          <div class="it-card-taxonomy">
+            <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
+          </div>
+        </footer>
+      </div>
+    </article>
+    <!--end it-card-->
+  </div>
+  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+    <!--start it-card-->
+    <article class="it-card rounded border shadow-sm mb-3">
+      <h4 class="it-card-title no_toc">
+        <a href="#">Titolo del servizio</a>
+      </h4>
+      <div class="it-card-body">
+       <p class="it-card-subtitle">Sottotitolo del servizio</p>
+        <footer class="it-card-related">
+          <div class="it-card-taxonomy">
+            <div class="chip chip-simple chip-sm chip-success">
+              <span class="visually-hidden">Stato del servizio: </span><span class="chip-label">Attivo</span>
+            </div>
+          </div>
+        </footer>
       </div>
       <div class="it-card-footer" aria-label="Link correlati:">
-        <a href="#" class="it-card-link">Link secondario</a>
-        <a href="#" class="it-card-link">Altro link secondario</a>
-      </div>
-    </article>
-    <!--end it-card-->
-    <!--start it-card-->
-    <article class="it-card it-card-image rounded border shadow-sm">
-      <h3 class="it-card-title no_toc">
-        <a href="#">Titolo h3</a>
-      </h3>
-      <div class="it-card-image-wrapper">
-        <div class="ratio ratio-custom" style="--bs-aspect-ratio: 20%;">
-          <figure class="figure img-full">
-            <img src="https://placehold.co/357x190/0066cc/FFFFFF/?text=Custom-5x1" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
-          </figure>
-        </div>
-      </div>
-      <div class="it-card-body">
-        <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
+        <a href="#" class="it-card-link">Requisiti per l'accesso</a>
       </div>
     </article>
     <!--end it-card-->
   </div>
   <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
     <!--start it-card-->
-    <article class="it-card it-card-image it-card-height-full rounded border shadow-sm">
-      <h3 class="it-card-title no_toc">
-        <a href="#">Titolo h3</a>
-      </h3>
-      <div class="it-card-image-wrapper">
-        <div class="ratio ratio-21x9">
-          <figure class="figure img-full">
-            <img src="https://placehold.co/357x190/0066cc/FFFFFF/?text=21x9" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
-          </figure>
-        </div>
-      </div>
-      <div class="it-card-body">
-        <address class="it-card-signature">di Maria Verde</address>
-        <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
-      </div>
-      <footer class="it-card-related it-card-footer">
-        <time class="it-card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
-      </footer>
-    </article>
-    <!--end it-card-->
-  </div>
-  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
-    <!--start it-card-->
-    <article class="it-card rounded shadow-sm border mb-3">
-      <h4 class="it-card-title it-card-title-icon no_toc">
-        <a href="#">Titolo lungo ad esempio di bando a cui poter partecipare h4</a>
-        <div><svg class="icon icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg></div>
+    <article class="it-card rounded border shadow-sm mb-3">
+      <h4 class="it-card-title no_toc">
+        <a href="#">Titolo del bando</a>
       </h4>
       <div class="it-card-body">
-        <p class="it-card-subtitle">Sottotitolo o periodo</p>
-        <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
-      </div>
-      <footer class="it-card-related it-card-footer">
-        <div class="it-card-taxonomy">
-          <div class="chip chip-simple chip-sm chip-success">
-            <span class="visually-hidden">Stato della lavorazione: </span><span class="chip-label">Aperto</span>
+        <p class="it-card-subtitle">Sottotitolo del bando</p>
+        <footer class="it-card-related">
+          <div class="it-card-taxonomy">
+            <div class="chip chip-simple chip-sm chip-success">
+              <span class="visually-hidden">Stato del bando: </span><span class="chip-label">Aperto</span>
+            </div>
           </div>
-        </div>
-        <span class="it-card-date text-warning"><strong>Scadenza: </strong><time class="it-card-date text-warning" datetime="10/12/{{ 'now' | date: "%Y" }}">31 gennaio, {{ 'now' | date: "%Y" }}</time></span>
-      </footer>
-      <div class="it-card-footer" aria-label="Azioni correlate:">
-        <button type="button" class="btn btn-outline-secondary btn-icon">
-          <span>Azione secondaria</span>
-          <svg class="icon icon-secondary ms-1" aria-hidden="true"><use href="/dist/svg/sprites.svg#it-arrow-right"></use></svg>
-        </button>
+          <span class="it-card-date text-warning"><strong>Scadenza: </strong><time class="it-card-date text-warning" datetime="10/12/{{ 'now' | date: "%Y" }}">31 gennaio, {{ 'now' | date: "%Y" }}</time></span>
+        </footer>
       </div>
-    </article>
-    <!--end it-card-->
-    <!--start it-card-->
-    <article class="it-card rounded shadow-sm border">
-      <h4 class="it-card-title it-card-title-icon no_toc">
-        Titolo solo descrittivo un po' lungo ad esempio h4
-        <div><svg class="icon icon-secondary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg></div>
-      </h4>
-      <div class="it-card-body">
-        <p class="it-card-subtitle">Sottotitolo o periodo</p>
-        <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
+      <div class="it-card-footer" aria-label="Link correlati:">
+        <button type="button" class="btn btn-outline-secondary">Compila il form di candidatura</button>
       </div>
     </article>
     <!--end it-card-->
@@ -926,18 +970,88 @@ Ecco alcuni esempi di configurazioni frequenti per le card:
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-## Card di tipo profilo
+### Card per documenti e allegati
 
-Utili ad esempio per indicare schede personale. Si attivano con la classe `.it-card-profile`. È da notare che la testata della card è costruita con classi di stile dedicate come `.it-card-profile-header` per nome e ruolo. L'immagine di profilo sulla destra è visualizzata integrando il componente avatar in una delle sue varianti. 
+Le card per rappresentare documenti e allegati possono usare un'icona affiancata al titolo usando la classe `.it-card-title-icon`. 
 
-La lista di metadati del profilo è costruita utilizzando liste descrittive `.it-card-description-list` con ogni coppia di item`dd`-`dt` raccolta in un `div` contenitore. 
+La classe `.it-card-footer` può essere usata per creare un ulteriore spazio dedicato a **collegamenti secondari** come negli esempi che seguono. Possono essere utili per quelle situazioni dove il collegamento principale della card, il titolo, porta a una pagina di approfondimento della risorsa, ma è auspicabile dare direttamente l'accesso dalla card per esempio a scaricare la risorsa collegata.
+
+{% comment %}Example name: Card servizi{% endcomment %}
+{% capture example %}
+<div class="row">
+  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+    <!--start it-card-->
+    <article class="it-card rounded border shadow-sm mb-3">
+      <h4 class="it-card-title it-card-title-icon no_toc">
+        <a href="#">Titolo del documento</a>
+        <div><svg class="icon icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg></div>
+      </h4>
+      <div class="it-card-body">
+        <p class="it-card-text">Eventuale breve estratto descrittivo del documento.</p>
+        <footer class="it-card-related">
+          <div class="it-card-taxonomy">
+            <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
+          </div>
+        </footer>
+      </div>
+    </article>
+    <!--end it-card-->
+  </div>
+  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+    <!--start it-card-->
+    <article class="it-card rounded border shadow-sm mb-3">
+      <h4 class="it-card-title it-card-title-icon no_toc">
+        <a href="#">Titolo del documento</a>
+        <div><svg class="icon icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg></div>
+      </h4>
+      <div class="it-card-body">
+        <p class="it-card-text">Eventuale breve estratto descrittivo del documento.</p>
+        <footer class="it-card-related">
+          <div class="it-card-taxonomy">
+            <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
+          </div>
+        </footer>
+      </div>
+      <div class="it-card-footer">
+        <span class="me-2">Scarica come:</span> 
+        <a href="#" class="it-card-link">ODT (300Kb)<span class="visually-hidden">: Titolo del documento</span></a>
+        <a href="#" class="it-card-link">PDF (20Kb)<span class="visually-hidden">: Titolo del documento</span></a>
+        <a href="#" class="it-card-link">ODS (400Kb)<span class="visually-hidden">: Titolo del documento</span></a>
+      </div>
+    </article>
+    <!--end it-card-->
+  </div>
+  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+    <!--start it-card-->
+    <article class="it-card rounded border shadow-sm mb-3">
+      <h4 class="it-card-title it-card-title-icon no_toc">
+        <a href="#">Titolo del file allegato <span class="visually-hidden">(Formato ODT, 200Kb)</span></a>
+        <div><svg class="icon icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file-odt"></use></svg></div>
+      </h4>
+      <div class="it-card-body">
+        <p class="it-card-text" aria-hidden="true">Formato ODT, 200Kb</p>
+      </div>
+    </article>
+    <!--end it-card-->
+  </div>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+### Card per profili personali 
+Utili ad esempio per indicare schede personale o relatori a un evento. Si attivano con la classe `.it-card-profile`. È da notare che la testata della card è costruita con classi di stile dedicate come `.it-card-profile-header` per nome e ruolo. L'immagine di profilo sulla destra è visualizzata integrando il componente avatar in una delle sue varianti. 
+
+Per l'icona o l'immagine del profilo si usa il componente avatar nelle varianti `lg` o `xl`. 
+
+La lista di metadati del profilo è costruita utilizzando liste descrittive `.it-card-description-list` con ogni coppia di item `dd`-`dt` raccolta in un `div` contenitore. 
+
+Per un effetto decorativo, è disponibile la classe `.it-card-border-top` (con varianti di colore `.it-card-border-top-COLORE`). Questa classe non deve essere utilizzata per comunicare significato semantico, ma solo come eventuale elemento decorativo. 
 
 {% capture callout %}
 #### Accessibilità titoli
 I titoli `.it-card-profile-name` in questi esempi sono `h4`. La gerarchia dei titoli deve adattarsi ovviamente al contesto in cui la card è inserita.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
-{% comment %}Example name: Card profilo{% endcomment %}
+{% comment %}Example name: Card profilo con iniziali{% endcomment %}
 {% capture example %}
 
 <div class="row">
@@ -959,7 +1073,44 @@ I titoli `.it-card-profile-name` in questi esempi sono `h4`. La gerarchia dei ti
         <dl class="it-card-description-list">
           <div>
             <dt>Area:</dt>
-            <dd><a href="#">Nome dell'area di appartenenza</a></dd>
+            <dd><a class="it-card-link" href="#">Nome dell'area di appartenenza</a></dd>
+          </div>
+          <div>
+            <dt>Email:</dt>
+            <dd>me@mail.com</dd>
+          </div>
+          <div>
+            <dt>Tel:</dt>
+            <dd>340.4050600</dd>
+          </div>
+          <div>
+            <dt>Indirizzo:</dt>
+            <dd>Via della città, 5 - 00100 Città</dd>
+          </div>
+        </dl>
+      </div>
+    </article>
+    <!--end it-card-->
+  </div>
+  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+    <!--start it-card-->
+    <article class="it-card it-card-profile rounded shadow-sm border">
+      <div class="it-card-profile-header">
+        <div class="it-card-profile">
+          <h4 class="it-card-profile-name no_toc">
+            <a href="#">Nome Personale</a>
+          </h4>
+          <p class="it-card-profile-role">Ruolo nell'organizzazione</p>
+        </div>
+        <div class="avatar size-xl">
+          <p aria-hidden="true">NP</p>
+        </div>
+      </div>
+      <div class="it-card-body">
+        <dl class="it-card-description-list">
+          <div>
+            <dt>Area:</dt>
+            <dd><a class="it-card-link" href="#">Nome dell'area di appartenenza</a></dd>
           </div>
           <div>
             <dt>Email:</dt>
@@ -989,14 +1140,14 @@ I titoli `.it-card-profile-name` in questi esempi sono `h4`. La gerarchia dei ti
           <p class="it-card-profile-role">Ruolo nell'organizzazione</p>
         </div>
         <div class="avatar size-xl">
-          <p aria-hidden="true">NP</p>
+          <img src="https://randomuser.me/api/portraits/women/24.jpg" alt="">
         </div>
       </div>
       <div class="it-card-body">
         <dl class="it-card-description-list">
           <div>
             <dt>Area:</dt>
-            <dd><a href="#">Nome dell'area di appartenenza</a></dd>
+            <dd><a class="it-card-link" href="#">Nome dell'area di appartenenza</a></dd>
           </div>
           <div>
             <dt>Email:</dt>
@@ -1018,7 +1169,7 @@ I titoli `.it-card-profile-name` in questi esempi sono `h4`. La gerarchia dei ti
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-## Card di tipo luogo
+### Card per luoghi
 
 Utili ad esempio per indicare schede località. Si attivano con la classe `.it-card-site`. È da notare che la testata della card è costruita con classi di stile dedicate come `.it-card-place-header` per nome, tipologia ed eventuale indirizzo. 
 
@@ -1026,7 +1177,7 @@ Lo spazio per l'immagine sulla destra `.it-card-place-image` può essere usato a
 
 La lista di metadati del luogo è costruita utilizzando liste descrittive `.it-card-description-list` con ogni coppia di item`dd`-`dt` raccolta in un `div` contenitore. 
 
-È possibile combinare un piede con eventuali collegamenti o dettagli della mappa usando l'elemento `footer` con le classi dedicate `.it-card-related` e `it-card-footer`. Negli esempi è stato poi applicato un `.border-top` a questo elemento, opzionale.  
+È possibile combinare un piede con eventuali collegamenti o dettagli della mappa usando l'elemento `footer` con le classi dedicate `.it-card-related` e `it-card-footer`. Negll'esempio è stato applicato un `.border-top` a questo elemento, opzionale.  
 
 {% capture callout %}
 #### Accessibilità
@@ -1086,7 +1237,7 @@ I titoli `.it-card-place-name` in questi esempi sono `h4`. La gerarchia dei tito
         </div>
         <div class="it-card-place-image ratio ratio-1x1">
           <figure class="figure img-full">
-            <img src="https://placehold.co/357x190/F4FAFB/0066cc/?text=1x1" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+            <img src="https://placeholderimage.eu/api/monument/320/320" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
           </figure>
         </div>
       </div>
@@ -1124,11 +1275,118 @@ I titoli `.it-card-place-name` in questi esempi sono `h4`. La gerarchia dei tito
 {% endcapture %}{% include example.html content=example %}
 
 
+### Card con liste di contenuti affini
+È possibile integrare nel corpo della card delle liste strutturate di link usando le classi `.list-group`. 
 
+Da usare con molta parsimonia, questa possibilità si presta a creare liste di accesso a contenuti in evidenza laddove la card rappresentino un'intera sezione o vista dei contenuti di un sito web, come nel caso di card per argomenti in evidenza. Oppure, per esempio, indichino pagine di dettaglio utili alla partecipazione ad un evento. 
 
+{% capture callout %}
 
+#### Accessibilità: lista link correlati
 
-## Stili di presentazione
+È da valutare caso per caso l'applicazione di un'eventuale aria-label all'elemento `ul` che permetta di comprendere la natura di questi link ai lettori di schermo.
+
+{% endcapture %}{% include callout.html content=callout type="accessibility" %}
+
+È da valutare nei singoli casi l'uso del colore primario per questa lista di link, oppure l'applicazione del colore secondario usando la classe dedicata `.it-card-link`. 
+
+Questa possibilità si può combinare con le funzionalità del contenitore `.it-card-footer` per ospitare link e pulsanti di servizio.
+
+{% comment %}Example name: Card con liste di contenuti affini{% endcomment %}
+{% capture example %}
+<div class="row">
+  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+    <!--start it-card-->
+    <article class="it-card rounded shadow-sm border">
+      <!--card first child is the title (link)-->
+      <h3 class="it-card-title no_toc">
+        <a href="#">Argomento X</a>
+      </h3>
+      <!--card body content-->
+      <div class="it-card-body">
+        <p class="it-card-text">Descrizione breve dell'argomento in poche righe non troncate.</p>
+        <ul role="list" class="list-group list-group-flush" aria-label="Contenuti in evidenza:">
+          <li class="list-group-item"><a href="#" class="it-card-link">Titolo notizia affine</a></li>
+          <li class="list-group-item"><a href="#" class="it-card-link">Titolo media affine</a></li>
+          <li class="list-group-item"><a href="#" class="it-card-link">Altro titolo scheda affine</a></li>
+          <li class="list-group-item"><a href="#" class="it-card-link">Pagina profilo affine</a></li>
+        </ul>
+      </div>
+    </article>
+    <!--end it-card-->
+  </div>
+  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+    <!--start it-card-->
+    <article class="it-card it-card-image rounded shadow-sm border">
+      <!--card first child is the title (link)-->
+      <h3 class="it-card-title no_toc">
+        <a href="#">Argomento Y</a>
+      </h3>
+      <!--card second child is the image (optional)-->
+      <div class="it-card-image-wrapper">
+        <div class="ratio ratio-21x9">
+          <figure class="figure img-full">
+            <img src="https://placeholderimage.eu/api/nature/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+          </figure>
+        </div>
+      </div>
+      <!--card body content-->
+      <div class="it-card-body">
+        <p class="it-card-text">Descrizione breve dell'argomento in poche righe non troncate.</p>
+        <ul role="list" class="list-group list-group-flush" aria-label="Contenuti in evidenza:">
+          <li class="list-group-item"><a href="#">Titolo notizia affine</a></li>
+          <li class="list-group-item"><a href="#">Titolo media affine</a></li>
+          <li class="list-group-item"><a href="#">Altro titolo scheda affine</a></li>
+          <li class="list-group-item"><a href="#">Pagina profilo affine</a></li>
+        </ul>
+      </div>
+    </article>
+    <!--end it-card-->
+  </div>
+  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+    <!--start it-card-->
+    <article class="it-card it-card-image rounded shadow-sm border">
+      <!--card first child is the title (link)-->
+      <h3 class="it-card-title no_toc">
+        <a href="#">Titolo evento</a>
+      </h3>
+      <!--card second child is the image (optional)-->
+      <div class="it-card-image-wrapper">
+        <div class="ratio ratio-21x9">
+          <figure class="figure img-full">
+            <img src="https://placeholderimage.eu/api/monument/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+          </figure>
+        </div>
+      </div>
+      <!--card body content-->
+      <div class="it-card-body">
+        <p class="it-card-subtitle">Dal 17 al 22 novembre</p>
+        <p class="it-card-text">Descrizione breve dell'evento in poche righe non troncate.</p>
+        <ul role="list" class="list-group list-group-flush" aria-label="Contenuti in evidenza:">
+          <li class="list-group-item"><a href="#">Gli artisti</a></li>
+          <li class="list-group-item"><a href="#">Il luogo</a></li>
+          <li class="list-group-item"><a href="#">Il programma dettagliato</a></li>
+        </ul>
+      </div>
+      <footer class="it-card-related it-card-footer border-top pt-3">
+        <div style="flex-grow:1">
+          <a class="it-card-link" href="#">Iscriviti per rimanere aggiornato</a>
+        </div>
+        <a href="#" target="_blank" class="it-card-link">
+          Apri la mappa
+          <span class="visually-hidden"> del Titolo evento (si apre in una nuova finestra)</span>
+          <svg class="icon icon-sm icon-secondary ms-2" aria-hidden="true"><use href="/dist/svg/sprites.svg#it-external-link"></use></svg>
+        </a>
+      </footer>
+    </article>
+    <!--end it-card-->
+  </div>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+## Personalizzazioni e stili
+
+Alcune classi e codice HTML utile a personalizzare le card.
 
 ### Bordi e ombre
 
@@ -1148,7 +1406,7 @@ Per garantire una buona accessibilità, è consigliabile mantenere un rapporto d
 
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
-{% comment %}Example name: Strutture card{% endcomment %}
+{% comment %}Example name: Bordi e ombre{% endcomment %}
 {% capture example %}
 <div class="row">
   <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
@@ -1199,19 +1457,7 @@ Per garantire una buona accessibilità, è consigliabile mantenere un rapporto d
 </div>
 <div class="row">
   <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
-    <!--start it-card-->
-    <article class="it-card rounded shadow-sm">
-      <h3 class="it-card-title no_toc">
-        <a href="#">Titolo h3</a>
-      </h3>
-      <div class="it-card-body">
-        <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
-      </div>
-      <footer class="it-card-related it-card-footer">
-        <time class="it-card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
-      </footer>
-    </article>
-    <!--end it-card-->
+    &nbsp;
   </div>
   <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
     <!--start it-card-->
@@ -1246,7 +1492,140 @@ Per garantire una buona accessibilità, è consigliabile mantenere un rapporto d
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-## Gruppi di card
+### Immagini
+
+Per le immagini è possibile usare le classi `.ratio` per definire il rapporto tra altezza e larghezza in tutte le card di base. 
+
+Scopri le classi e modalità dedicate nella scheda [Proporzioni](http://localhost:4000/docs/organizzare-gli-spazi/proporzioni/).
+
+È da notare che le varianti inline delle card hanno proporzioni immagini loro su desktop, però,ad eccezione delle varianti inline mini, su dispositivi piccoli o con importante ingrandimento, mostreranno il layout card di base con le proporzioni impostate come negli esempi che seguono.   
+
+{% comment %}Example name: Proporzioni immagini{% endcomment %}
+{% capture example %}
+<div class="row">
+  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+    <!--start it-card-->
+    <article class="it-card it-card-image rounded shadow-sm border">
+      <!--card first child is the title (link)-->
+      <h3 class="it-card-title no_toc">
+        <a href="#">Titolo del contenuto</a>
+      </h3>
+      <!--card second child is the image (optional)-->
+      <div class="it-card-image-wrapper">
+        <div class="ratio ratio-21x9">
+          <figure class="figure img-full">
+            <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+          </figure>
+        </div>
+      </div>
+      <!--card body content-->
+      <div class="it-card-body">
+        <p class="it-card-text">Card con immagine con proporzioni 21:9.</p>
+      </div>
+      <!--finally the card footer metadata-->
+      <footer class="it-card-related it-card-footer">
+        <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
+      </footer>
+    </article>
+    <!--end it-card-->
+  </div>
+<div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+    <!--start it-card-->
+    <article class="it-card it-card-image rounded shadow-sm border">
+      <!--card first child is the title (link)-->
+      <h3 class="it-card-title no_toc">
+        <a href="#">Titolo del contenuto</a>
+      </h3>
+      <!--card second child is the image (optional)-->
+      <div class="it-card-image-wrapper">
+        <div class="ratio ratio-16x9">
+          <figure class="figure img-full">
+            <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+          </figure>
+        </div>
+      </div>
+      <!--card body content-->
+      <div class="it-card-body">
+        <p class="it-card-text">Card con immagine con proporzioni 16:9.</p>
+      </div>
+      <!--finally the card footer metadata-->
+      <footer class="it-card-related it-card-footer">
+        <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
+      </footer>
+    </article>
+    <!--end it-card-->
+  </div>
+</div>
+<div class="row">
+  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+    <!--start it-card-->
+    <article class="it-card it-card-image rounded shadow-sm border">
+      <!--card first child is the title (link)-->
+      <h3 class="it-card-title no_toc">
+        <a href="#">Titolo del contenuto</a>
+      </h3>
+      <!--card second child is the image (optional)-->
+      <div class="it-card-image-wrapper">
+        <div class="ratio ratio-4x3">
+          <figure class="figure img-full">
+            <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+          </figure>
+        </div>
+      </div>
+      <!--card body content-->
+      <div class="it-card-body">
+        <p class="it-card-text">Card con immagine con proporzioni 4:3.</p>
+      </div>
+      <!--finally the card footer metadata-->
+      <footer class="it-card-related it-card-footer">
+        <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
+      </footer>
+    </article>
+    <!--end it-card-->
+  </div>
+<div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+    <!--start it-card-->
+    <article class="it-card it-card-image rounded shadow-sm border">
+      <!--card first child is the title (link)-->
+      <h3 class="it-card-title no_toc">
+        <a href="#">Titolo del contenuto</a>
+      </h3>
+      <!--card second child is the image (optional)-->
+      <div class="it-card-image-wrapper">
+        <div class="ratio ratio-1x1">
+          <figure class="figure img-full">
+            <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+          </figure>
+        </div>
+      </div>
+      <!--card body content-->
+      <div class="it-card-body">
+        <p class="it-card-text">Card con immagine con proporzioni 1:1.</p>
+      </div>
+      <!--finally the card footer metadata-->
+      <footer class="it-card-related it-card-footer">
+        <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
+      </footer>
+    </article>
+    <!--end it-card-->
+  </div>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+### Altezze delle card
+
+Per la gestione delle **altezze** in caso di gruppi di card, sono disponibili le classi: 
+- `.it-card-height-auto` (altezza basata sul contenuto) 
+- `.it-card-height-full` (occupa tutto lo spazio disponibile)
+da applicare all'elemento `article`.
+
+È da notare che l'elemento `footer .it-card-related` laddove viva dentro il contenitore `.it-card-body` resta attaccato al contenuto della card anche nel caso di card a tutta altezza. Se invece vive fuori con l'aggiunta della classe `.it-card-footer` si allineerà verticalmente sempre con l'altezza massima della card, attaccandosi al bordo inferiore. 
+
+**XXX È DA INSERIRE QUI UN MARKUP ESEMPIO**
+
+## Organizzazione e layout
+
+### Gruppi di card
 
 Gruppi di card con layout responsive usando `.it-card-group` in un `div` contenitore.
 
@@ -1353,9 +1732,9 @@ Usando `.it-card-group-center`.
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-## Gruppi di card con Container Queries (Sperimentale)
+### Layout responsive rispetto al contenitore (sperimentale)
 
-Questo gruppo di card utilizza Container Queries `.it-card-group-container-aware` per adattarsi alla dimensione del contenitore invece che alla viewport. Ridimensiona la finestra del browser o prova a visualizzare questa pagina su dispositivi di diverse dimensioni per vedere la differenza.
+Gruppo di card che risponde a Container Queries attivabile usando la classe dedicata `.it-card-group-container-aware` per adattarsi responsive alla dimensione del contenitore invece che alla viewport. Ridimensiona la finestra del browser o prova a visualizzare questa pagina su dispositivi di diverse dimensioni per apprezzare la differenza di approccio.
 
 Le Container Queries sono una tecnologia CSS moderna supportata nella maggior parte dei browser recenti. Per i browser che non supportano questa funzionalità, viene automaticamente applicato un fallback basato su Media Queries standard.
 
@@ -1492,3 +1871,20 @@ Qui puoi esplorare come lo stesso gruppo di card "container-aware" si adatta a d
     </div>
   </div>
 {% endcapture %}{% include example.html content=example %}
+
+## Accessibilità
+
+**XXX È DA RIVEDERE QUESTO CONTENUTO ANCHE RISPETTO A QUANTO GIÀ DETTO SOPRA**
+
+Se il titolo `.it-card-title` non è il primo elemento dell'`article`, è necessario collegarlo con `aria-labelledby="ID_TITOLO"` e aggiungere `id="ID_TITOLO"` al titolo stesso.
+
+I titoli sono preferibilmente `h3`, mentre sottotitoli o testi brevi dovrebbero essere paragrafi semplici. La gerarchia dei titoli deve adattarsi al contesto in cui la card è inserita.
+
+L'uso dell'elemento **`article`** è una scelta semantica ponderata. Anche se non tutti i lettori di schermo lo supportano allo stesso modo, i più diffusi (JAWS, VoiceOver) lo interpretano correttamente, e altri (come NVDA) possono essere configurati per farlo. L'utilizzo degli elementi `article` e `footer` rende il markup più comprensibile e semanticamente strutturato.
+
+Per i lettori di schermo, è importante aggiungere testi descrittivi per i **metadati**, nascosti con `.visually-hidden` (es. "Categoria correlata: ", "Argomento correlato: ") o applicati con `aria-label` (es. "Argomenti correlati: ").
+
+Valuta infine sempre attentamente nel contesto se gli elementi come le liste abbiano o meno bisogno di etichette `aria-label` o `aria-labelledby` per descriverne la funzione.
+
+## Funzionalità future
+**Sono in lavorazione le varianti di tipo presentazione (dati e banner).**
