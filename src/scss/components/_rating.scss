@@ -3,28 +3,34 @@
 .rating {
   border: none;
   float: left;
+
   //hide radio
-  & > input {
+  &>input {
     position: absolute;
     left: -9999px;
   }
+
   //star container
-  & > label {
+  &>label {
     float: right;
     //margin: 0 $v-gap/4 0 0;
     margin: 0;
     padding-right: $v-gap * 0.25;
+
     &:first-of-type {
       margin-right: 0;
     }
+
     svg {
       fill: #c3cfdb;
       position: relative;
       transform-origin: center center;
       transition: transform 0.1s;
     }
+
     &:hover {
       cursor: pointer;
+
       svg {
         transform: scale(1.1);
       }
@@ -32,7 +38,7 @@
   }
 
   // #stars label
-  & > legend {
+  &>legend {
     color: $dark;
     font-size: 0.875rem;
     float: right;
@@ -43,26 +49,33 @@
   }
 
   &.rating-read-only {
-    & > input,
-    & > label {
+
+    &>input,
+    &>label {
       pointer-events: none;
     }
   }
 }
 
-.rating > input:checked ~ label, // show primary color star when clicked
-.rating:not(:checked) > label:hover, // hover current star
-.rating:not(:checked) > label:hover ~ label {
+.rating>input:checked~label,
+// show primary color star when clicked
+.rating:not(:checked)>label:hover,
+// hover current star
+.rating:not(:checked)>label:hover~label {
   svg {
     fill: $primary;
   }
-} // hover previous stars in list
+}
 
-.rating > input:checked + label:hover, // hover current star when changing rating
-.rating > input:checked ~ label:hover,
-.rating > label:hover ~ input:checked ~ label, // lighten current selection
-.rating > input:checked ~ label:hover ~ label {
-  + svg {
+// hover previous stars in list
+
+.rating>input:checked+label:hover,
+// hover current star when changing rating
+.rating>input:checked~label:hover,
+.rating>label:hover~input:checked~label,
+// lighten current selection
+.rating>input:checked~label:hover~label {
+  +svg {
     fill: $primary;
   }
 }
@@ -70,8 +83,9 @@
 //small - tablet
 @include media-breakpoint-up(sm) {
   .rating {
+
     // #stars label
-    & > legend {
+    &>legend {
       font-size: 0.75rem;
     }
   }
