@@ -40,27 +40,21 @@
   }
 
   // Predefined column layouts
-  &.it-card-group-2-cols > .it-card {
+  &.it-card-group-2-cols > .it-card,
+  &.it-card-group-3-cols > .it-card,
+  &.it-card-group-4-cols > .it-card {
     @include media-breakpoint-up(sm) {
       flex: 0 0 calc(50% - 0.5 * var(--#{$prefix}it-card-group-gap));
     }
   }
 
   &.it-card-group-3-cols > .it-card {
-    @include media-breakpoint-up(sm) {
-      flex: 0 0 calc(50% - 0.5 * var(--#{$prefix}it-card-group-gap));
-    }
-
     @include media-breakpoint-up(md) {
       flex: 0 0 calc(33.333% - 0.667 * var(--#{$prefix}it-card-group-gap));
     }
   }
 
   &.it-card-group-4-cols > .it-card {
-    @include media-breakpoint-up(sm) {
-      flex: 0 0 calc(50% - 0.5 * var(--#{$prefix}it-card-group-gap));
-    }
-
     @include media-breakpoint-up(md) {
       flex: 0 0 calc(33.333% - 0.667 * var(--#{$prefix}it-card-group-gap));
     }
