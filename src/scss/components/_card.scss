@@ -161,14 +161,8 @@ article.it-card {
   --#{$prefix}it-card-cap-padding-y: calc(var(--#{$prefix}it-card-spacer-y) * 2);
   --#{$prefix}it-card-cap-padding-x: var(--#{$prefix}it-card-spacer-x);
   --#{$prefix}it-card-cap-color: null;
-  --#{$prefix}it-card-border-top-width: 8px;
-  --#{$prefix}it-card-border-top-default-bg: #{$white};
-  --#{$prefix}it-card-border-top-primary: #{$primary};
-  --#{$prefix}it-card-border-top-secondary: #{$secondary};
-  --#{$prefix}it-card-border-top-success: #{$success};
-  --#{$prefix}it-card-border-top-warning: #{$warning};
-  --#{$prefix}it-card-border-top-danger: #{$danger};
-  --#{$prefix}it-card-border-top-info: #{$info};
+  --#{$prefix}it-card-border-top-width: 6px;
+  --#{$prefix}it-card-border-top-color: transparent; // default background set to transparent
   --#{$prefix}it-card-category-size: 1rem;
   --#{$prefix}it-card-category-fw: 600;
   --#{$prefix}it-card-category-l-spacing: 0.5px;
@@ -570,7 +564,8 @@ article.it-card {
       right: 0;
       height: var(--#{$prefix}it-card-border-top-width);
       top: 0;
-      background: var(--#{$prefix}it-card-border-top-default-bg);
+      background: var(--#{$prefix}it-card-border-top-color);
+      // background: var(--#{$prefix}it-card-border-top-default-bg);
     }
 
     &.rounded {
@@ -579,23 +574,21 @@ article.it-card {
       }
     }
 
+    // Border Top Color
     &.it-card-border-top-primary::after {
-      background: var(--#{$prefix}it-card-border-top-primary);
+      --#{$prefix}it-card-border-top-color: #{$primary};
     }
     &.it-card-border-top-secondary::after {
-      background: var(--#{$prefix}it-card-border-top-secondary);
+      --#{$prefix}it-card-border-top-color: #{$secondary};
     }
     &.it-card-border-top-success::after {
-      background: var(--#{$prefix}it-card-border-top-success);
+      --#{$prefix}it-card-border-top-color: #{$success};
     }
     &.it-card-border-top-warning::after {
-      background: var(--#{$prefix}it-card-border-top-warning);
+      --#{$prefix}it-card-border-top-color: #{$warning};
     }
     &.it-card-border-top-danger::after {
-      background: var(--#{$prefix}it-card-border-top-danger);
-    }
-    &.it-card-border-top-info::after {
-      background: var(--#{$prefix}it-card-border-top-info);
+      --#{$prefix}it-card-border-top-color: #{$danger};
     }
   }
 
