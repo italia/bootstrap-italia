@@ -557,7 +557,6 @@ article.it-card {
       height: var(--#{$prefix}it-card-border-top-width);
       top: 0;
       background: var(--#{$prefix}it-card-border-top-color);
-      // background: var(--#{$prefix}it-card-border-top-default-bg);
     }
 
     &.rounded {
