@@ -554,8 +554,6 @@ article.it-card {
 
   // Card special colored 4px border-top, mere aestethic, don't use for semantic meaning
   &.it-card-border-top {
-    padding-top: var(--#{$prefix}it-card-border-top-width);
-
     &::after {
       content: '';
       display: block;
