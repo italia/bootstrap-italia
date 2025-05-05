@@ -5,21 +5,16 @@
 
   @include media-breakpoint-up(lg) {
     background: var(--#{$prefix}header-nav-background);
-  }
-}
 
-//Tablet horizontal / small desktop
-@include media-breakpoint-up(lg) {
-  .it-header-navbar-wrapper {
     .navbar {
       .nav-link {
         color: var(--#{$prefix}header-nav-text-color);
         text-decoration: none;
       }
+
       .navbar-collapsable {
         .menu-wrapper {
           background: transparent;
-
           display: flex;
           justify-content: space-between;
           align-items: flex-end;
@@ -33,7 +28,7 @@
 
               a {
                 font-size: 0.875rem;
-                line-height: 1.6;
+                line-height: var(--#{$prefix}label-line-height);
               }
             }
           }
