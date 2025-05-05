@@ -8,6 +8,7 @@
 
   a {
     color: $white;
+
     &:hover {
       color: color-hover($white);
     }
@@ -45,17 +46,17 @@
       text-decoration: none;
 
       h2 {
-        font-size: $header-center-h2-size-mob;
         margin-bottom: 0;
+        font-size: $header-center-h2-size-mob;
         font-weight: $header-center-h2-weight;
         letter-spacing: unset;
         line-height: 1.1;
       }
 
       h3 {
+        margin-bottom: 0;
         font-size: $header-center-h3-size;
         font-weight: normal;
-        margin-bottom: 0;
       }
 
       &:hover {
@@ -63,11 +64,11 @@
       }
 
       .icon {
-        fill: $header-center-text-color;
+        flex-shrink: 0;
         width: $header-center-icon-size-mob;
         height: $header-center-icon-size-mob;
         margin-right: $header-center-icon-margin-mob;
-        flex-shrink: 0;
+        fill: $header-center-text-color;
       }
     }
   }
@@ -89,9 +90,11 @@
 
     li {
       padding: 0.5rem 0;
+
       &:first-child {
         padding-top: 0;
       }
+
       &:last-child {
         padding-bottom: 0;
       }
@@ -100,9 +103,17 @@
 }
 
 .form-newsletter {
+
+  @include media-breakpoint-up(lg) {
+    button {
+      display: inline-block;
+      width: auto;
+    }
+  }
   input[type='email'] {
     font-size: 1rem;
-    & ~ * {
+
+    &~* {
       margin-top: 1em;
     }
   }
@@ -111,14 +122,8 @@
     display: block;
     width: 100%;
   }
-
-  @include media-breakpoint-up(lg) {
-    button {
-      display: inline-block;
-      width: auto;
-    }
-  }
 }
+
 //Tablet vertical
 @include media-breakpoint-up(md) {
   .it-footer-small-prints {
@@ -129,6 +134,7 @@
         &:first-child {
           padding-left: 0;
         }
+
         &:last-child {
           padding-right: 0;
         }
