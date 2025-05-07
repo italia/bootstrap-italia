@@ -1617,7 +1617,7 @@ Negli esempi che precedono è usato `.it-card-height-full` per rendere coerenti 
 
 ### Gruppi di card
 
-Gruppi di card con layout responsive usando `.it-card-group` in un `div` contenitore.
+Si possono organizzare gruppi di card con layout responsive con `.it-card-group` in un `div` contenitore. Di default il numero di colonne su desktop è impostato a 4. 
 
 {% comment %}Example name: Gruppi di card responsive{% endcomment %}
 {% capture example %}
@@ -1662,18 +1662,29 @@ Gruppi di card con layout responsive usando `.it-card-group` in un `div` conteni
         <time class="it-card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
       </footer>
     </article>
+    <article class="it-card rounded shadow-sm border">
+      <h3 class="it-card-title no_toc">
+        <a href="#">Titolo della quarta card</a>
+      </h3>
+      <div class="it-card-body">
+        <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione.</p>
+      </div>
+      <footer class="it-card-related it-card-footer">
+        <time class="it-card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
+      </footer>
+    </article>
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
 ### Numero di colonne specifiche
 
-Usando `.it-card-group-N-cols`.
+Usando `.it-card-group-N-cols`, dove modificando `N` si possono ottenere layout con 2 o 3 colonne su desktop. 
   
 {% comment %}Example name: Gruppi di card con colonne specifiche{% endcomment %}
 {% capture example %}
 <div>
-  <div class="it-card-group it-card-group-3-cols">
+  <div class="it-card-group it-card-group-2-cols">
     <article class="it-card rounded shadow-sm border">
       <h3 class="it-card-title no_toc">
         <a href="#">Card in due colonne</a>
