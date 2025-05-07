@@ -13,14 +13,14 @@ Aiutano a presentare un gruppo di contenuti correlati, come articoli o sezioni d
 
 {% capture callout %}
 #### Questo è un nuovo componente card
-Le card sono definite dalle classi `.it-card` e relativi modificatori. Le classi legacy di Bootstrap `.card` sono deprecate, **saranno mantenute nei fogli di stile fino al prossimo rilascio maggiore per permettere una migrazione graduale**. 
+Questo componente card e le sue varianti sono definiti dalle classi `.it-card` e relativi modificatori. Le classi legacy di Bootstrap `.card` sono ora deprecate ma **saranno mantenute nei fogli di stile fino al prossimo rilascio maggiore, per permettere una migrazione graduale**. 
 
-[Vai alla documentazione delle card legacy (deprecato)](../card-old/)
+[Vai alla documentazione del componente card legacy (deprecato)](../card-old/)
 {% endcapture %}{% include callout.html content=callout type="warning" %}
 
-## La struttura base della card
+## Struttura base della card
 Nota bene: negli esempi seguenti le card sono all’interno di colonne Bootstrap, se non segnalato diversamente.
-L’inizio della card vera e propria è segnalato nell'HTML dal commento `<!--start it-card-->`.
+Abbiamo segnalato l’inizio della card vera e propria nell'HTML con il commento `<!--start it-card-->`.
 
 Esempio base con immagine, descrizione e data:
 
@@ -57,7 +57,7 @@ Esempio base con immagine, descrizione e data:
 {% endcapture %}{% include example.html content=example %}
 
 La card è un contenitore con **semantica** `article`, con un titolo (heading) con classe `.it-card-title` come primo elemento figlio.
-È consigliato implementare il **titolo** (`.it-card-title`) come elemento cliccabile principale, evitando di distribuire collegamenti in tutta la card.
+Consigliamo di implementare il **titolo** (`.it-card-title`) come elemento cliccabile principale, evitando di distribuire collegamenti in tutta la card.
 
 {% capture callout %}
 
@@ -1390,7 +1390,7 @@ Quando si utilizzano ombre più evidenti, è possibile rimuovere il bordo se la 
 
 #### Accessibilità: contrasto con lo sfondo
 
-Per garantire una buona accessibilità, è consigliabile mantenere un rapporto di contrasto di almeno 3:1 tra la card e lo sfondo. Le combinazioni di bordi, ombre e colori di sfondo aiutano a raggiungere questo obiettivo. 
+Per garantire una buona accessibilità, consigliamo di mantenere un rapporto di contrasto di almeno 3:1 tra la card e lo sfondo. Le combinazioni di bordi, ombre e colori di sfondo aiutano a raggiungere questo obiettivo. 
 
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
@@ -1482,11 +1482,11 @@ Per garantire una buona accessibilità, è consigliabile mantenere un rapporto d
 
 ### Immagini
 
-Per le immagini è possibile usare le classi `.ratio` per definire il rapporto tra altezza e larghezza in tutte le card di base. 
+Per definire il rapporto tra altezza e larghezza delle immagini in tutte le card di base, usa le classi `.ratio`.
 
 Scopri le classi e modalità dedicate nella scheda [Proporzioni](http://localhost:4000/docs/organizzare-gli-spazi/proporzioni/).
 
-È da notare che le varianti inline delle card hanno proporzioni immagini loro su desktop, però,ad eccezione delle varianti inline mini, su dispositivi piccoli o con importante ingrandimento, mostreranno il layout card di base con le proporzioni impostate come negli esempi che seguono.   
+Le varianti inline delle card presentano proporzioni immagini proprie su desktop. Tuttavia, su dispositivi piccoli o con importante ingrandimento, ad eccezione delle varianti inline mini, mostreranno il layout card di base con le proporzioni immagini impostate come negli esempi che seguono.```
 
 {% comment %}Example name: Proporzioni immagini{% endcomment %}
 {% capture example %}
@@ -1602,14 +1602,14 @@ Scopri le classi e modalità dedicate nella scheda [Proporzioni](http://localhos
 
 ### Altezze delle card
 
-Per la gestione delle **altezze** in caso di gruppi di card, sono disponibili le classi: 
+Per la gestione delle **altezze** in caso di gruppi di card, puoi usare le classi: 
 - `.it-card-height-auto` (altezza basata sul contenuto) 
 - `.it-card-height-full` (occupa tutto lo spazio disponibile)
 da applicare all'elemento `article`. 
 
 Negli esempi che precedono è usato `.it-card-height-full` per rendere coerenti le anteprime affiancate di card con immagini. 
 
-È da notare che l'elemento `footer .it-card-related` laddove viva dentro il contenitore `.it-card-body` resta attaccato al contenuto della card anche nel caso di card a tutta altezza. Se invece vive fuori con l'aggiunta della classe `.it-card-footer` si allineerà verticalmente sempre con l'altezza massima della card, attaccandosi al bordo inferiore. 
+Quando l'elemento `footer .it-card-related` si trova all'interno del contenitore `.it-card-body`, questo resta attaccato al contenuto della card, anche nelle card a tutta altezza. Se invece si trova fuori il contenitore, con l'aggiunta della classe `.it-card-footer` si allineerà verticalmente sempre con l'altezza massima della card, attaccandosi al bordo inferiore.
 
 **XXX È DA INSERIRE QUI UN MARKUP ESEMPIO**
 
