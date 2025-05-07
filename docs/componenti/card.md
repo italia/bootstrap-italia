@@ -1602,7 +1602,7 @@ Le varianti inline delle card presentano proporzioni immagini proprie su desktop
 
 ### Altezze delle card
 
-Per la gestione delle **altezze** in caso di gruppi di card, sono disponibili le classi: 
+Per la gestione delle **altezze** in caso di gruppi di card, puoi usare le classi: 
 - `.it-card-height-auto` (altezza basata sul contenuto) 
 - `.it-card-height-full` (occupa tutto lo spazio disponibile)
 da applicare all'elemento `article`. 
