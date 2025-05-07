@@ -110,7 +110,7 @@ Da notare che la struttura dei metadati include:
   </div>
   <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
     <!--start it-card-->
-    <article class="it-card it-card-image rounded shadow-sm border">
+    <article class="it-card it-card-image it-card-height-full rounded shadow-sm border">
       <!--card first child is the title (link)-->
       <h3 class="it-card-title no_toc">
         <a href="#">Titolo del contenuto</a>
@@ -139,7 +139,7 @@ Da notare che la struttura dei metadati include:
   </div>
   <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
     <!--start it-card-->
-    <article class="it-card it-card-image rounded shadow-sm border">
+    <article class="it-card it-card-image it-card-height-full rounded shadow-sm border">
       <!--card first child is the title (link)-->
       <h3 class="it-card-title no_toc">
         <a href="#">Titolo del contenuto</a>
@@ -165,9 +165,6 @@ Da notare che la struttura dei metadati include:
             </a></li>
             <li class="list-item"><a class="chip chip-simple chip-sm" href="#">
               <span class="visually-hidden">Argomento: </span><span class="chip-label">Argomento 2</span>
-            </a></li>
-            <li class="list-item"><a class="chip chip-simple chip-sm" href="#">
-              <span class="visually-hidden">Argomento: </span><span class="chip-label">Argomento 3</span>
             </a></li>
           </ul>
         </div>
@@ -221,7 +218,7 @@ Negli esempi il `target` del link non è usato, nell'ottica di favorire la norma
   </div>
   <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
     <!--start it-card-->
-    <article class="it-card it-card-image rounded shadow-sm border">
+    <article class="it-card it-card-image it-card-height-full rounded shadow-sm border">
       <!--card first child is the title (link)-->
       <h3 class="it-card-title it-card-title-icon no_toc">
         <a href="#">Titolo contenuto featured <span class="visually-hidden">(link esterno su piattaforma XYZ)</span></a>
@@ -253,7 +250,7 @@ Negli esempi il `target` del link non è usato, nell'ottica di favorire la norma
   </div>
   <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
     <!--start it-card-->
-    <article class="it-card it-card-image rounded shadow-sm border">
+    <article class="it-card it-card-image it-card-height-full rounded shadow-sm border">
       <!--card first child is the title (link)-->
       <h3 class="it-card-title it-card-title-icon no_toc">
         <a href="#">Titolo contenuto featured <span class="visually-hidden">(link esterno su Designers Italia)</span></a>
@@ -282,9 +279,6 @@ Negli esempi il `target` del link non è usato, nell'ottica di favorire la norma
             </a></li>
             <li class="list-item"><a class="chip chip-simple chip-sm" href="#">
               <span class="visually-hidden">Argomento: </span><span class="chip-label">Argomento 2</span>
-            </a></li>
-            <li class="list-item"><a class="chip chip-simple chip-sm" href="#">
-              <span class="visually-hidden">Argomento: </span><span class="chip-label">Argomento 3</span>
             </a></li>
           </ul>
         </div>
@@ -388,7 +382,7 @@ L'immagine è opzionale e per invertire il solo ordine visivo tra destra e sinis
 <div class="row">
   <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
     <!--start it-card-->
-    <article class="it-card it-card-inline it-card-inline-mini rounded shadow-sm border">
+    <article class="it-card it-card-inline it-card-inline-mini it-card-height-full rounded shadow-sm border">
      <!--card first child is all the card content: title (link) + footer -->
       <div class="it-card-inline-content">
         <h3 class="it-card-title no_toc">
@@ -416,7 +410,7 @@ L'immagine è opzionale e per invertire il solo ordine visivo tra destra e sinis
           <div class="it-card-taxonomy">
             <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
           </div>
-          <time class="it-card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
+          <time class="it-card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">22 aprile, {{ 'now' | date: "%Y" }}</time>
         </footer>
       </div>
       <!--card second child is the image (optional)-->
@@ -512,7 +506,7 @@ La classe `.it-card-footer` può essere usata anche per creare un ulteriore spaz
   </div>
   <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
     <!--start it-card-->
-    <article class="it-card it-card-image rounded border shadow-sm mb-3">
+    <article class="it-card it-card-image it-card-height-full rounded border shadow-sm mb-3">
       <h3 class="it-card-title no_toc">
         <a href="#">Titolo evento</a>
       </h3>
@@ -541,7 +535,7 @@ La classe `.it-card-footer` può essere usata anche per creare un ulteriore spaz
   </div>
   <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
     <!--start it-card-->
-    <article class="it-card it-card-image rounded border shadow-sm mb-3">
+    <article class="it-card it-card-image it-card-height-full rounded border shadow-sm mb-3">
       <h3 class="it-card-title no_toc">
         <a href="#">Titolo evento</a>
       </h3>
@@ -663,7 +657,7 @@ Negli esempi il `target` del link non è usato, nell'ottica di favorire la norma
 <div class="row">
   <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
     <!--start it-card-->
-    <article class="it-card it-card-image rounded shadow-sm border">
+    <article class="it-card it-card-image it-card-height-full rounded shadow-sm border">
       <!--card first child is the title (link)-->
       <h3 class="it-card-title it-card-title-icon no_toc">
         <a href="#">Titolo contenuto video</a>
@@ -693,7 +687,7 @@ Negli esempi il `target` del link non è usato, nell'ottica di favorire la norma
   </div>
   <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
     <!--start it-card-->
-    <article class="it-card it-card-image rounded shadow-sm border">
+    <article class="it-card it-card-image it-card-height-full rounded shadow-sm border">
       <!--card first child is the title (link)-->
       <h3 class="it-card-title it-card-title-icon no_toc">
         <a href="#">Titolo contenuto video</a>
@@ -720,9 +714,6 @@ Negli esempi il `target` del link non è usato, nell'ottica di favorire la norma
             </a></li>
             <li class="list-item"><a class="chip chip-simple chip-sm" href="#">
               <span class="visually-hidden">Argomento: </span><span class="chip-label">Argomento 2</span>
-            </a></li>
-            <li class="list-item"><a class="chip chip-simple chip-sm" href="#">
-              <span class="visually-hidden">Argomento: </span><span class="chip-label">Argomento 3</span>
             </a></li>
           </ul>
         </div>
@@ -777,9 +768,6 @@ Negli esempi il `target` del link non è usato, nell'ottica di favorire la norma
             </a></li>
             <li class="list-item"><a class="chip chip-simple chip-sm" href="#">
               <span class="visually-hidden">Argomento: </span><span class="chip-label">Argomento 2</span>
-            </a></li>
-            <li class="list-item"><a class="chip chip-simple chip-sm" href="#">
-              <span class="visually-hidden">Argomento: </span><span class="chip-label">Argomento 3</span>
             </a></li>
           </ul>
         </div>
@@ -907,7 +895,7 @@ La classe `.it-card-footer` può essere usata anche per creare un ulteriore spaz
 <div class="row">
   <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
     <!--start it-card-->
-    <article class="it-card rounded border shadow-sm mb-3">
+    <article class="it-card it-card-height-full rounded border shadow-sm mb-3">
       <h4 class="it-card-title no_toc">
         <a href="#">Titolo del servizio</a>
       </h4>
@@ -924,7 +912,7 @@ La classe `.it-card-footer` può essere usata anche per creare un ulteriore spaz
   </div>
   <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
     <!--start it-card-->
-    <article class="it-card rounded border shadow-sm mb-3">
+    <article class="it-card it-card-height-full rounded border shadow-sm mb-3">
       <h4 class="it-card-title no_toc">
         <a href="#">Titolo del servizio</a>
       </h4>
@@ -946,7 +934,7 @@ La classe `.it-card-footer` può essere usata anche per creare un ulteriore spaz
   </div>
   <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
     <!--start it-card-->
-    <article class="it-card rounded border shadow-sm mb-3">
+    <article class="it-card it-card-height-full rounded border shadow-sm mb-3">
       <h4 class="it-card-title no_toc">
         <a href="#">Titolo del bando</a>
       </h4>
