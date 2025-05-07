@@ -183,7 +183,7 @@ In questo caso è bene comunicare dove si trova il contenuto e l'uscita dal sito
 
 {% capture callout %}
 
-#### Accessibilità link esterni
+#### Accessibilità link per contenuti esterni
 
 Negli esempi il `target` del link non è usato, nell'ottica di favorire la normale navigazione del browser. Se si rimanda a nuovi tab o finestre si deve comunicare all'utente in modo chiaro con un'icona di link esterno e un testo alternativo o nascosto che ne comunichi l'intento anche ai lettori di schermo.  
 
@@ -460,7 +460,7 @@ L'immagine è opzionale e per invertire il solo ordine visivo tra destra e sinis
 
 {% capture callout %}
 
-#### Accessibilità date e orari
+#### Accessibilità date e orari eventi
 
 Quando si presentano date e orari dell'evento può essere indicato usare l'elemento `time` con l'appropriato attributo `datetime`. 
 Inserire eventuali contenuti guida per lettori di schermo solo se realmente necessari per evitare il rumore (ad esempio il `<span class="visually-hidden">Data evento:</span>` presente nel primo esempio che segue). 
@@ -646,7 +646,7 @@ Anche in questo caso è bene comunicare la tipologia del contenuto e l'eventuale
 
 {% capture callout %}
 
-#### Accessibilità link esterni
+#### Accessibilità link per media esterni
 
 Negli esempi il `target` del link non è usato, nell'ottica di favorire la normale navigazione del browser. Se si rimanda a nuovi tab o finestre si deve comunicare all'utente in modo chiaro con un'icona di link esterno e un testo alternativo o nascosto che ne comunichi l'intento anche ai lettori di schermo.  
 
@@ -858,7 +858,7 @@ Come negli altri casi l'immagine segue sempre questo contenitore, ed è possibil
 Utili a fornire un’anteprima per pagine di dettaglio per servizi e bandi, oppure per rappresentare documenti e altri tipi di allegati. 
 
 {% capture callout %}
-#### Accessibilità titoli
+#### Accessibilità titoli delle card informative
 I titoli `.it-card-title` negli esempi di questo tipo sono `h4`. La gerarchia dei titoli deve adattarsi ovviamente al contesto in cui la card è inserita.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
@@ -870,7 +870,7 @@ Si consiglia di usare alternativamente un breve testo descrittivo `.it-card-text
 
 {% capture callout %}
 
-#### Accessibilità date e orari
+#### Accessibilità date e orari delle scadenze
 
 Quando si presentano date di scadenza può essere indicato usare l'elemento `time` con l'appropriato attributo `datetime`. È in questo caso importante indicare a tutte le persone il loro ruolo di "Scadenza" dichiarandolo nel testo come negli esempi che seguono. Non usare solo il colore (negli esempi `.text-warning`) per veicolarne l'importanza. 
 
@@ -884,7 +884,7 @@ La classe `.it-card-footer` può essere usata anche per creare un ulteriore spaz
 
 {% capture callout %}
 
-#### Accessibilità collegamenti secondari
+#### Accessibilità collegamenti secondari per le card informative
 
 È importante ricordare di usare link con semantica `a` per presentare collegamenti di navigazione, e pulsanti con semantica `button` per azioni che avvengono in pagina come l'apertura di modali. 
 
@@ -1035,7 +1035,7 @@ La lista di metadati del profilo è costruita utilizzando liste descrittive `.it
 Per un effetto decorativo, è disponibile la classe `.it-card-border-top` (con varianti di colore `.it-card-border-top-COLORE`). Questa classe non deve essere utilizzata per comunicare significato semantico, ma solo come eventuale elemento decorativo. 
 
 {% capture callout %}
-#### Accessibilità titoli
+#### Accessibilità nomi
 I titoli `.it-card-profile-name` in questi esempi sono `h4`. La gerarchia dei titoli deve adattarsi ovviamente al contesto in cui la card è inserita.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
@@ -1168,7 +1168,7 @@ La lista di metadati del luogo è costruita utilizzando liste descrittive `.it-c
 È possibile combinare un piede con eventuali collegamenti o dettagli della mappa usando l'elemento `footer` con le classi dedicate `.it-card-related` e `it-card-footer`. Negll'esempio è stato applicato un `.border-top` a questo elemento, opzionale.  
 
 {% capture callout %}
-#### Accessibilità
+#### Accessibilità nomi luoghi
 I titoli `.it-card-place-name` in questi esempi sono `h4`. La gerarchia dei titoli deve adattarsi ovviamente al contesto in cui la card è inserita.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
