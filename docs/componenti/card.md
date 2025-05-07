@@ -18,7 +18,7 @@ Le card sono definite dalle classi `.it-card` e relativi modificatori. Le classi
 [Vai alla documentazione delle card legacy (deprecato)](../card-old/)
 {% endcapture %}{% include callout.html content=callout type="warning" %}
 
-## La struttura base della card
+## Struttura base della card
 Nota bene: negli esempi seguenti le card sono all’interno di colonne Bootstrap, se non segnalato diversamente.
 L’inizio della card vera e propria è segnalato nell'HTML dal commento `<!--start it-card-->`.
 
