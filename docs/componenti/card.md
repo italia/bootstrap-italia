@@ -1605,7 +1605,9 @@ Scopri le classi e modalità dedicate nella scheda [Proporzioni](http://localhos
 Per la gestione delle **altezze** in caso di gruppi di card, sono disponibili le classi: 
 - `.it-card-height-auto` (altezza basata sul contenuto) 
 - `.it-card-height-full` (occupa tutto lo spazio disponibile)
-da applicare all'elemento `article`.
+da applicare all'elemento `article`. 
+
+Negli esempi che precedono è usato `.it-card-height-full` per rendere coerenti le anteprime affiancate di card con immagini. 
 
 È da notare che l'elemento `footer .it-card-related` laddove viva dentro il contenitore `.it-card-body` resta attaccato al contenuto della card anche nel caso di card a tutta altezza. Se invece vive fuori con l'aggiunta della classe `.it-card-footer` si allineerà verticalmente sempre con l'altezza massima della card, attaccandosi al bordo inferiore. 
 
