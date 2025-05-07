@@ -57,7 +57,7 @@ Esempio base con immagine, descrizione e data:
 {% endcapture %}{% include example.html content=example %}
 
 La card è un contenitore con **semantica** `article`, con un titolo (heading) con classe `.it-card-title` come primo elemento figlio.
-È consigliato implementare il **titolo** (`.it-card-title`) come elemento cliccabile principale, evitando di distribuire collegamenti in tutta la card.
+Consigliamo di implementare il **titolo** (`.it-card-title`) come elemento cliccabile principale, evitando di distribuire collegamenti in tutta la card.
 
 {% capture callout %}
 
