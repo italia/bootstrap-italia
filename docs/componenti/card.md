@@ -20,7 +20,7 @@ Questo componente card e le sue varianti sono definiti dalle classi `.it-card` e
 
 ## Struttura base della card
 Nota bene: negli esempi seguenti le card sono all’interno di colonne Bootstrap, se non segnalato diversamente.
-L’inizio della card vera e propria è segnalato nell'HTML dal commento `<!--start it-card-->`.
+Abbiamo segnalato l’inizio della card vera e propria nell'HTML con il commento `<!--start it-card-->`.
 
 Esempio base con immagine, descrizione e data:
 
