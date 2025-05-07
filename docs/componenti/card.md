@@ -1486,7 +1486,7 @@ Per definire il rapporto tra altezza e larghezza delle immagini in tutte le card
 
 Scopri le classi e modalità dedicate nella scheda [Proporzioni](http://localhost:4000/docs/organizzare-gli-spazi/proporzioni/).
 
-È da notare che le varianti inline delle card hanno proporzioni immagini loro su desktop, però,ad eccezione delle varianti inline mini, su dispositivi piccoli o con importante ingrandimento, mostreranno il layout card di base con le proporzioni impostate come negli esempi che seguono.   
+Le varianti inline delle card presentano proporzioni immagini proprie su desktop. Tuttavia, su dispositivi piccoli o con importante ingrandimento, ad eccezione delle varianti inline mini, mostreranno il layout card di base con le proporzioni immagini impostate come negli esempi che seguono.```
 
 {% comment %}Example name: Proporzioni immagini{% endcomment %}
 {% capture example %}
