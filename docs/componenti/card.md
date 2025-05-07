@@ -1609,7 +1609,7 @@ da applicare all'elemento `article`.
 
 Negli esempi che precedono è usato `.it-card-height-full` per rendere coerenti le anteprime affiancate di card con immagini. 
 
-È da notare che l'elemento `footer .it-card-related` laddove viva dentro il contenitore `.it-card-body` resta attaccato al contenuto della card anche nel caso di card a tutta altezza. Se invece vive fuori con l'aggiunta della classe `.it-card-footer` si allineerà verticalmente sempre con l'altezza massima della card, attaccandosi al bordo inferiore. 
+Quando l'elemento `footer .it-card-related` si trova all'interno del contenitore `.it-card-body`, questo resta attaccato al contenuto della card, anche nelle card a tutta altezza. Se invece si trova fuori il contenitore, con l'aggiunta della classe `.it-card-footer` si allineerà verticalmente sempre con l'altezza massima della card, attaccandosi al bordo inferiore.
 
 **XXX È DA INSERIRE QUI UN MARKUP ESEMPIO**
 
