@@ -1482,7 +1482,7 @@ Per garantire una buona accessibilità, consigliamo di mantenere un rapporto di 
 
 ### Immagini
 
-Per le immagini è possibile usare le classi `.ratio` per definire il rapporto tra altezza e larghezza in tutte le card di base. 
+Per definire il rapporto tra altezza e larghezza delle immagini in tutte le card di base, usa le classi `.ratio`.
 
 Scopri le classi e modalità dedicate nella scheda [Proporzioni](http://localhost:4000/docs/organizzare-gli-spazi/proporzioni/).
 
