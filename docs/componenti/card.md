@@ -13,7 +13,7 @@ Aiutano a presentare un gruppo di contenuti correlati, come articoli o sezioni d
 
 {% capture callout %}
 #### Questo è un nuovo componente card
-Le card sono definite dalle classi `.it-card` e relativi modificatori. Le classi legacy di Bootstrap `.card` sono deprecate, **saranno mantenute nei fogli di stile fino al prossimo rilascio maggiore per permettere una migrazione graduale**. 
+Questo componente card e le sue varianti sono definiti dalle classi `.it-card` e relativi modificatori. Le classi legacy di Bootstrap `.card` sono ora deprecate ma **saranno mantenute nei fogli di stile fino al prossimo rilascio maggiore, per permettere una migrazione graduale**. 
 
 [Vai alla documentazione delle card legacy (deprecato)](../card-old/)
 {% endcapture %}{% include callout.html content=callout type="warning" %}
