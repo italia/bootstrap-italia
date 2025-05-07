@@ -1390,7 +1390,7 @@ Quando si utilizzano ombre più evidenti, è possibile rimuovere il bordo se la 
 
 #### Accessibilità: contrasto con lo sfondo
 
-Per garantire una buona accessibilità, è consigliabile mantenere un rapporto di contrasto di almeno 3:1 tra la card e lo sfondo. Le combinazioni di bordi, ombre e colori di sfondo aiutano a raggiungere questo obiettivo. 
+Per garantire una buona accessibilità, consigliamo di mantenere un rapporto di contrasto di almeno 3:1 tra la card e lo sfondo. Le combinazioni di bordi, ombre e colori di sfondo aiutano a raggiungere questo obiettivo. 
 
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
