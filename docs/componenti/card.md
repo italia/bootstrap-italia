@@ -63,26 +63,26 @@ Consigliamo di implementare il **titolo** (`.it-card-title`) come elemento clicc
 
 #### Accessibilità titoli
 
-Negli esempi è stato utilizzato il tag `h3` per il titolo delle card. <br>
-Utilizzare il tag `h` corretto a seconda del contesto.
+Negli esempi abbiamo utilizzato il tag `h3` per il titolo delle card. <br>
+Utilizza il tag `h` corretto a seconda del contesto.
 
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
-Per inserire un'**immagine** è disponibile la classe `.it-card-image` da applicare alla card. L'immagine segue sempre l'elemento titolo, l'ordine di visualizzazione è invertito in automatico. 
+Per inserire un'**immagine** puoi applicare la classe `.it-card-image` alla card. L'immagine segue sempre l'elemento titolo, ma l'ordine di visualizzazione viene invertito in automatico. 
 
-Segue il **corpo** della card `.it-card-body`, che può contenere diversi contenuti di approfondimento a seconda del contesto d'uso. È possibile utilizzare più elementi `.it-card-body` per separare blocchi di contenuto.
+Segue il **corpo** della card `.it-card-body`, che può contenere diversi contenuti di approfondimento a seconda del contesto d'uso. Puoi utilizzare più elementi `.it-card-body` per separare blocchi di contenuto.
 
 Gli eventuali **metadati** (ad esempio categorie, argomenti e date) sono presentati in un elemento `footer` con classe `.it-card-related`. Questo può vivere nel corpo della card, oppure, seguirlo aggiungendo la classe `.it-card-footer` in modo da attaccarlo al bordo inferiore nei casi di card con altezza fissa.
 
-## Card per la pubblicazione di contenuti
+## Card per contenuti editoriali
 
-Utili a fornire un'anteprima per pagine come notizie, articoli ed eventi. Le classiche card con cui puoi comporre una sezione di copertina delle notizie in evidenza nella pagina principale del sito.  
+Le card per contenuti editoriali sono utili a fornire un'anteprima di notizie, articoli, pagine evento o pagine che contengono contenuti video e audio. Sono le classiche card con cui puoi comporre una sezione di copertina delle notizie in evidenza nella pagina principale del sito.  
 
 ### Card editoriali standard
 
 Esempi con descrizione e data di pubblicazione della scheda, con categoria oppure con argomenti (tag) di appartenenza, con e senza immagine. 
 
-Da notare che la struttura dei metadati include:
+La struttura dei metadati include:
 - Categorie nell'elemento `.it-card-taxonomy`
 - Tag/argomenti in liste quando sono più di uno
 - Date in elementi HTML semantici `time`, con il corretto attributo `datetime`
@@ -178,20 +178,20 @@ Da notare che la struttura dei metadati include:
 
 ### Card editoriali featured
 
-Le card possono essere usate anche per presentare contenuti di approfondimento che vivono su altre piattaforme terze. 
-In questo caso è bene comunicare dove si trova il contenuto e l'uscita dal sito stesso. Per farlo è possibile anche aggiungere un'icona a fianco del titolo, usando la classe `.it-card-title-icon` come negli esempi che seguono. 
+Usa queste card per presentare contenuti di approfondimento, anche quelli ospitati su piattaforme terze. 
+Se i contenuti sono su piattaforme terze, comunica chiaramente all'utente dove si trova il contenuto e che sta per uscire dal sito. Puoi aggiungere un'icona a fianco del titolo, usando la classe `.it-card-title-icon` come negli esempi che seguono. 
 
 {% capture callout %}
 
 #### Accessibilità link per contenuti esterni
 
-Negli esempi il `target` del link non è usato, nell'ottica di favorire la normale navigazione del browser. Se si rimanda a nuovi tab o finestre si deve comunicare all'utente in modo chiaro con un'icona di link esterno e un testo alternativo o nascosto che ne comunichi l'intento anche ai lettori di schermo.  
+Negli esempi non abbiamo usato il `target` del link per favorire la normale navigazione del browser. Se la pagina di destinazione si apre in una nuova tab o finestra, comunicalo in modo chiaro all'utente con un'icona di link esterno e un testo alternativo o nascosto per i lettori di schermo.  
 
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
-È possibile mostrare un sottotitolo per le card applicando la classe `.it-card-subtitle` su un elemento paragrafo.
+Per mostrare un sottotitolo sulle card, applica la classe `.it-card-subtitle` a un elemento paragrafo.
 
-È possibile inoltre indicare l'autore del contenuto usando l'elemento semantico `address` con classe `.it-card-signature`. 
+Per indicare l'autore del contenuto, usa l'elemento semantico `address` con classe `.it-card-signature`. 
 
 {% comment %}Example name: Card editoriale standard{% endcomment %}
 {% capture example %}
@@ -293,15 +293,16 @@ Negli esempi il `target` del link non è usato, nell'ottica di favorire la norma
 
 ### Card inline orizzontali
 
-È possibile ottenere una disposizione orizzontale della struttura della card usando la classe `.it-card-inline` e cambiando leggermente la struttura rispetto al codice HTML della card base: il titolo, il corpo della card e il piede, laddove presenti, sono infatti raccolti in un unico contenitore `.it-card-inline-content` che precede sempre l'immagine. 
+Usa questa variante orizzontale di card per creare sezioni in cui una o due card sono in evidenza rispetto a un gruppo di card più piccole. Usa questa variante solo quando per il contenuto è disponibile un'immagine.
 
-Questo tipo di card è da utilizzare solo quando è disponibile un'immagine, utile per creare sezioni in cui una o due card sono in evidenza rispetto a un gruppo di card più piccole.
+Per ottenere la disposizione orizzontale della card, usa la classe `.it-card-inline` e cambia leggermente la struttura rispetto al codice HTML della card base: raccogli il titolo, il corpo della card e il piede, se presenti, in un unico contenitore `.it-card-inline-content` che precede sempre l'immagine. 
 
-L'aspetto orizzontale è presentato all'utente solo su schermi medio-grandi non ingranditi, torna invece in un approccio responsivo ad una disposizione verticale simile alla card base su dispositivi più piccoli, oppure in viste ingrandite. L'immagine, se presente, assume quindi le proporzioni definite con le classi `.ratio-`. 
 
-Per usare al meglio questo tipo di card è consigliabile usare "queries" di impaginazione sensibili al proprio contenitore, piuttosto che al viewport come le colonne in esempio. Per permettere lo sviluppo orizzontale solo se lo spazio a disposizione è davvero sufficiente. È disponibile più avanti nella pagina una sezione dedicata a questo tipo di queries (sperimentali).
+La card si presenta in disposizione orizzontale solo su schermi medio-grandi non ingranditi, mentre su dispositivi più piccoli o in viste ingrandite torna invece, in un approccio responsivo, a una disposizione verticale simile alla card base. L'immagine, se presente, assume quindi le proporzioni definite con le classi `.ratio-`. 
 
-Per invertire il solo ordine visivo tra destra e sinistra è possibile applicare la classe `.it-card-inline-reverse`. 
+Per sfruttare al meglio questa variante di card, assicurati di permettere la disposizione orizzontale solo se lo spazio disponibile è davvero sufficiente. Consigliamo di usare "queries" di impaginazione sensibili al proprio contenitore, piuttosto che al viewport come le colonne in esempio. Puoi trovare più avanti nella pagina una sezione dedicata a questo tipo di queries (sperimentali).
+
+Per invertire solamente l'ordine visivo tra destra e sinistra, applica la classe `.it-card-inline-reverse`. 
 
 {% comment %}Example name: Card inline orizzontali{% endcomment %}
 {% capture example %}
@@ -371,11 +372,11 @@ Per invertire il solo ordine visivo tra destra e sinistra è possibile applicare
 
 ### Card inline mini
 
-È disponibile una variante "mini" delle card orizzontali, ideale per raggruppare in poco spazio card correlate, è utile per piccole card editoriali secondarie. Si ottiene usando la classe `.it-card-inline-mini` e la configurazione inline orizzontale, in questo caso, viene mantenuta anche su dispositivi piccoli o in viste ingrandite. 
+Usa la variante mini delle card orizzontali per raggruppare in poco spazio card editoriali con contenuti correlati secondari. La configurazione inline orizzontale, in questo caso, viene mantenuta anche su dispositivi piccoli o in viste ingrandite. Questa variante si ottiene applicando la classe `.it-card-inline-mini`.
 
-È consigliabile non aggiungere altri contenuti oltre al titolo (da tenere breve), l'eventuale categoria o argomento principale, e la data. 
+Consigliamo di non aggiungere altri contenuti oltre al titolo (da mantenere breve), l'eventuale categoria o argomento principale e la data. 
 
-L'immagine è opzionale e per invertire il solo ordine visivo tra destra e sinistra è possibile applicare la classe `.it-card-inline-reverse`. 
+L'immagine è opzionale. Per invertire solamente l'ordine visivo tra destra e sinistra, puoi applicare la classe `.it-card-inline-reverse`. 
 
 {% comment %}Example name: Card editoriale inline mini{% endcomment %}
 {% capture example %}
@@ -456,28 +457,30 @@ L'immagine è opzionale e per invertire il solo ordine visivo tra destra e sinis
 
 ### Card per eventi
 
-È possibile aggiungere un paragrafo all'inizio del corpo della card con la data o la durata dell'evento. La classe da usare sul paragrafo in questo caso è `.it-card-subtitle`. 
+Per mostrare la data o la durata di un evento in una card, aggiungili in un paragrafo all'inizio del corpo della card e applica la classe `.it-card-subtitle` al paragrafo. 
 
 {% capture callout %}
 
 #### Accessibilità date e orari eventi
 
-Quando si presentano date e orari dell'evento può essere indicato usare l'elemento `time` con l'appropriato attributo `datetime`. 
-Inserire eventuali contenuti guida per lettori di schermo solo se realmente necessari per evitare il rumore (ad esempio il `<span class="visually-hidden">Data evento:</span>` presente nel primo esempio che segue). 
+Quando presenti date e orari di un evento, usa l'elemento `time` con l'appropriato attributo `datetime`. 
+Inserisci eventuali contenuti guida per lettori di schermo solo se realmente necessari per evitare il rumore, ad esempio il `<span class="visually-hidden">Data evento:</span>` presente nel primo esempio che segue. 
 
-È inoltre sempre consigliabile svolgere test di usabilità anche con utenti che utilizzato tecnologie assistive. 
+Consigliamo, inoltre, di svolgere sempre test di usabilità anche con utenti che utilizzato tecnologie assistive. 
 
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
-La classe `.it-card-footer` può essere usata anche per creare un ulteriore spazio dedicato a **collegamenti o pulsanti secondari** come negli esempi che seguono. Possono essere utili per quelle situazioni dove il collegamento principale della card, il titolo, porta a una pagina di approfondimento, ma è auspicabile dare direttamente l'accesso dalla card per esempio a iscrizioni o azioni dirette rispetto al contenuto. 
+Per creare un ulteriore spazio dedicato a **collegamenti o pulsanti secondari**, come negli esempi che seguono, puoi usare la classe `.it-card-footer`. Questa impostazione è utile quando il titolo della card porta a una pagina di approfondimento (ad esempio, la descrizione dettagliata dell'evento), ma si vuole dare accesso diretto e immediato all'azione principale (ad esempio, l'iscrizione all'evento). 
 
-È disponibile la classe `.it-card-link` per i collegamenti `a` usati nel corpo o nel footer della card. Questa classe applica il colore secondario.
+Per applicare il colore secondario ai collegamenti `a` inseriti nel corpo o nel footer della card , usa la classe `.it-card-link`.
 
 {% capture callout %}
 
 #### Accessibilità collegamenti secondari
 
-È importante ricordare di usare link con semantica `a` per presentare collegamenti di navigazione, e pulsanti con semantica `button` per azioni che avvengono in pagina come l'apertura di modali. 
+Ricorda di usare:
+- link con semantica `a` per presentare collegamenti di navigazione
+- pulsanti con semantica `button` per azioni che avvengono in pagina, come l'apertura di modali. 
 
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
@@ -561,9 +564,9 @@ La classe `.it-card-footer` può essere usata anche per creare un ulteriore spaz
 
 #### Card per eventi inline
 
-È possibile disporre le card eventi in orizzontale usando la classe `.it-card-inline` e avendo cura di raccogliere tutti i contenuti di testo e interattivi in un contenitore `.it-card-inline-content`. 
+Per disporre le card eventi in orizzontale, usa la classe `.it-card-inline` e raccogli tutti i contenuti di testo e interattivi in un contenitore `.it-card-inline-content`. 
 
-Come negli altri casi l'immagine segue sempre questo contenitore, ed è possibile invertirne l'ordine solo visivo usando la classe `.it-card-inline-reverse`
+Come nelle altre varianti, l'immagine segue sempre questo contenitore. Puoi invertire solamente l'ordine visivo usando usando la classe `.it-card-inline-reverse`.
 
 {% comment %}Example name: Card eventi inline orizzontali{% endcomment %}
 {% capture example %}
@@ -641,14 +644,14 @@ Come negli altri casi l'immagine segue sempre questo contenitore, ed è possibil
 
 ### Card per media (video, audio)
 
-Le card possono essere usate anche per presentare contenuti media tipo video o audio, che rimandano a pagine di dettaglio oppure direttamente su piattaforme terze. 
-Anche in questo caso è bene comunicare la tipologia del contenuto e l'eventuale uscita dal sito stesso. Per farlo è possibile anche aggiungere un'icona a fianco del titolo, usando la classe `.it-card-title-icon`.
+Usa queste varianti di card per presentare contenuti media come video o audio e rimandare alle relative pagine di dettaglio, anche se ospitate su piattaforme terze. 
+Anche in questo caso, assicurati di comunicare all'utente la tipologia del contenuto e l'eventuale uscita dal sito stesso. Per farlo, puoi anche aggiungere un'icona a fianco del titolo, usando la classe `.it-card-title-icon`.
 
 {% capture callout %}
 
 #### Accessibilità link per media esterni
 
-Negli esempi il `target` del link non è usato, nell'ottica di favorire la normale navigazione del browser. Se si rimanda a nuovi tab o finestre si deve comunicare all'utente in modo chiaro con un'icona di link esterno e un testo alternativo o nascosto che ne comunichi l'intento anche ai lettori di schermo.  
+Negli esempi non abbiamo usato il `target` del link per favorire la normale navigazione del browser. Se la pagina di destinazione si apre in una nuova tab o finestra, comunicalo in modo chiaro all'utente con un'icona di link esterno e un testo alternativo o nascosto per i lettori di schermo.
 
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
@@ -781,9 +784,9 @@ Negli esempi il `target` del link non è usato, nell'ottica di favorire la norma
 
 #### Card per media video inline
 
-È possibile disporre le card media di tipo video in orizzontale usando la classe `.it-card-inline` e avendo cura di raccogliere tutti i contenuti di testo e interattivi in un contenitore `.it-card-inline-content`. 
+Per disporre disporre le card media di tipo video in orizzontale, usa la classe `.it-card-inline` e raccogli tutti i contenuti di testo e interattivi in un contenitore `.it-card-inline-content`. 
 
-Come negli altri casi l'immagine segue sempre questo contenitore, ed è possibile invertirne l'ordine solo visivo usando la classe `.it-card-inline-reverse`
+Come nelle altre varianti, l'immagine segue sempre questo contenitore. Puoi invertire solamente l'ordine visivo usando usando la classe `.it-card-inline-reverse`.
 
 {% comment %}Example name: Card eventi inline orizzontali{% endcomment %}
 {% capture example %}
@@ -855,38 +858,42 @@ Come negli altri casi l'immagine segue sempre questo contenitore, ed è possibil
 
 ## Card informative e di servizio
 
-Utili a fornire un’anteprima per pagine di dettaglio per servizi e bandi, oppure per rappresentare documenti e altri tipi di allegati. 
+Le card informative e di servizio sono utili a fornire un’anteprima per pagine di dettaglio di servizi e bandi, oppure per rappresentare documenti e altri tipi di allegati. 
 
 {% capture callout %}
 #### Accessibilità titoli delle card informative
-I titoli `.it-card-title` negli esempi di questo tipo sono `h4`. La gerarchia dei titoli deve adattarsi ovviamente al contesto in cui la card è inserita.
+Negli esempi abbiamo utilizzato il tag `h4` per i titoli `.it-card-title`. Utilizza il tag `h` corretto a seconda del contesto.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
 ### Card per servizi e bandi
 
-Si consiglia di usare alternativamente un breve testo descrittivo `.it-card-text` o sottotitolo `.it-card-subtitle` per descrivere il contesto della card. 
+Consigliamo di usare alternativamente un breve testo descrittivo `.it-card-text` o sottotitolo `.it-card-subtitle` per descrivere il contesto della card. 
 
-È possibile integrare nell'elemento `footer` lo stato del servizio o bando con un componente chip, e l'eventuale data di scadenza usando lo spazio `it-card-date` e integrandolo con eventuale testo descrittivo come negli esempi che seguono. 
+Per aggiungere indicazioni sullo stato del servizio o bando e un'eventuale data di scadenza, come negli esempi che seguono, puoi usare l'elemento `footer`: 
+- per lo stato del servizio o bando, usa un componente chip 
+- per un'eventuale data di scadenza, usa lo lo spazio `it-card-date` e un testo descrittivo. 
 
 {% capture callout %}
 
 #### Accessibilità date e orari delle scadenze
 
-Quando si presentano date di scadenza può essere indicato usare l'elemento `time` con l'appropriato attributo `datetime`. È in questo caso importante indicare a tutte le persone il loro ruolo di "Scadenza" dichiarandolo nel testo come negli esempi che seguono. Non usare solo il colore (negli esempi `.text-warning`) per veicolarne l'importanza. 
+Quando presenti date di scadenza, usa l'elemento `time` con l'appropriato attributo `datetime`. Comunica chiaramente agli utenti il loro ruolo di "Scadenza" aggiungendo il testo come negli esempi che seguono. Non usare solo il colore (negli esempi `.text-warning`) per veicolare l'importanza dell'informazione. 
 
-È inoltre sempre consigliabile svolgere test di usabilità anche con utenti che utilizzato tecnologie assistive. 
+Consigliamo, inoltre, di svolgere sempre test di usabilità anche con utenti che utilizzato tecnologie assistive. 
 
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
-La classe `.it-card-footer` può essere usata anche per creare un ulteriore spazio dedicato a **collegamenti o pulsanti secondari** come negli esempi che seguono. Possono essere utili per quelle situazioni dove il collegamento principale della card, il titolo, porta a una pagina di approfondimento, ma è auspicabile dare direttamente l'accesso dalla card per esempio a iscrizioni o azioni dirette rispetto al contenuto. 
+Per creare un ulteriore spazio dedicato a **collegamenti o pulsanti secondari**, come negli esempi che seguono, puoi usare la classe `.it-card-footer`. Questa impostazione è utile quando il titolo della card porta a una pagina di approfondimento (ad esempio, la descrizione dettagliata di un bando), ma si vuole dare accesso diretto e immediato all'azione principale (ad esempio, la candidatura al bando). 
 
-È disponibile la classe `.it-card-link` per i collegamenti `a` usati nel corpo o nel footer della card. Questa classe applica il colore secondario.
+Per applicare il colore secondario ai collegamenti `a` inseriti nel corpo o nel footer della card , usa la classe `.it-card-link`.
 
 {% capture callout %}
 
 #### Accessibilità collegamenti secondari per le card informative
 
-È importante ricordare di usare link con semantica `a` per presentare collegamenti di navigazione, e pulsanti con semantica `button` per azioni che avvengono in pagina come l'apertura di modali. 
+Ricorda di usare:
+- link con semantica `a` per presentare collegamenti di navigazione
+- pulsanti con semantica `button` per azioni che avvengono in pagina, come l'apertura di modali. 
 
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
@@ -960,9 +967,9 @@ La classe `.it-card-footer` può essere usata anche per creare un ulteriore spaz
 
 ### Card per documenti e allegati
 
-Le card per rappresentare documenti e allegati possono usare un'icona affiancata al titolo usando la classe `.it-card-title-icon`. 
+Usa questa variante per presentare documenti e allegati. Per mostrare un'icona affiancata al titolo, applica la classe `.it-card-title-icon`. 
 
-La classe `.it-card-footer` può essere usata per creare un ulteriore spazio dedicato a **collegamenti secondari** come negli esempi che seguono. Possono essere utili per quelle situazioni dove il collegamento principale della card, il titolo, porta a una pagina di approfondimento della risorsa, ma è auspicabile dare direttamente l'accesso dalla card per esempio a scaricare la risorsa collegata.
+Per creare un ulteriore spazio dedicato a **collegamenti o pulsanti secondari**, come negli esempi che seguono, puoi usare la classe `.it-card-footer`. Questa impostazione è utile quando il titolo della card porta a una pagina di approfondimento (ad esempio, la descrizione dettagliata del documento), ma si vuole dare accesso diretto e immediato all'azione principale (ad esempio, scaricare il file sul proprio dispositivo).
 
 {% comment %}Example name: Card servizi{% endcomment %}
 {% capture example %}
@@ -1026,17 +1033,17 @@ La classe `.it-card-footer` può essere usata per creare un ulteriore spazio ded
 {% endcapture %}{% include example.html content=example %}
 
 ### Card per profili personali 
-Utili ad esempio per indicare schede personale o relatori a un evento. Si attivano con la classe `.it-card-profile`. È da notare che la testata della card è costruita con classi di stile dedicate come `.it-card-profile-header` per nome e ruolo. L'immagine di profilo sulla destra è visualizzata integrando il componente avatar in una delle sue varianti. 
+Usa questa variante per indicare schede personali o i relatori a un evento. Si attivano con la classe `.it-card-profile`. La testata della card è costruita con classi di stile dedicate come `.it-card-profile-header` per nome e ruolo. L'immagine di profilo sulla destra è visualizzata integrando il componente avatar in una delle sue varianti. 
 
 Per l'icona o l'immagine del profilo si usa il componente avatar nelle varianti `lg` e `xl`. 
 
 La lista di metadati del profilo è costruita utilizzando liste descrittive `.it-card-description-list` con ogni coppia di item `dd`-`dt` raccolta in un `div` contenitore. 
 
-Per un effetto decorativo, è disponibile la classe `.it-card-border-top` (con varianti di colore `.it-card-border-top-COLORE`). Questa classe non deve essere utilizzata per comunicare significato semantico, ma solo come eventuale elemento decorativo. 
+Per un effetto decorativo, puoi usare la classe `.it-card-border-top` (con varianti di colore `.it-card-border-top-COLORE`). Non usare questa classe per comunicare significato semantico, ma solo come eventuale elemento decorativo. 
 
 {% capture callout %}
 #### Accessibilità nomi
-I titoli `.it-card-profile-name` in questi esempi sono `h4`. La gerarchia dei titoli deve adattarsi ovviamente al contesto in cui la card è inserita.
+Negli esempi abbiamo utilizzato il tag `h4` per i titoli `.it-card-profile-name`. Utilizza il tag `h` corretto a seconda del contesto.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
 {% comment %}Example name: Card profilo{% endcomment %}
@@ -1213,17 +1220,17 @@ I titoli `.it-card-profile-name` in questi esempi sono `h4`. La gerarchia dei ti
 
 ### Card per luoghi
 
-Utili ad esempio per indicare schede località. Si attivano con la classe `.it-card-site`. È da notare che la testata della card è costruita con classi di stile dedicate come `.it-card-place-header` per nome e tipologia.
+Usa questa variante per presentare schede località. Si attiva con la classe `.it-card-site`. La testata della card è costruita con classi di stile dedicate come `.it-card-place-header` per nome e tipologia. 
 
-Lo spazio per l'immagine sulla destra `.it-card-place-image` può essere usato anche per contenere un'icona. L'accortezza è racchiuderna dentro un `div` contenitore con wrapper `.it-card-place-icon-wrapper` che ne permetta i corretti allineamenti. 
+Puoi usare spazio per l'immagine sulla destra `.it-card-place-image` anche per contenere un'icona. Assicurati di racchiuderla dentro un `div` contenitore con wrapper `.it-card-place-icon-wrapper`, per permettere i corretti allineamenti. 
 
 La lista di metadati del luogo è costruita utilizzando liste descrittive `.it-card-description-list` con ogni coppia di item`dd`-`dt` raccolta in un `div` contenitore. 
 
-È possibile combinare un piede con eventuali collegamenti o dettagli della mappa usando l'elemento `footer` con le classi dedicate `.it-card-related` e `it-card-footer`. Negll'esempio è stato applicato un `.border-top` a questo elemento, opzionale.  
+Puoi combinare un piede con eventuali collegamenti o dettagli della mappa usando l'elemento `footer` con le classi dedicate `.it-card-related` e `it-card-footer`. Nell'esempio abbiamo applicato un `.border-top` a questo elemento, ma è opzionale.  
 
 {% capture callout %}
 #### Accessibilità nomi luoghi
-I titoli `.it-card-place-name` in questi esempi sono `h4`. La gerarchia dei titoli deve adattarsi ovviamente al contesto in cui la card è inserita.
+Negli esempi abbiamo utilizzato il tag `h4` per i titoli `.it-card-place-name`. Utilizza il tag `h` corretto a seconda del contesto.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
 {% comment %}Example name: Card luogo{% endcomment %}
@@ -1371,21 +1378,23 @@ I titoli `.it-card-place-name` in questi esempi sono `h4`. La gerarchia dei tito
 
 
 ### Card con liste di contenuti affini
-È possibile integrare nel corpo della card delle liste strutturate di link usando le classi `.list-group`. 
+Per presentare liste di contenuti affini, puoi integrare liste strutturate di link nel corpo della card usando le classi `.list-group`. 
 
-Da usare con molta parsimonia, questa possibilità si presta a creare liste di accesso a contenuti in evidenza laddove la card rappresentino un'intera sezione o vista dei contenuti di un sito web, come nel caso di card per argomenti in evidenza. Oppure, per esempio, indichino pagine di dettaglio utili alla partecipazione ad un evento. 
+Usa questa variante con moderazione e solo quando è necessario facilitare l'accesso ai contenuti in evidenza di un sito web, come ad esempio:
+- i contenuti correlati a un argomento in evidenza 
+- le varie pagine di approfondimento correlate a un evento in evidenza.
 
 {% capture callout %}
 
 #### Accessibilità: lista link correlati
 
-È da valutare caso per caso l'applicazione di un'eventuale aria-label all'elemento `ul` che permetta di comprendere la natura di questi link ai lettori di schermo.
+Valuta caso per caso l'applicazione di un'eventuale aria-label all'elemento `ul`, per permettere ai lettori di schermo di comprendere la natura di questi link.
 
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
-È da valutare nei singoli casi l'uso del colore primario per questa lista di link, oppure l'applicazione del colore secondario usando la classe dedicata `.it-card-link`. 
+Valuta caso per caso l'uso del colore primario per la lista di link, oppure l'applicazione del colore secondario usando la classe dedicata `.it-card-link`. 
 
-Questa possibilità si può combinare con le funzionalità del contenitore `.it-card-footer` per ospitare link e pulsanti di servizio.
+Puoi combinare questa impostazione con le funzionalità del contenitore `.it-card-footer` per ospitare link e pulsanti di servizio.
 
 {% comment %}Example name: Card con liste di contenuti affini{% endcomment %}
 {% capture example %}
@@ -1486,12 +1495,12 @@ Alcune classi e codice HTML utile a personalizzare le card.
 ### Bordi e ombre
 
 La configurazione base delle card prevede un bordo (`.border`) e un'ombra leggera (`.shadow-sm`).
-Per aumentare la separazione visiva dal contesto, è possibile utilizzare ombre più evidenti:
+Per aumentare la separazione visiva dal contesto, puoi utilizzare ombre più evidenti:
 
 - `.shadow` - ombra media
 - `.shadow-lg` - ombra pronunciata
 
-Quando si utilizzano ombre più evidenti, è possibile rimuovere il bordo se la distinzione dallo sfondo è sufficientemente chiara.
+Quando utilizzi ombre più evidenti, puoi rimuovere il bordo se la distinzione dallo sfondo è sufficientemente chiara.
 
 {% capture callout %}
 
