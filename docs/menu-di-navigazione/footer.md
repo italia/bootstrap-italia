@@ -180,7 +180,7 @@ Contiene solo i contatti dell'ente e i link utili. Può essere utilizzato in pag
 <footer class="it-footer">
   <div class="it-footer-main">
     <div class="container">
-      <section class="py-4">
+      <section class="pb-4">
         <div class="row clearfix">
           <div class="col-sm-12">
             <div class="it-brand-wrapper">
@@ -195,9 +195,9 @@ Contiene solo i contatti dell'ente e i link utili. Può essere utilizzato in pag
           </div>
         </div>
       </section>
-      <section class="py-4 border-white border-top">
+      <section class="pt-4 border-white border-top">
         <div class="row">
-          <div class="col-lg-4 col-md-4 pb-2">
+          <div class="col-lg-4 col-md-4 mt-2">
             <h4>Contatti</h4>
             <p>
               <strong>Nome Ente</strong><br>
@@ -212,7 +212,7 @@ Contiene solo i contatti dell'ente e i link utili. Può essere utilizzato in pag
               </ul>
             </div>
           </div>
-          <div class="col-lg-4 col-md-4 pb-2">
+          <div class="col-lg-4 col-md-4 mt-2">
             <div class="pb-2">
               <h4>Seguici su</h4>
               <ul class="list-inline text-left social">
@@ -231,7 +231,7 @@ Contiene solo i contatti dell'ente e i link utili. Può essere utilizzato in pag
               </ul>
             </div>
           </div>
-          <div class="col-lg-4 col-md-4 pb-2">
+          <div class="col-lg-4 col-md-4 mt-2">
             <h4>Newsletter</h4>
 
           </div>
