@@ -1028,7 +1028,7 @@ La classe `.it-card-footer` può essere usata per creare un ulteriore spazio ded
 ### Card per profili personali 
 Utili ad esempio per indicare schede personale o relatori a un evento. Si attivano con la classe `.it-card-profile`. È da notare che la testata della card è costruita con classi di stile dedicate come `.it-card-profile-header` per nome e ruolo. L'immagine di profilo sulla destra è visualizzata integrando il componente avatar in una delle sue varianti. 
 
-Per l'icona o l'immagine del profilo si usa il componente avatar nelle varianti `lg` o `xl`. 
+Per l'icona o l'immagine del profilo si usa il componente avatar nelle varianti `lg` e `xl`. 
 
 La lista di metadati del profilo è costruita utilizzando liste descrittive `.it-card-description-list` con ogni coppia di item `dd`-`dt` raccolta in un `div` contenitore. 
 
@@ -1039,8 +1039,62 @@ Per un effetto decorativo, è disponibile la classe `.it-card-border-top` (con v
 I titoli `.it-card-profile-name` in questi esempi sono `h4`. La gerarchia dei titoli deve adattarsi ovviamente al contesto in cui la card è inserita.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
-{% comment %}Example name: Card profilo con iniziali{% endcomment %}
+{% comment %}Example name: Card profilo{% endcomment %}
 {% capture example %}
+
+<div class="row">
+  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+    <!--start it-card-->
+    <article class="it-card it-card-profile rounded shadow-sm border">
+      <div class="it-card-profile-header">
+        <div class="it-card-profile">
+          <h4 class="it-card-profile-name no_toc">
+            <a href="#">Nome Personale</a>
+          </h4>
+          <p class="it-card-profile-role">Ruolo nell'organizzazione</p>
+        </div>
+        <div class="avatar size-lg">
+          <p aria-hidden="true">NP</p>
+        </div>
+      </div>
+    </article>
+    <!--end it-card-->
+  </div>
+  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+    <!--start it-card-->
+    <article class="it-card it-card-profile rounded shadow-sm border">
+      <div class="it-card-profile-header">
+        <div class="it-card-profile">
+          <h4 class="it-card-profile-name no_toc">
+            <a href="#">Nome Personale</a>
+          </h4>
+          <p class="it-card-profile-role">Ruolo nell'organizzazione</p>
+        </div>
+        <div class="avatar size-xl">
+          <p aria-hidden="true">NP</p>
+        </div>
+      </div>
+    </article>
+    <!--end it-card-->
+  </div>
+  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+    <!--start it-card-->
+    <article class="it-card it-card-profile it-card-border-top it-card-border-top-secondary rounded shadow-sm border">
+      <div class="it-card-profile-header">
+        <div class="it-card-profile">
+          <h4 class="it-card-profile-name no_toc">
+            <a href="#">Nome Personale</a>
+          </h4>
+          <p class="it-card-profile-role">Ruolo nell'organizzazione</p>
+        </div>
+        <div class="avatar size-xl">
+          <img src="https://randomuser.me/api/portraits/women/24.jpg" alt="">
+        </div>
+      </div>
+    </article>
+    <!--end it-card-->
+  </div>
+</div>
 
 <div class="row">
   <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
@@ -1159,7 +1213,7 @@ I titoli `.it-card-profile-name` in questi esempi sono `h4`. La gerarchia dei ti
 
 ### Card per luoghi
 
-Utili ad esempio per indicare schede località. Si attivano con la classe `.it-card-site`. È da notare che la testata della card è costruita con classi di stile dedicate come `.it-card-place-header` per nome, tipologia ed eventuale indirizzo. 
+Utili ad esempio per indicare schede località. Si attivano con la classe `.it-card-site`. È da notare che la testata della card è costruita con classi di stile dedicate come `.it-card-place-header` per nome e tipologia.
 
 Lo spazio per l'immagine sulla destra `.it-card-place-image` può essere usato anche per contenere un'icona. L'accortezza è racchiuderna dentro un `div` contenitore con wrapper `.it-card-place-icon-wrapper` che ne permetta i corretti allineamenti. 
 
@@ -1185,7 +1239,61 @@ I titoli `.it-card-place-name` in questi esempi sono `h4`. La gerarchia dei tito
             <a href="#">Toponimo o luogo</a>
           </h4>
           <p class="it-card-place-type">Tipologia di luogo</p>
-          <p class="it-card-place-address">Via della città, 5 - 00100 Città</p>
+        </div>
+      </div>
+    </article>
+    <!--end it-card-->
+  </div>
+  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+    <!--start it-card-->
+    <article class="it-card it-card-place rounded shadow-sm border">
+      <div class="it-card-place-header">
+        <div class="it-card-place">
+          <h4 class="it-card-place-name no_toc">
+            <a href="#">Toponimo o luogo</a>
+          </h4>
+          <p class="it-card-place-type">Tipologia di luogo</p>
+        </div>
+        <div class="it-card-place-image ratio ratio-1x1">
+          <div class="it-card-place-image-icon-wrapper">
+            <svg class="icon icon-lg icon-padded icon-primary" aria-hidden="true"><use href="/dist/svg/sprites.svg#it-pa"></use></svg>
+          </div>
+        </div>
+      </div>
+    </article>
+    <!--end it-card-->
+  </div>
+  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+    <!--start it-card-->
+    <article class="it-card it-card-place it-card-border-top it-card-border-top-secondary rounded shadow-sm border mb-3">
+      <div class="it-card-place-header">
+        <div class="it-card-place">
+          <h4 class="it-card-place-name no_toc">
+            <a href="#">Toponimo o luogo</a>
+          </h4>
+          <p class="it-card-place-type">Tipologia di luogo</p>
+        </div>
+        <div class="it-card-place-image ratio ratio-1x1">
+          <figure class="figure img-full">
+            <img src="https://placeholderimage.eu/api/monument/320/320" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+          </figure>
+        </div>
+      </div>
+    </article>
+    <!--end it-card-->
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+    <!--start it-card-->
+    <article class="it-card it-card-place rounded shadow-sm border">
+      <div class="it-card-place-header">
+        <div class="it-card-place">
+          <h4 class="it-card-place-name no_toc">
+            <a href="#">Toponimo o luogo</a>
+          </h4>
+          <p class="it-card-place-type">Tipologia di luogo</p>
         </div>
         <div class="it-card-place-image ratio ratio-1x1">
           <div class="it-card-place-image-icon-wrapper">
@@ -1221,7 +1329,6 @@ I titoli `.it-card-place-name` in questi esempi sono `h4`. La gerarchia dei tito
             <a href="#">Toponimo o luogo</a>
           </h4>
           <p class="it-card-place-type">Tipologia di luogo</p>
-          <p class="it-card-place-address">Via della città, 5 - 00100 Città</p>
         </div>
         <div class="it-card-place-image ratio ratio-1x1">
           <figure class="figure img-full">
