@@ -1,0 +1,305 @@
+---
+layout: test
+---
+
+<h1 id="inizio">Organizzazione e layout</h1>
+<p>In questa pagina puoi esplorare le opzioni di organizzazione e layout per le card</p>
+<ul>
+    <li><a class="list-item" href="#gruppi-di-card"><span>Gruppi di card</span></a></li>
+    <li><a class="list-item" href="#numero-di-colonne-specifiche"><span>Numero di colonne specifiche</span></a></li>
+    <li><a class="list-item" href="#centrate-orizzontalmente"><span>Centrate orizzontalmente</span></a></li>
+    <li><a class="list-item" href="#layout-responsive-rispetto-al-contenitore"><span>Layout responsive rispetto al
+                contenitore (sperimentale)</span></a></li>
+</ul>
+<p class="mb-5">E accedere alla documentazione in via di stesura di Bootstrap Italia dall'<a
+        href="#approfondimenti">ultimo paragrafo
+        di approfondimenti</a>. </p>
+
+<h2 id="gruppi-di-card">Gruppi di card</h2>
+<p>Si possono organizzare gruppi di card con layout responsive, senza il bisogno di usare la griglia a colonne di
+    Bootstrap.</p>
+<div class="container mt-5 mb-5">
+    <div>
+        <div class="it-card-group">
+            <article class="it-card rounded shadow-sm border">
+                <h3 class="it-card-title ">
+                    <a href="#">Titolo della prima card</a>
+                </h3>
+                <div class="it-card-body">
+                    <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di
+                        destinazione.</p>
+                </div>
+                <footer class="it-card-related it-card-footer">
+                    <div class="it-card-taxonomy">
+                        <a href="#" class="it-card-category it-card-link link-secondary"><span
+                                class="visually-hidden">Categoria correlata: </span>Categoria</a>
+                    </div>
+                    <time class="it-card-date" datetime="10/12/2025">12 ottobre, 2025</time>
+                </footer>
+            </article>
+            <article class="it-card rounded shadow-sm border">
+                <h3 class="it-card-title ">
+                    <a href="#">Titolo della seconda card</a>
+                </h3>
+                <div class="it-card-body">
+                    <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di
+                        destinazione.</p>
+                </div>
+                <footer class="it-card-related it-card-footer">
+                    <div class="it-card-taxonomy">
+                        <a href="#" class="it-card-category it-card-link link-secondary"><span
+                                class="visually-hidden">Categoria correlata: </span>Categoria</a>
+                    </div>
+                    <time class="it-card-date" datetime="10/12/2025">12 ottobre, 2025</time>
+                </footer>
+            </article>
+            <article class="it-card rounded shadow-sm border">
+                <h3 class="it-card-title ">
+                    <a href="#">Titolo della terza card</a>
+                </h3>
+                <div class="it-card-body">
+                    <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di
+                        destinazione.</p>
+                </div>
+                <footer class="it-card-related it-card-footer">
+                    <time class="it-card-date" datetime="10/12/2025">12 ottobre, 2025</time>
+                </footer>
+            </article>
+            <article class="it-card rounded shadow-sm border">
+                <h3 class="it-card-title ">
+                    <a href="#">Titolo della quarta card</a>
+                </h3>
+                <div class="it-card-body">
+                    <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di
+                        destinazione.</p>
+                </div>
+                <footer class="it-card-related it-card-footer">
+                    <time class="it-card-date" datetime="10/12/2025">12 ottobre, 2025</time>
+                </footer>
+            </article>
+        </div>
+    </div>
+</div>
+<a class="mb-5" href="#inizio"><svg aria-hidden="true" class="icon icon-sm icon-primary me-2">
+        <use href="/dist/svg/sprites.svg#it-arrow-up"></use>
+    </svg>Torna su</a>
+
+<h2 id="numero-di-colonne-specifiche">Numero di colonne specifiche</h2>
+<p>Organizzando le card in gruppi si può scegliere un numero di colonne specifiche di default.</p>
+<div class="container mt-5 mb-5">
+    <div>
+        <div class="it-card-group it-card-group-2-cols">
+            <article class="it-card rounded shadow-sm border">
+                <h3 class="it-card-title ">
+                    <a href="#">Card in due colonne</a>
+                </h3>
+                <div class="it-card-body">
+                    <p class="it-card-text">Questo gruppo mostra sempre due colonne su schermi medi e grandi.</p>
+                </div>
+            </article>
+            <article class="it-card it-card-image rounded shadow-sm border">
+                <h3 class="it-card-title ">
+                    <a href="#">Card in due colonne</a>
+                </h3>
+                <div class="it-card-body">
+                    <p class="it-card-text">Questo gruppo mostra sempre due colonne su schermi medi e grandi.</p>
+                </div>
+            </article>
+        </div>
+    </div>
+</div>
+<a class="mb-5" href="#inizio"><svg aria-hidden="true" class="icon icon-sm icon-primary me-2">
+        <use href="/dist/svg/sprites.svg#it-arrow-up"></use>
+    </svg>Torna su</a>
+
+<h2 id="centrate-orizzontalmente">Centrate orizzontalmente</h2>
+<p>I gruppi di card possono avere un numero di colonne a scelta centrato orizzontalmente nello schermo.</p>
+<div class="container mt-5 mb-5">
+    <div>
+        <div class="it-card-group it-card-group-3-cols it-card-group-center">
+            <article class="it-card rounded shadow-sm border">
+                <h3 class="it-card-title ">
+                    <a href="#">Card centrata</a>
+                </h3>
+                <div class="it-card-body">
+                    <p class="it-card-text">Questo gruppo ha le card centrate nella pagina.</p>
+                </div>
+            </article>
+            <article class="it-card rounded shadow-sm border">
+                <h3 class="it-card-title ">
+                    <a href="#">Card centrata</a>
+                </h3>
+                <div class="it-card-body">
+                    <p class="it-card-text">Questo gruppo ha le card centrate nella pagina.</p>
+                </div>
+            </article>
+        </div>
+    </div>
+</div>
+<a class="mb-5" href="#inizio"><svg aria-hidden="true" class="icon icon-sm icon-primary me-2">
+        <use href="/dist/svg/sprites.svg#it-arrow-up"></use>
+    </svg>Torna su</a>
+
+<h2 id="layout-responsive-rispetto-al-contenitore">Layout responsive rispetto al
+    contenitore (sperimentale)</h2>
+<p>Gruppo di card che risponde a <span lang="en">Container Queries</span> attivabile usando una classe dedicata
+    per adattarsi responsive alla dimensione del contenitore invece che alla <span lang="en">viewport</span>.
+    Ridimensiona la finestra del
+    browser o prova a visualizzare questa pagina su dispositivi di diverse dimensioni per apprezzare la differenza di
+    approccio.
+
+    Le <span lang="en">Container Queries</span> sono una tecnologia CSS moderna supportata nella maggior parte dei
+    browser recenti. Per i
+    browser che non supportano questa funzionalità, viene automaticamente applicato un <span lang="en">fallback</span>
+    basato su <span lang="en">Media Queries</span>
+    standard.</p>
+<div class="container mt-5 mb-5">
+    <div>
+        <div class="it-card-group it-card-group-container-aware">
+            <article class="it-card rounded shadow-sm border">
+                <h3 class="it-card-title ">
+                    <a href="#">Card con Container Queries</a>
+                </h3>
+                <div class="it-card-body">
+                    <p class="it-card-text">Questa card si adatta alla dimensione del suo contenitore, non della
+                        viewport.</p>
+                </div>
+                <footer class="it-card-related it-card-footer">
+                    <div class="it-card-taxonomy">
+                        <a href="#" class="it-card-category it-card-link link-secondary"><span
+                                class="visually-hidden">Categoria correlata: </span>Categoria</a>
+                    </div>
+                    <time class="it-card-date" datetime="10/12/2025">12 ottobre, 2025</time>
+                </footer>
+            </article>
+            <article class="it-card rounded shadow-sm border">
+                <h3 class="it-card-title ">
+                    <a href="#">Card con Container Queries</a>
+                </h3>
+                <div class="it-card-body">
+                    <p class="it-card-text">Questa card si adatta alla dimensione del suo contenitore, non della
+                        viewport.</p>
+                </div>
+                <footer class="it-card-related it-card-footer">
+                    <div class="it-card-taxonomy">
+                        <a href="#" class="it-card-category it-card-link link-secondary"><span
+                                class="visually-hidden">Categoria correlata: </span>Categoria</a>
+                    </div>
+                    <time class="it-card-date" datetime="10/12/2025">12 ottobre, 2025</time>
+                </footer>
+            </article>
+            <article class="it-card rounded shadow-sm border">
+                <h3 class="it-card-title ">
+                    <a href="#">Card con Container Queries</a>
+                </h3>
+                <div class="it-card-body">
+                    <p class="it-card-text">Questa card si adatta alla dimensione del suo contenitore, non della
+                        viewport.</p>
+                </div>
+                <footer class="it-card-related it-card-footer">
+                    <div class="it-card-taxonomy">
+                        <a href="#" class="it-card-category it-card-link link-secondary"><span
+                                class="visually-hidden">Categoria correlata: </span>Categoria</a>
+                    </div>
+                    <time class="it-card-date" datetime="10/12/2025">12 ottobre, 2025</time>
+                </footer>
+            </article>
+            <article class="it-card rounded shadow-sm border">
+                <h3 class="it-card-title ">
+                    <a href="#">Card con Container Queries</a>
+                </h3>
+                <div class="it-card-body">
+                    <p class="it-card-text">Questa card si adatta alla dimensione del suo contenitore, non della
+                        viewport.</p>
+                </div>
+                <footer class="it-card-related it-card-footer">
+                    <div class="it-card-taxonomy">
+                        <a href="#" class="it-card-category it-card-link link-secondary"><span
+                                class="visually-hidden">Categoria correlata: </span>Categoria</a>
+                    </div>
+                    <time class="it-card-date" datetime="10/12/2025">12 ottobre, 2025</time>
+                </footer>
+            </article>
+        </div>
+    </div>
+</div>
+
+<h3>Confronto in colonne diverse</h3>
+
+<div class="container mt-5 mb-5">
+    <div class="row">
+        <div class="col-12 col-lg-8 mb-4">
+            <div class="p-3 bg-light">
+                <div class="it-card-group it-card-group-container-aware">
+                    <article class="it-card rounded shadow-sm border">
+                        <h3 class="it-card-title ">
+                            <a href="#">Card in colonna larga</a>
+                        </h3>
+                        <div class="it-card-body">
+                            <p class="it-card-text">In questa colonna larga, le card si distribuiscono su più colonne.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="it-card rounded shadow-sm border">
+                        <h3 class="it-card-title ">
+                            <a href="#">Card in colonna larga</a>
+                        </h3>
+                        <div class="it-card-body">
+                            <p class="it-card-text">In questa colonna larga, le card si distribuiscono su più colonne.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="it-card rounded shadow-sm border">
+                        <h3 class="it-card-title ">
+                            <a href="#">Card in colonna larga</a>
+                        </h3>
+                        <div class="it-card-body">
+                            <p class="it-card-text">In questa colonna larga, le card si distribuiscono su più colonne.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-lg-4 mb-4">
+            <div class="p-3 bg-light">
+                <div class="it-card-group it-card-group-container-aware">
+                    <article class="it-card rounded shadow-sm border">
+                        <h3 class="it-card-title ">
+                            <a href="#">Card in colonna stretta</a>
+                        </h3>
+                        <div class="it-card-body">
+                            <p class="it-card-text">In questa colonna stretta, le card si dispongono su una singola
+                                colonna.</p>
+                        </div>
+                    </article>
+                    <article class="it-card rounded shadow-sm border">
+                        <h3 class="it-card-title ">
+                            <a href="#">Card in colonna stretta</a>
+                        </h3>
+                        <div class="it-card-body">
+                            <p class="it-card-text">In questa colonna stretta, le card si dispongono su una singola
+                                colonna.</p>
+                        </div>
+                    </article>
+                    <article class="it-card rounded shadow-sm border">
+                        <h3 class="it-card-title ">
+                            <a href="#">Card in colonna stretta</a>
+                        </h3>
+                        <div class="it-card-body">
+                            <p class="it-card-text">In questa colonna stretta, le card si dispongono su una singola
+                                colonna.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<a class="mb-5" href="#inizio"><svg aria-hidden="true" class="icon icon-sm icon-primary me-2">
+        <use href="/dist/svg/sprites.svg#it-arrow-up"></use>
+    </svg>Torna su</a>
+
+<h2 id="approfondimenti" class="">Approfondimenti</h2>
+<p>È possibile consulare la bozza della <a href="/docs/componenti/card/#organizzazione-e-layout>documentazione di
+        Bootstrap Italia</a> rispetto a quanto presentato in pagina, comprensiva di codice html e istruzioni d'uso.</p>
