@@ -1095,7 +1095,7 @@ Negli esempi abbiamo utilizzato il tag `h4` per i titoli `.it-card-profile-name`
           <p class="it-card-profile-role">Ruolo nell'organizzazione</p>
         </div>
         <div class="avatar size-xl">
-          <img src="https://randomuser.me/api/portraits/women/24.jpg" alt="">
+          <img src="https://randomuser.me/api/portraits/women/14.jpg" alt="">
         </div>
       </div>
     </article>
@@ -1189,7 +1189,7 @@ Negli esempi abbiamo utilizzato il tag `h4` per i titoli `.it-card-profile-name`
           <p class="it-card-profile-role">Ruolo nell'organizzazione</p>
         </div>
         <div class="avatar size-xl">
-          <img src="https://randomuser.me/api/portraits/women/24.jpg" alt="">
+          <img src="https://randomuser.me/api/portraits/women/14.jpg" alt="">
         </div>
       </div>
       <div class="it-card-body">
