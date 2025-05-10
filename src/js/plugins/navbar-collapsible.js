@@ -42,6 +42,7 @@ const EVENT_SHOW = `show${EVENT_KEY}`
 const EVENT_SHOWN = `shown${EVENT_KEY}`
 const EVENT_RESIZE = `resize${EVENT_KEY}`
 
+const CLASS_NAME_WRAPPER = 'navbar'
 const CLASS_NAME_OPEN = 'navbar-open'
 const CLASS_NAME_SHOW = 'show'
 const CLASS_NAME_EXPANDED = 'expanded'
@@ -69,6 +70,8 @@ const DefaultType = {
 class NavBarCollapsible extends BaseComponent {
   constructor(element, config) {
     super(element, config)
+
+    this.parentElement = this._element.parentNode;
 
     this._isShown = this._element.classList.contains(CLASS_NAME_EXPANDED)
     this._backdrop = this._initializeBackDrop()
@@ -198,6 +201,7 @@ class NavBarCollapsible extends BaseComponent {
       isVisible: Boolean(this._config.backdrop), // 'static' option will be translated to true, and booleans will keep their value,
       isAnimated: this._isAnimated(),
       className: 'navbar-backdrop',
+      rootElement: this.parentElement,
       clickCallback: () => {
         this.hide()
       },
