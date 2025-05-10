@@ -72,7 +72,6 @@ class NavBarCollapsible extends BaseComponent {
     super(element, config)
 
     this.parentElement = this._element.parentNode;
-    console.log(this.parentElement) 
 
     this._isShown = this._element.classList.contains(CLASS_NAME_EXPANDED)
     this._backdrop = this._initializeBackDrop()
@@ -202,7 +201,7 @@ class NavBarCollapsible extends BaseComponent {
       isVisible: Boolean(this._config.backdrop), // 'static' option will be translated to true, and booleans will keep their value,
       isAnimated: this._isAnimated(),
       className: 'navbar-backdrop',
-      rootElement: this.parentElement, // usefull to nest a navbar in an header with its fixed z-index
+      rootElement: this.parentElement,
       clickCallback: () => {
         this.hide()
       },
