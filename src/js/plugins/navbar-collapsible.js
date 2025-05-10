@@ -42,7 +42,6 @@ const EVENT_SHOW = `show${EVENT_KEY}`
 const EVENT_SHOWN = `shown${EVENT_KEY}`
 const EVENT_RESIZE = `resize${EVENT_KEY}`
 
-const CLASS_NAME_WRAPPER = 'navbar'
 const CLASS_NAME_OPEN = 'navbar-open'
 const CLASS_NAME_SHOW = 'show'
 const CLASS_NAME_EXPANDED = 'expanded'
@@ -71,7 +70,7 @@ class NavBarCollapsible extends BaseComponent {
   constructor(element, config) {
     super(element, config)
 
-    this.parentElement = this._element.parentNode;
+    this.parentElement = this._element.parentNode
 
     this._isShown = this._element.classList.contains(CLASS_NAME_EXPANDED)
     this._backdrop = this._initializeBackDrop()
