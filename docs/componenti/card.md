@@ -983,7 +983,7 @@ Per creare un ulteriore spazio dedicato a **collegamenti o pulsanti secondari**,
         <div><svg class="icon icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg></div>
       </h4>
       <div class="it-card-body">
-        <p class="it-card-text">Eventuale breve estratto descrittivo del documento.</p>
+        <p class="it-card-text">Eventuale breve estratto descrittivo del documento. Formato PDF (200Kb)</p>
         <footer class="it-card-related">
           <div class="it-card-taxonomy">
             <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
@@ -993,7 +993,6 @@ Per creare un ulteriore spazio dedicato a **collegamenti o pulsanti secondari**,
       <div class="it-card-footer">
         <span class="me-2">Scarica come:</span> 
         <a href="#" class="it-card-link">ODT (300Kb)<span class="visually-hidden">: Titolo del documento</span></a>
-        <a href="#" class="it-card-link">PDF (20Kb)<span class="visually-hidden">: Titolo del documento</span></a>
         <a href="#" class="it-card-link">ODS (400Kb)<span class="visually-hidden">: Titolo del documento</span></a>
       </div>
     </article>
@@ -1007,7 +1006,7 @@ Per creare un ulteriore spazio dedicato a **collegamenti o pulsanti secondari**,
         <div><svg class="icon icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file-odt"></use></svg></div>
       </h4>
       <div class="it-card-body">
-        <p class="it-card-text" aria-hidden="true">Formato ODT, 200Kb</p>
+        <p class="it-card-text" aria-hidden="true">Formato ODT (200Kb)</p>
       </div>
     </article>
     <!--end it-card-->
