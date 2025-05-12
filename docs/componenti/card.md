@@ -1219,44 +1219,9 @@ Negli esempi abbiamo utilizzato il tag `h4` per i titoli `.it-card-place-name`. 
 {% capture example %}
 
 <div class="row">
-  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
+  <div class="col-12 col-md-6 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-place rounded shadow-sm border">
-      <div class="it-card-place-header">
-        <div class="it-card-place">
-          <h4 class="it-card-place-name no_toc">
-            <a href="#">Toponimo o luogo</a>
-          </h4>
-          <p class="it-card-place-type">Tipologia di luogo</p>
-        </div>
-      </div>
-    </article>
-    <!--end it-card-->
-  </div>
-  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
-    <!--start it-card-->
-    <article class="it-card it-card-place rounded shadow-sm border">
-      <div class="it-card-place-header">
-        <div class="it-card-place">
-          <h4 class="it-card-place-name no_toc">
-            <a href="#">Toponimo o luogo</a>
-          </h4>
-          <p class="it-card-place-type">Tipologia di luogo</p>
-        </div>
-        <div class="it-card-place-image ratio ratio-1x1">
-          <div class="it-card-place-image-icon-wrapper">
-            <svg class="icon icon-lg icon-padded icon-primary" aria-hidden="true"><use href="/dist/svg/sprites.svg#it-pa"></use></svg>
-          </div>
-        </div>
-      </div>
-    </article>
-    <!--end it-card-->
-  </div>
-</div>
-<div class="row">
-  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
-    <!--start it-card-->
-    <article class="it-card it-card-place it-card-border-top it-card-border-top-secondary rounded shadow-sm border mb-3">
       <div class="it-card-place-header">
         <div class="it-card-place">
           <h4 class="it-card-place-name no_toc">
@@ -1273,7 +1238,7 @@ Negli esempi abbiamo utilizzato il tag `h4` per i titoli `.it-card-place-name`. 
     </article>
     <!--end it-card-->
   </div>
-   <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
+  <div class="col-12 col-md-6 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-place rounded shadow-sm border">
       <div class="it-card-place-header">
@@ -1289,29 +1254,11 @@ Negli esempi abbiamo utilizzato il tag `h4` per i titoli `.it-card-place-name`. 
           </div>
         </div>
       </div>
-      <div class="it-card-body">
-        <dl class="it-card-description-list">
-          <div>
-            <dt>Email:</dt>
-            <dd>me@mail.com</dd>
-          </div>
-          <div>
-            <dt>Tel:</dt>
-            <dd>340.4050600</dd>
-          </div>
-          <div>
-            <dt>Indirizzo:</dt>
-            <dd>Via della città, 5 - 00100 Città</dd>
-          </div>
-        </dl>
-      </div>
     </article>
     <!--end it-card-->
   </div>
 </div>
-
 <div class="row">
- 
   <div class="col-12 col-md-6 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-place it-card-border-top it-card-border-top-secondary rounded shadow-sm border mb-3">
@@ -1355,6 +1302,41 @@ Negli esempi abbiamo utilizzato il tag `h4` per i titoli `.it-card-place-name`. 
           <svg class="icon icon-sm icon-secondary ms-2" aria-hidden="true"><use href="/dist/svg/sprites.svg#it-external-link"></use></svg>
         </a>
       </footer>
+    </article>
+    <!--end it-card-->
+  </div>
+  <div class="col-12 col-md-6 mb-3 mb-md-4">
+    <!--start it-card-->
+    <article class="it-card it-card-place rounded shadow-sm border">
+      <div class="it-card-place-header">
+        <div class="it-card-place">
+          <h4 class="it-card-place-name no_toc">
+            <a href="#">Toponimo o luogo</a>
+          </h4>
+          <p class="it-card-place-type">Tipologia di luogo</p>
+        </div>
+        <div class="it-card-place-image ratio ratio-1x1">
+          <div class="it-card-place-image-icon-wrapper">
+            <svg class="icon icon-lg icon-padded icon-primary" aria-hidden="true"><use href="/dist/svg/sprites.svg#it-pa"></use></svg>
+          </div>
+        </div>
+      </div>
+      <div class="it-card-body">
+        <dl class="it-card-description-list">
+          <div>
+            <dt>Email:</dt>
+            <dd>me@mail.com</dd>
+          </div>
+          <div>
+            <dt>Tel:</dt>
+            <dd>340.4050600</dd>
+          </div>
+          <div>
+            <dt>Indirizzo:</dt>
+            <dd>Via della città, 5 - 00100 Città</dd>
+          </div>
+        </dl>
+      </div>
     </article>
     <!--end it-card-->
   </div>
