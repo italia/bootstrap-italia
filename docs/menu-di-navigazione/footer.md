@@ -143,11 +143,10 @@ Nel footer completo sono presenti i seguenti elementi
             <h4>Newsletter</h4>
             <div class="form-group">
               <div class="input-group">
-                  <span class="input-group-text"><svg class="icon icon-sm icon-secondary" aria-hidden="true"><use href="/dist/svg/sprites.svg#it-pencil"></use></svg></span>
-                  <input type="text" class="form-control" id="input-group-3" name="input-group-3">
-                  <div class="input-group-append">
-                    <button class="btn btn-primary" type="button" id="button-3">Invio</button>
-                  </div>
+                <input type="text" class="form-control" id="input-group-3" name="input-group-3" placeholder="Inserisci la tua email" aria-label="Inserisci la tua email" aria-describedby="button-3">
+                <div class="input-group-append">
+                  <button class="btn btn-primary" type="button" id="button-3">Invio</button>
+                </div>
                 </div>
             </div>
           </div>
