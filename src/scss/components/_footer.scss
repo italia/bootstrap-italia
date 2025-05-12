@@ -1,95 +1,114 @@
 .it-footer {
-  h4,
+  --#{$prefix}footer-top-background: var(--#{$prefix}color-background-primary-muted);
+  --#{$prefix}footer-bottom-background: var(--#{$prefix}color-background-primary-dark);
+  --#{$prefix}footer-brand-icon-color: var(--#{$prefix}icon-inverse);
+  --#{$prefix}footer-brand-icon-size: 3rem; // 48px
+  @include media-breakpoint-up(lg) {
+    --#{$prefix}footer-brand-icon-size: 3.5rem; // 56px 
+  }
+
+  h4 {
+    margin-bottom: var(--#{$prefix}spacing-s);
+    font-size: var(--#{$prefix}label-font-size);
+    text-transform: uppercase;
+  }
+
   ul,
   li,
   p {
-    font-size: 1rem;
+    font-size: var(--#{$prefix}label-font-size);
+    line-height: var(--#{$prefix}body-line-height);
   }
 
-  a {
-    color: $white;
+  // Links color and decoration
+  a,
+  a:hover,
+  .link-list-wrapper li a:not(.disabled) {
+    color: var(--#{$prefix}color-text-inverse);
+    text-decoration-color: hsla(0, 0%, 100%, 0.5);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
 
-    &:hover {
-      color: color-hover($white);
-    }
+  a:hover,
+  .link-list-wrapper li a:hover {
+    text-decoration-color: hsla(0, 0%, 100%, 1);
   }
 }
 
 .it-footer-main {
-  --bs-border-opacity: 0.5;
-  background-color: $footer-top-background;
-  color: $white;
-  font-size: 1rem;
+  background-color:  var(--#{$prefix}footer-top-background);
+  color: var(--#{$prefix}color-text-inverse);
+  font-size: var(--#{$prefix}body-font-size);
+  padding-top: var(--#{$prefix}spacing-l);
+  padding-bottom: var(--#{$prefix}spacing-l);
 
-  h4 {
-    text-transform: uppercase;
+  section {
+    margin: 0 var(--#{$prefix}spacing-xs);
   }
 
-  .link-list-wrapper ul li {
-    a:not(.disabled) {
-      padding: 0;
-      line-height: 2rem;
-      text-decoration: underline;
-    }
+  label {
+    font-weight: var(--#{$prefix}font-weight-solid);
+  }
+
+  .link-list-wrapper ul li:not(:last-child) {
+    margin-bottom: var(--#{$prefix}spacing-xs);
+  }
+
+  // Override the default .link-list styles - /components/_linklist.scss
+  .link-list-wrapper .list-item {
+    padding: 0;
+    text-decoration: underline;
   }
 
   .it-brand-wrapper {
-    padding: $v-gap * 4 0;
 
     .it-brand-text {
-      padding-right: $v-gap * 3;
+      padding-right: var(--#{$prefix}spacing-m);
     }
 
     a {
       display: flex;
       align-items: center;
       text-decoration: none;
+    }
 
-      h2 {
-        margin-bottom: 0;
-        font-size: $header-center-h2-size-mob;
-        font-weight: $header-center-h2-weight;
-        letter-spacing: unset;
-        line-height: 1.1;
-      }
+    h2 {
+      margin-bottom: var(--#{$prefix}spacing-3xs);
+      font-size: var(--#{$prefix}heading-5-font-size);
+      font-weight: var(--#{$prefix}heading-font-weight-weak);
+    }
 
-      h3 {
-        margin-bottom: 0;
-        font-size: $header-center-h3-size;
-        font-weight: normal;
-      }
+    h3 {
+      padding-top: 0;
+      font-size: var(--#{$prefix}body-font-size);
+      font-weight: var(--#{$prefix}body-font-weight);
+    }
 
-      &:hover {
-        text-decoration: none;
-      }
-
-      .icon {
-        flex-shrink: 0;
-        width: $header-center-icon-size-mob;
-        height: $header-center-icon-size-mob;
-        margin-right: $header-center-icon-margin-mob;
-        fill: $header-center-text-color;
-      }
+    .icon {
+      flex-shrink: 0;
+      width: var(--#{$prefix}footer-brand-icon-size);
+      height: var(--#{$prefix}footer-brand-icon-size);
+      margin-right: var(--#{$prefix}spacing-xs);
+      fill: var(--#{$prefix}footer-brand-icon-color);
     }
   }
 
-  section {
-    padding: 0 $v-gap * 2;
-  }
-
-  label {
-    font-weight: 600;
+  // Override the utility '.border-white' opacity - /utilities/colors.scss
+  .border-white {
+    --#{$prefix}border-opacity: 0.5;
   }
 }
 
 .it-footer-small-prints {
-  background-color: $footer-bottom-background;
+  background-color: var(--#{$prefix}footer-bottom-background);
 
   ul.it-footer-small-prints-list {
-    padding: 1.5rem 1rem;
+    padding: var(--#{$prefix}spacing-m) var(--#{$prefix}spacing-xs);
 
     li {
-      padding: 0.5rem 0;
+      padding: var(--#{$prefix}spacing-xs) 0;
+      font-size: var(--#{$prefix}label-font-size-s);
 
       &:first-child {
         padding-top: 0;
@@ -103,7 +122,6 @@
 }
 
 .form-newsletter {
-
   @include media-breakpoint-up(lg) {
     button {
       display: inline-block;
@@ -112,10 +130,6 @@
   }
   input[type='email'] {
     font-size: 1rem;
-
-    &~* {
-      margin-top: 1em;
-    }
   }
 
   button {
@@ -129,7 +143,7 @@
   .it-footer-small-prints {
     ul.it-footer-small-prints-list {
       li {
-        padding: 0 1rem;
+        padding: 0 var(--#{$prefix}spacing-xs);
 
         &:first-child {
           padding-left: 0;
