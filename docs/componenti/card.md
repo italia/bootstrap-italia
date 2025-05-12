@@ -641,7 +641,7 @@ Negli esempi non abbiamo usato il `target` del link per favorire la normale navi
 {% comment %}Example name: Card media video{% endcomment %}
 {% capture example %}
 <div class="row">
-  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
+  <div class="col-12 col-md-6 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-image it-card-height-full rounded shadow-sm border">
       <!--card first child is the title (link)-->
@@ -671,7 +671,7 @@ Negli esempi non abbiamo usato il `target` del link per favorire la normale navi
     </article>
     <!--end it-card-->
   </div>
-  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
+  <div class="col-12 col-md-6 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-image it-card-height-full rounded shadow-sm border">
       <!--card first child is the title (link)-->
