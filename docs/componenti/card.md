@@ -27,7 +27,7 @@ Esempio base con immagine, descrizione e data:
 {% comment %}Example name: Card semplice{% endcomment %}
 {% capture example %}
 <div class="row">
-  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-image rounded shadow-sm border">
       <!--card first child is the title (link)-->
@@ -90,7 +90,7 @@ La struttura dei metadati include:
 {% comment %}Example name: Card editoriale standard{% endcomment %}
 {% capture example %}
 <div class="row">
-  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card rounded shadow-sm border">
       <!--card first child is the title (link)-->
@@ -108,7 +108,7 @@ La struttura dei metadati include:
     </article>
     <!--end it-card-->
   </div>
-  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-image it-card-height-full rounded shadow-sm border">
       <!--card first child is the title (link)-->
@@ -137,7 +137,7 @@ La struttura dei metadati include:
     </article>
     <!--end it-card-->
   </div>
-  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-image it-card-height-full rounded shadow-sm border">
       <!--card first child is the title (link)-->
@@ -196,7 +196,7 @@ Per indicare l'autore del contenuto, usa l'elemento semantico `address` con clas
 {% comment %}Example name: Card editoriale standard{% endcomment %}
 {% capture example %}
 <div class="row">
-  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card rounded shadow-sm border">
       <!--card first child is the title (link)-->
@@ -216,7 +216,7 @@ Per indicare l'autore del contenuto, usa l'elemento semantico `address` con clas
     </article>
     <!--end it-card-->
   </div>
-  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-image it-card-height-full rounded shadow-sm border">
       <!--card first child is the title (link)-->
@@ -247,7 +247,7 @@ Per indicare l'autore del contenuto, usa l'elemento semantico `address` con clas
     </article>
     <!--end it-card-->
   </div>
-  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-image it-card-height-full rounded shadow-sm border">
       <!--card first child is the title (link)-->
@@ -471,7 +471,7 @@ Ricorda di usare:
 {% comment %}Example name: Card eventi{% endcomment %}
 {% capture example %}
 <div class="row">
-  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card rounded border shadow-sm mb-3">
       <h3 class="it-card-title no_toc">
@@ -490,7 +490,7 @@ Ricorda di usare:
     </article>
     <!--end it-card-->
   </div>
-  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-image it-card-height-full rounded border shadow-sm mb-3">
       <h3 class="it-card-title no_toc">
@@ -519,7 +519,7 @@ Ricorda di usare:
     </article>
     <!--end it-card-->
   </div>
-  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-image it-card-height-full rounded border shadow-sm mb-3">
       <h3 class="it-card-title no_toc">
@@ -641,7 +641,7 @@ Negli esempi non abbiamo usato il `target` del link per favorire la normale navi
 {% comment %}Example name: Card media video{% endcomment %}
 {% capture example %}
 <div class="row">
-  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-image it-card-height-full rounded shadow-sm border">
       <!--card first child is the title (link)-->
@@ -671,7 +671,7 @@ Negli esempi non abbiamo usato il `target` del link per favorire la normale navi
     </article>
     <!--end it-card-->
   </div>
-  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-image it-card-height-full rounded shadow-sm border">
       <!--card first child is the title (link)-->
@@ -711,7 +711,7 @@ Negli esempi non abbiamo usato il `target` del link per favorire la normale navi
 </div>
 
 <div class="row">
-  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card rounded shadow-sm border">
       <!--card first child is the title (link)-->
@@ -733,7 +733,7 @@ Negli esempi non abbiamo usato il `target` del link per favorire la normale navi
     </article>
     <!--end it-card-->
   </div>
-  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card rounded shadow-sm border">
       <!--card first child is the title (link)-->
@@ -883,7 +883,7 @@ Ricorda di usare:
 {% comment %}Example name: Card servizi{% endcomment %}
 {% capture example %}
 <div class="row">
-  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-height-full rounded border shadow-sm mb-3">
       <h4 class="it-card-title no_toc">
@@ -900,7 +900,7 @@ Ricorda di usare:
     </article>
     <!--end it-card-->
   </div>
-  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-height-full rounded border shadow-sm mb-3">
       <h4 class="it-card-title no_toc">
@@ -922,7 +922,7 @@ Ricorda di usare:
     </article>
     <!--end it-card-->
   </div>
-  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-height-full rounded border shadow-sm mb-3">
       <h4 class="it-card-title no_toc">
@@ -957,7 +957,7 @@ Per creare un ulteriore spazio dedicato a **collegamenti o pulsanti secondari**,
 {% comment %}Example name: Card servizi{% endcomment %}
 {% capture example %}
 <div class="row">
-  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card rounded border shadow-sm mb-3">
       <h4 class="it-card-title it-card-title-icon no_toc">
@@ -975,7 +975,7 @@ Per creare un ulteriore spazio dedicato a **collegamenti o pulsanti secondari**,
     </article>
     <!--end it-card-->
   </div>
-  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card rounded border shadow-sm mb-3">
       <h4 class="it-card-title it-card-title-icon no_toc">
@@ -999,7 +999,7 @@ Per creare un ulteriore spazio dedicato a **collegamenti o pulsanti secondari**,
     </article>
     <!--end it-card-->
   </div>
-  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card rounded border shadow-sm mb-3">
       <h4 class="it-card-title it-card-title-icon no_toc">
@@ -1033,7 +1033,7 @@ Negli esempi abbiamo utilizzato il tag `h4` per i titoli `.it-card-profile-name`
 {% capture example %}
 
 <div class="row">
-  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-profile rounded shadow-sm border">
       <div class="it-card-profile-header">
@@ -1050,7 +1050,7 @@ Negli esempi abbiamo utilizzato il tag `h4` per i titoli `.it-card-profile-name`
     </article>
     <!--end it-card-->
   </div>
-  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-profile rounded shadow-sm border">
       <div class="it-card-profile-header">
@@ -1067,7 +1067,7 @@ Negli esempi abbiamo utilizzato il tag `h4` per i titoli `.it-card-profile-name`
     </article>
     <!--end it-card-->
   </div>
-  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-profile it-card-border-top it-card-border-top-secondary rounded shadow-sm border">
       <div class="it-card-profile-header">
@@ -1087,7 +1087,7 @@ Negli esempi abbiamo utilizzato il tag `h4` per i titoli `.it-card-profile-name`
 </div>
 
 <div class="row">
-  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-profile rounded shadow-sm border">
       <div class="it-card-profile-header">
@@ -1124,7 +1124,7 @@ Negli esempi abbiamo utilizzato il tag `h4` per i titoli `.it-card-profile-name`
     </article>
     <!--end it-card-->
   </div>
-  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-profile rounded shadow-sm border">
       <div class="it-card-profile-header">
@@ -1161,7 +1161,7 @@ Negli esempi abbiamo utilizzato il tag `h4` per i titoli `.it-card-profile-name`
     </article>
     <!--end it-card-->
   </div>
-  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-profile it-card-border-top it-card-border-top-secondary rounded shadow-sm border">
       <div class="it-card-profile-header">
@@ -1220,7 +1220,7 @@ Negli esempi abbiamo utilizzato il tag `h4` per i titoli `.it-card-place-name`. 
 {% capture example %}
 
 <div class="row">
-  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-place rounded shadow-sm border">
       <div class="it-card-place-header">
@@ -1234,7 +1234,7 @@ Negli esempi abbiamo utilizzato il tag `h4` per i titoli `.it-card-place-name`. 
     </article>
     <!--end it-card-->
   </div>
-  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-place rounded shadow-sm border">
       <div class="it-card-place-header">
@@ -1253,7 +1253,7 @@ Negli esempi abbiamo utilizzato il tag `h4` per i titoli `.it-card-place-name`. 
     </article>
     <!--end it-card-->
   </div>
-  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-place it-card-border-top it-card-border-top-secondary rounded shadow-sm border mb-3">
       <div class="it-card-place-header">
@@ -1275,7 +1275,7 @@ Negli esempi abbiamo utilizzato il tag `h4` per i titoli `.it-card-place-name`. 
 </div>
 
 <div class="row">
-  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-place rounded shadow-sm border">
       <div class="it-card-place-header">
@@ -1310,7 +1310,7 @@ Negli esempi abbiamo utilizzato il tag `h4` per i titoli `.it-card-place-name`. 
     </article>
     <!--end it-card-->
   </div>
-  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-place it-card-border-top it-card-border-top-secondary rounded shadow-sm border mb-3">
       <div class="it-card-place-header">
@@ -1382,7 +1382,7 @@ Puoi combinare questa impostazione con le funzionalità del contenitore `.it-car
 {% comment %}Example name: Card con liste di contenuti affini{% endcomment %}
 {% capture example %}
 <div class="row">
-  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card rounded shadow-sm border">
       <!--card first child is the title (link)-->
@@ -1402,7 +1402,7 @@ Puoi combinare questa impostazione con le funzionalità del contenitore `.it-car
     </article>
     <!--end it-card-->
   </div>
-  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-image rounded shadow-sm border">
       <!--card first child is the title (link)-->
@@ -1430,7 +1430,7 @@ Puoi combinare questa impostazione con le funzionalità del contenitore `.it-car
     </article>
     <!--end it-card-->
   </div>
-  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-image rounded shadow-sm border">
       <!--card first child is the title (link)-->
@@ -1496,7 +1496,7 @@ Per garantire una buona accessibilità, consigliamo di mantenere un rapporto di 
 {% comment %}Example name: Bordi e ombre{% endcomment %}
 {% capture example %}
 <div class="row">
-  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card rounded shadow-sm border">
       <h3 class="it-card-title no_toc">
@@ -1511,7 +1511,7 @@ Per garantire una buona accessibilità, consigliamo di mantenere un rapporto di 
     </article>
     <!--end it-card-->
   </div>
-  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card rounded shadow border">
       <h3 class="it-card-title no_toc">
@@ -1526,7 +1526,7 @@ Per garantire una buona accessibilità, consigliamo di mantenere un rapporto di 
     </article>
     <!--end it-card-->
   </div>
-  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card rounded shadow-lg border">
       <h3 class="it-card-title no_toc">
@@ -1543,10 +1543,10 @@ Per garantire una buona accessibilità, consigliamo di mantenere un rapporto di 
   </div>
 </div>
 <div class="row">
-  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
     &nbsp;
   </div>
-  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card rounded shadow">
       <h3 class="it-card-title no_toc">
@@ -1561,7 +1561,7 @@ Per garantire una buona accessibilità, consigliamo di mantenere un rapporto di 
     </article>
     <!--end it-card-->
   </div>
-  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card rounded shadow-lg">
       <h3 class="it-card-title no_toc">
@@ -1590,7 +1590,7 @@ Le varianti inline delle card presentano proporzioni immagini proprie su desktop
 {% comment %}Example name: Proporzioni immagini{% endcomment %}
 {% capture example %}
 <div class="row">
-  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-image rounded shadow-sm border">
       <!--card first child is the title (link)-->
@@ -1616,7 +1616,7 @@ Le varianti inline delle card presentano proporzioni immagini proprie su desktop
     </article>
     <!--end it-card-->
   </div>
-<div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+<div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-image rounded shadow-sm border">
       <!--card first child is the title (link)-->
@@ -1644,7 +1644,7 @@ Le varianti inline delle card presentano proporzioni immagini proprie su desktop
   </div>
 </div>
 <div class="row">
-  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-image rounded shadow-sm border">
       <!--card first child is the title (link)-->
@@ -1670,7 +1670,7 @@ Le varianti inline delle card presentano proporzioni immagini proprie su desktop
     </article>
     <!--end it-card-->
   </div>
-<div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+<div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-image rounded shadow-sm border">
       <!--card first child is the title (link)-->
