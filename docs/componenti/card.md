@@ -372,7 +372,9 @@ Per invertire solamente l'ordine visivo tra destra e sinistra, applica la classe
 
 ### Card inline mini
 
-Usa la variante mini delle card orizzontali per raggruppare in poco spazio card editoriali con contenuti correlati secondari. La configurazione inline orizzontale, in questo caso, viene mantenuta anche su dispositivi piccoli o in viste ingrandite. Questa variante si ottiene applicando la classe `.it-card-inline-mini`.
+Usa la variante mini delle card orizzontali per raggruppare in poco spazio card editoriali con contenuti correlati secondari. In ragione di ciò, la card mini non ha il corpo `.it-card-body` e il footer `.it-card-footer` è visibile solo se presente. La dimensione del titolo è ridotta tramite la classe `h4` per adattarsi a questo layout.
+
+La configurazione inline orizzontale, in questo caso, viene mantenuta anche su dispositivi piccoli o in viste ingrandite. Questa variante si ottiene applicando la classe `.it-card-inline-mini`. #bsbrh2-10-0
 
 Consigliamo di non aggiungere altri contenuti oltre al titolo (da mantenere breve), l'eventuale categoria o argomento principale e la data. 
 
@@ -381,30 +383,12 @@ L'immagine è opzionale. Per invertire solamente l'ordine visivo tra destra e si
 {% comment %}Example name: Card editoriale inline mini{% endcomment %}
 {% capture example %}
 <div class="row">
-  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
-    <!--start it-card-->
-    <article class="it-card it-card-inline it-card-inline-mini it-card-height-full rounded shadow-sm border">
-     <!--card first child is all the card content: title (link) + footer -->
-      <div class="it-card-inline-content">
-        <h3 class="it-card-title no_toc">
-          <a href="#">Titolo contenuto editoriale breve</a>
-        </h3>
-        <footer class="it-card-related it-card-footer">
-          <div class="it-card-taxonomy">
-            <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
-          </div>
-          <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
-        </footer>
-      </div>
-    </article>
-    <!--end it-card-->
-  </div>
-  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+  <div class="col-12 col-md-6 mb-3 mb-md-4 ">
     <!--start it-card-->
     <article class="it-card it-card-inline it-card-inline-mini it-card-image rounded shadow-sm border">
      <!--card first child is all the card content: title (link) + footer -->
       <div class="it-card-inline-content">
-        <h3 class="it-card-title no_toc">
+        <h3 class="it-card-title h4 no_toc">
           <a href="#">Titolo contenuto editoriale</a>
         </h3>
         <footer class="it-card-related it-card-footer">
@@ -425,12 +409,12 @@ L'immagine è opzionale. Per invertire solamente l'ordine visivo tra destra e si
     </article>
     <!--end it-card-->
   </div>
-  <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+  <div class="col-12 col-md-6 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-inline it-card-inline-mini it-card-inline-reverse it-card-image rounded shadow-sm border">
      <!--card first child is all the card content: title (link) + footer -->
       <div class="it-card-inline-content">
-        <h3 class="it-card-title no_toc">
+        <h3 class="it-card-title h4 no_toc">
           <a href="#">Titolo contenuto editoriale</a>
         </h3>
         <footer class="it-card-related it-card-footer">
