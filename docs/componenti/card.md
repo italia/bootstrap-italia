@@ -235,7 +235,6 @@ Per indicare l'autore del contenuto, usa l'elemento semantico `address` con clas
       <!--card body content-->
       <div class="it-card-body">
         <p class="it-card-subtitle">Sottotitolo del contenuto</p>
-        <address class="it-card-signature">di Maria Verde</address>
         <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
       </div>
       <!--finally the card footer metadata-->
