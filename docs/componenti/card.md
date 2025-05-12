@@ -1252,6 +1252,8 @@ Negli esempi abbiamo utilizzato il tag `h4` per i titoli `.it-card-place-name`. 
     </article>
     <!--end it-card-->
   </div>
+</div>
+<div class="row">
   <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-place it-card-border-top it-card-border-top-secondary rounded shadow-sm border mb-3">
@@ -1271,10 +1273,7 @@ Negli esempi abbiamo utilizzato il tag `h4` per i titoli `.it-card-place-name`. 
     </article>
     <!--end it-card-->
   </div>
-</div>
-
-<div class="row">
-  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
+   <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-place rounded shadow-sm border">
       <div class="it-card-place-header">
@@ -1309,7 +1308,11 @@ Negli esempi abbiamo utilizzato il tag `h4` per i titoli `.it-card-place-name`. 
     </article>
     <!--end it-card-->
   </div>
-  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
+</div>
+
+<div class="row">
+ 
+  <div class="col-12 col-md-6 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-place it-card-border-top it-card-border-top-secondary rounded shadow-sm border mb-3">
       <div class="it-card-place-header">
