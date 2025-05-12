@@ -608,7 +608,7 @@ Come nelle altre varianti, l'immagine segue sempre questo contenitore. Puoi inve
           <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
         </footer>
         <div class="it-card-footer" aria-label="Link correlati:">
-          <button type="button" class="btn btn-outline-secondary">Compila il form di iscrizione</button>
+          <button type="button" class="btn btn-outline-secondary">Iscriviti</button>
         </div>
       </div>
       <!--card second child is the image (optional)-->
