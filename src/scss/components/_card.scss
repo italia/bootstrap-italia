@@ -139,7 +139,7 @@ article.it-card {
 
   --#{$prefix}it-card-spacer-y: 0.5rem;
   --#{$prefix}it-card-spacer-x: 1rem;
-  --#{$prefix}it-card-height: null;
+  --#{$prefix}it-card-height: 100%;
   --#{$prefix}it-card-inline-min-height: 240px;
   --#{$prefix}it-card-inline-mini-min-height: 160px;
   --#{$prefix}it-card-color: #{$color-text-secondary};
