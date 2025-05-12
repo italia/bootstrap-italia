@@ -1713,6 +1713,16 @@ Quando l'elemento `footer .it-card-related` si trova all'interno del contenitore
 
 ## Organizzazione e layout
 
+### Uso delle colonne
+
+Le card possono essere organizzate in colonne usando le classi `.col-*` per definire il numero di colonne desiderate. Negli esempi precedenti abbiamo usato `.col-12 col-md-6 col-lg-4` per ottenere 1 colonna su schermi piccoli, 2 colonne su schermi medi e 3 colonne su schermi grandi.
+
+Sono esempi puramente dimostrativi, **puoi usare qualsiasi combinazione** di colonne per ottenere il layout desiderato.
+
+La scelta del **numero di colonne** dipende dal layout della tua pagina e ha un **impatto sullo spazio interno** alla card per il contenuto. 
+
+È importante quindi **bilanciare la dimensione** di titoli, testo e immagini per garantire una buona leggibilità e un aspetto visivamente gradevole.
+
 ### Gruppi di card
 
 Si possono organizzare gruppi di card con layout responsive con `.it-card-group` in un `div` contenitore. Di default il numero di colonne su desktop è impostato a 4. 
