@@ -70,7 +70,9 @@ class NavBarCollapsible extends BaseComponent {
   constructor(element, config) {
     super(element, config)
 
-    this.parentElement = this._element.parentNode
+    this._mainElement = SelectorEngine.findOne('main')
+    this._isNavbarOutsideMain = this._mainElement && !this._mainElement.contains(this._element)
+    this._parentElement = this._element.parentNode
 
     this._isShown = this._element.classList.contains(CLASS_NAME_EXPANDED)
     this._backdrop = this._initializeBackDrop()
@@ -200,7 +202,7 @@ class NavBarCollapsible extends BaseComponent {
       isVisible: Boolean(this._config.backdrop), // 'static' option will be translated to true, and booleans will keep their value,
       isAnimated: this._isAnimated(),
       className: 'navbar-backdrop',
-      rootElement: this.parentElement,
+      rootElement: this._parentElement,
       clickCallback: () => {
         this.hide()
       },
@@ -267,6 +269,10 @@ class NavBarCollapsible extends BaseComponent {
     this._element.setAttribute('aria-modal', true)
     this._element.setAttribute('role', 'dialog')
 
+    if (this._mainElement && this._isNavbarOutsideMain) {
+      this._mainElement.setAttribute('inert', '')
+    }
+
     reflow(this._element)
 
     this._element.classList.add(CLASS_NAME_EXPANDED)
@@ -288,6 +294,10 @@ class NavBarCollapsible extends BaseComponent {
     this._element.removeAttribute('role')
 
     document.body.classList.remove(CLASS_NAME_OPEN)
+
+    if (this._mainElement && this._isNavbarOutsideMain) {
+      this._mainElement.removeAttribute('inert')
+    }
 
     this._scrollBar.reset()
     this._isTransitioning = false
