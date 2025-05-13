@@ -32,7 +32,7 @@
 
   a:hover,
   .link-list-wrapper li a:hover {
-    text-decoration-color: hsla(0, 0%, 100%, 1);
+    text-decoration-color: var(--#{$prefix}color-text-inverse);
   }
 }
 
@@ -118,23 +118,6 @@
         padding-bottom: 0;
       }
     }
-  }
-}
-
-.form-newsletter {
-  @include media-breakpoint-up(lg) {
-    button {
-      display: inline-block;
-      width: auto;
-    }
-  }
-  input[type='email'] {
-    font-size: 1rem;
-  }
-
-  button {
-    display: block;
-    width: 100%;
   }
 }
 
