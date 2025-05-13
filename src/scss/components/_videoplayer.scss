@@ -6,20 +6,23 @@
   .vjs-big-play-button {
     background-color: $primary;
   }
+
   &:hover .vjs-big-play-button,
   &.vjs-big-play-button:focus {
     background-color: $primary;
   }
+
   .vjs-control-bar {
     background-color: $primary;
     font-size: 1rem;
+
     @include media-breakpoint-up(lg) {
       min-height: 48px;
     }
   }
 }
 
-.acceptoverlay + .vjs-fluid {
+.acceptoverlay+.vjs-fluid {
   min-height: 400px;
 }
 
@@ -27,11 +30,14 @@
   display: flex;
   justify-content: center;
   border: none;
+
   .accordion-button {
     border: none;
   }
+
   .accordion-item {
     width: 100%;
+
     @include media-breakpoint-up(lg) {
       width: 75ch;
     }
