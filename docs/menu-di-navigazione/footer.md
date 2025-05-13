@@ -15,14 +15,14 @@ Potrebbe anche contenere riferimenti alle pagine social dell'amministrazione.
 
 ## Footer completo
 
-Nel footer completo sono presenti i seguenti elementi
-- **Logo** dell'ente con nome e tagline
-- **Sezioni di primo livello** e relative sotto-sezioni; il nome della sezione è un link che porta alla pagina principale della sezione
-- **Contatti** dell'ente
-- **Link utili** (Media policy, Note legali, Privacy policy, Mappa del sito)
-- **Dichiarazione di accessibilità** (link esterno su form AgID)
-- **Profili Social** dell'ente
-- **Iscrizione Newsletter** (opzionale)
+Nel footer completo sono presenti i seguenti elementi:
+- **Logo** dell'ente con nome e tagline;
+- **Sezioni di primo livello** e relative sotto-sezioni; il nome della sezione è un link che porta alla pagina principale della sezione;
+- **Contatti** dell'ente;
+- **Link utili** (Media policy, Note legali, Privacy policy, Mappa del sito);
+- **Dichiarazione di accessibilità** (link esterno su form AgID);
+- **Profili Social** dell'ente;
+- **Iscrizione Newsletter** (opzionale).
 
 {% comment %}Example name: Completo{% endcomment %}
 {% capture example %}
@@ -141,13 +141,9 @@ Nel footer completo sono presenti i seguenti elementi
           </div>
           <div class="col-lg-4 col-md-4 mt-2">
             <h4>Newsletter</h4>
-            <div class="form-group">
-              <div class="input-group">
-                <input type="text" class="form-control" id="input-group-3" name="input-group-3" placeholder="Inserisci la tua email" aria-label="Inserisci la tua email" aria-describedby="button-3">
-                <div class="input-group-append">
-                  <button class="btn btn-primary" type="button" id="button-3">Invio</button>
-                </div>
-                </div>
+            <div class="form-group d-flex gap-1">
+              <input type="text" class="form-control form-control-sm" id="exampleFormGroup" placeholder="Inserisci la tua email">
+              <button type="submit" class="btn btn-primary">Iscriviti</button>
             </div>
           </div>
         </div>
@@ -169,10 +165,10 @@ Nel footer completo sono presenti i seguenti elementi
 </footer>
 {% endcapture %}{% include example.html content=example %}
 
-## Footer solo contatti
+## Footer compatto
 Il footer compatto è una versione semplificata del footer completo. 
 
-Contiene solo i contatti dell'ente e i link utili. Può essere utilizzato in pagine dove non è necessario mostrare le sezioni di navigazione di primo livello (ad esempio Amministrazione, Servizi, Novità, Documenti).
+Contiene i contatti dell'ente, collegamenti ai profili social, form di iscrizione alla newsletter (se presente) e i link utili. Può essere utilizzato nei casi in cui non è necessario mostrare le sezioni di navigazione di primo livello.
 
 {% comment %}Example name: Compatto{% endcomment %}
 {% capture example %}
@@ -184,7 +180,7 @@ Contiene solo i contatti dell'ente e i link utili. Può essere utilizzato in pag
           <div class="col-sm-12">
             <div class="it-brand-wrapper">
               <a href="#" class="" data-focus-mouse="false">
-                <svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
+                <svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-pa"></use></svg>
                 <div class="it-brand-text">
                   <h2 class="no_toc">Nome Ente</h2>
                   <h3 class="no_toc">Tagline</h3>
@@ -232,7 +228,10 @@ Contiene solo i contatti dell'ente e i link utili. Può essere utilizzato in pag
           </div>
           <div class="col-lg-4 col-md-4 mt-2">
             <h4>Newsletter</h4>
-
+            <div class="form-group d-flex gap-1">
+              <input type="text" class="form-control form-control-sm" id="exampleFormGroup" placeholder="Inserisci la tua email">
+              <button type="submit" class="btn btn-primary">Iscriviti</button>
+            </div>
           </div>
         </div>
       </section>
