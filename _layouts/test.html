@@ -35,17 +35,18 @@
     <div class="d-flex align-items-center justify-content-center main-content">
       <div class="container-xl mt-5 mb-5">
         <div class="row">
+          <div class="col-12">
+            {% assign current = page.url | downcase | split: '/' %}
+            {% if current[2]!=null %}
+            <div class="mb-3">
+              <a href="/test/" class="go-back"><svg class="icon icon-sm icon-primary me-2" aria-hidden="true">
+                  <use href="/dist/svg/sprites.svg#it-arrow-left"></use>
+                </svg>Torna alla pagina iniziale</a>
+            </div>
+            {% endif %}
 
-          {% assign current = page.url | downcase | split: '/' %}
-          {% if current[2]!=null %}
-          <div class="mb-3">
-            <a href="/test/" class="go-back"><svg class="icon icon-sm icon-primary me-2" aria-hidden="true">
-                <use href="/dist/svg/sprites.svg#it-arrow-left"></use>
-              </svg>Torna alla pagina iniziale</a>
+            {{ content }}
           </div>
-          {% endif %}
-
-          {{ content }}
         </div>
       </div>
     </div>
