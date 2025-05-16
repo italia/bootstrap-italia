@@ -1,10 +1,24 @@
-//mobile
+// Gridlist variables
+//
+
+$grid-item-df-proportion: 66.81222707423581%;
+$grid-item-df-double-proportion: 33.4061135371179%;
+$grid-item-text-size: 0.75rem;
+$grid-list-default-gap: 2px;
+$grid-list-text-gap: 8px;
+$grid-item-sm-col: 50%;
+$grid-item-lg-col: 33.333333%;
+$grid-item-icon-size: 1.5rem;
+$grid-item-overlay: hsla(210%, 54%, 20, 0.85);
+
+// ---------------------------------------- //
+
 .it-grid-item-wrapper {
   position: relative;
 
   // img default proportion
   .img-responsive-wrapper {
-    border-radius: $border-radius;
+    border-radius: var(--#{$prefix}radius-smooth);
 
     .img-responsive {
       padding-bottom: $grid-item-df-proportion;
@@ -19,13 +33,13 @@
 
     .it-griditem-text {
       font-size: $grid-item-text-size;
-      font-weight: $font-weight-semibold;
+      font-weight: var(--#{$prefix}font-weight-solid);
     }
 
     .icon {
       flex-shrink: 0;
       position: relative;
-      fill: $primary;
+      fill: var(--#{$prefix}icon-primary);
       width: $grid-item-icon-size;
       height: $grid-item-icon-size;
     }
@@ -56,7 +70,7 @@
       right: 0;
       bottom: 0;
       background: transparent;
-      padding: $v-gap $v-gap * 2;
+      padding: var(--#{$prefix}spacing-xxs) calc(var(--#{$prefix}spacing-xxs) * 2);
       color: $white;
       text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
       .it-griditem-text {
@@ -80,14 +94,8 @@
 
   a {
     display: block;
-    text-decoration: none;
-    color: $grid-item-text-color;
-  }
-  // hover
-  a:hover {
-    .it-griditem-text {
-      text-decoration: underline;
-    }
+    text-decoration: underline;
+    color: var(--#{$prefix}color-text-secondary);
   }
   // double
   &.it-grid-item-double-w {
@@ -99,12 +107,12 @@
   }
 }
 
-// grid default
+// Grid default
 .it-grid-list-wrapper {
   padding-left: $grid-list-default-gap * 2;
   padding-right: $grid-list-default-gap * 2;
 
-  // grid changes
+  // Grid changes
   div[class^='col-'] {
     padding: 0 $grid-list-default-gap $grid-list-default-gap * 2 $grid-list-default-gap;
   }
@@ -116,7 +124,7 @@
     flex-wrap: wrap;
   }
 
-  // grid with label
+  // Grid with label
   &.it-image-label-grid {
     padding-left: $grid-list-text-gap * 2;
     padding-right: $grid-list-text-gap * 2;
@@ -140,7 +148,7 @@
   }
 }
 
-//small - tablet
+// Device small - tablet
 @include media-breakpoint-up(sm) {
   .it-masonry {
     .it-grid-item-wrapper {
@@ -165,12 +173,12 @@
   }
 }
 
-//Tablet horizontal / small desktop
+// Device Tablet horizontal / small desktop
 @include media-breakpoint-up(lg) {
   .it-grid-item-wrapper {
     &.it-grid-item-overlay {
       .it-griditem-text-wrapper {
-        padding: $v-gap * 2 $v-gap * 3;
+        padding: var(--#{$prefix}spacing-s) var(--#{$prefix}spacing-m);
 
         .it-griditem-text {
           font-size: $grid-item-text-size;

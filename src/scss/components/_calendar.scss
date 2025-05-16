@@ -1,9 +1,9 @@
 .it-calendar-wrapper {
   .it-header-block-title {
-    background-color: $primary;
-    color: $white;
     padding: 0.5em 0;
     border-radius: 4px 4px 0 0;
+    background-color: $primary;
+    color: $white;
   }
 
   .card-wrapper {
@@ -13,37 +13,37 @@
   .card {
     .card-title,
     .card-text {
-      border-bottom: 1px solid $color-border-subtle;
       padding-bottom: 16px;
+      border-bottom: 1px solid $color-border-subtle;
     }
 
     .card-body {
       .card-title {
+        padding-top: 16px;
         font-family: $font-family-sans-serif;
         font-size: 3rem;
         font-weight: 400;
-        padding-top: 16px;
 
         span {
-          font-size: 0.3em;
           display: block;
           padding-top: 1em;
           padding-left: 1em;
           font-family: $font-family-monospace;
+          font-size: 0.3em;
         }
       }
     }
 
     .card-text {
       a {
-        text-decoration: none;
         color: $color-text-base;
         font-family: $font-family-sans-serif;
-        font-size: $link-list-font-size-l;
+        font-size: var(--#{$prefix}body-font-size)-l;
+        text-decoration: none;
 
         &:hover {
-          text-decoration: underline;
           color: $link-color;
+          text-decoration: underline;
         }
       }
     }

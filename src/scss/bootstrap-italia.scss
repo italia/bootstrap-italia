@@ -1,3 +1,5 @@
+// @use '~design-tokens-italia/css/dsi-tokens.css';
+
 @import 'base/mixins/banner';
 @include bsBanner('');
 
@@ -41,53 +43,58 @@
 // Nav & Header
 @import 'components/nav';
 @import 'components/navbar';
-@import 'components/headerslim';
-@import 'components/headerslimtheme';
-@import 'components/headercenter';
-@import 'components/headercentertheme';
-@import 'components/headernavbar';
-@import 'components/headernavbartheme';
 @import 'components/header';
-@import 'components/navigationtheme';
+@import 'components/headerslim';
+// @import 'components/headerslimtheme';
+@import 'components/headercenter';
+// @import 'components/headercentertheme';
+// @import 'components/headernavbar';
+// @import 'components/headernavbartheme';
+// @import 'components/navigationtheme';
 // ------------------------------
 
 // Components
-@import 'components/type';
+@import 'components/avatar';
+@import 'components/code';
+@import 'components/figcaption';
 @import 'components/grid';
+@import 'components/gridlist';
+@import 'components/images';
+@import 'components/linklist';
+@import 'components/list';
+@import 'components/list-group';
+@import 'components/dropdown';
+@import 'components/megamenu';
 @import 'components/tables';
+@import 'components/type';
 @import 'components/breadcrumb';
 @import 'components/modal';
 @import 'components/accordion';
 @import 'components/carousel';
-@import 'components/calendar';
+// @import 'components/calendar'; Temporarily disabled because not used across the library
 @import 'components/alert';
 @import 'components/button-group';
 @import 'components/buttons';
 @import 'components/font';
-@import 'components/dropdown';
 @import 'components/pager';
 @import 'components/tab';
 @import 'components/cookiebar';
 @import 'components/hero';
 @import 'components/forward';
 @import 'components/back-to-top';
-@import 'components/list-group';
-@import 'components/linklist';
 @import 'components/offcanvas'; // Keep?
 @import 'components/navigation';
 @import 'components/skiplinks';
 @import 'components/affix';
 @import 'components/sidebar';
 @import 'components/sidebarthemes';
-@import 'components/megamenu';
 @import 'components/bottomnav';
 @import 'components/navscroll';
-@import 'components/navscrolltheme';
+// @import 'components/navscrolltheme';
 @import 'components/callout';
 @import 'components/toolbar';
 @import 'components/sections';
 @import 'components/notifications';
-@import 'components/avatar';
 @import 'components/thumbnav';
 @import 'components/steppers';
 @import 'components/card';
@@ -96,11 +103,9 @@
 @import 'components/progress-donuts';
 @import 'components/progress-bars';
 @import 'components/progress-spinners';
-@import 'components/gridlist';
 @import 'components/popover';
 @import 'components/tooltip';
 @import 'components/videoplayer';
-@import 'components/list';
 @import 'components/chips';
 @import 'components/rating';
 @import 'components/dimmer';
@@ -111,11 +116,9 @@
 @import 'components/point-list';
 @import 'components/rating-list';
 @import 'components/badge';
-@import 'components/figcaption';
 @import 'components/sticky';
 @import 'components/print';
-@import 'components/code';
-@import 'components/images';
+@import 'components/footer';
 @import 'components/page-scroll';
 @import 'components/pagination';
 @import 'components/placeholders'; // Keep?
@@ -124,26 +127,21 @@
 
 // Form
 @import 'forms/forms';
-@import 'forms/labels';
-@import 'forms/form-text';
+// @import 'forms/labels';
 @import 'forms/form-control';
-@import 'forms/form-check';
-@import 'forms/form-range';
-@import 'forms/floating-labels';
+// @import 'forms/form-check';
+// @import 'forms/form-range';
+// @import 'forms/floating-labels';
 @import 'forms/input-group';
-@import 'forms/validation';
+// @import 'forms/validation';
 @import 'forms/form-input-file';
 @import 'forms/form-input-number';
 @import 'forms/form-input-upload';
 @import 'forms/form-toggles';
 @import 'forms/form-password';
-@import 'forms/form-select';
+// @import 'forms/form-select';
 @import 'forms/form-transfer';
 @import 'forms/accessible-autocomplete';
 @import 'forms/autocomplete';
 @import 'forms/just-validate';
-// ------------------------------
-
-// Footer
-@import 'components/footer';
 // ------------------------------

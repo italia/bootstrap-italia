@@ -1,6 +1,38 @@
 //
-// Base styles
+// Accordion custom properties
 //
+
+// $arrow-size: $font-size-base * 0.5;
+
+.accordion {
+  --#{$prefix}accordion-color: var(--#{$prefix}color-text-base);
+  --#{$prefix}accordion-background: var(--#{$prefix}page-background); // Equal to page background color by default
+  --#{$prefix}accordion-transition: var(--#{$prefix}transition-instant);
+  --#{$prefix}accordion-border-color: var(--#{$prefix}color-border-subtle);
+  --#{$prefix}accordion-border-width: 0; // Set the border width for the accordion
+  --#{$prefix}accordion-item-border-width: 1px; // Set the border width for the accordion item
+  --#{$prefix}accordion-border-radius: var(--#{$prefix}radius-smooth);
+  --#{$prefix}accordion-inner-border-radius: var(--#{$prefix}radius-smooth);
+  --#{$prefix}accordion-btn-padding-x: var(--#{$prefix}spacing-m);
+  --#{$prefix}accordion-btn-padding-y: var(--#{$prefix}spacing-s);
+  --#{$prefix}accordion-btn-color: var(--#{$prefix}color-text-primary);
+  --#{$prefix}accordion-btn-line-height: var(--#{$prefix}font-line-height-1);
+  --#{$prefix}accordion-btn-bg: var(--#{$prefix}accordion-background);
+  --#{$prefix}accordion-btn-icon: #{escape-svg($accordion-button-icon)};
+  --#{$prefix}accordion-btn-icon-width: 1.25rem;
+  --#{$prefix}accordion-btn-icon-transform: rotate(-180deg);
+  --#{$prefix}accordion-btn-icon-transition: transform 0.2s ease-in-out;
+  --#{$prefix}accordion-btn-active-icon: #{escape-svg($accordion-button-active-icon)};
+  --#{$prefix}accordion-btn-focus-border-color: #{$accordion-button-focus-border-color};
+  --#{$prefix}accordion-btn-focus-box-shadow: #{$accordion-button-focus-box-shadow};
+  --#{$prefix}accordion-body-padding-x: var(--#{$prefix}spacing-m);
+  --#{$prefix}accordion-body-padding-y: var(--#{$prefix}spacing-s);
+  --#{$prefix}accordion-active-color: var(--#{$prefix}color-text-primary-active);
+  --#{$prefix}accordion-active-bg: var(--#{$prefix}color-background-primary);
+}
+
+//
+// Accordion button
 
 .accordion-button {
   position: relative;
@@ -8,19 +40,20 @@
   align-items: center;
   width: 100%;
   padding: var(--#{$prefix}accordion-btn-padding-y) var(--#{$prefix}accordion-btn-padding-x);
-  @include font-size($font-size-base);
+  border: 0; // Reset button style
+  line-height: var(--#{$prefix}accordion-btn-line-height);
+  background-color: var(--#{$prefix}accordion-btn-bg);
   color: var(--#{$prefix}accordion-btn-color);
   text-align: left; // Reset button style
-  background-color: var(--#{$prefix}accordion-btn-bg);
-  border: 0;
-  @include border-radius(0);
   overflow-anchor: none;
+  // @include font-size($font-size-base);
+  @include border-radius(0);
   @include transition(var(--#{$prefix}accordion-transition));
 
   &:not(.collapsed) {
-    color: var(--#{$prefix}accordion-active-color);
     background-color: var(--#{$prefix}accordion-active-bg);
-    box-shadow: inset 0 calc(-1 * var(--#{$prefix}accordion-border-width)) 0 var(--#{$prefix}accordion-border-color); // stylelint-disable-line function-disallowed-list
+    // box-shadow: inset 0 calc(-1 * var(--#{$prefix}accordion-border-width)) 0 var(--#{$prefix}accordion-border-color);
+    color: var(--#{$prefix}accordion-active-color);
 
     &::after {
       background-image: var(--#{$prefix}accordion-btn-active-icon);
@@ -30,11 +63,11 @@
 
   // Accordion icon
   &::after {
+    content: '';
     flex-shrink: 0;
     width: var(--#{$prefix}accordion-btn-icon-width);
     height: var(--#{$prefix}accordion-btn-icon-width);
     margin-left: auto;
-    content: '';
     background-image: var(--#{$prefix}accordion-btn-icon);
     background-repeat: no-repeat;
     background-size: var(--#{$prefix}accordion-btn-icon-width);
@@ -83,50 +116,33 @@
   }
 }
 
-$arrow-size: $font-size-base * 0.5;
-
-//collapse wrapper
+// Accordion Wrapper
 .accordion {
-  // scss-docs-start accordion-css-vars
-  --#{$prefix}accordion-color: #{$accordion-color};
-  --#{$prefix}accordion-bg: #{$accordion-bg};
-  --#{$prefix}accordion-transition: #{$accordion-transition};
-  --#{$prefix}accordion-border-color: #{$accordion-border-color};
-  --#{$prefix}accordion-border-width: #{$accordion-border-width};
-  --#{$prefix}accordion-border-radius: #{$accordion-border-radius};
-  --#{$prefix}accordion-inner-border-radius: #{$accordion-inner-border-radius};
-  --#{$prefix}accordion-btn-padding-x: #{$accordion-button-padding-x};
-  --#{$prefix}accordion-btn-padding-y: #{$accordion-button-padding-y};
-  --#{$prefix}accordion-btn-color: #{$accordion-button-color};
-  --#{$prefix}accordion-btn-bg: #{$accordion-button-bg};
-  --#{$prefix}accordion-btn-icon: #{escape-svg($accordion-button-icon)};
-  --#{$prefix}accordion-btn-icon-width: #{$accordion-icon-width};
-  --#{$prefix}accordion-btn-icon-transform: #{$accordion-icon-transform};
-  --#{$prefix}accordion-btn-icon-transition: #{$accordion-icon-transition};
-  --#{$prefix}accordion-btn-active-icon: #{escape-svg($accordion-button-active-icon)};
-  --#{$prefix}accordion-btn-focus-border-color: #{$accordion-button-focus-border-color};
-  --#{$prefix}accordion-btn-focus-box-shadow: #{$accordion-button-focus-box-shadow};
-  --#{$prefix}accordion-body-padding-x: #{$accordion-body-padding-x};
-  --#{$prefix}accordion-body-padding-y: #{$accordion-body-padding-y};
-  --#{$prefix}accordion-active-color: #{$accordion-button-active-color};
-  --#{$prefix}accordion-active-bg: #{$accordion-button-active-bg};
-  // scss-docs-end accordion-css-vars
-  border-bottom: 1px solid $gray-border; // UI kit;
+  border-left-width: var(--#{$prefix}accordion-border-width);
+  border-right-width: var(--#{$prefix}accordion-border-width);
+  border-top-width: var(--#{$prefix}accordion-border-width);
+  border-bottom: 0;
+  border-color: var(--#{$prefix}accordion-border-color);
+  border-style: solid;
+
+  // Nested Accordion
   .accordion {
-    border: 1px solid $gray-border; // UI kit;
-    border-top: 0;
+    border-left: 1px solid var(--#{$prefix}accordion-border-color);
+    border-right: 1px solid var(--#{$prefix}accordion-border-color);
   }
 
-  //background active version
+  // Background active version
   &.accordion-background-active {
     .accordion-header {
       .accordion-button[aria-expanded='true'] {
-        background-color: $primary;
-        color: $white;
-        border-color: $primary;
+        // border-color: var(--#{$prefix}color-border-primary);
+        background-color: var(--#{$prefix}color-background-primary);
+        color: var(--#{$prefix}color-text-inverse);
+
         &:before {
-          color: $white;
+          color: var(--#{$prefix}color-text-inverse);
         }
+
         &:after {
           content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 24 24' %3E%3Cg%3E%3Cpath fill='#{url-friendly-color($white)}' d='M12,10.3l4.8,4.8c0.3,0.3,0.8,0.3,1.1,0c0.3-0.3,0.3-0.8,0-1c0,0,0,0,0,0l-4.8-4.8c-0.6-0.6-1.5-0.6-2.1,0L6.2,14c-0.3,0.3-0.3,0.8,0,1c0,0,0,0,0,0c0.3,0.3,0.8,0.3,1.1,0L12,10.3z'/%3E%3C/g%3E%3C/svg%3E");
         }
@@ -134,15 +150,15 @@ $arrow-size: $font-size-base * 0.5;
     }
   }
 
-  //background hover version
+  // background hover version
   &.accordion-background-hover {
     .accordion-header {
       .accordion-button:hover {
-        background-color: $primary;
-        color: $white;
-        border-color: $primary;
+        // border-color: $primary;
+        background-color: var(--#{$prefix}color-background-primary);
+        color: var(--#{$prefix}color-text-inverse);
         &:before {
-          color: $white;
+          color: var(--#{$prefix}color-text-inverse);
         }
         &:after {
           content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 24 24' %3E%3Cg%3E%3Cpath fill='#{url-friendly-color($white)}' d='M12,10.3l4.8,4.8c0.3,0.3,0.8,0.3,1.1,0c0.3-0.3,0.3-0.8,0-1c0,0,0,0,0,0l-4.8-4.8c-0.6-0.6-1.5-0.6-2.1,0L6.2,14c-0.3,0.3-0.3,0.8,0,1c0,0,0,0,0,0c0.3,0.3,0.8,0.3,1.1,0L12,10.3z'/%3E%3C/g%3E%3C/svg%3E");
@@ -151,25 +167,27 @@ $arrow-size: $font-size-base * 0.5;
     }
   }
 
-  //left icon version
+  // left icon version
   &.accordion-left-icon {
     .accordion-header {
       .accordion-button {
         &:after {
           content: none;
         }
+
         &:before {
-          font-weight: 300;
           content: '-';
-          float: left;
-          margin: 0 1rem 0.3333333333333333rem 0;
           width: 1.5rem;
-          font-size: 1.5rem;
-          line-height: 1.2rem;
-          font-family: $font-family-sans-serif;
-          transform: none;
+          margin: 0 var(--#{$prefix}spacing-s) 0 0;
+          float: left;
           overflow: hidden;
+          font-family: var(--#{$prefix}font-serif);
+          font-size: var(--#{$prefix}heading-5-font-size);
+          font-weight: 300;
+          line-height: var(--#{$prefix}--#{$prefix}accordion-btn-line-height);
+          transform: none;
         }
+
         &[aria-expanded='false'] {
           &:before {
             content: '+';
@@ -180,11 +198,14 @@ $arrow-size: $font-size-base * 0.5;
   }
 }
 
-//item
+// Accordion item
+//
+
 .accordion-item {
+  border-top: var(--#{$prefix}accordion-item-border-width) solid var(--#{$prefix}accordion-border-color);
+  border-bottom: var(--#{$prefix}accordion-item-border-width) solid var(--#{$prefix}accordion-border-color);
+  background-color: var(--#{$prefix}accordion-background);
   color: var(--#{$prefix}accordion-color);
-  background-color: var(--#{$prefix}accordion-bg);
-  border: var(--#{$prefix}accordion-border-width) solid var(--#{$prefix}accordion-border-color);
 
   &:first-of-type {
     @include border-top-radius(var(--#{$prefix}accordion-border-radius));
@@ -212,7 +233,7 @@ $arrow-size: $font-size-base * 0.5;
       @include border-bottom-radius(var(--#{$prefix}accordion-border-radius));
     }
   }
-  border: none;
+  // border: none;
   &:first-of-type,
   &:last-of-type {
     border-radius: 0;
@@ -222,76 +243,72 @@ $arrow-size: $font-size-base * 0.5;
   }
 }
 
-//header
+// Accordion header
+//
 .accordion-header {
-  margin-bottom: 0;
   position: relative;
+  margin-bottom: 0;
 
   .accordion-button {
     width: 100%;
-    text-align: left;
     border: 0;
     background-color: transparent;
-    border-top: 1px solid $gray-border; // UI kit;
     box-shadow: none;
-    padding: 14px 24px;
+    color: var(--#{$prefix}accordion-btn-color);
+    font-size: var(--#{$prefix}body-font-size);
+    font-weight: var(--#{$prefix}font-weight-solid);
     cursor: pointer;
-    color: $primary;
-    font-size: 1rem;
-    font-weight: 600;
-    line-height: 1.5rem;
-    @include media-breakpoint-up(lg) {
-      font-size: 1.125rem;
-    }
-    &:not(.collapsed) {
-      color: $gray-secondary;
-      &:after {
-        transform: scaleY(1);
-      }
-    }
-    &:not(.collapsed):hover:before,
-    &[aria-expanded='true']:hover:before {
-      text-decoration: none;
-    }
-    &:after {
-      content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 24 24' %3E%3Cg%3E%3Cpath fill='#{url-friendly-color($primary)}' d='M12,10.3l4.8,4.8c0.3,0.3,0.8,0.3,1.1,0c0.3-0.3,0.3-0.8,0-1c0,0,0,0,0,0l-4.8-4.8c-0.6-0.6-1.5-0.6-2.1,0L6.2,14c-0.3,0.3-0.3,0.8,0,1c0,0,0,0,0,0c0.3,0.3,0.8,0.3,1.1,0L12,10.3z'/%3E%3C/g%3E%3C/svg%3E");
-      float: right;
-      width: 1.5rem;
-      height: auto;
-      line-height: 0.1rem;
-      color: $primary; // UI kit
-      transition: transform 0.3s;
-      background-image: none;
-      transform: scaleY(-1);
-    }
+
     &:hover {
       background: none;
       text-decoration: underline;
+
       &:after {
         text-decoration: none;
       }
     }
+
     &:active,
     &:hover,
     &:focus {
-      border-top-color: $gray-border; // UI kit !important;
+      border-top-color: var(--#{$prefix}accordion-border-color);
+    }
+
+    // Rotate icon
+    &:not(.collapsed) {
+      &:after {
+        transform: scaleY(1);
+      }
+    }
+
+    &:not(.collapsed):hover:before,
+    &[aria-expanded='true']:hover:before {
+      text-decoration: none;
+    }
+
+    &:after {
+      content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 24 24' %3E%3Cg%3E%3Cpath fill='#{url-friendly-color($primary)}' d='M12,10.3l4.8,4.8c0.3,0.3,0.8,0.3,1.1,0c0.3-0.3,0.3-0.8,0-1c0,0,0,0,0,0l-4.8-4.8c-0.6-0.6-1.5-0.6-2.1,0L6.2,14c-0.3,0.3-0.3,0.8,0,1c0,0,0,0,0,0c0.3,0.3,0.8,0.3,1.1,0L12,10.3z'/%3E%3C/g%3E%3C/svg%3E");
+      width: 1.5rem;
+      height: auto;
+      float: right;
+      background-image: none;
+      color: var(--#{$prefix}accordion-btn-color); // UI kit
+      line-height: 0.1rem;
+      transform: scaleY(-1);
+      transition: transform 0.3s;
     }
   }
 }
 
-// body
+// Accordion body
+//
 .accordion-body {
   padding: var(--#{$prefix}accordion-body-padding-y) var(--#{$prefix}accordion-body-padding-x);
-  padding: 12px 24px 42px;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  @include media-breakpoint-up(lg) {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-  }
+  font-size: var(--#{$prefix}body-font-size);
+  line-height: var(--#{$prefix}body-line-height);
 
   .accordion-header button[aria-expanded='true']:before {
-    height: 0;
     width: 0;
+    height: 0;
   }
 }

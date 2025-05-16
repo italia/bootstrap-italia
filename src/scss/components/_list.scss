@@ -1,53 +1,67 @@
-//mobile
+//
+// Global Lists
+
+.list-unstyled {
+  @include list-unstyled();
+}
+
+// Inline turns list items into inline-block
+.list-inline {
+  @include list-unstyled();
+}
+.list-inline-item {
+  display: inline-block;
+
+  &:not(:last-child) {
+    margin-right: $list-inline-padding;
+  }
+}
+
+//
+// Custom Lists
+
+.it-list {
+  --#{$prefix}list-item-spacing: var(--#{$prefix}spacing-s) var(--#{$prefix}spacing-xxs);
+  --#{$prefix}list-item-thumb-size: 5rem;
+}
+
 .it-list-wrapper {
   .it-list {
     list-style-type: none;
     margin: 0;
     padding: 0;
 
+    // Hover effect
+    a.list-item:hover {
+      background-color: var(--#{$prefix}color-background-inverse);
+      box-shadow: var(--#{$prefix}elevation-low);
+      color: var(--#{$prefix}link-hover);
+    }
+
+    // Force underline on list item text
+    a.list-item span {
+      text-decoration: underline;
+    }
+
+    // List item
     .list-item {
-      transition: all 0.3s;
-      margin-top: -1px;
+      transition: all 0.2s;
+      padding: var(--#{$prefix}list-item-spacing);
       display: flex;
       align-items: center;
       text-decoration: none;
-      border-bottom: 1px solid $list-border-color;
+      word-break: break-word;
       overflow-wrap: anywhere;
 
       .avatar,
       .it-rounded-icon,
       .it-thumb {
         flex-shrink: 0;
-        margin-right: $v-gap * 2;
-      }
-
-      .it-rounded-icon {
-        width: $v-gap * 5;
-
-        svg {
-          fill: $primary-a5;
-        }
-      }
-
-      .form-check {
-        margin-right: $v-gap;
-        width: $v-gap;
-        height: $v-gap * 4;
-        text-align: left;
-
-        & + .it-right-zone {
-          margin-left: $v-gap * 2;
-        }
-
-        label {
-          padding-left: 0;
-          margin-bottom: 0;
-        }
+        margin-right: var(--#{$prefix}icon-spacing);
       }
 
       .it-thumb {
-        width: $v-gap * 5;
-        height: $v-gap * 5;
+        width: var(--#{$prefix}list-item-thumb-size);
 
         img {
           object-fit: cover;
@@ -57,37 +71,25 @@
       }
 
       .it-right-zone {
-        padding: $list-text-padding;
         flex-grow: 1;
         display: flex;
         justify-content: space-between;
         align-items: center;
-
-        svg {
-          fill: $primary;
-          width: $v-gap * 3;
-          height: $v-gap * 3;
-        }
 
         .it-multiple {
           display: flex;
           justify-content: flex-end;
           flex-wrap: wrap;
 
+          a {
+            margin-left: var(--#{$prefix}icon-spacing);
+          }
+
           .metadata {
             margin-right: 0;
             width: 100%;
             text-align: right;
           }
-
-          svg {
-            margin-left: $v-gap * 2;
-            margin-right: 0;
-          }
-        }
-
-        .toggles {
-          height: $v-gap * 4;
         }
 
         .metadata {
@@ -112,82 +114,9 @@
       }
     }
 
-    li:last-child {
-      .list-item {
-        span.text {
-          border-bottom: 1px solid transparent;
-        }
-      }
-    }
-
-    a .text {
-      text-decoration: underline;
-    }
-  }
-}
-
-// Desktop
-@include media-breakpoint-up(xl) {
-  .it-list-wrapper {
-    .it-list {
-      .list-item {
-        .avatar,
-        .it-rounded-icon,
-        .it-thumb {
-          margin-left: $v-gap;
-          margin-right: 0;
-
-          & + .it-right-zone {
-            margin-left: $v-gap * 2;
-          }
-        }
-
-        .form-check {
-          margin-right: $v-gap * 2;
-          text-align: center;
-        }
-
-        // hover
-        .it-right-zone {
-          margin-left: $v-gap;
-          margin-right: $v-gap;
-
-          span.it-multiple {
-            margin-right: $v-gap;
-
-            a {
-              svg {
-                transition: fill 0.3s;
-              }
-
-              &:hover {
-                svg {
-                  fill: $primary-a10;
-                }
-              }
-            }
-          }
-
-          .toggles {
-            margin-right: 0;
-          }
-
-          span.metadata {
-            margin-right: $v-gap;
-          }
-        }
-      }
-
-      a.list-item:hover {
-        box-shadow: $card-shadow;
-        color: $color-text-primary-hover;
-        text-decoration: none;
-        background: $white;
-        position: relative;
-        z-index: 1;
-        transition: none;
-        border-bottom: 1px solid transparent;
-      }
+    // List item border on every item except the last one
+    li:not(:last-child) .list-item {
+      border-bottom: 1px solid var(--#{$prefix}color-border-subtle);
     }
   }
 }
