@@ -3,17 +3,20 @@
 /* stylelint-enable */
 
 .vjs-theme-bootstrap-italia {
+  --#{$prefix}videoplayer-button-background: var(--#{$prefix}color-background-primary);
+  --#{$prefix}videoplayer-control-background: var(--#{$prefix}color-background-primary);
+
   .vjs-big-play-button {
-    background-color: $primary;
+    background-color: var(--#{$prefix}videoplayer-button-background);
   }
 
   &:hover .vjs-big-play-button,
   &.vjs-big-play-button:focus {
-    background-color: $primary;
+    background-color: var(--#{$prefix}videoplayer-button-background);
   }
 
   .vjs-control-bar {
-    background-color: $primary;
+    background-color: var(--#{$prefix}videoplayer-control-background);
     font-size: 1rem;
 
     @include media-breakpoint-up(lg) {
