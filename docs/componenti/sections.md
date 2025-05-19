@@ -104,13 +104,11 @@ Si consiglia di applicare la classe `.white-color` al contenuto (come da esempio
 </section>
 {% endcapture %}{% include example.html content=example %}
 
-### Sfondo Neutrale
-
-Infine, utilizzando la classe `.section-neutral` si otterrà un sfondo di colore corrispondente al primo dei colori neutrali.
-
+### Sfondo in evidenza
+Aggiungendo la classe `.section-emphasis` si otterrà un sfondo di colore in evidenza.
 Si consiglia di applicare la classe `.white-color` al contenuto (come da esempio) per garantire la leggibilità dei testi contenuti.
 
-{% comment %}Example name: Sfondo neutrale{% endcomment %}
+{% comment %}Example name: Sfondo in evidenza{% endcomment %}
 {% capture example %}
 <section class="section section-neutral" aria-labelledby="titleEx4">
   <div class="section-content">
@@ -134,7 +132,7 @@ Si consiglia di applicare la classe `.white-color` al contenuto (come da esempio
 
 ## Immagine di sfondo
 
-Aggiungendo la classe `.section-image` alla Section e indicando attraverso CSS in linea l'URL dell'immagine da utilizzare (es: `style="background-image: url('URL-IMMAGINE')"`) la Section utilizzerà l'immagine indicata come sfondo, adattandone automaticamente le dimensioni per coprire l'intera Section.
+Aggiungendo la classe `.section-image` alla section e indicando attraverso CSS in linea l'URL dell'immagine da utilizzare (es: `style="background-image: url('URL-IMMAGINE')"`) la Section utilizzerà l'immagine indicata come sfondo, adattandone automaticamente le dimensioni per coprire l'intera Section.
 
 A seconda della luminosità dell'immagine si consiglia di applicare la classe `.white-color` al contenuto (come da esempio) per garantire il corretto contrasto fra testi e sfondo.
 

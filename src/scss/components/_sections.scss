@@ -1,37 +1,45 @@
-//mobile
 .section {
-  padding: #{map-get($grid-gutter-widths, sm) * 4} #{map-get($grid-gutter-widths, sm) * 2};
+  --#{$prefix}section-background-color: transparent;
+  --#{$prefix}section-image-overlay: hsla(0, 0%, 0%, 0.5);
+  --#{$prefix}section-padding-x: null;
+  --#{$prefix}section-padding-y: var(--#{$prefix}spacing-xxl);
 
-  //section content
+  padding: var(--#{$prefix}section-padding-y) var(--#{$prefix}section-padding-x);
+  background-color: var(--#{$prefix}section-background-color);
+
   .section-content {
-    margin: 0 auto;
     position: relative;
+    margin: 0 auto;
   }
 
   // color and image variants
   &.section-muted {
-    background: $color-background-muted;
+    --#{$prefix}section-background-color: var(--#{$prefix}color-background-muted);
   }
+
   &.section-primary {
-    background: $primary;
+    --#{$prefix}section-background-color: var(--#{$prefix}color-background-primary);
   }
-  &.section-neutral {
-    // TODO: Consider updating class name to match the variable
-    background: $color-background-emphasis;
+
+  &.section-emphasis {
+    --#{$prefix}-section-background-color: var(--#{$prefix}-color-background-emphasis);
   }
+
+  // TODO: 
   &.section-image {
-    background-size: cover;
-    background-position: center center;
     position: relative;
+    background-position: center center;
+    background-size: cover;
+
     &::before {
-      content: '';
       position: absolute;
       top: 0;
       left: 0;
+      content: '';
+      display: block;
       width: 100%;
       height: 100%;
-      display: block;
-      background: rgba(0, 0, 0, 0.5);
+      background: var(--#{$prefix}section-image-overlay);
     }
   }
 
@@ -44,16 +52,16 @@
     background-size: cover;
 
     &::before {
-      content: '';
       position: absolute;
       top: 0;
       left: 0;
+      z-index: -1;
+      content: '';
       width: 100%;
       height: 300px;
-      z-index: -1;
+      background-color: $section-header-background-color;
       background-repeat: no-repeat;
       background-position: top center;
-      background-color: $section-header-background-color;
     }
 
     &.section-user-header {
@@ -68,6 +76,7 @@
 
         a {
           text-decoration: none;
+
           &:hover {
             text-decoration: underline;
           }
@@ -99,6 +108,7 @@
           content: '';
           min-height: 550px;
         }
+
         .user-settings {
           font-size: 0.875rem;
         }
