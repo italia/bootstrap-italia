@@ -10,9 +10,9 @@ Per suddividere una pagina in blocchi orizzontali con sfondi differenti utilizza
 
 ## Esempio
 
-Il componente Section ha un padding verticale ed orizzontale predefinito ed uno sfondo trasparente.
+Il componente section ha uno spazio interno verticale predefinito e uno sfondo trasparente. Quando si organizzano i contenuti usando le classi della griglia, non serve aggiungere spazio ai lati. Se proprio necessario, si può aggiungere spazio laterale usando la variabile `--section-padding-x`.
 
-Il contenuto di una Section va inserito nel `<div>` con classe `.section-content`. Questo elemento occupa tutta la larghezza della Section (meno il padding) ma, nel caso ne venisse definita la `max-width` in CSS, verrà automaticamente centrato orizzontalmente all'interno della Section.
+Il contenuto va messo in un `<div>` con la classe `.section-content`. Questo contenitore occupa tutta la larghezza disponibile (tranne lo spazio interno). Se gli si assegna una larghezza massima in CSS, verrà automaticamente centrato nella section.
 
 {% capture callout %}
 
@@ -28,7 +28,7 @@ Gli autori dovrebbero dividere la pagina in sezioni semantiche reali e non per s
 {% capture example %}
 <section class="section" aria-labelledby="titleEx1">
   <div class="section-content">
-    <!-- contenuto di esempio START -->
+    <!-- START - contenuto di esempio -->
     <div class="container">
       <div class="row mb-3">
         <div class="col-12">
@@ -36,12 +36,18 @@ Gli autori dovrebbero dividere la pagina in sezioni semantiche reali e non per s
         </div>
       </div>
       <div class="row">
-        <div class="col-12 col-lg-6 col-xl-4 pe-0 pe-md-5 mb-3 font-serif">Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.</div>
-        <div class="col-12 col-lg-6 col-xl-4 pe-0 pe-md-5 mb-3 font-serif">Eget egestas purus viverra accumsan. Diam maecenas ultricies mi eget mauris pharetra et. Etiam dignissim diam quis enim. Eu nisl nunc mi ipsum faucibus.</div>
-        <div class="col-12 col-lg-6 col-xl-4 pe-0 pe-md-5 font-serif">Euismod lacinia at quis risus sed vulputate. Scelerisque purus semper eget duis at tellus at urna condimentum. Mattis enim ut tellus elementum sagittis.</div>
+        <div class="col-12 col-lg-6 col-xl-4">
+          <p>Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.</p>
+        </div>
+        <div class="col-12 col-lg-6 col-xl-4">
+          <p>Eget egestas purus viverra accumsan. Diam maecenas ultricies mi eget mauris pharetra et. Etiam dignissim diam quis enim. Eu nisl nunc mi ipsum faucibus.</p>
+        </div>
+        <div class="col-12 col-lg-6 col-xl-4">
+          <p>Euismod lacinia at quis risus sed vulputate. Scelerisque purus semper eget duis at tellus at urna condimentum. Mattis enim ut tellus elementum sagittis.</p>
+        </div>
       </div>
     </div>
-    <!-- contenuto di esempio END -->
+    <!-- END - contenuto di esempio -->
   </div>
 </section>
 {% endcapture %}{% include example.html content=example %}
@@ -66,9 +72,15 @@ Al componente Section può essere applicato uno sfondo di colore tenue utilizzan
         </div>
       </div>
       <div class="row">
-        <div class="col-12 col-lg-6 col-xl-4 pe-0 pe-md-5 mb-3 font-serif">Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.</div>
-        <div class="col-12 col-lg-6 col-xl-4 pe-0 pe-md-5 mb-3 font-serif">Eget egestas purus viverra accumsan. Diam maecenas ultricies mi eget mauris pharetra et. Etiam dignissim diam quis enim. Eu nisl nunc mi ipsum faucibus.</div>
-        <div class="col-12 col-lg-6 col-xl-4 pe-0 pe-md-5 font-serif">Euismod lacinia at quis risus sed vulputate. Scelerisque purus semper eget duis at tellus at urna condimentum. Mattis enim ut tellus elementum sagittis.</div>
+        <div class="col-12 col-lg-6 col-xl-4">
+          <p>Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.</p>
+        </div>
+        <div class="col-12 col-lg-6 col-xl-4">
+          <p>Eget egestas purus viverra accumsan. Diam maecenas ultricies mi eget mauris pharetra et. Etiam dignissim diam quis enim. Eu nisl nunc mi ipsum faucibus.</p>
+        </div>
+        <div class="col-12 col-lg-6 col-xl-4">
+          <p>Euismod lacinia at quis risus sed vulputate. Scelerisque purus semper eget duis at tellus at urna condimentum. Mattis enim ut tellus elementum sagittis.</p>
+        </div>
       </div>
     </div>
     <!-- contenuto di esempio END -->
@@ -94,9 +106,15 @@ Si consiglia di applicare la classe `.white-color` al contenuto (come da esempio
         </div>
       </div>
       <div class="row">
-        <div class="col-12 col-lg-6 col-xl-4 pe-0 pe-md-5 mb-3 font-serif">Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.</div>
-        <div class="col-12 col-lg-6 col-xl-4 pe-0 pe-md-5 mb-3 font-serif">Eget egestas purus viverra accumsan. Diam maecenas ultricies mi eget mauris pharetra et. Etiam dignissim diam quis enim. Eu nisl nunc mi ipsum faucibus.</div>
-        <div class="col-12 col-lg-6 col-xl-4 pe-0 pe-md-5 font-serif">Euismod lacinia at quis risus sed vulputate. Scelerisque purus semper eget duis at tellus at urna condimentum. Mattis enim ut tellus elementum sagittis.</div>
+        <div class="col-12 col-lg-6 col-xl-4">
+          <p>Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.</p>
+        </div>
+        <div class="col-12 col-lg-6 col-xl-4">
+          <p>Eget egestas purus viverra accumsan. Diam maecenas ultricies mi eget mauris pharetra et. Etiam dignissim diam quis enim. Eu nisl nunc mi ipsum faucibus.</p>
+        </div>
+        <div class="col-12 col-lg-6 col-xl-4">
+          <p>Euismod lacinia at quis risus sed vulputate. Scelerisque purus semper eget duis at tellus at urna condimentum. Mattis enim ut tellus elementum sagittis.</p>
+        </div>
       </div>
     </div>
     <!-- contenuto di esempio END -->
@@ -120,9 +138,15 @@ Si consiglia di applicare la classe `.white-color` al contenuto (come da esempio
         </div>
       </div>
       <div class="row">
-        <div class="col-12 col-lg-6 col-xl-4 pe-0 pe-md-5 mb-3 font-serif">Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.</div>
-        <div class="col-12 col-lg-6 col-xl-4 pe-0 pe-md-5 mb-3 font-serif">Eget egestas purus viverra accumsan. Diam maecenas ultricies mi eget mauris pharetra et. Etiam dignissim diam quis enim. Eu nisl nunc mi ipsum faucibus.</div>
-        <div class="col-12 col-lg-6 col-xl-4 pe-0 pe-md-5 font-serif">Euismod lacinia at quis risus sed vulputate. Scelerisque purus semper eget duis at tellus at urna condimentum. Mattis enim ut tellus elementum sagittis.</div>
+        <div class="col-12 col-lg-6 col-xl-4">
+          <p>Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.</p>
+        </div>
+        <div class="col-12 col-lg-6 col-xl-4">
+          <p>Eget egestas purus viverra accumsan. Diam maecenas ultricies mi eget mauris pharetra et. Etiam dignissim diam quis enim. Eu nisl nunc mi ipsum faucibus.</p>
+        </div>
+        <div class="col-12 col-lg-6 col-xl-4">
+          <p>Euismod lacinia at quis risus sed vulputate. Scelerisque purus semper eget duis at tellus at urna condimentum. Mattis enim ut tellus elementum sagittis.</p>
+        </div>
       </div>
     </div>
     <!-- contenuto di esempio END -->
@@ -148,9 +172,15 @@ A seconda della luminosità dell'immagine si consiglia di applicare la classe `.
         </div>
       </div>
       <div class="row">
-        <div class="col-12 col-lg-6 col-xl-4 pe-0 pe-md-5 mb-3 font-serif">Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.</div>
-        <div class="col-12 col-lg-6 col-xl-4 pe-0 pe-md-5 mb-3 font-serif">Eget egestas purus viverra accumsan. Diam maecenas ultricies mi eget mauris pharetra et. Etiam dignissim diam quis enim. Eu nisl nunc mi ipsum faucibus.</div>
-        <div class="col-12 col-lg-6 col-xl-4 pe-0 pe-md-5 font-serif">Euismod lacinia at quis risus sed vulputate. Scelerisque purus semper eget duis at tellus at urna condimentum. Mattis enim ut tellus elementum sagittis.</div>
+        <div class="col-12 col-lg-6 col-xl-4">
+          <p>Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.</p>
+        </div>
+        <div class="col-12 col-lg-6 col-xl-4">
+          <p>Eget egestas purus viverra accumsan. Diam maecenas ultricies mi eget mauris pharetra et. Etiam dignissim diam quis enim. Eu nisl nunc mi ipsum faucibus.</p>
+        </div>
+        <div class="col-12 col-lg-6 col-xl-4">
+          <p>Euismod lacinia at quis risus sed vulputate. Scelerisque purus semper eget duis at tellus at urna condimentum. Mattis enim ut tellus elementum sagittis.</p>
+        </div>
       </div>
     </div>
     <!-- contenuto di esempio END -->
