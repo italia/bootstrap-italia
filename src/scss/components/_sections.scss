@@ -1,10 +1,13 @@
 .section {
   --#{$prefix}section-background-color: transparent;
   --#{$prefix}section-image-overlay: hsla(0, 0%, 0%, 0.5);
-  --#{$prefix}section-padding-x: null;
   --#{$prefix}section-padding-y: var(--#{$prefix}spacing-xxl);
-
-  padding: var(--#{$prefix}section-padding-y) var(--#{$prefix}section-padding-x);
+  @include media-breakpoint-up(xl) {
+    --#{$prefix}section-padding-y: var(--#{$prefix}spacing-3xl);
+  }
+  
+  // Set `--#{$prefix}section-padding-x` only when extra horizontal padding is needed
+  padding: var(--#{$prefix}section-padding-y) var(--#{$prefix}section-padding-x, 0);
   background-color: var(--#{$prefix}section-background-color);
 
   .section-content {
@@ -14,6 +17,7 @@
 
   // color and image variants
   &.section-muted {
+    --#{$prefix}section-padding-x: var(--#{$prefix}spacing-2xl);
     --#{$prefix}section-background-color: var(--#{$prefix}color-background-muted);
   }
 
@@ -25,7 +29,7 @@
     --#{$prefix}-section-background-color: var(--#{$prefix}-color-background-emphasis);
   }
 
-  // TODO: 
+  // TODO: Check if this is needed
   &.section-image {
     position: relative;
     background-position: center center;
@@ -47,6 +51,7 @@
     box-shadow: inset 0 1rem 1rem -1rem rgba(0, 0, 0, 0.3);
   }
 
+  // TODO: Check if this is needed  
   &.section-background-header {
     position: relative;
     background-size: cover;
@@ -64,6 +69,7 @@
       background-position: top center;
     }
 
+    // TODO: Check if this is needed
     &.section-user-header {
       &::before {
         content: '';
@@ -90,18 +96,9 @@
   }
 }
 
-//Tablet vertical
-@include media-breakpoint-up(md) {
-  .section {
-    padding: #{map-get($grid-gutter-widths, md) * 4} #{map-get($grid-gutter-widths, md) * 2};
-  }
-}
-
-//Tablet horizontal / small desktop
+// TODO: Check if this is needed
 @include media-breakpoint-up(lg) {
   .section {
-    padding: #{map-get($grid-gutter-widths, lg) * 4};
-
     &.section-background-header {
       &.section-user-header {
         &::before {
@@ -117,11 +114,9 @@
   }
 }
 
-//Desktop
+// TODO: Check if this is needed
 @include media-breakpoint-up(xl) {
   .section {
-    padding: #{map-get($grid-gutter-widths, xl) * 4};
-
     &.section-background-header {
       &.section-user-header {
         .user-settings {
