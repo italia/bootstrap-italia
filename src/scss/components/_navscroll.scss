@@ -1,3 +1,6 @@
+//
+// Component properties
+
 .it-navscroll-wrapper {
   --#{$prefix}navscroll-background: var(--#{$prefix}page-background);
   --#{$prefix}navscroll-backbutton-padding: var(--#{$prefix}spacing-xs);
@@ -15,6 +18,9 @@
   --#{$prefix}navscroll-toggler-color: var(--#{$prefix}color-text-primary);
   --#{$prefix}navscroll-divider-color: var(--#{$prefix}color-border-subtle);
 }
+
+//
+// Component styles
 
 .navbar.it-navscroll-wrapper {
   background: var(--#{$prefix}navscroll-background);

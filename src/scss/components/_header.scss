@@ -1,3 +1,6 @@
+//
+// Custom properties
+
 .it-header-wrapper,
 .it-header-slim-wrapper,
 .it-header-center-wrapper,
@@ -39,7 +42,7 @@
   }
 }
 
-// Theme Light
+// Light theme
 .it-header-slim-wrapper.theme-light,
 .it-header-center-wrapper.theme-light,
 .it-header-navbar-wrapper.theme-light,
@@ -60,6 +63,9 @@
     --#{$prefix}header-search-icon-color: var(--#{$prefix}icon-inverse);
   }
 }
+
+//
+// Component styles
 
 .it-header-wrapper {
   position: relative;

@@ -1,10 +1,5 @@
-// Component: Rating
 //
-// Description: A rating component that allows users to rate something.
-//
-
-// Properties
-//
+// Component properties
 
 .rating {
   --#{$prefix}rating-icon-fill: var(--#{$prefix}icon-disabled);
@@ -14,8 +9,8 @@
   --#{$prefix}rating-font-weight: var(--#{$prefix}font-weight-solid);
 }
 
-// Styles
 //
+// Component styles
 
 .rating {
   border: none;

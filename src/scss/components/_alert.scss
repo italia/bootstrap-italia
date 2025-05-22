@@ -1,4 +1,6 @@
-// CSS Custom Properties
+//
+// Custom properties
+
 .alert {
   --#{$prefix}alert-background-color: var(--#{$prefix}color-background-inverse);
   --#{$prefix}alert-border-color: var(--#{$prefix}color-border-secondary);
@@ -11,7 +13,9 @@
   --#{$prefix}alert-spacing-outside: var(--#{$prefix}spacing-m);
 }
 
-// Base styles
+//
+// Component styles
+
 .alert {
   position: relative;
   margin-bottom: var(--#{$prefix}alert-margin);

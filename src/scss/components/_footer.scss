@@ -1,3 +1,19 @@
+//
+// Custom properties
+
+.it-footer {
+  --#{$prefix}footer-top-background: var(--#{$prefix}color-background-primary-muted);
+  --#{$prefix}footer-bottom-background: var(--#{$prefix}color-background-primary-dark);
+  --#{$prefix}footer-brand-icon-color: var(--#{$prefix}icon-inverse);
+  --#{$prefix}footer-brand-icon-size: 3rem; // 48px
+  @include media-breakpoint-up(lg) {
+    --#{$prefix}footer-brand-icon-size: 3.5rem; // 56px 
+  }
+}
+
+//
+// Component styles
+
 .it-footer {
   --#{$prefix}footer-top-background: var(--#{$prefix}color-background-primary-muted);
   --#{$prefix}footer-bottom-background: var(--#{$prefix}color-background-primary-dark);

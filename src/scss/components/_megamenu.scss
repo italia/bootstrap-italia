@@ -1,5 +1,5 @@
-// Component properties
 //
+// Component properties
 
 .megamenu {
   --#{$prefix}megamenu-background-color: var(--#{$prefix}color-background-inverse);
@@ -7,8 +7,8 @@
   --#{$prefix}megamenu-spacing: var(--#{$prefix}spacing-xs);
 }
 
-// Component styles
 //
+// Component styles
 
 .megamenu {
   padding-left: var(--#{$prefix}megamenu-spacing);

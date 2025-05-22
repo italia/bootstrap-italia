@@ -1,3 +1,6 @@
+//
+// Component properties
+
 .callout {
   --#{$prefix}callout-border-color: var(--#{$prefix}color-border-secondary);
   --#{$prefix}callout-border-size: 2px;
@@ -11,7 +14,12 @@
   --#{$prefix}callout-title-font-size: var(--#{$prefix}heading-6-font-size);
   --#{$prefix}callout-title-font-weight: var(--#{$prefix}heading-font-weight-weak);
   --#{$prefix}callout-title-color: var(--#{$prefix}color-text-secondary);
+}
 
+//
+// Component styles
+
+.callout {
   position: relative;
   overflow: hidden;
   background-color: var(--#{$prefix}callout-background-color);

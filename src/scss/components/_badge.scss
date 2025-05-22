@@ -1,4 +1,7 @@
-.badge {
+//
+// Custom properties
+
+.badge  {
   --#{$prefix}badge-padding-x: var(--#{$prefix}spacing-xs);
   --#{$prefix}badge-padding-y: var(--#{$prefix}spacing-3xs);
   --#{$prefix}badge-font-weight: var(--#{$prefix}font-weight-solid);
@@ -6,7 +9,12 @@
   --#{$prefix}badge-border-radius: var(--#{$prefix}radius-smooth);
   --#{$prefix}badge-font-size: var(--#{$prefix}label-font-size-s);
   --#{$prefix}badge-font-size-relative: 0.75em;
+}
 
+//
+// Component styles
+
+.badge {
   display: inline-block;
   padding: var(--#{$prefix}badge-padding-y) var(--#{$prefix}badge-padding-x);
   color: var(--#{$prefix}badge-text-color);

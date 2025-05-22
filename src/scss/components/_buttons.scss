@@ -1,13 +1,11 @@
-// Variables
-// Used for Sass functions
 //
+// Sass variables used in function
 
 $btn-close-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$btn-close-color}'><path d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/></svg>") !default;
 $btn-close-white-filter: invert(1) grayscale(100%) brightness(200%) !default;
 
-// Component properties
-// The CSS properties for the buttons component
 //
+// Component properties
 
 .btn {
   --#{$prefix}btn-padding-x: var(--#{$prefix}spacing-s);
@@ -26,14 +24,10 @@ $btn-close-white-filter: invert(1) grayscale(100%) brightness(200%) !default;
   --#{$prefix}btn-disabled-opacity: 0.5;
 }
 
-// Button
-// The base button class
-// This class is used for all buttons in the application.
-// It is used to set the default styles for all buttons.
 //
+// Component styles
 
 .btn {
-
   display: inline-block;
   padding: var(--#{$prefix}btn-padding-y) var(--#{$prefix}btn-padding-x);
   border: var(--#{$prefix}btn-border-width) solid var(--#{$prefix}btn-border-color);

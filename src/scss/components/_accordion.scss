@@ -1,8 +1,5 @@
 //
-// Accordion custom properties
-//
-
-// $arrow-size: $font-size-base * 0.5;
+// Custom properties
 
 .accordion {
   --#{$prefix}accordion-color: var(--#{$prefix}color-text-base);
@@ -32,7 +29,7 @@
 }
 
 //
-// Accordion button
+// Component styles
 
 .accordion-button {
   position: relative;

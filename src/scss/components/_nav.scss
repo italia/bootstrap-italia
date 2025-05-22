@@ -1,13 +1,16 @@
-// Base class
 //
-// Kickstart any navigation component with a set of style resets. Works with
-// `<nav>`s, `<ul>`s or `<ol>`s.
+// Component properties
 
 .nav {
   --#{$prefix}nav-link-padding-x: var(--#{$prefix}spacing-s);
   --#{$prefix}nav-link-padding-y: var(--#{$prefix}spacing-s);
   --#{$prefix}nav-link-disabled-color: var(--#{$prefix}color-text-disabled);
+}
 
+//
+// Component styles
+
+.nav {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 0;

@@ -1,21 +1,6 @@
-// Dropdown wrapper (`<div>`)
-.dropup,
-.dropend,
-.dropdown,
-.dropstart,
-.dropup-center,
-.dropdown-center {
-  position: relative;
-}
+//
+// Custom properties
 
-.dropdown-toggle {
-  white-space: nowrap;
-
-  // Generate the caret automatically
-  @include caret();
-}
-
-// Dropdown menu
 .dropdown-menu {
   --#{$prefix}dropdown-zindex: 8; // TODO review zindex usage
   --#{$prefix}dropdown-min-width: 10rem;
@@ -46,7 +31,29 @@
   --#{$prefix}dropdown-notch-position-y: -8px;
   --#{$prefix}dropdown-animation-speed: var(--#{$prefix}transition-instant);
   --#{$prefix}dropdown-vertical-shift: 10px;
+}
 
+// 
+// Component styles
+
+.dropup,
+.dropend,
+.dropdown,
+.dropstart,
+.dropup-center,
+.dropdown-center {
+  position: relative;
+}
+
+.dropdown-toggle {
+  white-space: nowrap;
+
+  // Generate the caret automatically
+  @include caret();
+}
+
+// Dropdown menu
+.dropdown-menu {
   position: absolute;
   z-index: var(--#{$prefix}dropdown-zindex);
   display: none; // none by default, but block on "open" of the menu

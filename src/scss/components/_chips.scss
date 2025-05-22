@@ -1,3 +1,6 @@
+//
+// Custom properties
+
 .chip {
   --#{$prefix}chip-background-color: var(--#{$prefix}color-background-muted);
   --#{$prefix}chip-border: $gray-secondary;
@@ -14,7 +17,12 @@
   --#{$prefix}chip-text-line-height: var(--#{$prefix}label-line-height);
   --#{$prefix}chip-text-size: var(--#{$prefix}label-font-size);
   --#{$prefix}chip-text-weight: var(--#{$prefix}font-weight-solid);
+}
 
+//
+// Component styles
+
+.chip {
   display: inline-flex;
   align-items: center;
   justify-content: space-evenly;

@@ -1,4 +1,5 @@
-// Properties
+//
+// Component properties
 .modal {
   --#{$prefix}modal-zindex: 1055;
   --#{$prefix}modal-width: 500px;
@@ -22,7 +23,9 @@
   --#{$prefix}modal-transition: transform 0.3s ease-in-out;
 }
 
-// Shell div to position the modal with bottom padding
+//
+// Component styles
+
 .modal-dialog {
   position: relative;
   width: auto;

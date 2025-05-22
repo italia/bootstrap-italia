@@ -7,7 +7,9 @@ $avatar-variants: (
   secondary: $color-secondary,
 );
 
-// Avatar properties
+//
+// Custom properties
+
 .avatar {
   --#{$prefix}avatar-background: var(--#{$prefix}color-background-secondary-lighter);
   --#{$prefix}avatar-text-color: var(--#{$prefix}color-text-secondary);
@@ -23,6 +25,9 @@ $avatar-variants: (
   --#{$prefix}avatar-dot-offset-top: 4px;
   --#{$prefix}avatar-dot-offset-bottom: 0;
 }
+
+//
+// Component styles
 
 .avatar {
   position: relative;

@@ -1,3 +1,6 @@
+//
+// Component properties
+
 .section {
   --#{$prefix}section-background-color: transparent;
   --#{$prefix}section-image-overlay: hsla(0, 0%, 0%, 0.5);
@@ -5,7 +8,12 @@
   @include media-breakpoint-up(xl) {
     --#{$prefix}section-padding-y: var(--#{$prefix}spacing-3xl);
   }
-  
+}
+
+//
+// Component styles
+
+.section {
   // Set `--#{$prefix}section-padding-x` only when extra horizontal padding is needed
   padding: var(--#{$prefix}section-padding-y) var(--#{$prefix}section-padding-x, 0);
   background-color: var(--#{$prefix}section-background-color);
