@@ -300,7 +300,7 @@ E un link: [Modale](/docs/componenti/modale/)
 
 
 {% capture callout %}
-La navbar quando aperta in versione mobile è stata ora reimplementata come un vero e proprio dialog modale per migliorare l'accessibilità con i lettori di schermo. Se hai personalizzato la navbar, in particolare quella mobile, nel tuo progetto, potresti dover aggiornare il tuo codice. 
+La navbar quando aperta in versione mobile è stata reimplementata usando l'approccio del componente modale per isolarla dal contenuto sottostante e migliorare il supporto con tutti i lettori di schermo. Se hai personalizzato la navbar nel tuo progetto, potresti dover aggiornare il markup. 
 
 **Modifiche principali:**
 - Struttura: la navbar ora utilizza un pattern dialog con backdrop 
