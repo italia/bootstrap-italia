@@ -15,6 +15,7 @@
  * - Now behaves as a modal dialog with proper ARIA attributes
  * - Z-index aligned with modal component
  * - Uses standard FocusTrap for keyboard navigation
+   - Uses inert for better SR support
  *
  * If you've customized this component, please review your code for compatibility.
  */
