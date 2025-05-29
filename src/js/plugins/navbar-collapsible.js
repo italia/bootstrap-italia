@@ -15,6 +15,7 @@
  * - Now behaves as a modal dialog with proper ARIA attributes
  * - Z-index aligned with modal component
  * - Uses standard FocusTrap for keyboard navigation
+   - Uses inert for better SR support
  *
  * If you've customized this component, please review your code for compatibility.
  */
@@ -263,7 +264,6 @@ class NavBarCollapsible extends BaseComponent {
   _showElement() {
     this._element.style.display = 'block'
     if (!this._element.getAttribute('aria-label') && !this._element.getAttribute('aria-labelledby')) {
-      // XXX
       this._element.setAttribute('aria-label', 'Menu')
     }
     this._element.setAttribute('aria-modal', true)
