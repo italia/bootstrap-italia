@@ -6,8 +6,6 @@ group: menu-di-navigazione
 toc: true
 ---
 
-[navbar-test](/docs/menu-di-navigazione/navbar-test/)
-
 ## Introduzione
 
 Il megamenu è una variazione del componente [dropdown]({{ site.baseurl }}/docs/componenti/dropdown/) per la navbar `<nav>` del sito, che permette di esplorare elenchi di link e informazioni correlate.
@@ -1049,6 +1047,18 @@ Il componente Megamenu deriva dal componente Dropdown, si rimanda dunque alla
 sezione [attivazione Dropdown tramite codice]({{ site.baseurl }}/docs/componenti/dropdown/#attivazione-tramite-codice)
 
 ## Breaking change
+
+{% capture callout %}
+La navbar presente nel markup di questi esempi, quando aperta in versione mobile o a forte ingrandimento, è stata ora reimplementata come un vero e proprio dialog modale per migliorare l'accessibilità con tutte le combinazioni principali di lettori di schermo, sistema operativo e browser. Se hai personalizzato la navbar, in particolare quella mobile, nel tuo progetto, potresti dover aggiornare il tuo codice. 
+
+**Modifiche principali:**
+- Struttura: la navbar ora utilizza un pattern dialog con backdrop 
+- Gerarchia visiva: la gestione `z-index` è allineata al componente Modale
+- Gestione del focus: implementato `focus-trap.js` per utenti da tastiera e lettori di schermo
+- Il comportamento è diverso se implementata dentro o fuori dall'elemento `main` di pagina (se presente)
+
+Se hai personalizzato il CSS della navbar, rivedi le tue modifiche per verificarne la compatibilità. Se hai modificato il comportamento JavaScript, assicurati che funzioni con il nuovo pattern dialog. Testa la tua implementazione con lettori di schermo e con utenti per verificarne l'accessibilità.
+{% endcapture %}{% include callout-breaking.html content=callout version="2.15.0" type="danger" %}
 
 {% capture callout %}
 - tutti gli esempi del componente, anche quelli integrati nel componente [header]({{ site.baseurl }}/docs/menu-di-navigazione/header/), sono stati rivisti: refactoring markup `HTML`, classi e stili nei file `_megamenu.scss`, `_navigation.scss`, `_headernavbar.scss`, `_headernavbartheme.scss`, `_navigationtheme.scss`
