@@ -87,10 +87,10 @@ Da notare che la navbar mobile può apparire anche a risoluzioni desktop ingrand
                     <ul class="navbar-nav">
                       <!-- megamenu 1 -->
                       <li class="nav-item dropdown megamenu">
-                        <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3 active" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-completo-A1" data-focus-mouse="false">
+                        <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3 active" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-completo-A0" data-focus-mouse="false">
                             <span>Megamenu 1 (attivo)</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
                         </button>
-                        <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-completo-A1">
+                        <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-completo-A0">
                           <div class="megamenu pb-5 pt-3 py-lg-0">
                             <div class="row">
                               <div class="col-xs-12 col-lg-4 px-0">
