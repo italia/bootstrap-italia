@@ -305,7 +305,7 @@ La navbar quando aperta in versione mobile è stata reimplementata usando l'appr
 **Modifiche principali:**
 - Struttura: la nuova navbar utilizza un pattern dialog con backdrop come il componente Modale 
 - Gerarchia visiva: la gestione `z-index` è allineata al componente Modale
-- Gestione del focus: implementato `focus-trap.js` per utenti da tastiera e lettori di schermo
+- Gestione del focus: implementato `focus-trap.js` per utenti da tastiera e lettori di schermo, e uso attributo `inert` in casi specifici
 
 Se hai personalizzato il CSS della navbar, rivedi le tue modifiche per verificarne la compatibilità. Se hai modificato il comportamento JavaScript, assicurati che funzioni con il nuovo pattern dialog. Testa la tua implementazione con lettori di schermo per verificare i miglioramenti di accessibilità
 {% endcapture %}{% include callout-breaking.html content=callout version="2.15.0" type="danger" %}
