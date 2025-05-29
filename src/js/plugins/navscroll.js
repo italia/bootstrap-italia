@@ -152,8 +152,19 @@ class NavScroll extends BaseComponent {
       documentScrollTo(target.offsetTop - this._getScrollPadding(), {
         duration: this._config.duration,
         easing: this._config.easing,
-        /*complete: () => {
-        },*/
+        complete: () => {
+          const needsTabIndex = !target.hasAttribute('tabindex')
+          if (needsTabIndex) {
+            // XXX
+            target.setAttribute('tabindex', '-1')
+          }
+          target.focus({ preventScroll: true }) // preventScroll to avoid double scrolling
+          // if (needsTabIndex) { // XXX
+          //   setTimeout(() => {
+          //     target.removeAttribute('tabindex');
+          //   }, 1000);
+          // }
+        },
       })
 
       if (history.pushState) {

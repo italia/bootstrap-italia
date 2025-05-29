@@ -406,11 +406,10 @@ Per cambiare tema all'header centrale è sufficiente aggiungere la classe `theme
       <div class="col-12">
         <!--start nav-->
         <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Navigazione principale">
-          <button class="custom-navbar-toggler" type="button" aria-controls="nav1" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#nav1">
+          <button class="custom-navbar-toggler" type="button" aria-controls="nav1" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#nav1">
             <svg class="icon bg-override"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use></svg>
           </button>
-          <div class="navbar-collapsable" id="nav1" style="display: none;">
-            <div class="overlay" style="display: none;"></div>
+          <div class="navbar-collapsable" id="nav1" tabindex="-1">
             <div class="close-div">
               <button class="btn close-menu" type="button">
                 <span class="visually-hidden">Nascondi la navigazione</span>
@@ -557,11 +556,10 @@ Per modificare il tema dell'Header Nav è sufficiente aggiungere una o tutte e d
       <div class="col-12">
         <!--start nav-->
         <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Navigazione principale">
-          <button class="custom-navbar-toggler" type="button" aria-controls="nav0" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#nav0">
+          <button class="custom-navbar-toggler" type="button" aria-controls="nav0" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#nav0">
             <svg class="icon bg-override"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use></svg>
           </button>
-          <div class="navbar-collapsable" id="nav0" style="display: none;">
-            <div class="overlay" style="display: none;"></div>
+          <div class="navbar-collapsable" id="nav0" tabindex="-1">
             <div class="close-div">
               <button class="btn close-menu" type="button">
                 <span class="visually-hidden">Nascondi la navigazione</span>
@@ -696,11 +694,10 @@ Per modificare il tema dell'Header Nav è sufficiente aggiungere una o tutte e d
       <div class="col-12">
         <!--start nav-->
         <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Navigazione principale">
-          <button class="custom-navbar-toggler" type="button" aria-controls="nav2" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#nav2">
+          <button class="custom-navbar-toggler" type="button" aria-controls="nav2" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#nav2">
             <svg class="icon bg-override"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use></svg>
           </button>
-          <div class="navbar-collapsable" id="nav2" style="display: none;">
-            <div class="overlay" style="display: none;"></div>
+          <div class="navbar-collapsable" id="nav2" tabindex="-1">
             <div class="close-div">
               <button class="btn close-menu" type="button">
                 <span class="visually-hidden">Nascondi la navigazione</span>
@@ -835,13 +832,12 @@ Per modificare il tema dell'Header Nav è sufficiente aggiungere una o tutte e d
       <div class="col-12">
         <!--start nav-->
         <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Navigazione principale">
-          <button class="custom-navbar-toggler" type="button" aria-controls="nav3" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#nav3">
+          <button class="custom-navbar-toggler" type="button" aria-controls="nav3" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#nav3">
             <svg class="icon">
               <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use>
             </svg>
           </button>
-          <div class="navbar-collapsable" id="nav3" style="display: none;">
-            <div class="overlay" style="display: none;"></div>
+          <div class="navbar-collapsable" id="nav3" tabindex="-1">
             <div class="close-div">
               <button class="btn close-menu" type="button">
                 <span class="visually-hidden">Nascondi la navigazione</span>
@@ -978,11 +974,10 @@ Al menu di navigazione principale può essere aggiunto anche un menu di navigazi
       <div class="col-12">
         <!--start nav-->
         <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Navigazione principale">
-          <button class="custom-navbar-toggler" type="button" aria-controls="nav4" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#nav4">
+          <button class="custom-navbar-toggler" type="button" aria-controls="nav4" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#nav4">
             <svg class="icon bg-override"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use></svg>
           </button>
-          <div class="navbar-collapsable" id="nav4" style="display: none;">
-            <div class="overlay" style="display: none;"></div>
+          <div class="navbar-collapsable" id="nav4" tabindex="-1">
             <div class="close-div">
               <button class="btn close-menu" type="button">
                 <span class="visually-hidden">Nascondi la navigazione</span>
@@ -1119,13 +1114,12 @@ Al menu di navigazione principale può essere aggiunto anche un menu di navigazi
           <div class="col-12">
             <!--start nav-->
             <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Navigazione principale">
-              <button class="custom-navbar-toggler" type="button" aria-controls="navC1" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#navC1">
+              <button class="custom-navbar-toggler" type="button" aria-controls="navC1" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#navC1">
                 <svg class="icon">
                   <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use>
                 </svg>
               </button>
-              <div class="navbar-collapsable" id="navC1" style="display: none;">
-                <div class="overlay" style="display: none;"></div>
+              <div class="navbar-collapsable" id="navC1" tabindex="-1">
                 <div class="close-div">
                   <button class="btn close-menu" type="button">
                     <span class="visually-hidden">Nascondi la navigazione</span>
@@ -1368,11 +1362,10 @@ Verrà creata un'ombra per enfatizzare l'Header rispetto alla pagina in cui è c
           <div class="col-12">
             <!--start nav-->
             <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Navigazione principale">
-              <button class="custom-navbar-toggler" type="button" aria-controls="navC2" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#navC2">
+              <button class="custom-navbar-toggler" type="button" aria-controls="navC2" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#navC2">
                 <svg class="icon"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use></svg>
               </button>
-              <div class="navbar-collapsable" id="navC2" style="display: none;">
-                <div class="overlay" style="display: none;"></div>
+              <div class="navbar-collapsable" id="navC2" tabindex="-1">
                 <div class="close-div">
                   <button class="btn close-menu" type="button">
                     <span class="visually-hidden">Nascondi la navigazione</span>
