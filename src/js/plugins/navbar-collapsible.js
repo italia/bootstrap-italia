@@ -263,7 +263,6 @@ class NavBarCollapsible extends BaseComponent {
   _showElement() {
     this._element.style.display = 'block'
     if (!this._element.getAttribute('aria-label') && !this._element.getAttribute('aria-labelledby')) {
-      // XXX
       this._element.setAttribute('aria-label', 'Menu')
     }
     this._element.setAttribute('aria-modal', true)
