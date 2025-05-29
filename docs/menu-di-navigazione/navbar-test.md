@@ -303,7 +303,7 @@ E un link: [Modale](/docs/componenti/modale/)
 La navbar quando aperta in versione mobile è stata reimplementata usando l'approccio del componente modale per isolarla dal contenuto sottostante e migliorare il supporto con tutti i lettori di schermo. Se hai personalizzato la navbar nel tuo progetto, potresti dover aggiornare il markup. 
 
 **Modifiche principali:**
-- Struttura: la navbar ora utilizza un pattern dialog con backdrop 
+- Struttura: la nuova navbar utilizza un pattern dialog con backdrop come il componente Modale 
 - Gerarchia visiva: la gestione `z-index` è allineata al componente Modale
 - Gestione del focus: implementato `focus-trap.js` per utenti da tastiera e lettori di schermo
 
