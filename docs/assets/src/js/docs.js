@@ -76,10 +76,10 @@
     })
   })
 
-  // anchors.options = { // XXX This add complexity for SR (navbar mobile)
-  //   icon: '#',
-  // }
-  // anchors.add('.bd-content > h2, .bd-content > h3, .bd-content > h4, .bd-content > h5')
+  anchors.options = { // XXX This add complexity for Screen Reader testing (example: navbar mobile)
+    icon: '#',
+  }
+  anchors.add('.bd-content > h2, .bd-content > h3, .bd-content > h4, .bd-content > h5')
 
   // Wrap inner
   makeArray(document.querySelectorAll('.bd-content > h2, .bd-content > h3, .bd-content > h4, .bd-content > h5')).forEach(function (hEl) {
