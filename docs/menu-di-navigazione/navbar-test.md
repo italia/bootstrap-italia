@@ -307,5 +307,5 @@ La navbar quando aperta in versione mobile è stata reimplementata usando l'appr
 - Gerarchia visiva: la gestione `z-index` è allineata al componente Modale
 - Gestione del focus: implementato `focus-trap.js` per utenti da tastiera e lettori di schermo, e uso attributo `inert` in casi specifici
 
-Se hai personalizzato il CSS della navbar, rivedi le tue modifiche per verificarne la compatibilità. Se hai modificato il comportamento JavaScript, assicurati che funzioni con il nuovo pattern dialog. Testa la tua implementazione con lettori di schermo per verificare i miglioramenti di accessibilità
+Se hai personalizzato il CSS della navbar, rivedi le tue modifiche per verificarne la compatibilità. Se hai modificato il comportamento JavaScript, assicurati che funzioni con il nuovo pattern dialog. Verifica la tua implementazione con tutte le combinazioni di lettori di schermo, browser e device per verificare le eventuali criticità di accessibilità, in particolar modo l'isolamento dal contenuto del resto della pagina navigando con tecnologie assistive
 {% endcapture %}{% include callout-breaking.html content=callout version="2.15.0" type="danger" %}
