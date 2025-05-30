@@ -9,13 +9,6 @@
  * --------------------------------------------------------------------------
  */
 
-/**
- * FocusTrap Util (BREAKING CHANGES in Bootstrap Italia v2.15)
- *
- * - New initialFocus config default: the inside element (optional) to set the focus after trapped
- *
- */
-
 import EventHandler from '../dom/event-handler'
 import SelectorEngine from '../dom/selector-engine'
 import Config from './config'
