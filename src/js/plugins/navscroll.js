@@ -153,23 +153,28 @@ class NavScroll extends BaseComponent {
   }
 
   _scrollToHash(hash) {
-    const target = SelectorEngine.findOne(hash, this._sectionContainer)
+    if (!hash || hash === '#') {   // Validate hash to prevent errors
+      return
+    }
+    const target = this._sectionContainer   // Fallback: when container is null, omit the second parameter entirely
+      ? SelectorEngine.findOne(hash, this._sectionContainer)
+      : SelectorEngine.findOne(hash)
     if (target) {
       documentScrollTo(target.offsetTop - this._getScrollPadding(), {
         duration: this._config.duration,
         easing: this._config.easing,
         complete: () => {
+          const isHeading = target.matches('h1, h2, h3, h4, h5, h6')
           const needsTabIndex = !target.hasAttribute('tabindex')
           if (needsTabIndex) {
-            // XXX
             target.setAttribute('tabindex', '-1')
           }
           target.focus({ preventScroll: true }) // preventScroll to avoid double scrolling
-          // if (needsTabIndex) { // XXX
-          //   setTimeout(() => {
-          //     target.removeAttribute('tabindex');
-          //   }, 1000);
-          // }
+          if (needsTabIndex && isHeading) { // remove tabIndex for headings after 500ms
+            setTimeout(() => {
+              target.removeAttribute('tabindex')
+            }, 500)
+          }
         },
       })
 
