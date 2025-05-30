@@ -6,20 +6,6 @@
  * --------------------------------------------------------------------------
  */
 
-/**
- * NavBarCollapsible Component (BREAKING CHANGES in Bootstrap Italia v2.15)
- *
- * This component has been reimplemented to follow proper modal/dialog patterns for improved
- * accessibility with screen readers. Key changes:
- *
- * - Now behaves as a modal dialog with proper ARIA attributes
- * - Z-index aligned with modal component
- * - Uses standard FocusTrap for keyboard navigation
-   - Uses inert for better SR support
- *
- * If you've customized this component, please review your code for compatibility.
- */
-
 import BaseComponent from './base-component.js'
 import { getElementFromSelector, isVisible, reflow } from './util/index'
 import EventHandler from './dom/event-handler'
