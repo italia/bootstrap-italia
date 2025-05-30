@@ -2,7 +2,7 @@
 // IT'S ALL JUST JUNK FOR OUR DOCS!
 // ++++++++++++++++++++++++++++++++++++++++++
 
-; (function () {
+;(function () {
   'use strict'
 
   function makeArray(list) {
@@ -81,7 +81,7 @@
   }
   // Docs screen reader testing mode: skip automatic anchors generation
   // to avoid focus management conflicts during accessibility testing (eg. navbar mobile isolation)
-  const isSRTesting = document.body.classList.contains('sr-testing');
+  const isSRTesting = document.body.classList.contains('sr-testing')
   if (!isSRTesting) {
     anchors.add('.bd-content > h2, .bd-content > h3, .bd-content > h4, .bd-content > h5')
   }
