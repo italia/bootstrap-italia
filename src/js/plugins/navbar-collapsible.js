@@ -62,13 +62,15 @@ class NavBarCollapsible extends BaseComponent {
     this._parentElement = this._element.parentNode
 
     this._isShown = this._element.classList.contains(CLASS_NAME_EXPANDED)
+
+    if (!this._element.getAttribute('tabindex')) {
+      this._element.setAttribute('tabindex', '-1')
+    }
+
     this._backdrop = this._initializeBackDrop()
-
     this._focustrap = this._initializeFocusTrap()
-
-    this._isTransitioning = false
     this._scrollBar = new ScrollBarHelper()
-
+    this._isTransitioning = false
     this._isMobile = isScreenMobile()
 
     this._btnClose = SelectorEngine.findOne(SELECTOR_BTN_CLOSE, this._element)
@@ -89,7 +91,6 @@ class NavBarCollapsible extends BaseComponent {
         this._toggleButton.setAttribute('aria-expanded', this._isShown ? 'true' : 'false')
       }
     }
-
     this._bindEvents()
   }
 
@@ -229,8 +230,6 @@ class NavBarCollapsible extends BaseComponent {
 
   _onResize() {
     this._isMobile = isScreenMobile()
-
-    // TO DO do we need to check if pass from mobile to desktop when open? es. to set aria-expanded on toggle button etc.
   }
 
   _onMenuItemKeyDown(evt) {
