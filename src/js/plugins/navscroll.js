@@ -25,6 +25,7 @@ const SELECTOR_TOGGLER = '.custom-navbar-toggler'
 const SELECTOR_TOGGLER_ICON = '.it-list'
 const SELECTOR_COLLAPSIBLE = '.navbar-collapsable'
 const SELECTOR_PROGRESS_BAR = '.it-navscroll-progressbar'
+const SELECTOR_MENU_WRAPPER = '.menu-wrapper'
 
 const Default = {
   scrollPadding: 10,
@@ -43,6 +44,11 @@ class NavScroll extends BaseComponent {
     this._isCollapseOpened = false
     this._callbackQueue = []
     this._scrollCb = null
+
+    const menuWrapper = SelectorEngine.findOne(SELECTOR_MENU_WRAPPER, this._element)
+    if (menuWrapper && !menuWrapper.hasAttribute('tabindex')) {
+      menuWrapper.setAttribute('tabindex', '-1')
+    }
 
     this._bindEvents()
   }

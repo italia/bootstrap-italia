@@ -56,7 +56,7 @@ In questo esempio, la linea che limita la barra di navigazione è posizionata a 
       <svg class="icon icon-sm icon-primary align-top"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left" xlink:href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left"></use></svg>
       <span>Indietro</span>
     </button>
-    <div class="menu-wrapper">
+    <div class="menu-wrapper" tabindex="-1">
       <div class="link-list-wrapper">
         <h3 class="no_toc">header</h3>
         <ul class="link-list">
@@ -122,7 +122,7 @@ In questo esempio, la linea che limita la barra di navigazione è posizionata a 
       <svg class="icon icon-sm icon-primary align-top"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left" xlink:href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left"></use></svg>
       <span>Indietro</span>
     </button>
-    <div class="menu-wrapper">
+    <div class="menu-wrapper" tabindex="-1">
       <div class="link-list-wrapper">
         <h3 class="no_toc">header</h3>
         <ul class="link-list">
@@ -190,7 +190,7 @@ La Navscroll può mostrare una barra di avanzamento dello scorrimento del conten
       <svg class="icon icon-sm icon-primary align-top"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left" xlink:href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left"></use></svg>
       <span>Indietro</span>
     </button>
-    <div class="menu-wrapper">
+    <div class="menu-wrapper" tabindex="-1">
       <div class="link-list-wrapper">
         <h3 class="no_toc">header</h3>
         <div class="progress">
@@ -270,7 +270,7 @@ Per cambiare il tema è sufficiente aggiungere le seguenti classi al tag `<nav c
       <svg class="icon icon-sm icon-white align-top"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left" xlink:href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left"></use></svg>
       <span>Indietro</span>
     </button>
-    <div class="menu-wrapper">
+    <div class="menu-wrapper" tabindex="-1">
       <div class="link-list-wrapper">
         <h3 class="no_toc">header</h3>
         <ul class="link-list">
