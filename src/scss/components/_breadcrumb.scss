@@ -1,14 +1,31 @@
 .breadcrumb {
-  // scss-docs-start breadcrumb-css-vars
-  --#{$prefix}breadcrumb-padding-x: #{$breadcrumb-padding-x};
-  --#{$prefix}breadcrumb-padding-y: #{$breadcrumb-padding-y};
-  --#{$prefix}breadcrumb-margin-bottom: #{$breadcrumb-margin-bottom};
-  --#{$prefix}breadcrumb-bg: #{$breadcrumb-bg};
-  --#{$prefix}breadcrumb-border-radius: #{$breadcrumb-border-radius};
-  --#{$prefix}breadcrumb-divider-color: #{$breadcrumb-divider-color};
-  --#{$prefix}breadcrumb-item-padding-x: #{$breadcrumb-item-padding-x};
-  --#{$prefix}breadcrumb-item-active-color: #{$breadcrumb-active-color};
-  // scss-docs-end breadcrumb-css-vars
+  // --#{$prefix}breadcrumb-padding-x: #{$breadcrumb-padding-x};
+  // --#{$prefix}breadcrumb-padding-y: #{$breadcrumb-padding-y};
+  // --#{$prefix}breadcrumb-margin-bottom: #{$breadcrumb-margin-bottom};
+  // --#{$prefix}breadcrumb-bg: #{$breadcrumb-bg};
+  // --#{$prefix}breadcrumb-border-radius: #{$breadcrumb-border-radius};
+  // --#{$prefix}breadcrumb-divider-color: #{$breadcrumb-divider-color};
+  // --#{$prefix}breadcrumb-item-padding-x: #{$breadcrumb-item-padding-x};
+  // --#{$prefix}breadcrumb-item-active-color: #{$breadcrumb-active-color};
+
+  // Add these CSS custom properties
+  --#{$prefix}breadcrumb-padding: 0.5em;
+  --#{$prefix}breadcrumb-padding-x: 0;
+  --#{$prefix}breadcrumb-padding-y: 0;
+  --#{$prefix}breadcrumb-margin-bottom: var(--#{$prefix}spacing-s);
+  --#{$prefix}breadcrumb-bg: transparent;
+  --#{$prefix}breadcrumb-border-radius: 0;
+  --#{$prefix}breadcrumb-divider-color: var(--#{$prefix}color-border-secondary);
+  --#{$prefix}breadcrumb-item-padding-x: var(--#{$prefix}spacing-xs);
+  --#{$prefix}breadcrumb-active-color: #{$gray-600};
+  --#{$prefix}breadcrumb-divider: '/';
+  --#{$prefix}breadcrumb-divider-flipped: var(--#{$prefix}breadcrumb-divider);
+  --#{$prefix}breadcrumb-font-size: var(--#{$prefix}label-font-size);
+  --#{$prefix}breadcrumb-link-font-weight: var(--#{$prefix}font-weight-solid);
+  --#{$prefix}breadcrumb-link-color: var(--#{$prefix}color-text-secondary);
+  --#{$prefix}breadcrumb-link-x-padding: var(--#{$prefix}spacing-3xs);
+  // --#{$prefix}breadcrumb-link-color-dark: #{$white};
+  // --#{$prefix}breadcrumb-icon-color-dark: #{$analogue-2-b1};
 
   display: flex;
   flex-wrap: wrap;
@@ -42,11 +59,11 @@
 }
 
 .breadcrumb-container {
-  --bs-breadcrumb-font-size: 1rem;
+  --#{$prefix}breadcrumb-font-size: 1rem;
 
   .breadcrumb {
-    padding: $breadcrumb-padding 0;
-    border-radius: $breadcrumb-border-radius;
+    padding: var(--#{$prefix}breadcrumb-padding) 0;
+    border-radius: var(--#{$prefix}breadcrumb-border-radius);
 
     .breadcrumb-item {
       padding-left: 0;
@@ -56,12 +73,12 @@
       }
 
       i {
-        padding-right: $breadcrumb-link-x-padding;
+        padding-right: var(--#{$prefix}breadcrumb-link-x-padding);
       }
 
       a {
-        color: $breadcrumb-link-color;
-        font-weight: $breadcrumb-link-font-weight;
+        color: var(--#{$prefix}breadcrumb-link-color);
+        font-weight: var(--#{$prefix}breadcrumb-link-font-weight);
       }
 
       &.active {
@@ -73,32 +90,26 @@
 
       span.separator {
         display: inline-block;
-        padding: 0 $breadcrumb-link-x-padding;
-        color: $secondary;
-        font-weight: $breadcrumb-link-font-weight;
+        padding: 0 var(--#{$prefix}breadcrumb-link-x-padding);
+        color: var(--#{$prefix}secondary);
+        font-weight: var(--#{$prefix}breadcrumb-link-font-weight);
       }
     }
 
     // dark version
     &.dark {
-      background: $breadcrumb-bg-dark;
-      color: $breadcrumb-link-color-dark;
+      --#{$prefix}breadcrumb-bg: var(--#{$prefix}neutral-1-a8);
+      --#{$prefix}breadcrumb-link-color: var(--#{$prefix}color-text-inverse);
+      --#{$prefix}breadcrumb-item-active-color: var(--#{$prefix}color-text-inverse);
+      --#{$prefix}breadcrumb-divider-color: var(--#{$prefix}analogue-2-b1);
 
       .breadcrumb-item {
-        a {
-          color: $breadcrumb-link-color-dark;
-        }
-
         span.separator {
-          color: $breadcrumb-link-color-dark;
+          color: var(--#{$prefix}breadcrumb-link-color);
         }
 
         i {
-          color: $breadcrumb-icon-color-dark;
-        }
-
-        &.active {
-          color: $breadcrumb-link-color-dark;
+          color: var(--#{$prefix}breadcrumb-divider-color);
         }
       }
     }
