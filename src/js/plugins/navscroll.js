@@ -153,10 +153,11 @@ class NavScroll extends BaseComponent {
   }
 
   _scrollToHash(hash) {
-    if (!hash || hash === '#') {   // Validate hash to prevent errors
+    if (!hash || hash === '#') {
+      // Validate hash to prevent errors
       return
     }
-    const target = this._sectionContainer   // Fallback: when container is null, omit the second parameter entirely
+    const target = this._sectionContainer // Fallback: when container is null, omit the second parameter entirely
       ? SelectorEngine.findOne(hash, this._sectionContainer)
       : SelectorEngine.findOne(hash)
     if (target) {
@@ -170,7 +171,8 @@ class NavScroll extends BaseComponent {
             target.setAttribute('tabindex', '-1')
           }
           target.focus({ preventScroll: true }) // preventScroll to avoid double scrolling
-          if (needsTabIndex && isHeading) { // remove tabIndex for headings after 500ms
+          if (needsTabIndex && isHeading) {
+            // remove tabIndex for headings after 500ms
             setTimeout(() => {
               target.removeAttribute('tabindex')
             }, 500)
