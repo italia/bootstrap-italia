@@ -202,7 +202,7 @@ class NavBarCollapsible extends BaseComponent {
       isVisible: Boolean(this._config.backdrop), // 'static' option will be translated to true, and booleans will keep their value,
       isAnimated: this._isAnimated(),
       className: 'navbar-backdrop',
-      rootElement: this._parentElement, // 'body', 
+      rootElement: this._parentElement,
       clickCallback: () => {
         this.hide()
       },
