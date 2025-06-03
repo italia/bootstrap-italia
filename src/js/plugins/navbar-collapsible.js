@@ -6,19 +6,6 @@
  * --------------------------------------------------------------------------
  */
 
-/**
- * NavBarCollapsible Component (BREAKING CHANGES in Bootstrap Italia v2.15)
- *
- * This component has been reimplemented to follow proper modal/dialog patterns for improved
- * accessibility with screen readers. Key changes:
- *
- * - Now behaves as a modal dialog with proper ARIA attributes
- * - Z-index aligned with modal component
- * - Uses standard FocusTrap for keyboard navigation
- *
- * If you've customized this component, please review your code for compatibility.
- */
-
 import BaseComponent from './base-component.js'
 import { getElementFromSelector, isVisible, reflow } from './util/index'
 import EventHandler from './dom/event-handler'
@@ -75,13 +62,15 @@ class NavBarCollapsible extends BaseComponent {
     this._parentElement = this._element.parentNode
 
     this._isShown = this._element.classList.contains(CLASS_NAME_EXPANDED)
+
+    if (!this._element.getAttribute('tabindex')) {
+      this._element.setAttribute('tabindex', '-1')
+    }
+
     this._backdrop = this._initializeBackDrop()
-
     this._focustrap = this._initializeFocusTrap()
-
-    this._isTransitioning = false
     this._scrollBar = new ScrollBarHelper()
-
+    this._isTransitioning = false
     this._isMobile = isScreenMobile()
 
     this._btnClose = SelectorEngine.findOne(SELECTOR_BTN_CLOSE, this._element)
@@ -102,7 +91,6 @@ class NavBarCollapsible extends BaseComponent {
         this._toggleButton.setAttribute('aria-expanded', this._isShown ? 'true' : 'false')
       }
     }
-
     this._bindEvents()
   }
 
@@ -242,8 +230,6 @@ class NavBarCollapsible extends BaseComponent {
 
   _onResize() {
     this._isMobile = isScreenMobile()
-
-    // TO DO do we need to check if pass from mobile to desktop when open? es. to set aria-expanded on toggle button etc.
   }
 
   _onMenuItemKeyDown(evt) {
@@ -263,7 +249,6 @@ class NavBarCollapsible extends BaseComponent {
   _showElement() {
     this._element.style.display = 'block'
     if (!this._element.getAttribute('aria-label') && !this._element.getAttribute('aria-labelledby')) {
-      // XXX
       this._element.setAttribute('aria-label', 'Menu')
     }
     this._element.setAttribute('aria-modal', true)

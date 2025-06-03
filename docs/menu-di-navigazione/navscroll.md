@@ -56,7 +56,7 @@ In questo esempio, la linea che limita la barra di navigazione è posizionata a 
       <svg class="icon icon-sm icon-primary align-top"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left" xlink:href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left"></use></svg>
       <span>Indietro</span>
     </button>
-    <div class="menu-wrapper">
+    <div class="menu-wrapper" tabindex="-1">
       <div class="link-list-wrapper">
         <h3 class="no_toc">header</h3>
         <ul class="link-list">
@@ -118,11 +118,11 @@ In questo esempio, la linea che limita la barra di navigazione è posizionata a 
         <span class="it-close"></span>Chiudi
       </button>
     </div>
-    <button type="button" class="it-back-button btn w-100 text-start">
-      <svg class="icon icon-sm icon-primary align-top"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left" xlink:href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left"></use></svg>
-      <span>Indietro</span>
-    </button>
-    <div class="menu-wrapper">
+    <div class="menu-wrapper" tabindex="-1">
+      <button type="button" class="it-back-button btn w-100 text-start">
+        <svg class="icon icon-sm icon-primary align-top"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left" xlink:href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left"></use></svg>
+        <span>Indietro</span>
+      </button>
       <div class="link-list-wrapper">
         <h3 class="no_toc">header</h3>
         <ul class="link-list">
@@ -186,11 +186,11 @@ La Navscroll può mostrare una barra di avanzamento dello scorrimento del conten
     <div class="progress-bar it-navscroll-progressbar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
   </div>
   <div class="navbar-collapsable" id="navbarNavProgress" tabindex="-1">
-    <button type="button" class="it-back-button btn w-100 text-start">
-      <svg class="icon icon-sm icon-primary align-top"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left" xlink:href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left"></use></svg>
-      <span>Indietro</span>
-    </button>
-    <div class="menu-wrapper">
+    <div class="menu-wrapper" tabindex="-1">
+      <button type="button" class="it-back-button btn w-100 text-start">
+        <svg class="icon icon-sm icon-primary align-top"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left" xlink:href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left"></use></svg>
+        <span>Indietro</span>
+      </button>
       <div class="link-list-wrapper">
         <h3 class="no_toc">header</h3>
         <div class="progress">
@@ -266,11 +266,11 @@ Per cambiare il tema è sufficiente aggiungere le seguenti classi al tag `<nav c
       <span class="it-close"></span>Chiudi
       </button>
     </div>
-    <button type="button" class="it-back-button btn w-100 text-start">
-      <svg class="icon icon-sm icon-white align-top"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left" xlink:href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left"></use></svg>
-      <span>Indietro</span>
-    </button>
-    <div class="menu-wrapper">
+    <div class="menu-wrapper" tabindex="-1">
+      <button type="button" class="it-back-button btn w-100 text-start">
+        <svg class="icon icon-sm icon-white align-top"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left" xlink:href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left"></use></svg>
+        <span>Indietro</span>
+      </button>
       <div class="link-list-wrapper">
         <h3 class="no_toc">header</h3>
         <ul class="link-list">
@@ -455,6 +455,18 @@ Le opzioni possono essere passate tramite gli attributi data o tramite Javascrip
 </table>
 
 ## Breaking change
+
+{% capture callout %}
+- Spostato il pulsante "Indietro" come primo elemento della struttura interna di `.menu-wrapper`.
+
+Inoltre, la versione mobile o a forte ingrandimento del componente, che si basa sulla navbar presente anche nei componenti Header e Megamenu, è stata reimplementata come modale per migliorare l'accessibilità con le combinazioni principali di lettori di schermo, sistema operativo e browser. Modifiche principali: 
+- struttura: la navbar ora utilizza un pattern dialog con backdrop 
+- gerarchia visiva: la gestione `z-index` è allineata al componente modale
+- gestione del focus: implementato `focus-trap.js` per utenti da tastiera e lettori di schermo, e gestione inert
+- il comportamento è diverso se implementata dentro o fuori dall'elemento `main` di pagina (se presente)
+
+Se hai personalizzato il CSS della navbar, rivedi le tue modifiche per verificarne la compatibilità. Se hai modificato il comportamento JavaScript in, assicurati che funzioni con il nuovo pattern dialog. Testa la tua implementazione con lettori di schermo e con utenti per verificarne l'accessibilità.
+{% endcapture %}{% include callout-breaking.html content=callout version="2.15.0" type="danger" %}
 
 {% capture callout %}
 Gli elementi con classe `.it-back-button` diventano di tipo `<button>` invece di `<a>`.
