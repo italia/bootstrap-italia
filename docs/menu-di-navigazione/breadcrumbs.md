@@ -56,7 +56,7 @@ Per aggiungere un icona all'elemento breadcrumb è sufficiente inserire l'SVG co
 
 ### Su sfondo scuro
 
-Per la versione su sfondo scuro delle breadcrumbs è sufficiente aggiungere al tag `<ol class="breadcrumb">` la classe `.dark`.
+Per la versione su sfondo scuro delle breadcrumbs è sufficiente aggiungere al tag `<ol class="breadcrumb">` la classe `.dark`. Il colore del testo e del separatore cambieranno automaticamente in base al tema scuro, mentre il colore delle icone dovrà essere impostato manualmente con la classe `.icon-inverse` per renderle visibili su sfondo scuro.
 
 Quando la versione su sfondo scuro viene utilizzata su un fondo di colore differente aggiungere la classe di spaziatura `px-3` al `<ol class="breadcrumb dark">` per creare un padding laterale.
 
@@ -73,8 +73,8 @@ Quando la versione su sfondo scuro viene utilizzata su un fondo di colore differ
 <hr>
 <nav class="breadcrumb-container" aria-label="Percorso di navigazione">
   <ol class="breadcrumb dark px-3">
-    <li class="breadcrumb-item"><svg class="icon icon-sm icon-white align-top me-1" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg><a href="#">Home</a><span class="separator">/</span></li>
-    <li class="breadcrumb-item"><svg class="icon icon-sm icon-white align-top me-1" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg><a href="#">Sottosezione</a><span class="separator">/</span></li>
+    <li class="breadcrumb-item"><svg class="icon icon-sm icon-inverse align-top me-1" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg><a href="#">Home</a><span class="separator">/</span></li>
+    <li class="breadcrumb-item"><svg class="icon icon-sm icon-inverse align-top me-1" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg><a href="#">Sottosezione</a><span class="separator">/</span></li>
     <li class="breadcrumb-item active" aria-current="page">Nome pagina</li>
   </ol>
 </nav>
