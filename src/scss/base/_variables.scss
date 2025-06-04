@@ -1,5 +1,5 @@
 // Import Design Tokens Italia
-// @import '../../node_modules/design-tokens-italia/scss/variables';
+// @import '~design-tokens-italia/scss/dsi-tokens';
 
 // Color vars
 // HSB (https://it.wikipedia.org/wiki/Hue_Saturation_Brightness, coincidente con il modello HSV)
@@ -465,9 +465,7 @@ $enable-deprecation-messages: true !default;
 $enable-important-utilities: true !default;
 
 // Prefix for :root CSS variables
-
-$variable-prefix: bs- !default; // Deprecated in v5.2.0 for the shorter `$prefix`
-$prefix: $variable-prefix !default;
+$prefix: bs- !default;
 
 // Spacing
 //
@@ -799,8 +797,8 @@ $btn-transition:
   border-color 0.15s ease-in-out,
   box-shadow 0.15s ease-in-out !default;
 
-$btn-link-color: var(--#{$prefix}link-color) !default;
-$btn-link-hover-color: var(--#{$prefix}link-hover-color) !default;
+$btn-link-color: var(--#{$prefix}color-link) !default;
+$btn-link-hover-color: var(--#{$prefix}color-link-hover) !default;
 $btn-link-disabled-color: $gray-600 !default;
 
 // Forms
@@ -1165,7 +1163,7 @@ $btn-primary-border: $primary !default;
 $link-color: $primary !default;
 $link-shade-percentage: 20% !default;
 $link-hover-color: shift-color($link-color, $link-shade-percentage) !default;
-$link-hover-decoration: null !default;
+$link-hover-decoration: underline !default;
 
 $stretched-link-pseudo-element: after !default;
 $stretched-link-z-index: 1 !default;
@@ -1270,23 +1268,23 @@ $modal-backdrop-opacity: 0.8 !default;
 $modal-max-width: 32rem !default;
 $modal-dialog-margin: 0.5rem !default;
 $modal-dialog-margin-y-sm-up: 1.5rem !default;
-$modal-inner-padding: 1.5rem !default;
+// $modal-inner-padding: 1.5rem !default;
 
-$modal-header-border-color: var(--#{$prefix}border-color) !default;
-$modal-header-border-width: 0 !default;
-$modal-header-padding-y: $modal-inner-padding !default;
-$modal-header-padding-x: $modal-inner-padding !default;
-$modal-header-padding: 1.5rem !default;
+// $modal-header-border-color: var(--#{$prefix}border-color) !default;
+// $modal-header-border-width: 0 !default;
+// $modal-header-padding-y: $modal-inner-padding !default;
+// $modal-header-padding-x: $modal-inner-padding !default;
+// $modal-header-padding: 1.5rem !default;
 $modal-show-transform: none !default;
 $modal-fade-transform: translate(0, -50px) !default;
 $modal-transition: transform 0.3s ease-out !default;
 $modal-scale-transform: scale(1.02) !default;
 $modal-title-line-height: $line-height-base !default;
 
-$modal-footer-bg: null !default;
-$modal-footer-border-color: $modal-header-border-color !default;
+// $modal-footer-bg: null !default;
+// $modal-footer-border-color: $modal-header-border-color !default;
 $modal-footer-margin-between: 0.5rem !default;
-$modal-footer-border-width: 0 !default;
+// $modal-footer-border-width: 0 !default;
 
 $modal-backdrop-bg: $black !default;
 
@@ -1337,19 +1335,19 @@ $pagination-padding-x-lg: 1.5rem !default;
 
 $pagination-font-size: $font-size-base !default;
 
-$pagination-color: var(--#{$prefix}link-color) !default;
+$pagination-color: var(--#{$prefix}color-link) !default;
 $pagination-bg: $white !default;
 $pagination-border-radius: $border-radius !default;
 $pagination-border-width: $border-width !default;
 $pagination-margin-start: ($pagination-border-width * -1) !default;
 $pagination-border-color: $gray-300 !default;
 
-$pagination-focus-color: var(--#{$prefix}link-hover-color) !default;
+$pagination-focus-color: var(--#{$prefix}color-link-hover) !default;
 $pagination-focus-bg: $gray-200 !default;
 $pagination-focus-box-shadow: $input-btn-focus-box-shadow !default;
 $pagination-focus-outline: 0 !default;
 
-$pagination-hover-color: var(--#{$prefix}link-hover-color) !default;
+$pagination-hover-color: var(--#{$prefix}color-link-hover) !default;
 $pagination-hover-bg: $gray-200 !default;
 $pagination-hover-border-color: $gray-300 !default;
 
@@ -1561,8 +1559,8 @@ $nav-link-padding-y: 0.5rem !default;
 $nav-link-padding-x: 1rem !default;
 $nav-link-font-size: null !default;
 $nav-link-font-weight: null !default;
-$nav-link-color: var(--#{$prefix}link-color) !default;
-$nav-link-hover-color: var(--#{$prefix}link-hover-color) !default;
+$nav-link-color: var(--#{$prefix}color-link) !default;
+$nav-link-hover-color: var(--#{$prefix}color-link-hover) !default;
 $nav-link-transition:
   color 0.15s ease-in-out,
   background-color 0.15s ease-in-out,
@@ -1665,25 +1663,6 @@ $navigation-light-megamenu-separator-color: $gray-border !default; // UI kit
 //inline
 $inline-menu-line-width: 2px;
 $inline-menu-linklist-v-padding: 0.59em;
-
-// Linklist
-$link-list-font-size: 1rem;
-$link-list-font-size-l: 1.125rem;
-$link-list-line-height: 2rem;
-$link-list-heading-size: 1.125rem;
-$link-list-divider-height: 1px;
-$link-list-divider-distance: 8px;
-$link-list-h-pad: 24px;
-$link-list-v-pad: 0.25em;
-$link-list-paragraph-size: 0.875rem;
-$link-list-left-icon-space: 8px;
-$link-list-avatar-radius: 50px;
-$link-list-avatar-margin: 8px;
-$link-list-checkbox-icon-right: 35px;
-$link-list-toggle-margin: 8px;
-$link-list-icon-v-padding: 5px;
-$link-list-v-padding-l: 0.45em;
-$link-list-hover-color: $primary-a5 !default; // TODO: Not used, consider to remove it
 
 // Megamenu
 $megamenu-padding-top-desktop: $v-gap * 4;
@@ -1921,27 +1900,28 @@ $dp-month-l-spacing: 0.1px;
 $dp-grid-size: 0.75rem;
 $dp-current-size: $v-gap * 4;
 
-//hero
-$hero-bg-color: $primary !default;
-$hero-height-desk: 400px;
-$hero-height-mob: 300px;
-$hero-height-sm-desk: 400px;
-$hero-height-sm-tab: 300px;
-$hero-height-sm-mob: 300px;
-$hero-text-padding: $v-gap * 3;
-$hero-text-color: $white !default;
-$hero-cat-size: 1rem;
-$hero-heading-size: 2.5rem;
-$hero-heding-size-desk: 3rem;
-$hero-p-size: 1rem;
-$hero-cat-spacing: $card-category-l-spacing !default;
-$hero-text-padding-desk: 120px;
-$hero-dark-bg: rgba($neutral-1-a10, 0.8) !default; // Missing in the UI kit
-$hero-primary-bg: rgba($primary, 0.8) !default;
-$hero-negative-margin: 2rem;
-$hero-negative-margin-desk: 3rem;
-$hero-negative-bottom-padding: 48px;
-$hero-negative-bottom-padding-mob: 96px;
+// hero
+// TODO: Clean when these variables become obsolete
+// $hero-bg-color: $primary !default;
+// $hero-height-desk: 400px;
+// $hero-height-mob: 300px;
+// $hero-height-sm-desk: 400px;
+// $hero-height-sm-tab: 300px;
+// $hero-height-sm-mob: 300px;
+// $hero-text-padding: $v-gap * 3;
+// $hero-text-color: $white !default;
+// $hero-cat-size: 1rem;
+// $hero-heading-size: 2.5rem;
+// $hero-heding-size-desk: 3rem;
+// $hero-p-size: 1rem;
+// $hero-cat-spacing: $card-category-l-spacing !default;
+// $hero-text-padding-desk: 120px;
+// $hero-dark-bg: rgba($neutral-1-a10, 0.8) !default; // Missing in the UI kit
+// $hero-primary-bg: rgba($primary, 0.8) !default;
+// $hero-negative-margin: 2rem;
+// $hero-negative-margin-desk: 3rem;
+// $hero-negative-bottom-padding: 48px;
+// $hero-negative-bottom-padding-mob: 96px;
 
 // Carousel
 $crs-margin-bottom: $v-gap * 3;
@@ -1954,19 +1934,6 @@ $crs-heading-h-padding: $v-gap * 3;
 $crs-heading-h-size: 1.75rem;
 $crs-landcape-card-padding: $v-gap * 6;
 $crs-landcape-bottom: 5px;
-
-// Gridlist **************
-$grid-item-df-proportion: 66.81222707423581%;
-$grid-item-df-double-proportion: 33.4061135371179%;
-$grid-item-text-size: 0.75rem;
-$grid-item-text-color: $neutral-1 !default; // Missing in the UI kit - need more attention
-$grid-item-text-overlay-bg: $neutral-1-a10 !default; // Missing in the UI kit - need more attention
-$grid-list-default-gap: 2px;
-$grid-list-text-gap: $v-gap;
-$grid-item-sm-col: 50%;
-$grid-item-lg-col: 33.333333%;
-$grid-item-icon-size: 24px;
-$grid-item-overlay: hsla(210%, 54%, 20, 0.85);
 
 // list
 $list-font-size: 1rem;
@@ -2026,9 +1993,10 @@ $grid-breakpoints: (
   xxl: 1400px,
 ) !default;
 
-// Hover states breackpoint
+// Hover states breakpoint
 // Define minimum dimension for over states activation
 $grid-breakpoints-hover: 1025px;
+
 // Grid containers
 // Define the maximum width of `.container` for different screen sizes.
 $container-max-widths: (
@@ -2108,8 +2076,8 @@ $autocomplete-box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.05) !default;
 
 // Offcanvas
 
-$offcanvas-padding-y: $modal-inner-padding !default;
-$offcanvas-padding-x: $modal-inner-padding !default;
+$offcanvas-padding-y: 1.5rem !default;
+$offcanvas-padding-x: 1.5rem !default;
 $offcanvas-horizontal-width: 400px !default;
 $offcanvas-vertical-height: 30vh !default;
 $offcanvas-transition-duration: 0.3s !default;
@@ -2121,3 +2089,15 @@ $offcanvas-color: $modal-content-color !default;
 $offcanvas-box-shadow: $modal-content-box-shadow-xs !default;
 $offcanvas-backdrop-bg: $modal-backdrop-bg !default;
 $offcanvas-backdrop-opacity: $modal-backdrop-opacity !default;
+// ============================================================
+
+// NEW VARIABLES
+
+// Global colors used inside sass loops and maps
+$color-primary: var(--#{$prefix}theme-primary);
+$color-secondary: var(--#{$prefix}color-background-secondary);
+$color-accent: var(--#{$prefix}color-background-accent);
+$color-success: var(--#{$prefix}color-background-success);
+$color-warning: var(--#{$prefix}color-background-warning);
+$color-danger: var(--#{$prefix}color-background-danger);
+$color-inverse: var(--#{$prefix}color-background-inverse);

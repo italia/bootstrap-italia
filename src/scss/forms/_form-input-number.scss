@@ -1,17 +1,20 @@
 .input-number {
   position: relative;
 
+
   &.input-number-adaptive {
     width: fit-content;
     input[type='number'] {
       width: auto;
-      transition: all 0.3s;
+      transition: all va(--#{$prefix}transition-instant);
     }
   }
 
   //reset input style
   input[type='number'] {
     appearance: textfield;
+    border-right: 0;
+
     &::-webkit-inner-spin-button,
     &::-webkit-outer-spin-button {
       -webkit-appearance: none;
@@ -20,43 +23,29 @@
       display: none;
     }
 
-    // color: $color-text-muted;
-
-    &:focus {
-      color: $color-text-base;
+    // Apply the border when not disabled - avoid specific styling for disabled inputs
+    &:not(:disabled) {
+      border-left: 1px solid var(--#{$prefix}form-control-border-color);
     }
   }
 
   //disabled version
   &.disabled {
-    input[type='number'] {
-      background-color: $gray-disabled;
-      color: $gray-800;
+    button {
+      pointer-events: none;
       &:hover {
         cursor: not-allowed;
-        color: $gray-label-disabled;
-      }
-    }
-    .input-group-text {
-      background-color: $gray-disabled;
-      color: $gray-800;
-      button {
-        pointer-events: none;
-        &:hover {
-          cursor: not-allowed;
-        }
       }
     }
   }
 
   //add + sub buttons
   .input-group-text.align-buttons {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    z-index: 10;
+    padding-right: var(--#{$prefix}form-control-spacing);
+    border-left: 0;
+    border-right-width: 1px;
   }
+ 
   .input-group-text button {
     position: relative;
     transition: opacity 0.1s;
@@ -107,6 +96,13 @@
     &:hover {
       cursor: pointer;
     }
+  }
+}
+
+// Reset border when input is prepended with input-group-text
+input[type='number'] {
+  .input-number .input-group-text + & {
+    border-left: 0;   
   }
 }
 
