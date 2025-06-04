@@ -22,8 +22,6 @@
   --#{$prefix}breadcrumb-link-color: var(--#{$prefix}color-text-secondary);
   --#{$prefix}breadcrumb-separator-color: var(--#{$prefix}color-background-secondary);
   --#{$prefix}breadcrumb-separator-spacing: var(--#{$prefix}spacing-xxs);
-  // --#{$prefix}breadcrumb-link-color-dark: #{$white};
-  // --#{$prefix}breadcrumb-icon-color-dark: #{$analogue-2-b1};
 
   display: flex;
   flex-wrap: wrap;
@@ -72,7 +70,7 @@
     color: var(--#{$prefix}breadcrumb-separator-color);
   }
 
-  // dark version
+  // Variant on dark background
   // todo: remove class directly applied to breadcrumb
   &.dark {
     --#{$prefix}breadcrumb-background: var(--#{$prefix}color-background-emphasis);
