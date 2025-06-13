@@ -630,6 +630,7 @@ article.it-card {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        flex-grow: 1;
 
         .it-card-footer {
           margin-bottom: calc(var(--#{$prefix}it-card-cap-padding-y) * 0.5);
