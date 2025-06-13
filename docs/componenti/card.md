@@ -394,7 +394,7 @@ L'immagine è opzionale. Per invertire solamente l'ordine visivo tra destra e si
           <div class="it-card-taxonomy">
             <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
           </div>
-          <time class="it-card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">22 aprile, {{ 'now' | date: "%Y" }}</time>
+          <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-10-12">22 aprile, {{ 'now' | date: "%Y" }}</time>
         </footer>
       </div>
       <!--card second child is the image (optional)-->
@@ -936,7 +936,7 @@ Ricorda di usare:
               <span class="visually-hidden">Stato del bando: </span><span class="chip-label">Aperto</span>
             </div>
           </div>
-          <span class="it-card-date text-warning"><strong>Scadenza: </strong><time class="it-card-date text-warning" datetime="10/12/{{ 'now' | date: "%Y" }}">31 gennaio, {{ 'now' | date: "%Y" }}</time></span>
+          <span class="it-card-date text-warning"><strong>Scadenza: </strong><time class="it-card-date text-warning" datetime="{{ 'now' | date: "%Y" }}-10-12">31 gennaio, {{ 'now' | date: "%Y" }}</time></span>
         </footer>
       </div>
       <div class="it-card-footer" aria-label="Link correlati:">
@@ -1490,7 +1490,7 @@ Per garantire una buona accessibilità, consigliamo di mantenere un rapporto di 
         <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
       </div>
       <footer class="it-card-related it-card-footer">
-        <time class="it-card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
+        <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-10-12">12 ottobre, {{ 'now' | date: "%Y" }}</time>
       </footer>
     </article>
     <!--end it-card-->
@@ -1505,7 +1505,7 @@ Per garantire una buona accessibilità, consigliamo di mantenere un rapporto di 
         <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
       </div>
       <footer class="it-card-related it-card-footer">
-        <time class="it-card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
+        <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-10-12">12 ottobre, {{ 'now' | date: "%Y" }}</time>
       </footer>
     </article>
     <!--end it-card-->
@@ -1520,7 +1520,7 @@ Per garantire una buona accessibilità, consigliamo di mantenere un rapporto di 
         <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
       </div>
       <footer class="it-card-related it-card-footer">
-        <time class="it-card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
+        <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-10-12">12 ottobre, {{ 'now' | date: "%Y" }}</time>
       </footer>
     </article>
     <!--end it-card-->
@@ -1540,7 +1540,7 @@ Per garantire una buona accessibilità, consigliamo di mantenere un rapporto di 
         <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
       </div>
       <footer class="it-card-related it-card-footer">
-        <time class="it-card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
+        <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-10-12">12 ottobre, {{ 'now' | date: "%Y" }}</time>
       </footer>
     </article>
     <!--end it-card-->
@@ -1555,7 +1555,7 @@ Per garantire una buona accessibilità, consigliamo di mantenere un rapporto di 
         <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
       </div>
       <footer class="it-card-related it-card-footer">
-        <time class="it-card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
+        <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-10-12">12 ottobre, {{ 'now' | date: "%Y" }}</time>
       </footer>
     </article>
     <!--end it-card-->
@@ -1727,7 +1727,7 @@ Si possono organizzare gruppi di card con layout responsive con `.it-card-group`
         <div class="it-card-taxonomy">
           <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
         </div>
-        <time class="it-card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
+        <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-10-12">12 ottobre, {{ 'now' | date: "%Y" }}</time>
       </footer>
     </article>
     <article class="it-card rounded shadow-sm border">
@@ -1741,7 +1741,7 @@ Si possono organizzare gruppi di card con layout responsive con `.it-card-group`
         <div class="it-card-taxonomy">
           <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
         </div>
-        <time class="it-card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
+        <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-10-12">12 ottobre, {{ 'now' | date: "%Y" }}</time>
       </footer>
     </article>
     <article class="it-card rounded shadow-sm border">
@@ -1752,7 +1752,7 @@ Si possono organizzare gruppi di card con layout responsive con `.it-card-group`
         <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione.</p>
       </div>
       <footer class="it-card-related it-card-footer">
-        <time class="it-card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
+        <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-10-12">12 ottobre, {{ 'now' | date: "%Y" }}</time>
       </footer>
     </article>
     <article class="it-card rounded shadow-sm border">
@@ -1763,7 +1763,7 @@ Si possono organizzare gruppi di card con layout responsive con `.it-card-group`
         <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione.</p>
       </div>
       <footer class="it-card-related it-card-footer">
-        <time class="it-card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
+        <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-10-12">12 ottobre, {{ 'now' | date: "%Y" }}</time>
       </footer>
     </article>
   </div>
@@ -1847,7 +1847,7 @@ Le Container Queries sono una tecnologia CSS moderna supportata nella maggior pa
         <div class="it-card-taxonomy">
           <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
         </div>
-        <time class="it-card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
+        <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-10-12">12 ottobre, {{ 'now' | date: "%Y" }}</time>
       </footer>
     </article>
     <article class="it-card rounded shadow-sm border">
@@ -1861,7 +1861,7 @@ Le Container Queries sono una tecnologia CSS moderna supportata nella maggior pa
         <div class="it-card-taxonomy">
           <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
         </div>
-        <time class="it-card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
+        <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-10-12">12 ottobre, {{ 'now' | date: "%Y" }}</time>
       </footer>
     </article>
     <article class="it-card rounded shadow-sm border">
@@ -1875,7 +1875,7 @@ Le Container Queries sono una tecnologia CSS moderna supportata nella maggior pa
         <div class="it-card-taxonomy">
           <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
         </div>
-        <time class="it-card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
+        <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-10-12">12 ottobre, {{ 'now' | date: "%Y" }}</time>
       </footer>
     </article>
     <article class="it-card rounded shadow-sm border">
@@ -1889,7 +1889,7 @@ Le Container Queries sono una tecnologia CSS moderna supportata nella maggior pa
         <div class="it-card-taxonomy">
           <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
         </div>
-        <time class="it-card-date" datetime="10/12/{{ 'now' | date: "%Y" }}">12 ottobre, {{ 'now' | date: "%Y" }}</time>
+        <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-10-12">12 ottobre, {{ 'now' | date: "%Y" }}</time>
       </footer>
     </article>
   </div>
