@@ -1026,9 +1026,9 @@ Per creare un ulteriore spazio dedicato a **collegamenti o pulsanti secondari**,
 {% endcapture %}{% include example.html content=example %}
 
 ### Card per profili personali 
-Usa questa variante per indicare schede personali o i relatori a un evento. Si attivano con la classe `.it-card-profile`. La testata della card è costruita con classi di stile dedicate come `.it-card-profile-header` per nome e ruolo. L'immagine di profilo sulla destra è visualizzata integrando il componente avatar in una delle sue varianti. 
+Usa questa variante per indicare schede personali o i relatori a un evento. Si attivano con la classe `.it-card-profile`. La testata della card è costruita con classi di stile dedicate come `.it-card-profile-header` per nome e ruolo. 
 
-Per l'icona o l'immagine del profilo si consiglia di usare il componente avatar nella varianti `xl`. 
+L'immagine di profilo sulla destra è visualizzata integrando il componente [avatar](/docs/componenti/avatar/), si consiglia di usarlo nelle varianti di dimensioni `xl`. 
 
 La lista di metadati del profilo è costruita utilizzando liste descrittive `.it-card-description-list` con ogni coppia di item `dd`-`dt` raccolta in un `div` contenitore. 
 
@@ -1045,7 +1045,7 @@ Negli esempi abbiamo utilizzato il tag `h4` per i titoli `.it-card-profile-name`
 <div class="row">
   <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
     <!--start it-card-->
-    <article class="it-card it-card-profile rounded shadow-sm border">
+    <article class="it-card it-card-profile it-card-height-full rounded shadow-sm border ">
       <div class="it-card-profile-header">
         <div class="it-card-profile">
           <h4 class="it-card-profile-name no_toc">
@@ -1062,7 +1062,7 @@ Negli esempi abbiamo utilizzato il tag `h4` per i titoli `.it-card-profile-name`
   </div>
   <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
     <!--start it-card-->
-    <article class="it-card it-card-profile it-card-border-top it-card-border-top-secondary rounded shadow-sm border">
+    <article class="it-card it-card-profile it-card-height-full it-card-border-top it-card-border-top-secondary rounded shadow-sm border">
       <div class="it-card-profile-header">
         <div class="it-card-profile">
           <h4 class="it-card-profile-name no_toc">
@@ -1081,7 +1081,7 @@ Negli esempi abbiamo utilizzato il tag `h4` per i titoli `.it-card-profile-name`
 <div class="row">
   <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
     <!--start it-card-->
-    <article class="it-card it-card-profile rounded shadow-sm border">
+    <article class="it-card it-card-profile it-card-height-full rounded shadow-sm border">
       <div class="it-card-profile-header">
         <div class="it-card-profile">
           <h4 class="it-card-profile-name no_toc">
@@ -1118,7 +1118,7 @@ Negli esempi abbiamo utilizzato il tag `h4` per i titoli `.it-card-profile-name`
   </div>
   <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
     <!--start it-card-->
-    <article class="it-card it-card-profile it-card-border-top it-card-border-top-secondary rounded shadow-sm border">
+    <article class="it-card it-card-profile it-card-height-full it-card-border-top it-card-border-top-secondary rounded shadow-sm border">
       <div class="it-card-profile-header">
         <div class="it-card-profile">
           <h4 class="it-card-profile-name no_toc">
@@ -1158,9 +1158,9 @@ Negli esempi abbiamo utilizzato il tag `h4` per i titoli `.it-card-profile-name`
 
 ### Card per luoghi
 
-Usa questa variante per presentare schede località. Si attiva con la classe `.it-card-site`. La testata della card è costruita con classi di stile dedicate come `.it-card-place-header` per nome e tipologia. 
+Usa questa variante per presentare schede località. Si attiva con la classe `.it-card-profile` come nel caso dei profili personali. La testata della card è costruita con classi di stile dedicate come `.it-card-profile-header` per nome e tipologia. 
 
-Puoi usare spazio per l'immagine sulla destra `.it-card-place-image` anche per contenere un'icona. Assicurati di racchiuderla dentro un `div` contenitore con wrapper `.it-card-place-icon-wrapper`, per permettere i corretti allineamenti. 
+Nel caso dei luoghi puoi inserire un'immagine sulla destra `.it-card-profile-image`, o utilizzare questo spazo anche per contenere un'icona. Assicurati di racchiuderla dentro un `div` contenitore con wrapper `.it-card-profile-icon-wrapper`, per permettere i corretti allineamenti. 
 
 La lista di metadati del luogo è costruita utilizzando liste descrittive `.it-card-description-list` con ogni coppia di item`dd`-`dt` raccolta in un `div` contenitore. 
 
@@ -1168,7 +1168,7 @@ Puoi combinare un piede con eventuali collegamenti o dettagli della mappa usando
 
 {% capture callout %}
 #### Accessibilità nomi luoghi
-Negli esempi abbiamo utilizzato il tag `h4` per i titoli `.it-card-place-name`. Utilizza il tag `h` corretto a seconda del contesto.
+Negli esempi abbiamo utilizzato il tag `h4` per i titoli `.it-card-profile-name`. Utilizza il tag `h` corretto a seconda del contesto.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
 {% comment %}Example name: Card luogo{% endcomment %}
@@ -1177,18 +1177,18 @@ Negli esempi abbiamo utilizzato il tag `h4` per i titoli `.it-card-place-name`. 
 <div class="row">
   <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
     <!--start it-card-->
-    <article class="it-card it-card-place rounded shadow-sm border">
-      <div class="it-card-place-header">
-        <div class="it-card-place">
-          <h4 class="it-card-place-name no_toc">
+    <article class="it-card it-card-profile it-card-height-full rounded shadow-sm border">
+      <div class="it-card-profile-header">
+        <div class="it-card-profile">
+          <h4 class="it-card-profile-name no_toc">
             <a href="#">Toponimo o luogo</a>
           </h4>
-          <p class="it-card-place-type">Tipologia di luogo</p>
+          <p class="it-card-profile-type">Tipologia di luogo</p>
         </div>
-        <div class="it-card-place-image ratio ratio-1x1">
-          <figure class="figure img-full">
-            <img src="https://placeholderimage.eu/api/monument/320/320" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
-          </figure>
+        <div class="it-card-profile-image ratio ratio-1x1">
+          <div class="it-card-profile-image-icon-wrapper">
+            <svg class="icon icon-lg icon-padded icon-primary" aria-hidden="true"><use href="/dist/svg/sprites.svg#it-pa"></use></svg>
+          </div>
         </div>
       </div>
     </article>
@@ -1196,18 +1196,18 @@ Negli esempi abbiamo utilizzato il tag `h4` per i titoli `.it-card-place-name`. 
   </div>
   <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
     <!--start it-card-->
-    <article class="it-card it-card-place rounded shadow-sm border">
-      <div class="it-card-place-header">
-        <div class="it-card-place">
-          <h4 class="it-card-place-name no_toc">
+    <article class="it-card it-card-profile it-card-height-full it-card-border-top it-card-border-top-secondary rounded shadow-sm border">
+      <div class="it-card-profile-header">
+        <div class="it-card-profile">
+          <h4 class="it-card-profile-name no_toc">
             <a href="#">Toponimo o luogo</a>
           </h4>
-          <p class="it-card-place-type">Tipologia di luogo</p>
+          <p class="it-card-profile-type">Tipologia di luogo</p>
         </div>
-        <div class="it-card-place-image ratio ratio-1x1">
-          <div class="it-card-place-image-icon-wrapper">
-            <svg class="icon icon-lg icon-padded icon-primary" aria-hidden="true"><use href="/dist/svg/sprites.svg#it-pa"></use></svg>
-          </div>
+        <div class="it-card-profile-image ratio ratio-1x1">
+          <figure class="figure img-full">
+            <img src="https://placeholderimage.eu/api/monument/320/320" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+          </figure>
         </div>
       </div>
     </article>
@@ -1217,15 +1217,50 @@ Negli esempi abbiamo utilizzato il tag `h4` per i titoli `.it-card-place-name`. 
 <div class="row">
   <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
     <!--start it-card-->
-    <article class="it-card it-card-place it-card-border-top it-card-border-top-secondary rounded shadow-sm border mb-3">
-      <div class="it-card-place-header">
-        <div class="it-card-place">
-          <h4 class="it-card-place-name no_toc">
+    <article class="it-card it-card-profile it-card-height-full rounded shadow-sm border">
+      <div class="it-card-profile-header">
+        <div class="it-card-profile">
+          <h4 class="it-card-profile-name no_toc">
             <a href="#">Toponimo o luogo</a>
           </h4>
-          <p class="it-card-place-type">Tipologia di luogo</p>
+          <p class="it-card-profile-type">Tipologia di luogo</p>
         </div>
-        <div class="it-card-place-image ratio ratio-1x1">
+        <div class="it-card-profile-image ratio ratio-1x1">
+          <div class="it-card-profile-image-icon-wrapper">
+            <svg class="icon icon-lg icon-padded icon-primary" aria-hidden="true"><use href="/dist/svg/sprites.svg#it-pa"></use></svg>
+          </div>
+        </div>
+      </div>
+      <div class="it-card-body">
+        <dl class="it-card-description-list">
+          <div>
+            <dt>Email:</dt>
+            <dd>me@mail.com</dd>
+          </div>
+          <div>
+            <dt>Tel:</dt>
+            <dd>340.4050600</dd>
+          </div>
+          <div>
+            <dt>Indirizzo:</dt>
+            <dd>Via della città, 5 - 00100 Città</dd>
+          </div>
+        </dl>
+      </div>
+    </article>
+    <!--end it-card-->
+  </div>
+  <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
+    <!--start it-card-->
+    <article class="it-card it-card-profile it-card-height-full it-card-border-top it-card-border-top-secondary rounded shadow-sm border mb-3">
+      <div class="it-card-profile-header">
+        <div class="it-card-profile">
+          <h4 class="it-card-profile-name no_toc">
+            <a href="#">Toponimo o luogo</a>
+          </h4>
+          <p class="it-card-profile-type">Tipologia di luogo</p>
+        </div>
+        <div class="it-card-profile-image ratio ratio-1x1">
           <figure class="figure img-full">
             <img src="https://placeholderimage.eu/api/monument/320/320" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
           </figure>
@@ -1238,8 +1273,8 @@ Negli esempi abbiamo utilizzato il tag `h4` per i titoli `.it-card-place-name`. 
             <dd>me@mail.com</dd>
           </div>
           <div>
-            <dt>Tel:</dt>
             <dd>340.4050600</dd>
+            <dt>Tel:</dt>
           </div>
           <div>
             <dt>Indirizzo:</dt>
@@ -1258,41 +1293,6 @@ Negli esempi abbiamo utilizzato il tag `h4` per i titoli `.it-card-place-name`. 
           <svg class="icon icon-sm icon-secondary ms-2" aria-hidden="true"><use href="/dist/svg/sprites.svg#it-external-link"></use></svg>
         </a>
       </footer>
-    </article>
-    <!--end it-card-->
-  </div>
-  <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
-    <!--start it-card-->
-    <article class="it-card it-card-place rounded shadow-sm border">
-      <div class="it-card-place-header">
-        <div class="it-card-place">
-          <h4 class="it-card-place-name no_toc">
-            <a href="#">Toponimo o luogo</a>
-          </h4>
-          <p class="it-card-place-type">Tipologia di luogo</p>
-        </div>
-        <div class="it-card-place-image ratio ratio-1x1">
-          <div class="it-card-place-image-icon-wrapper">
-            <svg class="icon icon-lg icon-padded icon-primary" aria-hidden="true"><use href="/dist/svg/sprites.svg#it-pa"></use></svg>
-          </div>
-        </div>
-      </div>
-      <div class="it-card-body">
-        <dl class="it-card-description-list">
-          <div>
-            <dt>Email:</dt>
-            <dd>me@mail.com</dd>
-          </div>
-          <div>
-            <dt>Tel:</dt>
-            <dd>340.4050600</dd>
-          </div>
-          <div>
-            <dt>Indirizzo:</dt>
-            <dd>Via della città, 5 - 00100 Città</dd>
-          </div>
-        </dl>
-      </div>
     </article>
     <!--end it-card-->
   </div>

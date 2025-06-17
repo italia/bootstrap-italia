@@ -200,6 +200,7 @@ article.it-card {
 
   // Profile card
   &.it-card-profile {
+
     .it-card-profile-header {
       display: flex;
       flex-direction: row;
@@ -232,59 +233,16 @@ article.it-card {
           margin-bottom: 0.25rem;
         }
 
-        .it-card-profile-role {
-          font-weight: 600;
-          font-size: 1rem;
-          line-height: 1.5rem;
-          margin-bottom: 0;
-        }
-      }
-    }
-  }
-
-  // Place card
-  &.it-card-place {
-    .it-card-place-header {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap-reverse;
-      justify-content: space-between;
-      align-items: center;
-
-      // Gap fallback XXXXXX?
-      >* {
-        margin: 0.5rem;
-      }
-
-      @supports (gap: 1rem) {
-        gap: 1rem;
-
-        >* {
-          margin: 0;
-        }
-      }
-
-      margin-top: calc(2 * var(--#{$prefix}it-card-title-spacer-y));
-      margin-bottom: var(--#{$prefix}it-card-title-spacer-y);
-      padding: 0 var(--#{$prefix}it-card-spacer-x);
-
-      .it-card-place {
-        flex: 1;
-        max-width: 100%;
-
-        .it-card-place-name {
-          margin-bottom: 0.25rem;
-        }
-
+        .it-card-profile-role,
         .it-card-place-type {
+          font-weight: 600;
           font-size: 1rem;
           line-height: 1.5rem;
-          font-weight: 600;
           margin-bottom: 0;
         }
       }
 
-      .it-card-place-image {
+      .it-card-profile-image {
         max-width: 80px;
         max-height: 80px;
 
@@ -292,7 +250,7 @@ article.it-card {
           margin-bottom: 0;
         }
 
-        .it-card-place-image-icon-wrapper {
+        .it-card-profile-image-icon-wrapper {
           display: flex;
           justify-content: center;
           align-items: center;
