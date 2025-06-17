@@ -10,7 +10,7 @@
   // gap fallback
   margin: calc(-0.5 * var(--#{$prefix}it-card-group-gap));
 
-  > .it-card {
+  >.it-card {
     margin: calc(0.5 * var(--#{$prefix}it-card-group-gap));
     // Default stacked on mobile
     flex: 0 0 calc(100% - var(--#{$prefix}it-card-group-gap));
@@ -33,27 +33,27 @@
     margin: 0;
     gap: var(--#{$prefix}it-card-group-gap);
 
-    > .it-card {
+    >.it-card {
       margin: 0;
     }
   }
 
   // Predefined column layouts
-  &.it-card-group-2-cols > .it-card,
-  &.it-card-group-3-cols > .it-card,
-  &.it-card-group-4-cols > .it-card {
+  &.it-card-group-2-cols>.it-card,
+  &.it-card-group-3-cols>.it-card,
+  &.it-card-group-4-cols>.it-card {
     @include media-breakpoint-up(sm) {
       flex: 0 0 calc(50% - 0.5 * var(--#{$prefix}it-card-group-gap));
     }
   }
 
-  &.it-card-group-3-cols > .it-card {
+  &.it-card-group-3-cols>.it-card {
     @include media-breakpoint-up(md) {
       flex: 0 0 calc(33.333% - 0.667 * var(--#{$prefix}it-card-group-gap));
     }
   }
 
-  &.it-card-group-4-cols > .it-card {
+  &.it-card-group-4-cols>.it-card {
     @include media-breakpoint-up(md) {
       flex: 0 0 calc(33.333% - 0.667 * var(--#{$prefix}it-card-group-gap));
     }
@@ -65,11 +65,13 @@
 
   // Progressive enhancement with Container Queries
   @supports (container-type: inline-size) {
+
     // Only with .it-card-group-container-aware class
     &.it-card-group-container-aware {
       container-type: inline-size;
 
-      > .it-card {
+      >.it-card {
+
         // Reset Media Queries
         @include media-breakpoint-up(sm) {
           flex: auto;
@@ -100,13 +102,13 @@
       }
 
       // Override specific coulmns in container mode
-      &.it-card-group-2-cols > .it-card {
+      &.it-card-group-2-cols>.it-card {
         @container (min-width: 500px) {
           flex: 0 0 calc(50% - 0.5 * var(--#{$prefix}it-card-group-gap));
         }
       }
 
-      &.it-card-group-3-cols > .it-card {
+      &.it-card-group-3-cols>.it-card {
         @container (min-width: 800px) {
           flex: 0 0 calc(33.333% - 0.667 * var(--#{$prefix}it-card-group-gap));
         }
@@ -115,7 +117,7 @@
   }
 
   // Option for equal height cards
-  &.it-card-group-equal-height > .it-card {
+  &.it-card-group-equal-height>.it-card {
     height: 100%;
   }
 
@@ -134,38 +136,41 @@
 //
 .it-card,
 article.it-card {
-  // to do: variabili intermedia per i calcoli più complessi?
-
-  --#{$prefix}it-card-spacer-y: 0.5rem;
-  --#{$prefix}it-card-spacer-x: 1rem;
-  --#{$prefix}it-card-height: auto;
-  --#{$prefix}it-card-inline-min-height: 240px;
-  --#{$prefix}it-card-inline-mini-min-height: 160px;
-  --#{$prefix}it-card-color: #{$color-text-secondary};
-  --#{$prefix}it-card-p-color: #{$color-text-secondary};
   --#{$prefix}it-card-bg: #{$white};
-  --#{$prefix}it-card-border-color: #{$gray-border};
-  --#{$prefix}it-card-border-width: 1px;
-  --#{$prefix}it-card-border-radius: 4px;
-  --#{$prefix}it-card-inner-border-radius: subtract(var(--#{$prefix}it-card-border-radius), var(--#{$prefix}it-card-border-width));
-  --#{$prefix}it-card-title-spacer-y: var(--#{$prefix}it-card-spacer-y);
   --#{$prefix}it-card-body-spacer: 1rem;
-  --#{$prefix}it-card-cap-bg: transparent;
-  --#{$prefix}it-card-cap-padding-y: calc(var(--#{$prefix}it-card-spacer-y) * 2);
-  --#{$prefix}it-card-cap-padding-x: var(--#{$prefix}it-card-spacer-x);
-  --#{$prefix}it-card-cap-color: null;
-  --#{$prefix}it-card-border-top-width: 6px;
+  --#{$prefix}it-card-border-color: #{$gray-border};
+  --#{$prefix}it-card-border-radius: 4px;
   --#{$prefix}it-card-border-top-color: transparent; // default background set to transparent
-  --#{$prefix}it-card-category-size: 1rem;
+  --#{$prefix}it-card-border-top-width: 6px;
+  --#{$prefix}it-card-border-width: 1px;
+  --#{$prefix}it-card-cap-bg: transparent;
+  --#{$prefix}it-card-cap-color: null;
+  --#{$prefix}it-card-cap-padding-x: var(--#{$prefix}it-card-spacer-x);
+  --#{$prefix}it-card-cap-padding-y: calc(var(--#{$prefix}it-card-spacer-y) * 2);
+  --#{$prefix}it-card-category-color: #{$color-text-muted};
   --#{$prefix}it-card-category-fw: 600;
   --#{$prefix}it-card-category-l-spacing: 0.5px;
   --#{$prefix}it-card-category-m-bottom: 0;
-  --#{$prefix}it-card-date-size: 0.875rem;
-  --#{$prefix}it-card-date-color: #{$color-text-muted};
-  --#{$prefix}it-card-chips-gap: 1rem;
+  --#{$prefix}it-card-category-size: 1rem;
   --#{$prefix}it-card-chips-a-color: #{$color-text-secondary};
-  --#{$prefix}it-card-signature-size: 1rem;
+  --#{$prefix}it-card-chips-gap: 1rem;
+  --#{$prefix}it-card-color: #{$color-text-secondary};
+  --#{$prefix}it-card-date-color: #{$color-text-muted};
+  --#{$prefix}it-card-date-size: 0.875rem;
+  --#{$prefix}it-card-description-color: #{$color-text-muted};
+  --#{$prefix}it-card-height: auto;
+  --#{$prefix}it-card-inline-min-height: 240px;
+  --#{$prefix}it-card-inline-mini-min-height: 160px;
+  --#{$prefix}it-card-inner-border-radius: subtract(var(--#{$prefix}it-card-border-radius), var(--#{$prefix}it-card-border-width));
   --#{$prefix}it-card-link-color: #{$color-text-secondary};
+  --#{$prefix}it-card-list-group-item-padding-y: 0.75rem;
+  --#{$prefix}it-card-p-color: #{$color-text-secondary};
+  --#{$prefix}it-card-signature-size: 1rem;
+  --#{$prefix}it-card-spacer-x: 1rem;
+  --#{$prefix}it-card-spacer-y: 0.5rem;
+  --#{$prefix}it-card-double-spacer-y: calc(2 * var(--#{$prefix}it-card-spacer-y));
+  --#{$prefix}it-card-quad-spacer-y: calc(4 * var(--#{$prefix}it-card-spacer-y));
+  --#{$prefix}it-card-title-spacer-y: var(--#{$prefix}it-card-spacer-y);
 
   display: flex;
   flex-direction: column;
@@ -191,7 +196,7 @@ article.it-card {
       color: color-hover($color-text-secondary);
     }
 
-    + .it-card-link {
+    +.it-card-link {
       margin-left: var(--#{$prefix}it-card-spacer-x);
     }
   }
@@ -205,15 +210,15 @@ article.it-card {
       justify-content: space-between;
       align-items: center;
 
-      // Gap fallback XXXXXX?
-      > * {
+      // Gap fallback
+      >* {
         margin: 0.5rem;
       }
 
       @supports (gap: 1rem) {
         gap: 1rem;
 
-        > * {
+        >* {
           margin: 0;
         }
       }
@@ -339,7 +344,7 @@ article.it-card {
 
   // Card metadata holder <footer>
   footer {
-    margin-top: calc(2 * var(--#{$prefix}it-card-spacer-y));
+    margin-top: var(--#{$prefix}it-card-double-spacer-y);
 
     &.it-card-related {
       display: flex;
@@ -347,20 +352,20 @@ article.it-card {
       flex-wrap: wrap;
       justify-content: flex-end;
 
-      // Gap fallback XXXXXX?
-      > * {
+      // Gap fallback
+      >* {
         margin: 0.5rem;
       }
 
       @supports (gap: 1rem) {
         gap: 1rem;
 
-        > * {
+        >* {
           margin: 0;
         }
       }
 
-      // Align items baseline and fallback XXXXXXX
+      // Align items baseline and fallback
       align-items: flex-end;
 
       @supports (align-items: last baseline) {
@@ -379,9 +384,9 @@ article.it-card {
     }
 
     .it-card-category {
-      color: $color-text-muted; // XXX var?
       display: inline-block;
       text-transform: uppercase;
+      color: var(--#{$prefix}it-card-category-color);
       font-size: var(--#{$prefix}it-card-category-size);
       font-weight: var(--#{$prefix}it-card-category-fw);
       letter-spacing: var(--#{$prefix}it-card-category-l-spacing);
@@ -394,14 +399,14 @@ article.it-card {
       flex-wrap: wrap;
 
       // Gap fallback
-      > li {
+      >li {
         margin: 0.25rem;
       }
 
       @supports (gap: 0.5rem) {
         gap: 0.5rem;
 
-        > li {
+        >li {
           margin: 0;
         }
       }
@@ -438,10 +443,10 @@ article.it-card {
 
     font-size: 1rem;
     line-height: 1.5rem;
-    color: $color-text-muted; //XXX < muted?
+    color: var(--#{$prefix}it-card-description-color);
 
-    padding-top: calc(2 * var(--#{$prefix}it-card-spacer-y));
-    padding-bottom: calc(2 * var(--#{$prefix}it-card-spacer-y));
+    padding-top: var(--#{$prefix}it-card-double-spacer-y);
+    padding-bottom: var(--#{$prefix}it-card-double-spacer-y);
 
     &:last-child {
       margin-bottom: 0;
@@ -451,7 +456,19 @@ article.it-card {
 
     display: flex;
     flex-direction: column;
-    gap: 0.5rem; // XXX NEED FALLBACK? YES?
+
+    // gap fallback
+    >* {
+      margin: 0.25rem;
+    }
+
+    @supports (gap: 0.5rem) {
+      gap: 0.5rem;
+
+      >* {
+        margin: 0;
+      }
+    }
 
     dt {
       display: inline;
@@ -471,13 +488,13 @@ article.it-card {
   }
 
   // Card can contain special lists, example: Related articles to a main Tag card
-  > .list-group,
-  .it-card-body > .list-group {
+  >.list-group,
+  .it-card-body>.list-group {
     border-top: var(--#{$prefix}it-card-border-width) solid var(--#{$prefix}it-card-border-color);
     border-bottom: var(--#{$prefix}it-card-border-width) solid var(--#{$prefix}it-card-border-color);
 
-    margin-top: calc(2 * var(--#{$prefix}it-card-spacer-y));
-    margin-bottom: calc(2 * var(--#{$prefix}it-card-spacer-y));
+    margin-top: var(--#{$prefix}it-card-double-spacer-y);
+    margin-bottom: var(--#{$prefix}it-card-double-spacer-y);
 
     color: var(--#{$prefix}it-card-p-color);
 
@@ -492,17 +509,17 @@ article.it-card {
     }
   }
 
-  .it-card-body > .list-group {
-    margin-top: calc(4 * var(--#{$prefix}it-card-spacer-y));
-    margin-bottom: calc(2 * var(--#{$prefix}it-card-spacer-y));
+  .it-card-body>.list-group {
+    margin-top: var(--#{$prefix}it-card-quad-spacer-y);
+    margin-bottom: var(--#{$prefix}it-card-double-spacer-y);
 
     .list-group-item {
-      padding: var(--bs-list-group-item-padding-y) 0; // XXXXXX > riportare a noi
+      padding: var(--#{$prefix}it-card-list-group-item-padding-y) 0;
     }
   }
 
-  > .it-card-header + .list-group,
-  > .list-group + .it-card-footer {
+  >.it-card-header+.list-group,
+  >.list-group+.it-card-footer {
     border-top: 0;
   }
 
@@ -514,6 +531,7 @@ article.it-card {
 
     &.rounded {
       .it-card-image-wrapper {
+
         &:first-child,
         &:nth-child(2) {
           border-top-left-radius: var(--#{$prefix}it-card-inner-border-radius);
@@ -523,6 +541,7 @@ article.it-card {
 
       &.it-card-border-top {
         .it-card-image-wrapper {
+
           &:first-child,
           &:nth-child(2) {
             border-top-left-radius: 0;
@@ -622,6 +641,7 @@ article.it-card {
 
         &.rounded {
           .it-card-image-wrapper {
+
             &:first-child,
             &:nth-child(2) {
               border-top-right-radius: 0 !important;
@@ -631,6 +651,7 @@ article.it-card {
 
           &.it-card-inline-reverse {
             .it-card-image-wrapper {
+
               &:first-child,
               &:nth-child(2) {
                 border-top-left-radius: 0 !important;
