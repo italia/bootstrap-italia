@@ -1,10 +1,10 @@
 :focus:not([data-focus-mouse='true']),
 %focus,
 .it-carousel-wrapper .splide__pagination button:focus:not([data-focus-mouse='true']),
-.upload:focus:not([data-focus-mouse='true']) + label,
-.upload-dragdrop-input:focus[type='file']:not([data-focus-mouse='true']) + label,
+.upload:focus:not([data-focus-mouse='true'])+label,
+.upload-dragdrop-input:focus[type='file']:not([data-focus-mouse='true'])+label,
 .avatar-upload:focus-within:not([data-focus-mouse='true']),
-.rating input:focus:not([data-focus-mouse='true']) + label svg {
+.rating input:focus:not([data-focus-mouse='true'])+label svg {
   border-color: $focus-outline-color-out !important;
   box-shadow:
     0 0 0 2px $focus-outline-color-in,
@@ -24,13 +24,25 @@
   outline: none !important;
 }
 
-p a {
+p a,
+p.it-card-text a {
   &:focus:not([data-focus-mouse='true'], .btn) {
     outline-offset: 0px !important;
     outline: 3px $focus-outline-color-out solid !important;
     background: $focus-outline-color-in;
     box-shadow: none !important;
     color: $link-color !important;
+  }
+}
+
+.it-card h2 a,
+.it-card h3 a,
+.it-card h4 a,
+.it-card h5 a,
+.it-card a.it-card-link,
+.it-card .list-group-item a {
+  &:focus:not([data-focus-mouse='true'], .btn) {
+    display: inline-block;
   }
 }
 
@@ -85,9 +97,10 @@ p a {
   }
 
   &.form-check-group {
+
     :focus:not([data-focus-mouse='true']),
-    [type='checkbox']:focus + label,
-    [type='radio']:focus + label {
+    [type='checkbox']:focus+label,
+    [type='radio']:focus+label {
       width: 100%;
     }
   }
@@ -95,6 +108,7 @@ p a {
 
 .bg-dark .btn,
 .back-to-top.dark {
+
   &:focus:not([data-focus-mouse='true']),
   &%focus {
     box-shadow:
@@ -104,6 +118,7 @@ p a {
 }
 
 .autocomplete__wrapper .autocomplete__menu {
+
   .autocomplete__hint,
   .autocomplete__option {
     &:focus {
