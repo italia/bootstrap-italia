@@ -143,10 +143,10 @@ La struttura dei metadati include:
         <div class="it-card-taxonomy">
           <ul class="it-card-chips chips-list" aria-label="Argomenti correlati: ">
             <li class="list-item"><a class="chip chip-simple chip-sm" href="#">
-              <span class="visually-hidden">Argomento: </span><span class="chip-label">Argomento 1</span>
+              <span class="chip-label"><span class="visually-hidden">Argomento: </span>Argomento 1</span>
             </a></li>
             <li class="list-item"><a class="chip chip-simple chip-sm" href="#">
-              <span class="visually-hidden">Argomento: </span><span class="chip-label">Argomento 2</span>
+              <span class="chip-label"><span class="visually-hidden">Argomento: </span>Argomento 2</span>
             </a></li>
           </ul>
         </div>
@@ -185,6 +185,19 @@ Se i contenuti sono su piattaforme terze, comunica chiaramente all'utente dove s
 
 {% capture callout %}
 
+#### Accessibilità: valore semantico delle icone
+
+Le icone nelle card possono avere diversi ruoli semantici:
+- **Decorative**: quando il significato è già chiaro dal contesto testuale, usa `aria-hidden="true"`. 
+- **Informative**: quando comunicano informazioni aggiuntive (es. tipo di file, link esterno), aggiungi testo nascosto con `<span class="visually-hidden">` che descriva l'informazione se non già veicolata diversamente. 
+- **Funzionali**: quando indicano un'azione o stato, assicurati che il significato sia comunicato anche testualmente.
+
+Negli esempi che seguono usiamo `aria-hidden="true"` perché il contesto è già chiaro dal titolo e dal testo della card. In altri esempi in questa documentazione troverai la soluzione per icone informative con testo nascosto. È inoltre possibile implementare una soluzione usando una combinazione di `role="img"` e aggiungendo l'elemento `<title>Titolo icona</title>` prima del tag `use`. 
+
+{% endcapture %}{% include callout.html content=callout type="accessibility" %}
+
+{% capture callout %}
+
 #### Accessibilità link per contenuti esterni
 
 Negli esempi non abbiamo usato il `target` del link per favorire la normale navigazione del browser. Se la pagina di destinazione si apre in una nuova tab o finestra, comunicalo in modo chiaro all'utente con un'icona di link esterno e un testo alternativo o nascosto per i lettori di schermo.  
@@ -203,8 +216,11 @@ Per indicare l'autore del contenuto, usa l'elemento semantico `address` con clas
     <article class="it-card it-card-image it-card-height-full rounded shadow-sm border">
       <!--card first child is the title (link)-->
       <h3 class="it-card-title it-card-title-icon no_toc">
-        <a href="#">Titolo contenuto featured <span class="visually-hidden">(link esterno su piattaforma XYZ)</span></a>
-        <div><svg class="icon icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg></div>
+        <a href="#">Titolo contenuto featured <span class="visually-hidden">(link esterno su piattaforma XYZ)</span>
+          <div class="it-card-title-icon-wrapper">
+            <svg class="icon icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
+          </div>
+        </a>
       </h3>
       <!--card second child is the image (optional)-->
       <div class="it-card-image-wrapper">
@@ -234,8 +250,11 @@ Per indicare l'autore del contenuto, usa l'elemento semantico `address` con clas
     <article class="it-card it-card-image it-card-height-full rounded shadow-sm border">
       <!--card first child is the title (link)-->
       <h3 class="it-card-title it-card-title-icon no_toc">
-        <a href="#">Titolo contenuto featured <span class="visually-hidden">(link esterno su Designers Italia)</span></a>
-        <div><svg class="icon icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-designers-italia"></use></svg></div>
+        <a href="#">Titolo contenuto featured <span class="visually-hidden">(link esterno su Designers Italia)</span>
+          <div class="it-card-title-icon-wrapper">
+            <svg class="icon icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-designers-italia"></use></svg>
+          </div>
+        </a>
       </h3>
       <!--card second child is the image (optional)-->
       <div class="it-card-image-wrapper">
@@ -256,10 +275,10 @@ Per indicare l'autore del contenuto, usa l'elemento semantico `address` con clas
         <div class="it-card-taxonomy">
           <ul class="it-card-chips chips-list" aria-label="Argomenti correlati: ">
             <li class="list-item"><a class="chip chip-simple chip-sm" href="#">
-              <span class="visually-hidden">Argomento: </span><span class="chip-label">Argomento 1</span>
+              <span class="chip-label"><span class="visually-hidden">Argomento: </span>Argomento 1</span>
             </a></li>
             <li class="list-item"><a class="chip chip-simple chip-sm" href="#">
-              <span class="visually-hidden">Argomento: </span><span class="chip-label">Argomento 2</span>
+              <span class="chip-label"><span class="visually-hidden">Argomento: </span>Argomento 2</span>
             </a></li>
           </ul>
         </div>
@@ -275,8 +294,11 @@ Per indicare l'autore del contenuto, usa l'elemento semantico `address` con clas
     <article class="it-card rounded shadow-sm border">
       <!--card first child is the title (link)-->
       <h3 class="it-card-title it-card-title-icon no_toc">
-        <a href="#">Titolo contenuto featured <span class="visually-hidden">(link esterno)</span></a>
-        <div><svg class="icon icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-external-link"></use></svg></div>
+        <a href="#">Titolo contenuto featured <span class="visually-hidden">(link esterno)</span>
+          <div class="it-card-title-icon-wrapper">
+            <svg class="icon icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-external-link"></use></svg>
+          </div>
+        </a>
       </h3>
       <!--card body content-->
       <div class="it-card-body">
@@ -654,8 +676,11 @@ Negli esempi non abbiamo usato il `target` del link per favorire la normale navi
     <article class="it-card it-card-image it-card-height-full rounded shadow-sm border">
       <!--card first child is the title (link)-->
       <h3 class="it-card-title it-card-title-icon no_toc">
-        <a href="#">Titolo contenuto video</a>
-        <div><svg class="icon icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-video"></use></svg></div>
+        <a href="#">Titolo contenuto video
+          <div class="it-card-title-icon-wrapper">
+            <svg class="icon icon-primary" role="img"><title>Tipo: Video</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-video"></use></svg>
+          </div>
+        </a>
       </h3>
       <!--card second child is the image (optional)-->
       <div class="it-card-image-wrapper">
@@ -684,8 +709,11 @@ Negli esempi non abbiamo usato il `target` del link per favorire la normale navi
     <article class="it-card it-card-image it-card-height-full rounded shadow-sm border">
       <!--card first child is the title (link)-->
       <h3 class="it-card-title it-card-title-icon no_toc">
-        <a href="#">Titolo contenuto video</a>
-        <div><svg class="icon icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-video"></use></svg></div>
+        <a href="#">Titolo contenuto video
+          <div class="it-card-title-icon-wrapper">
+            <svg class="icon icon-primary" role="img"><title>Tipo: Video</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-video"></use></svg>
+          </div>
+        </a>
       </h3>
       <!--card second child is the image (optional)-->
       <div class="it-card-image-wrapper">
@@ -704,10 +732,10 @@ Negli esempi non abbiamo usato il `target` del link per favorire la normale navi
         <div class="it-card-taxonomy">
           <ul class="it-card-chips chips-list" aria-label="Argomenti correlati: ">
             <li class="list-item"><a class="chip chip-simple chip-sm" href="#">
-              <span class="visually-hidden">Argomento: </span><span class="chip-label">Argomento 1</span>
+              <span class="chip-label"><span class="visually-hidden">Argomento: </span>Argomento 1</span>
             </a></li>
             <li class="list-item"><a class="chip chip-simple chip-sm" href="#">
-              <span class="visually-hidden">Argomento: </span><span class="chip-label">Argomento 2</span>
+              <span class="chip-label"><span class="visually-hidden">Argomento: </span>Argomento 2</span>
             </a></li>
           </ul>
         </div>
@@ -723,8 +751,11 @@ Negli esempi non abbiamo usato il `target` del link per favorire la normale navi
     <article class="it-card rounded shadow-sm border">
       <!--card first child is the title (link)-->
       <h3 class="it-card-title it-card-title-icon no_toc">
-        <a href="#">Titolo contenuto audio</a>
-        <div><svg class="icon icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-horn"></use></svg></div>
+        <a href="#">Titolo contenuto audio
+          <div class="it-card-title-icon-wrapper">
+            <svg class="icon icon-primary" role="img"><title>Tipo: Audio</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-horn"></use></svg>
+          </div>
+        </a>
       </h3>
       <!--card body content-->
       <div class="it-card-body">
@@ -745,8 +776,11 @@ Negli esempi non abbiamo usato il `target` del link per favorire la normale navi
     <article class="it-card rounded shadow-sm border">
       <!--card first child is the title (link)-->
       <h3 class="it-card-title it-card-title-icon no_toc">
-        <a href="#">Titolo contenuto audio</a>
-        <div><svg class="icon icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-horn"></use></svg></div>
+        <a href="#">Titolo contenuto audio
+          <div class="it-card-title-icon-wrapper">
+            <svg class="icon icon-primary" role="img"><title>Tipo: Audio</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-horn"></use></svg>
+          </div>
+        </a>
       </h3>
       <!--card body content-->
       <div class="it-card-body">
@@ -757,10 +791,10 @@ Negli esempi non abbiamo usato il `target` del link per favorire la normale navi
         <div class="it-card-taxonomy">
           <ul class="it-card-chips chips-list" aria-label="Argomenti correlati: ">
             <li class="list-item"><a class="chip chip-simple chip-sm" href="#">
-              <span class="visually-hidden">Argomento: </span><span class="chip-label">Argomento 1</span>
+              <span class="chip-label"><span class="visually-hidden">Argomento: </span>Argomento 1</span>
             </a></li>
             <li class="list-item"><a class="chip chip-simple chip-sm" href="#">
-              <span class="visually-hidden">Argomento: </span><span class="chip-label">Argomento 2</span>
+              <span class="chip-label"><span class="visually-hidden">Argomento: </span>Argomento 2</span>
             </a></li>
           </ul>
         </div>
@@ -787,8 +821,11 @@ Come nelle altre varianti, l'immagine segue sempre questo contenitore. Puoi inve
      <!--card first child is all the card content: title (link) + body + footer -->
       <div class="it-card-inline-content">
         <h3 class="it-card-title it-card-title-icon no_toc">
-          <a href="#">Titolo contenuto video</a>
-          <div><svg class="icon icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-video"></use></svg></div>
+          <a href="#">Titolo contenuto video
+            <div class="it-card-title-icon-wrapper">
+              <svg class="icon icon-primary" role="img"><title>Tipo: Video</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-video"></use></svg>
+            </div>
+          </a>
         </h3>
         <div class="it-card-body">
           <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
@@ -819,8 +856,11 @@ Come nelle altre varianti, l'immagine segue sempre questo contenitore. Puoi inve
      <!--card first child is all the card content: title (link) + body + footer -->
       <div class="it-card-inline-content">
         <h3 class="it-card-title it-card-title-icon no_toc">
-          <a href="#">Titolo contenuto video</a>
-          <div><svg class="icon icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-video"></use></svg></div>
+          <a href="#">Titolo contenuto video
+            <div class="it-card-title-icon-wrapper">
+              <svg class="icon icon-primary" role="img"><title>Tipo: Video</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-video"></use></svg>
+            </div>
+          </a>
         </h3>
         <div class="it-card-body">
           <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
@@ -970,8 +1010,11 @@ Per creare un ulteriore spazio dedicato a **collegamenti o pulsanti secondari**,
     <!--start it-card-->
     <article class="it-card rounded border shadow-sm mb-3">
       <h4 class="it-card-title it-card-title-icon no_toc">
-        <a href="#">Titolo del documento</a>
-        <div><svg class="icon icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg></div>
+        <a href="#">Titolo del documento
+          <div class="it-card-title-icon-wrapper">
+            <svg class="icon icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
+          </div>
+        </a>
       </h4>
       <div class="it-card-body">
         <p class="it-card-text">Eventuale breve estratto descrittivo del documento.</p>
@@ -988,8 +1031,11 @@ Per creare un ulteriore spazio dedicato a **collegamenti o pulsanti secondari**,
     <!--start it-card-->
     <article class="it-card rounded border shadow-sm mb-3">
       <h4 class="it-card-title it-card-title-icon no_toc">
-        <a href="#">Titolo del documento</a>
-        <div><svg class="icon icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg></div>
+        <a href="#">Titolo del documento
+          <div class="it-card-title-icon-wrapper">
+            <svg class="icon icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
+          </div>
+        </a>
       </h4>
       <div class="it-card-body">
         <p class="it-card-text">Eventuale breve estratto descrittivo del documento. Formato PDF (200Kb)</p>
@@ -1013,8 +1059,11 @@ Per creare un ulteriore spazio dedicato a **collegamenti o pulsanti secondari**,
     <!--start it-card-->
     <article class="it-card rounded border shadow-sm mb-3">
       <h4 class="it-card-title it-card-title-icon no_toc">
-        <a href="#">Titolo del file allegato <span class="visually-hidden">(Formato ODT, 200Kb)</span></a>
-        <div><svg class="icon icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file-odt"></use></svg></div>
+        <a href="#">Titolo del file allegato <span class="visually-hidden">(Formato ODT, 200Kb)</span>
+          <div class="it-card-title-icon-wrapper">
+            <svg class="icon icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file-odt"></use></svg>
+          </div>
+        </a>
       </h4>
       <div class="it-card-body">
         <p class="it-card-text" aria-hidden="true">Formato ODT (200Kb)</p>
@@ -1340,7 +1389,7 @@ Puoi combinare questa impostazione con le funzionalità del contenitore `.it-car
       <!--card body content-->
       <div class="it-card-body">
         <p class="it-card-text">Descrizione breve dell'argomento in poche righe non troncate.</p>
-        <ul role="list" class="list-group list-group-flush" aria-label="Contenuti in evidenza:">
+        <ul class="list-group list-group-flush" aria-label="Contenuti in evidenza:">
           <li class="list-group-item"><a href="#">Titolo notizia affine</a></li>
           <li class="list-group-item"><a href="#">Titolo media affine</a></li>
           <li class="list-group-item"><a href="#">Altro titolo scheda affine</a></li>
@@ -1369,7 +1418,7 @@ Puoi combinare questa impostazione con le funzionalità del contenitore `.it-car
       <div class="it-card-body">
         <p class="it-card-subtitle">Dal 17 al 22 novembre</p>
         <p class="it-card-text">Descrizione breve dell'evento in poche righe non troncate.</p>
-        <ul role="list" class="list-group list-group-flush" aria-label="Contenuti in evidenza:">
+        <ul class="list-group list-group-flush" aria-label="Contenuti in evidenza:">
           <li class="list-group-item"><a href="#">Gli artisti</a></li>
           <li class="list-group-item"><a href="#">Il luogo</a></li>
           <li class="list-group-item"><a href="#">Il programma dettagliato</a></li>
@@ -1400,7 +1449,7 @@ Puoi combinare questa impostazione con le funzionalità del contenitore `.it-car
       <!--card body content-->
       <div class="it-card-body">
         <p class="it-card-text">Descrizione breve dell'argomento in poche righe non troncate.</p>
-        <ul role="list" class="list-group list-group-flush" aria-label="Contenuti in evidenza:">
+        <ul class="list-group list-group-flush" aria-label="Contenuti in evidenza:">
           <li class="list-group-item"><a href="#" class="it-card-link">Titolo notizia affine</a></li>
           <li class="list-group-item"><a href="#" class="it-card-link">Titolo media affine</a></li>
           <li class="list-group-item"><a href="#" class="it-card-link">Altro titolo scheda affine</a></li>
@@ -1701,17 +1750,184 @@ Puoi cambiare questo comportamento per ogni card usando la classe `.it-card-heig
 
 ## Organizzazione e layout
 
+### Uso di contenitori responsive
+
+Se il tuo layout di pagina lo permette ti consigliamo di comprendere ogni gruppo di card in [contenitori responsive](/docs/organizzare-gli-spazi/introduzione#contenitori-responsive), usando le classi `.container-xl` oppure `.container-xxl` su un elemento `div` che contenga tutto il gruppo e il suo sistema di griglie. Così potrai sfruttare al massimo tutto lo spazio a disposizione in tutte le combinazioni di dimensioni della finestra e fattori di ingrandimento. 
+
+```html
+<div class="container-xl">
+  <div class="row">...</div>
+  <div class="row">...</div>
+</div>
+```
+
+Usando contenitori con breakpoint fissi `.container` potresti sprecare un eccessivo spazio vuoto a destra e sinistra in alcune combinazioni. 
+
 ### Uso della griglia
 
-Usando le [griglie](/docs/organizzare-gli-spazi/griglie/) si possono organizzare le card in righe e colonne con le classi `.row`e `.col-*` per definire il numero di colonne desiderate. 
+Usando le [griglie](/docs/organizzare-gli-spazi/griglie/) puoi organizzare le card in righe e colonne con le classi `.row` e `.col-*` per definire il numero di colonne desiderate. 
+
+```html
+<div class="container-xl">
+  <div class="row">
+    <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
+      <article class="it-card">...</article>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
+      <article class="it-card">...</article>
+    </div>
+  </div>
+</div>
+```
 
 Negli esempi precedenti abbiamo usato per esempio `.col-12 col-md-6 col-lg-4` per ottenere 1 colonna su schermi piccoli o finestre strette, 2 colonne su schermi medi e 3 colonne su schermi grandi. Sono esempi puramente dimostrativi, **puoi usare qualsiasi combinazione** di colonne per ottenere il layout desiderato.
 
 La scelta del **numero di colonne** dipende dal layout della tua pagina e ha un **impatto sullo spazio interno** alla card per il contenuto. È importante quindi **bilanciare la dimensione** dei contenuti della card per garantire una buona leggibilità e un aspetto visivamente gradevole a tutte le dimensioni e/o fattori di ingrandimento della viewport.
 
-### Uso di classi dedicate
+### Liste per gruppi numerosi di card
 
-Si possono inoltre organizzare gruppi di card con layout responsive con `.it-card-group` in un `div` contenitore. Di default il numero di colonne su desktop è impostato a 4. 
+Per **gruppi numerosi di card** (come pagine di listini, cataloghi, risultati di ricerca), usa liste semantiche `<ul>` con classe `.it-card-list` combinandole con il sistema di colonne. 
+
+{% capture callout %}
+
+#### Accessibilità liste di card
+
+Usando liste semanticamente corrette i lettori di schermo permetteranno agli utenti di conoscere il numero totale di elementi, l'elemento attualmente selezionato e navigare più facilmente.
+Se necessario nel contesto aggiungi una `aria-label` che spieghi i contenuti della lista come nell'esempio che segue. 
+{% endcapture %}{% include callout.html content=callout type="accessibility" %}
+
+```html
+<div class="container-xl">
+  <ul class="it-card-list row" aria-label="Risultati ricerca">
+    <li class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
+      <article class="it-card">...</article>
+    </li>
+    <li class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
+      <article class="it-card">...</article>
+    </li>
+  </ul>
+</div>
+```
+
+Esempio di lista card: 
+
+{% comment %}Example name: Lista di card{% endcomment %}
+{% capture example %}
+<ul class="it-card-list row" aria-label="Risultati ricerca">
+  <li class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
+    <!--start it-card-->
+    <article class="it-card it-card-height-full rounded shadow-sm border">
+      <!--card first child is the title (link)-->
+      <h3 class="it-card-title no_toc">
+        <a href="#">Titolo del contenuto</a>
+      </h3>
+      <!--card body content-->
+      <div class="it-card-body">
+        <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
+      </div>
+      <!--finally the card footer metadata-->
+      <footer class="it-card-related it-card-footer">
+        <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
+      </footer>
+    </article>
+    <!--end it-card-->
+  </li>
+  <li class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
+    <!--start it-card-->
+    <article class="it-card rounded shadow-sm border">
+      <!--card first child is the title (link)-->
+      <h3 class="it-card-title no_toc">
+        <a href="#">Titolo del contenuto</a>
+      </h3>
+      <!--card body content-->
+      <div class="it-card-body">
+        <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
+      </div>
+      <!--finally the card footer metadata-->
+      <footer class="it-card-related it-card-footer">
+        <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
+      </footer>
+    </article>
+    <!--end it-card-->
+  </li>
+  <li class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
+    <!--start it-card-->
+    <article class="it-card it-card-height-full rounded shadow-sm border">
+      <!--card first child is the title (link)-->
+      <h3 class="it-card-title no_toc">
+        <a href="#">Titolo del contenuto</a>
+      </h3>
+      <!--card body content-->
+      <div class="it-card-body">
+        <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
+      </div>
+      <!--finally the card footer metadata-->
+      <footer class="it-card-related it-card-footer">
+        <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
+      </footer>
+    </article>
+    <!--end it-card-->
+  </li>
+  <li class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
+    <!--start it-card-->
+    <article class="it-card rounded shadow-sm border">
+      <!--card first child is the title (link)-->
+      <h3 class="it-card-title no_toc">
+        <a href="#">Titolo del contenuto</a>
+      </h3>
+      <!--card body content-->
+      <div class="it-card-body">
+        <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
+      </div>
+      <!--finally the card footer metadata-->
+      <footer class="it-card-related it-card-footer">
+        <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
+      </footer>
+    </article>
+    <!--end it-card-->
+  </li>
+    <li class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
+    <!--start it-card-->
+    <article class="it-card it-card-height-full rounded shadow-sm border">
+      <!--card first child is the title (link)-->
+      <h3 class="it-card-title no_toc">
+        <a href="#">Titolo del contenuto</a>
+      </h3>
+      <!--card body content-->
+      <div class="it-card-body">
+        <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
+      </div>
+      <!--finally the card footer metadata-->
+      <footer class="it-card-related it-card-footer">
+        <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
+      </footer>
+    </article>
+    <!--end it-card-->
+  </li>
+  <li class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
+    <!--start it-card-->
+    <article class="it-card rounded shadow-sm border">
+      <!--card first child is the title (link)-->
+      <h3 class="it-card-title no_toc">
+        <a href="#">Titolo del contenuto</a>
+      </h3>
+      <!--card body content-->
+      <div class="it-card-body">
+        <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
+      </div>
+      <!--finally the card footer metadata-->
+      <footer class="it-card-related it-card-footer">
+        <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
+      </footer>
+    </article>
+    <!--end it-card-->
+  </li>
+</ul>
+{% endcapture %}{% include example.html content=example %}
+
+### Uso di classi dedicate (per piccoli gruppi)
+
+Solo per piccoli gruppi di card (2-6 card) puoi inoltre usare `.it-card-group` per creare facilmente un layout responsive in un `div` contenitore. Di default il numero di colonne su desktop è impostato a 4. 
 
 {% comment %}Example name: Gruppi di card responsive{% endcomment %}
 {% capture example %}

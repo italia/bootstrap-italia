@@ -1,5 +1,21 @@
 @use 'sass:math';
 
+// Special list for long groups of cards, bootstrap row/cols grid
+ul.row.it-card-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  > li.col,
+  > li[class*='col-'] {
+    border: none;
+    background: transparent;
+    margin-top: 0;
+    display: block;
+    transition: none;
+  }
+}
+
 // Improved responsive it-card-group with a @container aware twist
 .it-card-group {
   --#{$prefix}it-card-group-gap: #{$grid-gutter-width};
@@ -140,7 +156,8 @@ article.it-card {
   --#{$prefix}it-card-border-radius: 4px;
   --#{$prefix}it-card-border-top-color: transparent; // default background set to transparent
   --#{$prefix}it-card-border-top-width: 6px;
-  --#{$prefix}it-card-border-width: 1px;
+  --#{$prefix}it-card-border-outside-width: 1px; // xxx change to 2px if needed
+  --#{$prefix}it-card-border-separator-width: 1px; // xxx change to 2px if needed
   --#{$prefix}it-card-cap-bg: transparent;
   --#{$prefix}it-card-cap-color: null;
   --#{$prefix}it-card-cap-padding-x: var(--#{$prefix}it-card-spacer-x);
@@ -159,7 +176,7 @@ article.it-card {
   --#{$prefix}it-card-height: auto;
   --#{$prefix}it-card-inline-min-height: 240px;
   --#{$prefix}it-card-inline-mini-min-height: 160px;
-  --#{$prefix}it-card-inner-border-radius: subtract(var(--#{$prefix}it-card-border-radius), var(--#{$prefix}it-card-border-width));
+  --#{$prefix}it-card-inner-border-radius: subtract(var(--#{$prefix}it-card-border-radius), var(--#{$prefix}it-card-border-outside-width));
   --#{$prefix}it-card-link-color: #{$color-text-secondary};
   --#{$prefix}it-card-list-group-item-padding-y: 0.75rem;
   --#{$prefix}it-card-p-color: #{$color-text-secondary};
@@ -182,6 +199,10 @@ article.it-card {
   background-color: var(--#{$prefix}it-card-bg);
   background-clip: border-box;
   color: var(--#{$prefix}it-card-color);
+
+  &.border {
+    border-width: var(--#{$prefix}it-card-border-outside-width) !important;
+  }
 
   &.it-card-height-full {
     height: 100%;
@@ -271,10 +292,19 @@ article.it-card {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+      margin-right: -8px;
 
-      .icon {
-        margin-right: -8px;
-        margin-left: 8px;
+      .it-card-title-icon-wrapper {
+        display: flex;
+        align-items: center;
+      }
+
+      // linked titles with icons goes fullwidth
+      > a {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
       }
     }
   }
@@ -331,7 +361,7 @@ article.it-card {
     padding: var(--#{$prefix}it-card-cap-padding-y) 0;
     color: var(--#{$prefix}it-card-cap-color);
     background-color: var(--#{$prefix}it-card-cap-bg);
-    border-top: var(--#{$prefix}it-card-border-width) solid var(--#{$prefix}it-card-border-color);
+    border-top: var(--#{$prefix}it-card-border-separator-width) solid var(--#{$prefix}it-card-border-color);
     font-size: 1rem;
     line-height: 1.5rem;
 
@@ -436,8 +466,8 @@ article.it-card {
   // Card can contain description lists, example: personal or place data
   .it-card-description-list,
   .it-card-body .it-card-description-list {
-    border-top: var(--#{$prefix}it-card-border-width) solid var(--#{$prefix}it-card-border-color);
-    border-bottom: var(--#{$prefix}it-card-border-width) solid var(--#{$prefix}it-card-border-color);
+    border-top: var(--#{$prefix}it-card-border-separator-width) solid var(--#{$prefix}it-card-border-color);
+    border-bottom: var(--#{$prefix}it-card-border-separator-width) solid var(--#{$prefix}it-card-border-color);
 
     font-size: 1rem;
     line-height: 1.5rem;
@@ -488,8 +518,8 @@ article.it-card {
   // Card can contain special lists, example: Related articles to a main Tag card
   > .list-group,
   .it-card-body > .list-group {
-    border-top: var(--#{$prefix}it-card-border-width) solid var(--#{$prefix}it-card-border-color);
-    border-bottom: var(--#{$prefix}it-card-border-width) solid var(--#{$prefix}it-card-border-color);
+    border-top: var(--#{$prefix}it-card-border-separator-width) solid var(--#{$prefix}it-card-border-color);
+    border-bottom: var(--#{$prefix}it-card-border-separator-width) solid var(--#{$prefix}it-card-border-color);
 
     margin-top: var(--#{$prefix}it-card-double-spacer-y);
     margin-bottom: var(--#{$prefix}it-card-double-spacer-y);
