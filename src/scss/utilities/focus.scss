@@ -1,10 +1,10 @@
 :focus:not([data-focus-mouse='true']),
 %focus,
 .it-carousel-wrapper .splide__pagination button:focus:not([data-focus-mouse='true']),
-.upload:focus:not([data-focus-mouse='true'])+label,
-.upload-dragdrop-input:focus[type='file']:not([data-focus-mouse='true'])+label,
+.upload:focus:not([data-focus-mouse='true']) + label,
+.upload-dragdrop-input:focus[type='file']:not([data-focus-mouse='true']) + label,
 .avatar-upload:focus-within:not([data-focus-mouse='true']),
-.rating input:focus:not([data-focus-mouse='true'])+label svg {
+.rating input:focus:not([data-focus-mouse='true']) + label svg {
   border-color: $focus-outline-color-out !important;
   box-shadow:
     0 0 0 2px $focus-outline-color-in,
@@ -97,10 +97,9 @@ p.it-card-text a {
   }
 
   &.form-check-group {
-
     :focus:not([data-focus-mouse='true']),
-    [type='checkbox']:focus+label,
-    [type='radio']:focus+label {
+    [type='checkbox']:focus + label,
+    [type='radio']:focus + label {
       width: 100%;
     }
   }
@@ -108,7 +107,6 @@ p.it-card-text a {
 
 .bg-dark .btn,
 .back-to-top.dark {
-
   &:focus:not([data-focus-mouse='true']),
   &%focus {
     box-shadow:
@@ -118,7 +116,6 @@ p.it-card-text a {
 }
 
 .autocomplete__wrapper .autocomplete__menu {
-
   .autocomplete__hint,
   .autocomplete__option {
     &:focus {
