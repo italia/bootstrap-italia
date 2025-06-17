@@ -27,7 +27,7 @@ Esempio base con immagine, descrizione e data:
 {% comment %}Example name: Card semplice{% endcomment %}
 {% capture example %}
 <div class="row">
-  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
+  <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-image rounded shadow-sm border">
       <!--card first child is the title (link)-->
@@ -90,25 +90,7 @@ La struttura dei metadati include:
 {% comment %}Example name: Card editoriale standard{% endcomment %}
 {% capture example %}
 <div class="row">
-  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
-    <!--start it-card-->
-    <article class="it-card rounded shadow-sm border">
-      <!--card first child is the title (link)-->
-      <h3 class="it-card-title no_toc">
-        <a href="#">Titolo del contenuto</a>
-      </h3>
-      <!--card body content-->
-      <div class="it-card-body">
-        <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
-      </div>
-      <!--finally the card footer metadata-->
-      <footer class="it-card-related it-card-footer">
-        <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
-      </footer>
-    </article>
-    <!--end it-card-->
-  </div>
-  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
+  <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-image it-card-height-full rounded shadow-sm border">
       <!--card first child is the title (link)-->
@@ -137,7 +119,7 @@ La struttura dei metadati include:
     </article>
     <!--end it-card-->
   </div>
-  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
+  <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-image it-card-height-full rounded shadow-sm border">
       <!--card first child is the title (link)-->
@@ -174,6 +156,26 @@ La struttura dei metadati include:
     <!--end it-card-->
   </div>
 </div>
+<div class="row">
+  <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
+    <!--start it-card-->
+    <article class="it-card rounded shadow-sm border">
+      <!--card first child is the title (link)-->
+      <h3 class="it-card-title no_toc">
+        <a href="#">Titolo del contenuto</a>
+      </h3>
+      <!--card body content-->
+      <div class="it-card-body">
+        <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
+      </div>
+      <!--finally the card footer metadata-->
+      <footer class="it-card-related it-card-footer">
+        <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
+      </footer>
+    </article>
+    <!--end it-card-->
+  </div>
+</div>
 {% endcapture %}{% include example.html content=example %}
 
 ### Card editoriali featured
@@ -193,30 +195,10 @@ Per mostrare un sottotitolo sulle card, applica la classe `.it-card-subtitle` a 
 
 Per indicare l'autore del contenuto, usa l'elemento semantico `address` con classe `.it-card-signature`. 
 
-{% comment %}Example name: Card editoriale standard{% endcomment %}
+{% comment %}Example name: Card editoriale featured{% endcomment %}
 {% capture example %}
 <div class="row">
-  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
-    <!--start it-card-->
-    <article class="it-card rounded shadow-sm border">
-      <!--card first child is the title (link)-->
-      <h3 class="it-card-title it-card-title-icon no_toc">
-        <a href="#">Titolo contenuto featured <span class="visually-hidden">(link esterno)</span></a>
-        <div><svg class="icon icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-external-link"></use></svg></div>
-      </h3>
-      <!--card body content-->
-      <div class="it-card-body">
-        <address class="it-card-signature">di Maria Verde</address>
-        <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
-      </div>
-      <!--finally the card footer metadata-->
-      <footer class="it-card-related it-card-footer">
-        <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
-      </footer>
-    </article>
-    <!--end it-card-->
-  </div>
-  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
+  <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-image it-card-height-full rounded shadow-sm border">
       <!--card first child is the title (link)-->
@@ -247,7 +229,7 @@ Per indicare l'autore del contenuto, usa l'elemento semantico `address` con clas
     </article>
     <!--end it-card-->
   </div>
-  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
+  <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-image it-card-height-full rounded shadow-sm border">
       <!--card first child is the title (link)-->
@@ -287,10 +269,32 @@ Per indicare l'autore del contenuto, usa l'elemento semantico `address` con clas
     <!--end it-card-->
   </div>
 </div>
+<div class="row">
+  <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
+    <!--start it-card-->
+    <article class="it-card rounded shadow-sm border">
+      <!--card first child is the title (link)-->
+      <h3 class="it-card-title it-card-title-icon no_toc">
+        <a href="#">Titolo contenuto featured <span class="visually-hidden">(link esterno)</span></a>
+        <div><svg class="icon icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-external-link"></use></svg></div>
+      </h3>
+      <!--card body content-->
+      <div class="it-card-body">
+        <address class="it-card-signature">di Maria Verde</address>
+        <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
+      </div>
+      <!--finally the card footer metadata-->
+      <footer class="it-card-related it-card-footer">
+        <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
+      </footer>
+    </article>
+    <!--end it-card-->
+  </div>
+</div>
 {% endcapture %}{% include example.html content=example %}
 
 
-### Card inline orizzontali
+### Card inline
 
 Usa questa variante orizzontale di card per creare sezioni in cui una o due card sono in evidenza rispetto a un gruppo di card più piccole. Usa questa variante solo quando per il contenuto è disponibile un'immagine.
 
@@ -303,10 +307,10 @@ Per sfruttare al meglio questa variante di card, assicurati di permettere la dis
 
 Per invertire solamente l'ordine visivo tra destra e sinistra, applica la classe `.it-card-inline-reverse`. 
 
-{% comment %}Example name: Card inline orizzontali{% endcomment %}
+{% comment %}Example name: Card editoriale inline{% endcomment %}
 {% capture example %}
 <div class="row">
-  <div class="col-12 col-md-12 mb-3 mb-md-4 col-lg-10 col-xl-8">
+  <div class="col-12 col-md-12 col-lg-12 col-xl-10 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-inline it-card-image rounded shadow-sm border">
      <!--card first child is all the card content: title (link) + body + footer -->
@@ -337,7 +341,7 @@ Per invertire solamente l'ordine visivo tra destra e sinistra, applica la classe
   </div>
 </div>
 <div class="row">
-  <div class="col-12 col-md-12 mb-3 mb-md-4 col-lg-10 col-xl-8">
+  <div class="col-12 col-md-12 col-lg-12 col-xl-10 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-inline it-card-inline-reverse it-card-image rounded shadow-sm border">
      <!--card first child is all the card content: title (link) + body + footer -->
@@ -449,6 +453,8 @@ Per mostrare la data o la durata di un evento in una card, aggiungili in un para
 Quando presenti date e orari di un evento, usa l'elemento `time` con l'appropriato attributo `datetime`. 
 Inserisci eventuali contenuti guida per lettori di schermo solo se realmente necessari per evitare il rumore, ad esempio il `<span class="visually-hidden">Data evento:</span>` presente nel primo esempio che segue. 
 
+Poni particolare attenzione che non si crei confusione se nella card fosse presente anche la data di pubblicazione, in caso valuta di non mostrarla. 
+
 Consigliamo, inoltre, di svolgere sempre test di usabilità anche con utenti che utilizzato tecnologie assistive. 
 
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
@@ -471,26 +477,7 @@ Ricorda di usare:
 {% comment %}Example name: Card eventi{% endcomment %}
 {% capture example %}
 <div class="row">
-  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
-    <!--start it-card-->
-    <article class="it-card rounded border shadow-sm mb-3">
-      <h3 class="it-card-title no_toc">
-        <a href="#">Titolo evento</a>
-      </h3>
-      <div class="it-card-body">
-        <p class="it-card-subtitle"><span class="visually-hidden">Data evento:</span> <time datetime="08-19">19 agosto</time>, <span class="visually-hidden">Orario:</span>  <time>11:30</time>–<time>13:00</time></p>
-        <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
-        <footer class="it-card-related">
-          <div class="it-card-taxonomy">
-            <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
-          </div>
-          <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
-        </footer>
-      </div>
-    </article>
-    <!--end it-card-->
-  </div>
-  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
+  <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-image it-card-height-full rounded border shadow-sm mb-3">
       <h3 class="it-card-title no_toc">
@@ -519,7 +506,7 @@ Ricorda di usare:
     </article>
     <!--end it-card-->
   </div>
-  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
+  <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-image it-card-height-full rounded border shadow-sm mb-3">
       <h3 class="it-card-title no_toc">
@@ -543,6 +530,27 @@ Ricorda di usare:
     <!--end it-card-->
   </div>
 </div>
+<div class="row">
+  <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
+    <!--start it-card-->
+    <article class="it-card rounded border shadow-sm mb-3">
+      <h3 class="it-card-title no_toc">
+        <a href="#">Titolo evento</a>
+      </h3>
+      <div class="it-card-body">
+        <p class="it-card-subtitle"><span class="visually-hidden">Data evento:</span> <time datetime="08-19">19 agosto</time>, <span class="visually-hidden">Orario:</span>  <time>11:30</time>–<time>13:00</time></p>
+        <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
+        <footer class="it-card-related">
+          <div class="it-card-taxonomy">
+            <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
+          </div>
+          <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
+        </footer>
+      </div>
+    </article>
+    <!--end it-card-->
+  </div>
+</div>
 {% endcapture %}{% include example.html content=example %}
 
 #### Card per eventi inline
@@ -551,10 +559,10 @@ Per disporre le card eventi in orizzontale, usa la classe `.it-card-inline` e ra
 
 Come nelle altre varianti, l'immagine segue sempre questo contenitore. Puoi invertire solamente l'ordine visivo usando usando la classe `.it-card-inline-reverse`.
 
-{% comment %}Example name: Card eventi inline orizzontali{% endcomment %}
+{% comment %}Example name: Card eventi inline{% endcomment %}
 {% capture example %}
 <div class="row">
-  <div class="col-12 col-md-12 mb-3 mb-md-4 col-lg-10 col-xl-8">
+  <div class="col-12 col-md-12 col-lg-12 col-xl-10 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-inline it-card-image rounded shadow-sm border">
      <!--card first child is all the card content: title (link) + body + footer -->
@@ -589,7 +597,7 @@ Come nelle altre varianti, l'immagine segue sempre questo contenitore. Puoi inve
   </div>
 </div>
 <div class="row">
-  <div class="col-12 col-md-12 mb-3 mb-md-4 col-lg-10 col-xl-8">
+  <div class="col-12 col-md-12 col-lg-12 col-xl-10 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-inline it-card-inline-reverse it-card-image rounded shadow-sm border">
      <!--card first child is all the card content: title (link) + body + footer -->
@@ -638,10 +646,10 @@ Negli esempi non abbiamo usato il `target` del link per favorire la normale navi
 
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
-{% comment %}Example name: Card media video{% endcomment %}
+{% comment %}Example name: Card media{% endcomment %}
 {% capture example %}
 <div class="row">
-  <div class="col-12 col-md-6 mb-3 mb-md-4">
+  <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-image it-card-height-full rounded shadow-sm border">
       <!--card first child is the title (link)-->
@@ -671,7 +679,7 @@ Negli esempi non abbiamo usato il `target` del link per favorire la normale navi
     </article>
     <!--end it-card-->
   </div>
-  <div class="col-12 col-md-6 mb-3 mb-md-4">
+  <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-image it-card-height-full rounded shadow-sm border">
       <!--card first child is the title (link)-->
@@ -709,9 +717,8 @@ Negli esempi non abbiamo usato il `target` del link per favorire la normale navi
     <!--end it-card-->
   </div>
 </div>
-
 <div class="row">
-  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
+  <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card rounded shadow-sm border">
       <!--card first child is the title (link)-->
@@ -733,7 +740,7 @@ Negli esempi non abbiamo usato il `target` del link per favorire la normale navi
     </article>
     <!--end it-card-->
   </div>
-  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
+  <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card rounded shadow-sm border">
       <!--card first child is the title (link)-->
@@ -771,10 +778,10 @@ Per disporre disporre le card media di tipo video in orizzontale, usa la classe 
 
 Come nelle altre varianti, l'immagine segue sempre questo contenitore. Puoi invertire solamente l'ordine visivo usando usando la classe `.it-card-inline-reverse`.
 
-{% comment %}Example name: Card eventi inline orizzontali{% endcomment %}
+{% comment %}Example name: Card media inline{% endcomment %}
 {% capture example %}
 <div class="row">
-  <div class="col-12 col-md-12 mb-3 mb-md-4 col-lg-10 col-xl-8">
+  <div class="col-12 col-md-12 col-lg-12 col-xl-10 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-inline it-card-image rounded shadow-sm border">
      <!--card first child is all the card content: title (link) + body + footer -->
@@ -806,7 +813,7 @@ Come nelle altre varianti, l'immagine segue sempre questo contenitore. Puoi inve
   </div>
 </div>
 <div class="row">
-  <div class="col-12 col-md-12 mb-3 mb-md-4 col-lg-10 col-xl-8">
+  <div class="col-12 col-md-12 col-lg-12 col-xl-10 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-inline it-card-inline-reverse it-card-image rounded shadow-sm border">
      <!--card first child is all the card content: title (link) + body + footer -->
@@ -883,7 +890,7 @@ Ricorda di usare:
 {% comment %}Example name: Card servizi{% endcomment %}
 {% capture example %}
 <div class="row">
-  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
+  <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-height-full rounded border shadow-sm mb-3">
       <h4 class="it-card-title no_toc">
@@ -900,7 +907,7 @@ Ricorda di usare:
     </article>
     <!--end it-card-->
   </div>
-  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
+  <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-height-full rounded border shadow-sm mb-3">
       <h4 class="it-card-title no_toc">
@@ -922,7 +929,9 @@ Ricorda di usare:
     </article>
     <!--end it-card-->
   </div>
-  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
+</div>
+<div class="row">
+  <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-height-full rounded border shadow-sm mb-3">
       <h4 class="it-card-title no_toc">
@@ -957,7 +966,7 @@ Per creare un ulteriore spazio dedicato a **collegamenti o pulsanti secondari**,
 {% comment %}Example name: Card servizi{% endcomment %}
 {% capture example %}
 <div class="row">
-  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
+  <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card rounded border shadow-sm mb-3">
       <h4 class="it-card-title it-card-title-icon no_toc">
@@ -975,7 +984,7 @@ Per creare un ulteriore spazio dedicato a **collegamenti o pulsanti secondari**,
     </article>
     <!--end it-card-->
   </div>
-  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
+  <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card rounded border shadow-sm mb-3">
       <h4 class="it-card-title it-card-title-icon no_toc">
@@ -998,7 +1007,9 @@ Per creare un ulteriore spazio dedicato a **collegamenti o pulsanti secondari**,
     </article>
     <!--end it-card-->
   </div>
-  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
+</div>
+<div class="row">
+  <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card rounded border shadow-sm mb-3">
       <h4 class="it-card-title it-card-title-icon no_toc">
@@ -1017,7 +1028,7 @@ Per creare un ulteriore spazio dedicato a **collegamenti o pulsanti secondari**,
 ### Card per profili personali 
 Usa questa variante per indicare schede personali o i relatori a un evento. Si attivano con la classe `.it-card-profile`. La testata della card è costruita con classi di stile dedicate come `.it-card-profile-header` per nome e ruolo. L'immagine di profilo sulla destra è visualizzata integrando il componente avatar in una delle sue varianti. 
 
-Per l'icona o l'immagine del profilo si usa il componente avatar nelle varianti `lg` e `xl`. 
+Per l'icona o l'immagine del profilo si consiglia di usare il componente avatar nella varianti `xl`. 
 
 La lista di metadati del profilo è costruita utilizzando liste descrittive `.it-card-description-list` con ogni coppia di item `dd`-`dt` raccolta in un `div` contenitore. 
 
@@ -1032,24 +1043,7 @@ Negli esempi abbiamo utilizzato il tag `h4` per i titoli `.it-card-profile-name`
 {% capture example %}
 
 <div class="row">
-  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
-    <!--start it-card-->
-    <article class="it-card it-card-profile rounded shadow-sm border">
-      <div class="it-card-profile-header">
-        <div class="it-card-profile">
-          <h4 class="it-card-profile-name no_toc">
-            <a href="#">Nome Personale</a>
-          </h4>
-          <p class="it-card-profile-role">Ruolo nell'organizzazione</p>
-        </div>
-        <div class="avatar size-lg">
-          <p aria-hidden="true">NP</p>
-        </div>
-      </div>
-    </article>
-    <!--end it-card-->
-  </div>
-  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
+  <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-profile rounded shadow-sm border">
       <div class="it-card-profile-header">
@@ -1066,7 +1060,7 @@ Negli esempi abbiamo utilizzato il tag `h4` per i titoli `.it-card-profile-name`
     </article>
     <!--end it-card-->
   </div>
-  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
+  <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-profile it-card-border-top it-card-border-top-secondary rounded shadow-sm border">
       <div class="it-card-profile-header">
@@ -1084,46 +1078,8 @@ Negli esempi abbiamo utilizzato il tag `h4` per i titoli `.it-card-profile-name`
     <!--end it-card-->
   </div>
 </div>
-
 <div class="row">
-  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
-    <!--start it-card-->
-    <article class="it-card it-card-profile rounded shadow-sm border">
-      <div class="it-card-profile-header">
-        <div class="it-card-profile">
-          <h4 class="it-card-profile-name no_toc">
-            <a href="#">Nome Personale</a>
-          </h4>
-          <p class="it-card-profile-role">Ruolo nell'organizzazione</p>
-        </div>
-        <div class="avatar size-lg">
-          <p aria-hidden="true">NP</p>
-        </div>
-      </div>
-      <div class="it-card-body">
-        <dl class="it-card-description-list">
-          <div>
-            <dt>Area:</dt>
-            <dd><a class="it-card-link" href="#">Nome dell'area di appartenenza</a></dd>
-          </div>
-          <div>
-            <dt>Email:</dt>
-            <dd>me@mail.com</dd>
-          </div>
-          <div>
-            <dt>Tel:</dt>
-            <dd>340.4050600</dd>
-          </div>
-          <div>
-            <dt>Indirizzo:</dt>
-            <dd>Via della città, 5 - 00100 Città</dd>
-          </div>
-        </dl>
-      </div>
-    </article>
-    <!--end it-card-->
-  </div>
-  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
+  <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-profile rounded shadow-sm border">
       <div class="it-card-profile-header">
@@ -1160,7 +1116,7 @@ Negli esempi abbiamo utilizzato il tag `h4` per i titoli `.it-card-profile-name`
     </article>
     <!--end it-card-->
   </div>
-  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
+  <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-profile it-card-border-top it-card-border-top-secondary rounded shadow-sm border">
       <div class="it-card-profile-header">
@@ -1219,7 +1175,7 @@ Negli esempi abbiamo utilizzato il tag `h4` per i titoli `.it-card-place-name`. 
 {% capture example %}
 
 <div class="row">
-  <div class="col-12 col-md-6 mb-3 mb-md-4">
+  <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-place rounded shadow-sm border">
       <div class="it-card-place-header">
@@ -1238,7 +1194,7 @@ Negli esempi abbiamo utilizzato il tag `h4` per i titoli `.it-card-place-name`. 
     </article>
     <!--end it-card-->
   </div>
-  <div class="col-12 col-md-6 mb-3 mb-md-4">
+  <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-place rounded shadow-sm border">
       <div class="it-card-place-header">
@@ -1259,7 +1215,7 @@ Negli esempi abbiamo utilizzato il tag `h4` per i titoli `.it-card-place-name`. 
   </div>
 </div>
 <div class="row">
-  <div class="col-12 col-md-6 mb-3 mb-md-4">
+  <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-place it-card-border-top it-card-border-top-secondary rounded shadow-sm border mb-3">
       <div class="it-card-place-header">
@@ -1305,7 +1261,7 @@ Negli esempi abbiamo utilizzato il tag `h4` per i titoli `.it-card-place-name`. 
     </article>
     <!--end it-card-->
   </div>
-  <div class="col-12 col-md-6 mb-3 mb-md-4">
+  <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-place rounded shadow-sm border">
       <div class="it-card-place-header">
@@ -1366,27 +1322,7 @@ Puoi combinare questa impostazione con le funzionalità del contenitore `.it-car
 {% comment %}Example name: Card con liste di contenuti affini{% endcomment %}
 {% capture example %}
 <div class="row">
-  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
-    <!--start it-card-->
-    <article class="it-card rounded shadow-sm border">
-      <!--card first child is the title (link)-->
-      <h3 class="it-card-title no_toc">
-        <a href="#">Argomento X</a>
-      </h3>
-      <!--card body content-->
-      <div class="it-card-body">
-        <p class="it-card-text">Descrizione breve dell'argomento in poche righe non troncate.</p>
-        <ul role="list" class="list-group list-group-flush" aria-label="Contenuti in evidenza:">
-          <li class="list-group-item"><a href="#" class="it-card-link">Titolo notizia affine</a></li>
-          <li class="list-group-item"><a href="#" class="it-card-link">Titolo media affine</a></li>
-          <li class="list-group-item"><a href="#" class="it-card-link">Altro titolo scheda affine</a></li>
-          <li class="list-group-item"><a href="#" class="it-card-link">Pagina profilo affine</a></li>
-        </ul>
-      </div>
-    </article>
-    <!--end it-card-->
-  </div>
-  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
+  <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-image rounded shadow-sm border">
       <!--card first child is the title (link)-->
@@ -1414,7 +1350,7 @@ Puoi combinare questa impostazione con le funzionalità del contenitore `.it-car
     </article>
     <!--end it-card-->
   </div>
-  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
+  <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-image rounded shadow-sm border">
       <!--card first child is the title (link)-->
@@ -1453,6 +1389,28 @@ Puoi combinare questa impostazione con le funzionalità del contenitore `.it-car
     <!--end it-card-->
   </div>
 </div>
+<div class="row">
+  <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
+    <!--start it-card-->
+    <article class="it-card rounded shadow-sm border">
+      <!--card first child is the title (link)-->
+      <h3 class="it-card-title no_toc">
+        <a href="#">Argomento X</a>
+      </h3>
+      <!--card body content-->
+      <div class="it-card-body">
+        <p class="it-card-text">Descrizione breve dell'argomento in poche righe non troncate.</p>
+        <ul role="list" class="list-group list-group-flush" aria-label="Contenuti in evidenza:">
+          <li class="list-group-item"><a href="#" class="it-card-link">Titolo notizia affine</a></li>
+          <li class="list-group-item"><a href="#" class="it-card-link">Titolo media affine</a></li>
+          <li class="list-group-item"><a href="#" class="it-card-link">Altro titolo scheda affine</a></li>
+          <li class="list-group-item"><a href="#" class="it-card-link">Pagina profilo affine</a></li>
+        </ul>
+      </div>
+    </article>
+    <!--end it-card-->
+  </div>
+</div>
 {% endcapture %}{% include example.html content=example %}
 
 ## Personalizzazioni e stili
@@ -1473,7 +1431,7 @@ Quando utilizzi ombre più evidenti, puoi rimuovere il bordo se la distinzione d
 
 #### Accessibilità: contrasto con lo sfondo
 
-Per garantire una buona accessibilità, consigliamo di mantenere un rapporto di contrasto di almeno 3:1 tra la card e lo sfondo. Le combinazioni di bordi, ombre e colori di sfondo aiutano a raggiungere questo obiettivo. 
+Per garantire una buona accessibilità, mantieni un rapporto di contrasto colore di almeno 3:1 tra la card e lo sfondo. Le combinazioni di bordi, ombre e colori di sfondo possono aiutarti a raggiungere questo obiettivo. 
 
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
@@ -1574,7 +1532,7 @@ Le varianti inline delle card presentano proporzioni immagini proprie su desktop
 {% comment %}Example name: Proporzioni immagini{% endcomment %}
 {% capture example %}
 <div class="row">
-  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
+  <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-image rounded shadow-sm border">
       <!--card first child is the title (link)-->
@@ -1600,7 +1558,7 @@ Le varianti inline delle card presentano proporzioni immagini proprie su desktop
     </article>
     <!--end it-card-->
   </div>
-<div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
+<div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-image rounded shadow-sm border">
       <!--card first child is the title (link)-->
@@ -1628,7 +1586,7 @@ Le varianti inline delle card presentano proporzioni immagini proprie su desktop
   </div>
 </div>
 <div class="row">
-  <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
+  <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-image rounded shadow-sm border">
       <!--card first child is the title (link)-->
@@ -1654,7 +1612,7 @@ Le varianti inline delle card presentano proporzioni immagini proprie su desktop
     </article>
     <!--end it-card-->
   </div>
-<div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
+<div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-image rounded shadow-sm border">
       <!--card first child is the title (link)-->
