@@ -1656,19 +1656,17 @@ Quando l'elemento `footer .it-card-related` si trova all'interno del contenitore
 
 ## Organizzazione e layout
 
-### Uso delle colonne
+### Uso della griglia
 
-Le card possono essere organizzate in colonne usando le classi `.col-*` per definire il numero di colonne desiderate. Negli esempi precedenti abbiamo usato `.col-12 col-md-6 col-lg-4` per ottenere 1 colonna su schermi piccoli, 2 colonne su schermi medi e 3 colonne su schermi grandi.
+Usando le [griglie](/docs/organizzare-gli-spazi/griglie/) si possono organizzare le card in righe e colonne con le classi `.row`e `.col-*` per definire il numero di colonne desiderate. 
 
-Sono esempi puramente dimostrativi, **puoi usare qualsiasi combinazione** di colonne per ottenere il layout desiderato.
+Negli esempi precedenti abbiamo usato per esempio `.col-12 col-md-6 col-lg-4` per ottenere 1 colonna su schermi piccoli o finestre strette, 2 colonne su schermi medi e 3 colonne su schermi grandi. Sono esempi puramente dimostrativi, **puoi usare qualsiasi combinazione** di colonne per ottenere il layout desiderato.
 
-La scelta del **numero di colonne** dipende dal layout della tua pagina e ha un **impatto sullo spazio interno** alla card per il contenuto. 
+La scelta del **numero di colonne** dipende dal layout della tua pagina e ha un **impatto sullo spazio interno** alla card per il contenuto. È importante quindi **bilanciare la dimensione** dei contenuti della card per garantire una buona leggibilità e un aspetto visivamente gradevole a tutte le dimensioni e/o fattori di ingrandimento della viewport.
 
-È importante quindi **bilanciare la dimensione** di titoli, testo e immagini per garantire una buona leggibilità e un aspetto visivamente gradevole.
+### Uso di classi dedicate
 
-### Gruppi di card
-
-Si possono organizzare gruppi di card con layout responsive con `.it-card-group` in un `div` contenitore. Di default il numero di colonne su desktop è impostato a 4. 
+Si possono inoltre organizzare gruppi di card con layout responsive con `.it-card-group` in un `div` contenitore. Di default il numero di colonne su desktop è impostato a 4. 
 
 {% comment %}Example name: Gruppi di card responsive{% endcomment %}
 {% capture example %}
@@ -1682,9 +1680,6 @@ Si possono organizzare gruppi di card con layout responsive con `.it-card-group`
         <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione.</p>
       </div>
       <footer class="it-card-related it-card-footer">
-        <div class="it-card-taxonomy">
-          <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
-        </div>
         <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-10-12">12 ottobre, {{ 'now' | date: "%Y" }}</time>
       </footer>
     </article>
@@ -1696,9 +1691,6 @@ Si possono organizzare gruppi di card con layout responsive con `.it-card-group`
         <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione.</p>
       </div>
       <footer class="it-card-related it-card-footer">
-        <div class="it-card-taxonomy">
-          <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
-        </div>
         <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-10-12">12 ottobre, {{ 'now' | date: "%Y" }}</time>
       </footer>
     </article>
@@ -1728,7 +1720,7 @@ Si possono organizzare gruppi di card con layout responsive con `.it-card-group`
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Numero di colonne specifiche
+#### Numero di colonne specifiche
 
 Usando `.it-card-group-N-cols`, dove modificando `N` si possono ottenere layout con 2 o 3 colonne su desktop. 
   
@@ -1756,7 +1748,7 @@ Usando `.it-card-group-N-cols`, dove modificando `N` si possono ottenere layout 
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Centrate orizzontalmente
+#### Centrate orizzontalmente
 
 Usando `.it-card-group-center`.
 
@@ -1784,7 +1776,7 @@ Usando `.it-card-group-center`.
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Layout responsive rispetto al contenitore (sperimentale)
+#### Uso di classi dedicate rispetto al contenitore (sperimentale)
 
 Gruppo di card che risponde a Container Queries attivabile usando la classe dedicata `.it-card-group-container-aware` per adattarsi responsive alla dimensione del contenitore invece che alla viewport. Ridimensiona la finestra del browser o prova a visualizzare questa pagina su dispositivi di diverse dimensioni per apprezzare la differenza di approccio.
 
@@ -1802,9 +1794,6 @@ Le Container Queries sono una tecnologia CSS moderna supportata nella maggior pa
         <p class="it-card-text">Questa card si adatta alla dimensione del suo contenitore, non della viewport.</p>
       </div>
       <footer class="it-card-related it-card-footer">
-        <div class="it-card-taxonomy">
-          <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
-        </div>
         <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-10-12">12 ottobre, {{ 'now' | date: "%Y" }}</time>
       </footer>
     </article>
@@ -1816,9 +1805,6 @@ Le Container Queries sono una tecnologia CSS moderna supportata nella maggior pa
         <p class="it-card-text">Questa card si adatta alla dimensione del suo contenitore, non della viewport.</p>
       </div>
       <footer class="it-card-related it-card-footer">
-        <div class="it-card-taxonomy">
-          <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
-        </div>
         <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-10-12">12 ottobre, {{ 'now' | date: "%Y" }}</time>
       </footer>
     </article>
@@ -1830,9 +1816,6 @@ Le Container Queries sono una tecnologia CSS moderna supportata nella maggior pa
         <p class="it-card-text">Questa card si adatta alla dimensione del suo contenitore, non della viewport.</p>
       </div>
       <footer class="it-card-related it-card-footer">
-        <div class="it-card-taxonomy">
-          <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
-        </div>
         <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-10-12">12 ottobre, {{ 'now' | date: "%Y" }}</time>
       </footer>
     </article>
@@ -1844,9 +1827,6 @@ Le Container Queries sono una tecnologia CSS moderna supportata nella maggior pa
         <p class="it-card-text">Questa card si adatta alla dimensione del suo contenitore, non della viewport.</p>
       </div>
       <footer class="it-card-related it-card-footer">
-        <div class="it-card-taxonomy">
-          <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
-        </div>
         <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-10-12">12 ottobre, {{ 'now' | date: "%Y" }}</time>
       </footer>
     </article>
