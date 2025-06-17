@@ -1,7 +1,7 @@
 
 .pagination {
   --#{$prefix}pagination-padding-x: var(--#{$prefix}spacing-s);
-  --#{$prefix}pagination-padding-y: var(--#{$prefix}spacing-xs);
+  --#{$prefix}pagination-padding-y: var(--#{$prefix}spacing-xxs);
   --#{$prefix}pagination-link-color: var(--#{$prefix}color-link);
   --#{$prefix}pagination-background: transparent;
   --#{$prefix}pagination-border-width: 2px;
@@ -41,7 +41,7 @@
     justify-content: center;
 
     ul {
-      margin-bottom: var(--#{$prefix}spacing-xs);
+      margin-bottom: var(--#{$prefix}spacing-xxs);
     }
 
     p {
@@ -126,7 +126,7 @@
   }
 
   span.d-inline-block {
-    margin-right: var(--#{$prefix}spacing-xs);
+    margin-right: var(--#{$prefix}spacing-xxs);
   }
 
   .icon {
@@ -137,7 +137,7 @@
 // Fallback for browsers that do not support gap
 @supports not ((gap: 8px)) {
   .page-item {
-    margin-right: 8px;
+    margin-right: var(--#{$prefix}spacing-xxs);
     &:last-child {
       margin-right: 0;
     }
