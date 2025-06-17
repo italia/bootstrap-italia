@@ -1,7 +1,6 @@
 @use 'sass:math';
 
 // Improved responsive it-card-group with a @container aware twist
-// XXXX prendere dimensioni griglie?
 .it-card-group {
   --#{$prefix}it-card-group-gap: #{$grid-gutter-width};
 
@@ -11,7 +10,7 @@
   // gap fallback
   margin: calc(-0.5 * var(--#{$prefix}it-card-group-gap));
 
-  > .it-card {
+  >.it-card {
     margin: calc(0.5 * var(--#{$prefix}it-card-group-gap));
     // Default stacked on mobile
     flex: 0 0 calc(100% - var(--#{$prefix}it-card-group-gap));
@@ -34,27 +33,27 @@
     margin: 0;
     gap: var(--#{$prefix}it-card-group-gap);
 
-    > .it-card {
+    >.it-card {
       margin: 0;
     }
   }
 
   // Predefined column layouts
-  &.it-card-group-2-cols > .it-card,
-  &.it-card-group-3-cols > .it-card,
-  &.it-card-group-4-cols > .it-card {
+  &.it-card-group-2-cols>.it-card,
+  &.it-card-group-3-cols>.it-card,
+  &.it-card-group-4-cols>.it-card {
     @include media-breakpoint-up(sm) {
       flex: 0 0 calc(50% - 0.5 * var(--#{$prefix}it-card-group-gap));
     }
   }
 
-  &.it-card-group-3-cols > .it-card {
+  &.it-card-group-3-cols>.it-card {
     @include media-breakpoint-up(md) {
       flex: 0 0 calc(33.333% - 0.667 * var(--#{$prefix}it-card-group-gap));
     }
   }
 
-  &.it-card-group-4-cols > .it-card {
+  &.it-card-group-4-cols>.it-card {
     @include media-breakpoint-up(md) {
       flex: 0 0 calc(33.333% - 0.667 * var(--#{$prefix}it-card-group-gap));
     }
@@ -66,11 +65,13 @@
 
   // Progressive enhancement with Container Queries
   @supports (container-type: inline-size) {
+
     // Only with .it-card-group-container-aware class
     &.it-card-group-container-aware {
       container-type: inline-size;
 
-      > .it-card {
+      >.it-card {
+
         // Reset Media Queries
         @include media-breakpoint-up(sm) {
           flex: auto;
@@ -101,13 +102,13 @@
       }
 
       // Override specific coulmns in container mode
-      &.it-card-group-2-cols > .it-card {
+      &.it-card-group-2-cols>.it-card {
         @container (min-width: 500px) {
           flex: 0 0 calc(50% - 0.5 * var(--#{$prefix}it-card-group-gap));
         }
       }
 
-      &.it-card-group-3-cols > .it-card {
+      &.it-card-group-3-cols>.it-card {
         @container (min-width: 800px) {
           flex: 0 0 calc(33.333% - 0.667 * var(--#{$prefix}it-card-group-gap));
         }
@@ -116,7 +117,7 @@
   }
 
   // Option for equal height cards
-  &.it-card-group-equal-height > .it-card {
+  &.it-card-group-equal-height>.it-card {
     height: 100%;
   }
 
@@ -192,7 +193,7 @@ article.it-card {
       color: color-hover($color-text-secondary);
     }
 
-    + .it-card-link {
+    +.it-card-link {
       margin-left: var(--#{$prefix}it-card-spacer-x);
     }
   }
@@ -207,14 +208,14 @@ article.it-card {
       align-items: center;
 
       // Gap fallback XXXXXX?
-      > * {
+      >* {
         margin: 0.5rem;
       }
 
       @supports (gap: 1rem) {
         gap: 1rem;
 
-        > * {
+        >* {
           margin: 0;
         }
       }
@@ -224,7 +225,8 @@ article.it-card {
       padding: 0 var(--#{$prefix}it-card-spacer-x);
 
       .it-card-profile {
-        width: calc(100% - 80px - 1rem); // XXX To fix image on the right... but does we need it? Or we need a responsive "container" approach for the wrap?
+        flex: 1;
+        max-width: 100%;
 
         .it-card-profile-name {
           margin-bottom: 0.25rem;
@@ -250,14 +252,14 @@ article.it-card {
       align-items: center;
 
       // Gap fallback XXXXXX?
-      > * {
+      >* {
         margin: 0.5rem;
       }
 
       @supports (gap: 1rem) {
         gap: 1rem;
 
-        > * {
+        >* {
           margin: 0;
         }
       }
@@ -267,7 +269,8 @@ article.it-card {
       padding: 0 var(--#{$prefix}it-card-spacer-x);
 
       .it-card-place {
-        width: calc(100% - 80px - 1rem); // XXX To fix image on the right... but does we need it? Or we need a responsive "container" approach for the wrap?
+        flex: 1;
+        max-width: 100%;
 
         .it-card-place-name {
           margin-bottom: 0.25rem;
@@ -390,14 +393,14 @@ article.it-card {
       justify-content: flex-end;
 
       // Gap fallback XXXXXX?
-      > * {
+      >* {
         margin: 0.5rem;
       }
 
       @supports (gap: 1rem) {
         gap: 1rem;
 
-        > * {
+        >* {
           margin: 0;
         }
       }
@@ -436,14 +439,14 @@ article.it-card {
       flex-wrap: wrap;
 
       // Gap fallback
-      > li {
+      >li {
         margin: 0.25rem;
       }
 
       @supports (gap: 0.5rem) {
         gap: 0.5rem;
 
-        > li {
+        >li {
           margin: 0;
         }
       }
@@ -513,8 +516,8 @@ article.it-card {
   }
 
   // Card can contain special lists, example: Related articles to a main Tag card
-  > .list-group,
-  .it-card-body > .list-group {
+  >.list-group,
+  .it-card-body>.list-group {
     border-top: var(--#{$prefix}it-card-border-width) solid var(--#{$prefix}it-card-border-color);
     border-bottom: var(--#{$prefix}it-card-border-width) solid var(--#{$prefix}it-card-border-color);
 
@@ -534,7 +537,7 @@ article.it-card {
     }
   }
 
-  .it-card-body > .list-group {
+  .it-card-body>.list-group {
     margin-top: calc(4 * var(--#{$prefix}it-card-spacer-y));
     margin-bottom: calc(2 * var(--#{$prefix}it-card-spacer-y));
 
@@ -543,8 +546,8 @@ article.it-card {
     }
   }
 
-  > .it-card-header + .list-group,
-  > .list-group + .it-card-footer {
+  >.it-card-header+.list-group,
+  >.list-group+.it-card-footer {
     border-top: 0;
   }
 
@@ -556,6 +559,7 @@ article.it-card {
 
     &.rounded {
       .it-card-image-wrapper {
+
         &:first-child,
         &:nth-child(2) {
           border-top-left-radius: var(--#{$prefix}it-card-inner-border-radius);
@@ -565,6 +569,7 @@ article.it-card {
 
       &.it-card-border-top {
         .it-card-image-wrapper {
+
           &:first-child,
           &:nth-child(2) {
             border-top-left-radius: 0;
@@ -664,6 +669,7 @@ article.it-card {
 
         &.rounded {
           .it-card-image-wrapper {
+
             &:first-child,
             &:nth-child(2) {
               border-top-right-radius: 0 !important;
@@ -673,6 +679,7 @@ article.it-card {
 
           &.it-card-inline-reverse {
             .it-card-image-wrapper {
+
               &:first-child,
               &:nth-child(2) {
                 border-top-left-radius: 0 !important;
