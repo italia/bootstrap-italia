@@ -1324,7 +1324,7 @@ Puoi combinare questa impostazione con le funzionalità del contenitore `.it-car
 <div class="row">
   <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
     <!--start it-card-->
-    <article class="it-card it-card-image rounded shadow-sm border">
+    <article class="it-card it-card-image it-card-height-full rounded shadow-sm border">
       <!--card first child is the title (link)-->
       <h3 class="it-card-title no_toc">
         <a href="#">Argomento Y</a>
@@ -1352,7 +1352,7 @@ Puoi combinare questa impostazione con le funzionalità del contenitore `.it-car
   </div>
   <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
     <!--start it-card-->
-    <article class="it-card it-card-image rounded shadow-sm border">
+    <article class="it-card it-card-image it-card-height-full rounded shadow-sm border">
       <!--card first child is the title (link)-->
       <h3 class="it-card-title no_toc">
         <a href="#">Titolo evento</a>
@@ -1392,7 +1392,7 @@ Puoi combinare questa impostazione con le funzionalità del contenitore `.it-car
 <div class="row">
   <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
     <!--start it-card-->
-    <article class="it-card rounded shadow-sm border">
+    <article class="it-card it-card-height-full rounded shadow-sm border">
       <!--card first child is the title (link)-->
       <h3 class="it-card-title no_toc">
         <a href="#">Argomento X</a>
@@ -1643,16 +1643,61 @@ Le varianti inline delle card presentano proporzioni immagini proprie su desktop
 
 ### Altezze delle card
 
-Per la gestione delle **altezze** in caso di gruppi di card, puoi usare le classi: 
-- `.it-card-height-auto` (altezza basata sul contenuto) 
-- `.it-card-height-full` (occupa tutto lo spazio disponibile)
-da applicare all'elemento `article`. 
+Per la gestione delle **altezze** in caso di gruppi di card, l'impostazione di base è l'altezza basata sul contenuto. 
 
-Negli esempi che precedono è usato `.it-card-height-full` per rendere coerenti le anteprime affiancate di card con immagini. 
+Puoi cambiare questo comportamento per ogni card usando la classe `.it-card-height-full` (altezza basata su tutto lo spazio disponibile) sull'elemento `article .it-card`. Questa impostazione è presente in diversi degli esempi che precedono. 
 
-Quando l'elemento `footer .it-card-related` si trova all'interno del contenitore `.it-card-body`, questo resta attaccato al contenuto della card, anche nelle card a tutta altezza. Se invece si trova fuori il contenitore, con l'aggiunta della classe `.it-card-footer` si allineerà verticalmente sempre con l'altezza massima della card, attaccandosi al bordo inferiore.
+È da notare che quando l'elemento `footer .it-card-related` si trova all'interno del contenitore `.it-card-body`, questo resta sempre attaccato verticalmente al contenuto della card. Se invece si trova fuori del contenitore, con l'aggiunta della classe `.it-card-footer` si allineerà verticalmente sempre con l'altezza massima della card, attaccandosi al bordo inferiore come l'elenento data nell'esempio che segue senza immagine.
 
-**XXX È DA INSERIRE QUI UN MARKUP ESEMPIO**
+{% comment %}Example name: Altezza delle card basata su tutto lo spazio{% endcomment %}
+{% capture example %}
+<div class="row">
+  <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
+    <!--start it-card-->
+    <article class="it-card it-card-image it-card-height-full rounded shadow-sm border">
+      <!--card first child is the title (link)-->
+      <h3 class="it-card-title no_toc">
+        <a href="#">Titolo del contenuto</a>
+      </h3>
+      <!--card second child is the image (optional)-->
+      <div class="it-card-image-wrapper">
+        <div class="ratio ratio-16x9">
+          <figure class="figure img-full">
+            <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+          </figure>
+        </div>
+      </div>
+      <!--card body content-->
+      <div class="it-card-body">
+        <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
+      </div>
+      <!--finally the card footer metadata-->
+      <footer class="it-card-related it-card-footer">
+        <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
+      </footer>
+    </article>
+    <!--end it-card-->
+  </div>
+  <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
+    <!--start it-card-->
+    <article class="it-card it-card-height-full rounded shadow-sm border">
+      <!--card first child is the title (link)-->
+      <h3 class="it-card-title no_toc">
+        <a href="#">Titolo del contenuto</a>
+      </h3>
+      <!--card body content-->
+      <div class="it-card-body">
+        <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
+      </div>
+      <!--finally the card footer metadata-->
+      <footer class="it-card-related it-card-footer">
+        <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
+      </footer>
+    </article>
+    <!--end it-card-->
+  </div>
+</div>
+{% endcapture %}{% include example.html content=example %}
 
 ## Organizzazione e layout
 
