@@ -25,7 +25,8 @@
       }
     }
   }
-  .it-special-card { // xxx deprecated with old .card
+  .it-special-card {
+    // xxx deprecated with old .card
     h5.card-title {
       margin-bottom: 0;
     }
@@ -44,14 +45,16 @@
     padding-top: $crs-margin-bottom;
     padding-bottom: 0;
   }
-  .card-wrapper { // xxx deprecated with old .card
+  .card-wrapper {
+    // xxx deprecated with old .card
     padding-bottom: $v-gap * 2;
   }
   .it-card {
     padding-bottom: $v-gap * 2;
   }
-  // Landscape abstract 
-  &.it-carousel-landscape-abstract { // xxx deprecated with old .card
+  // Landscape abstract
+  &.it-carousel-landscape-abstract {
+    // xxx deprecated with old .card
     .it-single-slide-wrapper {
       > a {
         position: relative;
@@ -124,12 +127,14 @@
     }
     margin: 0 auto;
     // with img
-    .card.card-img { // xxx deprecated with old .card
+    .card.card-img {
+      // xxx deprecated with old .card
       margin-left: 0;
       margin-right: 0;
     }
     // with shadow
-    .it-card-bg { // xxx deprecated with old .card
+    .it-card-bg {
+      // xxx deprecated with old .card
       .card.card-bg {
         margin-left: 0;
         margin-right: 0;
@@ -139,7 +144,7 @@
   &.it-calendar-wrapper {
     .splide__track {
       padding-top: 0;
-      .card.card-bg { 
+      .card.card-bg {
         margin-left: 0;
         margin-right: 0;
       }
@@ -175,7 +180,8 @@
         }
         .it-text-slider-wrapper-outside {
           flex-basis: 50%;
-          .card { // xxx deprecated with old .card
+          .card {
+            // xxx deprecated with old .card
             border-right: none;
             margin-right: 0;
             &:after {
