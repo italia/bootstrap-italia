@@ -1758,6 +1758,40 @@ L'elemento `footer .it-card-related` si allinea verticamente in modo diverso a s
 </div>
 {% endcapture %}{% include example.html content=example %}
 
+### Pulsanti a tutta larghezza su mobile
+
+Puoi personalizzare il comportamento dei pulsanti nell'area metadati della card per ottenere pulsanti a larghezza fluida su dispositivi mobili utilizzando le classi `.d-grid` e `.d-md-block`. Per maggiori informazioni sulla personalizzazione dei pulsanti, consulta la [documentazione sulle varianti di dimensioni dei buttons](/docs/componenti/buttons#varianti-di-dimensione/).
+
+{% comment %}Example name: Card con pulsante fluido{% endcomment %}
+{% capture example %}
+<div class="row">
+  <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
+    <!--start it-card-->
+    <article class="it-card rounded shadow border">
+      <h3 class="it-card-title no_toc">
+        <a href="#">Titolo dell'evento</a>
+      </h3>
+      <!--card body content-->
+      <div class="it-card-body">
+        <p class="it-card-subtitle">Dal 4 al 6 agosto</p>
+        <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
+      </div>
+      <!--finally the card footer metadata-->
+      <footer class="it-card-related it-card-footer">
+        <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
+      </footer>
+      <!--finally the card footer metadata-->
+      <div class="it-card-footer">
+        <div class="d-grid gap-2 d-md-block">
+          <a href="#" class="btn btn-outline-secondary">Prenota <span class="visually-hidden">per Titolo dell'evento</span></a>
+        </div>
+      </div>
+    </article>
+    <!--end it-card-->
+  </div>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
 ## Organizzazione e layout
 
 ### Uso di contenitori responsive
