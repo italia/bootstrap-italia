@@ -2221,4 +2221,30 @@ Svolgi sempre test di usabilità con utenti che utilizzano tecnologie assistive 
 Questo è un nuovo componente card definito dalle classi `.it-card` e relativi modificatori. 
 
 Le classi legacy di Bootstrap `.card` sono ora deprecate ma **saranno mantenute nei fogli di stile fino al prossimo rilascio maggiore, per permettere una migrazione graduale**. 
+
+Per migrare le tue card dalle deprecate `.card` alle nuove `.it-card` (v2.16.0) considera prima di tutto i cambi strutturali. Prima era:
+```html
+<!-- Card base minimal -->
+<div class="card-wrapper">
+  <div class="card">
+    <div class="card-body">
+      <h3 class="card-title h5 ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h3>
+      <p class="card-text font-serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+  </div>
+</div>
+```
+
+Adesso:
+```html
+<!-- Card base minimal -->
+<article class="it-card rounded shadow-sm border">
+  <h3 class="it-card-title">
+    <a href="#">Titolo del contenuto</a>
+  </h3>
+  <div class="it-card-body">
+    <p class="it-card-text">Breve descrizione.</p>
+  </div>
+</article>
+```
 {% endcapture %}{% include callout-breaking.html content=callout version="2.16.0" type="danger" %}
