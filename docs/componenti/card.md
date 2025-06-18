@@ -2247,7 +2247,9 @@ Mantieni un rapporto di contrasto di almeno 3:1 tra le card e lo sfondo. Le comb
 Svolgi sempre test di usabilità con utenti che utilizzano tecnologie assistive per verificare l'efficacia delle soluzioni implementate.
 
 ## Funzionalità future
-**Sono in lavorazione le varianti di tipo presentazione (dati e banner), e l'interfaccia per mostrare funzionalità di condivisione.**
+**Sono in lavorazione**:
+- Le varianti di tipo presentazione (dati e banner) come mostrate in [UI Kit Italia](https://github.com/italia/design-ui-kit/) v3.7.0. 
+- L'eventuale pulsante di utilità per attivare un dropdown che mostri le possibilità di condivisione della card, come già disponibile nelle card del sito [sito Designers Italia](https://designers.italia.it/community/).
 
 ## Breaking change
 
