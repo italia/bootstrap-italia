@@ -11,13 +11,13 @@
 
 <title>Breaking change · Bootstrap Italia</title>
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202506181703" rel="stylesheet" />
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202506181709" rel="stylesheet" />
 
 <!-- Documentation extras -->
  
 <link href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" rel="stylesheet" />
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202506181703" rel="stylesheet" />
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202506181709" rel="stylesheet" />
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico" />
@@ -615,6 +615,14 @@
   <div class="sidebar-wrapper">
     <h3>Breaking change</h3>
     <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#2150">2.15.0</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#header">Header</a></li>
+<li class="toc-entry toc-h3"><a href="#megamenu">Megamenu</a></li>
+<li class="toc-entry toc-h3"><a href="#navscroll">Navscroll</a></li>
+<li class="toc-entry toc-h3"><a href="#sticky">Sticky</a></li>
+</ul>
+</li>
 <li class="toc-entry toc-h2"><a href="#2140">2.14.0</a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#autocompletamento">Autocompletamento</a></li>
@@ -655,11 +663,11 @@
 <li class="toc-entry toc-h2"><a href="#280">2.8.0</a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#avatar">Avatar</a></li>
-<li class="toc-entry toc-h3"><a href="#header">Header</a></li>
+<li class="toc-entry toc-h3"><a href="#header-1">Header</a></li>
 <li class="toc-entry toc-h3"><a href="#input-2">Input</a></li>
 <li class="toc-entry toc-h3"><a href="#liste-2">Liste</a></li>
-<li class="toc-entry toc-h3"><a href="#megamenu">Megamenu</a></li>
-<li class="toc-entry toc-h3"><a href="#navscroll">Navscroll</a></li>
+<li class="toc-entry toc-h3"><a href="#megamenu-1">Megamenu</a></li>
+<li class="toc-entry toc-h3"><a href="#navscroll-1">Navscroll</a></li>
 <li class="toc-entry toc-h3"><a href="#paginazione">Paginazione</a></li>
 <li class="toc-entry toc-h3"><a href="#sidebar">Sidebar</a></li>
 <li class="toc-entry toc-h3"><a href="#transfer">Transfer</a></li>
@@ -691,6 +699,62 @@
           <p class="lead"></p>
           <p>Di seguito saranno mostrate le principali breaking change di ogni versione.</p>
 
+<h2 id="2150">2.15.0</h2>
+
+<p><a href="https://github.com/italia/bootstrap-italia/releases/tag/v2.15.0">Changelog completo</a> <svg class="icon steppers-success" aria-hidden="true"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-file"></use></svg></p>
+
+<h3 id="header">Header</h3>
+
+<p>La navbar presente negli esempi, quando aperta in versione mobile o a forte ingrandimento, è stata reimplementata come modale per migliorare l’accessibilità con le combinazioni principali di lettori di schermo, sistema operativo e browser. Modifiche principali:</p>
+<ul>
+  <li>struttura: la navbar ora utilizza un pattern dialog con backdrop</li>
+  <li>gerarchia visiva: la gestione <code class="language-plaintext highlighter-rouge">z-index</code> è allineata al componente modale</li>
+  <li>gestione del focus: implementato <code class="language-plaintext highlighter-rouge">focus-trap.js</code> per utenti da tastiera e lettori di schermo, e gestione inert</li>
+  <li>il comportamento è diverso se implementata dentro o fuori dall’elemento <code class="language-plaintext highlighter-rouge">main</code> di pagina (se presente)</li>
+</ul>
+
+<p>Se hai personalizzato il CSS della navbar, rivedi le tue modifiche per verificarne la compatibilità. Se hai modificato il comportamento JavaScript, assicurati che funzioni con il nuovo pattern dialog. Testa la tua implementazione con lettori di schermo e con utenti per verificarne l’accessibilità.</p>
+
+<h3 id="megamenu">Megamenu</h3>
+
+<p>La navbar presente negli esempi, quando aperta in versione mobile o a forte ingrandimento, è stata reimplementata come modale per migliorare l’accessibilità con le combinazioni principali di lettori di schermo, sistema operativo e browser. Modifiche principali:</p>
+<ul>
+  <li>struttura: la navbar ora utilizza un pattern dialog con backdrop</li>
+  <li>gerarchia visiva: la gestione <code class="language-plaintext highlighter-rouge">z-index</code> è allineata al componente modale</li>
+  <li>gestione del focus: implementato <code class="language-plaintext highlighter-rouge">focus-trap.js</code> per utenti da tastiera e lettori di schermo, e gestione inert</li>
+  <li>il comportamento è diverso se implementata dentro o fuori dall’elemento <code class="language-plaintext highlighter-rouge">main</code> di pagina (se presente)</li>
+</ul>
+
+<p>Se hai personalizzato il CSS della navbar, rivedi le tue modifiche per verificarne la compatibilità. Se hai modificato il comportamento JavaScript in, assicurati che funzioni con il nuovo pattern dialog. Testa la tua implementazione con lettori di schermo e con utenti per verificarne l’accessibilità.</p>
+
+<h3 id="navscroll">Navscroll</h3>
+
+<ul>
+  <li>Spostato il pulsante “Indietro” come primo elemento della struttura interna di <code class="language-plaintext highlighter-rouge">.menu-wrapper</code>.</li>
+</ul>
+
+<p>Inoltre, la versione mobile o a forte ingrandimento del componente, che si basa sulla navbar presente anche nei componenti Header e Megamenu, è stata reimplementata come modale per migliorare l’accessibilità con le combinazioni principali di lettori di schermo, sistema operativo e browser. Modifiche principali:</p>
+<ul>
+  <li>struttura: la navbar ora utilizza un pattern dialog con backdrop</li>
+  <li>gerarchia visiva: la gestione <code class="language-plaintext highlighter-rouge">z-index</code> è allineata al componente modale</li>
+  <li>gestione del focus: implementato <code class="language-plaintext highlighter-rouge">focus-trap.js</code> per utenti da tastiera e lettori di schermo, e gestione inert</li>
+  <li>il comportamento è diverso se implementata dentro o fuori dall’elemento <code class="language-plaintext highlighter-rouge">main</code> di pagina (se presente)</li>
+</ul>
+
+<p>Se hai personalizzato il CSS della navbar, rivedi le tue modifiche per verificarne la compatibilità. Se hai modificato il comportamento JavaScript in, assicurati che funzioni con il nuovo pattern dialog. Testa la tua implementazione con lettori di schermo e con utenti per verificarne l’accessibilità.</p>
+
+<h3 id="sticky">Sticky</h3>
+
+<p>La navbar presente nel markup dell’esempio “Attivabile con target”, quando aperta in versione mobile o a forte ingrandimento, è stata reimplementata come modale per migliorare l’accessibilità con le combinazioni principali di lettori di schermo, sistema operativo e browser. Modifiche principali:</p>
+<ul>
+  <li>struttura: la navbar ora utilizza un pattern dialog con backdrop</li>
+  <li>gerarchia visiva: la gestione <code class="language-plaintext highlighter-rouge">z-index</code> è allineata al componente modale</li>
+  <li>gestione del focus: implementato <code class="language-plaintext highlighter-rouge">focus-trap.js</code> per utenti da tastiera e lettori di schermo, e gestione inert</li>
+  <li>il comportamento è diverso se implementata dentro o fuori dall’elemento <code class="language-plaintext highlighter-rouge">main</code> di pagina (se presente)</li>
+</ul>
+
+<p>Se hai personalizzato il CSS della navbar, rivedi le tue modifiche per verificarne la compatibilità. Se hai modificato il comportamento JavaScript, assicurati che funzioni con il nuovo pattern dialog. Testa la tua implementazione con lettori di schermo e con utenti per verificarne l’accessibilità.</p>
+
 <h2 id="2140">2.14.0</h2>
 
 <p><a href="https://github.com/italia/bootstrap-italia/releases/tag/v2.14.0">Changelog completo</a> <svg class="icon steppers-success" aria-hidden="true"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-file"></use></svg></p>
@@ -706,7 +770,7 @@
 
 <h3 id="generale">Generale</h3>
 
-<p>Il <code class="language-plaintext highlighter-rouge">focus</code> con la tastiera viene adesso settato con l’attributo <code class="language-plaintext highlighter-rouge">datadata-focus-mouse</code>
+<p>Il <code class="language-plaintext highlighter-rouge">focus</code> con la tastiera viene adesso settato con l’attributo <code class="language-plaintext highlighter-rouge">data-focus-mouse</code>
 invece che con la classe <code class="language-plaintext highlighter-rouge">focus--mouse</code>. Da tenere presente nel caso di un 
 precedente utilizzo della classe <code class="language-plaintext highlighter-rouge">focus--mouse</code> per un controllo e/o un’ implementazione 
 ulteriore di accessibilità.</p>
@@ -828,7 +892,7 @@ tutte le tab di tipo <code class="language-plaintext highlighter-rouge">Card</co
 
 <p>Il toggle del dropdown diventa <code class="language-plaintext highlighter-rouge">&lt;button&gt;</code> invece di <code class="language-plaintext highlighter-rouge">&lt;a&gt;</code>.</p>
 
-<h3 id="header">Header</h3>
+<h3 id="header-1">Header</h3>
 
 <ul>
   <li>Il toggle del dropdown diventa <code class="language-plaintext highlighter-rouge">&lt;button&gt;</code> invece di <code class="language-plaintext highlighter-rouge">&lt;a&gt;</code>.</li>
@@ -845,7 +909,7 @@ con classe <code class="language-plaintext highlighter-rouge">.input-group-text<
 
 <p>Gli elementi di tipo <code class="language-plaintext highlighter-rouge">&lt;a&gt;</code> dei collapse necessitano l’aggiunta dell’attributo <code class="language-plaintext highlighter-rouge">role="button"</code>.</p>
 
-<h3 id="megamenu">Megamenu</h3>
+<h3 id="megamenu-1">Megamenu</h3>
 
 <ul>
   <li>tutti gli esempi del componente, anche quelli integrati nel componente <a href="/bootstrap-italia/docs/menu-di-navigazione/header/">header</a>, sono stati rivisti: refactoring markup <code class="language-plaintext highlighter-rouge">HTML</code>, classi e stili nei file <code class="language-plaintext highlighter-rouge">_megamenu.scss</code>, <code class="language-plaintext highlighter-rouge">_navigation.scss</code>, <code class="language-plaintext highlighter-rouge">_headernavbar.scss</code>, <code class="language-plaintext highlighter-rouge">_headernavbartheme.scss</code>, <code class="language-plaintext highlighter-rouge">_navigationtheme.scss</code></li>
@@ -854,7 +918,7 @@ con classe <code class="language-plaintext highlighter-rouge">.input-group-text<
   <li>rimosse variabili obsolete e inutilizzate da <code class="language-plaintext highlighter-rouge">_variables.scss</code></li>
 </ul>
 
-<h3 id="navscroll">Navscroll</h3>
+<h3 id="navscroll-1">Navscroll</h3>
 
 <p>Gli elementi con classe <code class="language-plaintext highlighter-rouge">.it-back-button</code> diventano di tipo <code class="language-plaintext highlighter-rouge">&lt;button&gt;</code> invece di <code class="language-plaintext highlighter-rouge">&lt;a&gt;</code>.
 Gli elementi di tipo <code class="language-plaintext highlighter-rouge">&lt;a&gt;</code> dei collapse necessitano l’aggiunta dell’attributo <code class="language-plaintext highlighter-rouge">role="button"</code>.</p>
@@ -905,15 +969,15 @@ Gli elementi di tipo <code class="language-plaintext highlighter-rouge">&lt;a&gt
     </div>
 
     
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202506181703"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202506181709"></script>
 <script>
   bootstrap.loadFonts('/bootstrap-italia/dist/fonts')
-</script><script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202506181703"></script>
+</script><script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202506181709"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/anchor.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/clipboard.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tsparticles.min.js"></script>
 
-<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202506181703"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202506181709"></script>
 
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tweenjs.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/easeljs.min.js"></script>
@@ -930,7 +994,7 @@ Gli elementi di tipo <code class="language-plaintext highlighter-rouge">&lt;a&gt
     { src: '/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png', id: 'cover-7' },
   ]
 </script>
-<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202506181703"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202506181709"></script>
 <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
 
 <script>
