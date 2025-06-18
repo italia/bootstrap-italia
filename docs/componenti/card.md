@@ -2211,4 +2211,4 @@ Mantieni un rapporto di contrasto di almeno 3:1 tra le card e lo sfondo. Le comb
 Svolgi sempre test di usabilità con utenti che utilizzano tecnologie assistive per verificare l'efficacia delle soluzioni implementate.
 
 ## Funzionalità future
-**Sono in lavorazione le varianti di tipo presentazione (dati e banner).**
+**Sono in lavorazione le varianti di tipo presentazione (dati e banner), e l'interfaccia per mostrare funzionalità di condivisione.**
