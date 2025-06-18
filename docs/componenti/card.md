@@ -1474,6 +1474,107 @@ Puoi combinare questa impostazione con le funzionalità del contenitore `.it-car
 </div>
 {% endcapture %}{% include example.html content=example %}
 
+## Card di presentazione
+
+Le card di presentazione sono utili per presentare e dare evidenza a contenuti o per visualizzare dati in modo chiaro e organizzato.
+
+### Card per presentare contenuti
+
+La card presentazione contenuti è ottimizzata per presentare l'accesso a un unico contenuto (sezione, scheda in evidenza, o altro) con icona, titolo e sottotitolo. Puoi attivarla con la classe `.it-card-presentation`.
+
+{% comment %}Example name: Card presentazione contenuti{% endcomment %}
+{% capture example %}
+<div class="row">
+  <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
+    <!--start it-card-->
+    <article class="it-card it-card-presentation rounded shadow-sm border">
+      <!--card first child is the title (link)-->
+      <h3 class="it-card-title no_toc">
+        <a href="#">Titolo del contenuto</a>
+      </h3>
+      <!--card second child is the icon (optional)-->
+      <div class="it-card-presentation-icon-wrapper">
+        <svg class="icon icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chart-line"></use></svg>
+      </div>
+      <!--card body content-->
+      <div class="it-card-body">
+        <p class="it-card-subtitle">Sottotitolo</p>
+      </div>
+    </article>
+    <!--end it-card-->
+  </div>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+#### Con link o pulsanti accessori
+
+Se il contesto lo richiede, usa `.it-card-footer` per creare uno spazio dedicato per un link o azione correlata, come negli esempi seguenti. In questo caso il titolo della card non dovrebbe essere un link. 
+
+{% comment %}Example name: Card presentazione contenuti con link accessori{% endcomment %}
+{% capture example %}
+<div class="row">
+  <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
+    <!--start it-card-->
+    <article class="it-card it-card-presentation rounded shadow-sm border">
+      <!--card first child is the title (link)-->
+      <h3 class="it-card-title no_toc">
+        Titolo del contenuto
+      </h3>
+      <!--card second child is the icon (optional)-->
+      <div class="it-card-presentation-icon-wrapper">
+        <svg class="icon icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chart-line"></use></svg>
+      </div>
+      <!--card body content-->
+      <div class="it-card-body">
+        <p class="it-card-subtitle">Sottotitolo</p>
+      </div>
+      <div class="it-card-footer" aria-label="Link correlati:">
+        <a href="#">Scopri maggiori informazioni<span class="visually-hidden"> su Titolo del contenuto</span></a>
+      </div>
+    </article>
+    <!--end it-card-->
+  </div>
+  <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
+    <!--start it-card-->
+    <article class="it-card it-card-presentation rounded shadow-sm border">
+      <!--card first child is the title (link)-->
+      <h3 class="it-card-title no_toc">
+        Titolo del contenuto
+      </h3>
+      <!--card second child is the icon (optional)-->
+      <div class="it-card-presentation-icon-wrapper">
+        <svg class="icon icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chart-line"></use></svg>
+      </div>
+      <!--card body content-->
+      <div class="it-card-body">
+        <p class="it-card-subtitle">Sottotitolo</p>
+      </div>
+      <div class="it-card-footer" aria-label="Link correlati:">
+        <button type="button" class="btn btn-outline-primary">Apri il form di iscrizione <span class="visually-hidden">per Titolo del contenuto</span></button>
+      </div>
+    </article>
+    <!--end it-card-->
+  </div>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+### Card per presentare dati
+
+La card di presentazione dati permette di evidenziare un valore numerico significativo con la sua descrizione e l'andamento nel tempo. Puoi attivarla con la classe `.it-card-presentation-data`.
+
+{% comment %}Example name: Card presentazione dati{% endcomment %}
+{% capture example %}
+<div class="row">
+  <div class="col-12 col-lg-6">
+    <article class="it-card it-card-presentation-data">
+      <div class="it-card-body">
+        Lorem ipsum.
+      </div>
+    </article>
+  </div>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
 ## Personalizzazioni e stili
 
 Alcune classi e codice HTML utile a personalizzare le card.
