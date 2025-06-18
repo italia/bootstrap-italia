@@ -97,13 +97,13 @@
     text-decoration: underline;
   }
 
-  &:focus {
-    z-index: 3;
-    outline: $pagination-focus-outline;
-    background-color: var(--#{$prefix}pagination-focus-bg);
-    box-shadow: var(--#{$prefix}pagination-focus-box-shadow);
-    color: var(--#{$prefix}pagination-focus-color);
-  }
+  // &:focus {
+  //   z-index: 3;
+  //   outline: $pagination-focus-outline;
+  //   background-color: var(--#{$prefix}pagination-focus-bg);
+  //   box-shadow: var(--#{$prefix}pagination-focus-box-shadow);
+  //   color: var(--#{$prefix}pagination-focus-color);
+  // }
 
   &.disabled,
   .disabled>& {
