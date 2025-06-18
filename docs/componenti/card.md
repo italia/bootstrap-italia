@@ -18,6 +18,20 @@ Questo componente card e le sue varianti sono definiti dalle classi `.it-card` e
 [Vai alla documentazione del componente card legacy (deprecato)](../card-old/)
 {% endcapture %}{% include callout.html content=callout type="warning" %}
 
+## Quick start 
+
+```html
+<!-- Card base minimal -->
+<article class="it-card rounded shadow-sm border">
+  <h3 class="it-card-title">
+    <a href="#">Titolo del contenuto</a>
+  </h3>
+  <div class="it-card-body">
+    <p class="it-card-text">Breve descrizione.</p>
+  </div>
+</article>
+```
+
 ## Struttura base della card
 Nota bene: negli esempi seguenti le card sono all’interno di colonne Bootstrap, se non segnalato diversamente.
 Abbiamo segnalato l’inizio della card vera e propria nell'HTML con il commento `<!--start it-card-->`.
@@ -56,15 +70,14 @@ Esempio base con immagine, descrizione e data:
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-La card è un contenitore con **semantica** `article`, con un titolo (heading) con classe `.it-card-title` come primo elemento figlio.
-Consigliamo di implementare il **titolo** (`.it-card-title`) come elemento cliccabile principale, evitando di distribuire collegamenti in tutta la card.
+La card usa l'elemento **semantico** `article`, con un titolo (`.it-card-title`) come primo figlio.   
+Consigliamo di implementare il titolo come elemento cliccabile principale, evitando di distribuire collegamenti in tutta la card.
 
 {% capture callout %}
 
 #### Accessibilità titoli
 
-Negli esempi abbiamo utilizzato il tag `h3` per il titolo delle card. <br>
-Utilizza il tag `h` corretto a seconda del contesto.
+Negli esempi abbiamo utilizzato l'elemento `h3` per il titolo delle card. Utilizza il livello `h` corretto a seconda del contesto in cui la card è inserita. 
 
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
@@ -72,11 +85,11 @@ Per inserire un'**immagine** puoi applicare la classe `.it-card-image` alla card
 
 Segue il **corpo** della card `.it-card-body`, che può contenere diversi contenuti di approfondimento a seconda del contesto d'uso. Puoi utilizzare più elementi `.it-card-body` per separare blocchi di contenuto.
 
-Gli eventuali **metadati** (ad esempio categorie, argomenti e date) sono presentati in un elemento `footer` con classe `.it-card-related`. Questo può vivere nel corpo della card, oppure, seguirlo aggiungendo la classe `.it-card-footer` in modo da attaccarlo al bordo inferiore nei casi di card con altezza fissa.
+I **metadati** (come categorie, argomenti e date) vanno nell'elemento `footer` con classe `.it-card-related`. Può stare nel corpo della card o, seguendolo con la classe `.it-card-footer`, ancorarsi al bordo inferiore nei casi di card con altezza fissa.
 
 ## Card per contenuti editoriali
 
-Le card per contenuti editoriali sono utili a fornire un'anteprima di notizie, articoli, pagine evento o pagine che contengono contenuti video e audio. Sono le classiche card con cui puoi comporre una sezione di copertina delle notizie in evidenza nella pagina principale del sito.  
+Le card per contenuti editoriali sono utili a fornire un'anteprima di notizie, articoli, pagine evento o pagine che presentano media (video o audio). Sono le classiche card con cui puoi comporre una sezione di copertina delle notizie in evidenza nella pagina principale del sito.  
 
 ### Card editoriali standard
 
@@ -318,14 +331,13 @@ Per indicare l'autore del contenuto, usa l'elemento semantico `address` con clas
 
 ### Card inline
 
-Usa questa variante orizzontale di card per creare sezioni in cui una o due card sono in evidenza rispetto a un gruppo di card più piccole. Usa questa variante solo quando per il contenuto è disponibile un'immagine.
+Usa questa variante inline per evidenziare una o due card rispetto alle altre. Usa questa variante solo quando per il contenuto è disponibile un'immagine.
 
-Per ottenere la disposizione orizzontale della card, usa la classe `.it-card-inline` e cambia leggermente la struttura rispetto al codice HTML della card base: raccogli il titolo, il corpo della card e il piede, se presenti, in un unico contenitore `.it-card-inline-content` che precede sempre l'immagine. 
+Per ottenere la disposizione inline, usa la classe `.it-card-inline` e cambia leggermente la struttura rispetto al codice HTML della card base: raccogli il titolo, il corpo della card e il piede, se presenti, in un unico contenitore `.it-card-inline-content` che precede sempre l'immagine. 
 
+La card inline è orizzontale su viewport medio-grandi. Su dispositivi piccoli o con ingrandimento elevato adotta una disposizione verticale simile alla card base. L'immagine, se presente, assume quindi le proporzioni definite con le classi `.ratio-`. 
 
-La card si presenta in disposizione orizzontale solo su schermi medio-grandi non ingranditi, mentre su dispositivi più piccoli o in viste ingrandite torna invece, in un approccio responsivo, a una disposizione verticale simile alla card base. L'immagine, se presente, assume quindi le proporzioni definite con le classi `.ratio-`. 
-
-Per sfruttare al meglio questa variante di card, assicurati di permettere la disposizione orizzontale solo se lo spazio disponibile è davvero sufficiente. Consigliamo di usare "queries" di impaginazione sensibili al proprio contenitore, piuttosto che al viewport come le colonne in esempio. Puoi trovare più avanti nella pagina una sezione dedicata a questo tipo di queries (sperimentali).
+Per sfruttare al meglio questa variante, assicurati di permettere la disposizione orizzontale solo se lo spazio disponibile è davvero sufficiente. Consigliamo di usare "queries" di impaginazione sensibili al proprio contenitore, piuttosto che al viewport come le colonne in esempio. Puoi trovare più avanti nella pagina una sezione dedicata a questo tipo di approccio (sperimentale).
 
 Per invertire solamente l'ordine visivo tra destra e sinistra, applica la classe `.it-card-inline-reverse`. 
 
@@ -395,15 +407,13 @@ Per invertire solamente l'ordine visivo tra destra e sinistra, applica la classe
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Card inline mini
+#### Card inline mini
 
 Usa la variante mini delle card orizzontali per raggruppare in poco spazio card editoriali con contenuti correlati secondari. In ragione di ciò, la card mini non ha il corpo `.it-card-body` e il footer `.it-card-footer` è visibile solo se presente. La dimensione del titolo è ridotta tramite la classe `h4` per adattarsi a questo layout.
 
-La configurazione inline orizzontale, in questo caso, viene mantenuta anche su dispositivi piccoli o in viste ingrandite. Questa variante si ottiene applicando la classe `.it-card-inline-mini`. #bsbrh2-10-0
+La variante mini rimane orizzontale anche in viewport piccole o viste ingrandite. Questa variante si ottiene applicando la classe `.it-card-inline-mini`.
 
 Consigliamo di non aggiungere altri contenuti oltre al titolo (da mantenere breve), l'eventuale categoria o argomento principale e la data. 
-
-L'immagine è opzionale. Per invertire solamente l'ordine visivo tra destra e sinistra, puoi applicare la classe `.it-card-inline-reverse`. 
 
 {% comment %}Example name: Card editoriale inline mini{% endcomment %}
 {% capture example %}
@@ -477,11 +487,11 @@ Inserisci eventuali contenuti guida per lettori di schermo solo se realmente nec
 
 Poni particolare attenzione che non si crei confusione se nella card fosse presente anche la data di pubblicazione, in caso valuta di non mostrarla. 
 
-Consigliamo, inoltre, di svolgere sempre test di usabilità anche con utenti che utilizzato tecnologie assistive. 
+Consigliamo, inoltre, di svolgere sempre test di usabilità anche con utenti che utilizzano tecnologie assistive. 
 
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
-Per creare un ulteriore spazio dedicato a **collegamenti o pulsanti secondari**, come negli esempi che seguono, puoi usare la classe `.it-card-footer`. Questa impostazione è utile quando il titolo della card porta a una pagina di approfondimento (ad esempio, la descrizione dettagliata dell'evento), ma si vuole dare accesso diretto e immediato all'azione principale (ad esempio, l'iscrizione all'evento). 
+Usa `.it-card-footer` per creare uno spazio dedicato a **collegamenti o pulsanti secondari**, come negli esempi seguenti. Questa impostazione è utile quando il titolo della card porta a una pagina di approfondimento (ad esempio, la descrizione dettagliata dell'evento), ma si vuole dare accesso diretto e immediato all'azione principale (ad esempio, l'iscrizione all'evento). 
 
 Per applicare il colore secondario ai collegamenti `a` inseriti nel corpo o nel footer della card , usa la classe `.it-card-link`.
 
@@ -579,7 +589,7 @@ Ricorda di usare:
 
 Per disporre le card eventi in orizzontale, usa la classe `.it-card-inline` e raccogli tutti i contenuti di testo e interattivi in un contenitore `.it-card-inline-content`. 
 
-Come nelle altre varianti, l'immagine segue sempre questo contenitore. Puoi invertire solamente l'ordine visivo usando usando la classe `.it-card-inline-reverse`.
+L'immagine segue questo contenitore. Per invertire l'ordine visivo, usa la classe `.it-card-inline-reverse`.
 
 {% comment %}Example name: Card eventi inline{% endcomment %}
 {% capture example %}
@@ -810,7 +820,7 @@ Negli esempi non abbiamo usato il `target` del link per favorire la normale navi
 
 Per disporre disporre le card media di tipo video in orizzontale, usa la classe `.it-card-inline` e raccogli tutti i contenuti di testo e interattivi in un contenitore `.it-card-inline-content`. 
 
-Come nelle altre varianti, l'immagine segue sempre questo contenitore. Puoi invertire solamente l'ordine visivo usando usando la classe `.it-card-inline-reverse`.
+Usa le stesse regole delle card inline standard per struttura e inversione dell'ordine.
 
 {% comment %}Example name: Card media inline{% endcomment %}
 {% capture example %}
@@ -899,7 +909,7 @@ Negli esempi abbiamo utilizzato il tag `h4` per i titoli `.it-card-title`. Utili
 
 Consigliamo di usare alternativamente un breve testo descrittivo `.it-card-text` o sottotitolo `.it-card-subtitle` per descrivere il contesto della card. 
 
-Per aggiungere indicazioni sullo stato del servizio o bando e un'eventuale data di scadenza, come negli esempi che seguono, puoi usare l'elemento `footer`: 
+Per aggiungere indicazioni sullo stato del servizio o bando e un'eventuale data di scadenza, come negli esempi seguenti, puoi usare l'elemento `footer`: 
 - per lo stato del servizio o bando, usa un componente chip 
 - per un'eventuale data di scadenza, usa lo lo spazio `it-card-date` e un testo descrittivo. 
 
@@ -913,7 +923,7 @@ Consigliamo, inoltre, di svolgere sempre test di usabilità anche con utenti che
 
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
-Per creare un ulteriore spazio dedicato a **collegamenti o pulsanti secondari**, come negli esempi che seguono, puoi usare la classe `.it-card-footer`. Questa impostazione è utile quando il titolo della card porta a una pagina di approfondimento (ad esempio, la descrizione dettagliata di un bando), ma si vuole dare accesso diretto e immediato all'azione principale (ad esempio, la candidatura al bando). 
+Per creare un ulteriore spazio dedicato a **collegamenti o pulsanti secondari**, come negli esempi seguenti, puoi usare la classe `.it-card-footer`. Questa impostazione è utile quando il titolo della card porta a una pagina di approfondimento (ad esempio, la descrizione dettagliata di un bando), ma si vuole dare accesso diretto e immediato all'azione principale (ad esempio, la candidatura al bando). 
 
 Per applicare il colore secondario ai collegamenti `a` inseriti nel corpo o nel footer della card , usa la classe `.it-card-link`.
 
@@ -1001,7 +1011,7 @@ Ricorda di usare:
 
 Usa questa variante per presentare documenti e allegati. Per mostrare un'icona affiancata al titolo, applica la classe `.it-card-title-icon`. 
 
-Per creare un ulteriore spazio dedicato a **collegamenti o pulsanti secondari**, come negli esempi che seguono, puoi usare la classe `.it-card-footer`. Questa impostazione è utile quando il titolo della card porta a una pagina di approfondimento (ad esempio, la descrizione dettagliata del documento), ma si vuole dare accesso diretto e immediato all'azione principale (ad esempio, scaricare il file sul proprio dispositivo).
+Per creare un ulteriore spazio dedicato a **collegamenti o pulsanti secondari**, come negli esempi seguenti, puoi usare la classe `.it-card-footer`. Questa impostazione è utile quando il titolo della card porta a una pagina di approfondimento (ad esempio, la descrizione dettagliata del documento), ma si vuole dare accesso diretto e immediato all'azione principale (ad esempio, scaricare il file sul proprio dispositivo).
 
 {% comment %}Example name: Card servizi{% endcomment %}
 {% capture example %}
@@ -1209,7 +1219,7 @@ Negli esempi abbiamo utilizzato il tag `h4` per i titoli `.it-card-profile-name`
 
 Usa questa variante per presentare schede località. Si attiva con la classe `.it-card-profile` come nel caso dei profili personali. La testata della card è costruita con classi di stile dedicate come `.it-card-profile-header` per nome e tipologia. 
 
-Nel caso dei luoghi puoi inserire un'immagine sulla destra `.it-card-profile-image`, o utilizzare questo spazo anche per contenere un'icona. Assicurati di racchiuderla dentro un `div` contenitore con wrapper `.it-card-profile-icon-wrapper`, per permettere i corretti allineamenti. 
+Per i luoghi puoi inserire un'immagine `.it-card-profile-image` o un'icona sulla destra. Racchiudi l'icona in un `div` con classe `.it-card-profile-icon-wrapper` per l'allineamento corretto.
 
 La lista di metadati del luogo è costruita utilizzando liste descrittive `.it-card-description-list` con ogni coppia di item`dd`-`dt` raccolta in un `div` contenitore. 
 
@@ -1322,8 +1332,8 @@ Negli esempi abbiamo utilizzato il tag `h4` per i titoli `.it-card-profile-name`
             <dd>me@mail.com</dd>
           </div>
           <div>
-            <dd>340.4050600</dd>
             <dt>Tel:</dt>
+            <dd>340.4050600</dd>
           </div>
           <div>
             <dt>Indirizzo:</dt>
@@ -1430,7 +1440,7 @@ Puoi combinare questa impostazione con le funzionalità del contenitore `.it-car
         </div>
         <a href="#" target="_blank" class="it-card-link">
           Apri la mappa
-          <span class="visually-hidden"> del Titolo evento (si apre in una nuova finestra)</span>
+          <span class="visually-hidden"> di Titolo evento (si apre in una nuova finestra)</span>
           <svg class="icon icon-sm icon-secondary ms-2" aria-hidden="true"><use href="/dist/svg/sprites.svg#it-external-link"></use></svg>
         </a>
       </footer>
@@ -1572,11 +1582,9 @@ Per garantire una buona accessibilità, mantieni un rapporto di contrasto colore
 
 ### Immagini
 
-Per definire il rapporto tra altezza e larghezza delle immagini in tutte le card di base, usa le classi `.ratio`.
+Per definire il rapporto tra altezza e larghezza delle immagini in tutte le card di base, usa le classi `.ratio`. Scopri le classi e modalità dedicate nella scheda [Proporzioni](http://localhost:4000/docs/organizzare-gli-spazi/proporzioni/).
 
-Scopri le classi e modalità dedicate nella scheda [Proporzioni](http://localhost:4000/docs/organizzare-gli-spazi/proporzioni/).
-
-Le varianti inline delle card presentano proporzioni immagini proprie su desktop. Tuttavia, su dispositivi piccoli o con importante ingrandimento, ad eccezione delle varianti inline mini, mostreranno il layout card di base con le proporzioni immagini impostate come negli esempi che seguono.```
+Le varianti inline delle card hanno proporzioni immagini specifiche su desktop. Su dispositivi piccoli o con ingrandimento elevato (tranne le mini) usano il layout verticale con le proporzioni degli esempi seguenti.
 
 {% comment %}Example name: Proporzioni immagini{% endcomment %}
 {% capture example %}
@@ -1696,7 +1704,7 @@ Per la gestione delle **altezze** in caso di gruppi di card, l'impostazione di b
 
 Puoi cambiare questo comportamento per ogni card usando la classe `.it-card-height-full` (altezza basata su tutto lo spazio disponibile) sull'elemento `article .it-card`. Questa impostazione è presente in diversi degli esempi che precedono. 
 
-È da notare che quando l'elemento `footer .it-card-related` si trova all'interno del contenitore `.it-card-body`, questo resta sempre attaccato verticalmente al contenuto della card. Se invece si trova fuori del contenitore, con l'aggiunta della classe `.it-card-footer` si allineerà verticalmente sempre con l'altezza massima della card, attaccandosi al bordo inferiore come l'elenento data nell'esempio che segue senza immagine.
+L'elemento `footer .it-card-related` si allinea verticamente in modo diverso a seconda della posizione nel markup: quando all'interno di `.it-card-body` segue il contenuto; fuori, con l'aggiunta di `.it-card-footer`, si ancora al bordo inferiore come la data nell'esempio che segue.
 
 {% comment %}Example name: Altezza delle card basata su tutto lo spazio{% endcomment %}
 {% capture example %}
@@ -1752,7 +1760,7 @@ Puoi cambiare questo comportamento per ogni card usando la classe `.it-card-heig
 
 ### Uso di contenitori responsive
 
-Se il tuo layout di pagina lo permette ti consigliamo di comprendere ogni gruppo di card in [contenitori responsive](/docs/organizzare-gli-spazi/introduzione#contenitori-responsive), usando le classi `.container-xl` oppure `.container-xxl` su un elemento `div` che contenga tutto il gruppo e il suo sistema di griglie. Così potrai sfruttare al massimo tutto lo spazio a disposizione in tutte le combinazioni di dimensioni della finestra e fattori di ingrandimento. 
+Se il tuo layout di pagina lo permette ti consigliamo di comprendere ogni gruppo di card in [contenitori responsive](/docs/organizzare-gli-spazi/introduzione#contenitori-responsive), usando le classi `.container-xl` oppure `.container-xxl` su un elemento `div` che contenga tutto il gruppo e il suo sistema di griglie. Così potrai sfruttare al massimo tutto lo spazio a disposizione in tutte le combinazioni di dimensioni della viewport e fattori di ingrandimento. 
 
 ```html
 <div class="container-xl">
@@ -1780,7 +1788,7 @@ Usando le [griglie](/docs/organizzare-gli-spazi/griglie/) puoi organizzare le ca
 </div>
 ```
 
-Negli esempi precedenti abbiamo usato per esempio `.col-12 col-md-6 col-lg-4` per ottenere 1 colonna su schermi piccoli o finestre strette, 2 colonne su schermi medi e 3 colonne su schermi grandi. Sono esempi puramente dimostrativi, **puoi usare qualsiasi combinazione** di colonne per ottenere il layout desiderato.
+Negli esempi precedenti abbiamo usato per esempio `.col-12 col-md-6 col-lg-4` per ottenere 1 colonna su dispositivi piccoli o viewport strette, 2 colonne su viewport medie e 3 colonne su viewport grandi. Sono esempi puramente dimostrativi, **puoi usare qualsiasi combinazione** di colonne per ottenere il layout desiderato.
 
 La scelta del **numero di colonne** dipende dal layout della tua pagina e ha un **impatto sullo spazio interno** alla card per il contenuto. È importante quindi **bilanciare la dimensione** dei contenuti della card per garantire una buona leggibilità e un aspetto visivamente gradevole a tutte le dimensioni e/o fattori di ingrandimento della viewport.
 
@@ -1792,13 +1800,14 @@ Per **gruppi numerosi di card** (come pagine di listini, cataloghi, risultati di
 
 #### Accessibilità liste di card
 
-Usando liste semanticamente corrette i lettori di schermo permetteranno agli utenti di conoscere il numero totale di elementi, l'elemento attualmente selezionato e navigare più facilmente.
+Con le liste, le tecnologie assistive permettono agli utenti di conoscere il numero totale di componenti card che si stanno esplorando e navigare più facilmente.
+
 Se necessario nel contesto aggiungi una `aria-label` che spieghi i contenuti della lista come nell'esempio che segue. 
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
 ```html
 <div class="container-xl">
-  <ul class="it-card-list row" aria-label="Risultati ricerca">
+  <ul class="it-card-list row" aria-label="Risultati della ricerca: ">
     <li class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
       <article class="it-card">...</article>
     </li>
@@ -1813,13 +1822,13 @@ Esempio di lista card:
 
 {% comment %}Example name: Lista di card{% endcomment %}
 {% capture example %}
-<ul class="it-card-list row" aria-label="Risultati ricerca">
+<ul class="it-card-list row" aria-label="Risultati della ricerca: ">
   <li class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-height-full rounded shadow-sm border">
       <!--card first child is the title (link)-->
       <h3 class="it-card-title no_toc">
-        <a href="#">Titolo del contenuto</a>
+        <a href="#">Primo risultato</a>
       </h3>
       <!--card body content-->
       <div class="it-card-body">
@@ -1837,7 +1846,7 @@ Esempio di lista card:
     <article class="it-card rounded shadow-sm border">
       <!--card first child is the title (link)-->
       <h3 class="it-card-title no_toc">
-        <a href="#">Titolo del contenuto</a>
+        <a href="#">Secondo risultato</a>
       </h3>
       <!--card body content-->
       <div class="it-card-body">
@@ -1855,7 +1864,7 @@ Esempio di lista card:
     <article class="it-card it-card-height-full rounded shadow-sm border">
       <!--card first child is the title (link)-->
       <h3 class="it-card-title no_toc">
-        <a href="#">Titolo del contenuto</a>
+        <a href="#">Terzo risultato</a>
       </h3>
       <!--card body content-->
       <div class="it-card-body">
@@ -1873,7 +1882,7 @@ Esempio di lista card:
     <article class="it-card rounded shadow-sm border">
       <!--card first child is the title (link)-->
       <h3 class="it-card-title no_toc">
-        <a href="#">Titolo del contenuto</a>
+        <a href="#">Quarto risultato</a>
       </h3>
       <!--card body content-->
       <div class="it-card-body">
@@ -1891,7 +1900,7 @@ Esempio di lista card:
     <article class="it-card it-card-height-full rounded shadow-sm border">
       <!--card first child is the title (link)-->
       <h3 class="it-card-title no_toc">
-        <a href="#">Titolo del contenuto</a>
+        <a href="#">Quinto risultato</a>
       </h3>
       <!--card body content-->
       <div class="it-card-body">
@@ -1909,7 +1918,7 @@ Esempio di lista card:
     <article class="it-card rounded shadow-sm border">
       <!--card first child is the title (link)-->
       <h3 class="it-card-title no_toc">
-        <a href="#">Titolo del contenuto</a>
+        <a href="#">Sesto risultato</a>
       </h3>
       <!--card body content-->
       <div class="it-card-body">
@@ -1994,7 +2003,7 @@ Usando `.it-card-group-N-cols`, dove modificando `N` si possono ottenere layout 
         <a href="#">Card in due colonne</a>
       </h3>
       <div class="it-card-body">
-        <p class="it-card-text">Questo gruppo mostra sempre due colonne su schermi medi e grandi.</p>
+        <p class="it-card-text">Questo gruppo mostra sempre due colonne su viewport medie e grandi.</p>
       </div>
     </article>
     <article class="it-card it-card-image rounded shadow-sm border">
@@ -2002,7 +2011,7 @@ Usando `.it-card-group-N-cols`, dove modificando `N` si possono ottenere layout 
         <a href="#">Card in due colonne</a>
       </h3>
       <div class="it-card-body">
-        <p class="it-card-text">Questo gruppo mostra sempre due colonne su schermi medi e grandi.</p>
+        <p class="it-card-text">Questo gruppo mostra sempre due colonne su viewport medie e grandi.</p>
       </div>
     </article>
   </div>
@@ -2039,9 +2048,9 @@ Usando `.it-card-group-center`.
 
 #### Uso di classi dedicate rispetto al contenitore (sperimentale)
 
-Gruppo di card che risponde a Container Queries attivabile usando la classe dedicata `.it-card-group-container-aware` per adattarsi responsive alla dimensione del contenitore invece che alla viewport. Ridimensiona la finestra del browser o prova a visualizzare questa pagina su dispositivi di diverse dimensioni per apprezzare la differenza di approccio.
+Gruppo di card che risponde a Container Queries attivabile usando la classe dedicata `.it-card-group-container-aware` per adattarsi responsive alla dimensione del contenitore invece che alla viewport. Ridimensiona la viewport o prova a visualizzare questa pagina su dispositivi di diverse dimensioni per apprezzare la differenza di approccio.
 
-Le Container Queries sono una tecnologia CSS moderna supportata nella maggior parte dei browser recenti. Per i browser che non supportano questa funzionalità, viene automaticamente applicato un fallback basato su Media Queries standard.
+Le Container Queries sono una tecnologia CSS moderna supportata nella maggior parte dei browser recenti. Per i browser che non supportano questa funzionalità, si applica automaticamente un fallback basato su Media Queries standard.
 
 {% comment %}Example name: Gruppi di card con Container Queries{% endcomment %}
 {% capture example %}
@@ -2167,17 +2176,39 @@ Qui puoi esplorare come lo stesso gruppo di card "container-aware" si adatta a d
 
 ## Accessibilità
 
-**XXX È DA RIVEDERE QUESTO CONTENUTO ANCHE RISPETTO A QUANTO GIÀ DETTO SOPRA**
+Le card implementano diverse caratteristiche per garantire un'esperienza accessibile a tutte le persone, come evidenziato nelle note specifiche presenti nella documentazione.
 
-Se il titolo `.it-card-title` non è il primo elemento dell'`article`, è necessario collegarlo con `aria-labelledby="ID_TITOLO"` e aggiungere `id="ID_TITOLO"` al titolo stesso.
+### Struttura e semantica
+Le card utilizzano l'elemento `article` per fornire una struttura semantica chiara che facilita la navigazione con tecnologie assistive. Questa scelta permette di identificare ogni card come contenuto autonomo. Anche se non tutti i lettori di schermo supportano allo stesso modo l'elemento `article`, i più diffusi (JAWS, VoiceOver) lo interpretano correttamente, e altri (come NVDA) possono essere configurati per farlo. 
 
-I titoli sono preferibilmente `h3`, mentre sottotitoli o testi brevi dovrebbero essere paragrafi semplici. La gerarchia dei titoli deve adattarsi al contesto in cui la card è inserita.
+L'utilizzo degli elementi semantici `article` e `footer` rende il markup più comprensibile e semanticamente strutturato.
 
-L'uso dell'elemento **`article`** è una scelta semantica ponderata. Anche se non tutti i lettori di schermo lo supportano allo stesso modo, i più diffusi (JAWS, VoiceOver) lo interpretano correttamente, e altri (come NVDA) possono essere configurati per farlo. L'utilizzo degli elementi `article` e `footer` rende il markup più comprensibile e semanticamente strutturato.
+### Gerarchia dei titoli
+Utilizza gli elementi di intestazione (`h2`, `h3`, etc.) appropriati per il contesto intorno alle card. Negli esempi abbiamo usato quasi sempre `h3` per le card editoriali e `h4` per quelle informative. Adatta la gerarchia alla struttura complessiva della tua pagina in modo da rispettare l'ordine. 
 
-Per i lettori di schermo, è importante aggiungere testi descrittivi per i **metadati**, nascosti con `.visually-hidden` (es. "Categoria correlata: ", "Argomento correlato: ") o applicati con `aria-label` (es. "Argomenti correlati: ").
+Se il titolo `.it-card-title` non fosse il primo elemento dell'`article`, collegalo semanticamente usando `aria-labelledby="ID_TITOLO"` sull'articolo e aggiungendo `id="ID_TITOLO"` al titolo stesso.
 
-Valuta infine sempre attentamente nel contesto se gli elementi come le liste abbiano o meno bisogno di etichette `aria-label` o `aria-labelledby` per descriverne la funzione.
+### Metadati e contenuti descrittivi
+
+Per migliorare la comprensione dei metadati da parte delle tecnologie assistive aggiungi testi descrittivi nascosti con `.visually-hidden` (es. "Categoria correlata: ", "Argomento correlato: ") o applicati con `aria-label` (es. "Argomenti correlati: "); usa l'elemento semantico `time` con l'attributo `datetime` per date ed orari. Valuta attentamente se gli elementi come le liste (es. di contenuti affini, link secondari o una stessa lista di card) abbiano o meno bisogno di etichette `aria-label` o `aria-labelledby` per descriverne le finalità. 
+
+### Icone e contenuti visivi
+
+Laddove le icone abbiano puro scopo decorativo, quando cioè il loro significato sia già chiaro dal contesto, usa `aria-hidden="true"`. Se comunicano informazioni aggiuntive, aggiungi una descrizione testuale con `<span class="visually-hidden">` o usa `role="img"` con un elemento `title`. Se funzionali assicurati che il significato sia comunicato testualmente.  
+
+Per le immagini aggiungi una breve descrizione immagine (con l'attributo `alt="Breve descrizione."`) se ha senso nel contesto, marcale altrimenti come decorative lasciando l'`alt` applicato ma vuoto.
+
+### Collegamenti e navigazione
+
+Usa `a` per i collegamenti di navigazione e `button` per azioni nella stessa pagina. Per contenuti esterni, comunica chiaramente la destinazione, ad esempio con testo nascosto e icone appropriate. Privilegia il titolo come elemento principale di navigazione, evitando troppi collegamenti nella stessa card.
+
+### Contrasto e visibilità
+
+Mantieni un rapporto di contrasto di almeno 3:1 tra le card e lo sfondo. Le combinazioni di bordi, ombre e colori di sfondo possono aiutarti a raggiungere questo obiettivo.
+
+### Test e validazione
+
+Svolgi sempre test di usabilità con utenti che utilizzano tecnologie assistive per verificare l'efficacia delle soluzioni implementate.
 
 ## Funzionalità future
 **Sono in lavorazione le varianti di tipo presentazione (dati e banner).**
