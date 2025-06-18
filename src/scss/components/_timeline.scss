@@ -9,9 +9,11 @@
     color: $primary;
     font-weight: 600;
   }
+
   .row {
     position: relative;
     padding-top: $v-gap * 6;
+
     //padding-bottom: $v-gap*6;
     &:after {
       content: '';
@@ -23,13 +25,38 @@
       bottom: -$v-gap * 2;
     }
   }
+
   .timeline-element {
     padding: $timeline-content-padding;
     position: relative;
+    z-index: 1;
+
     .card {
+      // xxx deprecated with old .card
       background: none;
     }
+
+    .it-card {
+      margin-top: 16px;
+      margin-bottom: 16px;
+
+      + .it-card {
+        margin-top: 4px;
+      }
+
+      @include media-breakpoint-down(lg) {
+        margin-top: 32px;
+        margin-bottom: 32px;
+        margin-left: -24px;
+        width: auto;
+
+        + .it-card {
+          margin-top: 8px;
+        }
+      }
+    }
   }
+
   .it-pin-wrapper {
     display: flex;
     align-items: center;
@@ -37,6 +64,7 @@
     top: -$timeline-pin-circle-size * 0.5;
     z-index: 4;
     left: calc($timeline-padding / 2);
+
     .pin-icon {
       width: $timeline-pin-circle-size;
       height: $timeline-pin-circle-size;
@@ -50,11 +78,13 @@
       margin-right: $v-gap * 2;
       background: $white;
     }
+
     svg {
       width: $timeline-pin-size;
       height: $timeline-pin-size;
       fill: $primary;
     }
+
     .pin-text {
       color: $white;
       font-weight: 600;
@@ -69,6 +99,7 @@
         padding: $v-gap * 0.5 $v-gap * 2;
         display: block;
         position: relative;
+
         &:after {
           content: '';
           width: 10px;
@@ -82,15 +113,19 @@
         }
       }
     }
+
     &.it-now {
       .pin-icon {
         background: $primary;
       }
+
       svg {
         fill: $white;
       }
+
       .pin-text {
         background: $primary;
+
         span {
           &:after {
             background: $primary;
@@ -98,15 +133,19 @@
         }
       }
     }
+
     &.it-evidence {
       .pin-icon {
         background: $timeline-pin-background;
       }
+
       svg {
         fill: $white;
       }
+
       .pin-text {
         background: $timeline-pin-background;
+
         span {
           &:after {
             background: $timeline-pin-background;
@@ -117,6 +156,7 @@
   }
 
   .card-title {
+    // xxx deprecated with old .card
     text-transform: uppercase;
   }
 }
@@ -130,17 +170,21 @@
         left: calc(50% - #{$timeline-width});
       }
     }
+
     .timeline-element {
       padding: $timeline-content-padding;
       width: 50%;
     }
+
     .col-12 {
       .card-wrapper {
+        // xxx deprecated with old .card
         .card {
           border: none;
         }
       }
     }
+
     // col rules
     .col-12:nth-child(odd) {
       .it-now-label {
@@ -148,6 +192,7 @@
         transform: translateX(100%);
         display: flex;
         align-items: center;
+
         &:before {
           content: '';
           display: inline-block;
@@ -157,30 +202,38 @@
           margin-right: $v-gap * 2;
         }
       }
+
       .timeline-element {
         padding: $timeline-content-padding-reverse;
       }
+
       .card-wrapper {
+        // xxx deprecated with old .card
         .card {
           text-align: right;
+
           &:after {
             margin-left: auto;
             display: inline-block;
             margin-right: $v-gap * 3;
           }
+
           a.read-more {
             right: $v-gap * 3;
           }
         }
       }
+
       .it-pin-wrapper {
         flex-direction: row-reverse;
         left: auto;
         right: -62px;
+
         .pin-icon {
           margin-right: 0;
           margin-left: $v-gap * 2;
         }
+
         .pin-text {
           span {
             &:after {
@@ -189,6 +242,7 @@
             }
           }
         }
+
         &.it-evidence {
           .pin-text {
             span {
@@ -200,12 +254,14 @@
         }
       }
     }
+
     .col-12:nth-child(even) {
       .it-now-label {
         left: 0;
         transform: translateX(-100%);
         display: flex;
         align-items: center;
+
         &:after {
           content: '';
           display: inline-block;
@@ -215,16 +271,20 @@
           margin-left: $v-gap * 2;
         }
       }
+
       .timeline-element {
         position: relative;
         left: 50%;
+
         .it-pin-wrapper {
           left: -66px;
         }
       }
     }
+
     .it-pin-wrapper {
       position: relative;
+
       .pin-text {
         font-size: 1rem;
       }
