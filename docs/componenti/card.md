@@ -2212,3 +2212,9 @@ Svolgi sempre test di usabilità con utenti che utilizzano tecnologie assistive 
 
 ## Funzionalità future
 **Sono in lavorazione le varianti di tipo presentazione (dati e banner), e l'interfaccia per mostrare funzionalità di condivisione.**
+
+## Breaking change
+
+{% capture callout %}
+Questo è un nuovo componente card definito dalle classi `.it-card` e relativi modificatori. Le classi legacy di Bootstrap `.card` sono ora deprecate ma **saranno mantenute nei fogli di stile fino al prossimo rilascio maggiore, per permettere una migrazione graduale**. 
+{% endcapture %}{% include callout-breaking.html content=callout version="2.16.0" type="danger" %}
