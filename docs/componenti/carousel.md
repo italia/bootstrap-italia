@@ -877,9 +877,9 @@ const carouselElements = elementList.forEach((element) => {
 ## Breaking change
 
 {% capture callout %}
-Implementato negli esempi il nuovo componente card definito dalle classi `.it-card` e relativi modificatori. Il markup degli esempi e gli attributi per attivare il componente sono cambiati laddove c'è la necessità di gestire le altezze delle card con classi `.it-card-full-height` e/o la necessità di mostrarne le ombre `.shadow-`. 
+Implementato negli esempi il nuovo componente card definito dalle classi `.it-card` e relativi modificatori. Il markup degli esempi e gli attributi per attivare il componente sono inoltre cambiati laddove c'è la necessità di gestire le altezze delle card con classi `.it-card-full-height` e/o la necessità di mostrarne le ombre `.shadow-`. 
 
-Le classi legacy di Bootstrap `.card`, utili a implementare anche le precedenti varianti del componente carousel, sono ora deprecate ma **saranno mantenute nei fogli di stile fino al prossimo rilascio maggiore, per permettere una migrazione graduale**. 
+Le classi legacy di Bootstrap `.card` sono ora deprecate ma **saranno mantenute nei fogli di stile fino al prossimo rilascio maggiore, per permettere una migrazione graduale**. 
 {% endcapture %}{% include callout-breaking.html version="2.16.0" content=callout type="danger" %}
 
 {% capture callout %}

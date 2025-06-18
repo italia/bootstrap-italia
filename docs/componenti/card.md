@@ -13,7 +13,9 @@ Aiutano a presentare un gruppo di contenuti correlati, come articoli o sezioni d
 
 {% capture callout %}
 #### Questo è un nuovo componente card
-Questo componente card e le sue varianti sono definiti dalle classi `.it-card` e relativi modificatori. Le classi legacy di Bootstrap `.card` sono ora deprecate ma **saranno mantenute nei fogli di stile fino al prossimo rilascio maggiore, per permettere una migrazione graduale**. 
+Questo componente card e le sue varianti sono definiti dalle classi `.it-card` e relativi modificatori. 
+
+Le classi legacy di Bootstrap `.card` sono ora deprecate ma **saranno mantenute nei fogli di stile fino al prossimo rilascio maggiore, per permettere una migrazione graduale**. 
 
 [Vai alla documentazione del componente card legacy (deprecato)](../card-old/)
 {% endcapture %}{% include callout.html content=callout type="warning" %}
@@ -2216,5 +2218,7 @@ Svolgi sempre test di usabilità con utenti che utilizzano tecnologie assistive 
 ## Breaking change
 
 {% capture callout %}
-Questo è un nuovo componente card definito dalle classi `.it-card` e relativi modificatori. Le classi legacy di Bootstrap `.card` sono ora deprecate ma **saranno mantenute nei fogli di stile fino al prossimo rilascio maggiore, per permettere una migrazione graduale**. 
+Questo è un nuovo componente card definito dalle classi `.it-card` e relativi modificatori. 
+
+Le classi legacy di Bootstrap `.card` sono ora deprecate ma **saranno mantenute nei fogli di stile fino al prossimo rilascio maggiore, per permettere una migrazione graduale**. 
 {% endcapture %}{% include callout-breaking.html content=callout version="2.16.0" type="danger" %}
