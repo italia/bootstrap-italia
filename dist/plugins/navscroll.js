@@ -22,6 +22,7 @@ const SELECTOR_TOGGLER = '.custom-navbar-toggler';
 const SELECTOR_TOGGLER_ICON = '.it-list';
 const SELECTOR_COLLAPSIBLE = '.navbar-collapsable';
 const SELECTOR_PROGRESS_BAR = '.it-navscroll-progressbar';
+const SELECTOR_MENU_WRAPPER = '.menu-wrapper';
 
 const Default = {
   scrollPadding: 10,
@@ -40,6 +41,11 @@ class NavScroll extends BaseComponent {
     this._isCollapseOpened = false;
     this._callbackQueue = [];
     this._scrollCb = null;
+
+    const menuWrapper = SelectorEngine.findOne(SELECTOR_MENU_WRAPPER, this._element);
+    if (menuWrapper && !menuWrapper.hasAttribute('tabindex')) {
+      menuWrapper.setAttribute('tabindex', '-1');
+    }
 
     this._bindEvents();
   }
@@ -144,13 +150,31 @@ class NavScroll extends BaseComponent {
   }
 
   _scrollToHash(hash) {
-    const target = SelectorEngine.findOne(hash, this._sectionContainer);
+    if (!hash || hash === '#') {
+      // Validate hash to prevent errors
+      return
+    }
+    const target = this._sectionContainer // Fallback: when container is null, omit the second parameter entirely
+      ? SelectorEngine.findOne(hash, this._sectionContainer)
+      : SelectorEngine.findOne(hash);
     if (target) {
       documentScrollTo(target.offsetTop - this._getScrollPadding(), {
         duration: this._config.duration,
         easing: this._config.easing,
-        /*complete: () => {
-        },*/
+        complete: () => {
+          const isHeading = target.matches('h1, h2, h3, h4, h5, h6');
+          const needsTabIndex = !target.hasAttribute('tabindex');
+          if (needsTabIndex) {
+            target.setAttribute('tabindex', '-1');
+          }
+          target.focus({ preventScroll: true }); // preventScroll to avoid double scrolling
+          if (needsTabIndex && isHeading) {
+            // remove tabIndex for headings after 500ms
+            setTimeout(() => {
+              target.removeAttribute('tabindex');
+            }, 500);
+          }
+        },
       });
 
       if (history.pushState) {

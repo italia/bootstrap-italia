@@ -11,11 +11,11 @@
 
 <title>NavScroll · Bootstrap Italia</title>
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202505131207" rel="stylesheet" />
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202506181703" rel="stylesheet" />
 
 <!-- Documentation extras -->
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202505131207" rel="stylesheet" />
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202506181703" rel="stylesheet" />
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico" />
@@ -63,26 +63,38 @@
 
   </head>
   <body>
-    <header
-  class="it-header-wrapper it-header-sticky"
-  data-bs-toggle="sticky"
-  data-bs-position-type="fixed"
-  data-bs-sticky-class-name="is-sticky"
-  data-bs-target="#header-nav-wrapper"
->
+    <header class="it-header-wrapper">
   <div class="it-header-slim-wrapper">
-    <div class="container">
+    <div class="container-xxl">
       <div class="row">
         <div class="col-12">
           <div class="it-header-slim-wrapper-content">
-            <a class="d-lg-block navbar-brand" href="#">Nome della Regione</a>
+            <a class="d-none d-lg-block navbar-brand" href="#">Ente appartenenza</a>
+            <div class="nav-mobile">
+              <nav aria-label="Navigazione secondaria">
+                <a class="it-opener d-lg-none" data-bs-toggle="collapse" href="#menuC1" role="button"
+                  aria-expanded="false" aria-controls="menuC1">
+                  <span>Ente appartenenza</span>
+                  <svg class="icon" aria-hidden="true">
+                    <use href="/dist/svg/sprites.svg#it-expand"></use>
+                  </svg>
+                </a>
+                <div class="link-list-wrapper collapse" id="menuC1">
+                  <ul class="link-list">
+                    <li><a class="dropdown-item list-item" href="#">Link 1</a></li>
+                    <li><a class="list-item active" href="#" aria-current="page">Link 2 (Attivo)</a></li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
             <div class="it-header-slim-right-zone">
               <div class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
                   <span class="visually-hidden">Selezione lingua: lingua selezionata</span>
                   <span>ITA</span>
                   <svg class="icon d-none d-lg-block">
-                    <use href="/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use>
+                    <use href="/dist/svg/sprites.svg#it-expand"></use>
                   </svg>
                 </a>
                 <div class="dropdown-menu">
@@ -90,49 +102,38 @@
                     <div class="col-12">
                       <div class="link-list-wrapper">
                         <ul class="link-list">
-                          <li>
-                            <a class="dropdown-item list-item" href="#"
-                              ><span>ITA <span class="visually-hidden">selezionata</span></span></a
-                            >
-                          </li>
-                          <li>
-                            <a class="dropdown-item list-item" href="#"><span>ENG</span></a>
-                          </li>
+                          <li><a class="dropdown-item list-item" href="#"><span>ITA <span
+                                  class="visually-hidden">selezionata</span></span></a></li>
+                          <li><a class="dropdown-item list-item" href="#"><span>ENG</span></a></li>
                         </ul>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <a class="btn btn-primary btn-icon btn-full" href="#" title="Accedi all'area personale" aria-label="Accedi all'area personale">
-                <span class="rounded-icon">
-                  <svg class="icon icon-primary">
-                    <use xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-user"></use>
-                  </svg>
-                </span>
-                <span class="d-none d-lg-block">Accedi all'area personale</span>
-              </a>
+              <div class="it-access-top-wrapper">
+                <a class="btn btn-primary btn-sm" href="#">Accedi</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-
   <div class="it-nav-wrapper">
     <div class="it-header-center-wrapper">
-      <div class="container">
+      <div class="container-xxl">
         <div class="row">
           <div class="col-12">
             <div class="it-header-center-content-wrapper">
               <div class="it-brand-wrapper">
-                <a href="/bootstrap-italia/docs/esempi/comuni/template-homepage/">
+                <a href="#">
                   <svg class="icon" aria-hidden="true">
                     <use href="/dist/svg/sprites.svg#it-pa"></use>
                   </svg>
                   <div class="it-brand-text">
-                    <div class="it-brand-title">Nome del Comune</div>
-                    <div class="it-brand-tagline d-none d-md-block">Uno dei tanti Comuni d'Italia</div>
+                    <div class="it-brand-title">Nome dell'Istituzione</div>
+                    <div class="it-brand-tagline d-none d-md-block">Tag line dell'Istituzione</div>
                   </div>
                 </a>
               </div>
@@ -177,27 +178,19 @@
         </div>
       </div>
     </div>
-    <div class="it-header-navbar-wrapper" id="header-nav-wrapper">
-      <div class="container">
+    <div class="it-header-navbar-wrapper">
+      <div class="container-xxl">
         <div class="row">
           <div class="col-12">
             <!--start nav-->
             <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Navigazione principale">
-              <button
-                class="custom-navbar-toggler"
-                type="button"
-                aria-controls="nav4"
-                aria-expanded="false"
-                aria-label="Mostra/Nascondi la navigazione"
-                data-bs-target="#nav4"
-                data-bs-toggle="navbarcollapsible"
-              >
+              <button class="custom-navbar-toggler" type="button" aria-controls="navC1"
+                aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#navC1">
                 <svg class="icon">
                   <use href="/dist/svg/sprites.svg#it-burger"></use>
                 </svg>
               </button>
-              <div class="navbar-collapsable" id="nav4" style="display: none">
-                <div class="overlay" style="display: none"></div>
+              <div class="navbar-collapsable" id="navC1" tabindex="-1">
                 <div class="close-div">
                   <button class="btn close-menu" type="button">
                     <span class="visually-hidden">Nascondi la navigazione</span>
@@ -208,46 +201,135 @@
                 </div>
                 <div class="menu-wrapper">
                   <ul class="navbar-nav">
-                    <li class="nav-item ">
-                      <a
-                        class="nav-link "
-                        href="/bootstrap-italia/docs/esempi/comuni/template-amministrazione/"
-                      >
-                        <span>Amministrazione</span>
-                        
+                    <li class="nav-item active"><a class="nav-link active" href="#" aria-current="page"><span>Link 1
+                          (attivo)</span></a></li>
+                    <li class="nav-item"><a class="nav-link disabled" href="#" aria-disabled="true"><span>Link 2
+                          (disabilitato)</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><span>Link 3</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><span>Link 4</span></a></li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false" id="mainNavDropdownC1">
+                        <span>Menu Dropdown</span>
+                        <svg class="icon icon-xs">
+                          <use href="/dist/svg/sprites.svg#it-expand"></use>
+                        </svg>
                       </a>
+                      <div class="dropdown-menu" role="region" aria-labelledby="mainNavDropdownC1">
+                        <div class="link-list-wrapper">
+                          <ul class="link-list">
+                            <li><a class="dropdown-item list-item" href="#"><span>Link lista 1</span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link lista 2</span></a></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link lista 3</span></a></li>
+                            <li><span class="divider"></span></li>
+                            <li><a class="dropdown-item list-item" href="#"><span>Link lista 4</span></a></li>
+                          </ul>
+                        </div>
+                      </div>
                     </li>
-                    <li class="nav-item ">
-                      <a class="nav-link " href="/bootstrap-italia/docs/esempi/comuni/template-novita/">
-                        <span>Novità</span>
-                        
-                      </a>
-                    </li>
-                    <li class="nav-item ">
-                      <a class="nav-link " href="/bootstrap-italia/docs/esempi/comuni/template-servizi/">
-                        <span>Servizi</span>
-                        
-                      </a>
-                    </li>
-                    <li class="nav-item ">
-                      <a class="nav-link " href="/bootstrap-italia/docs/esempi/comuni/template-documenti/">
-                        <span>Documenti e Dati</span>
-                        
-                      </a>
-                    </li>
-                  </ul>
-                  <ul class="navbar-nav navbar-secondary">
-                    <li class="nav-item">
-                      <a class="nav-link" href="/bootstrap-italia/docs/esempi/comuni/template-argomenti-argomento/"> Argomento 1</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#"> Argomento 2</a>
-                    </li>
-                    <li class="nav-item ">
-                      <a class="nav-link " href="/bootstrap-italia/docs/esempi/comuni/template-argomenti">
-                        <span class="fw-bold">Tutti gli argomenti...</span>
-                        
-                      </a>
+                    <!-- megamenu -->
+                    <li class="nav-item dropdown megamenu">
+                      <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3" data-bs-toggle="dropdown"
+                        aria-expanded="false" id="megamenu-5" data-focus-mouse="false">
+                        <span>Megamenu</span><svg role="img" class="icon icon-xs ms-1">
+                          <use href="/dist/svg/sprites.svg#it-expand"></use>
+                        </svg>
+                      </button>
+                      <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-5">
+                        <div class="megamenu pb-5 pt-3 py-lg-0">
+                          <div class="row">
+                            <div class="col-xs-12 col-lg-4 px-0">
+                              <div class="row">
+                                <div class="col-12 it-vertical it-description pb-lg-3">
+                                  <div class="description-content ps-4 ps-sm-5 ms-3">
+                                    <div class="ratio ratio-21x9 lightgrey-bg-a1 mb-4 rounded">
+                                      <figure class="figure">
+                                        <img src="https://placehold.co/560x240/ebebeb/808080/?text=Immagine"
+                                          class="figure-img img-fluid rounded" alt="Segnaposto">
+                                      </figure>
+                                    </div>
+                                    <p>
+                                      Testo utile a fornire una descrizione dei contenuti della sezione
+                                      <strong>megamenu</strong>.
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-12 col-lg-8">
+                              <div class="it-heading-link-wrapper">
+                                <a class="it-heading-link" href="#"><svg role="img" class="icon icon-sm me-2 mb-1">
+                                    <use href="/dist/svg/sprites.svg#it-arrow-right-triangle"></use>
+                                  </svg>
+                                  <span>Esplora la sezione megamenu</span>
+                                </a>
+                              </div>
+                              <div class="row">
+                                <div class="col-12 col-lg-6">
+                                  <div class="link-list-wrapper">
+                                    <ul class="link-list">
+                                      <li>
+                                        <a class="list-item dropdown-item" href="#">
+                                          <svg role="img" class="icon icon-sm me-2">
+                                            <use href="/dist/svg/sprites.svg#it-arrow-right-triangle"></use>
+                                          </svg>
+                                          <span>Link lista 1</span>
+                                        </a>
+                                      </li>
+                                      <li>
+                                        <a class="list-item dropdown-item" href="#">
+                                          <svg role="img" class="icon icon-sm me-2">
+                                            <use href="/dist/svg/sprites.svg#it-arrow-right-triangle"></use>
+                                          </svg>
+                                          <span>Link lista 2</span>
+                                        </a>
+                                      </li>
+                                      <li>
+                                        <a class="list-item dropdown-item " href="#">
+                                          <svg role="img" class="icon icon-sm me-2">
+                                            <use href="/dist/svg/sprites.svg#it-arrow-right-triangle"></use>
+                                          </svg>
+                                          <span>Link lista 3</span>
+                                        </a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                                <div class="col-12 col-lg-6">
+                                  <div class="link-list-wrapper">
+                                    <ul class="link-list">
+                                      <li>
+                                        <a class="list-item dropdown-item" href="#">
+                                          <svg role="img" class="icon icon-sm me-2">
+                                            <use href="/dist/svg/sprites.svg#it-arrow-right-triangle"></use>
+                                          </svg>
+                                          <span>Link lista 4</span>
+                                        </a>
+                                      </li>
+                                      <li>
+                                        <a class="list-item dropdown-item" href="#">
+                                          <svg role="img" class="icon icon-sm me-2">
+                                            <use href="/dist/svg/sprites.svg#it-arrow-right-triangle"></use>
+                                          </svg>
+                                          <span>Link lista 5</span>
+                                        </a>
+                                      </li>
+                                      <li>
+                                        <a class="list-item dropdown-item " href="#">
+                                          <svg role="img" class="icon icon-sm me-2">
+                                            <use href="/dist/svg/sprites.svg#it-arrow-right-triangle"></use>
+                                          </svg>
+                                          <span>Link lista 6</span>
+                                        </a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </li>
                   </ul>
                 </div>
@@ -264,33 +346,28 @@
     <div class="col-12 col-lg-4">
       <div data-bs-toggle="sticky" data-bs-stackable="true">
         <nav class="navbar it-navscroll-wrapper navbar-expand-lg it-bottom-navscroll it-right-side" data-bs-navscroll>
-          <button
-            class="custom-navbar-toggler"
-            type="button"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-            data-bs-toggle="navbarcollapsible"
-            data-bs-target="#navbarNav"
-          >
+          <button class="custom-navbar-toggler" type="button" aria-controls="navbarNav" aria-expanded="false"
+            aria-label="Toggle navigation" data-bs-toggle="navbarcollapsible" data-bs-target="#navbarNav">
             <span class="it-list"></span>1. Introduzione
           </button>
           <div class="progress custom-navbar-progressbar">
-            <div class="progress-bar it-navscroll-progressbar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+            <div class="progress-bar it-navscroll-progressbar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+              aria-valuemax="100"></div>
           </div>
           <div class="navbar-collapsable" id="navbarNav">
-            <div class="overlay"></div>
-            <a class="it-back-button" href="#" role="button">
-              <svg class="icon icon-sm icon-primary align-top">
-                <use href="/bootstrap-italia/dist/svg/sprites.svg#it-chevron-left" xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-chevron-left"></use>
-              </svg>
-              <span>Indietro</span>
-            </a>
             <div class="menu-wrapper">
+              <button type="button" class="it-back-button btn w-100 text-start">
+                <svg class="icon icon-sm icon-primary align-top">
+                  <use href="/bootstrap-italia/dist/svg/sprites.svg#it-chevron-left"
+                    xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-chevron-left"></use>
+                </svg>
+                <span>Indietro</span>
+              </button>
               <div class="link-list-wrapper">
                 <h3>header</h3>
                 <div class="progress">
-                  <div class="progress-bar it-navscroll-progressbar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                  <div class="progress-bar it-navscroll-progressbar" role="progressbar" aria-valuenow="0"
+                    aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
                 <ul class="link-list">
                   <li class="nav-item">
@@ -371,112 +448,171 @@
     </div>
     <div class="col-12 col-lg-8 it-page-sections-container">
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec congue eros. Maecenas sagittis commodo libero nec porta. Nunc semper velit venenatis
-        ligula condimentum ultricies. In hac habitasse platea dictumst. In malesuada pharetra nulla, id aliquam metus egestas ut. Nulla sollicitudin cursus
-        felis, eu sagittis ante porta id. Suspendisse pellentesque ex non sem tincidunt, aliquam rhoncus turpis maximus. Vivamus eget massa turpis. Proin
-        placerat ipsum massa, ac commodo velit tempor quis. In ante augue, sodales ac rhoncus in, ultricies a neque. Morbi non semper felis, at lacinia nibh.
-        Nam quis elit massa. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam laoreet, diam quis blandit porttitor, leo erat semper sem,
-        vel sagittis dolor quam eu magna. Nunc feugiat pretium tempor. Nam eget augue quis tellus viverra malesuada vel ut quam. Cras vehicula rutrum vehicula.
-        Suspendisse efficitur eget purus vitae convallis. Integer euismod pharetra lorem, non ullamcorper lorem euismod vel. Orci varius natoque penatibus et
-        magnis dis parturient montes, nascetur ridiculus mus. Integer feugiat et massa nec rhoncus. Morbi vitae metus et sapien suscipit mattis vitae ac ex.
-        Proin pharetra, sem vitae varius malesuada, risus tortor sodales arcu, eu aliquam lorem libero vel urna. Aliquam massa lacus, faucibus quis urna ac,
-        pharetra pretium ex. In facilisis urna non urna luctus, a bibendum tortor facilisis. Mauris sed risus justo. In et erat fermentum eros hendrerit tempor.
-        Quisque accumsan magna ac risus ultricies, vel condimentum ipsum accumsan. Proin blandit mauris sed sodales sollicitudin.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec congue eros. Maecenas sagittis commodo libero
+        nec porta. Nunc semper velit venenatis
+        ligula condimentum ultricies. In hac habitasse platea dictumst. In malesuada pharetra nulla, id aliquam metus
+        egestas ut. Nulla sollicitudin cursus
+        felis, eu sagittis ante porta id. Suspendisse pellentesque ex non sem tincidunt, aliquam rhoncus turpis maximus.
+        Vivamus eget massa turpis. Proin
+        placerat ipsum massa, ac commodo velit tempor quis. In ante augue, sodales ac rhoncus in, ultricies a neque.
+        Morbi non semper felis, at lacinia nibh.
+        Nam quis elit massa. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam laoreet, diam quis
+        blandit porttitor, leo erat semper sem,
+        vel sagittis dolor quam eu magna. Nunc feugiat pretium tempor. Nam eget augue quis tellus viverra malesuada vel
+        ut quam. Cras vehicula rutrum vehicula.
+        Suspendisse efficitur eget purus vitae convallis. Integer euismod pharetra lorem, non ullamcorper lorem euismod
+        vel. Orci varius natoque penatibus et
+        magnis dis parturient montes, nascetur ridiculus mus. Integer feugiat et massa nec rhoncus. Morbi vitae metus et
+        sapien suscipit mattis vitae ac ex.
+        Proin pharetra, sem vitae varius malesuada, risus tortor sodales arcu, eu aliquam lorem libero vel urna. Aliquam
+        massa lacus, faucibus quis urna ac,
+        pharetra pretium ex. In facilisis urna non urna luctus, a bibendum tortor facilisis. Mauris sed risus justo. In
+        et erat fermentum eros hendrerit tempor.
+        Quisque accumsan magna ac risus ultricies, vel condimentum ipsum accumsan. Proin blandit mauris sed sodales
+        sollicitudin.
       </p>
       <h2 class="it-page-section" id="p1">Introduzione</h2>
       <p>
-        Proin placerat ipsum massa, ac commodo velit tempor quis. In ante augue, sodales ac rhoncus in, ultricies a neque. Morbi non semper felis, at lacinia
-        nibh. Nam quis elit massa. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam laoreet, diam quis blandit porttitor, leo erat semper
-        sem, vel sagittis dolor quam eu magna. Nunc feugiat pretium tempor. Nam eget augue quis tellus viverra malesuada vel ut quam. Cras vehicula rutrum
-        vehicula. Suspendisse efficitur eget purus vitae convallis. Integer euismod pharetra lorem, non ullamcorper lorem euismod vel. Orci varius natoque
+        Proin placerat ipsum massa, ac commodo velit tempor quis. In ante augue, sodales ac rhoncus in, ultricies a
+        neque. Morbi non semper felis, at lacinia
+        nibh. Nam quis elit massa. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam laoreet, diam
+        quis blandit porttitor, leo erat semper
+        sem, vel sagittis dolor quam eu magna. Nunc feugiat pretium tempor. Nam eget augue quis tellus viverra malesuada
+        vel ut quam. Cras vehicula rutrum
+        vehicula. Suspendisse efficitur eget purus vitae convallis. Integer euismod pharetra lorem, non ullamcorper
+        lorem euismod vel. Orci varius natoque
         penatibus et magnis dis parturient montes, nascetur ridiculus mus.
       </p>
       <h3 class="it-page-section" id="p1_1">Elemento annidato 1.1</h3>
       <p>
-        Proin placerat ipsum massa, ac commodo velit tempor quis. In ante augue,sodales ac rhoncus in, ultricies a neque. Morbi non semper felis, at lacinia
-        nibh. Nam quis elit massa. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam laoreet, diam quis blandit porttitor, leo erat semper
-        sem, vel sagittis dolor quam eu magna. Nunc feugiat pretium tempor. Nam eget augue quis tellus viverra malesuada vel ut quam. Cras vehicula rutrum
-        vehicula. Suspendisse efficitur eget purus vitae convallis. Integer euismod pharetra lorem, non ullamcorper lorem euismod vel. Orci varius natoque
+        Proin placerat ipsum massa, ac commodo velit tempor quis. In ante augue,sodales ac rhoncus in, ultricies a
+        neque. Morbi non semper felis, at lacinia
+        nibh. Nam quis elit massa. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam laoreet, diam
+        quis blandit porttitor, leo erat semper
+        sem, vel sagittis dolor quam eu magna. Nunc feugiat pretium tempor. Nam eget augue quis tellus viverra malesuada
+        vel ut quam. Cras vehicula rutrum
+        vehicula. Suspendisse efficitur eget purus vitae convallis. Integer euismod pharetra lorem, non ullamcorper
+        lorem euismod vel. Orci varius natoque
         penatibus et magnis dis parturient montes, nascetur ridiculus mus.
       </p>
       <h4 class="it-page-section" id="p1_1_1">Elemento annidato 1.1.1</h4>
       <p>
-        Proin placerat ipsum massa, ac commodo velit tempor quis. In ante augue,sodales ac rhoncus in, ultricies a neque. Morbi non semper felis, at lacinia
-        nibh. Nam quis elit massa. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam laoreet, diam quis blandit porttitor, leo erat semper
-        sem, vel sagittis dolor quam eu magna. Nunc feugiat pretium tempor. Nam eget augue quis tellus viverra malesuada vel ut quam. Cras vehicula rutrum
-        vehicula. Suspendisse efficitur eget purus vitae convallis. Integer euismod pharetra lorem, non ullamcorper lorem euismod vel. Orci varius natoque
+        Proin placerat ipsum massa, ac commodo velit tempor quis. In ante augue,sodales ac rhoncus in, ultricies a
+        neque. Morbi non semper felis, at lacinia
+        nibh. Nam quis elit massa. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam laoreet, diam
+        quis blandit porttitor, leo erat semper
+        sem, vel sagittis dolor quam eu magna. Nunc feugiat pretium tempor. Nam eget augue quis tellus viverra malesuada
+        vel ut quam. Cras vehicula rutrum
+        vehicula. Suspendisse efficitur eget purus vitae convallis. Integer euismod pharetra lorem, non ullamcorper
+        lorem euismod vel. Orci varius natoque
         penatibus et magnis dis parturient montes, nascetur ridiculus mus.
       </p>
       <h4 class="it-page-section" id="p1_1_2">Elemento annidato 1.1.2</h4>
       <p>
-        Proin placerat ipsum massa, ac commodo velit tempor quis. In ante augue,sodales ac rhoncus in, ultricies a neque. Morbi non semper felis, at lacinia
-        nibh. Nam quis elit massa. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam laoreet, diam quis blandit porttitor, leo erat semper
-        sem, vel sagittis dolor quam eu magna. Nunc feugiat pretium tempor. Nam eget augue quis tellus viverra malesuada vel ut quam. Cras vehicula rutrum
-        vehicula. Suspendisse efficitur eget purus vitae convallis. Integer euismod pharetra lorem, non ullamcorper lorem euismod vel. Orci varius natoque
+        Proin placerat ipsum massa, ac commodo velit tempor quis. In ante augue,sodales ac rhoncus in, ultricies a
+        neque. Morbi non semper felis, at lacinia
+        nibh. Nam quis elit massa. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam laoreet, diam
+        quis blandit porttitor, leo erat semper
+        sem, vel sagittis dolor quam eu magna. Nunc feugiat pretium tempor. Nam eget augue quis tellus viverra malesuada
+        vel ut quam. Cras vehicula rutrum
+        vehicula. Suspendisse efficitur eget purus vitae convallis. Integer euismod pharetra lorem, non ullamcorper
+        lorem euismod vel. Orci varius natoque
         penatibus et magnis dis parturient montes, nascetur ridiculus mus.
       </p>
       <h4 class="it-page-section" id="p1_1_3">Elemento annidato 1.1.3</h4>
       <p>
-        Proin placerat ipsum massa, ac commodo velit tempor quis. In ante augue,sodales ac rhoncus in, ultricies a neque. Morbi non semper felis, at lacinia
-        nibh. Nam quis elit massa. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam laoreet, diam quis blandit porttitor, leo erat semper
-        sem, vel sagittis dolor quam eu magna. Nunc feugiat pretium tempor. Nam eget augue quis tellus viverra malesuada vel ut quam. Cras vehicula rutrum
-        vehicula. Suspendisse efficitur eget purus vitae convallis. Integer euismod pharetra lorem, non ullamcorper lorem euismod vel. Orci varius natoque
+        Proin placerat ipsum massa, ac commodo velit tempor quis. In ante augue,sodales ac rhoncus in, ultricies a
+        neque. Morbi non semper felis, at lacinia
+        nibh. Nam quis elit massa. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam laoreet, diam
+        quis blandit porttitor, leo erat semper
+        sem, vel sagittis dolor quam eu magna. Nunc feugiat pretium tempor. Nam eget augue quis tellus viverra malesuada
+        vel ut quam. Cras vehicula rutrum
+        vehicula. Suspendisse efficitur eget purus vitae convallis. Integer euismod pharetra lorem, non ullamcorper
+        lorem euismod vel. Orci varius natoque
         penatibus et magnis dis parturient montes, nascetur ridiculus mus.
       </p>
       <h3 class="it-page-section" id="p1_2">Elemento annidato 1.2</h3>
       <p>
-        Proin placerat ipsum massa, ac commodo velit tempor quis. In ante augue,sodales ac rhoncus in, ultricies a neque. Morbi non semper felis, at lacinia
-        nibh. Nam quis elit massa. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam laoreet, diam quis blandit porttitor, leo erat semper
-        sem, vel sagittis dolor quam eu magna. Nunc feugiat pretium tempor. Nam eget augue quis tellus viverra malesuada vel ut quam. Cras vehicula rutrum
-        vehicula. Suspendisse efficitur eget purus vitae convallis. Integer euismod pharetra lorem, non ullamcorper lorem euismod vel. Orci varius natoque
+        Proin placerat ipsum massa, ac commodo velit tempor quis. In ante augue,sodales ac rhoncus in, ultricies a
+        neque. Morbi non semper felis, at lacinia
+        nibh. Nam quis elit massa. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam laoreet, diam
+        quis blandit porttitor, leo erat semper
+        sem, vel sagittis dolor quam eu magna. Nunc feugiat pretium tempor. Nam eget augue quis tellus viverra malesuada
+        vel ut quam. Cras vehicula rutrum
+        vehicula. Suspendisse efficitur eget purus vitae convallis. Integer euismod pharetra lorem, non ullamcorper
+        lorem euismod vel. Orci varius natoque
         penatibus et magnis dis parturient montes, nascetur ridiculus mus.
       </p>
       <h3 class="it-page-section" id="p1_3">Elemento annidato 1.3</h3>
       <p>
-        Proin placerat ipsum massa, ac commodo velit tempor quis. In ante augue,sodales ac rhoncus in, ultricies a neque. Morbi non semper felis, at lacinia
-        nibh. Nam quis elit massa. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam laoreet, diam quis blandit porttitor, leo erat semper
-        sem, vel sagittis dolor quam eu magna. Nunc feugiat pretium tempor. Nam eget augue quis tellus viverra malesuada vel ut quam. Cras vehicula rutrum
-        vehicula. Suspendisse efficitur eget purus vitae convallis. Integer euismod pharetra lorem, non ullamcorper lorem euismod vel. Orci varius natoque
+        Proin placerat ipsum massa, ac commodo velit tempor quis. In ante augue,sodales ac rhoncus in, ultricies a
+        neque. Morbi non semper felis, at lacinia
+        nibh. Nam quis elit massa. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam laoreet, diam
+        quis blandit porttitor, leo erat semper
+        sem, vel sagittis dolor quam eu magna. Nunc feugiat pretium tempor. Nam eget augue quis tellus viverra malesuada
+        vel ut quam. Cras vehicula rutrum
+        vehicula. Suspendisse efficitur eget purus vitae convallis. Integer euismod pharetra lorem, non ullamcorper
+        lorem euismod vel. Orci varius natoque
         penatibus et magnis dis parturient montes, nascetur ridiculus mus.
       </p>
       <h2 class="it-page-section" id="p2">Seconda sezione</h2>
       <p>
-        Proin placerat ipsum massa, ac commodo velit tempor quis. In ante augue,sodales ac rhoncus in, ultricies a neque. Morbi non semper felis, at lacinia
-        nibh. Nam quis elit massa. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam laoreet, diam quis blandit porttitor, leo erat semper
-        sem, vel sagittis dolor quam eu magna. Nunc feugiat pretium tempor. Nam eget augue quis tellus viverra malesuada vel ut quam. Cras vehicula rutrum
-        vehicula. Suspendisse efficitur eget purus vitae convallis. Integer euismod pharetra lorem, non ullamcorper lorem euismod vel. Orci varius natoque
+        Proin placerat ipsum massa, ac commodo velit tempor quis. In ante augue,sodales ac rhoncus in, ultricies a
+        neque. Morbi non semper felis, at lacinia
+        nibh. Nam quis elit massa. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam laoreet, diam
+        quis blandit porttitor, leo erat semper
+        sem, vel sagittis dolor quam eu magna. Nunc feugiat pretium tempor. Nam eget augue quis tellus viverra malesuada
+        vel ut quam. Cras vehicula rutrum
+        vehicula. Suspendisse efficitur eget purus vitae convallis. Integer euismod pharetra lorem, non ullamcorper
+        lorem euismod vel. Orci varius natoque
         penatibus et magnis dis parturient montes, nascetur ridiculus mus.
       </p>
       <h3 class="it-page-section" id="p2_1">Elemento annidato 2.1</h3>
       <p>
-        Proin placerat ipsum massa, ac commodo velit tempor quis. In ante augue,sodales ac rhoncus in, ultricies a neque. Morbi non semper felis, at lacinia
-        nibh. Nam quis elit massa. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam laoreet, diam quis blandit porttitor, leo erat semper
-        sem, vel sagittis dolor quam eu magna. Nunc feugiat pretium tempor. Nam eget augue quis tellus viverra malesuada vel ut quam. Cras vehicula rutrum
-        vehicula. Suspendisse efficitur eget purus vitae convallis. Integer euismod pharetra lorem, non ullamcorper lorem euismod vel. Orci varius natoque
+        Proin placerat ipsum massa, ac commodo velit tempor quis. In ante augue,sodales ac rhoncus in, ultricies a
+        neque. Morbi non semper felis, at lacinia
+        nibh. Nam quis elit massa. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam laoreet, diam
+        quis blandit porttitor, leo erat semper
+        sem, vel sagittis dolor quam eu magna. Nunc feugiat pretium tempor. Nam eget augue quis tellus viverra malesuada
+        vel ut quam. Cras vehicula rutrum
+        vehicula. Suspendisse efficitur eget purus vitae convallis. Integer euismod pharetra lorem, non ullamcorper
+        lorem euismod vel. Orci varius natoque
         penatibus et magnis dis parturient montes, nascetur ridiculus mus.
       </p>
       <h4 class="it-page-section" id="p2_1_1">Elemento annidato 2.1.1</h4>
       <p>
-        Proin placerat ipsum massa, ac commodo velit tempor quis. In ante augue,sodales ac rhoncus in, ultricies a neque. Morbi non semper felis, at lacinia
-        nibh. Nam quis elit massa. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam laoreet, diam quis blandit porttitor, leo erat semper
-        sem, vel sagittis dolor quam eu magna. Nunc feugiat pretium tempor. Nam eget augue quis tellus viverra malesuada vel ut quam. Cras vehicula rutrum
-        vehicula. Suspendisse efficitur eget purus vitae convallis. Integer euismod pharetra lorem, non ullamcorper lorem euismod vel. Orci varius natoque
+        Proin placerat ipsum massa, ac commodo velit tempor quis. In ante augue,sodales ac rhoncus in, ultricies a
+        neque. Morbi non semper felis, at lacinia
+        nibh. Nam quis elit massa. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam laoreet, diam
+        quis blandit porttitor, leo erat semper
+        sem, vel sagittis dolor quam eu magna. Nunc feugiat pretium tempor. Nam eget augue quis tellus viverra malesuada
+        vel ut quam. Cras vehicula rutrum
+        vehicula. Suspendisse efficitur eget purus vitae convallis. Integer euismod pharetra lorem, non ullamcorper
+        lorem euismod vel. Orci varius natoque
         penatibus et magnis dis parturient montes, nascetur ridiculus mus.
       </p>
       <h4 class="it-page-section" id="p2_1_2">Elemento annidato 2.1.2</h4>
       <p>
-        Proin placerat ipsum massa, ac commodo velit tempor quis. In ante augue,sodales ac rhoncus in, ultricies a neque. Morbi non semper felis, at lacinia
-        nibh. Nam quis elit massa. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam laoreet, diam quis blandit porttitor, leo erat semper
-        sem, vel sagittis dolor quam eu magna. Nunc feugiat pretium tempor. Nam eget augue quis tellus viverra malesuada vel ut quam. Cras vehicula rutrum
-        vehicula. Suspendisse efficitur eget purus vitae convallis. Integer euismod pharetra lorem, non ullamcorper lorem euismod vel. Orci varius natoque
+        Proin placerat ipsum massa, ac commodo velit tempor quis. In ante augue,sodales ac rhoncus in, ultricies a
+        neque. Morbi non semper felis, at lacinia
+        nibh. Nam quis elit massa. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam laoreet, diam
+        quis blandit porttitor, leo erat semper
+        sem, vel sagittis dolor quam eu magna. Nunc feugiat pretium tempor. Nam eget augue quis tellus viverra malesuada
+        vel ut quam. Cras vehicula rutrum
+        vehicula. Suspendisse efficitur eget purus vitae convallis. Integer euismod pharetra lorem, non ullamcorper
+        lorem euismod vel. Orci varius natoque
         penatibus et magnis dis parturient montes, nascetur ridiculus mus.
       </p>
       <h4 class="it-page-section" id="p2_1_3">Elemento annidato 2.1.3</h4>
       <p>
-        Proin placerat ipsum massa, ac commodo velit tempor quis. In ante augue,sodales ac rhoncus in, ultricies a neque. Morbi non semper felis, at lacinia
-        nibh. Nam quis elit massa. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam laoreet, diam quis blandit porttitor, leo erat semper
-        sem, vel sagittis dolor quam eu magna. Nunc feugiat pretium tempor. Nam eget augue quis tellus viverra malesuada vel ut quam. Cras vehicula rutrum
-        vehicula. Suspendisse efficitur eget purus vitae convallis. Integer euismod pharetra lorem, non ullamcorper lorem euismod vel. Orci varius natoque
+        Proin placerat ipsum massa, ac commodo velit tempor quis. In ante augue,sodales ac rhoncus in, ultricies a
+        neque. Morbi non semper felis, at lacinia
+        nibh. Nam quis elit massa. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam laoreet, diam
+        quis blandit porttitor, leo erat semper
+        sem, vel sagittis dolor quam eu magna. Nunc feugiat pretium tempor. Nam eget augue quis tellus viverra malesuada
+        vel ut quam. Cras vehicula rutrum
+        vehicula. Suspendisse efficitur eget purus vitae convallis. Integer euismod pharetra lorem, non ullamcorper
+        lorem euismod vel. Orci varius natoque
         penatibus et magnis dis parturient montes, nascetur ridiculus mus.
       </p>
     </div>
@@ -491,7 +627,9 @@
           <div class="col-sm-12">
             <div class="it-brand-wrapper">
               <a href="#">
-                <svg class="icon"><use xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-code-circle"></use></svg>
+                <svg class="icon">
+                  <use xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-code-circle"></use>
+                </svg>
                 <div class="it-brand-text">
                   <h2 class="no_toc">Lorem Ipsum</h2>
                   <h3 class="no_toc d-none d-md-block">Inserire qui la tag line</h3>
@@ -509,11 +647,15 @@
             </h4>
             <div class="link-list-wrapper">
               <ul class="footer-list link-list clearfix">
-                <li><a class="list-item" href="#" title="Vai alla pagina: Giunta e consiglio">Giunta e consiglio</a></li>
-                <li><a class="list-item" href="#" title="Vai alla pagina: Aree di competenza">Aree di competenza</a></li>
+                <li><a class="list-item" href="#" title="Vai alla pagina: Giunta e consiglio">Giunta e consiglio</a>
+                </li>
+                <li><a class="list-item" href="#" title="Vai alla pagina: Aree di competenza">Aree di competenza</a>
+                </li>
                 <li><a class="list-item" href="#" title="Vai alla pagina: Dipendenti">Dipendenti</a></li>
                 <li><a class="list-item" href="#" title="Vai alla pagina: Luoghi">Luoghi</a></li>
-                <li><a class="list-item" href="#" title="Vai alla pagina: Associazioni e società partecipate">Associazioni e società partecipate</a></li>
+                <li><a class="list-item" href="#"
+                    title="Vai alla pagina: Associazioni e società partecipate">Associazioni e società partecipate</a>
+                </li>
               </ul>
             </div>
           </div>
@@ -525,10 +667,13 @@
               <ul class="footer-list link-list clearfix">
                 <li><a class="list-item" href="#" title="Vai alla pagina: Pagamenti">Pagamenti</a></li>
                 <li><a class="list-item" href="#" title="Vai alla pagina: Sostegno">Sostegno</a></li>
-                <li><a class="list-item" href="#" title="Vai alla pagina: Domande e iscrizioni">Domande e iscrizioni</a></li>
+                <li><a class="list-item" href="#" title="Vai alla pagina: Domande e iscrizioni">Domande e iscrizioni</a>
+                </li>
                 <li><a class="list-item" href="#" title="Vai alla pagina: Segnalazioni">Segnalazioni</a></li>
-                <li><a class="list-item" href="#" title="Vai alla pagina: Autorizzazioni e concessioni">Autorizzazioni e concessioni</a></li>
-                <li><a class="list-item" href="#" title="Vai alla pagina: Certificati e dichiarazioni">Certificati e dichiarazioni</a></li>
+                <li><a class="list-item" href="#" title="Vai alla pagina: Autorizzazioni e concessioni">Autorizzazioni e
+                    concessioni</a></li>
+                <li><a class="list-item" href="#" title="Vai alla pagina: Certificati e dichiarazioni">Certificati e
+                    dichiarazioni</a></li>
               </ul>
             </div>
           </div>
@@ -550,8 +695,10 @@
             </h4>
             <div class="link-list-wrapper">
               <ul class="footer-list link-list clearfix">
-                <li><a class="list-item" href="#" title="Vai alla pagina: Progetti e attività">Progetti e attività</a></li>
-                <li><a class="list-item" href="#" title="Vai alla pagina: Delibere, determine e ordinanze">Delibere, determine e ordinanze</a></li>
+                <li><a class="list-item" href="#" title="Vai alla pagina: Progetti e attività">Progetti e attività</a>
+                </li>
+                <li><a class="list-item" href="#" title="Vai alla pagina: Delibere, determine e ordinanze">Delibere,
+                    determine e ordinanze</a></li>
                 <li><a class="list-item" href="#" title="Vai alla pagina: Bandi">Bandi</a></li>
                 <li><a class="list-item" href="#" title="Vai alla pagina: Concorsi">Concorsi</a></li>
                 <li><a class="list-item" href="#" title="Vai alla pagina: Albo pretorio">Albo pretorio</a></li>
@@ -570,9 +717,11 @@
             </p>
             <div class="link-list-wrapper">
               <ul class="footer-list link-list clearfix">
-                <li><a class="list-item" href="#" title="Vai alla pagina: Posta Elettronica Certificata">Posta Elettronica Certificata</a></li>
+                <li><a class="list-item" href="#" title="Vai alla pagina: Posta Elettronica Certificata">Posta
+                    Elettronica Certificata</a></li>
                 <li>
-                  <a class="list-item" href="#" title="Vai alla pagina: URP - Ufficio Relazioni con il Pubblico">URP - Ufficio Relazioni con il Pubblico</a>
+                  <a class="list-item" href="#" title="Vai alla pagina: URP - Ufficio Relazioni con il Pubblico">URP -
+                    Ufficio Relazioni con il Pubblico</a>
                 </li>
               </ul>
             </div>
@@ -586,25 +735,33 @@
               <ul class="list-inline text-left social">
                 <li class="list-inline-item">
                   <a class="p-2 text-white" href="#" target="_blank">
-                    <svg class="icon icon-sm icon-white align-top"><use xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-designers-italia"></use></svg>
+                    <svg class="icon icon-sm icon-white align-top">
+                      <use xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-designers-italia"></use>
+                    </svg>
                     <span class="visually-hidden">Designers Italia</span>
                   </a>
                 </li>
                 <li class="list-inline-item">
                   <a class="p-2 text-white" href="#" target="_blank">
-                    <svg class="icon icon-sm icon-white align-top"><use xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-twitter"></use></svg>
+                    <svg class="icon icon-sm icon-white align-top">
+                      <use xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-twitter"></use>
+                    </svg>
                     <span class="visually-hidden">Twitter</span>
                   </a>
                 </li>
                 <li class="list-inline-item">
                   <a class="p-2 text-white" href="#" target="_blank">
-                    <svg class="icon icon-sm icon-white align-top"><use xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-medium"></use></svg>
+                    <svg class="icon icon-sm icon-white align-top">
+                      <use xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-medium"></use>
+                    </svg>
                     <span class="visually-hidden">Medium</span>
                   </a>
                 </li>
                 <li class="list-inline-item">
                   <a class="p-2 text-white" href="#" target="_blank">
-                    <svg class="icon icon-sm icon-white align-top"><use xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-behance"></use></svg>
+                    <svg class="icon icon-sm icon-white align-top">
+                      <use xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-behance"></use>
+                    </svg>
                     <span class="visually-hidden">Behance</span>
                   </a>
                 </li>
@@ -643,7 +800,7 @@
   })
 </script>
  
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202505131207"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202506181703"></script>
 <script>
   bootstrap.loadFonts('/bootstrap-italia/dist/fonts')
 </script><!-- Notification per tornare alla pagina principale -->

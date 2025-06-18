@@ -11,13 +11,13 @@
 
 <title>Sticky · Bootstrap Italia</title>
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202505131207" rel="stylesheet" />
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202506181703" rel="stylesheet" />
 
 <!-- Documentation extras -->
  
 <link href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" rel="stylesheet" />
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202505131207" rel="stylesheet" />
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202506181703" rel="stylesheet" />
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico" />
@@ -144,9 +144,9 @@
     <ul class="navbar-nav flex-row ms-md-auto d-none d-md-flex">
       <li class="nav-item pe-2">
         <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center"
-          href="https://github.com/italia/bootstrap-italia/releases/download/v2.14.0/bootstrap-italia.zip"
+          href="https://github.com/italia/bootstrap-italia/releases/download/v2.15.0/bootstrap-italia.zip"
           aria-label="Download">
-          <small class="pe-2 m-0">v2.14.0</small>
+          <small class="pe-2 m-0">v2.15.0</small>
           <svg class="icon icon-sm icon-light">
             <use href="/bootstrap-italia/dist/svg/sprites.svg#it-download"
               xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-download"></use>
@@ -623,6 +623,7 @@
 </ul>
 </li>
 <li class="toc-entry toc-h2"><a href="#attivazione-tramite-codice">Attivazione tramite codice</a></li>
+<li class="toc-entry toc-h2"><a href="#breaking-changes">Breaking changes</a></li>
 </ul>
   </div>
 </div>
@@ -845,11 +846,10 @@ In tal caso è necessario utilizzare l’attributo <code class="language-plainte
           <div class="col-12">
             <!--start nav-->
             <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Navigazione principale">
-              <button class="custom-navbar-toggler" type="button" aria-controls="navC1" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#navC1">
+              <button class="custom-navbar-toggler" type="button" aria-controls="navC1" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#navC1">
                 <svg class="icon"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-burger"></use></svg>
               </button>
-              <div class="navbar-collapsable" id="navC1" style="display: none;">
-                <div class="overlay" style="display: none;"></div>
+              <div class="navbar-collapsable" id="navC1" tabindex="-1">
                 <div class="close-div">
                   <button class="btn close-menu" type="button">
                     <span class="visually-hidden">Nascondi la navigazione</span>
@@ -955,7 +955,6 @@ In tal caso è necessario utilizzare l’attributo <code class="language-plainte
 80
 81
 82
-83
 </pre></td><td class="code"><pre><span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"it-header-wrapper"</span> <span class="na">data-bs-toggle=</span><span class="s">"sticky"</span>  <span class="na">data-bs-target=</span><span class="s">"#stickyTrigger1"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-header-slim-wrapper"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
@@ -1012,11 +1011,10 @@ In tal caso è necessario utilizzare l’attributo <code class="language-plainte
           <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12"</span><span class="nt">&gt;</span>
             <span class="c">&lt;!--start nav--&gt;</span>
             <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar navbar-expand-lg has-megamenu"</span> <span class="na">aria-label=</span><span class="s">"Navigazione principale"</span><span class="nt">&gt;</span>
-              <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"custom-navbar-toggler"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">aria-controls=</span><span class="s">"navC1"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-label=</span><span class="s">"Mostra/Nascondi la navigazione"</span> <span class="na">data-bs-toggle=</span><span class="s">"navbarcollapsible"</span> <span class="na">data-bs-target=</span><span class="s">"#navC1"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"custom-navbar-toggler"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">aria-controls=</span><span class="s">"navC1"</span> <span class="na">aria-label=</span><span class="s">"Mostra/Nascondi la navigazione"</span> <span class="na">data-bs-toggle=</span><span class="s">"navbarcollapsible"</span> <span class="na">data-bs-target=</span><span class="s">"#navC1"</span><span class="nt">&gt;</span>
                 <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-burger"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
               <span class="nt">&lt;/button&gt;</span>
-              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"navbar-collapsable"</span> <span class="na">id=</span><span class="s">"navC1"</span> <span class="na">style=</span><span class="s">"display: none;"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"overlay"</span> <span class="na">style=</span><span class="s">"display: none;"</span><span class="nt">&gt;&lt;/div&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"navbar-collapsable"</span> <span class="na">id=</span><span class="s">"navC1"</span> <span class="na">tabindex=</span><span class="s">"-1"</span><span class="nt">&gt;</span>
                 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"close-div"</span><span class="nt">&gt;</span>
                   <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn close-menu"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>
                     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"visually-hidden"</span><span class="nt">&gt;</span>Nascondi la navigazione<span class="nt">&lt;/span&gt;</span>
@@ -1194,20 +1192,46 @@ inizializzazioni automatiche che possono portare a comportamenti inaspettati.</p
 <span class="p">})</span>
 </pre></td></tr></tbody></table></code></pre></div></div>
 
+<h2 id="breaking-changes">Breaking changes</h2>
+
+<div class="accordion p-0 bd-callout bd-callout-danger">
+  <div class="accordion-item">
+    <h4 class="accordion-header" id="#bsbrh2-15-0">
+      <button class="accordion-button text-black collapsed" type="button" style="border-top: none;" data-bs-toggle="collapse" data-bs-target="#bsbrc2-15-0" aria-controls="#bsbrc2-15-0">
+      Breaking change dalla versione&nbsp;<b>2.15.0</b>
+      </button>
+    </h4>
+    <div id="bsbrc2-15-0" class="accordion-collapse collapse" role="region" aria-labelledby="bsbrh2-15-0">
+      <div class="accordion-body">
+<p>La navbar presente nel markup dell’esempio “Attivabile con target”, quando aperta in versione mobile o a forte ingrandimento, è stata reimplementata come modale per migliorare l’accessibilità con le combinazioni principali di lettori di schermo, sistema operativo e browser. Modifiche principali:</p>
+<ul>
+  <li>struttura: la navbar ora utilizza un pattern dialog con backdrop</li>
+  <li>gerarchia visiva: la gestione <code class="language-plaintext highlighter-rouge">z-index</code> è allineata al componente modale</li>
+  <li>gestione del focus: implementato <code class="language-plaintext highlighter-rouge">focus-trap.js</code> per utenti da tastiera e lettori di schermo, e gestione inert</li>
+  <li>il comportamento è diverso se implementata dentro o fuori dall’elemento <code class="language-plaintext highlighter-rouge">main</code> di pagina (se presente)</li>
+</ul>
+
+<p>Se hai personalizzato il CSS della navbar, rivedi le tue modifiche per verificarne la compatibilità. Se hai modificato il comportamento JavaScript, assicurati che funzioni con il nuovo pattern dialog. Testa la tua implementazione con lettori di schermo e con utenti per verificarne l’accessibilità.</p>
+</div>
+    </div>
+  </div>
+</div>
+
+
         </main>
       </div>
     </div>
 
     
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202505131207"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202506181703"></script>
 <script>
   bootstrap.loadFonts('/bootstrap-italia/dist/fonts')
-</script><script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202505131207"></script>
+</script><script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202506181703"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/anchor.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/clipboard.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tsparticles.min.js"></script>
 
-<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202505131207"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202506181703"></script>
 
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tweenjs.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/easeljs.min.js"></script>
@@ -1224,7 +1248,7 @@ inizializzazioni automatiche che possono portare a comportamenti inaspettati.</p
     { src: '/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png', id: 'cover-7' },
   ]
 </script>
-<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202505131207"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202506181703"></script>
 <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
 
 <script>
