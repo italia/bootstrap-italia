@@ -1487,13 +1487,13 @@ Usa la variante banner per presentare una sezione principale del sito, un serviz
 <div class="row">
   <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
     <!--start it-card-->
-    <article class="it-card it-card-presentation rounded shadow-sm border">
+    <article class="it-card it-card-banner rounded shadow-sm border">
       <!--card first child is the title (link)-->
       <h3 class="it-card-title no_toc">
         <a href="#">Titolo del contenuto</a>
       </h3>
       <!--card second child is the icon (optional)-->
-      <div class="it-card-presentation-icon-wrapper">
+      <div class="it-card-banner-icon-wrapper">
         <svg class="icon icon-primary icon-xl" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chart-line"></use></svg>
       </div>
       <!--card body content-->
@@ -1515,13 +1515,13 @@ Per guidare verso un'azione specifica, usa l'elemento `.it-card-footer` per ospi
 <div class="row">
   <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
     <!--start it-card-->
-    <article class="it-card it-card-presentation rounded shadow-sm border">
+    <article class="it-card it-card-banner rounded shadow-sm border">
       <!--card first child is the title (link)-->
       <h3 class="it-card-title no_toc">
         Titolo del contenuto
       </h3>
       <!--card second child is the icon (optional)-->
-      <div class="it-card-presentation-icon-wrapper">
+      <div class="it-card-banner-icon-wrapper">
         <svg class="icon icon-primary icon-xl" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chart-line"></use></svg>
       </div>
       <!--card body content-->
@@ -1536,13 +1536,13 @@ Per guidare verso un'azione specifica, usa l'elemento `.it-card-footer` per ospi
   </div>
   <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
     <!--start it-card-->
-    <article class="it-card it-card-presentation rounded shadow-sm border">
+    <article class="it-card it-card-banner rounded shadow-sm border">
       <!--card first child is the title (link)-->
       <h3 class="it-card-title no_toc">
         Titolo del contenuto
       </h3>
       <!--card second child is the icon (optional)-->
-      <div class="it-card-presentation-icon-wrapper">
+      <div class="it-card-banner-icon-wrapper">
         <svg class="icon icon-primary icon-xl" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chart-line"></use></svg>
       </div>
       <!--card body content-->
@@ -1571,7 +1571,7 @@ Usa le stesse regole delle card inline e inline mini standard per struttura e in
 <div class="row">
   <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
     <!--start it-card-->
-    <article class="it-card it-card-presentation it-card-inline rounded shadow-sm border">
+    <article class="it-card it-card-banner it-card-inline rounded shadow-sm border">
      <!--card first child is all the card content: title (link) + body + footer -->
       <div class="it-card-inline-content">
         <h3 class="it-card-title no_toc">
@@ -1582,7 +1582,7 @@ Usa le stesse regole delle card inline e inline mini standard per struttura e in
         </div>
       </div>
       <!--card second child is the icon (optional)-->
-      <div class="it-card-presentation-icon-wrapper">
+      <div class="it-card-banner-icon-wrapper">
         <svg class="icon icon-primary icon-xl" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chart-line"></use></svg>
       </div>
     </article>
@@ -1590,7 +1590,7 @@ Usa le stesse regole delle card inline e inline mini standard per struttura e in
   </div>
   <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
     <!--start it-card-->
-    <article class="it-card it-card-presentation it-card-inline it-card-inline-reverse rounded shadow-sm border">
+    <article class="it-card it-card-banner it-card-inline it-card-inline-reverse rounded shadow-sm border">
      <!--card first child is all the card content: title (link) + body + footer -->
       <div class="it-card-inline-content">
         <h3 class="it-card-title no_toc">
@@ -1601,7 +1601,7 @@ Usa le stesse regole delle card inline e inline mini standard per struttura e in
         </div>
       </div>
       <!--card second child is the icon (optional)-->
-      <div class="it-card-presentation-icon-wrapper">
+      <div class="it-card-banner-icon-wrapper">
         <svg class="icon icon-primary icon-xl" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chart-line"></use></svg>
       </div>
     </article>
@@ -1612,7 +1612,7 @@ Usa le stesse regole delle card inline e inline mini standard per struttura e in
 <div class="row">
   <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
     <!--start it-card-->
-    <article class="it-card it-card-presentation it-card-inline it-card-inline-mini rounded shadow-sm border">
+    <article class="it-card it-card-banner it-card-inline it-card-inline-mini rounded shadow-sm border">
      <!--card first child is all the card content: title (link) + body + footer -->
       <div class="it-card-inline-content">
         <h3 class="it-card-title no_toc">
@@ -1623,7 +1623,7 @@ Usa le stesse regole delle card inline e inline mini standard per struttura e in
         </div>
       </div>
       <!--card second child is the icon (optional)-->
-      <div class="it-card-presentation-icon-wrapper">
+      <div class="it-card-banner-icon-wrapper">
         <svg class="icon icon-primary icon-xl" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chart-line"></use></svg>
       </div>
     </article>
@@ -1631,7 +1631,7 @@ Usa le stesse regole delle card inline e inline mini standard per struttura e in
   </div>
   <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
     <!--start it-card-->
-    <article class="it-card it-card-presentation it-card-inline it-card-inline-mini it-card-inline-reverse rounded shadow-sm border">
+    <article class="it-card it-card-banner it-card-inline it-card-inline-mini it-card-inline-reverse rounded shadow-sm border">
      <!--card first child is all the card content: title (link) + body + footer -->
       <div class="it-card-inline-content">
         <h3 class="it-card-title no_toc">
@@ -1642,7 +1642,7 @@ Usa le stesse regole delle card inline e inline mini standard per struttura e in
         </div>
       </div>
       <!--card second child is the icon (optional)-->
-      <div class="it-card-presentation-icon-wrapper">
+      <div class="it-card-banner-icon-wrapper">
         <svg class="icon icon-primary icon-xl" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chart-line"></use></svg>
       </div>
     </article>
@@ -1656,7 +1656,7 @@ Usa le stesse regole delle card inline e inline mini standard per struttura e in
 
 Usa le card dati per presentare numeri e metriche in dashboard, report e sezioni "numeri" delle pagine istituzionali. Permettono di presentare in modo chiaro numeri, descrizioni contestuali e indicatori di tendenza. Sono progettare inoltre per complementare pagine che contengono grafici, visualizzazioni di dati e possibilità di scaricare i dati. 
 
-Attiva questa variante con la classe `.it-card-presentation-data`.
+Attiva questa variante con la classe `.it-card-data`.
 
 {% capture callout %}
 
@@ -1673,12 +1673,31 @@ In particolare nei casi di presentazione di dati di particolare impostanza, svol
 {% comment %}Example name: Card dati{% endcomment %}
 {% capture example %}
 <div class="row">
-  <div class="col-12 col-lg-6">
-    <article class="it-card it-card-presentation-data">
-      <div class="it-card-body">
-        Lorem ipsum.
+  <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
+    <!--start it-card-->
+    <article class="it-card it-card-image it-card-data rounded shadow-sm border">
+      <!--card first child is the title (link)-->
+      <h3 class="it-card-title no_toc">
+        <a href="#">Titolo del contenuto</a>
+      </h3>
+      <!--card second child is the image (optional)-->
+      <div class="it-card-image-wrapper">
+        <div class="ratio ratio-16x9">
+          <figure class="figure img-full">
+            <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+          </figure>
+        </div>
       </div>
+      <!--card body content-->
+      <div class="it-card-body">
+        <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
+      </div>
+      <!--finally the card footer metadata-->
+      <footer class="it-card-related it-card-footer">
+        <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
+      </footer>
     </article>
+    <!--end it-card-->
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}

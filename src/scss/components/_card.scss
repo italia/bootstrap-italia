@@ -648,7 +648,7 @@ article.it-card {
   }
 
   // Card presentation
-  &.it-card-presentation {
+  &.it-card-banner {
     align-items: center;
     text-align: center;
     padding-top: calc(var(--#{$prefix}it-card-quad-spacer-y) + var(--#{$prefix}it-card-spacer-y));
@@ -663,7 +663,7 @@ article.it-card {
       font-weight: 500 !important;
     }
 
-    .it-card-presentation-icon-wrapper {
+    .it-card-banner-icon-wrapper {
       order: -1;
       width: 100%;
       display: flex;
@@ -682,7 +682,7 @@ article.it-card {
     @mixin it-card-inline-layout {
       flex-direction: row !important;
 
-      &:not(.it-card-presentation) {
+      &:not(.it-card-banner) {
         padding-bottom: 0 !important;
       }
 
@@ -751,23 +751,18 @@ article.it-card {
         }
       }
 
-      &.it-card-presentation {
+      &.it-card-banner {
         align-items: flex-start;
         text-align: left;
         min-height: auto !important;
-        padding-left: calc(var(--bs-it-card-spacer-x) * 2);
+        padding-left: var(--bs-it-card-spacer-x);
         padding-right: var(--bs-it-card-spacer-x);
-
-        @include media-breakpoint-down(sm) {
-          padding-left: var(--bs-it-card-spacer-x);
-          padding-right: 0;
-        }
 
         .it-card-title {
           margin-top: 0;
         }
 
-        .it-card-presentation-icon-wrapper {
+        .it-card-banner-icon-wrapper {
           width: auto;
         }
 
@@ -776,7 +771,7 @@ article.it-card {
           padding-right: var(--bs-it-card-spacer-x);
           padding-left: 0;
 
-          .it-card-presentation-icon-wrapper {
+          .it-card-banner-icon-wrapper {
             order: 1;
           }
         }
