@@ -16,6 +16,22 @@
   padding: 8px 0;
 }
 
+// Navbar mobile backdrop, inspired by "modal" approach
+.navbar-backdrop {
+  // scss-docs-start modal-backdrop-css-vars
+  --#{$prefix}backdrop-zindex: #{$zindex-modal-backdrop};
+  --#{$prefix}backdrop-bg: #{$modal-backdrop-bg};
+  --#{$prefix}backdrop-opacity: #{$modal-backdrop-opacity};
+  // scss-docs-end modal-backdrop-css-vars
+
+  @include overlay-backdrop(var(--#{$prefix}backdrop-zindex), var(--#{$prefix}backdrop-bg), var(--#{$prefix}backdrop-opacity));
+
+  @media (min-width: #{map-get($grid-breakpoints, lg)}) {
+    display: none; // to handle resize from md to lg when open
+  }
+}
+
+// navbar mobile
 .navbar {
   background: $navbar-bg-color;
 
@@ -30,23 +46,22 @@
     display: none;
   }
 
-  // navbar mobile
   .navbar-collapsable {
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
     bottom: 0;
-    z-index: 100;
+    z-index: #{$zindex-modal};
     display: none;
-    width: 100%; //-occupa sempre tutta lo spazio orizzontale disponibile
+    width: calc(100% - 48px); // occupa sempre tutta lo spazio orizzontale disponibile (BSI v2.15:) meno 48px a destra per il close e backdrop
 
     .menu-wrapper {
       background: $navigation-bg-color;
       position: absolute;
       top: 0;
       bottom: 0;
-      right: $navigation-h-padding * 2;
+      right: 0; // $navigation-h-padding * 2; < removed in BSI v2.15
       left: 0;
       pointer-events: all;
       overflow-y: auto;
@@ -351,9 +366,9 @@
       right: auto;
       left: auto;
       bottom: auto;
-      z-index: auto;
+      z-index: 1; // auto; xxx auto doesn't handle resize from md to lg when open
       background: none;
-      display: block !important; //-sovrascrive l'inline style di jquery
+      display: block !important;
       transition: none;
 
       .overlay {
