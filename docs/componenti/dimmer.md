@@ -451,3 +451,11 @@ const dimmer = new Dimmer(dimmerEl)
     </tbody>
   </table>
 </div>
+
+## Breaking change 
+
+{% capture callout %}
+Implementato negli esempi il nuovo componente card definito dalle classi `.it-card` e relativi modificatori.  
+
+Le classi legacy di Bootstrap `.card` sono ora deprecate ma **saranno mantenute nei fogli di stile fino al prossimo rilascio maggiore, per permettere una migrazione graduale**. 
+{% endcapture %}{% include callout-breaking.html version="2.16.0" content=callout type="danger" %}
