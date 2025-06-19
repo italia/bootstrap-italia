@@ -1651,57 +1651,6 @@ Usa le stesse regole delle card inline e inline mini standard per struttura e in
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-
-### Card dati
-
-Usa le card dati per presentare numeri e metriche in dashboard, report e sezioni "numeri" delle pagine istituzionali. Permettono di presentare in modo chiaro numeri, descrizioni contestuali e indicatori di tendenza. Sono progettare inoltre per complementare pagine che contengono grafici, visualizzazioni di dati e possibilità di scaricare i dati. 
-
-Attiva questa variante con la classe `.it-card-data`.
-
-{% capture callout %}
-
-#### Accessibilità nelle card dati
-
-Quando usi o componi card dati, usa markup semantico appropriato per i valori numerici. Se mostri tendenze o variazioni, comunica l'informazione anche testualmente e non solo attraverso colori o icone. Aggiungi `<span class="visually-hidden">` per fornire contesto aggiuntivo quando necessario (es. "Incremento del ", "Valore attuale: "). 
-
-Cura con attenzione la necessità o meno di descrivere il significato o la funzionalità delle icone (fai riferimento al paragrafo Accessibilità: valore semantico delle icone precedente), e usa il livello `h` corretto a seconda del contesto in cui la card è inserita. 
-
-In particolare nei casi di presentazione di dati di particolare impostanza, svolgi sempre test di usabilità con persone che utilizzano tecnologie assistive, per verificare l'efficacia delle soluzioni implementate.
-
-{% endcapture %}{% include callout.html content=callout type="accessibility" %}
-
-{% comment %}Example name: Card dati{% endcomment %}
-{% capture example %}
-<div class="row">
-  <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
-    <!--start it-card-->
-    <article class="it-card it-card-image it-card-data rounded shadow-sm border">
-      <!--card first child is the title (link)-->
-      <h3 class="it-card-title no_toc">
-        <a href="#">Titolo del contenuto</a>
-      </h3>
-      <!--card second child is the image (optional)-->
-      <div class="it-card-image-wrapper">
-        <div class="ratio ratio-16x9">
-          <figure class="figure img-full">
-            <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
-          </figure>
-        </div>
-      </div>
-      <!--card body content-->
-      <div class="it-card-body">
-        <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
-      </div>
-      <!--finally the card footer metadata-->
-      <footer class="it-card-related it-card-footer">
-        <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
-      </footer>
-    </article>
-    <!--end it-card-->
-  </div>
-</div>
-{% endcapture %}{% include example.html content=example %}
-
 ## Personalizzazioni e stili
 
 Alcune classi e codice HTML utile a personalizzare le card.
@@ -2476,7 +2425,7 @@ Svolgi sempre test di usabilità con utenti che utilizzano tecnologie assistive 
 
 ## Funzionalità future
 **Sono in lavorazione**:
-- Le varianti di tipo presentazione (dati e banner) come mostrate in [UI Kit Italia](https://github.com/italia/design-ui-kit/) v3.7.0. 
+- Le varianti di tipo presentazione dati come mostrate in [UI Kit Italia](https://github.com/italia/design-ui-kit/) v3.7.0. 
 - L'eventuale pulsante di utilità per attivare un dropdown che mostri le possibilità di condivisione della card, come già disponibile nelle card del sito [sito Designers Italia](https://designers.italia.it/community/).
 
 ## Breaking change
