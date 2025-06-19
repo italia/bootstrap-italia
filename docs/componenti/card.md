@@ -1482,6 +1482,8 @@ Le card presentazione sono utili per mettere in evidenza l'accesso rapido a cont
 
 Usa la variante banner per presentare una sezione principale del sito, un servizio chiave, oppure permettere l'accesso rapido a una funzionalità. Attivala con la classe `.it-card-banner`.
 
+Per inserire l'icona racchiudila in un contenitore `.it-card-banner-icon-wrapper` a seguire l’elemento titolo, l’ordine di visualizzazione viene invertito in automatico.
+
 {% comment %}Example name: Card banner{% endcomment %}
 {% capture example %}
 <div class="row">
