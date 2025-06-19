@@ -679,7 +679,7 @@ article.it-card {
 
   // Layout inline
   &.it-card-inline {
-    @mixin inline-layout {
+    @mixin it-card-inline-layout {
       flex-direction: row !important;
 
       &:not(.it-card-presentation) {
@@ -784,7 +784,7 @@ article.it-card {
     }
 
     &.it-card-inline-mini {
-      @include inline-layout;
+      @include it-card-inline-layout;
       min-height: var(--#{$prefix}it-card-inline-mini-min-height);
 
       &.it-card-image .it-card-image-wrapper {
@@ -798,7 +798,7 @@ article.it-card {
 
     @include media-breakpoint-up(sm) {
       &:not(.it-card-inline-mini) {
-        @include inline-layout;
+        @include it-card-inline-layout;
         min-height: var(--#{$prefix}it-card-inline-min-height);
 
         &.it-card-image .it-card-image-wrapper {
