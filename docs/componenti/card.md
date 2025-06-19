@@ -1577,7 +1577,7 @@ Usa le stesse regole delle card inline e inline mini standard per struttura e in
      <!--card first child is all the card content: title (link) + body + footer -->
       <div class="it-card-inline-content">
         <h3 class="it-card-title no_toc">
-          <a href="#">Titolo del contenutorelungo</a>
+          <a href="#">Titolo del contenuto</a>
         </h3>
         <div class="it-card-body">
           <p class="it-card-subtitle">Sottotitolo</p>
