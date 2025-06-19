@@ -1494,7 +1494,7 @@ Usa la variante banner per presentare una sezione principale del sito, un serviz
       </h3>
       <!--card second child is the icon (optional)-->
       <div class="it-card-banner-icon-wrapper">
-        <svg class="icon icon-primary icon-xl" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chart-line"></use></svg>
+        <svg class="icon icon-secondary icon-xl" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chart-line"></use></svg>
       </div>
       <!--card body content-->
       <div class="it-card-body">
@@ -1522,7 +1522,7 @@ Per guidare verso un'azione specifica, usa l'elemento `.it-card-footer` per ospi
       </h3>
       <!--card second child is the icon (optional)-->
       <div class="it-card-banner-icon-wrapper">
-        <svg class="icon icon-primary icon-xl" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chart-line"></use></svg>
+        <svg class="icon icon-secondary icon-xl" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chart-line"></use></svg>
       </div>
       <!--card body content-->
       <div class="it-card-body">
@@ -1543,7 +1543,7 @@ Per guidare verso un'azione specifica, usa l'elemento `.it-card-footer` per ospi
       </h3>
       <!--card second child is the icon (optional)-->
       <div class="it-card-banner-icon-wrapper">
-        <svg class="icon icon-primary icon-xl" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chart-line"></use></svg>
+        <svg class="icon icon-secondary icon-xl" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chart-line"></use></svg>
       </div>
       <!--card body content-->
       <div class="it-card-body">
@@ -1583,7 +1583,7 @@ Usa le stesse regole delle card inline e inline mini standard per struttura e in
       </div>
       <!--card second child is the icon (optional)-->
       <div class="it-card-banner-icon-wrapper">
-        <svg class="icon icon-primary icon-xl" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chart-line"></use></svg>
+        <svg class="icon icon-secondary icon-xl" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chart-line"></use></svg>
       </div>
     </article>
     <!--end it-card-->
@@ -1602,7 +1602,7 @@ Usa le stesse regole delle card inline e inline mini standard per struttura e in
       </div>
       <!--card second child is the icon (optional)-->
       <div class="it-card-banner-icon-wrapper">
-        <svg class="icon icon-primary icon-xl" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chart-line"></use></svg>
+        <svg class="icon icon-secondary icon-xl" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chart-line"></use></svg>
       </div>
     </article>
     <!--end it-card-->
@@ -1624,7 +1624,7 @@ Usa le stesse regole delle card inline e inline mini standard per struttura e in
       </div>
       <!--card second child is the icon (optional)-->
       <div class="it-card-banner-icon-wrapper">
-        <svg class="icon icon-primary icon-xl" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chart-line"></use></svg>
+        <svg class="icon icon-secondary icon-xl" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chart-line"></use></svg>
       </div>
     </article>
     <!--end it-card-->
@@ -1643,7 +1643,7 @@ Usa le stesse regole delle card inline e inline mini standard per struttura e in
       </div>
       <!--card second child is the icon (optional)-->
       <div class="it-card-banner-icon-wrapper">
-        <svg class="icon icon-primary icon-xl" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chart-line"></use></svg>
+        <svg class="icon icon-secondary icon-xl" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chart-line"></use></svg>
       </div>
     </article>
     <!--end it-card-->
