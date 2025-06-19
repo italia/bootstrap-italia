@@ -68,12 +68,12 @@ $icon-colors: (
   display: flex;
   align-items: center;
   justify-content: center;
-  width: var(--#{$prefix}icon-size-s);
-  height: var(--#{$prefix}icon-size-s);
+  width: var(--#{$prefix}rounded-icon-size);
+  height: var(--#{$prefix}rounded-icon-size);
   background-color: var(--#{$prefix}icon-inverse);
   border-radius: var(--#{$prefix}radius-circle);
 
-  // TODO: remove this when we have a proper icon color map 
+  // TODO: remove this when we have a proper icon color map
   @each $color, $value in $icon-colors {
     &.rounded-#{$color} {
       background-color: $value;
