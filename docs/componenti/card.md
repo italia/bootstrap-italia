@@ -1248,7 +1248,7 @@ Negli esempi abbiamo utilizzato il tag `h4` per i titoli `.it-card-profile-name`
         </div>
         <div class="it-card-profile-image ratio ratio-1x1">
           <div class="it-card-profile-image-icon-wrapper">
-            <svg class="icon icon-lg icon-padded icon-primary" aria-hidden="true"><use href="/dist/svg/sprites.svg#it-pa"></use></svg>
+            <svg class="icon icon-lg  icon-primary" aria-hidden="true"><use href="/dist/svg/sprites.svg#it-pa"></use></svg>
           </div>
         </div>
       </div>
@@ -1288,7 +1288,7 @@ Negli esempi abbiamo utilizzato il tag `h4` per i titoli `.it-card-profile-name`
         </div>
         <div class="it-card-profile-image ratio ratio-1x1">
           <div class="it-card-profile-image-icon-wrapper">
-            <svg class="icon icon-lg icon-padded icon-primary" aria-hidden="true"><use href="/dist/svg/sprites.svg#it-pa"></use></svg>
+            <svg class="icon icon-lg  icon-primary" aria-hidden="true"><use href="/dist/svg/sprites.svg#it-pa"></use></svg>
           </div>
         </div>
       </div>
@@ -1474,15 +1474,15 @@ Puoi combinare questa impostazione con le funzionalità del contenitore `.it-car
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-## Card di presentazione
+## Card presentazione
 
-Le card di presentazione sono utili per presentare e dare evidenza a contenuti o per visualizzare dati in modo chiaro e organizzato.
+Le card presentazione sono utili per mettere in evidenza l'accesso rapido a contenuti chiave oppure permettere la presentazione di dati. 
 
-### Card per presentare contenuti
+### Card banner
 
-La card presentazione contenuti è ottimizzata per presentare l'accesso a un unico contenuto (sezione, scheda in evidenza, o altro) con icona, titolo e sottotitolo. Puoi attivarla con la classe `.it-card-presentation`.
+Usa la variante banner per presentare una sezione principale del sito, un servizio chiave, oppure permettere l'accesso rapido a una funzionalità. Attivala con la classe `.it-card-banner`.
 
-{% comment %}Example name: Card presentazione contenuti{% endcomment %}
+{% comment %}Example name: Card banner{% endcomment %}
 {% capture example %}
 <div class="row">
   <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
@@ -1494,7 +1494,7 @@ La card presentazione contenuti è ottimizzata per presentare l'accesso a un uni
       </h3>
       <!--card second child is the icon (optional)-->
       <div class="it-card-presentation-icon-wrapper">
-        <svg class="icon icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chart-line"></use></svg>
+        <svg class="icon icon-primary icon-xl" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chart-line"></use></svg>
       </div>
       <!--card body content-->
       <div class="it-card-body">
@@ -1506,11 +1506,11 @@ La card presentazione contenuti è ottimizzata per presentare l'accesso a un uni
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-#### Con link o pulsanti accessori
+#### Card banner con azione
 
-Se il contesto lo richiede, usa `.it-card-footer` per creare uno spazio dedicato per un link o azione correlata, come negli esempi seguenti. In questo caso il titolo della card non dovrebbe essere un link. 
+Per guidare verso un'azione specifica, usa l'elemento `.it-card-footer` per ospitare un pulsante o link. In questo caso, evita di collegare il titolo della card.
 
-{% comment %}Example name: Card presentazione contenuti con link accessori{% endcomment %}
+{% comment %}Example name: Card banner con azione {% endcomment %}
 {% capture example %}
 <div class="row">
   <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
@@ -1522,7 +1522,7 @@ Se il contesto lo richiede, usa `.it-card-footer` per creare uno spazio dedicato
       </h3>
       <!--card second child is the icon (optional)-->
       <div class="it-card-presentation-icon-wrapper">
-        <svg class="icon icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chart-line"></use></svg>
+        <svg class="icon icon-primary icon-xl" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chart-line"></use></svg>
       </div>
       <!--card body content-->
       <div class="it-card-body">
@@ -1543,7 +1543,7 @@ Se il contesto lo richiede, usa `.it-card-footer` per creare uno spazio dedicato
       </h3>
       <!--card second child is the icon (optional)-->
       <div class="it-card-presentation-icon-wrapper">
-        <svg class="icon icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chart-line"></use></svg>
+        <svg class="icon icon-primary icon-xl" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chart-line"></use></svg>
       </div>
       <!--card body content-->
       <div class="it-card-body">
@@ -1558,11 +1558,119 @@ Se il contesto lo richiede, usa `.it-card-footer` per creare uno spazio dedicato
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Card per presentare dati
+#### Card banner inline
 
-La card di presentazione dati permette di evidenziare un valore numerico significativo con la sua descrizione e l'andamento nel tempo. Puoi attivarla con la classe `.it-card-presentation-data`.
+Per disporre le card banner in orizzontale, usa la classe `.it-card-inline` e raccogli tutti i contenuti di testo e interattivi in un contenitore `.it-card-inline-content`.
 
-{% comment %}Example name: Card presentazione dati{% endcomment %}
+Per mantenere il layout orizzontale anche su viewport piccole o fortemente ingrandite, usa `.it-card-inline-mini` come nelle ultime card dell'esempio. 
+
+Usa le stesse regole delle card inline e inline mini standard per struttura e inversione dell’ordine.
+
+{% comment %}Example name: Card banner inline{% endcomment %}
+{% capture example %}
+<div class="row">
+  <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
+    <!--start it-card-->
+    <article class="it-card it-card-presentation it-card-inline rounded shadow-sm border">
+     <!--card first child is all the card content: title (link) + body + footer -->
+      <div class="it-card-inline-content">
+        <h3 class="it-card-title no_toc">
+          <a href="#">Titolo del contenutorelungo</a>
+        </h3>
+        <div class="it-card-body">
+          <p class="it-card-subtitle">Sottotitolo</p>
+        </div>
+      </div>
+      <!--card second child is the icon (optional)-->
+      <div class="it-card-presentation-icon-wrapper">
+        <svg class="icon icon-primary icon-xl" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chart-line"></use></svg>
+      </div>
+    </article>
+    <!--end it-card-->
+  </div>
+  <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
+    <!--start it-card-->
+    <article class="it-card it-card-presentation it-card-inline it-card-inline-reverse rounded shadow-sm border">
+     <!--card first child is all the card content: title (link) + body + footer -->
+      <div class="it-card-inline-content">
+        <h3 class="it-card-title no_toc">
+          <a href="#">Titolo del contenuto</a>
+        </h3>
+        <div class="it-card-body">
+          <p class="it-card-subtitle">Sottotitolo</p>
+        </div>
+      </div>
+      <!--card second child is the icon (optional)-->
+      <div class="it-card-presentation-icon-wrapper">
+        <svg class="icon icon-primary icon-xl" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chart-line"></use></svg>
+      </div>
+    </article>
+    <!--end it-card-->
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
+    <!--start it-card-->
+    <article class="it-card it-card-presentation it-card-inline it-card-inline-mini rounded shadow-sm border">
+     <!--card first child is all the card content: title (link) + body + footer -->
+      <div class="it-card-inline-content">
+        <h3 class="it-card-title no_toc">
+          <a href="#">Titolo del contenuto</a>
+        </h3>
+        <div class="it-card-body">
+          <p class="it-card-subtitle">Versione inline anche su mobile</p>
+        </div>
+      </div>
+      <!--card second child is the icon (optional)-->
+      <div class="it-card-presentation-icon-wrapper">
+        <svg class="icon icon-primary icon-xl" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chart-line"></use></svg>
+      </div>
+    </article>
+    <!--end it-card-->
+  </div>
+  <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
+    <!--start it-card-->
+    <article class="it-card it-card-presentation it-card-inline it-card-inline-mini it-card-inline-reverse rounded shadow-sm border">
+     <!--card first child is all the card content: title (link) + body + footer -->
+      <div class="it-card-inline-content">
+        <h3 class="it-card-title no_toc">
+          <a href="#">Titolo del contenuto</a>
+        </h3>
+        <div class="it-card-body">
+          <p class="it-card-subtitle">Versione inline anche su mobile</p>
+        </div>
+      </div>
+      <!--card second child is the icon (optional)-->
+      <div class="it-card-presentation-icon-wrapper">
+        <svg class="icon icon-primary icon-xl" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chart-line"></use></svg>
+      </div>
+    </article>
+    <!--end it-card-->
+  </div>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+
+### Card dati
+
+Usa le card dati per presentare numeri e metriche in dashboard, report e sezioni "numeri" delle pagine istituzionali. Permettono di presentare in modo chiaro numeri, descrizioni contestuali e indicatori di tendenza. Sono progettare inoltre per complementare pagine che contengono grafici, visualizzazioni di dati e possibilità di scaricare i dati. 
+
+Attiva questa variante con la classe `.it-card-presentation-data`.
+
+{% capture callout %}
+
+#### Accessibilità nelle card dati
+
+Quando usi o componi card dati, usa markup semantico appropriato per i valori numerici. Se mostri tendenze o variazioni, comunica l'informazione anche testualmente e non solo attraverso colori o icone. Aggiungi `<span class="visually-hidden">` per fornire contesto aggiuntivo quando necessario (es. "Incremento del ", "Valore attuale: "). 
+
+Cura con attenzione la necessità o meno di descrivere il significato o la funzionalità delle icone (fai riferimento al paragrafo Accessibilità: valore semantico delle icone precedente), e usa il livello `h` corretto a seconda del contesto in cui la card è inserita. 
+
+In particolare nei casi di presentazione di dati di particolare impostanza, svolgi sempre test di usabilità con persone che utilizzano tecnologie assistive, per verificare l'efficacia delle soluzioni implementate.
+
+{% endcapture %}{% include callout.html content=callout type="accessibility" %}
+
+{% comment %}Example name: Card dati{% endcomment %}
 {% capture example %}
 <div class="row">
   <div class="col-12 col-lg-6">
@@ -2333,7 +2441,7 @@ Per migliorare la comprensione dei metadati da parte delle tecnologie assistive 
 
 Laddove le icone abbiano puro scopo decorativo, quando cioè il loro significato sia già chiaro dal contesto, usa `aria-hidden="true"`. Se comunicano informazioni aggiuntive, aggiungi una descrizione testuale con `<span class="visually-hidden">` o usa `role="img"` con un elemento `title`. Se funzionali assicurati che il significato sia comunicato testualmente.  
 
-Per le immagini aggiungi una breve descrizione immagine (con l'attributo `alt="Breve descrizione."`) se ha senso nel contesto, marcale altrimenti come decorative lasciando l'`alt` applicato ma vuoto.
+Per le immagini aggiungi una breve descrizione immagine (con l'attributo `alt="Breve descrizione."`) se ha senso nel contesto, marcale altrimenti come decorative lasciando l'attributo `alt` applicato ma vuoto.
 
 ### Collegamenti e navigazione
 
