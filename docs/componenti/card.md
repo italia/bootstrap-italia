@@ -40,7 +40,7 @@ Abbiamo segnalato l’inizio della card vera e propria nell'HTML con il commento
 
 Esempio base con immagine, descrizione e data:
 
-{% comment %}Example name: Card semplice{% endcomment %}
+{% comment %}Example name: Card base{% endcomment %}
 {% capture example %}
 <div class="row">
   <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
@@ -1015,7 +1015,7 @@ Usa questa variante per presentare documenti e allegati. Per mostrare un'icona a
 
 Per creare un ulteriore spazio dedicato a **collegamenti o pulsanti secondari**, come negli esempi seguenti, puoi usare la classe `.it-card-footer`. Questa impostazione è utile quando il titolo della card porta a una pagina di approfondimento (ad esempio, la descrizione dettagliata del documento), ma si vuole dare accesso diretto e immediato all'azione principale (ad esempio, scaricare il file sul proprio dispositivo).
 
-{% comment %}Example name: Card servizi{% endcomment %}
+{% comment %}Example name: Card documenti e allegati{% endcomment %}
 {% capture example %}
 <div class="row">
   <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
@@ -1887,7 +1887,7 @@ Puoi cambiare questo comportamento per ogni card usando la classe `.it-card-heig
 
 L'elemento `footer .it-card-related` si allinea verticamente in modo diverso a seconda della posizione nel markup: quando all'interno di `.it-card-body` segue il contenuto; fuori, con l'aggiunta di `.it-card-footer`, si ancora al bordo inferiore come la data nell'esempio che segue.
 
-{% comment %}Example name: Altezza delle card basata su tutto lo spazio{% endcomment %}
+{% comment %}Example name: Altezza delle card{% endcomment %}
 {% capture example %}
 <div class="row">
   <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
@@ -1941,7 +1941,7 @@ L'elemento `footer .it-card-related` si allinea verticamente in modo diverso a s
 
 Puoi personalizzare il comportamento dei pulsanti nell'area metadati della card per ottenere pulsanti a larghezza fluida su dispositivi mobili utilizzando le classi `.d-grid` e `.d-md-block`. Per maggiori informazioni sulla personalizzazione dei pulsanti, consulta la [documentazione sulle varianti di dimensioni dei buttons](/docs/componenti/buttons#varianti-di-dimensione/).
 
-{% comment %}Example name: Card con pulsante fluido{% endcomment %}
+{% comment %}Example name: Card con pulsante largo su mobile{% endcomment %}
 {% capture example %}
 <div class="row">
   <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
@@ -2153,7 +2153,7 @@ Esempio di lista card:
 
 Solo per piccoli gruppi di card (2-6 card) puoi inoltre usare `.it-card-group` per creare facilmente un layout responsive in un `div` contenitore. Di default il numero di colonne su desktop è impostato a 4. 
 
-{% comment %}Example name: Gruppi di card responsive{% endcomment %}
+{% comment %}Example name: Piccoli gruppi di card responsive{% endcomment %}
 {% capture example %}
 <div>
   <div class="it-card-group">
@@ -2209,7 +2209,7 @@ Solo per piccoli gruppi di card (2-6 card) puoi inoltre usare `.it-card-group` p
 
 Usando `.it-card-group-N-cols`, dove modificando `N` si possono ottenere layout con 2 o 3 colonne su desktop. 
   
-{% comment %}Example name: Gruppi di card con colonne specifiche{% endcomment %}
+{% comment %}Example name: Piccoli gruppi con colonne specifiche{% endcomment %}
 {% capture example %}
 <div>
   <div class="it-card-group it-card-group-2-cols">
@@ -2237,7 +2237,7 @@ Usando `.it-card-group-N-cols`, dove modificando `N` si possono ottenere layout 
 
 Usando `.it-card-group-center`.
 
-{% comment %}Example name: Gruppi di card centrate{% endcomment %}
+{% comment %}Example name: Piccoli gruppi di card centrate{% endcomment %}
 {% capture example %}  
 <div>
   <div class="it-card-group it-card-group-3-cols it-card-group-center">
@@ -2267,7 +2267,7 @@ Gruppo di card che risponde a Container Queries attivabile usando la classe dedi
 
 Le Container Queries sono una tecnologia CSS moderna supportata nella maggior parte dei browser recenti. Per i browser che non supportano questa funzionalità, si applica automaticamente un fallback basato su Media Queries standard.
 
-{% comment %}Example name: Gruppi di card con Container Queries{% endcomment %}
+{% comment %}Example name: Piccoli gruppi con Container Queries{% endcomment %}
 {% capture example %}
 <div>
   <div class="it-card-group it-card-group-container-aware">
@@ -2323,7 +2323,7 @@ Le Container Queries sono una tecnologia CSS moderna supportata nella maggior pa
 
 Qui puoi esplorare come lo stesso gruppo di card "container-aware" si adatta a diverse larghezze di colonna, permettendo di realizzare layout complessi:
 
-{% comment %}Example name: Gruppi di card con Container Queries in colonne diverse{% endcomment %}
+{% comment %}Example name: Piccoli gruppi con Container Queries confronto{% endcomment %}
 {% capture example %}
   <div class="row">
     <div class="col-12 col-lg-8 mb-4">
