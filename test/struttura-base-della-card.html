@@ -1,0 +1,63 @@
+---
+layout: test
+---
+
+<h1 id="inizio">Struttura base della card</h1>
+
+<p>Le card sono contenitori flessibili e versatili per organizzare e presentare contenuti strutturati in
+    modo coerente,
+    adattabili a diversi contesti e necessità. Aiutano a presentare un gruppo di contenuti correlati, come articoli o
+    sezioni di un sito web e permettono di
+    continuare la navigazione verso le rispettive pagine di dettaglio.</p>
+
+<p class="mb-5">Note tecnica: in tutti esempi presentati in queste pagine le card sono all’interno di griglie e colonne
+    Bootstrap per permetterne l'impaginazione. </p>
+
+<section aria-labelledby="card" class="mt-5 mb-5 pb-5">
+    <h2 id="card">Questa è una card</h2>
+    <p>Esempio base con titolo, immagine, descrizione e data.</p>
+
+    <div class="container mt-5 mb-5">
+        <div class="row">
+            <div class="col-12 col-md-6 mb-3 mb-md-4 col-lg-4">
+                <!--start it-card-->
+                <article class="it-card it-card-image rounded shadow-sm border">
+                    <!--card first child is the title (link)-->
+                    <h3 class="it-card-title ">
+                        <a href="#">Titolo del contenuto</a>
+                    </h3>
+                    <!--card second child is the image (optional)-->
+                    <div class="it-card-image-wrapper">
+                        <div class="ratio ratio-16x9">
+                            <figure class="figure img-full">
+                                <img src="https://placeholderimage.eu/api/city/800/600"
+                                    alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+                            </figure>
+                        </div>
+                    </div>
+                    <!--card body content-->
+                    <div class="it-card-body">
+                        <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di
+                            destinazione
+                            in massimo tre o quattro righe, senza troncamento.</p>
+                    </div>
+                    <!--finally the card footer metadata-->
+                    <footer class="it-card-related it-card-footer">
+                        <time class="it-card-date" datetime="2025-04-22">22 aprile 2025</time>
+                    </footer>
+                </article>
+                <!--end it-card-->
+            </div>
+        </div>
+    </div>
+    <a class="mb-5" href="#inizio"><svg aria-hidden="true" class="icon icon-sm icon-primary me-2">
+            <use href="/dist/svg/sprites.svg#it-arrow-up"></use>
+        </svg>Torna su</a>
+</section>
+
+<section aria-labelledby="approfondimenti" class="mt-5 mb-5 pb-5">
+    <h2 id="Approfondimenti">Approfondimenti</h2>
+    <p>È possibile consulare la bozza della <a href="/docs/componenti/card/#struttura-base-della-card">documentazione di
+            Bootstrap Italia</a> rispetto a quanto presentato in pagina, comprensiva di codice html e istruzioni d'uso.
+    </p>
+</section>
