@@ -41,26 +41,30 @@ Bootstrap Italia fornisce le label già tradotte in italiano come segue:
 
 Per tradurre le label in altre lingue è sufficiente utilizzare l'attributo opzionale `data-splide` sul div `it-carousel-wrapper splide` come nell'esempio seguente:
 
-`<div class="it-carousel-wrapper it-carousel-landscape-abstract-three-cols splide" data-bs-carousel-splide data-splide='{"i18n":{"slideX":"Go to slide %s","pageX":"Go to page %s"}}>`
+`<div class="it-carousel-wrapper it-carousel-landscape-abstract-three-cols splide" data-bs-carousel-splide data-splide='{"i18n":{"slideX":"Go to slide %s","pageX":"Go to page %s"}}'>`
 
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
-## Esempi di Carousel con diversi contenuti
+## Esempi di carousel con diversi contenuti
 
 I wrapper esterni `it-carousel-wrapper` e `splide__track` ricevono le classi necessarie per la corretta visualizzazione dei contenuti.
 
-### Titolo e Card semplici
+### Titolo e card base solo testo
 
-Esempio di carousel con card semplici.
+Esempio di carousel con [card](/docs/componenti/card) semplici.
 
 **Classi da applicare**:
 
 - div **`it-carousel-wrapper`** : viene aggiunta la classe `it-carousel-landscape-abstract-three-cols` che attiva la visualizzazione a 3 colonne su desktop.
 - div **`splide__track`** : vengono aggiunte le classi `ps-lg-3 pe-lg-3` che implementano il padding richiesto dal breakpoint `lg` in su.
 
-{% comment %}Example name: Titolo e card base{% endcomment %}
+**Uso delle ombre nelle card**:
+
+Se usi ombre sulle card (`.shadow`) in carousel base, puoi usare le classi padding (esempio `.p-2` per `.shadow-sm`) su `.it-single-slide-wrapper` per lasciare spazio utile a mostrarle. In questo caso puoi inoltre usare l'attributo `data-splide='{"gap":".5rem", "breadkpoints":{"560":{"gap":".5rem"}, "768":{"gap":".5rem"}, "992":{"gap":".5rem"}}}'` sul contenitore per ridurre l'intercolonna della misura necessaria in tutti i breakpoint (esempio `.5rem` per `.p-2`).
+
+{% comment %}Example name: Titolo e card base solo testo{% endcomment %}
 {% capture example %}
-<div class="it-carousel-wrapper it-carousel-landscape-abstract-three-cols splide" data-bs-carousel-splide>
+<div class="it-carousel-wrapper it-carousel-landscape-abstract-three-cols splide" data-bs-carousel-splide data-splide='{"gap":".5rem", "breakpoints":{"768":{"gap":".5rem"}, "992":{"gap":".5rem"}}}'>
   <div class="it-header-block">
     <div class="it-header-block-title">
       <h2 class="no_toc">Titolo del Carousel</h2>
@@ -69,99 +73,123 @@ Esempio di carousel con card semplici.
   <div class="splide__track ps-lg-3 pe-lg-3">
     <ul class="splide__list it-carousel-all">
       <li class="splide__slide">
-        <div class="it-single-slide-wrapper">
-          <div class="card-wrapper card-space">
-            <div class="card card-bg">
-              <div class="card-body">
-                <h3 class="card-title h5 no_toc">1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h3>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <a class="read-more" href="#">
-                  <span class="text">Leggi di più <span class="visually-hidden">1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span></span>
-                  <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg>
-                </a>
-              </div>
+        <div class="it-single-slide-wrapper p-2">
+          <!--start it-card-->
+          <article class="it-card rounded shadow-sm border">
+            <!--card first child is the title (link)-->
+            <h3 class="it-card-title no_toc">
+              <a href="#">Titolo del contenuto</a>
+            </h3>
+            <!--card body content-->
+            <div class="it-card-body">
+              <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
             </div>
-          </div>
+            <!--finally the card footer metadata-->
+            <footer class="it-card-related it-card-footer">
+              <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
+            </footer>
+          </article>
+          <!--end it-card-->
         </div>
       </li>
       <li class="splide__slide">
-        <div class="it-single-slide-wrapper">
-          <div class="card-wrapper card-space">
-            <div class="card card-bg">
-              <div class="card-body">
-                <h3 class="card-title h5 no_toc">2. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h3>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <a class="read-more" href="#">
-                  <span class="text">Leggi di più <span class="visually-hidden">2. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span></span>
-                  <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg>
-                </a>
-              </div>
+        <div class="it-single-slide-wrapper p-2">
+          <!--start it-card-->
+          <article class="it-card rounded shadow-sm border">
+            <!--card first child is the title (link)-->
+            <h3 class="it-card-title no_toc">
+              <a href="#">Titolo del contenuto</a>
+            </h3>
+            <!--card body content-->
+            <div class="it-card-body">
+              <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
             </div>
-          </div>
+            <!--finally the card footer metadata-->
+            <footer class="it-card-related it-card-footer">
+              <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
+            </footer>
+          </article>
+          <!--end it-card-->
         </div>
       </li>
       <li class="splide__slide">
-        <div class="it-single-slide-wrapper">
-          <div class="card-wrapper card-space">
-            <div class="card card-bg">
-              <div class="card-body">
-                <h3 class="card-title h5 no_toc">3. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h3>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <a class="read-more" href="#">
-                  <span class="text">Leggi di più <span class="visually-hidden">3. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span></span>
-                  <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg>
-                </a>
-              </div>
+        <div class="it-single-slide-wrapper p-2">
+          <!--start it-card-->
+          <article class="it-card rounded shadow-sm border">
+            <!--card first child is the title (link)-->
+            <h3 class="it-card-title no_toc">
+              <a href="#">Titolo del contenuto</a>
+            </h3>
+            <!--card body content-->
+            <div class="it-card-body">
+              <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
             </div>
-          </div>
+            <!--finally the card footer metadata-->
+            <footer class="it-card-related it-card-footer">
+              <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
+            </footer>
+          </article>
+          <!--end it-card-->
         </div>
       </li>
       <li class="splide__slide">
-        <div class="it-single-slide-wrapper">
-          <div class="card-wrapper card-space">
-            <div class="card card-bg">
-              <div class="card-body">
-                <h3 class="card-title h5 no_toc">4. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h3>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <a class="read-more" href="#">
-                  <span class="text">Leggi di più <span class="visually-hidden">4. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span></span>
-                  <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg>
-                </a>
-              </div>
+        <div class="it-single-slide-wrapper p-2">
+          <!--start it-card-->
+          <article class="it-card rounded shadow-sm border">
+            <!--card first child is the title (link)-->
+            <h3 class="it-card-title no_toc">
+              <a href="#">Titolo del contenuto</a>
+            </h3>
+            <!--card body content-->
+            <div class="it-card-body">
+              <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
             </div>
-          </div>
+            <!--finally the card footer metadata-->
+            <footer class="it-card-related it-card-footer">
+              <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
+            </footer>
+          </article>
+          <!--end it-card-->
         </div>
       </li>
       <li class="splide__slide">
-        <div class="it-single-slide-wrapper">
-          <div class="card-wrapper card-space">
-            <div class="card card-bg">
-              <div class="card-body">
-                <h3 class="card-title h5 no_toc">5. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h3>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <a class="read-more" href="#">
-                  <span class="text">Leggi di più <span class="visually-hidden">5. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span></span>
-                  <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg>
-                </a>
-              </div>
+        <div class="it-single-slide-wrapper p-2">
+          <!--start it-card-->
+          <article class="it-card rounded shadow-sm border">
+            <!--card first child is the title (link)-->
+            <h3 class="it-card-title no_toc">
+              <a href="#">Titolo del contenuto</a>
+            </h3>
+            <!--card body content-->
+            <div class="it-card-body">
+              <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
             </div>
-          </div>
+            <!--finally the card footer metadata-->
+            <footer class="it-card-related it-card-footer">
+              <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
+            </footer>
+          </article>
+          <!--end it-card-->
         </div>
       </li>
       <li class="splide__slide">
-        <div class="it-single-slide-wrapper">
-          <div class="card-wrapper card-space">
-            <div class="card card-bg">
-              <div class="card-body">
-                <h3 class="card-title h5 no_toc">6. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h3>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <a class="read-more" href="#">
-                  <span class="text">Leggi di più <span class="visually-hidden">6. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span></span>
-                  <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg>
-                </a>
-              </div>
+        <div class="it-single-slide-wrapper p-2">
+          <!--start it-card-->
+          <article class="it-card rounded shadow-sm border">
+            <!--card first child is the title (link)-->
+            <h3 class="it-card-title no_toc">
+              <a href="#">Titolo del contenuto</a>
+            </h3>
+            <!--card body content-->
+            <div class="it-card-body">
+              <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
             </div>
-          </div>
+            <!--finally the card footer metadata-->
+            <footer class="it-card-related it-card-footer">
+              <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
+            </footer>
+          </article>
+          <!--end it-card-->
         </div>
       </li>
     </ul>
@@ -169,100 +197,117 @@ Esempio di carousel con card semplici.
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Card "articolo"
+### Card editoriali solo testo
+
+Esempio di carousel con [card](/docs/componenti/card) editoriali.
 
 **Classi da applicare**:
 
 - div **`it-carousel-wrapper`**: viene aggiunta la classe `it-carousel-landscape-abstract-three-cols-arrow-visible` che attiva la visualizzazione a 3 colonne su desktop e la visualizzazione delle frecce di navigazione.
 
-{% comment %}Example name: Card articolo{% endcomment %}
+**Altezze delle card**:
+
+Per visualizzare card di eguale altezza nel caso di contenuti diversi (card con classe `.it-card-height-full`), è necessario applicare l'attributo `data-splide='{"height":"auto"}'` sul wrapper e la classe `.h-100` su ogni elemento `.it-single-slide-wrapper`. 
+
+{% comment %}Example name: Card editoriali solo testo{% endcomment %}
 {% capture example %}
 
-<div class="it-carousel-wrapper splide it-carousel-landscape-abstract-three-cols-arrow-visible" data-bs-carousel-splide>
+<div class="it-carousel-wrapper splide it-carousel-landscape-abstract-three-cols-arrow-visible" data-bs-carousel-splide data-splide='{"height":"auto"}'>
   <div class="splide__track">
     <ul class="splide__list">
       <li class="splide__slide lined_slide">
-        <div class="it-single-slide-wrapper">
-          <div class="card-wrapper">
-            <div class="card">
-              <div class="card-body">
-                <div class="category-top">
-                  <a class="category" href="#">Categoria</a>
-                  <span class="data">10/12/{{'now' | date: "%Y"}}</span>
-                </div>
-                <h3 class="card-title big-heading h5 no_toc">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h3>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <span class="card-signature">di Federico De Paolis</span>
-                <a class="read-more" href="#">
-                  <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
-                  <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg>
-                </a>
-              </div>
+        <div class="it-single-slide-wrapper h-100 p-2">
+          <!--start it-card-->
+          <article class="it-card it-card-height-full rounded shadow-sm border">
+            <!--card first child is the title (link)-->
+            <h3 class="it-card-title it-card-title-icon no_toc">
+              <a href="#">Titolo contenuto</a>
+            </h3>
+            <!--card body content-->
+            <div class="it-card-body">
+              <address class="it-card-signature">di Gino Rosso</address>
+              <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento. </p>
             </div>
-          </div>
+            <!--finally the card footer metadata-->
+            <footer class="it-card-related it-card-footer">
+              <div class="it-card-taxonomy">
+                <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
+              </div>
+              <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
+            </footer>
+          </article>
+          <!--end it-card-->
         </div>
       </li>
       <li class="splide__slide lined_slide">
-        <div class="it-single-slide-wrapper">
-          <div class="card-wrapper">
-            <div class="card">
-              <div class="card-body">
-                <div class="category-top">
-                  <a class="category" href="#">Categoria</a>
-                  <span class="data">10/12/{{'now' | date: "%Y"}}</span>
-                </div>
-                <h3 class="card-title big-heading h5 no_toc">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h3>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <span class="card-signature">di Federico De Paolis</span>
-                <a class="read-more" href="#">
-                  <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
-                  <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg>
-                </a>
-              </div>
+        <div class="it-single-slide-wrapper h-100 p-2">
+          <!--start it-card-->
+          <article class="it-card it-card-height-full rounded shadow-sm border">
+            <!--card first child is the title (link)-->
+            <h3 class="it-card-title it-card-title-icon no_toc">
+              <a href="#">Titolo contenuto</a>
+            </h3>
+            <!--card body content-->
+            <div class="it-card-body">
+              <address class="it-card-signature">di Gino Rosso</address>
             </div>
-          </div>
+            <!--finally the card footer metadata-->
+            <footer class="it-card-related it-card-footer">
+              <div class="it-card-taxonomy">
+                <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
+              </div>
+              <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
+            </footer>
+          </article>
+          <!--end it-card-->
         </div>
       </li>
       <li class="splide__slide lined_slide">
-        <div class="it-single-slide-wrapper">
-          <div class="card-wrapper">
-            <div class="card">
-              <div class="card-body">
-                <div class="category-top">
-                  <a class="category" href="#">Categoria</a>
-                  <span class="data">10/12/{{'now' | date: "%Y"}}</span>
-                </div>
-                <h3 class="card-title big-heading h5 no_toc">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h3>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <span class="card-signature">di Federico De Paolis</span>
-                <a class="read-more" href="#">
-                  <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
-                  <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg>
-                </a>
-              </div>
+        <div class="it-single-slide-wrapper h-100 p-2">
+          <!--start it-card-->
+          <article class="it-card it-card-height-full rounded shadow-sm border">
+            <!--card first child is the title (link)-->
+            <h3 class="it-card-title it-card-title-icon no_toc">
+              <a href="#">Titolo contenuto</a>
+            </h3>
+            <!--card body content-->
+            <div class="it-card-body">
+              <address class="it-card-signature">di Gino Rosso</address>
+              <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione.</p>
             </div>
-          </div>
+            <!--finally the card footer metadata-->
+            <footer class="it-card-related it-card-footer">
+              <div class="it-card-taxonomy">
+                <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
+              </div>
+              <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
+            </footer>
+          </article>
+          <!--end it-card-->
         </div>
       </li>
       <li class="splide__slide lined_slide">
-        <div class="it-single-slide-wrapper">
-          <div class="card-wrapper">
-            <div class="card">
-              <div class="card-body">
-                <div class="category-top">
-                  <a class="category" href="#">Categoria</a>
-                  <span class="data">10/12/{{'now' | date: "%Y"}}</span>
-                </div>
-                <h3 class="card-title big-heading h5 no_toc">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h3>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <span class="card-signature">di Federico De Paolis</span>
-                <a class="read-more" href="#">
-                  <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
-                  <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg>
-                </a>
-              </div>
+        <div class="it-single-slide-wrapper h-100 p-2">
+          <!--start it-card-->
+          <article class="it-card it-card-height-full rounded shadow-sm border">
+            <!--card first child is the title (link)-->
+            <h3 class="it-card-title it-card-title-icon no_toc">
+              <a href="#">Titolo contenuto</a>
+            </h3>
+            <!--card body content-->
+            <div class="it-card-body">
+              <address class="it-card-signature">di Gino Rosso</address>
+              <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
             </div>
-          </div>
+            <!--finally the card footer metadata-->
+            <footer class="it-card-related it-card-footer">
+              <div class="it-card-taxonomy">
+                <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
+              </div>
+              <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
+            </footer>
+          </article>
+          <!--end it-card-->
         </div>
       </li>
     </ul>
@@ -270,102 +315,114 @@ Esempio di carousel con card semplici.
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Card con immagine in evidenza
+### Card editoriali inline (orizzontali)
 
-Contiene un'immagine associata ad una card "articolo".
+Usa le varianti di card editoriale inline (orizzontali).
 
 **Classi da applicare**:
 
-- div **`it-carousel-wrapper`**: viene aggiunta la classe `it-carousel-landscape-abstract` che attiva la visualizzazione a 2 colonne in Flex.
+- div **`it-carousel-wrapper`**: viene aggiunta la classe `it-carousel-landscape-abstract`.
 
-{% comment %}Example name: Card con immagine in evidenza{% endcomment %}
+{% comment %}Example name: Card editoriali inline{% endcomment %}
 {% capture example %}
 
 <div class="it-carousel-wrapper it-carousel-landscape-abstract splide" data-bs-carousel-splide>
   <div class="splide__track">
     <ul class="splide__list">
       <li class="splide__slide">
-        <div class="it-single-slide-wrapper">
-          <div class="img-responsive-wrapper">
-            <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://placehold.co/480x360/ebebeb/808080/?text=Immagine1" title="titolo immagine" alt="descrizione immagine"></div>
-            </div>
-          </div>
-          <div class="it-text-slider-wrapper-outside">
-            <div class="card-wrapper">
-              <div class="card">
-                <div class="card-body">
-                  <div class="category-top">
-                    <a class="category" href="#">Categoria</a>
-                    <span class="data">10/12/{{'now' | date: "%Y"}}</span>
-                  </div>
-                  <h3 class="card-title big-heading h5 no_toc">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h3>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  <span class="card-signature">di Federico De Paolis</span>
-                  <a class="read-more" href="#">
-                  <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
-                    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg>
-                  </a>
+        <div class="it-single-slide-wrapper p-2">
+          <!--start it-card-->
+          <article class="it-card it-card-inline it-card-image rounded shadow-sm border">
+            <!--card first child is all the card content: title (link) + body + footer -->
+            <div class="it-card-inline-content">
+              <h3 class="it-card-title no_toc">
+                <a href="#">Titolo contenuto editoriale</a>
+              </h3>
+              <div class="it-card-body">
+                <address class="it-card-signature">di Maria Verde</address>
+                <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
+              </div>
+              <footer class="it-card-related it-card-footer">
+                <div class="it-card-taxonomy">
+                  <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
                 </div>
+                <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
+              </footer>
+            </div>
+            <!--card second child is the image (optional)-->
+            <div class="it-card-image-wrapper">
+              <div class="ratio ratio-16x9">
+                <figure class="figure img-full">
+                  <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+                </figure>
               </div>
             </div>
-          </div>
+          </article>
+          <!--end it-card-->
         </div>
       </li>
       <li class="splide__slide">
-        <div class="it-single-slide-wrapper">
-          <div class="img-responsive-wrapper">
-            <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://placehold.co/480x360/ebebeb/808080/?text=Immagine2" title="titolo immagine" alt="descrizione immagine"></div>
-            </div>
-          </div>
-          <div class="it-text-slider-wrapper-outside">
-            <div class="card-wrapper">
-              <div class="card">
-                <div class="card-body">
-                  <div class="category-top">
-                    <a class="category" href="#">Categoria</a>
-                    <span class="data">10/12/{{'now' | date: "%Y"}}</span>
-                  </div>
-                  <h3 class="card-title big-heading h5 no_toc">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h3>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  <span class="card-signature">di Federico De Paolis</span>
-                  <a class="read-more" href="#">
-                  <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
-                    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg>
-                  </a>
+        <div class="it-single-slide-wrapper p-2">
+          <!--start it-card-->
+          <article class="it-card it-card-inline it-card-image rounded shadow-sm border">
+            <!--card first child is all the card content: title (link) + body + footer -->
+            <div class="it-card-inline-content">
+              <h3 class="it-card-title no_toc">
+                <a href="#">Titolo contenuto editoriale</a>
+              </h3>
+              <div class="it-card-body">
+                <address class="it-card-signature">di Maria Verde</address>
+                <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
+              </div>
+              <footer class="it-card-related it-card-footer">
+                <div class="it-card-taxonomy">
+                  <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
                 </div>
+                <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
+              </footer>
+            </div>
+            <!--card second child is the image (optional)-->
+            <div class="it-card-image-wrapper">
+              <div class="ratio ratio-16x9">
+                <figure class="figure img-full">
+                  <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+                </figure>
               </div>
             </div>
-          </div>
+          </article>
+          <!--end it-card-->
         </div>
       </li>
       <li class="splide__slide">
-        <div class="it-single-slide-wrapper">
-          <div class="img-responsive-wrapper">
-            <div class="img-responsive">
-              <div class="img-wrapper"><img src="https://placehold.co/480x360/ebebeb/808080/?text=Immagine3" title="titolo immagine" alt="descrizione immagine"></div>
-            </div>
-          </div>
-          <div class="it-text-slider-wrapper-outside">
-            <div class="card-wrapper">
-              <div class="card">
-                <div class="card-body">
-                  <div class="category-top">
-                    <a class="category" href="#">Categoria</a>
-                    <span class="data">10/12/{{'now' | date: "%Y"}}</span>
-                  </div>
-                  <h3 class="card-title big-heading h5 no_toc">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h3>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  <span class="card-signature">di Federico De Paolis</span>
-                  <a class="read-more" href="#">
-                  <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
-                    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg>
-                  </a>
+        <div class="it-single-slide-wrapper p-2">
+          <!--start it-card-->
+          <article class="it-card it-card-inline it-card-image rounded shadow-sm border">
+            <!--card first child is all the card content: title (link) + body + footer -->
+            <div class="it-card-inline-content">
+              <h3 class="it-card-title no_toc">
+                <a href="#">Titolo contenuto editoriale</a>
+              </h3>
+              <div class="it-card-body">
+                <address class="it-card-signature">di Maria Verde</address>
+                <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
+              </div>
+              <footer class="it-card-related it-card-footer">
+                <div class="it-card-taxonomy">
+                  <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
                 </div>
+                <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
+              </footer>
+            </div>
+            <!--card second child is the image (optional)-->
+            <div class="it-card-image-wrapper">
+              <div class="ratio ratio-16x9">
+                <figure class="figure img-full">
+                  <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+                </figure>
               </div>
             </div>
-          </div>
+          </article>
+          <!--end it-card-->
         </div>
       </li>
     </ul>
@@ -373,136 +430,201 @@ Contiene un'immagine associata ad una card "articolo".
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Card con immagine in alto
+### Card editoriali con immagine in alto
 
 **Classi da applicare**:
 
 - div **`it-carousel-wrapper`**: viene aggiunta la classe `it-carousel-landscape-abstract-three-cols` per la visualizzazione a 3 colonne.
 
-{% comment %}Example name: Card con immagine in alto{% endcomment %}
+{% comment %}Example name: Card editoriali con immagine in alto{% endcomment %}
 {% capture example %}
 
-<div class="it-carousel-wrapper it-carousel-landscape-abstract-three-cols splide" data-bs-carousel-splide>
+<div class="it-carousel-wrapper it-carousel-landscape-abstract-three-cols splide" data-bs-carousel-splide data-splide='{"height":"auto", "gap":".5rem", "breakpoints":{"768":{"gap":".5rem"}, "992":{"gap":".5rem"}}}'>
   <div class="splide__track">
     <ul class="splide__list">
       <li class="splide__slide">
-        <div class="it-single-slide-wrapper">
-          <div class="card-wrapper">
-            <div class="card card-img no-after">
-              <div class="img-responsive-wrapper">
-                <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://placehold.co/480x360/ebebeb/808080/?text=Immagine1" title="titolo immagine" alt="descrizione immagine"></div>
-                </div>
-              </div>
-              <div class="card-body px-3 px-md-4">
-                <h3 class="card-title h5 no_toc">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h3>
-                <a class="read-more" href="#">
-                  <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
-                  <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg>
-                </a>
+        <div class="it-single-slide-wrapper h-100 p-2">
+          <!--start it-card-->
+          <article class="it-card it-card-image it-card-height-full rounded shadow-sm border">
+            <!--card first child is the title (link)-->
+            <h3 class="it-card-title no_toc">
+              <a href="#">Titolo del contenuto</a>
+            </h3>
+            <!--card second child is the image (optional)-->
+            <div class="it-card-image-wrapper">
+              <div class="ratio ratio-16x9">
+                <figure class="figure img-full">
+                  <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+                </figure>
               </div>
             </div>
-          </div>
+            <!--card body content-->
+            <div class="it-card-body">
+              <p class="it-card-text">Questo è un testo breve.</p>
+            </div>
+            <!--finally the card footer metadata-->
+            <footer class="it-card-related it-card-footer">
+              <div class="it-card-taxonomy">
+                <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
+              </div>
+              <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
+            </footer>
+          </article>
+          <!--end it-card-->
         </div>
       </li>
       <li class="splide__slide">
-        <div class="it-single-slide-wrapper">
-          <div class="card-wrapper">
-            <div class="card card-img no-after">
-              <div class="img-responsive-wrapper">
-                <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://placehold.co/480x360/ebebeb/808080/?text=Immagine2" title="titolo immagine" alt="descrizione immagine"></div>
-                </div>
-              </div>
-              <div class="card-body px-3 px-md-4">
-                <h3 class="card-title h5 no_toc">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h3>
-                <a class="read-more" href="#">
-                  <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
-                  <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg>
-                </a>
+        <div class="it-single-slide-wrapper h-100 p-2">
+          <!--start it-card-->
+          <article class="it-card it-card-image it-card-height-full rounded shadow-sm border">
+            <!--card first child is the title (link)-->
+            <h3 class="it-card-title no_toc">
+              <a href="#">Titolo del contenuto</a>
+            </h3>
+            <!--card second child is the image (optional)-->
+            <div class="it-card-image-wrapper">
+              <div class="ratio ratio-16x9">
+                <figure class="figure img-full">
+                  <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+                </figure>
               </div>
             </div>
-          </div>
+            <!--card body content-->
+            <div class="it-card-body">
+              <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
+            </div>
+            <!--finally the card footer metadata-->
+            <footer class="it-card-related it-card-footer">
+              <div class="it-card-taxonomy">
+                <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
+              </div>
+              <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
+            </footer>
+          </article>
+          <!--end it-card-->
         </div>
       </li>
       <li class="splide__slide">
-        <div class="it-single-slide-wrapper">
-          <div class="card-wrapper">
-            <div class="card card-img no-after">
-              <div class="img-responsive-wrapper">
-                <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://placehold.co/480x360/ebebeb/808080/?text=Immagine3" title="titolo immagine" alt="descrizione immagine"></div>
-                </div>
-              </div>
-              <div class="card-body px-3 px-md-4">
-                <h3 class="card-title h5 no_toc">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h3>
-                <a class="read-more" href="#">
-                  <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
-                  <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg>
-                </a>
+        <div class="it-single-slide-wrapper h-100 p-2">
+          <!--start it-card-->
+          <article class="it-card it-card-image it-card-height-full rounded shadow-sm border">
+            <!--card first child is the title (link)-->
+            <h3 class="it-card-title no_toc">
+              <a href="#">Titolo del contenuto</a>
+            </h3>
+            <!--card second child is the image (optional)-->
+            <div class="it-card-image-wrapper">
+              <div class="ratio ratio-16x9">
+                <figure class="figure img-full">
+                  <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+                </figure>
               </div>
             </div>
-          </div>
+            <!--card body content-->
+            <div class="it-card-body">
+            </div>
+            <!--finally the card footer metadata-->
+            <footer class="it-card-related it-card-footer">
+              <div class="it-card-taxonomy">
+                <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
+              </div>
+              <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
+            </footer>
+          </article>
+          <!--end it-card-->
         </div>
       </li>
       <li class="splide__slide">
-        <div class="it-single-slide-wrapper">
-          <div class="card-wrapper">
-            <div class="card card-img no-after">
-              <div class="img-responsive-wrapper">
-                <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://placehold.co/480x360/ebebeb/808080/?text=Immagine4" title="titolo immagine" alt="descrizione immagine"></div>
-                </div>
-              </div>
-              <div class="card-body px-3 px-md-4">
-                <h3 class="card-title h5 no_toc">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h3>
-                <a class="read-more" href="#">
-                  <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
-                  <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg>
-                </a>
+        <div class="it-single-slide-wrapper h-100 p-2">
+          <!--start it-card-->
+          <article class="it-card it-card-image it-card-height-full rounded shadow-sm border">
+            <!--card first child is the title (link)-->
+            <h3 class="it-card-title no_toc">
+              <a href="#">Titolo del contenuto</a>
+            </h3>
+            <!--card second child is the image (optional)-->
+            <div class="it-card-image-wrapper">
+              <div class="ratio ratio-16x9">
+                <figure class="figure img-full">
+                  <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+                </figure>
               </div>
             </div>
-          </div>
+            <!--card body content-->
+            <div class="it-card-body">
+              <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
+            </div>
+            <!--finally the card footer metadata-->
+            <footer class="it-card-related it-card-footer">
+              <div class="it-card-taxonomy">
+                <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
+              </div>
+              <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
+            </footer>
+          </article>
+          <!--end it-card-->
         </div>
       </li>
       <li class="splide__slide">
-        <div class="it-single-slide-wrapper">
-          <div class="card-wrapper">
-            <div class="card card-img no-after">
-              <div class="img-responsive-wrapper">
-                <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://placehold.co/480x360/ebebeb/808080/?text=Immagine5" title="titolo immagine" alt="descrizione immagine"></div>
-                </div>
-              </div>
-              <div class="card-body px-3 px-md-4">
-                <h3 class="card-title h5 no_toc">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h3>
-                <a class="read-more" href="#">
-                  <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
-                  <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg>
-                </a>
+        <div class="it-single-slide-wrapper h-100 p-2">
+          <!--start it-card-->
+          <article class="it-card it-card-image it-card-height-full rounded shadow-sm border">
+            <!--card first child is the title (link)-->
+            <h3 class="it-card-title no_toc">
+              <a href="#">Titolo del contenuto</a>
+            </h3>
+            <!--card second child is the image (optional)-->
+            <div class="it-card-image-wrapper">
+              <div class="ratio ratio-16x9">
+                <figure class="figure img-full">
+                  <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+                </figure>
               </div>
             </div>
-          </div>
+            <!--card body content-->
+            <div class="it-card-body">
+              <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
+            </div>
+            <!--finally the card footer metadata-->
+            <footer class="it-card-related it-card-footer">
+              <div class="it-card-taxonomy">
+                <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
+              </div>
+              <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
+            </footer>
+          </article>
+          <!--end it-card-->
         </div>
       </li>
       <li class="splide__slide">
-        <div class="it-single-slide-wrapper">
-          <div class="card-wrapper">
-            <div class="card card-img no-after">
-              <div class="img-responsive-wrapper">
-                <div class="img-responsive">
-                  <div class="img-wrapper"><img src="https://placehold.co/480x360/ebebeb/808080/?text=Immagine6" title="titolo immagine" alt="descrizione immagine"></div>
-                </div>
-              </div>
-              <div class="card-body px-3 px-md-4">
-                <h3 class="card-title h5 no_toc">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</h3>
-                <a class="read-more" href="#">
-                  <span class="text">Leggi di più <span class="visually-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit…</span></span>
-                  <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg>
-                </a>
+        <div class="it-single-slide-wrapper h-100 p-2">
+          <!--start it-card-->
+          <article class="it-card it-card-image it-card-height-full rounded shadow-sm border">
+            <!--card first child is the title (link)-->
+            <h3 class="it-card-title no_toc">
+              <a href="#">Titolo del contenuto</a>
+            </h3>
+            <!--card second child is the image (optional)-->
+            <div class="it-card-image-wrapper">
+              <div class="ratio ratio-16x9">
+                <figure class="figure img-full">
+                  <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+                </figure>
               </div>
             </div>
-          </div>
+            <!--card body content-->
+            <div class="it-card-body">
+              <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
+            </div>
+            <!--finally the card footer metadata-->
+            <footer class="it-card-related it-card-footer">
+              <div class="it-card-taxonomy">
+                <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
+              </div>
+              <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
+            </footer>
+          </article>
+          <!--end it-card-->
         </div>
       </li>
     </ul>
@@ -753,6 +875,12 @@ const carouselElements = elementList.forEach((element) => {
 </div>
 
 ## Breaking change
+
+{% capture callout %}
+Implementato negli esempi il nuovo componente card definito dalle classi `.it-card` e relativi modificatori. Il markup degli esempi e gli attributi per attivare il componente sono inoltre cambiati laddove c'è la necessità di gestire le altezze delle card con classi `.it-card-full-height` e/o la necessità di mostrarne le ombre `.shadow-`. 
+
+Le classi legacy di Bootstrap `.card` sono ora deprecate ma **saranno mantenute nei fogli di stile fino al prossimo rilascio maggiore, per permettere una migrazione graduale**. 
+{% endcapture %}{% include callout-breaking.html version="2.16.0" content=callout type="danger" %}
 
 {% capture callout %}
 Lato JavaScript il componente Carousel deve essere importato tramite la classe 

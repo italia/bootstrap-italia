@@ -237,25 +237,33 @@ Aggiungere alla section `.it-hero-wrapper` la classe `.it-bottom-overlapping-con
 </section>
 <div class="container">
    <div class="row">
-      <div class="col-12">
-         <div class="card-wrapper card-space">
-            <div class="card card-bg">
-               <div class="card-body">
-                  <div class="row">
-                    <div class="col-12 col-lg-10 offset-lg-1">
-                      <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
-                      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                      <a class="read-more" href="#">
-                        <span class="text">Leggi di più</span>
-                        <span class="visually-hidden">su Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span>
-                        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg>
-                      </a>
-                    </div>
-                  </div>
-               </div>
+      <div class="col-12"> <!-- <div class="col-12 col-lg-10 offset-lg-1"> e card-space nel wrapper>-->
+         <div class="col-12 mb-3 mb-md-4">
+            <!--start it-card-->
+            <article class="it-card rounded shadow border px-5 py-4">
+            <!--card first child is the title (link)-->
+            <h3 class="it-card-title no_toc h4">
+               Titolo del contenuto
+            </h3>
+            <!--card body content-->
+            <div class="it-card-body">
+               <p class="it-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
+            <div class="it-card-footer border-0" aria-label="Link correlati:">
+               <a href="#" class="it-card-link">Scopri di più <span class="visually-hidden">su Titolo del contenuto</span></a>
+            </div>
+            </article>
+            <!--end it-card-->
          </div>
       </div>
    </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
+
+## Breaking change
+
+{% capture callout %}
+Implementato nell'esempio con immagine e margine negativo per contenuti sovrapposti il nuovo componente card definito dalle classi `.it-card` e relativi modificatori.  
+
+Le classi legacy di Bootstrap `.card` sono ora deprecate ma **saranno mantenute nei fogli di stile fino al prossimo rilascio maggiore, per permettere una migrazione graduale**. 
+{% endcapture %}{% include callout-breaking.html version="2.16.0" content=callout type="danger" %}

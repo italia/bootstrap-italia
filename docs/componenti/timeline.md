@@ -40,23 +40,30 @@ Il **PIN** ha tre varianti di colore:
           </div>
           <div class="pin-text"><span>maggio {{'now' | date: "%Y"}}</span></div>
         </h3>
-        <div class="card-wrapper">
-          <div class="card">
-            <div class="card-body">
-              <h4 class="card-title h5">Lorem ipsum dolor sit amet</h4>
-              <div class="category-top">
-                <span class="visually-hidden">Categoria evento:</span> <a class="category" href="#">Categoria</a>
-                <span class="visually-hidden">Data evento:</span> <span class="data">10/12/{{'now' | date: "%Y"}}</span>
-              </div>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <span class="card-signature">di Federico De Paolis</span>
-              <a class="read-more" href="#">
-                <span class="text">Leggi di più</span>
-                <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg>
-              </a>
+        <!--start it-card-->
+        <article class="it-card it-card-image rounded shadow-sm border">
+          <!--card first child is the title (link)-->
+          <h4 class="it-card-title no_toc">
+            <a href="#">Titolo del contenuto</a>
+          </h4>
+          <!--card second child is the image (optional)-->
+          <div class="it-card-image-wrapper">
+            <div class="ratio ratio-21x9">
+              <figure class="figure img-full">
+                <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+              </figure>
             </div>
           </div>
-        </div>
+          <!--card body content-->
+          <div class="it-card-body">
+            <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
+          </div>
+          <!--finally the card footer metadata-->
+          <footer class="it-card-related it-card-footer">
+            <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
+          </footer>
+        </article>
+        <!--end it-card-->
       </div>
     </div>
     <div class="col-12">
@@ -67,14 +74,22 @@ Il **PIN** ha tre varianti di colore:
           </div>
           <div class="pin-text"><span>giugno {{'now' | date: "%Y"}}</span></div>
         </h3>
-        <div class="card-wrapper">
-          <div class="card">
-            <div class="card-body">
-              <h4 class="card-title h5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
+        <!--start it-card-->
+        <article class="it-card rounded shadow-sm border">
+          <!--card first child is the title (link)-->
+          <h4 class="it-card-title no_toc">
+            <a href="#">Titolo del contenuto</a>
+          </h4>
+          <!--card body content-->
+          <div class="it-card-body">
+            <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
           </div>
-        </div>
+          <!--finally the card footer metadata-->
+          <footer class="it-card-related it-card-footer">
+            <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
+          </footer>
+        </article>
+        <!--end it-card-->
       </div>
     </div>
     <div class="col-12">
@@ -85,24 +100,22 @@ Il **PIN** ha tre varianti di colore:
           </div>
           <div class="pin-text"><span>luglio {{'now' | date: "%Y"}}</span></div>
         </h3>
-        <div class="card-wrapper">
-          <div class="card">
-            <div class="card-body">
-              <h4 class="card-title h5">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
-              <div class="category-top">
-                <span class="visually-hidden">Categoria evento:</span> <a class="category" href="#">Categoria</a>
-                <span class="visually-hidden">Data evento:</span> <span class="data">10/12/{{'now' | date: "%Y"}}</span>
-              </div>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <span class="card-signature">di Federico De Paolis</span>
-              <a class="read-more" href="#">
-                <span class="text">Leggi di più</span>
-                <span class="visually-hidden">su Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
-                <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg>
-              </a>
-            </div>
+        <!--start it-card-->
+        <article class="it-card rounded shadow-sm border">
+          <!--card first child is the title (link)-->
+          <h4 class="it-card-title no_toc">
+            <a href="#">Titolo del contenuto</a>
+          </h4>
+          <!--card body content-->
+          <div class="it-card-body">
+            <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
           </div>
-        </div>
+          <!--finally the card footer metadata-->
+          <footer class="it-card-related it-card-footer">
+            <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
+          </footer>
+        </article>
+        <!--end it-card-->
       </div>
     </div>
     <div class="col-12">
@@ -114,14 +127,22 @@ Il **PIN** ha tre varianti di colore:
           </div>
           <div class="pin-text"><span>agosto {{'now' | date: "%Y"}}</span></div>
         </h3>
-        <div class="card-wrapper">
-          <div class="card">
-            <div class="card-body">
-              <h4 class="card-title h5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
+        <!--start it-card-->
+        <article class="it-card rounded shadow-sm border">
+          <!--card first child is the title (link)-->
+          <h4 class="it-card-title no_toc">
+            <a href="#">Titolo del contenuto</a>
+          </h4>
+          <!--card body content-->
+          <div class="it-card-body">
+            <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
           </div>
-        </div>
+          <!--finally the card footer metadata-->
+          <footer class="it-card-related it-card-footer">
+            <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
+          </footer>
+        </article>
+        <!--end it-card-->
       </div>
     </div>
     <div class="col-12">
@@ -132,24 +153,30 @@ Il **PIN** ha tre varianti di colore:
           </div>
           <div class="pin-text"><span>settembre {{'now' | date: "%Y"}}</span></div>
         </h3>
-        <div class="card-wrapper">
-          <div class="card">
-            <div class="card-body">
-              <h4 class="card-title h5">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
-              <div class="category-top">
-                <span class="visually-hidden">Categoria evento:</span> <a class="category" href="#">Categoria</a>
-                <span class="visually-hidden">Data evento:</span> <span class="data">10/12/{{'now' | date: "%Y"}}</span>
-              </div>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <span class="card-signature">di Federico De Paolis</span>
-              <a class="read-more" href="#">
-                <span class="text">Leggi di più</span>
-                <span class="visually-hidden">su Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
-                <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg>
-              </a>
+        <!--start it-card-->
+        <article class="it-card it-card-image rounded shadow-sm border">
+          <!--card first child is the title (link)-->
+          <h4 class="it-card-title no_toc">
+            <a href="#">Titolo del contenuto</a>
+          </h4>
+          <!--card second child is the image (optional)-->
+          <div class="it-card-image-wrapper">
+            <div class="ratio ratio-21x9">
+              <figure class="figure img-full">
+                <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+              </figure>
             </div>
           </div>
-        </div>
+          <!--card body content-->
+          <div class="it-card-body">
+            <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
+          </div>
+          <!--finally the card footer metadata-->
+          <footer class="it-card-related it-card-footer">
+            <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
+          </footer>
+        </article>
+        <!--end it-card-->
       </div>
     </div>
     <div class="col-12">
@@ -160,14 +187,30 @@ Il **PIN** ha tre varianti di colore:
           </div>
           <div class="pin-text"><span>ottobre {{'now' | date: "%Y"}}</span></div>
         </h3>
-        <div class="card-wrapper">
-          <div class="card">
-            <div class="card-body">
-              <h4 class="card-title h5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <!--start it-card-->
+        <article class="it-card it-card-inline it-card-inline-mini it-card-image rounded shadow-sm border">
+          <!--card first child is all the card content: title (link) + footer -->
+          <div class="it-card-inline-content">
+            <h4 class="it-card-title h4 no_toc">
+              <a href="#">Titolo contenuto editoriale</a>
+            </h4>
+            <footer class="it-card-related it-card-footer">
+              <div class="it-card-taxonomy">
+                <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
+              </div>
+              <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-10-12">22 aprile, {{ 'now' | date: "%Y" }}</time>
+            </footer>
+          </div>
+          <!--card second child is the image (optional)-->
+          <div class="it-card-image-wrapper">
+            <div class="ratio ratio-1x1">
+              <figure class="figure img-full">
+                <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+              </figure>
             </div>
           </div>
-        </div>
+        </article>
+        <!--end it-card-->
       </div>
     </div>
     <div class="col-12">
@@ -178,42 +221,30 @@ Il **PIN** ha tre varianti di colore:
           </div>
           <div class="pin-text"><span>novembre {{'now' | date: "%Y"}}</span></div>
         </h3>
-        <div class="card-wrapper">
-          <div class="card">
-            <div class="card-body">
-              <h4 class="card-title h5">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
-              <div class="category-top">
-                <span class="visually-hidden">Categoria evento:</span> <a class="category" href="#">Categoria</a>
-                <span class="visually-hidden">Data evento:</span> <span class="data">10/12/{{'now' | date: "%Y"}}</span>
+        <!--start it-card-->
+        <article class="it-card it-card-inline it-card-inline-mini it-card-inline-reverse it-card-image rounded shadow-sm border mb-3 mb-md-4">
+          <!--card first child is all the card content: title (link) + footer -->
+          <div class="it-card-inline-content">
+            <h4 class="it-card-title h4 no_toc">
+              <a href="#">Titolo contenuto editoriale</a>
+            </h4>
+            <footer class="it-card-related it-card-footer">
+              <div class="it-card-taxonomy">
+                <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
               </div>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <span class="card-signature">di Federico De Paolis</span>
-              <a class="read-more" href="#">
-                <span class="text">Leggi di più</span>
-                <span class="visually-hidden">su Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
-                <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg>
-              </a>
+              <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-10-12">22 aprile, {{ 'now' | date: "%Y" }}</time>
+            </footer>
+          </div>
+          <!--card second child is the image (optional)-->
+          <div class="it-card-image-wrapper">
+            <div class="ratio ratio-1x1">
+              <figure class="figure img-full">
+                <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+              </figure>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-12">
-      <div class="timeline-element">
-        <h3 class="it-pin-wrapper no_toc">
-          <div class="pin-icon">
-            <svg class="icon" role="img"><title>Milestone</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-flag"></use></svg>
-          </div>
-          <div class="pin-text"><span>dicembre {{'now' | date: "%Y"}}</span></div>
-        </h3>
-        <div class="card-wrapper">
-          <div class="card">
-            <div class="card-body">
-              <h4 class="card-title h5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-          </div>
-        </div>
+        </article>
+        <!--end it-card-->
       </div>
     </div>
   </div>
@@ -221,6 +252,12 @@ Il **PIN** ha tre varianti di colore:
 {% endcapture %}{% include example.html content=example %}
 
 ## Breaking change
+
+{% capture callout %}
+Implementato nell'esempio il nuovo componente card definito dalle classi `.it-card` e relativi modificatori.  
+
+Le classi legacy di Bootstrap `.card` sono ora deprecate ma **saranno mantenute nei fogli di stile fino al prossimo rilascio maggiore, per permettere una migrazione graduale**. 
+{% endcapture %}{% include callout-breaking.html version="2.16.0" content=callout type="danger" %}
 
 {% capture callout %}
 Il codice markup è stato rivisto in chiave accessibilità e robustezza. In particolare cosa cambia: 
