@@ -191,8 +191,7 @@ article.it-card {
   flex-direction: column;
   min-width: 0; // See https://github.com/twbs/bootstrap/pull/22740#issuecomment-305868106
   height: var(--#{$prefix}it-card-height);
-  padding: 0;
-  padding-bottom: var(--#{$prefix}it-card-spacer-y);
+  padding: 0 0 var(--#{$prefix}it-card-spacer-y) 0;
   position: relative;
   width: 100%;
   overflow-wrap: break-word;
