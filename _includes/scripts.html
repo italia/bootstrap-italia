@@ -3,6 +3,11 @@
 <script>
   bootstrap.loadFonts('{{ site.baseurl }}/dist/fonts')
 </script>
+{%- if page.layout == "test" -%}
+<script src="{{ site.baseurl }}/docs/assets/dist/js/docs.min.js?{{ buildTime }}"></script>
+<script src="{{ site.baseurl }}/docs/assets/src/js/docs.js?{{ buildTime }}"></script>
+<script src="{{ site.baseurl }}/docs/assets/src/js/vendor/preloadjs.min.js"></script>
+{%- endif -%}
 {%- if page.layout == "default" or page.layout == "docs" -%}
 <script src="{{ site.baseurl }}/docs/assets/dist/js/docs.min.js?{{ buildTime }}"></script>
 <script src="{{ site.baseurl }}/docs/assets/src/js/vendor/anchor.min.js"></script>

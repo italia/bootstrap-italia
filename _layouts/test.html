@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  {% include head.html %}
+
+  <style>
+    h1,
+    h2,
+    h3 {
+      max-width: 75ch !important;
+      clear: both;
+    }
+
+    p,
+    li:not(.nav-item),
+    h4,
+    h5,
+    h6 {
+      max-width: 75ch !important;
+      clear: both;
+    }
+  </style>
+</head>
+
+<body>
+  {% include test-header.html %}
+  <main id="content" style="min-height:480px;">
+    <div class="d-flex align-items-center justify-content-center main-content">
+      <div class="container-xl mt-5 mb-5">
+        <div class="row">
+          <div class="col-12">
+            {% assign current = page.url | downcase | split: '/' %}
+            {% if current[2]!=null %}
+            <div class="mb-3">
+              <a href="/test/" class="go-back"><svg class="icon icon-sm icon-primary me-2" aria-hidden="true">
+                  <use href="/dist/svg/sprites.svg#it-arrow-left"></use>
+                </svg>Torna alla pagina iniziale</a>
+            </div>
+            {% endif %}
+
+            {{ content }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  {% include test-footer.html %}
+  {% include scripts.html %}
+</body>
+
+</html>

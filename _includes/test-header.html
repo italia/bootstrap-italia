@@ -1,0 +1,166 @@
+<div class="skiplinks">
+  <a class="visually-hidden-focusable" href="#content">Vai al contenuto principale</a>
+  <a class="visually-hidden-focusable" href="#piede">Vai al piede di pagina</a>
+</div>
+
+<header class="it-header-wrapper"> 
+  <div class="it-nav-wrapper">
+    <div class="it-header-center-wrapper">
+      <div class="container-xxl">
+        <div class="row">
+          <div class="col-12">
+            <div class="it-header-center-content-wrapper">
+              <div class="it-brand-wrapper">
+                <a href="/test/">
+                  <svg class="icon" aria-hidden="true">
+                    <use href="/dist/svg/sprites.svg#it-designers-italia"></use>
+                  </svg>
+                  <div class="it-brand-text">
+                    <div class="it-brand-title it-brand-title d-none d-sm-block">Design system .italia agli <span lang="en">Accessibility Days</span>
+                      2025</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="it-header-navbar-wrapper">
+      <div class="container-xxl">
+        <div class="row">
+          <div class="col-12">
+            <!-- navbar -->
+            <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Menu principale" id="menu">
+              <button type="button" aria-label="Mostra o nascondi il menu" class="custom-navbar-toggler"
+                aria-controls="navbar-A" data-bs-toggle="navbarcollapsible" data-bs-target="#navbar-A">
+                <span>
+                  <svg role="img" class="icon">
+                    <use href="/dist/svg/sprites.svg#it-burger"></use>
+                  </svg>
+                </span>
+              </button>
+              <div class="navbar-collapsable" id="navbar-A" tabindex="-1">
+                <div class="close-div">
+                  <button type="button" aria-label="Chiudi il menu" class="btn close-menu">
+                    <span><svg role="img" class="icon">
+                        <use href="/dist/svg/sprites.svg#it-close-big"></use>
+                      </svg></span>
+                  </button>
+                </div>
+                <div class="menu-wrapper justify-content-lg-between">
+                  <ul class="navbar-nav">
+                    <!-- megamenu 1 -->
+                    <li class="nav-item dropdown megamenu">
+                      <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3 active"
+                        data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-completo-A1"
+                        data-focus-mouse="false">
+                        <span>Componenti da validare</span><svg role="img" class="icon icon-xs ms-1">
+                          <use href="/dist/svg/sprites.svg#it-expand"></use>
+                        </svg>
+                      </button>
+                      <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-completo-A1">
+                        <div class="megamenu pb-5 pt-3 py-lg-0">
+                          <div class="row">
+                            <div class="col-xs-12 col-lg-4 px-0">
+                              <div class="row">
+                                <div class="col-12 it-vertical it-description pb-lg-3">
+                                  <div class="description-content ps-4 ps-sm-5 ms-3">
+                                    <p>
+                                      <strong>Esplorate i nuovi componenti card.</strong><br />Fate attenzione anche a
+                                      questa <strong>barra di navigazione</strong>, in particolar modo su dispositivi
+                                      mobili o a forte ingrandimento, e al nuovo <strong>focus</strong> navigando da
+                                      tastiera.
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-12 col-lg-8">
+                              <div class="row">
+                                <div class="col-12 col-lg-6">
+                                  <div class="link-list-wrapper">
+                                    <ul class="link-list">
+
+                                      {% assign current = page.url | downcase | split: '/' %}
+
+                                      <li>
+                                        <a {% if current[2]=='struttura-base-della-card'
+                                          %}class="list-item dropdown-item active" aria-current="true" {% else %}
+                                          class="list-item dropdown-item" {% endif %}
+                                          href="/test/struttura-base-della-card/">
+                                          <svg role="img" class="icon icon-sm me-2">
+                                            <use href="/dist/svg/sprites.svg#it-arrow-right-triangle"></use>
+                                          </svg>
+                                          <span>Struttura base della card</span>
+                                        </a>
+                                      </li>
+                                      <li>
+                                        <a {% if current[2]=='card-per-contenuti-editoriali'
+                                          %}class="list-item dropdown-item active" aria-current="true" {% else %}
+                                          class="list-item dropdown-item" {% endif %}
+                                          href="/test/card-per-contenuti-editoriali/">
+                                          <svg role="img" class="icon icon-sm me-2">
+                                            <use href="/dist/svg/sprites.svg#it-arrow-right-triangle"></use>
+                                          </svg>
+                                          <span>Card per contenuti editoriali</span>
+                                        </a>
+                                      </li>
+                                      <li>
+                                        <a {% if current[2]=='card-informative-e-di-servizio'
+                                          %}class="list-item dropdown-item active" aria-current="true" {% else %}
+                                          class="list-item dropdown-item" {% endif %}
+                                          href="/test/card-informative-e-di-servizio/">
+                                          <svg role="img" class="icon icon-sm me-2">
+                                            <use href="/dist/svg/sprites.svg#it-arrow-right-triangle"></use>
+                                          </svg>
+                                          <span>Card informative e di servizio</span>
+                                        </a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                                <div class="col-12 col-lg-6">
+                                  <div class="link-list-wrapper">
+                                    <ul class="link-list">
+                                      <li>
+                                        <a {% if current[2]=='personalizzazione-e-stili'
+                                          %}class="list-item dropdown-item active" aria-current="true" {% else %}
+                                          class="list-item dropdown-item" {% endif %}
+                                          href="/test/personalizzazione-e-stili/">
+                                          <svg role="img" class="icon icon-sm me-2">
+                                            <use href="/dist/svg/sprites.svg#it-arrow-right-triangle"></use>
+                                          </svg>
+                                          <span>Personalizzazioni e stili</span>
+                                        </a>
+                                      </li>
+                                      <li>
+                                        <a {% if current[2]=='organizzazione-e-layout'
+                                          %}class="list-item dropdown-item active" aria-current="true" {% else %}
+                                          class="list-item dropdown-item" {% endif %}
+                                          href="/test/organizzazione-e-layout/">
+                                          <svg role="img" class="icon icon-sm me-2">
+                                            <use href="/dist/svg/sprites.svg#it-arrow-right-triangle"></use>
+                                          </svg>
+                                          <span>Organizzazione e layout</span>
+                                        </a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header> 
