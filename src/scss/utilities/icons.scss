@@ -67,11 +67,8 @@ $icon-colors: (
 :root {
   --#{$prefix}rounded-icon-size: var(--it-icon-size-s);
 }
-.rounded-icon {
-  .btn-xs & {
-    --#{$prefix}rounded-icon-size: var(--#{$prefix}icon-size-xs);
-  }
 
+.rounded-icon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -90,4 +87,8 @@ $icon-colors: (
   .icon {
     margin-right: 0;
   }
+}
+
+.btn-xs .rounded-icon {
+  --#{$prefix}rounded-icon-size: var(--#{$prefix}icon-size-xs);
 }
