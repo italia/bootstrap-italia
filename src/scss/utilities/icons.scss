@@ -88,7 +88,3 @@ $icon-colors: (
     margin-right: 0;
   }
 }
-
-.btn-xs {
-  --#{$prefix}rounded-icon-size: var(--#{$prefix}icon-size-xs);
-}
