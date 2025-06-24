@@ -2,7 +2,7 @@
   "items": [
     {
       "amichevole con lettori di schermo": "PRONTO",
-      "angular Kit": "DA RIVEDERE",
+      "angular Kit": "PRONTO",
       "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/collapse",
       "assignees": [
         "frmascia11y"
@@ -18,8 +18,7 @@
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjtRg",
       "navigabile": "PRONTO",
-      "notes / Issues": "https://github.com/italia/design-angular-kit/issues/426 — https://github.com/italia/design-react-kit/issues/1150",
-      "react Kit": "DA RIVEDERE",
+      "react Kit": "PRONTO",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/story/documentazione-componenti-accordion--accordion",
       "status": "Todo",
       "status a11y check": "Done",
@@ -82,7 +81,7 @@
     },
     {
       "amichevole con lettori di schermo": "PRONTO",
-      "angular Kit": "DA FARE",
+      "angular Kit": "PRONTO",
       "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/autocomplete",
       "assignees": [
         "Fupete"
@@ -98,7 +97,7 @@
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjtb4",
       "navigabile": "PRONTO",
-      "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1387 — https://github.com/italia/design-ui-kit/issues/114 — https://github.com/italia/design-angular-kit/issues/404",
+      "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1387 — https://github.com/italia/design-ui-kit/issues/114",
       "react Kit": "PRONTO",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/story/documentazione-form-input--input-autocomplete-con-dati-accessibile",
       "status": "Todo",
@@ -109,7 +108,7 @@
     },
     {
       "amichevole con lettori di schermo": "PRONTO",
-      "angular Kit": "DA COMPLETARE VARIANTI",
+      "angular Kit": "PRONTO",
       "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/avatar",
       "assignees": [
         "Fupete"
@@ -125,7 +124,6 @@
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwTI",
       "navigabile": "PRONTO",
-      "notes / Issues": "https://github.com/italia/design-angular-kit/issues/427",
       "react Kit": "PRONTO",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-avatar--documentazione",
       "status": "Todo",
@@ -358,7 +356,7 @@
     },
     {
       "amichevole con lettori di schermo": "PRONTO",
-      "angular Kit": "DA RIVEDERE A11Y",
+      "angular Kit": "PRONTO",
       "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/carousel",
       "assignees": [
         "Fupete"
@@ -374,8 +372,7 @@
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwWs",
       "navigabile": "PRONTO",
-      "notes / Issues": "https://github.com/italia/design-react-kit/issues/1148",
-      "react Kit": "DA FARE",
+      "react Kit": "PRONTO",
       "status": "Todo",
       "status a11y check": "Done",
       "title": "`Carousel` - check a11y e status",
@@ -548,7 +545,7 @@
     },
     {
       "amichevole con lettori di schermo": "PRONTO",
-      "angular Kit": "DA FARE",
+      "angular Kit": "PRONTO",
       "assignees": [
         "Fupete"
       ],
@@ -563,7 +560,6 @@
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwZc",
       "navigabile": "PRONTO",
-      "notes / Issues": "https://github.com/italia/design-angular-kit/issues/435",
       "notes / More": "Alcune incongruenze di contenuti e spazi da verificare: in UI Kit Italia ci sono cose in più (es: newsletter, presente solo in React Kit ma non in BSI). — In UI Kit Italia c'è anche una variante \"Alternate\" non presente in sviluppo. ",
       "react Kit": "PRONTO",
       "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-menu-di-navigazione-footer--documentazione",
@@ -1486,7 +1482,7 @@
     },
     {
       "amichevole con lettori di schermo": "PRONTO",
-      "angular Kit": "DA FARE",
+      "angular Kit": "PRONTO",
       "assignees": [
         "Fupete"
       ],
@@ -1501,8 +1497,7 @@
       },
       "id": "PVTI_lADOAOqloM4AcXblzgMjwoU",
       "navigabile": "PRONTO",
-      "notes / Issues": "https://github.com/italia/design-react-kit/issues/1101 — https://github.com/italia/design-angular-kit/issues/378",
-      "react Kit": "DA FARE",
+      "react Kit": "PRONTO",
       "status": "Todo",
       "status a11y check": "Done",
       "title": "`Video player` - check a11y e status",
