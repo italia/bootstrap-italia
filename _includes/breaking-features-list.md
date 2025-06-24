@@ -1,3 +1,125 @@
+## 2.16.0
+
+[Changelog completo](https://github.com/italia/bootstrap-italia/releases/tag/v2.16.0) <svg class="icon steppers-success" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
+
+### Card
+
+Questo è un nuovo componente card definito dalle classi `.it-card` e relativi modificatori. 
+
+Le classi legacy di Bootstrap `.card` sono ora deprecate ma **saranno mantenute nei fogli di stile fino al prossimo rilascio maggiore, per permettere una migrazione graduale**. 
+
+Per migrare le tue card dalle deprecate `.card` alle nuove `.it-card` (v2.16.0) considera prima di tutto i cambi strutturali. Prima era:
+```html
+<!-- Card base minimal -->
+<div class="card-wrapper">
+  <div class="card">
+    <div class="card-body">
+      <h3 class="card-title h5 ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h3>
+      <p class="card-text font-serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+  </div>
+</div>
+```
+
+Adesso:
+```html
+<!-- Card base minimal -->
+<article class="it-card rounded shadow-sm border">
+  <h3 class="it-card-title">
+    <a href="#">Titolo del contenuto</a>
+  </h3>
+  <div class="it-card-body">
+    <p class="it-card-text">Breve descrizione.</p>
+  </div>
+</article>
+```
+
+
+### Carousel
+
+Implementato negli esempi il nuovo componente card definito dalle classi `.it-card` e relativi modificatori. Il markup degli esempi e gli attributi per attivare il componente sono inoltre cambiati laddove c'è la necessità di gestire le altezze delle card con classi `.it-card-full-height` e/o la necessità di mostrarne le ombre `.shadow-`. 
+
+Le classi legacy di Bootstrap `.card` sono ora deprecate ma **saranno mantenute nei fogli di stile fino al prossimo rilascio maggiore, per permettere una migrazione graduale**. 
+
+
+### Dimmer
+
+Implementato negli esempi il nuovo componente card definito dalle classi `.it-card` e relativi modificatori.  
+
+Le classi legacy di Bootstrap `.card` sono ora deprecate ma **saranno mantenute nei fogli di stile fino al prossimo rilascio maggiore, per permettere una migrazione graduale**. 
+
+
+### Hero
+
+Implementato nell'esempio con immagine e margine negativo per contenuti sovrapposti il nuovo componente card definito dalle classi `.it-card` e relativi modificatori.  
+
+Le classi legacy di Bootstrap `.card` sono ora deprecate ma **saranno mantenute nei fogli di stile fino al prossimo rilascio maggiore, per permettere una migrazione graduale**. 
+
+
+### Sections
+
+Implementato nell'esempio con card il nuovo componente card definito dalle classi `.it-card` e relativi modificatori.  
+
+Le classi legacy di Bootstrap `.card` sono ora deprecate ma **saranno mantenute nei fogli di stile fino al prossimo rilascio maggiore, per permettere una migrazione graduale**. 
+
+
+### Timeline
+
+Implementato nell'esempio il nuovo componente card definito dalle classi `.it-card` e relativi modificatori.  
+
+Le classi legacy di Bootstrap `.card` sono ora deprecate ma **saranno mantenute nei fogli di stile fino al prossimo rilascio maggiore, per permettere una migrazione graduale**. 
+
+
+## 2.15.0
+
+[Changelog completo](https://github.com/italia/bootstrap-italia/releases/tag/v2.15.0) <svg class="icon steppers-success" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
+
+### Header
+
+La navbar presente negli esempi, quando aperta in versione mobile o a forte ingrandimento, è stata reimplementata come modale per migliorare l'accessibilità con le combinazioni principali di lettori di schermo, sistema operativo e browser. Modifiche principali: 
+- struttura: la navbar ora utilizza un pattern dialog con backdrop 
+- gerarchia visiva: la gestione `z-index` è allineata al componente modale
+- gestione del focus: implementato `focus-trap.js` per utenti da tastiera e lettori di schermo, e gestione inert
+- il comportamento è diverso se implementata dentro o fuori dall'elemento `main` di pagina (se presente)
+
+Se hai personalizzato il CSS della navbar, rivedi le tue modifiche per verificarne la compatibilità. Se hai modificato il comportamento JavaScript, assicurati che funzioni con il nuovo pattern dialog. Testa la tua implementazione con lettori di schermo e con utenti per verificarne l'accessibilità.
+
+
+### Megamenu
+
+La navbar presente negli esempi, quando aperta in versione mobile o a forte ingrandimento, è stata reimplementata come modale per migliorare l'accessibilità con le combinazioni principali di lettori di schermo, sistema operativo e browser. Modifiche principali: 
+- struttura: la navbar ora utilizza un pattern dialog con backdrop 
+- gerarchia visiva: la gestione `z-index` è allineata al componente modale
+- gestione del focus: implementato `focus-trap.js` per utenti da tastiera e lettori di schermo, e gestione inert
+- il comportamento è diverso se implementata dentro o fuori dall'elemento `main` di pagina (se presente)
+
+Se hai personalizzato il CSS della navbar, rivedi le tue modifiche per verificarne la compatibilità. Se hai modificato il comportamento JavaScript in, assicurati che funzioni con il nuovo pattern dialog. Testa la tua implementazione con lettori di schermo e con utenti per verificarne l'accessibilità.
+
+
+### Navscroll
+
+- Spostato il pulsante "Indietro" come primo elemento della struttura interna di `.menu-wrapper`.
+
+Inoltre, la versione mobile o a forte ingrandimento del componente, che si basa sulla navbar presente anche nei componenti Header e Megamenu, è stata reimplementata come modale per migliorare l'accessibilità con le combinazioni principali di lettori di schermo, sistema operativo e browser. Modifiche principali: 
+- struttura: la navbar ora utilizza un pattern dialog con backdrop 
+- gerarchia visiva: la gestione `z-index` è allineata al componente modale
+- gestione del focus: implementato `focus-trap.js` per utenti da tastiera e lettori di schermo, e gestione inert
+- il comportamento è diverso se implementata dentro o fuori dall'elemento `main` di pagina (se presente)
+
+Se hai personalizzato il CSS della navbar, rivedi le tue modifiche per verificarne la compatibilità. Se hai modificato il comportamento JavaScript in, assicurati che funzioni con il nuovo pattern dialog. Testa la tua implementazione con lettori di schermo e con utenti per verificarne l'accessibilità.
+
+
+### Sticky
+
+La navbar presente nel markup dell'esempio "Attivabile con target", quando aperta in versione mobile o a forte ingrandimento, è stata reimplementata come modale per migliorare l'accessibilità con le combinazioni principali di lettori di schermo, sistema operativo e browser. Modifiche principali: 
+- struttura: la navbar ora utilizza un pattern dialog con backdrop 
+- gerarchia visiva: la gestione `z-index` è allineata al componente modale
+- gestione del focus: implementato `focus-trap.js` per utenti da tastiera e lettori di schermo, e gestione inert
+- il comportamento è diverso se implementata dentro o fuori dall'elemento `main` di pagina (se presente)
+
+Se hai personalizzato il CSS della navbar, rivedi le tue modifiche per verificarne la compatibilità. Se hai modificato il comportamento JavaScript, assicurati che funzioni con il nuovo pattern dialog. Testa la tua implementazione con lettori di schermo e con utenti per verificarne l'accessibilità.
+
+
 ## 2.14.0
 
 [Changelog completo](https://github.com/italia/bootstrap-italia/releases/tag/v2.14.0) <svg class="icon steppers-success" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
@@ -15,7 +137,7 @@ Lato JavaScript il componente Carousel deve essere importato tramite la classe
 
 ### Generale
 
-Il `focus` con la tastiera viene adesso settato con l'attributo `datadata-focus-mouse`
+Il `focus` con la tastiera viene adesso settato con l'attributo `data-focus-mouse`
 invece che con la classe `focus--mouse`. Da tenere presente nel caso di un 
 precedente utilizzo della classe `focus--mouse` per un controllo e/o un' implementazione 
 ulteriore di accessibilità. 

@@ -1,6 +1,6 @@
 {
     "amichevole con lettori di schermo": "PRONTO",
-    "angular Kit": "DA RIVEDERE A11Y",
+    "angular Kit": "PRONTO",
     "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/carousel",
     "assignees": [
         "Fupete"
@@ -16,8 +16,7 @@
     },
     "id": "PVTI_lADOAOqloM4AcXblzgMjwWs",
     "navigabile": "PRONTO",
-    "notes / Issues": "https://github.com/italia/design-react-kit/issues/1148",
-    "react Kit": "DA FARE",
+    "react Kit": "PRONTO",
     "status": "Todo",
     "status a11y check": "Done",
     "title": "Carousel",
