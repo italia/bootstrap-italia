@@ -11,13 +11,13 @@
 
 <title>Dimmer · Bootstrap Italia</title>
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202506201239" rel="stylesheet" />
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202506241153" rel="stylesheet" />
 
 <!-- Documentation extras -->
  
 <link href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" rel="stylesheet" />
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202506201239" rel="stylesheet" />
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202506241153" rel="stylesheet" />
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico" />
@@ -144,9 +144,9 @@
     <ul class="navbar-nav flex-row ms-md-auto d-none d-md-flex">
       <li class="nav-item pe-2">
         <a title="Scarica Bootstrap Italia" data-toggle="tooltip" class="nav-link d-flex align-items-center"
-          href="https://github.com/italia/bootstrap-italia/releases/download/v2.15.1/bootstrap-italia.zip"
+          href="https://github.com/italia/bootstrap-italia/releases/download/v2.16.0/bootstrap-italia.zip"
           aria-label="Download">
-          <small class="pe-2 m-0">v2.15.1</small>
+          <small class="pe-2 m-0">v2.16.0</small>
           <svg class="icon icon-sm icon-light">
             <use href="/bootstrap-italia/dist/svg/sprites.svg#it-download"
               xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-download"></use>
@@ -626,6 +626,7 @@
 </ul>
 </li>
 <li class="toc-entry toc-h2"><a href="#attivazione-tramite-codice">Attivazione tramite codice</a></li>
+<li class="toc-entry toc-h2"><a href="#breaking-change">Breaking change</a></li>
 </ul>
   </div>
 </div>
@@ -682,546 +683,57 @@
       <p>Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.</p>
     </div>
   </div>
-  <div class="col-12 col-lg-4">
-    <!--start card-->
-    <div class="card-wrapper">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
-          <p class="card-text">Praesent volutpat in dolor in sollicitudin. Donec mollis varius condimentum. Nunc viverra, metus at viverra consectetur, magna orci posuere ipsum, et bibendum est urna sed sem. Fusce libero neque, elementum volutpat tincidunt id, egestas vitae nisi. Nulla vulputate luctus sem, eu maximus lacus faucibus eget. Fusce tristique enim augue, sed suscipit lorem bibendum vel. Donec vehicula vehicula nibh non suscipit.</p>
+  <div class="col-12 col-md-6 col-lg-6 my-3 my-md-4">
+    <!--start it-card-->
+    <article class="it-card it-card-image rounded shadow-sm border">
+      <!--card first child is the title (link)-->
+      <h3 class="it-card-title no_toc">
+        <a href="#">Titolo del contenuto</a>
+      </h3>
+      <!--card second child is the image (optional)-->
+      <div class="it-card-image-wrapper">
+        <div class="ratio ratio-16x9">
+          <figure class="figure img-full">
+            <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto." />
+          </figure>
         </div>
       </div>
-    </div>
-    <!--end card-->
+      <!--card body content-->
+      <div class="it-card-body">
+        <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
+      </div>
+      <!--finally the card footer metadata-->
+      <footer class="it-card-related it-card-footer">
+        <time class="it-card-date" datetime="2025-04-22">22 aprile 2025</time>
+      </footer>
+    </article>
+    <!--end it-card-->
   </div>
-  <div class="col-12 col-lg-4 d-none d-lg-block">
-    <!--start card-->
-    <div class="card-wrapper">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
-          <p class="card-text">Praesent volutpat in dolor in sollicitudin. Donec mollis varius condimentum. Nunc viverra, metus at viverra consectetur, magna orci posuere ipsum, et bibendum est urna sed sem. Fusce libero neque, elementum volutpat tincidunt id, egestas vitae nisi. Nulla vulputate luctus sem, eu maximus lacus faucibus eget. Fusce tristique enim augue, sed suscipit lorem bibendum vel. Donec vehicula vehicula nibh non suscipit.</p>
+  <div class="col-12 col-md-6 col-lg-6 my-3 my-md-4">
+    <!--start it-card-->
+    <article class="it-card it-card-image rounded shadow-sm border">
+      <!--card first child is the title (link)-->
+      <h3 class="it-card-title no_toc">
+        <a href="#">Titolo del contenuto</a>
+      </h3>
+      <!--card second child is the image (optional)-->
+      <div class="it-card-image-wrapper">
+        <div class="ratio ratio-16x9">
+          <figure class="figure img-full">
+            <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto." />
+          </figure>
         </div>
       </div>
-    </div>
-    <!--end card-->
-  </div>
-  <div class="col-12 col-lg-4 d-none d-lg-block">
-    <!--start card-->
-    <div class="card-wrapper">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
-          <p class="card-text">Praesent volutpat in dolor in sollicitudin. Donec mollis varius condimentum. Nunc viverra, metus at viverra consectetur, magna orci posuere ipsum, et bibendum est urna sed sem. Fusce libero neque, elementum volutpat tincidunt id, egestas vitae nisi. Nulla vulputate luctus sem, eu maximus lacus faucibus eget. Fusce tristique enim augue, sed suscipit lorem bibendum vel. Donec vehicula vehicula nibh non suscipit.</p>
-        </div>
+      <!--card body content-->
+      <div class="it-card-body">
+        <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
       </div>
-    </div>
-    <!--end card-->
-  </div>
-</div>
-</div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-48
-49
-50
-51
-52
-53
-54
-</pre></td><td class="code"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toggles col-md-6 col-lg-4"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"toggleDimmer1"</span><span class="nt">&gt;</span>
-    Attiva Dimmer 1
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"toggleDimmer1"</span> <span class="na">data-bs-toggle=</span><span class="s">"dimmer"</span> <span class="na">data-bs-target=</span><span class="s">"#dimmer1"</span> <span class="na">checked</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"lever"</span><span class="nt">&gt;&lt;/span&gt;</span>
-  <span class="nt">&lt;/label&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row dimmable"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dimmer fade show"</span> <span class="na">id=</span><span class="s">"dimmer1"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dimmer-inner"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dimmer-icon"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-xl"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-unlocked"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;p&gt;</span>Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.<span class="nt">&lt;/p&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-lg-4"</span><span class="nt">&gt;</span>
-    <span class="c">&lt;!--start card--&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…<span class="nt">&lt;/h5&gt;</span>
-          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Praesent volutpat in dolor in sollicitudin. Donec mollis varius condimentum. Nunc viverra, metus at viverra consectetur, magna orci posuere ipsum, et bibendum est urna sed sem. Fusce libero neque, elementum volutpat tincidunt id, egestas vitae nisi. Nulla vulputate luctus sem, eu maximus lacus faucibus eget. Fusce tristique enim augue, sed suscipit lorem bibendum vel. Donec vehicula vehicula nibh non suscipit.<span class="nt">&lt;/p&gt;</span>
-        <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="c">&lt;!--end card--&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-lg-4 d-none d-lg-block"</span><span class="nt">&gt;</span>
-    <span class="c">&lt;!--start card--&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…<span class="nt">&lt;/h5&gt;</span>
-          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Praesent volutpat in dolor in sollicitudin. Donec mollis varius condimentum. Nunc viverra, metus at viverra consectetur, magna orci posuere ipsum, et bibendum est urna sed sem. Fusce libero neque, elementum volutpat tincidunt id, egestas vitae nisi. Nulla vulputate luctus sem, eu maximus lacus faucibus eget. Fusce tristique enim augue, sed suscipit lorem bibendum vel. Donec vehicula vehicula nibh non suscipit.<span class="nt">&lt;/p&gt;</span>
-        <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="c">&lt;!--end card--&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-lg-4 d-none d-lg-block"</span><span class="nt">&gt;</span>
-    <span class="c">&lt;!--start card--&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…<span class="nt">&lt;/h5&gt;</span>
-          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Praesent volutpat in dolor in sollicitudin. Donec mollis varius condimentum. Nunc viverra, metus at viverra consectetur, magna orci posuere ipsum, et bibendum est urna sed sem. Fusce libero neque, elementum volutpat tincidunt id, egestas vitae nisi. Nulla vulputate luctus sem, eu maximus lacus faucibus eget. Fusce tristique enim augue, sed suscipit lorem bibendum vel. Donec vehicula vehicula nibh non suscipit.<span class="nt">&lt;/p&gt;</span>
-        <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="c">&lt;!--end card--&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</pre></td></tr></tbody></table></code></pre></figure>
-
-<p>Se si vuole iniziare con il dimmer disabilitato è necessario utilizzare l’attributo <code class="language-plaintext highlighter-rouge">aria-hidden</code>.</p>
-
-<div class="bd-example">
-
-<div class="toggles col-md-6 col-lg-4">
-  <label for="toggleDimmer2">
-    Attiva Dimmer 2
-    <input type="checkbox" id="toggleDimmer2" data-bs-toggle="dimmer" data-bs-target="#dimmer2" />
-    <span class="lever"></span>
-  </label>
-</div>
-
-<div class="row dimmable">
-  <div class="dimmer fade" id="dimmer2" aria-hidden="true">
-    <div class="dimmer-inner">
-      <div class="dimmer-icon">
-        <svg class="icon icon-xl"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-unlocked"></use></svg>
-      </div>
-      <p>Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.</p>
-    </div>
-  </div>
-  <div class="col-12 col-lg-4">
-    <!--start card-->
-    <div class="card-wrapper">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
-          <p class="card-text">Praesent volutpat in dolor in sollicitudin. Donec mollis varius condimentum. Nunc viverra, metus at viverra consectetur, magna orci posuere ipsum, et bibendum est urna sed sem. Fusce libero neque, elementum volutpat tincidunt id, egestas vitae nisi. Nulla vulputate luctus sem, eu maximus lacus faucibus eget. Fusce tristique enim augue, sed suscipit lorem bibendum vel. Donec vehicula vehicula nibh non suscipit.</p>
-        </div>
-      </div>
-    </div>
-    <!--end card-->
-  </div>
-  <div class="col-12 col-lg-4 d-none d-lg-block">
-    <!--start card-->
-    <div class="card-wrapper">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
-          <p class="card-text">Praesent volutpat in dolor in sollicitudin. Donec mollis varius condimentum. Nunc viverra, metus at viverra consectetur, magna orci posuere ipsum, et bibendum est urna sed sem. Fusce libero neque, elementum volutpat tincidunt id, egestas vitae nisi. Nulla vulputate luctus sem, eu maximus lacus faucibus eget. Fusce tristique enim augue, sed suscipit lorem bibendum vel. Donec vehicula vehicula nibh non suscipit.</p>
-        </div>
-      </div>
-    </div>
-    <!--end card-->
-  </div>
-  <div class="col-12 col-lg-4 d-none d-lg-block">
-    <!--start card-->
-    <div class="card-wrapper">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
-          <p class="card-text">Praesent volutpat in dolor in sollicitudin. Donec mollis varius condimentum. Nunc viverra, metus at viverra consectetur, magna orci posuere ipsum, et bibendum est urna sed sem. Fusce libero neque, elementum volutpat tincidunt id, egestas vitae nisi. Nulla vulputate luctus sem, eu maximus lacus faucibus eget. Fusce tristique enim augue, sed suscipit lorem bibendum vel. Donec vehicula vehicula nibh non suscipit.</p>
-        </div>
-      </div>
-    </div>
-    <!--end card-->
-  </div>
-</div>
-</div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-48
-49
-50
-51
-52
-53
-54
-</pre></td><td class="code"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toggles col-md-6 col-lg-4"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"toggleDimmer2"</span><span class="nt">&gt;</span>
-    Attiva Dimmer 2
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"toggleDimmer2"</span> <span class="na">data-bs-toggle=</span><span class="s">"dimmer"</span> <span class="na">data-bs-target=</span><span class="s">"#dimmer2"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"lever"</span><span class="nt">&gt;&lt;/span&gt;</span>
-  <span class="nt">&lt;/label&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row dimmable"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dimmer fade"</span> <span class="na">id=</span><span class="s">"dimmer2"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dimmer-inner"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dimmer-icon"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-xl"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-unlocked"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;p&gt;</span>Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.<span class="nt">&lt;/p&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-lg-4"</span><span class="nt">&gt;</span>
-    <span class="c">&lt;!--start card--&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…<span class="nt">&lt;/h5&gt;</span>
-          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Praesent volutpat in dolor in sollicitudin. Donec mollis varius condimentum. Nunc viverra, metus at viverra consectetur, magna orci posuere ipsum, et bibendum est urna sed sem. Fusce libero neque, elementum volutpat tincidunt id, egestas vitae nisi. Nulla vulputate luctus sem, eu maximus lacus faucibus eget. Fusce tristique enim augue, sed suscipit lorem bibendum vel. Donec vehicula vehicula nibh non suscipit.<span class="nt">&lt;/p&gt;</span>
-        <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="c">&lt;!--end card--&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-lg-4 d-none d-lg-block"</span><span class="nt">&gt;</span>
-    <span class="c">&lt;!--start card--&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…<span class="nt">&lt;/h5&gt;</span>
-          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Praesent volutpat in dolor in sollicitudin. Donec mollis varius condimentum. Nunc viverra, metus at viverra consectetur, magna orci posuere ipsum, et bibendum est urna sed sem. Fusce libero neque, elementum volutpat tincidunt id, egestas vitae nisi. Nulla vulputate luctus sem, eu maximus lacus faucibus eget. Fusce tristique enim augue, sed suscipit lorem bibendum vel. Donec vehicula vehicula nibh non suscipit.<span class="nt">&lt;/p&gt;</span>
-        <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="c">&lt;!--end card--&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-lg-4 d-none d-lg-block"</span><span class="nt">&gt;</span>
-    <span class="c">&lt;!--start card--&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…<span class="nt">&lt;/h5&gt;</span>
-          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Praesent volutpat in dolor in sollicitudin. Donec mollis varius condimentum. Nunc viverra, metus at viverra consectetur, magna orci posuere ipsum, et bibendum est urna sed sem. Fusce libero neque, elementum volutpat tincidunt id, egestas vitae nisi. Nulla vulputate luctus sem, eu maximus lacus faucibus eget. Fusce tristique enim augue, sed suscipit lorem bibendum vel. Donec vehicula vehicula nibh non suscipit.<span class="nt">&lt;/p&gt;</span>
-        <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="c">&lt;!--end card--&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</pre></td></tr></tbody></table></code></pre></figure>
-
-<h3 id="colore-primario">Colore Primario</h3>
-
-<p>Aggiungendo la classe <code class="language-plaintext highlighter-rouge">.dimmer-primary</code> al wrapper del dimmer si ottiene una versione con sfondo di colore primario.</p>
-
-<div class="bd-example">
-
-<div class="toggles col-md-6 col-lg-4">
-  <label for="toggleDimmer3">
-    Attiva Dimmer 2
-    <input type="checkbox" id="toggleDimmer3" data-bs-toggle="dimmer" data-bs-target="#dimmer3" checked="" />
-    <span class="lever"></span>
-  </label>
-</div>
-
-<div class="row dimmable">
-  <div class="dimmer dimmer-primary fade show" id="dimmer3">
-    <div class="dimmer-inner">
-      <p>Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus. Nulla vulputate luctus sem, eu maximus lacus faucibus eget. Fusce tristique enim augue, sed suscipit lorem bibendum vel. Donec vehicula vehicula nibh non suscipit.</p>
-    </div>
-  </div>
-  <div class="col-12 col-lg-4">
-    <!--start card-->
-    <div class="card-wrapper">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
-          <p class="card-text">Praesent volutpat in dolor in sollicitudin. Donec mollis varius condimentum. Nunc viverra, metus at viverra consectetur, magna orci posuere ipsum, et bibendum est urna sed sem. Fusce libero neque, elementum volutpat tincidunt id, egestas vitae nisi. Nulla vulputate luctus sem, eu maximus lacus faucibus eget. Fusce tristique enim augue, sed suscipit lorem bibendum vel. Donec vehicula vehicula nibh non suscipit.</p>
-        </div>
-      </div>
-    </div>
-    <!--end card-->
-  </div>
-  <div class="col-12 col-lg-4 d-none d-lg-block">
-    <!--start card-->
-    <div class="card-wrapper">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
-          <p class="card-text">Praesent volutpat in dolor in sollicitudin. Donec mollis varius condimentum. Nunc viverra, metus at viverra consectetur, magna orci posuere ipsum, et bibendum est urna sed sem. Fusce libero neque, elementum volutpat tincidunt id, egestas vitae nisi. Nulla vulputate luctus sem, eu maximus lacus faucibus eget. Fusce tristique enim augue, sed suscipit lorem bibendum vel. Donec vehicula vehicula nibh non suscipit.</p>
-        </div>
-      </div>
-    </div>
-    <!--end card-->
-  </div>
-  <div class="col-12 col-lg-4 d-none d-lg-block">
-    <!--start card-->
-    <div class="card-wrapper">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
-          <p class="card-text">Praesent volutpat in dolor in sollicitudin. Donec mollis varius condimentum. Nunc viverra, metus at viverra consectetur, magna orci posuere ipsum, et bibendum est urna sed sem. Fusce libero neque, elementum volutpat tincidunt id, egestas vitae nisi. Nulla vulputate luctus sem, eu maximus lacus faucibus eget. Fusce tristique enim augue, sed suscipit lorem bibendum vel. Donec vehicula vehicula nibh non suscipit.</p>
-        </div>
-      </div>
-    </div>
-    <!--end card-->
-  </div>
-</div>
-</div>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-48
-49
-50
-51
-</pre></td><td class="code"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toggles col-md-6 col-lg-4"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"toggleDimmer3"</span><span class="nt">&gt;</span>
-    Attiva Dimmer 2
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"toggleDimmer3"</span> <span class="na">data-bs-toggle=</span><span class="s">"dimmer"</span> <span class="na">data-bs-target=</span><span class="s">"#dimmer3"</span> <span class="na">checked</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"lever"</span><span class="nt">&gt;&lt;/span&gt;</span>
-  <span class="nt">&lt;/label&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row dimmable"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dimmer dimmer-primary fade show"</span> <span class="na">id=</span><span class="s">"dimmer3"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dimmer-inner"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;p&gt;</span>Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus. Nulla vulputate luctus sem, eu maximus lacus faucibus eget. Fusce tristique enim augue, sed suscipit lorem bibendum vel. Donec vehicula vehicula nibh non suscipit.<span class="nt">&lt;/p&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-lg-4"</span><span class="nt">&gt;</span>
-    <span class="c">&lt;!--start card--&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…<span class="nt">&lt;/h5&gt;</span>
-          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Praesent volutpat in dolor in sollicitudin. Donec mollis varius condimentum. Nunc viverra, metus at viverra consectetur, magna orci posuere ipsum, et bibendum est urna sed sem. Fusce libero neque, elementum volutpat tincidunt id, egestas vitae nisi. Nulla vulputate luctus sem, eu maximus lacus faucibus eget. Fusce tristique enim augue, sed suscipit lorem bibendum vel. Donec vehicula vehicula nibh non suscipit.<span class="nt">&lt;/p&gt;</span>
-        <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="c">&lt;!--end card--&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-lg-4 d-none d-lg-block"</span><span class="nt">&gt;</span>
-    <span class="c">&lt;!--start card--&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…<span class="nt">&lt;/h5&gt;</span>
-          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Praesent volutpat in dolor in sollicitudin. Donec mollis varius condimentum. Nunc viverra, metus at viverra consectetur, magna orci posuere ipsum, et bibendum est urna sed sem. Fusce libero neque, elementum volutpat tincidunt id, egestas vitae nisi. Nulla vulputate luctus sem, eu maximus lacus faucibus eget. Fusce tristique enim augue, sed suscipit lorem bibendum vel. Donec vehicula vehicula nibh non suscipit.<span class="nt">&lt;/p&gt;</span>
-        <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="c">&lt;!--end card--&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-lg-4 d-none d-lg-block"</span><span class="nt">&gt;</span>
-    <span class="c">&lt;!--start card--&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…<span class="nt">&lt;/h5&gt;</span>
-          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Praesent volutpat in dolor in sollicitudin. Donec mollis varius condimentum. Nunc viverra, metus at viverra consectetur, magna orci posuere ipsum, et bibendum est urna sed sem. Fusce libero neque, elementum volutpat tincidunt id, egestas vitae nisi. Nulla vulputate luctus sem, eu maximus lacus faucibus eget. Fusce tristique enim augue, sed suscipit lorem bibendum vel. Donec vehicula vehicula nibh non suscipit.<span class="nt">&lt;/p&gt;</span>
-        <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="c">&lt;!--end card--&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</pre></td></tr></tbody></table></code></pre></figure>
-
-<h2 id="dimmer-con-azioni">Dimmer con Azioni</h2>
-
-<p>Un dimmer può contenere tasti collegati ad azioni ed un titolo descrittivo.</p>
-
-<p>I pulsanti vanno inseriti in un <code class="language-plaintext highlighter-rouge">&lt;div&gt;</code> con classi <code class="language-plaintext highlighter-rouge">.dimmer-buttons</code> e <code class="language-plaintext highlighter-rouge">.bg-dark</code>. Se è presente un solo pulsante aggiungere la classe <code class="language-plaintext highlighter-rouge">.single-button</code>.</p>
-
-<div class="bd-example">
-
-<div class="toggles col-md-6 col-lg-4">
-  <label for="toggleDimmer4">
-    Attiva Dimmer 4
-    <input type="checkbox" id="toggleDimmer4" data-bs-toggle="dimmer" data-bs-target="#dimmer4" checked="" />
-    <span class="lever"></span>
-  </label>
-</div>
-
-<div class="row dimmable">
-  <div class="dimmer fade show" id="dimmer4">
-    <div class="dimmer-inner">
-      <h4>Titolo Dimmer</h4>
-      <div class="dimmer-buttons bg-dark">
-        <button type="button" class="btn btn-outline-primary">Azione secondaria</button>
-        <button type="button" class="btn btn-primary">Azione primaria</button>
-      </div>
-    </div>
-  </div>
-  <div class="col-12 col-lg-4">
-    <!--start card-->
-    <div class="card-wrapper">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
-          <p class="card-text">Praesent volutpat in dolor in sollicitudin. Donec mollis varius condimentum. Nunc viverra, metus at viverra consectetur, magna orci posuere ipsum, et bibendum est urna sed sem. Fusce libero neque, elementum volutpat tincidunt id, egestas vitae nisi. Nulla vulputate luctus sem, eu maximus lacus faucibus eget. Fusce tristique enim augue, sed suscipit lorem bibendum vel. Donec vehicula vehicula nibh non suscipit.</p>
-        </div>
-      </div>
-    </div>
-    <!--end card-->
-  </div>
-  <div class="col-12 col-lg-4 d-none d-lg-block">
-    <!--start card-->
-    <div class="card-wrapper">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
-          <p class="card-text">Praesent volutpat in dolor in sollicitudin. Donec mollis varius condimentum. Nunc viverra, metus at viverra consectetur, magna orci posuere ipsum, et bibendum est urna sed sem. Fusce libero neque, elementum volutpat tincidunt id, egestas vitae nisi. Nulla vulputate luctus sem, eu maximus lacus faucibus eget. Fusce tristique enim augue, sed suscipit lorem bibendum vel. Donec vehicula vehicula nibh non suscipit.</p>
-        </div>
-      </div>
-    </div>
-    <!--end card-->
-  </div>
-  <div class="col-12 col-lg-4 d-none d-lg-block">
-    <!--start card-->
-    <div class="card-wrapper">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
-          <p class="card-text">Praesent volutpat in dolor in sollicitudin. Donec mollis varius condimentum. Nunc viverra, metus at viverra consectetur, magna orci posuere ipsum, et bibendum est urna sed sem. Fusce libero neque, elementum volutpat tincidunt id, egestas vitae nisi. Nulla vulputate luctus sem, eu maximus lacus faucibus eget. Fusce tristique enim augue, sed suscipit lorem bibendum vel. Donec vehicula vehicula nibh non suscipit.</p>
-        </div>
-      </div>
-    </div>
-    <!--end card-->
+      <!--finally the card footer metadata-->
+      <footer class="it-card-related it-card-footer">
+        <time class="it-card-date" datetime="2025-04-22">22 aprile 2025</time>
+      </footer>
+    </article>
+    <!--end it-card-->
   </div>
 </div>
 </div>
@@ -1280,121 +792,165 @@
 53
 54
 55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
 </pre></td><td class="code"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toggles col-md-6 col-lg-4"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"toggleDimmer4"</span><span class="nt">&gt;</span>
-    Attiva Dimmer 4
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"toggleDimmer4"</span> <span class="na">data-bs-toggle=</span><span class="s">"dimmer"</span> <span class="na">data-bs-target=</span><span class="s">"#dimmer4"</span> <span class="na">checked</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"toggleDimmer1"</span><span class="nt">&gt;</span>
+    Attiva Dimmer 1
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"toggleDimmer1"</span> <span class="na">data-bs-toggle=</span><span class="s">"dimmer"</span> <span class="na">data-bs-target=</span><span class="s">"#dimmer1"</span> <span class="na">checked</span><span class="nt">&gt;</span>
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"lever"</span><span class="nt">&gt;&lt;/span&gt;</span>
   <span class="nt">&lt;/label&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row dimmable"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dimmer fade show"</span> <span class="na">id=</span><span class="s">"dimmer4"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dimmer fade show"</span> <span class="na">id=</span><span class="s">"dimmer1"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dimmer-inner"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;h4&gt;</span>Titolo Dimmer<span class="nt">&lt;/h4&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dimmer-buttons bg-dark"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-primary"</span><span class="nt">&gt;</span>Azione secondaria<span class="nt">&lt;/button&gt;</span>
-        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>Azione primaria<span class="nt">&lt;/button&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dimmer-icon"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-xl"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-unlocked"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;p&gt;</span>Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.<span class="nt">&lt;/p&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-lg-4"</span><span class="nt">&gt;</span>
-    <span class="c">&lt;!--start card--&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…<span class="nt">&lt;/h5&gt;</span>
-          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Praesent volutpat in dolor in sollicitudin. Donec mollis varius condimentum. Nunc viverra, metus at viverra consectetur, magna orci posuere ipsum, et bibendum est urna sed sem. Fusce libero neque, elementum volutpat tincidunt id, egestas vitae nisi. Nulla vulputate luctus sem, eu maximus lacus faucibus eget. Fusce tristique enim augue, sed suscipit lorem bibendum vel. Donec vehicula vehicula nibh non suscipit.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-md-6 col-lg-6 my-3 my-md-4"</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!--start it-card--&gt;</span>
+    <span class="nt">&lt;article</span> <span class="na">class=</span><span class="s">"it-card it-card-image rounded shadow-sm border"</span><span class="nt">&gt;</span>
+      <span class="c">&lt;!--card first child is the title (link)--&gt;</span>
+      <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"it-card-title "</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Titolo del contenuto<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;/h3&gt;</span>
+      <span class="c">&lt;!--card second child is the image (optional)--&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-card-image-wrapper"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ratio ratio-16x9"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;figure</span> <span class="na">class=</span><span class="s">"figure img-full"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://placeholderimage.eu/api/city/800/600"</span> <span class="na">alt=</span><span class="s">"Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto."</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;/figure&gt;</span>
         <span class="nt">&lt;/div&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="c">&lt;!--end card--&gt;</span>
+      <span class="c">&lt;!--card body content--&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-card-body"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"it-card-text"</span><span class="nt">&gt;</span>Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="c">&lt;!--finally the card footer metadata--&gt;</span>
+      <span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"it-card-related it-card-footer"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;time</span> <span class="na">class=</span><span class="s">"it-card-date"</span> <span class="na">datetime=</span><span class="s">"2025-04-22"</span><span class="nt">&gt;</span>22 aprile 2025<span class="nt">&lt;/time&gt;</span>
+      <span class="nt">&lt;/footer&gt;</span>
+    <span class="nt">&lt;/article&gt;</span>
+    <span class="c">&lt;!--end it-card--&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-lg-4 d-none d-lg-block"</span><span class="nt">&gt;</span>
-    <span class="c">&lt;!--start card--&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…<span class="nt">&lt;/h5&gt;</span>
-          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Praesent volutpat in dolor in sollicitudin. Donec mollis varius condimentum. Nunc viverra, metus at viverra consectetur, magna orci posuere ipsum, et bibendum est urna sed sem. Fusce libero neque, elementum volutpat tincidunt id, egestas vitae nisi. Nulla vulputate luctus sem, eu maximus lacus faucibus eget. Fusce tristique enim augue, sed suscipit lorem bibendum vel. Donec vehicula vehicula nibh non suscipit.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-md-6 col-lg-6 my-3 my-md-4"</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!--start it-card--&gt;</span>
+    <span class="nt">&lt;article</span> <span class="na">class=</span><span class="s">"it-card it-card-image rounded shadow-sm border"</span><span class="nt">&gt;</span>
+      <span class="c">&lt;!--card first child is the title (link)--&gt;</span>
+      <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"it-card-title "</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Titolo del contenuto<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;/h3&gt;</span>
+      <span class="c">&lt;!--card second child is the image (optional)--&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-card-image-wrapper"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ratio ratio-16x9"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;figure</span> <span class="na">class=</span><span class="s">"figure img-full"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://placeholderimage.eu/api/city/800/600"</span> <span class="na">alt=</span><span class="s">"Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto."</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;/figure&gt;</span>
         <span class="nt">&lt;/div&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="c">&lt;!--end card--&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-lg-4 d-none d-lg-block"</span><span class="nt">&gt;</span>
-    <span class="c">&lt;!--start card--&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…<span class="nt">&lt;/h5&gt;</span>
-          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Praesent volutpat in dolor in sollicitudin. Donec mollis varius condimentum. Nunc viverra, metus at viverra consectetur, magna orci posuere ipsum, et bibendum est urna sed sem. Fusce libero neque, elementum volutpat tincidunt id, egestas vitae nisi. Nulla vulputate luctus sem, eu maximus lacus faucibus eget. Fusce tristique enim augue, sed suscipit lorem bibendum vel. Donec vehicula vehicula nibh non suscipit.<span class="nt">&lt;/p&gt;</span>
-        <span class="nt">&lt;/div&gt;</span>
+      <span class="c">&lt;!--card body content--&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-card-body"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"it-card-text"</span><span class="nt">&gt;</span>Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.<span class="nt">&lt;/p&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="c">&lt;!--end card--&gt;</span>
+      <span class="c">&lt;!--finally the card footer metadata--&gt;</span>
+      <span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"it-card-related it-card-footer"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;time</span> <span class="na">class=</span><span class="s">"it-card-date"</span> <span class="na">datetime=</span><span class="s">"2025-04-22"</span><span class="nt">&gt;</span>22 aprile 2025<span class="nt">&lt;/time&gt;</span>
+      <span class="nt">&lt;/footer&gt;</span>
+    <span class="nt">&lt;/article&gt;</span>
+    <span class="c">&lt;!--end it-card--&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 </pre></td></tr></tbody></table></code></pre></figure>
 
-<h3 id="colore-primario-1">Colore Primario</h3>
-
-<p>Aggiungendo la classe <code class="language-plaintext highlighter-rouge">.dimmer-primary</code> al wrapper del dimmer si ottiene una versione con sfondo di colore primario.</p>
+<p>Se si vuole iniziare con il dimmer disabilitato è necessario utilizzare l’attributo <code class="language-plaintext highlighter-rouge">aria-hidden</code>.</p>
 
 <div class="bd-example">
 
 <div class="toggles col-md-6 col-lg-4">
-  <label for="toggleDimmer5">
-    Attiva Dimmer 5
-    <input type="checkbox" id="toggleDimmer5" data-bs-toggle="dimmer" data-bs-target="#dimmer5" checked="" />
+  <label for="toggleDimmer2">
+    Attiva Dimmer 2
+    <input type="checkbox" id="toggleDimmer2" data-bs-toggle="dimmer" data-bs-target="#dimmer2" />
     <span class="lever"></span>
   </label>
 </div>
 
 <div class="row dimmable">
-  <div class="dimmer dimmer-primary fade show" id="dimmer5">
+  <div class="dimmer fade" id="dimmer2" aria-hidden="true">
     <div class="dimmer-inner">
-      <h4>Titolo Dimmer</h4>
-      <div class="dimmer-buttons single-button bg-dark">
-        <button type="button" class="btn btn-primary">Azione primaria</button>
+      <div class="dimmer-icon">
+        <svg class="icon icon-xl"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-unlocked"></use></svg>
       </div>
+      <p>Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.</p>
     </div>
   </div>
-  <div class="col-12 col-lg-4">
-    <!--start card-->
-    <div class="card-wrapper">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
-          <p class="card-text">Praesent volutpat in dolor in sollicitudin. Donec mollis varius condimentum. Nunc viverra, metus at viverra consectetur, magna orci posuere ipsum, et bibendum est urna sed sem. Fusce libero neque, elementum volutpat tincidunt id, egestas vitae nisi. Nulla vulputate luctus sem, eu maximus lacus faucibus eget. Fusce tristique enim augue, sed suscipit lorem bibendum vel. Donec vehicula vehicula nibh non suscipit.</p>
+  <div class="col-12 col-md-6 col-lg-6 my-3 my-md-4">
+    <!--start it-card-->
+    <article class="it-card it-card-image rounded shadow-sm border">
+      <!--card first child is the title (link)-->
+      <h3 class="it-card-title no_toc">
+        <a href="#">Titolo del contenuto</a>
+      </h3>
+      <!--card second child is the image (optional)-->
+      <div class="it-card-image-wrapper">
+        <div class="ratio ratio-16x9">
+          <figure class="figure img-full">
+            <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto." />
+          </figure>
         </div>
       </div>
-    </div>
-    <!--end card-->
+      <!--card body content-->
+      <div class="it-card-body">
+        <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
+      </div>
+      <!--finally the card footer metadata-->
+      <footer class="it-card-related it-card-footer">
+        <time class="it-card-date" datetime="2025-04-22">22 aprile 2025</time>
+      </footer>
+    </article>
+    <!--end it-card-->
   </div>
-  <div class="col-12 col-lg-4 d-none d-lg-block">
-    <!--start card-->
-    <div class="card-wrapper">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
-          <p class="card-text">Praesent volutpat in dolor in sollicitudin. Donec mollis varius condimentum. Nunc viverra, metus at viverra consectetur, magna orci posuere ipsum, et bibendum est urna sed sem. Fusce libero neque, elementum volutpat tincidunt id, egestas vitae nisi. Nulla vulputate luctus sem, eu maximus lacus faucibus eget. Fusce tristique enim augue, sed suscipit lorem bibendum vel. Donec vehicula vehicula nibh non suscipit.</p>
+  <div class="col-12 col-md-6 col-lg-6 my-3 my-md-4">
+    <!--start it-card-->
+    <article class="it-card it-card-image rounded shadow-sm border">
+      <!--card first child is the title (link)-->
+      <h3 class="it-card-title no_toc">
+        <a href="#">Titolo del contenuto</a>
+      </h3>
+      <!--card second child is the image (optional)-->
+      <div class="it-card-image-wrapper">
+        <div class="ratio ratio-16x9">
+          <figure class="figure img-full">
+            <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto." />
+          </figure>
         </div>
       </div>
-    </div>
-    <!--end card-->
-  </div>
-  <div class="col-12 col-lg-4 d-none d-lg-block">
-    <!--start card-->
-    <div class="card-wrapper">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
-          <p class="card-text">Praesent volutpat in dolor in sollicitudin. Donec mollis varius condimentum. Nunc viverra, metus at viverra consectetur, magna orci posuere ipsum, et bibendum est urna sed sem. Fusce libero neque, elementum volutpat tincidunt id, egestas vitae nisi. Nulla vulputate luctus sem, eu maximus lacus faucibus eget. Fusce tristique enim augue, sed suscipit lorem bibendum vel. Donec vehicula vehicula nibh non suscipit.</p>
-        </div>
+      <!--card body content-->
+      <div class="it-card-body">
+        <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
       </div>
-    </div>
-    <!--end card-->
+      <!--finally the card footer metadata-->
+      <footer class="it-card-related it-card-footer">
+        <time class="it-card-date" datetime="2025-04-22">22 aprile 2025</time>
+      </footer>
+    </article>
+    <!--end it-card-->
   </div>
 </div>
 </div>
@@ -1452,6 +1008,675 @@
 52
 53
 54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+</pre></td><td class="code"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toggles col-md-6 col-lg-4"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"toggleDimmer2"</span><span class="nt">&gt;</span>
+    Attiva Dimmer 2
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"toggleDimmer2"</span> <span class="na">data-bs-toggle=</span><span class="s">"dimmer"</span> <span class="na">data-bs-target=</span><span class="s">"#dimmer2"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"lever"</span><span class="nt">&gt;&lt;/span&gt;</span>
+  <span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row dimmable"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dimmer fade"</span> <span class="na">id=</span><span class="s">"dimmer2"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dimmer-inner"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dimmer-icon"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"icon icon-xl"</span><span class="nt">&gt;&lt;use</span> <span class="na">href=</span><span class="s">"/bootstrap-italia/dist/svg/sprites.svg#it-unlocked"</span><span class="nt">&gt;&lt;/use&gt;&lt;/svg&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;p&gt;</span>Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-md-6 col-lg-6 my-3 my-md-4"</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!--start it-card--&gt;</span>
+    <span class="nt">&lt;article</span> <span class="na">class=</span><span class="s">"it-card it-card-image rounded shadow-sm border"</span><span class="nt">&gt;</span>
+      <span class="c">&lt;!--card first child is the title (link)--&gt;</span>
+      <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"it-card-title "</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Titolo del contenuto<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;/h3&gt;</span>
+      <span class="c">&lt;!--card second child is the image (optional)--&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-card-image-wrapper"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ratio ratio-16x9"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;figure</span> <span class="na">class=</span><span class="s">"figure img-full"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://placeholderimage.eu/api/city/800/600"</span> <span class="na">alt=</span><span class="s">"Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto."</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;/figure&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="c">&lt;!--card body content--&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-card-body"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"it-card-text"</span><span class="nt">&gt;</span>Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="c">&lt;!--finally the card footer metadata--&gt;</span>
+      <span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"it-card-related it-card-footer"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;time</span> <span class="na">class=</span><span class="s">"it-card-date"</span> <span class="na">datetime=</span><span class="s">"2025-04-22"</span><span class="nt">&gt;</span>22 aprile 2025<span class="nt">&lt;/time&gt;</span>
+      <span class="nt">&lt;/footer&gt;</span>
+    <span class="nt">&lt;/article&gt;</span>
+    <span class="c">&lt;!--end it-card--&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-md-6 col-lg-6 my-3 my-md-4"</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!--start it-card--&gt;</span>
+    <span class="nt">&lt;article</span> <span class="na">class=</span><span class="s">"it-card it-card-image rounded shadow-sm border"</span><span class="nt">&gt;</span>
+      <span class="c">&lt;!--card first child is the title (link)--&gt;</span>
+      <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"it-card-title "</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Titolo del contenuto<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;/h3&gt;</span>
+      <span class="c">&lt;!--card second child is the image (optional)--&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-card-image-wrapper"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ratio ratio-16x9"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;figure</span> <span class="na">class=</span><span class="s">"figure img-full"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://placeholderimage.eu/api/city/800/600"</span> <span class="na">alt=</span><span class="s">"Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto."</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;/figure&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="c">&lt;!--card body content--&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-card-body"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"it-card-text"</span><span class="nt">&gt;</span>Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="c">&lt;!--finally the card footer metadata--&gt;</span>
+      <span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"it-card-related it-card-footer"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;time</span> <span class="na">class=</span><span class="s">"it-card-date"</span> <span class="na">datetime=</span><span class="s">"2025-04-22"</span><span class="nt">&gt;</span>22 aprile 2025<span class="nt">&lt;/time&gt;</span>
+      <span class="nt">&lt;/footer&gt;</span>
+    <span class="nt">&lt;/article&gt;</span>
+    <span class="c">&lt;!--end it-card--&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<h3 id="colore-primario">Colore Primario</h3>
+
+<p>Aggiungendo la classe <code class="language-plaintext highlighter-rouge">.dimmer-primary</code> al wrapper del dimmer si ottiene una versione con sfondo di colore primario.</p>
+
+<div class="bd-example">
+
+<div class="toggles col-md-6 col-lg-4">
+  <label for="toggleDimmer3">
+    Attiva Dimmer 2
+    <input type="checkbox" id="toggleDimmer3" data-bs-toggle="dimmer" data-bs-target="#dimmer3" checked="" />
+    <span class="lever"></span>
+  </label>
+</div>
+
+<div class="row dimmable">
+  <div class="dimmer dimmer-primary fade show" id="dimmer3">
+    <div class="dimmer-inner">
+      <p>Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus. Nulla vulputate luctus sem, eu maximus lacus faucibus eget. Fusce tristique enim augue, sed suscipit lorem bibendum vel. Donec vehicula vehicula nibh non suscipit.</p>
+    </div>
+  </div>
+  <div class="col-12 col-md-6 col-lg-6 my-3 my-md-4">
+    <!--start it-card-->
+    <article class="it-card it-card-image rounded shadow-sm border">
+      <!--card first child is the title (link)-->
+      <h3 class="it-card-title no_toc">
+        <a href="#">Titolo del contenuto</a>
+      </h3>
+      <!--card second child is the image (optional)-->
+      <div class="it-card-image-wrapper">
+        <div class="ratio ratio-16x9">
+          <figure class="figure img-full">
+            <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto." />
+          </figure>
+        </div>
+      </div>
+      <!--card body content-->
+      <div class="it-card-body">
+        <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
+      </div>
+      <!--finally the card footer metadata-->
+      <footer class="it-card-related it-card-footer">
+        <time class="it-card-date" datetime="2025-04-22">22 aprile 2025</time>
+      </footer>
+    </article>
+    <!--end it-card-->
+  </div>
+  <div class="col-12 col-md-6 col-lg-6 my-3 my-md-4">
+    <!--start it-card-->
+    <article class="it-card it-card-image rounded shadow-sm border">
+      <!--card first child is the title (link)-->
+      <h3 class="it-card-title no_toc">
+        <a href="#">Titolo del contenuto</a>
+      </h3>
+      <!--card second child is the image (optional)-->
+      <div class="it-card-image-wrapper">
+        <div class="ratio ratio-16x9">
+          <figure class="figure img-full">
+            <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto." />
+          </figure>
+        </div>
+      </div>
+      <!--card body content-->
+      <div class="it-card-body">
+        <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
+      </div>
+      <!--finally the card footer metadata-->
+      <footer class="it-card-related it-card-footer">
+        <time class="it-card-date" datetime="2025-04-22">22 aprile 2025</time>
+      </footer>
+    </article>
+    <!--end it-card-->
+  </div>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+</pre></td><td class="code"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toggles col-md-6 col-lg-4"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"toggleDimmer3"</span><span class="nt">&gt;</span>
+    Attiva Dimmer 2
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"toggleDimmer3"</span> <span class="na">data-bs-toggle=</span><span class="s">"dimmer"</span> <span class="na">data-bs-target=</span><span class="s">"#dimmer3"</span> <span class="na">checked</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"lever"</span><span class="nt">&gt;&lt;/span&gt;</span>
+  <span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row dimmable"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dimmer dimmer-primary fade show"</span> <span class="na">id=</span><span class="s">"dimmer3"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dimmer-inner"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p&gt;</span>Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus. Nulla vulputate luctus sem, eu maximus lacus faucibus eget. Fusce tristique enim augue, sed suscipit lorem bibendum vel. Donec vehicula vehicula nibh non suscipit.<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-md-6 col-lg-6 my-3 my-md-4"</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!--start it-card--&gt;</span>
+    <span class="nt">&lt;article</span> <span class="na">class=</span><span class="s">"it-card it-card-image rounded shadow-sm border"</span><span class="nt">&gt;</span>
+      <span class="c">&lt;!--card first child is the title (link)--&gt;</span>
+      <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"it-card-title "</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Titolo del contenuto<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;/h3&gt;</span>
+      <span class="c">&lt;!--card second child is the image (optional)--&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-card-image-wrapper"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ratio ratio-16x9"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;figure</span> <span class="na">class=</span><span class="s">"figure img-full"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://placeholderimage.eu/api/city/800/600"</span> <span class="na">alt=</span><span class="s">"Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto."</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;/figure&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="c">&lt;!--card body content--&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-card-body"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"it-card-text"</span><span class="nt">&gt;</span>Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="c">&lt;!--finally the card footer metadata--&gt;</span>
+      <span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"it-card-related it-card-footer"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;time</span> <span class="na">class=</span><span class="s">"it-card-date"</span> <span class="na">datetime=</span><span class="s">"2025-04-22"</span><span class="nt">&gt;</span>22 aprile 2025<span class="nt">&lt;/time&gt;</span>
+      <span class="nt">&lt;/footer&gt;</span>
+    <span class="nt">&lt;/article&gt;</span>
+    <span class="c">&lt;!--end it-card--&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-md-6 col-lg-6 my-3 my-md-4"</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!--start it-card--&gt;</span>
+    <span class="nt">&lt;article</span> <span class="na">class=</span><span class="s">"it-card it-card-image rounded shadow-sm border"</span><span class="nt">&gt;</span>
+      <span class="c">&lt;!--card first child is the title (link)--&gt;</span>
+      <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"it-card-title "</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Titolo del contenuto<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;/h3&gt;</span>
+      <span class="c">&lt;!--card second child is the image (optional)--&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-card-image-wrapper"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ratio ratio-16x9"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;figure</span> <span class="na">class=</span><span class="s">"figure img-full"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://placeholderimage.eu/api/city/800/600"</span> <span class="na">alt=</span><span class="s">"Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto."</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;/figure&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="c">&lt;!--card body content--&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-card-body"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"it-card-text"</span><span class="nt">&gt;</span>Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="c">&lt;!--finally the card footer metadata--&gt;</span>
+      <span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"it-card-related it-card-footer"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;time</span> <span class="na">class=</span><span class="s">"it-card-date"</span> <span class="na">datetime=</span><span class="s">"2025-04-22"</span><span class="nt">&gt;</span>22 aprile 2025<span class="nt">&lt;/time&gt;</span>
+      <span class="nt">&lt;/footer&gt;</span>
+    <span class="nt">&lt;/article&gt;</span>
+    <span class="c">&lt;!--end it-card--&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<h2 id="dimmer-con-azioni">Dimmer con Azioni</h2>
+
+<p>Un dimmer può contenere tasti collegati ad azioni ed un titolo descrittivo.</p>
+
+<p>I pulsanti vanno inseriti in un <code class="language-plaintext highlighter-rouge">&lt;div&gt;</code> con classi <code class="language-plaintext highlighter-rouge">.dimmer-buttons</code> e <code class="language-plaintext highlighter-rouge">.bg-dark</code>. Se è presente un solo pulsante aggiungere la classe <code class="language-plaintext highlighter-rouge">.single-button</code>.</p>
+
+<div class="bd-example">
+
+<div class="toggles col-md-6 col-lg-4">
+  <label for="toggleDimmer4">
+    Attiva Dimmer 4
+    <input type="checkbox" id="toggleDimmer4" data-bs-toggle="dimmer" data-bs-target="#dimmer4" checked="" />
+    <span class="lever"></span>
+  </label>
+</div>
+
+<div class="row dimmable">
+  <div class="dimmer fade show" id="dimmer4">
+    <div class="dimmer-inner">
+      <h4>Titolo Dimmer</h4>
+      <div class="dimmer-buttons bg-dark">
+        <button type="button" class="btn btn-outline-primary">Azione secondaria</button>
+        <button type="button" class="btn btn-primary">Azione primaria</button>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 col-md-6 col-lg-6 my-3 my-md-4">
+    <!--start it-card-->
+    <article class="it-card it-card-image rounded shadow-sm border">
+      <!--card first child is the title (link)-->
+      <h3 class="it-card-title no_toc">
+        <a href="#">Titolo del contenuto</a>
+      </h3>
+      <!--card second child is the image (optional)-->
+      <div class="it-card-image-wrapper">
+        <div class="ratio ratio-16x9">
+          <figure class="figure img-full">
+            <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto." />
+          </figure>
+        </div>
+      </div>
+      <!--card body content-->
+      <div class="it-card-body">
+        <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
+      </div>
+      <!--finally the card footer metadata-->
+      <footer class="it-card-related it-card-footer">
+        <time class="it-card-date" datetime="2025-04-22">22 aprile 2025</time>
+      </footer>
+    </article>
+    <!--end it-card-->
+  </div>
+  <div class="col-12 col-md-6 col-lg-6 my-3 my-md-4">
+    <!--start it-card-->
+    <article class="it-card it-card-image rounded shadow-sm border">
+      <!--card first child is the title (link)-->
+      <h3 class="it-card-title no_toc">
+        <a href="#">Titolo del contenuto</a>
+      </h3>
+      <!--card second child is the image (optional)-->
+      <div class="it-card-image-wrapper">
+        <div class="ratio ratio-16x9">
+          <figure class="figure img-full">
+            <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto." />
+          </figure>
+        </div>
+      </div>
+      <!--card body content-->
+      <div class="it-card-body">
+        <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
+      </div>
+      <!--finally the card footer metadata-->
+      <footer class="it-card-related it-card-footer">
+        <time class="it-card-date" datetime="2025-04-22">22 aprile 2025</time>
+      </footer>
+    </article>
+    <!--end it-card-->
+  </div>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+</pre></td><td class="code"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toggles col-md-6 col-lg-4"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"toggleDimmer4"</span><span class="nt">&gt;</span>
+    Attiva Dimmer 4
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"toggleDimmer4"</span> <span class="na">data-bs-toggle=</span><span class="s">"dimmer"</span> <span class="na">data-bs-target=</span><span class="s">"#dimmer4"</span> <span class="na">checked</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"lever"</span><span class="nt">&gt;&lt;/span&gt;</span>
+  <span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row dimmable"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dimmer fade show"</span> <span class="na">id=</span><span class="s">"dimmer4"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dimmer-inner"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;h4&gt;</span>Titolo Dimmer<span class="nt">&lt;/h4&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dimmer-buttons bg-dark"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-primary"</span><span class="nt">&gt;</span>Azione secondaria<span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>Azione primaria<span class="nt">&lt;/button&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-md-6 col-lg-6 my-3 my-md-4"</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!--start it-card--&gt;</span>
+    <span class="nt">&lt;article</span> <span class="na">class=</span><span class="s">"it-card it-card-image rounded shadow-sm border"</span><span class="nt">&gt;</span>
+      <span class="c">&lt;!--card first child is the title (link)--&gt;</span>
+      <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"it-card-title "</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Titolo del contenuto<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;/h3&gt;</span>
+      <span class="c">&lt;!--card second child is the image (optional)--&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-card-image-wrapper"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ratio ratio-16x9"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;figure</span> <span class="na">class=</span><span class="s">"figure img-full"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://placeholderimage.eu/api/city/800/600"</span> <span class="na">alt=</span><span class="s">"Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto."</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;/figure&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="c">&lt;!--card body content--&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-card-body"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"it-card-text"</span><span class="nt">&gt;</span>Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="c">&lt;!--finally the card footer metadata--&gt;</span>
+      <span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"it-card-related it-card-footer"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;time</span> <span class="na">class=</span><span class="s">"it-card-date"</span> <span class="na">datetime=</span><span class="s">"2025-04-22"</span><span class="nt">&gt;</span>22 aprile 2025<span class="nt">&lt;/time&gt;</span>
+      <span class="nt">&lt;/footer&gt;</span>
+    <span class="nt">&lt;/article&gt;</span>
+    <span class="c">&lt;!--end it-card--&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-md-6 col-lg-6 my-3 my-md-4"</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!--start it-card--&gt;</span>
+    <span class="nt">&lt;article</span> <span class="na">class=</span><span class="s">"it-card it-card-image rounded shadow-sm border"</span><span class="nt">&gt;</span>
+      <span class="c">&lt;!--card first child is the title (link)--&gt;</span>
+      <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"it-card-title "</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Titolo del contenuto<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;/h3&gt;</span>
+      <span class="c">&lt;!--card second child is the image (optional)--&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-card-image-wrapper"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ratio ratio-16x9"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;figure</span> <span class="na">class=</span><span class="s">"figure img-full"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://placeholderimage.eu/api/city/800/600"</span> <span class="na">alt=</span><span class="s">"Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto."</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;/figure&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="c">&lt;!--card body content--&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-card-body"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"it-card-text"</span><span class="nt">&gt;</span>Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="c">&lt;!--finally the card footer metadata--&gt;</span>
+      <span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"it-card-related it-card-footer"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;time</span> <span class="na">class=</span><span class="s">"it-card-date"</span> <span class="na">datetime=</span><span class="s">"2025-04-22"</span><span class="nt">&gt;</span>22 aprile 2025<span class="nt">&lt;/time&gt;</span>
+      <span class="nt">&lt;/footer&gt;</span>
+    <span class="nt">&lt;/article&gt;</span>
+    <span class="c">&lt;!--end it-card--&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<h3 id="colore-primario-1">Colore Primario</h3>
+
+<p>Aggiungendo la classe <code class="language-plaintext highlighter-rouge">.dimmer-primary</code> al wrapper del dimmer si ottiene una versione con sfondo di colore primario.</p>
+
+<div class="bd-example">
+
+<div class="toggles col-md-6 col-lg-4">
+  <label for="toggleDimmer5">
+    Attiva Dimmer 5
+    <input type="checkbox" id="toggleDimmer5" data-bs-toggle="dimmer" data-bs-target="#dimmer5" checked="" />
+    <span class="lever"></span>
+  </label>
+</div>
+
+<div class="row dimmable">
+  <div class="dimmer dimmer-primary fade show" id="dimmer5">
+    <div class="dimmer-inner">
+      <h4>Titolo Dimmer</h4>
+      <div class="dimmer-buttons single-button bg-dark">
+        <button type="button" class="btn btn-primary">Azione primaria</button>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 col-md-6 col-lg-6 my-3 my-md-4">
+    <!--start it-card-->
+    <article class="it-card it-card-image rounded shadow-sm border">
+      <!--card first child is the title (link)-->
+      <h3 class="it-card-title no_toc">
+        <a href="#">Titolo del contenuto</a>
+      </h3>
+      <!--card second child is the image (optional)-->
+      <div class="it-card-image-wrapper">
+        <div class="ratio ratio-16x9">
+          <figure class="figure img-full">
+            <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto." />
+          </figure>
+        </div>
+      </div>
+      <!--card body content-->
+      <div class="it-card-body">
+        <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
+      </div>
+      <!--finally the card footer metadata-->
+      <footer class="it-card-related it-card-footer">
+        <time class="it-card-date" datetime="2025-04-22">22 aprile 2025</time>
+      </footer>
+    </article>
+    <!--end it-card-->
+  </div>
+  <div class="col-12 col-md-6 col-lg-6 my-3 my-md-4">
+    <!--start it-card-->
+    <article class="it-card it-card-image rounded shadow-sm border">
+      <!--card first child is the title (link)-->
+      <h3 class="it-card-title no_toc">
+        <a href="#">Titolo del contenuto</a>
+      </h3>
+      <!--card second child is the image (optional)-->
+      <div class="it-card-image-wrapper">
+        <div class="ratio ratio-16x9">
+          <figure class="figure img-full">
+            <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto." />
+          </figure>
+        </div>
+      </div>
+      <!--card body content-->
+      <div class="it-card-body">
+        <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
+      </div>
+      <!--finally the card footer metadata-->
+      <footer class="it-card-related it-card-footer">
+        <time class="it-card-date" datetime="2025-04-22">22 aprile 2025</time>
+      </footer>
+    </article>
+    <!--end it-card-->
+  </div>
+</div>
+</div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
 </pre></td><td class="code"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toggles col-md-6 col-lg-4"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"toggleDimmer5"</span><span class="nt">&gt;</span>
     Attiva Dimmer 5
@@ -1469,41 +1694,57 @@
       <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-lg-4"</span><span class="nt">&gt;</span>
-    <span class="c">&lt;!--start card--&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…<span class="nt">&lt;/h5&gt;</span>
-          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Praesent volutpat in dolor in sollicitudin. Donec mollis varius condimentum. Nunc viverra, metus at viverra consectetur, magna orci posuere ipsum, et bibendum est urna sed sem. Fusce libero neque, elementum volutpat tincidunt id, egestas vitae nisi. Nulla vulputate luctus sem, eu maximus lacus faucibus eget. Fusce tristique enim augue, sed suscipit lorem bibendum vel. Donec vehicula vehicula nibh non suscipit.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-md-6 col-lg-6 my-3 my-md-4"</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!--start it-card--&gt;</span>
+    <span class="nt">&lt;article</span> <span class="na">class=</span><span class="s">"it-card it-card-image rounded shadow-sm border"</span><span class="nt">&gt;</span>
+      <span class="c">&lt;!--card first child is the title (link)--&gt;</span>
+      <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"it-card-title "</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Titolo del contenuto<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;/h3&gt;</span>
+      <span class="c">&lt;!--card second child is the image (optional)--&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-card-image-wrapper"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ratio ratio-16x9"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;figure</span> <span class="na">class=</span><span class="s">"figure img-full"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://placeholderimage.eu/api/city/800/600"</span> <span class="na">alt=</span><span class="s">"Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto."</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;/figure&gt;</span>
         <span class="nt">&lt;/div&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="c">&lt;!--end card--&gt;</span>
+      <span class="c">&lt;!--card body content--&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-card-body"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"it-card-text"</span><span class="nt">&gt;</span>Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="c">&lt;!--finally the card footer metadata--&gt;</span>
+      <span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"it-card-related it-card-footer"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;time</span> <span class="na">class=</span><span class="s">"it-card-date"</span> <span class="na">datetime=</span><span class="s">"2025-04-22"</span><span class="nt">&gt;</span>22 aprile 2025<span class="nt">&lt;/time&gt;</span>
+      <span class="nt">&lt;/footer&gt;</span>
+    <span class="nt">&lt;/article&gt;</span>
+    <span class="c">&lt;!--end it-card--&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-lg-4 d-none d-lg-block"</span><span class="nt">&gt;</span>
-    <span class="c">&lt;!--start card--&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…<span class="nt">&lt;/h5&gt;</span>
-          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Praesent volutpat in dolor in sollicitudin. Donec mollis varius condimentum. Nunc viverra, metus at viverra consectetur, magna orci posuere ipsum, et bibendum est urna sed sem. Fusce libero neque, elementum volutpat tincidunt id, egestas vitae nisi. Nulla vulputate luctus sem, eu maximus lacus faucibus eget. Fusce tristique enim augue, sed suscipit lorem bibendum vel. Donec vehicula vehicula nibh non suscipit.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-md-6 col-lg-6 my-3 my-md-4"</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!--start it-card--&gt;</span>
+    <span class="nt">&lt;article</span> <span class="na">class=</span><span class="s">"it-card it-card-image rounded shadow-sm border"</span><span class="nt">&gt;</span>
+      <span class="c">&lt;!--card first child is the title (link)--&gt;</span>
+      <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"it-card-title "</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Titolo del contenuto<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;/h3&gt;</span>
+      <span class="c">&lt;!--card second child is the image (optional)--&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-card-image-wrapper"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ratio ratio-16x9"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;figure</span> <span class="na">class=</span><span class="s">"figure img-full"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://placeholderimage.eu/api/city/800/600"</span> <span class="na">alt=</span><span class="s">"Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto."</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;/figure&gt;</span>
         <span class="nt">&lt;/div&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="c">&lt;!--end card--&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12 col-lg-4 d-none d-lg-block"</span><span class="nt">&gt;</span>
-    <span class="c">&lt;!--start card--&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-wrapper"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"card-title"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…<span class="nt">&lt;/h5&gt;</span>
-          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"card-text"</span><span class="nt">&gt;</span>Praesent volutpat in dolor in sollicitudin. Donec mollis varius condimentum. Nunc viverra, metus at viverra consectetur, magna orci posuere ipsum, et bibendum est urna sed sem. Fusce libero neque, elementum volutpat tincidunt id, egestas vitae nisi. Nulla vulputate luctus sem, eu maximus lacus faucibus eget. Fusce tristique enim augue, sed suscipit lorem bibendum vel. Donec vehicula vehicula nibh non suscipit.<span class="nt">&lt;/p&gt;</span>
-        <span class="nt">&lt;/div&gt;</span>
+      <span class="c">&lt;!--card body content--&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"it-card-body"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"it-card-text"</span><span class="nt">&gt;</span>Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.<span class="nt">&lt;/p&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="c">&lt;!--end card--&gt;</span>
+      <span class="c">&lt;!--finally the card footer metadata--&gt;</span>
+      <span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"it-card-related it-card-footer"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;time</span> <span class="na">class=</span><span class="s">"it-card-date"</span> <span class="na">datetime=</span><span class="s">"2025-04-22"</span><span class="nt">&gt;</span>22 aprile 2025<span class="nt">&lt;/time&gt;</span>
+      <span class="nt">&lt;/footer&gt;</span>
+    <span class="nt">&lt;/article&gt;</span>
+    <span class="c">&lt;!--end it-card--&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 </pre></td></tr></tbody></table></code></pre></figure>
@@ -1567,20 +1808,39 @@ inizializzazioni automatiche che possono portare a comportamenti inaspettati.</p
   </table>
 </div>
 
+<h2 id="breaking-change">Breaking change</h2>
+
+<div class="accordion p-0 bd-callout bd-callout-danger">
+  <div class="accordion-item">
+    <h4 class="accordion-header" id="#bsbrh2-16-0">
+      <button class="accordion-button text-black collapsed" type="button" style="border-top: none;" data-bs-toggle="collapse" data-bs-target="#bsbrc2-16-0" aria-controls="#bsbrc2-16-0">
+      Breaking change dalla versione&nbsp;<b>2.16.0</b>
+      </button>
+    </h4>
+    <div id="bsbrc2-16-0" class="accordion-collapse collapse" role="region" aria-labelledby="bsbrh2-16-0">
+      <div class="accordion-body">
+<p>Implementato negli esempi il nuovo componente card definito dalle classi <code class="language-plaintext highlighter-rouge">.it-card</code> e relativi modificatori.</p>
+
+<p>Le classi legacy di Bootstrap <code class="language-plaintext highlighter-rouge">.card</code> sono ora deprecate ma <strong>saranno mantenute nei fogli di stile fino al prossimo rilascio maggiore, per permettere una migrazione graduale</strong>.</p>
+</div>
+    </div>
+  </div>
+</div>
+
         </main>
       </div>
     </div>
 
     
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202506201239"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202506241153"></script>
 <script>
   bootstrap.loadFonts('/bootstrap-italia/dist/fonts')
-</script><script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202506201239"></script>
+</script><script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202506241153"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/anchor.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/clipboard.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tsparticles.min.js"></script>
 
-<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202506201239"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202506241153"></script>
 
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tweenjs.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/easeljs.min.js"></script>
@@ -1597,7 +1857,7 @@ inizializzazioni automatiche che possono portare a comportamenti inaspettati.</p
     { src: '/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png', id: 'cover-7' },
   ]
 </script>
-<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202506201239"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202506241153"></script>
 <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
 
 <script>

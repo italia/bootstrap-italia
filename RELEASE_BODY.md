@@ -1,5 +1,5 @@
-## [2.15.1](https://github.com/italia/bootstrap-italia/compare/v2.15.0...v2.15.1) (2025-06-20)
+# [2.16.0](https://github.com/italia/bootstrap-italia/compare/v2.15.1...v2.16.0) (2025-06-24)
 
-### Bug Fixes
+### Features
 
-* carousel sass variable typo ([54f8a36](https://github.com/italia/bootstrap-italia/commit/54f8a36c59280e0dabf424069ae7d17ec8c348f9))
+* new card component ([caa76e1](https://github.com/italia/bootstrap-italia/commit/caa76e130208429b7d6269773ce2657ce6e9405a))
