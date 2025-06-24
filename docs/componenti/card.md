@@ -1132,7 +1132,7 @@ Negli esempi abbiamo utilizzato il tag `h4` per i titoli `.it-card-profile-name`
           <p class="it-card-profile-role">Ruolo nell'organizzazione</p>
         </div>
         <div class="avatar size-xl">
-          <img src="https://randomuser.me/api/portraits/women/14.jpg" alt="">
+          <img src="https://randomuser.me/api/portraits/women/14.jpg" alt="Woman image">
         </div>
       </div>
     </article>
@@ -1188,7 +1188,7 @@ Negli esempi abbiamo utilizzato il tag `h4` per i titoli `.it-card-profile-name`
           <p class="it-card-profile-role">Ruolo nell'organizzazione</p>
         </div>
         <div class="avatar size-xl">
-          <img src="https://randomuser.me/api/portraits/women/14.jpg" alt="">
+          <img src="https://randomuser.me/api/portraits/women/14.jpg" alt="Woman image">
         </div>
       </div>
       <div class="it-card-body">
@@ -1939,7 +1939,7 @@ L'elemento `footer .it-card-related` si allinea verticamente in modo diverso a s
 
 ### Pulsanti a tutta larghezza su mobile
 
-Puoi personalizzare il comportamento dei pulsanti nell'area metadati della card per ottenere pulsanti a larghezza fluida su dispositivi mobili utilizzando le classi `.d-grid` e `.d-md-block`. Per maggiori informazioni sulla personalizzazione dei pulsanti, consulta la [documentazione sulle varianti di dimensioni dei buttons](/docs/componenti/buttons#varianti-di-dimensione/).
+Puoi personalizzare il comportamento dei pulsanti nell'area metadati della card per ottenere pulsanti a larghezza fluida su dispositivi mobili utilizzando le classi `.d-grid` e `.d-md-block`. Per maggiori informazioni sulla personalizzazione dei pulsanti, consulta la [documentazione sulle varianti di dimensioni dei buttons](https://italia.github.io/bootstrap-italia/docs/componenti/buttons/#varianti-di-dimensione).
 
 {% comment %}Example name: Card con pulsante largo su mobile{% endcomment %}
 {% capture example %}
