@@ -89,6 +89,6 @@ $icon-colors: (
   }
 }
 
-.btn-xs .rounded-icon {
+.btn-xs {
   --#{$prefix}rounded-icon-size: var(--#{$prefix}icon-size-xs);
 }
