@@ -1,5 +1,4 @@
 @use 'base/mixins/banner';
-@include bsBanner('');
 
 // Bootstrap Italia version
 @use 'base/version';
@@ -148,3 +147,6 @@
 // Footer
 @use 'components/footer';
 // ------------------------------
+
+// @use rules must be written before any other rules
+@include bsBanner('');
