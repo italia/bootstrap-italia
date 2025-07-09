@@ -61,7 +61,7 @@ $font-family-sans-serif: 'Custom Font', Arial, Helvetica, sans-serif;
 $font-family-monospace: 'Custom Font', 'Courier New', Courier, monospace;
 
 // import libreria
-@import '../../node_modules/bootstrap-italia/src/scss/bootstrap-italia.scss';
+@use '../../node_modules/bootstrap-italia/src/scss/bootstrap-italia.scss';
 ```
 
 Ad esempio, per una applicazione costruita con ReactJS attraverso `create-react-app`, è possibile **importare bootstrap-italia-custom.scss** laddove serva utilizzare la libreria **Bootstrap-Italia**.

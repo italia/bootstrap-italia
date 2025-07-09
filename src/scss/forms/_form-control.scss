@@ -2,7 +2,7 @@
 // General form controls (plus a few specific high-level interventions)
 //
 
-@import '../base/mixins';
+@use '../base/mixins';
 
 .form-control {
   display: block;

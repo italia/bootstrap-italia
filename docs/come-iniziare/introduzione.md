@@ -52,14 +52,14 @@ Utilizzando SASS nella propria pipeline, si può ottimizzare Bootstrap Italia (e
 
 ```scss
 // funzioni e variabili colore
-@import 'bootstrap-italia/src/scss/functions';
-@import 'bootstrap-italia/src/scss/utilities/colors_vars';
+@use 'bootstrap-italia/src/scss/functions';
+@use 'bootstrap-italia/src/scss/utilities/colors_vars';
 
 //variables
-@import 'bootstrap-italia/src/scss/variables';
+@use 'bootstrap-italia/src/scss/variables';
 
 //classi colore
-@import 'bootstrap-italia/src/scss/utilities/colors';
+@use 'bootstrap-italia/src/scss/utilities/colors';
 
 // ...
 ```
