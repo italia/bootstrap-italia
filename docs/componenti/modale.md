@@ -650,129 +650,137 @@ pulsante, insieme a `data-bs-target="#foo"` o `href="#foo"` per attivare/disatti
 <button type="button" data-bs-toggle="modal" data-bs-target="#myModal">Lancia la modale</button>
 ```
 
-### Tramite JavaScript
+## Attivazione tramite codice
 
-Richiama una modale con id `myModal` con una singola riga di JavaScript:
+{% include callout-bundle-methods.md %}
 
 ```js
-var myModal = new bootstrap.Modal(document.getElementById('myModal'), options)
+import { Modal } from 'bootstrap-italia';
+
+const myModal = new Modal(document.getElementById('myModal'), options)
 ```
 
-### Metodi
-
-{% include callout-danger-async-methods.md %}
-
-#### `Utilizzo delle opzioni`
+#### Opzioni
 
 Attiva i tuoi contenuti come modali, configurabile con un oggetto (facoltativo).
 
 ```js
-var myModal = new bootstrap.Modal(document.getElementById('myModal'), {
+import { Modal } from 'bootstrap-italia';
+
+const myModal = new Modal(document.getElementById('myModal'), {
   keyboard: false,
 })
 ```
 
-#### `toggle`
+<div class="table-responsive">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th style="width: 100px;">Nome</th>
+        <th style="width: 50px;">Tipo</th>
+        <th style="width: 50px;">Predefinito</th>
+        <th>Descrizione</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>backdrop</td>
+        <td>boolean | 'static'</td>
+        <td>true</td>
+        <td>Include un elemento modal-backdrop. In alternativa, specificare "static" 
+        per uno sfondo che non chiuda il modal quando cliccato.</td>
+      </tr>
+      <tr>
+        <td>focus</td>
+        <td>boolean</td>
+        <td>true</td>
+        <td>Focus sulla modale quando viene inizializzata.</td>
+      </tr>
+      <tr>
+        <td>keyboard</td>
+        <td>boolean</td>
+        <td>true</td>
+        <td>Abilita la chisura della modale con il tasto escape.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-Attiva/disattiva manualmente una modale. **Ritorna al chiamante prima che la modale sia stata effettivamente mostrata o nascosta**
-(cioè prima che si verifichi l'evento `shown.bs.modal` o l'evento `hidden.bs.modal`).
+#### Metodi
 
-```js
-myModal.toggle()
-```
+{% include callout-danger-async-methods.md %}
 
-#### `show`
+<div class="table-responsive">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th style="width: 150px;">Metodo</th>
+        <th>Descrizione</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% include standard-methods.html class="Modal" %}
+      <tr>
+        <td>show</td>
+        <td>Apre manualmente una modale. Ritorna al chiamante prima che la modale sia stata effettivamente mostrata (cioè prima che si verifichi l'evento "shown.bs.modal").</td>
+      </tr>
+      <tr>
+        <td>hide</td>
+        <td>Nasconde manualmente una modale. Ritorna al chiamante prima che la modale sia stata effettivamente nascosta (cioè prima che si verifichi l'evento "hidden.bs.modal").</td>
+      </tr>
+      <tr>
+        <td>toggle</td>
+        <td>Attiva/disattiva manualmente una modale. Ritorna al chiamante prima che la modale sia stata effettivamente mostrata o nascosta (cioè prima che si verifichi l'evento "shown.bs.modal" o l'evento "hidden.bs.modal").</td>
+      </tr>
+      <tr>
+        <td>handleUpdate</td>
+        <td>Riposiziona manualmente la modale se l'altezza della modale cambia nel momento in cui è aperta (nel caso appaia una barra di scorrimento).</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-Apre manualmente una modale. **Ritorna al chiamante prima che la modale sia stata effettivamente mostrata**
-(cioè prima che si verifichi l'evento `shown.bs.modal`).
-
-```js
-myModal.show()
-```
-
-#### `hide`
-
-Nasconde manualmente una modale. **Ritorna al chiamante prima che la modale sia stata effettivamente nascosta**
-(cioè prima che si verifichi l'evento `hidden.bs.modal`).
-
-```js
-myModal.hide()
-```
-
-#### `handleUpdate`
-
-Riposiziona manualmente la modale se l'altezza della modale cambia nel momento in cui è aperta
-(nel caso appaia una barra di scorrimento).
-
-```js
-myModal.handleUpdate()
-```
-
-#### `dispose`
-
-Distrugge la modale di un elemento.
-
-```js
-myModal.dispose()
-```
-
-#### `getInstance`
-
-Metodo statico che consente di ottenere l'istanza di una modale associata ad un elemento del DOM.
-
-```js
-var myModalEl = document.getElementById('myModal')
-var modal = bootstrap.Modal.getInstance(myModalEl) // Returns a Bootstrap modal instance
-```
-
-#### `getOrCreateInstance`
-
-Metodo statico che consente di ottenere l'istanza di una modale associata ad un elemento del DOM o di crearne una nuova nel caso non fosse stata inizializzata.
-
-```js
-var myModalEl = document.querySelector('#myModal')
-var modal = bootstrap.Modal.getOrCreateInstance(myModalEl) // Returns a Bootstrap modal instance
-```
-
-### Eventi
+#### Eventi
 
 La classe della modale di Bootstrap espone alcuni eventi per l'aggancio alla funzionalità modale.
 Tutti gli eventi vengono attivati dalla modale stessa (cioè `<div class="modal">`).
 
-<table class="table table-bordered table-striped">
-  <thead>
-    <tr>
-      <th style="width: 150px;">Tipo di evento</th>
-      <th>Descrizione</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>show.bs.modal</td>
-      <td>Questo evento si attiva immediatamente quando il metodo di istanza <code>show</code> viene chiamato. Se causato da un click, l'elemento selezionato è disponibile come proprietà <code>relatedTarget</code> dell'evento.</td>
-    </tr>
-    <tr>
-      <td>shown.bs.modal</td>
-      <td>Questo evento viene attivato quando la modale è stata resa visibile all'utente (attenderà il completamento delle transizioni CSS). l'elemento selezionato è disponibile come proprietà <code>relatedTarget</code> dell'evento.</td>
-    </tr>
-    <tr>
-      <td>hide.bs.modal</td>
-      <td>Questo evento viene generato immediatamente quando il metodo di istanza <code>hide</code> è stato chiamato.</td>
-    </tr>
-    <tr>
-      <td>hidden.bs.modal</td>
-      <td>Questo evento viene attivato quando la modale ha finito di essere nascosta all'utente (attenderà il completamento delle transizioni CSS).</td>
-    </tr>
-    <tr>
-      <td>hidePrevented.bs.modal</td>
-      <td>Questo evento viene attivato quando la modale viene mostrata, il suo sfondo è <code>static</code> e un click fuori dalla modale o la pressione del tasto esc avvengono e il <code>data-bs-keyboard</code> è settato a  <code>false</code>.</td>
-    </tr>
-  </tbody>
-</table>
-
 ```js
-var myModalEl = document.getElementById('myModal')
+const myModalEl = document.getElementById('myModal')
 myModalEl.addEventListener('hidden.bs.modal', function (event) {
   // do something...
 })
 ```
+
+<div class="table-responsive">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th style="width: 150px;">Tipo di evento</th>
+        <th>Descrizione</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>show.bs.modal</td>
+        <td>Questo evento si attiva immediatamente quando il metodo di istanza <code>show</code> viene chiamato. Se causato da un click, l'elemento selezionato è disponibile come proprietà <code>relatedTarget</code> dell'evento.</td>
+      </tr>
+      <tr>
+        <td>shown.bs.modal</td>
+        <td>Questo evento viene attivato quando la modale è stata resa visibile all'utente (attenderà il completamento delle transizioni CSS). l'elemento selezionato è disponibile come proprietà <code>relatedTarget</code> dell'evento.</td>
+      </tr>
+      <tr>
+        <td>hide.bs.modal</td>
+        <td>Questo evento viene generato immediatamente quando il metodo di istanza <code>hide</code> è stato chiamato.</td>
+      </tr>
+      <tr>
+        <td>hidden.bs.modal</td>
+        <td>Questo evento viene attivato quando la modale ha finito di essere nascosta all'utente (attenderà il completamento delle transizioni CSS).</td>
+      </tr>
+      <tr>
+        <td>hidePrevented.bs.modal</td>
+        <td>Questo evento viene attivato quando la modale viene mostrata, il suo sfondo è <code>static</code> e un click fuori dalla modale o la pressione del tasto esc avvengono e il <code>data-bs-keyboard</code> è settato a  <code>false</code>.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

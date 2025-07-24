@@ -17,7 +17,7 @@ const CLASS_NAME_CLONED_HEADER = 'cloned-element'
 const CLASS_NAME_SHOW = 'show'
 const CLASS_NAME_ISTICKY = 'is-sticky'
 
-const SELECTOR_HEADER = '.it-header-sticky'
+const SELECTOR_HEADER = '.it-header-sticky [data-bs-toggle="sticky"]'
 const SELECTOR_TOGGLER = '.custom-navbar-toggler'
 const SELECTOR_MENU_WRAPPER = '.menu-wrapper'
 const SELECTOR_BRAND_WRAPPER = '.it-brand-wrapper'
@@ -89,12 +89,6 @@ class HeaderSticky {
       }
     }
   }
-
-  /*if (toAdd) {
-    elSticky.nextElementSibling.style.paddingTop = navbarHeight + (isDesktop ? navOffsetTop - scrollToGap : navbarHeight - scrollToGap) + 'px'
-  } else {
-    elSticky.nextElementSibling.style.paddingTop = 0 + 'px'
-  }*/
 }
 
 /**

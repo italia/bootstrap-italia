@@ -20,13 +20,6 @@ toc: true
   }
 </style>
 
-{% capture callout %}
-Breaking feature dalla versione **2.8.0**
-
-Gli elementi con classe `.it-back-button` diventano di tipo `<button>` invece di `<a>`.
-Gli elementi di tipo `<a>` dei collapse necessitano l'aggiunta dell'attributo `role="button"`.
-{% endcapture %}{% include callout.html content=callout type="danger" %}
-
 ## Layout della Navscroll
 
 Il componente Navscroll è una declinazione del componente Navbar `<nav class="navbar navbar-expand-lg">` con l'aggiunta della classe `.it-navscroll-wrapper` e dell'attributo `data-bs-navscroll`.  
@@ -51,10 +44,9 @@ In questo esempio, la linea che limita la barra di navigazione è posizionata a 
 {% comment %}Example name: Posizionata a fondo pagina con linea a sinistra{% endcomment %}
 {% capture example %}
 <nav class="navbar it-navscroll-wrapper navbar-expand-lg it-bottom-navscroll it-left-side" data-bs-navscroll>
-  <button class="custom-navbar-toggler" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" data-bs-toggle="navbarcollapsible" data-bs-target="#navbarNav"><span class="it-list"></span>1. Introduzione
+  <button class="custom-navbar-toggler" type="button" aria-controls="navbarNav" aria-label="Apri/Chiudi indice" data-bs-toggle="navbarcollapsible" data-bs-target="#navbarNav"><span class="it-list"></span>1. Introduzione
   </button>
-  <div class="navbar-collapsable" id="navbarNav">
-    <div class="overlay"></div>
+  <div class="navbar-collapsable" id="navbarNav" tabindex="-1">
     <div class="close-div visually-hidden">
       <button class="btn close-menu" type="button">
         <span class="it-close"></span>Chiudi
@@ -64,7 +56,7 @@ In questo esempio, la linea che limita la barra di navigazione è posizionata a 
       <svg class="icon icon-sm icon-primary align-top"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left" xlink:href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left"></use></svg>
       <span>Indietro</span>
     </button>
-    <div class="menu-wrapper">
+    <div class="menu-wrapper" tabindex="-1">
       <div class="link-list-wrapper">
         <h3 class="no_toc">header</h3>
         <ul class="link-list">
@@ -118,20 +110,19 @@ In questo esempio, la linea che limita la barra di navigazione è posizionata a 
 {% comment %}Example name: Posizionata in testa pagina con linea a destra{% endcomment %}
 {% capture example %}
 <nav class="navbar it-navscroll-wrapper navbar-expand-lg it-top-navscroll it-right-side" data-bs-navscroll>
-  <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavB" aria-expanded="false" aria-label="Toggle navigation" data-bs-toggle="navbarcollapsible" data-bs-target="#navbarNavB"><span class="it-list"></span>1. Introduzione
+  <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavB" aria-label="Apri/Chiudi indice" data-bs-toggle="navbarcollapsible" data-bs-target="#navbarNavB"><span class="it-list"></span>1. Introduzione
   </button>
-  <div class="navbar-collapsable" id="navbarNavB">
-    <div class="overlay"></div>
+  <div class="navbar-collapsable" id="navbarNavB" tabindex="-1">
     <div class="close-div visually-hidden">
       <button class="btn close-menu" type="button">
         <span class="it-close"></span>Chiudi
       </button>
     </div>
-    <button type="button" class="it-back-button btn w-100 text-start">
-      <svg class="icon icon-sm icon-primary align-top"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left" xlink:href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left"></use></svg>
-      <span>Indietro</span>
-    </button>
-    <div class="menu-wrapper">
+    <div class="menu-wrapper" tabindex="-1">
+      <button type="button" class="it-back-button btn w-100 text-start">
+        <svg class="icon icon-sm icon-primary align-top"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left" xlink:href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left"></use></svg>
+        <span>Indietro</span>
+      </button>
       <div class="link-list-wrapper">
         <h3 class="no_toc">header</h3>
         <ul class="link-list">
@@ -187,20 +178,19 @@ La Navscroll può mostrare una barra di avanzamento dello scorrimento del conten
 {% comment %}Example name: Con barra progresso{% endcomment %}
 {% capture example %}
 <nav class="navbar it-navscroll-wrapper navbar-expand-lg it-bottom-navscroll it-right-side" data-bs-navscroll>
-  <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavProgress" aria-expanded="false"
-    aria-label="Toggle navigation" data-bs-toggle="navbarcollapsible" data-bs-target="#navbarNavProgress">
+  <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavProgress"
+    aria-label="Apri/Chiudi indice" data-bs-toggle="navbarcollapsible" data-bs-target="#navbarNavProgress">
     <span class="it-list"></span>1. Introduzione
   </button>
   <div class="progress custom-navbar-progressbar">
     <div class="progress-bar it-navscroll-progressbar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
   </div>
-  <div class="navbar-collapsable" id="navbarNavProgress">
-    <div class="overlay"></div>
-    <button type="button" class="it-back-button btn w-100 text-start">
-      <svg class="icon icon-sm icon-primary align-top"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left" xlink:href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left"></use></svg>
-      <span>Indietro</span>
-    </button>
-    <div class="menu-wrapper">
+  <div class="navbar-collapsable" id="navbarNavProgress" tabindex="-1">
+    <div class="menu-wrapper" tabindex="-1">
+      <button type="button" class="it-back-button btn w-100 text-start">
+        <svg class="icon icon-sm icon-primary align-top"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left" xlink:href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left"></use></svg>
+        <span>Indietro</span>
+      </button>
       <div class="link-list-wrapper">
         <h3 class="no_toc">header</h3>
         <div class="progress">
@@ -268,20 +258,19 @@ Per cambiare il tema è sufficiente aggiungere le seguenti classi al tag `<nav c
 {% comment %}Example name: Variante scura{% endcomment %}
 {% capture example %}
 <nav class="navbar it-navscroll-wrapper navbar-expand-lg it-top-navscroll it-right-side theme-dark-mobile theme-dark-desk" data-bs-navscroll>
-  <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavC" aria-expanded="false" aria-label="Toggle navigation" data-bs-toggle="navbarcollapsible" data-bs-target="#navbarNavC"><span class="it-list"></span>1. Introduzione
+  <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavC" aria-label="Apri/Chiudi indice" data-bs-toggle="navbarcollapsible" data-bs-target="#navbarNavC"><span class="it-list"></span>1. Introduzione
   </button>
-  <div class="navbar-collapsable" id="navbarNavC">
-    <div class="overlay"></div>
+  <div class="navbar-collapsable" id="navbarNavC" tabindex="-1">
     <div class="close-div visually-hidden">
       <button class="btn close-menu" type="button">
       <span class="it-close"></span>Chiudi
       </button>
     </div>
-    <button type="button" class="it-back-button btn w-100 text-start">
-      <svg class="icon icon-sm icon-white align-top"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left" xlink:href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left"></use></svg>
-      <span>Indietro</span>
-    </button>
-    <div class="menu-wrapper">
+    <div class="menu-wrapper" tabindex="-1">
+      <button type="button" class="it-back-button btn w-100 text-start">
+        <svg class="icon icon-sm icon-white align-top"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left" xlink:href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left"></use></svg>
+        <span>Indietro</span>
+      </button>
       <div class="link-list-wrapper">
         <h3 class="no_toc">header</h3>
         <ul class="link-list">
@@ -394,16 +383,25 @@ Per maggiori informazioni, si può fare riferimento alla [documentazione delle L
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
-## Attivazione tramite JavaScript
+## Attivazione tramite codice
+
+{% include callout-bundle-methods.md %}
 
 È possibile creare un'istanza di Navscroll manualmente con il constructor:
 
 ```js
-var navscrollElement = document.querySelector('.it-navscroll-wrapper')
-var navscroll = new bootstrap.NavScroll(navscrollElement, config)
+import { NavScroll } from 'bootstrap-italia';
+
+const navscrollElement = document.querySelector('.it-navscroll-wrapper');
+const navscroll = new NavScroll(navscrollElement, options);
 ```
 
-### Opzioni
+Il componente nella sua versione `Menu Inline` utilizza al suo interno il componente 
+`Collapse`, si rimanda alle sezioni specifiche per l'attivazione:
+
+- [Attivazione Collapse tramite codice]({{ site.baseurl }}/docs/componenti/collapse/#attivazione-tramite-codice)
+
+#### Opzioni
 
 Le opzioni possono essere passate tramite gli attributi data o tramite Javascript. Per quanto riguarda gli attributi data, aggiungi il nome dell'opzione a `data-bs`, come in `data-bs-parent=""`.
 
@@ -421,24 +419,24 @@ Le opzioni possono essere passate tramite gli attributi data o tramite Javascrip
       <td>scrollPadding</td>
       <td>number | function </td>
       <td>10</td>
-      <td>uno spazio (in pixel) per consentire allo scroll di fermarsi prima o dopo (se viene fornito un valore negativo) rispetto alla posizione del bersaglio. Nel caso in cui ci siano degli elementi fixed dinamici è possibile fornire una funzione per calcolare di volta in volta lo spazio.</td>
+      <td>Uno spazio (in pixel) per consentire allo scroll di fermarsi prima o dopo (se viene fornito un valore negativo) rispetto alla posizione del bersaglio. Nel caso in cui ci siano degli elementi fixed dinamici è possibile fornire una funzione per calcolare di volta in volta lo spazio.</td>
     </tr>
     <tr>
       <td>duration</td>
       <td>number</td>
       <td>800</td>
-      <td>durata dell'animazione di scroll espressa in millisecondi</td>
+      <td>Durata dell'animazione di scroll espressa in millisecondi.</td>
     </tr>
     <tr>
       <td>easing</td>
       <td>string</td>
       <td>easeInOutSine</td>
-      <td>inerzia dell'animazione di scroll. Per i valori fare riferimento alla [documentazione di AnimeJs](https://animejs.com/documentation/#linearEasing).<</td>
+      <td>Inerzia dell'animazione di scroll. Per i valori fare riferimento alla <a href="https://animejs.com/documentation/#linearEasing">documentazione di AnimeJs</a>.</td>
     </tr>
   </tbody>
 </table>
 
-### Metodi
+#### Metodi
 
 <table class="table table-bordered table-striped table-responsive">
   <thead>
@@ -448,21 +446,29 @@ Le opzioni possono essere passate tramite gli attributi data o tramite Javascrip
     </tr>
   </thead>
   <tbody>
+    {% include standard-methods.html class="NavScroll" %}
     <tr>
       <td>setScrollPadding</td>
-      <td>modfica il valore dell'opzione <code>scrollPadding</code>.</td>
-    </tr>
-    <tr>
-      <td>dispose</td>
-      <td>Elimina le funzionalità del componente.</td>
-    </tr>
-    <tr>
-      <td>getInstance</td>
-      <td>Metodo statico che restituisce l'istanza NavScroll associata ad un elemento del DOM. Esempio: <code>bootstrap.NavScroll.getInstance(element)</code></td>
-    </tr>
-    <tr>
-      <td>getOrCreateInstance</td>
-      <td>Metodo statico che restituisce un'istanza NavScroll associata ad un elemento del DOM o ne crea una nuova nel caso non fosse stata inizializzata. Esempio: <code>bootstrap.NavScroll.getOrCreateInstance(element)</code></td>
+      <td>Modfica il valore dell'opzione <code>scrollPadding</code>.</td>
     </tr>
   </tbody>
 </table>
+
+## Breaking change
+
+{% capture callout %}
+- Spostato il pulsante "Indietro" come primo elemento della struttura interna di `.menu-wrapper`.
+
+Inoltre, la versione mobile o a forte ingrandimento del componente, che si basa sulla navbar presente anche nei componenti Header e Megamenu, è stata reimplementata come modale per migliorare l'accessibilità con le combinazioni principali di lettori di schermo, sistema operativo e browser. Modifiche principali: 
+- struttura: la navbar ora utilizza un pattern dialog con backdrop 
+- gerarchia visiva: la gestione `z-index` è allineata al componente modale
+- gestione del focus: implementato `focus-trap.js` per utenti da tastiera e lettori di schermo, e gestione inert
+- il comportamento è diverso se implementata dentro o fuori dall'elemento `main` di pagina (se presente)
+
+Se hai personalizzato il CSS della navbar, rivedi le tue modifiche per verificarne la compatibilità. Se hai modificato il comportamento JavaScript in, assicurati che funzioni con il nuovo pattern dialog. Testa la tua implementazione con lettori di schermo e con utenti per verificarne l'accessibilità.
+{% endcapture %}{% include callout-breaking.html content=callout version="2.15.0" type="danger" %}
+
+{% capture callout %}
+Gli elementi con classe `.it-back-button` diventano di tipo `<button>` invece di `<a>`.
+Gli elementi di tipo `<a>` dei collapse necessitano l'aggiunta dell'attributo `role="button"`.
+{% endcapture %}{% include callout-breaking.html content=callout version="2.8.0" type="danger" %}

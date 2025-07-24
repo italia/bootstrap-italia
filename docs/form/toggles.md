@@ -7,27 +7,18 @@ title: Toggles
 description: Campi di tipo "interruttore".
 ---
 
-{% capture callout %}
-Breaking feature dalla versione **2.10.0**
-
-- Il "raggruppamento" di campi di input deve prevedere l'elemento nativo `<fieldset>`. 
-- Sostituire `aria-labelledby` con `aria-describedby`.
-{% endcapture %}{% include callout.html content=callout type="danger" %}
-
 Per ottenere un interruttore con levetta basterà usare la seguente sintassi HTML, gli stili CSS penseranno al resto. Il contenitore padre dovrà avere la classe `.toggles`, mentre la label conterrà sia la checkbox che uno `<span>` con classe `.lever`.
 
 {% comment %}Example name: Base {% endcomment %}
 {% capture example %}
 <div>
-  <div class="row">
-    <div class="form-check col-6">
-      <div class="toggles">
-        <label for="toggleEsempio1a">
-          Label dell'interruttore 1
-          <input type="checkbox" id="toggleEsempio1a">
-          <span class="lever"></span>
-        </label>
-      </div>
+  <div class="form-check form-check-inline">
+    <div class="toggles">
+      <label for="toggleEsempio1a">
+        Label dell'interruttore 1
+        <input type="checkbox" id="toggleEsempio1a">
+        <span class="lever"></span>
+      </label>
     </div>
   </div>
 </div>
@@ -40,15 +31,13 @@ Affinché l'interruttore risulti disabilitato occorrerà aggiungere l'attributo 
 {% comment %}Example name: Disabilitato {% endcomment %}
 {% capture example %}
 <div>
-  <div class="row">
-    <div class="form-check col-6">
-      <div class="toggles">
-        <label for="toggleEsempio2a">
-          Label dell'interruttore 1
-          <input disabled type="checkbox" id="toggleEsempio2a">
-          <span class="lever"></span>
-        </label>
-      </div>
+  <div class="form-check form-check-inline">
+    <div class="toggles">
+      <label for="toggleEsempio2a">
+        Label dell'interruttore 1
+        <input disabled type="checkbox" id="toggleEsempio2a">
+        <span class="lever"></span>
+      </label>
     </div>
   </div>
 </div>
@@ -92,7 +81,7 @@ Per raggruppare visivamente gli elementi **toggle** occorrerà aggiungere al `.f
 {% capture example %}
 <div>
   <div class="row">
-    <fieldset class="col-5">
+    <fieldset class="col-12 col-md-6">
       <legend>Gruppo di toggle</legend>
       <div class="form-check form-check-group">
         <div class="toggles">
@@ -122,8 +111,7 @@ Per raggruppare visivamente gli elementi **toggle** occorrerà aggiungere al `.f
         </div>
       </div>
     </fieldset>
-    <div class="col-2"></div>
-    <fieldset class="col-5">
+    <fieldset class="col-12 col-md-6">
       <legend>Gruppo di toggle</legend>
       <div class="form-check form-check-group">
         <div class="toggles">
@@ -159,3 +147,10 @@ Per raggruppare visivamente gli elementi **toggle** occorrerà aggiungere al `.f
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
+
+## Breaking change
+
+{% capture callout %}
+- Il "raggruppamento" di campi di input deve prevedere l'elemento nativo `<fieldset>`. 
+- Sostituire `aria-labelledby` con `aria-describedby`.
+{% endcapture %}{% include callout-breaking.html content=callout version="2.10.0" type="danger" %}

@@ -15,8 +15,6 @@ Assicurarsi di aggiungere alla label la classe **`active`** per impedire la sovr
 
 {% endcapture %}{% include callout.html content=callout type="alert" %}
 
-Clicca sull’icona a destra per visualizzare il timepicker.
-
 {% comment %}Example name: Base {% endcomment %}
 {% capture example %}
 <div class="form-group">

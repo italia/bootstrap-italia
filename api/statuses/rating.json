@@ -1,11 +1,11 @@
 {
-    "amichevole con lettori di schermo": "IN REVIEW",
-    "angular Kit": "DA RIVEDERE A11Y",
+    "amichevole con lettori di schermo": "PRONTO",
+    "angular Kit": "PRONTO",
     "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/rating",
     "assignees": [
         "Fupete"
     ],
-    "bootstrap Italia": "DA RIVEDERE A11Y",
+    "bootstrap Italia": "PRONTO",
     "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/componenti/rating/",
     "comprensibile": "PRONTO",
     "content": {
@@ -15,10 +15,9 @@
         "type": "DraftIssue"
     },
     "id": "PVTI_lADOAOqloM4AcXblzgMjwg0",
-    "navigabile": "DA RIVEDERE",
-    "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1183",
+    "navigabile": "PRONTO",
     "notes / More": "C'\u00e8 una discrepanza con UI Kit Italia, l\u00ec c\u00e8 anche stellina outline per non ancora filled, nei framework di sviluppo no \u2014\u00a0Dovrebbe essere dentro la categoria Form nei framework di sviluppo BSI e React. Verificare.",
-    "react Kit": "DA RIVEDERE A11Y",
+    "react Kit": "PRONTO",
     "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-rating--documentazione",
     "status": "Todo",
     "status a11y check": "Done",

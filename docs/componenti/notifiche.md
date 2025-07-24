@@ -260,11 +260,13 @@ Esempi delle quattro posizioni fisse possibili.
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-## Implementazione
+## Attivazione tramite codice
+
+{% include callout-bundle-methods.md %}
 
 Il plugin per le notifiche attiva/disattiva il suo contenuto nascosto su richiesta, tramite attributi data o tramite JavaScript.
 
-### Tramite data attributes
+#### Tramite data attributes
 
 Attiva una notifica senza scrivere codice JavaScript. Imposta `data-bs-toggle="notification"` su un elemento di controllo, come un
 pulsante, insieme a `data-bs-target="#foo"` o `href="#foo"` per attivare/disattivare una specifica notifica.
@@ -282,63 +284,74 @@ L'attributo `data-bs-timeout` può essere assegnato anche direttamente al compon
 </div>
 ```
 
-### Tramite JavaScript
+#### Tramite JavaScript
 
 Richiama una notifica con id `myNotification` con una singola riga di JavaScript:
 
 ```js
-const myNotification = new bootstrap.Notification(document.getElementById('myNotification'), options)
+import { Notification } from 'bootstrap-italia';
+
+const myNotification = new Notification(document.getElementById('myNotification'), options)
 ```
 
-### Metodi
+#### Opzioni
 
-{% include callout-danger-async-methods.md %}
-
-#### `Utilizzo delle opzioni`
-
-Durante la creazione di un'istanza Notification è possibile passare un oggetto per la configurazione (opzionale).
+Durante la creazione di un'istanza Notification è possibile passare un oggetto per la configurazione.
 
 ```js
-const myNotification = new bootstrap.Notification(document.getElementById('myNotification'), {
+import { Notification } from 'bootstrap-italia';
+
+const myNotification = new Notification(document.getElementById('myNotification'), {
   timeout: 2000,
 })
 ```
 
-<table>
-<thead><tr><th>nome</th><th>descrizione</th></tr></thead>
-<tbody>
-<tr>
-  <td>timeout</td><td>durata di permanenza della notifica in millisecondi. Sostituisce l'attributo data-bs-timeout.</td>
-</tr>
-</tbody>
-</table>
+<div class="table-responsive">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th style="width: 100px;">Nome</th>
+        <th style="width: 50px;">Tipo</th>
+        <th style="width: 50px;">Predefinito</th>
+        <th style="width: 50px;">Descrizione</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>timeout</td>
+        <td>numero</td>
+        <td>2000</td>
+        <td>Durata di permanenza della notifica in millisecondi. Sostituisce l'attributo data-bs-timeout.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-#### `show`
+#### Metodi
 
-Mostra manualmente una notifica.
+{% include callout-danger-async-methods.md %}
 
-```js
-myNotification.show()
-```
-
-È possibile passare come parametro il valore in millisecondi di permanenza della notifica. Se non viene specificato, il tempo di permanenza della notifica verrà ricavato dal parametro di configurazione `timeout` o dal data attribute `data-bs-timeout`.
-
-```js
-myNotification.show(2000) //la notifica verrà visualizzata per 2 secondi, ignorando il parametro di configurazione
-```
-
-#### `hide`
-
-Nasconde manualmente una notifica.
-
-```js
-myNotification.hide()
-```
-
-#### `toggle`
-
-Mostra/Nasconde manualmente una notifica.
-
-```js
-myNotification.toggle()
-```
+<div class="table-responsive">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th style="width: 150px;">Metodo</th>
+        <th>Descrizione</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>show</td>
+        <td>Mostra la notifica. È possibile passare come parametro il valore in millisecondi di permanenza della notifica. Se non viene specificato, il tempo di permanenza della notifica verrà ricavato dal parametro di configurazione `timeout` o dal data attribute `data-bs-timeout`.</td>
+      </tr>
+      <tr>
+        <td>hide</td>
+        <td>Nasconde la notifica.</td>
+      </tr>
+      <tr>
+        <td>toggle</td>
+        <td>Mostra/nasconde la notifica.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

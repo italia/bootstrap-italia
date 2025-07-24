@@ -33,14 +33,6 @@ Il titolo del sito, "Nome dell'Istituzione" negli esempi, è contenuto in un `<d
 Maggiori dettagli sull'accessibilità del componente **megamenu** nella [relativa pagina]({{site.baseurl}}/docs/menu-di-navigazione/megamenu/).
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
-{% capture callout %}
-Breaking feature dalla versione **2.8.0**
-
-- Il toggle del dropdown diventa `<button>` invece di `<a>`. 
-- Gli altri elementi `<a>` che si comportano come toggle dropdown (eg. scelta Lingua), hanno l'aggiunta dell'attributo `role="button"`.
-- Il markup del Megamenu cambia come nel nuovo componente, per approfondire andare alla [relativa pagina]({{site.baseurl}}/docs/menu-di-navigazione/megamenu/).
-{% endcapture %}{% include callout.html content=callout type="danger" %}
-
 ## Slim Header
 
 Lo **Slim Header** mostra un'intestazione, solitamente con riferimento all'ente di appartenenza del progetto o riferimenti utili, oltre ad un eventuale menu per il cambio lingua e l'accesso ad area riservata.  
@@ -414,11 +406,10 @@ Per cambiare tema all'header centrale è sufficiente aggiungere la classe `theme
       <div class="col-12">
         <!--start nav-->
         <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Navigazione principale">
-          <button class="custom-navbar-toggler" type="button" aria-controls="nav1" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#nav1">
+          <button class="custom-navbar-toggler" type="button" aria-controls="nav1" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#nav1">
             <svg class="icon bg-override"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use></svg>
           </button>
-          <div class="navbar-collapsable" id="nav1" style="display: none;">
-            <div class="overlay" style="display: none;"></div>
+          <div class="navbar-collapsable" id="nav1" tabindex="-1">
             <div class="close-div">
               <button class="btn close-menu" type="button">
                 <span class="visually-hidden">Nascondi la navigazione</span>
@@ -565,11 +556,10 @@ Per modificare il tema dell'Header Nav è sufficiente aggiungere una o tutte e d
       <div class="col-12">
         <!--start nav-->
         <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Navigazione principale">
-          <button class="custom-navbar-toggler" type="button" aria-controls="nav0" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#nav0">
+          <button class="custom-navbar-toggler" type="button" aria-controls="nav0" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#nav0">
             <svg class="icon bg-override"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use></svg>
           </button>
-          <div class="navbar-collapsable" id="nav0" style="display: none;">
-            <div class="overlay" style="display: none;"></div>
+          <div class="navbar-collapsable" id="nav0" tabindex="-1">
             <div class="close-div">
               <button class="btn close-menu" type="button">
                 <span class="visually-hidden">Nascondi la navigazione</span>
@@ -704,11 +694,10 @@ Per modificare il tema dell'Header Nav è sufficiente aggiungere una o tutte e d
       <div class="col-12">
         <!--start nav-->
         <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Navigazione principale">
-          <button class="custom-navbar-toggler" type="button" aria-controls="nav2" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#nav2">
+          <button class="custom-navbar-toggler" type="button" aria-controls="nav2" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#nav2">
             <svg class="icon bg-override"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use></svg>
           </button>
-          <div class="navbar-collapsable" id="nav2" style="display: none;">
-            <div class="overlay" style="display: none;"></div>
+          <div class="navbar-collapsable" id="nav2" tabindex="-1">
             <div class="close-div">
               <button class="btn close-menu" type="button">
                 <span class="visually-hidden">Nascondi la navigazione</span>
@@ -843,13 +832,12 @@ Per modificare il tema dell'Header Nav è sufficiente aggiungere una o tutte e d
       <div class="col-12">
         <!--start nav-->
         <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Navigazione principale">
-          <button class="custom-navbar-toggler" type="button" aria-controls="nav3" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#nav3">
+          <button class="custom-navbar-toggler" type="button" aria-controls="nav3" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#nav3">
             <svg class="icon">
               <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use>
             </svg>
           </button>
-          <div class="navbar-collapsable" id="nav3" style="display: none;">
-            <div class="overlay" style="display: none;"></div>
+          <div class="navbar-collapsable" id="nav3" tabindex="-1">
             <div class="close-div">
               <button class="btn close-menu" type="button">
                 <span class="visually-hidden">Nascondi la navigazione</span>
@@ -986,11 +974,10 @@ Al menu di navigazione principale può essere aggiunto anche un menu di navigazi
       <div class="col-12">
         <!--start nav-->
         <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Navigazione principale">
-          <button class="custom-navbar-toggler" type="button" aria-controls="nav4" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#nav4">
+          <button class="custom-navbar-toggler" type="button" aria-controls="nav4" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#nav4">
             <svg class="icon bg-override"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use></svg>
           </button>
-          <div class="navbar-collapsable" id="nav4" style="display: none;">
-            <div class="overlay" style="display: none;"></div>
+          <div class="navbar-collapsable" id="nav4" tabindex="-1">
             <div class="close-div">
               <button class="btn close-menu" type="button">
                 <span class="visually-hidden">Nascondi la navigazione</span>
@@ -1127,13 +1114,12 @@ Al menu di navigazione principale può essere aggiunto anche un menu di navigazi
           <div class="col-12">
             <!--start nav-->
             <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Navigazione principale">
-              <button class="custom-navbar-toggler" type="button" aria-controls="navC1" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#navC1">
+              <button class="custom-navbar-toggler" type="button" aria-controls="navC1" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#navC1">
                 <svg class="icon">
                   <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use>
                 </svg>
               </button>
-              <div class="navbar-collapsable" id="navC1" style="display: none;">
-                <div class="overlay" style="display: none;"></div>
+              <div class="navbar-collapsable" id="navC1" tabindex="-1">
                 <div class="close-div">
                   <button class="btn close-menu" type="button">
                     <span class="visually-hidden">Nascondi la navigazione</span>
@@ -1376,11 +1362,10 @@ Verrà creata un'ombra per enfatizzare l'Header rispetto alla pagina in cui è c
           <div class="col-12">
             <!--start nav-->
             <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Navigazione principale">
-              <button class="custom-navbar-toggler" type="button" aria-controls="navC2" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#navC2">
+              <button class="custom-navbar-toggler" type="button" aria-controls="navC2" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#navC2">
                 <svg class="icon"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use></svg>
               </button>
-              <div class="navbar-collapsable" id="navC2" style="display: none;">
-                <div class="overlay" style="display: none;"></div>
+              <div class="navbar-collapsable" id="navC2" tabindex="-1">
                 <div class="close-div">
                   <button class="btn close-menu" type="button">
                     <span class="visually-hidden">Nascondi la navigazione</span>
@@ -1507,33 +1492,80 @@ Verrà creata un'ombra per enfatizzare l'Header rispetto alla pagina in cui è c
 </header>
 {% endcapture %}{% include example.html content=example %}
 
-## Header Sticky
+## Attivazione tramite codice
 
-Affinché la testata rimanga visibile in formato ridotto anche allo scorrere della pagina, è sufficiente utilizzare la classe `.it-header-sticky` nell'elemento identificato con la classe `.it-header-wrapper`.
+L'unica funzionalità del componente `Header` che necessita l'attivazione tramite
+codice è quella in cui si desidera che lo stesso si comporti in maniera `sticky`
+ovvero con la testata sempre visibile in formato ridotto anche allo scorrere 
+della pagina.
+
+{% include callout-bundle-methods.md %}
+
+### Inizializzazione automatica
+
+Per rendere `sticky` il componente `Header` automaticamente, è sufficiente 
+utilizzare la classe `.it-header-sticky` nell'elemento identificato con la 
+classe `.it-header-wrapper` insieme all'attributo `data-bs-toggle="sticky"`.
 
 ```html
-<div class="it-header-wrapper it-header-sticky">...</div>
+<div 
+  class="it-header-wrapper it-header-sticky" data-bs-toggle="sticky" data-bs-position-type="fixed" data-bs-sticky-class-name="is-sticky">
+  ...
+</div>
 ```
 
-È disponibile una <a href="{{ site.baseurl }}/docs/esempi/comuni/template-homepage/">pagina di esempio</a> dedicata a questa funzionalità per comprenderne appieno significato ed utilizzo.
+Per maggiori informazioni e ulteriori opzioni vedere il componente [Sticky]({{ site.baseurl }}/docs/componenti/sticky/) e l'[esempio]({{ site.baseurl }}/docs/esempi/navscroll/).
 
-### Tramite JavaScript
+### Inizializzazione manuale
 
-È possibile inizializzare il componente tramite JavaScript:
+Il componente `Header` solitamente contiene al suo interno i componenti `Dropdown`, 
+`NavScroll` e `Collapse`, si rimanda alle sezioni specifiche per l'attivazione di questi componenti:
+
+- [Attivazione Dropdown tramite codice]({{ site.baseurl }}/docs/componenti/dropdown/#attivazione-tramite-codice)
+- [Attivazione Collapse tramite codice]({{ site.baseurl }}/docs/componenti/collapse/#attivazione-tramite-codice)
+- [Attivazione NavScroll tramite codice]({{ site.baseurl }}/docs/menu-di-navigazione/navscroll/#attivazione-tramite-codice)
+
+
+Per rendere `sticky` il componente `Header` è  possibile inizializzare il 
+componente manualmente utilizzando la classe `HeaderSticky`:
 
 ```js
-var headerSticky = new bootstrap.HeaderSticky(document.getElementById('myHeaderSticky'), options)
+import { HeaderSticky } from 'bootstrap-italia';
+
+const headerStickyElement = document.querySelector('#myHeaderSticky');
+const headerSticky = new HeaderSticky(headerStickyElement);
 ```
 
-### Metodi
+#### Metodi
 
-{% include callout-danger-async-methods.md %}
+<div class="table-responsive">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th style="width: 150px;">Metodo</th>
+        <th>Descrizione</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% include standard-methods.html class="HeaderSticky" %}
+    </tbody>
+  </table>
+</div>
 
-#### `getOrCreateInstance`
+## Breaking change
 
-Metodo statico che consente di ottenere l'istanza di un HeaderSticky associata ad un elemento del DOM o di crearne una nuova nel caso non fosse stata inizializzata.
+{% capture callout %}
+La navbar presente negli esempi, quando aperta in versione mobile o a forte ingrandimento, è stata reimplementata come modale per migliorare l'accessibilità con le combinazioni principali di lettori di schermo, sistema operativo e browser. Modifiche principali: 
+- struttura: la navbar ora utilizza un pattern dialog con backdrop 
+- gerarchia visiva: la gestione `z-index` è allineata al componente modale
+- gestione del focus: implementato `focus-trap.js` per utenti da tastiera e lettori di schermo, e gestione inert
+- il comportamento è diverso se implementata dentro o fuori dall'elemento `main` di pagina (se presente)
 
-```js
-var headerStickyElement = document.querySelector('#myHeaderSticky')
-var headerSticky = bootstrap.HeaderSticky.getOrCreateInstance(headerStickyElement) // Returns a Bootstrap modal instance
-```
+Se hai personalizzato il CSS della navbar, rivedi le tue modifiche per verificarne la compatibilità. Se hai modificato il comportamento JavaScript, assicurati che funzioni con il nuovo pattern dialog. Testa la tua implementazione con lettori di schermo e con utenti per verificarne l'accessibilità.
+{% endcapture %}{% include callout-breaking.html content=callout version="2.15.0" type="danger" %}
+
+{% capture callout %}
+- Il toggle del dropdown diventa `<button>` invece di `<a>`. 
+- Gli altri elementi `<a>` che si comportano come toggle dropdown (eg. scelta Lingua), hanno l'aggiunta dell'attributo `role="button"`.
+- Il markup del Megamenu cambia come nel nuovo componente, per approfondire andare alla [relativa pagina]({{site.baseurl}}/docs/menu-di-navigazione/megamenu/).
+{% endcapture %}{% include callout-breaking.html content=callout version="2.8.0" type="danger" %}

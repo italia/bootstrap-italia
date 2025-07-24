@@ -1,35 +1,18 @@
-/*!
- * Bootstrap Docs (https://getbootstrap.com)
- * Copyright 2011-2017 The Bootstrap Authors
- * Copyright 2011-2017 Twitter, Inc.
- * Licensed under the Creative Commons Attribution 3.0 Unported License. For
- * details, see https://creativecommons.org/licenses/by/3.0/.
+/**
+ * --------------------------------------------------------------------------
+ * Bootstrap Italia (https://italia.github.io/bootstrap-italia/)
+ * Authors: https://github.com/italia/bootstrap-italia/blob/main/AUTHORS
+ * Licensed under BSD-3-Clause license (https://github.com/italia/bootstrap-italia/blob/main/LICENSE)
+ * This a fork of Bootstrap docs SCSS entry: Initial license and original file name below
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ * --------------------------------------------------------------------------
  */
-// Dev notes
-//
-// Background information on nomenclature and architecture decisions here.
-//
-// - Bootstrap functions, variables, and mixins are included for easy reuse.
-//   Doing so gives us access to the same core utilities provided by Bootstrap.
-//   For example, consistent media queries through those mixins.
-//
-// - Bootstrap's **docs variables** are prefixed with `$docs-`.
-//   These custom colors avoid collision with the components Bootstrap provides.
-//
-// - Classes are prefixed with `.bd-`.
-//   These classes indicate custom-built or modified components for the design
-//   and layout of the Bootstrap docs. They are not included in our builds.
-//
-// Happy Bootstrapping!
-// Load Bootstrap variables and mixins
+
 @import '../../../../src/scss/base/functions';
-// here to be available to "variables"
 @import '../../../../src/scss/base/variables';
 @import '../../../../src/scss/base/mixins/buttons';
-// here to override any conflicting "bootstrap/scss/functions" definitions
 @import '../../../../src/scss/base/mixins';
-// Load docs components
-@import '../../../../src/scss/utilities/focus';
+
 @import 'colors';
 @import 'nav';
 @import 'masthead';

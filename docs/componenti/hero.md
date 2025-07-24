@@ -9,13 +9,15 @@ toc: true
 La hero è un componente leggero e flessibile che può facoltativamente estendere l'intera finestra per mostrare i messaggi in evidenza sul tuo sito.
 Di seguito una serie di esempi con la descrizione degli elementi e delle classi applicabili.
 
-Il componente Hero può contenere:
+Gli elementi da cui è composto sono:
 
-- Sub head
-- Heading (titolo)
+- Titolo occhiello
+- Titolo principale (heading)
 - Paragrafo
-- Call to action
+- Uno o più pulsanti (call to action)
 - Immagine di background
+
+Poiché il componente occupa in larghezza l'intera pagina, consulta la **[pagina di esempio]**({{ site.baseurl }}/docs/esempi/hero/){:target="\_blank"} per visualizzare tutte le varianti in un contesto reale.
 
 {% capture callout %}
 
@@ -24,11 +26,6 @@ Il componente Hero può contenere:
 Valutare attentamente l'opportunità di utilizzare più hero nella stessa pagina.
 
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
-
-{% capture callout %}
-Il componente Hero è un componente full-width.
-Per la visualizzazione reale a schermo fate riferimento alla [pagina di esempio]({{ site.baseurl }}/docs/esempi/hero/){:target="\_blank"}.
-{% endcapture %}{% include callout.html content=callout type="info" %}
 
 ## Con immagine
 
@@ -87,10 +84,10 @@ Nei casi in cui fossero presenti contenuti testuali utilizzare per il titolo il 
     <div class="row">
         <div class="col-12">
           <div class="it-hero-text-wrapper bg-dark">
-              <span class="it-Categoria">Categoria</span>
-              <h1 class="no_toc">Heading lorem ipsum dolor sit amet, consetetur sadipscing.</h1>
+              <span class="it-category">Titolo occhiello</span>
+              <h1 class="no_toc">Titolo della sezione</h1>
               <p class="d-none d-lg-block">Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.</p>
-              <div class="it-btn-container"><a class="btn btn-sm btn-outline-primary" href="#">Label CTA</a></div>
+              <div class="it-btn-container"><a class="btn btn-sm btn-outline-primary" href="#">Azione primaria </a></div>
           </div>
         </div>
     </div>
@@ -110,10 +107,10 @@ aggiungere alla section `.it-hero-wrapper` la classe `.it-text-centered`.
       <div class="row">
          <div class="col-12">
             <div class="it-hero-text-wrapper bg-dark">
-               <span class="it-Categoria">Categoria</span>
-               <h2 class="no_toc">Heading lorem ipsum dolor sit amet, consetetur sadipscing.</h2>
+               <span class="it-category">Titolo occhiello</span>
+               <h2 class="no_toc">Titolo della sezione</h2>
                <p class="d-none d-lg-block">Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.</p>
-               <div class="it-btn-container"><a class="btn btn-sm btn-outline-primary" href="#">Label CTA</a></div>
+               <div class="it-btn-container"><a class="btn btn-sm btn-outline-primary" href="#">Azione primaria</a></div>
             </div>
          </div>
       </div>
@@ -151,10 +148,10 @@ Verificare che l'immagine utilizzata assicuri sempre un adeguato contrasto rispe
     <div class="row">
         <div class="col-12">
           <div class="it-hero-text-wrapper bg-dark">
-              <span class="it-Categoria">Categoria</span>
-              <h2 class="no_toc">Heading lorem ipsum dolor sit amet, consetetur sadipscing.</h2>
+              <span class="it-category">Titolo occhiello</span>
+              <h2 class="no_toc">Titolo della sezione</h2>
               <p class="d-none d-lg-block">Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.</p>
-              <div class="it-btn-container"><a class="btn btn-sm btn-secondary" href="#">Label CTA</a></div>
+              <div class="it-btn-container"><a class="btn btn-sm btn-secondary" href="#">Azione primaria</a></div>
           </div>
         </div>
     </div>
@@ -183,10 +180,10 @@ Per un div opaco di colore primario, aggiungere alla section `.it-hero-wrapper` 
       <div class="row">
          <div class="col-12">
             <div class="it-hero-text-wrapper bg-dark">
-               <span class="it-Categoria">Categoria</span>
-               <h2 class="no_toc">Heading lorem ipsum dolor sit amet, consetetur sadipscing.</h2>
+               <span class="it-category">Titolo occhiello</span>
+               <h2 class="no_toc">Titolo della sezione</h2>
                <p class="d-none d-lg-block">Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.</p>
-               <div class="it-btn-container"><a class="btn btn-sm btn-outline-primary" href="#">Label CTA</a></div>
+               <div class="it-btn-container"><a class="btn btn-sm btn-outline-primary" href="#">Azione primaria</a></div>
             </div>
          </div>
       </div>
@@ -229,10 +226,10 @@ Aggiungere alla section `.it-hero-wrapper` la classe `.it-bottom-overlapping-con
       <div class="row">
          <div class="col-12">
             <div class="it-hero-text-wrapper bg-dark">
-               <span class="it-Categoria">Categoria</span>
-               <h2 class="no_toc">Heading lorem ipsum dolor sit amet, consetetur sadipscing.</h2>
+               <span class="it-category">Titolo occhiello</span>
+               <h2 class="no_toc">Titolo della sezione</h2>
                <p class="d-none d-lg-block">Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.</p>
-               <div class="it-btn-container"><a class="btn btn-sm btn-secondary" href="#">Label CTA</a></div>
+               <div class="it-btn-container"><a class="btn btn-sm btn-secondary" href="#">Azione primaria</a></div>
             </div>
          </div>
       </div>
@@ -240,25 +237,33 @@ Aggiungere alla section `.it-hero-wrapper` la classe `.it-bottom-overlapping-con
 </section>
 <div class="container">
    <div class="row">
-      <div class="col-12">
-         <div class="card-wrapper card-space">
-            <div class="card card-bg">
-               <div class="card-body">
-                  <div class="row">
-                    <div class="col-12 col-lg-10 offset-lg-1">
-                      <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
-                      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                      <a class="read-more" href="#">
-                        <span class="text">Leggi di più</span>
-                        <span class="visually-hidden">su Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</span>
-                        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg>
-                      </a>
-                    </div>
-                  </div>
-               </div>
+      <div class="col-12"> <!-- <div class="col-12 col-lg-10 offset-lg-1"> e card-space nel wrapper>-->
+         <div class="col-12 mb-3 mb-md-4">
+            <!--start it-card-->
+            <article class="it-card rounded shadow border px-5 py-4">
+            <!--card first child is the title (link)-->
+            <h3 class="it-card-title no_toc h4">
+               Titolo del contenuto
+            </h3>
+            <!--card body content-->
+            <div class="it-card-body">
+               <p class="it-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
+            <div class="it-card-footer border-0" aria-label="Link correlati:">
+               <a href="#" class="it-card-link">Scopri di più <span class="visually-hidden">su Titolo del contenuto</span></a>
+            </div>
+            </article>
+            <!--end it-card-->
          </div>
       </div>
    </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
+
+## Breaking change
+
+{% capture callout %}
+Implementato nell'esempio con immagine e margine negativo per contenuti sovrapposti il nuovo componente card definito dalle classi `.it-card` e relativi modificatori.  
+
+Le classi legacy di Bootstrap `.card` sono ora deprecate ma **saranno mantenute nei fogli di stile fino al prossimo rilascio maggiore, per permettere una migrazione graduale**. 
+{% endcapture %}{% include callout-breaking.html version="2.16.0" content=callout type="danger" %}

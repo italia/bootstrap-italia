@@ -365,14 +365,34 @@ Aggiungendo la classe `.accordion-left-icon` ad `.accordion` si ottiene una vari
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-# Implementazione
+## Attivazione tramite codice
 
-Il componente Accordion si basa su quello nativo di [Bootstrap {{ site.bootstrap_version }}](https://getbootstrap.com/docs/{{ site.bootstrap_minor }}/components/accordion/){:target="\_blank"}, a sua volta basato sul componente [Collapse](https://getbootstrap.com/docs/{{ site.bootstrap_minor }}/components/collapse/){:target="\_blank"}.
+{% include callout-bundle-methods.md %}
 
-Bootstrap Italia migliora l'accessibilità dell'Accordion implementando la navigazione via tastiera degli header con le frecce cursore (su/giù) e con i tasti <kbd>Home</kbd> (primo elemento) ed <kbd>End</kbd> (ultimo elemento).
+Il componente Accordion si basa sul componente [Collapse]({{ site.baseurl }}/docs/componenti/dropdown/#attivazione-tramite-codice).
 
-Le funzionalità aggiuntive del componente vengono implementate nei seguenti file:
+```js
+import { Accordion } from 'bootstrap-italia';
 
-- [src/js/plugins/accordion.js](https://github.com/italia/bootstrap-italia/blob/main/src/js/plugins/accordion.js){:target="\_blank"}
+const accordionEl = document.getElementById('myAccordion');
+const accordion = new Accordion(accordionEl)
+```
 
-Seguendo l'approccio utilizzato nel resto della libreria il componente è sviluppato in vanilla JS ed estende il `BaseComponent` di Bootstrap.
+Bootstrap Italia migliora l'accessibilità dell'Accordion implementando la navigazione via tastiera degli header con le frecce cursore (`su`/`giù`) e con i tasti <kbd>Home</kbd> (primo elemento) ed <kbd>End</kbd> (ultimo elemento).
+
+
+#### Metodi
+
+<div class="table-responsive">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th style="width: 150px;">Metodo</th>
+        <th>Descrizione</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% include standard-methods.html class="Accordion" %}
+    </tbody>
+  </table>
+</div>

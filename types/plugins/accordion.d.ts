@@ -1,5 +1,5 @@
 import { default as BaseComponent } from 'bootstrap/js/dist/base-component'
-import { GetInstanceFactory, GetOrCreateInstanceFactory } from 'bootstrap/js/dist/base-component';
+import { type GetInstanceFactory, type GetOrCreateInstanceFactory } from 'bootstrap/js/dist/base-component';
 
 type KeyName = 'ArrowDown' | 'ArrowUp' | 'Home' | 'End'
 

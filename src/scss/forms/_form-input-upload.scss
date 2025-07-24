@@ -571,7 +571,7 @@
         }
       }
 
-      &:focus:not(.focus--mouse) {
+      &:focus:not([data-focus-mouse='true']) {
         &[type='file'] + label {
           outline: auto 5px -webkit-focus-ring-color;
         }

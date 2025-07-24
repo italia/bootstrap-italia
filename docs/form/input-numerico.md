@@ -80,15 +80,15 @@ Aggiungendo gli attributi HTML `min=""`, `max=""` e `step=""` all'input è possi
 
 ### Valuta
 
-Per anteporre il simbolo della valuta in Euro, aggiungere la classe `.input-number-currency` al wrapper `.input-number`.
+Per anteporre il simbolo della valuta in Euro, aggiungere la classe `.input-symbol-label` all'elemento `<label>`.
 
 {% comment %}Example name: Con valuta {% endcomment %}
 {% capture example %}
 
 <div>
   <div class="form-group">
-    <label for="inputNumber3" class="input-number-label active">Currency</label>
-    <div class="input-group input-number input-number-currency">
+    <label for="inputNumber3" class="input-symbol-label active">Currency</label>
+    <div class="input-group input-number">
       <span class="input-group-text fw-semibold">€</span>
       <input type="number" class="form-control" data-bs-input id="inputNumber3" name="inputNumber3" step="any" value="3.50" min="0" />
       <span class="input-group-text align-buttons flex-column">
@@ -106,7 +106,7 @@ Per anteporre il simbolo della valuta in Euro, aggiungere la classe `.input-numb
 
 ### Percentuale
 
-Per anteporre il simbolo percentuale, aggiungere la classe `.input-number-percentage` al wrapper `.input-number`.
+Per anteporre il simbolo percentuale, aggiungere la classe `.input-symbol-label` all'elemento `<label>`.
 
 Si consiglia di impostare gli attributi `min=0` e `max="100"`.
 
@@ -114,8 +114,8 @@ Si consiglia di impostare gli attributi `min=0` e `max="100"`.
 {% capture example %}
 <div>
   <div class="form-group">
-    <label for="inputNumber4" class="input-number-label active">Percentage</label>
-    <div class="input-group input-number input-number-percentage">
+    <label for="inputNumber4" class="input-symbol-label active">Percentage</label>
+    <div class="input-group input-number">
       <span class="input-group-text fw-semibold">%</span>
       <input type="number" class="form-control" data-bs-input id="inputNumber4" name="inputNumber4" value="50" min="0" max="100" step="any" />
       <span class="input-group-text align-buttons flex-column">
@@ -144,10 +144,35 @@ Aggiungere anche l'attributo `disabled` al campo e ai pulsanti.
     <div class="input-group input-number disabled">
       <input type="number" class="form-control" data-bs-input id="inputNumber5" name="inputNumber5" value="50" min="0" max="100" step="1" disabled />
       <span class="input-group-text align-buttons flex-column">
-        <button class="input-number-add">
+        <button class="input-number-add" disabled>
           <span class="visually-hidden">Aumenta valore</span>
         </button>
-        <button class="input-number-sub">
+        <button class="input-number-sub" disabled>
+          <span class="visually-hidden">Diminuisci valore</span>
+        </button>
+      </span>
+    </div>
+  </div>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+### Readonly
+
+Per rendere un Input number `readonly`, aggiungere l'attributo `readonly` al campo
+e `disabled` ai pulsanti.
+
+{% comment %}Example name: Sola lettura {% endcomment %}
+{% capture example %}
+<div>
+  <div class="form-group">
+    <label for="inputNumberReadOnly" class="input-number-label active">Contenuto in sola lettura</label>
+    <div class="input-group input-number">
+      <input type="number" class="form-control" data-bs-input id="inputNumberReadOnly" name="inputNumberReadOnly" value="50" min="0" max="100" step="1" readonly />
+      <span class="input-group-text align-buttons flex-column">
+        <button class="input-number-add" disabled>
+          <span class="visually-hidden">Aumenta valore</span>
+        </button>
+        <button class="input-number-sub" disabled>
           <span class="visually-hidden">Diminuisci valore</span>
         </button>
       </span>
@@ -182,11 +207,37 @@ sufficiente aggiungere la classe `input-number-adaptive`.
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Attivazione tramite JavaScript
+### Attivazione tramite codice
 
 È possibile creare un'istanza con il constructor, ad esempio:
 
 ```js
-var inputElement = document.getElementById('inputNumber6')
-var inputNumber = new bootstrap.InputNumber(inputElement)
+import { InputNumber } from 'bootstrap-italia';
+
+const inputNumberEl = document.querySelector('#my-input-numbber');
+const inputNumber = new InputNumberEl(inputNumberEl, options);
 ```
+
+#### Metodi
+
+<div class="table-responsive">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th style="width: 150px;">Metodo</th>
+        <th>Descrizione</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% include standard-methods.html class="InputNumber" %}
+    </tbody>
+  </table>
+</div>
+
+
+## Breaking change
+
+{% capture callout %}
+Le `label` degli input `percentuale` e `valuta` richiedono la classe `input-symbol-label`. 
+Le precedenti classi `input-number-percentage` e `input-number-currency` sono state rimosse.
+{% endcapture %}{% include callout-breaking.html content=callout version="2.13.0" type="danger" %}

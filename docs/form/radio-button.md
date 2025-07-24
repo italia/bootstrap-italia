@@ -7,13 +7,6 @@ title: Radio Button
 description: Elementi e stili per la creazione di radio button accessibili.
 ---
 
-{% capture callout %}
-Breaking feature dalla versione **2.10.0**
-
-- Il "raggruppamento" di campi di input deve prevedere l'elemento nativo `<fieldset>`. 
-- Sostituire `aria-labelledby` con `aria-describedby`.
-{% endcapture %}{% include callout.html content=callout type="danger" %}
-
 Per utilizzare i radio button personalizzati è necessario inserire la classe `.form-check` nell'elemento padre.
 
 {% comment %}Example name: Base {% endcomment %}
@@ -77,7 +70,7 @@ Per raggruppare visivamente gli elementi `checkbox` e `radio` occorrerà aggiung
 {% capture example %}
 <div>
   <div class="row">
-    <fieldset class="col-5">
+    <fieldset class="col-12 col-md-6">
       <legend>Gruppo di radio</legend>
       <div class="form-check form-check-group">
         <input name="gruppo4" type="radio" id="radio10" checked>
@@ -92,8 +85,7 @@ Per raggruppare visivamente gli elementi `checkbox` e `radio` occorrerà aggiung
         <label for="radio12" class="disabled">Opzione 3</label>
       </div>
     </fieldset>
-    <div class="col-2"></div>
-    <fieldset class="col-5">
+    <fieldset class="col-12 col-md-6">
       <legend>Gruppo di radio</legend>
       <div class="form-check form-check-group">
         <input checked name="gruppo5" type="radio" id="radio13" aria-describedby="radio13-help">
@@ -114,3 +106,10 @@ Per raggruppare visivamente gli elementi `checkbox` e `radio` occorrerà aggiung
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
+
+## Breaking change
+
+{% capture callout %}
+- Il "raggruppamento" di campi di input deve prevedere l'elemento nativo `<fieldset>`. 
+- Sostituire `aria-labelledby` con `aria-describedby`.
+{% endcapture %}{% include callout-breaking.html content=callout version="2.10.0" type="danger" %}

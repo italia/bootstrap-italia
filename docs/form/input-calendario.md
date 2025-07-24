@@ -9,7 +9,9 @@ description: Campo di tipo calendario per la selezione di giorni dell'anno.
 
 ## Datepicker
 
-Clicca sull’icona a destra per visualizzare il datepicker.
+Il componente input date, o datepicker, è un componente dedicato alla selezione di un giorno specifico.
+
+Clicca sull’input per visualizzare il datepicker.
 {% capture callout %}
 
 Assicurarsi di aggiungere alla label la classe **`active`** per impedire la sovrapposizione della label al campo.

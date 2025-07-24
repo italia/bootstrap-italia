@@ -357,51 +357,6 @@ Lo stato dell'upload è rappresentato graficamente dall'elemento `<div class="pr
 </form>
 {% endcapture %}{% include example.html content=example %}
 
-### Attivazione tramite JavaScript
-
-È possibile creare un'istanza con il constructor, ad esempio:
-
-```js
-var uploadElement = document.getElementById('uploadChangeStateTarget')
-var uploadDragDrop = new bootstrap.UploadDragDrop(uploadElement)
-```
-
-### Metodi
-
-<table class="table table-bordered table-striped">
-  <thead>
-    <tr>
-      <th style="width: 150px;">Metodo</th>
-      <th>Descrizione</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>progress</td>
-      <td>fa avanzare la barra e la percentuale di completamento. Deve essere un numero compreso tra 0 e 1.0</td>
-    </tr>
-    <tr>
-      <td>start</td>
-      <td>fa comparire la barra e la percentuale di completamento</td>
-    </tr>
-    <tr>
-      <td>success</td>
-      <td>fa comparire lo stato di avvenuto completamento dell'operazione</td>
-    </tr>
-    <tr>
-      <td>reset</td>
-      <td>riporta la barra e la percentuale di completamento allo stato iniziale</td>
-    </tr>
-    <tr>
-      <td>getInstance</td>
-      <td>Metodo statico che restituisce l'istanza UploadDragDrop associata ad un elemento del DOM. Esempio: <code>bootstrap.UploadDragDrop.getInstance(element)</code></td>
-    </tr>
-    <tr>
-      <td>getOrCreateInstance</td>
-      <td>Metodo statico che restituisce un'istanza UploadDragDrop associata ad un elemento del DOM o ne crea una nuova nel caso non fosse stata inizializzata. Esempio: <code>bootstrap.UploadDragDrop.getOrCreateInstance(element)</code></td>
-    </tr>
-  </tbody>
-</table>
 ### Esempio animato
 
 {% comment %}Example name: Con animazione {% endcomment %}
@@ -459,3 +414,52 @@ var uploadDragDrop = new bootstrap.UploadDragDrop(uploadElement)
 </script>
 
 {% endcapture %}{% include example.html content=example %}
+
+## Attivazione tramite codice
+
+{% include callout-bundle-methods.md toggle="`data-bs-upload-dragdrop`" %}
+
+{% capture callout %}
+Per l'attivazione automatica del relativo JavaScript è importante 
+che il componente che contiene la struttura abbia l'attributo `data-bs-upload-dragdrop`.
+
+In alternativa si può istanziare il componente utilizzando il costruttore come nel
+seguente esempio.
+{% endcapture %}{% include callout.html content=callout type="info" %}
+
+```js
+import { UploadDragDrop } from 'bootstrap-italia';
+
+const uploadElement = document.getElementById('uploadChangeStateTarget');
+const uploadDragDrop = new UploadDragDrop(uploadElement);
+```
+
+#### Metodi
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th style="width: 150px;">Metodo</th>
+      <th>Descrizione</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% include standard-methods.html class="UploadDragDrop" %}
+    <tr>
+      <td>progress</td>
+      <td>fa avanzare la barra e la percentuale di completamento. Deve essere un numero compreso tra 0 e 1.0</td>
+    </tr>
+    <tr>
+      <td>start</td>
+      <td>fa comparire la barra e la percentuale di completamento</td>
+    </tr>
+    <tr>
+      <td>success</td>
+      <td>fa comparire lo stato di avvenuto completamento dell'operazione</td>
+    </tr>
+    <tr>
+      <td>reset</td>
+      <td>riporta la barra e la percentuale di completamento allo stato iniziale</td>
+    </tr>
+  </tbody>
+</table>

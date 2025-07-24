@@ -6,7 +6,7 @@
  * --------------------------------------------------------------------------
  */
 
-export { default as CarouselBI } from './plugins/carousel-bi'
+export { default as Carousel } from './plugins/carousel'
 export { default as InputNumber } from './plugins/input-number'
 export { default as Dimmer } from './plugins/dimmer'
 export { default as Notification } from './plugins/notification'
@@ -23,7 +23,7 @@ export { default as InputSearchAutocomplete } from './plugins/input-search-autoc
 export { default as InputPassword } from './plugins/input-password'
 export { default as ProgressDonut } from './plugins/progress-donut'
 export { default as UploadDragDrop } from './plugins/upload-dragdrop'
-export { default as BackToTop } from './plugins/backToTop'
+export { default as BackToTop } from './plugins/back-to-top'
 export { default as HistoryBack } from './plugins/history-back'
 export { default as Forward } from './plugins/forward'
 export { default as Masonry } from './plugins/masonry'
@@ -33,7 +33,6 @@ export { default as Transfer } from './plugins/transfer'
 /* Bootstrap */
 export { default as Alert } from './plugins/alert'
 export { default as Button } from './plugins/button'
-export { default as Carousel } from './plugins/carousel'
 export { default as Collapse } from './plugins/collapse'
 export { default as Dropdown } from './plugins/dropdown'
 export { default as Modal } from './plugins/modal'

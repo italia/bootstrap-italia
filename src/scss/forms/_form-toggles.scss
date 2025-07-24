@@ -24,7 +24,7 @@
     &:focus + .lever {
       @extend %focus;
     }
-    &:focus.focus--mouse + .lever {
+    &:focus[data-focus-mouse='true'] + .lever {
       @extend %focusmouse;
     }
     & + .lever {

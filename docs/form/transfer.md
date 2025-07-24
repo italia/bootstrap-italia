@@ -9,12 +9,6 @@ description: Un componente che consente la creazione di liste di checkbox.
 
 Il componente Transfer consente di trasferire gli elementi di una lista di checkbox ad un'altra lista di checkbox.
 
-{% capture callout %}
-Breaking feature dalla versione **2.8.0**
-
-Agli elementi di `<a>` occorre aggiungere l'attributo `role="button"`.
-{% endcapture %}{% include callout.html content=callout type="danger" %}
-
 **Il componente Transfer contiene**
 
 - Lista checkbox di sinistra
@@ -31,10 +25,6 @@ Agli elementi di `<a>` occorre aggiungere l'attributo `role="button"`.
 - `a.transfer`: Traferisce i campi selezionati a sinistra nella colonna destra
 - `a.backtransfer`: Traferisce i campi selezionati a destra nella colonna sinistra
 - `a.reset`: Ripristina lo stato iniziale delle liste
-
-{% capture callout %}
-Per l'attivazione del relativo JavaScript è importante che il componente che contiene la struttura, abbia l'attributo `data-bs-transfer`
-{% endcapture %}{% include callout.html content=callout type="info" %}
 
 Nell'esempio che segue la struttura è colonnare simmetrica nella versione desktop (5 / 2 / 5), l'utente potrà scegliere i tipi di colonna da utilizzare, usando le regole di bootstrap.
 
@@ -202,3 +192,42 @@ Nell'esempio che segue la struttura è colonnare simmetrica nella versione deskt
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
+
+### Attivazione tramite codice
+
+{% include callout-bundle-methods.md toggle="`data-bs-transfer`" %}
+
+{% capture callout %}
+Per l'attivazione automatica del relativo JavaScript è importante 
+che il componente che contiene la struttura abbia l'attributo `data-bs-transfer`.
+
+In alternativa si può istanziare il componente utilizzando il costruttore come nel
+seguente esempio.
+{% endcapture %}{% include callout.html content=callout type="info" %}
+
+```js
+import { Transfer } from 'bootstrap-italia';
+
+const transferElement = document.querySelector('.it-transfer-wrapper');
+const transfer = new Transfer(transferElement, config);
+```
+
+#### Metodi
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th style="width: 150px;">Metodo</th>
+      <th>Descrizione</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% include standard-methods.html class="Transfer" %}
+  </tbody>
+</table>
+
+## Breaking change
+
+{% capture callout %}
+Agli elementi di `<a>` occorre aggiungere l'attributo `role="button"`.
+{% endcapture %}{% include callout-breaking.html content=callout version="2.8.0" type="danger" %}

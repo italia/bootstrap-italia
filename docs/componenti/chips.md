@@ -161,7 +161,7 @@ Aggiungendo la classe `.chip-disabled` al contenitore e l'attributo `disabled` a
 
 I gruppi di chip vengono visualizzati in linea.
 
-{% comment %}Example name: Gruppi{% endcomment %}
+{% comment %}Example name: Gruppi di Chip{% endcomment %}
 {% capture example %}
 <div class="chip chip-simple">
   <span class="chip-label">Label</span>
@@ -224,9 +224,9 @@ I gruppi di chip vengono visualizzati in linea.
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Gruppi di Chip link
+### Gruppi di Chip con link
 
-{% comment %}Example name: Gruppi{% endcomment %}
+{% comment %}Example name: Gruppi di Chip con link{% endcomment %}
 {% capture example %}
 <a href="#" class="chip chip-simple chip-primary">
   <span class="chip-label">Label</span>

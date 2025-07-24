@@ -38,6 +38,19 @@
 @import 'utilities/text-colors';
 // ------------------------------
 
+// Nav & Header
+@import 'components/nav';
+@import 'components/navbar';
+@import 'components/headerslim';
+@import 'components/headerslimtheme';
+@import 'components/headercenter';
+@import 'components/headercentertheme';
+@import 'components/headernavbar';
+@import 'components/headernavbartheme';
+@import 'components/header';
+@import 'components/navigationtheme';
+// ------------------------------
+
 // Components
 @import 'components/type';
 @import 'components/grid';
@@ -78,6 +91,7 @@
 @import 'components/thumbnav';
 @import 'components/steppers';
 @import 'components/card';
+@import 'components/card-old'; // Keep till next major? (.card is deprecated)
 @import 'components/imgresponsive';
 @import 'components/overlay-panel';
 @import 'components/progress-donuts';
@@ -103,7 +117,6 @@
 @import 'components/print';
 @import 'components/code';
 @import 'components/images';
-@import 'components/just-validate';
 @import 'components/page-scroll';
 @import 'components/pagination';
 @import 'components/placeholders'; // Keep?
@@ -111,6 +124,7 @@
 // ------------------------------
 
 // Form
+@import 'forms/forms';
 @import 'forms/labels';
 @import 'forms/form-text';
 @import 'forms/form-control';
@@ -128,20 +142,7 @@
 @import 'forms/form-transfer';
 @import 'forms/accessible-autocomplete';
 @import 'forms/autocomplete';
-@import 'forms/forms';
-// ------------------------------
-
-// Nav & Header
-@import 'components/nav';
-@import 'components/navbar';
-@import 'components/headerslim';
-@import 'components/headerslimtheme';
-@import 'components/headercenter';
-@import 'components/headercentertheme';
-@import 'components/headernavbar';
-@import 'components/headernavbartheme';
-@import 'components/header';
-@import 'components/navigationtheme';
+@import 'forms/just-validate';
 // ------------------------------
 
 // Footer

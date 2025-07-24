@@ -1,5 +1,5 @@
 import { Collapse as BSCollapse } from 'bootstrap'
-import { GetInstanceFactory, GetOrCreateInstanceFactory } from 'bootstrap/js/dist/base-component';
+import { type GetInstanceFactory, type GetOrCreateInstanceFactory } from 'bootstrap/js/dist/base-component';
 
 declare class Collapse extends BSCollapse {
   /**

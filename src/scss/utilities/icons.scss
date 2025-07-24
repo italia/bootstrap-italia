@@ -3,34 +3,34 @@
   height: 32px;
   vertical-align: middle;
   &.icon-padded {
-    padding: 8px;
+    margin: 8px;
   }
   &.icon-xs {
     width: 16px;
     height: 16px;
     &.icon-padded {
-      padding: 4px;
+      margin: 4px;
     }
   }
   &.icon-sm {
     width: 24px;
     height: 24px;
     &.icon-padded {
-      padding: 6px;
+      margin: 6px;
     }
   }
   &.icon-lg {
     width: 48px;
     height: 48px;
     &.icon-padded {
-      padding: 12px;
+      margin: 12px;
     }
   }
   &.icon-xl {
     width: 64px;
     height: 64px;
     &.icon-padded {
-      padding: 16px;
+      margin: 16px;
     }
   }
 }

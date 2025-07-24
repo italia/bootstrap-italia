@@ -9,13 +9,6 @@ toc: true
 Per aggiungere un pulsante che si abilita automaticamente allo scorrimento della pagina, e che aiuta l'utente a tornare in alto con un solo click su di esso, è sufficiente usare un link con attributo `data-bs-toggle="backtotop"` e con una classe `.back-to-top` che lo posiziona nella parte inferiore destra nella pagina.
 Le animazioni sono state realizzate con il plugin javascript [AnimeJs](https://animejs.com).
 
-{% capture callout %}
-Breaking feature dalla versione **2.12.0**
-
-- Rimossi gli attributi `tabindex="-1"` e `aria-hidden="true"` per permettere il focus da tastiera e l'interazione da strumenti assistivi. 
-- Aggiunto attributo `aria-label="Torna su"` per comunicare lo scopo a strumenti assistivi.
-{% endcapture %}{% include callout.html content=callout type="danger" %}
-
 <style>
   /* Style override for Documentation purposes */
   .back-to-top:not(#example) {
@@ -109,18 +102,20 @@ Aggiungendo le classi `.dark` e `.shadow` al link si ottiene un pulsante con omb
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-## Attivazione tramite JavaScript
+## Attivazione tramite codice
+
+{% include callout-bundle-methods.md %}
 
 È possibile creare un'istanza con il constructor, ad esempio:
 
 ```js
-var backToTopElement = document.getElementById('#backToTop')
-var backToTop = new bootstrap.BackToTop(backToTopElement, {
-  scrollLimit: 100,
-})
+import { BackToTop } from 'bootstrap-italia';
+
+const backToTopElement = document.getElementById('#backToTop');
+const backToTop = new BackToTop(backToTopElement, options);
 ```
 
-### Opzioni
+#### Opzioni
 
 Le opzioni possono essere passate tramite gli attributi data o tramite Javascript. Per quanto riguarda gli attributi data, aggiungi il nome dell'opzione a `data-bs`, come in `data-bs-scroll-limit=""`.
 
@@ -138,30 +133,30 @@ Le opzioni possono essere passate tramite gli attributi data o tramite Javascrip
       <td>positionTop</td>
       <td>number </td>
       <td>0</td>
-      <td>posizione Y espressa in pixel alla quale ritornarne al click sull'elemento</td>
+      <td>Posizione Y espressa in pixel alla quale ritornarne al click sull'elemento</td>
     </tr>
     <tr>
       <td>scrollLimit</td>
       <td>number </td>
       <td>100</td>
-      <td>posizione Y espressa in pixel alla quale far comparire l'elemento</td>
+      <td>Posizione Y espressa in pixel alla quale far comparire l'elemento</td>
     </tr>
     <tr>
       <td>duration</td>
       <td>number</td>
       <td>800</td>
-      <td>durata dell'animazione di scroll espressa in millisecondi</td>
+      <td>Durata dell'animazione di scroll espressa in millisecondi</td>
     </tr>
     <tr>
       <td>easing</td>
       <td>string</td>
       <td>easeInOutSine</td>
-      <td>inerzia dell'animazione di scroll. Per i valori fare riferimento alla [documentazione di AnimeJs](https://animejs.com/documentation/#linearEasing).</td>
+      <td>Inerzia dell'animazione di scroll. Per i valori fare riferimento alla <a href="https://animejs.com/documentation/#linearEasing">documentazione di AnimeJs</a>.</td>
     </tr>
   </tbody>
 </table>
 
-### Metodi
+#### Metodi
 
 <table class="table table-bordered table-striped">
   <thead>
@@ -173,27 +168,22 @@ Le opzioni possono essere passate tramite gli attributi data o tramite Javascrip
   <tbody>
     <tr>
       <td>show</td>
-      <td>mostra il pulsante</td>
+      <td>Mostra il pulsante</td>
     </tr>
     <tr>
       <td>hide</td>
-      <td>nasconde nasconde il pulsante</td>
+      <td>Nasconde nasconde il pulsante</td>
     </tr>
     <tr>
       <td>scrollToTop</td>
-      <td>attiva l'animazione di scroll verso la coordinata Y indicata dall'opzione <code>positionTop</code></td>
-    </tr>
-    <tr>
-      <td>dispose</td>
-      <td>Elimina le funzionalità del componente</td>
-    </tr>
-    <tr>
-      <td>getInstance</td>
-      <td>Metodo statico che restituisce l'istanza BackToTop associata ad un elemento del DOM. Esempio: <code>bootstrap.BackToTop.getInstance(element)</code></td>
-    </tr>
-    <tr>
-      <td>getOrCreateInstance</td>
-      <td>Metodo statico che restituisce un'istanza BackToTop associata ad un elemento del DOM o ne crea una nuova nel caso non fosse stata inizializzata. Esempio: <code>bootstrap.BackToTop.getOrCreateInstance(element)</code></td>
+      <td>Attiva l'animazione di scroll verso la coordinata Y indicata dall'opzione <code>positionTop</code></td>
     </tr>
   </tbody>
 </table>
+
+## Breaking change
+
+{% capture callout %}
+- Rimossi gli attributi `tabindex="-1"` e `aria-hidden="true"` per permettere il focus da tastiera e l'interazione da strumenti assistivi. 
+- Aggiunto attributo `aria-label="Torna su"` per comunicare lo scopo a strumenti assistivi.
+{% endcapture %}{% include callout-breaking.html content=callout version="2.12.0" type="danger" %}

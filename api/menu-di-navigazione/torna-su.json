@@ -1,26 +1,26 @@
 [
     {
         "name": "Base, funzionante",
-        "content": "\n<a href=\"#\" aria-label=\"Torna su\" data-bs-toggle=\"backtotop\" class=\"back-to-top\" id=\"example\">\n<svg class=\"icon icon-light\"><use href=\"/dist/svg/sprites.svg#it-arrow-up\"></use></svg>\n</a>\n"
+        "content": "\n<a href=\"#\" aria-label=\"Torna su\" data-bs-toggle=\"backtotop\" class=\"back-to-top\" id=\"example\">\n<svg class=\"icon icon-light\"><use href=\"https://italia.github.io/bootstrap-italia/dist/svg/sprites.svg#it-arrow-up\"></use></svg>\n</a>\n"
     },
     {
         "name": "Base, esempio",
-        "content": "\n<a href=\"#\" aria-label=\"Torna su\" data-bs-toggle=\"backtotop\" class=\"back-to-top\">\n<svg class=\"icon icon-light\"><use href=\"/dist/svg/sprites.svg#it-arrow-up\"></use></svg>\n</a>\n"
+        "content": "\n<a href=\"#\" aria-label=\"Torna su\" data-bs-toggle=\"backtotop\" class=\"back-to-top\">\n<svg class=\"icon icon-light\"><use href=\"https://italia.github.io/bootstrap-italia/dist/svg/sprites.svg#it-arrow-up\"></use></svg>\n</a>\n"
     },
     {
         "name": "Compatto, esempio",
-        "content": "\n<a href=\"#\" aria-label=\"Torna su\" data-bs-toggle=\"backtotop\" class=\"back-to-top back-to-top-small\">\n<svg class=\"icon icon-light\"><use href=\"/dist/svg/sprites.svg#it-arrow-up\"></use></svg>\n</a>\n\n"
+        "content": "\n<a href=\"#\" aria-label=\"Torna su\" data-bs-toggle=\"backtotop\" class=\"back-to-top back-to-top-small\">\n<svg class=\"icon icon-light\"><use href=\"https://italia.github.io/bootstrap-italia/dist/svg/sprites.svg#it-arrow-up\"></use></svg>\n</a>\n\n"
     },
     {
         "name": "Con ombra, esempio",
-        "content": "\n<div class=\"d-flex align-items-center\">\n  <a href=\"#\" aria-label=\"Torna su\" data-bs-toggle=\"backtotop\" class=\"back-to-top shadow\">\n    <svg class=\"icon icon-light\"><use href=\"/dist/svg/sprites.svg#it-arrow-up\"></use></svg>\n  </a>\n  <a href=\"#\" aria-label=\"Torna su\" data-bs-toggle=\"backtotop\" class=\"back-to-top back-to-top-small shadow\">\n    <svg class=\"icon icon-light\"><use href=\"/dist/svg/sprites.svg#it-arrow-up\"></use></svg>\n  </a>\n</div>\n"
+        "content": "\n<div class=\"d-flex align-items-center\">\n  <a href=\"#\" aria-label=\"Torna su\" data-bs-toggle=\"backtotop\" class=\"back-to-top shadow\">\n    <svg class=\"icon icon-light\"><use href=\"https://italia.github.io/bootstrap-italia/dist/svg/sprites.svg#it-arrow-up\"></use></svg>\n  </a>\n  <a href=\"#\" aria-label=\"Torna su\" data-bs-toggle=\"backtotop\" class=\"back-to-top back-to-top-small shadow\">\n    <svg class=\"icon icon-light\"><use href=\"https://italia.github.io/bootstrap-italia/dist/svg/sprites.svg#it-arrow-up\"></use></svg>\n  </a>\n</div>\n"
     },
     {
         "name": "Per sfondo scuro, esempio",
-        "content": "\n<div class=\"d-flex align-items-center p-4 neutral-1-bg-a8\">\n  <a href=\"#\" aria-label=\"Torna su\" data-bs-toggle=\"backtotop\" class=\"back-to-top dark\">\n    <svg class=\"icon icon-secondary\"><use href=\"/dist/svg/sprites.svg#it-arrow-up\"></use></svg>\n  </a>\n  <a href=\"#\" aria-label=\"Torna su\" data-bs-toggle=\"backtotop\" class=\"back-to-top back-to-top-small dark\">\n    <svg class=\"icon icon-secondary\"><use href=\"/dist/svg/sprites.svg#it-arrow-up\"></use></svg>\n  </a>\n</div>\n"
+        "content": "\n<div class=\"d-flex align-items-center p-4 neutral-1-bg-a8\">\n  <a href=\"#\" aria-label=\"Torna su\" data-bs-toggle=\"backtotop\" class=\"back-to-top dark\">\n    <svg class=\"icon icon-secondary\"><use href=\"https://italia.github.io/bootstrap-italia/dist/svg/sprites.svg#it-arrow-up\"></use></svg>\n  </a>\n  <a href=\"#\" aria-label=\"Torna su\" data-bs-toggle=\"backtotop\" class=\"back-to-top back-to-top-small dark\">\n    <svg class=\"icon icon-secondary\"><use href=\"https://italia.github.io/bootstrap-italia/dist/svg/sprites.svg#it-arrow-up\"></use></svg>\n  </a>\n</div>\n"
     },
     {
         "name": "Con ombra, per sfondo scuro, esempio",
-        "content": "\n<div class=\"d-flex align-items-center p-4 neutral-1-bg-a8\">\n  <a href=\"#\" aria-label=\"Torna su\" data-bs-toggle=\"backtotop\" class=\"back-to-top dark shadow\">\n    <svg class=\"icon icon-secondary\"><use href=\"/dist/svg/sprites.svg#it-arrow-up\"></use></svg>\n  </a>\n  <a href=\"#\" aria-label=\"Torna su\" data-bs-toggle=\"backtotop\" class=\"back-to-top back-to-top-small dark shadow\">\n    <svg class=\"icon icon-secondary\"><use href=\"/dist/svg/sprites.svg#it-arrow-up\"></use></svg>\n  </a>\n</div>\n"
+        "content": "\n<div class=\"d-flex align-items-center p-4 neutral-1-bg-a8\">\n  <a href=\"#\" aria-label=\"Torna su\" data-bs-toggle=\"backtotop\" class=\"back-to-top dark shadow\">\n    <svg class=\"icon icon-secondary\"><use href=\"https://italia.github.io/bootstrap-italia/dist/svg/sprites.svg#it-arrow-up\"></use></svg>\n  </a>\n  <a href=\"#\" aria-label=\"Torna su\" data-bs-toggle=\"backtotop\" class=\"back-to-top back-to-top-small dark shadow\">\n    <svg class=\"icon icon-secondary\"><use href=\"https://italia.github.io/bootstrap-italia/dist/svg/sprites.svg#it-arrow-up\"></use></svg>\n  </a>\n</div>\n"
     }
 ]

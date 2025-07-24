@@ -17,7 +17,9 @@ regular:
   - it-burger
   - it-calendar
   - it-camera
+  - it-car
   - it-card
+  - it-cart
   - it-chart-line
   - it-check
   - it-check-circle
@@ -91,6 +93,7 @@ regular:
   - it-star-outline
   - it-telephone
   - it-tool
+  - it-sign
   - it-unlocked
   - it-upload
   - it-user
@@ -106,6 +109,7 @@ platforms:
   - it-apple
   - it-apple-square
   - it-behance
+  - it-bluesky
   - it-facebook
   - it-facebook-square
   - it-figma
@@ -136,6 +140,7 @@ platforms:
   - it-stackexchange-square
   - it-stackoverflow
   - it-stackoverflow-square
+  - it-spotify
   - it-telegram
   - it-threads
   - it-threads-square
@@ -158,7 +163,9 @@ files:
   - it-file-audio
   - it-file-compressed
   - it-file-csv
+  - it-file-docx
   - it-file-json
+  - it-file-image
   - it-file-odp
   - it-file-ods
   - it-file-odt
@@ -166,7 +173,9 @@ files:
   - it-file-pdf-ext
   - it-file-ppt
   - it-file-sheet
+  - it-file-signed
   - it-file-slides
   - it-file-txt
   - it-file-video
+  - it-file-xlsx
   - it-file-xml

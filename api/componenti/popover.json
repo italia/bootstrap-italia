@@ -9,7 +9,7 @@
     },
     {
         "name": "Con icona e link",
-        "content": "\n<button type=\"button\" class=\"btn btn-secondary fade show\" data-container=\"body\" data-bs-toggle=\"popover\" data-bs-placement=\"top\" data-bs-html=\"true\" title=\"<svg class='icon'><use href='/dist/svg/sprites.svg#it-help-circle'></use></svg> Titolo con icona\" data-bs-content=\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue.<a href='#' class='popover-inner-link'>Leggi tutto<svg class='icon'><use href='/dist/svg/sprites.svg#it-arrow-right'></use></svg></a>\">\nPopover con icona e link\n</button>\n"
+        "content": "\n<button type=\"button\" class=\"btn btn-secondary fade show\" data-container=\"body\" data-bs-toggle=\"popover\" data-bs-placement=\"top\" data-bs-html=\"true\" title=\"<svg class='icon'><use href='https://italia.github.io/bootstrap-italia/dist/svg/sprites.svg#it-help-circle'></use></svg> Titolo con icona\" data-bs-content=\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel finibus augue.<a href='#' class='popover-inner-link'>Leggi tutto<svg class='icon'><use href='https://italia.github.io/bootstrap-italia/dist/svg/sprites.svg#it-arrow-right'></use></svg></a>\">\nPopover con icona e link\n</button>\n"
     },
     {
         "name": "Modalit\u00e0 hover",

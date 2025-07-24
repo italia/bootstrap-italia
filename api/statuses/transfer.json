@@ -1,6 +1,6 @@
 {
     "amichevole con lettori di schermo": "IN REVIEW",
-    "angular Kit": "DA FARE",
+    "angular Kit": "PRONTO",
     "assignees": [
         "Fupete"
     ],
@@ -15,7 +15,7 @@
     },
     "id": "PVTI_lADOAOqloM4AcXblzgMjwng",
     "navigabile": "DA RIVEDERE",
-    "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1187 \u2014 https://github.com/italia/bootstrap-italia/issues/1188 \u2014\u00a0https://github.com/italia/bootstrap-italia/issues/1189 \u2014\u00a0https://github.com/italia/bootstrap-italia/issues/1190 \u2014\u00a0https://github.com/italia/design-ui-kit/issues/151 \u2014 https://github.com/italia/design-angular-kit/issues/310",
+    "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1187 \u2014 https://github.com/italia/bootstrap-italia/issues/1188 \u2014\u00a0https://github.com/italia/bootstrap-italia/issues/1189 \u2014\u00a0https://github.com/italia/bootstrap-italia/issues/1190 \u2014\u00a0https://github.com/italia/design-ui-kit/issues/151",
     "react Kit": "NON PRESENTE",
     "status": "Todo",
     "status a11y check": "Done",

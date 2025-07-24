@@ -16,13 +16,14 @@
     },
     "id": "PVTI_lADOAOqloM4AcXblzgMjwUg",
     "navigabile": "PRONTO",
-    "notes / More": "Altri problemi evidenziati (future lavorazioni): Segnalati problemi con uso di colori saturi per lo sfondo, che rendono elemento troppo simile a pulsante, quando invece non \u00e8 cliccabile. Manca variante \"Bianca\" in UI Kit Italia. Uniformare spaziatura interna tra UI Kit Italia e framework di sviluppo.",
+    "notes / Issues": "https://github.com/italia/design-ui-kit/issues/181",
+    "notes / More": "Segnalati problemi con uso di colori saturi per lo sfondo, che rendono elemento troppo simile a pulsante, quando invece non \u00e8 cliccabile.",
     "react Kit": "PRONTO",
     "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-badge--documentazione",
     "status": "Todo",
     "status a11y check": "Done",
     "title": "Badge",
-    "uI Kit Italia": "PRONTO",
+    "uI Kit Italia": "DA COMPLETARE VARIANTI",
     "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920",
     "visivamente accessibile": "PRONTO"
 }

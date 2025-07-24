@@ -35,13 +35,16 @@ Nel seguente esempio sono presenti un Donut appena inizializzato ed un Donut al 
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Attivazione tramite JavaScript
+## Attivazione tramite codice
 
-È possibile creare un'istanza con il constructor, ad esempio:
+{% include callout-bundle-methods.md toggle="`data-bs-progress-donut`" %}
+
+È possibile creare un'istanza di `ProgressDonut` con il constructor, ad esempio:
 
 ```js
-var progElement = document.getElementById('prog-donut-1')
-var progDonut = new bootstrap.ProgressDonut(progElement, {
+import { ProgressDonut } from 'bootstrap-italia';
+const progElement = document.getElementById('prog-donut-1')
+const progDonut = new ProgressDonut(progElement, {
   value: 0.25,
 })
 ```
@@ -50,89 +53,82 @@ var progDonut = new bootstrap.ProgressDonut(progElement, {
 
 Le opzioni possono essere passate tramite gli attributi data o tramite JavaScript. Per quanto riguarda gli attributi data, aggiungi il nome dell'opzione a `data-bs`, come in `data-bs-value=""`.
 
-<table class="table table-bordered table-striped">
-  <thead>
-    <tr>
-      <th style="width: 100px;">Nome</th>
-      <th style="width: 50px;">Tipo</th>
-      <th style="width: 50px;">Predefinito</th>
-      <th>Descrizione</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>color</td>
-      <td>string</td>
-      <td>#0073E6</td>
-      <td>colore della barra</td>
-    </tr>
-    <tr>
-      <td>trailColor</td>
-      <td>string</td>
-      <td>#D4E9FF</td>
-      <td>colore della guida della barra</td>
-    </tr>
-    <tr>
-      <td>strokeWidth</td>
-      <td>number</td>
-      <td>24</td>
-      <td>spessore della barra</td>
-    </tr>
-    <tr>
-      <td>trailWidth</td>
-      <td>number</td>
-      <td>6</td>
-      <td>spessore della guida barra</td>
-    </tr>
-    <tr>
-      <td>easing</td>
-      <td>string</td>
-      <td>easeInOut</td>
-      <td>inerzia dell'animazione</td>
-    </tr>
-    <tr>
-      <td>animate</td>
-      <td>boolean</td>
-      <td>true</td>
-      <td>attiva/disattiva l'animazione</td>
-    </tr>
-    <tr>
-      <td>value</td>
-      <td>number</td>
-      <td>0</td>
-      <td>valore che indica la percentuale di completamento. Deve essere compreso tra 0 e 1.0</td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-responsive">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th style="width: 100px;">Nome</th>
+        <th style="width: 50px;">Tipo</th>
+        <th style="width: 50px;">Predefinito</th>
+        <th>Descrizione</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>color</td>
+        <td>string</td>
+        <td>#0073E6</td>
+        <td>colore della barra</td>
+      </tr>
+      <tr>
+        <td>trailColor</td>
+        <td>string</td>
+        <td>#D4E9FF</td>
+        <td>colore della guida della barra</td>
+      </tr>
+      <tr>
+        <td>strokeWidth</td>
+        <td>number</td>
+        <td>24</td>
+        <td>spessore della barra</td>
+      </tr>
+      <tr>
+        <td>trailWidth</td>
+        <td>number</td>
+        <td>6</td>
+        <td>spessore della guida barra</td>
+      </tr>
+      <tr>
+        <td>easing</td>
+        <td>string</td>
+        <td>easeInOut</td>
+        <td>inerzia dell'animazione</td>
+      </tr>
+      <tr>
+        <td>animate</td>
+        <td>boolean</td>
+        <td>true</td>
+        <td>attiva/disattiva l'animazione</td>
+      </tr>
+      <tr>
+        <td>value</td>
+        <td>number</td>
+        <td>0</td>
+        <td>valore che indica la percentuale di completamento. Deve essere compreso tra 0 e 1.0</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-### Metodi
+#### Metodi
 
-<table class="table table-bordered table-striped">
-  <thead>
-    <tr>
-      <th style="width: 150px;">Metodo</th>
-      <th>Descrizione</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>set</td>
-      <td>modifica lo stato di progressione della barra. È necessario inserire un numero compreso tra 0 e 1.0</td>
-    </tr>
-    <tr>
-      <td>dispose</td>
-      <td>Elimina la funzionalità del progressive donut.</td>
-    </tr>
-    <tr>
-      <td>getInstance</td>
-      <td>Metodo statico che restituisce l'istanza collapse associata ad un elemento del DOM. Esempio: <code>bootstrap.ProgressDonut.getInstance(element)</code></td>
-    </tr>
-    <tr>
-      <td>getOrCreateInstance</td>
-      <td>Metodo statico che restituisce un'istanza collapse associata ad un elemento del DOM o ne crea una nuova nel caso non fosse stata inizializzata. Esempio: <code>bootstrap.ProgressDonut.getOrCreateInstance(element)</code></td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-responsive">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th style="width: 150px;">Metodo</th>
+        <th>Descrizione</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% include standard-methods.html class="ProgressDonut" %}
+      <tr>
+        <td>set</td>
+        <td>modifica lo stato di progressione della barra. È necessario inserire un numero compreso tra 0 e 1.0</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 ## Progress Bar
 

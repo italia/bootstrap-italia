@@ -81,7 +81,11 @@ class InputLabel {
   }
 
   _isEmpty() {
-    return !this._element.value && !this._element.getAttribute('placeholder')
+    if (this._element.getAttribute('type') === 'number') {
+      return !this._element.value && !this._element.getAttribute('placeholder') && !this._element.validity.badInput
+    } else {
+      return !this._element.value && !this._element.getAttribute('placeholder')
+    }
   }
 
   _labelOut() {
