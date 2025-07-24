@@ -85,6 +85,7 @@
       }
     }
 
+    [disabled] & + .lever,
     &[disabled] + .lever {
       cursor: default;
       background-color: #e6e9f2;
@@ -93,6 +94,7 @@
       }
     }
 
+    [disabled] &:checked + .lever:after,
     &[disabled]:checked + .lever:after {
       background-color: #e6e9f2;
     }
