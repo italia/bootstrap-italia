@@ -402,7 +402,6 @@
       $hover-background: shade-color($white, 15%),
       $active-color: $primary,
       $active-background: shade-color($white, 20%)
-      // $active-border: shade-color($primary, 12.5%)
     );
     &.disabled,
     &:disabled {
@@ -424,8 +423,6 @@
       $hover-color: $white,
       $hover-background: shade-color($secondary, 15%),
       $hover-border: $secondary
-      // $active-background: tint-color($white, 10%),
-      // $active-border: shade-color($secondary, 12.5%)
     );
     color: $white;
   }
