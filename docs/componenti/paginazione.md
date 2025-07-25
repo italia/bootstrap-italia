@@ -23,7 +23,7 @@ Poiché è molto probabile che la pagina possa contenere più di un elemento `<n
   <ul class="pagination">
     <li class="page-item disabled">
       <a class="page-link" href="#">
-        <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-left"></use></svg>
+        <svg class="icon icon-disabled"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-left"></use></svg>
         <span class="visually-hidden">Pagina precedente</span>
       </a>
     </li>
@@ -62,7 +62,7 @@ In alternativa per la paginazione si può sostituire il link disabilitato con un
   <ul class="pagination">
     <li class="page-item disabled">
       <a class="page-link" href="#" tabindex="-1" aria-hidden="true">
-        <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-left"></use></svg>
+        <svg class="icon icon-disabled"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-left"></use></svg>
         <span class="visually-hidden">Pagina precedente</span>
       </a>
     </li>
@@ -78,7 +78,7 @@ In alternativa per la paginazione si può sostituire il link disabilitato con un
     <li class="page-item disabled">
       <a class="page-link" href="#" tabindex="-1" aria-hidden="true">
         <span class="visually-hidden">Pagina successiva</span>
-        <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use></svg>
+        <svg class="icon icon-disabled"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use></svg>
       </a>
     </li>
   </ul>
@@ -280,7 +280,7 @@ La funzionalità di changer permette di scegliere da un dropdown la quantità di
     <div class="dropdown-menu" aria-labelledby="pagerChanger">
       <div class="link-list-wrapper">
         <ul class="link-list">
-           <li><a class="list-item active" href="#" aria-current="page"><span>10/pagina</span></a></li>
+           <li><a class="dropdown-item list-item active" href="#" aria-current="page"><span>10/pagina</span></a></li>
            <li><a class="dropdown-item list-item" href="#"><span>20/pagina</span></a></li>
            <li><a class="dropdown-item list-item" href="#"><span>30/pagina</span></a></li>
            <li><a class="dropdown-item list-item" href="#"><span>40/pagina</span></a></li>
