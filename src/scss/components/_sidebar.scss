@@ -1,48 +1,56 @@
 //mobile
 .sidebar-wrapper {
   padding: $v-gap * 3 0;
+
   h3 {
-    font-weight: $sidebar-heading-font-weight;
-    margin-bottom: $sidebar-heading-bottom-margin;
-    font-size: $sidebar-heading-text-size;
     margin-top: $sidebar-heading-margin-top;
+    margin-bottom: $sidebar-heading-bottom-margin;
+    padding-right: $v-gap * 3;
+    padding-left: $v-gap * 3;
+    font-size: $sidebar-heading-text-size;
+    font-weight: $sidebar-heading-font-weight;
     letter-spacing: $sidebar-heading-letter-spacing;
     text-transform: uppercase;
-    padding-left: $v-gap * 3;
-    padding-right: $v-gap * 3;
   }
+
   .sidebar-linklist-wrapper {
     .link-list-wrapper {
       h3 {
-        font-weight: $sidebar-heading-font-weight;
+        margin-top: $sidebar-heading-margin-top;
         margin-bottom: $sidebar-heading-bottom-margin;
         font-size: $sidebar-heading-text-size;
-        margin-top: $sidebar-heading-margin-top;
+        font-weight: $sidebar-heading-font-weight;
         letter-spacing: $sidebar-heading-letter-spacing;
         text-transform: uppercase;
       }
+
       ul {
         li {
+
           // TODO: Add width: 100% to the li
           a {
-            line-height: $sidebar-linklist-link-line-height;
             padding-top: $sidebar-linklist-link-v-padding;
             padding-bottom: $sidebar-linklist-link-v-padding;
             padding-left: 24px; // FIXME: use a variable
             font-size: $sidebar-link-size;
+            line-height: $sidebar-linklist-link-line-height;
             text-decoration: none;
+
             i.it-expand {
-              font-size: $sidebar-dropdown-icon-size;
               top: 50%;
+              font-size: $sidebar-dropdown-icon-size;
               transform: translateY(-50%);
             }
+
             &[aria-expanded='true'] {
               i {
                 transform: translateY(-50%) scaleY(-1);
               }
             }
+
             &[data-bs-toggle='collapse'] {
               &.active {
+
                 span,
                 i {
                   color: $primary;
@@ -50,39 +58,46 @@
                 }
               }
             }
+
             &.active {
               text-decoration: none;
+
               span {
                 color: $primary;
                 text-decoration: none;
               }
+
               &:after {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
                 content: '';
                 display: block;
                 width: $sidebar-dropdown-line-selection-width;
-                position: absolute;
-                left: 0;
-                top: 0;
-                bottom: 0;
                 background-color: $sidebar-dropdown-line-selection-color;
               }
             }
+
             &.icon-right {
               padding: 0.55em 24px;
             }
           }
         }
+
         &.link-sublist {
           li {
             a {
-              font-size: $sidebar-submenu-font-size;
               padding-top: $sidebar-submenu-link-v-padding;
               padding-bottom: $sidebar-submenu-link-v-padding;
+              font-size: $sidebar-submenu-font-size;
+
               &.active {
                 span {
                   color: $color-text-base;
                   text-decoration: underline;
                 }
+
                 &::after {
                   display: none;
                 }
@@ -92,21 +107,24 @@
         }
       }
     }
+
     &.linklist-secondary {
       &:before {
         content: '';
+        display: block;
         width: $sidebar-link-small-line-width;
         height: 1px;
-        background: $color-border-subtle;
-        display: block;
-        margin-left: $v-gap * 3;
         margin-top: $v-gap * 3;
+        margin-left: $v-gap * 3;
+        background: $color-border-subtle;
       }
     }
   }
+
   // linea destra
   &.it-line-right-side {
     border-right: 1px solid $sidebar-border-color;
+
     .sidebar-linklist-wrapper {
       .link-list-wrapper {
         ul {
@@ -118,10 +136,11 @@
                   border-left: none;
                 }
               }
+
               &.active {
                 &:after {
-                  left: auto;
                   right: 0;
+                  left: auto;
                 }
               }
             }
@@ -130,6 +149,7 @@
       }
     }
   }
+
   // linea sinistra
   &.it-line-left-side {
     border-left: 1px solid $sidebar-border-color;
