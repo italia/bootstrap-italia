@@ -357,7 +357,7 @@ Tramite il contenitore `.point-year` è possibile specificare l'anno.
 <ul class="point-list-wrapper">
   <li class="point-list">
     <div class="point-list-aside point-list-primary">
-      <div class="point-year font-monospace" aria-label="anno">2025</div>
+      <div class="point-year font-monospace" aria-label="anno">{{'now' | date: "%Y"}}</div>
       <div class="point-date font-monospace" aria-label="giorno">14</div>
       <div class="point-month font-monospace" aria-label="mese"><span aria-hidden="true">OTT</span><span class="visually-hidden">Ottobre</span></div>
     </div>
@@ -486,7 +486,7 @@ colore `primary`.
 <ul class="point-list-wrapper">
   <li class="point-list">
     <div class="point-list-aside point-list-primary">
-      <div class="point-year font-monospace" aria-label="anno">2025</div>
+      <div class="point-year font-monospace" aria-label="anno">{{'now' | date: "%Y"}}</div>
       <div class="point-date font-monospace" aria-label="giorno">14</div>
       <div class="point-month font-monospace" aria-label="mese"><span aria-hidden="true">OTT</span><span class="visually-hidden">Ottobre</span></div>
     </div>
@@ -496,7 +496,7 @@ colore `primary`.
   </li>
   <li class="point-list">
     <div class="point-list-aside point-list-success">
-      <div class="point-year font-monospace" aria-label="anno">2025</div>
+      <div class="point-year font-monospace" aria-label="anno">{{'now' | date: "%Y"}}</div>
       <div class="point-date font-monospace" aria-label="giorno">14</div>
       <div class="point-month font-monospace" aria-label="mese"><span aria-hidden="true">OTT</span><span class="visually-hidden">Ottobre</span></div>
     </div>
@@ -506,7 +506,7 @@ colore `primary`.
   </li>
   <li class="point-list">
     <div class="point-list-aside point-list-info">
-      <div class="point-year font-monospace" aria-label="anno">2025</div>
+      <div class="point-year font-monospace" aria-label="anno">{{'now' | date: "%Y"}}</div>
       <div class="point-date font-monospace" aria-label="giorno">14</div>
       <div class="point-month font-monospace" aria-label="mese"><span aria-hidden="true">OTT</span><span class="visually-hidden">Ottobre</span></div>
     </div>
@@ -516,7 +516,7 @@ colore `primary`.
   </li>
   <li class="point-list">
     <div class="point-list-aside point-list-warning">
-      <div class="point-year font-monospace" aria-label="anno">2025</div>
+      <div class="point-year font-monospace" aria-label="anno">{{'now' | date: "%Y"}}</div>
       <div class="point-date font-monospace" aria-label="giorno">14</div>
       <div class="point-month font-monospace" aria-label="mese"><span aria-hidden="true">OTT</span><span class="visually-hidden">Ottobre</span></div>
     </div>
@@ -526,7 +526,7 @@ colore `primary`.
   </li>
   <li class="point-list">
     <div class="point-list-aside point-list-danger">
-      <div class="point-year font-monospace" aria-label="anno">2025</div>
+      <div class="point-year font-monospace" aria-label="anno">{{'now' | date: "%Y"}}</div>
       <div class="point-date font-monospace" aria-label="giorno">14</div>
       <div class="point-month font-monospace" aria-label="mese"><span aria-hidden="true">OTT</span><span class="visually-hidden">Ottobre</span></div>
     </div>
@@ -536,7 +536,7 @@ colore `primary`.
   </li>
   <li class="point-list">
     <div class="point-list-aside point-list-dark">
-      <div class="point-year font-monospace" aria-label="anno">2025</div>
+      <div class="point-year font-monospace" aria-label="anno">{{'now' | date: "%Y"}}</div>
       <div class="point-date font-monospace" aria-label="giorno">14</div>
       <div class="point-month font-monospace" aria-label="mese"><span aria-hidden="true">OTT</span><span class="visually-hidden">Ottobre</span></div>
     </div>
