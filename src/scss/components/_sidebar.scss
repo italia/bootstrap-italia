@@ -1,15 +1,26 @@
+//
+// Component properties
+
+.sidebar-wrapper {
+  --#{$prefix}sidebar-padding: var(--#{$prefix}spacing-m);
+  --#{$prefix}sidebar-heading-font-size: var(--#{$prefix}heading-6-font-size);
+}
+
+//
+// Component styles
+
+
 //mobile
 .sidebar-wrapper {
-  padding: $v-gap * 3 0;
+  padding: var(--#{$prefix}sidebar-padding) 0;
 
   h3 {
-    margin-top: $sidebar-heading-margin-top;
-    margin-bottom: $sidebar-heading-bottom-margin;
-    padding-right: $v-gap * 3;
-    padding-left: $v-gap * 3;
-    font-size: $sidebar-heading-text-size;
-    font-weight: $sidebar-heading-font-weight;
-    letter-spacing: $sidebar-heading-letter-spacing;
+    // margin-top: $sidebar-heading-margin-top;
+    margin-bottom: var(--#{$prefix}spacing-l);
+    padding-right: var(--#{$prefix}spacing-s);
+    padding-left: var(--#{$prefix}spacing-s);
+    font-size: var(--#{$prefix}sidebar-heading-font-size);
+    font-weight: var(--#{$prefix}font-weight-solid);
     text-transform: uppercase;
   }
 
