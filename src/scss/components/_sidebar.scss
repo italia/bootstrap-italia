@@ -4,18 +4,21 @@
 .sidebar-wrapper {
   --#{$prefix}sidebar-padding: var(--#{$prefix}spacing-m);
   --#{$prefix}sidebar-heading-font-size: var(--#{$prefix}heading-6-font-size);
+  --#{$prefix}sidebar-link-padding: var(--#{$prefix}spacing-s);
+  --#{$prefix}sidebar-link-sublist-padding: var(--#{$prefix}spacing-xs);
+  --#{$prefix}sidebar-link-font-size: var(--#{$prefix}label-font-size);
+  --#{$prefix}sidebar-link-line-height: var(--#{$prefix}label-line-height);
+  --#{$prefix}sidebar-link-active-line-width: 2px;
+  --#{$prefix}sidebar-divider-color: var(--#{$prefix}color-border-subtle);
 }
 
 //
 // Component styles
 
-
-//mobile
 .sidebar-wrapper {
-  padding: var(--#{$prefix}sidebar-padding) 0;
+  margin: var(--#{$prefix}sidebar-padding) 0;
 
   h3 {
-    // margin-top: $sidebar-heading-margin-top;
     margin-bottom: var(--#{$prefix}spacing-l);
     padding-right: var(--#{$prefix}spacing-s);
     padding-left: var(--#{$prefix}spacing-s);
@@ -29,44 +32,42 @@
 
       ul {
         li {
-
-          // TODO: Add width: 100% to the li
+          
           a {
-            padding-top: $sidebar-linklist-link-v-padding;
-            padding-bottom: $sidebar-linklist-link-v-padding;
-            padding-left: 24px; // FIXME: use a variable
-            font-size: $sidebar-link-size;
-            line-height: $sidebar-linklist-link-line-height;
+            width: 100%;
+            padding: var(--#{$prefix}sidebar-link-padding);
+            font-size: var(--#{$prefix}sidebar-link-font-size);
+            line-height: var(--#{$prefix}sidebar-link-line-height);
             text-decoration: none;
+            cursor: pointer;
 
-            i.it-expand {
-              top: 50%;
-              font-size: $sidebar-dropdown-icon-size;
-              transform: translateY(-50%);
-            }
+            // i.it-expand {
+            //   top: 50%;
+            //   font-size: $sidebar-dropdown-icon-size;
+            //   transform: translateY(-50%);
+            // }
 
-            &[aria-expanded='true'] {
-              i {
-                transform: translateY(-50%) scaleY(-1);
-              }
-            }
+            // &[aria-expanded='true'] {
+            //   i {
+            //     transform: translateY(-50%) scaleY(-1);
+            //   }
+            // }
 
-            &[data-bs-toggle='collapse'] {
-              &.active {
+            // &[data-bs-toggle='collapse'] {
+            //   &.active {
 
-                span,
-                i {
-                  color: $primary;
-                  text-decoration: none;
-                }
-              }
-            }
+            //     span,
+            //     i {
+            //       color: $primary;
+            //       text-decoration: none;
+            //     }
+            //   }
+            // }
 
             &.active {
-              text-decoration: none;
 
               span {
-                color: $primary;
+                color: var(--#{$prefix}color-text-primary-active);
                 text-decoration: none;
               }
 
@@ -77,27 +78,25 @@
                 left: 0;
                 content: '';
                 display: block;
-                width: $sidebar-dropdown-line-selection-width;
-                background-color: $sidebar-dropdown-line-selection-color;
+                width: var(--#{$prefix}sidebar-link-active-line-width);
+                background-color: var(--#{$prefix}color-border-primary-active);
               }
             }
 
-            &.icon-right {
-              padding: 0.55em 24px;
-            }
+            // &.icon-right {
+            //   padding: 16px;
+            // }
           }
         }
 
         &.link-sublist {
           li {
             a {
-              padding-top: $sidebar-submenu-link-v-padding;
-              padding-bottom: $sidebar-submenu-link-v-padding;
-              font-size: $sidebar-submenu-font-size;
+              padding-top: var(--#{$prefix}sidebar-link-sublist-padding);
+              padding-bottom: var(--#{$prefix}sidebar-link-sublist-padding);
 
               &.active {
                 span {
-                  color: $color-text-base;
                   text-decoration: underline;
                 }
 
@@ -112,14 +111,14 @@
     }
 
     &.linklist-secondary {
+      
       &:before {
         content: '';
         display: block;
-        width: $sidebar-link-small-line-width;
+        width: 100%;
         height: 1px;
-        margin-top: $v-gap * 3;
-        margin-left: $v-gap * 3;
-        background: $color-border-subtle;
+        margin: var(--#{$prefix}spacing-s) 0 var(--#{$prefix}spacing-s) var(--#{$prefix}spacing-s);
+        background: var(--#{$prefix}sidebar-divider-color);
       }
     }
   }
