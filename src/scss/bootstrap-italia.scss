@@ -98,6 +98,7 @@
 @import 'components/thumbnav';
 @import 'components/steppers';
 @import 'components/card';
+@import 'components/card-old'; // Keep till next major? (.card is deprecated)
 @import 'components/imgresponsive';
 @import 'components/overlay-panel';
 @import 'components/progress-donuts';
