@@ -68,7 +68,7 @@
 
               span {
                 color: var(--#{$prefix}color-text-primary-active);
-                text-decoration: none;
+                text-decoration: underline;
               }
 
               &:after {
