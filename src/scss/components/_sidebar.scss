@@ -28,6 +28,7 @@
             padding-top: $sidebar-linklist-link-v-padding;
             padding-bottom: $sidebar-linklist-link-v-padding;
             font-size: $sidebar-link-size;
+            cursor: pointer;
             i.it-expand {
               font-size: $sidebar-dropdown-icon-size;
               top: 50%;
@@ -80,9 +81,9 @@
                   color: $color-text-base;
                   text-decoration: underline;
                 }
-                &::after {
-                  display: none;
-                }
+                // &::after {
+                //   display: none;
+                // }
               }
             }
           }
