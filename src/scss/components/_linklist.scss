@@ -174,7 +174,7 @@
     }
 
     &[aria-expanded='true'] .icon {
-      transform: scale(-1);
+      transform: rotate(180deg);
     }
 
     .icon {
