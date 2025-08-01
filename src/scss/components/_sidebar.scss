@@ -8,7 +8,7 @@
   --#{$prefix}sidebar-link-sublist-padding: var(--#{$prefix}spacing-xs);
   --#{$prefix}sidebar-link-font-size: var(--#{$prefix}label-font-size);
   --#{$prefix}sidebar-link-line-height: var(--#{$prefix}label-line-height);
-  --#{$prefix}sidebar-link-active-line-width: 2px;
+  --#{$prefix}sidebar-link-active-line-width: 4px;
   --#{$prefix}sidebar-divider-color: var(--#{$prefix}color-border-subtle);
 }
 
@@ -79,7 +79,7 @@
                 content: '';
                 display: block;
                 width: var(--#{$prefix}sidebar-link-active-line-width);
-                background-color: var(--#{$prefix}color-border-primary-active);
+                background-color: var(--#{$prefix}color-border-primary);
               }
             }
 
