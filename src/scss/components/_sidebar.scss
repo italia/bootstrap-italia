@@ -4,8 +4,11 @@
 .sidebar-wrapper {
   --#{$prefix}sidebar-padding: var(--#{$prefix}spacing-m);
   --#{$prefix}sidebar-heading-font-size: var(--#{$prefix}heading-6-font-size);
-  --#{$prefix}sidebar-link-padding: var(--#{$prefix}spacing-s);
-  --#{$prefix}sidebar-link-sublist-padding: var(--#{$prefix}spacing-xs);
+  --#{$prefix}sidebar-link-color: var(--#{$prefix}color-text-primary);
+  --#{$prefix}sidebar-link-color-active: var(--#{$prefix}color-text-primary-active);
+  --#{$prefix}sidebar-link-padding-x: var(--#{$prefix}spacing-s);
+  --#{$prefix}sidebar-link-padding-y: var(--#{$prefix}spacing-xs);
+  --#{$prefix}sidebar-link-sublist-indent: var(--#{$prefix}spacing-m);
   --#{$prefix}sidebar-link-font-size: var(--#{$prefix}label-font-size);
   --#{$prefix}sidebar-link-line-height: var(--#{$prefix}label-line-height);
   --#{$prefix}sidebar-link-active-line-width: 4px;
@@ -32,40 +35,19 @@
 
       ul {
         li {
-          
           a {
             width: 100%;
-            padding: var(--#{$prefix}sidebar-link-padding);
+            padding: var(--#{$prefix}sidebar-link-padding-y) var(--#{$prefix}sidebar-link-padding-x);
             font-size: var(--#{$prefix}sidebar-link-font-size);
             line-height: var(--#{$prefix}sidebar-link-line-height);
             text-decoration: none;
             cursor: pointer;
 
-            // i.it-expand {
-            //   top: 50%;
-            //   font-size: $sidebar-dropdown-icon-size;
-            //   transform: translateY(-50%);
-            // }
-
-            // &[aria-expanded='true'] {
-            //   i {
-            //     transform: translateY(-50%) scaleY(-1);
-            //   }
-            // }
-
-            // &[data-bs-toggle='collapse'] {
-            //   &.active {
-
-            //     span,
-            //     i {
-            //       color: $primary;
-            //       text-decoration: none;
-            //     }
-            //   }
-            // }
+            span {
+              color: var(--#{$prefix}sidebar-link-color);
+            }
 
             &.active {
-
               span {
                 color: var(--#{$prefix}color-text-primary-active);
                 text-decoration: underline;
@@ -83,39 +65,35 @@
               }
             }
 
-            // &.icon-right {
-            //   padding: 16px;
-            // }
+            // Collapsable links
+            &[data-bs-toggle="collapse"][aria-expanded="true"] span {
+              color: var(--#{$prefix}sidebar-link-color-active);
+            }
           }
         }
 
         &.link-sublist {
-          li {
-            a {
-              padding-top: var(--#{$prefix}sidebar-link-sublist-padding);
-              padding-bottom: var(--#{$prefix}sidebar-link-sublist-padding);
+          padding-left: 0; // Reset padding for sublist from _link-list.scss
 
-              &.active {
-                span {
-                  text-decoration: underline;
-                }
-              }
+          li a {
+            padding-left: var(--#{$prefix}sidebar-link-sublist-indent);
+
+            &.active span {
+              text-decoration: underline;
             }
+            
           }
         }
       }
     }
 
-    &.linklist-secondary {
-      
-      &:before {
-        content: '';
-        display: block;
-        width: 100%;
-        height: 1px;
-        margin: var(--#{$prefix}spacing-s) 0 var(--#{$prefix}spacing-s) var(--#{$prefix}spacing-s);
-        background: var(--#{$prefix}sidebar-divider-color);
-      }
+    // Divider between link lists
+    &.linklist-secondary:before {
+      content: '';
+      display: block;s
+      height: 1px;
+      margin: var(--#{$prefix}sidebar-link-padding-y) var(--#{$prefix}sidebar-link-padding-y) var(--#{$prefix}sidebar-link-padding-y) 0;
+      background: var(--#{$prefix}sidebar-divider-color);
     }
   }
 
