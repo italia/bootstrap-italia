@@ -119,9 +119,14 @@
     }
   }
 
-  // linea destra
+  &.it-line-left-side,
   &.it-line-right-side {
-    border-right: 1px solid $sidebar-border-color;
+    border-color: var(--#{$prefix}sidebar-divider-color);
+  }
+
+  &.it-line-right-side {
+    border-right-width: 1px;
+    border-right-style: solid;
 
     .sidebar-linklist-wrapper {
       .link-list-wrapper {
@@ -148,8 +153,8 @@
     }
   }
 
-  // linea sinistra
   &.it-line-left-side {
-    border-left: 1px solid $sidebar-border-color;
+    border-left-width: 1px;
+    border-left-style: solid;
   }
 }
