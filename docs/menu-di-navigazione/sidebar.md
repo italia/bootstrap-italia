@@ -67,7 +67,7 @@ La sidebar può contenere icone nella sua Lista di link.
         <li>
           <a class="list-item medium active left-icon" href="#">
             <span class="list-item-title-icon-wrapper">
-              <svg class="icon icon-sm icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg><span>Link lista 1 (attivo)</span>
+              <svg class="icon icon-sm icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg><span>Link lista 1 (selezionato)</span>
             </span>
           </a>
         </li>
@@ -100,7 +100,7 @@ La sidebar può contenere icone nella sua Lista di link.
       <ul class="link-list">
         <li><a class="list-item" href="#"><span>Link secondario 1</span></a>
         </li>
-        <li><a class="list-item active" href="#"><span>Link secondario 2 (attivo)</span></a>
+        <li><a class="list-item active" href="#"><span>Link secondario 2 (selezionato)</span></a>
         </li>
         <li><a class="list-item disabled" href="#"><span>Link secondario 3 (disabilitato)</span></a>
         </li>
@@ -123,7 +123,7 @@ Per creare una sidebar con linea separatrice a destra è sufficiente aggiungere 
         <li>
           <h3 class="no_toc">Header</h3>
         </li>
-        <li><a class="list-item medium active" href="#"><span>Link lista 1 (attivo)</span></a>
+        <li><a class="list-item medium active" href="#"><span>Link lista 1 (selezionato)</span></a>
         </li>
         <li><a class="list-item medium disabled" href="#"><span>Link lista 2 (disabilitato)</span></a>
         </li>
@@ -139,7 +139,7 @@ Per creare una sidebar con linea separatrice a destra è sufficiente aggiungere 
       <ul class="link-list">
         <li><a class="list-item" href="#"><span>Link secondario 1</span></a>
         </li>
-        <li><a class="list-item active" href="#"><span>Link secondario 2 (attivo)</span></a>
+        <li><a class="list-item active" href="#"><span>Link secondario 2 (selezionato)</span></a>
         </li>
         <li><a class="list-item disabled" href="#"><span>Link secondario 3 (disabilitato)</span></a>
         </li>
@@ -200,7 +200,7 @@ La sidebar può contenere una Lista di link primaria annidata.
     <div class="link-list-wrapper">
       <ul class="link-list">
         <li>
-          <a class="list-item large medium right-icon active" href="#collapseOne" role="button" data-bs-toggle="collapse" aria-expanded="true" aria-controls="collapseOne">
+          <a class="list-item medium right-icon active" href="#collapseOne" role="button" data-bs-toggle="collapse" aria-expanded="true" aria-controls="collapseOne">
           <span class="list-item-title-icon-wrapper">
             <span>Link lista 1 (selezionato)</span>
             <svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
@@ -216,7 +216,7 @@ La sidebar può contenere una Lista di link primaria annidata.
           </ul>
         </li>
         <li>
-          <a class="list-item large medium right-icon" href="#collapseTwo" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo">
+          <a class="list-item medium right-icon" href="#collapseTwo" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo">
             <span class="list-item-title-icon-wrapper">
               <span>Link lista 2</span>
               <svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
@@ -232,7 +232,7 @@ La sidebar può contenere una Lista di link primaria annidata.
           </ul>
         </li>
         <li>
-          <a class="list-item large medium right-icon" href="#collapseThree" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseThree">
+          <a class="list-item medium right-icon" href="#collapseThree" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseThree">
             <span class="list-item-title-icon-wrapper">
               <span>Link lista 3</span>
               <svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
@@ -283,7 +283,7 @@ Per cambiare il tema della sidebar e renderla scura è sufficiente aggiungere al
             </span>
           </a>
           <ul class="link-sublist collapse show" id="collapseFour">
-            <li><a class="list-item active" href="#"><span>Link lista 1.1 (attivo)</span></a>
+            <li><a class="list-item active" href="#"><span>Link lista 1.1 (selezionato)</span></a>
             </li>
             <li><a class="list-item" href="#"><span>Link lista 1.2</span></a>
             </li>
@@ -329,7 +329,7 @@ Per cambiare il tema della sidebar e renderla scura è sufficiente aggiungere al
       <ul class="link-list">
         <li><a class="list-item" href="#"><span>Link secondario 1</span></a>
         </li>
-        <li><a class="list-item active" href="#"><span>Link secondario 2 (attivo)</span></a>
+        <li><a class="list-item active" href="#"><span>Link secondario 2 (selezionato)</span></a>
         </li>
         <li><a class="list-item disabled" href="#"><span>Link secondario 3 (disabilitato)</span></a>
         </li>
