@@ -1,6 +1,8 @@
+@use "sass:map";
+
 //mobile
 .section {
-  padding: #{map-get($grid-gutter-widths, sm) * 4} #{map-get($grid-gutter-widths, sm) * 2};
+  padding: #{map.get($grid-gutter-widths, sm) * 4} #{map.get($grid-gutter-widths, sm) * 2};
 
   //section content
   .section-content {
@@ -84,14 +86,14 @@
 //Tablet vertical
 @include media-breakpoint-up(md) {
   .section {
-    padding: #{map-get($grid-gutter-widths, md) * 4} #{map-get($grid-gutter-widths, md) * 2};
+    padding: #{map.get($grid-gutter-widths, md) * 4} #{map.get($grid-gutter-widths, md) * 2};
   }
 }
 
 //Tablet horizontal / small desktop
 @include media-breakpoint-up(lg) {
   .section {
-    padding: #{map-get($grid-gutter-widths, lg) * 4};
+    padding: #{map.get($grid-gutter-widths, lg) * 4};
 
     &.section-background-header {
       &.section-user-header {
@@ -110,7 +112,7 @@
 //Desktop
 @include media-breakpoint-up(xl) {
   .section {
-    padding: #{map-get($grid-gutter-widths, xl) * 4};
+    padding: #{map.get($grid-gutter-widths, xl) * 4};
 
     &.section-background-header {
       &.section-user-header {

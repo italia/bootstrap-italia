@@ -1,3 +1,5 @@
+@use "sass:map";
+
 //mobile
 .it-hero-wrapper {
   min-height: $hero-height-mob;
@@ -131,7 +133,7 @@
 }
 
 // for mobile only
-@media (max-width: #{map-get($grid-breakpoints, sm) - 1}) {
+@media (max-width: #{map.get($grid-breakpoints, sm) - 1}) {
   .it-hero-wrapper {
     &.it-wrapped-container {
       display: flex;

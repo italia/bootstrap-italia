@@ -1,4 +1,6 @@
-@media (max-width: #{map-get($grid-breakpoints, lg)}) {
+@use "sass:map";
+
+@media (max-width: #{map.get($grid-breakpoints, lg)}) {
   .it-header-center-wrapper.theme-light + .it-header-navbar-wrapper {
     .custom-navbar-toggler .icon {
       fill: $navigation-light-text-color;
@@ -112,7 +114,7 @@
 /*
 ++++++++++++++++++++++++++++++Desktop light Theme+++++++++++++++++++++++++++++++++++++++++++++++++
 */
-@media (min-width: #{map-get($grid-breakpoints, lg)}) {
+@media (min-width: #{map.get($grid-breakpoints, lg)}) {
   .it-header-navbar-wrapper {
     &.theme-light-desk {
       background: $navigation-light-bg-color;

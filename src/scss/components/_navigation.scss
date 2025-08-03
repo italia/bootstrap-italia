@@ -1,3 +1,5 @@
+@use "sass:map";
+
 //mobile
 //menu on bottom animation
 @keyframes megamenuFadeIn {
@@ -26,7 +28,7 @@
 
   @include overlay-backdrop(var(--#{$prefix}backdrop-zindex), var(--#{$prefix}backdrop-bg), var(--#{$prefix}backdrop-opacity));
 
-  @media (min-width: #{map-get($grid-breakpoints, lg)}) {
+  @media (min-width: #{map.get($grid-breakpoints, lg)}) {
     display: none; // to handle resize from md to lg when open
   }
 }
@@ -350,7 +352,7 @@
 }
 
 //Tablet horizontal / small desktop
-@media (min-width: #{map-get($grid-breakpoints, lg)}) {
+@media (min-width: #{map.get($grid-breakpoints, lg)}) {
   .row.row-column-border > [class^='col-'] .navbar {
     padding: 0;
   }

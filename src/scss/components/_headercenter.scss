@@ -1,3 +1,5 @@
+@use "sass:map";
+
 //mobile
 .it-header-center-wrapper {
   background: $header-center-bg-color;
@@ -98,7 +100,7 @@
 }
 
 //Tablet vertical
-@media (min-width: #{map-get($grid-breakpoints, md)}) {
+@media (min-width: #{map.get($grid-breakpoints, md)}) {
   .it-header-center-wrapper .it-header-center-content-wrapper .it-search-wrapper {
     margin-left: $header-center-search-distance * 0.5;
   }
@@ -108,7 +110,7 @@
 }
 
 //Tablet horizontal / small desktop
-@media (min-width: #{map-get($grid-breakpoints, lg)}) {
+@media (min-width: #{map.get($grid-breakpoints, lg)}) {
   .it-header-center-wrapper {
     height: $header-center-max-height;
     padding-left: 0;

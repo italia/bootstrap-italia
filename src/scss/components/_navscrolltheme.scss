@@ -1,4 +1,6 @@
-@media (max-width: #{map-get($grid-breakpoints, lg)}) {
+@use "sass:map";
+
+@media (max-width: #{map.get($grid-breakpoints, lg)}) {
   .navbar {
     &.it-navscroll-wrapper {
       &.theme-dark-mobile {

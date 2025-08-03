@@ -1,4 +1,5 @@
 @use 'sass:math';
+@use "sass:map";
 
 //Mobile
 .navbar {
@@ -129,7 +130,7 @@
 }
 
 //Desktop
-@media (min-width: #{map-get($grid-breakpoints, lg)}) {
+@media (min-width: #{map.get($grid-breakpoints, lg)}) {
   .navbar-nav {
     .megamenu {
       a.dropdown-toggle:before,

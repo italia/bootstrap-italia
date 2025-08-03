@@ -1,3 +1,5 @@
+@use "sass:map";
+
 //mobile
 .steppers {
   // steppers
@@ -316,7 +318,7 @@
 }
 
 //mobile ONLY BUTTONS
-@media (max-width: #{map-get($grid-breakpoints, lg) - 1px}) {
+@media (max-width: #{map.get($grid-breakpoints, lg) - 1px}) {
   .steppers {
     // navigation
     .steppers-nav {
