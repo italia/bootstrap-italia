@@ -1,4 +1,4 @@
-@use "sass:map";
+@use 'sass:map';
 
 @media (max-width: #{map.get($grid-breakpoints, lg)}) {
   .it-header-center-wrapper.theme-light + .it-header-navbar-wrapper {
