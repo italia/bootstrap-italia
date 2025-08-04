@@ -131,7 +131,6 @@
   --#{$prefix}label-font-size-xs: var(--it-label-font-size-xs);
   --#{$prefix}label-font-size-m: var(--it-label-font-size-m);
   --#{$prefix}label-line-height: var(--it-font-line-height-tight);
-  --#{$prefix}code-font-size: var(--it-font-size-3);
 
   // Typography responsive properties
   @include media-breakpoint-up(sm) {
