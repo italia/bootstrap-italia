@@ -34,7 +34,7 @@
   }
 
   &.section-emphasis {
-    --#{$prefix}-section-background-color: var(--#{$prefix}color-background-emphasis);
+    --#{$prefix}section-background-color: var(--#{$prefix}color-background-emphasis);
   }
 
   // TODO: Check if this is needed
