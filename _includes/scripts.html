@@ -127,19 +127,19 @@ https://github.com/algolia/docsearch{% endcomment %}
       divContainer.classList.add('copy-button-container');
       button.type = 'button';
       button.ariaLabel = 'Copia il codice negli appunti';
-      button.innerText = 'Copia';
-      button.classList.add('btn', 'btn-primary', 'btn-xs');
+      button.innerHTML = '<svg class="icon icon-sm icon-white" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-copy"></use></svg><span class="visually-hidden">Copia il codice negli appunti</span>';
+      button.classList.add('btn', 'shadow-sm');
       button.setAttribute('type', 'button');
       button.addEventListener('click', function () {
         const code = node.querySelector('code td[class="code"] pre') ?? node.querySelector('code td[class="rouge-code"] pre');
         navigator.clipboard.writeText(code.innerText.trim());
-        button.innerText = 'Copiato';
-        button.classList.remove('btn-primary');
-        button.classList.add('btn-success');
+         button.innerHTML = '<svg class="icon icon-sm icon-white" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg><span class="visually-hidden">Codice copiato negli appunti</span>';
+        // button.classList.remove('btn-primary');
+        // button.classList.add('btn-success');
         setTimeout(() => {
-          button.classList.remove('btn-success');
-          button.classList.add('btn-primary');
-          button.innerText = 'Copia';
+          // button.classList.remove('btn-success');
+          // button.classList.add('btn-primary');
+          button.innerHTML = '<svg class="icon icon-sm icon-white" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-copy"></use></svg><span class="visually-hidden">Copia il codice negli appunti</span>';
         }, 5000);
       });
       divContainer.appendChild(button);
