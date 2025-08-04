@@ -131,7 +131,7 @@
   --#{$prefix}label-font-size-xs: var(--it-label-font-size-xs);
   --#{$prefix}label-font-size-m: var(--it-label-font-size-m);
   --#{$prefix}label-line-height: var(--it-font-line-height-tight);
-  --#{$prefix}code-font-size: var(--it-font-size-2);
+  --#{$prefix}code-font-size: var(--it-font-size-3);
 
   // Typography responsive properties
   @include media-breakpoint-up(sm) {
@@ -196,7 +196,7 @@
   --#{$prefix}color-text-primary-hover: var(--it-color-text-primary-hover);
   --#{$prefix}color-text-primary: var(--it-color-text-primary);
   --#{$prefix}color-text-base: var(--it-color-text-base);
-  --#{$prefix}color-code: var(--it-color-text-inverse);
+  --#{$prefix}color-code: var(--it-color-text-secondary);
   --#{$prefix}color-link: var(--#{$prefix}color-text-primary);
   --#{$prefix}color-link-hover: var(--it-color-link-hover);
   --#{$prefix}color-link-active: var(--it-color-link-active);
@@ -259,7 +259,7 @@
   --#{$prefix}overlay-background-primary: hsla(210, 100%, 40%, 0.8);
   --#{$prefix}overlay-background-primary-muted: hsla(210, 54%, 20%, 0.8);
   --#{$prefix}highlight-background: var(--it-color-teal-80); // TODO: replace with semantic token
-  --#{$prefix}code-background: var(--it-color-background-secondary);
+  --#{$prefix}code-background: var(--it-color-background-muted);
   --#{$prefix}ins-background: var(--it-color-emerald-67);
   --#{$prefix}del-background: var(--it-color-red-70);
   --#{$prefix}page-background: var(--it-color-background-inverse);

@@ -3,17 +3,18 @@ pre {
   padding: var(--#{$prefix}spacing-s);
   overflow-x: auto;
   color: var(--#{$prefix}color-code);
-  font-size: var(--#{$prefix}code-font-size);
+  font-size: inherit;
 
   code {
-    color: inherit;
+    color: var(--#{$prefix}color-text-inverse);
+    background-color: transparent;
     font-size: inherit;
   }
 }
 
 code {
   color: var(--#{$prefix}color-code);
-  font-size: var(--#{$prefix}code-font-size);
+  font-size: 85%;
   word-wrap: break-word;
   background-color: var(--#{$prefix}code-background);
 }
