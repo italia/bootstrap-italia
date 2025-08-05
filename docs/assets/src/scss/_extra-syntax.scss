@@ -1,9 +1,3 @@
-.highlight .copy-button-container {
-  position: absolute;
-  right: -5px;
-  top: -20px;
-}
-
 .highlight {
   padding: 1rem;
   margin-top: 1rem;
@@ -11,14 +5,41 @@
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
   position: relative;
-  @include media-breakpoint-up(sm) {
-    padding: 1.5rem;
-  }
+
   pre {
+    font-size: 90%;
     margin-bottom: 0;
+    white-space: pre;
+    background: transparent;
+    padding: 0;
+    color: #fff;
+    overflow-x: auto;
+
     code {
-      font-size: 1rem;
       color: #eee;
+      background: transparent;
+    }
+  }
+
+  .copy-button-container {
+    display: none;
+
+    @include media-breakpoint-up(md) {
+      display: block;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+    }
+
+    .btn {
+      padding: 8px;
+      --#{$prefix}btn-bg: #444;
+      &:hover {
+        --#{$prefix}btn-hover-bg: #555;
+      }
+      &:active {
+        --#{$prefix}btn-active-bg: #666;
+      }
     }
   }
 }
