@@ -39,12 +39,7 @@
 // scss-docs-end btn-variant-mixin
 
 // scss-docs-start btn-outline-variant-mixin
-@mixin button-outline-variant(
-  $color,
-  $hover-border: shade-color($color, 20%),
-  $active-background: transparent,
-  $active-border: shade-color($color, 30%)
-) {
+@mixin button-outline-variant($color, $hover-border: shade-color($color, 20%), $active-background: transparent, $active-border: shade-color($color, 30%)) {
   --#{$prefix}btn-color: #{$color};
   --#{$prefix}btn-border-color: #{$color};
   --#{$prefix}btn-hover-color: #{$color};
@@ -68,4 +63,3 @@
   @include rfs($font-size, --#{$prefix}btn-font-size);
   --#{$prefix}btn-border-radius: #{$border-radius};
 }
-
