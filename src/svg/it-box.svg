@@ -1,9 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 25.4.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Livello_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
-<g>
-	<path d="M21,2H3v4h1v16h16V6h1V2z M19,21H5V6h14V21z M20,5H4V3h16V5z"/>
-	<rect x="8" y="8" width="8" height="1"/>
-</g>
+<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+	<path d="M21,2H3v4h1v16h16V6h1V2z M19,21H5V6h14V21z M20,5H4V3h16V5z" />
+	<rect x="8" y="8" width="8" height="1" />
 </svg>
