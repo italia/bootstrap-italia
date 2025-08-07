@@ -90,7 +90,7 @@
     // Divider between link lists
     &.linklist-secondary:before {
       content: '';
-      display: block;s
+      display: block;
       height: 1px;
       margin: var(--#{$prefix}sidebar-link-padding-y) var(--#{$prefix}sidebar-link-padding-y) var(--#{$prefix}sidebar-link-padding-y) 0;
       background: var(--#{$prefix}sidebar-divider-color);
