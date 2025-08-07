@@ -394,22 +394,36 @@
     color: $white;
   }
   .btn-primary {
-    @include button-variant($white, $primary, tint-color($white, 7.5%), shade-color($primary, 10%), tint-color($white, 10%), shade-color($primary, 12.5%));
-    color: $primary;
+    @include button-variant(
+      $white,
+      $primary,
+      $color: $primary,
+      $hover-color: $primary,
+      $hover-background: shade-color($white, 15%),
+      $active-color: $primary,
+      $active-background: shade-color($white, 20%)
+    );
     &.disabled,
     &:disabled {
       color: shade-color($primary, 10%);
     }
   }
   .btn-outline-primary {
-    @include button-outline-variant($white, color-hover($white), transparent, color-hover($white));
+    @include button-outline-variant($white);
     box-shadow: inset 0 0 0 2px $white;
     &:hover {
       box-shadow: inset 0 0 0 2px color-hover($white);
     }
   }
   .btn-secondary {
-    @include button-variant($primary, $white, tint-color($primary, 7.5%), shade-color($white, 10%), tint-color($primary, 10%), shade-color($white, 12.5%));
+    @include button-variant(
+      $secondary,
+      $secondary,
+      $color: $white,
+      $hover-color: $white,
+      $hover-background: shade-color($secondary, 15%),
+      $hover-border: $secondary
+    );
     color: $white;
   }
   .btn-outline-secondary {
