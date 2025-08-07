@@ -42,16 +42,11 @@
             line-height: var(--#{$prefix}sidebar-link-line-height);
             text-decoration: none;
             cursor: pointer;
-
-            span {
-              color: var(--#{$prefix}sidebar-link-color);
-            }
+            color: var(--#{$prefix}sidebar-link-color);
 
             &.active {
-              span {
-                color: var(--#{$prefix}color-text-primary-active);
-                text-decoration: underline;
-              }
+              color: var(--#{$prefix}color-text-primary-active);
+              text-decoration: underline;
 
               &:after {
                 position: absolute;
@@ -78,9 +73,9 @@
           li a {
             padding-left: var(--#{$prefix}sidebar-link-sublist-indent);
 
-            &.active span {
-              text-decoration: underline;
-            }
+            // &.active {
+            //   text-decoration: underline;
+            // }
             
           }
         }
