@@ -43,8 +43,7 @@
         text-decoration: none;
 
         &:hover {
-          color: $blue;
-          text-decoration: none;
+          text-decoration: underline;
         }
       }
     }

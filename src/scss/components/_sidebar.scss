@@ -51,8 +51,8 @@
             &.active {
               text-decoration: none;
               span {
-                color: $primary;
-                text-decoration: none;
+                color: $color-text-base;
+                text-decoration: underline;
               }
               &:after {
                 content: '';
