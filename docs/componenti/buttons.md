@@ -29,6 +29,7 @@ Le classi `.btn` sono state pensate per essere utilizzate con l'elemento `<butto
 In questo esempio vengono utilizzate diverse varianti di stile, come `.btn-link`,`.btn-outline-secondary` e `.btn-danger`, che conferiscono a ciascun elemento un aspetto visivo unico.
 
 {% capture callout %}
+
 #### Accessibilità
 
 Le classi `.btn` e `.btn-` conferiscono agli elementi html l'aspetto visivo di un pulsante. Anche elementi `<a>` o `<span>` possono subire questa trasformazione provocando discrepanza tra ciò che si rappresenta e la funzione semantica dell'elemento. Questo può provocare complesse problematiche di accessibilità.
@@ -72,6 +73,7 @@ Per creare pulsanti o gruppi di pulsanti a tutta larghezza, come i _block button
 
 {% comment %}Example name: Button full width{% endcomment %}
 {% capture example %}
+
 <div class="d-grid gap-2">
   <button class="btn btn-primary" type="button">Primary</button>
   <button class="btn btn-secondary" type="button">Secondary</button>
@@ -82,6 +84,7 @@ In questo esempio è stata implementata una variante responsive che visualizza i
 
 {% comment %}Example name: Button full width su mobile{% endcomment %}
 {% capture example %}
+
 <div class="d-grid gap-2 d-md-block">
   <button class="btn btn-primary" type="button">Primary</button>
   <button class="btn btn-secondary" type="button">Secondary</button>
@@ -138,7 +141,6 @@ Gli stili definiti da Bootstrap Italia utilizzano un naming consistente con Boot
 La classe `.disabled` usa `pointer-events: none` per provare a disabilitare l'attivazione dei comportamenti di default dei link `<a>`, ma tale funzionalità non è gestita in alcuni browsers. Oltre a questo, la navigazione attraverso tastiera rimane abilitata, per cui utenti che utilizzano tecnologie assistive saranno comunque in grado di attivare tali link. Per ovviare a questo problema, è possibile aggiungere l'attributo `tabindex="-1"` e utilizzare JavaScript per disabilitare le loro funzionalità.
 {% endcapture %}{% include callout.html content=callout type="warning" %}
 
-
 ### Pulsante con icona
 
 È possibile aggiungere un'icona personalizzata al pulsante con la classe `.btn-icon` in aggiunta alla classe `.btn` e alle relative varianti cromatiche e di dimensione definite in precedenza. L'icona può essere posizionata a sinistra o a destra del testo, a seconda della posizione in cui viene inserita all'interno del pulsante.
@@ -148,23 +150,23 @@ Per modificare la dimensione dell'icona, è possibile utilizzare le classi `.ico
 {% comment %}Example name: Button con icona{% endcomment %}
 {% capture example %}
 <button class="btn btn-success btn-lg btn-icon">
-  <span>Etichetta pulsante</span>
-  <svg class="icon icon-sm icon-inverse ms-1"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-full"></use></svg>
+<span>Etichetta pulsante</span>
+<svg class="icon icon-sm icon-inverse"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-full"></use></svg>
 </button>
 
 <button class="btn btn-primary btn-icon">
   <span>Etichetta pulsante</span>
-  <svg class="icon icon-sm icon-inverse ms-1"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-full"></use></svg>
+  <svg class="icon icon-sm icon-inverse"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-full"></use></svg>
 </button>
 
 <button class="btn btn-danger btn-icon">
   <span>Etichetta pulsante</span>
-  <svg class="icon icon-sm icon-inverse ms-1"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-full"></use></svg>
+  <svg class="icon icon-sm icon-inverse"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-full"></use></svg>
 </button>
 
 <button class="btn btn-secondary btn-xs btn-icon">
   <span>Etichetta pulsante</span>
-  <svg class="icon icon-xs icon-inverse ms-1"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-full"></use></svg>
+  <svg class="icon icon-xs icon-inverse"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-full"></use></svg>
 </button>
 {% endcapture %}{% include example.html content=example %}
 
@@ -177,42 +179,41 @@ Per modificare la dimensione dell'icona, è possibile utilizzare le classi `.ico
 {% comment %}Example name: Con icona, cerchiata{% endcomment %}
 {% capture example %}
 <button class="btn btn-success btn-lg btn-icon me-2">
-  <span class="rounded-icon me-2">
-    <svg class="icon icon-xs icon-success"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-user"></use></svg>
-  </span>
-  <span>Etichetta pulsante</span>
+<span class="rounded-icon">
+<svg class="icon icon-xs icon-success"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-user"></use></svg>
+</span>
+<span>Etichetta pulsante</span>
 </button>
 
 <button class="btn btn-primary btn-icon me-2">
-  <span class="rounded-icon me-2">
+  <span class="rounded-icon">
     <svg class="icon icon-xs icon-primary"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-user"></use></svg>
   </span>
   <span>Etichetta pulsante</span>
 </button>
 
 <button class="btn btn-danger btn-icon me-2">
-  <span class="rounded-icon me-2">
+  <span class="rounded-icon">
     <svg class="icon icon-xs icon-danger"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-user"></use></svg>
   </span>
   <span>Etichetta pulsante</span>
 </button>
 
 <button class="btn btn-secondary btn-xs btn-icon">
-  <span class="rounded-icon me-2">
+  <span class="rounded-icon">
     <svg class="icon icon-xs icon-secondary"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-user"></use></svg>
   </span>
   <span>Etichetta pulsante</span>
 </button>
 {% endcapture %}{% include example.html content=example %}
 
-
 ## Attivazione tramite codice
 
 ```js
-import { Button } from 'bootstrap-italia';
+import { Button } from 'bootstrap-italia'
 
-const buttonEl = document.getElementById('myButton');
-const button = new Button(buttonEl);
+const buttonEl = document.getElementById('myButton')
+const button = new Button(buttonEl)
 ```
 
 #### Metodi
@@ -236,9 +237,11 @@ const button = new Button(buttonEl);
 </div>
 
 ## Breaking change
+
 {% capture callout %}
+
 - Modificato il nome delle varianti di dimensione per coincidere con UI Kit Italia
-- Sostituite negli esempi le classi `.btn-me` con `.me-2`. 
+- Sostituite negli esempi le classi `.btn-me` con `.me-2`.
 - La class `.btn-sm` è stata rimossa dagli esempi, perché coincide con la versione base.
 - La dimensione delle icone non dipendono dalle dimensioni dei pulsanti.
-{% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}
+  {% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}
