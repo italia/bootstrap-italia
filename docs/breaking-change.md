@@ -1,6 +1,6 @@
 ---
 layout: docs
-group: breking-feature
+group: breaking-change
 toc: true
 title: Breaking change
 redirect_from: '/breaking-change/'
