@@ -3,6 +3,7 @@
 
 .sidebar-wrapper {
   --#{$prefix}sidebar-padding: var(--#{$prefix}spacing-m);
+  --#{$prefix}sidebar-background-color: transparent;
   --#{$prefix}sidebar-heading-font-size: var(--#{$prefix}heading-6-font-size);
   --#{$prefix}sidebar-link-color: var(--#{$prefix}color-text-primary);
   --#{$prefix}sidebar-link-color-active: var(--#{$prefix}color-text-primary-active);
@@ -19,7 +20,8 @@
 // Component styles
 
 .sidebar-wrapper {
-  margin: var(--#{$prefix}sidebar-padding) 0;
+  padding: var(--#{$prefix}sidebar-padding) 0;
+  background: var(--#{$prefix}sidebar-background-color);
 
   h3 {
     margin-bottom: var(--#{$prefix}spacing-m);
@@ -28,6 +30,7 @@
     font-size: var(--#{$prefix}sidebar-heading-font-size);
     font-weight: var(--#{$prefix}font-weight-solid);
     text-transform: uppercase;
+
   }
 
   .sidebar-linklist-wrapper {
@@ -131,5 +134,16 @@
   &.it-line-left-side {
     border-left-width: 1px;
     border-left-style: solid;
+  }
+}
+
+.sidebar-wrapper.theme-dark {
+  --#{$prefix}sidebar-background-color: var(--#{$prefix}color-background-secondary);
+  --#{$prefix}sidebar-link-color: var(--#{$prefix}--#{$prefix}color-text-muted);
+  --#{$prefix}sidebar-link-color-active: var(--#{$prefix}color-text-inverse);
+  --#{$prefix}sidebar-divider-color: var(--#{$prefix}color-border-subtle);
+
+  h3 {
+    color: var(--#{$prefix}color-text-inverse);
   }
 }
