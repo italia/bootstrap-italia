@@ -30,7 +30,6 @@
     font-size: var(--#{$prefix}sidebar-heading-font-size);
     font-weight: var(--#{$prefix}font-weight-solid);
     text-transform: uppercase;
-
   }
 
   .sidebar-linklist-wrapper {
@@ -41,12 +40,12 @@
           a {
             width: 100%;
             padding: var(--#{$prefix}sidebar-link-padding-y) var(--#{$prefix}sidebar-link-padding-x);
+            color: var(--#{$prefix}sidebar-link-color);
             font-size: var(--#{$prefix}sidebar-link-font-size);
             line-height: var(--#{$prefix}sidebar-link-line-height);
             text-decoration: none;
             text-transform: var(--#{$prefix}sidebar-text-transform, none); // Default to none if not set
             cursor: pointer;
-            color: var(--#{$prefix}sidebar-link-color);
 
             &.active {
               color: var(--#{$prefix}color-text-primary-active);
@@ -81,7 +80,7 @@
             // &.active {
             //   text-decoration: underline;
             // }
-            
+
           }
         }
       }
@@ -139,7 +138,7 @@
 
 .sidebar-wrapper.theme-dark {
   --#{$prefix}sidebar-background-color: var(--#{$prefix}color-background-secondary);
-  --#{$prefix}sidebar-link-color: var(--#{$prefix}--#{$prefix}color-text-muted);
+  --#{$prefix}sidebar-link-color: var(--#{$prefix}color-text-muted);
   --#{$prefix}sidebar-link-color-active: var(--#{$prefix}color-text-inverse);
   --#{$prefix}sidebar-divider-color: var(--#{$prefix}color-border-subtle);
 
