@@ -13,6 +13,7 @@
   --#{$prefix}sidebar-link-line-height: var(--#{$prefix}label-line-height);
   --#{$prefix}sidebar-link-active-line-width: 4px;
   --#{$prefix}sidebar-divider-color: var(--#{$prefix}color-border-subtle);
+  --#{$prefix}sidebar-text-transform: uppercase; // Default to uppercase if not set
 }
 
 //
@@ -41,6 +42,7 @@
             font-size: var(--#{$prefix}sidebar-link-font-size);
             line-height: var(--#{$prefix}sidebar-link-line-height);
             text-decoration: none;
+            text-transform: var(--#{$prefix}sidebar-text-transform, none); // Default to none if not set
             cursor: pointer;
             color: var(--#{$prefix}sidebar-link-color);
 
