@@ -9,6 +9,9 @@ optional: hide_markup - disabled (default)
 
 {%- assign preview_id = include.id -%}
 {%- assign preview_class = include.class -%}
+{%- assign random_id = "now" | date: "%s%N" -%}
+{%- assign accordion_id = "accordion-" | append: random_id -%}
+{%- assign collapse_id = "collapse-" | append: random_id -%}
 
 {%- if include.hide_preview == null -%}
 <div{% if preview_id %} id="{{ preview_id }}"{% endif %} class="bd-example{% if preview_class %} {{ preview_class }}{% endif %}">
@@ -17,7 +20,20 @@ optional: hide_markup - disabled (default)
 {%- endif -%}
 
 {%- if include.hide_markup == null -%}
-{%- highlight html linenos -%}
-{{- include.content | replace_regex: 'no_toc\s?', '' | replace_regex: '\sclass=""', '' | replace: 'data-src="holder.js', 'src="...' -}}
-{%- endhighlight -%}
+<div class="accordion accordion-left-icon border-bottom-0 pt-2" id="{{ accordion_id }}" style="margin-bottom: 2rem;">
+  <div class="accordion-item" style="background: transparent;">
+    <h2 class="accordion-header" id="heading-{{ random_id }}">
+      <button class="accordion-button border-top-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#{{ collapse_id }}" aria-expanded="false" aria-controls="{{ collapse_id }}">
+        Codice Bootstrap Italia
+      </button>
+    </h2>
+    <div id="{{ collapse_id }}" class="accordion-collapse collapse" data-bs-parent="#{{ accordion_id }}" role="region" aria-labelledby="heading-{{ random_id }}">
+      <div class="accordion-body p-0 position-relative">
+        {%- highlight html linenos -%}
+        {{- include.content | replace_regex: 'no_toc\s?', '' | replace_regex: '\sclass=""', '' | replace: 'data-src="holder.js', 'src="...' -}}
+        {%- endhighlight -%}
+      </div>
+    </div>
+  </div>
+</div>
 {%- endif -%}
