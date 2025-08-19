@@ -5,13 +5,11 @@
  * CSS Custom Properties for latest a11y theme
  */
 @layer bsi-syntax {
-
-  @media (forced-colors: none),
-  (forced-colors: active) {
+  @media (forced-colors: none), (forced-colors: active) {
     :root {
       --bsi-syntax-background: hsla(0, 0%, 17%, 1); // #2b2b2b
       --bsi-syntax-text: hsla(60, 30%, 96%, 1); // #f8f8f2
-      --bsi-syntax-comment: hsla(60, 30%, 96%, .5); // #f8f8f2 with 50% opacity (line numbers, comments) 
+      --bsi-syntax-comment: hsla(60, 30%, 96%, 0.5); // #f8f8f2 with 50% opacity (line numbers, comments)
       --bsi-syntax-cyan: hsla(187, 77.9%, 66.3%, 1); // #66dcec (keywords, operators)
       --bsi-syntax-green: hsla(80, 75%, 55%, 1); // #a9e236 (strings)
       --bsi-syntax-purple: hsla(291, 30%, 83%, 1); // #ddc7e1 (numbers)
@@ -20,9 +18,7 @@
     }
   }
 
-  @media (forced-colors: none),
-  (forced-colors: active) {
-
+  @media (forced-colors: none), (forced-colors: active) {
     /* Base highlight container */
     .highlight {
       color: var(--bsi-syntax-text);
@@ -53,7 +49,7 @@
 
     /* Prompt */
     .highlight .gp {
-      color: var(--bsi-syntax-yellow); 
+      color: var(--bsi-syntax-yellow);
       font-weight: normal;
     }
 
@@ -65,13 +61,13 @@
     .highlight .cpf,
     .highlight .c1,
     .highlight .cs {
-      color: var(--bsi-syntax-comment); 
+      color: var(--bsi-syntax-comment);
       font-style: italic;
     }
 
     /* Preprocessor - should be keyword-like */
     .highlight .cp {
-      color: var(--bsi-syntax-cyan); 
+      color: var(--bsi-syntax-cyan);
       font-weight: normal;
     }
 
@@ -95,21 +91,21 @@
     .highlight .kn,
     .highlight .kp,
     .highlight .kr {
-      color: var(--bsi-syntax-cyan); 
+      color: var(--bsi-syntax-cyan);
       font-weight: normal;
     }
 
     /* Operators */
     .highlight .o,
     .highlight .ow {
-      color: var(--bsi-syntax-cyan); 
+      color: var(--bsi-syntax-cyan);
       font-weight: normal;
     }
 
     /* Punctuation */
     .highlight .p,
     .highlight .pi {
-      color: var(--bsi-syntax-text); 
+      color: var(--bsi-syntax-text);
     }
 
     /* Diff deleted */
@@ -138,20 +134,20 @@
     /* Tags and HTML-like names */
     .highlight .nt {
       // Name.Tag (HTML tags)
-      color: var(--bsi-syntax-red); 
+      color: var(--bsi-syntax-red);
       font-weight: normal;
     }
 
     /* Generic headings */
     .highlight .gh,
     .highlight .gu {
-      color: var(--bsi-syntax-red); 
+      color: var(--bsi-syntax-red);
       font-weight: normal;
     }
 
     /* Name.Label */
     .highlight .nl {
-      color: var(--bsi-syntax-yellow); 
+      color: var(--bsi-syntax-yellow);
       font-weight: normal;
     }
 
@@ -164,7 +160,7 @@
     // Name.Constant
     .highlight .bp {
       // Name.Builtin.Pseudo
-      color: var(--bsi-syntax-yellow); 
+      color: var(--bsi-syntax-yellow);
       font-weight: normal;
     }
 
@@ -180,7 +176,7 @@
     /* Exceptions */
     .highlight .ne {
       // Name.Exception
-      color: var(--bsi-syntax-red); 
+      color: var(--bsi-syntax-red);
       font-weight: normal;
     }
 
@@ -216,13 +212,13 @@
     .highlight .sx,
     .highlight .sr,
     .highlight .s1 {
-      color: var(--bsi-syntax-yellow); 
+      color: var(--bsi-syntax-yellow);
       font-weight: normal;
     }
 
     /* String attributes */
     .highlight .sa {
-      color: var(--bsi-syntax-green); 
+      color: var(--bsi-syntax-green);
       font-weight: normal;
     }
 
@@ -230,14 +226,14 @@
     .highlight .se,
     .highlight .sc,
     .highlight .si {
-      color: var(--bsi-syntax-cyan); 
+      color: var(--bsi-syntax-cyan);
       font-weight: normal;
     }
 
     /* Built-ins */
     .highlight .nb {
       // Name.Builtin
-      color: var(--bsi-syntax-yellow); 
+      color: var(--bsi-syntax-yellow);
       font-weight: normal;
     }
 
@@ -259,18 +255,18 @@
     // Name.Function
     .highlight .fm {
       // Name.Function.Magic
-      color: var(--bsi-syntax-yellow)
+      color: var(--bsi-syntax-yellow);
     }
 
     .highlight .py {
       // Name.Property
-      color: var(--bsi-syntax-yellow); 
+      color: var(--bsi-syntax-yellow);
     }
 
     /* Attributes - CORRECTED */
     .highlight .na {
       // Name.Attribute
-      color: var(--bsi-syntax-green); 
+      color: var(--bsi-syntax-green);
     }
 
     /* Variables - CORRECTED */
@@ -284,7 +280,7 @@
     // Name.Variable.Instance
     .highlight .vm {
       // Name.Variable.Magic
-      color: var(--bsi-syntax-cyan); 
+      color: var(--bsi-syntax-cyan);
       font-weight: normal;
     }
   }
