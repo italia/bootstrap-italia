@@ -1,5 +1,4 @@
 .bd-example-row {
-
   .d-flex,
   .row {
     background-image: linear-gradient(45deg, $neutral-1-a2 25%, transparent 25%), linear-gradient(-45deg, $neutral-1-a2 25%, transparent 25%),
@@ -13,9 +12,8 @@
   }
 
   .row {
-
-    >.col,
-    >[class^='col-'] {
+    > .col,
+    > [class^='col-'] {
       padding-top: 0.75rem;
       padding-bottom: 0.75rem;
       background-color: rgba($primary, 0.75);
@@ -23,7 +21,7 @@
       color: $white;
     }
 
-    +.row {
+    + .row {
       margin-top: 1rem;
     }
   }
@@ -124,7 +122,7 @@
   border-width: 1px;
   background-color: $gray-100;
   border-radius: 4px;
-  box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
 
   @include clearfix();
 
@@ -132,12 +130,12 @@
     padding: 2.5rem 1.5rem;
   }
 
-  +.highlight,
-  +.clipboard+.highlight {
+  + .highlight,
+  + .clipboard + .highlight {
     margin-top: 0;
   }
 
-  +p {
+  + p {
     margin-top: 2rem;
   }
 
@@ -150,31 +148,31 @@
     }
   }
 
-  >.form-control {
-    +.form-control {
+  > .form-control {
+    + .form-control {
       margin-top: 0.5rem;
     }
   }
 
-  >.nav+.nav,
-  >.alert+.alert,
-  >.navbar+.navbar,
-  >.progress+.progress,
-  >.progress+.btn {
+  > .nav + .nav,
+  > .alert + .alert,
+  > .navbar + .navbar,
+  > .progress + .progress,
+  > .progress + .btn {
     margin-top: 1rem;
   }
 
-  >.dropdown-menu:first-child {
+  > .dropdown-menu:first-child {
     position: relative;
     display: block;
     top: 0;
   }
 
-  >.form-group:last-child {
+  > .form-group:last-child {
     margin-bottom: 1rem;
   }
 
-  >.close {
+  > .close {
     float: none;
   }
 
@@ -183,12 +181,12 @@
   }
 
   // Buttons
-  >.btn-group {
+  > .btn-group {
     margin-top: 0.25rem;
     margin-bottom: 0.25rem;
   }
 
-  >.btn-toolbar+.btn-toolbar {
+  > .btn-toolbar + .btn-toolbar {
     margin-top: 0.5rem;
   }
 
@@ -205,7 +203,6 @@
   }
 
   @include media-breakpoint-up(sm) {
-
     .fixed-top,
     .sticky-top {
       margin: -1.5rem -1.5rem 1rem;
@@ -252,15 +249,15 @@
 }
 
 // Images
-.bd-example>img {
-  +img {
+.bd-example > img {
+  + img {
     margin-left: 0.5rem;
   }
 }
 
 // Forms
 .bd-example-control-sizing select,
-.bd-example-control-sizing input[type='text']+input[type='text'] {
+.bd-example-control-sizing input[type='text'] + input[type='text'] {
   margin-top: 0.5rem;
 }
 
@@ -268,7 +265,7 @@
   margin-bottom: 0.5rem;
 }
 
-.bd-example>textarea.form-control {
+.bd-example > textarea.form-control {
   resize: vertical;
 }
 
