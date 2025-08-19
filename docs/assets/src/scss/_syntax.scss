@@ -1,214 +1,315 @@
-.highlight table td {
-  padding: 5px;
-}
-.highlight table pre {
-  margin: 0;
-}
-.highlight {
-  color: #faf6e4;
-  background-color: rgb(43, 43, 43);
-}
-.highlight .gl {
-  display: inline-block;
-  min-width: 2.25em;
-  padding-right: 1em;
-  text-align: right;
-  user-select: none;
-  color: rgb(212, 208, 171);
-}
-.highlight .gp {
-  color: rgb(171, 227, 56);
-  font-weight: normal;
-}
-.highlight .c,
-.highlight .ch,
-.highlight .cd,
-.highlight .cm,
-.highlight .cpf,
-.highlight .c1,
-.highlight .cs {
-  color: #d4d0ab;
-  font-style: italic;
-}
-.highlight .cp {
-  color: #b2fd6d;
-  font-weight: normal;
-}
-.highlight .err {
-  color: #fefeec;
-  background-color: #cc0000;
-}
-.highlight .gr {
-  color: #cc0000;
-  font-weight: normal;
-  font-style: italic;
-}
-.highlight .k,
-.highlight .kd,
-.highlight .kv {
-  color: #f6dd62;
-  font-weight: normal;
-}
-.highlight .o,
-.highlight .ow {
-  color: #4df4ff;
-  font-weight: normal;
-}
-.highlight .p,
-.highlight .pi {
-  color: #4df4ff;
-}
-.highlight .gd {
-  color: #cc0000;
-}
-.highlight .gi {
-  color: #b2fd6d;
-}
-.highlight .ge {
-  font-style: italic;
-}
-.highlight .gs {
-  font-weight: normal;
-}
-.highlight .gt {
-  color: #dee5e7;
-  background-color: #4e5d62;
-}
-.highlight .kc {
-  color: #f696db;
-  font-weight: normal;
-}
-.highlight .kn {
-  color: rgb(255, 160, 122);
-  font-weight: normal;
-}
-.highlight .kp {
-  color: rgb(255, 160, 122);
-  font-weight: normal;
-}
-.highlight .kr {
-  color: rgb(255, 160, 122);
-  font-weight: normal;
-}
-.highlight .gh {
-  color: rgb(255, 160, 122);
-  font-weight: normal;
-}
-.highlight .gu {
-  color: rgb(255, 160, 122);
-  font-weight: normal;
-}
-.highlight .kt {
-  color: #b2fd6d;
-  font-weight: normal;
-}
-.highlight .no {
-  color: #b2fd6d;
-  font-weight: normal;
-}
-.highlight .nc {
-  color: #b2fd6d;
-  font-weight: normal;
-}
-.highlight .nd {
-  color: #b2fd6d;
-  font-weight: normal;
-}
-.highlight .nn {
-  color: #b2fd6d;
-  font-weight: normal;
-}
-.highlight .bp {
-  color: #b2fd6d;
-  font-weight: normal;
-}
-.highlight .ne {
-  color: #b2fd6d;
-  font-weight: normal;
-}
-.highlight .nl {
-  color: rgb(255, 160, 122);
-  font-weight: normal;
-}
-.highlight .nt {
-  color: rgb(255, 160, 122);
-  font-weight: normal;
-}
-.highlight .m,
-.highlight .mb,
-.highlight .mf,
-.highlight .mh,
-.highlight .mi,
-.highlight .il,
-.highlight .mo,
-.highlight .mx {
-  color: #f696db;
-  font-weight: normal;
-}
-.highlight .ld {
-  color: #f696db;
-  font-weight: normal;
-}
-.highlight .ss {
-  color: #f696db;
-  font-weight: normal;
-}
-.highlight .s,
-.highlight .sb,
-.highlight .dl,
-.highlight .sd,
-.highlight .s2,
-.highlight .sh,
-.highlight .sx,
-.highlight .sr,
-.highlight .s1 {
-  color: rgb(255, 215, 0);
-  font-weight: normal;
-}
-.highlight .sa {
-  color: #f6dd62;
-  font-weight: normal;
-}
-.highlight .se {
-  color: #4df4ff;
-  font-weight: normal;
-}
-.highlight .sc {
-  color: #4df4ff;
-  font-weight: normal;
-}
-.highlight .si {
-  color: #4df4ff;
-  font-weight: normal;
-}
-.highlight .nb {
-  font-weight: normal;
-}
-.highlight .ni {
-  color: #999999;
-  font-weight: normal;
-}
-.highlight .w {
-  color: #bbbbbb;
-}
-.highlight .go {
-  color: #bbbbbb;
-}
-.highlight .nf,
-.highlight .fm {
-  color: rgb(171, 227, 56);
-}
-.highlight .py {
-  color: rgb(171, 227, 56);
-}
-.highlight .na {
-  color: rgb(171, 227, 56);
-}
-.highlight .nv,
-.highlight .vc,
-.highlight .vg,
-.highlight .vi,
-.highlight .vm {
-  color: rgb(171, 227, 56);
-  font-weight: normal;
+// Corrected Bootstrap Italia syntax.scss - Proper a11y color mapping
+// Fixed the color assignments based on semantic meaning
+
+/* 
+ * CSS Custom Properties for latest a11y theme
+ */
+@layer bsi-syntax {
+
+  @media (forced-colors: none),
+  (forced-colors: active) {
+    :root {
+      --bsi-syntax-background: hsla(0, 0%, 17%, 1); // #2b2b2b
+      --bsi-syntax-text: hsla(60, 30%, 96%, 1); // #f8f8f2
+      --bsi-syntax-comment: hsla(60, 30%, 96%, .5); // #f8f8f2 with 50% opacity (line numbers, comments) 
+      --bsi-syntax-cyan: hsla(187, 77.9%, 66.3%, 1); // #66dcec (keywords, operators)
+      --bsi-syntax-green: hsla(80, 75%, 55%, 1); // #a9e236 (strings)
+      --bsi-syntax-purple: hsla(291, 30%, 83%, 1); // #ddc7e1 (numbers)
+      --bsi-syntax-red: hsla(17, 100%, 74%, 1); // #ffa07a (tags, names)
+      --bsi-syntax-yellow: hsla(51, 100%, 50%, 1); // #ffd900 (functions, attributes)
+    }
+  }
+
+  @media (forced-colors: none),
+  (forced-colors: active) {
+
+    /* Base highlight container */
+    .highlight {
+      color: var(--bsi-syntax-text);
+      background-color: var(--bsi-syntax-background);
+      padding: 1em;
+      border-radius: 0 0 0.3em 0.3em;
+    }
+
+    .highlight table td {
+      padding: 5px;
+    }
+
+    .highlight table pre {
+      margin: 0;
+    }
+
+    /* Line numbers */
+    .highlight .gl {
+      display: inline-block;
+      min-width: 2.25em;
+      text-align: right;
+      user-select: none;
+      border-right: 1px solid !important;
+      padding-right: 10px;
+      margin-right: 5px;
+      color: var(--bsi-syntax-comment);
+    }
+
+    /* Prompt */
+    .highlight .gp {
+      color: var(--bsi-syntax-yellow); 
+      font-weight: normal;
+    }
+
+    /* Comments */
+    .highlight .c,
+    .highlight .ch,
+    .highlight .cd,
+    .highlight .cm,
+    .highlight .cpf,
+    .highlight .c1,
+    .highlight .cs {
+      color: var(--bsi-syntax-comment); 
+      font-style: italic;
+    }
+
+    /* Preprocessor - should be keyword-like */
+    .highlight .cp {
+      color: var(--bsi-syntax-cyan); 
+      font-weight: normal;
+    }
+
+    /* Error */
+    .highlight .err {
+      color: var(--bsi-syntax-text);
+      background-color: #cc0000;
+    }
+
+    .highlight .gr {
+      color: #cc0000;
+      font-weight: normal;
+      font-style: italic;
+    }
+
+    /* Keywords */
+    .highlight .k,
+    .highlight .kd,
+    .highlight .kv,
+    .highlight .kc,
+    .highlight .kn,
+    .highlight .kp,
+    .highlight .kr {
+      color: var(--bsi-syntax-cyan); 
+      font-weight: normal;
+    }
+
+    /* Operators */
+    .highlight .o,
+    .highlight .ow {
+      color: var(--bsi-syntax-cyan); 
+      font-weight: normal;
+    }
+
+    /* Punctuation */
+    .highlight .p,
+    .highlight .pi {
+      color: var(--bsi-syntax-text); 
+    }
+
+    /* Diff deleted */
+    .highlight .gd {
+      color: var(--bsi-syntax-red);
+    }
+
+    /* Diff inserted */
+    .highlight .gi {
+      color: var(--bsi-syntax-green);
+    }
+
+    .highlight .ge {
+      font-style: italic;
+    }
+
+    .highlight .gs {
+      font-weight: normal;
+    }
+
+    .highlight .gt {
+      color: var(--bsi-syntax-text);
+      background-color: #4e5d62;
+    }
+
+    /* Tags and HTML-like names */
+    .highlight .nt {
+      // Name.Tag (HTML tags)
+      color: var(--bsi-syntax-red); 
+      font-weight: normal;
+    }
+
+    /* Generic headings */
+    .highlight .gh,
+    .highlight .gu {
+      color: var(--bsi-syntax-red); 
+      font-weight: normal;
+    }
+
+    /* Name.Label */
+    .highlight .nl {
+      color: var(--bsi-syntax-yellow); 
+      font-weight: normal;
+    }
+
+    /* Types and Classes */
+    .highlight .kt,
+    // Keyword.Type
+    .highlight .nc,
+    // Name.Class
+    .highlight .no,
+    // Name.Constant
+    .highlight .bp {
+      // Name.Builtin.Pseudo
+      color: var(--bsi-syntax-yellow); 
+      font-weight: normal;
+    }
+
+    /* Decorators and Namespaces */
+    .highlight .nd,
+    // Name.Decorator
+    .highlight .nn {
+      // Name.Namespace
+      color: var(--bsi-syntax-cyan);
+      font-weight: normal;
+    }
+
+    /* Exceptions */
+    .highlight .ne {
+      // Name.Exception
+      color: var(--bsi-syntax-red); 
+      font-weight: normal;
+    }
+
+    /* Numbers */
+    .highlight .m,
+    .highlight .mb,
+    .highlight .mf,
+    .highlight .mh,
+    .highlight .mi,
+    .highlight .il,
+    .highlight .mo,
+    .highlight .mx {
+      color: var(--bsi-syntax-purple);
+      font-weight: normal;
+    }
+
+    /* Literal Data */
+    .highlight .ld,
+    // Literal.Date
+    .highlight .ss {
+      // String.Symbol
+      color: var(--bsi-syntax-yellow);
+      font-weight: normal;
+    }
+
+    /* Strings */
+    .highlight .s,
+    .highlight .sb,
+    .highlight .dl,
+    .highlight .sd,
+    .highlight .s2,
+    .highlight .sh,
+    .highlight .sx,
+    .highlight .sr,
+    .highlight .s1 {
+      color: var(--bsi-syntax-yellow); 
+      font-weight: normal;
+    }
+
+    /* String attributes */
+    .highlight .sa {
+      color: var(--bsi-syntax-green); 
+      font-weight: normal;
+    }
+
+    /* String escape */
+    .highlight .se,
+    .highlight .sc,
+    .highlight .si {
+      color: var(--bsi-syntax-cyan); 
+      font-weight: normal;
+    }
+
+    /* Built-ins */
+    .highlight .nb {
+      // Name.Builtin
+      color: var(--bsi-syntax-yellow); 
+      font-weight: normal;
+    }
+
+    .highlight .ni {
+      color: #999999;
+      font-weight: normal;
+    }
+
+    .highlight .w {
+      color: #bbbbbb;
+    }
+
+    .highlight .go {
+      color: #bbbbbb;
+    }
+
+    /* Functions */
+    .highlight .nf,
+    // Name.Function
+    .highlight .fm {
+      // Name.Function.Magic
+      color: var(--bsi-syntax-yellow)
+    }
+
+    .highlight .py {
+      // Name.Property
+      color: var(--bsi-syntax-yellow); 
+    }
+
+    /* Attributes - CORRECTED */
+    .highlight .na {
+      // Name.Attribute
+      color: var(--bsi-syntax-green); 
+    }
+
+    /* Variables - CORRECTED */
+    .highlight .nv,
+    // Name.Variable
+    .highlight .vc,
+    // Name.Variable.Class
+    .highlight .vg,
+    // Name.Variable.Global
+    .highlight .vi,
+    // Name.Variable.Instance
+    .highlight .vm {
+      // Name.Variable.Magic
+      color: var(--bsi-syntax-cyan); 
+      font-weight: normal;
+    }
+  }
+
+  /* Forced Colors mode support */
+  @media (forced-colors: active) {
+    :root {
+      --bsi-syntax-background: Canvas;
+      --bsi-syntax-text: CanvasText;
+      --bsi-syntax-comment: GrayText;
+      --bsi-syntax-cyan: LinkText;
+      --bsi-syntax-green: CanvasText;
+      --bsi-syntax-purple: CanvasText;
+      --bsi-syntax-red: CanvasText;
+      --bsi-syntax-yellow: GrayText;
+    }
+
+    .highlight .k,
+    .highlight .kd,
+    .highlight .kv,
+    .highlight .kc,
+    .highlight .kn,
+    .highlight .kp,
+    .highlight .kr {
+      font-weight: bold;
+    }
+  }
 }
