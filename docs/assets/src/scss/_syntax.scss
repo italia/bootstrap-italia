@@ -1,5 +1,5 @@
-// Corrected Bootstrap Italia syntax.scss - Proper a11y color mapping
-// Fixed the color assignments based on semantic meaning
+// Corrected Bootstrap Italia syntax.scss - Aligned with Eric's a11y theme
+// Fixed the color assignments to match Eric's semantic mapping
 
 /* 
  * CSS Custom Properties for latest a11y theme
@@ -9,34 +9,35 @@
     :root {
       --bsi-syntax-background: hsla(0, 0%, 17%, 1); // #2b2b2b
       --bsi-syntax-text: hsla(60, 30%, 96%, 1); // #f8f8f2
-      --bsi-syntax-comment: hsla(60, 30%, 96%, 0.5); // #f8f8f2 with 50% opacity (line numbers, comments)
-      --bsi-syntax-cyan: hsla(187, 77.9%, 66.3%, 1); // #66dcec (keywords, operators)
-      --bsi-syntax-green: hsla(80, 75%, 55%, 1); // #a9e236 (strings)
-      --bsi-syntax-purple: hsla(291, 30%, 83%, 1); // #ddc7e1 (numbers)
-      --bsi-syntax-red: hsla(17, 100%, 74%, 1); // #ffa07a (tags, names)
-      --bsi-syntax-yellow: hsla(51, 100%, 50%, 1); // #ffd900 (functions, attributes)
+      --bsi-syntax-comment: hsla(54, 32%, 75%, 1); // Comments)
+      --bsi-syntax-line-numbers: hsla(60, 30%, 96%, 0.5); // Line numbers)
+      --bsi-syntax-red: hsla(17, 100%, 74%, 1); // Variables, tags, names, deletion
+      --bsi-syntax-orange: hsla(37, 91%, 58%, 1); // Numbers, built-ins, literals, types
+      --bsi-syntax-yellow: hsla(51, 100%, 50%, 1); // Attributes only
+      --bsi-syntax-green: hsla(80, 75%, 55%, 1); // Strings, symbols, bullets, additions
+      --bsi-syntax-cyan: hsla(187, 77.9%, 66.3%, 1); // Functions, titles, sections
+      --bsi-syntax-purple: hsla(291, 30%, 83%, 1); // Keywords, selectors
     }
   }
 
   @media (forced-colors: none), (forced-colors: active) {
     /* Base highlight container */
-    .highlight {
+    :where(.highlight) {
       color: var(--bsi-syntax-text);
       background-color: var(--bsi-syntax-background);
-      padding: 1em;
-      border-radius: 0 0 0.3em 0.3em;
+      padding: 0.5em;
     }
 
-    .highlight table td {
+    :where(.highlight table td) {
       padding: 5px;
     }
 
-    .highlight table pre {
+    :where(.highlight table pre) {
       margin: 0;
     }
 
     /* Line numbers */
-    .highlight .gl {
+    :where(.highlight .gl) {
       display: inline-block;
       min-width: 2.25em;
       text-align: right;
@@ -44,244 +45,183 @@
       border-right: 1px solid !important;
       padding-right: 10px;
       margin-right: 5px;
-      color: var(--bsi-syntax-comment);
+      color: var(--bsi-syntax-line-numbers);
     }
 
     /* Prompt */
-    .highlight .gp {
-      color: var(--bsi-syntax-yellow);
+    :where(.highlight .gp) {
+      color: var(--bsi-syntax-green);
       font-weight: normal;
     }
 
     /* Comments */
-    .highlight .c,
-    .highlight .ch,
-    .highlight .cd,
-    .highlight .cm,
-    .highlight .cpf,
-    .highlight .c1,
-    .highlight .cs {
+    :where(
+      .highlight .c,
+      .highlight .ch,
+      .highlight .cd,
+      .highlight .cm,
+      .highlight .cpf,
+      .highlight .c1,
+      .highlight .cs
+    ) {
       color: var(--bsi-syntax-comment);
       font-style: italic;
     }
 
-    /* Preprocessor - should be keyword-like */
-    .highlight .cp {
-      color: var(--bsi-syntax-cyan);
+    /* Preprocessor */
+    :where(.highlight .cp) {
+      color: var(--bsi-syntax-purple);
       font-weight: normal;
     }
 
     /* Error */
-    .highlight .err {
+    :where(.highlight .err) {
       color: var(--bsi-syntax-text);
       background-color: #cc0000;
     }
 
-    .highlight .gr {
+    :where(.highlight .gr) {
       color: #cc0000;
       font-weight: normal;
       font-style: italic;
     }
 
-    /* Keywords */
-    .highlight .k,
-    .highlight .kd,
-    .highlight .kv,
-    .highlight .kc,
-    .highlight .kn,
-    .highlight .kp,
-    .highlight .kr {
-      color: var(--bsi-syntax-cyan);
-      font-weight: normal;
-    }
-
-    /* Operators */
-    .highlight .o,
-    .highlight .ow {
-      color: var(--bsi-syntax-cyan);
-      font-weight: normal;
-    }
-
-    /* Punctuation */
-    .highlight .p,
-    .highlight .pi {
-      color: var(--bsi-syntax-text);
-    }
-
-    /* Diff deleted */
-    .highlight .gd {
+    /* Red - Variables, tags, names, selectors, deletion */
+    :where(
+      .highlight .nv,
+      .highlight .vc,
+      .highlight .vg,
+      .highlight .vi,
+      .highlight .vm,
+      .highlight .nt,
+      .highlight .gh,
+      .highlight .gu,
+      .highlight .nl,
+      .highlight .ne,
+      .highlight .gd
+    ) {
       color: var(--bsi-syntax-red);
+      font-weight: normal;
     }
 
-    /* Diff inserted */
-    .highlight .gi {
+    /* Orange - Numbers, built-ins, literals, types, params, meta */
+    :where(
+      .highlight .m,
+      .highlight .mb,
+      .highlight .mf,
+      .highlight .mh,
+      .highlight .mi,
+      .highlight .il,
+      .highlight .mo,
+      .highlight .mx,
+      .highlight .nb,
+      .highlight .bp,
+      .highlight .kt,
+      .highlight .nc,
+      .highlight .no,
+      .highlight .ld
+    ) {
+      color: var(--bsi-syntax-orange);
+      font-weight: normal;
+    }
+
+    /* Yellow - Attributes only */
+    :where(.highlight .na) {
+      color: var(--bsi-syntax-yellow);
+      font-weight: normal;
+    }
+
+    /* Green - Strings, symbols, bullets, additions */
+    :where(
+      .highlight .s,
+      .highlight .sb,
+      .highlight .dl,
+      .highlight .sd,
+      .highlight .s2,
+      .highlight .sh,
+      .highlight .sx,
+      .highlight .sr,
+      .highlight .s1,
+      .highlight .ss,
+      .highlight .sa,
+      .highlight .gi
+    ) {
       color: var(--bsi-syntax-green);
-    }
-
-    .highlight .ge {
-      font-style: italic;
-    }
-
-    .highlight .gs {
       font-weight: normal;
     }
 
-    .highlight .gt {
-      color: var(--bsi-syntax-text);
-      background-color: #4e5d62;
-    }
-
-    /* Tags and HTML-like names */
-    .highlight .nt {
-      // Name.Tag (HTML tags)
-      color: var(--bsi-syntax-red);
-      font-weight: normal;
-    }
-
-    /* Generic headings */
-    .highlight .gh,
-    .highlight .gu {
-      color: var(--bsi-syntax-red);
-      font-weight: normal;
-    }
-
-    /* Name.Label */
-    .highlight .nl {
-      color: var(--bsi-syntax-yellow);
-      font-weight: normal;
-    }
-
-    /* Types and Classes */
-    .highlight .kt,
-    // Keyword.Type
-    .highlight .nc,
-    // Name.Class
-    .highlight .no,
-    // Name.Constant
-    .highlight .bp {
-      // Name.Builtin.Pseudo
-      color: var(--bsi-syntax-yellow);
-      font-weight: normal;
-    }
-
-    /* Decorators and Namespaces */
-    .highlight .nd,
-    // Name.Decorator
-    .highlight .nn {
-      // Name.Namespace
+    /* Cyan - Functions, titles, sections */
+    :where(
+      .highlight .nf,
+      .highlight .fm,
+      .highlight .py,
+      .highlight .nd,
+      .highlight .nn
+    ) {
       color: var(--bsi-syntax-cyan);
       font-weight: normal;
     }
 
-    /* Exceptions */
-    .highlight .ne {
-      // Name.Exception
-      color: var(--bsi-syntax-red);
-      font-weight: normal;
-    }
-
-    /* Numbers */
-    .highlight .m,
-    .highlight .mb,
-    .highlight .mf,
-    .highlight .mh,
-    .highlight .mi,
-    .highlight .il,
-    .highlight .mo,
-    .highlight .mx {
+    /* Purple - Keywords, selectors */
+    :where(
+      .highlight .k,
+      .highlight .kd,
+      .highlight .kv,
+      .highlight .kc,
+      .highlight .kn,
+      .highlight .kp,
+      .highlight .kr,
+      .highlight .o,
+      .highlight .ow
+    ) {
       color: var(--bsi-syntax-purple);
       font-weight: normal;
     }
 
-    /* Literal Data */
-    .highlight .ld,
-    // Literal.Date
-    .highlight .ss {
-      // String.Symbol
-      color: var(--bsi-syntax-yellow);
-      font-weight: normal;
+    /* Punctuation */
+    :where(
+      .highlight .p,
+      .highlight .pi
+    ) {
+      color: var(--bsi-syntax-text);
     }
 
-    /* Strings */
-    .highlight .s,
-    .highlight .sb,
-    .highlight .dl,
-    .highlight .sd,
-    .highlight .s2,
-    .highlight .sh,
-    .highlight .sx,
-    .highlight .sr,
-    .highlight .s1 {
-      color: var(--bsi-syntax-yellow);
-      font-weight: normal;
-    }
-
-    /* String attributes */
-    .highlight .sa {
-      color: var(--bsi-syntax-green);
-      font-weight: normal;
-    }
-
-    /* String escape */
-    .highlight .se,
-    .highlight .sc,
-    .highlight .si {
+    /* String escape sequences */
+    :where(
+      .highlight .se,
+      .highlight .sc,
+      .highlight .si
+    ) {
       color: var(--bsi-syntax-cyan);
       font-weight: normal;
     }
 
-    /* Built-ins */
-    .highlight .nb {
-      // Name.Builtin
-      color: var(--bsi-syntax-yellow);
-      font-weight: normal;
+    /* Emphasis and Strong (from Eric) */
+    :where(.highlight .ge) {
+      font-style: italic;
     }
 
-    .highlight .ni {
+    :where(.highlight .gs) {
+      font-weight: bold;
+    }
+
+    /* Generic */
+    :where(.highlight .gt) {
+      color: var(--bsi-syntax-text);
+      background-color: #4e5d62;
+    }
+
+    :where(.highlight .ni) {
       color: #999999;
       font-weight: normal;
     }
 
-    .highlight .w {
+    :where(.highlight .w) {
       color: #bbbbbb;
     }
 
-    .highlight .go {
+    :where(.highlight .go) {
       color: #bbbbbb;
-    }
-
-    /* Functions */
-    .highlight .nf,
-    // Name.Function
-    .highlight .fm {
-      // Name.Function.Magic
-      color: var(--bsi-syntax-yellow);
-    }
-
-    .highlight .py {
-      // Name.Property
-      color: var(--bsi-syntax-yellow);
-    }
-
-    /* Attributes - CORRECTED */
-    .highlight .na {
-      // Name.Attribute
-      color: var(--bsi-syntax-green);
-    }
-
-    /* Variables - CORRECTED */
-    .highlight .nv,
-    // Name.Variable
-    .highlight .vc,
-    // Name.Variable.Class
-    .highlight .vg,
-    // Name.Variable.Global
-    .highlight .vi,
-    // Name.Variable.Instance
-    .highlight .vm {
-      // Name.Variable.Magic
-      color: var(--bsi-syntax-cyan);
-      font-weight: normal;
     }
   }
 
@@ -291,20 +231,23 @@
       --bsi-syntax-background: Canvas;
       --bsi-syntax-text: CanvasText;
       --bsi-syntax-comment: GrayText;
-      --bsi-syntax-cyan: LinkText;
-      --bsi-syntax-green: CanvasText;
-      --bsi-syntax-purple: CanvasText;
       --bsi-syntax-red: CanvasText;
+      --bsi-syntax-orange: CanvasText;
       --bsi-syntax-yellow: GrayText;
+      --bsi-syntax-green: CanvasText;
+      --bsi-syntax-cyan: LinkText;
+      --bsi-syntax-purple: CanvasText;
     }
 
-    .highlight .k,
-    .highlight .kd,
-    .highlight .kv,
-    .highlight .kc,
-    .highlight .kn,
-    .highlight .kp,
-    .highlight .kr {
+    :where(
+      .highlight .k,
+      .highlight .kd,
+      .highlight .kv,
+      .highlight .kc,
+      .highlight .kn,
+      .highlight .kp,
+      .highlight .kr
+    ) {
       font-weight: bold;
     }
   }
