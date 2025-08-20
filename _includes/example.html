@@ -1,23 +1,122 @@
 {%- comment -%}
 Usage: {% include example.html content=markup %},
 where content is a capture with the HTML content
-id - null (default)
-class - "bd-example" (default)
-optional: hide_preview - disabled (default)
-optional: hide_markup - disabled (default)
+
+Parameters:
+- id: null (default) - Custom ID for the preview container
+- class: "bd-example" (default) - Additional CSS classes for preview
+- hide_preview: null (default) - Set to true to hide the preview
+- hide_markup: null (default) - Set to true to hide the code
+- accordion_title: "Codice Bootstrap Italia" (default) - Title for accordion button
+- accordion_expanded: null (default) - Explicit override for expansion state
+- accordion_class: "" (default) - Additional classes for accordion container
 {%- endcomment -%}
 
 {%- assign preview_id = include.id -%}
 {%- assign preview_class = include.class -%}
+{%- assign accordion_title = include.accordion_title | default: "Codice Bootstrap Italia" -%}
+{%- assign accordion_class = include.accordion_class | default: "" -%}
 
+{%- comment -%} Generate unique IDs with timestamp + nanoseconds {%- endcomment -%}
+{%- assign unique_id = "now" | date: "%6N" -%}
+{%- assign accordion_id = "accordion-example-" | append: unique_id -%}
+{%- assign collapse_id = "collapse-example-" | append: unique_id -%}
+{%- assign heading_id = "heading-example-" | append: unique_id -%}
+
+{%- comment -%} Determine if this should be expanded {%- endcomment -%}
+{%- if include.accordion_expanded != null -%}
+  {%- assign should_expand = include.accordion_expanded -%}
+{%- else -%}
+  {%- assign should_expand = false -%}
+{%- endif -%}
+
+{%- comment -%} Determine accordion state classes {%- endcomment -%}
+{%- if should_expand -%}
+  {%- assign button_class = "accordion-button border-top-0" -%}
+  {%- assign collapse_class = "accordion-collapse collapse show" -%}
+  {%- assign aria_expanded = "true" -%}
+{%- else -%}
+  {%- assign button_class = "accordion-button border-top-0 collapsed" -%}
+  {%- assign collapse_class = "accordion-collapse collapse" -%}
+  {%- assign aria_expanded = "false" -%}
+{%- endif -%}
+
+{%- comment -%} Preview section {%- endcomment -%}
 {%- if include.hide_preview == null -%}
 <div{% if preview_id %} id="{{ preview_id }}"{% endif %} class="bd-example{% if preview_class %} {{ preview_class }}{% endif %}">
-{{- include.content -}}
+  {{- include.content -}}
 </div>
 {%- endif -%}
 
+{%- comment -%} Code accordion section {%- endcomment -%}
 {%- if include.hide_markup == null -%}
-{%- highlight html linenos -%}
-{{- include.content | replace_regex: 'no_toc\s?', '' | replace_regex: '\sclass=""', '' | replace: 'data-src="holder.js', 'src="...' -}}
-{%- endhighlight -%}
+<div class="accordion accordion-left-icon border-bottom-0 pt-2 auto-expand-first code-example-accordion{% if accordion_class %} {{ accordion_class }}{% endif %}" 
+     id="{{ accordion_id }}" 
+     style="margin-bottom: 2rem;" 
+     data-auto-expand="true">
+  <div class="accordion-item" style="background: transparent;">
+    {%- comment -%} Header with copy button {%- endcomment -%}
+    <div class="d-flex justify-content-between align-items-center">
+      <h2 class="accordion-header flex-grow-1 no_toc" id="{{ heading_id }}">
+        <button class="{{ button_class }}" 
+                type="button" 
+                data-bs-toggle="collapse" 
+                data-bs-target="#{{ collapse_id }}" 
+                aria-expanded="{{ aria_expanded }}" 
+                aria-controls="{{ collapse_id }}">
+          {{ accordion_title }}
+        </button>
+      </h2>
+      <div class="d-flex align-items-center">
+        <button type="button" 
+                class="btn shadow-none btn-xs btn-secondary p-2 me-2 copy-code-btn" 
+                aria-label="Copia il codice negli appunti"
+                data-target="#{{ collapse_id }}">
+          <svg role="img" class="icon icon-sm align-middle icon-white" aria-label="Copia il codice negli appunti">
+            <use href="/dist/svg/sprites.svg#it-copy"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    
+    <div id="{{ collapse_id }}" 
+         class="{{ collapse_class }}" 
+         data-bs-parent="#{{ accordion_id }}" 
+         role="region" 
+         aria-labelledby="{{ heading_id }}">
+      <div class="accordion-body p-0 position-relative">
+        {%- highlight html linenos -%}
+        {{- include.content | replace_regex: 'no_toc\s?', '' | replace_regex: '\sclass=""', '' | replace: 'data-src="holder.js', 'src="...' -}}
+        {%- endhighlight -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{%- comment -%} Auto-expand first accordion {%- endcomment -%}
+<script type="text/javascript">
+if (!window.accordionAutoExpandSetup) {
+  window.accordionAutoExpandSetup = true;
+  
+  function initAutoExpand() {
+    const firstAccordion = document.querySelector('.auto-expand-first[data-auto-expand="true"]');
+    if (firstAccordion) {
+      const button = firstAccordion.querySelector('.accordion-button');
+      const collapse = firstAccordion.querySelector('.accordion-collapse');
+      
+      if (button && collapse && button.classList.contains('collapsed')) {
+        button.classList.remove('collapsed');
+        button.setAttribute('aria-expanded', 'true');
+        collapse.classList.add('show');
+      }
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initAutoExpand);
+  } else {
+    setTimeout(initAutoExpand, 0);
+  }
+}
+</script>
 {%- endif -%}

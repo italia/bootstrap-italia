@@ -1,15 +1,14 @@
 .highlight .copy-button-container {
   position: absolute;
-  right: -5px;
-  top: -20px;
+  right: 5px;
+  top: 5px;
 }
 
 .highlight {
   padding: 1rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
+  border-radius: 4px;
   position: relative;
   @include media-breakpoint-up(sm) {
     padding: 1.5rem;
