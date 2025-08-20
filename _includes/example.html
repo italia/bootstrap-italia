@@ -2,9 +2,6 @@
 Usage: {% include example.html content=markup %},
 where content is a capture with the HTML content
 
-This version automatically expands the first accordion on each page
-without requiring any changes to the pages themselves.
-
 Parameters:
 - id: null (default) - Custom ID for the preview container
 - class: "bd-example" (default) - Additional CSS classes for preview
@@ -20,11 +17,12 @@ Parameters:
 {%- assign accordion_title = include.accordion_title | default: "Codice Bootstrap Italia" -%}
 {%- assign accordion_class = include.accordion_class | default: "" -%}
 
-{%- comment -%} Generate unique IDs {%- endcomment -%}
-{%- assign random_id = "now" | date: "%s%N" -%}
-{%- assign accordion_id = "accordion-" | append: random_id -%}
-{%- assign collapse_id = "collapse-" | append: random_id -%}
-{%- assign heading_id = "heading-" | append: random_id -%}
+{%- comment -%} Generate unique IDs with proper format {%- endcomment -%}
+{%- assign timestamp = "now" | date: "%s" -%}
+{%- assign random_suffix = timestamp | append: forloop.index0 | default: "" -%}
+{%- assign accordion_id = "accordion-example-" | append: random_suffix -%}
+{%- assign collapse_id = "collapse-example-" | append: random_suffix -%}
+{%- assign heading_id = "heading-example-" | append: random_suffix -%}
 
 {%- comment -%} Determine if this should be expanded {%- endcomment -%}
 {%- if include.accordion_expanded != null -%}
@@ -59,8 +57,8 @@ Parameters:
      data-auto-expand="true">
   <div class="accordion-item" style="background: transparent;">
     {%- comment -%} Header with copy button {%- endcomment -%}
-    <div class="d-flex justify-content-between align-items-center" id="{{ heading_id }}">
-      <h2 class="accordion-header flex-grow-1">
+    <div class="d-flex justify-content-between align-items-center">
+      <h2 class="accordion-header flex-grow-1 no_toc" id="{{ heading_id }}">
         <button class="{{ button_class }}" 
                 type="button" 
                 data-bs-toggle="collapse" 
