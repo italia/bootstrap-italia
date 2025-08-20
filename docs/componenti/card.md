@@ -1763,7 +1763,7 @@ Per garantire una buona accessibilità, mantieni un rapporto di contrasto colore
 
 ### Immagini
 
-Per definire il rapporto tra altezza e larghezza delle immagini in tutte le card di base, usa le classi `.ratio`. Scopri le classi e modalità dedicate nella scheda [Proporzioni](http://localhost:4000/docs/organizzare-gli-spazi/proporzioni/).
+Per definire il rapporto tra altezza e larghezza delle immagini in tutte le card di base, usa le classi `.ratio`. Scopri le classi e modalità dedicate nella scheda [Proporzioni](https://italia.github.io/bootstrap-italia/docs/organizzare-gli-spazi/proporzioni/).
 
 Le varianti inline delle card hanno proporzioni immagini specifiche su desktop. Su dispositivi piccoli o con ingrandimento elevato (tranne le mini) usano il layout verticale con le proporzioni degli esempi seguenti.
 
