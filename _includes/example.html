@@ -17,14 +17,11 @@ Parameters:
 {%- assign accordion_title = include.accordion_title | default: "Codice Bootstrap Italia" -%}
 {%- assign accordion_class = include.accordion_class | default: "" -%}
 
-{%- comment -%} Generate unique IDs using content hash {%- endcomment -%}
-{%- assign content_hash = include.content | truncate: 50 | replace: " ", "" | replace: "<", "" | replace: ">", "" | replace: "\"", "" | replace: "'", "" -%}
-{%- assign timestamp = "now" | date: "%s%N" -%}
-{%- assign page_hash = page.path | replace: "/", "" | replace: ".", "" | truncate: 10 -%}
-{%- assign unique_suffix = timestamp | append: "-" | append: page_hash | append: "-" | append: content_hash | truncate: 50 -%}
-{%- assign accordion_id = "accordion-example-" | append: unique_suffix -%}
-{%- assign collapse_id = "collapse-example-" | append: unique_suffix -%}
-{%- assign heading_id = "heading-example-" | append: unique_suffix -%}
+{%- comment -%} Generate unique IDs with timestamp + nanoseconds {%- endcomment -%}
+{%- assign unique_id = "now" | date: "%s%N" -%}
+{%- assign accordion_id = "accordion-example-" | append: unique_id -%}
+{%- assign collapse_id = "collapse-example-" | append: unique_id -%}
+{%- assign heading_id = "heading-example-" | append: unique_id -%}
 
 {%- comment -%} Determine if this should be expanded {%- endcomment -%}
 {%- if include.accordion_expanded != null -%}
