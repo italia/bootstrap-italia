@@ -18,7 +18,7 @@ Parameters:
 {%- assign accordion_class = include.accordion_class | default: "" -%}
 
 {%- comment -%} Generate unique IDs with timestamp + nanoseconds {%- endcomment -%}
-{%- assign unique_id = "now" | date: "%s%N" -%}
+{%- assign unique_id = "now" | date: "%6N" -%}
 {%- assign accordion_id = "accordion-example-" | append: unique_id -%}
 {%- assign collapse_id = "collapse-example-" | append: unique_id -%}
 {%- assign heading_id = "heading-example-" | append: unique_id -%}
