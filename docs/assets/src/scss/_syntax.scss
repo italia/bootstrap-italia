@@ -1,214 +1,215 @@
-.highlight table td {
-  padding: 5px;
-}
-.highlight table pre {
-  margin: 0;
-}
-.highlight {
-  color: #faf6e4;
-  background-color: rgb(43, 43, 43);
-}
-.highlight .gl {
-  display: inline-block;
-  min-width: 2.25em;
-  padding-right: 1em;
-  text-align: right;
-  user-select: none;
-  color: rgb(212, 208, 171);
-}
-.highlight .gp {
-  color: rgb(171, 227, 56);
-  font-weight: normal;
-}
-.highlight .c,
-.highlight .ch,
-.highlight .cd,
-.highlight .cm,
-.highlight .cpf,
-.highlight .c1,
-.highlight .cs {
-  color: #d4d0ab;
-  font-style: italic;
-}
-.highlight .cp {
-  color: #b2fd6d;
-  font-weight: normal;
-}
-.highlight .err {
-  color: #fefeec;
-  background-color: #cc0000;
-}
-.highlight .gr {
-  color: #cc0000;
-  font-weight: normal;
-  font-style: italic;
-}
-.highlight .k,
-.highlight .kd,
-.highlight .kv {
-  color: #f6dd62;
-  font-weight: normal;
-}
-.highlight .o,
-.highlight .ow {
-  color: #4df4ff;
-  font-weight: normal;
-}
-.highlight .p,
-.highlight .pi {
-  color: #4df4ff;
-}
-.highlight .gd {
-  color: #cc0000;
-}
-.highlight .gi {
-  color: #b2fd6d;
-}
-.highlight .ge {
-  font-style: italic;
-}
-.highlight .gs {
-  font-weight: normal;
-}
-.highlight .gt {
-  color: #dee5e7;
-  background-color: #4e5d62;
-}
-.highlight .kc {
-  color: #f696db;
-  font-weight: normal;
-}
-.highlight .kn {
-  color: rgb(255, 160, 122);
-  font-weight: normal;
-}
-.highlight .kp {
-  color: rgb(255, 160, 122);
-  font-weight: normal;
-}
-.highlight .kr {
-  color: rgb(255, 160, 122);
-  font-weight: normal;
-}
-.highlight .gh {
-  color: rgb(255, 160, 122);
-  font-weight: normal;
-}
-.highlight .gu {
-  color: rgb(255, 160, 122);
-  font-weight: normal;
-}
-.highlight .kt {
-  color: #b2fd6d;
-  font-weight: normal;
-}
-.highlight .no {
-  color: #b2fd6d;
-  font-weight: normal;
-}
-.highlight .nc {
-  color: #b2fd6d;
-  font-weight: normal;
-}
-.highlight .nd {
-  color: #b2fd6d;
-  font-weight: normal;
-}
-.highlight .nn {
-  color: #b2fd6d;
-  font-weight: normal;
-}
-.highlight .bp {
-  color: #b2fd6d;
-  font-weight: normal;
-}
-.highlight .ne {
-  color: #b2fd6d;
-  font-weight: normal;
-}
-.highlight .nl {
-  color: rgb(255, 160, 122);
-  font-weight: normal;
-}
-.highlight .nt {
-  color: rgb(255, 160, 122);
-  font-weight: normal;
-}
-.highlight .m,
-.highlight .mb,
-.highlight .mf,
-.highlight .mh,
-.highlight .mi,
-.highlight .il,
-.highlight .mo,
-.highlight .mx {
-  color: #f696db;
-  font-weight: normal;
-}
-.highlight .ld {
-  color: #f696db;
-  font-weight: normal;
-}
-.highlight .ss {
-  color: #f696db;
-  font-weight: normal;
-}
-.highlight .s,
-.highlight .sb,
-.highlight .dl,
-.highlight .sd,
-.highlight .s2,
-.highlight .sh,
-.highlight .sx,
-.highlight .sr,
-.highlight .s1 {
-  color: rgb(255, 215, 0);
-  font-weight: normal;
-}
-.highlight .sa {
-  color: #f6dd62;
-  font-weight: normal;
-}
-.highlight .se {
-  color: #4df4ff;
-  font-weight: normal;
-}
-.highlight .sc {
-  color: #4df4ff;
-  font-weight: normal;
-}
-.highlight .si {
-  color: #4df4ff;
-  font-weight: normal;
-}
-.highlight .nb {
-  font-weight: normal;
-}
-.highlight .ni {
-  color: #999999;
-  font-weight: normal;
-}
-.highlight .w {
-  color: #bbbbbb;
-}
-.highlight .go {
-  color: #bbbbbb;
-}
-.highlight .nf,
-.highlight .fm {
-  color: rgb(171, 227, 56);
-}
-.highlight .py {
-  color: rgb(171, 227, 56);
-}
-.highlight .na {
-  color: rgb(171, 227, 56);
-}
-.highlight .nv,
-.highlight .vc,
-.highlight .vg,
-.highlight .vi,
-.highlight .vm {
-  color: rgb(171, 227, 56);
-  font-weight: normal;
+// Corrected Bootstrap Italia syntax.scss - Aligned with Eric's a11y theme
+// Fixed the color assignments to match Eric's semantic mapping
+
+/* 
+ * CSS Custom Properties for latest a11y theme
+ */
+@layer bsi-syntax {
+  @media (forced-colors: none), (forced-colors: active) {
+    :root {
+      --bsi-syntax-background: hsla(0, 0%, 17%, 1); // #2b2b2b
+      --bsi-syntax-text: hsla(60, 30%, 96%, 1); // #f8f8f2
+      --bsi-syntax-comment: hsla(54, 32%, 75%, 1); // Comments)
+      --bsi-syntax-line-numbers: hsla(60, 30%, 96%, 0.5); // Line numbers)
+      --bsi-syntax-red: hsla(17, 100%, 74%, 1); // Variables, tags, names, deletion
+      --bsi-syntax-orange: hsla(37, 91%, 58%, 1); // Numbers, built-ins, literals, types
+      --bsi-syntax-yellow: hsla(51, 100%, 50%, 1); // Attributes only
+      --bsi-syntax-green: hsla(80, 75%, 55%, 1); // Strings, symbols, bullets, additions
+      --bsi-syntax-cyan: hsla(187, 77.9%, 66.3%, 1); // Functions, titles, sections
+      --bsi-syntax-purple: hsla(291, 30%, 83%, 1); // Keywords, selectors
+    }
+  }
+
+  @media (forced-colors: none), (forced-colors: active) {
+    /* Base highlight container */
+    :where(.highlight) {
+      color: var(--bsi-syntax-text);
+      background-color: var(--bsi-syntax-background);
+      padding: 0.5em;
+    }
+
+    :where(.highlight table td) {
+      padding: 5px;
+    }
+
+    :where(.highlight table pre) {
+      margin: 0;
+    }
+
+    /* Line numbers */
+    :where(.highlight .gl) {
+      display: inline-block;
+      min-width: 2.25em;
+      text-align: right;
+      user-select: none;
+      border-right: 1px solid !important;
+      padding-right: 10px;
+      margin-right: 5px;
+      color: var(--bsi-syntax-line-numbers);
+    }
+
+    /* Prompt */
+    :where(.highlight .gp) {
+      color: var(--bsi-syntax-green);
+      font-weight: normal;
+    }
+
+    /* Comments */
+    :where(.highlight .c, .highlight .ch, .highlight .cd, .highlight .cm, .highlight .cpf, .highlight .c1, .highlight .cs) {
+      color: var(--bsi-syntax-comment);
+      font-style: italic;
+    }
+
+    /* Preprocessor */
+    :where(.highlight .cp) {
+      color: var(--bsi-syntax-purple);
+      font-weight: normal;
+    }
+
+    /* Error */
+    :where(.highlight .err) {
+      color: var(--bsi-syntax-text);
+      background-color: #cc0000;
+    }
+
+    :where(.highlight .gr) {
+      color: #cc0000;
+      font-weight: normal;
+      font-style: italic;
+    }
+
+    /* Red - Variables, tags, names, selectors, deletion */
+    :where(
+        .highlight .nv,
+        .highlight .vc,
+        .highlight .vg,
+        .highlight .vi,
+        .highlight .vm,
+        .highlight .nt,
+        .highlight .gh,
+        .highlight .gu,
+        .highlight .nl,
+        .highlight .ne,
+        .highlight .gd
+      ) {
+      color: var(--bsi-syntax-red);
+      font-weight: normal;
+    }
+
+    /* Orange - Numbers, built-ins, literals, types, params, meta */
+    :where(
+        .highlight .m,
+        .highlight .mb,
+        .highlight .mf,
+        .highlight .mh,
+        .highlight .mi,
+        .highlight .il,
+        .highlight .mo,
+        .highlight .mx,
+        .highlight .nb,
+        .highlight .bp,
+        .highlight .kt,
+        .highlight .nc,
+        .highlight .no,
+        .highlight .ld
+      ) {
+      color: var(--bsi-syntax-orange);
+      font-weight: normal;
+    }
+
+    /* Yellow - Attributes only */
+    :where(.highlight .na) {
+      color: var(--bsi-syntax-yellow);
+      font-weight: normal;
+    }
+
+    /* Green - Strings, symbols, bullets, additions */
+    :where(
+        .highlight .s,
+        .highlight .sb,
+        .highlight .dl,
+        .highlight .sd,
+        .highlight .s2,
+        .highlight .sh,
+        .highlight .sx,
+        .highlight .sr,
+        .highlight .s1,
+        .highlight .ss,
+        .highlight .sa,
+        .highlight .gi
+      ) {
+      color: var(--bsi-syntax-green);
+      font-weight: normal;
+    }
+
+    /* Cyan - Functions, titles, sections */
+    :where(.highlight .nf, .highlight .fm, .highlight .py, .highlight .nd, .highlight .nn) {
+      color: var(--bsi-syntax-cyan);
+      font-weight: normal;
+    }
+
+    /* Purple - Keywords, selectors */
+    :where(.highlight .k, .highlight .kd, .highlight .kv, .highlight .kc, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .o, .highlight .ow) {
+      color: var(--bsi-syntax-purple);
+      font-weight: normal;
+    }
+
+    /* Punctuation */
+    :where(.highlight .p, .highlight .pi) {
+      color: var(--bsi-syntax-text);
+    }
+
+    /* String escape sequences */
+    :where(.highlight .se, .highlight .sc, .highlight .si) {
+      color: var(--bsi-syntax-cyan);
+      font-weight: normal;
+    }
+
+    /* Emphasis and Strong (from Eric) */
+    :where(.highlight .ge) {
+      font-style: italic;
+    }
+
+    :where(.highlight .gs) {
+      font-weight: bold;
+    }
+
+    /* Generic */
+    :where(.highlight .gt) {
+      color: var(--bsi-syntax-text);
+      background-color: #4e5d62;
+    }
+
+    :where(.highlight .ni) {
+      color: #999999;
+      font-weight: normal;
+    }
+
+    :where(.highlight .w) {
+      color: #bbbbbb;
+    }
+
+    :where(.highlight .go) {
+      color: #bbbbbb;
+    }
+  }
+
+  /* Forced Colors mode support */
+  @media (forced-colors: active) {
+    :root {
+      --bsi-syntax-background: Canvas;
+      --bsi-syntax-text: CanvasText;
+      --bsi-syntax-comment: GrayText;
+      --bsi-syntax-red: CanvasText;
+      --bsi-syntax-orange: CanvasText;
+      --bsi-syntax-yellow: GrayText;
+      --bsi-syntax-green: CanvasText;
+      --bsi-syntax-cyan: LinkText;
+      --bsi-syntax-purple: CanvasText;
+    }
+
+    :where(.highlight .k, .highlight .kd, .highlight .kv, .highlight .kc, .highlight .kn, .highlight .kp, .highlight .kr) {
+      font-weight: bold;
+    }
+  }
 }
