@@ -342,9 +342,9 @@ a.btn-outline {
     --#{$prefix}btn-text-color: var(--#{$prefix}color-text-inverse);
 
     &:hover {
-      --btn-boxshadow-color-darken: color-mix(in srgb, var(--#{$prefix}color-border-inverse) 80%, black);
-      --btn-boxshadow-color-desaturated: color-mix(in srgb, var(--btn-boxshadow-color-darken) 80%, gray);
-      --#{$prefix}btn-outline-border-color: var(--btn-boxshadow-color-desaturated); //tutto questo equivale a fare color-hover(...)
+      --#{$prefix}btn-boxshadow-color-darken: color-mix(in srgb, var(--#{$prefix}color-border-inverse) 80%, black);
+      --#{$prefix}btn-boxshadow-color-desaturated: color-mix(in srgb, var(--#{$prefix}btn-boxshadow-color-darken) 80%, gray);
+      --#{$prefix}btn-outline-border-color: var(--#{$prefix}btn-boxshadow-color-desaturated); //tutto questo equivale a fare color-hover(...)
     }
   }
 
@@ -353,9 +353,9 @@ a.btn-outline {
     --#{$prefix}btn-text-color: var(--#{$prefix}color-text-inverse);
     &:hover,
     &:active {
-      --btn-boxshadow-color-darken: color-mix(in srgb, var(--#{$prefix}color-background-secondary) 80%, black);
-      --btn-boxshadow-color-desaturated: color-mix(in srgb, var(--btn-boxshadow-color-darken) 80%, gray);
-      --#{$prefix}btn-outline-border-color: var(--btn-boxshadow-color-desaturated); //tutto questo equivale a fare color-hover(...)
+      --#{$prefix}btn-boxshadow-color-darken: color-mix(in srgb, var(--#{$prefix}color-background-secondary) 80%, black);
+      --#{$prefix}btn-boxshadow-color-desaturated: color-mix(in srgb, var(--#{$prefix}btn-boxshadow-color-darken) 80%, gray);
+      --#{$prefix}btn-outline-border-color: var(--#{$prefix}btn-boxshadow-color-desaturated); //tutto questo equivale a fare color-hover(...)
     }
   }
 }
