@@ -5,8 +5,6 @@
   --#{$prefix}sidebar-padding: var(--#{$prefix}spacing-m);
   --#{$prefix}sidebar-background-color: transparent;
   --#{$prefix}sidebar-heading-font-size: var(--#{$prefix}heading-6-font-size);
-  // --#{$prefix}sidebar-link-color: var(--#{$prefix}color-text-primary);
-  // --#{$prefix}sidebar-link-color-active: var(--#{$prefix}color-text-primary-active);
   --#{$prefix}sidebar-link-padding-x: var(--#{$prefix}spacing-s);
   --#{$prefix}sidebar-link-padding-y: var(--#{$prefix}spacing-xs);
   --#{$prefix}sidebar-link-sublist-indent: var(--#{$prefix}spacing-m);
@@ -79,11 +77,6 @@
           li a {
             padding-left: var(--#{$prefix}sidebar-link-sublist-indent);
             text-transform: none; // No text transform for sublist items
-
-            // &.active {
-            //   text-decoration: underline;
-            // }
-
           }
         }
       }
