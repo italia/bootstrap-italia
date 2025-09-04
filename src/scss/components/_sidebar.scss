@@ -5,6 +5,7 @@
   --#{$prefix}sidebar-padding: var(--#{$prefix}spacing-m);
   --#{$prefix}sidebar-background-color: transparent;
   --#{$prefix}sidebar-heading-font-size: var(--#{$prefix}heading-6-font-size);
+  --#{$prefix}sidebar-heading-color: var(--#{$prefix}color-text-secondary);
   --#{$prefix}sidebar-link-padding-x: var(--#{$prefix}spacing-s);
   --#{$prefix}sidebar-link-padding-y: var(--#{$prefix}spacing-xs);
   --#{$prefix}sidebar-link-sublist-indent: var(--#{$prefix}spacing-m);
@@ -29,6 +30,7 @@
     font-size: var(--#{$prefix}sidebar-heading-font-size);
     font-weight: var(--#{$prefix}font-weight-solid);
     text-transform: uppercase;
+    color: var(--#{$prefix}sidebar-heading-color);
   }
 
   .sidebar-linklist-wrapper {
