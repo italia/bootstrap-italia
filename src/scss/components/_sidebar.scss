@@ -33,71 +33,63 @@
     color: var(--#{$prefix}sidebar-heading-color);
   }
 
-  .sidebar-linklist-wrapper {
-    .link-list-wrapper {
+  .sidebar-linklist-wrapper .link-list-wrapper ul li a {
+    width: 100%;
+    display: block;
+    position: relative;
+    padding: var(--#{$prefix}sidebar-link-padding-y) var(--#{$prefix}sidebar-link-padding-x);
+    font-size: var(--#{$prefix}sidebar-link-font-size);
+    line-height: var(--#{$prefix}sidebar-link-line-height);
+    text-transform: var(--#{$prefix}sidebar-text-transform, none); // Default to none if not set
 
-      ul {
-        li {
-          a {
-            width: 100%;
-            display: block;
-            position: relative;
-            padding: var(--#{$prefix}sidebar-link-padding-y) var(--#{$prefix}sidebar-link-padding-x);
-            font-size: var(--#{$prefix}sidebar-link-font-size);
-            line-height: var(--#{$prefix}sidebar-link-line-height);
-            text-transform: var(--#{$prefix}sidebar-text-transform, none); // Default to none if not set
-            
-            // Active indicator: support both .active class and semantic aria-current
-            &.active,
-            &[aria-current="page"] {
-              &::after {
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                inset-inline-start: 0;
-                content: '';
-                display: block;
-                width: var(--#{$prefix}sidebar-link-active-line-width);
-                background-color: var(--#{$prefix}sidebar-link-active-border-color);
-              }
-            }
-            
-            span {
-              text-decoration: none;
-            }
-
-            &.active span,
-            &[aria-current="page"] span {
-              text-decoration: underline;
-            }
-
-            // Collapsable links
-            &[data-bs-toggle="collapse"][aria-expanded="true"] span {
-              color: var(--#{$prefix}color-text-primary);
-            }
-          }
-        }
-
-        &.link-sublist {
-          padding-inline-start: 0; // Reset padding for sublist from _link-list.scss
-
-          li a {
-            padding-inline-start: var(--#{$prefix}sidebar-link-sublist-indent);
-            text-transform: none; // No text transform for sublist items
-          }
-        }
+    // Active indicator: support both .active class and semantic aria-current
+    &.active,
+    &[aria-current="page"] {
+      &::after {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        inset-inline-start: 0;
+        content: '';
+        display: block;
+        width: var(--#{$prefix}sidebar-link-active-line-width);
+        background-color: var(--#{$prefix}sidebar-link-active-border-color);
       }
     }
 
-    // Divider between link lists
-    &.linklist-secondary:before {
-      content: '';
-      display: block;
-      height: 1px;
-      margin: var(--#{$prefix}sidebar-link-padding-y) var(--#{$prefix}sidebar-link-padding-y) var(--#{$prefix}sidebar-link-padding-y) 0;
-      background: var(--#{$prefix}sidebar-divider-color);
+    span {
+      text-decoration: none;
+    }
+
+    &.active span,
+    &[aria-current="page"] span {
+      text-decoration: underline;
+    }
+
+    // Collapsable links
+    // &[data-bs-toggle="collapse"][aria-expanded="true"] span {
+    //   color: var(--#{$prefix}color-text-primary);
+    // }
+  }
+
+  .sidebar-linklist-wrapper .link-list-wrapper ul.link-sublist {
+    padding-inline-start: 0; // Reset padding for sublist from _link-list.scss
+
+    li a {
+      padding-inline-start: var(--#{$prefix}sidebar-link-sublist-indent);
+      text-transform: none; // No text transform for sublist items
     }
   }
+
+  // Divider between link lists
+  .sidebar-linklist-wrapper.linklist-secondary:before {
+    content: '';
+    display: block;
+    height: 1px;
+    margin: var(--#{$prefix}sidebar-link-padding-y) var(--#{$prefix}sidebar-link-padding-y) var(--#{$prefix}sidebar-link-padding-y) 0;
+    background: var(--#{$prefix}sidebar-divider-color);
+  }
+  
 
   &.it-line-left-side,
   &.it-line-right-side {
@@ -108,32 +100,19 @@
     // Use logical property for RTL support
     border-inline-end-width: 1px;
     border-inline-end-style: solid;
-
-    .sidebar-linklist-wrapper {
-      .link-list-wrapper {
-        ul {
-          li {
-            a {
-              &[data-bs-toggle='collapse'] {
-                &.active {
-                  border-inline-end: var(--#{$prefix}sidebar-link-active-line-width) solid var(--#{$prefix}sidebar-link-active-border-color);
-                  border-inline-start: none;
-                }
-              }
-
-              &.active {
-                &::after {
-                  inset-inline-end: 0;
-                  inset-inline-start: auto;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
   }
 
+  // Active indicator and collapse state
+  &.it-line-right-side .sidebar-linklist-wrapper .link-list-wrapper a[data-bs-toggle='collapse'].active {
+    border-inline-end: var(--#{$prefix}sidebar-link-active-line-width) solid var(--#{$prefix}sidebar-link-active-border-color);
+    border-inline-start: none;
+  }
+
+  &.it-line-right-side .sidebar-linklist-wrapper .link-list-wrapper a.active::after {
+    inset-inline-end: 0;
+    inset-inline-start: auto;
+  }
+  
   &.it-line-left-side {
     // Use logical property for RTL support
     border-inline-start-width: 1px;
@@ -144,13 +123,6 @@
 .sidebar-wrapper.theme-dark {
   --#{$prefix}sidebar-background-color: var(--#{$prefix}color-background-secondary);
   --#{$prefix}sidebar-divider-color: var(--#{$prefix}color-border-subtle);
+  --#{$prefix}sidebar-heading-color: var(--#{$prefix}color-text-inverse);
   --#{$prefix}sidebar-link-active-border-color: var(--#{$prefix}color-border-inverse);
-
-  h3 {
-    color: var(--#{$prefix}color-text-inverse);
-  }
-
-  .sidebar-linklist-wrapper .link-list-wrapper li a[data-bs-toggle="collapse"][aria-expanded="true"] span {
-    color: var(--#{$prefix}color-text-inverse);
-  }
 }
