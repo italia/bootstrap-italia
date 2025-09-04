@@ -52,7 +52,7 @@
                 position: absolute;
                 top: 0;
                 bottom: 0;
-                left: 0;
+                inset-inline-start: 0;
                 content: '';
                 display: block;
                 width: var(--#{$prefix}sidebar-link-active-line-width);
@@ -77,10 +77,10 @@
         }
 
         &.link-sublist {
-          padding-left: 0; // Reset padding for sublist from _link-list.scss
+          padding-inline-start: 0; // Reset padding for sublist from _link-list.scss
 
           li a {
-            padding-left: var(--#{$prefix}sidebar-link-sublist-indent);
+            padding-inline-start: var(--#{$prefix}sidebar-link-sublist-indent);
             text-transform: none; // No text transform for sublist items
           }
         }
@@ -103,8 +103,9 @@
   }
 
   &.it-line-right-side {
-    border-right-width: 1px;
-    border-right-style: solid;
+    // Use logical property for RTL support
+    border-inline-end-width: 1px;
+    border-inline-end-style: solid;
 
     .sidebar-linklist-wrapper {
       .link-list-wrapper {
@@ -113,15 +114,15 @@
             a {
               &[data-bs-toggle='collapse'] {
                 &.active {
-                  border-right: var(--#{$prefix}sidebar-link-active-line-width) var(--#{$prefix}sidebar-link-active-border-color);
-                  border-left: none;
+                  border-inline-end: var(--#{$prefix}sidebar-link-active-line-width) solid var(--#{$prefix}sidebar-link-active-border-color);
+                  border-inline-start: none;
                 }
               }
 
               &.active {
-                &:after {
-                  right: 0;
-                  left: auto;
+                &::after {
+                  inset-inline-end: 0;
+                  inset-inline-start: auto;
                 }
               }
             }
@@ -132,8 +133,9 @@
   }
 
   &.it-line-left-side {
-    border-left-width: 1px;
-    border-left-style: solid;
+    // Use logical property for RTL support
+    border-inline-start-width: 1px;
+    border-inline-start-style: solid;
   }
 }
 
