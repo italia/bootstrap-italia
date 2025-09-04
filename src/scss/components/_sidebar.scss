@@ -38,13 +38,17 @@
         li {
           a {
             width: 100%;
+            display: block;
+            position: relative;
             padding: var(--#{$prefix}sidebar-link-padding-y) var(--#{$prefix}sidebar-link-padding-x);
             font-size: var(--#{$prefix}sidebar-link-font-size);
             line-height: var(--#{$prefix}sidebar-link-line-height);
             text-transform: var(--#{$prefix}sidebar-text-transform, none); // Default to none if not set
             
-            &.active {
-              &:after {
+            // Active indicator: support both .active class and semantic aria-current
+            &.active,
+            &[aria-current="page"] {
+              &::after {
                 position: absolute;
                 top: 0;
                 bottom: 0;
@@ -60,7 +64,8 @@
               text-decoration: none;
             }
 
-            &.active span {
+            &.active span,
+            &[aria-current="page"] span {
               text-decoration: underline;
             }
 
@@ -108,7 +113,7 @@
             a {
               &[data-bs-toggle='collapse'] {
                 &.active {
-                  border-right: $sidebar-dropdown-line-selection-width solid $sidebar-dropdown-line-selection-color;
+                  border-right: var(--#{$prefix}sidebar-link-active-line-width) var(--#{$prefix}sidebar-link-active-border-color);
                   border-left: none;
                 }
               }
