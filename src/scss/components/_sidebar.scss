@@ -5,8 +5,8 @@
   --#{$prefix}sidebar-padding: var(--#{$prefix}spacing-m);
   --#{$prefix}sidebar-background-color: transparent;
   --#{$prefix}sidebar-heading-font-size: var(--#{$prefix}heading-6-font-size);
-  --#{$prefix}sidebar-link-color: var(--#{$prefix}color-text-primary);
-  --#{$prefix}sidebar-link-color-active: var(--#{$prefix}color-text-primary-active);
+  // --#{$prefix}sidebar-link-color: var(--#{$prefix}color-text-primary);
+  // --#{$prefix}sidebar-link-color-active: var(--#{$prefix}color-text-primary-active);
   --#{$prefix}sidebar-link-padding-x: var(--#{$prefix}spacing-s);
   --#{$prefix}sidebar-link-padding-y: var(--#{$prefix}spacing-xs);
   --#{$prefix}sidebar-link-sublist-indent: var(--#{$prefix}spacing-m);
@@ -14,6 +14,7 @@
   --#{$prefix}sidebar-link-line-height: var(--#{$prefix}body-line-height);
   --#{$prefix}sidebar-link-active-line-width: 4px;
   --#{$prefix}sidebar-divider-color: var(--#{$prefix}color-border-subtle);
+  --#{$prefix}sidebar-link-active-border-color: var(--#{$prefix}color-border-primary);
 }
 
 //
@@ -40,17 +41,11 @@
           a {
             width: 100%;
             padding: var(--#{$prefix}sidebar-link-padding-y) var(--#{$prefix}sidebar-link-padding-x);
-            color: var(--#{$prefix}sidebar-link-color);
             font-size: var(--#{$prefix}sidebar-link-font-size);
             line-height: var(--#{$prefix}sidebar-link-line-height);
-            text-decoration: none;
             text-transform: var(--#{$prefix}sidebar-text-transform, none); // Default to none if not set
-            cursor: pointer;
-
+            
             &.active {
-              color: var(--#{$prefix}color-text-primary-active);
-              text-decoration: underline;
-
               &:after {
                 position: absolute;
                 top: 0;
@@ -59,13 +54,21 @@
                 content: '';
                 display: block;
                 width: var(--#{$prefix}sidebar-link-active-line-width);
-                background-color: var(--#{$prefix}color-border-primary);
+                background-color: var(--#{$prefix}sidebar-link-active-border-color);
               }
+            }
+            
+            span {
+              text-decoration: none;
+            }
+
+            &.active span {
+              text-decoration: underline;
             }
 
             // Collapsable links
             &[data-bs-toggle="collapse"][aria-expanded="true"] span {
-              color: var(--#{$prefix}sidebar-link-color-active);
+              color: var(--#{$prefix}color-text-primary);
             }
           }
         }
@@ -138,11 +141,14 @@
 
 .sidebar-wrapper.theme-dark {
   --#{$prefix}sidebar-background-color: var(--#{$prefix}color-background-secondary);
-  --#{$prefix}sidebar-link-color: var(--#{$prefix}color-text-muted);
-  --#{$prefix}sidebar-link-color-active: var(--#{$prefix}color-text-inverse);
   --#{$prefix}sidebar-divider-color: var(--#{$prefix}color-border-subtle);
+  --#{$prefix}sidebar-link-active-border-color: var(--#{$prefix}color-border-inverse);
 
   h3 {
+    color: var(--#{$prefix}color-text-inverse);
+  }
+
+  .sidebar-linklist-wrapper .link-list-wrapper li a[data-bs-toggle="collapse"][aria-expanded="true"] span {
     color: var(--#{$prefix}color-text-inverse);
   }
 }

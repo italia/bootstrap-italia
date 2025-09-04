@@ -253,9 +253,19 @@
   }
 }
 
-.dark {
-  .link-list li a.disabled,
-  .link-list li a.disabled span {
+//
+// Dark theme styles 
+
+.dark,
+.theme-dark {
+
+  .link-list-wrapper .list-item:not(.disabled) span,
+  .link-list-wrapper .list-item:hover span {
+    color: var(--#{$prefix}color-text-inverse);
+  }
+
+  .link-list-wrapper .list-item.disabled,
+  .link-list-wrapper .list-item.disabled span {
     color: hsla(0, 0%, 100%, 0.35); // TODO: Add color variable for dark variant
   }
 }
