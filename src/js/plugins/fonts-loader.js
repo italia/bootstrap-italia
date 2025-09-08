@@ -131,127 +131,85 @@ const getTitilliumWebCSS = (basePath) => `
   }
 `;
 
-const getTitilliumProCSS = (basePath) => `
-  /* Titillium+Sans+Pro:300,400,600,700 */
-
-  /* titillium-sans-pro-300 - latin-ext_latin */
+const getTitilliumSansProCSS = (basePath) => `
+  /* Titillium Sans Pro - Light 300 */
   @font-face {
     font-family: 'Titillium Sans Pro';
     font-style: normal;
     font-weight: 300;
     font-display: swap;
-    src: url('${basePath}/Titillium_Sans_Pro/titillium-sans-pro-v1-latin-ext_latin-300.eot');
-    src: local(''),
-        url('${basePath}/Titillium_Sans_Pro/titillium-sans-pro-v1-latin-ext_latin-300.eot?#iefix') format('embedded-opentype'),
-        url('${basePath}/Titillium_Sans_Pro/titillium-sans-pro-v1-latin-ext_latin-300.woff2') format('woff2'),
-        url('${basePath}/Titillium_Sans_Pro/titillium-sans-pro-v1-latin-ext_latin-300.woff') format('woff'),
-        url('${basePath}/Titillium_Sans_Pro/titillium-sans-pro-v1-latin-ext_latin-300.ttf') format('truetype'),
-        url('${basePath}/Titillium_Sans_Pro/titillium-sans-pro-v1-latin-ext_latin-300.svg#TitilliumSansPro') format('svg');
+    src: url('${basePath}/Titillium_Sans_Pro/TitilliumSansPro-Light.woff2') format('woff2'),
+         url('${basePath}/Titillium_Sans_Pro/TitilliumSansPro-Light.woff') format('woff');
   }
 
-  /* titillium-sans-pro-300italic - latin-ext_latin */
+  /* Titillium Sans Pro - Light Italic 300 */
   @font-face {
     font-family: 'Titillium Sans Pro';
     font-style: italic;
     font-weight: 300;
     font-display: swap;
-    src: url('${basePath}/Titillium_Sans_Pro/titillium-sans-pro-v1-latin-ext_latin-300italic.eot');
-    src: local(''),
-        url('${basePath}/Titillium_Sans_Pro/titillium-sans-pro-v1-latin-ext_latin-300italic.eot?#iefix') format('embedded-opentype'),
-        url('${basePath}/Titillium_Sans_Pro/titillium-sans-pro-v1-latin-ext_latin-300italic.woff2') format('woff2'),
-        url('${basePath}/Titillium_Sans_Pro/titillium-sans-pro-v1-latin-ext_latin-300italic.woff') format('woff'),
-        url('${basePath}/Titillium_Sans_Pro/titillium-sans-pro-v1-latin-ext_latin-300italic.ttf') format('truetype'),
-        url('${basePath}/Titillium_Sans_Pro/titillium-sans-pro-v1-latin-ext_latin-300italic.svg#TitilliumSansPro') format('svg');
+    src: url('${basePath}/Titillium_Sans_Pro/TitilliumSansPro-LightItalic.woff2') format('woff2'),
+         url('${basePath}/Titillium_Sans_Pro/TitilliumSansPro-LightItalic.woff') format('woff');
   }
 
-  /* titillium-sans-pro-regular - latin-ext_latin */
+  /* Titillium Sans Pro - Regular 400 */
   @font-face {
     font-family: 'Titillium Sans Pro';
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url('${basePath}/Titillium_Sans_Pro/titillium-sans-pro-v1-latin-ext_latin-regular.eot');
-    src: local(''),
-        url('${basePath}/Titillium_Sans_Pro/titillium-sans-pro-v1-latin-ext_latin-regular.eot?#iefix') format('embedded-opentype'),
-        url('${basePath}/Titillium_Sans_Pro/titillium-sans-pro-v1-latin-ext_latin-regular.woff2') format('woff2'),
-        url('${basePath}/Titillium_Sans_Pro/titillium-sans-pro-v1-latin-ext_latin-regular.woff') format('woff'),
-        url('${basePath}/Titillium_Sans_Pro/titillium-sans-pro-v1-latin-ext_latin-regular.ttf') format('truetype'),
-        url('${basePath}/Titillium_Sans_Pro/titillium-sans-pro-v1-latin-ext_latin-regular.svg#TitilliumSansPro') format('svg');
+    src: url('${basePath}/Titillium_Sans_Pro/TitilliumSansPro-Regular.woff2') format('woff2'),
+         url('${basePath}/Titillium_Sans_Pro/TitilliumSansPro-Regular.woff') format('woff');
   }
 
-  /* titillium-sans-pro-italic - latin-ext_latin */
+  /* Titillium Sans Pro - Italic 400 */
   @font-face {
     font-family: 'Titillium Sans Pro';
     font-style: italic;
     font-weight: 400;
     font-display: swap;
-    src: url('${basePath}/Titillium_Sans_Pro/titillium-sans-pro-v1-latin-ext_latin-italic.eot');
-    src: local(''),
-        url('${basePath}/Titillium_Sans_Pro/titillium-sans-pro-v1-latin-ext_latin-italic.eot?#iefix') format('embedded-opentype'),
-        url('${basePath}/Titillium_Sans_Pro/titillium-sans-pro-v1-latin-ext_latin-italic.woff2') format('woff2'),
-        url('${basePath}/Titillium_Sans_Pro/titillium-sans-pro-v1-latin-ext_latin-italic.woff') format('woff'),
-        url('${basePath}/Titillium_Sans_Pro/titillium-sans-pro-v1-latin-ext_latin-italic.ttf') format('truetype'),
-        url('${basePath}/Titillium_Sans_Pro/titillium-sans-pro-v1-latin-ext_latin-italic.svg#TitilliumSansPro') format('svg');
+    src: url('${basePath}/Titillium_Sans_Pro/TitilliumSansPro-Italic.woff2') format('woff2'),
+         url('${basePath}/Titillium_Sans_Pro/TitilliumSansPro-Italic.woff') format('woff');
   }
 
-  /* titillium-sans-pro-600 - latin-ext_latin */
+  /* Titillium Sans Pro - Semibold 600 */
   @font-face {
     font-family: 'Titillium Sans Pro';
     font-style: normal;
     font-weight: 600;
     font-display: swap;
-    src: url('${basePath}/Titillium_Sans_Pro/titillium-sans-pro-v1-latin-ext_latin-600.eot');
-    src: local(''),
-        url('${basePath}/Titillium_Sans_Pro/titillium-sans-pro-v1-latin-ext_latin-600.eot?#iefix') format('embedded-opentype'),
-        url('${basePath}/Titillium_Sans_Pro/titillium-sans-pro-v1-latin-ext_latin-600.woff2') format('woff2'),
-        url('${basePath}/Titillium_Sans_Pro/titillium-sans-pro-v1-latin-ext_latin-600.woff') format('woff'),
-        url('${basePath}/Titillium_Sans_Pro/titillium-sans-pro-v1-latin-ext_latin-600.ttf') format('truetype'),
-        url('${basePath}/Titillium_Sans_Pro/titillium-sans-pro-v1-latin-ext_latin-600.svg#TitilliumSansPro') format('svg');
+    src: url('${basePath}/Titillium_Sans_Pro/TitilliumSansPro-Semibold.woff2') format('woff2'),
+         url('${basePath}/Titillium_Sans_Pro/TitilliumSansPro-Semibold.woff') format('woff');
   }
 
-  /* titillium-sans-pro-600italic - latin-ext_latin */
+  /* Titillium Sans Pro - Semibold Italic 600 */
   @font-face {
     font-family: 'Titillium Sans Pro';
     font-style: italic;
     font-weight: 600;
     font-display: swap;
-    src: url('${basePath}/Titillium_Sans_Pro/titillium-sans-pro-v1-latin-ext_latin-600italic.eot');
-    src: local(''),
-        url('${basePath}/Titillium_Sans_Pro/titillium-sans-pro-v1-latin-ext_latin-600italic.eot?#iefix') format('embedded-opentype'),
-        url('${basePath}/Titillium_Sans_Pro/titillium-sans-pro-v1-latin-ext_latin-600italic.woff2') format('woff2'),
-        url('${basePath}/Titillium_Sans_Pro/titillium-sans-pro-v1-latin-ext_latin-600italic.woff') format('woff'),
-        url('${basePath}/Titillium_Sans_Pro/titillium-sans-pro-v1-latin-ext_latin-600italic.ttf') format('truetype'),
-        url('${basePath}/Titillium_Sans_Pro/titillium-sans-pro-v1-latin-ext_latin-600italic.svg#TitilliumSansPro') format('svg');
+    src: url('${basePath}/Titillium_Sans_Pro/TitilliumSansPro-SemiboldItalic.woff2') format('woff2'),
+         url('${basePath}/Titillium_Sans_Pro/TitilliumSansPro-SemiboldItalic.woff') format('woff');
   }
 
-  /* titillium-sans-pro-700 - latin-ext_latin */
+  /* Titillium Sans Pro - Bold 700 */
   @font-face {
     font-family: 'Titillium Sans Pro';
     font-style: normal;
     font-weight: 700;
     font-display: swap;
-    src: url('${basePath}/Titillium_Sans_Pro/titillium-sans-pro-v1-latin-ext_latin-700.eot');
-    src: local(''),
-        url('${basePath}/Titillium_Sans_Pro/titillium-sans-pro-v1-latin-ext_latin-700.eot?#iefix') format('embedded-opentype'),
-        url('${basePath}/Titillium_Sans_Pro/titillium-sans-pro-v1-latin-ext_latin-700.woff2') format('woff2'),
-        url('${basePath}/Titillium_Sans_Pro/titillium-sans-pro-v1-latin-ext_latin-700.woff') format('woff'),
-        url('${basePath}/Titillium_Sans_Pro/titillium-sans-pro-v1-latin-ext_latin-700.ttf') format('truetype'),
-        url('${basePath}/Titillium_Sans_Pro/titillium-sans-pro-v1-latin-ext_latin-700.svg#TitilliumSansPro') format('svg');
+    src: url('${basePath}/Titillium_Sans_Pro/TitilliumSansPro-Bold.woff2') format('woff2'),
+         url('${basePath}/Titillium_Sans_Pro/TitilliumSansPro-Bold.woff') format('woff');
   }
 
-  /* titillium-sans-pro-700italic - latin-ext_latin */
+  /* Titillium Sans Pro - Bold Italic 700 */
   @font-face {
     font-family: 'Titillium Sans Pro';
     font-style: italic;
     font-weight: 700;
     font-display: swap;
-    src: url('${basePath}/Titillium_Sans_Pro/titillium-sans-pro-v1-latin-ext_latin-700italic.eot');
-    src: local(''),
-        url('${basePath}/Titillium_Sans_Pro/titillium-sans-pro-v1-latin-ext_latin-700italic.eot?#iefix') format('embedded-opentype'),
-        url('${basePath}/Titillium_Sans_Pro/titillium-sans-pro-v1-latin-ext_latin-700italic.woff2') format('woff2'),
-        url('${basePath}/Titillium_Sans_Pro/titillium-sans-pro-v1-latin-ext_latin-700italic.woff') format('woff'),
-        url('${basePath}/Titillium_Sans_Pro/titillium-sans-pro-v1-latin-ext_latin-700italic.ttf') format('truetype'),
-        url('${basePath}/Titillium_Sans_Pro/titillium-sans-pro-v1-latin-ext_latin-700italic.svg#TitilliumSansPro') format('svg');
+    src: url('${basePath}/Titillium_Sans_Pro/TitilliumSansPro-BoldItalic.woff2') format('woff2'),
+         url('${basePath}/Titillium_Sans_Pro/TitilliumSansPro-BoldItalic.woff') format('woff');
   }
 `;
 
@@ -267,6 +225,17 @@ const getTitillioCSS = (basePath) => `
          url('${basePath}/Titillio/Titillio-Light.ttf') format('truetype');
   }
 
+  /* Titillio - Light Italic 300 */
+  @font-face {
+    font-family: 'Titillio';
+    font-style: italic;
+    font-weight: 300;
+    font-display: swap;
+    src: url('${basePath}/Titillio/Titillio-LightItalic.woff2') format('woff2'),
+         url('${basePath}/Titillio/Titillio-LightItalic.woff') format('woff'),
+         url('${basePath}/Titillio/Titillio-LightItalic.ttf') format('truetype');
+  }
+
   /* Titillio - Regular 400 */
   @font-face {
     font-family: 'Titillio';
@@ -278,15 +247,15 @@ const getTitillioCSS = (basePath) => `
          url('${basePath}/Titillio/Titillio-Regular.ttf') format('truetype');
   }
 
-  /* Titillio - Italic 400 */
+  /* Titillio - Regular Italic 400 */
   @font-face {
     font-family: 'Titillio';
     font-style: italic;
     font-weight: 400;
     font-display: swap;
-    src: url('${basePath}/Titillio/Titillio-Italic.woff2') format('woff2'),
-         url('${basePath}/Titillio/Titillio-Italic.woff') format('woff'),
-         url('${basePath}/Titillio/Titillio-Italic.ttf') format('truetype');
+    src: url('${basePath}/Titillio/Titillio-RegularItalic.woff2') format('woff2'),
+         url('${basePath}/Titillio/Titillio-RegularItalic.woff') format('woff'),
+         url('${basePath}/Titillio/Titillio-RegularItalic.ttf') format('truetype');
   }
 
   /* Titillio - Semibold 600 */
@@ -465,7 +434,7 @@ const getRobotoMonoCSS = (basePath) => `
 // Font configuration map
 const fontGenerators = {
   'titillium-web': getTitilliumWebCSS,
-  'titillium-pro': getTitilliumProCSS,
+  'titillium-sans-pro': getTitilliumSansProCSS,
   'titillio': getTitillioCSS,
   'lora': getLoraCSS,
   'roboto-mono': getRobotoMonoCSS
@@ -488,12 +457,12 @@ export default (path = '/node_modules/bootstrap-italia/dist/fonts', options = {}
 
   // Extract options with defaults
   const {
-    titillium = 'web',           // 'web' | 'pro' | 'titillio'
+    titillium = 'web',           // 'web' | 'sans-pro' | 'titillio'
     fonts = ['titillium', 'lora', 'roboto-mono']  // which font families to include
   } = options;
 
   // Map titillium variant to specific font ID
-  const titilliumFontId = titillium === 'pro' ? 'titillium-pro' 
+  const titilliumFontId = titillium === 'sans-pro' ? 'titillium-sans-pro' 
                         : titillium === 'titillio' ? 'titillio'
                         : 'titillium-web';
 
@@ -520,7 +489,7 @@ export default (path = '/node_modules/bootstrap-italia/dist/fonts', options = {}
 
 // Export convenience functions for individual font loading
 export const loadTitilliumWeb = (path) => loadFonts(path, { titillium: 'web', fonts: ['titillium'] });
-export const loadTitilliumPro = (path) => loadFonts(path, { titillium: 'pro', fonts: ['titillium'] });
+export const loadTitilliumSansPro = (path) => loadFonts(path, { titillium: 'sans-pro', fonts: ['titillium'] });
 export const loadTitillio = (path) => loadFonts(path, { titillium: 'titillio', fonts: ['titillium'] });
 
 /*
