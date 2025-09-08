@@ -3,10 +3,6 @@
 
 .chip {
   --#{$prefix}chip-background-color: var(--#{$prefix}color-background-muted);
-  --#{$prefix}chip-border: $gray-secondary;
-  --#{$prefix}chip-background-hover: $gray-light;
-  --#{$prefix}chip-label-color: $gray-secondary;
-  --#{$prefix}chip-label-font-size: 0.875rem;
   --#{$prefix}chip-border-width: 1px;
   --#{$prefix}chip-border-radius: var(--#{$prefix}radius-rounded);
   --#{$prefix}chip-border-color: var(--#{$prefix}color-border-subtle);
@@ -17,6 +13,7 @@
   --#{$prefix}chip-text-line-height: var(--#{$prefix}label-line-height);
   --#{$prefix}chip-text-size: var(--#{$prefix}label-font-size);
   --#{$prefix}chip-text-weight: var(--#{$prefix}font-weight-solid);
+  --#{$prefix}chip-link-hover: var(--#{$prefix}color-text-inverse);
 }
 
 //
@@ -40,6 +37,7 @@
 
   &:hover {
     cursor: text;
+    color: var(--#{$prefix}chip-text-color);
   }
 
   // Chip label
@@ -156,15 +154,17 @@
 }
 
 // Chip link
+// Links inside a chip: use the component-specific hover color so we don't
+// override the global link hover color for the whole document.
 a.chip:not(.chip-disabled) {
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 // Chip link hover state
 a.chip:hover:not(.chip-disabled) {
   --#{$prefix}chip-background-color: var(--#{$prefix}color-background-secondary-hover);
   --#{$prefix}chip-border-color: var(--#{$prefix}color-background-secondary-hover);
-  --#{$prefix}chip-text-color: var(--#{$prefix}color-text-inverse);
+  --#{$prefix}chip-text-color: var(--#{$prefix}chip-link-hover);
 
   transition: all var(--#{$prefix}transition-instant) ease-in-out;
   cursor: pointer;
