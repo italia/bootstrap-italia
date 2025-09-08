@@ -3,10 +3,6 @@
 
 .chip {
   --#{$prefix}chip-background-color: var(--#{$prefix}color-background-muted);
-  --#{$prefix}chip-border: $gray-secondary;
-  --#{$prefix}chip-background-hover: $gray-light;
-  --#{$prefix}chip-label-color: $gray-secondary;
-  --#{$prefix}chip-label-font-size: 0.875rem;
   --#{$prefix}chip-border-width: 1px;
   --#{$prefix}chip-border-radius: var(--#{$prefix}radius-rounded);
   --#{$prefix}chip-border-color: var(--#{$prefix}color-border-subtle);
