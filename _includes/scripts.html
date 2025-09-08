@@ -1,7 +1,120 @@
 {% assign buildTime = site.time | date: '%Y%m%d%H%M' %}
 <script src="{{ site.baseurl }}/dist/js/bootstrap-italia.bundle.min.js?{{ buildTime }}"></script>
 <script>
-  bootstrap.loadFonts('{{ site.baseurl }}/dist/fonts')
+  // Font Switcher Logic
+  class FontSwitcher {
+    constructor() {
+      this.currentFont = localStorage.getItem('docs-font-variant') || 'web';
+      this.fontNames = {
+        'web': 'Titillium Web',
+        'sans-pro': 'Titillium Sans Pro',
+        'titillio': 'Titillio'
+      };
+      this.init();
+    }
+
+    init() {
+      // Carica font iniziale
+      this.loadFont(this.currentFont);
+
+      // Setup UI
+      this.updateUI();
+      this.setupEventListeners();
+    }
+
+    loadFont(variant) {
+      // Rimuovi style elements precedenti per evitare conflitti
+      document.querySelectorAll('style[data-font-switcher]').forEach(el => el.remove());
+
+      // Carica nuova variante
+      bootstrap.loadFonts('{{ site.baseurl }}/dist/fonts', {
+        titillium: variant,
+        fonts: ['titillium', 'lora', 'roboto-mono']
+      });
+
+      // Marca il style element per identificazione
+      const lastStyle = document.querySelector('style:last-of-type');
+      if (lastStyle) {
+        lastStyle.setAttribute('data-font-switcher', variant);
+      }
+
+      // Forza aggiornamento font CSS
+      this.updateFontStack(variant);
+    }
+
+    updateFontStack(variant) {
+      // Crea CSS temporaneo per forzare il nuovo font
+      const tempStyle = document.createElement('style');
+      tempStyle.setAttribute('data-font-switcher-override', variant);
+
+      const fontFamily = this.fontNames[variant];
+      tempStyle.innerHTML = `
+        body, .font-sans-serif, 
+        h1, h2, h3, h4, h5, h6,
+        .h1, .h2, .h3, .h4, .h5, .h6 {
+          font-family: '${fontFamily}', Geneva, Tahoma, sans-serif !important;
+        }
+      `;
+
+      // Rimuovi override precedente
+      document.querySelectorAll('style[data-font-switcher-override]').forEach(el => el.remove());
+      document.head.appendChild(tempStyle);
+    }
+
+    updateUI() {
+      const currentFontElement = document.getElementById('current-font');
+      if (currentFontElement) {
+        currentFontElement.textContent = this.fontNames[this.currentFont];
+      }
+
+      // Aggiorna active state nei dropdown items
+      document.querySelectorAll('[data-font]').forEach(item => {
+        item.classList.toggle('active', item.dataset.font === this.currentFont);
+      });
+    }
+
+    setupEventListeners() {
+      document.addEventListener('click', (e) => {
+        if (e.target.matches('[data-font]')) {
+          e.preventDefault();
+          const newFont = e.target.dataset.font;
+          this.switchFont(newFont);
+        }
+      });
+    }
+
+    switchFont(variant) {
+      if (variant === this.currentFont) return;
+
+      this.currentFont = variant;
+      localStorage.setItem('docs-font-variant', variant);
+
+      this.loadFont(variant);
+      this.updateUI();
+
+      // Optional: Analytics tracking
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'font_switch', {
+          'custom_parameter': variant
+        });
+      }
+
+      console.log(`Font switched to: ${this.fontNames[variant]}`);
+    }
+  }
+
+  // Inizializza font switcher quando DOM è ready
+  document.addEventListener('DOMContentLoaded', () => {
+    window.fontSwitcher = new FontSwitcher();
+  });
+
+  // Backward compatibility: carica Titillium Web di default se non c'è preferenza
+  if (!localStorage.getItem('docs-font-variant')) {
+    bootstrap.loadFonts('{{ site.baseurl }}/dist/fonts', {
+      titillium: 'web',
+      fonts: ['titillium', 'lora', 'roboto-mono']
+    });
+  }
 </script>
 {%- if page.layout == "default" or page.layout == "docs" -%}
 <script src="{{ site.baseurl }}/docs/assets/dist/js/docs.min.js?{{ buildTime }}"></script>
