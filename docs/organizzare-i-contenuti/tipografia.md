@@ -21,13 +21,13 @@ Cosa cambia nella tipografia dalla versione **2.7.0** della libreria
 
 {% endcapture %}{% include callout.html content=callout type="danger" %}
 
-## Famiglie di Caratteri
+## Famiglie di Caratteri **XXX DA AGGIORNARE E INTEGRARE**.
+- il font graziato, o _serif_, **Lora**.
 
 Come descritto in dettaglio nel capitolo sullo UI Kit, le Linee Guida di Design
 suggeriscono di usare le seguenti famiglie di caratteri:
 
-- il font senza grazie, o _sans serif_, **Titillium Web**.
-- il font graziato, o _serif_, **Lora**.
+- il font senza grazie, o _sans serif_, **Titillium Web**. 
 - il font _monospace_ con dimensioni di caratteri normalizzate **Roboto Mono**.
 
 ### Titillium Web
