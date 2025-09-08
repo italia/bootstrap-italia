@@ -129,7 +129,7 @@ const getTitilliumWebCSS = (basePath) => `
         url('${basePath}/Titillium_Web/titillium-web-v10-latin-ext_latin-700italic.ttf') format('truetype'),
         url('${basePath}/Titillium_Web/titillium-web-v10-latin-ext_latin-700italic.svg#TitilliumWeb') format('svg');
   }
-`;
+`
 
 const getTitilliumSansProCSS = (basePath) => `
   /* Titillium Sans Pro - Light 300 */
@@ -211,7 +211,7 @@ const getTitilliumSansProCSS = (basePath) => `
     src: url('${basePath}/Titillium_Sans_Pro/TitilliumSansPro-BoldItalic.woff2') format('woff2'),
          url('${basePath}/Titillium_Sans_Pro/TitilliumSansPro-BoldItalic.woff') format('woff');
   }
-`;
+`
 
 const getTitillioCSS = (basePath) => `
   /* Titillio - Light 300 */
@@ -301,7 +301,7 @@ const getTitillioCSS = (basePath) => `
          url('${basePath}/Titillio/Titillio-BoldItalic.woff') format('woff'),
          url('${basePath}/Titillio/Titillio-BoldItalic.ttf') format('truetype');
   }
-`;
+`
 
 const getLoraCSS = (basePath) => `
   /* Lora:400,700 */
@@ -365,7 +365,7 @@ const getLoraCSS = (basePath) => `
         url('${basePath}/Lora/lora-v20-latin-ext_latin-700italic.ttf') format('truetype'),
         url('${basePath}/Lora/lora-v20-latin-ext_latin-700italic.svg#Lora') format('svg');
   }
-`;
+`
 
 const getRobotoMonoCSS = (basePath) => `
   /* Roboto+Mono:400,700 */
@@ -429,21 +429,21 @@ const getRobotoMonoCSS = (basePath) => `
         url('${basePath}/Roboto_Mono/roboto-mono-v13-latin-ext_latin-700italic.ttf') format('truetype'),
         url('${basePath}/Roboto_Mono/roboto-mono-v13-latin-ext_latin-700italic.svg#RobotoMono') format('svg');
   }
-`;
+`
 
 // Font configuration map
 const fontGenerators = {
   'titillium-web': getTitilliumWebCSS,
   'titillium-sans-pro': getTitilliumSansProCSS,
-  'titillio': getTitillioCSS,
-  'lora': getLoraCSS,
-  'roboto-mono': getRobotoMonoCSS
-};
+  titillio: getTitillioCSS,
+  lora: getLoraCSS,
+  'roboto-mono': getRobotoMonoCSS,
+}
 
 // Main loadFonts function
 export default (path = '/node_modules/bootstrap-italia/dist/fonts', options = {}) => {
   if (typeof window === 'undefined' || typeof document === 'undefined') {
-    return;
+    return
   }
 
   // Backward compatibility: if called without options, use legacy behavior
@@ -451,46 +451,37 @@ export default (path = '/node_modules/bootstrap-italia/dist/fonts', options = {}
     // Original hardcoded behavior - load all three fonts with Titillium Web
     options = {
       titillium: 'web',
-      fonts: ['titillium', 'lora', 'roboto-mono']
-    };
+      fonts: ['titillium', 'lora', 'roboto-mono'],
+    }
   }
 
   // Extract options with defaults
   const {
-    titillium = 'web',           // 'web' | 'sans-pro' | 'titillio'
-    fonts = ['titillium', 'lora', 'roboto-mono']  // which font families to include
-  } = options;
+    titillium = 'web', // 'web' | 'sans-pro' | 'titillio'
+    fonts = ['titillium', 'lora', 'roboto-mono'], // which font families to include
+  } = options
 
   // Map titillium variant to specific font ID
-  const titilliumFontId = titillium === 'sans-pro' ? 'titillium-sans-pro' 
-                        : titillium === 'titillio' ? 'titillio'
-                        : 'titillium-web';
+  const titilliumFontId = titillium === 'sans-pro' ? 'titillium-sans-pro' : titillium === 'titillio' ? 'titillio' : 'titillium-web'
 
   // Build final font list - replace 'titillium' with the specific variant
-  const finalFonts = fonts.map(font => 
-    font === 'titillium' ? titilliumFontId : font
-  );
+  const finalFonts = fonts.map((font) => (font === 'titillium' ? titilliumFontId : font))
 
   // Resolve path
-  const __PUBLIC_PATH__ = window.__PUBLIC_PATH__ ? window.__PUBLIC_PATH__ : path;
+  const __PUBLIC_PATH__ = window.__PUBLIC_PATH__ ? window.__PUBLIC_PATH__ : path
 
   // Generate CSS for requested fonts
   const cssChunks = finalFonts
-    .filter(fontId => fontGenerators[fontId])  // only valid fonts
-    .map(fontId => fontGenerators[fontId](__PUBLIC_PATH__));
+    .filter((fontId) => fontGenerators[fontId]) // only valid fonts
+    .map((fontId) => fontGenerators[fontId](__PUBLIC_PATH__))
 
-  const finalCSS = cssChunks.join('\n');
+  const finalCSS = cssChunks.join('\n')
 
   // Create and inject stylesheet
-  const styleNode = document.createElement('style');
-  styleNode.innerHTML = finalCSS;
-  document.getElementsByTagName('head')[0].appendChild(styleNode);
-};
-
-// Export convenience functions for individual font loading
-export const loadTitilliumWeb = (path) => loadFonts(path, { titillium: 'web', fonts: ['titillium'] });
-export const loadTitilliumSansPro = (path) => loadFonts(path, { titillium: 'sans-pro', fonts: ['titillium'] });
-export const loadTitillio = (path) => loadFonts(path, { titillium: 'titillio', fonts: ['titillium'] });
+  const styleNode = document.createElement('style')
+  styleNode.innerHTML = finalCSS
+  document.getElementsByTagName('head')[0].appendChild(styleNode)
+}
 
 /*
 USAGE EXAMPLES:
@@ -509,11 +500,6 @@ loadFonts('/fonts', { titillium: 'sans-pro', fonts: ['titillium', 'lora'] });
 
 // Load all fonts with Titillio as the Titillium variant
 loadFonts('/fonts', { titillium: 'titillio' });
-
-// Convenience functions
-loadTitilliumWeb('/fonts');     // Only Titillium Web
-loadTitilliumSansPro('/fonts'); // Only Titillium Sans Pro  
-loadTitillio('/fonts');         // Only Titillio
 
 POSSIBLE VALUES:
 - titillium: 'web' | 'sans-pro' | 'titillio'

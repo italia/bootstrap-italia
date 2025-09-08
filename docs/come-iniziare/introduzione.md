@@ -642,23 +642,6 @@ loadFonts('/fonts', {
 });
 ```
 
-#### Funzioni di caricamento specifico
-
-Per casi d'uso specifici, sono disponibili funzioni di caricamento dedicate:
-
-```js
-import { 
-  loadTitilliumWeb, 
-  loadTitilliumSansPro, 
-  loadTitillio 
-} from 'bootstrap-italia'
-
-// Carica solo la variante Titillium specifica
-loadTitilliumWeb('/fonts');      // Solo Titillium Web
-loadTitilliumSansPro('/fonts');  // Solo Titillium Sans Pro
-loadTitillio('/fonts');          // Solo Titillio
-```
-
 #### Browser script
 
 Per l'utilizzo tramite tag script:
