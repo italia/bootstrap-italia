@@ -149,9 +149,21 @@ Per la versione non bundle, dopo aver copiato i file all'interno del progetto, s
 
 È necessario anche includere i file relativi ai font referenziati nel CSS, mantenendo i path dei singoli font utilizzato nei [file sorgente della libreria](https://github.com/italia/bootstrap-italia/releases/tag/v{{ site.current_version }}). L'inclusione dei font può avvenire utilizzando CSS o JavaScript.
 
-### Via CSS
+### Varianti Titillium disponibili
+
+Bootstrap Italia supporta tre varianti della "famiglia" Titillium:
+
+- **Titillium Web** (`'web'`): Versione originale, default di Bootstrap Italia. Supporta pesi 300, 400, 600, 700 con varianti italic.
+
+- **Titillium Sans Pro** (`'sans-pro'`): Versione professionale con supporto linguistico esteso per lingue europee ed extraeuropee. Disponibile nei formati WOFF2 e WOFF moderni.
+
+- **Titillio** (`'titillio'`): Variante alternativa sviluppata per App IO, include supporto TTF aggiuntivo per compatibilità estesa.
+
+### Caricamento via CSS
 
 Per caricare i font necessari via CSS è necessario inserire nei propri fogli di stile il seguente codice. Per semplicità abbiamo utilizzato la sintassi SCSS in modo da utilizzare una variabile per specificare la path di base dove prendere i font.
+
+#### Titillium Web (Default)
 
 ```scss
 $font-path: "/fonts";
@@ -218,35 +230,6 @@ $font-path: "/fonts";
         url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-italic.svg#TitilliumWeb') format('svg'); /* Legacy iOS */
 }
 
-/* titillium-web-700 - latin-ext_latin */
-@font-face {
-    font-family: 'Titillium Web';
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap;
-    src: url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-700.eot'); /* IE9 Compat Modes */
-    src: local(''),
-        url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-        url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-700.woff2') format('woff2'), /* Super Modern Browsers */
-        url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-700.woff') format('woff'), /* Modern Browsers */
-        url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
-        url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-700.svg#TitilliumWeb') format('svg'); /* Legacy iOS */
-}
-
-/* titillium-web-700italic - latin-ext_latin */
-@font-face {
-    font-family: 'Titillium Web';
-    font-style: italic;
-    font-weight: 700;
-    font-display: swap;
-    src: url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-700italic.eot'); /* IE9 Compat Modes */
-    src: local(''),
-        url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-700italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-        url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-700italic.woff2') format('woff2'), /* Super Modern Browsers */
-        url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-700italic.woff') format('woff'), /* Modern Browsers */
-        url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-700italic.ttf') format('truetype'), /* Safari, Android, iOS */
-        url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-700italic.svg#TitilliumWeb') format('svg'); /* Legacy iOS */
-}
 /* titillium-web-600 - latin-ext_latin */
 @font-face {
     font-family: 'Titillium Web';
@@ -277,6 +260,199 @@ $font-path: "/fonts";
         url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-600italic.svg#TitilliumWeb') format('svg'); /* Legacy iOS */
 }
 
+/* titillium-web-700 - latin-ext_latin */
+@font-face {
+    font-family: 'Titillium Web';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-700.eot'); /* IE9 Compat Modes */
+    src: local(''),
+        url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+        url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-700.woff') format('woff'), /* Modern Browsers */
+        url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+        url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-700.svg#TitilliumWeb') format('svg'); /* Legacy iOS */
+}
+
+/* titillium-web-700italic - latin-ext_latin */
+@font-face {
+    font-family: 'Titillium Web';
+    font-style: italic;
+    font-weight: 700;
+    font-display: swap;
+    src: url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-700italic.eot'); /* IE9 Compat Modes */
+    src: local(''),
+        url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-700italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-700italic.woff2') format('woff2'), /* Super Modern Browsers */
+        url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-700italic.woff') format('woff'), /* Modern Browsers */
+        url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-700italic.ttf') format('truetype'), /* Safari, Android, iOS */
+        url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-700italic.svg#TitilliumWeb') format('svg'); /* Legacy iOS */
+}
+```
+
+#### Titillium Sans Pro (Versione professionale)
+
+```scss
+$font-path: "/fonts";
+
+/* Titillium Sans Pro - Light 300 */
+@font-face {
+    font-family: 'Titillium Sans Pro';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url('#{$font-path}/Titillium_Sans_Pro/TitilliumSansPro-Light.woff2') format('woff2'),
+         url('#{$font-path}/Titillium_Sans_Pro/TitilliumSansPro-Light.woff') format('woff');
+}
+
+/* Titillium Sans Pro - Regular 400 */
+@font-face {
+    font-family: 'Titillium Sans Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('#{$font-path}/Titillium_Sans_Pro/TitilliumSansPro-Regular.woff2') format('woff2'),
+         url('#{$font-path}/Titillium_Sans_Pro/TitilliumSansPro-Regular.woff') format('woff');
+}
+
+/* Titillium Sans Pro - Italic 400 */
+@font-face {
+    font-family: 'Titillium Sans Pro';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url('#{$font-path}/Titillium_Sans_Pro/TitilliumSansPro-Italic.woff2') format('woff2'),
+         url('#{$font-path}/Titillium_Sans_Pro/TitilliumSansPro-Italic.woff') format('woff');
+}
+
+/* Titillium Sans Pro - Semibold 600 */
+@font-face {
+    font-family: 'Titillium Sans Pro';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('#{$font-path}/Titillium_Sans_Pro/TitilliumSansPro-Semibold.woff2') format('woff2'),
+         url('#{$font-path}/Titillium_Sans_Pro/TitilliumSansPro-Semibold.woff') format('woff');
+}
+
+/* Titillium Sans Pro - Semibold Italic 600 */
+@font-face {
+    font-family: 'Titillium Sans Pro';
+    font-style: italic;
+    font-weight: 600;
+    font-display: swap;
+    src: url('#{$font-path}/Titillium_Sans_Pro/TitilliumSansPro-SemiboldItalic.woff2') format('woff2'),
+         url('#{$font-path}/Titillium_Sans_Pro/TitilliumSansPro-SemiboldItalic.woff') format('woff');
+}
+
+/* Titillium Sans Pro - Bold 700 */
+@font-face {
+    font-family: 'Titillium Sans Pro';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('#{$font-path}/Titillium_Sans_Pro/TitilliumSansPro-Bold.woff2') format('woff2'),
+         url('#{$font-path}/Titillium_Sans_Pro/TitilliumSansPro-Bold.woff') format('woff');
+}
+
+/* Titillium Sans Pro - Bold Italic 700 */
+@font-face {
+    font-family: 'Titillium Sans Pro';
+    font-style: italic;
+    font-weight: 700;
+    font-display: swap;
+    src: url('#{$font-path}/Titillium_Sans_Pro/TitilliumSansPro-BoldItalic.woff2') format('woff2'),
+         url('#{$font-path}/Titillium_Sans_Pro/TitilliumSansPro-BoldItalic.woff') format('woff');
+}
+```
+
+#### Titillio (Variante App IO)
+
+```scss
+$font-path: "/fonts";
+
+/* Titillio - Light 300 */
+@font-face {
+    font-family: 'Titillio';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url('#{$font-path}/Titillio/Titillio-Light.woff2') format('woff2'),
+         url('#{$font-path}/Titillio/Titillio-Light.woff') format('woff'),
+         url('#{$font-path}/Titillio/Titillio-Light.ttf') format('truetype');
+}
+
+/* Titillio - Regular 400 */
+@font-face {
+    font-family: 'Titillio';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('#{$font-path}/Titillio/Titillio-Regular.woff2') format('woff2'),
+         url('#{$font-path}/Titillio/Titillio-Regular.woff') format('woff'),
+         url('#{$font-path}/Titillio/Titillio-Regular.ttf') format('truetype');
+}
+
+/* Titillio - Italic 400 */
+@font-face {
+    font-family: 'Titillio';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url('#{$font-path}/Titillio/Titillio-Italic.woff2') format('woff2'),
+         url('#{$font-path}/Titillio/Titillio-Italic.woff') format('woff'),
+         url('#{$font-path}/Titillio/Titillio-Italic.ttf') format('truetype');
+}
+
+/* Titillio - Semibold 600 */
+@font-face {
+    font-family: 'Titillio';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('#{$font-path}/Titillio/Titillio-Semibold.woff2') format('woff2'),
+         url('#{$font-path}/Titillio/Titillio-Semibold.woff') format('woff'),
+         url('#{$font-path}/Titillio/Titillio-Semibold.ttf') format('truetype');
+}
+
+/* Titillio - Semibold Italic 600 */
+@font-face {
+    font-family: 'Titillio';
+    font-style: italic;
+    font-weight: 600;
+    font-display: swap;
+    src: url('#{$font-path}/Titillio/Titillio-SemiboldItalic.woff2') format('woff2'),
+         url('#{$font-path}/Titillio/Titillio-SemiboldItalic.woff') format('woff'),
+         url('#{$font-path}/Titillio/Titillio-SemiboldItalic.ttf') format('truetype');
+}
+
+/* Titillio - Bold 700 */
+@font-face {
+    font-family: 'Titillio';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('#{$font-path}/Titillio/Titillio-Bold.woff2') format('woff2'),
+         url('#{$font-path}/Titillio/Titillio-Bold.woff') format('woff'),
+         url('#{$font-path}/Titillio/Titillio-Bold.ttf') format('truetype');
+}
+
+/* Titillio - Bold Italic 700 */
+@font-face {
+    font-family: 'Titillio';
+    font-style: italic;
+    font-weight: 700;
+    font-display: swap;
+    src: url('#{$font-path}/Titillio/Titillio-BoldItalic.woff2') format('woff2'),
+         url('#{$font-path}/Titillio/Titillio-BoldItalic.woff') format('woff'),
+         url('#{$font-path}/Titillio/Titillio-BoldItalic.ttf') format('truetype');
+}
+```
+
+#### Font Complementari (Lora e Roboto Mono)
+
+```scss
 /* Lora:400,700 */
 
 /* lora-regular - latin-ext_latin */
@@ -402,23 +578,105 @@ $font-path: "/fonts";
 }
 ```
 
-### Via JavaScript
+### Caricamento via JavaScript
+
+Bootstrap Italia supporta il caricamento flessibile dei font tramite JavaScript con controllo granulare delle varianti e famiglie font.
+
+#### Caricamento semplice
 
 ```js
 import { loadFonts } from 'bootstrap-italia'
 
-loadFonts('/bootstrap-italia/dist/fonts');
+// Caricamento standard (Titillium Web + Lora + Roboto Mono)
+loadFonts('/fonts');
 ```
 
-Oppure
+#### Controllo Varianti Titillium
+
+```js
+// Titillium Sans Pro al posto di Titillium Web
+loadFonts('/fonts', { titillium: 'sans-pro' });
+
+// Titillio al posto di Titillium Web  
+loadFonts('/fonts', { titillium: 'titillio' });
+
+// Titillium Web (default - equivalente al precedente)
+loadFonts('/fonts', { titillium: 'web' });
+```
+
+#### Controllo famiglie font
+
+```js
+// Solo Titillium Web (nessun font serif o monospace)
+loadFonts('/fonts', { fonts: ['titillium'] });
+
+// Titillium Sans Pro + Lora (senza Roboto Mono)
+loadFonts('/fonts', { 
+  titillium: 'sans-pro', 
+  fonts: ['titillium', 'lora'] 
+});
+
+// Solo Lora
+loadFonts('/fonts', { fonts: ['lora'] });
+
+// Solo Roboto Mono  
+loadFonts('/fonts', { fonts: ['roboto-mono'] });
+
+// Tutte le combinazioni sono supportate
+loadFonts('/fonts', { 
+  titillium: 'titillio',
+  fonts: ['titillium', 'roboto-mono'] 
+});
+```
+
+#### Funzioni di caricamento specifico
+
+Per casi d'uso specifici, sono disponibili funzioni di caricamento dedicate:
+
+```js
+import { 
+  loadTitilliumWeb, 
+  loadTitilliumSansPro, 
+  loadTitillio 
+} from 'bootstrap-italia'
+
+// Carica solo la variante Titillium specifica
+loadTitilliumWeb('/fonts');      // Solo Titillium Web
+loadTitilliumSansPro('/fonts');  // Solo Titillium Sans Pro
+loadTitillio('/fonts');          // Solo Titillio
+```
+
+#### Browser script
+
+Per l'utilizzo tramite tag script:
 
 ```html
+<!-- Caricamento standard -->
 <script>
-  bootstrap.loadFonts('/bootstrap-italia/dist/fonts');
+  bootstrap.loadFonts('/fonts');
+</script>
+
+<!-- Con varianti specifiche -->
+<script>
+  bootstrap.loadFonts('/fonts', { titillium: 'sans-pro' });
+</script>
+
+<!-- Caricamento selettivo -->
+<script>
+  bootstrap.loadFonts('/fonts', { 
+    titillium: 'titillio', 
+    fonts: ['titillium', 'lora'] 
+  });
 </script>
 ```
 
-Di default se non viene specificato alcun path, i font saranno cercati all'interno di una cartella `/node_modules/bootstrap-italia/dist/fonts` oppure, se valorizzata, utilizzando il contenuto della variabile globale `__PUBLIC_PATH__`.
+### Percorso predefinito
+
+Di default, se non viene specificato alcun path, i font saranno cercati nell'ordine seguente:
+
+1. Cartella `/node_modules/bootstrap-italia/dist/fonts`
+2. Valore della variabile globale `window.__PUBLIC_PATH__` (se valorizzata)
+3. Path specificato come parametro della funzione `loadFonts()`
 
 ## Icone
 
