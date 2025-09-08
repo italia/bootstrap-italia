@@ -98,6 +98,21 @@ L'azione richiesta per l'eliminazione della chip andrà associata al `<button>`.
   <a href="#" class="chip">
     <span class="chip-label">Etichetta con link</span>
   </a>
+  <a href="#" class="chip chip-primary">
+    <span class="chip-label">Etichetta con link</span>
+  </a>
+  <a href="#" class="chip chip-secondary">
+    <span class="chip-label">Etichetta con link</span>
+  </a>
+  <a href="#" class="chip chip-success">
+    <span class="chip-label">Etichetta con link</span>
+  </a>
+  <a href="#" class="chip chip-warning">
+    <span class="chip-label">Etichetta con link</span>
+  </a>
+  <a href="#" class="chip chip-danger">
+    <span class="chip-label">Etichetta con link</span>
+  </a>
 {% endcapture %}{% include example.html content=example %}
 
 

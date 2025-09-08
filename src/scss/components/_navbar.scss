@@ -66,6 +66,17 @@
 //
 // Component styles
 
+// Navbar mobile backdrop, inspired by "modal" approachAdd commentMore actions
+.navbar-backdrop {
+  --#{$prefix}backdrop-zindex: #{$zindex-modal-backdrop};
+  --#{$prefix}backdrop-bg: #{$modal-backdrop-bg};
+  --#{$prefix}backdrop-opacity: #{$modal-backdrop-opacity};
+  @include overlay-backdrop(var(--#{$prefix}backdrop-zindex), var(--#{$prefix}backdrop-bg), var(--#{$prefix}backdrop-opacity));
+  @media (min-width: #{map-get($grid-breakpoints, lg)}) {
+    display: none; // to handle resize from md to lg when open
+  }
+}
+
 .navbar {
   position: relative;
   display: flex;
@@ -244,9 +255,9 @@
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 100;
+  z-index: #{$zindex-modal};
   display: none;
-  width: 100%;
+  width: calc(100% - 48px); // occupa sempre tutta lo spazio orizzontale disponibile (BSI v2.15:) meno 48px a destra per il close e backdrop;
   @include media-breakpoint-up(lg) {
     position: relative;
     top: auto;
@@ -262,7 +273,7 @@
   .menu-wrapper {
     position: absolute;
     top: 0;
-    right: calc(var(--#{$prefix}spacing-m) * 2);
+    right: 0; // removed > calc(var(--#{$prefix}spacing-m) * 2);
     bottom: 0;
     left: 0;
     z-index: 5;

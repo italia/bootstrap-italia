@@ -207,6 +207,16 @@
           }
         }
       }
+      .splide__pagination {
+        position: absolute;
+        left: 50%;
+        margin-left: $v-gap * 5;
+        right: 0;
+        bottom: $crs-landscape-bottom;
+        text-align: left;
+        justify-content: left;
+        margin-bottom: 8px;
+      }
     }
     &.it-carousel-landscape-abstract-three-cols-arrow-visible {
       .lined_slide {
