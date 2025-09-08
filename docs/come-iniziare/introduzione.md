@@ -151,19 +151,21 @@ Per la versione non bundle, dopo aver copiato i file all'interno del progetto, s
 
 ### Varianti Titillium disponibili
 
-Bootstrap Italia supporta tre varianti della "famiglia" Titillium:
+Bootstrap Italia supporta tre varianti alternative della "famiglia" Titillium:
 
 - **Titillium Web** (`'web'`): Versione originale, default di Bootstrap Italia. Supporta pesi 300, 400, 600, 700 con varianti italic.
 
-- **Titillium Sans Pro** (`'sans-pro'`): Versione professionale con supporto linguistico esteso per lingue europee ed extraeuropee. Disponibile nei formati WOFF2 e WOFF moderni.
+- **Titillium Sans Pro** (`'sans-pro'`): Versione professionale con supporto linguistico esteso per lingue europee ed extraeuropee. Disponibile nei formati WOFF2 e WOFF moderni. Repository del progetto: [https://github.com/chialab/titillium_pro](https://github.com/chialab/titillium_pro)
 
-- **Titillio** (`'titillio'`): Variante alternativa sviluppata per App IO, include supporto TTF aggiuntivo per compatibilità estesa.
+- **Titillio** (`'titillio'`): Variante alternativa sviluppata per App IO, include supporto TTF aggiuntivo per compatibilità estesa. Repository del progetto: [https://github.com/pagopa/titillio](https://github.com/pagopa/titillio)
+
+Maggiori informazioni nella scheda [Tipografia](https://designers.italia.it/design-system/fondamenti/tipografia/) del Design system .italia. 
 
 ### Caricamento via CSS
 
 Per caricare i font necessari via CSS è necessario inserire nei propri fogli di stile il seguente codice. Per semplicità abbiamo utilizzato la sintassi SCSS in modo da utilizzare una variabile per specificare la path di base dove prendere i font.
 
-#### Titillium Web (Default)
+#### Titillium Web (default)
 
 ```scss
 $font-path: "/fonts";
@@ -291,7 +293,7 @@ $font-path: "/fonts";
 }
 ```
 
-#### Titillium Sans Pro (Versione professionale)
+#### Titillium Sans Pro (versione professionale)
 
 ```scss
 $font-path: "/fonts";
@@ -367,7 +369,7 @@ $font-path: "/fonts";
 }
 ```
 
-#### Titillio (Variante App IO)
+#### Titillio (variante App IO)
 
 ```scss
 $font-path: "/fonts";
@@ -383,6 +385,17 @@ $font-path: "/fonts";
          url('#{$font-path}/Titillio/Titillio-Light.ttf') format('truetype');
 }
 
+/* Titillio - Light Italic 300 */
+@font-face {
+    font-family: 'Titillio';
+    font-style: italic;
+    font-weight: 300;
+    font-display: swap;
+    src: url('#{$font-path}/Titillio/Titillio-LightItalic.woff2') format('woff2'),
+         url('#{$font-path}/Titillio/Titillio-LightItalic.woff') format('woff'),
+         url('#{$font-path}/Titillio/Titillio-LightItalic.ttf') format('truetype');
+}
+
 /* Titillio - Regular 400 */
 @font-face {
     font-family: 'Titillio';
@@ -394,15 +407,15 @@ $font-path: "/fonts";
          url('#{$font-path}/Titillio/Titillio-Regular.ttf') format('truetype');
 }
 
-/* Titillio - Italic 400 */
+/* Titillio - Regular Italic 400 */
 @font-face {
     font-family: 'Titillio';
     font-style: italic;
     font-weight: 400;
     font-display: swap;
-    src: url('#{$font-path}/Titillio/Titillio-Italic.woff2') format('woff2'),
-         url('#{$font-path}/Titillio/Titillio-Italic.woff') format('woff'),
-         url('#{$font-path}/Titillio/Titillio-Italic.ttf') format('truetype');
+    src: url('#{$font-path}/Titillio/Titillio-RegularItalic.woff2') format('woff2'),
+         url('#{$font-path}/Titillio/Titillio-RegularItalic.woff') format('woff'),
+         url('#{$font-path}/Titillio/Titillio-RegularItalic.ttf') format('truetype');
 }
 
 /* Titillio - Semibold 600 */
@@ -450,7 +463,7 @@ $font-path: "/fonts";
 }
 ```
 
-#### Font Complementari (Lora e Roboto Mono)
+#### Font complementari (Lora e Roboto Mono)
 
 ```scss
 /* Lora:400,700 */
