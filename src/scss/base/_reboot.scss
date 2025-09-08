@@ -156,11 +156,16 @@ a {
   text-decoration-skip-ink: auto;
   text-underline-offset: 2px;
 
-  &:hover:not(.btn) {
+  &:hover {
     color: var(--#{$prefix}color-link-hover);
     text-decoration: underline;
   }
 }
+
+// Links hover color inside a paragraph
+// p a:hover {
+//     color: var(--#{$prefix}color-link-hover);
+// }
 
 // And undo these styles for placeholder links/named anchors (without href).
 // It would be more straightforward to just use a[href] in previous block, but that
