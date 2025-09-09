@@ -166,7 +166,7 @@ DEPENDENCIES
   jekyll-redirect-from (~> 0.16.0)
   jekyll-sitemap (~> 1.4.0)
   jekyll-toc (~> 0.17.1)
-  sass-embedded (~> 1.69)
+  sass-embedded
   webrick (~> 1.7)
 
 RUBY VERSION
