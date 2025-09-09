@@ -1,7 +1,6 @@
 {% assign buildTime = site.time | date: '%Y%m%d%H%M' %}
 <script src="{{ site.baseurl }}/dist/js/bootstrap-italia.bundle.min.js?{{ buildTime }}"></script>
 <script>
-  // Font Switcher Logic
   class FontSwitcher {
     constructor() {
       this.currentFont = localStorage.getItem('docs-font-variant') || 'web';
@@ -14,39 +13,27 @@
     }
 
     init() {
-      // Carica font iniziale
       this.loadFont(this.currentFont);
-
-      // Setup UI
       this.updateUI();
       this.setupEventListeners();
     }
 
     loadFont(variant) {
-      // Rimuovi style elements precedenti per evitare conflitti
       document.querySelectorAll('style[data-font-switcher]').forEach(el => el.remove());
-
-      // Carica nuova variante
       bootstrap.loadFonts('{{ site.baseurl }}/dist/fonts', {
         titillium: variant,
         fonts: ['titillium', 'lora', 'roboto-mono']
       });
-
-      // Marca il style element per identificazione
       const lastStyle = document.querySelector('style:last-of-type');
       if (lastStyle) {
         lastStyle.setAttribute('data-font-switcher', variant);
       }
-
-      // Forza aggiornamento font CSS
       this.updateFontStack(variant);
     }
 
     updateFontStack(variant) {
-      // Crea CSS temporaneo per forzare il nuovo font
       const tempStyle = document.createElement('style');
       tempStyle.setAttribute('data-font-switcher-override', variant);
-
       const fontFamily = this.fontNames[variant];
       tempStyle.innerHTML = `
         body, .font-sans-serif, 
@@ -55,8 +42,6 @@
           font-family: '${fontFamily}', Geneva, Tahoma, sans-serif !important;
         }
       `;
-
-      // Rimuovi override precedente
       document.querySelectorAll('style[data-font-switcher-override]').forEach(el => el.remove());
       document.head.appendChild(tempStyle);
     }
@@ -66,8 +51,6 @@
       if (currentFontElement) {
         currentFontElement.textContent = this.fontNames[this.currentFont];
       }
-
-      // Aggiorna active state nei dropdown items
       document.querySelectorAll('[data-font]').forEach(item => {
         item.classList.toggle('active', item.dataset.font === this.currentFont);
       });
@@ -88,11 +71,10 @@
 
       this.currentFont = variant;
       localStorage.setItem('docs-font-variant', variant);
-
       this.loadFont(variant);
       this.updateUI();
 
-      // Optional: Analytics tracking
+      // Optional: analytics tracking XXX PoC 
       if (typeof gtag !== 'undefined') {
         gtag('event', 'font_switch', {
           'custom_parameter': variant
@@ -103,7 +85,6 @@
     }
   }
 
-  // Inizializza font switcher quando DOM è ready
   document.addEventListener('DOMContentLoaded', () => {
     window.fontSwitcher = new FontSwitcher();
   });

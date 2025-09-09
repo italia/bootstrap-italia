@@ -431,7 +431,6 @@ const getRobotoMonoCSS = (basePath) => `
   }
 `
 
-// Font configuration map
 const fontGenerators = {
   'titillium-web': getTitilliumWebCSS,
   'titillium-sans-pro': getTitilliumSansProCSS,
@@ -440,7 +439,6 @@ const fontGenerators = {
   'roboto-mono': getRobotoMonoCSS,
 }
 
-// Main loadFonts function
 export default (path = '/node_modules/bootstrap-italia/dist/fonts', options = {}) => {
   if (typeof window === 'undefined' || typeof document === 'undefined') {
     return
@@ -448,36 +446,26 @@ export default (path = '/node_modules/bootstrap-italia/dist/fonts', options = {}
 
   // Backward compatibility: if called without options, use legacy behavior
   if (Object.keys(options).length === 0) {
-    // Original hardcoded behavior - load all three fonts with Titillium Web
     options = {
       titillium: 'web',
       fonts: ['titillium', 'lora', 'roboto-mono'],
     }
   }
 
-  // Extract options with defaults
   const {
     titillium = 'web', // 'web' | 'sans-pro' | 'titillio'
     fonts = ['titillium', 'lora', 'roboto-mono'], // which font families to include
   } = options
 
-  // Map titillium variant to specific font ID
   const titilliumFontId = titillium === 'sans-pro' ? 'titillium-sans-pro' : titillium === 'titillio' ? 'titillio' : 'titillium-web'
-
-  // Build final font list - replace 'titillium' with the specific variant
   const finalFonts = fonts.map((font) => (font === 'titillium' ? titilliumFontId : font))
-
-  // Resolve path
   const __PUBLIC_PATH__ = window.__PUBLIC_PATH__ ? window.__PUBLIC_PATH__ : path
 
-  // Generate CSS for requested fonts
   const cssChunks = finalFonts
     .filter((fontId) => fontGenerators[fontId]) // only valid fonts
     .map((fontId) => fontGenerators[fontId](__PUBLIC_PATH__))
-
   const finalCSS = cssChunks.join('\n')
 
-  // Create and inject stylesheet
   const styleNode = document.createElement('style')
   styleNode.innerHTML = finalCSS
   document.getElementsByTagName('head')[0].appendChild(styleNode)
@@ -486,7 +474,7 @@ export default (path = '/node_modules/bootstrap-italia/dist/fonts', options = {}
 /*
 USAGE EXAMPLES:
 
-// Backward compatible - unchanged behavior
+// Backward compatible
 loadFonts('/fonts');
 
 // Load only Titillium Sans Pro
