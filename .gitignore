@@ -57,4 +57,3 @@ changelog.txt
 # Ignore cache file from linters
 .eslintcache
 .stylelintcache
-Gemfile.lock
