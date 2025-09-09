@@ -56,7 +56,10 @@
     bottom: 0;
     z-index: #{$zindex-modal};
     display: none;
-    width: calc(100% - 48px); // occupa sempre tutta lo spazio orizzontale disponibile (BSI v2.15:) meno 48px a destra per il close e backdrop
+    width: calc(100% - 48px); // use available horizontal space minus 48px on the right for the close button and backdrop
+    @media (min-width: #{map-get($grid-breakpoints, lg)}) {
+      width: 100%;
+    }
 
     .menu-wrapper {
       background: $navigation-bg-color;
