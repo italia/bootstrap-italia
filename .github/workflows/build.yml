@@ -8,7 +8,7 @@ jobs:
     name: HtmlProofer tests
     runs-on: ubuntu-latest
     container:
-      image: timbru31/ruby-node:3.1-20
+      image: timbru31/ruby-node:3.3-20
     steps:
       - uses: actions/checkout@v3
       - name: Fixup git permissions
