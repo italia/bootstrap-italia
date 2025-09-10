@@ -162,7 +162,7 @@ A seconda della luminosità dell'immagine si consiglia di applicare la classe `.
 
 ## Section con Card
 
-Per aggiungere una serie di card all'interno di una Section si consiglia di utilizzare le griglie per garantire un corretto margine fra gli elementi `.card`.
+Per aggiungere una serie di card all'interno di una Section si consiglia di utilizzare le griglie per garantire un corretto margine fra gli elementi `.it-card`.
 
 {% comment %}Example name: Con card{% endcomment %}
 {% capture example %}
@@ -176,19 +176,57 @@ Per aggiungere una serie di card all'interno di una Section si consiglia di util
         </div>
       </div>
       <div class="row gy-3">
-        <div class="col-12 col-md-6">
-          <div class="card shadow">
-            <div class="card-body">
-              <p class="card-text font-serif">Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus. Eget egestas purus viverra accumsan. Diam maecenas ultricies mi eget mauris pharetra et. </p>
+        <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
+          <!--start it-card-->
+          <article class="it-card it-card-image rounded shadow-sm border">
+            <!--card first child is the title (link)-->
+            <h3 class="it-card-title no_toc">
+              <a href="#">Titolo del contenuto</a>
+            </h3>
+            <!--card second child is the image (optional)-->
+            <div class="it-card-image-wrapper">
+              <div class="ratio ratio-16x9">
+                <figure class="figure img-full">
+                  <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+                </figure>
+              </div>
             </div>
-          </div>
+            <!--card body content-->
+            <div class="it-card-body">
+              <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
+            </div>
+            <!--finally the card footer metadata-->
+            <footer class="it-card-related it-card-footer">
+              <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
+            </footer>
+          </article>
+          <!--end it-card-->
         </div>
-        <div class="col-12 col-md-6">
-          <div class="card shadow">
-            <div class="card-body">
-              <p class="card-text font-serif">Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Dictum sit amet justo donec enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus. Eget egestas purus viverra accumsan. Diam maecenas ultricies mi eget mauris pharetra et. </p>
+        <div class="col-12 col-md-6 col-lg-6 mb-3 mb-md-4">
+          <!--start it-card-->
+          <article class="it-card it-card-image rounded shadow-sm border">
+            <!--card first child is the title (link)-->
+            <h3 class="it-card-title no_toc">
+              <a href="#">Titolo del contenuto</a>
+            </h3>
+            <!--card second child is the image (optional)-->
+            <div class="it-card-image-wrapper">
+              <div class="ratio ratio-16x9">
+                <figure class="figure img-full">
+                  <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+                </figure>
+              </div>
             </div>
-          </div>
+            <!--card body content-->
+            <div class="it-card-body">
+              <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
+            </div>
+            <!--finally the card footer metadata-->
+            <footer class="it-card-related it-card-footer">
+              <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
+            </footer>
+          </article>
+          <!--end it-card-->
         </div>
       </div>
     </div>
@@ -196,3 +234,11 @@ Per aggiungere una serie di card all'interno di una Section si consiglia di util
   </div>
 </section>
 {% endcapture %}{% include example.html content=example %}
+
+## Breaking change
+
+{% capture callout %}
+Implementato nell'esempio con card il nuovo componente card definito dalle classi `.it-card` e relativi modificatori.  
+
+Le classi legacy di Bootstrap `.card` sono ora deprecate ma **saranno mantenute nei fogli di stile fino al prossimo rilascio maggiore, per permettere una migrazione graduale**. 
+{% endcapture %}{% include callout-breaking.html version="2.16.0" content=callout type="danger" %}
