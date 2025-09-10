@@ -86,15 +86,13 @@ ul.row.it-card-list {
       container-type: inline-size;
 
       > .it-card {
-        // Reset Media Queries
+        // Reset media queries from small and up (single rule covers sm/md/lg)
         @include media-breakpoint-up(sm) {
           flex: auto;
         }
-
         @include media-breakpoint-up(md) {
           flex: auto;
         }
-
         @include media-breakpoint-up(lg) {
           flex: auto;
         }
@@ -115,7 +113,7 @@ ul.row.it-card-list {
         }
       }
 
-      // Override specific coulmns in container mode
+  // Override specific columns in container mode
       &.it-card-group-2-cols > .it-card {
         @container (min-width: 500px) {
           flex: 0 0 calc(50% - 0.5 * var(--#{$prefix}it-card-group-gap));
