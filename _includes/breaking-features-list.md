@@ -1,3 +1,75 @@
+## 2.16.0
+
+[Changelog completo](https://github.com/italia/bootstrap-italia/releases/tag/v2.16.0) <svg class="icon steppers-success" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
+
+### Card
+
+Questo è un nuovo componente card definito dalle classi `.it-card` e relativi modificatori. 
+
+Le classi legacy di Bootstrap `.card` sono ora deprecate ma **saranno mantenute nei fogli di stile fino al prossimo rilascio maggiore, per permettere una migrazione graduale**. 
+
+Per migrare le tue card dalle deprecate `.card` alle nuove `.it-card` (v2.16.0) considera prima di tutto i cambi strutturali. Prima era:
+```html
+<!-- Card base minimal -->
+<div class="card-wrapper">
+  <div class="card">
+    <div class="card-body">
+      <h3 class="card-title h5 ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h3>
+      <p class="card-text font-serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+  </div>
+</div>
+```
+
+Adesso:
+```html
+<!-- Card base minimal -->
+<article class="it-card rounded shadow-sm border">
+  <h3 class="it-card-title">
+    <a href="#">Titolo del contenuto</a>
+  </h3>
+  <div class="it-card-body">
+    <p class="it-card-text">Breve descrizione.</p>
+  </div>
+</article>
+```
+
+
+### Carousel
+
+Implementato negli esempi il nuovo componente card definito dalle classi `.it-card` e relativi modificatori. Il markup degli esempi e gli attributi per attivare il componente sono inoltre cambiati laddove c'è la necessità di gestire le altezze delle card con classi `.it-card-full-height` e/o la necessità di mostrarne le ombre `.shadow-`. 
+
+Le classi legacy di Bootstrap `.card` sono ora deprecate ma **saranno mantenute nei fogli di stile fino al prossimo rilascio maggiore, per permettere una migrazione graduale**. 
+
+
+### Dimmer
+
+Implementato negli esempi il nuovo componente card definito dalle classi `.it-card` e relativi modificatori.  
+
+Le classi legacy di Bootstrap `.card` sono ora deprecate ma **saranno mantenute nei fogli di stile fino al prossimo rilascio maggiore, per permettere una migrazione graduale**. 
+
+
+### Hero
+
+Implementato nell'esempio con immagine e margine negativo per contenuti sovrapposti il nuovo componente card definito dalle classi `.it-card` e relativi modificatori.  
+
+Le classi legacy di Bootstrap `.card` sono ora deprecate ma **saranno mantenute nei fogli di stile fino al prossimo rilascio maggiore, per permettere una migrazione graduale**. 
+
+
+### Sections
+
+Implementato nell'esempio con card il nuovo componente card definito dalle classi `.it-card` e relativi modificatori.  
+
+Le classi legacy di Bootstrap `.card` sono ora deprecate ma **saranno mantenute nei fogli di stile fino al prossimo rilascio maggiore, per permettere una migrazione graduale**. 
+
+
+### Timeline
+
+Implementato nell'esempio il nuovo componente card definito dalle classi `.it-card` e relativi modificatori.  
+
+Le classi legacy di Bootstrap `.card` sono ora deprecate ma **saranno mantenute nei fogli di stile fino al prossimo rilascio maggiore, per permettere una migrazione graduale**. 
+
+
 ## 2.15.0
 
 [Changelog completo](https://github.com/italia/bootstrap-italia/releases/tag/v2.15.0) <svg class="icon steppers-success" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>

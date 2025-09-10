@@ -1376,7 +1376,7 @@ $placeholder-opacity-max: 0.5 !default;
 $placeholder-opacity-min: 0.2 !default;
 // scss-docs-end placeholders
 
-// Cards
+// Cards (Deprecated)
 $card-cap-bg: transparent !default;
 $card-spacer-y: 1rem !default;
 $card-spacer-x: 2rem !default;
@@ -1974,7 +1974,7 @@ $timeline-pin-size: $v-gap * 3;
 $timeline-pin-background: hsl(210, 100%, 20%); // color-blue-20
 $timeline-pin-circle-size: 48px;
 $timeline-pin-circle-border: $v-gap solid $white !default;
-$timeline-content-padding: 18px 0 18px 40px;
+$timeline-content-padding: 18px 18px 18px 40px;
 $timeline-content-padding-reverse: 18px 40px 18px 18px;
 
 //Sections
