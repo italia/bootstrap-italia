@@ -151,13 +151,13 @@ Per la versione non bundle, dopo aver copiato i file all'interno del progetto, s
 
 ### Varianti Titillium disponibili
 
-Bootstrap Italia supporta tre varianti alternative della "famiglia" Titillium:
+Bootstrap Italia supporta tre varianti open alternative del carattere senza grazie "Titillium":
 
-- **Titillium Web** (`'web'`): Versione originale, default di Bootstrap Italia. Supporta pesi 300, 400, 600, 700 con varianti italic.
+- **Titillium Web** (`'web'`): Versione originale, default di Bootstrap Italia, il carattere di riferimento del Design system .italia per il digitale della Pubblica Amministrazione italiana. Disponibile in Bootstrap Italia nei pesi 300, 400, 600, 700 con varianti italic. ([Storia della font Titillium e crediti](https://nta.accademiadiurbino.it/titillium/)).
 
-- **Titillium Sans Pro** (`'sans-pro'`): Versione professionale con supporto linguistico esteso per lingue europee ed extraeuropee. Disponibile nei formati WOFF2 e WOFF moderni. Repository del progetto: [https://github.com/chialab/titillium_pro](https://github.com/chialab/titillium_pro)
+- **Titillium Sans Pro** (`'sans-pro'`): Versione professionale con supporto linguistico esteso per lingue europee, extraeuropee e scrittura matematica. Particolare cura è stata data all'aggiustamento di spaziature, kerning e metriche verticali. Disponibile in Bootstrap Italia nei formati WOFF2 e WOFF nei soliti pesi del Titillium Web, la font ha anche i pesi "Black" e "Thin" e altri formati file scaricabili dal repository ufficiale. ([Repository del Titillium Sans Pro e crediti](https://github.com/chialab/titillium_pro)).
 
-- **Titillio** (`'titillio'`): Variante alternativa sviluppata per App IO, include supporto TTF aggiuntivo per compatibilità estesa. Repository del progetto: [https://github.com/pagopa/titillio](https://github.com/pagopa/titillio)
+- **Titillio** (`'titillio'`): Versione alternativa del Titillium Sans Pro sviluppata in seno al progetto App IO con attenzione alla resa in applicazioni mobili e necessità di distinguere bene numerose gerarchie visive. Disponibile in Bootstrap Italia nei formati WOFF2, WOFF e TTF aggiuntivo per compatibilità estesa nei soliti pesi del Titillium Web, la font ha anche i pesi "Black", "Extra-Black" e "Thin" e altri formati file scaricabili dal repository ufficiale. ([Repository del Titillio e crediti](https://github.com/pagopa/titillio).
 
 Maggiori informazioni nella scheda [Tipografia](https://designers.italia.it/design-system/fondamenti/tipografia/) del Design system .italia. 
 
