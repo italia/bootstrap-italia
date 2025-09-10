@@ -4,6 +4,7 @@
 .link-list-wrapper {
   --#{$prefix}linklist-divider-size: 1px;
   --#{$prefix}linklist-heading-font-size: var(--#{$prefix}heading-6-font-size);
+  --#{$prefix}linklist-heading-color: var(--#{$prefix}color-text-secondary);
   --#{$prefix}linklist-item-font-size: var(--#{$prefix}label-font-size);
   --#{$prefix}linklist-item-line-height: var(--#{$prefix}label-line-height);
   --#{$prefix}linklist-item-spacing: var(--#{$prefix}spacing-xxs);
@@ -17,7 +18,7 @@
   .link-list-heading,
   h3 {
     margin-bottom: var(--#{$prefix}spacing-xxs);
-    color: var(--#{$prefix}color-text-base);
+    color: var(--#{$prefix}linklist-heading-color);
     font-size: var(--#{$prefix}linklist-heading-font-size);
     font-weight: var(--#{$prefix}heading-font-weight-weak);
     line-height: var(--#{$prefix}heading-line-height);
@@ -25,7 +26,6 @@
 
   h3 {
     padding: 0 var(--#{$prefix}spacing-m);
-    color: var(--#{$prefix}color-text-base);
   }
 
   ul {
@@ -174,7 +174,7 @@
     }
 
     &[aria-expanded='true'] .icon {
-      transform: scale(-1);
+      transform: rotate(180deg);
     }
 
     .icon {
@@ -253,9 +253,20 @@
   }
 }
 
-.dark {
-  .link-list li a.disabled,
-  .link-list li a.disabled span {
+//
+// Dark theme styles 
+
+.dark,
+.theme-dark {
+  --#{$prefix}linklist-heading-color: var(--#{$prefix}color-text-inverse);
+
+  .link-list-wrapper .list-item:not(.disabled) span,
+  .link-list-wrapper .list-item:hover span {
+    color: var(--#{$prefix}color-text-inverse);
+  }
+
+  .link-list-wrapper .list-item.disabled,
+  .link-list-wrapper .list-item.disabled span {
     color: hsla(0, 0%, 100%, 0.35); // TODO: Add color variable for dark variant
   }
 }
