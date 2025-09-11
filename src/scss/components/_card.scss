@@ -1,153 +1,7 @@
-@use 'sass:math';
-
-// Special list for long groups of cards, bootstrap row/cols grid
-ul.row.it-card-list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-
-  > li.col,
-  > li[class*='col-'] {
-    border: none;
-    background: transparent;
-    margin-top: 0;
-    display: block;
-    transition: none;
-  }
-}
-
-// Improved responsive it-card-group with a @container aware twist
-.it-card-group {
-  --#{$prefix}it-card-group-gap: #{$grid-gutter-width};
-
-  display: flex;
-  flex-wrap: wrap;
-
-  // gap fallback
-  margin: calc(-0.5 * var(--#{$prefix}it-card-group-gap));
-
-  > .it-card {
-    margin: calc(0.5 * var(--#{$prefix}it-card-group-gap));
-    // Default stacked on mobile
-    flex: 0 0 calc(100% - var(--#{$prefix}it-card-group-gap));
-
-    // Responsive breakpoints
-    @include media-breakpoint-up(sm) {
-      flex: 0 0 calc(50% - 0.5 * var(--#{$prefix}it-card-group-gap));
-    }
-
-    @include media-breakpoint-up(md) {
-      flex: 0 0 calc(33.333% - 0.667 * var(--#{$prefix}it-card-group-gap));
-    }
-
-    @include media-breakpoint-up(lg) {
-      flex: 0 0 calc(25% - 0.75 * var(--#{$prefix}it-card-group-gap));
-    }
-  }
-
-  @supports (gap: var(--#{$prefix}it-card-group-gap)) {
-    margin: 0;
-    gap: var(--#{$prefix}it-card-group-gap);
-
-    > .it-card {
-      margin: 0;
-    }
-  }
-
-  // Predefined column layouts
-  &.it-card-group-2-cols > .it-card,
-  &.it-card-group-3-cols > .it-card,
-  &.it-card-group-4-cols > .it-card {
-    @include media-breakpoint-up(sm) {
-      flex: 0 0 calc(50% - 0.5 * var(--#{$prefix}it-card-group-gap));
-    }
-  }
-
-  &.it-card-group-3-cols > .it-card {
-    @include media-breakpoint-up(md) {
-      flex: 0 0 calc(33.333% - 0.667 * var(--#{$prefix}it-card-group-gap));
-    }
-  }
-
-  &.it-card-group-4-cols > .it-card {
-    @include media-breakpoint-up(md) {
-      flex: 0 0 calc(33.333% - 0.667 * var(--#{$prefix}it-card-group-gap));
-    }
-
-    @include media-breakpoint-up(lg) {
-      flex: 0 0 calc(25% - 0.75 * var(--#{$prefix}it-card-group-gap));
-    }
-  }
-
-  // Progressive enhancement with Container Queries
-  @supports (container-type: inline-size) {
-    // Only with .it-card-group-container-aware class
-    &.it-card-group-container-aware {
-      container-type: inline-size;
-
-      > .it-card {
-        // Reset media queries from small and up (single rule covers sm/md/lg)
-        @include media-breakpoint-up(sm) {
-          flex: auto;
-        }
-        @include media-breakpoint-up(md) {
-          flex: auto;
-        }
-        @include media-breakpoint-up(lg) {
-          flex: auto;
-        }
-
-        // Container Queries
-        flex: 1 0 100%;
-
-        @container (min-width: 500px) {
-          flex: 0 0 calc(50% - 0.5 * var(--#{$prefix}it-card-group-gap));
-        }
-
-        @container (min-width: 800px) {
-          flex: 0 0 calc(33.333% - 0.667 * var(--#{$prefix}it-card-group-gap));
-        }
-
-        @container (min-width: 1100px) {
-          flex: 0 0 calc(25% - 0.75 * var(--#{$prefix}it-card-group-gap));
-        }
-      }
-
-  // Override specific columns in container mode
-      &.it-card-group-2-cols > .it-card {
-        @container (min-width: 500px) {
-          flex: 0 0 calc(50% - 0.5 * var(--#{$prefix}it-card-group-gap));
-        }
-      }
-
-      &.it-card-group-3-cols > .it-card {
-        @container (min-width: 800px) {
-          flex: 0 0 calc(33.333% - 0.667 * var(--#{$prefix}it-card-group-gap));
-        }
-      }
-    }
-  }
-
-  // Option for equal height cards
-  &.it-card-group-equal-height > .it-card {
-    height: 100%;
-  }
-
-  // Options for alignments
-  &.it-card-group-center {
-    justify-content: center;
-  }
-
-  &.it-card-group-end {
-    justify-content: flex-end;
-  }
-}
-
 //
-// Base card structure It Card 2025
-//
-.it-card,
-article.it-card {
+// Component Style - it-card (2025 refactoring)
+
+.it-card {
   --#{$prefix}it-card-bg: #{$white};
   --#{$prefix}it-card-body-spacer: 1rem;
   --#{$prefix}it-card-border-color: #{$gray-border};
@@ -796,5 +650,145 @@ article.it-card {
         }
       }
     }
+  }
+}
+
+// Card Lists
+//
+
+// Special list for long groups of cards, bootstrap row/cols grid
+ul.row.it-card-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  > li.col,
+  > li[class*='col-'] {
+    border: none;
+    background: transparent;
+    margin-top: 0;
+    display: block;
+    transition: none;
+  }
+}
+
+// Improved responsive it-card-group with a @container aware twist
+.it-card-group {
+  --#{$prefix}it-card-group-gap: #{$grid-gutter-width};
+
+  display: flex;
+  flex-wrap: wrap;
+
+  // gap fallback
+  margin: calc(-0.5 * var(--#{$prefix}it-card-group-gap));
+
+  > .it-card {
+    margin: calc(0.5 * var(--#{$prefix}it-card-group-gap));
+    // Default stacked on mobile
+    flex: 0 0 calc(100% - var(--#{$prefix}it-card-group-gap));
+
+    // Responsive breakpoints
+    @include media-breakpoint-up(sm) {
+      flex: 0 0 calc(50% - 0.5 * var(--#{$prefix}it-card-group-gap));
+    }
+
+    @include media-breakpoint-up(md) {
+      flex: 0 0 calc(33.333% - 0.667 * var(--#{$prefix}it-card-group-gap));
+    }
+
+    @include media-breakpoint-up(lg) {
+      flex: 0 0 calc(25% - 0.75 * var(--#{$prefix}it-card-group-gap));
+    }
+  }
+
+  @supports (gap: var(--#{$prefix}it-card-group-gap)) {
+    margin: 0;
+    gap: var(--#{$prefix}it-card-group-gap);
+
+    > .it-card {
+      margin: 0;
+    }
+  }
+
+  // Predefined column layouts
+  &.it-card-group-2-cols > .it-card,
+  &.it-card-group-3-cols > .it-card,
+  &.it-card-group-4-cols > .it-card {
+    @include media-breakpoint-up(sm) {
+      flex: 0 0 calc(50% - 0.5 * var(--#{$prefix}it-card-group-gap));
+    }
+  }
+
+  &.it-card-group-3-cols > .it-card {
+    @include media-breakpoint-up(md) {
+      flex: 0 0 calc(33.333% - 0.667 * var(--#{$prefix}it-card-group-gap));
+    }
+  }
+
+  &.it-card-group-4-cols > .it-card {
+    @include media-breakpoint-up(md) {
+      flex: 0 0 calc(33.333% - 0.667 * var(--#{$prefix}it-card-group-gap));
+    }
+
+    @include media-breakpoint-up(lg) {
+      flex: 0 0 calc(25% - 0.75 * var(--#{$prefix}it-card-group-gap));
+    }
+  }
+
+  // Progressive enhancement with Container Queries
+  @supports (container-type: inline-size) {
+    // Only with .it-card-group-container-aware class
+    &.it-card-group-container-aware {
+      container-type: inline-size;
+
+      > .it-card {
+        // Reset media queries from small and up
+        @include media-breakpoint-up(sm) {
+          flex: auto;
+        }
+
+        // Container Queries
+        flex: 1 0 100%;
+
+        @container (min-width: 500px) {
+          flex: 0 0 calc(50% - 0.5 * var(--#{$prefix}it-card-group-gap));
+        }
+
+        @container (min-width: 800px) {
+          flex: 0 0 calc(33.333% - 0.667 * var(--#{$prefix}it-card-group-gap));
+        }
+
+        @container (min-width: 1100px) {
+          flex: 0 0 calc(25% - 0.75 * var(--#{$prefix}it-card-group-gap));
+        }
+      }
+
+  // Override specific columns in container mode
+      &.it-card-group-2-cols > .it-card {
+        @container (min-width: 500px) {
+          flex: 0 0 calc(50% - 0.5 * var(--#{$prefix}it-card-group-gap));
+        }
+      }
+
+      &.it-card-group-3-cols > .it-card {
+        @container (min-width: 800px) {
+          flex: 0 0 calc(33.333% - 0.667 * var(--#{$prefix}it-card-group-gap));
+        }
+      }
+    }
+  }
+
+  // Option for equal height cards
+  &.it-card-group-equal-height > .it-card {
+    height: 100%;
+  }
+
+  // Options for alignments
+  &.it-card-group-center {
+    justify-content: center;
+  }
+
+  &.it-card-group-end {
+    justify-content: flex-end;
   }
 }
