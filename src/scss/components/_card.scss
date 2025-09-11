@@ -86,14 +86,8 @@ ul.row.it-card-list {
       container-type: inline-size;
 
       > .it-card {
-        // Reset media queries from small and up (single rule covers sm/md/lg)
+        // Reset media queries from small and up
         @include media-breakpoint-up(sm) {
-          flex: auto;
-        }
-        @include media-breakpoint-up(md) {
-          flex: auto;
-        }
-        @include media-breakpoint-up(lg) {
           flex: auto;
         }
 
