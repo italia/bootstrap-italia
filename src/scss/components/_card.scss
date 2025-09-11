@@ -140,8 +140,7 @@ ul.row.it-card-list {
 //
 // Base card structure It Card 2025
 //
-.it-card,
-article.it-card {
+.it-card {
   --#{$prefix}it-card-bg: #{$white};
   --#{$prefix}it-card-body-spacer: 1rem;
   --#{$prefix}it-card-border-color: #{$gray-border};
