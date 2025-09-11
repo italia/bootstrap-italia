@@ -2,10 +2,7 @@
 // Component Style - it-card (2025 refactoring)
 
 .it-card {
-  --#{$prefix}it-card-bg: #{$white};
-  --#{$prefix}it-card-body-spacer: 1rem;
-  --#{$prefix}it-card-border-color: #{$gray-border};
-  --#{$prefix}it-card-border-radius: 4px;
+  --#{$prefix}it-card-border-radius-inner: calc(var(--#{$prefix}it-card-border-radius) - var(--#{$prefix}it-card-border-outside-width));
   --#{$prefix}it-card-border-top-color: transparent; // default background set to transparent
   --#{$prefix}it-card-border-top-width: 6px;
   --#{$prefix}it-card-border-outside-width: 1px; // xxx change to 2px if needed
@@ -237,7 +234,7 @@
     line-height: 1.5rem;
 
     &:last-child {
-      @include border-radius(0 0 var(--#{$prefix}it-card-inner-border-radius) var(--#{$prefix}it-card-inner-border-radius));
+      @include border-radius(0 0 var(--#{$prefix}it-card-border-radius-inner) var(--#{$prefix}it-card-border-radius-inner));
     }
   }
 
@@ -399,12 +396,12 @@
 
     &:first-child {
       border-top-width: 0;
-      @include border-top-radius(var(--#{$prefix}it-card-inner-border-radius));
+      @include border-top-radius(var(--#{$prefix}it-card-border-radius-inner));
     }
 
     &:last-child {
       border-bottom-width: 0;
-      @include border-bottom-radius(var(--#{$prefix}it-card-inner-border-radius));
+      @include border-bottom-radius(var(--#{$prefix}it-card-border-radius-inner));
     }
   }
 
@@ -425,8 +422,8 @@
   // Card image responsive wrapper and a11y DOM order hack
   &.it-card-image {
     width: 100%;
-    @include border-top-radius(var(--#{$prefix}it-card-inner-border-radius));
-    @include border-bottom-radius(var(--#{$prefix}it-card-inner-border-radius));
+    @include border-top-radius(var(--#{$prefix}it-card-border-radius-inner));
+    @include border-bottom-radius(var(--#{$prefix}it-card-border-radius-inner));
 
     .it-card-image-wrapper {
       order: -1;
@@ -436,8 +433,8 @@
       .it-card-image-wrapper {
         &:first-child,
         &:nth-child(2) {
-          border-top-left-radius: var(--#{$prefix}it-card-inner-border-radius);
-          border-top-right-radius: var(--#{$prefix}it-card-inner-border-radius);
+          border-top-left-radius: var(--#{$prefix}it-card-border-radius-inner);
+          border-top-right-radius: var(--#{$prefix}it-card-border-radius-inner);
         }
       }
 
@@ -578,7 +575,7 @@
             &:first-child,
             &:nth-child(2) {
               border-top-right-radius: 0 !important;
-              border-bottom-left-radius: var(--#{$prefix}it-card-inner-border-radius);
+              border-bottom-left-radius: var(--#{$prefix}it-card-border-radius-inner);
             }
           }
 
@@ -588,8 +585,8 @@
               &:nth-child(2) {
                 border-top-left-radius: 0 !important;
                 border-bottom-left-radius: 0 !important;
-                border-top-right-radius: var(--#{$prefix}it-card-inner-border-radius) !important;
-                border-bottom-right-radius: var(--#{$prefix}it-card-inner-border-radius) !important;
+                border-top-right-radius: var(--#{$prefix}it-card-border-radius-inner) !important;
+                border-bottom-right-radius: var(--#{$prefix}it-card-border-radius-inner) !important;
               }
             }
           }
