@@ -322,16 +322,6 @@
     line-height: 1.5;
   }
 
-  .chip {
-    margin: 0;
-    line-height: 1.5; // reset default chip l-h
-  }
-
-  a.chip {
-    color: var(--#{$prefix}it-card-chips-a-color);
-    text-decoration: none;
-  }
-
   // Card date, use <time> if possible
   .it-card-date {
     color: var(--#{$prefix}it-card-date-color);
