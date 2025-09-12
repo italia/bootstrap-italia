@@ -18,10 +18,10 @@
   --#{$prefix}it-card-cap-padding-x: var(--#{$prefix}it-card-spacer-x);
   --#{$prefix}it-card-cap-padding-y: var(--#{$prefix}it-card-spacer-y);
   --#{$prefix}it-card-category-color: var(--#{$prefix}color-text-muted);
-  --#{$prefix}it-card-category-fw: var(--#{$prefix}font-weight-solid);
+  --#{$prefix}it-card-category-font-weight: var(--#{$prefix}font-weight-solid);
   // --#{$prefix}it-card-category-l-spacing: 0.5px;
-  --#{$prefix}it-card-category-m-bottom: 0;
-  --#{$prefix}it-card-category-size: 1rem;
+  // --#{$prefix}it-card-category-m-bottom: 0;
+  --#{$prefix}it-card-category-font-size: 1rem;
   --#{$prefix}it-card-chips-a-color: #{$color-text-secondary};
   --#{$prefix}it-card-chips-gap: 1rem;
   --#{$prefix}it-card-text-color: #{$color-text-secondary};
@@ -282,61 +282,60 @@
         border-top: none;
       }
     }
+  }
 
-    .it-card-taxonomy {
+  .it-card-taxonomy {
       flex-grow: 1;
     }
 
-    .it-card-category {
-      display: inline-block;
-      text-transform: uppercase;
-      color: var(--#{$prefix}it-card-category-color);
-      font-size: var(--#{$prefix}it-card-category-size);
-      font-weight: var(--#{$prefix}it-card-category-fw);
-      // letter-spacing: var(--#{$prefix}it-card-category-l-spacing);
-      margin-bottom: var(--#{$prefix}it-card-category-m-bottom);
+  .it-card-category {
+    display: inline-block;
+    text-transform: uppercase;
+    color: var(--#{$prefix}it-card-category-color);
+    font-size: var(--#{$prefix}it-card-category-font-size);
+    font-weight: var(--#{$prefix}it-card-category-font-weight);
+    margin-bottom: 0;
+  }
+
+  // If more than one Tag, use a list
+  ul.it-card-chips {
+    display: flex;
+    flex-wrap: wrap;
+
+    // Gap fallback
+    > li {
+      margin: 0.25rem;
     }
 
-    // If more than one Tag, use a list
-    ul.it-card-chips {
-      display: flex;
-      flex-wrap: wrap;
+    @supports (gap: 0.5rem) {
+      gap: 0.5rem;
 
-      // Gap fallback
       > li {
-        margin: 0.25rem;
+        margin: 0;
       }
-
-      @supports (gap: 0.5rem) {
-        gap: 0.5rem;
-
-        > li {
-          margin: 0;
-        }
-      }
-
-      padding: 0;
-      margin-top: 0.5rem;
-      margin-bottom: 0;
-      list-style-type: none;
-      line-height: 1.5;
     }
 
-    .chip {
-      margin: 0;
-      line-height: 1.5; // reset default chip l-h
-    }
+    padding: 0;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+    list-style-type: none;
+    line-height: 1.5;
+  }
 
-    a.chip {
-      color: var(--#{$prefix}it-card-chips-a-color);
-      text-decoration: none;
-    }
+  .chip {
+    margin: 0;
+    line-height: 1.5; // reset default chip l-h
+  }
 
-    // Card date, use <time> if possible
-    .it-card-date {
-      color: var(--#{$prefix}it-card-date-color);
-      font-size: var(--#{$prefix}it-card-date-size);
-    }
+  a.chip {
+    color: var(--#{$prefix}it-card-chips-a-color);
+    text-decoration: none;
+  }
+
+  // Card date, use <time> if possible
+  .it-card-date {
+    color: var(--#{$prefix}it-card-date-color);
+    font-size: var(--#{$prefix}it-card-date-size);
   }
 
   // Card can contain description lists, example: personal or place data
