@@ -156,7 +156,7 @@ La struttura dei metadati include:
       <!--finally the card footer metadata-->
       <footer class="it-card-related it-card-footer">
         <div class="it-card-taxonomy">
-          <ul class="it-card-chips chips-list" aria-label="Argomenti correlati: ">
+          <ul class="it-card-chips" aria-label="Argomenti correlati: ">
             <li class="list-item"><a class="chip chip-simple chip-sm" href="#">
               <span class="chip-label"><span class="visually-hidden">Argomento: </span>Argomento 1</span>
             </a></li>
@@ -288,7 +288,7 @@ Per indicare l'autore del contenuto, usa l'elemento semantico `address` con clas
       <!--finally the card footer metadata-->
       <footer class="it-card-related it-card-footer">
         <div class="it-card-taxonomy">
-          <ul class="it-card-chips chips-list" aria-label="Argomenti correlati: ">
+          <ul class="it-card-chips" aria-label="Argomenti correlati: ">
             <li class="list-item"><a class="chip chip-simple chip-sm" href="#">
               <span class="chip-label"><span class="visually-hidden">Argomento: </span>Argomento 1</span>
             </a></li>
@@ -742,7 +742,7 @@ Negli esempi non abbiamo usato il `target` del link per favorire la normale navi
       <!--finally the card footer metadata-->
       <footer class="it-card-related it-card-footer">
         <div class="it-card-taxonomy">
-          <ul class="it-card-chips chips-list" aria-label="Argomenti correlati: ">
+          <ul class="it-card-chips" aria-label="Argomenti correlati: ">
             <li class="list-item"><a class="chip chip-simple chip-sm" href="#">
               <span class="chip-label"><span class="visually-hidden">Argomento: </span>Argomento 1</span>
             </a></li>
@@ -801,7 +801,7 @@ Negli esempi non abbiamo usato il `target` del link per favorire la normale navi
       <!--finally the card footer metadata-->
       <footer class="it-card-related it-card-footer">
         <div class="it-card-taxonomy">
-          <ul class="it-card-chips chips-list" aria-label="Argomenti correlati: ">
+          <ul class="it-card-chips" aria-label="Argomenti correlati: ">
             <li class="list-item"><a class="chip chip-simple chip-sm" href="#">
               <span class="chip-label"><span class="visually-hidden">Argomento: </span>Argomento 1</span>
             </a></li>
