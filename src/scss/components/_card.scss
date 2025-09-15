@@ -2,7 +2,7 @@
 // Custom Properties
 
 .it-card {
-  --#{$prefix}it-card-bg: var(--#{$prefix}color-background-inverse);
+  --#{$prefix}it-card-background: var(--#{$prefix}color-background-inverse);
   --#{$prefix}it-card-body-spacer: var(--#{$prefix}spacing-s);
   --#{$prefix}it-card-border-color: var(--#{$prefix}color-border-subtle);
   // --#{$prefix}it-card-border-radius: var(--#{$prefix}radius-smooth);
@@ -11,7 +11,7 @@
   --#{$prefix}it-card-border-top-width: 6px;
   --#{$prefix}it-card-border-outside-width: 1px; // change to 2px if needed
   --#{$prefix}it-card-border-separator-width: 1px; // change to 2px if needed
-  --#{$prefix}it-card-cap-bg: transparent;
+  --#{$prefix}it-card-cap-background: transparent;
   // --#{$prefix}it-card-cap-color: transparent;
   --#{$prefix}it-card-spacer-x: var(--#{$prefix}spacing-s);
   --#{$prefix}it-card-spacer-y: var(--#{$prefix}spacing-xs);
@@ -21,7 +21,7 @@
   --#{$prefix}it-card-category-font-weight: var(--#{$prefix}font-weight-solid);
   // --#{$prefix}it-card-category-l-spacing: 0.5px;
   // --#{$prefix}it-card-category-m-bottom: 0;
-  --#{$prefix}it-card-category-font-size: 1rem;
+  --#{$prefix}it-card-category-font-size: var(--#{$prefix}label-font-size);
   --#{$prefix}it-card-chips-a-color: #{$color-text-secondary};
   --#{$prefix}it-card-chips-gap: 1rem;
   --#{$prefix}it-card-text-color: #{$color-text-secondary};
@@ -53,7 +53,7 @@
   width: 100%;
   overflow-wrap: break-word;
   word-break: break-word;
-  background-color: var(--#{$prefix}it-card-bg);
+  background-color: var(--#{$prefix}it-card-background);
   background-clip: border-box;
   color: var(--#{$prefix}it-card-text-color);
 
@@ -236,7 +236,7 @@
     margin: 0 var(--#{$prefix}it-card-cap-padding-x);
     padding: var(--#{$prefix}it-card-cap-padding-y) 0;
     // color: var(--#{$prefix}it-card-cap-color);
-    background-color: var(--#{$prefix}it-card-cap-bg);
+    background-color: var(--#{$prefix}it-card-cap-background);
     border-top: var(--#{$prefix}it-card-border-separator-width) solid var(--#{$prefix}it-card-border-color);
     font-size: 1rem;
     line-height: 1.5rem;
