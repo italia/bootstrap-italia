@@ -11,13 +11,13 @@
 
 <title>Componenti · Bootstrap Italia</title>
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202509161035" rel="stylesheet" />
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202509161414" rel="stylesheet" />
 
 <!-- Documentation extras -->
  
 <link href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" rel="stylesheet" />
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202509161035" rel="stylesheet" />
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202509161414" rel="stylesheet" />
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico" />
@@ -628,19 +628,23 @@
     </div>
 
     
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202509161035"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202509161414"></script>
 <script>
   bootstrap.loadFonts('/bootstrap-italia/dist/fonts')
-</script><script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202509161035"></script>
+</script><script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202509161414"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/anchor.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/clipboard.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tsparticles.min.js"></script>
 
-<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202509161035"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202509161414"></script>
 
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tweenjs.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/easeljs.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/preloadjs.min.js"></script>
+
+<script>
+  window.SITE_BASEURL = '/bootstrap-italia';
+</script>
 
 <script>
   var manifest = [
@@ -653,7 +657,7 @@
     { src: '/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png', id: 'cover-7' },
   ]
 </script>
-<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202509161035"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202509161414"></script>
 <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
 
 <script>
@@ -760,7 +764,7 @@
             const originalHTML = button.innerHTML;
             const originalAriaLabel = button.getAttribute('aria-label');
 
-            button.innerHTML = '<svg role="img" class="icon icon-sm align-middle icon-white" aria-label="Copiato"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-check"></use></svg>';
+            button.innerHTML = '<svg role="img" class="icon icon-sm align-middle icon-white" aria-label="Copiato"><use href="' + window.SITE_BASEURL + '/dist/svg/sprites.svg#it-check"></use></svg>';
             button.setAttribute('aria-label', 'Codice copiato negli appunti');
             button.classList.remove('btn-secondary');
             button.classList.add('btn-success');
@@ -797,7 +801,7 @@
         divContainer.classList.add('copy-button-container');
         button.type = 'button';
         button.setAttribute('aria-label', 'Copia il codice negli appunti');
-        button.innerHTML = '<svg role="img" class="icon icon-sm align-middle icon-white" aria-label="Copia"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-copy"></use></svg>';
+        button.innerHTML = '<svg role="img" class="icon icon-sm align-middle icon-white" aria-label="Copia"><use href="' + window.SITE_BASEURL + '/dist/svg/sprites.svg#it-copy"></use></svg>';
         button.classList.add('btn', 'btn-primary', 'btn-xs', 'btn-secondary');
 
         button.addEventListener('click', function () {
@@ -812,7 +816,7 @@
             const originalHTML = button.innerHTML;
             const originalAriaLabel = button.getAttribute('aria-label');
 
-            button.innerHTML = '<svg role="img" class="icon icon-sm align-middle icon-white" aria-label="Copiato"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-check"></use></svg>';
+            button.innerHTML = '<svg role="img" class="icon icon-sm align-middle icon-white" aria-label="Copiato"><use href="' + window.SITE_BASEURL + '/dist/svg/sprites.svg#it-check"></use></svg>';
             button.setAttribute('aria-label', 'Codice copiato negli appunti');
             button.classList.remove('btn-secondary');
             button.classList.add('btn-success');
@@ -858,6 +862,5 @@
     }
   });
 </script>
-
   </body>
 </html>
