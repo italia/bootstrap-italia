@@ -582,8 +582,8 @@ article.it-card {
 
     &.rounded {
       .it-card-image-wrapper img {
-          border-top-left-radius: var(--#{$prefix}it-card-inner-border-radius);
-          border-top-right-radius: var(--#{$prefix}it-card-inner-border-radius);
+        border-top-left-radius: var(--#{$prefix}it-card-inner-border-radius);
+        border-top-right-radius: var(--#{$prefix}it-card-inner-border-radius);
       }
 
       &.it-card-border-top {
