@@ -38,6 +38,13 @@ export default [
         sourceMap: true,
         watch: 'src/scss',
       }),
+      // Ensure dist output is also copied into _site for local preview (after bundle is written)
+      copy({
+        targets: [
+          { src: 'dist/css/bootstrap-italia.min.css', dest: '_site/dist/css' },
+        ],
+        hook: 'writeBundle'
+      }),
       nodeResolve(),
       commonjs(),
       injectProcessEnv({
@@ -88,6 +95,13 @@ export default [
         sourceMap: true,
         watch: 'src/scss',
       }),
+      // Ensure dist output is also copied into _site for local preview (after bundle is written)
+      copy({
+        targets: [
+          { src: 'dist/css/bootstrap-italia.min.css', dest: '_site/dist/css' },
+        ],
+        hook: 'writeBundle'
+      }),
       nodeResolve(),
       commonjs(),
       injectProcessEnv({
@@ -136,6 +150,13 @@ export default [
         output: 'docs/assets/dist/css/docs.min.css',
         outputStyle: 'compressed',
         watch: 'docs/assets/src/scss',
+      }),
+      // copy docs css into _site docs assets for preview
+      copy({
+        targets: [
+          { src: 'docs/assets/dist/css/docs.min.css', dest: '_site/docs/assets/dist/css' },
+        ],
+        hook: 'writeBundle'
       }),
       injectProcessEnv({
         NODE_ENV: 'production',
