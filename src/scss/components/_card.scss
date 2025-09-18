@@ -176,7 +176,7 @@ article.it-card {
   --#{$prefix}it-card-height: auto;
   --#{$prefix}it-card-inline-min-height: 240px;
   --#{$prefix}it-card-inline-mini-min-height: 160px;
-  --#{$prefix}it-card-inner-border-radius: subtract(var(--#{$prefix}it-card-border-radius), var(--#{$prefix}it-card-border-outside-width));
+  --#{$prefix}it-card-inner-border-radius: calc(var(--#{$prefix}it-card-border-radius) - var(--#{$prefix}it-card-border-outside-width));
   --#{$prefix}it-card-link-color: #{$color-text-secondary};
   --#{$prefix}it-card-list-group-item-padding-y: 0.75rem;
   --#{$prefix}it-card-p-color: #{$color-text-secondary};
@@ -581,12 +581,9 @@ article.it-card {
     }
 
     &.rounded {
-      .it-card-image-wrapper {
-        &:first-child,
-        &:nth-child(2) {
+      .it-card-image-wrapper img {
           border-top-left-radius: var(--#{$prefix}it-card-inner-border-radius);
           border-top-right-radius: var(--#{$prefix}it-card-inner-border-radius);
-        }
       }
 
       &.it-card-border-top {
@@ -721,24 +718,19 @@ article.it-card {
           }
         }
 
+        // Image border radius adjustments
         &.rounded {
-          .it-card-image-wrapper {
-            &:first-child,
-            &:nth-child(2) {
-              border-top-right-radius: 0 !important;
-              border-bottom-left-radius: var(--#{$prefix}it-card-inner-border-radius);
-            }
+          .it-card-image-wrapper img {
+            border-top-right-radius: 0;
+            border-bottom-left-radius: var(--#{$prefix}it-card-inner-border-radius);
           }
 
           &.it-card-inline-reverse {
-            .it-card-image-wrapper {
-              &:first-child,
-              &:nth-child(2) {
-                border-top-left-radius: 0 !important;
-                border-bottom-left-radius: 0 !important;
-                border-top-right-radius: var(--#{$prefix}it-card-inner-border-radius) !important;
-                border-bottom-right-radius: var(--#{$prefix}it-card-inner-border-radius) !important;
-              }
+            .it-card-image-wrapper img {
+              border-top-right-radius: var(--#{$prefix}it-card-inner-border-radius);
+              border-bottom-right-radius: var(--#{$prefix}it-card-inner-border-radius);
+              border-top-left-radius: 0;
+              border-bottom-left-radius: 0;
             }
           }
         }
