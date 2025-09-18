@@ -427,12 +427,9 @@
     }
 
     &.rounded {
-      .it-card-image-wrapper {
-        &:first-child,
-        &:nth-child(2) {
-          border-top-left-radius: var(--#{$prefix}it-card-border-radius-inner);
-          border-top-right-radius: var(--#{$prefix}it-card-border-radius-inner);
-        }
+      .it-card-image-wrapper img {
+        border-top-left-radius: var(--#{$prefix}it-card-border-radius-inner);
+        border-top-right-radius: var(--#{$prefix}it-card-border-radius-inner);
       }
 
       &.it-card-border-top {
@@ -568,23 +565,17 @@
         }
 
         &.rounded {
-          .it-card-image-wrapper {
-            &:first-child,
-            &:nth-child(2) {
-              border-top-right-radius: 0 !important;
-              border-bottom-left-radius: var(--#{$prefix}it-card-border-radius-inner);
-            }
+          .it-card-image-wrapper img {
+            border-top-right-radius: 0;
+            border-bottom-left-radius: var(--#{$prefix}it-card-border-radius-inner);
           }
 
           &.it-card-inline-reverse {
-            .it-card-image-wrapper {
-              &:first-child,
-              &:nth-child(2) {
-                border-top-left-radius: 0 !important;
-                border-bottom-left-radius: 0 !important;
-                border-top-right-radius: var(--#{$prefix}it-card-border-radius-inner) !important;
-                border-bottom-right-radius: var(--#{$prefix}it-card-border-radius-inner) !important;
-              }
+            .it-card-image-wrapper img {
+              border-top-left-radius: 0;
+              border-bottom-left-radius: 0;
+              border-top-right-radius: var(--#{$prefix}it-card-border-radius-inner);
+              border-bottom-right-radius: var(--#{$prefix}it-card-border-radius-inner);
             }
           }
         }
