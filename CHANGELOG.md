@@ -1,3 +1,16 @@
+## [2.16.1](https://github.com/italia/bootstrap-italia/compare/v2.16.0...v2.16.1) (2025-09-11)
+
+
+### Bug Fixes
+
+* button states on bg-dark containers ([3aa408e](https://github.com/italia/bootstrap-italia/commit/3aa408eae9e93af2a64cb1ba70479cc4db10f91b))
+* disabled toggles in fieldset ([57dd640](https://github.com/italia/bootstrap-italia/commit/57dd640fc69a6d0e94af566c02e1c05e5883d694))
+* docs sidebar active links ([4959d5c](https://github.com/italia/bootstrap-italia/commit/4959d5c28a2292342b1f0d5889fcdab02c3f59fe))
+* navbar collapsable width on large devices ([988e0f5](https://github.com/italia/bootstrap-italia/commit/988e0f5c240ec6ac466d8c3c30e957eb7f5ce6ee))
+* optimized svg code ([84e1395](https://github.com/italia/bootstrap-italia/commit/84e139511c0adcc48aa095550a1c8dd3c2d5e9d2))
+
+
+
 # [2.16.0](https://github.com/italia/bootstrap-italia/compare/v2.15.1...v2.16.0) (2025-06-24)
 
 
