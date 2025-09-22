@@ -572,17 +572,16 @@ article.it-card {
   // Card image responsive wrapper and a11y DOM order hack
   &.it-card-image {
     width: 100%;
-    @include border-top-radius(var(--#{$prefix}it-card-inner-border-radius));
-    @include border-bottom-radius(var(--#{$prefix}it-card-inner-border-radius));
 
     .it-card-image-wrapper {
       order: -1;
     }
 
     &.rounded {
+      @include border-top-radius(var(--#{$prefix}it-card-inner-border-radius));
+
       .it-card-image-wrapper img {
-        border-top-left-radius: var(--#{$prefix}it-card-inner-border-radius);
-        border-top-right-radius: var(--#{$prefix}it-card-inner-border-radius);
+        @include border-top-radius(var(--#{$prefix}it-card-inner-border-radius));
       }
 
       &.it-card-border-top {
