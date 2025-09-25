@@ -243,7 +243,7 @@ I gruppi di chip vengono visualizzati in linea.
   </div>
   <span class="chip-label">Label</span>
   <button>
-    <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
+    <svg class="icon icon-md"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
     <span class="visually-hidden">Elimina label</span>
   </button>
 </div>
@@ -279,7 +279,7 @@ I gruppi di chip vengono visualizzati in linea.
   <svg class="icon icon-xs"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-github"></use></svg>
   <span class="chip-label">Etichetta</span>
   <button>
-    <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
+    <svg class="icon icon-md"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
     <span class="visually-hidden">Elimina etichetta</span>
   </button>
 </a>
@@ -289,7 +289,7 @@ I gruppi di chip vengono visualizzati in linea.
   </div>
   <span class="chip-label">Etichetta</span>
   <button>
-    <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
+    <svg class="icon icon-md"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
     <span class="visually-hidden">Elimina etichetta</span>
   </button>
 </a>
