@@ -251,7 +251,7 @@ Nel rispetto delle regole di accessibilità vigenti, Bootstrap Italia mantiene l
 {% comment %}Example name: Link{% endcomment %}
 {% capture example %}
 <p>Esempio di <a href="#">link normale</a>.</p>
-<p>Esempio di <a href="#">link con icona <svg role="img" class="icon icon-sm icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg></a></p>
+<p>Esempio di <a href="#">link con icona <svg role="img" class="icon icon-sm icon-primary"><title>Freccia destra</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg></a></p>
 {% endcapture %}{% include example.html content=example %}
 
  Nel caso di link già in evidenza (menu di navigazione, dropdown menu, liste di link, ecc.), è possibile rimuovere la sottolineatura utilizzando la classe `.text-decoration-none`. Vai agli esempi di [link senza sottolineatura]({{ site.baseurl }}/docs/organizzare-i-contenuti/liste/#liste-per-menu-di-navigazione).
