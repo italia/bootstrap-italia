@@ -243,16 +243,19 @@ e [utilità di colore]({{ site.baseurl }}/docs/utilities/colori/).
 
 #### Accessibilità
 
-È fondamentale evidenziare i link presenti in un paragrafo in modo adeguato, utilizzando la forma (grassetto, sottolineato) oltre al colore per indicare la presenza di un collegamento ipertestuale.
+È fondamentale evidenziare i link presenti in un paragrafo in modo adeguato, utilizzando la sottolineatura oltre al colore per indicare la presenza di un collegamento ipertestuale.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
-Nel rispetto delle regole di accessibilità vigenti, Bootstrap Italia mantiene la sottolineatura ai link di tipo `<a>`. Nel caso di link già in evidenza (menu principali, liste di link, link in grassetto, ecc.), è possibile rimuovere la sottolineatura utilizzando la classe `.text-decoration-none`.
+Nel rispetto delle regole di accessibilità vigenti, Bootstrap Italia mantiene la sottolineatura ai link di tipo `<a>`. Nel caso in cui si voglia aggiungere un'icona a fianco del link, questa può essere inserita direttamente all'interno del tag `<a>`, come mostrato nell'esempio seguente.
 
 {% comment %}Example name: Link{% endcomment %}
 {% capture example %}
 <p>Esempio di <a href="#">link normale</a>.</p>
-<p>Esempio di <a href="#" class="text-decoration-none fw-bold">link in grassetto senza sottolineatura</a>.</p>
+<p>Esempio di <a href="#">link con icona <svg role="img" class="icon icon-sm icon-primary"><title>Freccia destra</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg></a></p>
 {% endcapture %}{% include example.html content=example %}
+
+ Nel caso di link già in evidenza (menu di navigazione, dropdown menu, liste di link, ecc.), è possibile rimuovere la sottolineatura utilizzando la classe `.text-decoration-none`. Vai agli esempi di [link senza sottolineatura]({{ site.baseurl }}/docs/organizzare-i-contenuti/liste/#liste-per-menu-di-navigazione).
+
 
 ## Abbreviazioni
 
