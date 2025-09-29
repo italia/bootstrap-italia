@@ -242,15 +242,15 @@ article.it-card {
         }
       }
 
-      .it-card-title-icon-wrapper {
-        display: flex;
-        align-items: center;
-      }
+      // .it-card-title-icon-wrapper {
+      //   display: flex;
+      //   // align-items: center;
+      // }
 
       // linked titles with icons goes fullwidth
       > a {
         display: flex;
-        flex-direction: row;
+        // flex-direction: row;
         justify-content: space-between;
         width: 100%;
 
