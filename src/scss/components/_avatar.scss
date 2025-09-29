@@ -24,6 +24,7 @@ $avatar-variants: (
   --#{$prefix}avatar-dot-offset-right: 0;
   --#{$prefix}avatar-dot-offset-top: 4px;
   --#{$prefix}avatar-dot-offset-bottom: 0;
+  --#{$prefix}avatar-overlay-background: var(--#{$prefix}color-background-emphasis);
 }
 
 //
@@ -189,7 +190,6 @@ $avatar-variants: (
 // Hover on avatar
 a.avatar,
 a .avatar {
-  text-decoration: none;
 
   &::after {
     position: absolute;
@@ -211,9 +211,18 @@ a .avatar {
   // }
 
   &:hover::after {
-    opacity: 0.5;
+    opacity: 0.25;
   }
 }
+
+a.avatar,
+a.avatar:hover,
+a.avatar:hover p,
+a .avatar:hover,
+a .avatar:hover p {
+  text-decoration: none;
+}
+
 
 // Avatar dropdown
 .avatar-dropdown {
