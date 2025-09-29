@@ -37,7 +37,7 @@
     },
     {
         "name": "Link",
-        "content": "\n<p>Esempio di <a href=\"#\">link normale</a>.</p>\n<p>Esempio di <a href=\"#\" class=\"text-decoration-none fw-bold\">link in grassetto senza sottolineatura</a>.</p>\n"
+        "content": "\n<p>Esempio di <a href=\"#\">link normale</a>.</p>\n<p>Esempio di <a href=\"#\">link con icona <svg role=\"img\" class=\"icon icon-sm icon-primary\"><title>Freccia destra</title><use href=\"https://italia.github.io/bootstrap-italia/dist/svg/sprites.svg#it-arrow-right\"></use></svg></a></p>\n"
     },
     {
         "name": "Abbreviazioni",
