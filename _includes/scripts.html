@@ -166,7 +166,7 @@ https://github.com/algolia/docsearch{% endcomment %}
             const originalHTML = button.innerHTML;
             const originalAriaLabel = button.getAttribute('aria-label');
 
-            button.innerHTML = '<svg role="img" class="icon icon-sm align-middle icon-white" aria-label="Copiato"><use href="/dist/svg/sprites.svg#it-check"></use></svg>';
+            button.innerHTML = '<svg role="img" class="icon icon-sm align-middle icon-inverse" aria-label="Copiato"><use href="/dist/svg/sprites.svg#it-check"></use></svg>';
             button.setAttribute('aria-label', 'Codice copiato negli appunti');
             button.classList.remove('btn-secondary');
             button.classList.add('btn-success');
@@ -203,7 +203,7 @@ https://github.com/algolia/docsearch{% endcomment %}
         divContainer.classList.add('copy-button-container');
         button.type = 'button';
         button.setAttribute('aria-label', 'Copia il codice negli appunti');
-        button.innerHTML = '<svg role="img" class="icon icon-sm align-middle icon-white" aria-label="Copia"><use href="/dist/svg/sprites.svg#it-copy"></use></svg>';
+        button.innerHTML = '<svg role="img" class="icon icon-sm align-middle icon-inverse" aria-label="Copia"><use href="/dist/svg/sprites.svg#it-copy"></use></svg>';
         button.classList.add('btn', 'btn-primary', 'btn-xs', 'btn-secondary');
 
         button.addEventListener('click', function () {
@@ -218,7 +218,7 @@ https://github.com/algolia/docsearch{% endcomment %}
             const originalHTML = button.innerHTML;
             const originalAriaLabel = button.getAttribute('aria-label');
 
-            button.innerHTML = '<svg role="img" class="icon icon-sm align-middle icon-white" aria-label="Copiato"><use href="/dist/svg/sprites.svg#it-check"></use></svg>';
+            button.innerHTML = '<svg role="img" class="icon icon-sm align-middle icon-inverse" aria-label="Copiato"><use href="/dist/svg/sprites.svg#it-check"></use></svg>';
             button.setAttribute('aria-label', 'Codice copiato negli appunti');
             button.classList.remove('btn-secondary');
             button.classList.add('btn-success');
