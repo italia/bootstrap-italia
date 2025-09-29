@@ -156,9 +156,8 @@ a {
   text-decoration-skip-ink: auto;
   text-underline-offset: 2px;
 
-  &:hover:not(.btn) {
+  &:hover {
     color: var(--#{$prefix}color-link-hover);
-    text-decoration: underline;
   }
 }
 
