@@ -127,27 +127,27 @@ Per utilizzare un'icona all'interno di un avatar è sufficiente includere il cod
 
 <div class="d-flex align-items-center justify-content-around flex-wrap flex-sm-nowrap">
   <div class="avatar size-xs">
-    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-user"></use></svg>
+    <svg class="icon icon-secondary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-user"></use></svg>
     <span class="visually-hidden">Cerca</span>
   </div>
   <div class="avatar size-sm">
-    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-user"></use></svg>
+    <svg class="icon icon-secondary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-user"></use></svg>
     <span class="visually-hidden">Cerca</span>
   </div>
   <div class="avatar">
-    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-user"></use></svg>
+    <svg class="icon icon-secondary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-user"></use></svg>
     <span class="visually-hidden">Cerca</span>
   </div>
   <div class="avatar size-lg">
-    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-user"></use></svg>
+    <svg class="icon icon-secondary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-user"></use></svg>
     <span class="visually-hidden">Cerca</span>
   </div>
   <div class="avatar size-xl">
-    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-user"></use></svg>
+    <svg class="icon icon-secondary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-user"></use></svg>
     <span class="visually-hidden">Cerca</span>
   </div>
   <div class="avatar size-xxl">
-    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-user"></use></svg>
+    <svg class="icon icon-secondary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-user"></use></svg>
     <span class="visually-hidden">Cerca</span>
   </div>
 </div>
@@ -169,11 +169,7 @@ Per associare un avatar ad un'azione o un link, utilizzare il tag `<a>` con rela
     <span class="visually-hidden">Mario Rossi</span>
   </a>
   <a class="avatar size-xl" href="#">
-    <p aria-hidden="true">MR</p>
-    <span class="visually-hidden">Mario Rossi</span>
-  </a>
-  <a class="avatar size-xl" href="#">
-    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-user"></use></svg>
+    <svg class="icon icon-secondary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-user"></use></svg>
     <span class="visually-hidden">Cerca</span>
   </a>
 </div>
@@ -234,20 +230,20 @@ Lista verticale di avatar di dimensione piccola con classe `.size-sm`.
       </a>
     </li>
     <li>
-      <div class="list-item">
+      <a class="list-item" href="#">
         <div class="avatar size-sm">
           <p aria-hidden="true">S</p>
         </div>
         <span>Sara Ghione</span>
-      </div>
+      </a>
     </li>
     <li>
-      <div class="list-item">
+      <a class="list-item" href="#">
         <div class="avatar size-sm">
           <svg class="icon icon-secondary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-user"></use></svg>
         </div>
         <span>Antonio Esposito</span>
-      </div>
+      </a>
     </li>
   </ul>
 </div>
