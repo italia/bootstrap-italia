@@ -24,7 +24,7 @@
   --#{$prefix}it-card-category-font-size: var(--#{$prefix}label-font-size);
   --#{$prefix}it-card-text-color: var(--#{$prefix}color-text-secondary);
   --#{$prefix}it-card-date-color: var(--#{$prefix}color-text-muted);
-  --#{$prefix}it-card-date-size: 0.875rem;
+  --#{$prefix}it-card-date-font-size: var(--#{$prefix}label-font-size-s);
   --#{$prefix}it-card-description-color: var(--#{$prefix}color-text-muted);
   --#{$prefix}it-card-height: auto;
   --#{$prefix}it-card-inline-min-height: 240px;
@@ -35,6 +35,7 @@
   --#{$prefix}it-card-double-spacer-y: calc(2 * var(--#{$prefix}it-card-spacer-y));
   --#{$prefix}it-card-quad-spacer-y: calc(4 * var(--#{$prefix}it-card-spacer-y));
   --#{$prefix}it-card-title-spacer-y: var(--#{$prefix}it-card-spacer-y);
+  --#{$prefix}it-card-signature-font-family: var(--#{$prefix}font-mono);
 }
 
 //
@@ -198,7 +199,6 @@
     // Card subtitle or event timeframe
     .it-card-subtitle {
       margin-bottom: var(--#{$prefix}it-card-spacer-y);
-
       font-weight: 600;
       font-size: 1.25rem; // equal h5
       line-height: 1.5rem;
@@ -221,7 +221,7 @@
 
     // Card author
     .it-card-signature {
-      font-family: $font-family-monospace;
+      font-family: var(--#{$prefix}it-card-signature-font-family);
       color: var(--#{$prefix}it-card-text-color);
       font-size: var(--#{$prefix}it-card-signature-font-size);
     }
@@ -321,7 +321,7 @@
   // Card date, use <time> if possible
   .it-card-date {
     color: var(--#{$prefix}it-card-date-color);
-    font-size: var(--#{$prefix}it-card-date-size);
+    font-size: var(--#{$prefix}it-card-date-font-size);
   }
 
   // Card can contain description lists, example: personal or place data
@@ -329,11 +329,9 @@
   .it-card-body .it-card-description-list {
     border-top: var(--#{$prefix}it-card-border-separator-width) solid var(--#{$prefix}it-card-border-color);
     border-bottom: var(--#{$prefix}it-card-border-separator-width) solid var(--#{$prefix}it-card-border-color);
-
     font-size: 1rem;
     line-height: 1.5rem;
     color: var(--#{$prefix}it-card-description-color);
-
     padding-top: var(--#{$prefix}it-card-double-spacer-y);
     padding-bottom: var(--#{$prefix}it-card-double-spacer-y);
 
