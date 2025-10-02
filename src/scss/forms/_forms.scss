@@ -293,9 +293,13 @@ input::-webkit-datetime-edit {
 
 .form-check {
   position: relative;
-  margin-bottom: var(--#{$prefix}spacing-s);
   padding-left: 0;
   align-items: center;
+
+  // &:not(:last-child),
+  // &:not(.form-check-inline) {
+  //   margin-bottom: var(--#{$prefix}spacing-s);
+  // }
 
   // Add vertical spacing for consequential elements
   &+& {
@@ -320,6 +324,7 @@ input::-webkit-datetime-edit {
       font-size: var(--#{$prefix}label-font-size);
       font-weight: var(--#{$prefix}font-weight-solid);
       cursor: pointer;
+      margin-bottom: 0; // reset default label margin
       user-select: none;
 
       @include media-breakpoint-up(sm) {
@@ -537,6 +542,15 @@ input::-webkit-datetime-edit {
     z-index: 0;
     border-color: var(--#{$prefix}form-checked-color);
     background-color: var(--#{$prefix}form-checked-color);
+  }
+}
+
+.form-check-inline {
+  display: inline-block;
+  // margin-right: $form-check-inline-margin-end;
+
+  &:not(:last-child) {
+    margin-right: var(--#{$prefix}spacing-m);
   }
 }
 
