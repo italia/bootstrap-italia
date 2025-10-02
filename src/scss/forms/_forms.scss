@@ -6,8 +6,8 @@
   --#{$prefix}form-control-border-color: var(--#{$prefix}color-border-secondary);
   --#{$prefix}form-control-border-radius: var(--#{$prefix}radius-smooth);
   --#{$prefix}form-control-placeholder-color: var(--#{$prefix}color-text-muted);
-  --#{$prefix}form-control-label-color: var(--#{$prefix}color-text-secondary);
-  --#{$prefix}form-control-text-color: var(--#{$prefix}color-text-base);
+  --#{$prefix}form-control-label-color: var(--#{$prefix}color-text-base);
+  --#{$prefix}form-control-text-color: var(--#{$prefix}color-text-secondary);
   --#{$prefix}form-control-font-size: var(--#{$prefix}body-font-size);
   --#{$prefix}form-group-spacing-y: var(--#{$prefix}spacing-m);
   --#{$prefix}form-checkbox-border-color: var(--#{$prefix}color-border-secondary);
@@ -193,20 +193,18 @@ input[type='time'] {
 //TODO: CHECK
 fieldset {
   legend {
-    z-index: 1;
-    display: block;
-    width: auto;
-    max-width: 100%;
-    margin-bottom: 0;
+    // display: block;
+    // width: auto;
+    margin-bottom: var(--#{$prefix}spacing-s);
     padding: 0 var(--#{$prefix}form-input-spacing-x);
-    float: none;
+    // float: none;
     background-color: transparent;
-    color:var(--#{$prefix}form-input-color);
-    font-size: $small-font-size;
-    font-weight: 700;
-    line-height: calc(#{$input-height} - 1px);
-    transition: 0.2s ease-out;
-    cursor: text;
+    color: var(--#{$prefix}form-control-text-color);
+    font-size: var(--#{$prefix}label-sm);
+    font-weight: var(--#{$prefix}font-weight-solid);
+    // line-height: calc(#{$input-height} - 1px);
+    // transition: 0.2s ease-out;
+    // cursor: text;
   }
 }
 
@@ -297,6 +295,7 @@ input::-webkit-datetime-edit {
   position: relative;
   margin-bottom: var(--#{$prefix}spacing-s);
   padding-left: 0;
+  align-items: center;
 
   // Add vertical spacing for consequential elements
   &+& {
@@ -317,10 +316,9 @@ input::-webkit-datetime-edit {
       position: relative;
       display: flex;
       align-items: center;
-      padding-left: 26px; // not using variable because of the pseudo element
+      padding-left: 28px; // checkbox size + left padding - not using variable because of the pseudo element
       font-size: var(--#{$prefix}label-font-size);
       font-weight: var(--#{$prefix}font-weight-solid);
-      line-height: 1;
       cursor: pointer;
       user-select: none;
 
