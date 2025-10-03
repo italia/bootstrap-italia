@@ -4,7 +4,6 @@
 
 @import '../base/mixins';
 
-
 // Readonly controls as plain text
 //
 // Apply class to a readonly input to make it appear like regular plain
@@ -21,7 +20,7 @@
     outline: 0;
     box-shadow: none !important;
   }
-  
+
   & + label {
     cursor: text;
   }
@@ -51,22 +50,16 @@
     border-color: var(--#{$prefix}color-border-danger);
   }
 
-  // Change background size for number inputs
-  .was-validated &:invalid[type='number'],
-  &.is-invalid[type='number']{
-    background-size: 80px 30%;
-  }
-
   &.warning {
-    background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%0A%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M2%2012C2%206.47715%206.47715%202%2012%202C14.6522%202%2017.1957%203.05357%2019.0711%204.92893C20.9464%206.8043%2022%209.34784%2022%2012C22%2017.5228%2017.5228%2022%2012%2022C6.47715%2022%202%2017.5228%202%2012ZM3%2012C3%2016.9706%207.02944%2021%2012%2021C16.9706%2021%2021%2016.9706%2021%2012C21%207.02944%2016.9706%203%2012%203C7.02944%203%203%207.02944%203%2012ZM11.5%2014.2V5.7H12.7V14.2H11.5ZM12.6%2018.3V16.5H11.4V18.3H12.6Z%22/%3E%0A%3C/svg%3E") no-repeat;
+    background-image: url('data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%0A%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M2%2012C2%206.47715%206.47715%202%2012%202C14.6522%202%2017.1957%203.05357%2019.0711%204.92893C20.9464%206.8043%2022%209.34784%2022%2012C22%2017.5228%2017.5228%2022%2012%2022C6.47715%2022%202%2017.5228%202%2012ZM3%2012C3%2016.9706%207.02944%2021%2012%2021C16.9706%2021%2021%2016.9706%2021%2012C21%207.02944%2016.9706%203%2012%203C7.02944%203%203%207.02944%203%2012ZM11.5%2014.2V5.7H12.7V14.2H11.5ZM12.6%2018.3V16.5H11.4V18.3H12.6Z%22/%3E%0A%3C/svg%3E')
+      no-repeat;
     border-color: var(--#{$prefix}color-border-warning);
   }
 
-  &.is-valid~.warning-feedback {
+  &.is-valid ~ .warning-feedback {
     display: block;
   }
 }
-
 
 // Form control sizing
 //

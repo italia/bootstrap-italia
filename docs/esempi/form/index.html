@@ -26,13 +26,33 @@ title: Validazione Form
       <div class="col-12 col-md-4">
         <div class="form-group">
           <label for="age">Campo numerico (min/max)</label>
-          <input type="number" data-bs-input class="form-control" id="age" min="18" max="50" step="1" required />
+          <span class="input-group input-number">
+            <input type="number" data-bs-input class="form-control" id="age" min="18" max="50" step="1" required />
+            <span class="input-group-text align-buttons flex-column">
+                <button class="input-number-add">
+                  <span class="visually-hidden">Aumenta valore Euro</span>
+                </button>
+                <button class="input-number-sub">
+                  <span class="visually-hidden">Diminuisci valore Euro</span>
+                </button>
+            </span>
+          </span>
         </div>
       </div>
       <div class="col-12 col-md-4">
         <div class="form-group">
           <label for="camponumerico">Campo numerico (5 cifre)</label>
-          <input type="number" data-bs-input class="form-control" id="camponumerico" maxlenght="5" required />
+          <span class="input-group input-number">
+            <input type="number" data-bs-input class="form-control" id="camponumerico" maxlenght="5" required />
+            <span class="input-group-text align-buttons flex-column">
+                <button class="input-number-add">
+                  <span class="visually-hidden">Aumenta valore Euro</span>
+                </button>
+                <button class="input-number-sub">
+                  <span class="visually-hidden">Diminuisci valore Euro</span>
+                </button>
+            </span>
+          </span>
         </div>
       </div>
     </div>
@@ -162,7 +182,7 @@ title: Validazione Form
         </div>
       </div>
 
-        
+
     </div>
 
     <div class="row mb-4">

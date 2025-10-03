@@ -1,7 +1,6 @@
 .input-number {
   position: relative;
 
-
   &.input-number-adaptive {
     width: fit-content;
     input[type='number'] {
@@ -13,7 +12,9 @@
   //reset input style
   input[type='number'] {
     appearance: textfield;
-    border-right: 0;
+    // border-right: 0;
+    border-top-right-radius: var(--bs-form-control-border-radius) !important;
+    border-bottom-right-radius: var(--bs-form-control-border-radius) !important;
 
     &::-webkit-inner-spin-button,
     &::-webkit-outer-spin-button {
@@ -41,11 +42,19 @@
 
   //add + sub buttons
   .input-group-text.align-buttons {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+
     padding-right: var(--#{$prefix}form-control-spacing);
-    border-left: 0;
-    border-right-width: 1px;
+    // border-left: 0;
+    // border-right-width: 1px;
+    border: none;
+    background: transparent;
   }
- 
+
   .input-group-text button {
     position: relative;
     transition: opacity 0.1s;
@@ -102,7 +111,7 @@
 // Reset border when input is prepended with input-group-text
 input[type='number'] {
   .input-number .input-group-text + & {
-    border-left: 0;   
+    border-left: 0;
   }
 }
 
