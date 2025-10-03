@@ -3,20 +3,18 @@
 
 .it-card {
   --#{$prefix}it-card-background: var(--#{$prefix}color-background-inverse);
-  --#{$prefix}it-card-body-spacer: var(--#{$prefix}spacing-s);
   --#{$prefix}it-card-border-color: var(--#{$prefix}color-border-subtle);
-  // --#{$prefix}it-card-border-radius: var(--#{$prefix}radius-smooth);
   --#{$prefix}it-card-border-radius-inner: calc(var(--#{$prefix}it-card-border-radius) - var(--#{$prefix}it-card-border-outside-width));
   --#{$prefix}it-card-border-top-color: transparent; // default background set to transparent
   --#{$prefix}it-card-border-top-width: 6px;
   --#{$prefix}it-card-border-outside-width: 1px; // change to 2px if needed
   --#{$prefix}it-card-border-separator-width: 1px; // change to 2px if needed
-  --#{$prefix}it-card-cap-background: transparent;
+  --#{$prefix}it-card-footer-background: transparent;
   // --#{$prefix}it-card-cap-color: transparent;
-  --#{$prefix}it-card-spacer-x: var(--#{$prefix}spacing-s);
-  --#{$prefix}it-card-spacer-y: var(--#{$prefix}spacing-xs);
-  --#{$prefix}it-card-cap-padding-x: var(--#{$prefix}it-card-spacer-x);
-  --#{$prefix}it-card-cap-padding-y: var(--#{$prefix}it-card-spacer-y);
+  --#{$prefix}it-card-spacing-x: var(--#{$prefix}spacing-s);
+  --#{$prefix}it-card-spacing-y: var(--#{$prefix}spacing-xs);
+  // --#{$prefix}it-card-cap-padding-x: var(--#{$prefix}it-card-spacing-x);
+  // --#{$prefix}it-card-cap-padding-y: var(--#{$prefix}it-card-spacing-y);
   --#{$prefix}it-card-category-color: var(--#{$prefix}color-text-muted);
   --#{$prefix}it-card-category-font-weight: var(--#{$prefix}font-weight-solid);
   // --#{$prefix}it-card-category-l-spacing: 0.5px;
@@ -30,11 +28,9 @@
   --#{$prefix}it-card-inline-min-height: 240px;
   --#{$prefix}it-card-inline-mini-min-height: 160px;
   --#{$prefix}it-card-link-color: var(--#{$prefix}color-text-secondary);
-  --#{$prefix}it-card-list-group-item-padding-y: 0.75rem;
+  // --#{$prefix}it-card-list-group-item-padding-y: 0.75rem;
+  --#{$prefix}it-card-title-spacing-y: var(--#{$prefix}it-card-spacing-y);
   --#{$prefix}it-card-signature-font-size: 1rem;
-  --#{$prefix}it-card-double-spacer-y: calc(2 * var(--#{$prefix}it-card-spacer-y));
-  --#{$prefix}it-card-quad-spacer-y: calc(4 * var(--#{$prefix}it-card-spacer-y));
-  --#{$prefix}it-card-title-spacer-y: var(--#{$prefix}it-card-spacer-y);
   --#{$prefix}it-card-signature-font-family: var(--#{$prefix}font-mono);
 }
 
@@ -46,7 +42,7 @@
   flex-direction: column;
   min-width: 0; // See https://github.com/twbs/bootstrap/pull/22740#issuecomment-305868106
   height: var(--#{$prefix}it-card-height);
-  padding: 0 0 var(--#{$prefix}it-card-spacer-y) 0;
+  padding: 0 0 var(--#{$prefix}it-card-spacing-y) 0;
   position: relative;
   width: 100%;
   overflow-wrap: break-word;
@@ -71,7 +67,7 @@
     }
 
     + .it-card-link {
-      margin-left: var(--#{$prefix}it-card-spacer-x);
+      margin-left: var(--#{$prefix}it-card-spacing-x);
     }
   }
 
@@ -97,9 +93,9 @@
         }
       }
 
-      margin-top: calc(2 * var(--#{$prefix}it-card-title-spacer-y));
-      margin-bottom: var(--#{$prefix}it-card-title-spacer-y);
-      padding: 0 var(--#{$prefix}it-card-spacer-x);
+      margin-top: calc(2 * var(--#{$prefix}it-card-title-spacing-y));
+      margin-bottom: var(--#{$prefix}it-card-title-spacing-y);
+      padding: 0 var(--#{$prefix}it-card-spacing-x);
 
       .it-card-profile {
         flex: 1;
@@ -139,9 +135,9 @@
 
   // Card title styles
   .it-card-title {
-    margin-top: calc(2 * var(--#{$prefix}it-card-title-spacer-y));
+    margin-top: calc(2 * var(--#{$prefix}it-card-title-spacing-y));
     margin-bottom: 0;
-    padding: 0 var(--#{$prefix}it-card-spacer-x);
+    padding: 0 var(--#{$prefix}it-card-spacing-x);
 
     &.it-card-title-icon {
       display: flex;
@@ -193,12 +189,12 @@
   // Card body and content
   .it-card-body {
     flex: 1 1 auto;
-    padding: var(--#{$prefix}it-card-spacer-y) var(--#{$prefix}it-card-spacer-x);
+    padding: var(--#{$prefix}it-card-spacing-y) var(--#{$prefix}it-card-spacing-x);
     color: var(--#{$prefix}it-card-text-color);
 
     // Card subtitle or event timeframe
     .it-card-subtitle {
-      margin-bottom: var(--#{$prefix}it-card-spacer-y);
+      margin-bottom: var(--#{$prefix}it-card-spacing-y);
       font-weight: 600;
       font-size: 1.25rem; // equal h5
       line-height: 1.5rem;
@@ -229,10 +225,9 @@
 
   // Card footer cap
   .it-card-footer {
-    margin: 0 var(--#{$prefix}it-card-cap-padding-x);
-    padding: var(--#{$prefix}it-card-cap-padding-y) 0;
-    // color: var(--#{$prefix}it-card-cap-color);
-    background-color: var(--#{$prefix}it-card-cap-background);
+    margin: 0 var(--#{$prefix}it-card-spacing-x);
+    padding: var(--#{$prefix}it-card-spacing-y) 0;
+    background-color: var(--#{$prefix}it-card-footer-background);
     border-top: var(--#{$prefix}it-card-border-separator-width) solid var(--#{$prefix}it-card-border-color);
     font-size: 1rem;
     line-height: 1.5rem;
@@ -244,7 +239,7 @@
 
   // Card metadata holder <footer>
   footer {
-    margin-top: var(--#{$prefix}it-card-double-spacer-y);
+    margin-top: var(--#{$prefix}spacing-m);
 
     &.it-card-related {
       display: flex;
@@ -332,12 +327,12 @@
     font-size: 1rem;
     line-height: 1.5rem;
     color: var(--#{$prefix}it-card-description-color);
-    padding-top: var(--#{$prefix}it-card-double-spacer-y);
-    padding-bottom: var(--#{$prefix}it-card-double-spacer-y);
+    padding-top: var(--#{$prefix}spacing-m);
+    padding-bottom: var(--#{$prefix}spacing-m);
 
     &:last-child {
       margin-bottom: 0;
-      padding-bottom: var(--#{$prefix}it-card-spacer-y);
+      padding-bottom: var(--#{$prefix}it-card-spacing-y);
       border-bottom: none;
     }
 
@@ -379,8 +374,8 @@
   .it-card-body > .list-group {
     border-top: var(--#{$prefix}it-card-border-separator-width) solid var(--#{$prefix}it-card-border-color);
     border-bottom: var(--#{$prefix}it-card-border-separator-width) solid var(--#{$prefix}it-card-border-color);
-    margin-top: var(--#{$prefix}it-card-double-spacer-y);
-    margin-bottom: var(--#{$prefix}it-card-double-spacer-y);
+    margin-top: var(--#{$prefix}spacing-m);
+    margin-bottom: var(--#{$prefix}spacing-m);
 
     &:first-child {
       border-top-width: 0;
@@ -394,11 +389,11 @@
   }
 
   .it-card-body > .list-group {
-    margin-top: var(--#{$prefix}it-card-quad-spacer-y);
-    margin-bottom: var(--#{$prefix}it-card-double-spacer-y);
+    margin-top: var(--#{$prefix}spacing-l);
+    margin-bottom: var(--#{$prefix}spacing-m);
 
     .list-group-item {
-      padding: var(--#{$prefix}it-card-list-group-item-padding-y) 0;
+      padding: var(--#{$prefix}spacing-xs) 0;
     }
   }
 
@@ -456,23 +451,23 @@
 
     // Border Top Color
     &.it-card-border-top-primary::after {
-      --#{$prefix}it-card-border-top-color: #{$primary};
+      --#{$prefix}it-card-border-top-color: var(--#{$prefix}color-border-primary);
     }
 
     &.it-card-border-top-secondary::after {
-      --#{$prefix}it-card-border-top-color: #{$secondary};
+      --#{$prefix}it-card-border-top-color: var(--#{$prefix}color-border-secondary);
     }
 
     &.it-card-border-top-success::after {
-      --#{$prefix}it-card-border-top-color: #{$success};
+      --#{$prefix}it-card-border-top-color: var(--#{$prefix}color-border-success);
     }
 
     &.it-card-border-top-warning::after {
-      --#{$prefix}it-card-border-top-color: #{$warning};
+      --#{$prefix}it-card-border-top-color: var(--#{$prefix}color-border-warning);
     }
 
     &.it-card-border-top-danger::after {
-      --#{$prefix}it-card-border-top-color: #{$danger};
+      --#{$prefix}it-card-border-top-color: var(--#{$prefix}color-border-danger);
     }
   }
 
@@ -480,12 +475,12 @@
   &.it-card-banner {
     align-items: center;
     text-align: center;
-    padding-top: calc(var(--#{$prefix}it-card-quad-spacer-y) + var(--#{$prefix}it-card-spacer-y));
-    padding-bottom: calc(var(--#{$prefix}it-card-double-spacer-y) + var(--#{$prefix}it-card-spacer-y));
+    --#{$prefix}card-spacing-x: var(--#{$prefix}spacing-m);
+    --#{$prefix}card-spacing-y: var(--#{$prefix}spacing-m);
 
-    @include media-breakpoint-down(sm) {
-      padding-top: calc(var(--#{$prefix}it-card-double-spacer-y) + var(--#{$prefix}it-card-spacer-y));
-      padding-bottom: var(--#{$prefix}it-card-spacer-y);
+    @include media-breakpoint-up(lg) {
+      --#{$prefix}card-spacing-x: var(--#{$prefix}spacing-xl);
+      --#{$prefix}card-spacing-y: var(--#{$prefix}spacing-xl);
     }
 
     .it-card-body .it-card-subtitle {
@@ -497,12 +492,11 @@
       width: 100%;
       display: flex;
       flex-direction: column;
-      align-items: center;
     }
 
     .it-card-footer {
       border-top: 0;
-      padding-top: var(--#{$prefix}it-card-spacer-y);
+      padding-top: var(--#{$prefix}it-card-spacing-y);
     }
   }
 
@@ -576,8 +570,8 @@
         align-items: flex-start;
         text-align: left;
         min-height: auto !important;
-        padding-left: var(--{$prefix}it-card-spacer-x);
-        padding-right: var(--{$prefix}it-card-spacer-x);
+        padding-left: var(--#{$prefix}it-card-spacing-x);
+        padding-right: var(--#{$prefix}it-card-spacing-x);
 
         .it-card-title {
           margin-top: 0;
@@ -589,7 +583,7 @@
 
         &.it-card-inline-reverse {
           order: inherit;
-          padding-right: var(--{$prefix}it-card-spacer-x);
+          padding-right: var(--{$prefix}it-card-spacing-x);
           padding-left: 0;
 
           .it-card-banner-icon-wrapper {
