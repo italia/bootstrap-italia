@@ -245,10 +245,11 @@ article.it-card {
       .it-card-title-icon-wrapper {
         position: relative;
 
+        // Adjust icon position relative to title
         .icon {
           position: absolute;
           top: 4px;
-          left: 0;
+          right: 0;
         }
       }
 
