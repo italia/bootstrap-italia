@@ -28,11 +28,19 @@
     &:not(:disabled) {
       border-left: 1px solid var(--#{$prefix}form-control-border-color);
     }
+
+    &[readonly] ~ .input-group-text {
+      .input-number-add,
+      .input-number-sub {
+        display: none;
+      }
+    }
   }
 
   //disabled version
   &.disabled {
     button {
+      display: none;
       pointer-events: none;
       &:hover {
         cursor: not-allowed;
