@@ -87,7 +87,7 @@ Per inserire un'**immagine** puoi applicare la classe `.it-card-image` alla card
 
 Segue il **corpo** della card `.it-card-body`, che può contenere diversi contenuti di approfondimento a seconda del contesto d'uso. Puoi utilizzare più elementi `.it-card-body` per separare blocchi di contenuto.
 
-I **metadati** (come categorie, argomenti e date) vanno nell'elemento `footer` con classe `.it-card-footer`. Può stare nel corpo della card o, seguendolo con la classe `.it-card-footer`, ancorarsi al bordo inferiore nei casi di card con altezza fissa.
+I **metadati** (come categorie, argomenti e date) vanno nell'elemento `footer` con classe `.it-card-footer`. Se la card usa la classe `.it-card-height-full`, il footer si ancora al bordo inferiore nei casi.
 
 ## Card per contenuti editoriali
 
@@ -124,7 +124,7 @@ La struttura dei metadati include:
       <div class="it-card-body">
         <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
       </div>
-      <!--finally the card footer metadata-->
+      <!--card footer -->
       <footer class="it-card-footer">
         <div class="it-card-taxonomy">
           <a href="#" class="it-card-category it-card-link"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
@@ -493,7 +493,7 @@ Consigliamo, inoltre, di svolgere sempre test di usabilità anche con utenti che
 
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
-Usa `.it-card-footer` per creare uno spazio dedicato a **collegamenti o pulsanti secondari**, come negli esempi seguenti. Questa impostazione è utile quando il titolo della card porta a una pagina di approfondimento (ad esempio, la descrizione dettagliata dell'evento), ma si vuole dare accesso diretto e immediato all'azione principale (ad esempio, l'iscrizione all'evento). 
+Usa `.it-card-actions` per creare uno spazio dedicato a **collegamenti o pulsanti secondari**, come negli esempi seguenti. Questa impostazione è utile quando il titolo della card porta a una pagina di approfondimento (ad esempio, la descrizione dettagliata dell'evento), ma si vuole dare accesso diretto e immediato all'azione principale (ad esempio, l'iscrizione all'evento). 
 
 Per applicare il colore secondario ai collegamenti `a` inseriti nel corpo o nel footer della card , usa la classe `.it-card-link`.
 
@@ -527,14 +527,14 @@ Ricorda di usare:
       <div class="it-card-body">
         <p class="it-card-subtitle">Dal 4 al 6 agosto</p>
         <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
-        <footer class="it-card-footer">
-          <div class="it-card-taxonomy">
-            <a href="#" class="it-card-category it-card-link"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
-          </div>
-          <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
-        </footer>
       </div>
-      <div class="it-card-footer" aria-label="Link correlati:">
+      <footer class="it-card-footer">
+        <div class="it-card-taxonomy">
+          <a href="#" class="it-card-category it-card-link"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
+        </div>
+        <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
+      </footer>
+      <div class="it-card-actions" aria-label="Link correlati:">
         <a href="#" class="it-card-link">Iscriviti all'evento</a>
       </div>
     </article>
@@ -557,7 +557,7 @@ Ricorda di usare:
         <p class="it-card-subtitle">Dal 4 al 6 novembre</p>
         <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
       </div>
-      <div class="it-card-footer" aria-label="Link correlati:">
+      <div class="it-card-actions" aria-label="Link correlati:">
         <button type="button" class="btn btn-outline-secondary">Compila il form di iscrizione</button>
       </div>
     </article>
@@ -574,13 +574,13 @@ Ricorda di usare:
       <div class="it-card-body">
         <p class="it-card-subtitle"><span class="visually-hidden">Data evento:</span> <time datetime="08-19">19 agosto</time>, <span class="visually-hidden">Orario:</span>  <time>11:30</time>–<time>13:00</time></p>
         <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
-        <footer class="it-card-footer">
-          <div class="it-card-taxonomy">
-            <a href="#" class="it-card-category it-card-link"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
-          </div>
-          <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
-        </footer>
       </div>
+      <footer class="it-card-footer">
+        <div class="it-card-taxonomy">
+          <a href="#" class="it-card-category it-card-link"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
+        </div>
+        <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
+      </footer>
     </article>
     <!--end it-card-->
   </div>
@@ -614,7 +614,7 @@ L'immagine segue questo contenitore. Per invertire l'ordine visivo, usa la class
           </div>
           <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
         </footer>
-        <div class="it-card-footer" aria-label="Link correlati:">
+        <div class="it-card-actions" aria-label="Link correlati:">
           <a href="#" class="it-card-link">Iscriviti all'evento</a>
         </div>
       </div>
@@ -649,7 +649,7 @@ L'immagine segue questo contenitore. Per invertire l'ordine visivo, usa la class
           </div>
           <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
         </footer>
-        <div class="it-card-footer" aria-label="Link correlati:">
+        <div class="it-card-actions" aria-label="Link correlati:">
           <button type="button" class="btn btn-outline-secondary">Iscriviti</button>
         </div>
       </div>
@@ -925,7 +925,7 @@ Consigliamo, inoltre, di svolgere sempre test di usabilità anche con utenti che
 
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
-Per creare un ulteriore spazio dedicato a **collegamenti o pulsanti secondari**, come negli esempi seguenti, puoi usare la classe `.it-card-footer`. Questa impostazione è utile quando il titolo della card porta a una pagina di approfondimento (ad esempio, la descrizione dettagliata di un bando), ma si vuole dare accesso diretto e immediato all'azione principale (ad esempio, la candidatura al bando). 
+Per creare un ulteriore spazio dedicato a **collegamenti o pulsanti secondari**, come negli esempi seguenti, puoi usare la classe `.it-card-actions`. Questa impostazione è utile quando il titolo della card porta a una pagina di approfondimento (ad esempio, la descrizione dettagliata di un bando), ma si vuole dare accesso diretto e immediato all'azione principale (ad esempio, la candidatura al bando). 
 
 Per applicare il colore secondario ai collegamenti `a` inseriti nel corpo o nel footer della card , usa la classe `.it-card-link`.
 
@@ -950,12 +950,12 @@ Ricorda di usare:
       </h4>
       <div class="it-card-body">
         <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
-        <footer class="it-card-footer">
-          <div class="it-card-taxonomy">
-            <a href="#" class="it-card-category it-card-link"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
-          </div>
-        </footer>
       </div>
+      <footer class="it-card-footer">
+        <div class="it-card-taxonomy">
+          <a href="#" class="it-card-category it-card-link"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
+        </div>
+      </footer>
     </article>
     <!--end it-card-->
   </div>
@@ -967,15 +967,15 @@ Ricorda di usare:
       </h4>
       <div class="it-card-body">
        <p class="it-card-subtitle">Sottotitolo del servizio</p>
-        <footer class="it-card-footer">
-          <div class="it-card-taxonomy">
-            <div class="chip chip-simple chip-sm chip-success">
-              <span class="visually-hidden">Stato del servizio: </span><span class="chip-label">Attivo</span>
-            </div>
-          </div>
-        </footer>
       </div>
-      <div class="it-card-footer" aria-label="Link correlati:">
+      <footer class="it-card-footer">
+        <div class="it-card-taxonomy">
+          <div class="chip chip-simple chip-sm chip-success">
+            <span class="visually-hidden">Stato del servizio: </span><span class="chip-label">Attivo</span>
+          </div>
+        </div>
+      </footer>
+      <div class="it-card-actions" aria-label="Link correlati:">
         <a href="#" class="it-card-link">Requisiti per l'accesso</a>
       </div>
     </article>
@@ -991,16 +991,16 @@ Ricorda di usare:
       </h4>
       <div class="it-card-body">
         <p class="it-card-subtitle">Sottotitolo del bando</p>
-        <footer class="it-card-footer">
-          <div class="it-card-taxonomy">
-            <div class="chip chip-simple chip-sm chip-success">
-              <span class="visually-hidden">Stato del bando: </span><span class="chip-label">Aperto</span>
-            </div>
-          </div>
-          <span class="it-card-date text-warning"><strong>Scadenza: </strong><time class="it-card-date text-warning" datetime="{{ 'now' | date: "%Y" }}-10-12">31 gennaio, {{ 'now' | date: "%Y" }}</time></span>
-        </footer>
       </div>
-      <div class="it-card-footer" aria-label="Link correlati:">
+      <footer class="it-card-footer">
+        <div class="it-card-taxonomy">
+          <div class="chip chip-simple chip-sm chip-success">
+            <span class="visually-hidden">Stato del bando: </span><span class="chip-label">Aperto</span>
+          </div>
+        </div>
+        <span class="it-card-date text-warning"><strong>Scadenza: </strong><time class="it-card-date text-warning" datetime="{{ 'now' | date: "%Y" }}-10-12">31 gennaio, {{ 'now' | date: "%Y" }}</time></span>
+      </footer>
+      <div class="it-card-actions" aria-label="Link correlati:">
         <button type="button" class="btn btn-outline-secondary">Compila il form di candidatura</button>
       </div>
     </article>
@@ -1013,7 +1013,7 @@ Ricorda di usare:
 
 Usa questa variante per presentare documenti e allegati. Per mostrare un'icona affiancata al titolo, applica la classe `.it-card-title-icon`. 
 
-Per creare un ulteriore spazio dedicato a **collegamenti o pulsanti secondari**, come negli esempi seguenti, puoi usare la classe `.it-card-footer`. Questa impostazione è utile quando il titolo della card porta a una pagina di approfondimento (ad esempio, la descrizione dettagliata del documento), ma si vuole dare accesso diretto e immediato all'azione principale (ad esempio, scaricare il file sul proprio dispositivo).
+Per creare un ulteriore spazio dedicato a **collegamenti o pulsanti secondari**, come negli esempi seguenti, puoi usare la classe `.it-card-actions`. Questa impostazione è utile quando il titolo della card porta a una pagina di approfondimento (ad esempio, la descrizione dettagliata del documento), ma si vuole dare accesso diretto e immediato all'azione principale (ad esempio, scaricare il file sul proprio dispositivo).
 
 {% comment %}Example name: Card documenti e allegati{% endcomment %}
 {% capture example %}
@@ -1030,12 +1030,12 @@ Per creare un ulteriore spazio dedicato a **collegamenti o pulsanti secondari**,
       </h4>
       <div class="it-card-body">
         <p class="it-card-text">Eventuale breve estratto descrittivo del documento.</p>
-        <footer class="it-card-footer">
-          <div class="it-card-taxonomy">
-            <a href="#" class="it-card-category it-card-link"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
-          </div>
-        </footer>
       </div>
+      <footer class="it-card-footer">
+        <div class="it-card-taxonomy">
+          <a href="#" class="it-card-category it-card-link"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
+        </div>
+      </footer>
     </article>
     <!--end it-card-->
   </div>
@@ -1051,13 +1051,13 @@ Per creare un ulteriore spazio dedicato a **collegamenti o pulsanti secondari**,
       </h4>
       <div class="it-card-body">
         <p class="it-card-text">Eventuale breve estratto descrittivo del documento. Formato PDF (200Kb)</p>
-        <footer class="it-card-footer">
-          <div class="it-card-taxonomy">
-            <a href="#" class="it-card-category it-card-link"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
-          </div>
-        </footer>
       </div>
-      <div class="it-card-footer">
+      <footer class="it-card-footer">
+        <div class="it-card-taxonomy">
+          <a href="#" class="it-card-category it-card-link"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
+        </div>
+      </footer>
+      <div class="it-card-actions">
         <span class="me-2">Scarica come:</span> 
         <a href="#" class="it-card-link">ODT (300Kb)<span class="visually-hidden">: Titolo del documento</span></a>
         <a href="#" class="it-card-link">ODS (400Kb)<span class="visually-hidden">: Titolo del documento</span></a>
@@ -1885,7 +1885,7 @@ Per la gestione delle **altezze** in caso di gruppi di card, l'impostazione di b
 
 Puoi cambiare questo comportamento per ogni card usando la classe `.it-card-height-full` (altezza basata su tutto lo spazio disponibile) sull'elemento `article .it-card`. Questa impostazione è presente in diversi degli esempi che precedono. 
 
-L'elemento `footer .it-card-footer` si allinea verticamente in modo diverso a seconda della posizione nel markup: quando all'interno di `.it-card-body` segue il contenuto; fuori, con l'aggiunta di `.it-card-footer`, si ancora al bordo inferiore come la data nell'esempio che segue.
+L'elemento `footer .it-card-footer` si allinea verticamente al bordo inferiore come la data nell'esempio che segue.
 
 {% comment %}Example name: Altezza delle card{% endcomment %}
 {% capture example %}
