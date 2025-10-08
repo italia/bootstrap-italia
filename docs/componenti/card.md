@@ -63,7 +63,7 @@ Esempio base con immagine, descrizione e data:
         <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
       </div>
       <!--finally the card footer metadata-->
-      <footer class="it-card-related it-card-footer">
+      <footer class="it-card-footer">
         <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
       </footer>
     </article>
@@ -87,7 +87,7 @@ Per inserire un'**immagine** puoi applicare la classe `.it-card-image` alla card
 
 Segue il **corpo** della card `.it-card-body`, che può contenere diversi contenuti di approfondimento a seconda del contesto d'uso. Puoi utilizzare più elementi `.it-card-body` per separare blocchi di contenuto.
 
-I **metadati** (come categorie, argomenti e date) vanno nell'elemento `footer` con classe `.it-card-related`. Può stare nel corpo della card o, seguendolo con la classe `.it-card-footer`, ancorarsi al bordo inferiore nei casi di card con altezza fissa.
+I **metadati** (come categorie, argomenti e date) vanno nell'elemento `footer` con classe `.it-card-footer`. Può stare nel corpo della card o, seguendolo con la classe `.it-card-footer`, ancorarsi al bordo inferiore nei casi di card con altezza fissa.
 
 ## Card per contenuti editoriali
 
@@ -125,7 +125,7 @@ La struttura dei metadati include:
         <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
       </div>
       <!--finally the card footer metadata-->
-      <footer class="it-card-related it-card-footer">
+      <footer class="it-card-footer">
         <div class="it-card-taxonomy">
           <a href="#" class="it-card-category it-card-link"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
         </div>
@@ -154,7 +154,7 @@ La struttura dei metadati include:
         <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
       </div>
       <!--finally the card footer metadata-->
-      <footer class="it-card-related it-card-footer">
+      <footer class="it-card-footer">
         <div class="it-card-taxonomy">
           <ul class="it-card-chips" aria-label="Argomenti correlati: ">
             <li class="list-item"><a class="chip chip-simple chip-sm" href="#">
@@ -184,7 +184,7 @@ La struttura dei metadati include:
         <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
       </div>
       <!--finally the card footer metadata-->
-      <footer class="it-card-related it-card-footer">
+      <footer class="it-card-footer">
         <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
       </footer>
     </article>
@@ -251,7 +251,7 @@ Per indicare l'autore del contenuto, usa l'elemento semantico `address` con clas
         <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
       </div>
       <!--finally the card footer metadata-->
-      <footer class="it-card-related it-card-footer">
+      <footer class="it-card-footer">
         <div class="it-card-taxonomy">
           <a href="#" class="it-card-category it-card-link"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
         </div>
@@ -286,7 +286,7 @@ Per indicare l'autore del contenuto, usa l'elemento semantico `address` con clas
         <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
       </div>
       <!--finally the card footer metadata-->
-      <footer class="it-card-related it-card-footer">
+      <footer class="it-card-footer">
         <div class="it-card-taxonomy">
           <ul class="it-card-chips" aria-label="Argomenti correlati: ">
             <li class="list-item"><a class="chip chip-simple chip-sm" href="#">
@@ -321,7 +321,7 @@ Per indicare l'autore del contenuto, usa l'elemento semantico `address` con clas
         <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
       </div>
       <!--finally the card footer metadata-->
-      <footer class="it-card-related it-card-footer">
+      <footer class="it-card-footer">
         <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
       </footer>
     </article>
@@ -357,7 +357,7 @@ Per invertire solamente l'ordine visivo tra destra e sinistra, applica la classe
         <div class="it-card-body">
           <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
         </div>
-        <footer class="it-card-related it-card-footer">
+        <footer class="it-card-footer">
           <div class="it-card-taxonomy">
             <a href="#" class="it-card-category it-card-link"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
           </div>
@@ -388,7 +388,7 @@ Per invertire solamente l'ordine visivo tra destra e sinistra, applica la classe
         <div class="it-card-body">
           <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
         </div>
-        <footer class="it-card-related it-card-footer">
+        <footer class="it-card-footer">
           <div class="it-card-taxonomy">
             <a href="#" class="it-card-category it-card-link"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
           </div>
@@ -428,7 +428,7 @@ Consigliamo di non aggiungere altri contenuti oltre al titolo (da mantenere brev
         <h3 class="it-card-title h4 no_toc">
           <a href="#">Titolo contenuto editoriale</a>
         </h3>
-        <footer class="it-card-related it-card-footer">
+        <footer class="it-card-footer">
           <div class="it-card-taxonomy">
             <a href="#" class="it-card-category it-card-link"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
           </div>
@@ -454,7 +454,7 @@ Consigliamo di non aggiungere altri contenuti oltre al titolo (da mantenere brev
         <h3 class="it-card-title h4 no_toc">
           <a href="#">Titolo contenuto editoriale</a>
         </h3>
-        <footer class="it-card-related it-card-footer">
+        <footer class="it-card-footer">
           <div class="it-card-taxonomy">
             <a href="#" class="it-card-category it-card-link"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
           </div>
@@ -527,7 +527,7 @@ Ricorda di usare:
       <div class="it-card-body">
         <p class="it-card-subtitle">Dal 4 al 6 agosto</p>
         <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
-        <footer class="it-card-related">
+        <footer class="it-card-footer">
           <div class="it-card-taxonomy">
             <a href="#" class="it-card-category it-card-link"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
           </div>
@@ -574,7 +574,7 @@ Ricorda di usare:
       <div class="it-card-body">
         <p class="it-card-subtitle"><span class="visually-hidden">Data evento:</span> <time datetime="08-19">19 agosto</time>, <span class="visually-hidden">Orario:</span>  <time>11:30</time>–<time>13:00</time></p>
         <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
-        <footer class="it-card-related">
+        <footer class="it-card-footer">
           <div class="it-card-taxonomy">
             <a href="#" class="it-card-category it-card-link"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
           </div>
@@ -608,7 +608,7 @@ L'immagine segue questo contenitore. Per invertire l'ordine visivo, usa la class
         <p class="it-card-subtitle"><span class="visually-hidden">Data evento:</span> <time datetime="08-19">19 agosto</time>, <span class="visually-hidden">Orario:</span>  <time>11:30</time>–<time>13:00</time></p>
           <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
         </div>
-        <footer class="it-card-related it-card-footer">
+        <footer class="it-card-footer">
           <div class="it-card-taxonomy">
             <a href="#" class="it-card-category it-card-link"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
           </div>
@@ -643,7 +643,7 @@ L'immagine segue questo contenitore. Per invertire l'ordine visivo, usa la class
         <p class="it-card-subtitle">Dal 4 al 6 agosto</p>
           <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
         </div>
-        <footer class="it-card-related it-card-footer">
+        <footer class="it-card-footer">
           <div class="it-card-taxonomy">
             <a href="#" class="it-card-category it-card-link"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
           </div>
@@ -707,7 +707,7 @@ Negli esempi non abbiamo usato il `target` del link per favorire la normale navi
         <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
       </div>
       <!--finally the card footer metadata-->
-      <footer class="it-card-related it-card-footer">
+      <footer class="it-card-footer">
         <div class="it-card-taxonomy">
           <a href="#" class="it-card-category it-card-link"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
         </div>
@@ -740,7 +740,7 @@ Negli esempi non abbiamo usato il `target` del link per favorire la normale navi
         <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
       </div>
       <!--finally the card footer metadata-->
-      <footer class="it-card-related it-card-footer">
+      <footer class="it-card-footer">
         <div class="it-card-taxonomy">
           <ul class="it-card-chips" aria-label="Argomenti correlati: ">
             <li class="list-item"><a class="chip chip-simple chip-sm" href="#">
@@ -774,7 +774,7 @@ Negli esempi non abbiamo usato il `target` del link per favorire la normale navi
         <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
       </div>
       <!--finally the card footer metadata-->
-      <footer class="it-card-related it-card-footer">
+      <footer class="it-card-footer">
         <div class="it-card-taxonomy">
           <a href="#" class="it-card-category it-card-link"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
         </div>
@@ -799,7 +799,7 @@ Negli esempi non abbiamo usato il `target` del link per favorire la normale navi
         <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
       </div>
       <!--finally the card footer metadata-->
-      <footer class="it-card-related it-card-footer">
+      <footer class="it-card-footer">
         <div class="it-card-taxonomy">
           <ul class="it-card-chips" aria-label="Argomenti correlati: ">
             <li class="list-item"><a class="chip chip-simple chip-sm" href="#">
@@ -842,7 +842,7 @@ Usa le stesse regole delle card inline standard per struttura e inversione dell'
         <div class="it-card-body">
           <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
         </div>
-        <footer class="it-card-related it-card-footer">
+        <footer class="it-card-footer">
           <div class="it-card-taxonomy">
             <a href="#" class="it-card-category it-card-link"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
           </div>
@@ -877,7 +877,7 @@ Usa le stesse regole delle card inline standard per struttura e inversione dell'
         <div class="it-card-body">
           <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
         </div>
-        <footer class="it-card-related it-card-footer">
+        <footer class="it-card-footer">
           <div class="it-card-taxonomy">
             <a href="#" class="it-card-category it-card-link"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
           </div>
@@ -950,7 +950,7 @@ Ricorda di usare:
       </h4>
       <div class="it-card-body">
         <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
-        <footer class="it-card-related">
+        <footer class="it-card-footer">
           <div class="it-card-taxonomy">
             <a href="#" class="it-card-category it-card-link"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
           </div>
@@ -967,7 +967,7 @@ Ricorda di usare:
       </h4>
       <div class="it-card-body">
        <p class="it-card-subtitle">Sottotitolo del servizio</p>
-        <footer class="it-card-related">
+        <footer class="it-card-footer">
           <div class="it-card-taxonomy">
             <div class="chip chip-simple chip-sm chip-success">
               <span class="visually-hidden">Stato del servizio: </span><span class="chip-label">Attivo</span>
@@ -991,7 +991,7 @@ Ricorda di usare:
       </h4>
       <div class="it-card-body">
         <p class="it-card-subtitle">Sottotitolo del bando</p>
-        <footer class="it-card-related">
+        <footer class="it-card-footer">
           <div class="it-card-taxonomy">
             <div class="chip chip-simple chip-sm chip-success">
               <span class="visually-hidden">Stato del bando: </span><span class="chip-label">Aperto</span>
@@ -1030,7 +1030,7 @@ Per creare un ulteriore spazio dedicato a **collegamenti o pulsanti secondari**,
       </h4>
       <div class="it-card-body">
         <p class="it-card-text">Eventuale breve estratto descrittivo del documento.</p>
-        <footer class="it-card-related">
+        <footer class="it-card-footer">
           <div class="it-card-taxonomy">
             <a href="#" class="it-card-category it-card-link"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
           </div>
@@ -1051,7 +1051,7 @@ Per creare un ulteriore spazio dedicato a **collegamenti o pulsanti secondari**,
       </h4>
       <div class="it-card-body">
         <p class="it-card-text">Eventuale breve estratto descrittivo del documento. Formato PDF (200Kb)</p>
-        <footer class="it-card-related">
+        <footer class="it-card-footer">
           <div class="it-card-taxonomy">
             <a href="#" class="it-card-category it-card-link"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
           </div>
@@ -1225,7 +1225,7 @@ Per i luoghi puoi inserire un'immagine `.it-card-profile-image` o un'icona sulla
 
 La lista di metadati del luogo è costruita utilizzando liste descrittive `.it-card-description-list` con ogni coppia di item`dd`-`dt` raccolta in un `div` contenitore. 
 
-Puoi combinare un piede con eventuali collegamenti o dettagli della mappa usando l'elemento `footer` con le classi dedicate `.it-card-related` e `it-card-footer`. Nell'esempio abbiamo applicato un `.border-top` a questo elemento, ma è opzionale.  
+Puoi combinare un piede con eventuali collegamenti o dettagli della mappa usando l'elemento `footer` con le classi dedicate `.it-card-footer` e `it-card-footer`. Nell'esempio abbiamo applicato un `.border-top` a questo elemento, ma è opzionale.  
 
 {% capture callout %}
 #### Accessibilità nomi luoghi
@@ -1343,7 +1343,7 @@ Negli esempi abbiamo utilizzato il tag `h4` per i titoli `.it-card-profile-name`
           </div>
         </dl>
       </div>
-      <footer class="it-card-related it-card-footer border-top pt-3">
+      <footer class="it-card-footer border-top pt-3">
         <div style="flex-grow:1">
           <svg class="icon icon-sm icon-secondary" aria-hidden="true"><use href="/dist/svg/sprites.svg#it-map-marker"></use></svg>
           <strong>Distanza:</strong> 900 metri
@@ -1436,7 +1436,7 @@ Puoi combinare questa impostazione con le funzionalità del contenitore `.it-car
           <li class="list-group-item"><a href="#">Il programma dettagliato</a></li>
         </ul>
       </div>
-      <footer class="it-card-related it-card-footer border-top pt-3">
+      <footer class="it-card-footer border-top pt-3">
         <div style="flex-grow:1">
           <a class="it-card-link" href="#">Iscriviti per rimanere aggiornato</a>
         </div>
@@ -1687,7 +1687,7 @@ Per garantire una buona accessibilità, mantieni un rapporto di contrasto colore
       <div class="it-card-body">
         <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
       </div>
-      <footer class="it-card-related it-card-footer">
+      <footer class="it-card-footer">
         <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-10-12">12 ottobre, {{ 'now' | date: "%Y" }}</time>
       </footer>
     </article>
@@ -1702,7 +1702,7 @@ Per garantire una buona accessibilità, mantieni un rapporto di contrasto colore
       <div class="it-card-body">
         <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
       </div>
-      <footer class="it-card-related it-card-footer">
+      <footer class="it-card-footer">
         <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-10-12">12 ottobre, {{ 'now' | date: "%Y" }}</time>
       </footer>
     </article>
@@ -1717,7 +1717,7 @@ Per garantire una buona accessibilità, mantieni un rapporto di contrasto colore
       <div class="it-card-body">
         <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
       </div>
-      <footer class="it-card-related it-card-footer">
+      <footer class="it-card-footer">
         <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-10-12">12 ottobre, {{ 'now' | date: "%Y" }}</time>
       </footer>
     </article>
@@ -1737,7 +1737,7 @@ Per garantire una buona accessibilità, mantieni un rapporto di contrasto colore
       <div class="it-card-body">
         <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
       </div>
-      <footer class="it-card-related it-card-footer">
+      <footer class="it-card-footer">
         <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-10-12">12 ottobre, {{ 'now' | date: "%Y" }}</time>
       </footer>
     </article>
@@ -1752,7 +1752,7 @@ Per garantire una buona accessibilità, mantieni un rapporto di contrasto colore
       <div class="it-card-body">
         <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
       </div>
-      <footer class="it-card-related it-card-footer">
+      <footer class="it-card-footer">
         <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-10-12">12 ottobre, {{ 'now' | date: "%Y" }}</time>
       </footer>
     </article>
@@ -1790,7 +1790,7 @@ Le varianti inline delle card hanno proporzioni immagini specifiche su desktop. 
         <p class="it-card-text">Card con immagine con proporzioni 21:9.</p>
       </div>
       <!--finally the card footer metadata-->
-      <footer class="it-card-related it-card-footer">
+      <footer class="it-card-footer">
         <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
       </footer>
     </article>
@@ -1816,7 +1816,7 @@ Le varianti inline delle card hanno proporzioni immagini specifiche su desktop. 
         <p class="it-card-text">Card con immagine con proporzioni 16:9.</p>
       </div>
       <!--finally the card footer metadata-->
-      <footer class="it-card-related it-card-footer">
+      <footer class="it-card-footer">
         <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
       </footer>
     </article>
@@ -1844,7 +1844,7 @@ Le varianti inline delle card hanno proporzioni immagini specifiche su desktop. 
         <p class="it-card-text">Card con immagine con proporzioni 4:3.</p>
       </div>
       <!--finally the card footer metadata-->
-      <footer class="it-card-related it-card-footer">
+      <footer class="it-card-footer">
         <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
       </footer>
     </article>
@@ -1870,7 +1870,7 @@ Le varianti inline delle card hanno proporzioni immagini specifiche su desktop. 
         <p class="it-card-text">Card con immagine con proporzioni 1:1.</p>
       </div>
       <!--finally the card footer metadata-->
-      <footer class="it-card-related it-card-footer">
+      <footer class="it-card-footer">
         <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
       </footer>
     </article>
@@ -1885,7 +1885,7 @@ Per la gestione delle **altezze** in caso di gruppi di card, l'impostazione di b
 
 Puoi cambiare questo comportamento per ogni card usando la classe `.it-card-height-full` (altezza basata su tutto lo spazio disponibile) sull'elemento `article .it-card`. Questa impostazione è presente in diversi degli esempi che precedono. 
 
-L'elemento `footer .it-card-related` si allinea verticamente in modo diverso a seconda della posizione nel markup: quando all'interno di `.it-card-body` segue il contenuto; fuori, con l'aggiunta di `.it-card-footer`, si ancora al bordo inferiore come la data nell'esempio che segue.
+L'elemento `footer .it-card-footer` si allinea verticamente in modo diverso a seconda della posizione nel markup: quando all'interno di `.it-card-body` segue il contenuto; fuori, con l'aggiunta di `.it-card-footer`, si ancora al bordo inferiore come la data nell'esempio che segue.
 
 {% comment %}Example name: Altezza delle card{% endcomment %}
 {% capture example %}
@@ -1910,7 +1910,7 @@ L'elemento `footer .it-card-related` si allinea verticamente in modo diverso a s
         <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
       </div>
       <!--finally the card footer metadata-->
-      <footer class="it-card-related it-card-footer">
+      <footer class="it-card-footer">
         <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
       </footer>
     </article>
@@ -1928,7 +1928,7 @@ L'elemento `footer .it-card-related` si allinea verticamente in modo diverso a s
         <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
       </div>
       <!--finally the card footer metadata-->
-      <footer class="it-card-related it-card-footer">
+      <footer class="it-card-footer">
         <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
       </footer>
     </article>
@@ -1956,7 +1956,7 @@ Puoi personalizzare il comportamento dei pulsanti nell'area metadati della card 
         <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
       </div>
       <!--finally the card footer metadata-->
-      <footer class="it-card-related it-card-footer">
+      <footer class="it-card-footer">
         <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
       </footer>
       <!--finally the card footer metadata-->
@@ -2050,7 +2050,7 @@ Esempio di lista card:
         <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
       </div>
       <!--finally the card footer metadata-->
-      <footer class="it-card-related it-card-footer">
+      <footer class="it-card-footer">
         <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
       </footer>
     </article>
@@ -2068,7 +2068,7 @@ Esempio di lista card:
         <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
       </div>
       <!--finally the card footer metadata-->
-      <footer class="it-card-related it-card-footer">
+      <footer class="it-card-footer">
         <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
       </footer>
     </article>
@@ -2086,7 +2086,7 @@ Esempio di lista card:
         <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
       </div>
       <!--finally the card footer metadata-->
-      <footer class="it-card-related it-card-footer">
+      <footer class="it-card-footer">
         <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
       </footer>
     </article>
@@ -2104,7 +2104,7 @@ Esempio di lista card:
         <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
       </div>
       <!--finally the card footer metadata-->
-      <footer class="it-card-related it-card-footer">
+      <footer class="it-card-footer">
         <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
       </footer>
     </article>
@@ -2122,7 +2122,7 @@ Esempio di lista card:
         <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
       </div>
       <!--finally the card footer metadata-->
-      <footer class="it-card-related it-card-footer">
+      <footer class="it-card-footer">
         <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
       </footer>
     </article>
@@ -2140,7 +2140,7 @@ Esempio di lista card:
         <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
       </div>
       <!--finally the card footer metadata-->
-      <footer class="it-card-related it-card-footer">
+      <footer class="it-card-footer">
         <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
       </footer>
     </article>
@@ -2164,7 +2164,7 @@ Solo per piccoli gruppi di card (2-6 card) puoi inoltre usare `.it-card-group` p
       <div class="it-card-body">
         <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione.</p>
       </div>
-      <footer class="it-card-related it-card-footer">
+      <footer class="it-card-footer">
         <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-10-12">12 ottobre, {{ 'now' | date: "%Y" }}</time>
       </footer>
     </article>
@@ -2175,7 +2175,7 @@ Solo per piccoli gruppi di card (2-6 card) puoi inoltre usare `.it-card-group` p
       <div class="it-card-body">
         <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione.</p>
       </div>
-      <footer class="it-card-related it-card-footer">
+      <footer class="it-card-footer">
         <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-10-12">12 ottobre, {{ 'now' | date: "%Y" }}</time>
       </footer>
     </article>
@@ -2186,7 +2186,7 @@ Solo per piccoli gruppi di card (2-6 card) puoi inoltre usare `.it-card-group` p
       <div class="it-card-body">
         <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione.</p>
       </div>
-      <footer class="it-card-related it-card-footer">
+      <footer class="it-card-footer">
         <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-10-12">12 ottobre, {{ 'now' | date: "%Y" }}</time>
       </footer>
     </article>
@@ -2197,7 +2197,7 @@ Solo per piccoli gruppi di card (2-6 card) puoi inoltre usare `.it-card-group` p
       <div class="it-card-body">
         <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione.</p>
       </div>
-      <footer class="it-card-related it-card-footer">
+      <footer class="it-card-footer">
         <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-10-12">12 ottobre, {{ 'now' | date: "%Y" }}</time>
       </footer>
     </article>
@@ -2278,7 +2278,7 @@ Le Container Queries sono una tecnologia CSS moderna supportata nella maggior pa
       <div class="it-card-body">
         <p class="it-card-text">Questa card si adatta alla dimensione del suo contenitore, non della viewport.</p>
       </div>
-      <footer class="it-card-related it-card-footer">
+      <footer class="it-card-footer">
         <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-10-12">12 ottobre, {{ 'now' | date: "%Y" }}</time>
       </footer>
     </article>
@@ -2289,7 +2289,7 @@ Le Container Queries sono una tecnologia CSS moderna supportata nella maggior pa
       <div class="it-card-body">
         <p class="it-card-text">Questa card si adatta alla dimensione del suo contenitore, non della viewport.</p>
       </div>
-      <footer class="it-card-related it-card-footer">
+      <footer class="it-card-footer">
         <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-10-12">12 ottobre, {{ 'now' | date: "%Y" }}</time>
       </footer>
     </article>
@@ -2300,7 +2300,7 @@ Le Container Queries sono una tecnologia CSS moderna supportata nella maggior pa
       <div class="it-card-body">
         <p class="it-card-text">Questa card si adatta alla dimensione del suo contenitore, non della viewport.</p>
       </div>
-      <footer class="it-card-related it-card-footer">
+      <footer class="it-card-footer">
         <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-10-12">12 ottobre, {{ 'now' | date: "%Y" }}</time>
       </footer>
     </article>
@@ -2311,7 +2311,7 @@ Le Container Queries sono una tecnologia CSS moderna supportata nella maggior pa
       <div class="it-card-body">
         <p class="it-card-text">Questa card si adatta alla dimensione del suo contenitore, non della viewport.</p>
       </div>
-      <footer class="it-card-related it-card-footer">
+      <footer class="it-card-footer">
         <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-10-12">12 ottobre, {{ 'now' | date: "%Y" }}</time>
       </footer>
     </article>
