@@ -437,7 +437,7 @@ input::-webkit-datetime-edit {
     &:not(:checked)+label {
       &::after,
       &::before {
-        border-color: var(var(--#{$prefix}form-checkbox-border-color));
+        border-color: var(--#{$prefix}form-checkbox-border-color);
       }
 
       &:after {
