@@ -182,10 +182,6 @@
     flex: 1 1 auto;
     color: var(--#{$prefix}it-card-text-color);
 
-    &:not(:last-child) {
-      margin-bottom: var(--#{$prefix}it-card-spacing-y);
-    }
-
     // Card subtitle or event timeframe
     .it-card-subtitle {
       margin-bottom: var(--#{$prefix}spacing-xxs);
