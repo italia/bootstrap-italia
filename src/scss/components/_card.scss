@@ -84,6 +84,10 @@
     justify-content: flex-end;
     margin-top: var(--#{$prefix}it-card-spacing-y);
     gap: var(--#{$prefix}it-card-spacing-y);
+
+    & + .it-card-actions {
+      margin-top: var(--#{$prefix}it-card-spacing-y);
+    }
   }
 
   // Card taxonomy area, can contain category, tags, date
