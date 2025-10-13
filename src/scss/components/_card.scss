@@ -156,8 +156,8 @@
     padding-top: var(--#{$prefix}it-card-spacing-y); // reset left/right padding to 0, using margin instead
     border-top: var(--#{$prefix}it-card-border-separator-width) solid var(--#{$prefix}it-card-border-color);
     background-color: var(--#{$prefix}it-card-footer-background);
-    font-size: 1rem;
-    line-height: 1.5rem;
+    font-size: var(--#{$prefix}label-font-size);
+    line-height: var(--#{$prefix}label-line-height);
 
     &:last-child {
       @include border-radius(0 0 var(--#{$prefix}it-card-border-radius-inner) var(--#{$prefix}it-card-border-radius-inner));
