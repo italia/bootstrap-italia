@@ -84,10 +84,6 @@
     justify-content: flex-end;
     margin-top: var(--#{$prefix}it-card-spacing-y);
     gap: var(--#{$prefix}it-card-spacing-y);
-
-    & + .it-card-actions {
-      margin-top: var(--#{$prefix}it-card-spacing-y);
-    }
   }
 
   // Card taxonomy area, can contain category, tags, date
@@ -156,6 +152,7 @@
 
   // Card action area, can contain buttons, links, etc.
   .it-card-actions {
+    margin-top: var(--#{$prefix}it-card-spacing-y); // separate from sibling content (body or footer)
     padding-top: var(--#{$prefix}it-card-spacing-y); // reset left/right padding to 0, using margin instead
     border-top: var(--#{$prefix}it-card-border-separator-width) solid var(--#{$prefix}it-card-border-color);
     background-color: var(--#{$prefix}it-card-footer-background);
