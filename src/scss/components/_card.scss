@@ -57,7 +57,8 @@
 
       .it-card-title-icon-wrapper {
         display: flex;
-        align-items: center;
+        align-items: start;
+        margin-left: var(--#{$prefix}icon-spacing);
       }
 
       // linked titles with icons goes fullwidth
@@ -271,7 +272,7 @@
 
         .it-card-profile-image-icon-wrapper {
           display: flex;
-          align-items: center;
+          align-items: start;
           justify-content: center;
 
           background-color: $color-background-primary-lighter;
@@ -314,7 +315,7 @@
 
   // Card image responsive wrapper and a11y DOM order hack
   &.it-card-image {
-    width: 100%;
+    width: 100%; // todo: remove
     @include border-top-radius(var(--#{$prefix}it-card-border-radius-inner));
     @include border-bottom-radius(var(--#{$prefix}it-card-border-radius-inner));
 
@@ -427,95 +428,27 @@
     }
   }
 
+  &.it-card-inline .it-card-inline-content,
+  &.it-card-inline-mini .it-card-inline-content {
+    display: flex;
+    flex-direction: column;
+    padding: var(--#{$prefix}it-card-spacing-y) var(--#{$prefix}it-card-spacing-x);
+  } 
+
   // Layout inline
   &.it-card-inline {
-    @mixin it-card-inline-layout {
-      flex-direction: row !important;
 
-      &:not(.it-card-banner) {
-        padding-bottom: 0 !important;
+    @include media-breakpoint-up(md) {
+      flex-direction: row;
+
+      // Set image orgder to last for inline reverse
+      &.it-card-inline-reverse .it-card-image-wrapper {
+        order: 1;
       }
-
-      .it-card-inline-content {
-        display: flex;
-        flex-direction: column;
-        flex-grow: 1;
-        justify-content: space-between;
-        padding: var(--#{$prefix}it-card-spacing-y) var(--#{$prefix}it-card-spacing-x);
-      }
-
-      &.it-card-image {
-        .it-card-image-wrapper {
-
-          position: relative;
-          overflow: hidden;
-          // display: flex;
-
-          .ratio {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-          }
-        }
-
-        &.it-card-inline-reverse {
-          order: inherit;
-
-          .it-card-image-wrapper {
-            order: 1;
-          }
-        }
-
-        &.rounded {
-          .it-card-image-wrapper img {
-            border-top-right-radius: 0;
-            border-bottom-left-radius: var(--#{$prefix}it-card-border-radius-inner);
-          }
-
-          &.it-card-inline-reverse {
-            .it-card-image-wrapper img {
-              border-top-left-radius: 0;
-              border-top-right-radius: var(--#{$prefix}it-card-border-radius-inner);
-              border-bottom-left-radius: 0;
-              border-bottom-right-radius: var(--#{$prefix}it-card-border-radius-inner);
-            }
-          }
-        }
-      }
-
-      &.it-card-banner {
-        align-items: flex-start;
-        min-height: auto !important;
-        padding-right: var(--#{$prefix}it-card-spacing-x);
-        padding-left: var(--#{$prefix}it-card-spacing-x);
-        text-align: left;
-
-        .it-card-title {
-          margin-top: 0;
-        }
-
-        .it-card-banner-icon-wrapper {
-          width: auto;
-        }
-
-        &.it-card-inline-reverse {
-          order: inherit;
-          padding-right: var(--#{$prefix}it-card-spacing-x);
-          padding-left: 0;
-
-          .it-card-banner-icon-wrapper {
-            order: 1;
-          }
-        }
-      }
-    }
-
-    @include media-breakpoint-up(sm) {
+      
       &:not(.it-card-inline-mini) {
         min-height: var(--#{$prefix}it-card-inline-min-height);
-        @include it-card-inline-layout;
+        // @include it-card-inline-layout;
 
         &.it-card-image .it-card-image-wrapper {
           width: 50%;
@@ -527,16 +460,82 @@
       }
     }
 
-    &.it-card-inline-mini {
-      min-height: var(--#{$prefix}it-card-inline-mini-min-height);
-      @include it-card-inline-layout;
+    &:not(.it-card-banner) {
+      padding-bottom: 0 !important;
+    }
 
-      &.it-card-image .it-card-image-wrapper {
-        width: 25%;
+    &.it-card-image {
+      .it-card-image-wrapper {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
       }
 
-      &.it-card-image .it-card-inline-content {
+      .ratio {
+        height: 100%;
+      }
+
+      &.rounded {
+        .it-card-image-wrapper img {
+          border-top-right-radius: 0;
+          border-bottom-left-radius: var(--#{$prefix}it-card-border-radius-inner);
+        }
+
+        &.it-card-inline-reverse {
+          .it-card-image-wrapper img {
+            border-top-left-radius: 0;
+            border-top-right-radius: var(--#{$prefix}it-card-border-radius-inner);
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: var(--#{$prefix}it-card-border-radius-inner);
+          }
+        }
+      }
+    }
+
+    &.it-card-inline-mini {
+      flex-direction: row; // default to row  for mini
+      min-height: var(--#{$prefix}it-card-inline-mini-min-height);
+      
+      // Set image orgder to last for inline mini reverse
+      &.it-card-inline-reverse .it-card-image-wrapper {
+        order: 1;
+      }
+      
+      .it-card-inline-content {
+        display: flex; // Manage space between title and footer
+        justify-content: space-between; // Manage space between title and footer
         width: 75%;
+      }
+
+      // Image wrapper fixed width
+      .it-card-image-wrapper {
+        width: 25%;
+      }
+    }
+  }
+
+  &.it-card-banner {
+    align-items: flex-start;
+    min-height: auto !important;
+    padding-right: var(--#{$prefix}it-card-spacing-x);
+    padding-left: var(--#{$prefix}it-card-spacing-x);
+    text-align: left;
+
+    .it-card-title {
+      margin-top: 0;
+    }
+
+    .it-card-banner-icon-wrapper {
+      width: auto;
+    }
+
+    &.it-card-inline-reverse {
+      order: inherit;
+      padding-right: var(--#{$prefix}it-card-spacing-x);
+      padding-left: 0;
+
+      .it-card-banner-icon-wrapper {
+        order: 1;
       }
     }
   }
