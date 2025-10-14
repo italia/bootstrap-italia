@@ -121,12 +121,14 @@
   .it-card-description-list {
     display: flex;
     flex-direction: column;
-    padding-top: var(--#{$prefix}--#{$prefix}card-spacing-y);
-    padding-bottom: var(--#{$prefix}card-spacing-y);
+    padding-top: var(--#{$prefix}it-card-spacing-y);
+    padding-bottom: var(--#{$prefix}it-card-spacing-y);
     border-top: var(--#{$prefix}it-card-border-separator-width) solid var(--#{$prefix}it-card-border-color);
     border-bottom: var(--#{$prefix}it-card-border-separator-width) solid var(--#{$prefix}it-card-border-color);
     color: var(--#{$prefix}it-card-description-color);
-    gap: var(--#{$prefix}spacing-xxs);
+    font-size: var(--#{$prefix}label-font-size);
+    line-height: var(--#{$prefix}label-line-height);
+    gap: var(--#{$prefix}spacing-s);
 
     @include media-breakpoint-down(sm) {
       display: flex;
