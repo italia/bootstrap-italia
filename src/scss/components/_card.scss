@@ -232,15 +232,10 @@
     padding-right: 0; // reset padding when using image variant
   }
 
-  // &.border {
-  //   border-width: var(--#{$prefix}it-card-border-outside-width) !important;
-  // }
-
   // Card with height 100%
   &.it-card-height-full {
     height: 100%;
   }
-
 
   // Profile card
   &.it-card-profile {
