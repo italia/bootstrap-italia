@@ -266,10 +266,9 @@
 
         .it-card-profile-image-icon-wrapper {
           display: flex;
-          align-items: start;
+          align-items: center;
           justify-content: center;
-
-          background-color: $color-background-primary-lighter;
+          background-color: var(--#{$prefix}color-background-muted);
         }
       }
     }
