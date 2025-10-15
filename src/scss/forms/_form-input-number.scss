@@ -61,6 +61,10 @@
     // border-right-width: 1px;
     border: none;
     background: transparent;
+
+    .is-invalid + & {
+      bottom: 0;
+    }
   }
 
   .input-group-text button {
