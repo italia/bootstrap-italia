@@ -248,11 +248,11 @@
         }
 
         .it-card-profile-role,
-        .it-card-place-type {
+        .it-card-profile-type {
           margin-bottom: 0;
-          font-size: 1rem;
-          font-weight: 600;
-          line-height: 1.5rem;
+          font-size: var(--#{$prefix}label-font-size);
+          font-weight: var(--#{$prefix}font-weight-solid);
+          line-height: var(--#{$prefix}label-line-height);
         }
       }
 
