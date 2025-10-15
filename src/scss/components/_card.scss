@@ -357,7 +357,7 @@
     overflow: hidden;
   }
 
-  // Card special colored 4px border-top, mere aestethic, don't use for semantic meaning
+  // Card special colored border-top, mere aesthetic, don't use for semantic meaning
   &.it-card-border-top {
     &::after {
       position: absolute;
@@ -440,14 +440,13 @@
     @include media-breakpoint-up(md) {
       flex-direction: row;
 
-      // Set image orgder to last for inline reverse
+      // Set image order to last for inline reverse
       &.it-card-inline-reverse .it-card-image-wrapper {
         order: 1;
       }
       
       &:not(.it-card-inline-mini) {
         min-height: var(--#{$prefix}it-card-inline-min-height);
-        // @include it-card-inline-layout;
 
         &.it-card-image .it-card-image-wrapper {
           width: 50%;
@@ -495,7 +494,7 @@
       flex-direction: row; // default to row  for mini
       min-height: var(--#{$prefix}it-card-inline-mini-min-height);
       
-      // Set image orgder to last for inline mini reverse
+      // Set image order to last for inline mini reverse
       &.it-card-inline-reverse .it-card-image-wrapper {
         order: 1;
       }
