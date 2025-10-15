@@ -10,6 +10,7 @@
   --#{$prefix}it-card-border-outside-width: 1px; // change to 2px if needed
   --#{$prefix}it-card-border-separator-width: 1px; // change to 2px if needed
   --#{$prefix}it-card-footer-background: transparent;
+  --#{$prefix}it-card-footer-text-color: var(--#{$prefix}color-text-muted);
   --#{$prefix}it-card-spacing-x: var(--#{$prefix}spacing-s);
   --#{$prefix}it-card-spacing-y: var(--#{$prefix}spacing-s);
   --#{$prefix}it-card-category-color: var(--#{$prefix}color-text-muted);
@@ -79,6 +80,7 @@
     justify-content: flex-end;
     margin-top: var(--#{$prefix}it-card-spacing-y);
     gap: var(--#{$prefix}it-card-spacing-y);
+    color: var(--#{$prefix}it-card-footer-text-color);
   }
 
   // Card taxonomy area, can contain category, tags, date
