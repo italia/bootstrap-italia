@@ -315,7 +315,6 @@
 
   // Card image responsive wrapper and a11y DOM order hack
   &.it-card-image {
-    width: 100%; // todo: remove
     @include border-top-radius(var(--#{$prefix}it-card-border-radius-inner));
     @include border-bottom-radius(var(--#{$prefix}it-card-border-radius-inner));
 
