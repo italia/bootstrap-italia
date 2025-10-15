@@ -410,10 +410,10 @@
     }
 
     .it-card-banner-icon-wrapper {
-      display: flex;
-      flex-direction: column;
+      // display: flex;
+      // flex-direction: column;
       order: -1;
-      width: 100%;
+      // width: 100%;
     }
 
     .it-card-footer {
@@ -432,6 +432,7 @@
   // Layout inline
   &.it-card-inline {
 
+    // Layout changes from stacked to row on md and up
     @include media-breakpoint-up(md) {
       flex-direction: row;
 
@@ -440,6 +441,7 @@
         order: 1;
       }
       
+      // Changes for inline cards except mini variant
       &:not(.it-card-inline-mini) {
         min-height: var(--#{$prefix}it-card-inline-min-height);
 
@@ -453,10 +455,12 @@
       }
     }
 
+    // Reset bottom padding for inline cards except banner variant
     &:not(.it-card-banner) {
       padding-bottom: 0 !important;
     }
 
+    // Image wrapper inside inline card
     &.it-card-image {
       .it-card-image-wrapper {
         position: relative;
@@ -485,6 +489,7 @@
       }
     }
 
+    // Mini variant for inline cards
     &.it-card-inline-mini {
       flex-direction: row; // default to row  for mini
       min-height: var(--#{$prefix}it-card-inline-mini-min-height);
@@ -505,33 +510,35 @@
         width: 25%;
       }
     }
-  }
 
-  &.it-card-banner {
-    align-items: flex-start;
-    min-height: auto !important;
-    padding-right: var(--#{$prefix}it-card-spacing-x);
-    padding-left: var(--#{$prefix}it-card-spacing-x);
-    text-align: left;
-
-    .it-card-title {
-      margin-top: 0;
-    }
-
-    .it-card-banner-icon-wrapper {
-      width: auto;
-    }
-
-    &.it-card-inline-reverse {
-      order: inherit;
+    // Banner variant for inline cards
+    &.it-card-banner {
+      align-items: flex-start;
+      min-height: auto !important;
       padding-right: var(--#{$prefix}it-card-spacing-x);
-      padding-left: 0;
-
+      padding-left: var(--#{$prefix}it-card-spacing-x);
+      text-align: left;
+  
+      .it-card-title {
+        margin-top: 0;
+      }
+  
       .it-card-banner-icon-wrapper {
-        order: 1;
+        width: auto;
+      }
+  
+      &.it-card-inline-reverse {
+        order: inherit;
+        padding-right: var(--#{$prefix}it-card-spacing-x);
+        padding-left: 0;
+  
+        .it-card-banner-icon-wrapper {
+          order: 1;
+        }
       }
     }
   }
+
 }
 
 // Card Lists
