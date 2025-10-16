@@ -170,6 +170,27 @@ Se per qualche motivo vuoi avere gli elementi `<input readonly>` nella forma sti
 </div>
 {% endcapture %}{% include example.html content=example %}
 
+### Dimensione
+
+È possibile modificare la dimensione dell'elemento utilizzando le classi `.form-control-lg` e `.form-control-sm`, che modificano la grandezza del carattere e la spaziatura interna.
+
+{% comment %}Example name: Varianti di dimensione {% endcomment %}
+{% capture example %}
+
+  <div class="form-group">
+    <label class="active" for="input-text-lg">Grande</label>
+    <input type="text" class="form-control form-control-lg" id="input-text-lg" placeholder="Inserisci il tuo nome">
+  </div>
+    <div class="form-group">
+    <label class="active" for="input-text-normal">Normale</label>
+    <input type="text" class="form-control" id="input-text-normal" placeholder="Inserisci il tuo nome">
+  </div>
+  <div class="form-group">
+    <label class="active" for="input-text-sm">Piccolo</label>
+    <input type="text" class="form-control form-control-sm" id="input-text-sm" placeholder="Inserisci il tuo nome">
+  </div>
+{% endcapture %}{% include example.html content=example %}
+
 ### Attivazione tramite codice
 
 È possibile abilitare l'input con la label associata manualmente utilizzando 
@@ -717,26 +738,6 @@ Includendo l'elemento all'interno di un `.form-group`, la label assumerà lo ste
   <div class="form-group">
     <label for="exampleFormControlTextarea1">Esempio di area di testo</label>
     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-  </div>
-{% endcapture %}{% include example.html content=example %}
-
-### Dimensione
-
-È possibile modificare la dimensione dell'elemento utilizzando le classi `.form-control-lg` e `.form-control-sm`, che modificano la grandezza del carattere e la spaziatura interna.
-
-{% comment %}Example name: Varianti di dimensione {% endcomment %}
-{% capture example %}
-  <div class="form-group">
-    <label class="active" for="input-text-lg">Grande</label>
-    <input type="text" class="form-control form-control-lg" id="input-text-lg" placeholder="Inserisci il tuo nome">
-  </div>
-    <div class="form-group">
-    <label class="active" for="input-text-normal">Normale</label>
-    <input type="text" class="form-control" id="input-text-normal" placeholder="Inserisci il tuo nome">
-  </div>
-  <div class="form-group">
-    <label class="active" for="input-text-sm">Piccolo</label>
-    <input type="text" class="form-control form-control-sm" id="input-text-sm" placeholder="Inserisci il tuo nome">
   </div>
 {% endcapture %}{% include example.html content=example %}
 
