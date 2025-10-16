@@ -493,7 +493,7 @@ Consigliamo, inoltre, di svolgere sempre test di usabilità anche con utenti che
 
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
-Usa `.it-card-actions` per creare uno spazio dedicato a **collegamenti o pulsanti secondari**, come negli esempi seguenti. Questa impostazione è utile quando il titolo della card porta a una pagina di approfondimento (ad esempio, la descrizione dettagliata dell'evento), ma si vuole dare accesso diretto e immediato all'azione principale (ad esempio, l'iscrizione all'evento). 
+Usa un `<div>` con classes `.it-card-actions` per creare uno spazio dedicato a **collegamenti o pulsanti secondari**, come negli esempi seguenti. Questa impostazione è utile quando il titolo della card porta a una pagina di approfondimento (ad esempio, la descrizione dettagliata dell'evento), ma si vuole dare accesso diretto e immediato all'azione principale (ad esempio, l'iscrizione all'evento). 
 
 Per applicare il colore secondario ai collegamenti `a` inseriti nel corpo o nel footer della card , usa la classe `.it-card-link`.
 
@@ -925,7 +925,7 @@ Consigliamo, inoltre, di svolgere sempre test di usabilità anche con utenti che
 
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
-Per creare un ulteriore spazio dedicato a **collegamenti o pulsanti secondari**, come negli esempi seguenti, puoi usare la classe `.it-card-actions`. Questa impostazione è utile quando il titolo della card porta a una pagina di approfondimento (ad esempio, la descrizione dettagliata di un bando), ma si vuole dare accesso diretto e immediato all'azione principale (ad esempio, la candidatura al bando). 
+Per creare un ulteriore spazio dedicato a **collegamenti o pulsanti secondari**, come negli esempi seguenti, puoi aggiungere un `<div>` con la classe `.it-card-actions`. Questa impostazione è utile quando il titolo della card porta a una pagina di approfondimento (ad esempio, la descrizione dettagliata di un bando), ma si vuole dare accesso diretto e immediato all'azione principale (ad esempio, la candidatura al bando). 
 
 Per applicare il colore secondario ai collegamenti `a` inseriti nel corpo o nel footer della card , usa la classe `.it-card-link`.
 
