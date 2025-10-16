@@ -56,15 +56,12 @@
       justify-content: space-between;
 
       .it-card-title-icon-wrapper {
-        display: flex;
-        align-items: start;
         margin-left: var(--#{$prefix}icon-spacing);
       }
 
       // linked titles with icons goes fullwidth
       >a {
         display: flex;
-        flex-direction: row;
         justify-content: space-between;
         width: 100%;
       }
