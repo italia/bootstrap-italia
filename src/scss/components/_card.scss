@@ -179,7 +179,7 @@
     // Card subtitle or event timeframe
     .it-card-subtitle {
       margin-bottom: var(--#{$prefix}spacing-xxs);
-      font-size: var(--#{$prefix}heading-5-font-size); // equal h5
+      font-size: var(--#{$prefix}heading-5-font-size);
       font-weight: var(--#{$prefix}font-weight-solid);
       line-height: var(--#{$prefix}font-line-height-2);
     }
@@ -390,14 +390,17 @@
 
   // Card presentation
   &.it-card-banner {
-    --#{$prefix}it-card-spacing-x: var(--#{$prefix}spacing-m);
-    --#{$prefix}it-card-spacing-y: var(--#{$prefix}spacing-m);
+    padding: var(--#{$prefix}spacing-m); // override default padding of card
     align-items: center;
     text-align: center;
+    gap: var(--#{$prefix}spacing-s);
 
     @include media-breakpoint-up(lg) {
-      --#{$prefix}it-card-spacing-x: var(--#{$prefix}spacing-xl);
-      --#{$prefix}it-card-spacing-y: var(--#{$prefix}spacing-xl);
+      padding: var(--#{$prefix}spacing-xl);
+    }
+
+    .it-card-title {
+      margin-bottom: 0;
     }
 
     .it-card-body .it-card-subtitle {
@@ -408,6 +411,7 @@
       // display: flex;
       // flex-direction: column;
       order: -1;
+      // margin-bottom: var(--#{$prefix}spacing-s);
       // width: 100%;
     }
 
@@ -421,8 +425,9 @@
   &.it-card-inline-mini .it-card-inline-content {
     display: flex;
     flex-direction: column;
+    flex: 1; // make content area grow to fill available space
     padding: var(--#{$prefix}it-card-spacing-y) var(--#{$prefix}it-card-spacing-x);
-  } 
+  }
 
   // Layout inline
   &.it-card-inline {
@@ -430,20 +435,18 @@
     // Layout changes from stacked to row on md and up
     @include media-breakpoint-up(md) {
       flex-direction: row;
+      flex: 1;
 
       // Set image order to last for inline reverse
       &.it-card-inline-reverse .it-card-image-wrapper {
         order: 1;
       }
-      
+
       // Changes for inline cards except mini variant
       &:not(.it-card-inline-mini) {
         min-height: var(--#{$prefix}it-card-inline-min-height);
 
-        &.it-card-image .it-card-image-wrapper {
-          width: 50%;
-        }
-
+        &.it-card-image .it-card-image-wrapper,
         &.it-card-image .it-card-inline-content {
           width: 50%;
         }
@@ -488,12 +491,12 @@
     &.it-card-inline-mini {
       flex-direction: row; // default to row  for mini
       min-height: var(--#{$prefix}it-card-inline-mini-min-height);
-      
+
       // Set image order to last for inline mini reverse
       &.it-card-inline-reverse .it-card-image-wrapper {
         order: 1;
       }
-      
+
       .it-card-inline-content {
         display: flex; // Manage space between title and footer
         justify-content: space-between; // Manage space between title and footer
@@ -508,172 +511,173 @@
 
     // Banner variant for inline cards
     &.it-card-banner {
-      align-items: flex-start;
-      min-height: auto !important;
-      padding-right: var(--#{$prefix}it-card-spacing-x);
-      padding-left: var(--#{$prefix}it-card-spacing-x);
-      text-align: left;
-  
-      .it-card-title {
-        margin-top: 0;
+      @include media-breakpoint-up(md) {
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: left;
       }
-  
-      .it-card-banner-icon-wrapper {
-        width: auto;
+
+      .it-card-inline-content {
+        padding: 0;
+        gap: var(--#{$prefix}spacing-xs)
       }
-  
+
       &.it-card-inline-reverse {
         order: inherit;
-        padding-right: var(--#{$prefix}it-card-spacing-x);
-        padding-left: 0;
-  
+
         .it-card-banner-icon-wrapper {
           order: 1;
         }
       }
+
+      &.it-card-inline-mini {
+        flex-direction: row; // card inline mini banner always row
+        text-align: left;
+        align-items: flex-start;
+      }
     }
+
   }
 
-}
+  // Card Lists
+  //
 
-// Card Lists
-//
-
-// Special list for long groups of cards, bootstrap row/cols grid
-ul.row.it-card-list {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-
-  >li.col,
-  >li[class*='col-'] {
-    display: block;
-    margin-top: 0;
-    border: none;
-    background: transparent;
-    transition: none;
-  }
-}
-
-// Improved responsive it-card-group with a @container aware twist
-.it-card-group {
-  --#{$prefix}it-card-group-gap: var(--#{$prefix}spacing-m);
-
-  display: flex;
-  flex-wrap: wrap;
-
-  // gap fallback
-  margin: calc(-0.5 * var(--#{$prefix}it-card-group-gap));
-
-  @supports (gap: var(--#{$prefix}it-card-group-gap)) {
+  // Special list for long groups of cards, bootstrap row/cols grid
+  ul.row.it-card-list {
     margin: 0;
-    gap: var(--#{$prefix}it-card-group-gap);
+    padding: 0;
+    list-style-type: none;
 
-    >.it-card {
-      margin: 0;
+    >li.col,
+    >li[class*='col-'] {
+      display: block;
+      margin-top: 0;
+      border: none;
+      background: transparent;
+      transition: none;
     }
   }
 
-  // Progressive enhancement with Container Queries
-  @supports (container-type: inline-size) {
+  // Improved responsive it-card-group with a @container aware twist
+  .it-card-group {
+    --#{$prefix}it-card-group-gap: var(--#{$prefix}spacing-m);
 
-    // Only with .it-card-group-container-aware class
-    &.it-card-group-container-aware {
-      container-type: inline-size;
+    display: flex;
+    flex-wrap: wrap;
+
+    // gap fallback
+    margin: calc(-0.5 * var(--#{$prefix}it-card-group-gap));
+
+    @supports (gap: var(--#{$prefix}it-card-group-gap)) {
+      margin: 0;
+      gap: var(--#{$prefix}it-card-group-gap);
 
       >.it-card {
-
-        // Container Queries
-        flex: 1 0 100%;
-
-        // Reset media queries from small and up
-        @include media-breakpoint-up(sm) {
-          flex: auto;
-        }
-
-        @container (min-width: 500px) {
-          flex: 0 0 calc(50% - 0.5 * var(--#{$prefix}it-card-group-gap));
-        }
-
-        @container (min-width: 800px) {
-          flex: 0 0 calc(33.333% - 0.667 * var(--#{$prefix}it-card-group-gap));
-        }
-
-        @container (min-width: 1100px) {
-          flex: 0 0 calc(25% - 0.75 * var(--#{$prefix}it-card-group-gap));
-        }
-      }
-
-      // Override specific columns in container mode
-      &.it-card-group-2-cols>.it-card {
-        @container (min-width: 500px) {
-          flex: 0 0 calc(50% - 0.5 * var(--#{$prefix}it-card-group-gap));
-        }
-      }
-
-      &.it-card-group-3-cols>.it-card {
-        @container (min-width: 800px) {
-          flex: 0 0 calc(33.333% - 0.667 * var(--#{$prefix}it-card-group-gap));
-        }
+        margin: 0;
       }
     }
-  }
 
-  >.it-card {
-    // Default stacked on mobile
-    flex: 0 0 calc(100% - var(--#{$prefix}it-card-group-gap));
-    margin: calc(0.5 * var(--#{$prefix}it-card-group-gap));
+    // Progressive enhancement with Container Queries
+    @supports (container-type: inline-size) {
 
-    // Responsive breakpoints
-    @include media-breakpoint-up(sm) {
-      flex: 0 0 calc(50% - 0.5 * var(--#{$prefix}it-card-group-gap));
+      // Only with .it-card-group-container-aware class
+      &.it-card-group-container-aware {
+        container-type: inline-size;
+
+        >.it-card {
+
+          // Container Queries
+          flex: 1 0 100%;
+
+          // Reset media queries from small and up
+          @include media-breakpoint-up(sm) {
+            flex: auto;
+          }
+
+          @container (min-width: 500px) {
+            flex: 0 0 calc(50% - 0.5 * var(--#{$prefix}it-card-group-gap));
+          }
+
+          @container (min-width: 800px) {
+            flex: 0 0 calc(33.333% - 0.667 * var(--#{$prefix}it-card-group-gap));
+          }
+
+          @container (min-width: 1100px) {
+            flex: 0 0 calc(25% - 0.75 * var(--#{$prefix}it-card-group-gap));
+          }
+        }
+
+        // Override specific columns in container mode
+        &.it-card-group-2-cols>.it-card {
+          @container (min-width: 500px) {
+            flex: 0 0 calc(50% - 0.5 * var(--#{$prefix}it-card-group-gap));
+          }
+        }
+
+        &.it-card-group-3-cols>.it-card {
+          @container (min-width: 800px) {
+            flex: 0 0 calc(33.333% - 0.667 * var(--#{$prefix}it-card-group-gap));
+          }
+        }
+      }
     }
 
-    @include media-breakpoint-up(md) {
-      flex: 0 0 calc(33.333% - 0.667 * var(--#{$prefix}it-card-group-gap));
+    >.it-card {
+      // Default stacked on mobile
+      flex: 0 0 calc(100% - var(--#{$prefix}it-card-group-gap));
+      margin: calc(0.5 * var(--#{$prefix}it-card-group-gap));
+
+      // Responsive breakpoints
+      @include media-breakpoint-up(sm) {
+        flex: 0 0 calc(50% - 0.5 * var(--#{$prefix}it-card-group-gap));
+      }
+
+      @include media-breakpoint-up(md) {
+        flex: 0 0 calc(33.333% - 0.667 * var(--#{$prefix}it-card-group-gap));
+      }
+
+      @include media-breakpoint-up(lg) {
+        flex: 0 0 calc(25% - 0.75 * var(--#{$prefix}it-card-group-gap));
+      }
     }
 
-    @include media-breakpoint-up(lg) {
-      flex: 0 0 calc(25% - 0.75 * var(--#{$prefix}it-card-group-gap));
-    }
-  }
-
-  // Predefined column layouts
-  &.it-card-group-2-cols>.it-card,
-  &.it-card-group-3-cols>.it-card,
-  &.it-card-group-4-cols>.it-card {
-    @include media-breakpoint-up(sm) {
-      flex: 0 0 calc(50% - 0.5 * var(--#{$prefix}it-card-group-gap));
-    }
-  }
-
-  &.it-card-group-3-cols>.it-card {
-    @include media-breakpoint-up(md) {
-      flex: 0 0 calc(33.333% - 0.667 * var(--#{$prefix}it-card-group-gap));
-    }
-  }
-
-  &.it-card-group-4-cols>.it-card {
-    @include media-breakpoint-up(md) {
-      flex: 0 0 calc(33.333% - 0.667 * var(--#{$prefix}it-card-group-gap));
+    // Predefined column layouts
+    &.it-card-group-2-cols>.it-card,
+    &.it-card-group-3-cols>.it-card,
+    &.it-card-group-4-cols>.it-card {
+      @include media-breakpoint-up(sm) {
+        flex: 0 0 calc(50% - 0.5 * var(--#{$prefix}it-card-group-gap));
+      }
     }
 
-    @include media-breakpoint-up(lg) {
-      flex: 0 0 calc(25% - 0.75 * var(--#{$prefix}it-card-group-gap));
+    &.it-card-group-3-cols>.it-card {
+      @include media-breakpoint-up(md) {
+        flex: 0 0 calc(33.333% - 0.667 * var(--#{$prefix}it-card-group-gap));
+      }
     }
-  }
 
-  // Option for equal height cards
-  &.it-card-group-equal-height>.it-card {
-    height: 100%;
-  }
+    &.it-card-group-4-cols>.it-card {
+      @include media-breakpoint-up(md) {
+        flex: 0 0 calc(33.333% - 0.667 * var(--#{$prefix}it-card-group-gap));
+      }
 
-  // Options for alignments
-  &.it-card-group-center {
-    justify-content: center;
-  }
+      @include media-breakpoint-up(lg) {
+        flex: 0 0 calc(25% - 0.75 * var(--#{$prefix}it-card-group-gap));
+      }
+    }
 
-  &.it-card-group-end {
-    justify-content: flex-end;
+    // Option for equal height cards
+    &.it-card-group-equal-height>.it-card {
+      height: 100%;
+    }
+
+    // Options for alignments
+    &.it-card-group-center {
+      justify-content: center;
+    }
+
+    &.it-card-group-end {
+      justify-content: flex-end;
+    }
   }
 }
