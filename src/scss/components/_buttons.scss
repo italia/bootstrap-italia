@@ -155,6 +155,12 @@
 @each $color, $value in $theme-colors {
   .btn-outline-#{$color} {
     @include button-outline-variant($value);
+    box-shadow: inset 0 0 0 2px $value;
+    &.disabled,
+    &:hover,
+    &:active {
+      box-shadow: inset 0 0 0 2px color-hover($value);
+    }
   }
 }
 // scss-docs-end btn-variant-loops
@@ -344,47 +350,6 @@
       background-color: hsl(210, 12%, 52%); // UI kit - missing tokens
       border-color: hsl(210, 12%, 52%); // UI kit - missing tokens
       opacity: 1;
-    }
-  }
-}
-
-.btn-outline {
-  &-primary {
-    box-shadow: inset 0 0 0 2px $primary;
-    &.disabled {
-      box-shadow: inset 0 0 0 2px color-hover($primary);
-    }
-  }
-  &-secondary {
-    box-shadow: inset 0 0 0 2px $secondary;
-    &.disabled,
-    &:hover,
-    &:active {
-      box-shadow: inset 0 0 0 2px color-hover($secondary);
-    }
-  }
-  &-success {
-    box-shadow: inset 0 0 0 2px $success;
-    &.disabled,
-    &:hover,
-    &:active {
-      box-shadow: inset 0 0 0 2px color-hover($success);
-    }
-  }
-  &-warning {
-    box-shadow: inset 0 0 0 2px $color-border-warning;
-    &.disabled,
-    &:hover,
-    &:active {
-      box-shadow: inset 0 0 0 2px color-hover($color-border-warning);
-    }
-  }
-  &-danger {
-    box-shadow: inset 0 0 0 2px $danger;
-    &.disabled,
-    &:hover,
-    &:active {
-      box-shadow: inset 0 0 0 2px color-hover($danger);
     }
   }
 }
