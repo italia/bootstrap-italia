@@ -150,7 +150,7 @@ sup {
 
 // Links
 
-a {
+a[href]{
   color: var(--#{$prefix}color-link);
   text-decoration: underline;
   text-decoration-skip-ink: auto;
