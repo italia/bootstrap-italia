@@ -151,13 +151,13 @@ Per la versione non bundle, dopo aver copiato i file all'interno del progetto, s
 
 ### Varianti Titillium disponibili
 
-Bootstrap Italia supporta tre varianti open alternative del carattere senza grazie "Titillium":
+Bootstrap Italia supporta due varianti open alternative del carattere senza grazie "Titillium":
 
 - **Titillium Web** (`'web'`): Versione originale, default di Bootstrap Italia, il carattere di riferimento del Design system .italia per il digitale della Pubblica Amministrazione italiana. Disponibile in Bootstrap Italia nei pesi 300, 400, 600, 700 con varianti italic. ([Storia della font Titillium e crediti](https://nta.accademiadiurbino.it/titillium/)).
 
 - **Titillium Sans Pro** (`'sans-pro'`): Versione professionale con supporto linguistico esteso per lingue europee, extraeuropee e scrittura matematica. Particolare cura è stata data all'aggiustamento di spaziature, kerning e metriche verticali. Disponibile in Bootstrap Italia nei formati WOFF2 e WOFF nei soliti pesi del Titillium Web, la font ha anche i pesi "Black" e "Thin" e altri formati file scaricabili dal repository ufficiale. ([Repository del Titillium Sans Pro e crediti](https://github.com/chialab/titillium_pro)).
 
-- **Titillio** (`'titillio'`): Versione alternativa del Titillium Sans Pro sviluppata in seno al progetto App IO con attenzione alla resa in applicazioni mobili e necessità di distinguere bene numerose gerarchie visive. Disponibile in Bootstrap Italia nei formati WOFF2, WOFF e TTF aggiuntivo per compatibilità estesa nei soliti pesi del Titillium Web, la font ha anche i pesi "Black", "Extra-Black" e "Thin" e altri formati file scaricabili dal repository ufficiale. ([Repository del Titillio e crediti](https://github.com/pagopa/titillio)).
+Segnaliamo inoltre l'esistenza della variante **Titillio** (`'titillio'`): Versione alternativa sviluppata partendo dal Titillium Sans Pro in seno al progetto App IO, con attenzione alla resa in applicazioni mobili e necessità di distinguere bene numerose gerarchie visive. Non è direttamente disponibile in Bootstrap Italia. ([Repository del Titillio e crediti](https://github.com/pagopa/titillio)).
 
 Maggiori informazioni nella scheda [Tipografia](https://designers.italia.it/design-system/fondamenti/tipografia/) del Design system .italia. 
 
@@ -369,100 +369,6 @@ $font-path: "/fonts";
 }
 ```
 
-#### Titillio (variante App IO)
-
-```scss
-$font-path: "/fonts";
-
-/* Titillio - Light 300 */
-@font-face {
-    font-family: 'Titillio';
-    font-style: normal;
-    font-weight: 300;
-    font-display: swap;
-    src: url('#{$font-path}/Titillio/Titillio-Light.woff2') format('woff2'),
-         url('#{$font-path}/Titillio/Titillio-Light.woff') format('woff'),
-         url('#{$font-path}/Titillio/Titillio-Light.ttf') format('truetype');
-}
-
-/* Titillio - Light Italic 300 */
-@font-face {
-    font-family: 'Titillio';
-    font-style: italic;
-    font-weight: 300;
-    font-display: swap;
-    src: url('#{$font-path}/Titillio/Titillio-LightItalic.woff2') format('woff2'),
-         url('#{$font-path}/Titillio/Titillio-LightItalic.woff') format('woff'),
-         url('#{$font-path}/Titillio/Titillio-LightItalic.ttf') format('truetype');
-}
-
-/* Titillio - Regular 400 */
-@font-face {
-    font-family: 'Titillio';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url('#{$font-path}/Titillio/Titillio-Regular.woff2') format('woff2'),
-         url('#{$font-path}/Titillio/Titillio-Regular.woff') format('woff'),
-         url('#{$font-path}/Titillio/Titillio-Regular.ttf') format('truetype');
-}
-
-/* Titillio - Regular Italic 400 */
-@font-face {
-    font-family: 'Titillio';
-    font-style: italic;
-    font-weight: 400;
-    font-display: swap;
-    src: url('#{$font-path}/Titillio/Titillio-RegularItalic.woff2') format('woff2'),
-         url('#{$font-path}/Titillio/Titillio-RegularItalic.woff') format('woff'),
-         url('#{$font-path}/Titillio/Titillio-RegularItalic.ttf') format('truetype');
-}
-
-/* Titillio - Semibold 600 */
-@font-face {
-    font-family: 'Titillio';
-    font-style: normal;
-    font-weight: 600;
-    font-display: swap;
-    src: url('#{$font-path}/Titillio/Titillio-Semibold.woff2') format('woff2'),
-         url('#{$font-path}/Titillio/Titillio-Semibold.woff') format('woff'),
-         url('#{$font-path}/Titillio/Titillio-Semibold.ttf') format('truetype');
-}
-
-/* Titillio - Semibold Italic 600 */
-@font-face {
-    font-family: 'Titillio';
-    font-style: italic;
-    font-weight: 600;
-    font-display: swap;
-    src: url('#{$font-path}/Titillio/Titillio-SemiboldItalic.woff2') format('woff2'),
-         url('#{$font-path}/Titillio/Titillio-SemiboldItalic.woff') format('woff'),
-         url('#{$font-path}/Titillio/Titillio-SemiboldItalic.ttf') format('truetype');
-}
-
-/* Titillio - Bold 700 */
-@font-face {
-    font-family: 'Titillio';
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap;
-    src: url('#{$font-path}/Titillio/Titillio-Bold.woff2') format('woff2'),
-         url('#{$font-path}/Titillio/Titillio-Bold.woff') format('woff'),
-         url('#{$font-path}/Titillio/Titillio-Bold.ttf') format('truetype');
-}
-
-/* Titillio - Bold Italic 700 */
-@font-face {
-    font-family: 'Titillio';
-    font-style: italic;
-    font-weight: 700;
-    font-display: swap;
-    src: url('#{$font-path}/Titillio/Titillio-BoldItalic.woff2') format('woff2'),
-         url('#{$font-path}/Titillio/Titillio-BoldItalic.woff') format('woff'),
-         url('#{$font-path}/Titillio/Titillio-BoldItalic.ttf') format('truetype');
-}
-```
-
 #### Font complementari (Lora e Roboto Mono)
 
 ```scss
@@ -610,9 +516,6 @@ loadFonts('/fonts');
 // Titillium Sans Pro al posto di Titillium Web
 loadFonts('/fonts', { titillium: 'sans-pro' });
 
-// Titillio al posto di Titillium Web  
-loadFonts('/fonts', { titillium: 'titillio' });
-
 // Titillium Web (default - equivalente al precedente)
 loadFonts('/fonts', { titillium: 'web' });
 ```
@@ -637,7 +540,7 @@ loadFonts('/fonts', { fonts: ['roboto-mono'] });
 
 // Tutte le combinazioni sono supportate
 loadFonts('/fonts', { 
-  titillium: 'titillio',
+  titillium: 'sans-pro',
   fonts: ['titillium', 'roboto-mono'] 
 });
 ```
@@ -660,7 +563,7 @@ Per l'utilizzo tramite tag script:
 <!-- Caricamento selettivo -->
 <script>
   bootstrap.loadFonts('/fonts', { 
-    titillium: 'titillio', 
+    titillium: 'sans-pro', 
     fonts: ['titillium', 'lora'] 
   });
 </script>

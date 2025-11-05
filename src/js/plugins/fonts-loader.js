@@ -453,11 +453,11 @@ export default (path = '/node_modules/bootstrap-italia/dist/fonts', options = {}
   }
 
   const {
-    titillium = 'web', // 'web' | 'sans-pro' | 'titillio'
+    titillium = 'web', // 'web' | 'sans-pro' 
     fonts = ['titillium', 'lora', 'roboto-mono'], // which font families to include
   } = options
 
-  const titilliumFontId = titillium === 'sans-pro' ? 'titillium-sans-pro' : titillium === 'titillio' ? 'titillio' : 'titillium-web'
+  const titilliumFontId = titillium === 'sans-pro' ? 'titillium-sans-pro' : 'titillium-web'
   const finalFonts = fonts.map((font) => (font === 'titillium' ? titilliumFontId : font))
   const __PUBLIC_PATH__ = window.__PUBLIC_PATH__ ? window.__PUBLIC_PATH__ : path
 
@@ -480,16 +480,13 @@ loadFonts('/fonts');
 // Load only Titillium Sans Pro
 loadFonts('/fonts', { titillium: 'sans-pro', fonts: ['titillium'] });
 
-// Load only Titillio
-loadFonts('/fonts', { titillium: 'titillio', fonts: ['titillium'] });
-
 // Load Titillium Sans Pro + Lora (no Roboto Mono)
 loadFonts('/fonts', { titillium: 'sans-pro', fonts: ['titillium', 'lora'] });
 
-// Load all fonts with Titillio as the Titillium variant
-loadFonts('/fonts', { titillium: 'titillio' });
+// Load all fonts with Titillium Sans Pro as the Titillium variant
+loadFonts('/fonts', { titillium: 'sans-pro' });
 
 POSSIBLE VALUES:
-- titillium: 'web' | 'sans-pro' | 'titillio'
+- titillium: 'web' | 'sans-pro'
 - fonts: ['titillium', 'lora', 'roboto-mono'] (any combination)
 */
