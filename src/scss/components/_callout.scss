@@ -3,31 +3,16 @@
   overflow: hidden;
 
   .callout-inner {
-    padding: 2rem;
+    padding: 1.5rem;
     border: 2px solid $color-border-secondary;
-    border-top: 0;
-    margin: 2.5rem 0;
+    margin: 2rem 0;
   }
 
   &.callout-highlight {
     border: none;
     border-left: 2px solid $color-border-secondary;
     border-radius: 0;
-    padding: 0 2.222rem;
-
-    p:last-child {
-      margin: 0;
-    }
-
-    .callout-title {
-      margin-bottom: 1.556rem;
-    }
-
-    @each $color-name, $color-value in (success: $success, warning: $color-border-warning, danger: $danger, important: $success, note: $primary) {
-      &.#{$color-name} {
-        border-color: $color-value;
-      }
-    }
+    padding: 0 1.5rem;
   }
 
   &.callout-more {
@@ -131,11 +116,13 @@
   }
 
   .callout-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
     font-weight: 600;
     text-transform: uppercase;
     font-size: 1rem;
     color: $color-text-secondary;
-
     @include media-breakpoint-up(lg) {
       font-size: 1.125rem;
     }
@@ -146,51 +133,16 @@
     }
   }
 
-  &:not(.callout-highlight):not(.callout-more) {
-    .callout-title {
-      position: relative;
-      padding-left: 1.5rem;
-      top: -3rem;
-
-      .text {
-        position: relative;
-        overflow: hidden;
-        width: 100%;
-        font-size: 0.875rem;
-        padding-right: 1.5rem;
-
-        @include media-breakpoint-up(md) {
-          font-size: 1.15rem;
-        }
-
-        &:after {
-          content: '';
-          top: 0.875em;
-          border-top: 2px solid;
-          position: absolute;
-          width: calc(100vw - 100% - 20px);
-          left: 100%;
-        }
-      }
-
-      &:before {
-        content: '';
-        top: 0.875em;
-        border-top: 2px solid;
-        position: absolute;
-        width: 3rem;
-        left: -2.5rem;
-      }
-    }
-  }
-
   p {
     font-family: $font-family-serif;
     font-size: 1rem;
     color: $color-text-secondary;
-
     @include media-breakpoint-up(lg) {
       font-size: 1.125rem;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
     }
 
     &.callout-big-text {
@@ -304,13 +256,7 @@
 }
 
 @media (min-width: 768px) {
-  .callout {
-    &.callout-highlight {
-      padding: 0 0 0 2.222rem;
-    }
-
-    &.callout-more p {
-      font-size: 0.775rem;
-    }
+  .callout .callout-more p {
+    font-size: 0.775rem;
   }
 }

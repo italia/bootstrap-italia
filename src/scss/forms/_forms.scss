@@ -30,7 +30,7 @@ fieldset {
   input,
   optgroup,
   textarea {
-    color: $color-text-muted;
+    color: $color-text-base;
   }
 
   label {
@@ -46,7 +46,7 @@ fieldset {
     max-width: 100%;
     width: auto;
     padding: 0 $input-spacing-x;
-    z-index: 5;
+    z-index: 2;
     &.active {
       transform: translateY(-85%);
       font-weight: 600;
