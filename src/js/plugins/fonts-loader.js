@@ -453,7 +453,7 @@ export default (path = '/node_modules/bootstrap-italia/dist/fonts', options = {}
   }
 
   const {
-    titillium = 'web', // 'web' | 'sans-pro' 
+    titillium = 'web', // 'web' | 'sans-pro'
     fonts = ['titillium', 'lora', 'roboto-mono'], // which font families to include
   } = options
 
