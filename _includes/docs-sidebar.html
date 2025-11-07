@@ -6,8 +6,10 @@
     <div class="sidebar-linklist-wrapper">
       <div class="link-list-wrapper">
         <ul class="link-list">
-          {%- for group in site.data.nav -%} {%- assign link = group.pages | first -%} {%- assign link_slug = link.title | slugify -%} {%- assign group_slug =
-          group.title | slugify -%} {%- assign active = nil -%} {%- assign expanded = 'false' -%} {%- if page.group == group_slug -%} {%- assign active =
+          {%- for group in site.data.nav -%} {%- assign link = group.pages | first -%} {%- assign link_slug = link.title
+          | slugify -%} {%- assign group_slug =
+          group.title | slugify -%} {%- assign active = nil -%} {%- assign expanded = 'false' -%} {%- if page.group ==
+          group_slug -%} {%- assign active =
           'active' -%} {%- assign expanded = 'true' -%} {%- endif -%}
           <li>
             {% if group.pages == nil %}
@@ -26,7 +28,8 @@
               <span class="list-item-title-icon-wrapper">
                 <span class="list-item-title">{{ group.title }}</span>
                 <svg class="icon icon-sm icon-primary right" aria-hidden="true">
-                  <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand" xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
+                  <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"
+                    xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
                 </svg>
               </span>
             </a>
@@ -45,6 +48,22 @@
           </li>
           {%- endfor -%}
         </ul>
+      </div>
+    </div>
+    <div>
+      <h3>Cambia font principale</h3>
+      <!-- Font Variant Switcher -->
+      <div class="font-switcher ms-3">
+        <div class="dropdown">
+          <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button" id="fontSwitcher"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            <span id="current-font">Titillium Web</span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="fontSwitcher">
+            <li><a class="dropdown-item" href="#" data-font="web">Titillium Web</a></li>
+            <li><a class="dropdown-item" href="#" data-font="sans-pro">Titillium Sans Pro</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
