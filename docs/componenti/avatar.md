@@ -274,20 +274,20 @@ Lista verticale di Avatar di dimensione media con classe `.size-md`.
       </a>
     </li>
     <li>
-      <div class="list-item">
+      <a class="list-item" href="#">
         <div class="avatar avatar-primary size-md">
           <p aria-hidden="true">SG</p>
         </div>
         <span>Sara Ghione</span>
-      </div>
+      </a>
     </li>
     <li>
-      <div class="list-item">
+      <a class="list-item" href="#">
         <div class="avatar size-md">
           <svg class="icon icon-secondary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-user"></use></svg>
         </div>
         <span>Antonio Esposito</span>
-      </div>
+      </a>
     </li>
   </ul>
 </div>
