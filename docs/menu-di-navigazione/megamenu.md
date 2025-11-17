@@ -56,7 +56,7 @@ Permette di includere **immagine e testo descrittivo** per una introduzione ai c
             <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3 active" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-completo-A1" data-focus-mouse="false">
                 <span>Megamenu 1 (attivo)</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
             </button>
-            <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-completo-A1">
+            <div class="dropdown-menu shadow-lg" aria-labelledby="megamenu-completo-A1">
               <div class="megamenu pb-5 pt-3 py-lg-0">
                 <div class="row">
                   <div class="col-xs-12 col-lg-4 px-0">
@@ -141,7 +141,7 @@ Permette di includere **immagine e testo descrittivo** per una introduzione ai c
             <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-completo-A2" data-focus-mouse="false">
                 <span>Megamenu 2</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
             </button>
-            <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-completo-A2">
+            <div class="dropdown-menu shadow-lg" aria-labelledby="megamenu-completo-A2">
               <div class="megamenu pb-5 pt-3 py-lg-0">
                 <div class="row">
                   <div class="col-xs-12 col-lg-4 px-0">
@@ -251,7 +251,7 @@ Il megamenu prende il tema colori dark su desktop se è dentro un `<nav>` che ha
           <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-completo-B" data-focus-mouse="false">
               <span>Megamenu</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
           </button>
-          <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-completo-B">
+          <div class="dropdown-menu shadow-lg" aria-labelledby="megamenu-completo-B">
             <div class="megamenu pb-5 pt-3 py-lg-0">
               <div class="row">
                 <div class="col-xs-12 col-lg-4 px-0">
@@ -360,7 +360,7 @@ Il megamenu prende il tema colori dark su mobile se è dentro un `<nav>` che ha 
           <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-completo-C" data-focus-mouse="false">
               <span>Megamenu</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
           </button>
-          <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-completo-C">
+          <div class="dropdown-menu shadow-lg" aria-labelledby="megamenu-completo-C">
             <div class="megamenu pb-5 pt-3 py-lg-0">
               <div class="row">
                 <div class="col-xs-12 col-lg-4 px-0">
@@ -470,7 +470,7 @@ Variante base che può contenere liste di link organizzate in tre colonne ed eve
           <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-base-D" data-focus-mouse="false">
               <span>Megamenu</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
           </button>
-          <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-base-D">
+          <div class="dropdown-menu shadow-lg" aria-labelledby="megamenu-base-D">
             <div class="megamenu pb-5 pt-3 py-lg-0">
               <div class="row">
                 <div class="col-12">
@@ -583,7 +583,7 @@ Come nella variante completa è possibile aggiungere un link "Esplora la sezione
           <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-base-E" data-focus-mouse="false">
               <span>Megamenu</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
           </button>
-          <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-base-E">
+          <div class="dropdown-menu shadow-lg" aria-labelledby="megamenu-base-E">
             <div class="megamenu pb-5 pt-3 py-lg-0">
               <div class="row">
                 <div class="col-12">
@@ -701,7 +701,7 @@ Nel caso le voci da mostrare fossero numerose, è possibile aggiungere un link "
           <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-base-F" data-focus-mouse="false">
               <span>Megamenu</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
           </button>
-          <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-base-F">
+          <div class="dropdown-menu shadow-lg" aria-labelledby="megamenu-base-F">
             <div class="megamenu pb-5 pt-3 py-lg-0">
               <div class="row">
                 <div class="col-12">
@@ -839,7 +839,7 @@ Questi seguono le liste di link, posizionati in basso o in una colonna destra, a
           <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-base-G" data-focus-mouse="false">
               <span>Megamenu</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
           </button>
-          <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-base-G">
+          <div class="dropdown-menu shadow-lg" aria-labelledby="megamenu-base-G">
             <div class="megamenu pb-5 pt-3 py-lg-0">
               <div class="row">
                 <div class="col-12">
@@ -962,7 +962,7 @@ Questi seguono le liste di link, posizionati in basso o in una colonna destra, a
           <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-base-H" data-focus-mouse="false">
               <span>Megamenu</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
           </button>
-          <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-base-H">
+          <div class="dropdown-menu shadow-lg" aria-labelledby="megamenu-base-H">
             <div class="megamenu pb-5 pt-3 py-lg-0">
               <div class="row">
                 <div class="col-12 col-lg-8">
