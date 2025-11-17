@@ -187,7 +187,9 @@ $avatar-variants: (
   }
 }
 
-// Hover on avatar
+//
+// Avatar with link 
+
 a.avatar,
 a .avatar {
 
@@ -205,10 +207,6 @@ a .avatar {
     background: var(--#{$prefix}color-background-emphasis);
     transition: opacity 0.2s;
   }
-
-  // &:hover p {
-  //   color: var(--bs-avatar-text-color);
-  // }
 
   &:hover::after {
     opacity: 0.25;
@@ -264,10 +262,6 @@ a .avatar:hover p {
 
   .link-list {
     white-space: nowrap;
-
-    // li:not(:last-child) {
-    //   margin-bottom: var(--#{$prefix}spacing-s);
-    // }
   }
 }
 
