@@ -91,6 +91,7 @@
   pages:
     - title: Introduzione
     - title: Input
+    - title: Area di testo
     - title: Input Numerico
     - title: Input Calendario
     - title: Input Ora # TODO Not working properly yet
