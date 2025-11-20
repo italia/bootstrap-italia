@@ -6,6 +6,7 @@ import json
 
 
 SCSS_BASE_PATH = os.path.join('src', 'scss')
+OUTPUT_JSON = os.path.join('api', 'tokens.json')
 
 glob_vars = []
 
@@ -18,12 +19,10 @@ for root, dirs, files in os.walk(SCSS_BASE_PATH):
     for file in files:
         if file.endswith(".scss"):
             css_file_to_inspect = os.path.join(root, file)
-            print(css_file_to_inspect)
-            vars = [re.findall(r'^\$.*:',line) for line in open(css_file_to_inspect)]
-
-            vars = (functools.reduce(operator.iconcat, vars, []))
-
-            glob_vars.extend(vars)
+            with open(css_file_to_inspect, "r") as f:
+              vars = [re.findall(r'^\$.*:',line) for line in f]
+              vars = (functools.reduce(operator.iconcat, vars, []))
+              glob_vars.extend(vars)
 
 # Map variables with prefix (e.g. dropdown, form ecc..)
 
@@ -38,4 +37,5 @@ for var in glob_vars:
         mapped_vars[prefix].append(clean_variable(var))
 
 
-print(json.dumps(mapped_vars, sort_keys=True, indent=4))
+with open(OUTPUT_JSON, "w") as fapi:
+  fapi.write(json.dumps(mapped_vars, sort_keys=True, indent=4))
