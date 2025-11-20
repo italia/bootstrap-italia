@@ -2,7 +2,7 @@
 // Component properties
 
 .rating {
-  --#{$prefix}rating-icon-fill: var(--#{$prefix}icon-disabled);
+  --#{$prefix}rating-icon-fill: var(--#{$prefix}color-background-secondary-light);
   --#{$prefix}rating-text: var(--#{$prefix}color-text-secondary);
   --#{$prefix}rating-font-size: var(--#{$prefix}label-font-size-s);
   --#{$prefix}rating-line-height: var(--#{$prefix}label-line-height);
