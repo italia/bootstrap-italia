@@ -238,7 +238,7 @@ a.btn-outline {
     --#{$prefix}btn-outline-border-color: var(--#{$prefix}color-border-primary);
     --#{$prefix}btn-text-color: var(--#{$prefix}color-text-primary);
     &:hover {
-      --#{$prefix}btn-outline-border-color: var(--#{$prefix}color-border-primary-hover);
+      --#{$prefix}btn-outline-border-color: color-mix(in srgb, var(--#{$prefix}color-border-primary-hover) 70%, black); // more contrast on hover
       --#{$prefix}btn-text-color: var(--#{$prefix}color-link-hover);
     }
     &:active {
@@ -268,7 +268,8 @@ a.btn-outline {
     --#{$prefix}btn-text-color: var(--#{$prefix}color-text-success);
 
     &:hover {
-      --#{$prefix}btn-outline-border-color: var(--#{$prefix}color-border-success-hover);
+      /* aumenta contrasto scurendo il bordo rispetto al token base */
+      --#{$prefix}btn-outline-border-color: color-mix(in srgb, var(--#{$prefix}color-border-success-hover) 70%, black); // more contrast on hover
       --#{$prefix}btn-text-color: var(--#{$prefix}color-text-success-hover);
     }
     &:active {
@@ -283,7 +284,7 @@ a.btn-outline {
     --#{$prefix}btn-text-color: var(--#{$prefix}color-text-warning);
 
     &:hover {
-      --#{$prefix}btn-outline-border-color: var(--#{$prefix}color-border-warning-hover);
+      --#{$prefix}btn-outline-border-color: color-mix(in srgb, var(--#{$prefix}color-border-warning-hover) 70%, black); // more contrast on hover
       --#{$prefix}btn-text-color: var(--#{$prefix}color-text-warning-hover);
     }
     &:active {
@@ -298,7 +299,7 @@ a.btn-outline {
     --#{$prefix}btn-text-color: var(--#{$prefix}color-text-danger);
 
     &:hover {
-      --#{$prefix}btn-outline-border-color: var(--#{$prefix}color-border-danger-hover);
+      --#{$prefix}btn-outline-border-color: color-mix(in srgb, var(--#{$prefix}color-border-danger-hover) 70%, black); // more contrast on hover
       --#{$prefix}btn-text-color: var(--#{$prefix}color-text-danger-hover);
     }
     &:active {
