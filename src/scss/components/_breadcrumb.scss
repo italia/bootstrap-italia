@@ -54,6 +54,9 @@
   a {
     color: var(--#{$prefix}breadcrumb-link-color);
     font-weight: var(--#{$prefix}breadcrumb-link-font-weight);
+    &:hover {
+      --#{$prefix}breadcrumb-link-color: var(--#{$prefix}color-text-secondary-hover);
+    }
   }
 
   // The breadcrumb item text with no link
