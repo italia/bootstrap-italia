@@ -50,6 +50,11 @@
   .link-list-wrapper li a:hover {
     text-decoration-color: var(--#{$prefix}color-text-inverse);
   }
+
+  // Override default hover color
+  .btn-primary:hover {
+    --#{$prefix}btn-background: var(--#{$prefix}color-background-primary-deep); 
+  }
 }
 
 .it-footer-main {
