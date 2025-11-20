@@ -140,8 +140,7 @@
 }
 
 .it-header-slim-right-zone {
-  .btn-primary:hover,
-  a.btn-primary:hover {
+  .btn-primary:hover {
     --#{$prefix}btn-background: var(--#{$prefix}color-background-primary-deep); // Override default hover color
   }
 }
