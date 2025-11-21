@@ -2,10 +2,10 @@
 // Custom properties
 
 .it-footer {
-  --#{$prefix}footer-top-background: var(--#{$prefix}color-background-primary-muted);
   --#{$prefix}footer-bottom-background: var(--#{$prefix}color-background-primary-deep);
   --#{$prefix}footer-brand-icon-color: var(--#{$prefix}icon-inverse);
   --#{$prefix}footer-brand-icon-size: 3rem; // 48px
+  --#{$prefix}footer-top-background: var(--#{$prefix}color-background-primary-muted);
   @include media-breakpoint-up(lg) {
     --#{$prefix}footer-brand-icon-size: 3.5rem; // 56px 
   }
@@ -15,14 +15,6 @@
 // Component styles
 
 .it-footer {
-  --#{$prefix}footer-top-background: var(--#{$prefix}color-background-primary-muted);
-  --#{$prefix}footer-bottom-background: var(--#{$prefix}color-background-primary-deep);
-  --#{$prefix}footer-brand-icon-color: var(--#{$prefix}icon-inverse);
-  --#{$prefix}footer-brand-icon-size: 3rem; // 48px
-  @include media-breakpoint-up(lg) {
-    --#{$prefix}footer-brand-icon-size: 3.5rem; // 56px 
-  }
-
   h4 {
     margin-bottom: var(--#{$prefix}spacing-s);
     font-size: var(--#{$prefix}label-font-size);

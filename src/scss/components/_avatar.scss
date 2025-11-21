@@ -12,19 +12,19 @@ $avatar-variants: (
 
 .avatar {
   --#{$prefix}avatar-background: var(--#{$prefix}color-background-secondary-lighter);
-  --#{$prefix}avatar-text-color: var(--#{$prefix}color-text-secondary);
+  --#{$prefix}avatar-dot-border-color: var(--#{$prefix}color-border-inverse);
+  --#{$prefix}avatar-dot-border-size: 2px;
+  --#{$prefix}avatar-dot-offset-bottom: 0;
+  --#{$prefix}avatar-dot-offset-right: 0;
+  --#{$prefix}avatar-dot-offset-top: 4px;
+  --#{$prefix}avatar-dot-size: 12px;
   --#{$prefix}avatar-font-size: var(--#{$prefix}font-size-3);
   --#{$prefix}avatar-font-weight: var(--#{$prefix}font-weight-solid);
   --#{$prefix}avatar-icon-size: var(--#{$prefix}icon-size-s);
+  --#{$prefix}avatar-overlay-background: var(--#{$prefix}color-background-emphasis);
   --#{$prefix}avatar-radius: var(--#{$prefix}radius-circle);
   --#{$prefix}avatar-size: 2.5rem; // default size - see '.size-' classes for other sizes
-  --#{$prefix}avatar-dot-size: 12px;
-  --#{$prefix}avatar-dot-border-size: 2px;
-  --#{$prefix}avatar-dot-border-color: var(--#{$prefix}color-border-inverse);
-  --#{$prefix}avatar-dot-offset-right: 0;
-  --#{$prefix}avatar-dot-offset-top: 4px;
-  --#{$prefix}avatar-dot-offset-bottom: 0;
-  --#{$prefix}avatar-overlay-background: var(--#{$prefix}color-background-emphasis);
+  --#{$prefix}avatar-text-color: var(--#{$prefix}color-text-secondary);
 }
 
 //

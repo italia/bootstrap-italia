@@ -9,17 +9,17 @@
   // --#{$prefix}breadcrumb-item-active-color: #{$breadcrumb-active-color};
 
   // Add these CSS custom properties
-  --#{$prefix}breadcrumb-padding: var(--#{$prefix}spacing-3xs);
-  --#{$prefix}breadcrumb-margin: var(--#{$prefix}spacing-s);
   --#{$prefix}breadcrumb-background: transparent;
   --#{$prefix}breadcrumb-border-radius: 0;
-  --#{$prefix}breadcrumb-divider-color: var(--#{$prefix}color-border-secondary);
-  --#{$prefix}breadcrumb-item-padding-x: var(--#{$prefix}spacing-xs);
   --#{$prefix}breadcrumb-divider: '/';
+  --#{$prefix}breadcrumb-divider-color: var(--#{$prefix}color-border-secondary);
   --#{$prefix}breadcrumb-divider-flipped: var(--#{$prefix}breadcrumb-divider);
   --#{$prefix}breadcrumb-font-size: var(--#{$prefix}label-font-size);
-  --#{$prefix}breadcrumb-link-font-weight: var(--#{$prefix}font-weight-solid);
+  --#{$prefix}breadcrumb-item-padding-x: var(--#{$prefix}spacing-xs);
   --#{$prefix}breadcrumb-link-color: var(--#{$prefix}color-text-secondary);
+  --#{$prefix}breadcrumb-link-font-weight: var(--#{$prefix}font-weight-solid);
+  --#{$prefix}breadcrumb-margin: var(--#{$prefix}spacing-s);
+  --#{$prefix}breadcrumb-padding: var(--#{$prefix}spacing-3xs);
   --#{$prefix}breadcrumb-separator-color: var(--#{$prefix}color-background-secondary);
   --#{$prefix}breadcrumb-separator-spacing: var(--#{$prefix}spacing-xxs);
 

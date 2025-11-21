@@ -1,26 +1,26 @@
 //
 // Component properties
 .modal {
-  --#{$prefix}modal-zindex: 1055;
-  --#{$prefix}modal-width: 500px;
-  --#{$prefix}modal-padding: var(--#{$prefix}spacing-m);
-  --#{$prefix}modal-margin: auto;
   --#{$prefix}modal-bg: var(--#{$prefix}color-background-inverse);
   --#{$prefix}modal-border-color: transparent;
-  --#{$prefix}modal-border-width: 0;
   --#{$prefix}modal-border-radius: var(--#{$prefix}radius-smooth);
+  --#{$prefix}modal-border-width: 0;
   --#{$prefix}modal-box-shadow: var(--#{$prefix}elevation-medium);
-  --#{$prefix}modal-inner-border-radius: var(--#{$prefix}radius-smooth);
-  --#{$prefix}modal-header-border-color: var(--#{$prefix}color-border-subtle);
-  --#{$prefix}modal-header-border-width: 0;
-  --#{$prefix}modal-title-font-size: var(--#{$prefix}heading-5-font-size);
-  --#{$prefix}modal-title-font-weight: var(--#{$prefix}heading-font-weight-weak);
-  --#{$prefix}modal-title-line-height: var(--#{$prefix}heading-line-height);
-  --#{$prefix}modal-footer-gap: var(--#{$prefix}spacing-s);
   --#{$prefix}modal-footer-bg: transparent;
   --#{$prefix}modal-footer-border-color: var(--#{$prefix}modal-header-border-color);
   --#{$prefix}modal-footer-border-width: var(--#{$prefix}modal-header-border-width);
+  --#{$prefix}modal-footer-gap: var(--#{$prefix}spacing-s);
+  --#{$prefix}modal-header-border-color: var(--#{$prefix}color-border-subtle);
+  --#{$prefix}modal-header-border-width: 0;
+  --#{$prefix}modal-inner-border-radius: var(--#{$prefix}radius-smooth);
+  --#{$prefix}modal-margin: auto;
+  --#{$prefix}modal-padding: var(--#{$prefix}spacing-m);
+  --#{$prefix}modal-title-font-size: var(--#{$prefix}heading-5-font-size);
+  --#{$prefix}modal-title-font-weight: var(--#{$prefix}heading-font-weight-weak);
+  --#{$prefix}modal-title-line-height: var(--#{$prefix}heading-line-height);
   --#{$prefix}modal-transition: transform 0.3s ease-in-out;
+  --#{$prefix}modal-width: 500px;
+  --#{$prefix}modal-zindex: 1055;
 }
 
 //

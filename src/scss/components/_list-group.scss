@@ -3,25 +3,23 @@
 // Easily usable on <ul>, <ol>, or <div>.
 
 .list-group {
-  // scss-docs-start list-group-css-vars
-  --#{$prefix}list-group-color: #{$list-group-color};
-  --#{$prefix}list-group-bg: #{$list-group-bg};
-  --#{$prefix}list-group-border-color: #{$list-group-border-color};
-  --#{$prefix}list-group-border-width: #{$list-group-border-width};
-  --#{$prefix}list-group-border-radius: #{$list-group-border-radius};
-  --#{$prefix}list-group-item-padding-x: #{$list-group-item-padding-x};
-  --#{$prefix}list-group-item-padding-y: #{$list-group-item-padding-y};
-  --#{$prefix}list-group-action-color: #{$list-group-action-color};
-  --#{$prefix}list-group-action-hover-color: #{$list-group-action-hover-color};
-  --#{$prefix}list-group-action-hover-bg: #{$list-group-hover-bg};
-  --#{$prefix}list-group-action-active-color: #{$list-group-action-active-color};
   --#{$prefix}list-group-action-active-bg: #{$list-group-action-active-bg};
-  --#{$prefix}list-group-disabled-color: #{$list-group-disabled-color};
-  --#{$prefix}list-group-disabled-bg: #{$list-group-disabled-bg};
-  --#{$prefix}list-group-active-color: #{$list-group-active-color};
+  --#{$prefix}list-group-action-active-color: #{$list-group-action-active-color};
+  --#{$prefix}list-group-action-hover-bg: #{$list-group-hover-bg};
+  --#{$prefix}list-group-action-hover-color: #{$list-group-action-hover-color};
+  --#{$prefix}list-group-action-color: #{$list-group-action-color};
   --#{$prefix}list-group-active-bg: #{$list-group-active-bg};
   --#{$prefix}list-group-active-border-color: #{$list-group-active-border-color};
-  // scss-docs-end list-group-css-vars
+  --#{$prefix}list-group-active-color: #{$list-group-active-color};
+  --#{$prefix}list-group-bg: #{$list-group-bg};
+  --#{$prefix}list-group-border-color: #{$list-group-border-color};
+  --#{$prefix}list-group-border-radius: #{$list-group-border-radius};
+  --#{$prefix}list-group-border-width: #{$list-group-border-width};
+  --#{$prefix}list-group-color: #{$list-group-color};
+  --#{$prefix}list-group-disabled-bg: #{$list-group-disabled-bg};
+  --#{$prefix}list-group-disabled-color: #{$list-group-disabled-color};
+  --#{$prefix}list-group-item-padding-x: #{$list-group-item-padding-x};
+  --#{$prefix}list-group-item-padding-y: #{$list-group-item-padding-y};
 
   display: flex;
   flex-direction: column;

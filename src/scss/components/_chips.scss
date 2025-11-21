@@ -3,17 +3,17 @@
 
 .chip {
   --#{$prefix}chip-background-color: var(--#{$prefix}color-background-muted);
-  --#{$prefix}chip-border-width: 1px;
-  --#{$prefix}chip-border-radius: var(--#{$prefix}radius-rounded);
   --#{$prefix}chip-border-color: var(--#{$prefix}color-border-subtle);
+  --#{$prefix}chip-border-radius: var(--#{$prefix}radius-rounded);
+  --#{$prefix}chip-border-width: 1px;
   --#{$prefix}chip-icon-color: var(--#{$prefix}icon-secondary);
+  --#{$prefix}chip-link-hover: var(--#{$prefix}color-text-inverse);
   --#{$prefix}chip-padding-x: var(--#{$prefix}spacing-xs);
   --#{$prefix}chip-padding-y: var(--#{$prefix}spacing-3xs);
   --#{$prefix}chip-text-color: var(--#{$prefix}color-text-secondary);
   --#{$prefix}chip-text-line-height: var(--#{$prefix}label-line-height);
   --#{$prefix}chip-text-size: var(--#{$prefix}label-font-size);
   --#{$prefix}chip-text-weight: var(--#{$prefix}font-weight-solid);
-  --#{$prefix}chip-link-hover: var(--#{$prefix}color-text-inverse);
 }
 
 //
