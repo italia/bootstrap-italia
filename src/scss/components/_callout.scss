@@ -1,5 +1,13 @@
+// Component: callout
 //
-// Component properties
+// Description: Component styles for callout
+//
+
+// Variables
+//
+
+// Properties
+//
 
 .callout {
   --#{$prefix}callout-background-color: var(--#{$prefix}page-background-color);
@@ -16,8 +24,9 @@
   --#{$prefix}callout-title-font-weight: var(--#{$prefix}heading-font-weight-weak);
 }
 
+// Styles
 //
-// Component styles
+
 
 .callout {
   position: relative;

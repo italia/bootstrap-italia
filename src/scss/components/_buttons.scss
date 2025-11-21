@@ -1,11 +1,16 @@
+// Component: buttons
 //
-// Sass variables used in function
+// Description: Component styles for buttons
+//
+
+// Variables
+//
 
 $btn-close-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$btn-close-color}'><path d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/></svg>") !default;
 $btn-close-white-filter: invert(1) grayscale(100%) brightness(200%) !default;
 
+// Properties
 //
-// Component properties
 
 .btn {
   --#{$prefix}btn-background: transparent; // default to transparent
@@ -24,8 +29,8 @@ $btn-close-white-filter: invert(1) grayscale(100%) brightness(200%) !default;
   --#{$prefix}btn-text-color: var(--#{$prefix}color-text-primary);
 }
 
+// Styles
 //
-// Component styles
 
 .btn {
   display: inline-block;

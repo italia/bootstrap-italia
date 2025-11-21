@@ -1,5 +1,13 @@
+// Component: nav
 //
-// Component properties
+// Description: Component styles for nav
+//
+
+// Variables
+//
+
+// Properties
+//
 
 .nav {
   --#{$prefix}nav-link-disabled-color: var(--#{$prefix}color-text-disabled);
@@ -7,8 +15,9 @@
   --#{$prefix}nav-link-padding-y: var(--#{$prefix}spacing-s);
 }
 
+// Styles
 //
-// Component styles
+
 
 .nav {
   display: flex;

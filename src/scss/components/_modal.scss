@@ -1,5 +1,13 @@
+// Component: modal
 //
-// Component properties
+// Description: Component styles for modal
+//
+
+// Variables
+//
+
+// Properties
+//
 .modal {
   --#{$prefix}modal-bg: var(--#{$prefix}color-background-inverse);
   --#{$prefix}modal-border-color: transparent;
@@ -23,8 +31,9 @@
   --#{$prefix}modal-zindex: 1055;
 }
 
+// Styles
 //
-// Component styles
+
 
 .modal-dialog {
   position: relative;

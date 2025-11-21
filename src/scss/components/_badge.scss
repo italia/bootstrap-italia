@@ -1,5 +1,13 @@
+// Component: badge
 //
-// Custom properties
+// Description: Component styles for badge
+//
+
+// Variables
+//
+
+// Properties
+//
 
 .badge  {
   --#{$prefix}badge-border-radius: var(--#{$prefix}radius-smooth);
@@ -11,8 +19,8 @@
   --#{$prefix}badge-text-color: var(--#{$prefix}color-text-inverse);
 }
 
+// Styles
 //
-// Component styles
 
 .badge {
   display: inline-block;

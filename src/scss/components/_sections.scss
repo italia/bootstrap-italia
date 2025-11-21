@@ -1,5 +1,13 @@
+// Component: sections
 //
-// Component properties
+// Description: Component styles for sections
+//
+
+// Variables
+//
+
+// Properties
+//
 
 .section {
   --#{$prefix}section-background-color: transparent;
@@ -10,8 +18,9 @@
   }
 }
 
+// Styles
 //
-// Component styles
+
 
 .section {
   // Set `--#{$prefix}section-padding-x` only when extra horizontal padding is needed

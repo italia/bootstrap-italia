@@ -1,14 +1,13 @@
-@use 'sass:math';
-
-// Avatar variants map
-// Edit the colors to match your theme or add more variants
-$avatar-variants: (
-  primary: $color-primary,
-  secondary: $color-secondary,
-);
-
+// Component: avatar
 //
-// Custom properties
+// Description: Component styles for avatar
+//
+
+// Variables
+//
+
+// Properties
+//
 
 .avatar {
   --#{$prefix}avatar-background: var(--#{$prefix}color-background-secondary-lighter);
@@ -27,8 +26,18 @@ $avatar-variants: (
   --#{$prefix}avatar-text-color: var(--#{$prefix}color-text-secondary);
 }
 
+// Styles
 //
-// Component styles
+
+@use 'sass:math';
+
+// Avatar variants map
+// Edit the colors to match your theme or add more variants
+$avatar-variants: (
+  primary: $color-primary,
+  secondary: $color-secondary,
+);
+
 
 .avatar {
   position: relative;

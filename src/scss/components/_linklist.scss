@@ -1,3 +1,17 @@
+// Component: linklist
+//
+// Description: Component styles for linklist
+//
+
+// Variables
+//
+
+// Properties
+//
+
+// Styles
+//
+
 //
 // Custom properties
 
@@ -11,8 +25,7 @@
   --#{$prefix}linklist-nested-spacing: var(--#{$prefix}spacing-s);
 }
 
-//
-// Component styles
+
 .link-list-wrapper {
 
   .link-list-heading,

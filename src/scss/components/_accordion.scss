@@ -1,5 +1,10 @@
+// Component: Accordion
 //
-// Custom properties
+// Description: Styles for the Accordion component.
+
+
+// Properties
+//
 
 .accordion {
   --#{$prefix}accordion-active-bg: var(--#{$prefix}color-background-primary);
@@ -27,9 +32,8 @@
   --#{$prefix}accordion-item-border-width: 1px; // Set the border width for the accordion item
   --#{$prefix}accordion-transition: var(--#{$prefix}transition-instant);
 }
-
+// Styles
 //
-// Component styles
 
 .accordion-button {
   position: relative;

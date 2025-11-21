@@ -1,5 +1,13 @@
+// Component: dropdown
 //
-// Custom properties
+// Description: Component styles for dropdown
+//
+
+// Variables
+//
+
+// Properties
+//
 
 .dropdown-menu {
   --#{$prefix}dropdown-animation-speed: var(--#{$prefix}transition-instant);
@@ -33,9 +41,8 @@
   --#{$prefix}dropdown-zindex: 8; // TODO review zindex usage
 }
 
-// 
-// Component styles
-
+// Styles
+//
 .dropup,
 .dropend,
 .dropdown,

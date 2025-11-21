@@ -1,3 +1,17 @@
+// Component: popover
+//
+// Description: Component styles for popover
+//
+
+// Variables
+//
+
+// Properties
+//
+
+// Styles
+//
+
 .bs-popover-top {
   > .popover-arrow {
     bottom: calc(-1 * (var(--#{$prefix}popover-arrow-height)) - var(--#{$prefix}popover-border-width)); // stylelint-disable-line function-disallowed-list

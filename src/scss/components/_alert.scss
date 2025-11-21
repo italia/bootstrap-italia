@@ -1,5 +1,13 @@
+// Component: alert
 //
-// Custom properties
+// Description: Component styles for alert
+//
+
+// Variables
+//
+
+// Properties
+//
 
 .alert {
   --#{$prefix}alert-background-color: var(--#{$prefix}color-background-inverse);
@@ -13,8 +21,9 @@
   --#{$prefix}alert-text-color: var(--#{$prefix}color-text-base);
 }
 
+// Styles
 //
-// Component styles
+
 
 .alert {
   position: relative;

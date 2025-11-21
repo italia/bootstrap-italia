@@ -1,5 +1,13 @@
+// Component: navbar
 //
-// Component properties
+// Description: Component styles for navbar
+//
+
+// Variables
+//
+
+// Properties
+//
 
 .navbar {
   --#{$prefix}navbar-active-color: #{$navbar-light-active-color};
@@ -61,8 +69,9 @@
   }
 }
 
+// Styles
 //
-// Component styles
+
 
 // Navbar mobile backdrop, inspired by "modal" approachAdd commentMore actions
 .navbar-backdrop {

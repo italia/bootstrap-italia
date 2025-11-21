@@ -1,5 +1,13 @@
+// Component: chips
 //
-// Custom properties
+// Description: Component styles for chips
+//
+
+// Variables
+//
+
+// Properties
+//
 
 .chip {
   --#{$prefix}chip-background-color: var(--#{$prefix}color-background-muted);
@@ -15,9 +23,8 @@
   --#{$prefix}chip-text-size: var(--#{$prefix}label-font-size);
   --#{$prefix}chip-text-weight: var(--#{$prefix}font-weight-solid);
 }
-
+// Styles
 //
-// Component styles
 
 .chip {
   display: inline-flex;

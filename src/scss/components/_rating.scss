@@ -1,5 +1,13 @@
+// Component: rating
 //
-// Component properties
+// Description: Component styles for rating
+//
+
+// Variables
+//
+
+// Properties
+//
 
 .rating {
   --#{$prefix}rating-font-size: var(--#{$prefix}label-font-size-s);
@@ -9,8 +17,9 @@
   --#{$prefix}rating-text: var(--#{$prefix}color-text-secondary);
 }
 
+// Styles
 //
-// Component styles
+
 
 .rating {
   border: none;
