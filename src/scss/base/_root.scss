@@ -65,15 +65,15 @@
   --#{$prefix}theme-primary-deep: var(--it-theme-italia-deep);
 
   // Spacing
-  --#{$prefix}spacing-3xl: var(--it-spacing-3xl);
-  --#{$prefix}spacing-xxl: var(--it-spacing-xxl);
-  --#{$prefix}spacing-xl: var(--it-spacing-xl);
-  --#{$prefix}spacing-l: var(--it-spacing-l);
-  --#{$prefix}spacing-m: var(--it-spacing-m);
-  --#{$prefix}spacing-s: var(--it-spacing-s);
-  --#{$prefix}spacing-xs: var(--it-spacing-xs);
-  --#{$prefix}spacing-xxs: var(--it-spacing-xxs);
-  --#{$prefix}spacing-3xs: var(--it-spacing-3xs);
+  --#{$prefix}spacing-3xl: var(--it-spacing-3xl); // equal to 6rem (96px)
+  --#{$prefix}spacing-xxl: var(--it-spacing-xxl); // equal to 3rem (48px)
+  --#{$prefix}spacing-xl: var(--it-spacing-xl); // equal to 2.5rem (40px)
+  --#{$prefix}spacing-l: var(--it-spacing-l); // equal to 2rem (32px)
+  --#{$prefix}spacing-m: var(--it-spacing-m); // equal to 1.5rem (24px)
+  --#{$prefix}spacing-s: var(--it-spacing-s); // equal to 1rem (16px)
+  --#{$prefix}spacing-xs: var(--it-spacing-xs); // equal to 0.75rem (12px)
+  --#{$prefix}spacing-xxs: var(--it-spacing-xxs); // equal to 0.5rem (8px)
+  --#{$prefix}spacing-3xs: var(--it-spacing-3xs); // equal to 0.25rem (4px)
 
   --#{$prefix}heading-spacing: var(--it-spacing-s);
   --#{$prefix}paragraph-spacing: var(--it-spacing-m);
