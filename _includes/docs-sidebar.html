@@ -13,18 +13,14 @@
           'active' -%} {%- assign expanded = 'true' -%} {%- endif -%}
           <li>
             {% if group.pages == nil %}
-            <a class="list-item{% if page.group == group_slug %} active{% endif %}" href="{{ site.baseurl }}/docs/{{ group_slug }}{% unless group_slug == '' %}/{% endunless %}"><span>{{ group.title }}</span></a>
+            <a class="list-item{% if page.group == group_slug %} active{% endif %}"
+              href="{{ site.baseurl }}/docs/{{ group_slug }}{% unless group_slug == '' %}/{% endunless %}"><span>{{
+                group.title }}</span></a>
             {% else %}
             <!-- One:usare ID -->
-            <a
-              role="button"
-              class="list-item large medium icon-right"
-              href="#collapse-{{ forloop.index }}"
-              data-bs-toggle="collapse" 
-              data-bs-target="#collapse-{{ forloop.index }}"
-              aria-expanded="{{expanded}}"
-              aria-controls="collapse-{{ forloop.index }}"
-            >
+            <a role="button" class="list-item large medium icon-right" href="#collapse-{{ forloop.index }}"
+              data-bs-toggle="collapse" data-bs-target="#collapse-{{ forloop.index }}" aria-expanded="{{expanded}}"
+              aria-controls="collapse-{{ forloop.index }}">
               <span class="list-item-title-icon-wrapper">
                 <span class="list-item-title">{{ group.title }}</span>
                 <svg class="icon icon-sm icon-primary right" aria-hidden="true">
@@ -33,15 +29,17 @@
                 </svg>
               </span>
             </a>
-            <ul class="link-sublist collapse {% if page.group == group_slug %}show{% endif %}" id="collapse-{{ forloop.index }}">
+            <ul class="link-sublist collapse {% if page.group == group_slug %}show{% endif %}"
+              id="collapse-{{ forloop.index }}">
               {%- for doc in group.pages -%}
-                {%- assign doc_slug = doc.title | slugify -%}
-                <li>
-                  <a class="list-item {% if page.group == group_slug and page_slug == doc_slug %}active{% endif %}" href="{{ site.baseurl }}/docs/{{ group_slug }}/{{ doc_slug }}/">
-                    <span>{{ doc.title }}</span>
-                    {%- if doc.status %}<span class="badge bg-secondary text-white">{{ doc.status }}</span>{%- endif -%}
-                  </a>
-                </li>
+              {%- assign doc_slug = doc.title | slugify -%}
+              <li>
+                <a class="list-item {% if page.group == group_slug and page_slug == doc_slug %}active{% endif %}"
+                  href="{{ site.baseurl }}/docs/{{ group_slug }}/{{ doc_slug }}/">
+                  <span>{{ doc.title }}</span>
+                  {%- if doc.status %}<span class="badge bg-secondary text-white">{{ doc.status }}</span>{%- endif -%}
+                </a>
+              </li>
               {%- endfor -%}
             </ul>
             {% endif %}
@@ -51,20 +49,26 @@
       </div>
     </div>
     <div>
-      <h3>Cambia font principale</h3>
+      <h3>Font principale</h3>
       <!-- Font Variant Switcher -->
-      <div class="font-switcher ms-3">
+      <div class="font-switcher ms-4 mt-3 mb-5">
         <div class="dropdown">
           <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button" id="fontSwitcher"
-            data-bs-toggle="dropdown" aria-expanded="false">
+            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <span id="current-font">Titillium Web</span>
+            <svg class="icon-expand icon icon-sm icon-secondary" aria-hidden="true">
+              <use href="/dist/svg/sprites.svg#it-expand"></use>
+            </svg>
           </button>
-          <ul class="dropdown-menu" aria-labelledby="fontSwitcher">
-            <li><a class="dropdown-item" href="#" data-font="web">Titillium Web</a></li>
-            <li><a class="dropdown-item" href="#" data-font="sans-pro">Titillium Sans Pro</a></li>
-          </ul>
+          <div class="dropdown-menu" aria-labelledby="fontSwitcher">
+            <div class="link-list-wrapper">
+              <ul class="link-list">
+                <li><a class="dropdown-item list-item" href="#" data-font="web">Titillium Web</a></li>
+                <li><a class="dropdown-item list-item" href="#" data-font="sans-pro">Titillium Sans Pro</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 </nav>
