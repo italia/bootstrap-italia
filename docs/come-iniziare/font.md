@@ -15,27 +15,25 @@ description: Guida completa al caricamento e alla configurazione dei font in Boo
 
 Bootstrap Italia include tre famiglie di caratteri tipografici pensate per garantire leggibilità e coerenza visiva nei progetti della Pubblica Amministrazione:
 
-- **Titillium** (Web o Sans Pro): font principale sans-serif per interfacce e testi 
-- **Lora**: font serif per testi lunghi e contenuti editoriali
+- **Titillium** (Web o Sans Pro): font principale senza grazie (sans-serif) per interfacce e testi 
+- **Lora**: font con grazie (serif) per testi lunghi e contenuti editoriali
 - **Roboto Mono**: font monospace per codice, numeri e dati tabulari
 
-Questa pagina spiega come caricare e configurare questi font nel tuo progetto.
+## Titillium: il font principale
 
-## Font principale: Titillium
-
-Bootstrap Italia supporta due versioni open alternative del carattere senza grazie (sans-serif) Titillium:
+Bootstrap Italia supporta dalla versione 3.0.0 due versioni alternative del carattere sans-serif Titillium con licenza aperta:
 
 - **Titillium Web** (`'web'`). Versione originale e default di Bootstrap Italia, è il carattere di riferimento del Design system .italia per il digitale della Pubblica Amministrazione italiana. Disponibile nei pesi 300, 400, 600, 700 con le rispettive varianti italic ([storia del font Titillium e crediti](https://nta.accademiadiurbino.it/titillium/)).
 
-- **Titillium Sans Pro** (`'sans-pro'`). Evoluzione del Titillium Web con supporto linguistico esteso e scrittura matematica. Particolare cura è riconoscibile nel miglioramento di spaziature, kerning, forme dei caratteri e metriche verticali. Disponibile in Bootstrap Italia nei formati WOFF2 e WOFF con gli stessi pesi e varianti del Titillium Web, anche se il font completo include anche i pesi Black e Thin e altri formati scaricabili dal repository ufficiale ([repository Titillium Sans Pro e crediti](https://github.com/chialab/titillium_pro/tree/main)).
+- **Titillium Sans Pro** (`'sans-pro'`). Evoluzione del Titillium Web con supporto linguistico esteso e scrittura matematica. Particolare cura è riconoscibile nel miglioramento di spaziature, kerning, forme dei caratteri e metriche verticali. Disponibile in Bootstrap Italia nei formati WOFF2 e WOFF con gli stessi pesi e varianti del Titillium Web, sono disponibili anche i pesi Black e Thin e altri formati scaricabili dal repository ufficiale ([repository Titillium Sans Pro e crediti](https://github.com/chialab/titillium_pro/tree/main)).
 
 {% capture callout %}
-Puoi esplorare la resa delle due versioni in questa documentazione: usa il selettore "Font principale" nella barra di sinistra per passare dall'una all'altra.
+Usa il selettore "Font principale" nella barra di sinistra per esplorare la resa delle due differenti versioni di Titillium su questa documentazione. 
 {% endcapture %}{% include callout.html content=callout type="info" %}
 
-Si segnala inoltre l'esistenza del **Titillio**: versione alternativa sviluppata partendo dal Titillium Sans Pro nell'ambito del progetto **App IO**. In questa versione è stata data particolare cura alla resa in applicazioni mobili, dove c'è la necessità di distinguere numerose gerarchie visive su schermi piccoli. Questo font non è direttamente disponibile in Bootstrap Italia ([repository Titillio e crediti](https://github.com/pagopa/titillio)).
+Ti segnaliamo inoltre l'esistenza del font **Titillio**: versione alternativa del Titillium sviluppata partendo dal Titillium Sans Pro nell'ambito del progetto **App IO**. Questa versione è stata curata con particolare attenzione alle applicazioni per schermi piccoli, laddove ci sia necessità di distinguere numerose gerarchie visive. Questo font non è direttamente disponibile in Bootstrap Italia ma è possibile scaricarlo dal repository ufficiale ([repository Titillio e crediti](https://github.com/pagopa/titillio)).
 
-Maggiori informazioni nella scheda [Tipografia](https://designers.italia.it/design-system/fondamenti/tipografia/) del Design system .italia.
+Ulteriori informazioni nella scheda [Tipografia](/organizzare-i-contenuti/tipografia/).
 
 ## Font complementari: Lora e Roboto Mono
 
@@ -44,6 +42,8 @@ Oltre al Titillium, Bootstrap Italia include due font complementari:
 - **Lora**: font con grazie (serif), ideale per testi lunghi, articoli e contenuti editoriali. Disponibile nei pesi 400 e 700 con varianti italic.
 
 - **Roboto Mono**: font monospaziato (monospace) ottimizzato per la visualizzazione di codice, dati tabulari e contenuti tecnici. Disponibile nei pesi 400 e 700 con varianti italic.
+
+Ulteriori informazioni nella scheda [Tipografia](/organizzare-i-contenuti/tipografia/).
 
 ## Caricamento via JavaScript
 
