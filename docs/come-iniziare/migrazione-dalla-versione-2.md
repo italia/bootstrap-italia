@@ -6,23 +6,40 @@ group: come-iniziare
 toc: true
 ---
 
+{% capture alpha_warning %}
+### ⚠️ Versione Alpha
+
+Work in progress.
+
+{% endcapture %}{% include callout.html content=alpha_warning type="warning" %}
+
 ## Novità
 
 ### Il sistema completo di design token
 
-Bootstrap Italia 3 introduce un sistema completo di [design tokens](https://designers.italia.it/design-system/fondamenti/design-tokens/) che integra e sostituisce le variabili Sass tradizionali:
+Bootstrap Italia 3 introduce il sistema completo di [design tokens del Design system .italia](https://designers.italia.it/design-system/fondamenti/design-tokens/) che integra e sostituisce le variabili Sass delle precedenti versioni:
 
 - Coerenza visiva garantita attraverso token globali e semantici.
 - Personalizzazione semplificata tramite CSS custom properties e token specifici.
-- Allineamento completo e automazioni da [Design Tokens Italia](https://github.com/italia/design-tokens-italia/).
+- Allineamento completo (con automazioni) con il repository [Design Tokens Italia](https://github.com/italia/design-tokens-italia/).
 - Supporto nativo per sviluppare temi personalizzati.
 - Riduzione significativa bundle CSS.
 
+[Vai alla scheda dedicata ai design tokens]({{ site.baseurl }}/docs/come-iniziare/design-tokens/)
+
 ### Le nuove versioni del carattere Titillium
 
-Bootstrap Italia 3 estende il supporto della [tipografia del Design system .italia](https://designers.italia.it/design-system/fondamenti/tipografia/) a tre versioni del font Titillium mantenendo retro-compatibiltà con le implementazioni precedenti: 
-- Supporto per i caratteri tipografici alternativi al Titillium Web (default): [Titillium Sans Pro](https://github.com/chialab/titillium_pro) e [Titillio](https://github.com/pagopa/titillio/).
-- Introduzione di un sistema parametrico di caricamento. 
+Bootstrap Italia 3 estende il supporto della [tipografia del Design system .italia](https://designers.italia.it/design-system/fondamenti/tipografia/), mantenendo retro-compatibiltà con le implementazioni precedenti: 
+- Supporto per il carattere tipografico alternativo al Titillium Web (default): [Titillium Sans Pro](https://github.com/chialab/titillium_pro).
+- Introduzione di un sistema parametrico di caricamento.
+
+[Vai alla scheda dedicata ai font]({{ site.baseurl }}/docs/come-iniziare/font/)
+
+### Il nuovo aspetto dei componenti per form
+
+Bootstrap Italia 3 cambia l'aspetto dei componenti per costruire moduli (nello specifico: input, select e toggle) per essere coerenti con il nuovo UI Kit Italia v4.
+
+[Vai alla sezione dedicata ai form]({{ site.baseurl }}/docs/form/introduzione/)
 
 --- 
 
@@ -60,7 +77,9 @@ Bootstrap Italia 3 estende il supporto della [tipografia del Design system .ital
 - ...
 
 ## Componenti con breaking change
-...
+... 
+
+[Vai alla scheda di dettaglio delle breaking change]({{ site.baseurl }}/docs/breaking-change/)
 
 ## Supporto browser
 ...
@@ -115,17 +134,17 @@ $font-size-base: 1rem;
 3. Controlla performance del bundle aggiornato
 4. Valida markup per conformità HTML5
 
-### Tool di migrazione - Lint 
+### Usa il tool di migrazione - Lint (desiderata, da valutare)
 
 ```bash
 # Tool per identificare classi obsolete (v2) nei tuoi file migrati 
 npm run bootstrap-italia-v3-migration-checker src/
 ```
 
-## Serve aiuto? 
+## Serve aiuto?
+Hai incontrato problemi di migrazione, o vuoi suggerire un miglioramento? 
 
-- [🐛 Segnala bug](https://github.com/italia/bootstrap-italia/issues)
-- 💬 [Parlane nel canale #design-system](#) dello Slack Developers Italia
+- [Apri una segnalazione sul repository](https://github.com/italia/bootstrap-italia/issues)
 
 ---
 

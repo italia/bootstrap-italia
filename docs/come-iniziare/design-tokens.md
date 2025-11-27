@@ -1,10 +1,17 @@
 ---
 layout: docs
-title: Design Tokens
-description: Sistema di design token per Bootstrap Italia basato sui token ufficiali del Design system .italia
+title: Design tokens
+description: Sistema completo basato su Design Tokens Italia
 group: come-iniziare
 toc: true
 ---
+
+{% capture alpha_warning %}
+### ⚠️ Versione Alpha
+
+Work in progress.
+
+{% endcapture %}{% include callout.html content=alpha_warning type="warning" %}
 
 ## Introduzione
 
@@ -16,13 +23,13 @@ I **design tokens** sono i valori atomici del Design System .italia che definisc
 Questa documentazione è sincronizzata automaticamente con la repository ufficiale del progetto Design Tokens Italia [italia/design-tokens-italia](https://github.com/italia/design-tokens-italia). I valori mostrati corrispondono alla versione `@latest` dei token.
 {% endcapture %}{% include callout.html content=callout type="info" %}
 
-## Struttura dei Token
+## Struttura
 I design tokens sono organizzati in due livelli:
 
-### Token Globali (Global Tokens)
+### Token globali
 Valori primitivi che definiscono la palette di base del sistema.
 
-### Token Semantici (Semantic Tokens)
+### Token semantici 
 Valori che hanno un significato specifico nel contesto del design system e referenziano i token globali.
 
 ## Colori
@@ -35,13 +42,13 @@ Valori che hanno un significato specifico nel contesto del design system e refer
 <div class="design-tokens-section" id="color-tokens">
   <!-- Placeholder per l'import automatico dei color tokens -->
   <div class="token-group">
-    <h4>Primary</h4>
+    <h4>Colore primario</h4>
     <div class="color-token-grid">
       <!-- Sarà popolato automaticamente da script -->
     </div>
   </div>
   <div class="token-group">
-    <h4>Semantic Colors</h4>
+    <h4>Colori semantici</h4>
     <div class="color-token-grid">
       <!-- Sarà popolato automaticamente da script -->
     </div>
@@ -50,7 +57,7 @@ Valori che hanno un significato specifico nel contesto del design system e refer
 
 ## Tipografia
 
-### Font Families
+### Famiglie di font
 
 <div class="design-tokens-section" id="typography-tokens">
   <table class="table table-striped">
@@ -58,8 +65,8 @@ Valori che hanno un significato specifico nel contesto del design system e refer
       <tr>
         <th>Token</th>
         <th>Valore</th>
-        <th>CSS Custom Property</th>
-        <th>Utilizzo</th>
+        <th>CSS custom property</th>
+        <th>Uso</th>
       </tr>
     </thead>
     <tbody id="typography-tokens-table">
@@ -68,7 +75,7 @@ Valori che hanno un significato specifico nel contesto del design system e refer
   </table>
 </div>
 
-### Font Sizes
+### Dimensioni dei font
 <div class="design-tokens-section" id="font-size-tokens">
   <div class="font-size-preview">
     <!-- Popolato automaticamente con preview delle dimensioni -->
@@ -77,14 +84,14 @@ Valori che hanno un significato specifico nel contesto del design system e refer
 
 ## Spaziature
 
-### Spacing scale
+### Spaziature
 <div class="design-tokens-section" id="spacing-tokens">
   <div class="spacing-scale">
     <!-- Popolato automaticamente con scala spaziature -->
   </div>
 </div>
 
-### Border radius
+### Bordi arrotondati
 <div class="design-tokens-section" id="radius-tokens">
   <div class="radius-examples">
     <!-- Esempi di border radius popolati automaticamente -->
@@ -100,8 +107,8 @@ Valori che hanno un significato specifico nel contesto del design system e refer
 
 ## Utilizzo nei componenti
 
-### CSS Custom properties 
-Tutti i design tokens sono esposti come CSS custom properties:
+### CSS custom properties 
+I design tokens sono esposti nel codice come CSS custom property:
 
 ```scss
 /* Esempio di utilizzo */
@@ -114,7 +121,7 @@ Tutti i design tokens sono esposti come CSS custom properties:
 ```
 
 #### Personalizzazione
-Puoi sovrascrivere i token definendo le CSS custom property:
+Puoi sovrascrivere i token definendo quindi CSS custom property per sovrascrivere il valore di default:
 
 ```scss
 :root {
@@ -140,6 +147,8 @@ Puoi sovrascrivere i token definendo le CSS custom property:
 <script>
 // Script che verrà implementato per importare automaticamente 
 // i token dalla repository italia/design-tokens
+// Segnaposto/SANDBOX / XXX
+//
 (function() {
   'use strict';
   
