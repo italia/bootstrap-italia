@@ -9,7 +9,7 @@
 // Properties
 //
 
-// Styles.pagination {
+.pagination {  
   --#{$prefix}pagination-padding-x: var(--#{$prefix}spacing-s);
   --#{$prefix}pagination-padding-y: var(--#{$prefix}spacing-xxs);
   --#{$prefix}pagination-link-color: var(--#{$prefix}color-link);
@@ -19,7 +19,11 @@
   --#{$prefix}pagination-border-radius: #{$pagination-border-radius};
   --#{$prefix}pagination-item-size: 3rem;
   --#{$prefix}pagination-font-size: var(--#{$prefix}label-font-size);
+}
 
+// Styles
+
+.pagination {
   display: flex;
   flex-wrap: wrap;
   @include list-unstyled();

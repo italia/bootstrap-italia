@@ -29,15 +29,12 @@
 // Styles
 //
 
-@use 'sass:math';
-
 // Avatar variants map
 // Edit the colors to match your theme or add more variants
 $avatar-variants: (
   primary: $color-primary,
   secondary: $color-secondary,
 );
-
 
 .avatar {
   position: relative;
