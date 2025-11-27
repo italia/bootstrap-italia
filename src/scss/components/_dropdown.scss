@@ -9,7 +9,7 @@
 // Properties
 //
 
-.dropdown-menu {
+.dropdown {
   --#{$prefix}dropdown-animation-speed: var(--#{$prefix}transition-instant);
   --#{$prefix}dropdown-background: var(--#{$prefix}color-background-inverse);
   --#{$prefix}dropdown-border-color: transparent;
