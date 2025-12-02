@@ -612,6 +612,7 @@ $utilities: map-merge(
           map-merge(
             $utilities-text-colors,
             (
+              'secondary': $color-text-secondary,
               'muted': $text-muted,
               'black-50': rgba($black, 0.5),
               // deprecated
