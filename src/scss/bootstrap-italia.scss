@@ -1,4 +1,4 @@
-@use '~design-tokens-italia/dist/css/variables.css';
+@use '~design-tokens-italia/dist/scss/variables';
 
 @import 'base/mixins/banner';
 @include bsBanner('');
