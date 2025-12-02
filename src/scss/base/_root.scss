@@ -1,5 +1,3 @@
-@import 'vendor/tokens';
-
 :root {
   @each $color, $value in $colors {
     --#{$prefix}#{$color}: #{$value};
