@@ -80,3 +80,8 @@ Se hai bisogno di trasformare un badge in un link, aggiungi una delle classi con
 {% for color in site.data.theme-colors %}
 <a href="#" class="badge badge-{{ color.name }}">{{ color.name | capitalize }}</a>{% endfor %}
 {% endcapture %}{% include example.html content=example %}
+
+{% capture callout %}
+Le classi che controllano il colore diventano specifiche per il componente, ad esempio le classi `.bg-secondary` e `.bg-white` diventano `.badge-secondary` e `.badge-inverse`.
+Viene definita la classe `.badge-sm` per l'uso mirato all'intero di pulsanti.  
+{% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}
