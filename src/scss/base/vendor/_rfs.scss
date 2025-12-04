@@ -1,5 +1,7 @@
 // stylelint-disable property-blacklist, scss/dollar-variable-default
 
+@use "sass:meta";
+
 // SCSS RFS mixin
 //
 // Automated responsive values for font sizes, paddings, margins and much more
@@ -30,7 +32,7 @@ $rfs-two-dimensional: false !default;
 // Factor of decrease
 $rfs-factor: 10 !default;
 
-@if type-of($rfs-factor) != number or $rfs-factor <= 1 {
+@if meta.type-of($rfs-factor) != number or $rfs-factor <= 1 {
   @error "`#{$rfs-factor}` is not a valid  $rfs-factor, it must be greater than 1.";
 }
 
