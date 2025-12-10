@@ -2,7 +2,7 @@
 // Docs color palette classes
 //
 
-@use "sass:color";
+@use 'sass:color';
 
 @each $color, $value in $colors {
   .swatch-#{$color} {
