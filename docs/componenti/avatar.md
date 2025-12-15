@@ -376,20 +376,20 @@ Gruppo di avatar sovrapposti di dimensione piccola con classe `.size-sm`.
                 </a>
               </li>
               <li>
-                <div class="dropdown-item list-item">
+                <a class="dropdown-item list-item" href="#">
                   <div class="avatar avatar-primary size-sm">
                     <p aria-hidden="true">S</p>
                   </div>
                   <span>Sara Ghione</span>
-                </div>
+                </a>
               </li>
               <li>
-                <div class="dropdown-item list-item">
+                <a class="dropdown-item list-item" href="#">
                   <div class="avatar size-sm">
                     <svg class="icon icon-secondary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-user"></use></svg>
                   </div>
                   <span>Antonio Esposito</span>
-                </div>
+                </a>
               </li>
             </ul>
           </div>
