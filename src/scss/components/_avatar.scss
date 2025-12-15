@@ -308,7 +308,6 @@ a .avatar:hover p {
   & > li {
     margin-bottom: var(--#{$prefix}spacing-s);
     display: flex;
-    line-height: auto;
 
     &:last-child {
       margin-bottom: 0;
