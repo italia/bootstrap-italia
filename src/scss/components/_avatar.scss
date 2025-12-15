@@ -307,6 +307,7 @@ a .avatar:hover p {
 .avatar-group {
   & > li {
     margin-bottom: var(--#{$prefix}spacing-s);
+    display: flex;
     line-height: auto;
 
     &:last-child {
