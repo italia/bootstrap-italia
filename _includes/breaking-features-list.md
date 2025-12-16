@@ -69,7 +69,6 @@ Implementato nell'esempio il nuovo componente card definito dalle classi `.it-ca
 
 Le classi legacy di Bootstrap `.card` sono ora deprecate ma **saranno mantenute nei fogli di stile fino al prossimo rilascio maggiore, per permettere una migrazione graduale**. 
 
-
 ## 2.15.0
 
 [Changelog completo](https://github.com/italia/bootstrap-italia/releases/tag/v2.15.0) <svg class="icon steppers-success" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>

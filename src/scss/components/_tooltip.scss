@@ -1,18 +1,32 @@
+// Component: tooltip
+//
+// Description: Component styles for tooltip
+//
+
+// Variables
+//
+
+// Properties
+//
+
+// Styles
+//
+
 // Base class
 .tooltip {
   // scss-docs-start tooltip-css-vars
-  --#{$prefix}tooltip-zindex: #{$zindex-tooltip};
-  --#{$prefix}tooltip-max-width: #{$tooltip-max-width};
-  --#{$prefix}tooltip-padding-x: #{$tooltip-padding-x};
-  --#{$prefix}tooltip-padding-y: #{$tooltip-padding-y};
-  --#{$prefix}tooltip-margin: #{$tooltip-margin};
-  @include rfs($tooltip-font-size, --#{$prefix}tooltip-font-size);
-  --#{$prefix}tooltip-color: #{$tooltip-color};
+  --#{$prefix}tooltip-arrow-height: #{$tooltip-arrow-height};
+  --#{$prefix}tooltip-arrow-width: #{$tooltip-arrow-width};
   --#{$prefix}tooltip-bg: #{$tooltip-bg};
   --#{$prefix}tooltip-border-radius: #{$tooltip-border-radius};
+  --#{$prefix}tooltip-color: #{$tooltip-color};
+  @include rfs($tooltip-font-size, --#{$prefix}tooltip-font-size);
+  --#{$prefix}tooltip-margin: #{$tooltip-margin};
+  --#{$prefix}tooltip-max-width: #{$tooltip-max-width};
   --#{$prefix}tooltip-opacity: #{$tooltip-opacity};
-  --#{$prefix}tooltip-arrow-width: #{$tooltip-arrow-width};
-  --#{$prefix}tooltip-arrow-height: #{$tooltip-arrow-height};
+  --#{$prefix}tooltip-padding-x: #{$tooltip-padding-x};
+  --#{$prefix}tooltip-padding-y: #{$tooltip-padding-y};
+  --#{$prefix}tooltip-zindex: #{$zindex-tooltip};
   // scss-docs-end tooltip-css-vars
 
   z-index: var(--#{$prefix}tooltip-zindex);
