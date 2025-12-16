@@ -11,30 +11,30 @@ link. Quando è necessario un maggiore controllo, fornisce delle
 [classi di utilità testuali]({{ site.baseurl }}/docs/organizzare-i-contenuti/testo/).
 
 {% capture callout %}
-Cosa cambia nella tipografia dalla versione **2.7.0** della libreria
+Le scelte tipografiche di Bootstrap Italia seguono le indicazioni del [Design system .italia](https://designers.italia.it/design-system/fondamenti/tipografia/). Per approfondimenti su gerarchia visiva, spaziature e uso dei caratteri, consulta la documentazione ufficiale.
+{% endcapture %}{% include callout.html content=callout type="info" %}
 
-- reimpostata la dimensione del carattere di base su `16px` su `body`.
-- sostituite le unità `em` con `rem`.
-- aggiornati i valori `font-size` per corrispondere al nuovo calcolo dell'unità `rem`.
-- rimosse le variabili obsolete e inutilizzate da `_variables.scss`
-- variabili specifiche dei componenti aggiornate e allineate al `kit UI v3.0`
+## Famiglie di caratteri
 
-{% endcapture %}{% include callout.html content=callout type="danger" %}
+Bootstrap Italia include tre famiglie di caratteri tipografici per garantire leggibilità e coerenza visiva:
 
-## Famiglie di Caratteri
+- **Titillium** (Web o Sans Pro): font principale sans-serif per interfacce e testi brevi
+- **Lora**: font serif per contenuti editoriali e testi lunghi
+- **Roboto Mono**: font monospace per codice, dati tabulari e numeri
 
-Come descritto in dettaglio nel capitolo sullo UI Kit, le Linee Guida di Design
-suggeriscono di usare le seguenti famiglie di caratteri:
+{% capture callout %}
+Per informazioni su come caricare i font (via JavaScript, CSS o bundle) e scegliere tra le varianti Titillium Web e Titillium Sans Pro, consulta la [**pagina dedicata Font**]({{ site.baseurl }}/docs/come-iniziare/font/).
+{% endcapture %}{% include callout.html content=callout type="info" %}
 
-- il font senza grazie, o _sans serif_, **Titillium Web**.
-- il font graziato, o _serif_, **Lora**.
-- il font _monospace_ con dimensioni di caratteri normalizzate **Roboto Mono**.
+### Titillium (font principale)
 
-### Titillium Web
+Bootstrap Italia supporta due varianti del carattere Titillium:
+- **Titillium Web** (default): versione originale e carattere di riferimento del Design system .italia
+- **Titillium Sans Pro**: evoluzione con supporto linguistico esteso e simboli matematici.
 
-È la famiglia di caratteri utilizzata per i contenuti web, per cui di norma non
-è necessario applicarlo esplicitamente. In caso si renda necessario è possibile
-utilizzare la classe `font-sans-serif`.
+Nella documentazione puoi esplorare la resa delle due versioni usando il selettore "Font principale" nella barra laterale.
+
+Il font Titillium è utilizzato di default, per cui di norma non è necessario applicarlo esplicitamente. In caso si renda necessario è possibile utilizzare la classe `.font-sans-serif`.
 
 {% comment %}Example name: Titillium Web{% endcomment %}
 {% capture example %}
@@ -43,11 +43,9 @@ utilizzare la classe `font-sans-serif`.
 <p class="font-sans-serif">0123456789</p>
 {% endcapture %}{% include example.html content=example %}
 
-### Lora
+### Lora (font serif)
 
-È un carattere più adatto a testi lunghi, introdotto per la sua leggibilità,
-nato espressamente per la lettura su display. Può essere utilizzato applicando
-la classe `font-serif`.
+Lora è un carattere serif progettato espressamente per la lettura su display, particolarmente adatto per testi lunghi e contenuti editoriali. Può essere utilizzato applicando la classe `.font-serif`.
 
 {% comment %}Example name: Lora{% endcomment %}
 {% capture example %}
@@ -56,13 +54,11 @@ la classe `font-serif`.
 <p class="font-serif">0123456789</p>
 {% endcapture %}{% include example.html content=example %}
 
-### Roboto Mono
+### Roboto Mono (font monospace)
 
-È una famiglia di caratteri adatta ad essere utilizzata per la rappresentazione
-di numeri, codici, calcoli matematici, esempi con linguaggi di programmazione.
-Per il suo utilizzo, è sufficiente usare la classe `font-monospace`.
+Roboto Mono è una famiglia di caratteri monospace adatta alla rappresentazione di codice, numeri, calcoli matematici e dati tabulari. Per utilizzarlo, è sufficiente usare la classe `.font-monospace`.
 
-{% comment %}Example name: Roboto{% endcomment %}
+{% comment %}Example name: Roboto Mono{% endcomment %}
 {% capture example %}
 <p class="font-monospace">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
 <p class="font-monospace">abcdefghijklmnopqrstuvwxyz</p>
@@ -84,6 +80,7 @@ Tutte le intestazioni HTML, da `<h1>` fino a `<h6>`, sono disponibili, anche se
 è buona norma non utilizzare più di 4 livelli di intestazione.
 
 L'interlinea è impostata con il rapporto di  `1.2`.
+
 
 
 {% comment %}Example name: Intestazioni{% endcomment %}
@@ -111,7 +108,7 @@ sono disponibili anche classi di tipo `.h1`, `.h2`, ecc.
 <p class="h6">Testo con classe .h6</p>
 {% endcapture %}{% include example.html content=example %}
 
-Queste le dimensioni nel dettaglio:
+Queste le dimensioni nel dettaglio, espresse in pixel con il relativo peso (font-weight) e interlinea (line-height):
 
 <table class="mb-5">
   <thead>
@@ -252,16 +249,19 @@ e [utilità di colore]({{ site.baseurl }}/docs/utilities/colori/).
 
 #### Accessibilità
 
-È fondamentale evidenziare i link presenti in un paragrafo in modo adeguato, utilizzando la forma (grassetto, sottolineato) oltre al colore per indicare la presenza di un collegamento ipertestuale.
+È fondamentale evidenziare i link presenti in un paragrafo in modo adeguato, utilizzando la sottolineatura oltre al colore per indicare la presenza di un collegamento ipertestuale.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
-Nel rispetto delle regole di accessibilità vigenti, Bootstrap Italia mantiene la sottolineatura ai link di tipo `<a>`. Nel caso di link già in evidenza (menu principali, liste di link, link in grassetto, ecc.), è possibile rimuovere la sottolineatura utilizzando la classe `.text-decoration-none`.
+Nel rispetto delle regole di accessibilità vigenti, Bootstrap Italia mantiene la sottolineatura ai link di tipo `<a>`. Nel caso in cui si voglia aggiungere un'icona a fianco del link, questa può essere inserita direttamente all'interno del tag `<a>`, come mostrato nell'esempio seguente.
 
 {% comment %}Example name: Link{% endcomment %}
 {% capture example %}
 <p>Esempio di <a href="#">link normale</a>.</p>
-<p>Esempio di <a href="#" class="text-decoration-none fw-bold">link in grassetto senza sottolineatura</a>.</p>
+<p>Esempio di <a href="#">link con icona <svg role="img" class="icon icon-sm icon-primary"><title>Freccia destra</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg></a></p>
 {% endcapture %}{% include example.html content=example %}
+
+ Nel caso di link già in evidenza (menu di navigazione, dropdown menu, liste di link, ecc.), è possibile rimuovere la sottolineatura utilizzando la classe `.text-decoration-none`. Vai agli esempi di [link senza sottolineatura]({{ site.baseurl }}/docs/organizzare-i-contenuti/liste/#liste-per-menu-di-navigazione).
+
 
 ## Abbreviazioni
 
@@ -436,3 +436,13 @@ con un `ellipsis`.
   </dd>
 </dl>
 {% endcapture %}{% include example.html content=example %}
+
+## Breaking change
+
+{% capture callout %}
+- Reimpostata la dimensione del carattere di base su `16px` su `body`.
+- Sostituite le unità `em` con `rem`.
+- Aggiornati i valori `font-size` per corrispondere al nuovo calcolo dell'unità `rem`.
+- Rimosse le variabili obsolete e inutilizzate da `_variables.scss`.
+- Variabili specifiche dei componenti aggiornate e allineate a `UI Kit Italia v3`.
+{% endcapture %}{% include callout-breaking.html content=callout version="2.7.0" type="danger" %}
