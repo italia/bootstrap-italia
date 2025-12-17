@@ -517,7 +517,7 @@ Inserire un `<span>` riservato agli screen reader con indicazione della presenza
     <div class="avatar size-xl">
       <img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Luisa Neri">
       <div class="avatar-presence busy">
-        <svg class="icon icon-white"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-minus"></use></svg>
+        <svg class="icon icon-inverse"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-minus"></use></svg>
         <span class="visually-hidden">Presenza: non disponibile</span>
       </div>
     </div>
@@ -536,7 +536,7 @@ Inserire un `<span>` riservato agli screen reader con indicazione della presenza
     <div class="avatar size-md">
       <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Ludovica Galli">
       <div class="avatar-presence busy">
-        <svg class="icon icon-white"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-minus"></use></svg>
+        <svg class="icon icon-inverse"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-minus"></use></svg>
         <span class="visually-hidden">Presenza: non disponibile</span>
       </div>
     </div>
@@ -545,7 +545,7 @@ Inserire un `<span>` riservato agli screen reader con indicazione della presenza
     <div class="avatar size-lg">
       <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Ludovica Galli">
       <div class="avatar-presence busy">
-        <svg class="icon icon-white"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-minus"></use></svg>
+        <svg class="icon icon-inverse"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-minus"></use></svg>
         <span class="visually-hidden">Presenza: non disponibile</span>
       </div>
     </div>
@@ -554,7 +554,7 @@ Inserire un `<span>` riservato agli screen reader con indicazione della presenza
     <div class="avatar size-xl">
       <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Ludovica Galli">
       <div class="avatar-presence busy">
-        <svg class="icon icon-white"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-minus"></use></svg>
+        <svg class="icon icon-inverse"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-minus"></use></svg>
         <span class="visually-hidden">Presenza: non disponibile</span>
       </div>
     </div>
@@ -563,7 +563,7 @@ Inserire un `<span>` riservato agli screen reader con indicazione della presenza
     <div class="avatar size-xxl">
       <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Ludovica Galli">
       <div class="avatar-presence busy">
-        <svg class="icon icon-white"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-minus"></use></svg>
+        <svg class="icon icon-inverse"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-minus"></use></svg>
         <span class="visually-hidden">Presenza: non disponibile</span>
       </div>
     </div>
@@ -595,7 +595,7 @@ Inserire un `<span>` riservato agli screen reader con indicazione dello stato de
     <div class="avatar size-xl">
       <img src="https://randomuser.me/api/portraits/men/43.jpg" alt="Mario Rossi">
       <div class="avatar-status approved">
-        <svg class="icon icon-white"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg>
+        <svg class="icon icon-inverse"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg>
         <span class="visually-hidden">Stato: approvato</span>
       </div>
     </div>
@@ -604,7 +604,7 @@ Inserire un `<span>` riservato agli screen reader con indicazione dello stato de
     <div class="avatar size-xl">
       <img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Luisa Neri">
       <div class="avatar-status declined">
-        <svg class="icon icon-white"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
+        <svg class="icon icon-inverse"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
         <span class="visually-hidden">Stato: respinto</span>
       </div>
     </div>
@@ -623,7 +623,7 @@ Inserire un `<span>` riservato agli screen reader con indicazione dello stato de
     <div class="avatar size-md">
       <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Ludovica Galli">
       <div class="avatar-status approved">
-        <svg class="icon icon-white"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg>
+        <svg class="icon icon-inverse"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg>
         <span class="visually-hidden">Stato: approvato</span>
       </div>
     </div>
@@ -632,7 +632,7 @@ Inserire un `<span>` riservato agli screen reader con indicazione dello stato de
     <div class="avatar size-lg">
       <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Ludovica Galli">
       <div class="avatar-status declined">
-        <svg class="icon icon-white"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
+        <svg class="icon icon-inverse"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
         <span class="visually-hidden">Stato: respinto</span>
       </div>
     </div>
@@ -641,7 +641,7 @@ Inserire un `<span>` riservato agli screen reader con indicazione dello stato de
     <div class="avatar size-xl">
       <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Ludovica Galli">
       <div class="avatar-status approved">
-        <svg class="icon icon-white"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg>
+        <svg class="icon icon-inverse"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg>
         <span class="visually-hidden">Stato: approvato</span>
       </div>
     </div>
@@ -650,7 +650,7 @@ Inserire un `<span>` riservato agli screen reader con indicazione dello stato de
     <div class="avatar size-xxl">
       <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Ludovica Galli">
       <div class="avatar-status declined">
-        <svg class="icon icon-white"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
+        <svg class="icon icon-inverse"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
         <span class="visually-hidden">Stato: respinto</span>
       </div>
     </div>
