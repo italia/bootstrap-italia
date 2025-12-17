@@ -22,7 +22,7 @@ jobs:
       env:
         GH_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
     - run: python extract_examples.py
-    - run: python extract_tokens.py
+    - run: python extract_custom_properties.py
     - name: Setup Git
       uses: fregante/setup-git-user@v1
     - name: Add API stuff
