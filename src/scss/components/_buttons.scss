@@ -1,31 +1,36 @@
+// Component: buttons
 //
-// Sass variables used in function
+// Description: Component styles for buttons
+//
+
+// Variables
+//
 
 $btn-close-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$btn-close-color}'><path d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/></svg>") !default;
 $btn-close-white-filter: invert(1) grayscale(100%) brightness(200%) !default;
 
+// Properties
 //
-// Component properties
 
 .btn {
-  --#{$prefix}btn-padding-x: var(--#{$prefix}spacing-s);
-  --#{$prefix}btn-padding-y: var(--#{$prefix}spacing-xs);
-  --#{$prefix}btn-font-family: var(--#{$prefix}font-sans);
-  --#{$prefix}btn-font-weight: var(--#{$prefix}font-weight-solid);
-  --#{$prefix}btn-font-size: var(--#{$prefix}label-font-size);
-  --#{$prefix}btn-line-height: var(--#{$prefix}font-line-height-3);
-  --#{$prefix}btn-text-color: var(--#{$prefix}color-text-primary);
   --#{$prefix}btn-background: transparent; // default to transparent
-  --#{$prefix}btn-border-size: 0; // default to 0
   --#{$prefix}btn-border-color: transparent;
   --#{$prefix}btn-border-radius: var(--#{$prefix}radius-smooth);
-  --#{$prefix}btn-outline-border-size: 2px;
-  --#{$prefix}btn-outline-border-color: transparent;
+  --#{$prefix}btn-border-size: 0; // default to 0
   --#{$prefix}btn-disabled-opacity: 0.5;
+  --#{$prefix}btn-font-family: var(--#{$prefix}font-sans);
+  --#{$prefix}btn-font-size: var(--#{$prefix}label-font-size);
+  --#{$prefix}btn-font-weight: var(--#{$prefix}font-weight-solid);
+  --#{$prefix}btn-line-height: var(--#{$prefix}font-line-height-3);
+  --#{$prefix}btn-outline-border-color: transparent;
+  --#{$prefix}btn-outline-border-size: 2px;
+  --#{$prefix}btn-padding-x: var(--#{$prefix}spacing-s);
+  --#{$prefix}btn-padding-y: var(--#{$prefix}spacing-xs);
+  --#{$prefix}btn-text-color: var(--#{$prefix}color-text-primary);
 }
 
+// Styles
 //
-// Component styles
 
 .btn {
   display: inline-block;
@@ -238,7 +243,7 @@ a.btn-outline {
     --#{$prefix}btn-outline-border-color: var(--#{$prefix}color-border-primary);
     --#{$prefix}btn-text-color: var(--#{$prefix}color-text-primary);
     &:hover {
-      --#{$prefix}btn-outline-border-color: var(--#{$prefix}color-border-primary-hover);
+      --#{$prefix}btn-outline-border-color: color-mix(in srgb, var(--#{$prefix}color-border-primary-hover) 70%, black); // more contrast on hover
       --#{$prefix}btn-text-color: var(--#{$prefix}color-link-hover);
     }
     &:active {
@@ -268,7 +273,8 @@ a.btn-outline {
     --#{$prefix}btn-text-color: var(--#{$prefix}color-text-success);
 
     &:hover {
-      --#{$prefix}btn-outline-border-color: var(--#{$prefix}color-border-success-hover);
+      /* aumenta contrasto scurendo il bordo rispetto al token base */
+      --#{$prefix}btn-outline-border-color: color-mix(in srgb, var(--#{$prefix}color-border-success-hover) 70%, black); // more contrast on hover
       --#{$prefix}btn-text-color: var(--#{$prefix}color-text-success-hover);
     }
     &:active {
@@ -283,7 +289,7 @@ a.btn-outline {
     --#{$prefix}btn-text-color: var(--#{$prefix}color-text-warning);
 
     &:hover {
-      --#{$prefix}btn-outline-border-color: var(--#{$prefix}color-border-warning-hover);
+      --#{$prefix}btn-outline-border-color: color-mix(in srgb, var(--#{$prefix}color-border-warning-hover) 70%, black); // more contrast on hover
       --#{$prefix}btn-text-color: var(--#{$prefix}color-text-warning-hover);
     }
     &:active {
@@ -298,7 +304,7 @@ a.btn-outline {
     --#{$prefix}btn-text-color: var(--#{$prefix}color-text-danger);
 
     &:hover {
-      --#{$prefix}btn-outline-border-color: var(--#{$prefix}color-border-danger-hover);
+      --#{$prefix}btn-outline-border-color: color-mix(in srgb, var(--#{$prefix}color-border-danger-hover) 70%, black); // more contrast on hover
       --#{$prefix}btn-text-color: var(--#{$prefix}color-text-danger-hover);
     }
     &:active {

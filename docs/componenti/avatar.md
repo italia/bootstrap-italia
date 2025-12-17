@@ -201,9 +201,11 @@ Per associare un avatar ad un'azione o un link, utilizzare il tag `<a>` con rela
 
 Gli avatar possono essere raggruppati in liste verticali ed orizzontali.
 
-### Lista
+### Lista di link con avatar
 
-Utilizzando una <a href="{{ site.baseurl }}/docs/organizzare-i-contenuti/liste/#liste-per-menu-di-navigazione">lista di link</a> con l'aggiunta della classe `.avatar-group` si ottiene una lista verticale con avatar affiancati da link e testi.
+Utilizza la <a href="{{ site.baseurl }}/docs/organizzare-i-contenuti/liste/#liste-per-menu-di-navigazione">lista di link</a> aggiungendo la classe `.avatar-group` per creare una lista verticale con avatar affiancati da link e testi.
+
+
 
 #### Lista piccola
 
@@ -376,20 +378,20 @@ Gruppo di avatar sovrapposti di dimensione piccola con classe `.size-sm`.
                 </a>
               </li>
               <li>
-                <div class="dropdown-item list-item">
+                <a class="dropdown-item list-item" href="#">
                   <div class="avatar avatar-primary size-sm">
                     <p aria-hidden="true">S</p>
                   </div>
                   <span>Sara Ghione</span>
-                </div>
+                </a>
               </li>
               <li>
-                <div class="dropdown-item list-item">
+                <a class="dropdown-item list-item" href="#">
                   <div class="avatar size-sm">
                     <svg class="icon icon-secondary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-user"></use></svg>
                   </div>
                   <span>Antonio Esposito</span>
-                </div>
+                </a>
               </li>
             </ul>
           </div>

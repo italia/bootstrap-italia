@@ -1,4 +1,33 @@
-@use 'sass:math';
+// Component: avatar
+//
+// Description: Component styles for avatar
+//
+
+// Variables
+//
+
+// Properties
+//
+
+.avatar {
+  --#{$prefix}avatar-background: var(--#{$prefix}color-background-secondary-lighter);
+  --#{$prefix}avatar-dot-border-color: var(--#{$prefix}color-border-inverse);
+  --#{$prefix}avatar-dot-border-size: 2px;
+  --#{$prefix}avatar-dot-offset-bottom: 0;
+  --#{$prefix}avatar-dot-offset-right: 0;
+  --#{$prefix}avatar-dot-offset-top: 4px;
+  --#{$prefix}avatar-dot-size: 12px;
+  --#{$prefix}avatar-font-size: var(--#{$prefix}font-size-3);
+  --#{$prefix}avatar-font-weight: var(--#{$prefix}font-weight-solid);
+  --#{$prefix}avatar-icon-size: var(--#{$prefix}icon-size-s);
+  --#{$prefix}avatar-overlay-background: var(--#{$prefix}color-background-emphasis);
+  --#{$prefix}avatar-radius: var(--#{$prefix}radius-circle);
+  --#{$prefix}avatar-size: 2.5rem; // default size - see '.size-' classes for other sizes
+  --#{$prefix}avatar-text-color: var(--#{$prefix}color-text-secondary);
+}
+
+// Styles
+//
 
 // Avatar variants map
 // Edit the colors to match your theme or add more variants
@@ -6,29 +35,6 @@ $avatar-variants: (
   primary: $color-primary,
   secondary: $color-secondary,
 );
-
-//
-// Custom properties
-
-.avatar {
-  --#{$prefix}avatar-background: var(--#{$prefix}color-background-secondary-lighter);
-  --#{$prefix}avatar-text-color: var(--#{$prefix}color-text-secondary);
-  --#{$prefix}avatar-font-size: var(--#{$prefix}font-size-3);
-  --#{$prefix}avatar-font-weight: var(--#{$prefix}font-weight-solid);
-  --#{$prefix}avatar-icon-size: var(--#{$prefix}icon-size-s);
-  --#{$prefix}avatar-radius: var(--#{$prefix}radius-circle);
-  --#{$prefix}avatar-size: 2.5rem; // default size - see '.size-' classes for other sizes
-  --#{$prefix}avatar-dot-size: 12px;
-  --#{$prefix}avatar-dot-border-size: 2px;
-  --#{$prefix}avatar-dot-border-color: var(--#{$prefix}color-border-inverse);
-  --#{$prefix}avatar-dot-offset-right: 0;
-  --#{$prefix}avatar-dot-offset-top: 4px;
-  --#{$prefix}avatar-dot-offset-bottom: 0;
-  --#{$prefix}avatar-overlay-background: var(--#{$prefix}color-background-emphasis);
-}
-
-//
-// Component styles
 
 .avatar {
   position: relative;
@@ -301,7 +307,7 @@ a .avatar:hover p {
 .avatar-group {
   & > li {
     margin-bottom: var(--#{$prefix}spacing-s);
-    line-height: auto;
+    display: flex;
 
     &:last-child {
       margin-bottom: 0;

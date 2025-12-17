@@ -14,19 +14,49 @@ Gli avvisi sono disponibili in quattro tipologie diverse e sono adatti a qualsia
 {% capture example %}
 
 <div class="alert alert-primary" role="alert">
-  <p class="mb-0"><svg class="alert-icon icon"><use href="/dist/svg/sprites.svg#it-info-circle"></use></svg> Questo è un alert di tipo "<strong>primary</strong>".</p>
+  <p class="mb-0">
+    <svg class="alert-icon icon" role="img">
+      <title>Testo significato icon</title>
+      <use href="/dist/svg/sprites.svg#it-info-circle"></use>
+    </svg> 
+    Questo è un alert di tipo "<strong>primary</strong>".
+  </p>
 </div>
 <div class="alert alert-secondary" role="alert">
-  <p class="mb-0"><svg class="alert-icon icon"><use href="/dist/svg/sprites.svg#it-info-circle"></use></svg> Questo è un alert di tipo "<strong>info</strong>".</p>
+  <p class="mb-0">
+    <svg class="alert-icon icon" role="img">
+      <title>Testo significato icon</title>
+      <use href="/dist/svg/sprites.svg#it-info-circle"></use>
+    </svg> 
+    Questo è un alert di tipo "<strong>info</strong>".
+  </p>
 </div>
 <div class="alert alert-success" role="alert">
-  <p class="mb-0"><svg class="alert-icon icon"><use href="/dist/svg/sprites.svg#it-check-circle"></use></svg> Questo è un alert di tipo "<strong>success</strong>".</p>
+  <p class="mb-0">
+    <svg class="alert-icon icon" role="img">
+      <title>Testo significato icon</title>
+      <use href="/dist/svg/sprites.svg#it-check-circle"></use>
+    </svg> 
+    Questo è un alert di tipo "<strong>success</strong>".
+  </p>
 </div>
 <div class="alert alert-warning" role="alert">
-  <p class="mb-0"><svg class="alert-icon icon"><use href="/dist/svg/sprites.svg#it-warning-circle"></use></svg> Questo è un alert di tipo "<strong>warning</strong>".</p>
+  <p class="mb-0">
+    <svg class="alert-icon icon" role="img">
+      <title>Testo significato icon</title>
+      <use href="/dist/svg/sprites.svg#it-warning-circle"></use>
+    </svg> 
+    Questo è un alert di tipo "<strong>warning</strong>".
+  </p>
 </div>
 <div class="alert alert-danger" role="alert">
-  <p class="mb-0"><svg class="alert-icon icon"><use href="/dist/svg/sprites.svg#it-error"></use></svg> Questo è un alert di tipo "<strong>danger</strong>".</p>
+  <p class="mb-0">
+    <svg class="alert-icon icon">
+      <title>Testo significato icon</title>
+      <use href="/dist/svg/sprites.svg#it-error"></use>
+    </svg> 
+    Questo è un alert di tipo "<strong>danger</strong>".
+  </p>
 </div>
 
 {% endcapture %}

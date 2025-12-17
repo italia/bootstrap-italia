@@ -9,7 +9,7 @@
 
 _🇬🇧 [English version](README.EN.md)_
 
-_⚠️ [La versione 1.x di Bootstrap Italia (basata su Bootstrap 4) è deprecata](https://github.com/italia/bootstrap-italia/tree/1.x)_
+_⚠️ Attenzione: questo branch 3.x è in lavorazione. Non è consigliato per l'utilizzo in ambienti di produzione._
 
 Bootstrap Italia è un framework basato su [Bootstrap 5](https://getbootstrap.com/docs/5.2/getting-started/introduction/).
 

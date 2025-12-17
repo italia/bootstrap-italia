@@ -127,7 +127,7 @@ La struttura dei metadati include:
       <!--finally the card footer metadata-->
       <footer class="it-card-related it-card-footer">
         <div class="it-card-taxonomy">
-          <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
+          <a href="#" class="it-card-category it-card-link"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
         </div>
         <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
       </footer>
@@ -253,7 +253,7 @@ Per indicare l'autore del contenuto, usa l'elemento semantico `address` con clas
       <!--finally the card footer metadata-->
       <footer class="it-card-related it-card-footer">
         <div class="it-card-taxonomy">
-          <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
+          <a href="#" class="it-card-category it-card-link"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
         </div>
         <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
       </footer>
@@ -359,7 +359,7 @@ Per invertire solamente l'ordine visivo tra destra e sinistra, applica la classe
         </div>
         <footer class="it-card-related it-card-footer">
           <div class="it-card-taxonomy">
-            <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
+            <a href="#" class="it-card-category it-card-link"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
           </div>
           <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
         </footer>
@@ -390,7 +390,7 @@ Per invertire solamente l'ordine visivo tra destra e sinistra, applica la classe
         </div>
         <footer class="it-card-related it-card-footer">
           <div class="it-card-taxonomy">
-            <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
+            <a href="#" class="it-card-category it-card-link"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
           </div>
           <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
         </footer>
@@ -430,7 +430,7 @@ Consigliamo di non aggiungere altri contenuti oltre al titolo (da mantenere brev
         </h3>
         <footer class="it-card-related it-card-footer">
           <div class="it-card-taxonomy">
-            <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
+            <a href="#" class="it-card-category it-card-link"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
           </div>
           <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-10-12">22 aprile, {{ 'now' | date: "%Y" }}</time>
         </footer>
@@ -456,7 +456,7 @@ Consigliamo di non aggiungere altri contenuti oltre al titolo (da mantenere brev
         </h3>
         <footer class="it-card-related it-card-footer">
           <div class="it-card-taxonomy">
-            <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
+            <a href="#" class="it-card-category it-card-link"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
           </div>
           <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
         </footer>
@@ -529,7 +529,7 @@ Ricorda di usare:
         <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
         <footer class="it-card-related">
           <div class="it-card-taxonomy">
-            <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
+            <a href="#" class="it-card-category it-card-link"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
           </div>
           <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
         </footer>
@@ -576,7 +576,7 @@ Ricorda di usare:
         <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
         <footer class="it-card-related">
           <div class="it-card-taxonomy">
-            <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
+            <a href="#" class="it-card-category it-card-link"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
           </div>
           <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
         </footer>
@@ -610,7 +610,7 @@ L'immagine segue questo contenitore. Per invertire l'ordine visivo, usa la class
         </div>
         <footer class="it-card-related it-card-footer">
           <div class="it-card-taxonomy">
-            <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
+            <a href="#" class="it-card-category it-card-link"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
           </div>
           <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
         </footer>
@@ -645,7 +645,7 @@ L'immagine segue questo contenitore. Per invertire l'ordine visivo, usa la class
         </div>
         <footer class="it-card-related it-card-footer">
           <div class="it-card-taxonomy">
-            <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
+            <a href="#" class="it-card-category it-card-link"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
           </div>
           <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
         </footer>
@@ -709,7 +709,7 @@ Negli esempi non abbiamo usato il `target` del link per favorire la normale navi
       <!--finally the card footer metadata-->
       <footer class="it-card-related it-card-footer">
         <div class="it-card-taxonomy">
-          <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
+          <a href="#" class="it-card-category it-card-link"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
         </div>
         <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
       </footer>
@@ -776,7 +776,7 @@ Negli esempi non abbiamo usato il `target` del link per favorire la normale navi
       <!--finally the card footer metadata-->
       <footer class="it-card-related it-card-footer">
         <div class="it-card-taxonomy">
-          <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
+          <a href="#" class="it-card-category it-card-link"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
         </div>
         <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
       </footer>
@@ -844,7 +844,7 @@ Usa le stesse regole delle card inline standard per struttura e inversione dell'
         </div>
         <footer class="it-card-related it-card-footer">
           <div class="it-card-taxonomy">
-            <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
+            <a href="#" class="it-card-category it-card-link"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
           </div>
           <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
         </footer>
@@ -879,7 +879,7 @@ Usa le stesse regole delle card inline standard per struttura e inversione dell'
         </div>
         <footer class="it-card-related it-card-footer">
           <div class="it-card-taxonomy">
-            <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
+            <a href="#" class="it-card-category it-card-link"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
           </div>
           <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
         </footer>
@@ -952,7 +952,7 @@ Ricorda di usare:
         <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
         <footer class="it-card-related">
           <div class="it-card-taxonomy">
-            <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
+            <a href="#" class="it-card-category it-card-link"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
           </div>
         </footer>
       </div>
@@ -1032,7 +1032,7 @@ Per creare un ulteriore spazio dedicato a **collegamenti o pulsanti secondari**,
         <p class="it-card-text">Eventuale breve estratto descrittivo del documento.</p>
         <footer class="it-card-related">
           <div class="it-card-taxonomy">
-            <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
+            <a href="#" class="it-card-category it-card-link"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
           </div>
         </footer>
       </div>
@@ -1053,7 +1053,7 @@ Per creare un ulteriore spazio dedicato a **collegamenti o pulsanti secondari**,
         <p class="it-card-text">Eventuale breve estratto descrittivo del documento. Formato PDF (200Kb)</p>
         <footer class="it-card-related">
           <div class="it-card-taxonomy">
-            <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
+            <a href="#" class="it-card-category it-card-link"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
           </div>
         </footer>
       </div>

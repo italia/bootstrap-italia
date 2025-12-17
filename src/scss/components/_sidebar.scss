@@ -1,5 +1,13 @@
+// Component: sidebar
 //
-// Component properties
+// Description: Component styles for sidebar
+//
+
+// Variables
+//
+
+// Properties
+//
 
 .sidebar-wrapper {
   --#{$prefix}sidebar-padding: var(--#{$prefix}spacing-m);
@@ -16,8 +24,9 @@
   --#{$prefix}sidebar-link-active-border-color: var(--#{$prefix}color-border-primary);
 }
 
+// Styles
 //
-// Component styles
+
 
 .sidebar-wrapper {
   padding: var(--#{$prefix}sidebar-padding) 0;

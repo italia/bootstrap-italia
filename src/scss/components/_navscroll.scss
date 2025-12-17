@@ -1,5 +1,13 @@
+// Component: navscroll
 //
-// Component properties
+// Description: Component styles for navscroll
+//
+
+// Variables
+//
+
+// Properties
+//
 
 .it-navscroll-wrapper {
   --#{$prefix}navscroll-background: var(--#{$prefix}page-background);
@@ -19,8 +27,9 @@
   --#{$prefix}navscroll-divider-color: var(--#{$prefix}color-border-subtle);
 }
 
+// Styles
 //
-// Component styles
+
 
 .navbar.it-navscroll-wrapper {
   background: var(--#{$prefix}navscroll-background);
