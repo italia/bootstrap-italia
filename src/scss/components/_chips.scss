@@ -8,7 +8,7 @@
   border-radius: $v-gap * 1.5;
   height: $v-gap * 3;
   min-width: 100px;
-  padding: 0 calc($v-gap / 2) 2px $v-gap;
+  padding: 0 $v-gap / 2 2px $v-gap;
   transition: all 0.05s;
   margin-top: $v-gap * 0.5;
   margin-bottom: $v-gap;
@@ -67,7 +67,7 @@
     height: $v-gap * 4;
     min-width: 120px;
     border-radius: $v-gap * 2;
-    padding: 2px calc($v-gap / 2) 0 $v-gap * 2;
+    padding: 2px $v-gap / 2 0 $v-gap * 2;
     //label
     .chip-label {
       font-size: $chips-label-font-size-l;

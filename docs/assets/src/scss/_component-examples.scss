@@ -1,5 +1,3 @@
-@use 'sass:color';
-
 .bd-example-row {
   .d-flex,
   .row {
@@ -90,7 +88,7 @@
 .bd-example-container-header {
   height: 3rem;
   margin-bottom: 0.5rem;
-  background-color: color.scale($blue, $lightness: 50%);
+  background-color: lighten($blue, 50%);
   border-radius: 0.25rem;
 }
 
@@ -98,14 +96,14 @@
   float: right;
   width: 4rem;
   height: 8rem;
-  background-color: color.scale($blue, $lightness: 25%);
+  background-color: lighten($blue, 25%);
   border-radius: 0.25rem;
 }
 
 .bd-example-container-body {
   height: 8rem;
   margin-right: 4.5rem;
-  background-color: color.scale($primary, $lightness: 25%);
+  background-color: lighten($primary, 25%);
   border-radius: 0.25rem;
 }
 

@@ -2,8 +2,6 @@
 // Docs color palette classes
 //
 
-@use 'sass:color';
-
 @each $color, $value in $colors {
   .swatch-#{$color} {
     color: color-contrast($value);
@@ -25,8 +23,8 @@
   }
 }
 
-$primary-bright: color.scale(color.scale($primary, $saturation: 5%), $lightness: 15%) !default;
-$primary-light: color.scale(color.scale($primary, $saturation: 5%), $lightness: 45%) !default;
+$primary-bright: lighten(saturate($primary, 5%), 15%) !default;
+$primary-light: lighten(saturate($primary, 5%), 45%) !default;
 $docs-info: rgb(23, 50, 77) !default;
 $docs-warning: rgb(255, 151, 0) !default;
 $docs-danger: rgb(248, 62, 90) !default;

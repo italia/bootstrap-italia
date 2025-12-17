@@ -1,5 +1,3 @@
-@use 'sass:color';
-
 .bd-callout {
   padding: 1.25rem;
   margin-top: 1.25rem;
@@ -28,9 +26,9 @@
 
 // Variations
 @mixin bs-callout-variant($color) {
-  border-left-color: color.scale($color, $lightness: -10%);
+  border-left-color: darken($color, 10%);
   h4 {
-    color: color.scale($color, $lightness: -10%);
+    color: darken($color, 10%);
   }
 }
 
@@ -40,9 +38,6 @@
 
 .bd-callout-warning {
   @include bs-callout-variant($docs-warning);
-  h4 {
-    color: $color-text-warning;
-  }
 }
 
 .bd-callout-danger {
@@ -53,5 +48,5 @@
   h4 {
     color: $docs-accessibility;
   }
-  border-left-color: color.scale($docs-accessibility, $lightness: 10%);
+  border-left-color: lighten($docs-accessibility, 10%);
 }
