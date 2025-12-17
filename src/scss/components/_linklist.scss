@@ -58,7 +58,7 @@
 
   .list-item {
     position: relative;
-    display: inline-block;
+    display: inline-flex;
     padding-top: var(--#{$prefix}linklist-item-spacing);
     padding-bottom: var(--#{$prefix}linklist-item-spacing);
     text-decoration: none;
