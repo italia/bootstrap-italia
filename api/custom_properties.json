@@ -147,10 +147,10 @@
         "box-shadow-lg",
         "box-shadow-inset"
     ],
-    "breadcrumb": {
-        "breadcrumb-font-size" : "",
-        "breadcrumb-padding" : "",
-        "breadcrumb-padding-y" : "",
+    "breadcrumb": [
+        "breadcrumb-font-size",
+        "breadcrumb-padding",
+        "breadcrumb-padding-y",
         "breadcrumb-padding-x",
         "breadcrumb-item-padding-x",
         "breadcrumb-margin-bottom",
@@ -166,7 +166,7 @@
         "breadcrumb-divider-flipped",
         "breadcrumb-link-color-dark",
         "breadcrumb-icon-color-dark"
-    },
+    ],
     "btn": [
         "btn-close-bg url(\"dataimage/svg+xml,<svg xmlns='http",
         "btn-close-white-filter",
