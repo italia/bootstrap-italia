@@ -36,8 +36,8 @@ for pkt in glob_vars:
             mapped_vars[prefix] = []
         final_var_name = f"--bsi-{clean_variable(var)}"
         mapped_vars[prefix].append({
-          'var': final_var_name,
-          'default': pkt[1],
+          'variable-name': final_var_name,
+          'value': pkt[1].replace("--#{$prefix}", "--bsi-"),
           'description': pkt[2].replace('//', '').strip()
         })
 
