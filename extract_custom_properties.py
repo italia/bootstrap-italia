@@ -20,22 +20,26 @@ for root, dirs, files in os.walk(SCSS_BASE_PATH):
         if file.endswith(".scss"):
             css_file_to_inspect = os.path.join(root, file)
             with open(css_file_to_inspect, "r") as f:
-              vars = [re.findall(r'\s--#{\$prefix}.*\:',line) for line in f]
+              vars = [re.findall(r'\s(--#{\$prefix}[a-z-].*):\s(.*);(\s\/\/.*)?',line) for line in f]
               vars = (functools.reduce(operator.iconcat, vars, []))
               glob_vars.extend(vars)
 
 # Map variables with prefix (e.g. dropdown, form ecc..)
-
 mapped_vars = {}
 
-for var in glob_vars:
-    var = var.replace("--#{$prefix}", "")
+for pkt in glob_vars:
+    var = pkt[0].replace("--#{$prefix}", "")
     prefixes = var.split('-')
     if len(prefixes) > 1:
         prefix = clean_variable(prefixes[0])
         if prefix not in mapped_vars:
             mapped_vars[prefix] = []
-        mapped_vars[prefix].append(f"--bsi-{clean_variable(var)}")
+        final_var_name = f"--bsi-{clean_variable(var)}"
+        mapped_vars[prefix].append({
+          'var': final_var_name,
+          'default': pkt[1],
+          'description': pkt[2].replace('//', '').strip()
+        })
 
 
 with open(OUTPUT_JSON, "w") as fapi:
