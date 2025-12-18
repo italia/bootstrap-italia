@@ -1,5 +1,9 @@
+@use 'sass:map';
+
 // Import Design Tokens Italia
-// @import '../../node_modules/design-tokens-italia/scss/variables';
+// @use '../../node_modules/design-tokens-italia/scss/variables';
+
+@use 'sass:map';
 
 @use 'sass:map';
 
@@ -39,7 +43,7 @@ $grays: map.merge(
 );
 
 @function main($key: '80') {
-  @return map-get($mains, $key);
+  @return map.get($mains, $key);
 }
 
 // The contrast ratio to reach against white, to determine if color changes from "light" to "dark". Acceptable values for WCAG 2.0 are 3, 4.5 and 7.
