@@ -27,6 +27,30 @@ Tuttavia, Bootstrap comprende di base il supporto per la maggior parte delle int
 Si ricorda che link di navigazione semanticamente sono tag `<a>`, mentre link che attivano azioni in pagina sono tag `<button>`, seppur questi ultimi è possibile implementarli in casi molto particolari come tag `<a>` con proprietà `role="button"`.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
+
+### Dropdown custom properties
+
+<div class="table-responsive">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>Variable</th>
+        <th>Description</th>
+        <th>Value</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for track in site.data.cprops.dropdown %}
+    <tr>
+      <td>{{ track.variable-name }}</td>
+      <td>{{ track.description }}</td>
+      <td>{{ track.value }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+
 ### Dropdown button
 
 Ogni singolo `.btn` può essere trasformato in un pulsante per l'apertura di dropdown con del semplice markdown HTML.
