@@ -15,7 +15,7 @@
 @use 'sass:math';
 
 // Special list for long groups of cards, bootstrap row/cols grid
-ul.row.it-card-list {
+ul.it-card-list {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -33,7 +33,6 @@ ul.row.it-card-list {
 // Improved responsive it-card-group with a @container aware twist
 .it-card-group {
   --#{$prefix}it-card-group-gap: #{$grid-gutter-width};
-
   display: flex;
   flex-wrap: wrap;
 
