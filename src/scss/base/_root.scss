@@ -1,5 +1,3 @@
-@import 'vendor/tokens';
-
 :root {
   @each $color, $value in $colors {
     --#{$prefix}#{$color}: #{$value};
@@ -225,7 +223,7 @@
   --#{$prefix}color-background-primary: var(--it-color-background-primary);
   --#{$prefix}color-background-primary-lighter: var(--it-color-background-primary-lighter);
   --#{$prefix}color-background-primary-light: var(--it-color-background-primary-light);
-  --#{$prefix}color-background-primary-dark: var(--it-color-background-primary-deep);
+  --#{$prefix}color-background-primary-deep: var(--it-color-background-primary-deep);
   --#{$prefix}color-background-primary-muted: var(--it-color-background-primary-muted);
   --#{$prefix}color-background-primary-active: var(--it-color-background-primary-active);
   --#{$prefix}color-background-primary-hover: var(--it-color-background-primary-hover);

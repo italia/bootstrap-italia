@@ -1,5 +1,13 @@
+// Component: card
 //
-// Custom Properties
+// Description: Component styles for card
+//
+
+// Variables
+//
+
+// Properties
+//
 
 .it-card {
   --#{$prefix}it-card-background: var(--#{$prefix}color-background-inverse);
@@ -29,8 +37,8 @@
   --#{$prefix}it-card-signature-font-family: var(--#{$prefix}font-mono);
 }
 
+// Styles
 //
-// Component Style
 
 .it-card {
   position: relative;
@@ -385,6 +393,68 @@
 
     &.it-card-border-top-danger::after {
       --#{$prefix}it-card-border-top-color: var(--#{$prefix}color-border-danger);
+    }
+  }
+
+  // Card profile
+  &.it-card-profile {
+    .it-card-profile-header {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap-reverse;
+      justify-content: space-between;
+      align-items: center;
+
+      // Gap fallback
+      > * {
+        margin: 0.5rem;
+      }
+
+      @supports (gap: 1rem) {
+        gap: 1rem;
+
+        > * {
+          margin: 0;
+        }
+      }
+
+      margin-top: calc(2 * var(--#{$prefix}it-card-title-spacer-y));
+      margin-bottom: var(--#{$prefix}it-card-title-spacer-y);
+      padding: 0 var(--#{$prefix}it-card-spacer-x);
+
+      .it-card-profile {
+        flex: 1;
+        max-width: 100%;
+
+        .it-card-profile-name {
+          margin-bottom: 0.25rem;
+        }
+
+        .it-card-profile-role,
+        .it-card-place-type {
+          font-weight: 600;
+          font-size: 1rem;
+          line-height: 1.5rem;
+          margin-bottom: 0;
+        }
+      }
+
+      .it-card-profile-image {
+        max-width: 80px;
+        max-height: 80px;
+
+        figure {
+          margin-bottom: 0;
+        }
+
+        .it-card-profile-image-icon-wrapper {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          background-color: $color-background-primary-lighter;
+        }
+      }
     }
   }
 

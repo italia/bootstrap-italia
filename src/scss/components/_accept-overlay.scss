@@ -1,3 +1,14 @@
+// Component: accept overlay
+//
+// Description: Component styles for accept overlay
+//
+
+// Variables
+//
+
+// Properties
+//
+
 .acceptoverlay {
   --#{$prefix}acceptoverlay-color-background: var(--#{$prefix}color-background-inverse);
   --#{$prefix}acceptoverlay-color-text: var(--#{$prefix}color-text);
@@ -10,7 +21,12 @@
   --#{$prefix}acceptoverlay-icon-spacing: var(--#{$prefix}spacing-s);
   --#{$prefix}acceptoverlay-icon-fill: var(--#{$prefix}icon-primary);
   --#{$prefix}acceptoverlay-buttons-spacing: var(--#{$prefix}spacing-s);
-  --#{$prefix}acceptoverlay-buttons-last-child-margin-top: ;
+}
+// Styles
+//
+
+.acceptoverlay {
+
   position: absolute;
   top: 0;
   right: 0;

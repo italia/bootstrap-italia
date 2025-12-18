@@ -1,46 +1,52 @@
+// Component: navbar
 //
-// Component properties
+// Description: Component styles for navbar
+//
+
+// Variables
+//
+
+// Properties
+//
 
 .navbar {
-  --#{$prefix}navbar-background: var(--#{$prefix}color-background-primary);
-  --#{$prefix}navbar-color: #{$navbar-light-color};
-  --#{$prefix}navbar-hover-color: #{$navbar-light-hover-color};
-  --#{$prefix}navbar-disabled-color: #{$navbar-light-disabled-color};
   --#{$prefix}navbar-active-color: #{$navbar-light-active-color};
-  --#{$prefix}navbar-brand-padding-y: #{$navbar-brand-padding-y};
-  --#{$prefix}navbar-brand-margin-end: #{$navbar-brand-margin-end};
-  --#{$prefix}navbar-brand-font-size: #{$navbar-brand-font-size};
+  --#{$prefix}navbar-background: var(--#{$prefix}color-background-primary);
   --#{$prefix}navbar-brand-color: var(--#{$prefix}color-text-inverse);
-  --#{$prefix}navbar-nav-link-padding-x: #{$navbar-nav-link-padding-x};
-  --#{$prefix}navbar-toggler-padding-y: #{$navbar-toggler-padding-y};
-  --#{$prefix}navbar-toggler-padding-x: #{$navbar-toggler-padding-x};
-  --#{$prefix}navbar-toggler-font-size: #{$navbar-toggler-font-size};
-  --#{$prefix}navbar-toggler-icon-bg: #{escape-svg($navbar-light-toggler-icon-bg)};
-  --#{$prefix}navbar-toggler-border-color: #{$navbar-light-toggler-border-color};
-  --#{$prefix}navbar-toggler-border-radius: #{$navbar-toggler-border-radius};
-  --#{$prefix}navbar-toggler-focus-width: #{$navbar-toggler-focus-width};
-  --#{$prefix}navbar-toggler-transition: #{$navbar-toggler-transition};
-  --#{$prefix}navbar-sidebar-bg-color-mobile: rgba(0, 0, 0, 0.6);
-  --#{$prefix}navbar-close-button-size: 44px;
-  --#{$prefix}navbar-close-button-text-color: var(--#{$prefix}color-text-secondary);
+  --#{$prefix}navbar-brand-font-size: #{$navbar-brand-font-size};
+  --#{$prefix}navbar-brand-margin-end: #{$navbar-brand-margin-end};
+  --#{$prefix}navbar-brand-padding-y: #{$navbar-brand-padding-y};
   --#{$prefix}navbar-close-button-font-size: 0.75rem;
   --#{$prefix}navbar-close-button-icon-size: 2rem;
+  --#{$prefix}navbar-close-button-size: 44px;
+  --#{$prefix}navbar-color: #{$navbar-light-color};
+  --#{$prefix}navbar-disabled-color: #{$navbar-light-disabled-color};
+  --#{$prefix}navbar-disabled-item-opacity: 0.6;
+  --#{$prefix}navbar-dropdown-icon-line-height: 1rem;
+  --#{$prefix}navbar-dropdown-icon-size: 0.75rem;
+  --#{$prefix}navbar-dropdown-icon-width: 1rem;
+  --#{$prefix}navbar-hamburger-size: 1.5rem;
+  --#{$prefix}navbar-hover-color: #{$navbar-light-hover-color};
+  --#{$prefix}navbar-link-border-size: var(--#{$prefix}border-thick);
+  --#{$prefix}navbar-link-color: var(--#{$prefix}color-link); // nav link color default - mobile
+  --#{$prefix}navbar-link-font-size: var(--#{$prefix}label-font-size);
+  --#{$prefix}navbar-link-font-weight: var(--#{$prefix}font-weight-solid);
+  --#{$prefix}navbar-link-line-height: var(--#{$prefix}label-line-height);
   --#{$prefix}navbar-link-padding-x: var(--#{$prefix}spacing-m);
   --#{$prefix}navbar-link-padding-y: var(--#{$prefix}spacing-s);
   --#{$prefix}navbar-links-margin-top: 102px;
-  --#{$prefix}navbar-link-color: var(--#{$prefix}color-link); // nav link color default - mobile
-  --#{$prefix}navbar-link-font-size: var(--#{$prefix}label-font-size);
-  --#{$prefix}navbar-link-line-height: var(--#{$prefix}label-line-height);
-  --#{$prefix}navbar-link-font-weight: var(--#{$prefix}font-weight-solid);
-  --#{$prefix}navbar-link-border-size: var(--#{$prefix}border-thick);
-  --#{$prefix}navbar-link-active-border-color: var(--#{$prefix}color-border-primary);
+  --#{$prefix}navbar-nav-link-padding-x: #{$navbar-nav-link-padding-x};
+  --#{$prefix}navbar-sidebar-bg-color-mobile: rgba(0, 0, 0, 0.6);
   --#{$prefix}navbar-toggle-button-icon-color: var(--#{$prefix}icon-inverse);
   --#{$prefix}navbar-toggle-button-icon-size: 1.5rem;
-  --#{$prefix}navbar-dropdown-icon-size: 0.75rem;
-  --#{$prefix}navbar-dropdown-icon-line-height: 1rem;
-  --#{$prefix}navbar-dropdown-icon-width: 1rem;
-  --#{$prefix}navbar-disabled-item-opacity: 0.6;
-  --#{$prefix}navbar-hamburger-size: 1.5rem;
+  --#{$prefix}navbar-toggler-border-color: #{$navbar-light-toggler-border-color};
+  --#{$prefix}navbar-toggler-border-radius: #{$navbar-toggler-border-radius};
+  --#{$prefix}navbar-toggler-focus-width: #{$navbar-toggler-focus-width};
+  --#{$prefix}navbar-toggler-font-size: #{$navbar-toggler-font-size};
+  --#{$prefix}navbar-toggler-icon-bg: #{escape-svg($navbar-light-toggler-icon-bg)};
+  --#{$prefix}navbar-toggler-padding-x: #{$navbar-toggler-padding-x};
+  --#{$prefix}navbar-toggler-padding-y: #{$navbar-toggler-padding-y};
+  --#{$prefix}navbar-toggler-transition: #{$navbar-toggler-transition};
   @include media-breakpoint-up(lg) {
     --#{$prefix}navbar-link-color: var(--#{$prefix}color-text-inverse); // nav link color default - desktop
     --#{$prefix}navbar-link-active-border-color: var(--#{$prefix}color-border-inverse);
@@ -63,8 +69,9 @@
   }
 }
 
+// Styles
 //
-// Component styles
+
 
 // Navbar mobile backdrop, inspired by "modal" approachAdd commentMore actions
 .navbar-backdrop {

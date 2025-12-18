@@ -1,15 +1,29 @@
+// Component: pagination
+//
+// Description: Component styles for pagination
+//
 
-.pagination {
-  --#{$prefix}pagination-padding-x: var(--#{$prefix}spacing-s);
-  --#{$prefix}pagination-padding-y: var(--#{$prefix}spacing-xxs);
-  --#{$prefix}pagination-link-color: var(--#{$prefix}color-link);
+// Variables
+//
+
+// Properties
+//
+
+.pagination {  
   --#{$prefix}pagination-background: transparent;
-  --#{$prefix}pagination-border-width: 2px;
+  --#{$prefix}pagination-border-width: 2px; 
   --#{$prefix}pagination-border-color: transparent;
   --#{$prefix}pagination-border-radius: #{$pagination-border-radius};
-  --#{$prefix}pagination-item-size: 3rem;
   --#{$prefix}pagination-font-size: var(--#{$prefix}label-font-size);
+  --#{$prefix}pagination-item-size: 3rem;
+  --#{$prefix}pagination-link-color: var(--#{$prefix}color-link);
+  --#{$prefix}pagination-padding-x: var(--#{$prefix}spacing-s);
+  --#{$prefix}pagination-padding-y: var(--#{$prefix}spacing-xxs);
+}
 
+// Styles
+
+.pagination {
   display: flex;
   flex-wrap: wrap;
   @include list-unstyled();

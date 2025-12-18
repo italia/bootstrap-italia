@@ -75,10 +75,8 @@ textarea {
 
 input[type='checkbox'],
 input[type='radio'] {
-  &.just-validate-success-field {
-    + label {
-      color: var(--#{$prefix}color-text-success);
-    }
+  &.is-invalid {
+    --#{$prefix}form-checkbox-border-color: var(--#{$prefix}color-border-danger);
   }
 }
 

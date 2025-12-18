@@ -127,27 +127,27 @@ Per utilizzare un'icona all'interno di un avatar è sufficiente includere il cod
 
 <div class="d-flex align-items-center justify-content-around flex-wrap flex-sm-nowrap">
   <div class="avatar size-xs">
-    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-user"></use></svg>
+    <svg class="icon icon-secondary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-user"></use></svg>
     <span class="visually-hidden">Cerca</span>
   </div>
   <div class="avatar size-sm">
-    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-user"></use></svg>
+    <svg class="icon icon-secondary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-user"></use></svg>
     <span class="visually-hidden">Cerca</span>
   </div>
   <div class="avatar">
-    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-user"></use></svg>
+    <svg class="icon icon-secondary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-user"></use></svg>
     <span class="visually-hidden">Cerca</span>
   </div>
   <div class="avatar size-lg">
-    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-user"></use></svg>
+    <svg class="icon icon-secondary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-user"></use></svg>
     <span class="visually-hidden">Cerca</span>
   </div>
   <div class="avatar size-xl">
-    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-user"></use></svg>
+    <svg class="icon icon-secondary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-user"></use></svg>
     <span class="visually-hidden">Cerca</span>
   </div>
   <div class="avatar size-xxl">
-    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-user"></use></svg>
+    <svg class="icon icon-secondary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-user"></use></svg>
     <span class="visually-hidden">Cerca</span>
   </div>
 </div>
@@ -169,11 +169,7 @@ Per associare un avatar ad un'azione o un link, utilizzare il tag `<a>` con rela
     <span class="visually-hidden">Mario Rossi</span>
   </a>
   <a class="avatar size-xl" href="#">
-    <p aria-hidden="true">MR</p>
-    <span class="visually-hidden">Mario Rossi</span>
-  </a>
-  <a class="avatar size-xl" href="#">
-    <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-user"></use></svg>
+    <svg class="icon icon-secondary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-user"></use></svg>
     <span class="visually-hidden">Cerca</span>
   </a>
 </div>
@@ -205,9 +201,11 @@ Per associare un avatar ad un'azione o un link, utilizzare il tag `<a>` con rela
 
 Gli avatar possono essere raggruppati in liste verticali ed orizzontali.
 
-### Lista
+### Lista di link con avatar
 
-Utilizzando una <a href="{{ site.baseurl }}/docs/organizzare-i-contenuti/liste/#liste-per-menu-di-navigazione">lista di link</a> con l'aggiunta della classe `.avatar-group` si ottiene una lista verticale con avatar affiancati da link e testi.
+Utilizza la <a href="{{ site.baseurl }}/docs/organizzare-i-contenuti/liste/#liste-per-menu-di-navigazione">lista di link</a> aggiungendo la classe `.avatar-group` per creare una lista verticale con avatar affiancati da link e testi.
+
+
 
 #### Lista piccola
 
@@ -234,20 +232,20 @@ Lista verticale di avatar di dimensione piccola con classe `.size-sm`.
       </a>
     </li>
     <li>
-      <div class="list-item">
+      <a class="list-item" href="#">
         <div class="avatar size-sm">
           <p aria-hidden="true">S</p>
         </div>
         <span>Sara Ghione</span>
-      </div>
+      </a>
     </li>
     <li>
-      <div class="list-item">
+      <a class="list-item" href="#">
         <div class="avatar size-sm">
           <svg class="icon icon-secondary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-user"></use></svg>
         </div>
         <span>Antonio Esposito</span>
-      </div>
+      </a>
     </li>
   </ul>
 </div>
@@ -278,20 +276,20 @@ Lista verticale di Avatar di dimensione media con classe `.size-md`.
       </a>
     </li>
     <li>
-      <div class="list-item">
+      <a class="list-item" href="#">
         <div class="avatar avatar-primary size-md">
           <p aria-hidden="true">SG</p>
         </div>
         <span>Sara Ghione</span>
-      </div>
+      </a>
     </li>
     <li>
-      <div class="list-item">
+      <a class="list-item" href="#">
         <div class="avatar size-md">
           <svg class="icon icon-secondary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-user"></use></svg>
         </div>
         <span>Antonio Esposito</span>
-      </div>
+      </a>
     </li>
   </ul>
 </div>
@@ -380,20 +378,20 @@ Gruppo di avatar sovrapposti di dimensione piccola con classe `.size-sm`.
                 </a>
               </li>
               <li>
-                <div class="dropdown-item list-item">
+                <a class="dropdown-item list-item" href="#">
                   <div class="avatar avatar-primary size-sm">
                     <p aria-hidden="true">S</p>
                   </div>
                   <span>Sara Ghione</span>
-                </div>
+                </a>
               </li>
               <li>
-                <div class="dropdown-item list-item">
+                <a class="dropdown-item list-item" href="#">
                   <div class="avatar size-sm">
                     <svg class="icon icon-secondary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-user"></use></svg>
                   </div>
                   <span>Antonio Esposito</span>
-                </div>
+                </a>
               </li>
             </ul>
           </div>
@@ -519,7 +517,7 @@ Inserire un `<span>` riservato agli screen reader con indicazione della presenza
     <div class="avatar size-xl">
       <img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Luisa Neri">
       <div class="avatar-presence busy">
-        <svg class="icon icon-white"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-minus"></use></svg>
+        <svg class="icon icon-inverse"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-minus"></use></svg>
         <span class="visually-hidden">Presenza: non disponibile</span>
       </div>
     </div>
@@ -538,7 +536,7 @@ Inserire un `<span>` riservato agli screen reader con indicazione della presenza
     <div class="avatar size-md">
       <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Ludovica Galli">
       <div class="avatar-presence busy">
-        <svg class="icon icon-white"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-minus"></use></svg>
+        <svg class="icon icon-inverse"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-minus"></use></svg>
         <span class="visually-hidden">Presenza: non disponibile</span>
       </div>
     </div>
@@ -547,7 +545,7 @@ Inserire un `<span>` riservato agli screen reader con indicazione della presenza
     <div class="avatar size-lg">
       <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Ludovica Galli">
       <div class="avatar-presence busy">
-        <svg class="icon icon-white"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-minus"></use></svg>
+        <svg class="icon icon-inverse"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-minus"></use></svg>
         <span class="visually-hidden">Presenza: non disponibile</span>
       </div>
     </div>
@@ -556,7 +554,7 @@ Inserire un `<span>` riservato agli screen reader con indicazione della presenza
     <div class="avatar size-xl">
       <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Ludovica Galli">
       <div class="avatar-presence busy">
-        <svg class="icon icon-white"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-minus"></use></svg>
+        <svg class="icon icon-inverse"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-minus"></use></svg>
         <span class="visually-hidden">Presenza: non disponibile</span>
       </div>
     </div>
@@ -565,7 +563,7 @@ Inserire un `<span>` riservato agli screen reader con indicazione della presenza
     <div class="avatar size-xxl">
       <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Ludovica Galli">
       <div class="avatar-presence busy">
-        <svg class="icon icon-white"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-minus"></use></svg>
+        <svg class="icon icon-inverse"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-minus"></use></svg>
         <span class="visually-hidden">Presenza: non disponibile</span>
       </div>
     </div>
@@ -597,7 +595,7 @@ Inserire un `<span>` riservato agli screen reader con indicazione dello stato de
     <div class="avatar size-xl">
       <img src="https://randomuser.me/api/portraits/men/43.jpg" alt="Mario Rossi">
       <div class="avatar-status approved">
-        <svg class="icon icon-white"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg>
+        <svg class="icon icon-inverse"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg>
         <span class="visually-hidden">Stato: approvato</span>
       </div>
     </div>
@@ -606,7 +604,7 @@ Inserire un `<span>` riservato agli screen reader con indicazione dello stato de
     <div class="avatar size-xl">
       <img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Luisa Neri">
       <div class="avatar-status declined">
-        <svg class="icon icon-white"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
+        <svg class="icon icon-inverse"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
         <span class="visually-hidden">Stato: respinto</span>
       </div>
     </div>
@@ -625,7 +623,7 @@ Inserire un `<span>` riservato agli screen reader con indicazione dello stato de
     <div class="avatar size-md">
       <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Ludovica Galli">
       <div class="avatar-status approved">
-        <svg class="icon icon-white"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg>
+        <svg class="icon icon-inverse"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg>
         <span class="visually-hidden">Stato: approvato</span>
       </div>
     </div>
@@ -634,7 +632,7 @@ Inserire un `<span>` riservato agli screen reader con indicazione dello stato de
     <div class="avatar size-lg">
       <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Ludovica Galli">
       <div class="avatar-status declined">
-        <svg class="icon icon-white"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
+        <svg class="icon icon-inverse"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
         <span class="visually-hidden">Stato: respinto</span>
       </div>
     </div>
@@ -643,7 +641,7 @@ Inserire un `<span>` riservato agli screen reader con indicazione dello stato de
     <div class="avatar size-xl">
       <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Ludovica Galli">
       <div class="avatar-status approved">
-        <svg class="icon icon-white"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg>
+        <svg class="icon icon-inverse"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg>
         <span class="visually-hidden">Stato: approvato</span>
       </div>
     </div>
@@ -652,7 +650,7 @@ Inserire un `<span>` riservato agli screen reader con indicazione dello stato de
     <div class="avatar size-xxl">
       <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Ludovica Galli">
       <div class="avatar-status declined">
-        <svg class="icon icon-white"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
+        <svg class="icon icon-inverse"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
         <span class="visually-hidden">Stato: respinto</span>
       </div>
     </div>

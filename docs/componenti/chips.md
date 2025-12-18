@@ -155,7 +155,7 @@ Aggiungendo la classe `.chip-disabled` al contenitore e l'attributo `disabled` a
 
 <div class="chip chip-disabled">
   <span class="chip-label">Etichetta</span>
-  <button  data-bs-dismiss='chip'>
+  <button disabled data-bs-dismiss='chip'>
     <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
     <span class="visually-hidden">Elimina etichetta</span>
   </button>

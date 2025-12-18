@@ -1,18 +1,31 @@
+// Component: linklist
+//
+// Description: Component styles for linklist
+//
+
+// Variables
+//
+
+// Properties
+//
+
+// Styles
+//
+
 //
 // Custom properties
 
 .link-list-wrapper {
   --#{$prefix}linklist-divider-size: 1px;
-  --#{$prefix}linklist-heading-font-size: var(--#{$prefix}heading-6-font-size);
   --#{$prefix}linklist-heading-color: var(--#{$prefix}color-text-secondary);
+  --#{$prefix}linklist-heading-font-size: var(--#{$prefix}heading-6-font-size);
   --#{$prefix}linklist-item-font-size: var(--#{$prefix}label-font-size);
   --#{$prefix}linklist-item-line-height: var(--#{$prefix}label-line-height);
   --#{$prefix}linklist-item-spacing: var(--#{$prefix}spacing-xxs);
   --#{$prefix}linklist-nested-spacing: var(--#{$prefix}spacing-s);
 }
 
-//
-// Component styles
+
 .link-list-wrapper {
 
   .link-list-heading,
@@ -45,7 +58,7 @@
 
   .list-item {
     position: relative;
-    display: inline-block;
+    display: inline-flex;
     padding-top: var(--#{$prefix}linklist-item-spacing);
     padding-bottom: var(--#{$prefix}linklist-item-spacing);
     text-decoration: none;
@@ -70,10 +83,6 @@
     &:hover:not(.disabled) {
       span {
         color: var(--#{$prefix}color-link-hover);
-      }
-
-      p {
-        color: var(--#{$prefix}color-text-secondary);
       }
 
       .icon {

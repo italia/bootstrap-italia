@@ -1,21 +1,34 @@
+// Component: hero
+//
+// Description: Component styles for hero
+//
+
+// Variables
+//
+
+// Properties
+//
+
+// Styles
+//
+
 //
 // Custom properties
 
 .it-hero-wrapper {
-  --#{$prefix}hero-height: 300px;
   --#{$prefix}hero-background-color: var(--#{$prefix}color-background-primary);
-  --#{$prefix}hero-overlay-background: transparent;
-  --#{$prefix}hero-text-color: #fff;
-  --#{$prefix}hero-text-family: var(--#{$prefix}font-serif);
   --#{$prefix}hero-cat-size: 1rem;
-  --#{$prefix}hero-primary-bg: rgba(var(--#{$prefix}color-background-primary), 0.8);
+  --#{$prefix}hero-height: 300px;
   --#{$prefix}hero-overlap-negative-spacing: -3rem;
   --#{$prefix}hero-overlap-spacing-inset: 48px;
+  --#{$prefix}hero-overlay-background: transparent;
+  --#{$prefix}hero-primary-bg: rgba(var(--#{$prefix}color-background-primary), 0.8);
+  --#{$prefix}hero-text-family: var(--#{$prefix}font-serif);
+  --#{$prefix}hero-text-color: #fff;
   --card-padding: 24px;
 }
 
-//
-// Component styles
+
 
 .it-hero-wrapper {
   min-height: var(--#{$prefix}hero-height);

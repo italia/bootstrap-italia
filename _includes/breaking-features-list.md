@@ -303,6 +303,19 @@ Gli elementi di tipo `<a>` dei collapse necessitano l'aggiunta dell'attributo `r
 Agli elementi di `<a>` occorre aggiungere l'attributo `role="button"`.
 
 
+## 2.7.0
+
+[Changelog completo](https://github.com/italia/bootstrap-italia/releases/tag/v2.7.0) <svg class="icon steppers-success" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
+
+### Tipografia
+
+- Reimpostata la dimensione del carattere di base su `16px` su `body`.
+- Sostituite le unità `em` con `rem`.
+- Aggiornati i valori `font-size` per corrispondere al nuovo calcolo dell'unità `rem`.
+- Rimosse le variabili obsolete e inutilizzate da `_variables.scss`.
+- Variabili specifiche dei componenti aggiornate e allineate a `UI Kit Italia v3`.
+
+
 ## 2.4.0
 
 [Changelog completo](https://github.com/italia/bootstrap-italia/releases/tag/v2.4.0) <svg class="icon steppers-success" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>

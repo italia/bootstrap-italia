@@ -1,18 +1,26 @@
+// Component: badge
 //
-// Custom properties
+// Description: Component styles for badge
+//
+
+// Variables
+//
+
+// Properties
+//
 
 .badge  {
-  --#{$prefix}badge-padding-x: var(--#{$prefix}spacing-xs);
-  --#{$prefix}badge-padding-y: var(--#{$prefix}spacing-3xs);
-  --#{$prefix}badge-font-weight: var(--#{$prefix}font-weight-solid);
-  --#{$prefix}badge-text-color: var(--#{$prefix}color-text-inverse);
   --#{$prefix}badge-border-radius: var(--#{$prefix}radius-smooth);
   --#{$prefix}badge-font-size: var(--#{$prefix}label-font-size-s);
   --#{$prefix}badge-font-size-relative: 0.75em;
+  --#{$prefix}badge-font-weight: var(--#{$prefix}font-weight-solid);
+  --#{$prefix}badge-padding-x: var(--#{$prefix}spacing-xs);
+  --#{$prefix}badge-padding-y: var(--#{$prefix}spacing-3xs);
+  --#{$prefix}badge-text-color: var(--#{$prefix}color-text-inverse);
 }
 
+// Styles
 //
-// Component styles
 
 .badge {
   display: inline-block;

@@ -1,14 +1,23 @@
+// Component: nav
 //
-// Component properties
+// Description: Component styles for nav
+//
+
+// Variables
+//
+
+// Properties
+//
 
 .nav {
+  --#{$prefix}nav-link-disabled-color: var(--#{$prefix}color-text-disabled);
   --#{$prefix}nav-link-padding-x: var(--#{$prefix}spacing-s);
   --#{$prefix}nav-link-padding-y: var(--#{$prefix}spacing-s);
-  --#{$prefix}nav-link-disabled-color: var(--#{$prefix}color-text-disabled);
 }
 
+// Styles
 //
-// Component styles
+
 
 .nav {
   display: flex;
@@ -46,13 +55,13 @@
 
 .nav-tabs {
   // scss-docs-start nav-tabs-css-vars
-  --#{$prefix}nav-tabs-border-width: #{$nav-tabs-border-width};
   --#{$prefix}nav-tabs-border-color: #{$nav-tabs-border-color};
   --#{$prefix}nav-tabs-border-radius: #{$nav-tabs-border-radius};
-  --#{$prefix}nav-tabs-link-hover-border-color: #{$nav-tabs-link-hover-border-color};
-  --#{$prefix}nav-tabs-link-active-color: #{$nav-tabs-link-active-color};
+  --#{$prefix}nav-tabs-border-width: #{$nav-tabs-border-width};
   --#{$prefix}nav-tabs-link-active-bg: #{$nav-tabs-link-active-bg};
+  --#{$prefix}nav-tabs-link-active-color: #{$nav-tabs-link-active-color};
   --#{$prefix}nav-tabs-link-active-border-color: #{$nav-tabs-link-active-border-color};
+  --#{$prefix}nav-tabs-link-hover-border-color: #{$nav-tabs-link-hover-border-color};
   // scss-docs-end nav-tabs-css-vars
 
   border-bottom: var(--#{$prefix}nav-tabs-border-width) solid var(--#{$prefix}nav-tabs-border-color);
@@ -98,11 +107,9 @@
 //
 
 .nav-pills {
-  // scss-docs-start nav-pills-css-vars
   --#{$prefix}nav-pills-border-radius: #{$nav-pills-border-radius};
-  --#{$prefix}nav-pills-link-active-color: #{$nav-pills-link-active-color};
   --#{$prefix}nav-pills-link-active-bg: #{$nav-pills-link-active-bg};
-  // scss-docs-end nav-pills-css-vars
+  --#{$prefix}nav-pills-link-active-color: #{$nav-pills-link-active-color};
 
   .nav-link {
     border: 0;
