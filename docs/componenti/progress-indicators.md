@@ -213,7 +213,7 @@ La Progress Bar può essere integrata in un pulsante Primario o Secondario con c
     <div class="col-12 col-sm-6">
       <p><strong>Pulsante primario</strong></p>
       <button type="button" class="btn btn-primary btn-progress disabled" disabled>
-        Label pulsante <svg class="icon icon-white"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-github"></use></svg>
+        Label pulsante <svg class="icon icon-inverse"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-github"></use></svg>
         <span class="progress">
         <span class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></span>
       </span>
@@ -222,7 +222,7 @@ La Progress Bar può essere integrata in un pulsante Primario o Secondario con c
     <div class="col-12 col-sm-6">
       <p><strong>Pulsante secondario</strong></p>
       <button type="button" class="btn btn-secondary btn-progress disabled" disabled>
-        Label pulsante <svg class="icon icon-white"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-github"></use></svg>
+        Label pulsante <svg class="icon icon-inverse"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-github"></use></svg>
         <span class="progress">
         <span class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></span>
       </span>

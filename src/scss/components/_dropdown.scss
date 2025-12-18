@@ -181,15 +181,15 @@
 
   &.show {
     display: block;
-    //menu on bottom
+    // menu on bottom
     &[data-popper-placement='bottom-start'] {
       animation: dropdownFadeIn forwards var(--#{$prefix}dropdown-animation-speed);
     }
-    //menu on top
+    // menu on top
     &[data-popper-placement='top-start'] {
       animation: dropdownFadeInTop forwards var(--#{$prefix}dropdown-animation-speed);
     }
-    //-menu on left
+    // menu on left
     &[data-popper-placement='left-start'] {
       animation: dropdownFadeInTop forwards var(--#{$prefix}dropdown-animation-speed);
       &:before {
@@ -198,7 +198,7 @@
         left: auto;
       }
     }
-    //-menu on right
+    // menu on right
     &[data-popper-placement='right-start'] {
       animation: dropdownFadeInTop forwards var(--#{$prefix}dropdown-animation-speed);
       &:before {
