@@ -2221,7 +2221,7 @@ Usando `.it-card-group-N-cols`, dove modificando `N` si possono ottenere layout 
         <p class="it-card-text">Questo gruppo mostra sempre due colonne su viewport medie e grandi.</p>
       </div>
     </article>
-    <article class="it-card it-card-image rounded shadow-sm border">
+    <article class="it-card rounded shadow-sm border">
       <h3 class="it-card-title no_toc">
         <a href="#">Card in due colonne</a>
       </h3>
