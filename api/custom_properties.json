@@ -66,7 +66,7 @@
             "variable-name": "--bsi-acceptoverlay-background-color"
         },
         {
-            "description": "TODO: apply semantic token",
+            "description": "Todo: apply semantic token",
             "value": "var(--it-spacing-12x)",
             "variable-name": "--bsi-acceptoverlay-icon-margin-bottom"
         },
@@ -230,7 +230,7 @@
             "variable-name": "--bsi-alert-spacing-inset"
         },
         {
-            "description": "TODO: replace with semantic token",
+            "description": "Todo: replace with semantic token",
             "value": "var(--bsi-spacing-16x)",
             "variable-name": "--bsi-alert-spacing-inset-extra"
         },
@@ -284,12 +284,12 @@
             "variable-name": "--bsi-autocomplete-list-background-color"
         },
         {
-            "description": "change to show border",
+            "description": "Change to show border",
             "value": "transparent",
             "variable-name": "--bsi-autocomplete-list-border-color"
         },
         {
-            "description": "change to 1px to show border",
+            "description": "Change to 1px to show border",
             "value": "0",
             "variable-name": "--bsi-autocomplete-list-border-size"
         },
@@ -406,7 +406,7 @@
             "variable-name": "--bsi-avatar-radius"
         },
         {
-            "description": "default size - see '.size-' classes for other sizes",
+            "description": "Default size - see '.size-' classes for other sizes",
             "value": "2.5rem",
             "variable-name": "--bsi-avatar-size"
         },
@@ -917,7 +917,7 @@
     ],
     "btn": [
         {
-            "description": "default to transparent",
+            "description": "Default to transparent",
             "value": "transparent",
             "variable-name": "--bsi-btn-background"
         },
@@ -932,7 +932,7 @@
             "variable-name": "--bsi-btn-border-radius"
         },
         {
-            "description": "default to 0",
+            "description": "Default to 0",
             "value": "0",
             "variable-name": "--bsi-btn-border-size"
         },
@@ -1152,7 +1152,7 @@
             "variable-name": "--bsi-btn-text-color"
         },
         {
-            "description": "more contrast on hover",
+            "description": "More contrast on hover",
             "value": "color-mix(in srgb, var(--bsi-color-border-primary-hover) 70%, black)",
             "variable-name": "--bsi-btn-outline-border-color"
         },
@@ -1212,7 +1212,7 @@
             "variable-name": "--bsi-btn-text-color"
         },
         {
-            "description": "more contrast on hover",
+            "description": "More contrast on hover",
             "value": "color-mix(in srgb, var(--bsi-color-border-success-hover) 70%, black)",
             "variable-name": "--bsi-btn-outline-border-color"
         },
@@ -1242,7 +1242,7 @@
             "variable-name": "--bsi-btn-text-color"
         },
         {
-            "description": "more contrast on hover",
+            "description": "More contrast on hover",
             "value": "color-mix(in srgb, var(--bsi-color-border-warning-hover) 70%, black)",
             "variable-name": "--bsi-btn-outline-border-color"
         },
@@ -1272,7 +1272,7 @@
             "variable-name": "--bsi-btn-text-color"
         },
         {
-            "description": "more contrast on hover",
+            "description": "More contrast on hover",
             "value": "color-mix(in srgb, var(--bsi-color-border-danger-hover) 70%, black)",
             "variable-name": "--bsi-btn-outline-border-color"
         },
@@ -1352,7 +1352,7 @@
             "variable-name": "--bsi-btn-boxshadow-color-desaturated"
         },
         {
-            "description": "tutto questo equivale a fare color-hover(...)",
+            "description": "Tutto questo equivale a fare color-hover(...)",
             "value": "var(--bsi-btn-boxshadow-color-desaturated)",
             "variable-name": "--bsi-btn-outline-border-color"
         },
@@ -1372,7 +1372,7 @@
             "variable-name": "--bsi-btn-boxshadow-color-desaturated"
         },
         {
-            "description": "tutto questo equivale a fare color-hover(...)",
+            "description": "Tutto questo equivale a fare color-hover(...)",
             "value": "var(--bsi-btn-boxshadow-color-desaturated)",
             "variable-name": "--bsi-btn-outline-border-color"
         },
@@ -2314,7 +2314,7 @@
             "variable-name": "--bsi-color-background-inverse"
         },
         {
-            "description": "TODO: replace with semantic token",
+            "description": "Todo: replace with semantic token",
             "value": "var(--it-color-slate-93)",
             "variable-name": "--bsi-color-background-inverse-hover"
         },
@@ -2435,147 +2435,147 @@
     ],
     "dropdown": [
         {
-            "description": "",
+            "description": "Speed of dropdown open animation",
             "value": "var(--bsi-transition-instant)",
             "variable-name": "--bsi-dropdown-animation-speed"
         },
         {
-            "description": "",
+            "description": "Default background",
             "value": "var(--bsi-color-background-inverse)",
             "variable-name": "--bsi-dropdown-background"
         },
         {
-            "description": "",
+            "description": "Default border color",
             "value": "transparent",
             "variable-name": "--bsi-dropdown-border-color"
         },
         {
-            "description": "",
+            "description": "Border radius",
             "value": "var(--bsi-radius-smooth)",
             "variable-name": "--bsi-dropdown-border-radius"
         },
         {
-            "description": "",
+            "description": "Border width",
             "value": "0",
             "variable-name": "--bsi-dropdown-border-width"
         },
         {
-            "description": "",
+            "description": "Box shadow",
             "value": "var(--bsi-elevation-medium)",
             "variable-name": "--bsi-dropdown-box-shadow"
         },
         {
-            "description": "",
+            "description": "Default text color",
             "value": "var(--bsi-color-text-base)",
             "variable-name": "--bsi-dropdown-color"
         },
         {
-            "description": "",
+            "description": "Divider background color",
             "value": "var(--bsi-color-border-subtle)",
             "variable-name": "--bsi-dropdown-divider-bg"
         },
         {
-            "description": "",
+            "description": "Divider margin top and bottom",
             "value": "var(--bsi-spacing-xxs)",
             "variable-name": "--bsi-dropdown-divider-margin-y"
         },
         {
-            "description": "",
+            "description": "Font size of dropdown items",
             "value": "var(--bsi-label-font-size)",
             "variable-name": "--bsi-dropdown-font-size"
         },
         {
-            "description": "",
+            "description": "Dropdown header text color",
             "value": "var(--bsi-color-text-secondary)",
             "variable-name": "--bsi-dropdown-header-color"
         },
         {
-            "description": "",
+            "description": "Dropdown header font size",
             "value": "var(--bsi-label-font-size)",
             "variable-name": "--bsi-dropdown-header-font-size"
         },
         {
-            "description": "",
+            "description": "Dropdown header padding left and right",
             "value": "var(--bsi-spacing-s)",
             "variable-name": "--bsi-dropdown-header-padding-x"
         },
         {
-            "description": "",
+            "description": "Dropdown header padding top and bottom",
             "value": "var(--bsi-spacing-xxs)",
             "variable-name": "--bsi-dropdown-header-padding-y"
         },
         {
-            "description": "",
+            "description": "Inner border radius for first and last items",
             "value": "var(--bsi-radius-smooth)",
             "variable-name": "--bsi-dropdown-inner-border-radius"
         },
         {
-            "description": "",
+            "description": "Dropdown item padding left and right",
             "value": "var(--bsi-spacing-s)",
             "variable-name": "--bsi-dropdown-item-padding-x"
         },
         {
-            "description": "",
+            "description": "Dropdown item padding top and bottom",
             "value": "var(--bsi-spacing-xs)",
             "variable-name": "--bsi-dropdown-item-padding-y"
         },
         {
-            "description": "",
+            "description": "Active link color",
             "value": "var(--bsi-color-text-primary-active)",
             "variable-name": "--bsi-dropdown-link-active-color"
         },
         {
-            "description": "",
+            "description": "Link color in dropdown items",
             "value": "var(--bsi-color-text-primary)",
             "variable-name": "--bsi-dropdown-link-color"
         },
         {
-            "description": "",
+            "description": "Link hover color in dropdown items",
             "value": "var(--bsi-color-text-primary-hover)",
             "variable-name": "--bsi-dropdown-link-hover-color"
         },
         {
-            "description": "",
+            "description": "Minimum width of dropdown menu",
             "value": "10rem",
             "variable-name": "--bsi-dropdown-min-width"
         },
         {
-            "description": "",
+            "description": "Size of the notch element",
             "value": "1.125rem",
             "variable-name": "--bsi-dropdown-notch-base-size"
         },
         {
-            "description": "",
+            "description": "X position of the notch element",
             "value": "20px",
             "variable-name": "--bsi-dropdown-notch-position-x"
         },
         {
-            "description": "",
+            "description": "Y position of the notch element",
             "value": "-8px",
             "variable-name": "--bsi-dropdown-notch-position-y"
         },
         {
-            "description": "",
+            "description": "Dropdown menu padding left and right",
             "value": "0",
             "variable-name": "--bsi-dropdown-padding-x"
         },
         {
-            "description": "",
+            "description": "Dropdown menu padding top and bottom",
             "value": "var(--bsi-spacing-xxs)",
             "variable-name": "--bsi-dropdown-padding-y"
         },
         {
-            "description": "",
+            "description": "Space between dropdown toggle and menu",
             "value": "0.125rem",
             "variable-name": "--bsi-dropdown-spacer"
         },
         {
-            "description": "",
+            "description": "Vertical shift for dropdown open animation",
             "value": "10px",
             "variable-name": "--bsi-dropdown-vertical-shift"
         },
         {
-            "description": "TODO review zindex usage",
+            "description": "Z-index of dropdown menu",
             "value": "8",
             "variable-name": "--bsi-dropdown-zindex"
         },
@@ -3092,7 +3092,7 @@
             "variable-name": "--bsi-header-search-icon-size"
         },
         {
-            "description": "TODO: use variable when ready",
+            "description": "Todo: use variable when ready",
             "value": "var(--it-color-blue-30)",
             "variable-name": "--bsi-header-slim-background"
         },
@@ -3388,7 +3388,7 @@
     ],
     "highlight": [
         {
-            "description": "TODO: replace with semantic token",
+            "description": "Todo: replace with semantic token",
             "value": "var(--it-color-teal-80)",
             "variable-name": "--bsi-highlight-background"
         }
@@ -3549,7 +3549,7 @@
             "variable-name": "--bsi-it-card-border-radius"
         },
         {
-            "description": "default background set to transparent",
+            "description": "Default background set to transparent",
             "value": "transparent",
             "variable-name": "--bsi-it-card-border-top-color"
         },
@@ -3559,12 +3559,12 @@
             "variable-name": "--bsi-it-card-border-top-width"
         },
         {
-            "description": "xxx change to 2px if needed",
+            "description": "Xxx change to 2px if needed",
             "value": "1px",
             "variable-name": "--bsi-it-card-border-outside-width"
         },
         {
-            "description": "xxx change to 2px if needed",
+            "description": "Xxx change to 2px if needed",
             "value": "1px",
             "variable-name": "--bsi-it-card-border-separator-width"
         },
@@ -4245,7 +4245,7 @@
             "variable-name": "--bsi-navbar-link-border-size"
         },
         {
-            "description": "nav link color default - mobile",
+            "description": "Nav link color default - mobile",
             "value": "var(--bsi-color-link)",
             "variable-name": "--bsi-navbar-link-color"
         },
@@ -4340,7 +4340,7 @@
             "variable-name": "--bsi-navbar-toggler-transition"
         },
         {
-            "description": "nav link color default - desktop",
+            "description": "Nav link color default - desktop",
             "value": "var(--bsi-color-text-inverse)",
             "variable-name": "--bsi-navbar-link-color"
         },
@@ -4355,7 +4355,7 @@
             "variable-name": "--bsi-navbar-background"
         },
         {
-            "description": "nav link color theme light",
+            "description": "Nav link color theme light",
             "value": "var(--bsi-color-link)",
             "variable-name": "--bsi-navbar-link-color"
         },
@@ -4375,7 +4375,7 @@
             "variable-name": "--bsi-navbar-background"
         },
         {
-            "description": "nav link color theme dark",
+            "description": "Nav link color theme dark",
             "value": "var(--bsi-color-text-inverse)",
             "variable-name": "--bsi-navbar-link-color"
         },

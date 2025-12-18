@@ -7,6 +7,7 @@ import json
 
 SCSS_BASE_PATH = os.path.join('src', 'scss')
 OUTPUT_JSON = os.path.join('api', 'custom_properties.json')
+OUTPUT_JSON_JEKYLL = os.path.join('_data', 'cprops.json')
 
 glob_vars = []
 
@@ -38,9 +39,12 @@ for pkt in glob_vars:
         mapped_vars[prefix].append({
           'variable-name': final_var_name,
           'value': pkt[1].replace("--#{$prefix}", "--bsi-"),
-          'description': pkt[2].replace('//', '').strip()
+          'description': pkt[2].replace('//', '').strip().capitalize()
         })
 
 
 with open(OUTPUT_JSON, "w") as fapi:
+  fapi.write(json.dumps(mapped_vars, sort_keys=True, indent=4))
+
+with open(OUTPUT_JSON_JEKYLL, "w") as fapi:
   fapi.write(json.dumps(mapped_vars, sort_keys=True, indent=4))
