@@ -31,20 +31,20 @@ Si ricorda che link di navigazione semanticamente sono tag `<a>`, mentre link ch
 ### Dropdown custom properties
 
 <div class="table-responsive">
-  <table class="table table-bordered table-striped">
+  <table class="table table-simple">
     <thead>
       <tr>
         <th>Variable</th>
         <th>Description</th>
-        <th>Value</th>
+        <!-- <th>Value</th> -->
       </tr>
     </thead>
     <tbody>
     {% for track in site.data.cprops.dropdown %}
     <tr>
-      <td>{{ track.variable-name }}</td>
+      <td><code>{{ track.variable-name }}</code></td>
       <td>{{ track.description }}</td>
-      <td>{{ track.value }}</td>
+      <!-- <td>{{ track.value }}</td> -->
     </tr>
     {% endfor %}
     </tbody>
