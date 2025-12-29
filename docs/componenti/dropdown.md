@@ -36,7 +36,7 @@ Si ricorda che link di navigazione semanticamente sono tag `<a>`, mentre link ch
       <tr>
         <th>Variable</th>
         <th>Description</th>
-        <!-- <th>Value</th> -->
+        <th>Default</th>
       </tr>
     </thead>
     <tbody>
@@ -44,7 +44,7 @@ Si ricorda che link di navigazione semanticamente sono tag `<a>`, mentre link ch
     <tr>
       <td><code>{{ track.variable-name }}</code></td>
       <td>{{ track.description }}</td>
-      <!-- <td>{{ track.value }}</td> -->
+      <td><code>{{ track.value }}</code></td>
     </tr>
     {% endfor %}
     </tbody>
