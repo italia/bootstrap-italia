@@ -28,9 +28,9 @@ Si ricorda che link di navigazione semanticamente sono tag `<a>`, mentre link ch
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
 
-### Dropdown custom properties
+### Properties
 
-<div class="table-responsive">
+<div class="table-responsive" style="font-size: 1rem">
   <table class="table table-simple">
     <thead>
       <tr>
