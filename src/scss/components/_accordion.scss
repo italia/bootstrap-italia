@@ -2,7 +2,6 @@
 //
 // Description: Styles for the Accordion component.
 
-
 // Properties
 //
 
@@ -32,6 +31,7 @@
   --#{$prefix}accordion-item-border-width: 1px; // Set the border width for the accordion item
   --#{$prefix}accordion-transition: var(--#{$prefix}transition-instant); // Transition timing for the accordion button
 }
+
 // Styles
 //
 
