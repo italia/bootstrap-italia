@@ -15,7 +15,6 @@ Per il corretto funzionamento dei dropdown è necessario assicurarsi che sia inc
 Per l'attivazione di un dropdown è sufficiente racchiudere il link per l'apertura e il menu a discesa all'interno di un elemento con classe `.dropdown`, o un altro elemento che dichiari la `position: relative;`. I dropdown possono essere attivati da elementi `<a>` o `<button>` per soddisfare al meglio le tue esigenze.
 
 {% capture callout %}
-
 #### Accessibilità
 
 Lo standard [WAI ARIA](https://www.w3.org/TR/wai-aria/) definisce un widget con proprietà [`role="menu"`](https://www.w3.org/TR/wai-aria/#menu), specifica per i menu applicativi con link o azioni. Questi menu possono contenere solo voci di menu, voci di menu di caselle di controllo, voci di menu dei pulsanti di opzione, gruppi di pulsanti di opzione e sottomenu.
@@ -28,30 +27,7 @@ Si ricorda che link di navigazione semanticamente sono tag `<a>`, mentre link ch
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
 
-### Properties
-
-<div class="table-responsive" style="font-size: 1rem">
-  <table class="table table-simple">
-    <thead>
-      <tr>
-        <th>Variable</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-    {% for track in site.data.cprops.dropdown %}
-    <tr>
-      <td><code>{{ track.variable-name }}</code></td>
-      <td>{{ track.description }}</td>
-      <td><code>{{ track.value }}</code></td>
-    </tr>
-    {% endfor %}
-    </tbody>
-  </table>
-</div>
-
-### Dropdown button
+## Dropdown button
 
 Ogni singolo `.btn` può essere trasformato in un pulsante per l'apertura di dropdown con del semplice markdown HTML.
 Il design di default dei dropdown richiede l'applicazione della classe `.btn-dropdown`. I link o le voci all'interno del dropdown devono essere contenute in un elemento `.link-list`.
@@ -577,6 +553,29 @@ Le opzioni possono essere passate tramite gli attributi data o tramite JavaScrip
         <td><code>shown.bs.dropdown</code></td>
         <td>Attivato quando il menu a discesa è stato reso visibile all'utente e le transizioni CSS sono state completate.</td>
       </tr>
+    </tbody>
+  </table>
+</div>
+
+## Properties
+
+<div class="table-responsive" style="font-size: 1rem">
+  <table class="table table-simple">
+    <thead>
+      <tr>
+        <th>Variable</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for track in site.data.cprops.dropdown %}
+    <tr>
+      <td><code>{{ track.variable-name }}</code></td>
+      <td>{{ track.description }}</td>
+      <td><code>{{ track.value }}</code></td>
+    </tr>
+    {% endfor %}
     </tbody>
   </table>
 </div>
