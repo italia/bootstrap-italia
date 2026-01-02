@@ -64,6 +64,29 @@ Gli avvisi sono disponibili in quattro tipologie diverse e sono adatti a qualsia
 
 {% include callout-warning-color-assistive-technologies.md %}
 
+### Properties
+
+<div class="table-responsive" style="font-size: 1rem">
+  <table class="table table-simple">
+    <thead>
+      <tr>
+        <th>Variable</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for track in site.data.cprops.dropdown %}
+    <tr>
+      <td><code>{{ track.variable-name }}</code></td>
+      <td>{{ track.description }}</td>
+      <td><code>{{ track.value }}</code></td>
+    </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+
 ### Link evidenziato
 
 Usa la classe `.alert-link` per dare risalto ad un link all'interno dell'alert.
