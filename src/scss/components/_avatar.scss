@@ -10,20 +10,20 @@
 //
 
 .avatar {
-  --#{$prefix}avatar-background: var(--#{$prefix}color-background-secondary-lighter);
-  --#{$prefix}avatar-dot-border-color: var(--#{$prefix}color-border-inverse);
-  --#{$prefix}avatar-dot-border-size: 2px;
-  --#{$prefix}avatar-dot-offset-bottom: 0;
-  --#{$prefix}avatar-dot-offset-right: 0;
-  --#{$prefix}avatar-dot-offset-top: 4px;
-  --#{$prefix}avatar-dot-size: 12px;
-  --#{$prefix}avatar-font-size: var(--#{$prefix}font-size-3);
-  --#{$prefix}avatar-font-weight: var(--#{$prefix}font-weight-solid);
-  --#{$prefix}avatar-icon-size: var(--#{$prefix}icon-size-s);
-  --#{$prefix}avatar-overlay-background: var(--#{$prefix}color-background-emphasis);
-  --#{$prefix}avatar-radius: var(--#{$prefix}radius-circle);
-  --#{$prefix}avatar-size: 2.5rem; // default size - see '.size-' classes for other sizes
-  --#{$prefix}avatar-text-color: var(--#{$prefix}color-text-secondary);
+  --#{$prefix}avatar-background: var(--#{$prefix}color-background-secondary-lighter); // Controls the background for the avatar, using color tokens.
+  --#{$prefix}avatar-dot-border-color: var(--#{$prefix}color-border-inverse); // Controls the dot border color for the avatar, using color tokens.
+  --#{$prefix}avatar-dot-border-size: 2px; // Controls the dot border size for the avatar.
+  --#{$prefix}avatar-dot-offset-bottom: 0; // Controls the bottom offset for the avatar dot.
+  --#{$prefix}avatar-dot-offset-right: 0; // Controls the right offset for the avatar dot.
+  --#{$prefix}avatar-dot-offset-top: 4px; // Controls the top offset for the avatar dot.
+  --#{$prefix}avatar-dot-size: 12px; // Controls the size of the avatar dot.
+  --#{$prefix}avatar-font-size: var(--#{$prefix}font-size-3); // Controls the font size for the avatar, using font tokens.
+  --#{$prefix}avatar-font-weight: var(--#{$prefix}font-weight-solid); // Controls the font weight for the avatar, using font tokens.
+  --#{$prefix}avatar-icon-size: var(--#{$prefix}icon-size-s); // Controls the icon size for the avatar, using icon tokens.
+  --#{$prefix}avatar-overlay-background: var(--#{$prefix}color-background-emphasis); // Controls the overlay background for the avatar, using color tokens.
+  --#{$prefix}avatar-radius: var(--#{$prefix}radius-circle); // Controls the border radius for the avatar, using radius tokens.
+  --#{$prefix}avatar-size: 2.5rem; // Controls the default size for the avatar.
+  --#{$prefix}avatar-text-color: var(--#{$prefix}color-text-secondary); // Controls the text color for the avatar, using color tokens.
 }
 
 // Styles

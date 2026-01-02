@@ -10,26 +10,26 @@
 //
 
 .modal {
-  --#{$prefix}modal-bg: var(--#{$prefix}color-background-inverse);
-  --#{$prefix}modal-border-color: transparent;
-  --#{$prefix}modal-border-radius: var(--#{$prefix}radius-smooth);
-  --#{$prefix}modal-border-width: 0;
-  --#{$prefix}modal-box-shadow: var(--#{$prefix}elevation-medium);
-  --#{$prefix}modal-footer-bg: transparent;
-  --#{$prefix}modal-footer-border-color: var(--#{$prefix}modal-header-border-color);
-  --#{$prefix}modal-footer-border-width: var(--#{$prefix}modal-header-border-width);
-  --#{$prefix}modal-footer-gap: var(--#{$prefix}spacing-s);
-  --#{$prefix}modal-header-border-color: var(--#{$prefix}color-border-subtle);
-  --#{$prefix}modal-header-border-width: 0;
-  --#{$prefix}modal-inner-border-radius: var(--#{$prefix}radius-smooth);
-  --#{$prefix}modal-margin: auto;
-  --#{$prefix}modal-padding: var(--#{$prefix}spacing-m);
-  --#{$prefix}modal-title-font-size: var(--#{$prefix}heading-5-font-size);
-  --#{$prefix}modal-title-font-weight: var(--#{$prefix}heading-font-weight-weak);
-  --#{$prefix}modal-title-line-height: var(--#{$prefix}heading-line-height);
-  --#{$prefix}modal-transition: transform 0.3s ease-in-out;
-  --#{$prefix}modal-width: 500px;
-  --#{$prefix}modal-zindex: 1055;
+  --#{$prefix}modal-bg: var(--#{$prefix}color-background-inverse); // Controls the background for the modal, using color tokens.
+  --#{$prefix}modal-border-color: transparent; // Controls the border color for the modal.
+  --#{$prefix}modal-border-radius: var(--#{$prefix}radius-smooth); // Controls the border radius for the modal, using radius tokens.
+  --#{$prefix}modal-border-width: 0; // Controls the border width for the modal.
+  --#{$prefix}modal-box-shadow: var(--#{$prefix}elevation-medium); // Controls the box shadow for the modal, using elevation tokens.
+  --#{$prefix}modal-footer-bg: transparent; // Controls the footer background for the modal.
+  --#{$prefix}modal-footer-border-color: var(--#{$prefix}modal-header-border-color); // Controls the footer border color for the modal.
+  --#{$prefix}modal-footer-border-width: var(--#{$prefix}modal-header-border-width); // Controls the footer border width for the modal.
+  --#{$prefix}modal-footer-gap: var(--#{$prefix}spacing-s); // Controls the footer gap for the modal, using spacing tokens.
+  --#{$prefix}modal-header-border-color: var(--#{$prefix}color-border-subtle); // Controls the header border color for the modal, using color tokens.
+  --#{$prefix}modal-header-border-width: 0; // Controls the header border width for the modal.
+  --#{$prefix}modal-inner-border-radius: var(--#{$prefix}radius-smooth); // Controls the inner border radius for the modal, using radius tokens.
+  --#{$prefix}modal-margin: auto; // Controls the margin for the modal.
+  --#{$prefix}modal-padding: var(--#{$prefix}spacing-m); // Controls the padding for the modal, using spacing tokens.
+  --#{$prefix}modal-title-font-size: var(--#{$prefix}heading-5-font-size); // Controls the title font size for the modal, using font tokens.
+  --#{$prefix}modal-title-font-weight: var(--#{$prefix}heading-font-weight-weak); // Controls the title font weight for the modal, using font tokens.
+  --#{$prefix}modal-title-line-height: var(--#{$prefix}heading-line-height); // Controls the title line height for the modal, using font tokens.
+  --#{$prefix}modal-transition: transform 0.3s ease-in-out; // Controls the transition for the modal.
+  --#{$prefix}modal-width: 500px; // Controls the width for the modal.
+  --#{$prefix}modal-zindex: 1055; // Controls the z-index for the modal.
 }
 
 // Styles
