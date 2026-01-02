@@ -64,7 +64,7 @@ Gli avvisi sono disponibili in quattro tipologie diverse e sono adatti a qualsia
 
 {% include callout-warning-color-assistive-technologies.md %}
 
-### Properties
+## Properties
 
 <div class="table-responsive" style="font-size: 1rem">
   <table class="table table-simple">
@@ -76,7 +76,7 @@ Gli avvisi sono disponibili in quattro tipologie diverse e sono adatti a qualsia
       </tr>
     </thead>
     <tbody>
-    {% for track in site.data.cprops.dropdown %}
+    {% for track in site.data.cprops.alert %}
     <tr>
       <td><code>{{ track.variable-name }}</code></td>
       <td>{{ track.description }}</td>
