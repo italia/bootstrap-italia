@@ -9,12 +9,6 @@
 // Properties
 //
 
-// Styles
-//
-
-//
-// Custom properties
-
 .link-list-wrapper {
   --#{$prefix}linklist-divider-size: 1px;
   --#{$prefix}linklist-heading-color: var(--#{$prefix}color-text-secondary);
@@ -25,6 +19,8 @@
   --#{$prefix}linklist-nested-spacing: var(--#{$prefix}spacing-s);
 }
 
+// Styles
+//
 
 .link-list-wrapper {
 

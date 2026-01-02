@@ -9,12 +9,6 @@
 // Properties
 //
 
-// Styles
-//
-
-//
-// Custom properties
-
 .it-footer {
   --#{$prefix}footer-bottom-background: var(--#{$prefix}color-background-primary-deep);
   --#{$prefix}footer-brand-icon-color: var(--#{$prefix}icon-inverse);
@@ -25,7 +19,8 @@
   }
 }
 
-
+// Styles
+//
 
 .it-footer {
   h4 {

@@ -9,12 +9,6 @@
 // Properties
 //
 
-// Styles
-//
-
-//
-// Custom properties
-
 .it-header-wrapper,
 .it-header-slim-wrapper,
 .it-header-center-wrapper,
@@ -55,6 +49,9 @@
     --#{$prefix}header-nav-text-color: var(--#{$prefix}color-text-inverse);
   }
 }
+
+// Styles
+//
 
 // Light theme
 .it-header-slim-wrapper.theme-light,

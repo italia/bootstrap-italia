@@ -9,12 +9,6 @@
 // Properties
 //
 
-// Styles
-//
-
-//
-// Custom properties
-
 .it-hero-wrapper {
   --#{$prefix}hero-background-color: var(--#{$prefix}color-background-primary);
   --#{$prefix}hero-cat-size: 1rem;
@@ -28,7 +22,8 @@
   --card-padding: 24px;
 }
 
-
+// Styles
+//
 
 .it-hero-wrapper {
   min-height: var(--#{$prefix}hero-height);

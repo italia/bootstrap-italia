@@ -8,6 +8,7 @@
 
 // Properties
 //
+
 .modal {
   --#{$prefix}modal-bg: var(--#{$prefix}color-background-inverse);
   --#{$prefix}modal-border-color: transparent;
@@ -33,7 +34,6 @@
 
 // Styles
 //
-
 
 .modal-dialog {
   position: relative;
