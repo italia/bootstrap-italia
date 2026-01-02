@@ -28,7 +28,7 @@ jobs:
         run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
       - uses: actions/setup-node@v1
         with:
-          node-version: 20.x
+          node-version: 22.x
       - run: npm install -g pa11y-ci --unsafe-perm=true
       - run: pa11y-ci --sitemap ${{ needs.wait_for_vercel.outputs.preview_url }}/sitemap.xml --sitemap-find ^/ --sitemap-replace '${{ needs.wait_for_vercel.outputs.preview_url }}/'
   htmlproofer:
