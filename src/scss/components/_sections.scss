@@ -10,9 +10,9 @@
 //
 
 .section {
-  --#{$prefix}section-background-color: transparent;
-  --#{$prefix}section-image-overlay: hsla(0, 0%, 0%, 0.5);
-  --#{$prefix}section-padding-y: var(--#{$prefix}spacing-xxl);
+  --#{$prefix}section-background-color: transparent; // Controls the background color for the section.
+  --#{$prefix}section-image-overlay: hsla(0, 0%, 0%, 0.5); // Controls the image overlay for the section.
+  --#{$prefix}section-padding-y: var(--#{$prefix}spacing-xxl); // Controls the vertical padding for the section, using spacing tokens.
   @include media-breakpoint-up(xl) {
     --#{$prefix}section-padding-y: var(--#{$prefix}spacing-3xl);
   }

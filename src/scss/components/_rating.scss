@@ -10,16 +10,15 @@
 //
 
 .rating {
-  --#{$prefix}rating-font-size: var(--#{$prefix}label-font-size-s);
-  --#{$prefix}rating-font-weight: var(--#{$prefix}font-weight-solid);
-  --#{$prefix}rating-icon-fill: var(--#{$prefix}color-background-secondary-light);
-  --#{$prefix}rating-line-height: var(--#{$prefix}label-line-height);
-  --#{$prefix}rating-text: var(--#{$prefix}color-text-secondary);
+  --#{$prefix}rating-font-size: var(--#{$prefix}label-font-size-s); // Controls the font size for the rating, using font tokens.
+  --#{$prefix}rating-font-weight: var(--#{$prefix}font-weight-solid); // Controls the font weight for the rating, using font tokens.
+  --#{$prefix}rating-icon-fill: var(--#{$prefix}color-background-secondary-light); // Controls the icon fill for the rating, using color tokens.
+  --#{$prefix}rating-line-height: var(--#{$prefix}label-line-height); // Controls the line height for the rating, using font tokens.
+  --#{$prefix}rating-text: var(--#{$prefix}color-text-secondary); // Controls the text color for the rating, using color tokens.
 }
 
 // Styles
 //
-
 
 .rating {
   border: none;

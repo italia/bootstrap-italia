@@ -10,18 +10,18 @@
 //
 
 .sidebar-wrapper {
-  --#{$prefix}sidebar-padding: var(--#{$prefix}spacing-m);
-  --#{$prefix}sidebar-background-color: transparent;
-  --#{$prefix}sidebar-heading-font-size: var(--#{$prefix}heading-6-font-size);
-  --#{$prefix}sidebar-heading-color: var(--#{$prefix}color-text-secondary);
-  --#{$prefix}sidebar-link-padding-x: var(--#{$prefix}spacing-s);
-  --#{$prefix}sidebar-link-padding-y: var(--#{$prefix}spacing-xs);
-  --#{$prefix}sidebar-link-sublist-indent: var(--#{$prefix}spacing-m);
-  --#{$prefix}sidebar-link-font-size: var(--#{$prefix}label-font-size);
-  --#{$prefix}sidebar-link-line-height: var(--#{$prefix}body-line-height);
-  --#{$prefix}sidebar-link-active-line-width: 4px;
-  --#{$prefix}sidebar-divider-color: var(--#{$prefix}color-border-subtle);
-  --#{$prefix}sidebar-link-active-border-color: var(--#{$prefix}color-border-primary);
+  --#{$prefix}sidebar-padding: var(--#{$prefix}spacing-m); // Controls the padding for the sidebar, using spacing tokens.
+  --#{$prefix}sidebar-background-color: transparent; // Controls the background color for the sidebar.
+  --#{$prefix}sidebar-heading-font-size: var(--#{$prefix}heading-6-font-size); // Controls the heading font size for the sidebar, using font tokens.
+  --#{$prefix}sidebar-heading-color: var(--#{$prefix}color-text-secondary); // Controls the heading color for the sidebar, using color tokens.
+  --#{$prefix}sidebar-link-padding-x: var(--#{$prefix}spacing-s); // Controls the link horizontal padding for the sidebar, using spacing tokens.
+  --#{$prefix}sidebar-link-padding-y: var(--#{$prefix}spacing-xs); // Controls the link vertical padding for the sidebar, using spacing tokens.
+  --#{$prefix}sidebar-link-sublist-indent: var(--#{$prefix}spacing-m); // Controls the sublist indent for the sidebar, using spacing tokens.
+  --#{$prefix}sidebar-link-font-size: var(--#{$prefix}label-font-size); // Controls the link font size for the sidebar, using font tokens.
+  --#{$prefix}sidebar-link-line-height: var(--#{$prefix}body-line-height); // Controls the link line height for the sidebar, using font tokens.
+  --#{$prefix}sidebar-link-active-line-width: 4px; // Controls the active line width for the sidebar.
+  --#{$prefix}sidebar-divider-color: var(--#{$prefix}color-border-subtle); // Controls the divider color for the sidebar, using color tokens.
+  --#{$prefix}sidebar-link-active-border-color: var(--#{$prefix}color-border-primary); // Controls the active border color for the sidebar, using color tokens.
 }
 
 // Styles
