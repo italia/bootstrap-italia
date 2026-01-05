@@ -1,6 +1,8 @@
 // Import Design Tokens Italia
 // @import '../../node_modules/design-tokens-italia/scss/variables';
 
+@use 'sass:map';
+
 // Color vars
 // HSB (https://it.wikipedia.org/wiki/Hue_Saturation_Brightness, coincidente con il modello HSV)
 // è lo spazio colore scelto per ottenere le varianti colore della tonalità primaria.
@@ -21,7 +23,7 @@ $gray-800: hsl(0, 0%, 15%) !default; // color-gray-15
 $gray-900: hsl(0, 0%, 10%) !default; // color-gray-10
 
 $grays: () !default;
-$grays: map-merge(
+$grays: map.merge(
   (
     '100': $gray-100,
     '200': $gray-200,
@@ -89,7 +91,7 @@ $gray-border-disabled: $gray-disabled !default; // color-border-disabled
 $secondary: $gray-secondary !default;
 
 $colors: () !default;
-$colors: map-merge(
+$colors: map.merge(
   (
     'indigo': $indigo,
     'purple': $purple,
@@ -121,7 +123,7 @@ $warning: $orange-accessible !default;
 $danger: $red-accessible !default;
 
 $theme-colors: () !default;
-$theme-colors: map-merge(
+$theme-colors: map.merge(
   (
     'primary': $primary,
     'secondary': $secondary,
@@ -412,7 +414,7 @@ $neutral-2-a7: hsb($neutral-2-h, $neutral-2-s + 4, $neutral-2-b - 85) !default;
 // Backgrounds
 $color-background-emphasis: hsl(210, 54%, 20%); // color-slate-20
 $color-background-primary-lighter: hsl(210, 62%, 97%); // color-blue-97
-$color-background-primary-hover: hsl(210, 100, 30); // color-blue-30
+$color-background-primary-hover: hsl(210, 100%, 30%); // color-blue-30
 $color-background-secondary-hover: hsl(210, 33%, 28%); // color-slate-28
 $color-background-secondary-lighter: hsl(210, 3%, 85%); // color-slate-85
 $color-background-muted: $gray-100; // color-gray-96
@@ -1966,7 +1968,7 @@ $grid-list-text-gap: $v-gap;
 $grid-item-sm-col: 50%;
 $grid-item-lg-col: 33.333333%;
 $grid-item-icon-size: 24px;
-$grid-item-overlay: hsla(210%, 54%, 20, 0.85);
+$grid-item-overlay: hsla(210deg, 54%, 20%, 0.85);
 
 // list
 $list-font-size: 1rem;
