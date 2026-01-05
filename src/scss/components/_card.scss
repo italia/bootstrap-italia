@@ -243,14 +243,12 @@ article.it-card {
       }
 
       .it-card-title-icon-wrapper {
-        display: flex;
-        align-items: center;
+        margin-left: 0.5rem;
       }
 
       // linked titles with icons goes fullwidth
       > a {
         display: flex;
-        flex-direction: row;
         justify-content: space-between;
         width: 100%;
 
