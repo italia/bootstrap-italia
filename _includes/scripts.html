@@ -1,7 +1,100 @@
 {% assign buildTime = site.time | date: '%Y%m%d%H%M' %}
 <script src="{{ site.baseurl }}/dist/js/bootstrap-italia.bundle.min.js?{{ buildTime }}"></script>
 <script>
-  bootstrap.loadFonts('{{ site.baseurl }}/dist/fonts')
+  class FontSwitcher {
+    constructor() {
+      this.currentFont = localStorage.getItem('docs-font-variant') || 'web';
+      this.fontNames = {
+        'web': 'Titillium Web',
+        'sans-pro': 'Titillium Sans Pro'
+      };
+      this.init();
+    }
+
+    init() {
+      this.loadFont(this.currentFont);
+      this.updateUI();
+      this.setupEventListeners();
+    }
+
+    loadFont(variant) {
+      document.querySelectorAll('style[data-font-switcher]').forEach(el => el.remove());
+      bootstrap.loadFonts('{{ site.baseurl }}/dist/fonts', {
+        titillium: variant,
+        fonts: ['titillium', 'lora', 'roboto-mono']
+      });
+      const lastStyle = document.querySelector('style:last-of-type');
+      if (lastStyle) {
+        lastStyle.setAttribute('data-font-switcher', variant);
+      }
+      this.updateFontStack(variant);
+    }
+
+    updateFontStack(variant) {
+      const tempStyle = document.createElement('style');
+      tempStyle.setAttribute('data-font-switcher-override', variant);
+      const fontFamily = this.fontNames[variant];
+      tempStyle.innerHTML = `
+        body, .font-sans-serif, 
+        h1, h2, h3, h4, h5, h6,
+        .h1, .h2, .h3, .h4, .h5, .h6 {
+          font-family: '${fontFamily}', Geneva, Tahoma, sans-serif !important;
+        }
+      `;
+      document.querySelectorAll('style[data-font-switcher-override]').forEach(el => el.remove());
+      document.head.appendChild(tempStyle);
+    }
+
+    updateUI() {
+      const currentFontElement = document.getElementById('current-font');
+      if (currentFontElement) {
+        currentFontElement.textContent = this.fontNames[this.currentFont];
+      }
+      document.querySelectorAll('[data-font]').forEach(item => {
+        item.classList.toggle('active', item.dataset.font === this.currentFont);
+      });
+    }
+
+    setupEventListeners() {
+      document.addEventListener('click', (e) => {
+        if (e.target.matches('[data-font]')) {
+          e.preventDefault();
+          const newFont = e.target.dataset.font;
+          this.switchFont(newFont);
+        }
+      });
+    }
+
+    switchFont(variant) {
+      if (variant === this.currentFont) return;
+
+      this.currentFont = variant;
+      localStorage.setItem('docs-font-variant', variant);
+      this.loadFont(variant);
+      this.updateUI();
+
+      // Optional: analytics tracking XXX PoC 
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'font_switch', {
+          'custom_parameter': variant
+        });
+      }
+
+      console.log(`Font switched to: ${this.fontNames[variant]}`);
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    window.fontSwitcher = new FontSwitcher();
+  });
+
+  // Backward compatibility: carica Titillium Web di default se non c'è preferenza
+  if (!localStorage.getItem('docs-font-variant')) {
+    bootstrap.loadFonts('{{ site.baseurl }}/dist/fonts', {
+      titillium: 'web',
+      fonts: ['titillium', 'lora', 'roboto-mono']
+    });
+  }
 </script>
 {%- if page.layout == "default" or page.layout == "docs" -%}
 <script src="{{ site.baseurl }}/docs/assets/dist/js/docs.min.js?{{ buildTime }}"></script>
@@ -14,6 +107,10 @@
 <script src="{{ site.baseurl }}/docs/assets/src/js/vendor/tweenjs.min.js"></script>
 <script src="{{ site.baseurl }}/docs/assets/src/js/vendor/easeljs.min.js"></script>
 <script src="{{ site.baseurl }}/docs/assets/src/js/vendor/preloadjs.min.js"></script>
+
+<script>
+  window.SITE_BASEURL = '{{ site.baseurl }}';
+</script>
 
 <script>
   var manifest = [
@@ -166,7 +263,7 @@ https://github.com/algolia/docsearch{% endcomment %}
             const originalHTML = button.innerHTML;
             const originalAriaLabel = button.getAttribute('aria-label');
 
-            button.innerHTML = '<svg role="img" class="icon icon-sm align-middle icon-inverse" aria-label="Copiato"><use href="/dist/svg/sprites.svg#it-check"></use></svg>';
+            button.innerHTML = '<svg role="img" class="icon icon-sm align-middle icon-white" aria-label="Copiato"><use href="' + window.SITE_BASEURL + '/dist/svg/sprites.svg#it-check"></use></svg>';
             button.setAttribute('aria-label', 'Codice copiato negli appunti');
             button.classList.remove('btn-secondary');
             button.classList.add('btn-success');
@@ -203,7 +300,7 @@ https://github.com/algolia/docsearch{% endcomment %}
         divContainer.classList.add('copy-button-container');
         button.type = 'button';
         button.setAttribute('aria-label', 'Copia il codice negli appunti');
-        button.innerHTML = '<svg role="img" class="icon icon-sm align-middle icon-inverse" aria-label="Copia"><use href="/dist/svg/sprites.svg#it-copy"></use></svg>';
+        button.innerHTML = '<svg role="img" class="icon icon-sm align-middle icon-white" aria-label="Copia"><use href="' + window.SITE_BASEURL + '/dist/svg/sprites.svg#it-copy"></use></svg>';
         button.classList.add('btn', 'btn-primary', 'btn-xs', 'btn-secondary');
 
         button.addEventListener('click', function () {
@@ -218,7 +315,7 @@ https://github.com/algolia/docsearch{% endcomment %}
             const originalHTML = button.innerHTML;
             const originalAriaLabel = button.getAttribute('aria-label');
 
-            button.innerHTML = '<svg role="img" class="icon icon-sm align-middle icon-inverse" aria-label="Copiato"><use href="/dist/svg/sprites.svg#it-check"></use></svg>';
+            button.innerHTML = '<svg role="img" class="icon icon-sm align-middle icon-white" aria-label="Copiato"><use href="' + window.SITE_BASEURL + '/dist/svg/sprites.svg#it-check"></use></svg>';
             button.setAttribute('aria-label', 'Codice copiato negli appunti');
             button.classList.remove('btn-secondary');
             button.classList.add('btn-success');

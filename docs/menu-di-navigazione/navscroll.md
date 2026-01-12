@@ -263,7 +263,7 @@ Per attivare la variante scura è necessario aggiungere le seguenti classi all'e
     </div>
     <div class="menu-wrapper" tabindex="-1">
       <button type="button" class="it-back-button btn w-100 text-start">
-        <svg class="icon icon-sm icon-white align-top"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left" xlink:href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left"></use></svg>
+        <svg class="icon icon-sm icon-inverse align-top"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left" xlink:href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left"></use></svg>
         <span>Indietro</span>
       </button>
       <div class="link-list-wrapper">

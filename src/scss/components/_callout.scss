@@ -35,66 +35,16 @@
   color: var(--#{$prefix}callout-text-color);
 
   .callout-inner {
-    margin: var(--#{$prefix}callout-outer-spacing) 0;
-    padding: 8px var(--#{$prefix}callout-inner-spacing) var(--#{$prefix}callout-inner-spacing);
+    padding: var(--#{$prefix}callout-inner-spacing);
     border: var(--#{$prefix}callout-border-size) solid var(--#{$prefix}callout-border-color);
-    border-top: 0;
+    margin: var(--#{$prefix}callout-outer-spacing) 0;
   }
 
-  .callout-title {
-    color: var(--#{$prefix}callout-title-color);
-    font-size: var(--#{$prefix}callout-title-font-size);
-    font-weight: var(--#{$prefix}callout-title-font-weight);
-    text-transform: uppercase;
-
-    .icon {
-      margin-right: var(--#{$prefix}spacing-xxs);
-      fill: var(--#{$prefix}callout-icon-color);
-    }
-
-    span {
-      border-color: var(--#{$prefix}callout-border-color);
-
-      &:before,
-      &:after {
-        background: var(--#{$prefix}callout-border-color);
-      }
-    }
-  }
-
-  &:not(.callout-highlight):not(.callout-more) {
-    .callout-title {
-      position: relative;
-      top: -1.5rem; // Must be equal to the inner spacing
-      display: flex;
-      align-items: center;
-      padding-left: var(--#{$prefix}spacing-xs);
-
-      .text {
-        position: relative;
-        display: flex;
-        align-items: center;
-        padding-right: var(--#{$prefix}spacing-xs);
-
-        &:after {
-          position: absolute;
-          left: 100%;
-          content: '';
-          width: calc(100vw - 100% - 24px);
-          border-top: var(--#{$prefix}callout-border-size) solid var(--#{$prefix}callout-border-color);
-        }
-      }
-
-      &:before {
-        position: absolute;
-        top: 0.875em;
-        left: -1.5rem; // Equal to the inner spacing
-        content: '';
-        display: block;
-        width: 1.5rem;
-        border-top: var(--#{$prefix}callout-border-size) solid var(--#{$prefix}callout-border-color);
-      }
-    }
+  &.callout-highlight {
+    border: none;
+    border-left: var(--#{$prefix}callout-border-size) solid var(--#{$prefix}callout-border-color);
+    border-radius: 0;
+    padding: 0 var(--#{$prefix}callout-inner-spacing);
   }
 
   p {
