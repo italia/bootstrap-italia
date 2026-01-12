@@ -776,11 +776,9 @@ Includendo l'elemento all'interno di un `.form-group`, la label assumerà lo ste
 ## Breaking change
 
 {% capture callout %}
-Breaking feature dalla versione **3.0.0**
 - Nel caso di input con icona o pulsanti, l'elemento `label` è stato spostato fuori dal contenitore `.input-group` per leggibilità del markup.
 - Nel paragrafo dimensioni sono stati integrati gli esempi con icone, pulsanti di invio e istruzioni specifiche.
-
-{% endcapture %}{% include callout.html content=callout type="danger" %}
+{% endcapture %}{% include callout.html content=callout version="3.0.0" type="danger" %}
 
 {% capture callout %}
 Quando si utilizza l'attributo `placeholder` o l'input parte già valorizzato assicurarsi di aggiungere alla label la classe **`active`** per impedire la sovrapposizione della label al campo.
