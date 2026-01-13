@@ -1539,6 +1539,13 @@ const headerSticky = new HeaderSticky(headerStickyElement);
 
 ## Breaking change
 
+## Breaking change
+
+{% capture callout %}
+- Cambiata la dimensione del pulsante Accedi: cambiato classe da `.btn-sm` a `.btn-sx`.
+- Rimossa la classe `.ms-1` dall'icona `<svg>` che segue la voce Megamenu negli esempi.
+{% endcapture %}{% include callout.html content=callout version="3.0.0" type="danger" %}
+
 {% capture callout %}
 La navbar presente negli esempi, quando aperta in versione mobile o a forte ingrandimento, è stata reimplementata come modale per migliorare l'accessibilità con le combinazioni principali di lettori di schermo, sistema operativo e browser. Modifiche principali: 
 - struttura: la navbar ora utilizza un pattern dialog con backdrop 
