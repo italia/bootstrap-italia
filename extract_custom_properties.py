@@ -21,7 +21,11 @@ for root, dirs, files in os.walk(SCSS_BASE_PATH):
         if file.endswith(".scss"):
             css_file_to_inspect = os.path.join(root, file)
             with open(css_file_to_inspect, "r") as f:
-              vars = [re.findall(r'\s(--#{\$prefix}[a-z-].*):\s(.*);(\s\/\/.*)?',line) for line in f]
+              vars = []
+              for line in f:
+                if '// Styles' in line:
+                   break
+                vars.append(re.findall(r'\s(--#{\$prefix}[a-z-].*):\s(.*);(\s\/\/.*)?', line))
               vars = (functools.reduce(operator.iconcat, vars, []))
               glob_vars.extend(vars)
 
