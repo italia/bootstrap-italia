@@ -1065,6 +1065,12 @@ Per questo tipo di link list sono state utilizzate, oltre alle classi custom, le
 ## Breaking change
 
 {% capture callout %}
+- Negli esempi di varianti lista con avatar è stata rimossa la classe `.size-lg` dai `<div>` con classe `.avatar`. 
+- Nelle liste con immagini sono state aggiunge le classi per controllare la dimensione dell'immagine sui `<div>` con classe `.it-thumb`: `.ratio` e `.ratio-16x9` con istruzioni su come cambiare quest'ultima con le classi specifiche per cambiare le proporzioni.
+- Nelle liste con azioni e freccia è definita esplicitamente la dimensione e il colore delle icone freccia aggiungendo le classi `.icon-primary` e `.icon-sm` rispettivamente dove necessario.
+{% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}
+
+{% capture callout %}
 Gli elementi di tipo `<a>` dei collapse necessitano l'aggiunta dell'attributo `role="button"`.
 {% endcapture %}{% include callout-breaking.html content=callout version="2.8.0" type="danger" %}
 
