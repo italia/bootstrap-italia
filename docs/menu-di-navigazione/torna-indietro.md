@@ -108,3 +108,9 @@ Le opzioni possono essere passate tramite gli attributi data o tramite Javascrip
     </tr>
   </tbody>
 </table>
+
+## Breaking change
+
+{% capture callout %}
+- La classe che controlla il colore delle icone ha cambiato nome: `.icon-white` diventa `.icon-inverse`.
+{% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}
