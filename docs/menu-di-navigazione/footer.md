@@ -255,7 +255,6 @@ Contiene i contatti dell'ente, collegamenti ai profili social, form di iscrizion
 ## Breaking change
 
 {% capture callout %}
-
 - Per la `<section>` di branding dell'ente: aggiunta classe `.pb-4`.
 - Per la `<section>` che ospita sitemap o link: aggiunta classe `.pt-2`. 
   - Per i `<div>` interni di questa seconda sezione è stato corretto il responsive: rimossa classe `.col-md-3` e aggiunta la classe `.pb-3`.
