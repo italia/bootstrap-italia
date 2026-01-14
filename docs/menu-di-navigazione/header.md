@@ -422,7 +422,7 @@ Per cambiare tema all'header centrale è sufficiente aggiungere la classe `theme
                 <li class="nav-item"><a class="nav-link disabled" href="#" aria-disabled="true"><span>Link disabilitato</span></a></li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="mainNavDropdown1">
-                    <span>Menu Dropdown</span>
+                    <span>Dropdown</span>
                     <svg class="icon icon-xs"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
                   </a>
                   <div class="dropdown-menu" role="region" aria-labelledby="mainNavDropdown1">
@@ -570,7 +570,7 @@ Per modificare il tema dell'Header Nav è sufficiente aggiungere una o tutte e d
                 <li class="nav-item"><a class="nav-link disabled" href="#" aria-disabled="true"><span>Link disabilitato</span></a></li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="mainNavDropdown0">
-                    <span>Link Dropdown</span>
+                    <span>Dropdown</span>
                     <svg class="icon icon-xs"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
                   </a>
                   <div class="dropdown-menu" role="region" aria-labelledby="mainNavDropdown0">
@@ -706,7 +706,7 @@ Per modificare il tema dell'Header Nav è sufficiente aggiungere una o tutte e d
                 <li class="nav-item"><a class="nav-link disabled" href="#" aria-disabled="true"><span>Link disabilitato</span></a></li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="mainNavDropdown2">
-                    <span>Link Dropdown</span>
+                    <span>Dropdown</span>
                     <svg class="icon icon-xs"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
                   </a>
                   <div class="dropdown-menu" role="region" aria-labelledby="mainNavDropdown2">
@@ -844,7 +844,7 @@ Per modificare il tema dell'Header Nav è sufficiente aggiungere una o tutte e d
                 <li class="nav-item"><a class="nav-link disabled" href="#" aria-disabled="true"><span>Link disabilitato</span></a></li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="mainNavDropdown3">
-                    <span>Link Dropdown</span>
+                    <span>Dropdown</span>
                     <svg class="icon icon-xs"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
                   </a>
                   <div class="dropdown-menu" role="region" aria-labelledby="mainNavDropdown3">
@@ -1123,7 +1123,7 @@ Al menu di navigazione principale può essere aggiunto anche un menu di navigazi
                     <li class="nav-item"><a class="nav-link disabled" href="#" aria-disabled="true"><span>Link disabilitato</span></a></li>
                     <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="mainNavDropdownC1">
-                        <span>Link Dropdown</span>
+                        <span>Dropdown</span>
                         <svg class="icon icon-xs">
                           <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use>
                         </svg>
@@ -1365,7 +1365,7 @@ Verrà creata un'ombra per enfatizzare l'Header rispetto alla pagina in cui è c
                     <li class="nav-item"><a class="nav-link disabled" href="#" aria-disabled="true"><span>Link disabilitato</span></a></li>
                     <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="mainNavDropdownC2">
-                        <span>Menu Dropdown</span>
+                        <span>Dropdown</span>
                         <svg class="icon icon-xs"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
                       </a>
                       <div class="dropdown-menu" role="region" aria-labelledby="mainNavDropdownC2">
