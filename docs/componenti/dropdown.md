@@ -565,7 +565,7 @@ Le opzioni possono essere passate tramite gli attributi data o tramite JavaScrip
       <tr>
         <th>Variabile CSS</th>
         <th>Descrizione (Inglese)</th>
-        <th>Default</th>
+        <th>Predefinito</th>
       </tr>
     </thead>
     <tbody>
