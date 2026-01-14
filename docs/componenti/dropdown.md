@@ -563,7 +563,7 @@ Le opzioni possono essere passate tramite gli attributi data o tramite JavaScrip
   <table class="table table-simple">
     <thead>
       <tr>
-        <th>Variable</th>
+        <th>Variabile CSS</th>
         <th>Description</th>
         <th>Default</th>
       </tr>
