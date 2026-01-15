@@ -15,15 +15,14 @@ Work in progress.
 
 ## Novità
 
-### Il sistema completo di design token
+### Il sistema completo di design tokens e CSS custom properties
 
-Bootstrap Italia 3 introduce il sistema completo di [design tokens del Design system .italia](https://designers.italia.it/design-system/fondamenti/design-tokens/) che integra e sostituisce le variabili Sass delle precedenti versioni:
+Bootstrap Italia 3 usa il sistema completo di [design tokens del Design system .italia](https://designers.italia.it/design-system/fondamenti/design-tokens/) come valori predefiniti per le CSS custom properties, sostituendo le variabili Sass delle versioni precedenti:
 
-- Coerenza visiva garantita attraverso token globali e semantici.
-- Personalizzazione semplificata tramite CSS custom properties e token specifici.
+- Coerenza visiva garantita con le altre risorse del Design system .italia.
 - Allineamento completo (con automazioni) con il repository [Design Tokens Italia](https://github.com/italia/design-tokens-italia/).
-- Supporto nativo per sviluppare temi personalizzati.
-- Riduzione significativa bundle CSS.
+- Personalizzazione semplificata tramite CSS custom properties.
+- Bundle CSS ottimizzato.
 
 [Vai alla scheda dedicata ai design tokens]({{ site.baseurl }}/docs/come-iniziare/design-tokens/)
 
@@ -47,7 +46,7 @@ Bootstrap Italia 3 cambia l'aspetto dei componenti per costruire moduli (nello s
 
 ### CSS custom properties basate su Design Tokens Italia
 
-Dalle variabili SCSS della v2 si passa all'uso di CSS custom properties (anche variabili CSS) dalla versione 3. Queste sono documentate nel codice all'inizio di ogni componente, con valori predefiniti che laddove possibile derivano dall'ultima versione disponibile dei token rilasciata sul repository [Design Tokens Italia](https://github.com/italia/design-tokens-italia/). 
+Dalle variabili SCSS della v2 si passa all'uso di CSS custom properties (anche variabili CSS) dalla versione 3. Queste sono documentate nel codice all'inizio di ogni componente, con valori predefiniti che laddove possibile puntano all'ultima versione disponibile dei token rilasciata sul repository [Design Tokens Italia](https://github.com/italia/design-tokens-italia/). 
 
 Alcuni esempi:
 

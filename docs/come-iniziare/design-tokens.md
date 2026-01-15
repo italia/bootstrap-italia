@@ -14,96 +14,37 @@ Work in progress.
 {% endcapture %}{% include callout.html content=alpha_warning type="warning" %}
 
 ## Introduzione
+I **design tokens** sono i valori atomici del [Design System .italia](https://designers.italia.it/design-system/fondamenti/design-tokens/) che definiscono le proprietà visive (colori, spaziature, tipografia, etc.).
 
-I **design tokens** sono i valori atomici del Design System .italia che definiscono le proprietà visive di tutti i componenti. Bootstrap Italia dalla v3 integra completamente questi token per garantire coerenza, personalizzazione e facilità di manutenzione.
+Bootstrap Italia 3 implementa questi token come **CSS custom properties**, sostituendo le variabili Sass delle versioni precedenti. Questo garantisce:
+- Coerenza visiva con il Design System .italia
+- Personalizzazione semplificata 
+- Facilità di manutenzione
 
 {% capture callout %}
-### Sincronizzazione automatica
-
-Questa documentazione è sincronizzata automaticamente con la repository ufficiale del progetto Design Tokens Italia [italia/design-tokens-italia](https://github.com/italia/design-tokens-italia). I valori mostrati corrispondono alla versione `@latest` dei token.
+### Da design tokens a CSS custom properties
+Bootstrap Italia usa i design tokens disponibili dal repository [italia/design-tokens-italia](https://github.com/italia/design-tokens-italia) per definire CSS custom properties dedicate utilizzabili nel codice dei singoli componenti. Ogni token del Design System .italia diventa così in Bootstrap Italia una variabile CSS con prefisso `--bsi-*`.
 {% endcapture %}{% include callout.html content=callout type="info" %}
 
-## Struttura
-I design tokens sono organizzati in due livelli:
+## Come funzionano
+Il flusso di integrazione dei design tokens in Bootstrap Italia avviene in modo automatizzato:
 
-### Token globali
-Valori primitivi che definiscono la palette di base del sistema.
+## Come funzionano
 
-### Token semantici 
-Valori che hanno un significato specifico nel contesto del design system e referenziano i token globali.
+Il flusso di integrazione dei design tokens in Bootstrap Italia avviene in modo automatizzato:
 
-## Colori
+1. **Design Tokens Italia**: repository ufficiale [italia/design-tokens-italia](https://github.com/italia/design-tokens-italia) contenente i valori in formato JSON, CSS e SCSS.
+2. **Durante la build**: vengono letti i valori delle variabili CSS dell'ultima release del repository e usati come base.
+3. **CSS Custom Properties**: le variabili CSS vengono usate per definire variabili CSS specifiche di Bootstrap Italia con prefisso `--bsi-*`
+4. **Componenti**: ogni componente definisce le proprie variabili CSS in uso all'inizio del proprio codice SCSS.
 
-{% comment %}
-<!-- AUTO-GENERATED: Questa sezione viene generata automaticamente dai JSON -->
-<!-- Source: https://github.com/italia/design-tokens-italia/tree/main/tokens -->
-{% endcomment %}
+Questo processo garantisce l'allineamento automatico con il Design System .italia.
 
-<div class="design-tokens-section" id="color-tokens">
-  <!-- Placeholder per l'import automatico dei color tokens -->
-  <div class="token-group">
-    <h4>Colore primario</h4>
-    <div class="color-token-grid">
-      <!-- Sarà popolato automaticamente da script -->
-    </div>
-  </div>
-  <div class="token-group">
-    <h4>Colori semantici</h4>
-    <div class="color-token-grid">
-      <!-- Sarà popolato automaticamente da script -->
-    </div>
-  </div>
-</div>
+## Il prefisso dedicato "bsi-"
+Bootstrap Italia 3 usa il nuovo prefisso `bsi-*` per distinguere le proprie custom properties da quelle native di Bootstrap:
 
-## Tipografia
-
-### Famiglie di font
-
-<div class="design-tokens-section" id="typography-tokens">
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th>Token</th>
-        <th>Valore</th>
-        <th>CSS custom property</th>
-        <th>Uso</th>
-      </tr>
-    </thead>
-    <tbody id="typography-tokens-table">
-      <!-- Popolato automaticamente -->
-    </tbody>
-  </table>
-</div>
-
-### Dimensioni dei font
-<div class="design-tokens-section" id="font-size-tokens">
-  <div class="font-size-preview">
-    <!-- Popolato automaticamente con preview delle dimensioni -->
-  </div>
-</div>
-
-## Spaziature
-
-### Spaziature
-<div class="design-tokens-section" id="spacing-tokens">
-  <div class="spacing-scale">
-    <!-- Popolato automaticamente con scala spaziature -->
-  </div>
-</div>
-
-### Bordi arrotondati
-<div class="design-tokens-section" id="radius-tokens">
-  <div class="radius-examples">
-    <!-- Esempi di border radius popolati automaticamente -->
-  </div>
-</div>
-
-### Ombre
-<div class="design-tokens-section" id="shadow-tokens">
-  <div class="shadow-examples">
-    <!-- Esempi di shadow popolati automaticamente -->
-  </div>
-</div>
+- `--bsi-*`: Custom properties Bootstrap Italia
+- `--bs-*`: Custom properties Bootstrap 5 native
 
 ## Utilizzo nei componenti
 
@@ -112,102 +53,29 @@ I design tokens sono esposti nel codice come CSS custom property:
 
 ```scss
 /* Esempio di utilizzo */
-.my-component {
-  color: var(--bsi-color-text-primary);
-  background: var(--bsi-color-background-base);
-  padding: var(--bsi-spacing-md);
-  border-radius: var(--bsi-radius-sm);
+.my-class {
+  background: var(--bsi-color-primary);
 }
 ```
 
 #### Personalizzazione
-Puoi sovrascrivere i token definendo quindi CSS custom property per sovrascrivere il valore di default:
+Puoi sovrascrivere i valori predefiniti delle custom properties di Bootstrap Italia sovrascrivendone il valore di default:
 
-```scss
+```css
+/* Esempio di personalizzazione */
 :root {
-  --bsi-color-primary: #your-brand-color;
-  --bsi-spacing-base: 1rem;
+  --bsi-color-primary: #0066cc; /* Your primary color */
 }
 ```
 
-## Prefissi e naming
+## Documentazione dei token
 
-Bootstrap Italia 3 usa il prefisso `bsi-*` per distinguere le proprie custom properties da quelle native di Bootstrap:
+La documentazione completa dei token (colori, tipografia, spaziature, ...) è disponibile nelle tabelle **Properties** di ogni componente, ad esempio:
 
-- `--bsi-*`: Custom properties Bootstrap Italia
-- `--bs-*`: Custom properties Bootstrap 5 native (se necessarie)
+- [Button - Properties]({{ site.baseurl }}/docs/componenti/button/#properties)
+- [Alert - Properties]({{ site.baseurl }}/docs/componenti/alert/#properties)
+- [Card - Properties]({{ site.baseurl }}/docs/componenti/card/#properties)
 
+**Come vengono generate**: queste tabelle sono generate automaticamente dal codice SCSS di ogni componente tramite GitHub Action. Le CSS custom properties sono documentate all'inizio del file SCSS di ciascun componente.
 
-{# ## Temi 
-
-### Tema scuro
-...
-
-### Temi personalizzati
-... #}
-
-
-{# ## Script di import
-{% comment %}
-<!-- Script per l'import automatico dai JSON del repository design-tokens-italia -->
-{% endcomment %}
-
-```html
-<script>
-// Script che verrà implementato per importare automaticamente 
-// i token dalla repository italia/design-tokens
-// Segnaposto/SANDBOX / XXX
-//
-(function() {
-  'use strict';
-  
-  // URL dei JSON dei token
-  const TOKEN_URLS = {
-    global: 'https://raw.githubusercontent.com/italia/design-tokens-italia/main/tokens/global.json',
-    semantic: 'https://raw.githubusercontent.com/italia/design-tokens-italia/main/tokens/semantic.json'
-  };
-  
-  // Funzioni per popolare le sezioni
-  async function loadTokens() {
-    try {
-      const responses = await Promise.all([
-        fetch(TOKEN_URLS.global),
-        fetch(TOKEN_URLS.semantic)
-      ]);
-      
-      const [globalTokens, semanticTokens] = await Promise.all(
-        responses.map(r => r.json())
-      );
-      
-      populateColorTokens(globalTokens, semanticTokens);
-      populateTypographyTokens(globalTokens, semanticTokens);
-      populateSpacingTokens(globalTokens, semanticTokens);
-      // ... altre funzioni di popolamento
-      
-    } catch (error) {
-      console.error('Errore nel caricamento dei design tokens:', error);
-      showFallbackContent();
-    }
-  }
-  
-  function populateColorTokens(global, semantic) {
-    // Implementazione per popolare la sezione colori
-  }
-  
-  function populateTypographyTokens(global, semantic) {
-    // Implementazione per popolare la sezione tipografia
-  }
-  
-  function populateSpacingTokens(global, semantic) {
-    // Implementazione per popolare la sezione spacing
-  }
-  
-  function showFallbackContent() {
-    // Mostra contenuto statico in caso di errore
-  }
-  
-  // Carica i token quando la pagina è pronta
-  document.addEventListener('DOMContentLoaded', loadTokens);
-})();
-</script>
-``` #}
+_Visualizzazione unificata dei token globali disponibile nelle prossime release_.
