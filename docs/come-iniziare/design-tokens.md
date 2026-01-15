@@ -35,7 +35,6 @@ Il flusso di integrazione dei design tokens in Bootstrap Italia avviene in modo 
 3. **CSS custom properties**: le variabili CSS vengono usate per definire variabili CSS specifiche di Bootstrap Italia con prefisso `--bsi-*`
 4. **Componenti**: ogni componente definisce le proprie variabili CSS in uso all'inizio del proprio codice SCSS.
 
-
 ## Il prefisso dedicato "bsi-"
 Bootstrap Italia 3 usa il nuovo prefisso `bsi-*` per distinguere le proprie custom properties da quelle native di Bootstrap:
 
