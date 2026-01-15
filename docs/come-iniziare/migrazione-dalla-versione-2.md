@@ -73,13 +73,6 @@ Bootstrap Italia 3 cambia l'aspetto dei componenti per costruire moduli (nello s
   - Versione 2: `.icon-light`, `.icon-white`
   - Versione 3: `.icon-inverse`
 
-
-### Componenti form
-
-- **Aspetto visivo**
-  - Versione 2: Stile Bootstrap Italia v2
-  - Versione 3: Nuovo aspetto allineato a UI Kit Italia v4. 
-
 ### Font loading JS
 
 - **API loadFonts()**
