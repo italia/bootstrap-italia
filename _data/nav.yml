@@ -3,12 +3,12 @@
 - title: Come iniziare
   pages:
     - title: Introduzione
+    - title: Font
+    - title: Design tokens
     - title: Strumenti di compilazione
     - title: Personalizzazione della libreria
-    - title: Font
     - title: Modificare componenti
     - title: Migrazione dalla versione 2
-    - title: Design tokens
 
 - title: Breaking change
 
