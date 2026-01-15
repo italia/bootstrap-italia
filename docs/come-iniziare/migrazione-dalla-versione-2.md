@@ -45,76 +45,66 @@ Bootstrap Italia 3 cambia l'aspetto dei componenti per costruire moduli (nello s
 
 ## Breaking change globali
 
-### Sistema di design token
+### CSS custom properties basate su Design Tokens Italia
+
+Dalle variabili SCSS della v2 si passa all'uso di CSS custom properties (anche variabili CSS) dalla versione 3. Queste sono documentate nel codice all'inizio di ogni componente, con valori predefiniti che laddove possibile derivano dall'ultima versione disponibile dei token rilasciata sul repository [Design Tokens Italia](https://github.com/italia/design-tokens-italia/). 
+
+Alcuni esempi:
 
 - **Da variabili SCSS a CSS custom properties***
   - Versione 2: `$primary`, `$secondary`, `$font-size-base`
   - Versione 3: `--bsi-color-primary`, `--bsi-color-secondary`, `--bsi-font-size-base`
 
-- **Spaziature**
-  - Versione 2: Classi di utilità con valori hardcoded
-  - Versione 3: Token semantici `--bsi-spacing-*` (xs, sm, md, lg, xl)
-
 - **Tipografia**
-  - Versione 2: Variabili Sass `$font-family-sans-serif`, `$headings-font-weight`
-  - Versione 3: Token tipografici `--bsi-font-family-*`, `--bsi-font-weight-*`, `--bsi-font-size-*` e nuova scala dimensioni basata su rem
+  - Versione 2: `$font-family-sans-serif`, `$headings-font-weight`
+  - Versione 3: `--bsi-font-family-*`, `--bsi-font-weight-*`, `--bsi-font-size-*`
 
-- **Border Radius**
-  - Versione 2: `$border-radius`, `$border-radius-sm`, `$border-radius-lg`
-  - Versione 3: `--bsi-radius-*` (xs, sm, md, lg, xl)
+- **Ombreggiature**
+  - Versione 2: `$box-shadow`, `$box-shadow-sm`, `$box-shadow-lg`
+  - Versione 3: `--bsi-elevation-*` (low, medium, high)
 
-- **Ombre (Shadows)**
-  - Versione 2: Classi di utilità con valori hardcoded
-  - Versione 3: Token `--bsi-shadow-*` allineati a Design System .italia
-
-### Icone
-
-- **Classi colore icone bianche su sfondo scuro**
-  - Versione 2: `.icon-light`, `.icon-white`
-  - Versione 3: `.icon-inverse`
+In ogni scheda di dettaglio del componente in questa documentazione sono documentate le CSS custom properties dedicate nella tabella Properties. 
 
 ### Font loading JS
 
 - **API loadFonts()**
   - Versione 2: `loadFonts('/fonts')`
-  - Versione 3: `loadFonts('/fonts', { titillium: 'web' })` o `{ titillium: 'pro' }`. Retro-compatibile con chiamata senza parametri che usa 'web' come default.
+  - Versione 3: `loadFonts('/fonts', { titillium: 'web' })` o `{ titillium: 'pro' }` per il secondo parametro. Retro-compatibile anche la versione senza il secondo parametro che carica "web" come predefinito. 
 
 ## Breaking change componenti
-Molti componenti hanno modifiche al markup o alle classi CSS. Consulta la documentazione specifica di ogni componente per i dettagli.
+Il markup e i css di molti componenti sono cambiati. Consulta le schede di documentazione dettagliata di ogni componente e fai riferimento al paragrafo "Breaking changes" per approfondire i cambiamenti al markup.
 
-Esplora la lista dei [componenti con breaking changes al markup]({{ site.baseurl }}/docs/breaking-change/). Fai riferimento alla "Breaking change" nella documentazione di ogni componente per la v3.0.0.
-
+[Esplora la lista dei componenti con il markup cambiato rispetto alla v2]({{ site.baseurl }}/docs/breaking-change/)
 ## Supporto browser
-...
+_Paragrafo da definire_
 
 ## Compatibilità con Design system .italia
-...
+_Paragrafo da definire_
 
 ---
 
-## Guida pratica alla migrazione
-...
+## Guida pratica alla migrazione dalla versione 2
 
-### Step 1: Aggiornamento dipendenze
+### Aggiornamento dipendenze
 
 ```bash
 # Aggiorna il pacchetto
 npm install bootstrap-italia@^3.0.0
 ```
 
-### Step 2: Aggiornamento SCSS
+### Aggiornamento SCSS
 
 ```bash
 // Nel tuo main.scss, sostituisci:
 @import "~bootstrap-italia/src/scss/bootstrap-italia.scss";
 
-// Con (se usi custom variables):
+// Con (se usi variabili personalizzate):
 // Importa i tuoi token personalizzati DOPO
 @import "~bootstrap-italia/src/scss/bootstrap-italia.scss";
 @import "custom-tokens";
 ```
 
-### Step 3: Migrazione variabili personalizzate
+### Da variabili personalizzate a CSS custom properties
 
 ```bash
 // ❌ Versione 2
@@ -128,21 +118,20 @@ $font-size-base: 1rem;
 }
 ```
 
-### Step 4: ...
-...
+### _Altri passaggi da definire_
+_Paragrafo da definire_
 
-### Step 5: Verifica layout e componenti
-1. Testa tutti i componenti sui browser supportati
-2. Verifica accessibilità con tool automatici e verifiche manuali (screen reader, navigazione da tastiera, ...)
-3. Controlla performance del bundle aggiornato
-4. Valida markup per conformità HTML5
+### Verifica la migrazione
+1. Verifica la resa e la funzionalità di tutti i componenti sui browser supportati e a diverse risoluzioni, fattori di ingrandimento e uso con tastiera e lettori di schermo.
+2. Verifica l'accessibilità tecnica per la conformità alle WCAG 2.2 seguendo ad esempio le indicazioni dettagliate del *Workflow per migliorare lo sviluppo dei componenti di .italia* disponibile dalla scheda [fondamento accessibilità](https://designers.italia.it/design-system/fondamenti/accessibilita/).
+3. Controlla le performance del bundle aggiornato.
 
-{# ### Usa il tool di migrazione - Lint (desiderata)
+<!-- ### Usa il tool di migrazione - Lint (desiderata)
 
 ```bash
 # Tool per identificare classi obsolete (v2) nei tuoi file migrati 
 npm run bootstrap-italia-v3-migration-checker src/
-``` #}
+``` -->
 
 ## Serve aiuto?
 Hai incontrato problemi di migrazione, o vuoi suggerire un miglioramento? 
@@ -151,4 +140,4 @@ Hai incontrato problemi di migrazione, o vuoi suggerire un miglioramento?
 
 ---
 
-**Per migrazioni dalla versione 1.x, consulta prima la [guida archiviata da 1.x a 2.x](/docs/come-iniziare/migrazione-dalla-versione-1/).**
+**Per migrazioni da versioni più vecchie della v2, è ancora disponibile la precedente [guida per la migrazione da 1 a 2](/docs/come-iniziare/migrazione-dalla-versione-1/).** Considera che questa non tiene di conto di tutte le breaking change poi occorse nella vita della v2, che puoi recuperare dalla pagina di documentazione delle [breaking change]({{ site.baseurl }}/docs/breaking-change/).
