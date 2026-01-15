@@ -113,10 +113,10 @@ I design tokens sono esposti nel codice come CSS custom property:
 ```scss
 /* Esempio di utilizzo */
 .my-component {
-  color: var(--bs-color-text-primary);
-  background: var(--bs-color-background-base);
-  padding: var(--bs-spacing-md);
-  border-radius: var(--bs-radius-sm);
+  color: var(--bsi-color-text-primary);
+  background: var(--bsi-color-background-base);
+  padding: var(--bsi-spacing-md);
+  border-radius: var(--bsi-radius-sm);
 }
 ```
 
@@ -125,20 +125,29 @@ Puoi sovrascrivere i token definendo quindi CSS custom property per sovrascriver
 
 ```scss
 :root {
-  --bs-color-primary: #your-brand-color;
-  --bs-spacing-base: 1rem;
+  --bsi-color-primary: #your-brand-color;
+  --bsi-spacing-base: 1rem;
 }
 ```
 
-## Temi 
+## Prefissi e naming
+
+Bootstrap Italia 3 usa il prefisso `bsi-*` per distinguere le proprie custom properties da quelle native di Bootstrap:
+
+- `--bsi-*`: Custom properties Bootstrap Italia
+- `--bs-*`: Custom properties Bootstrap 5 native (se necessarie)
+
+
+{# ## Temi 
 
 ### Tema scuro
 ...
 
 ### Temi personalizzati
-...
+... #}
 
-## Script di import
+
+{# ## Script di import
 {% comment %}
 <!-- Script per l'import automatico dai JSON del repository design-tokens-italia -->
 {% endcomment %}
@@ -201,4 +210,4 @@ Puoi sovrascrivere i token definendo quindi CSS custom property per sovrascriver
   document.addEventListener('DOMContentLoaded', loadTokens);
 })();
 </script>
-```
+``` #}
