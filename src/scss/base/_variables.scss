@@ -1,6 +1,8 @@
 // Import Design Tokens Italia
 // @import '../../node_modules/design-tokens-italia/scss/variables';
 
+@use 'sass:map';
+
 // Color vars
 // HSB (https://it.wikipedia.org/wiki/Hue_Saturation_Brightness, coincidente con il modello HSV)
 // è lo spazio colore scelto per ottenere le varianti colore della tonalità primaria.
@@ -21,7 +23,7 @@ $gray-800: hsl(0, 0%, 15%) !default; // color-gray-15
 $gray-900: hsl(0, 0%, 10%) !default; // color-gray-10
 
 $grays: () !default;
-$grays: map-merge(
+$grays: map.merge(
   (
     '100': $gray-100,
     '200': $gray-200,
@@ -89,7 +91,7 @@ $gray-border-disabled: $gray-disabled !default; // color-border-disabled
 $secondary: $gray-secondary !default;
 
 $colors: () !default;
-$colors: map-merge(
+$colors: map.merge(
   (
     'indigo': $indigo,
     'purple': $purple,
@@ -121,7 +123,7 @@ $warning: $orange-accessible !default;
 $danger: $red-accessible !default;
 
 $theme-colors: () !default;
-$theme-colors: map-merge(
+$theme-colors: map.merge(
   (
     'primary': $primary,
     'secondary': $secondary,
@@ -151,36 +153,36 @@ $escaped-characters: (('<', '%3c'), ('>', '%3e'), ('#', '%23'), ('(', '%28'), ('
 
 // ACCENT COLORS DEFINITIONS
 // analoghi
-$analogue-1-h: 243;
-$analogue-1-s: 85;
-$analogue-1-b: 100;
+$analogue-1-h: 243 !default;
+$analogue-1-s: 85 !default;
+$analogue-1-b: 100 !default;
 $analogue-1: hsb($analogue-1-h, $analogue-1-s, $analogue-1-b) !default;
-$analogue-2-h: 178;
-$analogue-2-s: 95;
-$analogue-2-b: 85;
+$analogue-2-h: 178 !default;
+$analogue-2-s: 95 !default;
+$analogue-2-b: 85 !default;
 $analogue-2: hsb($analogue-2-h, $analogue-2-s, $analogue-2-b) !default;
 // Complementari e triadici
-$complementary-1-h: 351;
-$complementary-1-s: 75;
-$complementary-1-b: 97;
+$complementary-1-h: 351 !default;
+$complementary-1-s: 75 !default;
+$complementary-1-b: 97 !default;
 $complementary-1: hsb($complementary-1-h, $complementary-1-s, $complementary-1-b) !default;
-$complementary-2-h: 36;
-$complementary-2-s: 100;
-$complementary-2-b: 100;
+$complementary-2-h: 36 !default;
+$complementary-2-s: 100 !default;
+$complementary-2-b: 100 !default;
 $complementary-2: hsb($complementary-2-h, $complementary-2-s, $complementary-2-b) !default;
-$complementary-3-h: 159;
-$complementary-3-s: 100;
-$complementary-3-b: 81;
+$complementary-3-h: 159 !default;
+$complementary-3-s: 100 !default;
+$complementary-3-b: 81 !default;
 $complementary-3: hsb($complementary-3-h, $complementary-3-s, $complementary-3-b) !default;
 
 // NEUTRAL COLORS DEFINITIONS
-$neutral-1-h: 210;
-$neutral-1-s: 70;
-$neutral-1-b: 30;
+$neutral-1-h: 210 !default;
+$neutral-1-s: 70 !default;
+$neutral-1-b: 30 !default;
 $neutral-1: hsb($neutral-1-h, $neutral-1-s, $neutral-1-b) !default;
-$neutral-2-h: 210;
-$neutral-2-s: 5;
-$neutral-2-b: 95;
+$neutral-2-h: 210 !default;
+$neutral-2-s: 5 !default;
+$neutral-2-b: 95 !default;
 $neutral-2: hsb($neutral-2-h, $neutral-2-s, $neutral-2-b) !default;
 
 // Light Greys A
@@ -412,7 +414,7 @@ $neutral-2-a7: hsb($neutral-2-h, $neutral-2-s + 4, $neutral-2-b - 85) !default;
 // Backgrounds
 $color-background-emphasis: hsl(210, 54%, 20%); // color-slate-20
 $color-background-primary-lighter: hsl(210, 62%, 97%); // color-blue-97
-$color-background-primary-hover: hsl(210, 100, 30); // color-blue-30
+$color-background-primary-hover: hsl(210, 100%, 30%); // color-blue-30
 $color-background-secondary-hover: hsl(210, 33%, 28%); // color-slate-28
 $color-background-secondary-lighter: hsl(210, 3%, 85%); // color-slate-85
 $color-background-muted: $gray-100; // color-gray-96
@@ -680,7 +682,7 @@ $aspect-ratios: (
 
 // Text
 $font-family-serif: 'Lora', Georgia, serif !default;
-$font-family-sans-serif: 'Titillium Web', Geneva, Tahoma, sans-serif !default;
+$font-family-sans-serif: 'Titillium Web', 'Titillium Sans Pro', Geneva, Tahoma, sans-serif !default;
 $font-family-monospace: 'Roboto Mono', monospace !default;
 $text-color: $gray-700 !default;
 $text-muted: $color-text-muted !default;
@@ -1966,7 +1968,7 @@ $grid-list-text-gap: $v-gap;
 $grid-item-sm-col: 50%;
 $grid-item-lg-col: 33.333333%;
 $grid-item-icon-size: 24px;
-$grid-item-overlay: hsla(210%, 54%, 20, 0.85);
+$grid-item-overlay: hsla(210deg, 54%, 20%, 0.85);
 
 // list
 $list-font-size: 1rem;
