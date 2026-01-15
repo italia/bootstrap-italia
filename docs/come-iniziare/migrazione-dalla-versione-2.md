@@ -64,6 +64,20 @@ Alcuni esempi:
 
 In ogni scheda di dettaglio del componente in questa documentazione sono documentate le CSS custom properties dedicate nella tabella Properties. 
 
+### Convenzioni di naming
+
+Bootstrap Italia 3 adotta convenzioni chiare per distinguere classi CSS e variabili:
+
+**Classi CSS**
+- Classi Bootstrap standard: **nessun prefisso** (es. `.btn`, `.alert`)
+- Classi specifiche Bootstrap Italia: prefisso **`it-*`** (es. `.it-header`, `.it-card`)
+
+**CSS custom properties (variabili CSS)**
+- Variabili Bootstrap Italia: prefisso **`--bsi-*`** (es. `--bsi-color-primary`)
+- Variabili Bootstrap 5 native: prefisso **`--bs-*`** (es. `--bs-primary`)
+
+Questa distinzione garantisce compatibilità con Bootstrap 5 ed evita conflitti di naming.
+
 ### Font loading JS
 
 - **API loadFonts()**
@@ -74,6 +88,7 @@ In ogni scheda di dettaglio del componente in questa documentazione sono documen
 Il markup e i css di molti componenti sono cambiati. Consulta le schede di documentazione dettagliata di ogni componente e fai riferimento al paragrafo "Breaking changes" per approfondire i cambiamenti al markup.
 
 [Esplora la lista dei componenti con il markup cambiato rispetto alla v2]({{ site.baseurl }}/docs/breaking-change/)
+
 ## Supporto browser
 _Paragrafo da definire_
 

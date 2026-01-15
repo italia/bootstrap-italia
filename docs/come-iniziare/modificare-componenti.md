@@ -28,9 +28,15 @@ Nel caso di un nuovo componente, sarà necessario aggiungere un nuovo file `.md`
 
 ### Personalizzazione di stile
 
-Per la personalizzazione dello stile dei componenti, andranno sovrascritte o aggiunte variabili nella cartella `src/scss/base/_variables.scss`; oppure, in caso non sia sufficiente sovrascrivere variabili, aggiungere o modificare classi e proprietà nella cartella `src/scss/components/`. Si può notare le modalità con cui il file `bootstrap-italia.scss` importa ed estende secondo un preciso ordine gli stili e le funzioni di base di Bootstrap {{ site.bootstrap_version }}.
+Bootstrap Italia 3 utilizza **CSS custom properties** (variabili CSS) per la personalizzazione dei componenti, derivate dai [design tokens del Design System .italia]({{ site.baseurl }}/docs/come-iniziare/design-tokens/). 
 
-Il componente dovrebbe utilizzare una classe base `.nome-componente`, che ne definisce gli stili, e dei modificatori (se necessari) che ne possano alterare alcune proprietà (es.: `.nome-componente-sm`, `.nome-componente-primary`, ecc.).
+Le custom properties di ogni componente sono definite all'inizio del proprio codice SCSS disponibile nella cartella `src/scss/components/`, e documentate nella tabella Properties delle schede di documentazione. 
+
+Il prefisso delle custom properties di Bootstrap italia è `--bsi-*`. 
+
+**Vedi anche:**
+- [Guida ai design tokens]({{ site.baseurl }}/docs/come-iniziare/design-tokens/)
+- [Guida alla migrazione dalla v2]({{ site.baseurl }}/docs/come-iniziare/migrazione-dalla-versione-2/)
 
 ### Personalizzazione di comportamento
 
