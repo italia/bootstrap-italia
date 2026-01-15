@@ -27,9 +27,6 @@ Bootstrap Italia usa i design tokens disponibili dal repository [italia/design-t
 {% endcapture %}{% include callout.html content=callout type="info" %}
 
 ## Come funzionano
-Il flusso di integrazione dei design tokens in Bootstrap Italia avviene in modo automatizzato:
-
-## Come funzionano
 
 Il flusso di integrazione dei design tokens in Bootstrap Italia avviene in modo automatizzato:
 
