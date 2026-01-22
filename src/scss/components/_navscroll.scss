@@ -182,8 +182,6 @@
     --#{$prefix}navscroll-heading-color: var(--#{$prefix}color-text-inverse);
     --#{$prefix}navscroll-toggler-color: var(--#{$prefix}color-text-inverse);
 
-    --#{$prefix}navscroll-background: var(--#{$prefix}color-background-secondary);
-
     .link-list-wrapper ul li a,
     .link-list-wrapper ul li a.active {
       --#{$prefix}navscroll-item-font-color: var(--#{$prefix}color-text-inverse);
