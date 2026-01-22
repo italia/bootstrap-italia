@@ -328,7 +328,7 @@ input::-webkit-datetime-edit {
       user-select: none;
 
       @include media-breakpoint-up(sm) {
-        font-size: var(--#{$prefix}label-font-size-m);
+        font-size: var(--#{$prefix}label-font-size-l);
       }
     }
 

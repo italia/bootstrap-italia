@@ -410,7 +410,7 @@
 
   color: var(--#{$prefix}dropdown-button-color);
   @include media-breakpoint-up(lg) {
-    font-size: var(--#{$prefix}label-font-size-m);
+    font-size: var(--#{$prefix}label-font-size-l);
   }
   &:hover {
     --#{$prefix}dropdown-button-color: var(--#{$prefix}color-text-primary-hover);

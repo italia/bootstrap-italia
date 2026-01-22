@@ -29,7 +29,7 @@
   --#{$prefix}navbar-hover-color: #{$navbar-light-hover-color};
   --#{$prefix}navbar-link-border-size: var(--#{$prefix}border-thick);
   --#{$prefix}navbar-link-color: var(--#{$prefix}color-link); // nav link color default - mobile
-  --#{$prefix}navbar-link-font-size: var(--#{$prefix}label-font-size-m);
+  --#{$prefix}navbar-link-font-size: var(--#{$prefix}label-font-size-l);
   --#{$prefix}navbar-link-font-weight: var(--#{$prefix}font-weight-solid);
   --#{$prefix}navbar-link-line-height: var(--#{$prefix}label-line-height);
   --#{$prefix}navbar-link-padding-x: var(--#{$prefix}spacing-m);
@@ -95,7 +95,7 @@
     padding: 0 var(--#{$prefix}header-spacing-inset);
   }
   @include media-breakpoint-up(lg) {
-    --#{$prefix}navbar-link-font-size: var(--#{$prefix}label-font-size-m);
+    --#{$prefix}navbar-link-font-size: var(--#{$prefix}label-font-size-l);
   }
 
   @each $breakpoint, $container-max-width in $container-max-widths {
