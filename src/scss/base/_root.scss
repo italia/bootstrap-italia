@@ -165,12 +165,9 @@
   --#{$prefix}sizing-quarter: var(--it-sizing-quarter);
 
   // Shadow
-  --#{$prefix}elevation-high: var(--it-elevation-high-color) var(--it-elevation-high-x) var(--it-elevation-high-y) var(--it-elevation-high-blur)
-    var(--it-elevation-high-spread);
-  --#{$prefix}elevation-medium: var(--it-elevation-medium-color) var(--it-elevation-medium-x) var(--it-elevation-medium-y) var(--it-elevation-medium-blur)
-    var(--it-elevation-medium-spread);
-  --#{$prefix}elevation-low: var(--it-elevation-low-color) var(--it-elevation-low-x) var(--it-elevation-low-y) var(--it-elevation-low-blur)
-    var(--it-elevation-low-spread);
+  --#{$prefix}elevation-high: var(--it-elevation-high);
+  --#{$prefix}elevation-medium: var(--it-elevation-medium);
+  --#{$prefix}elevation-low: var(--it-elevation-low-);
 
   // Text colors
   --#{$prefix}color-text-accent: var(--it-color-text-accent);
