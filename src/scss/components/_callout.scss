@@ -50,7 +50,7 @@
   p {
     color: var(--#{$prefix}callout-text-color);
     font-family: var(--#{$prefix}callout-font-family);
-    font-size: var(--#{$prefix}callout-text-size);
+    font-size: var(--#{$prefix}callout-text-font-size);
 
     &.callout-big-text {
       font-size: var(--it-body-font-size-l);
@@ -61,8 +61,20 @@
     }
   }
 
+  .callout-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--#{$prefix}spacing-s);
+    color: var(--#{$prefix}callout-title-color);
+    font-family: var(--#{$prefix}callout-font-family);
+    font-size: var(--#{$prefix}callout-title-font-size);
+    font-weight: var(--#{$prefix}callout-title-font-weight);
+    text-transform: uppercase;
+  }
+
   .icon {
     fill: var(--#{$prefix}callout-icon-color);
+    margin-right: var(--#{$prefix}icon-spacing);
   }
 
   // Color Variants
@@ -98,7 +110,7 @@
     border-left: var(--#{$prefix}callout-border-size) solid var(--#{$prefix}callout-border-color);
 
     .callout-title {
-      margin-bottom: var(--#{$prefix}spacing-s);
+      margin-bottom: var(--#{$prefix}spacing-s)
     }
   }
 
@@ -138,7 +150,6 @@
     }
 
     .callout-title {
-      display: flex;
       align-items: flex-start;
       margin-bottom: 2.222rem;
 
