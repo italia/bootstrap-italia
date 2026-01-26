@@ -27,7 +27,6 @@
 // Styles
 //
 
-
 .sidebar-wrapper {
   padding: var(--#{$prefix}sidebar-padding) 0;
   background: var(--#{$prefix}sidebar-background-color);
@@ -44,7 +43,6 @@
 
   .sidebar-linklist-wrapper .link-list-wrapper ul li a {
     width: 100%;
-    display: block;
     position: relative;
     padding: var(--#{$prefix}sidebar-link-padding-y) var(--#{$prefix}sidebar-link-padding-x);
     font-size: var(--#{$prefix}sidebar-link-font-size);
@@ -75,6 +73,7 @@
       text-decoration: underline;
     }
 
+    TODO: Resolve this comment 
     // Collapsable links
     // &[data-bs-toggle="collapse"][aria-expanded="true"] span {
     //   color: var(--#{$prefix}color-text-primary);
@@ -88,6 +87,10 @@
       padding-inline-start: var(--#{$prefix}sidebar-link-sublist-indent);
       text-transform: none; // No text transform for sublist items
     }
+  }
+
+  .icon {
+    margin-right: var(--#{$prefix}icon-spacing);
   }
 
   // Divider between link lists
