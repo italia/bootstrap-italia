@@ -30,7 +30,7 @@ Nel caso di un nuovo componente, sarà necessario aggiungere un nuovo file `.md`
 
 Bootstrap Italia 3 utilizza **CSS custom properties** (variabili CSS) per la personalizzazione dei componenti, derivate dai [design tokens del Design System .italia]({{ site.baseurl }}/docs/come-iniziare/design-tokens/). 
 
-Le custom properties di ogni componente sono definite all'inizio del proprio codice SCSS disponibile nella cartella `src/scss/components/`, e documentate nella tabella Properties delle schede di documentazione. 
+Le custom properties di ogni componente sono definite all'inizio del relativo codice SCSS nella cartella `src/scss/components/`, e documentate nella tabella Properties delle schede di documentazione. 
 
 Il prefisso delle custom properties di Bootstrap italia è `--bsi-*`. 
 
