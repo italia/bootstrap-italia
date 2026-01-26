@@ -123,7 +123,7 @@
 
     // Increase font-size and spacing for list item link with large class
     &.large {
-      --#{$prefix}linklist-item-font-size: var(--#{$prefix}label-font-size-m);
+      --#{$prefix}linklist-item-font-size: var(--#{$prefix}label-font-size-l);
     }
 
     // Avatar position inside the list item
@@ -242,7 +242,7 @@
   .list-item-title {
     font-size: var(--#{$prefix}label-font-size);
     @include media-breakpoint-up(lg) {
-      font-size: var(--#{$prefix}label-font-size-m);
+      font-size: var(--#{$prefix}label-font-size-l);
     }
   }
 

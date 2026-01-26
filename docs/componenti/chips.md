@@ -28,7 +28,7 @@ L'azione richiesta per l'eliminazione della chip andrà associata al `<button>`.
     <p class="mt-4 mb-2">Testo e chiusura</p>
     <div class="chip">
       <span class="chip-label">Etichetta</span>
-      <button  data-bs-dismiss='chip'>
+      <button  data-bs-dismiss='alert'>
         <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
         <span class="visually-hidden">Elimina etichetta</span>
       </button>
@@ -37,7 +37,7 @@ L'azione richiesta per l'eliminazione della chip andrà associata al `<button>`.
     <div class="chip">
       <svg class="icon icon-xs"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-github"></use></svg>
       <span class="chip-label">Etichetta</span>
-      <button data-bs-dismiss='chip'>
+      <button data-bs-dismiss='alert'>
         <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
         <span class="visually-hidden">Elimina etichetta</span>
       </button>
@@ -48,7 +48,7 @@ L'azione richiesta per l'eliminazione della chip andrà associata al `<button>`.
         <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Mario Rossi">
       </div>
       <span class="chip-label">Etichetta</span>
-      <button data-bs-dismiss='chip'>
+      <button data-bs-dismiss='alert'>
         <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
         <span class="visually-hidden">Elimina etichetta</span>
       </button>

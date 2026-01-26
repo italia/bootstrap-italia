@@ -74,7 +74,7 @@ In caso di necessità, è anche possibile utilizzare un ulteriore contenuto test
     placeholder="Testo segnaposto"
     aria-describedby="formGroupExampleInputWithHelpDescription"
   >
-  <small class="form-text">Testo di supporto</small>
+  <small id="formGroupExampleInputWithHelpDescription" class="form-text">Testo di supporto</small>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -276,7 +276,7 @@ Nel caso del campo di tipo password, è molto importante configurare correttamen
     <svg class="password-icon-visible icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-visible"></use></svg>
     <svg class="password-icon-invisible icon icon-sm d-none" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-invisible"></use></svg>
   </button>
-  <p id="infoPassword4" class="form-text text-muted d-block small pb-0">Inserisci almeno 8 caratteri, combinando maiuscole, numeri e caratteri speciali.</p>
+  <p id="infoPassword4" class="form-text text-muted d-block small pb-0"></p>
   <div class="password-strength-meter">
     <div id="strengthMeterSuggestions4" class="strenght-meter-suggestions small form-text text-muted"></div>
     <p id="strengthMeterInfo4" class="strength-meter-info small form-text text-muted pt-0" aria-live="polite"

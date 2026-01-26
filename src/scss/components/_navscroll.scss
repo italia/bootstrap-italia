@@ -15,13 +15,14 @@
   --#{$prefix}navscroll-bottom-box-shadow: 0 0px 30px 5px rgba(0, 0, 0, 0.05);
   --#{$prefix}navscroll-backbutton-weight: var(--#{$prefix}font-weight-solid);
   --#{$prefix}navscroll-item-spacing: var(--#{$prefix}spacing-xs) var(--#{$prefix}spacing-m);
-  --#{$prefix}navscroll-item-font-size: var(--#{$prefix}label-font-size);
+  --#{$prefix}navscroll-item-font-size: var(--#{$prefix}label-font-size-l);
   --#{$prefix}navscroll-item-font-color: var(--#{$prefix}color-text-primary);
   --#{$prefix}navscroll-item-border-color: transparent;
   --#{$prefix}navscroll-heading-spacing-top: var(--#{$prefix}spacing-s);
-  --#{$prefix}navscroll-heading-spacing-bottom: var(--#{$prefix}spacing-xs);
+  --#{$prefix}navscroll-heading-spacing-bottom: var(--#{$prefix}spacing-s);
   --#{$prefix}navscroll-heading-spacing-x: var(--#{$prefix}spacing-m);
   --#{$prefix}navscroll-heading-font-size: var(--#{$prefix}heading-6-font-size);
+  --#{$prefix}navscroll-heading-color: var(--#{$prefix}color-text-secondary);
   --#{$prefix}navscroll-heading-font-weight: var(--#{$prefix}heading-font-weight);
   --#{$prefix}navscroll-toggler-color: var(--#{$prefix}color-text-primary);
   --#{$prefix}navscroll-divider-color: var(--#{$prefix}color-border-subtle);
@@ -29,7 +30,6 @@
 
 // Styles
 //
-
 
 .navbar.it-navscroll-wrapper {
   background: var(--#{$prefix}navscroll-background);
@@ -41,10 +41,12 @@
     left: 0;
     z-index: 10;
     visibility: hidden;
-    padding: var(--#{$prefix}navscroll-backbutton-padding);
+    padding: var(--#{$prefix}spacing-s) var(--#{$prefix}spacing-m);
+    border-radius: 0;
     opacity: 0;
     background: var(--#{$prefix}navscroll-background);
     box-shadow: var(--#{$prefix}navscroll-bottom-box-shadow);
+    color: var(--#{$prefix}navscroll-toggler-color);
     font-weight: var(--#{$prefix}navscroll-backbutton-weight);
     text-decoration: none;
     transition:
@@ -67,12 +69,14 @@
     }
   }
 
+  .link-list-wrapper ul li span {
+    font-size: var(--#{$prefix}navscroll-item-font-size);
+  }
+
   .link-list-wrapper ul li a {
     padding: var(--#{$prefix}navscroll-item-spacing);
-    color: var(--#{$prefix}navscroll-item-font-color);
-    font-size: var(--#{$prefix}navscroll-item-font-size);
-    font-weight: var(--#{$prefix}font-weight-solid);
     border-left: var(--#{$prefix}border-thick) solid var(--#{$prefix}navscroll-item-border-color);
+    color: var(--#{$prefix}navscroll-item-font-color);
   }
 
   .link-list-wrapper ul li a.active {
@@ -86,6 +90,7 @@
 
   .link-list-wrapper ul li ul li a.active {
     --#{$prefix}navscroll-item-border-color: transparent;
+    text-decoration: underline;
   }
 
   // Navscroll Heading
@@ -94,15 +99,26 @@
     margin-bottom: var(--#{$prefix}navscroll-heading-spacing-bottom);
     padding-right: var(--#{$prefix}navscroll-heading-spacing-x);
     padding-left: var(--#{$prefix}navscroll-heading-spacing-x);
+    color: var(--#{$prefix}navscroll-heading-color);
     font-size: var(--#{$prefix}navscroll-heading-font-size);
     font-weight: var(--#{$prefix}navscroll-heading-font-weight);
     text-transform: uppercase;
+  }
+
+  // Menu Wrapper
+  .menu-wrapper {
+    @include media-breakpoint-down(md) {
+      padding-top: 56px; // to avoid overlap with navscroll toggler - value must match navscroll toggler height
+    }
+    background: var(--#{$prefix}navscroll-background);
   }
 
   // Navscroll Toggler
   .custom-navbar-toggler {
     display: flex;
     align-items: center;
+    margin-top: 0;
+    padding: var(--#{$prefix}spacing-s) var(--#{$prefix}spacing-m);
     color: var(--#{$prefix}navscroll-toggler-color);
     font-weight: var(--#{$prefix}font-weight-solid);
     cursor: pointer;
@@ -117,11 +133,11 @@
 .navbar.it-bottom-navscroll,
 .navbar.it-top-navscroll {
   position: fixed;
-  left: 0;
   right: 0;
+  left: 0;
   z-index: 99999;
-  padding-top: var(--#{$prefix}spacing-xxs);
-  padding-bottom: var(--#{$prefix}spacing-xxs);
+/*   padding-top: var(--#{$prefix}spacing-xxs);
+  padding-bottom: var(--#{$prefix}spacing-xxs); */
   box-shadow: var(--#{$prefix}navscroll-bottom-box-shadow);
 }
 
@@ -145,19 +161,12 @@
 @include media-breakpoint-down(lg) {
   .it-navscroll-wrapper.theme-dark-mobile {
     --#{$prefix}navscroll-background: var(--#{$prefix}color-background-secondary);
-
-    .link-list-wrapper h3 {
-      color: var(--#{$prefix}color-text-muted);
-    }
+    --#{$prefix}navscroll-heading-color: var(--#{$prefix}color-text-inverse);
+    --#{$prefix}navscroll-toggler-color: var(--#{$prefix}color-text-inverse);
 
     .link-list-wrapper ul li a,
     .link-list-wrapper ul li a.active {
       --#{$prefix}navscroll-item-font-color: var(--#{$prefix}color-text-inverse);
-    }
-
-    .custom-navbar-toggler,
-    .custom-navbar-toggler span.it-list {
-      --#{$prefix}navscroll-toggler-color: var(--#{$prefix}color-text-inverse);
     }
 
     .link-list-wrapper ul li a.active {
@@ -170,10 +179,8 @@
 @include media-breakpoint-up(lg) {
   .it-navscroll-wrapper.theme-dark-desk {
     --#{$prefix}navscroll-background: var(--#{$prefix}color-background-secondary);
-
-    .link-list-wrapper h3 {
-      color: var(--#{$prefix}color-text-inverse);
-    }
+    --#{$prefix}navscroll-heading-color: var(--#{$prefix}color-text-inverse);
+    --#{$prefix}navscroll-toggler-color: var(--#{$prefix}color-text-inverse);
 
     .link-list-wrapper ul li a,
     .link-list-wrapper ul li a.active {
@@ -200,7 +207,8 @@
   }
 
   .navbar.it-navscroll-wrapper .menu-wrapper {
-    padding: var(--#{$prefix}spacing-s) 0 var(--#{$prefix}spacing-m);
+    display: block;
+    /* padding: var(--#{$prefix}spacing-s) 0 var(--#{$prefix}spacing-m); */
     background: var(--#{$prefix}navscroll-background);
   }
 

@@ -865,7 +865,7 @@ Inserisci l'icona all'interno del tag `<span class="list-item-title-icon-wrapper
     <li>
       <a class="list-item icon-left" href="#">
         <span class="list-item-title-icon-wrapper">
-          <svg class="icon icon-primar icon-sm">
+          <svg class="icon icon-primary icon-sm">
             <title>Link</title>
             <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use>
           </svg>
@@ -935,7 +935,7 @@ Lista di link contenente un [checkbox]({{ site.baseurl }}/docs/form/checkbox/).
       </div>
     </li>
     <li>
-      <div class="form-check form-check-group disabled" aria-describedby="" aria-disabled="true">
+      <div class="form-check form-check-group disabled" aria-disabled="true">
         <input type="checkbox" id="checkbox8" disabled aria-disabled="true">
         <label for="checkbox8">Checkbox disabilitato non selezionato</label>
       </div>
