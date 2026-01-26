@@ -46,7 +46,7 @@ Bootstrap Italia 3 cambia l'aspetto dei componenti per costruire moduli (nello s
 
 ### CSS custom properties basate su Design Tokens Italia
 
-Dalle variabili SCSS della v2 si passa all'uso di CSS custom properties (anche variabili CSS) dalla versione 3. Queste sono documentate nel codice all'inizio di ogni componente, con valori predefiniti che laddove possibile puntano all'ultima versione disponibile dei token rilasciata sul repository [Design Tokens Italia](https://github.com/italia/design-tokens-italia/). 
+Dalla versione 2 alla versione 3 si passa dalle variabili SCSS alle CSS custom properties (anche chiamate variabili CSS). Queste sono documentate nel codice all'inizio di ogni componente, con valori predefiniti che, quando possibile, puntano all'ultima versione dei token disponibile sul repository [[Design Tokens Italia](https://github.com/italia/design-tokens-italia/)](https://github.com/italia/design-tokens-italia/).
 
 Alcuni esempi:
 
