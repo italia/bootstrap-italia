@@ -12,9 +12,8 @@
   //reset input style
   input[type='number'] {
     appearance: textfield;
-    // border-right: 0;
-    border-top-right-radius: var(--bs-form-control-border-radius) !important;
-    border-bottom-right-radius: var(--bs-form-control-border-radius) !important;
+    border-top-right-radius: var(--#{$prefix}form-control-border-radius) !important;
+    border-bottom-right-radius: var(--#{$prefix}form-control-border-radius) !important;
 
     &::-webkit-inner-spin-button,
     &::-webkit-outer-spin-button {
