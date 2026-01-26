@@ -8,7 +8,7 @@ toc: true
 
 ## Introduzione
 
-Bootstrap Italia eredita ed estende tutte le variabili di Bootstrap, personalizzando alcuni valori per adattarsi alle esigenze della Pubblica Amministrazione italiana. Un esempio è il colore primario blu `#0066CC`, tipico della libreria.
+Bootstrap Italia eredita ed estende tutte le variabili di Bootstrap, personalizzando alcuni valori per adattarsi alle esigenze della Pubblica Amministrazione italiana. Un esempio è il colore primario blu `#0066CC`, caratteristico della libreria.
 
 L'utilizzo del blu `#0066CC` dovrebbe essere riservato alle amministrazioni centrali dello Stato. Per altre organizzazioni è necessario personalizzare i valori per le proprie necessità.
 
