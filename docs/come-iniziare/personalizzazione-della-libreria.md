@@ -12,7 +12,7 @@ Bootstrap Italia eredita ed estende tutte le variabili di Bootstrap, personalizz
 
 Il blu #0066CC è riservato alle amministrazioni centrali dello Stato. Le altre organizzazioni devono personalizzare i valori secondo le proprie necessità.
 
-Bootstrap Italia dalla versione 3 usa **CSS custom properties**, semplificando la personalizzazione e permettendo modifiche **runtime** senza ricompilazione.
+Dalla versione 3, Bootstrap Italia usa le CSS custom properties. Questo semplifica la personalizzazione e permette modifiche runtime senza ricompilare il codice.
 
 ## Personalizzazione base
 
