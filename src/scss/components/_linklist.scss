@@ -59,6 +59,7 @@
   .list-item {
     position: relative;
     display: inline-flex;
+    flex: 1;
     padding-top: var(--#{$prefix}linklist-item-spacing);
     padding-bottom: var(--#{$prefix}linklist-item-spacing);
     text-decoration: none;
@@ -195,6 +196,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      flex: 1;
 
       .list-item-title {
         margin-right: var(--#{$prefix}spacing-xxs);
