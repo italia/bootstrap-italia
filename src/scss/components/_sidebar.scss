@@ -72,12 +72,6 @@
     &[aria-current="page"] span {
       text-decoration: underline;
     }
-
-    TODO: Resolve this comment 
-    // Collapsable links
-    // &[data-bs-toggle="collapse"][aria-expanded="true"] span {
-    //   color: var(--#{$prefix}color-text-primary);
-    // }
   }
 
   .sidebar-linklist-wrapper .link-list-wrapper ul.link-sublist {
