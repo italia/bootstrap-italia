@@ -236,6 +236,8 @@ const button = new Button(buttonEl)
   </table>
 </div>
 
+{% include properties.md properties=site.data.cprops.btn %}
+
 ## Breaking change
 
 {% capture callout %}

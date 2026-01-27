@@ -1062,6 +1062,8 @@ Per questo tipo di link list sono state utilizzate, oltre alle classi custom, le
 </div>
 {% endcapture %}{% include example.html content=example %}
 
+{% include properties.md properties=site.data.cprops.linklist %}
+
 ## Breaking change
 
 {% capture callout %}

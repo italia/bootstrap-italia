@@ -263,6 +263,8 @@ Per aggiungere una serie di card all'interno di una Section si consiglia di util
 </section>
 {% endcapture %}{% include example.html content=example %}
 
+{% include properties.md properties=site.data.cprops.section %}
+
 ## Breaking change
 
 {% capture callout %}

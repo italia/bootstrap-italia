@@ -790,3 +790,5 @@ myModalEl.addEventListener('hidden.bs.modal', function (event) {
     </tbody>
   </table>
 </div>
+
+{% include properties.md properties=site.data.cprops.modal %}

@@ -159,3 +159,5 @@ document.addEventListener('DOMContentLoaded', function() {
   })
 })
 </script>
+
+{% include properties.md properties=site.data.cprops.icon %}

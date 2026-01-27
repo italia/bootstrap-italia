@@ -234,6 +234,8 @@ Il pulsante di controllo del collapse può essere affiancato da un link per down
 </div>
 {% endcapture %}{% include example.html content=example %}
 
+{% include properties.md properties=site.data.cprops.callout %}
+
 ## Breaking change
 
 {% capture callout %}

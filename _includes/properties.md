@@ -12,7 +12,7 @@
       </tr>
     </thead>
     <tbody>
-    {% for track in site.data.cprops.dropdown %}
+    {% for track in properties %}
     <tr>
       <td><code>{{ track.variable-name }}</code></td>
       <td>{{ track.description }}</td>

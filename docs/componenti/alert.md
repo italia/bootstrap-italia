@@ -209,3 +209,5 @@ myAlert.addEventListener('closed.bs.alert', () => {
   // document.getElementById('...').focus()
 })
 ```
+
+{% include properties.md properties=site.data.cprops.alert %}

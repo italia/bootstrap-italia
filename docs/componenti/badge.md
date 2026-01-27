@@ -80,3 +80,5 @@ Se hai bisogno di trasformare un badge in un link, aggiungi una delle classi con
 {% for color in site.data.theme-colors %}
 <a href="#" class="badge badge-{{ color.name }}">{{ color.name | capitalize }}</a>{% endfor %}
 {% endcapture %}{% include example.html content=example %}
+
+{% include properties.md properties=site.data.cprops.badge %}
