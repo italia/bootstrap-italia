@@ -65,22 +65,22 @@ La sidebar può contenere icone nella sua Lista di link.
           <h3 class="no_toc">Header</h3>
         </li>
         <li>
-          <a class="list-item medium active left-icon" href="#">
+          <a class="list-item medium active" href="#">
             <svg class="icon icon-sm icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg><span>Link lista 1 (selezionato)</span>
           </a>
         </li>
         <li>
-          <a class="list-item medium disabled left-icon" href="#">
+          <a class="list-item medium disabled" href="#">
             <svg class="icon icon-sm icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg><span>Link lista 2 (disabilitato)</span>
           </a>
         </li>
         <li>
-          <a class="list-item medium left-icon" href="#">
+          <a class="list-item medium" href="#">
             <svg class="icon icon-sm icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg><span>Link lista 3</span>
           </a>
         </li>
         <li>
-          <a class="list-item medium left-icon" href="#">
+          <a class="list-item medium" href="#">
             <svg class="icon icon-sm icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg><span>Link lista 4</span>
           </a>
         </li>
