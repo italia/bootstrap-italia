@@ -27,7 +27,7 @@ Sovrascrivi le variabili `--bsi-*` nel tuo CSS o SCSS dedicato, ad esempio:
 ## CSS Custom properties disponibili
 
 Ogni componente documenta le proprie custom properties nella tabella **Properties**:
-- [Button]({{ site.baseurl }}/docs/componenti/button/#properties)
+- [Button]({{ site.baseurl }}/docs/componenti/buttons/#properties)
 - [Alert]({{ site.baseurl }}/docs/componenti/alert/#properties)
 - [Vedi tutti i componenti]({{ site.baseurl }}/docs/componenti/introduzione/)
 
