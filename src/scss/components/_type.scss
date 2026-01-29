@@ -266,7 +266,7 @@ blockquote,
   &.blockquote-card {
     margin-left: 0;
     padding: var(--#{$prefix}spacing-m);
-    background-color: var(--#{$prefix}color-background-inverse); // TODO: Use a card background variable when available
+    background-color: var(--#{$prefix}color-background-inverse);
     box-shadow: var(--#{$prefix}elevation-low);
 
     .blockquote-footer {
