@@ -278,6 +278,6 @@
 
   .link-list-wrapper .list-item.disabled,
   .link-list-wrapper .list-item.disabled span {
-    color: hsla(0, 0%, 100%, 0.35); // TODO: Add color variable for dark variant
+    color: hsla(var(--#{$prefix}color-text-base), 0.35);
   }
 }
