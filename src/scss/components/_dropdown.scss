@@ -214,7 +214,7 @@
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
     .dropdown-menu#{$infix}-start {
-      --bs-position: start;
+      --#{$prefix}dropdown-position: start;
 
       &[data-bs-popper] {
         right: auto;
@@ -223,7 +223,7 @@
     }
 
     .dropdown-menu#{$infix}-end {
-      --bs-position: end;
+      --#{$prefix}dropdown-position: end;
 
       &[data-bs-popper] {
         right: 0;

@@ -10,6 +10,14 @@ title: Introduzione
 description: Come usare Bootstrap Italia nel tuo progetto.
 ---
 
+{% capture alpha_warning %}
+### ⚠️ Versione Alpha
+
+Questa è una versione alpha di Bootstrap Italia 3.
+
+- [Breaking change]({{ site.baseurl }}/docs/come-iniziare/migrazione-dalla-versione-2/)
+{% endcapture %}{% include callout.html content=alpha_warning type="warning" %}
+
 ## Installazione
 
 ### Con NPM
@@ -225,6 +233,10 @@ continua a leggere alla pagina [strumenti di compilazione e contribuzione]({{ si
 
 
 ## Breaking change
+
+{% capture callout %}
+La versione 3.0.0 ha portato molte breaking changes sia a livello generale che a livello di singolo componente. Fai riferimento alla [guida alla migrazione dalla versione 2]({{ site.baseurl }}/docs/come-iniziare/migrazione-dalla-versione-2/).
+{% endcapture %}{% include callout-breaking.html version="3.0.0" content=callout type="danger" %}
 
 {% capture callout %}
 Per caricare i font utilizzando JavaScript occorre chiamare **esplicitamente** la funzione `loadFonts` passando il percorso della cartella dove si trovano i font.

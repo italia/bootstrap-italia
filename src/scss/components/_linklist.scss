@@ -59,6 +59,7 @@
   .list-item {
     position: relative;
     display: inline-flex;
+    flex: 1;
     padding-top: var(--#{$prefix}linklist-item-spacing);
     padding-bottom: var(--#{$prefix}linklist-item-spacing);
     text-decoration: none;
@@ -195,6 +196,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      flex: 1;
 
       .list-item-title {
         margin-right: var(--#{$prefix}spacing-xxs);
@@ -276,6 +278,6 @@
 
   .link-list-wrapper .list-item.disabled,
   .link-list-wrapper .list-item.disabled span {
-    color: hsla(0, 0%, 100%, 0.35); // TODO: Add color variable for dark variant
+    color: hsla(var(--#{$prefix}color-text-base), 0.35);
   }
 }

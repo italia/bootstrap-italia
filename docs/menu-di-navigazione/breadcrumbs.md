@@ -73,8 +73,8 @@ Quando la versione su sfondo scuro viene utilizzata su un fondo di colore differ
 <hr>
 <nav class="breadcrumb-container" aria-label="Percorso di navigazione">
   <ol class="breadcrumb dark px-3">
-    <li class="breadcrumb-item"><svg class="icon icon-sm icon-white align-top me-1" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg><a href="#">Home</a><span class="separator" aria-hidden="true">/</span></li>
-    <li class="breadcrumb-item"><svg class="icon icon-sm icon-white align-top me-1" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg><a href="#">Sottosezione</a><span class="separator" aria-hidden="true">/</span></li>
+    <li class="breadcrumb-item"><svg class="icon icon-sm icon-inverse align-top me-1" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg><a href="#">Home</a><span class="separator" aria-hidden="true">/</span></li>
+    <li class="breadcrumb-item"><svg class="icon icon-sm icon-inverse align-top me-1" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg><a href="#">Sottosezione</a><span class="separator" aria-hidden="true">/</span></li>
     <li class="breadcrumb-item active" aria-current="page">Nome pagina</li>
   </ol>
 </nav>

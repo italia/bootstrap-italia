@@ -15,7 +15,7 @@
   --#{$prefix}sidebar-heading-font-size: var(--#{$prefix}heading-6-font-size);
   --#{$prefix}sidebar-heading-color: var(--#{$prefix}color-text-secondary);
   --#{$prefix}sidebar-link-padding-x: var(--#{$prefix}spacing-s);
-  --#{$prefix}sidebar-link-padding-y: var(--#{$prefix}spacing-xs);
+  --#{$prefix}sidebar-link-padding-y: var(--#{$prefix}spacing-xxs);
   --#{$prefix}sidebar-link-sublist-indent: var(--#{$prefix}spacing-m);
   --#{$prefix}sidebar-link-font-size: var(--#{$prefix}label-font-size);
   --#{$prefix}sidebar-link-line-height: var(--#{$prefix}body-line-height);
@@ -26,7 +26,6 @@
 
 // Styles
 //
-
 
 .sidebar-wrapper {
   padding: var(--#{$prefix}sidebar-padding) 0;
@@ -44,7 +43,6 @@
 
   .sidebar-linklist-wrapper .link-list-wrapper ul li a {
     width: 100%;
-    display: block;
     position: relative;
     padding: var(--#{$prefix}sidebar-link-padding-y) var(--#{$prefix}sidebar-link-padding-x);
     font-size: var(--#{$prefix}sidebar-link-font-size);
@@ -74,11 +72,6 @@
     &[aria-current="page"] span {
       text-decoration: underline;
     }
-
-    // Collapsable links
-    // &[data-bs-toggle="collapse"][aria-expanded="true"] span {
-    //   color: var(--#{$prefix}color-text-primary);
-    // }
   }
 
   .sidebar-linklist-wrapper .link-list-wrapper ul.link-sublist {
@@ -88,6 +81,10 @@
       padding-inline-start: var(--#{$prefix}sidebar-link-sublist-indent);
       text-transform: none; // No text transform for sublist items
     }
+  }
+
+  .icon {
+    margin-right: var(--#{$prefix}icon-spacing);
   }
 
   // Divider between link lists
