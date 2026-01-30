@@ -190,21 +190,14 @@ input[type='time'] {
   display: flex;
 }
 
-//TODO: CHECK
-fieldset {
+fieldset {visibility: hidden;
   legend {
-    // display: block;
-    // width: auto;
     margin-bottom: var(--#{$prefix}spacing-s);
     padding: 0 var(--#{$prefix}form-input-spacing-x);
-    // float: none;
     background-color: transparent;
     color: var(--#{$prefix}form-control-text-color);
     font-size: var(--#{$prefix}label-sm);
     font-weight: var(--#{$prefix}font-weight-solid);
-    // line-height: calc(#{$input-height} - 1px);
-    // transition: 0.2s ease-out;
-    // cursor: text;
   }
 }
 
