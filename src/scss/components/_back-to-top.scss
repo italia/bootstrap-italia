@@ -1,102 +1,119 @@
-/*back to top*/
+// Component: back to top
+//
+// Description: Component styles for back to top
+//
+
+// Variables
+//
+
+// Properties
+//
+
+.back-to-top {
+  --#{$prefix}backtop-background: var(--#{$prefix}color-background-primary);
+  --#{$prefix}backtop-position: 1rem;
+  --#{$prefix}backtop-radius: var(--#{$prefix}radius-circle);
+  --#{$prefix}backtop-sizing: 2.5rem;
+}
+
+// Styles
+//
+
+
 .back-to-top {
   position: fixed;
-  bottom: 16px;
-  right: 16px;
-  background: $primary;
-  width: 40px;
-  height: 40px;
-  text-decoration: none;
-  border-radius: 50%;
+  right: var(--#{$prefix}backtop-position);
+  bottom: var(--#{$prefix}backtop-position);
+  z-index: 1;
   display: block;
   visibility: hidden;
+  width: var(--#{$prefix}backtop-sizing);
+  height: var(--#{$prefix}backtop-sizing);
+  border-radius: var(--#{$prefix}backtop-radius);
   opacity: 0;
+  background: var(--#{$prefix}backtop-background);
   text-align: center;
+  text-decoration: none;
+  transform: scale(0.7);
+  transform-origin: center center;
   transition:
     $transition-base,
     transform 0.25s cubic-bezier(0.75, -0.5, 0, 1.75),
     visibility 0.3s linear,
     opacity 0.3s ease-in-out;
-  z-index: 1;
-  transform: scale(0.7);
-  transform-origin: center center;
-  //fade in
+
+  // Tablet vertical
+  @include media-breakpoint-up(md) {
+    --#{$prefix}backtop-sizing: 3.5rem; // 56px
+  }
+
+  // Desktop
+  @include media-breakpoint-up(xl) {
+    --#{$prefix}backtop-position: 2rem; // 32px
+  }
+
+  &:hover {
+    --backtop-background: var(--#{$prefix}color-background-primary-hover);
+    text-decoration: none;
+  }
+
+  // Fade in
   &.back-to-top-show {
     visibility: visible;
     opacity: 1;
+    transform: scale(1);
     transition:
       $transition-base,
       transform 0.05s ease-out,
       visibility 0s linear,
       opacity 0.1s ease-in-out;
-    transform: scale(1);
   }
-  &:hover {
-    background: shade-color($primary, 10%);
-    text-decoration: none;
-  }
-  //caret
+
+  // Icon
   .icon {
-    margin: 0;
     position: relative;
-    transform: scale(0.75);
     top: 4px;
+    margin: 0;
+    transform: scale(0.75);
+
+    @include media-breakpoint-up(md) {
+      top: 10px;
+      transform: scale(1);
+    }
+
     &:before {
       margin: 0;
-      color: $white;
+      color: var(--#{$prefix}icon-inverse);
     }
   }
 
-  //shadow
+  // Shadow
   &.shadow {
     &:hover {
       box-shadow: 0 0.3rem 0.75rem rgba(0, 0, 0, 0.3) !important;
     }
   }
 
-  //dark version
+  // Dark version
   &.dark {
-    background: #fff;
+    --#{$prefix}backtop-background: var(--#{$prefix}color-background-inverse);
     &:hover {
-      background: $neutral-1-a1; // TODO Missing in the UI kit
+      --#{$prefix}backtop-background: var(--#{$prefix}color-background-inverse-hover);
     }
 
-    //caret
     .icon {
       &:before {
-        color: $neutral-1-a8; // TODO Missing in the UI kit
+        color: var(--#{$prefix}icon-secondary);
       }
     }
   }
-}
 
-//Tablet vertical
-@include media-breakpoint-up(md) {
-  /*back to top*/
-  .back-to-top {
-    width: 56px;
-    height: 56px;
+  // Small version
+  &.back-to-top-small {
+    --#{$prefix}backtop-sizing: 2.5rem; // 40px
     .icon {
-      transform: scale(1);
-      top: 10px;
+      top: 4px;
+      transform: scale(0.75);
     }
-    //small version
-    &.back-to-top-small {
-      width: 40px;
-      height: 40px;
-      //caret
-      .icon {
-        transform: scale(0.75);
-        top: 4px;
-      }
-    }
-  }
-}
-
-//Desktop
-@include media-breakpoint-up(xl) {
-  .back-to-top {
-    bottom: 32px;
-    right: 32px;
   }
 }

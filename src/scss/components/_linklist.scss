@@ -1,299 +1,283 @@
-//mobile
+// Component: linklist
+//
+// Description: Component styles for linklist
+//
+
+// Variables
+//
+
+// Properties
+//
+
+// Styles
+//
+
+//
+// Custom properties
+
 .link-list-wrapper {
-  .list-item-title,
-  .link-list-heading {
-    font-size: $link-list-heading-size;
-  }
-  .link-list-heading {
-    color: $color-text-base;
-    padding: 0 $link-list-h-pad;
-    font-weight: 600;
-    margin-bottom: $link-list-divider-distance;
-    line-height: 1.25;
-    a {
-      padding: 0;
-      font-size: $link-list-font-size;
-      line-height: $link-list-line-height;
-      display: block;
-      position: relative;
-      text-decoration: none;
-    }
-  }
+  --#{$prefix}linklist-divider-size: 1px;
+  --#{$prefix}linklist-heading-color: var(--#{$prefix}color-text-secondary);
+  --#{$prefix}linklist-heading-font-size: var(--#{$prefix}heading-6-font-size);
+  --#{$prefix}linklist-item-font-size: var(--#{$prefix}label-font-size);
+  --#{$prefix}linklist-item-line-height: var(--#{$prefix}label-line-height);
+  --#{$prefix}linklist-item-spacing: var(--#{$prefix}spacing-xxs);
+  --#{$prefix}linklist-nested-spacing: var(--#{$prefix}spacing-s);
+}
+
+
+.link-list-wrapper {
+
+  .link-list-heading,
   h3 {
-    font-size: $link-list-heading-size;
-    color: $color-text-base;
-    padding: 0 $link-list-h-pad;
-    font-weight: 600;
-    a {
-      line-height: inherit;
-      font-size: 1rem;
-      padding: 0;
-    }
+    margin-bottom: var(--#{$prefix}spacing-xxs);
+    color: var(--#{$prefix}linklist-heading-color);
+    font-size: var(--#{$prefix}linklist-heading-font-size);
+    font-weight: var(--#{$prefix}heading-font-weight-weak);
+    line-height: var(--#{$prefix}heading-line-height);
   }
+
+  h3 {
+    padding: 0 var(--#{$prefix}spacing-m);
+  }
+
   ul {
     padding: 0;
     list-style-type: none;
-    // sottolista
+
     &.link-sublist {
-      padding-left: $link-list-h-pad;
+      padding-left: var(--#{$prefix}linklist-nested-spacing);
     }
-    li {
-      a {
-        font-size: $link-list-font-size;
-        line-height: $link-list-line-height;
-        display: block;
-        padding: 0.25rem $link-list-h-pad;
+  }
+
+  li span,
+  .list-item {
+    font-size: var(--#{$prefix}linklist-item-font-size);
+    line-height: var(--#{$prefix}linklist-item-line-height);
+  }
+
+  .list-item {
+    position: relative;
+    display: inline-flex;
+    flex: 1;
+    padding-top: var(--#{$prefix}linklist-item-spacing);
+    padding-bottom: var(--#{$prefix}linklist-item-spacing);
+    text-decoration: none;
+
+    &.active span,
+    &:hover:not(.disable) span {
+      text-decoration: underline;
+    }
+
+    // List item active state
+    &.active {
+      span {
+        color: var(--#{$prefix}color-text-primary-active);
+      }
+
+      .icon {
+        color: var(--#{$prefix}color-icon-primary-active);
+      }
+    }
+
+    // Hover on list item
+    &:hover:not(.disabled) {
+      span {
+        color: var(--#{$prefix}color-link-hover);
+      }
+
+      .icon {
+        fill: var(--#{$prefix}icon-primary-hover);
+      }
+
+      .icon.icon-inverse {
+        fill: var(--#{$prefix}icon-inverse);
+      }
+    }
+
+    // List item disabled state
+    &.disabled {
+      cursor: not-allowed;
+
+      &:hover span {
         text-decoration: none;
-        position: relative;
-        &.icon-right,
-        &.icon-left {
-          padding-left: 0;
-          padding-right: 0;
-          padding-top: $link-list-v-pad;
-          padding-bottom: $link-list-v-pad;
-          & + ul {
-            padding-left: 0;
-          }
-        }
-        &.icon-right {
-          .list-item-title-icon-wrapper {
-            justify-content: space-between;
-            margin-right: 0;
-          }
-        }
-        &[data-bs-toggle] {
-          .icon {
-            transition: transform 0.3s;
-          }
-        }
-        &[aria-expanded='true'] {
-          .icon {
-            transform: scale(-1);
-          }
-        }
-        // hover state
-        &:hover:not(.disabled) {
-          text-decoration: none;
-          span {
-            color: $primary;
-            text-decoration: underline;
-          }
-          p {
-            color: $color-text-secondary;
-            text-decoration: none;
-          }
-          .icon {
-            fill: $primary;
-          }
-        }
-        &.disabled:hover {
-          text-decoration: none;
-        }
-        // weight variation
-        &.medium {
-          font-weight: 600;
-        }
-        span {
-          color: $primary;
-          display: inline-block;
-          margin-right: $link-list-h-pad;
-          line-height: normal;
-        }
-        .icon {
-          display: inline-block;
-          flex-shrink: 0;
-        }
-        .list-item-title-icon-wrapper {
-          display: flex;
-          align-items: center;
-          .list-item-title {
-            margin-right: $link-list-h-pad;
-          }
-        }
-        // icone destre dentro link
-        &.right-icon {
-          .list-item-title-icon-wrapper {
-            padding-right: 0;
-            margin-right: 0;
-            justify-content: space-between;
-          }
-          .icon {
-            transition: transform $dropdown-menu-animation-speed;
-            &.secondary {
-              color: $icon-secondary;
-            }
-          }
-        }
-        // variazione icone a collapse aperto
-        &.right-icon[aria-expanded='true'] {
-          .icon.right {
-            transform: scaleY(-1);
-          }
-        }
-        &.active {
-          span {
-            color: $color-text-primary-active;
-          }
-          .icon {
-            color: $color-text-primary-active;
-          }
-        }
-        &.disabled {
-          cursor: not-allowed;
-          span {
-            color: $gray-label-disabled;
-          }
-          svg {
-            fill: $gray-disabled;
-            &.secondary {
-              fill: $gray-disabled;
-            }
-          }
-        }
-        &.large {
-          font-size: $link-list-font-size-l;
-        }
-        // paragrafo dentro link
-        p {
-          font-size: $link-list-paragraph-size;
-          line-height: initial;
-          color: $color-text-secondary;
-        }
-        //avatar
-        &.avatar {
-          display: flex;
-          margin-bottom: $link-list-avatar-margin;
-          .avatar {
-            display: block;
-            border-radius: $link-list-avatar-radius;
-            margin-right: $link-list-left-icon-space;
-          }
-        }
+      }
 
-        &.list-item {
-          &.icon-left {
-            .icon {
-              margin-right: $v-gap;
-            }
-          }
-          &.icon-left,
-          &.left-icon {
-            p {
-              width: 100%;
-            }
-            .icon {
-              left: 0;
-              margin-left: 0;
-              flex-shrink: 0;
-            }
-          }
+      span {
+        color: var(--#{$prefix}color-text-disabled);
+      }
+
+      svg {
+        fill: var(--#{$prefix}icon-disabled);
+
+        &.secondary {
+          fill: var(--#{$prefix}icon-disabled);
         }
-      }
-    }
-    .divider {
-      display: block;
-      height: $link-list-divider-height;
-      background: $color-border-subtle;
-      margin: $link-list-divider-distance 0;
-    }
-    //toggles
-    .toggles {
-      label {
-        padding: 0 $link-list-h-pad;
-        font-size: $link-list-font-size;
-        line-height: $link-list-line-height;
-        justify-content: space-between;
-        height: auto;
-        font-weight: inherit;
-        margin: 0;
-      }
-      input[type='checkbox'] + .lever {
-        margin: $link-list-toggle-margin 0 0;
       }
     }
 
-    //checkboxes
-    .form-check {
-      &.form-check-group {
-        padding: 0 $link-list-h-pad;
-        box-shadow: none;
-        [type='checkbox'] + label {
-          padding-left: 0;
-          font-size: $link-list-font-size;
-          line-height: $link-list-line-height;
-          height: inherit;
-          margin-bottom: 0;
-          &:after {
-            right: $link-list-h-pad;
-          }
-          &:before {
-            right: $link-list-checkbox-icon-right;
-          }
-        }
-        [type='checkbox'][disabled] + label {
-          color: $color-text-secondary;
-        }
-      }
+    // Change the list item link font weight
+    &.medium,
+    .list-item-title {
+      font-weight: var(--#{$prefix}font-weight-solid);
     }
-  }
-  &.multiline {
-    .list-item-title-icon-wrapper {
-      justify-content: space-between;
-      margin-bottom: calc($v-gap / 2);
-      padding: 0;
-    }
-    .list-item {
-      &.icon-right {
-        .list-item-title-icon-wrapper {
-          margin-right: 0;
-        }
-      }
-    }
-  }
-}
-//small - tablet
-@include media-breakpoint-up(sm) {
-  .link-list-wrapper ul li a.large {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    font-size: $link-list-font-size-l;
-  }
-}
 
-//Tablet vertical
-@include media-breakpoint-up(md) {
-  .link-list-wrapper ul li a.large {
-    &.icon-left,
+    // Increase font-size and spacing for list item link with large class
+    &.large {
+      --#{$prefix}linklist-item-font-size: var(--#{$prefix}label-font-size-l);
+    }
+
+    // Avatar position inside the list item
+    &.avatar {
+      display: flex;
+      margin-bottom: var(--#{$prefix}spacing-xxs);
+
+      .avatar {
+        display: block;
+        margin-right: var(--#{$prefix}spacing-s);
+      }
+    }
+
+    // Icon left and right inside list item
+    &.icon-right,
+    &.icon-left {
+      padding-right: 0;
+      padding-left: 0;
+    }
+
+    // Icon left inside list item
+    &.icon-left {
+      .icon {
+        left: 0;
+        flex-shrink: 0;
+        margin-right: var(--#{$prefix}spacing-xxs);
+      }
+
+      p {
+        width: 100%;
+      }
+    }
+
     &.icon-right {
-      padding-top: $link-list-v-padding-l;
-      padding-bottom: $link-list-v-padding-l;
+      width: 100%;
+      .list-item-title-icon-wrapper {
+        justify-content: space-between;
+      }
     }
-  }
-}
 
-//Tablet horizontal / small desktop
-@include media-breakpoint-up(lg) {
-  .link-list-wrapper {
-    // classe modificatore per menu laterale
-    &.menu-link-list {
-      position: relative;
+    &.right-icon {
+      .list-item-title-icon-wrapper {
+        justify-content: space-between;
+      }
 
-      h3,
-      h4 {
-        position: relative;
-        padding: 1rem;
-        margin-top: 0;
-        border-bottom: 4px solid $color-border-subtle;
-        &:after {
-          content: '';
-          position: absolute;
-          left: 0;
-          bottom: -4px;
-          width: 40px;
-          height: 4px;
-          background-color: $warning;
+      .icon {
+        transition: transform $dropdown-menu-animation-speed;
+
+        &.secondary {
+          color: var(--#{$prefix}icon-secondary);
         }
       }
     }
+
+    &[data-bs-toggle] .icon {
+      transition: transform 0.3s;
+    }
+
+    &[aria-expanded='true'] .icon {
+      transform: rotate(180deg);
+    }
+
+    .icon {
+      display: inline-block;
+      flex-shrink: 0;
+    }
+
+    .list-item-title-icon-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex: 1;
+
+      .list-item-title {
+        margin-right: var(--#{$prefix}spacing-xxs);
+      }
+    }
+
+    // Text paragraph inside multiline list item
+    > p {
+      color: var(--#{$prefix}color-text-secondary);
+      font-size: var(--#{$prefix}caption-font-size);
+      line-height: var(--#{$prefix}caption-line-height);
+    }
+
+    // Listed item label wrapped in the <a> tag
+    > span {
+      display: inline-block;
+      color: var(--#{$prefix}color-link);
+    }
+  }
+
+  // Divider between list items
+  .divider {
+    display: block;
+    height: var(--#{$prefix}linklist-divider-size);
+    margin: var(--#{$prefix}spacing-xxs) 0;
+    background: var(--#{$prefix}color-border-subtle);
+  }
+
+  .form-check {
+    padding: 0 var(--#{$prefix}spacing-m);
+  }
+}
+
+// Multiline list item
+.multiline {
+  .list-item-title-icon-wrapper {
+    margin-bottom: var(--#{$prefix}spacing-3xs);
+  }
+
+  .list-item.icon-right .list-item-title-icon-wrapper {
+    margin-right: 0;
+  }
+
+  // List item label inside a multiline list item
+  .list-item-title {
+    font-size: var(--#{$prefix}label-font-size);
+    @include media-breakpoint-up(lg) {
+      font-size: var(--#{$prefix}label-font-size-l);
+    }
+  }
+
+  .list-item {
+    width: 100%;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .link-list-wrapper ul li a.large.icon-left,
+  .link-list-wrapper ul li a.large.icon-right {
+    --#{$prefix}linklist-item-spacing: var(--#{$prefix}spacing-s);
+  }
+}
+
+//
+// Dark theme styles 
+
+.dark,
+.theme-dark {
+  --#{$prefix}linklist-heading-color: var(--#{$prefix}color-text-inverse);
+
+  .link-list-wrapper .list-item:not(.disabled) span,
+  .link-list-wrapper .list-item:hover span {
+    color: var(--#{$prefix}color-text-inverse);
+  }
+
+  .link-list-wrapper .list-item.disabled,
+  .link-list-wrapper .list-item.disabled span {
+    color: hsla(var(--#{$prefix}color-text-base), 0.35);
   }
 }

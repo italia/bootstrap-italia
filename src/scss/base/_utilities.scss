@@ -61,9 +61,9 @@ $utilities: map-merge(
         property: box-shadow,
         class: shadow,
         values: (
-          null: $box-shadow,
-          sm: $box-shadow-sm,
-          lg: $box-shadow-lg,
+          sm: var(--#{$prefix}elevation-low),
+          md: var(--#{$prefix}elevation-medium),
+          lg: var(--#{$prefix}elevation-high),
           none: none,
         ),
       ),

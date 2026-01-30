@@ -1,277 +1,218 @@
-//mobile
+// Component: chips
+//
+// Description: Component styles for chips
+//
+
+// Variables
+//
+
+// Properties
+//
+
+.chip {
+  --#{$prefix}chip-background-color: var(--#{$prefix}color-background-muted);
+  --#{$prefix}chip-border-color: var(--#{$prefix}color-border-subtle);
+  --#{$prefix}chip-border-radius: var(--#{$prefix}radius-rounded);
+  --#{$prefix}chip-border-width: 1px;
+  --#{$prefix}chip-icon-color: var(--#{$prefix}icon-secondary);
+  --#{$prefix}chip-link-hover: var(--#{$prefix}color-text-inverse);
+  --#{$prefix}chip-padding-x: var(--#{$prefix}spacing-xs);
+  --#{$prefix}chip-padding-y: var(--#{$prefix}spacing-3xs);
+  --#{$prefix}chip-text-color: var(--#{$prefix}color-text-secondary);
+  --#{$prefix}chip-text-line-height: var(--#{$prefix}label-line-height);
+  --#{$prefix}chip-text-size: var(--#{$prefix}label-font-size);
+  --#{$prefix}chip-text-weight: var(--#{$prefix}font-weight-solid);
+}
+// Styles
+//
+
 .chip {
   display: inline-flex;
-  justify-content: space-evenly;
   align-items: center;
-  background: $chips-background;
-  border: 1px solid $chips-border;
-  border-radius: $v-gap * 1.5;
-  height: $v-gap * 3;
-  min-width: 100px;
-  padding: 0 calc($v-gap / 2) 2px $v-gap;
-  transition: all 0.05s;
-  margin-top: $v-gap * 0.5;
-  margin-bottom: $v-gap;
-  &:not(:last-child) {
-    margin-right: $v-gap;
+  justify-content: space-evenly;
+  padding: var(--#{$prefix}chip-padding-y) var(--#{$prefix}chip-padding-x);
+  border: var(--#{$prefix}chip-border-width) solid var(--#{$prefix}chip-border-color);
+  border-radius: var(--#{$prefix}chip-border-radius);
+  background-color: var(--#{$prefix}chip-background-color);
+  color: var(--#{$prefix}chip-text-color);
+  gap: var(--#{$prefix}spacing-xxs);
+
+  & + & {
+    // adjacent sibling selector
+    margin-left: var(--#{$prefix}spacing-s);
   }
-  //label
+
+  &:hover {
+    cursor: text;
+    color: var(--#{$prefix}chip-text-color);
+  }
+
+  // Chip label
   .chip-label {
-    font-size: $chips-label-font-size;
-    height: $v-gap * 2;
-    font-weight: 600;
-    color: $chips-label-color;
     margin-bottom: 0;
-    transform: translateY(-2px);
-    transition: color 0.05s;
+    font-size: var(--#{$prefix}chip-text-size);
+    font-weight: var(--#{$prefix}chip-text-weight);
+    line-height: var(--#{$prefix}chip-text-line-height);
     text-decoration: none;
-    &:hover {
-      text-decoration: none;
-    }
   }
-  //close button
+
+  // Close button
   button {
     padding: 0;
-    background: transparent;
     border: none;
-    margin-left: auto;
-    width: 24px;
-    height: 24px;
-    position: relative;
+    background: transparent;
+    line-height: 1; // Reset default button line-height
+
     &:hover:not([disabled]) {
       cursor: pointer;
     }
+
     &:hover[disabled] {
       cursor: not-allowed;
     }
+
     .icon {
-      width: 22px;
-      height: 22px;
-      fill: $gray-secondary;
-      transition: fill 0.05s;
+      fill: var(--#{$prefix}chip-icon-color);
+      &:hover {
+        fill: var(--#{$prefix}icon-primary);
+      }
     }
   }
-  //left icon
+
+  // left icon
+
   & > .icon {
-    fill: $chips-label-color;
-    transform: translateX(-5px) translateY(1px);
-    transition: fill 0.05s;
-  }
-  //avatar
-  .avatar {
-    transform: translateX(-5px) translateY(1px);
+    fill: var(--#{$prefix}chip-icon-color);
   }
 
-  //large version-------------------------------
-  &.chip-lg {
-    height: $v-gap * 4;
-    min-width: 120px;
-    border-radius: $v-gap * 2;
-    padding: 2px calc($v-gap / 2) 0 $v-gap * 2;
-    //label
-    .chip-label {
-      font-size: $chips-label-font-size-l;
-      height: 12px;
-      transform: translateY(-8px);
-    }
-    //close button
-    button {
-      width: 32px;
-      height: 32px;
-      .icon {
-        width: 28px;
-        height: 28px;
-      }
-    }
-    //left icon
-    & > .icon {
-      height: 24px;
-      width: 24px;
-      margin-right: -8px;
-      transform: translateX(-13px) translateY(-1px);
-    }
-    //avatar
-    .avatar {
-      width: 24px;
-      height: 24px;
-      margin-right: -4px;
-      transform: translateX(-12px) translateY(-1px);
-    }
-
-    //label only version
-    &.chip-simple {
-      padding-right: $v-gap * 2;
-    }
+  // Reset margin for avatar - see _avatar.scss
+  .avatar ~ span {
+    margin-left: 0;
   }
 
-  //label only version
-  &.chip-simple {
-    padding-right: $v-gap;
+  // Variant Large
+  &-lg {
+    --#{$prefix}chip-padding-x: var(--#{$prefix}spacing-s);
+    --#{$prefix}chip-text-size: var(--#{$prefix}label-font-size-l);
   }
 
-  //hover state--------------------------------
-  &:hover:not(.chip-disabled) {
-    background: $chips-background-hover;
-    border-color: $chips-background-hover;
-    transition: background-color 0.1s;
-    //label
-    .chip-label {
-      color: $white;
-      transition: color 0.1s;
-    }
-    //close button
-    button {
-      .icon {
-        fill: $white;
-        transition: fill 0.1s;
-      }
-    }
-    //left icon
-    & > .icon {
-      fill: $white;
-      transition: fill 0.1s;
-    }
+  // Default background for color variants
+  &-primary,
+  &-secondary,
+  &-success,
+  &-danger,
+  &-warning {
+    --#{$prefix}chip-background-color: transparent;
   }
 
-  //disabled state--------------------------------
+  // Variant Colors
+  &.chip-primary {
+    --#{$prefix}chip-text-color: var(--#{$prefix}color-text-primary);
+    --#{$prefix}chip-border-color: var(--#{$prefix}color-border-primary);
+  }
+
+  &.chip-secondary {
+    --#{$prefix}chip-text-color: var(--#{$prefix}color-text-secondary);
+    --#{$prefix}chip-border-color: var(--#{$prefix}color-border-secondary);
+  }
+
+  &.chip-success {
+    --#{$prefix}chip-text-color: var(--#{$prefix}color-text-success);
+    --#{$prefix}chip-border-color: var(--#{$prefix}color-border-success);
+  }
+
+  &.chip-danger {
+    --#{$prefix}chip-text-color: var(--#{$prefix}color-text-danger);
+    --#{$prefix}chip-border-color: var(--#{$prefix}color-border-danger);
+  }
+
+  &.chip-warning {
+    --#{$prefix}chip-text-color: var(--#{$prefix}color-text-warning);
+    --#{$prefix}chip-border-color: var(--#{$prefix}color-border-warning);
+  }
+
+  // State disabled
   &.chip-disabled {
-    background: $white;
-    color: $chips-label-color-disabled;
+    --#{$prefix}chip-background-color: var(--#{$prefix}color-background-disabled);
+    --#{$prefix}chip-text-color: var(--#{$prefix}color-text-disabled);
+
     &:hover {
       cursor: not-allowed;
     }
-    //label
-    .chip-label {
-      color: $chips-label-color-disabled; // Exempt from color contrast requirements: https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html
-    }
-    //close button
+
     button {
+      cursor: not-allowed;
+
       .icon {
-        fill: $gray-disabled;
+        fill: var(--#{$prefix}icon-disabled);
       }
     }
-    //left icon
+
     & > .icon {
-      fill: $gray-disabled;
+      fill: var(--#{$prefix}icon-disabled);
     }
+
     .avatar {
       img {
         filter: grayscale(100%);
       }
     }
   }
+}
+
+// Chip link
+// Links inside a chip: use the component-specific hover color so we don't
+// override the global link hover color for the whole document.
+a.chip:not(.chip-disabled) {
+  text-decoration: underline;
+}
+
+// Chip link hover state
+a.chip:hover:not(.chip-disabled) {
+  --#{$prefix}chip-background-color: var(--#{$prefix}color-background-secondary-hover);
+  --#{$prefix}chip-border-color: var(--#{$prefix}color-background-secondary-hover);
+  --#{$prefix}chip-text-color: var(--#{$prefix}chip-link-hover);
+
+  transition: all var(--#{$prefix}transition-instant) ease-in-out;
+  cursor: pointer;
+
+  button .icon,
+  & > .icon {
+    fill: var(--#{$prefix}icon-inverse);
+  }
+
+  &.chip-primary,
+  &.chip-secondary,
+  &.chip-success,
+  &.chip-danger,
+  &.chip-warning {
+    & > .chip-label {
+      color: var(--#{$prefix}color-text-inverse);
+    }
+  }
 
   &.chip-primary {
-    background-color: transparent;
-    border-color: $primary;
-    color: $primary;
-
-    & > .chip-label {
-      color: $primary;
-    }
-
-    &:hover {
-      background-color: $primary;
-      border-color: $primary;
-
-      & > .chip-label {
-        color: $white;
-      }
-    }
+    --#{$prefix}chip-background-color: var(--#{$prefix}color-background-primary-hover);
+    --#{$prefix}chip-border-color: var(--#{$prefix}color-border-primary-hover);
   }
 
   &.chip-secondary {
-    background-color: transparent;
-    border-color: $secondary;
-    color: $primary;
-
-    & > .chip-label {
-      color: $secondary;
-    }
-
-    &:hover {
-      background-color: $secondary;
-      border-color: $secondary;
-
-      & > .chip-label {
-        color: $white;
-      }
-    }
+    --#{$prefix}chip-background-color: var(--#{$prefix}color-background-secondary-hover);
+    --#{$prefix}chip-border-color: var(--#{$prefix}color-border-secondary-hover);
   }
 
   &.chip-success {
-    background-color: transparent;
-    border-color: $success;
-    color: $success;
-
-    & > .chip-label {
-      color: $success;
-    }
-
-    &:hover {
-      background-color: $success;
-      border-color: $success;
-
-      & > .chip-label {
-        color: $white;
-      }
-    }
+    --#{$prefix}chip-background-color: var(--#{$prefix}color-background-success-hover);
+    --#{$prefix}chip-border-color: var(--#{$prefix}color-border-success-hover);
   }
 
   &.chip-danger {
-    background-color: transparent;
-    border-color: $danger;
-    color: $danger;
-
-    & > .chip-label {
-      color: $danger;
-    }
-
-    &:hover {
-      background-color: $danger;
-      border-color: $danger;
-
-      & > .chip-label {
-        color: $white;
-      }
-    }
-  }
-
-  &.chip-info {
-    background-color: transparent;
-    border-color: $info;
-    color: $info;
-
-    & > .chip-label {
-      color: $info;
-    }
-
-    &:hover {
-      background-color: $info;
-      border-color: $info;
-
-      & > .chip-label {
-        color: $white;
-      }
-    }
+    --#{$prefix}chip-background-color: var(--#{$prefix}color-background-danger-hover);
+    --#{$prefix}chip-border-color: var(--#{$prefix}color-border-danger-hover);
   }
 
   &.chip-warning {
-    background-color: transparent;
-    border-color: $warning;
-    color: $warning;
-
-    & > .chip-label {
-      color: $warning;
-    }
-
-    &:hover {
-      background-color: $warning;
-      border-color: $warning;
-
-      & > .chip-label {
-        color: $white;
-      }
-    }
+    --#{$prefix}chip-background-color: var(--#{$prefix}color-background-warning-hover);
+    --#{$prefix}chip-border-color: var(--#{$prefix}color-border-warning-hover);
   }
 }

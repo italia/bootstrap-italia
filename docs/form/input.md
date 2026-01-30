@@ -15,7 +15,7 @@ description: Elementi e stili per la creazione di input accessibili e responsivi
   }
 </style>
 
-## Esempi di campi di input
+## Utilizzo e varianti
 
 Per il corretto funzionamento degli elementi di tipo `<input>` è di fondamentale importanza l'utilizzo uno degli appositi attributi `type` (ad esempio, `email` per l'inserimento di indirizzi email o `number` per informazioni numeriche), in modo da sfruttare i controlli nativi dei browser più recenti come la verifica dell'email, l'utilizzo di metodo di input numerico ed altro.
 
@@ -25,105 +25,93 @@ Per l'inserimento guidato di campi di tipo numerico si può anche utilizzare l'e
 {% capture example %}
 <div>
   <div class="form-group">
-    <label for="exampleInputText">Campo di tipo testuale</label>
+    <label for="exampleInputText">Campo di testo</label>
     <input type="text" class="form-control" id="exampleInputText">
   </div>
   <div class="form-group">
-    <label for="exampleInputEmail1">Campo di tipo email</label>
+    <label for="exampleInputEmail1">Campo email</label>
     <input type="email" class="form-control" id="exampleInputEmail1">
   </div>
   <div class="form-group">
-    <label for="exampleInputNumber">Campo di tipo numerico</label>
+    <label for="exampleInputNumber">Campo numerico</label>
     <input type="number" data-bs-input class="form-control" id="exampleInputNumber">
   </div>
   <div class="form-group">
-    <label for="exampleInputTelephone">Campo di tipo telefono</label>
+    <label for="exampleInputTelephone">Campo telefonico</label>
     <input type="tel" class="form-control" id="exampleInputTelephone">
   </div>
   <div class="form-group">
-    <label class="active" for="exampleInputTime">Campo di tipo ora</label>
+    <label class="active" for="exampleInputTime">Campo orario</label>
     <input type="time" class="form-control" id="exampleInputTime" min="9:00" max="18:00">
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Utilizzo di placeholder e label
+### Placeholder e testo di supporto
 
-Si può includere un'etichetta che si riposiziona automaticamente quando l'utente utilizza il campo di testo.
+È possibile abbinare al campo `<input>` un testo segnaposto (placeholder) per fornire indicazioni sul tipo di contenuto atteso.
+Questo testo non sostituisce l'etichetta, ma fornisce informazioni aggiuntive.
 
-{% comment %}Example name: Con etichetta {% endcomment %}
+
+{% comment %}Example name: Campo con testo segnaposto {% endcomment %}
 {% capture example %}
 <div class="form-group">
-  <label for="formGroupExampleInput">Etichetta di esempio</label>
-  <input type="text" class="form-control" id="formGroupExampleInput">
-</div>
-{% endcapture %}{% include example.html content=example %}
-
-Si può abbinare all'etichetta un _placeholder_ (testo di esempio) per ulteriore chiarezza.
-
-{% comment %}Example name: Con etichetta e segnaposto {% endcomment %}
-{% capture example %}
-<div class="form-group">
-  <label class="active" for="formGroupExampleInput2">Etichetta di esempio</label>
-  <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Testo di esempio">
+  <label class="active" for="exampleFormGroup">Etichetta</label>
+  <input type="text" class="form-control" id="exampleFormGroup" placeholder="Testo segnaposto">
 </div>
 {% endcapture %}{% include example.html content=example %}
 
 In caso di necessità, è anche possibile utilizzare un ulteriore contenuto testuale sotto il campo di testo, aggiungendo un elemento `<small>` con classe `.form-text` all'interno di `.form-group`.
+
+{% comment %}Example name: Campo con testo di supporto{% endcomment %}
+{% capture example %}
+<div class="form-group">
+  <label class="active" for="exampleFormHelp">Etichetta</label>
+  <input
+    type="text"
+    class="form-control"
+    id="exampleFormHelp"
+    placeholder="Testo segnaposto"
+    aria-describedby="formGroupExampleInputWithHelpDescription"
+  >
+  <small id="formGroupExampleInputWithHelpDescription" class="form-text">Testo di supporto</small>
+</div>
+{% endcapture %}{% include example.html content=example %}
 
 {% capture callout %}
 #### Accessibilità: associazione del testo di aiuto con con i campi
 Il testo di aiuto deve essere esplicitamente associato ai campi a cui si riferisce utilizzando l'attributo `aria-describedby`. Ciò garantirà che le tecnologie assistive, come i lettori di schermo, leggano questo testo di aiuto quando l'utente avrà il focus sull'elemento.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
-{% comment %}Example name: Con testo di aiuto {% endcomment %}
-{% capture example %}
-<div class="form-group">
-  <label class="active" for="formGroupExampleInputWithHelp">Etichetta di esempio</label>
-  <input
-    type="text"
-    class="form-control"
-    id="formGroupExampleInputWithHelp"
-    placeholder="Testo di esempio"
-    aria-describedby="formGroupExampleInputWithHelpDescription"
-  >
-  <small id="formGroupExampleInputWithHelpDescription" class="form-text">Ulteriore testo informativo</small>
-</div>
-{% endcapture %}{% include example.html content=example %}
-
-### Input con icona o pulsanti
+### Icone o pulsanti
 
 {% capture callout %}
+Breaking feature dalla versione **3.0.0**
+- L'elemento `label` è sempre posizionato sopra l'elemento `input` per garantire la corretta accessibilità. 
+- Nel caso di input con icona o pulsanti, l'elemento `label` è stato spostato fuori dal contenitore `.input-group`.
+- ...
+{% endcapture %}{% include callout.html content=callout type="danger" %}
 
-#### Accessibilità delle icone
-
-Nel caso in cui l'icona è semanticamente rilevante e non spiegata dal testo che la segue, occorre:
-- rimuovere `aria-hidden="true"`
-- aggiungere `role="img"` sul tag `<svg>`
-- inserire all'interno il tag `<title>` con un titolo per l'icona che ne spieghi il significato (nel formato `<title>significato icona</title>"`)
-
-{% endcapture %}{% include callout.html content=callout type="accessibility" %}
-
-{% comment %}Example name: Varianti con icona o pulsanti {% endcomment %}
+{% comment %}Example name: Campo con icona o pulsante {% endcomment %}
 {% capture example %}
 <div class="form-group">
+  <label for="input-group-1">Campo con icona</label>
   <div class="input-group">
-    <span class="input-group-text"><svg class="icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-pencil"></use></svg></span>
-    <label for="input-group-1">Con Etichetta</label>
+    <span class="input-group-text"><svg class="icon icon-sm icon-secondary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-pencil"></use></svg></span>
     <input type="text" class="form-control" id="input-group-1" name="input-group-1">
   </div>
 </div>
 <div class="form-group">
+  <label class="active" for="input-group-2">Campo con icona e segnaposto</label>
   <div class="input-group">
-    <span class="input-group-text"><svg class="icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-pencil"></use></svg></span>
-    <label class="active" for="input-group-2">Con Etichetta e placeholder</label>
+    <span class="input-group-text"><svg class="icon icon-sm icon-secondary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-pencil"></use></svg></span>
     <input type="text" class="form-control" id="input-group-2" name="input-group-2" placeholder="Lorem Ipsum">
   </div>
 </div>
 <div class="form-group">
+  <label for="input-group-3">Campo con icona e pulsante</label>
   <div class="input-group">
-      <span class="input-group-text"><svg class="icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-pencil"></use></svg></span>
-      <label for="input-group-3">Con Etichetta e pulsante "primary"</label>
+      <span class="input-group-text"><svg class="icon icon-sm icon-secondary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-pencil"></use></svg></span>
       <input type="text" class="form-control" id="input-group-3" name="input-group-3">
       <div class="input-group-append">
         <button class="btn btn-primary" type="button" id="button-3">Invio</button>
@@ -132,6 +120,14 @@ Nel caso in cui l'icona è semanticamente rilevante e non spiegata dal testo che
 </div>
 {% endcapture %}{% include example.html content=example %}
 
+{% capture callout %}
+#### Accessibilità delle icone
+Nel caso in cui l'icona è semanticamente rilevante e non spiegata dal testo che la segue, occorre:
+- rimuovere `aria-hidden="true"`
+- aggiungere `role="img"` sul tag `<svg>`
+- inserire all'interno il tag `<title>` con un titolo per l'icona che ne spieghi il significato (nel formato `<title>significato icona</title>"`)
+{% endcapture %}{% include callout.html content=callout type="accessibility" %}
+
 ### Disabilitato
 
 Aggiungi l'attributo `disabled` ad un input per impedire la modifica del valore contenuto e non inviare i dati in esso contenuti.
@@ -139,7 +135,6 @@ Aggiungi l'attributo `disabled` ad un input per impedire la modifica del valore 
 {% comment %}Example name: Disabilitato {% endcomment %}
 {% capture example %}
 <div class="form-group">
-  <label for="input-text-disabled">Contenuto disabilitato</label>
   <input class="form-control" type="text" id="input-text-disabled" disabled>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -151,8 +146,8 @@ Aggiungi l'attributo `readonly` ad un input per impedire la modifica del valore 
 {% comment %}Example name: Sola lettura {% endcomment %}
 {% capture example %}
 <div class="form-group">
-  <label class="active" for="input-text-read-only">Contenuto in sola lettura</label>
-  <input class="form-control" type="text" id="input-text-read-only" value="Sola lettura" readonly>
+  <label class="active" for="input-text-read-only">Etichetta</label>
+  <input class="form-control" type="text" id="input-text-read-only" value="Campo in sola lettura" readonly>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -164,8 +159,8 @@ Se per qualche motivo vuoi avere gli elementi `<input readonly>` nella forma sti
 {% capture example %}
 <div>
   <div class="form-group">
-    <label class="active" for="input-text-read-only-2">Contenuto in sola lettura</label>
-    <input class="form-control-plaintext" value="Sola lettura" type="text" id="input-text-read-only-2" readonly>
+    <label class="active" for="input-text-read-only-2">Etichetta</label>
+    <input class="form-control-plaintext" value="Contenuto in sola lettura" type="text" id="input-text-read-only-2" readonly>
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -181,6 +176,7 @@ import { Input } from 'bootstrap-italia';
 const inputElement = document.querySelector('#my-input');
 const input = new Input(inputElement);
 ```
+
 
 #### Metodi
 
@@ -198,14 +194,13 @@ const input = new Input(inputElement);
   </table>
 </div>
 
-## Input password
+### Password
 
-Per rendere più semplice l'inserimento della password, il campo Input di tipo password è dotato di un pulsante che permette di mostrare i caratteri inseriti. Inoltre, è possibile abbinare una descrizione estesa che ne aiuti la compilazine, ad esempio in fase di scelta di una nuova password.  
+Per semplificare l'inserimento della password, il campo Input di tipo password include un pulsante che mostra i caratteri digitati. È inoltre possibile aggiungere un testo di supporto che aiuti nella compilazione.
 
 {% comment %}Example name: Password base{% endcomment %}
 {% capture example %}
 
-<p class="mt-4 pb-3">Base, login</p>
 <div class="form-group">
   <label for="exampleInputPassword">Password</label>
   <input type="password" data-bs-input class="form-control input-password" id="exampleInputPassword">
@@ -216,7 +211,6 @@ Per rendere più semplice l'inserimento della password, il campo Input di tipo p
   </button>
 </div>
 
-<p class="mt-4 pb-3">Con descrizione estesa</p>
 <div class="form-group">
   <label for="exampleInputPassword2">Password</label>
   <input type="password" data-bs-input class="form-control input-password" id="exampleInputPassword2" aria-describedby="infoPassword2">
@@ -229,7 +223,7 @@ Per rendere più semplice l'inserimento della password, il campo Input di tipo p
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Password con misuratore sicurezza e suggerimenti
+#### Misuratore sicurezza e suggerimenti
 
 Nel caso di un campo per la scelta di una nuova password, è possibile abbinare controlli per segnalare quanto la password che si sta inserendo segua alcuni suggerimenti di sicurezza, come la lunghezza minima o l'uso di caratteri speciali. Inoltre, è possibile restituire all'utente una lista dei suggerimenti, con indicati quelli che sono soddistatti. 
 
@@ -252,9 +246,8 @@ Nel caso del campo di tipo password, è molto importante configurare correttamen
 {% comment %}Example name: Password con misuratore sicurezza e suggerimenti{% endcomment %}
 {% capture example %}
 
-<p class="mt-4 pb-3">Con descrizione e misuratore sicurezza</p>
 <div class="form-group">
-  <label for="exampleInputPassword3">Scegli password</label>
+  <label for="exampleInputPassword3">Password</label>
   <input type="password" data-bs-input class="form-control input-password" id="exampleInputPassword3" aria-describedby="strengthMeterInfo3 infoPassword3">
   <button type="button" class="password-icon btn" role="switch" aria-checked="false">
     <span class="visually-hidden">Mostra/Nascondi Password</span>
@@ -281,9 +274,9 @@ Nel caso del campo di tipo password, è molto importante configurare correttamen
   </div>
 </div>
 
-<p class="mt-4 pb-3">Con misuratore sicurezza e suggerimenti puntuali</p>
+
 <div class="form-group">
-  <label for="exampleInputPassword4">Scegli password</label>
+  <label for="exampleInputPassword4">Password</label>
   <input type="password" data-bs-input class="form-control input-password" id="exampleInputPassword4" aria-describedby="strengthMeterSuggestions4 strengthMeterInfo4 infoPassword4">
   <button type="button" class="password-icon btn" role="switch" aria-checked="false">
     <span class="visually-hidden">Mostra/Nascondi Password</span>
@@ -450,6 +443,51 @@ const inputPsw = new InputPassword(inputPswElement, options);
   </table>
 </div>
 
+## Dimensioni
+La input di base ha una dimensione media che non necessita alcuna classe aggiuntiva.
+
+Per modificare questa dimensione, è possiible utilizzare le classi `.form-control-lg` o `.form-control-sm` applicandole sull'elemento `<input>`.
+
+Per modificare invece la dimensione dell'icona, è possibile utilizzare le classi `.icon-lg` o `.icon-sm` sull'elemento `<svg>`.
+
+{% comment %}Example name: Varianti con icona o pulsanti di dimensioni diverse{% endcomment %}
+{% capture example %}
+<div class="form-group">
+  <label for="input-group-3">Campo dimensione grande</label>
+  <div class="input-group">
+      <span class="input-group-text"><svg class="icon icon-md" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-pencil"></use></svg></span>
+      <input type="text" class="form-control form-control-lg" id="input-group-1" name="input-group-3" placeholder="Testo segnaposto">
+      <div class="input-group-append">
+        <button class="btn btn-primary" type="button" id="button-1" for="input-group-1">Invio</button>
+      </div>
+    </div>
+</div>
+
+<div class="form-group">
+  <label for="input-group-3">Campo dimensione base</label>
+  <div class="input-group">
+      <span class="input-group-text"><svg class="icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-pencil"></use></svg></span>
+      <input type="text" class="form-control" id="input-group-2" name="input-group-2" placeholder="Testo segnaposto">
+      <div class="input-group-append">
+        <button class="btn btn-primary" type="button" id="button-2" for="input-group-2">Invio</button>
+      </div>
+    </div>
+</div>
+
+<div class="form-group">
+  <label class="active" for="input-group-2">Campo dimensione piccola</label>
+  <div class="input-group">
+    <span class="input-group-text"><svg class="icon icon-xs" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-pencil"></use></svg></span>
+    <input type="text" class="form-control form-control-sm" id="input-group-3" name="input-group-3" placeholder="Testo segnaposto">
+    <div class="input-group-append">
+      <button class="btn btn-primary" type="button" id="button-3" for="input-group-3">Invio</button>
+    </div>
+  </div>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+
+
 ## Ricerca con autocompletamento
 
 Per ottenere un input con un risultato ricerca o un autocomplete statico è necessario aggiungere all'input la classe `.autocomplete` e l'attributo `data-bs-autocomplete` contenente un JSON da filtrare.
@@ -527,7 +565,7 @@ Il testo corrispondente alla ricerca (_"ite"_, nell'esempio) deve essere racchiu
     </li>
     <li>
       <a href="#">
-        <svg class="icon icon-sm">
+        <svg class="icon icon-sm icon-secondary">
           <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use>
         </svg>
         <span class="autocomplete-list-text">
@@ -539,9 +577,9 @@ Il testo corrispondente alla ricerca (_"ite"_, nell'esempio) deve essere racchiu
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Ricerca con autocompletamento grande
+### Dimensione grande
 
-Per ottenere una versione grande dell'Autocomplete, indicata ad esempio per intestazioni di pagina ed overlay dedicati, aggiungere la classe `.autocomplete-wrapper-big` al contenitore `.form-group`.
+Per ottenere una versione grande dell'Autocomplete, indicata ad esempio per intestazioni di pagina ed overlay dedicati, aggiungere la classe `.autocomplete-wrapper-big` al contenitore `.form-group`. L'icona presente nella input non ha alcuna classe di dimensione assegnata, perché questa è gestita dal contenitore.
 
 {% comment %}Example name: Ricerca con autocompletamento grande {% endcomment %}
 {% capture example %}
@@ -552,7 +590,7 @@ Per ottenere una versione grande dell'Autocomplete, indicata ad esempio per inte
     name="autocomplete-two"
     data-bs-autocomplete="[]">
   <span class="autocomplete-icon" aria-hidden="true">
-    <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-search"></use></svg>
+    <svg class="icon icon-secondary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-search"></use></svg>
   </span>
   <ul class="autocomplete-list" id="testAutocomplete2">
     <li>
@@ -595,7 +633,7 @@ Per ottenere una versione grande dell'Autocomplete, indicata ad esempio per inte
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Ricerca con autocompletamento e dati
+### Lista di dati
 
 Questo autocompletamento è collegato, tramite l'attributo `data-bs-autocomplete`, ad una lista di oggetti nella quale sono presenti:
 
@@ -645,7 +683,9 @@ Cerca ad esempio _"Italia"_ per verificarne il comportamento.
 
 ### Attivazione tramite codice
 
-È possibile creare un'istanza con il constructor, ad esempio:
+È possibile attivare l'autocompletamento creando un'istanza con il constructor. 
+
+Ad esempio:
 
 ```js
 import { InputSearch } from 'bootstrap-italia';

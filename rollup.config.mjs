@@ -27,6 +27,8 @@ export default [
         targets: [
           { src: 'src/assets', dest: 'dist' },
           { src: 'src/fonts', dest: 'dist' },
+          // keep a copy in the generated site so browser-sync / jekyll can serve updated assets
+          { src: 'dist/**/*', dest: '_site/dist' },
         ],
       }),
       svgSprite({
@@ -84,6 +86,8 @@ export default [
         targets: [
           { src: 'src/assets', dest: 'dist' },
           { src: 'src/fonts', dest: 'dist' },
+          // ensure site folder gets updated during watch builds
+          { src: 'dist/**/*', dest: '_site/dist' },
         ],
       }),
       svgSprite({

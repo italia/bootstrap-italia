@@ -20,19 +20,39 @@ title: Validazione Form
       <div class="col-12 col-md-4">
         <div class="form-group">
           <label for="nome">Campo testo</label>
-          <input type="text" class="form-control" id="nome" required />
+          <input type="text" class="form-control" id="nome" placeholder="Inserisci un testo" required />
         </div>
       </div>
       <div class="col-12 col-md-4">
         <div class="form-group">
           <label for="age">Campo numerico (min/max)</label>
-          <input type="number" data-bs-input class="form-control" id="age" min="18" max="50" step="1" required />
+          <span class="input-group input-number">
+            <input type="number" data-bs-input class="form-control" id="age" min="18" max="50" step="1" required />
+            <span class="input-group-text align-buttons flex-column">
+                <button class="input-number-add">
+                  <span class="visually-hidden">Aumenta valore Euro</span>
+                </button>
+                <button class="input-number-sub">
+                  <span class="visually-hidden">Diminuisci valore Euro</span>
+                </button>
+            </span>
+          </span>
         </div>
       </div>
       <div class="col-12 col-md-4">
         <div class="form-group">
           <label for="camponumerico">Campo numerico (5 cifre)</label>
-          <input type="number" data-bs-input class="form-control" id="camponumerico" maxlenght="5" required />
+          <span class="input-group input-number">
+            <input type="number" data-bs-input class="form-control" id="camponumerico" maxlenght="5" required />
+            <span class="input-group-text align-buttons flex-column">
+                <button class="input-number-add">
+                  <span class="visually-hidden">Aumenta valore Euro</span>
+                </button>
+                <button class="input-number-sub">
+                  <span class="visually-hidden">Diminuisci valore Euro</span>
+                </button>
+            </span>
+          </span>
         </div>
       </div>
     </div>
@@ -110,13 +130,59 @@ title: Validazione Form
     <div class="row">
       <div class="col-12">
         <div class="form-group">
-          <div class="input-group">
+          <label class="active" for="etichetta_input_group">Input group lg</label>
+          <div class="input-group input-group-lg">
             <span class="input-group-text"><svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-pencil"></use></svg></span>
-            <label class="active" for="etichetta_input_group">Con Etichetta e placeholder</label>
             <input type="text" class="form-control" id="etichetta_input_group" name="etichetta_input_group" placeholder="Lorem Ipsum">
           </div>
         </div>
       </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="form-group">
+          <label class="active" for="etichetta_input_group">Input group sm</label>
+          <div class="input-group input-group-sm">
+            <span class="input-group-text"><svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-pencil"></use></svg></span>
+            <input type="text" class="form-control" id="etichetta_input_group" name="etichetta_input_group" placeholder="Lorem Ipsum">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-md-4">
+        <div class="form-group">
+          <label for="nome">Campo testo</label>
+          <input type="text" class="form-control" id="nome" placeholder="Inserisci un testo" required disabled />
+        </div>
+      </div>
+    </div>
+    <div class="row mt-5 mb-4">
+      <div class="col-12">
+        <h2>Dimensioni</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-md-4">
+         <div class="form-group">
+          <label class="active" for="input-text-lg">Grande</label>
+          <input type="text" class="form-control form-control-lg" id="input-text-lg" placeholder="Inserisci il tuo nome">
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="form-group">
+          <label class="active" for="input-text-normal">Normale</label>
+          <input type="text" class="form-control" id="input-text-normal" placeholder="Inserisci il tuo nome">
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="form-group">
+          <label class="active" for="input-text-sm">Piccolo</label>
+          <input type="text" class="form-control form-control-sm" id="input-text-sm" placeholder="Inserisci il tuo nome">
+        </div>
+      </div>
+
+
     </div>
 
     <div class="row mb-4">
@@ -141,11 +207,9 @@ title: Validazione Form
 
     <div class="row">
       <div class="col-12 col-md-4">
-        <div class="row">
-          <div class="form-check mb-5">
-            <input id="checkbox1" type="checkbox" required />
-            <label for="checkbox1">Checkbox isolata</label>
-          </div>
+        <div class="form-check">
+          <input id="checkbox1" type="checkbox" required />
+          <label for="checkbox1">Checkbox isolata</label>
         </div>
       </div>
       <div class="col-12 col-md-4">
@@ -158,7 +222,7 @@ title: Validazione Form
         </div>
       </div>
     </div>
-    <div class="row">
+    <div class="row mb-4">
       <div class="col-12 col-md-4">
         <fieldset id="radiogroup">
           <legend>Fieldset radio buttons</legend>
@@ -187,7 +251,7 @@ title: Validazione Form
       </div>
     </div>
 
-    <div class="row mb-4">
+    <div class="row mb-4 mt-5">
       <div class="col-12">
         <h2>File</h2>
       </div>
@@ -197,11 +261,7 @@ title: Validazione Form
       <div class="col-12 col-md-6">
         <div class="form-upload">
           <label for="upload">Upload</label>
-          <input type="file" name="upload" id="upload" multiple="multiple" class="form-control" required />
-        </div>
-      </div>
-      <div class="col-12 col-md-6">
-        <div class="form-upload">
+          <input type="file" name="upload" id="upload" multiple="multiple" class="form-control mb-3" required />
           <input type="file" name="upload1" id="upload1" class="upload" multiple="multiple" required />
           <label for="upload1">
             <svg class="icon icon-sm" aria-hidden="true"><use href="/dist/svg/sprites.svg#it-upload"></use></svg>

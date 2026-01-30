@@ -30,6 +30,10 @@ exclude:
   - README.md
   - bootstrap/
 
+sass:
+  load_paths:
+    - node_modules
+
 plugins:
   - jekyll-redirect-from
   - jekyll-sitemap

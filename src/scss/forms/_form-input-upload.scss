@@ -1,97 +1,99 @@
-//mobile
-
-//input file/button
+// Input file/button
 .upload,
 .upload-avatar {
-  width: 0.1px;
-  height: 0.1px;
-  opacity: 0;
-  overflow: hidden;
   position: absolute;
   z-index: -1;
+  width: 0.1px;
+  height: 0.1px;
+  overflow: hidden;
+  opacity: 0;
 }
 
-//input file
+// Input file
 .upload {
-  //button styling
-  &[type='file'] + label {
+
+  // button styling
+  &[type='file']+label {
+    display: inline-block;
+    margin-bottom: 0;
     max-width: 80%;
+    padding: var(--#{$prefix}spacing-xs) var(--#{$prefix}spacing-m);
+    overflow: hidden;
+    border-radius: var(--#{$prefix}form-control-border-radius);
+    background-color: var(--#{$prefix}color-background-primary);
+    color: var(--#{$prefix}color-text-inverse);
     font-size: 1rem;
     font-weight: 700;
+    transition: background-color var(--#{$prefix}transition-instant);
     cursor: pointer;
-    display: inline-block;
-    overflow: hidden;
-    padding: 7px 24px;
-    border-radius: $border-radius;
-    color: $white;
-    background-color: $primary;
-    transition: background-color 0.15s;
 
     &:hover {
-      background-color: shade-color($primary, 10%);
+      background-color: var(--#{$prefix}color-background-primary-hover);
     }
 
     //icon
     svg {
-      fill: $white;
-      margin-right: 10px;
+      margin-right: var(--#{$prefix}spacing-xxs);
+      fill: var(--#{$prefix}icon-inverse);
     }
   }
 }
 
-//pictures wall version
+// Pictures wall version
 .upload-pictures-wall {
-  padding: 0;
   display: flex;
   flex-wrap: wrap;
+  padding: 0;
+
   //grid list element
-  & > li {
+  &>li {
+    margin-right: var(--#{$prefix}spacing-xxs);
+    margin-bottom: var(--#{$prefix}spacing-xxs);
     list-style-type: none;
-    margin-right: $v-gap;
-    margin-bottom: $v-gap;
 
     &:last-child {
       margin-right: 0;
     }
   }
 
-  //input file
+  // input file
   .upload {
+
     //button styling
-    &[type='file'] + label {
-      font-weight: 600;
-      height: 128px;
-      width: 128px;
-      border-radius: 0;
-      padding: 0;
-      border: 2px dashed $primary-a1;
-      background-color: tint-color($primary-a1, 10%);
-      color: $primary-a7;
-      text-align: center;
+    &[type='file']+label {
       display: table-cell;
+      width: 128px;
+      height: 128px;
+      padding: 0;
+      border: 2px dashed var(--#{$prefix}color-border-primary);
+      border-radius: 0;
+      background-color: var(--#{$prefix}color-border-primary-lighter);
+      color: var(--#{$prefix}color-text-primary);
+      font-weight: 600;
+      text-align: center;
       vertical-align: middle;
-      transition: border-color 0.2s;
+      transition: border-color var(--#{$prefix}transition-instant);
 
       .icon {
         display: block;
-        fill: $primary;
-        margin: 0 auto;
+        flex-shrink: 0;
         width: 48px;
         height: 48px;
-        flex-shrink: 0;
+        margin: 0 auto;
+        fill: var(--#{$prefix}icon-primary);
       }
 
       &:hover {
-        border: 2px dashed $primary;
+        border: 2px dashed var(--#{$prefix}color-border-primary-hover);
       }
     }
 
-    &:focus,
-    &:active {
-      &[type='file'] + label {
-        border: 2px dashed $primary-a3;
-      }
-    }
+    // &:focus,
+    // &:active {
+    //   &[type='file'] + label {
+    //     border: 2px dashed $primary-a3;
+    //   }
+    // }
   }
 
   //image
@@ -101,17 +103,18 @@
     height: 128px;
 
     img {
-      object-fit: cover;
       width: 100%;
       height: 100%;
+      object-fit: cover;
     }
   }
 }
 
-//files list
+// files list
 .upload-file-list {
   margin-top: 5px;
   padding: 0;
+
   //image version
   &.upload-file-list-image {
     .progress {
@@ -120,30 +123,31 @@
   }
 
   .upload-file {
-    list-style-type: none;
+    position: relative;
     display: flex;
     align-items: center;
     max-width: 375px;
-    margin-bottom: 16px;
-    position: relative;
-    //states
+    margin-bottom: var(--#{$prefix}spacing-s);
+    list-style-type: none;
+
+    // states
     &.uploading {
       .icon {
-        fill: $neutral-1-a7;
+        fill: var(--#{$prefix}icon-secondary);
       }
 
       p {
-        color: $neutral-1-a7;
+        color: var(--#{$prefix}color-text-secondary);
       }
     }
 
     &.success {
       svg {
-        fill: $primary;
+        fill: var(--#{$prefix}icon-success);
       }
 
       p {
-        color: $primary;
+        color: var(--#{$prefix}color-text-success);
 
         .upload-file-weight {
           display: inline-block;
@@ -153,11 +157,11 @@
 
     &.error {
       svg {
-        fill: $danger;
+        fill: var(--#{$prefix}icon-danger);
       }
 
       p {
-        color: $danger;
+        color: var(--#{$prefix}color-text-danger);
       }
     }
 
@@ -173,41 +177,41 @@
       height: 40px;
 
       img {
-        object-fit: cover;
         width: 100%;
         height: 100%;
+        object-fit: cover;
       }
     }
 
     //file name
     p {
       margin: 0;
+      margin-left: 12px;
+      overflow: hidden;
       font-size: 0.875rem;
       font-weight: 600;
       text-overflow: ellipsis;
       white-space: nowrap;
-      margin-left: 12px;
-      overflow: hidden;
+
       .upload-file-weight {
-        color: $neutral-1-a7;
-        // font-size: 0.75em;
-        margin-left: 10px;
         display: none;
+        margin-left: 10px;
+        color: var(--#{$prefix}color-text-secondary);
       }
     }
 
     //action button / upload ok
     button {
-      background: transparent;
-      border: 0;
-      padding: 0px;
       margin-left: auto;
+      padding: 0;
+      border: 0;
+      background: transparent;
 
       &:hover {
         cursor: pointer;
 
         svg {
-          fill: $primary;
+          fill: var(--#{$prefix}icon-primary);
         }
       }
     }
@@ -216,7 +220,7 @@
   //file upload progress
   .progress {
     position: absolute;
-    bottom: -10px;
+    bottom: -4px;
     left: 36px;
     width: calc(100% - 45px);
     height: 4px;
@@ -229,19 +233,21 @@
   }
 }
 
-//avatar version -------------------------------- START
+// Upload Avatar
+//
+
 .upload-avatar-container {
   position: absolute;
-  left: 0;
   top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
 
   .upload-avatar {
-    &[type='file'] + label {
+    &[type='file']+label {
       position: absolute;
-      left: 0;
       top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
 
@@ -256,31 +262,29 @@
   }
 }
 
+.avatar-upload {
+  overflow: hidden; // mask the upload icon and background
+}
+
 .avatar-upload-wrapper {
-  position: relative;
-  display: inline-block;
-  //avatar version
-  .avatar {
-    &.avatar-upload {
-      position: relative;
-    }
-  }
+  // position: relative;
+  // display: inline-block;
 
   .avatar-upload-icon {
     position: absolute;
-    bottom: 16px;
     right: 4px;
+    bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 26px;
     height: 26px;
-    background: $neutral-1-a1;
+    border: 2px solid var(--#{$prefix}color-border-inverse);
     border-radius: 50%;
-    border: 2px solid $white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: $neutral-1-a1;
     pointer-events: none;
 
-    & > svg {
+    &>svg {
       width: 16px;
       height: 16px;
     }
@@ -288,17 +292,17 @@
 
   &.size-sm {
     .avatar {
-      width: $avatar-base-size * 10;
-      height: $avatar-base-size * 10;
+      width: 80px;
+      height: 80px;
     }
 
     .avatar-upload-icon {
-      bottom: 6px;
       right: 4px;
+      bottom: 6px;
       width: 18px;
       height: 18px;
 
-      & > svg {
+      &>svg {
         width: 12px;
         height: 12px;
       }
@@ -306,9 +310,9 @@
   }
 }
 
-//avatar version -------------------------------- END
+//
+// Upload Drag and Drop
 
-//drag/drop version ----------------------------- START
 .upload-dragdrop {
   display: inline-flex;
   align-items: center;
@@ -349,49 +353,46 @@
   }
 }
 
-//drag and drop text
+// Drag and drop text
 .upload-dragdrop-text {
   p {
     margin: 0;
+    color: var(--#{$prefix}color-text-secondary);
     font-size: 0.875rem;
-    color: $secondary;
 
     &.upload-dragdrop-weight {
-      color: $neutral-1-a7;
-      font-size: 0.75rem;
       visibility: hidden;
+      color: var(--#{$prefix}color-text-secondary);
+      font-size: 0.75rem;
 
       svg {
-        fill: $neutral-1-a7;
+        fill: var(--#{$prefix}icon-secondary);
       }
     }
   }
 
   h5 {
     margin: 0;
-    font-size: 1.25rem;
-    font-weight: 600;
-    line-height: 1.75rem;
-    color: $neutral-1;
+    color: var(--#{$prefix}color-text-base);
   }
 }
 
 .upload-dragdrop-input {
-  width: 0.1px;
-  height: 0.1px;
-  opacity: 0;
-  overflow: hidden;
   position: absolute;
   z-index: -1;
+  width: 0.1px;
+  height: 0.1px;
+  overflow: hidden;
+  opacity: 0;
 
-  &[type='file'] + label {
+  &[type='file']+label {
+    color: var(--#{$prefix}color-text-primary);
     text-decoration: underline;
-    color: $primary;
     cursor: pointer;
   }
 
   &:focus {
-    &[type='file'] + label {
+    &[type='file']+label {
       outline: auto 5px -webkit-focus-ring-color;
     }
   }
@@ -400,103 +401,109 @@
 .upload-dragdrop-loading {
   position: absolute;
   top: 0;
+  right: 0;
   bottom: 0;
   left: 0;
-  right: 0;
   width: 128px;
   height: 128px;
   overflow: hidden;
+  border-radius: 50%;
   opacity: 0;
   transition: opacity 0.2s;
-  border-radius: 50%;
+
   .progress-donut {
     position: relative;
+
     .progressbar-text {
       color: #000 !important;
       font-weight: 700;
     }
+
     svg {
       position: relative;
+
       path:first-child {
         display: none;
       }
     }
+
     &:before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 0;
       content: '';
-      background: #fff;
       width: 67px;
       height: 67px;
-      left: 50%;
-      top: 50%;
-      transform: translateX(-50%) translateY(-50%);
-      position: absolute;
       border-radius: 50%;
-      z-index: 0;
+      background: #fff;
+      transform: translateX(-50%) translateY(-50%);
     }
   }
 }
 
 .upload-dragdrop-image {
+  position: relative;
+  flex-shrink: 0;
   width: 128px;
   height: 128px;
-  flex-shrink: 0;
-  position: relative;
-  margin-right: 16px;
+  margin-right: var(--#{$prefix}spacing-s);
 
   img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
     display: block;
     width: 100%;
     height: 100%;
-    border-radius: 50%;
     overflow: hidden;
-    position: absolute;
-    transform-origin: center center;
-    top: 50%;
-    left: 50%;
-    transition: transform 0.4s cubic-bezier(0.33, 1.07, 0.54, 1);
+    border-radius: 50%;
     transform: translateX(-50%) translateY(-50%);
+    transform-origin: center center;
+    transition: transform 0.4s cubic-bezier(0.33, 1.07, 0.54, 1);
   }
 
   .upload-dragdrop-success {
-    width: 36px;
-    height: 36px;
     position: absolute;
     top: calc(50% - 18px);
     left: 20px;
-    background: $primary;
-    border-radius: 50%;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
     opacity: 0;
+    background: var(--#{$prefix}color-background-success);
     transform: scale(0.6);
     transition:
       opacity 0.2s,
       transform 0.5s cubic-bezier(0.75, -0.5, 0, 1.75);
 
     svg {
-      fill: $white;
       width: 30px;
       height: 30px;
+      fill: var(--#{$prefix}icon-inverse);
+    }
+
+    .upload-dragdrop-text h5+p {
+      color: var(--#{$prefix}color-text-success);
+      font-weight: var(--#{$prefix}font-weight-solid);
     }
   }
 }
 
-//drag/drop version ----------------------------- END
-
-//small - tablet
+// Media quert small - tablet
 @include media-breakpoint-up(sm) {
-  //input file
   .upload {
-    &[type='file'] + label {
-      font-size: 0.875rem;
+    &[type='file']+label {
+      font-size: var(--#{$prefix}label-font-size-s);
     }
   }
 }
 
-//Tablet vertical
+// Media query medium - tablet vertical
 @include media-breakpoint-up(md) {
-  //drag and drop version
   .upload-dragdrop-image {
     width: 180px;
     height: 180px;
@@ -510,6 +517,7 @@
   .upload-dragdrop-loading {
     width: 180px;
     height: 180px;
+
     .progress-donut {
       &:before {
         content: '';
@@ -520,43 +528,41 @@
   }
 }
 
-//Desktop
+// Media query - desktop
+
 @include media-breakpoint-up(xl) {
-  //avatar version -------------------------------- START
+
   .avatar-upload:hover,
   .avatar-upload:focus-within {
     .upload-avatar-container {
       opacity: 1;
-      //fade in speed
-      transition: opacity 0.25s;
     }
   }
 
   .upload-avatar-container {
+    top: auto;
+    right: 0;
     bottom: -10%;
     left: 0;
-    right: 0;
-    top: auto;
     width: 100%;
     height: 60%;
-    background-color: rgba(0, 0, 0, 0.6);
-    //fade out speed
-    transition: opacity 0.15s;
     opacity: 0;
+    background-color: var(--#{$prefix}overlay-background-primary-muted);
+    transition: opacity var(--#{$prefix}transition-instant);
 
     .upload-avatar {
-      &[type='file'] + label {
-        margin: 0;
-        padding-top: 10px;
-        color: $white;
-        text-align: center;
+      &[type='file']+label {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
         width: 100%;
         height: 100%;
+        margin: 0;
+        padding-top: var(--#{$prefix}spacing-xxs);
+        color: var(--#{$prefix}color-text-inverse);
         font-size: 0.75rem;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        flex-direction: column;
+        text-align: center;
         cursor: pointer;
 
         span {
@@ -565,14 +571,14 @@
 
         svg {
           display: block;
-          fill: $white;
           width: 20px;
           height: 20px;
+          fill: var(--#{$prefix}icon-inverse);
         }
       }
 
       &:focus:not([data-focus-mouse='true']) {
-        &[type='file'] + label {
+        &[type='file']+label {
           outline: auto 5px -webkit-focus-ring-color;
         }
       }
@@ -580,6 +586,7 @@
   }
 
   .avatar-upload-wrapper {
+
     //hide icon
     .avatar-upload-icon {
       display: none;
@@ -587,7 +594,7 @@
 
     &.size-sm {
       .upload-avatar {
-        &[type='file'] + label {
+        &[type='file']+label {
           span {
             display: none;
           }
@@ -595,5 +602,4 @@
       }
     }
   }
-  //avatar version -------------------------------- END
 }

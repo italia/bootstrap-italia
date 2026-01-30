@@ -1,287 +1,223 @@
-@use 'sass:math';
+// Component: megamenu
+//
+// Description: Component styles for megamenu
+//
 
-//Mobile
-.navbar {
-  .navbar-collapsable {
-    .menu-wrapper {
-      .nav-item {
-        &.megamenu {
-          .dropdown-menu {
-            .it-vertical {
-              width: 100%;
-              background: $color-background-primary-lighter;
-              padding-top: $v-gap * 2;
-              padding-bottom: $v-gap * 2;
-              margin-top: $v-gap * 2;
-              .link-list-wrapper {
-                ul.link-list {
-                  width: 100%;
-                  li {
-                    a {
-                      display: flex;
-                      justify-content: space-between;
-                      span {
-                        font-weight: 600;
-                        display: inline-flex;
-                        align-items: center;
-                      }
-                    }
-                  }
-                }
-              }
-              // description & image variation
-              &.it-description {
-                background: transparent;
-                .description-content {
-                  max-width: 480px;
-                  padding-left: 48px;
-                  padding-right: 48px;
-                  &:before {
-                    content: '';
-                    display: block;
-                    height: 1px;
-                    width: $megamenu-link-small-line-width;
-                    background: $color-border-subtle;
-                    margin-bottom: $megamenu-link-small-line-margin-bottom * 2;
-                  }
-                  img {
-                    display: block;
-                    width: 100%;
-                    margin-bottom: $grid-gutter-width;
-                  }
-                  p {
-                    font-size: $megamenu-vertical-description-font-size;
-                    line-height: 1.5rem;
-                  }
-                }
-              }
-            }
+// Variables
+//
 
-            // linklist specs
-            .link-list-wrapper {
-              margin-bottom: 0;
-              ul.link-list li {
-                a {
-                  white-space: normal;
-                  display: flex;
-                  align-items: center;
-                  padding: 8px 16px !important;
-                }
-              }
-            }
+// Properties
+//
 
-            .it-heading-link-wrapper {
-              margin-left: $megamenu-heading-margin-x;
-              margin-right: $megamenu-heading-margin-x;
-              padding-bottom: $megamenu-heading-bottom-margin;
-              margin-bottom: $megamenu-heading-bottom-margin; // 24
-              border-bottom: 1px solid $color-border-subtle;
-              a.it-heading-link {
-                font-weight: $megamenu-heading-font-weight;
-                font-size: $megamenu-heading-text-size;
-                line-height: $megamenu-heading-line-height;
-                text-decoration: none;
-                :hover {
-                  text-decoration: underline;
-                }
-              }
-            }
+.megamenu {
+  --#{$prefix}megamenu-background-color: var(--#{$prefix}color-background-inverse);
+  --#{$prefix}megamenu-border-color: var(--#{$prefix}color-border-subtle);
+  --#{$prefix}megamenu-spacing: var(--#{$prefix}spacing-xs);
+}
 
-            .it-footer-link-wrapper {
-              margin-left: 28px;
-              margin-right: 28px;
-              padding-top: 24px;
-              padding-bottom: 24px;
-              margin-top: 24px;
-              border-top: 1px solid $color-border-subtle;
-              a.it-footer-link {
-                flex: 1 1 auto;
-              }
-            }
+// Styles
+//
 
-            .it-footer-link-wrapper-vertical {
-              margin-left: 28px;
-              margin-right: 28px;
-              padding-top: 24px;
-              padding-bottom: 24px;
-              margin-top: 24px;
-              border-top: 1px solid $color-border-subtle;
-            }
+.megamenu {
+  padding-left: var(--#{$prefix}megamenu-spacing);
+  padding-right: var(--#{$prefix}megamenu-spacing);
 
-            a.it-footer-link {
-              font-weight: 600;
-              font-size: 1.125rem;
-              line-height: 1.2;
-              text-decoration: none;
-              margin-bottom: 24px;
-              &:last-of-type {
-                margin-bottom: 0;
-              }
-              :hover {
-                text-decoration: underline;
-              }
-            }
-          }
+  @include media-breakpoint-down(lg) {
+    margin-left: calc(-1 * var(--#{$prefix}megamenu-spacing));
+    margin-right: calc(-1 * var(--#{$prefix}megamenu-spacing));
+  }
+
+  // Override default dropdown styles
+  .dropdown-menu {
+    --#{$prefix}dropdown-item-padding-x: var(--#{$prefix}spacing-xxs);
+    --#{$prefix}dropdown-item-padding-y: var(--#{$prefix}spacing-xxs);
+    --#{$prefix}dropdown-spacer: 0;
+    width: 100%;
+    background: var(--#{$prefix}megamenu-background-color);
+
+    // Extra padding on large devices only
+    @include media-breakpoint-up(lg) {
+      --#{$prefix}dropdown-padding-y: var(--#{$prefix}spacing-m);
+      --#{$prefix}dropdown-padding-x: var(--#{$prefix}spacing-xs);
+    }
+
+    .link-list-wrapper {
+      margin-bottom: 0;
+      padding: 0;
+      // Extra margin on collapsed menu only
+      @include media-breakpoint-down(lg) {
+        margin-left: var(--#{$prefix}spacing-s);
+      }
+    }
+
+    .link-list {
+      width: 100%;
+     
+      .list-item {
+        display: flex;
+        align-items: center;
+        white-space: normal;
+        span {
+          display: inline-flex;
+          align-items: center;
         }
       }
+    }
+
+    // description & image variation
+    .it-description {
+      background: transparent;
+      @include media-breakpoint-down(lg) {
+        padding-top: var(--#{$prefix}megamenu-spacing);
+        padding-left: calc(var(--#{$prefix}megamenu-spacing) * 2);
+        padding-right: calc(var(--#{$prefix}megamenu-spacing) * 2);
+      }
+
+      .description-content {
+        max-width: 480px;
+
+        img {
+          display: block;
+          width: 100%;
+          margin-bottom: var(--#{$prefix}spacing-s);
+        }
+
+        p {
+          font-size: var(--#{$prefix}label-font-size);
+          line-height: var(--#{$prefix}body-line-height);
+        }
+      }
+    }
+
+    .it-heading-link-wrapper,
+    .it-footer-link-wrapper,
+    .it-footer-link-wrapper-vertical {
+      margin-left: var(--#{$prefix}megamenu-spacing);
+      padding-bottom: var(--#{$prefix}spacing-s);
+      border-color: var(--#{$prefix}megamenu-border-color);
+    }
+
+    .it-heading-link-wrapper {
+      margin-bottom: var(--#{$prefix}spacing-s);
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+      // Extra margin on collapsed menu only
+      @include media-breakpoint-down(lg) {
+        margin-left: var(--#{$prefix}spacing-m);
+        margin-right: var(--#{$prefix}spacing-m);
+      }
+    }
+
+    .it-heading-link,
+    .it-footer-link {
+      font-size: var(--#{$prefix}heading-6-font-size);
+      font-weight: var(--#{$prefix}font-weight-solid);
+      line-height: var(--#{$prefix}heading-line-height);
+      text-decoration: none;
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+    }
+
+    .it-footer-link-wrapper,
+    .it-footer-link-wrapper-vertical {
+      margin-top: var(--#{$prefix}spacing-s);
+      padding-top: var(--#{$prefix}spacing-s);
+      border-top-width: 1px;
+      border-top-style: solid;
     }
   }
 }
 
-//Desktop
-@media (min-width: #{map-get($grid-breakpoints, lg)}) {
-  .navbar-nav {
-    .megamenu {
-      a.dropdown-toggle:before,
-      button.dropdown-toggle:before {
-        z-index: 2;
-      }
-      .dropdown-menu {
-        z-index: 1;
-        box-shadow: $dropdown-menu-shadow;
-      }
-    }
-  }
-
-  .navbar {
-    .dropdown-menu {
-      box-shadow: $dropdown-menu-shadow;
-    }
-    .navbar-collapsable {
-      .menu-wrapper {
-        .nav-item {
-          &.megamenu {
-            .dropdown-menu {
-              padding: $megamenu-padding-top-desktop $megamenu-column-gap;
-
-              .col-12 {
-                &:last-child {
-                  padding-bottom: 0;
-                }
-                .link-list-wrapper {
-                  min-height: 100%;
-                  ul.link-list {
-                    display: flex;
-                    flex-direction: column;
-                    li {
-                      a {
-                        padding: $megamenu-linklist-link-v-padding $megamenu-column-gap;
-                        line-height: $megamenu-linklist-link-line-height;
-                      }
-                    }
-                  }
-                }
-              }
-
-              .col-12:first-child {
-                .link-list-wrapper {
-                  margin-bottom: 0;
-                }
-              }
-              .row.max-height-col {
-                min-height: 100%;
-                margin-right: -($megamenu-column-gap + 24px * 0.5 + 1);
-                .row.max-height-col {
-                  margin-right: -$grid-gutter-width * 0.5;
-                }
-                .margin-right-col {
-                  margin-right: $megamenu-column-gap;
-                }
-              }
-              .it-vertical {
-                background: $lightgrey-c2;
-                padding-top: $megamenu-padding-top-desktop;
-                margin-top: -$megamenu-padding-top-desktop;
-                margin-bottom: -$megamenu-padding-top-desktop;
-                margin-right: -$megamenu-column-gap;
-                margin-left: math.div($grid-gutter-width, -2);
-                .link-list-wrapper {
-                  ul.link-list {
-                    width: 100%;
-                    li {
-                      margin-bottom: 3px;
-                      a {
-                        display: flex;
-                        justify-content: space-between;
-                        span {
-                          font-weight: 600;
-                        }
-                      }
-                    }
-                  }
-                }
-                // description & image variation
-                &.it-description {
-                  background: transparent;
-                  .description-content {
-                    padding-left: $megamenu-linklist-vertical-link-padding;
-                    padding-right: $megamenu-linklist-vertical-link-padding;
-                    &:before {
-                      display: none;
-                    }
-                    img {
-                      display: block;
-                      width: 100%;
-                      margin-bottom: $grid-gutter-width;
-                    }
-                    p {
-                      font-size: $megamenu-vertical-description-font-size;
-                      line-height: 1.5rem;
-                    }
-                  }
-                }
-              }
-
-              .it-heading-link-wrapper {
-                margin: 0 0 24px;
-                padding-bottom: 24px;
-              }
-
-              .it-footer-link-wrapper-vertical {
-                margin: 0;
-                padding: 0;
-                padding-left: 24px;
-                border-top: none;
-                border-left: 1px solid #d9dadb;
-                height: 100%;
-                .d-flex {
-                  height: 100%;
-                }
-              }
-
-              .it-footer-link-wrapper {
-                margin: 24px 0 0 0;
-                padding-top: 24px;
-                padding-bottom: 0;
-                a.it-footer-link {
-                  margin-bottom: 0;
-                  margin-right: 16px;
-                  &:last-child {
-                    margin-right: 0px;
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-// Fixes added from designers.italia.it (sticky navbar edition)
-
-//Tablet landscape --------------------------------------------------------------------------------------
 @include media-breakpoint-up(lg) {
-  // .nav-item {
-  //   display: flex;
-  // }
+  .navbar-nav .megamenu {
+    a.dropdown-toggle:before,
+    button.dropdown-toggle:before {
+      z-index: 2;
+    }
+    
+    .dropdown-menu {
+      z-index: 1;
+    }
+  }
+
+  // Megamenu column styles
+  .navbar .navbar-collapsable .menu-wrapper .nav-item.megamenu .dropdown-menu {
+    .col-12:last-child {
+      padding-bottom: 0;
+    }
+
+    .col-12 .link-list-wrapper {
+      min-height: 100%;
+    }
+
+    .col-12 .link-list-wrapper ul.link-list {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .col-12:first-child .link-list-wrapper {
+      margin-bottom: 0;
+    }
+
+    // Vertical menu styles
+    .it-vertical {
+
+      .link-list-wrapper ul.link-list {
+        width: 100%;
+
+        li {
+          margin-bottom: 3px;
+
+          a {
+            display: flex;
+            justify-content: space-between;
+
+            span {
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+
+    // Heading link wrapper
+    .it-heading-link-wrapper {
+      margin: 0 0 var(--#{$prefix}megamenu-spacing);
+      padding-bottom: var(--#{$prefix}megamenu-spacing);
+    }
+
+    // Footer link wrapper vertical
+    .it-footer-link-wrapper-vertical {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      padding-left: var(--#{$prefix}megamenu-spacing);
+      border-top: none;
+      border-left: 1px solid var(--#{$prefix}megamenu-border-color);
+
+      .d-flex {
+        height: 100%;
+      }
+    }
+
+    // Footer link wrapper
+    .it-footer-link-wrapper {
+      margin-top: var(--#{$prefix}spacing-s);
+      padding-bottom: 0;
+
+      .it-footer-link:not(:last-child) {
+        margin-right: var(--#{$prefix}spacing-s);
+      }
+    }
+  }
+
   .it-header-sticky.is-sticky .nav-item button.nav-link {
     font-size: 16px;
   }
 }
 
-//Desktop  --------------------------------------------------------------------------------------
 @include media-breakpoint-up(xl) {
   .it-header-sticky.is-sticky .nav-item button.nav-link {
     font-size: 18px;

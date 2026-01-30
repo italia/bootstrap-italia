@@ -9,6 +9,11 @@
   align-items: stretch;
   width: 100%;
 
+  // Reset border
+  > input {
+    border-left-width: 0;
+  }
+
   > .form-control,
   > .form-select,
   > .form-floating {
@@ -46,44 +51,26 @@
 .input-group-text {
   display: flex;
   align-items: center;
-  padding: $input-group-addon-padding-y $input-group-addon-padding-x;
-  @include font-size($input-font-size); // Match inputs
-  font-weight: $input-group-addon-font-weight;
-  line-height: $input-line-height;
-  color: $input-group-addon-color;
+  padding: var(--#{$prefix}form-control-spacing) 0 var(--#{$prefix}form-control-spacing) var(--#{$prefix}form-control-spacing);
+  font-size: var(--#{$prefix}body-font-size);
+  font-weight: var(--#{$prefix}font-weight-solid);
+  color: var(--#{$prefix}form-inpunt-text-color);
+  background-color: var(--#{$prefix}form-control-background-color);
   text-align: center;
   white-space: nowrap;
-  background-color: $input-group-addon-bg;
-  border: $input-border-width solid $input-group-addon-border-color;
-  @include border-radius($input-border-radius);
-}
+  border-top-width: 1px;
+  border-left-width: 1px;
+  border-right-width: 0;
+  border-bottom-width: 1px;
+  border-style: solid;
+  border-color: var(--#{$prefix}form-control-border-color);
+  border-radius: var(--#{$prefix}form-control-border-radius);
 
-// Sizing
-//
-// Remix the default form control sizing classes into new ones for easier
-// manipulation.
-
-.input-group-lg > .form-control,
-.input-group-lg > .form-select,
-.input-group-lg > .input-group-text,
-.input-group-lg > .btn {
-  padding: $input-padding-y-lg $input-padding-x-lg;
-  @include font-size($input-font-size-lg);
-  @include border-radius($input-border-radius-lg);
-}
-
-.input-group-sm > .form-control,
-.input-group-sm > .form-select,
-.input-group-sm > .input-group-text,
-.input-group-sm > .btn {
-  padding: $input-padding-y-sm $input-padding-x-sm;
-  @include font-size($input-font-size-sm);
-  @include border-radius($input-border-radius-sm);
-}
-
-.input-group-lg > .form-select,
-.input-group-sm > .form-select {
-  padding-right: $form-select-padding-x + $form-select-indicator-padding;
+  .disabled & {
+    background-color: var(--#{$prefix}color-background-disabled);
+    border-color: var(--#{$prefix}color-border-disabled);
+    color: var(--#{$prefix}color-text-disabled);
+  }
 }
 
 // Rounded corners

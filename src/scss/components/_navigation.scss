@@ -1,14 +1,27 @@
-//mobile
-//menu on bottom animation
+// Component: navigation
+//
+// Description: Component styles for navigation
+//
+
+// Variables
+//
+
+// Properties
+//
+
+// Styles
+//
+
+// Menu on bottom animation
 @keyframes megamenuFadeIn {
   0% {
+    margin-top: 1rem;
     opacity: 0;
-    margin-top: $dropdown-menu-vertical-shift;
   }
 
   100% {
+    margin-top: 1rem;
     opacity: 1;
-    margin-top: $dropdown-menu-vertical-shift;
   }
 }
 
@@ -16,280 +29,13 @@
   padding: 8px 0;
 }
 
-// Navbar mobile backdrop, inspired by "modal" approach
-.navbar-backdrop {
-  // scss-docs-start modal-backdrop-css-vars
-  --#{$prefix}backdrop-zindex: #{$zindex-modal-backdrop};
-  --#{$prefix}backdrop-bg: #{$modal-backdrop-bg};
-  --#{$prefix}backdrop-opacity: #{$modal-backdrop-opacity};
-  // scss-docs-end modal-backdrop-css-vars
-
-  @include overlay-backdrop(var(--#{$prefix}backdrop-zindex), var(--#{$prefix}backdrop-bg), var(--#{$prefix}backdrop-opacity));
-
-  @media (min-width: #{map-get($grid-breakpoints, lg)}) {
-    display: none; // to handle resize from md to lg when open
-  }
-}
-
-// navbar mobile
-.navbar {
-  background: $navbar-bg-color;
-
-  // overlay div
-  .overlay {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    background: $navigation-sidebar-bg-color-mobile;
-    display: none;
-  }
-
-  .navbar-collapsable {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    z-index: #{$zindex-modal};
-    display: none;
-    width: calc(100% - 48px); // use available horizontal space minus 48px on the right for the close button and backdrop
-    @media (min-width: #{map-get($grid-breakpoints, lg)}) {
-      width: 100%;
-    }
-
-    .menu-wrapper {
-      background: $navigation-bg-color;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      right: 0; // $navigation-h-padding * 2; < removed in BSI v2.15
-      left: 0;
-      pointer-events: all;
-      overflow-y: auto;
-      transform: translateX(-100%);
-      transition: all 0.2s cubic-bezier(0.29, 0.85, 0.5, 0.99);
-      z-index: 5;
-
-      .navbar-nav {
-        padding: $navigation-h-padding 0 0;
-        overflow: hidden;
-
-        .dropdown-menu {
-          padding-bottom: 0;
-        }
-      }
-    }
-
-    /*lista menu*/
-    .navbar-nav {
-      padding: $navigation-h-padding 0;
-
-      li {
-        > button.nav-link {
-          border: none;
-          display: block;
-          background: transparent;
-          color: $navigation-link-color;
-          font-weight: 600;
-          padding: $navigation-v-padding $navigation-h-padding;
-          position: relative;
-
-          &.dropdown-toggle {
-            svg {
-              fill: $navbar-bg-color;
-              transition: all 0.3s;
-            }
-
-            &[aria-expanded='true'] {
-              .icon {
-                transform: scaleY(-1);
-              }
-            }
-          }
-
-          &.active {
-            border-left: $navigation-link-active-bar-size solid $navigation-link-active-bar-color;
-          }
-
-          &.disabled {
-            span,
-            .icon {
-              opacity: $navigation-disabled-item-mobile-opacity;
-            }
-          }
-
-          &:hover:not(.active) {
-            text-decoration: underline;
-          }
-        }
-
-        a.nav-link {
-          color: $navigation-link-color;
-          font-weight: 600;
-          padding: $navigation-v-padding $navigation-h-padding;
-          position: relative;
-
-          &.dropdown-toggle {
-            svg {
-              fill: $navbar-bg-color;
-              transition: all 0.3s;
-            }
-
-            &[aria-expanded='true'] {
-              .icon {
-                transform: scaleY(-1);
-              }
-            }
-          }
-
-          &.active {
-            border-left: $navigation-link-active-bar-size solid $navigation-link-active-bar-color;
-          }
-
-          &.disabled {
-            span,
-            .icon {
-              opacity: $navigation-disabled-item-mobile-opacity;
-            }
-          }
-
-          &:hover:not(.active) {
-            text-decoration: underline;
-          }
-        }
-      }
-    }
-
-    &.expanded {
-      .menu-wrapper {
-        transform: translateX(0);
-        transition: all 0.3s cubic-bezier(0.29, 0.85, 0.5, 0.99);
-      }
-
-      .close-div {
-        //transform: translateX(0);
-        opacity: 1;
-      }
-    }
-  }
-
-  //wrapper pulsante di chiusura menu
-  .close-div {
-    opacity: 0;
-    position: fixed;
-    left: auto;
-    right: 2px;
-    top: $navigation-h-padding;
-    background: transparent;
-    z-index: 10;
-    pointer-events: none;
-    transition: all 0.3s cubic-bezier(0.1, 0.57, 0.4, 0.97);
-
-    // pulsante di chiusura menu
-    .close-menu {
-      background: transparent;
-      pointer-events: all;
-      color: $navigation-close-button-text-color;
-      font-size: $navigation-close-button-text-size;
-      padding: 0;
-      width: $navigation-close-button-size;
-      height: $navigation-close-button-size;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      .icon {
-        fill: $white;
-      }
-    }
-  }
-
-  // Dropdown style tipo collapse
-  .dropdown-menu {
-    background: transparent;
-    box-shadow: none;
-    padding-top: 0;
-
-    &:before {
-      display: none;
-    }
-
-    a.it-heading-link,
-    a.it-footer-link {
-      color: $navigation-link-color;
-
-      svg {
-        fill: $navigation-link-color;
-      }
-
-      &.active {
-        span {
-          text-decoration: underline;
-          color: $navigation-link-color;
-        }
-      }
-    }
-
-    .link-list-wrapper {
-      padding-left: $navigation-h-padding;
-      padding-right: $navigation-h-padding;
-      margin-bottom: $navigation-h-padding;
-
-      ul li {
-        a {
-          &.list-item.active {
-            color: $primary-b3;
-            text-decoration: underline;
-
-            span {
-              color: $primary-b3;
-            }
-          }
-
-          svg {
-            fill: $navigation-link-color;
-          }
-
-          span {
-            color: $navigation-link-color;
-          }
-
-          i {
-            color: $navigation-link-color;
-          }
-        }
-      }
-    }
-  }
-}
-
-.custom-navbar-toggler {
-  background: none;
-  border: none;
-  cursor: pointer;
-
-  span {
-    color: $navigation-toggle-button-icon-color;
-    font-size: $navigation-toggle-button-icon-size;
-  }
-
-  svg {
-    fill: $navigation-toggle-button-icon-color;
-    width: $navigation-hamburger-size;
-    height: $navigation-hamburger-size;
-    display: block;
-  }
-}
-
-//reset icon on megamenu
+// Reset icon on megamenu
 .nav-item.megamenu > a:before,
 .nav-item.megamenu > button:before {
   display: none;
 }
 
-//-------------------INLINE MENU---------------------
+// Inline Menu
 .inline-menu {
   .link-list-wrapper {
     .link-list {
@@ -300,32 +46,32 @@
           position: relative;
 
           &.large {
-            padding-top: $inline-menu-linklist-v-padding;
-            padding-bottom: $inline-menu-linklist-v-padding;
+            padding-top: var(--inline-menu-linklist-v-padding);
+            padding-bottom: var(--inline-menu-linklist-v-padding);
           }
 
           i {
-            color: $primary-a3;
+            color: var(--#{$prefix}color-link);
           }
 
           &:after {
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 1;
             content: '';
             display: block;
-            width: $inline-menu-line-width;
-            background: $primary;
-            position: absolute;
-            right: 0;
-            top: 0;
+            width: var(--inline-menu-line-width);
             height: 100%;
-            transform-origin: center;
+            background: var(--#{$prefix}color-link);
             transform: scaleY(0);
+            transform-origin: center;
             transition: all 0.3s;
-            z-index: 1;
           }
 
           &.active {
             span {
-              color: $primary;
+              color: var(--#{$prefix}color-link);
               text-decoration: none;
             }
           }
@@ -339,177 +85,23 @@
       }
 
       &:after {
+        position: absolute;
+        top: 0;
+        right: 0;
         content: '';
         display: block;
-        width: $inline-menu-line-width;
-        background: linear-gradient(to bottom, rgba($neutral-2-a1, 1) 0%, rgba($neutral-2-a1, 0.3) 100%);
-        position: absolute;
-        right: 0;
-        top: 0;
+        width: var(--inline-menu-line-width);
         height: 100%;
+        background: linear-gradient(to bottom, rgba(var(--#{$prefix}-neutral-2-a1), 1) 0%, rgba(var(--#{$prefix}-neutral-2-a1), 0.3) 100%);
       }
     }
   }
 }
 
 //Tablet horizontal / small desktop
-@media (min-width: #{map-get($grid-breakpoints, lg)}) {
+@include media-breakpoint-up(lg) {
   .row.row-column-border > [class^='col-'] .navbar {
     padding: 0;
-  }
-
-  .navbar {
-    background: $navigation-bg-color-desktop;
-    padding: 0;
-
-    // navbar mobile
-    .navbar-collapsable {
-      position: relative;
-      top: auto;
-      right: auto;
-      left: auto;
-      bottom: auto;
-      z-index: 1; // auto; xxx auto doesn't handle resize from md to lg when open
-      background: none;
-      display: block !important;
-      transition: none;
-
-      .overlay {
-        display: none !important;
-      }
-
-      // menu wrapper
-      .menu-wrapper {
-        position: inherit;
-        top: auto;
-        bottom: auto;
-        right: auto;
-        left: auto;
-        overflow-y: visible;
-        transform: none;
-        transition: none;
-        background: $navigation-bg-color-desktop;
-
-        .navbar-nav {
-          margin-top: 0;
-          padding: 0 $navigation-h-padding;
-          overflow: inherit;
-
-          .dropdown-menu {
-            padding-bottom: $link-list-footer-distance-bottom;
-          }
-        }
-      }
-
-      /*lista menu*/
-      .navbar-nav {
-        margin-top: 0;
-        padding: 0 $navigation-h-padding;
-
-        li.nav-item {
-          display: flex;
-
-          a.nav-link,
-          button.nav-link {
-            display: flex;
-            align-self: flex-end;
-            align-items: center;
-            font-weight: 400;
-            padding: $navigation-v-padding $navigation-h-padding;
-            color: $navigation-link-color-desk;
-            border-bottom: $navigation-link-active-bar-size solid transparent;
-
-            &.dropdown-toggle {
-              svg {
-                fill: $navigation-bg-color;
-                margin-top: 3px;
-              }
-            }
-
-            &[data-focus-mouse='true'] {
-              border-color: transparent !important;
-            }
-
-            &.active {
-              border-left: 0;
-              border-color: $navigation-link-active-bar-color-desk;
-              background: transparent;
-            }
-
-            &.disabled {
-              span,
-              .icon {
-                opacity: $navigation-disabled-item-opacity;
-              }
-            }
-          }
-        }
-      }
-    }
-
-    //wrapper pulsante di chiusura menu
-    .close-div {
-      display: none;
-    }
-
-    // Dropdown style tipo collapse
-    .dropdown-menu {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      z-index: $zindex-dropdown;
-      //display: none; // none by default, but block on "open" of the menu
-      float: left;
-      min-width: $dropdown-min-width;
-      padding: $dropdown-padding-y 0 0;
-      margin: $dropdown-spacer 0 0; // override default ul
-      font-size: $font-size-base; // Redeclare because nesting can cause inheritance issues
-      color: $body-color;
-      text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
-      list-style: none;
-      background-color: $dropdown-bg;
-      background-clip: padding-box;
-      border: $dropdown-border-width solid $dropdown-border-color;
-      @include border-radius($dropdown-border-radius);
-      @include box-shadow($dropdown-box-shadow);
-      border-top-left-radius: 0;
-      border-top-right-radius: 0;
-
-      &.show {
-        animation: dropdownFadeIn forwards $dropdown-menu-animation-speed;
-        top: calc(100% - #{$dropdown-menu-vertical-shift});
-      }
-
-      &:before {
-        display: block;
-      }
-
-      .link-list-wrapper {
-        padding-left: 0;
-        padding-right: 0;
-        margin-bottom: 0;
-
-        ul li {
-          a {
-            color: $primary;
-
-            span,
-            i {
-              color: $primary;
-            }
-          }
-        }
-      }
-    }
-
-    .dropdown-toggle {
-      display: block;
-      justify-content: inherit;
-    }
-  }
-
-  .custom-navbar-toggler {
-    display: none;
   }
 
   .has-megamenu {
@@ -526,24 +118,24 @@
       position: relative;
 
       &:before {
-        content: '';
         position: absolute;
         top: auto;
-        bottom: -$dropdown-menu-notch-base-size - 6;
-        left: $dropdown-menu-notch-position-x;
-        width: $dropdown-menu-notch-base-size * 3;
-        height: $dropdown-menu-notch-base-size * 3;
-        border-radius: $dropdown-menu-radius;
-        background-color: $dropdown-bg;
-        transform: rotate(45deg);
-        opacity: 0;
+        bottom: -14px;
+        left: 24px;
+        content: '';
         display: block;
-        transition: opacity $dropdown-menu-animation-speed * 0.5 cubic-bezier(0.1, 0.57, 0.36, 0.99);
+        width: 18px;
+        height: 18px;
+        border-radius: var(--#{$prefix}radius-smooth);
+        opacity: 0;
+        background-color: var(--#{$prefix}color-background-inverse);
+        transform: rotate(45deg);
+        transition: opacity calc(var($dropdown-menu-animation-speed) * 0.5) cubic-bezier(0.1, 0.57, 0.36, 0.99);
       }
     }
 
     > button.dropdown-toggle:before {
-      bottom: -$dropdown-menu-notch-base-size - 8;
+      bottom: calc(var($dropdown-menu-notch-base-size) * -1 - 8);
     }
 
     a.dropdown-toggle,
@@ -558,18 +150,22 @@
 
   .megamenu {
     .dropdown-menu {
+      right: var(--#{$prefix}navbar-spacing-inset);
+      left: var(--#{$prefix}navbar-spacing-inset);
       min-width: auto;
-      left: $navigation-h-padding;
-      right: $navigation-h-padding;
       animation-timing-function: cubic-bezier(0.1, 0.57, 0.36, 0.99);
+      @include media-breakpoint-up(lg) {
+        right: 0;
+        left: 0;
+      }
 
-      //hide arrow
+      // hide arrow
       &:before {
         display: none;
       }
 
       &.show {
-        animation: megamenuFadeIn forwards $dropdown-menu-animation-speed * 0.5;
+        animation: megamenuFadeIn forwards calc(var($dropdown-menu-animation-speed) * 0.5);
       }
     }
   }
