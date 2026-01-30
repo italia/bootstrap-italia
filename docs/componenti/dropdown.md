@@ -556,3 +556,11 @@ Le opzioni possono essere passate tramite gli attributi data o tramite JavaScrip
     </tbody>
   </table>
 </div>
+
+## Breaking change
+
+{% capture callout %}
+- Per quanto riguarda le icone le classi che ne controllano il colore potrebbero aver cambiato nome, ad esempio `.icon-white` diventa `.icon-inverse`.
+- Aggiunta classe `.dropdown-item` alla voce attiva nell'esempio di menu voci attive ed a tutti agli elementi dei menu dropdown laddove mancava.
+- Corretto markup dell'intestazione nel Menu con intestazioni e separatori, `<div>` diventa `<h4>`. Sarà da far attenzione alla corretta gerarchia in pagina di questa intestazione scegliendone il livello a seconda del contesto. 
+{% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}

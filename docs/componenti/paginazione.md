@@ -542,5 +542,10 @@ Con il posizionamento a destra
 ## Breaking change
 
 {% capture callout %}
+- È stato corretto il colore delle icone chevron per gli elementi disabilitati sostituendo la classe `.icon-primary` con `.icon-disabled`.
+- È stato corretto l'esempio "Changer" aggiungendo la classe `.dropdown-item` che mancava sul primo elemento `.list-item`. 
+{% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}
+
+{% capture callout %}
 Il toggle del dropdown diventa `<button>` invece di `<a>`.
 {% endcapture %}{% include callout-breaking.html content=callout version="2.8.0" type="danger" %}

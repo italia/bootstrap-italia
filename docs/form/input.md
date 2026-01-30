@@ -85,13 +85,6 @@ Il testo di aiuto deve essere esplicitamente associato ai campi a cui si riferis
 
 ### Icone o pulsanti
 
-{% capture callout %}
-Breaking feature dalla versione **3.0.0**
-- L'elemento `label` è sempre posizionato sopra l'elemento `input` per garantire la corretta accessibilità. 
-- Nel caso di input con icona o pulsanti, l'elemento `label` è stato spostato fuori dal contenitore `.input-group`.
-- ...
-{% endcapture %}{% include callout.html content=callout type="danger" %}
-
 {% comment %}Example name: Campo con icona o pulsante {% endcomment %}
 {% capture example %}
 <div class="form-group">
@@ -781,6 +774,11 @@ Includendo l'elemento all'interno di un `.form-group`, la label assumerà lo ste
 {% endcapture %}{% include example.html content=example %}
 
 ## Breaking change
+
+{% capture callout %}
+- Nel caso di input con icona o pulsanti, l'elemento `label` è stato spostato fuori dal contenitore `.input-group` per leggibilità del markup.
+- Nel paragrafo dimensioni sono stati integrati gli esempi con icone, pulsanti di invio e istruzioni specifiche.
+{% endcapture %}{% include callout.html content=callout version="3.0.0" type="danger" %}
 
 {% capture callout %}
 Quando si utilizza l'attributo `placeholder` o l'input parte già valorizzato assicurarsi di aggiungere alla label la classe **`active`** per impedire la sovrapposizione della label al campo.

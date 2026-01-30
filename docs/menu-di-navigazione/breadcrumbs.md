@@ -79,3 +79,9 @@ Quando la versione su sfondo scuro viene utilizzata su un fondo di colore differ
   </ol>
 </nav>
 {% endcapture %}{% include example.html content=example %}
+
+## Breaking change
+
+{% capture callout %}
+- Per la versione su sfondo scuro il colore delle icone dovrà essere impostato manualmente con la classe `.icon-inverse` per renderle visibili su sfondo scuro.
+{% endcapture %}{% include callout.html content=callout version="3.0.0" type="danger" %}

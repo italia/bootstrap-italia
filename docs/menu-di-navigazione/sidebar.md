@@ -339,5 +339,11 @@ sezione [attivazione Collapse tramite codice]({{ site.baseurl }}/docs/componenti
 ## Breaking change
 
 {% capture callout %}
+- Rimossi elementi `<span>` con classe `list-item-title-icon-wrapper`.
+- Nella variante con una lista di link primaria annidata è stata rimossa la classe `.large` dagli elementi `<a>` con classi `.list-item .medium`. 
+- Nelle varianti scure la classe che controlla il colore delle icone bianche ha cambiato nome: `.icon-white` diventa `.icon-inverse`.
+{% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}
+
+{% capture callout %}
 Gli elementi di tipo `<a>` dei collapse necessitano l'aggiunta dell'attributo `role="button"`.
 {% endcapture %}{% include callout-breaking.html content=callout version="2.8.0" type="danger" %}

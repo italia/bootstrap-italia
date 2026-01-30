@@ -373,3 +373,9 @@ Aggiungendo la classe `.progress-spinner-double` allo Spinner si ottiene un'anim
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
+
+## Breaking change
+
+{% capture callout %}
+- Nella variante "Pulsante con Progress Bar" la classe che controlla il colore dell'icona ha cambiato nome: `.icon-white` diventa `.icon-inverse`.
+{% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}
