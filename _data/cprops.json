@@ -393,22 +393,22 @@
     ],
     "backtop": [
         {
-            "description": "",
+            "description": "Controls the background color of the button, using color tokens",
             "value": "var(--bsi-color-background-primary)",
             "variable-name": "--bsi-backtop-background"
         },
         {
-            "description": "",
+            "description": "Controls the distance from the bottom and right edges",
             "value": "1rem",
             "variable-name": "--bsi-backtop-position"
         },
         {
-            "description": "",
+            "description": "Controls the border radius of the button, using radius tokens",
             "value": "var(--bsi-radius-circle)",
             "variable-name": "--bsi-backtop-radius"
         },
         {
-            "description": "",
+            "description": "Controls the width and height of the button",
             "value": "2.5rem",
             "variable-name": "--bsi-backtop-sizing"
         }
@@ -2578,37 +2578,37 @@
     ],
     "linklist": [
         {
-            "description": "",
+            "description": "Controls the height of the divider between list items",
             "value": "1px",
             "variable-name": "--bsi-linklist-divider-size"
         },
         {
-            "description": "",
+            "description": "Controls the color of the linklist heading, using text color tokens",
             "value": "var(--bsi-color-text-secondary)",
             "variable-name": "--bsi-linklist-heading-color"
         },
         {
-            "description": "",
+            "description": "Controls the font size of the linklist heading, using text tokens",
             "value": "var(--bsi-heading-6-font-size)",
             "variable-name": "--bsi-linklist-heading-font-size"
         },
         {
-            "description": "",
+            "description": "Controls the font size of the list items, using text tokens",
             "value": "var(--bsi-label-font-size)",
             "variable-name": "--bsi-linklist-item-font-size"
         },
         {
-            "description": "",
+            "description": "Controls the line height of the list items, using text tokens",
             "value": "var(--bsi-label-line-height)",
             "variable-name": "--bsi-linklist-item-line-height"
         },
         {
-            "description": "",
+            "description": "Controls the vertical spacing of the list items, using spacing tokens",
             "value": "var(--bsi-spacing-xxs)",
             "variable-name": "--bsi-linklist-item-spacing"
         },
         {
-            "description": "",
+            "description": "Controls the left padding of nested linklists, using spacing tokens",
             "value": "var(--bsi-spacing-s)",
             "variable-name": "--bsi-linklist-nested-spacing"
         }
@@ -3105,7 +3105,7 @@
         },
         {
             "description": "Controls the border radius for the pagination.",
-            "value": "#{$pagination-border-radius}",
+            "value": "var(--bsi-radius-smooth)",
             "variable-name": "--bsi-pagination-border-radius"
         },
         {
