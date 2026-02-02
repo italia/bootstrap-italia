@@ -136,16 +136,17 @@
   position: fixed;
   right: 0;
   left: 0;
-  z-index: 8;
   box-shadow: var(--#{$prefix}navscroll-bottom-box-shadow);
 }
 
 .navbar.it-bottom-navscroll {
   bottom: 0;
+  z-index: 9999;
 }
 
 .navbar.it-top-navscroll {
   top: 0;
+  z-index: 8;
 }
 
 .navbar.it-left-side {
