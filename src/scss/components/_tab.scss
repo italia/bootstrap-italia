@@ -9,13 +9,51 @@
 // Properties
 //
 
+
+
+
 // Styles
 //
 
+// Component CSS variables for tab
+.nav-tabs {
+  --#{$prefix}tabs-background-color: var(--it-white, #fff);
+  --#{$prefix}tabs-border-color: var(--it-color-border-subtle);
+  --#{$prefix}tab-color: var(--it-color-text-secondary);
+  --#{$prefix}tab-text-color-active: var(--it-color-primary);
+  --#{$prefix}tab-text-color-hover: var(--it-color-text-primary-hover);
+  --#{$prefix}tab-text-color-disabled: var(--it-color-text-disabled);
+  --#{$prefix}tab-icon-color: var(--it-color-text-secondary);
+  --#{$prefix}tab-icon-color-active: var(--it-color-primary);
+  --#{$prefix}tab-icon-color-hover: var(--it-color-text-primary-hover);
+  --#{$prefix}tab-icon-color-disabled: var(--it-color-text-disabled);
+  --#{$prefix}tab-border-radius: var(--it-border-radius, 0.25rem);
+  --#{$prefix}tab-border-width: 3px;
+  --#{$prefix}tab-padding-x: 12px;
+  --#{$prefix}tab-padding-y: 12px;
+  --#{$prefix}tab-font-size: 1rem;
+  --#{$prefix}tab-font-weight: 600;
+  --#{$prefix}tab-shadow: 0 12px 25px -20px rgba(0, 0, 0, 0.5);
+  --#{$prefix}tab-background-light: var(--it-color-background-primary-lighter);
+  // --#{$prefix}tab-background-dark: var(--it-gray-primary);
+  // --#{$prefix}tab-text-color-dark: var(--it-neutral-1-a2);
+  // --#{$prefix}tab-color-dark-active: var(--it-cyan);
+  // --#{$prefix}tab-color-dark-disabled: var(--it-neutral-1-a6);
+  --#{$prefix}tab-border-color-active: var(--it-cyan);
+  --#{$prefix}tab-border-radius-cards: var(--it-border-radius, 0.25rem);
+  --#{$prefix}tab-border-width-cards: 2px;
+  --#{$prefix}tab-border-color-cards: var(--it-color-border-subtle);
+  --#{$prefix}tab-add-btn-border: var(--it-color-primary);
+  --#{$prefix}tab-add-btn-color: var(--it-color-primary);
+  --#{$prefix}tab-close-btn-color: var(--it-color-text-secondary);
+  --#{$prefix}tab-close-btn-color-hover: color-mix(in srgb, var(--it-color-primary) 90%, black 10%);
+  --#{$prefix}tab-close-btn-color-disabled: var(--it-color-text-disabled);
+}
+
 .nav-tabs {
   position: relative;
-  background-color: $white;
-  border-bottom-color: $color-border-subtle;
+  background-color: var(--#{$prefix}tabs-background-color);
+  border-bottom-color: var(--#{$prefix}tabs-border-color);
   display: flex;
   overflow-x: auto;
   overflow-y: hidden;
@@ -72,7 +110,7 @@
   &.nav-tabs-vertical {
     flex-direction: column;
     border-bottom: none;
-    border-right: 1px solid $color-border-subtle;
+    border-right: 1px solid var(--#{$prefix}tab-border-color);
     .nav-link {
       justify-content: space-between;
       border-bottom: none;
@@ -80,7 +118,7 @@
       white-space: normal;
       position: relative;
       &:focus:not([data-focus-mouse='true']) {
-        box-shadow: inset 0 0px 0 2px $focus-outline-color !important;
+        box-shadow: inset 0 0 0 2px $focus-outline-color !important;
       }
       &:hover {
         border-bottom: none;
@@ -96,7 +134,7 @@
     .nav-link.active,
     .nav-item.show .nav-link {
       border-bottom: none;
-      border-right-color: $primary;
+      border-right-color: var(--#{$prefix}tab-border-dark-active);
     }
     &.nav-tabs-vertical-background {
       .nav-link.active,
@@ -110,11 +148,11 @@
   .nav-link {
     border-radius: 0;
     font-size: 1rem;
-    font-weight: 600;
-    color: $color-text-secondary;
+    font-weight: var(--#{$prefix}tab-font-weight);
+    color: var(--#{$prefix}tab-text-color-secondary);
     border: none;
-    border-bottom: 3px solid transparent;
-    padding: 0.778rem 1.333em;
+    border-bottom: var(--#{$prefix}tab-border-width) solid transparent;
+    padding:  var(--#{$prefix}tab-padding-y) var(--#{$prefix}tab-padding-x);
     flex: 1 0 auto;
     white-space: nowrap;
     line-height: 1rem;
