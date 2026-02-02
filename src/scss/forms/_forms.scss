@@ -190,21 +190,14 @@ input[type='time'] {
   display: flex;
 }
 
-//TODO: CHECK
 fieldset {
   legend {
-    // display: block;
-    // width: auto;
     margin-bottom: var(--#{$prefix}spacing-s);
     padding: 0 var(--#{$prefix}form-input-spacing-x);
-    // float: none;
     background-color: transparent;
     color: var(--#{$prefix}form-control-text-color);
     font-size: var(--#{$prefix}label-sm);
     font-weight: var(--#{$prefix}font-weight-solid);
-    // line-height: calc(#{$input-height} - 1px);
-    // transition: 0.2s ease-out;
-    // cursor: text;
   }
 }
 
@@ -293,8 +286,6 @@ input::-webkit-datetime-edit {
 
 .form-check {
   position: relative;
-  padding-left: 0;
-  align-items: center;
 
   // &:not(:last-child),
   // &:not(.form-check-inline) {
@@ -309,26 +300,24 @@ input::-webkit-datetime-edit {
   [type='checkbox'],
   [type='radio'] {
     position: absolute;
-    // top: 9px;
-    // left: 9px;
-    height: 100%;
+    top: 9px;
+    left: 9px;
+    width: auto;
     margin-top: 0;
     margin-left: 0;
     opacity: 0;
 
     +label {
       position: relative;
-      display: flex;
-      align-items: center;
+      margin-bottom: 0; // reset default label margin
       padding-left: 28px; // checkbox size + left padding - not using variable because of the pseudo element
       font-size: var(--#{$prefix}label-font-size);
       font-weight: var(--#{$prefix}font-weight-solid);
       cursor: pointer;
-      margin-bottom: 0; // reset default label margin
       user-select: none;
 
       @include media-breakpoint-up(sm) {
-        font-size: var(--#{$prefix}label-font-size-m);
+        font-size: var(--#{$prefix}label-font-size-l);
       }
     }
 
@@ -355,14 +344,14 @@ input::-webkit-datetime-edit {
 
     // Checkbox shape
     +label::after {
-      top: 0;
+      top: 4px;
       width: 20px;
       height: 20px;
       border-radius: var(--#{$prefix}form-control-border-radius);
     }
 
     &:checked+label::before {
-      top: 3px;
+      top: 6px;
       left: 3px;
       width: 6px;
       height: 12px;
@@ -421,7 +410,7 @@ input::-webkit-datetime-edit {
       &::after,
       &::before {
         position: absolute;
-        top: 0;
+        top: 4px;
         left: 0;
         z-index: 0;
         content: '';
@@ -494,6 +483,7 @@ input::-webkit-datetime-edit {
 
     input[type='checkbox']+label,
     input[type='radio']+label {
+      position: static;
       padding-right: 3.25rem;
       padding-left: 0;
 
@@ -525,7 +515,7 @@ input::-webkit-datetime-edit {
   }
 
   input.semi-checked:not(:checked)+label::before {
-    top: 9px;
+    top: 12px;
     left: 4px;
     width: 12px;
     height: 2px;

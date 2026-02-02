@@ -93,7 +93,7 @@
   // Variant Large
   &-lg {
     --#{$prefix}chip-padding-x: var(--#{$prefix}spacing-s);
-    --#{$prefix}chip-text-size: var(--#{$prefix}label-font-size-m);
+    --#{$prefix}chip-text-size: var(--#{$prefix}label-font-size-l);
   }
 
   // Default background for color variants

@@ -14,7 +14,7 @@ Nelle breadcrumbs c'è la possibilità di scegliere il carattere da usare come s
 
 #### Accessibilità
 
-Dato che le breadcrumb sono uno strumento di navigazione del sito, è buona idea aggiungere un'etichetta significativa come `aria-label="Percorso di navigazione"` per descrivere il tipo di navigazione fornito nell'elemento `<nav>`, nonché applicare `aria-current="page"` all'ultimo elemento del set per indicare che rappresenta la pagina corrente.
+Dato che le breadcrumb sono uno strumento di navigazione del sito, è buona idea aggiungere un'etichetta significativa come `aria-label="Percorso di navigazione"` per descrivere il tipo di navigazione fornito nell'elemento `<nav>`, nonché applicare `aria-current="page"` all'ultimo elemento del set per indicare che rappresenta la pagina corrente. Per ottimizzare l'esperienza con gli screen reader, è consigliabile applicare `aria-hidden="true"` ai separatori delle breadcrumb, in quanto sono elementi visivi che non aggiungono informazioni utili alla navigazione.
 
 Per maggiori informazioni, guarda le [linee guida WAI-ARIA per la creazione di breadcrumb](https://www.w3.org/TR/wai-aria-practices/#breadcrumb).
 
@@ -24,16 +24,16 @@ Per maggiori informazioni, guarda le [linee guida WAI-ARIA per la creazione di b
 {% capture example %}
 <nav class="breadcrumb-container" aria-label="Percorso di navigazione">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="#">Home</a><span class="separator">/</span></li>
-    <li class="breadcrumb-item"><a href="#">Sottosezione</a><span class="separator">/</span></li>
+    <li class="breadcrumb-item"><a href="#">Home</a><span class="separator" aria-hidden="true">/</span></li>
+    <li class="breadcrumb-item"><a href="#">Sottosezione</a><span class="separator" aria-hidden="true">/</span></li>
     <li class="breadcrumb-item active" aria-current="page">Nome pagina</li>
   </ol>
 </nav>
 
  <nav class="breadcrumb-container" aria-label="Percorso di navigazione">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="#">Home</a><span class="separator">&gt;</span></li>
-    <li class="breadcrumb-item"><a href="#">Sottosezione</a><span class="separator">&gt;</span></li>
+    <li class="breadcrumb-item"><a href="#">Home</a><span class="separator" aria-hidden="true">&gt;</span></li>
+    <li class="breadcrumb-item"><a href="#">Sottosezione</a><span class="separator" aria-hidden="true">&gt;</span></li>
     <li class="breadcrumb-item active" aria-current="page">Nome pagina</li>
   </ol>
 </nav>
@@ -47,8 +47,8 @@ Per aggiungere un icona all'elemento breadcrumb è sufficiente inserire l'SVG co
 {% capture example %}
 <nav class="breadcrumb-container" aria-label="Percorso di navigazione">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><svg class="icon icon-sm icon-secondary align-top me-1" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg><a href="#">Home</a><span class="separator">/</span></li>
-    <li class="breadcrumb-item"><svg class="icon icon-sm icon-secondary align-top me-1" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg><a href="#">Sottosezione</a><span class="separator">/</span></li>
+    <li class="breadcrumb-item"><svg class="icon icon-sm icon-secondary align-top me-1" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg><a href="#">Home</a><span class="separator" aria-hidden="true">/</span></li>
+    <li class="breadcrumb-item"><svg class="icon icon-sm icon-secondary align-top me-1" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg><a href="#">Sottosezione</a><span class="separator" aria-hidden="true">/</span></li>
     <li class="breadcrumb-item active" aria-current="page"><svg class="icon icon-sm icon-secondary align-top me-1" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg>Nome pagina</li>
   </ol>
 </nav>
@@ -64,8 +64,8 @@ Quando la versione su sfondo scuro viene utilizzata su un fondo di colore differ
 {% capture example %}
 <nav class="breadcrumb-container" aria-label="Percorso di navigazione">
   <ol class="breadcrumb dark px-3">
-    <li class="breadcrumb-item"><a href="#">Home</a><span class="separator">/</span></li>
-    <li class="breadcrumb-item"><a href="#">Sottosezione</a><span class="separator">/</span></li>
+    <li class="breadcrumb-item"><a href="#">Home</a><span class="separator" aria-hidden="true">/</span></li>
+    <li class="breadcrumb-item"><a href="#">Sottosezione</a><span class="separator" aria-hidden="true">/</span></li>
     <li class="breadcrumb-item active" aria-current="page">Nome pagina</li>
   </ol>
 </nav>
@@ -73,11 +73,17 @@ Quando la versione su sfondo scuro viene utilizzata su un fondo di colore differ
 <hr>
 <nav class="breadcrumb-container" aria-label="Percorso di navigazione">
   <ol class="breadcrumb dark px-3">
-    <li class="breadcrumb-item"><svg class="icon icon-sm icon-inverse align-top me-1" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg><a href="#">Home</a><span class="separator">/</span></li>
-    <li class="breadcrumb-item"><svg class="icon icon-sm icon-inverse align-top me-1" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg><a href="#">Sottosezione</a><span class="separator">/</span></li>
+    <li class="breadcrumb-item"><svg class="icon icon-sm icon-inverse align-top me-1" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg><a href="#">Home</a><span class="separator" aria-hidden="true">/</span></li>
+    <li class="breadcrumb-item"><svg class="icon icon-sm icon-inverse align-top me-1" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg><a href="#">Sottosezione</a><span class="separator" aria-hidden="true">/</span></li>
     <li class="breadcrumb-item active" aria-current="page">Nome pagina</li>
   </ol>
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
 {% include properties.md properties=site.data.cprops.breadcrumb %}
+
+## Breaking change
+
+{% capture callout %}
+- Per la versione su sfondo scuro il colore delle icone dovrà essere impostato manualmente con la classe `.icon-inverse` per renderle visibili su sfondo scuro.
+{% endcapture %}{% include callout.html content=callout version="3.0.0" type="danger" %}

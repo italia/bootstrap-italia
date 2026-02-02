@@ -63,16 +63,15 @@
   --#{$prefix}theme-primary-deep: var(--it-theme-italia-deep);
 
   // Spacing
-  --#{$prefix}spacing-3xl: var(--it-spacing-3xl);
-  --#{$prefix}spacing-xxl: var(--it-spacing-xxl);
-  --#{$prefix}spacing-xl: var(--it-spacing-xl);
-  --#{$prefix}spacing-l: var(--it-spacing-l);
-  --#{$prefix}spacing-m: var(--it-spacing-m);
-  --#{$prefix}spacing-s: var(--it-spacing-s);
-  --#{$prefix}spacing-xs: var(--it-spacing-xs);
-  --#{$prefix}spacing-xxs: var(--it-spacing-xxs);
-  --#{$prefix}spacing-3xs: var(--it-spacing-3xs);
-
+  --#{$prefix}spacing-3xl: var(--it-spacing-3xl); // equal to 6rem (96px)
+  --#{$prefix}spacing-xxl: var(--it-spacing-xxl); // equal to 3rem (48px)
+  --#{$prefix}spacing-xl: var(--it-spacing-xl); // equal to 2.5rem (40px)
+  --#{$prefix}spacing-l: var(--it-spacing-l); // equal to 2rem (32px)
+  --#{$prefix}spacing-m: var(--it-spacing-m); // equal to 1.5rem (24px)
+  --#{$prefix}spacing-s: var(--it-spacing-s); // equal to 1rem (16px)
+  --#{$prefix}spacing-xs: var(--it-spacing-xs); // equal to 0.75rem (12px)
+  --#{$prefix}spacing-xxs: var(--it-spacing-xxs); // equal to 0.5rem (8px)
+  --#{$prefix}spacing-3xs: var(--it-spacing-3xs); // equal to 0.25rem (4px)
   --#{$prefix}heading-spacing: var(--it-spacing-s);
   --#{$prefix}paragraph-spacing: var(--it-spacing-m);
 
@@ -127,7 +126,7 @@
   --#{$prefix}label-font-size: var(--it-label-font-size);
   --#{$prefix}label-font-size-s: var(--it-label-font-size-s);
   --#{$prefix}label-font-size-xs: var(--it-label-font-size-xs);
-  --#{$prefix}label-font-size-m: var(--it-label-font-size-m);
+  --#{$prefix}label-font-size-l: var(--it-label-font-size-l);
   --#{$prefix}label-line-height: var(--it-font-line-height-tight);
 
   // Typography responsive properties
@@ -165,12 +164,9 @@
   --#{$prefix}sizing-quarter: var(--it-sizing-quarter);
 
   // Shadow
-  --#{$prefix}elevation-high: var(--it-elevation-high-color) var(--it-elevation-high-x) var(--it-elevation-high-y) var(--it-elevation-high-blur)
-    var(--it-elevation-high-spread);
-  --#{$prefix}elevation-medium: var(--it-elevation-medium-color) var(--it-elevation-medium-x) var(--it-elevation-medium-y) var(--it-elevation-medium-blur)
-    var(--it-elevation-medium-spread);
-  --#{$prefix}elevation-low: var(--it-elevation-low-color) var(--it-elevation-low-x) var(--it-elevation-low-y) var(--it-elevation-low-blur)
-    var(--it-elevation-low-spread);
+  --#{$prefix}elevation-high: var(--it-elevation-high);
+  --#{$prefix}elevation-medium: var(--it-elevation-medium);
+  --#{$prefix}elevation-low: var(--it-elevation-low-);
 
   // Text colors
   --#{$prefix}color-text-accent: var(--it-color-text-accent);

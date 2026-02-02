@@ -1,3 +1,5 @@
+@use 'sass:map';
+
 // Color vars
 // HSB (https://it.wikipedia.org/wiki/Hue_Saturation_Brightness, coincidente con il modello HSV)
 // è lo spazio colore scelto per ottenere le varianti colore della tonalità primaria.
@@ -18,7 +20,7 @@ $gray-800: hsl(0, 0%, 15%) !default; // color-gray-15
 $gray-900: hsl(0, 0%, 10%) !default; // color-gray-10
 
 $grays: () !default;
-$grays: map-merge(
+$grays: map.merge(
   (
     '100': $gray-100,
     '200': $gray-200,
@@ -86,7 +88,7 @@ $gray-border-disabled: $gray-disabled !default; // color-border-disabled
 $secondary: $gray-secondary !default;
 
 $colors: () !default;
-$colors: map-merge(
+$colors: map.merge(
   (
     'indigo': $indigo,
     'purple': $purple,
@@ -118,7 +120,7 @@ $warning: $orange-accessible !default;
 $danger: $red-accessible !default;
 
 $theme-colors: () !default;
-$theme-colors: map-merge(
+$theme-colors: map.merge(
   (
     'primary': $primary,
     'secondary': $secondary,
@@ -409,7 +411,7 @@ $neutral-2-a7: hsb($neutral-2-h, $neutral-2-s + 4, $neutral-2-b - 85) !default;
 // Backgrounds
 $color-background-emphasis: hsl(210, 54%, 20%); // color-slate-20
 $color-background-primary-lighter: hsl(210, 62%, 97%); // color-blue-97
-$color-background-primary-hover: hsl(210, 100, 30); // color-blue-30
+$color-background-primary-hover: hsl(210, 100%, 30%); // color-blue-30
 $color-background-secondary-hover: hsl(210, 33%, 28%); // color-slate-28
 $color-background-secondary-lighter: hsl(210, 3%, 85%); // color-slate-85
 $color-background-muted: $gray-100; // color-gray-96
@@ -462,7 +464,7 @@ $enable-deprecation-messages: true !default;
 $enable-important-utilities: true !default;
 
 // Prefix for :root CSS variables
-$prefix: bs- !default;
+$prefix: bsi- !default;
 
 // Spacing
 //
@@ -1229,7 +1231,7 @@ $tooltip-font-size: $font-size-sm !default;
 $tooltip-color: $white !default;
 $tooltip-bg: $black !default;
 $tooltip-border-radius: $border-radius !default;
-$tooltip-margin: null !default; // TODO: remove this in v6
+$tooltip-margin: null !default;
 $tooltip-arrow-width: 0.8rem !default;
 $tooltip-arrow-height: 0.4rem !default;
 // fusv-disable
@@ -1286,7 +1288,7 @@ $modal-footer-margin-between: 0.5rem !default;
 $modal-backdrop-bg: $black !default;
 
 // Carousel
-$carousel-bg: #444e57 !default; // TODO: not used, consider to remove
+$carousel-bg: #444e57 !default;
 $carousel-padding: 3em !default;
 $carousel-control-color: $secondary !default;
 $carousel-control-width: auto !default;
@@ -1855,7 +1857,7 @@ $card-big-h5-l-h: 1.5rem;
 $card-big-p-size: 1.125rem;
 $card-big-p-l-h: 1.5rem;
 $card-big-top-icon-size: $v-gap * 10;
-$card-img-heading-size: 1.1111111111111112rem; // FIXME
+$card-img-heading-size: 1.1111111111111112rem;
 $card-img-heading-l-h: 1.5555555555555556rem;
 $special-card-img-width: 174px;
 // flag icon
@@ -1880,7 +1882,7 @@ $select-dd-small-separator-width: 65px;
 $select-dd-small-separator-bg: $gray-border !default; // UI kit
 $select-dd-icon-size: $v-gap * 3;
 $select-dd-icon-flag-top: 10px;
-$select-dd-pill-font-size: 0.7777777777777778rem; // FIXME
+$select-dd-pill-font-size: 0.7777777777777778rem;
 $select-dd-pill-distance: $v-gap;
 $select-dd-pill-font-w: 700;
 $select-dd-header-size: 0.875rem;
@@ -1889,7 +1891,7 @@ $select-dd-check-height: 30px;
 
 //date picker
 $dp-label-color: $color-text-base !default;
-$dp-border-bottom: 1px solid $dp-label-color !default; // TODO Not found - need more attention
+$dp-border-bottom: 1px solid $dp-label-color !default;
 $dp-shadow: $dialog-shadow;
 $dp-arrow-size: $v-gap * 2;
 $dp-month-size: 0.875rem;
@@ -1898,27 +1900,26 @@ $dp-grid-size: 0.75rem;
 $dp-current-size: $v-gap * 4;
 
 // hero
-// TODO: Clean when these variables become obsolete
-// $hero-bg-color: $primary !default;
-// $hero-height-desk: 400px;
-// $hero-height-mob: 300px;
-// $hero-height-sm-desk: 400px;
-// $hero-height-sm-tab: 300px;
-// $hero-height-sm-mob: 300px;
-// $hero-text-padding: $v-gap * 3;
-// $hero-text-color: $white !default;
-// $hero-cat-size: 1rem;
-// $hero-heading-size: 2.5rem;
-// $hero-heding-size-desk: 3rem;
-// $hero-p-size: 1rem;
-// $hero-cat-spacing: $card-category-l-spacing !default;
-// $hero-text-padding-desk: 120px;
-// $hero-dark-bg: rgba($neutral-1-a10, 0.8) !default; // Missing in the UI kit
-// $hero-primary-bg: rgba($primary, 0.8) !default;
-// $hero-negative-margin: 2rem;
-// $hero-negative-margin-desk: 3rem;
-// $hero-negative-bottom-padding: 48px;
-// $hero-negative-bottom-padding-mob: 96px;
+$hero-bg-color: $primary !default;
+$hero-height-desk: 400px;
+$hero-height-mob: 300px;
+$hero-height-sm-desk: 400px;
+$hero-height-sm-tab: 300px;
+$hero-height-sm-mob: 300px;
+$hero-text-padding: $v-gap * 3;
+$hero-text-color: $white !default;
+$hero-cat-size: 1rem;
+$hero-heading-size: 2.5rem;
+$hero-heding-size-desk: 3rem;
+$hero-p-size: 1rem;
+$hero-cat-spacing: $card-category-l-spacing !default;
+$hero-text-padding-desk: 120px;
+$hero-dark-bg: rgba($neutral-1-a10, 0.8) !default; // Missing in the UI kit
+$hero-primary-bg: rgba($primary, 0.8) !default;
+$hero-negative-margin: 2rem;
+$hero-negative-margin-desk: 3rem;
+$hero-negative-bottom-padding: 48px;
+$hero-negative-bottom-padding-mob: 96px;
 
 // Carousel
 $crs-margin-bottom: $v-gap * 3;
@@ -1931,6 +1932,19 @@ $crs-heading-h-padding: $v-gap * 3;
 $crs-heading-h-size: 1.75rem;
 $crs-landcape-card-padding: $v-gap * 6; // Variabile non usata
 $crs-landscape-bottom: 5px;
+
+// Gridlist **************
+$grid-item-df-proportion: 66.81222707423581%;
+$grid-item-df-double-proportion: 33.4061135371179%;
+$grid-item-text-size: 0.75rem;
+$grid-item-text-color: $neutral-1 !default; // Missing in the UI kit - need more attention
+$grid-item-text-overlay-bg: $neutral-1-a10 !default; // Missing in the UI kit - need more attention
+$grid-list-default-gap: 2px;
+$grid-list-text-gap: $v-gap;
+$grid-item-sm-col: 50%;
+$grid-item-lg-col: 33.333333%;
+$grid-item-icon-size: 24px;
+$grid-item-overlay: hsla(210deg, 54%, 20%, 0.85);
 
 // list
 $list-font-size: 1rem;
@@ -1956,10 +1970,10 @@ $stepper-spacing-h: 24px;
 $stepper-spacing-v: 16px;
 
 // transfer
-$transfer-border: 1px solid $neutral-1-a3 !default; // TODO Not found
+$transfer-border: 1px solid $neutral-1-a3 !default;
 $transfer-descr-size: 0.75rem;
-$transfer-descr-color: $neutral-1-a8 !default; // TODO Not found
-$transfer-header-line-color: $neutral-1-a3 !default; // TODO Not found
+$transfer-descr-color: $neutral-1-a8 !default;
+$transfer-header-line-color: $neutral-1-a3 !default;
 $transfer-header-line-w: 65px;
 $transfer-height: 240px;
 

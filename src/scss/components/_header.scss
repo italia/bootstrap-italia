@@ -178,7 +178,7 @@
 .it-header-navbar-wrapper {
   position: absolute;
   top: 50%;
-  left: 8px; // TODO: use gutter variable when ready
+  left: 8px;
   z-index: 3;
   margin-top: -20px;
   transition: padding-top var(--#{$prefix}transition-instant) ease;

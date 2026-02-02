@@ -16,7 +16,7 @@
   --#{$prefix}alert-heading-color: var(--#{$prefix}color-text-base); // Controls the heading color for the alert, using color tokens.
   --#{$prefix}alert-icon-spacing: var(--#{$prefix}icon-spacing); // Controls the icon spacing for the alert, using spacing tokens.
   --#{$prefix}alert-spacing-inset: var(--#{$prefix}spacing-s); // Controls the inset spacing for the alert, using spacing tokens.
-  --#{$prefix}alert-spacing-inset-extra: var(--#{$prefix}spacing-16x); // Controls the extra inset spacing for the alert, using spacing tokens. // TODO: replace with semantic token
+  --#{$prefix}alert-spacing-inset-extra: var(--#{$prefix}spacing-16x); // Controls the extra inset spacing for the alert, using spacing tokens.
   --#{$prefix}alert-spacing-outside: var(--#{$prefix}spacing-m); // Controls the outside spacing for the alert, using spacing tokens.
   --#{$prefix}alert-text-color: var(--#{$prefix}color-text-base); // Controls the text color for the alert, using color tokens.
 }

@@ -454,6 +454,10 @@ Le opzioni possono essere passate tramite gli attributi data o tramite Javascrip
 ## Breaking change
 
 {% capture callout %}
+- La classe che controlla il colore dell'icona chevron per le varianti scure ha cambiato nome: `.icon-white` diventa `.icon-inverse`.
+{% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}
+
+{% capture callout %}
 - Spostato il pulsante "Indietro" come primo elemento della struttura interna di `.menu-wrapper`.
 
 Inoltre, la versione mobile o a forte ingrandimento del componente, che si basa sulla navbar presente anche nei componenti Header e Megamenu, è stata reimplementata come modale per migliorare l'accessibilità con le combinazioni principali di lettori di schermo, sistema operativo e browser. Modifiche principali: 

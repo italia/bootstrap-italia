@@ -268,6 +268,10 @@ Per aggiungere una serie di card all'interno di una Section si consiglia di util
 ## Breaking change
 
 {% capture callout %}
+- Negli esempi sono stati rimossi dai contenitori delle colonne tutte le classi custom per padding, margin e font a favore dello standard. 
+{% endcapture %}{% include callout-breaking.html version="3.0.0" content=callout type="danger" %}
+
+{% capture callout %}
 Implementato nell'esempio con card il nuovo componente card definito dalle classi `.it-card` e relativi modificatori.  
 
 Le classi legacy di Bootstrap `.card` sono ora deprecate ma **saranno mantenute nei fogli di stile fino al prossimo rilascio maggiore, per permettere una migrazione graduale**. 

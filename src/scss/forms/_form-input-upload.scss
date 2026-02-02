@@ -15,6 +15,7 @@
   // button styling
   &[type='file']+label {
     display: inline-block;
+    margin-bottom: 0;
     max-width: 80%;
     padding: var(--#{$prefix}spacing-xs) var(--#{$prefix}spacing-m);
     overflow: hidden;

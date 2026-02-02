@@ -211,3 +211,9 @@ myAlert.addEventListener('closed.bs.alert', () => {
 ```
 
 {% include properties.md properties=site.data.cprops.alert %}
+## Breaking change
+
+{% capture callout %}
+- Nel markup del componente il contenuto va incluso in un tag `<p>`. 
+- L'icona d'ora in poi va definita esplicitamente con il tag `<svg>` e la corretta semantica per l'accessibilità. 
+{% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}

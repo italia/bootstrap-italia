@@ -65,22 +65,22 @@ La sidebar può contenere icone nella sua Lista di link.
           <h3 class="no_toc">Header</h3>
         </li>
         <li>
-          <a class="list-item medium active left-icon" href="#">
+          <a class="list-item medium active" href="#">
             <svg class="icon icon-sm icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg><span>Link lista 1 (selezionato)</span>
           </a>
         </li>
         <li>
-          <a class="list-item medium disabled left-icon" href="#">
+          <a class="list-item medium disabled" href="#">
             <svg class="icon icon-sm icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg><span>Link lista 2 (disabilitato)</span>
           </a>
         </li>
         <li>
-          <a class="list-item medium left-icon" href="#">
+          <a class="list-item medium" href="#">
             <svg class="icon icon-sm icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg><span>Link lista 3</span>
           </a>
         </li>
         <li>
-          <a class="list-item medium left-icon" href="#">
+          <a class="list-item medium" href="#">
             <svg class="icon icon-sm icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg><span>Link lista 4</span>
           </a>
         </li>
@@ -339,6 +339,12 @@ sezione [attivazione Collapse tramite codice]({{ site.baseurl }}/docs/componenti
 {% include properties.md properties=site.data.cprops.sidebar %}
 
 ## Breaking change
+
+{% capture callout %}
+- Rimossi elementi `<span>` con classe `list-item-title-icon-wrapper`.
+- Nella variante con una lista di link primaria annidata è stata rimossa la classe `.large` dagli elementi `<a>` con classi `.list-item .medium`. 
+- Nelle varianti scure la classe che controlla il colore delle icone bianche ha cambiato nome: `.icon-white` diventa `.icon-inverse`.
+{% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}
 
 {% capture callout %}
 Gli elementi di tipo `<a>` dei collapse necessitano l'aggiunta dell'attributo `role="button"`.

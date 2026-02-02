@@ -12,9 +12,8 @@
   //reset input style
   input[type='number'] {
     appearance: textfield;
-    // border-right: 0;
-    border-top-right-radius: var(--bs-form-control-border-radius) !important;
-    border-bottom-right-radius: var(--bs-form-control-border-radius) !important;
+    border-top-right-radius: var(--#{$prefix}form-control-border-radius) !important;
+    border-bottom-right-radius: var(--#{$prefix}form-control-border-radius) !important;
 
     &::-webkit-inner-spin-button,
     &::-webkit-outer-spin-button {
@@ -89,12 +88,12 @@
     &:hover {
       &.input-number-add {
         &:after {
-          border-color: transparent transparent $dark transparent; // TODO Check if still necessary
+          border-color: transparent transparent var(--#{$prefix}form-control-border-color) transparent;
         }
       }
       &.input-number-sub {
         &:after {
-          border-color: $dark transparent transparent transparent; // TODO Check if still necessary
+          border-color: var(--#{$prefix}form-control-border-color) transparent transparent transparent;
         }
       }
     }
@@ -105,13 +104,13 @@
     &.input-number-add {
       &:after {
         border-width: 0 5px 6px 5px;
-        border-color: transparent transparent $neutral-1-a7 transparent; // TODO Check if still necessary
+        border-color: transparent transparent var(--#{$prefix}form-control-border-color) transparent;
       }
     }
     &.input-number-sub {
       &:after {
         border-width: 6px 5px 0 5px;
-        border-color: $neutral-1-a7 transparent transparent transparent; // TODO Check if still necessary
+        border-color: var(--#{$prefix}form-control-border-color) transparent transparent transparent;
       }
     }
     &:hover {

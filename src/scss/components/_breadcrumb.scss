@@ -28,7 +28,6 @@
 // Styles
 //
 
-
 .breadcrumb {
   display: flex;
   flex-wrap: wrap;
@@ -37,6 +36,25 @@
   background-color: var(--#{$prefix}breadcrumb-background, transparent);
   list-style: none;
   font-size: var(--#{$prefix}breadcrumb-font-size);
+
+  // Variant on dark background
+
+  &.dark {
+    --#{$prefix}breadcrumb-background: var(--#{$prefix}color-background-emphasis);
+    --#{$prefix}breadcrumb-link-color: var(--#{$prefix}color-text-inverse);
+    --#{$prefix}breadcrumb-item-active-color: var(--#{$prefix}color-text-inverse);
+    --#{$prefix}breadcrumb-divider-color: var(--#{$prefix}color-text-inverse);
+
+    .breadcrumb-item {
+      span.separator {
+        color: var(--#{$prefix}breadcrumb-link-color);
+      }
+
+      i {
+        color: var(--#{$prefix}breadcrumb-divider-color);
+      }
+    }
+  }
 }
 
 .breadcrumb-item {
@@ -78,25 +96,6 @@
     display: inline-block;
     padding: 0 var(--#{$prefix}breadcrumb-separator-spacing);
     color: var(--#{$prefix}breadcrumb-separator-color);
-  }
-
-  // Variant on dark background
-  // todo: remove class directly applied to breadcrumb
-  &.dark {
-    --#{$prefix}breadcrumb-background: var(--#{$prefix}color-background-emphasis);
-    --#{$prefix}breadcrumb-link-color: var(--#{$prefix}color-text-inverse);
-    --#{$prefix}breadcrumb-item-active-color: var(--#{$prefix}color-text-inverse);
-    --#{$prefix}breadcrumb-divider-color: var(--#{$prefix}color-text-inverse);
-
-    .breadcrumb-item {
-      span.separator {
-        color: var(--#{$prefix}breadcrumb-link-color);
-      }
-
-      i {
-        color: var(--#{$prefix}breadcrumb-divider-color);
-      }
-    }
   }
 }
 

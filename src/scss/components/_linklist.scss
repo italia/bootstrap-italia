@@ -55,6 +55,7 @@
   .list-item {
     position: relative;
     display: inline-flex;
+    flex: 1;
     padding-top: var(--#{$prefix}linklist-item-spacing);
     padding-bottom: var(--#{$prefix}linklist-item-spacing);
     text-decoration: none;
@@ -119,7 +120,7 @@
 
     // Increase font-size and spacing for list item link with large class
     &.large {
-      --#{$prefix}linklist-item-font-size: var(--#{$prefix}label-font-size-m);
+      --#{$prefix}linklist-item-font-size: var(--#{$prefix}label-font-size-l);
     }
 
     // Avatar position inside the list item
@@ -191,6 +192,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      flex: 1;
 
       .list-item-title {
         margin-right: var(--#{$prefix}spacing-xxs);
@@ -238,7 +240,7 @@
   .list-item-title {
     font-size: var(--#{$prefix}label-font-size);
     @include media-breakpoint-up(lg) {
-      font-size: var(--#{$prefix}label-font-size-m);
+      font-size: var(--#{$prefix}label-font-size-l);
     }
   }
 
@@ -272,6 +274,6 @@
 
   .link-list-wrapper .list-item.disabled,
   .link-list-wrapper .list-item.disabled span {
-    color: hsla(0, 0%, 100%, 0.35); // TODO: Add color variable for dark variant
+    color: hsla(var(--#{$prefix}color-text-base), 0.35);
   }
 }

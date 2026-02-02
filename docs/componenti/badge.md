@@ -82,3 +82,9 @@ Se hai bisogno di trasformare un badge in un link, aggiungi una delle classi con
 {% endcapture %}{% include example.html content=example %}
 
 {% include properties.md properties=site.data.cprops.badge %}
+## Breaking change
+
+{% capture callout %}
+- Le classi che controllano il colore diventano specifiche per il componente e hanno cambiato nome, ad esempio le classi `.bg-secondary` e `.bg-white` diventano `.badge-secondary` e `.badge-inverse`.
+- Viene definita la classe `.badge-sm` per l'uso mirato all'intero di pulsanti.  
+{% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}
