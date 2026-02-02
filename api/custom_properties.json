@@ -210,7 +210,7 @@
             "variable-name": "--bsi-alert-spacing-inset"
         },
         {
-            "description": "Controls the extra inset spacing for the alert, using spacing tokens.  todo: replace with semantic token",
+            "description": "Controls the extra inset spacing for the alert, using spacing tokens.",
             "value": "var(--bsi-spacing-16x)",
             "variable-name": "--bsi-alert-spacing-inset-extra"
         },
@@ -1631,6 +1631,23 @@
             "variable-name": "--bsi-dropdown-zindex"
         }
     ],
+    "elevation": [
+        {
+            "description": "",
+            "value": "var(--it-elevation-high)",
+            "variable-name": "--bsi-elevation-high"
+        },
+        {
+            "description": "",
+            "value": "var(--it-elevation-medium)",
+            "variable-name": "--bsi-elevation-medium"
+        },
+        {
+            "description": "",
+            "value": "var(--it-elevation-low-)",
+            "variable-name": "--bsi-elevation-low"
+        }
+    ],
     "font": [
         {
             "description": "",
@@ -2383,6 +2400,133 @@
             "variable-name": "--bsi-ins-background"
         }
     ],
+    "it": [
+        {
+            "description": "",
+            "value": "var(--bsi-color-background-inverse)",
+            "variable-name": "--bsi-it-card-background"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-border-subtle)",
+            "variable-name": "--bsi-it-card-border-color"
+        },
+        {
+            "description": "",
+            "value": "calc(var(--bsi-it-card-border-radius) - var(--bsi-it-card-border-outside-width))",
+            "variable-name": "--bsi-it-card-border-radius-inner"
+        },
+        {
+            "description": "Default background set to transparent",
+            "value": "transparent",
+            "variable-name": "--bsi-it-card-border-top-color"
+        },
+        {
+            "description": "",
+            "value": "6px",
+            "variable-name": "--bsi-it-card-border-top-width"
+        },
+        {
+            "description": "Change to 2px if needed",
+            "value": "1px",
+            "variable-name": "--bsi-it-card-border-outside-width"
+        },
+        {
+            "description": "Change to 2px if needed",
+            "value": "1px",
+            "variable-name": "--bsi-it-card-border-separator-width"
+        },
+        {
+            "description": "",
+            "value": "transparent",
+            "variable-name": "--bsi-it-card-footer-background"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-text-muted)",
+            "variable-name": "--bsi-it-card-footer-text-color"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-spacing-s)",
+            "variable-name": "--bsi-it-card-spacing-x"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-spacing-s)",
+            "variable-name": "--bsi-it-card-spacing-y"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-text-muted)",
+            "variable-name": "--bsi-it-card-category-color"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-font-weight-solid)",
+            "variable-name": "--bsi-it-card-category-font-weight"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-label-font-size)",
+            "variable-name": "--bsi-it-card-category-font-size"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-text-secondary)",
+            "variable-name": "--bsi-it-card-text-color"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-text-muted)",
+            "variable-name": "--bsi-it-card-date-color"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-label-font-size-s)",
+            "variable-name": "--bsi-it-card-date-font-size"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-text-muted)",
+            "variable-name": "--bsi-it-card-description-color"
+        },
+        {
+            "description": "",
+            "value": "auto",
+            "variable-name": "--bsi-it-card-height"
+        },
+        {
+            "description": "",
+            "value": "240px",
+            "variable-name": "--bsi-it-card-inline-min-height"
+        },
+        {
+            "description": "",
+            "value": "160px",
+            "variable-name": "--bsi-it-card-inline-mini-min-height"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-text-secondary)",
+            "variable-name": "--bsi-it-card-link-color"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-it-card-spacing-y)",
+            "variable-name": "--bsi-it-card-title-spacing-y"
+        },
+        {
+            "description": "",
+            "value": "1rem",
+            "variable-name": "--bsi-it-card-signature-font-size"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-font-mono)",
+            "variable-name": "--bsi-it-card-signature-font-family"
+        }
+    ],
     "label": [
         {
             "description": "",
@@ -2401,8 +2545,8 @@
         },
         {
             "description": "",
-            "value": "var(--it-label-font-size-m)",
-            "variable-name": "--bsi-label-font-size-m"
+            "value": "var(--it-label-font-size-l)",
+            "variable-name": "--bsi-label-font-size-l"
         },
         {
             "description": "",
@@ -2703,7 +2847,7 @@
         },
         {
             "description": "",
-            "value": "var(--bsi-label-font-size)",
+            "value": "var(--bsi-label-font-size-l)",
             "variable-name": "--bsi-navbar-link-font-size"
         },
         {
@@ -3178,47 +3322,47 @@
     ],
     "spacing": [
         {
-            "description": "",
+            "description": "Equal to 6rem (96px)",
             "value": "var(--it-spacing-3xl)",
             "variable-name": "--bsi-spacing-3xl"
         },
         {
-            "description": "",
+            "description": "Equal to 3rem (48px)",
             "value": "var(--it-spacing-xxl)",
             "variable-name": "--bsi-spacing-xxl"
         },
         {
-            "description": "",
+            "description": "Equal to 2.5rem (40px)",
             "value": "var(--it-spacing-xl)",
             "variable-name": "--bsi-spacing-xl"
         },
         {
-            "description": "",
+            "description": "Equal to 2rem (32px)",
             "value": "var(--it-spacing-l)",
             "variable-name": "--bsi-spacing-l"
         },
         {
-            "description": "",
+            "description": "Equal to 1.5rem (24px)",
             "value": "var(--it-spacing-m)",
             "variable-name": "--bsi-spacing-m"
         },
         {
-            "description": "",
+            "description": "Equal to 1rem (16px)",
             "value": "var(--it-spacing-s)",
             "variable-name": "--bsi-spacing-s"
         },
         {
-            "description": "",
+            "description": "Equal to 0.75rem (12px)",
             "value": "var(--it-spacing-xs)",
             "variable-name": "--bsi-spacing-xs"
         },
         {
-            "description": "",
+            "description": "Equal to 0.5rem (8px)",
             "value": "var(--it-spacing-xxs)",
             "variable-name": "--bsi-spacing-xxs"
         },
         {
-            "description": "",
+            "description": "Equal to 0.25rem (4px)",
             "value": "var(--it-spacing-3xs)",
             "variable-name": "--bsi-spacing-3xs"
         }
