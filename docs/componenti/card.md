@@ -1108,7 +1108,7 @@ Negli esempi abbiamo utilizzato il tag `h4` per i titoli `.it-card-profile-name`
     <!--start it-card-->
     <article class="it-card it-card-profile it-card-height-full rounded shadow-sm border ">
       <div class="it-card-profile-header">
-        <div class="it-card-profile">
+        <div class="it-card-profile-content">
           <h4 class="it-card-profile-name no_toc">
             <a href="#">Nome Personale</a>
           </h4>
