@@ -190,7 +190,7 @@ input[type='time'] {
   display: flex;
 }
 
-fieldset {visibility: hidden;
+fieldset {
   legend {
     margin-bottom: var(--#{$prefix}spacing-s);
     padding: 0 var(--#{$prefix}form-input-spacing-x);
@@ -410,7 +410,7 @@ input::-webkit-datetime-edit {
       &::after,
       &::before {
         position: absolute;
-        top: 0;
+        top: 4px;
         left: 0;
         z-index: 0;
         content: '';
@@ -515,7 +515,7 @@ input::-webkit-datetime-edit {
   }
 
   input.semi-checked:not(:checked)+label::before {
-    top: 9px;
+    top: 12px;
     left: 4px;
     width: 12px;
     height: 2px;
