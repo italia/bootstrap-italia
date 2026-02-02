@@ -6,12 +6,12 @@
 
   .dropdown-item {
     &.active {
-      background-color: var(--bs-primary);
+      background-color: var(--bsi-primary);
       color: white;
 
       &:focus,
       &:hover {
-        background-color: var(--bs-primary);
+        background-color: var(--bsi-primary);
         color: white;
       }
     }
