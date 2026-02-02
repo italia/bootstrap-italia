@@ -10,13 +10,13 @@
 //
 
 .link-list-wrapper {
-  --#{$prefix}linklist-divider-size: 1px;
-  --#{$prefix}linklist-heading-color: var(--#{$prefix}color-text-secondary);
-  --#{$prefix}linklist-heading-font-size: var(--#{$prefix}heading-6-font-size);
-  --#{$prefix}linklist-item-font-size: var(--#{$prefix}label-font-size);
-  --#{$prefix}linklist-item-line-height: var(--#{$prefix}label-line-height);
-  --#{$prefix}linklist-item-spacing: var(--#{$prefix}spacing-xxs);
-  --#{$prefix}linklist-nested-spacing: var(--#{$prefix}spacing-s);
+  --#{$prefix}linklist-divider-size: 1px; // Controls the height of the divider between list items
+  --#{$prefix}linklist-heading-color: var(--#{$prefix}color-text-secondary); // Controls the color of the linklist heading, using text color tokens
+  --#{$prefix}linklist-heading-font-size: var(--#{$prefix}heading-6-font-size); // Controls the font size of the linklist heading, using text tokens
+  --#{$prefix}linklist-item-font-size: var(--#{$prefix}label-font-size); // Controls the font size of the list items, using text tokens
+  --#{$prefix}linklist-item-line-height: var(--#{$prefix}label-line-height); // Controls the line height of the list items, using text tokens
+  --#{$prefix}linklist-item-spacing: var(--#{$prefix}spacing-xxs); // Controls the vertical spacing of the list items, using spacing tokens
+  --#{$prefix}linklist-nested-spacing: var(--#{$prefix}spacing-s); // Controls the left padding of nested linklists, using spacing tokens
 }
 
 // Styles
