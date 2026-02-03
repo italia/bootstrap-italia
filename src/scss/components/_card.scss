@@ -10,31 +10,31 @@
 //
 
 .it-card {
-  --#{$prefix}it-card-background: var(--#{$prefix}color-background-inverse);
-  --#{$prefix}it-card-border-color: var(--#{$prefix}color-border-subtle);
-  --#{$prefix}it-card-border-radius-inner: calc(var(--#{$prefix}it-card-border-radius) - var(--#{$prefix}it-card-border-outside-width));
-  --#{$prefix}it-card-border-top-color: transparent; // default background set to transparent
-  --#{$prefix}it-card-border-top-width: 6px;
-  --#{$prefix}it-card-border-outside-width: 1px; // change to 2px if needed
-  --#{$prefix}it-card-border-separator-width: 1px; // change to 2px if needed
-  --#{$prefix}it-card-footer-background: transparent;
-  --#{$prefix}it-card-footer-text-color: var(--#{$prefix}color-text-muted);
-  --#{$prefix}it-card-spacing-x: var(--#{$prefix}spacing-s);
-  --#{$prefix}it-card-spacing-y: var(--#{$prefix}spacing-s);
-  --#{$prefix}it-card-category-color: var(--#{$prefix}color-text-muted);
-  --#{$prefix}it-card-category-font-weight: var(--#{$prefix}font-weight-solid);
-  --#{$prefix}it-card-category-font-size: var(--#{$prefix}label-font-size);
-  --#{$prefix}it-card-text-color: var(--#{$prefix}color-text-secondary);
-  --#{$prefix}it-card-date-color: var(--#{$prefix}color-text-muted);
-  --#{$prefix}it-card-date-font-size: var(--#{$prefix}label-font-size-s);
-  --#{$prefix}it-card-description-color: var(--#{$prefix}color-text-muted);
-  --#{$prefix}it-card-height: auto;
-  --#{$prefix}it-card-inline-min-height: 240px;
-  --#{$prefix}it-card-inline-mini-min-height: 160px;
-  --#{$prefix}it-card-link-color: var(--#{$prefix}color-text-secondary);
-  --#{$prefix}it-card-title-spacing-y: var(--#{$prefix}it-card-spacing-y);
-  --#{$prefix}it-card-signature-font-size: 1rem;
-  --#{$prefix}it-card-signature-font-family: var(--#{$prefix}font-mono);
+  --#{$prefix}card-background: var(--#{$prefix}color-background-inverse);
+  --#{$prefix}card-border-color: var(--#{$prefix}color-border-subtle);
+  --#{$prefix}card-border-radius-inner: calc(var(--#{$prefix}card-border-radius) - var(--#{$prefix}card-border-outside-width));
+  --#{$prefix}card-border-top-color: transparent; // default background set to transparent
+  --#{$prefix}card-border-top-width: 6px;
+  --#{$prefix}card-border-outside-width: 1px; // change to 2px if needed
+  --#{$prefix}card-border-separator-width: 1px; // change to 2px if needed
+  --#{$prefix}card-footer-background: transparent;
+  --#{$prefix}card-footer-text-color: var(--#{$prefix}color-text-muted);
+  --#{$prefix}card-spacing-x: var(--#{$prefix}spacing-s);
+  --#{$prefix}card-spacing-y: var(--#{$prefix}spacing-s);
+  --#{$prefix}card-category-color: var(--#{$prefix}color-text-muted);
+  --#{$prefix}card-category-font-weight: var(--#{$prefix}font-weight-solid);
+  --#{$prefix}card-category-font-size: var(--#{$prefix}label-font-size);
+  --#{$prefix}card-text-color: var(--#{$prefix}color-text-secondary);
+  --#{$prefix}card-date-color: var(--#{$prefix}color-text-muted);
+  --#{$prefix}card-date-font-size: var(--#{$prefix}label-font-size-s);
+  --#{$prefix}card-description-color: var(--#{$prefix}color-text-muted);
+  --#{$prefix}card-height: auto;
+  --#{$prefix}card-inline-min-height: 240px;
+  --#{$prefix}card-inline-mini-min-height: 160px;
+  --#{$prefix}card-link-color: var(--#{$prefix}color-text-secondary);
+  --#{$prefix}card-title-spacing-y: var(--#{$prefix}card-spacing-y);
+  --#{$prefix}card-signature-font-size: 1rem;
+  --#{$prefix}card-signature-font-family: var(--#{$prefix}font-mono);
 }
 
 // Styles
@@ -46,10 +46,10 @@
   flex-direction: column;
   width: 100%;
   min-width: 0; // See https://github.com/twbs/bootstrap/pull/22740#issuecomment-305868106
-  height: var(--#{$prefix}it-card-height);
-  padding: var(--#{$prefix}it-card-spacing-y) var(--#{$prefix}it-card-spacing-x);
-  background-color: var(--#{$prefix}it-card-background);
-  color: var(--#{$prefix}it-card-text-color);
+  height: var(--#{$prefix}card-height);
+  padding: var(--#{$prefix}card-spacing-y) var(--#{$prefix}card-spacing-x);
+  background-color: var(--#{$prefix}card-background);
+  color: var(--#{$prefix}card-text-color);
   word-break: break-word;
   overflow-wrap: break-word;
   background-clip: border-box;
@@ -81,9 +81,9 @@
     flex-wrap: wrap;
     align-items: flex-end;
     justify-content: flex-end;
-    margin-top: var(--#{$prefix}it-card-spacing-y);
-    gap: var(--#{$prefix}it-card-spacing-y);
-    color: var(--#{$prefix}it-card-footer-text-color);
+    margin-top: var(--#{$prefix}card-spacing-y);
+    gap: var(--#{$prefix}card-spacing-y);
+    color: var(--#{$prefix}card-footer-text-color);
   }
 
   // Card taxonomy area, can contain category, tags, date
@@ -95,9 +95,9 @@
   .it-card-category {
     display: inline-block;
     margin-bottom: 0;
-    color: var(--#{$prefix}it-card-category-color);
-    font-size: var(--#{$prefix}it-card-category-font-size);
-    font-weight: var(--#{$prefix}it-card-category-font-weight);
+    color: var(--#{$prefix}card-category-color);
+    font-size: var(--#{$prefix}card-category-font-size);
+    font-weight: var(--#{$prefix}card-category-font-weight);
     text-transform: uppercase;
   }
 
@@ -108,24 +108,24 @@
     margin-bottom: 0;
     padding: 0;
     list-style-type: none;
-    gap: calc(var(--#{$prefix}it-card-spacing-y)*0.5); // use half spacing for gap
+    gap: calc(var(--#{$prefix}card-spacing-y)*0.5); // use half spacing for gap
   }
 
   // Card date, use <time> if possible
   .it-card-date {
-    color: var(--#{$prefix}it-card-date-color);
-    font-size: var(--#{$prefix}it-card-date-font-size);
+    color: var(--#{$prefix}card-date-color);
+    font-size: var(--#{$prefix}card-date-font-size);
   }
 
   // Card description list, use <dl><dt><dd> if possible
   .it-card-description-list {
     display: flex;
     flex-direction: column;
-    padding-top: var(--#{$prefix}it-card-spacing-y);
-    padding-bottom: var(--#{$prefix}it-card-spacing-y);
-    border-top: var(--#{$prefix}it-card-border-separator-width) solid var(--#{$prefix}it-card-border-color);
-    border-bottom: var(--#{$prefix}it-card-border-separator-width) solid var(--#{$prefix}it-card-border-color);
-    color: var(--#{$prefix}it-card-description-color);
+    padding-top: var(--#{$prefix}card-spacing-y);
+    padding-bottom: var(--#{$prefix}card-spacing-y);
+    border-top: var(--#{$prefix}card-border-separator-width) solid var(--#{$prefix}card-border-color);
+    border-bottom: var(--#{$prefix}card-border-separator-width) solid var(--#{$prefix}card-border-color);
+    color: var(--#{$prefix}card-description-color);
     font-size: var(--#{$prefix}label-font-size);
     line-height: var(--#{$prefix}label-line-height);
     gap: var(--#{$prefix}spacing-s);
@@ -154,35 +154,35 @@
 
   // Card action area, can contain buttons, links, etc.
   .it-card-actions {
-    margin-top: var(--#{$prefix}it-card-spacing-y); // separate from sibling content (body or footer)
-    padding-top: var(--#{$prefix}it-card-spacing-y); // reset left/right padding to 0, using margin instead
-    border-top: var(--#{$prefix}it-card-border-separator-width) solid var(--#{$prefix}it-card-border-color);
-    background-color: var(--#{$prefix}it-card-footer-background);
+    margin-top: var(--#{$prefix}card-spacing-y); // separate from sibling content (body or footer)
+    padding-top: var(--#{$prefix}card-spacing-y); // reset left/right padding to 0, using margin instead
+    border-top: var(--#{$prefix}card-border-separator-width) solid var(--#{$prefix}card-border-color);
+    background-color: var(--#{$prefix}card-footer-background);
     font-size: var(--#{$prefix}label-font-size);
     line-height: var(--#{$prefix}label-line-height);
 
     &:last-child {
-      @include border-radius(0 0 var(--#{$prefix}it-card-border-radius-inner) var(--#{$prefix}it-card-border-radius-inner));
+      @include border-radius(0 0 var(--#{$prefix}card-border-radius-inner) var(--#{$prefix}card-border-radius-inner));
     }
   }
 
   // Card links
   .it-card-link {
-    color: var(--#{$prefix}it-card-link-color);
+    color: var(--#{$prefix}card-link-color);
 
     &:hover {
       color: color-hover($color-text-secondary);
     }
 
     +.it-card-link {
-      margin-left: var(--#{$prefix}it-card-spacing-x);
+      margin-left: var(--#{$prefix}card-spacing-x);
     }
   }
 
   // Card body and content
   .it-card-body {
     flex: 1 1 auto;
-    color: var(--#{$prefix}it-card-text-color);
+    color: var(--#{$prefix}card-text-color);
 
     // Card subtitle or event timeframe
     .it-card-subtitle {
@@ -204,10 +204,10 @@
 
     // Card author
     .it-card-signature {
-      margin-bottom: calc(0.5 * var(--#{$prefix}it-card-title-spacing-y));
-      color: var(--#{$prefix}it-card-text-color);
-      font-family: var(--#{$prefix}it-card-signature-font-family);
-      font-size: var(--#{$prefix}it-card-signature-font-size);
+      margin-bottom: calc(0.5 * var(--#{$prefix}card-title-spacing-y));
+      color: var(--#{$prefix}card-text-color);
+      font-family: var(--#{$prefix}card-signature-font-family);
+      font-size: var(--#{$prefix}card-signature-font-size);
     }
   }
 
@@ -244,7 +244,7 @@
       flex-wrap: wrap-reverse;
       align-items: center;
       justify-content: space-between;
-      gap: var(--#{$prefix}it-card-spacing-x);
+      gap: var(--#{$prefix}card-spacing-x);
 
       .it-card-profile {
 
@@ -279,7 +279,7 @@
     }
 
     .it-card-body {
-      margin-top: var(--#{$prefix}it-card-spacing-y);
+      margin-top: var(--#{$prefix}card-spacing-y);
     }
   }
 
@@ -288,8 +288,8 @@
   .it-card-body>.list-group {
     margin-top: var(--#{$prefix}spacing-s);
     margin-bottom: var(--#{$prefix}spacing-s);
-    border-top: var(--#{$prefix}it-card-border-separator-width) solid var(--#{$prefix}it-card-border-color);
-    border-bottom: var(--#{$prefix}it-card-border-separator-width) solid var(--#{$prefix}it-card-border-color);
+    border-top: var(--#{$prefix}card-border-separator-width) solid var(--#{$prefix}card-border-color);
+    border-bottom: var(--#{$prefix}card-border-separator-width) solid var(--#{$prefix}card-border-color);
 
     .list-group-item {
       padding: var(--#{$prefix}spacing-xs) 0;
@@ -297,12 +297,12 @@
 
     &:first-child {
       border-top-width: 0;
-      @include border-top-radius(var(--#{$prefix}it-card-border-radius-inner));
+      @include border-top-radius(var(--#{$prefix}card-border-radius-inner));
     }
 
     &:last-child {
       border-bottom-width: 0;
-      @include border-bottom-radius(var(--#{$prefix}it-card-border-radius-inner));
+      @include border-bottom-radius(var(--#{$prefix}card-border-radius-inner));
     }
   }
 
@@ -313,8 +313,8 @@
 
   // Card image responsive wrapper and a11y DOM order hack
   &.it-card-image {
-    @include border-top-radius(var(--#{$prefix}it-card-border-radius-inner));
-    @include border-bottom-radius(var(--#{$prefix}it-card-border-radius-inner));
+    @include border-top-radius(var(--#{$prefix}card-border-radius-inner));
+    @include border-bottom-radius(var(--#{$prefix}card-border-radius-inner));
 
     // Reset margin because of '.ratio' positioning
     figure {
@@ -328,8 +328,8 @@
 
     &.rounded {
       .it-card-image-wrapper img {
-        border-top-left-radius: var(--#{$prefix}it-card-border-radius-inner);
-        border-top-right-radius: var(--#{$prefix}it-card-border-radius-inner);
+        border-top-left-radius: var(--#{$prefix}card-border-radius-inner);
+        border-top-right-radius: var(--#{$prefix}card-border-radius-inner);
       }
 
       &.it-card-border-top {
@@ -348,10 +348,10 @@
   // Full width image, outside the padding area
   &.it-card-image:not(.it-card-inline) .it-card-image-wrapper {
     display: block;
-    width: calc(100% + (2 * var(--#{$prefix}it-card-spacing-x))); // full width including padding area
-    margin-right: calc(-1 * var(--#{$prefix}it-card-spacing-x)); // negative margin to compensate padding
-    margin-bottom: calc(0.5 * var(--#{$prefix}it-card-spacing-y)); // spacing between image and content
-    margin-left: calc(-1 * var(--#{$prefix}it-card-spacing-x)); // negative margin to compensate padding
+    width: calc(100% + (2 * var(--#{$prefix}card-spacing-x))); // full width including padding area
+    margin-right: calc(-1 * var(--#{$prefix}card-spacing-x)); // negative margin to compensate padding
+    margin-bottom: calc(0.5 * var(--#{$prefix}card-spacing-y)); // spacing between image and content
+    margin-left: calc(-1 * var(--#{$prefix}card-spacing-x)); // negative margin to compensate padding
     overflow: hidden;
   }
 
@@ -364,8 +364,8 @@
       left: 0;
       content: '';
       display: block;
-      height: var(--#{$prefix}it-card-border-top-width);
-      background: var(--#{$prefix}it-card-border-top-color);
+      height: var(--#{$prefix}card-border-top-width);
+      background: var(--#{$prefix}card-border-top-color);
     }
 
     &.rounded {
@@ -376,23 +376,23 @@
 
     // Border Top Color
     &.it-card-border-top-primary::after {
-      --#{$prefix}it-card-border-top-color: var(--#{$prefix}color-border-primary);
+      --#{$prefix}card-border-top-color: var(--#{$prefix}color-border-primary);
     }
 
     &.it-card-border-top-secondary::after {
-      --#{$prefix}it-card-border-top-color: var(--#{$prefix}color-border-secondary);
+      --#{$prefix}card-border-top-color: var(--#{$prefix}color-border-secondary);
     }
 
     &.it-card-border-top-success::after {
-      --#{$prefix}it-card-border-top-color: var(--#{$prefix}color-border-success);
+      --#{$prefix}card-border-top-color: var(--#{$prefix}color-border-success);
     }
 
     &.it-card-border-top-warning::after {
-      --#{$prefix}it-card-border-top-color: var(--#{$prefix}color-border-warning);
+      --#{$prefix}card-border-top-color: var(--#{$prefix}color-border-warning);
     }
 
     &.it-card-border-top-danger::after {
-      --#{$prefix}it-card-border-top-color: var(--#{$prefix}color-border-danger);
+      --#{$prefix}card-border-top-color: var(--#{$prefix}color-border-danger);
     }
   }
 
@@ -418,9 +418,9 @@
         }
       }
 
-      margin-top: calc(2 * var(--#{$prefix}it-card-title-spacer-y));
-      margin-bottom: var(--#{$prefix}it-card-title-spacer-y);
-      padding: 0 var(--#{$prefix}it-card-spacer-x);
+      margin-top: calc(2 * var(--#{$prefix}card-title-spacer-y));
+      margin-bottom: var(--#{$prefix}card-title-spacer-y);
+      padding: 0 var(--#{$prefix}card-spacer-x);
 
       .it-card-profile {
         flex: 1;
@@ -486,7 +486,7 @@
     }
 
     .it-card-footer {
-      padding-top: var(--#{$prefix}it-card-spacing-y);
+      padding-top: var(--#{$prefix}card-spacing-y);
       border-top: 0;
     }
   }
@@ -496,7 +496,7 @@
     display: flex;
     flex-direction: column;
     flex: 1; // make content area grow to fill available space
-    padding: var(--#{$prefix}it-card-spacing-y) var(--#{$prefix}it-card-spacing-x);
+    padding: var(--#{$prefix}card-spacing-y) var(--#{$prefix}card-spacing-x);
   }
 
   // Layout inline
@@ -514,7 +514,7 @@
 
       // Changes for inline cards except mini variant
       &:not(.it-card-inline-mini) {
-        min-height: var(--#{$prefix}it-card-inline-min-height);
+        min-height: var(--#{$prefix}card-inline-min-height);
 
         &.it-card-image .it-card-image-wrapper,
         &.it-card-image .it-card-inline-content {
@@ -543,15 +543,15 @@
       &.rounded {
         .it-card-image-wrapper img {
           border-top-right-radius: 0;
-          border-bottom-left-radius: var(--#{$prefix}it-card-border-radius-inner);
+          border-bottom-left-radius: var(--#{$prefix}card-border-radius-inner);
         }
 
         &.it-card-inline-reverse {
           .it-card-image-wrapper img {
             border-top-left-radius: 0;
-            border-top-right-radius: var(--#{$prefix}it-card-border-radius-inner);
+            border-top-right-radius: var(--#{$prefix}card-border-radius-inner);
             border-bottom-left-radius: 0;
-            border-bottom-right-radius: var(--#{$prefix}it-card-border-radius-inner);
+            border-bottom-right-radius: var(--#{$prefix}card-border-radius-inner);
           }
         }
       }
@@ -560,7 +560,7 @@
     // Mini variant for inline cards
     &.it-card-inline-mini {
       flex-direction: row; // default to row  for mini
-      min-height: var(--#{$prefix}it-card-inline-mini-min-height);
+      min-height: var(--#{$prefix}card-inline-mini-min-height);
 
       // Set image order to last for inline mini reverse
       &.it-card-inline-reverse .it-card-image-wrapper {
@@ -630,10 +630,10 @@ ul.it-card-list {
 
 // Improved responsive it-card-group with a @container aware twist
 .it-card-group {
-  --#{$prefix}it-card-group-gap: 24px;
+  --#{$prefix}card-group-gap: 24px;
   display: flex;
   flex-wrap: wrap;
-  gap: var(--#{$prefix}it-card-group-gap);
+  gap: var(--#{$prefix}card-group-gap);
 
   >.it-card {
     margin: 0;
@@ -657,28 +657,28 @@ ul.it-card-list {
         }
 
         @container (min-width: 500px) {
-          flex: 0 0 calc(50% - 0.5 * var(--#{$prefix}it-card-group-gap));
+          flex: 0 0 calc(50% - 0.5 * var(--#{$prefix}card-group-gap));
         }
 
         @container (min-width: 800px) {
-          flex: 0 0 calc(33.333% - 0.667 * var(--#{$prefix}it-card-group-gap));
+          flex: 0 0 calc(33.333% - 0.667 * var(--#{$prefix}card-group-gap));
         }
 
         @container (min-width: 1100px) {
-          flex: 0 0 calc(25% - 0.75 * var(--#{$prefix}it-card-group-gap));
+          flex: 0 0 calc(25% - 0.75 * var(--#{$prefix}card-group-gap));
         }
       }
 
       // Override specific columns in container mode
       &.it-card-group-2-cols>.it-card {
         @container (min-width: 500px) {
-          flex: 0 0 calc(50% - 0.5 * var(--#{$prefix}it-card-group-gap));
+          flex: 0 0 calc(50% - 0.5 * var(--#{$prefix}card-group-gap));
         }
       }
 
       &.it-card-group-3-cols>.it-card {
         @container (min-width: 800px) {
-          flex: 0 0 calc(33.333% - 0.667 * var(--#{$prefix}it-card-group-gap));
+          flex: 0 0 calc(33.333% - 0.667 * var(--#{$prefix}card-group-gap));
         }
       }
     }
@@ -686,20 +686,20 @@ ul.it-card-list {
 
   >.it-card {
     // Default stacked on mobile
-    flex: 0 0 calc(100% - var(--#{$prefix}it-card-group-gap));
-    // margin: calc(0.5 * var(--#{$prefix}it-card-group-gap));
+    flex: 0 0 calc(100% - var(--#{$prefix}card-group-gap));
+    // margin: calc(0.5 * var(--#{$prefix}card-group-gap));
 
     // Responsive breakpoints
     @include media-breakpoint-up(sm) {
-      flex: 0 0 calc(50% - 0.5 * var(--#{$prefix}it-card-group-gap));
+      flex: 0 0 calc(50% - 0.5 * var(--#{$prefix}card-group-gap));
     }
 
     @include media-breakpoint-up(md) {
-      flex: 0 0 calc(33.333% - 0.667 * var(--#{$prefix}it-card-group-gap));
+      flex: 0 0 calc(33.333% - 0.667 * var(--#{$prefix}card-group-gap));
     }
 
     @include media-breakpoint-up(lg) {
-      flex: 0 0 calc(25% - 0.75 * var(--#{$prefix}it-card-group-gap));
+      flex: 0 0 calc(25% - 0.75 * var(--#{$prefix}card-group-gap));
     }
   }
 
@@ -708,23 +708,23 @@ ul.it-card-list {
   &.it-card-group-3-cols>.it-card,
   &.it-card-group-4-cols>.it-card {
     @include media-breakpoint-up(sm) {
-      flex: 0 0 calc(50% - 0.5 * var(--#{$prefix}it-card-group-gap));
+      flex: 0 0 calc(50% - 0.5 * var(--#{$prefix}card-group-gap));
     }
   }
 
   &.it-card-group-3-cols>.it-card {
     @include media-breakpoint-up(md) {
-      flex: 0 0 calc(33.333% - 0.667 * var(--#{$prefix}it-card-group-gap));
+      flex: 0 0 calc(33.333% - 0.667 * var(--#{$prefix}card-group-gap));
     }
   }
 
   &.it-card-group-4-cols>.it-card {
     @include media-breakpoint-up(md) {
-      flex: 0 0 calc(33.333% - 0.667 * var(--#{$prefix}it-card-group-gap));
+      flex: 0 0 calc(33.333% - 0.667 * var(--#{$prefix}card-group-gap));
     }
 
     @include media-breakpoint-up(lg) {
-      flex: 0 0 calc(25% - 0.75 * var(--#{$prefix}it-card-group-gap));
+      flex: 0 0 calc(25% - 0.75 * var(--#{$prefix}card-group-gap));
     }
   }
 
