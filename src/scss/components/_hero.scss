@@ -10,15 +10,14 @@
 //
 
 .it-hero-wrapper {
-  --#{$prefix}hero-background-color: var(--#{$prefix}color-background-primary);
-  --#{$prefix}hero-cat-size: 1rem;
-  --#{$prefix}hero-height: 300px;
-  --#{$prefix}hero-overlap-negative-spacing: -3rem;
-  --#{$prefix}hero-overlap-spacing-inset: 48px;
-  --#{$prefix}hero-overlay-background: transparent;
-  --#{$prefix}hero-primary-bg: rgba(var(--#{$prefix}color-background-primary), 0.8);
-  --#{$prefix}hero-text-family: var(--#{$prefix}font-serif);
-  --#{$prefix}hero-text-color: #fff;
+  --#{$prefix}hero-background-color: var(--#{$prefix}color-background-primary); // Controls the hero background color, using color tokens
+  --#{$prefix}hero-category-font-size: var(--#{$prefix}label-font-size); // Controls the font size of the category text in the hero, using text tokens
+  --#{$prefix}hero-height: 300px; // Controls the height of the hero
+  --#{$prefix}hero-overlap-negative-spacing: -3rem; // Controls the negative spacing for overlapping content below the hero
+  --#{$prefix}hero-overlap-spacing-inset: var(--#{$prefix}spacing-xxl); // Controls the inset spacing for overlapping content within the hero, using spacing tokens
+  --#{$prefix}hero-overlay-background: transparent;  // Controls the overlay background color for the hero
+  --#{$prefix}hero-text-font-family: var(--#{$prefix}font-serif); // Controls the font family for the hero text, using typography tokens
+  --#{$prefix}hero-text-color: var(--#{$prefix}color-text-inverse); // Controls the text color for the hero text, using color tokens
 }
 
 // Styles
@@ -64,7 +63,7 @@
 
   .it-hero-text-wrapper .it-category {
     display: block;
-    font-size: var(--#{$prefix}hero-cat-size);
+    font-size: var(--#{$prefix}hero-category-font-size);
     text-transform: uppercase;
     font-weight: 600;
     margin-bottom: var(--#{$prefix}spacing-xxs);
