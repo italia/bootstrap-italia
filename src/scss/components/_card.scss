@@ -10,31 +10,32 @@
 //
 
 .it-card {
-  --#{$prefix}card-background: var(--#{$prefix}color-background-inverse);
-  --#{$prefix}card-border-color: var(--#{$prefix}color-border-subtle);
-  --#{$prefix}card-border-radius-inner: calc(var(--#{$prefix}card-border-radius) - var(--#{$prefix}card-border-outside-width));
-  --#{$prefix}card-border-top-color: transparent; // default background set to transparent
-  --#{$prefix}card-border-top-width: 6px;
-  --#{$prefix}card-border-outside-width: 1px; // change to 2px if needed
-  --#{$prefix}card-border-separator-width: 1px; // change to 2px if needed
-  --#{$prefix}card-footer-background: transparent;
-  --#{$prefix}card-footer-text-color: var(--#{$prefix}color-text-muted);
-  --#{$prefix}card-spacing-x: var(--#{$prefix}spacing-s);
-  --#{$prefix}card-spacing-y: var(--#{$prefix}spacing-s);
-  --#{$prefix}card-category-color: var(--#{$prefix}color-text-muted);
-  --#{$prefix}card-category-font-weight: var(--#{$prefix}font-weight-solid);
-  --#{$prefix}card-category-font-size: var(--#{$prefix}label-font-size);
-  --#{$prefix}card-text-color: var(--#{$prefix}color-text-secondary);
-  --#{$prefix}card-date-color: var(--#{$prefix}color-text-muted);
-  --#{$prefix}card-date-font-size: var(--#{$prefix}label-font-size-s);
-  --#{$prefix}card-description-color: var(--#{$prefix}color-text-muted);
-  --#{$prefix}card-height: auto;
-  --#{$prefix}card-inline-min-height: 240px;
-  --#{$prefix}card-inline-mini-min-height: 160px;
-  --#{$prefix}card-link-color: var(--#{$prefix}color-text-secondary);
-  --#{$prefix}card-title-spacing-y: var(--#{$prefix}card-spacing-y);
-  --#{$prefix}card-signature-font-size: 1rem;
-  --#{$prefix}card-signature-font-family: var(--#{$prefix}font-mono);
+  --#{$prefix}card-background: var(--#{$prefix}color-background-inverse); // Controls the card background color, using color tokens
+  --#{$prefix}card-border-color: var(--#{$prefix}color-border-subtle); // Controls the card border color, using color tokens
+  --#{$prefix}card-border-radius: var(--#{$prefix}radius-smooth); // Controls the outer border radius of the card, using radius tokens
+  --#{$prefix}card-border-radius-inner: calc(var(--#{$prefix}card-border-radius) - var(--#{$prefix}card-border-outside-width)); // Controls the inner border radius of the card
+  --#{$prefix}card-border-top-color: transparent; // Controls 
+  --#{$prefix}card-border-top-width: 6px; // Controls the width of the top border
+  --#{$prefix}card-border-outside-width: 1px; // Controls the width of the outside border, used for calculating inner border radius
+  --#{$prefix}card-border-separator-width: 1px; // Controls the width of the separator border for card sections like body and footer
+  --#{$prefix}card-footer-background: transparent; // Controls the background color of the card footer, using color tokens
+  --#{$prefix}card-footer-text-color: var(--#{$prefix}color-text-muted); // Controls the text color of the card footer, using color tokens
+  --#{$prefix}card-spacing-x: var(--#{$prefix}spacing-s); // Controls the horizontal padding of the card, using spacing tokens
+  --#{$prefix}card-spacing-y: var(--#{$prefix}spacing-s); // Controls the vertical padding of the card, using spacing tokens
+  --#{$prefix}card-category-color: var(--#{$prefix}color-text-muted); // Controls the text color of the card category, using color tokens
+  --#{$prefix}card-category-font-weight: var(--#{$prefix}font-weight-solid); // Controls the font weight of the card category, using font weight tokens
+  --#{$prefix}card-category-font-size: var(--#{$prefix}label-font-size); // Controls the font size of the card category, using font size tokens
+  --#{$prefix}card-text-color: var(--#{$prefix}color-text-secondary); // Controls the main text color of the card, using color tokens
+  --#{$prefix}card-date-color: var(--#{$prefix}color-text-muted); // Controls the text color of the card date, using color tokens
+  --#{$prefix}card-date-font-size: var(--#{$prefix}label-font-size-s); // Controls the font size of the card date, using font size tokens
+  --#{$prefix}card-description-color: var(--#{$prefix}color-text-muted); // Controls the text color of the card description, using color tokens
+  --#{$prefix}card-height: auto; // Controls the height of the card, can be set to fixed value or auto
+  --#{$prefix}card-inline-min-height: 240px; // Controls the minimum height of inline cards, ensuring enough space for content and image
+  --#{$prefix}card-inline-mini-min-height: 160px; // Controls the minimum height of inline mini cards, ensuring enough space for content and image
+  --#{$prefix}card-link-color: var(--#{$prefix}color-text-secondary); // Controls the text color of links within the card, using color tokens
+  --#{$prefix}card-title-spacing-y: var(--#{$prefix}card-spacing-y); // Controls the vertical spacing around the card title, using the card spacing variable for consistency
+  --#{$prefix}card-signature-font-size: var(--#{$prefix}label-font-size); // Controls the font size of the card signature, using font size tokens
+  --#{$prefix}card-signature-font-family: var(--#{$prefix}font-mono); // Controls the font family of the card signature, using font family tokens
 }
 
 // Styles
