@@ -8,7 +8,7 @@
 
 .accordion {
   --#{$prefix}accordion-active-bg: var(--#{$prefix}color-background-primary);
-  --#{$prefix}accordion-active-color: var(--#{$prefix}color-text-primary-active);
+  --#{$prefix}accordion-active-color: var(--#{$prefix}color-link-primary-active);
   --#{$prefix}accordion-background: var(--#{$prefix}page-background); // Equal to page background color by default
   --#{$prefix}accordion-border-color: var(--#{$prefix}color-border-subtle);
   --#{$prefix}accordion-border-radius: var(--#{$prefix}radius-smooth);

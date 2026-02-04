@@ -259,11 +259,11 @@ a.btn-outline {
 
     &:hover {
       --#{$prefix}btn-outline-border-color: var(--#{$prefix}color-border-secondary-hover);
-      --#{$prefix}btn-text-color: var(--#{$prefix}color-text-secondary-hover);
+      --#{$prefix}btn-text-color: var(--#{$prefix}color-link-secondary-hover);
     }
     &:active {
       --#{$prefix}btn-outline-border-color: var(--#{$prefix}color-border-secondary-active);
-      --#{$prefix}btn-text-color: var(--#{$prefix}color-text-secondary-active);
+      --#{$prefix}btn-text-color: var(--#{$prefix}color-link-secondary-active);
     }
   }
 

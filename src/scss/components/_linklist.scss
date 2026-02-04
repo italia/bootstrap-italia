@@ -72,7 +72,7 @@
     // List item active state
     &.active {
       span {
-        color: var(--#{$prefix}color-text-primary-active);
+        color: var(--#{$prefix}color-link-primary-active);
       }
 
       .icon {
