@@ -46,10 +46,16 @@
     position: initial;
   }
 
+  // Text container centered 
   .it-hero-text-wrapper {
     padding: 3rem 0.75rem;
     background: transparent !important;
     position: relative;
+  }
+
+  &.it-text-centered .it-hero-text-wrapper {
+    margin: 0 auto;
+    text-align: center;
   }
 
   .it-hero-text-wrapper span,
@@ -63,6 +69,7 @@
     color: var(--#{$prefix}hero-text-color);
     margin-bottom: var(--#{$prefix}spacing-m);
   }
+
 
   .it-hero-text-wrapper .it-category {
     display: block;
