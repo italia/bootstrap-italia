@@ -2,7 +2,7 @@ name: Generate new release
 on:
   push:
     tags:
-      - 'v2*'
+      - 'v3*'
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -30,7 +30,7 @@ jobs:
       - run: npm ci
       - run: npm run build
       - name: Publish package to NPM
-        run: npm publish
+        run: npm publish --tag alpha
         continue-on-error: true
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
@@ -43,18 +43,18 @@ jobs:
           artifacts: './dist/zip/*.zip'
           bodyFile: 'RELEASE_BODY.md'
           token: ${{ secrets.GITHUB_TOKEN }}
-      - name: Publish on gh-pages
-        run: |
-          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
-          chown -R 1001:121 "/github/home/.npm"
-          chown -R 1001:121 "/github/home/.bundle/"
-          chmod -R 777 /github/home/.bundle/
-          chmod -R 777 /usr/local/bundle/
-          npm run documentation-deploy-to-gh-pages
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - uses: italia/slack-notify-release-action@v0.2.0
-        with:
-          slack_token: ${{ secrets.SLACK_TOKEN }}
-          channel_id: ${{ secrets.SLACK_CHANNEL }}
-          project_name: Bootstrap Italia
+      # - name: Publish on gh-pages
+      #   run: |
+      #     git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+      #     chown -R 1001:121 "/github/home/.npm"
+      #     chown -R 1001:121 "/github/home/.bundle/"
+      #     chmod -R 777 /github/home/.bundle/
+      #     chmod -R 777 /usr/local/bundle/
+      #     npm run documentation-deploy-to-gh-pages
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # - uses: italia/slack-notify-release-action@v0.2.0
+      #   with:
+      #     slack_token: ${{ secrets.SLACK_TOKEN }}
+      #     channel_id: ${{ secrets.SLACK_CHANNEL }}
+      #     project_name: Bootstrap Italia
