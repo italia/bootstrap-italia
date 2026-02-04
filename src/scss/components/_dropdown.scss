@@ -29,7 +29,7 @@
   --#{$prefix}dropdown-item-padding-y: var(--#{$prefix}spacing-xs); // dropdown item padding top and bottom
   --#{$prefix}dropdown-link-active-color: var(--#{$prefix}color-text-primary-active); // active link color
   --#{$prefix}dropdown-link-color: var(--#{$prefix}color-text-primary); // link color in dropdown items
-  --#{$prefix}dropdown-link-hover-color: var(--#{$prefix}color-link-primary-hover); // link hover color in dropdown items
+  --#{$prefix}dropdown-link-hover-color: var(--#{$prefix}color-link-hover); // link hover color in dropdown items
   --#{$prefix}dropdown-min-width: 10rem; // minimum width of dropdown menu
   --#{$prefix}dropdown-notch-base-size: 1.125rem; // size of the notch element
   --#{$prefix}dropdown-notch-position-x: 20px; // x position of the notch element
@@ -413,7 +413,7 @@
     font-size: var(--#{$prefix}label-font-size-l);
   }
   &:hover {
-    --#{$prefix}dropdown-button-color: var(--#{$prefix}color-link-primary-hover);
+    --#{$prefix}dropdown-button-color: var(--#{$prefix}color-link-hover);
     text-decoration: underline;
   }
   &:not(:disabled):active {
