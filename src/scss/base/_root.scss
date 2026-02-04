@@ -78,7 +78,7 @@
   // Typography
   --#{$prefix}font-mono: var(--it-font-mono);
   --#{$prefix}font-serif: var(--it-font-serif);
-  --#{$prefix}font-sans: var(--it-font-sans);
+  --#{$prefix}font-sans: 'Titillium Web', 'Titillium Sans Pro', var(--it-font-sans);
   --#{$prefix}font-weight-strong: var(--it-font-weight-bold);
   --#{$prefix}font-weight-solid: var(--it-font-weight-semibold);
   --#{$prefix}font-weight-base: var(--it-font-weight-regular);
