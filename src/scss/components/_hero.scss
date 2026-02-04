@@ -46,7 +46,7 @@
     position: initial;
   }
 
-  // Text container centered 
+  // Text container centered
   .it-hero-text-wrapper {
     padding: 3rem 0.75rem;
     background: transparent !important;
@@ -69,7 +69,6 @@
     color: var(--#{$prefix}hero-text-color);
     margin-bottom: var(--#{$prefix}spacing-m);
   }
-
 
   .it-hero-text-wrapper .it-category {
     display: block;
