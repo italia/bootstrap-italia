@@ -118,3 +118,5 @@ Ricordarsi di aggiungere un testo alternativo per Screen Reader che comunichi lo
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
+
+{% include properties.md properties=site.data.cprops.overlay %}

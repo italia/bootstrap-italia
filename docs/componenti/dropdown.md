@@ -15,7 +15,6 @@ Per il corretto funzionamento dei dropdown è necessario assicurarsi che sia inc
 Per l'attivazione di un dropdown è sufficiente racchiudere il link per l'apertura e il menu a discesa all'interno di un elemento con classe `.dropdown`, o un altro elemento che dichiari la `position: relative;`. I dropdown possono essere attivati da elementi `<a>` o `<button>` per soddisfare al meglio le tue esigenze.
 
 {% capture callout %}
-
 #### Accessibilità
 
 Lo standard [WAI ARIA](https://www.w3.org/TR/wai-aria/) definisce un widget con proprietà [`role="menu"`](https://www.w3.org/TR/wai-aria/#menu), specifica per i menu applicativi con link o azioni. Questi menu possono contenere solo voci di menu, voci di menu di caselle di controllo, voci di menu dei pulsanti di opzione, gruppi di pulsanti di opzione e sottomenu.
@@ -27,7 +26,8 @@ Tuttavia, Bootstrap comprende di base il supporto per la maggior parte delle int
 Si ricorda che link di navigazione semanticamente sono tag `<a>`, mentre link che attivano azioni in pagina sono tag `<button>`, seppur questi ultimi è possibile implementarli in casi molto particolari come tag `<a>` con proprietà `role="button"`.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
-### Dropdown button
+
+## Dropdown button
 
 Ogni singolo `.btn` può essere trasformato in un pulsante per l'apertura di dropdown con del semplice markdown HTML.
 Il design di default dei dropdown richiede l'applicazione della classe `.btn-dropdown`. I link o le voci all'interno del dropdown devono essere contenute in un elemento `.link-list`.
@@ -557,6 +557,7 @@ Le opzioni possono essere passate tramite gli attributi data o tramite JavaScrip
   </table>
 </div>
 
+{% include properties.md properties=site.data.cprops.dropdown %}
 ## Breaking change
 
 {% capture callout %}

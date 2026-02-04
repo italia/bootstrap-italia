@@ -80,6 +80,8 @@ Quando la versione su sfondo scuro viene utilizzata su un fondo di colore differ
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
+{% include properties.md properties=site.data.cprops.breadcrumb %}
+
 ## Breaking change
 
 {% capture callout %}

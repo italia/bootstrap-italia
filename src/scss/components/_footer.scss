@@ -9,21 +9,19 @@
 // Properties
 //
 
-// Styles
-//
-
-//
-// Custom properties
-
 .it-footer {
-  --#{$prefix}footer-bottom-background: var(--#{$prefix}color-background-primary-deep);
-  --#{$prefix}footer-brand-icon-color: var(--#{$prefix}icon-inverse);
-  --#{$prefix}footer-brand-icon-size: 3rem; // 48px
-  --#{$prefix}footer-top-background: var(--#{$prefix}color-background-primary-muted);
+  --#{$prefix}footer-bottom-background: var(--#{$prefix}color-background-primary-deep); // Controls the bottom background for the footer, using color tokens.
+  --#{$prefix}footer-brand-icon-color: var(--#{$prefix}icon-inverse); // Controls the brand icon color for the footer, using icon tokens.
+  --#{$prefix}footer-brand-icon-size: 3rem; // Controls the brand icon size for the footer.
+  --#{$prefix}footer-top-background: var(--#{$prefix}color-background-primary-muted); // Controls the top background for the footer, using color tokens.
   @include media-breakpoint-up(lg) {
     --#{$prefix}footer-brand-icon-size: 3.5rem; // 56px
   }
 }
+
+// Styles
+//
+
 /* stylelint-disable-next-line no-duplicate-selectors */
 .it-footer {
   h4 {

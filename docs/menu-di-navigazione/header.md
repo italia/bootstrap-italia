@@ -1561,3 +1561,5 @@ Se hai personalizzato il CSS della navbar, rivedi le tue modifiche per verificar
 - Gli altri elementi `<a>` che si comportano come toggle dropdown (eg. scelta Lingua), hanno l'aggiunta dell'attributo `role="button"`.
 - Il markup del Megamenu cambia come nel nuovo componente, per approfondire andare alla [relativa pagina]({{site.baseurl}}/docs/menu-di-navigazione/megamenu/).
 {% endcapture %}{% include callout-breaking.html content=callout version="2.8.0" type="danger" %}
+
+{% include properties.md properties=site.data.cprops.header %}

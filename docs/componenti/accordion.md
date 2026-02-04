@@ -396,3 +396,5 @@ Bootstrap Italia migliora l'accessibilità dell'Accordion implementando la navig
     </tbody>
   </table>
 </div>
+
+{% include properties.md properties=site.data.cprops.accordion %}

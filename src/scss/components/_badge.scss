@@ -9,14 +9,14 @@
 // Properties
 //
 
-.badge {
-  --#{$prefix}badge-border-radius: var(--#{$prefix}radius-smooth);
-  --#{$prefix}badge-font-size: var(--#{$prefix}label-font-size-s);
-  --#{$prefix}badge-font-size-relative: 0.75em;
-  --#{$prefix}badge-font-weight: var(--#{$prefix}font-weight-solid);
-  --#{$prefix}badge-padding-x: var(--#{$prefix}spacing-xs);
-  --#{$prefix}badge-padding-y: var(--#{$prefix}spacing-3xs);
-  --#{$prefix}badge-text-color: var(--#{$prefix}color-text-inverse);
+.badge  {
+  --#{$prefix}badge-border-radius: var(--#{$prefix}radius-smooth); // Controls the border radius for the badge, using radius tokens.
+  --#{$prefix}badge-font-size: var(--#{$prefix}label-font-size-s); // Controls the font size for the badge, using font tokens.
+  --#{$prefix}badge-font-size-relative: 0.75em; // Controls the relative font size for the badge.
+  --#{$prefix}badge-font-weight: var(--#{$prefix}font-weight-solid); // Controls the font weight for the badge, using font tokens.
+  --#{$prefix}badge-padding-x: var(--#{$prefix}spacing-xs); // Controls the horizontal padding for the badge, using spacing tokens.
+  --#{$prefix}badge-padding-y: var(--#{$prefix}spacing-3xs); // Controls the vertical padding for the badge, using spacing tokens.
+  --#{$prefix}badge-text-color: var(--#{$prefix}color-text-inverse); // Controls the text color for the badge, using color tokens.
 }
 
 // Styles

@@ -135,6 +135,8 @@ Per rendere accessibile il contenuto è necessario aggiungere un tag `<legend>` 
 </fieldset>
 {% endcapture %}{% include example.html content=example %}
 
+{% include properties.md properties=site.data.cprops.rating %}
+
 ## Breaking change
 
 {% capture callout %}

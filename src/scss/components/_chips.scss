@@ -10,18 +10,18 @@
 //
 
 .chip {
-  --#{$prefix}chip-background-color: var(--#{$prefix}color-background-muted);
-  --#{$prefix}chip-border-color: var(--#{$prefix}color-border-subtle);
-  --#{$prefix}chip-border-radius: var(--#{$prefix}radius-rounded);
-  --#{$prefix}chip-border-width: 1px;
-  --#{$prefix}chip-icon-color: var(--#{$prefix}icon-secondary);
-  --#{$prefix}chip-link-hover: var(--#{$prefix}color-text-inverse);
-  --#{$prefix}chip-padding-x: var(--#{$prefix}spacing-xs);
-  --#{$prefix}chip-padding-y: var(--#{$prefix}spacing-3xs);
-  --#{$prefix}chip-text-color: var(--#{$prefix}color-text-secondary);
-  --#{$prefix}chip-text-line-height: var(--#{$prefix}label-leading);
-  --#{$prefix}chip-text-size: var(--#{$prefix}label-font-size);
-  --#{$prefix}chip-text-weight: var(--#{$prefix}font-weight-solid);
+  --#{$prefix}chip-background-color: var(--#{$prefix}color-background-muted); // Controls the background color for the chip, using color tokens.
+  --#{$prefix}chip-border-color: var(--#{$prefix}color-border-subtle); // Controls the border color for the chip, using color tokens.
+  --#{$prefix}chip-border-radius: var(--#{$prefix}radius-rounded); // Controls the border radius for the chip, using radius tokens.
+  --#{$prefix}chip-border-width: 1px; // Controls the border width for the chip.
+  --#{$prefix}chip-icon-color: var(--#{$prefix}icon-secondary); // Controls the icon color for the chip, using icon tokens.
+  --#{$prefix}chip-link-hover: var(--#{$prefix}color-text-inverse); // Controls the link hover color for the chip, using color tokens.
+  --#{$prefix}chip-padding-x: var(--#{$prefix}spacing-xs); // Controls the horizontal padding for the chip, using spacing tokens.
+  --#{$prefix}chip-padding-y: var(--#{$prefix}spacing-3xs); // Controls the vertical padding for the chip, using spacing tokens.
+  --#{$prefix}chip-text-color: var(--#{$prefix}color-text-secondary); // Controls the text color for the chip, using color tokens.
+  --#{$prefix}chip-text-line-height: var(--#{$prefix}label-line-height); // Controls the text line height for the chip, using font tokens.
+  --#{$prefix}chip-text-size: var(--#{$prefix}label-font-size); // Controls the text size for the chip, using font tokens.
+  --#{$prefix}chip-text-weight: var(--#{$prefix}font-weight-solid); // Controls the text weight for the chip, using font tokens.
 }
 // Styles
 //

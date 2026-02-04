@@ -1049,6 +1049,8 @@ Questi seguono le liste di link, posizionati in basso o in una colonna destra, a
 Il componente Megamenu deriva dal componente Dropdown, si rimanda dunque alla 
 sezione [attivazione Dropdown tramite codice]({{ site.baseurl }}/docs/componenti/dropdown/#attivazione-tramite-codice)
 
+{% include properties.md properties=site.data.cprops.megamenu %}
+
 ## Breaking change
 
 {% capture callout %}

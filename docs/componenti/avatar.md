@@ -699,6 +699,7 @@ Per il nome è possibile utilizzare i tag `<h3>` o `<h4>`. Il testo esteso può 
 
 {% endcapture %}{% include example.html content=example %}
 
+{% include properties.md properties=site.data.cprops.avatar %}
 
 ## Breaking change
 
