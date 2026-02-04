@@ -131,7 +131,7 @@
       font-size: var(--#{$prefix}header-brand-title-size);
       font-weight: var(--#{$prefix}heading-font-weight);
       letter-spacing: unset;
-      line-height: var(--#{$prefix}heading-line-height);
+      line-height: var(--#{$prefix}heading-leading);
       @include media-breakpoint-up(lg) {
         margin-bottom: var(--#{$prefix}spacing-3xs);
       }

@@ -112,7 +112,7 @@
     .it-footer-link {
       font-size: var(--#{$prefix}heading-6-font-size);
       font-weight: var(--#{$prefix}font-weight-solid);
-      line-height: var(--#{$prefix}heading-line-height);
+      line-height: var(--#{$prefix}heading-leading);
       text-decoration: none;
       &:hover,
       &:focus {
