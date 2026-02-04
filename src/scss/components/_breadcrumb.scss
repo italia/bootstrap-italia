@@ -46,12 +46,12 @@
     --#{$prefix}breadcrumb-divider-color: var(--#{$prefix}color-text-inverse);
 
     .breadcrumb-item {
-      span.separator {
-        color: var(--#{$prefix}breadcrumb-link-color);
+      a:hover {
+        --#{$prefix}breadcrumb-link-color: var(--#{$prefix}color-text-inverse);
       }
 
-      i {
-        color: var(--#{$prefix}breadcrumb-divider-color);
+      .separator {
+        color: var(--#{$prefix}breadcrumb-link-color);
       }
     }
   }
@@ -75,7 +75,7 @@
     display: none;
   }
 
-// The breadcrumb item link
+  // The breadcrumb item link
   a {
     color: var(--#{$prefix}breadcrumb-link-color);
     font-weight: var(--#{$prefix}breadcrumb-link-font-weight);
@@ -98,4 +98,3 @@
     color: var(--#{$prefix}breadcrumb-separator-color);
   }
 }
-
