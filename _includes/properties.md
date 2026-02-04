@@ -1,5 +1,5 @@
 {%- assign properties = include.properties -%}
-
+{% if properties %}
 ## Properties
 
 <div class="table-responsive" style="font-size: 1rem">
@@ -22,3 +22,4 @@
     </tbody>
   </table>
 </div>
+{% endif %}
