@@ -67,7 +67,7 @@ Puoi sovrascrivere i valori predefiniti delle custom properties di Bootstrap Ita
 
 La documentazione completa dei token (colori, tipografia, spaziature, ...) è disponibile nelle tabelle **Properties** di ogni componente, ad esempio:
 
-- [Button - Properties]({{ site.baseurl }}/docs/componenti/button/#properties)
+- [Button - Properties]({{ site.baseurl }}/docs/componenti/buttons/#properties)
 - [Alert - Properties]({{ site.baseurl }}/docs/componenti/alert/#properties)
 - [Card - Properties]({{ site.baseurl }}/docs/componenti/card/#properties)
 

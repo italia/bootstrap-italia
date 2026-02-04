@@ -7,10 +7,9 @@
       <div class="link-list-wrapper">
         <ul class="link-list">
           {%- for group in site.data.nav -%} {%- assign link = group.pages | first -%} {%- assign link_slug = link.title
-          | slugify -%} {%- assign group_slug =
-          group.title | slugify -%} {%- assign active = nil -%} {%- assign expanded = 'false' -%} {%- if page.group ==
-          group_slug -%} {%- assign active =
-          'active' -%} {%- assign expanded = 'true' -%} {%- endif -%}
+          | slugify -%} {%- assign group_slug = group.title | slugify -%} {%- assign active = nil -%} {%- assign
+          expanded = 'false' -%} {%- if page.group == group_slug -%} {%- assign active = 'active' -%} {%- assign
+          expanded = 'true' -%} {%- endif -%}
           <li>
             {% if group.pages == nil %}
             <a class="list-item{% if page.group == group_slug %} active{% endif %}"
@@ -71,4 +70,5 @@
         </div>
       </div>
     </div>
+  </div>
 </nav>

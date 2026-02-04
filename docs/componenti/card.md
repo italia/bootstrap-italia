@@ -2430,6 +2430,8 @@ Svolgi sempre test di usabilità con utenti che utilizzano tecnologie assistive 
 - Le varianti di tipo presentazione dati come mostrate in [UI Kit Italia](https://github.com/italia/design-ui-kit/) v3.7.0. 
 - L'eventuale pulsante di utilità per attivare un dropdown che mostri le possibilità di condivisione della card, come già disponibile nelle card del sito [sito Designers Italia](https://designers.italia.it/community/).
 
+{% include properties.md properties=site.data.cprops.it %}
+
 ## Breaking change
 
 {% capture callout %}
