@@ -3,13 +3,13 @@
   //   --#{$prefix}#{$color}: #{$value};
   // }
 
-  // @each $color, $value in $grays {
-  //   --#{$prefix}gray-#{$color}: #{$value};
-  // }
+  @each $color, $value in $grays {
+    --#{$prefix}gray-#{$color}: #{$value};
+  }
 
-  // @each $color, $value in $theme-colors {
-  //   --#{$prefix}#{$color}: #{$value};
-  // }
+  @each $color, $value in $theme-colors {
+    --#{$prefix}#{$color}: #{$value};
+  }
 
   // @each $color, $value in $theme-colors-rgb {
   //   --#{$prefix}#{$color}-rgb: #{$value};
@@ -20,22 +20,22 @@
   // --#{$prefix}body-color-rgb: #{to-rgb($body-color)};
   // --#{$prefix}body-bg-rgb: #{to-rgb($body-bg)};
 
-  // // Fonts
+  // Fonts
 
-  // // Note: Use `inspect` for lists so that quoted items keep the quotes.
-  // // See https://github.com/sass/sass/issues/2383#issuecomment-336349172
+  // Note: Use `inspect` for lists so that quoted items keep the quotes.
+  // See https://github.com/sass/sass/issues/2383#issuecomment-336349172
   // --#{$prefix}font-sans-serif: #{inspect($font-family-sans-serif)};
   // --#{$prefix}font-monospace: #{inspect($font-family-monospace)};
   // --#{$prefix}gradient: #{$gradient};
 
-  // // Root and body
+  // Root and body
   // @if $font-size-root != null {
   //   --#{$prefix}root-font-size: #{$font-size-root};
   // }
   // --#{$prefix}body-font-family: #{$font-family-base};
-  // // @include rfs($font-size-base, --#{$prefix}body-font-size);
-  // // --#{$prefix}body-font-weight: #{$font-weight-base};
-  // // --#{$prefix}body-line-height: #{$line-height-base};
+  // @include rfs($font-size-base, --#{$prefix}body-font-size);
+  // --#{$prefix}body-font-weight: #{$font-weight-base};
+  // --#{$prefix}body-line-height: #{$line-height-base};
   // --#{$prefix}body-color: #{$body-color};
   // @if $body-text-align != null {
   //   --#{$prefix}body-text-align: #{$body-text-align};
