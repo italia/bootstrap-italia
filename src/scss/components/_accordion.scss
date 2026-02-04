@@ -2,7 +2,6 @@
 //
 // Description: Styles for the Accordion component.
 
-
 // Properties
 //
 
@@ -118,6 +117,7 @@
 }
 
 // Accordion Wrapper
+/* stylelint-disable-next-line no-duplicate-selectors */
 .accordion {
   border-left-width: var(--#{$prefix}accordion-border-width);
   border-right-width: var(--#{$prefix}accordion-border-width);

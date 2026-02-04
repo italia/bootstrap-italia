@@ -34,7 +34,6 @@
 // Styles
 //
 
-
 .modal-dialog {
   position: relative;
   width: auto;
@@ -203,7 +202,7 @@
     }
   }
 }
-
+/* stylelint-disable-next-line no-duplicate-selectors */
 .modal {
   position: fixed;
   top: 0;

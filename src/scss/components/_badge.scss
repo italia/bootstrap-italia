@@ -9,7 +9,7 @@
 // Properties
 //
 
-.badge  {
+.badge {
   --#{$prefix}badge-border-radius: var(--#{$prefix}radius-smooth);
   --#{$prefix}badge-font-size: var(--#{$prefix}label-font-size-s);
   --#{$prefix}badge-font-size-relative: 0.75em;
@@ -21,7 +21,7 @@
 
 // Styles
 //
-
+/* stylelint-disable-next-line no-duplicate-selectors */
 .badge {
   display: inline-block;
   padding: var(--#{$prefix}badge-padding-y) var(--#{$prefix}badge-padding-x);

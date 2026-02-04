@@ -31,7 +31,7 @@ $btn-close-white-filter: invert(1) grayscale(100%) brightness(200%) !default;
 
 // Styles
 //
-
+/* stylelint-disable-next-line no-duplicate-selectors */
 .btn {
   display: inline-block;
   padding: var(--#{$prefix}btn-padding-y) var(--#{$prefix}btn-padding-x);

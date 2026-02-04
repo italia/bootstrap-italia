@@ -21,12 +21,10 @@
   --#{$prefix}footer-brand-icon-size: 3rem; // 48px
   --#{$prefix}footer-top-background: var(--#{$prefix}color-background-primary-muted);
   @include media-breakpoint-up(lg) {
-    --#{$prefix}footer-brand-icon-size: 3.5rem; // 56px 
+    --#{$prefix}footer-brand-icon-size: 3.5rem; // 56px
   }
 }
-
-
-
+/* stylelint-disable-next-line no-duplicate-selectors */
 .it-footer {
   h4 {
     margin-bottom: var(--#{$prefix}spacing-s);
@@ -58,12 +56,12 @@
 
   // Override default hover color
   .btn-primary:hover {
-    --#{$prefix}btn-background: var(--#{$prefix}color-background-primary-deep); 
+    --#{$prefix}btn-background: var(--#{$prefix}color-background-primary-deep);
   }
 }
 
 .it-footer-main {
-  background-color:  var(--#{$prefix}footer-top-background);
+  background-color: var(--#{$prefix}footer-top-background);
   color: var(--#{$prefix}color-text-inverse);
   font-size: var(--#{$prefix}body-font-size);
   padding-top: var(--#{$prefix}spacing-l);
@@ -88,7 +86,6 @@
   }
 
   .it-brand-wrapper {
-
     .it-brand-text {
       padding-right: var(--#{$prefix}spacing-m);
     }

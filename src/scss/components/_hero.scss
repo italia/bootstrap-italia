@@ -27,9 +27,7 @@
   --#{$prefix}hero-text-color: #fff;
   --card-padding: 24px;
 }
-
-
-
+/* stylelint-disable-next-line no-duplicate-selectors */
 .it-hero-wrapper {
   min-height: var(--#{$prefix}hero-height);
   position: relative;

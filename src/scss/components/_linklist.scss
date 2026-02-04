@@ -24,10 +24,8 @@
   --#{$prefix}linklist-item-spacing: var(--#{$prefix}spacing-xxs);
   --#{$prefix}linklist-nested-spacing: var(--#{$prefix}spacing-s);
 }
-
-
+/* stylelint-disable-next-line no-duplicate-selectors */
 .link-list-wrapper {
-
   .link-list-heading,
   h3 {
     margin-bottom: var(--#{$prefix}spacing-xxs);
@@ -232,7 +230,6 @@
 
 // Multiline list item
 .multiline {
-
   .list-item-title-icon-wrapper {
     margin-bottom: var(--#{$prefix}spacing-3xs);
   }
@@ -266,7 +263,7 @@
 }
 
 //
-// Dark theme styles 
+// Dark theme styles
 
 .dark,
 .theme-dark {

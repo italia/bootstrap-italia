@@ -72,7 +72,6 @@
 // Styles
 //
 
-
 // Navbar mobile backdrop, inspired by "modal" approachAdd commentMore actions
 .navbar-backdrop {
   --#{$prefix}backdrop-zindex: #{$zindex-modal-backdrop};
@@ -83,7 +82,7 @@
     display: none; // to handle resize from md to lg when open
   }
 }
-
+/* stylelint-disable-next-line no-duplicate-selectors */
 .navbar {
   position: relative;
   display: flex;
@@ -166,9 +165,8 @@
   // Dropdown menu inside navbar
   // This is a special case for the dropdown menu inside the navbar
   //
-  
-  .dropdown-menu {
 
+  .dropdown-menu {
     a.it-heading-link,
     a.it-footer-link {
       svg {
@@ -272,7 +270,7 @@
     bottom: auto;
     left: auto;
     z-index: auto;
-    display: block !important; // overrides jquery inline style 
+    display: block !important; // overrides jquery inline style
     background: none;
     transition: none;
     width: 100%;
@@ -326,10 +324,10 @@
     }
 
     li {
-      .nav-link[data-focus-mouse="true"] {
+      .nav-link[data-focus-mouse='true'] {
         border-color: transparent !important;
       }
-      
+
       .nav-link {
         position: relative;
         font-weight: var(--#{$prefix}navbar-link-font-weight);

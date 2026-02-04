@@ -27,7 +27,7 @@
 
 // Styles
 //
-
+/* stylelint-disable-next-line no-duplicate-selectors */
 .breadcrumb {
   display: flex;
   flex-wrap: wrap;
@@ -61,17 +61,19 @@
   padding-left: 0;
 
   // The separator between breadcrumbs (by default, a forward-slash: "/")
-  +.breadcrumb-item {
+  + .breadcrumb-item {
     &::before {
-      content: var(--#{$prefix}breadcrumb-divider, escape-svg($breadcrumb-divider)) #{'/* rtl:'} var(--#{$prefix}breadcrumb-divider,
-        escape-svg($breadcrumb-divider-flipped)) #{'*/'};
+      content: var(--#{$prefix}breadcrumb-divider, escape-svg($breadcrumb-divider)) #{'/* rtl:'} var(
+          --#{$prefix}breadcrumb-divider,
+          escape-svg($breadcrumb-divider-flipped)
+        ) #{'*/'};
       padding-right: var(--#{$prefix}breadcrumb-item-padding-x);
       float: left; // Suppress inline spacings and underlining of the separator
       color: var(--#{$prefix}breadcrumb-divider-color);
     }
   }
 
-  &+.breadcrumb-item:before {
+  & + .breadcrumb-item:before {
     display: none;
   }
 

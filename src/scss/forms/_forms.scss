@@ -45,14 +45,15 @@ select {
     color: var(--#{$prefix}color-text-disabled);
   }
 }
-
+/* stylelint-disable-next-line no-duplicate-selectors */
 input,
 textarea {
   &:focus {
     outline: 3px solid transparent;
     outline-offset: 3px;
-    box-shadow: 0 0 0 2px var(--#{$prefix}color-border-inverse),
-    0 0 0 5px var(--#{$prefix}color-outline-focus) !important;
+    box-shadow:
+      0 0 0 2px var(--#{$prefix}color-border-inverse),
+      0 0 0 5px var(--#{$prefix}color-outline-focus) !important;
   }
 }
 
@@ -90,7 +91,7 @@ input {
   // https://github.com/twbs/bootstrap/issues/23307
   &::-webkit-date-and-time-value {
     // Multiply line-height by 1em if it has no unit
-    height: if(unit($input-line-height)=='', $input-line-height * 1em, $input-line-height);
+    height: if(unit($input-line-height) == '', $input-line-height * 1em, $input-line-height);
   }
 }
 
@@ -119,9 +120,7 @@ select {
 
     @if $enable-shadows {
       @include box-shadow($form-select-box-shadow, $form-select-focus-box-shadow);
-    }
-
-    @else {
+    } @else {
       // Avoid using mixin so we can pass custom focus shadow properly
       box-shadow: $form-select-focus-box-shadow;
     }
@@ -152,7 +151,7 @@ select {
   option {
     font-weight: normal;
   }
-
+  /* stylelint-disable-next-line no-duplicate-selectors */ /* TO DO check these styles */
   &:disabled {
     opacity: 1;
     background-color: $input-disabled-bg;
@@ -175,7 +174,7 @@ label {
   font-weight: var(--#{$prefix}font-weight-solid);
   line-height: var(--#{$prefix}label-leading);
 }
-
+/* stylelint-disable-next-line no-duplicate-selectors */
 input,
 textarea {
   outline: 0;
@@ -227,7 +226,7 @@ input::-webkit-datetime-edit {
     font-size: $small-font-size;
   }
 
-  input[type='time']~label {
+  input[type='time'] ~ label {
     font-size: $small-font-size;
   }
 }
@@ -239,7 +238,6 @@ input::-webkit-datetime-edit {
   margin: var(--#{$prefix}spacing-xxs) 0;
   color: var(--#{$prefix}color-text-secondary);
 }
-
 
 //
 // Form Group
@@ -293,7 +291,7 @@ input::-webkit-datetime-edit {
   // }
 
   // Add vertical spacing for consequential elements
-  &+& {
+  & + & {
     margin-top: var(--#{$prefix}spacing-s);
   }
 
@@ -307,7 +305,7 @@ input::-webkit-datetime-edit {
     margin-left: 0;
     opacity: 0;
 
-    +label {
+    + label {
       position: relative;
       margin-bottom: 0; // reset default label margin
       padding-left: 28px; // checkbox size + left padding - not using variable because of the pseudo element
@@ -321,7 +319,7 @@ input::-webkit-datetime-edit {
       }
     }
 
-    &:focus+label {
+    &:focus + label {
       @extend %focus;
     }
 
@@ -331,8 +329,8 @@ input::-webkit-datetime-edit {
   }
 
   input[type='checkbox'] {
-    +label::after,
-    +label::before {
+    + label::after,
+    + label::before {
       position: absolute;
       left: 0;
       z-index: 1;
@@ -343,14 +341,14 @@ input::-webkit-datetime-edit {
     }
 
     // Checkbox shape
-    +label::after {
+    + label::after {
       top: 4px;
       width: 20px;
       height: 20px;
       border-radius: var(--#{$prefix}form-control-border-radius);
     }
 
-    &:checked+label::before {
+    &:checked + label::before {
       top: 6px;
       left: 3px;
       width: 6px;
@@ -364,19 +362,19 @@ input::-webkit-datetime-edit {
       backface-visibility: hidden;
     }
 
-    &:checked+label::after {
+    &:checked + label::after {
       z-index: 0;
       border-color: var(--#{$prefix}form-checked-color);
       background-color: var(--#{$prefix}form-checked-color);
     }
 
-    &:not(:checked)+label::after {
+    &:not(:checked) + label::after {
       z-index: 0;
       border-color: var(--#{$prefix}form-checkbox-border-color);
       background-color: transparent;
     }
 
-    &:not(:checked)+label::before {
+    &:not(:checked) + label::before {
       top: 10px;
       left: 6px;
       width: 0;
@@ -384,17 +382,17 @@ input::-webkit-datetime-edit {
       border-color: transparent;
     }
 
-    &:disabled+label {
+    &:disabled + label {
       opacity: 1;
       cursor: not-allowed;
     }
 
-    &:disabled:not(:checked)+label::after {
+    &:disabled:not(:checked) + label::after {
       border-color: var(--#{$prefix}color-border-disabled);
       background-color: transparent;
     }
 
-    &:disabled:checked+label::after {
+    &:disabled:checked + label::after {
       border-color: var(--#{$prefix}color-border-disabled);
       background-color: var(--#{$prefix}color-border-disabled);
     }
@@ -404,8 +402,7 @@ input::-webkit-datetime-edit {
   // Radio button
 
   input[type='radio'] {
-    +label {
-
+    + label {
       // Radio button shape
       &::after,
       &::before {
@@ -423,7 +420,7 @@ input::-webkit-datetime-edit {
       }
     }
 
-    &:not(:checked)+label {
+    &:not(:checked) + label {
       &::after,
       &::before {
         border-color: var(--#{$prefix}form-checkbox-border-color);
@@ -435,7 +432,7 @@ input::-webkit-datetime-edit {
       }
     }
 
-    &:checked+label {
+    &:checked + label {
       &::after {
         z-index: 0;
         border-color: var(--#{$prefix}form-checked-color);
@@ -449,18 +446,18 @@ input::-webkit-datetime-edit {
     }
 
     &:disabled {
-      &+label {
+      & + label {
         cursor: not-allowed;
       }
 
-      &:not(:checked)+label {
+      &:not(:checked) + label {
         &::after,
         &::before {
           border-color: var(--#{$prefix}color-border-disabled);
         }
       }
 
-      &:checked+label {
+      &:checked + label {
         &::after {
           border-color: var(--#{$prefix}color-border-disabled);
           background-color: var(--#{$prefix}color-border-disabled);
@@ -481,8 +478,8 @@ input::-webkit-datetime-edit {
     padding: 0 0 1rem 0;
     box-shadow: inset 0 -1px 0 0 rgba(1, 1, 1, 0.1);
 
-    input[type='checkbox']+label,
-    input[type='radio']+label {
+    input[type='checkbox'] + label,
+    input[type='radio'] + label {
       position: static;
       padding-right: 3.25rem;
       padding-left: 0;
@@ -494,11 +491,11 @@ input::-webkit-datetime-edit {
       }
     }
 
-    input[type='checkbox']:checked+label::before {
+    input[type='checkbox']:checked + label::before {
       right: 11px;
     }
 
-    input[type='radio']:checked+label::before {
+    input[type='radio']:checked + label::before {
       right: 0;
     }
 
@@ -508,13 +505,13 @@ input::-webkit-datetime-edit {
       padding-right: 3.25rem;
     }
 
-    input.semi-checked:not(:checked)+label::before {
+    input.semi-checked:not(:checked) + label::before {
       right: 4px;
       left: auto;
     }
   }
 
-  input.semi-checked:not(:checked)+label::before {
+  input.semi-checked:not(:checked) + label::before {
     top: 12px;
     left: 4px;
     width: 12px;
@@ -528,7 +525,7 @@ input::-webkit-datetime-edit {
     backface-visibility: hidden;
   }
 
-  input.semi-checked:not(:checked)+label::after {
+  input.semi-checked:not(:checked) + label::after {
     z-index: 0;
     border-color: var(--#{$prefix}form-checked-color);
     background-color: var(--#{$prefix}form-checked-color);
@@ -555,12 +552,12 @@ input::-webkit-datetime-edit {
   textarea,
   .form-check [type='checkbox'],
   .form-check [type='radio'],
-  .form-check [type='checkbox']+label::after,
-  .form-check [type='checkbox']+label::before,
-  .form-check [type='radio']+label::after,
-  .form-check [type='radio']+label::before,
-  .toggles label input[type='checkbox']+.lever::before,
-  .toggles label input[type='checkbox']+.lever::after {
+  .form-check [type='checkbox'] + label::after,
+  .form-check [type='checkbox'] + label::before,
+  .form-check [type='radio'] + label::after,
+  .form-check [type='radio'] + label::before,
+  .toggles label input[type='checkbox'] + .lever::before,
+  .toggles label input[type='checkbox'] + .lever::after {
     transition: none !important;
   }
 }

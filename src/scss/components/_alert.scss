@@ -22,8 +22,7 @@
 
 // Styles
 //
-
-
+/* stylelint-disable-next-line no-duplicate-selectors */
 .alert {
   position: relative;
   margin-bottom: var(--#{$prefix}alert-margin);

@@ -36,6 +36,7 @@ $avatar-variants: (
   secondary: $color-secondary,
 );
 
+/* stylelint-disable-next-line no-duplicate-selectors */
 .avatar {
   position: relative;
   z-index: 1;
@@ -194,11 +195,10 @@ $avatar-variants: (
 }
 
 //
-// Avatar with link 
+// Avatar with link
 
 a.avatar,
 a .avatar {
-
   &::after {
     position: absolute;
     top: 0;
@@ -226,7 +226,6 @@ a .avatar:hover,
 a .avatar:hover p {
   text-decoration: none;
 }
-
 
 // Avatar dropdown
 .avatar-dropdown {
