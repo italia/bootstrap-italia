@@ -127,7 +127,7 @@
     border-bottom: var(--#{$prefix}it-card-border-separator-width) solid var(--#{$prefix}it-card-border-color);
     color: var(--#{$prefix}it-card-description-color);
     font-size: var(--#{$prefix}label-font-size);
-    line-height: var(--#{$prefix}label-line-height);
+    line-height: var(--#{$prefix}label-leading);
     gap: var(--#{$prefix}spacing-s);
 
     @include media-breakpoint-down(sm) {
@@ -159,7 +159,7 @@
     border-top: var(--#{$prefix}it-card-border-separator-width) solid var(--#{$prefix}it-card-border-color);
     background-color: var(--#{$prefix}it-card-footer-background);
     font-size: var(--#{$prefix}label-font-size);
-    line-height: var(--#{$prefix}label-line-height);
+    line-height: var(--#{$prefix}label-leading);
 
     &:last-child {
       @include border-radius(0 0 var(--#{$prefix}it-card-border-radius-inner) var(--#{$prefix}it-card-border-radius-inner));
@@ -257,7 +257,7 @@
           margin-bottom: 0;
           font-size: var(--#{$prefix}label-font-size);
           font-weight: var(--#{$prefix}font-weight-solid);
-          line-height: var(--#{$prefix}label-line-height);
+          line-height: var(--#{$prefix}label-leading);
         }
       }
 

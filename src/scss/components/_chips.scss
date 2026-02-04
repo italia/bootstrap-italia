@@ -19,7 +19,7 @@
   --#{$prefix}chip-padding-x: var(--#{$prefix}spacing-xs);
   --#{$prefix}chip-padding-y: var(--#{$prefix}spacing-3xs);
   --#{$prefix}chip-text-color: var(--#{$prefix}color-text-secondary);
-  --#{$prefix}chip-text-line-height: var(--#{$prefix}label-line-height);
+  --#{$prefix}chip-text-line-height: var(--#{$prefix}label-leading);
   --#{$prefix}chip-text-size: var(--#{$prefix}label-font-size);
   --#{$prefix}chip-text-weight: var(--#{$prefix}font-weight-solid);
 }

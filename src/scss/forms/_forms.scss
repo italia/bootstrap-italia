@@ -173,7 +173,7 @@ label {
   color: var(--#{$prefix}form-control-label-color);
   font-size: var(--#{$prefix}label-font-size-s);
   font-weight: var(--#{$prefix}font-weight-solid);
-  line-height: var(--#{$prefix}label-line-height);
+  line-height: var(--#{$prefix}label-leading);
 }
 
 input,

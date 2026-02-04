@@ -20,7 +20,7 @@
   --#{$prefix}linklist-heading-color: var(--#{$prefix}color-text-secondary);
   --#{$prefix}linklist-heading-font-size: var(--#{$prefix}heading-6-font-size);
   --#{$prefix}linklist-item-font-size: var(--#{$prefix}label-font-size);
-  --#{$prefix}linklist-item-line-height: var(--#{$prefix}label-line-height);
+  --#{$prefix}linklist-item-line-height: var(--#{$prefix}label-leading);
   --#{$prefix}linklist-item-spacing: var(--#{$prefix}spacing-xxs);
   --#{$prefix}linklist-nested-spacing: var(--#{$prefix}spacing-s);
 }
@@ -72,7 +72,7 @@
     // List item active state
     &.active {
       span {
-        color: var(--#{$prefix}color-link-primary-active);
+        color: var(--#{$prefix}color-link-active);
       }
 
       .icon {
@@ -232,6 +232,7 @@
 
 // Multiline list item
 .multiline {
+
   .list-item-title-icon-wrapper {
     margin-bottom: var(--#{$prefix}spacing-3xs);
   }
@@ -249,7 +250,7 @@
   }
 
   .list-item {
-    width: 100%;
+    display: block; // Override inline-flex display
   }
 
   p {
