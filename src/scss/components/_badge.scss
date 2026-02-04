@@ -21,7 +21,7 @@
 
 // Styles
 //
-
+/* stylelint-disable-next-line no-duplicate-selectors */
 .badge {
   display: inline-block;
   padding: var(--#{$prefix}badge-padding-y) var(--#{$prefix}badge-padding-x);

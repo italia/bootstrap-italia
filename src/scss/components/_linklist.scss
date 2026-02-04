@@ -21,9 +21,8 @@
 
 // Styles
 //
-
+/* stylelint-disable-next-line no-duplicate-selectors */
 .link-list-wrapper {
-
   .link-list-heading,
   h3 {
     margin-bottom: var(--#{$prefix}spacing-xxs);
@@ -68,7 +67,7 @@
     // List item active state
     &.active {
       span {
-        color: var(--#{$prefix}color-text-primary-active);
+        color: var(--#{$prefix}color-link-active);
       }
 
       .icon {
@@ -245,7 +244,7 @@
   }
 
   .list-item {
-    width: 100%;
+    display: block; // Override inline-flex display
   }
 
   p {
@@ -261,7 +260,7 @@
 }
 
 //
-// Dark theme styles 
+// Dark theme styles
 
 .dark,
 .theme-dark {

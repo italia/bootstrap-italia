@@ -18,8 +18,7 @@
 
 // Styles
 //
-
-
+/* stylelint-disable-next-line no-duplicate-selectors */
 .back-to-top {
   position: fixed;
   right: var(--#{$prefix}backtop-position);

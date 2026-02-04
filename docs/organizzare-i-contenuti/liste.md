@@ -434,19 +434,19 @@ Per avere una lista che permetta paragrafi di testo aggiuntivo per ogni elemento
           <span class="it-multiple">
             <span class="metadata"><a href="#">metadata link</a></span>
             <a href="#" aria-label="Testo 2 - Azione 1">
-              <svg class="icon">
+              <svg class="icon icon-primary">
                 <title>Codice</title>
                 <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
               </svg>
             </a>
             <a href="#" aria-label="Testo 2 - Azione 2">
-              <svg class="icon">
+              <svg class="icon icon-primary">
                 <title>Codice</title>
                 <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
               </svg>
             </a>
             <a href="#" aria-label="Testo 2 - Azione 3">
-              <svg class="icon">
+              <svg class="icon icon-primary">
                 <title>Codice</title>
                 <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
               </svg>
@@ -465,19 +465,19 @@ Per avere una lista che permetta paragrafi di testo aggiuntivo per ogni elemento
           <span class="it-multiple">
             <span class="metadata"><a href="#">metadata link</a></span>
             <a href="#" aria-label="Link - Azione 1">
-              <svg class="icon">
+              <svg class="icon icon-primary">
                 <title>Codice</title>
                 <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
               </svg>
             </a>
             <a href="#" aria-label="Link - Azione 2">
-              <svg class="icon">
+              <svg class="icon icon-primary">
                 <title>Codice</title>
                 <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
               </svg>
             </a>
             <a href="#" aria-label="Link - Azione 3">
-              <svg class="icon">
+              <svg class="icon icon-primary">
                 <title>Codice</title>
                 <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
               </svg>
@@ -496,19 +496,19 @@ Per avere una lista che permetta paragrafi di testo aggiuntivo per ogni elemento
           <span class="it-multiple">
             <span class="metadata">metadata testo</span>
             <a href="#" aria-label="Link - Azione 1">
-              <svg class="icon">
+              <svg class="icon icon-primary">
                 <title>Codice</title>
                 <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
               </svg>
             </a>
             <a href="#" aria-label="Link - Azione 2">
-              <svg class="icon">
+              <svg class="icon icon-primary">
                 <title>Codice</title>
                 <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
               </svg>
             </a>
             <a href="#" aria-label="Link - Azione 3">
-              <svg class="icon">
+              <svg class="icon icon-primary">
                 <title>Codice</title>
                 <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
               </svg>

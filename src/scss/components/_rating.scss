@@ -19,7 +19,7 @@
 
 // Styles
 //
-
+/* stylelint-disable-next-line no-duplicate-selectors */
 .rating {
   border: none;
   display: flex;
@@ -28,7 +28,7 @@
   align-items: center;
 
   // Hide radio input
-  &>input {
+  & > input {
     position: absolute;
     left: -9999px;
   }
@@ -36,11 +36,11 @@
   // Star container
   //
 
-  &>label {
+  & > label {
     margin: 0;
     padding-right: 2px;
 
-     &:hover {
+    &:hover {
       cursor: pointer;
 
       svg {
@@ -62,7 +62,7 @@
   // Rating label
   //
 
-  &>legend {
+  & > legend {
     color: var(--#{$prefix}rating-text);
     font-size: var(--#{$prefix}rating-font-size);
     float: right;
@@ -76,8 +76,8 @@
   //
 
   &.rating-read-only {
-    &>input,
-    &>label {
+    & > input,
+    & > label {
       pointer-events: none;
     }
   }

@@ -20,7 +20,7 @@
 
 // Styles
 //
-
+/* stylelint-disable-next-line no-duplicate-selectors */
 .section {
   // Set `--#{$prefix}section-padding-x` only when extra horizontal padding is needed
   padding: var(--#{$prefix}section-padding-y) var(--#{$prefix}section-padding-x, 0);
@@ -67,7 +67,7 @@
     box-shadow: inset 0 1rem 1rem -1rem rgba(0, 0, 0, 0.3);
   }
 
-  // TODO: Check if this is needed  
+  // TODO: Check if this is needed
   &.section-background-header {
     position: relative;
     background-size: cover;

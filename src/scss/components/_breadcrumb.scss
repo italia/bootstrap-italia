@@ -27,7 +27,7 @@
 
 // Styles
 //
-
+/* stylelint-disable-next-line no-duplicate-selectors */
 .breadcrumb {
   display: flex;
   flex-wrap: wrap;
@@ -46,12 +46,12 @@
     --#{$prefix}breadcrumb-divider-color: var(--#{$prefix}color-text-inverse);
 
     .breadcrumb-item {
-      span.separator {
-        color: var(--#{$prefix}breadcrumb-link-color);
+      a:hover {
+        --#{$prefix}breadcrumb-link-color: var(--#{$prefix}color-text-inverse);
       }
 
-      i {
-        color: var(--#{$prefix}breadcrumb-divider-color);
+      .separator {
+        color: var(--#{$prefix}breadcrumb-link-color);
       }
     }
   }
@@ -61,26 +61,28 @@
   padding-left: 0;
 
   // The separator between breadcrumbs (by default, a forward-slash: "/")
-  +.breadcrumb-item {
+  + .breadcrumb-item {
     &::before {
-      content: var(--#{$prefix}breadcrumb-divider, escape-svg($breadcrumb-divider)) #{'/* rtl:'} var(--#{$prefix}breadcrumb-divider,
-        escape-svg($breadcrumb-divider-flipped)) #{'*/'};
+      content: var(--#{$prefix}breadcrumb-divider, escape-svg($breadcrumb-divider)) #{'/* rtl:'} var(
+          --#{$prefix}breadcrumb-divider,
+          escape-svg($breadcrumb-divider-flipped)
+        ) #{'*/'};
       padding-right: var(--#{$prefix}breadcrumb-item-padding-x);
       float: left; // Suppress inline spacings and underlining of the separator
       color: var(--#{$prefix}breadcrumb-divider-color);
     }
   }
 
-  &+.breadcrumb-item:before {
+  & + .breadcrumb-item:before {
     display: none;
   }
 
-// The breadcrumb item link
+  // The breadcrumb item link
   a {
     color: var(--#{$prefix}breadcrumb-link-color);
     font-weight: var(--#{$prefix}breadcrumb-link-font-weight);
     &:hover {
-      --#{$prefix}breadcrumb-link-color: var(--#{$prefix}color-text-secondary-hover);
+      --#{$prefix}breadcrumb-link-color: var(--#{$prefix}color-link-secondary-hover);
     }
   }
 
@@ -98,4 +100,3 @@
     color: var(--#{$prefix}breadcrumb-separator-color);
   }
 }
-

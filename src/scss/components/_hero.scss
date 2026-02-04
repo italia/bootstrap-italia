@@ -23,6 +23,8 @@
 // Styles
 //
 
+
+/* stylelint-disable-next-line no-duplicate-selectors */
 .it-hero-wrapper {
   min-height: var(--#{$prefix}hero-height);
   position: relative;

@@ -26,8 +26,7 @@
 
 // Styles
 //
-
-
+/* stylelint-disable-next-line no-duplicate-selectors */
 .callout {
   position: relative;
   overflow: hidden;
@@ -110,7 +109,7 @@
     border-left: var(--#{$prefix}callout-border-size) solid var(--#{$prefix}callout-border-color);
 
     .callout-title {
-      margin-bottom: var(--#{$prefix}spacing-s)
+      margin-bottom: var(--#{$prefix}spacing-s);
     }
   }
 

@@ -40,7 +40,7 @@
 
 // Styles
 //
-
+/* stylelint-disable-next-line no-duplicate-selectors */
 .it-card {
   position: relative;
   display: flex;
@@ -68,7 +68,7 @@
       }
 
       // linked titles with icons goes fullwidth
-      >a {
+      > a {
         display: flex;
         justify-content: space-between;
         width: 100%;
@@ -128,7 +128,7 @@
     border-bottom: var(--#{$prefix}card-border-separator-width) solid var(--#{$prefix}card-border-color);
     color: var(--#{$prefix}card-description-color);
     font-size: var(--#{$prefix}label-font-size);
-    line-height: var(--#{$prefix}label-line-height);
+    line-height: var(--#{$prefix}label-leading);
     gap: var(--#{$prefix}spacing-s);
 
     @include media-breakpoint-down(sm) {
@@ -160,7 +160,7 @@
     border-top: var(--#{$prefix}card-border-separator-width) solid var(--#{$prefix}card-border-color);
     background-color: var(--#{$prefix}card-footer-background);
     font-size: var(--#{$prefix}label-font-size);
-    line-height: var(--#{$prefix}label-line-height);
+    line-height: var(--#{$prefix}label-leading);
 
     &:last-child {
       @include border-radius(0 0 var(--#{$prefix}card-border-radius-inner) var(--#{$prefix}card-border-radius-inner));
@@ -247,8 +247,7 @@
       justify-content: space-between;
       gap: var(--#{$prefix}card-spacing-x);
 
-      .it-card-profile {
-
+      .it-card-profile-content {
         .it-card-profile-name {
           margin-bottom: var(--#{$prefix}spacing-3xs);
         }
@@ -258,7 +257,7 @@
           margin-bottom: 0;
           font-size: var(--#{$prefix}label-font-size);
           font-weight: var(--#{$prefix}font-weight-solid);
-          line-height: var(--#{$prefix}label-line-height);
+          line-height: var(--#{$prefix}label-leading);
         }
       }
 
@@ -285,8 +284,8 @@
   }
 
   // Card can contain special lists, example: Related articles to a main Tag card
-  >.list-group,
-  .it-card-body>.list-group {
+  > .list-group,
+  .it-card-body > .list-group {
     margin-top: var(--#{$prefix}spacing-s);
     margin-bottom: var(--#{$prefix}spacing-s);
     border-top: var(--#{$prefix}card-border-separator-width) solid var(--#{$prefix}card-border-color);
@@ -307,12 +306,13 @@
     }
   }
 
-  >.it-card-header+.list-group,
-  >.list-group+.it-card-footer {
+  > .it-card-header + .list-group,
+  > .list-group + .it-card-footer {
     border-top: 0;
   }
 
   // Card image responsive wrapper and a11y DOM order hack
+  /* stylelint-disable-next-line no-duplicate-selectors */
   &.it-card-image {
     @include border-top-radius(var(--#{$prefix}card-border-radius-inner));
     @include border-bottom-radius(var(--#{$prefix}card-border-radius-inner));
@@ -324,7 +324,6 @@
 
     .it-card-image-wrapper {
       order: -1;
-
     }
 
     &.rounded {
@@ -335,7 +334,6 @@
 
       &.it-card-border-top {
         .it-card-image-wrapper {
-
           &:first-child,
           &:nth-child(2) {
             border-top-left-radius: 0;
@@ -398,7 +396,9 @@
   }
 
   // Card profile
+  /* stylelint-disable-next-line no-duplicate-selectors */
   &.it-card-profile {
+    /* stylelint-disable-next-line no-duplicate-selectors */
     .it-card-profile-header {
       display: flex;
       flex-direction: row;
@@ -439,15 +439,15 @@
           margin-bottom: 0;
         }
       }
-
+      /* stylelint-disable-next-line no-duplicate-selectors */
       .it-card-profile-image {
         max-width: 80px;
         max-height: 80px;
-
+        /* stylelint-disable-next-line no-duplicate-selectors */
         figure {
           margin-bottom: 0;
         }
-
+        /* stylelint-disable-next-line no-duplicate-selectors */
         .it-card-profile-image-icon-wrapper {
           display: flex;
           justify-content: center;
@@ -502,7 +502,6 @@
 
   // Layout inline
   &.it-card-inline {
-
     // Layout changes from stacked to row on md and up
     @include media-breakpoint-up(md) {
       flex-direction: row;
@@ -590,7 +589,7 @@
 
       .it-card-inline-content {
         padding: 0;
-        gap: var(--#{$prefix}spacing-xs)
+        gap: var(--#{$prefix}spacing-xs);
       }
 
       &.it-card-inline-reverse {
@@ -619,8 +618,8 @@ ul.it-card-list {
   padding: 0;
   list-style-type: none;
 
-  >li.col,
-  >li[class*='col-'] {
+  > li.col,
+  > li[class*='col-'] {
     display: block;
     margin-top: 0;
     border: none;
@@ -636,19 +635,17 @@ ul.it-card-list {
   flex-wrap: wrap;
   gap: var(--#{$prefix}card-group-gap);
 
-  >.it-card {
+  > .it-card {
     margin: 0;
   }
 
   // Progressive enhancement with Container Queries
   @supports (container-type: inline-size) {
-
     // Only with .it-card-group-container-aware class
     &.it-card-group-container-aware {
       container-type: inline-size;
 
-      >.it-card {
-
+      > .it-card {
         // Container Queries
         flex: 1 0 100%;
 
@@ -671,21 +668,21 @@ ul.it-card-list {
       }
 
       // Override specific columns in container mode
-      &.it-card-group-2-cols>.it-card {
+      &.it-card-group-2-cols > .it-card {
         @container (min-width: 500px) {
           flex: 0 0 calc(50% - 0.5 * var(--#{$prefix}card-group-gap));
         }
       }
 
-      &.it-card-group-3-cols>.it-card {
+      &.it-card-group-3-cols > .it-card {
         @container (min-width: 800px) {
           flex: 0 0 calc(33.333% - 0.667 * var(--#{$prefix}card-group-gap));
         }
       }
     }
   }
-
-  >.it-card {
+  /* stylelint-disable-next-line no-duplicate-selectors */
+  > .it-card {
     // Default stacked on mobile
     flex: 0 0 calc(100% - var(--#{$prefix}card-group-gap));
     // margin: calc(0.5 * var(--#{$prefix}card-group-gap));
@@ -705,21 +702,21 @@ ul.it-card-list {
   }
 
   // Predefined column layouts
-  &.it-card-group-2-cols>.it-card,
-  &.it-card-group-3-cols>.it-card,
-  &.it-card-group-4-cols>.it-card {
+  &.it-card-group-2-cols > .it-card,
+  &.it-card-group-3-cols > .it-card,
+  &.it-card-group-4-cols > .it-card {
     @include media-breakpoint-up(sm) {
       flex: 0 0 calc(50% - 0.5 * var(--#{$prefix}card-group-gap));
     }
   }
 
-  &.it-card-group-3-cols>.it-card {
+  &.it-card-group-3-cols > .it-card {
     @include media-breakpoint-up(md) {
       flex: 0 0 calc(33.333% - 0.667 * var(--#{$prefix}card-group-gap));
     }
   }
 
-  &.it-card-group-4-cols>.it-card {
+  &.it-card-group-4-cols > .it-card {
     @include media-breakpoint-up(md) {
       flex: 0 0 calc(33.333% - 0.667 * var(--#{$prefix}card-group-gap));
     }
@@ -730,7 +727,7 @@ ul.it-card-list {
   }
 
   // Option for equal height cards
-  &.it-card-group-equal-height>.it-card {
+  &.it-card-group-equal-height > .it-card {
     height: 100%;
   }
 

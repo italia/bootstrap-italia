@@ -8,7 +8,6 @@
 
 // Properties
 //
-
 .acceptoverlay {
   --#{$prefix}acceptoverlay-color-background: var(--#{$prefix}color-background-inverse);
   --#{$prefix}acceptoverlay-color-text: var(--#{$prefix}color-text);
@@ -24,9 +23,8 @@
 }
 // Styles
 //
-
+/* stylelint-disable-next-line no-duplicate-selectors */
 .acceptoverlay {
-
   position: absolute;
   top: 0;
   right: 0;

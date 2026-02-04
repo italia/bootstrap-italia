@@ -17,7 +17,7 @@
 
 // Styles
 //
-
+/* stylelint-disable-next-line no-duplicate-selectors */
 .megamenu {
   padding-left: var(--#{$prefix}megamenu-spacing);
   padding-right: var(--#{$prefix}megamenu-spacing);
@@ -52,7 +52,7 @@
 
     .link-list {
       width: 100%;
-     
+
       .list-item {
         display: flex;
         align-items: center;
@@ -136,7 +136,7 @@
     button.dropdown-toggle:before {
       z-index: 2;
     }
-    
+
     .dropdown-menu {
       z-index: 1;
     }
@@ -163,7 +163,6 @@
 
     // Vertical menu styles
     .it-vertical {
-
       .link-list-wrapper ul.link-list {
         width: 100%;
 

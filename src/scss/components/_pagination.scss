@@ -22,7 +22,7 @@
 }
 
 // Styles
-
+/* stylelint-disable-next-line no-duplicate-selectors */
 .pagination {
   display: flex;
   flex-wrap: wrap;
@@ -120,7 +120,7 @@
   // }
 
   &.disabled,
-  .disabled>& {
+  .disabled > & {
     --#{$prefix}pagination-border-color: transparent;
     --#{$prefix}pagination-link-color: var(--#{$prefix}color-text-disabled);
     --#{$prefix}pagination-icon-color: var(--#{$prefix}color-text-disabled);
@@ -149,7 +149,11 @@
 }
 
 // Fallback for browsers that do not support gap
-@supports not ((gap: 8px)) {
+@supports not (
+  (
+    gap: 8px,
+  )
+) {
   .page-item {
     margin-right: var(--#{$prefix}spacing-xxs);
     &:last-child {

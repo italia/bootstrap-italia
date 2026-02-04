@@ -31,7 +31,7 @@ $btn-close-white-filter: invert(1) grayscale(100%) brightness(200%) !default;
 
 // Styles
 //
-
+/* stylelint-disable-next-line no-duplicate-selectors */
 .btn {
   display: inline-block;
   padding: var(--#{$prefix}btn-padding-y) var(--#{$prefix}btn-padding-x);
@@ -259,11 +259,11 @@ a.btn-outline {
 
     &:hover {
       --#{$prefix}btn-outline-border-color: var(--#{$prefix}color-border-secondary-hover);
-      --#{$prefix}btn-text-color: var(--#{$prefix}color-text-secondary-hover);
+      --#{$prefix}btn-text-color: var(--#{$prefix}color-link-secondary-hover);
     }
     &:active {
       --#{$prefix}btn-outline-border-color: var(--#{$prefix}color-border-secondary-active);
-      --#{$prefix}btn-text-color: var(--#{$prefix}color-text-secondary-active);
+      --#{$prefix}btn-text-color: var(--#{$prefix}color-link-secondary-active);
     }
   }
 

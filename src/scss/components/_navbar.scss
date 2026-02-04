@@ -31,7 +31,7 @@
   --#{$prefix}navbar-link-color: var(--#{$prefix}color-link); // nav link color default - mobile
   --#{$prefix}navbar-link-font-size: var(--#{$prefix}label-font-size-l);
   --#{$prefix}navbar-link-font-weight: var(--#{$prefix}font-weight-solid);
-  --#{$prefix}navbar-link-line-height: var(--#{$prefix}label-line-height);
+  --#{$prefix}navbar-link-line-height: var(--#{$prefix}label-leading);
   --#{$prefix}navbar-link-padding-x: var(--#{$prefix}spacing-m);
   --#{$prefix}navbar-link-padding-y: var(--#{$prefix}spacing-s);
   --#{$prefix}navbar-links-margin-top: 102px;
@@ -72,7 +72,6 @@
 // Styles
 //
 
-
 // Navbar mobile backdrop, inspired by "modal" approachAdd commentMore actions
 .navbar-backdrop {
   --#{$prefix}backdrop-zindex: #{$zindex-modal-backdrop};
@@ -83,7 +82,7 @@
     display: none; // to handle resize from md to lg when open
   }
 }
-
+/* stylelint-disable-next-line no-duplicate-selectors */
 .navbar {
   position: relative;
   display: flex;
@@ -166,9 +165,8 @@
   // Dropdown menu inside navbar
   // This is a special case for the dropdown menu inside the navbar
   //
-  
-  .dropdown-menu {
 
+  .dropdown-menu {
     a.it-heading-link,
     a.it-footer-link {
       svg {
@@ -272,7 +270,7 @@
     bottom: auto;
     left: auto;
     z-index: auto;
-    display: block !important; // overrides jquery inline style 
+    display: block !important; // overrides jquery inline style
     background: none;
     transition: none;
     width: 100%;
@@ -326,10 +324,10 @@
     }
 
     li {
-      .nav-link[data-focus-mouse="true"] {
+      .nav-link[data-focus-mouse='true'] {
         border-color: transparent !important;
       }
-      
+
       .nav-link {
         position: relative;
         font-weight: var(--#{$prefix}navbar-link-font-weight);
