@@ -13,8 +13,10 @@
   --#{$prefix}card-background: var(--#{$prefix}color-background-inverse); // Controls the card background color, using color tokens
   --#{$prefix}card-border-color: var(--#{$prefix}color-border-subtle); // Controls the card border color, using color tokens
   --#{$prefix}card-border-radius: var(--#{$prefix}radius-smooth); // Controls the outer border radius of the card, using radius tokens
-  --#{$prefix}card-border-radius-inner: calc(var(--#{$prefix}card-border-radius) - var(--#{$prefix}card-border-outside-width)); // Controls the inner border radius of the card
-  --#{$prefix}card-border-top-color: transparent; // Controls 
+  --#{$prefix}card-border-radius-inner: calc(
+    var(--#{$prefix}card-border-radius) - var(--#{$prefix}card-border-outside-width)
+  ); // Controls the inner border radius of the card
+  --#{$prefix}card-border-top-color: transparent; // Controls
   --#{$prefix}card-border-top-width: 6px; // Controls the width of the top border
   --#{$prefix}card-border-outside-width: 1px; // Controls the width of the outside border, used for calculating inner border radius
   --#{$prefix}card-border-separator-width: 1px; // Controls the width of the separator border for card sections like body and footer
@@ -33,7 +35,9 @@
   --#{$prefix}card-inline-min-height: 240px; // Controls the minimum height of inline cards, ensuring enough space for content and image
   --#{$prefix}card-inline-mini-min-height: 160px; // Controls the minimum height of inline mini cards, ensuring enough space for content and image
   --#{$prefix}card-link-color: var(--#{$prefix}color-text-secondary); // Controls the text color of links within the card, using color tokens
-  --#{$prefix}card-title-spacing-y: var(--#{$prefix}card-spacing-y); // Controls the vertical spacing around the card title, using the card spacing variable for consistency
+  --#{$prefix}card-title-spacing-y: var(
+    --#{$prefix}card-spacing-y
+  ); // Controls the vertical spacing around the card title, using the card spacing variable for consistency
   --#{$prefix}card-signature-font-size: var(--#{$prefix}label-font-size); // Controls the font size of the card signature, using font size tokens
   --#{$prefix}card-signature-font-family: var(--#{$prefix}font-mono); // Controls the font family of the card signature, using font family tokens
 }
@@ -109,7 +113,7 @@
     margin-bottom: 0;
     padding: 0;
     list-style-type: none;
-    gap: calc(var(--#{$prefix}card-spacing-y)*0.5); // use half spacing for gap
+    gap: calc(var(--#{$prefix}card-spacing-y) * 0.5); // use half spacing for gap
   }
 
   // Card date, use <time> if possible
@@ -175,7 +179,7 @@
       color: color-hover($color-text-secondary);
     }
 
-    +.it-card-link {
+    + .it-card-link {
       margin-left: var(--#{$prefix}card-spacing-x);
     }
   }
