@@ -138,7 +138,7 @@ L'elemento `.it-rounded-icon` con all'interno la relativa icona, precede l'eleme
 
 ### Lista con immagine
 
-L'elemento `.it-thumb` con all'interno la relativa immagine, precede l'elemento `.it-right-zone` che contiene il testo. Ha una dimensione massima di `5rem` che corrispondono a `80px`. La proporzione dell'immagine può essere modificata utilizzando le classi specifiche per le <a href="{{ site.baseurl }}/docs/componenti/organizzare-gli-spazi/proporzioni/">proporzioni</a>
+L'elemento `.it-thumb` con all'interno la relativa immagine, precede l'elemento `.it-right-zone` che contiene il testo. Ha una dimensione massima di `5rem` che corrispondono a `80px`. La proporzione dell'immagine può essere modificata utilizzando le classi specifiche per le <a href="{{ site.baseurl }}/docs/organizzare-gli-spazi/proporzioni/">proporzioni</a>
 
 {% comment %}Example name: Base, con immagine{% endcomment %}
 {% capture example %}

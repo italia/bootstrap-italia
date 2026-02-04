@@ -17,7 +17,6 @@ Le scelte tipografiche di Bootstrap Italia seguono le indicazioni del [Design sy
 ## Famiglie di caratteri
 
 Bootstrap Italia include tre famiglie di caratteri tipografici per garantire leggibilità e coerenza visiva:
-
 - **Titillium** (Web o Sans Pro): font principale sans-serif per interfacce e testi brevi
 - **Lora**: font serif per contenuti editoriali e testi lunghi
 - **Roboto Mono**: font monospace per codice, dati tabulari e numeri
@@ -81,8 +80,6 @@ Tutte le intestazioni HTML, da `<h1>` fino a `<h6>`, sono disponibili, anche se
 
 L'interlinea è impostata con il rapporto di  `1.2`.
 
-
-
 {% comment %}Example name: Intestazioni{% endcomment %}
 {% capture example %}
 <h1 class="no_toc">Intestazione di tipo h1</h1>
@@ -92,7 +89,6 @@ L'interlinea è impostata con il rapporto di  `1.2`.
 <h5 class="no_toc">Intestazione di tipo h5</h5>
 <h6 class="no_toc">Intestazione di tipo h6</h6>
 {% endcapture %}{% include example.html content=example %}
-
 
 Nel caso in cui si voglia presentare il testo nello stesso stile delle
 intestazioni, ma non sia possibile utilizzare l'elemento HTML appropriato,
