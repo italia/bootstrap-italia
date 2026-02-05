@@ -446,7 +446,7 @@ Per modificare invece la dimensione dell'icona, è possibile utilizzare le class
 {% comment %}Example name: Varianti con icona o pulsanti di dimensioni diverse{% endcomment %}
 {% capture example %}
 <div class="form-group">
-  <label for="input-group-4>Campo dimensione grande</label>
+  <label for="input-group-4">Campo dimensione grande</label>
   <div class="input-group">
       <span class="input-group-text"><svg class="icon icon-md" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-pencil"></use></svg></span>
       <input type="text" class="form-control form-control-lg" id="input-group-4" name="input-group-4" placeholder="Testo segnaposto">
