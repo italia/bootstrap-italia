@@ -128,7 +128,7 @@ Aggiungi l'attributo `disabled` ad un input per impedire la modifica del valore 
 {% comment %}Example name: Disabilitato {% endcomment %}
 {% capture example %}
 <div class="form-group">
-  <input class="form-control" type="text" id="input-text-disabled" disabled>
+  <input class="form-control" type="text" id="input-text-disabled" disabled aria-label="Campo disabilitato">
 </div>
 {% endcapture %}{% include example.html content=example %}
 
