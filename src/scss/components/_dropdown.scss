@@ -312,7 +312,7 @@
 }
 
 // Dropdown section headers
-.dropdown-header {
+.dropdown-header.link-list-heading {
   display: block;
   margin-bottom: 0; // for use with heading elements
   padding: var(--#{$prefix}dropdown-header-padding-y) var(--#{$prefix}dropdown-header-padding-x);
