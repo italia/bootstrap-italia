@@ -107,7 +107,7 @@ Il testo di aiuto deve essere esplicitamente associato ai campi a cui si riferis
       <span class="input-group-text"><svg class="icon icon-sm icon-secondary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-pencil"></use></svg></span>
       <input type="text" class="form-control" id="input-group-3" name="input-group-3">
       <div class="input-group-append">
-        <button class="btn btn-primary" type="button" id="button-3">Invio</button>
+        <button class="btn btn-primary" type="button" id="button-4">Invio</button>
       </div>
     </div>
 </div>
@@ -446,34 +446,34 @@ Per modificare invece la dimensione dell'icona, è possibile utilizzare le class
 {% comment %}Example name: Varianti con icona o pulsanti di dimensioni diverse{% endcomment %}
 {% capture example %}
 <div class="form-group">
-  <label for="input-group-3">Campo dimensione grande</label>
+  <label for="input-group-4>Campo dimensione grande</label>
   <div class="input-group">
       <span class="input-group-text"><svg class="icon icon-md" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-pencil"></use></svg></span>
-      <input type="text" class="form-control form-control-lg" id="input-group-1" name="input-group-3" placeholder="Testo segnaposto">
+      <input type="text" class="form-control form-control-lg" id="input-group-4" name="input-group-4" placeholder="Testo segnaposto">
       <div class="input-group-append">
-        <button class="btn btn-primary" type="button" id="button-1" for="input-group-1">Invio</button>
+        <button class="btn btn-primary" type="button" id="button-1" for="input-group-4">Invio</button>
       </div>
     </div>
 </div>
 
 <div class="form-group">
-  <label for="input-group-3">Campo dimensione base</label>
+  <label for="input-group-5">Campo dimensione base</label>
   <div class="input-group">
       <span class="input-group-text"><svg class="icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-pencil"></use></svg></span>
-      <input type="text" class="form-control" id="input-group-2" name="input-group-2" placeholder="Testo segnaposto">
+      <input type="text" class="form-control" id="input-group-5" name="input-group-5" placeholder="Testo segnaposto">
       <div class="input-group-append">
-        <button class="btn btn-primary" type="button" id="button-2" for="input-group-2">Invio</button>
+        <button class="btn btn-primary" type="button" id="button-2" for="input-group-5">Invio</button>
       </div>
     </div>
 </div>
 
 <div class="form-group">
-  <label class="active" for="input-group-2">Campo dimensione piccola</label>
+  <label class="active" for="input-group-6">Campo dimensione piccola</label>
   <div class="input-group">
     <span class="input-group-text"><svg class="icon icon-xs" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-pencil"></use></svg></span>
-    <input type="text" class="form-control form-control-sm" id="input-group-3" name="input-group-3" placeholder="Testo segnaposto">
+    <input type="text" class="form-control form-control-sm" id="input-group-6" name="input-group-6" placeholder="Testo segnaposto">
     <div class="input-group-append">
-      <button class="btn btn-primary" type="button" id="button-3" for="input-group-3">Invio</button>
+      <button class="btn btn-primary" type="button" id="button-3" for="input-group-6">Invio</button>
     </div>
   </div>
 </div>
