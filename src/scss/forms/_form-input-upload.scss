@@ -11,9 +11,8 @@
 
 // Input file
 .upload {
-
   // button styling
-  &[type='file']+label {
+  &[type='file'] + label {
     display: inline-block;
     margin-bottom: 0;
     max-width: 80%;
@@ -46,7 +45,7 @@
   padding: 0;
 
   //grid list element
-  &>li {
+  & > li {
     margin-right: var(--#{$prefix}spacing-xxs);
     margin-bottom: var(--#{$prefix}spacing-xxs);
     list-style-type: none;
@@ -58,9 +57,8 @@
 
   // input file
   .upload {
-
     //button styling
-    &[type='file']+label {
+    &[type='file'] + label {
       display: table-cell;
       width: 128px;
       height: 128px;
@@ -244,7 +242,7 @@
   height: 100%;
 
   .upload-avatar {
-    &[type='file']+label {
+    &[type='file'] + label {
       position: absolute;
       top: 0;
       left: 0;
@@ -284,7 +282,7 @@
     background: $neutral-1-a1;
     pointer-events: none;
 
-    &>svg {
+    & > svg {
       width: 16px;
       height: 16px;
     }
@@ -302,7 +300,7 @@
       width: 18px;
       height: 18px;
 
-      &>svg {
+      & > svg {
         width: 12px;
         height: 12px;
       }
@@ -385,14 +383,14 @@
   overflow: hidden;
   opacity: 0;
 
-  &[type='file']+label {
+  &[type='file'] + label {
     color: var(--#{$prefix}color-text-primary);
     text-decoration: underline;
     cursor: pointer;
   }
 
   &:focus {
-    &[type='file']+label {
+    &[type='file'] + label {
       outline: auto 5px -webkit-focus-ring-color;
     }
   }
@@ -486,7 +484,7 @@
       fill: var(--#{$prefix}icon-inverse);
     }
 
-    .upload-dragdrop-text h5+p {
+    .upload-dragdrop-text h5 + p {
       color: var(--#{$prefix}color-text-success);
       font-weight: var(--#{$prefix}font-weight-solid);
     }
@@ -496,7 +494,7 @@
 // Media quert small - tablet
 @include media-breakpoint-up(sm) {
   .upload {
-    &[type='file']+label {
+    &[type='file'] + label {
       font-size: var(--#{$prefix}label-font-size-s);
     }
   }
@@ -531,7 +529,6 @@
 // Media query - desktop
 
 @include media-breakpoint-up(xl) {
-
   .avatar-upload:hover,
   .avatar-upload:focus-within {
     .upload-avatar-container {
@@ -551,7 +548,7 @@
     transition: opacity var(--#{$prefix}transition-instant);
 
     .upload-avatar {
-      &[type='file']+label {
+      &[type='file'] + label {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -578,7 +575,7 @@
       }
 
       &:focus:not([data-focus-mouse='true']) {
-        &[type='file']+label {
+        &[type='file'] + label {
           outline: auto 5px -webkit-focus-ring-color;
         }
       }
@@ -586,7 +583,6 @@
   }
 
   .avatar-upload-wrapper {
-
     //hide icon
     .avatar-upload-icon {
       display: none;
@@ -594,7 +590,7 @@
 
     &.size-sm {
       .upload-avatar {
-        &[type='file']+label {
+        &[type='file'] + label {
           span {
             display: none;
           }

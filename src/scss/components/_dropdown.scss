@@ -9,42 +9,44 @@
 // Properties
 //
 
-.dropdown {
-  --#{$prefix}dropdown-animation-speed: var(--#{$prefix}transition-instant); // speed of dropdown open animation
-  --#{$prefix}dropdown-background: var(--#{$prefix}color-background-inverse); // default background
-  --#{$prefix}dropdown-border-color: transparent; // default border color
-  --#{$prefix}dropdown-border-radius: var(--#{$prefix}radius-smooth); // border radius
-  --#{$prefix}dropdown-border-width: 0; // border width
-  --#{$prefix}dropdown-box-shadow: var(--#{$prefix}elevation-medium); // box shadow
-  --#{$prefix}dropdown-color: var(--#{$prefix}color-text-base); // default text color
-  --#{$prefix}dropdown-divider-bg: var(--#{$prefix}color-border-subtle); // divider background color
-  --#{$prefix}dropdown-divider-margin-y: var(--#{$prefix}spacing-xxs); // divider margin top and bottom
-  --#{$prefix}dropdown-font-size: var(--#{$prefix}label-font-size); // font size of dropdown items
-  --#{$prefix}dropdown-header-color: var(--#{$prefix}color-text-secondary); // dropdown header text color
-  --#{$prefix}dropdown-header-font-size: var(--#{$prefix}label-font-size); // dropdown header font size
-  --#{$prefix}dropdown-header-padding-x: var(--#{$prefix}spacing-s); // dropdown header padding left and right
-  --#{$prefix}dropdown-header-padding-y: var(--#{$prefix}spacing-xxs); // dropdown header padding top and bottom
-  --#{$prefix}dropdown-inner-border-radius: var(--#{$prefix}radius-smooth); // inner border radius for first and last items
-  --#{$prefix}dropdown-item-padding-x: var(--#{$prefix}spacing-s); // dropdown item padding left and right
-  --#{$prefix}dropdown-item-padding-y: var(--#{$prefix}spacing-xs); // dropdown item padding top and bottom
-  --#{$prefix}dropdown-link-active-color: var(--#{$prefix}color-text-primary-active); // active link color
-  --#{$prefix}dropdown-link-color: var(--#{$prefix}color-text-primary); // link color in dropdown items
-  --#{$prefix}dropdown-link-hover-color: var(--#{$prefix}color-text-primary-hover); // link hover color in dropdown items
-  --#{$prefix}dropdown-min-width: 10rem; // minimum width of dropdown menu
-  --#{$prefix}dropdown-notch-base-size: 1.125rem; // size of the notch element
-  --#{$prefix}dropdown-notch-position-x: 20px; // x position of the notch element
-  --#{$prefix}dropdown-notch-position-y: -8px; // y position of the notch element
-  --#{$prefix}dropdown-padding-x: 0; // dropdown menu padding left and right
-  --#{$prefix}dropdown-padding-y: var(--#{$prefix}spacing-xxs); // dropdown menu padding top and bottom
-  --#{$prefix}dropdown-spacer: 0.125rem; // space between dropdown toggle and menu
-  --#{$prefix}dropdown-vertical-shift: 10px; // vertical shift for dropdown open animation
-  --#{$prefix}dropdown-zindex: 8; // z-index of dropdown menu
+.dropdown,
+.dropdown-menu {
+  --#{$prefix}dropdown-animation-speed: var(--#{$prefix}transition-instant); // Controls the speed of the dropdown open animation, using transition tokens.
+  --#{$prefix}dropdown-background: var(--#{$prefix}color-background-inverse); // Controls the default background, using color tokens.
+  --#{$prefix}dropdown-border-color: transparent; // Controls the default border color.
+  --#{$prefix}dropdown-border-radius: var(--#{$prefix}radius-smooth); // Controls the border radius, using radius tokens.
+  --#{$prefix}dropdown-border-width: 0; // Controls the border width.
+  --#{$prefix}dropdown-box-shadow: var(--#{$prefix}elevation-medium); // Controls the box shadow, using elevation tokens.
+  --#{$prefix}dropdown-color: var(--#{$prefix}color-text-base); // Controls the default text color, using color tokens.
+  --#{$prefix}dropdown-divider-bg: var(--#{$prefix}color-border-subtle); // Controls the divider background color, using color tokens.
+  --#{$prefix}dropdown-divider-margin-y: var(--#{$prefix}spacing-xxs); // Controls the divider margin top and bottom, using spacing tokens.
+  --#{$prefix}dropdown-font-size: var(--#{$prefix}label-font-size); // Controls the font size of dropdown items, using font tokens.
+  --#{$prefix}dropdown-header-color: var(--#{$prefix}color-text-secondary); // Controls the dropdown header text color, using color tokens.
+  --#{$prefix}dropdown-header-font-size: var(--#{$prefix}label-font-size); // Controls the dropdown header font size, using font tokens.
+  --#{$prefix}dropdown-header-padding-x: var(--#{$prefix}spacing-s); // Controls the dropdown header padding left and right, using spacing tokens.
+  --#{$prefix}dropdown-header-padding-y: var(--#{$prefix}spacing-xxs); // Controls the dropdown header padding top and bottom, using spacing tokens.
+  --#{$prefix}dropdown-inner-border-radius: var(--#{$prefix}radius-smooth); // Controls the inner border radius for first and last items, using radius tokens.
+  --#{$prefix}dropdown-item-padding-x: var(--#{$prefix}spacing-s); // Controls the dropdown item padding left and right, using spacing tokens.
+  --#{$prefix}dropdown-item-padding-y: var(--#{$prefix}spacing-xs); // Controls the dropdown item padding top and bottom, using spacing tokens.
+  --#{$prefix}dropdown-link-active-color: var(--#{$prefix}color-text-primary-active); // Controls the active link color, using color tokens.
+  --#{$prefix}dropdown-link-color: var(--#{$prefix}color-text-primary); // Controls the link color in dropdown items, using color tokens.
+  --#{$prefix}dropdown-link-hover-color: var(--#{$prefix}color-text-primary-hover); // Controls the link hover color in dropdown items, using color tokens.
+  --#{$prefix}dropdown-min-width: 10rem; // Controls the minimum width of the dropdown menu.
+  --#{$prefix}dropdown-notch-base-size: 1.125rem; // Controls the size of the notch element.
+  --#{$prefix}dropdown-notch-position-x: 20px; // Controls the x position of the notch element.
+  --#{$prefix}dropdown-notch-position-y: -8px; // Controls the y position of the notch element.
+  --#{$prefix}dropdown-padding-x: 0; // Controls the dropdown menu padding left and right.
+  --#{$prefix}dropdown-padding-y: var(--#{$prefix}spacing-xxs); // Controls the dropdown menu padding top and bottom, using spacing tokens.
+  --#{$prefix}dropdown-spacer: 0.125rem; // Controls the space between dropdown toggle and menu.
+  --#{$prefix}dropdown-vertical-shift: 10px; // Controls the vertical shift for dropdown open animation.
+  --#{$prefix}dropdown-zindex: 8; // Controls the z-index of the dropdown menu.
 }
 
 // Styles
 //
 .dropup,
 .dropend,
+/* stylelint-disable-next-line no-duplicate-selectors */
 .dropdown,
 .dropstart,
 .dropup-center,
@@ -310,7 +312,7 @@
 }
 
 // Dropdown section headers
-.dropdown-header {
+.dropdown-header.link-list-heading {
   display: block;
   margin-bottom: 0; // for use with heading elements
   padding: var(--#{$prefix}dropdown-header-padding-y) var(--#{$prefix}dropdown-header-padding-x);
@@ -345,7 +347,7 @@
     opacity: 0;
   }
   100% {
-    margin-top: -var(--#{$prefix}dropdown-vertical-shift);
+    margin-top: calc(-1 * var(--#{$prefix}dropdown-vertical-shift));
     opacity: 1;
   }
 }
@@ -407,13 +409,12 @@
   // padding: var(--#{$prefix}dropdown-button-padding);
   border-radius: 0;
   box-shadow: none;
-
   color: var(--#{$prefix}dropdown-button-color);
   @include media-breakpoint-up(lg) {
     font-size: var(--#{$prefix}label-font-size-l);
   }
   &:hover {
-    --#{$prefix}dropdown-button-color: var(--#{$prefix}color-text-primary-hover);
+    --#{$prefix}dropdown-button-color: var(--#{$prefix}color-link-hover);
     text-decoration: underline;
   }
   &:not(:disabled):active {

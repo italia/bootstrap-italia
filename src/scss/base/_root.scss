@@ -1,7 +1,7 @@
 :root {
-  @each $color, $value in $colors {
-    --#{$prefix}#{$color}: #{$value};
-  }
+  // @each $color, $value in $colors {
+  //   --#{$prefix}#{$color}: #{$value};
+  // }
 
   @each $color, $value in $grays {
     --#{$prefix}gray-#{$color}: #{$value};
@@ -15,42 +15,42 @@
     --#{$prefix}#{$color}-rgb: #{$value};
   }
 
-  --#{$prefix}white-rgb: #{to-rgb($white)};
-  --#{$prefix}black-rgb: #{to-rgb($black)};
-  --#{$prefix}body-color-rgb: #{to-rgb($body-color)};
-  --#{$prefix}body-bg-rgb: #{to-rgb($body-bg)};
+  // --#{$prefix}white-rgb: #{to-rgb($white)};
+  // --#{$prefix}black-rgb: #{to-rgb($black)};
+  // --#{$prefix}body-color-rgb: #{to-rgb($body-color)};
+  // --#{$prefix}body-bg-rgb: #{to-rgb($body-bg)};
 
   // Fonts
 
   // Note: Use `inspect` for lists so that quoted items keep the quotes.
   // See https://github.com/sass/sass/issues/2383#issuecomment-336349172
-  --#{$prefix}font-sans-serif: #{inspect($font-family-sans-serif)};
-  --#{$prefix}font-monospace: #{inspect($font-family-monospace)};
-  --#{$prefix}gradient: #{$gradient};
+  // --#{$prefix}font-sans-serif: #{inspect($font-family-sans-serif)};
+  // --#{$prefix}font-monospace: #{inspect($font-family-monospace)};
+  // --#{$prefix}gradient: #{$gradient};
 
   // Root and body
-  @if $font-size-root != null {
-    --#{$prefix}root-font-size: #{$font-size-root};
-  }
-  --#{$prefix}body-font-family: #{$font-family-base};
+  // @if $font-size-root != null {
+  //   --#{$prefix}root-font-size: #{$font-size-root};
+  // }
+  // --#{$prefix}body-font-family: #{$font-family-base};
   // @include rfs($font-size-base, --#{$prefix}body-font-size);
   // --#{$prefix}body-font-weight: #{$font-weight-base};
   // --#{$prefix}body-line-height: #{$line-height-base};
-  --#{$prefix}body-color: #{$body-color};
-  @if $body-text-align != null {
-    --#{$prefix}body-text-align: #{$body-text-align};
-  }
-  --#{$prefix}body-bg: #{$body-bg};
-  --#{$prefix}border-width: #{$border-width};
-  --#{$prefix}border-style: #{$border-style};
-  --#{$prefix}border-color: #{$border-color};
-  --#{$prefix}border-color-translucent: #{$border-color-translucent};
-  --#{$prefix}border-radius: #{$border-radius};
-  --#{$prefix}border-radius-sm: #{$border-radius-sm};
-  --#{$prefix}border-radius-lg: #{$border-radius-lg};
-  --#{$prefix}border-radius-xl: #{$border-radius-xl};
-  --#{$prefix}border-radius-2xl: #{$border-radius-2xl};
-  --#{$prefix}border-radius-pill: #{$border-radius-pill};
+  // --#{$prefix}body-color: #{$body-color};
+  // @if $body-text-align != null {
+  //   --#{$prefix}body-text-align: #{$body-text-align};
+  // }
+  // --#{$prefix}body-bg: #{$body-bg};
+  // --#{$prefix}border-width: #{$border-width};
+  // --#{$prefix}border-style: #{$border-style};
+  // --#{$prefix}border-color: #{$border-color};
+  // --#{$prefix}border-color-translucent: #{$border-color-translucent};
+  // --#{$prefix}border-radius: #{$border-radius};
+  // --#{$prefix}border-radius-sm: #{$border-radius-sm};
+  // --#{$prefix}border-radius-lg: #{$border-radius-lg};
+  // --#{$prefix}border-radius-xl: #{$border-radius-xl};
+  // --#{$prefix}border-radius-2xl: #{$border-radius-2xl};
+  // --#{$prefix}border-radius-pill: #{$border-radius-pill};
 
   // ----------------------------------------------------------- //
 
@@ -72,14 +72,13 @@
   --#{$prefix}spacing-xs: var(--it-spacing-xs); // equal to 0.75rem (12px)
   --#{$prefix}spacing-xxs: var(--it-spacing-xxs); // equal to 0.5rem (8px)
   --#{$prefix}spacing-3xs: var(--it-spacing-3xs); // equal to 0.25rem (4px)
-
   --#{$prefix}heading-spacing: var(--it-spacing-s);
   --#{$prefix}paragraph-spacing: var(--it-spacing-m);
 
   // Typography
   --#{$prefix}font-mono: var(--it-font-mono);
   --#{$prefix}font-serif: var(--it-font-serif);
-  --#{$prefix}font-sans: var(--it-font-sans);
+  --#{$prefix}font-sans: 'Titillium Web', 'Titillium Sans Pro', var(--it-font-sans);
   --#{$prefix}font-weight-strong: var(--it-font-weight-bold);
   --#{$prefix}font-weight-solid: var(--it-font-weight-semibold);
   --#{$prefix}font-weight-base: var(--it-font-weight-regular);
@@ -95,11 +94,11 @@
   --#{$prefix}font-size-3: var(--it-font-size-3);
   --#{$prefix}font-size-2: var(--it-font-size-2);
   --#{$prefix}font-size-1: var(--it-font-size-1);
-  --#{$prefix}font-line-height-5: var(--it-font-line-height-5);
-  --#{$prefix}font-line-height-4: var(--it-font-line-height-4);
-  --#{$prefix}font-line-height-3: var(--it-font-line-height-3);
-  --#{$prefix}font-line-height-2: var(--it-font-line-height-2);
-  --#{$prefix}font-line-height-1: var(--it-font-line-height-1);
+  --#{$prefix}font-leading-5: var(--it-font-leading-5);
+  --#{$prefix}font-leading-4: var(--it-font-leading-4);
+  --#{$prefix}font-leading-3: var(--it-font-leading-3);
+  --#{$prefix}font-leading-2: var(--it-font-leading-2);
+  --#{$prefix}font-leading-1: var(--it-font-leading-1);
   --#{$prefix}font-tracking-normal: var(--it-font-tracking-normal);
   --#{$prefix}font-tracking-tight: var(--it-font-tracking-tight);
   --#{$prefix}font-tracking-narrow: var(--it-font-tracking-narrow);
@@ -113,22 +112,22 @@
   --#{$prefix}heading-1-font-size: var(--it-heading-1-font-size);
   --#{$prefix}heading-font-weight: var(--it-heading-font-weight);
   --#{$prefix}heading-font-weight-weak: var(--it-heading-font-weight-weak);
-  --#{$prefix}heading-line-height: var(--it-heading-line-height);
+  --#{$prefix}heading-leading: var(--it-heading-leading);
   --#{$prefix}body-font-size: var(--it-body-font-size);
-  --#{$prefix}body-line-height: var(--it-body-line-height);
+  --#{$prefix}body-leading: var(--it-body-leading);
   --#{$prefix}body-font-weight: var(--it-body-font-weight);
   --#{$prefix}lead-font-size: var(--it-lead-font-size);
-  --#{$prefix}lead-line-height: var(--it-lead-line-height);
+  --#{$prefix}lead-leading: var(--it-lead-leading);
   --#{$prefix}lead-font-weight: var(--it-lead-font-weight);
   --#{$prefix}caption-font-size: var(--it-caption-font-size);
-  --#{$prefix}caption-line-height: var(--it-caption-line-height);
+  --#{$prefix}caption-leading: var(--it-caption-leading);
   --#{$prefix}caption-font-weight-regular: var(--it-caption-font-weight-regular);
   --#{$prefix}caption-font-weight-semibold: var(--it-caption-font-weight-semibold);
   --#{$prefix}label-font-size: var(--it-label-font-size);
   --#{$prefix}label-font-size-s: var(--it-label-font-size-s);
   --#{$prefix}label-font-size-xs: var(--it-label-font-size-xs);
   --#{$prefix}label-font-size-l: var(--it-label-font-size-l);
-  --#{$prefix}label-line-height: var(--it-font-line-height-tight);
+  --#{$prefix}label-leading: var(--it-label-leading);
 
   // Typography responsive properties
   @include media-breakpoint-up(sm) {
@@ -167,7 +166,7 @@
   // Shadow
   --#{$prefix}elevation-high: var(--it-elevation-high);
   --#{$prefix}elevation-medium: var(--it-elevation-medium);
-  --#{$prefix}elevation-low: var(--it-elevation-low-);
+  --#{$prefix}elevation-low: var(--it-elevation-low);
 
   // Text colors
   --#{$prefix}color-text-accent: var(--it-color-text-accent);
@@ -183,17 +182,20 @@
   --#{$prefix}color-text-success: var(--it-color-text-success);
   --#{$prefix}color-text-disabled: var(--it-color-text-disabled);
   --#{$prefix}color-text-muted: var(--it-color-text-muted);
-  --#{$prefix}color-text-secondary-active: var(--it-color-text-secondary-active);
-  --#{$prefix}color-text-secondary-hover: var(--it-color-text-secondary-hover);
   --#{$prefix}color-text-secondary: var(--it-color-text-secondary);
-  --#{$prefix}color-text-primary-active: var(--it-color-text-primary-active);
-  --#{$prefix}color-text-primary-hover: var(--it-color-text-primary-hover);
   --#{$prefix}color-text-primary: var(--it-color-text-primary);
   --#{$prefix}color-text-base: var(--it-color-text-base);
   --#{$prefix}color-code: var(--it-color-text-secondary);
-  --#{$prefix}color-link: var(--#{$prefix}color-text-primary);
+  --#{$prefix}color-link: var(--it-color-link-base);
   --#{$prefix}color-link-hover: var(--it-color-link-hover);
   --#{$prefix}color-link-active: var(--it-color-link-active);
+  --#{$prefix}color-link-secondary: var(--it-color-link-secondary);
+  --#{$prefix}color-link-secondary-hover: var(--it-color-link-secondary-hover);
+  --#{$prefix}color-link-secondary-active: var(--it-color-link-secondary-active);
+  --#{$prefix}color-link-inverse: var(--it-color-link-inverse);
+  --#{$prefix}color-link-disabled: var(--it-color-link-disabled);
+  --#{$prefix}color-link-accent: var(--it-color-link-accent);
+  --#{$prefix}color-link-accent-hover: var(--it-color-link-accent-hover);
 
   // Border colors
   --#{$prefix}color-border-danger-active: var(--it-color-border-danger-active);

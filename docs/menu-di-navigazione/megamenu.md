@@ -1049,7 +1049,15 @@ Questi seguono le liste di link, posizionati in basso o in una colonna destra, a
 Il componente Megamenu deriva dal componente Dropdown, si rimanda dunque alla 
 sezione [attivazione Dropdown tramite codice]({{ site.baseurl }}/docs/componenti/dropdown/#attivazione-tramite-codice)
 
+{% include properties.md properties=site.data.cprops.megamenu %}
+
 ## Breaking change
+
+{% capture callout %}
+- Rimosse varianti scure definite dalla presenza delle classi sul `<nav>` contenitore `.theme-light-desk` e `.theme-dark-mobile`.
+- Corrette spaziature sul `<div>` contenitore con classe `.megamenu`: rimosse classi `.pb-5 .pt-3 .py-lg-0`. 
+- Nella variante con Call to action in basso: rimossa la classe `.justify-content-around` sul contenitore e aggiunta la classe `.flex-grow-1` agli elementi `<a>` con classe `.it-footer-link`. 
+{% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}
 
 {% capture callout %}
 La navbar presente negli esempi, quando aperta in versione mobile o a forte ingrandimento, è stata reimplementata come modale per migliorare l'accessibilità con le combinazioni principali di lettori di schermo, sistema operativo e browser. Modifiche principali: 

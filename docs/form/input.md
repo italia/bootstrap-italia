@@ -85,13 +85,6 @@ Il testo di aiuto deve essere esplicitamente associato ai campi a cui si riferis
 
 ### Icone o pulsanti
 
-{% capture callout %}
-Breaking feature dalla versione **3.0.0**
-- L'elemento `label` è sempre posizionato sopra l'elemento `input` per garantire la corretta accessibilità. 
-- Nel caso di input con icona o pulsanti, l'elemento `label` è stato spostato fuori dal contenitore `.input-group`.
-- ...
-{% endcapture %}{% include callout.html content=callout type="danger" %}
-
 {% comment %}Example name: Campo con icona o pulsante {% endcomment %}
 {% capture example %}
 <div class="form-group">
@@ -114,7 +107,7 @@ Breaking feature dalla versione **3.0.0**
       <span class="input-group-text"><svg class="icon icon-sm icon-secondary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-pencil"></use></svg></span>
       <input type="text" class="form-control" id="input-group-3" name="input-group-3">
       <div class="input-group-append">
-        <button class="btn btn-primary" type="button" id="button-3">Invio</button>
+        <button class="btn btn-primary" type="button" id="button-4">Invio</button>
       </div>
     </div>
 </div>
@@ -135,7 +128,7 @@ Aggiungi l'attributo `disabled` ad un input per impedire la modifica del valore 
 {% comment %}Example name: Disabilitato {% endcomment %}
 {% capture example %}
 <div class="form-group">
-  <input class="form-control" type="text" id="input-text-disabled" disabled>
+  <input class="form-control" type="text" id="input-text-disabled" disabled aria-label="Campo disabilitato">
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -283,7 +276,7 @@ Nel caso del campo di tipo password, è molto importante configurare correttamen
     <svg class="password-icon-visible icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-visible"></use></svg>
     <svg class="password-icon-invisible icon icon-sm d-none" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-invisible"></use></svg>
   </button>
-  <p id="infoPassword4" class="form-text text-muted d-block small pb-0"></p>
+  <p id="infoPassword4" class="form-text text-muted d-block small pb-0">Inserisci almeno 8 caratteri, combinando maiuscole, numeri e caratteri speciali.</p>
   <div class="password-strength-meter">
     <div id="strengthMeterSuggestions4" class="strenght-meter-suggestions small form-text text-muted"></div>
     <p id="strengthMeterInfo4" class="strength-meter-info small form-text text-muted pt-0" aria-live="polite"
@@ -453,34 +446,34 @@ Per modificare invece la dimensione dell'icona, è possibile utilizzare le class
 {% comment %}Example name: Varianti con icona o pulsanti di dimensioni diverse{% endcomment %}
 {% capture example %}
 <div class="form-group">
-  <label for="input-group-3">Campo dimensione grande</label>
+  <label for="input-group-4">Campo dimensione grande</label>
   <div class="input-group">
       <span class="input-group-text"><svg class="icon icon-md" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-pencil"></use></svg></span>
-      <input type="text" class="form-control form-control-lg" id="input-group-1" name="input-group-3" placeholder="Testo segnaposto">
+      <input type="text" class="form-control form-control-lg" id="input-group-4" name="input-group-4" placeholder="Testo segnaposto">
       <div class="input-group-append">
-        <button class="btn btn-primary" type="button" id="button-1" for="input-group-1">Invio</button>
+        <button class="btn btn-primary" type="button" id="button-1" for="input-group-4">Invio</button>
       </div>
     </div>
 </div>
 
 <div class="form-group">
-  <label for="input-group-3">Campo dimensione base</label>
+  <label for="input-group-5">Campo dimensione base</label>
   <div class="input-group">
       <span class="input-group-text"><svg class="icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-pencil"></use></svg></span>
-      <input type="text" class="form-control" id="input-group-2" name="input-group-2" placeholder="Testo segnaposto">
+      <input type="text" class="form-control" id="input-group-5" name="input-group-5" placeholder="Testo segnaposto">
       <div class="input-group-append">
-        <button class="btn btn-primary" type="button" id="button-2" for="input-group-2">Invio</button>
+        <button class="btn btn-primary" type="button" id="button-2" for="input-group-5">Invio</button>
       </div>
     </div>
 </div>
 
 <div class="form-group">
-  <label class="active" for="input-group-2">Campo dimensione piccola</label>
+  <label class="active" for="input-group-6">Campo dimensione piccola</label>
   <div class="input-group">
     <span class="input-group-text"><svg class="icon icon-xs" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-pencil"></use></svg></span>
-    <input type="text" class="form-control form-control-sm" id="input-group-3" name="input-group-3" placeholder="Testo segnaposto">
+    <input type="text" class="form-control form-control-sm" id="input-group-6" name="input-group-6" placeholder="Testo segnaposto">
     <div class="input-group-append">
-      <button class="btn btn-primary" type="button" id="button-3" for="input-group-3">Invio</button>
+      <button class="btn btn-primary" type="button" id="button-3" for="input-group-6">Invio</button>
     </div>
   </div>
 </div>
@@ -781,6 +774,11 @@ Includendo l'elemento all'interno di un `.form-group`, la label assumerà lo ste
 {% endcapture %}{% include example.html content=example %}
 
 ## Breaking change
+
+{% capture callout %}
+- Nel caso di input con icona o pulsanti, l'elemento `label` è stato spostato fuori dal contenitore `.input-group` per leggibilità del markup.
+- Nel paragrafo dimensioni sono stati integrati gli esempi con icone, pulsanti di invio e istruzioni specifiche.
+{% endcapture %}{% include callout.html content=callout version="3.0.0" type="danger" %}
 
 {% capture callout %}
 Quando si utilizza l'attributo `placeholder` o l'input parte già valorizzato assicurarsi di aggiungere alla label la classe **`active`** per impedire la sovrapposizione della label al campo.

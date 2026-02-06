@@ -10,9 +10,9 @@
 //
 
 .section {
-  --#{$prefix}section-background-color: transparent;
-  --#{$prefix}section-image-overlay: hsla(0, 0%, 0%, 0.5);
-  --#{$prefix}section-padding-y: var(--#{$prefix}spacing-xxl);
+  --#{$prefix}section-background-color: transparent; // Controls the background color for the section.
+  --#{$prefix}section-image-overlay: hsla(0, 0%, 0%, 0.5); // Controls the image overlay for the section.
+  --#{$prefix}section-padding-y: var(--#{$prefix}spacing-xxl); // Controls the vertical padding for the section, using spacing tokens.
   @include media-breakpoint-up(xl) {
     --#{$prefix}section-padding-y: var(--#{$prefix}spacing-3xl);
   }
@@ -20,8 +20,7 @@
 
 // Styles
 //
-
-
+/* stylelint-disable-next-line no-duplicate-selectors */
 .section {
   // Set `--#{$prefix}section-padding-x` only when extra horizontal padding is needed
   padding: var(--#{$prefix}section-padding-y) var(--#{$prefix}section-padding-x, 0);
@@ -68,7 +67,7 @@
     box-shadow: inset 0 1rem 1rem -1rem rgba(0, 0, 0, 0.3);
   }
 
-  // TODO: Check if this is needed  
+  // TODO: Check if this is needed
   &.section-background-header {
     position: relative;
     background-size: cover;

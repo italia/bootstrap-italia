@@ -128,7 +128,7 @@ Si consiglia di applicare la classe `.white-color` al contenuto (come da esempio
 
 {% comment %}Example name: Sfondo in evidenza{% endcomment %}
 {% capture example %}
-<section class="section section-neutral" aria-labelledby="titleEx4">
+<section class="section section-emphasis" aria-labelledby="titleEx4">
   <div class="section-content">
     <!-- contenuto di esempio START -->
     <div class="container white-color">
@@ -263,7 +263,13 @@ Per aggiungere una serie di card all'interno di una Section si consiglia di util
 </section>
 {% endcapture %}{% include example.html content=example %}
 
+{% include properties.md properties=site.data.cprops.section %}
+
 ## Breaking change
+
+{% capture callout %}
+- Negli esempi sono stati rimossi dai contenitori delle colonne tutte le classi custom per padding, margin e font a favore dello standard. 
+{% endcapture %}{% include callout-breaking.html version="3.0.0" content=callout type="danger" %}
 
 {% capture callout %}
 Implementato nell'esempio con card il nuovo componente card definito dalle classi `.it-card` e relativi modificatori.  

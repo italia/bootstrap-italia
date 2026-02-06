@@ -9,41 +9,37 @@
 // Properties
 //
 
-// Styles
-//
-
-//
-// Custom properties
-
 .it-header-wrapper,
 .it-header-slim-wrapper,
 .it-header-center-wrapper,
 .it-header-navbar-wrapper {
-  --#{$prefix}header-brand-color: var(--#{$prefix}color-text-inverse);
-  --#{$prefix}header-brand-icon-color: var(--#{$prefix}icon-inverse);
-  --#{$prefix}header-brand-size: 2.5rem;
-  --#{$prefix}header-brand-spacing: var(--it-spacing-14x);
-  --#{$prefix}header-brand-tagline-size: var(--#{$prefix}body-font-size);
-  --#{$prefix}header-brand-title-size: var(--#{$prefix}heading-5-font-size);
-  --#{$prefix}header-center-background: var(--#{$prefix}color-background-primary);
-  --#{$prefix}header-center-font-size: var(--#{$prefix}label-font-size-s);
-  --#{$prefix}header-center-height: 4.5rem; // 72px
-  --#{$prefix}header-center-text-color: var(--#{$prefix}color-text-inverse);
-  --#{$prefix}header-nav-background: var(--#{$prefix}color-background-primary);
-  --#{$prefix}header-nav-secondary-font-size: var(--#{$prefix}label-font-size);
-  --#{$prefix}header-nav-text-color: var(--#{$prefix}color-link);
-  --#{$prefix}header-search-button-background: var(--#{$prefix}color-background-inverse);
-  --#{$prefix}header-search-button-color: var(--#{$prefix}icon-inverse);
-  --#{$prefix}header-search-button-size: 3rem;
-  --#{$prefix}header-search-icon-color: var(--#{$prefix}icon-inverse);
-  --#{$prefix}header-search-icon-size: 1.5rem;
-  --#{$prefix}header-slim-background: var(--#{$prefix}theme-primary-muted);
-  --#{$prefix}header-slim-border-color: hsla(0, 0%, 100%, 0.2);
-  --#{$prefix}header-slim-font-size: var(--#{$prefix}label-font-size-s);
-  --#{$prefix}header-slim-height: 3rem; // 48px
-  --#{$prefix}header-slim-text-color: var(--#{$prefix}color-text-inverse);
-  --#{$prefix}header-social-color: var(--#{$prefix}icon-inverse);
-  --#{$prefix}header-spacing-inset: var(--#{$prefix}spacing-xxs);
+  --#{$prefix}header-brand-color: var(--#{$prefix}color-text-inverse); // Controls the brand color for the header, using color tokens.
+  --#{$prefix}header-brand-icon-color: var(--#{$prefix}icon-inverse); // Controls the brand icon color for the header, using icon tokens.
+  --#{$prefix}header-brand-size: 2.5rem; // Controls the brand size for the header.
+  --#{$prefix}header-brand-spacing: var(--it-spacing-14x); // Controls the brand spacing for the header, using spacing tokens.
+  --#{$prefix}header-brand-tagline-size: var(--#{$prefix}body-font-size); // Controls the brand tagline size for the header, using font tokens.
+  --#{$prefix}header-brand-title-size: var(--#{$prefix}heading-5-font-size); // Controls the brand title size for the header, using font tokens.
+  --#{$prefix}header-center-background: var(--#{$prefix}color-background-primary); // Controls the center background for the header, using color tokens.
+  --#{$prefix}header-center-font-size: var(--#{$prefix}label-font-size-s); // Controls the center font size for the header, using font tokens.
+  --#{$prefix}header-center-height: 4.5rem; // Controls the center height for the header.
+  --#{$prefix}header-center-text-color: var(--#{$prefix}color-text-inverse); // Controls the center text color for the header, using color tokens.
+  --#{$prefix}header-nav-background: var(--#{$prefix}color-background-primary); // Controls the nav background for the header, using color tokens.
+  --#{$prefix}header-nav-secondary-font-size: var(--#{$prefix}label-font-size); // Controls the nav secondary font size for the header, using font tokens.
+  --#{$prefix}header-nav-text-color: var(--#{$prefix}color-link); // Controls the nav text color for the header, using color tokens.
+  --#{$prefix}header-search-button-background: var(
+    --#{$prefix}color-background-inverse
+  ); // Controls the search button background for the header, using color tokens.
+  --#{$prefix}header-search-button-color: var(--#{$prefix}icon-inverse); // Controls the search button color for the header, using icon tokens.
+  --#{$prefix}header-search-button-size: 3rem; // Controls the search button size for the header.
+  --#{$prefix}header-search-icon-color: var(--#{$prefix}icon-inverse); // Controls the search icon color for the header, using icon tokens.
+  --#{$prefix}header-search-icon-size: 1.5rem; // Controls the search icon size for the header.
+  --#{$prefix}header-slim-background: var(--it-color-blue-30); // Controls the slim background for the header. // TODO: use variable when ready
+  --#{$prefix}header-slim-border-color: hsla(0, 0%, 100%, 0.2); // Controls the slim border color for the header.
+  --#{$prefix}header-slim-font-size: var(--#{$prefix}label-font-size-s); // Controls the slim font size for the header, using font tokens.
+  --#{$prefix}header-slim-height: 3rem; // Controls the slim height for the header.
+  --#{$prefix}header-slim-text-color: var(--#{$prefix}color-text-inverse); // Controls the slim text color for the header, using color tokens.
+  --#{$prefix}header-social-color: var(--#{$prefix}icon-inverse); // Controls the social color for the header, using icon tokens.
+  --#{$prefix}header-spacing-inset: var(--#{$prefix}spacing-xxs); // Controls the inset spacing for the header, using spacing tokens.
   @include media-breakpoint-up(md) {
     --#{$prefix}header-brand-size: 3.5rem; // 56px
     --#{$prefix}header-search-icon-color: var(--#{$prefix}icon-primary);
@@ -55,6 +51,9 @@
     --#{$prefix}header-nav-text-color: var(--#{$prefix}color-text-inverse);
   }
 }
+
+// Styles
+//
 
 // Light theme
 .it-header-slim-wrapper.theme-light,
@@ -77,8 +76,6 @@
     --#{$prefix}header-search-icon-color: var(--#{$prefix}icon-inverse);
   }
 }
-
-
 
 .it-header-wrapper {
   position: relative;

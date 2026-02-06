@@ -10,22 +10,21 @@
 //
 
 .it-navscroll-wrapper {
-  --#{$prefix}navscroll-background: var(--#{$prefix}page-background);
-  --#{$prefix}navscroll-backbutton-padding: var(--#{$prefix}spacing-xs);
-  --#{$prefix}navscroll-bottom-box-shadow: 0 0px 30px 5px rgba(0, 0, 0, 0.05);
-  --#{$prefix}navscroll-backbutton-weight: var(--#{$prefix}font-weight-solid);
-  --#{$prefix}navscroll-item-spacing: var(--#{$prefix}spacing-xs) var(--#{$prefix}spacing-m);
-  --#{$prefix}navscroll-item-font-size: var(--#{$prefix}label-font-size-l);
-  --#{$prefix}navscroll-item-font-color: var(--#{$prefix}color-text-primary);
-  --#{$prefix}navscroll-item-border-color: transparent;
-  --#{$prefix}navscroll-heading-spacing-top: var(--#{$prefix}spacing-s);
-  --#{$prefix}navscroll-heading-spacing-bottom: var(--#{$prefix}spacing-s);
-  --#{$prefix}navscroll-heading-spacing-x: var(--#{$prefix}spacing-m);
-  --#{$prefix}navscroll-heading-font-size: var(--#{$prefix}heading-6-font-size);
-  --#{$prefix}navscroll-heading-color: var(--#{$prefix}color-text-secondary);
-  --#{$prefix}navscroll-heading-font-weight: var(--#{$prefix}heading-font-weight);
-  --#{$prefix}navscroll-toggler-color: var(--#{$prefix}color-text-primary);
-  --#{$prefix}navscroll-divider-color: var(--#{$prefix}color-border-subtle);
+  --#{$prefix}navscroll-background: var(--#{$prefix}page-background); // Controls the background for the navscroll, using color tokens.
+  --#{$prefix}navscroll-backbutton-padding: var(--#{$prefix}spacing-xs); // Controls the backbutton padding for the navscroll, using spacing tokens.
+  --#{$prefix}navscroll-bottom-box-shadow: 0 0px 30px 5px rgba(0, 0, 0, 0.05); // Controls the bottom box shadow for the navscroll.
+  --#{$prefix}navscroll-backbutton-weight: var(--#{$prefix}font-weight-solid); // Controls the backbutton font weight for the navscroll, using font tokens.
+  --#{$prefix}navscroll-item-spacing: var(--#{$prefix}spacing-xs) var(--#{$prefix}spacing-m); // Controls the item spacing for the navscroll, using spacing tokens.
+  --#{$prefix}navscroll-item-font-size: var(--#{$prefix}label-font-size); // Controls the item font size for the navscroll, using font tokens.
+  --#{$prefix}navscroll-item-font-color: var(--#{$prefix}color-text-primary); // Controls the item font color for the navscroll, using color tokens.
+  --#{$prefix}navscroll-item-border-color: transparent; // Controls the item border color for the navscroll.
+  --#{$prefix}navscroll-heading-spacing-top: var(--#{$prefix}spacing-s); // Controls the heading spacing top for the navscroll, using spacing tokens.
+  --#{$prefix}navscroll-heading-spacing-bottom: var(--#{$prefix}spacing-xs); // Controls the heading spacing bottom for the navscroll, using spacing tokens.
+  --#{$prefix}navscroll-heading-spacing-x: var(--#{$prefix}spacing-m); // Controls the heading spacing x for the navscroll, using spacing tokens.
+  --#{$prefix}navscroll-heading-font-size: var(--#{$prefix}heading-6-font-size); // Controls the heading font size for the navscroll, using font tokens.
+  --#{$prefix}navscroll-heading-font-weight: var(--#{$prefix}heading-font-weight); // Controls the heading font weight for the navscroll, using font tokens.
+  --#{$prefix}navscroll-toggler-color: var(--#{$prefix}color-text-primary); // Controls the toggler color for the navscroll, using color tokens.
+  --#{$prefix}navscroll-divider-color: var(--#{$prefix}color-border-subtle); // Controls the divider color for the navscroll, using color tokens.
 }
 
 // Styles
@@ -107,6 +106,7 @@
 
   // Menu Wrapper
   .menu-wrapper {
+    z-index: 5;
     @include media-breakpoint-down(md) {
       padding-top: 56px; // to avoid overlap with navscroll toggler - value must match navscroll toggler height
     }
@@ -135,18 +135,17 @@
   position: fixed;
   right: 0;
   left: 0;
-  z-index: 99999;
-/*   padding-top: var(--#{$prefix}spacing-xxs);
-  padding-bottom: var(--#{$prefix}spacing-xxs); */
   box-shadow: var(--#{$prefix}navscroll-bottom-box-shadow);
 }
 
 .navbar.it-bottom-navscroll {
   bottom: 0;
+  z-index: 9999;
 }
 
 .navbar.it-top-navscroll {
   top: 0;
+  z-index: 8;
 }
 
 .navbar.it-left-side {

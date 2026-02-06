@@ -33,7 +33,7 @@ Usa il selettore "Font principale" nella barra di sinistra per esplorare la resa
 
 Ti segnaliamo inoltre l'esistenza del font **Titillio**: versione alternativa del Titillium sviluppata partendo dal Titillium Sans Pro nell'ambito del progetto **App IO**. Questa versione è stata curata con particolare attenzione alle applicazioni per schermi piccoli, laddove ci sia necessità di distinguere numerose gerarchie visive. Questo font non è direttamente disponibile in Bootstrap Italia ma è possibile scaricarlo dal repository ufficiale ([repository Titillio e crediti](https://github.com/pagopa/titillio)).
 
-Ulteriori informazioni nella scheda [Tipografia](/organizzare-i-contenuti/tipografia/).
+Ulteriori informazioni nella scheda [Tipografia](/docs/organizzare-i-contenuti/tipografia/).
 
 ## Font complementari: Lora e Roboto Mono
 
@@ -43,7 +43,7 @@ Oltre al Titillium, Bootstrap Italia include due font complementari:
 
 - **Roboto Mono**: font monospaziato (monospace) ottimizzato per la visualizzazione di codice, dati tabulari e contenuti tecnici. Disponibile nei pesi 400 e 700 con varianti italic.
 
-Ulteriori informazioni nella scheda [Tipografia](/organizzare-i-contenuti/tipografia/).
+Ulteriori informazioni nella scheda [Tipografia](/docs/organizzare-i-contenuti/tipografia/).
 
 ## Caricamento via JavaScript
 

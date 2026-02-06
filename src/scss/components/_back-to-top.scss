@@ -10,16 +10,15 @@
 //
 
 .back-to-top {
-  --#{$prefix}backtop-background: var(--#{$prefix}color-background-primary);
-  --#{$prefix}backtop-position: 1rem;
-  --#{$prefix}backtop-radius: var(--#{$prefix}radius-circle);
-  --#{$prefix}backtop-sizing: 2.5rem;
+  --#{$prefix}backtop-background: var(--#{$prefix}color-background-primary); // Controls the background color of the button, using color tokens
+  --#{$prefix}backtop-position: 1rem; // Controls the distance from the bottom and right edges
+  --#{$prefix}backtop-radius: var(--#{$prefix}radius-circle); // Controls the border radius of the button, using radius tokens
+  --#{$prefix}backtop-sizing: 2.5rem; // Controls the width and height of the button
 }
 
 // Styles
 //
-
-
+/* stylelint-disable-next-line no-duplicate-selectors */
 .back-to-top {
   position: fixed;
   right: var(--#{$prefix}backtop-position);

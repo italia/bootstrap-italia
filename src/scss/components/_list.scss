@@ -49,7 +49,7 @@
     a.list-item:hover {
       background-color: var(--#{$prefix}color-background-inverse);
       box-shadow: var(--#{$prefix}elevation-low);
-      color: var(--#{$prefix}link-hover);
+      color: var(--#{$prefix}color-link-hover);
     }
 
     // Force underline on list item text

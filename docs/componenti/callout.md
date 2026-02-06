@@ -234,7 +234,17 @@ Il pulsante di controllo del collapse può essere affiancato da un link per down
 </div>
 {% endcapture %}{% include example.html content=example %}
 
+{% include properties.md properties=site.data.cprops.callout %}
+
 ## Breaking change
+
+{% capture callout %}
+- Il carattere di default del contenuto diventa senza grazie e con dimensione `16px`. 
+- È disponibile la nuova classe `.callout-big-text` per aumentare la dimensione del carattere del contenuto. 
+- È disponibile la nuova classe `.callout-primary`.
+- Le classi che controllano il colore diventano specifiche per il componente, ad esempio le classi `.success` e `.danger` diventano `.callout-success` e `.callout-danger`.
+- Sono state rimosse la classi `.important` e `.note` a favore delle varianti standard. 
+{% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}
 
 {% capture callout %}
 Il contenitore `<div>` con classe `.callout` deve essere seguito da un ulteriore contenitore `<div>` con classe `.callout-inner`. Seguire gli esempi e la successiva descrizione per capire la composizione del nuovo componente.

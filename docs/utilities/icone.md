@@ -159,3 +159,11 @@ document.addEventListener('DOMContentLoaded', function() {
   })
 })
 </script>
+
+{% include properties.md properties=site.data.cprops.icon %}
+
+## Breaking change
+
+{% capture callout %}
+- Per le icone bianche da usare su sfondi scuri sono state rimosse le classi `.icon-light` e `.icon-white` a favore di `.icon-inverse`.
+{% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}

@@ -10,15 +10,14 @@
 //
 
 .nav {
-  --#{$prefix}nav-link-disabled-color: var(--#{$prefix}color-text-disabled);
-  --#{$prefix}nav-link-padding-x: var(--#{$prefix}spacing-s);
-  --#{$prefix}nav-link-padding-y: var(--#{$prefix}spacing-s);
+  --#{$prefix}nav-link-disabled-color: var(--#{$prefix}color-text-disabled); // Controls the disabled link color for the nav, using color tokens.
+  --#{$prefix}nav-link-padding-x: var(--#{$prefix}spacing-s); // Controls the horizontal padding for nav links, using spacing tokens.
+  --#{$prefix}nav-link-padding-y: var(--#{$prefix}spacing-s); // Controls the vertical padding for nav links, using spacing tokens.
 }
 
 // Styles
 //
-
-
+/* stylelint-disable-next-line no-duplicate-selectors */
 .nav {
   display: flex;
   flex-wrap: wrap;

@@ -9,20 +9,20 @@
 // Properties
 //
 
-.pagination {  
-  --#{$prefix}pagination-background: transparent;
-  --#{$prefix}pagination-border-width: 2px; 
-  --#{$prefix}pagination-border-color: transparent;
-  --#{$prefix}pagination-border-radius: #{$pagination-border-radius};
-  --#{$prefix}pagination-font-size: var(--#{$prefix}label-font-size);
-  --#{$prefix}pagination-item-size: 3rem;
-  --#{$prefix}pagination-link-color: var(--#{$prefix}color-link);
-  --#{$prefix}pagination-padding-x: var(--#{$prefix}spacing-s);
-  --#{$prefix}pagination-padding-y: var(--#{$prefix}spacing-xxs);
+.pagination {
+  --#{$prefix}pagination-background: transparent; // Controls the background for the pagination.
+  --#{$prefix}pagination-border-width: 2px; // Controls the border width for the pagination.
+  --#{$prefix}pagination-border-color: transparent; // Controls the border color for the pagination.
+  --#{$prefix}pagination-border-radius: var(--#{$prefix}radius-smooth); // Controls the border radius for the pagination.
+  --#{$prefix}pagination-font-size: var(--#{$prefix}label-font-size); // Controls the font size for the pagination, using font tokens.
+  --#{$prefix}pagination-item-size: 3rem; // Controls the item size for the pagination.
+  --#{$prefix}pagination-link-color: var(--#{$prefix}color-link); // Controls the link color for the pagination, using color tokens.
+  --#{$prefix}pagination-padding-x: var(--#{$prefix}spacing-s); // Controls the horizontal padding for the pagination, using spacing tokens.
+  --#{$prefix}pagination-padding-y: var(--#{$prefix}spacing-xxs); // Controls the vertical padding for the pagination, using spacing tokens.
 }
 
 // Styles
-
+/* stylelint-disable-next-line no-duplicate-selectors */
 .pagination {
   display: flex;
   flex-wrap: wrap;
@@ -120,7 +120,7 @@
   // }
 
   &.disabled,
-  .disabled>& {
+  .disabled > & {
     --#{$prefix}pagination-border-color: transparent;
     --#{$prefix}pagination-link-color: var(--#{$prefix}color-text-disabled);
     --#{$prefix}pagination-icon-color: var(--#{$prefix}color-text-disabled);
@@ -149,7 +149,11 @@
 }
 
 // Fallback for browsers that do not support gap
-@supports not ((gap: 8px)) {
+@supports not (
+  (
+    gap: 8px,
+  )
+) {
   .page-item {
     margin-right: var(--#{$prefix}spacing-xxs);
     &:last-child {

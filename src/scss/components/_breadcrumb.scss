@@ -10,24 +10,24 @@
 //
 
 .breadcrumb {
-  --#{$prefix}breadcrumb-background: transparent;
-  --#{$prefix}breadcrumb-border-radius: 0;
-  --#{$prefix}breadcrumb-divider: '/';
-  --#{$prefix}breadcrumb-divider-color: var(--#{$prefix}color-border-secondary);
-  --#{$prefix}breadcrumb-divider-flipped: var(--#{$prefix}breadcrumb-divider);
-  --#{$prefix}breadcrumb-font-size: var(--#{$prefix}label-font-size);
-  --#{$prefix}breadcrumb-item-padding-x: var(--#{$prefix}spacing-xs);
-  --#{$prefix}breadcrumb-link-color: var(--#{$prefix}color-text-secondary);
-  --#{$prefix}breadcrumb-link-font-weight: var(--#{$prefix}font-weight-solid);
-  --#{$prefix}breadcrumb-margin: var(--#{$prefix}spacing-s);
-  --#{$prefix}breadcrumb-padding: var(--#{$prefix}spacing-3xs);
-  --#{$prefix}breadcrumb-separator-color: var(--#{$prefix}color-background-secondary);
-  --#{$prefix}breadcrumb-separator-spacing: var(--#{$prefix}spacing-xxs);
+  --#{$prefix}breadcrumb-background: transparent; // Controls the background for the breadcrumb.
+  --#{$prefix}breadcrumb-border-radius: 0; // Controls the border radius for the breadcrumb.
+  --#{$prefix}breadcrumb-divider: '/'; // Controls the divider character for the breadcrumb.
+  --#{$prefix}breadcrumb-divider-color: var(--#{$prefix}color-border-secondary); // Controls the divider color for the breadcrumb, using color tokens.
+  --#{$prefix}breadcrumb-divider-flipped: var(--#{$prefix}breadcrumb-divider); // Controls the flipped divider for the breadcrumb.
+  --#{$prefix}breadcrumb-font-size: var(--#{$prefix}label-font-size); // Controls the font size for the breadcrumb, using font tokens.
+  --#{$prefix}breadcrumb-item-padding-x: var(--#{$prefix}spacing-xs); // Controls the horizontal padding for breadcrumb items, using spacing tokens.
+  --#{$prefix}breadcrumb-link-color: var(--#{$prefix}color-text-secondary); // Controls the link color for the breadcrumb, using color tokens.
+  --#{$prefix}breadcrumb-link-font-weight: var(--#{$prefix}font-weight-solid); // Controls the link font weight for the breadcrumb, using font tokens.
+  --#{$prefix}breadcrumb-margin: var(--#{$prefix}spacing-s); // Controls the margin for the breadcrumb, using spacing tokens.
+  --#{$prefix}breadcrumb-padding: var(--#{$prefix}spacing-3xs); // Controls the padding for the breadcrumb, using spacing tokens.
+  --#{$prefix}breadcrumb-separator-color: var(--#{$prefix}color-background-secondary); // Controls the separator color for the breadcrumb, using color tokens.
+  --#{$prefix}breadcrumb-separator-spacing: var(--#{$prefix}spacing-xxs); // Controls the separator spacing for the breadcrumb, using spacing tokens.
 }
 
 // Styles
 //
-
+/* stylelint-disable-next-line no-duplicate-selectors */
 .breadcrumb {
   display: flex;
   flex-wrap: wrap;
@@ -46,12 +46,12 @@
     --#{$prefix}breadcrumb-divider-color: var(--#{$prefix}color-text-inverse);
 
     .breadcrumb-item {
-      span.separator {
-        color: var(--#{$prefix}breadcrumb-link-color);
+      a:hover {
+        --#{$prefix}breadcrumb-link-color: var(--#{$prefix}color-text-inverse);
       }
 
-      i {
-        color: var(--#{$prefix}breadcrumb-divider-color);
+      .separator {
+        color: var(--#{$prefix}breadcrumb-link-color);
       }
     }
   }
@@ -61,26 +61,28 @@
   padding-left: 0;
 
   // The separator between breadcrumbs (by default, a forward-slash: "/")
-  +.breadcrumb-item {
+  + .breadcrumb-item {
     &::before {
-      content: var(--#{$prefix}breadcrumb-divider, escape-svg($breadcrumb-divider)) #{'/* rtl:'} var(--#{$prefix}breadcrumb-divider,
-        escape-svg($breadcrumb-divider-flipped)) #{'*/'};
+      content: var(--#{$prefix}breadcrumb-divider, escape-svg($breadcrumb-divider)) #{'/* rtl:'} var(
+          --#{$prefix}breadcrumb-divider,
+          escape-svg($breadcrumb-divider-flipped)
+        ) #{'*/'};
       padding-right: var(--#{$prefix}breadcrumb-item-padding-x);
       float: left; // Suppress inline spacings and underlining of the separator
       color: var(--#{$prefix}breadcrumb-divider-color);
     }
   }
 
-  &+.breadcrumb-item:before {
+  & + .breadcrumb-item:before {
     display: none;
   }
 
-// The breadcrumb item link
+  // The breadcrumb item link
   a {
     color: var(--#{$prefix}breadcrumb-link-color);
     font-weight: var(--#{$prefix}breadcrumb-link-font-weight);
     &:hover {
-      --#{$prefix}breadcrumb-link-color: var(--#{$prefix}color-text-secondary-hover);
+      --#{$prefix}breadcrumb-link-color: var(--#{$prefix}color-link-secondary-hover);
     }
   }
 
@@ -98,4 +100,3 @@
     color: var(--#{$prefix}breadcrumb-separator-color);
   }
 }
-

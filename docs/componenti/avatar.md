@@ -699,8 +699,15 @@ Per il nome è possibile utilizzare i tag `<h3>` o `<h4>`. Il testo esteso può 
 
 {% endcapture %}{% include example.html content=example %}
 
+{% include properties.md properties=site.data.cprops.avatar %}
 
 ## Breaking change
+
+{% capture callout %}
+- Nelle varianti avatar con testo i colori di fondo possono essere solo `.avatar-primary` e `.avatar-secondary`. Sono state rimosse le classi `.avatar-green`, `.avatar-orange` e `.avatar-red`.
+- Corretta l'icona nella variante Avatar con icona (`sprites.svg#it-user`).
+- Rimossi dagli esempi liste i colori di sfondo custom, ad esempio `.complementary-3-bg`.
+{% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}
 
 {% capture callout %}
 Il toggle del dropdown diventa `<button>` invece di `<a>`.

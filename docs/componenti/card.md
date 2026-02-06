@@ -1108,7 +1108,7 @@ Negli esempi abbiamo utilizzato il tag `h4` per i titoli `.it-card-profile-name`
     <!--start it-card-->
     <article class="it-card it-card-profile it-card-height-full rounded shadow-sm border ">
       <div class="it-card-profile-header">
-        <div class="it-card-profile">
+        <div class="it-card-profile-content">
           <h4 class="it-card-profile-name no_toc">
             <a href="#">Nome Personale</a>
           </h4>
@@ -1125,7 +1125,7 @@ Negli esempi abbiamo utilizzato il tag `h4` per i titoli `.it-card-profile-name`
     <!--start it-card-->
     <article class="it-card it-card-profile it-card-height-full it-card-border-top it-card-border-top-secondary rounded shadow-sm border">
       <div class="it-card-profile-header">
-        <div class="it-card-profile">
+        <div class="it-card-profile-content">
           <h4 class="it-card-profile-name no_toc">
             <a href="#">Nome Personale</a>
           </h4>
@@ -1144,7 +1144,7 @@ Negli esempi abbiamo utilizzato il tag `h4` per i titoli `.it-card-profile-name`
     <!--start it-card-->
     <article class="it-card it-card-profile it-card-height-full rounded shadow-sm border">
       <div class="it-card-profile-header">
-        <div class="it-card-profile">
+        <div class="it-card-profile-content">
           <h4 class="it-card-profile-name no_toc">
             <a href="#">Nome Personale</a>
           </h4>
@@ -1181,7 +1181,7 @@ Negli esempi abbiamo utilizzato il tag `h4` per i titoli `.it-card-profile-name`
     <!--start it-card-->
     <article class="it-card it-card-profile it-card-height-full it-card-border-top it-card-border-top-secondary rounded shadow-sm border">
       <div class="it-card-profile-header">
-        <div class="it-card-profile">
+        <div class="it-card-profile-content">
           <h4 class="it-card-profile-name no_toc">
             <a href="#">Nome Personale</a>
           </h4>
@@ -2430,7 +2430,15 @@ Svolgi sempre test di usabilità con utenti che utilizzano tecnologie assistive 
 - Le varianti di tipo presentazione dati come mostrate in [UI Kit Italia](https://github.com/italia/design-ui-kit/) v3.7.0. 
 - L'eventuale pulsante di utilità per attivare un dropdown che mostri le possibilità di condivisione della card, come già disponibile nelle card del sito [sito Designers Italia](https://designers.italia.it/community/).
 
+{% include properties.md properties=site.data.cprops.it %}
+
 ## Breaking change
+
+{% capture callout %}
+- Per i metadati è stata rimossa la classe `.it-card-related` a favore del solo uso dell'elemento `<footer>` con classe `.it-card-footer` a seguire il corpo della card.
+- Usa un `<div>` con la sola classe `.it-card-actions` a seguire il corpo della card per ospitare link correlati e/o secondari.
+- È stata rimossa la classe `.chips-list` dall'elemento `<ul>` con classe `.it-card-chips` che ospita una lista di più argomenti.
+{% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}
 
 {% capture callout %}
 Questo è un nuovo componente card definito dalle classi `.it-card` e relativi modificatori. 

@@ -14,7 +14,7 @@ jobs:
       run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
     - uses: actions/setup-python@v4
       with:
-        python-version: '3.10' 
+        python-version: '3.10'
         cache: 'pip'
     - run: pip install -r requirements.txt
     - name: Add components status
@@ -22,12 +22,13 @@ jobs:
       env:
         GH_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
     - run: python extract_examples.py
+    - run: python extract_custom_properties.py
     - name: Setup Git
       uses: fregante/setup-git-user@v1
     - name: Add API stuff
-      run: | 
+      run: |
         git add api/
-        git commit -m "chore: update examples api"
+        git commit -m "chore: update examples api and tokens"
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v4
       with:

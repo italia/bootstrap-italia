@@ -138,7 +138,7 @@ L'elemento `.it-rounded-icon` con all'interno la relativa icona, precede l'eleme
 
 ### Lista con immagine
 
-L'elemento `.it-thumb` con all'interno la relativa immagine, precede l'elemento `.it-right-zone` che contiene il testo. Ha una dimensione massima di `5rem` che corrispondono a `80px`. La proporzione dell'immagine può essere modificata utilizzando le classi specifiche per le <a href="{{ site.baseurl }}/docs/componenti/organizzare-gli-spazi/proporzioni/">proporzioni</a>
+L'elemento `.it-thumb` con all'interno la relativa immagine, precede l'elemento `.it-right-zone` che contiene il testo. Ha una dimensione massima di `5rem` che corrispondono a `80px`. La proporzione dell'immagine può essere modificata utilizzando le classi specifiche per le <a href="{{ site.baseurl }}/docs/organizzare-gli-spazi/proporzioni/">proporzioni</a>
 
 {% comment %}Example name: Base, con immagine{% endcomment %}
 {% capture example %}
@@ -434,19 +434,19 @@ Per avere una lista che permetta paragrafi di testo aggiuntivo per ogni elemento
           <span class="it-multiple">
             <span class="metadata"><a href="#">metadata link</a></span>
             <a href="#" aria-label="Testo 2 - Azione 1">
-              <svg class="icon">
+              <svg class="icon icon-primary">
                 <title>Codice</title>
                 <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
               </svg>
             </a>
             <a href="#" aria-label="Testo 2 - Azione 2">
-              <svg class="icon">
+              <svg class="icon icon-primary">
                 <title>Codice</title>
                 <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
               </svg>
             </a>
             <a href="#" aria-label="Testo 2 - Azione 3">
-              <svg class="icon">
+              <svg class="icon icon-primary">
                 <title>Codice</title>
                 <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
               </svg>
@@ -465,19 +465,19 @@ Per avere una lista che permetta paragrafi di testo aggiuntivo per ogni elemento
           <span class="it-multiple">
             <span class="metadata"><a href="#">metadata link</a></span>
             <a href="#" aria-label="Link - Azione 1">
-              <svg class="icon">
+              <svg class="icon icon-primary">
                 <title>Codice</title>
                 <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
               </svg>
             </a>
             <a href="#" aria-label="Link - Azione 2">
-              <svg class="icon">
+              <svg class="icon icon-primary">
                 <title>Codice</title>
                 <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
               </svg>
             </a>
             <a href="#" aria-label="Link - Azione 3">
-              <svg class="icon">
+              <svg class="icon icon-primary">
                 <title>Codice</title>
                 <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
               </svg>
@@ -496,19 +496,19 @@ Per avere una lista che permetta paragrafi di testo aggiuntivo per ogni elemento
           <span class="it-multiple">
             <span class="metadata">metadata testo</span>
             <a href="#" aria-label="Link - Azione 1">
-              <svg class="icon">
+              <svg class="icon icon-primary">
                 <title>Codice</title>
                 <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
               </svg>
             </a>
             <a href="#" aria-label="Link - Azione 2">
-              <svg class="icon">
+              <svg class="icon icon-primary">
                 <title>Codice</title>
                 <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
               </svg>
             </a>
             <a href="#" aria-label="Link - Azione 3">
-              <svg class="icon">
+              <svg class="icon icon-primary">
                 <title>Codice</title>
                 <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
               </svg>
@@ -1062,7 +1062,15 @@ Per questo tipo di link list sono state utilizzate, oltre alle classi custom, le
 </div>
 {% endcapture %}{% include example.html content=example %}
 
+{% include properties.md properties=site.data.cprops.linklist %}
+
 ## Breaking change
+
+{% capture callout %}
+- Negli esempi di varianti lista con avatar è stata rimossa la classe `.size-lg` dai `<div>` con classe `.avatar`. 
+- Nelle liste con immagini sono state aggiunge le classi per controllare la dimensione dell'immagine sui `<div>` con classe `.it-thumb`: `.ratio` e `.ratio-16x9` con istruzioni su come cambiare quest'ultima con le classi specifiche per cambiare le proporzioni.
+- Nelle liste con azioni e freccia è definita esplicitamente la dimensione e il colore delle icone freccia aggiungendo le classi `.icon-primary` e `.icon-sm` rispettivamente dove necessario.
+{% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}
 
 {% capture callout %}
 Gli elementi di tipo `<a>` dei collapse necessitano l'aggiunta dell'attributo `role="button"`.

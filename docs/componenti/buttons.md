@@ -236,12 +236,15 @@ const button = new Button(buttonEl)
   </table>
 </div>
 
+{% include properties.md properties=site.data.cprops.btn %}
+
 ## Breaking change
 
 {% capture callout %}
-
-- Modificato il nome delle varianti di dimensione per coincidere con UI Kit Italia
-- Sostituite negli esempi le classi `.btn-me` con `.me-2`.
-- La class `.btn-sm` è stata rimossa dagli esempi, perché coincide con la versione base.
-- La dimensione delle icone non dipendono dalle dimensioni dei pulsanti.
-  {% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}
+- Il nome delle varianti di dimensione ora coincide con UI Kit Italia: 
+  - Large (`.btn-lg`) diventa Grande (stessa classe `.btn-lg`).
+  - Small (`.btn-sm`) diventa Base (senza classe di dimensione specifica).
+  - Mini (`.btn-xs`) diventa Piccolo (stessa classe `.btn-xs`).
+- La classe `.btn-me` è stata sostituita a favore delle classi di spacing generico usando `.me-2`.
+- Nelle varianti con icona le classi che ne controllano il colore potrebbero aver cambiato nome, ad esempio `.icon-white` diventa `.icon-inverse`.
+{% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}

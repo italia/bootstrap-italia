@@ -142,7 +142,7 @@ Nel footer completo sono presenti i seguenti elementi:
           <div class="col-lg-4 col-md-4 mt-2">
             <h4>Newsletter</h4>
             <div class="form-group d-flex gap-1">
-              <input type="text" class="form-control form-control-sm" id="exampleFormGroup" placeholder="Inserisci la tua email">
+              <input type="text" class="form-control form-control-sm" id="exampleFormGroup1" placeholder="Inserisci la tua email" aria-label="Inserisci la tua email">
               <button type="submit" class="btn btn-primary">Iscriviti</button>
             </div>
           </div>
@@ -229,7 +229,7 @@ Contiene i contatti dell'ente, collegamenti ai profili social, form di iscrizion
           <div class="col-lg-4 col-md-4 mt-2">
             <h4>Newsletter</h4>
             <div class="form-group d-flex gap-1">
-              <input type="text" class="form-control form-control-sm" id="exampleFormGroup" placeholder="Inserisci la tua email">
+              <input type="text" class="form-control form-control-sm" id="exampleFormGroup2" placeholder="Inserisci la tua email" aria-label="Inserisci la tua email">
               <button type="submit" class="btn btn-primary">Iscriviti</button>
             </div>
           </div>
@@ -251,3 +251,16 @@ Contiene i contatti dell'ente, collegamenti ai profili social, form di iscrizion
   </div>
 </footer>
 {% endcapture %}{% include example.html content=example %}
+
+{% include properties.md properties=site.data.cprops.footer %}
+## Breaking change
+
+{% capture callout %}
+- Per la `<section>` di branding dell'ente: aggiunta classe `.pb-4`.
+- Per la `<section>` che ospita sitemap o link: aggiunta classe `.pt-2`. 
+  - Per i `<div>` interni di questa seconda sezione è stato corretto il responsive: rimossa classe `.col-md-3` e aggiunta la classe `.pb-3`.
+- Per la `<section>` che presenta dati dell'ente e contatti: cambiato da `.py-4` a `.pt-4`.
+  - Per i `<div>` interni di questa terza sezione sono state corrette le spaziature verticali: cambiato da `.pb-2` a `.mt-2` 
+- La classe che controlla il colore delle icone social ha cambiato nome: `.icon-white` diventa `.icon-inverse`.
+- Aggiunto il markup per mostrare il campo input per l'iscrizione alla newsletter.
+{% endcapture %}{% include callout.html content=callout version="3.0.0" type="danger" %}

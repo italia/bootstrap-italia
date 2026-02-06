@@ -10,14 +10,14 @@
 //
 
 .megamenu {
-  --#{$prefix}megamenu-background-color: var(--#{$prefix}color-background-inverse);
-  --#{$prefix}megamenu-border-color: var(--#{$prefix}color-border-subtle);
-  --#{$prefix}megamenu-spacing: var(--#{$prefix}spacing-xs);
+  --#{$prefix}megamenu-background-color: var(--#{$prefix}color-background-inverse); // Controls the background color for the megamenu, using color tokens.
+  --#{$prefix}megamenu-border-color: var(--#{$prefix}color-border-subtle); // Controls the border color for the megamenu, using color tokens.
+  --#{$prefix}megamenu-spacing: var(--#{$prefix}spacing-xs); // Controls the spacing for the megamenu, using spacing tokens.
 }
 
 // Styles
 //
-
+/* stylelint-disable-next-line no-duplicate-selectors */
 .megamenu {
   padding-left: var(--#{$prefix}megamenu-spacing);
   padding-right: var(--#{$prefix}megamenu-spacing);
@@ -52,7 +52,7 @@
 
     .link-list {
       width: 100%;
-     
+
       .list-item {
         display: flex;
         align-items: center;
@@ -112,7 +112,7 @@
     .it-footer-link {
       font-size: var(--#{$prefix}heading-6-font-size);
       font-weight: var(--#{$prefix}font-weight-solid);
-      line-height: var(--#{$prefix}heading-line-height);
+      line-height: var(--#{$prefix}heading-leading);
       text-decoration: none;
       &:hover,
       &:focus {
@@ -136,7 +136,7 @@
     button.dropdown-toggle:before {
       z-index: 2;
     }
-    
+
     .dropdown-menu {
       z-index: 1;
     }
@@ -163,7 +163,6 @@
 
     // Vertical menu styles
     .it-vertical {
-
       .link-list-wrapper ul.link-list {
         width: 100%;
 

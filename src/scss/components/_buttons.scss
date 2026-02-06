@@ -13,25 +13,25 @@ $btn-close-white-filter: invert(1) grayscale(100%) brightness(200%) !default;
 //
 
 .btn {
-  --#{$prefix}btn-background: transparent; // default to transparent
-  --#{$prefix}btn-border-color: transparent;
-  --#{$prefix}btn-border-radius: var(--#{$prefix}radius-smooth);
-  --#{$prefix}btn-border-size: 0; // default to 0
-  --#{$prefix}btn-disabled-opacity: 0.5;
-  --#{$prefix}btn-font-family: var(--#{$prefix}font-sans);
-  --#{$prefix}btn-font-size: var(--#{$prefix}label-font-size);
-  --#{$prefix}btn-font-weight: var(--#{$prefix}font-weight-solid);
-  --#{$prefix}btn-line-height: var(--#{$prefix}font-line-height-3);
-  --#{$prefix}btn-outline-border-color: transparent;
-  --#{$prefix}btn-outline-border-size: 2px;
-  --#{$prefix}btn-padding-x: var(--#{$prefix}spacing-s);
-  --#{$prefix}btn-padding-y: var(--#{$prefix}spacing-xs);
-  --#{$prefix}btn-text-color: var(--#{$prefix}color-text-primary);
+  --#{$prefix}btn-background: transparent; // Controls the background for the button.
+  --#{$prefix}btn-border-color: transparent; // Controls the border color for the button.
+  --#{$prefix}btn-border-radius: var(--#{$prefix}radius-smooth); // Controls the border radius for the button, using radius tokens.
+  --#{$prefix}btn-border-size: 0; // Controls the border size for the button.
+  --#{$prefix}btn-disabled-opacity: 0.5; // Controls the opacity for disabled buttons.
+  --#{$prefix}btn-font-family: var(--#{$prefix}font-sans); // Controls the font family for the button, using font tokens.
+  --#{$prefix}btn-font-size: var(--#{$prefix}label-font-size); // Controls the font size for the button, using font tokens.
+  --#{$prefix}btn-font-weight: var(--#{$prefix}font-weight-solid); // Controls the font weight for the button, using font tokens.
+  --#{$prefix}btn-line-height: var(--#{$prefix}font-leading-3); // Controls the line height for the button, using font tokens.
+  --#{$prefix}btn-outline-border-color: transparent; // Controls the outline border color for the button.
+  --#{$prefix}btn-outline-border-size: 2px; // Controls the outline border size for the button.
+  --#{$prefix}btn-padding-x: var(--#{$prefix}spacing-s); // Controls the horizontal padding for the button, using spacing tokens.
+  --#{$prefix}btn-padding-y: var(--#{$prefix}spacing-xs); // Controls the vertical padding for the button, using spacing tokens.
+  --#{$prefix}btn-text-color: var(--#{$prefix}color-text-primary); // Controls the text color for the button, using color tokens.
 }
 
 // Styles
 //
-
+/* stylelint-disable-next-line no-duplicate-selectors */
 .btn {
   display: inline-block;
   padding: var(--#{$prefix}btn-padding-y) var(--#{$prefix}btn-padding-x);
@@ -95,7 +95,7 @@ $btn-close-white-filter: invert(1) grayscale(100%) brightness(200%) !default;
   --#{$prefix}btn-padding-x: var(--#{$prefix}spacing-xs);
   --#{$prefix}btn-padding-y: var(--#{$prefix}spacing-xs);
   --#{$prefix}btn-font-size: var(--#{$prefix}label-font-size-s);
-  --#{$prefix}btn-line-height: var(--#{$prefix}font-line-height-1);
+  --#{$prefix}btn-line-height: var(--#{$prefix}font-leading-1);
   --#{$prefix}rounded-icon-size: 20px;
 }
 
@@ -103,7 +103,7 @@ $btn-close-white-filter: invert(1) grayscale(100%) brightness(200%) !default;
   --#{$prefix}btn-padding-x: var(--#{$prefix}spacing-m);
   --#{$prefix}btn-padding-y: var(--#{$prefix}spacing-s);
   --#{$prefix}btn-font-size: var(--#{$prefix}label-font-size-l);
-  --#{$prefix}btn-line-height: var(--#{$prefix}font-line-height-5);
+  --#{$prefix}btn-line-height: var(--#{$prefix}font-leading-5);
 }
 
 .btn-progress {
@@ -259,11 +259,11 @@ a.btn-outline {
 
     &:hover {
       --#{$prefix}btn-outline-border-color: var(--#{$prefix}color-border-secondary-hover);
-      --#{$prefix}btn-text-color: var(--#{$prefix}color-text-secondary-hover);
+      --#{$prefix}btn-text-color: var(--#{$prefix}color-link-secondary-hover);
     }
     &:active {
       --#{$prefix}btn-outline-border-color: var(--#{$prefix}color-border-secondary-active);
-      --#{$prefix}btn-text-color: var(--#{$prefix}color-text-secondary-active);
+      --#{$prefix}btn-text-color: var(--#{$prefix}color-link-secondary-active);
     }
   }
 

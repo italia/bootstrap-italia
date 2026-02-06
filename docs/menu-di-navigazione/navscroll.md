@@ -449,7 +449,13 @@ Le opzioni possono essere passate tramite gli attributi data o tramite Javascrip
   </tbody>
 </table>
 
+{% include properties.md properties=site.data.cprops.navscroll %}
+
 ## Breaking change
+
+{% capture callout %}
+- La classe che controlla il colore dell'icona chevron per le varianti scure ha cambiato nome: `.icon-white` diventa `.icon-inverse`.
+{% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}
 
 {% capture callout %}
 - Spostato il pulsante "Indietro" come primo elemento della struttura interna di `.menu-wrapper`.

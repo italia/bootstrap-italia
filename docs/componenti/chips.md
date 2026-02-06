@@ -294,3 +294,12 @@ I gruppi di chip vengono visualizzati in linea.
   </button>
 </a>
 {% endcapture %}{% include example.html content=example %}
+
+{% include properties.md properties=site.data.cprops.chip %}
+## Breaking change
+
+{% capture callout %}
+- È stata rimossa la classe `.chip-simple`.
+- Nelle chip con pulsante di chiusura il tag `<label>` diventa `<span>`.
+- Alle icone del pulsante di chiusura per le chip con classe `.chip-lg` viene aggiunta la classe `.icon-md`. 
+{% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}
