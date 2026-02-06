@@ -179,10 +179,6 @@
     }
 
     .link-list-wrapper {
-      // margin-bottom: var(--#{$prefix}spacing-m);
-      // padding-right: var(--#{$prefix}spacing-m);
-      // padding-left: var(--#{$prefix}spacing-m);
-
       ul li a {
         &.list-item.active {
           color: var(--#{$prefix}color-link);
