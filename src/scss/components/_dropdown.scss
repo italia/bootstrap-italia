@@ -9,7 +9,8 @@
 // Properties
 //
 
-.dropdown {
+.dropdown,
+.dropdown-menu {
   --#{$prefix}dropdown-animation-speed: var(--#{$prefix}transition-instant); // Controls the speed of the dropdown open animation, using transition tokens.
   --#{$prefix}dropdown-background: var(--#{$prefix}color-background-inverse); // Controls the default background, using color tokens.
   --#{$prefix}dropdown-border-color: transparent; // Controls the default border color.
@@ -311,7 +312,7 @@
 }
 
 // Dropdown section headers
-.dropdown-header {
+.dropdown-header.link-list-heading {
   display: block;
   margin-bottom: 0; // for use with heading elements
   padding: var(--#{$prefix}dropdown-header-padding-y) var(--#{$prefix}dropdown-header-padding-x);

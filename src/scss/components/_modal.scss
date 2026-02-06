@@ -269,7 +269,7 @@
       .modal-body {
         p {
           font-size: var(--#{$prefix}caption-font-size);
-          line-height: var(--#{$prefix}caption-line-height);
+          line-height: var(--#{$prefix}caption-leading);
         }
       }
       .modal-footer {

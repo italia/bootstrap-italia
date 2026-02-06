@@ -128,7 +128,7 @@ Si consiglia di applicare la classe `.white-color` al contenuto (come da esempio
 
 {% comment %}Example name: Sfondo in evidenza{% endcomment %}
 {% capture example %}
-<section class="section section-neutral" aria-labelledby="titleEx4">
+<section class="section section-emphasis" aria-labelledby="titleEx4">
   <div class="section-content">
     <!-- contenuto di esempio START -->
     <div class="container white-color">
