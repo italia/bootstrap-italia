@@ -142,7 +142,7 @@ Nel footer completo sono presenti i seguenti elementi:
           <div class="col-lg-4 col-md-4 mt-2">
             <h4>Newsletter</h4>
             <div class="form-group d-flex gap-1">
-              <input type="text" class="form-control form-control-sm" id="exampleFormGroup" placeholder="Inserisci la tua email">
+              <input type="text" class="form-control form-control-sm" id="exampleFormGroup1" placeholder="Inserisci la tua email" aria-label="Inserisci la tua email">
               <button type="submit" class="btn btn-primary">Iscriviti</button>
             </div>
           </div>
@@ -229,7 +229,7 @@ Contiene i contatti dell'ente, collegamenti ai profili social, form di iscrizion
           <div class="col-lg-4 col-md-4 mt-2">
             <h4>Newsletter</h4>
             <div class="form-group d-flex gap-1">
-              <input type="text" class="form-control form-control-sm" id="exampleFormGroup" placeholder="Inserisci la tua email">
+              <input type="text" class="form-control form-control-sm" id="exampleFormGroup2" placeholder="Inserisci la tua email" aria-label="Inserisci la tua email">
               <button type="submit" class="btn btn-primary">Iscriviti</button>
             </div>
           </div>
