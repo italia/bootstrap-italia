@@ -260,6 +260,8 @@ Aggiungere alla section `.it-hero-wrapper` la classe `.it-bottom-overlapping-con
 </div>
 {% endcapture %}{% include example.html content=example %}
 
+{% include properties.md properties=site.data.cprops.hero %}
+
 ## Breaking change
 
 {% capture callout %}

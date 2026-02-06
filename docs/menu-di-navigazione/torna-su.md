@@ -29,7 +29,7 @@ Per visualizzare il Back to top nella posizione corretta è necessario scrollare
 {% comment %}Example name: Base, funzionante{% endcomment %}
 {% capture example %}
 <a href="#" aria-label="Torna su" data-bs-toggle="backtotop" class="back-to-top" id="example">
-<svg class="icon icon-light"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-up"></use></svg>
+<svg class="icon icon-inverse"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-up"></use></svg>
 </a>
 {% endcapture %}{% include example.html content=example %}
 
@@ -38,7 +38,7 @@ Per visualizzare il Back to top nella posizione corretta è necessario scrollare
 {% comment %}Example name: Base, esempio{% endcomment %}
 {% capture example %}
 <a href="#" aria-label="Torna su" data-bs-toggle="backtotop" class="back-to-top">
-<svg class="icon icon-light"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-up"></use></svg>
+<svg class="icon icon-inverse"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-up"></use></svg>
 </a>
 {% endcapture %}{% include example.html content=example %}
 
@@ -49,7 +49,7 @@ Aggiungendo la classe `.back-to-top-small` al link si ottiene un pulsante di dim
 {% comment %}Example name: Compatto, esempio{% endcomment %}
 {% capture example %}
 <a href="#" aria-label="Torna su" data-bs-toggle="backtotop" class="back-to-top back-to-top-small">
-<svg class="icon icon-light"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-up"></use></svg>
+<svg class="icon icon-inverse"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-up"></use></svg>
 </a>
 
 {% endcapture %}{% include example.html content=example %}
@@ -62,10 +62,10 @@ Aggiungendo la classe `.shadow` al link si aggiunge un'ombra al pulsante.
 {% capture example %}
 <div class="d-flex align-items-center">
   <a href="#" aria-label="Torna su" data-bs-toggle="backtotop" class="back-to-top shadow">
-    <svg class="icon icon-light"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-up"></use></svg>
+    <svg class="icon icon-inverse"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-up"></use></svg>
   </a>
   <a href="#" aria-label="Torna su" data-bs-toggle="backtotop" class="back-to-top back-to-top-small shadow">
-    <svg class="icon icon-light"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-up"></use></svg>
+    <svg class="icon icon-inverse"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-up"></use></svg>
   </a>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -181,7 +181,13 @@ Le opzioni possono essere passate tramite gli attributi data o tramite Javascrip
   </tbody>
 </table>
 
+{% include properties.md properties=site.data.cprops.backtop %}
+
 ## Breaking change
+
+{% capture callout %}
+- La classe che controlla il colore delle icone bianche ha cambiato nome: `.icon-white` diventa `.icon-inverse`.
+{% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}
 
 {% capture callout %}
 - Rimossi gli attributi `tabindex="-1"` e `aria-hidden="true"` per permettere il focus da tastiera e l'interazione da strumenti assistivi. 

@@ -1,46 +1,79 @@
-//mobile
+// Component: rating
+//
+// Description: Component styles for rating
+//
+
+// Variables
+//
+
+// Properties
+//
 
 .rating {
+  --#{$prefix}rating-font-size: var(--#{$prefix}label-font-size-s); // Controls the font size for the rating, using font tokens.
+  --#{$prefix}rating-font-weight: var(--#{$prefix}font-weight-solid); // Controls the font weight for the rating, using font tokens.
+  --#{$prefix}rating-icon-fill: var(--#{$prefix}color-background-secondary-light); // Controls the icon fill for the rating, using color tokens.
+  --#{$prefix}rating-line-height: var(--#{$prefix}label-leading); // Controls the line height for the rating, using font tokens.
+  --#{$prefix}rating-text: var(--#{$prefix}color-text-secondary); // Controls the text color for the rating, using color tokens.
+}
+
+// Styles
+//
+/* stylelint-disable-next-line no-duplicate-selectors */
+.rating {
   border: none;
-  float: left;
-  //hide radio
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+
+  // Hide radio input
   & > input {
     position: absolute;
     left: -9999px;
   }
-  //star container
+
+  // Star container
+  //
+
   & > label {
-    float: right;
-    //margin: 0 $v-gap/4 0 0;
     margin: 0;
-    padding-right: $v-gap * 0.25;
-    &:first-of-type {
-      margin-right: 0;
-    }
-    svg {
-      fill: #c3cfdb;
-      position: relative;
-      transform-origin: center center;
-      transition: transform 0.1s;
-    }
+    padding-right: 2px;
+
     &:hover {
       cursor: pointer;
+
       svg {
-        transform: scale(1.1);
+        transform: scale(1.2);
       }
+    }
+
+    // Star icon
+    //
+
+    svg {
+      fill: var(--#{$prefix}rating-icon-fill);
+      position: relative;
+      transform-origin: center center;
+      transition: transform var(--#{$prefix}transition-instant);
     }
   }
 
-  // #stars label
+  // Rating label
+  //
+
   & > legend {
-    color: $dark;
-    font-size: 0.875rem;
+    color: var(--#{$prefix}rating-text);
+    font-size: var(--#{$prefix}rating-font-size);
     float: right;
     width: auto;
-    margin: 6px 0 0 $v-gap * 2;
-    font-weight: 500;
-    line-height: 1.3;
+    margin-left: var(--#{$prefix}spacing-xxs);
+    font-weight: var(--#{$prefix}rating-font-weight);
+    line-height: var(--#{$prefix}rating-line-height);
   }
+
+  // Read only rating
+  //
 
   &.rating-read-only {
     & > input,
@@ -50,29 +83,27 @@
   }
 }
 
-.rating > input:checked ~ label, // show primary color star when clicked
-.rating:not(:checked) > label:hover, // hover current star
-.rating:not(:checked) > label:hover ~ label {
-  svg {
-    fill: $primary;
-  }
-} // hover previous stars in list
+// Interactive states
+//
 
-.rating > input:checked + label:hover, // hover current star when changing rating
-.rating > input:checked ~ label:hover,
-.rating > label:hover ~ input:checked ~ label, // lighten current selection
-.rating > input:checked ~ label:hover ~ label {
-  + svg {
-    fill: $primary;
-  }
+// Show primary color star when clicked
+.rating>input:checked~label,
+// show primary color star when clicked
+.rating:not(:checked)>label:hover,
+// hover current star
+.rating:not(:checked)>label:hover~label {
+  --#{$prefix}rating-icon-fill: var(--#{$prefix}icon-primary);
 }
 
-//small - tablet
-@include media-breakpoint-up(sm) {
-  .rating {
-    // #stars label
-    & > legend {
-      font-size: 0.75rem;
-    }
+// Hover previous stars in list
+.rating>input:checked+label:hover,
+// Hover current star when changing rating
+.rating>input:checked~label:hover,
+// Hover current star when changing rating
+.rating>label:hover~input:checked~label,
+// Lighten current selection
+.rating>input:checked~label:hover~label {
+  svg {
+    --#{$prefix}rating-icon-fill: var(--#{$prefix}icon-primary);
   }
 }
