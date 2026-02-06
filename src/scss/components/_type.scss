@@ -24,13 +24,13 @@ ul,
 ol,
 dl {
   font-size: var(--#{$prefix}body-font-size);
-  line-height: var(--#{$prefix}body-line-height);
+  line-height: var(--#{$prefix}body-leading);
 }
 
 caption,
 figcaption {
   font-size: var(--#{$prefix}caption-font-size);
-  line-height: var(--#{$prefix}caption-line-height);
+  line-height: var(--#{$prefix}caption-leading);
 }
 
 b,
@@ -234,7 +234,7 @@ blockquote,
   padding: var(--#{$prefix}spacing-s);
   border-left: var(--#{$prefix}border-thick) solid var(--#{$prefix}border-color-secondary);
   font-size: var(--#{$prefix}body-font-size);
-  line-height: var(--#{$prefix}body-line-height);
+  line-height: var(--#{$prefix}body-leading);
 
   > :last-child {
     margin-bottom: 0;

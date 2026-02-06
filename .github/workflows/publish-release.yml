@@ -30,7 +30,7 @@ jobs:
       - run: npm ci
       - run: npm run build
       - name: Publish package to NPM
-        run: npm publish --tag alpha
+        run: npm publish --tag alpha # to change
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - run: npm i extract-changelog-release
@@ -42,6 +42,7 @@ jobs:
           artifacts: './dist/zip/*.zip'
           bodyFile: 'RELEASE_BODY.md'
           token: ${{ secrets.GITHUB_TOKEN }}
+          makeLatest: false # to change
       # - name: Publish on gh-pages
       #   run: |
       #     git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git

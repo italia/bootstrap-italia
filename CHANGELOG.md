@@ -1,3 +1,17 @@
+# [3.0.0-alpha.1](https://github.com/italia/bootstrap-italia/compare/v3.0.0-alpha.0...v3.0.0-alpha.1) (2026-02-06)
+
+
+### Bug Fixes
+
+* dropdown preview ([#1655](https://github.com/italia/bootstrap-italia/issues/1655)) ([f1b5616](https://github.com/italia/bootstrap-italia/commit/f1b5616806f80a34733312fdb255bc80bc79dff3))
+* errori pa11y ([#1657](https://github.com/italia/bootstrap-italia/issues/1657)) ([5ba442e](https://github.com/italia/bootstrap-italia/commit/5ba442ea18b1d891aac582f5f36eefd2011fdb29))
+* hero text centerd [#1649](https://github.com/italia/bootstrap-italia/issues/1649) ([d672018](https://github.com/italia/bootstrap-italia/commit/d6720189a672faf258bce9232dba8bd2662915f3))
+* replace bs variables with bsi [#1644](https://github.com/italia/bootstrap-italia/issues/1644) ([c0b1b52](https://github.com/italia/bootstrap-italia/commit/c0b1b524a4ed77fa6bd42559c530c013221fe0f9))
+* scss lint ([6cd273f](https://github.com/italia/bootstrap-italia/commit/6cd273feff53eba3e246f1cf8b1b3d5836b0d01e))
+* Titillium pro typography ([#1652](https://github.com/italia/bootstrap-italia/issues/1652)) ([4e82b19](https://github.com/italia/bootstrap-italia/commit/4e82b195ad6085e5d5b160809224c7a2cc382253))
+
+
+
 # [3.0.0-alpha.0](https://github.com/italia/bootstrap-italia/compare/v2.17.3...v3.0.0-alpha.0) (2026-02-04)
 
 

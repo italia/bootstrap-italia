@@ -194,13 +194,13 @@
       margin-bottom: var(--#{$prefix}spacing-xxs);
       font-size: var(--#{$prefix}heading-5-font-size);
       font-weight: var(--#{$prefix}font-weight-solid);
-      line-height: var(--#{$prefix}font-line-height-2);
+      line-height: var(--#{$prefix}font-leading-2);
     }
 
     // Card description
     .it-card-text {
       font-size: var(--#{$prefix}font-size-base);
-      line-height: var(--#{$prefix}font-line-height-5);
+      line-height: var(--#{$prefix}font-leading-5);
 
       &:last-child {
         margin-bottom: 0;

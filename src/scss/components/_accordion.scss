@@ -27,7 +27,7 @@
   --#{$prefix}accordion-btn-icon-transform: rotate(-180deg); // Controls the transform for the accordion button icon when active.
   --#{$prefix}accordion-btn-icon-transition: transform 0.2s ease-in-out; // Controls the transition for the accordion button icon.
   --#{$prefix}accordion-btn-icon-width: 1.25rem; // Controls the width of the accordion button icon.
-  --#{$prefix}accordion-btn-line-height: var(--#{$prefix}font-line-height-1); // Controls the line height for the accordion button, using font tokens.
+  --#{$prefix}accordion-btn-line-height: var(--#{$prefix}font-leading-1); // Controls the line height for the accordion button, using font tokens.
   --#{$prefix}accordion-btn-padding-x: var(--#{$prefix}spacing-m); // Controls the horizontal padding for the accordion button, using spacing tokens.
   --#{$prefix}accordion-btn-padding-y: var(--#{$prefix}spacing-s); // Controls the vertical padding for the accordion button, using spacing tokens.
   --#{$prefix}accordion-color: var(--#{$prefix}color-text-base); // Controls the text color for the accordion item, using color tokens.
