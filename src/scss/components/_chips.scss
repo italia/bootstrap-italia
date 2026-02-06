@@ -19,7 +19,7 @@
   --#{$prefix}chip-padding-x: var(--#{$prefix}spacing-xs); // Controls the horizontal padding for the chip, using spacing tokens.
   --#{$prefix}chip-padding-y: var(--#{$prefix}spacing-3xs); // Controls the vertical padding for the chip, using spacing tokens.
   --#{$prefix}chip-text-color: var(--#{$prefix}color-text-secondary); // Controls the text color for the chip, using color tokens.
-  --#{$prefix}chip-text-line-height: var(--#{$prefix}label-line-height); // Controls the text line height for the chip, using font tokens.
+  --#{$prefix}chip-text-line-height: var(--#{$prefix}label-leading); // Controls the text line height for the chip, using font tokens.
   --#{$prefix}chip-text-size: var(--#{$prefix}label-font-size); // Controls the text size for the chip, using font tokens.
   --#{$prefix}chip-text-weight: var(--#{$prefix}font-weight-solid); // Controls the text weight for the chip, using font tokens.
 }
