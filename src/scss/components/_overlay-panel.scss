@@ -6,7 +6,7 @@
 // Properties
 //
 
-.overlay-panel {
+%overlay-panel-properties {
   --#{$prefix}overlay-panel-padding-y: var(--#{$prefix}spacing-s);
   --#{$prefix}overlay-panel-padding-x: var(--#{$prefix}spacing-m);
   --#{$prefix}overlay-panel-bg: var(--#{$prefix}overlay-background-primary);
@@ -41,8 +41,9 @@
   }
 }
 
-//overlay label
+// Overlay panel
 .overlay-panel {
+  @extend %overlay-panel-properties;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -92,3 +93,4 @@
   &.overlay-black {
     --#{$prefix}overlay-panel-bg: var(--#{$prefix}overlay-background-light);
   }
+}
