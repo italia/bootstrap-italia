@@ -158,6 +158,7 @@ a {
 
   &:hover {
     color: var(--#{$prefix}color-link-hover);
+    cursor: pointer;
   }
 }
 
