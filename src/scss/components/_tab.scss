@@ -22,15 +22,15 @@
   // --#{$prefix}tab-text-color-active: var(--#{$prefix}primary);
   // --#{$prefix}tab-text-color-hover: var(--#{$prefix}color-link-hover);
   // --#{$prefix}tab-text-color-disabled: var(--#{$prefix}color-text-disabled);
-  --#{$prefix}tab-icon-color: var(--#{$prefix}color-icon-secondary);
+  --#{$prefix}tab-icon-color: var(--#{$prefix}icon-secondary);
   // --#{$prefix}tab-icon-color-active: var(--#{$prefix}primary);
   // --#{$prefix}tab-icon-color-hover: var(--#{$prefix}color-link-hover);
   // --#{$prefix}tab-icon-color-disabled: var(--#{$prefix}color-text-disabled);
   --#{$prefix}tab-border-radius: var(--#{$prefix}radiuns-smooth);
   --#{$prefix}tab-border-width: 3px;
-  --#{$prefix}tab-padding-x: 12px;
-  --#{$prefix}tab-padding-y: 12px;
-  --#{$prefix}tab-font-size: 1rem;
+  --#{$prefix}tab-padding-x: var(--#{$prefix}spacing-m);
+  --#{$prefix}tab-padding-y: var(--#{$prefix}spacing-s);
+  --#{$prefix}tab-font-size: var(--#{$prefix}label-font-size);
   --#{$prefix}tab-font-weight: 600;
   --#{$prefix}tab-shadow: 0 12px 25px -20px rgba(0, 0, 0, 0.5);
   --#{$prefix}tab-background-light: var(--#{$prefix}color-background-primary-lighter);
@@ -38,7 +38,7 @@
   // --#{$prefix}tab-text-color-dark: var(--#{$prefix}color-text-secondary);
   // --#{$prefix}tab-color-dark-active: var(--#{$prefix}cyan);
   // --#{$prefix}tab-color-dark-disabled: var(--#{$prefix}color-text-disabled);
-  --#{$prefix}tab-border-color-active: var(--#{$prefix}color-border-primary-active);
+  --#{$prefix}tab-border-color: transparent;
   --#{$prefix}tab-border-radius-cards: var(--#{$prefix}border-base, 0.25rem);
   --#{$prefix}tab-border-width-cards: 2px;
   --#{$prefix}tab-border-color-cards: var(--#{$prefix}color-border-subtle);
@@ -99,11 +99,11 @@
   }
 
   //tabs with big icon
-  &.nav-tabs-icon-lg {
-    .nav-link {
-      padding: 0.778rem 1.778em;
-    }
-  }
+  // &.nav-tabs-icon-lg {
+  //   .nav-link {
+  //     padding: 0.778rem 1.778em;
+  //   }
+  // }
 
   //vertical tabs
   &.nav-tabs-vertical {
@@ -146,12 +146,13 @@
   //link element
   .nav-link {
     border-radius: 0;
-    font-size: 1rem;
+    font-size: var(--#{$prefix}tab-font-size);
     font-weight: var(--#{$prefix}tab-font-weight);
     color: var(--#{$prefix}tab-text-color);
     border: none;
-    border-bottom: var(--#{$prefix}tab-border-width) solid transparent;
-    padding:  var(--#{$prefix}tab-padding-y) var(--#{$prefix}tab-padding-x);
+    --#{$prefix}tab-border-color: transparent;
+    border-bottom: var(--#{$prefix}tab-border-width) solid var(--#{$prefix}tab-border-color);
+    padding: var(--#{$prefix}tab-padding-y) var(--#{$prefix}tab-padding-x);
     flex: 1 0 auto;
     white-space: nowrap;
     line-height: 1rem;
@@ -160,12 +161,11 @@
     justify-content: center;
     text-decoration: none;
     @include media-breakpoint-up(lg) {
-      font-size: 1.125rem;
+      --#{$prefix}tab-font-size: var(--#{$prefix}label-font-size-l);
     }
 
     &:hover {
       --#{$prefix}tab-text-color: var(--#{$prefix}color-text-secondary-hover);
-      border-bottom-color: transparent;
     }
 
     &:focus:not([data-focus-mouse='true']) {
@@ -173,11 +173,20 @@
     }
 
     &.disabled {
-      --#{$prefix}tab-text-color: var(--#{$prefix}color-text-disabled);
+      --#{$prefix}tab-text-color: var(--#{$prefix}color-link-disabled);
       cursor: not-allowed;
-      // .icon {
-      //   fill: va;
-      // }
+      .icon {
+        --#{$prefix}tab-icon-color: var(--#{$prefix}color-background-subtle);
+      }
+    }
+
+    &.active {
+      --#{$prefix}tab-border-color: var(--#{$prefix}color-border-primary);
+      --#{$prefix}tab-text-color: var(--#{$prefix}color-text-primary);
+
+      .icon {
+        --#{$prefix}tab-icon-color: var(--#{$prefix}icon-primary);
+      }
     }
 
     // Icons
@@ -187,18 +196,10 @@
         --#{$prefix}tab-icon-color: var(--#{$prefix}icon-secondary-hover);
       }
     }
-    &.active {
-      .icon {
-        --#{$prefix}tab-icon-color: var(--#{$prefix}icon-primary-active);
-      }
-    }
   }
-  .nav-link.active,
-  .nav-item.show .nav-link {
-    border-bottom-color: $primary;
-    color: $primary;
-    cursor: inherit;
-  }
+  // .nav-link.active,
+  // .nav-item.show .nav-link {
+  // }
   .nav-item {
     margin-bottom: 0;
     display: flex;
