@@ -1,3 +1,28 @@
+## [2.17.3](https://github.com/italia/bootstrap-italia/compare/v2.17.2...v2.17.3) (2026-02-04)
+
+* security update
+
+
+
+## [2.17.2](https://github.com/italia/bootstrap-italia/compare/v2.17.1...v2.17.2) (2026-01-19)
+
+
+### Bug Fixes
+
+* removed invalid selector `:after .icon` ([e4804b9](https://github.com/italia/bootstrap-italia/commit/e4804b9e71845e98307ea1e134af8a5d47e8d7b7))
+
+
+
+## [2.17.1](https://github.com/italia/bootstrap-italia/compare/v2.17.0...v2.17.1) (2025-12-18)
+
+
+### Bug Fixes
+
+* breadcrumb screen reader announcement, ignore separators ([381f845](https://github.com/italia/bootstrap-italia/commit/381f845d23218ef22cd40f241d1d9224c7588295))
+* **scss:** resolving sass deprecation warnings and compilation errors ([faa996c](https://github.com/italia/bootstrap-italia/commit/faa996c739799dfa03967f4c74c78db8f144aa84))
+
+
+
 # [2.17.0](https://github.com/italia/bootstrap-italia/compare/v2.16.2...v2.17.0) (2025-10-28)
 
 
