@@ -1,4 +1,7 @@
 @use 'sass:map';
+@use '../config' as *;
+@use '../variables' as *;
+@use '../vendor/rfs' as *;
 
 // Utility generator
 // Used to generate utilities & print utilities

@@ -1,44 +1,44 @@
 // Toggles
 //
-// Used in conjunction with global variables to enable certain theme features.
+// forwardd in conjunction with global variables to enable certain theme features.
 
 // Vendor
-@use 'vendor/rfs';
+@forward 'vendor/rfs' hide divide, $enable-rfs;
 
 // Deprecate
-@use 'mixins/deprecate';
+@forward 'mixins/deprecate';
 
 // Helpers
-@use 'mixins/breakpoints';
-@use 'mixins/color-scheme';
-@use 'mixins/image';
-@use 'mixins/resize';
-@use 'mixins/visually-hidden';
-@use 'mixins/reset-text';
-@use 'mixins/text-truncate';
-@use 'mixins/text-emphasis';
+@forward 'mixins/breakpoints';
+@forward 'mixins/color-scheme';
+@forward 'mixins/image';
+@forward 'mixins/resize';
+@forward 'mixins/visually-hidden';
+@forward 'mixins/reset-text';
+@forward 'mixins/text-truncate';
+@forward 'mixins/text-emphasis';
 
 // Utilities
-@use 'mixins/utilities';
+@forward 'mixins/utilities';
 
 // Components
-@use 'mixins/alert';
-@use 'mixins/backdrop';
-@use 'mixins/buttons';
-@use 'mixins/caret';
-@use 'mixins/pagination';
-@use 'mixins/lists';
-@use 'mixins/list-group';
-@use 'mixins/forms';
-@use 'mixins/table-variants';
+@forward 'mixins/alert';
+@forward 'mixins/backdrop';
+@forward 'mixins/buttons';
+@forward 'mixins/caret';
+@forward 'mixins/pagination';
+@forward 'mixins/lists';
+@forward 'mixins/list-group';
+@forward 'mixins/forms';
+@forward 'mixins/table-variants';
 
 // Skins
-@use 'mixins/border-radius';
-@use 'mixins/box-shadow';
-@use 'mixins/gradients';
-@use 'mixins/transition';
+@forward 'mixins/border-radius';
+@forward 'mixins/box-shadow';
+@forward 'mixins/gradients';
+@forward 'mixins/transition';
 
 // Layout
-@use 'mixins/clearfix';
-@use 'mixins/container';
-@use 'mixins/grid';
+@forward 'mixins/clearfix';
+@forward 'mixins/container';
+@forward 'mixins/grid';

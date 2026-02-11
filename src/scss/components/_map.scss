@@ -1,3 +1,5 @@
+@use "../base/mixins/breakpoints" as *;
+
 .map-wrapper {
   min-height: 280px;
 

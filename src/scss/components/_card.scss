@@ -1,3 +1,8 @@
+@use "../base/config" as *;
+@use "../base/variables" as *;
+@use "../base/mixins/breakpoints" as *;
+@use "../base/mixins/border-radius" as *;
+
 // Special list for long groups of cards, bootstrap row/cols grid
 ul.row.it-card-list {
   list-style-type: none;

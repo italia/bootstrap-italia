@@ -1,151 +1,151 @@
-@use 'base/mixins/banner';
+@forward 'base/mixins/banner';
 
 // Bootstrap Italia version
-@use 'base/version';
+@forward 'base/version';
 // ------------------------------
 
 // Functions
-@use 'base/functions';
+@forward 'base/functions';
 // ------------------------------
 
 // Variables
-@use 'base/variables';
+@forward 'base/variables';
 // ------------------------------
 
 // Functions, maps and mixins
-@use 'base/mixins';
-@use 'base/maps';
-@use 'base/utilities';
+@forward 'base/mixins';
+@forward 'base/maps';
+@forward 'base/utilities';
 // ------------------------------
 
 // Layout
-@use 'base/root';
-@use 'base/reboot';
-@use 'base/containers';
-@use 'base/transitions';
+@forward 'base/root';
+@forward 'base/reboot';
+@forward 'base/containers';
+@forward 'base/transitions';
 // ------------------------------
 
 // Helpers & utilities
-@use 'base/helpers';
-@use 'base/utilities/api';
+@forward 'base/helpers';
+@forward 'base/utilities/api';
 // ------------------------------
 
 // Class utilities
-@use 'utilities/focus';
-@use 'utilities/icons';
-@use 'utilities/colors';
-@use 'utilities/text-colors';
+@forward 'utilities/focus';
+@forward 'utilities/icons';
+@forward 'utilities/colors';
+// @forward 'utilities/text-colors';
 
 // Nav & Header
-@use 'components/nav';
-@use 'components/navbar';
-@use 'components/headerslim';
-@use 'components/headerslimtheme';
-@use 'components/headercenter';
-@use 'components/headercentertheme';
-@use 'components/headernavbar';
-@use 'components/headernavbartheme';
-@use 'components/header';
-@use 'components/navigationtheme';
+@forward 'components/nav';
+@forward 'components/navbar';
+@forward 'components/headerslim';
+@forward 'components/headerslimtheme';
+@forward 'components/headercenter';
+@forward 'components/headercentertheme';
+@forward 'components/headernavbar';
+@forward 'components/headernavbartheme';
+@forward 'components/header';
+@forward 'components/navigationtheme';
 // ------------------------------
 
 // Components
-@use 'components/type';
-@use 'components/grid';
-@use 'components/tables';
-@use 'components/breadcrumb';
-@use 'components/modal';
-@use 'components/accordion';
-@use 'components/carousel';
-@use 'components/calendar';
-@use 'components/alert';
-@use 'components/button-group';
-@use 'components/buttons';
-@use 'components/font';
-@use 'components/dropdown';
-@use 'components/pager';
-@use 'components/tab';
-@use 'components/cookiebar';
-@use 'components/hero';
-@use 'components/forward';
-@use 'components/back-to-top';
-@use 'components/list-group';
-@use 'components/linklist';
-@use 'components/offcanvas'; // Keep?
-@use 'components/navigation';
-@use 'components/skiplinks';
-@use 'components/affix';
-@use 'components/sidebar';
-@use 'components/sidebarthemes';
-@use 'components/megamenu';
-@use 'components/bottomnav';
-@use 'components/navscroll';
-@use 'components/navscrolltheme';
-@use 'components/callout';
-@use 'components/toolbar';
-@use 'components/sections';
-@use 'components/notifications';
-@use 'components/avatar';
-@use 'components/thumbnav';
-@use 'components/steppers';
-@use 'components/card';
-@use 'components/card-old'; // Keep till next major? (.card is deprecated)
-@use 'components/imgresponsive';
-@use 'components/overlay-panel';
-@use 'components/progress-donuts';
-@use 'components/progress-bars';
-@use 'components/progress-spinners';
-@use 'components/gridlist';
-@use 'components/popover';
-@use 'components/tooltip';
-@use 'components/videoplayer';
-@use 'components/list';
-@use 'components/chips';
-@use 'components/rating';
-@use 'components/dimmer';
-@use 'components/accept-overlay';
-@use 'components/timeline';
-@use 'components/anchor';
-@use 'components/map';
-@use 'components/point-list';
-@use 'components/rating-list';
-@use 'components/badge';
-@use 'components/figcaption';
-@use 'components/sticky';
-@use 'components/print';
-@use 'components/code';
-@use 'components/images';
-@use 'components/page-scroll';
-@use 'components/pagination';
-@use 'components/placeholders'; // Keep?
-@use 'components/toasts';
+@forward 'components/type';
+@forward 'components/grid';
+@forward 'components/tables';
+@forward 'components/breadcrumb';
+@forward 'components/modal';
+@forward 'components/accordion';
+@forward 'components/carousel';
+@forward 'components/calendar';
+@forward 'components/alert';
+@forward 'components/button-group';
+@forward 'components/buttons';
+@forward 'components/font';
+@forward 'components/dropdown';
+@forward 'components/pager';
+@forward 'components/tab';
+@forward 'components/cookiebar';
+@forward 'components/hero';
+@forward 'components/forward';
+@forward 'components/back-to-top';
+@forward 'components/list-group';
+@forward 'components/linklist';
+@forward 'components/offcanvas'; // Keep?
+@forward 'components/navigation';
+@forward 'components/skiplinks';
+@forward 'components/affix';
+@forward 'components/sidebar';
+@forward 'components/sidebarthemes';
+@forward 'components/megamenu';
+@forward 'components/bottomnav';
+@forward 'components/navscroll';
+@forward 'components/navscrolltheme';
+@forward 'components/callout';
+@forward 'components/toolbar';
+@forward 'components/sections';
+@forward 'components/notifications';
+@forward 'components/avatar';
+@forward 'components/thumbnav';
+@forward 'components/steppers';
+@forward 'components/card';
+@forward 'components/card-old'; // Keep till next major? (.card is deprecated)
+@forward 'components/imgresponsive';
+@forward 'components/overlay-panel';
+@forward 'components/progress-donuts';
+@forward 'components/progress-bars';
+@forward 'components/progress-spinners';
+@forward 'components/gridlist';
+@forward 'components/popover';
+@forward 'components/tooltip';
+@forward 'components/videoplayer';
+@forward 'components/list';
+@forward 'components/chips';
+@forward 'components/rating';
+@forward 'components/dimmer';
+@forward 'components/accept-overlay';
+@forward 'components/timeline';
+@forward 'components/anchor';
+@forward 'components/map';
+@forward 'components/point-list';
+@forward 'components/rating-list';
+@forward 'components/badge';
+@forward 'components/figcaption';
+@forward 'components/sticky';
+@forward 'components/print';
+@forward 'components/code';
+@forward 'components/images';
+@forward 'components/page-scroll';
+@forward 'components/pagination';
+@forward 'components/placeholders'; // Keep?
+@forward 'components/toasts';
 // ------------------------------
 
 // Form
-@use 'forms/forms';
-@use 'forms/labels';
-@use 'forms/form-text';
-@use 'forms/form-control';
-@use 'forms/form-check';
-@use 'forms/form-range';
-@use 'forms/floating-labels';
-@use 'forms/input-group';
-@use 'forms/validation';
-@use 'forms/form-input-file';
-@use 'forms/form-input-number';
-@use 'forms/form-input-upload';
-@use 'forms/form-toggles';
-@use 'forms/form-password';
-@use 'forms/form-select';
-@use 'forms/form-transfer';
-@use 'forms/accessible-autocomplete';
-@use 'forms/autocomplete';
-@use 'forms/just-validate';
+@forward 'forms/forms';
+@forward 'forms/labels';
+@forward 'forms/form-text';
+@forward 'forms/form-control';
+@forward 'forms/form-check';
+@forward 'forms/form-range';
+@forward 'forms/floating-labels';
+@forward 'forms/input-group';
+@forward 'forms/validation';
+@forward 'forms/form-input-file';
+@forward 'forms/form-input-number';
+@forward 'forms/form-input-upload';
+@forward 'forms/form-toggles';
+@forward 'forms/form-password';
+@forward 'forms/form-select';
+@forward 'forms/form-transfer';
+@forward 'forms/accessible-autocomplete';
+@forward 'forms/autocomplete';
+@forward 'forms/just-validate';
 // ------------------------------
 
 // Footer
-@use 'components/footer';
+@forward 'components/footer';
 // ------------------------------
 
-// @use rules must be written before any other rules
-@include bsBanner('');
+// @forward rules must be written before any other rules
+// @include bsBanner('');

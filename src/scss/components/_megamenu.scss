@@ -1,5 +1,8 @@
 @use 'sass:math';
 @use 'sass:map';
+@use "../base/config" as *;
+@use "../base/variables" as *;
+@use "../base/mixins/breakpoints" as *;
 
 //Mobile
 .navbar {

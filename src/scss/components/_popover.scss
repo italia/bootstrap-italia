@@ -1,3 +1,7 @@
+@use "../base/config" as *;
+@use "../base/variables" as *;
+@use "../base/mixins" as *;
+
 .bs-popover-top {
   > .popover-arrow {
     bottom: calc(-1 * (var(--#{$prefix}popover-arrow-height)) - var(--#{$prefix}popover-border-width)); // stylelint-disable-line function-disallowed-list

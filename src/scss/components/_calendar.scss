@@ -1,3 +1,6 @@
+@use "../base/config" as *;
+@use "../base/variables" as *;
+
 .it-calendar-wrapper {
   .it-header-block-title {
     background-color: $primary;

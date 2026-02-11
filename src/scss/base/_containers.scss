@@ -1,3 +1,7 @@
+@use 'config' as *;
+@use 'variables' as *;
+@use 'mixins' as *;
+
 // Container widths
 //
 // Set the container width, and override it for fixed navbars in media queries.

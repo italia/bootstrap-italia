@@ -1,3 +1,6 @@
+@use 'src/scss/base/config' as *;
+@use 'src/scss/base/variables' as *;  
+
 .anchorjs-link {
   font-weight: 400;
   color: rgba($link-color, 0.5);

@@ -1,3 +1,6 @@
+@use "../base/config" as *;
+@use "../base/variables" as *;
+
 .masonry-loader {
   position: absolute;
   display: none;

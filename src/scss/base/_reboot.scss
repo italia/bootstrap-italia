@@ -1,3 +1,9 @@
+@use 'config' as *;
+@use 'variables' as *; 
+@use 'functions' as *;
+@use 'mixins' as *;
+@use 'maps' as *;
+
 // stylelint-disable declaration-no-important, selector-no-qualifying-type, property-no-vendor-prefix
 
 // Reboot

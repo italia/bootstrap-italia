@@ -1,4 +1,7 @@
 @use 'sass:math';
+@use "../base/config" as *;
+@use "../base/variables" as *;
+@use "../base/mixins" as *;
 
 // Keep till next major? (.card is deprecated)
 

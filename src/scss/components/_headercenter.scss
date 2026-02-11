@@ -1,4 +1,6 @@
 @use 'sass:map';
+@use "../base/config" as *;
+@use "../base/variables" as *;
 
 //mobile
 .it-header-center-wrapper {

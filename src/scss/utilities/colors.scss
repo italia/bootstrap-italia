@@ -1,3 +1,6 @@
+@use "../base/config" as *;
+@use "../base/variables" as *;
+
 // primary color ---------------------------------
 .primary-bg {
   background-color: $primary !important;

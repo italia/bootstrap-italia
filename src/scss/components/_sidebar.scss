@@ -1,3 +1,6 @@
+@use "../base/config" as *;
+@use "../base/variables" as *;
+
 //mobile
 .sidebar-wrapper {
   padding: $v-gap * 3 0;

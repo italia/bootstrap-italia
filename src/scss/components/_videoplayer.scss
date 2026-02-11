@@ -1,3 +1,7 @@
+@use "../base/config" as *;
+@use "../base/variables" as *;
+@use "../base/mixins/breakpoints" as *;
+
 /* stylelint-disable */
 @use 'video.js/src/css/video-js';
 /* stylelint-enable */

@@ -1,3 +1,8 @@
+@use '../config' as *;
+@use '../variables' as *;  
+@use 'border-radius' as *;
+@use '../vendor/rfs' as *;
+
 // This mixin uses an `if()` technique to be compatible with Dart Sass
 // See https://github.com/sass/sass/issues/1873#issuecomment-152293725 for more details
 

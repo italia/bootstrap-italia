@@ -1,3 +1,7 @@
+@use "../base/config" as *;
+@use "../base/variables" as *;
+@use "../base/mixins" as *;
+
 // Disable animation if transitions are disabled
 
 // scss-docs-start progress-keyframes

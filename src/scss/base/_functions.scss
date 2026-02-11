@@ -1,12 +1,12 @@
 @use 'sass:map';
+@use 'sass:meta';
+@use 'sass:color';
+@use 'sass:math';
+@use 'config' as *;
 
 // Bootstrap functions
 //
 // Utility mixins and functions for evaluating source code across our variables, maps, and mixins.
-
-@use 'sass:meta';
-@use 'sass:color';
-@use 'sass:math';
 
 // Ascending
 // Used to evaluate Sass maps like our grid breakpoints.
