@@ -89,8 +89,12 @@
   // Vertical tabs
   &.nav-tabs-vertical {
     flex-direction: column;
-    border-right: 1px solid var(--#{$prefix}tabs-border-color);
-    border-bottom: none;
+    border-color: var(--#{$prefix}tabs-border-color);
+    border-right-width: 1px;
+    border-style: solid;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    border-top-width: 0;
 
     .nav-link {
       position: relative;
