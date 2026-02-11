@@ -149,13 +149,20 @@
     }
 
     &.active,
-    &[data-focus-mouse='true'] {
-      --#{$prefix}tab-border-color: var(--#{$prefix}color-border-primary) !important;
+    &[data-focus-mouse="true"],
+    &[data-focus-mouse="true"]:not(:focus) {
+      --#{$prefix}tab-border-color: var(--#{$prefix}color-border-primary);
       --#{$prefix}tab-text-color: var(--#{$prefix}color-text-primary);
+      border-color: var(--#{$prefix}tab-border-color) !important;
 
       .icon {
         --#{$prefix}tab-icon-color: var(--#{$prefix}icon-primary);
       }
+    }
+
+    &:focus:not([data-focus-mouse="true"]) {
+      box-shadow: inset 0 1px 0 2px #000 !important;
+
     }
 
     // Icon styles inside tab nav link
