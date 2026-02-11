@@ -183,43 +183,36 @@
   }
 
   // Dark version
-  // Missing in the UI kit v3.x.x
+  // This styles are missing in the UI kit v3.x
   &.nav-dark {
     border-bottom: none;
-    background-color: $gray-primary;
+    --#{$prefix}tabs-background-color: var(--#{$prefix}color-background-primary-deep);
+
     .nav-link {
-      color: $neutral-1-a2;
-      .icon {
-        fill: $neutral-1-a2;
-      }
+      --#{$prefix}tab-text-color: var(--#{$prefix}color-text-inverse);
+      opacity: 0.75;
       &:hover {
-        color: $cyan;
-        .icon {
-          fill: $cyan;
-        }
+        opacity: 1;
       }
       &.disabled {
-        color: $neutral-1-a6;
-        & .icon {
-          fill: $neutral-1-a6;
-        }
+        opacity: 0.5;
+      }
+      .icon {
+        --#{$prefix}tab-icon-color: var(--#{$prefix}color-text-inverse);
       }
     }
+
     .nav-link.active,
     .nav-item.show .nav-link {
-      border-bottom: 2px solid $cyan;
-      background-color: $gray-primary;
-      color: $cyan;
-      .icon {
-        fill: $cyan;
-      }
+      opacity: 1;
+      --#{$prefix}tab-border-color: var(--#{$prefix}color-border-inverse);
     }
 
     &.nav-tabs-vertical {
       .nav-link.active,
       .nav-item.show .nav-link {
         border-bottom: none;
-        border-right-color: $cyan;
+        border-right-color: var(--#{$prefix}color-border-inverse);
       }
     }
   }
