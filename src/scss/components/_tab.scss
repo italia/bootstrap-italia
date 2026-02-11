@@ -95,13 +95,9 @@
     .nav-link {
       position: relative;
       justify-content: space-between;
-      border-right: var(--#{$prefix}tab-border-width) solid transparent;
-      border-bottom: none;
+      border-right-width: var(--#{$prefix}tab-border-width);
+      border-bottom-width: 0;
       white-space: normal;
-
-      &:hover {
-        border-bottom: none;
-      }
 
       &.justify-content-end {
         .it-ico:before,
@@ -109,12 +105,6 @@
           margin-right: 0;
         }
       }
-    }
-
-    .nav-link.active,
-    .nav-item.show .nav-link {
-      border-bottom: none;
-      border-right-color: var(--#{$prefix}tab-border-color);
     }
 
     &.nav-tabs-vertical-background {
@@ -132,8 +122,13 @@
     align-items: center;
     justify-content: center;
     padding: var(--#{$prefix}tab-padding-y) var(--#{$prefix}tab-padding-x);
-    border: none;
-    border-bottom: var(--#{$prefix}tab-border-width) solid var(--#{$prefix}tab-border-color, transparent);
+    border-width: var(--#{$prefix}tab-border-width);
+    border-style: solid;
+    border-left-width: 0;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-color: transparent;
+    border-bottom-width: var(--#{$prefix}tab-border-width);
     border-radius: 0;
     color: var(--#{$prefix}tab-text-color);
     font-size: var(--#{$prefix}tab-font-size);
@@ -339,17 +334,12 @@
 .flex-column-reverse {
   .nav-tabs {
     border-top-width: 1px;
-    border-bottom-width: none;
+    border-bottom-width: 0; // reset bottom border
 
     .nav-link {
       border-top-width: var(--#{$prefix}tab-border-width);
-      border-bottom-width: none;
+      border-bottom-width: 0; // reset bottom border
     }
-
-    // .nav-link.active,
-    // .nav-item.show .nav-link {
-    //   // border-top-color: var(--#{$prefix}tab-border-color);
-    // }
   }
 }
 
@@ -365,13 +355,13 @@
       }
     }
     &.nav-tabs-vertical {
-      border-right-width: none;
+      border-right-width: 0;
       border-left-width: 1px;
 
       .nav-link {
         justify-content: flex-start;
-        border-right-width: none;
-        border-bottom-width: none;
+        border-right-width: 0;
+        border-bottom-width: 0;
         border-left-width: var(--#{$prefix}tab-border-width);
       }
     }
