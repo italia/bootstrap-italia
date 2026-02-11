@@ -185,8 +185,8 @@
   // Dark version
   // This styles are missing in the UI kit v3.x
   &.nav-dark {
-    border-bottom: none;
-    --#{$prefix}tabs-background-color: var(--#{$prefix}color-background-primary-deep);
+    --#{$prefix}tabs-border-color: var(--#{$prefix}color-border-subtle);
+    --#{$prefix}tabs-background-color: var(--#{$prefix}color-background-secondary-deep);
 
     .nav-link {
       --#{$prefix}tab-text-color: var(--#{$prefix}color-text-inverse);
