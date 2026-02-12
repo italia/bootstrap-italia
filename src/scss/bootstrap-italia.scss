@@ -1,4 +1,5 @@
-@forward 'base/mixins/banner';
+// Banner
+@forward 'base/banner';
 
 // Bootstrap Italia version
 @forward 'base/version';
@@ -146,6 +147,3 @@
 // Footer
 @forward 'components/footer';
 // ------------------------------
-
-// @forward rules must be written before any other rules
-// @include bsBanner('');
