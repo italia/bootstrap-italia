@@ -2,7 +2,9 @@
 @use 'sass:meta';
 @use '../config' as *;
 @use '../variables' as *;
-@use '../mixins' as *;
+@use '../mixins/utilities' as *;
+@use '../mixins/breakpoints' as *;
+@use '../vendor/rfs' as *;
 @use '../utilities' as *;
 
 // Loop over each breakpoint

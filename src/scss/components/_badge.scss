@@ -1,6 +1,8 @@
 @use '../base/config' as *;
 @use '../base/variables' as *;
-@use '../base/mixins' as *;
+@use '../base/mixins/border-radius' as *;
+@use '../base/mixins/gradients' as *;
+@use '../base/vendor/rfs' as *;
 
 .badge {
   // scss-docs-start badge-css-vars

@@ -1,6 +1,8 @@
 @use '../base/config' as *;
 @use '../base/variables' as *;
-@use '../base/mixins' as *;
+@use '../base/mixins/lists' as *;
+@use '../base/mixins/breakpoints' as *;
+@use '../base/vendor/rfs' as *;
 @use '../base/reboot' as *;
 
 //

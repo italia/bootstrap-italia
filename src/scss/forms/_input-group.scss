@@ -1,7 +1,8 @@
 @use 'sass:string';
 @use '../base/config' as *;
 @use '../base/variables' as *;
-@use '../base/mixins' as *;
+@use '../base/mixins/border-radius' as *;
+@use '../base/vendor/rfs' as *;
 
 //
 // Base styles

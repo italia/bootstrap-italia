@@ -1,6 +1,10 @@
 @use '../base/config' as *;
 @use '../base/variables' as *;
-@use '../base/mixins' as *;
+@use '../base/mixins/border-radius' as *;
+@use '../base/mixins/box-shadow' as *;
+@use '../base/mixins/image' as *;
+@use '../base/mixins/breakpoints' as *;
+@use '../base/vendor/rfs' as *;
 
 // Responsive images (ensure images don't scale beyond their parents)
 //

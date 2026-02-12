@@ -3,7 +3,9 @@
 @use 'sass:map';
 @use '../base/config' as *;
 @use '../base/variables' as *;
-@use '../base/mixins' as *;
+@use '../base/mixins/border-radius' as *;
+@use '../base/mixins/breakpoints' as *;
+@use '../base/mixins/list-group' as *;
 @use '../base/functions' as *;
 
 // Base class

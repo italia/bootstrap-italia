@@ -1,6 +1,9 @@
 @use '../base/config' as *;
 @use '../base/variables' as *;
-@use '../base/mixins' as *;
+@use '../base/mixins/border-radius' as *;
+@use '../base/mixins/box-shadow' as *;
+@use '../base/mixins/transition' as *;
+@use '../base/vendor/rfs' as *;
 
 // Select
 //

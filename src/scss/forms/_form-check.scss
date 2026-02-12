@@ -1,6 +1,7 @@
 @use '../base/config' as *;
 @use '../base/variables' as *;
-@use '../base/mixins' as *;
+@use '../base/mixins/border-radius' as *;
+@use '../base/mixins/transition' as *;
 
 //
 // Check/radio

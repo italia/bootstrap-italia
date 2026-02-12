@@ -1,7 +1,10 @@
 @use 'sass:map';
 @use '../base/config' as *;
 @use '../base/variables' as *;
-@use '../base/mixins' as *;
+@use '../base/mixins/box-shadow' as *;
+@use '../base/mixins/transition' as *;
+@use '../base/mixins/backdrop' as *;
+@use '../base/mixins/breakpoints' as *;
 
 // stylelint-disable function-disallowed-list
 
