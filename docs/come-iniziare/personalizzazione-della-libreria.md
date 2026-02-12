@@ -26,7 +26,7 @@ Per avere la corrispondenza tra valore esadecimale del colore e HSB si può util
 L'impostazione di nuovi valori alle variabili di default non può essere applicata in runtime ma deve essere eseguita **prima** della compilazione della libreria. Pertanto non è possibile usare una versione modificata di **Bootstrap Italia** semplicemente caricandola con un `link` nella parte `<head>...</head>` del codice HTML ma va importata esplicitamente in una applicazione pre-processata ad esempio attraverso SASS.
 
 {% capture callout %}
-**⚠️ Dalla versione 2.x.x Bootstrap Italia ha adottato il moderno sistema di moduli Sass (`@use`/`@forward`).
+**⚠️ Dalla versione 2.x.x Bootstrap Italia ha adottato il moderno sistema di moduli Sass (`@use`/`@forward`).**
 
 Sono supportati due metodi di personalizzazione:
 - **Metodo raccomandato**: sintassi `@use ... with` (Dart Sass 3.0 ready, zero warning)
