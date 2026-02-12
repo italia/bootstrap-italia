@@ -3,6 +3,7 @@
 @use 'src/scss/base/variables' as *;
 @use 'src/scss/base/mixins/container' as *;
 @use 'src/scss/base/mixins/grid' as *;
+@use 'src/scss/base/mixins/clearfix' as *;
 @use 'src/scss/base/mixins/breakpoints' as *;
 
 .bd-example-row {
