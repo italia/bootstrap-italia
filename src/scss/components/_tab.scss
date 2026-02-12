@@ -361,7 +361,7 @@
   .nav-tabs {
     &.nav-tabs-vertical {
       border-right-width: 0;
-      border-left-width: var(--#{$prefix}tabs-border-width);
+      border-left-width: 1px;
 
       .nav-link {
         justify-content: flex-start;
