@@ -25,6 +25,16 @@ Per avere la corrispondenza tra valore esadecimale del colore e HSB si può util
 
 L'impostazione di nuovi valori alle variabili di default non può essere applicata in runtime ma deve essere eseguita **prima** della compilazione della libreria. Pertanto non è possibile usare una versione modificata di **Bootstrap Italia** semplicemente caricandola con un `link` nella parte `<head>...</head>` del codice HTML ma va importata esplicitamente in una applicazione pre-processata ad esempio attraverso SASS.
 
+{% capture callout %}
+**⚠️ Dalla versione 2.x.x Bootstrap Italia ha adottato il moderno sistema di moduli Sass (`@use`/`@forward`).
+
+Sono supportati due metodi di personalizzazione:
+- **Metodo raccomandato**: sintassi `@use ... with` (Dart Sass 3.0 ready, zero warning)
+- **Metodo legacy**: sintassi `@import` (deprecato, funzionante ma con warning)
+
+Consigliamo di utilizzare il metodo raccomandato per nuovi progetti.
+{% endcapture %}{% include callout.html content=callout type="warning" %}
+
 ### Sovrascrivere le variabili colore
 
 1. Installare **Bootstrap Italia** da NPM o da sorgente
@@ -45,24 +55,63 @@ Il **modo più semplice per creare una versione personalizzata di Bootstrap Ital
 
 {% endcapture %}{% include callout.html content=callout type="info" %}
 
+#### Metodo raccomandato: @use con configurazione inline
+
 ```scss
 // file: bootstrap-italia-custom.scss
 
-// modifica completa del template: è possibile ricompilare la libreria modificando alcune variabili SCSS
+// Importa la libreria CON configurazione delle variabili
+@use '../../node_modules/bootstrap-italia/src/scss/bootstrap-italia.scss' with (
+  // Override colore primary (colore #FF3333 https://rgb.to/ff3333)
+  $primary-h: 0,
+  $primary-s: 80,
+  $primary-b: 100,
+  
+  // Override famiglia di caratteri
+  $font-family-serif: ('Custom Font', Georgia, serif),
+  $font-family-sans-serif: ('Custom Font', Arial, Helvetica, sans-serif),
+  $font-family-monospace: ('Custom Font', 'Courier New', Courier, monospace)
+);
+```
 
-// Per l'override del colore $primary della palette in formato HSB (colore #FF3333 https://rgb.to/ff3333):
+{% capture callout %}
+**Perché usare `@use ... with`?**
+
+- ✅ Zero deprecation warnings
+- ✅ Compatibile con Dart Sass 3.0
+- ✅ Scope dei moduli isolato e sicuro
+- ✅ Sintassi moderna raccomandata da Sass
+
+**Nota importante:** Con `@use`, le variabili devono essere configurate nella clausola `with (...)` e non possono essere definite prima dell'import come con `@import`.
+{% endcapture %}{% include callout.html content=callout type="success" %}
+
+#### Metodo legacy: @import (deprecato)
+
+```scss
+// file: bootstrap-italia-custom.scss
+
+// Definisci le variabili PRIMA dell'import
 $primary-h: 0;
 $primary-s: 80;
 $primary-b: 100;
 
-// Per l'override della famiglia di caratteri
 $font-family-serif: 'Custom Font', Georgia, serif;
 $font-family-sans-serif: 'Custom Font', Arial, Helvetica, sans-serif;
 $font-family-monospace: 'Custom Font', 'Courier New', Courier, monospace;
 
-// import libreria
-@use '../../node_modules/bootstrap-italia/src/scss/bootstrap-italia.scss';
+// Importa la libreria
+@import '../../node_modules/bootstrap-italia/src/scss/bootstrap-italia.scss';
 ```
+
+{% capture callout %}
+**⚠️ Metodo deprecato**
+
+La sintassi `@import` è deprecata in Dart Sass e sarà rimossa nella versione 3.0. Questo metodo funziona ancora ma genera warning di deprecazione durante la compilazione.
+
+**Si raccomanda di migrare** al metodo `@use ... with` per evitare problemi futuri.
+{% endcapture %}{% include callout.html content=callout type="warning" %}
+
+### Utilizzo in applicazioni
 
 Ad esempio, per una applicazione costruita con ReactJS attraverso `create-react-app`, è possibile **importare bootstrap-italia-custom.scss** laddove serva utilizzare la libreria **Bootstrap-Italia**.
 
