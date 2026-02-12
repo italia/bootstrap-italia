@@ -1,6 +1,6 @@
 @use 'sass:map';
-@use "../base/config" as *;
-@use "../base/variables" as *;
+@use '../base/config' as *;
+@use '../base/variables' as *;
 
 .it-header-slim-wrapper {
   &.theme-light {

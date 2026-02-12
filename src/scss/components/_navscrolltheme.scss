@@ -1,7 +1,7 @@
 @use 'sass:map';
-@use "../base/config" as *;
-@use "../base/variables" as *;
-@use "../base/mixins/breakpoints" as *;
+@use '../base/config' as *;
+@use '../base/variables' as *;
+@use '../base/mixins/breakpoints' as *;
 
 @media (max-width: #{map.get($grid-breakpoints, lg)}) {
   .navbar {

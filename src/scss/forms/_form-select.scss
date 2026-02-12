@@ -1,6 +1,6 @@
-@use "../base/config" as *;
-@use "../base/variables" as *;
-@use "../base/mixins" as *;
+@use '../base/config' as *;
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
 
 // Select
 //
@@ -23,7 +23,7 @@
   background-size: $form-select-bg-size;
   border: $form-select-border-width solid $form-select-border-color;
   appearance: none;
-  
+
   @include font-size($form-select-font-size);
   @include border-radius($form-select-border-radius, 0);
   @include box-shadow($form-select-box-shadow);
@@ -35,9 +35,7 @@
 
     @if $enable-shadows {
       @include box-shadow($form-select-box-shadow, $form-select-focus-box-shadow);
-    }
-
-    @else {
+    } @else {
       // Avoid using mixin so we can pass custom focus shadow properly
       box-shadow: $form-select-focus-box-shadow;
     }
@@ -156,7 +154,7 @@
 
 .btn-light:not(:disabled):not(.disabled).active,
 .btn-light:not(:disabled):not(.disabled):active,
-.show>.btn-light.dropdown-toggle {
+.show > .btn-light.dropdown-toggle {
   background: transparent;
   color: inherit;
 }
@@ -166,8 +164,7 @@
     box-shadow: none;
   }
 
-  &>.dropdown-toggle.bs-placeholder {
-
+  & > .dropdown-toggle.bs-placeholder {
     &,
     &:active,
     &:focus,
@@ -194,7 +191,7 @@
     .bootstrap-select {
       background-color: $input-disabled-bg;
 
-      &>.dropdown-toggle.bs-placeholder {
+      & > .dropdown-toggle.bs-placeholder {
         color: $color-text-base;
         opacity: 1;
       }
@@ -209,11 +206,9 @@
 
   .dropdown,
   .btn-group {
-
     //menu fade in
     &.show {
       .dropdown-menu {
-
         //menu on bottom
         &[x-placement='bottom-start'] {
           animation: selectDropdownFadeIn forwards $dropdown-menu-animation-speed;
@@ -231,7 +226,7 @@
     display: none;
   }
 
-  >label {
+  > label {
     position: absolute;
     color: $select-label-color;
     font-size: $select-label-size;
@@ -320,7 +315,6 @@
 
   .dropdown {
     &.bootstrap-select {
-
       //search
       .bs-searchbox {
         padding: ($v-gap) $v-gap * 3;
@@ -363,8 +357,8 @@
         margin-top: 0;
       }
 
-      .form-check [type='checkbox']+label,
-      .form-check [type='radio']+label {
+      .form-check [type='checkbox'] + label,
+      .form-check [type='radio'] + label {
         margin-bottom: 0;
         font-weight: normal;
         font-size: $select-dd-text-size;
@@ -421,7 +415,6 @@
       &.show-tick {
         .filter-option {
           .filter-option-inner-inner {
-
             //color: rgba(255,255,255,0);
             .select-pill {
               font-size: $select-dd-pill-font-size;
@@ -448,8 +441,8 @@
             }
 
             // remove select style
-            .form-check [type='checkbox']+label,
-            .form-check [type='radio']+label {
+            .form-check [type='checkbox'] + label,
+            .form-check [type='radio'] + label {
               font-size: $select-dd-pill-font-size;
               padding: $v-gap * 0.5 $v-gap;
               border: 1px solid $select-label-color;
@@ -588,7 +581,7 @@ fieldset:disabled .bootstrap-select-wrapper {
     cursor: not-allowed;
   }
 
-  .bootstrap-select>.dropdown-toggle.bs-placeholder {
+  .bootstrap-select > .dropdown-toggle.bs-placeholder {
     color: $color-text-base;
   }
 

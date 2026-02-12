@@ -1,5 +1,5 @@
-@use "../base/config" as *;
-@use "../base/variables" as *;
+@use '../base/config' as *;
+@use '../base/variables' as *;
 
 input[type='file'] + label {
   background-color: transparent;

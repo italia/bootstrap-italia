@@ -1,6 +1,6 @@
-@use "../base/config" as *;
-@use "../base/variables" as *;
-@use "../base/mixins/breakpoints" as *;
+@use '../base/config' as *;
+@use '../base/variables' as *;
+@use '../base/mixins/breakpoints' as *;
 
 // Allows to give anchors an offset to be positioned below the sticky header
 .anchor-offset:before {

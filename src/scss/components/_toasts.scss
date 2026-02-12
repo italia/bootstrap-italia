@@ -1,7 +1,7 @@
-@use "../base/config" as *;
-@use "../base/variables" as *;
-@use "../base/mixins/border-radius" as *;
-@use "../base/vendor/rfs" as *;
+@use '../base/config' as *;
+@use '../base/variables' as *;
+@use '../base/mixins/border-radius' as *;
+@use '../base/vendor/rfs' as *;
 
 .toast {
   // scss-docs-start toast-css-vars

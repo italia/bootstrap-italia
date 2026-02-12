@@ -1,6 +1,6 @@
 @use 'sass:map';
-@use "../base/config" as *;
-@use "../base/variables" as *;
+@use '../base/config' as *;
+@use '../base/variables' as *;
 @use '@splidejs/splide/src/css/core/index';
 
 // Keep all .card-SOMETHING till next major? (.card is deprecated)

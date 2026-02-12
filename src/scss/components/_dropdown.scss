@@ -1,8 +1,8 @@
-@use "sass:map";
-@use "../base/config" as *;
-@use "../base/variables" as *;
-@use "../base/mixins" as *;
-@use "../base/vendor/rfs" as *;
+@use 'sass:map';
+@use '../base/config' as *;
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+@use '../base/vendor/rfs' as *;
 
 // The dropdown wrapper (`<div>`)
 .dropup,

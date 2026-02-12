@@ -1,7 +1,7 @@
-@use "sass:color";
-@use "../base/config" as *;
-@use "../base/variables" as *;
-@use "../utilities/focus.scss" as *;
+@use 'sass:color';
+@use '../base/config' as *;
+@use '../base/variables' as *;
+@use '../utilities/focus.scss' as *;
 
 .toggles,
 .toggles * {
@@ -27,15 +27,15 @@
     width: 0;
     height: 0;
 
-    &:focus+.lever {
+    &:focus + .lever {
       @extend %focus;
     }
 
-    &:focus[data-focus-mouse='true']+.lever {
+    &:focus[data-focus-mouse='true'] + .lever {
       @extend %focusmouse;
     }
 
-    &+.lever {
+    & + .lever {
       content: '';
       position: relative;
       width: 46px;
@@ -77,7 +77,7 @@
       }
     }
 
-    &:checked+.lever {
+    &:checked + .lever {
       background-color: #e6e9f2;
 
       &:before,
@@ -94,8 +94,8 @@
       }
     }
 
-    [disabled] &+.lever,
-    &[disabled]+.lever {
+    [disabled] & + .lever,
+    &[disabled] + .lever {
       cursor: default;
       background-color: #e6e9f2;
 
@@ -104,8 +104,8 @@
       }
     }
 
-    [disabled] &:checked+.lever:after,
-    &[disabled]:checked+.lever:after {
+    [disabled] &:checked + .lever:after,
+    &[disabled]:checked + .lever:after {
       background-color: #e6e9f2;
     }
   }

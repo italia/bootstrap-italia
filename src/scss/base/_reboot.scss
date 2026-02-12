@@ -29,7 +29,7 @@
 // null by default, thus nothing is generated.
 
 :root {
-  @if $font-size-root !=null {
+  @if $font-size-root != null {
     @include font-size(var(--#{$prefix}root-font-size));
   }
 
@@ -252,7 +252,6 @@ a {
 // See https://github.com/twbs/bootstrap/issues/19402
 
 a:not([href]):not([class]) {
-
   &,
   &:hover {
     color: inherit;
@@ -296,7 +295,7 @@ code {
   word-wrap: break-word;
 
   // Streamline the style when inside anchors to avoid broken underline and more
-  a>& {
+  a > & {
     color: inherit;
   }
 }

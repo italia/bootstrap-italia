@@ -1,10 +1,9 @@
-@use "../base/config" as *;
-@use "../base/variables" as *;
+@use '../base/config' as *;
+@use '../base/variables' as *;
 @use '../base/mixins' as *;
 //
 // General form controls (plus a few specific high-level interventions)
 //
-
 
 .form-control {
   display: block;

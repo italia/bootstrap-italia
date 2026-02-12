@@ -84,7 +84,7 @@
   }
 
   .nav {
-    >li>a {
+    > li > a {
       display: inline-block;
       padding: 0.25rem 0.5rem 0.25rem 1.5rem;
       font-size: 1rem;
@@ -96,8 +96,8 @@
       }
     }
 
-    >.active>a,
-    >.active:hover>a {
+    > .active > a,
+    > .active:hover > a {
       font-weight: 600;
       color: $primary;
       background-color: transparent;

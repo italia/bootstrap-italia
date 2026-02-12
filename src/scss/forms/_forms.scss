@@ -1,7 +1,7 @@
-@use "../base/config" as *;
-@use "../base/variables" as *;
-@use "../base/mixins/breakpoints" as *;
-@use "../utilities/focus.scss" as *;
+@use '../base/config' as *;
+@use '../base/variables' as *;
+@use '../base/mixins/breakpoints' as *;
+@use '../utilities/focus.scss' as *;
 
 label {
   color: $input-label-color;

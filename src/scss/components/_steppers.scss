@@ -1,11 +1,10 @@
 @use 'sass:map';
-@use "../base/config" as *;
-@use "../base/variables" as *;
-@use "../base/mixins/breakpoints" as *;
+@use '../base/config' as *;
+@use '../base/variables' as *;
+@use '../base/mixins/breakpoints' as *;
 
 //mobile
 .steppers {
-
   // steppers
   .steppers-index {
     margin-left: auto;
@@ -224,7 +223,6 @@
 //Tablet horizontal / small desktop
 @include media-breakpoint-up(lg) {
   .steppers {
-
     // header
     .steppers-header {
       padding: 0;
@@ -319,7 +317,6 @@
     // dark version
     &.bg-dark {
       .steppers-header {
-
         // steps
         li {
           border-color: $neutral-1-a8;
@@ -378,7 +375,6 @@
 //mobile ONLY BUTTONS
 @media (max-width: #{map.get($grid-breakpoints, lg) - 1px}) {
   .steppers {
-
     // navigation
     .steppers-nav {
       button:not(.steppers-btn-save):not(.steppers-btn-confirm) {
@@ -408,7 +404,6 @@
 
     // dark version
     &.bg-dark {
-
       // navigation
       .steppers-nav {
         button:not(.steppers-btn-save):not(.steppers-btn-confirm) {

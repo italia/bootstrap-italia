@@ -1,7 +1,7 @@
 // base/_variables.scss
 @use 'sass:map';
-@use 'config' as *;      // Variabili primitive
-@use 'functions' as *;   // Funzioni custom (hsb, etc.)
+@use 'config' as *; // Variabili primitive
+@use 'functions' as *; // Funzioni custom (hsb, etc.)
 
 // ============================================================================
 // PRIMARY COLOR (usa hsb)

@@ -1,6 +1,6 @@
-@use "../base/config" as *;
-@use "../base/variables" as *;
-@use "../base/mixins" as *;
+@use '../base/config' as *;
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
 
 // Disable animation if transitions are disabled
 
@@ -130,7 +130,6 @@
 
 //small - tablet
 @include media-breakpoint-up(sm) {
-
   //label
   .progress-bar-label {
     font-size: 0.75rem;
