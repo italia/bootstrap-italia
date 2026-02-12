@@ -55,14 +55,14 @@ Per utilizzare l'intera libreria, eventualmente personalizzando colori e variabi
 
 ```scss
 // Import completo della libreria
-@use 'bootstrap-italia/src/scss/bootstrap-italia.scss';
+@use 'bootstrap-italia/src/scss/bootstrap-italia.scss' as *;
 
 // Oppure con personalizzazione variabili
 @use 'bootstrap-italia/src/scss/bootstrap-italia.scss' with (
   $primary-h: 210,
   $primary-s: 100,
   $primary-b: 47
-);
+) as *;
 ```
 
 {% capture callout %}
@@ -90,7 +90,7 @@ Per importare solo i componenti necessari e ridurre le dimensioni del bundle fin
 ```
 
 {% capture callout %}
-** Nota importante sullo scope **
+**Nota importante sullo scope**
 
 Quando si importano moduli selettivamente, per come sono organizzati i file sass di Bootstrap Italia, è necessario usare `as *` per rendere disponibili variabili, funzioni e mixin nel contesto corrente. Senza `as *`, le variabili come `$primary` o le funzioni come `spacing()` non saranno disponibili.
 {% endcapture %}{% include callout.html content=callout type="warning" %}
