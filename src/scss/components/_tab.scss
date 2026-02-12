@@ -149,7 +149,7 @@
       cursor: not-allowed;
     }
     &[data-focus-mouse="true"]:not(.active) {
-      border-color: var(--#{$prefix}tab-border-color) !important; // stylelint-disable-line declaration-no-important
+      border-color: var(--#{$prefix}tab-border-color) !important; // stylelint-disable-line declaration-no-important - overrides styles in _focus.scss
       --#{$prefix}tab-border-color: var(--#{$prefix}color-border-subtle);
     }
     &.active,
@@ -157,7 +157,7 @@
     &[data-focus-mouse="true"]:not(:focus) {
       --#{$prefix}tab-border-color: var(--#{$prefix}color-border-primary);
       --#{$prefix}tab-text-color: var(--#{$prefix}color-text-primary);
-      border-color: var(--#{$prefix}tab-border-color) !important; // stylelint-disable-line declaration-no-important
+      border-color: var(--#{$prefix}tab-border-color) !important; // stylelint-disable-line declaration-no-important - overrides styles in _focus.scss
 
       .icon {
         --#{$prefix}tab-icon-color: var(--#{$prefix}icon-primary);
@@ -280,7 +280,7 @@
         content: '';
         width: 2px;
         height: 0.778rem;
-        background-color: $primary;
+        background-color: var(--#{$prefix}color-background-primary);
       }
       &:before {
         position: absolute;
@@ -289,30 +289,30 @@
         content: '';
         width: 0.778rem;
         height: 2px;
-        background-color: $primary;
+        background-color: var(--#{$prefix}color-background-primary);
       }
     }
 
     .nav-link {
-      padding-right: 2.5rem;
+      padding-right: 3rem;
     }
 
     //close button
     .nav-link-close {
       position: absolute;
-      top: calc(50% - 0.9rem);
+      top: calc(50% - 1rem);
       right: 0.889rem;
-      color: $color-text-secondary;
+      color: var(--#{$prefix}color-text-secondary);
       transition: color 0.2s;
       cursor: pointer;
       .icon {
-        fill: $color-text-secondary;
+        fill: var(--#{$prefix}icon-secondary);
       }
       &.disabled {
-        color: $gray-disabled;
+        color: var(--#{$prefix}color-text-disabled);
         cursor: pointer;
         .icon {
-          fill: $gray-disabled;
+          fill: var(--#{$prefix}icon-disabled);
         }
       }
       &:hover {
@@ -331,9 +331,9 @@
     .nav-link.active,
     .nav-item.show .nav-link {
       .nav-link-close {
-        color: $primary;
+        color: var(--#{$prefix}color-text-primary);
         .icon {
-          fill: $primary;
+          fill: var(--#{$prefix}icon-primary);
         }
       }
     }
@@ -358,17 +358,9 @@
 // Vertical tabs on right
 .flex-row-reverse {
   .nav-tabs {
-    &.nav-dark {
-      &.nav-tabs-vertical {
-        .nav-link.active,
-        .nav-item.show .nav-link {
-          border-left-color: $cyan;
-        }
-      }
-    }
     &.nav-tabs-vertical {
       border-right-width: 0;
-      border-left-width: 1px;
+      border-left-width: var(--#{$prefix}tabs-border-width);
 
       .nav-link {
         justify-content: flex-start;
