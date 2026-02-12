@@ -149,7 +149,7 @@
       cursor: not-allowed;
     }
     &[data-focus-mouse="true"]:not(.active) {
-      border-color: var(--#{$prefix}tab-border-color);
+      border-color: var(--#{$prefix}tab-border-color) !important; // stylelint-disable-line declaration-no-important
       --#{$prefix}tab-border-color: var(--#{$prefix}color-border-subtle);
     }
     &.active,
@@ -157,7 +157,7 @@
     &[data-focus-mouse="true"]:not(:focus) {
       --#{$prefix}tab-border-color: var(--#{$prefix}color-border-primary);
       --#{$prefix}tab-text-color: var(--#{$prefix}color-text-primary);
-      border-color: var(--#{$prefix}tab-border-color);
+      border-color: var(--#{$prefix}tab-border-color) !important; // stylelint-disable-line declaration-no-important
 
       .icon {
         --#{$prefix}tab-icon-color: var(--#{$prefix}icon-primary);
