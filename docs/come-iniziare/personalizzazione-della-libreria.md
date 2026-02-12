@@ -71,7 +71,7 @@ Il **modo più semplice per creare una versione personalizzata di Bootstrap Ital
   $font-family-serif: ('Custom Font', Georgia, serif),
   $font-family-sans-serif: ('Custom Font', Arial, Helvetica, sans-serif),
   $font-family-monospace: ('Custom Font', 'Courier New', Courier, monospace)
-);
+) as *;
 ```
 
 {% capture callout %}
@@ -84,6 +84,12 @@ Il **modo più semplice per creare una versione personalizzata di Bootstrap Ital
 
 **Nota importante:** Con `@use`, le variabili devono essere configurate nella clausola `with (...)` e non possono essere definite prima dell'import come con `@import`.
 {% endcapture %}{% include callout.html content=callout type="success" %}
+
+{% capture callout %}
+**Nota sull'`as *`**
+
+L'utilizzo di `as *` rende disponibili tutte le variabili, funzioni e mixin di Bootstrap Italia nel tuo codice Sass. Senza `as *`, potresti configurare le variabili ma non poter utilizzare ad esempio `$primary` o funzioni come `spacing()` nel resto del tuo codice.
+{% endcapture %}{% include callout.html content=callout type="info" %}
 
 #### Metodo legacy: @import (deprecato)
 
