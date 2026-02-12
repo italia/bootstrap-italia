@@ -132,7 +132,7 @@
   }
   &[data-popper-placement^='right'] {
     @extend .bs-tooltip-end;
-  } 
+  }
   &[data-popper-placement^='bottom'] {
     @extend .bs-tooltip-bottom;
   }

@@ -19,7 +19,6 @@
 //
 /* stylelint-disable-next-line no-duplicate-selectors */
 .megamenu {
-
   @include media-breakpoint-down(lg) {
     margin-left: calc(-1 * var(--#{$prefix}megamenu-spacing));
     margin-right: calc(-1 * var(--#{$prefix}megamenu-spacing));
