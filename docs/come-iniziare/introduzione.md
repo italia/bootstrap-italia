@@ -51,24 +51,24 @@ La libreria è accessibile anche via CDN su [jsDelivr](https://www.jsdelivr.com/
 Utilizzando SASS nella propria pipeline, puoi sfruttare le funzionalità del sistema di moduli per personalizzare variabili e ottimizzare il bundle finale.
 
 #### Metodo raccomandato: import completo
-Per utilizzare l'intera libreria, eventualmente personalizzando colori e variabili:
 
+Per utilizzare l'intera libreria, eventualmente personalizzando colori e variabili:
 ```scss
 // Import completo della libreria
-@use 'bootstrap-italia/src/scss/bootstrap-italia.scss' as *;
+@use 'bootstrap-italia/src/scss/bootstrap-italia.scss';
 
 // Oppure con personalizzazione variabili
 @use 'bootstrap-italia/src/scss/bootstrap-italia.scss' with (
   $primary-h: 210,
   $primary-s: 100,
   $primary-b: 47
-) as *;
+);
 ```
 
 {% capture callout %}
 **Personalizzare colori, font e altre variabili?**
 
-Per maggiori dettagli sulla personalizzazione delle variabili tramite `@use ... with`, consulta la [guida alla personalizzazione della libreria]({{ site.baseurl }}/docs/come-iniziare/personalizzazione-della-libreria/).
+Per maggiori dettagli sulla personalizzazione delle variabili tramite `@use ... with` e sull'uso dei namespace (`as *`, `as bsi`, ecc.), consulta la [guida alla personalizzazione della libreria]({{ site.baseurl }}/docs/come-iniziare/personalizzazione-della-libreria/).
 {% endcapture %}{% include callout.html content=callout type="info" %}
 
 #### Ottimizzazione bundle: import selettivo
@@ -92,7 +92,9 @@ Per importare solo i componenti necessari e ridurre le dimensioni del bundle fin
 {% capture callout %}
 **Nota importante sullo scope**
 
-Quando si importano moduli selettivamente, per come sono organizzati i file sass di Bootstrap Italia, è necessario usare `as *` per rendere disponibili variabili, funzioni e mixin nel contesto corrente. Senza `as *`, le variabili come `$primary` o le funzioni come `spacing()` non saranno disponibili.
+Quando si importano moduli selettivamente, per come sono organizzati i file sass di Bootstrap Italia, sarà necessario usare `as *` per rendere disponibili variabili, funzioni e mixin nel contesto corrente. Senza `as *`, le variabili come `$primary` o le funzioni come `spacing()` non saranno disponibili.
+
+**Alternative:** Puoi usare un namespace custom (`as bsi`) per maggiore chiarezza, o omettere `as` per usare il namespace completo `bootstrap-italia.*`. Per dettagli, consulta la [guida alla personalizzazione]({{ site.baseurl }}/docs/come-iniziare/personalizzazione-della-libreria/#scelta-del-namespace).
 {% endcapture %}{% include callout.html content=callout type="warning" %}
 
 #### Metodo legacy (deprecato)

@@ -43,19 +43,7 @@ Consigliamo di utilizzare il metodo raccomandato per nuovi progetti.
 4. Impostare le variabili di default da modificare con dei valori **personalizzati** (la maggior parte delle variabili usate da Bootstrap Italia è visibile [qui](https://github.com/italia/bootstrap-italia/blob/main/src/scss/))
 5. Importare la libreria **bootstrap-italia.scss** da **node_modules** o da sorgente alla fine del file
 
-{% capture callout %}
-
-##### Bootstrap Italia Playground
-
-<div class="text-center">
-<img class="rounded" src="{{ site.baseurl }}/docs/assets/img/bootstrap-italia-playground.png" width="400" alt="Esempio di pagina personalizzata con Bootstrap Italia Playground">
-</div>
-
-Il **modo più semplice per creare una versione personalizzata di Bootstrap Italia**, è seguire i passi indicati nel repository di esempio **[Bootstrap Italia Playground](https://github.com/italia/bootstrap-italia-playground/tree/main)**.
-
-{% endcapture %}{% include callout.html content=callout type="info" %}
-
-#### Metodo raccomandato: @use con configurazione inline
+### Metodo raccomandato: @use con configurazione inline
 
 ```scss
 // file: bootstrap-italia-custom.scss
@@ -85,13 +73,63 @@ Il **modo più semplice per creare una versione personalizzata di Bootstrap Ital
 **Nota importante:** Con `@use`, le variabili devono essere configurate nella clausola `with (...)` e non possono essere definite prima dell'import come con `@import`.
 {% endcapture %}{% include callout.html content=callout type="success" %}
 
+### Scelta del namespace
+
+Con `@use` puoi decidere come accedere alle variabili e mixin di Bootstrap Italia nel tuo codice:
+
+#### Namespace globale (`as *`)
+```scss
+@use 'bootstrap-italia/src/scss/bootstrap-italia.scss' with (
+  $primary-h: 0
+) as *;
+
+.custom {
+  color: $primary;  // Diretto
+  @include button-variant($primary, $primary);
+}
+```
+**Vantaggi:** Sintassi semplice, simile a `@import`.  
+**Svantaggi:** Possibili conflitti di naming.
+
+#### Namespace custom (`as nome`)
+```scss
+@use 'bootstrap-italia/src/scss/bootstrap-italia.scss' with (
+  $primary-h: 0
+) as bi;
+
+.custom {
+  color: bi.$primary;  // Esplicito
+  @include bi.button-variant(bi.$primary, bi.$primary);
+}
+```
+**Vantaggi:** Esplicito, evita conflitti, consigliato da Sass.  
+**Svantaggi:** Leggermente più verboso.
+
+#### Namespace default (nessun `as`)
+```scss
+@use 'bootstrap-italia/src/scss/bootstrap-italia.scss' with (
+  $primary-h: 0
+);
+
+.custom {
+  color: bootstrap-italia.$primary;  // Molto esplicito
+  @include bootstrap-italia.button-variant(bootstrap-italia.$primary, bootstrap-italia.$primary);
+}
+```
+**Vantaggi:** Zero conflitti garantito.  
+**Svantaggi:** Molto verboso.
+
 {% capture callout %}
-**Nota sull'`as *`**
+**Quale scegliere?**
 
-L'utilizzo di `as *` rende disponibili tutte le variabili, funzioni e mixin di Bootstrap Italia nel tuo codice Sass. Senza `as *`, potresti configurare le variabili ma non poter utilizzare ad esempio `$primary` o funzioni come `spacing()` nel resto del tuo codice.
-{% endcapture %}{% include callout.html content=callout type="info" %}
+- **Progetti piccoli o solo uso classi CSS:** `as *` (semplicità)
+- **Progetti medi/grandi con Sass custom:** `as bi` (chiarezza senza verbosità)  
+- **Librerie condivise:** namespace default (massima sicurezza)
 
-#### Metodo legacy: @import (deprecato)
+**Nota:** Se usi solo le classi CSS di Bootstrap Italia (es: `btn-primary`) senza scrivere codice Sass custom, puoi omettere completamente `as` - le classi funzioneranno comunque.
+{% endcapture %}{% include callout.html content=callout type="success" %}
+
+### Metodo legacy: @import (deprecato)
 
 ```scss
 // file: bootstrap-italia-custom.scss
