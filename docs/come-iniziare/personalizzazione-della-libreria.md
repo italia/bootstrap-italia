@@ -77,7 +77,9 @@ Consigliamo di utilizzare il metodo raccomandato per nuovi progetti.
 
 Con `@use` puoi decidere come accedere alle variabili e mixin di Bootstrap Italia nel tuo codice:
 
-#### Namespace globale (`as *`)
+#### Namespace globale
+Utilizzando `as *`:
+
 ```scss
 @use 'bootstrap-italia/src/scss/bootstrap-italia.scss' with (
   $primary-h: 0
@@ -85,27 +87,31 @@ Con `@use` puoi decidere come accedere alle variabili e mixin di Bootstrap Itali
 
 .custom {
   color: $primary;  // Diretto
-  @include button-variant($primary, $primary);
+  @include button-variant($primary, $primary, ...);
 }
 ```
 **Vantaggi:** Sintassi semplice, simile a `@import`.  
 **Svantaggi:** Possibili conflitti di naming.
 
-#### Namespace custom (`as nome`)
+#### Namespace custom
+Utilizzando `as NOME`, esempio `as bsi`:
+
 ```scss
 @use 'bootstrap-italia/src/scss/bootstrap-italia.scss' with (
   $primary-h: 0
 ) as bi;
 
 .custom {
-  color: bi.$primary;  // Esplicito
-  @include bi.button-variant(bi.$primary, bi.$primary);
+  color: bsi.$primary;  // Esplicito
+  @include bsi.button-variant(bsi.$primary, bsi.$primary, ...);
 }
 ```
 **Vantaggi:** Esplicito, evita conflitti, consigliato da Sass.  
 **Svantaggi:** Leggermente più verboso.
 
-#### Namespace default (nessun `as`)
+#### Namespace default 
+Non specificando un namespace: 
+
 ```scss
 @use 'bootstrap-italia/src/scss/bootstrap-italia.scss' with (
   $primary-h: 0
@@ -113,7 +119,7 @@ Con `@use` puoi decidere come accedere alle variabili e mixin di Bootstrap Itali
 
 .custom {
   color: bootstrap-italia.$primary;  // Molto esplicito
-  @include bootstrap-italia.button-variant(bootstrap-italia.$primary, bootstrap-italia.$primary);
+  @include bootstrap-italia.button-variant(bootstrap-italia.$primary, bootstrap-italia.$primary, ...);
 }
 ```
 **Vantaggi:** Zero conflitti garantito.  
@@ -123,10 +129,10 @@ Con `@use` puoi decidere come accedere alle variabili e mixin di Bootstrap Itali
 **Quale scegliere?**
 
 - **Progetti piccoli o solo uso classi CSS:** `as *` (semplicità)
-- **Progetti medi/grandi con Sass custom:** `as bi` (chiarezza senza verbosità)  
+- **Progetti medi/grandi con Sass custom:** `as bsi` (chiarezza senza verbosità)  
 - **Librerie condivise:** namespace default (massima sicurezza)
 
-**Nota:** Se usi solo le classi CSS di Bootstrap Italia (es: `btn-primary`) senza scrivere codice Sass custom, puoi omettere completamente `as` - le classi funzioneranno comunque.
+**Nota:** Se usi solo le classi CSS di Bootstrap Italia (es: `.btn-primary`) senza scrivere codice Sass custom, puoi omettere completamente `as` - le classi funzioneranno comunque.
 {% endcapture %}{% include callout.html content=callout type="success" %}
 
 ### Metodo legacy: @import (deprecato)
