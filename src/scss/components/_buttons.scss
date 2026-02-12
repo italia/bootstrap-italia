@@ -34,6 +34,7 @@
 
   display: inline-block;
   font-family: var(--#{$prefix}btn-font-family);
+  @include font-size(var(--#{$prefix}btn-font-size));
   font-weight: var(--#{$prefix}btn-font-weight);
   line-height: var(--#{$prefix}btn-line-height);
   color: var(--#{$prefix}btn-color);
@@ -46,17 +47,16 @@
   --bs-btn-color: $primary;
   --bs-btn-hover-color: $color-background-primary-hover;
   --bs-btn-active-color: #003366; // TODO change with tokens when available
+  @include border-radius(var(--#{$prefix}btn-border-radius));
+  @include gradient-bg(var(--#{$prefix}btn-bg));
+  @include box-shadow(var(--#{$prefix}btn-box-shadow));
+  @include transition($btn-transition);
   //btn-css-vars-end
   padding: 12px 24px;
   font-size: $btn-font-size;
   white-space: initial;
   text-decoration: none;
   box-shadow: none;
-  @include font-size(var(--#{$prefix}btn-font-size));
-  @include border-radius(var(--#{$prefix}btn-border-radius));
-  @include gradient-bg(var(--#{$prefix}btn-bg));
-  @include box-shadow(var(--#{$prefix}btn-box-shadow));
-  @include transition($btn-transition);
 
   &:hover {
     color: var(--#{$prefix}btn-hover-color);
