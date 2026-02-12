@@ -259,7 +259,8 @@
       position: relative;
       border-bottom: 0;
       &:last-of-type {
-        padding: var(--#{$prefix}tab-padding-y) var(--#{$prefix}tab-padding-x);
+        padding: var(--#{$prefix}tab-padding-y) calc(var(--#{$prefix}tab-padding-x) / 2);
+        border-bottom: 1px solid var(--#{$prefix}color-border-subtle);
       }
     }
 
