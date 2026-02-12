@@ -1,3 +1,4 @@
+@use 'sass:color';
 @use '../base/config' as *;
 @use '../base/variables' as *;
 @use '../base/mixins/breakpoints' as *;
@@ -32,7 +33,7 @@
     transition: background-color 0.15s;
 
     &:hover {
-      background-color: shade-color($primary, 10%);
+      background-color: color.mix($black, $primary, 10%);
     }
 
     //icon
@@ -69,7 +70,7 @@
       border-radius: 0;
       padding: 0;
       border: 2px dashed $primary-a1;
-      background-color: tint-color($primary-a1, 10%);
+      background-color: mix($white, $primary-a1, 10%);
       color: $primary-a7;
       text-align: center;
       display: table-cell;
