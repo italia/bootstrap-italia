@@ -89,8 +89,6 @@ ul.row.it-card-list {
       container-type: inline-size;
 
       > .it-card {
-        // Container Queries
-        flex: 1 0 100%;
 
         // Reset Media Queries
         @include media-breakpoint-up(sm) {
@@ -104,6 +102,9 @@ ul.row.it-card-list {
         @include media-breakpoint-up(lg) {
           flex: auto;
         }
+
+        // Container Queries
+        flex: 1 0 100%;
 
         @container (min-width: 500px) {
           flex: 0 0 calc(50% - 0.5 * var(--#{$prefix}it-card-group-gap));
