@@ -3,21 +3,30 @@
 // Description: Component styles for overlay panel
 //
 
-// Variables
-//
-
 // Properties
 //
+
+%overlay-panel-properties {
+  --#{$prefix}overlay-panel-padding-y: var(--#{$prefix}spacing-s); // Controls the vertical padding of the panel, using spacing tokens
+  --#{$prefix}overlay-panel-padding-x: var(--#{$prefix}spacing-m); // Controls the horizontal padding of the panel, using spacing tokens
+  --#{$prefix}overlay-panel-bg: var(--#{$prefix}overlay-background-primary); // Controls the background color of the panel, using overlay background tokens
+  --#{$prefix}overlay-panel-color: var(--#{$prefix}color-text-inverse); // Controls the text color of the panel, using color tokens
+  --#{$prefix}overlay-panel-font-weight: var(--#{$prefix}font-weight-solid); // Controls the font weight of the panel, using typography tokens
+  --#{$prefix}overlay-panel-font-size: var(--#{$prefix}label-font-size-s); // Controls the font size of the panel, using typography tokens
+  --#{$prefix}overlay-panel-max-height: 3.5rem; // Control the height of the panel when it is not full height
+  --#{$prefix}overlay-panel-icon-color: var(--#{$prefix}icon-inverse); // Controls the color of icons in the panel, using icon tokens
+}
 
 // Styles
 //
 
-//overlay wrapper
+// Wrapper
 .overlay-wrapper {
   position: relative;
   display: inline-block;
   overflow: hidden;
-  //hover version
+
+  // Hover state
   &.overlay-hover {
     .overlay-panel {
       opacity: 0;
@@ -32,20 +41,25 @@
   }
 }
 
-//overlay label
+// Overlay panel
 .overlay-panel {
+  @extend %overlay-panel-properties;
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
   width: 100%;
-  padding: $v-gap * 2 $v-gap * 3;
-  background-color: rgba($primary, 0.85);
-  color: $white;
-  font-weight: 600;
-  font-size: 1rem;
-  max-height: $v-gap * 7;
-  //text
+  padding: var(--#{$prefix}overlay-panel-padding-y) var(--#{$prefix}overlay-panel-padding-x);
+  background-color: var(--#{$prefix}overlay-panel-bg);
+  color: var(--#{$prefix}overlay-panel-color);
+  font-weight: var(--#{$prefix}overlay-panel-font-weight);
+  font-size: var(--#{$prefix}overlay-panel-font-size);
+  max-height: var(--#{$prefix}overlay-panel-max-height);
+  @include media-breakpoint-up(md) {
+    --#{$prefix}overlay-panel-font-size: var(--#{$prefix}label-font-size);
+  }
+
+  // Text inside the overlay
   span {
     min-width: 0;
     overflow: hidden;
@@ -53,7 +67,8 @@
     text-overflow: ellipsis;
     display: block;
   }
-  //fullheight & icon version
+
+  // Fullheight & icon version
   &.overlay-panel-fullheight,
   &.overlay-icon {
     top: 0;
@@ -61,26 +76,21 @@
     max-height: 100%;
     display: flex;
   }
+
   &.overlay-panel-fullheight {
     align-items: flex-end;
   }
+
   &.overlay-icon {
     justify-content: center;
     align-items: center;
     .icon {
-      fill: $white;
+      fill: var(--#{$prefix}overlay-panel-icon-color);
     }
   }
-  //black version
-  &.overlay-black {
-    background-color: rgba($black, 0.54);
-  }
-}
 
-//small - tablet
-@include media-breakpoint-up(sm) {
-  //overlay label
-  .overlay-panel {
-    font-size: 0.875rem;
+  // black version
+  &.overlay-black {
+    --#{$prefix}overlay-panel-bg: var(--#{$prefix}overlay-background-light);
   }
 }
