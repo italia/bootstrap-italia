@@ -12,6 +12,7 @@
     }
   }
 }
+
 // scss-docs-end progress-keyframes
 
 .progress-bar-striped {
@@ -38,9 +39,11 @@
   0% {
     left: -5%;
   }
+
   50% {
     width: 66%;
   }
+
   100% {
     left: 100%;
     width: 33%;
@@ -69,11 +72,14 @@
   @include box-shadow(var(--#{$prefix}progress-box-shadow));
   height: 4px;
   box-shadow: none;
+
   &.progress-color {
     background-color: $color-background-secondary-lighter; // UI Kit
   }
+
   &.progress-indeterminate {
     position: relative;
+
     .progress-bar {
       width: 0;
       animation: progressBarIndeterminate 1.4s cubic-bezier(0.77, 0, 0.175, 1) infinite forwards;
@@ -93,9 +99,9 @@
   color: var(--#{$prefix}progress-bar-color);
   text-align: center;
   white-space: nowrap;
+  background-color: $secondary; // UI Kit
   // background-color: var(--#{$prefix}progress-bar-bg);
   @include transition(var(--#{$prefix}progress-bar-transition));
-  background-color: $secondary; // UI Kit
 }
 
 //label
@@ -116,6 +122,7 @@
     left: 0;
     border-radius: 0 0 $btn-border-radius $btn-border-radius;
   }
+
   .progress-bar {
     height: 4px;
   }
@@ -123,6 +130,7 @@
 
 //small - tablet
 @include media-breakpoint-up(sm) {
+
   //label
   .progress-bar-label {
     font-size: 0.75rem;

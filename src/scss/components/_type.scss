@@ -2,6 +2,7 @@
 @use '../base/variables' as *;
 @use'../base/mixins' as *;
 @use '../base/reboot' as *;
+
 //
 // Headings
 //
@@ -32,11 +33,11 @@
 // Type display classes
 @each $display, $font-size in $display-font-sizes {
   .display-#{$display} {
-    @include font-size($font-size);
     font-family: $display-font-family;
     font-style: $display-font-style;
     font-weight: $display-font-weight;
     line-height: $display-line-height;
+    @include font-size($font-size);
   }
 }
 
@@ -63,6 +64,7 @@
 .list-inline {
   @include list-unstyled();
 }
+
 .list-inline-item {
   display: inline-block;
 
@@ -92,6 +94,7 @@ h1,
   font-size: 2.5rem;
   line-height: 3rem;
   letter-spacing: -1px;
+
   @include media-breakpoint-up(sm) {
     font-size: 3rem;
     line-height: 3.5rem;
@@ -102,6 +105,7 @@ h2,
 .h2 {
   font-size: 2rem;
   line-height: 2.5rem;
+
   @include media-breakpoint-up(sm) {
     font-size: 2.5rem;
     line-height: 3rem;
@@ -112,6 +116,7 @@ h3,
 .h3 {
   font-size: 1.75rem;
   line-height: 2rem;
+
   @include media-breakpoint-up(sm) {
     font-size: 2rem;
     line-height: 2.5rem;
@@ -122,6 +127,7 @@ h4,
 .h4 {
   font-size: 1.5rem;
   line-height: 2rem;
+
   @include media-breakpoint-up(sm) {
     font-size: 1.75rem;
     line-height: 2rem;
@@ -132,6 +138,7 @@ h5,
 .h5 {
   font-size: 1.25rem;
   line-height: 1.5rem;
+
   @include media-breakpoint-up(sm) {
     font-size: 1.5rem;
     line-height: 2rem;
@@ -142,6 +149,7 @@ h6,
 .h6 {
   font-size: 1rem;
   line-height: 1.5rem;
+
   @include media-breakpoint-up(sm) {
     font-size: 1.125rem;
   }
@@ -185,6 +193,7 @@ ol,
 dl {
   font-size: 1rem;
   line-height: 1.5rem;
+
   @include media-breakpoint-up(sm) {
     font-size: 1.125rem;
     line-height: 1.75rem;
@@ -196,6 +205,7 @@ dl {
   font-weight: $lead-font-weight;
   font-size: 1.25rem;
   line-height: 2rem;
+
   @include media-breakpoint-up(sm) {
     font-size: 1.5rem;
   }
@@ -211,10 +221,12 @@ blockquote,
   margin-left: calc($spacer / 2);
   border-left: 4px solid $analogue-2;
   padding: calc($spacer / 4) $spacer;
+
   &.text-end {
     margin-right: calc($spacer / 2);
     border-right: 4px solid $analogue-2;
   }
+
   &.text-center,
   &.text-end,
   &.blockquote-simple {
@@ -222,10 +234,12 @@ blockquote,
     border-left: none;
     border-right: none;
   }
+
   &.text-center,
   &.blockquote-simple {
     padding: 0;
   }
+
   &.blockquote-simple {
     font-style: italic;
   }
@@ -235,17 +249,21 @@ blockquote,
     margin-left: 0;
     padding: 16px 40px 24px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
     .blockquote-footer {
       font-size: inherit;
+
       &:before {
         content: none;
       }
     }
+
     &.dark {
       background-color: $primary;
       border-left: none;
       color: $white;
       padding: 40px;
+
       .blockquote-footer {
         color: $white;
       }
@@ -256,11 +274,14 @@ blockquote,
 .blockquote-footer {
   margin-bottom: $blockquote-margin-y;
   @include font-size($blockquote-footer-font-size);
+
   &::before {
     content: '\2014\00A0'; // em dash, nbsp
   }
+
   color: $blockquote-small-color;
   margin-top: 0;
+
   .bg-dark & {
     color: $blockquote-small-color-dark;
   }

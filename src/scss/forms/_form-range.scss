@@ -23,6 +23,7 @@
     &::-webkit-slider-thumb {
       box-shadow: $form-range-thumb-focus-box-shadow;
     }
+
     &::-moz-range-thumb {
       box-shadow: $form-range-thumb-focus-box-shadow;
     }
@@ -36,12 +37,12 @@
     width: $form-range-thumb-width;
     height: $form-range-thumb-height;
     margin-top: ($form-range-track-height - $form-range-thumb-height) * 0.5; // Webkit specific
-    @include gradient-bg($form-range-thumb-bg);
     border: $form-range-thumb-border;
+    appearance: none;
+    @include gradient-bg($form-range-thumb-bg);
     @include border-radius($form-range-thumb-border-radius);
     @include box-shadow($form-range-thumb-box-shadow);
     @include transition($form-range-thumb-transition);
-    appearance: none;
 
     &:active {
       @include gradient-bg($form-range-thumb-active-bg);
@@ -62,12 +63,13 @@
   &::-moz-range-thumb {
     width: $form-range-thumb-width;
     height: $form-range-thumb-height;
-    @include gradient-bg($form-range-thumb-bg);
     border: $form-range-thumb-border;
+    appearance: none;
+
+    @include gradient-bg($form-range-thumb-bg);
     @include border-radius($form-range-thumb-border-radius);
     @include box-shadow($form-range-thumb-box-shadow);
     @include transition($form-range-thumb-transition);
-    appearance: none;
 
     &:active {
       @include gradient-bg($form-range-thumb-active-bg);

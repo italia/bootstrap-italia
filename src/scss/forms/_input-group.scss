@@ -1,3 +1,4 @@
+@use 'sass:string';
 @use "../base/config" as *;
 @use "../base/variables" as *;
 @use "../base/mixins" as *;
@@ -118,7 +119,7 @@
 
   $validation-messages: '';
   @each $state in map-keys($form-validation-states) {
-    $validation-messages: $validation-messages + ':not(.' + unquote($state) + '-tooltip)' + ':not(.' + unquote($state) + '-feedback)';
+    $validation-messages: $validation-messages + ':not(.' + string.unquote($state) + '-tooltip)' + ':not(.' + string.unquote($state) + '-feedback)';
   }
 
   > :not(:first-child):not(.dropdown-menu)#{$validation-messages} {

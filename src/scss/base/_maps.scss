@@ -1,3 +1,4 @@
+@use 'sass:map';
 @use 'config' as *;
 @use 'variables' as *;   
 @use 'functions' as *;
@@ -20,7 +21,7 @@ $utilities-colors: $theme-colors-rgb !default;
 // scss-docs-end utilities-colors
 
 // scss-docs-start utilities-text-colors
-$utilities-text: map-merge(
+$utilities-text: map.merge(
   $utilities-colors,
   (
     'black': to-rgb($black),
@@ -32,7 +33,7 @@ $utilities-text-colors: map-loop($utilities-text, rgba-css-var, '$key', 'text') 
 // scss-docs-end utilities-text-colors
 
 // scss-docs-start utilities-bg-colors
-$utilities-bg: map-merge(
+$utilities-bg: map.merge(
   $utilities-colors,
   (
     'black': to-rgb($black),
@@ -44,7 +45,7 @@ $utilities-bg-colors: map-loop($utilities-bg, rgba-css-var, '$key', 'bg') !defau
 // scss-docs-end utilities-bg-colors
 
 // scss-docs-start utilities-border-colors
-$utilities-border: map-merge(
+$utilities-border: map.merge(
   $utilities-colors,
   (
     'white': to-rgb($white),

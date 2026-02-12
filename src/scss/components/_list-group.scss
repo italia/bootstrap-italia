@@ -1,3 +1,6 @@
+@use "sass:color";
+@use "sass:math";
+@use "sass:map";
 @use "../base/config" as *;
 @use "../base/variables" as *;
 @use "../base/mixins" as *;
@@ -124,7 +127,7 @@
 //
 // Change the layout of list group items from vertical (default) to horizontal.
 
-@each $breakpoint in map-keys($grid-breakpoints) {
+@each $breakpoint in map.keys($grid-breakpoints) {
   @include media-breakpoint-up($breakpoint) {
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
@@ -187,7 +190,7 @@
   $list-group-variant-bg: shift-color($value, $list-group-item-bg-scale);
   $list-group-variant-color: shift-color($value, $list-group-item-color-scale);
   @if (contrast-ratio($list-group-variant-bg, $list-group-variant-color) < $min-contrast-ratio) {
-    $list-group-variant-color: mix($value, color-contrast($list-group-variant-bg), abs($list-group-item-color-scale));
+    $list-group-variant-color: color.mix($value, color-contrast($list-group-variant-bg), math.abs($list-group-item-color-scale));
   }
 
   @include list-group-item-variant($state, $list-group-variant-bg, $list-group-variant-color);

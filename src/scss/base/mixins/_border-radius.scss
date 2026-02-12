@@ -1,3 +1,5 @@
+@use 'sass:meta';
+@use 'sass:list';
 @use '../config' as *;
 @use '../variables' as *;
 
@@ -8,10 +10,10 @@
 @function valid-radius($radius) {
   $return: ();
   @each $value in $radius {
-    @if type-of($value) == number {
-      $return: append($return, max($value, 0));
+    @if meta.type-of($value) == number {
+      $return: list.append($return, max($value, 0));
     } @else {
-      $return: append($return, $value);
+      $return: list.append($return, $value);
     }
   }
   @return $return;

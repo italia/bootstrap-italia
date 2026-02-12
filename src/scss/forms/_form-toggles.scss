@@ -1,3 +1,4 @@
+@use "sass:color";
 @use "../base/config" as *;
 @use "../base/variables" as *;
 @use "../utilities/focus.scss" as *;
@@ -63,7 +64,7 @@
       }
 
       &:before {
-        background-color: transparentize($primary, 0.85);
+        background-color: color.scale($primary, $alpha: -85%);
       }
 
       &:after {

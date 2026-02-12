@@ -13,7 +13,6 @@
   padding: $form-select-padding-y $form-select-indicator-padding $form-select-padding-y $form-select-padding-x;
   -moz-padding-start: subtract($form-select-padding-x, 3px); // See https://github.com/twbs/bootstrap/issues/32636
   font-family: $form-select-font-family;
-  @include font-size($form-select-font-size);
   font-weight: $form-select-font-weight;
   line-height: $form-select-line-height;
   color: $form-select-color;
@@ -23,17 +22,22 @@
   background-position: $form-select-bg-position;
   background-size: $form-select-bg-size;
   border: $form-select-border-width solid $form-select-border-color;
+  appearance: none;
+  
+  @include font-size($form-select-font-size);
   @include border-radius($form-select-border-radius, 0);
   @include box-shadow($form-select-box-shadow);
   @include transition($form-select-transition);
-  appearance: none;
 
   &:focus {
     border-color: $form-select-focus-border-color;
     outline: 0;
+
     @if $enable-shadows {
       @include box-shadow($form-select-box-shadow, $form-select-focus-box-shadow);
-    } @else {
+    }
+
+    @else {
       // Avoid using mixin so we can pass custom focus shadow properly
       box-shadow: $form-select-focus-box-shadow;
     }
@@ -81,6 +85,7 @@
     opacity: 0;
     margin-top: 0;
   }
+
   100% {
     opacity: 1;
     margin-top: 0;
@@ -93,13 +98,16 @@
     opacity: 0;
     margin-top: 0;
   }
+
   100% {
     opacity: 1;
     margin-top: 0;
   }
 }
+
 .select-wrapper {
   position: relative;
+
   label {
     position: absolute;
     color: $select-label-color;
@@ -111,6 +119,7 @@
     top: 0;
     transform: translateY(-75%);
   }
+
   select {
     border: none;
     border-bottom: 1px solid $neutral-1-a7;
@@ -125,25 +134,29 @@
     color: $color-text-base;
     background-color: $white;
     appearance: auto;
+
     option {
       font-weight: normal;
     }
+
     &:disabled {
       background-color: $input-disabled-bg;
       opacity: 1;
+
       &:hover {
         cursor: not-allowed;
       }
     }
   }
 }
+
 .bootstrap-select:not([class*='col-']):not([class*='form-control']):not(.input-group-btn) {
   width: 100%;
 }
 
 .btn-light:not(:disabled):not(.disabled).active,
 .btn-light:not(:disabled):not(.disabled):active,
-.show > .btn-light.dropdown-toggle {
+.show>.btn-light.dropdown-toggle {
   background: transparent;
   color: inherit;
 }
@@ -153,7 +166,8 @@
     box-shadow: none;
   }
 
-  & > .dropdown-toggle.bs-placeholder {
+  &>.dropdown-toggle.bs-placeholder {
+
     &,
     &:active,
     &:focus,
@@ -179,7 +193,8 @@
 
     .bootstrap-select {
       background-color: $input-disabled-bg;
-      & > .dropdown-toggle.bs-placeholder {
+
+      &>.dropdown-toggle.bs-placeholder {
         color: $color-text-base;
         opacity: 1;
       }
@@ -194,9 +209,11 @@
 
   .dropdown,
   .btn-group {
+
     //menu fade in
     &.show {
       .dropdown-menu {
+
         //menu on bottom
         &[x-placement='bottom-start'] {
           animation: selectDropdownFadeIn forwards $dropdown-menu-animation-speed;
@@ -214,7 +231,7 @@
     display: none;
   }
 
-  > label {
+  >label {
     position: absolute;
     color: $select-label-color;
     font-size: $select-label-size;
@@ -303,6 +320,7 @@
 
   .dropdown {
     &.bootstrap-select {
+
       //search
       .bs-searchbox {
         padding: ($v-gap) $v-gap * 3;
@@ -345,8 +363,8 @@
         margin-top: 0;
       }
 
-      .form-check [type='checkbox'] + label,
-      .form-check [type='radio'] + label {
+      .form-check [type='checkbox']+label,
+      .form-check [type='radio']+label {
         margin-bottom: 0;
         font-weight: normal;
         font-size: $select-dd-text-size;
@@ -403,6 +421,7 @@
       &.show-tick {
         .filter-option {
           .filter-option-inner-inner {
+
             //color: rgba(255,255,255,0);
             .select-pill {
               font-size: $select-dd-pill-font-size;
@@ -429,8 +448,8 @@
             }
 
             // remove select style
-            .form-check [type='checkbox'] + label,
-            .form-check [type='radio'] + label {
+            .form-check [type='checkbox']+label,
+            .form-check [type='radio']+label {
               font-size: $select-dd-pill-font-size;
               padding: $v-gap * 0.5 $v-gap;
               border: 1px solid $select-label-color;
@@ -569,7 +588,7 @@ fieldset:disabled .bootstrap-select-wrapper {
     cursor: not-allowed;
   }
 
-  .bootstrap-select > .dropdown-toggle.bs-placeholder {
+  .bootstrap-select>.dropdown-toggle.bs-placeholder {
     color: $color-text-base;
   }
 
