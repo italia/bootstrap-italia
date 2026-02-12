@@ -43,14 +43,14 @@
   cursor: if($enable-button-pointers, pointer, null);
   user-select: none;
   border: var(--#{$prefix}btn-border-width) solid var(--#{$prefix}btn-border-color);
-  //btn-css-vars
-  --bs-btn-color: $primary;
-  --bs-btn-hover-color: $color-background-primary-hover;
-  --bs-btn-active-color: #003366; // TODO change with tokens when available
   @include border-radius(var(--#{$prefix}btn-border-radius));
   @include gradient-bg(var(--#{$prefix}btn-bg));
   @include box-shadow(var(--#{$prefix}btn-box-shadow));
   @include transition($btn-transition);
+  //btn-css-vars
+  --bs-btn-color: $primary;
+  --bs-btn-hover-color: $color-background-primary-hover;
+  --bs-btn-active-color: #003366; // TODO change with tokens when available
   //btn-css-vars-end
   padding: 12px 24px;
   font-size: $btn-font-size;
