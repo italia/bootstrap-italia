@@ -89,7 +89,6 @@ ul.row.it-card-list {
       container-type: inline-size;
 
       > .it-card {
-
         // Reset Media Queries
         @include media-breakpoint-up(sm) {
           flex: auto;
