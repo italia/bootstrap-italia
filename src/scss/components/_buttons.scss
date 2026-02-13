@@ -1,3 +1,15 @@
+@use 'sass:color';
+@use '../base/config' as *;
+@use '../base/variables' as *;
+@use '../base/functions' as *;
+@use '../base/mixins/border-radius' as *;
+@use '../base/mixins/box-shadow' as *;
+@use '../base/mixins/gradients' as *;
+@use '../base/mixins/transition' as *;
+@use '../base/mixins/breakpoints' as *;
+@use '../base/mixins/buttons' as *;
+@use '../base/vendor/rfs' as *;
+
 // Component: buttons
 //
 // Description: Component styles for buttons

@@ -1,3 +1,18 @@
+@use '../base/config' as *;
+@use '../base/variables' as *;
+
+.autocomplete__hint,
+.autocomplete__input {
+  appearance: none;
+  border: 2px solid #0b0c0c;
+  border-radius: 0; /* Safari 10 on iOS adds implicit border rounding. */
+  box-sizing: border-box;
+  margin-bottom: 0; /* BUG: Safari 10 on macOS seems to add an implicit margin. */
+  line-height: 1.25;
+  height: 2.5rem;
+  width: 100%;
+}
+
 .autocomplete__input {
   position: relative;
 }

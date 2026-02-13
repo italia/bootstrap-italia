@@ -1,3 +1,12 @@
+@use 'sass:meta';
+@use 'sass:math';
+@use 'sass:map';
+@use '../config' as *;
+@use '../variables' as *;
+@use '../functions' as *;
+@use '../maps' as *;
+@use 'breakpoints' as *;
+
 // Grid system
 //
 // Generate semantic grid columns with these mixins.
@@ -15,7 +24,7 @@
 
 @mixin make-col-ready() {
   // Add box sizing if only the grid is loaded
-  box-sizing: if(variable-exists(include-column-box-sizing) and $include-column-box-sizing, border-box, null);
+  box-sizing: if(meta.variable-exists(include-column-box-sizing) and $include-column-box-sizing, border-box, null);
   // Prevent columns from becoming too narrow when at smaller grid tiers by
   // always setting `width: 100%;`. This works because we set the width
   // later on to override this initial width.
@@ -30,7 +39,7 @@
 @mixin make-col($size: false, $columns: $grid-columns) {
   @if $size {
     flex: 0 0 auto;
-    width: percentage(divide($size, $columns));
+    width: math.percentage(divide($size, $columns));
   } @else {
     flex: 1 1 0;
     max-width: 100%;
@@ -44,7 +53,7 @@
 
 @mixin make-col-offset($size, $columns: $grid-columns) {
   $num: divide($size, $columns);
-  margin-left: if($num == 0, 0, percentage($num));
+  margin-left: if($num == 0, 0, math.percentage($num));
 }
 
 // Row columns
@@ -65,7 +74,7 @@
 // any value of `$grid-columns`.
 
 @mixin make-grid-columns($columns: $grid-columns, $gutter: $grid-gutter-width, $breakpoints: $grid-breakpoints) {
-  @each $breakpoint in map-keys($breakpoints) {
+  @each $breakpoint in map.keys($breakpoints) {
     $infix: breakpoint-infix($breakpoint, $breakpoints);
 
     @include media-breakpoint-up($breakpoint, $breakpoints) {
@@ -127,7 +136,7 @@
 }
 
 @mixin make-cssgrid($columns: $grid-columns, $breakpoints: $grid-breakpoints) {
-  @each $breakpoint in map-keys($breakpoints) {
+  @each $breakpoint in map.keys($breakpoints) {
     $infix: breakpoint-infix($breakpoint, $breakpoints);
 
     @include media-breakpoint-up($breakpoint, $breakpoints) {

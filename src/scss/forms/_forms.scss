@@ -1,3 +1,8 @@
+@use '../base/config' as *;
+@use '../base/variables' as *;
+@use '../base/mixins/breakpoints' as *;
+@use '../utilities/focus.scss' as *;
+
 // Form properties are :root scoped to allow for easy customization of form elements.
 :root {
   --#{$prefix}form-control-height: 2.5rem;

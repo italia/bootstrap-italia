@@ -56,8 +56,63 @@ La libreria è accessibile anche via CDN su [jsDelivr](https://www.jsdelivr.com/
 
 ### Con SASS
 
-Utilizzando SASS nella propria pipeline, si può ottimizzare Bootstrap Italia (e di conseguenza il bundle finale) importando solo i componenti di cui si ha bisogno. Le ottimizzazioni maggiori proverranno probabilmente dalla sezione Layout e dai componenti del file principale `bootstrap-italia.scss`, ad esempio
+Utilizzando SASS nella propria pipeline, puoi sfruttare le funzionalità del sistema di moduli per personalizzare variabili e ottimizzare il bundle finale.
 
+#### Metodo raccomandato: import completo
+
+Per utilizzare l'intera libreria, eventualmente personalizzando colori e variabili:
+```scss
+// Import completo degli stili
+@use 'bootstrap-italia/src/scss/bootstrap-italia.scss';
+
+// Oppure con personalizzazione variabili
+@use 'bootstrap-italia/src/scss/bootstrap-italia.scss' with (
+  $primary-h: 210,
+  $primary-s: 100,
+  $primary-b: 47
+);
+```
+
+{% capture callout %}
+**Personalizzare colori, font e altre variabili?**
+
+Per maggiori dettagli sulla personalizzazione delle variabili tramite `@use ... with` e sull'uso dei namespace (`as *`, `as bsi`, ecc.), consulta la [guida alla personalizzazione della libreria]({{ site.baseurl }}/docs/come-iniziare/personalizzazione-della-libreria/).
+{% endcapture %}{% include callout.html content=callout type="info" %}
+
+#### Ottimizzazione bundle: import selettivo
+Per importare solo i componenti necessari e ridurre le dimensioni del bundle finale:
+
+```scss
+// 1. Import base (obbligatorio)
+@use 'bootstrap-italia/src/scss/functions' as *;
+@use 'bootstrap-italia/src/scss/variables' as *;
+@use 'bootstrap-italia/src/scss/maps' as *;
+@use 'bootstrap-italia/src/scss/mixins' as *;
+
+// 2. Import moduli (esempi)
+@use 'bootstrap-italia/src/scss/base/root' as *;
+@use 'bootstrap-italia/src/scss/base/reboot' as *;
+@use 'bootstrap-italia/src/scss/components/buttons' as *;
+@use 'bootstrap-italia/src/scss/utilities/colors' as *;
+// ... altri moduli
+```
+
+{% capture callout %}
+**Nota importante sullo scope**
+
+Quando si importano i moduli selettivamente, è necessario usare `as *` per rendere disponibili variabili, funzioni e mixin nel contesto corrente. Senza, le variabili come `$primary` o le funzioni come `spacing()` non saranno disponibili.
+
+**Alternative:** Puoi usare un namespace custom (ad esempio, `as bsi`) per maggiore chiarezza, o omettere `as` per usare il namespace completo `bootstrap-italia.*`. Per dettagli, consulta la [guida alla personalizzazione]({{ site.baseurl }}/docs/come-iniziare/personalizzazione-della-libreria/#scelta-del-namespace).
+{% endcapture %}{% include callout.html content=callout type="warning" %}
+
+#### Metodo legacy (deprecato)
+
+##### Import completo:
+```scss
+@import 'bootstrap-italia/src/scss/bootstrap-italia.scss';
+```
+
+##### Import selettivo (ottimizzazione bundle):
 ```scss
 // funzioni e variabili colore
 @import 'bootstrap-italia/src/scss/functions';
@@ -71,6 +126,11 @@ Utilizzando SASS nella propria pipeline, si può ottimizzare Bootstrap Italia (e
 
 // ...
 ```
+
+{% capture callout %}
+**⚠️ Metodo deprecato**
+La sintassi `@import` è deprecata in Dart Sass e sarà rimossa nella versione 3.0. Si raccomanda di migrare a @use per evitare problemi futuri.
+{% endcapture %}{% include callout.html content=callout type="warning" %}
 
 ### Con il bundle CSS
 

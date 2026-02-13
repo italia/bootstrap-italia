@@ -1,3 +1,8 @@
+@use 'src/scss/base/config' as *;
+@use 'src/scss/base/variables' as *;
+@use 'src/scss/base/mixins/breakpoints' as *;
+@use 'colors' as *;
+
 .bd-navbar {
   min-height: 10rem;
   background-color: $primary;

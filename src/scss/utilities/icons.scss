@@ -1,3 +1,6 @@
+@use '../base/config' as *;
+@use '../base/variables' as *;
+
 // Icon Colors Map - TODO: Leave it here or move to _maps.scss?
 $icon-colors: (
   primary: var(--#{$prefix}icon-primary),

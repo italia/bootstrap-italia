@@ -1,3 +1,9 @@
+//mobile
+@use 'sass:math';
+@use '../base/config' as *;
+@use '../base/variables' as *;
+@use '../base/mixins/breakpoints' as *;
+
 // Component: header
 //
 // Description: Component styles for header
@@ -26,9 +32,7 @@
   --#{$prefix}header-nav-background: var(--#{$prefix}color-background-primary); // Controls the nav background for the header, using color tokens.
   --#{$prefix}header-nav-secondary-font-size: var(--#{$prefix}label-font-size); // Controls the nav secondary font size for the header, using font tokens.
   --#{$prefix}header-nav-text-color: var(--#{$prefix}color-link); // Controls the nav text color for the header, using color tokens.
-  --#{$prefix}header-search-button-background: var(
-    --#{$prefix}color-background-inverse
-  ); // Controls the search button background for the header, using color tokens.
+  --#{$prefix}header-search-button-background: var(--#{$prefix}color-background-inverse  ); // Controls the search button background for the header, using color tokens.
   --#{$prefix}header-search-button-color: var(--#{$prefix}icon-inverse); // Controls the search button color for the header, using icon tokens.
   --#{$prefix}header-search-button-size: 3rem; // Controls the search button size for the header.
   --#{$prefix}header-search-icon-color: var(--#{$prefix}icon-inverse); // Controls the search icon color for the header, using icon tokens.

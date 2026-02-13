@@ -1,146 +1,146 @@
-@import 'design-tokens-italia/dist/css/variables';
-
-@import 'base/mixins/banner';
-@include bsBanner('');
+// Banner
+@forward 'base/banner';
 
 // Bootstrap Italia version
-@import 'base/version';
+@forward 'base/version';
 // ------------------------------
 
 // Functions
-@import 'base/functions';
+@forward 'base/functions';
 // ------------------------------
 
 // Variables
-@import 'base/variables';
+@forward 'base/variables';
 // ------------------------------
 
 // Functions, maps and mixins
-@import 'base/mixins';
-@import 'base/mixins/focus';
-@import 'base/maps';
-@import 'base/utilities';
+@forward 'base/mixins';
+@forward 'base/maps';
+@forward 'base/utilities';
 // ------------------------------
 
 // Layout
-@import 'base/root';
-@import 'base/reboot';
-@import 'base/containers';
-@import 'base/transitions';
+@forward 'base/root';
+@forward 'base/reboot';
+@forward 'base/containers';
+@forward 'base/transitions';
 // ------------------------------
 
 // Helpers & utilities
-@import 'base/helpers';
-@import 'base/utilities/api';
+@forward 'base/helpers';
+@forward 'base/utilities/api';
 // ------------------------------
 
 // Class utilities
-@import 'utilities/focus';
-@import 'utilities/icons';
-@import 'utilities/colors';
-// ------------------------------
+@forward 'utilities/focus';
+@forward 'utilities/icons';
+@forward 'utilities/colors';
+// @forward 'utilities/text-colors';
 
 // Nav & Header
-@import 'components/nav';
-@import 'components/navbar';
-@import 'components/header';
-@import 'components/headerslim';
-// @import 'components/headerslimtheme';
-@import 'components/headercenter';
-// @import 'components/headercentertheme';
-// @import 'components/headernavbar';
-// @import 'components/headernavbartheme';
-// @import 'components/navigationtheme';
+@forward 'components/nav';
+@forward 'components/navbar';
+@forward 'components/headerslim';
+@forward 'components/headerslimtheme'; // Keep? It was already removed in 3.x before this merge
+@forward 'components/headercenter';
+@forward 'components/headercentertheme'; // Keep? It was already removed in 3.x before this merge
+@forward 'components/headernavbar'; // Keep? It was already removed in 3.x before this merge
+@forward 'components/headernavbartheme'; // Keep? It was already removed in 3.x before this merge
+@forward 'components/header';
+@forward 'components/navigationtheme'; // Keep? It was already removed in 3.x before this merge
 // ------------------------------
 
 // Components
-@import 'components/avatar';
-@import 'components/code';
-@import 'components/figcaption';
-@import 'components/grid';
-@import 'components/gridlist';
-@import 'components/images';
-@import 'components/linklist';
-@import 'components/list';
-@import 'components/list-group';
-@import 'components/dropdown';
-@import 'components/megamenu';
-@import 'components/tables';
-@import 'components/type';
-@import 'components/breadcrumb';
-@import 'components/modal';
-@import 'components/accordion';
-@import 'components/carousel';
-// @import 'components/calendar'; Temporarily disabled because not used across the library
-@import 'components/alert';
-@import 'components/button-group';
-@import 'components/buttons';
-@import 'components/font';
-@import 'components/tab';
-@import 'components/cookiebar';
-@import 'components/hero';
-@import 'components/forward';
-@import 'components/back-to-top';
-@import 'components/offcanvas'; // Keep?
-@import 'components/navigation';
-@import 'components/skiplinks';
-@import 'components/affix';
-@import 'components/sidebar';
-@import 'components/bottomnav';
-@import 'components/navscroll';
-// @import 'components/navscrolltheme';
-@import 'components/callout';
-@import 'components/toolbar';
-@import 'components/sections';
-@import 'components/notifications';
-@import 'components/thumbnav';
-@import 'components/steppers';
-@import 'components/card';
-@import 'components/card-old'; // Keep till next major? (.card is deprecated)
-@import 'components/imgresponsive';
-@import 'components/overlay-panel';
-@import 'components/progress-donuts';
-@import 'components/progress-bars';
-@import 'components/progress-spinners';
-@import 'components/popover';
-@import 'components/tooltip';
-@import 'components/videoplayer';
-@import 'components/chips';
-@import 'components/rating';
-@import 'components/dimmer';
-@import 'components/accept-overlay';
-@import 'components/timeline';
-@import 'components/anchor';
-@import 'components/map';
-@import 'components/point-list';
-@import 'components/rating-list';
-@import 'components/badge';
-@import 'components/sticky';
-@import 'components/print';
-@import 'components/footer';
-@import 'components/page-scroll';
-@import 'components/pagination';
-@import 'components/placeholders'; // Keep?
-@import 'components/toasts';
+@forward 'components/type';
+@forward 'components/grid';
+@forward 'components/tables';
+@forward 'components/breadcrumb';
+@forward 'components/modal';
+@forward 'components/accordion';
+@forward 'components/carousel';
+@forward 'components/calendar'; // Keep? It was already removed in 3.x before this merge
+@forward 'components/alert';
+@forward 'components/button-group';
+@forward 'components/buttons';
+@forward 'components/font';
+@forward 'components/dropdown';
+@forward 'components/pager';
+@forward 'components/tab';
+@forward 'components/cookiebar';
+@forward 'components/hero';
+@forward 'components/forward';
+@forward 'components/back-to-top';
+@forward 'components/list-group';
+@forward 'components/linklist';
+@forward 'components/offcanvas'; // Keep?
+@forward 'components/navigation';
+@forward 'components/skiplinks';
+@forward 'components/affix';
+@forward 'components/sidebar';
+@forward 'components/sidebarthemes';
+@forward 'components/megamenu';
+@forward 'components/bottomnav';
+@forward 'components/navscroll';
+@forward 'components/navscrolltheme'; // Keep? It was already removed in 3.x before this merge
+@forward 'components/callout';
+@forward 'components/toolbar';
+@forward 'components/sections';
+@forward 'components/notifications';
+@forward 'components/avatar';
+@forward 'components/thumbnav';
+@forward 'components/steppers';
+@forward 'components/card';
+@forward 'components/card-old'; // Keep till next major? (.card is deprecated)
+@forward 'components/imgresponsive';
+@forward 'components/overlay-panel';
+@forward 'components/progress-donuts';
+@forward 'components/progress-bars';
+@forward 'components/progress-spinners';
+@forward 'components/gridlist';
+@forward 'components/popover';
+@forward 'components/tooltip';
+@forward 'components/videoplayer';
+@forward 'components/list';
+@forward 'components/chips';
+@forward 'components/rating';
+@forward 'components/dimmer';
+@forward 'components/accept-overlay';
+@forward 'components/timeline';
+@forward 'components/anchor';
+@forward 'components/map';
+@forward 'components/point-list';
+@forward 'components/rating-list';
+@forward 'components/badge';
+@forward 'components/figcaption';
+@forward 'components/sticky';
+@forward 'components/print';
+@forward 'components/code';
+@forward 'components/images';
+@forward 'components/page-scroll';
+@forward 'components/pagination';
+@forward 'components/placeholders'; // Keep?
+@forward 'components/toasts';
+@forward 'components/footer';
 // ------------------------------
 
 // Form
-@import 'forms/forms';
-// @import 'forms/labels';
-@import 'forms/form-control';
-// @import 'forms/form-check';
-// @import 'forms/form-range';
-// @import 'forms/floating-labels';
-@import 'forms/input-group';
-// @import 'forms/validation';
-@import 'forms/form-input-file';
-@import 'forms/form-input-number';
-@import 'forms/form-input-upload';
-@import 'forms/form-toggles';
-@import 'forms/form-password';
-// @import 'forms/form-select';
-@import 'forms/form-transfer';
-@import 'forms/accessible-autocomplete';
-@import 'forms/autocomplete';
-@import 'forms/just-validate';
+@forward 'forms/forms';
+@forward 'forms/labels'; // Keep? It was already removed in 3.x before this merge
+@forward 'forms/form-text'; // Keep? It was already removed in 3.x before this merge
+@forward 'forms/form-control';
+@forward 'forms/form-check'; // Keep? It was already removed in 3.x before this merge
+@forward 'forms/form-range'; // Keep? It was already removed in 3.x before this merge
+@forward 'forms/floating-labels'; // Keep? It was already removed in 3.x before this merge
+@forward 'forms/input-group';
+@forward 'forms/validation'; // Keep? It was already removed in 3.x before this merge
+@forward 'forms/form-input-file';
+@forward 'forms/form-input-number';
+@forward 'forms/form-input-upload';
+@forward 'forms/form-toggles';
+@forward 'forms/form-password';
+@forward 'forms/form-select';
+@forward 'forms/form-transfer';
+@forward 'forms/accessible-autocomplete';
+@forward 'forms/autocomplete';
+@forward 'forms/just-validate';
 // ------------------------------

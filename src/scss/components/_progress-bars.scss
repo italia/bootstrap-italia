@@ -1,3 +1,12 @@
+@use '../base/config' as *;
+@use '../base/variables' as *;
+@use '../base/mixins/border-radius' as *;
+@use '../base/mixins/box-shadow' as *;
+@use '../base/mixins/gradients' as *;
+@use '../base/mixins/transition' as *;
+@use '../base/mixins/breakpoints' as *;
+@use '../base/vendor/rfs' as *;
+
 // Component: progress bars
 //
 // Description: Component styles for progress bars
@@ -22,6 +31,7 @@
     }
   }
 }
+
 // scss-docs-end progress-keyframes
 
 .progress-bar-striped {
@@ -48,9 +58,11 @@
   0% {
     left: -5%;
   }
+
   50% {
     width: 66%;
   }
+
   100% {
     left: 100%;
     width: 33%;
@@ -79,11 +91,14 @@
   @include box-shadow(var(--#{$prefix}progress-box-shadow));
   height: 4px;
   box-shadow: none;
+
   &.progress-color {
     background-color: $color-background-secondary-lighter; // UI Kit
   }
+
   &.progress-indeterminate {
     position: relative;
+
     .progress-bar {
       width: 0;
       animation: progressBarIndeterminate 1.4s cubic-bezier(0.77, 0, 0.175, 1) infinite forwards;
@@ -103,9 +118,9 @@
   color: var(--#{$prefix}progress-bar-color);
   text-align: center;
   white-space: nowrap;
+  background-color: $secondary; // UI Kit
   // background-color: var(--#{$prefix}progress-bar-bg);
   @include transition(var(--#{$prefix}progress-bar-transition));
-  background-color: $secondary; // UI Kit
 }
 
 //label
@@ -126,6 +141,7 @@
     left: 0;
     border-radius: 0 0 $btn-border-radius $btn-border-radius;
   }
+
   .progress-bar {
     height: 4px;
   }
