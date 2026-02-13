@@ -221,10 +221,9 @@
   }
 }
 
-// XXX TO DO : double check this comment is correct and working as expected
 // Pay attention: if you change $prefix in config.scss (default value "bsi-"), 
-// make sure that in JS you check for the same prefix when reading the custom 
-// property for the correct Popper's positioning. 
+// make sure that in dropdown.js you check for the same prefix when reading 
+// the custom property for the correct Popper's positioning. 
 
 @each $breakpoint in map-keys($grid-breakpoints) {
   @include media-breakpoint-up($breakpoint) {
