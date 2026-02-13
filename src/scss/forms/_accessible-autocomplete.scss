@@ -1,21 +1,9 @@
-.autocomplete__hint,
-.autocomplete__input {
-  appearance: none;
-  border: 2px solid #0b0c0c;
-  border-radius: 0; /* Safari 10 on iOS adds implicit border rounding. */
-  box-sizing: border-box;
-  margin-bottom: 0; /* BUG: Safari 10 on macOS seems to add an implicit margin. */
-  line-height: 1.25;
-  height: 2.5rem;
-  width: 100%;
-}
-
 .autocomplete__input {
   position: relative;
 }
 
 .autocomplete__hint {
-  color: #505a5f;
+  // color: #505a5f;
   position: absolute;
 }
 
@@ -23,11 +11,11 @@
   padding: 5px;
 }
 
-.autocomplete__input--focused {
-  outline: 3px solid #fd0;
-  outline-offset: 0;
-  box-shadow: inset 0 0 0 2px;
-}
+// .autocomplete__input--focused {
+//   outline: 3px solid #fd0;
+//   outline-offset: 0;
+//   box-shadow: inset 0 0 0 2px;
+// }
 
 .autocomplete__input--show-all-values {
   padding: 5px 35px 5px 5px; /* Space for arrow. Other padding should match .autocomplete__input--default. */
@@ -45,7 +33,7 @@
 }
 
 .autocomplete__menu {
-  background-color: #ffffff;
+  background-color: var(--#{$prefix}color-background-inverse);
   border: 2px solid #0b0c0c;
   border-top: 0;
   color: #0b0c0c;
@@ -54,7 +42,7 @@
   overflow-x: hidden;
   padding: 0;
   width: 100%;
-  width: calc(100% - 4px);
+  // width: calc(100% - 4px);
 }
 
 .autocomplete__menu--visible {
@@ -66,7 +54,7 @@
 }
 
 .autocomplete__menu--overlay {
-  box-shadow: rgba(0, 0, 0, 0.256863) 0px 2px 6px;
+  box-shadow: rgba(0, 0, 0, 0.256863) 0 2px 6px;
   left: 0;
   position: absolute;
   top: 100%;
@@ -144,25 +132,35 @@
 
 .autocomplete__wrapper {
   position: relative;
+
   .autocomplete__menu {
-    border: $autocomplete-border;
+    border: 1px solid var(--#{$prefix}color-border-subtle);
     border-top: none;
     width: 100%;
     position: absolute;
     top: 100%;
     z-index: 10;
-    box-shadow: $autocomplete-box-shadow;
+    box-shadow: var(--#{$prefix}elevation-low);
+
     .autocomplete__hint,
     .autocomplete__option {
-      padding: 12px 24px;
-      background-color: #fff;
+      padding: var(--#{$prefix}spacing-xs) var(--#{$prefix}spacing-m);
+      background-color: var(--#{$prefix}color-background-inverse);
       border: none;
+      font-size: 0.875rem;
+      font-weight: var(--#{$prefix}font-weight-solid);
+
       &:hover,
       &:focus {
-        color: $primary;
+        color: var(--#{$prefix}color-text-primary);
       }
+
+      &:hover {
+        background-color: var(--#{$prefix}color-background-primary-lighter);
+      }
+
       &:focus {
-        border: 2px solid $focus-outline-color;
+        border: 2px solid var(--#{$prefix}color-outline-focus);
       }
     }
   }
