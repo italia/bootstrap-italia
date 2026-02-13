@@ -54,7 +54,7 @@ Utilizzando SASS nella propria pipeline, puoi sfruttare le funzionalità del sis
 
 Per utilizzare l'intera libreria, eventualmente personalizzando colori e variabili:
 ```scss
-// Import completo della libreria
+// Import completo degli stili
 @use 'bootstrap-italia/src/scss/bootstrap-italia.scss';
 
 // Oppure con personalizzazione variabili
@@ -81,30 +81,30 @@ Per importare solo i componenti necessari e ridurre le dimensioni del bundle fin
 @use 'bootstrap-italia/src/scss/maps' as *;
 @use 'bootstrap-italia/src/scss/mixins' as *;
 
-// 2. Import componenti necessari (esempi)
+// 2. Import moduli (esempi)
 @use 'bootstrap-italia/src/scss/base/root' as *;
 @use 'bootstrap-italia/src/scss/base/reboot' as *;
 @use 'bootstrap-italia/src/scss/components/buttons' as *;
 @use 'bootstrap-italia/src/scss/utilities/colors' as *;
-// ... altri componenti
+// ... altri moduli
 ```
 
 {% capture callout %}
 **Nota importante sullo scope**
 
-Quando si importano moduli selettivamente, per come sono organizzati i file sass di Bootstrap Italia, sarà necessario usare `as *` per rendere disponibili variabili, funzioni e mixin nel contesto corrente. Senza `as *`, le variabili come `$primary` o le funzioni come `spacing()` non saranno disponibili.
+Quando si importano i moduli selettivamente, è necessario usare `as *` per rendere disponibili variabili, funzioni e mixin nel contesto corrente. Senza, le variabili come `$primary` o le funzioni come `spacing()` non saranno disponibili.
 
-**Alternative:** Puoi usare un namespace custom (`as bsi`) per maggiore chiarezza, o omettere `as` per usare il namespace completo `bootstrap-italia.*`. Per dettagli, consulta la [guida alla personalizzazione]({{ site.baseurl }}/docs/come-iniziare/personalizzazione-della-libreria/#scelta-del-namespace).
+**Alternative:** Puoi usare un namespace custom (ad esempio, `as bsi`) per maggiore chiarezza, o omettere `as` per usare il namespace completo `bootstrap-italia.*`. Per dettagli, consulta la [guida alla personalizzazione]({{ site.baseurl }}/docs/come-iniziare/personalizzazione-della-libreria/#scelta-del-namespace).
 {% endcapture %}{% include callout.html content=callout type="warning" %}
 
 #### Metodo legacy (deprecato)
 
-Import completo:
+##### Import completo:
 ```scss
 @import 'bootstrap-italia/src/scss/bootstrap-italia.scss';
 ```
 
-Import selettivo (ottimizzazione bundle):
+##### Import selettivo (ottimizzazione bundle):
 ```scss
 // funzioni e variabili colore
 @import 'bootstrap-italia/src/scss/functions';

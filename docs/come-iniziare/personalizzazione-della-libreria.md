@@ -35,20 +35,20 @@ Sono supportati due metodi di personalizzazione:
 Consigliamo di utilizzare il metodo raccomandato per nuovi progetti.
 {% endcapture %}{% include callout.html content=callout type="warning" %}
 
-### Sovrascrivere le variabili colore
+### Come iniziare
 
 1. Installare **Bootstrap Italia** da NPM o da sorgente
 2. Installare **sass** (https://www.npmjs.com/package/sass)
 3. Creare all'interno della cartella **scss** di progetto un file di tipo **bootstrap-italia-custom.scss**
-4. Impostare le variabili di default da modificare con dei valori **personalizzati** (la maggior parte delle variabili usate da Bootstrap Italia è visibile [qui](https://github.com/italia/bootstrap-italia/blob/main/src/scss/))
+4. Impostare le variabili di default da modificare con dei valori **personalizzati** (la maggior parte delle variabili usate da Bootstrap Italia è disponibile qui [qui](https://github.com/italia/bootstrap-italia/blob/main/src/scss/))
 5. Importare la libreria **bootstrap-italia.scss** da **node_modules** o da sorgente alla fine del file
 
-### Metodo raccomandato: @use con configurazione inline
+### Personalizzare variabili: metodo raccomandato con @use
 
 ```scss
 // file: bootstrap-italia-custom.scss
 
-// Importa la libreria CON configurazione delle variabili
+// Usa Bootstrap Italia CON configurazione delle variabili
 @use '../../node_modules/bootstrap-italia/src/scss/bootstrap-italia.scss' with (
   // Override colore primary (colore #FF3333 https://rgb.to/ff3333)
   $primary-h: 0,
@@ -61,17 +61,6 @@ Consigliamo di utilizzare il metodo raccomandato per nuovi progetti.
   $font-family-monospace: ('Custom Font', 'Courier New', Courier, monospace)
 ) as *;
 ```
-
-{% capture callout %}
-**Perché usare `@use ... with`?**
-
-- ✅ Zero deprecation warnings
-- ✅ Compatibile con Dart Sass 3.0
-- ✅ Scope dei moduli isolato e sicuro
-- ✅ Sintassi moderna raccomandata da Sass
-
-**Nota importante:** Con `@use`, le variabili devono essere configurate nella clausola `with (...)` e non possono essere definite prima dell'import come con `@import`.
-{% endcapture %}{% include callout.html content=callout type="success" %}
 
 ### Scelta del namespace
 
@@ -132,10 +121,10 @@ Non specificando un namespace:
 - **Progetti medi/grandi con Sass custom:** `as bsi` (chiarezza senza verbosità)  
 - **Librerie condivise:** namespace default (massima sicurezza)
 
-**Nota:** Se usi solo le classi CSS di Bootstrap Italia (es: `.btn-primary`) senza scrivere codice Sass custom, puoi omettere completamente `as` - le classi funzioneranno comunque.
+**Nota:** Ricorda, se usi solo le classi CSS di Bootstrap Italia (es: `.btn-primary`) senza scrivere codice Sass custom, puoi omettere completamente `as` - le classi funzionano comunque.
 {% endcapture %}{% include callout.html content=callout type="success" %}
 
-### Metodo legacy: @import (deprecato)
+### Personalizzare variabili: metodo deprecato con @import
 
 ```scss
 // file: bootstrap-italia-custom.scss
@@ -149,7 +138,7 @@ $font-family-serif: 'Custom Font', Georgia, serif;
 $font-family-sans-serif: 'Custom Font', Arial, Helvetica, sans-serif;
 $font-family-monospace: 'Custom Font', 'Courier New', Courier, monospace;
 
-// Importa la libreria
+// Importa Bootstrap Italia
 @import '../../node_modules/bootstrap-italia/src/scss/bootstrap-italia.scss';
 ```
 
@@ -159,6 +148,8 @@ $font-family-monospace: 'Custom Font', 'Courier New', Courier, monospace;
 La sintassi `@import` è deprecata in Dart Sass e sarà rimossa nella versione 3.0. Questo metodo funziona ancora ma genera warning di deprecazione durante la compilazione.
 
 **Si raccomanda di migrare** al metodo `@use ... with` per evitare problemi futuri.
+
+Per approfondire puoi esplorare [la scheda breaking change dedicata a @import su sass-lang.com](https://sass-lang.com/documentation/breaking-changes/import/). 
 {% endcapture %}{% include callout.html content=callout type="warning" %}
 
 ### Utilizzo in applicazioni
