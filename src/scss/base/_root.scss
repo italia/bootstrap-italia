@@ -6,9 +6,9 @@
 @use 'mixins/breakpoints' as *;
 @use 'vendor/rfs' as *;
 
-// Design Tokens Italia tokens - Design Tokens Italia is a collection of design tokens 
-// that can be used in any project. It includes a wide range of tokens for colors, 
-// typography, spacing, and more. By referencing these tokens in --bsi custom properties, 
+// Design Tokens Italia tokens - Design Tokens Italia is a collection of design tokens
+// that can be used in any project. It includes a wide range of tokens for colors,
+// typography, spacing, and more. By referencing these tokens in --bsi custom properties,
 // we can ensure that our custom properties are always in sync with the latest design tokens.
 @use 'design-tokens-italia/dist/scss/_variables.scss' as tokens;
 
@@ -39,7 +39,7 @@
   // Fonts
 
   // Note: Use `inspect` for lists so that quoted items keep the quotes.
-  // See https://github.com/sass/sass/issues/2383#issuecomment-336349172 
+  // See https://github.com/sass/sass/issues/2383#issuecomment-336349172
   // XXX TO DO double check if these are still needed with the new tokens structure
   // --#{$prefix}font-sans-serif: #{meta.inspect($font-family-sans-serif)};
   // --#{$prefix}font-monospace: #{meta.inspect($font-family-monospace)};

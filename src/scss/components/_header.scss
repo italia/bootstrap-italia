@@ -31,12 +31,16 @@
   --#{$prefix}header-nav-background: var(--#{$prefix}color-background-primary); // Controls the nav background for the header, using color tokens.
   --#{$prefix}header-nav-secondary-font-size: var(--#{$prefix}label-font-size); // Controls the nav secondary font size for the header, using font tokens.
   --#{$prefix}header-nav-text-color: var(--#{$prefix}color-link); // Controls the nav text color for the header, using color tokens.
-  --#{$prefix}header-search-button-background: var(--#{$prefix}color-background-inverse  ); // Controls the search button background for the header, using color tokens.
+  --#{$prefix}header-search-button-background: var(
+    --#{$prefix}color-background-inverse
+  ); // Controls the search button background for the header, using color tokens.
   --#{$prefix}header-search-button-color: var(--#{$prefix}icon-inverse); // Controls the search button color for the header, using icon tokens.
   --#{$prefix}header-search-button-size: 3rem; // Controls the search button size for the header.
   --#{$prefix}header-search-icon-color: var(--#{$prefix}icon-inverse); // Controls the search icon color for the header, using icon tokens.
   --#{$prefix}header-search-icon-size: 1.5rem; // Controls the search icon size for the header.
-  --#{$prefix}header-slim-background: var(--#{$prefix}color-background-primary-muted); // Controls the slim background for the header. // TODO: use variable when ready
+  --#{$prefix}header-slim-background: var(
+    --#{$prefix}color-background-primary-muted
+  ); // Controls the slim background for the header. // TODO: use variable when ready
   --#{$prefix}header-slim-border-color: hsla(0, 0%, 100%, 0.2); // Controls the slim border color for the header.
   --#{$prefix}header-slim-font-size: var(--#{$prefix}label-font-size-s); // Controls the slim font size for the header, using font tokens.
   --#{$prefix}header-slim-height: 3rem; // Controls the slim height for the header.
