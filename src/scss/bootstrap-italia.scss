@@ -41,13 +41,13 @@
 @forward 'components/nav';
 @forward 'components/navbar';
 @forward 'components/headerslim';
-@forward 'components/headerslimtheme'; // Keep? It was already removed in 3.x before this merge
+// @forward 'components/headerslimtheme'; // Keep? It was already removed in 3.x before this merge
 @forward 'components/headercenter';
-@forward 'components/headercentertheme'; // Keep? It was already removed in 3.x before this merge
-@forward 'components/headernavbar'; // Keep? It was already removed in 3.x before this merge
-@forward 'components/headernavbartheme'; // Keep? It was already removed in 3.x before this merge
+// @forward 'components/headercentertheme'; // Keep? It was already removed in 3.x before this merge
+// @forward 'components/headernavbar'; // Keep? It was already removed in 3.x before this merge
+// @forward 'components/headernavbartheme'; // Keep? It was already removed in 3.x before this merge
 @forward 'components/header';
-@forward 'components/navigationtheme'; // Keep? It was already removed in 3.x before this merge
+// @forward 'components/navigationtheme'; // Keep? It was already removed in 3.x before this merge
 // ------------------------------
 
 // Components
@@ -58,13 +58,13 @@
 @forward 'components/modal';
 @forward 'components/accordion';
 @forward 'components/carousel';
-@forward 'components/calendar'; // Keep? It was already removed in 3.x before this merge
+// @forward 'components/calendar'; // Keep? It was already removed in 3.x before this merge
 @forward 'components/alert';
 @forward 'components/button-group';
 @forward 'components/buttons';
 @forward 'components/font';
 @forward 'components/dropdown';
-@forward 'components/pager';
+// @forward 'components/pager'; // Removed in 3.x before this merge
 @forward 'components/tab';
 @forward 'components/cookiebar';
 @forward 'components/hero';
@@ -81,7 +81,7 @@
 @forward 'components/megamenu';
 @forward 'components/bottomnav';
 @forward 'components/navscroll';
-@forward 'components/navscrolltheme'; // Keep? It was already removed in 3.x before this merge
+// @forward 'components/navscrolltheme'; // Keep? It was already removed in 3.x before this merge
 @forward 'components/callout';
 @forward 'components/toolbar';
 @forward 'components/sections';
@@ -90,7 +90,7 @@
 @forward 'components/thumbnav';
 @forward 'components/steppers';
 @forward 'components/card';
-@forward 'components/card-old'; // Keep till next major? (.card is deprecated)
+// @forward 'components/card-old'; // Keep till next major? (.card is deprecated)
 @forward 'components/imgresponsive';
 @forward 'components/overlay-panel';
 @forward 'components/progress-donuts';
@@ -125,14 +125,14 @@
 
 // Form
 @forward 'forms/forms';
-@forward 'forms/labels'; // Keep? It was already removed in 3.x before this merge
-@forward 'forms/form-text'; // Keep? It was already removed in 3.x before this merge
+// @forward 'forms/labels'; // Keep? It was already removed in 3.x before this merge
+// @forward 'forms/form-text'; // Keep? It was already removed in 3.x before this merge
 @forward 'forms/form-control';
-@forward 'forms/form-check'; // Keep? It was already removed in 3.x before this merge
-@forward 'forms/form-range'; // Keep? It was already removed in 3.x before this merge
-@forward 'forms/floating-labels'; // Keep? It was already removed in 3.x before this merge
+// @forward 'forms/form-check'; // Keep? It was already removed in 3.x before this merge
+// @forward 'forms/form-range'; // Keep? It was already removed in 3.x before this merge
+// @forward 'forms/floating-labels'; // Keep? It was already removed in 3.x before this merge
 @forward 'forms/input-group';
-@forward 'forms/validation'; // Keep? It was already removed in 3.x before this merge
+// @forward 'forms/validation'; // Keep? It was already removed in 3.x before this merge
 @forward 'forms/form-input-file';
 @forward 'forms/form-input-number';
 @forward 'forms/form-input-upload';
