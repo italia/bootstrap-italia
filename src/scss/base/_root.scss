@@ -3,6 +3,7 @@
 @use 'variables' as *;
 @use 'functions' as *;
 @use 'maps' as *;
+@use 'mixins/breakpoints' as *;
 @use 'vendor/rfs' as *;
 
 // Design Tokens Italia tokens - Design Tokens Italia is a collection of design tokens 
@@ -71,246 +72,246 @@
   // ----------------------------------------------------------- //
 
   // Theme colors
-  --#{$prefix}theme-primary: #{$it-theme-italia-base}; // Theme primary color
-  --#{$prefix}theme-primary-light: #{$it-theme-italia-light};
-  --#{$prefix}theme-primary-lighter: #{$it-theme-italia-lighter};
-  --#{$prefix}theme-primary-subtle: #{$it-theme-italia-subtle};
-  --#{$prefix}theme-primary-muted: #{$it-theme-italia-muted};
-  --#{$prefix}theme-primary-deep: #{$it-theme-italia-deep};
+  --#{$prefix}theme-primary: #{tokens.$it-theme-italia-base}; // Theme primary color
+  --#{$prefix}theme-primary-light: #{tokens.$it-theme-italia-light};
+  --#{$prefix}theme-primary-lighter: #{tokens.$it-theme-italia-lighter};
+  --#{$prefix}theme-primary-subtle: #{tokens.$it-theme-italia-subtle};
+  --#{$prefix}theme-primary-muted: #{tokens.$it-theme-italia-muted};
+  --#{$prefix}theme-primary-deep: #{tokens.$it-theme-italia-deep};
 
   // Spacing
-  --#{$prefix}spacing-3xl: #{$it-spacing-3xl}; // equal to 6rem (96px)
-  --#{$prefix}spacing-xxl: #{$it-spacing-xxl}; // equal to 3rem (48px)
-  --#{$prefix}spacing-xl: #{$it-spacing-xl}; // equal to 2.5rem (40px)
-  --#{$prefix}spacing-l: #{$it-spacing-l}; // equal to 2rem (32px)
-  --#{$prefix}spacing-m: #{$it-spacing-m}; // equal to 1.5rem (24px)
-  --#{$prefix}spacing-s: #{$it-spacing-s}; // equal to 1rem (16px)
-  --#{$prefix}spacing-xs: #{$it-spacing-xs}; // equal to 0.75rem (12px)
-  --#{$prefix}spacing-xxs: #{$it-spacing-xxs}; // equal to 0.5rem (8px)
-  --#{$prefix}spacing-3xs: #{$it-spacing-3xs}; // equal to 0.25rem (4px)
-  --#{$prefix}heading-spacing: #{$it-spacing-s};
-  --#{$prefix}paragraph-spacing: #{$it-spacing-m};
+  --#{$prefix}spacing-3xl: #{tokens.$it-spacing-3xl}; // equal to 6rem (96px)
+  --#{$prefix}spacing-xxl: #{tokens.$it-spacing-xxl}; // equal to 3rem (48px)
+  --#{$prefix}spacing-xl: #{tokens.$it-spacing-xl}; // equal to 2.5rem (40px)
+  --#{$prefix}spacing-l: #{tokens.$it-spacing-l}; // equal to 2rem (32px)
+  --#{$prefix}spacing-m: #{tokens.$it-spacing-m}; // equal to 1.5rem (24px)
+  --#{$prefix}spacing-s: #{tokens.$it-spacing-s}; // equal to 1rem (16px)
+  --#{$prefix}spacing-xs: #{tokens.$it-spacing-xs}; // equal to 0.75rem (12px)
+  --#{$prefix}spacing-xxs: #{tokens.$it-spacing-xxs}; // equal to 0.5rem (8px)
+  --#{$prefix}spacing-3xs: #{tokens.$it-spacing-3xs}; // equal to 0.25rem (4px)
+  --#{$prefix}heading-spacing: #{tokens.$it-spacing-s};
+  --#{$prefix}paragraph-spacing: #{tokens.$it-spacing-m};
 
   // Typography
-  --#{$prefix}font-mono: #{$it-font-mono};
-  --#{$prefix}font-serif: #{$it-font-serif};
-  --#{$prefix}font-sans: 'Titillium Web', 'Titillium Sans Pro', #{$it-font-sans};
-  --#{$prefix}font-weight-strong: #{$it-font-weight-bold};
-  --#{$prefix}font-weight-solid: #{$it-font-weight-semibold};
-  --#{$prefix}font-weight-base: #{$it-font-weight-regular};
-  --#{$prefix}font-weight-thin: #{$it-font-weight-light};
-  --#{$prefix}font-size-11: #{$it-font-size-11};
-  --#{$prefix}font-size-10: #{$it-font-size-10};
-  --#{$prefix}font-size-9: #{$it-font-size-9};
-  --#{$prefix}font-size-8: #{$it-font-size-8};
-  --#{$prefix}font-size-7: #{$it-font-size-7};
-  --#{$prefix}font-size-6: #{$it-font-size-6};
-  --#{$prefix}font-size-5: #{$it-font-size-5};
-  --#{$prefix}font-size-4: #{$it-font-size-4};
-  --#{$prefix}font-size-3: #{$it-font-size-3};
-  --#{$prefix}font-size-2: #{$it-font-size-2};
-  --#{$prefix}font-size-1: #{$it-font-size-1};
-  --#{$prefix}font-leading-5: #{$it-font-leading-5};
-  --#{$prefix}font-leading-4: #{$it-font-leading-4};
-  --#{$prefix}font-leading-3: #{$it-font-leading-3};
-  --#{$prefix}font-leading-2: #{$it-font-leading-2};
-  --#{$prefix}font-leading-1: #{$it-font-leading-1};
-  --#{$prefix}font-tracking-normal: #{$it-font-tracking-normal};
-  --#{$prefix}font-tracking-tight: #{$it-font-tracking-tight};
-  --#{$prefix}font-tracking-narrow: #{$it-font-tracking-narrow};
-  --#{$prefix}font-tracking-short: #{$it-font-tracking-short};
-  --#{$prefix}display-font-size: #{$it-font-size-11};
-  --#{$prefix}heading-6-font-size: #{$it-heading-6-font-size};
-  --#{$prefix}heading-5-font-size: #{$it-heading-5-font-size};
-  --#{$prefix}heading-4-font-size: #{$it-heading-4-font-size};
-  --#{$prefix}heading-3-font-size: #{$it-heading-3-font-size};
-  --#{$prefix}heading-2-font-size: #{$it-heading-2-font-size};
-  --#{$prefix}heading-1-font-size: #{$it-heading-1-font-size};
-  --#{$prefix}heading-font-weight: #{$it-heading-font-weight};
-  --#{$prefix}heading-font-weight-weak: #{$it-heading-font-weight-weak};
-  --#{$prefix}heading-leading: #{$it-heading-leading};
-  --#{$prefix}body-font-size: #{$it-body-font-size};
-  --#{$prefix}body-leading: #{$it-body-leading};
-  --#{$prefix}body-font-weight: #{$it-body-font-weight};
-  --#{$prefix}lead-font-size: #{$it-lead-font-size};
-  --#{$prefix}lead-leading: #{$it-lead-leading};
-  --#{$prefix}lead-font-weight: #{$it-lead-font-weight};
-  --#{$prefix}caption-font-size: #{$it-caption-font-size};
-  --#{$prefix}caption-leading: #{$it-caption-leading};
-  --#{$prefix}caption-font-weight-regular: #{$it-caption-font-weight-regular};
-  --#{$prefix}caption-font-weight-semibold: #{$it-caption-font-weight-semibold};
-  --#{$prefix}label-font-size: #{$it-label-font-size};
-  --#{$prefix}label-font-size-s: #{$it-label-font-size-s};
-  --#{$prefix}label-font-size-xs: #{$it-label-font-size-xs};
-  --#{$prefix}label-font-size-l: #{$it-label-font-size-l};
-  --#{$prefix}label-leading: #{$it-label-leading};
-
-  // Typography responsive properties
-  @include media-breakpoint-up(sm) {
-    --#{$prefix}heading-1-font-size: #{$it-heading-1-font-size-l};
-    --#{$prefix}heading-2-font-size: #{$it-heading-2-font-size-l};
-    --#{$prefix}heading-3-font-size: #{$it-heading-3-font-size-l};
-    --#{$prefix}heading-4-font-size: #{$it-heading-4-font-size-l};
-    --#{$prefix}heading-5-font-size: #{$it-heading-5-font-size-l};
-    --#{$prefix}heading-6-font-size: #{$it-heading-6-font-size-l};
-    --#{$prefix}lead-font-size: #{$it-lead-font-size-l};
-    --#{$prefix}body-font-size: #{$it-body-font-size-l};
-  }
+  --#{$prefix}font-mono: #{tokens.$it-font-mono};
+  --#{$prefix}font-serif: #{tokens.$it-font-serif};
+  --#{$prefix}font-sans: 'Titillium Web', 'Titillium Sans Pro', #{tokens.$it-font-sans};
+  --#{$prefix}font-weight-strong: #{tokens.$it-font-weight-bold};
+  --#{$prefix}font-weight-solid: #{tokens.$it-font-weight-semibold};
+  --#{$prefix}font-weight-base: #{tokens.$it-font-weight-regular};
+  --#{$prefix}font-weight-thin: #{tokens.$it-font-weight-light};
+  --#{$prefix}font-size-11: #{tokens.$it-font-size-11};
+  --#{$prefix}font-size-10: #{tokens.$it-font-size-10};
+  --#{$prefix}font-size-9: #{tokens.$it-font-size-9};
+  --#{$prefix}font-size-8: #{tokens.$it-font-size-8};
+  --#{$prefix}font-size-7: #{tokens.$it-font-size-7};
+  --#{$prefix}font-size-6: #{tokens.$it-font-size-6};
+  --#{$prefix}font-size-5: #{tokens.$it-font-size-5};
+  --#{$prefix}font-size-4: #{tokens.$it-font-size-4};
+  --#{$prefix}font-size-3: #{tokens.$it-font-size-3};
+  --#{$prefix}font-size-2: #{tokens.$it-font-size-2};
+  --#{$prefix}font-size-1: #{tokens.$it-font-size-1};
+  --#{$prefix}font-leading-5: #{tokens.$it-font-leading-5};
+  --#{$prefix}font-leading-4: #{tokens.$it-font-leading-4};
+  --#{$prefix}font-leading-3: #{tokens.$it-font-leading-3};
+  --#{$prefix}font-leading-2: #{tokens.$it-font-leading-2};
+  --#{$prefix}font-leading-1: #{tokens.$it-font-leading-1};
+  --#{$prefix}font-tracking-normal: #{tokens.$it-font-tracking-normal};
+  --#{$prefix}font-tracking-tight: #{tokens.$it-font-tracking-tight};
+  --#{$prefix}font-tracking-narrow: #{tokens.$it-font-tracking-narrow};
+  --#{$prefix}font-tracking-short: #{tokens.$it-font-tracking-short};
+  --#{$prefix}display-font-size: #{tokens.$it-font-size-11};
+  --#{$prefix}heading-6-font-size: #{tokens.$it-heading-6-font-size};
+  --#{$prefix}heading-5-font-size: #{tokens.$it-heading-5-font-size};
+  --#{$prefix}heading-4-font-size: #{tokens.$it-heading-4-font-size};
+  --#{$prefix}heading-3-font-size: #{tokens.$it-heading-3-font-size};
+  --#{$prefix}heading-2-font-size: #{tokens.$it-heading-2-font-size};
+  --#{$prefix}heading-1-font-size: #{tokens.$it-heading-1-font-size};
+  --#{$prefix}heading-font-weight: #{tokens.$it-heading-font-weight};
+  --#{$prefix}heading-font-weight-weak: #{tokens.$it-heading-font-weight-weak};
+  --#{$prefix}heading-leading: #{tokens.$it-heading-leading};
+  --#{$prefix}body-font-size: #{tokens.$it-body-font-size};
+  --#{$prefix}body-leading: #{tokens.$it-body-leading};
+  --#{$prefix}body-font-weight: #{tokens.$it-body-font-weight};
+  --#{$prefix}lead-font-size: #{tokens.$it-lead-font-size};
+  --#{$prefix}lead-leading: #{tokens.$it-lead-leading};
+  --#{$prefix}lead-font-weight: #{tokens.$it-lead-font-weight};
+  --#{$prefix}caption-font-size: #{tokens.$it-caption-font-size};
+  --#{$prefix}caption-leading: #{tokens.$it-caption-leading};
+  --#{$prefix}caption-font-weight-regular: #{tokens.$it-caption-font-weight-regular};
+  --#{$prefix}caption-font-weight-semibold: #{tokens.$it-caption-font-weight-semibold};
+  --#{$prefix}label-font-size: #{tokens.$it-label-font-size};
+  --#{$prefix}label-font-size-s: #{tokens.$it-label-font-size-s};
+  --#{$prefix}label-font-size-xs: #{tokens.$it-label-font-size-xs};
+  --#{$prefix}label-font-size-l: #{tokens.$it-label-font-size-l};
+  --#{$prefix}label-leading: #{tokens.$it-label-leading};
 
   // Icons
-  --#{$prefix}icon-size-xl: #{$it-icon-size-xl};
-  --#{$prefix}icon-size-l: #{$it-icon-size-l};
-  --#{$prefix}icon-size-m: #{$it-icon-size-m};
-  --#{$prefix}icon-size-s: #{$it-icon-size-s};
-  --#{$prefix}icon-size-xs: #{$it-icon-size-xs};
+  --#{$prefix}icon-size-xl: #{tokens.$it-icon-size-xl};
+  --#{$prefix}icon-size-l: #{tokens.$it-icon-size-l};
+  --#{$prefix}icon-size-m: #{tokens.$it-icon-size-m};
+  --#{$prefix}icon-size-s: #{tokens.$it-icon-size-s};
+  --#{$prefix}icon-size-xs: #{tokens.$it-icon-size-xs};
 
   // Border
-  --#{$prefix}border-broad: #{$it-border-broad};
-  --#{$prefix}border-thick: #{$it-border-thick};
-  --#{$prefix}border-double: #{$it-border-double};
-  --#{$prefix}border-base: #{$it-border-base};
-  --#{$prefix}radius-rounded: #{$it-radius-rounded};
-  --#{$prefix}radius-circle: #{$it-radius-circle};
-  --#{$prefix}radius-smooth: #{$it-radius-smooth};
+  --#{$prefix}border-broad: #{tokens.$it-border-broad};
+  --#{$prefix}border-thick: #{tokens.$it-border-thick};
+  --#{$prefix}border-double: #{tokens.$it-border-double};
+  --#{$prefix}border-base: #{tokens.$it-border-base};
+  --#{$prefix}radius-rounded: #{tokens.$it-radius-rounded};
+  --#{$prefix}radius-circle: #{tokens.$it-radius-circle};
+  --#{$prefix}radius-smooth: #{tokens.$it-radius-smooth};
 
   // Sizing
-  --#{$prefix}sizing-full: #{$it-sizing-full};
-  --#{$prefix}sizing-two-thirds: #{$it-sizing-two-thirds};
-  --#{$prefix}sizing-half: #{$it-sizing-half};
-  --#{$prefix}sizing-quarter: #{$it-sizing-quarter};
+  --#{$prefix}sizing-full: #{tokens.$it-sizing-full};
+  --#{$prefix}sizing-two-thirds: #{tokens.$it-sizing-two-thirds};
+  --#{$prefix}sizing-half: #{tokens.$it-sizing-half};
+  --#{$prefix}sizing-quarter: #{tokens.$it-sizing-quarter};
 
   // Shadow
-  --#{$prefix}elevation-high: #{$it-elevation-high};
-  --#{$prefix}elevation-medium: #{$it-elevation-medium};
-  --#{$prefix}elevation-low: #{$it-elevation-low};
+  --#{$prefix}elevation-high: #{tokens.$it-elevation-high};
+  --#{$prefix}elevation-medium: #{tokens.$it-elevation-medium};
+  --#{$prefix}elevation-low: #{tokens.$it-elevation-low};
 
   // Text colors
-  --#{$prefix}color-text-accent: #{$it-color-text-accent};
-  --#{$prefix}color-text-inverse: #{$it-color-text-inverse};
-  --#{$prefix}color-text-danger-active: #{$it-color-text-danger-active};
-  --#{$prefix}color-text-danger-hover: #{$it-color-text-danger-hover};
-  --#{$prefix}color-text-danger: #{$it-color-text-danger};
-  --#{$prefix}color-text-warning-active: #{$it-color-text-warning-active};
-  --#{$prefix}color-text-warning-hover: #{$it-color-text-warning-hover};
-  --#{$prefix}color-text-warning: #{$it-color-text-warning};
-  --#{$prefix}color-text-success-active: #{$it-color-text-success-active};
-  --#{$prefix}color-text-success-hover: #{$it-color-text-success-hover};
-  --#{$prefix}color-text-success: #{$it-color-text-success};
-  --#{$prefix}color-text-disabled: #{$it-color-text-disabled};
-  --#{$prefix}color-text-muted: #{$it-color-text-muted};
-  --#{$prefix}color-text-secondary: #{$it-color-text-secondary};
-  --#{$prefix}color-text-primary: #{$it-color-text-primary};
-  --#{$prefix}color-text-base: #{$it-color-text-base};
-  --#{$prefix}color-code: #{$it-color-text-secondary};
-  --#{$prefix}color-link: #{$it-color-link-base};
-  --#{$prefix}color-link-hover: #{$it-color-link-hover};
-  --#{$prefix}color-link-active: #{$it-color-link-active};
-  --#{$prefix}color-link-secondary: #{$it-color-link-secondary};
-  --#{$prefix}color-link-secondary-hover: #{$it-color-link-secondary-hover};
-  --#{$prefix}color-link-secondary-active: #{$it-color-link-secondary-active};
-  --#{$prefix}color-link-inverse: #{$it-color-link-inverse};
-  --#{$prefix}color-link-disabled: #{$it-color-link-disabled};
-  --#{$prefix}color-link-accent: #{$it-color-link-accent};
-  --#{$prefix}color-link-accent-hover: #{$it-color-link-accent-hover};
+  --#{$prefix}color-text-accent: #{tokens.$it-color-text-accent};
+  --#{$prefix}color-text-inverse: #{tokens.$it-color-text-inverse};
+  --#{$prefix}color-text-danger-active: #{tokens.$it-color-text-danger-active};
+  --#{$prefix}color-text-danger-hover: #{tokens.$it-color-text-danger-hover};
+  --#{$prefix}color-text-danger: #{tokens.$it-color-text-danger};
+  --#{$prefix}color-text-warning-active: #{tokens.$it-color-text-warning-active};
+  --#{$prefix}color-text-warning-hover: #{tokens.$it-color-text-warning-hover};
+  --#{$prefix}color-text-warning: #{tokens.$it-color-text-warning};
+  --#{$prefix}color-text-success-active: #{tokens.$it-color-text-success-active};
+  --#{$prefix}color-text-success-hover: #{tokens.$it-color-text-success-hover};
+  --#{$prefix}color-text-success: #{tokens.$it-color-text-success};
+  --#{$prefix}color-text-disabled: #{tokens.$it-color-text-disabled};
+  --#{$prefix}color-text-muted: #{tokens.$it-color-text-muted};
+  --#{$prefix}color-text-secondary: #{tokens.$it-color-text-secondary};
+  --#{$prefix}color-text-primary: #{tokens.$it-color-text-primary};
+  --#{$prefix}color-text-base: #{tokens.$it-color-text-base};
+  --#{$prefix}color-code: #{tokens.$it-color-text-secondary};
+  --#{$prefix}color-link: #{tokens.$it-color-link-base};
+  --#{$prefix}color-link-hover: #{tokens.$it-color-link-hover};
+  --#{$prefix}color-link-active: #{tokens.$it-color-link-active};
+  --#{$prefix}color-link-secondary: #{tokens.$it-color-link-secondary};
+  --#{$prefix}color-link-secondary-hover: #{tokens.$it-color-link-secondary-hover};
+  --#{$prefix}color-link-secondary-active: #{tokens.$it-color-link-secondary-active};
+  --#{$prefix}color-link-inverse: #{tokens.$it-color-link-inverse};
+  --#{$prefix}color-link-disabled: #{tokens.$it-color-link-disabled};
+  --#{$prefix}color-link-accent: #{tokens.$it-color-link-accent};
+  --#{$prefix}color-link-accent-hover: #{tokens.$it-color-link-accent-hover};
 
   // Border colors
-  --#{$prefix}color-border-danger-active: #{$it-color-border-danger-active};
-  --#{$prefix}color-border-danger-hover: #{$it-color-border-danger-hover};
-  --#{$prefix}color-border-danger: #{$it-color-border-danger};
-  --#{$prefix}color-border-warning-active: #{$it-color-border-warning-active};
-  --#{$prefix}color-border-warning-hover: #{$it-color-border-warning-hover};
-  --#{$prefix}color-border-warning: #{$it-color-border-warning};
-  --#{$prefix}color-border-success-active: #{$it-color-border-success-active};
-  --#{$prefix}color-border-success-hover: #{$it-color-border-success-hover};
-  --#{$prefix}color-border-success: #{$it-color-border-success};
-  --#{$prefix}color-border-subtle: #{$it-color-border-subtle};
-  --#{$prefix}color-border-disabled: #{$it-color-border-disabled};
-  --#{$prefix}color-border-inverse: #{$it-color-border-inverse};
-  --#{$prefix}color-border-secondary-active: #{$it-color-border-secondary-active};
-  --#{$prefix}color-border-secondary-hover: #{$it-color-border-secondary-hover};
-  --#{$prefix}color-border-secondary: #{$it-color-border-secondary};
-  --#{$prefix}color-border-primary-active: #{$it-color-border-primary-active};
-  --#{$prefix}color-border-primary-hover: #{$it-color-border-primary-hover};
-  --#{$prefix}color-border-primary: #{$it-color-border-primary};
-  --#{$prefix}color-outline-focus: #{$it-color-outline-focus};
+  --#{$prefix}color-border-danger-active: #{tokens.$it-color-border-danger-active};
+  --#{$prefix}color-border-danger-hover: #{tokens.$it-color-border-danger-hover};
+  --#{$prefix}color-border-danger: #{tokens.$it-color-border-danger};
+  --#{$prefix}color-border-warning-active: #{tokens.$it-color-border-warning-active};
+  --#{$prefix}color-border-warning-hover: #{tokens.$it-color-border-warning-hover};
+  --#{$prefix}color-border-warning: #{tokens.$it-color-border-warning};
+  --#{$prefix}color-border-success-active: #{tokens.$it-color-border-success-active};
+  --#{$prefix}color-border-success-hover: #{tokens.$it-color-border-success-hover};
+  --#{$prefix}color-border-success: #{tokens.$it-color-border-success};
+  --#{$prefix}color-border-subtle: #{tokens.$it-color-border-subtle};
+  --#{$prefix}color-border-disabled: #{tokens.$it-color-border-disabled};
+  --#{$prefix}color-border-inverse: #{tokens.$it-color-border-inverse};
+  --#{$prefix}color-border-secondary-active: #{tokens.$it-color-border-secondary-active};
+  --#{$prefix}color-border-secondary-hover: #{tokens.$it-color-border-secondary-hover};
+  --#{$prefix}color-border-secondary: #{tokens.$it-color-border-secondary};
+  --#{$prefix}color-border-primary-active: #{tokens.$it-color-border-primary-active};
+  --#{$prefix}color-border-primary-hover: #{tokens.$it-color-border-primary-hover};
+  --#{$prefix}color-border-primary: #{tokens.$it-color-border-primary};
+  --#{$prefix}color-outline-focus: #{tokens.$it-color-outline-focus};
 
   // Background colors
-  --#{$prefix}color-background-primary: #{$it-color-background-primary};
-  --#{$prefix}color-background-primary-lighter: #{$it-color-background-primary-lighter};
-  --#{$prefix}color-background-primary-light: #{$it-color-background-primary-light};
-  --#{$prefix}color-background-primary-deep: #{$it-color-background-primary-deep};
-  --#{$prefix}color-background-primary-muted: #{$it-color-background-primary-muted};
-  --#{$prefix}color-background-primary-active: #{$it-color-background-primary-active};
-  --#{$prefix}color-background-primary-hover: #{$it-color-background-primary-hover};
-  --#{$prefix}color-background-danger-active: #{$it-color-background-danger-active};
-  --#{$prefix}color-background-danger-hover: #{$it-color-background-danger-hover};
-  --#{$prefix}color-background-danger-light: #{$it-color-background-danger-light};
-  --#{$prefix}color-background-danger: #{$it-color-background-danger};
-  --#{$prefix}color-background-warning-active: #{$it-color-background-warning-active};
-  --#{$prefix}color-background-warning-hover: #{$it-color-background-warning-hover};
-  --#{$prefix}color-background-warning-light: #{$it-color-background-warning-light};
-  --#{$prefix}color-background-warning: #{$it-color-background-warning};
-  --#{$prefix}color-background-success-active: #{$it-color-background-success-active};
-  --#{$prefix}color-background-success-hover: #{$it-color-background-success-hover};
-  --#{$prefix}color-background-success-light: #{$it-color-background-success-light};
-  --#{$prefix}color-background-success: #{$it-color-background-success};
-  --#{$prefix}color-background-emphasis: #{$it-color-background-emphasis};
-  --#{$prefix}color-background-subtle: #{$it-color-background-subtle};
-  --#{$prefix}color-background-disabled: #{$it-color-background-disabled};
-  --#{$prefix}color-background-inverse: #{$it-color-background-inverse};
-  --#{$prefix}color-background-inverse-hover: #{$it-color-slate-93}; // TODO: replace with semantic token
-  --#{$prefix}color-background-muted: #{$it-color-background-muted};
-  --#{$prefix}color-background-accent-hover: #{$it-color-background-accent-hover};
-  --#{$prefix}color-background-accent: #{$it-color-background-accent};
-  --#{$prefix}color-background-secondary-lighter: #{$it-color-background-secondary-lighter};
-  --#{$prefix}color-background-secondary-light: #{$it-color-background-secondary-light};
-  --#{$prefix}color-background-secondary-active: #{$it-color-background-secondary-active};
-  --#{$prefix}color-background-secondary-hover: #{$it-color-background-secondary-hover};
-  --#{$prefix}color-background-secondary: #{$it-color-background-secondary};
+  --#{$prefix}color-background-primary: #{tokens.$it-color-background-primary};
+  --#{$prefix}color-background-primary-lighter: #{tokens.$it-color-background-primary-lighter};
+  --#{$prefix}color-background-primary-light: #{tokens.$it-color-background-primary-light};
+  --#{$prefix}color-background-primary-deep: #{tokens.$it-color-background-primary-deep};
+  --#{$prefix}color-background-primary-muted: #{tokens.$it-color-background-primary-muted};
+  --#{$prefix}color-background-primary-active: #{tokens.$it-color-background-primary-active};
+  --#{$prefix}color-background-primary-hover: #{tokens.$it-color-background-primary-hover};
+  --#{$prefix}color-background-danger-active: #{tokens.$it-color-background-danger-active};
+  --#{$prefix}color-background-danger-hover: #{tokens.$it-color-background-danger-hover};
+  --#{$prefix}color-background-danger-light: #{tokens.$it-color-background-danger-light};
+  --#{$prefix}color-background-danger: #{tokens.$it-color-background-danger};
+  --#{$prefix}color-background-warning-active: #{tokens.$it-color-background-warning-active};
+  --#{$prefix}color-background-warning-hover: #{tokens.$it-color-background-warning-hover};
+  --#{$prefix}color-background-warning-light: #{tokens.$it-color-background-warning-light};
+  --#{$prefix}color-background-warning: #{tokens.$it-color-background-warning};
+  --#{$prefix}color-background-success-active: #{tokens.$it-color-background-success-active};
+  --#{$prefix}color-background-success-hover: #{tokens.$it-color-background-success-hover};
+  --#{$prefix}color-background-success-light: #{tokens.$it-color-background-success-light};
+  --#{$prefix}color-background-success: #{tokens.$it-color-background-success};
+  --#{$prefix}color-background-emphasis: #{tokens.$it-color-background-emphasis};
+  --#{$prefix}color-background-subtle: #{tokens.$it-color-background-subtle};
+  --#{$prefix}color-background-disabled: #{tokens.$it-color-background-disabled};
+  --#{$prefix}color-background-inverse: #{tokens.$it-color-background-inverse};
+  --#{$prefix}color-background-inverse-hover: #{tokens.$it-color-slate-93}; // TODO: replace with semantic token
+  --#{$prefix}color-background-muted: #{tokens.$it-color-background-muted};
+  --#{$prefix}color-background-accent-hover: #{tokens.$it-color-background-accent-hover};
+  --#{$prefix}color-background-accent: #{tokens.$it-color-background-accent};
+  --#{$prefix}color-background-secondary-lighter: #{tokens.$it-color-background-secondary-lighter};
+  --#{$prefix}color-background-secondary-light: #{tokens.$it-color-background-secondary-light};
+  --#{$prefix}color-background-secondary-active: #{tokens.$it-color-background-secondary-active};
+  --#{$prefix}color-background-secondary-hover: #{tokens.$it-color-background-secondary-hover};
+  --#{$prefix}color-background-secondary: #{tokens.$it-color-background-secondary};
   --#{$prefix}overlay-background-light: hsla(0, 0%, 0%, 0.5);
   --#{$prefix}overlay-background-primary: hsla(210, 100%, 40%, 0.8);
   --#{$prefix}overlay-background-primary-muted: hsla(210, 54%, 20%, 0.8);
-  --#{$prefix}highlight-background: #{$it-color-teal-80}; // TODO: replace with semantic token
-  --#{$prefix}code-background: #{$it-color-background-muted};
-  --#{$prefix}ins-background: #{$it-color-emerald-67};
-  --#{$prefix}del-background: #{$it-color-red-70};
-  --#{$prefix}page-background: #{$it-color-background-inverse};
+  --#{$prefix}highlight-background: #{tokens.$it-color-teal-80}; // TODO: replace with semantic token
+  --#{$prefix}code-background: #{tokens.$it-color-background-muted};
+  --#{$prefix}ins-background: #{tokens.$it-color-emerald-67};
+  --#{$prefix}del-background: #{tokens.$it-color-red-70};
+  --#{$prefix}page-background: #{tokens.$it-color-background-inverse};
 
   // Status colors - reference the background category colors only
-  --#{$prefix}color-status-danger: #{$it-color-background-danger};
-  --#{$prefix}color-status-danger-hover: #{$it-color-background-danger-hover};
-  --#{$prefix}color-status-danger-active: #{$it-color-background-danger-active};
-  --#{$prefix}color-status-success: #{$it-color-background-success};
-  --#{$prefix}color-status-success-hover: #{$it-color-background-success-hover};
-  --#{$prefix}color-status-success-active: #{$it-color-background-success-active};
-  --#{$prefix}color-status-info: #{$it-color-background-info};
-  --#{$prefix}color-status-info-hover: #{$it-color-background-info-hover};
-  --#{$prefix}color-status-info-active: #{$it-color-background-info-active};
-  --#{$prefix}color-status-warning: #{$it-color-background-warning};
-  --#{$prefix}color-status-warning-hover: #{$it-color-background-warning-hover};
-  --#{$prefix}color-status-warning-active: #{$it-color-background-warning-active};
+  --#{$prefix}color-status-danger: #{tokens.$it-color-background-danger};
+  --#{$prefix}color-status-danger-hover: #{tokens.$it-color-background-danger-hover};
+  --#{$prefix}color-status-danger-active: #{tokens.$it-color-background-danger-active};
+  --#{$prefix}color-status-success: #{tokens.$it-color-background-success};
+  --#{$prefix}color-status-success-hover: #{tokens.$it-color-background-success-hover};
+  --#{$prefix}color-status-success-active: #{tokens.$it-color-background-success-active};
+  --#{$prefix}color-status-info: #{tokens.$it-color-background-info};
+  --#{$prefix}color-status-info-hover: #{tokens.$it-color-background-info-hover};
+  --#{$prefix}color-status-info-active: #{tokens.$it-color-background-info-active};
+  --#{$prefix}color-status-warning: #{tokens.$it-color-background-warning};
+  --#{$prefix}color-status-warning-hover: #{tokens.$it-color-background-warning-hover};
+  --#{$prefix}color-status-warning-active: #{tokens.$it-color-background-warning-active};
 
   // Icons colors
-  --#{$prefix}icon-danger-active: #{$it-icon-danger-active};
-  --#{$prefix}icon-danger-hover: #{$it-icon-danger-hover};
-  --#{$prefix}icon-danger: #{$it-icon-danger};
-  --#{$prefix}icon-warning-active: #{$it-icon-warning-active};
-  --#{$prefix}icon-warning-hover: #{$it-icon-warning-hover};
-  --#{$prefix}icon-warning: #{$it-icon-warning};
-  --#{$prefix}icon-success-active: #{$it-icon-success-active};
-  --#{$prefix}icon-success-hover: #{$it-icon-success-hover};
-  --#{$prefix}icon-success: #{$it-icon-success};
-  --#{$prefix}icon-secondary-active: #{$it-icon-secondary-active};
-  --#{$prefix}icon-inverse: #{$it-icon-inverse};
-  --#{$prefix}icon-secondary-hover: #{$it-icon-secondary-hover};
-  --#{$prefix}icon-secondary: #{$it-icon-secondary};
-  --#{$prefix}icon-primary-active: #{$it-icon-primary-active};
-  --#{$prefix}icon-primary-hover: #{$it-icon-primary-hover};
-  --#{$prefix}icon-primary: #{$it-icon-primary};
-  --#{$prefix}icon-default: #{$it-icon-default};
-  --#{$prefix}icon-disabled: #{$it-icon-disabled};
-  --#{$prefix}icon-spacing: #{$it-spacing-xs};
+  --#{$prefix}icon-danger-active: #{tokens.$it-icon-danger-active};
+  --#{$prefix}icon-danger-hover: #{tokens.$it-icon-danger-hover};
+  --#{$prefix}icon-danger: #{tokens.$it-icon-danger};
+  --#{$prefix}icon-warning-active: #{tokens.$it-icon-warning-active};
+  --#{$prefix}icon-warning-hover: #{tokens.$it-icon-warning-hover};
+  --#{$prefix}icon-warning: #{tokens.$it-icon-warning};
+  --#{$prefix}icon-success-active: #{tokens.$it-icon-success-active};
+  --#{$prefix}icon-success-hover: #{tokens.$it-icon-success-hover};
+  --#{$prefix}icon-success: #{tokens.$it-icon-success};
+  --#{$prefix}icon-secondary-active: #{tokens.$it-icon-secondary-active};
+  --#{$prefix}icon-inverse: #{tokens.$it-icon-inverse};
+  --#{$prefix}icon-secondary-hover: #{tokens.$it-icon-secondary-hover};
+  --#{$prefix}icon-secondary: #{tokens.$it-icon-secondary};
+  --#{$prefix}icon-primary-active: #{tokens.$it-icon-primary-active};
+  --#{$prefix}icon-primary-hover: #{tokens.$it-icon-primary-hover};
+  --#{$prefix}icon-primary: #{tokens.$it-icon-primary};
+  --#{$prefix}icon-default: #{tokens.$it-icon-default};
+  --#{$prefix}icon-disabled: #{tokens.$it-icon-disabled};
+  --#{$prefix}icon-spacing: #{tokens.$it-spacing-xs};
 
   // Transitions
   --#{$prefix}transition-instant: 0.2s;
+
+  // Typography responsive properties
+  @include media-breakpoint-up(sm) {
+    --#{$prefix}heading-1-font-size: #{tokens.$it-heading-1-font-size-l};
+    --#{$prefix}heading-2-font-size: #{tokens.$it-heading-2-font-size-l};
+    --#{$prefix}heading-3-font-size: #{tokens.$it-heading-3-font-size-l};
+    --#{$prefix}heading-4-font-size: #{tokens.$it-heading-4-font-size-l};
+    --#{$prefix}heading-5-font-size: #{tokens.$it-heading-5-font-size-l};
+    --#{$prefix}heading-6-font-size: #{tokens.$it-heading-6-font-size-l};
+    --#{$prefix}lead-font-size: #{tokens.$it-lead-font-size-l};
+    --#{$prefix}body-font-size: #{tokens.$it-body-font-size-l};
+  }
 }
