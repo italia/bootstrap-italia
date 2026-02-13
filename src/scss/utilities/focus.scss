@@ -1,5 +1,6 @@
 @use '../base/config' as *;
 @use '../base/variables' as *;
+@use '../base/mixins/focus' as *;
 
 :focus:not([data-focus-mouse='true']),
 .it-carousel-wrapper .splide__pagination button:focus:not([data-focus-mouse='true']),
