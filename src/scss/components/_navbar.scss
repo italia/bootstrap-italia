@@ -6,6 +6,7 @@
 @use '../base/mixins/gradients' as *;
 @use '../base/mixins/transition' as *;
 @use '../base/mixins/deprecate' as *;
+@use '../base/mixins/backdrop' as *;
 @use '../base/mixins/breakpoints' as *;
 @use '../base/vendor/rfs' as *;
 
@@ -89,7 +90,7 @@
   --#{$prefix}backdrop-bg: #{$modal-backdrop-bg};
   --#{$prefix}backdrop-opacity: #{$modal-backdrop-opacity};
   @include overlay-backdrop(var(--#{$prefix}backdrop-zindex), var(--#{$prefix}backdrop-bg), var(--#{$prefix}backdrop-opacity));
-  @media (min-width: #{map-get($grid-breakpoints, lg)}) {
+  @media (min-width: #{map.get($grid-breakpoints, lg)}) {
     display: none; // to handle resize from md to lg when open
   }
 }

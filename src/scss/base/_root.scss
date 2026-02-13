@@ -86,6 +86,7 @@
   --#{$prefix}spacing-l: #{tokens.$it-spacing-l}; // equal to 2rem (32px)
   --#{$prefix}spacing-m: #{tokens.$it-spacing-m}; // equal to 1.5rem (24px)
   --#{$prefix}spacing-s: #{tokens.$it-spacing-s}; // equal to 1rem (16px)
+  --#{$prefix}spacing-14x: #{tokens.$it-spacing-14x}; // equal to 0.875rem (14px)
   --#{$prefix}spacing-xs: #{tokens.$it-spacing-xs}; // equal to 0.75rem (12px)
   --#{$prefix}spacing-xxs: #{tokens.$it-spacing-xxs}; // equal to 0.5rem (8px)
   --#{$prefix}spacing-3xs: #{tokens.$it-spacing-3xs}; // equal to 0.25rem (4px)
@@ -272,9 +273,9 @@
   --#{$prefix}color-status-success: #{tokens.$it-color-background-success};
   --#{$prefix}color-status-success-hover: #{tokens.$it-color-background-success-hover};
   --#{$prefix}color-status-success-active: #{tokens.$it-color-background-success-active};
-  --#{$prefix}color-status-info: #{tokens.$it-color-background-info};
-  --#{$prefix}color-status-info-hover: #{tokens.$it-color-background-info-hover};
-  --#{$prefix}color-status-info-active: #{tokens.$it-color-background-info-active};
+  // --#{$prefix}color-status-info: #{tokens.$it-color-background-info}; // < XXX TODO: Currently not present in Design Tokens Italia
+  // --#{$prefix}color-status-info-hover: #{tokens.$it-color-background-info-hover}; // < XXX TODO: Currently not present in Design Tokens Italia
+  // --#{$prefix}color-status-info-active: #{tokens.$it-color-background-info-active}; // < XXX TODO: Currently not present in Design Tokens Italia
   --#{$prefix}color-status-warning: #{tokens.$it-color-background-warning};
   --#{$prefix}color-status-warning-hover: #{tokens.$it-color-background-warning-hover};
   --#{$prefix}color-status-warning-active: #{tokens.$it-color-background-warning-active};

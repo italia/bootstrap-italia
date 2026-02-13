@@ -5,49 +5,6 @@
 @use '../base/vendor/rfs' as *;
 @use '../base/reboot' as *;
 
-//
-// Headings
-//
-.h1 {
-  @extend h1;
-}
-
-.h2 {
-  @extend h2;
-}
-
-.h3 {
-  @extend h3;
-}
-
-.h4 {
-  @extend h4;
-}
-
-.h5 {
-  @extend h5;
-}
-
-.h6 {
-  @extend h6;
-}
-
-// Type display classes
-@each $display, $font-size in $display-font-sizes {
-  .display-#{$display} {
-    font-family: $display-font-family;
-    font-style: $display-font-style;
-    font-weight: $display-font-weight;
-    line-height: $display-line-height;
-    @include font-size($font-size);
-  }
-}
-
-//
-// Emphasis
-//
-.small {
-  @extend small;
 // Component: type
 //
 // Description: Component styles for type

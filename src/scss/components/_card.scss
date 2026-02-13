@@ -427,9 +427,9 @@
       flex-wrap: wrap-reverse;
       justify-content: space-between;
       align-items: center;
-      margin-top: calc(2 * var(--#{$prefix}it-card-title-spacer-y));
-      margin-bottom: var(--#{$prefix}it-card-title-spacer-y);
-      padding: 0 var(--#{$prefix}it-card-spacer-x);
+      margin-top: calc(2 * var(--#{$prefix}card-title-spacer-y));
+      margin-bottom: var(--#{$prefix}card-title-spacer-y);
+      padding: 0 var(--#{$prefix}card-spacer-x);
 
       // Gap fallback
       > * {
@@ -443,10 +443,6 @@
           margin: 0;
         }
       }
-
-      margin-top: calc(2 * var(--#{$prefix}card-title-spacer-y));
-      margin-bottom: var(--#{$prefix}card-title-spacer-y);
-      padding: 0 var(--#{$prefix}card-spacer-x);
 
       .it-card-profile {
         flex: 1;

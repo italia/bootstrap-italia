@@ -56,7 +56,7 @@
     font-size: var(--#{$prefix}callout-text-font-size);
 
     &.callout-big-text {
-      font-size: var(--it-body-font-size-l);
+      font-size: var(--#{$prefix}lead-font-size); // XXX TO DO: verify if this is the correct token to use for big text in callouts
     }
 
     &:last-child {

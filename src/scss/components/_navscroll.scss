@@ -111,10 +111,10 @@
   // Menu Wrapper
   .menu-wrapper {
     z-index: 5;
+    background: var(--#{$prefix}navscroll-background);
     @include media-breakpoint-down(md) {
       padding-top: 56px; // to avoid overlap with navscroll toggler - value must match navscroll toggler height
     }
-    background: var(--#{$prefix}navscroll-background);
   }
 
   // Navscroll Toggler
