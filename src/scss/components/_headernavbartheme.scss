@@ -1,3 +1,7 @@
+@use 'sass:map';
+@use '../base/config' as *;
+@use '../base/variables' as *;
+
 // Component: headernavbartheme
 //
 // Description: Component styles for headernavbartheme
@@ -126,7 +130,7 @@
 /*
 ++++++++++++++++++++++++++++++Desktop light Theme+++++++++++++++++++++++++++++++++++++++++++++++++
 */
-@media (min-width: #{map-get($grid-breakpoints, lg)}) {
+@media (min-width: #{map.get($grid-breakpoints, lg)}) {
   .it-header-navbar-wrapper {
     &.theme-light-desk {
       background: $navigation-light-bg-color;

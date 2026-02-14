@@ -13,6 +13,10 @@
 //
 
 @use 'sass:math';
+@use '../base/config' as *;
+@use '../base/variables' as *;
+@use '../base/mixins/grid' as *;
+@use '../base/mixins/breakpoints' as *;
 
 // Row
 //

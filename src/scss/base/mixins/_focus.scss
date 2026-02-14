@@ -1,3 +1,6 @@
+@use '../config' as *;
+@use '../variables' as *;
+
 %focus {
   border-color: $focus-outline-color-out !important;
   box-shadow:

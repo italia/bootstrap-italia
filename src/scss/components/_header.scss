@@ -1,3 +1,8 @@
+@use 'sass:math';
+@use '../base/config' as *;
+@use '../base/variables' as *;
+@use '../base/mixins/breakpoints' as *;
+
 // Component: header
 //
 // Description: Component styles for header
@@ -16,7 +21,7 @@
   --#{$prefix}header-brand-color: var(--#{$prefix}color-text-inverse); // Controls the brand color for the header, using color tokens.
   --#{$prefix}header-brand-icon-color: var(--#{$prefix}icon-inverse); // Controls the brand icon color for the header, using icon tokens.
   --#{$prefix}header-brand-size: 2.5rem; // Controls the brand size for the header.
-  --#{$prefix}header-brand-spacing: var(--it-spacing-14x); // Controls the brand spacing for the header, using spacing tokens.
+  --#{$prefix}header-brand-spacing: var(--#{$prefix}spacing-14x); // Controls the brand spacing for the header, using spacing tokens.
   --#{$prefix}header-brand-tagline-size: var(--#{$prefix}body-font-size); // Controls the brand tagline size for the header, using font tokens.
   --#{$prefix}header-brand-title-size: var(--#{$prefix}heading-5-font-size); // Controls the brand title size for the header, using font tokens.
   --#{$prefix}header-center-background: var(--#{$prefix}color-background-primary); // Controls the center background for the header, using color tokens.
@@ -33,7 +38,9 @@
   --#{$prefix}header-search-button-size: 3rem; // Controls the search button size for the header.
   --#{$prefix}header-search-icon-color: var(--#{$prefix}icon-inverse); // Controls the search icon color for the header, using icon tokens.
   --#{$prefix}header-search-icon-size: 1.5rem; // Controls the search icon size for the header.
-  --#{$prefix}header-slim-background: var(--it-color-blue-30); // Controls the slim background for the header. // TODO: use variable when ready
+  --#{$prefix}header-slim-background: var(
+    --#{$prefix}color-background-primary-muted
+  ); // Controls the slim background for the header. // TODO: use variable when ready
   --#{$prefix}header-slim-border-color: hsla(0, 0%, 100%, 0.2); // Controls the slim border color for the header.
   --#{$prefix}header-slim-font-size: var(--#{$prefix}label-font-size-s); // Controls the slim font size for the header, using font tokens.
   --#{$prefix}header-slim-height: 3rem; // Controls the slim height for the header.
