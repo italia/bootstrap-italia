@@ -277,435 +277,521 @@ Il codice markup è stato rivisto in chiave accessibilità e robustezza. In part
 
 -----
 
-## Timeline point List
-La timeline point list permette la rappresentazione di una sequenza di eventi o
-informazioni in maniera più compatta rispetto alla timeline classica. 
-È particolarmente indicata per presentare una breve sequenza di cose da fare 
-e scadenze temporali.
+-----
 
-Il componente timeline è caratterizzato da una lista `<ul>` con classe `.it-point-list-wrapper`.  
-Contiene un elenco di elementi lista `<li>` con classe `.it-point-list`.
+## Timeline Point List
 
-Il componente è composto da una sezione primaria `.it-point-list-content` e da una
-sezione secondaria `.it-point-list-aside`. La sezione primaria è preposta alla
-presentazione del contenuto ed è possibile innestare altri componenti; la sezione
-secondaria viene usata per mettere in risalto la sequenza temporale ed è possibile
-presentare date specifiche o traguardi generici (con icone e micro-testi).
+La Timeline Point List permette la rappresentazione di una sequenza di eventi o informazioni in maniera più compatta rispetto alla timeline classica. È particolarmente indicata per presentare una breve sequenza di cose da fare e scadenze temporali.
 
-Infine, il componente può essere implementato usando l'elenco non ordinato `ul`
-oppure usando il contenitore generico `div`.
+Il componente è caratterizzato da un elenco ordinato `<ol>` con classe `.it-timeline-point-list`. Ogni elemento `<li>` della lista ha classe `.timeline-point` e contiene una sezione laterale `.point-aside` per date o milestone, e una sezione principale `.point-content` per il contenuto.
 
-### Esempio come elenco
-{% comment %}Example name: Timeline point list, elenco non ordinato{% endcomment %}
+Il componente dovrebbe essere implemento come elenco ordinato `ol` per usare la corretta semantica HTML. Tuttavia, per la massima flessibilità è possibile implementarlo come elenco non ordinato `ul` o, nel caso di pochi eventi, scegliere con consapevolezza una sequenza di elementi `div` con elementi heading interni.  
+
+### Struttura della sezione laterale
+
+La sezione laterale `.point-aside` visualizza informazioni in tre posizioni verticali tramite classi posizionali:
+
+- `.point-top`: elemento superiore (opzionale) - es. anno, categoria, versione
+- `.point-main`: elemento principale (obbligatorio) - es. giorno, numero step, icona milestone
+- `.point-bottom`: elemento inferiore (opzionale) - es. mese, frazione, label
+
+Questi elementi sono racchiusi in `.point-visual` con `aria-hidden="true"` perché sono solo presentazione visiva. Il contenuto accessibile è fornito da:
+- Elemento `<time>` con attributo `datetime` per le date
+- `<span class="visually-hidden">` per contenuti non temporali
+
+{% capture callout %}
+#### Accessibilità
+
+**Struttura accessibile:**
+- Il wrapper `.point-visual` ha `aria-hidden="true"` per nascondere la presentazione visiva agli screen reader
+- Implementa descrizioni dedicate ai lettori di schermo e machine readable con: 
+  - **Per punti data**: usa l'elemento semantico `<time>` con l'attributo `datetime` in formato ISO (es. `2025-10-14`).
+  - **Per punti non temporali:** usa un `<div>` contenitore generico e usa `<span class="visually-hidden">` per descrivere il contenuto in linguaggio naturale seguendo l'ordine visivo (top → bottom, es. "Categoria AB, passo 1 di 3").
+  - **Per punti icona:** usa `aria-hidden="true"` sull'elemento `<svg>` e veicola il significato usando `<span class="visually-hidden">`.
+{% endcapture %}{% include callout.html content=callout type="accessibility" %}
+
+### Esempio base
+
+{% comment %}Example name: Timeline point list{% endcomment %}
 {% capture example %}
-<ul class="it-point-list-wrapper">
-  <li class="it-point-list">
-    <div class="it-point-list-aside it-point-list-primary">
-      <div class="it-point-date font-monospace" aria-label="giorno">14</div>
-      <div class="it-point-month font-monospace" aria-label="mese"><span aria-hidden="true">OTT</span><span class="visually-hidden">Ottobre</span></div>
+<ol class="it-timeline-point-list">
+  <li class="timeline-point">
+    <div class="point-aside point-aside-primary">
+      <time datetime="2025-10-14">
+        <span class="visually-hidden">14 ottobre 2025</span>
+        <div class="point-visual" aria-hidden="true">
+          <div class="point-main font-monospace">14</div>
+          <div class="point-bottom font-monospace">OTT</div>
+        </div>
+      </time>
     </div>
-    <div class="it-point-list-content">
+    <div class="point-content">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </div>
   </li>
-  <li class="it-point-list">
-    <div class="it-point-list-aside it-point-list-primary">
-      <div class="it-point-date font-monospace" aria-label="giorno">14</div>
-      <div class="it-point-month font-monospace" aria-label="mese"><span aria-hidden="true">DIC</span><span class="visually-hidden">Dicembre</span></div>
+  <li class="timeline-point">
+    <div class="point-aside point-aside-primary">
+      <time datetime="2025-12-14">
+        <span class="visually-hidden">14 dicembre 2025</span>
+        <div class="point-visual" aria-hidden="true">
+          <div class="point-main font-monospace">14</div>
+          <div class="point-bottom font-monospace">DIC</div>
+        </div>
+      </time>
     </div>
-    <div class="it-point-list-content">
+    <div class="point-content">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </div>
   </li>
-</ul>
-
+</ol>
 {% endcapture %}{% include example.html content=example %}
-
-### Esempio con il contenitore generico
-{% comment %}Example name: Timeline point list, contenitore generico{% endcomment %}
-{% capture example %}
-<div class="it-point-list-wrapper" role="list">
-  <div class="it-point-list" role="listitem">
-    <div class="it-point-list-aside it-point-list-primary">
-      <div class="it-point-date font-monospace" aria-label="giorno">14</div>
-      <div class="it-point-month font-monospace" aria-label="mese"><span aria-hidden="true">OTT</span><span class="visually-hidden">Ottobre</span></div>
-    </div>
-    <div class="it-point-list-content">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </div>
-  </div>
-</div>
-
-{% endcapture %}{% include example.html content=example %}
-
 
 ### Date specifiche
-Per esplicitare le date si usano dei contenitori annidati nella sezione secondaria
-`.it-point-list-aside`.
 
-#### Esempio base
-Nella sezione secondaria il contenitore `.it-point-date` viene usato per evidenziare il
-giorno, il contenitore `.it-point-month` per il mese.
+Per esplicitare le date complete si usa l'elemento `<time>` con l'attributo `datetime` e i contenitori posizionali per la visualizzazione.
+
+#### Con giorno e mese
 
 {% comment %}Example name: Timeline point list, calendario{% endcomment %}
 {% capture example %}
-<div class="it-point-list-wrapper" role="list">
-  <div class="it-point-list" role="listitem">
-    <div class="it-point-list-aside it-point-list-primary">
-      <div class="it-point-date font-monospace" aria-label="giorno">14</div>
-      <div class="it-point-month font-monospace" aria-label="mese"><span aria-hidden="true">OTT</span><span class="visually-hidden">Ottobre</span></div>
+<ol class="it-timeline-point-list">
+  <li class="timeline-point">
+    <div class="point-aside point-aside-primary">
+      <time datetime="2025-10-14">
+        <span class="visually-hidden">14 ottobre 2025</span>
+        <div class="point-visual" aria-hidden="true">
+          <div class="point-main font-monospace">14</div>
+          <div class="point-bottom font-monospace">OTT</div>
+        </div>
+      </time>
     </div>
-    <div class="it-point-list-content">
+    <div class="point-content">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </div>
-  </div>
-</div>
-
+  </li>
+</ol>
 {% endcapture %}{% include example.html content=example %}
 
-#### Con anno
-Tramite il contenitore `.it-point-year` è possibile specificare l'anno.
+#### Con anno, giorno e mese
+
+Tramite il contenitore `.point-top` è possibile visualizzare anche l'anno.
 
 {% comment %}Example name: Timeline point list, calendario completo{% endcomment %}
 {% capture example %}
-<ul class="it-point-list-wrapper">
-  <li class="it-point-list">
-    <div class="it-point-list-aside it-point-list-primary">
-      <div class="it-point-year font-monospace" aria-label="anno">{{'now' | date: "%Y"}}</div>
-      <div class="it-point-date font-monospace" aria-label="giorno">14</div>
-      <div class="it-point-month font-monospace" aria-label="mese"><span aria-hidden="true">OTT</span><span class="visually-hidden">Ottobre</span></div>
+<ol class="it-timeline-point-list">
+  <li class="timeline-point">
+    <div class="point-aside point-aside-primary">
+      <time datetime="2025-10-14">
+        <span class="visually-hidden">14 ottobre 2025</span>
+        <div class="point-visual" aria-hidden="true">
+          <div class="point-top font-monospace">2025</div>
+          <div class="point-main font-monospace">14</div>
+          <div class="point-bottom font-monospace">OTT</div>
+        </div>
+      </time>
     </div>
-    <div class="it-point-list-content">
+    <div class="point-content">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </div>
   </li>
-</ul>
-
+</ol>
 {% endcapture %}{% include example.html content=example %}
 
-### Layout molto compatto
-Tramite la classe `.it-point-list-xs` è possibile rendere ancora più compatta la
-timeline.
+### Layout compatto
 
-{% comment %}Example name: Timeline point list, compatto{% endcomment %}
+Tramite la classe `.timeline-point-xs` applicata all'elemento `.timeline-point` è possibile rendere più compatta la visualizzazione.
+
+{% comment %}Example name: Timeline point list, compatta{% endcomment %}
 {% capture example %}
-<ul class="it-point-list-wrapper">
-  <li class="it-point-list it-point-list-xs">
-    <div class="it-point-list-aside it-point-list-primary">
-      <div class="it-point-date font-monospace" aria-label="giorno">14</div>
-      <div class="it-point-month font-monospace" aria-label="mese"><span aria-hidden="true">OTT</span><span class="visually-hidden">Ottobre</span></div>
+<ol class="it-timeline-point-list">
+  <li class="timeline-point timeline-point-xs">
+    <div class="point-aside point-aside-primary">
+      <time datetime="2025-10-14">
+        <span class="visually-hidden">14 ottobre 2025</span>
+        <div class="point-visual" aria-hidden="true">
+          <div class="point-main font-monospace">14</div>
+          <div class="point-bottom font-monospace">OTT</div>
+        </div>
+      </time>
     </div>
-    <div class="it-point-list-content">
+    <div class="point-content">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </div>
   </li>
-</ul>
-
+</ol>
 {% endcapture %}{% include example.html content=example %}
 
-### Traguardi
-Nella sezione secondaria è possibile evidenziare l'ordine temporale dei contenuti
-tramite icone o con del breve testo (2 caratteri massimo).
+### Traguardi e milestone
 
-#### Traguardi con testo
-Viene usato il contenitore `.it-point-date` per inserire un testo brevissimo (2 caratteri
-massimo). È possibile usare `.it-point-month` e `.it-point-year` per aggiungere ulteriori
-informazioni.
+La sezione laterale può essere usata anche per visualizzare progressi, step o milestone tramite numeri, sigle o icone.
 
-{% comment %}Example name: Timeline point list, traguardi con testo compatto{% endcomment %}
+#### Traguardi con numeri e sigle
+
+È possibile usare i contenitori posizionali per presentare informazioni diverse dalle date, come numeri di step, frazioni o sigle. In questo caso si usa un `<div>` generico al posto di `<time>`.
+
+{% comment %}Example name: Timeline point list, traguardi numerici{% endcomment %}
 {% capture example %}
-<ul class="it-point-list-wrapper">
-  <li class="it-point-list it-point-list-xs">
-    <div class="it-point-list-aside it-point-list-primary">
-      <div class="it-point-date font-monospace" aria-label="passo">01</div>
+<ol class="it-timeline-point-list">
+  <li class="timeline-point timeline-point-xs">
+    <div class="point-aside point-aside-primary">
+      <div>
+        <span class="visually-hidden">Passo 1</span>
+        <div class="point-visual" aria-hidden="true">
+          <div class="point-main font-monospace">01</div>
+        </div>
+      </div>
     </div>
-    <div class="it-point-list-content">
+    <div class="point-content">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </div>
   </li>
-  <li class="it-point-list it-point-list-xs">
-    <div class="it-point-list-aside it-point-list-primary">
-      <div class="it-point-date font-monospace" aria-label="passo">01</div>
-      <div class="it-point-month font-monospace" aria-label="passi totali">/3</div>
+  <li class="timeline-point timeline-point-xs">
+    <div class="point-aside point-aside-primary">
+      <div>
+        <span class="visually-hidden">Passo 1 di 3</span>
+        <div class="point-visual" aria-hidden="true">
+          <div class="point-main font-monospace">01</div>
+          <div class="point-bottom font-monospace">/3</div>
+        </div>
+      </div>
     </div>
-    <div class="it-point-list-content">
+    <div class="point-content">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </div>
   </li>
-  <li class="it-point-list it-point-list-xs">
-    <div class="it-point-list-aside it-point-list-primary">
-      <div class="it-point-year font-monospace" aria-label="categoria">AB</div>
-      <div class="it-point-date font-monospace" aria-label="passo">01</div>
-      <div class="it-point-month font-monospace" aria-label="passi totali">/3</div>
+  <li class="timeline-point timeline-point-xs">
+    <div class="point-aside point-aside-primary">
+      <div>
+        <span class="visually-hidden">Categoria AB, passo 1 di 3</span>
+        <div class="point-visual" aria-hidden="true">
+          <div class="point-top font-monospace">AB</div>
+          <div class="point-main font-monospace">01</div>
+          <div class="point-bottom font-monospace">/3</div>
+        </div>
+      </div>
     </div>
-    <div class="it-point-list-content">
+    <div class="point-content">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </div>
   </li>
-</ul>
-
+</ol>
 {% endcapture %}{% include example.html content=example %}
 
-#### Traguardi con icona
-È possibile usare un'icona nel contenitore `.it-point-date`, e dei micro-testi nei
-contenitori `.it-point-month` e `.it-point-year`.
+#### Traguardi con icone
 
-{% comment %}Example name: Timeline point list, traguardi con icona compatto{% endcomment %}
+È possibile usare un'icona nel contenitore `.point-main` per rappresentare milestone o stati, accompagnata da eventuali micro-testi nei contenitori `.point-top` e `.point-bottom`.
+
+{% comment %}Example name: Timeline point list, milestone con icone{% endcomment %}
 {% capture example %}
-<div class="it-point-list-wrapper" role="list">
-  <div class="it-point-list it-point-list-xs" role="listitem">
-    <div class="it-point-list-aside it-point-list-primary">
-      <div class="it-point-date font-monospace">
-        <svg class="icon icon-primary" role="img"><title>Milestone</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-flag"></use></svg>
+<ol class="it-timeline-point-list">
+  <li class="timeline-point timeline-point-xs">
+    <div class="point-aside point-aside-primary">
+      <div>
+        <span class="visually-hidden">Milestone completata</span>
+        <div class="point-visual" aria-hidden="true">
+          <div class="point-main font-monospace">
+            <svg class="icon icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-flag"></use></svg>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="it-point-list-content">
+    <div class="point-content">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </div>
-  </div>
-  <div class="it-point-list it-point-list-xs" role="listitem">
-    <div class="it-point-list-aside it-point-list-primary">
-      <div class="it-point-date font-monospace">
-        <svg class="icon icon-primary" role="img"><title>Milestone</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
+  </li>
+  <li class="timeline-point timeline-point-xs">
+    <div class="point-aside point-aside-primary">
+      <div>
+        <span class="visually-hidden">Documento rilasciato</span>
+        <div class="point-visual" aria-hidden="true">
+          <div class="point-main font-monospace">
+            <svg class="icon icon-primary" aria-hidden="true">
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use>
+            </svg>
+          </div>
+          <div class="point-bottom font-monospace">DOC</div>
+        </div>
       </div>
-      <div class="it-point-month font-monospace" aria-label="documento">DOC</div>
     </div>
-    <div class="it-point-list-content">
+    <div class="point-content">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </div>
-  </div>
-  <div class="it-point-list it-point-list-xs" role="listitem">
-    <div class="it-point-list-aside it-point-list-primary">
-      <div class="it-point-year font-monospace" aria-label="versione">v2</div>
-      <div class="it-point-date font-monospace">
-        <svg class="icon icon-primary" role="img"><title>Milestone</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
+  </li>
+  <li class="timeline-point timeline-point-xs">
+    <div class="point-aside point-aside-primary">
+      <div>
+        <span class="visually-hidden">Versione 2, codice JavaScript</span>
+        <div class="point-visual" aria-hidden="true">
+          <div class="point-top font-monospace">v2</div>
+          <div class="point-main font-monospace">
+            <svg class="icon icon-primary" aria-hidden="true">
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
+            </svg>
+          </div>
+          <div class="point-bottom font-monospace">JS</div>
+        </div>
       </div>
-      <div class="it-point-month font-monospace" aria-label="linguaggio">JS</div>
     </div>
-    <div class="it-point-list-content">
+    <div class="point-content">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </div>
-  </div>
-</div>
-
+  </li>
+</ol>
 {% endcapture %}{% include example.html content=example %}
 
 ### Varianti colore
-Modificando opportunamente `.it-point-list-{suffisso}` è possibile personalizzare il
-colore della sezione secondaria. Ad esempio: `.it-point-list-primary` userà il
-colore `primary`.
+
+Modificando la classe `.point-aside-{suffisso}` è possibile personalizzare il colore della sezione laterale utilizzando i colori del tema. Ad esempio: `.point-aside-primary`, `.point-aside-success`, `.point-aside-danger`.
 
 {% comment %}Example name: Timeline point list, varianti colore{% endcomment %}
 {% capture example %}
-<ul class="it-point-list-wrapper">
-  <li class="it-point-list">
-    <div class="it-point-list-aside it-point-list-primary">
-      <div class="it-point-year font-monospace" aria-label="anno">{{'now' | date: "%Y"}}</div>
-      <div class="it-point-date font-monospace" aria-label="giorno">14</div>
-      <div class="it-point-month font-monospace" aria-label="mese"><span aria-hidden="true">OTT</span><span class="visually-hidden">Ottobre</span></div>
+<ol class="it-timeline-point-list">
+  <li class="timeline-point">
+    <div class="point-aside point-aside-primary">
+      <time datetime="2025-10-14">
+        <span class="visually-hidden">14 ottobre 2025</span>
+        <div class="point-visual" aria-hidden="true">
+          <div class="point-top font-monospace">2025</div>
+          <div class="point-main font-monospace">14</div>
+          <div class="point-bottom font-monospace">OTT</div>
+        </div>
+      </time>
     </div>
-    <div class="it-point-list-content">
+    <div class="point-content">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </div>
   </li>
-  <li class="it-point-list">
-    <div class="it-point-list-aside it-point-list-success">
-      <div class="it-point-year font-monospace" aria-label="anno">{{'now' | date: "%Y"}}</div>
-      <div class="it-point-date font-monospace" aria-label="giorno">14</div>
-      <div class="it-point-month font-monospace" aria-label="mese"><span aria-hidden="true">OTT</span><span class="visually-hidden">Ottobre</span></div>
+  <li class="timeline-point">
+    <div class="point-aside point-aside-success">
+      <time datetime="2025-10-14">
+        <span class="visually-hidden">14 ottobre 2025</span>
+        <div class="point-visual" aria-hidden="true">
+          <div class="point-top font-monospace">2025</div>
+          <div class="point-main font-monospace">14</div>
+          <div class="point-bottom font-monospace">OTT</div>
+        </div>
+      </time>
     </div>
-    <div class="it-point-list-content">
+    <div class="point-content">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </div>
   </li>
-  <li class="it-point-list">
-    <div class="it-point-list-aside it-point-list-info">
-      <div class="it-point-year font-monospace" aria-label="anno">{{'now' | date: "%Y"}}</div>
-      <div class="it-point-date font-monospace" aria-label="giorno">14</div>
-      <div class="it-point-month font-monospace" aria-label="mese"><span aria-hidden="true">OTT</span><span class="visually-hidden">Ottobre</span></div>
+  <li class="timeline-point">
+    <div class="point-aside point-aside-info">
+      <time datetime="2025-10-14">
+        <span class="visually-hidden">14 ottobre 2025</span>
+        <div class="point-visual" aria-hidden="true">
+          <div class="point-top font-monospace">2025</div>
+          <div class="point-main font-monospace">14</div>
+          <div class="point-bottom font-monospace">OTT</div>
+        </div>
+      </time>
     </div>
-    <div class="it-point-list-content">
+    <div class="point-content">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </div>
   </li>
-  <li class="it-point-list">
-    <div class="it-point-list-aside it-point-list-warning">
-      <div class="it-point-year font-monospace" aria-label="anno">{{'now' | date: "%Y"}}</div>
-      <div class="it-point-date font-monospace" aria-label="giorno">14</div>
-      <div class="it-point-month font-monospace" aria-label="mese"><span aria-hidden="true">OTT</span><span class="visually-hidden">Ottobre</span></div>
+  <li class="timeline-point">
+    <div class="point-aside point-aside-warning">
+      <time datetime="2025-10-14">
+        <span class="visually-hidden">14 ottobre 2025</span>
+        <div class="point-visual" aria-hidden="true">
+          <div class="point-top font-monospace">2025</div>
+          <div class="point-main font-monospace">14</div>
+          <div class="point-bottom font-monospace">OTT</div>
+        </div>
+      </time>
     </div>
-    <div class="it-point-list-content">
+    <div class="point-content">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </div>
   </li>
-  <li class="it-point-list">
-    <div class="it-point-list-aside it-point-list-danger">
-      <div class="it-point-year font-monospace" aria-label="anno">{{'now' | date: "%Y"}}</div>
-      <div class="it-point-date font-monospace" aria-label="giorno">14</div>
-      <div class="it-point-month font-monospace" aria-label="mese"><span aria-hidden="true">OTT</span><span class="visually-hidden">Ottobre</span></div>
+  <li class="timeline-point">
+    <div class="point-aside point-aside-danger">
+      <time datetime="2025-10-14">
+        <span class="visually-hidden">14 ottobre 2025</span>
+        <div class="point-visual" aria-hidden="true">
+          <div class="point-top font-monospace">2025</div>
+          <div class="point-main font-monospace">14</div>
+          <div class="point-bottom font-monospace">OTT</div>
+        </div>
+      </time>
     </div>
-    <div class="it-point-list-content">
+    <div class="point-content">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </div>
   </li>
-  <li class="it-point-list">
-    <div class="it-point-list-aside it-point-list-dark">
-      <div class="it-point-year font-monospace" aria-label="anno">{{'now' | date: "%Y"}}</div>
-      <div class="it-point-date font-monospace" aria-label="giorno">14</div>
-      <div class="it-point-month font-monospace" aria-label="mese"><span aria-hidden="true">OTT</span><span class="visually-hidden">Ottobre</span></div>
+  <li class="timeline-point">
+    <div class="point-aside point-aside-dark">
+      <time datetime="2025-10-14">
+        <span class="visually-hidden">14 ottobre 2025</span>
+        <div class="point-visual" aria-hidden="true">
+          <div class="point-top font-monospace">2025</div>
+          <div class="point-main font-monospace">14</div>
+          <div class="point-bottom font-monospace">OTT</div>
+        </div>
+      </time>
     </div>
-    <div class="it-point-list-content">
+    <div class="point-content">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </div>
   </li>
-</ul>
-
+</ol>
 {% endcapture %}{% include example.html content=example %}
 
 ### Esempio complesso
-Di seguito un esempio un po' più complesso.
+
+Di seguito un esempio che integra card nel contenuto della timeline.
 
 {% comment %}Example name: Point list, esempio complesso{% endcomment %}
 {% capture example %}
-  <ul class="it-point-list-wrapper">
-    <li class="it-point-list">
-      <div class="it-point-list-aside it-point-list-dark">
-        <div class="it-point-date font-monospace" aria-label="giorno">14</div>
-        <div class="it-point-month font-monospace" aria-label="mese"><span aria-hidden="true">OTT</span><span class="visually-hidden">Ottobre</span></div>
+<ol class="it-timeline-point-list">
+  <li class="timeline-point">
+    <div class="point-aside point-aside-dark">
+      <time datetime="2025-10-14">
+        <span class="visually-hidden">14 ottobre 2025</span>
+        <div class="point-visual" aria-hidden="true">
+          <div class="point-main font-monospace">14</div>
+          <div class="point-bottom font-monospace">OTT</div>
+        </div>
+      </time>
+    </div>
+    <div class="point-content">
+      <div class="row mb-5">
+        <div class="col-lg-7">
+          <!--start it-card-->
+          <article class="it-card rounded shadow-sm border">
+            <h4 class="it-card-title no_toc">
+              <a href="#">Titolo del contenuto</a>
+            </h4>
+            <div class="it-card-body">
+              <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
+            </div>
+            <footer class="it-card-related it-card-footer">
+              <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
+            </footer>
+          </article>
+          <!--end it-card-->
+        </div>
       </div>
-      <div class="it-point-list-content">
-        <div class="row mb-5">
-          <div class="col-lg-7">
-            <!--start it-card-->
-            <article class="it-card rounded shadow-sm border">
-              <!--card first child is the title (link)-->
-              <h4 class="it-card-title no_toc">
-                <a href="#">Titolo del contenuto</a>
+    </div>
+  </li>
+  <li class="timeline-point">
+    <div class="point-aside point-aside-danger">
+      <time datetime="2025-10-31">
+        <span class="visually-hidden">31 ottobre 2025</span>
+        <div class="point-visual" aria-hidden="true">
+          <div class="point-main font-monospace">31</div>
+          <div class="point-bottom font-monospace">OTT</div>
+        </div>
+      </time>
+    </div>
+    <div class="point-content">
+      <div class="row mb-5">
+        <div class="col-lg-7">
+          <!--start it-card-->
+          <article class="it-card it-card-inline it-card-inline-mini it-card-image rounded shadow-sm border">
+            <div class="it-card-inline-content">
+              <h4 class="it-card-title h4 no_toc">
+                <a href="#">Titolo contenuto editoriale</a>
               </h4>
-              <!--card body content-->
-              <div class="it-card-body">
-                <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
-              </div>
-              <!--finally the card footer metadata-->
               <footer class="it-card-related it-card-footer">
-                <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
+                <div class="it-card-taxonomy">
+                  <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
+                </div>
+                <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-10-12">22 aprile, {{ 'now' | date: "%Y" }}</time>
               </footer>
-            </article>
-            <!--end it-card-->
+            </div>
+            <div class="it-card-image-wrapper">
+              <div class="ratio ratio-1x1">
+                <figure class="figure img-full">
+                  <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+                </figure>
+              </div>
+            </div>
+          </article>
+          <!--end it-card-->
+        </div>
+      </div>
+    </div>
+  </li>
+  <li class="timeline-point">
+    <div class="point-aside point-aside-info">
+      <div>
+        <span class="visually-hidden">Milestone in corso</span>
+        <div class="point-visual" aria-hidden="true">
+          <div class="point-main font-monospace">
+            <svg class="icon icon-info icon-lg" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-clock"></use></svg>
           </div>
         </div>
       </div>
-    </li>
-    <li class="it-point-list">
-      <div class="it-point-list-aside it-point-list-danger">
-        <div class="it-point-date font-monospace" aria-label="giorno">31</div>
-        <div class="it-point-month font-monospace" aria-label="mese"><span aria-hidden="true">OTT</span><span class="visually-hidden">Ottobre</span></div>
-      </div>
-      <div class="it-point-list-content">
-        <div class="row mb-5">
-          <div class="col-lg-7">
-            <!--start it-card-->
-            <article class="it-card it-card-inline it-card-inline-mini it-card-image rounded shadow-sm border">
-              <!--card first child is all the card content: title (link) + footer -->
-              <div class="it-card-inline-content">
-                <h4 class="it-card-title h4 no_toc">
-                  <a href="#">Titolo contenuto editoriale</a>
-                </h4>
-                <footer class="it-card-related it-card-footer">
-                  <div class="it-card-taxonomy">
-                    <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
-                  </div>
-                  <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-10-12">22 aprile, {{ 'now' | date: "%Y" }}</time>
-                </footer>
-              </div>
-              <!--card second child is the image (optional)-->
-              <div class="it-card-image-wrapper">
-                <div class="ratio ratio-1x1">
-                  <figure class="figure img-full">
-                    <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
-                  </figure>
-                </div>
-              </div>
-            </article>
-            <!--end it-card-->
-          </div>
-        </div>
-      </div>
-    </li>
-    <li class="it-point-list">
-      <div class="it-point-list-aside it-point-list-info">
-        <div class="it-point-date font-monospace">
-          <svg class="icon icon-info icon-lg" role="img"><title>Milestone</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-clock"></use></svg>
-        </div>
-      </div>
-      <div class="it-point-list-content">
-        <div class="row mb-5">
-          <div class="col-lg-7">
-            <!--start it-card-->
-            <article class="it-card it-card-inline it-card-inline-mini it-card-inline-reverse it-card-image rounded shadow-sm border mb-3 mb-md-4">
-              <!--card first child is all the card content: title (link) + footer -->
-              <div class="it-card-inline-content">
-                <h4 class="it-card-title h4 no_toc">
-                  <a href="#">Titolo contenuto editoriale</a>
-                </h4>
-                <footer class="it-card-related it-card-footer">
-                  <div class="it-card-taxonomy">
-                    <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
-                  </div>
-                  <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-10-12">22 aprile, {{ 'now' | date: "%Y" }}</time>
-                </footer>
-              </div>
-              <!--card second child is the image (optional)-->
-              <div class="it-card-image-wrapper">
-                <div class="ratio ratio-1x1">
-                  <figure class="figure img-full">
-                    <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
-                  </figure>
-                </div>
-              </div>
-            </article>
-            <!--end it-card-->
-          </div>
-        </div>
-      </div>
-    </li>
-    <li class="it-point-list">
-      <div class="it-point-list-aside it-point-list-success">
-        <div class="it-point-date font-monospace">
-          <svg class="icon icon-success icon-lg" role="img"><title>Milestone</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-flag"></use></svg>
-        </div>
-      </div>
-      <div class="it-point-list-content">
-        <div class="row">
-          <div class="col-lg-7">
-            <!--start it-card-->
-            <article class="it-card it-card-image rounded shadow-sm border">
-              <!--card first child is the title (link)-->
-              <h4 class="it-card-title no_toc">
-                <a href="#">Titolo del contenuto</a>
+    </div>
+    <div class="point-content">
+      <div class="row mb-5">
+        <div class="col-lg-7">
+          <!--start it-card-->
+          <article class="it-card it-card-inline it-card-inline-mini it-card-inline-reverse it-card-image rounded shadow-sm border mb-3 mb-md-4">
+            <div class="it-card-inline-content">
+              <h4 class="it-card-title h4 no_toc">
+                <a href="#">Titolo contenuto editoriale</a>
               </h4>
-              <!--card second child is the image (optional)-->
-              <div class="it-card-image-wrapper">
-                <div class="ratio ratio-21x9">
-                  <figure class="figure img-full">
-                    <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
-                  </figure>
-                </div>
-              </div>
-              <!--card body content-->
-              <div class="it-card-body">
-                <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
-              </div>
-              <!--finally the card footer metadata-->
               <footer class="it-card-related it-card-footer">
-                <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
+                <div class="it-card-taxonomy">
+                  <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
+                </div>
+                <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-10-12">22 aprile, {{ 'now' | date: "%Y" }}</time>
               </footer>
-            </article>
-            <!--end it-card-->
+            </div>
+            <div class="it-card-image-wrapper">
+              <div class="ratio ratio-1x1">
+                <figure class="figure img-full">
+                  <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+                </figure>
+              </div>
+            </div>
+          </article>
+          <!--end it-card-->
+        </div>
+      </div>
+    </div>
+  </li>
+  <li class="timeline-point">
+    <div class="point-aside point-aside-success">
+      <div>
+        <span class="visually-hidden">Milestone completata</span>
+        <div class="point-visual" aria-hidden="true">
+          <div class="point-main font-monospace">
+            <svg class="icon icon-success icon-lg" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-flag"></use></svg>
           </div>
         </div>
       </div>
-    </li>
-  </ul>
-
+    </div>
+    <div class="point-content">
+      <div class="row">
+        <div class="col-lg-7">
+          <!--start it-card-->
+          <article class="it-card it-card-image rounded shadow-sm border">
+            <h4 class="it-card-title no_toc">
+              <a href="#">Titolo del contenuto</a>
+            </h4>
+            <div class="it-card-image-wrapper">
+              <div class="ratio ratio-21x9">
+                <figure class="figure img-full">
+                  <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+                </figure>
+              </div>
+            </div>
+            <div class="it-card-body">
+              <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
+            </div>
+            <footer class="it-card-related it-card-footer">
+              <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
+            </footer>
+          </article>
+          <!--end it-card-->
+        </div>
+      </div>
+    </div>
+  </li>
+</ol>
 {% endcapture %}{% include example.html content=example %}

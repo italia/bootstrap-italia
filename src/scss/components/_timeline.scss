@@ -294,11 +294,309 @@
   }
 }
 
+scss
+
+// Timeline component styles
+
+//mobile
+.it-timeline-wrapper {
+  .it-now-label {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    font-size: 1rem;
+    font-family: $font-family-monospace;
+    color: $primary;
+    font-weight: 600;
+  }
+
+  .row {
+    position: relative;
+    padding-top: $v-gap * 6;
+
+    //padding-bottom: $v-gap*6;
+    &:after {
+      content: '';
+      width: $timeline-width;
+      background: $timeline-border-color;
+      position: absolute;
+      left: $v-gap * 5;
+      top: -$v-gap * 2;
+      bottom: -$v-gap * 2;
+    }
+  }
+
+  .timeline-element {
+    padding: $timeline-content-padding;
+    position: relative;
+    z-index: 1;
+
+    .card {
+      // xxx deprecated with old .card
+      background: none;
+    }
+
+    .it-card {
+      margin-top: 16px;
+      margin-bottom: 16px;
+
+      + .it-card {
+        margin-top: 4px;
+      }
+
+      @include media-breakpoint-down(lg) {
+        margin-top: 32px;
+        margin-bottom: 32px;
+        margin-left: -24px;
+        width: auto;
+
+        + .it-card {
+          margin-top: 8px;
+        }
+      }
+    }
+  }
+
+  .it-pin-wrapper {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: -$timeline-pin-circle-size * 0.5;
+    z-index: 4;
+    left: calc($timeline-padding / 2);
+
+    .pin-icon {
+      width: $timeline-pin-circle-size;
+      height: $timeline-pin-circle-size;
+      border-radius: $timeline-pin-circle-size;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: $card-shadow;
+      border: $timeline-pin-circle-border;
+      margin-right: $v-gap * 2;
+      background: $white;
+    }
+
+    svg {
+      width: $timeline-pin-size;
+      height: $timeline-pin-size;
+      fill: $primary;
+    }
+
+    .pin-text {
+      color: $white;
+      font-weight: 600;
+      text-transform: uppercase;
+      background: $timeline-pin-background;
+      border-radius: $border-radius;
+      font-family: $font-family-monospace;
+      font-size: var(--bs-body-font-size);
+      line-height: var(--bs-body-line-height);
+
+      span {
+        padding: $v-gap * 0.5 $v-gap * 2;
+        display: block;
+        position: relative;
+
+        &:after {
+          content: '';
+          width: 10px;
+          height: 10px;
+          background: $timeline-pin-background;
+          border-radius: 3px;
+          position: absolute;
+          left: -4px;
+          top: 50%;
+          transform: translateY(-50%) rotate(45deg);
+        }
+      }
+    }
+
+    &.it-now {
+      .pin-icon {
+        background: $primary;
+      }
+
+      svg {
+        fill: $white;
+      }
+
+      .pin-text {
+        background: $primary;
+
+        span {
+          &:after {
+            background: $primary;
+          }
+        }
+      }
+    }
+
+    &.it-evidence {
+      .pin-icon {
+        background: $timeline-pin-background;
+      }
+
+      svg {
+        fill: $white;
+      }
+
+      .pin-text {
+        background: $timeline-pin-background;
+
+        span {
+          &:after {
+            background: $timeline-pin-background;
+          }
+        }
+      }
+    }
+  }
+
+  .card-title {
+    // xxx deprecated with old .card
+    text-transform: uppercase;
+  }
+}
+
+//small - tablet
+@include media-breakpoint-up(lg) {
+  .it-timeline-wrapper {
+    .row {
+      &:after {
+        content: '';
+        left: calc(50% - #{$timeline-width});
+      }
+    }
+
+    .timeline-element {
+      padding: $timeline-content-padding;
+      width: 50%;
+    }
+
+    .col-12 {
+      .card-wrapper {
+        // xxx deprecated with old .card
+        .card {
+          border: none;
+        }
+      }
+    }
+
+    // col rules
+    .col-12:nth-child(odd) {
+      .it-now-label {
+        right: 50%;
+        transform: translateX(100%);
+        display: flex;
+        align-items: center;
+
+        &:before {
+          content: '';
+          display: inline-block;
+          height: 1px;
+          width: $v-gap * 2;
+          background: $primary;
+          margin-right: $v-gap * 2;
+        }
+      }
+
+      .timeline-element {
+        padding: $timeline-content-padding-reverse;
+      }
+
+      .card-wrapper {
+        // xxx deprecated with old .card
+        .card {
+          text-align: right;
+
+          &:after {
+            margin-left: auto;
+            display: inline-block;
+            margin-right: $v-gap * 3;
+          }
+
+          a.read-more {
+            right: $v-gap * 3;
+          }
+        }
+      }
+
+      .it-pin-wrapper {
+        flex-direction: row-reverse;
+        left: auto;
+        right: -62px;
+
+        .pin-icon {
+          margin-right: 0;
+          margin-left: $v-gap * 2;
+        }
+
+        .pin-text {
+          span {
+            &:after {
+              left: auto;
+              right: -4px;
+            }
+          }
+        }
+
+        &.it-evidence {
+          .pin-text {
+            span {
+              &:after {
+                border-color: transparent transparent transparent $primary;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .col-12:nth-child(even) {
+      .it-now-label {
+        left: 0;
+        transform: translateX(-100%);
+        display: flex;
+        align-items: center;
+
+        &:after {
+          content: '';
+          display: inline-block;
+          height: 1px;
+          width: $v-gap * 2;
+          background: $primary;
+          margin-left: $v-gap * 2;
+        }
+      }
+
+      .timeline-element {
+        position: relative;
+        left: 50%;
+
+        .it-pin-wrapper {
+          left: -66px;
+        }
+      }
+    }
+
+    .it-pin-wrapper {
+      position: relative;
+
+      .pin-text {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
 // Timeline Point List component styles
 
 .it-timeline-point-list {
   @at-root ol#{&},
-  ul#{&}, div#{&} { // support ul and div only for maximum flexibility, but ol is the recommended semantic markup
+  ul#{&} {
     padding-left: 0;
     list-style: none;
   }
@@ -306,51 +604,65 @@
   .timeline-point {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    align-items: center; // default: everything centered vertically
 
     .point-aside {
       position: relative;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
       padding: 0.5rem 1rem;
       color: $primary;
       border-right-width: 1px;
       border-right-style: solid;
       border-color: $primary;
+      text-align: center;
 
       &:after {
         content: '';
         position: absolute;
         width: 9px;
         height: 9px;
-        top: 2.4rem;
+        // Default: dot centered vertically
+        top: 50%;
         right: -5px;
-        transform: translateY(-5px);
+        transform: translateY(-50%);
         border-radius: 50%;
         background-color: $primary;
       }
 
-      &:has(.point-year):has(.point-month) {
-        &:after {
-          top: 3.872rem;
-        }
+      // Visual wrapper for aria-hidden content
+      .point-visual {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
       }
 
-      .point-date {
+      // Main positional classes
+      .point-main {
         font-size: 2.75rem;
         line-height: 1.1;
-        // keep width in case of icon
-        min-width: 53px;
+        min-width: 53px; // keep width in case of icon
       }
 
-      .point-month,
-      .point-year {
+      .point-top,
+      .point-bottom {
         font-size: 1rem;
         text-transform: uppercase;
       }
 
+      // Legacy aliases for date-specific usage (maintained for convenience)
+      // These work as synonyms: .point-date = .point-main, .point-month = .point-bottom, .point-year = .point-top
+      .point-date {
+        @extend .point-main;
+      }
+
+      .point-month {
+        @extend .point-bottom;
+      }
+
+      .point-year {
+        @extend .point-top;
+      }
+
+      // Color variants
       @each $color, $value in $theme-colors {
         &.point-aside-#{$color} {
           color: $value;
@@ -366,45 +678,49 @@
     .point-content {
       flex: 1;
       margin-left: 2em;
-      align-self: center;
+      // No align-self needed, inherits from parent align-items: center
 
-      &>* {
+      & > * {
         width: 100%;
       }
     }
 
+    // Variant for long content: align dot to top
+    &.timeline-point-align-top {
+      align-items: flex-start;
+
+      .point-aside {
+        &:after {
+          // Reset to fixed position from top
+          top: 2.4rem;
+          transform: translateY(-5px);
+        }
+
+        // Adjust dot position when top and bottom elements are present
+        &:has(.point-top):has(.point-bottom),
+        &:has(.point-year):has(.point-month) {
+          &:after {
+            top: 3.872rem;
+          }
+        }
+      }
+    }
+
+    // Compact variant
     &.timeline-point-xs {
       .point-aside {
         min-width: 54px;
         padding: 0.3rem 1rem 0.3rem 0;
 
-        &:after {
-          top: 1.3rem;
-        }
-
-        &:has(.it-card):not(:has(.point-month)),
-        &:has(.point-month):not(:has(.point-year)) {
-          &:after {
-            top: 2rem;
-          }
-        }
-
-        &:has(.it-card):has(.point-month) {
-          &:after {
-            top: 2.867rem;
-          }
-        }
-
+        .point-main,
         .point-date {
-          flex: 0;
           font-size: 1.5rem;
           line-height: 1;
-          // keep width in case of icon
-          min-width: 32px;
+          min-width: 32px; // keep width in case of icon
         }
 
+        .point-bottom,
         .point-month {
-          flex: 0;
           font-size: 0.875rem;
           text-transform: uppercase;
         }
@@ -413,11 +729,38 @@
       .point-content {
         margin-left: 1em;
       }
+
+      // Compact variant with align-top
+      &.timeline-point-align-top {
+        .point-aside {
+          &:after {
+            top: 1.3rem;
+          }
+
+          // Adjust dot position for compact variant with multiple elements
+          &:has(.point-main):not(:has(.point-bottom)),
+          &:has(.point-date):not(:has(.point-month)),
+          &:has(.point-bottom):not(:has(.point-top)),
+          &:has(.point-month):not(:has(.point-year)) {
+            &:after {
+              top: 2rem;
+            }
+          }
+
+          &:has(.point-main):has(.point-bottom),
+          &:has(.point-date):has(.point-month) {
+            &:after {
+              top: 2.867rem;
+            }
+          }
+        }
+      }
     }
   }
 
   // Tablet horizontal / small desktop
   @include media-breakpoint-up(lg) {
+    // Horizontal step layout variant
     &.it-timeline-point-list-step {
       display: flex;
       flex-direction: row;
@@ -435,10 +778,14 @@
           border-right-width: 0;
           border-bottom-width: 1px;
           border-bottom-style: solid;
-          flex-direction: row;
-          justify-content: center;
-          align-items: flex-end;
 
+          .point-visual {
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-end;
+          }
+
+          .point-bottom,
           .point-month {
             margin-left: $v-gap;
             margin-bottom: -2px;
