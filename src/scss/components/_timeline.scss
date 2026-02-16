@@ -1,3 +1,5 @@
+// Timeline component styles
+
 //mobile
 .it-timeline-wrapper {
   .it-now-label {
@@ -287,6 +289,170 @@
 
       .pin-text {
         font-size: 1rem;
+      }
+    }
+  }
+}
+
+// Timeline point list component styles
+
+.it-timeline-point-list-wrapper {
+  @at-root ul#{&} {
+    padding-left: 0;
+  }
+  .it-point-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    .it-point-list-aside {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      color: $primary;
+      border-right-width: 1px;
+      border-right-style: solid;
+      border-color: $primary;
+
+      &:after {
+        content: '';
+        position: absolute;
+        width: 9px;
+        height: 9px;
+
+        top: 2.4rem;
+        right: -5px;
+        transform: translateY(-5px);
+        border-radius: 50%;
+        background-color: $primary;
+      }
+      &:has(.point-year):has(.point-month) {
+        &:after {
+          top: 3.872rem;
+        }
+      }
+
+      .it-point-date {
+        font-size: 2.75rem;
+        line-height: 1.1;
+
+        // keep width in case of icon
+        min-width: 53px;
+      }
+
+      .it-point-month,
+      .it-point-year {
+        font-size: 1rem;
+        text-transform: uppercase;
+      }
+
+      @each $color, $value in $theme-colors {
+        &.it-point-list-#{$color} {
+          color: $value;
+          border-color: $value;
+
+          &:after {
+            background-color: $value;
+          }
+        }
+      }
+    }
+
+    .it-point-list-content {
+      flex: 1;
+      margin-left: 2em;
+      align-self: center;
+
+      & > * {
+        width: 100%;
+      }
+    }
+
+    &.it-point-list-xs {
+      .it-point-list-aside {
+        min-width: 54px;
+        padding: 0.3rem 1rem 0.3rem 0;
+
+        &:after {
+          top: 1.3rem;
+        }
+        &:has(.it-card):not(:has(.it-point-month)),
+        &:has(.it-point-month):not(:has(.it-point-year)) {
+          &:after {
+            top: 2rem;
+          }
+        }
+        &:has(.it-card):has(.it-point-month) {
+          &:after {
+            top: 2.867rem;
+          }
+        }
+
+        .it-point-date {
+          flex: 0;
+          font-size: 1.5rem;
+          line-height: 1;
+
+          // keep width in case of icon
+          min-width: 32px;
+        }
+
+        .it-point-month {
+          flex: 0;
+          font-size: 0.875rem;
+          text-transform: uppercase;
+        }
+      }
+
+      .it-point-list-content {
+        margin-left: 1em;
+      }
+    }
+  }
+  //Tablet horizontal / small desktop
+  @include media-breakpoint-up(lg) {
+    &.it-point-list-step-wrapper {
+      display: flex;
+      flex-direction: row;
+
+      .it-point-list-step {
+        flex: 1;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .it-point-list-aside {
+          padding: $v-gap * 2 0;
+          min-height: 65px;
+          width: 100%;
+
+          border-right-width: 0;
+          border-bottom-width: 1px;
+          border-bottom-style: solid;
+
+          flex-direction: row;
+          justify-content: center;
+          align-items: flex-end;
+
+          .it-point-month {
+            margin-left: $v-gap;
+            margin-bottom: -2px;
+          }
+
+          &:after {
+            top: 100%;
+            right: 50%;
+            transform: translate(2px, -4px);
+          }
+        }
+
+        .it-point-list-content {
+          margin: 0;
+          text-align: center;
+        }
       }
     }
   }
