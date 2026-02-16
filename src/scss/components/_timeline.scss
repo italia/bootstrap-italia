@@ -180,6 +180,7 @@
 
     .col-12 {
       .card-wrapper {
+
         // xxx deprecated with old .card
         .card {
           border: none;
@@ -210,6 +211,7 @@
       }
 
       .card-wrapper {
+
         // xxx deprecated with old .card
         .card {
           text-align: right;
@@ -294,7 +296,6 @@
   }
 }
 
-scss
 
 // Timeline component styles
 
@@ -478,6 +479,7 @@ scss
 
     .col-12 {
       .card-wrapper {
+
         // xxx deprecated with old .card
         .card {
           border: none;
@@ -508,6 +510,7 @@ scss
       }
 
       .card-wrapper {
+
         // xxx deprecated with old .card
         .card {
           text-align: right;
@@ -595,20 +598,24 @@ scss
 // Timeline Point List component styles
 
 .it-timeline-point-list {
+
   @at-root ol#{&},
   ul#{&} {
     padding-left: 0;
     list-style: none;
   }
 
+  display: flex;
+  flex-direction: column;
+
   .timeline-point {
     display: flex;
     flex-direction: row;
     align-items: center; // default: everything centered vertically
-    
+
     .point-aside {
       position: relative;
-      padding: 0.5rem 1rem;
+      padding: 1.5rem 1rem;
       color: $primary;
       border-right-width: 1px;
       border-right-style: solid;
@@ -640,12 +647,27 @@ scss
         font-size: 2.75rem;
         line-height: 1.1;
         min-width: 53px; // keep width in case of icon
+
+        @include media-breakpoint-down(md) {
+          font-size: 1.5rem; // Compact on mobile
+          min-width: 32px;
+        }
       }
 
       .point-top,
       .point-bottom {
         font-size: 1rem;
         text-transform: uppercase;
+
+        @include media-breakpoint-down(md) {
+          font-size: 0.875rem; // Compact on mobile
+        }
+      }
+
+
+      @include media-breakpoint-down(md) {
+        min-width: 54px;
+        padding: 1rem 1rem 1rem 0;
       }
 
       // Legacy aliases for date-specific usage (maintained for convenience)
@@ -677,27 +699,19 @@ scss
 
     .point-content {
       flex: 1;
-      margin-left: 2em;
-      padding-bottom: $v-gap * 3;
+      margin-left: 1.5em;
 
       @include media-breakpoint-down(md) {
         margin-left: 1.5em; // Slightly tighter on mobile
       }
 
-      & > * {
+      &>* {
         width: 100%;
       }
 
       // Remove margin from last child for better vertical centering
-      & > *:last-child {
+      &>*:last-child {
         margin-bottom: 0;
-      }
-    }
-
-     // Remove padding from last timeline-point
-    &:last-child {
-      .point-content {
-        padding-bottom: 0;
       }
     }
 
@@ -707,7 +721,7 @@ scss
 
       .point-aside {
         align-self: stretch; // Extend aside to full height of timeline-point
-        
+
         &:after {
           // Reset to fixed position from top
           top: 2.4rem;
@@ -720,6 +734,32 @@ scss
           &:after {
             top: 3.872rem;
           }
+        }
+      }
+    }
+
+    &.timeline-point-stack-mobile {
+      @include media-breakpoint-down(md) {
+        flex-direction: column;
+        align-items: flex-start;
+
+        .point-aside {
+          border-right-width: 0;
+          border-bottom-width: 1px;
+          width: 100%;
+
+          &:after {
+            left: 50%;
+            top: 100%;
+            right: auto;
+            transform: translate(-50%, -4px);
+          }
+        }
+
+        .point-content {
+          margin-left: 0;
+          margin-top: $v-gap * 2;
+          width: 100%;
         }
       }
     }
@@ -778,6 +818,7 @@ scss
 
   // Tablet horizontal / small desktop
   @include media-breakpoint-up(lg) {
+
     // Horizontal step layout variant
     &.it-timeline-point-list-step {
       display: flex;

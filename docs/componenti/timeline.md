@@ -397,9 +397,9 @@ Tramite il contenitore `.point-top` è possibile visualizzare anche l'anno.
 </ol>
 {% endcapture %}{% include example.html content=example %}
 
-### Layout compatto
+### Layout compatto su desktop
 
-Tramite la classe `.timeline-point-xs` applicata all'elemento `.timeline-point` è possibile rendere più compatta la visualizzazione.
+Tramite la classe `.timeline-point-xs` applicata all'elemento `.timeline-point` è possibile rendere più compatta la visualizzazione del blocco di aside anche su desktop, facendola corrispondere alla visualizzazione per dispositivi mobile.
 
 {% comment %}Example name: Timeline point list, compatta{% endcomment %}
 {% capture example %}
@@ -432,7 +432,7 @@ La sezione laterale può essere usata anche per visualizzare progressi, step o m
 {% comment %}Example name: Timeline point list, traguardi numerici{% endcomment %}
 {% capture example %}
 <ol class="it-timeline-point-list">
-  <li class="timeline-point timeline-point-xs">
+  <li class="timeline-point">
     <div class="point-aside point-aside-primary">
       <div>
         <span class="visually-hidden">Passo 1</span>
@@ -445,7 +445,7 @@ La sezione laterale può essere usata anche per visualizzare progressi, step o m
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </div>
   </li>
-  <li class="timeline-point timeline-point-xs">
+  <li class="timeline-point">
     <div class="point-aside point-aside-primary">
       <div>
         <span class="visually-hidden">Passo 1 di 3</span>
@@ -459,7 +459,7 @@ La sezione laterale può essere usata anche per visualizzare progressi, step o m
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </div>
   </li>
-  <li class="timeline-point timeline-point-xs">
+  <li class="timeline-point">
     <div class="point-aside point-aside-primary">
       <div>
         <span class="visually-hidden">Categoria AB, passo 1 di 3</span>
@@ -484,7 +484,7 @@ La sezione laterale può essere usata anche per visualizzare progressi, step o m
 {% comment %}Example name: Timeline point list, milestone con icone{% endcomment %}
 {% capture example %}
 <ol class="it-timeline-point-list">
-  <li class="timeline-point timeline-point-xs">
+  <li class="timeline-point">
     <div class="point-aside point-aside-primary">
       <div>
         <span class="visually-hidden">Milestone completata</span>
@@ -499,7 +499,7 @@ La sezione laterale può essere usata anche per visualizzare progressi, step o m
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </div>
   </li>
-  <li class="timeline-point timeline-point-xs">
+  <li class="timeline-point">
     <div class="point-aside point-aside-primary">
       <div>
         <span class="visually-hidden">Documento rilasciato</span>
@@ -515,7 +515,7 @@ La sezione laterale può essere usata anche per visualizzare progressi, step o m
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </div>
   </li>
-  <li class="timeline-point timeline-point-xs">
+  <li class="timeline-point">
     <div class="point-aside point-aside-primary">
       <div>
         <span class="visually-hidden">Versione 2, codice JavaScript</span>
@@ -637,16 +637,126 @@ Modificando la classe `.point-aside-{suffisso}` è possibile personalizzare il c
 </ol>
 {% endcapture %}{% include example.html content=example %}
 
+### Timeline stile servizi pubblici
+
+Un layout ottimizzato per presentare scadenze e procedure amministrative, come quelle dei servizi pubblici. Le card hanno sfondo bianco per maggiore leggibilità.
+
+Per fissare verticalmente il punto dell'elenco all'inizio del contenuto usa la classe `.timeline-point-align-top` sull'elemento `.timeline-point`.
+
+{% comment %}Example name: Timeline point list, servizi pubblici{% endcomment %}
+{% capture example %}
+<ol class="it-timeline-point-list">
+  <li class="timeline-point timeline-point-align-top">
+    <div class="point-aside point-aside-dark">
+      <time datetime="2022-01-04">
+        <span class="visually-hidden">4 gennaio 2022</span>
+        <div class="point-visual" aria-hidden="true">
+          <div class="point-top font-monospace">2022</div>
+          <div class="point-main font-monospace">04</div>
+          <div class="point-bottom font-monospace">gen</div>
+        </div>
+      </time>
+    </div>
+    <div class="point-content">
+     <div class="row mb-4">
+      <div class="col-lg-9">
+          <div class="it-card rounded shadow-sm border bg-white it-card-border-top it-card-border-top-secondary">
+            <h4 class="it-card-title h5 no_toc">Apertura iscrizioni</h4>
+            <div class="it-card-body">
+              <p class="it-card-text mb-0">Inizio del periodo per presentare la domanda di iscrizione all'asilo.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>    
+  <li class="timeline-point timeline-point-align-top">
+    <div class="point-aside point-aside-dark">
+      <time datetime="2022-02-04">
+        <span class="visually-hidden">4 febbraio 2022</span>
+        <div class="point-visual" aria-hidden="true">
+          <div class="point-top font-monospace">2022</div>
+          <div class="point-main font-monospace">04</div>
+          <div class="point-bottom font-monospace">feb</div>
+        </div>
+      </time>
+    </div>
+    <div class="point-content">
+      <div class="row mb-4">
+        <div class="col-lg-9">
+          <div class="it-card rounded shadow-sm border bg-white it-card-border-top it-card-border-top-secondary">
+            <h4 class="it-card-title h5 no_toc">Termine presentazione domande</h4>
+            <div class="it-card-body">
+              <p class="it-card-text mb-0">Scadenza ultima per l'invio della documentazione richiesta.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>    
+  <li class="timeline-point timeline-point-align-top">
+    <div class="point-aside point-aside-dark">
+      <time datetime="2022-03-02">
+        <span class="visually-hidden">2 marzo 2022</span>
+        <div class="point-visual" aria-hidden="true">
+          <div class="point-top font-monospace">2022</div>
+          <div class="point-main font-monospace">02</div>
+          <div class="point-bottom font-monospace">mar</div>
+        </div>
+      </time>
+    </div>
+    <div class="point-content">
+      <div class="row mb-4">
+        <div class="col-lg-9">
+          <div class="it-card rounded shadow-sm border bg-white it-card-border-top it-card-border-top-secondary">
+            <h4 class="it-card-title h5 no_toc">Pubblicazione graduatorie</h4>
+            <div class="it-card-body">
+              <p class="it-card-text mb-0">Pubblicazione delle graduatorie provvisorie sul sito istituzionale.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>    
+  <li class="timeline-point timeline-point-align-top">
+    <div class="point-aside point-aside-dark">
+      <time datetime="2022-04-02">
+        <span class="visually-hidden">2 aprile 2022</span>
+        <div class="point-visual" aria-hidden="true">
+          <div class="point-top font-monospace">2022</div>
+          <div class="point-main font-monospace">02</div>
+          <div class="point-bottom font-monospace">apr</div>
+        </div>
+      </time>
+    </div>
+    <div class="point-content">
+      <div class="row mb-4">
+        <div class="col-lg-9">
+          <div class="it-card rounded shadow-sm border bg-white it-card-border-top it-card-border-top-secondary">
+            <h4 class="it-card-title h5 no_toc">Perfezionamento domande</h4>
+            <div class="it-card-body">
+              <p class="it-card-text mb-0">Termine ultimo per la conferma dell'iscrizione e il pagamento della quota.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+</ol>
+{% endcapture %}{% include example.html content=example %}
+
 ### Esempio complesso con punto fissato verticalmente
 
 Di seguito un esempio che integra card nel contenuto della timeline.
 
-**Nota bene:** per fissare verticalmente il punto dell'elenco all'inizio del contenuto usa la classe `.timeline-point-align-top` sull'elemento `.timeline-point`
+Per fissare verticalmente il punto dell'elenco all'inizio del contenuto usa la classe `.timeline-point-align-top` sull'elemento `.timeline-point`.
+
+Usa la classe `.timeline-point-stack-mobile` per permettere su mobile di disporre verticalmente la sezione laterale sopra al contenuto, ottimizzando lo spazio per card complesse.
 
 {% comment %}Example name: Point list, esempio complesso{% endcomment %}
 {% capture example %}
 <ol class="it-timeline-point-list">
-  <li class="timeline-point timeline-point-align-top">
+  <li class="timeline-point timeline-point-align-top timeline-point-stack-mobile">
     <div class="point-aside point-aside-dark">
       <time datetime="2025-10-14">
         <span class="visually-hidden">14 ottobre 2025</span>
@@ -676,7 +786,7 @@ Di seguito un esempio che integra card nel contenuto della timeline.
       </div>
     </div>
   </li>
-  <li class="timeline-point timeline-point-align-top">
+  <li class="timeline-point timeline-point-align-top timeline-point-stack-mobile">
     <div class="point-aside point-aside-danger">
       <time datetime="2025-10-31">
         <span class="visually-hidden">31 ottobre 2025</span>
@@ -715,7 +825,7 @@ Di seguito un esempio che integra card nel contenuto della timeline.
       </div>
     </div>
   </li>
-  <li class="timeline-point timeline-point-align-top">
+  <li class="timeline-point timeline-point-align-top timeline-point-stack-mobile">
     <div class="point-aside point-aside-info">
       <div>
         <span class="visually-hidden">Milestone in corso</span>
@@ -755,7 +865,7 @@ Di seguito un esempio che integra card nel contenuto della timeline.
       </div>
     </div>
   </li>
-  <li class="timeline-point timeline-point-align-top">
+  <li class="timeline-point timeline-point-align-top timeline-point-stack-mobile">
     <div class="point-aside point-aside-success">
       <div>
         <span class="visually-hidden">Milestone completata</span>
