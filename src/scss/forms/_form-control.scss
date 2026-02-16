@@ -31,6 +31,7 @@
   background-repeat: no-repeat;
   background-position: center right;
   background-size: 45px 30%;
+  line-height: var(--#{$prefix}label-leading);
 
   &:disabled {
     cursor: not-allowed;
