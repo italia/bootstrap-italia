@@ -96,22 +96,10 @@ input {
 }
 
 select {
-  // padding: $form-select-padding-y $form-select-indicator-padding $form-select-padding-y $form-select-padding-x;
-  // -moz-padding-start: subtract($form-select-padding-x, 3px); // See https://github.com/twbs/bootstrap/issues/32636
-  // font-family: $form-select-font-family;
-  // @include font-size($form-select-font-size);
-  // font-weight: $form-select-font-weight;
-  // line-height: $form-select-line-height;
-  // color: $form-select-color;
-  // background-color: $form-select-bg;
   background-image: escape-svg($form-select-indicator);
   background-repeat: no-repeat;
   background-position: right var(--#{$prefix}form-control-spacing) center;
   background-size: 16px 12px;
-  // border: $form-select-border-width solid $form-select-border-color;
-  // @include border-radius($form-select-border-radius, 0);
-  // @include box-shadow($form-select-box-shadow);
-  // @include transition($form-select-transition);
   appearance: none;
 
   &:focus {
@@ -284,11 +272,6 @@ input::-webkit-datetime-edit {
 
 .form-check {
   position: relative;
-
-  // &:not(:last-child),
-  // &:not(.form-check-inline) {
-  //   margin-bottom: var(--#{$prefix}spacing-s);
-  // }
 
   // Add vertical spacing for consequential elements
   & + & {
@@ -534,8 +517,6 @@ input::-webkit-datetime-edit {
 
 .form-check-inline {
   display: inline-block;
-  // margin-right: $form-check-inline-margin-end;
-
   &:not(:last-child) {
     margin-right: var(--#{$prefix}spacing-m);
   }
