@@ -294,18 +294,21 @@
   }
 }
 
-// Timeline point list component styles
+// Timeline Point List component styles
 
-.it-timeline-point-list-wrapper {
-  @at-root ul#{&} {
+.it-timeline-point-list {
+  @at-root ol#{&},
+  ul#{&}, div#{&} { // support ul and div only for maximum flexibility, but ol is the recommended semantic markup
     padding-left: 0;
+    list-style: none;
   }
-  .it-point-list {
+
+  .timeline-point {
     display: flex;
     flex-direction: row;
     justify-content: center;
 
-    .it-point-list-aside {
+    .point-aside {
       position: relative;
       display: flex;
       flex-direction: column;
@@ -322,35 +325,34 @@
         position: absolute;
         width: 9px;
         height: 9px;
-
         top: 2.4rem;
         right: -5px;
         transform: translateY(-5px);
         border-radius: 50%;
         background-color: $primary;
       }
+
       &:has(.point-year):has(.point-month) {
         &:after {
           top: 3.872rem;
         }
       }
 
-      .it-point-date {
+      .point-date {
         font-size: 2.75rem;
         line-height: 1.1;
-
         // keep width in case of icon
         min-width: 53px;
       }
 
-      .it-point-month,
-      .it-point-year {
+      .point-month,
+      .point-year {
         font-size: 1rem;
         text-transform: uppercase;
       }
 
       @each $color, $value in $theme-colors {
-        &.it-point-list-#{$color} {
+        &.point-aside-#{$color} {
           color: $value;
           border-color: $value;
 
@@ -361,83 +363,83 @@
       }
     }
 
-    .it-point-list-content {
+    .point-content {
       flex: 1;
       margin-left: 2em;
       align-self: center;
 
-      & > * {
+      &>* {
         width: 100%;
       }
     }
 
-    &.it-point-list-xs {
-      .it-point-list-aside {
+    &.timeline-point-xs {
+      .point-aside {
         min-width: 54px;
         padding: 0.3rem 1rem 0.3rem 0;
 
         &:after {
           top: 1.3rem;
         }
-        &:has(.it-card):not(:has(.it-point-month)),
-        &:has(.it-point-month):not(:has(.it-point-year)) {
+
+        &:has(.it-card):not(:has(.point-month)),
+        &:has(.point-month):not(:has(.point-year)) {
           &:after {
             top: 2rem;
           }
         }
-        &:has(.it-card):has(.it-point-month) {
+
+        &:has(.it-card):has(.point-month) {
           &:after {
             top: 2.867rem;
           }
         }
 
-        .it-point-date {
+        .point-date {
           flex: 0;
           font-size: 1.5rem;
           line-height: 1;
-
           // keep width in case of icon
           min-width: 32px;
         }
 
-        .it-point-month {
+        .point-month {
           flex: 0;
           font-size: 0.875rem;
           text-transform: uppercase;
         }
       }
 
-      .it-point-list-content {
+      .point-content {
         margin-left: 1em;
       }
     }
   }
-  //Tablet horizontal / small desktop
+
+  // Tablet horizontal / small desktop
   @include media-breakpoint-up(lg) {
-    &.it-point-list-step-wrapper {
+    &.it-timeline-point-list-step {
       display: flex;
       flex-direction: row;
 
-      .it-point-list-step {
+      .timeline-point {
         flex: 1;
         flex-direction: column;
         justify-content: center;
         align-items: center;
 
-        .it-point-list-aside {
+        .point-aside {
           padding: $v-gap * 2 0;
           min-height: 65px;
           width: 100%;
-
           border-right-width: 0;
           border-bottom-width: 1px;
           border-bottom-style: solid;
-
           flex-direction: row;
           justify-content: center;
           align-items: flex-end;
 
-          .it-point-month {
+          .point-month {
             margin-left: $v-gap;
             margin-bottom: -2px;
           }
@@ -449,7 +451,7 @@
           }
         }
 
-        .it-point-list-content {
+        .point-content {
           margin: 0;
           text-align: center;
         }
