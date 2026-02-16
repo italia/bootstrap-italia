@@ -285,7 +285,7 @@ La Timeline Point List permette la rappresentazione di una sequenza di eventi o 
 
 Il componente è caratterizzato da un elenco ordinato `<ol>` con classe `.it-timeline-point-list`. Ogni elemento `<li>` della lista ha classe `.timeline-point` e contiene una sezione laterale `.point-aside` per date o milestone, e una sezione principale `.point-content` per il contenuto.
 
-Il componente dovrebbe essere implemento come elenco ordinato `ol` per usare la corretta semantica HTML. Tuttavia, per la massima flessibilità è possibile implementarlo come elenco non ordinato `ul` o, nel caso di pochi eventi, scegliere con consapevolezza una sequenza di elementi `div` con elementi heading interni.  
+Il componente è implementato come elenco ordinato `<ol> per garantire la corretta semantica HTML. In casi eccezionali è possibile utilizzare un elenco non ordinato `<ul>`, ma l'uso di `<ol>` è fortemente raccomandato per rappresentare correttamente la sequenza cronologica.
 
 ### Struttura della sezione laterale
 
@@ -505,9 +505,7 @@ La sezione laterale può essere usata anche per visualizzare progressi, step o m
         <span class="visually-hidden">Documento rilasciato</span>
         <div class="point-visual" aria-hidden="true">
           <div class="point-main font-monospace">
-            <svg class="icon icon-primary" aria-hidden="true">
-              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use>
-            </svg>
+            <svg class="icon icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
           </div>
           <div class="point-bottom font-monospace">DOC</div>
         </div>
@@ -639,14 +637,16 @@ Modificando la classe `.point-aside-{suffisso}` è possibile personalizzare il c
 </ol>
 {% endcapture %}{% include example.html content=example %}
 
-### Esempio complesso
+### Esempio complesso con punto fissato verticalmente
 
 Di seguito un esempio che integra card nel contenuto della timeline.
+
+**Nota bene:** per fissare verticalmente il punto dell'elenco all'inizio del contenuto usa la classe `.timeline-point-align-top` sull'elemento `.timeline-point`
 
 {% comment %}Example name: Point list, esempio complesso{% endcomment %}
 {% capture example %}
 <ol class="it-timeline-point-list">
-  <li class="timeline-point">
+  <li class="timeline-point timeline-point-align-top">
     <div class="point-aside point-aside-dark">
       <time datetime="2025-10-14">
         <span class="visually-hidden">14 ottobre 2025</span>
@@ -676,7 +676,7 @@ Di seguito un esempio che integra card nel contenuto della timeline.
       </div>
     </div>
   </li>
-  <li class="timeline-point">
+  <li class="timeline-point timeline-point-align-top">
     <div class="point-aside point-aside-danger">
       <time datetime="2025-10-31">
         <span class="visually-hidden">31 ottobre 2025</span>
@@ -715,7 +715,7 @@ Di seguito un esempio che integra card nel contenuto della timeline.
       </div>
     </div>
   </li>
-  <li class="timeline-point">
+  <li class="timeline-point timeline-point-align-top">
     <div class="point-aside point-aside-info">
       <div>
         <span class="visually-hidden">Milestone in corso</span>
@@ -755,7 +755,7 @@ Di seguito un esempio che integra card nel contenuto della timeline.
       </div>
     </div>
   </li>
-  <li class="timeline-point">
+  <li class="timeline-point timeline-point-align-top">
     <div class="point-aside point-aside-success">
       <div>
         <span class="visually-hidden">Milestone completata</span>

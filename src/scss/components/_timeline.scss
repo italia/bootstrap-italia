@@ -605,7 +605,7 @@ scss
     display: flex;
     flex-direction: row;
     align-items: center; // default: everything centered vertically
-
+    
     .point-aside {
       position: relative;
       padding: 0.5rem 1rem;
@@ -678,10 +678,26 @@ scss
     .point-content {
       flex: 1;
       margin-left: 2em;
-      // No align-self needed, inherits from parent align-items: center
+      padding-bottom: $v-gap * 3;
+
+      @include media-breakpoint-down(md) {
+        margin-left: 1.5em; // Slightly tighter on mobile
+      }
 
       & > * {
         width: 100%;
+      }
+
+      // Remove margin from last child for better vertical centering
+      & > *:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+     // Remove padding from last timeline-point
+    &:last-child {
+      .point-content {
+        padding-bottom: 0;
       }
     }
 
@@ -690,6 +706,8 @@ scss
       align-items: flex-start;
 
       .point-aside {
+        align-self: stretch; // Extend aside to full height of timeline-point
+        
         &:after {
           // Reset to fixed position from top
           top: 2.4rem;
