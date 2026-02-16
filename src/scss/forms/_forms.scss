@@ -171,12 +171,6 @@ textarea {
   appearance: none;
 }
 
-input[type='date'],
-input[type='datetime-local'],
-input[type='time'] {
-  display: flex;
-}
-
 fieldset {
   legend {
     margin-bottom: var(--#{$prefix}spacing-s);
@@ -192,10 +186,8 @@ fieldset {
   color: var(--#{$prefix}form-control-placeholder-color);
 }
 
-// WebKit datetime edit fields
 input::-webkit-datetime-edit {
-  background-color: var(--#{$prefix}color-background-primary-lighter);
-  color: var(--#{$prefix}form-contro-text-color);
+  padding-top: 3px; // Fix file input height in Safari
 }
 
 //

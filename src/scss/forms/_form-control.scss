@@ -131,3 +131,14 @@ textarea {
     height: $input-height-lg;
   }
 }
+
+// input[type='date']::-webkit-datetime-edit,
+// input[type='time']::-webkit-datetime-edit {
+//   background: transparent !important;
+//   color: var(--#{$prefix}color-text-subtle);
+// }
+
+// input[type='date']::-webkit-datetime-edit-text {
+//   color: var(--#{$prefix}color-text-subtle);
+// }
+
