@@ -6,8 +6,15 @@ group: componenti
 toc: true
 ---
 
+## Timeline classica e Point list
+
+Il componente timeline è disponibile indue varianti distinte: 
+
+- **Timeline classica** per presentare una storia o l'avanzamento di una roadmap di cose da fare.
+- **Timeline point list** per presentare una breve sequenza di cose da fare e scadenze temporali.
+
 ## Timeline classica
-Il componente _Timeline_ è caratterizzato dalla classe `.it-timeline-wrapper`.  
+Il componente timeline è caratterizzato dalla classe `.it-timeline-wrapper`.  
 Contiene un elenco di `.timeline-element`.
 
 Ogni `.timeline-element` contiene:
@@ -268,12 +275,19 @@ Il codice markup è stato rivisto in chiave accessibilità e robustezza. In part
   - L'elemento `.card-title` è ora implementato con heading `h4` per rispettare la gerarchia attuale. Dovrà avere il livello intestazione corretto a seconda della gerarchia in pagina.
 {% endcapture %}{% include callout-breaking.html content=callout version="2.11.0" type="danger" %}
 
-## Timeline point List
-La _Timeline point list_ permette la rappresentazione di una sequenza di eventi o
-informazioni in maniera più compatta rispetto alla timeline classica.
+-----
 
-Il componente è composto da una sezione primaria `.point-list-content` e da una
-sezione secondaria `.point-list-aside`. La sezione primaria è preposta alla
+## Timeline point List
+La timeline point list permette la rappresentazione di una sequenza di eventi o
+informazioni in maniera più compatta rispetto alla timeline classica. 
+È particolarmente indicata per presentare una breve sequenza di cose da fare 
+e scadenze temporali.
+
+Il componente timeline è caratterizzato da una lista `<ul>` con classe `.it-point-list-wrapper`.  
+Contiene un elenco di elementi lista `<li>` con classe `.it-point-list`.
+
+Il componente è composto da una sezione primaria `.it-point-list-content` e da una
+sezione secondaria `.it-point-list-aside`. La sezione primaria è preposta alla
 presentazione del contenuto ed è possibile innestare altri componenti; la sezione
 secondaria viene usata per mettere in risalto la sequenza temporale ed è possibile
 presentare date specifiche o traguardi generici (con icone e micro-testi).
@@ -284,22 +298,22 @@ oppure usando il contenitore generico `div`.
 ### Esempio come elenco
 {% comment %}Example name: Timeline point list, elenco non ordinato{% endcomment %}
 {% capture example %}
-<ul class="point-list-wrapper">
-  <li class="point-list">
-    <div class="point-list-aside point-list-primary">
-      <div class="point-date font-monospace" aria-label="giorno">14</div>
-      <div class="point-month font-monospace" aria-label="mese"><span aria-hidden="true">OTT</span><span class="visually-hidden">Ottobre</span></div>
+<ul class="it-point-list-wrapper">
+  <li class="it-point-list">
+    <div class="it-point-list-aside it-point-list-primary">
+      <div class="it-point-date font-monospace" aria-label="giorno">14</div>
+      <div class="it-point-month font-monospace" aria-label="mese"><span aria-hidden="true">OTT</span><span class="visually-hidden">Ottobre</span></div>
     </div>
-    <div class="point-list-content">
+    <div class="it-point-list-content">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </div>
   </li>
-  <li class="point-list">
-    <div class="point-list-aside point-list-primary">
-      <div class="point-date font-monospace" aria-label="giorno">14</div>
-      <div class="point-month font-monospace" aria-label="mese"><span aria-hidden="true">DIC</span><span class="visually-hidden">Dicembre</span></div>
+  <li class="it-point-list">
+    <div class="it-point-list-aside it-point-list-primary">
+      <div class="it-point-date font-monospace" aria-label="giorno">14</div>
+      <div class="it-point-month font-monospace" aria-label="mese"><span aria-hidden="true">DIC</span><span class="visually-hidden">Dicembre</span></div>
     </div>
-    <div class="point-list-content">
+    <div class="it-point-list-content">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </div>
   </li>
@@ -310,13 +324,13 @@ oppure usando il contenitore generico `div`.
 ### Esempio con il contenitore generico
 {% comment %}Example name: Timeline point list, contenitore generico{% endcomment %}
 {% capture example %}
-<div class="point-list-wrapper" role="list">
-  <div class="point-list" role="listitem">
-    <div class="point-list-aside point-list-primary">
-      <div class="point-date font-monospace" aria-label="giorno">14</div>
-      <div class="point-month font-monospace" aria-label="mese"><span aria-hidden="true">OTT</span><span class="visually-hidden">Ottobre</span></div>
+<div class="it-point-list-wrapper" role="list">
+  <div class="it-point-list" role="listitem">
+    <div class="it-point-list-aside it-point-list-primary">
+      <div class="it-point-date font-monospace" aria-label="giorno">14</div>
+      <div class="it-point-month font-monospace" aria-label="mese"><span aria-hidden="true">OTT</span><span class="visually-hidden">Ottobre</span></div>
     </div>
-    <div class="point-list-content">
+    <div class="it-point-list-content">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </div>
   </div>
@@ -327,21 +341,21 @@ oppure usando il contenitore generico `div`.
 
 ### Date specifiche
 Per esplicitare le date si usano dei contenitori annidati nella sezione secondaria
-`.point-list-aside`.
+`.it-point-list-aside`.
 
 #### Esempio base
-Nella sezione secondaria il contenitore `.point-date` viene usato per evidenziare il
-giorno, il contenitore `.point-month` per il mese.
+Nella sezione secondaria il contenitore `.it-point-date` viene usato per evidenziare il
+giorno, il contenitore `.it-point-month` per il mese.
 
 {% comment %}Example name: Timeline point list, calendario{% endcomment %}
 {% capture example %}
-<div class="point-list-wrapper" role="list">
-  <div class="point-list" role="listitem">
-    <div class="point-list-aside point-list-primary">
-      <div class="point-date font-monospace" aria-label="giorno">14</div>
-      <div class="point-month font-monospace" aria-label="mese"><span aria-hidden="true">OTT</span><span class="visually-hidden">Ottobre</span></div>
+<div class="it-point-list-wrapper" role="list">
+  <div class="it-point-list" role="listitem">
+    <div class="it-point-list-aside it-point-list-primary">
+      <div class="it-point-date font-monospace" aria-label="giorno">14</div>
+      <div class="it-point-month font-monospace" aria-label="mese"><span aria-hidden="true">OTT</span><span class="visually-hidden">Ottobre</span></div>
     </div>
-    <div class="point-list-content">
+    <div class="it-point-list-content">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </div>
   </div>
@@ -350,18 +364,18 @@ giorno, il contenitore `.point-month` per il mese.
 {% endcapture %}{% include example.html content=example %}
 
 #### Con anno
-Tramite il contenitore `.point-year` è possibile specificare l'anno.
+Tramite il contenitore `.it-point-year` è possibile specificare l'anno.
 
 {% comment %}Example name: Timeline point list, calendario completo{% endcomment %}
 {% capture example %}
-<ul class="point-list-wrapper">
-  <li class="point-list">
-    <div class="point-list-aside point-list-primary">
-      <div class="point-year font-monospace" aria-label="anno">{{'now' | date: "%Y"}}</div>
-      <div class="point-date font-monospace" aria-label="giorno">14</div>
-      <div class="point-month font-monospace" aria-label="mese"><span aria-hidden="true">OTT</span><span class="visually-hidden">Ottobre</span></div>
+<ul class="it-point-list-wrapper">
+  <li class="it-point-list">
+    <div class="it-point-list-aside it-point-list-primary">
+      <div class="it-point-year font-monospace" aria-label="anno">{{'now' | date: "%Y"}}</div>
+      <div class="it-point-date font-monospace" aria-label="giorno">14</div>
+      <div class="it-point-month font-monospace" aria-label="mese"><span aria-hidden="true">OTT</span><span class="visually-hidden">Ottobre</span></div>
     </div>
-    <div class="point-list-content">
+    <div class="it-point-list-content">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </div>
   </li>
@@ -370,18 +384,18 @@ Tramite il contenitore `.point-year` è possibile specificare l'anno.
 {% endcapture %}{% include example.html content=example %}
 
 ### Layout molto compatto
-Tramite la classe `.point-list-xs` è possibile rendere ancora più compatta la
+Tramite la classe `.it-point-list-xs` è possibile rendere ancora più compatta la
 timeline.
 
 {% comment %}Example name: Timeline point list, compatto{% endcomment %}
 {% capture example %}
-<ul class="point-list-wrapper">
-  <li class="point-list point-list-xs">
-    <div class="point-list-aside point-list-primary">
-      <div class="point-date font-monospace" aria-label="giorno">14</div>
-      <div class="point-month font-monospace" aria-label="mese"><span aria-hidden="true">OTT</span><span class="visually-hidden">Ottobre</span></div>
+<ul class="it-point-list-wrapper">
+  <li class="it-point-list it-point-list-xs">
+    <div class="it-point-list-aside it-point-list-primary">
+      <div class="it-point-date font-monospace" aria-label="giorno">14</div>
+      <div class="it-point-month font-monospace" aria-label="mese"><span aria-hidden="true">OTT</span><span class="visually-hidden">Ottobre</span></div>
     </div>
-    <div class="point-list-content">
+    <div class="it-point-list-content">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </div>
   </li>
@@ -394,37 +408,37 @@ Nella sezione secondaria è possibile evidenziare l'ordine temporale dei contenu
 tramite icone o con del breve testo (2 caratteri massimo).
 
 #### Traguardi con testo
-Viene usato il contenitore `.point-date` per inserire un testo brevissimo (2 caratteri
-massimo). È possibile usare `.point-month` e `.point-year` per aggiungere ulteriori
+Viene usato il contenitore `.it-point-date` per inserire un testo brevissimo (2 caratteri
+massimo). È possibile usare `.it-point-month` e `.it-point-year` per aggiungere ulteriori
 informazioni.
 
 {% comment %}Example name: Timeline point list, traguardi con testo compatto{% endcomment %}
 {% capture example %}
-<ul class="point-list-wrapper">
-  <li class="point-list point-list-xs">
-    <div class="point-list-aside point-list-primary">
-      <div class="point-date font-monospace" aria-label="passo">01</div>
+<ul class="it-point-list-wrapper">
+  <li class="it-point-list it-point-list-xs">
+    <div class="it-point-list-aside it-point-list-primary">
+      <div class="it-point-date font-monospace" aria-label="passo">01</div>
     </div>
-    <div class="point-list-content">
+    <div class="it-point-list-content">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </div>
   </li>
-  <li class="point-list point-list-xs">
-    <div class="point-list-aside point-list-primary">
-      <div class="point-date font-monospace" aria-label="passo">01</div>
-      <div class="point-month font-monospace" aria-label="passi totali">/3</div>
+  <li class="it-point-list it-point-list-xs">
+    <div class="it-point-list-aside it-point-list-primary">
+      <div class="it-point-date font-monospace" aria-label="passo">01</div>
+      <div class="it-point-month font-monospace" aria-label="passi totali">/3</div>
     </div>
-    <div class="point-list-content">
+    <div class="it-point-list-content">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </div>
   </li>
-  <li class="point-list point-list-xs">
-    <div class="point-list-aside point-list-primary">
-      <div class="point-year font-monospace" aria-label="categoria">AB</div>
-      <div class="point-date font-monospace" aria-label="passo">01</div>
-      <div class="point-month font-monospace" aria-label="passi totali">/3</div>
+  <li class="it-point-list it-point-list-xs">
+    <div class="it-point-list-aside it-point-list-primary">
+      <div class="it-point-year font-monospace" aria-label="categoria">AB</div>
+      <div class="it-point-date font-monospace" aria-label="passo">01</div>
+      <div class="it-point-month font-monospace" aria-label="passi totali">/3</div>
     </div>
-    <div class="point-list-content">
+    <div class="it-point-list-content">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </div>
   </li>
@@ -433,42 +447,42 @@ informazioni.
 {% endcapture %}{% include example.html content=example %}
 
 #### Traguardi con icona
-È possibile usare un'icona nel contenitore `.point-date`, e dei micro-testi nei
-contenitori `.point-month` e `.point-year`.
+È possibile usare un'icona nel contenitore `.it-point-date`, e dei micro-testi nei
+contenitori `.it-point-month` e `.it-point-year`.
 
 {% comment %}Example name: Timeline point list, traguardi con icona compatto{% endcomment %}
 {% capture example %}
-<div class="point-list-wrapper" role="list">
-  <div class="point-list point-list-xs" role="listitem">
-    <div class="point-list-aside point-list-primary">
-      <div class="point-date font-monospace">
+<div class="it-point-list-wrapper" role="list">
+  <div class="it-point-list it-point-list-xs" role="listitem">
+    <div class="it-point-list-aside it-point-list-primary">
+      <div class="it-point-date font-monospace">
         <svg class="icon icon-primary" role="img"><title>Milestone</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-flag"></use></svg>
       </div>
     </div>
-    <div class="point-list-content">
+    <div class="it-point-list-content">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </div>
   </div>
-  <div class="point-list point-list-xs" role="listitem">
-    <div class="point-list-aside point-list-primary">
-      <div class="point-date font-monospace">
+  <div class="it-point-list it-point-list-xs" role="listitem">
+    <div class="it-point-list-aside it-point-list-primary">
+      <div class="it-point-date font-monospace">
         <svg class="icon icon-primary" role="img"><title>Milestone</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
       </div>
-      <div class="point-month font-monospace" aria-label="documento">DOC</div>
+      <div class="it-point-month font-monospace" aria-label="documento">DOC</div>
     </div>
-    <div class="point-list-content">
+    <div class="it-point-list-content">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </div>
   </div>
-  <div class="point-list point-list-xs" role="listitem">
-    <div class="point-list-aside point-list-primary">
-      <div class="point-year font-monospace" aria-label="versione">v2</div>
-      <div class="point-date font-monospace">
+  <div class="it-point-list it-point-list-xs" role="listitem">
+    <div class="it-point-list-aside it-point-list-primary">
+      <div class="it-point-year font-monospace" aria-label="versione">v2</div>
+      <div class="it-point-date font-monospace">
         <svg class="icon icon-primary" role="img"><title>Milestone</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
       </div>
-      <div class="point-month font-monospace" aria-label="linguaggio">JS</div>
+      <div class="it-point-month font-monospace" aria-label="linguaggio">JS</div>
     </div>
-    <div class="point-list-content">
+    <div class="it-point-list-content">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </div>
   </div>
@@ -477,70 +491,70 @@ contenitori `.point-month` e `.point-year`.
 {% endcapture %}{% include example.html content=example %}
 
 ### Varianti colore
-Modificando opportunamente `.point-list-{suffisso}` è possibile personalizzare il
-colore della sezione secondaria. Ad esempio: `.point-list-primary` userà il
+Modificando opportunamente `.it-point-list-{suffisso}` è possibile personalizzare il
+colore della sezione secondaria. Ad esempio: `.it-point-list-primary` userà il
 colore `primary`.
 
 {% comment %}Example name: Timeline point list, varianti colore{% endcomment %}
 {% capture example %}
-<ul class="point-list-wrapper">
-  <li class="point-list">
-    <div class="point-list-aside point-list-primary">
-      <div class="point-year font-monospace" aria-label="anno">{{'now' | date: "%Y"}}</div>
-      <div class="point-date font-monospace" aria-label="giorno">14</div>
-      <div class="point-month font-monospace" aria-label="mese"><span aria-hidden="true">OTT</span><span class="visually-hidden">Ottobre</span></div>
+<ul class="it-point-list-wrapper">
+  <li class="it-point-list">
+    <div class="it-point-list-aside it-point-list-primary">
+      <div class="it-point-year font-monospace" aria-label="anno">{{'now' | date: "%Y"}}</div>
+      <div class="it-point-date font-monospace" aria-label="giorno">14</div>
+      <div class="it-point-month font-monospace" aria-label="mese"><span aria-hidden="true">OTT</span><span class="visually-hidden">Ottobre</span></div>
     </div>
-    <div class="point-list-content">
+    <div class="it-point-list-content">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </div>
   </li>
-  <li class="point-list">
-    <div class="point-list-aside point-list-success">
-      <div class="point-year font-monospace" aria-label="anno">{{'now' | date: "%Y"}}</div>
-      <div class="point-date font-monospace" aria-label="giorno">14</div>
-      <div class="point-month font-monospace" aria-label="mese"><span aria-hidden="true">OTT</span><span class="visually-hidden">Ottobre</span></div>
+  <li class="it-point-list">
+    <div class="it-point-list-aside it-point-list-success">
+      <div class="it-point-year font-monospace" aria-label="anno">{{'now' | date: "%Y"}}</div>
+      <div class="it-point-date font-monospace" aria-label="giorno">14</div>
+      <div class="it-point-month font-monospace" aria-label="mese"><span aria-hidden="true">OTT</span><span class="visually-hidden">Ottobre</span></div>
     </div>
-    <div class="point-list-content">
+    <div class="it-point-list-content">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </div>
   </li>
-  <li class="point-list">
-    <div class="point-list-aside point-list-info">
-      <div class="point-year font-monospace" aria-label="anno">{{'now' | date: "%Y"}}</div>
-      <div class="point-date font-monospace" aria-label="giorno">14</div>
-      <div class="point-month font-monospace" aria-label="mese"><span aria-hidden="true">OTT</span><span class="visually-hidden">Ottobre</span></div>
+  <li class="it-point-list">
+    <div class="it-point-list-aside it-point-list-info">
+      <div class="it-point-year font-monospace" aria-label="anno">{{'now' | date: "%Y"}}</div>
+      <div class="it-point-date font-monospace" aria-label="giorno">14</div>
+      <div class="it-point-month font-monospace" aria-label="mese"><span aria-hidden="true">OTT</span><span class="visually-hidden">Ottobre</span></div>
     </div>
-    <div class="point-list-content">
+    <div class="it-point-list-content">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </div>
   </li>
-  <li class="point-list">
-    <div class="point-list-aside point-list-warning">
-      <div class="point-year font-monospace" aria-label="anno">{{'now' | date: "%Y"}}</div>
-      <div class="point-date font-monospace" aria-label="giorno">14</div>
-      <div class="point-month font-monospace" aria-label="mese"><span aria-hidden="true">OTT</span><span class="visually-hidden">Ottobre</span></div>
+  <li class="it-point-list">
+    <div class="it-point-list-aside it-point-list-warning">
+      <div class="it-point-year font-monospace" aria-label="anno">{{'now' | date: "%Y"}}</div>
+      <div class="it-point-date font-monospace" aria-label="giorno">14</div>
+      <div class="it-point-month font-monospace" aria-label="mese"><span aria-hidden="true">OTT</span><span class="visually-hidden">Ottobre</span></div>
     </div>
-    <div class="point-list-content">
+    <div class="it-point-list-content">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </div>
   </li>
-  <li class="point-list">
-    <div class="point-list-aside point-list-danger">
-      <div class="point-year font-monospace" aria-label="anno">{{'now' | date: "%Y"}}</div>
-      <div class="point-date font-monospace" aria-label="giorno">14</div>
-      <div class="point-month font-monospace" aria-label="mese"><span aria-hidden="true">OTT</span><span class="visually-hidden">Ottobre</span></div>
+  <li class="it-point-list">
+    <div class="it-point-list-aside it-point-list-danger">
+      <div class="it-point-year font-monospace" aria-label="anno">{{'now' | date: "%Y"}}</div>
+      <div class="it-point-date font-monospace" aria-label="giorno">14</div>
+      <div class="it-point-month font-monospace" aria-label="mese"><span aria-hidden="true">OTT</span><span class="visually-hidden">Ottobre</span></div>
     </div>
-    <div class="point-list-content">
+    <div class="it-point-list-content">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </div>
   </li>
-  <li class="point-list">
-    <div class="point-list-aside point-list-dark">
-      <div class="point-year font-monospace" aria-label="anno">{{'now' | date: "%Y"}}</div>
-      <div class="point-date font-monospace" aria-label="giorno">14</div>
-      <div class="point-month font-monospace" aria-label="mese"><span aria-hidden="true">OTT</span><span class="visually-hidden">Ottobre</span></div>
+  <li class="it-point-list">
+    <div class="it-point-list-aside it-point-list-dark">
+      <div class="it-point-year font-monospace" aria-label="anno">{{'now' | date: "%Y"}}</div>
+      <div class="it-point-date font-monospace" aria-label="giorno">14</div>
+      <div class="it-point-month font-monospace" aria-label="mese"><span aria-hidden="true">OTT</span><span class="visually-hidden">Ottobre</span></div>
     </div>
-    <div class="point-list-content">
+    <div class="it-point-list-content">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </div>
   </li>
@@ -553,13 +567,13 @@ Di seguito un esempio un po' più complesso.
 
 {% comment %}Example name: Point list, esempio complesso{% endcomment %}
 {% capture example %}
-  <ul class="point-list-wrapper">
-    <li class="point-list">
-      <div class="point-list-aside point-list-dark">
-        <div class="point-date font-monospace" aria-label="giorno">14</div>
-        <div class="point-month font-monospace" aria-label="mese"><span aria-hidden="true">OTT</span><span class="visually-hidden">Ottobre</span></div>
+  <ul class="it-point-list-wrapper">
+    <li class="it-point-list">
+      <div class="it-point-list-aside it-point-list-dark">
+        <div class="it-point-date font-monospace" aria-label="giorno">14</div>
+        <div class="it-point-month font-monospace" aria-label="mese"><span aria-hidden="true">OTT</span><span class="visually-hidden">Ottobre</span></div>
       </div>
-      <div class="point-list-content">
+      <div class="it-point-list-content">
         <div class="row mb-5">
           <div class="col-lg-7">
             <!--start it-card-->
@@ -582,12 +596,12 @@ Di seguito un esempio un po' più complesso.
         </div>
       </div>
     </li>
-    <li class="point-list">
-      <div class="point-list-aside point-list-danger">
-        <div class="point-date font-monospace" aria-label="giorno">31</div>
-        <div class="point-month font-monospace" aria-label="mese"><span aria-hidden="true">OTT</span><span class="visually-hidden">Ottobre</span></div>
+    <li class="it-point-list">
+      <div class="it-point-list-aside it-point-list-danger">
+        <div class="it-point-date font-monospace" aria-label="giorno">31</div>
+        <div class="it-point-month font-monospace" aria-label="mese"><span aria-hidden="true">OTT</span><span class="visually-hidden">Ottobre</span></div>
       </div>
-      <div class="point-list-content">
+      <div class="it-point-list-content">
         <div class="row mb-5">
           <div class="col-lg-7">
             <!--start it-card-->
@@ -618,13 +632,13 @@ Di seguito un esempio un po' più complesso.
         </div>
       </div>
     </li>
-    <li class="point-list">
-      <div class="point-list-aside point-list-info">
-        <div class="point-date font-monospace">
+    <li class="it-point-list">
+      <div class="it-point-list-aside it-point-list-info">
+        <div class="it-point-date font-monospace">
           <svg class="icon icon-info icon-lg" role="img"><title>Milestone</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-clock"></use></svg>
         </div>
       </div>
-      <div class="point-list-content">
+      <div class="it-point-list-content">
         <div class="row mb-5">
           <div class="col-lg-7">
             <!--start it-card-->
@@ -655,13 +669,13 @@ Di seguito un esempio un po' più complesso.
         </div>
       </div>
     </li>
-    <li class="point-list">
-      <div class="point-list-aside point-list-success">
-        <div class="point-date font-monospace">
+    <li class="it-point-list">
+      <div class="it-point-list-aside it-point-list-success">
+        <div class="it-point-date font-monospace">
           <svg class="icon icon-success icon-lg" role="img"><title>Milestone</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-flag"></use></svg>
         </div>
       </div>
-      <div class="point-list-content">
+      <div class="it-point-list-content">
         <div class="row">
           <div class="col-lg-7">
             <!--start it-card-->
