@@ -1,4 +1,4 @@
-import { sanitizeHtml, DefaultAllowlist } from './sanitizer.js';
+import { DefaultAllowlist, sanitizeHtml } from './sanitizer.js';
 import { isElement, getElement } from './index.js';
 import SelectorEngine from '../dom/selector-engine.js';
 import Config from './config.js';
