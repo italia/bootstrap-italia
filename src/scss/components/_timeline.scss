@@ -313,10 +313,6 @@
     align-items: center;
     margin-bottom: $v-gap * 3;
 
-    &:last-child {
-      margin-bottom: 0;
-    }
-
     .point-aside {
       position: relative;
       width: 5rem;
@@ -421,6 +417,8 @@
 
     // Last item: line extends only for aside, not content
     &:last-child {
+      margin-bottom: 0;
+
       .point-aside::before {
         height: 100%;
       }
