@@ -641,12 +641,12 @@ Modificando la classe `.point-aside-{suffisso}` è possibile personalizzare il c
 
 Un layout ottimizzato per presentare scadenze e procedure amministrative, come quelle dei servizi pubblici. Le card hanno sfondo bianco per maggiore leggibilità.
 
-Per fissare verticalmente il punto dell'elenco all'inizio del contenuto usa la classe `.timeline-point-align-top` sull'elemento `.timeline-point`.
+Per fissare verticalmente il punto dell'elenco all'inizio del contenuto usa la classe `.timeline-point-align-top` sull'elemento `.timeline-point`. Nell'esempio è applicata all'ultimo punto elenco particolarmente lungo. 
 
 {% comment %}Example name: Timeline point list, servizi pubblici{% endcomment %}
 {% capture example %}
 <ol class="it-timeline-point-list">
-  <li class="timeline-point timeline-point-align-top">
+  <li class="timeline-point">
     <div class="point-aside point-aside-dark">
       <time datetime="2022-01-04">
         <span class="visually-hidden">4 gennaio 2022</span>
@@ -658,7 +658,7 @@ Per fissare verticalmente il punto dell'elenco all'inizio del contenuto usa la c
       </time>
     </div>
     <div class="point-content">
-     <div class="row mb-4">
+     <div class="row g-0">
       <div class="col-lg-9">
           <div class="it-card rounded shadow-sm border bg-white it-card-border-top it-card-border-top-secondary">
             <h4 class="it-card-title h5 no_toc">Apertura iscrizioni</h4>
@@ -670,7 +670,7 @@ Per fissare verticalmente il punto dell'elenco all'inizio del contenuto usa la c
       </div>
     </div>
   </li>    
-  <li class="timeline-point timeline-point-align-top">
+  <li class="timeline-point">
     <div class="point-aside point-aside-dark">
       <time datetime="2022-02-04">
         <span class="visually-hidden">4 febbraio 2022</span>
@@ -682,19 +682,16 @@ Per fissare verticalmente il punto dell'elenco all'inizio del contenuto usa la c
       </time>
     </div>
     <div class="point-content">
-      <div class="row mb-4">
+      <div class="row g-0">
         <div class="col-lg-9">
-          <div class="it-card rounded shadow-sm border bg-white it-card-border-top it-card-border-top-secondary">
+          <div class="it-card rounded shadow-sm border bg-white it-card-border-top it-card-border-top-secondary pb-3">
             <h4 class="it-card-title h5 no_toc">Termine presentazione domande</h4>
-            <div class="it-card-body">
-              <p class="it-card-text mb-0">Scadenza ultima per l'invio della documentazione richiesta.</p>
-            </div>
           </div>
         </div>
       </div>
     </div>
   </li>    
-  <li class="timeline-point timeline-point-align-top">
+  <li class="timeline-point">
     <div class="point-aside point-aside-dark">
       <time datetime="2022-03-02">
         <span class="visually-hidden">2 marzo 2022</span>
@@ -706,7 +703,7 @@ Per fissare verticalmente il punto dell'elenco all'inizio del contenuto usa la c
       </time>
     </div>
     <div class="point-content">
-      <div class="row mb-4">
+      <div class="row g-0">
         <div class="col-lg-9">
           <div class="it-card rounded shadow-sm border bg-white it-card-border-top it-card-border-top-secondary">
             <h4 class="it-card-title h5 no_toc">Pubblicazione graduatorie</h4>
@@ -730,12 +727,12 @@ Per fissare verticalmente il punto dell'elenco all'inizio del contenuto usa la c
       </time>
     </div>
     <div class="point-content">
-      <div class="row mb-4">
+      <div class="row g-0">
         <div class="col-lg-9">
           <div class="it-card rounded shadow-sm border bg-white it-card-border-top it-card-border-top-secondary">
             <h4 class="it-card-title h5 no_toc">Perfezionamento domande</h4>
             <div class="it-card-body">
-              <p class="it-card-text mb-0">Termine ultimo per la conferma dell'iscrizione e il pagamento della quota.</p>
+              <p class="it-card-text mb-0">Termine ultimo per la conferma dell'iscrizione e il pagamento della quota. Fino al secondo o anche anche terzo riga utile per ulteriori istruzioni relative a questa scadenza. Se diventa così lungo bene avere la data allineaata al to.</p>
             </div>
           </div>
         </div>
@@ -745,18 +742,18 @@ Per fissare verticalmente il punto dell'elenco all'inizio del contenuto usa la c
 </ol>
 {% endcapture %}{% include example.html content=example %}
 
-### Esempio complesso con punto fissato verticalmente
+### Esempio complesso con card complete
 
 Di seguito un esempio che integra card nel contenuto della timeline.
 
-Per fissare verticalmente il punto dell'elenco all'inizio del contenuto usa la classe `.timeline-point-align-top` sull'elemento `.timeline-point`.
+Per fissare verticalmente il punto dell'elenco all'inizio del contenuto usa la classe `.timeline-point-align-top` sull'elemento `.timeline-point`. Nell'esempio è applicato a tutti i punti in elenco essendo particolarmente lunghi nei contenuti. 
 
-Usa la classe `.timeline-point-stack-mobile` per permettere su mobile di disporre verticalmente la sezione laterale sopra al contenuto, ottimizzando lo spazio per card complesse.
+**Nota bene:** usa la classe `.it-timeline-point-list-stack-mobile` sull'elemento lista `.it-timeline-point-list` per permettere su mobile di disporre verticalmente la sezione laterale in alto al contenuto, ottimizzando lo spazio per card complesse a risoluzioni mobile. In questo caso è bene che il contenuto sia sempre raccolto in elementi di tipo card o almeno con un fondale colorato per sovrastare gerarchicamente la linea. Naviga l'esempio a risoluzione mobile per esplorare la soluzione. 
 
 {% comment %}Example name: Point list, esempio complesso{% endcomment %}
 {% capture example %}
-<ol class="it-timeline-point-list">
-  <li class="timeline-point timeline-point-align-top timeline-point-stack-mobile">
+<ol class="it-timeline-point-list it-timeline-point-list-stack-mobile">
+  <li class="timeline-point timeline-point-align-top">
     <div class="point-aside point-aside-dark">
       <time datetime="2025-10-14">
         <span class="visually-hidden">14 ottobre 2025</span>
@@ -767,7 +764,7 @@ Usa la classe `.timeline-point-stack-mobile` per permettere su mobile di disporr
       </time>
     </div>
     <div class="point-content">
-      <div class="row mb-5">
+      <div class="row g-0">
         <div class="col-lg-7">
           <!--start it-card-->
           <article class="it-card rounded shadow-sm border">
@@ -786,7 +783,7 @@ Usa la classe `.timeline-point-stack-mobile` per permettere su mobile di disporr
       </div>
     </div>
   </li>
-  <li class="timeline-point timeline-point-align-top timeline-point-stack-mobile">
+  <li class="timeline-point timeline-point-align-top">
     <div class="point-aside point-aside-danger">
       <time datetime="2025-10-31">
         <span class="visually-hidden">31 ottobre 2025</span>
@@ -797,7 +794,7 @@ Usa la classe `.timeline-point-stack-mobile` per permettere su mobile di disporr
       </time>
     </div>
     <div class="point-content">
-      <div class="row mb-5">
+      <div class="row g-0">
         <div class="col-lg-7">
           <!--start it-card-->
           <article class="it-card it-card-inline it-card-inline-mini it-card-image rounded shadow-sm border">
@@ -809,7 +806,7 @@ Usa la classe `.timeline-point-stack-mobile` per permettere su mobile di disporr
                 <div class="it-card-taxonomy">
                   <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
                 </div>
-                <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-10-12">22 aprile, {{ 'now' | date: "%Y" }}</time>
+                <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile, {{ 'now' | date: "%Y" }}</time>
               </footer>
             </div>
             <div class="it-card-image-wrapper">
@@ -825,7 +822,7 @@ Usa la classe `.timeline-point-stack-mobile` per permettere su mobile di disporr
       </div>
     </div>
   </li>
-  <li class="timeline-point timeline-point-align-top timeline-point-stack-mobile">
+  <li class="timeline-point timeline-point-align-top">
     <div class="point-aside point-aside-info">
       <div>
         <span class="visually-hidden">Milestone in corso</span>
@@ -837,10 +834,10 @@ Usa la classe `.timeline-point-stack-mobile` per permettere su mobile di disporr
       </div>
     </div>
     <div class="point-content">
-      <div class="row mb-5">
+      <div class="row g-0">
         <div class="col-lg-7">
           <!--start it-card-->
-          <article class="it-card it-card-inline it-card-inline-mini it-card-inline-reverse it-card-image rounded shadow-sm border mb-3 mb-md-4">
+          <article class="it-card it-card-inline it-card-inline-mini it-card-inline-reverse it-card-image rounded shadow-sm border">
             <div class="it-card-inline-content">
               <h4 class="it-card-title h4 no_toc">
                 <a href="#">Titolo contenuto editoriale</a>
@@ -849,7 +846,7 @@ Usa la classe `.timeline-point-stack-mobile` per permettere su mobile di disporr
                 <div class="it-card-taxonomy">
                   <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
                 </div>
-                <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-10-12">22 aprile, {{ 'now' | date: "%Y" }}</time>
+                <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile, {{ 'now' | date: "%Y" }}</time>
               </footer>
             </div>
             <div class="it-card-image-wrapper">
@@ -865,7 +862,7 @@ Usa la classe `.timeline-point-stack-mobile` per permettere su mobile di disporr
       </div>
     </div>
   </li>
-  <li class="timeline-point timeline-point-align-top timeline-point-stack-mobile">
+  <li class="timeline-point timeline-point-align-top">
     <div class="point-aside point-aside-success">
       <div>
         <span class="visually-hidden">Milestone completata</span>
@@ -877,7 +874,7 @@ Usa la classe `.timeline-point-stack-mobile` per permettere su mobile di disporr
       </div>
     </div>
     <div class="point-content">
-      <div class="row">
+      <div class="row g-0">
         <div class="col-lg-7">
           <!--start it-card-->
           <article class="it-card it-card-image rounded shadow-sm border">
