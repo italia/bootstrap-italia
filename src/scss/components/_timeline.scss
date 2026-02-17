@@ -604,96 +604,68 @@
     list-style: none;
   }
 
-  // Flex fallback for browsers without subgrid support
   display: flex;
   flex-direction: column;
-  row-gap: $v-gap * 3;
-
-  // Modern grid with subgrid
-  @supports (grid-template-columns: subgrid) {
-    display: grid;
-    grid-template-columns: auto 2px 1fr;
-    row-gap: $v-gap * 3;
-  }
+  // NO row-gap - usiamo margin-bottom sui timeline-point
 
   .timeline-point {
-    // Flex fallback
     display: flex;
     align-items: center;
+    margin-bottom: $v-gap * 3; // Gap tra elementi
 
-    // Grid with subgrid
-    @supports (grid-template-columns: subgrid) {
-      display: grid;
-      grid-template-columns: subgrid;
-      grid-column: 1 / -1;
-      align-items: center;
+    &:last-child {
+      margin-bottom: 0;
     }
 
     .point-aside {
       position: relative;
-      padding: 0.5rem 1rem 0.5rem 1rem;
+      width: 5rem;
+      flex-shrink: 0;
+      padding: 0.5rem 1rem 0.5rem 0;
       color: var(--point-color, $primary);
       text-align: center;
-      align-self: stretch;
-
-      // Flex fallback: border-right for vertical line
       display: flex;
       flex-direction: column;
       justify-content: center;
-      border-right: 2px solid var(--point-color, $primary);
-      margin-top: -#{$v-gap * 1.5};
-      margin-bottom: -#{$v-gap * 1.5};
-      padding-top: calc(0.5rem + #{$v-gap * 1.5}); // 0.5rem originale + compensazione margin su fallback
-      padding-bottom: calc(0.5rem + #{$v-gap * 1.5});
-
-      // Grid: no border, use ::after instead
-      @supports (grid-template-columns: subgrid) {
-        grid-column: 1;
-        border-right: 0;
-        margin-top: 0;
-        margin-bottom: 0;
-        padding-top: 0.5rem;
-        padding-bottom: 0.5rem;
-      }
+      align-self: stretch;
 
       @include media-breakpoint-down(md) {
-        padding: 0.5rem 1rem 0.5rem 0;
+        width: 4rem;
+        padding: 0.5rem 0.75rem 0.5rem 0;
       }
 
-      // Circular point indicator
+      // Linea verticale - si estende NEL margin-bottom
       &::before {
+        content: '';
+        position: absolute;
+        width: 2px;
+        top: 0;
+        right: 0;
+        height: calc(100% + #{$v-gap * 3}); // Estende nel gap
+        background-color: var(--point-color, $primary);
+        z-index: 1;
+      }
+
+      // Puntino circolare
+      &::after {
         content: '';
         position: absolute;
         width: 9px;
         height: 9px;
         top: 50%;
-        right: -5px;
+        right: -4px;
         transform: translateY(-50%);
         border-radius: 50%;
         background-color: var(--point-color, $primary);
+        z-index: 2;
       }
 
-      // Vertical line (grid only)
-      @supports (grid-template-columns: subgrid) {
-        &::after {
-          content: '';
-          position: absolute;
-          right: -2px;
-          top: 0;
-          bottom: -#{$v-gap * 3}; // Extend into gap
-          width: 2px;
-          background-color: var(--point-color, $primary);
-        }
-      }
-
-      // Visual wrapper for aria-hidden content
       .point-visual {
         display: inline-flex;
         flex-direction: column;
         align-items: center;
       }
 
-      // Main positional classes
       .point-main {
         font-size: 2.75rem;
         line-height: 1.1;
@@ -715,7 +687,6 @@
         }
       }
 
-      // Legacy aliases
       .point-date {
         @extend .point-main;
       }
@@ -728,11 +699,9 @@
         @extend .point-top;
       }
 
-      // Color variants
       @each $color, $value in $theme-colors {
         &.point-aside-#{$color} {
           --point-color: #{$value};
-          border-color: $value;
         }
       }
     }
@@ -740,12 +709,6 @@
     .point-content {
       flex: 1;
       margin-left: 1rem;
-
-      @supports (grid-template-columns: subgrid) {
-        grid-column: 3;
-        align-self: center;
-        flex: none;
-      }
 
       &>* {
         width: 100%;
@@ -756,24 +719,35 @@
       }
     }
 
-    // Last item: line doesn't extend beyond 
+    // Last item: linea non si estende oltre
     &:last-child {
-      @supports (grid-template-columns: subgrid) {
-        .point-aside::after {
-          bottom: 0;
-        }
+      .point-aside::before {
+        height: 100%; // Solo altezza aside
       }
     }
 
     // Align-top variant
     &.timeline-point-align-top {
-      .point-aside {
-        justify-content: flex-start; // Top align internal content
-        padding-top: 0.5rem; // Un po' di respiro dall'alto
+      align-items: flex-start;
 
-        &::before {
-          top: 2.6rem; // Fixed position
+      .point-aside {
+        align-self: stretch; // Estende per altezza content
+        justify-content: flex-start;
+        padding-top: 0.5rem;
+
+        &::after {
+          top: 2.6rem;
           transform: translateY(-5px);
+        }
+
+        &:has(.point-top):has(.point-bottom) {
+          &::after {
+            top: 3.5rem;
+
+            @include media-breakpoint-down(md) {
+              top: 2.7rem;
+            }
+          }
         }
       }
     }
@@ -781,8 +755,13 @@
     // Compact variant
     &.timeline-point-xs {
       .point-aside {
-        min-width: 54px;
-        padding: 1rem 1rem 1rem 0.5rem;
+        width: 3.5rem;
+        padding: 0.5rem 0.75rem 0.5rem 0;
+
+        @include media-breakpoint-down(md) {
+          width: 3rem;
+          padding: 0.5rem 0.5rem 0.5rem 0;
+        }
 
         .point-main,
         .point-date {
@@ -794,82 +773,82 @@
         .point-bottom,
         .point-month {
           font-size: 0.875rem;
-          text-transform: uppercase;
         }
       }
 
-      // Compact + align-top
       &.timeline-point-align-top {
         .point-aside {
-          align-self: stretch;
-          padding: 0.5rem 1rem 0 1rem;
+          padding-top: 0.5rem;
 
-          @include media-breakpoint-down(md) {
-            padding: 0.5rem 1rem 0 0;
+          &::after {
+            top: 1.3rem;
+          }
+
+          &:has(.point-main):has(.point-bottom)::after {
+            top: 2rem;
+          }
+
+          &:has(.point-top):has(.point-bottom)::after {
+            top: 2.7rem;
           }
         }
       }
     }
   }
 
-  // Stack mobile variant
   &.it-timeline-point-list-stack-mobile {
     @include media-breakpoint-down(md) {
       .timeline-point {
-        display: flex !important;
         flex-wrap: wrap;
         position: relative;
 
-        // Propaga colori dall'aside al timeline-point
+        // Linea verticale sul timeline-point
+        &::before {
+          content: '';
+          position: absolute;
+          left: 2rem;
+          top: 0;
+          width: 2px;
+          height: calc(100% + #{$v-gap * 3});
+          background-color: var(--point-color, $primary);
+        }
+
+        &:last-child::before {
+          height: 100%;
+        }
+
         @each $color, $value in $theme-colors {
           &:has(.point-aside-#{$color}) {
             --point-color: #{$value};
           }
         }
 
-        // Linea verticale sul timeline-point
-        &::before {
-          content: '';
-          position: absolute;
-          left: 16px; // Posizione fissa per tutti
-          top: 0;
-          bottom: -#{$v-gap * 3};
-          width: 2px;
-          background-color: var(--point-color, $primary);
-        }
-
-        &:last-child::before {
-          bottom: 0;
-        }
-
         .point-aside {
           width: auto;
           flex-shrink: 0;
           flex-direction: row-reverse;
-          padding-left: 2rem;
+          padding-left: 2.5rem;
           padding-right: 0.5rem;
+          position: relative; 
 
           &::before {
-            right: auto;
-            left: 13px;
+            display: none;
           }
 
-          border-right: 0;
-          border-left: 0;
-
-          @supports (grid-template-columns: subgrid) {
-            &::after {
-              display: none;
-            }
+          &::after {
+            left: 1.75rem;
+            right: auto;
           }
         }
 
         .point-content {
-          width: 100%;
+          flex: 1 1 100%;
+          min-width: 0;
           margin-left: 0;
           margin-top: $v-gap * 2;
         }
       }
     }
   }
+
 }
