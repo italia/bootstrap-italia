@@ -8,7 +8,7 @@ toc: true
 
 ## Timeline classica e point list
 
-Il componente timeline è disponibile indue varianti distinte: 
+Il componente timeline è disponibile in due varianti distinte: 
 
 - **Timeline classica** per presentare una storia o l'avanzamento di una roadmap di cose da fare.
 - **Timeline point list** per presentare una breve sequenza di cose da fare e scadenze temporali.
