@@ -684,7 +684,7 @@ Per fissare verticalmente il punto dell'elenco all'inizio del contenuto usa la c
     <div class="point-content">
       <div class="row g-0">
         <div class="col-lg-9">
-          <div class="it-card rounded shadow-sm border bg-white it-card-border-top it-card-border-top-secondary pb-3">
+          <div class="it-card rounded shadow-sm border bg-white it-card-border-top it-card-border-top-secondary">
             <h4 class="it-card-title h5 no_toc">Termine presentazione domande</h4>
           </div>
         </div>
