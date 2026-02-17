@@ -6,7 +6,7 @@ group: componenti
 toc: true
 ---
 
-## Timeline classica e Point list
+## Timeline classica e point list
 
 Il componente timeline è disponibile indue varianti distinte: 
 
@@ -279,9 +279,9 @@ Il codice markup è stato rivisto in chiave accessibilità e robustezza. In part
 
 -----
 
-## Timeline Point List
+## Timeline point list
 
-La Timeline Point List permette la rappresentazione di una sequenza di eventi o informazioni in maniera più compatta rispetto alla timeline classica. È particolarmente indicata per presentare una breve sequenza di cose da fare e scadenze temporali.
+La timeline point list permette la rappresentazione di una sequenza di eventi o informazioni in maniera più compatta rispetto alla timeline classica. È particolarmente indicata per presentare una breve sequenza di cose da fare e scadenze temporali.
 
 Il componente è caratterizzato da un elenco ordinato `<ol>` con classe `.it-timeline-point-list`. Ogni elemento `<li>` della lista ha classe `.timeline-point` e contiene una sezione laterale `.point-aside` per date o milestone, e una sezione principale `.point-content` per il contenuto.
 
@@ -300,7 +300,7 @@ Questi elementi sono racchiusi in `.point-visual` con `aria-hidden="true"` perch
 - `<span class="visually-hidden">` per contenuti non temporali
 
 {% capture callout %}
-#### Accessibilità
+#### Accessibilità point list
 
 **Struttura accessibile:**
 - Il wrapper `.point-visual` ha `aria-hidden="true"` per nascondere la presentazione visiva agli screen reader
