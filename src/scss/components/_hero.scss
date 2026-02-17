@@ -1,249 +1,145 @@
-//mobile
+// Component: hero
+//
+// Description: Component styles for hero
+//
+
+// Variables
+//
+
+// Properties
+//
+
 .it-hero-wrapper {
-  min-height: $hero-height-mob;
+  --#{$prefix}hero-background-color: var(--#{$prefix}color-background-primary); // Controls the hero background color, using color tokens
+  --#{$prefix}hero-category-font-size: var(--#{$prefix}label-font-size); // Controls the font size of the category text in the hero, using text tokens
+  --#{$prefix}hero-height: 400px; // Controls the height of the hero
+  --#{$prefix}hero-overlap-negative-spacing: -3rem; // Controls the negative spacing for overlapping content below the hero
+  --#{$prefix}hero-overlap-spacing-inset: var(
+    --#{$prefix}spacing-xxl
+  ); // Controls the inset spacing for overlapping content within the hero, using spacing tokens
+  --#{$prefix}hero-overlay-background: transparent; // Controls the overlay background color for the hero
+  --#{$prefix}hero-padding-x: var(--#{$prefix}spacing-xs); // Controls the horizontal padding for the hero, using spacing tokens
+  --#{$prefix}hero-padding-y: var(--#{$prefix}spacing-3xl); // Controls the vertical padding for the hero, using spacing tokens
+  --#{$prefix}hero-text-font-family: var(--#{$prefix}font-serif); // Controls the font family for the hero text, using typography tokens
+  --#{$prefix}hero-text-color: var(--#{$prefix}color-text-inverse); // Controls the text color for the hero text, using color tokens
+}
+
+// Styles
+//
+
+/* stylelint-disable-next-line no-duplicate-selectors */
+.it-hero-wrapper {
+  min-height: var(--#{$prefix}hero-height);
   position: relative;
-  background-color: $hero-bg-color;
+  background-color: var(--#{$prefix}hero-background-color);
   display: flex;
   align-items: flex-end;
-  // Img -------------------------------------------
+
+  &.it-hero-small-size {
+    --#{$prefix}hero-height: 300px;
+  }
+
   .img-responsive-wrapper {
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
-    .img-responsive {
-      padding-bottom: inherit;
-      height: 100%;
-      position: initial;
-    }
   }
-  // small size --------------------------------
-  &.it-hero-small-size {
-    min-height: $hero-height-sm-mob;
+
+  .img-responsive {
+    padding-bottom: inherit;
+    height: 100%;
+    position: initial;
   }
-  // Text container ----------------------------
+
+  // Text container centered
   .it-hero-text-wrapper {
     padding: 3rem 0.75rem;
     background: transparent !important;
     position: relative;
+  }
 
-    span,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p {
-      color: $hero-text-color;
-      margin-bottom: $v-gap * 3;
-    }
-    .it-category {
-      display: block;
-      font-size: $hero-cat-size;
-      text-transform: uppercase;
-      font-weight: 600;
-      margin-bottom: $v-gap;
-    }
-    h1 {
-      font-size: $hero-heading-size;
-    }
-    p {
-      font-size: $hero-p-size;
-      font-family: $font-family-serif;
-    }
-    .it-btn-container {
-      margin-top: 1.5rem;
-    }
-  }
-  // Small size container ----------------------------
-  &.it-hero-small-size .it-hero-text-wrapper {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-  }
-  // Text container centered----------------------------
   &.it-text-centered .it-hero-text-wrapper {
     margin: 0 auto;
     text-align: center;
   }
-  // overlay color--------------------------------------
-  &.it-overlay {
-    .img-responsive-wrapper {
-      &:after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-      }
-    }
-    // dark overlay
-    &.it-dark {
-      .img-responsive-wrapper {
-        &:after {
-          background: $hero-dark-bg;
-        }
-      }
-    }
-    // dark overlay
-    &.it-primary {
-      .img-responsive-wrapper {
-        &:after {
-          background: $hero-primary-bg;
-        }
-      }
-    }
-    // filter
-    &.it-filter {
-      .img-responsive-wrapper {
-        img {
-          mix-blend-mode: screen;
-        }
-        &:after {
-          display: none;
-        }
-      }
-    }
+
+  .it-hero-text-wrapper span,
+  .it-hero-text-wrapper h1,
+  .it-hero-text-wrapper h2,
+  .it-hero-text-wrapper h3,
+  .it-hero-text-wrapper h4,
+  .it-hero-text-wrapper h5,
+  .it-hero-text-wrapper h6,
+  .it-hero-text-wrapper p {
+    color: var(--#{$prefix}hero-text-color);
+    margin-bottom: var(--#{$prefix}spacing-m);
   }
-  // negative bottom
+
+  .it-hero-text-wrapper .it-category {
+    display: block;
+    font-size: var(--#{$prefix}hero-category-font-size);
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: var(--#{$prefix}spacing-xxs);
+  }
+
+  .it-hero-text-wrapper p {
+    font-family: var(--#{$prefix}hero-text-family);
+  }
+
+  &.it-overlay .img-responsive-wrapper:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--#{$prefix}hero-overlay-background);
+  }
+
+  &.it-overlay.it-dark .img-responsive-wrapper:after {
+    --#{$prefix}hero-overlay-background: var(--#{$prefix}overlay-background-primary-muted);
+  }
+
+  &.it-overlay.it-primary .img-responsive-wrapper:after {
+    --#{$prefix}hero-overlay-background: var(--#{$prefix}overlay-background-primary);
+  }
+
   &.it-bottom-overlapping-content {
-    margin-bottom: -$hero-negative-margin;
+    margin-bottom: var(--#{$prefix}hero-overlap-negative-spacing);
     .it-hero-text-wrapper {
-      padding-bottom: $hero-negative-bottom-padding-mob;
+      padding-bottom: var(--#{$prefix}hero-overlap-spacing-inset);
     }
   }
 
-  &.it-wrapped-container {
-    min-height: 0 !important; // disable prev min-height
-    align-items: flex-end;
-  }
-
-  .it-hero-card {
-    background-color: $white;
-
-    &.it-hero-bottom-overlapping {
-      position: relative;
-      margin-top: $hero-negative-margin;
-      margin-bottom: -$hero-negative-margin;
-    }
-  }
-}
-
-// for mobile only
-@media (max-width: #{map-get($grid-breakpoints, sm) - 1}) {
-  .it-hero-wrapper {
+  @media (max-width: 575px) {
+    --#{$prefix}hero-overlap-negative-spacing: calc(var(--#{$prefix}spacing-l) * -1);
     &.it-wrapped-container {
       display: flex;
       flex-direction: column;
-
-      .container {
-        background-color: $white;
-      }
-
-      .img-responsive-wrapper {
-        position: relative;
-
-        .img-wrapper {
-          position: relative;
-        }
-
-        &:after {
-          content: none;
-        }
-      }
-
-      .it-hero-card {
-        background-color: $white;
-        border-radius: 0 !important;
-        box-shadow: none !important;
-      }
-    }
-
-    .it-hero-card {
-      &.it-hero-bottom-overlapping {
-        margin: 0;
-      }
     }
   }
-}
 
-//small - tablet
-@include media-breakpoint-up(sm) {
-  .it-hero-wrapper {
+  @media (min-width: 576px) {
     &.it-wrapped-container {
-      min-height: 0 !important; // disable prev min-height
+      min-height: 0 !important;
       align-items: flex-end;
     }
-
-    .it-hero-card {
-      background-color: $white;
-
-      &.it-hero-bottom-overlapping {
-        margin-top: $hero-negative-margin;
-        margin-bottom: -$hero-negative-margin;
-      }
-    }
   }
-}
 
-//Tablet vertical
-@include media-breakpoint-up(md) {
-  .it-hero-wrapper {
-    // img small size --------------------------------
-    &.it-hero-small-size {
-      min-height: $hero-height-sm-tab;
-    }
+  @media (min-width: 768px) {
+    --#{$prefix}hero-height: 300px;
   }
-}
 
-// Tablet horizontal / small desktop
-@include media-breakpoint-up(lg) {
-  .it-hero-wrapper {
-    position: relative;
-    min-height: $hero-height-desk;
+  @media (min-width: 992px) {
+    --#{$prefix}hero-height: 400px;
+    --#{$prefix}hero-overlap-negative-spacing: -40px;
+    --#{$prefix}hero-overlap-spacing-inset: 96px;
     align-items: center;
-    // img small size --------------------------------
-    &.it-hero-small-size {
-      min-height: $hero-height-sm-desk;
-    }
-    // Text container ----------------------------
+
     .it-hero-text-wrapper {
-      padding: $v-gap * 12 0;
       max-width: 50vw;
-
-      h1 {
-        font-size: $hero-heding-size-desk;
-      }
-    }
-
-    // negative bottom
-    &.it-bottom-overlapping-content {
-      margin-bottom: -$hero-negative-margin-desk;
-      .it-hero-text-wrapper {
-        padding-bottom: $hero-negative-bottom-padding * 2;
-      }
-      & .card-wrapper {
-        .card-body {
-          padding-top: 48px;
-        }
-      }
-    }
-  }
-}
-
-//Tablet horizontal / small desktop
-@include media-breakpoint-up(xxl) {
-  .it-hero-wrapper {
-    // negative bottom
-    &.it-bottom-overlapping-content {
-      & + .container {
-        .card-wrapper {
-          .card-body {
-            padding-top: $card-padding * 2.5;
-          }
-        }
-      }
     }
   }
 }

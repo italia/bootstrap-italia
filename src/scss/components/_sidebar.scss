@@ -1,135 +1,133 @@
-//mobile
+// Component: sidebar
+//
+// Description: Component styles for sidebar
+//
+
+// Variables
+//
+
+// Properties
+//
+
 .sidebar-wrapper {
-  padding: $v-gap * 3 0;
+  --#{$prefix}sidebar-padding: var(--#{$prefix}spacing-m); // Controls the padding for the sidebar, using spacing tokens.
+  --#{$prefix}sidebar-background-color: transparent; // Controls the background color for the sidebar.
+  --#{$prefix}sidebar-heading-font-size: var(--#{$prefix}heading-6-font-size); // Controls the heading font size for the sidebar, using font tokens.
+  --#{$prefix}sidebar-heading-color: var(--#{$prefix}color-text-secondary); // Controls the heading color for the sidebar, using color tokens.
+  --#{$prefix}sidebar-link-padding-x: var(--#{$prefix}spacing-s); // Controls the link horizontal padding for the sidebar, using spacing tokens.
+  --#{$prefix}sidebar-link-padding-y: var(--#{$prefix}spacing-xs); // Controls the link vertical padding for the sidebar, using spacing tokens.
+  --#{$prefix}sidebar-link-sublist-indent: var(--#{$prefix}spacing-m); // Controls the sublist indent for the sidebar, using spacing tokens.
+  --#{$prefix}sidebar-link-font-size: var(--#{$prefix}label-font-size); // Controls the link font size for the sidebar, using font tokens.
+  --#{$prefix}sidebar-link-line-height: var(--#{$prefix}body-line-height); // Controls the link line height for the sidebar, using font tokens.
+  --#{$prefix}sidebar-link-active-line-width: 4px; // Controls the active line width for the sidebar.
+  --#{$prefix}sidebar-divider-color: var(--#{$prefix}color-border-subtle); // Controls the divider color for the sidebar, using color tokens.
+  --#{$prefix}sidebar-link-active-border-color: var(--#{$prefix}color-border-primary); // Controls the active border color for the sidebar, using color tokens.
+}
+
+// Styles
+//
+/* stylelint-disable-next-line no-duplicate-selectors */
+.sidebar-wrapper {
+  padding: var(--#{$prefix}sidebar-padding) 0;
+  background: var(--#{$prefix}sidebar-background-color);
+
   h3 {
-    font-weight: $sidebar-heading-font-weight;
-    margin-bottom: $sidebar-heading-bottom-margin;
-    font-size: $sidebar-heading-text-size;
-    margin-top: $sidebar-heading-margin-top;
-    letter-spacing: $sidebar-heading-letter-spacing;
+    margin-bottom: var(--#{$prefix}spacing-m);
+    padding-right: var(--#{$prefix}spacing-s);
+    padding-left: var(--#{$prefix}spacing-s);
+    font-size: var(--#{$prefix}sidebar-heading-font-size);
+    font-weight: var(--#{$prefix}font-weight-solid);
     text-transform: uppercase;
-    padding-left: $v-gap * 3;
-    padding-right: $v-gap * 3;
+    color: var(--#{$prefix}sidebar-heading-color);
   }
-  .sidebar-linklist-wrapper {
-    .link-list-wrapper {
-      h3 {
-        font-weight: $sidebar-heading-font-weight;
-        margin-bottom: $sidebar-heading-bottom-margin;
-        font-size: $sidebar-heading-text-size;
-        margin-top: $sidebar-heading-margin-top;
-        letter-spacing: $sidebar-heading-letter-spacing;
-        text-transform: uppercase;
-      }
-      ul {
-        li {
-          a {
-            line-height: $sidebar-linklist-link-line-height;
-            padding-top: $sidebar-linklist-link-v-padding;
-            padding-bottom: $sidebar-linklist-link-v-padding;
-            font-size: $sidebar-link-size;
-            cursor: pointer;
-            i.it-expand {
-              font-size: $sidebar-dropdown-icon-size;
-              top: 50%;
-              transform: translateY(-50%);
-            }
-            &[aria-expanded='true'] {
-              i {
-                transform: translateY(-50%) scaleY(-1);
-              }
-            }
-            &[data-bs-toggle='collapse'] {
-              &.active {
-                span,
-                i {
-                  color: $primary;
-                  text-decoration: none;
-                }
-              }
-            }
-            &.active {
-              text-decoration: none;
-              span {
-                color: $color-text-base;
-                text-decoration: underline;
-              }
-              &:after {
-                content: '';
-                display: block;
-                width: $sidebar-dropdown-line-selection-width;
-                position: absolute;
-                left: 0;
-                top: 0;
-                bottom: 0;
-                background-color: $sidebar-dropdown-line-selection-color;
-              }
-            }
-            &.icon-right {
-              padding: 0.55em 24px;
-            }
-          }
-        }
-        &.link-sublist {
-          li {
-            a {
-              font-size: $sidebar-submenu-font-size;
-              padding-top: $sidebar-submenu-link-v-padding;
-              padding-bottom: $sidebar-submenu-link-v-padding;
-              &.active {
-                span {
-                  color: $color-text-base;
-                  text-decoration: underline;
-                }
-                // &::after {
-                //   display: none;
-                // }
-              }
-            }
-          }
-        }
-      }
-    }
-    &.linklist-secondary {
-      &:before {
+
+  .sidebar-linklist-wrapper .link-list-wrapper ul li a {
+    width: 100%;
+    position: relative;
+    padding: var(--#{$prefix}sidebar-link-padding-y) var(--#{$prefix}sidebar-link-padding-x);
+    font-size: var(--#{$prefix}sidebar-link-font-size);
+    line-height: var(--#{$prefix}sidebar-link-line-height);
+    text-transform: var(--#{$prefix}sidebar-text-transform, none); // Default to none if not set
+
+    // Active indicator: support both .active class and semantic aria-current
+    &.active,
+    &[aria-current='page'] {
+      &::after {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        inset-inline-start: 0;
         content: '';
-        width: $sidebar-link-small-line-width;
-        height: 1px;
-        background: $color-border-subtle;
         display: block;
-        margin-left: $v-gap * 3;
-        margin-top: $v-gap * 3;
+        width: var(--#{$prefix}sidebar-link-active-line-width);
+        background-color: var(--#{$prefix}sidebar-link-active-border-color);
       }
     }
+
+    span {
+      text-decoration: none;
+    }
+
+    &.active span,
+    &[aria-current='page'] span {
+      text-decoration: underline;
+    }
   }
-  // linea destra
+
+  .sidebar-linklist-wrapper .link-list-wrapper ul.link-sublist {
+    padding-inline-start: 0; // Reset padding for sublist from _link-list.scss
+
+    li a {
+      padding-inline-start: var(--#{$prefix}sidebar-link-sublist-indent);
+      text-transform: none; // No text transform for sublist items
+    }
+  }
+
+  .icon {
+    margin-right: var(--#{$prefix}icon-spacing);
+  }
+
+  // Divider between link lists
+  .sidebar-linklist-wrapper.linklist-secondary:before {
+    content: '';
+    display: block;
+    height: 1px;
+    margin: var(--#{$prefix}sidebar-link-padding-y) var(--#{$prefix}sidebar-link-padding-y) var(--#{$prefix}sidebar-link-padding-y) 0;
+    background: var(--#{$prefix}sidebar-divider-color);
+  }
+
+  &.it-line-left-side,
   &.it-line-right-side {
-    border-right: 1px solid $sidebar-border-color;
-    .sidebar-linklist-wrapper {
-      .link-list-wrapper {
-        ul {
-          li {
-            a {
-              &[data-bs-toggle='collapse'] {
-                &.active {
-                  border-right: $sidebar-dropdown-line-selection-width solid $sidebar-dropdown-line-selection-color;
-                  border-left: none;
-                }
-              }
-              &.active {
-                &:after {
-                  left: auto;
-                  right: 0;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
+    border-color: var(--#{$prefix}sidebar-divider-color);
   }
-  // linea sinistra
+
+  &.it-line-right-side {
+    // Use logical property for RTL support
+    border-inline-end-width: 1px;
+    border-inline-end-style: solid;
+  }
+
+  // Active indicator and collapse state
+  &.it-line-right-side .sidebar-linklist-wrapper .link-list-wrapper a[data-bs-toggle='collapse'].active {
+    border-inline-end: var(--#{$prefix}sidebar-link-active-line-width) solid var(--#{$prefix}sidebar-link-active-border-color);
+    border-inline-start: none;
+  }
+
+  &.it-line-right-side .sidebar-linklist-wrapper .link-list-wrapper a.active::after {
+    inset-inline-end: 0;
+    inset-inline-start: auto;
+  }
+
   &.it-line-left-side {
-    border-left: 1px solid $sidebar-border-color;
+    // Use logical property for RTL support
+    border-inline-start-width: 1px;
+    border-inline-start-style: solid;
   }
+}
+
+.sidebar-wrapper.theme-dark {
+  --#{$prefix}sidebar-background-color: var(--#{$prefix}color-background-secondary);
+  --#{$prefix}sidebar-divider-color: var(--#{$prefix}color-border-subtle);
+  --#{$prefix}sidebar-heading-color: var(--#{$prefix}color-text-inverse);
+  --#{$prefix}sidebar-link-active-border-color: var(--#{$prefix}color-border-inverse);
 }

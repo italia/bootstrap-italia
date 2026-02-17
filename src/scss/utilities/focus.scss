@@ -1,27 +1,18 @@
 :focus:not([data-focus-mouse='true']),
-%focus,
 .it-carousel-wrapper .splide__pagination button:focus:not([data-focus-mouse='true']),
 .upload:focus:not([data-focus-mouse='true']) + label,
 .upload-dragdrop-input:focus[type='file']:not([data-focus-mouse='true']) + label,
 .avatar-upload:focus-within:not([data-focus-mouse='true']),
 .rating input:focus:not([data-focus-mouse='true']) + label svg {
-  border-color: $focus-outline-color-out !important;
-  box-shadow:
-    0 0 0 2px $focus-outline-color-in,
-    0 0 0 5px $focus-outline-color-out !important;
-  outline: 3px solid transparent !important;
-  outline-offset: 3px !important;
+  @extend %focus;
 }
 
 [tabindex='-1']:focus:not(:focus-visible) {
   box-shadow: none !important;
 }
 
-[data-focus-mouse='true']:not(.btn),
-%focusmouse {
-  border-color: inherit !important;
-  box-shadow: none !important;
-  outline: none !important;
+[data-focus-mouse='true']:not(.btn) {
+  @extend %focusmouse;
 }
 
 p a,

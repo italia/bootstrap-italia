@@ -526,3 +526,5 @@ Esistono numerosi [plugin](https://videojs.com/plugins/) disponibili per video.j
 consentono di aggiungere nuove funzionalità, come la riproduzione di video in VR, 
 l'analisi delle statistiche di visualizzazione del video, le utility per la UI mobile 
 e molto altro ancora.
+
+{% include properties.md properties=site.data.cprops.acceptoverlay %}
