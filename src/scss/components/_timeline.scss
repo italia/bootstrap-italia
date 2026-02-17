@@ -42,7 +42,7 @@
       margin-top: 16px;
       margin-bottom: 16px;
 
-      +.it-card {
+      + .it-card {
         margin-top: 4px;
       }
 
@@ -52,7 +52,7 @@
         margin-left: -24px;
         width: auto;
 
-        +.it-card {
+        + .it-card {
           margin-top: 8px;
         }
       }
@@ -180,7 +180,6 @@
 
     .col-12 {
       .card-wrapper {
-
         // xxx deprecated with old .card
         .card {
           border: none;
@@ -211,7 +210,6 @@
       }
 
       .card-wrapper {
-
         // xxx deprecated with old .card
         .card {
           text-align: right;
@@ -298,9 +296,8 @@
 
 // Timeline Point List component styles
 .it-timeline-point-list {
-
   @at-root ol#{&},
-  ul#{&} {
+    ul#{&} {
     padding-left: 0;
     list-style: none;
   }
@@ -406,11 +403,11 @@
       flex: 1;
       margin-left: 1rem;
 
-      &>* {
+      & > * {
         width: 100%;
       }
 
-      &>*:last-child {
+      & > *:last-child {
         margin-bottom: 0;
       }
     }
