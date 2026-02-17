@@ -42,7 +42,7 @@
       margin-top: 16px;
       margin-bottom: 16px;
 
-      +.it-card {
+      + .it-card {
         margin-top: 4px;
       }
 
@@ -52,7 +52,7 @@
         margin-left: -24px;
         width: auto;
 
-        +.it-card {
+        + .it-card {
           margin-top: 8px;
         }
       }
@@ -180,7 +180,6 @@
 
     .col-12 {
       .card-wrapper {
-
         // xxx deprecated with old .card
         .card {
           border: none;
@@ -211,7 +210,6 @@
       }
 
       .card-wrapper {
-
         // xxx deprecated with old .card
         .card {
           text-align: right;
@@ -296,7 +294,6 @@
   }
 }
 
-
 // Timeline component styles
 
 //mobile
@@ -341,7 +338,7 @@
       margin-top: 16px;
       margin-bottom: 16px;
 
-      +.it-card {
+      + .it-card {
         margin-top: 4px;
       }
 
@@ -351,7 +348,7 @@
         margin-left: -24px;
         width: auto;
 
-        +.it-card {
+        + .it-card {
           margin-top: 8px;
         }
       }
@@ -479,7 +476,6 @@
 
     .col-12 {
       .card-wrapper {
-
         // xxx deprecated with old .card
         .card {
           border: none;
@@ -510,7 +506,6 @@
       }
 
       .card-wrapper {
-
         // xxx deprecated with old .card
         .card {
           text-align: right;
@@ -597,21 +592,19 @@
 
 // Timeline Point List component styles
 .it-timeline-point-list {
-
   @at-root ol#{&},
-  ul#{&} {
+    ul#{&} {
     padding-left: 0;
     list-style: none;
   }
 
   display: flex;
   flex-direction: column;
-  // NO row-gap - usiamo margin-bottom sui timeline-point
 
   .timeline-point {
     display: flex;
     align-items: center;
-    margin-bottom: $v-gap * 3; // Gap tra elementi
+    margin-bottom: $v-gap * 3;
 
     &:last-child {
       margin-bottom: 0;
@@ -634,7 +627,7 @@
         padding: 0.5rem 0.75rem 0.5rem 0;
       }
 
-      // Linea verticale - si estende NEL margin-bottom
+      // Vertical line
       &::before {
         content: '';
         position: absolute;
@@ -646,7 +639,7 @@
         z-index: 1;
       }
 
-      // Puntino circolare
+      // Point circle
       &::after {
         content: '';
         position: absolute;
@@ -710,19 +703,19 @@
       flex: 1;
       margin-left: 1rem;
 
-      &>* {
+      & > * {
         width: 100%;
       }
 
-      &>*:last-child {
+      & > *:last-child {
         margin-bottom: 0;
       }
     }
 
-    // Last item: linea non si estende oltre
+    // Last item: line extends only for aside, not content
     &:last-child {
       .point-aside::before {
-        height: 100%; // Solo altezza aside
+        height: 100%;
       }
     }
 
@@ -731,7 +724,7 @@
       align-items: flex-start;
 
       .point-aside {
-        align-self: stretch; // Estende per altezza content
+        align-self: stretch; // Extends to full height of content
         justify-content: flex-start;
         padding-top: 0.5rem;
 
@@ -802,7 +795,7 @@
         flex-wrap: wrap;
         position: relative;
 
-        // Linea verticale sul timeline-point
+        // Vertical line for stacked layout - extends through content and gap
         &::before {
           content: '';
           position: absolute;
@@ -829,7 +822,7 @@
           flex-direction: row-reverse;
           padding-left: 2.5rem;
           padding-right: 0.5rem;
-          position: relative; 
+          position: relative;
 
           &::before {
             display: none;
@@ -850,5 +843,4 @@
       }
     }
   }
-
 }
