@@ -113,7 +113,7 @@
     }
   }
 
-  @media (max-width: 575px) {
+  @include media-breakpoint-down(sm) {
     --#{$prefix}hero-overlap-negative-spacing: calc(var(--#{$prefix}spacing-l) * -1);
     &.it-wrapped-container {
       display: flex;
@@ -121,18 +121,18 @@
     }
   }
 
-  @media (min-width: 576px) {
+  @include media-breakpoint-up(sm) {
     &.it-wrapped-container {
       min-height: 0 !important;
       align-items: flex-end;
     }
   }
 
-  @media (min-width: 768px) {
+  @include media-breakpoint-up(md) {
     --#{$prefix}hero-height: 300px;
   }
 
-  @media (min-width: 992px) {
+  @include media-breakpoint-up(lg) {
     --#{$prefix}hero-height: 400px;
     --#{$prefix}hero-overlap-negative-spacing: -40px;
     --#{$prefix}hero-overlap-spacing-inset: 96px;
