@@ -19,6 +19,7 @@ $gray-700: hsl(0, 0%, 25%) !default; // color-gray-25
 $gray-800: hsl(0, 0%, 15%) !default; // color-gray-15
 $gray-900: hsl(0, 0%, 10%) !default; // color-gray-10
 
+// TODO: move the _map.scss
 $grays: () !default;
 $grays: map.merge(
   (
@@ -87,6 +88,7 @@ $gray-border-disabled: $gray-disabled !default; // color-border-disabled
 
 $secondary: $gray-secondary !default;
 
+// TODO: move the _map.scss
 $colors: () !default;
 $colors: map.merge(
   (
@@ -119,6 +121,7 @@ $info: $secondary !default;
 $warning: $orange-accessible !default;
 $danger: $red-accessible !default;
 
+// TODO: move the _map.scss
 $theme-colors: () !default;
 $theme-colors: map.merge(
   (
@@ -1995,6 +1998,7 @@ $section-user-header-background-color: $primary-a1 !default; // Missing in the U
 // Grid breakpoints
 // Define the minimum dimensions at which your layout will change,
 // adapting to different screen sizes, for use in media queries.
+// TODO: move the _map.scss
 $grid-breakpoints: (
   xs: 0,
   sm: 576px,
@@ -2010,6 +2014,8 @@ $grid-breakpoints-hover: 1025px;
 
 // Grid containers
 // Define the maximum width of `.container` for different screen sizes.
+// TODO: move the _map.scss
+
 $container-max-widths: (
   sm: 540px,
   md: 720px,
