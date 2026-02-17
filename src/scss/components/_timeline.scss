@@ -42,7 +42,7 @@
       margin-top: 16px;
       margin-bottom: 16px;
 
-      + .it-card {
+      +.it-card {
         margin-top: 4px;
       }
 
@@ -52,7 +52,7 @@
         margin-left: -24px;
         width: auto;
 
-        + .it-card {
+        +.it-card {
           margin-top: 8px;
         }
       }
@@ -180,6 +180,7 @@
 
     .col-12 {
       .card-wrapper {
+
         // xxx deprecated with old .card
         .card {
           border: none;
@@ -210,302 +211,7 @@
       }
 
       .card-wrapper {
-        // xxx deprecated with old .card
-        .card {
-          text-align: right;
 
-          &:after {
-            margin-left: auto;
-            display: inline-block;
-            margin-right: $v-gap * 3;
-          }
-
-          a.read-more {
-            right: $v-gap * 3;
-          }
-        }
-      }
-
-      .it-pin-wrapper {
-        flex-direction: row-reverse;
-        left: auto;
-        right: -62px;
-
-        .pin-icon {
-          margin-right: 0;
-          margin-left: $v-gap * 2;
-        }
-
-        .pin-text {
-          span {
-            &:after {
-              left: auto;
-              right: -4px;
-            }
-          }
-        }
-
-        &.it-evidence {
-          .pin-text {
-            span {
-              &:after {
-                border-color: transparent transparent transparent $primary;
-              }
-            }
-          }
-        }
-      }
-    }
-
-    .col-12:nth-child(even) {
-      .it-now-label {
-        left: 0;
-        transform: translateX(-100%);
-        display: flex;
-        align-items: center;
-
-        &:after {
-          content: '';
-          display: inline-block;
-          height: 1px;
-          width: $v-gap * 2;
-          background: $primary;
-          margin-left: $v-gap * 2;
-        }
-      }
-
-      .timeline-element {
-        position: relative;
-        left: 50%;
-
-        .it-pin-wrapper {
-          left: -66px;
-        }
-      }
-    }
-
-    .it-pin-wrapper {
-      position: relative;
-
-      .pin-text {
-        font-size: 1rem;
-      }
-    }
-  }
-}
-
-// Timeline component styles
-
-//mobile
-.it-timeline-wrapper {
-  .it-now-label {
-    position: absolute;
-    top: 50%;
-    z-index: 10;
-    font-size: 1rem;
-    font-family: $font-family-monospace;
-    color: $primary;
-    font-weight: 600;
-  }
-
-  .row {
-    position: relative;
-    padding-top: $v-gap * 6;
-
-    //padding-bottom: $v-gap*6;
-    &:after {
-      content: '';
-      width: $timeline-width;
-      background: $timeline-border-color;
-      position: absolute;
-      left: $v-gap * 5;
-      top: -$v-gap * 2;
-      bottom: -$v-gap * 2;
-    }
-  }
-
-  .timeline-element {
-    padding: $timeline-content-padding;
-    position: relative;
-    z-index: 1;
-
-    .card {
-      // xxx deprecated with old .card
-      background: none;
-    }
-
-    .it-card {
-      margin-top: 16px;
-      margin-bottom: 16px;
-
-      + .it-card {
-        margin-top: 4px;
-      }
-
-      @include media-breakpoint-down(lg) {
-        margin-top: 32px;
-        margin-bottom: 32px;
-        margin-left: -24px;
-        width: auto;
-
-        + .it-card {
-          margin-top: 8px;
-        }
-      }
-    }
-  }
-
-  .it-pin-wrapper {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    top: -$timeline-pin-circle-size * 0.5;
-    z-index: 4;
-    left: calc($timeline-padding / 2);
-
-    .pin-icon {
-      width: $timeline-pin-circle-size;
-      height: $timeline-pin-circle-size;
-      border-radius: $timeline-pin-circle-size;
-      box-sizing: border-box;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: $card-shadow;
-      border: $timeline-pin-circle-border;
-      margin-right: $v-gap * 2;
-      background: $white;
-    }
-
-    svg {
-      width: $timeline-pin-size;
-      height: $timeline-pin-size;
-      fill: $primary;
-    }
-
-    .pin-text {
-      color: $white;
-      font-weight: 600;
-      text-transform: uppercase;
-      background: $timeline-pin-background;
-      border-radius: $border-radius;
-      font-family: $font-family-monospace;
-      font-size: var(--bs-body-font-size);
-      line-height: var(--bs-body-line-height);
-
-      span {
-        padding: $v-gap * 0.5 $v-gap * 2;
-        display: block;
-        position: relative;
-
-        &:after {
-          content: '';
-          width: 10px;
-          height: 10px;
-          background: $timeline-pin-background;
-          border-radius: 3px;
-          position: absolute;
-          left: -4px;
-          top: 50%;
-          transform: translateY(-50%) rotate(45deg);
-        }
-      }
-    }
-
-    &.it-now {
-      .pin-icon {
-        background: $primary;
-      }
-
-      svg {
-        fill: $white;
-      }
-
-      .pin-text {
-        background: $primary;
-
-        span {
-          &:after {
-            background: $primary;
-          }
-        }
-      }
-    }
-
-    &.it-evidence {
-      .pin-icon {
-        background: $timeline-pin-background;
-      }
-
-      svg {
-        fill: $white;
-      }
-
-      .pin-text {
-        background: $timeline-pin-background;
-
-        span {
-          &:after {
-            background: $timeline-pin-background;
-          }
-        }
-      }
-    }
-  }
-
-  .card-title {
-    // xxx deprecated with old .card
-    text-transform: uppercase;
-  }
-}
-
-//small - tablet
-@include media-breakpoint-up(lg) {
-  .it-timeline-wrapper {
-    .row {
-      &:after {
-        content: '';
-        left: calc(50% - #{$timeline-width});
-      }
-    }
-
-    .timeline-element {
-      padding: $timeline-content-padding;
-      width: 50%;
-    }
-
-    .col-12 {
-      .card-wrapper {
-        // xxx deprecated with old .card
-        .card {
-          border: none;
-        }
-      }
-    }
-
-    // col rules
-    .col-12:nth-child(odd) {
-      .it-now-label {
-        right: 50%;
-        transform: translateX(100%);
-        display: flex;
-        align-items: center;
-
-        &:before {
-          content: '';
-          display: inline-block;
-          height: 1px;
-          width: $v-gap * 2;
-          background: $primary;
-          margin-right: $v-gap * 2;
-        }
-      }
-
-      .timeline-element {
-        padding: $timeline-content-padding-reverse;
-      }
-
-      .card-wrapper {
         // xxx deprecated with old .card
         .card {
           text-align: right;
@@ -592,8 +298,9 @@
 
 // Timeline Point List component styles
 .it-timeline-point-list {
+
   @at-root ol#{&},
-    ul#{&} {
+  ul#{&} {
     padding-left: 0;
     list-style: none;
   }
@@ -703,11 +410,11 @@
       flex: 1;
       margin-left: 1rem;
 
-      & > * {
+      &>* {
         width: 100%;
       }
 
-      & > *:last-child {
+      &>*:last-child {
         margin-bottom: 0;
       }
     }
