@@ -1,3 +1,4 @@
+@use 'sass:map';
 @use 'sass:string';
 @use '../base/config' as *;
 @use '../base/variables' as *;
@@ -106,7 +107,7 @@
   }
 
   $validation-messages: '';
-  @each $state in map-keys($form-validation-states) {
+  @each $state in map.keys($form-validation-states) {
     $validation-messages: $validation-messages + ':not(.' + string.unquote($state) + '-tooltip)' + ':not(.' + string.unquote($state) + '-feedback)';
   }
 
