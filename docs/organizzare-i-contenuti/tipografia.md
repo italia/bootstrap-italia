@@ -11,30 +11,29 @@ link. Quando è necessario un maggiore controllo, fornisce delle
 [classi di utilità testuali]({{ site.baseurl }}/docs/organizzare-i-contenuti/testo/).
 
 {% capture callout %}
-Cosa cambia nella tipografia dalla versione **2.7.0** della libreria
+Le scelte tipografiche di Bootstrap Italia seguono le indicazioni del [Design system .italia](https://designers.italia.it/design-system/fondamenti/tipografia/). Per approfondimenti su gerarchia visiva, spaziature e uso dei caratteri, consulta la documentazione ufficiale.
+{% endcapture %}{% include callout.html content=callout type="info" %}
 
-- reimpostata la dimensione del carattere di base su `16px` su `body`.
-- sostituite le unità `em` con `rem`.
-- aggiornati i valori `font-size` per corrispondere al nuovo calcolo dell'unità `rem`.
-- rimosse le variabili obsolete e inutilizzate da `_variables.scss`
-- variabili specifiche dei componenti aggiornate e allineate al `kit UI v3.0`
+## Famiglie di caratteri
 
-{% endcapture %}{% include callout.html content=callout type="danger" %}
+Bootstrap Italia include tre famiglie di caratteri tipografici per garantire leggibilità e coerenza visiva:
+- **Titillium** (Web o Sans Pro): font principale sans-serif per interfacce e testi brevi
+- **Lora**: font serif per contenuti editoriali e testi lunghi
+- **Roboto Mono**: font monospace per codice, dati tabulari e numeri
 
-## Famiglie di Caratteri
+{% capture callout %}
+Per informazioni su come caricare i font (via JavaScript, CSS o bundle) e scegliere tra le varianti Titillium Web e Titillium Sans Pro, consulta la [**pagina dedicata Font**]({{ site.baseurl }}/docs/come-iniziare/font/).
+{% endcapture %}{% include callout.html content=callout type="info" %}
 
-Come descritto in dettaglio nel capitolo sullo UI Kit, le Linee Guida di Design
-suggeriscono di usare le seguenti famiglie di caratteri:
+### Titillium (font principale)
 
-- il font senza grazie, o _sans serif_, **Titillium Web**.
-- il font graziato, o _serif_, **Lora**.
-- il font _monospace_ con dimensioni di caratteri normalizzate **Roboto Mono**.
+Bootstrap Italia supporta due varianti del carattere Titillium:
+- **Titillium Web** (default): versione originale e carattere di riferimento del Design system .italia
+- **Titillium Sans Pro**: evoluzione con supporto linguistico esteso e simboli matematici.
 
-### Titillium Web
+Nella documentazione puoi esplorare la resa delle due versioni usando il selettore "Font principale" nella barra laterale.
 
-È la famiglia di caratteri utilizzata per i contenuti web, per cui di norma non
-è necessario applicarlo esplicitamente. In caso si renda necessario è possibile
-utilizzare la classe `font-sans-serif`.
+Il font Titillium è utilizzato di default, per cui di norma non è necessario applicarlo esplicitamente. In caso si renda necessario è possibile utilizzare la classe `.font-sans-serif`.
 
 {% comment %}Example name: Titillium Web{% endcomment %}
 {% capture example %}
@@ -43,11 +42,9 @@ utilizzare la classe `font-sans-serif`.
 <p class="font-sans-serif">0123456789</p>
 {% endcapture %}{% include example.html content=example %}
 
-### Lora
+### Lora (font serif)
 
-È un carattere più adatto a testi lunghi, introdotto per la sua leggibilità,
-nato espressamente per la lettura su display. Può essere utilizzato applicando
-la classe `font-serif`.
+Lora è un carattere serif progettato espressamente per la lettura su display, particolarmente adatto per testi lunghi e contenuti editoriali. Può essere utilizzato applicando la classe `.font-serif`.
 
 {% comment %}Example name: Lora{% endcomment %}
 {% capture example %}
@@ -56,13 +53,11 @@ la classe `font-serif`.
 <p class="font-serif">0123456789</p>
 {% endcapture %}{% include example.html content=example %}
 
-### Roboto Mono
+### Roboto Mono (font monospace)
 
-È una famiglia di caratteri adatta ad essere utilizzata per la rappresentazione
-di numeri, codici, calcoli matematici, esempi con linguaggi di programmazione.
-Per il suo utilizzo, è sufficiente usare la classe `font-monospace`.
+Roboto Mono è una famiglia di caratteri monospace adatta alla rappresentazione di codice, numeri, calcoli matematici e dati tabulari. Per utilizzarlo, è sufficiente usare la classe `.font-monospace`.
 
-{% comment %}Example name: Roboto{% endcomment %}
+{% comment %}Example name: Roboto Mono{% endcomment %}
 {% capture example %}
 <p class="font-monospace">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
 <p class="font-monospace">abcdefghijklmnopqrstuvwxyz</p>
@@ -83,9 +78,7 @@ spazio quando lo schermo lo permette.
 Tutte le intestazioni HTML, da `<h1>` fino a `<h6>`, sono disponibili, anche se
 è buona norma non utilizzare più di 4 livelli di intestazione.
 
-Nel caso in cui si voglia presentare il testo nello stesso stile delle
-intestazioni, ma non sia possibile utilizzare l'elemento HTML appropriato,
-sono disponibili anche classi di tipo `.h1`, `.h2`, ecc.
+L'interlinea è impostata con il rapporto di  `1.2`.
 
 {% comment %}Example name: Intestazioni{% endcomment %}
 {% capture example %}
@@ -95,18 +88,25 @@ sono disponibili anche classi di tipo `.h1`, `.h2`, ecc.
 <h4 class="no_toc">Intestazione di tipo h4</h4>
 <h5 class="no_toc">Intestazione di tipo h5</h5>
 <h6 class="no_toc">Intestazione di tipo h6</h6>
-
-<p class="h1">Stile h1</p>
-<p class="h2">Stile h2</p>
-<p class="h3">Stile h3</p>
-<p class="h4">Stile h4</p>
-<p class="h5">Stile h5</p>
-<p class="h6">Stile h6</p>
 {% endcapture %}{% include example.html content=example %}
 
-Queste le dimensioni nel dettaglio:
+Nel caso in cui si voglia presentare il testo nello stesso stile delle
+intestazioni, ma non sia possibile utilizzare l'elemento HTML appropriato,
+sono disponibili anche classi di tipo `.h1`, `.h2`, ecc.
 
-<table>
+{% comment %}Example name: Stili intestazioni{% endcomment %}
+{% capture example %}
+<p class="h1">Testo con classe .h1</p>
+<p class="h2">Testo con classe .h2</p>
+<p class="h3">Testo con classe .h3</p>
+<p class="h4">Testo con classe .h4</p>
+<p class="h5">Testo con classe .h5</p>
+<p class="h6">Testo con classe .h6</p>
+{% endcapture %}{% include example.html content=example %}
+
+Queste le dimensioni nel dettaglio, espresse in pixel con il relativo peso (font-weight) e interlinea (line-height):
+
+<table class="mb-5">
   <thead>
     <tr>
       <th>Intestazione</th>
@@ -117,50 +117,50 @@ Queste le dimensioni nel dettaglio:
   <tbody>
     <tr>
       <td>
-        <p class="h1">h1</p>
+        <p class="h1 mb-0">h1</p>
       </td>
-      <td>Bold, 40px/48px</td>
-      <td>Bold, 48px/60px</td>
+      <td>40px (2.5rem)</td>
+      <td>48px (3rem)</td>
     </tr>
     <tr>
       <td>
-        <p class="h2">h2</p>
+        <p class="h2 mb-0">h2</p>
       </td>
-      <td>Bold, 32px/40px</td>
-      <td>Bold, 40px/48px</td>
+      <td>32px (2rem)</td>
+      <td>40px (2.5rem)</td>
     </tr>
     <tr>
       <td>
-        <p class="h3">h3</p>
+        <p class="h3 mb-0">h3</p>
       </td>
-      <td>Bold, 28px/32px</td>
-      <td>Bold, 32px/40px</td>
+      <td>28px (1.75rem)</td>
+      <td>32px (2rem)</td>
     </tr>
     <tr>
       <td>
-        <p class="h4">h4</p>
+        <p class="h4 mb-0">h4</p>
       </td>
-      <td>SemiBold, 24px/28px</td>
-      <td>SemiBold, 28px/40px</td>
+      <td>24px (1.5rem)</td>
+      <td>28px (1.75rem)</td>
     </tr>
     <tr>
       <td>
-        <p class="h5">h5</p>
+        <p class="h5 mb-0">h5</p>
       </td>
-      <td>Regular, 20px/24px</td>
-      <td>Regular, 24px/40px</td>
+      <td>20px (1.25rem)</td>
+      <td>24px (1.5rem)</td>
     </tr>
     <tr>
       <td>
-        <p class="h6">h6</p>
+        <p class="h6 mb-0">h6</p>
       </td>
-      <td>SemiBold, 16px/24px</td>
-      <td>SemiBold, 18px/28px</td>
+      <td>16px (1rem)</td>
+      <td>18px (1.125rem)</td>
     </tr>
   </tbody>
 </table>
 
-### Intestazione h1 in evidenza
+### Intestazione in evidenza
 
 Gli elementi di intestazione tradizionali sono progettati per funzionare al
 meglio nel contesto della pagina. Nel caso sia necessario mettere in ulteriore
@@ -187,9 +187,11 @@ dare uno stile diverso per testi di intestazione secondaria.
 
 ## Paragrafi
 
-Il semplice paragrafo prevede una dimensione di testo e un'interlinea di
-`16px/24px` per dispositivi mobili, e di `18px/28px` per schermi con dimensioni
-maggiori di 576px.
+Il semplice paragrafo prevede una dimensione di testo di
+`16px/1rem` per dispositivi mobili e di `18px/1.125rem` per schermi con dimensioni
+maggiori di 576px. 
+
+L'interlinea è impostata con il rapporto di  `1.5`.
 
 {% comment %}Example name: Paragrafi contenuti{% endcomment %}
 {% capture example %}
@@ -223,9 +225,9 @@ semplicemente gli elementi HTML5 per il trattamento di testo.
 <p>Esempio di testo <em>corsivo</em>.</p>
 <p>Esempio di testo <strong>in grassetto</strong>.</p>
 <p>Esempio di testo <small>rimpicciolito</small>.</p>
-<p>Esempio di testo <ins>aggiuntivo</ins>.</p>
-<p>Esempio di testo <del>cancellato</del> o <s>invalido</s>.</p>
-<p>Esempio di testo <code>monospace</code>.</p>
+<p>Esempio di <code>codice</code> in un paragrafo di testo.</p>
+<ins>Testo aggiunto</ins>
+<del>Testo rimosso</del>
 {% endcapture %}{% include example.html content=example %}
 
 Le classi `.mark` e `.small` sono disponibili anche per applicare gli stessi
@@ -430,3 +432,13 @@ con un `ellipsis`.
   </dd>
 </dl>
 {% endcapture %}{% include example.html content=example %}
+
+## Breaking change
+
+{% capture callout %}
+- Reimpostata la dimensione del carattere di base su `16px` su `body`.
+- Sostituite le unità `em` con `rem`.
+- Aggiornati i valori `font-size` per corrispondere al nuovo calcolo dell'unità `rem`.
+- Rimosse le variabili obsolete e inutilizzate da `_variables.scss`.
+- Variabili specifiche dei componenti aggiornate e allineate a `UI Kit Italia v3`.
+{% endcapture %}{% include callout-breaking.html content=callout version="2.7.0" type="danger" %}

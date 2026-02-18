@@ -30,6 +30,10 @@ exclude:
   - README.md
   - bootstrap/
 
+sass:
+  load_paths:
+    - node_modules
+
 plugins:
   - jekyll-redirect-from
   - jekyll-sitemap
@@ -54,7 +58,7 @@ twitter: 'https://twitter.com/designersITA'
 twitter_handle: '@designersITA'
 
 # Versions
-current_version:		2.17.4
+current_version:		3.0.0-alpha.1
 bootstrap_version: 5.2.3
 bootstrap_minor: 5.1
 

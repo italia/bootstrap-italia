@@ -1,9 +1,34 @@
-code,
-pre,
-kbd {
-  font-size: 1rem;
+// Component: code
+//
+// Description: Component styles for code
+//
+
+// Variables
+//
+
+// Properties
+//
+
+// Styles
+//
+
+pre {
+  background-color: var(--#{$prefix}color-background-emphasis);
+  padding: var(--#{$prefix}spacing-s);
+  overflow-x: auto;
+  color: var(--#{$prefix}color-code);
+  font-size: inherit;
+
+  code {
+    color: var(--#{$prefix}color-text-inverse);
+    background-color: transparent;
+    font-size: inherit;
+  }
 }
 
-pre code {
-  font-size: 1rem;
+code {
+  color: var(--#{$prefix}color-code);
+  font-size: 85%;
+  word-wrap: break-word;
+  background-color: var(--#{$prefix}code-background);
 }

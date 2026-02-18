@@ -14,29 +14,39 @@ Per una Pubblica Amministrazione potrebbe contenere tutte i riferimenti ai vari 
 Potrebbe anche contenere riferimenti alle pagine social dell'amministrazione.
 
 ## Footer completo
+
+Nel footer completo sono presenti i seguenti elementi:
+- **Logo** dell'ente con nome e tagline;
+- **Sezioni di primo livello** e relative sotto-sezioni; il nome della sezione è un link che porta alla pagina principale della sezione;
+- **Contatti** dell'ente;
+- **Link utili** (Media policy, Note legali, Privacy policy, Mappa del sito);
+- **Dichiarazione di accessibilità** (link esterno su form AgID);
+- **Profili Social** dell'ente;
+- **Iscrizione Newsletter** (opzionale).
+
 {% comment %}Example name: Completo{% endcomment %}
 {% capture example %}
 <footer class="it-footer">
   <div class="it-footer-main">
     <div class="container">
-      <section>
+      <section class="pb-4">
         <div class="row clearfix">
           <div class="col-sm-12">
             <div class="it-brand-wrapper">
               <a href="#" class="" data-focus-mouse="false">
                 <svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
                 <div class="it-brand-text">
-                  <h2 class="no_toc">Lorem Ipsum</h2>
-                  <h3 class="no_toc d-none d-md-block">Inserire qui la tag line</h3>
+                  <h2 class="no_toc">Nome Ente</h2>
+                  <h3 class="no_toc">Tagline</h3>
                 </div>
               </a>
             </div>
           </div>
         </div>
       </section>
-      <section>
+      <section class="pt-2">
         <div class="row">
-          <div class="col-lg-3 col-md-3 col-sm-6 pb-2">
+          <div class="col-lg-3 col-sm-6 pb-3">
             <h4>
               <a href="#" title="Vai alla pagina: Amministrazione">Amministrazione</a>
             </h4>
@@ -50,7 +60,7 @@ Potrebbe anche contenere riferimenti alle pagine social dell'amministrazione.
               </ul>
             </div>
           </div>
-          <div class="col-lg-3 col-md-3 col-sm-6 pb-2">
+          <div class="col-lg-3 col-sm-6 pb-3">
             <h4>
               <a href="#" title="Vai alla pagina: Servizi">Servizi</a>
             </h4>
@@ -65,7 +75,7 @@ Potrebbe anche contenere riferimenti alle pagine social dell'amministrazione.
               </ul>
             </div>
           </div>
-          <div class="col-lg-3 col-md-3 col-sm-6 pb-2">
+          <div class="col-lg-3 col-sm-6 pb-3">
             <h4>
               <a href="#" title="Vai alla pagina: Novità">Novità</a>
             </h4>
@@ -77,7 +87,7 @@ Potrebbe anche contenere riferimenti alle pagine social dell'amministrazione.
               </ul>
             </div>
           </div>
-          <div class="col-lg-3 col-md-3 col-sm-6">
+          <div class="col-lg-3 col-sm-6 pb-3">
             <h4>
               <a href="#" title="Vai alla pagina: Documenti">Documenti</a>
             </h4>
@@ -93,13 +103,13 @@ Potrebbe anche contenere riferimenti alle pagine social dell'amministrazione.
           </div>
         </div>
       </section>
-      <section class="py-4 border-white border-top">
+      <section class="pt-4 border-white border-top">
         <div class="row">
-          <div class="col-lg-4 col-md-4 pb-2">
+          <div class="col-lg-4 col-md-4 mt-2">
             <h4>Contatti</h4>
             <p>
-              <strong>Comune di Lorem Ipsum</strong><br>
-              Via Roma 0 - 00000 Lorem Ipsum Codice fiscale / P. IVA: 000000000
+              <strong>Nome Ente</strong><br>
+              Via Roma 0 - 00000 Città - Codice fiscale / P. IVA: 000000000
             </p>
             <div class="link-list-wrapper">
               <ul class="footer-list link-list clearfix">
@@ -110,26 +120,30 @@ Potrebbe anche contenere riferimenti alle pagine social dell'amministrazione.
               </ul>
             </div>
           </div>
-          <div class="col-lg-4 col-md-4 pb-2">
-            <h4>Lorem Ipsum</h4>
-          </div>
-          <div class="col-lg-4 col-md-4 pb-2">
+          <div class="col-lg-4 col-md-4 mt-2">
             <div class="pb-2">
               <h4>Seguici su</h4>
               <ul class="list-inline text-left social">
                 <li class="list-inline-item">
-                  <a class="p-2 text-white" href="#"><svg class="icon icon-sm icon-white align-top"><use xlink:href="{{site.baseurl}}/dist/svg/sprites.svg#it-designers-italia"></use></svg><span class="visually-hidden">Designers Italia (link esterno)</span></a>
+                  <a class="p-2 text-white" href="#"><svg class="icon icon-sm icon-inverse align-top"><use xlink:href="{{site.baseurl}}/dist/svg/sprites.svg#it-designers-italia"></use></svg><span class="visually-hidden">Designers Italia (link esterno)</span></a>
                 </li>
                 <li class="list-inline-item">
-                  <a class="p-2 text-white" href="#"><svg class="icon icon-sm icon-white align-top"><use xlink:href="{{site.baseurl}}/dist/svg/sprites.svg#it-twitter"></use></svg><span class="visually-hidden">X (link esterno)</span></a>
+                  <a class="p-2 text-white" href="#"><svg class="icon icon-sm icon-inverse align-top"><use xlink:href="{{site.baseurl}}/dist/svg/sprites.svg#it-twitter"></use></svg><span class="visually-hidden">X (link esterno)</span></a>
                 </li>
                 <li class="list-inline-item">
-                  <a class="p-2 text-white" href="#"><svg class="icon icon-sm icon-white align-top"><use xlink:href="{{site.baseurl}}/dist/svg/sprites.svg#it-medium"></use></svg><span class="visually-hidden">Medium (link esterno)</span></a>
+                  <a class="p-2 text-white" href="#"><svg class="icon icon-sm icon-inverse align-top"><use xlink:href="{{site.baseurl}}/dist/svg/sprites.svg#it-medium"></use></svg><span class="visually-hidden">Medium (link esterno)</span></a>
                 </li>
                 <li class="list-inline-item">
-                  <a class="p-2 text-white" href="#"><svg class="icon icon-sm icon-white align-top"><use xlink:href="{{site.baseurl}}/dist/svg/sprites.svg#it-behance"></use></svg><span class="visually-hidden">Behance (link esterno)</span></a>
+                  <a class="p-2 text-white" href="#"><svg class="icon icon-sm icon-inverse align-top"><use xlink:href="{{site.baseurl}}/dist/svg/sprites.svg#it-behance"></use></svg><span class="visually-hidden">Behance (link esterno)</span></a>
                 </li>
               </ul>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 mt-2">
+            <h4>Newsletter</h4>
+            <div class="form-group d-flex gap-1">
+              <input type="text" class="form-control form-control-sm" id="exampleFormGroup1" placeholder="Inserisci la tua email" aria-label="Inserisci la tua email">
+              <button type="submit" class="btn btn-primary">Iscriviti</button>
             </div>
           </div>
         </div>
@@ -151,34 +165,38 @@ Potrebbe anche contenere riferimenti alle pagine social dell'amministrazione.
 </footer>
 {% endcapture %}{% include example.html content=example %}
 
-## Footer solo contatti
+## Footer compatto
+Il footer compatto è una versione semplificata del footer completo. 
+
+Contiene i contatti dell'ente, collegamenti ai profili social, form di iscrizione alla newsletter (se presente) e i link utili. Può essere utilizzato nei casi in cui non è necessario mostrare le sezioni di navigazione di primo livello.
+
 {% comment %}Example name: Compatto{% endcomment %}
 {% capture example %}
 <footer class="it-footer">
   <div class="it-footer-main">
     <div class="container">
-      <section>
+      <section class="pb-4">
         <div class="row clearfix">
           <div class="col-sm-12">
             <div class="it-brand-wrapper">
               <a href="#" class="" data-focus-mouse="false">
-                <svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
+                <svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-pa"></use></svg>
                 <div class="it-brand-text">
-                  <h2 class="no_toc">Lorem Ipsum</h2>
-                  <h3 class="no_toc d-none d-md-block">Inserire qui la tag line</h3>
+                  <h2 class="no_toc">Nome Ente</h2>
+                  <h3 class="no_toc">Tagline</h3>
                 </div>
               </a>
             </div>
           </div>
         </div>
       </section>
-      <section class="py-4 border-white border-top">
+      <section class="pt-4 border-white border-top">
         <div class="row">
-          <div class="col-lg-4 col-md-4 pb-2">
+          <div class="col-lg-4 col-md-4 mt-2">
             <h4>Contatti</h4>
             <p>
-              <strong>Comune di Lorem Ipsum</strong><br>
-              Via Roma 0 - 00000 Lorem Ipsum Codice fiscale / P. IVA: 000000000
+              <strong>Nome Ente</strong><br>
+              Via Roma 0 - 00000 Città - Codice fiscale / P. IVA: 000000000
             </p>
             <div class="link-list-wrapper">
               <ul class="footer-list link-list clearfix">
@@ -189,26 +207,30 @@ Potrebbe anche contenere riferimenti alle pagine social dell'amministrazione.
               </ul>
             </div>
           </div>
-          <div class="col-lg-4 col-md-4 pb-2">
-            <h4>Lorem Ipsum</h4>
-          </div>
-          <div class="col-lg-4 col-md-4 pb-2">
+          <div class="col-lg-4 col-md-4 mt-2">
             <div class="pb-2">
               <h4>Seguici su</h4>
               <ul class="list-inline text-left social">
                 <li class="list-inline-item">
-                  <a class="p-2 text-white" href="#"><svg class="icon icon-sm icon-white align-top"><use xlink:href="{{site.baseurl}}/dist/svg/sprites.svg#it-designers-italia"></use></svg><span class="visually-hidden">Designers Italia (link esterno)</span></a>
+                  <a class="p-2 text-white" href="#"><svg class="icon icon-sm icon-inverse align-top"><use xlink:href="{{site.baseurl}}/dist/svg/sprites.svg#it-designers-italia"></use></svg><span class="visually-hidden">Designers Italia (link esterno)</span></a>
                 </li>
                 <li class="list-inline-item">
-                  <a class="p-2 text-white" href="#"><svg class="icon icon-sm icon-white align-top"><use xlink:href="{{site.baseurl}}/dist/svg/sprites.svg#it-twitter"></use></svg><span class="visually-hidden">X (link esterno)</span></a>
+                  <a class="p-2 text-white" href="#"><svg class="icon icon-sm icon-inverse align-top"><use xlink:href="{{site.baseurl}}/dist/svg/sprites.svg#it-twitter"></use></svg><span class="visually-hidden">X (link esterno)</span></a>
                 </li>
                 <li class="list-inline-item">
-                  <a class="p-2 text-white" href="#"><svg class="icon icon-sm icon-white align-top"><use xlink:href="{{site.baseurl}}/dist/svg/sprites.svg#it-medium"></use></svg><span class="visually-hidden">Medium (link esterno)</span></a>
+                  <a class="p-2 text-white" href="#"><svg class="icon icon-sm icon-inverse align-top"><use xlink:href="{{site.baseurl}}/dist/svg/sprites.svg#it-medium"></use></svg><span class="visually-hidden">Medium (link esterno)</span></a>
                 </li>
                 <li class="list-inline-item">
-                  <a class="p-2 text-white" href="#"><svg class="icon icon-sm icon-white align-top"><use xlink:href="{{site.baseurl}}/dist/svg/sprites.svg#it-behance"></use></svg><span class="visually-hidden">Behance (link esterno)</span></a>
+                  <a class="p-2 text-white" href="#"><svg class="icon icon-sm icon-inverse align-top"><use xlink:href="{{site.baseurl}}/dist/svg/sprites.svg#it-behance"></use></svg><span class="visually-hidden">Behance (link esterno)</span></a>
                 </li>
               </ul>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 mt-2">
+            <h4>Newsletter</h4>
+            <div class="form-group d-flex gap-1">
+              <input type="text" class="form-control form-control-sm" id="exampleFormGroup2" placeholder="Inserisci la tua email" aria-label="Inserisci la tua email">
+              <button type="submit" class="btn btn-primary">Iscriviti</button>
             </div>
           </div>
         </div>
@@ -229,3 +251,16 @@ Potrebbe anche contenere riferimenti alle pagine social dell'amministrazione.
   </div>
 </footer>
 {% endcapture %}{% include example.html content=example %}
+
+{% include properties.md properties=site.data.cprops.footer %}
+## Breaking change
+
+{% capture callout %}
+- Per la `<section>` di branding dell'ente: aggiunta classe `.pb-4`.
+- Per la `<section>` che ospita sitemap o link: aggiunta classe `.pt-2`. 
+  - Per i `<div>` interni di questa seconda sezione è stato corretto il responsive: rimossa classe `.col-md-3` e aggiunta la classe `.pb-3`.
+- Per la `<section>` che presenta dati dell'ente e contatti: cambiato da `.py-4` a `.pt-4`.
+  - Per i `<div>` interni di questa terza sezione sono state corrette le spaziature verticali: cambiato da `.pb-2` a `.mt-2` 
+- La classe che controlla il colore delle icone social ha cambiato nome: `.icon-white` diventa `.icon-inverse`.
+- Aggiunto il markup per mostrare il campo input per l'iscrizione alla newsletter.
+{% endcapture %}{% include callout.html content=callout version="3.0.0" type="danger" %}

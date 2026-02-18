@@ -1,0 +1,14 @@
+%focus {
+  border-color: $focus-outline-color-out !important;
+  box-shadow:
+    0 0 0 2px var(--#{$prefix}color-border-inverse),
+    0 0 0 5px var(--#{$prefix}color-outline-focus) !important;
+  outline: 3px solid transparent !important;
+  outline-offset: 3px !important;
+}
+
+%focusmouse {
+  border-color: inherit !important;
+  box-shadow: none !important;
+  outline: none !important;
+}

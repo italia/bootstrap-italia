@@ -81,7 +81,7 @@ Il cambio lingua è gestito con il componente [dropdown]({{ site.baseurl }}/docs
               </div>
             </div>
             <div class="it-access-top-wrapper">
-              <a class="btn btn-primary btn-sm" href="#">Accedi</a>
+              <a class="btn btn-primary btn-xs" href="#">Accedi</a>
             </div>
           </div>
         </div>
@@ -189,7 +189,7 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
               </div>
             </div>
             <div class="it-access-top-wrapper">
-              <a class="btn btn-primary btn-sm" href="#">Accedi</a>
+              <a class="btn btn-primary btn-xs" href="#">Accedi</a>
             </div>
           </div>
         </div>
@@ -418,13 +418,11 @@ Per cambiare tema all'header centrale è sufficiente aggiungere la classe `theme
             </div>
             <div class="menu-wrapper">
               <ul class="navbar-nav">
-                <li class="nav-item active"><a class="nav-link active" href="#" aria-current="page"><span>Link 1 (attivo)</span></a></li>
-                <li class="nav-item"><a class="nav-link disabled" href="#" aria-disabled="true"><span>Link 2 (disabilitato)</span></a></li>
-                <li class="nav-item"><a class="nav-link" href="#"><span>Link 3</span></a></li>
-                <li class="nav-item"><a class="nav-link" href="#"><span>Link 4</span></a></li>
+                <li class="nav-item active"><a class="nav-link active" href="#" aria-current="page"><span>Link attivo</span></a></li>
+                <li class="nav-item"><a class="nav-link disabled" href="#" aria-disabled="true"><span>Link disabilitato</span></a></li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="mainNavDropdown1">
-                    <span>Menu Dropdown</span>
+                    <span>Dropdown</span>
                     <svg class="icon icon-xs"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
                   </a>
                   <div class="dropdown-menu" role="region" aria-labelledby="mainNavDropdown1">
@@ -442,7 +440,7 @@ Per cambiare tema all'header centrale è sufficiente aggiungere la classe `theme
                 <!-- megamenu -->
                 <li class="nav-item dropdown megamenu">
                   <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-1" data-focus-mouse="false">
-                      <span>Megamenu</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
+                      <span>Megamenu</span><svg role="img" class="icon icon-xs"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
                   </button>
                   <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-1">
                     <div class="megamenu pb-5 pt-3 py-lg-0">
@@ -568,13 +566,11 @@ Per modificare il tema dell'Header Nav è sufficiente aggiungere una o tutte e d
             </div>
             <div class="menu-wrapper">
               <ul class="navbar-nav">
-                <li class="nav-item active"><a class="nav-link active" href="#" aria-current="page"><span>Link 1 (attivo)</span></a></li>
-                <li class="nav-item"><a class="nav-link disabled" href="#" aria-disabled="true"><span>Link 2 (disabilitato)</span></a></li>
-                <li class="nav-item"><a class="nav-link" href="#"><span>Link 3</span></a></li>
-                <li class="nav-item"><a class="nav-link" href="#"><span>Link 4</span></a></li>
+                <li class="nav-item active"><a class="nav-link active" href="#" aria-current="page"><span>Link attivo</span></a></li>
+                <li class="nav-item"><a class="nav-link disabled" href="#" aria-disabled="true"><span>Link disabilitato</span></a></li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="mainNavDropdown0">
-                    <span>Menu Dropdown</span>
+                    <span>Dropdown</span>
                     <svg class="icon icon-xs"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
                   </a>
                   <div class="dropdown-menu" role="region" aria-labelledby="mainNavDropdown0">
@@ -592,7 +588,7 @@ Per modificare il tema dell'Header Nav è sufficiente aggiungere una o tutte e d
                 <!-- megamenu -->
                 <li class="nav-item dropdown megamenu">
                   <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-2" data-focus-mouse="false">
-                      <span>Megamenu</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
+                      <span>Megamenu</span><svg role="img" class="icon icon-xs"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
                   </button>
                   <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-2">
                     <div class="megamenu pb-5 pt-3 py-lg-0">
@@ -706,13 +702,11 @@ Per modificare il tema dell'Header Nav è sufficiente aggiungere una o tutte e d
             </div>
             <div class="menu-wrapper">
               <ul class="navbar-nav">
-                <li class="nav-item active"><a class="nav-link active" href="#" aria-current="page"><span>Link 1 (attivo)</span></a></li>
-                <li class="nav-item"><a class="nav-link disabled" href="#" aria-disabled="true"><span>Link 2 (disabilitato)</span></a></li>
-                <li class="nav-item"><a class="nav-link" href="#"><span>Link 3</span></a></li>
-                <li class="nav-item"><a class="nav-link" href="#"><span>Link 4</span></a></li>
+                <li class="nav-item active"><a class="nav-link active" href="#" aria-current="page"><span>Link attivo</span></a></li>
+                <li class="nav-item"><a class="nav-link disabled" href="#" aria-disabled="true"><span>Link disabilitato</span></a></li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="mainNavDropdown2">
-                    <span>Menu Dropdown</span>
+                    <span>Dropdown</span>
                     <svg class="icon icon-xs"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
                   </a>
                   <div class="dropdown-menu" role="region" aria-labelledby="mainNavDropdown2">
@@ -730,7 +724,7 @@ Per modificare il tema dell'Header Nav è sufficiente aggiungere una o tutte e d
                 <!-- megamenu -->
                 <li class="nav-item dropdown megamenu">
                   <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-3" data-focus-mouse="false">
-                      <span>Megamenu</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
+                      <span>Megamenu</span><svg role="img" class="icon icon-xs"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
                   </button>
                   <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-3">
                     <div class="megamenu pb-5 pt-3 py-lg-0">
@@ -846,13 +840,11 @@ Per modificare il tema dell'Header Nav è sufficiente aggiungere una o tutte e d
             </div>
             <div class="menu-wrapper">
               <ul class="navbar-nav">
-                <li class="nav-item active"><a class="nav-link active" href="#" aria-current="page"><span>Link 1 (attivo)</span></a></li>
-                <li class="nav-item"><a class="nav-link disabled" href="#" aria-disabled="true"><span>Link 2 (disabilitato)</span></a></li>
-                <li class="nav-item"><a class="nav-link" href="#"><span>Link 3</span></a></li>
-                <li class="nav-item"><a class="nav-link" href="#"><span>Link 4</span></a></li>
+                <li class="nav-item active"><a class="nav-link active" href="#" aria-current="page"><span>Link attivo</span></a></li>
+                <li class="nav-item"><a class="nav-link disabled" href="#" aria-disabled="true"><span>Link disabilitato</span></a></li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="mainNavDropdown3">
-                    <span>Menu Dropdown</span>
+                    <span>Dropdown</span>
                     <svg class="icon icon-xs"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
                   </a>
                   <div class="dropdown-menu" role="region" aria-labelledby="mainNavDropdown3">
@@ -870,7 +862,7 @@ Per modificare il tema dell'Header Nav è sufficiente aggiungere una o tutte e d
                 <!-- megamenu -->
                 <li class="nav-item dropdown megamenu">
                   <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-4" data-focus-mouse="false">
-                      <span>Megamenu</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
+                      <span>Megamenu</span><svg role="img" class="icon icon-xs"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
                   </button>
                   <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-4">
                     <div class="megamenu pb-5 pt-3 py-lg-0">
@@ -986,16 +978,13 @@ Al menu di navigazione principale può essere aggiunto anche un menu di navigazi
             </div>
             <div class="menu-wrapper">
               <ul class="navbar-nav">
-                <li class="nav-item active"><a class="nav-link active" href="#" aria-current="page"><span>Link 1 (attivo)</span></a></li>
-                <li class="nav-item"><a class="nav-link disabled" href="#" aria-disabled="true"><span>Link 2 (disabilitato)</span></a></li>
-                <li class="nav-item"><a class="nav-link" href="#"><span>Link 3</span></a></li>
-                <li class="nav-item"><a class="nav-link" href="#"><span>Link 4</span></a></li>
+                <li class="nav-item active"><a class="nav-link active" href="#" aria-current="page"><span>Link attivo</span></a></li>
+                <li class="nav-item"><a class="nav-link disabled" href="#" aria-disabled="true"><span>Link disabilitato</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><span>Link</span></a></li>
               </ul>
               <ul class="navbar-nav navbar-secondary">
-                <li class="nav-item"><a class="nav-link" href="#"><span>Link 5</span></a></li>
-                <li class="nav-item"><a class="nav-link" href="#"><span>Link 6</span></a></li>
-                <li class="nav-item"><a class="nav-link" href="#"><span>Link 7</span></a></li>
-                <li class="nav-item"><a class="nav-link" href="#"><span>Link 8</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><span>Link secondario</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><span>Link secondario</span></a></li>
               </ul>
             </div>
           </div>
@@ -1052,7 +1041,7 @@ Al menu di navigazione principale può essere aggiunto anche un menu di navigazi
                 </div>
               </div>
               <div class="it-access-top-wrapper">
-                <a class="btn btn-primary btn-sm" href="#">Accedi</a>
+                <a class="btn btn-primary btn-xs" href="#">Accedi</a>
               </div>
             </div>
           </div>
@@ -1130,13 +1119,11 @@ Al menu di navigazione principale può essere aggiunto anche un menu di navigazi
                 </div>
                 <div class="menu-wrapper">
                   <ul class="navbar-nav">
-                    <li class="nav-item active"><a class="nav-link active" href="#" aria-current="page"><span>Link 1 (attivo)</span></a></li>
-                    <li class="nav-item"><a class="nav-link disabled" href="#" aria-disabled="true"><span>Link 2 (disabilitato)</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><span>Link 3</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><span>Link 4</span></a></li>
+                    <li class="nav-item active"><a class="nav-link active" href="#" aria-current="page"><span>Link attivo</span></a></li>
+                    <li class="nav-item"><a class="nav-link disabled" href="#" aria-disabled="true"><span>Link disabilitato</span></a></li>
                     <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="mainNavDropdownC1">
-                        <span>Menu Dropdown</span>
+                        <span>Dropdown</span>
                         <svg class="icon icon-xs">
                           <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use>
                         </svg>
@@ -1156,7 +1143,7 @@ Al menu di navigazione principale può essere aggiunto anche un menu di navigazi
                     <!-- megamenu -->
                     <li class="nav-item dropdown megamenu">
                       <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-5" data-focus-mouse="false">
-                          <span>Megamenu</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
+                          <span>Megamenu</span><svg role="img" class="icon icon-xs"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
                       </button>
                       <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-5">
                         <div class="megamenu pb-5 pt-3 py-lg-0">
@@ -1300,7 +1287,7 @@ Verrà creata un'ombra per enfatizzare l'Header rispetto alla pagina in cui è c
                 </div>
               </div>
               <div class="it-access-top-wrapper">
-                <a class="btn btn-primary btn-sm" href="#">Accedi</a>
+                <a class="btn btn-primary btn-xs" href="#">Accedi</a>
               </div>
             </div>
           </div>
@@ -1374,13 +1361,11 @@ Verrà creata un'ombra per enfatizzare l'Header rispetto alla pagina in cui è c
                 </div>
                 <div class="menu-wrapper">
                   <ul class="navbar-nav">
-                    <li class="nav-item active"><a class="nav-link active" href="#" aria-current="page"><span>Link 1 (attivo)</span></a></li>
-                    <li class="nav-item"><a class="nav-link disabled" href="#" aria-disabled="true"><span>Link 2 (disabilitato)</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><span>Link 3</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><span>Link 4</span></a></li>
+                    <li class="nav-item active"><a class="nav-link active" href="#" aria-current="page"><span>Link attivo</span></a></li>
+                    <li class="nav-item"><a class="nav-link disabled" href="#" aria-disabled="true"><span>Link disabilitato</span></a></li>
                     <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="mainNavDropdownC2">
-                        <span>Menu Dropdown</span>
+                        <span>Dropdown</span>
                         <svg class="icon icon-xs"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
                       </a>
                       <div class="dropdown-menu" role="region" aria-labelledby="mainNavDropdownC2">
@@ -1398,7 +1383,7 @@ Verrà creata un'ombra per enfatizzare l'Header rispetto alla pagina in cui è c
                     <!-- megamenu -->
                     <li class="nav-item dropdown megamenu">
                       <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-6" data-focus-mouse="false">
-                          <span>Megamenu</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
+                          <span>Megamenu</span><svg role="img" class="icon icon-xs"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
                       </button>
                       <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-6">
                         <div class="megamenu pb-5 pt-3 py-lg-0">
@@ -1554,6 +1539,13 @@ const headerSticky = new HeaderSticky(headerStickyElement);
 
 ## Breaking change
 
+## Breaking change
+
+{% capture callout %}
+- Cambiata la dimensione del pulsante Accedi: cambiato classe da `.btn-sm` a `.btn-sx`.
+- Rimossa la classe `.ms-1` dall'icona `<svg>` che segue la voce Megamenu negli esempi.
+{% endcapture %}{% include callout.html content=callout version="3.0.0" type="danger" %}
+
 {% capture callout %}
 La navbar presente negli esempi, quando aperta in versione mobile o a forte ingrandimento, è stata reimplementata come modale per migliorare l'accessibilità con le combinazioni principali di lettori di schermo, sistema operativo e browser. Modifiche principali: 
 - struttura: la navbar ora utilizza un pattern dialog con backdrop 
@@ -1569,3 +1561,5 @@ Se hai personalizzato il CSS della navbar, rivedi le tue modifiche per verificar
 - Gli altri elementi `<a>` che si comportano come toggle dropdown (eg. scelta Lingua), hanno l'aggiunta dell'attributo `role="button"`.
 - Il markup del Megamenu cambia come nel nuovo componente, per approfondire andare alla [relativa pagina]({{site.baseurl}}/docs/menu-di-navigazione/megamenu/).
 {% endcapture %}{% include callout-breaking.html content=callout version="2.8.0" type="danger" %}
+
+{% include properties.md properties=site.data.cprops.header %}

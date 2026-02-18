@@ -1,249 +1,74 @@
-// Special list for long groups of cards, bootstrap row/cols grid
-ul.row.it-card-list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+// Component: card
+//
+// Description: Component styles for card
+//
 
-  > li.col,
-  > li[class*='col-'] {
-    border: none;
-    background: transparent;
-    margin-top: 0;
-    display: block;
-    transition: none;
-  }
+// Variables
+//
+
+// Properties
+//
+
+.it-card {
+  --#{$prefix}card-background: var(--#{$prefix}color-background-inverse); // Controls the card background color, using color tokens
+  --#{$prefix}card-border-color: var(--#{$prefix}color-border-subtle); // Controls the card border color, using color tokens
+  --#{$prefix}card-border-radius: var(--#{$prefix}radius-smooth); // Controls the outer border radius of the card, using radius tokens
+  --#{$prefix}card-border-radius-inner: calc(
+    var(--#{$prefix}card-border-radius) - var(--#{$prefix}card-border-outside-width)
+  ); // Controls the inner border radius of the card
+  --#{$prefix}card-border-top-color: transparent; // Controls
+  --#{$prefix}card-border-top-width: 6px; // Controls the width of the top border
+  --#{$prefix}card-border-outside-width: 1px; // Controls the width of the outside border, used for calculating inner border radius
+  --#{$prefix}card-border-separator-width: 1px; // Controls the width of the separator border for card sections like body and footer
+  --#{$prefix}card-footer-background: transparent; // Controls the background color of the card footer, using color tokens
+  --#{$prefix}card-footer-text-color: var(--#{$prefix}color-text-muted); // Controls the text color of the card footer, using color tokens
+  --#{$prefix}card-spacing-x: var(--#{$prefix}spacing-s); // Controls the horizontal padding of the card, using spacing tokens
+  --#{$prefix}card-spacing-y: var(--#{$prefix}spacing-s); // Controls the vertical padding of the card, using spacing tokens
+  --#{$prefix}card-category-color: var(--#{$prefix}color-text-muted); // Controls the text color of the card category, using color tokens
+  --#{$prefix}card-category-font-weight: var(--#{$prefix}font-weight-solid); // Controls the font weight of the card category, using font weight tokens
+  --#{$prefix}card-category-font-size: var(--#{$prefix}label-font-size); // Controls the font size of the card category, using font size tokens
+  --#{$prefix}card-text-color: var(--#{$prefix}color-text-secondary); // Controls the main text color of the card, using color tokens
+  --#{$prefix}card-date-color: var(--#{$prefix}color-text-muted); // Controls the text color of the card date, using color tokens
+  --#{$prefix}card-date-font-size: var(--#{$prefix}label-font-size-s); // Controls the font size of the card date, using font size tokens
+  --#{$prefix}card-description-color: var(--#{$prefix}color-text-muted); // Controls the text color of the card description, using color tokens
+  --#{$prefix}card-height: auto; // Controls the height of the card, can be set to fixed value or auto
+  --#{$prefix}card-inline-min-height: 240px; // Controls the minimum height of inline cards, ensuring enough space for content and image
+  --#{$prefix}card-inline-mini-min-height: 160px; // Controls the minimum height of inline mini cards, ensuring enough space for content and image
+  --#{$prefix}card-link-color: var(--#{$prefix}color-text-secondary); // Controls the text color of links within the card, using color tokens
+  --#{$prefix}card-title-spacing-y: var(
+    --#{$prefix}card-spacing-y
+  ); // Controls the vertical spacing around the card title, using the card spacing variable for consistency
+  --#{$prefix}card-signature-font-size: var(--#{$prefix}label-font-size); // Controls the font size of the card signature, using font size tokens
+  --#{$prefix}card-signature-font-family: var(--#{$prefix}font-mono); // Controls the font family of the card signature, using font family tokens
 }
 
-// Improved responsive it-card-group with a @container aware twist
-.it-card-group {
-  --#{$prefix}it-card-group-gap: #{$grid-gutter-width};
-
-  display: flex;
-  flex-wrap: wrap;
-
-  // gap fallback
-  margin: calc(-0.5 * var(--#{$prefix}it-card-group-gap));
-
-  > .it-card {
-    margin: calc(0.5 * var(--#{$prefix}it-card-group-gap));
-    // Default stacked on mobile
-    flex: 0 0 calc(100% - var(--#{$prefix}it-card-group-gap));
-
-    // Responsive breakpoints
-    @include media-breakpoint-up(sm) {
-      flex: 0 0 calc(50% - 0.5 * var(--#{$prefix}it-card-group-gap));
-    }
-
-    @include media-breakpoint-up(md) {
-      flex: 0 0 calc(33.333% - 0.667 * var(--#{$prefix}it-card-group-gap));
-    }
-
-    @include media-breakpoint-up(lg) {
-      flex: 0 0 calc(25% - 0.75 * var(--#{$prefix}it-card-group-gap));
-    }
-  }
-
-  @supports (gap: var(--#{$prefix}it-card-group-gap)) {
-    margin: 0;
-    gap: var(--#{$prefix}it-card-group-gap);
-
-    > .it-card {
-      margin: 0;
-    }
-  }
-
-  // Predefined column layouts
-  &.it-card-group-2-cols > .it-card,
-  &.it-card-group-3-cols > .it-card,
-  &.it-card-group-4-cols > .it-card {
-    @include media-breakpoint-up(sm) {
-      flex: 0 0 calc(50% - 0.5 * var(--#{$prefix}it-card-group-gap));
-    }
-  }
-
-  &.it-card-group-3-cols > .it-card {
-    @include media-breakpoint-up(md) {
-      flex: 0 0 calc(33.333% - 0.667 * var(--#{$prefix}it-card-group-gap));
-    }
-  }
-
-  &.it-card-group-4-cols > .it-card {
-    @include media-breakpoint-up(md) {
-      flex: 0 0 calc(33.333% - 0.667 * var(--#{$prefix}it-card-group-gap));
-    }
-
-    @include media-breakpoint-up(lg) {
-      flex: 0 0 calc(25% - 0.75 * var(--#{$prefix}it-card-group-gap));
-    }
-  }
-
-  // Progressive enhancement with Container Queries
-  @supports (container-type: inline-size) {
-    // Only with .it-card-group-container-aware class
-    &.it-card-group-container-aware {
-      container-type: inline-size;
-
-      > .it-card {
-        // Reset Media Queries
-        @include media-breakpoint-up(sm) {
-          flex: auto;
-        }
-
-        @include media-breakpoint-up(md) {
-          flex: auto;
-        }
-
-        @include media-breakpoint-up(lg) {
-          flex: auto;
-        }
-
-        // Container Queries
-        flex: 1 0 100%;
-
-        @container (min-width: 500px) {
-          flex: 0 0 calc(50% - 0.5 * var(--#{$prefix}it-card-group-gap));
-        }
-
-        @container (min-width: 800px) {
-          flex: 0 0 calc(33.333% - 0.667 * var(--#{$prefix}it-card-group-gap));
-        }
-
-        @container (min-width: 1100px) {
-          flex: 0 0 calc(25% - 0.75 * var(--#{$prefix}it-card-group-gap));
-        }
-      }
-
-      // Override specific coulmns in container mode
-      &.it-card-group-2-cols > .it-card {
-        @container (min-width: 500px) {
-          flex: 0 0 calc(50% - 0.5 * var(--#{$prefix}it-card-group-gap));
-        }
-      }
-
-      &.it-card-group-3-cols > .it-card {
-        @container (min-width: 800px) {
-          flex: 0 0 calc(33.333% - 0.667 * var(--#{$prefix}it-card-group-gap));
-        }
-      }
-    }
-  }
-
-  // Option for equal height cards
-  &.it-card-group-equal-height > .it-card {
-    height: 100%;
-  }
-
-  // Options for alignments
-  &.it-card-group-center {
-    justify-content: center;
-  }
-
-  &.it-card-group-end {
-    justify-content: flex-end;
-  }
-}
-
+// Styles
 //
-// Base card structure It Card 2025
-//
-.it-card,
-article.it-card {
-  --#{$prefix}it-card-bg: #{$white};
-  --#{$prefix}it-card-body-spacer: 1rem;
-  --#{$prefix}it-card-border-color: #{$gray-border};
-  --#{$prefix}it-card-border-radius: 4px;
-  --#{$prefix}it-card-border-top-color: transparent; // default background set to transparent
-  --#{$prefix}it-card-border-top-width: 6px;
-  --#{$prefix}it-card-border-outside-width: 1px; // xxx change to 2px if needed
-  --#{$prefix}it-card-border-separator-width: 1px; // xxx change to 2px if needed
-  --#{$prefix}it-card-cap-bg: transparent;
-  --#{$prefix}it-card-cap-color: null;
-  --#{$prefix}it-card-cap-padding-x: var(--#{$prefix}it-card-spacer-x);
-  --#{$prefix}it-card-cap-padding-y: calc(var(--#{$prefix}it-card-spacer-y) * 2);
-  --#{$prefix}it-card-category-color: #{$color-text-muted};
-  --#{$prefix}it-card-category-fw: 600;
-  --#{$prefix}it-card-category-l-spacing: 0.5px;
-  --#{$prefix}it-card-category-m-bottom: 0;
-  --#{$prefix}it-card-category-size: 1rem;
-  --#{$prefix}it-card-chips-a-color: #{$color-text-secondary};
-  --#{$prefix}it-card-chips-gap: 1rem;
-  --#{$prefix}it-card-color: #{$color-text-secondary};
-  --#{$prefix}it-card-date-color: #{$color-text-muted};
-  --#{$prefix}it-card-date-size: 0.875rem;
-  --#{$prefix}it-card-description-color: #{$color-text-muted};
-  --#{$prefix}it-card-height: auto;
-  --#{$prefix}it-card-inline-min-height: 240px;
-  --#{$prefix}it-card-inline-mini-min-height: 160px;
-  --#{$prefix}it-card-inner-border-radius: calc(var(--#{$prefix}it-card-border-radius) - var(--#{$prefix}it-card-border-outside-width));
-  --#{$prefix}it-card-link-color: #{$color-text-secondary};
-  --#{$prefix}it-card-list-group-item-padding-y: 0.75rem;
-  --#{$prefix}it-card-p-color: #{$color-text-secondary};
-  --#{$prefix}it-card-signature-size: 1rem;
-  --#{$prefix}it-card-spacer-x: 1rem;
-  --#{$prefix}it-card-spacer-y: 0.5rem;
-  --#{$prefix}it-card-double-spacer-y: calc(2 * var(--#{$prefix}it-card-spacer-y));
-  --#{$prefix}it-card-quad-spacer-y: calc(4 * var(--#{$prefix}it-card-spacer-y));
-  --#{$prefix}it-card-title-spacer-y: var(--#{$prefix}it-card-spacer-y);
-
+/* stylelint-disable-next-line no-duplicate-selectors */
+.it-card {
+  position: relative;
   display: flex;
   flex-direction: column;
-  min-width: 0; // See https://github.com/twbs/bootstrap/pull/22740#issuecomment-305868106
-  height: var(--#{$prefix}it-card-height);
-  padding: 0 0 var(--#{$prefix}it-card-spacer-y) 0;
-  position: relative;
   width: 100%;
-  overflow-wrap: break-word;
+  min-width: 0; // See https://github.com/twbs/bootstrap/pull/22740#issuecomment-305868106
+  height: var(--#{$prefix}card-height);
+  padding: var(--#{$prefix}card-spacing-y) var(--#{$prefix}card-spacing-x);
+  background-color: var(--#{$prefix}card-background);
+  color: var(--#{$prefix}card-text-color);
   word-break: break-word;
-  background-color: var(--#{$prefix}it-card-bg);
+  overflow-wrap: break-word;
   background-clip: border-box;
-  color: var(--#{$prefix}it-card-color);
-
-  &.border {
-    border-width: var(--#{$prefix}it-card-border-outside-width) !important;
-  }
-
-  &.it-card-height-full {
-    height: 100%;
-  }
-
-  .it-card-link {
-    color: var(--#{$prefix}it-card-link-color);
-
-    &:hover {
-      color: color-hover($color-text-secondary);
-    }
-
-    + .it-card-link {
-      margin-left: var(--#{$prefix}it-card-spacer-x);
-    }
-  }
 
   // Card title styles
   .it-card-title {
-    margin-top: calc(2 * var(--#{$prefix}it-card-title-spacer-y));
-    margin-bottom: 0;
-    padding: 0 var(--#{$prefix}it-card-spacer-x);
+    margin-bottom: var(--#{$prefix}spacing-xxs);
 
     &.it-card-title-icon {
       display: flex;
-      flex-direction: row;
       justify-content: space-between;
 
-      // Gap fallback
-      > * {
-        margin: 0.25rem;
-      }
-
-      @supports (gap: 0.5rem) {
-        gap: 0.5rem;
-
-        > * {
-          margin: 0;
-        }
-      }
-
       .it-card-title-icon-wrapper {
-        margin-left: 0.5rem;
+        margin-left: var(--#{$prefix}icon-spacing);
       }
 
       // linked titles with icons goes fullwidth
@@ -251,48 +76,131 @@ article.it-card {
         display: flex;
         justify-content: space-between;
         width: 100%;
-
-        // Gap fallback
-        > * {
-          margin: 0.25rem;
-        }
-
-        @supports (gap: 0.5rem) {
-          gap: 0.5rem;
-
-          > * {
-            margin: 0;
-          }
-        }
       }
+    }
+  }
+
+  // Card footer
+  .it-card-footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-top: var(--#{$prefix}card-spacing-y);
+    gap: var(--#{$prefix}card-spacing-y);
+    color: var(--#{$prefix}card-footer-text-color);
+  }
+
+  // Card taxonomy area, can contain category, tags, date
+  .it-card-taxonomy {
+    flex-grow: 1;
+  }
+
+  // Card category, use <span> or <a> if possible
+  .it-card-category {
+    display: inline-block;
+    margin-bottom: 0;
+    color: var(--#{$prefix}card-category-color);
+    font-size: var(--#{$prefix}card-category-font-size);
+    font-weight: var(--#{$prefix}card-category-font-weight);
+    text-transform: uppercase;
+  }
+
+  // Card chips, use <ul><li> if possible
+  .it-card-chips {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+    padding: 0;
+    list-style-type: none;
+    gap: calc(var(--#{$prefix}card-spacing-y) * 0.5); // use half spacing for gap
+  }
+
+  // Card date, use <time> if possible
+  .it-card-date {
+    color: var(--#{$prefix}card-date-color);
+    font-size: var(--#{$prefix}card-date-font-size);
+  }
+
+  // Card description list, use <dl><dt><dd> if possible
+  .it-card-description-list {
+    display: flex;
+    flex-direction: column;
+    padding-top: var(--#{$prefix}card-spacing-y);
+    padding-bottom: var(--#{$prefix}card-spacing-y);
+    border-top: var(--#{$prefix}card-border-separator-width) solid var(--#{$prefix}card-border-color);
+    border-bottom: var(--#{$prefix}card-border-separator-width) solid var(--#{$prefix}card-border-color);
+    color: var(--#{$prefix}card-description-color);
+    font-size: var(--#{$prefix}label-font-size);
+    line-height: var(--#{$prefix}label-leading);
+    gap: var(--#{$prefix}spacing-s);
+
+    @include media-breakpoint-down(sm) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+      border-bottom: none;
+    }
+
+    dt {
+      display: inline;
+      margin-right: 0.125rem;
+      font-weight: bold;
+    }
+
+    dd {
+      display: inline-block;
+      margin: 0;
+    }
+  }
+
+  // Card action area, can contain buttons, links, etc.
+  .it-card-actions {
+    margin-top: var(--#{$prefix}card-spacing-y); // separate from sibling content (body or footer)
+    padding-top: var(--#{$prefix}card-spacing-y); // reset left/right padding to 0, using margin instead
+    border-top: var(--#{$prefix}card-border-separator-width) solid var(--#{$prefix}card-border-color);
+    background-color: var(--#{$prefix}card-footer-background);
+    font-size: var(--#{$prefix}label-font-size);
+    line-height: var(--#{$prefix}label-leading);
+
+    &:last-child {
+      @include border-radius(0 0 var(--#{$prefix}card-border-radius-inner) var(--#{$prefix}card-border-radius-inner));
+    }
+  }
+
+  // Card links
+  .it-card-link {
+    color: var(--#{$prefix}card-link-color);
+
+    &:hover {
+      color: color-hover($color-text-secondary);
+    }
+
+    + .it-card-link {
+      margin-left: var(--#{$prefix}card-spacing-x);
     }
   }
 
   // Card body and content
   .it-card-body {
     flex: 1 1 auto;
-    padding: var(--#{$prefix}it-card-spacer-y) var(--#{$prefix}it-card-spacer-x);
-    color: var(--#{$prefix}it-card-color);
+    color: var(--#{$prefix}card-text-color);
 
     // Card subtitle or event timeframe
     .it-card-subtitle {
-      margin-bottom: var(--#{$prefix}it-card-spacer-y);
-
-      font-weight: 600;
-      font-size: 1.25rem; // equal h5
-      line-height: 1.5rem;
-
-      @include media-breakpoint-up(sm) {
-        font-size: 1.5rem;
-        line-height: 2rem;
-      }
+      margin-bottom: var(--#{$prefix}spacing-xxs);
+      font-size: var(--#{$prefix}heading-5-font-size);
+      font-weight: var(--#{$prefix}font-weight-solid);
+      line-height: var(--#{$prefix}font-leading-2);
     }
 
     // Card description
     .it-card-text {
-      color: var(--#{$prefix}it-card-p-color);
-      font-size: 1rem;
-      line-height: 1.5rem;
+      font-size: var(--#{$prefix}font-size-base);
+      line-height: var(--#{$prefix}font-leading-5);
 
       &:last-child {
         margin-bottom: 0;
@@ -301,200 +209,104 @@ article.it-card {
 
     // Card author
     .it-card-signature {
-      font-family: $font-family-monospace;
-      color: var(--#{$prefix}it-card-color);
-      font-size: var(--#{$prefix}it-card-signature-size);
+      margin-bottom: calc(0.5 * var(--#{$prefix}card-title-spacing-y));
+      color: var(--#{$prefix}card-text-color);
+      font-family: var(--#{$prefix}card-signature-font-family);
+      font-size: var(--#{$prefix}card-signature-font-size);
     }
   }
 
-  // Card footer
-  .it-card-footer {
-    margin: 0 var(--#{$prefix}it-card-cap-padding-x);
-    padding: var(--#{$prefix}it-card-cap-padding-y) 0;
-    color: var(--#{$prefix}it-card-cap-color);
-    background-color: var(--#{$prefix}it-card-cap-bg);
-    border-top: var(--#{$prefix}it-card-border-separator-width) solid var(--#{$prefix}it-card-border-color);
-    font-size: 1rem;
-    line-height: 1.5rem;
+  //
+  // Card Variants
 
-    &:last-child {
-      @include border-radius(0 0 var(--#{$prefix}it-card-inner-border-radius) var(--#{$prefix}it-card-inner-border-radius));
-    }
+  // Card with image
+  &.it-card-image {
+    padding-top: 0; // reset padding when using image variant
   }
 
-  // Card metadata holder <footer>
-  footer {
-    margin-top: var(--#{$prefix}it-card-double-spacer-y);
+  &.it-card-image.it-card-inline,
+  &.it-card-image.it-card-inline-reverse {
+    padding-bottom: 0; // reset padding when using image variant
+  }
 
-    &.it-card-related {
+  &.it-card-image.it-card-inline {
+    padding-left: 0; // reset padding when using image variant
+  }
+
+  &.it-card-image.it-card-inline-reverse {
+    padding-right: 0; // reset padding when using image variant
+  }
+
+  // Card with height 100%
+  &.it-card-height-full {
+    height: 100%;
+  }
+
+  // Profile card
+  &.it-card-profile {
+    .it-card-profile-header {
       display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: flex-end;
+      flex-wrap: wrap-reverse;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--#{$prefix}card-spacing-x);
 
-      // Gap fallback
-      > * {
-        margin: 0.5rem;
-      }
+      .it-card-profile-content {
+        .it-card-profile-name {
+          margin-bottom: var(--#{$prefix}spacing-3xs);
+        }
 
-      @supports (gap: 1rem) {
-        gap: 1rem;
-
-        > * {
-          margin: 0;
+        .it-card-profile-role,
+        .it-card-profile-type {
+          margin-bottom: 0;
+          font-size: var(--#{$prefix}label-font-size);
+          font-weight: var(--#{$prefix}font-weight-solid);
+          line-height: var(--#{$prefix}label-leading);
         }
       }
 
-      // Align items baseline and fallback
-      align-items: flex-end;
+      .it-card-profile-image {
+        max-width: 80px;
+        max-height: 80px;
 
-      @supports (align-items: last baseline) {
-        align-items: last baseline;
-      }
+        figure {
+          margin-bottom: 0;
+        }
 
-      &.it-card-footer {
-        padding-bottom: var(--#{$prefix}it-card-cap-padding-y);
-        padding-top: calc(var(--#{$prefix}it-card-cap-padding-y) * 0.5);
-        border-top: none;
-      }
-    }
-
-    .it-card-taxonomy {
-      flex-grow: 1;
-    }
-
-    .it-card-category {
-      display: inline-block;
-      text-transform: uppercase;
-      color: var(--#{$prefix}it-card-category-color);
-      font-size: var(--#{$prefix}it-card-category-size);
-      font-weight: var(--#{$prefix}it-card-category-fw);
-      letter-spacing: var(--#{$prefix}it-card-category-l-spacing);
-      margin-bottom: var(--#{$prefix}it-card-category-m-bottom);
-    }
-
-    // If more than one Tag, use a list
-    ul.it-card-chips {
-      display: flex;
-      flex-wrap: wrap;
-
-      // Gap fallback
-      > li {
-        margin: 0.25rem;
-      }
-
-      @supports (gap: 0.5rem) {
-        gap: 0.5rem;
-
-        > li {
-          margin: 0;
+        .it-card-profile-image-icon-wrapper {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: var(--#{$prefix}color-background-muted);
         }
       }
-
-      padding: 0;
-      margin-top: 0.5rem;
-      margin-bottom: 0;
-      list-style-type: none;
-      line-height: 1.5;
     }
 
-    .chip {
-      margin: 0;
-      line-height: 1.5; // reset default chip l-h
-    }
-
-    a.chip {
-      color: var(--#{$prefix}it-card-chips-a-color);
-      text-decoration: none;
-    }
-
-    // Card date, use <time> if possible
-    .it-card-date {
-      color: var(--#{$prefix}it-card-date-color);
-      font-size: var(--#{$prefix}it-card-date-size);
-    }
-  }
-
-  // Card can contain description lists, example: personal or place data
-  .it-card-description-list,
-  .it-card-body .it-card-description-list {
-    border-top: var(--#{$prefix}it-card-border-separator-width) solid var(--#{$prefix}it-card-border-color);
-    border-bottom: var(--#{$prefix}it-card-border-separator-width) solid var(--#{$prefix}it-card-border-color);
-
-    font-size: 1rem;
-    line-height: 1.5rem;
-    color: var(--#{$prefix}it-card-description-color);
-
-    padding-top: var(--#{$prefix}it-card-double-spacer-y);
-    padding-bottom: var(--#{$prefix}it-card-double-spacer-y);
-
-    &:last-child {
-      margin-bottom: 0;
-      padding-bottom: var(--#{$prefix}it-card-spacer-y);
-      border-bottom: none;
-    }
-
-    display: flex;
-    flex-direction: column;
-
-    // gap fallback
-    > * {
-      margin: 0.25rem;
-    }
-
-    @supports (gap: 0.5rem) {
-      gap: 0.5rem;
-
-      > * {
-        margin: 0;
-      }
-    }
-
-    dt {
-      display: inline;
-      font-weight: bold;
-      margin-right: 0.125rem;
-    }
-
-    dd {
-      display: inline-block;
-      margin: 0;
-    }
-
-    @include media-breakpoint-down(sm) {
-      display: flex;
-      flex-direction: column;
+    .it-card-body {
+      margin-top: var(--#{$prefix}card-spacing-y);
     }
   }
 
   // Card can contain special lists, example: Related articles to a main Tag card
   > .list-group,
   .it-card-body > .list-group {
-    border-top: var(--#{$prefix}it-card-border-separator-width) solid var(--#{$prefix}it-card-border-color);
-    border-bottom: var(--#{$prefix}it-card-border-separator-width) solid var(--#{$prefix}it-card-border-color);
+    margin-top: var(--#{$prefix}spacing-s);
+    margin-bottom: var(--#{$prefix}spacing-s);
+    border-top: var(--#{$prefix}card-border-separator-width) solid var(--#{$prefix}card-border-color);
+    border-bottom: var(--#{$prefix}card-border-separator-width) solid var(--#{$prefix}card-border-color);
 
-    margin-top: var(--#{$prefix}it-card-double-spacer-y);
-    margin-bottom: var(--#{$prefix}it-card-double-spacer-y);
-
-    color: var(--#{$prefix}it-card-p-color);
+    .list-group-item {
+      padding: var(--#{$prefix}spacing-xs) 0;
+    }
 
     &:first-child {
       border-top-width: 0;
-      @include border-top-radius(var(--#{$prefix}it-card-inner-border-radius));
+      @include border-top-radius(var(--#{$prefix}card-border-radius-inner));
     }
 
     &:last-child {
       border-bottom-width: 0;
-      @include border-bottom-radius(var(--#{$prefix}it-card-inner-border-radius));
-    }
-  }
-
-  .it-card-body > .list-group {
-    margin-top: var(--#{$prefix}it-card-quad-spacer-y);
-    margin-bottom: var(--#{$prefix}it-card-double-spacer-y);
-
-    .list-group-item {
-      padding: var(--#{$prefix}it-card-list-group-item-padding-y) 0;
+      @include border-bottom-radius(var(--#{$prefix}card-border-radius-inner));
     }
   }
 
@@ -504,18 +316,24 @@ article.it-card {
   }
 
   // Card image responsive wrapper and a11y DOM order hack
+  /* stylelint-disable-next-line no-duplicate-selectors */
   &.it-card-image {
-    width: 100%;
+    @include border-top-radius(var(--#{$prefix}card-border-radius-inner));
+    @include border-bottom-radius(var(--#{$prefix}card-border-radius-inner));
+
+    // Reset margin because of '.ratio' positioning
+    figure {
+      margin-bottom: 0;
+    }
 
     .it-card-image-wrapper {
       order: -1;
     }
 
     &.rounded {
-      @include border-top-radius(var(--#{$prefix}it-card-inner-border-radius));
-
       .it-card-image-wrapper img {
-        @include border-top-radius(var(--#{$prefix}it-card-inner-border-radius));
+        border-top-left-radius: var(--#{$prefix}card-border-radius-inner);
+        border-top-right-radius: var(--#{$prefix}card-border-radius-inner);
       }
 
       &.it-card-border-top {
@@ -530,17 +348,27 @@ article.it-card {
     }
   }
 
-  // Card special colored 4px border-top, mere aestethic, don't use for semantic meaning
+  // Full width image, outside the padding area
+  &.it-card-image:not(.it-card-inline) .it-card-image-wrapper {
+    display: block;
+    width: calc(100% + (2 * var(--#{$prefix}card-spacing-x))); // full width including padding area
+    margin-right: calc(-1 * var(--#{$prefix}card-spacing-x)); // negative margin to compensate padding
+    margin-bottom: calc(0.5 * var(--#{$prefix}card-spacing-y)); // spacing between image and content
+    margin-left: calc(-1 * var(--#{$prefix}card-spacing-x)); // negative margin to compensate padding
+    overflow: hidden;
+  }
+
+  // Card special colored border-top, mere aesthetic, don't use for semantic meaning
   &.it-card-border-top {
     &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
       content: '';
       display: block;
-      position: absolute;
-      left: 0;
-      right: 0;
-      height: var(--#{$prefix}it-card-border-top-width);
-      top: 0;
-      background: var(--#{$prefix}it-card-border-top-color);
+      height: var(--#{$prefix}card-border-top-width);
+      background: var(--#{$prefix}card-border-top-color);
     }
 
     &.rounded {
@@ -551,28 +379,30 @@ article.it-card {
 
     // Border Top Color
     &.it-card-border-top-primary::after {
-      --#{$prefix}it-card-border-top-color: #{$primary};
+      --#{$prefix}card-border-top-color: var(--#{$prefix}color-border-primary);
     }
 
     &.it-card-border-top-secondary::after {
-      --#{$prefix}it-card-border-top-color: #{$secondary};
+      --#{$prefix}card-border-top-color: var(--#{$prefix}color-border-secondary);
     }
 
     &.it-card-border-top-success::after {
-      --#{$prefix}it-card-border-top-color: #{$success};
+      --#{$prefix}card-border-top-color: var(--#{$prefix}color-border-success);
     }
 
     &.it-card-border-top-warning::after {
-      --#{$prefix}it-card-border-top-color: #{$warning};
+      --#{$prefix}card-border-top-color: var(--#{$prefix}color-border-warning);
     }
 
     &.it-card-border-top-danger::after {
-      --#{$prefix}it-card-border-top-color: #{$danger};
+      --#{$prefix}card-border-top-color: var(--#{$prefix}color-border-danger);
     }
   }
 
   // Card profile
+  /* stylelint-disable-next-line no-duplicate-selectors */
   &.it-card-profile {
+    /* stylelint-disable-next-line no-duplicate-selectors */
     .it-card-profile-header {
       display: flex;
       flex-direction: row;
@@ -593,9 +423,9 @@ article.it-card {
         }
       }
 
-      margin-top: calc(2 * var(--#{$prefix}it-card-title-spacer-y));
-      margin-bottom: var(--#{$prefix}it-card-title-spacer-y);
-      padding: 0 var(--#{$prefix}it-card-spacer-x);
+      margin-top: calc(2 * var(--#{$prefix}card-title-spacer-y));
+      margin-bottom: var(--#{$prefix}card-title-spacer-y);
+      padding: 0 var(--#{$prefix}card-spacer-x);
 
       .it-card-profile {
         flex: 1;
@@ -613,15 +443,15 @@ article.it-card {
           margin-bottom: 0;
         }
       }
-
+      /* stylelint-disable-next-line no-duplicate-selectors */
       .it-card-profile-image {
         max-width: 80px;
         max-height: 80px;
-
+        /* stylelint-disable-next-line no-duplicate-selectors */
         figure {
           margin-bottom: 0;
         }
-
+        /* stylelint-disable-next-line no-duplicate-selectors */
         .it-card-profile-image-icon-wrapper {
           display: flex;
           justify-content: center;
@@ -635,154 +465,282 @@ article.it-card {
 
   // Card presentation
   &.it-card-banner {
+    padding: var(--#{$prefix}spacing-m); // override default padding of card
     align-items: center;
     text-align: center;
-    padding-top: calc(var(--#{$prefix}it-card-quad-spacer-y) + var(--#{$prefix}it-card-spacer-y));
-    padding-bottom: calc(var(--#{$prefix}it-card-double-spacer-y) + var(--#{$prefix}it-card-spacer-y));
+    gap: var(--#{$prefix}spacing-s);
 
-    @include media-breakpoint-down(sm) {
-      padding-top: calc(var(--#{$prefix}it-card-double-spacer-y) + var(--#{$prefix}it-card-spacer-y));
-      padding-bottom: var(--#{$prefix}it-card-spacer-y);
+    @include media-breakpoint-up(lg) {
+      padding: var(--#{$prefix}spacing-xl);
+    }
+
+    .it-card-title {
+      margin-bottom: 0;
     }
 
     .it-card-body .it-card-subtitle {
-      font-weight: 500 !important;
+      font-weight: var(--#{$prefix}font-weight-weak);
     }
 
     .it-card-banner-icon-wrapper {
+      // display: flex;
+      // flex-direction: column;
       order: -1;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      // margin-bottom: var(--#{$prefix}spacing-s);
+      // width: 100%;
     }
 
     .it-card-footer {
+      padding-top: var(--#{$prefix}card-spacing-y);
       border-top: 0;
-      padding-top: var(--#{$prefix}it-card-spacer-y);
     }
+  }
+
+  &.it-card-inline .it-card-inline-content,
+  &.it-card-inline-mini .it-card-inline-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1; // make content area grow to fill available space
+    padding: var(--#{$prefix}card-spacing-y) var(--#{$prefix}card-spacing-x);
   }
 
   // Layout inline
   &.it-card-inline {
-    @mixin it-card-inline-layout {
-      flex-direction: row !important;
+    // Layout changes from stacked to row on md and up
+    @include media-breakpoint-up(md) {
+      flex-direction: row;
+      flex: 1;
 
-      &:not(.it-card-banner) {
-        padding-bottom: 0 !important;
+      // Set image order to last for inline reverse
+      &.it-card-inline-reverse .it-card-image-wrapper {
+        order: 1;
       }
 
-      .it-card-inline-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        flex-grow: 1;
-
-        .it-card-footer {
-          margin-bottom: calc(var(--#{$prefix}it-card-cap-padding-y) * 0.5);
-        }
-
-        .it-card-related.it-card-footer {
-          margin-bottom: 0;
-          padding-bottom: var(--#{$prefix}it-card-cap-padding-y);
-        }
-      }
-
-      &.it-card-image {
-        .it-card-image-wrapper {
-          display: flex;
-
-          .ratio {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            left: 0;
-            top: 0;
-          }
-
-          position: relative;
-          overflow: hidden;
-        }
-
-        &.it-card-inline-reverse {
-          order: inherit;
-
-          .it-card-image-wrapper {
-            order: 1;
-          }
-        }
-
-        // Image border radius adjustments
-        &.rounded {
-          .it-card-image-wrapper img {
-            border-top-right-radius: 0;
-            border-bottom-left-radius: var(--#{$prefix}it-card-inner-border-radius);
-          }
-
-          &.it-card-inline-reverse {
-            .it-card-image-wrapper img {
-              border-top-right-radius: var(--#{$prefix}it-card-inner-border-radius);
-              border-bottom-right-radius: var(--#{$prefix}it-card-inner-border-radius);
-              border-top-left-radius: 0;
-              border-bottom-left-radius: 0;
-            }
-          }
-        }
-      }
-
-      &.it-card-banner {
-        align-items: flex-start;
-        text-align: left;
-        min-height: auto !important;
-        padding-left: var(--bs-it-card-spacer-x);
-        padding-right: var(--bs-it-card-spacer-x);
-
-        .it-card-title {
-          margin-top: 0;
-        }
-
-        .it-card-banner-icon-wrapper {
-          width: auto;
-        }
-
-        &.it-card-inline-reverse {
-          order: inherit;
-          padding-right: var(--bs-it-card-spacer-x);
-          padding-left: 0;
-
-          .it-card-banner-icon-wrapper {
-            order: 1;
-          }
-        }
-      }
-    }
-
-    &.it-card-inline-mini {
-      @include it-card-inline-layout;
-      min-height: var(--#{$prefix}it-card-inline-mini-min-height);
-
-      &.it-card-image .it-card-image-wrapper {
-        width: 25%;
-      }
-
-      &.it-card-image .it-card-inline-content {
-        width: 75%;
-      }
-    }
-
-    @include media-breakpoint-up(sm) {
+      // Changes for inline cards except mini variant
       &:not(.it-card-inline-mini) {
-        @include it-card-inline-layout;
-        min-height: var(--#{$prefix}it-card-inline-min-height);
+        min-height: var(--#{$prefix}card-inline-min-height);
 
-        &.it-card-image .it-card-image-wrapper {
-          width: 50%;
-        }
-
+        &.it-card-image .it-card-image-wrapper,
         &.it-card-image .it-card-inline-content {
           width: 50%;
         }
       }
     }
+
+    // Reset bottom padding for inline cards except banner variant
+    &:not(.it-card-banner) {
+      padding-bottom: 0 !important;
+    }
+
+    // Image wrapper inside inline card
+    &.it-card-image {
+      .it-card-image-wrapper {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+      }
+
+      .ratio {
+        height: 100%;
+      }
+
+      &.rounded {
+        .it-card-image-wrapper img {
+          border-top-right-radius: 0;
+          border-bottom-left-radius: var(--#{$prefix}card-border-radius-inner);
+        }
+
+        &.it-card-inline-reverse {
+          .it-card-image-wrapper img {
+            border-top-left-radius: 0;
+            border-top-right-radius: var(--#{$prefix}card-border-radius-inner);
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: var(--#{$prefix}card-border-radius-inner);
+          }
+        }
+      }
+    }
+
+    // Mini variant for inline cards
+    &.it-card-inline-mini {
+      flex-direction: row; // default to row  for mini
+      min-height: var(--#{$prefix}card-inline-mini-min-height);
+
+      // Set image order to last for inline mini reverse
+      &.it-card-inline-reverse .it-card-image-wrapper {
+        order: 1;
+      }
+
+      .it-card-inline-content {
+        display: flex; // Manage space between title and footer
+        justify-content: space-between; // Manage space between title and footer
+        width: 75%;
+      }
+
+      // Image wrapper fixed width
+      .it-card-image-wrapper {
+        width: 25%;
+      }
+    }
+
+    // Banner variant for inline cards
+    &.it-card-banner {
+      @include media-breakpoint-up(md) {
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: left;
+      }
+
+      .it-card-inline-content {
+        padding: 0;
+        gap: var(--#{$prefix}spacing-xs);
+      }
+
+      &.it-card-inline-reverse {
+        order: inherit;
+
+        .it-card-banner-icon-wrapper {
+          order: 1;
+        }
+      }
+
+      &.it-card-inline-mini {
+        flex-direction: row; // card inline mini banner always row
+        text-align: left;
+        align-items: flex-start;
+      }
+    }
+  }
+}
+
+// Card Lists
+//
+
+// Special list for long groups of cards, bootstrap row/cols grid
+ul.it-card-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  > li.col,
+  > li[class*='col-'] {
+    display: block;
+    margin-top: 0;
+    border: none;
+    background: transparent;
+    transition: none;
+  }
+}
+
+// Improved responsive it-card-group with a @container aware twist
+.it-card-group {
+  --#{$prefix}card-group-gap: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--#{$prefix}card-group-gap);
+
+  > .it-card {
+    margin: 0;
+  }
+
+  // Progressive enhancement with Container Queries
+  @supports (container-type: inline-size) {
+    // Only with .it-card-group-container-aware class
+    &.it-card-group-container-aware {
+      container-type: inline-size;
+
+      > .it-card {
+        // Container Queries
+        flex: 1 0 100%;
+
+        // Reset media queries from small and up
+        @include media-breakpoint-up(sm) {
+          flex: auto;
+        }
+
+        @container (min-width: 500px) {
+          flex: 0 0 calc(50% - 0.5 * var(--#{$prefix}card-group-gap));
+        }
+
+        @container (min-width: 800px) {
+          flex: 0 0 calc(33.333% - 0.667 * var(--#{$prefix}card-group-gap));
+        }
+
+        @container (min-width: 1100px) {
+          flex: 0 0 calc(25% - 0.75 * var(--#{$prefix}card-group-gap));
+        }
+      }
+
+      // Override specific columns in container mode
+      &.it-card-group-2-cols > .it-card {
+        @container (min-width: 500px) {
+          flex: 0 0 calc(50% - 0.5 * var(--#{$prefix}card-group-gap));
+        }
+      }
+
+      &.it-card-group-3-cols > .it-card {
+        @container (min-width: 800px) {
+          flex: 0 0 calc(33.333% - 0.667 * var(--#{$prefix}card-group-gap));
+        }
+      }
+    }
+  }
+  /* stylelint-disable-next-line no-duplicate-selectors */
+  > .it-card {
+    // Default stacked on mobile
+    flex: 0 0 calc(100% - var(--#{$prefix}card-group-gap));
+    // margin: calc(0.5 * var(--#{$prefix}card-group-gap));
+
+    // Responsive breakpoints
+    @include media-breakpoint-up(sm) {
+      flex: 0 0 calc(50% - 0.5 * var(--#{$prefix}card-group-gap));
+    }
+
+    @include media-breakpoint-up(md) {
+      flex: 0 0 calc(33.333% - 0.667 * var(--#{$prefix}card-group-gap));
+    }
+
+    @include media-breakpoint-up(lg) {
+      flex: 0 0 calc(25% - 0.75 * var(--#{$prefix}card-group-gap));
+    }
+  }
+
+  // Predefined column layouts
+  &.it-card-group-2-cols > .it-card,
+  &.it-card-group-3-cols > .it-card,
+  &.it-card-group-4-cols > .it-card {
+    @include media-breakpoint-up(sm) {
+      flex: 0 0 calc(50% - 0.5 * var(--#{$prefix}card-group-gap));
+    }
+  }
+
+  &.it-card-group-3-cols > .it-card {
+    @include media-breakpoint-up(md) {
+      flex: 0 0 calc(33.333% - 0.667 * var(--#{$prefix}card-group-gap));
+    }
+  }
+
+  &.it-card-group-4-cols > .it-card {
+    @include media-breakpoint-up(md) {
+      flex: 0 0 calc(33.333% - 0.667 * var(--#{$prefix}card-group-gap));
+    }
+
+    @include media-breakpoint-up(lg) {
+      flex: 0 0 calc(25% - 0.75 * var(--#{$prefix}card-group-gap));
+    }
+  }
+
+  // Option for equal height cards
+  &.it-card-group-equal-height > .it-card {
+    height: 100%;
+  }
+
+  // Options for alignments
+  &.it-card-group-center {
+    justify-content: center;
+  }
+
+  &.it-card-group-end {
+    justify-content: flex-end;
   }
 }

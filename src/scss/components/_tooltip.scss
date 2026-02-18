@@ -1,32 +1,47 @@
-// Base class
-.tooltip {
-  // scss-docs-start tooltip-css-vars
-  --#{$prefix}tooltip-zindex: #{$zindex-tooltip};
-  --#{$prefix}tooltip-max-width: #{$tooltip-max-width};
-  --#{$prefix}tooltip-padding-x: #{$tooltip-padding-x};
-  --#{$prefix}tooltip-padding-y: #{$tooltip-padding-y};
-  --#{$prefix}tooltip-margin: #{$tooltip-margin};
-  @include rfs($tooltip-font-size, --#{$prefix}tooltip-font-size);
-  --#{$prefix}tooltip-color: #{$tooltip-color};
-  --#{$prefix}tooltip-bg: #{$tooltip-bg};
-  --#{$prefix}tooltip-border-radius: #{$tooltip-border-radius};
-  --#{$prefix}tooltip-opacity: #{$tooltip-opacity};
-  --#{$prefix}tooltip-arrow-width: #{$tooltip-arrow-width};
-  --#{$prefix}tooltip-arrow-height: #{$tooltip-arrow-height};
-  // scss-docs-end tooltip-css-vars
+// Component: tooltip
+//
+// Description: Component styles for tooltip
+//
 
+// Variables
+//
+
+// Properties
+//
+
+.tooltip {
+  --#{$prefix}tooltip-arrow-height: 0.4rem;
+  --#{$prefix}tooltip-arrow-width: 0.8rem;
+  --#{$prefix}tooltip-bg: var(--#{$prefix}color-background-emphasis);
+  --#{$prefix}tooltip-border-radius: var(--#{$prefix}radius-smooth);
+  --#{$prefix}tooltip-color: var(--#{$prefix}color-text-inverse);
+  --#{$prefix}tooltip-font-size: var(--#{$prefix}label-font-size-s);
+  --#{$prefix}tooltip-margin: 0;
+  --#{$prefix}tooltip-max-width: 32em;
+  --#{$prefix}tooltip-opacity: 1;
+  --#{$prefix}tooltip-padding-x: var(--#{$prefix}spacing-3xs);
+  --#{$prefix}tooltip-padding-y: var(--#{$prefix}spacing-xxs);
+  --#{$prefix}tooltip-zindex: 10;
+}
+
+// Styles
+//
+/* stylelint-disable-next-line no-duplicate-selectors */
+.tooltip {
   z-index: var(--#{$prefix}tooltip-zindex);
   display: block;
-  padding: var(--#{$prefix}tooltip-arrow-height);
   margin: var(--#{$prefix}tooltip-margin);
+  padding: var(--#{$prefix}tooltip-arrow-height);
+  border-radius: var(--#{$prefix}tooltip-border-radius);
+  opacity: 0;
+  font-size: var(--#{$prefix}tooltip-font-size);
+  // Allow breaking very long words so they don't overflow the tooltip's bounds
+  word-wrap: break-word;
   @include deprecate('`$tooltip-margin`', 'v5', 'v5.x', true);
   // Our parent element can be arbitrary since tooltips are by default inserted as a sibling of their target element.
   // So reset our font and text properties to avoid inheriting weird values.
   @include reset-text();
   @include font-size(var(--#{$prefix}tooltip-font-size));
-  // Allow breaking very long words so they don't overflow the tooltip's bounds
-  word-wrap: break-word;
-  opacity: 0;
 
   &.show {
     opacity: var(--#{$prefix}tooltip-opacity);
@@ -35,31 +50,29 @@
   .tooltip-arrow {
     display: none;
   }
-  border-radius: $border-radius;
-  font-size: 0.75rem;
 
   //text
   .tooltip-inner {
-    padding: 7px $v-gap * 2;
-    background-color: $color-background-emphasis;
+    padding: var(--#{$prefix}tooltip-padding-y) calc(var(--#{$prefix}tooltip-padding-x) * 2);
+    background-color: var(--#{$prefix}tooltip-bg);
     @include media-breakpoint-up(md) {
       .tooltip-inner {
-        padding: 4.5px $v-gap;
+        padding: calc(var(--#{$prefix}tooltip-padding-x) * 0.5) var(--#{$prefix}tooltip-padding-x);
       }
     }
     a {
-      color: $white;
+      color: var(--#{$prefix}tooltip-color);
       text-decoration: underline;
     }
   }
   //padding
   &.bs-tooltip-top,
   &.bs-tooltip-bottom {
-    padding: $v-gap 0;
+    padding: var(--#{$prefix}tooltip-padding-x) 0;
   }
   &.bs-tooltip-left,
   &.bs-tooltip-right {
-    padding: 0 $v-gap;
+    padding: 0 var(--#{$prefix}tooltip-padding-x);
   }
 }
 
@@ -132,8 +145,8 @@
 .tooltip-inner {
   max-width: var(--#{$prefix}tooltip-max-width);
   padding: var(--#{$prefix}tooltip-padding-y) var(--#{$prefix}tooltip-padding-x);
+  background-color: var(--#{$prefix}tooltip-bg);
   color: var(--#{$prefix}tooltip-color);
   text-align: center;
-  background-color: var(--#{$prefix}tooltip-bg);
   @include border-radius(var(--#{$prefix}tooltip-border-radius));
 }

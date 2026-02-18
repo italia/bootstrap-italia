@@ -20,6 +20,7 @@
 
 // Utilities
 @import 'mixins/utilities';
+@import 'mixins/focus';
 
 // Components
 @import 'mixins/alert';
@@ -35,7 +36,7 @@
 // Skins
 @import 'mixins/border-radius';
 @import 'mixins/box-shadow';
-@import 'mixins/gradients';
+@import 'mixins/gradients'; // Disabled as not used in the project
 @import 'mixins/transition';
 
 // Layout

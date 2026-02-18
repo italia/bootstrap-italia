@@ -1,13 +1,7 @@
 :root {
-  // Note: Custom variable values only support SassScript inside `#{}`.
-
-  // Colors
-  //
-  // Generate palettes for full colors, grays, and theme colors.
-
-  @each $color, $value in $colors {
-    --#{$prefix}#{$color}: #{$value};
-  }
+  // @each $color, $value in $colors {
+  //   --#{$prefix}#{$color}: #{$value};
+  // }
 
   @each $color, $value in $grays {
     --#{$prefix}gray-#{$color}: #{$value};
@@ -21,53 +15,285 @@
     --#{$prefix}#{$color}-rgb: #{$value};
   }
 
-  --#{$prefix}white-rgb: #{to-rgb($white)};
-  --#{$prefix}black-rgb: #{to-rgb($black)};
-  --#{$prefix}body-color-rgb: #{to-rgb($body-color)};
-  --#{$prefix}body-bg-rgb: #{to-rgb($body-bg)};
+  // --#{$prefix}white-rgb: #{to-rgb($white)};
+  // --#{$prefix}black-rgb: #{to-rgb($black)};
+  // --#{$prefix}body-color-rgb: #{to-rgb($body-color)};
+  // --#{$prefix}body-bg-rgb: #{to-rgb($body-bg)};
 
   // Fonts
 
   // Note: Use `inspect` for lists so that quoted items keep the quotes.
   // See https://github.com/sass/sass/issues/2383#issuecomment-336349172
-  --#{$prefix}font-sans-serif: #{inspect($font-family-sans-serif)};
-  --#{$prefix}font-monospace: #{inspect($font-family-monospace)};
-  --#{$prefix}gradient: #{$gradient};
+  // --#{$prefix}font-sans-serif: #{inspect($font-family-sans-serif)};
+  // --#{$prefix}font-monospace: #{inspect($font-family-monospace)};
+  // --#{$prefix}gradient: #{$gradient};
 
   // Root and body
-  // scss-docs-start root-body-variables
-  @if $font-size-root != null {
-    --#{$prefix}root-font-size: #{$font-size-root};
+  // @if $font-size-root != null {
+  //   --#{$prefix}root-font-size: #{$font-size-root};
+  // }
+  // --#{$prefix}body-font-family: #{$font-family-base};
+  // @include rfs($font-size-base, --#{$prefix}body-font-size);
+  // --#{$prefix}body-font-weight: #{$font-weight-base};
+  // --#{$prefix}body-line-height: #{$line-height-base};
+  // --#{$prefix}body-color: #{$body-color};
+  // @if $body-text-align != null {
+  //   --#{$prefix}body-text-align: #{$body-text-align};
+  // }
+  // --#{$prefix}body-bg: #{$body-bg};
+  // --#{$prefix}border-width: #{$border-width};
+  // --#{$prefix}border-style: #{$border-style};
+  // --#{$prefix}border-color: #{$border-color};
+  // --#{$prefix}border-color-translucent: #{$border-color-translucent};
+  // --#{$prefix}border-radius: #{$border-radius};
+  // --#{$prefix}border-radius-sm: #{$border-radius-sm};
+  // --#{$prefix}border-radius-lg: #{$border-radius-lg};
+  // --#{$prefix}border-radius-xl: #{$border-radius-xl};
+  // --#{$prefix}border-radius-2xl: #{$border-radius-2xl};
+  // --#{$prefix}border-radius-pill: #{$border-radius-pill};
+
+  // ----------------------------------------------------------- //
+
+  // Theme colors
+  --#{$prefix}theme-primary: var(--it-theme-italia-base); // Theme base color
+  --#{$prefix}theme-primary-light: var(--it-theme-italia-light);
+  --#{$prefix}theme-primary-lighter: var(--it-theme-italia-lighter);
+  --#{$prefix}theme-primary-subtle: var(--it-theme-italia-subtle);
+  --#{$prefix}theme-primary-muted: var(--it-theme-italia-muted);
+  --#{$prefix}theme-primary-deep: var(--it-theme-italia-deep);
+
+  // Spacing
+  --#{$prefix}spacing-3xl: var(--it-spacing-3xl); // equal to 6rem (96px)
+  --#{$prefix}spacing-xxl: var(--it-spacing-xxl); // equal to 3rem (48px)
+  --#{$prefix}spacing-xl: var(--it-spacing-xl); // equal to 2.5rem (40px)
+  --#{$prefix}spacing-l: var(--it-spacing-l); // equal to 2rem (32px)
+  --#{$prefix}spacing-m: var(--it-spacing-m); // equal to 1.5rem (24px)
+  --#{$prefix}spacing-s: var(--it-spacing-s); // equal to 1rem (16px)
+  --#{$prefix}spacing-xs: var(--it-spacing-xs); // equal to 0.75rem (12px)
+  --#{$prefix}spacing-xxs: var(--it-spacing-xxs); // equal to 0.5rem (8px)
+  --#{$prefix}spacing-3xs: var(--it-spacing-3xs); // equal to 0.25rem (4px)
+  --#{$prefix}heading-spacing: var(--it-spacing-s);
+  --#{$prefix}paragraph-spacing: var(--it-spacing-m);
+
+  // Typography
+  --#{$prefix}font-mono: var(--it-font-mono);
+  --#{$prefix}font-serif: var(--it-font-serif);
+  --#{$prefix}font-sans: 'Titillium Web', 'Titillium Sans Pro', var(--it-font-sans);
+  --#{$prefix}font-weight-strong: var(--it-font-weight-bold);
+  --#{$prefix}font-weight-solid: var(--it-font-weight-semibold);
+  --#{$prefix}font-weight-base: var(--it-font-weight-regular);
+  --#{$prefix}font-weight-thin: var(--it-font-weight-light);
+  --#{$prefix}font-size-11: var(--it-font-size-11);
+  --#{$prefix}font-size-10: var(--it-font-size-10);
+  --#{$prefix}font-size-9: var(--it-font-size-9);
+  --#{$prefix}font-size-8: var(--it-font-size-8);
+  --#{$prefix}font-size-7: var(--it-font-size-7);
+  --#{$prefix}font-size-6: var(--it-font-size-6);
+  --#{$prefix}font-size-5: var(--it-font-size-5);
+  --#{$prefix}font-size-4: var(--it-font-size-4);
+  --#{$prefix}font-size-3: var(--it-font-size-3);
+  --#{$prefix}font-size-2: var(--it-font-size-2);
+  --#{$prefix}font-size-1: var(--it-font-size-1);
+  --#{$prefix}font-leading-5: var(--it-font-leading-5);
+  --#{$prefix}font-leading-4: var(--it-font-leading-4);
+  --#{$prefix}font-leading-3: var(--it-font-leading-3);
+  --#{$prefix}font-leading-2: var(--it-font-leading-2);
+  --#{$prefix}font-leading-1: var(--it-font-leading-1);
+  --#{$prefix}font-tracking-normal: var(--it-font-tracking-normal);
+  --#{$prefix}font-tracking-tight: var(--it-font-tracking-tight);
+  --#{$prefix}font-tracking-narrow: var(--it-font-tracking-narrow);
+  --#{$prefix}font-tracking-short: var(--it-font-tracking-short);
+  --#{$prefix}display-font-size: var(--it-font-size-11);
+  --#{$prefix}heading-6-font-size: var(--it-heading-6-font-size);
+  --#{$prefix}heading-5-font-size: var(--it-heading-5-font-size);
+  --#{$prefix}heading-4-font-size: var(--it-heading-4-font-size);
+  --#{$prefix}heading-3-font-size: var(--it-heading-3-font-size);
+  --#{$prefix}heading-2-font-size: var(--it-heading-2-font-size);
+  --#{$prefix}heading-1-font-size: var(--it-heading-1-font-size);
+  --#{$prefix}heading-font-weight: var(--it-heading-font-weight);
+  --#{$prefix}heading-font-weight-weak: var(--it-heading-font-weight-weak);
+  --#{$prefix}heading-leading: var(--it-heading-leading);
+  --#{$prefix}body-font-size: var(--it-body-font-size);
+  --#{$prefix}body-leading: var(--it-body-leading);
+  --#{$prefix}body-font-weight: var(--it-body-font-weight);
+  --#{$prefix}lead-font-size: var(--it-lead-font-size);
+  --#{$prefix}lead-leading: var(--it-lead-leading);
+  --#{$prefix}lead-font-weight: var(--it-lead-font-weight);
+  --#{$prefix}caption-font-size: var(--it-caption-font-size);
+  --#{$prefix}caption-leading: var(--it-caption-leading);
+  --#{$prefix}caption-font-weight-regular: var(--it-caption-font-weight-regular);
+  --#{$prefix}caption-font-weight-semibold: var(--it-caption-font-weight-semibold);
+  --#{$prefix}label-font-size: var(--it-label-font-size);
+  --#{$prefix}label-font-size-s: var(--it-label-font-size-s);
+  --#{$prefix}label-font-size-xs: var(--it-label-font-size-xs);
+  --#{$prefix}label-font-size-l: var(--it-label-font-size-l);
+  --#{$prefix}label-leading: var(--it-label-leading);
+
+  // Typography responsive properties
+  @include media-breakpoint-up(sm) {
+    --#{$prefix}heading-1-font-size: var(--it-heading-1-font-size-l);
+    --#{$prefix}heading-2-font-size: var(--it-heading-2-font-size-l);
+    --#{$prefix}heading-3-font-size: var(--it-heading-3-font-size-l);
+    --#{$prefix}heading-4-font-size: var(--it-heading-4-font-size-l);
+    --#{$prefix}heading-5-font-size: var(--it-heading-5-font-size-l);
+    --#{$prefix}heading-6-font-size: var(--it-heading-6-font-size-l);
+    --#{$prefix}lead-font-size: var(--it-lead-font-size-l);
+    --#{$prefix}body-font-size: var(--it-body-font-size-l);
   }
-  --#{$prefix}body-font-family: #{$font-family-base};
-  @include rfs($font-size-base, --#{$prefix}body-font-size);
-  --#{$prefix}body-font-weight: #{$font-weight-base};
-  --#{$prefix}body-line-height: #{$line-height-base};
-  --#{$prefix}body-color: #{$body-color};
-  @if $body-text-align != null {
-    --#{$prefix}body-text-align: #{$body-text-align};
-  }
-  --#{$prefix}body-bg: #{$body-bg};
-  // scss-docs-end root-body-variables
 
-  // scss-docs-start root-border-var
-  --#{$prefix}border-width: #{$border-width};
-  --#{$prefix}border-style: #{$border-style};
-  --#{$prefix}border-color: #{$border-color};
-  --#{$prefix}border-color-translucent: #{$border-color-translucent};
+  // Icons
+  --#{$prefix}icon-size-xl: var(--it-icon-size-xl);
+  --#{$prefix}icon-size-l: var(--it-icon-size-l);
+  --#{$prefix}icon-size-m: var(--it-icon-size-m);
+  --#{$prefix}icon-size-s: var(--it-icon-size-s);
+  --#{$prefix}icon-size-xs: var(--it-icon-size-xs);
 
-  --#{$prefix}border-radius: #{$border-radius};
-  --#{$prefix}border-radius-sm: #{$border-radius-sm};
-  --#{$prefix}border-radius-lg: #{$border-radius-lg};
-  --#{$prefix}border-radius-xl: #{$border-radius-xl};
-  --#{$prefix}border-radius-2xl: #{$border-radius-2xl};
-  --#{$prefix}border-radius-pill: #{$border-radius-pill};
-  // scss-docs-end root-border-var
+  // Border
+  --#{$prefix}border-broad: var(--it-border-broad);
+  --#{$prefix}border-thick: var(--it-border-thick);
+  --#{$prefix}border-double: var(--it-border-double);
+  --#{$prefix}border-base: var(--it-border-base);
+  --#{$prefix}radius-rounded: var(--it-radius-rounded);
+  --#{$prefix}radius-circle: var(--it-radius-circle);
+  --#{$prefix}radius-smooth: var(--it-radius-smooth);
+  --#{$prefix}border-style: solid;
 
-  --#{$prefix}link-color: #{$link-color};
-  --#{$prefix}link-hover-color: #{$link-hover-color};
+  // Sizing
+  --#{$prefix}sizing-full: var(--it-sizing-full);
+  --#{$prefix}sizing-two-thirds: var(--it-sizing-two-thirds);
+  --#{$prefix}sizing-half: var(--it-sizing-half);
+  --#{$prefix}sizing-quarter: var(--it-sizing-quarter);
 
-  --#{$prefix}code-color: #{$code-color};
+  // Shadow
+  --#{$prefix}elevation-high: var(--it-elevation-high);
+  --#{$prefix}elevation-medium: var(--it-elevation-medium);
+  --#{$prefix}elevation-low: var(--it-elevation-low);
 
-  --#{$prefix}highlight-bg: #{$mark-bg};
+  // Text colors
+  --#{$prefix}color-text-accent: var(--it-color-text-accent);
+  --#{$prefix}color-text-inverse: var(--it-color-text-inverse);
+  --#{$prefix}color-text-danger-active: var(--it-color-text-danger-active);
+  --#{$prefix}color-text-danger-hover: var(--it-color-text-danger-hover);
+  --#{$prefix}color-text-danger: var(--it-color-text-danger);
+  --#{$prefix}color-text-warning-active: var(--it-color-text-warning-active);
+  --#{$prefix}color-text-warning-hover: var(--it-color-text-warning-hover);
+  --#{$prefix}color-text-warning: var(--it-color-text-warning);
+  --#{$prefix}color-text-success-active: var(--it-color-text-success-active);
+  --#{$prefix}color-text-success-hover: var(--it-color-text-success-hover);
+  --#{$prefix}color-text-success: var(--it-color-text-success);
+  --#{$prefix}color-text-disabled: var(--it-color-text-disabled);
+  --#{$prefix}color-text-muted: var(--it-color-text-muted);
+  --#{$prefix}color-text-secondary: var(--it-color-text-secondary);
+  --#{$prefix}color-text-primary: var(--it-color-text-primary);
+  --#{$prefix}color-text-base: var(--it-color-text-base);
+  --#{$prefix}color-code: var(--it-color-text-secondary);
+  --#{$prefix}color-link: var(--it-color-link-base);
+  --#{$prefix}color-link-hover: var(--it-color-link-hover);
+  --#{$prefix}color-link-active: var(--it-color-link-active);
+  --#{$prefix}color-link-secondary: var(--it-color-link-secondary);
+  --#{$prefix}color-link-secondary-hover: var(--it-color-link-secondary-hover);
+  --#{$prefix}color-link-secondary-active: var(--it-color-link-secondary-active);
+  --#{$prefix}color-link-inverse: var(--it-color-link-inverse);
+  --#{$prefix}color-link-disabled: var(--it-color-link-disabled);
+  --#{$prefix}color-link-accent: var(--it-color-link-accent);
+  --#{$prefix}color-link-accent-hover: var(--it-color-link-accent-hover);
+
+  // Border colors
+  --#{$prefix}color-border-danger-active: var(--it-color-border-danger-active);
+  --#{$prefix}color-border-danger-hover: var(--it-color-border-danger-hover);
+  --#{$prefix}color-border-danger: var(--it-color-border-danger);
+  --#{$prefix}color-border-warning-active: var(--it-color-border-warning-active);
+  --#{$prefix}color-border-warning-hover: var(--it-color-border-warning-hover);
+  --#{$prefix}color-border-warning: var(--it-color-border-warning);
+  --#{$prefix}color-border-success-active: var(--it-color-border-success-active);
+  --#{$prefix}color-border-success-hover: var(--it-color-border-success-hover);
+  --#{$prefix}color-border-success: var(--it-color-border-success);
+  --#{$prefix}color-border-subtle: var(--it-color-border-subtle);
+  --#{$prefix}color-border-disabled: var(--it-color-border-disabled);
+  --#{$prefix}color-border-inverse: var(--it-color-border-inverse);
+  --#{$prefix}color-border-secondary-active: var(--it-color-border-secondary-active);
+  --#{$prefix}color-border-secondary-hover: var(--it-color-border-secondary-hover);
+  --#{$prefix}color-border-secondary: var(--it-color-border-secondary);
+  --#{$prefix}color-border-primary-active: var(--it-color-border-primary-active);
+  --#{$prefix}color-border-primary-hover: var(--it-color-border-primary-hover);
+  --#{$prefix}color-border-primary: var(--it-color-border-primary);
+  --#{$prefix}color-outline-focus: var(--it-color-outline-focus);
+
+  // Background colors
+  --#{$prefix}color-background-primary: var(--it-color-background-primary);
+  --#{$prefix}color-background-primary-lighter: var(--it-color-background-primary-lighter);
+  --#{$prefix}color-background-primary-light: var(--it-color-background-primary-light);
+  --#{$prefix}color-background-primary-deep: var(--it-color-background-primary-deep);
+  --#{$prefix}color-background-primary-muted: var(--it-color-background-primary-muted);
+  --#{$prefix}color-background-primary-active: var(--it-color-background-primary-active);
+  --#{$prefix}color-background-primary-hover: var(--it-color-background-primary-hover);
+  --#{$prefix}color-background-danger-active: var(--it-color-background-danger-active);
+  --#{$prefix}color-background-danger-hover: var(--it-color-background-danger-hover);
+  --#{$prefix}color-background-danger-light: var(--it-color-background-danger-light);
+  --#{$prefix}color-background-danger: var(--it-color-background-danger);
+  --#{$prefix}color-background-warning-active: var(--it-color-background-warning-active);
+  --#{$prefix}color-background-warning-hover: var(--it-color-background-warning-hover);
+  --#{$prefix}color-background-warning-light: var(--it-color-background-warning-light);
+  --#{$prefix}color-background-warning: var(--it-color-background-warning);
+  --#{$prefix}color-background-success-active: var(--it-color-background-success-active);
+  --#{$prefix}color-background-success-hover: var(--it-color-background-success-hover);
+  --#{$prefix}color-background-success-light: var(--it-color-background-success-light);
+  --#{$prefix}color-background-success: var(--it-color-background-success);
+  --#{$prefix}color-background-emphasis: var(--it-color-background-emphasis);
+  --#{$prefix}color-background-subtle: var(--it-color-background-subtle);
+  --#{$prefix}color-background-disabled: var(--it-color-background-disabled);
+  --#{$prefix}color-background-inverse: var(--it-color-background-inverse);
+  --#{$prefix}color-background-inverse-hover: var(--it-color-slate-93); // TODO: replace with semantic token
+  --#{$prefix}color-background-muted: var(--it-color-background-muted);
+  --#{$prefix}color-background-accent-hover: var(--it-color-background-accent-hover);
+  --#{$prefix}color-background-accent: var(--it-color-background-accent);
+  --#{$prefix}color-background-secondary-lighter: var(--it-color-background-secondary-lighter);
+  --#{$prefix}color-background-secondary-light: var(--it-color-background-secondary-light);
+  --#{$prefix}color-background-secondary-active: var(--it-color-background-secondary-active);
+  --#{$prefix}color-background-secondary-hover: var(--it-color-background-secondary-hover);
+  --#{$prefix}color-background-secondary: var(--it-color-background-secondary);
+  --#{$prefix}color-background-secondary-deep: var(--it-color-slate-20);
+  --#{$prefix}overlay-background-light: hsla(0, 0%, 0%, 0.5);
+  --#{$prefix}overlay-background-primary: hsla(210, 100%, 40%, 0.8);
+  --#{$prefix}overlay-background-primary-muted: hsla(210, 54%, 20%, 0.8);
+  --#{$prefix}highlight-background: var(--it-color-teal-80); // TODO: replace with semantic token
+  --#{$prefix}code-background: var(--it-color-background-muted);
+  --#{$prefix}ins-background: var(--it-color-emerald-67);
+  --#{$prefix}del-background: var(--it-color-red-70);
+  --#{$prefix}page-background: var(--it-color-background-inverse);
+
+  // Status colors - reference the background category colors only
+  --#{$prefix}color-status-danger: var(--it-color-background-danger);
+  --#{$prefix}color-status-danger-hover: var(--it-color-background-danger-hover);
+  --#{$prefix}color-status-danger-active: var(--it-color-background-danger-active);
+  --#{$prefix}color-status-success: var(--it-color-background-success);
+  --#{$prefix}color-status-success-hover: var(--it-color-background-success-hover);
+  --#{$prefix}color-status-success-active: var(--it-color-background-success-active);
+  --#{$prefix}color-status-warning: var(--it-color-background-warning);
+  --#{$prefix}color-status-warning-hover: var(--it-color-background-warning-hover);
+  --#{$prefix}color-status-warning-active: var(--it-color-background-warning-active);
+
+  // Icons colors
+  --#{$prefix}icon-danger-active: var(--it-icon-danger-active);
+  --#{$prefix}icon-danger-hover: var(--it-icon-danger-hover);
+  --#{$prefix}icon-danger: var(--it-icon-danger);
+  --#{$prefix}icon-warning-active: var(--it-icon-warning-active);
+  --#{$prefix}icon-warning-hover: var(--it-icon-warning-hover);
+  --#{$prefix}icon-warning: var(--it-icon-warning);
+  --#{$prefix}icon-success-active: var(--it-icon-success-active);
+  --#{$prefix}icon-success-hover: var(--it-icon-success-hover);
+  --#{$prefix}icon-success: var(--it-icon-success);
+  --#{$prefix}icon-secondary-active: var(--it-icon-secondary-active);
+  --#{$prefix}icon-inverse: var(--it-icon-inverse);
+  --#{$prefix}icon-secondary-hover: var(--it-icon-secondary-hover);
+  --#{$prefix}icon-secondary: var(--it-icon-secondary);
+  --#{$prefix}icon-primary-active: var(--it-icon-primary-active);
+  --#{$prefix}icon-primary-hover: var(--it-icon-primary-hover);
+  --#{$prefix}icon-primary: var(--it-icon-primary);
+  --#{$prefix}icon-default: var(--it-icon-default);
+  --#{$prefix}icon-disabled: var(--it-icon-disabled);
+  --#{$prefix}icon-spacing: var(--it-spacing-xs);
+
+  // Transitions
+  --#{$prefix}transition-instant: 0.2s;
 }

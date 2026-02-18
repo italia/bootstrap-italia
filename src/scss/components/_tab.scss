@@ -1,12 +1,49 @@
+// Component: tab
+//
+// Description: Component styles for tab
+//
+
+// Variables
+//
+
+// Properties
+//
+
+.nav-tabs {
+  --#{$prefix}tabs-background-color: var(--#{$prefix}color-background-inverse);
+  --#{$prefix}tabs-border-color: var(--#{$prefix}color-border-subtle);
+  --#{$prefix}tab-text-color: var(--#{$prefix}color-text-secondary);
+  --#{$prefix}tab-icon-color: var(--#{$prefix}icon-secondary);
+  --#{$prefix}tab-border-radius: var(--#{$prefix}radius-smooth);
+  --#{$prefix}tab-border-width: 3px;
+  --#{$prefix}tab-padding-x: var(--#{$prefix}spacing-m);
+  --#{$prefix}tab-padding-y: var(--#{$prefix}spacing-s);
+  --#{$prefix}tab-font-size: var(--#{$prefix}label-font-size);
+  --#{$prefix}tab-font-weight: 600;
+  --#{$prefix}tab-shadow: 0 12px 25px -20px rgba(0, 0, 0, 0.5);
+  --#{$prefix}tab-background-light: var(--#{$prefix}color-background-primary-lighter);
+  --#{$prefix}tab-border-color: transparent;
+  --#{$prefix}tab-border-width-cards: 2px;
+  --#{$prefix}tab-border-color-cards: var(--#{$prefix}color-border-subtle);
+  --#{$prefix}tab-add-btn-border: var(--#{$prefix}color-border-primary);
+  --#{$prefix}tab-add-btn-color: var(--#{$prefix}color-background-primary);
+  --#{$prefix}tab-close-btn-color: var(--#{$prefix}color-text-secondary);
+  --#{$prefix}tab-close-btn-color-hover: color-mix(in srgb, var(--#{$prefix}primary) 90%, black 10%);
+  --#{$prefix}tab-close-btn-color-disabled: var(--#{$prefix}color-text-disabled);
+}
+
+// Styles
+//
+
 .nav-tabs {
   position: relative;
-  background-color: $white;
-  border-bottom-color: $color-border-subtle;
   display: flex;
+  flex-wrap: nowrap;
   overflow-x: auto;
   overflow-y: hidden;
+  border-bottom-color: var(--#{$prefix}tabs-border-color);
+  background-color: var(--#{$prefix}tabs-background-color);
   -webkit-overflow-scrolling: touch;
-  flex-wrap: nowrap;
 
   //reset icon right margin
   .it-ico,
@@ -39,7 +76,7 @@
     }
   }
 
-  //tabs with icon and text
+  // Tabs with icon and text
   &.nav-tabs-icon-text {
     //icons
     .icon {
@@ -47,30 +84,22 @@
     }
   }
 
-  //tabs with big icon
-  &.nav-tabs-icon-lg {
-    .nav-link {
-      padding: 0.778rem 1.778em;
-    }
-  }
-
-  //vertical tabs
+  // Vertical tabs
   &.nav-tabs-vertical {
     flex-direction: column;
-    border-bottom: none;
-    border-right: 1px solid $color-border-subtle;
+    border-color: var(--#{$prefix}tabs-border-color);
+    border-right-width: 1px;
+    border-style: solid;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    border-top-width: 0;
+
     .nav-link {
-      justify-content: space-between;
-      border-bottom: none;
-      border-right: 2px solid transparent;
-      white-space: normal;
       position: relative;
-      &:focus:not([data-focus-mouse='true']) {
-        box-shadow: inset 0 0px 0 2px $focus-outline-color !important;
-      }
-      &:hover {
-        border-bottom: none;
-      }
+      justify-content: space-between;
+      border-right-width: var(--#{$prefix}tab-border-width);
+      border-bottom-width: 0;
+      white-space: normal;
 
       &.justify-content-end {
         .it-ico:before,
@@ -79,216 +108,211 @@
         }
       }
     }
-    .nav-link.active,
-    .nav-item.show .nav-link {
-      border-bottom: none;
-      border-right-color: $primary;
-    }
+
     &.nav-tabs-vertical-background {
       .nav-link.active,
       .nav-item.show .nav-link {
-        background-color: $color-background-primary-lighter;
+        --#{$prefix}tab-background-color: var(--#{$prefix}color-background-primary-lighter);
       }
     }
   }
 
-  //link element
+  // Link element
   .nav-link {
-    border-radius: 0;
-    font-size: 1rem;
-    font-weight: 600;
-    color: $color-text-secondary;
-    border: none;
-    border-bottom: 3px solid transparent;
-    padding: 0.778rem 1.333em;
-    flex: 1 0 auto;
-    white-space: nowrap;
-    line-height: 1rem;
     display: flex;
+    flex: 1 0 auto;
     align-items: center;
     justify-content: center;
+    padding: var(--#{$prefix}tab-padding-y) var(--#{$prefix}tab-padding-x);
+    border-width: var(--#{$prefix}tab-border-width);
+    border-style: solid;
+    border-left-width: 0;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-color: transparent;
+    border-bottom-width: var(--#{$prefix}tab-border-width);
+    border-radius: 0;
+    color: var(--#{$prefix}tab-text-color);
+    font-size: var(--#{$prefix}tab-font-size);
+    font-weight: var(--#{$prefix}tab-font-weight);
+    line-height: 1rem;
     text-decoration: none;
+    white-space: nowrap;
     @include media-breakpoint-up(lg) {
-      font-size: 1.125rem;
+      --#{$prefix}tab-font-size: var(--#{$prefix}label-font-size-l);
     }
-
     &:hover {
-      color: $color-text-primary-hover;
-      border-bottom-color: transparent;
+      --#{$prefix}tab-text-color: var(--#{$prefix}color-text-secondary-hover);
     }
-
-    &:focus:not([data-focus-mouse='true']) {
-      box-shadow: inset 0 1px 0 2px $focus-outline-color !important;
-    }
-
     &.disabled {
-      color: $gray-disabled;
-      cursor: default;
+      --#{$prefix}tab-text-color: var(--#{$prefix}color-link-disabled);
+      cursor: not-allowed;
+    }
+    &[data-focus-mouse='true']:not(.active) {
+      border-color: var(--#{$prefix}tab-border-color) !important; // stylelint-disable-line declaration-no-important - overrides styles in _focus.scss
+      --#{$prefix}tab-border-color: var(--#{$prefix}color-border-subtle);
+    }
+    &.active,
+    &[data-focus-mouse='true']:has(.active),
+    &[data-focus-mouse='true']:not(:focus) {
+      --#{$prefix}tab-border-color: var(--#{$prefix}color-border-primary);
+      --#{$prefix}tab-text-color: var(--#{$prefix}color-text-primary);
+      border-color: var(--#{$prefix}tab-border-color) !important; // stylelint-disable-line declaration-no-important - overrides styles in _focus.scss
+
       .icon {
-        fill: $gray-disabled;
+        --#{$prefix}tab-icon-color: var(--#{$prefix}icon-primary);
       }
+    }
+    &:focus:not([data-focus-mouse='true']) {
+      box-shadow: inset 0 0 0 2px var(--#{$prefix}color-outline-focus) !important;
     }
 
-    //icons
-    .it-ico {
-      &:before {
-        font-size: 1.25rem;
-      }
-    }
-    .it-ico-lg {
-      &:before {
-        font-size: 2rem;
-      }
-    }
+    // Icon styles inside tab nav link
     .icon {
-      fill: $gray-secondary;
+      fill: var(--#{$prefix}tab-icon-color);
       &:hover {
-        fill: $color-text-primary-hover;
+        --#{$prefix}tab-icon-color: var(--#{$prefix}icon-secondary-hover);
       }
-    }
-    &.active {
-      .icon {
-        fill: $primary;
+      .disabled & {
+        fill: var(--#{$prefix}icon-disabled);
       }
     }
   }
-  .nav-link.active,
-  .nav-item.show .nav-link {
-    border-bottom-color: $primary;
-    color: $primary;
-    cursor: inherit;
-  }
+
   .nav-item {
-    margin-bottom: 0;
     display: flex;
+    margin-bottom: 0;
   }
 
   // Dark version
-  // Missing in the UI kit v3.x.x
+  // This styles are missing in the UI kit v3.x
   &.nav-dark {
-    background-color: $gray-primary;
-    border-bottom: none;
+    --#{$prefix}tabs-border-color: var(--#{$prefix}color-border-subtle);
+    --#{$prefix}tabs-background-color: var(--#{$prefix}color-background-secondary-deep);
+
     .nav-link {
-      color: $neutral-1-a2;
-      .icon {
-        fill: $neutral-1-a2;
-      }
+      --#{$prefix}tab-text-color: var(--#{$prefix}color-text-inverse);
+      opacity: 0.75;
       &:hover {
-        color: $cyan;
-        .icon {
-          fill: $cyan;
-        }
+        opacity: 1;
       }
       &.disabled {
-        color: $neutral-1-a6;
-        & .icon {
-          fill: $neutral-1-a6;
-        }
+        opacity: 0.5;
+      }
+      .icon {
+        --#{$prefix}tab-icon-color: var(--#{$prefix}color-text-inverse);
       }
     }
+
     .nav-link.active,
     .nav-item.show .nav-link {
-      background-color: $gray-primary;
-      color: $cyan;
-      border-bottom: 2px solid $cyan;
-      .icon {
-        fill: $cyan;
-      }
+      opacity: 1;
+      --#{$prefix}tab-border-color: var(--#{$prefix}color-border-inverse);
     }
 
     &.nav-tabs-vertical {
       .nav-link.active,
       .nav-item.show .nav-link {
-        border-right-color: $cyan;
         border-bottom: none;
+        border-right-color: var(--#{$prefix}color-border-inverse);
       }
     }
   }
 
-  //card version
+  // Tab Card version
   &.nav-tabs-cards {
-    border-bottom: none;
-
-    //grey fullwidth bottom border for ul
+    // Grey fullwidth bottom border for ul
     &::after {
       content: '';
       flex-grow: 1;
-      border-bottom: 1px solid $color-border-subtle;
+      border-bottom: 1px solid var(--#{$prefix}color-border-subtle);
     }
+
+    // Tab link styles
     .nav-link {
-      border-bottom-width: 2px;
-      border-color: transparent;
+      --#{$prefix}tab-border-width: 1px;
+      border-bottom: var(--#{$prefix}tab-border-width) solid var(--#{$prefix}color-border-subtle);
       position: relative;
-      border-bottom-color: $color-border-subtle;
-      border-radius: $border-radius $border-radius 0 0;
-      &.active {
-        border: 1px solid $color-border-subtle;
-        border-bottom-color: transparent;
-        border-bottom-width: 1px;
+
+      &[data-focus-mouse='true']:not(.active) {
+        border-color: transparent;
+      }
+
+      &.active,
+      &[data-focus-mouse='true']:not(:focus) {
+        --#{$prefix}tab-border-color: var(--#{$prefix}color-border-subtle);
+        border-color: var(--#{$prefix}tab-border-color);
+        border-top-width: var(--#{$prefix}tab-border-width);
+        border-right-width: var(--#{$prefix}tab-border-width);
+        border-left-width: var(--#{$prefix}tab-border-width);
+        border-bottom-color: transparent !important;
+        border-top-left-radius: var(--#{$prefix}tab-border-radius);
+        border-top-right-radius: var(--#{$prefix}tab-border-radius);
       }
     }
   }
 
-  //editable version
+  // Editable version
   &.nav-tabs-editable {
     .nav-item {
       position: relative;
+      border-bottom: 0;
       &:last-of-type {
-        border-bottom: 1px solid $color-border-subtle;
+        padding: var(--#{$prefix}tab-padding-y) calc(var(--#{$prefix}tab-padding-x) / 2);
+        border-bottom: 1px solid var(--#{$prefix}color-border-subtle);
       }
     }
 
-    //add button
+    // Add button
     .nav-tab-add {
-      margin: -0.2em 1em 0;
       position: relative;
-      width: 1.444rem;
-      height: 1.444rem;
-      top: 0.8rem;
-      border: 1px solid $primary;
+      width: 1.5rem;
+      height: 1.5rem;
+      margin: -0.2em 1em 0;
+      border: 1px solid var(--#{$prefix}color-border-primary);
       border-radius: 50%;
-      right: 0;
-      //plus sign
+
+      // Plus sign
       &:after {
-        content: '';
         position: absolute;
+        top: 0.278rem;
+        left: 0.611rem;
+        content: '';
         width: 2px;
         height: 0.778rem;
-        left: 0.611rem;
-        top: 0.278rem;
-        background-color: $primary;
+        background-color: var(--#{$prefix}color-background-primary);
       }
       &:before {
-        content: '';
         position: absolute;
+        top: 0.611rem;
+        left: 0.278rem;
+        content: '';
         width: 0.778rem;
         height: 2px;
-        left: 0.278rem;
-        top: 0.611rem;
-        background-color: $primary;
+        background-color: var(--#{$prefix}color-background-primary);
       }
     }
 
     .nav-link {
-      padding-right: 2.888em;
+      padding-right: 3rem;
     }
 
     //close button
     .nav-link-close {
-      cursor: pointer;
       position: absolute;
-      top: calc(50% - 0.9rem);
+      top: calc(50% - 1rem);
       right: 0.889rem;
-      color: $color-text-secondary;
+      color: var(--#{$prefix}color-text-secondary);
       transition: color 0.2s;
+      cursor: pointer;
       .icon {
-        fill: $color-text-secondary;
+        fill: var(--#{$prefix}icon-secondary);
       }
       &.disabled {
-        color: $gray-disabled;
+        color: var(--#{$prefix}color-text-disabled);
         cursor: pointer;
         .icon {
-          fill: $gray-disabled;
+          fill: var(--#{$prefix}icon-disabled);
         }
       }
       &:hover {
@@ -307,9 +331,9 @@
     .nav-link.active,
     .nav-item.show .nav-link {
       .nav-link-close {
-        color: $primary;
+        color: var(--#{$prefix}color-text-primary);
         .icon {
-          fill: $primary;
+          fill: var(--#{$prefix}icon-primary);
         }
       }
     }
@@ -318,63 +342,37 @@
 
 // ----------- tabs position ----------------
 
-//horizontal tabs on bottom
+// Horizontal tabs on bottom
 .flex-column-reverse {
   .nav-tabs {
-    border-bottom: none;
-    border-top: 1px solid $color-border-subtle;
+    border-top-width: 1px;
+    border-bottom-width: 0; // reset bottom border
+
     .nav-link {
-      border-bottom: none;
-      border-top: 2px solid transparent;
-      &:focus:not([data-focus-mouse='true']) {
-        box-shadow: inset 0 -1px 0 2px $focus-outline-color !important;
-      }
-    }
-    .nav-link.active,
-    .nav-item.show .nav-link {
-      border-top-color: $primary;
+      border-top-width: var(--#{$prefix}tab-border-width);
+      border-bottom-width: 0; // reset bottom border
     }
   }
 }
 
-//vertical tabs on right
+// Vertical tabs on right
 .flex-row-reverse {
   .nav-tabs {
-    &.nav-dark {
-      &.nav-tabs-vertical {
-        .nav-link.active,
-        .nav-item.show .nav-link {
-          border-left-color: $cyan;
-        }
-      }
-    }
     &.nav-tabs-vertical {
-      border-right: none;
-      border-left: 1px solid $color-border-subtle;
+      border-right-width: 0;
+      border-left-width: 1px;
+
       .nav-link {
         justify-content: flex-start;
-        border-bottom: none;
-        border-right: none;
-        border-left: 2px solid transparent;
-        &:focus:not([data-focus-mouse='true']) {
-          box-shadow: inset 0px 0px 0 2px $focus-outline-color !important;
-        }
-        &:hover {
-          border-bottom: none;
-        }
-        //icons
-        .icon {
-          margin-right: 0.889rem;
-        }
-      }
-      .nav-link.active,
-      .nav-item.show .nav-link {
-        border-left-color: $primary;
+        border-right-width: 0;
+        border-bottom-width: 0;
+        border-left-width: var(--#{$prefix}tab-border-width);
       }
     }
   }
 }
-//hide ios horizontal scrollbar
+
+// Hide iOS horizontal scrollbar
 .nav-tabs-hidescroll {
   height: 2.667rem;
   overflow: hidden;
@@ -388,6 +386,7 @@
     padding-bottom: 20px;
   }
 }
+
 @include media-breakpoint-down(md) {
   .nav-tabs {
     box-shadow: 0 12px 25px -20px rgba(0, 0, 0, 0.5);
@@ -397,17 +396,18 @@
     }
   }
 }
-//Desktop
+
+// Desktop
 @include media-breakpoint-up(xl) {
   .nav-tabs {
-    overflow-x: hidden;
     flex-wrap: wrap;
+    overflow-x: hidden;
     &.auto {
       flex-wrap: nowrap;
     }
   }
 
-  //hide ios horizontal scrollbar
+  // Hide iOS horizontal scrollbar
   .nav-tabs-hidescroll {
     height: auto;
     overflow: initial;

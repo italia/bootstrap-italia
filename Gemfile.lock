@@ -14,6 +14,7 @@ GEM
     ethon (0.15.0)
       ffi (>= 1.15.0)
     eventmachine (1.2.7)
+    ffi (1.17.2)
     ffi (1.17.2-aarch64-linux-gnu)
     ffi (1.17.2-aarch64-linux-musl)
     ffi (1.17.2-arm-linux-gnu)
@@ -95,6 +96,10 @@ GEM
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     mercenary (0.4.0)
+    mini_portile2 (2.8.9)
+    nokogiri (1.18.9)
+      mini_portile2 (~> 2.8.2)
+      racc (~> 1.4)
     nokogiri (1.18.9-aarch64-linux-gnu)
       racc (~> 1.4)
     nokogiri (1.18.9-aarch64-linux-musl)
@@ -124,6 +129,9 @@ GEM
     rexml (3.4.3)
     rouge (4.6.0)
     safe_yaml (1.0.5)
+    sass-embedded (1.92.1)
+      google-protobuf (~> 4.31)
+      rake (>= 13)
     sass-embedded (1.92.1-aarch64-linux-gnu)
       google-protobuf (~> 4.31)
     sass-embedded (1.92.1-aarch64-linux-musl)
@@ -156,6 +164,7 @@ PLATFORMS
   arm-linux-musl
   arm-linux-musleabihf
   arm64-darwin
+  ruby
   x86_64-darwin
   x86_64-linux-gnu
   x86_64-linux-musl

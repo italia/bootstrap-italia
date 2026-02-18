@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-italia",
-  "version": "2.17.4",
+  "version": "3.0.0-alpha.1",
   "keywords": [
     "css",
     "sass",
@@ -37,7 +37,7 @@
     "fix-scss": "stylelint ./src/scss/ ./docs/assets/src/scss/ --fix",
     "format-code": "npx prettier --write . && eslint ./src/js ./docs/assets/src/js/ --fix --cache && stylelint ./src/scss/ ./docs/assets/src/scss/ --fix --cache",
     "release": "node scripts/release",
-    "version": "node scripts/config-sync && git add _config.yml && git add src/js/version.js && git add src/scss/base/_version.scss && conventional-changelog -p angular -i CHANGELOG.md -s && node scripts/wait-confirm && git add CHANGELOG.md",
+    "version": "node ./scripts/create-breaking-page.js && git add _includes/breaking-features-list.md && node scripts/config-sync && git add _config.yml && git add src/js/version.js && git add src/scss/base/_version.scss && conventional-changelog -p angular -i CHANGELOG.md -s && node scripts/wait-confirm && git add CHANGELOG.md",
     "postversion": "echo \"You can now publish your tag with 'git push --follow-tags'\"",
     "test-htmlproofer": "JEKYLL_ENV=development bundle exec jekyll build --config _config.yml && bundle exec htmlproofer ./_site --assume-extension --check-html --allow-hash-href --disable-external --url-ignore /1.x/",
     "test-a11y": "npx pa11y-ci --sitemap http://localhost:4000/sitemap.xml --sitemap-find ^/ --sitemap-replace 'http://localhost:4000/'",
@@ -61,7 +61,7 @@
     "@octokit/rest": "^22.0.1",
     "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-legacy": "^3.0.2",
-    "@rollup/plugin-node-resolve": "^15.3.0",
+    "@rollup/plugin-node-resolve": "^15.3.1",
     "@rollup/plugin-terser": "^0.4.4",
     "browser-sync": "^3.0.2",
     "browserslist-config-design-italia": "^1.1.0",
