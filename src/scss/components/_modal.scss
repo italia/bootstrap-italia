@@ -186,7 +186,10 @@
 // Fullscreen modal loop
 @each $breakpoint in map.keys($grid-breakpoints) {
   $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
-  $postfix: if($infix != '', $infix + '-down', '');
+  $postfix: '';
+  @if $infix != '' {
+    $postfix: $infix + '-down';
+  }
 
   @include media-breakpoint-down($breakpoint) {
     .modal-fullscreen#{$postfix} {

@@ -54,7 +54,10 @@ $utilities-border: map.merge(
 $utilities-border-colors: map-loop($utilities-border, rgba-css-var, '$key', 'border') !default;
 // scss-docs-end utilities-border-colors
 
-$negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) !default;
+$negative-spacers: null !default;
+@if $enable-negative-margins {
+  $negative-spacers: negativify-map($spacers);
+}
 
 $gutters: $spacers !default;
 

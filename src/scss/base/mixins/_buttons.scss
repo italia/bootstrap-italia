@@ -14,19 +14,69 @@
   $background,
   $border,
   $color: color-contrast($background),
-  $hover-background:
-    if($color == $color-contrast-light, shade-color($background, $btn-hover-bg-shade-amount), tint-color($background, $btn-hover-bg-tint-amount)),
-  $hover-border: if($color == $color-contrast-light, shade-color($border, $btn-hover-border-shade-amount), tint-color($border, $btn-hover-border-tint-amount)),
-  $hover-color: color-contrast($hover-background),
-  $active-background:
-    if($color == $color-contrast-light, shade-color($background, $btn-active-bg-shade-amount), tint-color($background, $btn-active-bg-tint-amount)),
-  $active-border:
-    if($color == $color-contrast-light, shade-color($border, $btn-active-border-shade-amount), tint-color($border, $btn-active-border-tint-amount)),
-  $active-color: color-contrast($active-background),
-  $disabled-background: $background,
-  $disabled-border: $border,
-  $disabled-color: color-contrast($disabled-background)
+  $hover-background: null,
+  $hover-border: null,
+  $hover-color: null,
+  $active-background: null,
+  $active-border: null,
+  $active-color: null,
+  $disabled-background: null,
+  $disabled-border: null,
+  $disabled-color: null
 ) {
+  // Calculate defaults if not provided
+  @if $hover-background == null {
+    @if $color == $color-contrast-light {
+      $hover-background: shade-color($background, $btn-hover-bg-shade-amount);
+    } @else {
+      $hover-background: tint-color($background, $btn-hover-bg-tint-amount);
+    }
+  }
+
+  @if $hover-border == null {
+    @if $color == $color-contrast-light {
+      $hover-border: shade-color($border, $btn-hover-border-shade-amount);
+    } @else {
+      $hover-border: tint-color($border, $btn-hover-border-tint-amount);
+    }
+  }
+
+  @if $hover-color == null {
+    $hover-color: color-contrast($hover-background);
+  }
+
+  @if $active-background == null {
+    @if $color == $color-contrast-light {
+      $active-background: shade-color($background, $btn-active-bg-shade-amount);
+    } @else {
+      $active-background: tint-color($background, $btn-active-bg-tint-amount);
+    }
+  }
+
+  @if $active-border == null {
+    @if $color == $color-contrast-light {
+      $active-border: shade-color($border, $btn-active-border-shade-amount);
+    } @else {
+      $active-border: tint-color($border, $btn-active-border-tint-amount);
+    }
+  }
+
+  @if $active-color == null {
+    $active-color: color-contrast($active-background);
+  }
+
+  @if $disabled-background == null {
+    $disabled-background: $background;
+  }
+
+  @if $disabled-border == null {
+    $disabled-border: $border;
+  }
+
+  @if $disabled-color == null {
+    $disabled-color: color-contrast($disabled-background);
+  }
+
   --#{$prefix}btn-color: #{$color};
   --#{$prefix}btn-bg: #{$background};
   --#{$prefix}btn-border-color: #{$border};

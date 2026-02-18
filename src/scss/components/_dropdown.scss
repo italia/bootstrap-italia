@@ -316,12 +316,19 @@
   border: 0; // For `<button>`s
   background-color: transparent; // For `<button>`s
   text-align: inherit; // For `<button>`s
-  text-decoration: if($link-decoration == none, null, none);
+  @if $link-decoration == none {
+    text-decoration: null;
+  } @else {
+    text-decoration: none;
+  }
+
   white-space: nowrap; // prevent links from randomly breaking onto new lines
 
   &:hover,
   &:focus {
-    text-decoration: if($link-hover-decoration == underline, none, null);
+    @if $link-hover-decoration == underline {
+      text-decoration: none;
+    }
   }
 }
 

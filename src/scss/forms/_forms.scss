@@ -98,7 +98,11 @@ input {
   // https://github.com/twbs/bootstrap/issues/23307
   &::-webkit-date-and-time-value {
     // Multiply line-height by 1em if it has no unit
-    height: if(unit($input-line-height) == '', $input-line-height * 1em, $input-line-height);
+    @if unit($input-line-height) == '' {
+      height: $input-line-height * 1em;
+    } @else {
+      height: $input-line-height;
+    }
   }
 }
 

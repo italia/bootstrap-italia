@@ -25,19 +25,40 @@
     }
 
     // Use custom class if present
-    $property-class: if(map.has-key($utility, class), map.get($utility, class), list.nth($properties, 1));
-    $property-class: if($property-class == null, '', $property-class);
+    $property-class: list.nth($properties, 1);
+    @if map.has-key($utility, class) {
+      $property-class: map.get($utility, class);
+    }
+
+    @if $property-class == null {
+      $property-class: '';
+    }
 
     // Use custom CSS variable name if present, otherwise default to `class`
-    $css-variable-name: if(map.has-key($utility, css-variable-name), map.get($utility, css-variable-name), map.get($utility, class));
+    $css-variable-name: map.get($utility, class);
+    @if map.has-key($utility, css-variable-name) {
+      $css-variable-name: map.get($utility, css-variable-name);
+    }
 
     // State params to generate pseudo-classes
-    $state: if(map.has-key($utility, state), map.get($utility, state), ());
+    $state: ();
+    @if map.has-key($utility, state) {
+      $state: map.get($utility, state);
+    }
 
-    $infix: if($property-class == '' and string.slice($infix, 1, 1) == '-', string.slice($infix, 2), $infix);
+    @if $property-class == '' and string.slice($infix, 1, 1) == '-' {
+      $infix: string.slice($infix, 2);
+    }
 
     // Don't prefix if value key is null (e.g. with shadow class)
-    $property-class-modifier: if($key, if($property-class == '' and $infix == '', '', '-') + $key, '');
+    $property-class-modifier: '';
+    @if $key {
+      @if $property-class == '' and $infix == '' {
+        $property-class-modifier: '' + $key;
+      } @else {
+        $property-class-modifier: '-' + $key;
+      }
+    }
 
     @if map.get($utility, rfs) {
       // Inside the media query
@@ -45,7 +66,11 @@
         $val: rfs-value($value);
 
         // Do not render anything if fluid and non fluid values are the same
-        $value: if($val == rfs-fluid-value($value), null, $val);
+        @if $val == rfs-fluid-value($value) {
+          $value: null;
+        } @else {
+          $value: $val;
+        }
       } @else {
         $value: rfs-fluid-value($value);
       }
@@ -78,8 +103,11 @@
                 --#{$prefix}#{$local-var}: #{$variable};
               }
             }
-
-            #{$property}: $value if($enable-important-utilities, !important, null);
+            @if $enable-important-utilities {
+              #{$property}: $value !important;
+            } @else {
+              #{$property}: $value;
+            }
           }
         }
 
@@ -91,8 +119,11 @@
                   --#{$prefix}#{$local-var}: #{$variable};
                 }
               }
-
-              #{$property}: $value if($enable-important-utilities, !important, null);
+              @if $enable-important-utilities {
+                #{$property}: $value !important;
+              } @else {
+                #{$property}: $value;
+              }
             }
           }
         }
