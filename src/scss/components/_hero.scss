@@ -19,7 +19,9 @@
   --#{$prefix}hero-category-font-size: var(--#{$prefix}label-font-size); // Controls the font size of the category text in the hero, using text tokens
   --#{$prefix}hero-height: 400px; // Controls the height of the hero
   --#{$prefix}hero-overlap-negative-spacing: -3rem; // Controls the negative spacing for overlapping content below the hero
-  --#{$prefix}hero-overlap-spacing-inset: var(--#{$prefix}spacing-xxl); // Controls the inset spacing for overlapping content within the hero, using spacing tokens
+  --#{$prefix}hero-overlap-spacing-inset: var(
+    --#{$prefix}spacing-xxl
+  ); // Controls the inset spacing for overlapping content within the hero, using spacing tokens
   --#{$prefix}hero-overlay-background: transparent; // Controls the overlay background color for the hero
   --#{$prefix}hero-padding-x: var(--#{$prefix}spacing-xs); // Controls the horizontal padding for the hero, using spacing tokens
   --#{$prefix}hero-padding-y: var(--#{$prefix}spacing-3xl); // Controls the vertical padding for the hero, using spacing tokens
@@ -116,7 +118,7 @@
     }
   }
 
-  @media (max-width: 575px) {
+  @include media-breakpoint-down(sm) {
     --#{$prefix}hero-overlap-negative-spacing: calc(var(--#{$prefix}spacing-l) * -1);
     &.it-wrapped-container {
       display: flex;
@@ -124,18 +126,18 @@
     }
   }
 
-  @media (min-width: 576px) {
+  @include media-breakpoint-up(sm) {
     &.it-wrapped-container {
       min-height: 0 !important;
       align-items: flex-end;
     }
   }
 
-  @media (min-width: 768px) {
+  @include media-breakpoint-up(md) {
     --#{$prefix}hero-height: 300px;
   }
 
-  @media (min-width: 992px) {
+  @include media-breakpoint-up(lg) {
     --#{$prefix}hero-height: 400px;
     --#{$prefix}hero-overlap-negative-spacing: -40px;
     --#{$prefix}hero-overlap-spacing-inset: 96px;
