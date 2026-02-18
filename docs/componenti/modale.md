@@ -134,6 +134,23 @@ Esempio completo:
 È possibile inserire un icona di alert (o altro tipo) affiancandola all'intestazione.
 Per formattare correttamente i contenuti della modale con icona, occorre aggiungere la classe `alert-modal` all'elemento `<div class="modal">`
 
+{% capture callout %}
+
+#### Accessibilità icona
+
+**Fornire un testo alternativo per l'icona che veicola informazioni:** È fondamentale comunicare il significato dell'icona agli utenti che utilizzano tecnologie assistive. Sono disponibili diverse tecniche:
+
+- **Tecnica consigliata (supporto più ampio):** Applicare l'attributo `role="img"` all'elemento `<svg>`, inserire un elemento `<title>` all'interno del tag `<svg>` con il testo descrittivo e collegare i due elementi tramite `aria-labelledby`.
+- **Alternativa:** Utilizzare l'attributo `aria-label` direttamente sull'elemento `<svg>`
+- **Approccio alternativo:** Nascondere l'icona con `aria-hidden="true"` aggiunto all'elemento `<svg>` se il significato è già comunicato tramite altro testo. 
+
+Per maggiori informazioni, consulta il seguente articolo [Using ARIA to enhance SVG accessibility](https://www.tpgi.com/using-aria-enhance-svg-accessibility/).
+{% endcapture %}{% include callout.html content=callout type="accessibility" %}
+
+
+
+{% comment %}Example name: Pulsante di chiusura, dettaglio{% endcomment %}
+
 {% comment %}Example name: Con icona{% endcomment %}
 {% capture example %}
 <div class="it-example-modal">
@@ -141,7 +158,7 @@ Per formattare correttamente i contenuti della modale con icona, occorre aggiung
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-info-circle"></use></svg>
+          <svg class="icon" aria-labelledby="titolo-svg" role="img"><title id="titolo-svg">Testo alternativo per la svg</title><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-info-circle"></use></svg>
           <h2 class="modal-title h5 no_toc" id="modal3Title">Questo è un messaggio di notifica più esteso del solito</h2>
         </div>
         <div class="modal-body">
