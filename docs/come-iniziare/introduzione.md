@@ -60,23 +60,16 @@ Utilizzando SASS nella propria pipeline, puoi sfruttare le funzionalità del sis
 
 #### Metodo raccomandato: import completo
 
-Per utilizzare l'intera libreria, eventualmente personalizzando colori e variabili:
+Per utilizzare l'intera libreria:
 ```scss
 // Import completo degli stili
 @use 'bootstrap-italia/src/scss/bootstrap-italia.scss';
-
-// Oppure con personalizzazione variabili
-@use 'bootstrap-italia/src/scss/bootstrap-italia.scss' with (
-  $primary-h: 210,
-  $primary-s: 100,
-  $primary-b: 47
-);
 ```
 
 {% capture callout %}
-**Personalizzare colori, font e altre variabili?**
+**Personalizzare colori e altre variabili? Usare namespace "as bsi"?**
 
-Per maggiori dettagli sulla personalizzazione delle variabili tramite `@use ... with` e sull'uso dei namespace (`as *`, `as bsi`, ecc.), consulta la [guida alla personalizzazione della libreria]({{ site.baseurl }}/docs/come-iniziare/personalizzazione-della-libreria/).
+Per maggiori dettagli sulla personalizzazione, consulta la [guida alla personalizzazione della libreria]({{ site.baseurl }}/docs/come-iniziare/personalizzazione-della-libreria/).
 {% endcapture %}{% include callout.html content=callout type="info" %}
 
 #### Ottimizzazione bundle: import selettivo
