@@ -1,3 +1,8 @@
+@use 'sass:map';
+@use '../base/config' as *;
+@use '../base/variables' as *;
+@use '../base/mixins/breakpoints' as *;
+
 // Component: steppers
 //
 // Description: Component styles for steppers
@@ -20,18 +25,24 @@
     font-size: 0.875rem;
     font-weight: 600;
     flex-shrink: 0;
+
     @include media-breakpoint-up(lg) {
       display: none;
     }
+
     span {
       margin-left: 0.25rem;
+
       &.active {
         color: $primary;
         text-decoration: underline;
       }
     }
   }
+
   .steppers-header {
+    margin-bottom: 1rem;
+
     @include media-breakpoint-down(lg) {
       padding: 0 24px;
       height: 64px;
@@ -41,27 +52,31 @@
       align-items: center;
       justify-content: space-between;
     }
-    margin-bottom: 1rem;
+
     ul {
       display: flex;
       width: 100%;
       padding: 0;
+
       @include media-breakpoint-down(lg) {
         margin: 0;
         padding: 0;
       }
+
       li {
         display: flex;
         font-size: 1.125rem;
         font-weight: 600;
         color: $gray-secondary;
         list-style-type: none;
+
         .icon {
           fill: $gray-secondary;
           margin-right: 0.667rem;
           width: 24px;
           height: 24px;
         }
+
         // states
         &:not(.active) {
           @include media-breakpoint-down(lg) {
@@ -71,21 +86,26 @@
             display: block;
           }
         }
+
         &.active,
         &.confirmed {
           color: $primary;
+
           .icon {
             fill: $primary;
           }
         }
+
         &.steppers-index {
           display: block;
         }
+
         // numbers
         .steppers-number {
           .icon {
             margin: 0;
           }
+
           &:after {
             content: '. ';
           }
@@ -98,42 +118,53 @@
   &.bg-dark {
     .steppers-header {
       background: none;
+
       // steppers
       .steppers-index {
         color: $neutral-1-a2;
+
         span {
           &.active {
             color: $analogue-2-a6;
           }
         }
       }
+
       // steps
       li {
         color: $neutral-1-a2;
+
         .icon {
           fill: $neutral-1-a2;
         }
+
         &.active {
           font-weight: 600;
           color: $analogue-2-a6;
+
           .icon {
             fill: $analogue-2-a6;
           }
         }
+
         &.confirmed {
           font-weight: 600;
           color: $white;
+
           .icon {
             fill: $white;
           }
         }
       }
     }
+
     .steppers-nav {
       background: none;
+
       .progress-bar {
         background: $analogue-2-a6;
       }
+
       .steppers-dots {
         li.done {
           background: $analogue-2-a6;
@@ -151,24 +182,29 @@
     background: $white;
     align-items: center;
     justify-content: space-between;
+
     .steppers-progress,
     .steppers-dots {
       width: 20%;
+
       .progress {
         height: 2px;
       }
     }
+
     .steppers-progress {
       .progress {
         height: 2px;
       }
     }
+
     .steppers-dots {
       padding: 0;
       margin: 0;
       display: flex;
       justify-content: center;
       align-items: center;
+
       li {
         list-style-type: none;
         padding: 0;
@@ -178,6 +214,7 @@
         background: $progress-bg;
         margin-right: 8px;
         border-radius: 50%;
+
         &.done {
           background: $progress-bar-bg;
         }
@@ -196,6 +233,7 @@
     }
   }
 }
+
 //Tablet horizontal / small desktop
 @include media-breakpoint-up(lg) {
   .steppers {
@@ -207,10 +245,12 @@
       display: flex;
       justify-content: space-between;
       background: transparent;
+
       // shadow
       &:before {
         display: none;
       }
+
       // steps
       li {
         padding: $stepper-spacing-v $stepper-spacing-h;
@@ -219,16 +259,20 @@
         position: relative;
         display: flex;
         align-items: center;
+
         &:nth-last-child(1) {
           border-right: 1px solid $gray-border;
         }
+
         // index
         &.steppers-index {
           display: none;
         }
+
         // active
         &.active {
           display: flex;
+
           &:after {
             content: '';
             position: absolute;
@@ -239,21 +283,25 @@
             left: 50%;
             transform: translateX(-50%);
           }
+
           .steppers-number {
             color: $white;
             background: $primary;
             border-color: $primary;
           }
+
           &.no-line {
             &:after {
               display: none;
             }
           }
         }
+
         // success icon
         .steppers-success {
           margin-left: auto;
         }
+
         // numbers
         .steppers-number {
           display: inline-block;
@@ -264,9 +312,11 @@
           text-align: center;
           margin-right: 0.667rem;
           flex-shrink: 0;
+
           &:after {
             display: none;
           }
+
           // numbers check
           .icon {
             &:before {
@@ -284,17 +334,20 @@
         // steps
         li {
           border-color: $neutral-1-a8;
+
           // active
           &.active {
             &:after {
               background: $analogue-2-a6;
             }
+
             .steppers-number {
               background: $analogue-2-a6;
               border-color: $analogue-2-a6;
               color: $neutral-1-a10;
             }
           }
+
           // numbers
           .steppers-number {
             border-color: $neutral-1-a6;
@@ -309,18 +362,22 @@
       margin-top: 0.889rem;
       align-items: center;
       background: none;
+
       .steppers-progress,
       .steppers-dots {
         display: none;
       }
+
       button {
         .icon {
           display: none;
         }
+
         &:not(.steppers-btn-confirm) {
           margin-right: 0.889rem;
         }
       }
+
       .steppers-btn-confirm {
         display: block;
         margin-left: auto;
@@ -330,7 +387,7 @@
 }
 
 //mobile ONLY BUTTONS
-@media (max-width: #{map-get($grid-breakpoints, lg) - 1px}) {
+@media (max-width: #{map.get($grid-breakpoints, lg) - 1px}) {
   .steppers {
     // navigation
     .steppers-nav {
@@ -341,6 +398,7 @@
         box-shadow: none;
         padding-left: 0;
         padding-right: 0;
+
         &:hover,
         &:focus,
         &:active {
@@ -348,6 +406,7 @@
           color: $primary !important;
           box-shadow: $btn-focus-box-shadow !important;
         }
+
         .icon {
           margin: 0 0.333rem;
           //font-size: 0.875rem;
@@ -363,9 +422,11 @@
       .steppers-nav {
         button:not(.steppers-btn-save):not(.steppers-btn-confirm) {
           color: $white;
+
           .icon {
             fill: $white;
           }
+
           &:hover,
           &:focus,
           &:active {

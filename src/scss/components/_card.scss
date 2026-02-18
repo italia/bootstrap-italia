@@ -1,3 +1,8 @@
+@use '../base/config' as *;
+@use '../base/variables' as *;
+@use '../base/mixins/breakpoints' as *;
+@use '../base/mixins/border-radius' as *;
+
 // Component: card
 //
 // Description: Component styles for card
@@ -66,6 +71,19 @@
     &.it-card-title-icon {
       display: flex;
       justify-content: space-between;
+
+      // Gap fallback
+      > * {
+        margin: 0.25rem;
+      }
+
+      @supports (gap: 0.5rem) {
+        gap: 0.5rem;
+
+        > * {
+          margin: 0;
+        }
+      }
 
       .it-card-title-icon-wrapper {
         margin-left: var(--#{$prefix}icon-spacing);
@@ -409,6 +427,9 @@
       flex-wrap: wrap-reverse;
       justify-content: space-between;
       align-items: center;
+      margin-top: calc(2 * var(--#{$prefix}card-title-spacer-y));
+      margin-bottom: var(--#{$prefix}card-title-spacer-y);
+      padding: 0 var(--#{$prefix}card-spacer-x);
 
       // Gap fallback
       > * {
@@ -422,10 +443,6 @@
           margin: 0;
         }
       }
-
-      margin-top: calc(2 * var(--#{$prefix}card-title-spacer-y));
-      margin-bottom: var(--#{$prefix}card-title-spacer-y);
-      padding: 0 var(--#{$prefix}card-spacer-x);
 
       .it-card-profile {
         flex: 1;

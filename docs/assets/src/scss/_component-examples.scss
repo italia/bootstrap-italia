@@ -1,8 +1,15 @@
 @use 'sass:color';
+@use 'src/scss/base/config' as *;
+@use 'src/scss/base/variables' as *;
+@use 'src/scss/base/mixins/container' as *;
+@use 'src/scss/base/mixins/grid' as *;
+@use 'src/scss/base/mixins/clearfix' as *;
+@use 'src/scss/base/mixins/breakpoints' as *;
 
 .bd-example-row {
   .row {
-    background-image: linear-gradient(45deg, $neutral-1-a2 25%, transparent 25%), linear-gradient(-45deg, $neutral-1-a2 25%, transparent 25%),
+    background-image:
+      linear-gradient(45deg, $neutral-1-a2 25%, transparent 25%), linear-gradient(-45deg, $neutral-1-a2 25%, transparent 25%),
       linear-gradient(45deg, transparent 75%, $neutral-1-a2 75%), linear-gradient(-45deg, transparent 75%, $neutral-1-a2 75%);
     background-size: 20px 20px;
     background-position:

@@ -1,3 +1,7 @@
+@use '../base/config' as *;
+@use '../base/variables' as *;
+@use '../base/mixins/breakpoints' as *;
+
 // Component: tab
 //
 // Description: Component styles for tab
@@ -35,6 +39,7 @@
 // Styles
 //
 
+/* stylelint-disable-next-line no-duplicate-selectors */
 .nav-tabs {
   position: relative;
   display: flex;

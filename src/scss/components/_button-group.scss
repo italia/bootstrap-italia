@@ -1,3 +1,8 @@
+@use '../base/config' as *;
+@use '../base/variables' as *;
+@use '../base/mixins/border-radius' as *;
+@use '../base/mixins/box-shadow' as *;
+
 // Component: button group
 //
 // Description: Component styles for button group

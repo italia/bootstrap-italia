@@ -1,3 +1,7 @@
+@use 'sass:list';
+@use '../base/config' as *;
+@use '../base/variables' as *;
+
 // primary color ---------------------------------
 .primary-bg {
   background-color: $primary !important;
@@ -30,8 +34,8 @@
 
 $colorlist: $primary-a1 $primary-a2 $primary-a3 $primary-a4 $primary-a5 $primary-a6 $primary-a7 $primary-a8 $primary-a9 $primary-a10 $primary-a11 $primary-a12;
 
-@for $i from 1 through length($colorlist) {
-  $color: nth($colorlist, $i);
+@for $i from 1 through list.length($colorlist) {
+  $color: list.nth($colorlist, $i);
   .primary-bg-a#{$i} {
     background-color: $color !important;
   }
@@ -48,8 +52,8 @@ $colorlist: $primary-a1 $primary-a2 $primary-a3 $primary-a4 $primary-a5 $primary
 // primary colors toni------------------
 $colorlist: $primary-b1 $primary-b2 $primary-b3 $primary-b4 $primary-b5 $primary-b6 $primary-b7 $primary-b8;
 
-@for $i from 1 through length($colorlist) {
-  $color: nth($colorlist, $i);
+@for $i from 1 through list.length($colorlist) {
+  $color: list.nth($colorlist, $i);
   .primary-bg-b#{$i} {
     background-color: $color !important;
   }
@@ -66,8 +70,8 @@ $colorlist: $primary-b1 $primary-b2 $primary-b3 $primary-b4 $primary-b5 $primary
 // primary colors saturazione------------------
 $colorlist: $primary-c1 $primary-c2 $primary-c3 $primary-c4 $primary-c5 $primary-c6 $primary-c7 $primary-c8 $primary-c9 $primary-c10 $primary-c11 $primary-c12;
 
-@for $i from 1 through length($colorlist) {
-  $color: nth($colorlist, $i);
+@for $i from 1 through list.length($colorlist) {
+  $color: list.nth($colorlist, $i);
   .primary-bg-c#{$i} {
     background-color: $color !important;
   }
@@ -99,8 +103,8 @@ $colorlist: $primary-c1 $primary-c2 $primary-c3 $primary-c4 $primary-c5 $primary
 $colorlist: $analogue-1-a1 $analogue-1-a2 $analogue-1-a3 $analogue-1-a4 $analogue-1-a5 $analogue-1-a6 $analogue-1-a7 $analogue-1-a8 $analogue-1-a9
   $analogue-1-a10 $analogue-1-a11 $analogue-1-a12;
 
-@for $i from 1 through length($colorlist) {
-  $color: nth($colorlist, $i);
+@for $i from 1 through list.length($colorlist) {
+  $color: list.nth($colorlist, $i);
   .analogue-1-bg-a#{$i} {
     background-color: $color !important;
   }
@@ -130,8 +134,8 @@ $colorlist: $analogue-1-a1 $analogue-1-a2 $analogue-1-a3 $analogue-1-a4 $analogu
 $colorlist: $analogue-2-a1 $analogue-2-a2 $analogue-2-a3 $analogue-2-a4 $analogue-2-a5 $analogue-2-a6 $analogue-2-a7 $analogue-2-a8 $analogue-2-a9
   $analogue-2-a10 $analogue-2-a11 $analogue-2-a12;
 
-@for $i from 1 through length($colorlist) {
-  $color: nth($colorlist, $i);
+@for $i from 1 through list.length($colorlist) {
+  $color: list.nth($colorlist, $i);
   .analogue-2-bg-a#{$i} {
     background-color: $color !important;
   }
@@ -162,8 +166,8 @@ $colorlist: $analogue-2-a1 $analogue-2-a2 $analogue-2-a3 $analogue-2-a4 $analogu
 $colorlist: $complementary-1-a1 $complementary-1-a2 $complementary-1-a3 $complementary-1-a4 $complementary-1-a5 $complementary-1-a6 $complementary-1-a7
   $complementary-1-a8 $complementary-1-a9 $complementary-1-a10 $complementary-1-a11 $complementary-1-a12;
 
-@for $i from 1 through length($colorlist) {
-  $color: nth($colorlist, $i);
+@for $i from 1 through list.length($colorlist) {
+  $color: list.nth($colorlist, $i);
   .complementary-1-bg-a#{$i} {
     background-color: $color !important;
   }
@@ -194,8 +198,8 @@ $colorlist: $complementary-1-a1 $complementary-1-a2 $complementary-1-a3 $complem
 $colorlist: $complementary-2-a1 $complementary-2-a2 $complementary-2-a3 $complementary-2-a4 $complementary-2-a5 $complementary-2-a6 $complementary-2-a7
   $complementary-2-a8 $complementary-2-a9 $complementary-2-a10 $complementary-2-a11 $complementary-2-a12;
 
-@for $i from 1 through length($colorlist) {
-  $color: nth($colorlist, $i);
+@for $i from 1 through list.length($colorlist) {
+  $color: list.nth($colorlist, $i);
   .complementary-2-bg-a#{$i} {
     background-color: $color !important;
   }
@@ -226,8 +230,8 @@ $colorlist: $complementary-2-a1 $complementary-2-a2 $complementary-2-a3 $complem
 $colorlist: $complementary-3-a1 $complementary-3-a2 $complementary-3-a3 $complementary-3-a4 $complementary-3-a5 $complementary-3-a6 $complementary-3-a7
   $complementary-3-a8 $complementary-3-a9 $complementary-3-a10 $complementary-3-a11 $complementary-3-a12;
 
-@for $i from 1 through length($colorlist) {
-  $color: nth($colorlist, $i);
+@for $i from 1 through list.length($colorlist) {
+  $color: list.nth($colorlist, $i);
   .complementary-3-bg-a#{$i} {
     background-color: $color !important;
   }
@@ -246,8 +250,8 @@ $colorlist: $complementary-3-a1 $complementary-3-a2 $complementary-3-a3 $complem
 // analog 1
 $colorlist: $analogue-1-b1 $analogue-1-b2 $analogue-1-b3 $analogue-1-b4 $analogue-1-b5 $analogue-1-b6 $analogue-1-b7 $analogue-1-b8;
 
-@for $i from 1 through length($colorlist) {
-  $color: nth($colorlist, $i);
+@for $i from 1 through list.length($colorlist) {
+  $color: list.nth($colorlist, $i);
   .analogue-1-bg-b#{$i} {
     background-color: $color !important;
   }
@@ -265,8 +269,8 @@ $colorlist: $analogue-1-b1 $analogue-1-b2 $analogue-1-b3 $analogue-1-b4 $analogu
 // analog 2
 $colorlist: $analogue-2-b1 $analogue-2-b2 $analogue-2-b3 $analogue-2-b4 $analogue-2-b5 $analogue-2-b6 $analogue-2-b7 $analogue-2-b8;
 
-@for $i from 1 through length($colorlist) {
-  $color: nth($colorlist, $i);
+@for $i from 1 through list.length($colorlist) {
+  $color: list.nth($colorlist, $i);
   .analogue-2-bg-b#{$i} {
     background-color: $color !important;
   }
@@ -285,8 +289,8 @@ $colorlist: $analogue-2-b1 $analogue-2-b2 $analogue-2-b3 $analogue-2-b4 $analogu
 $colorlist: $complementary-1-b1 $complementary-1-b2 $complementary-1-b3 $complementary-1-b4 $complementary-1-b5 $complementary-1-b6 $complementary-1-b7
   $complementary-1-b8;
 
-@for $i from 1 through length($colorlist) {
-  $color: nth($colorlist, $i);
+@for $i from 1 through list.length($colorlist) {
+  $color: list.nth($colorlist, $i);
   .complementary-1-bg-b#{$i} {
     background-color: $color !important;
   }
@@ -305,8 +309,8 @@ $colorlist: $complementary-1-b1 $complementary-1-b2 $complementary-1-b3 $complem
 $colorlist: $complementary-2-b1 $complementary-2-b2 $complementary-2-b3 $complementary-2-b4 $complementary-2-b5 $complementary-2-b6 $complementary-2-b7
   $complementary-2-b8;
 
-@for $i from 1 through length($colorlist) {
-  $color: nth($colorlist, $i);
+@for $i from 1 through list.length($colorlist) {
+  $color: list.nth($colorlist, $i);
   .complementary-2-bg-b#{$i} {
     background-color: $color !important;
   }
@@ -325,8 +329,8 @@ $colorlist: $complementary-2-b1 $complementary-2-b2 $complementary-2-b3 $complem
 $colorlist: $complementary-3-b1 $complementary-3-b2 $complementary-3-b3 $complementary-3-b4 $complementary-3-b5 $complementary-3-b6 $complementary-3-b7
   $complementary-3-b8;
 
-@for $i from 1 through length($colorlist) {
-  $color: nth($colorlist, $i);
+@for $i from 1 through list.length($colorlist) {
+  $color: list.nth($colorlist, $i);
   .complementary-3-bg-b#{$i} {
     background-color: $color !important;
   }
@@ -357,8 +361,8 @@ $colorlist: $complementary-3-b1 $complementary-3-b2 $complementary-3-b3 $complem
 
 $colorlist: $neutral-1-a1 $neutral-1-a2 $neutral-1-a3 $neutral-1-a4 $neutral-1-a5 $neutral-1-a6 $neutral-1-a7 $neutral-1-a8 $neutral-1-a9 $neutral-1-a10;
 
-@for $i from 1 through length($colorlist) {
-  $color: nth($colorlist, $i);
+@for $i from 1 through list.length($colorlist) {
+  $color: list.nth($colorlist, $i);
   .neutral-1-bg-a#{$i} {
     background-color: $color !important;
   }
@@ -386,8 +390,8 @@ $colorlist: $neutral-1-a1 $neutral-1-a2 $neutral-1-a3 $neutral-1-a4 $neutral-1-a
 
 $colorlist: $neutral-2-b1 $neutral-2-b2 $neutral-2-b3 $neutral-2-b4 $neutral-2-b5 $neutral-2-b6 $neutral-2-b7;
 
-@for $i from 1 through length($colorlist) {
-  $color: nth($colorlist, $i);
+@for $i from 1 through list.length($colorlist) {
+  $color: list.nth($colorlist, $i);
   .neutral-2-bg-b#{$i} {
     background-color: $color !important;
   }
@@ -404,8 +408,8 @@ $colorlist: $neutral-2-b1 $neutral-2-b2 $neutral-2-b3 $neutral-2-b4 $neutral-2-b
 
 $colorlist: $neutral-2-a1 $neutral-2-a2 $neutral-2-a3 $neutral-2-a4 $neutral-2-a5 $neutral-2-a6 $neutral-2-a7;
 
-@for $i from 1 through length($colorlist) {
-  $color: nth($colorlist, $i);
+@for $i from 1 through list.length($colorlist) {
+  $color: list.nth($colorlist, $i);
   .neutral-2-bg-a#{$i} {
     background-color: $color !important;
   }
@@ -423,8 +427,8 @@ $colorlist: $neutral-2-a1 $neutral-2-a2 $neutral-2-a3 $neutral-2-a4 $neutral-2-a
 // light greys a
 $colorlist: $lightgrey-a1 $lightgrey-a2 $lightgrey-a3 $lightgrey-a4;
 
-@for $i from 1 through length($colorlist) {
-  $color: nth($colorlist, $i);
+@for $i from 1 through list.length($colorlist) {
+  $color: list.nth($colorlist, $i);
   .lightgrey-bg-a#{$i} {
     background-color: $color !important;
   }
@@ -442,8 +446,8 @@ $colorlist: $lightgrey-a1 $lightgrey-a2 $lightgrey-a3 $lightgrey-a4;
 // light greys b
 $colorlist: $lightgrey-b1 $lightgrey-b2 $lightgrey-b3 $lightgrey-b4;
 
-@for $i from 1 through length($colorlist) {
-  $color: nth($colorlist, $i);
+@for $i from 1 through list.length($colorlist) {
+  $color: list.nth($colorlist, $i);
   .lightgrey-bg-b#{$i} {
     background-color: $color !important;
   }
@@ -461,8 +465,8 @@ $colorlist: $lightgrey-b1 $lightgrey-b2 $lightgrey-b3 $lightgrey-b4;
 // light greys c
 $colorlist: $lightgrey-c1 $lightgrey-c2;
 
-@for $i from 1 through length($colorlist) {
-  $color: nth($colorlist, $i);
+@for $i from 1 through list.length($colorlist) {
+  $color: list.nth($colorlist, $i);
   .lightgrey-bg-c#{$i} {
     background-color: $color !important;
   }

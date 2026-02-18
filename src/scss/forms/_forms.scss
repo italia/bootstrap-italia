@@ -1,3 +1,11 @@
+@use 'sass:math';
+@use '../base/config' as *;
+@use '../base/variables' as *;
+@use '../base/mixins/breakpoints' as *;
+@use '../base/mixins/gradients' as *;
+@use '../base/mixins/transition' as *;
+@use '../utilities/focus.scss' as *;
+
 // Form properties are :root scoped to allow for easy customization of form elements.
 :root {
   --#{$prefix}form-control-height: 2.5rem;
@@ -91,7 +99,11 @@ input {
   // https://github.com/twbs/bootstrap/issues/23307
   &::-webkit-date-and-time-value {
     // Multiply line-height by 1em if it has no unit
-    height: if(unit($input-line-height) == '', $input-line-height * 1em, $input-line-height);
+    @if math.unit($input-line-height) == '' {
+      height: $input-line-height * 1em;
+    } @else {
+      height: $input-line-height;
+    }
   }
 }
 

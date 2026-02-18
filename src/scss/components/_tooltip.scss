@@ -1,3 +1,12 @@
+@use '../base/config' as *;
+@use '../base/variables' as *;
+@use '../base/mixins/border-radius' as *;
+@use '../base/mixins/deprecate' as *;
+@use '../base/mixins/reset-text' as *;
+@use '../base/mixins/breakpoints' as *;
+@use '../base/vendor/rfs' as *;
+
+// Base class
 // Component: tooltip
 //
 // Description: Component styles for tooltip

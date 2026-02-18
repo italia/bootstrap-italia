@@ -1,3 +1,8 @@
+@use 'sass:color';
+@use '../base/config' as *;
+@use '../base/variables' as *;
+@use '../utilities/focus.scss' as *;
+
 .toggles,
 .toggles * {
   appearance: none;
@@ -24,12 +29,15 @@
     opacity: 0;
     width: 0;
     height: 0;
+
     &:focus + .lever {
       @extend %focus;
     }
+
     &:focus[data-focus-mouse='true'] + .lever {
       @extend %focusmouse;
     }
+
     & + .lever {
       content: '';
       position: relative;
@@ -57,7 +65,7 @@
       }
 
       &:before {
-        background-color: transparentize($primary, 0.85);
+        background-color: color.scale($primary, $alpha: -85%);
       }
 
       &:after {
@@ -91,6 +99,7 @@
     &[disabled] + .lever {
       cursor: default;
       background-color: #e6e9f2;
+
       &:after {
         background-color: #e6e9f2;
       }
