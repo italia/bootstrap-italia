@@ -164,7 +164,7 @@
       }
     }
     &:focus:not([data-focus-mouse='true']) {
-      box-shadow: inset 0 1px 0 2px var(--#{$prefix}color-outline-focus) !important;
+      box-shadow: inset 0 0 0 2px var(--#{$prefix}color-outline-focus) !important;
     }
 
     // Icon styles inside tab nav link
