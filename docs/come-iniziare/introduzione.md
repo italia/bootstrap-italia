@@ -95,7 +95,7 @@ Per importare solo i componenti necessari e ridurre le dimensioni del bundle fin
 
 Quando si importano i moduli selettivamente, è necessario usare `as *` per rendere disponibili variabili, funzioni e mixin nel contesto corrente. 
 
-**Alternative:** Puoi usare un namespace custom (ad esempio, `as bsi`) per maggiore chiarezza, o omettere `as` per usare il namespace completo `bootstrap-italia.*`. Per dettagli, consulta la [guida alla personalizzazione]({{ site.baseurl }}/docs/come-iniziare/personalizzazione-della-libreria/#scelta-del-namespace).
+**Alternative:** Puoi usare un namespace custom (ad esempio, `as bsi`) per maggiore chiarezza, o omettere `as` per usare il namespace completo `bootstrap-italia.*`. Per dettagli, consulta la [guida alla personalizzazione]({{ site.baseurl }}/docs/come-iniziare/personalizzazione-della-libreria/).
 {% endcapture %}{% include callout.html content=callout type="warning" %}
 
 #### Metodo legacy (deprecato)
