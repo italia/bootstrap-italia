@@ -58,8 +58,8 @@
   //   --#{$prefix}body-text-align: #{$body-text-align};
   // }
   // --#{$prefix}body-bg: #{$body-bg};
-  // XXX TO DO double check: these are currently still needed (ex. Card border color) 
-  // for mixins that reference them directly, or can they be replaced with the new 
+  // XXX TO DO double check: these are currently still needed (ex. Card border color)
+  // for mixins that reference them directly, or can they be replaced with the new
   // tokens structure?
   --#{$prefix}border-width: #{$border-width};
   --#{$prefix}border-style: #{$border-style};
