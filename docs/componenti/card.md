@@ -820,7 +820,7 @@ Negli esempi non abbiamo usato il `target` del link per favorire la normale navi
 
 #### Card per media video inline
 
-Per disporre disporre le card media di tipo video in orizzontale, usa la classe `.it-card-inline` e raccogli tutti i contenuti di testo e interattivi in un contenitore `.it-card-inline-content`. 
+Per disporre le card media di tipo video in orizzontale, usa la classe `.it-card-inline` e raccogli tutti i contenuti di testo e interattivi in un contenitore `.it-card-inline-content`. 
 
 Usa le stesse regole delle card inline standard per struttura e inversione dell'ordine.
 
