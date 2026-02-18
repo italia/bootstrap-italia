@@ -66,7 +66,7 @@
 //
 
 .form-control-sm {
-  --#{$prefix}form-control-spacing: var(--#{$prefix}spacing-xxs) var(--#{$prefix}spacing-3xs);
+  --#{$prefix}form-control-spacing: var(--#{$prefix}spacing-xxs) var(--#{$prefix}spacing-xxs);
   --#{$prefix}form-control-font-size: var(--#{$prefix}label-font-size);
 
   &::file-selector-button {
@@ -92,16 +92,16 @@
 
 textarea {
   &.form-control {
-    min-height: $input-height;
-    border: 1px solid $input-border;
+    min-height: 2.5rem;
+    border: 1px solid var(--#{$prefix}form-control-border-color);
   }
 
   &.form-control-sm {
-    min-height: $input-height-sm;
+    min-height: 2rem
   }
 
   &.form-control-lg {
-    min-height: $input-height-lg;
+    min-height: 3rem;
   }
 }
 // stylelint-enable selector-no-qualifying-type
