@@ -1,7 +1,6 @@
 @use 'sass:color';
 
 .bd-example-row {
-  .d-flex,
   .row {
     background-image:
       linear-gradient(45deg, $neutral-1-a2 25%, transparent 25%), linear-gradient(-45deg, $neutral-1-a2 25%, transparent 25%),
@@ -12,9 +11,6 @@
       0 10px,
       10px -10px,
       -10px 0px;
-  }
-
-  .row {
     > .col,
     > [class^='col-'] {
       padding-top: 0.75rem;
