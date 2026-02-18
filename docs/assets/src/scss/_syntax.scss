@@ -80,39 +80,39 @@
 
     /* Red - Variables, tags, names, selectors, deletion */
     :where(
-      .highlight .nv,
-      .highlight .vc,
-      .highlight .vg,
-      .highlight .vi,
-      .highlight .vm,
-      .highlight .nt,
-      .highlight .gh,
-      .highlight .gu,
-      .highlight .nl,
-      .highlight .ne,
-      .highlight .gd
-    ) {
+        .highlight .nv,
+        .highlight .vc,
+        .highlight .vg,
+        .highlight .vi,
+        .highlight .vm,
+        .highlight .nt,
+        .highlight .gh,
+        .highlight .gu,
+        .highlight .nl,
+        .highlight .ne,
+        .highlight .gd
+      ) {
       color: var(--bsi-syntax-red);
       font-weight: normal;
     }
 
     /* Orange - Numbers, built-ins, literals, types, params, meta */
     :where(
-      .highlight .m,
-      .highlight .mb,
-      .highlight .mf,
-      .highlight .mh,
-      .highlight .mi,
-      .highlight .il,
-      .highlight .mo,
-      .highlight .mx,
-      .highlight .nb,
-      .highlight .bp,
-      .highlight .kt,
-      .highlight .nc,
-      .highlight .no,
-      .highlight .ld
-    ) {
+        .highlight .m,
+        .highlight .mb,
+        .highlight .mf,
+        .highlight .mh,
+        .highlight .mi,
+        .highlight .il,
+        .highlight .mo,
+        .highlight .mx,
+        .highlight .nb,
+        .highlight .bp,
+        .highlight .kt,
+        .highlight .nc,
+        .highlight .no,
+        .highlight .ld
+      ) {
       color: var(--bsi-syntax-orange);
       font-weight: normal;
     }
@@ -125,19 +125,19 @@
 
     /* Green - Strings, symbols, bullets, additions */
     :where(
-      .highlight .s,
-      .highlight .sb,
-      .highlight .dl,
-      .highlight .sd,
-      .highlight .s2,
-      .highlight .sh,
-      .highlight .sx,
-      .highlight .sr,
-      .highlight .s1,
-      .highlight .ss,
-      .highlight .sa,
-      .highlight .gi
-    ) {
+        .highlight .s,
+        .highlight .sb,
+        .highlight .dl,
+        .highlight .sd,
+        .highlight .s2,
+        .highlight .sh,
+        .highlight .sx,
+        .highlight .sr,
+        .highlight .s1,
+        .highlight .ss,
+        .highlight .sa,
+        .highlight .gi
+      ) {
       color: var(--bsi-syntax-green);
       font-weight: normal;
     }
