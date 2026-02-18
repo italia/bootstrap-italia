@@ -52,54 +52,54 @@
 // Tabs
 //
 
-.nav-tabs {
-  // scss-docs-start nav-tabs-css-vars
-  --#{$prefix}nav-tabs-border-color: #{$nav-tabs-border-color};
-  --#{$prefix}nav-tabs-border-radius: #{$nav-tabs-border-radius};
-  --#{$prefix}nav-tabs-border-width: #{$nav-tabs-border-width};
-  --#{$prefix}nav-tabs-link-active-bg: #{$nav-tabs-link-active-bg};
-  --#{$prefix}nav-tabs-link-active-color: #{$nav-tabs-link-active-color};
-  --#{$prefix}nav-tabs-link-active-border-color: #{$nav-tabs-link-active-border-color};
-  --#{$prefix}nav-tabs-link-hover-border-color: #{$nav-tabs-link-hover-border-color};
-  // scss-docs-end nav-tabs-css-vars
+// .nav-tabs {
+//   // scss-docs-start nav-tabs-css-vars
+//   --#{$prefix}nav-tabs-border-color: #{$nav-tabs-border-color};
+//   --#{$prefix}nav-tabs-border-radius: #{$nav-tabs-border-radius};
+//   --#{$prefix}nav-tabs-border-width: #{$nav-tabs-border-width};
+//   --#{$prefix}nav-tabs-link-active-bg: #{$nav-tabs-link-active-bg};
+//   --#{$prefix}nav-tabs-link-active-color: #{$nav-tabs-link-active-color};
+//   --#{$prefix}nav-tabs-link-active-border-color: #{$nav-tabs-link-active-border-color};
+//   --#{$prefix}nav-tabs-link-hover-border-color: #{$nav-tabs-link-hover-border-color};
+//   // scss-docs-end nav-tabs-css-vars
 
-  border-bottom: var(--#{$prefix}nav-tabs-border-width) solid var(--#{$prefix}nav-tabs-border-color);
+//   border-bottom: var(--#{$prefix}nav-tabs-border-width) solid var(--#{$prefix}nav-tabs-border-color);
 
-  .nav-link {
-    margin-bottom: calc(-1 * var(--#{$prefix}nav-tabs-border-width)); // stylelint-disable-line function-disallowed-list
-    border: var(--#{$prefix}nav-tabs-border-width) solid transparent;
-    background: none;
-    @include border-top-radius(var(--#{$prefix}nav-tabs-border-radius));
+//   .nav-link {
+//     margin-bottom: calc(-1 * var(--#{$prefix}nav-tabs-border-width)); // stylelint-disable-line function-disallowed-list
+//     border: var(--#{$prefix}nav-tabs-border-width) solid transparent;
+//     background: none;
+//     @include border-top-radius(var(--#{$prefix}nav-tabs-border-radius));
 
-    &:hover,
-    &:focus {
-      border-color: var(--#{$prefix}nav-tabs-link-hover-border-color);
-      // Prevents active .nav-link tab overlapping focus outline of previous/next .nav-link
-      isolation: isolate;
-    }
+//     &:hover,
+//     &:focus {
+//       border-color: var(--#{$prefix}nav-tabs-link-hover-border-color);
+//       // Prevents active .nav-link tab overlapping focus outline of previous/next .nav-link
+//       isolation: isolate;
+//     }
 
-    &.disabled,
-    &:disabled {
-      border-color: transparent;
-      background-color: transparent;
-      color: var(--#{$prefix}nav-link-disabled-color);
-    }
-  }
+//     &.disabled,
+//     &:disabled {
+//       border-color: transparent;
+//       background-color: transparent;
+//       color: var(--#{$prefix}nav-link-disabled-color);
+//     }
+//   }
 
-  .nav-link.active,
-  .nav-item.show .nav-link {
-    border-color: var(--#{$prefix}nav-tabs-link-active-border-color);
-    background-color: var(--#{$prefix}nav-tabs-link-active-bg);
-    color: var(--#{$prefix}nav-tabs-link-active-color);
-  }
+//   .nav-link.active,
+//   .nav-item.show .nav-link {
+//     border-color: var(--#{$prefix}nav-tabs-link-active-border-color);
+//     background-color: var(--#{$prefix}nav-tabs-link-active-bg);
+//     color: var(--#{$prefix}nav-tabs-link-active-color);
+//   }
 
-  .dropdown-menu {
-    // Make dropdown border overlap tab border
-    margin-top: calc(-1 * var(--#{$prefix}nav-tabs-border-width)); // stylelint-disable-line function-disallowed-list
-    // Remove the top rounded corners here since there is a hard edge above the menu
-    @include border-top-radius(0);
-  }
-}
+//   .dropdown-menu {
+//     // Make dropdown border overlap tab border
+//     margin-top: calc(-1 * var(--#{$prefix}nav-tabs-border-width)); // stylelint-disable-line function-disallowed-list
+//     // Remove the top rounded corners here since there is a hard edge above the menu
+//     @include border-top-radius(0);
+//   }
+// }
 
 //
 // Pills
