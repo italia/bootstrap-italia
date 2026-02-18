@@ -7,7 +7,6 @@ import legacy from '@rollup/plugin-legacy'
 import nodeResolve from '@rollup/plugin-node-resolve'
 import injectProcessEnv from 'rollup-plugin-inject-process-env'
 import commonjs from 'rollup-plugin-commonjs'
-import { writeFileSync } from 'fs'
 
 export default [
   // Bundle version
@@ -37,9 +36,7 @@ export default [
       }),
       sass({
         api: 'modern',
-        output(styles, styleNodes) {
-          writeFileSync('dist/css/bootstrap-italia.min.css', styles)
-        },
+        output: 'dist/css/bootstrap-italia.min.css',
         options: {
           style: 'compressed',
           sourceMap: true,
@@ -101,9 +98,7 @@ export default [
       }),
       sass({
         api: 'modern',
-        output(styles, styleNodes) {
-          writeFileSync('dist/css/bootstrap-italia.min.css', styles)
-        },
+        output: 'dist/css/bootstrap-italia.min.css',
         options: {
           style: 'compressed',
           sourceMap: true,
@@ -163,9 +158,7 @@ export default [
       }),
       sass({
         api: 'modern',
-        output(styles, styleNodes) {
-          writeFileSync('docs/assets/dist/css/docs.min.css', styles)
-        },
+        output: 'docs/assets/dist/css/docs.min.css',
         options: {
           style: 'compressed',
           loadPaths: ['node_modules'],
