@@ -129,7 +129,7 @@
 }
 
 .sidebar-wrapper.theme-dark {
-  --#{$prefix}sidebar-background-color: var(--#{$prefix}color-background-secondary);
+  --#{$prefix}sidebar-background-color: var(--#{$prefix}color-background-secondary-deep);
   --#{$prefix}sidebar-divider-color: var(--#{$prefix}color-border-subtle);
   --#{$prefix}sidebar-heading-color: var(--#{$prefix}color-text-inverse);
   --#{$prefix}sidebar-link-active-border-color: var(--#{$prefix}color-border-inverse);

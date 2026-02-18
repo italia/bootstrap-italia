@@ -165,6 +165,7 @@
   --#{$prefix}radius-rounded: #{tokens.$it-radius-rounded};
   --#{$prefix}radius-circle: #{tokens.$it-radius-circle};
   --#{$prefix}radius-smooth: #{tokens.$it-radius-smooth};
+  --#{$prefix}border-style: solid;
 
   // Sizing
   --#{$prefix}sizing-full: #{tokens.$it-sizing-full};
@@ -260,6 +261,7 @@
   --#{$prefix}color-background-secondary-active: #{tokens.$it-color-background-secondary-active};
   --#{$prefix}color-background-secondary-hover: #{tokens.$it-color-background-secondary-hover};
   --#{$prefix}color-background-secondary: #{tokens.$it-color-background-secondary};
+  --#{$prefix}color-background-secondary-deep: #{tokens.$it-color-slate-20};
   --#{$prefix}overlay-background-light: hsla(0, 0%, 0%, 0.5);
   --#{$prefix}overlay-background-primary: hsla(210, 100%, 40%, 0.8);
   --#{$prefix}overlay-background-primary-muted: hsla(210, 54%, 20%, 0.8);
@@ -276,9 +278,6 @@
   --#{$prefix}color-status-success: #{tokens.$it-color-background-success};
   --#{$prefix}color-status-success-hover: #{tokens.$it-color-background-success-hover};
   --#{$prefix}color-status-success-active: #{tokens.$it-color-background-success-active};
-  // --#{$prefix}color-status-info: #{tokens.$it-color-background-info}; // < XXX TODO: Currently not present in Design Tokens Italia
-  // --#{$prefix}color-status-info-hover: #{tokens.$it-color-background-info-hover}; // < XXX TODO: Currently not present in Design Tokens Italia
-  // --#{$prefix}color-status-info-active: #{tokens.$it-color-background-info-active}; // < XXX TODO: Currently not present in Design Tokens Italia
   --#{$prefix}color-status-warning: #{tokens.$it-color-background-warning};
   --#{$prefix}color-status-warning-hover: #{tokens.$it-color-background-warning-hover};
   --#{$prefix}color-status-warning-active: #{tokens.$it-color-background-warning-active};
