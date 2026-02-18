@@ -1,12 +1,13 @@
 import { babel } from '@rollup/plugin-babel'
 import copy from 'rollup-plugin-copy'
 import svgSprite from 'rollup-plugin-svg-sprite-deterministic'
-import scss from 'rollup-plugin-scss'
+import sass from 'rollup-plugin-sass'
 import terser from '@rollup/plugin-terser';
 import legacy from '@rollup/plugin-legacy'
 import nodeResolve from '@rollup/plugin-node-resolve'
 import injectProcessEnv from 'rollup-plugin-inject-process-env'
 import commonjs from 'rollup-plugin-commonjs'
+import { writeFileSync } from 'fs'
 
 export default [
   // Bundle version
@@ -34,11 +35,16 @@ export default [
       svgSprite({
         outputFolder: 'dist/svg',
       }),
-      scss({
-        output: 'dist/css/bootstrap-italia.min.css',
-        outputStyle: 'compressed',
-        sourceMap: true,
-        watch: 'src/scss',
+      sass({
+        api: 'modern',
+        output(styles, styleNodes) {
+          writeFileSync('dist/css/bootstrap-italia.min.css', styles)
+        },
+        options: {
+          style: 'compressed',
+          sourceMap: true,
+          loadPaths: ['node_modules'],
+        },
       }),
       // Ensure dist output is also copied into _site for local preview (after bundle is written)
       copy({
@@ -93,11 +99,16 @@ export default [
       svgSprite({
         outputFolder: 'dist/svg',
       }),
-      scss({
-        output: 'dist/css/bootstrap-italia.min.css',
-        outputStyle: 'compressed',
-        sourceMap: true,
-        watch: 'src/scss',
+      sass({
+        api: 'modern',
+        output(styles, styleNodes) {
+          writeFileSync('dist/css/bootstrap-italia.min.css', styles)
+        },
+        options: {
+          style: 'compressed',
+          sourceMap: true,
+          loadPaths: ['node_modules'],
+        },
       }),
       // Ensure dist output is also copied into _site for local preview (after bundle is written)
       copy({
@@ -150,10 +161,15 @@ export default [
           initCoverAnimation: 'animation.initCoverAnimation',
         },
       }),
-      scss({
-        output: 'docs/assets/dist/css/docs.min.css',
-        outputStyle: 'compressed',
-        watch: 'docs/assets/src/scss',
+      sass({
+        api: 'modern',
+        output(styles, styleNodes) {
+          writeFileSync('docs/assets/dist/css/docs.min.css', styles)
+        },
+        options: {
+          style: 'compressed',
+          loadPaths: ['node_modules'],
+        },
       }),
       // copy docs css into _site docs assets for preview
       copy({
