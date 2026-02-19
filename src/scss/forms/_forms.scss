@@ -326,6 +326,12 @@ input::-webkit-datetime-edit {
     &:focus[data-focus-mouse='true'] + label {
       @extend %focusmouse;
     }
+
+    .form-text {
+      display: block;
+      margin-bottom: 0.5rem;
+      padding-right: 3.25rem;
+    }
   }
 
   input[type='checkbox'] {
@@ -497,12 +503,6 @@ input::-webkit-datetime-edit {
 
     input[type='radio']:checked + label::before {
       right: 0;
-    }
-
-    .form-text {
-      display: block;
-      margin-bottom: 0.5rem;
-      padding-right: 3.25rem;
     }
 
     input.semi-checked:not(:checked) + label::before {
