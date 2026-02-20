@@ -9,6 +9,16 @@
 // Properties
 //
 
+.progress-spinner {
+  --#{$prefix}progress-spinner-bg: var(--#{$prefix}color-border-secondary);
+  --#{$prefix}progress-spinner-size: 48px;
+  --#{$prefix}progress-spinner-size-sm: 32px;
+  --#{$prefix}progress-spinner-size-lg: 64px;
+  --#{$prefix}progress-spinner-size-xl: 80px;
+  --#{$prefix}progress-spinner-border-width: 4px;
+  --#{$prefix}progress-spinner-animation-duration: 0.75s;
+}
+
 // Styles
 //
 
@@ -44,11 +54,12 @@
 
 //standard spinner
 .progress-spinner {
+  @extend %progress;
   display: block;
-  width: $v-gap * 6;
-  height: $v-gap * 6;
+  width: var(--#{$prefix}progress-spinner-size);
+  height: var(--#{$prefix}progress-spinner-size);
   border-radius: 50%;
-  border: 4px solid $color-background-secondary-lighter; // UI Kit
+  border: var(--#{$prefix}progress-spinner-border-width) solid var(--#{$prefix}progress-bg);
   //spinner active state
   &.progress-spinner-active {
     animation: spinnerAnim 0.75s linear infinite;
@@ -56,24 +67,24 @@
   //standard spinner active state
   &.progress-spinner-active:not(.progress-spinner-double) {
     border-color: $secondary;
-    border-bottom-color: $color-background-secondary-lighter;
+    border-bottom-color: var(--#{$prefix}progress-bg);
   }
   //small size
   &.size-sm {
-    width: $v-gap * 4;
-    height: $v-gap * 4;
+    width: var(--#{$prefix}progress-spinner-size-sm);
+    height: var(--#{$prefix}progress-spinner-size-sm);
   }
 
   //large size
   &.size-lg {
-    width: $v-gap * 8;
-    height: $v-gap * 8;
+    width: var(--#{$prefix}progress-spinner-size-lg);
+    height: var(--#{$prefix}progress-spinner-size-lg);
   }
 
   //extra-large size
   &.size-xl {
-    width: $v-gap * 10;
-    height: $v-gap * 10;
+    width: var(--#{$prefix}progress-spinner-size-xl);
+    height: var(--#{$prefix}progress-spinner-size-xl);
   }
 
   //double spinner
@@ -83,32 +94,32 @@
 
     //small size
     &.size-sm {
-      width: $v-gap * 4;
-      height: $v-gap * 4;
+      width: var(--#{$prefix}progress-spinner-size-sm);
+      height: var(--#{$prefix}progress-spinner-size-sm);
       //double spinner inner
       .progress-spinner-inner {
-        width: $v-gap * 4;
-        height: $v-gap * 2;
+        width: var(--#{$prefix}progress-spinner-size-sm);
+        height: calc(var(--#{$prefix}progress-spinner-size-sm) / 2);
       }
     }
 
     &.size-lg {
-      width: $v-gap * 8;
-      height: $v-gap * 8;
+      width: var(--#{$prefix}progress-spinner-size-lg);
+      height: var(--#{$prefix}progress-spinner-size-lg);
       //double spinner inner
       .progress-spinner-inner {
-        width: $v-gap * 8;
-        height: $v-gap * 4;
+        width: var(--#{$prefix}progress-spinner-size-lg);
+        height: calc(var(--#{$prefix}progress-spinner-size-lg) / 2);
       }
     }
 
     &.size-xl {
-      width: $v-gap * 10;
-      height: $v-gap * 10;
+      width: var(--#{$prefix}progress-spinner-size-xl);
+      height: var(--#{$prefix}progress-spinner-size-xl);
       //double spinner inner
       .progress-spinner-inner {
-        width: $v-gap * 10;
-        height: $v-gap * 5;
+        width: var(--#{$prefix}progress-spinner-size-xl);
+        height: calc(var(--#{$prefix}progress-spinner-size-xl) / 2);
       }
     }
 
@@ -120,14 +131,15 @@
     }
     //double spinner inner
     .progress-spinner-inner {
-      width: $v-gap * 6;
-      height: $v-gap * 3;
+      
+      width: var(--#{$prefix}progress-spinner-size);
+      height: calc(var(--#{$prefix}progress-spinner-size) / 2);
       overflow: hidden;
-      margin-left: -$v-gap * 0.5;
+      margin-left: calc(var(--#{$prefix}progress-spinner-border-width) * -1);
       opacity: 0;
       transition: opacity 0.3s;
       &:nth-child(1) {
-        margin-top: -$v-gap * 0.5;
+        margin-top: calc(var(--#{$prefix}progress-spinner-border-width) * -1);
       }
       &:nth-child(2) {
         transform: rotate(180deg);
@@ -140,9 +152,9 @@
         display: inline-block;
         transform: rotate(45deg);
         border-radius: 50%;
-        border: 4px solid $secondary;
-        border-right: 4px solid transparent;
-        border-bottom: 4px solid transparent;
+        border: 4px solid var(--#{$prefix}color-border-secondary);
+        border-right: var(--#{$prefix}progress-spinner-border-width) solid transparent;
+        border-bottom: var(--#{$prefix}progress-spinner-border-width) solid transparent;
         width: 100%;
         height: 200%;
         animation: spinnerAnimInner1 0.75s cubic-bezier(0.25, 0.1, 0.5, 1) infinite alternate;
