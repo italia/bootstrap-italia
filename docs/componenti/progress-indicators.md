@@ -184,20 +184,20 @@ Quando non è possibile stabilire una percentuale di progressione utilizzare una
 
 ### Colori
 
-Per variare il colore della barra è sufficiente aggiungere la classe `.progress-color` al `<div>` contenitore ed applicare una delle classi contenute nelle <a href="{{ site.baseurl }}/docs/utilities/colori/#colore-di-sfondo">Utility colori</a> alla Progress Bar.
+Per variare il colore della barra è sufficiente aggiungere una delle classi contenute nelle <a href="{{ site.baseurl }}/docs/utilities/colori/#colore-di-sfondo">Utility colori</a> alla Progress Bar.
 
 {% comment %}Example name: Barra di progresso, varianti di colore{% endcomment %}
 {% capture example %}
-<div class="progress progress-color">
+<div class="progress">
   <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
-<div class="progress progress-color">
+<div class="progress">
   <div class="progress-bar bg-info" role="progressbar" style="width: 33%" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
-<div class="progress progress-color">
+<div class="progress">
   <div class="progress-bar bg-warning" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
-<div class="progress progress-color">
+<div class="progress">
   <div class="progress-bar bg-danger" role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 {% endcapture %}{% include example.html content=example %}
