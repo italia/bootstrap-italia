@@ -1,6 +1,7 @@
-## [2.17.4](https://github.com/italia/bootstrap-italia/compare/v2.17.3...v2.17.4) (2026-02-17)
+## [2.17.5](https://github.com/italia/bootstrap-italia/compare/v2.17.4...v2.17.5) (2026-02-24)
 
 ### Bug Fixes
 
-* hero small height [#1505](https://github.com/italia/bootstrap-italia/issues/1505) [#1656](https://github.com/italia/bootstrap-italia/issues/1656) ([30f27ba](https://github.com/italia/bootstrap-italia/commit/30f27ba28ae06d6c5eb231b37b2808d8efb3507d))
-* typo liste.md ([dd07e68](https://github.com/italia/bootstrap-italia/commit/dd07e68f71817a98b8d38b9fdec78436366ec6b1))
+* **docs:** image background on `d-flex` component viewer ([ad5eacb](https://github.com/italia/bootstrap-italia/commit/ad5eacbb903ec0ac2cfaf81e6444ec1afc19c40b))
+* **docs:** typo ([e78b675](https://github.com/italia/bootstrap-italia/commit/e78b6755af862a421e168a39857937b48daf8a18))
+* icon paths in card examples ([e62ee01](https://github.com/italia/bootstrap-italia/commit/e62ee01b434d5e97b70b0d9712e7618beacdd2b9))
