@@ -41,9 +41,7 @@
   //   --#{$prefix}body-text-align: #{$body-text-align};
   // }
   // --#{$prefix}body-bg: #{$body-bg};
-  // --#{$prefix}border-width: #{$border-width};
-  // --#{$prefix}border-style: #{$border-style};
-  // --#{$prefix}border-color: #{$border-color};
+
   // --#{$prefix}border-color-translucent: #{$border-color-translucent};
   // --#{$prefix}border-radius: #{$border-radius};
   // --#{$prefix}border-radius-sm: #{$border-radius-sm};
@@ -53,6 +51,11 @@
   // --#{$prefix}border-radius-pill: #{$border-radius-pill};
 
   // ----------------------------------------------------------- //
+
+  // Utilities
+  --#{$prefix}border-width: 1px;
+  --#{$prefix}border-style: solid;
+  --#{$prefix}border-color: var(--#{$prefix}color-border-subtle);
 
   // Theme colors
   --#{$prefix}theme-primary: var(--it-theme-italia-base); // Theme base color
