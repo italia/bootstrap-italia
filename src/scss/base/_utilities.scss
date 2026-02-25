@@ -107,14 +107,14 @@ $utilities: map-merge(
       (
         property: border,
         values: (
-          null: var(--#{$prefix}border-base) var(--#{$prefix}border-style) var(--#{$prefix}color-border-subtle),
+          null: var(--#{$prefix}border-base) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
           0: 0,
         ),
       ),
     'border-top': (
       property: border-top,
       values: (
-        null: var(--#{$prefix}border-base) var(--#{$prefix}border-style) var(--#{$prefix}color-border-subtle),
+        null: var(--#{$prefix}border-base) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
         0: 0,
       ),
     ),
@@ -122,14 +122,14 @@ $utilities: map-merge(
       property: border-right,
       class: border-end,
       values: (
-        null: var(--#{$prefix}border-base) var(--#{$prefix}border-style) var(--#{$prefix}color-border-subtle),
+        null: var(--#{$prefix}border-base) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
         0: 0,
       ),
     ),
     'border-bottom': (
       property: border-bottom,
       values: (
-        null: var(--#{$prefix}border-base) var(--#{$prefix}border-style) var(--#{$prefix}color-border-subtle),
+        null: var(--#{$prefix}border-base) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
         0: 0,
       ),
     ),
@@ -137,12 +137,14 @@ $utilities: map-merge(
       property: border-left,
       class: border-start,
       values: (
-        null: var(--#{$prefix}border-base) var(--#{$prefix}border-style) var(--#{$prefix}color-border-subtle),
+        null: var(--#{$prefix}border-base) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
         0: 0,
       ),
     ),
     'border-color': (
       property: border-color,
+      css-var: true,
+      css-variable-name: border-color,
       class: border,
       local-vars: (
         'border-opacity': 1,
