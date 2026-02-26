@@ -38,6 +38,10 @@
       --#{$prefix}dropdown-padding-x: var(--#{$prefix}spacing-xs);
     }
   }
+}
+
+.megamenu,
+.megamenu-content {
   .link-list-wrapper {
     margin-bottom: 0;
     padding: 0;
@@ -139,7 +143,8 @@
   }
 
   // Megamenu column styles
-  .navbar .navbar-collapsable .menu-wrapper .nav-item.megamenu .dropdown-menu {
+  .megamenu,
+  .megamenu-content {
     .col-12:last-child {
       padding-bottom: 0;
     }
