@@ -53,6 +53,7 @@
 }
 
 //standard spinner
+/* stylelint-disable-next-line no-duplicate-selectors */
 .progress-spinner {
   @extend %progress;
   display: block;
@@ -131,7 +132,6 @@
     }
     //double spinner inner
     .progress-spinner-inner {
-      
       width: var(--#{$prefix}progress-spinner-size);
       height: calc(var(--#{$prefix}progress-spinner-size) / 2);
       overflow: hidden;
