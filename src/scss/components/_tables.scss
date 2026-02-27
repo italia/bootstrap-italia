@@ -9,6 +9,18 @@
 // Properties
 //
 
+%table {
+  --#{$prefix}table-color: var(--#{$prefix}color-text-base); // Controls the text color for the table, using color tokens.
+  --#{$prefix}table-bg: transparent; // Controls the background color for the table, using color tokens.
+  --#{$prefix}table-border-color: var(--#{$prefix}border-color); // Controls the border color for the table, using color tokens.
+  --#{$prefix}table-border-width: var(--#{$prefix}border-width); // Controls the border width for the table cell.
+  --#{$prefix}table-striped-color: #{$table-striped-color};
+  --#{$prefix}table-active-color: #{$table-active-color};
+  --#{$prefix}table-active-bg: #{$table-active-bg};
+  --#{$prefix}table-hover-color: #{$table-hover-color};
+  --#{$prefix}table-hover-bg: #{$table-hover-bg};
+}
+
 // Styles
 //
 
@@ -17,30 +29,20 @@
 //
 
 .table {
-  --#{$prefix}table-color: var(--#{$prefix}color-text-base); // Controls the text color for the table, using color tokens.
-  --#{$prefix}table-bg: transparent; // Controls the background color for the table, using color tokens.
-  --#{$prefix}table-border-color: var(--#{$prefix}color-border-subtle); // Controls the border color for the table, using color tokens.
-  // --#{$prefix}table-accent-bg: #{$table-accent-bg};
-  --#{$prefix}table-striped-color: #{$table-striped-color};
-  --#{$prefix}table-striped-bg: #{$table-striped-bg};
-  --#{$prefix}table-active-color: #{$table-active-color};
-  --#{$prefix}table-active-bg: #{$table-active-bg};
-  --#{$prefix}table-hover-color: #{$table-hover-color};
-  --#{$prefix}table-hover-bg: #{$table-hover-bg};
-
+  @extend %table;
   width: 100%;
   margin-bottom: $spacer;
   border-color: var(--#{$prefix}table-border-color);
   color: var(--#{$prefix}table-color);
   vertical-align: $table-cell-vertical-align;
-
   @include media-breakpoint-up(lg) {
     font-size: 1.125rem;
   }
+
   //table styles go here
   .table-dark {
     a {
-      color: $white;
+      color: var(--#{$prefix}color-text-inverse);
     }
   }
 
@@ -89,6 +91,8 @@
   }
 }
 
+
+
 // Border versions
 //
 // Add or remove borders all around the table and between all the columns.
@@ -127,15 +131,21 @@
 // For rows
 .table-striped {
   > tbody > tr:nth-of-type(#{$table-striped-order}) > * {
-    --#{$prefix}table-accent-bg: var(--#{$prefix}table-striped-bg);
+    --#{$prefix}table-bg: var(--#{$prefix}table-striped-bg, var(--#{$prefix}color-background-muted));
     color: var(--#{$prefix}table-striped-color);
+  }
+
+  &.table-dark {
+    > tbody > tr:nth-of-type(#{$table-striped-order}) > * {
+      --#{$prefix}table-bg: var(--#{$prefix}color-background-primary-muted);
+    }
   }
 }
 
 // For columns
 .table-striped-columns {
   > :not(caption) > tr > :nth-child(#{$table-striped-columns-order}) {
-    --#{$prefix}table-accent-bg: var(--#{$prefix}table-striped-bg);
+    --#{$prefix}table-bg: var(--#{$prefix}table-striped-bg, var(--#{$prefix}color-background-muted));
     color: var(--#{$prefix}table-striped-color);
   }
 }
@@ -165,8 +175,100 @@
 // Table variants set the table cell backgrounds, border colors
 // and the colors of the striped, hovered & active tables
 
-@each $color, $value in $table-variants {
-  @include table-variant($color, $value);
+.table-primary {
+  --#{$prefix}table-bg: var(--#{$prefix}color-background-primary-lighter);
+  --#{$prefix}table-color: var(--#{$prefix}color-text-inverse);
+  --#{$prefix}table-border-color: var(--#{$prefix}color-border-primary);
+  --#{$prefix}table-striped-bg: var(--#{$prefix}color-background-primary-muted);
+  --#{$prefix}table-striped-color: var(--#{$prefix}color-text-inverse);
+  --#{$prefix}table-hover-bg: var(--#{$prefix}color-background-primary-hover);
+  --#{$prefix}table-hover-color: var(--#{$prefix}color-text-inverse);
+  --#{$prefix}table-active-bg: var(--#{$prefix}color-background-primary-active);
+  --#{$prefix}table-active-color: var(--#{$prefix}color-text-inverse);
+}
+
+.table-secondary {
+  --#{$prefix}table-bg: var(--#{$prefix}color-background-secondary-lighter);
+  --#{$prefix}table-color: var(--#{$prefix}color-text-primary);
+  --#{$prefix}table-border-color: var(--#{$prefix}color-border-secondary);
+  --#{$prefix}table-striped-bg: var(--#{$prefix}color-background-secondary-lighter);
+  --#{$prefix}table-striped-color: var(--#{$prefix}color-text-primary);
+  --#{$prefix}table-hover-bg: var(--#{$prefix}color-background-secondary-hover);
+  --#{$prefix}table-hover-color: var(--#{$prefix}color-text-primary);
+  --#{$prefix}table-active-bg: var(--#{$prefix}color-background-secondary-active);
+  --#{$prefix}table-active-color: var(--#{$prefix}color-text-primary);
+}
+
+.table-success {
+  --#{$prefix}table-bg: var(--#{$prefix}color-background-success);
+  --#{$prefix}table-color: var(--#{$prefix}color-text-inverse);
+  --#{$prefix}table-border-color: var(--#{$prefix}color-border-success);
+  --#{$prefix}table-striped-bg: var(--#{$prefix}color-background-success-light);
+  --#{$prefix}table-striped-color: var(--#{$prefix}color-text-success);
+  --#{$prefix}table-hover-bg: var(--#{$prefix}color-background-success-hover);
+  --#{$prefix}table-hover-color: var(--#{$prefix}color-text-inverse);
+  --#{$prefix}table-active-bg: var(--#{$prefix}color-background-success-active);
+  --#{$prefix}table-active-color: var(--#{$prefix}color-text-inverse);
+}
+
+.table-info {
+  --#{$prefix}table-bg: var(--#{$prefix}color-background-secondary-lighter);
+  --#{$prefix}table-color: var(--#{$prefix}color-text-primary);
+  --#{$prefix}table-border-color: var(--#{$prefix}color-border-secondary);
+  --#{$prefix}table-striped-bg: var(--#{$prefix}color-background-secondary-lighter);
+  --#{$prefix}table-striped-color: var(--#{$prefix}color-text-primary);
+  --#{$prefix}table-hover-bg: var(--#{$prefix}color-background-secondary-hover);
+  --#{$prefix}table-hover-color: var(--#{$prefix}color-text-primary);
+  --#{$prefix}table-active-bg: var(--#{$prefix}color-background-secondary-active);
+  --#{$prefix}table-active-color: var(--#{$prefix}color-text-primary);
+}
+
+.table-warning {
+  --#{$prefix}table-bg: var(--#{$prefix}color-background-warning);
+  --#{$prefix}table-color: var(--#{$prefix}color-text-warning);
+  --#{$prefix}table-border-color: var(--#{$prefix}color-border-warning);
+  --#{$prefix}table-striped-bg: var(--#{$prefix}color-background-warning-light);
+  --#{$prefix}table-striped-color: var(--#{$prefix}color-text-warning);
+  --#{$prefix}table-hover-bg: var(--#{$prefix}color-background-warning-hover);
+  --#{$prefix}table-hover-color: var(--#{$prefix}color-text-warning);
+  --#{$prefix}table-active-bg: var(--#{$prefix}color-background-warning-active);
+  --#{$prefix}table-active-color: var(--#{$prefix}color-text-warning);
+}
+
+.table-danger {
+  --#{$prefix}table-bg: var(--#{$prefix}color-background-danger);
+  --#{$prefix}table-color: var(--#{$prefix}color-text-inverse);
+  --#{$prefix}table-border-color: var(--#{$prefix}color-border-danger);
+  --#{$prefix}table-striped-bg: var(--#{$prefix}color-background-danger-light);
+  --#{$prefix}table-striped-color: var(--#{$prefix}color-text-danger);
+  --#{$prefix}table-hover-bg: var(--#{$prefix}color-background-danger-hover);
+  --#{$prefix}table-hover-color: var(--#{$prefix}color-text-inverse);
+  --#{$prefix}table-active-bg: var(--#{$prefix}color-background-danger-active);
+  --#{$prefix}table-active-color: var(--#{$prefix}color-text-inverse);
+}
+
+.table-light {
+  --#{$prefix}table-bg: var(--#{$prefix}color-background-muted);
+  --#{$prefix}table-color: var(--#{$prefix}color-text-primary);
+  --#{$prefix}table-border-color: var(--#{$prefix}color-border-subtle);
+  --#{$prefix}table-striped-bg: var(--#{$prefix}color-background-subtle);
+  --#{$prefix}table-striped-color: var(--#{$prefix}color-text-primary);
+  --#{$prefix}table-hover-bg: var(--#{$prefix}color-background-secondary-lighter);
+  --#{$prefix}table-hover-color: var(--#{$prefix}color-text-primary);
+  --#{$prefix}table-active-bg: var(--#{$prefix}color-background-secondary);
+  --#{$prefix}table-active-color: var(--#{$prefix}color-text-primary);
+}
+
+.table-dark {
+  --#{$prefix}table-bg: var(--#{$prefix}color-background-primary-deep);
+  --#{$prefix}table-color: var(--#{$prefix}color-text-inverse);
+  --#{$prefix}table-border-color: var(--#{$prefix}color-border-inverse);
+  --#{$prefix}table-striped-bg: var(--#{$prefix}color-background-primary-muted);
+  --#{$prefix}table-striped-color: var(--#{$prefix}color-text-inverse);
+  --#{$prefix}table-hover-bg: var(--#{$prefix}color-background-primary-hover);
+  --#{$prefix}table-hover-color: var(--#{$prefix}color-text-inverse);
+  --#{$prefix}table-active-bg: var(--#{$prefix}color-background-primary-active);
+  --#{$prefix}table-active-color: var(--#{$prefix}color-text-inverse);
 }
 
 // Responsive tables
