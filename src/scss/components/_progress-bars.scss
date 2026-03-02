@@ -89,7 +89,7 @@
 
 // Common styles for all progress components
 .progress {
-  @extend %progress;
+  @extend %progress !optional;
   display: flex;
   overflow: hidden; // force rounded corners by cropping it
   background-color: var(--#{$prefix}progress-bg);
