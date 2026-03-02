@@ -383,22 +383,22 @@ a.btn-outline {
   height: 2.5rem;
   padding: 0;
   border: 0; // for button elements
-  opacity: 0.5;
   background-color: transparent;
-  color: var(--#{$prefix}color-text-base);
 
   .icon {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    fill: var(--#{$prefix}icon-secondary); // default color for the close icon, using color tokens
+    // Override <a>'s hover style
+    &:hover {
+      // color: var(--#{$prefix}icon-default); // default color for the close icon, using color tokens
+      fill: var(--#{$prefix}icon-default); // default color for the close icon, using color tokens
+      text-decoration: none;
+    }
   }
 
-  // Override <a>'s hover style
-  &:hover {
-    opacity: 1;
-    text-decoration: none;
-  }
 
   &:focus {
     opacity: 1;
