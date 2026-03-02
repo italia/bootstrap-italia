@@ -58,7 +58,7 @@
 //standard spinner
 /* stylelint-disable-next-line no-duplicate-selectors */
 .progress-spinner {
-  @extend %progress;
+  @extend %progress !optional;
   display: block;
   width: var(--#{$prefix}progress-spinner-size);
   height: var(--#{$prefix}progress-spinner-size);
