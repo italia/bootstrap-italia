@@ -129,9 +129,21 @@
 
 
 
+## [2.17.5](https://github.com/italia/bootstrap-italia/compare/v2.17.4...v2.17.5) (2026-02-24)
+
+
+### Bug Fixes
+
+* **docs:** image background on `d-flex` component viewer ([ad5eacb](https://github.com/italia/bootstrap-italia/commit/ad5eacbb903ec0ac2cfaf81e6444ec1afc19c40b))
+* **docs:** typo ([e78b675](https://github.com/italia/bootstrap-italia/commit/e78b6755af862a421e168a39857937b48daf8a18))
+* icon paths in card examples ([e62ee01](https://github.com/italia/bootstrap-italia/commit/e62ee01b434d5e97b70b0d9712e7618beacdd2b9))
+
+
+
 ## [2.17.4](https://github.com/italia/bootstrap-italia/compare/v2.17.3...v2.17.4) (2026-02-17)
 
-### Bug fixes
+
+### Bug Fixes
 
 * hero small height [#1505](https://github.com/italia/bootstrap-italia/issues/1505) [#1656](https://github.com/italia/bootstrap-italia/issues/1656) ([30f27ba](https://github.com/italia/bootstrap-italia/commit/30f27ba28ae06d6c5eb231b37b2808d8efb3507d))
 * typo liste.md ([dd07e68](https://github.com/italia/bootstrap-italia/commit/dd07e68f71817a98b8d38b9fdec78436366ec6b1))
@@ -215,6 +227,7 @@
 ### Features
 
 * new card component ([caa76e1](https://github.com/italia/bootstrap-italia/commit/caa76e130208429b7d6269773ce2657ce6e9405a))
+
 
 
 ## [2.15.1](https://github.com/italia/bootstrap-italia/compare/v2.15.0...v2.15.1) (2025-06-20)
@@ -311,7 +324,6 @@
 
 * form check margin ([9573eb7](https://github.com/italia/bootstrap-italia/commit/9573eb7a71959fb1442d5bd32ca40bebc5a59498))
 * navbar padding ([b7fd3d5](https://github.com/italia/bootstrap-italia/commit/b7fd3d59c57cf56cf3743ff8f83e0f7ceaca1deb))
-
 
 
 
@@ -1068,6 +1080,5 @@
 ### Features
 
 * Adapt version 2.0.0 to Bootstrap 5
-
 
 
