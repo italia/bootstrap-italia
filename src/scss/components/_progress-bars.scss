@@ -5,6 +5,7 @@
 @use '../base/mixins/gradients' as *;
 @use '../base/mixins/transition' as *;
 @use '../base/mixins/breakpoints' as *;
+@use '../base/mixins/progress' as *;
 @use '../base/vendor/rfs' as *;
 
 // Component: progress bars
@@ -17,24 +18,14 @@
 
 // Properties
 //
-// NOTE: Shared properties between .progress and .progress-spinner components.
-// Using %placeholder pattern for DRY. Both components @extend this base.
-%progress {
-  --#{$prefix}progress-bg: var(--#{$prefix}color-background-secondary-lighter);
-  --#{$prefix}progress-border-radius: var(--#{$prefix}radius-smooth);
-  --#{$prefix}progress-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
-  --#{$prefix}progress-label-color: var(--#{$prefix}color-text-secondary);
-  --#{$prefix}progress-label-font-size: var(--#{$prefix}label-font-size-xs);
-  --#{$prefix}progress-bar-transition: width 0.5s ease;
-  --#{$prefix}progress-bar-bg: var(--#{$prefix}color-background-secondary);
-  --#{$prefix}progress-height: 4px;
+.progress {
+  @include progress-base;
 }
 
 // Styles
 //
 
 // Disable animation if transitions are disabled
-
 // scss-docs-start progress-keyframes
 @if $enable-transitions {
   @keyframes progress-bar-stripes {
@@ -45,7 +36,6 @@
 }
 
 // scss-docs-end progress-keyframes
-
 .progress-bar-striped {
   @include gradient-striped();
   background-size: var(--#{$prefix}progress-height) var(--#{$prefix}progress-height);
@@ -63,16 +53,7 @@
   }
 }
 
-// Enable transitions
-@if $enable-transitions {
-  @keyframes progress-bar-stripes {
-    0% {
-      background-position-x: $progress-height;
-    }
-  }
-}
-
-// Indetrminate animation
+// Indeterminate animation
 @keyframes progressBarIndeterminate {
   0% {
     left: -5%;
@@ -89,8 +70,8 @@
 }
 
 // Common styles for all progress components
+/* stylelint-disable-next-line no-duplicate-selectors */
 .progress {
-  @extend %progress !optional;
   display: flex;
   overflow: hidden; // force rounded corners by cropping it
   background-color: var(--#{$prefix}progress-bg);
@@ -124,7 +105,6 @@
   overflow: hidden;
   text-align: center;
   white-space: nowrap;
-  // background-color: var(--#{$prefix}progress-bar-bg);
   @include transition(var(--#{$prefix}progress-bar-transition));
   background-color: var(--#{$prefix}progress-bar-bg);
 }

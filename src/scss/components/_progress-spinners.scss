@@ -1,5 +1,6 @@
 @use '../base/config' as *;
 @use '../base/variables' as *;
+@use './base/mixins/progress' as *;
 
 // Component: progress spinners
 //
@@ -11,8 +12,9 @@
 
 // Properties
 //
-
 .progress-spinner {
+  @include progress-base;
+
   --#{$prefix}progress-spinner-bg: var(--#{$prefix}color-border-secondary);
   --#{$prefix}progress-spinner-size: 48px;
   --#{$prefix}progress-spinner-size-sm: 32px;
@@ -58,7 +60,6 @@
 //standard spinner
 /* stylelint-disable-next-line no-duplicate-selectors */
 .progress-spinner {
-  @extend %progress !optional;
   display: block;
   width: var(--#{$prefix}progress-spinner-size);
   height: var(--#{$prefix}progress-spinner-size);
