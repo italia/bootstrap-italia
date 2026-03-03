@@ -1062,6 +1062,7 @@ sezione [attivazione Dropdown tramite codice]({{ site.baseurl }}/docs/componenti
 {% capture callout %}
 
 - Rimosse varianti scure definite dalla presenza delle classi sul `<nav>` contenitore `.theme-light-desk` e `.theme-dark-mobile`.
+- La classe `.has-megamenu` non è più necessaria per attivare il megamenu, è sufficiente la presenza della classe `.megamenu` sull'elemento `<li>` che contiene il megamenu, e la classe `.megamenu-content` sull'elemento che contiene il contenuto del megamenu.
 - Il contenuto del megamenu ora ha classe `.megamenu-content` invece di `.megamenu`, e non ha più le classi `.pb-5 .pt-3 .py-lg-0`.
 - Nella parte descrittiva del megamenu contenuta nell'elemento `.description-content`, la classe `.ps-4` è stata sostituita da `.px-4` per garantire un padding coerente anche su mobile.
 - Nella variante con Call to action in basso: rimossa la classe `.justify-content-around` sul contenitore e aggiunta la classe `.flex-grow-1` agli elementi `<a>` con classe `.it-footer-link`.
