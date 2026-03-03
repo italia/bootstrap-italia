@@ -14,15 +14,15 @@
   $background,
   $border,
   $color: color-contrast($background),
-  $hover-background: null,      
-  $hover-border: null,           
-  $hover-color: null,            
-  $active-background: null,      
-  $active-border: null,          
-  $active-color: null,           
-  $disabled-background: null,    
-  $disabled-border: null,        
-  $disabled-color: null          
+  $hover-background: null,
+  $hover-border: null,
+  $hover-color: null,
+  $active-background: null,
+  $active-border: null,
+  $active-color: null,
+  $disabled-background: null,
+  $disabled-border: null,
+  $disabled-color: null
 ) {
   // Calculate defaults if not provided
   @if $hover-background == null {
