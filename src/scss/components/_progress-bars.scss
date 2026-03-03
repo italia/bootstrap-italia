@@ -125,7 +125,6 @@
   white-space: nowrap;
   // background-color: var(--#{$prefix}progress-bar-bg);
   @include transition(var(--#{$prefix}progress-bar-transition));
-  @include transition(var(--#{$prefix}progress-bar-transition));
   background-color: var(--#{$prefix}progress-bar-bg);
 }
 
