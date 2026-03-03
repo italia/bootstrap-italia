@@ -99,7 +99,7 @@
   box-shadow: none;
 
   &.progress-color {
-    background-color: $color-background-secondary-lighter; // UI Kit
+    background-color: var(--#{$prefix}color-background-secondary-lighter);
   }
 
   &.progress-indeterminate {
