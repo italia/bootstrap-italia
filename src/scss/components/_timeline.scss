@@ -1,6 +1,6 @@
 // Component: timeline
 //
-// Description: Component styles for timeline
+// Description: Component styles for timeline classic and point list
 //
 
 // Variables
@@ -301,6 +301,259 @@
 
       .pin-text {
         font-size: 1rem;
+      }
+    }
+  }
+}
+
+// Timeline Point List component styles
+.it-timeline-point-list {
+  @at-root ol#{&},
+    ul#{&} {
+    padding-left: 0;
+    list-style: none;
+  }
+
+  display: flex;
+  flex-direction: column;
+
+  .timeline-point {
+    display: flex;
+    align-items: center;
+    margin-bottom: $v-gap * 3;
+
+    .point-aside {
+      position: relative;
+      width: 5rem;
+      flex-shrink: 0;
+      padding: 0.5rem 1rem 0.5rem 0;
+      color: var(--point-color, $primary);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-self: stretch;
+
+      @include media-breakpoint-down(md) {
+        width: 4rem;
+        padding: 0.5rem 0.75rem 0.5rem 0;
+      }
+
+      // Vertical line
+      &::before {
+        content: '';
+        position: absolute;
+        width: 2px;
+        top: 0;
+        right: 0;
+        height: calc(100% + #{$v-gap * 3}); // Estende nel gap
+        background-color: var(--point-color, $primary);
+        z-index: 1;
+      }
+
+      // Point circle
+      &::after {
+        content: '';
+        position: absolute;
+        width: 9px;
+        height: 9px;
+        top: 50%;
+        right: -4px;
+        transform: translateY(-50%);
+        border-radius: 50%;
+        background-color: var(--point-color, $primary);
+        z-index: 2;
+      }
+
+      .point-visual {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .point-main {
+        font-size: 2.75rem;
+        line-height: 1.1;
+        min-width: 53px;
+
+        @include media-breakpoint-down(md) {
+          font-size: 1.5rem;
+          min-width: 32px;
+        }
+      }
+
+      .point-top,
+      .point-bottom {
+        font-size: 1rem;
+        text-transform: uppercase;
+
+        @include media-breakpoint-down(md) {
+          font-size: 0.875rem;
+        }
+      }
+
+      .point-date {
+        @extend .point-main;
+      }
+
+      .point-month {
+        @extend .point-bottom;
+      }
+
+      .point-year {
+        @extend .point-top;
+      }
+
+      @each $color, $value in $theme-colors {
+        &.point-aside-#{$color} {
+          --point-color: #{$value};
+        }
+      }
+    }
+
+    .point-content {
+      flex: 1;
+      margin-left: 1rem;
+
+      & > * {
+        width: 100%;
+      }
+
+      & > *:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    // Last item: line extends only for aside, not content
+    &:last-child {
+      margin-bottom: 0;
+
+      .point-aside::before {
+        height: 100%;
+      }
+    }
+
+    // Align-top variant
+    &.timeline-point-align-top {
+      align-items: flex-start;
+
+      .point-aside {
+        align-self: stretch; // Extends to full height of content
+        justify-content: flex-start;
+        padding-top: 0.5rem;
+
+        &::after {
+          top: 2.6rem;
+          transform: translateY(-5px);
+        }
+
+        &:has(.point-top):has(.point-bottom) {
+          &::after {
+            top: 3.5rem;
+
+            @include media-breakpoint-down(md) {
+              top: 2.7rem;
+            }
+          }
+        }
+      }
+    }
+
+    // Compact variant
+    &.timeline-point-xs {
+      .point-aside {
+        width: 3.5rem;
+        padding: 0.5rem 0.75rem 0.5rem 0;
+
+        @include media-breakpoint-down(md) {
+          width: 3rem;
+          padding: 0.5rem 0.5rem 0.5rem 0;
+        }
+
+        .point-main,
+        .point-date {
+          font-size: 1.5rem;
+          line-height: 1;
+          min-width: 32px;
+        }
+
+        .point-bottom,
+        .point-month {
+          font-size: 0.875rem;
+        }
+      }
+
+      &.timeline-point-align-top {
+        .point-aside {
+          padding-top: 0.5rem;
+
+          &::after {
+            top: 1.3rem;
+          }
+
+          &:has(.point-main):has(.point-bottom)::after {
+            top: 2rem;
+          }
+
+          &:has(.point-top):has(.point-bottom)::after {
+            top: 2.7rem;
+          }
+        }
+      }
+    }
+  }
+
+  &.it-timeline-point-list-stack-mobile {
+    @include media-breakpoint-down(md) {
+      .timeline-point {
+        flex-wrap: wrap;
+        position: relative;
+
+        // Vertical line for stacked layout - extends through content and gap
+        &::before {
+          content: '';
+          position: absolute;
+          left: 2rem;
+          top: 0;
+          width: 2px;
+          height: calc(100% + #{$v-gap * 3});
+          background-color: var(--point-color, $primary);
+        }
+
+        &:last-child::before {
+          height: 100%;
+        }
+
+        @each $color, $value in $theme-colors {
+          &:has(.point-aside-#{$color}) {
+            --point-color: #{$value};
+          }
+        }
+
+        .point-aside {
+          width: auto;
+          flex-shrink: 0;
+          flex-direction: row-reverse;
+          padding-left: 2.5rem;
+          padding-right: 0.5rem;
+          position: relative;
+
+          &::before {
+            display: none;
+          }
+
+          &::after {
+            left: 1.75rem;
+            right: auto;
+          }
+        }
+
+        .point-content {
+          flex: 1 1 100%;
+          min-width: 0;
+          margin-left: 0;
+          margin-top: $v-gap * 2;
+        }
       }
     }
   }
