@@ -1221,7 +1221,7 @@ Negli esempi abbiamo utilizzato il tag `h4` per i titoli `.it-card-profile-name`
 
 Usa questa variante per presentare schede località. Si attiva con la classe `.it-card-profile` come nel caso dei profili personali. La testata della card è costruita con classi di stile dedicate come `.it-card-profile-header` per nome e tipologia. 
 
-Per i luoghi puoi inserire un'immagine `.it-card-profile-image` o un'icona sulla destra. Racchiudi l'icona in un `div` con classe `.it-card-profile-icon-wrapper` per l'allineamento corretto.
+Per i luoghi puoi inserire un'immagine `.it-card-profile-image` o un'icona sulla destra. Racchiudi l'icona in un `div` con classe `.it-card-profile-image-icon-wrapper` per l'allineamento corretto.
 
 La lista di metadati del luogo è costruita utilizzando liste descrittive `.it-card-description-list` con ogni coppia di item`dd`-`dt` raccolta in un `div` contenitore. 
 
