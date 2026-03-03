@@ -12,30 +12,32 @@ Il megamenu è una variazione del componente [dropdown]({{ site.baseurl }}/docs/
 
 Per stilare il megamenu si deve aggiungere la classe `.has-megamenu` al tag `<nav class="navbar">`. Ai dropdown che si desidera trasformare in megamenu si deve aggiungere la classe `.has-megamenu` al tag `<li class="nav-item dropdown">`.
 
-Il megamenu ha di default tema colori chiaro, si possono attivare i temi scuri su desktop e mobile applicando al `<nav>` contenitore rispettivamente le classi `.theme-light-desk` (navbar con tema chiaro e megamenu a tema scuro su desktop) e `.theme-dark-mobile` (navbar e megamenu a tema scuro su desktop). 
+Il megamenu ha di default tema colori chiaro, si possono attivare i temi scuri su desktop e mobile applicando al `<nav>` contenitore rispettivamente le classi `.theme-light-desk` (navbar con tema chiaro e megamenu a tema scuro su desktop) e `.theme-dark-mobile` (navbar e megamenu a tema scuro su desktop).
 
 {% capture callout %}
+
 #### Accessibilità
 
-Il megamenu è un componente della navigazione principale del sito che richiede particolari attenzioni dal punto di vista dell'accessibilità: 
+Il megamenu è un componente della navigazione principale del sito che richiede particolari attenzioni dal punto di vista dell'accessibilità:
 
 - svolgere con cura verifiche di accessibilità e test di usabilità con utenti;
 - applicare correttamente gli attributi `ARIA` presenti negli esempi;
 - usare il corretto tag semantico `<button>` per i pulsanti di apertura;
-- usare icone (freccia negli esempi) per contraddistinguere i link anche nelle situazioni o condizioni in cui non sia possibile percepirne il colore, in particolar modo se presente del testo descrittivo o non cliccabile; 
+- usare icone (freccia negli esempi) per contraddistinguere i link anche nelle situazioni o condizioni in cui non sia possibile percepirne il colore, in particolar modo se presente del testo descrittivo o non cliccabile;
 - distinguere le etichette dei link in modo chiaro: non devono essere presenti link con la stessa etichetta che portino a destinazioni diverse. Nel caso di più link "Esplora tutti" si può ad esempio aggiungere " i contenuti della sezione X", oppure, si può usare `<span class="visually-hidden"> i contenuti della sezione X</span>` per comunicare la distinzione almeno alle tecnologie assistive.
-{% endcapture %}{% include callout.html content=callout type="accessibility" %} 
+  {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
 ## Megamenu completo
- 
-Variante completa per dare ad esempio accesso a una intera sezione di un sito con un'architettura dell'informazione ben strutturata. Permette all'utente di comprendere l'organizzazione dei contenuti e di saltare direttamente a pagine foglia. 
+
+Variante completa per dare ad esempio accesso a una intera sezione di un sito con un'architettura dell'informazione ben strutturata. Permette all'utente di comprendere l'organizzazione dei contenuti e di saltare direttamente a pagine foglia.
 
 È possibile navigare un **esempio di applicazione** nel sito [Designers Italia](https://designers.italia.it).
 
-Permette di includere **immagine e testo descrittivo** per una introduzione ai contenuti della sezione. Può contenere un link **"Esplora la sezione X"** per dare accesso a una copertina della sezione. Se il link ha la classe `active` è riferito alla pagina corrente. Si possono accostare più megamenu nella navbar per dare accesso a sezioni diverse del sito. Se il pulsante ha la classe `active` è riferito alla sezione corrente. 
+Permette di includere **immagine e testo descrittivo** per una introduzione ai contenuti della sezione. Può contenere un link **"Esplora la sezione X"** per dare accesso a una copertina della sezione. Se il link ha la classe `active` è riferito alla pagina corrente. Si possono accostare più megamenu nella navbar per dare accesso a sezioni diverse del sito. Se il pulsante ha la classe `active` è riferito alla sezione corrente.
 
 {% comment %}Example name: Completo{% endcomment %}
 {% capture example %}
+
 <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Menu principale">
   <button type="button" aria-label="Mostra o nascondi il menu" class="custom-navbar-toggler" aria-controls="navbar-A" data-bs-toggle="navbarcollapsible" data-bs-target="#navbar-A">
       <span>
@@ -56,12 +58,12 @@ Permette di includere **immagine e testo descrittivo** per una introduzione ai c
                 <span>Megamenu 1 (attivo)</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
             </button>
             <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-completo-A1">
-              <div class="megamenu pb-5 pt-3 py-lg-0">
+              <div class="megamenu-content">
                 <div class="row">
                   <div class="col-xs-12 col-lg-4 px-0">
                     <div class="row">
                       <div class="col-12 it-vertical it-description pb-lg-3">
-                        <div class="description-content ps-4 ps-sm-5 ms-3">
+                        <div class="description-content px-4 ps-sm-5 ms-3">
                           <div class="ratio ratio-21x9 lightgrey-bg-a1 mb-4 rounded">
                             <figure class="figure">
                               <img src="https://placehold.co/560x240/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Segnaposto">
@@ -141,12 +143,12 @@ Permette di includere **immagine e testo descrittivo** per una introduzione ai c
                 <span>Megamenu 2</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
             </button>
             <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-completo-A2">
-              <div class="megamenu pb-5 pt-3 py-lg-0">
+              <div class="megamenu-content">
                 <div class="row">
                   <div class="col-xs-12 col-lg-4 px-0">
                     <div class="row">
                       <div class="col-12 it-vertical it-description pb-lg-3">
-                        <div class="description-content ps-4 ps-sm-5 ms-3">
+                        <div class="description-content px-4 ps-sm-5 ms-3">
                           <div class="ratio ratio-21x9 lightgrey-bg-a1 mb-4 rounded">
                             <figure class="figure">
                               <img src="https://placehold.co/560x240/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Segnaposto">
@@ -230,7 +232,7 @@ Permette di includere **immagine e testo descrittivo** per una introduzione ai c
 
 ### Completo scuro desktop
 
-Il megamenu prende il tema colori dark su desktop se è dentro un `<nav>` che ha applicata la classe `.theme-light-desk`. 
+Il megamenu prende il tema colori dark su desktop se è dentro un `<nav>` che ha applicata la classe `.theme-light-desk`.
 
 {% comment %}Example name: Completo scuro desktop{% endcomment %}
 {% capture example %}
@@ -253,12 +255,12 @@ Il megamenu prende il tema colori dark su desktop se è dentro un `<nav>` che ha
               <span>Megamenu</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
           </button>
           <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-completo-B">
-            <div class="megamenu">
+            <div class="megamenu-content">
               <div class="row">
                 <div class="col-xs-12 col-lg-4">
                   <div class="row">
                     <div class="col-12 it-vertical it-description">
-                      <div class="description-content">
+                      <div class="description-content px-4 ps-sm-5 ms-3">
                         <div class="ratio ratio-21x9 mb-4 rounded">
                           <figure class="figure">
                             <img src="https://placehold.co/560x240/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Segnaposto">
@@ -339,7 +341,7 @@ Il megamenu prende il tema colori dark su desktop se è dentro un `<nav>` che ha
 
 ### Completo scuro mobile
 
-Il megamenu prende il tema colori dark su mobile se è dentro un `<nav>` che ha applicata la classe `.theme-dark-mobile`. 
+Il megamenu prende il tema colori dark su mobile se è dentro un `<nav>` che ha applicata la classe `.theme-dark-mobile`.
 
 {% comment %}Example name: Completo scuro mobile{% endcomment %}
 {% capture example %}
@@ -362,7 +364,7 @@ Il megamenu prende il tema colori dark su mobile se è dentro un `<nav>` che ha 
               <span>Megamenu</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
           </button>
           <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-completo-C">
-            <div class="megamenu">
+            <div class="megamenu-content">
               <div class="row">
                 <div class="col-xs-12 col-lg-4">
                   <div class="row">
@@ -449,11 +451,12 @@ Il megamenu prende il tema colori dark su mobile se è dentro un `<nav>` che ha 
 -->
 
 ## Megamenu base
- 
-Variante base che può contenere liste di link organizzate in tre colonne ed eventuali link correlati come "Esplora la sezione X", "Esplora tutti i contenuti Y" o di altro tipo.  
+
+Variante base che può contenere liste di link organizzate in tre colonne ed eventuali link correlati come "Esplora la sezione X", "Esplora tutti i contenuti Y" o di altro tipo.
 
 {% comment %}Example name: Base{% endcomment %}
 {% capture example %}
+
 <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Menu principale">
   <button type="button" aria-label="Mostra o nascondi il menu" class="custom-navbar-toggler" aria-controls="navbar-D" data-bs-toggle="navbarcollapsible" data-bs-target="#navbar-D" >
       <span>
@@ -474,7 +477,7 @@ Variante base che può contenere liste di link organizzate in tre colonne ed eve
               <span>Megamenu</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
           </button>
           <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-base-D">
-            <div class="megamenu">
+            <div class="megamenu-content">
               <div class="row">
                 <div class="col-12">
                   <div class="row">
@@ -564,10 +567,11 @@ Variante base che può contenere liste di link organizzate in tre colonne ed eve
 
 ### Con link "Esplora la sezione"
 
-Come nella variante completa è possibile aggiungere un link "Esplora la sezione X" come primo link. Se il link ha la classe `active` è riferito alla sezione corrente del sito.  
+Come nella variante completa è possibile aggiungere un link "Esplora la sezione X" come primo link. Se il link ha la classe `active` è riferito alla sezione corrente del sito.
 
 {% comment %}Example name: Base, con link esplora la sezione{% endcomment %}
 {% capture example %}
+
 <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Menu principale">
   <button type="button" aria-label="Mostra o nascondi il menu" class="custom-navbar-toggler" aria-controls="navbar-E" data-bs-toggle="navbarcollapsible" data-bs-target="#navbar-E">
       <span>
@@ -587,7 +591,7 @@ Come nella variante completa è possibile aggiungere un link "Esplora la sezione
               <span>Megamenu</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
           </button>
           <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-base-E">
-            <div class="megamenu">
+            <div class="megamenu-content">
               <div class="row">
                 <div class="col-12">
                   <div class="it-heading-link-wrapper">
@@ -682,10 +686,11 @@ Come nella variante completa è possibile aggiungere un link "Esplora la sezione
 
 ### Con link "Esplora tutti"
 
-Nel caso le voci da mostrare fossero numerose, è possibile aggiungere un link "Esplora tutti i contenuti Y" che porti a una lista completa. Se il link ha la classe `active` è riferito alla vista corrente.  
+Nel caso le voci da mostrare fossero numerose, è possibile aggiungere un link "Esplora tutti i contenuti Y" che porti a una lista completa. Se il link ha la classe `active` è riferito alla vista corrente.
 
 {% comment %}Example name: Base, con link esplora tutti{% endcomment %}
 {% capture example %}
+
 <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Menu principale">
   <button type="button" aria-label="Mostra o nascondi il menu" class="custom-navbar-toggler" aria-controls="navbar-F" data-bs-toggle="navbarcollapsible" data-bs-target="#navbar-F">
       <span>
@@ -705,7 +710,7 @@ Nel caso le voci da mostrare fossero numerose, è possibile aggiungere un link "
               <span>Megamenu</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
           </button>
           <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-base-F">
-            <div class="megamenu">
+            <div class="megamenu-content">
               <div class="row">
                 <div class="col-12">
                   <div class="row">
@@ -816,14 +821,14 @@ Nel caso le voci da mostrare fossero numerose, è possibile aggiungere un link "
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
-
 ### Con call to action in basso
 
 I megamenu possono contenere altri link correlati, che possono avere la funzione di "call to action" rispetto agli altri contenuti del megamenu.  
-Questi seguono le liste di link, posizionati in basso o in una colonna destra, allineati in orizzontale o verticale usando le proprietà `d-flex`. 
+Questi seguono le liste di link, posizionati in basso o in una colonna destra, allineati in orizzontale o verticale usando le proprietà `d-flex`.
 
 {% comment %}Example name: Base, con call to action in basso{% endcomment %}
 {% capture example %}
+
 <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Menu principale">
   <button type="button" aria-label="Mostra o nascondi il menu" class="custom-navbar-toggler" aria-controls="navbar-G" data-bs-toggle="navbarcollapsible" data-bs-target="#navbar-G">
       <span>
@@ -843,7 +848,7 @@ Questi seguono le liste di link, posizionati in basso o in una colonna destra, a
               <span>Megamenu</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
           </button>
           <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-base-G">
-            <div class="megamenu">
+            <div class="megamenu-content">
               <div class="row">
                 <div class="col-12">
                   <div class="row">
@@ -947,6 +952,7 @@ Questi seguono le liste di link, posizionati in basso o in una colonna destra, a
 
 {% comment %}Example name: Base, con call to action a destra{% endcomment %}
 {% capture example %}
+
 <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Menu principale">
   <button type="button" aria-label="Mostra o nascondi il menu" class="custom-navbar-toggler" aria-controls="navbar-H" data-bs-toggle="navbarcollapsible" data-bs-target="#navbar-H">
       <span>
@@ -966,7 +972,7 @@ Questi seguono le liste di link, posizionati in basso o in una colonna destra, a
               <span>Megamenu</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
           </button>
           <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-base-H">
-            <div class="megamenu">
+            <div class="megamenu-content">
               <div class="row">
                 <div class="col-12 col-lg-8">
                   <div class="row">
@@ -1046,7 +1052,7 @@ Questi seguono le liste di link, posizionati in basso o in una colonna destra, a
 
 ## Attivazione tramite codice
 
-Il componente Megamenu deriva dal componente Dropdown, si rimanda dunque alla 
+Il componente Megamenu deriva dal componente Dropdown, si rimanda dunque alla
 sezione [attivazione Dropdown tramite codice]({{ site.baseurl }}/docs/componenti/dropdown/#attivazione-tramite-codice)
 
 {% include properties.md properties=site.data.cprops.megamenu %}
@@ -1054,14 +1060,17 @@ sezione [attivazione Dropdown tramite codice]({{ site.baseurl }}/docs/componenti
 ## Breaking change
 
 {% capture callout %}
+
 - Rimosse varianti scure definite dalla presenza delle classi sul `<nav>` contenitore `.theme-light-desk` e `.theme-dark-mobile`.
-- Corrette spaziature sul `<div>` contenitore con classe `.megamenu`: rimosse classi `.pb-5 .pt-3 .py-lg-0`. 
-- Nella variante con Call to action in basso: rimossa la classe `.justify-content-around` sul contenitore e aggiunta la classe `.flex-grow-1` agli elementi `<a>` con classe `.it-footer-link`. 
-{% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}
+- Il contenuto del megamenu ora ha classe `.megamenu-content` invece di `.megamenu`, e non ha più le classi `.pb-5 .pt-3 .py-lg-0`.
+- Nella parte descrittiva del megamenu contenuta nell'elemento `.description-content`, la classe `.ps-4` è stata sostituita da `.px-4` per garantire un padding coerente anche su mobile.
+- Nella variante con Call to action in basso: rimossa la classe `.justify-content-around` sul contenitore e aggiunta la classe `.flex-grow-1` agli elementi `<a>` con classe `.it-footer-link`.
+  {% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}
 
 {% capture callout %}
-La navbar presente negli esempi, quando aperta in versione mobile o a forte ingrandimento, è stata reimplementata come modale per migliorare l'accessibilità con le combinazioni principali di lettori di schermo, sistema operativo e browser. Modifiche principali: 
-- struttura: la navbar ora utilizza un pattern dialog con backdrop 
+La navbar presente negli esempi, quando aperta in versione mobile o a forte ingrandimento, è stata reimplementata come modale per migliorare l'accessibilità con le combinazioni principali di lettori di schermo, sistema operativo e browser. Modifiche principali:
+
+- struttura: la navbar ora utilizza un pattern dialog con backdrop
 - gerarchia visiva: la gestione `z-index` è allineata al componente modale
 - gestione del focus: implementato `focus-trap.js` per utenti da tastiera e lettori di schermo, e gestione inert
 - il comportamento è diverso se implementata dentro o fuori dall'elemento `main` di pagina (se presente)
@@ -1070,8 +1079,9 @@ Se hai personalizzato il CSS della navbar, rivedi le tue modifiche per verificar
 {% endcapture %}{% include callout-breaking.html content=callout version="2.15.0" type="danger" %}
 
 {% capture callout %}
+
 - tutti gli esempi del componente, anche quelli integrati nel componente [header]({{ site.baseurl }}/docs/menu-di-navigazione/header/), sono stati rivisti: refactoring markup `HTML`, classi e stili nei file `_megamenu.scss`, `_navigation.scss`, `_headernavbar.scss`, `_headernavbartheme.scss`, `_navigationtheme.scss`
 - rimossi esempi "con sezioni"
-- rimosse classi `.it-megamenu-footer`, `.it-external`, `.it-more`, `.divider`, `h3`, `.link-list-heading` 
+- rimosse classi `.it-megamenu-footer`, `.it-external`, `.it-more`, `.divider`, `h3`, `.link-list-heading`
 - rimosse variabili obsolete e inutilizzate da `_variables.scss`
-{% endcapture %}{% include callout-breaking.html content=callout version="2.8.0" type="danger" %}
+  {% endcapture %}{% include callout-breaking.html content=callout version="2.8.0" type="danger" %}

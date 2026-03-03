@@ -11,8 +11,8 @@
 
 .megamenu {
   --#{$prefix}megamenu-background-color: var(--#{$prefix}color-background-inverse); // Controls the background color for the megamenu, using color tokens.
-  --#{$prefix}megamenu-border-color: var(--#{$prefix}color-border-subtle); // Controls the border color for the megamenu, using color tokens.
   --#{$prefix}megamenu-spacing: var(--#{$prefix}spacing-xs); // Controls the spacing for the megamenu, using spacing tokens.
+  --#{$prefix}megamenu-border-color: var(--#{$prefix}color-border-subtle); // Controls the border color for the megamenu, using color tokens.
 }
 
 // Styles
@@ -40,7 +40,6 @@
   }
 }
 
-.megamenu,
 .megamenu-content {
   .link-list-wrapper {
     margin-bottom: 0;
