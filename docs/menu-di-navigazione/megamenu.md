@@ -10,9 +10,9 @@ toc: true
 
 Il megamenu è una variazione del componente [dropdown]({{ site.baseurl }}/docs/componenti/dropdown/) per la navbar `<nav>` del sito, che permette di esplorare elenchi di link e informazioni correlate.
 
-Per stilare il megamenu si deve aggiungere la classe `.has-megamenu` al tag `<nav class="navbar">`. Ai dropdown che si desidera trasformare in megamenu si deve aggiungere la classe `.has-megamenu` al tag `<li class="nav-item dropdown">`.
+Per stilare il megamenu, all'elemento del nav che si desidera trasformare in megamenu, si deve aggiungere la classe `.megamenu` al tag `<li class="nav-item dropdown">`.
 
-Il megamenu ha di default tema colori chiaro, si possono attivare i temi scuri su desktop e mobile applicando al `<nav>` contenitore rispettivamente le classi `.theme-light-desk` (navbar con tema chiaro e megamenu a tema scuro su desktop) e `.theme-dark-mobile` (navbar e megamenu a tema scuro su desktop).
+<!-- Il megamenu ha di default tema colori chiaro, si possono attivare i temi scuri su desktop e mobile applicando al `<nav>` contenitore rispettivamente le classi `.theme-light-desk` (navbar con tema chiaro e megamenu a tema scuro su desktop) e `.theme-dark-mobile` (navbar e megamenu a tema scuro su desktop). -->
 
 {% capture callout %}
 
@@ -38,7 +38,7 @@ Permette di includere **immagine e testo descrittivo** per una introduzione ai c
 {% comment %}Example name: Completo{% endcomment %}
 {% capture example %}
 
-<nav class="navbar navbar-expand-lg has-megamenu" aria-label="Menu principale">
+<nav class="navbar navbar-expand-lg" aria-label="Menu principale">
   <button type="button" aria-label="Mostra o nascondi il menu" class="custom-navbar-toggler" aria-controls="navbar-A" data-bs-toggle="navbarcollapsible" data-bs-target="#navbar-A">
       <span>
         <svg role="img" class="icon"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use></svg>

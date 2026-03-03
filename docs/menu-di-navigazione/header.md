@@ -24,11 +24,12 @@ L'header di un sito della Pubblica Amministrazione è solitamente composto di 3 
   (<svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-burger"></use></svg>) su dispositivi mobili.
 
 {% capture callout %}
+
 #### Accessibilità
 
 Considerando l'importanza dell'Header per la navigazione, si ricorda porre particolare attenzione all'utilizzo della corretta semantica HTML, alle etichette e agli attributi `ARIA`, oltre a validare e testare sempre con utenti il risultato.
 
-Il titolo del sito, "Nome dell'Istituzione" negli esempi, è contenuto in un `<div>` generico e non un tag `<h1>` per evitare conflitti con gli `<h1>` presenti nelle singole pagine. Nel caso in cui la home page fosse priva di un titolo (es: primo contenuto è una ultima notizia in evidenza) si può applicare il tag `<h1>` al titolo dell'header unicamente in quella pagina oppure creare un `h1` nei contenuti principali di pagina con classe `.visually-hidden`. Questa ultima soluzione sarà anche utile a dare focus direttamente al tag `<h1>` laddove siano presenti [skiplinks]({{ site.baseurl }}/docs/menu-di-navigazione/skiplinks/) che permettano agli utenti che navigano da tastiera o con tecnologie assistive di saltare i contenuti dell'Header. 
+Il titolo del sito, "Nome dell'Istituzione" negli esempi, è contenuto in un `<div>` generico e non un tag `<h1>` per evitare conflitti con gli `<h1>` presenti nelle singole pagine. Nel caso in cui la home page fosse priva di un titolo (es: primo contenuto è una ultima notizia in evidenza) si può applicare il tag `<h1>` al titolo dell'header unicamente in quella pagina oppure creare un `h1` nei contenuti principali di pagina con classe `.visually-hidden`. Questa ultima soluzione sarà anche utile a dare focus direttamente al tag `<h1>` laddove siano presenti [skiplinks]({{ site.baseurl }}/docs/menu-di-navigazione/skiplinks/) che permettano agli utenti che navigano da tastiera o con tecnologie assistive di saltare i contenuti dell'Header.
 
 Maggiori dettagli sull'accessibilità del componente **megamenu** nella [relativa pagina]({{site.baseurl}}/docs/menu-di-navigazione/megamenu/).
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
@@ -40,6 +41,7 @@ Il cambio lingua è gestito con il componente [dropdown]({{ site.baseurl }}/docs
 
 {% comment %}Example name: Slim header{% endcomment %}
 {% capture example %}
+
 <div class="it-header-slim-wrapper">
   <div class="container-xxl">
     <div class="row">
@@ -100,6 +102,7 @@ Il modificatore `.btn-full` è disponibile anche con il tema chiaro attivato da 
 
 {% comment %}Example name: Slim header con pulsante accedi full-responsive{% endcomment %}
 {% capture example %}
+
 <div class="it-header-slim-wrapper">
   <div class="container-xxl">
     <div class="row">
@@ -148,6 +151,7 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
 
 {% comment %}Example name: Slim header, variante chiara{% endcomment %}
 {% capture example %}
+
 <div class="it-header-slim-wrapper theme-light">
   <div class="container-xxl">
     <div class="row">
@@ -205,6 +209,7 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
 
 {% comment %}Example name: Header centrale{% endcomment %}
 {% capture example %}
+
 <div class="it-header-center-wrapper">
   <div class="container-xxl">
     <div class="row">
@@ -270,6 +275,7 @@ Per utilizzare la versione più compatta in verticale dell'header centrale è su
 
 {% comment %}Example name: Header centrale, variante compatta{% endcomment %}
 {% capture example %}
+
 <div class="it-header-center-wrapper it-small-header">
   <div class="container-xxl">
     <div class="row">
@@ -335,6 +341,7 @@ Per cambiare tema all'header centrale è sufficiente aggiungere la classe `theme
 
 {% comment %}Example name: Header centrale, variante chiara{% endcomment %}
 {% capture example %}
+
 <div class="it-header-center-wrapper theme-light">
   <div class="container-xxl">
     <div class="row">
@@ -400,12 +407,13 @@ Per cambiare tema all'header centrale è sufficiente aggiungere la classe `theme
 
 {% comment %}Example name: Header navigazione{% endcomment %}
 {% capture example %}
+
 <div class="it-header-navbar-wrapper">
   <div class="container-xxl">
     <div class="row">
       <div class="col-12">
         <!--start nav-->
-        <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Navigazione principale">
+        <nav class="navbar navbar-expand-lg" aria-label="Navigazione principale">
           <button class="custom-navbar-toggler" type="button" aria-controls="nav1" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#nav1">
             <svg class="icon bg-override"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use></svg>
           </button>
@@ -443,12 +451,12 @@ Per cambiare tema all'header centrale è sufficiente aggiungere la classe `theme
                       <span>Megamenu</span><svg role="img" class="icon icon-xs"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
                   </button>
                   <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-1">
-                    <div class="megamenu pb-5 pt-3 py-lg-0">
+                    <div class="megamenu-content">
                       <div class="row">
                         <div class="col-xs-12 col-lg-4 px-0">
                           <div class="row">
                             <div class="col-12 it-vertical it-description pb-lg-3">
-                              <div class="description-content ps-4 ps-sm-5 ms-3">
+                              <div class="description-content px-4 ps-sm-5 ms-3">
                                 <div class="ratio ratio-21x9 lightgrey-bg-a1 mb-4 rounded">
                                   <figure class="figure">
                                     <img src="https://placehold.co/560x240/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Segnaposto">
@@ -548,12 +556,13 @@ Per modificare il tema dell'Header Nav è sufficiente aggiungere una o tutte e d
 
 {% comment %}Example name: Header navigazione standard{% endcomment %}
 {% capture example %}
+
 <div class="it-header-navbar-wrapper">
   <div class="container-xxl">
     <div class="row">
       <div class="col-12">
         <!--start nav-->
-        <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Navigazione principale">
+        <nav class="navbar navbar-expand-lg" aria-label="Navigazione principale">
           <button class="custom-navbar-toggler" type="button" aria-controls="nav0" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#nav0">
             <svg class="icon bg-override"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use></svg>
           </button>
@@ -591,12 +600,12 @@ Per modificare il tema dell'Header Nav è sufficiente aggiungere una o tutte e d
                       <span>Megamenu</span><svg role="img" class="icon icon-xs"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
                   </button>
                   <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-2">
-                    <div class="megamenu pb-5 pt-3 py-lg-0">
+                    <div class="megamenu-content">
                       <div class="row">
                         <div class="col-xs-12 col-lg-4 px-0">
                           <div class="row">
                             <div class="col-12 it-vertical it-description pb-lg-3">
-                              <div class="description-content ps-4 ps-sm-5 ms-3">
+                              <div class="description-content px-4 ps-sm-5 ms-3">
                                 <div class="ratio ratio-21x9 lightgrey-bg-a1 mb-4 rounded">
                                   <figure class="figure">
                                     <img src="https://placehold.co/560x240/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Segnaposto">
@@ -684,12 +693,13 @@ Per modificare il tema dell'Header Nav è sufficiente aggiungere una o tutte e d
 
 {% comment %}Example name: Header navigazione mobile scura{% endcomment %}
 {% capture example %}
+
 <div class="it-header-navbar-wrapper theme-dark-mobile">
   <div class="container-xxl">
     <div class="row">
       <div class="col-12">
         <!--start nav-->
-        <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Navigazione principale">
+        <nav class="navbar navbar-expand-lg" aria-label="Navigazione principale">
           <button class="custom-navbar-toggler" type="button" aria-controls="nav2" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#nav2">
             <svg class="icon bg-override"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use></svg>
           </button>
@@ -727,12 +737,12 @@ Per modificare il tema dell'Header Nav è sufficiente aggiungere una o tutte e d
                       <span>Megamenu</span><svg role="img" class="icon icon-xs"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
                   </button>
                   <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-3">
-                    <div class="megamenu pb-5 pt-3 py-lg-0">
+                    <div class="megamenu-content">
                       <div class="row">
                         <div class="col-xs-12 col-lg-4 px-0">
                           <div class="row">
                             <div class="col-12 it-vertical it-description pb-lg-3">
-                              <div class="description-content ps-4 ps-sm-5 ms-3">
+                              <div class="description-content px-4 ps-sm-5 ms-3">
                                 <div class="ratio ratio-21x9 lightgrey-bg-a1 mb-4 rounded">
                                   <figure class="figure">
                                     <img src="https://placehold.co/560x240/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Segnaposto">
@@ -820,12 +830,13 @@ Per modificare il tema dell'Header Nav è sufficiente aggiungere una o tutte e d
 
 {% comment %}Example name: Header navigazione desktop chiara{% endcomment %}
 {% capture example %}
+
 <div class="it-header-navbar-wrapper theme-light-desk">
   <div class="container-xxl">
     <div class="row">
       <div class="col-12">
         <!--start nav-->
-        <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Navigazione principale">
+        <nav class="navbar navbar-expand-lg" aria-label="Navigazione principale">
           <button class="custom-navbar-toggler" type="button" aria-controls="nav3" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#nav3">
             <svg class="icon">
               <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use>
@@ -865,12 +876,12 @@ Per modificare il tema dell'Header Nav è sufficiente aggiungere una o tutte e d
                       <span>Megamenu</span><svg role="img" class="icon icon-xs"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
                   </button>
                   <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-4">
-                    <div class="megamenu pb-5 pt-3 py-lg-0">
+                    <div class="megamenu-content">
                       <div class="row">
                         <div class="col-xs-12 col-lg-4 px-0">
                           <div class="row">
                             <div class="col-12 it-vertical it-description pb-lg-3">
-                              <div class="description-content ps-4 ps-sm-5 ms-3">
+                              <div class="description-content px-4 ps-sm-5 ms-3">
                                 <div class="ratio ratio-21x9 lightgrey-bg-a1 mb-4 rounded">
                                   <figure class="figure">
                                     <img src="https://placehold.co/560x240/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Segnaposto">
@@ -960,12 +971,13 @@ Al menu di navigazione principale può essere aggiunto anche un menu di navigazi
 
 {% comment %}Example name: Header navigazione secondaria{% endcomment %}
 {% capture example %}
+
 <div class="it-header-navbar-wrapper">
   <div class="container-xxl">
     <div class="row">
       <div class="col-12">
         <!--start nav-->
-        <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Navigazione principale">
+        <nav class="navbar navbar-expand-lg" aria-label="Navigazione principale">
           <button class="custom-navbar-toggler" type="button" aria-controls="nav4" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#nav4">
             <svg class="icon bg-override"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use></svg>
           </button>
@@ -999,6 +1011,7 @@ Al menu di navigazione principale può essere aggiunto anche un menu di navigazi
 
 {% comment %}Example name: Header completa{% endcomment %}
 {% capture example %}
+
 <header class="it-header-wrapper">
   <div class="it-header-slim-wrapper">
     <div class="container-xxl">
@@ -1102,7 +1115,7 @@ Al menu di navigazione principale può essere aggiunto anche un menu di navigazi
         <div class="row">
           <div class="col-12">
             <!--start nav-->
-            <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Navigazione principale">
+            <nav class="navbar navbar-expand-lg" aria-label="Navigazione principale">
               <button class="custom-navbar-toggler" type="button" aria-controls="navC1" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#navC1">
                 <svg class="icon">
                   <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use>
@@ -1146,12 +1159,12 @@ Al menu di navigazione principale può essere aggiunto anche un menu di navigazi
                           <span>Megamenu</span><svg role="img" class="icon icon-xs"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
                       </button>
                       <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-5">
-                        <div class="megamenu pb-5 pt-3 py-lg-0">
+                        <div class="megamenu-content">
                           <div class="row">
                             <div class="col-xs-12 col-lg-4 px-0">
                               <div class="row">
                                 <div class="col-12 it-vertical it-description pb-lg-3">
-                                  <div class="description-content ps-4 ps-sm-5 ms-3">
+                                  <div class="description-content px-4 ps-sm-5 ms-3">
                                     <div class="ratio ratio-21x9 lightgrey-bg-a1 mb-4 rounded">
                                       <figure class="figure">
                                         <img src="https://placehold.co/560x240/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Segnaposto">
@@ -1245,6 +1258,7 @@ Verrà creata un'ombra per enfatizzare l'Header rispetto alla pagina in cui è c
 
 {% comment %}Example name: Header completa, variante chiara{% endcomment %}
 {% capture example %}
+
 <header class="it-header-wrapper it-shadow">
   <div class="it-header-slim-wrapper theme-light">
     <div class="container-xxl">
@@ -1348,7 +1362,7 @@ Verrà creata un'ombra per enfatizzare l'Header rispetto alla pagina in cui è c
         <div class="row">
           <div class="col-12">
             <!--start nav-->
-            <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Navigazione principale">
+            <nav class="navbar navbar-expand-lg" aria-label="Navigazione principale">
               <button class="custom-navbar-toggler" type="button" aria-controls="navC2" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#navC2">
                 <svg class="icon"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use></svg>
               </button>
@@ -1386,12 +1400,12 @@ Verrà creata un'ombra per enfatizzare l'Header rispetto alla pagina in cui è c
                           <span>Megamenu</span><svg role="img" class="icon icon-xs"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
                       </button>
                       <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-6">
-                        <div class="megamenu pb-5 pt-3 py-lg-0">
+                        <div class="megamenu-content">
                           <div class="row">
                             <div class="col-xs-12 col-lg-4 px-0">
                               <div class="row">
                                 <div class="col-12 it-vertical it-description pb-lg-3">
-                                  <div class="description-content ps-4 ps-sm-5 ms-3">
+                                  <div class="description-content px-4 ps-sm-5 ms-3">
                                     <div class="ratio ratio-21x9 lightgrey-bg-a1 mb-4 rounded">
                                       <figure class="figure">
                                         <img src="https://placehold.co/560x240/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Segnaposto">
@@ -1481,44 +1495,40 @@ Verrà creata un'ombra per enfatizzare l'Header rispetto alla pagina in cui è c
 
 L'unica funzionalità del componente `Header` che necessita l'attivazione tramite
 codice è quella in cui si desidera che lo stesso si comporti in maniera `sticky`
-ovvero con la testata sempre visibile in formato ridotto anche allo scorrere 
+ovvero con la testata sempre visibile in formato ridotto anche allo scorrere
 della pagina.
 
 {% include callout-bundle-methods.md %}
 
 ### Inizializzazione automatica
 
-Per rendere `sticky` il componente `Header` automaticamente, è sufficiente 
-utilizzare la classe `.it-header-sticky` nell'elemento identificato con la 
+Per rendere `sticky` il componente `Header` automaticamente, è sufficiente
+utilizzare la classe `.it-header-sticky` nell'elemento identificato con la
 classe `.it-header-wrapper` insieme all'attributo `data-bs-toggle="sticky"`.
 
 ```html
-<div 
-  class="it-header-wrapper it-header-sticky" data-bs-toggle="sticky" data-bs-position-type="fixed" data-bs-sticky-class-name="is-sticky">
-  ...
-</div>
+<div class="it-header-wrapper it-header-sticky" data-bs-toggle="sticky" data-bs-position-type="fixed" data-bs-sticky-class-name="is-sticky">...</div>
 ```
 
 Per maggiori informazioni e ulteriori opzioni vedere il componente [Sticky]({{ site.baseurl }}/docs/componenti/sticky/) e l'[esempio]({{ site.baseurl }}/docs/esempi/navscroll/).
 
 ### Inizializzazione manuale
 
-Il componente `Header` solitamente contiene al suo interno i componenti `Dropdown`, 
+Il componente `Header` solitamente contiene al suo interno i componenti `Dropdown`,
 `NavScroll` e `Collapse`, si rimanda alle sezioni specifiche per l'attivazione di questi componenti:
 
 - [Attivazione Dropdown tramite codice]({{ site.baseurl }}/docs/componenti/dropdown/#attivazione-tramite-codice)
 - [Attivazione Collapse tramite codice]({{ site.baseurl }}/docs/componenti/collapse/#attivazione-tramite-codice)
 - [Attivazione NavScroll tramite codice]({{ site.baseurl }}/docs/menu-di-navigazione/navscroll/#attivazione-tramite-codice)
 
-
-Per rendere `sticky` il componente `Header` è  possibile inizializzare il 
+Per rendere `sticky` il componente `Header` è possibile inizializzare il
 componente manualmente utilizzando la classe `HeaderSticky`:
 
 ```js
-import { HeaderSticky } from 'bootstrap-italia';
+import { HeaderSticky } from 'bootstrap-italia'
 
-const headerStickyElement = document.querySelector('#myHeaderSticky');
-const headerSticky = new HeaderSticky(headerStickyElement);
+const headerStickyElement = document.querySelector('#myHeaderSticky')
+const headerSticky = new HeaderSticky(headerStickyElement)
 ```
 
 #### Metodi
@@ -1542,13 +1552,15 @@ const headerSticky = new HeaderSticky(headerStickyElement);
 ## Breaking change
 
 {% capture callout %}
+
 - Cambiata la dimensione del pulsante Accedi: cambiato classe da `.btn-sm` a `.btn-sx`.
 - Rimossa la classe `.ms-1` dall'icona `<svg>` che segue la voce Megamenu negli esempi.
-{% endcapture %}{% include callout.html content=callout version="3.0.0" type="danger" %}
+  {% endcapture %}{% include callout.html content=callout version="3.0.0" type="danger" %}
 
 {% capture callout %}
-La navbar presente negli esempi, quando aperta in versione mobile o a forte ingrandimento, è stata reimplementata come modale per migliorare l'accessibilità con le combinazioni principali di lettori di schermo, sistema operativo e browser. Modifiche principali: 
-- struttura: la navbar ora utilizza un pattern dialog con backdrop 
+La navbar presente negli esempi, quando aperta in versione mobile o a forte ingrandimento, è stata reimplementata come modale per migliorare l'accessibilità con le combinazioni principali di lettori di schermo, sistema operativo e browser. Modifiche principali:
+
+- struttura: la navbar ora utilizza un pattern dialog con backdrop
 - gerarchia visiva: la gestione `z-index` è allineata al componente modale
 - gestione del focus: implementato `focus-trap.js` per utenti da tastiera e lettori di schermo, e gestione inert
 - il comportamento è diverso se implementata dentro o fuori dall'elemento `main` di pagina (se presente)
@@ -1557,9 +1569,10 @@ Se hai personalizzato il CSS della navbar, rivedi le tue modifiche per verificar
 {% endcapture %}{% include callout-breaking.html content=callout version="2.15.0" type="danger" %}
 
 {% capture callout %}
-- Il toggle del dropdown diventa `<button>` invece di `<a>`. 
+
+- Il toggle del dropdown diventa `<button>` invece di `<a>`.
 - Gli altri elementi `<a>` che si comportano come toggle dropdown (eg. scelta Lingua), hanno l'aggiunta dell'attributo `role="button"`.
 - Il markup del Megamenu cambia come nel nuovo componente, per approfondire andare alla [relativa pagina]({{site.baseurl}}/docs/menu-di-navigazione/megamenu/).
-{% endcapture %}{% include callout-breaking.html content=callout version="2.8.0" type="danger" %}
+  {% endcapture %}{% include callout-breaking.html content=callout version="2.8.0" type="danger" %}
 
 {% include properties.md properties=site.data.cprops.header %}
