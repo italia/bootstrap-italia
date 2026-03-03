@@ -820,7 +820,7 @@ Negli esempi non abbiamo usato il `target` del link per favorire la normale navi
 
 #### Card per media video inline
 
-Per disporre disporre le card media di tipo video in orizzontale, usa la classe `.it-card-inline` e raccogli tutti i contenuti di testo e interattivi in un contenitore `.it-card-inline-content`. 
+Per disporre le card media di tipo video in orizzontale, usa la classe `.it-card-inline` e raccogli tutti i contenuti di testo e interattivi in un contenitore `.it-card-inline-content`. 
 
 Usa le stesse regole delle card inline standard per struttura e inversione dell'ordine.
 
@@ -1248,7 +1248,7 @@ Negli esempi abbiamo utilizzato il tag `h4` per i titoli `.it-card-profile-name`
         </div>
         <div class="it-card-profile-image ratio ratio-1x1">
           <div class="it-card-profile-image-icon-wrapper">
-            <svg class="icon icon-lg  icon-primary" aria-hidden="true"><use href="/dist/svg/sprites.svg#it-pa"></use></svg>
+            <svg class="icon icon-lg  icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-pa"></use></svg>
           </div>
         </div>
       </div>
@@ -1288,7 +1288,7 @@ Negli esempi abbiamo utilizzato il tag `h4` per i titoli `.it-card-profile-name`
         </div>
         <div class="it-card-profile-image ratio ratio-1x1">
           <div class="it-card-profile-image-icon-wrapper">
-            <svg class="icon icon-lg  icon-primary" aria-hidden="true"><use href="/dist/svg/sprites.svg#it-pa"></use></svg>
+            <svg class="icon icon-lg  icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-pa"></use></svg>
           </div>
         </div>
       </div>
@@ -1345,13 +1345,13 @@ Negli esempi abbiamo utilizzato il tag `h4` per i titoli `.it-card-profile-name`
       </div>
       <footer class="it-card-footer border-top pt-3">
         <div style="flex-grow:1">
-          <svg class="icon icon-sm icon-secondary" aria-hidden="true"><use href="/dist/svg/sprites.svg#it-map-marker"></use></svg>
+          <svg class="icon icon-sm icon-secondary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-map-marker"></use></svg>
           <strong>Distanza:</strong> 900 metri
         </div>
         <a href="#" target="_blank" class="it-card-link">
           Apri in mappa
           <span class="visually-hidden"> Toponimo o Luogo (si apre in una nuova finestra)</span>
-          <svg class="icon icon-sm icon-secondary ms-2" aria-hidden="true"><use href="/dist/svg/sprites.svg#it-external-link"></use></svg>
+          <svg class="icon icon-sm icon-secondary ms-2" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-external-link"></use></svg>
         </a>
       </footer>
     </article>
@@ -1443,7 +1443,7 @@ Puoi combinare questa impostazione con le funzionalità del contenitore `.it-car
         <a href="#" target="_blank" class="it-card-link">
           Apri la mappa
           <span class="visually-hidden"> di Titolo evento (si apre in una nuova finestra)</span>
-          <svg class="icon icon-sm icon-secondary ms-2" aria-hidden="true"><use href="/dist/svg/sprites.svg#it-external-link"></use></svg>
+          <svg class="icon icon-sm icon-secondary ms-2" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-external-link"></use></svg>
         </a>
       </footer>
     </article>

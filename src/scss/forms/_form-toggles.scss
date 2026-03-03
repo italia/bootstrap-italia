@@ -11,6 +11,9 @@
   height: 32px;
   line-height: 32px;
   font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
   &.active {
     transform: none;
@@ -36,8 +39,7 @@
       border-radius: 10px;
       transition: background 0.3s ease;
       vertical-align: middle;
-      margin: 8px 10px 0 16px;
-      float: right;
+
       &:before,
       &:after {
         content: '';
