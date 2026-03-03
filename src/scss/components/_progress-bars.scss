@@ -9,21 +9,21 @@
 // Properties
 //
 
+%progress {
+  --#{$prefix}progress-bg: var(--#{$prefix}color-background-secondary-lighter);
+  --#{$prefix}progress-border-radius: var(--#{$prefix}radius-smooth);
+  --#{$prefix}progress-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+  --#{$prefix}progress-label-color: var(--#{$prefix}color-text-secondary);
+  --#{$prefix}progress-label-font-size: var(--#{$prefix}label-font-size-xs);
+  --#{$prefix}progress-bar-transition: width 0.5s ease;
+  --#{$prefix}progress-bar-bg: var(--#{$prefix}color-background-secondary);
+  --#{$prefix}progress-height: 4px;
+}
+
 // Styles
 //
 
 // Disable animation if transitions are disabled
-
-// scss-docs-start progress-keyframes
-@if $enable-transitions {
-  @keyframes progress-bar-stripes {
-    0% {
-      background-position-x: $progress-height;
-    }
-  }
-}
-// scss-docs-end progress-keyframes
-
 .progress-bar-striped {
   @include gradient-striped();
   background-size: var(--#{$prefix}progress-height) var(--#{$prefix}progress-height);
@@ -41,9 +41,16 @@
   }
 }
 
-//mobile
+// Enable transitions
+@if $enable-transitions {
+  @keyframes progress-bar-stripes {
+    0% {
+      background-position-x: $progress-height;
+    }
+  }
+}
 
-//indetrminate animation
+// Indetrminate animation
 @keyframes progressBarIndeterminate {
   0% {
     left: -5%;
@@ -57,31 +64,17 @@
   }
 }
 
-//background bar
+// Common styles for all progress components
 .progress {
-  // scss-docs-start progress-css-vars
-  --#{$prefix}progress-height: #{$progress-height};
-  @include rfs($progress-font-size, --#{$prefix}progress-font-size);
-  --#{$prefix}progress-bg: #{$progress-bg};
-  --#{$prefix}progress-border-radius: #{$progress-border-radius};
-  --#{$prefix}progress-box-shadow: #{$progress-box-shadow};
-  --#{$prefix}progress-bar-color: #{$progress-bar-color};
-  --#{$prefix}progress-bar-bg: #{$progress-bar-bg};
-  --#{$prefix}progress-bar-transition: #{$progress-bar-transition};
-  // scss-docs-end progress-css-vars
-
+  @extend %progress;
   display: flex;
-  // height: var(--#{$prefix}progress-height);
   overflow: hidden; // force rounded corners by cropping it
-  @include font-size(var(--#{$prefix}progress-font-size));
   background-color: var(--#{$prefix}progress-bg);
   @include border-radius(var(--#{$prefix}progress-border-radius));
   @include box-shadow(var(--#{$prefix}progress-box-shadow));
-  height: 4px;
+  height: var(--#{$prefix}progress-height);
   box-shadow: none;
-  &.progress-color {
-    background-color: $color-background-secondary-lighter; // UI Kit
-  }
+
   &.progress-indeterminate {
     position: relative;
     .progress-bar {
@@ -94,29 +87,27 @@
   }
 }
 
-//progress bar
+// Progress Bar styles
 .progress-bar {
   display: flex;
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
-  color: var(--#{$prefix}progress-bar-color);
   text-align: center;
   white-space: nowrap;
-  // background-color: var(--#{$prefix}progress-bar-bg);
   @include transition(var(--#{$prefix}progress-bar-transition));
-  background-color: $secondary; // UI Kit
+  background-color: var(--#{$prefix}progress-bar-bg);
 }
 
-//label
+// Progress Bar label
 .progress-bar-label {
   text-align: right;
-  font-size: 0.75rem;
-  color: $color-text-base;
+  font-size: var(--#{$prefix}progress-label-font-size);
+  color: var(--#{$prefix}progress-label-color);
   font-weight: 500;
 }
 
-//button version
+// Button with progress bar
 .btn-progress {
   .progress {
     display: block;
@@ -124,17 +115,9 @@
     bottom: 0;
     width: 100%;
     left: 0;
-    border-radius: 0 0 $btn-border-radius $btn-border-radius;
+    border-radius: 0 0 var(--#{$prefix}progress-border-radius) var(--#{$prefix}progress-border-radius);
   }
   .progress-bar {
-    height: 4px;
-  }
-}
-
-//small - tablet
-@include media-breakpoint-up(sm) {
-  //label
-  .progress-bar-label {
-    font-size: 0.75rem;
+    height: var(--#{$prefix}progress-height);
   }
 }
