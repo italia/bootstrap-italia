@@ -1,5 +1,6 @@
 @use '../base/config' as *;
 @use '../base/variables' as *;
+@forward '../base/mixins/focus';
 @use '../base/mixins/focus' as *;
 
 :focus:not([data-focus-mouse='true']),
@@ -8,7 +9,7 @@
 .upload-dragdrop-input:focus[type='file']:not([data-focus-mouse='true']) + label,
 .avatar-upload:focus-within:not([data-focus-mouse='true']),
 .rating input:focus:not([data-focus-mouse='true']) + label svg {
-  @extend %focus;
+  @include focus;
 }
 
 [tabindex='-1']:focus:not(:focus-visible) {
@@ -16,7 +17,7 @@
 }
 
 [data-focus-mouse='true']:not(.btn) {
-  @extend %focusmouse;
+  @include focusmouse;
 }
 
 p a,
@@ -77,7 +78,7 @@ p.it-card-text a {
 
 .form-check {
   .toggles label:has(input[type='checkbox']:focus:not([data-focus-mouse='true'])) {
-    @extend %focus;
+    @include focus;
 
     input,
     .lever {
@@ -88,7 +89,7 @@ p.it-card-text a {
   }
 
   .toggles label:has(input[type='checkbox']:focus[data-focus-mouse='true']) {
-    @extend %focusmouse;
+    @include focusmouse;
   }
 
   &.form-check-group {
@@ -102,8 +103,7 @@ p.it-card-text a {
 
 .bg-dark .btn,
 .back-to-top.dark {
-  &:focus:not([data-focus-mouse='true']),
-  &%focus {
+  &:focus:not([data-focus-mouse='true']) {
     box-shadow:
       0 0 0 2px $focus-outline-color-out,
       0 0 0 5px $focus-outline-color-in !important;

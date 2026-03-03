@@ -31,11 +31,11 @@
     height: 0;
 
     &:focus + .lever {
-      @extend %focus;
+      @include focus;
     }
 
     &:focus[data-focus-mouse='true'] + .lever {
-      @extend %focusmouse;
+      @include focusmouse;
     }
 
     & + .lever {

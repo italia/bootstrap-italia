@@ -332,11 +332,11 @@ input::-webkit-datetime-edit {
     }
 
     &:focus + label {
-      @extend %focus;
+      @include focus;
     }
 
     &:focus[data-focus-mouse='true'] + label {
-      @extend %focusmouse;
+      @include focusmouse;
     }
   }
 
