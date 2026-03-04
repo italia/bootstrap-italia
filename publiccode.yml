@@ -41,7 +41,7 @@ description:
       interfacce web moderne, inclusive e semplici da mantenere.
 developmentStatus: stable
 isBasedOn:
-  - Bootstrap
+  - https://github.com/twbs/bootstrap
 it:
   conforme:
     gdpr: false
