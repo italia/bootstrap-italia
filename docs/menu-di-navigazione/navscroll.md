@@ -197,7 +197,7 @@ La Navscroll può mostrare una barra di avanzamento dello scorrimento del conten
           <div class="progress-bar it-navscroll-progressbar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
         </div>
         <ul class="link-list">
-          <li class="nav-item">
+          <li class="nav-item active">
             <a class="nav-link active" href="#">
               <span>1. Introduzione </span>
             </a>
@@ -244,16 +244,11 @@ La Navscroll può mostrare una barra di avanzamento dello scorrimento del conten
 
 ### Variante scura
 
-Il nav ha due versioni, light e dark.
+Per attivare la variante scura è necessario aggiungere le seguenti classi all'elemento `<nav class="navbar">`:
 
-Lo stile di default è con sfondo bianco e testo di colore primario, su desktop e mobile.
+**`.theme-dark-mobile`**: sfondo scuro, testi e link bianco (modifica unicamente la versione mobile del navscroll).
 
-**Temi Navscroll**  
-Per cambiare il tema è sufficiente aggiungere le seguenti classi al tag `<nav class="navbar">`:
-
-**`.theme-dark-mobile`**: sfondo scuro, testi e link bianco (modifica unicamente la versione mobile del Navscroll).
-
-**`.theme-dark-desktop`**: sfondo scuro, testi e link di colore bianco (modifica unicamente la versione desktop del Navscroll).
+**`.theme-dark-desktop`**: sfondo scuro, testi e link di colore bianco (modifica unicamente la versione desktop del navscroll).
 
 {% comment %}Example name: Variante scura{% endcomment %}
 {% capture example %}
@@ -268,7 +263,7 @@ Per cambiare il tema è sufficiente aggiungere le seguenti classi al tag `<nav c
     </div>
     <div class="menu-wrapper" tabindex="-1">
       <button type="button" class="it-back-button btn w-100 text-start">
-        <svg class="icon icon-sm icon-white align-top"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left" xlink:href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left"></use></svg>
+        <svg class="icon icon-sm icon-inverse align-top"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left" xlink:href="{{site.baseurl}}/dist/svg/sprites.svg#it-chevron-left"></use></svg>
         <span>Indietro</span>
       </button>
       <div class="link-list-wrapper">
@@ -454,7 +449,13 @@ Le opzioni possono essere passate tramite gli attributi data o tramite Javascrip
   </tbody>
 </table>
 
+{% include properties.md properties=site.data.cprops.navscroll %}
+
 ## Breaking change
+
+{% capture callout %}
+- La classe che controlla il colore dell'icona chevron per le varianti scure ha cambiato nome: `.icon-white` diventa `.icon-inverse`.
+{% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}
 
 {% capture callout %}
 - Spostato il pulsante "Indietro" come primo elemento della struttura interna di `.menu-wrapper`.

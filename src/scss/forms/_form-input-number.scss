@@ -5,13 +5,16 @@
     width: fit-content;
     input[type='number'] {
       width: auto;
-      transition: all 0.3s;
+      transition: all va(--#{$prefix}transition-instant);
     }
   }
 
   //reset input style
   input[type='number'] {
     appearance: textfield;
+    border-top-right-radius: var(--#{$prefix}form-control-border-radius) !important;
+    border-bottom-right-radius: var(--#{$prefix}form-control-border-radius) !important;
+
     &::-webkit-inner-spin-button,
     &::-webkit-outer-spin-button {
       -webkit-appearance: none;
@@ -20,31 +23,26 @@
       display: none;
     }
 
-    // color: $color-text-muted;
+    // Apply the border when not disabled - avoid specific styling for disabled inputs
+    &:not(:disabled) {
+      border-left: 1px solid var(--#{$prefix}form-control-border-color);
+    }
 
-    &:focus {
-      color: $color-text-base;
+    &[readonly] ~ .input-group-text {
+      .input-number-add,
+      .input-number-sub {
+        display: none;
+      }
     }
   }
 
   //disabled version
   &.disabled {
-    input[type='number'] {
-      background-color: $gray-disabled;
-      color: $gray-800;
+    button {
+      display: none;
+      pointer-events: none;
       &:hover {
         cursor: not-allowed;
-        color: $gray-label-disabled;
-      }
-    }
-    .input-group-text {
-      background-color: $gray-disabled;
-      color: $gray-800;
-      button {
-        pointer-events: none;
-        &:hover {
-          cursor: not-allowed;
-        }
       }
     }
   }
@@ -56,7 +54,18 @@
     bottom: 0;
     right: 0;
     z-index: 10;
+
+    padding-right: var(--#{$prefix}form-control-spacing);
+    // border-left: 0;
+    // border-right-width: 1px;
+    border: none;
+    background: transparent;
+
+    .is-invalid + & {
+      bottom: 0;
+    }
   }
+
   .input-group-text button {
     position: relative;
     transition: opacity 0.1s;
@@ -79,12 +88,12 @@
     &:hover {
       &.input-number-add {
         &:after {
-          border-color: transparent transparent $dark transparent; // TODO Check if still necessary
+          border-color: transparent transparent var(--#{$prefix}form-control-border-color) transparent;
         }
       }
       &.input-number-sub {
         &:after {
-          border-color: $dark transparent transparent transparent; // TODO Check if still necessary
+          border-color: var(--#{$prefix}form-control-border-color) transparent transparent transparent;
         }
       }
     }
@@ -95,18 +104,25 @@
     &.input-number-add {
       &:after {
         border-width: 0 5px 6px 5px;
-        border-color: transparent transparent $neutral-1-a7 transparent; // TODO Check if still necessary
+        border-color: transparent transparent var(--#{$prefix}form-control-border-color) transparent;
       }
     }
     &.input-number-sub {
       &:after {
         border-width: 6px 5px 0 5px;
-        border-color: $neutral-1-a7 transparent transparent transparent; // TODO Check if still necessary
+        border-color: var(--#{$prefix}form-control-border-color) transparent transparent transparent;
       }
     }
     &:hover {
       cursor: pointer;
     }
+  }
+}
+
+// Reset border when input is prepended with input-group-text
+input[type='number'] {
+  .input-number .input-group-text + & {
+    border-left: 0;
   }
 }
 

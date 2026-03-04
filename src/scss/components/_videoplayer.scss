@@ -1,18 +1,35 @@
+// Component: videoplayer
+//
+// Description: Component styles for videoplayer
+//
+
+// Variables
+//
+
+// Properties
+//
+
+// Styles
+//
+
 /* stylelint-disable */
 @import 'video.js/src/css/video-js';
 /* stylelint-enable */
 
 .vjs-theme-bootstrap-italia {
-  .vjs-big-play-button {
-    background-color: $primary;
-  }
+  --#{$prefix}videoplayer-button-background: var(--#{$prefix}color-background-primary);
+  --#{$prefix}videoplayer-control-background: var(--#{$prefix}color-background-primary);
+
+  .vjs-big-play-button,
   &:hover .vjs-big-play-button,
   &.vjs-big-play-button:focus {
-    background-color: $primary;
+    background-color: var(--#{$prefix}videoplayer-button-background);
   }
+
   .vjs-control-bar {
-    background-color: $primary;
+    background-color: var(--#{$prefix}videoplayer-control-background);
     font-size: 1rem;
+
     @include media-breakpoint-up(lg) {
       min-height: 48px;
     }
@@ -27,11 +44,14 @@
   display: flex;
   justify-content: center;
   border: none;
+
   .accordion-button {
     border: none;
   }
+
   .accordion-item {
     width: 100%;
+
     @include media-breakpoint-up(lg) {
       width: 75ch;
     }

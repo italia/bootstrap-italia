@@ -1,0 +1,1968 @@
+{
+    "acceptoverlay": [
+        {
+            "description": "",
+            "value": "var(--bsi-color-background-inverse)",
+            "variable-name": "--bsi-acceptoverlay-color-background"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-text)",
+            "variable-name": "--bsi-acceptoverlay-color-text"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-text-secondary)",
+            "variable-name": "--bsi-acceptoverlay-label-color"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-border-subtle)",
+            "variable-name": "--bsi-acceptoverlay-label-border-color"
+        },
+        {
+            "description": "",
+            "value": "0.9",
+            "variable-name": "--bsi-acceptoverlay-opacity"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-spacing-s)",
+            "variable-name": "--bsi-acceptoverlay-spacing-inset"
+        },
+        {
+            "description": "",
+            "value": "0.95",
+            "variable-name": "--bsi-acceptoverlay-primary-opacity"
+        },
+        {
+            "description": "",
+            "value": "600px",
+            "variable-name": "--bsi-acceptoverlay-inner-width"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-spacing-s)",
+            "variable-name": "--bsi-acceptoverlay-icon-spacing"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-icon-primary)",
+            "variable-name": "--bsi-acceptoverlay-icon-fill"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-spacing-s)",
+            "variable-name": "--bsi-acceptoverlay-buttons-spacing"
+        }
+    ],
+    "accordion": [
+        {
+            "description": "Controls the active background color for the accordion button, using color tokens.",
+            "value": "var(--bsi-color-background-primary)",
+            "variable-name": "--bsi-accordion-active-bg"
+        },
+        {
+            "description": "Controls the active text color for the accordion button, using color tokens.",
+            "value": "var(--bsi-color-text-primary-active)",
+            "variable-name": "--bsi-accordion-active-color"
+        },
+        {
+            "description": "Controls the background color for the accordion item, using color tokens.",
+            "value": "var(--bsi-page-background)",
+            "variable-name": "--bsi-accordion-background"
+        },
+        {
+            "description": "Controls the border color for the accordion, using color tokens.",
+            "value": "var(--bsi-color-border-subtle)",
+            "variable-name": "--bsi-accordion-border-color"
+        },
+        {
+            "description": "Controls the border radius for the accordion, using radius tokens.",
+            "value": "var(--bsi-radius-smooth)",
+            "variable-name": "--bsi-accordion-border-radius"
+        },
+        {
+            "description": "Controls the border width for the accordion wrapper.",
+            "value": "0",
+            "variable-name": "--bsi-accordion-border-width"
+        },
+        {
+            "description": "Controls the horizontal padding for the accordion body, using spacing tokens.",
+            "value": "var(--bsi-spacing-m)",
+            "variable-name": "--bsi-accordion-body-padding-x"
+        },
+        {
+            "description": "Controls the vertical padding for the accordion body, using spacing tokens.",
+            "value": "var(--bsi-spacing-s)",
+            "variable-name": "--bsi-accordion-body-padding-y"
+        },
+        {
+            "description": "Controls the icon for the active accordion button.",
+            "value": "#{escape-svg($accordion-button-active-icon)}",
+            "variable-name": "--bsi-accordion-btn-active-icon"
+        },
+        {
+            "description": "Controls the background color for the accordion button.",
+            "value": "var(--bsi-accordion-background)",
+            "variable-name": "--bsi-accordion-btn-bg"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-text-primary)",
+            "variable-name": "--bsi-accordion-btn-color"
+        },
+        {
+            "description": "Controls the border color for the accordion button on focus.",
+            "value": "#{$accordion-button-focus-border-color}",
+            "variable-name": "--bsi-accordion-btn-focus-border-color"
+        },
+        {
+            "description": "Controls the box shadow for the accordion button on focus.",
+            "value": "#{$accordion-button-focus-box-shadow}",
+            "variable-name": "--bsi-accordion-btn-focus-box-shadow"
+        },
+        {
+            "description": "Controls the icon for the accordion button.",
+            "value": "#{escape-svg($accordion-button-icon)}",
+            "variable-name": "--bsi-accordion-btn-icon"
+        },
+        {
+            "description": "Controls the transform for the accordion button icon when active.",
+            "value": "rotate(-180deg)",
+            "variable-name": "--bsi-accordion-btn-icon-transform"
+        },
+        {
+            "description": "Controls the transition for the accordion button icon.",
+            "value": "transform 0.2s ease-in-out",
+            "variable-name": "--bsi-accordion-btn-icon-transition"
+        },
+        {
+            "description": "Controls the width of the accordion button icon.",
+            "value": "1.25rem",
+            "variable-name": "--bsi-accordion-btn-icon-width"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-font-line-height-1)",
+            "variable-name": "--bsi-accordion-btn-line-height"
+        },
+        {
+            "description": "Controls the horizontal padding for the accordion button, using spacing tokens.",
+            "value": "var(--bsi-spacing-m)",
+            "variable-name": "--bsi-accordion-btn-padding-x"
+        },
+        {
+            "description": "Controls the vertical padding for the accordion button, using spacing tokens.",
+            "value": "var(--bsi-spacing-s)",
+            "variable-name": "--bsi-accordion-btn-padding-y"
+        },
+        {
+            "description": "Controls the text color for the accordion item, using color tokens.",
+            "value": "var(--bsi-color-text-base)",
+            "variable-name": "--bsi-accordion-color"
+        },
+        {
+            "description": "Controls the inner border radius for the accordion button, using radius tokens.",
+            "value": "var(--bsi-radius-smooth)",
+            "variable-name": "--bsi-accordion-inner-border-radius"
+        },
+        {
+            "description": "Controls the border width for the accordion item.",
+            "value": "1px",
+            "variable-name": "--bsi-accordion-item-border-width"
+        },
+        {
+            "description": "Controls the transition timing for the accordion button, using transition tokens.",
+            "value": "var(--bsi-transition-instant)",
+            "variable-name": "--bsi-accordion-transition"
+        }
+    ],
+    "alert": [
+        {
+            "description": "Controls the background color for the alert, using color tokens.",
+            "value": "var(--bsi-color-background-inverse)",
+            "variable-name": "--bsi-alert-background-color"
+        },
+        {
+            "description": "Controls the external border color for the alert, using color tokens.",
+            "value": "var(--bsi-color-border-secondary)",
+            "variable-name": "--bsi-alert-border-color"
+        },
+        {
+            "description": "Controls the border size for the alert.",
+            "value": "0.5rem",
+            "variable-name": "--bsi-alert-border-size"
+        },
+        {
+            "description": "Controls the heading color for the alert, using color tokens.",
+            "value": "var(--bsi-color-text-base)",
+            "variable-name": "--bsi-alert-heading-color"
+        },
+        {
+            "description": "Controls the icon spacing for the alert, using spacing tokens.",
+            "value": "var(--bsi-icon-spacing)",
+            "variable-name": "--bsi-alert-icon-spacing"
+        },
+        {
+            "description": "Controls the inset spacing for the alert, using spacing tokens.",
+            "value": "var(--bsi-spacing-s)",
+            "variable-name": "--bsi-alert-spacing-inset"
+        },
+        {
+            "description": "Controls the extra inset spacing for the alert, using spacing tokens.",
+            "value": "var(--bsi-spacing-16x)",
+            "variable-name": "--bsi-alert-spacing-inset-extra"
+        },
+        {
+            "description": "Controls the outside spacing for the alert, using spacing tokens.",
+            "value": "var(--bsi-spacing-m)",
+            "variable-name": "--bsi-alert-spacing-outside"
+        },
+        {
+            "description": "Controls the text color for the alert, using color tokens.",
+            "value": "var(--bsi-color-text-base)",
+            "variable-name": "--bsi-alert-text-color"
+        }
+    ],
+    "autocomplete": [
+        {
+            "description": "",
+            "value": "0",
+            "variable-name": "--bsi-autocomplete-list-spacing"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-background-inverse)",
+            "variable-name": "--bsi-autocomplete-list-background-color"
+        },
+        {
+            "description": "Change to show border",
+            "value": "transparent",
+            "variable-name": "--bsi-autocomplete-list-border-color"
+        },
+        {
+            "description": "Change to 1px to show border",
+            "value": "0",
+            "variable-name": "--bsi-autocomplete-list-border-size"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-radius-smooth)",
+            "variable-name": "--bsi-autocomplete-list-radius"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-elevation-high)",
+            "variable-name": "--bsi-autocomplete-list-shadow"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-text-secondary)",
+            "variable-name": "--bsi-autocomplete-item-color"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-text-primary)",
+            "variable-name": "--bsi-autocomplete-item-hover-color"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-background-primary-lighter)",
+            "variable-name": "--bsi-autocomplete-item-hover-background-color"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-icon-primary)",
+            "variable-name": "--bsi-autocomplete-item-hover-icon-color"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-body-font-size)",
+            "variable-name": "--bsi-autocomplete-item-text-size"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-spacing-xs) var(--bsi-spacing-s)",
+            "variable-name": "--bsi-autocomplete-item-spacing"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-text-primary)",
+            "variable-name": "--bsi-autocomplete-text-highlight"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-body-font-size-l)",
+            "variable-name": "--bsi-autocomplete-item-text-size"
+        }
+    ],
+    "avatar": [
+        {
+            "description": "Controls the background for the avatar, using color tokens.",
+            "value": "var(--bsi-color-background-secondary-lighter)",
+            "variable-name": "--bsi-avatar-background"
+        },
+        {
+            "description": "Controls the dot border color for the avatar, using color tokens.",
+            "value": "var(--bsi-color-border-inverse)",
+            "variable-name": "--bsi-avatar-dot-border-color"
+        },
+        {
+            "description": "Controls the dot border size for the avatar.",
+            "value": "2px",
+            "variable-name": "--bsi-avatar-dot-border-size"
+        },
+        {
+            "description": "Controls the bottom offset for the avatar dot.",
+            "value": "0",
+            "variable-name": "--bsi-avatar-dot-offset-bottom"
+        },
+        {
+            "description": "Controls the right offset for the avatar dot.",
+            "value": "0",
+            "variable-name": "--bsi-avatar-dot-offset-right"
+        },
+        {
+            "description": "Controls the top offset for the avatar dot.",
+            "value": "4px",
+            "variable-name": "--bsi-avatar-dot-offset-top"
+        },
+        {
+            "description": "Controls the size of the avatar dot.",
+            "value": "12px",
+            "variable-name": "--bsi-avatar-dot-size"
+        },
+        {
+            "description": "Controls the font size for the avatar, using font tokens.",
+            "value": "var(--bsi-font-size-3)",
+            "variable-name": "--bsi-avatar-font-size"
+        },
+        {
+            "description": "Controls the font weight for the avatar, using font tokens.",
+            "value": "var(--bsi-font-weight-solid)",
+            "variable-name": "--bsi-avatar-font-weight"
+        },
+        {
+            "description": "Controls the icon size for the avatar, using icon tokens.",
+            "value": "var(--bsi-icon-size-s)",
+            "variable-name": "--bsi-avatar-icon-size"
+        },
+        {
+            "description": "Controls the overlay background for the avatar, using color tokens.",
+            "value": "var(--bsi-color-background-emphasis)",
+            "variable-name": "--bsi-avatar-overlay-background"
+        },
+        {
+            "description": "Controls the border radius for the avatar, using radius tokens.",
+            "value": "var(--bsi-radius-circle)",
+            "variable-name": "--bsi-avatar-radius"
+        },
+        {
+            "description": "Controls the default size for the avatar.",
+            "value": "2.5rem",
+            "variable-name": "--bsi-avatar-size"
+        },
+        {
+            "description": "Controls the text color for the avatar, using color tokens.",
+            "value": "var(--bsi-color-text-secondary)",
+            "variable-name": "--bsi-avatar-text-color"
+        }
+    ],
+    "backtop": [
+        {
+            "description": "Controls the background color of the button, using color tokens",
+            "value": "var(--bsi-color-background-primary)",
+            "variable-name": "--bsi-backtop-background"
+        },
+        {
+            "description": "Controls the distance from the bottom and right edges",
+            "value": "1rem",
+            "variable-name": "--bsi-backtop-position"
+        },
+        {
+            "description": "Controls the border radius of the button, using radius tokens",
+            "value": "var(--bsi-radius-circle)",
+            "variable-name": "--bsi-backtop-radius"
+        },
+        {
+            "description": "Controls the width and height of the button",
+            "value": "2.5rem",
+            "variable-name": "--bsi-backtop-sizing"
+        }
+    ],
+    "badge": [
+        {
+            "description": "Controls the border radius for the badge, using radius tokens.",
+            "value": "var(--bsi-radius-smooth)",
+            "variable-name": "--bsi-badge-border-radius"
+        },
+        {
+            "description": "Controls the font size for the badge, using font tokens.",
+            "value": "var(--bsi-label-font-size-s)",
+            "variable-name": "--bsi-badge-font-size"
+        },
+        {
+            "description": "Controls the relative font size for the badge.",
+            "value": "0.75em",
+            "variable-name": "--bsi-badge-font-size-relative"
+        },
+        {
+            "description": "Controls the font weight for the badge, using font tokens.",
+            "value": "var(--bsi-font-weight-solid)",
+            "variable-name": "--bsi-badge-font-weight"
+        },
+        {
+            "description": "Controls the horizontal padding for the badge, using spacing tokens.",
+            "value": "var(--bsi-spacing-xs)",
+            "variable-name": "--bsi-badge-padding-x"
+        },
+        {
+            "description": "Controls the vertical padding for the badge, using spacing tokens.",
+            "value": "var(--bsi-spacing-3xs)",
+            "variable-name": "--bsi-badge-padding-y"
+        },
+        {
+            "description": "Controls the text color for the badge, using color tokens.",
+            "value": "var(--bsi-color-text-inverse)",
+            "variable-name": "--bsi-badge-text-color"
+        }
+    ],
+    "breadcrumb": [
+        {
+            "description": "Controls the background for the breadcrumb.",
+            "value": "transparent",
+            "variable-name": "--bsi-breadcrumb-background"
+        },
+        {
+            "description": "Controls the border radius for the breadcrumb.",
+            "value": "0",
+            "variable-name": "--bsi-breadcrumb-border-radius"
+        },
+        {
+            "description": "Controls the divider character for the breadcrumb.",
+            "value": "'/'",
+            "variable-name": "--bsi-breadcrumb-divider"
+        },
+        {
+            "description": "Controls the divider color for the breadcrumb, using color tokens.",
+            "value": "var(--bsi-color-border-secondary)",
+            "variable-name": "--bsi-breadcrumb-divider-color"
+        },
+        {
+            "description": "Controls the flipped divider for the breadcrumb.",
+            "value": "var(--bsi-breadcrumb-divider)",
+            "variable-name": "--bsi-breadcrumb-divider-flipped"
+        },
+        {
+            "description": "Controls the font size for the breadcrumb, using font tokens.",
+            "value": "var(--bsi-label-font-size)",
+            "variable-name": "--bsi-breadcrumb-font-size"
+        },
+        {
+            "description": "Controls the horizontal padding for breadcrumb items, using spacing tokens.",
+            "value": "var(--bsi-spacing-xs)",
+            "variable-name": "--bsi-breadcrumb-item-padding-x"
+        },
+        {
+            "description": "Controls the link color for the breadcrumb, using color tokens.",
+            "value": "var(--bsi-color-text-secondary)",
+            "variable-name": "--bsi-breadcrumb-link-color"
+        },
+        {
+            "description": "Controls the link font weight for the breadcrumb, using font tokens.",
+            "value": "var(--bsi-font-weight-solid)",
+            "variable-name": "--bsi-breadcrumb-link-font-weight"
+        },
+        {
+            "description": "Controls the margin for the breadcrumb, using spacing tokens.",
+            "value": "var(--bsi-spacing-s)",
+            "variable-name": "--bsi-breadcrumb-margin"
+        },
+        {
+            "description": "Controls the padding for the breadcrumb, using spacing tokens.",
+            "value": "var(--bsi-spacing-3xs)",
+            "variable-name": "--bsi-breadcrumb-padding"
+        },
+        {
+            "description": "Controls the separator color for the breadcrumb, using color tokens.",
+            "value": "var(--bsi-color-background-secondary)",
+            "variable-name": "--bsi-breadcrumb-separator-color"
+        },
+        {
+            "description": "Controls the separator spacing for the breadcrumb, using spacing tokens.",
+            "value": "var(--bsi-spacing-xxs)",
+            "variable-name": "--bsi-breadcrumb-separator-spacing"
+        }
+    ],
+    "btn": [
+        {
+            "description": "Controls the background for the button.",
+            "value": "transparent",
+            "variable-name": "--bsi-btn-background"
+        },
+        {
+            "description": "Controls the border color for the button.",
+            "value": "transparent",
+            "variable-name": "--bsi-btn-border-color"
+        },
+        {
+            "description": "Controls the border radius for the button, using radius tokens.",
+            "value": "var(--bsi-radius-smooth)",
+            "variable-name": "--bsi-btn-border-radius"
+        },
+        {
+            "description": "Controls the border size for the button.",
+            "value": "0",
+            "variable-name": "--bsi-btn-border-size"
+        },
+        {
+            "description": "Controls the opacity for disabled buttons.",
+            "value": "0.5",
+            "variable-name": "--bsi-btn-disabled-opacity"
+        },
+        {
+            "description": "Controls the font family for the button, using font tokens.",
+            "value": "var(--bsi-font-sans)",
+            "variable-name": "--bsi-btn-font-family"
+        },
+        {
+            "description": "Controls the font size for the button, using font tokens.",
+            "value": "var(--bsi-label-font-size)",
+            "variable-name": "--bsi-btn-font-size"
+        },
+        {
+            "description": "Controls the font weight for the button, using font tokens.",
+            "value": "var(--bsi-font-weight-solid)",
+            "variable-name": "--bsi-btn-font-weight"
+        },
+        {
+            "description": "Controls the line height for the button, using font tokens.",
+            "value": "var(--bsi-font-line-height-3)",
+            "variable-name": "--bsi-btn-line-height"
+        },
+        {
+            "description": "Controls the outline border color for the button.",
+            "value": "transparent",
+            "variable-name": "--bsi-btn-outline-border-color"
+        },
+        {
+            "description": "Controls the outline border size for the button.",
+            "value": "2px",
+            "variable-name": "--bsi-btn-outline-border-size"
+        },
+        {
+            "description": "Controls the horizontal padding for the button, using spacing tokens.",
+            "value": "var(--bsi-spacing-s)",
+            "variable-name": "--bsi-btn-padding-x"
+        },
+        {
+            "description": "Controls the vertical padding for the button, using spacing tokens.",
+            "value": "var(--bsi-spacing-xs)",
+            "variable-name": "--bsi-btn-padding-y"
+        },
+        {
+            "description": "Controls the text color for the button, using color tokens.",
+            "value": "var(--bsi-color-text-primary)",
+            "variable-name": "--bsi-btn-text-color"
+        }
+    ],
+    "callout": [
+        {
+            "description": "",
+            "value": "var(--bsi-page-background-color)",
+            "variable-name": "--bsi-callout-background-color"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-border-secondary)",
+            "variable-name": "--bsi-callout-border-color"
+        },
+        {
+            "description": "",
+            "value": "2px",
+            "variable-name": "--bsi-callout-border-size"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-font-sans)",
+            "variable-name": "--bsi-callout-font-family"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-icon-secondary)",
+            "variable-name": "--bsi-callout-icon-color"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-spacing-m)",
+            "variable-name": "--bsi-callout-inner-spacing"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-spacing-l)",
+            "variable-name": "--bsi-callout-outer-spacing"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-text-secondary)",
+            "variable-name": "--bsi-callout-text-color"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-body-font-size)",
+            "variable-name": "--bsi-callout-text-font-size"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-text-secondary)",
+            "variable-name": "--bsi-callout-title-color"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-heading-6-font-size)",
+            "variable-name": "--bsi-callout-title-font-size"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-heading-font-weight-weak)",
+            "variable-name": "--bsi-callout-title-font-weight"
+        }
+    ],
+    "chip": [
+        {
+            "description": "Controls the background color for the chip, using color tokens.",
+            "value": "var(--bsi-color-background-muted)",
+            "variable-name": "--bsi-chip-background-color"
+        },
+        {
+            "description": "Controls the border color for the chip, using color tokens.",
+            "value": "var(--bsi-color-border-subtle)",
+            "variable-name": "--bsi-chip-border-color"
+        },
+        {
+            "description": "Controls the border radius for the chip, using radius tokens.",
+            "value": "var(--bsi-radius-rounded)",
+            "variable-name": "--bsi-chip-border-radius"
+        },
+        {
+            "description": "Controls the border width for the chip.",
+            "value": "1px",
+            "variable-name": "--bsi-chip-border-width"
+        },
+        {
+            "description": "Controls the icon color for the chip, using icon tokens.",
+            "value": "var(--bsi-icon-secondary)",
+            "variable-name": "--bsi-chip-icon-color"
+        },
+        {
+            "description": "Controls the link hover color for the chip, using color tokens.",
+            "value": "var(--bsi-color-text-inverse)",
+            "variable-name": "--bsi-chip-link-hover"
+        },
+        {
+            "description": "Controls the horizontal padding for the chip, using spacing tokens.",
+            "value": "var(--bsi-spacing-xs)",
+            "variable-name": "--bsi-chip-padding-x"
+        },
+        {
+            "description": "Controls the vertical padding for the chip, using spacing tokens.",
+            "value": "var(--bsi-spacing-3xs)",
+            "variable-name": "--bsi-chip-padding-y"
+        },
+        {
+            "description": "Controls the text color for the chip, using color tokens.",
+            "value": "var(--bsi-color-text-secondary)",
+            "variable-name": "--bsi-chip-text-color"
+        },
+        {
+            "description": "Controls the text line height for the chip, using font tokens.",
+            "value": "var(--bsi-label-line-height)",
+            "variable-name": "--bsi-chip-text-line-height"
+        },
+        {
+            "description": "Controls the text size for the chip, using font tokens.",
+            "value": "var(--bsi-label-font-size)",
+            "variable-name": "--bsi-chip-text-size"
+        },
+        {
+            "description": "Controls the text weight for the chip, using font tokens.",
+            "value": "var(--bsi-font-weight-solid)",
+            "variable-name": "--bsi-chip-text-weight"
+        }
+    ],
+    "dropdown": [
+        {
+            "description": "Controls the speed of the dropdown open animation, using transition tokens.",
+            "value": "var(--bsi-transition-instant)",
+            "variable-name": "--bsi-dropdown-animation-speed"
+        },
+        {
+            "description": "Controls the default background, using color tokens.",
+            "value": "var(--bsi-color-background-inverse)",
+            "variable-name": "--bsi-dropdown-background"
+        },
+        {
+            "description": "Controls the default border color.",
+            "value": "transparent",
+            "variable-name": "--bsi-dropdown-border-color"
+        },
+        {
+            "description": "Controls the border radius, using radius tokens.",
+            "value": "var(--bsi-radius-smooth)",
+            "variable-name": "--bsi-dropdown-border-radius"
+        },
+        {
+            "description": "Controls the border width.",
+            "value": "0",
+            "variable-name": "--bsi-dropdown-border-width"
+        },
+        {
+            "description": "Controls the box shadow, using elevation tokens.",
+            "value": "var(--bsi-elevation-medium)",
+            "variable-name": "--bsi-dropdown-box-shadow"
+        },
+        {
+            "description": "Controls the default text color, using color tokens.",
+            "value": "var(--bsi-color-text-base)",
+            "variable-name": "--bsi-dropdown-color"
+        },
+        {
+            "description": "Controls the divider background color, using color tokens.",
+            "value": "var(--bsi-color-border-subtle)",
+            "variable-name": "--bsi-dropdown-divider-bg"
+        },
+        {
+            "description": "Controls the divider margin top and bottom, using spacing tokens.",
+            "value": "var(--bsi-spacing-xxs)",
+            "variable-name": "--bsi-dropdown-divider-margin-y"
+        },
+        {
+            "description": "Controls the font size of dropdown items, using font tokens.",
+            "value": "var(--bsi-label-font-size)",
+            "variable-name": "--bsi-dropdown-font-size"
+        },
+        {
+            "description": "Controls the dropdown header text color, using color tokens.",
+            "value": "var(--bsi-color-text-secondary)",
+            "variable-name": "--bsi-dropdown-header-color"
+        },
+        {
+            "description": "Controls the dropdown header font size, using font tokens.",
+            "value": "var(--bsi-label-font-size)",
+            "variable-name": "--bsi-dropdown-header-font-size"
+        },
+        {
+            "description": "Controls the dropdown header padding left and right, using spacing tokens.",
+            "value": "var(--bsi-spacing-s)",
+            "variable-name": "--bsi-dropdown-header-padding-x"
+        },
+        {
+            "description": "Controls the dropdown header padding top and bottom, using spacing tokens.",
+            "value": "var(--bsi-spacing-xxs)",
+            "variable-name": "--bsi-dropdown-header-padding-y"
+        },
+        {
+            "description": "Controls the inner border radius for first and last items, using radius tokens.",
+            "value": "var(--bsi-radius-smooth)",
+            "variable-name": "--bsi-dropdown-inner-border-radius"
+        },
+        {
+            "description": "Controls the dropdown item padding left and right, using spacing tokens.",
+            "value": "var(--bsi-spacing-s)",
+            "variable-name": "--bsi-dropdown-item-padding-x"
+        },
+        {
+            "description": "Controls the dropdown item padding top and bottom, using spacing tokens.",
+            "value": "var(--bsi-spacing-xs)",
+            "variable-name": "--bsi-dropdown-item-padding-y"
+        },
+        {
+            "description": "Controls the active link color, using color tokens.",
+            "value": "var(--bsi-color-text-primary-active)",
+            "variable-name": "--bsi-dropdown-link-active-color"
+        },
+        {
+            "description": "Controls the link color in dropdown items, using color tokens.",
+            "value": "var(--bsi-color-text-primary)",
+            "variable-name": "--bsi-dropdown-link-color"
+        },
+        {
+            "description": "Controls the link hover color in dropdown items, using color tokens.",
+            "value": "var(--bsi-color-text-primary-hover)",
+            "variable-name": "--bsi-dropdown-link-hover-color"
+        },
+        {
+            "description": "Controls the minimum width of the dropdown menu.",
+            "value": "10rem",
+            "variable-name": "--bsi-dropdown-min-width"
+        },
+        {
+            "description": "Controls the size of the notch element.",
+            "value": "1.125rem",
+            "variable-name": "--bsi-dropdown-notch-base-size"
+        },
+        {
+            "description": "Controls the x position of the notch element.",
+            "value": "20px",
+            "variable-name": "--bsi-dropdown-notch-position-x"
+        },
+        {
+            "description": "Controls the y position of the notch element.",
+            "value": "-8px",
+            "variable-name": "--bsi-dropdown-notch-position-y"
+        },
+        {
+            "description": "Controls the dropdown menu padding left and right.",
+            "value": "0",
+            "variable-name": "--bsi-dropdown-padding-x"
+        },
+        {
+            "description": "Controls the dropdown menu padding top and bottom, using spacing tokens.",
+            "value": "var(--bsi-spacing-xxs)",
+            "variable-name": "--bsi-dropdown-padding-y"
+        },
+        {
+            "description": "Controls the space between dropdown toggle and menu.",
+            "value": "0.125rem",
+            "variable-name": "--bsi-dropdown-spacer"
+        },
+        {
+            "description": "Controls the vertical shift for dropdown open animation.",
+            "value": "10px",
+            "variable-name": "--bsi-dropdown-vertical-shift"
+        },
+        {
+            "description": "Controls the z-index of the dropdown menu.",
+            "value": "8",
+            "variable-name": "--bsi-dropdown-zindex"
+        }
+    ],
+    "footer": [
+        {
+            "description": "Controls the bottom background for the footer, using color tokens.",
+            "value": "var(--bsi-color-background-primary-deep)",
+            "variable-name": "--bsi-footer-bottom-background"
+        },
+        {
+            "description": "Controls the brand icon color for the footer, using icon tokens.",
+            "value": "var(--bsi-icon-inverse)",
+            "variable-name": "--bsi-footer-brand-icon-color"
+        },
+        {
+            "description": "Controls the brand icon size for the footer.",
+            "value": "3rem",
+            "variable-name": "--bsi-footer-brand-icon-size"
+        },
+        {
+            "description": "Controls the top background for the footer, using color tokens.",
+            "value": "var(--bsi-color-background-primary-muted)",
+            "variable-name": "--bsi-footer-top-background"
+        },
+        {
+            "description": "56px",
+            "value": "3.5rem",
+            "variable-name": "--bsi-footer-brand-icon-size"
+        }
+    ],
+    "form": [
+        {
+            "description": "",
+            "value": "2.5rem",
+            "variable-name": "--bsi-form-control-height"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-spacing-xxs)",
+            "variable-name": "--bsi-form-control-spacing"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-background-inverse)",
+            "variable-name": "--bsi-form-control-background-color"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-border-secondary)",
+            "variable-name": "--bsi-form-control-border-color"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-radius-smooth)",
+            "variable-name": "--bsi-form-control-border-radius"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-text-muted)",
+            "variable-name": "--bsi-form-control-placeholder-color"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-text-base)",
+            "variable-name": "--bsi-form-control-label-color"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-text-secondary)",
+            "variable-name": "--bsi-form-control-text-color"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-body-font-size)",
+            "variable-name": "--bsi-form-control-font-size"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-spacing-m)",
+            "variable-name": "--bsi-form-group-spacing-y"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-border-secondary)",
+            "variable-name": "--bsi-form-checkbox-border-color"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-radius-smooth)",
+            "variable-name": "--bsi-form-checkbox-border-radius"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-background-primary)",
+            "variable-name": "--bsi-form-checked-color"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-border-subtle)",
+            "variable-name": "--bsi-form-control-border-color"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-background-muted)",
+            "variable-name": "--bsi-form-control-background-color"
+        },
+        {
+            "description": "",
+            "value": "transparent",
+            "variable-name": "--bsi-form-control-border-color"
+        },
+        {
+            "description": "",
+            "value": "0",
+            "variable-name": "--bsi-form-control-border-radius"
+        },
+        {
+            "description": "",
+            "value": "transparent",
+            "variable-name": "--bsi-form-control-background-color"
+        },
+        {
+            "description": "",
+            "value": "0",
+            "variable-name": "--bsi-form-control-spacing"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-spacing-xxs) var(--bsi-spacing-3xs)",
+            "variable-name": "--bsi-form-control-spacing"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-label-font-size)",
+            "variable-name": "--bsi-form-control-font-size"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-lead-font-size)",
+            "variable-name": "--bsi-form-control-font-size"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-border-danger)",
+            "variable-name": "--bsi-form-checkbox-border-color"
+        }
+    ],
+    "header": [
+        {
+            "description": "Controls the brand color for the header, using color tokens.",
+            "value": "var(--bsi-color-text-inverse)",
+            "variable-name": "--bsi-header-brand-color"
+        },
+        {
+            "description": "Controls the brand icon color for the header, using icon tokens.",
+            "value": "var(--bsi-icon-inverse)",
+            "variable-name": "--bsi-header-brand-icon-color"
+        },
+        {
+            "description": "Controls the brand size for the header.",
+            "value": "2.5rem",
+            "variable-name": "--bsi-header-brand-size"
+        },
+        {
+            "description": "Controls the brand spacing for the header, using spacing tokens.",
+            "value": "var(--it-spacing-14x)",
+            "variable-name": "--bsi-header-brand-spacing"
+        },
+        {
+            "description": "Controls the brand tagline size for the header, using font tokens.",
+            "value": "var(--bsi-body-font-size)",
+            "variable-name": "--bsi-header-brand-tagline-size"
+        },
+        {
+            "description": "Controls the brand title size for the header, using font tokens.",
+            "value": "var(--bsi-heading-5-font-size)",
+            "variable-name": "--bsi-header-brand-title-size"
+        },
+        {
+            "description": "Controls the center background for the header, using color tokens.",
+            "value": "var(--bsi-color-background-primary)",
+            "variable-name": "--bsi-header-center-background"
+        },
+        {
+            "description": "Controls the center font size for the header, using font tokens.",
+            "value": "var(--bsi-label-font-size-s)",
+            "variable-name": "--bsi-header-center-font-size"
+        },
+        {
+            "description": "Controls the center height for the header.",
+            "value": "4.5rem",
+            "variable-name": "--bsi-header-center-height"
+        },
+        {
+            "description": "Controls the center text color for the header, using color tokens.",
+            "value": "var(--bsi-color-text-inverse)",
+            "variable-name": "--bsi-header-center-text-color"
+        },
+        {
+            "description": "Controls the nav background for the header, using color tokens.",
+            "value": "var(--bsi-color-background-primary)",
+            "variable-name": "--bsi-header-nav-background"
+        },
+        {
+            "description": "Controls the nav secondary font size for the header, using font tokens.",
+            "value": "var(--bsi-label-font-size)",
+            "variable-name": "--bsi-header-nav-secondary-font-size"
+        },
+        {
+            "description": "Controls the nav text color for the header, using color tokens.",
+            "value": "var(--bsi-color-link)",
+            "variable-name": "--bsi-header-nav-text-color"
+        },
+        {
+            "description": "Controls the search button background for the header, using color tokens.",
+            "value": "var(--bsi-color-background-inverse)",
+            "variable-name": "--bsi-header-search-button-background"
+        },
+        {
+            "description": "Controls the search button color for the header, using icon tokens.",
+            "value": "var(--bsi-icon-inverse)",
+            "variable-name": "--bsi-header-search-button-color"
+        },
+        {
+            "description": "Controls the search button size for the header.",
+            "value": "3rem",
+            "variable-name": "--bsi-header-search-button-size"
+        },
+        {
+            "description": "Controls the search icon color for the header, using icon tokens.",
+            "value": "var(--bsi-icon-inverse)",
+            "variable-name": "--bsi-header-search-icon-color"
+        },
+        {
+            "description": "Controls the search icon size for the header.",
+            "value": "1.5rem",
+            "variable-name": "--bsi-header-search-icon-size"
+        },
+        {
+            "description": "Controls the slim background for the header.  todo: use variable when ready",
+            "value": "var(--it-color-blue-30)",
+            "variable-name": "--bsi-header-slim-background"
+        },
+        {
+            "description": "Controls the slim border color for the header.",
+            "value": "hsla(0, 0%, 100%, 0.2)",
+            "variable-name": "--bsi-header-slim-border-color"
+        },
+        {
+            "description": "Controls the slim font size for the header, using font tokens.",
+            "value": "var(--bsi-label-font-size-s)",
+            "variable-name": "--bsi-header-slim-font-size"
+        },
+        {
+            "description": "Controls the slim height for the header.",
+            "value": "3rem",
+            "variable-name": "--bsi-header-slim-height"
+        },
+        {
+            "description": "Controls the slim text color for the header, using color tokens.",
+            "value": "var(--bsi-color-text-inverse)",
+            "variable-name": "--bsi-header-slim-text-color"
+        },
+        {
+            "description": "Controls the social color for the header, using icon tokens.",
+            "value": "var(--bsi-icon-inverse)",
+            "variable-name": "--bsi-header-social-color"
+        },
+        {
+            "description": "Controls the inset spacing for the header, using spacing tokens.",
+            "value": "var(--bsi-spacing-xxs)",
+            "variable-name": "--bsi-header-spacing-inset"
+        },
+        {
+            "description": "56px",
+            "value": "3.5rem",
+            "variable-name": "--bsi-header-brand-size"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-icon-primary)",
+            "variable-name": "--bsi-header-search-icon-color"
+        },
+        {
+            "description": "72px",
+            "value": "4.5rem",
+            "variable-name": "--bsi-header-brand-size"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-heading-3-font-size)",
+            "variable-name": "--bsi-header-brand-title-size"
+        },
+        {
+            "description": "120px",
+            "value": "7.5rem",
+            "variable-name": "--bsi-header-center-height"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-text-inverse)",
+            "variable-name": "--bsi-header-nav-text-color"
+        }
+    ],
+    "hero": [
+        {
+            "description": "",
+            "value": "var(--bsi-color-background-primary)",
+            "variable-name": "--bsi-hero-background-color"
+        },
+        {
+            "description": "",
+            "value": "1rem",
+            "variable-name": "--bsi-hero-cat-size"
+        },
+        {
+            "description": "",
+            "value": "300px",
+            "variable-name": "--bsi-hero-height"
+        },
+        {
+            "description": "",
+            "value": "-3rem",
+            "variable-name": "--bsi-hero-overlap-negative-spacing"
+        },
+        {
+            "description": "",
+            "value": "48px",
+            "variable-name": "--bsi-hero-overlap-spacing-inset"
+        },
+        {
+            "description": "",
+            "value": "transparent",
+            "variable-name": "--bsi-hero-overlay-background"
+        },
+        {
+            "description": "",
+            "value": "rgba(var(--bsi-color-background-primary), 0.8)",
+            "variable-name": "--bsi-hero-primary-bg"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-font-serif)",
+            "variable-name": "--bsi-hero-text-family"
+        },
+        {
+            "description": "",
+            "value": "#fff",
+            "variable-name": "--bsi-hero-text-color"
+        }
+    ],
+    "it": [
+        {
+            "description": "",
+            "value": "var(--bsi-color-background-inverse)",
+            "variable-name": "--bsi-it-card-background"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-border-subtle)",
+            "variable-name": "--bsi-it-card-border-color"
+        },
+        {
+            "description": "",
+            "value": "calc(var(--bsi-it-card-border-radius) - var(--bsi-it-card-border-outside-width))",
+            "variable-name": "--bsi-it-card-border-radius-inner"
+        },
+        {
+            "description": "Default background set to transparent",
+            "value": "transparent",
+            "variable-name": "--bsi-it-card-border-top-color"
+        },
+        {
+            "description": "",
+            "value": "6px",
+            "variable-name": "--bsi-it-card-border-top-width"
+        },
+        {
+            "description": "Change to 2px if needed",
+            "value": "1px",
+            "variable-name": "--bsi-it-card-border-outside-width"
+        },
+        {
+            "description": "Change to 2px if needed",
+            "value": "1px",
+            "variable-name": "--bsi-it-card-border-separator-width"
+        },
+        {
+            "description": "",
+            "value": "transparent",
+            "variable-name": "--bsi-it-card-footer-background"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-text-muted)",
+            "variable-name": "--bsi-it-card-footer-text-color"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-spacing-s)",
+            "variable-name": "--bsi-it-card-spacing-x"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-spacing-s)",
+            "variable-name": "--bsi-it-card-spacing-y"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-text-muted)",
+            "variable-name": "--bsi-it-card-category-color"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-font-weight-solid)",
+            "variable-name": "--bsi-it-card-category-font-weight"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-label-font-size)",
+            "variable-name": "--bsi-it-card-category-font-size"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-text-secondary)",
+            "variable-name": "--bsi-it-card-text-color"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-text-muted)",
+            "variable-name": "--bsi-it-card-date-color"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-label-font-size-s)",
+            "variable-name": "--bsi-it-card-date-font-size"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-text-muted)",
+            "variable-name": "--bsi-it-card-description-color"
+        },
+        {
+            "description": "",
+            "value": "auto",
+            "variable-name": "--bsi-it-card-height"
+        },
+        {
+            "description": "",
+            "value": "240px",
+            "variable-name": "--bsi-it-card-inline-min-height"
+        },
+        {
+            "description": "",
+            "value": "160px",
+            "variable-name": "--bsi-it-card-inline-mini-min-height"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-text-secondary)",
+            "variable-name": "--bsi-it-card-link-color"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-it-card-spacing-y)",
+            "variable-name": "--bsi-it-card-title-spacing-y"
+        },
+        {
+            "description": "",
+            "value": "1rem",
+            "variable-name": "--bsi-it-card-signature-font-size"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-font-mono)",
+            "variable-name": "--bsi-it-card-signature-font-family"
+        }
+    ],
+    "linklist": [
+        {
+            "description": "Controls the height of the divider between list items",
+            "value": "1px",
+            "variable-name": "--bsi-linklist-divider-size"
+        },
+        {
+            "description": "Controls the color of the linklist heading, using text color tokens",
+            "value": "var(--bsi-color-text-secondary)",
+            "variable-name": "--bsi-linklist-heading-color"
+        },
+        {
+            "description": "Controls the font size of the linklist heading, using text tokens",
+            "value": "var(--bsi-heading-6-font-size)",
+            "variable-name": "--bsi-linklist-heading-font-size"
+        },
+        {
+            "description": "Controls the font size of the list items, using text tokens",
+            "value": "var(--bsi-label-font-size)",
+            "variable-name": "--bsi-linklist-item-font-size"
+        },
+        {
+            "description": "Controls the line height of the list items, using text tokens",
+            "value": "var(--bsi-label-line-height)",
+            "variable-name": "--bsi-linklist-item-line-height"
+        },
+        {
+            "description": "Controls the vertical spacing of the list items, using spacing tokens",
+            "value": "var(--bsi-spacing-xxs)",
+            "variable-name": "--bsi-linklist-item-spacing"
+        },
+        {
+            "description": "Controls the left padding of nested linklists, using spacing tokens",
+            "value": "var(--bsi-spacing-s)",
+            "variable-name": "--bsi-linklist-nested-spacing"
+        }
+    ],
+    "megamenu": [
+        {
+            "description": "Controls the background color for the megamenu, using color tokens.",
+            "value": "var(--bsi-color-background-inverse)",
+            "variable-name": "--bsi-megamenu-background-color"
+        },
+        {
+            "description": "Controls the border color for the megamenu, using color tokens.",
+            "value": "var(--bsi-color-border-subtle)",
+            "variable-name": "--bsi-megamenu-border-color"
+        },
+        {
+            "description": "Controls the spacing for the megamenu, using spacing tokens.",
+            "value": "var(--bsi-spacing-xs)",
+            "variable-name": "--bsi-megamenu-spacing"
+        }
+    ],
+    "modal": [
+        {
+            "description": "Controls the background for the modal, using color tokens.",
+            "value": "var(--bsi-color-background-inverse)",
+            "variable-name": "--bsi-modal-bg"
+        },
+        {
+            "description": "Controls the border color for the modal.",
+            "value": "transparent",
+            "variable-name": "--bsi-modal-border-color"
+        },
+        {
+            "description": "Controls the border radius for the modal, using radius tokens.",
+            "value": "var(--bsi-radius-smooth)",
+            "variable-name": "--bsi-modal-border-radius"
+        },
+        {
+            "description": "Controls the border width for the modal.",
+            "value": "0",
+            "variable-name": "--bsi-modal-border-width"
+        },
+        {
+            "description": "Controls the box shadow for the modal, using elevation tokens.",
+            "value": "var(--bsi-elevation-medium)",
+            "variable-name": "--bsi-modal-box-shadow"
+        },
+        {
+            "description": "Controls the footer background for the modal.",
+            "value": "transparent",
+            "variable-name": "--bsi-modal-footer-bg"
+        },
+        {
+            "description": "Controls the footer border color for the modal.",
+            "value": "var(--bsi-modal-header-border-color)",
+            "variable-name": "--bsi-modal-footer-border-color"
+        },
+        {
+            "description": "Controls the footer border width for the modal.",
+            "value": "var(--bsi-modal-header-border-width)",
+            "variable-name": "--bsi-modal-footer-border-width"
+        },
+        {
+            "description": "Controls the footer gap for the modal, using spacing tokens.",
+            "value": "var(--bsi-spacing-s)",
+            "variable-name": "--bsi-modal-footer-gap"
+        },
+        {
+            "description": "Controls the header border color for the modal, using color tokens.",
+            "value": "var(--bsi-color-border-subtle)",
+            "variable-name": "--bsi-modal-header-border-color"
+        },
+        {
+            "description": "Controls the header border width for the modal.",
+            "value": "0",
+            "variable-name": "--bsi-modal-header-border-width"
+        },
+        {
+            "description": "Controls the inner border radius for the modal, using radius tokens.",
+            "value": "var(--bsi-radius-smooth)",
+            "variable-name": "--bsi-modal-inner-border-radius"
+        },
+        {
+            "description": "Controls the margin for the modal.",
+            "value": "auto",
+            "variable-name": "--bsi-modal-margin"
+        },
+        {
+            "description": "Controls the padding for the modal, using spacing tokens.",
+            "value": "var(--bsi-spacing-m)",
+            "variable-name": "--bsi-modal-padding"
+        },
+        {
+            "description": "Controls the title font size for the modal, using font tokens.",
+            "value": "var(--bsi-heading-5-font-size)",
+            "variable-name": "--bsi-modal-title-font-size"
+        },
+        {
+            "description": "Controls the title font weight for the modal, using font tokens.",
+            "value": "var(--bsi-heading-font-weight-weak)",
+            "variable-name": "--bsi-modal-title-font-weight"
+        },
+        {
+            "description": "Controls the title line height for the modal, using font tokens.",
+            "value": "var(--bsi-heading-line-height)",
+            "variable-name": "--bsi-modal-title-line-height"
+        },
+        {
+            "description": "Controls the transition for the modal.",
+            "value": "transform 0.3s ease-in-out",
+            "variable-name": "--bsi-modal-transition"
+        },
+        {
+            "description": "Controls the width for the modal.",
+            "value": "500px",
+            "variable-name": "--bsi-modal-width"
+        },
+        {
+            "description": "Controls the z-index for the modal.",
+            "value": "1055",
+            "variable-name": "--bsi-modal-zindex"
+        }
+    ],
+    "nav": [
+        {
+            "description": "Controls the disabled link color for the nav, using color tokens.",
+            "value": "var(--bsi-color-text-disabled)",
+            "variable-name": "--bsi-nav-link-disabled-color"
+        },
+        {
+            "description": "Controls the horizontal padding for nav links, using spacing tokens.",
+            "value": "var(--bsi-spacing-s)",
+            "variable-name": "--bsi-nav-link-padding-x"
+        },
+        {
+            "description": "Controls the vertical padding for nav links, using spacing tokens.",
+            "value": "var(--bsi-spacing-s)",
+            "variable-name": "--bsi-nav-link-padding-y"
+        }
+    ],
+    "navbar": [
+        {
+            "description": "",
+            "value": "#{$navbar-light-active-color}",
+            "variable-name": "--bsi-navbar-active-color"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-background-primary)",
+            "variable-name": "--bsi-navbar-background"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-text-inverse)",
+            "variable-name": "--bsi-navbar-brand-color"
+        },
+        {
+            "description": "",
+            "value": "#{$navbar-brand-font-size}",
+            "variable-name": "--bsi-navbar-brand-font-size"
+        },
+        {
+            "description": "",
+            "value": "#{$navbar-brand-margin-end}",
+            "variable-name": "--bsi-navbar-brand-margin-end"
+        },
+        {
+            "description": "",
+            "value": "#{$navbar-brand-padding-y}",
+            "variable-name": "--bsi-navbar-brand-padding-y"
+        },
+        {
+            "description": "",
+            "value": "0.75rem",
+            "variable-name": "--bsi-navbar-close-button-font-size"
+        },
+        {
+            "description": "",
+            "value": "2rem",
+            "variable-name": "--bsi-navbar-close-button-icon-size"
+        },
+        {
+            "description": "",
+            "value": "44px",
+            "variable-name": "--bsi-navbar-close-button-size"
+        },
+        {
+            "description": "",
+            "value": "#{$navbar-light-color}",
+            "variable-name": "--bsi-navbar-color"
+        },
+        {
+            "description": "",
+            "value": "#{$navbar-light-disabled-color}",
+            "variable-name": "--bsi-navbar-disabled-color"
+        },
+        {
+            "description": "",
+            "value": "0.6",
+            "variable-name": "--bsi-navbar-disabled-item-opacity"
+        },
+        {
+            "description": "",
+            "value": "1rem",
+            "variable-name": "--bsi-navbar-dropdown-icon-line-height"
+        },
+        {
+            "description": "",
+            "value": "0.75rem",
+            "variable-name": "--bsi-navbar-dropdown-icon-size"
+        },
+        {
+            "description": "",
+            "value": "1rem",
+            "variable-name": "--bsi-navbar-dropdown-icon-width"
+        },
+        {
+            "description": "",
+            "value": "1.5rem",
+            "variable-name": "--bsi-navbar-hamburger-size"
+        },
+        {
+            "description": "",
+            "value": "#{$navbar-light-hover-color}",
+            "variable-name": "--bsi-navbar-hover-color"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-border-thick)",
+            "variable-name": "--bsi-navbar-link-border-size"
+        },
+        {
+            "description": "Nav link color default - mobile",
+            "value": "var(--bsi-color-link)",
+            "variable-name": "--bsi-navbar-link-color"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-label-font-size-l)",
+            "variable-name": "--bsi-navbar-link-font-size"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-font-weight-solid)",
+            "variable-name": "--bsi-navbar-link-font-weight"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-label-line-height)",
+            "variable-name": "--bsi-navbar-link-line-height"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-spacing-m)",
+            "variable-name": "--bsi-navbar-link-padding-x"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-spacing-s)",
+            "variable-name": "--bsi-navbar-link-padding-y"
+        },
+        {
+            "description": "",
+            "value": "102px",
+            "variable-name": "--bsi-navbar-links-margin-top"
+        },
+        {
+            "description": "",
+            "value": "#{$navbar-nav-link-padding-x}",
+            "variable-name": "--bsi-navbar-nav-link-padding-x"
+        },
+        {
+            "description": "",
+            "value": "rgba(0, 0, 0, 0.6)",
+            "variable-name": "--bsi-navbar-sidebar-bg-color-mobile"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-icon-inverse)",
+            "variable-name": "--bsi-navbar-toggle-button-icon-color"
+        },
+        {
+            "description": "",
+            "value": "1.5rem",
+            "variable-name": "--bsi-navbar-toggle-button-icon-size"
+        },
+        {
+            "description": "",
+            "value": "#{$navbar-light-toggler-border-color}",
+            "variable-name": "--bsi-navbar-toggler-border-color"
+        },
+        {
+            "description": "",
+            "value": "#{$navbar-toggler-border-radius}",
+            "variable-name": "--bsi-navbar-toggler-border-radius"
+        },
+        {
+            "description": "",
+            "value": "#{$navbar-toggler-focus-width}",
+            "variable-name": "--bsi-navbar-toggler-focus-width"
+        },
+        {
+            "description": "",
+            "value": "#{$navbar-toggler-font-size}",
+            "variable-name": "--bsi-navbar-toggler-font-size"
+        },
+        {
+            "description": "",
+            "value": "#{escape-svg($navbar-light-toggler-icon-bg)}",
+            "variable-name": "--bsi-navbar-toggler-icon-bg"
+        },
+        {
+            "description": "",
+            "value": "#{$navbar-toggler-padding-x}",
+            "variable-name": "--bsi-navbar-toggler-padding-x"
+        },
+        {
+            "description": "",
+            "value": "#{$navbar-toggler-padding-y}",
+            "variable-name": "--bsi-navbar-toggler-padding-y"
+        },
+        {
+            "description": "",
+            "value": "#{$navbar-toggler-transition}",
+            "variable-name": "--bsi-navbar-toggler-transition"
+        },
+        {
+            "description": "Nav link color default - desktop",
+            "value": "var(--bsi-color-text-inverse)",
+            "variable-name": "--bsi-navbar-link-color"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-border-inverse)",
+            "variable-name": "--bsi-navbar-link-active-border-color"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-background-inverse)",
+            "variable-name": "--bsi-navbar-background"
+        },
+        {
+            "description": "Nav link color theme light",
+            "value": "var(--bsi-color-link)",
+            "variable-name": "--bsi-navbar-link-color"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-icon-primary)",
+            "variable-name": "--bsi-navbar-toggle-button-icon-color"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-border-primary)",
+            "variable-name": "--bsi-navbar-link-active-border-color"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-background-primary)",
+            "variable-name": "--bsi-navbar-background"
+        },
+        {
+            "description": "Nav link color theme dark",
+            "value": "var(--bsi-color-text-inverse)",
+            "variable-name": "--bsi-navbar-link-color"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-icon-inverse)",
+            "variable-name": "--bsi-navbar-toggle-button-icon-color"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-border-inverse)",
+            "variable-name": "--bsi-navbar-link-active-border-color"
+        }
+    ],
+    "navscroll": [
+        {
+            "description": "Controls the background for the navscroll, using color tokens.",
+            "value": "var(--bsi-page-background)",
+            "variable-name": "--bsi-navscroll-background"
+        },
+        {
+            "description": "Controls the backbutton padding for the navscroll, using spacing tokens.",
+            "value": "var(--bsi-spacing-xs)",
+            "variable-name": "--bsi-navscroll-backbutton-padding"
+        },
+        {
+            "description": "Controls the bottom box shadow for the navscroll.",
+            "value": "0 0px 30px 5px rgba(0, 0, 0, 0.05)",
+            "variable-name": "--bsi-navscroll-bottom-box-shadow"
+        },
+        {
+            "description": "Controls the backbutton font weight for the navscroll, using font tokens.",
+            "value": "var(--bsi-font-weight-solid)",
+            "variable-name": "--bsi-navscroll-backbutton-weight"
+        },
+        {
+            "description": "Controls the item spacing for the navscroll, using spacing tokens.",
+            "value": "var(--bsi-spacing-xs) var(--bsi-spacing-m)",
+            "variable-name": "--bsi-navscroll-item-spacing"
+        },
+        {
+            "description": "Controls the item font size for the navscroll, using font tokens.",
+            "value": "var(--bsi-label-font-size)",
+            "variable-name": "--bsi-navscroll-item-font-size"
+        },
+        {
+            "description": "Controls the item font color for the navscroll, using color tokens.",
+            "value": "var(--bsi-color-text-primary)",
+            "variable-name": "--bsi-navscroll-item-font-color"
+        },
+        {
+            "description": "Controls the item border color for the navscroll.",
+            "value": "transparent",
+            "variable-name": "--bsi-navscroll-item-border-color"
+        },
+        {
+            "description": "Controls the heading spacing top for the navscroll, using spacing tokens.",
+            "value": "var(--bsi-spacing-s)",
+            "variable-name": "--bsi-navscroll-heading-spacing-top"
+        },
+        {
+            "description": "Controls the heading spacing bottom for the navscroll, using spacing tokens.",
+            "value": "var(--bsi-spacing-xs)",
+            "variable-name": "--bsi-navscroll-heading-spacing-bottom"
+        },
+        {
+            "description": "Controls the heading spacing x for the navscroll, using spacing tokens.",
+            "value": "var(--bsi-spacing-m)",
+            "variable-name": "--bsi-navscroll-heading-spacing-x"
+        },
+        {
+            "description": "Controls the heading font size for the navscroll, using font tokens.",
+            "value": "var(--bsi-heading-6-font-size)",
+            "variable-name": "--bsi-navscroll-heading-font-size"
+        },
+        {
+            "description": "Controls the heading font weight for the navscroll, using font tokens.",
+            "value": "var(--bsi-heading-font-weight)",
+            "variable-name": "--bsi-navscroll-heading-font-weight"
+        },
+        {
+            "description": "Controls the toggler color for the navscroll, using color tokens.",
+            "value": "var(--bsi-color-text-primary)",
+            "variable-name": "--bsi-navscroll-toggler-color"
+        },
+        {
+            "description": "Controls the divider color for the navscroll, using color tokens.",
+            "value": "var(--bsi-color-border-subtle)",
+            "variable-name": "--bsi-navscroll-divider-color"
+        }
+    ],
+    "pagination": [
+        {
+            "description": "Controls the background for the pagination.",
+            "value": "transparent",
+            "variable-name": "--bsi-pagination-background"
+        },
+        {
+            "description": "Controls the border width for the pagination.",
+            "value": "2px",
+            "variable-name": "--bsi-pagination-border-width"
+        },
+        {
+            "description": "Controls the border color for the pagination.",
+            "value": "transparent",
+            "variable-name": "--bsi-pagination-border-color"
+        },
+        {
+            "description": "Controls the border radius for the pagination.",
+            "value": "var(--bsi-radius-smooth)",
+            "variable-name": "--bsi-pagination-border-radius"
+        },
+        {
+            "description": "Controls the font size for the pagination, using font tokens.",
+            "value": "var(--bsi-label-font-size)",
+            "variable-name": "--bsi-pagination-font-size"
+        },
+        {
+            "description": "Controls the item size for the pagination.",
+            "value": "3rem",
+            "variable-name": "--bsi-pagination-item-size"
+        },
+        {
+            "description": "Controls the link color for the pagination, using color tokens.",
+            "value": "var(--bsi-color-link)",
+            "variable-name": "--bsi-pagination-link-color"
+        },
+        {
+            "description": "Controls the horizontal padding for the pagination, using spacing tokens.",
+            "value": "var(--bsi-spacing-s)",
+            "variable-name": "--bsi-pagination-padding-x"
+        },
+        {
+            "description": "Controls the vertical padding for the pagination, using spacing tokens.",
+            "value": "var(--bsi-spacing-xxs)",
+            "variable-name": "--bsi-pagination-padding-y"
+        }
+    ],
+    "rating": [
+        {
+            "description": "Controls the font size for the rating, using font tokens.",
+            "value": "var(--bsi-label-font-size-s)",
+            "variable-name": "--bsi-rating-font-size"
+        },
+        {
+            "description": "Controls the font weight for the rating, using font tokens.",
+            "value": "var(--bsi-font-weight-solid)",
+            "variable-name": "--bsi-rating-font-weight"
+        },
+        {
+            "description": "Controls the icon fill for the rating, using color tokens.",
+            "value": "var(--bsi-color-background-secondary-light)",
+            "variable-name": "--bsi-rating-icon-fill"
+        },
+        {
+            "description": "Controls the line height for the rating, using font tokens.",
+            "value": "var(--bsi-label-line-height)",
+            "variable-name": "--bsi-rating-line-height"
+        },
+        {
+            "description": "Controls the text color for the rating, using color tokens.",
+            "value": "var(--bsi-color-text-secondary)",
+            "variable-name": "--bsi-rating-text"
+        }
+    ],
+    "rounded": [
+        {
+            "description": "",
+            "value": "var(--it-icon-size-s)",
+            "variable-name": "--bsi-rounded-icon-size"
+        }
+    ],
+    "section": [
+        {
+            "description": "Controls the background color for the section.",
+            "value": "transparent",
+            "variable-name": "--bsi-section-background-color"
+        },
+        {
+            "description": "Controls the image overlay for the section.",
+            "value": "hsla(0, 0%, 0%, 0.5)",
+            "variable-name": "--bsi-section-image-overlay"
+        },
+        {
+            "description": "Controls the vertical padding for the section, using spacing tokens.",
+            "value": "var(--bsi-spacing-xxl)",
+            "variable-name": "--bsi-section-padding-y"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-spacing-3xl)",
+            "variable-name": "--bsi-section-padding-y"
+        }
+    ],
+    "sidebar": [
+        {
+            "description": "Controls the padding for the sidebar, using spacing tokens.",
+            "value": "var(--bsi-spacing-m)",
+            "variable-name": "--bsi-sidebar-padding"
+        },
+        {
+            "description": "Controls the background color for the sidebar.",
+            "value": "transparent",
+            "variable-name": "--bsi-sidebar-background-color"
+        },
+        {
+            "description": "Controls the heading font size for the sidebar, using font tokens.",
+            "value": "var(--bsi-heading-6-font-size)",
+            "variable-name": "--bsi-sidebar-heading-font-size"
+        },
+        {
+            "description": "Controls the heading color for the sidebar, using color tokens.",
+            "value": "var(--bsi-color-text-secondary)",
+            "variable-name": "--bsi-sidebar-heading-color"
+        },
+        {
+            "description": "Controls the link horizontal padding for the sidebar, using spacing tokens.",
+            "value": "var(--bsi-spacing-s)",
+            "variable-name": "--bsi-sidebar-link-padding-x"
+        },
+        {
+            "description": "Controls the link vertical padding for the sidebar, using spacing tokens.",
+            "value": "var(--bsi-spacing-xs)",
+            "variable-name": "--bsi-sidebar-link-padding-y"
+        },
+        {
+            "description": "Controls the sublist indent for the sidebar, using spacing tokens.",
+            "value": "var(--bsi-spacing-m)",
+            "variable-name": "--bsi-sidebar-link-sublist-indent"
+        },
+        {
+            "description": "Controls the link font size for the sidebar, using font tokens.",
+            "value": "var(--bsi-label-font-size)",
+            "variable-name": "--bsi-sidebar-link-font-size"
+        },
+        {
+            "description": "Controls the link line height for the sidebar, using font tokens.",
+            "value": "var(--bsi-body-line-height)",
+            "variable-name": "--bsi-sidebar-link-line-height"
+        },
+        {
+            "description": "Controls the active line width for the sidebar.",
+            "value": "4px",
+            "variable-name": "--bsi-sidebar-link-active-line-width"
+        },
+        {
+            "description": "Controls the divider color for the sidebar, using color tokens.",
+            "value": "var(--bsi-color-border-subtle)",
+            "variable-name": "--bsi-sidebar-divider-color"
+        },
+        {
+            "description": "Controls the active border color for the sidebar, using color tokens.",
+            "value": "var(--bsi-color-border-primary)",
+            "variable-name": "--bsi-sidebar-link-active-border-color"
+        }
+    ]
+}

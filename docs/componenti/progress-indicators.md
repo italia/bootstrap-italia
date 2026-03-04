@@ -184,20 +184,20 @@ Quando non è possibile stabilire una percentuale di progressione utilizzare una
 
 ### Colori
 
-Per variare il colore della barra è sufficiente aggiungere la classe `.progress-color` al `<div>` contenitore ed applicare una delle classi contenute nelle <a href="{{ site.baseurl }}/docs/utilities/colori/#colore-di-sfondo">Utility colori</a> alla Progress Bar.
+Per variare il colore della barra è sufficiente aggiungere una delle classi contenute nelle <a href="{{ site.baseurl }}/docs/utilities/colori/#colore-di-sfondo">Utility colori</a> alla Progress Bar.
 
 {% comment %}Example name: Barra di progresso, varianti di colore{% endcomment %}
 {% capture example %}
-<div class="progress progress-color">
+<div class="progress">
   <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
-<div class="progress progress-color">
+<div class="progress">
   <div class="progress-bar bg-info" role="progressbar" style="width: 33%" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
-<div class="progress progress-color">
+<div class="progress">
   <div class="progress-bar bg-warning" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
-<div class="progress progress-color">
+<div class="progress">
   <div class="progress-bar bg-danger" role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -213,7 +213,7 @@ La Progress Bar può essere integrata in un pulsante Primario o Secondario con c
     <div class="col-12 col-sm-6">
       <p><strong>Pulsante primario</strong></p>
       <button type="button" class="btn btn-primary btn-progress disabled" disabled>
-        Label pulsante <svg class="icon icon-white"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-github"></use></svg>
+        Label pulsante <svg class="icon icon-inverse"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-github"></use></svg>
         <span class="progress">
         <span class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></span>
       </span>
@@ -222,7 +222,7 @@ La Progress Bar può essere integrata in un pulsante Primario o Secondario con c
     <div class="col-12 col-sm-6">
       <p><strong>Pulsante secondario</strong></p>
       <button type="button" class="btn btn-secondary btn-progress disabled" disabled>
-        Label pulsante <svg class="icon icon-white"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-github"></use></svg>
+        Label pulsante <svg class="icon icon-inverse"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-github"></use></svg>
         <span class="progress">
         <span class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></span>
       </span>
@@ -373,3 +373,9 @@ Aggiungendo la classe `.progress-spinner-double` allo Spinner si ottiene un'anim
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
+
+## Breaking change
+
+{% capture callout %}
+- Nella variante "Pulsante con Progress Bar" la classe che controlla il colore dell'icona ha cambiato nome: `.icon-white` diventa `.icon-inverse`.
+{% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}

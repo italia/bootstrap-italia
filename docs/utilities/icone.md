@@ -64,8 +64,11 @@ Sono disponibili le classi `icon-*`, dove `*` può essere `xs`, `sm`, `lg`, `xl`
 <svg class="icon icon-success"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>
 <svg class="icon icon-warning"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>
 <svg class="icon icon-danger"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>
-<svg class="icon icon-light"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>
-<svg class="icon icon-white"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>
+<!-- Dark background to show inverse icon -->
+<span class="bg-dark d-inline-block p-1">
+  <svg class="icon icon-inverse"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>
+</span>
+<!-- End dark background to show inverse icon -->
 {% endcapture %}{% include example.html content=example %}
 
 ### Allineamenti
@@ -156,3 +159,11 @@ document.addEventListener('DOMContentLoaded', function() {
   })
 })
 </script>
+
+{% include properties.md properties=site.data.cprops.icon %}
+
+## Breaking change
+
+{% capture callout %}
+- Per le icone bianche da usare su sfondi scuri sono state rimosse le classi `.icon-light` e `.icon-white` a favore di `.icon-inverse`.
+{% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}
