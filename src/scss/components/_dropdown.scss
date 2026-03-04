@@ -1,3 +1,13 @@
+@use 'sass:map';
+@use '../base/config' as *;
+@use '../base/variables' as *;
+@use '../base/mixins/border-radius' as *;
+@use '../base/mixins/box-shadow' as *;
+@use '../base/mixins/caret' as *;
+@use '../base/mixins/breakpoints' as *;
+@use '../base/vendor/rfs' as *;
+
+// The dropdown wrapper (`<div>`)
 // Component: dropdown
 //
 // Description: Component styles for dropdown
@@ -211,7 +221,11 @@
   }
 }
 
-@each $breakpoint in map-keys($grid-breakpoints) {
+// Pay attention: if you change $prefix in config.scss (default value "bsi-"),
+// make sure that in dropdown.js you check for the same prefix when reading
+// the custom property for the correct Popper's positioning.
+
+@each $breakpoint in map.keys($grid-breakpoints) {
   @include media-breakpoint-up($breakpoint) {
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
@@ -302,12 +316,19 @@
   border: 0; // For `<button>`s
   background-color: transparent; // For `<button>`s
   text-align: inherit; // For `<button>`s
-  text-decoration: if($link-decoration == none, null, none);
+  @if $link-decoration == none {
+    text-decoration: null;
+  } @else {
+    text-decoration: none;
+  }
+
   white-space: nowrap; // prevent links from randomly breaking onto new lines
 
   &:hover,
   &:focus {
-    text-decoration: if($link-hover-decoration == underline, none, null);
+    @if $link-hover-decoration == underline {
+      text-decoration: none;
+    }
   }
 }
 

@@ -1,0 +1,15 @@
+@use '../config' as *;
+@use '../variables' as *;
+
+// Mixin: Progress base properties
+// Shared between .progress (progress-bars) and .progress-spinner (progress-spinners)
+@mixin progress-base {
+  --#{$prefix}progress-bg: var(--#{$prefix}color-background-secondary-lighter);
+  --#{$prefix}progress-border-radius: var(--#{$prefix}radius-smooth);
+  --#{$prefix}progress-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+  --#{$prefix}progress-label-color: var(--#{$prefix}color-text-secondary);
+  --#{$prefix}progress-label-font-size: var(--#{$prefix}label-font-size-xs);
+  --#{$prefix}progress-bar-transition: width 0.5s ease;
+  --#{$prefix}progress-bar-bg: var(--#{$prefix}color-background-secondary);
+  --#{$prefix}progress-height: 4px;
+}
