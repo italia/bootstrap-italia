@@ -2438,6 +2438,7 @@ Svolgi sempre test di usabilità con utenti che utilizzano tecnologie assistive 
 - Per i metadati è stata rimossa la classe `.it-card-related` a favore del solo uso dell'elemento `<footer>` con classe `.it-card-footer` a seguire il corpo della card.
 - Usa un `<div>` con la sola classe `.it-card-actions` a seguire il corpo della card per ospitare link correlati e/o secondari.
 - È stata rimossa la classe `.chips-list` dall'elemento `<ul>` con classe `.it-card-chips` che ospita una lista di più argomenti.
+- La doppia classe `.card-profile` è stata sostituita da `.card-profile-content` per le card di tipo profilo.
 {% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}
 
 {% capture callout %}
