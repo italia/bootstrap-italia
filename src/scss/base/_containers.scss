@@ -9,7 +9,7 @@
   .container-fluid {
     @include make-container();
     @include media-breakpoint-up(md, $grid-breakpoints) {
-      --#{$prefix}gutter-x: $grid-gutter-width;
+      --#{$prefix}gutter-x: #{$grid-gutter-width};
     }
   }
 
