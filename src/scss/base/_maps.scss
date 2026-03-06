@@ -40,13 +40,16 @@ $utilities-bg-colors: map-loop($utilities-bg, rgba-css-var, '$key', 'bg') !defau
 // scss-docs-end utilities-bg-colors
 
 // scss-docs-start utilities-border-colors
-$utilities-border: map-merge(
-  $utilities-colors,
-  (
-    'white': to-rgb($white),
-  )
+$utilities-border-colors: (
+  'primary': var(--bsi-color-border-primary),
+  'secondary': var(--bsi-color-border-secondary),
+  'success': var(--bsi-color-border-success),
+  'warning': var(--bsi-color-border-warning),
+  'danger': var(--bsi-color-border-danger),
+  'inverse': var(--bsi-color-border-inverse),
+  'white': var(--bsi-color-border-inverse),
 ) !default;
-$utilities-border-colors: map-loop($utilities-border, rgba-css-var, '$key', 'border') !default;
+// $utilities-border-colors: $utilities-border !default;
 // scss-docs-end utilities-border-colors
 
 $negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) !default;
