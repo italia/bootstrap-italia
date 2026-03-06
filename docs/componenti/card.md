@@ -87,7 +87,12 @@ Per inserire un'**immagine** puoi applicare la classe `.it-card-image` alla card
 
 Segue il **corpo** della card `.it-card-body`, che può contenere diversi contenuti di approfondimento a seconda del contesto d'uso. Puoi utilizzare più elementi `.it-card-body` per separare blocchi di contenuto.
 
-I **metadati** (come categorie, argomenti e date) vanno nell'elemento `footer` con classe `.it-card-related`. Può stare nel corpo della card o, seguendolo con la classe `.it-card-footer`, ancorarsi al bordo inferiore nei casi di card con altezza fissa.
+I **metadati** (come categorie, argomenti e date) devono essere inseriti nell'elemento `footer` con classe `.it-card-related`. Questo elemento può essere posizionato in due modi:
+
+1. come ultimo elemento della card, aggiungendo la classe `.it-card-footer`
+2. all’interno del contenitore `.it-card-body` 
+
+Il tag `<footer>` è utilizzato esclusivamente per i metadati, non per link o call to action come nel caso degli [card-per-eventi](eventi)
 
 ## Card per contenuti editoriali
 
