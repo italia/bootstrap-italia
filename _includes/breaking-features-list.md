@@ -50,6 +50,7 @@
 - Per i metadati è stata rimossa la classe `.it-card-related` a favore del solo uso dell'elemento `<footer>` con classe `.it-card-footer` a seguire il corpo della card.
 - Usa un `<div>` con la sola classe `.it-card-actions` a seguire il corpo della card per ospitare link correlati e/o secondari.
 - È stata rimossa la classe `.chips-list` dall'elemento `<ul>` con classe `.it-card-chips` che ospita una lista di più argomenti.
+- La doppia classe `.card-profile` è stata sostituita da `.card-profile-content` per le card di tipo profilo.
 
 
 ### Chips
@@ -79,9 +80,10 @@
 
 ### Header
 
+
 - Cambiata la dimensione del pulsante Accedi: cambiato classe da `.btn-sm` a `.btn-sx`.
 - Rimossa la classe `.ms-1` dall'icona `<svg>` che segue la voce Megamenu negli esempi.
-
+  
 
 ### Icone
 
@@ -108,10 +110,13 @@ La versione 3.0.0 ha portato molte breaking changes sia a livello generale che a
 
 ### Megamenu
 
-- Rimosse varianti scure definite dalla presenza delle classi sul `<nav>` contenitore `.theme-light-desk` e `.theme-dark-mobile`.
-- Corrette spaziature sul `<div>` contenitore con classe `.megamenu`: rimosse classi `.pb-5 .pt-3 .py-lg-0`. 
-- Nella variante con Call to action in basso: rimossa la classe `.justify-content-around` sul contenitore e aggiunta la classe `.flex-grow-1` agli elementi `<a>` con classe `.it-footer-link`. 
 
+- Rimosse varianti scure definite dalla presenza delle classi sul `<nav>` contenitore `.theme-light-desk` e `.theme-dark-mobile`.
+- La classe `.has-megamenu` non è più necessaria per attivare il megamenu, è sufficiente la presenza della classe `.megamenu` sull'elemento `<li>` che contiene il megamenu, e la classe `.megamenu-content` sull'elemento che contiene il contenuto del megamenu.
+- Il contenuto del megamenu ora ha classe `.megamenu-content` invece di `.megamenu`, e non ha più le classi `.pb-5 .pt-3 .py-lg-0`.
+- Nella parte descrittiva del megamenu contenuta nell'elemento `.description-content`, la classe `.ps-4` è stata sostituita da `.px-4` per garantire un padding coerente anche su mobile.
+- Nella variante con Call to action in basso: rimossa la classe `.justify-content-around` sul contenitore e aggiunta la classe `.flex-grow-1` agli elementi `<a>` con classe `.it-footer-link`.
+  
 
 ### Modale
 
@@ -235,8 +240,9 @@ Le classi legacy di Bootstrap `.card` sono ora deprecate ma **saranno mantenute 
 
 ### Header
 
-La navbar presente negli esempi, quando aperta in versione mobile o a forte ingrandimento, è stata reimplementata come modale per migliorare l'accessibilità con le combinazioni principali di lettori di schermo, sistema operativo e browser. Modifiche principali: 
-- struttura: la navbar ora utilizza un pattern dialog con backdrop 
+La navbar presente negli esempi, quando aperta in versione mobile o a forte ingrandimento, è stata reimplementata come modale per migliorare l'accessibilità con le combinazioni principali di lettori di schermo, sistema operativo e browser. Modifiche principali:
+
+- struttura: la navbar ora utilizza un pattern dialog con backdrop
 - gerarchia visiva: la gestione `z-index` è allineata al componente modale
 - gestione del focus: implementato `focus-trap.js` per utenti da tastiera e lettori di schermo, e gestione inert
 - il comportamento è diverso se implementata dentro o fuori dall'elemento `main` di pagina (se presente)
@@ -246,8 +252,9 @@ Se hai personalizzato il CSS della navbar, rivedi le tue modifiche per verificar
 
 ### Megamenu
 
-La navbar presente negli esempi, quando aperta in versione mobile o a forte ingrandimento, è stata reimplementata come modale per migliorare l'accessibilità con le combinazioni principali di lettori di schermo, sistema operativo e browser. Modifiche principali: 
-- struttura: la navbar ora utilizza un pattern dialog con backdrop 
+La navbar presente negli esempi, quando aperta in versione mobile o a forte ingrandimento, è stata reimplementata come modale per migliorare l'accessibilità con le combinazioni principali di lettori di schermo, sistema operativo e browser. Modifiche principali:
+
+- struttura: la navbar ora utilizza un pattern dialog con backdrop
 - gerarchia visiva: la gestione `z-index` è allineata al componente modale
 - gestione del focus: implementato `focus-trap.js` per utenti da tastiera e lettori di schermo, e gestione inert
 - il comportamento è diverso se implementata dentro o fuori dall'elemento `main` di pagina (se presente)
@@ -270,8 +277,9 @@ Se hai personalizzato il CSS della navbar, rivedi le tue modifiche per verificar
 
 ### Sticky
 
-La navbar presente nel markup dell'esempio "Attivabile con target", quando aperta in versione mobile o a forte ingrandimento, è stata reimplementata come modale per migliorare l'accessibilità con le combinazioni principali di lettori di schermo, sistema operativo e browser. Modifiche principali: 
-- struttura: la navbar ora utilizza un pattern dialog con backdrop 
+La navbar presente nel markup dell'esempio "Attivabile con target", quando aperta in versione mobile o a forte ingrandimento, è stata reimplementata come modale per migliorare l'accessibilità con le combinazioni principali di lettori di schermo, sistema operativo e browser. Modifiche principali:
+
+- struttura: la navbar ora utilizza un pattern dialog con backdrop
 - gerarchia visiva: la gestione `z-index` è allineata al componente modale
 - gestione del focus: implementato `focus-trap.js` per utenti da tastiera e lettori di schermo, e gestione inert
 - il comportamento è diverso se implementata dentro o fuori dall'elemento `main` di pagina (se presente)
@@ -418,10 +426,11 @@ Il toggle del dropdown diventa `<button>` invece di `<a>`.
 
 ### Header
 
-- Il toggle del dropdown diventa `<button>` invece di `<a>`. 
+
+- Il toggle del dropdown diventa `<button>` invece di `<a>`.
 - Gli altri elementi `<a>` che si comportano come toggle dropdown (eg. scelta Lingua), hanno l'aggiunta dell'attributo `role="button"`.
 - Il markup del Megamenu cambia come nel nuovo componente, per approfondire andare alla [relativa pagina]({{site.baseurl}}/docs/menu-di-navigazione/megamenu/).
-
+  
 
 ### Input
 
@@ -436,11 +445,12 @@ Gli elementi di tipo `<a>` dei collapse necessitano l'aggiunta dell'attributo `r
 
 ### Megamenu
 
+
 - tutti gli esempi del componente, anche quelli integrati nel componente [header]({{ site.baseurl }}/docs/menu-di-navigazione/header/), sono stati rivisti: refactoring markup `HTML`, classi e stili nei file `_megamenu.scss`, `_navigation.scss`, `_headernavbar.scss`, `_headernavbartheme.scss`, `_navigationtheme.scss`
 - rimossi esempi "con sezioni"
-- rimosse classi `.it-megamenu-footer`, `.it-external`, `.it-more`, `.divider`, `h3`, `.link-list-heading` 
+- rimosse classi `.it-megamenu-footer`, `.it-external`, `.it-more`, `.divider`, `h3`, `.link-list-heading`
 - rimosse variabili obsolete e inutilizzate da `_variables.scss`
-
+  
 
 ### Navscroll
 

@@ -1,3 +1,13 @@
+# [3.0.0-alpha.4](https://github.com/italia/bootstrap-italia/compare/v3.0.0-alpha.3...v3.0.0-alpha.4) (2026-03-06)
+
+
+### Bug Fixes
+
+* card example ([2832ca7](https://github.com/italia/bootstrap-italia/commit/2832ca700b4d3f8ad8f64fe77ade8df130988ef6))
+* megamenu styles and add megamenu-content class ([3b28612](https://github.com/italia/bootstrap-italia/commit/3b28612983bd9c24b4b17a2beedbdb640ab73d0c))
+
+
+
 # [3.0.0-alpha.3](https://github.com/italia/bootstrap-italia/compare/v2.17.5...v3.0.0-alpha.3) (2026-03-03)
 
 
