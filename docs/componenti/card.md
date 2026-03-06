@@ -1885,7 +1885,7 @@ Per la gestione delle **altezze** in caso di gruppi di card, l'impostazione di b
 
 Puoi cambiare questo comportamento per ogni card usando la classe `.it-card-height-full` (altezza basata su tutto lo spazio disponibile) sull'elemento `article .it-card`. Questa impostazione è presente in diversi degli esempi che precedono. 
 
-L'elemento `footer .it-card-footer` si allinea verticamente al bordo inferiore come la data nell'esempio che segue.
+L'elemento footer `.it-card-footer` si allinea verticamente al bordo inferiore come la data nell'esempio che segue.
 
 {% comment %}Example name: Altezza delle card{% endcomment %}
 {% capture example %}
@@ -1960,7 +1960,7 @@ Puoi personalizzare il comportamento dei pulsanti nell'area metadati della card 
         <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
       </footer>
       <!--finally the card footer metadata-->
-      <div class="it-card-footer">
+      <div class="it-card-actions">
         <div class="d-grid gap-2 d-md-block">
           <a href="#" class="btn btn-outline-secondary">Prenota <span class="visually-hidden">per Titolo dell'evento</span></a>
         </div>
