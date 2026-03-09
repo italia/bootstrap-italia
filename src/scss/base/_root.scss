@@ -55,7 +55,7 @@
   // Utilities
   --#{$prefix}border-width: 1px;
   --#{$prefix}border-style: solid;
-  --#{$prefix}border-color: var(--#{$prefix}color-border-subtle);
+  --#{$prefix}border-color: var(--it-color-border-subtle);
 
   // Theme colors
   --#{$prefix}theme-primary: var(--it-theme-italia-base); // Theme base color
@@ -240,6 +240,7 @@
   --#{$prefix}color-background-success-active: var(--it-color-background-success-active);
   --#{$prefix}color-background-success-hover: var(--it-color-background-success-hover);
   --#{$prefix}color-background-success-light: var(--it-color-background-success-light);
+  --#{$prefix}color-background-success-lighter: var(--it-color-background-success-lighter);
   --#{$prefix}color-background-success: var(--it-color-background-success);
   --#{$prefix}color-background-emphasis: var(--it-color-background-emphasis);
   --#{$prefix}color-background-subtle: var(--it-color-background-subtle);
