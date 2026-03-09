@@ -20,6 +20,8 @@
   --#{$prefix}table-hover-color: #{$table-hover-color};
   --#{$prefix}table-hover-bg: #{$table-hover-bg};
   --#{$prefix}table-padding: var(--#{$prefix}spacing-xxs); // Controls the padding for the table cells, using spacing tokens.
+  --#{$prefix}table-cell-font-size: var(--#{$prefix}body-font-size); // Controls the font size for the table cells, using typography tokens.
+  --#{$prefix}table-cell-vertical-align: top; // Controls the vertical alignment of the table cells.
 }
 
 // Styles
@@ -29,11 +31,9 @@
   width: 100%;
   margin-bottom: $spacer;
   border-color: var(--#{$prefix}table-border-color);
+  font-size: var(--#{$prefix}table-cell-font-size);
   color: var(--#{$prefix}table-color);
-  vertical-align: $table-cell-vertical-align;
-  @include media-breakpoint-up(lg) {
-    font-size: 1.125rem;
-  }
+  vertical-align: var(--#{$prefix}table-cell-vertical-align);
 
   //table styles go here
   .table-dark {
@@ -52,7 +52,6 @@
     border-bottom-width: var(--#{$prefix}table-border-width);
     border-color: var(--#{$prefix}table-border-color);
     background-color: var(--#{$prefix}table-bg);
-    // box-shadow: inset 0 0 0 9999px var(--#{$prefix}table-accent-bg);
   }
 
   > tbody {
@@ -65,7 +64,7 @@
 }
 
 .table-group-divider {
-  border-top: (var(--#{$prefix}table-border-width) * 2) solid $table-group-separator-color;
+  border-top: calc(var(--#{$prefix}table-border-width) * 2) solid $table-group-separator-color;
 }
 
 //
@@ -172,57 +171,52 @@
 // and the colors of the striped, hovered & active tables
 
 .table-primary {
-  --#{$prefix}table-bg: var(--#{$prefix}color-background-primary-lighter);
-  --#{$prefix}table-color: var(--#{$prefix}color-text-inverse);
-  --#{$prefix}table-border-color: var(--#{$prefix}color-border-primary);
-  --#{$prefix}table-striped-bg: var(--#{$prefix}color-background-primary-muted);
-  --#{$prefix}table-striped-color: var(--#{$prefix}color-text-inverse);
+  --#{$prefix}table-bg: var(--#{$prefix}color-background-primary-light);
+  --#{$prefix}table-color: var(--#{$prefix}color-text-base);
+  --#{$prefix}table-striped-bg: var(--#{$prefix}color-background-primary-light);
+  --#{$prefix}table-striped-color: var(--#{$prefix}color-text-base);
   --#{$prefix}table-hover-bg: var(--#{$prefix}color-background-primary-hover);
-  --#{$prefix}table-hover-color: var(--#{$prefix}color-text-inverse);
+  --#{$prefix}table-hover-color: var(--#{$prefix}color-text-base);
   --#{$prefix}table-active-bg: var(--#{$prefix}color-background-primary-active);
-  --#{$prefix}table-active-color: var(--#{$prefix}color-text-inverse);
+  --#{$prefix}table-active-color: var(--#{$prefix}color-text-base);
 }
 
 .table-secondary {
-  --#{$prefix}table-bg: var(--#{$prefix}color-background-secondary-lighter);
-  --#{$prefix}table-color: var(--#{$prefix}color-text-primary);
-  --#{$prefix}table-border-color: var(--#{$prefix}color-border-secondary);
-  --#{$prefix}table-striped-bg: var(--#{$prefix}color-background-secondary-lighter);
-  --#{$prefix}table-striped-color: var(--#{$prefix}color-text-primary);
+  --#{$prefix}table-bg: var(--#{$prefix}color-background-secondary-light);
+  --#{$prefix}table-color: var(--#{$prefix}color-text-base);
+  --#{$prefix}table-striped-bg: var(--#{$prefix}color-background-secondary-light);
+  --#{$prefix}table-striped-color: var(--#{$prefix}color-text-base);
   --#{$prefix}table-hover-bg: var(--#{$prefix}color-background-secondary-hover);
-  --#{$prefix}table-hover-color: var(--#{$prefix}color-text-primary);
+  --#{$prefix}table-hover-color: var(--#{$prefix}color-text-base);
   --#{$prefix}table-active-bg: var(--#{$prefix}color-background-secondary-active);
-  --#{$prefix}table-active-color: var(--#{$prefix}color-text-primary);
+  --#{$prefix}table-active-color: var(--#{$prefix}color-text-base);
 }
 
 .table-success {
-  --#{$prefix}table-bg: var(--#{$prefix}color-background-success);
-  --#{$prefix}table-color: var(--#{$prefix}color-text-inverse);
-  --#{$prefix}table-border-color: var(--#{$prefix}color-border-success);
+  --#{$prefix}table-bg: var(--#{$prefix}color-background-success-light);
+  --#{$prefix}table-color: var(--#{$prefix}color-text-base);
   --#{$prefix}table-striped-bg: var(--#{$prefix}color-background-success-light);
   --#{$prefix}table-striped-color: var(--#{$prefix}color-text-success);
   --#{$prefix}table-hover-bg: var(--#{$prefix}color-background-success-hover);
-  --#{$prefix}table-hover-color: var(--#{$prefix}color-text-inverse);
+  --#{$prefix}table-hover-color: var(--#{$prefix}color-text-base);
   --#{$prefix}table-active-bg: var(--#{$prefix}color-background-success-active);
-  --#{$prefix}table-active-color: var(--#{$prefix}color-text-inverse);
+  --#{$prefix}table-active-color: var(--#{$prefix}color-text-base);
 }
 
 .table-info {
-  --#{$prefix}table-bg: var(--#{$prefix}color-background-secondary-lighter);
-  --#{$prefix}table-color: var(--#{$prefix}color-text-primary);
-  --#{$prefix}table-border-color: var(--#{$prefix}color-border-secondary);
-  --#{$prefix}table-striped-bg: var(--#{$prefix}color-background-secondary-lighter);
-  --#{$prefix}table-striped-color: var(--#{$prefix}color-text-primary);
-  --#{$prefix}table-hover-bg: var(--#{$prefix}color-background-secondary-hover);
-  --#{$prefix}table-hover-color: var(--#{$prefix}color-text-primary);
-  --#{$prefix}table-active-bg: var(--#{$prefix}color-background-secondary-active);
-  --#{$prefix}table-active-color: var(--#{$prefix}color-text-primary);
+  --#{$prefix}table-bg: var(--#{$prefix}--#{$prefix}color-background-primary-lighter);
+  --#{$prefix}table-color: var(--#{$prefix}color-text-base);
+  --#{$prefix}table-striped-bg: var(--#{$prefix}--#{$prefix}color-background-primary-lighter);
+  --#{$prefix}table-striped-color: var(--#{$prefix}color-text-base);
+  --#{$prefix}table-hover-bg: var(--#{$prefix}color-background-primary-hover);
+  --#{$prefix}table-hover-color: var(--#{$prefix}color-text-base);
+  --#{$prefix}table-active-bg: var(--#{$prefix}color-background-primary-active);
+  --#{$prefix}table-active-color: var(--#{$prefix}color-text-base);
 }
 
 .table-warning {
-  --#{$prefix}table-bg: var(--#{$prefix}color-background-warning);
-  --#{$prefix}table-color: var(--#{$prefix}color-text-warning);
-  --#{$prefix}table-border-color: var(--#{$prefix}color-border-warning);
+  --#{$prefix}table-bg: var(--#{$prefix}color-background-warning-light);
+  --#{$prefix}table-color: var(--#{$prefix}color-text-base);
   --#{$prefix}table-striped-bg: var(--#{$prefix}color-background-warning-light);
   --#{$prefix}table-striped-color: var(--#{$prefix}color-text-warning);
   --#{$prefix}table-hover-bg: var(--#{$prefix}color-background-warning-hover);
@@ -232,24 +226,22 @@
 }
 
 .table-danger {
-  --#{$prefix}table-bg: var(--#{$prefix}color-background-danger);
-  --#{$prefix}table-color: var(--#{$prefix}color-text-inverse);
-  --#{$prefix}table-border-color: var(--#{$prefix}color-border-danger);
+  --#{$prefix}table-bg: var(--#{$prefix}color-background-danger-light);
+  --#{$prefix}table-color: var(--#{$prefix}color-text-base);
   --#{$prefix}table-striped-bg: var(--#{$prefix}color-background-danger-light);
-  --#{$prefix}table-striped-color: var(--#{$prefix}color-text-danger);
+  --#{$prefix}table-striped-color: var(--#{$prefix}color-text-base);
   --#{$prefix}table-hover-bg: var(--#{$prefix}color-background-danger-hover);
-  --#{$prefix}table-hover-color: var(--#{$prefix}color-text-inverse);
+  --#{$prefix}table-hover-color: var(--#{$prefix}color-text-base);
   --#{$prefix}table-active-bg: var(--#{$prefix}color-background-danger-active);
-  --#{$prefix}table-active-color: var(--#{$prefix}color-text-inverse);
+  --#{$prefix}table-active-color: var(--#{$prefix}color-text-base);
 }
 
 .table-light {
-  --#{$prefix}table-bg: var(--#{$prefix}color-background-muted);
-  --#{$prefix}table-color: var(--#{$prefix}color-text-primary);
-  --#{$prefix}table-border-color: var(--#{$prefix}color-border-subtle);
-  --#{$prefix}table-striped-bg: var(--#{$prefix}color-background-subtle);
+  --#{$prefix}table-bg: var(--#{$prefix}color-background-secondary-lighter);
+  --#{$prefix}table-color: var(--#{$prefix}color-text-base);
+  --#{$prefix}table-striped-bg: var(--#{$prefix}color-background-secondary-lighter);
   --#{$prefix}table-striped-color: var(--#{$prefix}color-text-primary);
-  --#{$prefix}table-hover-bg: var(--#{$prefix}color-background-secondary-lighter);
+  --#{$prefix}table-hover-bg: var(--#{$prefix}color-background-secondary-light);
   --#{$prefix}table-hover-color: var(--#{$prefix}color-text-primary);
   --#{$prefix}table-active-bg: var(--#{$prefix}color-background-secondary);
   --#{$prefix}table-active-color: var(--#{$prefix}color-text-primary);
@@ -258,7 +250,6 @@
 .table-dark {
   --#{$prefix}table-bg: var(--#{$prefix}color-background-primary-deep);
   --#{$prefix}table-color: var(--#{$prefix}color-text-inverse);
-  --#{$prefix}table-border-color: var(--#{$prefix}color-border-inverse);
   --#{$prefix}table-striped-bg: var(--#{$prefix}color-background-primary-muted);
   --#{$prefix}table-striped-color: var(--#{$prefix}color-text-inverse);
   --#{$prefix}table-hover-bg: var(--#{$prefix}color-background-primary-hover);
