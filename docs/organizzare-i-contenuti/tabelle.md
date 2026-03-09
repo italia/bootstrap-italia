@@ -186,7 +186,7 @@ Utilizza le classi contestuali per colorare tabelle, righe o celle individuali.
   <table class="table table-primary">
     <tbody>
       <tr>
-        <th scope="row">Default</th>
+        <th scope="row">Primary</th>
         <td>Cella</td>
         <td>Cella</td>
       </tr>
