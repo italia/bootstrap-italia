@@ -348,56 +348,46 @@
         }
       }
 
-      button.nav-link {
-        display: block;
-        border-top: 0;
-        border-right: 0;
-        border-bottom: 0;
-        border-left: var(--#{$prefix}navbar-link-border-size) solid transparent;
+      button.nav-link,
+      a.nav-link {
+        --navbar-link-border-color: transparent;
+        font-weight: var(--#{$prefix}navbar-link-font-weight);
+        border-left: var(--#{$prefix}navbar-link-border-size) solid var(--navbar-link-border-color);
         background: transparent;
-        font-weight: var(--#{$prefix}navbar-link-font-weight);  
-        // border-left: var(--#{$prefix}navbar-link-border-size) solid transparent;
 
         @include media-breakpoint-up(lg) {
           display: flex;
           align-items: center;
           line-height: var(--#{$prefix}navbar-link-line-height);
           border-left: 0;
-          border-bottom: var(--#{$prefix}navbar-link-border-size) solid transparent;
+          border-bottom: var(--#{$prefix}navbar-link-border-size) solid var(--navbar-link-border-color);
         }
+
         &.active {
-          border-left: var(--#{$prefix}navbar-link-border-size) solid var(--#{$prefix}navbar-link-active-border-color);
-          
-          @include media-breakpoint-up(lg) {
-            border-left: 0;
-            border-bottom-color: var(--#{$prefix}navbar-link-active-border-color);
-          }
+          --navbar-link-border-color: var(--#{$prefix}navbar-link-active-border-color);
+        }
+      }
+
+      button.nav-link {
+        display: block;
+        border-top: 0;
+        border-right: 0;
+        border-bottom: 0;
+
+        @include media-breakpoint-up(lg) {
+          display: flex;
         }
       }
 
       a.nav-link {
-        font-weight: var(--#{$prefix}navbar-link-font-weight);
         line-height: var(--#{$prefix}navbar-link-line-height);
-        border-left: var(--#{$prefix}navbar-link-border-size) solid transparent;
         @include media-breakpoint-up(lg) {
-          display: flex;
-          align-items: center;
           align-self: flex-end;
-          border-left: 0;
-          border-bottom: var(--#{$prefix}navbar-link-border-size) solid transparent;
         }
 
         @include media-breakpoint-up(lg) {
           &:hover {
             color: var(--#{$prefix}color-text-inverse);
-          }
-        }
-
-        &.active {
-          border-left: var(--#{$prefix}navbar-link-border-size) solid var(--#{$prefix}navbar-link-active-border-color);
-          @include media-breakpoint-up(lg) {
-            border-left: 0;
-            border-bottom: var(--#{$prefix}navbar-link-border-size) solid var(--#{$prefix}navbar-link-active-border-color);
           }
         }
 
