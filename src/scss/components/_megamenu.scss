@@ -22,10 +22,10 @@
 //
 /* stylelint-disable-next-line no-duplicate-selectors */
 .megamenu {
-  @include media-breakpoint-down(lg) {
-    margin-left: calc(-1 * var(--#{$prefix}spacing-xs));
-    margin-right: calc(-1 * var(--#{$prefix}spacing-xs));
-  }
+  // @include media-breakpoint-down(lg) {
+  //   margin-left: calc(-1 * var(--#{$prefix}spacing-xs));
+  //   margin-right: calc(-1 * var(--#{$prefix}spacing-xs));
+  // }
 
   // Override default dropdown styles
   .dropdown-menu {
