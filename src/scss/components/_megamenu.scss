@@ -9,72 +9,29 @@
 // Properties
 //
 
+/* stylelint-disable-next-line no-duplicate-selectors */
 .megamenu {
   --#{$prefix}megamenu-background-color: var(--#{$prefix}color-background-inverse); // Controls the background color for the megamenu, using color tokens.
-}
-
-.megamenu-content {
   --#{$prefix}megamenu-content-spacing: var(--#{$prefix}spacing-xs); // Controls the spacing for the megamenu, using spacing tokens.
   --#{$prefix}megamenu-content-border-color: var(--#{$prefix}color-border-subtle); // Controls the border color for the megamenu, using color tokens.
 }
 
 // Styles
 //
-/* stylelint-disable-next-line no-duplicate-selectors */
+
 .megamenu {
-  // @include media-breakpoint-down(lg) {
-  //   margin-left: calc(-1 * var(--#{$prefix}spacing-xs));
-  //   margin-right: calc(-1 * var(--#{$prefix}spacing-xs));
-  // }
 
-  // Override default dropdown styles
-  .dropdown-menu {
-    --#{$prefix}dropdown-item-padding-x: var(--#{$prefix}spacing-xxs);
-    --#{$prefix}dropdown-item-padding-y: var(--#{$prefix}spacing-xxs);
-    --#{$prefix}dropdown-spacer: 0;
-    width: 100%;
-    background: var(--#{$prefix}megamenu-background-color);
-
-    // Extra padding on large devices only
-    @include media-breakpoint-up(lg) {
-      --#{$prefix}dropdown-padding-y: var(--#{$prefix}spacing-m);
-      --#{$prefix}dropdown-padding-x: var(--#{$prefix}spacing-xs);
-    }
-  }
-}
-
-.megamenu-content {
-  padding-top: var(--#{$prefix}spacing-s);
-  
-  .link-list-wrapper {
-    margin-bottom: 0;
-    // Extra margin on collapsed menu only
-    @include media-breakpoint-down(lg) {
-      margin-left: var(--#{$prefix}spacing-s);
-    }
+  .megamenu-content {
+    padding: var(--#{$prefix}megamenu-content-spacing);
   }
 
-  .link-list {
-    width: 100%;
-
-    .list-item {
-      display: flex;
-      align-items: center;
-      white-space: normal;
-      span {
-        display: inline-flex;
-        align-items: center;
-      }
-    }
-  }
-
-  // description & image variation
+   // Description & image variation
   .it-description {
     background: transparent;
     @include media-breakpoint-down(lg) {
       padding-top: var(--#{$prefix}megamenu-content-spacing);
-      padding-left: calc(var(--#{$prefix}megamenu-content-spacing) * 2);
       padding-right: calc(var(--#{$prefix}megamenu-content-spacing) * 2);
+      padding-left: calc(var(--#{$prefix}megamenu-content-spacing) * 2);
     }
 
     .description-content {
@@ -96,20 +53,14 @@
   .it-heading-link-wrapper,
   .it-footer-link-wrapper,
   .it-footer-link-wrapper-vertical {
-    margin-left: var(--#{$prefix}megamenu-content-spacing);
-    padding-bottom: var(--#{$prefix}spacing-s);
     border-color: var(--#{$prefix}megamenu-content-border-color);
   }
 
   .it-heading-link-wrapper {
     margin-bottom: var(--#{$prefix}spacing-s);
+    padding-bottom: var(--#{$prefix}spacing-s);
     border-bottom-width: 1px;
     border-bottom-style: solid;
-    // Extra margin on collapsed menu only
-    @include media-breakpoint-down(lg) {
-      margin-left: var(--#{$prefix}spacing-m);
-      margin-right: var(--#{$prefix}spacing-m);
-    }
   }
 
   .it-heading-link,
@@ -118,20 +69,69 @@
     font-weight: var(--#{$prefix}font-weight-solid);
     line-height: var(--#{$prefix}heading-leading);
     text-decoration: none;
-    &:hover,
-    &:focus {
-      text-decoration: underline;
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
     }
-  }
 
   .it-footer-link-wrapper,
   .it-footer-link-wrapper-vertical {
-    margin-top: var(--#{$prefix}spacing-s);
-    padding-top: var(--#{$prefix}spacing-s);
+    margin-top: var(--#{$prefix}spacing-m);
+    margin-right: var(--#{$prefix}spacing-m); // Extra margin on collapsed menu only, compensating negative margin on grid column
+    margin-left: var(--#{$prefix}spacing-m); // Extra margin on collapsed menu only, compensating negative margin on grid column
+    padding-top: var(--#{$prefix}spacing-m);
     border-top-width: 1px;
     border-top-style: solid;
   }
+
+  .it-footer-link {
+    margin-bottom: var(--#{$prefix}spacing-m);
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  // Overrides
+  //
+
+  // Override default dropdown styles
+  .dropdown-menu {
+    --#{$prefix}dropdown-item-padding-x: var(--#{$prefix}spacing-xxs);
+    --#{$prefix}dropdown-item-padding-y: var(--#{$prefix}spacing-xxs);
+    --#{$prefix}dropdown-spacer: 0;
+    width: 100%;
+    background: var(--#{$prefix}megamenu-background-color);
+
+    // Extra padding on large devices only
+    @include media-breakpoint-up(lg) {
+      --#{$prefix}dropdown-padding-y: var(--#{$prefix}spacing-xs);
+      --#{$prefix}dropdown-padding-x: var(--#{$prefix}spacing-xs);
+    }
+  }
+
+  // Override default link list styles
+  .link-list-wrapper {
+    margin-bottom: 0;
+  
+    .link-list {
+      width: 100%;
+  
+      .list-item {
+        display: flex;
+        align-items: center;
+        white-space: normal;
+
+        span {
+          display: inline-flex;
+          align-items: center;
+        }
+      }
+    }
+  }
 }
+
+// Desktop only styles for megamenu
 
 @include media-breakpoint-up(lg) {
   .navbar-nav .megamenu {
@@ -193,9 +193,9 @@
     // Footer link wrapper vertical
     .it-footer-link-wrapper-vertical {
       height: 100%;
-      margin: 0;
+      margin-top: 0;
       padding: 0;
-      padding-left: var(--#{$prefix}megamenu-content-spacing);
+      padding-left: var(--#{$prefix}spacing-m);
       border-top: none;
       border-left: 1px solid var(--#{$prefix}megamenu-content-border-color);
 
@@ -206,8 +206,6 @@
 
     // Footer link wrapper
     .it-footer-link-wrapper {
-      margin-top: var(--#{$prefix}megamenu-content-spacing);
-      padding-bottom: 0;
 
       .it-footer-link:not(:last-child) {
         margin-right: var(--#{$prefix}megamenu-content-spacing);
