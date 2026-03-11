@@ -173,20 +173,21 @@
 .it-nav-wrapper {
   position: relative;
   z-index: auto;
-}
-
-.it-header-navbar-wrapper {
-  position: absolute;
-  top: 50%;
-  left: 8px;
-  z-index: 3;
-  margin-top: -20px;
-  transition: padding-top var(--#{$prefix}transition-instant) ease;
-  @include media-breakpoint-up(lg) {
-    position: inherit;
-    top: inherit;
-    left: auto;
-    margin-top: 0;
-    background: var(--#{$prefix}header-nav-background);
+  
+  .it-header-navbar-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 8px;
+    z-index: 3;
+    margin-top: -20px;
+    transition: padding-top var(--#{$prefix}transition-instant) ease;
+    @include media-breakpoint-up(lg) {
+      position: inherit;
+      top: inherit;
+      left: auto;
+      margin-top: 0;
+      background: var(--#{$prefix}header-nav-background);
+    }
   }
 }
+
