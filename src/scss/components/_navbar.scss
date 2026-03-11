@@ -27,6 +27,8 @@
   --#{$prefix}navbar-dropdown-icon-width: 1rem;
   --#{$prefix}navbar-hamburger-size: 1.5rem;
   --#{$prefix}navbar-hover-color: #{$navbar-light-hover-color};
+  --#{$prefix}navbar-padding-x: 0;
+  --#{$prefix}navbar-padding-y: var(--#{$prefix}spacing-s);
   --#{$prefix}navbar-link-active-border-color: var(--#{$prefix}color-border-primary);
   --#{$prefix}navbar-link-border-size: var(--#{$prefix}border-thick);
   --#{$prefix}navbar-link-color: var(--#{$prefix}color-link); // nav link color default - mobile
@@ -92,9 +94,7 @@
   justify-content: space-between; // space out brand from logo
   background: var(--#{$prefix}navbar-background);
   @include media-breakpoint-up(lg) {
-    padding: 0 var(--#{$prefix}header-spacing-inset);
-  }
-  @include media-breakpoint-up(lg) {
+    --#{$prefix}navbar-padding-y: 0;
     --#{$prefix}navbar-link-font-size: var(--#{$prefix}label-font-size-l);
   }
 
@@ -351,6 +351,7 @@
         font-weight: var(--#{$prefix}navbar-link-font-weight);
         padding-left: calc(var(--#{$prefix}navbar-link-padding-x) - var(--#{$prefix}navbar-link-border-size));
         border-left: var(--#{$prefix}navbar-link-border-size) solid var(--navbar-link-border-color);
+        border-bottom: 0;
         background: transparent;
 
         @include media-breakpoint-up(lg) {
@@ -439,7 +440,6 @@
 }
 
 .custom-navbar-toggler {
-  margin-top: var(--#{$prefix}spacing-xxs);
   padding: 0;
   border: none;
   background: none;
