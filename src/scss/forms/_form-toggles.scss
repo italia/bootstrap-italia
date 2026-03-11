@@ -1,29 +1,29 @@
 .toggles,
 .toggles * {
-  appearance: none;
   user-select: none;
+  appearance: none;
 }
 
 .toggles label {
-  cursor: pointer;
-  width: 100%;
-  margin-bottom: $v-gap;
-  height: 32px;
-  line-height: 32px;
-  font-weight: 600;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
+  height: 32px;
+  margin-bottom: var(--#{$prefix}spacing-xxs);
+  font-weight: var(--#{$prefix}-font-weight-solid);
+  line-height: 32px;
+  cursor: pointer;
 
   &.active {
-    transform: none;
     font-size: 1rem;
+    transform: none;
   }
 
   input[type='checkbox'] {
-    opacity: 0;
     width: 0;
     height: 0;
+    opacity: 0;
     &:focus + .lever {
       @extend %focus;
     }
@@ -31,42 +31,39 @@
       @extend %focusmouse;
     }
     & + .lever {
-      content: '';
       position: relative;
+      content: '';
       width: 46px;
       height: 16px;
-      background-color: #e6e9f2;
       border-radius: 10px;
-      transition: background 0.3s ease;
+      background-color: #e6e9f2;
       vertical-align: middle;
-
+      transition: background 0.3s ease;
       &:before,
       &:after {
-        content: '';
         position: absolute;
+        top: -5px;
+        left: -3px;
+        content: '';
         display: inline-block;
         width: 26px;
         height: 26px;
         border-radius: 50%;
-        top: -5px;
-        left: -3px;
         transition:
           left 0.3s ease,
           background 0.1s ease,
           transform 0.1s ease;
       }
-
       &:before {
         background-color: transparentize($primary, 0.85);
       }
-
       &:after {
+        border: 2px solid #fff;
         background-color: $neutral-1-a7;
-        background-size: 10px 10px;
+        background-image: url("data:image/svg+xml;charset=UTF-8, %3csvg width='10px' height='10px' viewBox='0 0 10 10' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' opacity='0.8'%3e%3cg id='Data-entry/toggle/Light_bg/disabledOff' transform='translate(-8.000000, -11.000000)' fill='%23FFFFFF'%3e%3cpath d='M14.363961,15.9497475 L17.8994949,19.4852814 L16.4852814,20.8994949 L12.9497475,17.363961 L9.41421356,20.8994949 L8,19.4852814 L11.5355339,15.9497475 L8,12.4142136 L9.41421356,11 L12.9497475,14.5355339 L16.4852814,11 L17.8994949,12.4142136 L14.363961,15.9497475 Z' id='Combined-Shape'%3e%3c/path%3e%3c/g%3e%3c/g%3e%3c/svg%3e");
         background-repeat: no-repeat;
         background-position: center;
-        background-image: url("data:image/svg+xml;charset=UTF-8, %3csvg width='10px' height='10px' viewBox='0 0 10 10' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' opacity='0.8'%3e%3cg id='Data-entry/toggle/Light_bg/disabledOff' transform='translate(-8.000000, -11.000000)' fill='%23FFFFFF'%3e%3cpath d='M14.363961,15.9497475 L17.8994949,19.4852814 L16.4852814,20.8994949 L12.9497475,17.363961 L9.41421356,20.8994949 L8,19.4852814 L11.5355339,15.9497475 L8,12.4142136 L9.41421356,11 L12.9497475,14.5355339 L16.4852814,11 L17.8994949,12.4142136 L14.363961,15.9497475 Z' id='Combined-Shape'%3e%3c/path%3e%3c/g%3e%3c/g%3e%3c/svg%3e");
-        border: 2px solid #fff;
+        background-size: 10px 10px;
       }
     }
 
@@ -80,17 +77,17 @@
 
       &:after {
         background-color: $primary;
-        background-size: 14px 14px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14px' height='11px' viewBox='0 0 14 11'%3E%3Cg stroke='none' fill='none' opacity='0.5'%3E%3Cg transform='translate(-28.000000, -11.000000)' fill='%23FFF'%3E%3Cg transform='translate(24.000000, 16.000000) scale(-1, 1) translate(-24.000000, -16.000000) translate(1.000000, 4.000000)'%3E%3Cpath d='M13,15 L13,5 L15,5 L15,15 L15,17 L9,17 L9,15 L13,15 Z' transform='translate(12.000000, 11.000000) scale(-1, 1) rotate(45.000000) translate(-12.000000, -11.000000) '/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
         background-repeat: no-repeat;
         background-position: center;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14px' height='11px' viewBox='0 0 14 11'%3E%3Cg stroke='none' fill='none' opacity='0.5'%3E%3Cg transform='translate(-28.000000, -11.000000)' fill='%23FFF'%3E%3Cg transform='translate(24.000000, 16.000000) scale(-1, 1) translate(-24.000000, -16.000000) translate(1.000000, 4.000000)'%3E%3Cpath d='M13,15 L13,5 L15,5 L15,15 L15,17 L9,17 L9,15 L13,15 Z' transform='translate(12.000000, 11.000000) scale(-1, 1) rotate(45.000000) translate(-12.000000, -11.000000) '/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+        background-size: 14px 14px;
       }
     }
 
     [disabled] & + .lever,
     &[disabled] + .lever {
-      cursor: default;
       background-color: #e6e9f2;
+      cursor: default;
       &:after {
         background-color: #e6e9f2;
       }
