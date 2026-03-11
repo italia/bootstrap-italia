@@ -320,11 +320,8 @@
       }
     }
 
+    // Navbar item
     li {
-      // .nav-link[data-focus-mouse='true'] {
-      //   border-color: transparent !important;
-      // }
-
       .nav-link {
         position: relative;
         font-weight: var(--#{$prefix}navbar-link-font-weight);
