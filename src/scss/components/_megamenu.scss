@@ -44,9 +44,10 @@
 }
 
 .megamenu-content {
+  padding-top: var(--#{$prefix}spacing-s);
+  
   .link-list-wrapper {
     margin-bottom: 0;
-    padding: 0;
     // Extra margin on collapsed menu only
     @include media-breakpoint-down(lg) {
       margin-left: var(--#{$prefix}spacing-s);
