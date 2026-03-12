@@ -415,7 +415,7 @@ Per cambiare tema all'header centrale è sufficiente aggiungere la classe `theme
         <!--start nav-->
         <nav class="navbar navbar-expand-lg" aria-label="Navigazione principale">
           <button class="custom-navbar-toggler" type="button" aria-controls="nav1" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#nav1">
-            <svg class="icon bg-override"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use></svg>
+            <svg class="icon"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use></svg>
           </button>
           <div class="navbar-collapsable" id="nav1" tabindex="-1">
             <div class="close-div">
@@ -564,7 +564,7 @@ Per modificare il tema dell'Header Nav è sufficiente aggiungere una o tutte e d
         <!--start nav-->
         <nav class="navbar navbar-expand-lg" aria-label="Navigazione principale">
           <button class="custom-navbar-toggler" type="button" aria-controls="nav0" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#nav0">
-            <svg class="icon bg-override"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use></svg>
+            <svg class="icon"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use></svg>
           </button>
           <div class="navbar-collapsable" id="nav0" tabindex="-1">
             <div class="close-div">
@@ -701,7 +701,7 @@ Per modificare il tema dell'Header Nav è sufficiente aggiungere una o tutte e d
         <!--start nav-->
         <nav class="navbar navbar-expand-lg" aria-label="Navigazione principale">
           <button class="custom-navbar-toggler" type="button" aria-controls="nav2" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#nav2">
-            <svg class="icon bg-override"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use></svg>
+            <svg class="icon"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use></svg>
           </button>
           <div class="navbar-collapsable" id="nav2" tabindex="-1">
             <div class="close-div">
@@ -979,7 +979,7 @@ Al menu di navigazione principale può essere aggiunto anche un menu di navigazi
         <!--start nav-->
         <nav class="navbar navbar-expand-lg" aria-label="Navigazione principale">
           <button class="custom-navbar-toggler" type="button" aria-controls="nav4" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#nav4">
-            <svg class="icon bg-override"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use></svg>
+            <svg class="icon"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use></svg>
           </button>
           <div class="navbar-collapsable" id="nav4" tabindex="-1">
             <div class="close-div">
