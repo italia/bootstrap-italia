@@ -16,16 +16,9 @@
   --#{$prefix}navbar-brand-margin-end: #{$navbar-brand-margin-end};
   --#{$prefix}navbar-brand-padding-y: #{$navbar-brand-padding-y};
   --#{$prefix}navbar-close-button-font-size: 0.75rem;
-  // --#{$prefix}navbar-close-button-icon-size: 2rem;
   --#{$prefix}navbar-close-button-size: 44px;
-  // --#{$prefix}navbar-color: #{$navbar-light-color};
-  // --#{$prefix}navbar-disabled-color: #{$navbar-light-disabled-color};
   --#{$prefix}navbar-disabled-item-opacity: 0.75;
-  // --#{$prefix}navbar-dropdown-icon-line-height: 1rem;
-  // --#{$prefix}navbar-dropdown-icon-size: 0.75rem;
-  // --#{$prefix}navbar-dropdown-icon-width: 1rem;
   --#{$prefix}navbar-hamburger-size: 1.5rem;
-  // --#{$prefix}navbar-hover-color: #{$navbar-light-hover-color};
   --#{$prefix}navbar-link-border-size: var(--#{$prefix}border-thick);
   --#{$prefix}navbar-link-color: var(--#{$prefix}color-link); // nav link color default - mobile
   --#{$prefix}navbar-link-font-size: var(--#{$prefix}label-font-size-l);
@@ -33,8 +26,6 @@
   --#{$prefix}navbar-link-line-height: var(--#{$prefix}label-leading);
   --#{$prefix}navbar-link-padding-x: var(--#{$prefix}spacing-m);
   --#{$prefix}navbar-link-padding-y: var(--#{$prefix}spacing-s);
-  // --#{$prefix}navbar-links-margin-top: 102px;
-  // --#{$prefix}navbar-nav-link-padding-x: #{$navbar-nav-link-padding-x};
   --#{$prefix}navbar-overlay-bg: rgba(0, 0, 0, 0.6);
   --#{$prefix}navbar-toggle-button-icon-color: var(--#{$prefix}icon-inverse);
   --#{$prefix}navbar-toggle-button-icon-size: 1.5rem;
@@ -405,7 +396,6 @@
   }
 }
 
-
 // Custom Navbar Toggler - used in Header component
 .custom-navbar-toggler {
   padding: 0;
@@ -500,7 +490,6 @@
   }
 }
 // scss-docs-end navbar-expand-loop
-
 
 // Navbar Toggler
 // Button for toggling the navbar when in its collapsed state - used in docs header (not component)
