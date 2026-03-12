@@ -27,6 +27,9 @@
   --#{$prefix}navbar-dropdown-icon-width: 1rem;
   --#{$prefix}navbar-hamburger-size: 1.5rem;
   --#{$prefix}navbar-hover-color: #{$navbar-light-hover-color};
+  --#{$prefix}navbar-padding-x: 0;
+  --#{$prefix}navbar-padding-y: var(--#{$prefix}spacing-s);
+  --#{$prefix}navbar-link-active-border-color: var(--#{$prefix}color-border-primary);
   --#{$prefix}navbar-link-border-size: var(--#{$prefix}border-thick);
   --#{$prefix}navbar-link-color: var(--#{$prefix}color-link); // nav link color default - mobile
   --#{$prefix}navbar-link-font-size: var(--#{$prefix}label-font-size-l);
@@ -91,9 +94,7 @@
   justify-content: space-between; // space out brand from logo
   background: var(--#{$prefix}navbar-background);
   @include media-breakpoint-up(lg) {
-    padding: 0 var(--#{$prefix}header-spacing-inset);
-  }
-  @include media-breakpoint-up(lg) {
+    --#{$prefix}navbar-padding-y: 0;
     --#{$prefix}navbar-link-font-size: var(--#{$prefix}label-font-size-l);
   }
 
@@ -319,11 +320,8 @@
       }
     }
 
+    // Navbar item
     li {
-      .nav-link[data-focus-mouse='true'] {
-        border-color: transparent !important;
-      }
-
       .nav-link {
         position: relative;
         font-weight: var(--#{$prefix}navbar-link-font-weight);
@@ -347,45 +345,48 @@
         }
       }
 
-      button.nav-link {
-        display: block;
-        border: none;
-        background: transparent;
+      button.nav-link,
+      a.nav-link {
+        --navbar-link-border-color: transparent;
         font-weight: var(--#{$prefix}navbar-link-font-weight);
+        padding-left: calc(var(--#{$prefix}navbar-link-padding-x) - var(--#{$prefix}navbar-link-border-size));
+        border-left: var(--#{$prefix}navbar-link-border-size) solid var(--navbar-link-border-color);
+        border-bottom: 0;
+        background: transparent;
+
         @include media-breakpoint-up(lg) {
           display: flex;
           align-items: center;
-          border-bottom: var(--#{$prefix}navbar-link-border-size) solid transparent;
+          padding-bottom: calc(var(--#{$prefix}navbar-link-padding-y) - var(--#{$prefix}navbar-link-border-size));
           line-height: var(--#{$prefix}navbar-link-line-height);
+          border-left: 0;
+          border-bottom: var(--#{$prefix}navbar-link-border-size) solid var(--navbar-link-border-color);
         }
 
         &.active {
-          border-left: var(--#{$prefix}navbar-link-border-size) solid var(--#{$prefix}navbar-link-active-bar-color);
+          --navbar-link-border-color: var(--#{$prefix}navbar-link-active-border-color);
+        }
+      }
+
+      button.nav-link {
+        display: block;
+        border-top: 0;
+        border-right: 0;
+
+        @include media-breakpoint-up(lg) {
+          display: flex;
         }
       }
 
       a.nav-link {
-        font-weight: var(--#{$prefix}navbar-link-font-weight);
         line-height: var(--#{$prefix}navbar-link-line-height);
         @include media-breakpoint-up(lg) {
-          display: flex;
-          align-items: center;
           align-self: flex-end;
-          border-bottom: var(--#{$prefix}navbar-link-border-size) solid transparent;
         }
 
         @include media-breakpoint-up(lg) {
           &:hover {
             color: var(--#{$prefix}color-text-inverse);
-          }
-        }
-
-        &.active {
-          border-left: var(--#{$prefix}navbar-link-border-size) solid var(--#{$prefix}navbar-link-active-bar-color);
-          @include media-breakpoint-up(lg) {
-            border-left: 0;
-            border-color: var(--#{$prefix}navbar-link-active-border-color);
-            background: transparent;
           }
         }
 
@@ -439,7 +440,6 @@
 }
 
 .custom-navbar-toggler {
-  margin-top: var(--#{$prefix}spacing-xxs);
   padding: 0;
   border: none;
   background: none;
@@ -549,10 +549,6 @@
 // Navbar themes
 //
 // Styles for switching between navbars with light or dark background.
-
-.navbar-light {
-  @include deprecate('`.navbar-light`', 'v5.2.0', 'v6.0.0', true);
-}
 
 .navbar-dark {
   --#{$prefix}navbar-color: var(--#{$prefix}color-text-inverse);
