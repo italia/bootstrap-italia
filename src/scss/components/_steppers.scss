@@ -9,18 +9,53 @@
 // Properties
 //
 
+.steppers {
+  --#{$prefix}stepper-color: #{$gray-secondary}; // Controls the inactive step text and icon color.
+  --#{$prefix}stepper-color-active: #{$primary}; // Controls the active step text and icon color.
+  --#{$prefix}stepper-color-confirmed: #{$primary}; // Controls the confirmed step text and icon color.
+  --#{$prefix}stepper-color-background: #{$white}; // Controls the header and nav background color.
+  --#{$prefix}stepper-color-border: #{$gray-border}; // Controls the step border color.
+  --#{$prefix}stepper-color-active-indicator: #{$primary}; // Controls the active step underline color.
+  --#{$prefix}stepper-shadow-header: 0 8px 20px rgba(0, 0, 0, 0.1); // Controls the header box shadow.
+  --#{$prefix}stepper-shadow-nav: 0 -8px 20px rgba(0, 0, 0, 0.1); // Controls the navigation box shadow.
+  --#{$prefix}stepper-header-height: 64px; // Controls the header height on mobile.
+  --#{$prefix}stepper-header-margin-bottom: 1rem; // Controls the header bottom margin.
+  --#{$prefix}stepper-nav-height: 64px; // Controls the navigation bar height.
+  --#{$prefix}stepper-spacing-h: #{$stepper-spacing-h}; // Controls the horizontal padding.
+  --#{$prefix}stepper-spacing-v: #{$stepper-spacing-v}; // Controls the vertical padding for desktop steps.
+  --#{$prefix}stepper-font-size: 1.125rem; // Controls the step label font size.
+  --#{$prefix}stepper-font-weight: 600; // Controls the step label font weight.
+  --#{$prefix}stepper-index-font-size: 0.875rem; // Controls the step index font size.
+  --#{$prefix}stepper-icon-size: 24px; // Controls the icon width and height.
+  --#{$prefix}stepper-number-size: 2rem; // Controls the number badge width and height.
+  --#{$prefix}stepper-number-border-color: #{$gray-border}; // Controls the number badge border color.
+  --#{$prefix}stepper-number-background-active: #{$primary}; // Controls the number badge active background.
+  --#{$prefix}stepper-number-border-color-active: #{$primary}; // Controls the number badge active border color.
+  --#{$prefix}stepper-number-color-active: #{$white}; // Controls the number badge active text color.
+  --#{$prefix}stepper-dot-size: 4px; // Controls the dot indicator size.
+  --#{$prefix}stepper-dot-gap: 8px; // Controls the gap between dots.
+  --#{$prefix}stepper-dot-color: #{$progress-bg}; // Controls the dot background color.
+  --#{$prefix}stepper-dot-color-done: #{$progress-bar-bg}; // Controls the completed dot background color.
+  --#{$prefix}stepper-progress-height: 2px; // Controls the progress bar height.
+  --#{$prefix}stepper-active-indicator-height: 2px; // Controls the active step underline height.
+  --#{$prefix}stepper-button-color: #{$primary}; // Controls the mobile navigation button color.
+  --#{$prefix}stepper-button-color-hover: #{$primary}; // Controls the mobile navigation button hover color.
+}
+
 // Styles
 //
 
 //mobile
+/* stylelint-disable-next-line no-duplicate-selectors */
 .steppers {
 
   // steppers
   .steppers-index {
     flex-shrink: 0;
     margin-left: auto;
-    font-size: 0.875rem;
-    font-weight: 600;
+    color: var(--#{$prefix}stepper-color);
+    font-size: var(--#{$prefix}stepper-index-font-size);
+    font-weight: var(--#{$prefix}stepper-font-weight);
 
     @include media-breakpoint-up(lg) {
       display: none;
@@ -30,7 +65,7 @@
       margin-left: 0.25rem;
 
       &.active {
-        color: $primary;
+        color: var(--#{$prefix}stepper-color-active);
         text-decoration: underline;
       }
     }
@@ -38,15 +73,15 @@
 
   .steppers-header {
 
-    margin-bottom: 1rem;
+    margin-bottom: var(--#{$prefix}stepper-header-margin-bottom);
     @include media-breakpoint-down(lg) {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 64px;
-      padding: 0 24px;
-      background: $white;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      height: var(--#{$prefix}stepper-header-height);
+      padding: 0 var(--#{$prefix}stepper-spacing-h);
+      background: var(--#{$prefix}stepper-color-background);
+      box-shadow: var(--#{$prefix}stepper-shadow-header);
     }
 
     ul {
@@ -62,15 +97,15 @@
       li {
         display: flex;
         list-style-type: none;
-        color: $gray-secondary;
-        font-size: 1.125rem;
-        font-weight: 600;
+        color: var(--#{$prefix}stepper-color);
+        font-size: var(--#{$prefix}stepper-font-size);
+        font-weight: var(--#{$prefix}stepper-font-weight);
 
         .icon {
-          width: 24px;
-          height: 24px;
+          width: var(--#{$prefix}stepper-icon-size);
+          height: var(--#{$prefix}stepper-icon-size);
           margin-right: 0.667rem;
-          fill: $gray-secondary;
+          fill: var(--#{$prefix}stepper-color);
         }
 
         // states
@@ -83,12 +118,19 @@
           }
         }
 
-        &.active,
-        &.confirmed {
-          color: $primary;
+        &.active {
+          color: var(--#{$prefix}stepper-color-active);
 
           .icon {
-            fill: $primary;
+            fill: var(--#{$prefix}stepper-color-active);
+          }
+        }
+
+        &.confirmed {
+          color: var(--#{$prefix}stepper-color-confirmed);
+
+          .icon {
+            fill: var(--#{$prefix}stepper-color-confirmed);
           }
         }
 
@@ -112,59 +154,23 @@
 
   // dark version
   &.bg-dark {
-    .steppers-header {
-      background: none;
-
-      // steppers
-      .steppers-index {
-        color: $neutral-1-a2;
-
-        span {
-          &.active {
-            color: $analogue-2-a6;
-          }
-        }
-      }
-
-      // steps
-      li {
-        color: $neutral-1-a2;
-
-        .icon {
-          fill: $neutral-1-a2;
-        }
-
-        &.active {
-          color: $analogue-2-a6;
-          font-weight: 600;
-
-          .icon {
-            fill: $analogue-2-a6;
-          }
-        }
-
-        &.confirmed {
-          color: $white;
-          font-weight: 600;
-
-          .icon {
-            fill: $white;
-          }
-        }
-      }
-    }
+    --#{$prefix}stepper-color: #{$neutral-1-a2};
+    --#{$prefix}stepper-color-active: #{$analogue-2-a6};
+    --#{$prefix}stepper-color-confirmed: #{$white};
+    --#{$prefix}stepper-color-background: transparent;
+    --#{$prefix}stepper-color-border: #{$neutral-1-a8};
+    --#{$prefix}stepper-color-active-indicator: #{$analogue-2-a6};
+    --#{$prefix}stepper-number-border-color: #{$neutral-1-a6};
+    --#{$prefix}stepper-number-background-active: #{$analogue-2-a6};
+    --#{$prefix}stepper-number-border-color-active: #{$analogue-2-a6};
+    --#{$prefix}stepper-number-color-active: #{$neutral-1-a10};
+    --#{$prefix}stepper-dot-color-done: #{$analogue-2-a6};
+    --#{$prefix}stepper-button-color: #{$white};
+    --#{$prefix}stepper-button-color-hover: #{$analogue-2-a6};
 
     .steppers-nav {
-      background: none;
-
       .progress-bar {
-        background: $analogue-2-a6;
-      }
-
-      .steppers-dots {
-        li.done {
-          background: $analogue-2-a6;
-        }
+        background: var(--#{$prefix}stepper-dot-color-done);
       }
     }
   }
@@ -174,23 +180,23 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 64px;
-    padding: 0 $stepper-spacing-h;
-    background: $white;
-    box-shadow: 0 -8px 20px rgba(0, 0, 0, 0.1); // TEMP - substitute with generic ellipsical shadow
+    height: var(--#{$prefix}stepper-nav-height);
+    padding: 0 var(--#{$prefix}stepper-spacing-h);
+    background: var(--#{$prefix}stepper-color-background);
+    box-shadow: var(--#{$prefix}stepper-shadow-nav);
 
     .steppers-progress,
     .steppers-dots {
       width: 20%;
 
       .progress {
-        height: 2px;
+        height: var(--#{$prefix}stepper-progress-height);
       }
     }
 
     .steppers-progress {
       .progress {
-        height: 2px;
+        height: var(--#{$prefix}stepper-progress-height);
       }
     }
 
@@ -202,17 +208,17 @@
       padding: 0;
 
       li {
-        width: 4px;
-        min-width: 4px;
-        height: 4px;
-        margin-right: 8px;
+        width: var(--#{$prefix}stepper-dot-size);
+        min-width: var(--#{$prefix}stepper-dot-size);
+        height: var(--#{$prefix}stepper-dot-size);
+        margin-right: var(--#{$prefix}stepper-dot-gap);
         padding: 0;
         list-style-type: none;
         border-radius: 50%;
-        background: $progress-bg;
+        background: var(--#{$prefix}stepper-dot-color);
 
         &.done {
-          background: $progress-bar-bg;
+          background: var(--#{$prefix}stepper-dot-color-done);
         }
       }
     }
@@ -254,11 +260,11 @@
         display: flex;
         flex-grow: 1;
         align-items: center;
-        padding: $stepper-spacing-v $stepper-spacing-h;
-        border-left: 1px solid $gray-border;
+        padding: var(--#{$prefix}stepper-spacing-v) var(--#{$prefix}stepper-spacing-h);
+        border-left: 1px solid var(--#{$prefix}stepper-color-border);
 
         &:nth-last-child(1) {
-          border-right: 1px solid $gray-border;
+          border-right: 1px solid var(--#{$prefix}stepper-color-border);
         }
 
         // index
@@ -276,15 +282,15 @@
             left: 50%;
             content: '';
             width: calc(100% - 2.222rem);
-            height: 2px;
-            background: $primary;
+            height: var(--#{$prefix}stepper-active-indicator-height);
+            background: var(--#{$prefix}stepper-color-active-indicator);
             transform: translateX(-50%);
           }
 
           .steppers-number {
-            border-color: $primary;
-            background: $primary;
-            color: $white;
+            border-color: var(--#{$prefix}stepper-number-border-color-active);
+            background: var(--#{$prefix}stepper-number-background-active);
+            color: var(--#{$prefix}stepper-number-color-active);
           }
 
           &.no-line {
@@ -303,10 +309,10 @@
         .steppers-number {
           display: inline-block;
           flex-shrink: 0;
-          width: 2rem;
-          height: 2rem;
+          width: var(--#{$prefix}stepper-number-size);
+          height: var(--#{$prefix}stepper-number-size);
           margin-right: 0.667rem;
-          border: 1px solid $gray-border;
+          border: 1px solid var(--#{$prefix}stepper-number-border-color);
           border-radius: 50%;
           text-align: center;
 
@@ -320,35 +326,6 @@
               margin-top: 0.333rem;
               margin-right: 0;
             }
-          }
-        }
-      }
-    }
-
-    // dark version
-    &.bg-dark {
-      .steppers-header {
-
-        // steps
-        li {
-          border-color: $neutral-1-a8;
-
-          // active
-          &.active {
-            &:after {
-              background: $analogue-2-a6;
-            }
-
-            .steppers-number {
-              border-color: $analogue-2-a6;
-              background: $analogue-2-a6;
-              color: $neutral-1-a10;
-            }
-          }
-
-          // numbers
-          .steppers-number {
-            border-color: $neutral-1-a6;
           }
         }
       }
@@ -395,7 +372,7 @@
         padding-left: 0;
         background: transparent;
         box-shadow: none;
-        color: $primary;
+        color: var(--#{$prefix}stepper-button-color);
         font-size: 1rem;
 
         &:hover,
@@ -403,35 +380,15 @@
         &:active {
           background: transparent !important;
           box-shadow: $btn-focus-box-shadow !important;
-          color: $primary !important;
+          color: var(--#{$prefix}stepper-button-color-hover) !important;
         }
 
         .icon {
-          width: 24px;
+          width: var(--#{$prefix}stepper-icon-size);
           //font-size: 0.875rem;
-          height: 24px;
+          height: var(--#{$prefix}stepper-icon-size);
           margin: 0 0.333rem;
-        }
-      }
-    }
-
-    // dark version
-    &.bg-dark {
-
-      // navigation
-      .steppers-nav {
-        button:not(.steppers-btn-save):not(.steppers-btn-confirm) {
-          color: $white;
-
-          .icon {
-            fill: $white;
-          }
-
-          &:hover,
-          &:focus,
-          &:active {
-            color: $analogue-2-a6 !important;
-          }
+          fill: var(--#{$prefix}stepper-button-color);
         }
       }
     }
