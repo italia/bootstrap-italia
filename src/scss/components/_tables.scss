@@ -9,38 +9,36 @@
 // Properties
 //
 
+.table {
+  --#{$prefix}table-color: var(--#{$prefix}color-text-base); // Controls the text color for the table, using color tokens.
+  --#{$prefix}table-bg: transparent; // Controls the background color for the table, using color tokens.
+  --#{$prefix}table-border-color: var(--#{$prefix}border-color); // Controls the border color for the table, using color tokens.
+  --#{$prefix}table-border-width: var(--#{$prefix}border-width); // Controls the border width for the table cell.
+  --#{$prefix}table-striped-bg: var(--#{$prefix}color-background-muted); // Controls the text color for the striped rows, using color tokens.
+  // --#{$prefix}table-striped-color: var(--#{$prefix}color-b); // Controls the text color for the striped rows, using color tokens.
+  --#{$prefix}table-active-color: #{$table-active-color};
+  --#{$prefix}table-active-bg: #{$table-active-bg};
+  --#{$prefix}table-hover-color: var(--#{$prefix}color-text-base);
+  --#{$prefix}table-hover-bg: #{$table-hover-bg};
+  --#{$prefix}table-padding: var(--#{$prefix}spacing-xxs); // Controls the padding for the table cells, using spacing tokens.
+  --#{$prefix}table-cell-font-size: var(--#{$prefix}body-font-size); // Controls the font size for the table cells, using typography tokens.
+  --#{$prefix}table-cell-vertical-align: top; // Controls the vertical alignment of the table cells.
+}
+
 // Styles
 //
 
-//
-// Basic Bootstrap table
-//
-
 .table {
-  --#{$prefix}table-color: #{$table-color};
-  --#{$prefix}table-bg: #{$table-bg};
-  --#{$prefix}table-border-color: #{$table-border-color};
-  --#{$prefix}table-accent-bg: #{$table-accent-bg};
-  --#{$prefix}table-striped-color: #{$table-striped-color};
-  --#{$prefix}table-striped-bg: #{$table-striped-bg};
-  --#{$prefix}table-active-color: #{$table-active-color};
-  --#{$prefix}table-active-bg: #{$table-active-bg};
-  --#{$prefix}table-hover-color: #{$table-hover-color};
-  --#{$prefix}table-hover-bg: #{$table-hover-bg};
-
   width: 100%;
   margin-bottom: $spacer;
-  color: var(--#{$prefix}table-color);
-  vertical-align: $table-cell-vertical-align;
   border-color: var(--#{$prefix}table-border-color);
+  font-size: var(--#{$prefix}table-cell-font-size);
+  vertical-align: var(--#{$prefix}table-cell-vertical-align);
 
-  @include media-breakpoint-up(lg) {
-    font-size: 1.125rem;
-  }
   //table styles go here
   .table-dark {
     a {
-      color: $white;
+      color: var(--#{$prefix}color-text-inverse);
     }
   }
 
@@ -50,10 +48,11 @@
   // Another advantage is that this generates less code and makes the selector less specific making it easier to override.
   // stylelint-disable-next-line selector-max-universal
   > :not(caption) > * > * {
-    padding: $table-cell-padding-y $table-cell-padding-x;
+    padding: var(--#{$prefix}table-padding);
+    border-bottom-width: var(--#{$prefix}table-border-width);
+    border-color: var(--#{$prefix}table-border-color);
     background-color: var(--#{$prefix}table-bg);
-    border-bottom-width: $table-border-width;
-    box-shadow: inset 0 0 0 9999px var(--#{$prefix}table-accent-bg);
+    color: var(--#{$prefix}table-color);
   }
 
   > tbody {
@@ -66,7 +65,7 @@
 }
 
 .table-group-divider {
-  border-top: ($table-border-width * 2) solid $table-group-separator-color;
+  border-top: calc(var(--#{$prefix}table-border-width) * 2) solid $table-group-separator-color;
 }
 
 //
@@ -84,9 +83,11 @@
 .table-sm {
   // stylelint-disable-next-line selector-max-universal
   > :not(caption) > * > * {
-    padding: $table-cell-padding-y-sm $table-cell-padding-x-sm;
+    --#{$prefix}table-padding: var(--#{$prefix}spacing-3xs);
   }
 }
+
+
 
 // Border versions
 //
@@ -99,11 +100,11 @@
 
 .table-bordered {
   > :not(caption) > * {
-    border-width: $table-border-width 0;
+    border-width: var(--#{$prefix}table-border-width) 0;
 
     // stylelint-disable-next-line selector-max-universal
     > * {
-      border-width: 0 $table-border-width;
+      border-width: 0 var(--#{$prefix}table-border-width);
     }
   }
 }
@@ -126,16 +127,22 @@
 // For rows
 .table-striped {
   > tbody > tr:nth-of-type(#{$table-striped-order}) > * {
-    --#{$prefix}table-accent-bg: var(--#{$prefix}table-striped-bg);
-    color: var(--#{$prefix}table-striped-color);
+    --#{$prefix}table-bg: var(--#{$prefix}table-striped-bg, var(--#{$prefix}color-background-muted));
+    --#{$prefix}table-color: var(--#{$prefix}table-striped-color);
+  }
+
+  &.table-dark {
+    > tbody > tr:nth-of-type(#{$table-striped-order}) > * {
+      --#{$prefix}table-bg: var(--#{$prefix}color-background-primary-muted);
+    }
   }
 }
 
 // For columns
 .table-striped-columns {
   > :not(caption) > tr > :nth-child(#{$table-striped-columns-order}) {
-    --#{$prefix}table-accent-bg: var(--#{$prefix}table-striped-bg);
-    color: var(--#{$prefix}table-striped-color);
+    --#{$prefix}table-bg: var(--#{$prefix}table-striped-bg, var(--#{$prefix}color-background-muted));
+    --#{$prefix}table-color: var(--#{$prefix}table-striped-color);
   }
 }
 
@@ -144,8 +151,7 @@
 // The `.table-active` class can be added to highlight rows or cells
 
 .table-active {
-  --#{$prefix}table-accent-bg: var(--#{$prefix}table-active-bg);
-  color: var(--#{$prefix}table-active-color);
+  --#{$prefix}table-bg: var(--#{$prefix}table-active-bg);
 }
 
 // Hover effect
@@ -154,8 +160,7 @@
 
 .table-hover {
   > tbody > tr:hover > * {
-    --#{$prefix}table-accent-bg: var(--#{$prefix}table-hover-bg);
-    color: var(--#{$prefix}table-hover-color);
+    --#{$prefix}table-bg: var(--#{$prefix}table-hover-bg);
   }
 }
 
@@ -164,8 +169,78 @@
 // Table variants set the table cell backgrounds, border colors
 // and the colors of the striped, hovered & active tables
 
-@each $color, $value in $table-variants {
-  @include table-variant($color, $value);
+.table-primary {
+  --#{$prefix}table-bg: var(--#{$prefix}color-background-primary-light);
+  --#{$prefix}table-color: var(--#{$prefix}color-text-base);
+  --#{$prefix}table-striped-bg: var(--#{$prefix}color-background-primary-light);
+  --#{$prefix}table-striped-color: var(--#{$prefix}color-text-base);
+  --#{$prefix}table-hover-bg: var(--#{$prefix}color-background-primary-hover);
+  --#{$prefix}table-active-bg: var(--#{$prefix}color-background-primary-light);
+}
+
+.table-secondary {
+  --#{$prefix}table-bg: var(--#{$prefix}color-background-secondary-light);
+  --#{$prefix}table-color: var(--#{$prefix}color-text-base);
+  --#{$prefix}table-striped-bg: var(--#{$prefix}color-background-secondary-light);
+  --#{$prefix}table-striped-color: var(--#{$prefix}color-text-base);
+  --#{$prefix}table-hover-bg: var(--#{$prefix}color-background-secondary-hover);
+  --#{$prefix}table-active-bg: var(--#{$prefix}color-background-secondary-active);
+}
+
+.table-success {
+  --#{$prefix}table-bg: var(--#{$prefix}color-background-success-light);
+  --#{$prefix}table-color: var(--#{$prefix}color-text-base);
+  --#{$prefix}table-striped-bg: var(--#{$prefix}color-background-success-light);
+  --#{$prefix}table-striped-color: var(--#{$prefix}color-text-success);
+  --#{$prefix}table-hover-bg: var(--#{$prefix}color-background-success-hover);
+  --#{$prefix}table-active-bg: var(--#{$prefix}color-background-success-active);
+}
+
+.table-info {
+  --#{$prefix}table-bg: var(--#{$prefix}color-background-primary-lighter);
+  --#{$prefix}table-color: var(--#{$prefix}color-text-base);
+  --#{$prefix}table-striped-bg: var(--{$prefix}color-background-primary-lighter);
+  --#{$prefix}table-striped-color: var(--#{$prefix}color-text-base);
+  --#{$prefix}table-hover-bg: var(--#{$prefix}color-background-primary-hover);
+  --#{$prefix}table-active-bg: var(--#{$prefix}color-background-primary-active);
+}
+
+.table-warning {
+  --#{$prefix}table-bg: var(--#{$prefix}color-background-warning-light);
+  --#{$prefix}table-color: var(--#{$prefix}color-text-base);
+  --#{$prefix}table-striped-bg: var(--#{$prefix}color-background-warning-light);
+  --#{$prefix}table-striped-color: var(--#{$prefix}color-text-warning);
+  --#{$prefix}table-hover-bg: var(--#{$prefix}color-background-warning-hover);
+  --#{$prefix}table-active-bg: var(--#{$prefix}color-background-warning-active);
+}
+
+.table-danger {
+  --#{$prefix}table-bg: var(--#{$prefix}color-background-danger-light);
+  --#{$prefix}table-color: var(--#{$prefix}color-text-base);
+  --#{$prefix}table-striped-bg: var(--#{$prefix}color-background-danger-light);
+  --#{$prefix}table-striped-color: var(--#{$prefix}color-text-base);
+  --#{$prefix}table-hover-bg: var(--#{$prefix}color-background-danger-hover);
+  --#{$prefix}table-active-bg: var(--#{$prefix}color-background-danger-active);
+}
+
+.table-light {
+  --#{$prefix}table-bg: var(--#{$prefix}color-background-secondary-lighter);
+  --#{$prefix}table-color: var(--#{$prefix}color-text-base);
+  --#{$prefix}table-striped-bg: var(--#{$prefix}color-background-secondary-lighter);
+  --#{$prefix}table-striped-color: var(--#{$prefix}color-text-primary);
+  --#{$prefix}table-hover-bg: var(--#{$prefix}color-background-secondary-hover);
+  --#{$prefix}table-hover-color: var(--#{$prefix}color-text-primary);
+  --#{$prefix}table-active-bg: var(--#{$prefix}color-background-secondary);
+}
+
+.table-dark {
+  --#{$prefix}table-bg: var(--#{$prefix}color-background-primary-deep);
+  --#{$prefix}table-border-color: var(--#{$prefix}color-background-primary-deep);
+  --#{$prefix}table-color: var(--#{$prefix}color-text-inverse);
+  --#{$prefix}table-striped-bg: var(--#{$prefix}color-background-primary-deep);
+  --#{$prefix}table-striped-color: var(--#{$prefix}color-text-inverse);
+  --#{$prefix}table-hover-bg: var(--#{$prefix}color-background-primary-muted);
+  --#{$prefix}table-active-bg: var(--#{$prefix}color-background-primary-active);
 }
 
 // Responsive tables
