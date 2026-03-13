@@ -3,26 +3,59 @@ layout: default
 ---
 
 <main id="content">
-  <div class="d-flex align-items-center justify-content-center main-content">
+  <div class="main-content py-5">
     <div class="container">
-      <div class="row">
-        <div class="main-content--panel col-md-10 col-lg-8 mb-5 p-4">
-          <p class="mt-5">
-            Il framework <strong>Bootstrap Italia</strong> è il modo più semplice per realizzare interfacce web <strong>inclusive</strong> e <strong>semplici da mantenere</strong>.
-          </p>
-          <p>
-            Completamente <strong>open source</strong>, è costruito sulle fondamenta di <a href="https://getbootstrap.com/" target="_blank" rel="noopener noreferrer">Bootstrap {{ site.bootstrap_version }}</a>, di cui eredita tutte le funzionalità, componenti, griglie e classi di utilità, personalizzandole per implementare soluzioni secondo le <a href="https://designers.italia.it/norme-e-riferimenti/" target="_blank" rel="noopener noreferrer">Linee guida di design per i siti internet e i servizi digitali della Pubblica Amministrazione</a>.
-          </p> 
-          <p><strong>Bootstrap Italia</strong> è la risorsa di sviluppo dell'ecosistema <a href="https://designers.italia.it/design-system/come-iniziare/" target="_blank" rel="noopener noreferrer"><strong>design system del Paese</strong></a> e implementa pattern e componenti di <a href="https://github.com/italia/design-ui-kit/" target="_blank" rel="noopener noreferrer"><strong>UI Kit Italia</strong></a> in codice pronto all'uso!
-          </p>
-          <div class="d-flex flex-column justify-content-center my-5">
-            <a class="mt-2 mx-auto btn btn-primary btl-lg mb-2" href="{{ site.baseurl }}/docs/come-iniziare/introduzione/">Come iniziare</a>
-            <div class="mx-auto text-muted">Versione corrente: <strong>v{{ site.current_version }}</strong></div>
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-5 mb-lg-0">
+          <div class="main-content--panel p-4 h-100 d-flex flex-column justify-content-center">
+            <p class="text-uppercase text-primary fw-semibold mb-2">
+              Design system del Paese
+            </p>
+            <h1 class="display-5 fw-bold mb-3">
+              Crea interfacce web inclusive con <span class="text-primary">Bootstrap Italia</span>
+            </h1>
+            <p class="lead mb-3">
+              Il framework <strong>Bootstrap Italia</strong> è il modo più semplice per realizzare interfacce web <strong>inclusive</strong> e <strong>semplici da mantenere</strong>.
+            </p>
+            <p class="mb-3">
+              Completamente <strong>open source</strong>, è costruito sulle fondamenta di
+              <a href="https://getbootstrap.com/" target="_blank" rel="noopener noreferrer">Bootstrap {{ site.bootstrap_version }}</a>,
+              di cui eredita tutte le funzionalità, componenti, griglie e classi di utilità, personalizzandole per implementare soluzioni secondo le
+              <a href="https://designers.italia.it/norme-e-riferimenti/" target="_blank" rel="noopener noreferrer">Linee guida di design per i siti internet e i servizi digitali della Pubblica Amministrazione</a>.
+            </p>
+            <p class="mb-4">
+              <strong>Bootstrap Italia</strong> è la risorsa di sviluppo dell'ecosistema
+              <a href="https://designers.italia.it/design-system/come-iniziare/" target="_blank" rel="noopener noreferrer"><strong>design system del Paese</strong></a>
+              e implementa pattern e componenti di
+              <a href="https://github.com/italia/design-ui-kit/" target="_blank" rel="noopener noreferrer"><strong>UI Kit Italia</strong></a>
+              in codice pronto all'uso!
+            </p>
+
+            <div class="d-flex flex-column flex-sm-row align-items-sm-center gap-3 mb-4">
+              <a class="btn btn-primary btn-lg" href="{{ site.baseurl }}/docs/come-iniziare/introduzione/">
+                Come iniziare
+              </a>
+              <div class="text-muted">
+                Versione corrente: <strong>v{{ site.current_version }}</strong>
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <div class="text-muted mb-1">Installa via npm</div>
+              <pre class="bg-dark text-white rounded px-3 py-2 mb-0"><code>npm install bootstrap-italia</code></pre>
+            </div>
+
+            <div class="mt-3 small text-muted">
+              La versione di Bootstrap Italia 1.6.4 e precedenti sono deprecate e la documentazione è
+              <a href="https://regioneer.github.io/bootstrap-italia" target="_blank" rel="noopener noreferrer">disponibile online</a>
+              grazie al contributo della regione Emilia-Romagna. Si prega di fare riferimento al branch
+              <a href="https://github.com/italia/bootstrap-italia/tree/1.x">1.x per il codice</a>.
+            </div>
           </div>
-          <div class="d-flex flex-column justify-content-center my-5">
-            <div>La versione di Bootstrap Italia 1.6.4 e precedenti sono deprecate e la documentazione è <a href="https://regioneer.github.io/bootstrap-italia" target="_blank" rel="noopener noreferrer">disponibile online</a> grazie al contributo della regione Emilia-Romagna. Si prega di fare riferimento al branch <a href="https://github.com/italia/bootstrap-italia/tree/1.x"> per il codice</a>.</div>
-          </div>
-          <div class="cover-container my-4">
+        </div>
+
+        <div class="col-lg-6">
+          <div class="cover-container my-4 my-lg-0">
             <div class="cover-progress d-flex align-items-center justify-content-center">
               <div class="progress-spinner progress-spinner-active">
                 <span class="visually-hidden">Caricamento...</span>
