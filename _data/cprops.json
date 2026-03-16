@@ -58,16 +58,6 @@
     ],
     "accordion": [
         {
-            "description": "Controls the active background color for the accordion button, using color tokens.",
-            "value": "var(--bsi-color-background-primary)",
-            "variable-name": "--bsi-accordion-active-bg"
-        },
-        {
-            "description": "Controls the active text color for the accordion button, using color tokens.",
-            "value": "var(--bsi-color-text-primary-active)",
-            "variable-name": "--bsi-accordion-active-color"
-        },
-        {
             "description": "Controls the background color for the accordion item, using color tokens.",
             "value": "var(--bsi-page-background)",
             "variable-name": "--bsi-accordion-background"
@@ -108,7 +98,7 @@
             "variable-name": "--bsi-accordion-btn-bg"
         },
         {
-            "description": "",
+            "description": "Controls the text color for the accordion button, using color tokens.",
             "value": "var(--bsi-color-text-primary)",
             "variable-name": "--bsi-accordion-btn-color"
         },
@@ -143,8 +133,8 @@
             "variable-name": "--bsi-accordion-btn-icon-width"
         },
         {
-            "description": "",
-            "value": "var(--bsi-font-line-height-1)",
+            "description": "Controls the line height for the accordion button, using font tokens.",
+            "value": "var(--bsi-font-leading-1)",
             "variable-name": "--bsi-accordion-btn-line-height"
         },
         {
@@ -538,7 +528,7 @@
         },
         {
             "description": "Controls the line height for the button, using font tokens.",
-            "value": "var(--bsi-font-line-height-3)",
+            "value": "var(--bsi-font-leading-3)",
             "variable-name": "--bsi-btn-line-height"
         },
         {
@@ -629,6 +619,128 @@
             "variable-name": "--bsi-callout-title-font-weight"
         }
     ],
+    "card": [
+        {
+            "description": "Controls the card background color, using color tokens",
+            "value": "var(--bsi-color-background-inverse)",
+            "variable-name": "--bsi-card-background"
+        },
+        {
+            "description": "Controls the card border color, using color tokens",
+            "value": "var(--bsi-color-border-subtle)",
+            "variable-name": "--bsi-card-border-color"
+        },
+        {
+            "description": "Controls the outer border radius of the card, using radius tokens",
+            "value": "var(--bsi-radius-smooth)",
+            "variable-name": "--bsi-card-border-radius"
+        },
+        {
+            "description": "Controls",
+            "value": "transparent",
+            "variable-name": "--bsi-card-border-top-color"
+        },
+        {
+            "description": "Controls the width of the top border",
+            "value": "6px",
+            "variable-name": "--bsi-card-border-top-width"
+        },
+        {
+            "description": "Controls the width of the outside border, used for calculating inner border radius",
+            "value": "1px",
+            "variable-name": "--bsi-card-border-outside-width"
+        },
+        {
+            "description": "Controls the width of the separator border for card sections like body and footer",
+            "value": "1px",
+            "variable-name": "--bsi-card-border-separator-width"
+        },
+        {
+            "description": "Controls the background color of the card footer, using color tokens",
+            "value": "transparent",
+            "variable-name": "--bsi-card-footer-background"
+        },
+        {
+            "description": "Controls the text color of the card footer, using color tokens",
+            "value": "var(--bsi-color-text-muted)",
+            "variable-name": "--bsi-card-footer-text-color"
+        },
+        {
+            "description": "Controls the horizontal padding of the card, using spacing tokens",
+            "value": "var(--bsi-spacing-s)",
+            "variable-name": "--bsi-card-spacing-x"
+        },
+        {
+            "description": "Controls the vertical padding of the card, using spacing tokens",
+            "value": "var(--bsi-spacing-s)",
+            "variable-name": "--bsi-card-spacing-y"
+        },
+        {
+            "description": "Controls the text color of the card category, using color tokens",
+            "value": "var(--bsi-color-text-muted)",
+            "variable-name": "--bsi-card-category-color"
+        },
+        {
+            "description": "Controls the font weight of the card category, using font weight tokens",
+            "value": "var(--bsi-font-weight-solid)",
+            "variable-name": "--bsi-card-category-font-weight"
+        },
+        {
+            "description": "Controls the font size of the card category, using font size tokens",
+            "value": "var(--bsi-label-font-size)",
+            "variable-name": "--bsi-card-category-font-size"
+        },
+        {
+            "description": "Controls the main text color of the card, using color tokens",
+            "value": "var(--bsi-color-text-secondary)",
+            "variable-name": "--bsi-card-text-color"
+        },
+        {
+            "description": "Controls the text color of the card date, using color tokens",
+            "value": "var(--bsi-color-text-muted)",
+            "variable-name": "--bsi-card-date-color"
+        },
+        {
+            "description": "Controls the font size of the card date, using font size tokens",
+            "value": "var(--bsi-label-font-size-s)",
+            "variable-name": "--bsi-card-date-font-size"
+        },
+        {
+            "description": "Controls the text color of the card description, using color tokens",
+            "value": "var(--bsi-color-text-muted)",
+            "variable-name": "--bsi-card-description-color"
+        },
+        {
+            "description": "Controls the height of the card, can be set to fixed value or auto",
+            "value": "auto",
+            "variable-name": "--bsi-card-height"
+        },
+        {
+            "description": "Controls the minimum height of inline cards, ensuring enough space for content and image",
+            "value": "240px",
+            "variable-name": "--bsi-card-inline-min-height"
+        },
+        {
+            "description": "Controls the minimum height of inline mini cards, ensuring enough space for content and image",
+            "value": "160px",
+            "variable-name": "--bsi-card-inline-mini-min-height"
+        },
+        {
+            "description": "Controls the text color of links within the card, using color tokens",
+            "value": "var(--bsi-color-text-secondary)",
+            "variable-name": "--bsi-card-link-color"
+        },
+        {
+            "description": "Controls the font size of the card signature, using font size tokens",
+            "value": "var(--bsi-label-font-size)",
+            "variable-name": "--bsi-card-signature-font-size"
+        },
+        {
+            "description": "Controls the font family of the card signature, using font family tokens",
+            "value": "var(--bsi-font-mono)",
+            "variable-name": "--bsi-card-signature-font-family"
+        }
+    ],
     "chip": [
         {
             "description": "Controls the background color for the chip, using color tokens.",
@@ -677,7 +789,7 @@
         },
         {
             "description": "Controls the text line height for the chip, using font tokens.",
-            "value": "var(--bsi-label-line-height)",
+            "value": "var(--bsi-label-leading)",
             "variable-name": "--bsi-chip-text-line-height"
         },
         {
@@ -868,6 +980,41 @@
     "form": [
         {
             "description": "",
+            "value": "transparent",
+            "variable-name": "--bsi-form-control-border-color"
+        },
+        {
+            "description": "",
+            "value": "0",
+            "variable-name": "--bsi-form-control-border-radius"
+        },
+        {
+            "description": "",
+            "value": "transparent",
+            "variable-name": "--bsi-form-control-background-color"
+        },
+        {
+            "description": "",
+            "value": "0",
+            "variable-name": "--bsi-form-control-spacing"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-spacing-xxs) var(--bsi-spacing-3xs)",
+            "variable-name": "--bsi-form-control-spacing"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-label-font-size)",
+            "variable-name": "--bsi-form-control-font-size"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-lead-font-size)",
+            "variable-name": "--bsi-form-control-font-size"
+        },
+        {
+            "description": "",
             "value": "2.5rem",
             "variable-name": "--bsi-form-control-height"
         },
@@ -943,41 +1090,6 @@
         },
         {
             "description": "",
-            "value": "transparent",
-            "variable-name": "--bsi-form-control-border-color"
-        },
-        {
-            "description": "",
-            "value": "0",
-            "variable-name": "--bsi-form-control-border-radius"
-        },
-        {
-            "description": "",
-            "value": "transparent",
-            "variable-name": "--bsi-form-control-background-color"
-        },
-        {
-            "description": "",
-            "value": "0",
-            "variable-name": "--bsi-form-control-spacing"
-        },
-        {
-            "description": "",
-            "value": "var(--bsi-spacing-xxs) var(--bsi-spacing-3xs)",
-            "variable-name": "--bsi-form-control-spacing"
-        },
-        {
-            "description": "",
-            "value": "var(--bsi-label-font-size)",
-            "variable-name": "--bsi-form-control-font-size"
-        },
-        {
-            "description": "",
-            "value": "var(--bsi-lead-font-size)",
-            "variable-name": "--bsi-form-control-font-size"
-        },
-        {
-            "description": "",
             "value": "var(--bsi-color-border-danger)",
             "variable-name": "--bsi-form-checkbox-border-color"
         }
@@ -1047,11 +1159,6 @@
             "description": "Controls the nav text color for the header, using color tokens.",
             "value": "var(--bsi-color-link)",
             "variable-name": "--bsi-header-nav-text-color"
-        },
-        {
-            "description": "Controls the search button background for the header, using color tokens.",
-            "value": "var(--bsi-color-background-inverse)",
-            "variable-name": "--bsi-header-search-button-background"
         },
         {
             "description": "Controls the search button color for the header, using icon tokens.",
@@ -1141,176 +1248,49 @@
     ],
     "hero": [
         {
-            "description": "",
+            "description": "Controls the hero background color, using color tokens",
             "value": "var(--bsi-color-background-primary)",
             "variable-name": "--bsi-hero-background-color"
         },
         {
-            "description": "",
-            "value": "1rem",
-            "variable-name": "--bsi-hero-cat-size"
+            "description": "Controls the font size of the category text in the hero, using text tokens",
+            "value": "var(--bsi-label-font-size)",
+            "variable-name": "--bsi-hero-category-font-size"
         },
         {
-            "description": "",
-            "value": "300px",
+            "description": "Controls the height of the hero",
+            "value": "400px",
             "variable-name": "--bsi-hero-height"
         },
         {
-            "description": "",
+            "description": "Controls the negative spacing for overlapping content below the hero",
             "value": "-3rem",
             "variable-name": "--bsi-hero-overlap-negative-spacing"
         },
         {
-            "description": "",
-            "value": "48px",
-            "variable-name": "--bsi-hero-overlap-spacing-inset"
-        },
-        {
-            "description": "",
+            "description": "Controls the overlay background color for the hero",
             "value": "transparent",
             "variable-name": "--bsi-hero-overlay-background"
         },
         {
-            "description": "",
-            "value": "rgba(var(--bsi-color-background-primary), 0.8)",
-            "variable-name": "--bsi-hero-primary-bg"
+            "description": "Controls the horizontal padding for the hero, using spacing tokens",
+            "value": "var(--bsi-spacing-xs)",
+            "variable-name": "--bsi-hero-padding-x"
         },
         {
-            "description": "",
+            "description": "Controls the vertical padding for the hero, using spacing tokens",
+            "value": "var(--bsi-spacing-3xl)",
+            "variable-name": "--bsi-hero-padding-y"
+        },
+        {
+            "description": "Controls the font family for the hero text, using typography tokens",
             "value": "var(--bsi-font-serif)",
-            "variable-name": "--bsi-hero-text-family"
+            "variable-name": "--bsi-hero-text-font-family"
         },
         {
-            "description": "",
-            "value": "#fff",
+            "description": "Controls the text color for the hero text, using color tokens",
+            "value": "var(--bsi-color-text-inverse)",
             "variable-name": "--bsi-hero-text-color"
-        }
-    ],
-    "it": [
-        {
-            "description": "",
-            "value": "var(--bsi-color-background-inverse)",
-            "variable-name": "--bsi-it-card-background"
-        },
-        {
-            "description": "",
-            "value": "var(--bsi-color-border-subtle)",
-            "variable-name": "--bsi-it-card-border-color"
-        },
-        {
-            "description": "",
-            "value": "calc(var(--bsi-it-card-border-radius) - var(--bsi-it-card-border-outside-width))",
-            "variable-name": "--bsi-it-card-border-radius-inner"
-        },
-        {
-            "description": "Default background set to transparent",
-            "value": "transparent",
-            "variable-name": "--bsi-it-card-border-top-color"
-        },
-        {
-            "description": "",
-            "value": "6px",
-            "variable-name": "--bsi-it-card-border-top-width"
-        },
-        {
-            "description": "Change to 2px if needed",
-            "value": "1px",
-            "variable-name": "--bsi-it-card-border-outside-width"
-        },
-        {
-            "description": "Change to 2px if needed",
-            "value": "1px",
-            "variable-name": "--bsi-it-card-border-separator-width"
-        },
-        {
-            "description": "",
-            "value": "transparent",
-            "variable-name": "--bsi-it-card-footer-background"
-        },
-        {
-            "description": "",
-            "value": "var(--bsi-color-text-muted)",
-            "variable-name": "--bsi-it-card-footer-text-color"
-        },
-        {
-            "description": "",
-            "value": "var(--bsi-spacing-s)",
-            "variable-name": "--bsi-it-card-spacing-x"
-        },
-        {
-            "description": "",
-            "value": "var(--bsi-spacing-s)",
-            "variable-name": "--bsi-it-card-spacing-y"
-        },
-        {
-            "description": "",
-            "value": "var(--bsi-color-text-muted)",
-            "variable-name": "--bsi-it-card-category-color"
-        },
-        {
-            "description": "",
-            "value": "var(--bsi-font-weight-solid)",
-            "variable-name": "--bsi-it-card-category-font-weight"
-        },
-        {
-            "description": "",
-            "value": "var(--bsi-label-font-size)",
-            "variable-name": "--bsi-it-card-category-font-size"
-        },
-        {
-            "description": "",
-            "value": "var(--bsi-color-text-secondary)",
-            "variable-name": "--bsi-it-card-text-color"
-        },
-        {
-            "description": "",
-            "value": "var(--bsi-color-text-muted)",
-            "variable-name": "--bsi-it-card-date-color"
-        },
-        {
-            "description": "",
-            "value": "var(--bsi-label-font-size-s)",
-            "variable-name": "--bsi-it-card-date-font-size"
-        },
-        {
-            "description": "",
-            "value": "var(--bsi-color-text-muted)",
-            "variable-name": "--bsi-it-card-description-color"
-        },
-        {
-            "description": "",
-            "value": "auto",
-            "variable-name": "--bsi-it-card-height"
-        },
-        {
-            "description": "",
-            "value": "240px",
-            "variable-name": "--bsi-it-card-inline-min-height"
-        },
-        {
-            "description": "",
-            "value": "160px",
-            "variable-name": "--bsi-it-card-inline-mini-min-height"
-        },
-        {
-            "description": "",
-            "value": "var(--bsi-color-text-secondary)",
-            "variable-name": "--bsi-it-card-link-color"
-        },
-        {
-            "description": "",
-            "value": "var(--bsi-it-card-spacing-y)",
-            "variable-name": "--bsi-it-card-title-spacing-y"
-        },
-        {
-            "description": "",
-            "value": "1rem",
-            "variable-name": "--bsi-it-card-signature-font-size"
-        },
-        {
-            "description": "",
-            "value": "var(--bsi-font-mono)",
-            "variable-name": "--bsi-it-card-signature-font-family"
         }
     ],
     "linklist": [
@@ -1336,7 +1316,7 @@
         },
         {
             "description": "Controls the line height of the list items, using text tokens",
-            "value": "var(--bsi-label-line-height)",
+            "value": "var(--bsi-label-leading)",
             "variable-name": "--bsi-linklist-item-line-height"
         },
         {
@@ -1357,14 +1337,14 @@
             "variable-name": "--bsi-megamenu-background-color"
         },
         {
-            "description": "Controls the border color for the megamenu, using color tokens.",
-            "value": "var(--bsi-color-border-subtle)",
-            "variable-name": "--bsi-megamenu-border-color"
-        },
-        {
             "description": "Controls the spacing for the megamenu, using spacing tokens.",
             "value": "var(--bsi-spacing-xs)",
-            "variable-name": "--bsi-megamenu-spacing"
+            "variable-name": "--bsi-megamenu-content-spacing"
+        },
+        {
+            "description": "Controls the border color for the megamenu, using color tokens.",
+            "value": "var(--bsi-color-border-subtle)",
+            "variable-name": "--bsi-megamenu-content-border-color"
         }
     ],
     "modal": [
@@ -1489,11 +1469,6 @@
     "navbar": [
         {
             "description": "",
-            "value": "#{$navbar-light-active-color}",
-            "variable-name": "--bsi-navbar-active-color"
-        },
-        {
-            "description": "",
             "value": "var(--bsi-color-background-primary)",
             "variable-name": "--bsi-navbar-background"
         },
@@ -1504,7 +1479,7 @@
         },
         {
             "description": "",
-            "value": "#{$navbar-brand-font-size}",
+            "value": "var(--bsi-)",
             "variable-name": "--bsi-navbar-brand-font-size"
         },
         {
@@ -1524,53 +1499,18 @@
         },
         {
             "description": "",
-            "value": "2rem",
-            "variable-name": "--bsi-navbar-close-button-icon-size"
-        },
-        {
-            "description": "",
             "value": "44px",
             "variable-name": "--bsi-navbar-close-button-size"
         },
         {
             "description": "",
-            "value": "#{$navbar-light-color}",
-            "variable-name": "--bsi-navbar-color"
-        },
-        {
-            "description": "",
-            "value": "#{$navbar-light-disabled-color}",
-            "variable-name": "--bsi-navbar-disabled-color"
-        },
-        {
-            "description": "",
-            "value": "0.6",
+            "value": "0.75",
             "variable-name": "--bsi-navbar-disabled-item-opacity"
-        },
-        {
-            "description": "",
-            "value": "1rem",
-            "variable-name": "--bsi-navbar-dropdown-icon-line-height"
-        },
-        {
-            "description": "",
-            "value": "0.75rem",
-            "variable-name": "--bsi-navbar-dropdown-icon-size"
-        },
-        {
-            "description": "",
-            "value": "1rem",
-            "variable-name": "--bsi-navbar-dropdown-icon-width"
         },
         {
             "description": "",
             "value": "1.5rem",
             "variable-name": "--bsi-navbar-hamburger-size"
-        },
-        {
-            "description": "",
-            "value": "#{$navbar-light-hover-color}",
-            "variable-name": "--bsi-navbar-hover-color"
         },
         {
             "description": "",
@@ -1594,7 +1534,7 @@
         },
         {
             "description": "",
-            "value": "var(--bsi-label-line-height)",
+            "value": "var(--bsi-label-leading)",
             "variable-name": "--bsi-navbar-link-line-height"
         },
         {
@@ -1609,18 +1549,8 @@
         },
         {
             "description": "",
-            "value": "102px",
-            "variable-name": "--bsi-navbar-links-margin-top"
-        },
-        {
-            "description": "",
-            "value": "#{$navbar-nav-link-padding-x}",
-            "variable-name": "--bsi-navbar-nav-link-padding-x"
-        },
-        {
-            "description": "",
             "value": "rgba(0, 0, 0, 0.6)",
-            "variable-name": "--bsi-navbar-sidebar-bg-color-mobile"
+            "variable-name": "--bsi-navbar-overlay-bg"
         },
         {
             "description": "",
@@ -1631,46 +1561,6 @@
             "description": "",
             "value": "1.5rem",
             "variable-name": "--bsi-navbar-toggle-button-icon-size"
-        },
-        {
-            "description": "",
-            "value": "#{$navbar-light-toggler-border-color}",
-            "variable-name": "--bsi-navbar-toggler-border-color"
-        },
-        {
-            "description": "",
-            "value": "#{$navbar-toggler-border-radius}",
-            "variable-name": "--bsi-navbar-toggler-border-radius"
-        },
-        {
-            "description": "",
-            "value": "#{$navbar-toggler-focus-width}",
-            "variable-name": "--bsi-navbar-toggler-focus-width"
-        },
-        {
-            "description": "",
-            "value": "#{$navbar-toggler-font-size}",
-            "variable-name": "--bsi-navbar-toggler-font-size"
-        },
-        {
-            "description": "",
-            "value": "#{escape-svg($navbar-light-toggler-icon-bg)}",
-            "variable-name": "--bsi-navbar-toggler-icon-bg"
-        },
-        {
-            "description": "",
-            "value": "#{$navbar-toggler-padding-x}",
-            "variable-name": "--bsi-navbar-toggler-padding-x"
-        },
-        {
-            "description": "",
-            "value": "#{$navbar-toggler-padding-y}",
-            "variable-name": "--bsi-navbar-toggler-padding-y"
-        },
-        {
-            "description": "",
-            "value": "#{$navbar-toggler-transition}",
-            "variable-name": "--bsi-navbar-toggler-transition"
         },
         {
             "description": "Nav link color default - desktop",
@@ -1800,6 +1690,48 @@
             "variable-name": "--bsi-navscroll-divider-color"
         }
     ],
+    "overlay": [
+        {
+            "description": "Controls the vertical padding of the panel, using spacing tokens",
+            "value": "var(--bsi-spacing-s)",
+            "variable-name": "--bsi-overlay-panel-padding-y"
+        },
+        {
+            "description": "Controls the horizontal padding of the panel, using spacing tokens",
+            "value": "var(--bsi-spacing-m)",
+            "variable-name": "--bsi-overlay-panel-padding-x"
+        },
+        {
+            "description": "Controls the background color of the panel, using overlay background tokens",
+            "value": "var(--bsi-overlay-background-primary)",
+            "variable-name": "--bsi-overlay-panel-bg"
+        },
+        {
+            "description": "Controls the text color of the panel, using color tokens",
+            "value": "var(--bsi-color-text-inverse)",
+            "variable-name": "--bsi-overlay-panel-color"
+        },
+        {
+            "description": "Controls the font weight of the panel, using typography tokens",
+            "value": "var(--bsi-font-weight-solid)",
+            "variable-name": "--bsi-overlay-panel-font-weight"
+        },
+        {
+            "description": "Controls the font size of the panel, using typography tokens",
+            "value": "var(--bsi-label-font-size-s)",
+            "variable-name": "--bsi-overlay-panel-font-size"
+        },
+        {
+            "description": "Control the height of the panel when it is not full height",
+            "value": "3.5rem",
+            "variable-name": "--bsi-overlay-panel-max-height"
+        },
+        {
+            "description": "Controls the color of icons in the panel, using icon tokens",
+            "value": "var(--bsi-icon-inverse)",
+            "variable-name": "--bsi-overlay-panel-icon-color"
+        }
+    ],
     "pagination": [
         {
             "description": "Controls the background for the pagination.",
@@ -1847,6 +1779,83 @@
             "variable-name": "--bsi-pagination-padding-y"
         }
     ],
+    "progress": [
+        {
+            "description": "",
+            "value": "var(--bsi-color-border-secondary)",
+            "variable-name": "--bsi-progress-spinner-bg"
+        },
+        {
+            "description": "",
+            "value": "48px",
+            "variable-name": "--bsi-progress-spinner-size"
+        },
+        {
+            "description": "",
+            "value": "32px",
+            "variable-name": "--bsi-progress-spinner-size-sm"
+        },
+        {
+            "description": "",
+            "value": "64px",
+            "variable-name": "--bsi-progress-spinner-size-lg"
+        },
+        {
+            "description": "",
+            "value": "80px",
+            "variable-name": "--bsi-progress-spinner-size-xl"
+        },
+        {
+            "description": "",
+            "value": "4px",
+            "variable-name": "--bsi-progress-spinner-border-width"
+        },
+        {
+            "description": "",
+            "value": "0.75s",
+            "variable-name": "--bsi-progress-spinner-animation-duration"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-background-secondary-lighter)",
+            "variable-name": "--bsi-progress-bg"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-radius-smooth)",
+            "variable-name": "--bsi-progress-border-radius"
+        },
+        {
+            "description": "",
+            "value": "inset 0 1px 2px rgba(0, 0, 0, 0.075)",
+            "variable-name": "--bsi-progress-box-shadow"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-text-secondary)",
+            "variable-name": "--bsi-progress-label-color"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-label-font-size-xs)",
+            "variable-name": "--bsi-progress-label-font-size"
+        },
+        {
+            "description": "",
+            "value": "width 0.5s ease",
+            "variable-name": "--bsi-progress-bar-transition"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-background-secondary)",
+            "variable-name": "--bsi-progress-bar-bg"
+        },
+        {
+            "description": "",
+            "value": "4px",
+            "variable-name": "--bsi-progress-height"
+        }
+    ],
     "rating": [
         {
             "description": "Controls the font size for the rating, using font tokens.",
@@ -1865,7 +1874,7 @@
         },
         {
             "description": "Controls the line height for the rating, using font tokens.",
-            "value": "var(--bsi-label-line-height)",
+            "value": "var(--bsi-label-leading)",
             "variable-name": "--bsi-rating-line-height"
         },
         {
@@ -1963,6 +1972,172 @@
             "description": "Controls the active border color for the sidebar, using color tokens.",
             "value": "var(--bsi-color-border-primary)",
             "variable-name": "--bsi-sidebar-link-active-border-color"
+        }
+    ],
+    "tab": [
+        {
+            "description": "",
+            "value": "var(--bsi-color-text-secondary)",
+            "variable-name": "--bsi-tab-text-color"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-icon-secondary)",
+            "variable-name": "--bsi-tab-icon-color"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-radius-smooth)",
+            "variable-name": "--bsi-tab-border-radius"
+        },
+        {
+            "description": "",
+            "value": "3px",
+            "variable-name": "--bsi-tab-border-width"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-spacing-m)",
+            "variable-name": "--bsi-tab-padding-x"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-spacing-s)",
+            "variable-name": "--bsi-tab-padding-y"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-label-font-size)",
+            "variable-name": "--bsi-tab-font-size"
+        },
+        {
+            "description": "",
+            "value": "600",
+            "variable-name": "--bsi-tab-font-weight"
+        },
+        {
+            "description": "",
+            "value": "0 12px 25px -20px rgba(0, 0, 0, 0.5)",
+            "variable-name": "--bsi-tab-shadow"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-background-primary-lighter)",
+            "variable-name": "--bsi-tab-background-light"
+        },
+        {
+            "description": "",
+            "value": "transparent",
+            "variable-name": "--bsi-tab-border-color"
+        },
+        {
+            "description": "",
+            "value": "2px",
+            "variable-name": "--bsi-tab-border-width-cards"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-border-subtle)",
+            "variable-name": "--bsi-tab-border-color-cards"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-border-primary)",
+            "variable-name": "--bsi-tab-add-btn-border"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-background-primary)",
+            "variable-name": "--bsi-tab-add-btn-color"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-text-secondary)",
+            "variable-name": "--bsi-tab-close-btn-color"
+        },
+        {
+            "description": "",
+            "value": "color-mix(in srgb, var(--bsi-primary) 90%, black 10%)",
+            "variable-name": "--bsi-tab-close-btn-color-hover"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-text-disabled)",
+            "variable-name": "--bsi-tab-close-btn-color-disabled"
+        }
+    ],
+    "tabs": [
+        {
+            "description": "",
+            "value": "var(--bsi-color-background-inverse)",
+            "variable-name": "--bsi-tabs-background-color"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-border-subtle)",
+            "variable-name": "--bsi-tabs-border-color"
+        }
+    ],
+    "tooltip": [
+        {
+            "description": "",
+            "value": "0.4rem",
+            "variable-name": "--bsi-tooltip-arrow-height"
+        },
+        {
+            "description": "",
+            "value": "0.8rem",
+            "variable-name": "--bsi-tooltip-arrow-width"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-background-emphasis)",
+            "variable-name": "--bsi-tooltip-bg"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-radius-smooth)",
+            "variable-name": "--bsi-tooltip-border-radius"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-text-inverse)",
+            "variable-name": "--bsi-tooltip-color"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-label-font-size-s)",
+            "variable-name": "--bsi-tooltip-font-size"
+        },
+        {
+            "description": "",
+            "value": "0",
+            "variable-name": "--bsi-tooltip-margin"
+        },
+        {
+            "description": "",
+            "value": "32em",
+            "variable-name": "--bsi-tooltip-max-width"
+        },
+        {
+            "description": "",
+            "value": "1",
+            "variable-name": "--bsi-tooltip-opacity"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-spacing-3xs)",
+            "variable-name": "--bsi-tooltip-padding-x"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-spacing-xxs)",
+            "variable-name": "--bsi-tooltip-padding-y"
+        },
+        {
+            "description": "",
+            "value": "10",
+            "variable-name": "--bsi-tooltip-zindex"
         }
     ]
 }
