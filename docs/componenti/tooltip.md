@@ -13,6 +13,10 @@ I tooltip sono suggerimenti personalizzati con CSS e JavaScript, utilizzano CSS3
 #### Accessibilità
 
 I tooltip funzionano sia con la tastiera che per gli utenti dotati di tecnologia assistiva.
+I tooltip di Bootstrap Italia restano visibili quando il puntatore si sposta dal
+trigger al tooltip stesso, migliorando così la conformità al criterio WCAG 2.1
+**1.4.13 – Content on Hover or Focus**. Per gli utenti da tastiera il requisito
+è già soddisfatto tramite la gestione del focus.
 
 È importante aggiungere tooltip solo ad elementi HTML che sono tradizionalmente attivabili da tastiera e interattivi (link,
 pulsanti, o elementi di form).
