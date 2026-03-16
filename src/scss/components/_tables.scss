@@ -9,6 +9,7 @@
 // Properties
 //
 
+/* stylelint-disable-next-line no-duplicate-selectors */
 .table {
   --#{$prefix}table-color: var(--#{$prefix}color-text-base); // Controls the text color for the table, using color tokens.
   --#{$prefix}table-bg: transparent; // Controls the background color for the table, using color tokens.
@@ -16,10 +17,9 @@
   --#{$prefix}table-border-width: var(--#{$prefix}border-width); // Controls the border width for the table cell.
   --#{$prefix}table-striped-bg: var(--#{$prefix}color-background-muted); // Controls the text color for the striped rows, using color tokens.
   // --#{$prefix}table-striped-color: var(--#{$prefix}color-b); // Controls the text color for the striped rows, using color tokens.
-  --#{$prefix}table-active-color: #{$table-active-color};
-  --#{$prefix}table-active-bg: #{$table-active-bg};
-  --#{$prefix}table-hover-color: var(--#{$prefix}color-text-base);
-  --#{$prefix}table-hover-bg: #{$table-hover-bg};
+  --#{$prefix}table-active-bg: var(--#{$prefix}color-background-secondary); // Controls the background color for the active rows, using color tokens.
+  --#{$prefix}table-hover-color: var(--#{$prefix}color-text-base); // Controls the text color for the hovered rows, using color tokens.
+  --#{$prefix}table-hover-bg: var(--#{$prefix}color-background-secondary-hover); // Controls the background color for the hovered rows, using color tokens.
   --#{$prefix}table-padding: var(--#{$prefix}spacing-xxs); // Controls the padding for the table cells, using spacing tokens.
   --#{$prefix}table-cell-font-size: var(--#{$prefix}body-font-size); // Controls the font size for the table cells, using typography tokens.
   --#{$prefix}table-cell-vertical-align: top; // Controls the vertical alignment of the table cells.
