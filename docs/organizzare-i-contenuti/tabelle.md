@@ -749,10 +749,10 @@ Le celle contenute nel `<thead>` sono sempre allineate verticalmente al bottom. 
           <td>Questa cella eredita <code>vertical-align: bottom;</code>dalla riga</td>
           <td>This here is some placeholder text, intended to take up quite a bit of vertical space, to demonstrate how the vertical alignment works in the preceding cells.</td>
         </tr>
-        <tr>
-          <td>Questa cella eredita <code>vertical-align: middle;</code> dalla tabella</td>
-          <td>Questa cella eredita <code>vertical-align: middle;</code> dalla tabella</td>
-          <td class="align-top">This cell is aligned to the top.</td>
+        <tr class="align-top">
+          <td>Questa cella eredita <code>vertical-align: top;</code> dalla tabella</td>
+          <td>Questa cella eredita <code>vertical-align: top;</code> dalla tabella</td>
+          <td>Questa cella eredita <code>vertical-align: top;</code> dalla tabella</td>
           <td>This here is some placeholder text, intended to take up quite a bit of vertical space, to demonstrate how the vertical alignment works in the preceding cells.</td>
         </tr>
       </tbody>
