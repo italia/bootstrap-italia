@@ -63,7 +63,7 @@ Permette di includere **immagine e testo descrittivo** per una introduzione ai c
                   <div class="col-xs-12 col-lg-4 px-0">
                     <div class="row">
                       <div class="col-12 it-vertical it-description pb-lg-3">
-                        <div class="description-content px-4 ps-sm-5 ms-3">
+                        <div class="description-content px-2 ms-1">
                           <div class="ratio ratio-21x9 lightgrey-bg-a1 mb-4 rounded">
                             <figure class="figure">
                               <img src="https://placehold.co/560x240/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Segnaposto">
@@ -148,7 +148,7 @@ Permette di includere **immagine e testo descrittivo** per una introduzione ai c
                   <div class="col-xs-12 col-lg-4 px-0">
                     <div class="row">
                       <div class="col-12 it-vertical it-description pb-lg-3">
-                        <div class="description-content px-4 ps-sm-5 ms-3">
+                        <div class="description-content px-2 ms-1">
                           <div class="ratio ratio-21x9 lightgrey-bg-a1 mb-4 rounded">
                             <figure class="figure">
                               <img src="https://placehold.co/560x240/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Segnaposto">
@@ -260,7 +260,7 @@ Il megamenu prende il tema colori dark su desktop se è dentro un `<nav>` che ha
                 <div class="col-xs-12 col-lg-4">
                   <div class="row">
                     <div class="col-12 it-vertical it-description">
-                      <div class="description-content px-4 ps-sm-5 ms-3">
+                      <div class="description-content px-2 ms-1">
                         <div class="ratio ratio-21x9 mb-4 rounded">
                           <figure class="figure">
                             <img src="https://placehold.co/560x240/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Segnaposto">

@@ -2,8 +2,9 @@
 name: Publiccode.yml update
 
 on:
-  schedule:
-    - cron:  '30 17 * * *'
+  push:
+    tags:
+      - 'v2*'
 
   workflow_dispatch:
 
