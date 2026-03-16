@@ -10,36 +10,36 @@
 //
 
 .steppers {
-  --#{$prefix}stepper-color: #{$gray-secondary}; // Controls the inactive step text and icon color.
-  --#{$prefix}stepper-color-active: #{$primary}; // Controls the active step text and icon color.
-  --#{$prefix}stepper-color-confirmed: #{$primary}; // Controls the confirmed step text and icon color.
-  --#{$prefix}stepper-color-background: #{$white}; // Controls the header and nav background color.
-  --#{$prefix}stepper-color-border: #{$gray-border}; // Controls the step border color.
-  --#{$prefix}stepper-color-active-indicator: #{$primary}; // Controls the active step underline color.
-  --#{$prefix}stepper-shadow-header: 0 8px 20px rgba(0, 0, 0, 0.1); // Controls the header box shadow.
-  --#{$prefix}stepper-shadow-nav: 0 -8px 20px rgba(0, 0, 0, 0.1); // Controls the navigation box shadow.
-  --#{$prefix}stepper-header-height: 64px; // Controls the header height on mobile.
-  --#{$prefix}stepper-header-margin-bottom: 1rem; // Controls the header bottom margin.
-  --#{$prefix}stepper-nav-height: 64px; // Controls the navigation bar height.
-  --#{$prefix}stepper-spacing-h: #{$stepper-spacing-h}; // Controls the horizontal padding.
-  --#{$prefix}stepper-spacing-v: #{$stepper-spacing-v}; // Controls the vertical padding for desktop steps.
-  --#{$prefix}stepper-font-size: 1.125rem; // Controls the step label font size.
-  --#{$prefix}stepper-font-weight: 600; // Controls the step label font weight.
-  --#{$prefix}stepper-index-font-size: 0.875rem; // Controls the step index font size.
-  --#{$prefix}stepper-icon-size: 24px; // Controls the icon width and height.
-  --#{$prefix}stepper-number-size: 2rem; // Controls the number badge width and height.
-  --#{$prefix}stepper-number-border-color: #{$gray-border}; // Controls the number badge border color.
-  --#{$prefix}stepper-number-background-active: #{$primary}; // Controls the number badge active background.
-  --#{$prefix}stepper-number-border-color-active: #{$primary}; // Controls the number badge active border color.
-  --#{$prefix}stepper-number-color-active: #{$white}; // Controls the number badge active text color.
-  --#{$prefix}stepper-dot-size: 4px; // Controls the dot indicator size.
-  --#{$prefix}stepper-dot-gap: 8px; // Controls the gap between dots.
-  --#{$prefix}stepper-dot-color: #{$progress-bg}; // Controls the dot background color.
-  --#{$prefix}stepper-dot-color-done: #{$progress-bar-bg}; // Controls the completed dot background color.
-  --#{$prefix}stepper-progress-height: 2px; // Controls the progress bar height.
   --#{$prefix}stepper-active-indicator-height: 2px; // Controls the active step underline height.
   --#{$prefix}stepper-button-color: #{$primary}; // Controls the mobile navigation button color.
   --#{$prefix}stepper-button-color-hover: #{$primary}; // Controls the mobile navigation button hover color.
+  --#{$prefix}stepper-color: #{$gray-secondary}; // Controls the inactive step text and icon color.
+  --#{$prefix}stepper-color-active: #{$primary}; // Controls the active step text and icon color.
+  --#{$prefix}stepper-color-active-indicator: #{$primary}; // Controls the active step underline color.
+  --#{$prefix}stepper-color-background: #{$white}; // Controls the header and nav background color.
+  --#{$prefix}stepper-color-border: #{$gray-border}; // Controls the step border color.
+  --#{$prefix}stepper-color-confirmed: #{$primary}; // Controls the confirmed step text and icon color.
+  --#{$prefix}stepper-dot-color: #{$progress-bg}; // Controls the dot background color.
+  --#{$prefix}stepper-dot-color-done: #{$progress-bar-bg}; // Controls the completed dot background color.
+  --#{$prefix}stepper-dot-gap: 8px; // Controls the gap between dots.
+  --#{$prefix}stepper-dot-size: 4px; // Controls the dot indicator size.
+  --#{$prefix}stepper-font-size: 1.125rem; // Controls the step label font size.
+  --#{$prefix}stepper-font-weight: 600; // Controls the step label font weight.
+  --#{$prefix}stepper-header-height: 64px; // Controls the header height on mobile.
+  --#{$prefix}stepper-header-margin-bottom: 1rem; // Controls the header bottom margin.
+  --#{$prefix}stepper-icon-size: 24px; // Controls the icon width and height.
+  --#{$prefix}stepper-index-font-size: 0.875rem; // Controls the step index font size.
+  --#{$prefix}stepper-nav-height: 64px; // Controls the navigation bar height.
+  --#{$prefix}stepper-number-background-active: #{$primary}; // Controls the number badge active background.
+  --#{$prefix}stepper-number-border-color: #{$gray-border}; // Controls the number badge border color.
+  --#{$prefix}stepper-number-border-color-active: #{$primary}; // Controls the number badge active border color.
+  --#{$prefix}stepper-number-color-active: #{$white}; // Controls the number badge active text color.
+  --#{$prefix}stepper-number-size: 2rem; // Controls the number badge width and height.
+  --#{$prefix}stepper-progress-height: 2px; // Controls the progress bar height.
+  --#{$prefix}stepper-shadow-header: 0 8px 20px rgba(0, 0, 0, 0.1); // Controls the header box shadow.
+  --#{$prefix}stepper-shadow-nav: 0 -8px 20px rgba(0, 0, 0, 0.1); // Controls the navigation box shadow.
+  --#{$prefix}stepper-spacing-h: #{$stepper-spacing-h}; // Controls the horizontal padding.
+  --#{$prefix}stepper-spacing-v: #{$stepper-spacing-v}; // Controls the vertical padding for desktop steps.
 }
 
 // Styles
