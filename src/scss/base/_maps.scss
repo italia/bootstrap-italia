@@ -49,7 +49,6 @@ $utilities-border-colors: (
   'inverse': var(--bsi-color-border-inverse),
   'white': var(--bsi-color-border-inverse),
 ) !default;
-// $utilities-border-colors: $utilities-border !default;
 // scss-docs-end utilities-border-colors
 
 $negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) !default;
