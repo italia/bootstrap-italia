@@ -16,7 +16,6 @@
   --#{$prefix}table-border-color: var(--#{$prefix}border-color); // Controls the border color for the table, using color tokens.
   --#{$prefix}table-border-width: var(--#{$prefix}border-width); // Controls the border width for the table cell.
   --#{$prefix}table-striped-bg: var(--#{$prefix}color-background-muted); // Controls the text color for the striped rows, using color tokens.
-  // --#{$prefix}table-striped-color: var(--#{$prefix}color-b); // Controls the text color for the striped rows, using color tokens.
   --#{$prefix}table-active-bg: var(--#{$prefix}color-background-secondary); // Controls the background color for the active rows, using color tokens.
   --#{$prefix}table-hover-color: var(--#{$prefix}color-text-base); // Controls the text color for the hovered rows, using color tokens.
   --#{$prefix}table-hover-bg: var(--#{$prefix}color-background-secondary-hover); // Controls the background color for the hovered rows, using color tokens.
