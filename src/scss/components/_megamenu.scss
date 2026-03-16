@@ -9,7 +9,6 @@
 // Properties
 //
 
-/* stylelint-disable-next-line no-duplicate-selectors */
 .megamenu {
   --#{$prefix}megamenu-background-color: var(--#{$prefix}color-background-inverse); // Controls the background color for the megamenu, using color tokens.
   --#{$prefix}megamenu-content-spacing: var(--#{$prefix}spacing-xs); // Controls the spacing for the megamenu, using spacing tokens.
@@ -18,14 +17,13 @@
 
 // Styles
 //
-
+/* stylelint-disable-next-line no-duplicate-selectors */
 .megamenu {
-
   .megamenu-content {
     padding: var(--#{$prefix}megamenu-content-spacing);
   }
 
-   // Description & image variation
+  // Description & image variation
   .it-description {
     background: transparent;
     @include media-breakpoint-down(lg) {
@@ -69,11 +67,11 @@
     font-weight: var(--#{$prefix}font-weight-solid);
     line-height: var(--#{$prefix}heading-leading);
     text-decoration: none;
-      &:hover,
-      &:focus {
-        text-decoration: underline;
-      }
+    &:hover,
+    &:focus {
+      text-decoration: underline;
     }
+  }
 
   .it-footer-link-wrapper,
   .it-footer-link-wrapper-vertical {
@@ -113,10 +111,10 @@
   // Override default link list styles
   .link-list-wrapper {
     margin-bottom: 0;
-  
+
     .link-list {
       width: 100%;
-  
+
       .list-item {
         display: flex;
         align-items: center;
@@ -206,7 +204,6 @@
 
     // Footer link wrapper
     .it-footer-link-wrapper {
-
       .it-footer-link:not(:last-child) {
         margin-right: var(--#{$prefix}megamenu-content-spacing);
       }
