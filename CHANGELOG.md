@@ -1,3 +1,14 @@
+# [3.0.0-alpha.5](https://github.com/italia/bootstrap-italia/compare/v3.0.0-alpha.4...v3.0.0-alpha.5) (2026-03-16)
+
+
+### Bug Fixes
+
+* correct table style inheritance description ([5914bf7](https://github.com/italia/bootstrap-italia/commit/5914bf78659e294c8f7ebe00aa7c4241957e16fc))
+* refine mega menu link styles for active state and improve border handling ([#1713](https://github.com/italia/bootstrap-italia/issues/1713)) ([bd52dfc](https://github.com/italia/bootstrap-italia/commit/bd52dfcb2b9272b9a5f235cb22ba391d5ca22574))
+* remove bg-override class from header component ([ae6e460](https://github.com/italia/bootstrap-italia/commit/ae6e46032bb2c93704965b753a3849360df56ae0))
+* remove eval from cover animation ([f5de581](https://github.com/italia/bootstrap-italia/commit/f5de58180c3ec53577b08a645c28cce6878f7cdb))
+
+
 # [3.0.0-alpha.4](https://github.com/italia/bootstrap-italia/compare/v3.0.0-alpha.3...v3.0.0-alpha.4) (2026-03-06)
 
 
