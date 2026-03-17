@@ -160,7 +160,7 @@ h6,
 .h6 {
   margin-top: 0;
   margin-bottom: var(--#{$prefix}heading-spacing);
-  line-height: var(--#{$prefix}heading-line-height);
+  line-height: var(--#{$prefix}heading-leading);
 
   // Adds top spacing when two heading tags or classes are adiacent or follow a paragraph
   :is(h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6) + &,
@@ -216,14 +216,14 @@ h1,
 .display-1 {
   font-size: var(--#{$prefix}display-font-size);
   font-weight: var(--#{$prefix}heading-font-weight);
-  line-height: var(--#{$prefix}heading-line-height);
+  line-height: var(--#{$prefix}heading-leading);
 }
 
 // Lead
 .lead {
   font-size: var(--#{$prefix}lead-font-size);
   font-weight: var(--#{$prefix}lead-font-weight);
-  line-height: var(--#{$prefix}lead-line-height);
+  line-height: var(--#{$prefix}lead-leading);
 }
 
 // Blockquote
