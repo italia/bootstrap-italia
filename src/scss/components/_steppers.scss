@@ -31,6 +31,7 @@
   --#{$prefix}stepper-icon-confirmed: var(--#{$prefix}icon-inverse); // Controls the icon color for confirmed steps.
   --#{$prefix}stepper-index-font-size: 0.875rem; // Controls the step index font size.
   --#{$prefix}stepper-item-background: var(--#{$prefix}stepper-background); // Controls the step background color, default to the header/nav background.
+  --#{$prefix}stepper-item-border-color-active: var(--#{$prefix}color-border-primary); // Controls the step border color when active.
   --#{$prefix}stepper-item-text-color: var(--#{$prefix}color-text-muted); // Controls the step background color, default to the header/nav background.
   --#{$prefix}stepper-nav-height: 64px; // Controls the navigation bar height.
   --#{$prefix}stepper-number-background-active: var(--#{$prefix}color-background-primary); // Controls the number badge active background.
@@ -194,7 +195,8 @@
       }
 
       &.active {
-        --#{$prefix}stepper-item-background: var(--#{$prefix}color-background-primary-lighter);
+        --#{$prefix}stepper-item-background: var(--#{$prefix}color-background-primary-lightest);
+        border-bottom: 2px solid var(--#{$prefix}stepper-item-border-color-active);
       }
 
       &.steppers-index {
@@ -280,17 +282,6 @@
         // active
         &.active {
           display: flex;
-
-          &:after {
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            content: '';
-            width: calc(100% - 2.222rem);
-            height: var(--#{$prefix}stepper-active-indicator-height);
-            background: var(--#{$prefix}stepper-color-active-indicator);
-            transform: translateX(-50%);
-          }
 
           .steppers-number {
             border-color: var(--#{$prefix}stepper-number-border-color-active);
