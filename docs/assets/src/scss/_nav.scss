@@ -1,5 +1,5 @@
 .bd-navbar {
-  min-height: 10rem;
+  // min-height: 10rem;
   background-color: $primary;
 
   @include media-breakpoint-down(md) {
@@ -96,16 +96,18 @@
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: unset;
-  margin-bottom: 0;
+  margin-bottom: var(--#{$prefix}spacing-xxs);
   @include media-breakpoint-up(sm) {
     font-size: 32px;
     line-height: 1;
   }
 }
 
-.bd-logo-subtitle {
+.bd-navbar .bd-logo-subtitle {
   font-size: 14px;
   line-height: 1;
   font-weight: 300;
   letter-spacing: normal;
+  padding-top: 0 ;
+  margin-bottom: 0;
 }
