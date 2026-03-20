@@ -216,14 +216,14 @@ h1,
 .display-1 {
   font-size: var(--#{$prefix}display-font-size);
   font-weight: var(--#{$prefix}heading-font-weight);
-  line-height: var(--#{$prefix}heading-line-height);
+  line-height: var(--#{$prefix}heading-leading);
 }
 
 // Lead
 .lead {
   font-size: var(--#{$prefix}lead-font-size);
   font-weight: var(--#{$prefix}lead-font-weight);
-  line-height: var(--#{$prefix}lead-line-height);
+  line-height: var(--#{$prefix}lead-leading);
 }
 
 // Blockquote

@@ -5,18 +5,20 @@ layout: default
 <main id="content">
   <div class="main-content py-5">
     <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h1 class="display-1 fw-bold mb-3">
+            Realizza interfacce web con <span class="text-primary">Bootstrap Italia</span>
+          </h1>
+          <p class="lead text-secondary w-75 mb-3">
+              Il framework open-source <strong>Bootstrap Italia</strong> è il modo più semplice per realizzare interfacce web <strong>accessibili</strong> e <strong>semplici da mantenere</strong>.
+            </p>
+        </div>
+      </div>
       <div class="row align-items-center">
         <div class="col-lg-6 mb-5 mb-lg-0">
-          <div class="main-content--panel p-4 h-100 d-flex flex-column justify-content-center">
-            <p class="text-uppercase text-primary fw-semibold mb-2">
-              Design system del Paese
-            </p>
-            <h1 class="display-5 fw-bold mb-3">
-              Crea interfacce web inclusive con <span class="text-primary">Bootstrap Italia</span>
-            </h1>
-            <p class="lead mb-3">
-              Il framework <strong>Bootstrap Italia</strong> è il modo più semplice per realizzare interfacce web <strong>inclusive</strong> e <strong>semplici da mantenere</strong>.
-            </p>
+          <div class="d-flex flex-column justify-content-center">
+            
             <p class="mb-3">
               Completamente <strong>open source</strong>, è costruito sulle fondamenta di
               <a href="https://getbootstrap.com/" target="_blank" rel="noopener noreferrer">Bootstrap {{ site.bootstrap_version }}</a>,
@@ -31,18 +33,14 @@ layout: default
               in codice pronto all'uso!
             </p>
 
-            <div class="d-flex flex-column flex-sm-row align-items-sm-center gap-3 mb-4">
+            <div class="d-flex flex-column flex-sm-row align-items-sm-center gap-3 mb-2">
               <a class="btn btn-primary btn-lg" href="{{ site.baseurl }}/docs/come-iniziare/introduzione/">
                 Come iniziare
               </a>
-              <div class="text-muted">
-                Versione corrente: <strong>v{{ site.current_version }}</strong>
-              </div>
+              <pre class="bg-dark rounded px-3 py-3 mb-0"><code>npm install bootstrap-italia</code></pre>
             </div>
-
-            <div class="mb-4">
-              <div class="text-muted mb-1">Installa via npm</div>
-              <pre class="bg-dark text-white rounded px-3 py-2 mb-0"><code>npm install bootstrap-italia</code></pre>
+            <div class="text-muted caption">
+              Versione corrente: <strong>v{{ site.current_version }}</strong>
             </div>
 
             <div class="mt-3 small text-muted">
