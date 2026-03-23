@@ -15,7 +15,7 @@
   // --#{$prefix}stepper-button-color-hover: #{$primary}; // Controls the mobile navigation button hover color.
   --#{$prefix}stepper-index-color: var(--#{$prefix}color-text-secondary); // Controls the inactive step text and icon color.
   // --#{$prefix}stepper-color-active-indicator: #{$primary}; // Controls the active step underline color.
-  --#{$prefix}stepper-background: var(--#{$prefix}color-background-inverse); // Controls the header and navigation background color. Default to white.
+  --#{$prefix}stepper-background: transparent; // Controls the header and navigation background color. Default to white.
   --#{$prefix}stepper-border-color: var(--#{$prefix}color-border-subtle); // Controls the step border color.
   // --#{$prefix}stepper-color-active: #{$primary}; // Controls the active step text and icon color.
   // --#{$prefix}stepper-color-confirmed: var(--#{$prefix}color-text-base); // Controls the confirmed step text and icon color.
@@ -67,8 +67,6 @@
     --#{$prefix}stepper-number-border-color-active: #{$analogue-2-a6};
     --#{$prefix}stepper-number-color-active: #{$neutral-1-a10};
     --#{$prefix}stepper-dot-color-done: #{$analogue-2-a6};
-    // --#{$prefix}stepper-button-color: #{$white};
-    // --#{$prefix}stepper-button-color-hover: #{$analogue-2-a6};
 
     .steppers-nav {
       .progress-bar {
@@ -105,7 +103,6 @@
   justify-content: space-between;
   height: var(--#{$prefix}stepper-nav-height);
   background: var(--#{$prefix}stepper-background);
-  box-shadow: var(--#{$prefix}stepper-nav-shadow);
 
   .steppers-progress,
   .steppers-dots {
