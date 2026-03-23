@@ -262,10 +262,15 @@ Su dispositivi mobili è possibile inserire un terzo pulsante "Salva" di aspetto
     <!-- Esempio END -->
   </div>
   <nav class="steppers-nav">
-    <button type="button" class="btn btn-outline-primary btn-sm steppers-btn-prev"><svg class="icon icon-sm icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-left"></use></svg>Indietro</button>
-    <button type="button" class="btn btn-primary btn-sm steppers-btn-save">Salva</button>
-    <button type="button" class="btn btn-primary btn-sm steppers-btn-next">Avanti<svg class="icon icon-sm icon-inverse"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use></svg></button>
+    <button type="button" class="btn btn-icon btn-primary btn-sm steppers-btn-next">Avanti<svg class="icon icon-sm icon-inverse"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use></svg></button>
   </nav>
+  <div class="steppers-save d-flex border-top border-subtle pt-3 mt-2">
+    <div class="text-lg-end mb-2 mb-lg-0 me-lg-3">
+      <p class="text-muted mb-0 small"><strong>Vuoi salvare il progresso?</strong></p>
+      <p class="text-muted mb-0 small">Potrai riprendere il flusso da questo punto in poi.</p>
+    </div>
+    <button type="button" class="btn btn-outline-secondary btn-sm">Salva</button>
+  </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
