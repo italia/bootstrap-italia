@@ -255,6 +255,21 @@
   }
 }
 
+.steppers-save {
+  justify-content: flex-start;
+  flex-direction: column;
+  > * {
+    flex: 0 0 auto;
+    align-self: flex-start;
+    width: fit-content;
+    max-width: 100%;
+  }
+  @include media-breakpoint-up(lg) {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+}
+
 //Tablet horizontal / small desktop
 @include media-breakpoint-up(lg) {
   .steppers {
