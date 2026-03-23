@@ -104,7 +104,6 @@
   align-items: center;
   justify-content: space-between;
   height: var(--#{$prefix}stepper-nav-height);
-  padding: 0 var(--#{$prefix}stepper-spacing-x);
   background: var(--#{$prefix}stepper-background);
   box-shadow: var(--#{$prefix}stepper-nav-shadow);
 
@@ -306,16 +305,6 @@
       .steppers-progress,
       .steppers-dots {
         display: none;
-      }
-
-      button {
-        .icon {
-          display: none;
-        }
-
-        &:not(.steppers-btn-confirm) {
-          margin-right: 0.889rem;
-        }
       }
 
       .steppers-btn-confirm {
