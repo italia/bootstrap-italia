@@ -75,10 +75,11 @@ Le media queries devono usare i breakpoint definiti nel file `_breakpoints.scss`
 | `xxl` | ≥ 1400px                               |
 
 - Segnala breakpoint con valori arbitrari non corrispondenti a quelli definiti nel file `_breakpoints.scss`
-- Verifica l'approccio **mobile-first**: le regole base devono essere per schermi piccoli, le media query per schermi più grandi (`min-width`, non `max-width`)
-- Preferire l’annidamento delle media query dentro il blocco del selettore; evitare blocchi `@media` a livello radice che ripetono lo stesso selettore
+- **Mobile-first**: preferire regole base per schermi piccoli e `@include media-breakpoint-up(...)` per allargare il viewport. L’uso di `max-width` (incluso `@include media-breakpoint-down(...)`) **non è un errore**; segnala però la **possibilità** di rivedere il codice per un approccio mobile-first equivalente, quando il refactor è realistico.
+- **Errore**: blocchi `@media` scritti manualmente (`@media (min-width: …)`, `@media (max-width: …)`, ecc.). Usare sempre i mixin del file `_breakpoints.scss` (`media-breakpoint-up`, `media-breakpoint-down`, `media-breakpoint-between`, `media-breakpoint-only`), così i valori restano allineati alla mappa `$grid-breakpoints`.
+- Preferire l’annidamento dei mixin breakpoint dentro il blocco del selettore; evitare a livello radice la ripetizione dello stesso selettore attorno al mixin.
   ```scss
-  // ❌ Errato
+  // ❌ Errato: @media manuale
   @media (min-width: 768px) {
     .my-component {
       ...
@@ -93,6 +94,10 @@ Le media queries devono usare i breakpoint definiti nel file `_breakpoints.scss`
     }
   }
   ```
+- **Container query**: segnala valori fissi in `px` nelle condizioni `@container` (es. `min-width: 500px`); preferire **misure relative** (es. `cqi`, `cqmin`, `em`, `rem`, percentuali) coerenti con il contesto del contenitore.
+- Evitare di **ripetere** le stesse dichiarazioni in più breakpoint: nel blocco base vanno le regole comuni; nei mixin successivi solo ciò che **cambia** rispetto al precedente.
+- Con più regole responsive sullo stesso componente, verifica **ordine e coerenza** dei breakpoint (progressione logica da `sm` verso `xxl`) e assenza di combinazioni `up` / `down` sulla stessa proprietà che si contraddicono senza una ragione chiara.
+- Per adattamenti di **display** o **spaziatura** puramente responsivi, verifica che si preferiscano le **classi di utilità** responsive del kit nel markup; segnala SCSS sostituibile con utility. Lo SCSS resta appropriato quando servono regole non coperte dalle utility (layout complesso, pseudo-elementi, variabili custom, ecc.).
 
 ### 5. Specificity e override
 - Segnala ogni uso di `!important` — è accettabile solo per utility class, non per regole generali
