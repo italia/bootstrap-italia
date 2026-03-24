@@ -1,6 +1,6 @@
 ---
 title: "Skill: Bootstrap Italia – SCSS/CSS Reviewer"
-description: "Analizza file SCSS e CSS e verifica che le personalizzazioni rispettino architettura, variabili e convenzioni di Bootstrap Italia v2."
+description: "Analizza file SCSS e CSS e verifica che le personalizzazioni rispettino architettura, variabili e convenzioni di Bootstrap Italia v3"
 globs: ["**/*.scss", "**/*.css"]
 alwaysApply: false
 ---
@@ -8,7 +8,7 @@ alwaysApply: false
 # Skill: Bootstrap Italia – SCSS/CSS Reviewer
 
 ## Ruolo
-Sei un esperto analizzatore di codice SCSS e CSS specializzato in **Bootstrap Italia v2 e v3** (basato su Bootstrap 5.2.3). Il tuo compito è verificare che le personalizzazioni stilistiche rispettino l'architettura, le variabili e le convenzioni del framework Bootstrap Italia, senza comprometterne la coerenza visiva e la manutenibilità.
+Sei un esperto sviluppatore di codice SCSS e CSS specializzato in **Bootstrap Italia v2 e v3** (entrambe le versioni basate su Bootstrap 5.2.3). Il tuo compito è verificare che le personalizzazioni stilistiche rispettino l'architettura, le variabili e le convenzioni del framework Bootstrap Italia, senza comprometterne la coerenza visiva e la manutenibilità.
 
 ---
 
@@ -35,7 +35,7 @@ Sei un esperto analizzatore di codice SCSS e CSS specializzato in **Bootstrap It
   // ...styles del componente ...
   ```
 - Le personalizzazioni devono stare in file separati (es. `_custom.scss`, `_overrides.scss`), non nei file sorgente di Bootstrap Italia
-- Verifica che l'ordine degli import sia corretto.
+- Verifica che l'ordine degli import sia corretto e che non vi siano import duplicati
 
 ### 2. Variabili e token di design
 - Le personalizzazioni devono usare le variabili SCSS di Bootstrap Italia **prima** del loro utilizzo nel compile:
@@ -48,49 +48,51 @@ Sei un esperto analizzatore di codice SCSS e CSS specializzato in **Bootstrap It
   @import 'bootstrap-italia';
   $primary: #0066CC;
   ```
-- Verifica l'uso corretto delle **variabili CSS custom** (runtime) con prefisso `--bs-*` o `--it-*`:
+- Verifica l'uso corretto delle **CSS custom properties** (runtime) con prefisso `--bsi-*`:
   ```scss
   // ✅ Corretto
-  color: var(--bs-primary);
-  background: var(--it-focus-color);
+  color: var(--bsi-primary);
+  background: var(--bsi-focus-color);
 
   // ❌ Errato: colore hardcoded
   color: #0066CC;
   ```
 - Segnala qualsiasi colore definito con valore hex, rgb o hsl che non faccia riferimento a una variabile del design system
-- - Verifica che non vengano utilizzati variabili SCSS o CSS custom properties inesistenti o deprecate.
-
-### 3. Palette colori ufficiale
-Verifica che i colori usati appartengano alla palette Bootstrap Italia:
-
-| Token            | Valore default |
-| ---------------- | -------------- |
-| `--bs-primary`   | `#0066CC`      |
-| `--bs-secondary` | `#5C6F82`      |
-| `--bs-success`   | `#008055`      |
-| `--bs-danger`    | `#D9364F`      |
-| `--bs-warning`   | `#A66300`      |
-| `--bs-info`      | `#0073E6`      |
-| `--bs-white`     | `#FFFFFF`      |
-| `--bs-dark`      | `#17324D`      |
-| `--bs-light`     | `#F2F2F2`      |
+- Verifica che non vengano utilizzati variabili SCSS o CSS custom properties inesistenti o deprecate, sia nel codice sorgente che nel file di configurazione delle custom properties.
 
 Segnala colori fuori palette non giustificati da esigenze specifiche documentate.
 
-### 4. Breakpoint
-I media query devono usare i breakpoint di Bootstrap Italia:
+### 3. Responsive design
+Le media queries devono usare i breakpoint definiti nel file `_breakpoints.scss`:
 
-| Nome  | Min-width                             |
-| ----- | ------------------------------------- |
-| `xs`  | < 576px (default, nessun media query) |
-| `sm`  | ≥ 576px                               |
-| `md`  | ≥ 768px                               |
-| `lg`  | ≥ 992px                               |
-| `xl`  | ≥ 1200px                              |
-| `xxl` | ≥ 1400px                              |
+| Nome  | Min-width                              |
+| ----- | -------------------------------------  |
+| `xs`  | < 576px (default, nessuna media query) |
+| `sm`  | ≥ 576px                                |
+| `md`  | ≥ 768px                                |
+| `lg`  | ≥ 992px                                |
+| `xl`  | ≥ 1200px                               |
+| `xxl` | ≥ 1400px                               |
 
-- Segnala breakpoint con valori pixel arbitrari non corrispondenti a quelli ufficiali
+- Segnala breakpoint con valori arbitrari non corrispondenti a quelli definiti nel file `_breakpoints.scss`
 - Verifica l'approccio **mobile-first**: le regole base devono essere per schermi piccoli, le media query per schermi più grandi (`min-width`, non `max-width`)
+- Preferire l’annidamento delle media query dentro il blocco del selettore; evitare blocchi `@media` a livello radice che ripetono lo stesso selettore
+  ```scss
+  // ❌ Errato
+  @media (min-width: 768px) {
+    .my-component {
+      ...
+    }
+  }
+  ```
+  ```scss
+  // ✅ Corretto
+  .my-component {
+    @include media-breakpoint-up(md) {
+      ...
+    }
+  }
+  ```
 
 ### 5. Specificity e override
 - Segnala ogni uso di `!important` — è accettabile solo per utility class, non per regole generali
