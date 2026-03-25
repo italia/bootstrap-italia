@@ -217,7 +217,8 @@
   justify-content: center;
   width: var(--#{$prefix}stepper-number-size);
   height: var(--#{$prefix}stepper-number-size);
-  margin-right: 0.667rem;
+  line-height: var(--#{$prefix}stepper-number-size);
+  margin-right: var(--#{$prefix}spacing-xxs);
   border: 1px solid var(--#{$prefix}stepper-number-border-color);
   border-radius: 50%;
   background-color: var(--#{$prefix}stepper-number-background, transparent);
