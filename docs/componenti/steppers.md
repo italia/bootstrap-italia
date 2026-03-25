@@ -3,12 +3,11 @@ layout: docs
 group: componenti
 toc: true
 title: Steppers
-description: Gli "Stepper" mostrano l'avanzamento del progresso di una procedura a più passi attraverso la numerazione dei passi stessi.
+description: Mostrano l'avanzamento del progresso di una procedura a più passi attraverso la numerazione dei passi stessi.
 ---
 
 <style>
   /* Style override for Documentation purposes */
-
   .bd-example .steppers-content {
     height: 400px;
     border: 2px dashed #eee;
@@ -65,11 +64,12 @@ description: Gli "Stepper" mostrano l'avanzamento del progresso di una procedura
 
 ## Intestazione
 
-Il contenitore degli Stepper ha sempre una classe `.steppers`. La sua intestazione è contenuta in una lista `<ul>` all'interno della quale i singoli passi (o _step_) sono rappresentati da elementi `<li>`.
+Il contenitore ha sempre una classe `.steppers`. La sua intestazione è contenuta in una lista `<ul>` all'interno della quale i singoli passi (o _step_) sono rappresentati da elementi `<li>`.
 
 {% capture callout %}
+#### Visualizzazione su mobile
 L'aspetto della modalità mobile degli Steppers è differente rispetto a quello desktop. Se si sta consultando questa documentazione su un PC desktop, per visualizzare correttamente gli esempi seguenti in formato mobile sarà necessario ridimensionare la finestra del browser al di sotto dei 992 pixel.
-{% endcapture %}{% include callout.html content=callout type="info" %}
+{% endcapture %}{% include callout.html content=callout type="warning" %}
 
 ### Varianti intestazione
 
@@ -126,7 +126,7 @@ Nel caso in cui l'icona è semanticamente rilevante e non spiegata dal testo che
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-#### Ordine degli step
+#### Testo e numeri
 
 Le label presenti negli steps dell'header possono essere anticipate dal numero ordinale relativo allo stesso. Come mostrato nell'esempio, nel caso di uno step completato al posto del numero deve essere inclusa un'icona di conferma con un testo riservato agli screen reader.
 
