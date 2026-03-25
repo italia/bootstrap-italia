@@ -41,8 +41,8 @@
   --#{$prefix}stepper-progress-height: 2px; // Controls the progress bar height.
   --#{$prefix}stepper-header-shadow: var(--#{$prefix}elevation-medium); // Controls the header box shadow.
   --#{$prefix}stepper-nav-shadow: var(--#{$prefix}elevation-medium); // Controls the navigation box shadow.
-  --#{$prefix}stepper-spacing-x: #{$stepper-spacing-h}; // Controls the horizontal padding.
-  --#{$prefix}stepper-spacing-y: #{$stepper-spacing-v}; // Controls the vertical padding for desktop steps.
+  --#{$prefix}stepper-spacing-x: var(--#{$prefix}spacing-xs); // Controls the horizontal padding.
+  --#{$prefix}stepper-spacing-y: var(--#{$prefix}spacing-s); // Controls the vertical padding for desktop steps.
   @include media-breakpoint-up(lg) {
     --#{$prefix}stepper-background: transparent;
   }
@@ -147,7 +147,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--#{$prefix}stepper-spacing-y) 0;
+  padding: var(--#{$prefix}stepper-spacing-y) var(--#{$prefix}stepper-spacing-x);
   background: var(--#{$prefix}stepper-background);
   @include media-breakpoint-down(lg) {
     margin-bottom: var(--#{$prefix}stepper-header-margin-bottom);
