@@ -11,23 +11,15 @@
 
 .steppers {
   --#{$prefix}stepper-active-indicator-height: 2px; // Controls the active step underline height.
-  // --#{$prefix}stepper-button-color: #{$primary}; // Controls the mobile navigation button color.
-  // --#{$prefix}stepper-button-color-hover: #{$primary}; // Controls the mobile navigation button hover color.
   --#{$prefix}stepper-index-color: var(--#{$prefix}color-text-secondary); // Controls the inactive step text and icon color.
-  // --#{$prefix}stepper-color-active-indicator: #{$primary}; // Controls the active step underline color.
   --#{$prefix}stepper-background: transparent; // Controls the header and navigation background color. Default to white.
   --#{$prefix}stepper-border-color: var(--#{$prefix}color-border-subtle); // Controls the step border color.
-  // --#{$prefix}stepper-color-active: #{$primary}; // Controls the active step text and icon color.
-  // --#{$prefix}stepper-color-confirmed: var(--#{$prefix}color-text-base); // Controls the confirmed step text and icon color.
   --#{$prefix}stepper-dot-color: #{$progress-bg}; // Controls the dot background color.
   --#{$prefix}stepper-dot-color-done: #{$progress-bar-bg}; // Controls the completed dot background color.
   --#{$prefix}stepper-dot-gap: 8px; // Controls the gap between dots.
   --#{$prefix}stepper-dot-size: 4px; // Controls the dot indicator size.
   --#{$prefix}stepper-font-size: var(--#{$prefix}label-font-size-l); // Controls the step label font size.
-  --#{$prefix}stepper-font-weight: 600; // Controls the step label font weight.
-  --#{$prefix}stepper-header-height: 64px; // Controls the header height on mobile.
-  --#{$prefix}stepper-header-margin-bottom: 1rem; // Controls the header bottom margin.
-  --#{$prefix}stepper-icon-size: 24px; // Controls the icon width and height.
+  --#{$prefix}stepper-icon-size: var(--#{$prefix}icon-size-m); // Controls the icon width and height.
   --#{$prefix}stepper-icon-confirmed: var(--#{$prefix}icon-success); // Controls the icon color for confirmed steps.
   --#{$prefix}stepper-index-font-size: 0.875rem; // Controls the step index font size.
   --#{$prefix}stepper-item-background: var(--#{$prefix}stepper-background); // Controls the step background color, default to the header/nav background.
@@ -57,8 +49,6 @@
   // dark version
   &.bg-dark {
     --#{$prefix}stepper-color: #{$neutral-1-a2};
-    --#{$prefix}stepper-color-active: #{$analogue-2-a6};
-    --#{$prefix}stepper-color-confirmed: #{$white};
     --#{$prefix}stepper-background: transparent;
     --#{$prefix}stepper-border-color: #{$neutral-1-a8};
     --#{$prefix}stepper-color-active-indicator: #{$analogue-2-a6};
@@ -82,7 +72,7 @@
   margin-left: auto;
   color: var(--#{$prefix}stepper-index-color);
   font-size: var(--#{$prefix}stepper-index-font-size);
-  font-weight: var(--#{$prefix}stepper-font-weight);
+  font-weight: var(--#{$prefix}font-weight-solid);
   @include media-breakpoint-up(lg) {
     display: none;
   }
@@ -101,7 +91,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: var(--#{$prefix}stepper-nav-height);
   background: var(--#{$prefix}stepper-background);
 
   .steppers-progress,
@@ -150,12 +139,12 @@
   padding: var(--#{$prefix}stepper-spacing-y) var(--#{$prefix}stepper-spacing-x);
   background: var(--#{$prefix}stepper-background);
   @include media-breakpoint-down(lg) {
-    margin-bottom: var(--#{$prefix}stepper-header-margin-bottom);
+    margin-bottom: var(--#{$prefix}spacing-s);
     border-bottom: 2px solid var(--#{$prefix}stepper-border-color);
     box-shadow: var(--#{$prefix}stepper-header-shadow);
   }
   @include media-breakpoint-up(lg) {
-    padding:0;
+    padding: 0;
   }
 
   ul {
@@ -173,7 +162,7 @@
       background-color: var(--#{$prefix}stepper-item-background);
       color: var(--#{$prefix}stepper-item-text-color);
       font-size: var(--#{$prefix}stepper-font-size);
-      font-weight: var(--#{$prefix}stepper-font-weight);
+      font-weight: var(--#{$prefix}font-weight-solid);
       line-height: var(--#{$prefix}label-leading);
 
       // states
