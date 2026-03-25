@@ -128,9 +128,7 @@ Nel caso in cui l'icona è semanticamente rilevante e non spiegata dal testo che
 
 #### Ordine degli step
 
-Le label presenti negli steps dell'header possono essere anticipate dal numero ordinale relativo allo stesso. Come mostrato nell'esempio, nel caso di uno step completato al posto del numero va inclusa un'icona di conferma con un testo riservato agli screen reader.
-
-È necessario aggiungere la classe `.no-line` al `<li>` attivo per nascondere il bordo inferiore azzurro, in questo caso ridondante.
+Le label presenti negli steps dell'header possono essere anticipate dal numero ordinale relativo allo stesso. Come mostrato nell'esempio, nel caso di uno step completato al posto del numero deve essere inclusa un'icona di conferma con un testo riservato agli screen reader.
 
 {% comment %}Example name: Intestazione ordinata{% endcomment %}
 {% capture example %}
@@ -184,11 +182,13 @@ Nel caso si stia sviluppando una _Single page application_ oppure una sequenza d
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Varianti navigazione per mobile
+### Indicatori di progresso
 
 La versione mobile degli Steppers non visualizza l'elenco completo degli step disponibili, ma solo quello corrente. Per questa ragione è possibile aggiungere degli indicatori di progresso allo `.steppers-nav`.
 
-Questi indicatori saranno visualizzati solo su mobile, ma nei seguenti esempi sono stati resi disponibili anche nella visualizzazione desktop. Si raccomanda comunque la visualizzazione in un viewport ridotto per ottenere un esempio realistico dell'aspetto finale.
+{% capture callout %}
+Questi indicatori sono **visualizzati solo su mobile**, ma nei seguenti esempi sono stati resi disponibili anche nella visualizzazione desktop.
+{% endcapture %}{% include callout.html content=callout type="warning" %}
 
 #### Progress bar
 
@@ -251,7 +251,7 @@ Per ragioni di accessibilità, i `<li>` devono contenere uno `<span>` con classe
 
 ### Salva
 
-Su dispositivi mobili è possibile inserire un terzo pulsante "Salva" di aspetto differente con classe `.steppers-btn-save` fra i pulsanti "Indietro" e "Avanti".
+È possibile inserire un pulsante "Salva" all'interno di un elemento con classe `.steppers-save`. Il pulsante è posizionato a destra su dispositivi desktop e a sinistra su dispositivi mobili, in uno spazio che prevede anche un testo di supporto.
 
 {% comment %}Example name: Con navigazione mobile e pulsante salva{% endcomment %}
 {% capture example %}
@@ -363,6 +363,13 @@ Per ottenere una versione scura degli Stepper è sufficiente aggiungere la class
 {% endcapture %}{% include example.html content=example %}
 
 ## Breaking change
+
+{% capture callout %}
+- Rimossa la classe `.no-line` per nascondere il bordo inferiore azzurro.
+- Aggiunta la classe `.btn-icon` ai pulsanti "Indietro" e "Avanti".
+- Il pulsante "Avanti" è sempre un `.btn-primary`.
+- Modificata la posizione del pulsante "Salva", ora posizionato in un righe a sé stante.
+{% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}
 
 {% capture callout %}
 L'elemento con classe `.steppers-index` adesso è diventato uno `<span>` collocato fuori dalla lista `<ul>`.
