@@ -200,7 +200,6 @@
         --#{$prefix}stepper-item-text-color: var(--#{$prefix}color-text-base);
         --#{$prefix}stepper-number-border-color: var(--#{$prefix}color-border-success);
         --#{$prefix}stepper-number-background: var(--#{$prefix}color-background-success);
-        --#{$prefix}stepper-icon-confirmed: var(--#{$prefix}icon-inverse);
       }
 
       &.active,
@@ -217,11 +216,24 @@
   // Steppers icon
   //
 
+  // Default icon for a stepper item
   .icon {
     width: var(--#{$prefix}stepper-icon-size);
     height: var(--#{$prefix}stepper-icon-size);
     margin-right: var(--#{$prefix}spacing-xxs);
     fill: var(--#{$prefix}stepper-icon-color);
+
+    // Steppers success icon
+    &.steppers-success {
+      margin-left: auto;
+      fill: var(--#{$prefix}stepper-icon-confirmed);
+    }
+  }
+
+  // Steppers success icon when inside a number badge
+  .steppers-number .icon.steppers-success {
+    --#{$prefix}stepper-icon-confirmed: var(--#{$prefix}icon-inverse);
+    margin: 0; // Reset `auto`
   }
 
   // Steppers number badge
@@ -243,18 +255,6 @@
     .icon {
       margin-right: 0;
       margin-left: 0;
-    }
-  }
-
-  // Steppers success icon
-  .steppers-success {
-    margin-left: auto;
-    fill: var(--#{$prefix}stepper-icon-confirmed);
-
-    // when inside a number badge
-    .steppers-number & {
-      --#{$prefix}stepper-icon-confirmed: var(--#{$prefix}icon-inverse);
-      margin: 0;
     }
   }
 }
@@ -301,5 +301,7 @@
 
   .steppers-header ul li.active {
     --#{$prefix}stepper-item-text-color: var(--#{$prefix}color-text-inverse);
+    --#{$prefix}stepper-number-color: var(--#{$prefix}color-text-secondary);
+    --#{$prefix}stepper-number-background: var(--#{$prefix}color-background-inverse);
   }
 }
