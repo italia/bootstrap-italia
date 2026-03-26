@@ -13,6 +13,27 @@
 //
 
 .toolbar {
+  --#{$prefix}toolbar-item-margin-x: var(--#{$prefix}spacing-xs);
+  --#{$prefix}toolbar-item-margin-y: var(--#{$prefix}spacing-xs);
+  --#{$prefix}toolbar-link-margin-bottom-medium: 6px;
+  --#{$prefix}toolbar-list-background-color: #{$white};
+  --#{$prefix}toolbar-divider-color: #{$gray-border};
+  --#{$prefix}toolbar-link-color: #{$color-text-secondary};
+  --#{$prefix}toolbar-icon-color: #{$secondary};
+  --#{$prefix}toolbar-dropdown-padding-x: 10px;
+  --#{$prefix}toolbar-dropdown-caret-color: #{$secondary};
+  --#{$prefix}toolbar-dropdown-caret-size: 0.25rem;
+  --#{$prefix}toolbar-icon-font-size: 1.6rem;
+  --#{$prefix}toolbar-more-icon-font-size: 0.6rem;
+  --#{$prefix}toolbar-badge-border-color: #{$white};
+  --#{$prefix}toolbar-badge-background-color: #{$primary};
+  --#{$prefix}toolbar-badge-border-radius: 50%;
+  --#{$prefix}toolbar-badge-text-color: #{$white};
+  --#{$prefix}toolbar-badge-padding-x: 4px;
+  --#{$prefix}toolbar-badge-font-size: 0.5rem;
+  --#{$prefix}toolbar-label-margin-top: var(--#{$prefix}spacing-xs);
+  --#{$prefix}toolbar-label-font-size: 0.75rem;
+
   position: relative;
   width: 100%;
   height: 96px;
@@ -34,7 +55,7 @@
       & > li {
         display: flex;
         align-items: center;
-        margin: 8px 0;
+        margin: var(--#{$prefix}toolbar-item-margin-y) 0;
         // divider
         &.toolbar-divider {
           width: calc(100% - 16px);
@@ -63,7 +84,7 @@
 
       // badge
       .toolbar-badge {
-        right: 0px;
+        right: 0;
       }
 
       // dropdown
@@ -71,7 +92,7 @@
         &:after {
           top: 13px;
           right: -10px;
-          font-size: 0.25rem;
+          font-size: var(--#{$prefix}toolbar-dropdown-caret-size);
         }
       }
       .dropdown-menu {
@@ -87,7 +108,7 @@
 
       // badge
       .toolbar-badge {
-        right: 0px;
+        right: 0;
       }
 
       // dropdown
@@ -95,7 +116,7 @@
         &:after {
           top: 11px;
           right: -9px;
-          font-size: 0.25rem;
+          font-size: var(--#{$prefix}toolbar-dropdown-caret-size);
         }
       }
       .dropdown-menu {
@@ -143,7 +164,7 @@
     }
 
     .toolbar-badge {
-      right: 0px;
+      right: 0;
     }
 
     .badge-wrapper {
@@ -153,6 +174,8 @@
   // toolbar vertical ----------------- END
 
   &.toolbar-medium {
+    --#{$prefix}toolbar-icon-font-size: 1.35rem;
+
     height: 80px;
     //  list
     & > ul {
@@ -160,7 +183,7 @@
     }
     a,
     .btn-dropdown {
-      margin-bottom: 6px;
+      margin-bottom: var(--#{$prefix}toolbar-link-margin-bottom-medium);
     }
     .btn-dropdown {
       // dropdow caret
@@ -171,7 +194,7 @@
     }
     // icon
     .it-ico {
-      font-size: 1.35rem;
+      font-size: var(--#{$prefix}toolbar-icon-font-size);
       // more icon
       &.it-more-actions {
         &:before {
@@ -182,7 +205,7 @@
     // icon badge
     .toolbar-badge {
       top: -2px;
-      right: 0px;
+      right: 0;
       width: 10px;
       min-width: 10px;
       height: 10px;
@@ -191,6 +214,8 @@
   }
 
   &.toolbar-small {
+    --#{$prefix}toolbar-icon-font-size: 1.125rem;
+
     height: 72px;
     //  list
     & > ul {
@@ -205,7 +230,7 @@
     }
     // icon
     .it-ico {
-      font-size: 1.125rem;
+      font-size: var(--#{$prefix}toolbar-icon-font-size);
       &.it-more-actions {
         &:before {
           top: 25%;
@@ -215,7 +240,7 @@
     // icon badge
     .toolbar-badge {
       top: 2px;
-      right: 0px;
+      right: 0;
       width: 8px;
       min-width: 8px;
       height: 8px;
@@ -252,9 +277,9 @@
     height: 64px;
     margin: 0;
     padding: 0;
-    background-color: $white;
+    background-color: var(--#{$prefix}toolbar-list-background-color);
     & > li {
-      margin: 0 8px;
+      margin: 0 var(--#{$prefix}toolbar-item-margin-x);
       list-style-type: none;
       text-align: center;
       // divider
@@ -264,7 +289,7 @@
         max-width: 1px;
         height: calc(100% - 16px);
         margin: 0;
-        background: $gray-border;
+        background: var(--#{$prefix}toolbar-divider-color);
       }
     }
   }
@@ -272,41 +297,48 @@
   a,
   .btn-dropdown {
     display: block;
-    color: $color-text-secondary;
+    color: var(--#{$prefix}toolbar-link-color);
     .icon {
-      fill: $secondary;
+      fill: var(--#{$prefix}toolbar-icon-color);
     }
     // active
     &.active {
-      color: $primary;
+      --#{$prefix}toolbar-link-color: #{$primary};
+      --#{$prefix}toolbar-icon-color: #{$primary};
       .icon {
-        fill: $primary;
+        fill: var(--#{$prefix}toolbar-icon-color);
       }
     }
     // disabled
     &.disabled {
-      color: $gray-disabled;
+      --#{$prefix}toolbar-link-color: #{$gray-disabled};
+      --#{$prefix}toolbar-icon-color: #{$gray-disabled};
+
+      color: var(--#{$prefix}toolbar-link-color);
       cursor: not-allowed;
       .icon {
-        fill: $gray-disabled;
+        fill: var(--#{$prefix}toolbar-icon-color);
       }
       &:hover {
-        color: $gray-disabled;
+        color: var(--#{$prefix}toolbar-link-color);
         text-decoration: none;
         .icon {
-          fill: $gray-disabled;
+          fill: var(--#{$prefix}toolbar-icon-color);
         }
       }
       &:after {
-        color: $gray-disabled;
+        color: var(--#{$prefix}toolbar-link-color);
       }
     }
     // hover
     &:not(.disabled):hover {
-      color: $color-text-primary-hover;
+      --#{$prefix}toolbar-link-color: #{$color-text-primary-hover};
+      --#{$prefix}toolbar-icon-color: #{$color-text-primary-hover};
+
+      color: var(--#{$prefix}toolbar-link-color);
       text-decoration: underline;
       .icon {
-        fill: $color-text-primary-hover;
+        fill: var(--#{$prefix}toolbar-icon-color);
       }
     }
     // hover fix for ie11
@@ -323,8 +355,8 @@
     position: relative;
     width: 100%;
     padding: 0;
-    padding-right: 10px;
-    padding-left: 10px;
+    padding-right: var(--#{$prefix}toolbar-dropdown-padding-x);
+    padding-left: var(--#{$prefix}toolbar-dropdown-padding-x);
     &.toolbar-more {
       &:after {
         display: none;
@@ -354,7 +386,7 @@
       margin-left: 0;
       border-width: 4px 3px 0 3px;
       border-style: solid;
-      border-color: $secondary transparent transparent transparent;
+      border-color: var(--#{$prefix}toolbar-dropdown-caret-color) transparent transparent transparent;
     }
   }
 
@@ -363,13 +395,13 @@
     position: relative;
     display: block;
     height: 32px;
-    font-size: 1.6rem;
+    font-size: var(--#{$prefix}toolbar-icon-font-size);
     &:before {
       margin-right: 0;
     }
     // more icon
     &.it-more-actions {
-      font-size: 0.6rem;
+      font-size: var(--#{$prefix}toolbar-more-icon-font-size);
       &:before {
         position: relative;
         top: 50%;
@@ -387,20 +419,20 @@
   .toolbar-alert {
     position: absolute;
     display: block;
-    border: 1px solid $white;
-    background-color: $primary;
+    border: 1px solid var(--#{$prefix}toolbar-badge-border-color);
+    background-color: var(--#{$prefix}toolbar-badge-background-color);
   }
 
   // icon badge
   .toolbar-badge {
     top: -4px;
-    right: 0px;
+    right: 0;
     min-width: 18px;
     height: 18px;
-    padding: 0 4px;
-    border-radius: 50%;
-    color: $white;
-    font-size: 0.5rem;
+    padding: 0 var(--#{$prefix}toolbar-badge-padding-x);
+    border-radius: var(--#{$prefix}toolbar-badge-border-radius);
+    color: var(--#{$prefix}toolbar-badge-text-color);
+    font-size: var(--#{$prefix}toolbar-badge-font-size);
     font-style: normal;
     line-height: 1rem;
   }
@@ -408,8 +440,8 @@
   // text label
   .toolbar-label {
     display: block;
-    margin-top: 8px;
-    font-size: 0.75rem;
+    margin-top: var(--#{$prefix}toolbar-label-margin-top);
+    font-size: var(--#{$prefix}toolbar-label-font-size);
     font-weight: 600;
     line-height: 1;
   }
