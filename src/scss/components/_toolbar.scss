@@ -13,36 +13,36 @@
 //
 
 .toolbar {
+  position: relative;
   width: 100%;
   height: 96px;
-  position: relative;
 
   a {
     text-decoration: none;
   }
   // toolbar vertical ----------------- START
   &.toolbar-vertical {
-    height: 100%;
-    width: 96px;
     position: absolute;
     top: 0;
     bottom: 0;
+    width: 96px;
+    height: 100%;
     & > ul {
-      height: 100%;
       flex-direction: column;
       width: 72px;
+      height: 100%;
       & > li {
-        margin: 8px 0;
         display: flex;
         align-items: center;
+        margin: 8px 0;
         // divider
         &.toolbar-divider {
-          margin: 0;
+          width: calc(100% - 16px);
+          max-width: inherit;
           height: 1px;
           min-height: 1px; // fix for IE11
           max-height: 1px;
-          width: calc(100% - 16px);
-          max-width: inherit;
+          margin: 0;
         }
       }
     }
@@ -69,8 +69,8 @@
       // dropdown
       .btn-dropdown {
         &:after {
-          right: -10px;
           top: 13px;
+          right: -10px;
           font-size: 0.25rem;
         }
       }
@@ -93,8 +93,8 @@
       // dropdown
       .btn-dropdown {
         &:after {
-          right: -9px;
           top: 11px;
+          right: -9px;
           font-size: 0.25rem;
         }
       }
@@ -122,24 +122,24 @@
       margin: 0;
       box-shadow: $dropdown-box-shadow-vertical;
       &:before {
-        left: -6px;
         top: 24px;
+        left: -6px;
       }
     }
 
     // shadow
     &:before {
+      top: 0;
+      right: 32px;
+      bottom: auto;
+      left: auto;
+      z-index: 6;
       width: 360px;
       height: 100%;
-      left: auto;
-      top: 0;
-      bottom: auto;
-      right: 32px;
-      z-index: 6;
-      background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 60%);
       border-radius: 50%;
-      transform: translateX(50%) scalex(0.12) scaleY(1.25);
       opacity: 0.18;
+      background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 60%);
+      transform: translateX(50%) scalex(0.12) scaleY(1.25);
     }
 
     .toolbar-badge {
@@ -181,11 +181,11 @@
     }
     // icon badge
     .toolbar-badge {
-      height: 10px;
+      top: -2px;
+      right: 0px;
       width: 10px;
       min-width: 10px;
-      right: 0px;
-      top: -2px;
+      height: 10px;
       padding: 0;
     }
   }
@@ -214,56 +214,56 @@
     }
     // icon badge
     .toolbar-badge {
-      height: 8px;
+      top: 2px;
+      right: 0px;
       width: 8px;
       min-width: 8px;
-      right: 0px;
-      top: 2px;
+      height: 8px;
       padding: 0;
     }
   }
 
   // shadow
   &:before {
-    content: '';
     position: absolute;
-    height: 360px;
-    width: 100%;
     top: auto;
     bottom: 32px;
     z-index: 6;
-    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 60%);
+    content: '';
+    width: 100%;
+    height: 360px;
     border-radius: 50%;
-    transform: translateY(50%) scalex(1.4) scaleY(0.12);
     opacity: 0.18;
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 60%);
+    transform: translateY(50%) scalex(1.4) scaleY(0.12);
   }
 
   //  list
   & > ul {
     position: absolute;
     top: 0;
-    left: 0;
     right: 0;
-    width: 100%;
+    left: 0;
     z-index: 7;
-    background-color: $white;
     display: flex;
-    justify-content: space-around;
     align-items: center;
-    padding: 0;
-    margin: 0;
+    justify-content: space-around;
+    width: 100%;
     height: 64px;
+    margin: 0;
+    padding: 0;
+    background-color: $white;
     & > li {
-      list-style-type: none;
       margin: 0 8px;
+      list-style-type: none;
       text-align: center;
       // divider
       &.toolbar-divider {
-        margin: 0;
         width: 1px;
         min-width: 1px; // fix for IE11
         max-width: 1px;
         height: calc(100% - 16px);
+        margin: 0;
         background: $gray-border;
       }
     }
@@ -285,14 +285,14 @@
     }
     // disabled
     &.disabled {
-      cursor: not-allowed;
       color: $gray-disabled;
+      cursor: not-allowed;
       .icon {
         fill: $gray-disabled;
       }
       &:hover {
-        text-decoration: none;
         color: $gray-disabled;
+        text-decoration: none;
         .icon {
           fill: $gray-disabled;
         }
@@ -303,8 +303,8 @@
     }
     // hover
     &:not(.disabled):hover {
-      text-decoration: underline;
       color: $color-text-primary-hover;
+      text-decoration: underline;
       .icon {
         fill: $color-text-primary-hover;
       }
@@ -320,11 +320,11 @@
 
   // dropdown button
   .btn-dropdown {
-    padding: 0;
-    width: 100%;
     position: relative;
-    padding-left: 10px;
+    width: 100%;
+    padding: 0;
     padding-right: 10px;
+    padding-left: 10px;
     &.toolbar-more {
       &:after {
         display: none;
@@ -345,25 +345,25 @@
 
     // dropdown caret
     &:after {
-      content: '';
-      width: 0;
-      height: 0;
-      border-style: solid;
-      border-width: 4px 3px 0 3px;
-      border-color: $secondary transparent transparent transparent;
       position: absolute;
       top: 16px;
       right: 2px;
+      content: '';
+      width: 0;
+      height: 0;
       margin-left: 0;
+      border-width: 4px 3px 0 3px;
+      border-style: solid;
+      border-color: $secondary transparent transparent transparent;
     }
   }
 
   // icon
   .it-ico {
     position: relative;
-    font-size: 1.6rem;
     display: block;
     height: 32px;
+    font-size: 1.6rem;
     &:before {
       margin-right: 0;
     }
@@ -385,10 +385,10 @@
 
   .toolbar-badge,
   .toolbar-alert {
-    display: block;
     position: absolute;
-    background-color: $primary;
+    display: block;
     border: 1px solid $white;
+    background-color: $primary;
   }
 
   // icon badge
@@ -398,19 +398,19 @@
     min-width: 18px;
     height: 18px;
     padding: 0 4px;
+    border-radius: 50%;
     color: $white;
     font-size: 0.5rem;
-    line-height: 1rem;
-    border-radius: 50%;
     font-style: normal;
+    line-height: 1rem;
   }
 
   // text label
   .toolbar-label {
+    display: block;
     margin-top: 8px;
     font-size: 0.75rem;
     font-weight: 600;
     line-height: 1;
-    display: block;
   }
 }
