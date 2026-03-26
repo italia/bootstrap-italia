@@ -9,9 +9,6 @@
 // Properties
 //
 
-// Styles
-//
-
 .toolbar {
   --#{$prefix}toolbar-item-margin-x: var(--#{$prefix}spacing-xs);
   --#{$prefix}toolbar-item-margin-y: var(--#{$prefix}spacing-xs);
@@ -33,7 +30,12 @@
   --#{$prefix}toolbar-badge-font-size: 0.5rem;
   --#{$prefix}toolbar-label-margin-top: var(--#{$prefix}spacing-xs);
   --#{$prefix}toolbar-label-font-size: 0.75rem;
+}
 
+// Styles
+//
+
+.toolbar {
   position: relative;
   width: 100%;
   height: 96px;
@@ -41,7 +43,7 @@
   a {
     text-decoration: none;
   }
-  // toolbar vertical ----------------- START
+  // Vertical toolbar
   &.toolbar-vertical {
     position: absolute;
     top: 0;
@@ -56,7 +58,7 @@
         display: flex;
         align-items: center;
         margin: var(--#{$prefix}toolbar-item-margin-y) 0;
-        // divider
+        // Divider
         &.toolbar-divider {
           width: calc(100% - 16px);
           max-width: inherit;
@@ -82,12 +84,12 @@
         width: 56px;
       }
 
-      // badge
+      // Badge
       .toolbar-badge {
         right: 0;
       }
 
-      // dropdown
+      // Dropdown
       .btn-dropdown {
         &:after {
           top: 13px;
@@ -106,12 +108,12 @@
         width: 48px;
       }
 
-      // badge
+      // Badge
       .toolbar-badge {
         right: 0;
       }
 
-      // dropdown
+      // Dropdown
       .btn-dropdown {
         &:after {
           top: 11px;
@@ -124,7 +126,7 @@
       }
     }
 
-    // dropdown
+    // Dropdown
     .btn-dropdown {
       padding: 0;
       &:after {
@@ -148,7 +150,7 @@
       }
     }
 
-    // shadow
+    // Shadow
     &:before {
       top: 0;
       right: 32px;
@@ -171,13 +173,13 @@
       width: 100%;
     }
   }
-  // toolbar vertical ----------------- END
+  // Medium toolbar
 
   &.toolbar-medium {
     --#{$prefix}toolbar-icon-font-size: 1.35rem;
 
     height: 80px;
-    //  list
+    // List
     & > ul {
       height: 48px;
     }
@@ -186,23 +188,23 @@
       margin-bottom: var(--#{$prefix}toolbar-link-margin-bottom-medium);
     }
     .btn-dropdown {
-      // dropdow caret
+      // Dropdown caret
       &:after {
         top: 12px;
         right: 1px;
       }
     }
-    // icon
+    // Icon
     .it-ico {
       font-size: var(--#{$prefix}toolbar-icon-font-size);
-      // more icon
+      // More icon
       &.it-more-actions {
         &:before {
           top: 33%;
         }
       }
     }
-    // icon badge
+    // Icon badge
     .toolbar-badge {
       top: -2px;
       right: 0;
@@ -213,22 +215,23 @@
     }
   }
 
+  // Small toolbar
   &.toolbar-small {
     --#{$prefix}toolbar-icon-font-size: 1.125rem;
 
     height: 72px;
-    //  list
+    // List
     & > ul {
       height: 40px;
     }
     .btn-dropdown {
-      // dropdow caret
+      // Dropdown caret
       &:after {
         top: 12px;
         right: 2px;
       }
     }
-    // icon
+    // Icon
     .it-ico {
       font-size: var(--#{$prefix}toolbar-icon-font-size);
       &.it-more-actions {
@@ -237,7 +240,7 @@
         }
       }
     }
-    // icon badge
+    // Icon badge
     .toolbar-badge {
       top: 2px;
       right: 0;
@@ -248,7 +251,7 @@
     }
   }
 
-  // shadow
+  // Shadow
   &:before {
     position: absolute;
     top: auto;
@@ -263,7 +266,7 @@
     transform: translateY(50%) scalex(1.4) scaleY(0.12);
   }
 
-  //  list
+  // List
   & > ul {
     position: absolute;
     top: 0;
@@ -282,7 +285,7 @@
       margin: 0 var(--#{$prefix}toolbar-item-margin-x);
       list-style-type: none;
       text-align: center;
-      // divider
+      // Divider
       &.toolbar-divider {
         width: 1px;
         min-width: 1px; // fix for IE11
@@ -293,7 +296,7 @@
       }
     }
   }
-  // link and button
+  // Links and buttons
   a,
   .btn-dropdown {
     display: block;
@@ -301,7 +304,7 @@
     .icon {
       fill: var(--#{$prefix}toolbar-icon-color);
     }
-    // active
+    // Active state
     &.active {
       --#{$prefix}toolbar-link-color: #{$primary};
       --#{$prefix}toolbar-icon-color: #{$primary};
@@ -309,7 +312,7 @@
         fill: var(--#{$prefix}toolbar-icon-color);
       }
     }
-    // disabled
+    // Disabled state
     &.disabled {
       --#{$prefix}toolbar-link-color: #{$gray-disabled};
       --#{$prefix}toolbar-icon-color: #{$gray-disabled};
@@ -330,7 +333,7 @@
         color: var(--#{$prefix}toolbar-link-color);
       }
     }
-    // hover
+    // Hover state
     &:not(.disabled):hover {
       --#{$prefix}toolbar-link-color: #{$color-text-primary-hover};
       --#{$prefix}toolbar-icon-color: #{$color-text-primary-hover};
@@ -341,7 +344,7 @@
         fill: var(--#{$prefix}toolbar-icon-color);
       }
     }
-    // hover fix for ie11
+    // Hover fix for IE11
     /* stylelint-disable */
     _:-ms-fullscreen,
     &:not(.disabled):hover {
@@ -350,7 +353,7 @@
     /* stylelint-enable */
   }
 
-  // dropdown button
+  // Dropdown button
   .btn-dropdown {
     position: relative;
     width: 100%;
@@ -375,7 +378,7 @@
       box-shadow: $btn-focus-box-shadow;
     }
 
-    // dropdown caret
+    // Dropdown caret
     &:after {
       position: absolute;
       top: 16px;
@@ -390,7 +393,7 @@
     }
   }
 
-  // icon
+  // Icon
   .it-ico {
     position: relative;
     display: block;
@@ -399,7 +402,7 @@
     &:before {
       margin-right: 0;
     }
-    // more icon
+    // More icon
     &.it-more-actions {
       font-size: var(--#{$prefix}toolbar-more-icon-font-size);
       &:before {
@@ -409,7 +412,7 @@
     }
   }
 
-  // icon badges ------------------
+  // Icon badges
   .badge-wrapper {
     // width: calc(50% + 28px);
     position: relative;
@@ -423,7 +426,7 @@
     background-color: var(--#{$prefix}toolbar-badge-background-color);
   }
 
-  // icon badge
+  // Icon badge
   .toolbar-badge {
     top: -4px;
     right: 0;
@@ -437,7 +440,7 @@
     line-height: 1rem;
   }
 
-  // text label
+  // Text label
   .toolbar-label {
     display: block;
     margin-top: var(--#{$prefix}toolbar-label-margin-top);
