@@ -20,6 +20,7 @@
   --#{$prefix}toolbar-dropdown-padding-x: 10px;
   --#{$prefix}toolbar-dropdown-caret-color: #{$secondary};
   --#{$prefix}toolbar-dropdown-caret-size: 0.25rem;
+  --#{$prefix}toolbar-dropdown-shadow: #{$dropdown-box-shadow-vertical};
   --#{$prefix}toolbar-icon-font-size: 1.6rem;
   --#{$prefix}toolbar-more-icon-font-size: 0.6rem;
   --#{$prefix}toolbar-badge-border-color: #{$white};
@@ -143,7 +144,7 @@
       top: calc(-100% - 28px) !important;
       left: calc(100% + 24px) !important;
       margin: 0;
-      box-shadow: $dropdown-box-shadow-vertical;
+      --#{$prefix}dropdown-box-shadow: var(--#{$prefix}toolbar-dropdown-shadow);
       &:before {
         top: 24px;
         left: -6px;
