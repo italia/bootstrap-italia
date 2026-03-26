@@ -10,7 +10,7 @@
 //
 
 .toolbar {
-  --#{$prefix}toolbar-item-margin-x: var(--#{$prefix}spacing-xs);
+  --#{$prefix}toolbar-item-margin-x: var(--#{$prefix}spacing-xxs);
   --#{$prefix}toolbar-item-margin-y: var(--#{$prefix}spacing-xs);
   --#{$prefix}toolbar-link-margin-bottom-medium: 6px;
   --#{$prefix}toolbar-list-background-color: var(--#{$prefix}color-background-inverse);
@@ -29,8 +29,8 @@
   --#{$prefix}toolbar-badge-text-color: var(--#{$prefix}color-text-inverse);
   --#{$prefix}toolbar-badge-padding-x: var(--#{$prefix}spacing-3xs);
   --#{$prefix}toolbar-badge-font-size: var(--#{$prefix}label-font-size-xs);
-  --#{$prefix}toolbar-label-margin-top: var(--#{$prefix}spacing-xs);
-  --#{$prefix}toolbar-label-font-size: 0.75rem;
+  --#{$prefix}toolbar-label-margin-top: var(--#{$prefix}spacing-3xs);
+  --#{$prefix}toolbar-label-font-size: var(--#{$prefix}label-font-size-xs);;
 }
 
 // Styles
