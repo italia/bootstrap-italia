@@ -31,7 +31,6 @@
   --#{$prefix}stepper-number-color: var(--#{$prefix}color-text-muted); // Controls the number badge active text color.
   --#{$prefix}stepper-number-size: 2rem; // Controls the number badge width and height.
   --#{$prefix}stepper-progress-height: 2px; // Controls the progress bar height.
-  --#{$prefix}stepper-header-shadow: var(--#{$prefix}elevation-medium); // Controls the header box shadow.
   --#{$prefix}stepper-spacing-x: var(--#{$prefix}spacing-xs); // Controls the horizontal padding.
   --#{$prefix}stepper-spacing-y: var(--#{$prefix}spacing-s); // Controls the vertical padding for desktop steps.
   @include media-breakpoint-up(lg) {
@@ -145,9 +144,7 @@
     display: flex;
     width: 100%;
     padding: 0;
-    @include media-breakpoint-down(lg) {
-      margin-bottom: 0;
-    }
+    margin-bottom: 0;
 
     li {
       display: flex;
