@@ -62,14 +62,47 @@ description: Mostrano l'avanzamento del progresso di una procedura a più passi 
 }
 </style>
 
-## Intestazione
+## Come è fatto
 
-Il contenitore ha sempre una classe `.steppers`. La sua intestazione è contenuta in una lista `<ul>` all'interno della quale i singoli passi (o _step_) sono rappresentati da elementi `<li>`.
+Il componente Steppers è composto da tre aree principali:
+- l'intestazione, che mostra i passi della procedura e lo step attivo
+- il contenuto, che mostra il contenuto relativo allo step attivo
+- la navigazione, che mostra i pulsanti per navigare fra gli step
+- opzionalmente, un'area per il salvataggio del progresso e un indicatore di progresso, visibile solo su mobile
 
+## Esempio
 {% capture callout %}
 #### Visualizzazione su mobile
 L'aspetto della modalità mobile degli Steppers è differente rispetto a quello desktop. Se si sta consultando questa documentazione su un PC desktop, per visualizzare correttamente gli esempi seguenti in formato mobile sarà necessario ridimensionare la finestra del browser al di sotto dei 992 pixel.
 {% endcapture %}{% include callout.html content=callout type="warning" %}
+{% comment %}Example name: Completo{% endcomment %}
+{% capture example %}
+<div class="steppers">
+  <div class="steppers-header">
+    <ul>
+      <li class="confirmed">Primo contenuto <svg class="icon steppers-success" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg><span class="visually-hidden">Confermato</span></li>
+      <li class="active">Secondo contenuto <span class="visually-hidden">Attivo</span></li>
+      <li>Terzo contenuto</li>
+    </ul>
+    <span class="steppers-index" aria-hidden="true">2/6</span>
+  </div>
+  <div class="steppers-content" aria-live="polite">
+    <!-- Esempio START -->
+    <p>Contenuto di esempio dello step corrente</p>
+    <!-- Esempio END -->
+  </div>
+  <nav class="steppers-nav">
+    <button type="button" class="btn btn-icon btn-outline-primary btn-sm steppers-btn-prev"><svg class="icon icon-sm icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-left"></use></svg>Indietro</button>
+
+    <button type="button" class="btn btn-icon btn-primary btn-sm steppers-btn-next">Avanti <svg class="icon icon-sm icon-inverse"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use></svg></button>
+  </nav>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+## Intestazione
+
+Il contenitore ha sempre una classe `.steppers`. La sua intestazione è contenuta in una lista `<ul>` all'interno della quale i singoli passi (o _step_) sono rappresentati da elementi `<li>`.
+
 
 ### Varianti intestazione
 
@@ -85,14 +118,20 @@ I passi visibili nell'intestazione possono essere corredati da tre classi aggiun
 
 {% comment %}Example name: Intestazione solo testo{% endcomment %}
 {% capture example %}
-<div class="steppers">
-  <div class="steppers-header">
-    <ul>
-      <li class="confirmed">Primo contenuto <svg class="icon steppers-success" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg><span class="visually-hidden">Confermato</span></li>
-      <li class="active">Secondo contenuto <span class="visually-hidden">Attivo</span></li>
-      <li>Terzo contenuto</li>
-    </ul>
-    <span class="steppers-index" aria-hidden="true">2/6</span>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <div class="steppers">
+        <div class="steppers-header">
+          <ul>
+            <li class="confirmed">Primo contenuto <svg class="icon steppers-success" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg><span class="visually-hidden">Confermato</span></li>
+            <li class="active">Secondo contenuto <span class="visually-hidden">Attivo</span></li>
+            <li>Terzo contenuto</li>
+          </ul>
+          <span class="steppers-index" aria-hidden="true">2/6</span>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
