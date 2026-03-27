@@ -701,7 +701,7 @@ Per il nome è possibile utilizzare i tag `<h3>` o `<h4>`. Il testo esteso può 
 
 {% include properties.md properties=site.data.cprops.avatar %}
 
-## Breaking change
+## Breaking changes
 
 {% capture callout %}
 - Nelle varianti avatar con testo i colori di fondo possono essere solo `.avatar-primary` e `.avatar-secondary`. Sono state rimosse le classi `.avatar-green`, `.avatar-orange` e `.avatar-red`.

@@ -265,7 +265,7 @@ Per aggiungere una serie di card all'interno di una Section si consiglia di util
 
 {% include properties.md properties=site.data.cprops.section %}
 
-## Breaking change
+## Breaking changes
 
 {% capture callout %}
 - Negli esempi sono stati rimossi dai contenitori delle colonne tutte le classi custom per padding, margin e font a favore dello standard. 

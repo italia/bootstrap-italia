@@ -773,7 +773,7 @@ Includendo l'elemento all'interno di un `.form-group`, la label assumerà lo ste
   </div>
 {% endcapture %}{% include example.html content=example %}
 
-## Breaking change
+## Breaking changes
 
 {% capture callout %}
 - Nel caso di input con icona o pulsanti, l'elemento `label` è stato spostato fuori dal contenitore `.input-group` per leggibilità del markup.

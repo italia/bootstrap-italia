@@ -2432,7 +2432,7 @@ Svolgi sempre test di usabilità con utenti che utilizzano tecnologie assistive 
 
 {% include properties.md properties=site.data.cprops.it %}
 
-## Breaking change
+## Breaking changes
 
 {% capture callout %}
 - Per i metadati è stata rimossa la classe `.it-card-related` a favore del solo uso dell'elemento `<footer>` con classe `.it-card-footer` a seguire il corpo della card.

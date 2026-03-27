@@ -236,7 +236,7 @@ Il pulsante di controllo del collapse può essere affiancato da un link per down
 
 {% include properties.md properties=site.data.cprops.callout %}
 
-## Breaking change
+## Breaking changes
 
 {% capture callout %}
 - Il carattere di default del contenuto diventa senza grazie e con dimensione `16px`. 

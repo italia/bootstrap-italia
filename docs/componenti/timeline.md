@@ -259,7 +259,7 @@ Il **PIN** ha tre varianti di colore:
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Breaking change
+### Breaking changes
 
 {% capture callout %}
 Implementato nell'esempio il nuovo componente card definito dalle classi `.it-card` e relativi modificatori.  

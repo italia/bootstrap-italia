@@ -253,7 +253,7 @@ Contiene i contatti dell'ente, collegamenti ai profili social, form di iscrizion
 {% endcapture %}{% include example.html content=example %}
 
 {% include properties.md properties=site.data.cprops.footer %}
-## Breaking change
+## Breaking changes
 
 {% capture callout %}
 - Per la `<section>` di branding dell'ente: aggiunta classe `.pb-4`.

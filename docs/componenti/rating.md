@@ -137,7 +137,7 @@ Per rendere accessibile il contenuto è necessario aggiungere un tag `<legend>` 
 
 {% include properties.md properties=site.data.cprops.rating %}
 
-## Breaking change
+## Breaking changes
 
 {% capture callout %}
 - Aggiunto attributo `aria-hidden="true"` sulle icone perché lo scopo è già trasmesso agli strumenti assistivi dal testo con classe `.visually-hidden`.

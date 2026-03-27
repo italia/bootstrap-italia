@@ -232,7 +232,7 @@ Se ti interessa contribuire alla libreria e sapere come funziona il processo di 
 continua a leggere alla pagina [strumenti di compilazione e contribuzione]({{ site.baseurl }}/docs/come-iniziare/strumenti-di-compilazione/).
 
 
-## Breaking change
+## Breaking changes
 
 {% capture callout %}
 La versione 3.0.0 ha portato molte breaking changes sia a livello generale che a livello di singolo componente. Fai riferimento alla [guida alla migrazione dalla versione 2]({{ site.baseurl }}/docs/come-iniziare/migrazione-dalla-versione-2/).

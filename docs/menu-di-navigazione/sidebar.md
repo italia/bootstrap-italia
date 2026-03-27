@@ -338,7 +338,7 @@ sezione [attivazione Collapse tramite codice]({{ site.baseurl }}/docs/componenti
 
 {% include properties.md properties=site.data.cprops.sidebar %}
 
-## Breaking change
+## Breaking changes
 
 {% capture callout %}
 - Rimossi elementi `<span>` con classe `list-item-title-icon-wrapper`.

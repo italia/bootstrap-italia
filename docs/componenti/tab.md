@@ -832,7 +832,7 @@ triggerTabList.forEach(function (triggerEl) {
   </table>
 </div>
 
-## Breaking change
+## Breaking changes
 
 {% capture callout %}
 Sono stati rimossi gli elementi delle liste con classe `nav-item-filler` per 

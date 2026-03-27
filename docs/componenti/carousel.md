@@ -874,7 +874,7 @@ const carouselElements = elementList.forEach((element) => {
   </table>
 </div>
 
-## Breaking change
+## Breaking changes
 
 {% capture callout %}
 Implementato negli esempi il nuovo componente card definito dalle classi `.it-card` e relativi modificatori. Il markup degli esempi e gli attributi per attivare il componente sono inoltre cambiati laddove c'è la necessità di gestire le altezze delle card con classi `.it-card-full-height` e/o la necessità di mostrarne le ombre `.shadow-`. 

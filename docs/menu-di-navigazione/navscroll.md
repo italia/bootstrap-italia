@@ -451,7 +451,7 @@ Le opzioni possono essere passate tramite gli attributi data o tramite Javascrip
 
 {% include properties.md properties=site.data.cprops.navscroll %}
 
-## Breaking change
+## Breaking changes
 
 {% capture callout %}
 - La classe che controlla il colore dell'icona chevron per le varianti scure ha cambiato nome: `.icon-white` diventa `.icon-inverse`.

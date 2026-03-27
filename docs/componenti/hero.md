@@ -262,7 +262,7 @@ Aggiungere alla section `.it-hero-wrapper` la classe `.it-bottom-overlapping-con
 
 {% include properties.md properties=site.data.cprops.hero %}
 
-## Breaking change
+## Breaking changes
 
 {% capture callout %}
 Implementato nell'esempio con immagine e margine negativo per contenuti sovrapposti il nuovo componente card definito dalle classi `.it-card` e relativi modificatori.  

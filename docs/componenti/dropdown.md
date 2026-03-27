@@ -558,7 +558,7 @@ Le opzioni possono essere passate tramite gli attributi data o tramite JavaScrip
 </div>
 
 {% include properties.md properties=site.data.cprops.dropdown %}
-## Breaking change
+## Breaking changes
 
 {% capture callout %}
 - Per quanto riguarda le icone le classi che ne controllano il colore potrebbero aver cambiato nome, ad esempio `.icon-white` diventa `.icon-inverse`.

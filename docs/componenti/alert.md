@@ -211,7 +211,7 @@ myAlert.addEventListener('closed.bs.alert', () => {
 ```
 
 {% include properties.md properties=site.data.cprops.alert %}
-## Breaking change
+## Breaking changes
 
 {% capture callout %}
 - Nel markup del componente il contenuto va incluso in un tag `<p>`. 

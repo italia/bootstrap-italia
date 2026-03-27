@@ -1064,7 +1064,7 @@ Per questo tipo di link list sono state utilizzate, oltre alle classi custom, le
 
 {% include properties.md properties=site.data.cprops.linklist %}
 
-## Breaking change
+## Breaking changes
 
 {% capture callout %}
 - Negli esempi di varianti lista con avatar è stata rimossa la classe `.size-lg` dai `<div>` con classe `.avatar`. 

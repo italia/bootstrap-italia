@@ -305,7 +305,7 @@ stickyElement.addEventListener('on.bs.sticky', () => {
 })
 ```
 
-## Breaking changes
+## Breaking changess
 
 {% capture callout %}
 La navbar presente nel markup dell'esempio "Attivabile con target", quando aperta in versione mobile o a forte ingrandimento, è stata reimplementata come modale per migliorare l'accessibilità con le combinazioni principali di lettori di schermo, sistema operativo e browser. Modifiche principali:

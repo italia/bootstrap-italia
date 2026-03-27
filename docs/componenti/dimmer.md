@@ -452,7 +452,7 @@ const dimmer = new Dimmer(dimmerEl)
   </table>
 </div>
 
-## Breaking change 
+## Breaking changes 
 
 {% capture callout %}
 Implementato negli esempi il nuovo componente card definito dalle classi `.it-card` e relativi modificatori.  

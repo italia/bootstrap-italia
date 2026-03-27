@@ -364,7 +364,7 @@ fare riferimento alla [guida ufficiale](https://github.com/alphagov/accessible-a
 
 {% include properties.md properties=site.data.cprops.autocomplete %}
 
-## Breaking change
+## Breaking changes
 
 {% capture callout %}
 Nuova modalità di utilizzo del componente Autocomplete via codice.

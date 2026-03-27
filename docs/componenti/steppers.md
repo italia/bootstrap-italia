@@ -443,7 +443,7 @@ Si raccomanda la visualizzazione in un viewport ridotto per ottenere un esempio 
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-## Breaking change
+## Breaking changes
 
 {% capture callout %}
 L'elemento con classe `.steppers-index` adesso è diventato uno `<span>` collocato fuori dalla lista `<ul>`.

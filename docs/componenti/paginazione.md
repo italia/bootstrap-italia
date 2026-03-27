@@ -541,7 +541,7 @@ Con il posizionamento a destra
 
 {% include properties.md properties=site.data.cprops.pagination %}
 
-## Breaking change
+## Breaking changes
 
 {% capture callout %}
 - È stato corretto il colore delle icone chevron per gli elementi disabilitati sostituendo la classe `.icon-primary` con `.icon-disabled`.

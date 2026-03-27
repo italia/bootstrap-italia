@@ -433,7 +433,7 @@ con un `ellipsis`.
 </dl>
 {% endcapture %}{% include example.html content=example %}
 
-## Breaking change
+## Breaking changes
 
 {% capture callout %}
 - Reimpostata la dimensione del carattere di base su `16px` su `body`.

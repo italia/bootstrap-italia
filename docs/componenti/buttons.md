@@ -238,7 +238,7 @@ const button = new Button(buttonEl)
 
 {% include properties.md properties=site.data.cprops.btn %}
 
-## Breaking change
+## Breaking changes
 
 {% capture callout %}
 - Il nome delle varianti di dimensione ora coincide con UI Kit Italia: 

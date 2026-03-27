@@ -235,7 +235,7 @@ const inputNumber = new InputNumberEl(inputNumberEl, options);
 </div>
 
 
-## Breaking change
+## Breaking changes
 
 {% capture callout %}
 Le `label` degli input `percentuale` e `valuta` richiedono la classe `input-symbol-label`. 

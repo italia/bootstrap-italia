@@ -1057,7 +1057,7 @@ sezione [attivazione Dropdown tramite codice]({{ site.baseurl }}/docs/componenti
 
 {% include properties.md properties=site.data.cprops.megamenu %}
 
-## Breaking change
+## Breaking changes
 
 {% capture callout %}
 

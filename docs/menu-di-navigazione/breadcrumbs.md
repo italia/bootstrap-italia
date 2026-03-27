@@ -82,7 +82,7 @@ Quando la versione su sfondo scuro viene utilizzata su un fondo di colore differ
 
 {% include properties.md properties=site.data.cprops.breadcrumb %}
 
-## Breaking change
+## Breaking changes
 
 {% capture callout %}
 - Per la versione su sfondo scuro il colore delle icone dovrà essere impostato manualmente con la classe `.icon-inverse` per renderle visibili su sfondo scuro.

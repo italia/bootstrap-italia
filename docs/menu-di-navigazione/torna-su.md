@@ -183,7 +183,7 @@ Le opzioni possono essere passate tramite gli attributi data o tramite Javascrip
 
 {% include properties.md properties=site.data.cprops.backtop %}
 
-## Breaking change
+## Breaking changes
 
 {% capture callout %}
 - La classe che controlla il colore delle icone bianche ha cambiato nome: `.icon-white` diventa `.icon-inverse`.

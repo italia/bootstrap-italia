@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 {% include properties.md properties=site.data.cprops.icon %}
 
-## Breaking change
+## Breaking changes
 
 {% capture callout %}
 - Per le icone bianche da usare su sfondi scuri sono state rimosse le classi `.icon-light` e `.icon-white` a favore di `.icon-inverse`.

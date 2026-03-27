@@ -792,7 +792,7 @@ myModalEl.addEventListener('hidden.bs.modal', function (event) {
         <td>shown.bs.modal</td>
         <td>Questo evento viene attivato quando la modale è stata resa visibile all'utente (attenderà il completamento delle transizioni CSS). l'elemento selezionato è disponibile come proprietà <code>relatedTarget</code> dell'evento.</td>
       </tr>
-      <tr>
+## Breaking changes
         <td>hide.bs.modal</td>
         <td>Questo evento viene generato immediatamente quando il metodo di istanza <code>hide</code> è stato chiamato.</td>
       </tr>

@@ -607,7 +607,7 @@ const masonry = new Masonry(masonryElement, options);
   </table>
 </div>
 
-## Breaking change
+## Breaking changes
 
 {% capture callout %}
 Utilizzare i tag `<figure>` e `<figcaption>` per liste di immagini con didascalia.

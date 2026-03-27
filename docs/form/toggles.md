@@ -148,7 +148,7 @@ Per raggruppare visivamente gli elementi **toggle** occorrerà aggiungere al `.f
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-## Breaking change
+## Breaking changes
 
 {% capture callout %}
 - Il "raggruppamento" di campi di input deve prevedere l'elemento nativo `<fieldset>`. 

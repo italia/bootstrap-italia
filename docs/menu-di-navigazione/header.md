@@ -1547,9 +1547,9 @@ const headerSticky = new HeaderSticky(headerStickyElement)
   </table>
 </div>
 
-## Breaking change
+## Breaking changes
 
-## Breaking change
+## Breaking changes
 
 {% capture callout %}
 

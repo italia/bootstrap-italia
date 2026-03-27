@@ -226,7 +226,7 @@ const transfer = new Transfer(transferElement, config);
   </tbody>
 </table>
 
-## Breaking change
+## Breaking changes
 
 {% capture callout %}
 Agli elementi di `<a>` occorre aggiungere l'attributo `role="button"`.
