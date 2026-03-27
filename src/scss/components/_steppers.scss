@@ -135,9 +135,7 @@
   padding: var(--#{$prefix}stepper-spacing-y) var(--#{$prefix}stepper-spacing-x);
   background: var(--#{$prefix}stepper-background);
   @include media-breakpoint-down(lg) {
-    margin-bottom: var(--#{$prefix}spacing-s);
     border-bottom: var(--#{$prefix}stepper-active-indicator-height) solid var(--#{$prefix}stepper-border-color);
-    box-shadow: var(--#{$prefix}stepper-header-shadow);
   }
   @include media-breakpoint-up(lg) {
     padding: 0;
