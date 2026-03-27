@@ -62,59 +62,68 @@ description: Mostrano l'avanzamento del progresso di una procedura a più passi 
 }
 </style>
 
-## Come è fatto
+## Introduzione
 
-Il componente Steppers è composto da tre aree principali:
-- l'intestazione, che mostra i passi della procedura e lo step attivo
-- il contenuto, che mostra il contenuto relativo allo step attivo
-- la navigazione, che mostra i pulsanti per navigare fra gli step
-- opzionalmente, un'area per il salvataggio del progresso e un indicatore di progresso, visibile solo su mobile
+È composto da tre aree principali:
+- **intestazione**, che mostra i passi della procedura e lo step attivo;
+- **area del contenuto**, che mostra il contenuto relativo allo step attivo;  
+- **navigazione**, che mostra i pulsanti per navigare fra gli step.
+  
+Opzionalmente, è possibile aggiungere un'area per il **salvataggio del progresso**. 
+Vai alla sezione [Salva](#salva) per maggiori dettagli.
 
 ## Esempio
-{% capture callout %}
-#### Visualizzazione su mobile
-L'aspetto della modalità mobile degli Steppers è differente rispetto a quello desktop. Se si sta consultando questa documentazione su un PC desktop, per visualizzare correttamente gli esempi seguenti in formato mobile sarà necessario ridimensionare la finestra del browser al di sotto dei 992 pixel.
-{% endcapture %}{% include callout.html content=callout type="warning" %}
-{% comment %}Example name: Completo{% endcomment %}
-{% capture example %}
-<div class="steppers">
-  <div class="steppers-header">
-    <ul>
-      <li class="confirmed">Primo contenuto <svg class="icon steppers-success" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg><span class="visually-hidden">Confermato</span></li>
-      <li class="active">Secondo contenuto <span class="visually-hidden">Attivo</span></li>
-      <li>Terzo contenuto</li>
-    </ul>
-    <span class="steppers-index" aria-hidden="true">2/6</span>
-  </div>
-  <div class="steppers-content" aria-live="polite">
-    <!-- Esempio START -->
-    <p>Contenuto di esempio dello step corrente</p>
-    <!-- Esempio END -->
-  </div>
-  <nav class="steppers-nav">
-    <button type="button" class="btn btn-icon btn-outline-primary btn-sm steppers-btn-prev"><svg class="icon icon-sm icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-left"></use></svg>Indietro</button>
 
-    <button type="button" class="btn btn-icon btn-primary btn-sm steppers-btn-next">Avanti <svg class="icon icon-sm icon-inverse"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use></svg></button>
-  </nav>
+{% capture callout %}
+#### Codice sorgente
+Gli esempi includono sempre il codice HTML per elementi globali come il `.container-*` , `.row` e `.col-*`. Questi elementi non sono necessari per il corretto funzionamento del componente, ma sono inclusi per completezza.
+{% endcapture %}{% include callout.html content=callout type="warning" %}
+
+{% comment %}Example name: Steppers completo{% endcomment %}
+{% capture example %}
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <div class="steppers">
+        <div class="steppers-header mb-3">
+          <ul>
+            <li class="confirmed">Primo contenuto <svg class="icon steppers-success" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg><span class="visually-hidden">Confermato</span></li>
+            <li class="active">Secondo contenuto <span class="visually-hidden">Attivo</span></li>
+            <li>Terzo contenuto</li>
+          </ul>
+          <span class="steppers-index" aria-hidden="true">2/6</span>
+        </div>
+        <div class="steppers-content mb-3" aria-live="polite">
+          <!-- Esempio START -->
+          <p>Contenuto di esempio dello step corrente</p>
+          <!-- Esempio END -->
+        </div>
+        <nav class="steppers-nav mb-3">
+          <button type="button" class="btn btn-icon btn-outline-primary btn-sm steppers-btn-prev"><svg class="icon icon-sm icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-left"></use></svg>Indietro</button>
+          <button type="button" class="btn btn-icon btn-primary btn-sm steppers-btn-next">Avanti <svg class="icon icon-sm icon-inverse"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use></svg></button>
+        </nav>
+      </div>
+    </div>
+  </div>
 </div>
+
 {% endcapture %}{% include example.html content=example %}
 
 ## Intestazione
 
 Il contenitore ha sempre una classe `.steppers`. La sua intestazione è contenuta in una lista `<ul>` all'interno della quale i singoli passi (o _step_) sono rappresentati da elementi `<li>`.
+{% capture callout %}
+#### Visualizzazione su mobile
+La modalità mobile dell'intestazioneha un aspetto diverso da quella desktop. Se stai consultando questa documentazione da un computer, ridimensiona la finestra del browser a meno di 992 pixel di larghezza per visualizzare l'esempio su dispositivo mobile.
+{% endcapture %}{% include callout.html content=callout type="warning" %}
 
-
-### Varianti intestazione
-
-#### Solo testo
+### Solo testo
 
 I passi visibili nell'intestazione possono essere corredati da tre classi aggiuntive:
 
 - `.confirmed` per individuare uno step già confermato. È bene corredare tali step con un'icona che ne identifichi il completamento (vedi di seguito).
 - `.active` per individuare lo step attualmente attivo; su dispositivi mobili è l'unico visualizzato.
 - `.steppers-index` per individuare un indice, visibile solo su mobile, che può contenere lo stato attuale di progresso indicato in forma testuale
-
-È necessario ridurre la finestra del browser per apprezzare il comportamente degli Stepper su dispositivi di dimensioni ridotte.
 
 {% comment %}Example name: Intestazione solo testo{% endcomment %}
 {% capture example %}
@@ -136,7 +145,7 @@ I passi visibili nell'intestazione possono essere corredati da tre classi aggiun
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-#### Testo e icone
+### Testo e icone
 
 Le label presenti negli step dell'intestazione possono essere anticipate da un'icona.
 
@@ -165,7 +174,7 @@ Nel caso in cui l'icona è semanticamente rilevante e non spiegata dal testo che
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-#### Testo e numeri
+### Testo e numeri
 
 Le label presenti negli steps dell'header possono essere anticipate dal numero ordinale relativo allo stesso. Come mostrato nell'esempio, nel caso di uno step completato al posto del numero deve essere inclusa un'icona di conferma con un testo riservato agli screen reader.
 
@@ -175,7 +184,7 @@ Le label presenti negli steps dell'header possono essere anticipate dal numero o
   <div class="steppers-header">
     <ul>
       <li class="confirmed"><span class="steppers-number"><svg class="icon steppers-success" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg><span class="visually-hidden">Confermato</span></span>Primo contenuto</li>
-      <li class="active no-line"><span class="steppers-number"><span class="visually-hidden">Step </span>2</span>Secondo contenuto <span class="visually-hidden">Attivo</span></li>
+      <li class="active"><span class="steppers-number"><span class="visually-hidden">Step </span>2</span>Secondo contenuto <span class="visually-hidden">Attivo</span></li>
       <li><span class="steppers-number"><span class="visually-hidden">Step </span>3</span>Terzo contenuto</li>
     </ul>
     <span class="steppers-index" aria-hidden="true"><span>1</span> <span class="active">2</span> <span>3</span> <span>4</span></span>
@@ -208,7 +217,7 @@ Nel caso si stia sviluppando una _Single page application_ oppure una sequenza d
     </ul>
     <span class="steppers-index" aria-hidden="true">2/6</span>
   </div>
-  <div class="steppers-content" aria-live="polite">
+  <div class="steppers-content mb-1" aria-live="polite">
     <!-- Esempio START -->
     <p>Contenuto di esempio dello step corrente</p>
     <!-- Esempio END -->
@@ -393,7 +402,7 @@ Per ottenere una versione scura degli Stepper è sufficiente aggiungere la class
   <div class="steppers-header">
     <ul>
       <li class="confirmed"><span class="steppers-number"><svg class="icon steppers-success" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg><span class="visually-hidden">Confermato Step 1</span></span>Primo contenuto</li>
-      <li class="active no-line"><span class="steppers-number"><span class="visually-hidden">Attivo Step </span>2</span>Secondo contenuto</li>
+      <li class="active"><span class="steppers-number"><span class="visually-hidden">Attivo Step </span>2</span>Secondo contenuto</li>
       <li><span class="steppers-number"><span class="visually-hidden">Step </span>3</span>Terzo contenuto</li>
     </ul>
     <span class="steppers-index" aria-hidden="true"><span>1</span> <span class="active">2</span> <span>3</span> <span>4</span></span>
