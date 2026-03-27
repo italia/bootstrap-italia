@@ -199,36 +199,9 @@ I pulsanti "Avanti" e "Indietro" dovranno essere utilizzati per implementare la 
 Il passaggio da uno step all'altro attraverso i pulsanti contenuti in `.steppers-nav` determina un cambiamento del contenuto presente in `.steppers-content`.
 
 {% capture callout %}
-
 #### Accessibilità
-
 Nel caso si stia sviluppando una _Single page application_ oppure una sequenza di step in AJAX il contenitore `.steppers-content` dovrebbe avere un attributo ARIA `aria-live="polite"` per avvisare gli utilizzatori di screen reader dall'avvenuto cambiamento del contenuto.
-
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
-
-{% comment %}Example name: Con navigazione degli step{% endcomment %}
-{% capture example %}
-<div class="steppers">
-  <div class="steppers-header">
-    <ul>
-      <li class="confirmed">Primo contenuto <svg class="icon steppers-success" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg><span class="visually-hidden">Confermato</span></li>
-      <li class="active">Secondo contenuto <span class="visually-hidden">Attivo</span></li>
-      <li>Terzo contenuto</li>
-    </ul>
-    <span class="steppers-index" aria-hidden="true">2/6</span>
-  </div>
-  <div class="steppers-content mb-1" aria-live="polite">
-    <!-- Esempio START -->
-    <p>Contenuto di esempio dello step corrente</p>
-    <!-- Esempio END -->
-  </div>
-  <nav class="steppers-nav">
-    <button type="button" class="btn btn-icon btn-outline-primary btn-sm steppers-btn-prev"><svg class="icon icon-sm icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-left"></use></svg>Indietro</button>
-
-    <button type="button" class="btn btn-icon btn-primary btn-sm steppers-btn-next">Avanti <svg class="icon icon-sm icon-inverse"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use></svg></button>
-  </nav>
-</div>
-{% endcapture %}{% include example.html content=example %}
 
 ### Indicatori di progresso
 
@@ -242,7 +215,7 @@ Questi indicatori sono **visualizzati solo su mobile**, ma nei seguenti esempi s
 
 La Progress bar è quella nativa di Bootstrap 5 ed è contenuta in un elemento `.steppers-progress` situato fra i pulsanti "Indietro" ed "Avanti".
 
-{% comment %}Example name: Con navigazione mobile barra di progresso{% endcomment %}
+{% comment %}Example name: Indicatore di progresso con barra{% endcomment %}
 {% capture example %}
 <div class="steppers mobile-examples">
   <div class="steppers-content" aria-live="polite">
@@ -274,7 +247,7 @@ Per ragioni di accessibilità, i `<li>` devono contenere uno `<span>` con classe
 
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
-{% comment %}Example name: Con navigazione mobile pallini{% endcomment %}
+{% comment %}Example name: Indicatore di progresso con pallini{% endcomment %}
 {% capture example %}
 <div class="steppers mobile-examples">
   <div class="steppers-content" aria-live="polite">
@@ -301,7 +274,7 @@ Per ragioni di accessibilità, i `<li>` devono contenere uno `<span>` con classe
 
 È possibile inserire un pulsante "Salva" all'interno di un elemento con classe `.steppers-save`. Il pulsante è posizionato a destra su dispositivi desktop e a sinistra su dispositivi mobili, in uno spazio che prevede anche un testo di supporto.
 
-{% comment %}Example name: Con navigazione mobile e pulsante salva{% endcomment %}
+{% comment %}Example name: Salvataggio progresso{% endcomment %}
 {% capture example %}
 <div class="steppers mobile-examples">
   <div class="steppers-content" aria-live="polite">
@@ -327,7 +300,7 @@ Per ragioni di accessibilità, i `<li>` devono contenere uno `<span>` con classe
 
 Su dispositivi mobili è possibile sostituire il pulsante "Avanti" con un pulsante "Conferma" di stile differente, con la classe `.steppers-btn-confirm`.
 
-{% comment %}Example name: Con navigazione mobile e pulsante conferma{% endcomment %}
+{% comment %}Example name: Conferma degli step{% endcomment %}
 {% capture example %}
 <div class="steppers mobile-examples">
   <div class="steppers-content" aria-live="polite">
@@ -346,7 +319,7 @@ Su dispositivi mobili è possibile sostituire il pulsante "Avanti" con un pulsan
 
 Per ottenere una versione scura degli Stepper è sufficiente aggiungere la classe `.bg-dark` al contenitore principale.
 
-{% comment %}Example name: Con sfondo scuro{% endcomment %}
+{% comment %}Example name: Variante su sfondo scuro{% endcomment %}
 {% capture example %}
 <div class="steppers bg-dark">
   <div class="steppers-header">
@@ -371,7 +344,7 @@ Per ottenere una versione scura degli Stepper è sufficiente aggiungere la class
 
 ### Varianti intestazione
 
-{% comment %}Example name: Con sfondo scuro, varianti intestazione{% endcomment %}
+{% comment %}Example name: Intestazioni su sfondo scuro{% endcomment %}
 {% capture example %}
 <!-- Solo testo -->
 <div class="steppers bg-dark">
