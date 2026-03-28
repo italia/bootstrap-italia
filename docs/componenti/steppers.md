@@ -3,7 +3,7 @@ layout: docs
 group: componenti
 toc: true
 title: Steppers
-description: Mostrano l'avanzamento del progresso di una procedura a più passi attraverso la numerazione dei passi stessi.
+description: Indica il progresso all'interno di una procedura suddivisa in più passi.
 ---
 
 <style>
