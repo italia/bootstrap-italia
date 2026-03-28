@@ -24,6 +24,8 @@
   --#{$prefix}avatar-radius: var(--#{$prefix}radius-circle); // Controls the border radius for the avatar, using radius tokens.
   --#{$prefix}avatar-size: 2.5rem; // Controls the default size for the avatar.
   --#{$prefix}avatar-text-color: var(--#{$prefix}color-text-secondary); // Controls the text color for the avatar, using color tokens.
+  --#{$prefix}avatar-dropdown-margin-left: -24px; // Controls the margin left for the avatar dropdown menu.
+  --#{$prefix}avatar-dropdown-margin-top: 24px; // Controls the margin top for the avatar dropdown menu.
 }
 
 // Styles
@@ -244,8 +246,10 @@ a .avatar:hover p {
     border: 0;
   }
 
+  // Position the dropdown menu for avatar dropdowns
   .dropdown-menu {
-    margin-left: -27px;
+    margin-left: var(--#{$prefix}avatar-dropdown-margin-left) !important; // Use !important to override Popper.js default margin: 0
+    margin-top: var(--#{$prefix}avatar-dropdown-margin-top) !important; // Use !important to override Popper.js default margin: 0
   }
 
   .btn-dropdown {
