@@ -263,11 +263,6 @@ a .avatar:hover p {
     }
   }
 
-  .list-item {
-    display: flex;
-    align-items: center;
-  }
-
   .link-list {
     white-space: nowrap;
   }
@@ -316,9 +311,7 @@ a .avatar:hover p {
     }
 
     .list-item {
-      display: inline-flex;
-      align-items: center;
-      padding: 0;
+      padding: 0; // Remove padding from list item
     }
   }
 }
