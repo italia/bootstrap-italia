@@ -255,7 +255,7 @@ a .avatar:hover p {
   .btn-dropdown {
     padding: 0;
     color: inherit;
-    font-size: var(--#{$prefix}label-font-size-xs);
+    font-size: var(--#{$prefix}avatar-font-size);
     line-height: 0;
 
     &:focus {
@@ -266,7 +266,6 @@ a .avatar:hover p {
   .list-item {
     display: flex;
     align-items: center;
-    // font-size: var(--#{$prefix}font-size-1);
   }
 
   .link-list {
