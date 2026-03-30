@@ -177,9 +177,9 @@ Nel caso si stia sviluppando una _Single page application_ oppure una sequenza d
     <!-- Esempio END -->
   </div>
   <nav class="steppers-nav">
-    <button type="button" class="btn btn-outline-primary btn-sm steppers-btn-prev"><svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-left"></use></svg>Indietro</button>
-    <button type="button" class="btn btn-outline-primary btn-sm steppers-btn-next">Avanti<svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use></svg></button>
-    <button type="button" class="btn btn-primary btn-sm steppers-btn-confirm d-none d-lg-block">Conferma</button>
+    <button type="button" class="btn btn-icon btn-outline-primary btn-sm steppers-btn-prev"><svg class="icon icon-sm icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-left"></use></svg>Indietro</button>
+
+    <button type="button" class="btn btn-icon btn-primary btn-sm steppers-btn-next">Avanti <svg class="icon icon-sm icon-inverse"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use></svg></button>
   </nav>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -203,13 +203,13 @@ La Progress bar è quella nativa di Bootstrap 5 ed è contenuta in un elemento `
     <!-- Esempio END -->
   </div>
   <nav class="steppers-nav">
-    <button type="button" class="btn btn-outline-primary btn-sm steppers-btn-prev"><svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-left"></use></svg>Indietro</button>
+    <button type="button" class="btn btn-icon btn-outline-primary btn-sm steppers-btn-prev"><svg class="icon icon-sm icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-left"></use></svg>Indietro</button>
     <div class="steppers-progress">
       <div class="progress">
         <div class="progress-bar" role="progressbar" style="width: 33%" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100"></div>
       </div>
     </div>
-    <button type="button" class="btn btn-outline-primary btn-sm steppers-btn-next">Avanti<svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use></svg></button>
+    <button type="button" class="btn btn-icon btn-primary btn-sm steppers-btn-next">Avanti<svg class="icon icon-sm icon-inverse"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use></svg></button>
   </nav>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -235,7 +235,7 @@ Per ragioni di accessibilità, i `<li>` devono contenere uno `<span>` con classe
     <!-- Esempio END -->
   </div>
   <nav class="steppers-nav">
-    <button type="button" class="btn btn-outline-primary btn-sm steppers-btn-prev"><svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-left"></use></svg>Indietro</button>
+    <button type="button" class="btn btn-icon btn-outline-primary btn-sm steppers-btn-prev"><svg class="icon icon-sm icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-left"></use></svg>Indietro</button>
     <ul class="steppers-dots">
       <li class="done"><span class="visually-hidden">Step 1 di 6 - Confermato</span></li>
       <li class="done"><span class="visually-hidden">Step 2 di 6 - Confermato</span></li>
@@ -244,12 +244,12 @@ Per ragioni di accessibilità, i `<li>` devono contenere uno `<span>` con classe
       <li><span class="visually-hidden">Step 5 di 6</span></li>
       <li><span class="visually-hidden">Step 6 di 6</span></li>
     </ul>
-    <button type="button" class="btn btn-outline-primary btn-sm steppers-btn-next">Avanti<svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use></svg></button>
+    <button type="button" class="btn btn-icon btn-primary btn-sm steppers-btn-next">Avanti<svg class="icon icon-sm icon-inverse"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use></svg></button>
   </nav>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-#### Pulsante Salva
+### Salva
 
 Su dispositivi mobili è possibile inserire un terzo pulsante "Salva" di aspetto differente con classe `.steppers-btn-save` fra i pulsanti "Indietro" e "Avanti".
 
@@ -262,14 +262,20 @@ Su dispositivi mobili è possibile inserire un terzo pulsante "Salva" di aspetto
     <!-- Esempio END -->
   </div>
   <nav class="steppers-nav">
-    <button type="button" class="btn btn-outline-primary btn-sm steppers-btn-prev"><svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-left"></use></svg>Indietro</button>
-    <button type="button" class="btn btn-primary btn-sm steppers-btn-save">Salva</button>
-    <button type="button" class="btn btn-outline-primary btn-sm steppers-btn-next">Avanti<svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use></svg></button>
+    <button type="button" class="btn btn-icon btn-outline-primary btn-sm steppers-btn-prev"><svg class="icon icon-sm icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-left"></use></svg>Indietro</button>
+    <button type="button" class="btn btn-icon btn-primary btn-sm steppers-btn-next">Avanti<svg class="icon icon-sm icon-inverse"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use></svg></button>
   </nav>
+  <div class="steppers-save d-flex border-top border-subtle pt-3 mt-2">
+    <div class="text-lg-end mb-2 mb-lg-0 me-lg-3">
+      <p class="text-muted mb-0 small"><strong>Vuoi salvare il progresso?</strong></p>
+      <p class="text-muted mb-0 small">Potrai riprendere il flusso da questo punto in poi.</p>
+    </div>
+    <button type="button" class="btn btn-outline-secondary btn-sm">Salva</button>
+  </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-#### Pulsante conferma
+### Conferma
 
 Su dispositivi mobili è possibile sostituire il pulsante "Avanti" con un pulsante "Conferma" di stile differente, con la classe `.steppers-btn-confirm`.
 
@@ -282,8 +288,8 @@ Su dispositivi mobili è possibile sostituire il pulsante "Avanti" con un pulsan
     <!-- Esempio END -->
   </div>
   <nav class="steppers-nav">
-    <button type="button" class="btn btn-outline-primary btn-sm steppers-btn-prev"><svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-left"></use></svg>Indietro</button>
-    <button type="button" class="btn btn-primary btn-sm steppers-btn-confirm">Conferma</button>
+    <button type="button" class="btn btn-icon btn-outline-primary btn-sm steppers-btn-prev"><svg class="icon icon-sm icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-left"></use></svg>Indietro</button>
+    <button type="button" class="btn btn-icon btn-primary btn-sm steppers-btn-confirm">Conferma</button>
   </nav>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -309,9 +315,8 @@ Per ottenere una versione scura degli Stepper è sufficiente aggiungere la class
     <!-- Esempio END -->
   </div>
   <nav class="steppers-nav">
-    <button type="button" class="btn btn-outline-primary btn-sm steppers-btn-prev"><svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-left"></use></svg>Indietro</button>
-    <button type="button" class="btn btn-outline-primary btn-sm steppers-btn-next">Avanti<svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use></svg></button>
-    <button type="button" class="btn btn-primary btn-sm steppers-btn-confirm d-none d-lg-block">Conferma</button>
+    <button type="button" class="btn btn-icon btn-outline-primary btn-sm steppers-btn-prev"><svg class="icon icon-sm icon-inverse"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-left"></use></svg>Indietro</button>
+    <button type="button" class="btn btn-icon btn-outline-primary btn-sm steppers-btn-next">Avanti<svg class="icon icon-sm icon-inverse"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use></svg></button>
   </nav>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -354,92 +359,6 @@ Per ottenere una versione scura degli Stepper è sufficiente aggiungere la class
     </ul>
     <span class="steppers-index" aria-hidden="true"><span>1</span> <span class="active">2</span> <span>3</span> <span>4</span></span>
   </div>
-</div>
-{% endcapture %}{% include example.html content=example %}
-
-### Varianti navigazione per mobile
-
-Si raccomanda la visualizzazione in un viewport ridotto per ottenere un esempio realistico dell'aspetto finale.
-
-#### Progress bar
-
-{% comment %}Example name: Con sfondo scuro, navigazione mobile barra di progresso{% endcomment %}
-{% capture example %}
-<div class="steppers bg-dark mobile-examples">
-  <div class="steppers-content" aria-live="polite">
-    <!-- Esempio START -->
-    <p>Contenuto di esempio dello step corrente</p>
-    <!-- Esempio END -->
-  </div>
-  <nav class="steppers-nav">
-    <button type="button" class="btn btn-outline-primary btn-sm steppers-btn-prev"><svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-left"></use></svg>Indietro</button>
-    <div class="steppers-progress">
-      <div class="progress">
-        <div class="progress-bar" role="progressbar" style="width: 33%" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100"></div>
-      </div>
-    </div>
-    <button type="button" class="btn btn-outline-primary btn-sm steppers-btn-next">Avanti<svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use></svg></button>
-  </nav>
-</div>
-{% endcapture %}{% include example.html content=example %}
-
-#### Pallini
-
-{% comment %}Example name: Con sfondo scuro, navigazione mobile pallini{% endcomment %}
-{% capture example %}
-<div class="steppers bg-dark mobile-examples">
-  <div class="steppers-content" aria-live="polite">
-    <!-- Esempio START -->
-    <p>Contenuto di esempio dello step corrente</p>
-    <!-- Esempio END -->
-  </div>
-  <nav class="steppers-nav">
-    <button type="button" class="btn btn-outline-primary btn-sm steppers-btn-prev"><svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-left"></use></svg>Indietro</button>
-    <ul class="steppers-dots">
-      <li class="done"><span class="visually-hidden">Step 1 di 6 - Confermato</span></li>
-      <li class="done"><span class="visually-hidden">Step 2 di 6 - Confermato</span></li>
-      <li class="done"><span class="visually-hidden">Step 3 di 6 - Confermato</span></li>
-      <li><span class="visually-hidden">Step 4 di 6</span></li>
-      <li><span class="visually-hidden">Step 5 di 6</span></li>
-      <li><span class="visually-hidden">Step 6 di 6</span></li>
-    </ul>
-    <button type="button" class="btn btn-outline-primary btn-sm steppers-btn-next">Avanti<svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use></svg></button>
-  </nav>
-</div>
-{% endcapture %}{% include example.html content=example %}
-
-#### Pulsante Salva
-
-{% comment %}Example name: Con sfondo scuro, navigazione mobile e pulsante salva{% endcomment %}
-{% capture example %}
-<div class="steppers bg-dark mobile-examples">
-  <div class="steppers-content" aria-live="polite">
-    <!-- Esempio START -->
-    <p>Contenuto di esempio dello step corrente</p>
-    <!-- Esempio END -->
-  </div>
-  <nav class="steppers-nav">
-    <button type="button" class="btn btn-outline-primary btn-sm steppers-btn-prev"><svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-left"></use></svg>Indietro</button>
-    <button type="button" class="btn btn-primary btn-sm steppers-btn-save">Salva</button>
-    <button type="button" class="btn btn-outline-primary btn-sm steppers-btn-next">Avanti<svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use></svg></button>
-  </nav>
-</div>
-{% endcapture %}{% include example.html content=example %}
-
-#### Pulsante conferma
-
-{% comment %}Example name: Con sfondo scuro, navigazione mobile e pulsante conferma{% endcomment %}
-{% capture example %}
-<div class="steppers bg-dark mobile-examples">
-  <div class="steppers-content" aria-live="polite">
-    <!-- Esempio START -->
-    <p>Contenuto di esempio dello step corrente</p>
-    <!-- Esempio END -->
-  </div>
-  <nav class="steppers-nav">
-    <button type="button" class="btn btn-outline-primary btn-sm steppers-btn-prev"><svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-left"></use></svg>Indietro</button>
-    <button type="button" class="btn btn-primary btn-sm steppers-btn-confirm">Conferma</button>
-  </nav>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
