@@ -15,20 +15,19 @@ Nel seguente esempio sono presenti un Donut appena inizializzato ed un Donut al 
 
 {% comment %}Example name: Ciambelle{% endcomment %}
 {% capture example %}
+
 <div class="container">
   <div class="row">
     <div class="col-12 col-sm-6">
       <p><strong>Stato iniziale</strong></p>
       <div class="progress-donut-wrapper">
-        <div class="progress-donut" id="prog-donut-1" data-bs-progress-donut></div>
-        <span class="visually-hidden"></span>
+        <div class="progress-donut" id="prog-donut-1" data-bs-progress-donut role="progressbar" aria-label="Caricamento" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>        
       </div>
     </div>
     <div class="col-12 col-sm-6">
       <p><strong>Attivo</strong></p>
       <div class="progress-donut-wrapper">
-        <div class="progress-donut" data-bs-progress-donut data-bs-value="0.75" id="prog-donut-2"></div>
-        <span class="visually-hidden"></span>
+        <div class="progress-donut" data-bs-progress-donut data-bs-value="0.75" id="prog-donut-2" role="progressbar" aria-label="Caricamento" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>        
       </div>
     </div>
   </div>
@@ -42,7 +41,7 @@ Nel seguente esempio sono presenti un Donut appena inizializzato ed un Donut al 
 È possibile creare un'istanza di `ProgressDonut` con il constructor, ad esempio:
 
 ```js
-import { ProgressDonut } from 'bootstrap-italia';
+import { ProgressDonut } from 'bootstrap-italia'
 const progElement = document.getElementById('prog-donut-1')
 const progDonut = new ProgressDonut(progElement, {
   value: 0.25,
@@ -149,8 +148,9 @@ Per rendere accessibile l’elemento `.progress-bar` sono necessari alcuni attri
 
 {% comment %}Example name: Barra di progresso{% endcomment %}
 {% capture example %}
+
 <div class="progress">
-  <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" aria-label="Caricamento"></div>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -162,10 +162,11 @@ Non dimenticare il testo esplicativo dedicato agli Screen Reader all'interno di 
 
 {% comment %}Example name: Barra di progresso, con etichetta{% endcomment %}
 {% capture example %}
+
 <div class="progress-bar-wrapper">
   <div class="progress-bar-label"><span class="visually-hidden">Progresso </span>35%</div>
   <div class="progress">
-    <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+    <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" aria-label="Caricamento"></div>
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -176,9 +177,9 @@ Quando non è possibile stabilire una percentuale di progressione utilizzare una
 
 {% comment %}Example name: Progresso indeterminato{% endcomment %}
 {% capture example %}
+
 <div class="progress progress-indeterminate">
-  <span class="visually-hidden">In elaborazione...</span>
-  <div class="progress-bar" role="progressbar"></div>
+  <div class="progress-bar" role="progressbar" aria-label="In elaborazione..." aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -188,17 +189,18 @@ Per variare il colore della barra è sufficiente aggiungere una delle classi con
 
 {% comment %}Example name: Barra di progresso, varianti di colore{% endcomment %}
 {% capture example %}
+
 <div class="progress">
-  <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" aria-label="Caricamento"></div>
 </div>
 <div class="progress">
-  <div class="progress-bar bg-info" role="progressbar" style="width: 33%" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar bg-info" role="progressbar" style="width: 33%" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100" aria-label="Caricamento"></div>
 </div>
 <div class="progress">
-  <div class="progress-bar bg-warning" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar bg-warning" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" aria-label="Caricamento"></div>
 </div>
 <div class="progress">
-  <div class="progress-bar bg-danger" role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar bg-danger" role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100" aria-label="Caricamento"></div>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
@@ -208,6 +210,7 @@ La Progress Bar può essere integrata in un pulsante Primario o Secondario con c
 
 {% comment %}Example name: Pulsante con barra di progresso{% endcomment %}
 {% capture example %}
+
 <div class="container">
   <div class="row">
     <div class="col-12 col-sm-6">
@@ -240,6 +243,7 @@ Per ottenere una versione ridotta dello Spinner aggiungere allo stesso la classe
 
 {% comment %}Example name: Spinner{% endcomment %}
 {% capture example %}
+
 <div class="container">
   <div class="row">
     <div class="col-6 col-lg-3">
@@ -302,6 +306,7 @@ Aggiungendo la classe `.progress-spinner-double` allo Spinner si ottiene un'anim
 
 {% comment %}Example name: Spinner, animazione alternativa{% endcomment %}
 {% capture example %}
+
 <div class="container">
   <div class="row">
     <div class="col-6 col-lg-3">
@@ -377,5 +382,6 @@ Aggiungendo la classe `.progress-spinner-double` allo Spinner si ottiene un'anim
 ## Breaking change
 
 {% capture callout %}
+
 - Nella variante "Pulsante con Progress Bar" la classe che controlla il colore dell'icona ha cambiato nome: `.icon-white` diventa `.icon-inverse`.
-{% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}
+  {% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}
