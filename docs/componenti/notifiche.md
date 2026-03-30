@@ -71,7 +71,7 @@ La notifica può essere composta da un solo titolo oppure da un titolo accompagn
     <div class="col-12 col-md-6">
       <p class="mb-4"><strong>Notification con icona</strong></p>
       <div class="notification with-icon" role="alert" aria-labelledby="not2-title" id="not2">
-        <h2 id="not2-title" class="notification-title no_toc"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>Titolo notifica</h2>
+        <h2 id="not2-title" class="notification-title d-flex align-items-center no_toc"><svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>Titolo notifica</h2>
       </div>
     </div>
   </div>
@@ -96,7 +96,7 @@ Si può aggiungere un breve testo al di sotto del titolo utilizzando un tag `<p>
     <div class="col-12 col-md-6">
       <p class="mb-4"><strong>Notifica con icona e testo</strong></p>
       <div class="notification with-icon success" role="alert" aria-labelledby="not2a-title" id="not2a">
-        <h2 id="not2a-title" class="notification-title no_toc"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>Titolo notifica</h2>
+        <h2 id="not2a-title" class="notification-title no_toc"><svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>Titolo notifica</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</p>
       </div>
     </div>
@@ -127,7 +127,7 @@ Utilizzare una classe aggiuntiva `.dismissable` per ottenere questo comportament
     <div class="col-12 col-md-6">
       <p class="mb-4"><strong>Notifica eliminabile con icona e testo</strong></p>
       <div class="notification with-icon success dismissable" role="alert" aria-labelledby="not2dms-title" id="not2dms">
-        <h2 id="not2dms-title" class="notification-title no_toc"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>Titolo notifica</h2>
+        <h2 id="not2dms-title" class="notification-title no_toc"><svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>Titolo notifica</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</p>
         <button type="button" class="btn notification-close">
           <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
@@ -155,13 +155,13 @@ Alle notifiche possono essere applicate classi aggiuntive che ne determinano lo 
     <div class="col-12 col-md-6 mb-4 mb-md-0">
       <p><strong>Successo</strong></p>
       <div class="notification with-icon success" role="alert" aria-labelledby="not1b-title" id="not1b">
-        <h2 id="not1b-title" class="notification-title no_toc"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>Titolo notifica</h2>
+        <h2 id="not1b-title" class="notification-title no_toc"><svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>Titolo notifica</h2>
       </div>
     </div>
     <div class="col-12 col-md-6">
       <p><strong>Errore</strong></p>
       <div class="notification with-icon error" role="alert" aria-labelledby="not2b-title" id="not2b">
-        <h2 id="not2b-title" class="notification-title no_toc"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close-circle"></use></svg>Titolo notifica</h2>
+        <h2 id="not2b-title" class="notification-title no_toc"><svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close-circle"></use></svg>Titolo notifica</h2>
       </div>
     </div>
   </div>
@@ -169,13 +169,13 @@ Alle notifiche possono essere applicate classi aggiuntive che ne determinano lo 
     <div class="col-12 col-md-6 mb-4 mb-md-0">
       <p><strong>Info</strong></p>
       <div class="notification with-icon info" role="alert" aria-labelledby="not3b-title" id="not3b">
-        <h2 id="not3btitle" class="notification-title no_toc"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-info-circle"></use></svg>Titolo notifica</h2>
+        <h2 id="not3btitle" class="notification-title no_toc"><svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-info-circle"></use></svg>Titolo notifica</h2>
       </div>
     </div>
     <div class="col-12 col-md-6">
       <p><strong>Precauzione</strong></p>
       <div class="notification with-icon warning" role="alert" aria-labelledby="not4b-title" id="not4b">
-        <h2 id="not4b-title" class="notification-title no_toc"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-error"></use></svg>Titolo notifica</h2>
+        <h2 id="not4b-title" class="notification-title no_toc"><svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-error"></use></svg>Titolo notifica</h2>
       </div>
     </div>
   </div>
@@ -197,13 +197,13 @@ Utilizzando le classi aggiuntive di posizione fissa elencate di seguito la notif
     <div class="col-12 col-md-6 mb-4 mb-md-0">
       <p><strong>Basico (arrotondamento ai 4 angoli)</strong></p>
       <div class="notification with-icon success" role="alert" aria-labelledby="not1c-title" id="not1c">
-        <h2 id="not1c-title" class="notification-title no_toc"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>Titolo notifica</h2>
+        <h2 id="not1c-title" class="notification-title no_toc"><svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>Titolo notifica</h2>
       </div>
     </div>
     <div class="col-12 col-md-6">
       <p><strong>top-fix</strong></p>
       <div class="notification top-fix with-icon success" role="alert" aria-labelledby="not2c-title" id="not2c">
-        <h2 id="not2c-title" class="notification-title no_toc"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>Titolo notifica</h2>
+        <h2 id="not2c-title" class="notification-title no_toc"><svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>Titolo notifica</h2>
       </div>
       <p class="mt-4"><strong>bottom-fix</strong></p>
       <div class="notification bottom-fix with-icon success" role="alert" aria-labelledby="not3c-title" id="not3c">
