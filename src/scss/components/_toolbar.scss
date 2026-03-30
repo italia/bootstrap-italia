@@ -30,12 +30,13 @@
   --#{$prefix}toolbar-badge-padding-x: var(--#{$prefix}spacing-3xs);
   --#{$prefix}toolbar-badge-font-size: var(--#{$prefix}label-font-size-xs);
   --#{$prefix}toolbar-label-margin-top: var(--#{$prefix}spacing-3xs);
-  --#{$prefix}toolbar-label-font-size: var(--#{$prefix}label-font-size-xs);;
+  --#{$prefix}toolbar-label-font-size: var(--#{$prefix}label-font-size-xs);
 }
 
 // Styles
 //
 
+/* stylelint-disable-next-line no-duplicate-selectors */
 .toolbar {
   position: relative;
   width: 100%;

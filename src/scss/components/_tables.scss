@@ -9,7 +9,6 @@
 // Properties
 //
 
-/* stylelint-disable-next-line no-duplicate-selectors */
 .table {
   --#{$prefix}table-color: var(--#{$prefix}color-text-base); // Controls the text color for the table, using color tokens.
   --#{$prefix}table-bg: transparent; // Controls the background color for the table, using color tokens.
@@ -27,6 +26,7 @@
 // Styles
 //
 
+/* stylelint-disable-next-line no-duplicate-selectors */
 .table {
   width: 100%;
   margin-bottom: $spacer;
@@ -85,8 +85,6 @@
     --#{$prefix}table-padding: var(--#{$prefix}spacing-3xs);
   }
 }
-
-
 
 // Border versions
 //

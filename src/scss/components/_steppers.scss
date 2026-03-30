@@ -190,7 +190,7 @@
           border-bottom: var(--#{$prefix}stepper-active-indicator-height) solid var(--#{$prefix}stepper-item-border-color-active);
         }
       }
-      
+
       &.confirmed {
         --#{$prefix}stepper-item-text-color: var(--#{$prefix}color-text-base);
         --#{$prefix}stepper-number-border-color: var(--#{$prefix}color-border-success);
@@ -200,7 +200,7 @@
       &.active,
       &.confirmed {
         --#{$prefix}stepper-number-color: var(--#{$prefix}color-text-inverse);
-      } 
+      }
 
       &.steppers-index {
         display: block;
