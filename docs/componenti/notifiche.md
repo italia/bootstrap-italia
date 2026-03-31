@@ -2,8 +2,9 @@
 layout: docs
 group: componenti
 toc: true
-title: Notifiche
-description: Per attirare l'attenzione su brevi messaggi di stato.
+title: Notification
+description: Messaggio di testo a comparsa per informare l'utente di eventi, aggiornamenti o azioni che richiedono la sua attenzione.
+
 ---
 
 <style>
