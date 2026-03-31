@@ -12,136 +12,140 @@
 // Styles
 //
 
-//mobile
+.notification {
+  --#{$prefix}notification-background: var(--#{$prefix}color-background-inverse);
+  --#{$prefix}notification-border-color: var(--#{$prefix}color-border-secondary);
+  --#{$prefix}notification-box-shadow: var(--#{$prefix}elevation-medium);
+  --#{$prefix}notification-padding-x: var(--#{$prefix}spacing-m);
+  --#{$prefix}notification-padding-right: calc(var(--#{$prefix}spacing-m) + var(--#{$prefix}spacing-xl));
+  --#{$prefix}notification-title-color: var(--#{$prefix}color-text-base);
+  --#{$prefix}notification-title-font-size: var(--#{$prefix}heading-6-font-size-l);
+  --#{$prefix}notification-body-color: var(--#{$prefix}color-text-secondary);
+  --#{$prefix}notification-body-font-size: var(--#{$prefix}body-font-size);
+}
+
+/* stylelint-disable-next-line no-duplicate-selectors */
 .notification {
   width: 100%;
-  padding: 1.5rem;
-  padding-right: 4rem;
-  box-shadow: 0 -0.5rem 1rem rgba(0, 0, 0, 0.15);
-  background: $white;
+  padding: var(--#{$prefix}notification-padding-x);
+  padding-right: var(--#{$prefix}notification-padding-right);
+  box-shadow: var(--#{$prefix}notification-box-shadow);
+  background: var(--#{$prefix}notification-background);
   position: fixed;
   bottom: 0;
   right: 0;
   display: none;
-  border-top: 4px solid $color-border-secondary;
+  border-top: var(--#{$prefix}border-thick) solid var(--#{$prefix}notification-border-color);
 
-  //title
-  h5 {
-    font-size: 0.875rem;
-    text-transform: uppercase;
-    color: $color-text-base;
+  // Title
+  &-title {
+    font-size: var(--#{$prefix}label-font-size);
+    color: var(--#{$prefix}notification-title-color);
     letter-spacing: 0;
     margin: 0;
     position: relative;
-    line-height: 1rem;
-    font-weight: 700;
+    line-height: var(--#{$prefix}heading-leading);
+    font-weight: var(--#{$prefix}font-weight-strong);
   }
+
   p {
-    margin-top: 1rem;
-    font-size: 0.875rem;
-    line-height: 1.5rem;
-    color: $color-text-secondary;
+    margin-top: var(--#{$prefix}spacing-s);
+    font-size: var(--#{$prefix}notification-body-font-size);
+    line-height: var(--#{$prefix}body-leading);
+    color: var(--#{$prefix}notification-body-color);
   }
+
   p:last-child {
     margin-bottom: 0;
   }
 
-  //icon version
+  // With icon
   &.with-icon {
-    border-top: 4px solid $color-border-secondary;
-    h5 {
-      .icon {
-        position: absolute;
-        top: -8px;
-        left: -38px;
-      }
-    }
-    h5,
+    // .notification-title {
+    //   .icon {
+    //     position: absolute;
+    //     top: calc(0px - var(--#{$prefix}spacing-xxs));
+    //     left: -38px;
+    //   }
+    // }
+
     p {
-      margin-left: 2rem;
+      margin-left: var(--#{$prefix}spacing-l);
     }
-    //status variants
+
+    // Status variants
     &.success {
-      border-color: $success;
-      .icon {
-        fill: $success;
-      }
+      --#{$prefix}notification-strip-color: var(--#{$prefix}success);
+      --#{$prefix}notification-icon-fill: var(--#{$prefix}success);
     }
+
     &.error {
-      border-color: $danger;
-      .icon {
-        fill: $danger;
-      }
+      --#{$prefix}notification-strip-color: var(--#{$prefix}danger);
+      --#{$prefix}notification-icon-fill: var(--#{$prefix}danger);
     }
+
     &.info {
-      border-color: $primary;
-      .icon {
-        fill: $primary;
-      }
+      --#{$prefix}notification-strip-color: var(--#{$prefix}primary);
+      --#{$prefix}notification-icon-fill: var(--#{$prefix}primary);
     }
+
     &.warning {
-      border-color: $warning;
-      .icon {
-        fill: $warning;
-      }
+      --#{$prefix}notification-strip-color: var(--#{$prefix}warning);
+      --#{$prefix}notification-icon-fill: var(--#{$prefix}warning);
+    }
+
+    &.success .icon,
+    &.error .icon,
+    &.info .icon,
+    &.warning .icon {
+      fill: var(--#{$prefix}notification-icon-fill);
     }
   }
-  // dismissable version
+
+  // Dismissable
   &.dismissable {
-    //close button
     .notification-close {
       position: absolute;
       right: 20px;
       top: 15px;
       display: block;
-      width: 32px;
-      height: 32px;
+      width: var(--#{$prefix}icon-size-l);
+      height: var(--#{$prefix}icon-size-l);
       padding: 0;
       background: none;
+
       .icon {
-        fill: $icon-secondary;
+        fill: var(--#{$prefix}icon-secondary);
       }
+
       &:hover {
         .icon {
-          fill: $icon-primary;
+          fill: var(--#{$prefix}icon-primary);
         }
       }
+
       &:active {
         box-shadow: none;
       }
     }
   }
-}
 
-//small - tablet
-@include media-breakpoint-up(sm) {
-  .notification {
-    padding: 1.333rem;
-    padding-right: 3.556rem;
-    &.with-icon {
-      h5,
-      p {
-        margin-left: 1.778rem;
-      }
-    }
-  }
-}
 
-//Tablet vertical
-@include media-breakpoint-up(md) {
-  .notification {
-    width: 376px;
-    bottom: 16px;
-    right: 16px;
-    border-radius: $border-radius;
+  // Tablet vertical
+  @include media-breakpoint-up(md) {
+    bottom: var(--#{$prefix}spacing-s);
+    right: var(--#{$prefix}spacing-s);
+    border-radius: var(--#{$prefix}radius-smooth);
     border-top: none;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.15);
-    //icon version
+    box-shadow: var(--#{$prefix}notification-box-shadow);
+
     &.with-icon {
-      border-left: 4px solid $secondary;
+      --#{$prefix}notification-strip-color: var(--#{$prefix}secondary);
+      border-left: var(--#{$prefix}border-broad) solid var(--#{$prefix}notification-strip-color);
       border-top: none;
     }
-    //fix variants
+
+    // Fixed positions
     &.top-fix {
       border-top-left-radius: 0;
       border-top-right-radius: 0;
@@ -151,6 +155,7 @@
       bottom: auto;
       right: auto;
     }
+
     &.bottom-fix {
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
@@ -159,18 +164,20 @@
       bottom: 0;
       right: auto;
     }
+
     &.left-fix {
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
       border-left: none;
-      border-right-style: solid;
-      border-right-width: 4px;
+      border-right-style: var(--#{$prefix}border-style);
+      border-right-width: var(--#{$prefix}border-broad);
       left: 0;
       right: auto;
       top: 50%;
       bottom: auto;
       transform: translateY(-50%);
     }
+
     &.right-fix {
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
