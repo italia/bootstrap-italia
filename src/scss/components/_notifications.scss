@@ -14,6 +14,7 @@
 
 .notification {
   --#{$prefix}notification-background: var(--#{$prefix}color-background-inverse);
+  --#{$prefix}notification-border-width: var(--#{$prefix}border-thick);
   --#{$prefix}notification-border-color: var(--#{$prefix}color-border-secondary);
   --#{$prefix}notification-box-shadow: var(--#{$prefix}elevation-medium);
   --#{$prefix}notification-padding-x: var(--#{$prefix}spacing-m);
@@ -35,7 +36,8 @@
   bottom: 0;
   right: 0;
   display: none;
-  border-top: var(--#{$prefix}border-thick) solid var(--#{$prefix}notification-border-color);
+  border-top: var(--#{$prefix}notification-border-width) solid var(--#{$prefix}notification-border-color);
+  border-radius: var(--#{$prefix}radius-smooth);
 
   // Title
   &-title {
@@ -135,13 +137,11 @@
   @include media-breakpoint-up(md) {
     bottom: var(--#{$prefix}spacing-s);
     right: var(--#{$prefix}spacing-s);
-    border-radius: var(--#{$prefix}radius-smooth);
     border-top: none;
-    box-shadow: var(--#{$prefix}notification-box-shadow);
 
     &.with-icon {
       --#{$prefix}notification-strip-color: var(--#{$prefix}secondary);
-      border-left: var(--#{$prefix}border-broad) solid var(--#{$prefix}notification-strip-color);
+      border-left: var(--#{$prefix}notification-border-width) solid var(--#{$prefix}notification-strip-color);
       border-top: none;
     }
 
@@ -169,8 +169,8 @@
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
       border-left: none;
-      border-right-style: var(--#{$prefix}border-style);
-      border-right-width: var(--#{$prefix}border-broad);
+      border-right-style: solid;
+      border-right-width: var(--#{$prefix}notification-border-width);
       left: 0;
       right: auto;
       top: 50%;
