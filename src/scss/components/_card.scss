@@ -18,6 +18,11 @@ ul.row.it-card-list {
 .it-card-group {
   --#{$prefix}it-card-group-gap: #{$grid-gutter-width};
 
+  @include media-breakpoint-down(sm) {
+    --#{$prefix}it-card-group-gap: 0;
+    row-gap: $grid-gutter-width;
+  }
+
   display: flex;
   flex-wrap: wrap;
 
