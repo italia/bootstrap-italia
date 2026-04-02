@@ -49,7 +49,7 @@
 
   li {
     &::marker {
-     font-size: 0; // hide default marker safely without affecting Safari accessibility
+      font-size: 0; // hide default marker safely without affecting Safari accessibility
     }
     padding: 0;
   }

@@ -384,7 +384,7 @@ article.it-card {
       flex-wrap: wrap;
 
       li {
-          &::marker {
+        &::marker {
           font-size: 0; // hide default marker safely without affecting Safari accessibility
         }
       }

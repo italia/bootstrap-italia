@@ -241,7 +241,7 @@
     height: 64px;
     & > li {
       &::marker {
-       font-size: 0; // hide default marker safely without affecting Safari accessibility
+        font-size: 0; // hide default marker safely without affecting Safari accessibility
       }
       margin: 0 8px;
       text-align: center;
