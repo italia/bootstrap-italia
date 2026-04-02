@@ -32,12 +32,14 @@
   }
   ul {
     padding: 0;
-    list-style-type: none;
     // sottolista
     &.link-sublist {
       padding-left: $link-list-h-pad;
     }
     li {
+      &::marker {
+        font-size: 0; // hide default marker safely without affecting Safari accessibility
+      }
       a {
         font-size: $link-list-font-size;
         line-height: $link-list-line-height;

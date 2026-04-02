@@ -33,8 +33,13 @@
 }
 
 .list-group-numbered {
-  list-style-type: none;
   counter-reset: section;
+
+  li {
+    &::marker {
+      font-size: 0; // hide default marker safely without affecting Safari accessibility
+    }
+  }
 
   > .list-group-item::before {
     // Increments only this instance of the section counter

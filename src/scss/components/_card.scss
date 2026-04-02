@@ -1,8 +1,13 @@
 // Special list for long groups of cards, bootstrap row/cols grid
 ul.row.it-card-list {
-  list-style-type: none;
   margin: 0;
   padding: 0;
+
+  li {
+    &::marker {
+      font-size: 0; // hide default marker safely without affecting Safari accessibility
+    }
+  }
 
   > li.col,
   > li[class*='col-'] {
@@ -378,6 +383,12 @@ article.it-card {
       display: flex;
       flex-wrap: wrap;
 
+      li {
+          &::marker {
+          font-size: 0; // hide default marker safely without affecting Safari accessibility
+        }
+      }
+
       // Gap fallback
       > li {
         margin: 0.25rem;
@@ -394,7 +405,6 @@ article.it-card {
       padding: 0;
       margin-top: 0.5rem;
       margin-bottom: 0;
-      list-style-type: none;
       line-height: 1.5;
     }
 
