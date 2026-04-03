@@ -637,13 +637,13 @@ Modificando la classe `.point-aside-{suffisso}` è possibile personalizzare il c
 </ol>
 {% endcapture %}{% include example.html content=example %}
 
-### Timeline stile servizi pubblici
+### Timeline con card generiche
 
-Un layout ottimizzato per presentare scadenze e procedure amministrative, come quelle dei servizi pubblici. Le card hanno sfondo bianco per maggiore leggibilità.
+Un layout ottimizzato per presentare contenuti di servizio come bandi, documenti, procedure amministrative. Le card hanno sfondo bianco per maggiore leggibilità.
 
-Per fissare verticalmente il punto dell'elenco all'inizio del contenuto usa la classe `.timeline-point-align-top` sull'elemento `.timeline-point`. Nell'esempio è applicata all'ultimo punto elenco particolarmente lungo. 
+Usa la classe `.timeline-point-align-top` sull'elemento `.timeline-point` per fissare verticalmente il punto dell'elenco all'inizio del contenuto. Nell'esempio è applicata all'ultimo punto elenco particolarmente lungo. 
 
-{% comment %}Example name: Timeline point list, servizi pubblici{% endcomment %}
+{% comment %}Example name: Timeline con card generiche{% endcomment %}
 {% capture example %}
 <ol class="it-timeline-point-list">
   <li class="timeline-point">
@@ -742,19 +742,19 @@ Per fissare verticalmente il punto dell'elenco all'inizio del contenuto usa la c
 </ol>
 {% endcapture %}{% include example.html content=example %}
 
-### Esempio complesso con card complete
+### Timeline con card editoriali
 
-Di seguito un esempio che integra card nel contenuto della timeline.
+Di seguito un esempio che integra card editoriali nel contenuto della timeline.
 
 Per fissare verticalmente il punto dell'elenco all'inizio del contenuto usa la classe `.timeline-point-align-top` sull'elemento `.timeline-point`. Nell'esempio è applicato a tutti i punti in elenco essendo particolarmente lunghi nei contenuti. 
 
 **Nota bene:** usa la classe `.it-timeline-point-list-stack-mobile` sull'elemento lista `.it-timeline-point-list` per permettere su mobile di disporre verticalmente la sezione laterale in alto al contenuto, ottimizzando lo spazio per card complesse a risoluzioni mobile. In questo caso è bene che il contenuto sia sempre raccolto in elementi di tipo card o almeno con un fondale colorato per sovrastare gerarchicamente la linea. Naviga l'esempio a risoluzione mobile per esplorare la soluzione. 
 
-{% comment %}Example name: Point list, esempio complesso{% endcomment %}
+{% comment %}Example name: Timeline con card editoriali{% endcomment %}
 {% capture example %}
 <ol class="it-timeline-point-list it-timeline-point-list-stack-mobile">
   <li class="timeline-point timeline-point-align-top">
-    <div class="point-aside point-aside-dark">
+    <div class="point-aside point-aside-primary">
       <time datetime="2025-10-14">
         <span class="visually-hidden">14 ottobre 2025</span>
         <div class="point-visual" aria-hidden="true">
@@ -784,7 +784,7 @@ Per fissare verticalmente il punto dell'elenco all'inizio del contenuto usa la c
     </div>
   </li>
   <li class="timeline-point timeline-point-align-top">
-    <div class="point-aside point-aside-danger">
+    <div class="point-aside point-aside-primary">
       <time datetime="2025-10-31">
         <span class="visually-hidden">31 ottobre 2025</span>
         <div class="point-visual" aria-hidden="true">
@@ -823,15 +823,14 @@ Per fissare verticalmente il punto dell'elenco all'inizio del contenuto usa la c
     </div>
   </li>
   <li class="timeline-point timeline-point-align-top">
-    <div class="point-aside point-aside-info">
-      <div>
-        <span class="visually-hidden">Milestone in corso</span>
+    <div class="point-aside point-aside-primary">
+      <time datetime="2026-01-27">
+        <span class="visually-hidden">27 gennaio 2026</span>
         <div class="point-visual" aria-hidden="true">
-          <div class="point-main font-monospace">
-            <svg class="icon icon-info icon-lg" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-clock"></use></svg>
-          </div>
+          <div class="point-main font-monospace">27</div>
+          <div class="point-bottom font-monospace">GEN</div>
         </div>
-      </div>
+      </time>
     </div>
     <div class="point-content">
       <div class="row g-0">
@@ -863,15 +862,14 @@ Per fissare verticalmente il punto dell'elenco all'inizio del contenuto usa la c
     </div>
   </li>
   <li class="timeline-point timeline-point-align-top">
-    <div class="point-aside point-aside-success">
-      <div>
-        <span class="visually-hidden">Milestone completata</span>
+    <div class="point-aside point-aside-primary">
+      <time datetime="2026-02-03">
+        <span class="visually-hidden">3 febbraio 2026</span>
         <div class="point-visual" aria-hidden="true">
-          <div class="point-main font-monospace">
-            <svg class="icon icon-success icon-lg" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-flag"></use></svg>
-          </div>
+          <div class="point-main font-monospace">03</div>
+          <div class="point-bottom font-monospace">FEB</div>
         </div>
-      </div>
+      </time>
     </div>
     <div class="point-content">
       <div class="row g-0">
