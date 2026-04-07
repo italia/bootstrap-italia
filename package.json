@@ -62,7 +62,7 @@
     "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-legacy": "^3.0.2",
     "@rollup/plugin-node-resolve": "^15.3.0",
-    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-terser": "^1.0.0",
     "browser-sync": "^3.0.2",
     "browserslist-config-design-italia": "^1.1.0",
     "concurrently": "^7.0.0",
