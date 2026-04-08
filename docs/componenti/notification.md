@@ -79,7 +79,7 @@ La notifica può essere composta da un solo titolo oppure da un titolo accompagn
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-## Notifica con messaggio
+## Testo supplementare
 
 Si può aggiungere un breve testo al di sotto del titolo utilizzando un tag `<p>`.
 
@@ -105,18 +105,16 @@ Si può aggiungere un breve testo al di sotto del titolo utilizzando un tag `<p>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-## Eliminabili
+## Pulsante di chiusura
 
-Le notifiche eliminabili non vengono nascoste dopo un intervallo di tempo ma vengono chiuse solo quando si clicca sul rispettivo pulsante di chiusura.
+Le notifiche con pulsante di chiusura non vengono nascoste dopo un intervallo di tempo ma vengono chiuse solo quando si clicca sul rispettivo pulsante di chiusura.
 
-Utilizzare una classe aggiuntiva `.dismissable` per ottenere questo comportamento.
-
-{% comment %}Example name: Eliminabili{% endcomment %}
+{% comment %}Example name: Pulsante di chiusura{% endcomment %}
 {% capture example %}
 <div class="container test-docs">
   <div class="row">
     <div class="col-12 col-md-6 mb-4 mb-md-0">
-      <p class="mb-4"><strong>Notifica eliminabile con testo</strong></p>
+      <p class="mb-4"><strong>Notifica con pulsante di chiusura</strong></p>
       <div class="notification dismissable" role="alert" aria-labelledby="not1dms-title" id="not1dms">
         <h2 id="not1dms-title" class="notification-title no_toc">Titolo notifica</h2>
         <button type="button" class="btn notification-close">
@@ -126,7 +124,7 @@ Utilizzare una classe aggiuntiva `.dismissable` per ottenere questo comportament
       </div>
     </div>
     <div class="col-12 col-md-6">
-      <p class="mb-4"><strong>Notifica eliminabile con icona e testo</strong></p>
+      <p class="mb-4"><strong>Notifica con pulsante di chiusura e icona</strong></p>
       <div class="notification with-icon success dismissable" role="alert" aria-labelledby="not2dms-title" id="not2dms">
         <h2 id="not2dms-title" class="notification-title no_toc"><svg class="icon icon-sm me-2"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>Titolo notifica</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</p>
@@ -183,7 +181,7 @@ Alle notifiche possono essere applicate classi aggiuntive che ne determinano lo 
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-## Posizione e arrotondamento degli angoli
+## Posizione
 
 La posizione predefinita delle notifiche è nella parte destra inferiore della finestra.
 
@@ -208,15 +206,15 @@ Utilizzando le classi aggiuntive di posizione fissa elencate di seguito la notif
       </div>
       <p class="mt-4"><strong>bottom-fix</strong></p>
       <div class="notification bottom-fix with-icon success" role="alert" aria-labelledby="not3c-title" id="not3c">
-        <h2 id="not3c-title" class="notification-title no_toc"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>Titolo notifica</h2>
+        <h2 id="not3c-title" class="notification-title no_toc"><svg class="icon icon-sm me-2"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>Titolo notifica</h2>
       </div>
       <p class="mt-4"><strong>left-fix</strong></p>
       <div class="notification left-fix with-icon success" role="alert" aria-labelledby="not4c-title" id="not4c">
-        <h2 id="not4c-title" class="notification-title no_toc"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>Titolo notifica</h2>
+        <h2 id="not4c-title" class="notification-title no_toc"><svg class="icon icon-sm me-2"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>Titolo notifica</h2>
       </div>
       <p class="mt-4"><strong>right-fix</strong></p>
       <div class="notification right-fix with-icon success" role="alert" aria-labelledby="not5c-title" id="not5c">
-        <h2 id="not5c-title" class="notification-title no_toc"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>Titolo notifica</h2>
+        <h2 id="not5c-title" class="notification-title no_toc"><svg class="icon icon-sm me-2"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>Titolo notifica</h2>
       </div>
     </div>
   </div>
@@ -245,18 +243,18 @@ Esempi delle quattro posizioni fisse possibili.
 {% capture example %}
 <div class="container test-desktop">
   <div class="notification top-fix with-icon success" role="alert" aria-labelledby="not1e-title" id="not1e">
-    <h2 id="not1e-title" class="notification-title no_toc"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>Top fix</h2>
+    <h2 id="not1e-title" class="notification-title no_toc"><svg class="icon icon-sm me-2"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>Top fix</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</p>
   </div>
   <div class="notification bottom-fix with-icon success" role="alert" aria-labelledby="not2e-title" id="not2e">
-    <h2 id="not2e-title" class="notification-title no_toc"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>Bottom fix</h2>
+    <h2 id="not2e-title" class="notification-title no_toc"><svg class="icon icon-sm me-2"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>Bottom fix</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</p>
   </div>
   <div class="notification left-fix with-icon success" role="alert" aria-labelledby="not3e-title" id="not3e">
-    <h2 id="not3e-title" class="notification-title no_toc"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>Left fix</h2>
+    <h2 id="not3e-title" class="notification-title no_toc"><svg class="icon icon-sm me-2"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>Left fix</h2>
   </div>
   <div class="notification right-fix with-icon success" role="alert" aria-labelledby="not4e-title" id="not4e">
-    <h2 id="not4e-title" class="notification-title no_toc"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>Right fix</h2>
+    <h2 id="not4e-title" class="notification-title no_toc"><svg class="icon icon-sm me-2"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>Right fix</h2>
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -356,3 +354,14 @@ const myNotification = new Notification(document.getElementById('myNotification'
     </tbody>
   </table>
 </div>
+
+{% include properties.md properties=site.data.cprops.notification %}
+
+## Breaking changes
+
+{% capture callout %}
+- Rinominato il componente da `Notifiche` a `Notification`.
+- Aggiunta la classe `.icon-sm` all'icona `<svg>` del titolo della notifica.
+- Aggiunta la classe `.me-2` all'icona `<svg>` del titolo della notifica.
+- Aggiunta la classe `.icon-sm` all'icona `<svg>` del pulsante di chiusura `.btn-close`.
+{% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}
