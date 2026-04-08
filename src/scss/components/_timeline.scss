@@ -35,15 +35,15 @@
 
 .it-timeline-wrapper {
   --#{$prefix}timeline-point-color: var(--#{$prefix}color-background-secondary);
-  --#{$prefix}timeline-width: #{$timeline-width};
-  --#{$prefix}timeline-padding: #{$timeline-padding};
+  --#{$prefix}timeline-line-width: var(--#{$prefix}border-thick);
+  --#{$prefix}timeline-padding: var(--#{$prefix}spacing-xs);
   --#{$prefix}timeline-line-color: var(--#{$prefix}color-background-primary-deep);
-  --#{$prefix}timeline-pin-size: #{$timeline-pin-size};
-  --#{$prefix}timeline-pin-background: #{$timeline-pin-background};
-  --#{$prefix}timeline-pin-circle-size: #{$timeline-pin-circle-size};
-  --#{$prefix}timeline-pin-circle-border: #{$timeline-pin-circle-border};
-  --#{$prefix}timeline-content-padding: #{$timeline-content-padding};
-  --#{$prefix}timeline-content-padding-reverse: #{$timeline-content-padding-reverse};
+  --#{$prefix}timeline-pin-size: 24px;
+  --#{$prefix}timeline-pin-background: var(--#{$prefix}color-background-primary-deep);
+  --#{$prefix}timeline-pin-circle-size: 48px;
+  --#{$prefix}timeline-pin-circle-border: var(--#{$prefix}border-broad) solid var(--#{$prefix}color-background-inverse);
+  --#{$prefix}timeline-content-padding: var(--#{$prefix}spacing-s) var(--#{$prefix}spacing-s) var(--#{$prefix}spacing-s) var(--#{$prefix}spacing-xl);
+  --#{$prefix}timeline-content-padding-reverse: var(--#{$prefix}spacing-s) var(--#{$prefix}spacing-xl) var(--#{$prefix}spacing-s) var(--#{$prefix}spacing-s);
 
   // Styles
   //
@@ -53,7 +53,7 @@
     top: 50%;
     z-index: 10;
     font-size: 1rem;
-    font-family: $font-family-monospace;
+    font-family: var(--#{$prefix}font-sans);
     color: var(--#{$prefix}color-text-primary);
     font-weight: 600;
   }
@@ -64,7 +64,7 @@
 
     &:after {
       content: '';
-      width: var(--#{$prefix}timeline-width);
+      width: var(--#{$prefix}timeline-line-width);
       background-color: var(--#{$prefix}timeline-line-color);
       position: absolute;
       left: var(--#{$prefix}spacing-xl);
@@ -137,8 +137,8 @@
       font-weight: 600;
       text-transform: uppercase;
       background: var(--#{$prefix}timeline-pin-background);
-      border-radius: $border-radius;
-      font-family: $font-family-monospace;
+      border-radius: var(--#{$prefix}radius-rounded);
+      font-family: var(--#{$prefix}font-mono);
       font-size: var(--bs-body-font-size);
       line-height: var(--bs-body-line-height);
 
@@ -182,7 +182,7 @@
     .row {
       &:after {
         content: '';
-        left: calc(50% - var(--#{$prefix}timeline-width));
+        left: calc(50% - var(--#{$prefix}timeline-line-width));
       }
     }
 
