@@ -363,13 +363,13 @@ per tutti gli elenchi annidati.
 
 {% comment %}Example name: Lista senza stile{% endcomment %}
 {% capture example %}
-<ul class="list-unstyled">
+<ul class="list-unstyled" role="list">
   <li>Lorem ipsum dolor sit amet</li>
   <li>Consectetur adipiscing elit</li>
   <li>Integer molestie lorem at massa</li>
   <li>Facilisis in pretium nisl aliquet</li>
   <li>Nulla volutpat aliquam velit
-    <ul class="list-unstyled">
+    <ul class="list-unstyled" role="list">
       <li>Phasellus iaculis neque</li>
       <li>Purus sodales ultricies</li>
       <li>Vestibulum laoreet porttitor sem</li>
@@ -389,7 +389,7 @@ combinazione di due classi, `.list-inline` e `.list-inline-item`.
 
 {% comment %}Example name: Lista inline{% endcomment %}
 {% capture example %}
-<ul class="list-inline">
+<ul class="list-inline" role="list">
   <li class="list-inline-item">Lorem ipsum</li>
   <li class="list-inline-item">Phasellus iaculis</li>
   <li class="list-inline-item">Nulla volutpat</li>
