@@ -316,7 +316,6 @@ Questi elementi sono racchiusi in `.point-visual` con `aria-hidden="true"` perch
 {% capture callout %}
 #### Accessibilità point list
 
-**Struttura accessibile:**
 - Il wrapper `.point-visual` ha `aria-hidden="true"` per nascondere la presentazione visiva agli screen reader
 - Implementa descrizioni dedicate ai lettori di schermo e machine readable con: 
   - **Per punti data**: usa l'elemento semantico `<time>` con l'attributo `datetime` in formato ISO (es. `2025-10-14`).
