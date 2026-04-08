@@ -35,5 +35,5 @@ jobs:
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v4
       with:
-        title: "chore: update examples api v3 (don't merge)"
+        title: "chore: update examples api v3"
         branch: feature/update-examples-api-v3
