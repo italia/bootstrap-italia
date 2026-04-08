@@ -185,11 +185,15 @@ Alle notifiche possono essere applicate classi aggiuntive che ne determinano lo 
 
 La posizione predefinita delle notifiche è nella parte destra inferiore della finestra.
 
-Utilizzando le classi aggiuntive di posizione fissa elencate di seguito la notifica verrà posizionata a filo di uno dei margini indicati, modificando l'arrotondamento degli angoli di conseguenza.
+Utilizzando le **classi aggiuntive di posizione fissa** elencate di seguito la notifica verrà posizionata a filo di uno dei margini indicati, modificando l'arrotondamento degli angoli di conseguenza.
 
-**N.B. queste classi non influenzano il posizionamento su device mobile, in questo caso la Notification è sempre a piede della finestra e ne occupa tutta la larghezza**
+{% capture callout %}
+#### Posizione su mobile
+Le classi di posizione non influenzano il posizionamento su device mobile dove la notifica è sempre a piede della finestra e ne occupa tutta la larghezza.
+{% endcapture %}{% include callout.html content=callout type="warning" %}
 
-{% comment %}Example name: Posizione e arrotondamento{% endcomment %}
+
+{% comment %}Example name: Posizione{% endcomment %}
 {% capture example %}
 <div class="container test-docs">
   <div class="row mb-5">
