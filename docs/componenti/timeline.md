@@ -616,11 +616,9 @@ La sezione laterale può essere usata anche per visualizzare progressi e traguar
 </ol>
 {% endcapture %}{% include example.html content=example %}
 
+### Lista contenuti generici
 
-
-### Timeline con card generiche
-
-Un layout ottimizzato per presentare contenuti di servizio come bandi, documenti, procedure amministrative. Le card hanno sfondo bianco per maggiore leggibilità.
+Un layout ottimizzato per presentare contenuti generici come procedure amministrative, scadenze, liste di attività.
 
 Usa la classe `.timeline-point-align-top` sull'elemento `.timeline-point` per fissare verticalmente il punto dell'elenco all'inizio del contenuto. Nell'esempio è applicata all'ultimo punto elenco particolarmente lungo. 
 
@@ -723,7 +721,7 @@ Usa la classe `.timeline-point-align-top` sull'elemento `.timeline-point` per fi
 </ol>
 {% endcapture %}{% include example.html content=example %}
 
-### Timeline con card editoriali
+### Lista contenuti editoriali
 
 Di seguito un esempio che integra card editoriali nel contenuto della timeline.
 
