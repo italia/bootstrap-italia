@@ -32,7 +32,7 @@
   right: 0;
   bottom: 0;
   display: none;
-  width: 100%;
+  width: auto;
   padding: var(--#{$prefix}notification-padding-y) var(--#{$prefix}notification-padding-x);
   border-radius: var(--#{$prefix}radius-smooth);
   background: var(--#{$prefix}notification-background);
@@ -73,6 +73,7 @@
       left: 0;
       border-left: none;
       border-right-width: var(--#{$prefix}notification-border-width);
+      border-right-color: var(--#{$prefix}notification-border-color);
       border-right-style: solid;
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
@@ -135,8 +136,8 @@
     }
 
     &.info {
-      --#{$prefix}notification-border-color: var(--#{$prefix}color-border-subtle);
-      --#{$prefix}notification-icon-fill: var(--#{$prefix}icon-info);
+      --#{$prefix}notification-border-color: var(--#{$prefix}color-border-secondary);
+      --#{$prefix}notification-icon-fill: var(--#{$prefix}icon-secondary);
     }
 
     &.warning {
