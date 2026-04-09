@@ -54,14 +54,17 @@
       list-style-type: none;
     }
 
+    a {
+      &:hover {
+        --#{$prefix}header-social-color: var(--#{$prefix}color-background-inverse-hover);
+      }
+    }
+
     .icon {
       width: var(--#{$prefix}icon-size-s);
       height: var(--#{$prefix}icon-size-s);
       margin-left: var(--#{$prefix}spacing-s);
       fill: var(--#{$prefix}header-social-color);
-      &:hover {
-        --#{$prefix}header-social-color: var(--#{$prefix}color-background-inverse-hover);
-      }
     }
   }
 }
