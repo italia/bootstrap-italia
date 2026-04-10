@@ -365,7 +365,7 @@
 
         @include media-breakpoint-up(lg) {
           &:hover {
-            color: var(--#{$prefix}color-text-inverse);
+            // color: var(--#{$prefix}color-text-inverse);
           }
         }
 
