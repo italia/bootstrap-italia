@@ -1221,7 +1221,7 @@ Negli esempi abbiamo utilizzato il tag `h4` per i titoli `.it-card-profile-name`
 
 Usa questa variante per presentare schede località. Si attiva con la classe `.it-card-profile` come nel caso dei profili personali. La testata della card è costruita con classi di stile dedicate come `.it-card-profile-header` per nome e tipologia. 
 
-Per i luoghi puoi inserire un'immagine `.it-card-profile-image` o un'icona sulla destra. Racchiudi l'icona in un `div` con classe `.it-card-profile-icon-wrapper` per l'allineamento corretto.
+Per i luoghi puoi inserire un'immagine `.it-card-profile-image` o un'icona sulla destra. Racchiudi l'icona in un `div` con classe `.it-card-profile-image-icon-wrapper` per l'allineamento corretto.
 
 La lista di metadati del luogo è costruita utilizzando liste descrittive `.it-card-description-list` con ogni coppia di item`dd`-`dt` raccolta in un `div` contenitore. 
 
@@ -1885,7 +1885,7 @@ Per la gestione delle **altezze** in caso di gruppi di card, l'impostazione di b
 
 Puoi cambiare questo comportamento per ogni card usando la classe `.it-card-height-full` (altezza basata su tutto lo spazio disponibile) sull'elemento `article .it-card`. Questa impostazione è presente in diversi degli esempi che precedono. 
 
-L'elemento `footer .it-card-footer` si allinea verticamente al bordo inferiore come la data nell'esempio che segue.
+L'elemento footer `.it-card-footer` si allinea verticamente al bordo inferiore come la data nell'esempio che segue.
 
 {% comment %}Example name: Altezza delle card{% endcomment %}
 {% capture example %}
@@ -1960,7 +1960,7 @@ Puoi personalizzare il comportamento dei pulsanti nell'area metadati della card 
         <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
       </footer>
       <!--finally the card footer metadata-->
-      <div class="it-card-footer">
+      <div class="it-card-actions">
         <div class="d-grid gap-2 d-md-block">
           <a href="#" class="btn btn-outline-secondary">Prenota <span class="visually-hidden">per Titolo dell'evento</span></a>
         </div>
@@ -2438,6 +2438,7 @@ Svolgi sempre test di usabilità con utenti che utilizzano tecnologie assistive 
 - Per i metadati è stata rimossa la classe `.it-card-related` a favore del solo uso dell'elemento `<footer>` con classe `.it-card-footer` a seguire il corpo della card.
 - Usa un `<div>` con la sola classe `.it-card-actions` a seguire il corpo della card per ospitare link correlati e/o secondari.
 - È stata rimossa la classe `.chips-list` dall'elemento `<ul>` con classe `.it-card-chips` che ospita una lista di più argomenti.
+- La doppia classe `.card-profile` è stata sostituita da `.card-profile-content` per le card di tipo profilo.
 {% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}
 
 {% capture callout %}

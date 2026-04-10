@@ -111,8 +111,12 @@ class Tooltip extends BaseComponent {
 
     // Private
     this._isEnabled = true
-    this._timeout = 0
+    this._timers = {
+      main: null,
+      tip: null,
+    }
     this._isHovered = null
+    this._isTipHovered = false
     this._activeTrigger = {}
     this._popper = null
     this._templateFactory = null
@@ -169,7 +173,8 @@ class Tooltip extends BaseComponent {
   }
 
   dispose() {
-    clearTimeout(this._timeout)
+    this._clearTimer('main')
+    this._clearTimer('tip')
 
     EventHandler.off(this._element.closest(SELECTOR_MODAL), EVENT_MODAL_HIDE, this._hideModalHandler)
 
@@ -215,6 +220,7 @@ class Tooltip extends BaseComponent {
     this._popper = this._createPopper(tip)
 
     tip.classList.add(CLASS_NAME_SHOW)
+    this._setTipListeners()
 
     // If this is a touch-enabled device we add extra
     // empty mouseover listeners to the body's immediate children;
@@ -261,6 +267,7 @@ class Tooltip extends BaseComponent {
 
     const tip = this._getTipElement()
     tip.classList.remove(CLASS_NAME_SHOW)
+    this._removeTipListeners()
 
     // If this is a touch-enabled device we remove the extra
     // empty mouseover listeners we added for iOS support
@@ -280,7 +287,7 @@ class Tooltip extends BaseComponent {
         return
       }
 
-      if (!this._isHovered) {
+      if (!this._isHovered || !this._isTipHovered) {
         this._disposePopper()
       }
 
@@ -487,6 +494,40 @@ class Tooltip extends BaseComponent {
     EventHandler.on(this._element.closest(SELECTOR_MODAL), EVENT_MODAL_HIDE, this._hideModalHandler)
   }
 
+  _setTipListeners() {
+    if (!this.tip) return
+    EventHandler.on(this.tip, EVENT_MOUSEENTER, this._handleTipMouseEnter)
+    EventHandler.on(this.tip, EVENT_MOUSELEAVE, this._handleTipMouseLeave)
+  }
+
+  _handleTipMouseEnter = () => {
+    this._clearTimer('tip')
+    this._isTipHovered = true
+  }
+
+  _handleTipMouseLeave = () => {
+    this._clearTimer('tip')
+    this._isTipHovered = false
+
+    this._setTimer(
+      'tip',
+      () => {
+        if (!this._isHovered && !this._isTipHovered) {
+          this._leave()
+        }
+      },
+      100
+    )
+  }
+
+  _removeTipListeners() {
+    if (!this.tip) return
+
+    EventHandler.off(this.tip, EVENT_MOUSEENTER, this._handleTipMouseEnter)
+    EventHandler.off(this.tip, EVENT_MOUSELEAVE, this._handleTipMouseLeave)
+    this._clearTimer('tip')
+  }
+
   _fixTitle() {
     const title = this._element.getAttribute('title')
 
@@ -510,11 +551,15 @@ class Tooltip extends BaseComponent {
 
     this._isHovered = true
 
-    this._setTimeout(() => {
-      if (this._isHovered) {
-        this.show()
-      }
-    }, this._config.delay.show)
+    this._setTimer(
+      'main',
+      () => {
+        if (this._isHovered) {
+          this.show()
+        }
+      },
+      this._config.delay.show
+    )
   }
 
   _leave() {
@@ -522,18 +567,38 @@ class Tooltip extends BaseComponent {
       return
     }
 
-    this._isHovered = false
+    this._setTimer(
+      'main',
+      () => {
+        if (!this._isHovered && !this._isTipHovered) {
+          this.hide()
+        }
+      },
+      this._config.delay.hide
+    )
 
-    this._setTimeout(() => {
-      if (!this._isHovered) {
-        this.hide()
-      }
-    }, this._config.delay.hide)
+    this._isHovered = false
+    this._isTipHovered = false
   }
 
-  _setTimeout(handler, timeout) {
-    clearTimeout(this._timeout)
-    this._timeout = setTimeout(handler, timeout)
+  _setTimer(name, handler, timeout) {
+    this._clearTimer(name)
+    this._timers[name] = setTimeout(() => {
+      this._timers[name] = null
+      handler()
+    }, timeout)
+    return this._timers[name]
+  }
+
+  _clearTimer(name) {
+    if (!this._timers) {
+      return
+    }
+
+    if (this._timers[name]) {
+      clearTimeout(this._timers[name])
+      this._timers[name] = null
+    }
   }
 
   _isWithActiveTrigger() {
@@ -605,6 +670,8 @@ class Tooltip extends BaseComponent {
     }
 
     if (this.tip) {
+      this._removeTipListeners()
+      this._isTipHovered = false
       this.tip.remove()
       this.tip = null
     }
