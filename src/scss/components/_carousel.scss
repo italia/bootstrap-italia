@@ -9,91 +9,123 @@
 // Properties
 //
 
-// Styles
-//
-
 @import '@splidejs/splide/src/css/core/index';
 
-// Keep all .card-SOMETHING till next major? (.card is deprecated)
-
-//mobile
 .it-carousel-wrapper {
-  // splide pagination
+  --#{$prefix}carousel-pagination-dot-size: var(--#{$prefix}spacing-s); // Controls the dot size for carousel pagination.
+  --#{$prefix}carousel-pagination-dot-color: hsl(210, 83%, 77%); // Controls the dot color for carousel pagination.
+  --#{$prefix}carousel-pagination-spacing: var(--#{$prefix}spacing-xxs); // Controls the spacing around pagination dots.
+  --#{$prefix}carousel-heading-font-size: 1.75rem; // Controls the heading font size for carousel header.
+  --#{$prefix}carousel-heading-padding-inline: var(--#{$prefix}spacing-m); // Controls the inline padding for carousel header.
+  --#{$prefix}carousel-heading-border-color: var(--#{$prefix}color-border-subtle); // Controls the heading border color.
+  --#{$prefix}carousel-track-padding-top: var(--#{$prefix}spacing-m); // Controls the track top padding.
+  --#{$prefix}carousel-card-padding-bottom: var(--#{$prefix}spacing-s); // Controls the card bottom padding.
+  --#{$prefix}carousel-arrow-size: var(--#{$prefix}spacing-xl); // Controls the arrow button size.
+  --#{$prefix}carousel-arrow-icon-size: var(--#{$prefix}spacing-s); // Controls the arrow icon size.
+  --#{$prefix}carousel-arrow-background: var(--#{$prefix}color-background-primary); // Controls the arrow button background.
+  --#{$prefix}carousel-arrow-icon-color: var(--#{$prefix}color-text-inverse); // Controls the arrow icon color.
+  --#{$prefix}carousel-arrow-offset: var(--#{$prefix}spacing-m); // Controls the arrow offset from the carousel edges.
+  --#{$prefix}carousel-divider-color: var(--#{$prefix}color-border-subtle); // Controls the divider color between slides.
+  --#{$prefix}carousel-divider-offset: var(--#{$prefix}spacing-xs); // Controls the divider offset from the slide edge.
+  --#{$prefix}carousel-landscape-card-spacing: var(--#{$prefix}spacing-xxl); // Controls the landscape card body spacing.
+}
+
+// Styles
+//
+/* stylelint-disable-next-line no-duplicate-selectors */
+.it-carousel-wrapper {
+  margin: 0 auto;
+  // Keep all .card-SOMETHING till next major? (.card is deprecated)
+
+  // Splide pagination
   .splide__pagination {
-    margin-top: $v-gap;
+    margin-top: var(--#{$prefix}carousel-pagination-spacing);
     margin-left: 0;
     padding-left: 0;
+
     button {
-      width: $crs-dots-dimension;
-      height: $crs-dots-dimension;
-      background: $crs-dots-color;
       display: inline-block;
-      transition: all 0.3s;
-      border-radius: 50px;
-      margin: 0 $v-gap;
+      width: var(--#{$prefix}carousel-pagination-dot-size);
+      height: var(--#{$prefix}carousel-pagination-dot-size);
+      margin: 0 var(--#{$prefix}carousel-pagination-spacing);
       padding: 0;
-      box-shadow: none;
       border: none;
+      border-radius: 50px;
+      background: var(--#{$prefix}carousel-pagination-dot-color);
+      box-shadow: none;
+      transition: all 0.3s;
+
       &.is-active {
-        background: $primary;
+        --#{$prefix}carousel-pagination-dot-color: var(--#{$prefix}color-background-primary);
       }
     }
   }
+
   .it-special-card {
+
     // xxx deprecated with old .card
     h5.card-title {
       margin-bottom: 0;
     }
   }
-  margin: 0 auto;
+
   .it-header-block {
     h2 {
-      font-size: $crs-heading-h-size;
-      border-bottom: 1px solid $card-border-color;
-      padding-bottom: $v-gap;
       margin-bottom: 0;
+      padding-bottom: var(--#{$prefix}carousel-pagination-spacing);
+      border-bottom: 1px solid var(--#{$prefix}carousel-heading-border-color);
+      font-size: var(--#{$prefix}carousel-heading-font-size);
       letter-spacing: unset;
     }
   }
+
   .splide__track {
-    padding-top: $crs-margin-bottom;
+    padding-top: var(--#{$prefix}carousel-track-padding-top);
     padding-bottom: 0;
   }
+
   .card-wrapper {
     // xxx deprecated with old .card
-    padding-bottom: $v-gap * 2;
+    padding-bottom: var(--#{$prefix}carousel-card-padding-bottom);
   }
+
   .it-card {
-    padding-bottom: $v-gap * 2;
+    padding-bottom: var(--#{$prefix}carousel-card-padding-bottom);
   }
+
   // Landscape abstract
   &.it-carousel-landscape-abstract {
+
     // xxx deprecated with old .card
     .it-single-slide-wrapper {
-      > a {
+      >a {
         position: relative;
         display: block;
       }
+
       .it-text-slider-wrapper-outside {
         .card {
-          border-right: none;
           margin-right: 0;
+          border-right: none;
+
           &:after {
             display: none;
           }
+
           .card-body {
             .card-signature {
-              float: left;
-              margin-bottom: 0;
               width: 60%;
+              margin-bottom: 0;
+              float: left;
             }
+
             a.read-more {
-              float: right;
               position: inherit;
               bottom: inherit;
-              margin-bottom: 0;
-              width: 35%;
               justify-content: flex-end;
+              width: 35%;
+              margin-bottom: 0;
+              float: right;
               line-height: 21px;
             }
           }
@@ -101,120 +133,148 @@
       }
     }
   }
+
+  // Three cols with arrows
   &.it-carousel-landscape-abstract-three-cols-arrow-visible {
     .splide__arrows {
       position: absolute;
       top: 50%;
-      left: -$v-gap * 3;
-      right: -$v-gap * 3;
-      display: flex;
+      right: calc(-1 * var(--#{$prefix}carousel-arrow-offset));
+      left: calc(-1 * var(--#{$prefix}carousel-arrow-offset));
       z-index: 1;
+      display: flex;
       justify-content: space-between;
       pointer-events: none;
+
       .splide__arrow {
-        width: $v-gap * 5;
-        height: $v-gap * 5;
-        background: $primary;
-        border: none;
         display: flex;
         align-items: center;
         justify-content: center;
+        width: var(--#{$prefix}carousel-arrow-size);
+        height: var(--#{$prefix}carousel-arrow-size);
+        border: none;
+        background: var(--#{$prefix}carousel-arrow-background);
         pointer-events: all;
+
         svg {
-          fill: $white;
-          width: $v-gap * 2;
-          height: $v-gap * 2;
+          width: var(--#{$prefix}carousel-arrow-icon-size);
+          height: var(--#{$prefix}carousel-arrow-icon-size);
+          fill: var(--#{$prefix}carousel-arrow-icon-color);
         }
+
         &.splide__arrow--prev {
           transform: rotate(180deg);
         }
+
         &[disabled] {
-          background: $gray-disabled;
+          --#{$prefix}carousel-arrow-background: var(--#{$prefix}color-background-disabled);
         }
       }
     }
   }
+
   // 3 col card
   &.it-carousel-landscape-abstract-3 {
-    .it-header-block {
-      padding: 0 $crs-heading-h-padding;
-    }
     margin: 0 auto;
+
+    .it-header-block {
+      padding: 0 var(--#{$prefix}carousel-heading-padding-inline);
+    }
+
     // with img
     .card.card-img {
+      margin-right: 0;
       // xxx deprecated with old .card
       margin-left: 0;
-      margin-right: 0;
     }
+
     // with shadow
     .it-card-bg {
+
       // xxx deprecated with old .card
       .card.card-bg {
-        margin-left: 0;
         margin-right: 0;
+        margin-left: 0;
       }
     }
   }
+
   &.it-calendar-wrapper {
     .splide__track {
       padding-top: 0;
+
       .card.card-bg {
-        margin-left: 0;
         margin-right: 0;
+        margin-left: 0;
       }
     }
   }
 }
 
-//Tablet horizontal / small desktop
+// Tablet horizontal / small desktop
 @media (min-width: #{map-get($grid-breakpoints, lg)}) {
   .it-carousel-wrapper {
+    --#{$prefix}carousel-heading-padding-inline: var(--#{$prefix}spacing-xs);
+    --#{$prefix}carousel-arrow-offset: var(--#{$prefix}spacing-xxl);
+
     // Landscape abstract
     &.it-carousel-landscape-abstract {
       max-width: #{map-get($container-max-widths, lg)};
+
       .splide__list {
         display: flex;
+
         .splide__slide {
           display: flex;
+
           .it-single-slide-wrapper {
             height: 100%;
           }
         }
       }
+
       .it-single-slide-wrapper {
         display: flex;
         flex-basis: 100%;
         width: 100%;
+
         // img
         .img-responsive-wrapper {
           flex-basis: 50%;
+
           .img-responsive {
             height: 100%;
           }
         }
+
         .it-text-slider-wrapper-outside {
           flex-basis: 50%;
+
           .card {
+            margin-right: 0;
             // xxx deprecated with old .card
             border-right: none;
-            margin-right: 0;
+
             &:after {
               display: none;
             }
+
             .card-body {
-              padding-left: $v-gap * 6;
-              padding-bottom: $v-gap * 6;
+              padding-bottom: var(--#{$prefix}carousel-landscape-card-spacing);
+              padding-left: var(--#{$prefix}carousel-landscape-card-spacing);
+
               .card-signature {
-                float: left;
                 width: 60%;
+                float: left;
               }
+
               a.read-more {
-                float: right;
                 position: inherit;
                 bottom: inherit;
-                margin-bottom: 0;
-                width: 35%;
                 justify-content: flex-end;
+                width: 35%;
+                margin-bottom: 0;
+                float: right;
                 line-height: 26px;
               }
             }
@@ -222,47 +282,52 @@
         }
       }
     }
+
+    // Divider
     &.it-carousel-landscape-abstract-three-cols-arrow-visible {
       .lined_slide {
         &:after {
+          position: absolute;
+          top: 0;
+          right: calc(-1 * var(--#{$prefix}carousel-divider-offset));
+          bottom: 0;
           content: '';
           display: block;
           width: 1px;
-          position: absolute;
-          right: -$v-gap * 1.5;
-          top: 0;
-          bottom: 0;
-          background-color: $neutral-2; // Missing in the UI kit
+          background-color: var(--#{$prefix}carousel-divider-color);
         }
       }
     }
+
     // 3 col card
     &.it-carousel-landscape-abstract-3 {
       max-width: #{map-get($container-max-widths, lg)};
+
       &.it-full-carousel {
         max-width: unset;
       }
-      .it-header-block {
-        padding: 0 $crs-heading-h-padding * 0.5;
-      }
     }
+
     &.it-carousel-landscape-abstract-three-cols-arrow-visible .splide__arrows {
-      left: -$v-gap * 6;
-      right: -$v-gap * 6;
+      right: calc(-1 * var(--#{$prefix}carousel-arrow-offset));
+      left: calc(-1 * var(--#{$prefix}carousel-arrow-offset));
     }
   }
 }
 
-//Desktop
+// Desktop
 @media (min-width: #{map-get($grid-breakpoints, xl)}) {
   .it-carousel-wrapper {
+
     // Landscape abstract
     &.it-carousel-landscape-abstract {
       max-width: #{map-get($container-max-widths, xl)};
     }
+
     // 3 col card
     &.it-carousel-landscape-abstract-3 {
       max-width: #{map-get($container-max-widths, xl)};
+
       &.it-full-carousel {
         max-width: unset;
       }
