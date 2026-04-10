@@ -30,7 +30,7 @@
   --#{$prefix}toggle-knob-offset: 4px; // Controls the top and left offset of the knob inside the track.
   --#{$prefix}toggle-knob-border-radius: 50%; // Controls the border radius of the knob.
   --#{$prefix}toggle-knob-background: var(--#{$prefix}color-background-inverse); // Controls the background color of the knob, using color tokens.
-  --#{$prefix}toggle-knob-shadow-color: #{transparentize($primary, 0.85)}; // Controls the shadow/aura color behind the knob.
+  --#{$prefix}toggle-knob-shadow-color: #{color.adjust($primary, $alpha: -0.85)}; // Controls the shadow/aura color behind the knob.
   --#{$prefix}toggle-knob-background-disabled: var(
     --#{$prefix}color-background-secondary
   ); // Controls the background of the knob when disabled, using color tokens.
