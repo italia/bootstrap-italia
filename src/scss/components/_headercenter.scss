@@ -54,7 +54,6 @@
       list-style-type: none;
     }
 
-    a {
       &:hover {
         --#{$prefix}header-social-color: var(--#{$prefix}color-background-inverse-hover);
       }
