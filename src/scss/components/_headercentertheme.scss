@@ -82,9 +82,9 @@
 
         .it-search-wrapper {
           a {
-            .rounded-icon {
-              background: $header-center-theme-light-text-color;
+            background: $header-center-theme-light-text-color;
 
+            &.rounded-icon {
               svg {
                 fill: $header-center-theme-light-bg-color;
               }
