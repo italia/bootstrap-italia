@@ -12,22 +12,22 @@
 @import '@splidejs/splide/src/css/core/index';
 
 .it-carousel-wrapper {
-  --#{$prefix}carousel-pagination-dot-size: var(--#{$prefix}spacing-s); // Controls the dot size for carousel pagination, using spacing tokens
-  --#{$prefix}carousel-pagination-dot-color: hsl(210, 83%, 77%); // Controls the dot color for carousel pagination.
-  --#{$prefix}carousel-pagination-spacing: var(--#{$prefix}spacing-xxs); // Controls the spacing around pagination dots, using spacing tokens
-  --#{$prefix}carousel-heading-font-size: 1.75rem; // Controls the heading font size for carousel header.
-  --#{$prefix}carousel-heading-padding-inline: var(--#{$prefix}spacing-m); // Controls the inline padding for carousel header, using spacing tokens
-  --#{$prefix}carousel-heading-border-color: var(--#{$prefix}color-border-subtle); // Controls the heading border color, using color tokens
-  --#{$prefix}carousel-track-padding-top: var(--#{$prefix}spacing-m); // Controls the track top padding, using spacing tokens
-  --#{$prefix}carousel-card-padding-bottom: var(--#{$prefix}spacing-s); // Controls the card bottom padding, using spacing tokens
-  --#{$prefix}carousel-arrow-size: var(--#{$prefix}spacing-xl); // Controls the arrow button size, using spacing tokens
+  --#{$prefix}carousel-arrow-size: var(--#{$prefix}spacing-xl); // Controls the arrow button size, using spacing tokens.
   --#{$prefix}carousel-arrow-icon-size: var(--#{$prefix}spacing-s); // Controls the arrow icon size, using spacing tokens
   --#{$prefix}carousel-arrow-background: var(--#{$prefix}color-background-primary); // Controls the arrow button background, using color tokens
   --#{$prefix}carousel-arrow-icon-color: var(--#{$prefix}color-text-inverse); // Controls the arrow icon color, using color tokens
   --#{$prefix}carousel-arrow-offset: var(--#{$prefix}spacing-m); // Controls the arrow offset from the carousel edges, using spacing tokens
+  --#{$prefix}carousel-card-padding-bottom: var(--#{$prefix}spacing-s); // Controls the card bottom padding, using spacing tokens
   --#{$prefix}carousel-divider-color: var(--#{$prefix}color-border-subtle); // Controls the divider color between slides, using color tokens
   --#{$prefix}carousel-divider-offset: var(--#{$prefix}spacing-xs); // Controls the divider offset from the slide edge, using spacing tokens
+  --#{$prefix}carousel-heading-font-size: 1.75rem; // Controls the heading font size for carousel header.
+  --#{$prefix}carousel-heading-padding-inline: var(--#{$prefix}spacing-m); // Controls the inline padding for carousel header, using spacing tokens
+  --#{$prefix}carousel-heading-border-color: var(--#{$prefix}color-border-subtle); // Controls the heading border color, using color tokens
   --#{$prefix}carousel-landscape-card-spacing: var(--#{$prefix}spacing-xxl); // Controls the landscape card body spacing, using spacing tokens
+  --#{$prefix}carousel-pagination-dot-size: 1rem; // Controls the dot size for carousel pagination, using spacing tokens
+  --#{$prefix}carousel-pagination-dot-color: var(--#{$prefix}color-background-subtle); // Controls the dot color for carousel pagination.
+  --#{$prefix}carousel-pagination-spacing: var(--#{$prefix}spacing-m); // Controls the spacing around pagination dots, using spacing tokens
+  --#{$prefix}carousel-track-padding-top: var(--#{$prefix}spacing-m); // Controls the track top padding, using spacing tokens.
 }
 
 // Styles
@@ -43,11 +43,16 @@
     margin-left: 0;
     padding-left: 0;
 
+    // Add spacing between pagination dots
+    li:not(:last-child) {
+      margin-right: var(--#{$prefix}spacing-s);
+    }
+
+    // Pagination dot
     button {
       display: inline-block;
       width: var(--#{$prefix}carousel-pagination-dot-size);
       height: var(--#{$prefix}carousel-pagination-dot-size);
-      margin: 0 var(--#{$prefix}carousel-pagination-spacing);
       padding: 0;
       border: none;
       border-radius: 50px;
@@ -61,21 +66,11 @@
     }
   }
 
-  .it-special-card {
-
-    // xxx deprecated with old .card
-    h5.card-title {
-      margin-bottom: 0;
-    }
-  }
-
   .it-header-block {
     h2 {
       margin-bottom: 0;
       padding-bottom: var(--#{$prefix}carousel-pagination-spacing);
       border-bottom: 1px solid var(--#{$prefix}carousel-heading-border-color);
-      font-size: var(--#{$prefix}carousel-heading-font-size);
-      letter-spacing: unset;
     }
   }
 
@@ -84,10 +79,10 @@
     padding-bottom: 0;
   }
 
-  .card-wrapper {
-    // xxx deprecated with old .card
-    padding-bottom: var(--#{$prefix}carousel-card-padding-bottom);
-  }
+  // .card-wrapper {
+  //   // xxx deprecated with old .card
+  //   padding-bottom: var(--#{$prefix}carousel-card-padding-bottom);
+  // }
 
   .it-card {
     padding-bottom: var(--#{$prefix}carousel-card-padding-bottom);
