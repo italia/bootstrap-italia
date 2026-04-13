@@ -84,39 +84,6 @@
     }
   }
 
-  // Vertical tabs
-  &.nav-tabs-vertical {
-    flex-direction: column;
-    border-color: var(--#{$prefix}tabs-border-color);
-    border-right-width: 1px;
-    border-style: solid;
-    border-bottom-width: 0;
-    border-left-width: 0;
-    border-top-width: 0;
-
-    .nav-link {
-      position: relative;
-      justify-content: space-between;
-      border-right-width: var(--#{$prefix}tab-border-width);
-      border-bottom-width: 0;
-      white-space: normal;
-
-      &.justify-content-end {
-        .it-ico:before,
-        .it-ico-lg:before {
-          margin-right: 0;
-        }
-      }
-    }
-
-    &.nav-tabs-vertical-background {
-      .nav-link.active,
-      .nav-item.show .nav-link {
-        --#{$prefix}tab-background-color: var(--#{$prefix}color-background-primary-lighter);
-      }
-    }
-  }
-
   // Link element
   .nav-link {
     display: flex;
@@ -124,6 +91,7 @@
     align-items: center;
     justify-content: center;
     padding: var(--#{$prefix}tab-padding-y) var(--#{$prefix}tab-padding-x);
+    background-color: var(--#{$prefix}tab-background-color, transparent);
     border-width: var(--#{$prefix}tab-border-width);
     border-style: solid;
     border-left-width: 0;
@@ -182,6 +150,39 @@
   .nav-item {
     display: flex;
     margin-bottom: 0;
+  }
+
+    // Vertical tabs
+  &.nav-tabs-vertical {
+    flex-direction: column;
+    border-color: var(--#{$prefix}tabs-border-color);
+    border-right-width: 1px;
+    border-style: solid;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    border-top-width: 0;
+
+    .nav-link {
+      position: relative;
+      justify-content: space-between;
+      border-right-width: var(--#{$prefix}tab-border-width);
+      border-bottom-width: 0;
+      white-space: normal;
+
+      &.justify-content-end {
+        .it-ico:before,
+        .it-ico-lg:before {
+          margin-right: 0;
+        }
+      }
+    }
+
+    &.nav-tabs-vertical-background {
+      .nav-link.active,
+      .nav-item.show .nav-link {
+        --#{$prefix}tab-background-color: var(--#{$prefix}color-background-primary-lighter);
+      }
+    }
   }
 
   // Dark version
