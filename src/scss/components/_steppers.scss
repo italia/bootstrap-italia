@@ -10,29 +10,29 @@
 //
 
 .steppers {
-  --#{$prefix}stepper-active-indicator-height: 2px; // Controls the active step underline height.
-  --#{$prefix}stepper-index-color: var(--#{$prefix}color-text-secondary); // Controls the inactive step text and icon color.
-  --#{$prefix}stepper-background: transparent; // Controls the header and navigation background color. Default to white.
-  --#{$prefix}stepper-border-color: var(--#{$prefix}color-border-subtle); // Controls the step border color.
-  --#{$prefix}stepper-dot-color: var(--#{$prefix}color-background-subtle); // Controls the dot background color.
-  --#{$prefix}stepper-dot-gap: 8px; // Controls the gap between dots.
-  --#{$prefix}stepper-dot-size: 4px; // Controls the dot indicator size.
-  --#{$prefix}stepper-font-size: var(--#{$prefix}label-font-size-l); // Controls the step label font size.
-  --#{$prefix}stepper-icon-size: var(--#{$prefix}icon-size-m); // Controls the icon width and height.
-  --#{$prefix}stepper-icon-color: var(--#{$prefix}stepper-item-text-color); // Controls the icon color.
-  --#{$prefix}stepper-icon-confirmed: var(--#{$prefix}icon-success); // Controls the icon color for confirmed steps.
-  --#{$prefix}stepper-index-font-size: var(--#{$prefix}label-font-size-s); // Controls the step index font size.
-  --#{$prefix}stepper-item-background: var(--#{$prefix}stepper-background); // Controls the step background color, default to the header/nav background.
-  --#{$prefix}stepper-item-border-color-active: var(--#{$prefix}color-border-primary); // Controls the step border color when active.
-  --#{$prefix}stepper-item-text-color: var(--#{$prefix}color-text-muted); // Controls the step background color, default to the header/nav background.
-  --#{$prefix}stepper-nav-height: 64px; // Controls the navigation bar height.
-  --#{$prefix}stepper-number-background-active: var(--#{$prefix}color-background-primary); // Controls the number badge active background.
-  --#{$prefix}stepper-number-border-color: var(--#{$prefix}color-border-subtle); // Controls the number badge border color.
-  --#{$prefix}stepper-number-color: var(--#{$prefix}color-text-muted); // Controls the number badge active text color.
-  --#{$prefix}stepper-number-size: 2rem; // Controls the number badge width and height.
-  --#{$prefix}stepper-progress-height: 2px; // Controls the progress bar height.
-  --#{$prefix}stepper-spacing-x: var(--#{$prefix}spacing-xs); // Controls the horizontal padding.
-  --#{$prefix}stepper-spacing-y: var(--#{$prefix}spacing-s); // Controls the vertical padding for desktop steps.
+  --#{$prefix}stepper-active-indicator-height: 2px; // Controls the stepper active indicator height.
+  --#{$prefix}stepper-index-color: var(--#{$prefix}color-text-secondary); // Controls the stepper index color, using color tokens.
+  --#{$prefix}stepper-background: transparent; // Controls the stepper background.
+  --#{$prefix}stepper-border-color: var(--#{$prefix}color-border-subtle); // Controls the stepper border color, using color tokens.
+  --#{$prefix}stepper-dot-color: var(--#{$prefix}color-background-subtle); // Controls the stepper dot color, using color tokens.
+  --#{$prefix}stepper-dot-gap: 8px; // Controls the stepper dot gap.
+  --#{$prefix}stepper-dot-size: 4px; // Controls the stepper dot size.
+  --#{$prefix}stepper-font-size: var(--#{$prefix}label-font-size-l); // Controls the stepper font size, using typography tokens.
+  --#{$prefix}stepper-icon-size: var(--#{$prefix}icon-size-m); // Controls the stepper icon size, using icon tokens.
+  --#{$prefix}stepper-icon-color: var(--#{$prefix}stepper-item-text-color); // Controls the stepper icon color.
+  --#{$prefix}stepper-icon-confirmed: var(--#{$prefix}icon-success); // Controls the stepper icon confirmed, using icon tokens.
+  --#{$prefix}stepper-index-font-size: var(--#{$prefix}label-font-size-s); // Controls the stepper index font size, using typography tokens.
+  --#{$prefix}stepper-item-background: var(--#{$prefix}stepper-background); // Controls the stepper item background.
+  --#{$prefix}stepper-item-border-color-active: var(--#{$prefix}color-border-primary); // Controls the stepper item border color active, using color tokens.
+  --#{$prefix}stepper-item-text-color: var(--#{$prefix}color-text-muted); // Controls the stepper item text color, using color tokens.
+  --#{$prefix}stepper-nav-height: 64px; // Controls the stepper nav height.
+  --#{$prefix}stepper-number-background-active: var(--#{$prefix}color-background-primary); // Controls the stepper number background active, using color tokens.
+  --#{$prefix}stepper-number-border-color: var(--#{$prefix}color-border-subtle); // Controls the stepper number border color, using color tokens.
+  --#{$prefix}stepper-number-color: var(--#{$prefix}color-text-muted); // Controls the stepper number color, using color tokens.
+  --#{$prefix}stepper-number-size: 2rem; // Controls the stepper number size.
+  --#{$prefix}stepper-progress-height: 2px; // Controls the stepper progress height.
+  --#{$prefix}stepper-spacing-x: var(--#{$prefix}spacing-xs); // Controls the stepper spacing x, using spacing tokens.
+  --#{$prefix}stepper-spacing-y: var(--#{$prefix}spacing-s); // Controls the stepper spacing y, using spacing tokens.
   @include media-breakpoint-up(lg) {
     --#{$prefix}stepper-background: transparent;
   }
