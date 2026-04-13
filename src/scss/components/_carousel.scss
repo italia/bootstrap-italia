@@ -12,22 +12,22 @@
 @import '@splidejs/splide/src/css/core/index';
 
 .it-carousel-wrapper {
-  --#{$prefix}carousel-pagination-dot-size: var(--#{$prefix}spacing-s); // Controls the dot size for carousel pagination.
+  --#{$prefix}carousel-pagination-dot-size: var(--#{$prefix}spacing-s); // Controls the dot size for carousel pagination, using spacing tokens
   --#{$prefix}carousel-pagination-dot-color: hsl(210, 83%, 77%); // Controls the dot color for carousel pagination.
-  --#{$prefix}carousel-pagination-spacing: var(--#{$prefix}spacing-xxs); // Controls the spacing around pagination dots.
+  --#{$prefix}carousel-pagination-spacing: var(--#{$prefix}spacing-xxs); // Controls the spacing around pagination dots, using spacing tokens
   --#{$prefix}carousel-heading-font-size: 1.75rem; // Controls the heading font size for carousel header.
-  --#{$prefix}carousel-heading-padding-inline: var(--#{$prefix}spacing-m); // Controls the inline padding for carousel header.
-  --#{$prefix}carousel-heading-border-color: var(--#{$prefix}color-border-subtle); // Controls the heading border color.
-  --#{$prefix}carousel-track-padding-top: var(--#{$prefix}spacing-m); // Controls the track top padding.
-  --#{$prefix}carousel-card-padding-bottom: var(--#{$prefix}spacing-s); // Controls the card bottom padding.
-  --#{$prefix}carousel-arrow-size: var(--#{$prefix}spacing-xl); // Controls the arrow button size.
-  --#{$prefix}carousel-arrow-icon-size: var(--#{$prefix}spacing-s); // Controls the arrow icon size.
-  --#{$prefix}carousel-arrow-background: var(--#{$prefix}color-background-primary); // Controls the arrow button background.
-  --#{$prefix}carousel-arrow-icon-color: var(--#{$prefix}color-text-inverse); // Controls the arrow icon color.
-  --#{$prefix}carousel-arrow-offset: var(--#{$prefix}spacing-m); // Controls the arrow offset from the carousel edges.
-  --#{$prefix}carousel-divider-color: var(--#{$prefix}color-border-subtle); // Controls the divider color between slides.
-  --#{$prefix}carousel-divider-offset: var(--#{$prefix}spacing-xs); // Controls the divider offset from the slide edge.
-  --#{$prefix}carousel-landscape-card-spacing: var(--#{$prefix}spacing-xxl); // Controls the landscape card body spacing.
+  --#{$prefix}carousel-heading-padding-inline: var(--#{$prefix}spacing-m); // Controls the inline padding for carousel header, using spacing tokens
+  --#{$prefix}carousel-heading-border-color: var(--#{$prefix}color-border-subtle); // Controls the heading border color, using color tokens
+  --#{$prefix}carousel-track-padding-top: var(--#{$prefix}spacing-m); // Controls the track top padding, using spacing tokens
+  --#{$prefix}carousel-card-padding-bottom: var(--#{$prefix}spacing-s); // Controls the card bottom padding, using spacing tokens
+  --#{$prefix}carousel-arrow-size: var(--#{$prefix}spacing-xl); // Controls the arrow button size, using spacing tokens
+  --#{$prefix}carousel-arrow-icon-size: var(--#{$prefix}spacing-s); // Controls the arrow icon size, using spacing tokens
+  --#{$prefix}carousel-arrow-background: var(--#{$prefix}color-background-primary); // Controls the arrow button background, using color tokens
+  --#{$prefix}carousel-arrow-icon-color: var(--#{$prefix}color-text-inverse); // Controls the arrow icon color, using color tokens
+  --#{$prefix}carousel-arrow-offset: var(--#{$prefix}spacing-m); // Controls the arrow offset from the carousel edges, using spacing tokens
+  --#{$prefix}carousel-divider-color: var(--#{$prefix}color-border-subtle); // Controls the divider color between slides, using color tokens
+  --#{$prefix}carousel-divider-offset: var(--#{$prefix}spacing-xs); // Controls the divider offset from the slide edge, using spacing tokens
+  --#{$prefix}carousel-landscape-card-spacing: var(--#{$prefix}spacing-xxl); // Controls the landscape card body spacing, using spacing tokens
 }
 
 // Styles
