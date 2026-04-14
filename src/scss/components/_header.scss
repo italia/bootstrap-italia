@@ -186,5 +186,11 @@
       margin-top: 0;
       background: var(--#{$prefix}header-nav-background);
     }
+
+    // Add border bottom on light theme
+    &.theme-light,
+    &.theme-light-desk {
+     border-bottom: 1px solid var(--#{$prefix}header-slim-border-color);
+    }
   }
 }
