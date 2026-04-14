@@ -93,7 +93,8 @@
   }
 
   // Navscroll Heading
-  h3 {
+  h3,
+  .it-navscroll-heading {
     margin-top: var(--#{$prefix}navscroll-heading-spacing-top);
     margin-bottom: var(--#{$prefix}navscroll-heading-spacing-bottom);
     padding-right: var(--#{$prefix}navscroll-heading-spacing-x);
