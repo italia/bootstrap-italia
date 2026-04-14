@@ -21,6 +21,7 @@
   // Header Center Small
   &.it-small-header {
     --#{$prefix}header-center-height: 4rem; // 64px
+
     @include media-breakpoint-up(lg) {
       --#{$prefix}header-center-height: 6.5rem; // 104px
     }
@@ -32,6 +33,7 @@
   flex-basis: 100%;
   align-items: center;
   justify-content: space-between;
+
   @include media-breakpoint-up(lg) {
     padding: 0 var(--#{$prefix}header-spacing-inset);
   }
@@ -54,9 +56,8 @@
       list-style-type: none;
     }
 
-      a:hover {
-        --#{$prefix}header-social-color: var(--#{$prefix}color-background-inverse-hover);
-      }
+    a:hover {
+      --#{$prefix}header-social-color: var(--#{$prefix}color-background-inverse-hover);
     }
 
     .icon {
@@ -73,6 +74,7 @@
   display: flex;
   align-items: center;
   font-size: var(--#{$prefix}header-center-font-size);
+
   @include media-breakpoint-up(md) {
     margin-left: 3rem; // 48px
   }
@@ -93,6 +95,7 @@
 
     @include media-breakpoint-up(lg) {
       --#{$prefix}header-search-button-size: 3.5rem; // 56px
+
       &:hover {
         background: var(--#{$prefix}color-background-inverse-hover);
       }
@@ -135,6 +138,7 @@
       font-weight: var(--#{$prefix}heading-font-weight);
       letter-spacing: unset;
       line-height: var(--#{$prefix}heading-leading);
+
       @include media-breakpoint-up(lg) {
         margin-bottom: var(--#{$prefix}spacing-3xs);
       }
