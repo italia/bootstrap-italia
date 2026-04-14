@@ -54,7 +54,7 @@ docker-compose up
 
 Software components distributed with Bootstrap Italia that have their own different license from CC0 are listed below.
 
-- [Bootstrap 5](https://getbootstrap.com) © Twitter, Inc., MIT license
+- [Bootstrap 5](https://getbootstrap.com) © The Bootstrap Authors, MIT license
 - [Popper.js](https://popper.js.org) © Floating UI contributors, MIT license
 - [SplideJS](https://splidejs.com) © Naotoshi Fujita, MIT license
 - [Accessible Autocomplete](https://alphagov.github.io/accessible-autocomplete) © Crown Copyright (Government Digital Service), MIT license
