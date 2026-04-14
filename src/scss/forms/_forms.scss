@@ -4,7 +4,7 @@
 @use '../base/mixins/breakpoints' as *;
 @use '../base/mixins/gradients' as *;
 @use '../base/mixins/transition' as *;
-@use '../utilities/focus.scss' as *;
+@use '../base/mixins/focus' as *;
 
 // Form properties are :root scoped to allow for easy customization of form elements.
 :root {
