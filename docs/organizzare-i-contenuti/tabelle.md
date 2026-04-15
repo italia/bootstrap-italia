@@ -186,7 +186,7 @@ Utilizza le classi contestuali per colorare tabelle, righe o celle individuali.
   <table class="table table-primary">
     <tbody>
       <tr>
-        <th scope="row">Default</th>
+        <th scope="row">Primary</th>
         <td>Cella</td>
         <td>Cella</td>
       </tr>
@@ -331,10 +331,9 @@ Utilizza le classi contestuali per colorare tabelle, righe o celle individuali.
 {% comment %}Example name: Celle colorate{% endcomment %}
 {% capture example %}
   <div class="table-responsive">
-    <table class="table table-primary">
+    <table class="table">
       <tbody>
         <tr>
-          <th scope="row">Default</th>
           <td class="table-primary">Primary</td>
           <td class="table-secondary">Secondary</td>
           <td class="table-success">Success</td>
@@ -501,6 +500,8 @@ Le tabelle con hover possono essere combinate con la variante striata.
 
 ### Tabelle attive
 
+Le tabelle attive mettono in evidenza una cella o un'intera riga. Aggiungi `.table-active` a una riga `<tr>` o a una cella `<td>` per evidenziare quella riga o cella specifica.
+
 {% comment %}Example name: Con stato attivo{% endcomment %}
 {% capture example %}
 <table class="table">
@@ -527,7 +528,8 @@ Le tabelle con hover possono essere combinate con la variante striata.
     </tr>
     <tr>
       <th scope="row">3</th>
-      <td colspan="2" class="table-active">Mario Verdi</td>
+      <td>Mario</td>
+      <td>Verdi</td>
       <td>@twitter</td>
     </tr>
   </tbody>
@@ -564,7 +566,8 @@ Aggiungi `.table-bordered` per avere i bordi a tutti i lati della tabella e su t
         </tr>
         <tr>
           <th scope="row">3</th>
-          <td colspan="2">Mario Verdi</td>
+          <td>Mario</td>
+          <td>Verdi</td>
           <td>@twitter</td>
         </tr>
       </tbody>
@@ -599,7 +602,8 @@ Le [utilities di colorazione dei bordi]({{site.baseurl}}/docs/organizzare-gli-sp
         </tr>
         <tr>
           <th scope="row">3</th>
-          <td colspan="2">Mario Verdi</td>
+          <td>Mario</td>
+          <td>Verdi</td>
           <td>@twitter</td>
         </tr>
       </tbody>
@@ -636,7 +640,8 @@ Aggiungi la classe `.table-borderless` per una tabella senza bordi.
         </tr>
         <tr>
           <th scope="row">3</th>
-          <td colspan="2">Mario Verdi</td>
+          <td>Mario</td>
+          <td>Verdi</td>
           <td>@twitter</td>
         </tr>
       </tbody>
@@ -669,7 +674,8 @@ Aggiungi la classe `.table-borderless` per una tabella senza bordi.
         </tr>
         <tr>
           <th scope="row">3</th>
-          <td colspan="2">Mario Verdi</td>
+          <td>Mario</td>
+          <td>Verdi</td>
           <td>@twitter</td>
         </tr>
       </tbody>
@@ -706,7 +712,8 @@ Aggiungi `.table-sm` per rendere le tabelle più compatte dimezzando il cell pad
         </tr>
         <tr>
           <th scope="row">3</th>
-          <td colspan="2">Mario Verdi</td>
+          <td>Mario</td>
+          <td>Verdi</td>
           <td>@twitter</td>
         </tr>
       </tbody>
@@ -742,10 +749,10 @@ Le celle contenute nel `<thead>` sono sempre allineate verticalmente al bottom. 
           <td>Questa cella eredita <code>vertical-align: bottom;</code>dalla riga</td>
           <td>This here is some placeholder text, intended to take up quite a bit of vertical space, to demonstrate how the vertical alignment works in the preceding cells.</td>
         </tr>
-        <tr>
-          <td>Questa cella eredita <code>vertical-align: middle;</code> dalla tabella</td>
-          <td>Questa cella eredita <code>vertical-align: middle;</code> dalla tabella</td>
-          <td class="align-top">This cell is aligned to the top.</td>
+        <tr class="align-top">
+          <td>Questa cella eredita <code>vertical-align: top;</code> dalla tabella</td>
+          <td>Questa cella eredita <code>vertical-align: top;</code> dalla tabella</td>
+          <td>Questa cella eredita <code>vertical-align: top;</code> dalla tabella</td>
           <td>This here is some placeholder text, intended to take up quite a bit of vertical space, to demonstrate how the vertical alignment works in the preceding cells.</td>
         </tr>
       </tbody>

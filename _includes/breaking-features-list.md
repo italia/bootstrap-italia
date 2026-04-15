@@ -137,8 +137,9 @@ La versione 3.0.0 ha portato molte breaking changes sia a livello generale che a
 
 ### Progress indicators
 
-- Nella variante "Pulsante con Progress Bar" la classe che controlla il colore dell'icona ha cambiato nome: `.icon-white` diventa `.icon-inverse`.
 
+- Nella variante "Pulsante con Progress Bar" la classe che controlla il colore dell'icona ha cambiato nome: `.icon-white` diventa `.icon-inverse`.
+  
 
 ### Sections
 
@@ -150,6 +151,14 @@ La versione 3.0.0 ha portato molte breaking changes sia a livello generale che a
 - Rimossi elementi `<span>` con classe `list-item-title-icon-wrapper`.
 - Nella variante con una lista di link primaria annidata è stata rimossa la classe `.large` dagli elementi `<a>` con classi `.list-item .medium`. 
 - Nelle varianti scure la classe che controlla il colore delle icone bianche ha cambiato nome: `.icon-white` diventa `.icon-inverse`.
+
+
+### Steppers
+
+- Rimossa la classe `.no-line` per nascondere il bordo inferiore azzurro.
+- Aggiunta la classe `.btn-icon` ai pulsanti "Indietro" e "Avanti".
+- Il pulsante "Avanti" è sempre un `.btn-primary`.
+- Modificata la posizione del pulsante "Salva", ora posizionato in un righe a sé stante.
 
 
 ### Torna indietro

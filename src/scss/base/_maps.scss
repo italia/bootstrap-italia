@@ -40,13 +40,15 @@ $utilities-bg-colors: map-loop($utilities-bg, rgba-css-var, '$key', 'bg') !defau
 // scss-docs-end utilities-bg-colors
 
 // scss-docs-start utilities-border-colors
-$utilities-border: map-merge(
-  $utilities-colors,
-  (
-    'white': to-rgb($white),
-  )
+$utilities-border-colors: (
+  'primary': var(--bsi-color-border-primary),
+  'secondary': var(--bsi-color-border-secondary),
+  'success': var(--bsi-color-border-success),
+  'warning': var(--bsi-color-border-warning),
+  'danger': var(--bsi-color-border-danger),
+  'inverse': var(--bsi-color-border-inverse),
+  'white': var(--bsi-color-border-inverse),
 ) !default;
-$utilities-border-colors: map-loop($utilities-border, rgba-css-var, '$key', 'border') !default;
 // scss-docs-end utilities-border-colors
 
 $negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) !default;
@@ -54,12 +56,11 @@ $negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) 
 $gutters: $spacers !default;
 
 // Colors Palette
-// TODO: Use css variables instead of Sass maps
 $colors-palette: (
-  'primary': $color-primary,
-  'secondary': $color-secondary,
-  'success': $color-success,
-  'warning': $color-warning,
-  'danger': $color-danger,
-  'inverse': $color-inverse,
+  'primary': var(--bsi-color-background-primary),
+  'secondary': var(--bsi-color-background-secondary),
+  'success': var(--bsi-color-background-success),
+  'warning': var(--bsi-color-background-warning),
+  'danger': var(--bsi-color-background-danger),
+  'inverse': var(--bsi-color-background-inverse),
 ) !default;
