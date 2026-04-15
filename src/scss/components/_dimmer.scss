@@ -6,23 +6,24 @@
 // Properties
 //
 
-.dimmable {
-  position: relative;
-}
-
 .dimmer {
   --#{$prefix}dimmer-padding: var(--#{$prefix}spacing-l);
-  --#{$prefix}dimmer-background: color-mix(in srgb, var(--#{$prefix}color-background-emphasis) 90%, transparent);
+  --#{$prefix}dimmer-background: var(--#{$prefix}overlay-background-primary-muted);
   --#{$prefix}dimmer-text-color: var(--#{$prefix}color-text-inverse);
   --#{$prefix}dimmer-heading-size: var(--#{$prefix}heading-3-font-size);
-  --#{$prefix}dimmer-body-size: var(--#{$prefix}body-font-size);
+  --#{$prefix}dimmer-body-font-size: var(--#{$prefix}body-font-size);
   --#{$prefix}dimmer-body-font-family: var(--#{$prefix}font-serif);
   --#{$prefix}dimmer-icon-gap: var(--#{$prefix}spacing-m);
   --#{$prefix}dimmer-buttons-gap: var(--#{$prefix}spacing-l);
   --#{$prefix}dimmer-button-gap: var(--#{$prefix}spacing-s);
   --#{$prefix}dimmer-button-width: var(--#{$prefix}sizing-full);
   --#{$prefix}dimmer-button-last-margin-top: var(--#{$prefix}dimmer-button-gap);
+}
 
+// Styles
+//
+/* stylelint-disable-next-line no-duplicate-selectors */
+.dimmer {
   display: flex;
   background-color: var(--#{$prefix}dimmer-background);
   position: absolute;
@@ -35,6 +36,10 @@
   justify-content: center;
   flex-wrap: wrap;
   align-items: flex-start;
+
+  @include media-breakpoint-up(lg) {
+    align-items: center;
+  }
 
   &[aria-hidden='true'] {
     display: none;
@@ -67,7 +72,7 @@
   p {
     text-align: justify;
     font-family: var(--#{$prefix}dimmer-body-font-family);
-    font-size: var(--#{$prefix}dimmer-body-size);
+    font-size: var(--#{$prefix}dimmer-body-font-size);
   }
 
   .dimmer-inner {
@@ -107,6 +112,10 @@
   }
 }
 
+.dimmable {
+  position: relative;
+}
+
 // Tablet vertical
 @include media-breakpoint-up(md) {
   .dimmer {
@@ -139,12 +148,5 @@
         }
       }
     }
-  }
-}
-
-// Tablet horizontal / small desktop
-@include media-breakpoint-up(lg) {
-  .dimmer {
-    align-items: center;
   }
 }
