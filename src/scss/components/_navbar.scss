@@ -10,34 +10,34 @@
 //
 
 .navbar {
-  --#{$prefix}navbar-background: var(--#{$prefix}color-background-primary);
-  --#{$prefix}navbar-brand-color: var(--#{$prefix}color-text-inverse);
-  --#{$prefix}navbar-brand-font-size: var(--#{$prefix});
-  --#{$prefix}navbar-brand-margin-end: #{$navbar-brand-margin-end};
-  --#{$prefix}navbar-brand-padding-y: #{$navbar-brand-padding-y};
-  --#{$prefix}navbar-close-button-font-size: 0.75rem;
-  --#{$prefix}navbar-close-button-size: 44px;
-  --#{$prefix}navbar-disabled-item-opacity: 0.75;
-  --#{$prefix}navbar-hamburger-size: 1.5rem;
-  --#{$prefix}navbar-link-border-size: var(--#{$prefix}border-thick);
-  --#{$prefix}navbar-link-color: var(--#{$prefix}color-link); // nav link color default - mobile
-  --#{$prefix}navbar-link-font-size: var(--#{$prefix}label-font-size-l);
-  --#{$prefix}navbar-link-font-weight: var(--#{$prefix}font-weight-solid);
-  --#{$prefix}navbar-link-line-height: var(--#{$prefix}label-leading);
-  --#{$prefix}navbar-link-padding-x: var(--#{$prefix}spacing-m);
-  --#{$prefix}navbar-link-padding-y: var(--#{$prefix}spacing-s);
-  --#{$prefix}navbar-overlay-bg: rgba(0, 0, 0, 0.6);
-  --#{$prefix}navbar-toggle-button-icon-color: var(--#{$prefix}icon-inverse);
-  --#{$prefix}navbar-toggle-button-icon-size: 1.5rem;
+  --#{$prefix}navbar-background: var(--#{$prefix}color-background-primary); // Controls the navbar background, using color tokens.
+  --#{$prefix}navbar-brand-color: var(--#{$prefix}color-text-inverse); // Controls the navbar brand color, using color tokens.
+  --#{$prefix}navbar-brand-font-size: var(--#{$prefix}); // Controls the navbar brand font size, using size tokens.
+  --#{$prefix}navbar-brand-margin-end: #{$navbar-brand-margin-end}; // Controls the navbar brand margin end.
+  --#{$prefix}navbar-brand-padding-y: #{$navbar-brand-padding-y}; // Controls the navbar brand padding y.
+  --#{$prefix}navbar-close-button-font-size: 0.75rem; // Controls the navbar close button font size.
+  --#{$prefix}navbar-close-button-size: 44px; // Controls the navbar close button size.
+  --#{$prefix}navbar-disabled-item-opacity: 0.75; // Controls the navbar disabled item opacity.
+  --#{$prefix}navbar-hamburger-size: 1.5rem; // Controls the navbar hamburger size.
+  --#{$prefix}navbar-link-border-size: var(--#{$prefix}border-thick); // Controls the navbar link border size, using border tokens.
+  --#{$prefix}navbar-link-color: var(--#{$prefix}color-link); // nav link color default - mobile, using color tokens.
+  --#{$prefix}navbar-link-font-size: var(--#{$prefix}label-font-size-l); // Controls the navbar link font size, using typography tokens.
+  --#{$prefix}navbar-link-font-weight: var(--#{$prefix}font-weight-solid); // Controls the navbar link font weight, using typography tokens.
+  --#{$prefix}navbar-link-line-height: var(--#{$prefix}label-leading); // Controls the navbar link line height, using typography tokens.
+  --#{$prefix}navbar-link-padding-x: var(--#{$prefix}spacing-m); // Controls the navbar link padding x, using spacing tokens.
+  --#{$prefix}navbar-link-padding-y: var(--#{$prefix}spacing-s); // Controls the navbar link padding y, using spacing tokens.
+  --#{$prefix}navbar-overlay-bg: rgba(0, 0, 0, 0.6); // Controls the navbar overlay bg.
+  --#{$prefix}navbar-toggle-button-icon-color: var(--#{$prefix}icon-inverse); // Controls the navbar toggle button icon color, using icon tokens.
+  --#{$prefix}navbar-toggle-button-icon-size: 1.5rem; // Controls the navbar toggle button icon size.
   @include media-breakpoint-up(lg) {
-    --#{$prefix}navbar-link-color: var(--#{$prefix}color-text-inverse); // nav link color default - desktop
+    --#{$prefix}navbar-link-color: var(--#{$prefix}color-text-inverse); // nav link color default - desktop.
     --#{$prefix}navbar-link-active-border-color: var(--#{$prefix}color-border-inverse);
   }
 
   .theme-light &,
   .theme-light-desk & {
     --#{$prefix}navbar-background: var(--#{$prefix}color-background-inverse);
-    --#{$prefix}navbar-link-color: var(--#{$prefix}color-link); // nav link color theme light
+    --#{$prefix}navbar-link-color: var(--#{$prefix}color-link);
     --#{$prefix}navbar-toggle-button-icon-color: var(--#{$prefix}icon-primary);
     --#{$prefix}navbar-link-active-border-color: var(--#{$prefix}color-border-primary);
   }
