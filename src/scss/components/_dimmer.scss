@@ -3,31 +3,35 @@
 // Description: Component styles for dimmer
 //
 
-// Variables
-//
-
 // Properties
 //
-
-// Styles
-//
-
-//mobile
 
 .dimmable {
   position: relative;
 }
 
 .dimmer {
+  --#{$prefix}dimmer-padding: var(--#{$prefix}spacing-l);
+  --#{$prefix}dimmer-background: color-mix(in srgb, var(--#{$prefix}color-background-emphasis) 90%, transparent);
+  --#{$prefix}dimmer-text-color: var(--#{$prefix}color-text-inverse);
+  --#{$prefix}dimmer-heading-size: var(--#{$prefix}heading-3-font-size);
+  --#{$prefix}dimmer-body-size: var(--#{$prefix}body-font-size);
+  --#{$prefix}dimmer-body-font-family: var(--#{$prefix}font-serif);
+  --#{$prefix}dimmer-icon-gap: var(--#{$prefix}spacing-m);
+  --#{$prefix}dimmer-buttons-gap: var(--#{$prefix}spacing-l);
+  --#{$prefix}dimmer-button-gap: var(--#{$prefix}spacing-s);
+  --#{$prefix}dimmer-button-width: var(--#{$prefix}sizing-full);
+  --#{$prefix}dimmer-button-last-margin-top: var(--#{$prefix}dimmer-button-gap);
+
   display: flex;
-  background-color: hsla(210, 54%, 20%, 0.9);
+  background-color: var(--#{$prefix}dimmer-background);
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   z-index: 1;
-  padding: $v-gap * 4;
+  padding: var(--#{$prefix}dimmer-padding);
   justify-content: center;
   flex-wrap: wrap;
   align-items: flex-start;
@@ -37,9 +41,10 @@
   }
 
   &.dimmer-primary {
-    background-color: $primary;
+    --#{$prefix}dimmer-background: var(--#{$prefix}color-background-primary);
+
     &.show {
-      background-color: hsla(210, 100%, 40%, 0.9);
+      --#{$prefix}dimmer-background: color-mix(in srgb, var(--#{$prefix}color-background-primary) 90%, transparent);
     }
   }
 
@@ -50,19 +55,19 @@
   h5,
   h6,
   p {
-    color: $white;
+    color: var(--#{$prefix}dimmer-text-color);
     margin-bottom: 0;
   }
 
   h4 {
     text-align: center;
-    font-size: 2.25rem;
+    font-size: var(--#{$prefix}dimmer-heading-size);
   }
 
   p {
     text-align: justify;
-    font-family: $font-family-serif;
-    font-size: 1rem;
+    font-family: var(--#{$prefix}dimmer-body-font-family);
+    font-size: var(--#{$prefix}dimmer-body-size);
   }
 
   .dimmer-inner {
@@ -72,24 +77,28 @@
 
   .dimmer-icon {
     text-align: center;
-    margin-bottom: $v-gap * 3;
+    margin-bottom: var(--#{$prefix}dimmer-icon-gap);
+
     .icon {
-      fill: $white;
+      fill: var(--#{$prefix}icon-inverse);
     }
   }
 
   .dimmer-buttons {
     background-color: transparent !important;
-    margin-top: $v-gap * 4;
+    margin-top: var(--#{$prefix}dimmer-buttons-gap);
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+
     button {
-      width: 100%;
+      width: var(--#{$prefix}dimmer-button-width);
+
       &:last-child {
-        margin-top: $v-gap * 2;
+        margin-top: var(--#{$prefix}dimmer-button-last-margin-top);
       }
     }
+
     &.single-button {
       button {
         margin-top: 0;
@@ -97,27 +106,35 @@
     }
   }
 }
-//Tablet vertical
+
+// Tablet vertical
 @include media-breakpoint-up(md) {
   .dimmer {
-    padding: $v-gap * 3;
+    --#{$prefix}dimmer-padding: var(--#{$prefix}spacing-m);
+    --#{$prefix}dimmer-icon-gap: var(--#{$prefix}spacing-xxl);
+    --#{$prefix}dimmer-button-width: var(--#{$prefix}sizing-half);
+    --#{$prefix}dimmer-button-gap: var(--#{$prefix}spacing-m);
+    --#{$prefix}dimmer-button-last-margin-top: 0;
+
     .dimmer-icon {
-      margin-bottom: $v-gap * 6;
+      margin-bottom: var(--#{$prefix}dimmer-icon-gap);
     }
+
     .dimmer-buttons {
       flex-wrap: nowrap;
+
       button {
-        width: 50%;
         margin-top: 0 !important;
+
         &:last-child {
-          margin-left: $v-gap * 3;
+          margin-left: var(--#{$prefix}dimmer-button-gap);
         }
       }
+
       &.single-button {
-        //text-align: center;
         button {
           width: auto;
-          min-width: 50%;
+          min-width: var(--#{$prefix}sizing-half);
           margin: 0 auto;
         }
       }
@@ -125,7 +142,7 @@
   }
 }
 
-//Tablet horizontal / small desktop
+// Tablet horizontal / small desktop
 @include media-breakpoint-up(lg) {
   .dimmer {
     align-items: center;
