@@ -66,6 +66,13 @@
     }
   }
 
+  .it-special-card {
+    // xxx deprecated with old .card
+    h5.card-title {
+      margin-bottom: 0;
+    }
+  }
+
   .it-header-block {
     h2 {
       margin-bottom: 0;
@@ -79,10 +86,10 @@
     padding-bottom: 0;
   }
 
-   .card-wrapper {
-  //   // xxx deprecated with old .card
-     padding-bottom: var(--#{$prefix}carousel-card-padding-bottom);
-   }
+  .card-wrapper {
+    // xxx deprecated with old .card
+    padding-bottom: var(--#{$prefix}carousel-card-padding-bottom);
+  }
 
   .it-card {
     padding-bottom: var(--#{$prefix}carousel-card-padding-bottom);
@@ -90,10 +97,9 @@
 
   // Landscape abstract
   &.it-carousel-landscape-abstract {
-
     // xxx deprecated with old .card
     .it-single-slide-wrapper {
-      >a {
+      > a {
         position: relative;
         display: block;
       }
@@ -185,7 +191,6 @@
 
     // with shadow
     .it-card-bg {
-
       // xxx deprecated with old .card
       .card.card-bg {
         margin-right: 0;
@@ -207,7 +212,7 @@
 }
 
 // Tablet horizontal / small desktop
-@media (min-width: #{map-get($grid-breakpoints, lg)}) {
+@include media-breakpoint-up(lg) {
   .it-carousel-wrapper {
     --#{$prefix}carousel-heading-padding-inline: var(--#{$prefix}spacing-xs);
     --#{$prefix}carousel-arrow-offset: var(--#{$prefix}spacing-xxl);
@@ -311,9 +316,8 @@
 }
 
 // Desktop
-@media (min-width: #{map-get($grid-breakpoints, xl)}) {
+@include media-breakpoint-up(xl) {
   .it-carousel-wrapper {
-
     // Landscape abstract
     &.it-carousel-landscape-abstract {
       max-width: #{map-get($container-max-widths, xl)};
