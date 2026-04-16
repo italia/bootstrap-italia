@@ -1,3 +1,49 @@
+# [3.0.0-alpha.7](https://github.com/italia/bootstrap-italia/compare/v3.0.0-alpha.6...v3.0.0-alpha.7) (2026-04-16)
+
+
+### Bug Fixes
+
+* add border bottom for light theme in header component [#1761](https://github.com/italia/bootstrap-italia/issues/1761) ([00a0438](https://github.com/italia/bootstrap-italia/commit/00a04380d9775a8ec4fd474b4c496de40901f7eb))
+* add missing properties description [#1741](https://github.com/italia/bootstrap-italia/issues/1741) ([c6d969c](https://github.com/italia/bootstrap-italia/commit/c6d969c681a4888c2965da847871ddf74629b2b7))
+* hover color on navbar [#1756](https://github.com/italia/bootstrap-italia/issues/1756) ([2fbd0b1](https://github.com/italia/bootstrap-italia/commit/2fbd0b1d9db1d72d95164c013208e6d9b93642e0))
+* missing background color on vertical tabs [#1732](https://github.com/italia/bootstrap-italia/issues/1732) ([77faae4](https://github.com/italia/bootstrap-italia/commit/77faae45b2ea9a2c73d7da9a824edc08cf7eaa0e))
+* navbar hamburger icon alignment [#1762](https://github.com/italia/bootstrap-italia/issues/1762) ([bbab8b4](https://github.com/italia/bootstrap-italia/commit/bbab8b410b1cf212a32731be57f7e6cea65f1c14))
+* navscroll progress color on dark bg [#1620](https://github.com/italia/bootstrap-italia/issues/1620) ([9532341](https://github.com/italia/bootstrap-italia/commit/9532341e92d5d8fcc1c0c2746cad82f8732c4c2a))
+* remove toast ([9d610a6](https://github.com/italia/bootstrap-italia/commit/9d610a674503fe066510b8923b6585b4af369d0d))
+* update navscroll headings for consistent styling [#1621](https://github.com/italia/bootstrap-italia/issues/1621) ([dd9ca4a](https://github.com/italia/bootstrap-italia/commit/dd9ca4a797798b58b64f36025441b628c5002534))
+
+
+### Features
+
+* carousel design tokens ([4ef724d](https://github.com/italia/bootstrap-italia/commit/4ef724da1432415d10fefd7f4b2ed5008880e96e))
+* notification design tokens  ([353652d](https://github.com/italia/bootstrap-italia/commit/353652d7ef615e52f8ae69cea3520cbe8982e862))
+* timeline design tokens  ([2724450](https://github.com/italia/bootstrap-italia/commit/2724450357ec2948d59fa1f66489c3ba4401d641))
+
+
+
+# [3.0.0-alpha.6](https://github.com/italia/bootstrap-italia/compare/v3.0.0-alpha.5...v3.0.0-alpha.6) (2026-03-30)
+
+
+### Bug Fixes
+
+* a11y progress indicator ([97d0ae5](https://github.com/italia/bootstrap-italia/commit/97d0ae5668f5e4a3cbf3589200f3d28d023590bf))
+* card text font size [#1726](https://github.com/italia/bootstrap-italia/issues/1726) ([86453c3](https://github.com/italia/bootstrap-italia/commit/86453c32bcaefdca3f67f282d8552e97bff51415))
+* dropdown menu position in avatar group ([70f3dae](https://github.com/italia/bootstrap-italia/commit/70f3daeeae3447ebb987f0efca4e68d103c209bb))
+* misleading typography props name ([2681984](https://github.com/italia/bootstrap-italia/commit/2681984a011b1f88d23d5f13ca68b04f140401c3))
+* update avatar font size variable in dropdown ([e5a434a](https://github.com/italia/bootstrap-italia/commit/e5a434ac9a7b222c0c0fe1eb8d9ae0c5b7ba0671))
+* update dropdown styles for dark theme and add disabled link styling ([4612913](https://github.com/italia/bootstrap-italia/commit/4612913b839dbbc55ad0063dc50ef0ace068ba9c))
+* update examples_api_update_3.yml branch name ([feace15](https://github.com/italia/bootstrap-italia/commit/feace152bc628191021c38797d0af97e84696d1b))
+
+
+### Features
+
+* stepper design tokens ([17a8e97](https://github.com/italia/bootstrap-italia/commit/17a8e97869cf951c2cffb7f0ec04f528bb8054ee))
+* tables design tokens ([6d8f416](https://github.com/italia/bootstrap-italia/commit/6d8f416e2a2b24073a16ea46906095702b052754))
+* toggle design tokens ([5dbfbb4](https://github.com/italia/bootstrap-italia/commit/5dbfbb4741421b877a4029f623aced84d3e75301))
+* toolbar design tokens ([0468dab](https://github.com/italia/bootstrap-italia/commit/0468dab65aee359b74cdd63a89437e5ae627ee29))
+
+
+
 # [3.0.0-alpha.5](https://github.com/italia/bootstrap-italia/compare/v3.0.0-alpha.4...v3.0.0-alpha.5) (2026-03-16)
 
 

@@ -58,7 +58,7 @@ In questo esempio, la linea che limita la barra di navigazione è posizionata a 
     </button>
     <div class="menu-wrapper" tabindex="-1">
       <div class="link-list-wrapper">
-        <h3 class="no_toc">header</h3>
+        <h3 class="no_toc it-navscroll-heading">header</h3>
         <ul class="link-list">
           <li class="nav-item active">
             <a class="nav-link active" href="#"><span>1. Introduzione </span></a>
@@ -124,7 +124,7 @@ In questo esempio, la linea che limita la barra di navigazione è posizionata a 
         <span>Indietro</span>
       </button>
       <div class="link-list-wrapper">
-        <h3 class="no_toc">header</h3>
+        <h3 class="no_toc it-navscroll-heading">header</h3>
         <ul class="link-list">
           <li class="nav-item active">
             <a class="nav-link active" href="#"><span>1. Introduzione </span></a>
@@ -192,7 +192,7 @@ La Navscroll può mostrare una barra di avanzamento dello scorrimento del conten
         <span>Indietro</span>
       </button>
       <div class="link-list-wrapper">
-        <h3 class="no_toc">header</h3>
+        <h3 class="no_toc it-navscroll-heading">header</h3>
         <div class="progress">
           <div class="progress-bar it-navscroll-progressbar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
         </div>
@@ -267,7 +267,7 @@ Per attivare la variante scura è necessario aggiungere le seguenti classi all'e
         <span>Indietro</span>
       </button>
       <div class="link-list-wrapper">
-        <h3 class="no_toc">header</h3>
+        <h3 class="no_toc it-navscroll-heading">header</h3>
         <ul class="link-list">
           <li class="nav-item active">
             <a class="nav-link active" href="#"><span>1. Introduzione </span></a>

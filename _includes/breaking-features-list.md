@@ -80,10 +80,9 @@
 
 ### Header
 
-
 - Cambiata la dimensione del pulsante Accedi: cambiato classe da `.btn-sm` a `.btn-sx`.
 - Rimossa la classe `.ms-1` dall'icona `<svg>` che segue la voce Megamenu negli esempi.
-  
+
 
 ### Icone
 
@@ -129,6 +128,15 @@ La versione 3.0.0 ha portato molte breaking changes sia a livello generale che a
 - La classe che controlla il colore dell'icona chevron per le varianti scure ha cambiato nome: `.icon-white` diventa `.icon-inverse`.
 
 
+### Notification
+
+- Rinominato il componente da `Notifiche` a `Notification`.
+- Aggiunta la classe `.notification-title` al titolo della notifica.
+- Aggiunta la classe `.icon-sm` all'icona `<svg>` del titolo della notifica.
+- Aggiunta la classe `.me-2` all'icona `<svg>` del titolo della notifica.
+- Aggiunta la classe `.icon-sm` all'icona `<svg>` del pulsante di chiusura `.btn-close`.
+
+
 ### Paginazione
 
 - È stato corretto il colore delle icone chevron per gli elementi disabilitati sostituendo la classe `.icon-primary` con `.icon-disabled`.
@@ -137,8 +145,9 @@ La versione 3.0.0 ha portato molte breaking changes sia a livello generale che a
 
 ### Progress indicators
 
-- Nella variante "Pulsante con Progress Bar" la classe che controlla il colore dell'icona ha cambiato nome: `.icon-white` diventa `.icon-inverse`.
 
+- Nella variante "Pulsante con Progress Bar" la classe che controlla il colore dell'icona ha cambiato nome: `.icon-white` diventa `.icon-inverse`.
+  
 
 ### Sections
 
@@ -150,6 +159,14 @@ La versione 3.0.0 ha portato molte breaking changes sia a livello generale che a
 - Rimossi elementi `<span>` con classe `list-item-title-icon-wrapper`.
 - Nella variante con una lista di link primaria annidata è stata rimossa la classe `.large` dagli elementi `<a>` con classi `.list-item .medium`. 
 - Nelle varianti scure la classe che controlla il colore delle icone bianche ha cambiato nome: `.icon-white` diventa `.icon-inverse`.
+
+
+### Steppers
+
+- Rimossa la classe `.no-line` per nascondere il bordo inferiore azzurro.
+- Aggiunta la classe `.btn-icon` ai pulsanti "Indietro" e "Avanti".
+- Il pulsante "Avanti" è sempre un `.btn-primary`.
+- Modificata la posizione del pulsante "Salva", ora posizionato in un righe a sé stante.
 
 
 ### Torna indietro

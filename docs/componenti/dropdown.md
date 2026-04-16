@@ -202,7 +202,7 @@ Per aprire le voci di menu verso sinistra aggiungere la classe `.dropstart` all'
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Dropdown menu
+## Dropdown menu
 
 Le voci del menu che viene aperto al click sul pulsante possono essere personalizzate, così come il menu stesso.
 

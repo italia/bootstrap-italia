@@ -1,4 +1,4 @@
-// Component: steppers
+// Component: Steppers
 //
 // Description: Component styles for steppers
 //
@@ -9,370 +9,294 @@
 // Properties
 //
 
+.steppers {
+  --#{$prefix}stepper-active-indicator-height: 2px; // Controls the stepper active indicator height.
+  --#{$prefix}stepper-index-color: var(--#{$prefix}color-text-secondary); // Controls the stepper index color, using color tokens.
+  --#{$prefix}stepper-background: transparent; // Controls the stepper background.
+  --#{$prefix}stepper-border-color: var(--#{$prefix}color-border-subtle); // Controls the stepper border color, using color tokens.
+  --#{$prefix}stepper-dot-color: var(--#{$prefix}color-background-subtle); // Controls the stepper dot color, using color tokens.
+  --#{$prefix}stepper-dot-gap: 8px; // Controls the stepper dot gap.
+  --#{$prefix}stepper-dot-size: 4px; // Controls the stepper dot size.
+  --#{$prefix}stepper-font-size: var(--#{$prefix}label-font-size-l); // Controls the stepper font size, using typography tokens.
+  --#{$prefix}stepper-icon-size: var(--#{$prefix}icon-size-m); // Controls the stepper icon size, using icon tokens.
+  --#{$prefix}stepper-icon-color: var(--#{$prefix}stepper-item-text-color); // Controls the stepper icon color.
+  --#{$prefix}stepper-icon-confirmed: var(--#{$prefix}icon-success); // Controls the stepper icon confirmed, using icon tokens.
+  --#{$prefix}stepper-index-font-size: var(--#{$prefix}label-font-size-s); // Controls the stepper index font size, using typography tokens.
+  --#{$prefix}stepper-item-background: var(--#{$prefix}stepper-background); // Controls the stepper item background.
+  --#{$prefix}stepper-item-border-color-active: var(--#{$prefix}color-border-primary); // Controls the stepper item border color active, using color tokens.
+  --#{$prefix}stepper-item-text-color: var(--#{$prefix}color-text-muted); // Controls the stepper item text color, using color tokens.
+  --#{$prefix}stepper-nav-height: 64px; // Controls the stepper nav height.
+  --#{$prefix}stepper-number-background-active: var(--#{$prefix}color-background-primary); // Controls the stepper number background active, using color tokens.
+  --#{$prefix}stepper-number-border-color: var(--#{$prefix}color-border-subtle); // Controls the stepper number border color, using color tokens.
+  --#{$prefix}stepper-number-color: var(--#{$prefix}color-text-muted); // Controls the stepper number color, using color tokens.
+  --#{$prefix}stepper-number-size: 2rem; // Controls the stepper number size.
+  --#{$prefix}stepper-progress-height: 2px; // Controls the stepper progress height.
+  --#{$prefix}stepper-spacing-x: var(--#{$prefix}spacing-xs); // Controls the stepper spacing x, using spacing tokens.
+  --#{$prefix}stepper-spacing-y: var(--#{$prefix}spacing-s); // Controls the stepper spacing y, using spacing tokens.
+  @include media-breakpoint-up(lg) {
+    --#{$prefix}stepper-background: transparent;
+  }
+}
+
 // Styles
 //
 
-//mobile
-.steppers {
-  // steppers
-  .steppers-index {
-    margin-left: auto;
-    font-size: 0.875rem;
-    font-weight: 600;
-    flex-shrink: 0;
-    @include media-breakpoint-up(lg) {
-      display: none;
-    }
-    span {
-      margin-left: 0.25rem;
-      &.active {
-        color: $primary;
-        text-decoration: underline;
-      }
-    }
-  }
-  .steppers-header {
-    @include media-breakpoint-down(lg) {
-      padding: 0 24px;
-      height: 64px;
-      background: $white;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    margin-bottom: 1rem;
-    ul {
-      display: flex;
-      width: 100%;
-      padding: 0;
-      @include media-breakpoint-down(lg) {
-        margin: 0;
-        padding: 0;
-      }
-      li {
-        display: flex;
-        font-size: 1.125rem;
-        font-weight: 600;
-        color: $gray-secondary;
-        list-style-type: none;
-        .icon {
-          fill: $gray-secondary;
-          margin-right: 0.667rem;
-          width: 24px;
-          height: 24px;
-        }
-        // states
-        &:not(.active) {
-          @include media-breakpoint-down(lg) {
-            clip: rect(1px, 1px, 1px, 1px);
-            height: 0;
-            position: absolute;
-            display: block;
-          }
-        }
-        &.active,
-        &.confirmed {
-          color: $primary;
-          .icon {
-            fill: $primary;
-          }
-        }
-        &.steppers-index {
-          display: block;
-        }
-        // numbers
-        .steppers-number {
-          .icon {
-            margin: 0;
-          }
-          &:after {
-            content: '. ';
-          }
-        }
-      }
-    }
+// Steppers index
+//
+
+.steppers-index {
+  flex-shrink: 0;
+  margin-left: auto;
+  color: var(--#{$prefix}stepper-index-color);
+  font-size: var(--#{$prefix}stepper-index-font-size);
+  font-weight: var(--#{$prefix}font-weight-solid);
+  @include media-breakpoint-up(lg) {
+    display: none;
   }
 
-  // dark version
-  &.bg-dark {
-    .steppers-header {
-      background: none;
-      // steppers
-      .steppers-index {
-        color: $neutral-1-a2;
-        span {
-          &.active {
-            color: $analogue-2-a6;
-          }
-        }
-      }
-      // steps
-      li {
-        color: $neutral-1-a2;
-        .icon {
-          fill: $neutral-1-a2;
-        }
-        &.active {
-          font-weight: 600;
-          color: $analogue-2-a6;
-          .icon {
-            fill: $analogue-2-a6;
-          }
-        }
-        &.confirmed {
-          font-weight: 600;
-          color: $white;
-          .icon {
-            fill: $white;
-          }
-        }
-      }
-    }
-    .steppers-nav {
-      background: none;
-      .progress-bar {
-        background: $analogue-2-a6;
-      }
-      .steppers-dots {
-        li.done {
-          background: $analogue-2-a6;
-        }
-      }
+  span {
+    margin-left: var(--#{$prefix}spacing-3xs);
+
+    &.active {
+      --#{$prefix}stepper-index-color: var(--#{$prefix}color-text-base);
     }
   }
+}
 
-  // navigation
-  .steppers-nav {
-    display: flex;
-    height: 64px;
-    padding: 0 $stepper-spacing-h;
-    box-shadow: 0 -8px 20px rgba(0, 0, 0, 0.1); // TEMP - substitute with generic ellipsical shadow
-    background: $white;
+// Stepper navigation
+//
+
+.steppers-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--#{$prefix}stepper-background);
+
+  @include media-breakpoint-up(lg) {
     align-items: center;
-    justify-content: space-between;
+    margin-top: var(--#{$prefix}spacing-s);
+    background: none;
+    box-shadow: none;
+
     .steppers-progress,
     .steppers-dots {
-      width: 20%;
-      .progress {
-        height: 2px;
-      }
+      display: none;
     }
-    .steppers-progress {
-      .progress {
-        height: 2px;
-      }
+
+    .steppers-btn-confirm {
+      display: block;
+      margin-left: auto;
     }
-    .steppers-dots {
+  }
+
+  .steppers-progress,
+  .steppers-dots {
+    width: 20%;
+  }
+
+  .steppers-progress {
+    .progress {
+      height: var(--#{$prefix}stepper-progress-height);
+    }
+  }
+
+  .steppers-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+
+    li {
+      width: var(--#{$prefix}stepper-dot-size);
+      min-width: var(--#{$prefix}stepper-dot-size);
+      height: var(--#{$prefix}stepper-dot-size);
+      margin-right: var(--#{$prefix}stepper-dot-gap);
       padding: 0;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      li {
-        list-style-type: none;
-        padding: 0;
-        height: 4px;
-        width: 4px;
-        min-width: 4px;
-        background: $progress-bg;
-        margin-right: 8px;
-        border-radius: 50%;
-        &.done {
-          background: $progress-bar-bg;
-        }
+      list-style-type: none;
+      border-radius: 50%;
+      background: var(--#{$prefix}stepper-dot-color);
+
+      &.done {
+        --#{$prefix}stepper-dot-color: var(--#{$prefix}icon-primary); // Controls the completed dot background color.
       }
     }
   }
 }
 
-//small - tablet
-@include media-breakpoint-up(sm) {
-  .steppers {
-    .steppers-header {
-      li {
-        font-size: 1rem;
-      }
-    }
+// Stepper Header
+//
+
+.steppers-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--#{$prefix}stepper-spacing-y) var(--#{$prefix}stepper-spacing-x);
+  background: var(--#{$prefix}stepper-background);
+  @include media-breakpoint-down(lg) {
+    border-bottom: var(--#{$prefix}stepper-active-indicator-height) solid var(--#{$prefix}stepper-border-color);
   }
-}
-//Tablet horizontal / small desktop
-@include media-breakpoint-up(lg) {
-  .steppers {
-    // header
-    .steppers-header {
-      padding: 0;
-      box-shadow: none; // TEMP
-      height: auto;
+  @include media-breakpoint-up(lg) {
+    padding: 0;
+  }
+
+  ul {
+    display: flex;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 0;
+
+    li {
       display: flex;
-      justify-content: space-between;
-      background: transparent;
-      // shadow
-      &:before {
-        display: none;
-      }
-      // steps
-      li {
-        padding: $stepper-spacing-v $stepper-spacing-h;
-        flex-grow: 1;
-        border-left: 1px solid $gray-border;
+      align-items: center;
+      list-style-type: none;
+      background-color: var(--#{$prefix}stepper-item-background);
+      color: var(--#{$prefix}stepper-item-text-color);
+      font-size: var(--#{$prefix}stepper-font-size);
+      font-weight: var(--#{$prefix}font-weight-solid);
+      line-height: var(--#{$prefix}label-leading);
+      @include media-breakpoint-up(lg) {
         position: relative;
-        display: flex;
-        align-items: center;
+        flex-grow: 1;
+        padding: var(--#{$prefix}stepper-spacing-y) var(--#{$prefix}stepper-spacing-x);
+        border-left: 1px solid var(--#{$prefix}stepper-border-color);
+
         &:nth-last-child(1) {
-          border-right: 1px solid $gray-border;
+          border-right: 1px solid var(--#{$prefix}stepper-border-color);
         }
-        // index
+
         &.steppers-index {
           display: none;
         }
-        // active
-        &.active {
-          display: flex;
-          &:after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            width: calc(100% - 2.222rem);
-            height: 2px;
-            background: $primary;
-            left: 50%;
-            transform: translateX(-50%);
-          }
-          .steppers-number {
-            color: $white;
-            background: $primary;
-            border-color: $primary;
-          }
-          &.no-line {
-            &:after {
-              display: none;
-            }
-          }
-        }
-        // success icon
-        .steppers-success {
-          margin-left: auto;
-        }
-        // numbers
-        .steppers-number {
-          display: inline-block;
-          width: 2rem;
-          height: 2rem;
-          border: 1px solid $gray-border;
-          border-radius: 50%;
-          text-align: center;
-          margin-right: 0.667rem;
-          flex-shrink: 0;
-          &:after {
-            display: none;
-          }
-          // numbers check
-          .icon {
-            &:before {
-              margin-right: 0;
-              margin-top: 0.333rem;
-            }
-          }
-        }
       }
-    }
 
-    // dark version
-    &.bg-dark {
-      .steppers-header {
-        // steps
-        li {
-          border-color: $neutral-1-a8;
-          // active
-          &.active {
-            &:after {
-              background: $analogue-2-a6;
-            }
-            .steppers-number {
-              background: $analogue-2-a6;
-              border-color: $analogue-2-a6;
-              color: $neutral-1-a10;
-            }
-          }
-          // numbers
-          .steppers-number {
-            border-color: $neutral-1-a6;
-          }
-        }
-      }
-    }
+      // Stepper item states
+      //
 
-    // navigation
-    .steppers-nav {
-      box-shadow: none; // TEMP
-      margin-top: 0.889rem;
-      align-items: center;
-      background: none;
-      .steppers-progress,
-      .steppers-dots {
-        display: none;
-      }
-      button {
-        .icon {
-          display: none;
-        }
-        &:not(.steppers-btn-confirm) {
-          margin-right: 0.889rem;
+      &:not(.active) {
+        @include media-breakpoint-down(lg) {
+          position: absolute;
+          display: block;
+          height: 0;
+          clip: rect(1px, 1px, 1px, 1px);
         }
       }
-      .steppers-btn-confirm {
+
+      &.active {
+        --#{$prefix}stepper-item-text-color: var(--#{$prefix}color-text-primary);
+        --#{$prefix}stepper-number-border-color: var(--#{$prefix}color-border-primary);
+        --#{$prefix}stepper-number-background: var(--#{$prefix}color-background-primary);
+        @include media-breakpoint-up(lg) {
+          border-bottom: var(--#{$prefix}stepper-active-indicator-height) solid var(--#{$prefix}stepper-item-border-color-active);
+        }
+      }
+
+      &.confirmed {
+        --#{$prefix}stepper-item-text-color: var(--#{$prefix}color-text-base);
+        --#{$prefix}stepper-number-border-color: var(--#{$prefix}color-border-success);
+        --#{$prefix}stepper-number-background: var(--#{$prefix}color-background-success);
+      }
+
+      &.active,
+      &.confirmed {
+        --#{$prefix}stepper-number-color: var(--#{$prefix}color-text-inverse);
+      }
+
+      &.steppers-index {
         display: block;
-        margin-left: auto;
       }
+    }
+  }
+
+  // Steppers icon
+  //
+
+  // Default icon for a stepper item
+  .icon {
+    width: var(--#{$prefix}stepper-icon-size);
+    height: var(--#{$prefix}stepper-icon-size);
+    margin-right: var(--#{$prefix}spacing-xxs);
+    fill: var(--#{$prefix}stepper-icon-color);
+
+    // Steppers success icon
+    &.steppers-success {
+      margin-left: auto;
+      fill: var(--#{$prefix}stepper-icon-confirmed);
+    }
+  }
+
+  // Steppers success icon when inside a number badge
+  .steppers-number .icon.steppers-success {
+    --#{$prefix}stepper-icon-confirmed: var(--#{$prefix}icon-inverse);
+    margin: 0; // Reset `auto`
+  }
+
+  // Steppers number badge
+  //
+
+  .steppers-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--#{$prefix}stepper-number-size);
+    height: var(--#{$prefix}stepper-number-size);
+    margin-right: var(--#{$prefix}spacing-xxs);
+    border: 1px solid var(--#{$prefix}stepper-number-border-color);
+    border-radius: var(--#{$prefix}radius-rounded);
+    background-color: var(--#{$prefix}stepper-number-background, transparent);
+    color: var(--#{$prefix}stepper-number-color);
+    line-height: var(--#{$prefix}stepper-number-size);
+
+    .icon {
+      margin-right: 0;
+      margin-left: 0;
     }
   }
 }
 
-//mobile ONLY BUTTONS
-@media (max-width: #{map-get($grid-breakpoints, lg) - 1px}) {
-  .steppers {
-    // navigation
-    .steppers-nav {
-      button:not(.steppers-btn-save):not(.steppers-btn-confirm) {
-        font-size: 1rem;
-        background: transparent;
-        color: $primary;
-        box-shadow: none;
-        padding-left: 0;
-        padding-right: 0;
-        &:hover,
-        &:focus,
-        &:active {
-          background: transparent !important;
-          color: $primary !important;
-          box-shadow: $btn-focus-box-shadow !important;
-        }
-        .icon {
-          margin: 0 0.333rem;
-          //font-size: 0.875rem;
-          height: 24px;
-          width: 24px;
-        }
-      }
-    }
+// Steppers save
+//
 
-    // dark version
-    &.bg-dark {
-      // navigation
-      .steppers-nav {
-        button:not(.steppers-btn-save):not(.steppers-btn-confirm) {
-          color: $white;
-          .icon {
-            fill: $white;
-          }
-          &:hover,
-          &:focus,
-          &:active {
-            color: $analogue-2-a6 !important;
-          }
-        }
-      }
-    }
+.steppers-save {
+  flex-direction: column;
+  justify-content: flex-start;
+  @include media-breakpoint-up(lg) {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  > div,
+  > button,
+  > a {
+    flex: 0 0 auto;
+    align-self: flex-start;
+    width: fit-content;
+    max-width: 100%;
+  }
+}
+
+// Stepper on dark background
+//
+
+.steppers.bg-dark,
+.bg-dark .steppers {
+  --#{$prefix}stepper-border-color: var(--it-color-slate-52);
+  --#{$prefix}stepper-icon-confirmed: var(--#{$prefix}icon-inverse);
+  --#{$prefix}stepper-item-text-color: var(--#{$prefix}color-text-inverse);
+  --#{$prefix}stepper-item-border-color-active: var(--#{$prefix}color-border-inverse);
+  --#{$prefix}stepper-number-border-color: var(--it-color-slate-52);
+  --#{$prefix}stepper-number-color: var(--it-color-slate-52);
+
+  .steppers-header ul li {
+    --#{$prefix}stepper-item-text-color: var(--it-color-slate-52);
+  }
+
+  .steppers-header ul li.confirmed {
+    --#{$prefix}stepper-item-text-color: var(--#{$prefix}color-text-inverse);
+  }
+
+  .steppers-header ul li.active {
+    --#{$prefix}stepper-item-text-color: var(--#{$prefix}color-text-inverse);
+    --#{$prefix}stepper-number-color: var(--#{$prefix}color-text-secondary);
+    --#{$prefix}stepper-number-background: var(--#{$prefix}color-background-inverse);
   }
 }

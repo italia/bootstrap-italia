@@ -38,6 +38,7 @@
   --#{$prefix}card-title-spacing-y: var(
     --#{$prefix}card-spacing-y
   ); // Controls the vertical spacing around the card title, using the card spacing variable for consistency
+  --#{$prefix}card-text-font-size: var(--#{$prefix}font-size-3); // Controls the font size of the main card text, using font size tokens
   --#{$prefix}card-signature-font-size: var(--#{$prefix}label-font-size); // Controls the font size of the card signature, using font size tokens
   --#{$prefix}card-signature-font-family: var(--#{$prefix}font-mono); // Controls the font family of the card signature, using font family tokens
 }
@@ -199,8 +200,8 @@
 
     // Card description
     .it-card-text {
-      font-size: var(--#{$prefix}font-size-base);
-      line-height: var(--#{$prefix}font-leading-5);
+      font-size: var(--#{$prefix}card-text-font-size);
+      line-height: var(--#{$prefix}body-leading);
 
       &:last-child {
         margin-bottom: 0;
