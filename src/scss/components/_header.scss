@@ -73,7 +73,7 @@
   --#{$prefix}header-slim-text-color: var(--#{$prefix}color-link);
   --#{$prefix}header-social-color: var(--#{$prefix}icon-primary);
   --#{$prefix}color-background-inverse-hover: var(--#{$prefix}header-center-text-color);
-  --#{$prefix}color-text-inverse: var(--#{$prefix}header-center-text-color);
+
 
   @include media-breakpoint-up(md) {
     --#{$prefix}header-search-icon-color: var(--#{$prefix}icon-inverse);
