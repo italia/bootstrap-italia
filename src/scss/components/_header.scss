@@ -16,7 +16,7 @@
   --#{$prefix}header-brand-color: var(--#{$prefix}color-text-inverse); // Controls the brand color for the header, using color tokens.
   --#{$prefix}header-brand-icon-color: var(--#{$prefix}icon-inverse); // Controls the brand icon color for the header, using icon tokens.
   --#{$prefix}header-brand-size: 2.5rem; // Controls the header brand size.
-  --#{$prefix}header-brand-spacing: var(--it-spacing-14x); // Controls the brand spacing for the header, using spacing tokens.  
+  --#{$prefix}header-brand-spacing: var(--it-spacing-14x); // Controls the brand spacing for the header, using spacing tokens.
   --#{$prefix}header-brand-tagline-size: var(--#{$prefix}body-font-size); // Controls the brand tagline size for the header, using font tokens
   --#{$prefix}header-brand-title-size: var(--#{$prefix}heading-5-font-size); // Controls the brand title size for the header, using font tokens.
   --#{$prefix}header-center-background: var(--#{$prefix}color-background-primary); // Controls the center background for the header, using color tokens.
@@ -26,7 +26,9 @@
   --#{$prefix}header-nav-background: var(--#{$prefix}color-background-primary); // Controls the nav background for the header, using color tokens
   --#{$prefix}header-nav-secondary-font-size: var(--#{$prefix}label-font-size); // Controls the nav secondary font size for the header, using font tokens
   --#{$prefix}header-nav-text-color: var(--#{$prefix}color-link); // Controls the nav text color for the header, using color tokens
-  --#{$prefix}header-search-button-background: var(--#{$prefix}color-background-inverse); // Controls the search button background for the header, using color tokens.
+  --#{$prefix}header-search-button-background: var(
+    --#{$prefix}color-background-inverse
+  ); // Controls the search button background for the header, using color tokens.
   --#{$prefix}header-search-button-color: var(--#{$prefix}icon-inverse); // Controls the search button color for the header, using icon tokens.
   --#{$prefix}header-search-button-size: 3rem; // Controls the header search button size.
   --#{$prefix}header-search-icon-color: var(--#{$prefix}icon-inverse); // Controls the search icon color for the header, using icon tokens.
@@ -45,8 +47,8 @@
   @include media-breakpoint-up(lg) {
     --#{$prefix}header-brand-size: 4.5rem;
     --#{$prefix}header-brand-title-size: var(--#{$prefix}heading-3-font-size);
-    --#{$prefix}header-center-height: 7.5rem; 
-    --#{$prefix}header-nav-text-color: var(--#{$prefix}color-text-inverse); 
+    --#{$prefix}header-center-height: 7.5rem;
+    --#{$prefix}header-nav-text-color: var(--#{$prefix}color-text-inverse);
   }
 }
 
@@ -190,7 +192,7 @@
     // Add border bottom on light theme
     &.theme-light,
     &.theme-light-desk {
-     border-bottom: 1px solid var(--#{$prefix}header-slim-border-color);
+      border-bottom: 1px solid var(--#{$prefix}header-slim-border-color);
     }
   }
 }
