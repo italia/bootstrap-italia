@@ -756,6 +756,88 @@
             "variable-name": "--bsi-card-signature-font-family"
         }
     ],
+    "carousel": [
+        {
+            "description": "Controls the arrow button size, using spacing tokens.",
+            "value": "var(--bsi-spacing-xl)",
+            "variable-name": "--bsi-carousel-arrow-size"
+        },
+        {
+            "description": "Controls the arrow icon size, using spacing tokens",
+            "value": "var(--bsi-spacing-s)",
+            "variable-name": "--bsi-carousel-arrow-icon-size"
+        },
+        {
+            "description": "Controls the arrow button background, using color tokens",
+            "value": "var(--bsi-color-background-primary)",
+            "variable-name": "--bsi-carousel-arrow-background"
+        },
+        {
+            "description": "Controls the arrow icon color, using color tokens",
+            "value": "var(--bsi-color-text-inverse)",
+            "variable-name": "--bsi-carousel-arrow-icon-color"
+        },
+        {
+            "description": "Controls the arrow offset from the carousel edges, using spacing tokens",
+            "value": "var(--bsi-spacing-m)",
+            "variable-name": "--bsi-carousel-arrow-offset"
+        },
+        {
+            "description": "Controls the card bottom padding, using spacing tokens",
+            "value": "var(--bsi-spacing-s)",
+            "variable-name": "--bsi-carousel-card-padding-bottom"
+        },
+        {
+            "description": "Controls the divider color between slides, using color tokens",
+            "value": "var(--bsi-color-border-subtle)",
+            "variable-name": "--bsi-carousel-divider-color"
+        },
+        {
+            "description": "Controls the divider offset from the slide edge, using spacing tokens",
+            "value": "var(--bsi-spacing-xs)",
+            "variable-name": "--bsi-carousel-divider-offset"
+        },
+        {
+            "description": "Controls the heading font size for carousel header.",
+            "value": "1.75rem",
+            "variable-name": "--bsi-carousel-heading-font-size"
+        },
+        {
+            "description": "Controls the inline padding for carousel header, using spacing tokens",
+            "value": "var(--bsi-spacing-m)",
+            "variable-name": "--bsi-carousel-heading-padding-inline"
+        },
+        {
+            "description": "Controls the heading border color, using color tokens",
+            "value": "var(--bsi-color-border-subtle)",
+            "variable-name": "--bsi-carousel-heading-border-color"
+        },
+        {
+            "description": "Controls the landscape card body spacing, using spacing tokens",
+            "value": "var(--bsi-spacing-xxl)",
+            "variable-name": "--bsi-carousel-landscape-card-spacing"
+        },
+        {
+            "description": "Controls the dot size for carousel pagination, using spacing tokens",
+            "value": "1rem",
+            "variable-name": "--bsi-carousel-pagination-dot-size"
+        },
+        {
+            "description": "Controls the dot color for carousel pagination.",
+            "value": "var(--bsi-color-background-subtle)",
+            "variable-name": "--bsi-carousel-pagination-dot-color"
+        },
+        {
+            "description": "Controls the spacing around pagination dots, using spacing tokens",
+            "value": "var(--bsi-spacing-m)",
+            "variable-name": "--bsi-carousel-pagination-spacing"
+        },
+        {
+            "description": "Controls the track top padding, using spacing tokens.",
+            "value": "var(--bsi-spacing-m)",
+            "variable-name": "--bsi-carousel-track-padding-top"
+        }
+    ],
     "chip": [
         {
             "description": "Controls the background color for the chip, using color tokens.",
@@ -2275,6 +2357,58 @@
             "description": "Controls the tabs border color, using color tokens.",
             "value": "var(--bsi-color-border-subtle)",
             "variable-name": "--bsi-tabs-border-color"
+        }
+    ],
+    "timeline": [
+        {
+            "description": "",
+            "value": "var(--bsi-color-background-secondary)",
+            "variable-name": "--bsi-timeline-point-color"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-border-thick)",
+            "variable-name": "--bsi-timeline-line-width"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-spacing-xs)",
+            "variable-name": "--bsi-timeline-padding"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-background-primary-deep)",
+            "variable-name": "--bsi-timeline-line-color"
+        },
+        {
+            "description": "",
+            "value": "24px",
+            "variable-name": "--bsi-timeline-pin-size"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-background-primary-deep)",
+            "variable-name": "--bsi-timeline-pin-background"
+        },
+        {
+            "description": "",
+            "value": "48px",
+            "variable-name": "--bsi-timeline-pin-circle-size"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-border-broad) solid var(--bsi-color-background-inverse)",
+            "variable-name": "--bsi-timeline-pin-circle-border"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-spacing-s) var(--bsi-spacing-s) var(--bsi-spacing-s) var(--bsi-spacing-xl)",
+            "variable-name": "--bsi-timeline-content-padding"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-spacing-s) var(--bsi-spacing-xl) var(--bsi-spacing-s) var(--bsi-spacing-s)",
+            "variable-name": "--bsi-timeline-content-padding-reverse"
         }
     ],
     "toggle": [
