@@ -34,10 +34,10 @@
   display: none;
   width: auto;
   padding: var(--#{$prefix}notification-padding-y) var(--#{$prefix}notification-padding-x);
+  border-left: var(--#{$prefix}notification-border-width) solid var(--#{$prefix}notification-border-color);
   border-radius: var(--#{$prefix}radius-smooth);
   background: var(--#{$prefix}notification-background);
   box-shadow: var(--#{$prefix}notification-box-shadow);
-  border-left: var(--#{$prefix}notification-border-width) solid var(--#{$prefix}notification-border-color);
   
   // Tablet vertical
   @include media-breakpoint-up(md) {
@@ -50,9 +50,9 @@
       right: auto;
       bottom: auto;
       left: 50%;
+      border-bottom-width: var(--#{$prefix}notification-border-width);
       border-top-left-radius: 0;
       border-top-right-radius: 0;
-      border-bottom-width: var(--#{$prefix}notification-border-width);
       transform: translateX(-50%);
     }
 
@@ -60,9 +60,9 @@
       right: auto;
       bottom: 0;
       left: 50%;
+      border-top-width: var(--#{$prefix}notification-border-width);
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
-      border-top-width: var(--#{$prefix}notification-border-width);
       transform: translateX(-50%);
     }
 
@@ -73,10 +73,10 @@
       left: 0;
       border-left: none;
       border-right-width: var(--#{$prefix}notification-border-width);
-      border-right-color: var(--#{$prefix}notification-border-color);
       border-right-style: solid;
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
+      border-right-color: var(--#{$prefix}notification-border-color);
       transform: translateY(-50%);
     }
 
