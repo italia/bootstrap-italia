@@ -10,18 +10,17 @@
 //
 
 .dimmer {
-  --#{$prefix}dimmer-padding: var(--#{$prefix}spacing-l); // Controls the padding of the dimmer, using spacing tokens.
   --#{$prefix}dimmer-background: var(--#{$prefix}overlay-background-primary-muted); // Controls the background color of the dimmer, using overlay background tokens.
-  --#{$prefix}dimmer-text-color: var(--#{$prefix}color-text-inverse); // Controls the text color of the dimmer, using color tokens.
-  --#{$prefix}dimmer-heading-size: var(--#{$prefix}heading-3-font-size); // Controls the heading size of the dimmer, using typography tokens.
   --#{$prefix}dimmer-body-font-size: var(--#{$prefix}body-font-size); // Controls the body font size of the dimmer, using typography tokens.
   --#{$prefix}dimmer-body-font-family: var(--#{$prefix}font-serif); // Controls the body font family of the dimmer, using typography tokens.
-  --#{$prefix}dimmer-icon-gap: var(--#{$prefix}spacing-m); // Controls the gap between the icon and the text of the dimmer, using spacing tokens.
-  --#{$prefix}dimmer-buttons-gap: var(--#{$prefix}spacing-l); // Controls the gap between the buttons of the dimmer, using spacing tokens.
   --#{$prefix}dimmer-button-gap: var(--#{$prefix}spacing-s); // Controls the gap between the buttons of the dimmer, using spacing tokens.
   --#{$prefix}dimmer-button-width: var(--#{$prefix}sizing-full); // Controls the width of the buttons of the dimmer, using sizing tokens.
   --#{$prefix}dimmer-button-last-margin-top: var(--#{$prefix}dimmer-button-gap); // Controls the margin top of the last button of the dimmer.
-  // scss-docs-end dimmer-variables
+  --#{$prefix}dimmer-buttons-gap: var(--#{$prefix}spacing-l); // Controls the gap between the buttons of the dimmer, using spacing tokens.
+  --#{$prefix}dimmer-heading-size: var(--#{$prefix}heading-3-font-size); // Controls the heading size of the dimmer, using typography tokens.
+  --#{$prefix}dimmer-icon-gap: var(--#{$prefix}spacing-m); // Controls the gap between the icon and the text of the dimmer, using spacing tokens.
+  --#{$prefix}dimmer-padding: var(--#{$prefix}spacing-l); // Controls the padding of the dimmer, using spacing tokens.
+  --#{$prefix}dimmer-text-color: var(--#{$prefix}color-text-inverse); // Controls the text color of the dimmer, using color tokens.
 }
 
 // Styles
@@ -120,7 +119,7 @@
   position: relative;
 }
 
-// Tablet vertical
+// Responsive: Tablet
 @include media-breakpoint-up(md) {
   .dimmer {
     --#{$prefix}dimmer-padding: var(--#{$prefix}spacing-m);
