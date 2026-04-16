@@ -177,14 +177,14 @@
     top: 50%;
     left: 8px;
     z-index: 3;
-    margin-top: -20px;
+    transform: translateY(-50%);
     transition: padding-top var(--#{$prefix}transition-instant) ease;
     @include media-breakpoint-up(lg) {
       position: inherit;
       top: inherit;
       left: auto;
-      margin-top: 0;
       background: var(--#{$prefix}header-nav-background);
+      transform: none;
     }
 
     // Add border bottom on light theme
