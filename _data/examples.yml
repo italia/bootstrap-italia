@@ -4,6 +4,9 @@
     - name: Cookiebar
       url: cookiebar
       description: Una barra di avviso sui cookie.
+    - name: Header
+      url: header
+      description: Header standard di navigazione.
     - name: Notification
       url: notification
       description: Pagina con vari esempi di Notification.
