@@ -40,10 +40,12 @@
   width: calc(100% - var(--#{$prefix}notification-position-distance) * 2);
   padding: var(--#{$prefix}notification-padding-y) var(--#{$prefix}notification-padding-x);
   border: 1px solid var(--#{$prefix}notification-border-color);
-  box-shadow: inset var(--#{$prefix}notification-inset-line-width) 0 0 var(--#{$prefix}notification-inset-line-color), var(--#{$prefix}notification-box-shadow);
+  box-shadow:
+    inset var(--#{$prefix}notification-inset-line-width) 0 0 var(--#{$prefix}notification-inset-line-color),
+    var(--#{$prefix}notification-box-shadow);
   border-radius: var(--#{$prefix}radius-smooth);
   background: var(--#{$prefix}notification-background);
-  
+
   // Responsive: Tablet
   @include media-breakpoint-up(md) {
     width: 33vw;
@@ -111,7 +113,6 @@
 
   // With icon
   &.with-icon {
-
     .notification-title {
       display: flex;
       align-items: center;
