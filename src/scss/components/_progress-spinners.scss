@@ -10,13 +10,13 @@
 //
 
 .progress-spinner {
-  --#{$prefix}progress-spinner-bg: var(--#{$prefix}color-border-secondary);
-  --#{$prefix}progress-spinner-size: 48px;
-  --#{$prefix}progress-spinner-size-sm: 32px;
-  --#{$prefix}progress-spinner-size-lg: 64px;
-  --#{$prefix}progress-spinner-size-xl: 80px;
-  --#{$prefix}progress-spinner-border-width: 4px;
-  --#{$prefix}progress-spinner-animation-duration: 0.75s;
+  --#{$prefix}progress-spinner-bg: var(--#{$prefix}color-border-secondary); // Controls the progress spinner bg, using color tokens.
+  --#{$prefix}progress-spinner-size: 48px; // Controls the progress spinner size.
+  --#{$prefix}progress-spinner-size-sm: 32px; // Controls the progress spinner size sm.
+  --#{$prefix}progress-spinner-size-lg: 64px; // Controls the progress spinner size lg.
+  --#{$prefix}progress-spinner-size-xl: 80px; // Controls the progress spinner size xl.
+  --#{$prefix}progress-spinner-border-width: 4px; // Controls the progress spinner border width.
+  --#{$prefix}progress-spinner-animation-duration: 0.75s; // Controls the progress spinner animation duration.
 }
 
 // Styles
