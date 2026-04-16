@@ -12,172 +12,169 @@
 // Styles
 //
 
-//mobile
 .notification {
-  width: 100%;
-  padding: 1.5rem;
-  padding-right: 4rem;
-  box-shadow: 0 -0.5rem 1rem rgba(0, 0, 0, 0.15);
-  background: $white;
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  display: none;
-  border-top: 4px solid $color-border-secondary;
+  --#{$prefix}notification-background: var(--#{$prefix}color-background-inverse);
+  --#{$prefix}notification-border-color: var(--#{$prefix}color-border-subtle);
+  --#{$prefix}notification-box-shadow: var(--#{$prefix}elevation-medium);
+  --#{$prefix}notification-inset-line-width: var(--#{$prefix}border-thick);
+  --#{$prefix}notification-inset-line-color: var(--#{$prefix}color-border-primary);
+  --#{$prefix}notification-padding-x: var(--#{$prefix}spacing-s);
+  --#{$prefix}notification-padding-y: var(--#{$prefix}spacing-s);
+  --#{$prefix}notification-padding-right: calc(var(--#{$prefix}spacing-m) + var(--#{$prefix}spacing-xl));
+  --#{$prefix}notification-position-distance: var(--#{$prefix}spacing-xxs);
+  --#{$prefix}notification-title-color: var(--#{$prefix}color-text-base);
+  --#{$prefix}notification-title-font-size: var(--#{$prefix}heading-6-font-size);
+  --#{$prefix}notification-text-color: var(--#{$prefix}color-text-secondary);
+  --#{$prefix}notification-text-font-size: var(--#{$prefix}label-font-size);
+  @include media-breakpoint-up(md) {
+    --#{$prefix}notification-position-distance: var(--#{$prefix}spacing-s);
+  }
+}
 
-  //title
-  h5 {
-    font-size: 0.875rem;
-    text-transform: uppercase;
-    color: $color-text-base;
-    letter-spacing: 0;
-    margin: 0;
+/* stylelint-disable-next-line no-duplicate-selectors */
+.notification {
+  position: fixed;
+  right: var(--#{$prefix}notification-position-distance);
+  bottom: var(--#{$prefix}notification-position-distance);
+  display: none;
+  width: calc(100% - var(--#{$prefix}notification-position-distance) * 2);
+  padding: var(--#{$prefix}notification-padding-y) var(--#{$prefix}notification-padding-x);
+  border: 1px solid var(--#{$prefix}notification-border-color);
+  box-shadow: inset var(--#{$prefix}notification-inset-line-width) 0 0 var(--#{$prefix}notification-inset-line-color), var(--#{$prefix}notification-box-shadow);
+  border-radius: var(--#{$prefix}radius-smooth);
+  background: var(--#{$prefix}notification-background);
+  
+  // Responsive: Tablet
+  @include media-breakpoint-up(md) {
+    width: 33vw;
+    max-width: 300px;
+
+    // Fixed positions
+    &.top-fix {
+      top: var(--#{$prefix}notification-position-distance);
+      right: auto;
+      bottom: auto;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &.bottom-fix {
+      right: auto;
+      bottom: var(--#{$prefix}notification-position-distance);
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &.left-fix {
+      top: 50%;
+      right: auto;
+      bottom: auto;
+      left: var(--#{$prefix}notification-position-distance);
+      border-left: none;
+      transform: translateY(-50%);
+    }
+
+    &.right-fix {
+      top: 50%;
+      right: var(--#{$prefix}notification-position-distance);
+      bottom: auto;
+      transform: translateY(-50%);
+    }
+  }
+
+  // Responsive: Desktop
+  @include media-breakpoint-up(lg) {
+    width: 25vw;
+    max-width: 375px;
+  }
+
+  // Title
+  &-title {
     position: relative;
-    line-height: 1rem;
-    font-weight: 700;
+    margin: 0;
+    color: var(--#{$prefix}notification-title-color);
+    font-size: var(--#{$prefix}notification-title-font-size);
+    font-weight: var(--#{$prefix}font-weight-strong);
+    line-height: var(--#{$prefix}heading-leading);
   }
+
   p {
-    margin-top: 1rem;
-    font-size: 0.875rem;
-    line-height: 1.5rem;
-    color: $color-text-secondary;
+    margin-top: var(--#{$prefix}spacing-xxs);
+    color: var(--#{$prefix}notification-text-color);
+    font-size: var(--#{$prefix}notification-text-font-size);
+    line-height: var(--#{$prefix}body-leading);
   }
+
   p:last-child {
     margin-bottom: 0;
   }
 
-  //icon version
+  // With icon
   &.with-icon {
-    border-top: 4px solid $color-border-secondary;
-    h5 {
-      .icon {
-        position: absolute;
-        top: -8px;
-        left: -38px;
-      }
+
+    .notification-title {
+      display: flex;
+      align-items: center;
     }
-    h5,
+
     p {
-      margin-left: 2rem;
+      margin-bottom: 0;
+      margin-left: var(--#{$prefix}spacing-xl);
     }
-    //status variants
+
+    // Status variants
     &.success {
-      border-color: $success;
-      .icon {
-        fill: $success;
-      }
+      --#{$prefix}notification-inset-line-color: var(--#{$prefix}color-border-success);
+      --#{$prefix}notification-icon-fill: var(--#{$prefix}icon-success);
     }
+
     &.error {
-      border-color: $danger;
-      .icon {
-        fill: $danger;
-      }
+      --#{$prefix}notification-inset-line-color: var(--#{$prefix}color-border-danger);
+      --#{$prefix}notification-icon-fill: var(--#{$prefix}icon-danger);
     }
+
     &.info {
-      border-color: $primary;
-      .icon {
-        fill: $primary;
-      }
+      --#{$prefix}notification-inset-line-color: var(--#{$prefix}color-border-secondary);
+      --#{$prefix}notification-icon-fill: var(--#{$prefix}icon-secondary);
     }
+
     &.warning {
-      border-color: $warning;
-      .icon {
-        fill: $warning;
-      }
+      --#{$prefix}notification-inset-line-color: var(--#{$prefix}color-border-warning);
+      --#{$prefix}notification-icon-fill: var(--#{$prefix}icon-warning);
+    }
+
+    &.success .icon,
+    &.error .icon,
+    &.info .icon,
+    &.warning .icon {
+      fill: var(--#{$prefix}notification-icon-fill);
+      margin-right: var(--#{$prefix}spacing-xxs);
     }
   }
-  // dismissable version
+
+  // Dismissable
   &.dismissable {
-    //close button
     .notification-close {
       position: absolute;
-      right: 20px;
-      top: 15px;
+      top: var(--#{$prefix}notification-padding-y);
+      right: var(--#{$prefix}notification-padding-x);
       display: block;
-      width: 32px;
-      height: 32px;
       padding: 0;
       background: none;
+
       .icon {
-        fill: $icon-secondary;
+        fill: var(--#{$prefix}icon-secondary);
       }
+
       &:hover {
         .icon {
-          fill: $icon-primary;
+          fill: var(--#{$prefix}icon-primary);
         }
       }
+
       &:active {
         box-shadow: none;
       }
-    }
-  }
-}
-
-//small - tablet
-@include media-breakpoint-up(sm) {
-  .notification {
-    padding: 1.333rem;
-    padding-right: 3.556rem;
-    &.with-icon {
-      h5,
-      p {
-        margin-left: 1.778rem;
-      }
-    }
-  }
-}
-
-//Tablet vertical
-@include media-breakpoint-up(md) {
-  .notification {
-    width: 376px;
-    bottom: 16px;
-    right: 16px;
-    border-radius: $border-radius;
-    border-top: none;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.15);
-    //icon version
-    &.with-icon {
-      border-left: 4px solid $secondary;
-      border-top: none;
-    }
-    //fix variants
-    &.top-fix {
-      border-top-left-radius: 0;
-      border-top-right-radius: 0;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      bottom: auto;
-      right: auto;
-    }
-    &.bottom-fix {
-      border-bottom-left-radius: 0;
-      border-bottom-right-radius: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      bottom: 0;
-      right: auto;
-    }
-    &.left-fix {
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
-      border-left: none;
-      border-right-style: solid;
-      border-right-width: 4px;
-      left: 0;
-      right: auto;
-      top: 50%;
-      bottom: auto;
-      transform: translateY(-50%);
-    }
-    &.right-fix {
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
-      right: 0;
-      top: 50%;
-      bottom: auto;
-      transform: translateY(-50%);
     }
   }
 }
