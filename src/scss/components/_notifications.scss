@@ -156,7 +156,7 @@
   &.dismissable {
     .notification-close {
       position: absolute;
-      top: 20px;
+      top: var(--#{$prefix}notification-padding-y);
       right: var(--#{$prefix}notification-padding-x);
       display: block;
       padding: 0;
