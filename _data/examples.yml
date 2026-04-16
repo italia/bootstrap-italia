@@ -4,9 +4,9 @@
     - name: Cookiebar
       url: cookiebar
       description: Una barra di avviso sui cookie.
-    - name: Notifiche
-      url: notifications
-      description: Pagina con vari esempi di Notifiche.
+    - name: Notification
+      url: notification
+      description: Pagina con vari esempi di Notification.
     - name: Navscroll
       url: navscroll
       description: Pagina con esempio di Navscroll.
