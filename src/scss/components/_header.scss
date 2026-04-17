@@ -183,7 +183,7 @@
   .it-header-navbar-wrapper {
     height: var(--#{$prefix}header-center-height); // Set height for mobile
     background-color: var(--#{$prefix}header-center-background); // Set background color for mobile
-    display: flex; 
+    display: flex;
     align-items: center;
 
     // Restore default styles on desktop
