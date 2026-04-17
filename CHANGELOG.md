@@ -1,3 +1,17 @@
+# [3.0.0-alpha.8](https://github.com/italia/bootstrap-italia/compare/v3.0.0-alpha.7...v3.0.0-alpha.8) (2026-04-17)
+
+
+### Bug Fixes
+
+* update comment for heading spacing to clarify specificity impact ([1a8c195](https://github.com/italia/bootstrap-italia/commit/1a8c1954e8e5a57862052208118ac5e3ceb54305))
+
+
+### Features
+
+* add new Header example to examples.yml ([0966514](https://github.com/italia/bootstrap-italia/commit/096651466c91a0cf3f3eb59d5c6214e6e4db31d3))
+
+
+
 # [3.0.0-alpha.7](https://github.com/italia/bootstrap-italia/compare/v3.0.0-alpha.6...v3.0.0-alpha.7) (2026-04-16)
 
 

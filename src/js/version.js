@@ -8,5 +8,5 @@
 
 // NOTE:bootstrap italia version variable, useful to check for the current version
 
-const BOOTSTRAP_ITALIA_VERSION = '3.0.0-alpha.7'
+const BOOTSTRAP_ITALIA_VERSION = '3.0.0-alpha.8'
 export default BOOTSTRAP_ITALIA_VERSION
