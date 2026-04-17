@@ -58,8 +58,7 @@
 // Light theme
 .it-header-slim-wrapper.theme-light,
 .it-header-center-wrapper.theme-light,
-.it-header-navbar-wrapper.theme-light,
-.it-header-navbar-wrapper.theme-light-desk {
+.it-header-navbar-wrapper.theme-light {
   --#{$prefix}header-brand-color: var(--#{$prefix}color-text-primary);
   --#{$prefix}header-brand-icon-color: var(--#{$prefix}icon-primary);
   --#{$prefix}header-center-background: var(--#{$prefix}color-background-inverse);

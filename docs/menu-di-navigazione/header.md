@@ -547,10 +547,7 @@ I'Header Nav ha due temi colore, uno chiaro ("light") e uno scuro ("dark"). Lo s
 - Su **desktop** lo stile di default ha un **background di colore primario e link bianchi**. Gli elementi **Dropdown** e **Megamenu** hanno background bianco, testi neri e link di colore primario.
 - Su **mobile** lo stile di default ha un **background bianco e testi e link di colore primario**.
 
-Per modificare il tema dell'Header Nav è sufficiente aggiungere una o tutte e due le seguenti classi al tag `<nav class="it-header-navbar-wrapper">`:
-
-- la classe **`.theme-dark-mobile`** riguarda la versione **mobile** dell'Header Nav, impostando lo sfondo di colore primario con testi e link bianchi;
-- la classe **`.theme-light-desk`** riguarda la versione **desktop** dell'Header Nav, impostando lo sfondo bianco con testi e link di colore primario. Gli elementi **Dropdown** e **Megamenu** in questo caso assumono sfondo di colore primario con testi e link bianchi.
+Per modificare il colore di sfondo e testi di Header Nav bisogna aggiungere la class `.theme-light` al tag `<nav class="it-header-navbar-wrapper">`:
 
 #### Header Nav standard
 
@@ -689,149 +686,12 @@ Per modificare il tema dell'Header Nav è sufficiente aggiungere una o tutte e d
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-#### Header Nav mobile scura
-
-{% comment %}Example name: Header navigazione mobile scura{% endcomment %}
-{% capture example %}
-
-<div class="it-header-navbar-wrapper theme-dark-mobile">
-  <div class="container-xxl">
-    <div class="row">
-      <div class="col-12">
-        <!--start nav-->
-        <nav class="navbar navbar-expand-lg" aria-label="Navigazione principale">
-          <button class="custom-navbar-toggler" type="button" aria-controls="nav2" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#nav2">
-            <svg class="icon"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-burger"></use></svg>
-          </button>
-          <div class="navbar-collapsable" id="nav2" tabindex="-1">
-            <div class="close-div">
-              <button class="btn close-menu" type="button">
-                <span class="visually-hidden">Nascondi la navigazione</span>
-                <svg class="icon"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-close-big"></use></svg>
-              </button>
-            </div>
-            <div class="menu-wrapper">
-              <ul class="navbar-nav">
-                <li class="nav-item active"><a class="nav-link active" href="#" aria-current="page"><span>Link attivo</span></a></li>
-                <li class="nav-item"><a class="nav-link disabled" href="#" aria-disabled="true"><span>Link disabilitato</span></a></li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="mainNavDropdown2">
-                    <span>Dropdown</span>
-                    <svg class="icon icon-xs"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
-                  </a>
-                  <div class="dropdown-menu" role="region" aria-labelledby="mainNavDropdown2">
-                    <div class="link-list-wrapper">
-                      <ul class="link-list">
-                        <li><a class="dropdown-item list-item" href="#"><span>Link lista 1</span></a></li>
-                        <li><a class="dropdown-item list-item" href="#"><span>Link lista 2</span></a></li>
-                        <li><a class="dropdown-item list-item" href="#"><span>Link lista 3</span></a></li>
-                        <li><span class="divider"></span></li>
-                        <li><a class="dropdown-item list-item" href="#"><span>Link lista 4</span></a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </li>
-                <!-- megamenu -->
-                <li class="nav-item dropdown megamenu">
-                  <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-3" data-focus-mouse="false">
-                      <span>Megamenu</span><svg role="img" class="icon icon-xs"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
-                  </button>
-                  <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-3">
-                    <div class="megamenu-content">
-                      <div class="row">
-                        <div class="col-xs-12 col-lg-4 px-0">
-                          <div class="row">
-                            <div class="col-12 it-vertical it-description pb-lg-3">
-                              <div class="description-content px-4 ps-sm-5 ms-3">
-                                <div class="ratio ratio-21x9 lightgrey-bg-a1 mb-4 rounded">
-                                  <figure class="figure">
-                                    <img src="https://placehold.co/560x240/ebebeb/808080/?text=Immagine" class="figure-img img-fluid rounded" alt="Segnaposto">
-                                  </figure>
-                                </div>
-                                <p>
-                                  Testo utile a fornire una descrizione dei contenuti della sezione <strong>megamenu</strong>.
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-12 col-lg-8">
-                          <div class="it-heading-link-wrapper">
-                            <a class="it-heading-link" href="#"><svg role="img" class="icon icon-sm me-2 mb-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
-                            <span>Esplora la sezione megamenu</span>
-                            </a>
-                          </div>
-                          <div class="row">
-                            <div class="col-12 col-lg-6">
-                              <div class="link-list-wrapper">
-                                <ul class="link-list">
-                                  <li>
-                                    <a class="list-item dropdown-item" href="#">
-                                      <svg role="img" class="icon icon-sm me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
-                                      <span>Link lista 1</span>
-                                    </a>
-                                  </li>
-                                  <li>
-                                    <a class="list-item dropdown-item" href="#">
-                                      <svg role="img" class="icon icon-sm me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
-                                      <span>Link lista 2</span>
-                                    </a>
-                                  </li>
-                                  <li>
-                                    <a class="list-item dropdown-item " href="#">
-                                      <svg role="img" class="icon icon-sm me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
-                                      <span>Link lista 3</span>
-                                    </a>
-                                  </li>
-                                </ul>
-                              </div>
-                            </div>
-                            <div class="col-12 col-lg-6">
-                              <div class="link-list-wrapper">
-                                <ul class="link-list">
-                                  <li>
-                                    <a class="list-item dropdown-item" href="#">
-                                      <svg role="img" class="icon icon-sm me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
-                                      <span>Link lista 4</span>
-                                    </a>
-                                  </li>
-                                  <li>
-                                    <a class="list-item dropdown-item" href="#">
-                                      <svg role="img" class="icon icon-sm me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
-                                      <span>Link lista 5</span>
-                                    </a>
-                                  </li>
-                                  <li>
-                                    <a class="list-item dropdown-item " href="#">
-                                      <svg role="img" class="icon icon-sm me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
-                                      <span>Link lista 6</span>
-                                    </a>
-                                  </li>
-                                </ul>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </div>
-    </div>
-  </div>
-</div>
-{% endcapture %}{% include example.html content=example %}
-
-#### Header Nav desktop chiara
+#### Header Nav - tema chiaro
 
 {% comment %}Example name: Header navigazione desktop chiara{% endcomment %}
 {% capture example %}
 
-<div class="it-header-navbar-wrapper theme-light-desk">
+<div class="it-header-navbar-wrapper theme-light">
   <div class="container-xxl">
     <div class="row">
       <div class="col-12">
