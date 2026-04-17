@@ -179,7 +179,7 @@
     top: 50%;
     left: 8px;
     z-index: 3;
-    transform: translateY(-50%);
+
     transition: padding-top var(--#{$prefix}transition-instant) ease;
     @include media-breakpoint-up(lg) {
       position: inherit;

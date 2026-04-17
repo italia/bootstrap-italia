@@ -397,6 +397,7 @@
 
 // Custom Navbar Toggler - used in Header component
 .custom-navbar-toggler {
+  margin-top:calc(var(--#{$prefix}spacing-xs) * -1); // fix to align with the navbar brand
   padding: 0;
   border: none;
   background: none;
