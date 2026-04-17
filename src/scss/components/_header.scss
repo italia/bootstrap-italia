@@ -84,16 +84,6 @@
   &.it-header-sticky.is-sticky {
     width: 100%;
 
-    .it-nav-wrapper {
-      top: 0;
-      z-index: 10;
-      width: 100%;
-    }
-
-    .it-header-slim-wrapper {
-      display: none;
-    }
-
     @include media-breakpoint-up(lg) {
       .it-header-slim-wrapper,
       .it-header-center-wrapper {
@@ -167,32 +157,48 @@
         }
       }
     }
+
+    .it-nav-wrapper {
+      top: 0;
+      z-index: 10;
+      width: 100%;
+    }
+
+    .it-header-slim-wrapper {
+      display: none;
+    }
   }
 }
 
 .it-nav-wrapper {
   position: relative;
   z-index: auto;
+  display: flex;
+  flex-direction: row-reverse;
+  width: auto;
+  @include media-breakpoint-up(lg) {
+    display: block;
+  }
 
   .it-header-navbar-wrapper {
-    position: absolute;
-    top: 50%;
-    left: 8px;
-    z-index: 3;
+    height: var(--#{$prefix}header-center-height); // Set height for mobile
+    background-color: var(--#{$prefix}header-center-background); // Set background color for mobile
+    display: flex; 
+    align-items: center;
 
-    transition: padding-top var(--#{$prefix}transition-instant) ease;
+    // Restore default styles on desktop
     @include media-breakpoint-up(lg) {
-      position: inherit;
-      top: inherit;
-      left: auto;
-      background: var(--#{$prefix}header-nav-background);
-      transform: none;
+      height: auto;
+      display: block;
     }
+  }
+}
 
-    // Add border bottom on light theme
-    &.theme-light,
-    &.theme-light-desk {
-      border-bottom: 1px solid var(--#{$prefix}header-slim-border-color);
-    }
+// Add border bottom on light theme
+.it-header-center-wrapper,
+.it-header-navbar-wrapper {
+  &.theme-light,
+  &.theme-light-desk {
+    border-bottom: 1px solid var(--#{$prefix}header-slim-border-color);
   }
 }
