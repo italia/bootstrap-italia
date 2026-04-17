@@ -28,7 +28,11 @@
   --#{$prefix}tab-add-btn-border: var(--#{$prefix}color-border-primary); // Controls the tab add btn border, using color tokens.
   --#{$prefix}tab-add-btn-color: var(--#{$prefix}color-background-primary); // Controls the tab add btn color, using color tokens.
   --#{$prefix}tab-close-btn-color: var(--#{$prefix}color-text-secondary); // Controls the tab close btn color, using color tokens.
-  --#{$prefix}tab-close-btn-color-hover: color-mix(in srgb, var(--#{$prefix}primary) 90%, black 10%); // Controls the tab close btn color hover, using color tokens.
+  --#{$prefix}tab-close-btn-color-hover: color-mix(
+    in srgb,
+    var(--#{$prefix}primary) 90%,
+    black 10%
+  ); // Controls the tab close btn color hover, using color tokens.
   --#{$prefix}tab-close-btn-color-disabled: var(--#{$prefix}color-text-disabled); // Controls the tab close btn color disabled, using color tokens.
 }
 
@@ -152,7 +156,7 @@
     margin-bottom: 0;
   }
 
-    // Vertical tabs
+  // Vertical tabs
   &.nav-tabs-vertical {
     flex-direction: column;
     border-color: var(--#{$prefix}tabs-border-color);
