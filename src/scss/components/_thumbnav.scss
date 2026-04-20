@@ -15,7 +15,7 @@
 .thumb-nav {
   --#{$prefix}thumb-nav-gap: var(--#{$prefix}spacing-xxs); // Controls the spacing between thumb items, using spacing tokens.
   --#{$prefix}thumb-nav-auto-basis-offset: var(--#{$prefix}spacing-s); // Controls the offset subtracted from auto layout item widths, using spacing tokens.
-  --#{$prefix}thumb-nav-overlay-offset: var(--#{$prefix}spacing-s); // Controls the external offset for overlay-positioned variants (top/bottom/left/right), using spacing tokens.
+  --#{$prefix}thumb-nav-overlay-offset: var(--#{$prefix}spacing-s); // Controls the external offset for overlay-positioned variants, using spacing tokens.
   --#{$prefix}thumb-nav-item-width: 240px; // Controls the default width for each thumb item.
   --#{$prefix}thumb-nav-item-width-small: 120px; // Controls the width for thumb items in small variant.
   --#{$prefix}thumb-nav-item-height-small-vertical: 80px; // Controls the height for vertical + small thumb items.
