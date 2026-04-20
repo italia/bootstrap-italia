@@ -19,7 +19,8 @@
   --#{$prefix}thumb-nav-item-width: 240px; // Controls the default width for each thumb item.
   --#{$prefix}thumb-nav-item-width-small: 120px; // Controls the width for thumb items in small variant.
   --#{$prefix}thumb-nav-item-height-small-vertical: 80px; // Controls the height for vertical + small thumb items.
-  --#{$prefix}thumb-nav-overlay-bg: var(--#{$prefix}overlay-background-primary); // Controls the default overlay background color for thumb states.
+  --#{$prefix}thumb-nav-overlay-bg-primary: var(--#{$prefix}overlay-background-primary); // Controls the default overlay background color for thumb states.
+  --#{$prefix}thumb-nav-overlay-bg-black: var(--#{$prefix}overlay-background-light); // Controls the default overlay background color for thumb states.
   --#{$prefix}thumb-nav-hover-scale: 1.05; // Controls the image zoom scale on hover.
   --#{$prefix}thumb-nav-transition-duration: 0.4s; // Controls the base transition duration for overlay and image transform.
   --#{$prefix}thumb-nav-transition-duration-hover: 1s; // Controls the transition duration applied during hover state.
@@ -113,12 +114,12 @@
   }
   &.thumb-nav-black {
     a:after {
-      background: rgba(0, 0, 0, var(--#{$prefix}thumb-nav-overlay-opacity-black));
+      background: var(--#{$prefix}thumb-nav-overlay-bg-black);
     }
   }
   &.thumb-nav-primary {
     a:after {
-      background: rgba($primary, var(--#{$prefix}thumb-nav-overlay-opacity-primary));
+      background: var(--#{$prefix}thumb-nav-overlay-bg-primary);
     }
   }
 
