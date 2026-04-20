@@ -13,19 +13,17 @@
 //
 
 .thumb-nav {
-  --#{$prefix}thumb-nav-gap: var(--#{$prefix}spacing-xxs);
-  --#{$prefix}thumb-nav-auto-basis-offset: var(--#{$prefix}spacing-s);
-  --#{$prefix}thumb-nav-overlay-offset: var(--#{$prefix}spacing-s);
-  --#{$prefix}thumb-nav-item-width: 240px;
-  --#{$prefix}thumb-nav-item-width-small: 120px;
-  --#{$prefix}thumb-nav-item-height-small-vertical: 80px;
-  --#{$prefix}thumb-nav-overlay-opacity-black: 0.8;
-  --#{$prefix}thumb-nav-overlay-opacity-primary: 0.8;
-  --#{$prefix}thumb-nav-overlay-opacity-active: 0.6;
-  --#{$prefix}thumb-nav-hover-scale: 1.05;
-  --#{$prefix}thumb-nav-transition-duration: 0.4s;
-  --#{$prefix}thumb-nav-transition-duration-hover: 1s;
-  --#{$prefix}thumb-nav-transition-easing: cubic-bezier(0.15, 0.7, 0.36, 0.99);
+  --#{$prefix}thumb-nav-gap: var(--#{$prefix}spacing-xxs); // Controls the spacing between thumb items, using spacing tokens.
+  --#{$prefix}thumb-nav-auto-basis-offset: var(--#{$prefix}spacing-s); // Controls the offset subtracted from auto layout item widths, using spacing tokens.
+  --#{$prefix}thumb-nav-overlay-offset: var(--#{$prefix}spacing-s); // Controls the external offset for overlay-positioned variants (top/bottom/left/right), using spacing tokens.
+  --#{$prefix}thumb-nav-item-width: 240px; // Controls the default width for each thumb item.
+  --#{$prefix}thumb-nav-item-width-small: 120px; // Controls the width for thumb items in small variant.
+  --#{$prefix}thumb-nav-item-height-small-vertical: 80px; // Controls the height for vertical + small thumb items.
+  --#{$prefix}thumb-nav-overlay-bg: var(--#{$prefix}overlay-background-primary); // Controls the default overlay background color for thumb states.
+  --#{$prefix}thumb-nav-hover-scale: 1.05; // Controls the image zoom scale on hover.
+  --#{$prefix}thumb-nav-transition-duration: 0.4s; // Controls the base transition duration for overlay and image transform.
+  --#{$prefix}thumb-nav-transition-duration-hover: 1s; // Controls the transition duration applied during hover state.
+  --#{$prefix}thumb-nav-transition-easing: cubic-bezier(0.15, 0.7, 0.36, 0.99); // Controls the easing curve used by thumb-nav transitions.
 
   display: flex;
   justify-content: center;
@@ -198,7 +196,7 @@
       pointer-events: none;
       &:after {
         opacity: 1;
-        background: rgba($primary, var(--#{$prefix}thumb-nav-overlay-opacity-active));
+        background: var(--#{$prefix}thumb-nav-overlay-bg);
       }
     }
     // hover state
