@@ -13,10 +13,10 @@
 //
 
 .thumb-nav {
-  padding: 0;
-  margin: 0 -8px;
   display: flex;
   justify-content: center;
+  margin: 0 -8px;
+  padding: 0;
 
   // vertical version
   &.thumb-nav-vertical {
@@ -115,8 +115,8 @@
   &.thumb-nav-top {
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
     width: 90%;
+    transform: translateX(-50%);
   }
   &.thumb-nav-bottom {
     bottom: 0;
@@ -130,8 +130,8 @@
   &.thumb-nav-right {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
     height: 90%;
+    transform: translateY(-50%);
   }
   &.thumb-nav-left {
     left: 0;
@@ -145,17 +145,17 @@
   // list element
   li {
     position: relative;
-    list-style-type: none;
-    margin: 8px;
-    width: 240px;
     flex: 0 1 auto;
+    width: 240px;
+    margin: 8px;
+    list-style-type: none;
   }
 
   // invisible resizer image
   .thumb-nav-resizer {
+    visibility: hidden;
     width: 100%;
     height: auto;
-    visibility: hidden;
   }
   &.thumb-nav-small {
     li {
@@ -165,17 +165,17 @@
 
   // link and image
   a {
-    overflow: hidden;
     position: relative;
     display: block;
+    overflow: hidden;
     // overlay
     &:after {
-      content: '';
       position: absolute;
       top: 0;
       right: 0;
-      left: 0;
       bottom: 0;
+      left: 0;
+      content: '';
       opacity: 0;
       transition: opacity 0.4s cubic-bezier(0.15, 0.7, 0.36, 0.99);
     }
@@ -199,13 +199,13 @@
     }
     // image
     img {
-      object-fit: cover;
-      width: 100%;
-      height: 100%;
-      transition: transform 0.4s cubic-bezier(0.15, 0.7, 0.36, 0.99);
       position: absolute;
       top: 0;
       left: 0;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.4s cubic-bezier(0.15, 0.7, 0.36, 0.99);
+      object-fit: cover;
     }
   }
 }
