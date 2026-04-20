@@ -15,7 +15,7 @@
 .thumb-nav {
   display: flex;
   justify-content: center;
-  margin: 0 -8px;
+  margin: 0 calc(var(--#{$prefix}spacing-xxs) * -1);
   padding: 0;
 
   // vertical version
@@ -59,22 +59,22 @@
     }
     &.thumb-nav-auto-2 {
       li {
-        flex-basis: calc(50% - 16px);
+        flex-basis: calc(50% - var(--#{$prefix}spacing-s));
       }
     }
     &.thumb-nav-auto-3 {
       li {
-        flex-basis: calc(33.3333% - 16px);
+        flex-basis: calc(33.3333% - var(--#{$prefix}spacing-s));
       }
     }
     &.thumb-nav-auto-4 {
       li {
-        flex-basis: calc(25% - 16px);
+        flex-basis: calc(25% - var(--#{$prefix}spacing-s));
       }
     }
     &.thumb-nav-auto-5 {
       li {
-        flex-basis: calc(20% - 16px);
+        flex-basis: calc(20% - var(--#{$prefix}spacing-s));
       }
     }
   }
@@ -120,11 +120,11 @@
   }
   &.thumb-nav-bottom {
     bottom: 0;
-    margin-bottom: 16px;
+    margin-bottom: var(--#{$prefix}spacing-s);
   }
   &.thumb-nav-top {
     top: 0;
-    margin-top: 16px;
+    margin-top: var(--#{$prefix}spacing-s);
   }
   &.thumb-nav-left,
   &.thumb-nav-right {
@@ -135,11 +135,11 @@
   }
   &.thumb-nav-left {
     left: 0;
-    margin-left: 16px;
+    margin-left: var(--#{$prefix}spacing-s);
   }
   &.thumb-nav-right {
     right: 0;
-    margin-right: 16px;
+    margin-right: var(--#{$prefix}spacing-s);
   }
 
   // list element
@@ -147,7 +147,7 @@
     position: relative;
     flex: 0 1 auto;
     width: 240px;
-    margin: 8px;
+    margin: var(--#{$prefix}spacing-xxs);
     list-style-type: none;
   }
 
