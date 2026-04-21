@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Navscroll
-description: L'elemento Navscroll presenta liste di link con ancore a sezioni della pagina in cui è contenuto.
+description: Lista di link con ancore per navigare velocemente a una sezione specifica della pagina in cui è contenuto.
 group: menu-di-navigazione
 toc: true
 ---
@@ -20,28 +20,23 @@ toc: true
   }
 </style>
 
-## Layout della Navscroll
+Il componente Navscroll, declinazione del [componente Sidebar]({{ site.baseurl }}/docs/menu-di-navigazione/sidebar/), è una barra di navigazione laterale che, tramite una lista di ancore, permette di creare un indice utile a saltare velocemente alle sezioni e ai contenuti presenti su una stessa pagina.
 
-Il componente Navscroll è una declinazione del componente Navbar `<nav class="navbar navbar-expand-lg">` con l'aggiunta della classe `.it-navscroll-wrapper` e dell'attributo `data-bs-navscroll`.  
-Nella sua versione mobile, la navigazione viene collassata all'interno di un menu, posizionabile a inizio o fine viewport.
+[Approfondisci come e quando usare il componente Navscroll](https://designers.italia.it/design-system/componenti/navscroll/)
+
+## Posizione su mobile
+
+Il componente Navscroll può essere posizionato a inizio o fine viewport, a seconda dell'ordine in cui viene inserito nel markup HTML.
 
 Per posizionare tale menu in alto, è sufficiente aggiungere al tag `<nav>` la classe `.it-top-navscroll`. Al contrario, per posizionare il menu in basso, è sufficiente aggiungere la classe `.it-bottom-navscroll`.
 
-La Navscroll può avere una linea-separatore a destra o a sinistra dell'elemento. Si ottiene aggiungendo al tag `<nav>` la classe `.it-left-side` per ottenere una linea a sinistra, e `.it-right-side` per ottenere una linea a destra.
+## Posizione su desktop
 
-{% capture callout %}
-Ogni link all'interno della Navscroll contiene l'attributo `href` con il valore dell'id relativo all'elemento correlato in pagina: `href="#idElemento"`.
-{% endcapture %}{% include callout.html content=callout type="info" %}
+Puoi posizionare una navscroll a sinistra o a destra, a seconda dell'ordine in cui viene inserita nel markup HTML.
 
-Per fare in modo che la voce di menu sia evidenziata automaticamente durante lo scorrimento della pagina, è sufficiente aggiungere alle sezioni corrispondenti alle voci di menu (`#idElemento`), una classe `.it-page-section`, e racchiudere le sezioni in un elemento con classe `.it-page-sections-container`.
+Per posizionare tale menu a sinistra, è sufficiente aggiungere al tag `<nav>` la classe `.it-left-side`. 
 
-Le animazioni sono state realizzate con il plugin javascript [AnimeJs](https://animejs.com).
-
-### Posizionamento a fondo pagina con linea a sinistra
-
-In questo esempio, la linea che limita la barra di navigazione è posizionata a sinistra. Su dispositivi con schermi a dimensione inferiore a 992px, la barra che permette di aprire la navigazione si sposterà in basso nella pagina.
-
-{% comment %}Example name: Posizionata a fondo pagina con linea a sinistra{% endcomment %}
+{% comment %}Example name: Navscroll a sinistra{% endcomment %}
 {% capture example %}
 <nav class="navbar it-navscroll-wrapper navbar-expand-lg it-bottom-navscroll it-left-side" data-bs-navscroll>
   <button class="custom-navbar-toggler" type="button" aria-controls="navbarNav" aria-label="Apri/Chiudi indice" data-bs-toggle="navbarcollapsible" data-bs-target="#navbarNav"><span class="it-list"></span>1. Introduzione
@@ -103,11 +98,9 @@ In questo esempio, la linea che limita la barra di navigazione è posizionata a 
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
-### Posizionamento in testa alla pagina con linea a destra
+Al contrario, per posizionare il menu a destra, è sufficiente aggiungere la classe `.it-right-side`.
 
-In questo esempio, la linea che limita la barra di navigazione è posizionata a destra. Su dispositivi con schermi a dimensione inferiore a 992px, la barra che permette di aprire la navigazione si sposterà in alto nella pagina.
-
-{% comment %}Example name: Posizionata in testa pagina con linea a destra{% endcomment %}
+{% comment %}Example name: Navscroll a destra{% endcomment %}
 {% capture example %}
 <nav class="navbar it-navscroll-wrapper navbar-expand-lg it-top-navscroll it-right-side" data-bs-navscroll>
   <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavB" aria-label="Apri/Chiudi indice" data-bs-toggle="navbarcollapsible" data-bs-target="#navbarNavB"><span class="it-list"></span>1. Introduzione
@@ -168,6 +161,19 @@ In questo esempio, la linea che limita la barra di navigazione è posizionata a 
   </div>
 </nav>
 {% endcapture %}{% include example.html content=example %}
+
+
+<!-- Il componente Navscroll  `<nav class="navbar navbar-expand-lg">` con l'aggiunta della classe `.it-navscroll-wrapper` e dell'attributo `data-bs-navscroll`.   -->
+
+{% capture callout %}
+### Link con ancore
+
+Ogni link all'interno della Navscroll contiene l'attributo `href` con il valore dell'id relativo all'elemento correlato in pagina: `href="#idElemento"`.
+{% endcapture %}{% include callout.html content=callout type="info" %}
+
+Per fare in modo che la voce di menu sia evidenziata automaticamente durante lo scorrimento della pagina, è sufficiente aggiungere alle sezioni corrispondenti alle voci di menu (`#idElemento`), una classe `.it-page-section`, e racchiudere le sezioni in un elemento con classe `.it-page-sections-container`.
+
+Le animazioni sono state realizzate con il plugin javascript [AnimeJs](https://animejs.com).
 
 ### Progress bar
 
