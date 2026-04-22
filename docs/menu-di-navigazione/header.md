@@ -1217,7 +1217,7 @@ Verrà creata un'ombra per enfatizzare l'Header rispetto alla pagina in cui è c
         </div>
       </div>
     </div>
-    <div class="it-header-navbar-wrapper theme-light-desk">
+    <div class="it-header-navbar-wrapper theme-light">
       <div class="container-xxl">
         <div class="row">
           <div class="col-12">
