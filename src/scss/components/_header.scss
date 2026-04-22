@@ -181,7 +181,7 @@
 
   .it-header-navbar-wrapper {
     height: var(--#{$prefix}header-center-height); // Set height for mobile
-    background-color: var(--#{$prefix}header-center-background); // Set background color for mobile
+    background-color: var(--#{$prefix}header-nav-background); // Set background color for mobile
     display: flex;
     align-items: center;
 
