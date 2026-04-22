@@ -26,7 +26,9 @@
   --#{$prefix}header-nav-background: var(--#{$prefix}color-background-primary); // Controls the nav background for the header, using color tokens
   --#{$prefix}header-nav-secondary-font-size: var(--#{$prefix}label-font-size); // Controls the nav secondary font size for the header, using font tokens
   --#{$prefix}header-nav-text-color: var(--#{$prefix}color-link); // Controls the nav text color for the header, using color tokens
-  --#{$prefix}header-search-button-background: var(--#{$prefix}color-background-inverse); // Controls the search button background for the header, using color tokens.
+  --#{$prefix}header-search-button-background: var(
+    --#{$prefix}color-background-inverse
+  ); // Controls the search button background for the header, using color tokens.
   --#{$prefix}header-search-button-color: var(--#{$prefix}icon-inverse); // Controls the search button color for the header, using icon tokens.
   --#{$prefix}header-search-button-size: 3rem; // Controls the header search button size.
   --#{$prefix}header-search-icon-color: var(--#{$prefix}icon-inverse); // Controls the search icon color for the header, using icon tokens.
@@ -58,8 +60,7 @@
 // Light theme
 .it-header-slim-wrapper.theme-light,
 .it-header-center-wrapper.theme-light,
-.it-header-navbar-wrapper.theme-light,
-.it-header-navbar-wrapper.theme-light-desk {
+.it-header-navbar-wrapper.theme-light {
   --#{$prefix}header-brand-color: var(--#{$prefix}color-text-primary);
   --#{$prefix}header-brand-icon-color: var(--#{$prefix}icon-primary);
   --#{$prefix}header-center-background: var(--#{$prefix}color-background-inverse);
@@ -86,16 +87,6 @@
 
   &.it-header-sticky.is-sticky {
     width: 100%;
-
-    .it-nav-wrapper {
-      top: 0;
-      z-index: 10;
-      width: 100%;
-    }
-
-    .it-header-slim-wrapper {
-      display: none;
-    }
 
     @include media-breakpoint-up(lg) {
 
@@ -172,33 +163,48 @@
         }
       }
     }
+
+    .it-nav-wrapper {
+      top: 0;
+      z-index: 10;
+      width: 100%;
+    }
+
+    .it-header-slim-wrapper {
+      display: none;
+    }
   }
 }
 
 .it-nav-wrapper {
   position: relative;
   z-index: auto;
+  display: flex;
+  flex-direction: row-reverse;
+  width: auto;
+  @include media-breakpoint-up(lg) {
+    display: block;
+  }
 
   .it-header-navbar-wrapper {
-    position: absolute;
-    top: 50%;
-    left: 8px;
-    z-index: 3;
-    margin-top: -20px;
-    transition: padding-top var(--#{$prefix}transition-instant) ease;
+    height: var(--#{$prefix}header-center-height); // Set height for mobile
+    background-color: var(--#{$prefix}header-nav-background); // Set background color for mobile
+    display: flex;
+    align-items: center;
 
+    // Restore default styles on desktop
     @include media-breakpoint-up(lg) {
-      position: inherit;
-      top: inherit;
-      left: auto;
-      margin-top: 0;
-      background: var(--#{$prefix}header-nav-background);
+      height: auto;
+      display: block;
     }
+  }
+}
 
-    // Add border bottom on light theme
-    &.theme-light,
-    &.theme-light-desk {
-      border-bottom: 1px solid var(--#{$prefix}header-slim-border-color);
-    }
+// Add border bottom on light theme
+.it-header-center-wrapper,
+.it-header-navbar-wrapper {
+  &.theme-light,
+  &.theme-light-desk {
+    border-bottom: 1px solid var(--#{$prefix}header-slim-border-color);
   }
 }

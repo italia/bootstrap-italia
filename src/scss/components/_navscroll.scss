@@ -173,7 +173,7 @@
     .link-list-wrapper ul li a.active {
       --#{$prefix}navscroll-item-border-color: var(--#{$prefix}color-border-inverse);
     }
-    
+
     .progress {
       --#{$prefix}progress-bar-bg: var(--#{$prefix}color-background-inverse); // Override the progress bar background color on dark theme
       --#{$prefix}progress-bg: var(--#{$prefix}color-slate-52); // Override the progress bar background color on dark theme

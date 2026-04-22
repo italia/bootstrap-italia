@@ -40,19 +40,19 @@ Il link `<a>` attivo possiede una classe `.active`.
     <li>
       <a href="#" class="active">
         <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-comment"></use></svg>
-        <span class="bottom-nav-label">messaggi</span>
+        <span class="bottom-nav-label">Messaggi</span>
       </a>
     </li>
     <li>
       <a href="#">
         <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-camera"></use></svg>
-        <span class="bottom-nav-label">immagini</span>
+        <span class="bottom-nav-label">Immagini</span>
       </a>
     </li>
     <li>
       <a href="#">
         <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
-        <span class="bottom-nav-label">documenti</span>
+        <span class="bottom-nav-label">Documenti</span>
       </a>
     </li>
   </ul>
@@ -68,25 +68,25 @@ I link occupano automaticamente tutto lo spazio orizzontale disponibile. Qui di 
     <li>
       <a href="#" class="active">
         <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-comment"></use></svg>
-        <span class="bottom-nav-label">messaggi</span>
+        <span class="bottom-nav-label">Messaggi</span>
       </a>
     </li>
     <li>
       <a href="#">
         <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-camera"></use></svg>
-        <span class="bottom-nav-label">immagini</span>
+        <span class="bottom-nav-label">Immagini</span>
       </a>
     </li>
     <li>
       <a href="#">
         <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
-        <span class="bottom-nav-label">documenti</span>
+        <span class="bottom-nav-label">Documenti</span>
       </a>
     </li>
     <li>
       <a href="#">
         <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg>
-        <span class="bottom-nav-label">preferiti</span>
+        <span class="bottom-nav-label">Preferiti</span>
       </a>
     </li>
   </ul>
@@ -105,33 +105,33 @@ Aggiungere uno `<span>` con classe `.bottom-nav-badge` all'interno dell'icona pe
       <a href="#">
         <div class="badge-wrapper"><span class="bottom-nav-badge">1</span></div>
         <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-comment"></use></svg>
-        <span class="bottom-nav-label">messaggi<span class="visually-hidden">da leggere</span></span>
+        <span class="bottom-nav-label">Messaggi<span class="visually-hidden">da leggere</span></span>
       </a>
     </li>
     <li>
       <a href="#" class="active">
         <div class="badge-wrapper"><span class="bottom-nav-badge">2</span></div>
         <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-camera"></use></svg>
-        <span class="bottom-nav-label">immagini<span class="visually-hidden">da visualizzare</span></span>
+        <span class="bottom-nav-label">Immagini<span class="visually-hidden">da visualizzare</span></span>
       </a>
     </li>
     <li>
       <a href="#">
         <div class="badge-wrapper"><span class="bottom-nav-badge">42</span></div>
         <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
-        <span class="bottom-nav-label">documenti<span class="visually-hidden">da esaminare</span></span>
+        <span class="bottom-nav-label">Documenti<span class="visually-hidden">da esaminare</span></span>
       </a>
     </li>
     <li>
       <a href="#">
         <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg>
-        <span class="bottom-nav-label">preferiti</span>
+        <span class="bottom-nav-label">Preferiti</span>
       </a>
     </li>
     <li>
       <a href="#">
         <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-settings"></use></svg>
-        <span class="bottom-nav-label">preferenze</span>
+        <span class="bottom-nav-label">Preferenze</span>
       </a>
     </li>
   </ul>
@@ -157,32 +157,32 @@ I badge e gli alert sono nascosti agli screen reader. Per garantire l'accessibil
       <a href="#" class="active">
         <div class="badge-wrapper"><span class="bottom-nav-alert"></span></div>
         <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-comment"></use></svg>
-        <span class="bottom-nav-label">messaggi<span class="visually-hidden">ci sono 42 nuovi messaggi da leggere</span></span>
+        <span class="bottom-nav-label">Messaggi<span class="visually-hidden">ci sono 42 nuovi messaggi da leggere</span></span>
       </a>
     </li>
     <li>
       <a href="#">
         <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-camera"></use></svg>
-        <span class="bottom-nav-label">immagini</span>
+        <span class="bottom-nav-label">Immagini</span>
       </a>
     </li>
     <li>
       <a href="#">
         <div class="badge-wrapper"><span class="bottom-nav-alert"></span></div>
         <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
-        <span class="bottom-nav-label">documenti<span class="visually-hidden">ci sono 42 nuovi documenti da esaminare</span></span>
+        <span class="bottom-nav-label">Documenti<span class="visually-hidden">ci sono 42 nuovi documenti da esaminare</span></span>
       </a>
     </li>
     <li>
       <a href="#">
         <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg>
-        <span class="bottom-nav-label">preferiti</span>
+        <span class="bottom-nav-label">Preferiti</span>
       </a>
     </li>
     <li>
       <a href="#">
         <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-settings"></use></svg>
-        <span class="bottom-nav-label">preferenze</span>
+        <span class="bottom-nav-label">Preferenze</span>
       </a>
     </li>
   </ul>
