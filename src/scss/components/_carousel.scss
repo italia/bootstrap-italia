@@ -1,6 +1,7 @@
 @use 'sass:map';
 @use '../base/config' as *;
 @use '../base/variables' as *;
+@use '../base/mixins/breakpoints' as *;
 @use '@splidejs/splide/src/css/core/index'; // XXX TO DO: To verify @use migration
 
 // Component: carousel
