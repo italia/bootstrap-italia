@@ -48,6 +48,7 @@
   a {
     text-decoration: none;
   }
+
   // Vertical toolbar
   &.toolbar-vertical {
     position: absolute;
@@ -55,14 +56,17 @@
     bottom: 0;
     width: 96px;
     height: 100%;
-    & > ul {
+
+    &>ul {
       flex-direction: column;
       width: 72px;
       height: 100%;
-      & > li {
+
+      &>li {
         display: flex;
         align-items: center;
         margin: var(--#{$prefix}toolbar-item-margin-y) 0;
+
         // Divider
         &.toolbar-divider {
           width: calc(100% - 16px);
@@ -78,14 +82,16 @@
     &.toolbar-medium,
     &.toolbar-small {
       height: 100%;
-      & > ul {
+
+      &>ul {
         height: 100%;
       }
     }
 
     &.toolbar-medium {
       width: 84px;
-      & > ul {
+
+      &>ul {
         width: 56px;
       }
 
@@ -102,6 +108,7 @@
           font-size: var(--#{$prefix}toolbar-dropdown-caret-size);
         }
       }
+
       .dropdown-menu {
         top: calc(-100% - 25px) !important;
       }
@@ -109,7 +116,8 @@
 
     &.toolbar-small {
       width: 72px;
-      & > ul {
+
+      &>ul {
         width: 48px;
       }
 
@@ -126,6 +134,7 @@
           font-size: var(--#{$prefix}toolbar-dropdown-caret-size);
         }
       }
+
       .dropdown-menu {
         top: calc(-100% - 35px) !important;
       }
@@ -134,21 +143,25 @@
     // Dropdown
     .btn-dropdown {
       padding: 0;
+
       &:after {
         right: -12px;
         transform: rotate(-90deg);
       }
+
       &[aria-expanded='true'] {
         &:after {
           transform: rotate(90deg) scaleX(-1);
         }
       }
     }
+
     .dropdown-menu {
       top: calc(-100% - 28px) !important;
       left: calc(100% + 24px) !important;
       margin: 0;
       --#{$prefix}dropdown-box-shadow: var(--#{$prefix}toolbar-dropdown-shadow);
+
       &:before {
         top: 24px;
         left: -6px;
@@ -178,21 +191,26 @@
       width: 100%;
     }
   }
+
   // Medium toolbar
 
   &.toolbar-medium {
     --#{$prefix}toolbar-icon-font-size: var(--#{$prefix}icon-size-m);
 
     height: 80px;
+
     // List
-    & > ul {
+    &>ul {
       height: 48px;
     }
+
     a,
     .btn-dropdown {
       margin-bottom: var(--#{$prefix}toolbar-link-margin-bottom-medium);
     }
+
     .btn-dropdown {
+
       // Dropdown caret
       &:after {
         top: 12px;
@@ -217,10 +235,12 @@
     height: 72px;
 
     // List
-    & > ul {
+    &>ul {
       height: 40px;
     }
+
     .btn-dropdown {
+
       // Dropdown caret
       &:after {
         top: 12px;
@@ -255,7 +275,7 @@
   }
 
   // List
-  & > ul {
+  &>ul {
     position: absolute;
     top: 0;
     right: 0;
@@ -269,10 +289,12 @@
     margin: 0;
     padding: 0;
     background-color: var(--#{$prefix}toolbar-list-background-color);
-    & > li {
+
+    &>li {
       margin: 0 var(--#{$prefix}toolbar-item-margin-x);
       list-style-type: none;
       text-align: center;
+
       // Divider
       &.toolbar-divider {
         width: 1px;
@@ -284,22 +306,27 @@
       }
     }
   }
+
   // Links and buttons
   a,
   .btn-dropdown {
     display: block;
     color: var(--#{$prefix}toolbar-link-color);
+
     .icon {
       fill: var(--#{$prefix}toolbar-icon-color);
     }
+
     // Active state
     &.active {
       --#{$prefix}toolbar-link-color: var(--#{$prefix}color-text-primary);
       --#{$prefix}toolbar-icon-color: var(--#{$prefix}icon-primary);
+
       .icon {
         fill: var(--#{$prefix}toolbar-icon-color);
       }
     }
+
     // Disabled state
     &.disabled {
       --#{$prefix}toolbar-link-color: var(--#{$prefix}color-text-disabled);
@@ -307,20 +334,25 @@
 
       color: var(--#{$prefix}toolbar-link-color);
       cursor: not-allowed;
+
       .icon {
         fill: var(--#{$prefix}toolbar-icon-color);
       }
+
       &:hover {
         color: var(--#{$prefix}toolbar-link-color);
         text-decoration: none;
+
         .icon {
           fill: var(--#{$prefix}toolbar-icon-color);
         }
       }
+
       &:after {
         color: var(--#{$prefix}toolbar-link-color);
       }
     }
+
     // Hover state
     &:not(.disabled):hover {
       --#{$prefix}toolbar-link-color: var(--#{$prefix}color-link-hover);
@@ -328,16 +360,19 @@
 
       color: var(--#{$prefix}toolbar-link-color);
       text-decoration: underline;
+
       .icon {
         fill: var(--#{$prefix}toolbar-icon-color);
       }
     }
+
     // Hover fix for IE11
     /* stylelint-disable */
     _:-ms-fullscreen,
     &:not(.disabled):hover {
       text-decoration: none;
     }
+
     /* stylelint-enable */
   }
 
@@ -348,14 +383,17 @@
     padding: 0;
     padding-right: var(--#{$prefix}toolbar-dropdown-padding-x);
     padding-left: var(--#{$prefix}toolbar-dropdown-padding-x);
+
     &.toolbar-more {
       &:after {
         display: none;
       }
     }
+
     &:not(.disabled) {
       &.active {
         box-shadow: none;
+
         &:focus {
           box-shadow: $btn-focus-box-shadow;
         }
@@ -387,15 +425,12 @@
     position: relative;
   }
 
+  // Icon badge
   .toolbar-badge {
     position: absolute;
     display: block;
     border: 1px solid var(--#{$prefix}toolbar-badge-border-color);
     background-color: var(--#{$prefix}toolbar-badge-background-color);
-  }
-
-  // Icon badge
-  .toolbar-badge {
     top: -4px;
     right: 0;
     min-width: 18px;
