@@ -17,7 +17,7 @@
   align-items: center;
   height: var(--#{$prefix}header-center-height);
   background: var(--#{$prefix}header-center-background);
-
+  width: 100%;
   // Header Center Small
   &.it-small-header {
     --#{$prefix}header-center-height: 4rem; // 64px
@@ -105,12 +105,6 @@
 
 // Brand
 .it-brand-wrapper {
-  padding-left: var(--#{$prefix}header-brand-spacing);
-
-  @include media-breakpoint-up(lg) {
-    padding-left: 0;
-  }
-
   .it-brand-text {
     margin-right: var(--#{$prefix}spacing-xxs);
   }
