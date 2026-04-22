@@ -196,16 +196,7 @@
         right: 1px;
       }
     }
-    // Icon
-    .it-ico {
-      font-size: var(--#{$prefix}toolbar-icon-font-size);
-      // More icon
-      &.it-more-actions {
-        &:before {
-          top: 33%;
-        }
-      }
-    }
+
     // Icon badge
     .toolbar-badge {
       top: -2px;
@@ -220,8 +211,8 @@
   // Small toolbar
   &.toolbar-small {
     --#{$prefix}toolbar-icon-font-size: var(--#{$prefix}icon-size-s);
-
     height: 72px;
+
     // List
     & > ul {
       height: 40px;
@@ -233,15 +224,7 @@
         right: 2px;
       }
     }
-    // Icon
-    .it-ico {
-      font-size: var(--#{$prefix}toolbar-icon-font-size);
-      &.it-more-actions {
-        &:before {
-          top: 25%;
-        }
-      }
-    }
+
     // Icon badge
     .toolbar-badge {
       top: 2px;
@@ -395,33 +378,13 @@
     }
   }
 
-  // Icon
-  .it-ico {
-    position: relative;
-    display: block;
-    height: 32px;
-    font-size: var(--#{$prefix}toolbar-icon-font-size);
-    &:before {
-      margin-right: 0;
-    }
-    // More icon
-    &.it-more-actions {
-      font-size: var(--#{$prefix}toolbar-more-icon-font-size);
-      &:before {
-        position: relative;
-        top: 50%;
-      }
-    }
-  }
-
   // Icon badges
   .badge-wrapper {
     // width: calc(50% + 28px);
     position: relative;
   }
 
-  .toolbar-badge,
-  .toolbar-alert {
+  .toolbar-badge {
     position: absolute;
     display: block;
     border: 1px solid var(--#{$prefix}toolbar-badge-border-color);
