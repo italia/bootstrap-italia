@@ -38,7 +38,7 @@
   --#{$prefix}header-search-button-size: 3rem; // Controls the header search button size.
   --#{$prefix}header-search-icon-color: var(--#{$prefix}icon-inverse); // Controls the search icon color for the header, using icon tokens.
   --#{$prefix}header-search-icon-size: 1.5rem; // Controls the header search icon size.
-  --#{$prefix}header-slim-background: var(--it-color-blue-30); // Controls the header slim background, using color tokens.
+  --#{$prefix}header-slim-background: var(--#{$prefix}color-blue-30); // Controls the header slim background, using color tokens.
   --#{$prefix}header-slim-border-color: hsla(0, 0%, 100%, 0.2); // Controls the header slim border color.
   --#{$prefix}header-slim-font-size: var(--#{$prefix}label-font-size-s); // Controls the slim font size for the header, using font tokens.
   --#{$prefix}header-slim-height: 3rem; // Controls the header slim height.
