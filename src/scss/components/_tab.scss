@@ -14,26 +14,30 @@
 //
 
 .nav-tabs {
-  --#{$prefix}tabs-background-color: var(--#{$prefix}color-background-inverse);
-  --#{$prefix}tabs-border-color: var(--#{$prefix}color-border-subtle);
-  --#{$prefix}tab-text-color: var(--#{$prefix}color-text-secondary);
-  --#{$prefix}tab-icon-color: var(--#{$prefix}icon-secondary);
-  --#{$prefix}tab-border-radius: var(--#{$prefix}radius-smooth);
-  --#{$prefix}tab-border-width: 3px;
-  --#{$prefix}tab-padding-x: var(--#{$prefix}spacing-m);
-  --#{$prefix}tab-padding-y: var(--#{$prefix}spacing-s);
-  --#{$prefix}tab-font-size: var(--#{$prefix}label-font-size);
-  --#{$prefix}tab-font-weight: 600;
-  --#{$prefix}tab-shadow: 0 12px 25px -20px rgba(0, 0, 0, 0.5);
-  --#{$prefix}tab-background-light: var(--#{$prefix}color-background-primary-lighter);
-  --#{$prefix}tab-border-color: transparent;
-  --#{$prefix}tab-border-width-cards: 2px;
-  --#{$prefix}tab-border-color-cards: var(--#{$prefix}color-border-subtle);
-  --#{$prefix}tab-add-btn-border: var(--#{$prefix}color-border-primary);
-  --#{$prefix}tab-add-btn-color: var(--#{$prefix}color-background-primary);
-  --#{$prefix}tab-close-btn-color: var(--#{$prefix}color-text-secondary);
-  --#{$prefix}tab-close-btn-color-hover: color-mix(in srgb, var(--#{$prefix}primary) 90%, black 10%);
-  --#{$prefix}tab-close-btn-color-disabled: var(--#{$prefix}color-text-disabled);
+  --#{$prefix}tabs-background-color: var(--#{$prefix}color-background-inverse); // Controls the tabs background color, using color tokens.
+  --#{$prefix}tabs-border-color: var(--#{$prefix}color-border-subtle); // Controls the tabs border color, using color tokens.
+  --#{$prefix}tab-text-color: var(--#{$prefix}color-text-secondary); // Controls the tab text color, using color tokens.
+  --#{$prefix}tab-icon-color: var(--#{$prefix}icon-secondary); // Controls the tab icon color, using color tokens.
+  --#{$prefix}tab-border-radius: var(--#{$prefix}radius-smooth); // Controls the tab border radius, using radius tokens.
+  --#{$prefix}tab-border-width: 3px; // Controls the tab border width, using border tokens.
+  --#{$prefix}tab-padding-x: var(--#{$prefix}spacing-m); // Controls the tab padding x, using spacing tokens.
+  --#{$prefix}tab-padding-y: var(--#{$prefix}spacing-s); // Controls the tab padding y, using spacing tokens.
+  --#{$prefix}tab-font-size: var(--#{$prefix}label-font-size); // Controls the tab font size, using typography tokens.
+  --#{$prefix}tab-font-weight: 600; // Controls the tab font weight, using component tokens.
+  --#{$prefix}tab-shadow: 0 12px 25px -20px rgba(0, 0, 0, 0.5); // Controls the tab shadow, using elevation tokens.
+  --#{$prefix}tab-background-light: var(--#{$prefix}color-background-primary-lighter); // Controls the tab background light, using color tokens.
+  --#{$prefix}tab-border-color: transparent; // Controls the tab border color, using border tokens.
+  --#{$prefix}tab-border-width-cards: 2px; // Controls the tab border width cards, using border tokens.
+  --#{$prefix}tab-border-color-cards: var(--#{$prefix}color-border-subtle); // Controls the tab border color cards, using color tokens.
+  --#{$prefix}tab-add-btn-border: var(--#{$prefix}color-border-primary); // Controls the tab add btn border, using color tokens.
+  --#{$prefix}tab-add-btn-color: var(--#{$prefix}color-background-primary); // Controls the tab add btn color, using color tokens.
+  --#{$prefix}tab-close-btn-color: var(--#{$prefix}color-text-secondary); // Controls the tab close btn color, using color tokens.
+  --#{$prefix}tab-close-btn-color-hover: color-mix(
+    in srgb,
+    var(--#{$prefix}primary) 90%,
+    black 10%
+  ); // Controls the tab close btn color hover, using color tokens.
+  --#{$prefix}tab-close-btn-color-disabled: var(--#{$prefix}color-text-disabled); // Controls the tab close btn color disabled, using color tokens.
 }
 
 // Styles
@@ -89,39 +93,6 @@
     }
   }
 
-  // Vertical tabs
-  &.nav-tabs-vertical {
-    flex-direction: column;
-    border-color: var(--#{$prefix}tabs-border-color);
-    border-right-width: 1px;
-    border-style: solid;
-    border-bottom-width: 0;
-    border-left-width: 0;
-    border-top-width: 0;
-
-    .nav-link {
-      position: relative;
-      justify-content: space-between;
-      border-right-width: var(--#{$prefix}tab-border-width);
-      border-bottom-width: 0;
-      white-space: normal;
-
-      &.justify-content-end {
-        .it-ico:before,
-        .it-ico-lg:before {
-          margin-right: 0;
-        }
-      }
-    }
-
-    &.nav-tabs-vertical-background {
-      .nav-link.active,
-      .nav-item.show .nav-link {
-        --#{$prefix}tab-background-color: var(--#{$prefix}color-background-primary-lighter);
-      }
-    }
-  }
-
   // Link element
   .nav-link {
     display: flex;
@@ -129,6 +100,7 @@
     align-items: center;
     justify-content: center;
     padding: var(--#{$prefix}tab-padding-y) var(--#{$prefix}tab-padding-x);
+    background-color: var(--#{$prefix}tab-background-color, transparent);
     border-width: var(--#{$prefix}tab-border-width);
     border-style: solid;
     border-left-width: 0;
@@ -187,6 +159,39 @@
   .nav-item {
     display: flex;
     margin-bottom: 0;
+  }
+
+  // Vertical tabs
+  &.nav-tabs-vertical {
+    flex-direction: column;
+    border-color: var(--#{$prefix}tabs-border-color);
+    border-right-width: 1px;
+    border-style: solid;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    border-top-width: 0;
+
+    .nav-link {
+      position: relative;
+      justify-content: space-between;
+      border-right-width: var(--#{$prefix}tab-border-width);
+      border-bottom-width: 0;
+      white-space: normal;
+
+      &.justify-content-end {
+        .it-ico:before,
+        .it-ico-lg:before {
+          margin-right: 0;
+        }
+      }
+    }
+
+    &.nav-tabs-vertical-background {
+      .nav-link.active,
+      .nav-item.show .nav-link {
+        --#{$prefix}tab-background-color: var(--#{$prefix}color-background-primary-lighter);
+      }
+    }
   }
 
   // Dark version

@@ -1,3 +1,40 @@
+# [3.0.0-alpha.8](https://github.com/italia/bootstrap-italia/compare/v3.0.0-alpha.7...v3.0.0-alpha.8) (2026-04-17)
+
+
+### Bug Fixes
+
+* update comment for heading spacing to clarify specificity impact ([1a8c195](https://github.com/italia/bootstrap-italia/commit/1a8c1954e8e5a57862052208118ac5e3ceb54305))
+
+
+### Features
+
+* add new Header example to examples.yml ([0966514](https://github.com/italia/bootstrap-italia/commit/096651466c91a0cf3f3eb59d5c6214e6e4db31d3))
+
+
+
+# [3.0.0-alpha.7](https://github.com/italia/bootstrap-italia/compare/v3.0.0-alpha.6...v3.0.0-alpha.7) (2026-04-16)
+
+
+### Bug Fixes
+
+* add border bottom for light theme in header component [#1761](https://github.com/italia/bootstrap-italia/issues/1761) ([00a0438](https://github.com/italia/bootstrap-italia/commit/00a04380d9775a8ec4fd474b4c496de40901f7eb))
+* add missing properties description [#1741](https://github.com/italia/bootstrap-italia/issues/1741) ([c6d969c](https://github.com/italia/bootstrap-italia/commit/c6d969c681a4888c2965da847871ddf74629b2b7))
+* hover color on navbar [#1756](https://github.com/italia/bootstrap-italia/issues/1756) ([2fbd0b1](https://github.com/italia/bootstrap-italia/commit/2fbd0b1d9db1d72d95164c013208e6d9b93642e0))
+* missing background color on vertical tabs [#1732](https://github.com/italia/bootstrap-italia/issues/1732) ([77faae4](https://github.com/italia/bootstrap-italia/commit/77faae45b2ea9a2c73d7da9a824edc08cf7eaa0e))
+* navbar hamburger icon alignment [#1762](https://github.com/italia/bootstrap-italia/issues/1762) ([bbab8b4](https://github.com/italia/bootstrap-italia/commit/bbab8b410b1cf212a32731be57f7e6cea65f1c14))
+* navscroll progress color on dark bg [#1620](https://github.com/italia/bootstrap-italia/issues/1620) ([9532341](https://github.com/italia/bootstrap-italia/commit/9532341e92d5d8fcc1c0c2746cad82f8732c4c2a))
+* remove toast ([9d610a6](https://github.com/italia/bootstrap-italia/commit/9d610a674503fe066510b8923b6585b4af369d0d))
+* update navscroll headings for consistent styling [#1621](https://github.com/italia/bootstrap-italia/issues/1621) ([dd9ca4a](https://github.com/italia/bootstrap-italia/commit/dd9ca4a797798b58b64f36025441b628c5002534))
+
+
+### Features
+
+* carousel design tokens ([4ef724d](https://github.com/italia/bootstrap-italia/commit/4ef724da1432415d10fefd7f4b2ed5008880e96e))
+* notification design tokens  ([353652d](https://github.com/italia/bootstrap-italia/commit/353652d7ef615e52f8ae69cea3520cbe8982e862))
+* timeline design tokens  ([2724450](https://github.com/italia/bootstrap-italia/commit/2724450357ec2948d59fa1f66489c3ba4401d641))
+
+
+
 # [3.0.0-alpha.6](https://github.com/italia/bootstrap-italia/compare/v3.0.0-alpha.5...v3.0.0-alpha.6) (2026-03-30)
 
 

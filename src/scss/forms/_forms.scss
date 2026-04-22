@@ -207,7 +207,7 @@ fieldset {
     padding: 0 var(--#{$prefix}form-input-spacing-x);
     background-color: transparent;
     color: var(--#{$prefix}form-control-text-color);
-    font-size: var(--#{$prefix}label-sm);
+    font-size: var(--#{$prefix}label-font-size-s);
     font-weight: var(--#{$prefix}font-weight-solid);
   }
 }

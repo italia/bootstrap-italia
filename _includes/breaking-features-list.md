@@ -80,10 +80,9 @@
 
 ### Header
 
-
 - Cambiata la dimensione del pulsante Accedi: cambiato classe da `.btn-sm` a `.btn-sx`.
 - Rimossa la classe `.ms-1` dall'icona `<svg>` che segue la voce Megamenu negli esempi.
-  
+
 
 ### Icone
 
@@ -127,6 +126,15 @@ La versione 3.0.0 ha portato molte breaking changes sia a livello generale che a
 ### Navscroll
 
 - La classe che controlla il colore dell'icona chevron per le varianti scure ha cambiato nome: `.icon-white` diventa `.icon-inverse`.
+
+
+### Notification
+
+- Rinominato il componente da `Notifiche` a `Notification`.
+- Aggiunta la classe `.notification-title` al titolo della notifica.
+- Aggiunta la classe `.icon-sm` all'icona `<svg>` del titolo della notifica.
+- Aggiunta la classe `.me-2` all'icona `<svg>` del titolo della notifica.
+- Aggiunta la classe `.icon-sm` all'icona `<svg>` del pulsante di chiusura `.btn-close`.
 
 
 ### Paginazione

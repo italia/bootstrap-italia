@@ -19,18 +19,18 @@
 //
 
 .tooltip {
-  --#{$prefix}tooltip-arrow-height: 0.4rem;
-  --#{$prefix}tooltip-arrow-width: 0.8rem;
-  --#{$prefix}tooltip-bg: var(--#{$prefix}color-background-emphasis);
-  --#{$prefix}tooltip-border-radius: var(--#{$prefix}radius-smooth);
-  --#{$prefix}tooltip-color: var(--#{$prefix}color-text-inverse);
-  --#{$prefix}tooltip-font-size: var(--#{$prefix}label-font-size-s);
-  --#{$prefix}tooltip-margin: 0;
-  --#{$prefix}tooltip-max-width: 32em;
-  --#{$prefix}tooltip-opacity: 1;
-  --#{$prefix}tooltip-padding-x: var(--#{$prefix}spacing-3xs);
-  --#{$prefix}tooltip-padding-y: var(--#{$prefix}spacing-xxs);
-  --#{$prefix}tooltip-zindex: 10;
+  --#{$prefix}tooltip-arrow-height: 0.4rem; // Controls the tooltip arrow height.
+  --#{$prefix}tooltip-arrow-width: 0.8rem; // Controls the tooltip arrow width.
+  --#{$prefix}tooltip-bg: var(--#{$prefix}color-background-emphasis); // Controls the tooltip bg, using color tokens.
+  --#{$prefix}tooltip-border-radius: var(--#{$prefix}radius-smooth); // Controls the tooltip border radius, using radius tokens.
+  --#{$prefix}tooltip-color: var(--#{$prefix}color-text-inverse); // Controls the tooltip color, using color tokens.
+  --#{$prefix}tooltip-font-size: var(--#{$prefix}label-font-size-s); // Controls the tooltip font size, using typography tokens.
+  --#{$prefix}tooltip-margin: 0; // Controls the tooltip margin.
+  --#{$prefix}tooltip-max-width: 32em; // Controls the tooltip max width.
+  --#{$prefix}tooltip-opacity: 1; // Controls the tooltip opacity.
+  --#{$prefix}tooltip-padding-x: var(--#{$prefix}spacing-3xs); // Controls the tooltip padding x, using spacing tokens.
+  --#{$prefix}tooltip-padding-y: var(--#{$prefix}spacing-xxs); // Controls the tooltip padding y, using spacing tokens.
+  --#{$prefix}tooltip-zindex: 10; // Controls the tooltip zindex.
 }
 
 // Styles

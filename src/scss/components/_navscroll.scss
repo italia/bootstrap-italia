@@ -97,7 +97,8 @@
   }
 
   // Navscroll Heading
-  h3 {
+  h3,
+  .it-navscroll-heading {
     margin-top: var(--#{$prefix}navscroll-heading-spacing-top);
     margin-bottom: var(--#{$prefix}navscroll-heading-spacing-bottom);
     padding-right: var(--#{$prefix}navscroll-heading-spacing-x);
@@ -166,6 +167,7 @@
     --#{$prefix}navscroll-background: var(--#{$prefix}color-background-secondary);
     --#{$prefix}navscroll-heading-color: var(--#{$prefix}color-text-inverse);
     --#{$prefix}navscroll-toggler-color: var(--#{$prefix}color-text-inverse);
+    --#{$prefix}progress-bar-bg: var(--#{$prefix}color-background-inverse); // Override the progress bar background color on dark theme
 
     .link-list-wrapper ul li a,
     .link-list-wrapper ul li a.active {
@@ -174,6 +176,11 @@
 
     .link-list-wrapper ul li a.active {
       --#{$prefix}navscroll-item-border-color: var(--#{$prefix}color-border-inverse);
+    }
+
+    .progress {
+      --#{$prefix}progress-bar-bg: var(--#{$prefix}color-background-inverse); // Override the progress bar background color on dark theme
+      --#{$prefix}progress-bg: var(--#{$prefix}color-slate-52); // Override the progress bar background color on dark theme
     }
   }
 }
@@ -198,6 +205,11 @@
     .link-list-wrapper ul li a.active {
       --#{$prefix}navscroll-item-border-color: var(--#{$prefix}color-border-inverse);
     }
+
+    .progress {
+      --#{$prefix}progress-bar-bg: var(--#{$prefix}color-background-inverse); // Override the progress bar background color on dark theme
+      --#{$prefix}progress-bg: var(--#{$prefix}color-slate-52); // Override the progress bar background color on dark theme
+    }
   }
 }
 
@@ -211,7 +223,6 @@
 
   .navbar.it-navscroll-wrapper .menu-wrapper {
     display: block;
-    /* padding: var(--#{$prefix}spacing-s) 0 var(--#{$prefix}spacing-m); */
     background: var(--#{$prefix}navscroll-background);
   }
 

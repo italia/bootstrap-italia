@@ -40,13 +40,13 @@
 // Nav & Header
 @forward 'components/nav';
 @forward 'components/navbar';
+@forward 'components/header';
 @forward 'components/headerslim';
 // @forward 'components/headerslimtheme'; // Keep? It was already removed in 3.x before this merge
 @forward 'components/headercenter';
 // @forward 'components/headercentertheme'; // Keep? It was already removed in 3.x before this merge
 // @forward 'components/headernavbar'; // Keep? It was already removed in 3.x before this merge
 // @forward 'components/headernavbartheme'; // Keep? It was already removed in 3.x before this merge
-@forward 'components/header';
 // @forward 'components/navigationtheme'; // Keep? It was already removed in 3.x before this merge
 // ------------------------------
 
@@ -77,7 +77,7 @@
 @forward 'components/skiplinks';
 @forward 'components/affix';
 @forward 'components/sidebar';
-@forward 'components/sidebarthemes';
+// @forward 'components/sidebarthemes';
 @forward 'components/megamenu';
 @forward 'components/bottomnav';
 @forward 'components/navscroll';
@@ -118,7 +118,7 @@
 @forward 'components/page-scroll';
 @forward 'components/pagination';
 @forward 'components/placeholders'; // Keep?
-@forward 'components/toasts';
+// @forward 'components/toasts';
 @forward 'components/footer';
 // ------------------------------
 

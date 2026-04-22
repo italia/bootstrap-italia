@@ -6,8 +6,6 @@ group: componenti
 toc: true
 ---
 
-## Timeline classica e point list
-
 Il componente timeline è disponibile in due varianti distinte: 
 
 - **Timeline classica** per presentare una storia o l'avanzamento di una roadmap di cose da fare.
@@ -259,26 +257,6 @@ Il **PIN** ha tre varianti di colore:
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-### Breaking change
-
-{% capture callout %}
-Implementato nell'esempio il nuovo componente card definito dalle classi `.it-card` e relativi modificatori.  
-
-Le classi legacy di Bootstrap `.card` sono ora deprecate ma **saranno mantenute nei fogli di stile fino al prossimo rilascio maggiore, per permettere una migrazione graduale**. 
-{% endcapture %}{% include callout-breaking.html version="2.16.0" content=callout type="danger" %}
-
-{% capture callout %}
-Il codice markup è stato rivisto in chiave accessibilità e robustezza. In particolare cosa cambia: 
-  - L'elemento `.pin-wrapper` è ora implementato come heading `h` e non semplice `div`. Dovrà avere il livello intestazione corretto a seconda della gerarchia in pagina.
-  - L'elemento `.pin-icon`, se semanticamente rilevante, deve avere attributo `role="img"` e contenere un tag `title` che lo descriva.
-  - Gli elementi categoria e data hanno ora tag `span` `visually-hidden` che ne descrivono lo scopo.
-  - L'elemento `.card-title` è ora implementato con heading `h4` per rispettare la gerarchia attuale. Dovrà avere il livello intestazione corretto a seconda della gerarchia in pagina.
-{% endcapture %}{% include callout-breaking.html content=callout version="2.11.0" type="danger" %}
-
------
-
------
-
 ## Timeline point list
 
 La timeline point list permette la rappresentazione di una sequenza di eventi o informazioni in maniera più compatta rispetto alla timeline classica. È particolarmente indicata per presentare una breve sequenza di cose da fare e scadenze temporali.
@@ -287,30 +265,7 @@ Il componente è caratterizzato da un elenco ordinato `<ol>` con classe `.it-tim
 
 Il componente è implementato come elenco ordinato `<ol> per garantire la corretta semantica HTML. In casi eccezionali è possibile utilizzare un elenco non ordinato `<ul>`, ma l'uso di `<ol>` è fortemente raccomandato per rappresentare correttamente la sequenza cronologica.
 
-### Struttura della sezione laterale
-
-La sezione laterale `.point-aside` visualizza informazioni in tre posizioni verticali tramite classi posizionali:
-
-- `.point-top`: elemento superiore (opzionale) - es. anno, categoria, versione
-- `.point-main`: elemento principale (obbligatorio) - es. giorno, numero step, icona milestone
-- `.point-bottom`: elemento inferiore (opzionale) - es. mese, frazione, label
-
-Questi elementi sono racchiusi in `.point-visual` con `aria-hidden="true"` perché sono solo presentazione visiva. Il contenuto accessibile è fornito da:
-- Elemento `<time>` con attributo `datetime` per le date
-- `<span class="visually-hidden">` per contenuti non temporali
-
-{% capture callout %}
-#### Accessibilità point list
-
-**Struttura accessibile:**
-- Il wrapper `.point-visual` ha `aria-hidden="true"` per nascondere la presentazione visiva agli screen reader
-- Implementa descrizioni dedicate ai lettori di schermo e machine readable con: 
-  - **Per punti data**: usa l'elemento semantico `<time>` con l'attributo `datetime` in formato ISO (es. `2025-10-14`).
-  - **Per punti non temporali:** usa un `<div>` contenitore generico e usa `<span class="visually-hidden">` per descrivere il contenuto in linguaggio naturale seguendo l'ordine visivo (top → bottom, es. "Categoria AB, passo 1 di 3").
-  - **Per punti icona:** usa `aria-hidden="true"` sull'elemento `<svg>` e veicola il significato usando `<span class="visually-hidden">`.
-{% endcapture %}{% include callout.html content=callout type="accessibility" %}
-
-### Esempio base
+### Esempio
 
 {% comment %}Example name: Timeline point list{% endcomment %}
 {% capture example %}
@@ -346,196 +301,27 @@ Questi elementi sono racchiusi in `.point-visual` con `aria-hidden="true"` perch
 </ol>
 {% endcapture %}{% include example.html content=example %}
 
-### Date specifiche
+### Struttura della sezione laterale
 
-Per esplicitare le date complete si usa l'elemento `<time>` con l'attributo `datetime` e i contenitori posizionali per la visualizzazione.
+La sezione laterale `.point-aside` visualizza informazioni in tre posizioni verticali tramite classi posizionali:
 
-#### Con giorno e mese
+- `.point-top`: elemento superiore (opzionale) - es. anno, categoria, versione
+- `.point-main`: elemento principale (obbligatorio) - es. giorno, numero step, icona milestone
+- `.point-bottom`: elemento inferiore (opzionale) - es. mese, frazione, label
 
-{% comment %}Example name: Timeline point list, calendario{% endcomment %}
-{% capture example %}
-<ol class="it-timeline-point-list">
-  <li class="timeline-point">
-    <div class="point-aside point-aside-primary">
-      <time datetime="2025-10-14">
-        <span class="visually-hidden">14 ottobre 2025</span>
-        <div class="point-visual" aria-hidden="true">
-          <div class="point-main font-monospace">14</div>
-          <div class="point-bottom font-monospace">OTT</div>
-        </div>
-      </time>
-    </div>
-    <div class="point-content">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </div>
-  </li>
-</ol>
-{% endcapture %}{% include example.html content=example %}
+Questi elementi sono racchiusi in `.point-visual` con `aria-hidden="true"` perché sono solo presentazione visiva. Il contenuto accessibile è fornito da:
+- Elemento `<time>` con attributo `datetime` per le date
+- `<span class="visually-hidden">` per contenuti non temporali
 
-#### Con anno, giorno e mese
+{% capture callout %}
+#### Accessibilità point list
 
-Tramite il contenitore `.point-top` è possibile visualizzare anche l'anno.
-
-{% comment %}Example name: Timeline point list, calendario completo{% endcomment %}
-{% capture example %}
-<ol class="it-timeline-point-list">
-  <li class="timeline-point">
-    <div class="point-aside point-aside-primary">
-      <time datetime="2025-10-14">
-        <span class="visually-hidden">14 ottobre 2025</span>
-        <div class="point-visual" aria-hidden="true">
-          <div class="point-top font-monospace">2025</div>
-          <div class="point-main font-monospace">14</div>
-          <div class="point-bottom font-monospace">OTT</div>
-        </div>
-      </time>
-    </div>
-    <div class="point-content">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </div>
-  </li>
-</ol>
-{% endcapture %}{% include example.html content=example %}
-
-### Layout compatto su desktop
-
-Tramite la classe `.timeline-point-xs` applicata all'elemento `.timeline-point` è possibile rendere più compatta la visualizzazione del blocco di aside anche su desktop, facendola corrispondere alla visualizzazione per dispositivi mobile.
-
-{% comment %}Example name: Timeline point list, compatta{% endcomment %}
-{% capture example %}
-<ol class="it-timeline-point-list">
-  <li class="timeline-point timeline-point-xs">
-    <div class="point-aside point-aside-primary">
-      <time datetime="2025-10-14">
-        <span class="visually-hidden">14 ottobre 2025</span>
-        <div class="point-visual" aria-hidden="true">
-          <div class="point-main font-monospace">14</div>
-          <div class="point-bottom font-monospace">OTT</div>
-        </div>
-      </time>
-    </div>
-    <div class="point-content">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </div>
-  </li>
-</ol>
-{% endcapture %}{% include example.html content=example %}
-
-### Traguardi e milestone
-
-La sezione laterale può essere usata anche per visualizzare progressi, step o milestone tramite numeri, sigle o icone.
-
-#### Traguardi con numeri e sigle
-
-È possibile usare i contenitori posizionali per presentare informazioni diverse dalle date, come numeri di step, frazioni o sigle. In questo caso si usa un `<div>` generico al posto di `<time>`.
-
-{% comment %}Example name: Timeline point list, traguardi numerici{% endcomment %}
-{% capture example %}
-<ol class="it-timeline-point-list">
-  <li class="timeline-point">
-    <div class="point-aside point-aside-primary">
-      <div>
-        <span class="visually-hidden">Passo 1</span>
-        <div class="point-visual" aria-hidden="true">
-          <div class="point-main font-monospace">01</div>
-        </div>
-      </div>
-    </div>
-    <div class="point-content">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </div>
-  </li>
-  <li class="timeline-point">
-    <div class="point-aside point-aside-primary">
-      <div>
-        <span class="visually-hidden">Passo 1 di 3</span>
-        <div class="point-visual" aria-hidden="true">
-          <div class="point-main font-monospace">01</div>
-          <div class="point-bottom font-monospace">/3</div>
-        </div>
-      </div>
-    </div>
-    <div class="point-content">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </div>
-  </li>
-  <li class="timeline-point">
-    <div class="point-aside point-aside-primary">
-      <div>
-        <span class="visually-hidden">Categoria AB, passo 1 di 3</span>
-        <div class="point-visual" aria-hidden="true">
-          <div class="point-top font-monospace">AB</div>
-          <div class="point-main font-monospace">01</div>
-          <div class="point-bottom font-monospace">/3</div>
-        </div>
-      </div>
-    </div>
-    <div class="point-content">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </div>
-  </li>
-</ol>
-{% endcapture %}{% include example.html content=example %}
-
-#### Traguardi con icone
-
-È possibile usare un'icona nel contenitore `.point-main` per rappresentare milestone o stati, accompagnata da eventuali micro-testi nei contenitori `.point-top` e `.point-bottom`.
-
-{% comment %}Example name: Timeline point list, milestone con icone{% endcomment %}
-{% capture example %}
-<ol class="it-timeline-point-list">
-  <li class="timeline-point">
-    <div class="point-aside point-aside-primary">
-      <div>
-        <span class="visually-hidden">Milestone completata</span>
-        <div class="point-visual" aria-hidden="true">
-          <div class="point-main font-monospace">
-            <svg class="icon icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-flag"></use></svg>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="point-content">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </div>
-  </li>
-  <li class="timeline-point">
-    <div class="point-aside point-aside-primary">
-      <div>
-        <span class="visually-hidden">Documento rilasciato</span>
-        <div class="point-visual" aria-hidden="true">
-          <div class="point-main font-monospace">
-            <svg class="icon icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
-          </div>
-          <div class="point-bottom font-monospace">DOC</div>
-        </div>
-      </div>
-    </div>
-    <div class="point-content">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </div>
-  </li>
-  <li class="timeline-point">
-    <div class="point-aside point-aside-primary">
-      <div>
-        <span class="visually-hidden">Versione 2, codice JavaScript</span>
-        <div class="point-visual" aria-hidden="true">
-          <div class="point-top font-monospace">v2</div>
-          <div class="point-main font-monospace">
-            <svg class="icon icon-primary" aria-hidden="true">
-              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
-            </svg>
-          </div>
-          <div class="point-bottom font-monospace">JS</div>
-        </div>
-      </div>
-    </div>
-    <div class="point-content">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </div>
-  </li>
-</ol>
-{% endcapture %}{% include example.html content=example %}
+- Il wrapper `.point-visual` ha `aria-hidden="true"` per nascondere la presentazione visiva agli screen reader
+- Implementa descrizioni dedicate ai lettori di schermo e machine readable con: 
+  - **Per punti data**: usa l'elemento semantico `<time>` con l'attributo `datetime` in formato ISO (es. `2025-10-14`).
+  - **Per punti non temporali:** usa un `<div>` contenitore generico e usa `<span class="visually-hidden">` per descrivere il contenuto in linguaggio naturale seguendo l'ordine visivo (top → bottom, es. "Categoria AB, passo 1 di 3").
+  - **Per punti icona:** usa `aria-hidden="true"` sull'elemento `<svg>` e veicola il significato usando `<span class="visually-hidden">`.
+{% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
 ### Varianti colore
 
@@ -637,13 +423,205 @@ Modificando la classe `.point-aside-{suffisso}` è possibile personalizzare il c
 </ol>
 {% endcapture %}{% include example.html content=example %}
 
-### Timeline stile servizi pubblici
+### Dimensione compatta
 
-Un layout ottimizzato per presentare scadenze e procedure amministrative, come quelle dei servizi pubblici. Le card hanno sfondo bianco per maggiore leggibilità.
+Tramite la classe `.timeline-point-xs` applicata all'elemento `.timeline-point` è possibile rendere la data più compatta, su qualunque dispositivo.
 
-Per fissare verticalmente il punto dell'elenco all'inizio del contenuto usa la classe `.timeline-point-align-top` sull'elemento `.timeline-point`. Nell'esempio è applicata all'ultimo punto elenco particolarmente lungo. 
+{% comment %}Example name: Timeline point list, compatta{% endcomment %}
+{% capture example %}
+<ol class="it-timeline-point-list">
+  <li class="timeline-point timeline-point-xs">
+    <div class="point-aside point-aside-primary">
+      <time datetime="2025-10-14">
+        <span class="visually-hidden">14 ottobre 2025</span>
+        <div class="point-visual" aria-hidden="true">
+          <div class="point-main font-monospace">14</div>
+          <div class="point-bottom font-monospace">OTT</div>
+        </div>
+      </time>
+    </div>
+    <div class="point-content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  </li>
+</ol>
+{% endcapture %}{% include example.html content=example %}
 
-{% comment %}Example name: Timeline point list, servizi pubblici{% endcomment %}
+### Opzioni date
+
+Per esplicitare le date complete si usa l'elemento `<time>` con l'attributo `datetime` e i contenitori posizionali per la visualizzazione.
+
+#### Data con giorno e mese
+
+{% comment %}Example name: Timeline point list, calendario{% endcomment %}
+{% capture example %}
+<ol class="it-timeline-point-list">
+  <li class="timeline-point">
+    <div class="point-aside point-aside-primary">
+      <time datetime="2025-10-14">
+        <span class="visually-hidden">14 ottobre 2025</span>
+        <div class="point-visual" aria-hidden="true">
+          <div class="point-main font-monospace">14</div>
+          <div class="point-bottom font-monospace">OTT</div>
+        </div>
+      </time>
+    </div>
+    <div class="point-content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  </li>
+</ol>
+{% endcapture %}{% include example.html content=example %}
+
+#### Data completa
+
+Tramite il contenitore `.point-top` è possibile visualizzare anche l'anno.
+
+{% comment %}Example name: Timeline point list, calendario completo{% endcomment %}
+{% capture example %}
+<ol class="it-timeline-point-list">
+  <li class="timeline-point">
+    <div class="point-aside point-aside-primary">
+      <time datetime="2025-10-14">
+        <span class="visually-hidden">14 ottobre 2025</span>
+        <div class="point-visual" aria-hidden="true">
+          <div class="point-top font-monospace">2025</div>
+          <div class="point-main font-monospace">14</div>
+          <div class="point-bottom font-monospace">OTT</div>
+        </div>
+      </time>
+    </div>
+    <div class="point-content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  </li>
+</ol>
+{% endcapture %}{% include example.html content=example %}
+
+
+### Progressi e traguardi
+
+La sezione laterale può essere usata anche per visualizzare progressi e traguardi tramite numeri, sigle o icone.
+
+#### Progressi con numeri e sigle
+
+È possibile usare i contenitori posizionali per presentare informazioni diverse dalle date, come numeri di step, frazioni o sigle. In questo caso si usa un `<div>` generico al posto di `<time>`.
+
+{% comment %}Example name: Timeline point list, progresi numerici{% endcomment %}
+{% capture example %}
+<ol class="it-timeline-point-list">
+  <li class="timeline-point">
+    <div class="point-aside point-aside-primary">
+      <div>
+        <span class="visually-hidden">Passo 1</span>
+        <div class="point-visual" aria-hidden="true">
+          <div class="point-main font-monospace">01</div>
+        </div>
+      </div>
+    </div>
+    <div class="point-content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  </li>
+  <li class="timeline-point">
+    <div class="point-aside point-aside-primary">
+      <div>
+        <span class="visually-hidden">Passo 1 di 3</span>
+        <div class="point-visual" aria-hidden="true">
+          <div class="point-main font-monospace">01</div>
+          <div class="point-bottom font-monospace">/3</div>
+        </div>
+      </div>
+    </div>
+    <div class="point-content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  </li>
+  <li class="timeline-point">
+    <div class="point-aside point-aside-primary">
+      <div>
+        <span class="visually-hidden">Categoria AB, passo 1 di 3</span>
+        <div class="point-visual" aria-hidden="true">
+          <div class="point-top font-monospace">AB</div>
+          <div class="point-main font-monospace">01</div>
+          <div class="point-bottom font-monospace">/3</div>
+        </div>
+      </div>
+    </div>
+    <div class="point-content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  </li>
+</ol>
+{% endcapture %}{% include example.html content=example %}
+
+#### Traguardi con icone
+
+È possibile usare un'icona nel contenitore `.point-main` per rappresentare milestone o stati, accompagnata da eventuali micro-testi nei contenitori `.point-top` e `.point-bottom`.
+
+{% comment %}Example name: Timeline point list, traguardi con icone{% endcomment %}
+{% capture example %}
+<ol class="it-timeline-point-list">
+  <li class="timeline-point">
+    <div class="point-aside point-aside-primary">
+      <div>
+        <span class="visually-hidden">Milestone completata</span>
+        <div class="point-visual" aria-hidden="true">
+          <div class="point-main font-monospace">
+            <svg class="icon icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-flag"></use></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="point-content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  </li>
+  <li class="timeline-point">
+    <div class="point-aside point-aside-primary">
+      <div>
+        <span class="visually-hidden">Documento rilasciato</span>
+        <div class="point-visual" aria-hidden="true">
+          <div class="point-main font-monospace">
+            <svg class="icon icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
+          </div>
+          <div class="point-bottom font-monospace">DOC</div>
+        </div>
+      </div>
+    </div>
+    <div class="point-content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  </li>
+  <li class="timeline-point">
+    <div class="point-aside point-aside-primary">
+      <div>
+        <span class="visually-hidden">Versione 2, codice JavaScript</span>
+        <div class="point-visual" aria-hidden="true">
+          <div class="point-top font-monospace">v2</div>
+          <div class="point-main font-monospace">
+            <svg class="icon icon-primary" aria-hidden="true">
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
+            </svg>
+          </div>
+          <div class="point-bottom font-monospace">JS</div>
+        </div>
+      </div>
+    </div>
+    <div class="point-content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  </li>
+</ol>
+{% endcapture %}{% include example.html content=example %}
+
+### Lista contenuti generici
+
+Un layout ottimizzato per presentare contenuti generici come procedure amministrative, scadenze, liste di attività.
+
+Usa la classe `.timeline-point-align-top` sull'elemento `.timeline-point` per fissare verticalmente il punto dell'elenco all'inizio del contenuto. Nell'esempio è applicata all'ultimo punto elenco particolarmente lungo. 
+
+{% comment %}Example name: Timeline con card generiche{% endcomment %}
 {% capture example %}
 <ol class="it-timeline-point-list">
   <li class="timeline-point">
@@ -742,19 +720,19 @@ Per fissare verticalmente il punto dell'elenco all'inizio del contenuto usa la c
 </ol>
 {% endcapture %}{% include example.html content=example %}
 
-### Esempio complesso con card complete
+### Lista contenuti editoriali
 
-Di seguito un esempio che integra card nel contenuto della timeline.
+Di seguito un esempio che integra card editoriali nel contenuto della timeline.
 
 Per fissare verticalmente il punto dell'elenco all'inizio del contenuto usa la classe `.timeline-point-align-top` sull'elemento `.timeline-point`. Nell'esempio è applicato a tutti i punti in elenco essendo particolarmente lunghi nei contenuti. 
 
 **Nota bene:** usa la classe `.it-timeline-point-list-stack-mobile` sull'elemento lista `.it-timeline-point-list` per permettere su mobile di disporre verticalmente la sezione laterale in alto al contenuto, ottimizzando lo spazio per card complesse a risoluzioni mobile. In questo caso è bene che il contenuto sia sempre raccolto in elementi di tipo card o almeno con un fondale colorato per sovrastare gerarchicamente la linea. Naviga l'esempio a risoluzione mobile per esplorare la soluzione. 
 
-{% comment %}Example name: Point list, esempio complesso{% endcomment %}
+{% comment %}Example name: Timeline con card editoriali{% endcomment %}
 {% capture example %}
 <ol class="it-timeline-point-list it-timeline-point-list-stack-mobile">
   <li class="timeline-point timeline-point-align-top">
-    <div class="point-aside point-aside-dark">
+    <div class="point-aside point-aside-primary">
       <time datetime="2025-10-14">
         <span class="visually-hidden">14 ottobre 2025</span>
         <div class="point-visual" aria-hidden="true">
@@ -784,7 +762,7 @@ Per fissare verticalmente il punto dell'elenco all'inizio del contenuto usa la c
     </div>
   </li>
   <li class="timeline-point timeline-point-align-top">
-    <div class="point-aside point-aside-danger">
+    <div class="point-aside point-aside-primary">
       <time datetime="2025-10-31">
         <span class="visually-hidden">31 ottobre 2025</span>
         <div class="point-visual" aria-hidden="true">
@@ -823,15 +801,14 @@ Per fissare verticalmente il punto dell'elenco all'inizio del contenuto usa la c
     </div>
   </li>
   <li class="timeline-point timeline-point-align-top">
-    <div class="point-aside point-aside-info">
-      <div>
-        <span class="visually-hidden">Milestone in corso</span>
+    <div class="point-aside point-aside-primary">
+      <time datetime="2026-01-27">
+        <span class="visually-hidden">27 gennaio 2026</span>
         <div class="point-visual" aria-hidden="true">
-          <div class="point-main font-monospace">
-            <svg class="icon icon-info icon-lg" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-clock"></use></svg>
-          </div>
+          <div class="point-main font-monospace">27</div>
+          <div class="point-bottom font-monospace">GEN</div>
         </div>
-      </div>
+      </time>
     </div>
     <div class="point-content">
       <div class="row g-0">
@@ -863,15 +840,14 @@ Per fissare verticalmente il punto dell'elenco all'inizio del contenuto usa la c
     </div>
   </li>
   <li class="timeline-point timeline-point-align-top">
-    <div class="point-aside point-aside-success">
-      <div>
-        <span class="visually-hidden">Milestone completata</span>
+    <div class="point-aside point-aside-primary">
+      <time datetime="2026-02-03">
+        <span class="visually-hidden">3 febbraio 2026</span>
         <div class="point-visual" aria-hidden="true">
-          <div class="point-main font-monospace">
-            <svg class="icon icon-success icon-lg" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-flag"></use></svg>
-          </div>
+          <div class="point-main font-monospace">03</div>
+          <div class="point-bottom font-monospace">FEB</div>
         </div>
-      </div>
+      </time>
     </div>
     <div class="point-content">
       <div class="row g-0">
@@ -902,3 +878,19 @@ Per fissare verticalmente il punto dell'elenco all'inizio del contenuto usa la c
   </li>
 </ol>
 {% endcapture %}{% include example.html content=example %}
+
+## Breaking change
+
+{% capture callout %}
+Implementato nell'esempio il nuovo componente card definito dalle classi `.it-card` e relativi modificatori.  
+
+Le classi legacy di Bootstrap `.card` sono ora deprecate ma **saranno mantenute nei fogli di stile fino al prossimo rilascio maggiore, per permettere una migrazione graduale**. 
+{% endcapture %}{% include callout-breaking.html version="2.16.0" content=callout type="danger" %}
+
+{% capture callout %}
+Il codice markup è stato rivisto in chiave accessibilità e robustezza. In particolare cosa cambia: 
+  - L'elemento `.pin-wrapper` è ora implementato come heading `h` e non semplice `div`. Dovrà avere il livello intestazione corretto a seconda della gerarchia in pagina.
+  - L'elemento `.pin-icon`, se semanticamente rilevante, deve avere attributo `role="img"` e contenere un tag `title` che lo descriva.
+  - Gli elementi categoria e data hanno ora tag `span` `visually-hidden` che ne descrivono lo scopo.
+  - L'elemento `.card-title` è ora implementato con heading `h4` per rispettare la gerarchia attuale. Dovrà avere il livello intestazione corretto a seconda della gerarchia in pagina.
+{% endcapture %}{% include callout-breaking.html content=callout version="2.11.0" type="danger" %}
