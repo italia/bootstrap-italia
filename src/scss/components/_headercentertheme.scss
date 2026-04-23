@@ -1,3 +1,5 @@
+// NOTA: Questo file attualmente non è usato perchè deprecato
+
 // Component: headercentertheme
 //
 // Description: Component styles for headercentertheme
@@ -16,10 +18,12 @@
 .it-header-center-wrapper {
   &.theme-light {
     background: $header-center-theme-light-bg-color;
+
     .it-header-center-content-wrapper {
       .it-brand-wrapper {
         a {
           color: $header-center-theme-light-text-color;
+
           .icon {
             fill: $header-center-theme-light-text-color;
           }
@@ -29,6 +33,7 @@
       //right zone
       .it-right-zone {
         color: $header-center-theme-light-text-color;
+
         .it-socials {
           ul {
             .icon {
@@ -37,6 +42,7 @@
           }
         }
       }
+
       //-search
       .it-search-wrapper {
         a {
@@ -56,6 +62,7 @@
   .it-header-center-wrapper {
     &.theme-light {
       .it-header-center-content-wrapper {
+
         //right zone
         .it-right-zone {
           .it-socials {
@@ -70,14 +77,18 @@
             }
           }
         }
+
         //-search
+
         .it-search-wrapper {
           a {
             background: $header-center-theme-light-text-color;
+
             &.rounded-icon {
               svg {
                 fill: $header-center-theme-light-bg-color;
               }
+
               &:hover {
                 background: shade-color($header-center-theme-light-text-color, 5%);
               }
