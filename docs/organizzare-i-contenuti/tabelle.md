@@ -268,7 +268,7 @@ Le classi per personalizzare il colore sono: `.table-primary`, `.table-secondary
 
 ### Righe colorate e hover
 
-Puoi applicare la classe contestuale di colore all'elemento `<tr>` per colorare una singola riga. Insieme ad esso puoi applicare `.table-hover` per abilitare lo stato hover.
+Puoi applicare la classe contestuale di colore all'elemento `<tr>` per colorare una singola riga. Insieme ad essa puoi applicare anche la classe `.table-hover` per abilitare lo stato hover su ogni riga.
 
 {% comment %}Example name: Righe colorate{% endcomment %}
 {% capture example %}
@@ -332,6 +332,8 @@ Puoi applicare la classe contestuale di colore all'elemento `<tr>` per colorare 
 
 ### Celle colorate
 
+Puoi applicare la classe contestuale di colore all'elemento `<td>` per colorare una singola cella.
+
 {% comment %}Example name: Celle colorate{% endcomment %}
 {% capture example %}
   <div class="table-responsive">
@@ -357,7 +359,11 @@ Puoi applicare la classe contestuale di colore all'elemento `<tr>` per colorare 
 
 ### Righe striate
 
-Usa `.table-striped` per aggiungere delle striature zebrate ad ogni riga della tabella contenute in `<tbody>`.
+Usa `.table-striped` per aggiungere colori alternati ad ogni riga della tabella contenute in `<tbody>`.
+
+{% capture callout %} 
+  Questa variante non può essere combinata con le classi di colore.
+{% endcapture %}{% include callout.html content=callout type="warning" %}
 
 {% comment %}Example name: Righe striate{% endcomment %}
 {% capture example %}
@@ -541,7 +547,7 @@ Aggiungi `.table-bordered` per avere i bordi a tutti i lati della tabella e su t
   </table>
 {% endcapture %}{% include example.html content=example %}
 
-Le [utilities di colorazione dei bordi]({{site.baseurl}}/docs/organizzare-gli-spazi/bordi/#colore-dei-bordi) possono essere utilizzate per cambiarne i colori.
+Le [utilities dei bordi]({{site.baseurl}}/docs/organizzare-gli-spazi/bordi/#colore-dei-bordi) permettono di cambiarne il colore.
 
 {% comment %}Example name: Con bordi, varianti di colore{% endcomment %}
 {% capture example %}
