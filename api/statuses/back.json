@@ -1,7 +1,7 @@
 {
     "amichevole con lettori di schermo": "PRONTO",
     "angular Kit": "PRONTO",
-    "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/back-button",
+    "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/menu-di-navigazione/back-button",
     "assignees": [
         "Fupete"
     ],
@@ -14,10 +14,12 @@
         "title": "Back",
         "type": "DraftIssue"
     },
+    "dev Kit Italia": "PRONTO",
+    "dev Kit Italia - url": "https://italia.github.io/dev-kit-italia/?path=/docs/componenti-back--documentazione",
     "id": "PVTI_lADOAOqloM4AcXblzgMjwUQ",
     "navigabile": "PRONTO",
     "react Kit": "PRONTO",
-    "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-goback--documentazione",
+    "react Kit - url": "https://italia.github.io/design-react-kit/latest/?path=/docs/documentazione-componenti-goback--documentazione",
     "status": "Todo",
     "status a11y check": "Done",
     "title": "Back",
