@@ -15,9 +15,9 @@
   --#{$prefix}table-border-color: var(--#{$prefix}border-color); // Controls the border color for the table, using color tokens.
   --#{$prefix}table-border-width: var(--#{$prefix}border-width); // Controls the border width for the table cell.
   --#{$prefix}table-striped-bg: var(--#{$prefix}color-background-muted); // Controls the text color for the striped rows, using color tokens.
-  --#{$prefix}table-active-bg: var(--#{$prefix}color-background-secondary); // Controls the background color for the active rows, using color tokens.
+  --#{$prefix}table-active-bg: var(--it-color-slate-85); // Controls the background color for the active rows, using color tokens.
   --#{$prefix}table-hover-color: var(--#{$prefix}color-text-base); // Controls the text color for the hovered rows, using color tokens.
-  --#{$prefix}table-hover-bg: var(--#{$prefix}color-background-secondary-hover); // Controls the background color for the hovered rows, using color tokens.
+  --#{$prefix}table-hover-bg: var(--it-color-slate-85); // Controls the background color for the hovered rows, using color tokens.
   --#{$prefix}table-padding: var(--#{$prefix}spacing-xxs); // Controls the padding for the table cells, using spacing tokens.
   --#{$prefix}table-cell-font-size: var(--#{$prefix}body-font-size); // Controls the font size for the table cells, using typography tokens.
   --#{$prefix}table-cell-vertical-align: top; // Controls the vertical alignment of the table cells.
@@ -131,6 +131,7 @@
   &.table-dark {
     > tbody > tr:nth-of-type(#{$table-striped-order}) > * {
       --#{$prefix}table-bg: var(--#{$prefix}color-background-primary-muted);
+      --#{$prefix}table-color: var(--#{$prefix}color-text-inverse);
     }
   }
 }
@@ -158,6 +159,10 @@
 .table-hover {
   > tbody > tr:hover > * {
     --#{$prefix}table-bg: var(--#{$prefix}table-hover-bg);
+    cursor: pointer;
+    @media (prefers-reduced-motion: no-preference) {
+      transition: background-color var(--#{$prefix}transition-instant) ease;
+    }
   }
 }
 
@@ -165,79 +170,73 @@
 //
 // Table variants set the table cell backgrounds, border colors
 // and the colors of the striped, hovered & active tables
+//
+// `table-striped-bg` is defined only on the base `.table` class.
+// `table-hover-bg` is computed at runtime via color-mix():
+//   - light variants: darken bg by 10% (mix with black)
+//   - dark variant:   lighten bg by 10% (mix with white)
+//
+//
 
-.table-primary {
-  --#{$prefix}table-bg: var(--#{$prefix}color-background-primary-light);
-  --#{$prefix}table-color: var(--#{$prefix}color-text-base);
-  --#{$prefix}table-striped-bg: var(--#{$prefix}color-background-primary-light);
-  --#{$prefix}table-striped-color: var(--#{$prefix}color-text-base);
-  --#{$prefix}table-hover-bg: var(--#{$prefix}color-background-primary-hover);
-  --#{$prefix}table-active-bg: var(--#{$prefix}color-background-primary-light);
-}
+// scss-docs-start table-variants
+$table-variants: (
+  'primary': (
+    'bg': 'color-background-primary-light',
+    'active-bg': 'color-background-primary-light',
+  ),
+  'secondary': (
+    'bg': 'color-background-secondary-light',
+    'active-bg': 'color-background-secondary-active',
+  ),
+  'success': (
+    'bg': 'color-background-success-light',
+    'active-bg': 'color-background-success-active',
+  ),
+  'info': (
+    'bg': 'color-background-primary-lighter',
+    'active-bg': 'color-background-primary-active',
+  ),
+  'warning': (
+    'bg': 'color-background-warning-light',
+    'active-bg': 'color-background-warning-active',
+  ),
+  'danger': (
+    'bg': 'color-background-danger-light',
+    'active-bg': 'color-background-danger-active',
+  ),
+  'light': (
+    'bg': 'color-background-secondary-lighter',
+    'active-bg': 'color-background-secondary',
+  ),
+  'dark': (
+    'bg': 'color-background-primary-deep',
+    'active-bg': 'color-background-primary-active',
+    'border-color': 'color-background-primary-deep',
+    'color': 'color-text-inverse',
+    'lighten': true,
+  ),
+) !default;
+// scss-docs-end table-variants
 
-.table-secondary {
-  --#{$prefix}table-bg: var(--#{$prefix}color-background-secondary-light);
-  --#{$prefix}table-color: var(--#{$prefix}color-text-base);
-  --#{$prefix}table-striped-bg: var(--#{$prefix}color-background-secondary-light);
-  --#{$prefix}table-striped-color: var(--#{$prefix}color-text-base);
-  --#{$prefix}table-hover-bg: var(--#{$prefix}color-background-secondary-hover);
-  --#{$prefix}table-active-bg: var(--#{$prefix}color-background-secondary-active);
-}
+@each $variant, $values in $table-variants {
+  .table-#{$variant} {
+    --#{$prefix}table-bg: var(--#{$prefix}#{map-get($values, 'bg')});
+    --#{$prefix}table-active-bg: var(--#{$prefix}#{map-get($values, 'active-bg')});
 
-.table-success {
-  --#{$prefix}table-bg: var(--#{$prefix}color-background-success-light);
-  --#{$prefix}table-color: var(--#{$prefix}color-text-base);
-  --#{$prefix}table-striped-bg: var(--#{$prefix}color-background-success-light);
-  --#{$prefix}table-striped-color: var(--#{$prefix}color-text-success);
-  --#{$prefix}table-hover-bg: var(--#{$prefix}color-background-success-hover);
-  --#{$prefix}table-active-bg: var(--#{$prefix}color-background-success-active);
-}
+    @if map-get($values, 'lighten') {
+      --#{$prefix}table-hover-bg: color-mix(in srgb, var(--#{$prefix}table-bg) 80%, white 10%);
+    } @else {
+      --#{$prefix}table-hover-bg: color-mix(in srgb, var(--#{$prefix}table-bg) 80%, black 10%);
+    }
 
-.table-info {
-  --#{$prefix}table-bg: var(--#{$prefix}color-background-primary-lighter);
-  --#{$prefix}table-color: var(--#{$prefix}color-text-base);
-  --#{$prefix}table-striped-bg: var(--{$prefix}color-background-primary-lighter);
-  --#{$prefix}table-striped-color: var(--#{$prefix}color-text-base);
-  --#{$prefix}table-hover-bg: var(--#{$prefix}color-background-primary-hover);
-  --#{$prefix}table-active-bg: var(--#{$prefix}color-background-primary-active);
-}
+    @if map-get($values, 'color') {
+      --#{$prefix}table-color: var(--#{$prefix}#{map-get($values, 'color')});
+    }
 
-.table-warning {
-  --#{$prefix}table-bg: var(--#{$prefix}color-background-warning-light);
-  --#{$prefix}table-color: var(--#{$prefix}color-text-base);
-  --#{$prefix}table-striped-bg: var(--#{$prefix}color-background-warning-light);
-  --#{$prefix}table-striped-color: var(--#{$prefix}color-text-warning);
-  --#{$prefix}table-hover-bg: var(--#{$prefix}color-background-warning-hover);
-  --#{$prefix}table-active-bg: var(--#{$prefix}color-background-warning-active);
-}
-
-.table-danger {
-  --#{$prefix}table-bg: var(--#{$prefix}color-background-danger-light);
-  --#{$prefix}table-color: var(--#{$prefix}color-text-base);
-  --#{$prefix}table-striped-bg: var(--#{$prefix}color-background-danger-light);
-  --#{$prefix}table-striped-color: var(--#{$prefix}color-text-base);
-  --#{$prefix}table-hover-bg: var(--#{$prefix}color-background-danger-hover);
-  --#{$prefix}table-active-bg: var(--#{$prefix}color-background-danger-active);
-}
-
-.table-light {
-  --#{$prefix}table-bg: var(--#{$prefix}color-background-secondary-lighter);
-  --#{$prefix}table-color: var(--#{$prefix}color-text-base);
-  --#{$prefix}table-striped-bg: var(--#{$prefix}color-background-secondary-lighter);
-  --#{$prefix}table-striped-color: var(--#{$prefix}color-text-primary);
-  --#{$prefix}table-hover-bg: var(--#{$prefix}color-background-secondary-hover);
-  --#{$prefix}table-hover-color: var(--#{$prefix}color-text-primary);
-  --#{$prefix}table-active-bg: var(--#{$prefix}color-background-secondary);
-}
-
-.table-dark {
-  --#{$prefix}table-bg: var(--#{$prefix}color-background-primary-deep);
-  --#{$prefix}table-border-color: var(--#{$prefix}color-background-primary-deep);
-  --#{$prefix}table-color: var(--#{$prefix}color-text-inverse);
-  --#{$prefix}table-striped-bg: var(--#{$prefix}color-background-primary-deep);
-  --#{$prefix}table-striped-color: var(--#{$prefix}color-text-inverse);
-  --#{$prefix}table-hover-bg: var(--#{$prefix}color-background-primary-muted);
-  --#{$prefix}table-active-bg: var(--#{$prefix}color-background-primary-active);
+    @if map-get($values, 'border-color') {
+      --#{$prefix}table-border-color: var(--#{$prefix}#{map-get($values, 'border-color')});
+    }
+  }
 }
 
 // Responsive tables
