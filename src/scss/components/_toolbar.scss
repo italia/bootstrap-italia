@@ -367,15 +367,12 @@
     position: relative;
   }
 
+  // Icon badge
   .toolbar-badge {
     position: absolute;
     display: block;
     border: 1px solid var(--#{$prefix}toolbar-badge-border-color);
     background-color: var(--#{$prefix}toolbar-badge-background-color);
-  }
-
-  // Icon badge
-  .toolbar-badge {
     top: -4px;
     right: 0;
     min-width: 18px;

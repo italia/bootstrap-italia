@@ -75,7 +75,6 @@
   --#{$prefix}header-social-color: var(--#{$prefix}icon-primary);
   --#{$prefix}color-background-inverse-hover: var(--#{$prefix}header-center-text-color);
 
-
   @include media-breakpoint-up(md) {
     --#{$prefix}header-search-icon-color: var(--#{$prefix}icon-inverse);
   }
@@ -89,7 +88,6 @@
     width: 100%;
 
     @include media-breakpoint-up(lg) {
-
       .it-header-slim-wrapper,
       .it-header-center-wrapper {
         display: none;
