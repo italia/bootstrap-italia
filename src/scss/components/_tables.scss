@@ -225,21 +225,21 @@ $table-variants: (
 
 @each $variant, $values in $table-variants {
   .table-#{$variant} {
-    --#{$prefix}table-bg: var(--#{$prefix}#{map-get($values, 'bg')});
-    --#{$prefix}table-active-bg: var(--#{$prefix}#{map-get($values, 'active-bg')});
+    --#{$prefix}table-bg: var(--#{$prefix}#{map.get($values, 'bg')});
+    --#{$prefix}table-active-bg: var(--#{$prefix}#{map.get($values, 'active-bg')});
 
-    @if map-get($values, 'lighten') {
+    @if map.get($values, 'lighten') {
       --#{$prefix}table-hover-bg: color-mix(in srgb, var(--#{$prefix}table-bg) 80%, white 10%);
     } @else {
       --#{$prefix}table-hover-bg: color-mix(in srgb, var(--#{$prefix}table-bg) 80%, black 10%);
     }
 
-    @if map-get($values, 'color') {
-      --#{$prefix}table-color: var(--#{$prefix}#{map-get($values, 'color')});
+    @if map.get($values, 'color') {
+      --#{$prefix}table-color: var(--#{$prefix}#{map.get($values, 'color')});
     }
 
-    @if map-get($values, 'border-color') {
-      --#{$prefix}table-border-color: var(--#{$prefix}#{map-get($values, 'border-color')});
+    @if map.get($values, 'border-color') {
+      --#{$prefix}table-border-color: var(--#{$prefix}#{map.get($values, 'border-color')});
     }
   }
 }

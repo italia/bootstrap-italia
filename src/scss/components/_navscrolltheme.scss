@@ -17,7 +17,7 @@
 // Styles
 //
 
-@media (max-width: #{map-get($grid-breakpoints, lg)}) {
+@media (max-width: #{map.get($grid-breakpoints, lg)}) {
   .navbar {
     &.it-navscroll-wrapper {
       &.theme-dark-mobile {

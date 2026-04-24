@@ -16,7 +16,7 @@
 // Styles
 //
 
-@media (max-width: #{map-get($grid-breakpoints, lg)}) {
+@media (max-width: #{map.get($grid-breakpoints, lg)}) {
   .it-header-center-wrapper.theme-light + .it-header-navbar-wrapper {
     .custom-navbar-toggler .icon {
       fill: var(--#{$primar}icon-primary);
