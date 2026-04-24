@@ -298,7 +298,6 @@
     &.disabled {
       --#{$prefix}toolbar-link-color: var(--#{$prefix}color-text-disabled);
       --#{$prefix}toolbar-icon-color: var(--#{$prefix}icon-disabled);
-      cursor: not-allowed;
       &:hover {
         text-decoration: none;
       }

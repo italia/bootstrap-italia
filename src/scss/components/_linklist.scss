@@ -93,8 +93,6 @@
 
     // List item disabled state
     &.disabled {
-      cursor: not-allowed;
-
       &:hover span {
         text-decoration: none;
       }

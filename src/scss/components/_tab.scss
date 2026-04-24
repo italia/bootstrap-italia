@@ -118,7 +118,6 @@
     }
     &.disabled {
       --#{$prefix}tab-text-color: var(--#{$prefix}color-link-disabled);
-      cursor: not-allowed;
     }
     &[data-focus-mouse='true']:not(.active) {
       border-color: var(--#{$prefix}tab-border-color) !important; // stylelint-disable-line declaration-no-important - overrides styles in _focus.scss

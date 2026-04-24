@@ -59,7 +59,6 @@ $btn-close-white-filter: invert(1) grayscale(100%) brightness(200%) !default;
   &:disabled,
   &.disabled {
     opacity: var(--#{$prefix}btn-disabled-opacity);
-    cursor: not-allowed;
     pointer-events: none;
   }
 
@@ -136,11 +135,6 @@ $btn-close-white-filter: invert(1) grayscale(100%) brightness(200%) !default;
     justify-content: center;
     margin: 0;
   }
-}
-
-.btn:disabled:hover,
-.btn.disabled:hover {
-  cursor: not-allowed;
 }
 
 .btn-primary,

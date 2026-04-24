@@ -296,6 +296,11 @@ select {
   cursor: pointer;
 }
 
+.disabled,
+[disabled] {
+  cursor: not-allowed;
+}
+
 select {
   // Remove the inheritance of word-wrap in Safari.
   // See https://github.com/twbs/bootstrap/issues/24990

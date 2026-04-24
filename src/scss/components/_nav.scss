@@ -43,7 +43,6 @@
   // Disabled state lightens text
   &.disabled {
     opacity: var(--#{$prefix}navbar-disable-item-opacity);
-    cursor: not-allowed;
     pointer-events: none;
   }
 }
