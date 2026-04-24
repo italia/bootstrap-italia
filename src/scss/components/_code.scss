@@ -31,7 +31,8 @@ pre {
 
 code {
   color: var(--#{$prefix}color-code);
-  font-size: 85%;
+  font-size: 80%;
+  font-weight: 500;
   word-wrap: break-word;
   background-color: var(--#{$prefix}code-background);
 }

@@ -45,10 +45,12 @@
   --#{$prefix}header-slim-text-color: var(--#{$prefix}color-text-inverse); // Controls the slim text color for the header, using color tokens.
   --#{$prefix}header-social-color: var(--#{$prefix}icon-inverse); // Controls the social color for the header, using icon tokens.
   --#{$prefix}header-spacing-inset: var(--#{$prefix}spacing-xxs); // Controls the inset spacing for the header, using spacing tokens.
+
   @include media-breakpoint-up(md) {
     --#{$prefix}header-brand-size: 3.5rem;
     --#{$prefix}header-search-icon-color: var(--#{$prefix}icon-primary);
   }
+
   @include media-breakpoint-up(lg) {
     --#{$prefix}header-brand-size: 4.5rem;
     --#{$prefix}header-brand-title-size: var(--#{$prefix}heading-3-font-size);
@@ -76,6 +78,8 @@
   --#{$prefix}header-slim-border-color: hsla(210, 100%, 40%, 0.2);
   --#{$prefix}header-slim-text-color: var(--#{$prefix}color-link);
   --#{$prefix}header-social-color: var(--#{$prefix}icon-primary);
+  --#{$prefix}color-background-inverse-hover: var(--#{$prefix}header-center-text-color);
+
   @include media-breakpoint-up(md) {
     --#{$prefix}header-search-icon-color: var(--#{$prefix}icon-inverse);
   }
@@ -114,6 +118,7 @@
 
               a {
                 color: var(--#{$prefix}header-brand-color);
+
                 &:hover {
                   text-decoration: none;
                 }
@@ -198,8 +203,7 @@
   }
 }
 
-// Add border bottom on light theme
-.it-header-center-wrapper,
+// Add border bottom to the navbar on light theme
 .it-header-navbar-wrapper {
   &.theme-light,
   &.theme-light-desk {

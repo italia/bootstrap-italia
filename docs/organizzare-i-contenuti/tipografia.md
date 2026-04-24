@@ -78,7 +78,7 @@ spazio quando lo schermo lo permette.
 Tutte le intestazioni HTML, da `<h1>` fino a `<h6>`, sono disponibili, anche se
 è buona norma non utilizzare più di 4 livelli di intestazione.
 
-L'interlinea è impostata con il rapporto di  `1.2`.
+L'interlinea è impostata con il rapporto di  `1.2` per tutte le intestazioni.
 
 {% comment %}Example name: Intestazioni{% endcomment %}
 {% capture example %}
@@ -92,7 +92,7 @@ L'interlinea è impostata con il rapporto di  `1.2`.
 
 Nel caso in cui si voglia presentare il testo nello stesso stile delle
 intestazioni, ma non sia possibile utilizzare l'elemento HTML appropriato,
-sono disponibili anche classi di tipo `.h1`, `.h2`, ecc.
+sono disponibili anche classi di tipo `.h1`, `.h2`, `.h3`, `.h4`, `.h5`, `.h6`.
 
 {% comment %}Example name: Stili intestazioni{% endcomment %}
 {% capture example %}
@@ -104,9 +104,9 @@ sono disponibili anche classi di tipo `.h1`, `.h2`, ecc.
 <p class="h6">Testo con classe .h6</p>
 {% endcapture %}{% include example.html content=example %}
 
-Queste le dimensioni nel dettaglio, espresse in pixel con il relativo peso (font-weight) e interlinea (line-height):
+Queste le dimensioni nel dettaglio (dimensione del testo, peso del font e interlinea):
 
-<table class="mb-5">
+<table class="table table-striped table-sm mb-5">
   <thead>
     <tr>
       <th>Intestazione</th>
@@ -119,43 +119,43 @@ Queste le dimensioni nel dettaglio, espresse in pixel con il relativo peso (font
       <td>
         <p class="h1 mb-0">h1</p>
       </td>
-      <td>40px (2.5rem)</td>
-      <td>48px (3rem)</td>
+      <td>40px (2.5rem)<br>font-weight: 700<br>line-height: 1.2</td>
+      <td>48px (3rem)<br>font-weight: 700<br>line-height: 1.2</td>
     </tr>
     <tr>
       <td>
         <p class="h2 mb-0">h2</p>
       </td>
-      <td>32px (2rem)</td>
-      <td>40px (2.5rem)</td>
+      <td>32px (2rem)<br>font-weight: 700<br>line-height: 1.2</td>
+      <td>40px (2.5rem)<br>font-weight: 700<br>line-height: 1.2</td>
     </tr>
     <tr>
       <td>
         <p class="h3 mb-0">h3</p>
       </td>
-      <td>28px (1.75rem)</td>
-      <td>32px (2rem)</td>
+      <td>28px (1.75rem)<br>font-weight: 700<br>line-height: 1.2</td>
+      <td>32px (2rem)<br>font-weight: 700<br>line-height: 1.2</td>
     </tr>
     <tr>
       <td>
         <p class="h4 mb-0">h4</p>
       </td>
-      <td>24px (1.5rem)</td>
-      <td>28px (1.75rem)</td>
+      <td>24px (1.5rem)<br>font-weight: 600<br>line-height: 1.2</td>
+      <td>28px (1.75rem)<br>font-weight: 600<br>line-height: 1.2</td>
     </tr>
     <tr>
       <td>
         <p class="h5 mb-0">h5</p>
       </td>
-      <td>20px (1.25rem)</td>
-      <td>24px (1.5rem)</td>
+      <td>20px (1.25rem)<br>font-weight: 600<br>line-height: 1.2</td>
+      <td>24px (1.5rem)<br>font-weight: 600<br>line-height: 1.2</td>
     </tr>
     <tr>
       <td>
         <p class="h6 mb-0">h6</p>
       </td>
-      <td>16px (1rem)</td>
-      <td>18px (1.125rem)</td>
+      <td>16px (1rem)<br>font-weight: 600<br>line-height: 1.2</td>
+      <td>18px (1.125rem)<br>font-weight: 600<br>line-height: 1.2</td>
     </tr>
   </tbody>
 </table>
@@ -187,8 +187,8 @@ dare uno stile diverso per testi di intestazione secondaria.
 
 ## Paragrafi
 
-Il semplice paragrafo prevede una dimensione di testo di
-`16px/1rem` per dispositivi mobili e di `18px/1.125rem` per schermi con dimensioni
+Il semplice paragrafo prevede una dimensione del testo di
+`16px/1rem` su dispositivi mobili e `18px/1.125rem` su schermi con dimensioni
 maggiori di 576px. 
 
 L'interlinea è impostata con il rapporto di  `1.5`.

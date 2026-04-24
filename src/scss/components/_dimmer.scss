@@ -14,7 +14,9 @@
 //
 
 .dimmer {
-  --#{$prefix}dimmer-background: var(--#{$prefix}overlay-background-primary-muted); // Controls the background color of the dimmer, using overlay background tokens.
+  --#{$prefix}dimmer-background: var(
+    --#{$prefix}overlay-background-primary-muted
+  ); // Controls the background color of the dimmer, using overlay background tokens.
   --#{$prefix}dimmer-body-font-size: var(--#{$prefix}body-font-size); // Controls the body font size of the dimmer, using typography tokens.
   --#{$prefix}dimmer-body-font-family: var(--#{$prefix}font-serif); // Controls the body font family of the dimmer, using typography tokens.
   --#{$prefix}dimmer-button-gap: var(--#{$prefix}spacing-s); // Controls the gap between the buttons of the dimmer, using spacing tokens.

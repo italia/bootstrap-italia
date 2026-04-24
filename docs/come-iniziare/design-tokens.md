@@ -69,7 +69,6 @@ La documentazione completa dei token (colori, tipografia, spaziature, ...) è di
 
 - [Button - Properties]({{ site.baseurl }}/docs/componenti/buttons/#properties)
 - [Alert - Properties]({{ site.baseurl }}/docs/componenti/alert/#properties)
-- [Card - Properties]({{ site.baseurl }}/docs/componenti/card/#properties)
 
 **Come vengono generate**: queste tabelle sono generate automaticamente dal codice SCSS di ogni componente presente sul ramo `main` tramite GitHub Action. Le CSS custom properties sono documentate all'inizio del file SCSS di ciascun componente.
 

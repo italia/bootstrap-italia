@@ -285,14 +285,15 @@
 .steppers.bg-dark,
 .bg-dark .steppers {
   --#{$prefix}stepper-border-color: var(--it-color-slate-52);
+  --#{$prefix}stepper-icon-color: var(--it-color-slate-62);
   --#{$prefix}stepper-icon-confirmed: var(--#{$prefix}icon-inverse);
   --#{$prefix}stepper-item-text-color: var(--#{$prefix}color-text-inverse);
   --#{$prefix}stepper-item-border-color-active: var(--#{$prefix}color-border-inverse);
   --#{$prefix}stepper-number-border-color: var(--it-color-slate-52);
-  --#{$prefix}stepper-number-color: var(--it-color-slate-52);
+  --#{$prefix}stepper-number-color: var(--it-color-slate-62);
 
   .steppers-header ul li {
-    --#{$prefix}stepper-item-text-color: var(--it-color-slate-52);
+    --#{$prefix}stepper-item-text-color: var(--it-color-slate-62);
   }
 
   .steppers-header ul li.confirmed {

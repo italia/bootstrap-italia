@@ -80,6 +80,7 @@
 
 ### Header
 
+- Rimossa la variante `theme-light-desk` per Header Nav, ora è possibile impostare il tema chiaro con la class `.theme-light` al tag `<nav class="it-header-navbar-wrapper">`.
 - Cambiata la dimensione del pulsante Accedi: cambiato classe da `.btn-sm` a `.btn-sx`.
 - Rimossa la classe `.ms-1` dall'icona `<svg>` che segue la voce Megamenu negli esempi.
 
