@@ -1,3 +1,187 @@
+# [3.0.0-alpha.9](https://github.com/italia/bootstrap-italia/compare/v2.18.1...v3.0.0-alpha.9) (2026-04-24)
+
+
+### Bug Fixes
+
+* acceptoverlay text color ([44f5ae1](https://github.com/italia/bootstrap-italia/commit/44f5ae10ee18248414079810f6550b77570eb3df))
+* headercenter tokens and styles ([#1754](https://github.com/italia/bootstrap-italia/issues/1754)) ([3df6a01](https://github.com/italia/bootstrap-italia/commit/3df6a01cf4d471eb7531c134e9f319d86c552cb8))
+* linting scss ([f95c6b6](https://github.com/italia/bootstrap-italia/commit/f95c6b639dbe3ba6c8209dfd082e7231824bc569))
+* linting scss ([a865378](https://github.com/italia/bootstrap-italia/commit/a8653785e2fd63bca63dba58507606e1ed13d3e8))
+* navbar custom toggler ([#1770](https://github.com/italia/bootstrap-italia/issues/1770)) ([f9ab0b7](https://github.com/italia/bootstrap-italia/commit/f9ab0b7bff7805fc9fc9db58e7bd70f17d2bc2a8))
+* navbar icon menu [#1769](https://github.com/italia/bootstrap-italia/issues/1769) ([c2f8e4f](https://github.com/italia/bootstrap-italia/commit/c2f8e4f19a1b4bccbd23a24d2b97d617bc125f11))
+* postcss order ([b01df72](https://github.com/italia/bootstrap-italia/commit/b01df723327e4a25da66c892b14b14dc86e8c2e7))
+* remove border from header center ([1119c6f](https://github.com/italia/bootstrap-italia/commit/1119c6f4b03bf33c5910955c12ad2a9da34d84da))
+* remove Card properties link from design tokens documentation ([2812a30](https://github.com/italia/bootstrap-italia/commit/2812a30091a0fdacd6e31c29b53452dc2c98c73c))
+* remove duplicated properties in toolbar [#1747](https://github.com/italia/bootstrap-italia/issues/1747) ([9b760b3](https://github.com/italia/bootstrap-italia/commit/9b760b32525f6542409e38658dae7a3c0f44efc8))
+* stepper item text color on dark bg [#1758](https://github.com/italia/bootstrap-italia/issues/1758) ([a451890](https://github.com/italia/bootstrap-italia/commit/a451890f4325c932a6f5365b70a878fb2bc6b603))
+* update color variables for code styling improving contrast ([019d398](https://github.com/italia/bootstrap-italia/commit/019d39878e5b1d3e865895ffae077e8eb4092c5f))
+* update typography documentation for header styles and details [#1636](https://github.com/italia/bootstrap-italia/issues/1636) ([71c6f64](https://github.com/italia/bootstrap-italia/commit/71c6f64cee7ed2a90c785e7d02fbd9484938fd65))
+* wrong variable ([7b744aa](https://github.com/italia/bootstrap-italia/commit/7b744aab17f575edcce549ab97ebc2c1888406aa))
+
+
+### Features
+
+* bottom nav design tokens  ([cddd56d](https://github.com/italia/bootstrap-italia/commit/cddd56d31c96f63ac2ec6edae41b849a4889c0a5))
+* dimmer design tokens  ([9d83f7e](https://github.com/italia/bootstrap-italia/commit/9d83f7ef0c5ee4c2d351767e647cf5d411ef29ae))
+* navscroll docs ([#1773](https://github.com/italia/bootstrap-italia/issues/1773)) ([1278aee](https://github.com/italia/bootstrap-italia/commit/1278aee5a5df94ac415ff015e59b105b7bb32e8e))
+* thumbnav design tokens ([b90f8fe](https://github.com/italia/bootstrap-italia/commit/b90f8fe3d497925e56efc83ba93789059c99d289))
+
+# [3.0.0-alpha.8](https://github.com/italia/bootstrap-italia/compare/v3.0.0-alpha.7...v3.0.0-alpha.8) (2026-04-17)
+
+
+### Bug Fixes
+
+* update comment for heading spacing to clarify specificity impact ([1a8c195](https://github.com/italia/bootstrap-italia/commit/1a8c1954e8e5a57862052208118ac5e3ceb54305))
+
+
+### Features
+
+* add new Header example to examples.yml ([0966514](https://github.com/italia/bootstrap-italia/commit/096651466c91a0cf3f3eb59d5c6214e6e4db31d3))
+
+# [3.0.0-alpha.7](https://github.com/italia/bootstrap-italia/compare/v3.0.0-alpha.6...v3.0.0-alpha.7) (2026-04-16)
+
+
+### Bug Fixes
+
+* add border bottom for light theme in header component [#1761](https://github.com/italia/bootstrap-italia/issues/1761) ([00a0438](https://github.com/italia/bootstrap-italia/commit/00a04380d9775a8ec4fd474b4c496de40901f7eb))
+* add missing properties description [#1741](https://github.com/italia/bootstrap-italia/issues/1741) ([c6d969c](https://github.com/italia/bootstrap-italia/commit/c6d969c681a4888c2965da847871ddf74629b2b7))
+* hover color on navbar [#1756](https://github.com/italia/bootstrap-italia/issues/1756) ([2fbd0b1](https://github.com/italia/bootstrap-italia/commit/2fbd0b1d9db1d72d95164c013208e6d9b93642e0))
+* missing background color on vertical tabs [#1732](https://github.com/italia/bootstrap-italia/issues/1732) ([77faae4](https://github.com/italia/bootstrap-italia/commit/77faae45b2ea9a2c73d7da9a824edc08cf7eaa0e))
+* navbar hamburger icon alignment [#1762](https://github.com/italia/bootstrap-italia/issues/1762) ([bbab8b4](https://github.com/italia/bootstrap-italia/commit/bbab8b410b1cf212a32731be57f7e6cea65f1c14))
+* navscroll progress color on dark bg [#1620](https://github.com/italia/bootstrap-italia/issues/1620) ([9532341](https://github.com/italia/bootstrap-italia/commit/9532341e92d5d8fcc1c0c2746cad82f8732c4c2a))
+* remove toast ([9d610a6](https://github.com/italia/bootstrap-italia/commit/9d610a674503fe066510b8923b6585b4af369d0d))
+* update navscroll headings for consistent styling [#1621](https://github.com/italia/bootstrap-italia/issues/1621) ([dd9ca4a](https://github.com/italia/bootstrap-italia/commit/dd9ca4a797798b58b64f36025441b628c5002534))
+
+
+### Features
+
+* carousel design tokens ([4ef724d](https://github.com/italia/bootstrap-italia/commit/4ef724da1432415d10fefd7f4b2ed5008880e96e))
+* notification design tokens  ([353652d](https://github.com/italia/bootstrap-italia/commit/353652d7ef615e52f8ae69cea3520cbe8982e862))
+* timeline design tokens  ([2724450](https://github.com/italia/bootstrap-italia/commit/2724450357ec2948d59fa1f66489c3ba4401d641))
+
+# [3.0.0-alpha.6](https://github.com/italia/bootstrap-italia/compare/v3.0.0-alpha.5...v3.0.0-alpha.6) (2026-03-30)
+
+
+### Bug Fixes
+
+* a11y progress indicator ([97d0ae5](https://github.com/italia/bootstrap-italia/commit/97d0ae5668f5e4a3cbf3589200f3d28d023590bf))
+* card text font size [#1726](https://github.com/italia/bootstrap-italia/issues/1726) ([86453c3](https://github.com/italia/bootstrap-italia/commit/86453c32bcaefdca3f67f282d8552e97bff51415))
+* dropdown menu position in avatar group ([70f3dae](https://github.com/italia/bootstrap-italia/commit/70f3daeeae3447ebb987f0efca4e68d103c209bb))
+* misleading typography props name ([2681984](https://github.com/italia/bootstrap-italia/commit/2681984a011b1f88d23d5f13ca68b04f140401c3))
+* update avatar font size variable in dropdown ([e5a434a](https://github.com/italia/bootstrap-italia/commit/e5a434ac9a7b222c0c0fe1eb8d9ae0c5b7ba0671))
+* update dropdown styles for dark theme and add disabled link styling ([4612913](https://github.com/italia/bootstrap-italia/commit/4612913b839dbbc55ad0063dc50ef0ace068ba9c))
+
+
+### Features
+
+* stepper design tokens ([17a8e97](https://github.com/italia/bootstrap-italia/commit/17a8e97869cf951c2cffb7f0ec04f528bb8054ee))
+* tables design tokens ([6d8f416](https://github.com/italia/bootstrap-italia/commit/6d8f416e2a2b24073a16ea46906095702b052754))
+* toggle design tokens ([5dbfbb4](https://github.com/italia/bootstrap-italia/commit/5dbfbb4741421b877a4029f623aced84d3e75301))
+* toolbar design tokens ([0468dab](https://github.com/italia/bootstrap-italia/commit/0468dab65aee359b74cdd63a89437e5ae627ee29))
+
+# [3.0.0-alpha.5](https://github.com/italia/bootstrap-italia/compare/v3.0.0-alpha.4...v3.0.0-alpha.5) (2026-03-16)
+
+
+### Bug Fixes
+
+* refine mega menu link styles for active state and improve border handling ([#1713](https://github.com/italia/bootstrap-italia/issues/1713)) ([bd52dfc](https://github.com/italia/bootstrap-italia/commit/bd52dfcb2b9272b9a5f235cb22ba391d5ca22574))
+* remove bg-override class from header component ([ae6e460](https://github.com/italia/bootstrap-italia/commit/ae6e46032bb2c93704965b753a3849360df56ae0))
+* remove eval from cover animation ([f5de581](https://github.com/italia/bootstrap-italia/commit/f5de58180c3ec53577b08a645c28cce6878f7cdb))
+
+# [3.0.0-alpha.4](https://github.com/italia/bootstrap-italia/compare/v2.18.0...v3.0.0-alpha.4) (2026-03-06)
+
+
+### Bug Fixes
+
+* card example ([2832ca7](https://github.com/italia/bootstrap-italia/commit/2832ca700b4d3f8ad8f64fe77ade8df130988ef6))
+* megamenu styles and add megamenu-content class ([3b28612](https://github.com/italia/bootstrap-italia/commit/3b28612983bd9c24b4b17a2beedbdb640ab73d0c))
+
+# [3.0.0-alpha.3](https://github.com/italia/bootstrap-italia/compare/v2.17.5...v3.0.0-alpha.3) (2026-03-03)
+
+
+### Bug Fixes
+
+* **3.x:** form check formtext ([256d97d](https://github.com/italia/bootstrap-italia/commit/256d97dd674d3b48d92143f535195ed2dc82eeb8))
+* button close color for a11y ([49909a0](https://github.com/italia/bootstrap-italia/commit/49909a0173025fa494fd0535203ad827ea9c88a1))
+
+
+### Features
+
+* **3.x:** point list component ([5dee8d0](https://github.com/italia/bootstrap-italia/commit/5dee8d08d22e00c55936cbe75aef6e2856432ba4))
+* progress design tokens  ([c857d33](https://github.com/italia/bootstrap-italia/commit/c857d33e49d1f25a0991c9d4e1a82b7f7d1f0c87))
+
+# [3.0.0-alpha.2](https://github.com/italia/bootstrap-italia/compare/v2.17.4...v3.0.0-alpha.2) (2026-02-24)
+
+
+### Bug Fixes
+
+* add ignore linting rule ([bf3d30c](https://github.com/italia/bootstrap-italia/commit/bf3d30c0d453bb81553409c5dc00088bf9eec1d9))
+* aggiorna utility class border con le nuove properties ([#1688](https://github.com/italia/bootstrap-italia/issues/1688)) ([03ea6dd](https://github.com/italia/bootstrap-italia/commit/03ea6dd0a03d1b3a8cf7ad5df0fa0543c2565891))
+* comuni example duplicated id a11y ([920d0ba](https://github.com/italia/bootstrap-italia/commit/920d0ba82c9467a5fbc9a2dc0b79dd23584cf14d))
+* enhance megamenu style ([1944030](https://github.com/italia/bootstrap-italia/commit/1944030e78832ff292a95d2c7721a0d0c1c938f2))
+* focus outline width on tabs [#1637](https://github.com/italia/bootstrap-italia/issues/1637) ([b77572d](https://github.com/italia/bootstrap-italia/commit/b77572d9c8cb446d0146b0465be824e0c6f0e8c1))
+* hero small height ([#1667](https://github.com/italia/bootstrap-italia/issues/1667)) ([1058c29](https://github.com/italia/bootstrap-italia/commit/1058c2993ca7fe9c568ffa14ea6b8f46caea8c68))
+* lint scss ([56daf93](https://github.com/italia/bootstrap-italia/commit/56daf93b5cbc1ac95b805efffa9afa4bbb95e1b4))
+* linting ([25c9b79](https://github.com/italia/bootstrap-italia/commit/25c9b7986777ef1defd5c055076585d5a024deba))
+* linting ([debbe01](https://github.com/italia/bootstrap-italia/commit/debbe0126dad2ca515ecbf707dd2608e8f8e8a2e))
+* linting ([9518a17](https://github.com/italia/bootstrap-italia/commit/9518a175345c538a2aaf34a6dc8a051b386778b9))
+* pa11y errors for chips example bg ([a634757](https://github.com/italia/bootstrap-italia/commit/a634757d0a737a81dc2782a1b0dd590bb786c352))
+* remove unpaired variables ([#1659](https://github.com/italia/bootstrap-italia/issues/1659)) ([ea8fc8a](https://github.com/italia/bootstrap-italia/commit/ea8fc8ae1f6421d6aab0178c51ff6062d3ab9d77))
+* replace hardcoded breakpoints in hero scss ([4dcdd29](https://github.com/italia/bootstrap-italia/commit/4dcdd29eae852c9239dce55ebccc7056a58dc060))
+* toggle alignment [#1682](https://github.com/italia/bootstrap-italia/issues/1682) ([358b78b](https://github.com/italia/bootstrap-italia/commit/358b78be5cfe21c875d5cc23a4a8f0f72e45d8de))
+
+
+### Features
+
+* design tokens in overlay component ([#1366](https://github.com/italia/bootstrap-italia/issues/1366)) ([42b8194](https://github.com/italia/bootstrap-italia/commit/42b81945290a46d2549064d08a446ddd23e7a6c2))
+* design tokens in tabs  ([dda305c](https://github.com/italia/bootstrap-italia/commit/dda305c8165d7ac2e01b00f279cf880cd3bc96ab))
+* design tokens in Tooltip component ([ba7f8e3](https://github.com/italia/bootstrap-italia/commit/ba7f8e3135e18309074e50f0f98c7f161c1824af))
+
+# [3.0.0-alpha.1](https://github.com/italia/bootstrap-italia/compare/v3.0.0-alpha.0...v3.0.0-alpha.1) (2026-02-06)
+
+
+### Bug Fixes
+
+* dropdown preview ([#1655](https://github.com/italia/bootstrap-italia/issues/1655)) ([f1b5616](https://github.com/italia/bootstrap-italia/commit/f1b5616806f80a34733312fdb255bc80bc79dff3))
+* errori pa11y ([#1657](https://github.com/italia/bootstrap-italia/issues/1657)) ([5ba442e](https://github.com/italia/bootstrap-italia/commit/5ba442ea18b1d891aac582f5f36eefd2011fdb29))
+* hero text centerd [#1649](https://github.com/italia/bootstrap-italia/issues/1649) ([d672018](https://github.com/italia/bootstrap-italia/commit/d6720189a672faf258bce9232dba8bd2662915f3))
+* replace bs variables with bsi [#1644](https://github.com/italia/bootstrap-italia/issues/1644) ([c0b1b52](https://github.com/italia/bootstrap-italia/commit/c0b1b524a4ed77fa6bd42559c530c013221fe0f9))
+* scss lint ([6cd273f](https://github.com/italia/bootstrap-italia/commit/6cd273feff53eba3e246f1cf8b1b3d5836b0d01e))
+* Titillium pro typography ([#1652](https://github.com/italia/bootstrap-italia/issues/1652)) ([4e82b19](https://github.com/italia/bootstrap-italia/commit/4e82b195ad6085e5d5b160809224c7a2cc382253))
+
+# [3.0.0-alpha.0](https://github.com/italia/bootstrap-italia/compare/v2.17.3...v3.0.0-alpha.0) (2026-02-04)
+
+
+### Bug Fixes
+
+* add icon color in lists ([6e29bce](https://github.com/italia/bootstrap-italia/commit/6e29bce02614c2f903ccc0691588098a16661361))
+* add missing link variables ([46e282e](https://github.com/italia/bootstrap-italia/commit/46e282e9aecd74e4acd3e98bce9c80cbe741d073))
+* add missing suffix ([9ae19e9](https://github.com/italia/bootstrap-italia/commit/9ae19e95fce393a7333a04ce4764f861cb327bde))
+* bootstrap classes ([8c1b1e0](https://github.com/italia/bootstrap-italia/commit/8c1b1e0dc0cbdd65083acc8e76ac3734b9ac43e3))
+* breadcrumb link color on dark bg [#1585](https://github.com/italia/bootstrap-italia/issues/1585) ([e662bea](https://github.com/italia/bootstrap-italia/commit/e662bea9ee197e0e2c22a962439ba71d46b3e914))
+* breadcrumb screen reader announcement, ignore separators ([052fb0c](https://github.com/italia/bootstrap-italia/commit/052fb0ca680156e4169b8a488b78c5f0a95e7eb2))
+* check and radio visibility ([1ab96a6](https://github.com/italia/bootstrap-italia/commit/1ab96a6c9d48f298e20933eaaa787b13f059675a))
+* checkbox and radio alignment [#1647](https://github.com/italia/bootstrap-italia/issues/1647) ([0bc4a47](https://github.com/italia/bootstrap-italia/commit/0bc4a476fbbb54cf7e65bcc589ee5e52f57c10be))
+* color link variables ([fb34090](https://github.com/italia/bootstrap-italia/commit/fb34090010cbfbad27236b4ca928575d443f8cd3))
+* double class on card profile [#1566](https://github.com/italia/bootstrap-italia/issues/1566) ([d0c64dd](https://github.com/italia/bootstrap-italia/commit/d0c64dd2eb0087df1e8b57776b4953d011a7934d))
+* duplicate use ([59d46a2](https://github.com/italia/bootstrap-italia/commit/59d46a264d93243a25b4a7191a044cb4f03a6a51))
+* font-switcher active style ([9c34e6f](https://github.com/italia/bootstrap-italia/commit/9c34e6f5c20b4a7ed94e697b1be520ee2fd9f736))
+* font-switcher w-100 class ([5242653](https://github.com/italia/bootstrap-italia/commit/5242653f3f3b2e8a3718ed686092759f295311c4))
+* html proofer ([fef6ab9](https://github.com/italia/bootstrap-italia/commit/fef6ab92b3732f4c913acd10690c70bda4ffbb17))
+* htmlproofer ([fadc1be](https://github.com/italia/bootstrap-italia/commit/fadc1be220c70f47d45c6ef8e8eae32507e43bf0))
+* label leading property ([5dccfc7](https://github.com/italia/bootstrap-italia/commit/5dccfc75b8573169a22edab5ef5c6934f1d080bc))
+* link colors variants ([2721f83](https://github.com/italia/bootstrap-italia/commit/2721f83d1cf9130ba72383ebd8355b0414e52b97))
+* linting scss ([2cbf34b](https://github.com/italia/bootstrap-italia/commit/2cbf34b4a1bbf45891bf17c6cdd12f9d405dd302))
+* navscroll zindex [#1619](https://github.com/italia/bootstrap-italia/issues/1619) ([cbd41ee](https://github.com/italia/bootstrap-italia/commit/cbd41eeca9abca4837d8c222129b76b707b9ee8b))
+* proper zindex order [#1619](https://github.com/italia/bootstrap-italia/issues/1619) ([546dcaa](https://github.com/italia/bootstrap-italia/commit/546dcaa1afe0d055367bea11b0676302951c7b06))
+* restore legend for checkbox fieldset ([d6f74e0](https://github.com/italia/bootstrap-italia/commit/d6f74e0c32cf66f4b7ce841330c3c7db953c3534))
+
+
+### Features
+
+* add titillium sans pro support ([5426cd3](https://github.com/italia/bootstrap-italia/commit/5426cd39d7445cd2ab95f27de4508005a0cde5eb))
+* design tokens ([#1310](https://github.com/italia/bootstrap-italia/issues/1310)) ([a99dac1](https://github.com/italia/bootstrap-italia/commit/a99dac1e179c251c5b3a0e6623e64d6ddfc4cf4f)), closes [#1340](https://github.com/italia/bootstrap-italia/issues/1340) [#1335](https://github.com/italia/bootstrap-italia/issues/1335) [#1380](https://github.com/italia/bootstrap-italia/issues/1380) [#1346](https://github.com/italia/bootstrap-italia/issues/1346) [#1384](https://github.com/italia/bootstrap-italia/issues/1384) [#1393](https://github.com/italia/bootstrap-italia/issues/1393) [#1364](https://github.com/italia/bootstrap-italia/issues/1364) [#1398](https://github.com/italia/bootstrap-italia/issues/1398) [#1405](https://github.com/italia/bootstrap-italia/issues/1405) [#1400](https://github.com/italia/bootstrap-italia/issues/1400) [#1409](https://github.com/italia/bootstrap-italia/issues/1409) [#1411](https://github.com/italia/bootstrap-italia/issues/1411) [#1415](https://github.com/italia/bootstrap-italia/issues/1415) [#1418](https://github.com/italia/bootstrap-italia/issues/1418) [#1413](https://github.com/italia/bootstrap-italia/issues/1413) [#1361](https://github.com/italia/bootstrap-italia/issues/1361) [#1431](https://github.com/italia/bootstrap-italia/issues/1431) [#1443](https://github.com/italia/bootstrap-italia/issues/1443) [#1437](https://github.com/italia/bootstrap-italia/issues/1437) [#1447](https://github.com/italia/bootstrap-italia/issues/1447) [#1452](https://github.com/italia/bootstrap-italia/issues/1452) [#1460](https://github.com/italia/bootstrap-italia/issues/1460) [#1462](https://github.com/italia/bootstrap-italia/issues/1462) [#1467](https://github.com/italia/bootstrap-italia/issues/1467) [#1468](https://github.com/italia/bootstrap-italia/issues/1468) [#1487](https://github.com/italia/bootstrap-italia/issues/1487) [#1495](https://github.com/italia/bootstrap-italia/issues/1495) [#1476](https://github.com/italia/bootstrap-italia/issues/1476) [#1492](https://github.com/italia/bootstrap-italia/issues/1492) [#1507](https://github.com/italia/bootstrap-italia/issues/1507)
+* extract variables for api and add Properties table to documentation ([c421a01](https://github.com/italia/bootstrap-italia/commit/c421a01262e9955cdbb361c16cdeb4d993bbba5b))
 # [3.0.0-alpha.8](https://github.com/italia/bootstrap-italia/compare/v3.0.0-alpha.7...v3.0.0-alpha.8) (2026-04-17)
 
 
