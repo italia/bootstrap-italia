@@ -229,7 +229,7 @@ Per formattare correttamente il contenuto di questa modale, aggiungere la classe
             </div>
             <div class="modal-body">
                <div class="link-list-wrapper">
-                   class="link-list" role="list">
+                   <ul class="link-list" role="list">
                      <li>
                         <a class="list-item icon-left" href="#">
                            <svg class="icon icon-primary">
