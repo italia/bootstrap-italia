@@ -824,7 +824,12 @@ Applicando una classe aggiuntiva `.toolbar-vertical` alla Toolbar gli elementi v
       <div class="dropdown">
         <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton-big" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
           <div class="badge-wrapper"><span class="toolbar-badge">1</span></div>
-          <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-comment"></use></svg>
+          <div class="d-flex align-items-center">
+            <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-comment"></use></svg>
+            <svg class="icon icon-sm icon-primary icon-expand" aria-hidden="true">
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand" xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
+            </svg>
+          </div>
           <span class="toolbar-label">Immagini<span class="visually-hidden">Da visualizzare</span></span>
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1-vert">
@@ -886,7 +891,12 @@ Applicando una classe aggiuntiva `.toolbar-vertical` alla Toolbar gli elementi v
             <span class="toolbar-badge"></span>
             <span class="visually-hidden">ci sono 42 nuove immagini da visualizzare</span>
           </div>
-          <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-camera"></use></svg>
+          <div class="d-flex align-items-center">
+            <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-camera"></use></svg>
+            <svg class="icon icon-xs icon-primary icon-expand" aria-hidden="true">
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand" xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
+            </svg>
+          </div>
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton-vert">
           <div class="link-list-wrapper">
@@ -947,7 +957,12 @@ Applicando una classe aggiuntiva `.toolbar-vertical` alla Toolbar gli elementi v
             <span class="toolbar-badge"></span>
             <span class="visually-hidden">ci sono 42 nuove immagini da visualizzare</span>
           </div>
-          <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-camera"></use></svg>
+          <div class="d-flex align-items-center">
+            <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-camera"></use></svg>
+            <svg class="icon icon-xs icon-primary icon-expand" aria-hidden="true">
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand" xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
+            </svg>
+          </div>
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1-vert-sml">
           <div class="link-list-wrapper">

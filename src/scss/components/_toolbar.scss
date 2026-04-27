@@ -75,7 +75,7 @@
     display: block;
     border: 1px solid var(--#{$prefix}toolbar-badge-border-color);
     background-color: var(--#{$prefix}toolbar-badge-background-color);
-    top: -4px;
+    top: 0;
     right: 0;
     min-width: 18px;
     height: 18px;
@@ -166,37 +166,6 @@
     /* stylelint-enable */
   }
 
-  // Dropdown button
-  .btn-dropdown {
-    position: relative;
-    width: 100%;
-    padding: 0;
-
-    &.toolbar-more {
-      &:after {
-        display: none;
-      }
-    }
-
-    &:not(.disabled) {
-      &.active {
-        box-shadow: none;
-        &:focus {
-          box-shadow: $btn-focus-box-shadow;
-        }
-      }
-    }
-
-    &:focus {
-      box-shadow: $btn-focus-box-shadow;
-    }
-
-    .toolbar-badge {
-      top: 0;
-      right: 12px;
-    }
-  }
-
   // Variants
   //
 
@@ -212,8 +181,6 @@
 
     // Icon badge
     .toolbar-badge {
-      top: -2px;
-      right: 0;
       width: 10px;
       min-width: 10px;
       height: 10px;
@@ -230,18 +197,10 @@
     & > ul {
       height: 40px;
     }
-    // .btn-dropdown {
-    //   // Dropdown caret
-    //   &:after {
-    //     top: 12px;
-    //     right: 2px;
-    //   }
-    // }
 
     // Icon badge
     .toolbar-badge {
-      top: 2px;
-      right: 0;
+      top: var(--#{$prefix}spacing-3xs);
       width: 8px;
       min-width: 8px;
       height: 8px;
@@ -293,18 +252,18 @@
       }
 
       // Badge
-      .toolbar-badge {
-        right: 0;
-      }
+      // .toolbar-badge {
+      //   right: 0;
+      // }
 
       // Dropdown
-      .btn-dropdown {
-        &:after {
-          top: 13px;
-          right: -10px;
-          font-size: var(--#{$prefix}toolbar-dropdown-caret-size);
-        }
-      }
+      // .btn-dropdown {
+      //   &:after {
+      //     top: 13px;
+      //     right: -10px;
+      //     font-size: var(--#{$prefix}toolbar-dropdown-caret-size);
+      //   }
+      // }
       .dropdown-menu {
         top: calc(-100% - 25px) !important;
       }
@@ -316,9 +275,9 @@
         width: 48px;
       }
 
-      .toolbar-badge {
-        right: 0;
-      }
+      // .toolbar-badge {
+      //   right: var(--#{$prefix}spacing-s);
+      // }
 
       .dropdown-menu {
         top: calc(-100% - 35px) !important;
@@ -368,6 +327,36 @@
 
     .badge-wrapper {
       width: 100%;
+    }
+  }
+
+   // Dropdown button
+  .btn-dropdown {
+    position: relative;
+    width: 100%;
+    padding: 0;
+
+    &.toolbar-more {
+      &:after {
+        display: none;
+      }
+    }
+
+    &:not(.disabled) {
+      &.active {
+        box-shadow: none;
+        &:focus {
+          box-shadow: $btn-focus-box-shadow;
+        }
+      }
+    }
+
+    &:focus {
+      box-shadow: $btn-focus-box-shadow;
+    }
+
+    .toolbar-badge {
+      right: var(--#{$prefix}spacing-xs);
     }
   }
 }
