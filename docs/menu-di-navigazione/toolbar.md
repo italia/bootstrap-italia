@@ -498,9 +498,9 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton5">
           <div class="link-list-wrapper">
             <ul class="link-list">
-              <li><a class="dropdown-item list-item icon-left" href="#"><svg class="icon me-2" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg><span>Label</span></a></li>
-              <li><a class="dropdown-item list-item icon-left" href="#"><svg class="icon me-2" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-mail"></use></svg><span>Label</span></a></li>
-              <li><a class="dropdown-item list-item icon-left" href="#"><svg class="icon me-2" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-settings"></use></svg><span>Label</span></a></li>
+              <li><a class="dropdown-item list-item" href="#"><svg class="icon icon-sm me-2" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg><span>Condividi link</span></a></li>
+              <li><a class="dropdown-item list-item" href="#"><svg class="icon icon-sm me-2" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-mail"></use></svg><span>Condividi email</span></a></li>
+              <li><a class="dropdown-item list-item" href="#"><svg class="icon icon-sm me-2" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-settings"></use></svg><span>Impostazioni</span></a></li>
             </ul>
           </div>
         </div>
@@ -642,9 +642,9 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton6-med">
           <div class="link-list-wrapper">
             <ul class="link-list">
-              <li><a class="dropdown-item list-item icon-left" href="#"><svg class="icon me-2" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg><span>Label</span></a></li>
-              <li><a class="dropdown-item list-item icon-left" href="#"><svg class="icon me-2" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-mail"></use></svg><span>Label</span></a></li>
-              <li><a class="dropdown-item list-item icon-left" href="#"><svg class="icon me-2" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-settings"></use></svg><span>Label</span></a></li>
+              <li><a class="dropdown-item list-item" href="#"><svg class="icon icon-sm me-2" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg><span>Condividi link</span></a></li>
+              <li><a class="dropdown-item list-item" href="#"><svg class="icon icon-sm me-2" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-mail"></use></svg><span>Condividi email</span></a></li>
+              <li><a class="dropdown-item list-item" href="#"><svg class="icon icon-sm me-2" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-settings"></use></svg><span>Impostazioni</span></a></li>
             </ul>
           </div>
         </div>
@@ -790,9 +790,9 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton6-sml">
           <div class="link-list-wrapper">
             <ul class="link-list">
-              <li><a class="dropdown-item list-item left-icon" href="#"><svg class="icon icon-sm me-2 left" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg><span>Label</span></a></li>
-              <li><a class="dropdown-item list-item left-icon" href="#"><svg class="icon icon-sm me-2 left" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-mail"></use></svg><span>Label</span></a></li>
-              <li><a class="dropdown-item list-item left-icon" href="#"><svg class="icon icon-sm me-2 left" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-settings"></use></svg><span>Label</span></a></li>
+              <li><a class="dropdown-item list-item" href="#"><svg class="icon icon-sm me-2" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg><span>Condividi link</span></a></li>
+              <li><a class="dropdown-item list-item" href="#"><svg class="icon icon-sm me-2" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-mail"></use></svg><span>Condividi email</span></a></li>
+              <li><a class="dropdown-item list-item" href="#"><svg class="icon icon-sm me-2" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-settings"></use></svg><span>Impostazioni</span></a></li>
             </ul>
           </div>
         </div>
@@ -994,3 +994,12 @@ Applicando una classe aggiuntiva `.toolbar-vertical` alla Toolbar gli elementi v
 
 Il componente Toolbar utilizza al suo interno il componente `Dropdown`, si rimanda dunque alla 
 sezione [attivazione Dropdown tramite codice]({{ site.baseurl }}/docs/componenti/dropdown/#attivazione-tramite-codice)
+
+
+## Breaking change
+
+{% capture callout %}
+- L'icona del dropdown è ora gestita con il tag `<svg>`
+- Le icone sono ora inserite dentro un elemento contenitore dedicato
+- Corretta la dimensione delle icone nei menu dropdown per la voce 'Altro'
+{% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}
