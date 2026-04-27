@@ -549,7 +549,7 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
           </div>
           <div class="d-flex align-items-center">
             <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-camera"></use></svg>
-            <svg class="icon icon-xs icon-primary" aria-hidden="true">
+            <svg class="icon icon-xs icon-primary icon-expand" aria-hidden="true">
               <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand" xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
             </svg>
           </div>
@@ -571,7 +571,7 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
         <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton3-med" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
           <div class="d-flex align-items-center">
             <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
-            <svg class="icon icon-xs icon-primary" aria-hidden="true">
+            <svg class="icon icon-xs icon-primary icon-expand" aria-hidden="true">
               <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand" xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
             </svg>
           </div>
@@ -593,7 +593,7 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
         <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton4-med" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
           <div class="d-flex align-items-center">
             <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-locked"></use></svg>
-            <svg class="icon icon-xs icon-primary" aria-hidden="true">
+            <svg class="icon icon-xs icon-primary icon-expand" aria-hidden="true">
               <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand" xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
             </svg>
           </div>
@@ -615,7 +615,7 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
         <button class="btn btn-dropdown dropdown-toggle disabled" type="button" id="dropdownMenuButton5-med" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-disabled="true" title="Azione">
           <div class="d-flex align-items-center">
             <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg>
-            <svg class="icon icon-xs icon-primary" aria-hidden="true">
+            <svg class="icon icon-xs icon-primary icon-expand" aria-hidden="true">
               <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand" xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
             </svg>
           </div>
@@ -671,7 +671,7 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
           </div>
           <div class="d-flex align-items-center">
             <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-comment"></use></svg>
-            <svg class="icon icon-xs icon-primary" aria-hidden="true">
+            <svg class="icon icon-xs icon-primary icon-expand" aria-hidden="true">
               <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand" xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
             </svg>
           </div>
@@ -697,7 +697,7 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
           </div>
           <div class="d-flex align-items-center">
             <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-camera"></use></svg>
-            <svg class="icon icon-xs icon-primary" aria-hidden="true">
+            <svg class="icon icon-xs icon-primary icon-expand" aria-hidden="true">
               <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand" xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
             </svg>
           </div>
@@ -719,7 +719,7 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
         <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton3-sml" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
           <div class="d-flex align-items-center">
             <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
-            <svg class="icon icon-xs icon-primary" aria-hidden="true">
+            <svg class="icon icon-xs icon-primary icon-expand" aria-hidden="true">
               <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand" xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
             </svg>
           </div>
@@ -741,7 +741,7 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
         <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton4-sml" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
           <div class="d-flex align-items-center"> 
             <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-locked"></use></svg>
-            <svg class="icon icon-xs icon-primary" aria-hidden="true">
+            <svg class="icon icon-xs icon-primary icon-expand" aria-hidden="true">
               <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand" xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
             </svg>
           </div>
@@ -763,7 +763,7 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
         <button class="btn btn-dropdown dropdown-toggle disabled" type="button" id="dropdownMenuButton5-sml" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-disabled="true" title="Azione">
           <div class="d-flex align-items-center">
             <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg>
-            <svg class="icon icon-xs icon-primary" aria-hidden="true">
+            <svg class="icon icon-xs icon-primary icon-expand" aria-hidden="true">
               <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand" xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
             </svg>
           </div>
