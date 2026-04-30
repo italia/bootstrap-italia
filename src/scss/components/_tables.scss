@@ -60,9 +60,9 @@ $table-variants: (
   --#{$prefix}table-border-color: var(--#{$prefix}border-color); // Controls the border color for the table, using color tokens.
   --#{$prefix}table-border-width: var(--#{$prefix}border-width); // Controls the border width for the table cell.
   --#{$prefix}table-striped-bg: var(--#{$prefix}color-background-muted); // Controls the text color for the striped rows, using color tokens.
-  --#{$prefix}table-active-bg: var(--it-color-slate-85); // Controls the background color for the active rows, using color tokens.
+  --#{$prefix}table-active-bg: var(--bsi-color-slate-85); // Controls the background color for the active rows, using color tokens.
   --#{$prefix}table-hover-color: var(--#{$prefix}color-text-base); // Controls the text color for the hovered rows, using color tokens.
-  --#{$prefix}table-hover-bg: var(--it-color-slate-85); // Controls the background color for the hovered rows, using color tokens.
+  --#{$prefix}table-hover-bg: var(--bsi-color-slate-85); // Controls the background color for the hovered rows, using color tokens.
   --#{$prefix}table-padding: var(--#{$prefix}spacing-xxs); // Controls the padding for the table cells, using spacing tokens.
   --#{$prefix}table-cell-font-size: var(--#{$prefix}body-font-size); // Controls the font size for the table cells, using typography tokens.
   --#{$prefix}table-cell-vertical-align: top; // Controls the vertical alignment of the table cells.

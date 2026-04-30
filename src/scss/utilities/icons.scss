@@ -67,7 +67,7 @@ $icon-colors: (
 // It is used in the buttons.
 //
 :root {
-  --#{$prefix}rounded-icon-size: var(--it-icon-size-s);
+  --#{$prefix}rounded-icon-size: var(--bsi-icon-size-s);
 }
 
 .rounded-icon {

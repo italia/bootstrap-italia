@@ -77,7 +77,7 @@
   // Utilities
   --#{$prefix}border-width: 1px;
   --#{$prefix}border-style: solid;
-  --#{$prefix}border-color: var(--it-color-border-subtle);
+  --#{$prefix}border-color: #{tokens.$it-color-border-subtle};
 
   // Theme colors
   --#{$prefix}theme-primary: #{tokens.$it-theme-italia-base}; // Theme primary color
@@ -89,6 +89,9 @@
   
   // Colors
   --#{$prefix}color-blue-30: #{tokens.$it-color-blue-30}; // Color blue 30% (eg. for header slim background)
+  --#{$prefix}color-slate-52: #{tokens.$it-color-slate-52}; 
+  --#{$prefix}color-slate-62: #{tokens.$it-color-slate-62}; 
+  --#{$prefix}color-slate-85: #{tokens.$it-color-slate-85}; 
   // ... ? do we nneed to add more colors here or can we just reference the tokens directly in the components?
 
   // Spacing
