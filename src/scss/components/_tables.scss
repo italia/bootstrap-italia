@@ -11,6 +11,48 @@
 // Variables
 //
 
+@use 'sass:map';
+
+// scss-docs-start table-variants
+$table-variants: (
+  'primary': (
+    'bg': 'color-background-primary-light',
+    'active-bg': 'color-background-primary-light',
+  ),
+  'secondary': (
+    'bg': 'color-background-secondary-light',
+    'active-bg': 'color-background-secondary-active',
+  ),
+  'success': (
+    'bg': 'color-background-success-light',
+    'active-bg': 'color-background-success-active',
+  ),
+  'info': (
+    'bg': 'color-background-primary-lighter',
+    'active-bg': 'color-background-primary-active',
+  ),
+  'warning': (
+    'bg': 'color-background-warning-light',
+    'active-bg': 'color-background-warning-active',
+  ),
+  'danger': (
+    'bg': 'color-background-danger-light',
+    'active-bg': 'color-background-danger-active',
+  ),
+  'light': (
+    'bg': 'color-background-secondary-lighter',
+    'active-bg': 'color-background-secondary',
+  ),
+  'dark': (
+    'bg': 'color-background-primary-deep',
+    'active-bg': 'color-background-primary-active',
+    'border-color': 'color-background-primary-deep',
+    'color': 'color-text-inverse',
+    'lighten': true,
+  ),
+) !default;
+// scss-docs-end table-variants
+
 // Properties
 //
 
@@ -182,46 +224,6 @@
 //   - dark variant:   lighten bg by 10% (mix with white)
 //
 //
-
-// scss-docs-start table-variants
-$table-variants: (
-  'primary': (
-    'bg': 'color-background-primary-light',
-    'active-bg': 'color-background-primary-light',
-  ),
-  'secondary': (
-    'bg': 'color-background-secondary-light',
-    'active-bg': 'color-background-secondary-active',
-  ),
-  'success': (
-    'bg': 'color-background-success-light',
-    'active-bg': 'color-background-success-active',
-  ),
-  'info': (
-    'bg': 'color-background-primary-lighter',
-    'active-bg': 'color-background-primary-active',
-  ),
-  'warning': (
-    'bg': 'color-background-warning-light',
-    'active-bg': 'color-background-warning-active',
-  ),
-  'danger': (
-    'bg': 'color-background-danger-light',
-    'active-bg': 'color-background-danger-active',
-  ),
-  'light': (
-    'bg': 'color-background-secondary-lighter',
-    'active-bg': 'color-background-secondary',
-  ),
-  'dark': (
-    'bg': 'color-background-primary-deep',
-    'active-bg': 'color-background-primary-active',
-    'border-color': 'color-background-primary-deep',
-    'color': 'color-text-inverse',
-    'lighten': true,
-  ),
-) !default;
-// scss-docs-end table-variants
 
 @each $variant, $values in $table-variants {
   .table-#{$variant} {

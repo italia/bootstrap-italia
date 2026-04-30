@@ -7,17 +7,17 @@
         },
         {
             "description": "Controls the acceptoverlay color text, using color tokens",
-            "value": "var(--bsi-color-text)",
+            "value": "var(--bsi-color-text-inverse)",
             "variable-name": "--bsi-acceptoverlay-color-text"
         },
         {
             "description": "Controls the acceptoverlay label color, using color tokens",
-            "value": "var(--bsi-color-text-secondary)",
+            "value": "var(--bsi-color-text-inverse)",
             "variable-name": "--bsi-acceptoverlay-label-color"
         },
         {
             "description": "Controls the acceptoverlay label border color, using color tokens",
-            "value": "var(--bsi-color-border-subtle)",
+            "value": "var(--bsi-color-border-inverse)",
             "variable-name": "--bsi-acceptoverlay-label-border-color"
         },
         {
@@ -900,6 +900,58 @@
             "variable-name": "--bsi-chip-text-weight"
         }
     ],
+    "dimmer": [
+        {
+            "description": "Controls the body font size of the dimmer, using typography tokens.",
+            "value": "var(--bsi-body-font-size)",
+            "variable-name": "--bsi-dimmer-body-font-size"
+        },
+        {
+            "description": "Controls the body font family of the dimmer, using typography tokens.",
+            "value": "var(--bsi-font-serif)",
+            "variable-name": "--bsi-dimmer-body-font-family"
+        },
+        {
+            "description": "Controls the gap between the buttons of the dimmer, using spacing tokens.",
+            "value": "var(--bsi-spacing-s)",
+            "variable-name": "--bsi-dimmer-button-gap"
+        },
+        {
+            "description": "Controls the width of the buttons of the dimmer, using sizing tokens.",
+            "value": "var(--bsi-sizing-full)",
+            "variable-name": "--bsi-dimmer-button-width"
+        },
+        {
+            "description": "Controls the margin top of the last button of the dimmer.",
+            "value": "var(--bsi-dimmer-button-gap)",
+            "variable-name": "--bsi-dimmer-button-last-margin-top"
+        },
+        {
+            "description": "Controls the gap between the buttons of the dimmer, using spacing tokens.",
+            "value": "var(--bsi-spacing-l)",
+            "variable-name": "--bsi-dimmer-buttons-gap"
+        },
+        {
+            "description": "Controls the heading size of the dimmer, using typography tokens.",
+            "value": "var(--bsi-heading-3-font-size)",
+            "variable-name": "--bsi-dimmer-heading-size"
+        },
+        {
+            "description": "Controls the gap between the icon and the text of the dimmer, using spacing tokens.",
+            "value": "var(--bsi-spacing-m)",
+            "variable-name": "--bsi-dimmer-icon-gap"
+        },
+        {
+            "description": "Controls the padding of the dimmer, using spacing tokens.",
+            "value": "var(--bsi-spacing-l)",
+            "variable-name": "--bsi-dimmer-padding"
+        },
+        {
+            "description": "Controls the text color of the dimmer, using color tokens.",
+            "value": "var(--bsi-color-text-inverse)",
+            "variable-name": "--bsi-dimmer-text-color"
+        }
+    ],
     "dropdown": [
         {
             "description": "Controls the speed of the dropdown open animation, using transition tokens.",
@@ -1256,11 +1308,6 @@
             "description": "Controls the nav text color for the header, using color tokens",
             "value": "var(--bsi-color-link)",
             "variable-name": "--bsi-header-nav-text-color"
-        },
-        {
-            "description": "Controls the search button background for the header, using color tokens.",
-            "value": "var(--bsi-color-background-inverse)",
-            "variable-name": "--bsi-header-search-button-background"
         },
         {
             "description": "Controls the search button color for the header, using icon tokens.",
@@ -2280,11 +2327,6 @@
             "variable-name": "--bsi-tab-close-btn-color"
         },
         {
-            "description": "Controls the tab close btn color hover, using color tokens.",
-            "value": "color-mix(in srgb, var(--bsi-primary) 90%, black 10%)",
-            "variable-name": "--bsi-tab-close-btn-color-hover"
-        },
-        {
             "description": "Controls the tab close btn color disabled, using color tokens.",
             "value": "var(--bsi-color-text-disabled)",
             "variable-name": "--bsi-tab-close-btn-color-disabled"
@@ -2318,7 +2360,7 @@
         },
         {
             "description": "Controls the background color for the active rows, using color tokens.",
-            "value": "var(--bsi-color-background-secondary)",
+            "value": "var(--it-color-slate-85)",
             "variable-name": "--bsi-table-active-bg"
         },
         {
@@ -2328,7 +2370,7 @@
         },
         {
             "description": "Controls the background color for the hovered rows, using color tokens.",
-            "value": "var(--bsi-color-background-secondary-hover)",
+            "value": "var(--it-color-slate-85)",
             "variable-name": "--bsi-table-hover-bg"
         },
         {
