@@ -61,9 +61,6 @@
   // XXX TO DO double check: these are currently still needed (ex. Card border color)
   // for mixins that reference them directly, or can they be replaced with the new
   // tokens structure?
-  --#{$prefix}border-width: #{$border-width};
-  --#{$prefix}border-style: #{$border-style};
-  --#{$prefix}border-color: #{$border-color};
   --#{$prefix}border-color-translucent: #{$border-color-translucent};
   --#{$prefix}border-radius: #{$border-radius};
   --#{$prefix}border-radius-sm: #{$border-radius-sm};
@@ -73,11 +70,6 @@
   --#{$prefix}border-radius-pill: #{$border-radius-pill};
 
   // ----------------------------------------------------------- //
-
-  // Utilities
-  --#{$prefix}border-width: 1px;
-  --#{$prefix}border-style: solid;
-  --#{$prefix}border-color: #{tokens.$it-color-border-subtle};
 
   // Theme colors
   --#{$prefix}theme-primary: #{tokens.$it-theme-italia-base}; // Theme primary color
@@ -170,6 +162,9 @@
   --#{$prefix}icon-size-xs: #{tokens.$it-icon-size-xs};
 
   // Border
+  --#{$prefix}border-width: 1px;
+  --#{$prefix}border-style: solid;
+  --#{$prefix}border-color: #{tokens.$it-color-border-subtle};
   --#{$prefix}border-broad: #{tokens.$it-border-broad};
   --#{$prefix}border-thick: #{tokens.$it-border-thick};
   --#{$prefix}border-double: #{tokens.$it-border-double};
@@ -177,7 +172,6 @@
   --#{$prefix}radius-rounded: #{tokens.$it-radius-rounded};
   --#{$prefix}radius-circle: #{tokens.$it-radius-circle};
   --#{$prefix}radius-smooth: #{tokens.$it-radius-smooth};
-  --#{$prefix}border-style: solid;
 
   // Sizing
   --#{$prefix}sizing-full: #{tokens.$it-sizing-full};
