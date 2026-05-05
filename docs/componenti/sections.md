@@ -268,7 +268,7 @@ Per aggiungere una serie di card all'interno di una Section si consiglia di util
 ## Breaking change
 
 {% capture callout %}
-- Negli esempi sono stati rimossi dai contenitori delle colonne tutte le classi custom per padding, margin e font a favore dello standard. 
+- Negli esempi sono stati rimossi dai contenitori delle colonne le classi di utility come `.pe-0`, `.pe-md-5` e `.font-serif`. 
 {% endcapture %}{% include callout-breaking.html version="3.0.0" content=callout type="danger" %}
 
 {% capture callout %}
