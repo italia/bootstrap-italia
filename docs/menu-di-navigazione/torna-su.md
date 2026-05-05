@@ -24,7 +24,7 @@ Le animazioni sono state realizzate con il plugin javascript [AnimeJs](https://a
 
 ## Esempio
 
-{% capture example %}
+{% capture callout %}
 Per facilitare la visualizzazione delle varianti di Back to top disponibili, i seguenti esempi saranno visualizzati in linea.
 {% endcapture %}{% include callout.html content=example type="warning" %}
 
