@@ -192,10 +192,10 @@ La sidebar può contenere una Lista di link primaria annidata.
     <div class="link-list-wrapper">
       <ul class="link-list">
         <li>
-          <a class="list-item medium right-icon" href="#collapseOne" role="button" data-bs-toggle="collapse" aria-expanded="true" aria-controls="collapseOne">
+          <a class="list-item medium" href="#collapseOne" role="button" data-bs-toggle="collapse" aria-expanded="true" aria-controls="collapseOne">
           <span class="list-item-title-icon-wrapper">
             <span>Link lista 1</span>
-            <svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
+            <svg class="icon icon-sm icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
           </span>
           </a>
           <ul class="link-sublist collapse show" id="collapseOne">
@@ -208,10 +208,10 @@ La sidebar può contenere una Lista di link primaria annidata.
           </ul>
         </li>
         <li>
-          <a class="list-item medium right-icon" href="#collapseTwo" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo">
+          <a class="list-item medium" href="#collapseTwo" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo">
             <span class="list-item-title-icon-wrapper">
               <span>Link lista 2</span>
-              <svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
+              <svg class="icon icon-sm icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
             </span>
           </a>
           <ul class="link-sublist collapse" id="collapseTwo">
@@ -224,10 +224,10 @@ La sidebar può contenere una Lista di link primaria annidata.
           </ul>
         </li>
         <li>
-          <a class="list-item medium right-icon" href="#collapseThree" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseThree">
+          <a class="list-item medium" href="#collapseThree" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseThree">
             <span class="list-item-title-icon-wrapper">
               <span>Link lista 3</span>
-              <svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
+              <svg class="icon icon-sm icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
             </span>
           </a>
           <ul class="link-sublist collapse" id="collapseThree">
@@ -269,9 +269,9 @@ Per cambiare il tema della sidebar e renderla scura è sufficiente aggiungere al
     <div class="link-list-wrapper">
       <ul class="link-list">
         <li>
-          <a class="list-item large medium right-icon" href="#collapseFour" role="button" data-bs-toggle="collapse" aria-expanded="true" aria-controls="collapseOne">
+          <a class="list-item large medium" href="#collapseFour" role="button" data-bs-toggle="collapse" aria-expanded="true" aria-controls="collapseOne">
             <span class="list-item-title-icon-wrapper">
-              <span>Link lista 1</span><svg class="icon icon-sm icon-inverse right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
+              <span>Link lista 1</span><svg class="icon icon-sm icon-inverse" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
             </span>
           </a>
           <ul class="link-sublist collapse show" id="collapseFour">
@@ -284,9 +284,9 @@ Per cambiare il tema della sidebar e renderla scura è sufficiente aggiungere al
           </ul>
         </li>
         <li>
-          <a class="list-item large medium right-icon" href="#collapseFive" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo">
+          <a class="list-item large medium" href="#collapseFive" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo">
           <span class="list-item-title-icon-wrapper">
-              <span>Link lista 2</span><svg class="icon icon-sm icon-inverse right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
+              <span>Link lista 2</span><svg class="icon icon-sm icon-inverse" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
             </span>
           </a>
           <ul class="link-sublist collapse" id="collapseFive">
@@ -299,9 +299,9 @@ Per cambiare il tema della sidebar e renderla scura è sufficiente aggiungere al
           </ul>
         </li>
         <li>
-          <a class="list-item large medium right-icon" href="#collapseSix" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseThree">
+          <a class="list-item large medium" href="#collapseSix" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseThree">
             <span class="list-item-title-icon-wrapper">
-              <span>Link lista 3</span><svg class="icon icon-sm icon-inverse right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
+              <span>Link lista 3</span><svg class="icon icon-sm icon-inverse" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
             </span>
           </a>
           <ul class="link-sublist collapse" id="collapseSix">
@@ -344,6 +344,7 @@ sezione [attivazione Collapse tramite codice]({{ site.baseurl }}/docs/componenti
 - Rimossi elementi `<span>` con classe `list-item-title-icon-wrapper`.
 - Nella variante con una lista di link primaria annidata è stata rimossa la classe `.large` dagli elementi `<a>` con classi `.list-item .medium`. 
 - Nelle varianti scure la classe che controlla il colore delle icone bianche ha cambiato nome: `.icon-white` diventa `.icon-inverse`.
+- Rimossa le classi `.right-icon` e `.right` dai link list item.
 {% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}
 
 {% capture callout %}

@@ -473,6 +473,8 @@ Le opzioni possono essere passate tramite gli attributi data o tramite Javascrip
 
 {% capture callout %}
 - La classe che controlla il colore dell'icona chevron per le varianti scure ha cambiato nome: `.icon-white` diventa `.icon-inverse`.
+- Aggiunta la classe `.it-navscroll-heading` al titolo della sezione.
+- Rinominata la classe `.icon-white` in `.icon-inverse` per le icone chevron delle varianti scure.
 {% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}
 
 {% capture callout %}
