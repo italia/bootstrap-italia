@@ -24,16 +24,9 @@ Le animazioni sono state realizzate con il plugin javascript [AnimeJs](https://a
 
 ## Esempio
 
-Per visualizzare il Back to top nella posizione corretta è necessario scrollare questa pagina. L'esempio del codice sottostante sarà visibile solo a scroll avvenuto.
-
-{% comment %}Example name: Base, funzionante{% endcomment %}
-{% capture example %}
-<a href="#" aria-label="Torna su" data-bs-toggle="backtotop" class="back-to-top" id="example">
-<svg class="icon icon-inverse"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-up"></use></svg>
-</a>
-{% endcapture %}{% include example.html content=example %}
-
-**Per facilitare la visualizzazione delle varie versioni di Back to top disponibili i seguenti esempi saranno visualizzati in linea.**
+{% capture callout %}
+Per facilitare la visualizzazione delle varianti di Back to top disponibili, i seguenti esempi saranno visualizzati in linea.
+{% endcapture %}{% include callout.html content=example type="warning" %}
 
 {% comment %}Example name: Base, esempio{% endcomment %}
 {% capture example %}

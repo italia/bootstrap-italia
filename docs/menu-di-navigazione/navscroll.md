@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Navscroll
-description: L'elemento Navscroll presenta liste di link con ancore a sezioni della pagina in cui è contenuto.
+description: Lista di link con ancore per navigare velocemente a una sezione specifica della pagina in cui è contenuto.
 group: menu-di-navigazione
 toc: true
 ---
@@ -20,28 +20,29 @@ toc: true
   }
 </style>
 
-## Layout della Navscroll
+Il componente Navscroll, declinazione del [componente Sidebar]({{ site.baseurl }}/docs/menu-di-navigazione/sidebar/), è una barra di navigazione laterale che, tramite una lista di ancore, permette di creare un indice utile a saltare velocemente alle sezioni e ai contenuti presenti su una stessa pagina.
 
-Il componente Navscroll è una declinazione del componente Navbar `<nav class="navbar navbar-expand-lg">` con l'aggiunta della classe `.it-navscroll-wrapper` e dell'attributo `data-bs-navscroll`.  
-Nella sua versione mobile, la navigazione viene collassata all'interno di un menu, posizionabile a inizio o fine viewport.
+[Approfondisci come e quando usare il componente Navscroll](https://designers.italia.it/design-system/componenti/navscroll/)
 
-Per posizionare tale menu in alto, è sufficiente aggiungere al tag `<nav>` la classe `.it-top-navscroll`. Al contrario, per posizionare il menu in basso, è sufficiente aggiungere la classe `.it-bottom-navscroll`.
+## Posizione su mobile
 
-La Navscroll può avere una linea-separatore a destra o a sinistra dell'elemento. Si ottiene aggiungendo al tag `<nav>` la classe `.it-left-side` per ottenere una linea a sinistra, e `.it-right-side` per ottenere una linea a destra.
+Il componente Navscroll può essere posizionato a inizio o fine viewport, a seconda della classe aggiunta al tag `<nav>`:
 
-{% capture callout %}
-Ogni link all'interno della Navscroll contiene l'attributo `href` con il valore dell'id relativo all'elemento correlato in pagina: `href="#idElemento"`.
-{% endcapture %}{% include callout.html content=callout type="info" %}
+- `.it-top-navscroll`: posiziona il menu in alto
+- `.it-bottom-navscroll`: posiziona il menu in basso
 
-Per fare in modo che la voce di menu sia evidenziata automaticamente durante lo scorrimento della pagina, è sufficiente aggiungere alle sezioni corrispondenti alle voci di menu (`#idElemento`), una classe `.it-page-section`, e racchiudere le sezioni in un elemento con classe `.it-page-sections-container`.
+[Vai all'esempio Navscroll]({{ site.baseurl }}/docs/esempi/navscroll/){:target="\_blank"} e restringi la finestra del browser per vedere il componente in azione su mobile.
 
-Le animazioni sono state realizzate con il plugin javascript [AnimeJs](https://animejs.com).
+## Posizione su desktop
 
-### Posizionamento a fondo pagina con linea a sinistra
+Puoi posizionare una Navscroll a sinistra o a destra, a seconda della classe aggiunta al tag `<nav>`:
 
-In questo esempio, la linea che limita la barra di navigazione è posizionata a sinistra. Su dispositivi con schermi a dimensione inferiore a 992px, la barra che permette di aprire la navigazione si sposterà in basso nella pagina.
+- `.it-left-side`: posiziona il menu a sinistra, viene aggiunto un bordo a sinistra del menu.
+- `.it-right-side`: posiziona il menu a destra, viene aggiunto un bordo a destra del menu.
 
-{% comment %}Example name: Posizionata a fondo pagina con linea a sinistra{% endcomment %}
+### Navscroll a sinistra
+
+{% comment %}Example name: Navscroll a sinistra{% endcomment %}
 {% capture example %}
 <nav class="navbar it-navscroll-wrapper navbar-expand-lg it-bottom-navscroll it-left-side" data-bs-navscroll>
   <button class="custom-navbar-toggler" type="button" aria-controls="navbarNav" aria-label="Apri/Chiudi indice" data-bs-toggle="navbarcollapsible" data-bs-target="#navbarNav"><span class="it-list"></span>1. Introduzione
@@ -103,11 +104,9 @@ In questo esempio, la linea che limita la barra di navigazione è posizionata a 
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
-### Posizionamento in testa alla pagina con linea a destra
+### Navscroll a destra
 
-In questo esempio, la linea che limita la barra di navigazione è posizionata a destra. Su dispositivi con schermi a dimensione inferiore a 992px, la barra che permette di aprire la navigazione si sposterà in alto nella pagina.
-
-{% comment %}Example name: Posizionata in testa pagina con linea a destra{% endcomment %}
+{% comment %}Example name: Navscroll a destra{% endcomment %}
 {% capture example %}
 <nav class="navbar it-navscroll-wrapper navbar-expand-lg it-top-navscroll it-right-side" data-bs-navscroll>
   <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavB" aria-label="Apri/Chiudi indice" data-bs-toggle="navbarcollapsible" data-bs-target="#navbarNavB"><span class="it-list"></span>1. Introduzione
@@ -169,13 +168,30 @@ In questo esempio, la linea che limita la barra di navigazione è posizionata a 
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
-### Progress bar
 
-La Navscroll può mostrare una barra di avanzamento dello scorrimento del contenuto. Per farlo utilizzare il componente [Progress Bar]({{site.baseurl}}/docs/componenti/progress-indicators/#progress-bar), aggiungendo la classe `.it-navscroll-progressbar` all'elemento `.progress-bar`. Il contenuto a cui si riferisce l'avanzamento dello scorrimento è relativo all'elemento `.it-page-sections-container`.
+<!-- Il componente Navscroll  `<nav class="navbar navbar-expand-lg">` con l'aggiunta della classe `.it-navscroll-wrapper` e dell'attributo `data-bs-navscroll`.   -->
 
-**[Esempio Navscroll con Progress bar >]({{ site.baseurl }}/docs/esempi/navscroll/){:target="\_blank"}**
+{% capture callout %}
+#### Come gestire le ancore
 
-{% comment %}Example name: Con barra progresso{% endcomment %}
+Ogni link che punta a una sezione della pagina deve contenere l'attributo `href` con il valore dell'id dell'elemento correlato in pagina: `href="#idElemento"`.
+{% endcapture %}{% include callout.html content=callout type="warning" %}
+
+#### Evidenziare automaticamente la voce di menu
+
+Per fare in modo che la voce di menu sia evidenziata automaticamente durante lo scorrimento della pagina, aggiungi una classe `.it-page-section` alle sezioni corrispondenti alle voci di menu (`#idElemento`), e racchiudi le sezioni in un elemento con classe `.it-page-sections-container`.
+
+Le animazioni sono state realizzate con il plugin javascript [AnimeJs](https://animejs.com).
+
+## Varianti
+
+### Barra di avanzamento
+
+Per mostrare una barra di avanzamento nella Navscroll, usa il componente [Progress Bar]({{site.baseurl}}/docs/componenti/progress-indicators/#progress-bar) e aggiungi la classe `.it-navscroll-progressbar` all'elemento `.progress-bar`. La barra indica lo scorrimento dell'elemento `.it-page-sections-container`.
+
+[Vai alla pagina di esempio →]({{ site.baseurl }}/docs/esempi/navscroll/){:target="\_blank"}
+
+{% comment %}Example name: Barra di avanzamento{% endcomment %}
 {% capture example %}
 <nav class="navbar it-navscroll-wrapper navbar-expand-lg it-bottom-navscroll it-right-side" data-bs-navscroll>
   <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavProgress"
@@ -242,15 +258,17 @@ La Navscroll può mostrare una barra di avanzamento dello scorrimento del conten
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
-### Variante scura
+### Tema scuro
 
-Per attivare la variante scura è necessario aggiungere le seguenti classi all'elemento `<nav class="navbar">`:
+Per attivare il tema scuro è necessario aggiungere le seguenti classi all'elemento `<nav class="navbar">`:
 
-**`.theme-dark-mobile`**: sfondo scuro, testi e link bianco (modifica unicamente la versione mobile del navscroll).
+**`.theme-dark-mobile`**: sfondo scuro, testi e link bianco (solo per la versione mobile).
 
-**`.theme-dark-desktop`**: sfondo scuro, testi e link di colore bianco (modifica unicamente la versione desktop del navscroll).
+**`.theme-dark-desktop`**: sfondo scuro, testi e link di colore bianco (solo per la versione desktop).
 
-{% comment %}Example name: Variante scura{% endcomment %}
+Utilizza entrambe le classi insieme per attivare il tema scuro su tutti i dispositivi.
+
+{% comment %}Example name: Tema scuro{% endcomment %}
 {% capture example %}
 <nav class="navbar it-navscroll-wrapper navbar-expand-lg it-top-navscroll it-right-side theme-dark-mobile theme-dark-desk" data-bs-navscroll>
   <button class="custom-navbar-toggler" type="button" aria-controls="navbarNavC" aria-label="Apri/Chiudi indice" data-bs-toggle="navbarcollapsible" data-bs-target="#navbarNavC"><span class="it-list"></span>1. Introduzione
@@ -312,13 +330,13 @@ Per attivare la variante scura è necessario aggiungere le seguenti classi all'e
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
-## Menu Inline
+### Menu Inline
 
-La classe distintiva del wrapper esterno è `.inline-menu`.
-
-Gli inline menu possono contenere liste di link di ogni tipo; nell'esempio che segue è stata inserita una Lista di link collassabile.
+Il componente Navscroll può essere utilizzato anche come menu in linea, utilizzando la classe `.inline-menu`.
 
 Per maggiori informazioni, si può fare riferimento alla [documentazione delle Liste di link]({{ site.baseurl }}/docs/organizzare-i-contenuti/liste/#liste-per-menu-di-navigazione).
+
+Gli inline menu possono contenere liste di link di ogni tipo; nell'esempio che segue è stata inserita una Lista di link collassabile.
 
 {% comment %}Example name: Menu in linea{% endcomment %}
 {% capture example %}
@@ -455,6 +473,8 @@ Le opzioni possono essere passate tramite gli attributi data o tramite Javascrip
 
 {% capture callout %}
 - La classe che controlla il colore dell'icona chevron per le varianti scure ha cambiato nome: `.icon-white` diventa `.icon-inverse`.
+- Aggiunta la classe `.it-navscroll-heading` al titolo della sezione.
+- Rinominata la classe `.icon-white` in `.icon-inverse` per le icone chevron delle varianti scure.
 {% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}
 
 {% capture callout %}

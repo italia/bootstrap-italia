@@ -177,9 +177,11 @@ Usa `.table-responsive{-sm|-md|-lg|-xl|-xxl}` come necessario per creare tabelle
 
 ## Varianti
 
-Utilizza le classi contestuali per colorare tabelle, righe o celle individuali.
+Utilizza le classi contestuali per personalizzare un'intera tabella o una singola riga o cella.
 
 ### Tabelle colorate 
+
+Le classi per personalizzare il colore sono: `.table-primary`, `.table-secondary`, `.table-success`, `.table-danger`, `.table-warning`, `.table-info`, `.table-light`, `.table-dark`.
 
 {% comment %}Example name: Tabelle colorate{% endcomment %}
 {% capture example %}
@@ -264,11 +266,13 @@ Utilizza le classi contestuali per colorare tabelle, righe o celle individuali.
   </table>
 {% endcapture %}{% include example.html content=example %}
 
-### Righe colorate 
+### Righe colorate e hover
+
+Puoi applicare la classe contestuale di colore all'elemento `<tr>` per colorare una singola riga. Insieme ad essa puoi applicare anche la classe `.table-hover` per abilitare lo stato hover su ogni riga.
 
 {% comment %}Example name: Righe colorate{% endcomment %}
 {% capture example %}
-  <table class="table">
+  <table class="table table-hover">
     <thead>
       <tr>
         <th scope="col">Classe</th>
@@ -328,6 +332,8 @@ Utilizza le classi contestuali per colorare tabelle, righe o celle individuali.
 
 ### Celle colorate
 
+Puoi applicare la classe contestuale di colore all'elemento `<td>` per colorare una singola cella.
+
 {% comment %}Example name: Celle colorate{% endcomment %}
 {% capture example %}
   <div class="table-responsive">
@@ -350,9 +356,14 @@ Utilizza le classi contestuali per colorare tabelle, righe o celle individuali.
 
 {% include callout-warning-color-assistive-technologies.md %}
 
+
 ### Righe striate
 
-Usa `.table-striped` per aggiungere delle striature zebrate ad ogni riga della tabella contenute in `<tbody>`.
+Usa `.table-striped` per aggiungere colori alternati ad ogni riga della tabella contenute in `<tbody>`.
+
+{% capture callout %} 
+  Questa variante non può essere combinata con le classi di colore.
+{% endcapture %}{% include callout.html content=callout type="warning" %}
 
 {% comment %}Example name: Righe striate{% endcomment %}
 {% capture example %}
@@ -388,7 +399,7 @@ Usa `.table-striped` per aggiungere delle striature zebrate ad ogni riga della t
   </table>
 {% endcapture %}{% include example.html content=example %}
 
-Queste classi sono applicabili anche alle varianti:
+Queste classi sono applicabili anche alla variante scura:
 
 {% comment %}Example name: Righe striate, sfondo scuro{% endcomment %}
 {% capture example %}
@@ -424,45 +435,7 @@ Queste classi sono applicabili anche alle varianti:
   </table>
 {% endcapture %}{% include example.html content=example %}
 
-### Righe e hover
-
-Aggiungi `.table-hover` per abilitare lo stato hover sulle righe della tabella contenute in `<tbody>`.
-
-{% comment %}Example name: Righe con stato hover{% endcomment %}
-{% capture example %}
-  <table class="table table-hover">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Nome</th>
-        <th scope="col">Cognome</th>
-        <th scope="col">Username</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mario</td>
-        <td>Verdi</td>
-        <td>mario.verdi</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Francesco</td>
-        <td>Bianchi</td>
-        <td>francesco.bianchi</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Alessandro</td>
-        <td>Rossi</td>
-        <td>alessandro.rossi</td>
-      </tr>
-    </tbody>
-  </table>
-{% endcapture %}{% include example.html content=example %}
-
-Le tabelle con hover possono essere combinate con la variante striata.
+Le tabelle con hover possono essere combinate con la variante striata:
 
 {% comment %}Example name: Righe striate con stato hover{% endcomment %}
 {% capture example %}
@@ -498,9 +471,9 @@ Le tabelle con hover possono essere combinate con la variante striata.
   </table>
 {% endcapture %}{% include example.html content=example %}
 
-### Tabelle attive
+### Righe in evidenza
 
-Le tabelle attive mettono in evidenza una cella o un'intera riga. Aggiungi `.table-active` a una riga `<tr>` o a una cella `<td>` per evidenziare quella riga o cella specifica.
+Aggiungi `.table-active` a una riga `<tr>` o a una cella `<td>` per evidenziare quella riga o cella specifica.
 
 {% comment %}Example name: Con stato attivo{% endcomment %}
 {% capture example %}
@@ -574,7 +547,7 @@ Aggiungi `.table-bordered` per avere i bordi a tutti i lati della tabella e su t
   </table>
 {% endcapture %}{% include example.html content=example %}
 
-Le [utilities di colorazione dei bordi]({{site.baseurl}}/docs/organizzare-gli-spazi/bordi/#colore-dei-bordi) possono essere utilizzate per cambiarne i colori.
+Le [utilities dei bordi]({{site.baseurl}}/docs/organizzare-gli-spazi/bordi/#colore-dei-bordi) permettono di cambiarne il colore.
 
 {% comment %}Example name: Con bordi, varianti di colore{% endcomment %}
 {% capture example %}

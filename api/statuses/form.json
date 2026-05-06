@@ -1,7 +1,7 @@
 {
     "amichevole con lettori di schermo": "PRONTO",
     "angular Kit": "PRONTO",
-    "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/form-input",
+    "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/form/form-input",
     "assignees": [
         "Fupete"
     ],
@@ -14,12 +14,14 @@
         "title": "Form",
         "type": "DraftIssue"
     },
+    "dev Kit Italia": "PRONTO",
+    "dev Kit Italia - url": "https://italia.github.io/dev-kit-italia/?path=/docs/componenti-form--documentazione",
     "id": "PVTI_lADOAOqloM4AcXblzgMjwZo",
     "navigabile": "PRONTO",
-    "notes / Issues": "https://github.com/italia/design-ui-kit/issues/118 \u2014 https://github.com/italia/bootstrap-italia/issues/1403 \u2014 https://github.com/italia/design-react-kit/issues/1154",
+    "notes / Issues": "https://github.com/italia/design-ui-kit/issues/118 \u2014 https://github.com/italia/bootstrap-italia/issues/1403",
     "notes / More": "In Angular kit ci sono cose sotto Form Input. \u2014\u00a0La variante Angular kit \"Interazione con Form Input dotato di validazione Model Driven\" sarebbe utile anche in Bootstrap Italia e React kit",
-    "react Kit": "DA RIVEDERE",
-    "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-form--documentazione",
+    "react Kit": "PRONTO",
+    "react Kit - url": "https://italia.github.io/design-react-kit/latest/?path=/docs/documentazione-form--documentazione",
     "status": "Todo",
     "status a11y check": "Done",
     "title": "Form",

@@ -200,7 +200,7 @@ Posizionamento predefinito della notifica.
 {% capture example %}
 <div class="container test-desktop">
   <div class="notification with-icon success" role="alert" aria-labelledby="not1d-title" id="not1d">
-    <h2 id="not1d-title" class="notification-title no_toc"><svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>Titolo notifica</h2>
+    <h2 id="not1d-title" class="notification-title no_toc"><svg class="icon icon-sm me-2"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check-circle"></use></svg>Titolo notifica</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</p>
   </div>
 </div>

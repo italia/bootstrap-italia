@@ -192,7 +192,7 @@
   --#{$prefix}color-text-secondary: var(--it-color-text-secondary);
   --#{$prefix}color-text-primary: var(--it-color-text-primary);
   --#{$prefix}color-text-base: var(--it-color-text-base);
-  --#{$prefix}color-code: var(--it-color-text-secondary);
+  --#{$prefix}color-code: var(--it-color-red-44);
   --#{$prefix}color-link: var(--it-color-link-base);
   --#{$prefix}color-link-hover: var(--it-color-link-hover);
   --#{$prefix}color-link-active: var(--it-color-link-active);
@@ -261,10 +261,10 @@
   --#{$prefix}color-background-secondary: var(--it-color-background-secondary);
   --#{$prefix}color-background-secondary-deep: var(--it-color-slate-20);
   --#{$prefix}overlay-background-light: hsla(0, 0%, 0%, 0.5);
-  --#{$prefix}overlay-background-primary: hsla(210, 100%, 40%, 0.8);
-  --#{$prefix}overlay-background-primary-muted: hsla(210, 54%, 20%, 0.8);
+  --#{$prefix}overlay-background-primary: hsla(210, 100%, 40%, 0.85);
+  --#{$prefix}overlay-background-primary-muted: hsla(210, 54%, 20%, 0.85);
   --#{$prefix}highlight-background: var(--it-color-teal-80); // TODO: replace with semantic token
-  --#{$prefix}code-background: var(--it-color-background-muted);
+  --#{$prefix}code-background: var(--it-color-slate-93);
   --#{$prefix}ins-background: var(--it-color-emerald-67);
   --#{$prefix}del-background: var(--it-color-red-70);
   --#{$prefix}page-background: var(--it-color-background-inverse);

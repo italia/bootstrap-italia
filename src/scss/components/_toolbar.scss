@@ -196,16 +196,7 @@
         right: 1px;
       }
     }
-    // Icon
-    .it-ico {
-      font-size: var(--#{$prefix}toolbar-icon-font-size);
-      // More icon
-      &.it-more-actions {
-        &:before {
-          top: 33%;
-        }
-      }
-    }
+
     // Icon badge
     .toolbar-badge {
       top: -2px;
@@ -220,8 +211,8 @@
   // Small toolbar
   &.toolbar-small {
     --#{$prefix}toolbar-icon-font-size: var(--#{$prefix}icon-size-s);
-
     height: 72px;
+
     // List
     & > ul {
       height: 40px;
@@ -233,15 +224,7 @@
         right: 2px;
       }
     }
-    // Icon
-    .it-ico {
-      font-size: var(--#{$prefix}toolbar-icon-font-size);
-      &.it-more-actions {
-        &:before {
-          top: 25%;
-        }
-      }
-    }
+
     // Icon badge
     .toolbar-badge {
       top: 2px;
@@ -310,26 +293,14 @@
     &.active {
       --#{$prefix}toolbar-link-color: var(--#{$prefix}color-text-primary);
       --#{$prefix}toolbar-icon-color: var(--#{$prefix}icon-primary);
-      .icon {
-        fill: var(--#{$prefix}toolbar-icon-color);
-      }
     }
     // Disabled state
     &.disabled {
       --#{$prefix}toolbar-link-color: var(--#{$prefix}color-text-disabled);
       --#{$prefix}toolbar-icon-color: var(--#{$prefix}icon-disabled);
-
-      color: var(--#{$prefix}toolbar-link-color);
       cursor: not-allowed;
-      .icon {
-        fill: var(--#{$prefix}toolbar-icon-color);
-      }
       &:hover {
-        color: var(--#{$prefix}toolbar-link-color);
         text-decoration: none;
-        .icon {
-          fill: var(--#{$prefix}toolbar-icon-color);
-        }
       }
       &:after {
         color: var(--#{$prefix}toolbar-link-color);
@@ -339,12 +310,7 @@
     &:not(.disabled):hover {
       --#{$prefix}toolbar-link-color: var(--#{$prefix}color-link-hover);
       --#{$prefix}toolbar-icon-color: var(--#{$prefix}icon-primary-hover);
-
-      color: var(--#{$prefix}toolbar-link-color);
       text-decoration: underline;
-      .icon {
-        fill: var(--#{$prefix}toolbar-icon-color);
-      }
     }
     // Hover fix for IE11
     /* stylelint-disable */
@@ -395,41 +361,18 @@
     }
   }
 
-  // Icon
-  .it-ico {
-    position: relative;
-    display: block;
-    height: 32px;
-    font-size: var(--#{$prefix}toolbar-icon-font-size);
-    &:before {
-      margin-right: 0;
-    }
-    // More icon
-    &.it-more-actions {
-      font-size: var(--#{$prefix}toolbar-more-icon-font-size);
-      &:before {
-        position: relative;
-        top: 50%;
-      }
-    }
-  }
-
   // Icon badges
   .badge-wrapper {
     // width: calc(50% + 28px);
     position: relative;
   }
 
-  .toolbar-badge,
-  .toolbar-alert {
+  // Icon badge
+  .toolbar-badge {
     position: absolute;
     display: block;
     border: 1px solid var(--#{$prefix}toolbar-badge-border-color);
     background-color: var(--#{$prefix}toolbar-badge-background-color);
-  }
-
-  // Icon badge
-  .toolbar-badge {
     top: -4px;
     right: 0;
     min-width: 18px;

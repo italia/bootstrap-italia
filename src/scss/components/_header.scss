@@ -40,10 +40,12 @@
   --#{$prefix}header-slim-text-color: var(--#{$prefix}color-text-inverse); // Controls the slim text color for the header, using color tokens.
   --#{$prefix}header-social-color: var(--#{$prefix}icon-inverse); // Controls the social color for the header, using icon tokens.
   --#{$prefix}header-spacing-inset: var(--#{$prefix}spacing-xxs); // Controls the inset spacing for the header, using spacing tokens.
+
   @include media-breakpoint-up(md) {
     --#{$prefix}header-brand-size: 3.5rem;
     --#{$prefix}header-search-icon-color: var(--#{$prefix}icon-primary);
   }
+
   @include media-breakpoint-up(lg) {
     --#{$prefix}header-brand-size: 4.5rem;
     --#{$prefix}header-brand-title-size: var(--#{$prefix}heading-3-font-size);
@@ -58,8 +60,7 @@
 // Light theme
 .it-header-slim-wrapper.theme-light,
 .it-header-center-wrapper.theme-light,
-.it-header-navbar-wrapper.theme-light,
-.it-header-navbar-wrapper.theme-light-desk {
+.it-header-navbar-wrapper.theme-light {
   --#{$prefix}header-brand-color: var(--#{$prefix}color-text-primary);
   --#{$prefix}header-brand-icon-color: var(--#{$prefix}icon-primary);
   --#{$prefix}header-center-background: var(--#{$prefix}color-background-inverse);
@@ -72,6 +73,8 @@
   --#{$prefix}header-slim-border-color: hsla(210, 100%, 40%, 0.2);
   --#{$prefix}header-slim-text-color: var(--#{$prefix}color-link);
   --#{$prefix}header-social-color: var(--#{$prefix}icon-primary);
+  --#{$prefix}color-background-inverse-hover: var(--#{$prefix}header-center-text-color);
+
   @include media-breakpoint-up(md) {
     --#{$prefix}header-search-icon-color: var(--#{$prefix}icon-inverse);
   }
@@ -83,16 +86,6 @@
 
   &.it-header-sticky.is-sticky {
     width: 100%;
-
-    .it-nav-wrapper {
-      top: 0;
-      z-index: 10;
-      width: 100%;
-    }
-
-    .it-header-slim-wrapper {
-      display: none;
-    }
 
     @include media-breakpoint-up(lg) {
       .it-header-slim-wrapper,
@@ -120,6 +113,7 @@
 
               a {
                 color: var(--#{$prefix}header-brand-color);
+
                 &:hover {
                   text-decoration: none;
                 }
@@ -167,32 +161,47 @@
         }
       }
     }
+
+    .it-nav-wrapper {
+      top: 0;
+      z-index: 10;
+      width: 100%;
+    }
+
+    .it-header-slim-wrapper {
+      display: none;
+    }
   }
 }
 
 .it-nav-wrapper {
   position: relative;
   z-index: auto;
+  display: flex;
+  flex-direction: row-reverse;
+  width: auto;
+  @include media-breakpoint-up(lg) {
+    display: block;
+  }
 
   .it-header-navbar-wrapper {
-    position: absolute;
-    top: 50%;
-    left: 8px;
-    z-index: 3;
-    transform: translateY(-50%);
-    transition: padding-top var(--#{$prefix}transition-instant) ease;
-    @include media-breakpoint-up(lg) {
-      position: inherit;
-      top: inherit;
-      left: auto;
-      background: var(--#{$prefix}header-nav-background);
-      transform: none;
-    }
+    height: var(--#{$prefix}header-center-height); // Set height for mobile
+    background-color: var(--#{$prefix}header-nav-background); // Set background color for mobile
+    display: flex;
+    align-items: center;
 
-    // Add border bottom on light theme
-    &.theme-light,
-    &.theme-light-desk {
-      border-bottom: 1px solid var(--#{$prefix}header-slim-border-color);
+    // Restore default styles on desktop
+    @include media-breakpoint-up(lg) {
+      height: auto;
+      display: block;
     }
+  }
+}
+
+// Add border bottom to the navbar on light theme
+.it-header-navbar-wrapper {
+  &.theme-light,
+  &.theme-light-desk {
+    border-bottom: 1px solid var(--#{$prefix}header-slim-border-color);
   }
 }

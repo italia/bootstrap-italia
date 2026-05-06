@@ -167,7 +167,7 @@
       }
 
       .icon {
-        transition: transform $dropdown-menu-animation-speed;
+        transition: transform var(--#{$prefix}transition-instant);
 
         &.secondary {
           color: var(--#{$prefix}icon-secondary);
