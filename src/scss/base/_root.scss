@@ -106,7 +106,7 @@
   --#{$prefix}font-tracking-tight: var(--it-font-tracking-tight);
   --#{$prefix}font-tracking-narrow: var(--it-font-tracking-narrow);
   --#{$prefix}font-tracking-short: var(--it-font-tracking-short);
-  --#{$prefix}display-font-size: var(--it-font-size-11);
+  --#{$prefix}display-font-size: var(--it-font-size-10);
   --#{$prefix}heading-6-font-size: var(--it-heading-6-font-size);
   --#{$prefix}heading-5-font-size: var(--it-heading-5-font-size);
   --#{$prefix}heading-4-font-size: var(--it-heading-4-font-size);
@@ -142,6 +142,10 @@
     --#{$prefix}heading-6-font-size: var(--it-heading-6-font-size-l);
     --#{$prefix}lead-font-size: var(--it-lead-font-size-l);
     --#{$prefix}body-font-size: var(--it-body-font-size-l);
+  }
+
+  @include media-breakpoint-up(md) {
+    --#{$prefix}display-font-size: var(--it-font-size-11);
   }
 
   // Icons
