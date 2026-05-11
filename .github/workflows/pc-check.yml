@@ -1,6 +1,9 @@
 on:
+  pull_request:
+    branches:
+      - main
   workflow_dispatch:
-
+name: Lint publiccode
 jobs:
   publiccode_yml_validation:
     runs-on: ubuntu-latest
