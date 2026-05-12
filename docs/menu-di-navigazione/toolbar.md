@@ -21,9 +21,9 @@ L'elemento Toolbar è un contenitore di link, pulsanti o dropdown. Consiste in u
 
 ## Dimensioni
 
-La Toolbar si adatta automaticamente in larghezza al suo contenitore. È consigliabile utilizzare contenitori di dimensione orizzontale (o verticale, nel caso del Toolbar verticale) ridotta, per evitare che gli elementi si disperdano in uno spazio troppo ampio.
+La Toolbar si adatta automaticamente allo spazio disponibile. È consigliabile utilizzare contenitori di dimensione orizzontale (o verticale, nel caso del Toolbar verticale) ridotta, per evitare che gli elementi si disperdano in uno spazio troppo ampio.
 
-Per ottimizzare lo spazio disponibile l'elemento è fornito in tre versioni: grande, media e piccola.
+Per ottimizzare lo spazio, è possibile utilizzare le tre dimensioni disponibili: grande, media e piccola. La dimensione predefinita è la grande. Le altre dimensioni dipendono dalla dimensione delle icone e del testo.
 
 ### Toolbar grande
 
@@ -70,7 +70,7 @@ La versione predefinita dell'elemento è quella con icone grandi e label.
 
 ### Toolbar media
 
-Applicando una classe aggiuntiva `.toolbar-medium` alla Toolbar si ottiene una versione di dimensioni medie.
+Applicando la classe `.toolbar-medium` si ottiene la dimensione media, con testo di dimensione leggermente inferiore. 
 
 In questo caso le label, nascoste visivamente, devono essere contenute in uno `<span>` con classe `.visually-hidden`, per rendere disponibile la descrizione agli screen reader.
 
@@ -81,37 +81,31 @@ In questo caso le label, nascoste visivamente, devono essere contenute in uno `<
     <li>
       <a href="#" class="active">
         <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-comment"></use></svg>
-        <span class="visually-hidden">messaggi</span>
+        <span class="visually-hidden">Messaggi</span>
       </a>
     </li>
     <li>
       <a href="#">
         <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-camera"></use></svg>
-        <span class="visually-hidden">immagini</span>
+        <span class="visually-hidden">Immagini</span>
       </a>
     </li>
     <li>
       <a href="#">
         <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
-        <span class="visually-hidden">documenti</span>
+        <span class="visually-hidden">Documenti</span>
       </a>
     </li>
     <li>
       <a href="#">
         <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-locked"></use></svg>
-        <span class="visually-hidden">privacy</span>
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg>
-        <span class="visually-hidden">preferiti</span>
+        <span class="visually-hidden">Privacy</span>
       </a>
     </li>
     <li>
       <a href="#" class="disabled" disabled aria-disabled="true">
-        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-download"></use></svg>
-        <span class="visually-hidden">downloads</span>
+        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg>
+        <span class="visually-hidden">Preferiti</span>
       </a>
     </li>
   </ul>
@@ -121,9 +115,9 @@ In questo caso le label, nascoste visivamente, devono essere contenute in uno `<
 
 ### Toolbar piccola
 
-Applicando una classe aggiuntiva `.toolbar-small` alla Toolbar si ottiene la versione più piccola.
+Applicando la classe `.toolbar-small` si ottiene la dimensione piccola, con testo e icone di dimensione inferiore. Cambia anche il `padding` interno del componente.
 
-Anche in questo caso le label, non visibile, devono essere contenute in uno `<span>` con classe `.visually-hidden`, per rendere disponibile la descrizione agli screen reader.
+Anche in questo caso le label, nascoste visivamente, devono essere contenute in uno `<span>` con classe `.visually-hidden`, per rendere disponibile la descrizione agli screen reader.
 
 {% comment %}Example name: Piccola{% endcomment %}
 {% capture example %}
@@ -132,37 +126,31 @@ Anche in questo caso le label, non visibile, devono essere contenute in uno `<sp
     <li>
       <a href="#" class="active">
         <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-comment"></use></svg>
-        <span class="visually-hidden">messaggi</span>
+        <span class="visually-hidden">Messaggi</span>
       </a>
     </li>
     <li>
       <a href="#">
         <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-camera"></use></svg>
-        <span class="visually-hidden">immagini</span>
+        <span class="visually-hidden">Immagini</span>
       </a>
     </li>
     <li>
       <a href="#">
         <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
-        <span class="visually-hidden">documenti</span>
+        <span class="visually-hidden">Documenti</span>
       </a>
     </li>
     <li>
       <a href="#">
         <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-locked"></use></svg>
-        <span class="visually-hidden">privacy</span>
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg>
-        <span class="visually-hidden">preferiti</span>
+        <span class="visually-hidden">Privacy</span>
       </a>
     </li>
     <li>
       <a href="#" class="disabled" disabled aria-disabled="true">
-        <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-download"></use></svg>
-        <span class="visually-hidden">downloads</span>
+        <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg>
+        <span class="visually-hidden">Preferiti</span>
       </a>
     </li>
   </ul>
@@ -230,7 +218,7 @@ I Badge possono essere utilizzati per indicare contenuti non letti o alert di va
 
 ### Grande con Badge
 
-Nella versione grande i Badge possono contenere dei numeri. Il numero dei contenuti non letti o nuovi va indicato anche all'interno della label in uno `<span>` con classe `.visually-hidden` riservato agli screen reader.
+Nella dimensione grande i Badge possono contenere dei numeri. Il numero dei contenuti non letti o nuovi va indicato anche all'interno della label in uno `<span>` con classe `.visually-hidden` riservato agli screen reader.
 
 {% comment %}Example name: Grande con badge{% endcomment %}
 {% capture example %}
@@ -238,22 +226,22 @@ Nella versione grande i Badge possono contenere dei numeri. Il numero dei conten
   <ul>
     <li>
       <a href="#" class="active">
-        <div class="badge-wrapper"><span class="toolbar-badge">1</span></div>
+        <div class="badge-wrapper"><span class="toolbar-badge">2</span></div>
         <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-comment"></use></svg>
-        <span class="toolbar-label">Messaggi<span class="visually-hidden">Da leggere</span></span>
+        <span class="toolbar-label">Messaggi<span class="visually-hidden">Ci sono 2 nuovi messaggi da leggere</span></span>
       </a>
     </li>
     <li>
       <a href="#">
         <div class="badge-wrapper"><span class="toolbar-badge">42</span></div>
-        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
-        <span class="toolbar-label">Documenti<span class="visually-hidden">Da esaminare</span></span>
+        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-camera"></use></svg>
+        <span class="toolbar-label">Immagini<span class="visually-hidden">Ci sono 42 nuove immagini da visualizzare</span></span>
       </a>
     </li>
     <li>
       <a href="#">
-        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-camera"></use></svg>
-        <span class="toolbar-label">Immagini</span>
+        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
+        <span class="toolbar-label">Documenti</span>
       </a>
     </li>
     <li>
@@ -283,46 +271,40 @@ Nella versione media i Badge non contengono numeri ma possono essere usati come 
   <ul>
     <li>
       <a href="#" class="active">
-        <span class="visually-hidden">messaggi</span>
+        <span class="visually-hidden">Messaggi</span>
         <div class="badge-wrapper">
           <span class="toolbar-badge"></span>
-          <span class="visually-hidden">ci sono 42 nuovi messaggi da leggere</span>
+          <span class="visually-hidden">Ci sono 2 nuovi messaggi da leggere</span>
         </div>
         <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-comment"></use></svg>
       </a>
     </li>
     <li>
       <a href="#">
-        <span class="visually-hidden">documenti</span>
+        <span class="visually-hidden">Immagini</span>
         <div class="badge-wrapper">
           <span class="toolbar-badge"></span>
-          <span class="visually-hidden">ci sono 42 nuovi documenti da esaminare</span>
+          <span class="visually-hidden">Ci sono 42 nuove immagini da visualizzare</span>
         </div>
         <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
       </a>
     </li>
     <li>
       <a href="#">
-        <span class="visually-hidden">immagini</span>
-        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-camera"></use></svg>
+        <span class="visually-hidden">Documenti</span>
+        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
       </a>
     </li>
     <li>
       <a href="#">
-        <span class="visually-hidden">privacy</span>
+        <span class="visually-hidden">Privacy</span>
         <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-locked"></use></svg>
       </a>
     </li>
     <li>
-      <a href="#">
-        <span class="visually-hidden">preferiti</span>
-        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg>
-      </a>
-    </li>
-    <li>
       <a href="#" class="disabled" disabled aria-disabled="true">
-        <span class="visually-hidden">download</span>
-        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-download"></use></svg>
+        <span class="visually-hidden">Preferiti</span>
+        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg>
       </a>
     </li>
   </ul>
@@ -332,7 +314,7 @@ Nella versione media i Badge non contengono numeri ma possono essere usati come 
 
 ### Piccola con Badge
 
-Nella versione piccola i Badge non contengono numeri ma possono essere usati come alert generici. Il numero dei contenuti non letti o nuovi va indicato all'interno della label con classe `.visually-hidden` riservata agli screen reader.
+Nella dimensione piccola i Badge non contengono numeri ma possono essere usati come alert generici. Il numero dei contenuti non letti o nuovi va indicato all'interno della label con classe `.visually-hidden` riservata agli screen reader.
 
 {% comment %}Example name: Piccola con badge{% endcomment %}
 {% capture example %}
@@ -340,46 +322,40 @@ Nella versione piccola i Badge non contengono numeri ma possono essere usati com
   <ul>
     <li>
       <a href="#" class="active">
-        <span class="visually-hidden">documenti</span>
+        <span class="visually-hidden">Messaggi</span>
         <div class="badge-wrapper">
           <span class="toolbar-badge"></span>
-          <span class="visually-hidden">ci sono nuovi documenti da esaminare</span>
+          <span class="visually-hidden">Ci sono 2 nuovi messaggi da leggere</span>
         </div>
         <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-comment"></use></svg>
       </a>
     </li>
     <li>
       <a href="#">
-        <span class="visually-hidden">messaggi</span>
+        <span class="visually-hidden">Immagini</span>
         <div class="badge-wrapper">
           <span class="toolbar-badge"></span>
-          <span class="visually-hidden">ci sono nuovi messaggi da leggere</span>
+          <span class="visually-hidden">Ci sono 42 nuove immagini da visualizzare</span>
         </div>
-        <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <span class="visually-hidden">immagini</span>
         <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-camera"></use></svg>
       </a>
     </li>
     <li>
       <a href="#">
-        <span class="visually-hidden">privacy</span>
+        <span class="visually-hidden">Documenti</span>
+        <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <span class="visually-hidden">Privacy</span>
         <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-locked"></use></svg>
       </a>
     </li>
     <li>
       <a href="#">
-        <span class="visually-hidden">preferiti</span>
+        <span class="visually-hidden">Preferiti</span>
         <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg>
-      </a>
-    </li>
-    <li>
-      <a href="#" class="disabled" disabled aria-disabled="true">
-        <span class="visually-hidden">download</span>
-        <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-download"></use></svg>
       </a>
     </li>
   </ul>
@@ -389,7 +365,7 @@ Nella versione piccola i Badge non contengono numeri ma possono essere usati com
 
 ## Toolbar con Dropdown
 
-All'interno della Toolbar è possibile implementare dei pulsanti dropdown con relativo sottomenù.
+All'interno della Toolbar è possibile implementare dei pulsanti dropdown con relativo sottomenù. Per gestire correttamente la larghezza e l'allineamento dei contenuti del pulsante, è necessario aggiungere un contenitore `<div>` con classe `.d-flex align-items-center`, come mostrato negli esempi che seguono.
 
 ### Grande con Dropdown
 
@@ -400,9 +376,16 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
     <li>
       <div class="dropdown">
         <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
-          <div class="badge-wrapper"><span class="toolbar-badge">1</span></div>
-          <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-comment"></use></svg>
-          <span class="toolbar-label">Messaggi<span class="visually-hidden">Da leggere</span></span>
+          <div class="d-flex align-items-center">
+            <div>
+              <div class="badge-wrapper"><span class="toolbar-badge">2</span></div>
+              <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-comment"></use></svg>
+              <span class="toolbar-label">Messaggi<span class="visually-hidden">Ci sono 2 nuovi messaggi da leggere</span></span>
+            </div>
+            <svg class="icon icon-xs icon-primary icon-expand" aria-hidden="true">
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand" xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
+            </svg>
+          </div>
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
           <div class="link-list-wrapper">
@@ -418,9 +401,16 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
     <li>
       <div class="dropdown">
         <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
-          <div class="badge-wrapper"><span class="toolbar-badge">42</span></div>
-          <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-camera"></use></svg>
-          <span class="toolbar-label">Immagini<span class="visually-hidden">Da visualizzare</span></span>
+          <div class="d-flex align-items-center">
+            <div>
+              <div class="badge-wrapper"><span class="toolbar-badge">42</span></div>
+              <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-camera"></use></svg>
+              <span class="toolbar-label">Immagini<span class="visually-hidden">Ci sono 42 nuove immagini da visualizzare</span></span>
+            </div>
+            <svg class="icon icon-xs icon-primary icon-expand" aria-hidden="true">
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand" xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
+            </svg>
+          </div>
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
           <div class="link-list-wrapper">
@@ -436,8 +426,15 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
     <li>
       <div class="dropdown">
         <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton3" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
-          <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
-          <span class="toolbar-label">Documenti</span>
+          <div class="d-flex align-items-center">
+            <div>
+              <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
+              <span class="toolbar-label">Documenti</span>
+            </div>
+            <svg class="icon icon-xs icon-primary icon-expand" aria-hidden="true">
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand" xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
+            </svg>
+          </div>
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
           <div class="link-list-wrapper">
@@ -452,9 +449,16 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
     </li>
     <li>
       <div class="dropdown">
-        <button class="btn btn-dropdown dropdown-toggle disabled" type="button" id="dropdownMenuButton4" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-disabled="true" title="Azione">
-          <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-locked"></use></svg>
-          <span class="toolbar-label">Privacy</span>
+        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton4" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-disabled="true" title="Azione">
+          <div class="d-flex align-items-center">
+            <div>
+              <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-locked"></use></svg>
+              <span class="toolbar-label">Privacy</span>
+            </div>
+            <svg class="icon icon-xs icon-primary icon-expand" aria-hidden="true">
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand" xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
+            </svg>
+          </div>
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton4">
           <div class="link-list-wrapper">
@@ -469,16 +473,23 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
     </li>
     <li>
       <div class="dropdown">
-        <button class="btn btn-dropdown dropdown-toggle toolbar-more" type="button" id="dropdownMenuButton5" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
-          <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-more-actions"></use></svg>
-          <span class="toolbar-label">Altro</span>
+        <button class="btn btn-dropdown dropdown-toggle disabled" type="button" id="dropdownMenuButton5-med" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-disabled="true" title="Azione">
+          <div class="d-flex align-items-center">
+            <div>
+              <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg>
+              <span class="toolbar-label">Preferiti</span>
+            </div>
+            <svg class="icon icon-xs icon-primary icon-expand" aria-hidden="true">
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand" xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
+            </svg>
+          </div>
         </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton5">
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton5-med">
           <div class="link-list-wrapper">
             <ul class="link-list">
-              <li><a class="dropdown-item list-item icon-left" href="#"><svg class="icon me-2" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg><span>Label</span></a></li>
-              <li><a class="dropdown-item list-item icon-left" href="#"><svg class="icon me-2" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-mail"></use></svg><span>Label</span></a></li>
-              <li><a class="dropdown-item list-item icon-left" href="#"><svg class="icon me-2" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-settings"></use></svg><span>Label</span></a></li>
+              <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
+              <li><a class="dropdown-item list-item" href="#"><span>Azione 2</span></a></li>
+              <li><a class="dropdown-item list-item" href="#"><span>Azione 3</span></a></li>
             </ul>
           </div>
         </div>
@@ -497,13 +508,18 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
   <ul>
     <li>
       <div class="dropdown">
-        <span class="visually-hidden">messaggi</span>
         <button class="btn btn-dropdown dropdown-toggle active" type="button" id="dropdownMenuButton-med" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
-          <div class="badge-wrapper">
-            <span class="toolbar-badge"></span>
-            <span class="visually-hidden">ci sono 42 nuovi messaggi da esaminare</span>
+          <span class="visually-hidden">Messaggi</span>
+          <div class="d-flex align-items-center">
+            <div>
+              <div class="badge-wrapper"><span class="toolbar-badge"></span></div>
+              <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-comment"></use></svg>
+              <span class="visually-hidden">Ci sono 2 nuovi messaggi da leggere</span>
+            </div>
+            <svg class="icon icon-xs icon-primary icon-expand" aria-hidden="true">
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand" xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
+            </svg>
           </div>
-          <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-comment"></use></svg>
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton-med">
           <div class="link-list-wrapper">
@@ -518,13 +534,18 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
     </li>
     <li>
       <div class="dropdown">
-        <span class="visually-hidden">immagini</span>
+        <span class="visually-hidden">Immagini</span>
         <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton2-med" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
-          <div class="badge-wrapper">
-            <span class="toolbar-badge"></span>
-            <span class="visually-hidden">ci sono 42 nuove immagini da visualizzare</span>
+          <div class="d-flex align-items-center">
+            <div>
+              <div class="badge-wrapper"><span class="toolbar-badge"></span></div>
+              <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-camera"></use></svg>
+              <span class="visually-hidden">Ci sono 42 nuove immagini da visualizzare</span>
+            </div>
+            <svg class="icon icon-xs icon-primary icon-expand" aria-hidden="true">
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand" xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
+            </svg>
           </div>
-          <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-camera"></use></svg>
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2-med">
           <div class="link-list-wrapper">
@@ -539,9 +560,16 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
     </li>
     <li>
       <div class="dropdown">
-        <span class="visually-hidden">documenti</span>
+        <span class="visually-hidden">Documenti</span>
         <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton3-med" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
-          <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
+          <div class="d-flex align-items-center">
+            <div>
+              <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
+            </div>
+            <svg class="icon icon-xs icon-primary icon-expand" aria-hidden="true">
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand" xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
+            </svg>
+          </div>
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton3-med">
           <div class="link-list-wrapper">
@@ -556,9 +584,16 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
     </li>
     <li>
       <div class="dropdown">
-        <span class="visually-hidden">privacy</span>
+        <span class="visually-hidden">Privacy</span>
         <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton4-med" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
-          <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-locked"></use></svg>
+          <div class="d-flex align-items-center">
+            <div>
+              <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-locked"></use></svg>
+            </div>  
+            <svg class="icon icon-xs icon-primary icon-expand" aria-hidden="true">
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand" xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
+            </svg>
+          </div>
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton4-med">
           <div class="link-list-wrapper">
@@ -573,9 +608,16 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
     </li>
     <li>
       <div class="dropdown">
-        <span class="visually-hidden">preferiti</span>
+        <span class="visually-hidden">Preferiti</span>
         <button class="btn btn-dropdown dropdown-toggle disabled" type="button" id="dropdownMenuButton5-med" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-disabled="true" title="Azione">
-          <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg>
+          <div class="d-flex align-items-center">
+            <div>
+              <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg>
+            </div>
+            <svg class="icon icon-xs icon-primary icon-expand" aria-hidden="true">
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand" xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
+            </svg>
+          </div>
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton5-med">
           <div class="link-list-wrapper">
@@ -583,23 +625,6 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
               <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
               <li><a class="dropdown-item list-item" href="#"><span>Azione 2</span></a></li>
               <li><a class="dropdown-item list-item" href="#"><span>Azione 3</span></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </li>
-    <li>
-      <div class="dropdown">
-        <span class="visually-hidden">altro</span>
-        <button class="btn btn-dropdown dropdown-toggle toolbar-more" type="button" id="dropdownMenuButton6-med" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
-          <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-more-actions"></use></svg>
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton6-med">
-          <div class="link-list-wrapper">
-            <ul class="link-list">
-              <li><a class="dropdown-item list-item icon-left" href="#"><svg class="icon me-2" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg><span>Label</span></a></li>
-              <li><a class="dropdown-item list-item icon-left" href="#"><svg class="icon me-2" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-mail"></use></svg><span>Label</span></a></li>
-              <li><a class="dropdown-item list-item icon-left" href="#"><svg class="icon me-2" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-settings"></use></svg><span>Label</span></a></li>
             </ul>
           </div>
         </div>
@@ -618,13 +643,19 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
   <ul>
     <li>
       <div class="dropdown">
-        <span class="visually-hidden">messaggi</span>
+        <span class="visually-hidden">Messaggi</span>
         <button class="btn btn-dropdown dropdown-toggle active" type="button" id="dropdownMenuButton-sml" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
-          <div class="badge-wrapper">
-            <span class="toolbar-badge"></span>
-            <span class="visually-hidden">ci sono 42 nuovi messaggi da esaminare</span>
+          <span class="visually-hidden">Messaggi</span>
+          <div class="d-flex align-items-center">
+            <div>
+              <div class="badge-wrapper"><span class="toolbar-badge"></span></div>
+              <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-comment"></use></svg>
+              <span class="visually-hidden">Ci sono 2 nuovi messaggi da leggere</span>
+            </div>
+            <svg class="icon icon-xs icon-primary icon-expand" aria-hidden="true">
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand" xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
+            </svg>
           </div>
-          <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-comment"></use></svg>
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton-sml">
           <div class="link-list-wrapper">
@@ -639,13 +670,18 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
     </li>
     <li>
       <div class="dropdown">
-        <span class="visually-hidden">immagini</span>
+        <span class="visually-hidden">Immagini</span>
         <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton2-sml" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
-          <div class="badge-wrapper">
-            <span class="toolbar-badge"></span>
-            <span class="visually-hidden">ci sono 42 nuove immagini da visualizzare</span>
+          <div class="d-flex align-items-center">
+            <div>
+              <div class="badge-wrapper"><span class="toolbar-badge"></span></div>
+              <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-camera"></use></svg>
+              <span class="visually-hidden">Ci sono 42 nuove immagini da visualizzare</span>
+            </div>
+            <svg class="icon icon-xs icon-primary icon-expand" aria-hidden="true">
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand" xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
+            </svg>
           </div>
-          <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-camera"></use></svg>
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2-sml">
           <div class="link-list-wrapper">
@@ -660,9 +696,16 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
     </li>
     <li>
       <div class="dropdown">
-        <span class="visually-hidden">documenti</span>
+        <span class="visually-hidden">Documenti</span>
         <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton3-sml" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
-          <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
+          <div class="d-flex align-items-center">
+            <div>
+              <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
+            </div>
+            <svg class="icon icon-xs icon-primary icon-expand" aria-hidden="true">
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand" xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
+            </svg>
+          </div>
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton3-sml">
           <div class="link-list-wrapper">
@@ -674,12 +717,19 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
           </div>
         </div>
       </div>
-  </li>
-  <li>
+    </li>
+    <li>
       <div class="dropdown">
-        <span class="visually-hidden">privacy</span>
+        <span class="visually-hidden">Privacy</span>
         <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton4-sml" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
-          <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-locked"></use></svg>
+          <div class="d-flex align-items-center">
+            <div>
+              <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-locked"></use></svg>
+            </div>  
+            <svg class="icon icon-xs icon-primary icon-expand" aria-hidden="true">
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand" xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
+            </svg>
+          </div>
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton4-sml">
           <div class="link-list-wrapper">
@@ -691,12 +741,19 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
           </div>
         </div>
       </div>
-  </li>
-  <li>
+    </li>
+    <li>
       <div class="dropdown">
         <span class="visually-hidden">preferiti</span>
         <button class="btn btn-dropdown dropdown-toggle disabled" type="button" id="dropdownMenuButton5-sml" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-disabled="true" title="Azione">
-          <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg>
+          <div class="d-flex align-items-center">
+            <div>
+              <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg>
+            </div>
+            <svg class="icon icon-xs icon-primary icon-expand" aria-hidden="true">
+              <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand" xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
+            </svg>
+          </div>
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton5-sml">
           <div class="link-list-wrapper">
@@ -708,24 +765,7 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
           </div>
         </div>
       </div>
-  </li>
-  <li>
-      <div class="dropdown">
-        <span class="visually-hidden">altro</span>
-        <button class="btn btn-dropdown dropdown-toggle toolbar-more" type="button" id="dropdownMenuButton6-sml" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
-          <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-more-actions"></use></svg>
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton6-sml">
-          <div class="link-list-wrapper">
-            <ul class="link-list">
-              <li><a class="dropdown-item list-item left-icon" href="#"><svg class="icon icon-sm me-2 left" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg><span>Label</span></a></li>
-              <li><a class="dropdown-item list-item left-icon" href="#"><svg class="icon icon-sm me-2 left" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-mail"></use></svg><span>Label</span></a></li>
-              <li><a class="dropdown-item list-item left-icon" href="#"><svg class="icon icon-sm me-2 left" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-settings"></use></svg><span>Label</span></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-  </li>
+    </li>
   </ul>
 </nav>
 {% endcapture %}
@@ -743,45 +783,31 @@ Applicando una classe aggiuntiva `.toolbar-vertical` alla Toolbar gli elementi v
   <ul>
     <li>
       <a href="#" class="active">
-        <div class="badge-wrapper"><span class="toolbar-badge">42</span></div>
-        <svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-comment"></use></svg>
-        <span class="toolbar-label">Messaggi<span class="visually-hidden">Da leggere</span></span>
+        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-comment"></use></svg>
+        <span class="toolbar-label">Messaggi</span>
       </a>
     </li>
     <li>
-      <div class="dropdown">
-        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton-big" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
-          <div class="badge-wrapper"><span class="toolbar-badge">1</span></div>
-          <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-comment"></use></svg>
-          <span class="toolbar-label">Immagini<span class="visually-hidden">Da visualizzare</span></span>
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1-vert">
-          <div class="link-list-wrapper">
-            <ul class="link-list">
-              <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
-              <li><a class="dropdown-item list-item" href="#"><span>Azione 2</span></a></li>
-              <li><a class="dropdown-item list-item" href="#"><span>Azione 3</span></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-  </li>
-  <li class="toolbar-divider" role="separator" aria-orientation="vertical"></li>
-  <li>
       <a href="#">
-        <svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
+        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-camera"></use></svg>
+        <span class="toolbar-label">Immagini</span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
         <span class="toolbar-label">Documenti</span>
       </a>
     </li>
-  <li>
+    <li>
       <a href="#">
-        <svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-locked"></use></svg>
+        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-locked"></use></svg>
         <span class="toolbar-label">Privacy</span>
       </a>
     </li>
     <li>
       <a href="#" class="disabled" disabled aria-disabled="true">
-        <svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg>
+        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg>
         <span class="toolbar-label">Preferiti</span>
       </a>
     </li>
@@ -798,52 +824,32 @@ Applicando una classe aggiuntiva `.toolbar-vertical` alla Toolbar gli elementi v
   <ul>
     <li>
       <a href="#" class="active">
-        <span class="visually-hidden">messaggi</span>
-        <div class="badge-wrapper">
-          <span class="toolbar-badge"></span>
-          <span class="visually-hidden">ci sono 42 nuovi messaggi da leggere</span>
-        </div>
         <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-comment"></use></svg>
+        <span class="visually-hidden">Messaggi</span>
       </a>
     </li>
     <li>
-      <div class="dropdown">
-        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton-vert" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
-          <span class="visually-hidden">immagini</span>
-          <div class="badge-wrapper">
-            <span class="toolbar-badge"></span>
-            <span class="visually-hidden">ci sono 42 nuove immagini da visualizzare</span>
-          </div>
-          <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-camera"></use></svg>
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton-vert">
-          <div class="link-list-wrapper">
-            <ul class="link-list">
-              <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
-              <li><a class="dropdown-item list-item" href="#"><span>Azione 2</span></a></li>
-              <li><a class="dropdown-item list-item" href="#"><span>Azione 3</span></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
+      <a href="#">
+        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-camera"></use></svg>
+        <span class="visually-hidden">Immagini</span>
+      </a>
     </li>
-    <li class="toolbar-divider" role="separator" aria-orientation="vertical"></li>
     <li>
       <a href="#">
-        <span class="visually-hidden">privacy</span>
+        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
+        <span class="visually-hidden">Documenti</span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
         <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-locked"></use></svg>
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <span class="visually-hidden">preferiti</span>
-        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg>
+        <span class="visually-hidden">Privacy</span>
       </a>
     </li>
     <li>
       <a href="#" class="disabled" disabled aria-disabled="true">
-        <span class="visually-hidden">download</span>
-        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-download"></use></svg>
+        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg>
+        <span class="visually-hidden">Preferiti</span>
       </a>
     </li>
   </ul>
@@ -859,58 +865,32 @@ Applicando una classe aggiuntiva `.toolbar-vertical` alla Toolbar gli elementi v
   <ul>
     <li>
       <a href="#" class="active">
-        <span class="visually-hidden">messaggi</span>
-        <div class="badge-wrapper">
-          <span class="toolbar-badge"></span>
-          <span class="visually-hidden">ci sono 42 nuovi messaggi da leggere</span>
-        </div>
         <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-comment"></use></svg>
+        <span class="visually-hidden">Messaggi</span>
       </a>
     </li>
     <li>
-      <div class="dropdown">
-        <button class="btn btn-dropdown dropdown-toggle" type="button" id="dropdownMenuButton1-vert-sml" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Azione">
-          <span class="visually-hidden">immagini</span>
-          <div class="badge-wrapper">
-            <span class="toolbar-badge"></span>
-            <span class="visually-hidden">ci sono 42 nuove immagini da visualizzare</span>
-          </div>
-          <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-camera"></use></svg>
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1-vert-sml">
-          <div class="link-list-wrapper">
-            <ul class="link-list">
-              <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
-              <li><a class="dropdown-item list-item" href="#"><span>Azione 2</span></a></li>
-              <li><a class="dropdown-item list-item" href="#"><span>Azione 3</span></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
+      <a href="#">
+        <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-camera"></use></svg>
+        <span class="visually-hidden">Immagini</span>
+      </a>
     </li>
-    <li class="toolbar-divider" role="separator" aria-orientation="vertical"></li>
-    <li>
-        <a href="#">
-        <span class="visually-hidden">immagini</span>
-          <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-camera"></use></svg>
-        </a>
-      </li>
     <li>
       <a href="#">
-        <span class="visually-hidden">privacy</span>
+        <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
+        <span class="visually-hidden">Documenti</span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
         <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-locked"></use></svg>
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <span class="visually-hidden">preferiti</span>
-        <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg>
+        <span class="visually-hidden">Privacy</span>
       </a>
     </li>
     <li>
       <a href="#" class="disabled" disabled aria-disabled="true">
-        <span class="visually-hidden">download</span>
-        <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-download"></use></svg>
+        <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg>
+        <span class="visually-hidden">Preferiti</span>
       </a>
     </li>
   </ul>
@@ -922,3 +902,12 @@ Applicando una classe aggiuntiva `.toolbar-vertical` alla Toolbar gli elementi v
 
 Il componente Toolbar utilizza al suo interno il componente `Dropdown`, si rimanda dunque alla 
 sezione [attivazione Dropdown tramite codice]({{ site.baseurl }}/docs/componenti/dropdown/#attivazione-tramite-codice)
+
+
+## Breaking change
+
+{% capture callout %}
+- L'icona del dropdown è ora gestita con il tag `<svg>`
+- Il contenuto di ogni voce è racchiuso in un contenitore dedicato nel caso di versione con dropdown.
+- Modificata la gestione dell'ombreggiatura, altezza e posizione della toolbar.
+{% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}
