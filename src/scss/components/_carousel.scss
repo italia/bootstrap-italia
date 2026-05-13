@@ -15,11 +15,6 @@
 // Properties
 //
 
-// Styles
-//
-
-// Keep all .card-SOMETHING till next major? (.card is deprecated)
-
 .it-carousel-wrapper {
   --#{$prefix}carousel-arrow-size: var(--#{$prefix}spacing-xl); // Controls the arrow button size, using spacing tokens.
   --#{$prefix}carousel-arrow-icon-size: var(--#{$prefix}spacing-s); // Controls the arrow icon size, using spacing tokens
