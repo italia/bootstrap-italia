@@ -1,9 +1,5 @@
 [
     {
-        "name": "Base, funzionante",
-        "content": "\n<a href=\"#\" aria-label=\"Torna su\" data-bs-toggle=\"backtotop\" class=\"back-to-top\" id=\"example\">\n<svg class=\"icon icon-inverse\"><use href=\"https://italia.github.io/bootstrap-italia/dist/svg/sprites.svg#it-arrow-up\"></use></svg>\n</a>\n"
-    },
-    {
         "name": "Base, esempio",
         "content": "\n<a href=\"#\" aria-label=\"Torna su\" data-bs-toggle=\"backtotop\" class=\"back-to-top\">\n<svg class=\"icon icon-inverse\"><use href=\"https://italia.github.io/bootstrap-italia/dist/svg/sprites.svg#it-arrow-up\"></use></svg>\n</a>\n"
     },
