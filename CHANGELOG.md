@@ -1,3 +1,10 @@
+# [3.0.0-beta.0](https://github.com/italia/bootstrap-italia/compare/v3.0.0-alpha.10...v3.0.0-beta.0) (2026-05-13)
+
+
+### Features
+
+* New modular Sass architecture compatible with Dart Sass v3 ([0e4f65b](https://github.com/italia/bootstrap-italia/commit/0e4f65bfeffc1bc36ae45f8a22b646631cd154f1)), closes [#1678](https://github.com/italia/bootstrap-italia/issues/1678)
+
 # [3.0.0-alpha.10](https://github.com/italia/bootstrap-italia/compare/v3.0.0-alpha.9...v3.0.0-alpha.10) (2026-05-13)
 
 
