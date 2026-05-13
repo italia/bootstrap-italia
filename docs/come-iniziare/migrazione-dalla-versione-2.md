@@ -6,12 +6,12 @@ group: come-iniziare
 toc: true
 ---
 
-{% capture alpha_warning %}
-### ⚠️ Versione Alpha
+{% capture beta_warning %}
+### ⚠️ Versione Beta
 
 Work in progress.
 
-{% endcapture %}{% include callout.html content=alpha_warning type="warning" %}
+{% endcapture %}{% include callout.html content=beta_warning type="warning" %}
 
 ## Novità
 

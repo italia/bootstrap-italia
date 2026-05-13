@@ -6,12 +6,12 @@ group: come-iniziare
 toc: true
 ---
 
-{% capture alpha_warning %}
-### ⚠️ Versione Alpha
+{% capture beta_warning %}
+### ⚠️ Versione Beta
 
 Work in progress.
 
-{% endcapture %}{% include callout.html content=alpha_warning type="warning" %}
+{% endcapture %}{% include callout.html content=beta_warning type="warning" %}
 
 ## Introduzione
 I **design tokens** sono i valori atomici del [Design system .italia](https://designers.italia.it/design-system/fondamenti/design-tokens/) che definiscono le proprietà visive (colori, spaziature, tipografia, etc.).
