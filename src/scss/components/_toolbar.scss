@@ -111,7 +111,7 @@
       text-align: center;
     }
   }
-  
+
   // Links and buttons
   a,
   .btn-dropdown {
@@ -213,14 +213,12 @@
     }
 
     &.toolbar-medium {
-
       .dropdown-menu {
         top: calc(-100% - 25px) !important;
       }
     }
 
     &.toolbar-small {
-
       .dropdown-menu {
         top: calc(-100% - 35px) !important;
       }
@@ -268,7 +266,7 @@
     }
   }
 
-   // Dropdown button
+  // Dropdown button
   .btn-dropdown {
     position: relative;
     width: 100%;
