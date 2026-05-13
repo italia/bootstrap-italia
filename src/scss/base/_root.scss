@@ -78,12 +78,12 @@
   --#{$prefix}theme-primary-subtle: #{tokens.$it-theme-italia-subtle};
   --#{$prefix}theme-primary-muted: #{tokens.$it-theme-italia-muted};
   --#{$prefix}theme-primary-deep: #{tokens.$it-theme-italia-deep};
-  
+
   // Colors
   --#{$prefix}color-blue-30: #{tokens.$it-color-blue-30}; // Color blue 30% (eg. for header slim background)
-  --#{$prefix}color-slate-52: #{tokens.$it-color-slate-52}; 
-  --#{$prefix}color-slate-62: #{tokens.$it-color-slate-62}; 
-  --#{$prefix}color-slate-85: #{tokens.$it-color-slate-85}; 
+  --#{$prefix}color-slate-52: #{tokens.$it-color-slate-52};
+  --#{$prefix}color-slate-62: #{tokens.$it-color-slate-62};
+  --#{$prefix}color-slate-85: #{tokens.$it-color-slate-85};
   // ... ? do we nneed to add more colors here or can we just reference the tokens directly in the components?
 
   // Spacing
