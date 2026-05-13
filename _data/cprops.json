@@ -201,7 +201,7 @@
         },
         {
             "description": "Controls the extra inset spacing for the alert, using spacing tokens.",
-            "value": "var(--bsi-spacing-16x)",
+            "value": "var(--bsi-spacing-xxl)",
             "variable-name": "--bsi-alert-spacing-inset-extra"
         },
         {
@@ -1261,7 +1261,7 @@
         },
         {
             "description": "Controls the brand spacing for the header, using spacing tokens.",
-            "value": "var(--it-spacing-14x)",
+            "value": "var(--bsi-spacing-14x)",
             "variable-name": "--bsi-header-brand-spacing"
         },
         {
@@ -1331,7 +1331,7 @@
         },
         {
             "description": "Controls the header slim background, using color tokens.",
-            "value": "var(--it-color-blue-30)",
+            "value": "var(--bsi-color-blue-30)",
             "variable-name": "--bsi-header-slim-background"
         },
         {
@@ -2035,7 +2035,7 @@
     "rounded": [
         {
             "description": "",
-            "value": "var(--it-icon-size-s)",
+            "value": "var(--bsi-icon-size-s)",
             "variable-name": "--bsi-rounded-icon-size"
         }
     ],
@@ -2360,7 +2360,7 @@
         },
         {
             "description": "Controls the background color for the active rows, using color tokens.",
-            "value": "var(--it-color-slate-85)",
+            "value": "var(--bsi-color-slate-85)",
             "variable-name": "--bsi-table-active-bg"
         },
         {
@@ -2370,7 +2370,7 @@
         },
         {
             "description": "Controls the background color for the hovered rows, using color tokens.",
-            "value": "var(--it-color-slate-85)",
+            "value": "var(--bsi-color-slate-85)",
             "variable-name": "--bsi-table-hover-bg"
         },
         {
@@ -2501,8 +2501,8 @@
         },
         {
             "description": "Controls the shadow/aura color behind the knob.",
-            "value": "#{transparentize($primary, 0.85)}",
-            "variable-name": "--bsi-toggle-knob-shadow-color"
+            "value": "-0.85)}",
+            "variable-name": "--bsi-toggle-knob-shadow-color: #{color.adjust($primary, $alpha"
         },
         {
             "description": "Controls the left offset of the knob when checked.",
@@ -2522,24 +2522,9 @@
     ],
     "toolbar": [
         {
-            "description": "Controls the toolbar item margin x, using spacing tokens.",
-            "value": "var(--bsi-spacing-xxs)",
-            "variable-name": "--bsi-toolbar-item-margin-x"
-        },
-        {
-            "description": "Controls the toolbar item margin y, using spacing tokens.",
-            "value": "var(--bsi-spacing-xs)",
-            "variable-name": "--bsi-toolbar-item-margin-y"
-        },
-        {
-            "description": "Controls the toolbar link margin bottom medium, using size tokens.",
-            "value": "6px",
-            "variable-name": "--bsi-toolbar-link-margin-bottom-medium"
-        },
-        {
             "description": "Controls the toolbar list background color, using color tokens.",
             "value": "var(--bsi-color-background-inverse)",
-            "variable-name": "--bsi-toolbar-list-background-color"
+            "variable-name": "--bsi-toolbar-bg"
         },
         {
             "description": "Controls the toolbar divider color, using color tokens.",
@@ -2580,6 +2565,11 @@
             "description": "Controls the toolbar icon font size, using color tokens.",
             "value": "var(--bsi-icon-size-l)",
             "variable-name": "--bsi-toolbar-icon-font-size"
+        },
+        {
+            "description": "Controls the toolbar item gap, using spacing tokens.",
+            "value": "var(--bsi-spacing-xs)",
+            "variable-name": "--bsi-toolbar-item-gap"
         },
         {
             "description": "Controls the toolbar more icon font size, using typography tokens.",
@@ -2625,6 +2615,21 @@
             "description": "Controls the toolbar label font size, using typography tokens.",
             "value": "var(--bsi-label-font-size-xs)",
             "variable-name": "--bsi-toolbar-label-font-size"
+        },
+        {
+            "description": "Controls the toolbar inner padding, using spacing tokens.",
+            "value": "var(--bsi-spacing-xs)",
+            "variable-name": "--bsi-toolbar-padding-x"
+        },
+        {
+            "description": "Controls the toolbar inner padding, using spacing tokens.",
+            "value": "var(--bsi-spacing-xs)",
+            "variable-name": "--bsi-toolbar-padding-y"
+        },
+        {
+            "description": "Controls the toolbar shadow, using elevation tokens.",
+            "value": "var(--bsi-elevation-medium)",
+            "variable-name": "--bsi-toolbar-shadow"
         }
     ],
     "tooltip": [
