@@ -1,3 +1,22 @@
+# [3.0.0-alpha.10](https://github.com/italia/bootstrap-italia/compare/v3.0.0-alpha.9...v3.0.0-alpha.10) (2026-05-13)
+
+
+### Bug Fixes
+
+* adjust notification title icon size and notification paragraph margin ([6a5606b](https://github.com/italia/bootstrap-italia/commit/6a5606b07830c98b7c91b53cdc45bab86eefb0db))
+* alert dismissable padding [#1779](https://github.com/italia/bootstrap-italia/issues/1779) ([5d15685](https://github.com/italia/bootstrap-italia/commit/5d15685fde0e531b762f6ea2530d30bf6ad5fa09))
+* icon tag in toolbar ([#1782](https://github.com/italia/bootstrap-italia/issues/1782)) ([37c4325](https://github.com/italia/bootstrap-italia/commit/37c43255a93757e595b347817f49e99cd3114126))
+* update Back to top example for improved visibility and clarity ([0e88857](https://github.com/italia/bootstrap-italia/commit/0e888579561ec7f212652c0e56674ed08bfd6b5b))
+* update breaking change callout to reflect removal of utility classes in examples ([ac3cb8a](https://github.com/italia/bootstrap-italia/commit/ac3cb8afe0e4123edbbadb4e3039889cc49d4c04))
+* update callout block ([a7a483b](https://github.com/italia/bootstrap-italia/commit/a7a483bce1b0d56fa178fcb15c9425134c106787))
+* update linklist icon transition to use CSS variable for consistency ([66a5545](https://github.com/italia/bootstrap-italia/commit/66a5545cd83e174d6b5cdf6764db48cbcacd055d))
+
+
+### Features
+
+* add sass map for table variants ([2ac84b4](https://github.com/italia/bootstrap-italia/commit/2ac84b450f726b0e58a2425cf20082f1bd027e89))
+* update navscroll 3.x breaking change callout ([5568421](https://github.com/italia/bootstrap-italia/commit/556842142224ba051f67e9de788727aa040dcf40))
+
 # [3.0.0-alpha.9](https://github.com/italia/bootstrap-italia/compare/v2.18.1...v3.0.0-alpha.9) (2026-04-24)
 
 
