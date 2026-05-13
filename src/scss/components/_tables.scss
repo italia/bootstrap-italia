@@ -1,3 +1,8 @@
+@use 'sass:map';
+@use '../base/config' as *;
+@use '../base/variables' as *;
+@use '../base/mixins/breakpoints' as *;
+
 // Component: tables
 //
 // Description: Component styles for tables
@@ -5,8 +10,6 @@
 
 // Variables
 //
-
-@use 'sass:map';
 
 // scss-docs-start table-variants
 $table-variants: (
@@ -57,9 +60,9 @@ $table-variants: (
   --#{$prefix}table-border-color: var(--#{$prefix}border-color); // Controls the border color for the table, using color tokens.
   --#{$prefix}table-border-width: var(--#{$prefix}border-width); // Controls the border width for the table cell.
   --#{$prefix}table-striped-bg: var(--#{$prefix}color-background-muted); // Controls the text color for the striped rows, using color tokens.
-  --#{$prefix}table-active-bg: var(--it-color-slate-85); // Controls the background color for the active rows, using color tokens.
+  --#{$prefix}table-active-bg: var(--bsi-color-slate-85); // Controls the background color for the active rows, using color tokens.
   --#{$prefix}table-hover-color: var(--#{$prefix}color-text-base); // Controls the text color for the hovered rows, using color tokens.
-  --#{$prefix}table-hover-bg: var(--it-color-slate-85); // Controls the background color for the hovered rows, using color tokens.
+  --#{$prefix}table-hover-bg: var(--bsi-color-slate-85); // Controls the background color for the hovered rows, using color tokens.
   --#{$prefix}table-padding: var(--#{$prefix}spacing-xxs); // Controls the padding for the table cells, using spacing tokens.
   --#{$prefix}table-cell-font-size: var(--#{$prefix}body-font-size); // Controls the font size for the table cells, using typography tokens.
   --#{$prefix}table-cell-vertical-align: top; // Controls the vertical alignment of the table cells.
@@ -222,21 +225,21 @@ $table-variants: (
 
 @each $variant, $values in $table-variants {
   .table-#{$variant} {
-    --#{$prefix}table-bg: var(--#{$prefix}#{map-get($values, 'bg')});
-    --#{$prefix}table-active-bg: var(--#{$prefix}#{map-get($values, 'active-bg')});
+    --#{$prefix}table-bg: var(--#{$prefix}#{map.get($values, 'bg')});
+    --#{$prefix}table-active-bg: var(--#{$prefix}#{map.get($values, 'active-bg')});
 
-    @if map-get($values, 'lighten') {
+    @if map.get($values, 'lighten') {
       --#{$prefix}table-hover-bg: color-mix(in srgb, var(--#{$prefix}table-bg) 80%, white 10%);
     } @else {
       --#{$prefix}table-hover-bg: color-mix(in srgb, var(--#{$prefix}table-bg) 80%, black 10%);
     }
 
-    @if map-get($values, 'color') {
-      --#{$prefix}table-color: var(--#{$prefix}#{map-get($values, 'color')});
+    @if map.get($values, 'color') {
+      --#{$prefix}table-color: var(--#{$prefix}#{map.get($values, 'color')});
     }
 
-    @if map-get($values, 'border-color') {
-      --#{$prefix}table-border-color: var(--#{$prefix}#{map-get($values, 'border-color')});
+    @if map.get($values, 'border-color') {
+      --#{$prefix}table-border-color: var(--#{$prefix}#{map.get($values, 'border-color')});
     }
   }
 }
@@ -246,7 +249,7 @@ $table-variants: (
 // Generate series of `.table-responsive-*` classes for configuring the screen
 // size of where your table will overflow.
 
-@each $breakpoint in map-keys($grid-breakpoints) {
+@each $breakpoint in map.keys($grid-breakpoints) {
   $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
   @include media-breakpoint-down($breakpoint) {

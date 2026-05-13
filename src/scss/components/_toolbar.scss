@@ -1,3 +1,6 @@
+@use '../base/config' as *;
+@use '../base/variables' as *;
+
 // Component: toolbar
 //
 // Description: Component styles for toolbar
@@ -117,14 +120,17 @@
   .btn-dropdown {
     display: block;
     color: var(--#{$prefix}toolbar-link-color);
+
     .icon {
       fill: var(--#{$prefix}toolbar-icon-color);
     }
+
     // Active state
     &.active {
       --#{$prefix}toolbar-link-color: var(--#{$prefix}color-text-primary);
       --#{$prefix}toolbar-icon-color: var(--#{$prefix}icon-primary);
     }
+
     // Disabled state
     &.disabled {
       --#{$prefix}toolbar-link-color: var(--#{$prefix}color-text-disabled);
@@ -133,22 +139,26 @@
       &:hover {
         text-decoration: none;
       }
+
       &:after {
         color: var(--#{$prefix}toolbar-link-color);
       }
     }
+
     // Hover state
     &:not(.disabled):hover {
       --#{$prefix}toolbar-link-color: var(--#{$prefix}color-link-hover);
       --#{$prefix}toolbar-icon-color: var(--#{$prefix}icon-primary-hover);
       text-decoration: underline;
     }
+
     // Hover fix for IE11
     /* stylelint-disable */
     _:-ms-fullscreen,
     &:not(.disabled):hover {
       text-decoration: none;
     }
+
     /* stylelint-enable */
   }
 
@@ -281,6 +291,7 @@
     &:not(.disabled) {
       &.active {
         box-shadow: none;
+
         &:focus {
           box-shadow: $btn-focus-box-shadow;
         }

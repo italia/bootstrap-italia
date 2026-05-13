@@ -1,3 +1,7 @@
+@use 'src/scss/base/config' as *;
+@use 'src/scss/base/variables' as *;
+@use 'src/scss/base/mixins/breakpoints' as *;
+
 :root {
   --docsearch-primary-color: #06c;
   --docsearch-muted-color: rgb(28, 30, 33);

@@ -1,7 +1,7 @@
 import { babel } from '@rollup/plugin-babel'
 import copy from 'rollup-plugin-copy'
 import svgSprite from 'rollup-plugin-svg-sprite-deterministic'
-import scss from 'rollup-plugin-scss'
+import sass from 'rollup-plugin-sass'
 import terser from '@rollup/plugin-terser';
 import legacy from '@rollup/plugin-legacy'
 import nodeResolve from '@rollup/plugin-node-resolve'
@@ -34,11 +34,14 @@ export default [
       svgSprite({
         outputFolder: 'dist/svg',
       }),
-      scss({
+      sass({
+        api: 'modern',
         output: 'dist/css/bootstrap-italia.min.css',
-        outputStyle: 'compressed',
-        sourceMap: true,
-        watch: 'src/scss',
+        options: {
+          style: 'compressed',
+          sourceMap: true,
+          loadPaths: ['node_modules'],
+        },
       }),
       // Ensure dist output is also copied into _site for local preview (after bundle is written)
       copy({
@@ -93,11 +96,14 @@ export default [
       svgSprite({
         outputFolder: 'dist/svg',
       }),
-      scss({
+      sass({
+        api: 'modern',
         output: 'dist/css/bootstrap-italia.min.css',
-        outputStyle: 'compressed',
-        sourceMap: true,
-        watch: 'src/scss',
+        options: {
+          style: 'compressed',
+          sourceMap: true,
+          loadPaths: ['node_modules'],
+        },
       }),
       // Ensure dist output is also copied into _site for local preview (after bundle is written)
       copy({
@@ -150,10 +156,13 @@ export default [
           initCoverAnimation: 'animation.initCoverAnimation',
         },
       }),
-      scss({
+      sass({
+        api: 'modern',
         output: 'docs/assets/dist/css/docs.min.css',
-        outputStyle: 'compressed',
-        watch: 'docs/assets/src/scss',
+        options: {
+          style: 'compressed',
+          loadPaths: ['node_modules'],
+        },
       }),
       // copy docs css into _site docs assets for preview
       copy({

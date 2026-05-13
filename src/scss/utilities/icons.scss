@@ -1,3 +1,6 @@
+@use '../base/config' as *;
+@use '../base/variables' as *;
+
 // Icon Colors Map - TODO: Leave it here or move to _maps.scss?
 $icon-colors: (
   primary: var(--#{$prefix}icon-primary),
@@ -64,7 +67,7 @@ $icon-colors: (
 // It is used in the buttons.
 //
 :root {
-  --#{$prefix}rounded-icon-size: var(--it-icon-size-s);
+  --#{$prefix}rounded-icon-size: var(--bsi-icon-size-s);
 }
 
 .rounded-icon {

@@ -1,3 +1,11 @@
+@use '../base/config' as *;
+@use '../base/variables' as *;
+@use '../base/mixins/border-radius' as *;
+@use '../base/mixins/box-shadow' as *;
+@use '../base/mixins/image' as *;
+@use '../base/mixins/breakpoints' as *;
+@use '../base/vendor/rfs' as *;
+
 // Component: images
 //
 // Description: Component styles for images

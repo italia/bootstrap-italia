@@ -13,6 +13,11 @@
 //
 
 @use 'sass:math';
+@use '../base/config' as *;
+@use '../base/variables' as *;
+@use '../base/mixins/border-radius' as *;
+@use '../base/mixins/box-shadow' as *;
+@use '../base/mixins/breakpoints' as *;
 
 // Keep till next major? (.card is deprecated)
 
@@ -43,7 +48,9 @@
 
 .card-link {
   &:hover {
-    text-decoration: if($link-hover-decoration == underline, none, null);
+    @if $link-hover-decoration == underline {
+      text-decoration: none;
+    }
   }
 
   + .card-link {

@@ -6,12 +6,12 @@ group: come-iniziare
 toc: true
 ---
 
-{% capture alpha_warning %}
-### ⚠️ Versione Alpha
+{% capture beta_warning %}
+### ⚠️ Versione Beta
 
 Work in progress.
 
-{% endcapture %}{% include callout.html content=alpha_warning type="warning" %}
+{% endcapture %}{% include callout.html content=beta_warning type="warning" %}
 
 ## Novità
 
@@ -25,6 +25,14 @@ Bootstrap Italia 3 usa il sistema completo di [design tokens del Design system .
 - Bundle CSS ottimizzato.
 
 [Vai alla scheda dedicata ai design tokens]({{ site.baseurl }}/docs/come-iniziare/design-tokens/)
+
+### La nuova architettura Sass modulare compatibile con Dart Sass v3.0
+
+Bootstrap Italia 3 migra il sistema di build interno degli stili da `@import` a `@use`/`@forward`, adottando un sistema dichiarativo moderno in linea con gli standard Sass e già compatibile con il futuro Dart Sass v3.0.
+
+- Risoluzione dei warning di build relativi alle funzioni e agli import deprecati.
+- Codice sorgente Sass organizzato in moduli espliciti con dipendenze dichiarate, per un più facile controllo dello scope e migliore manutenibilità.
+- Integrazione nativa con Design Tokens Italia tramite variabili Sass in `_root.scss`, senza impatto sul CSS compilato, anzi con bundle CSS ottimizzato.
 
 ### Le nuove versioni del carattere Titillium
 

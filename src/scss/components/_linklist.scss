@@ -1,3 +1,7 @@
+@use '../base/config' as *;
+@use '../base/variables' as *;
+@use '../base/mixins/breakpoints' as *;
+
 // Component: linklist
 //
 // Description: Component styles for linklist
