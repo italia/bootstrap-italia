@@ -3,445 +3,267 @@ layout: docs
 group: utilites
 toc: true
 
-title: Colori Custom
-description: Modifica colori di background, testo e bordi con colori custom.
+title: Personalizzazione dei colori
+description: Come sovrascrivere le variabili CSS di Bootstrap Italia per personalizzare i colori del tema senza ricompilare i sorgenti SCSS.
 ---
 
-Definisci colori di background, bordi, colore di testo attraverso specifiche classi.
+## Introduzione
 
-## Colori Primari
+Bootstrap Italia v3 espone i propri valori di colore come **CSS custom properties** (variabili CSS) con prefisso `--bsi-`, disponibili globalmente sull'elemento `:root`. Questo approccio sostituisce il vecchio sistema basato su classi utility come `.primary-bg` o `.analogue-1-color`, e permette di personalizzare l'aspetto visivo semplicemente sovrascrivendo le variabili in un foglio di stile aggiuntivo, senza dover ricompilare i sorgenti SCSS.
 
-<div class="bd-example-border-utils">
-  <p>
-  I colori primari sono il Blu Italia e il bianco.<br>
-  Il <strong class="primary-color">Blu Italia</strong> è il colore identificativo dell’intera brand identity e rappresenta la radice per creare altri colori della palette primaria.
-  </p>
-  <div class="primary-color-container">
-    <div class="square-color primary-bg">
-      <span class="white-color">#0066CC</span>
-    </div>
-    <div class="square-color white-bg shadow">
-      <span>#FFFFFF</span>
-    </div>
-    <div class="clearfix"></div>
-   </div>
-</div>
+Le variabili seguono una nomenclatura **semantica**: il nome descrive la funzione del colore (es. `--bsi-color-text-primary`, `--bsi-color-background-danger`) e non il valore cromatico. Questo disaccoppia la palette dalla sua applicazione e rende più semplice creare temi personalizzati coerenti.
 
-<div class="exclude-a11y-check">
-{% comment %}Example name: Colori primari{% endcomment %}
-{% capture example %}
-<div class="primary-bg p-3"><span class="white-color">Testo bianco su background colore primario</span></div>
-<div class="primary-border-color border p-3"><span class="primary-color">Testo colore primario su background con bordo primario</span></div>
-{% endcapture %}{% include example.html content=example %}
-</div>
+## Architettura del sistema
 
-**Utilizzo delle classi:**
+I valori di default derivano dal pacchetto [`design-tokens-italia`](https://github.com/italia/design-tokens-italia), che rappresenta la fonte unica dei token di design del Design System Italia. In `_root.scss` questi token vengono mappati nelle variabili `--bsi-*` esposte al browser.
 
-`.primary-bg` : per background color <br>
-`.primary-color` : per text color<br>
-`.primary-border-color` : per border color<br>
+```
+design-tokens-italia  →  src/scss/base/_root.scss  →  CSS compilato (:root { --bsi-* })
+                                                            ↑
+                                              Il tuo CSS sovrascrive qui
+```
 
-### Varianti monocromatiche del colore base
+I componenti di Bootstrap Italia referenziano le variabili `--bsi-*` a runtime: sovrascriverle nel tuo CSS fa sì che le modifiche si propaghino automaticamente a tutti i componenti che le utilizzano.
 
-Il colore primario possiede tre tipologie di varianti cromatiche. Per utilizzarle è sufficiente utilizzare la relativa classe
+## Variabili del tema
 
-**Utilizzo delle classi:**
+Il gruppo `--bsi-theme-primary-*` rappresenta la palette del colore primario del tema. Questi sono i valori che la maggior parte dei componenti usa direttamente per colori di sfondo, bordi e testo interattivo.
 
-`.primary-bg- + variante-colore` : per background color <br>
-`.primary-color- + variante-colore` : per text color<br>
-`.primary-border-color- + variante-colore` : per border color
+| Variabile CSS | Valore default | Descrizione |
+|---|---|---|
+| `--bsi-theme-primary` | `#0066cc` | Colore base del tema (Blu Italia) |
+| `--bsi-theme-primary-light` | `#bfdfff` | Variante chiara |
+| `--bsi-theme-primary-lighter` | `#f2f7fc` | Variante molto chiara |
+| `--bsi-theme-primary-subtle` | `#004d99` | Variante attenuata |
+| `--bsi-theme-primary-muted` | `#004080` | Variante molto attenuata |
+| `--bsi-theme-primary-deep` | `#003366` | Variante scura |
 
-(es. `.primary-bg-a5` per utilizzare come background il colore primario con variante **a5** )
+## Variabili semantiche per categoria
 
-<div class="exclude-a11y-check">
-{% comment %}Example name: Varianti monocromatiche del colore base{% endcomment %}
-{% capture example %}
-<div class="bd-example-border-utils">
-  <div class="row">
-    <div class="col-xs-12 col-md-3">
-      <p>Tinte e ombre</p>
-      <div class="c-line primary-bg-a1">a1</div>
-      <div class="c-line primary-bg-a2">a2</div>
-      <div class="c-line primary-bg-a3">a3</div>
-      <div class="c-line primary-bg-a4">a4</div>
-      <div class="c-line primary-bg-a5">a5</div>
-      <div class="c-line white-color primary-bg-a6">a6</div>
-      <div class="c-line white-color primary-bg-a7">a7</div>
-      <div class="c-line white-color primary-bg-a8">a8</div>
-      <div class="c-line white-color primary-bg-a9">a9</div>
-      <div class="c-line white-color primary-bg-a10">a10</div>
-      <div class="c-line white-color primary-bg-a11">a11</div>
-      <div class="c-line white-color primary-bg-a12">a12</div>
-    </div>
-    <div class="col-xs-12 col-md-3">
-      <p>Toni</p>
-      <div class="c-line primary-bg-b1 white-color">b1</div>
-      <div class="c-line primary-bg-b2 white-color">b2</div>
-      <div class="c-line primary-bg-b3 white-color">b3</div>
-      <div class="c-line primary-bg-b4 white-color">b4</div>
-      <div class="c-line primary-bg-b5 white-color">b5</div>
-      <div class="c-line primary-bg-b6 white-color">b6</div>
-      <div class="c-line primary-bg-b7 white-color">b7</div>
-    </div>
-    <div class="col-xs-12 col-md-3">
-      <p>Variazione di saturazione</p>
-      <div class="c-line primary-bg-c1">c1</div>
-      <div class="c-line primary-bg-c2">c2</div>
-      <div class="c-line primary-bg-c3">c3</div>
-      <div class="c-line primary-bg-c4">c4</div>
-      <div class="c-line primary-bg-c5">c5</div>
-      <div class="c-line primary-bg-c6">c6</div>
-      <div class="c-line primary-bg-c7">c7</div>
-      <div class="c-line primary-bg-c8">c8</div>
-      <div class="c-line primary-bg-c9">c9</div>
-      <div class="c-line primary-bg-c10">c10</div>
-      <div class="c-line white-color primary-bg-c11">c11</div>
-      <div class="c-line white-color primary-bg-c12">c12</div>
-    </div>
-  </div>
-</div>
-{% endcapture %}{% include example.html content=example %}
-</div>
+Le variabili semantiche descrivono il **ruolo** del colore all'interno dell'interfaccia. Sono organizzate per categoria: testo, sfondo, bordo, link e stato.
 
-## Colori secondari
+### Colore del testo
 
-### Analoghi
+Le variabili `--bsi-color-text-*` controllano il colore del testo in diversi contesti.
 
-Ai colori monocromatici può essere affiancato un accent color, definito così perché si tratta di un colore molto luminoso, serve ad attirare l’attenzione.
+| Variabile CSS | Utilizzo |
+|---|---|
+| `--bsi-color-text-base` | Testo principale della pagina |
+| `--bsi-color-text-primary` | Testo con funzione di link o azione primaria |
+| `--bsi-color-text-secondary` | Testo alternativo, contenuti di dettaglio |
+| `--bsi-color-text-muted` | Testo di supporto, didascalie brevi |
+| `--bsi-color-text-disabled` | Testo su elementi disabilitati |
+| `--bsi-color-text-inverse` | Testo su sfondi a contrasto (primary, emphasis) |
+| `--bsi-color-text-accent` | Testo di accento su sfondi a contrasto |
+| `--bsi-color-text-success` | Testo per stati di successo |
+| `--bsi-color-text-success-hover` | Testo di successo — stato hover |
+| `--bsi-color-text-success-active` | Testo di successo — stato active |
+| `--bsi-color-text-warning` | Testo per stati di allerta |
+| `--bsi-color-text-warning-hover` | Testo di allerta — stato hover |
+| `--bsi-color-text-warning-active` | Testo di allerta — stato active |
+| `--bsi-color-text-danger` | Testo per errori o pericoli |
+| `--bsi-color-text-danger-hover` | Testo di pericolo — stato hover |
+| `--bsi-color-text-danger-active` | Testo di pericolo — stato active |
 
-Devono essere usati in modo parsimonioso.
+### Colore di sfondo
 
-<div class="primary-color-container">
-  <div class="square-color analogue-1-bg">
-    <span class="white-color">#3126ff</span>
-  </div>
-  <div class="square-color analogue-2-bg">
-    <span>#0bd9d2</span>
-  </div>
-  <div class="clearfix"></div>
-</div>
+Le variabili `--bsi-color-background-*` controllano i colori di sfondo di componenti e sezioni di pagina.
 
-<br>
-**Utilizzo delle classi:**
+| Variabile CSS | Utilizzo |
+|---|---|
+| `--bsi-color-background-primary` | Sfondo primario (bottoni, link, elementi brand) |
+| `--bsi-color-background-primary-light` | Sfondo primario chiaro (alternativo per elementi interattivi) |
+| `--bsi-color-background-primary-lighter` | Sfondo primario molto chiaro (definisce sezioni di pagina) |
+| `--bsi-color-background-primary-hover` | Sfondo primario — stato hover |
+| `--bsi-color-background-primary-active` | Sfondo primario — stato active/premuto |
+| `--bsi-color-background-primary-muted` | Sfondo primario attenuato (sezioni di pagina) |
+| `--bsi-color-background-primary-deep` | Sfondo primario scuro (sezioni di pagina) |
+| `--bsi-color-background-secondary` | Sfondo secondario (elementi interattivi alternativi) |
+| `--bsi-color-background-secondary-light` | Sfondo secondario chiaro |
+| `--bsi-color-background-secondary-lighter` | Sfondo secondario molto chiaro |
+| `--bsi-color-background-secondary-hover` | Sfondo secondario — stato hover |
+| `--bsi-color-background-secondary-active` | Sfondo secondario — stato active |
+| `--bsi-color-background-secondary-deep` | Sfondo secondario molto scuro |
+| `--bsi-color-background-accent` | Sfondo con colore di accento |
+| `--bsi-color-background-accent-hover` | Sfondo di accento — stato hover |
+| `--bsi-color-background-muted` | Sfondo molto chiaro (sezioni, paragrafi) |
+| `--bsi-color-background-subtle` | Sfondo chiaro (separatori, sezioni) |
+| `--bsi-color-background-emphasis` | Sfondo di enfasi (sezioni in evidenza) |
+| `--bsi-color-background-inverse` | Sfondo invertito (bianco su sfondi scuri) |
+| `--bsi-color-background-disabled` | Sfondo per elementi disabilitati |
+| `--bsi-color-background-success` | Sfondo per stati di successo |
+| `--bsi-color-background-success-light` | Sfondo di successo chiaro (contenuti medio-lunghi) |
+| `--bsi-color-background-success-hover` | Sfondo di successo — stato hover |
+| `--bsi-color-background-success-active` | Sfondo di successo — stato active |
+| `--bsi-color-background-warning` | Sfondo per stati di allerta |
+| `--bsi-color-background-warning-light` | Sfondo di allerta chiaro (contenuti medio-lunghi) |
+| `--bsi-color-background-warning-hover` | Sfondo di allerta — stato hover |
+| `--bsi-color-background-warning-active` | Sfondo di allerta — stato active |
+| `--bsi-color-background-danger` | Sfondo per errori o pericoli |
+| `--bsi-color-background-danger-light` | Sfondo di pericolo chiaro (contenuti medio-lunghi) |
+| `--bsi-color-background-danger-hover` | Sfondo di pericolo — stato hover |
+| `--bsi-color-background-danger-active` | Sfondo di pericolo — stato active |
 
-`.analogue-(+ 1/2 +)-bg` : per background color <br>
-`.analogue-(+ 1/2 +)-color` : per text color<br>
-`.analogue-(+ 1/2 +)-border-color` : per border color
+### Colore dei bordi
 
-<div class="exclude-a11y-check">
-{% comment %}Example name: Colori secondari{% endcomment %}
-{% capture example %}
-<div class="analogue-1-bg p-3"><span class="white-color">Testo bianco su background colore analogo 1</span></div>
-<div class="analogue-2-bg p-3"><span>Testo nero su background colore analogo 2</span></div>
-{% endcapture %}{% include example.html content=example %}
-</div>
+Le variabili `--bsi-color-border-*` controllano i colori dei bordi di componenti e separatori.
 
----
+| Variabile CSS | Utilizzo |
+|---|---|
+| `--bsi-color-border-primary` | Bordo primario (elementi interattivi cliccabili) |
+| `--bsi-color-border-primary-hover` | Bordo primario — stato hover |
+| `--bsi-color-border-primary-active` | Bordo primario — stato active |
+| `--bsi-color-border-secondary` | Bordo secondario |
+| `--bsi-color-border-secondary-hover` | Bordo secondario — stato hover |
+| `--bsi-color-border-secondary-active` | Bordo secondario — stato active |
+| `--bsi-color-border-inverse` | Bordo su sfondi a contrasto |
+| `--bsi-color-border-disabled` | Bordo per elementi disabilitati |
+| `--bsi-color-border-subtle` | Bordo separatore (sezioni e componenti) |
+| `--bsi-color-border-success` | Bordo di successo |
+| `--bsi-color-border-success-hover` | Bordo di successo — stato hover |
+| `--bsi-color-border-success-active` | Bordo di successo — stato active |
+| `--bsi-color-border-warning` | Bordo di allerta |
+| `--bsi-color-border-warning-hover` | Bordo di allerta — stato hover |
+| `--bsi-color-border-warning-active` | Bordo di allerta — stato active |
+| `--bsi-color-border-danger` | Bordo di pericolo/errore |
+| `--bsi-color-border-danger-hover` | Bordo di pericolo — stato hover |
+| `--bsi-color-border-danger-active` | Bordo di pericolo — stato active |
 
-### Complementari e triadici
+### Colore dei link
 
-<div class="primary-color-container">
-  <div class="square-color complementary-1-bg">
-    <span>#f73e5a</span>
-  </div>
-  <div class="square-color complementary-2-bg">
-    <span>#ff9900</span>
-  </div>
-  <div class="square-color complementary-3-bg">
-    <span>#00cf86</span>
-  </div>
-  <div class="clearfix"></div>
-</div>
+Le variabili `--bsi-color-link-*` controllano i colori dei link nella pagina.
 
-<br>
-**Utilizzo delle classi:**
+| Variabile CSS | Utilizzo |
+|---|---|
+| `--bsi-color-link` | Colore base dei link |
+| `--bsi-color-link-hover` | Link — stato hover |
+| `--bsi-color-link-active` | Link — stato active |
+| `--bsi-color-link-secondary` | Link secondari (richiede sottolineatura) |
+| `--bsi-color-link-secondary-hover` | Link secondario — stato hover |
+| `--bsi-color-link-secondary-active` | Link secondario — stato active |
+| `--bsi-color-link-inverse` | Link su sfondi a contrasto |
+| `--bsi-color-link-disabled` | Link disabilitato |
+| `--bsi-color-link-accent` | Link con colore di accento |
+| `--bsi-color-link-accent-hover` | Link di accento — stato hover |
 
-`.complementary-(+ 1/2/3 +)-bg` : per background color <br>
-`.complementary-(+ 1/2/3 +)-color` : per text color<br>
-`.complementary-(+ 1/2/3 +)-border-color` : per border color
+### Colori di stato
 
-<div class="exclude-a11y-check">
-{% comment %}Example name: Colori complementari e triadici{% endcomment %}
-{% capture example %}
-<div class="complementary-1-bg p-3"><span>Testo su background colore complementare 1</span></div>
-<div class="complementary-2-bg p-3"><span>Testo su background colore complementare 2</span></div>
-<div class="complementary-3-bg p-3"><span>Testo su background colore complementare 3</span></div>
-{% endcapture %}{% include example.html content=example %}
-</div>
+Le variabili `--bsi-color-status-*` sono alias semantici dei colori di sfondo di stato, utili per colorare elementi indicatori come badge, dot o icone.
 
----
+| Variabile CSS | Utilizzo |
+|---|---|
+| `--bsi-color-status-danger` | Colore indicatore di pericolo/errore |
+| `--bsi-color-status-danger-hover` | Indicatore pericolo — stato hover |
+| `--bsi-color-status-danger-active` | Indicatore pericolo — stato active |
+| `--bsi-color-status-success` | Colore indicatore di successo |
+| `--bsi-color-status-success-hover` | Indicatore successo — stato hover |
+| `--bsi-color-status-success-active` | Indicatore successo — stato active |
+| `--bsi-color-status-warning` | Colore indicatore di allerta |
+| `--bsi-color-status-warning-hover` | Indicatore allerta — stato hover |
+| `--bsi-color-status-warning-active` | Indicatore allerta — stato active |
 
-## Varianti colori secondari
+## Come personalizzare i colori
 
-### Analoghi
+Per personalizzare i colori non è necessario ricompilare i sorgenti SCSS. È sufficiente caricare un foglio di stile aggiuntivo **dopo** `bootstrap-italia.min.css` e sovrascrivere le variabili sull'elemento `:root`.
 
-I colori analoghi possiedono due tipologie di varianti cromatiche. Per utilizzarle è sufficiente utilizzare la relativa classe
+### Cambiare il colore primario del tema
 
-**Utilizzo delle classi:**
+La maggior parte dei componenti usa direttamente le variabili del gruppo `--bsi-theme-primary-*`. Per cambiare il colore primario del tema è quindi sufficiente sovrascrivere questo gruppo:
 
-`.analogue-(+ 1/2 )-bg- + variante-colore` : per background color <br>
-`.analogue-(+ 1/2 )-color- + variante-colore` : per text color<br>
-`.analogue-(+ 1/2 )-border-color- + variante-colore` : per border color
+```css
+/* custom.css — da caricare dopo bootstrap-italia.min.css */
+:root {
+  --bsi-theme-primary:         #005C2B;
+  --bsi-theme-primary-deep:    #003D1C;
+  --bsi-theme-primary-muted:   #004D24;
+  --bsi-theme-primary-subtle:  #004D24;
+  --bsi-theme-primary-light:   #C8E6D4;
+  --bsi-theme-primary-lighter: #EDF7F1;
+}
+```
 
-(es. `.analogue-1-bg-a5` per utilizzare come background il colore analogo **1** con variante **a5** )
+### Personalizzare variabili semantiche singole
 
-<div class="exclude-a11y-check">
-{% comment %}Example name: Varianti colori secondari, analoghi{% endcomment %}
-{% capture example %}
-<div class="row">
-  <div class="col-md-3">
-    <div class="c-line analogue-1-bg-a1">a1 </div>
-    <div class="c-line analogue-1-bg-a2">a2 </div>
-    <div class="c-line analogue-1-bg-a3">a3 </div>
-    <div class="c-line white-color analogue-1-bg-a4">a4 </div>
-    <div class="c-line white-color analogue-1-bg-a5">a5 </div>
-    <div class="c-line white-color analogue-1-bg-a6">a6 </div>
-    <div class="c-line white-color analogue-1-bg-a7">a7 </div>
-    <div class="c-line white-color analogue-1-bg-a8">a8 </div>
-    <div class="c-line white-color analogue-1-bg-a9">a9 </div>
-    <div class="c-line white-color analogue-1-bg-a10">a10 </div>
-    <div class="c-line white-color analogue-1-bg-a11">a11 </div>
-    <div class="c-line white-color analogue-1-bg-a12">a12 </div>
-  </div>
-  <div class="col-md-3">
-    <div class="c-line white-color analogue-1-bg-b1">b1</div>
-    <div class="c-line white-color analogue-1-bg-b2">b2</div>
-    <div class="c-line white-color analogue-1-bg-b3">b3</div>
-    <div class="c-line white-color analogue-1-bg-b4">b4</div>
-    <div class="c-line white-color analogue-1-bg-b5">b5</div>
-    <div class="c-line white-color analogue-1-bg-b6">b6</div>
-    <div class="c-line white-color analogue-1-bg-b7">b7</div>
-    <div class="c-line white-color analogue-1-bg-b8">b8</div>
-  </div>
-  <div class="col-md-3">
-    <div class="c-line analogue-2-bg-a1">a1</div>
-    <div class="c-line analogue-2-bg-a2">a2</div>
-    <div class="c-line analogue-2-bg-a3">a3</div>
-    <div class="c-line analogue-2-bg-a4">a4</div>
-    <div class="c-line analogue-2-bg-a5">a5</div>
-    <div class="c-line analogue-2-bg-a6">a6</div>
-    <div class="c-line analogue-2-bg-a7">a7</div>
-    <div class="c-line analogue-2-bg-a8">a8</div>
-    <div class="c-line white-color analogue-2-bg-a9">a9</div>
-    <div class="c-line white-color analogue-2-bg-a10">a10</div>
-    <div class="c-line white-color analogue-2-bg-a11">a11</div>
-    <div class="c-line white-color analogue-2-bg-a12">a12</div>
-  </div>
-  <div class="col-md-3">
-    <div class="c-line white-color analogue-2-bg-b1">b1</div>
-    <div class="c-line white-color analogue-2-bg-b2">b2</div>
-    <div class="c-line white-color analogue-2-bg-b3">b3</div>
-    <div class="c-line white-color analogue-2-bg-b4">b4</div>
-    <div class="c-line white-color analogue-2-bg-b5">b5</div>
-    <div class="c-line white-color analogue-2-bg-b6">b6</div>
-    <div class="c-line white-color analogue-2-bg-b7">b7</div>
-    <div class="c-line white-color analogue-2-bg-b8">b8</div>
-  </div>
-</div>
-{% endcapture %}{% include example.html content=example %}
-</div>
+Per interventi più mirati — ad esempio cambiare solo il colore dei bordi primari o il colore dei link — è possibile sovrascrivere singole variabili semantiche:
 
-### Complementari e triadici
+```css
+:root {
+  --bsi-color-border-primary:       #005C2B;
+  --bsi-color-link:                 #005C2B;
+  --bsi-color-link-hover:           #003D1C;
+}
+```
 
-I colori Complementari possiedono due tipologie di varianti cromatiche. Per utilizzarle è sufficiente utilizzare la relativa classe
+### Personalizzare i colori di stato
 
-**Utilizzo delle classi:**
+I colori di successo, allerta ed errore possono essere personalizzati indipendentemente:
 
-`.complementary-(+ 1/2/3 )-bg- + variante-colore` : per background color <br>
-`.complementary-(+ 1/2/3 )-color- + variante-colore` : per text color<br>
-`.complementary-(+ 1/2/3 )-border-color- + variante-colore` : per border color
+```css
+:root {
+  --bsi-color-background-success:       #1a6b3c;
+  --bsi-color-background-success-light: #d4edda;
+  --bsi-color-text-success:             #1a6b3c;
+  --bsi-color-border-success:           #1a6b3c;
+  --bsi-color-status-success:           #1a6b3c;
+}
+```
 
-(es. `.complementary-1-bg-a5` per utilizzare come background il colore complementare **1** con variante **a4** )
+{% capture callout %}
+#### Accessibilità
 
-<div class="exclude-a11y-check">
-{% comment %}Example name: Varianti colori secondari, complementari e triadici{% endcomment %}
-{% capture example %}
-<div class="row">
-   <div class="col-md-2">
-      <div class="c-line complementary-1-bg-a1">a1</div>
-      <div class="c-line complementary-1-bg-a2">a2</div>
-      <div class="c-line complementary-1-bg-a3">a3</div>
-      <div class="c-line complementary-1-bg-a4">a4</div>
-      <div class="c-line complementary-1-bg-a5">a5</div>
-      <div class="c-line white-color complementary-1-bg-a6">a6</div>
-      <div class="c-line white-color complementary-1-bg-a7">a7</div>
-      <div class="c-line white-color complementary-1-bg-a8">a8</div>
-      <div class="c-line white-color complementary-1-bg-a9">a9</div>
-      <div class="c-line white-color complementary-1-bg-a10">a10</div>
-      <div class="c-line white-color complementary-1-bg-a11">a11</div>
-      <div class="c-line white-color complementary-1-bg-a12">a12</div>
-   </div>
-   <div class="col-md-2">
-      <div class="c-line white-color complementary-1-bg-b1">b1</div>
-      <div class="c-line white-color complementary-1-bg-b2">b2</div>
-      <div class="c-line white-color complementary-1-bg-b3">b3</div>
-      <div class="c-line white-color complementary-1-bg-b4">b4</div>
-      <div class="c-line white-color complementary-1-bg-b5">b5</div>
-      <div class="c-line white-color complementary-1-bg-b6">b6</div>
-      <div class="c-line white-color complementary-1-bg-b7">b7</div>
-      <div class="c-line white-color complementary-1-bg-b8">b8</div>
-   </div>
-   <div class="col-md-2">
-      <div class="c-line complementary-2-bg-a1">a1</div>
-      <div class="c-line complementary-2-bg-a2">a2</div>
-      <div class="c-line complementary-2-bg-a3">a3</div>
-      <div class="c-line complementary-2-bg-a4">a4</div>
-      <div class="c-line complementary-2-bg-a5">a5</div>
-      <div class="c-line complementary-2-bg-a6">a6</div>
-      <div class="c-line white-color complementary-2-bg-a7">a7</div>
-      <div class="c-line white-color complementary-2-bg-a8">a8</div>
-      <div class="c-line white-color complementary-2-bg-a9">a9</div>
-      <div class="c-line white-color complementary-2-bg-a10">a10</div>
-      <div class="c-line white-color complementary-2-bg-a11">a11</div>
-      <div class="c-line white-color complementary-2-bg-a12">a12</div>
-   </div>
-   <div class="col-md-2">
-      <div class="c-line white-color complementary-2-bg-b1">b1</div>
-      <div class="c-line white-color complementary-2-bg-b2">b2</div>
-      <div class="c-line white-color complementary-2-bg-b3">b3</div>
-      <div class="c-line white-color complementary-2-bg-b4">b4</div>
-      <div class="c-line white-color complementary-2-bg-b5">b5</div>
-      <div class="c-line white-color complementary-2-bg-b6">b6</div>
-      <div class="c-line white-color complementary-2-bg-b7">b7</div>
-      <div class="c-line white-color complementary-2-bg-b8">b8</div>
-   </div>
-   <div class="col-md-2">
-      <div class="c-line complementary-3-bg-a1">a1</div>
-      <div class="c-line complementary-3-bg-a2">a2</div>
-      <div class="c-line complementary-3-bg-a3">a3</div>
-      <div class="c-line complementary-3-bg-a4">a4</div>
-      <div class="c-line complementary-3-bg-a5">a5</div>
-      <div class="c-line complementary-3-bg-a6">a6</div>
-      <div class="c-line complementary-3-bg-a7">a7</div>
-      <div class="c-line complementary-3-bg-a8">a8</div>
-      <div class="c-line white-color complementary-3-bg-a9">a9</div>
-      <div class="c-line white-color complementary-3-bg-a10">a10</div>
-      <div class="c-line white-color complementary-3-bg-a11">a11</div>
-      <div class="c-line white-color complementary-3-bg-a12">a12</div>
-   </div>
-   <div class="col-md-2">
-      <div class="c-line white-color complementary-3-bg-b1">b1</div>
-      <div class="c-line white-color complementary-3-bg-b2">b2</div>
-      <div class="c-line white-color complementary-3-bg-b3">b3</div>
-      <div class="c-line white-color complementary-3-bg-b4">b4</div>
-      <div class="c-line white-color complementary-3-bg-b5">b5</div>
-      <div class="c-line white-color complementary-3-bg-b6">b6</div>
-      <div class="c-line white-color complementary-3-bg-b7">b7</div>
-      <div class="c-line white-color complementary-3-bg-b8">b8</div>
-   </div>
-</div>
-{% endcapture %}{% include example.html content=example %}
-</div>
+Quando si personalizzano i colori verificare sempre che il contrasto tra testo e sfondo soddisfi i requisiti WCAG 2.1 (rapporto minimo 4.5:1 per testo normale, 3:1 per testo grande). Strumenti come [Contrast Checker](https://webaim.org/resources/contrastchecker/) possono aiutare nella verifica.
+{% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
-## Colori neutrali
+## Migrazione dalla versione 2
 
-<div class="primary-color-container">
-<div class="square-color neutral-1-bg">
-<span class="white-color">#17324d</span>
-</div>
-<div class="square-color neutral-2-bg">
-<span>#e6ecf2</span>
-</div>
-<div class="clearfix"></div>
-</div>
+Nella versione 2 di Bootstrap Italia i colori erano applicati tramite classi CSS utility legate direttamente alla palette (es. `.primary-bg`, `.analogue-1-color`). In v3 questo sistema è stato rimosso e sostituito con variabili CSS semantiche.
 
-<br>
-**Utilizzo delle classi:**
+La tabella seguente riporta le corrispondenze principali per le classi che avevano un equivalente semantico. Le classi elencate come rimosse non hanno un sostituto diretto: i casi d'uso che le richiedevano devono essere valutati in base al contesto e alla funzione del colore, scegliendo la variabile semantica più appropriata.
 
-`.neutral-(+ 1/2 +)-bg` : per background color <br>
-`.neutral-(+ 1/2 +)-color` : per text color<br>
-`.neutral-(+ 1/2 +)-border-color` : per border color
+### Colori primari
 
-<div class="exclude-a11y-check">
-{% comment %}Example name: Varianti colori neutrali{% endcomment %}
-{% capture example %}
-<div class="neutral-1-bg p-3"><span class="white-color">Testo bianco su background colore neutrale 1</span></div>
-<div class="neutral-2-bg p-3"><span>Testo su background colore neutrale 2</span></div>
-{% endcapture %}{% include example.html content=example %}
-</div>
+| v2 — Classe CSS | v3 — Variabile CSS |
+|---|---|
+| `.primary-bg` | `background-color: var(--bsi-color-background-primary)` |
+| `.primary-color` | `color: var(--bsi-color-text-primary)` |
+| `.primary-border-color` | `border-color: var(--bsi-color-border-primary)` |
+| `.primary-bg-a*` / `.primary-bg-b*` / `.primary-bg-c*` | Rimosso — usare le varianti `--bsi-theme-primary-light`, `-lighter`, `-subtle`, `-muted`, `-deep` |
 
-## Varianti colori neutrali
+### Colori analoghi
 
-I colori neutrali possiedono tre tipologie di varianti cromatiche. Per utilizzarle è sufficiente utilizzare la relativa classe
+| v2 — Classe CSS | v3 — Variabile CSS |
+|---|---|
+| `.analogue-1-bg` / `.analogue-1-color` / `.analogue-1-border-color` | Rimosso — nessun sostituto diretto |
+| `.analogue-2-bg` / `.analogue-2-color` / `.analogue-2-border-color` | Rimosso — nessun sostituto diretto |
+| Varianti `.analogue-*-bg-a*` / `.analogue-*-bg-b*` | Rimosso — nessun sostituto diretto |
 
-**Utilizzo delle classi:**
+### Colori complementari e triadici
 
-`.neutral-(+ 1/2 +)-bg- + variante-colore` : per background color <br>
-`.neutral-(+ 1/2 +)-color- + variante-colore` : per text color<br>
-`.neutral-(+ 1/2 +)-border-color- + variante-colore` : per border color
+| v2 — Classe CSS | v3 — Variabile CSS |
+|---|---|
+| `.complementary-1-bg` / `.complementary-1-color` / `.complementary-1-border-color` | Rimosso — nessun sostituto diretto |
+| `.complementary-2-bg` / `.complementary-2-color` / `.complementary-2-border-color` | Rimosso — nessun sostituto diretto |
+| `.complementary-3-bg` / `.complementary-3-color` / `.complementary-3-border-color` | Rimosso — nessun sostituto diretto |
+| Varianti `.complementary-*-bg-a*` / `.complementary-*-bg-b*` | Rimosso — nessun sostituto diretto |
 
-(es. `.neutral-1-bg-a5` per utilizzare come background il colore neutrale **1** con variante **a5** )
+### Colori neutrali
 
-<div class="exclude-a11y-check">
-{% comment %}Example name: Varianti colori neutrali{% endcomment %}
-{% capture example %}
-<div class="row">
-  <div class="col-md-3">
-    <div class="c-line neutral-1-bg-a1">a1</div>
-    <div class="c-line neutral-1-bg-a2">a2</div>
-    <div class="c-line neutral-1-bg-a3">a3</div>
-    <div class="c-line neutral-1-bg-a4">a4</div>
-    <div class="c-line neutral-1-bg-a5">a5</div>
-    <div class="c-line neutral-1-bg-a6">a6</div>
-    <div class="c-line white-color neutral-1-bg-a7">a7</div>
-    <div class="c-line white-color neutral-1-bg-a8">a8</div>
-    <div class="c-line white-color neutral-1-bg-a9">a9</div>
-    <div class="c-line white-color neutral-1-bg-a10">a10</div>
-  </div>
-  <div class="col-md-3">
-    <div class="c-line neutral-2-bg-b1">b1</div>
-    <div class="c-line neutral-2-bg-b2">b2</div>
-    <div class="c-line neutral-2-bg-b3">b3</div>
-    <div class="c-line neutral-2-bg-b4">b4</div>
-    <div class="c-line white-color neutral-2-bg-b5">b5</div>
-    <div class="c-line white-color neutral-2-bg-b6">b6</div>
-    <div class="c-line white-color neutral-2-bg-b7">b7</div>
-  </div>
-  <div class="col-md-3">
-    <div class="c-line neutral-2-bg-a1">a1</div>
-    <div class="c-line neutral-2-bg-a2">a2</div>
-    <div class="c-line neutral-2-bg-a3">a3</div>
-    <div class="c-line neutral-2-bg-a4">a4</div>
-    <div class="c-line white-color neutral-2-bg-a5">a5</div>
-    <div class="c-line white-color neutral-2-bg-a6">a6</div>
-    <div class="c-line white-color neutral-2-bg-a7">a7</div>
-  </div>
-</div>
-{% endcapture %}{% include example.html content=example %}
-</div>
+I colori neutrali non hanno un sostituto diretto. In base al contesto d'uso, valutare le variabili semantiche `subtle` o `muted`:
 
-## Grigi chiari
+| v2 — Classe CSS | v3 — Suggerimento |
+|---|---|
+| `.neutral-1-bg` | `background-color: var(--bsi-color-background-subtle)` oppure `var(--bsi-color-background-muted)` |
+| `.neutral-1-color` | `color: var(--bsi-color-text-muted)` |
+| `.neutral-1-border-color` | `border-color: var(--bsi-color-border-subtle)` |
+| `.neutral-2-bg` | `background-color: var(--bsi-color-background-muted)` |
+| `.neutral-2-color` | `color: var(--bsi-color-text-muted)` |
+| `.neutral-2-border-color` | `border-color: var(--bsi-color-border-subtle)` |
+| Varianti `.neutral-*-bg-a*` / `.neutral-*-bg-b*` | Rimosso — nessun sostituto diretto |
 
-I grigi chiari sono di tre tipologie. Per utilizzarle è sufficiente utilizzare la relativa classe
+### Grigi chiari
 
-**Utilizzo delle classi:**
-
-`.lightgrey-bg- + variante-colore` : per background color <br>
-`.lightgrey-color- + variante-colore` : per text color<br>
-`.lightgrey-border-color- + variante-colore` : per border color
-
-(es. `.lightgrey-1-bg-a4` per utilizzare come background il grigio chiaro **1** con variante **a5** )
-
-<div class="exclude-a11y-check">
-{% comment %}Example name: Grigi chiari{% endcomment %}
-{% capture example %}
-<div class="row">
-  <div class="col-md-2">
-    <div class="c-line lightgrey-bg-a1">a1</div>
-    <div class="c-line lightgrey-bg-a2">a2</div>
-    <div class="c-line lightgrey-bg-a3">a3</div>
-    <div class="c-line lightgrey-bg-a4">a4</div>
-  </div>
-  <div class="col-md-2">
-    <div class="c-line lightgrey-bg-b1">b1</div>
-    <div class="c-line lightgrey-bg-b2">b2</div>
-    <div class="c-line lightgrey-bg-b3">b3</div>
-    <div class="c-line lightgrey-bg-b4">b4</div>
-  </div>
-  <div class="col-md-2">
-    <div class="c-line lightgrey-bg-c1">c1</div>
-    <div class="c-line lightgrey-bg-c2">c2</div>
-  </div>
-</div>
-{% endcapture %}{% include example.html content=example %}
-</div>
+| v2 — Classe CSS | v3 — Variabile CSS |
+|---|---|
+| `.lightgrey-bg-a*` / `.lightgrey-bg-b*` / `.lightgrey-bg-c*` | Rimosso — nessun sostituto diretto |
+| `.lightgrey-color-*` | Rimosso — nessun sostituto diretto |
+| `.lightgrey-border-color-*` | Rimosso — nessun sostituto diretto |
