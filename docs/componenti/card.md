@@ -54,7 +54,7 @@ Esempio base con immagine, descrizione e data:
       <div class="it-card-image-wrapper">
         <div class="ratio ratio-16x9">
           <figure class="figure img-full">
-            <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+            <img src="https://picsum.photos/seed/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
           </figure>
         </div>
       </div>
@@ -116,7 +116,7 @@ La struttura dei metadati include:
       <div class="it-card-image-wrapper">
         <div class="ratio ratio-16x9">
           <figure class="figure img-full">
-            <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+            <img src="https://picsum.photos/seed/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
           </figure>
         </div>
       </div>
@@ -145,7 +145,7 @@ La struttura dei metadati include:
       <div class="it-card-image-wrapper">
         <div class="ratio ratio-16x9">
           <figure class="figure img-full">
-            <img src="https://placeholderimage.eu/api/nature/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+            <img src="https://picsum.photos/seed/nature/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
           </figure>
         </div>
       </div>
@@ -241,7 +241,7 @@ Per indicare l'autore del contenuto, usa l'elemento semantico `address` con clas
       <div class="it-card-image-wrapper">
         <div class="ratio ratio-16x9">
           <figure class="figure img-full">
-            <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+            <img src="https://picsum.photos/seed/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
           </figure>
         </div>
       </div>
@@ -275,7 +275,7 @@ Per indicare l'autore del contenuto, usa l'elemento semantico `address` con clas
       <div class="it-card-image-wrapper">
         <div class="ratio ratio-16x9">
           <figure class="figure img-full">
-            <img src="https://placeholderimage.eu/api/nature/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+            <img src="https://picsum.photos/seed/nature/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
           </figure>
         </div>
       </div>
@@ -368,7 +368,7 @@ Per invertire solamente l'ordine visivo tra destra e sinistra, applica la classe
       <div class="it-card-image-wrapper">
         <div class="ratio ratio-1x1">
           <figure class="figure img-full">
-            <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+            <img src="https://picsum.photos/seed/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
           </figure>
         </div>
       </div>
@@ -399,7 +399,7 @@ Per invertire solamente l'ordine visivo tra destra e sinistra, applica la classe
       <div class="it-card-image-wrapper">
         <div class="ratio ratio-1x1">
           <figure class="figure img-full">
-            <img src="https://placeholderimage.eu/api/nature/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+            <img src="https://picsum.photos/seed/nature/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
           </figure>
         </div>
       </div>
@@ -439,7 +439,7 @@ Consigliamo di non aggiungere altri contenuti oltre al titolo (da mantenere brev
       <div class="it-card-image-wrapper">
         <div class="ratio ratio-1x1">
           <figure class="figure img-full">
-            <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+            <img src="https://picsum.photos/seed/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
           </figure>
         </div>
       </div>
@@ -465,7 +465,7 @@ Consigliamo di non aggiungere altri contenuti oltre al titolo (da mantenere brev
       <div class="it-card-image-wrapper">
         <div class="ratio ratio-1x1">
           <figure class="figure img-full">
-            <img src="https://placeholderimage.eu/api/nature/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+            <img src="https://picsum.photos/seed/nature/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
           </figure>
         </div>
       </div>
@@ -520,7 +520,7 @@ Ricorda di usare:
       <div class="it-card-image-wrapper">
         <div class="ratio ratio-16x9">
           <figure class="figure img-full">
-            <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+            <img src="https://picsum.photos/seed/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
           </figure>
         </div>
       </div>
@@ -549,7 +549,7 @@ Ricorda di usare:
       <div class="it-card-image-wrapper">
         <div class="ratio ratio-16x9">
           <figure class="figure img-full">
-            <img src="https://placeholderimage.eu/api/nature/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+            <img src="https://picsum.photos/seed/nature/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
           </figure>
         </div>
       </div>
@@ -622,7 +622,7 @@ L'immagine segue questo contenitore. Per invertire l'ordine visivo, usa la class
       <div class="it-card-image-wrapper">
         <div class="ratio ratio-1x1">
           <figure class="figure img-full">
-            <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+            <img src="https://picsum.photos/seed/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
           </figure>
         </div>
       </div>
@@ -657,7 +657,7 @@ L'immagine segue questo contenitore. Per invertire l'ordine visivo, usa la class
       <div class="it-card-image-wrapper">
         <div class="ratio ratio-1x1">
           <figure class="figure img-full">
-            <img src="https://placeholderimage.eu/api/nature/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+            <img src="https://picsum.photos/seed/nature/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
           </figure>
         </div>
       </div>
@@ -698,7 +698,7 @@ Negli esempi non abbiamo usato il `target` del link per favorire la normale navi
       <div class="it-card-image-wrapper">
         <div class="ratio ratio-16x9">
           <figure class="figure img-full">
-            <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+            <img src="https://picsum.photos/seed/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
           </figure>
         </div>
       </div>
@@ -731,7 +731,7 @@ Negli esempi non abbiamo usato il `target` del link per favorire la normale navi
       <div class="it-card-image-wrapper">
         <div class="ratio ratio-16x9">
           <figure class="figure img-full">
-            <img src="https://placeholderimage.eu/api/nature/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+            <img src="https://picsum.photos/seed/nature/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
           </figure>
         </div>
       </div>
@@ -853,7 +853,7 @@ Usa le stesse regole delle card inline standard per struttura e inversione dell'
       <div class="it-card-image-wrapper">
         <div class="ratio ratio-1x1">
           <figure class="figure img-full">
-            <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+            <img src="https://picsum.photos/seed/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
           </figure>
         </div>
       </div>
@@ -888,7 +888,7 @@ Usa le stesse regole delle card inline standard per struttura e inversione dell'
       <div class="it-card-image-wrapper">
         <div class="ratio ratio-1x1">
           <figure class="figure img-full">
-            <img src="https://placeholderimage.eu/api/nature/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+            <img src="https://picsum.photos/seed/nature/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
           </figure>
         </div>
       </div>
@@ -1267,7 +1267,7 @@ Negli esempi abbiamo utilizzato il tag `h4` per i titoli `.it-card-profile-name`
         </div>
         <div class="it-card-profile-image ratio ratio-1x1">
           <figure class="figure img-full">
-            <img src="https://placeholderimage.eu/api/monument/320/320" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+            <img src="https://picsum.photos/seed/monument/320/320" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
           </figure>
         </div>
       </div>
@@ -1323,7 +1323,7 @@ Negli esempi abbiamo utilizzato il tag `h4` per i titoli `.it-card-profile-name`
         </div>
         <div class="it-card-profile-image ratio ratio-1x1">
           <figure class="figure img-full">
-            <img src="https://placeholderimage.eu/api/monument/320/320" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+            <img src="https://picsum.photos/seed/monument/320/320" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
           </figure>
         </div>
       </div>
@@ -1394,7 +1394,7 @@ Puoi combinare questa impostazione con le funzionalità del contenitore `.it-car
       <div class="it-card-image-wrapper">
         <div class="ratio ratio-21x9">
           <figure class="figure img-full">
-            <img src="https://placeholderimage.eu/api/nature/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+            <img src="https://picsum.photos/seed/nature/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
           </figure>
         </div>
       </div>
@@ -1422,7 +1422,7 @@ Puoi combinare questa impostazione con le funzionalità del contenitore `.it-car
       <div class="it-card-image-wrapper">
         <div class="ratio ratio-21x9">
           <figure class="figure img-full">
-            <img src="https://placeholderimage.eu/api/monument/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+            <img src="https://picsum.photos/seed/monument/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
           </figure>
         </div>
       </div>
@@ -1781,7 +1781,7 @@ Le varianti inline delle card hanno proporzioni immagini specifiche su desktop. 
       <div class="it-card-image-wrapper">
         <div class="ratio ratio-21x9">
           <figure class="figure img-full">
-            <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+            <img src="https://picsum.photos/seed/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
           </figure>
         </div>
       </div>
@@ -1807,7 +1807,7 @@ Le varianti inline delle card hanno proporzioni immagini specifiche su desktop. 
       <div class="it-card-image-wrapper">
         <div class="ratio ratio-16x9">
           <figure class="figure img-full">
-            <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+            <img src="https://picsum.photos/seed/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
           </figure>
         </div>
       </div>
@@ -1835,7 +1835,7 @@ Le varianti inline delle card hanno proporzioni immagini specifiche su desktop. 
       <div class="it-card-image-wrapper">
         <div class="ratio ratio-4x3">
           <figure class="figure img-full">
-            <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+            <img src="https://picsum.photos/seed/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
           </figure>
         </div>
       </div>
@@ -1861,7 +1861,7 @@ Le varianti inline delle card hanno proporzioni immagini specifiche su desktop. 
       <div class="it-card-image-wrapper">
         <div class="ratio ratio-1x1">
           <figure class="figure img-full">
-            <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+            <img src="https://picsum.photos/seed/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
           </figure>
         </div>
       </div>
@@ -1901,7 +1901,7 @@ L'elemento `footer .it-card-related` si allinea verticamente in modo diverso a s
       <div class="it-card-image-wrapper">
         <div class="ratio ratio-16x9">
           <figure class="figure img-full">
-            <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+            <img src="https://picsum.photos/seed/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
           </figure>
         </div>
       </div>

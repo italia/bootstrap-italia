@@ -58,7 +58,7 @@ Il testo è contenuto all'interno di un tag `<p>` e può essere preceduto da un'
       <div class="it-card-image-wrapper">
         <div class="ratio ratio-16x9">
           <figure class="figure img-full">
-            <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+            <img src="https://picsum.photos/seed/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
           </figure>
         </div>
       </div>
@@ -84,7 +84,7 @@ Il testo è contenuto all'interno di un tag `<p>` e può essere preceduto da un'
       <div class="it-card-image-wrapper">
         <div class="ratio ratio-16x9">
           <figure class="figure img-full">
-            <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+            <img src="https://picsum.photos/seed/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
           </figure>
         </div>
       </div>
@@ -135,7 +135,7 @@ Se si vuole iniziare con il dimmer disabilitato è necessario utilizzare l'attri
       <div class="it-card-image-wrapper">
         <div class="ratio ratio-16x9">
           <figure class="figure img-full">
-            <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+            <img src="https://picsum.photos/seed/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
           </figure>
         </div>
       </div>
@@ -161,7 +161,7 @@ Se si vuole iniziare con il dimmer disabilitato è necessario utilizzare l'attri
       <div class="it-card-image-wrapper">
         <div class="ratio ratio-16x9">
           <figure class="figure img-full">
-            <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+            <img src="https://picsum.photos/seed/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
           </figure>
         </div>
       </div>
@@ -211,7 +211,7 @@ Aggiungendo la classe `.dimmer-primary` al wrapper del dimmer si ottiene una ver
       <div class="it-card-image-wrapper">
         <div class="ratio ratio-16x9">
           <figure class="figure img-full">
-            <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+            <img src="https://picsum.photos/seed/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
           </figure>
         </div>
       </div>
@@ -237,7 +237,7 @@ Aggiungendo la classe `.dimmer-primary` al wrapper del dimmer si ottiene una ver
       <div class="it-card-image-wrapper">
         <div class="ratio ratio-16x9">
           <figure class="figure img-full">
-            <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+            <img src="https://picsum.photos/seed/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
           </figure>
         </div>
       </div>
@@ -293,7 +293,7 @@ I pulsanti vanno inseriti in un `<div>` con classi `.dimmer-buttons` e `.bg-dark
       <div class="it-card-image-wrapper">
         <div class="ratio ratio-16x9">
           <figure class="figure img-full">
-            <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+            <img src="https://picsum.photos/seed/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
           </figure>
         </div>
       </div>
@@ -319,7 +319,7 @@ I pulsanti vanno inseriti in un `<div>` con classi `.dimmer-buttons` e `.bg-dark
       <div class="it-card-image-wrapper">
         <div class="ratio ratio-16x9">
           <figure class="figure img-full">
-            <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+            <img src="https://picsum.photos/seed/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
           </figure>
         </div>
       </div>
@@ -372,7 +372,7 @@ Aggiungendo la classe `.dimmer-primary` al wrapper del dimmer si ottiene una ver
       <div class="it-card-image-wrapper">
         <div class="ratio ratio-16x9">
           <figure class="figure img-full">
-            <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+            <img src="https://picsum.photos/seed/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
           </figure>
         </div>
       </div>
@@ -398,7 +398,7 @@ Aggiungendo la classe `.dimmer-primary` al wrapper del dimmer si ottiene una ver
       <div class="it-card-image-wrapper">
         <div class="ratio ratio-16x9">
           <figure class="figure img-full">
-            <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+            <img src="https://picsum.photos/seed/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
           </figure>
         </div>
       </div>
