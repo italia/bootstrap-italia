@@ -19,7 +19,7 @@ I valori di default derivano dal pacchetto [`design-tokens-italia`](https://gith
 
 I componenti di Bootstrap Italia referenziano le variabili `--bsi-*` a runtime: sovrascriverle nel tuo CSS fa sì che le modifiche si propaghino automaticamente a tutti i componenti che le utilizzano.
 
-## Variabili del tema
+<!-- ## Variabili del tema
 
 Il gruppo `--bsi-theme-primary-*` rappresenta la palette del colore primario del tema. Questi sono i valori che la maggior parte dei componenti usa direttamente per colori di sfondo, bordi e testo interattivo.
 
@@ -30,7 +30,7 @@ Il gruppo `--bsi-theme-primary-*` rappresenta la palette del colore primario del
 | `--bsi-theme-primary-lighter` | `#f2f7fc` | Variante molto chiara |
 | `--bsi-theme-primary-subtle` | `#004d99` | Variante attenuata |
 | `--bsi-theme-primary-muted` | `#004080` | Variante molto attenuata |
-| `--bsi-theme-primary-deep` | `#003366` | Variante scura |
+| `--bsi-theme-primary-deep` | `#003366` | Variante scura | -->
 
 ## Variabili semantiche per categoria
 
