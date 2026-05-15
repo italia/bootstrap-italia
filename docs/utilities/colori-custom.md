@@ -17,12 +17,6 @@ Le variabili seguono una nomenclatura **semantica**: il nome descrive la funzion
 
 I valori di default derivano dal pacchetto [`design-tokens-italia`](https://github.com/italia/design-tokens-italia), che rappresenta la fonte unica dei token di design del Design System Italia. In `_root.scss` questi token vengono mappati nelle variabili `--bsi-*` esposte al browser.
 
-```
-design-tokens-italia  →  src/scss/base/_root.scss  →  CSS compilato (:root { --bsi-* })
-                                                            ↑
-                                              Il tuo CSS sovrascrive qui
-```
-
 I componenti di Bootstrap Italia referenziano le variabili `--bsi-*` a runtime: sovrascriverle nel tuo CSS fa sì che le modifiche si propaghino automaticamente a tutti i componenti che le utilizzano.
 
 ## Variabili del tema
