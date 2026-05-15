@@ -50,6 +50,8 @@
   flex-wrap: nowrap;
   overflow-x: auto;
   overflow-y: hidden;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
   border-bottom-color: var(--#{$prefix}tabs-border-color);
   background-color: var(--#{$prefix}tabs-background-color);
   -webkit-overflow-scrolling: touch;
@@ -356,6 +358,8 @@
 .flex-column-reverse {
   .nav-tabs {
     border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: var(--#{$prefix}color-border-subtle);
     border-bottom-width: 0; // reset bottom border
 
     .nav-link {
