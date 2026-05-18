@@ -1,7 +1,7 @@
 {
     "amichevole con lettori di schermo": "PRONTO",
     "angular Kit": "DA COMPLETARE VARIANTI",
-    "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/upload",
+    "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/form/upload",
     "assignees": [
         "Fupete"
     ],
@@ -14,10 +14,12 @@
         "title": "Upload",
         "type": "DraftIssue"
     },
+    "dev Kit Italia": "DA FARE",
     "id": "PVTI_lADOAOqloM4AcXblzgMjwnk",
     "navigabile": "PRONTO",
     "notes / More": "La versione con \"Animazione\" per simularne il funzionamento funziona solo al click del mouse, non via tastiera. \u2014\u00a0In Angular kit manca la versione Avatar",
-    "react Kit": "NON PRESENTE",
+    "react Kit": "PRONTO",
+    "react Kit - url": "https://italia.github.io/design-react-kit/latest/?path=/docs/documentazione-form-upload--documentazione",
     "status": "Todo",
     "status a11y check": "Done",
     "title": "Upload",

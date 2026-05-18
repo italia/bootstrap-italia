@@ -3,8 +3,8 @@ name: Bootstrap Italia
 applicationSuite: Design system Italia
 url: https://github.com/italia/bootstrap-italia
 isBasedOn: https://github.com/twbs/bootstrap
-softwareVersion: "v2.18.0 "
-releaseDate: 2026-03-05
+softwareVersion: v2.18.1
+releaseDate: '2026-04-23'
 platforms:
   - web
 categories:
@@ -13,7 +13,7 @@ categories:
   - it-development
   - design
 organisation:
-  uri: https://github.com/italia
+  uri: urn:x-italian-pa:pcm
   name: Dipartimento per la trasformazione digitale
 roadmap: https://github.com/orgs/italia/projects/17/views/5?filterQuery=repo%3Aitalia%2Fbootstrap-italia
 developmentStatus: stable

@@ -14,6 +14,8 @@
         "title": "Collapse",
         "type": "DraftIssue"
     },
+    "dev Kit Italia": "PRONTO",
+    "dev Kit Italia - url": "https://italia.github.io/dev-kit-italia/?path=/docs/componenti-collapse--documentazione",
     "id": "PVTI_lADOAOqloM4AcXblzgMjwXg",
     "navigabile": "PRONTO",
     "notes / More": "In React kit c'\u00e8 la sola funzionalit\u00e0 Accordion e un esempio collapse sotto List. ",

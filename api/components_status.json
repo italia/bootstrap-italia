@@ -3,7 +3,7 @@
     {
       "amichevole con lettori di schermo": "PRONTO",
       "angular Kit": "PRONTO",
-      "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/collapse",
+      "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/accordion",
       "assignees": [
         "frmascia11y"
       ],
@@ -16,10 +16,12 @@
         "title": "`Accordion` - check a11y e status",
         "type": "DraftIssue"
       },
+      "dev Kit Italia": "PRONTO",
+      "dev Kit Italia - url": "https://italia.github.io/dev-kit-italia/?path=/docs/componenti-accordion--documentazione",
       "id": "PVTI_lADOAOqloM4AcXblzgMjtRg",
       "navigabile": "PRONTO",
       "react Kit": "PRONTO",
-      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/story/documentazione-componenti-accordion--accordion",
+      "react Kit - url": "https://italia.github.io/design-react-kit/latest/?path=/docs/documentazione-componenti-accordion--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
       "title": "`Accordion` - check a11y e status",
@@ -42,6 +44,8 @@
         "title": "`Affix` - check a11y e status",
         "type": "DraftIssue"
       },
+      "dev Kit Italia": "PRONTO",
+      "dev Kit Italia - url": "https://italia.github.io/dev-kit-italia/?path=/docs/componenti-affix--documentazione",
       "id": "PVTI_lADOAOqloM4AcXblzgMjtas",
       "navigabile": "PRONTO",
       "notes / More": "Funzionalità presente/documentata solo in BSI.",
@@ -68,10 +72,12 @@
         "title": "`Alert` - check a11y e status",
         "type": "DraftIssue"
       },
+      "dev Kit Italia": "PRONTO",
+      "dev Kit Italia - url": "https://italia.github.io/dev-kit-italia/?path=/docs/componenti-alert--documentazione",
       "id": "PVTI_lADOAOqloM4AcXblzgMjtbQ",
       "navigabile": "PRONTO",
       "react Kit": "PRONTO",
-      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-alert--documentazione",
+      "react Kit - url": "https://italia.github.io/design-react-kit/latest/?path=/docs/documentazione-componenti-alert--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
       "title": "`Alert` - check a11y e status",
@@ -82,7 +88,7 @@
     {
       "amichevole con lettori di schermo": "PRONTO",
       "angular Kit": "PRONTO",
-      "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/autocomplete",
+      "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/form/autocomplete",
       "assignees": [
         "Fupete"
       ],
@@ -95,11 +101,13 @@
         "title": "`Autocomplete` - check a11y e status",
         "type": "DraftIssue"
       },
+      "dev Kit Italia": "PRONTO",
+      "dev Kit Italia - url": "https://italia.github.io/dev-kit-italia/?path=/docs/componenti-form-autocomplete--documentazione",
       "id": "PVTI_lADOAOqloM4AcXblzgMjtb4",
       "navigabile": "PRONTO",
       "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1387 — https://github.com/italia/design-ui-kit/issues/114",
       "react Kit": "PRONTO",
-      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/story/documentazione-form-input--input-autocomplete-con-dati-accessibile",
+      "react Kit - url": "https://italia.github.io/design-react-kit/latest/?path=/story/documentazione-form-input--input-autocomplete-con-dati-accessibile",
       "status": "Todo",
       "status a11y check": "Done",
       "title": "`Autocomplete` - check a11y e status",
@@ -122,10 +130,12 @@
         "title": "`Avatar` - check a11y e status",
         "type": "DraftIssue"
       },
+      "dev Kit Italia": "PRONTO",
+      "dev Kit Italia - url": "https://italia.github.io/dev-kit-italia/?path=/docs/componenti-avatar--documentazione",
       "id": "PVTI_lADOAOqloM4AcXblzgMjwTI",
       "navigabile": "PRONTO",
       "react Kit": "PRONTO",
-      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-avatar--documentazione",
+      "react Kit - url": "https://italia.github.io/design-react-kit/latest/?path=/docs/documentazione-componenti-avatar--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
       "title": "`Avatar` - check a11y e status",
@@ -136,7 +146,7 @@
     {
       "amichevole con lettori di schermo": "PRONTO",
       "angular Kit": "PRONTO",
-      "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/back-button",
+      "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/menu-di-navigazione/back-button",
       "assignees": [
         "Fupete"
       ],
@@ -149,10 +159,12 @@
         "title": "`Back` - check a11y e status",
         "type": "DraftIssue"
       },
+      "dev Kit Italia": "PRONTO",
+      "dev Kit Italia - url": "https://italia.github.io/dev-kit-italia/?path=/docs/componenti-back--documentazione",
       "id": "PVTI_lADOAOqloM4AcXblzgMjwUQ",
       "navigabile": "PRONTO",
       "react Kit": "PRONTO",
-      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-goback--documentazione",
+      "react Kit - url": "https://italia.github.io/design-react-kit/latest/?path=/docs/documentazione-componenti-goback--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
       "title": "`Back` - check a11y e status",
@@ -163,7 +175,7 @@
     {
       "amichevole con lettori di schermo": "PRONTO",
       "angular Kit": "PRONTO",
-      "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/back-to-top",
+      "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/menu-di-navigazione/back-to-top",
       "assignees": [
         "Fupete"
       ],
@@ -176,10 +188,12 @@
         "title": "`Back to top` - check a11y e status",
         "type": "DraftIssue"
       },
+      "dev Kit Italia": "PRONTO",
+      "dev Kit Italia - url": "https://italia.github.io/dev-kit-italia/?path=/docs/componenti-back-to-top--documentazione",
       "id": "PVTI_lADOAOqloM4AcXblzgMjwUY",
       "navigabile": "PRONTO",
       "react Kit": "PRONTO",
-      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-backtotop--documentazione",
+      "react Kit - url": "https://italia.github.io/design-react-kit/latest/?path=/docs/documentazione-componenti-backtotop--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
       "title": "`Back to top` - check a11y e status",
@@ -203,12 +217,14 @@
         "title": "`Badge` - check a11y e status",
         "type": "DraftIssue"
       },
+      "dev Kit Italia": "PRONTO",
+      "dev Kit Italia - url": "https://italia.github.io/dev-kit-italia/?path=/docs/componenti-badge--documentazione",
       "id": "PVTI_lADOAOqloM4AcXblzgMjwUg",
       "navigabile": "PRONTO",
       "notes / Issues": "https://github.com/italia/design-ui-kit/issues/181",
       "notes / More": "Segnalati problemi con uso di colori saturi per lo sfondo, che rendono elemento troppo simile a pulsante, quando invece non è cliccabile.",
       "react Kit": "PRONTO",
-      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-badge--documentazione",
+      "react Kit - url": "https://italia.github.io/design-react-kit/latest/?path=/docs/documentazione-componenti-badge--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
       "title": "`Badge` - check a11y e status",
@@ -231,10 +247,12 @@
         "title": "`Bottomnav`  - check a11y e status",
         "type": "DraftIssue"
       },
+      "dev Kit Italia": "PRONTO",
+      "dev Kit Italia - url": "https://italia.github.io/dev-kit-italia/?path=/docs/componenti-bottomnav--documentazione",
       "id": "PVTI_lADOAOqloM4AcXblzgMjwVE",
       "navigabile": "PRONTO",
       "react Kit": "PRONTO",
-      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-menu-di-navigazione-bottomnav--documentazione",
+      "react Kit - url": "https://italia.github.io/design-react-kit/latest/?path=/docs/documentazione-menu-di-navigazione-bottomnav--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
       "title": "`Bottomnav`  - check a11y e status",
@@ -245,7 +263,7 @@
     {
       "amichevole con lettori di schermo": "PRONTO",
       "angular Kit": "PRONTO",
-      "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/breadcrumb",
+      "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/menu-di-navigazione/breadcrumb",
       "assignees": [
         "Fupete"
       ],
@@ -258,10 +276,12 @@
         "title": "`Breadcrumbs` - check a11y e status",
         "type": "DraftIssue"
       },
+      "dev Kit Italia": "PRONTO",
+      "dev Kit Italia - url": "https://italia.github.io/dev-kit-italia/?path=/docs/componenti-breadcrumbs--documentazione",
       "id": "PVTI_lADOAOqloM4AcXblzgMjwVc",
       "navigabile": "PRONTO",
       "react Kit": "PRONTO",
-      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-menu-di-navigazione-breadcrumbs--documentazione",
+      "react Kit - url": "https://italia.github.io/design-react-kit/latest/?path=/docs/documentazione-menu-di-navigazione-breadcrumbs--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
       "title": "`Breadcrumbs` - check a11y e status",
@@ -285,11 +305,13 @@
         "title": "`Buttons` - check a11y e status",
         "type": "DraftIssue"
       },
+      "dev Kit Italia": "PRONTO",
+      "dev Kit Italia - url": "https://italia.github.io/dev-kit-italia/?path=/docs/componenti-button--documentazione",
       "id": "PVTI_lADOAOqloM4AcXblzgMjwV0",
       "navigabile": "PRONTO",
       "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1388",
       "react Kit": "PRONTO",
-      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-button--documentazione",
+      "react Kit - url": "https://italia.github.io/design-react-kit/latest/?path=/docs/documentazione-componenti-button--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
       "title": "`Buttons` - check a11y e status",
@@ -313,12 +335,14 @@
         "title": "`Callout` - check a11y e status",
         "type": "DraftIssue"
       },
+      "dev Kit Italia": "PRONTO",
+      "dev Kit Italia - url": "https://italia.github.io/dev-kit-italia/?path=/docs/componenti-callout--documentazione",
       "id": "PVTI_lADOAOqloM4AcXblzgMjwWE",
       "navigabile": "IN REVIEW",
       "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1158",
       "notes / More": "In UI kit Italia sono previsti angoli arrotondati per le varianti base. Uniformare? (Se TOKENS facile in BSIsennò SQUADRATO in UI KIT)",
       "react Kit": "DA RIVEDERE A11Y",
-      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-callout--documentazione",
+      "react Kit - url": "https://italia.github.io/design-react-kit/latest/?path=/docs/documentazione-componenti-callout--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
       "title": "`Callout` - check a11y e status",
@@ -342,10 +366,12 @@
         "title": "`Card` - check a11y e status",
         "type": "DraftIssue"
       },
+      "dev Kit Italia": "PRONTO",
+      "dev Kit Italia - url": "https://italia.github.io/dev-kit-italia/?path=/docs/componenti-card--documentazione",
       "id": "PVTI_lADOAOqloM4AcXblzgMjwWQ",
       "navigabile": "PRONTO",
       "react Kit": "PRONTO",
-      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-cards--documentazione",
+      "react Kit - url": "https://italia.github.io/design-react-kit/latest/?path=/docs/documentazione-componenti-cards--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
       "title": "`Card` - check a11y e status",
@@ -369,9 +395,12 @@
         "title": "`Carousel` - check a11y e status",
         "type": "DraftIssue"
       },
+      "dev Kit Italia": "PRONTO",
+      "dev Kit Italia - url": "https://italia.github.io/dev-kit-italia/?path=/docs/componenti-carousel--documentazione",
       "id": "PVTI_lADOAOqloM4AcXblzgMjwWs",
       "navigabile": "PRONTO",
       "react Kit": "PRONTO",
+      "react Kit - url": "https://italia.github.io/design-react-kit/latest/?path=/docs/documentazione-componenti-carousel--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
       "title": "`Carousel` - check a11y e status",
@@ -382,7 +411,7 @@
     {
       "amichevole con lettori di schermo": "PRONTO",
       "angular Kit": "PRONTO",
-      "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/checkbox",
+      "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/form/checkbox",
       "assignees": [
         "Fupete"
       ],
@@ -395,10 +424,12 @@
         "title": "`Checkbox`- check a11y e status",
         "type": "DraftIssue"
       },
+      "dev Kit Italia": "PRONTO",
+      "dev Kit Italia - url": "https://italia.github.io/dev-kit-italia/?path=/docs/componenti-form-checkbox--documentazione",
       "id": "PVTI_lADOAOqloM4AcXblzgSeKRg",
       "navigabile": "PRONTO",
       "react Kit": "PRONTO",
-      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-form-checkbox--documentazione",
+      "react Kit - url": "https://italia.github.io/design-react-kit/latest/?path=/docs/documentazione-form-checkbox--documentazione",
       "status a11y check": "Done",
       "title": "`Checkbox`- check a11y e status",
       "uI Kit Italia": "PRONTO",
@@ -421,10 +452,12 @@
         "title": "`Chips` - check a11y e status",
         "type": "DraftIssue"
       },
+      "dev Kit Italia": "PRONTO",
+      "dev Kit Italia - url": "https://italia.github.io/dev-kit-italia/?path=/docs/componenti-chip--documentazione",
       "id": "PVTI_lADOAOqloM4AcXblzgMjwXQ",
       "navigabile": "PRONTO",
       "react Kit": "PRONTO",
-      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-chips--documentazione",
+      "react Kit - url": "https://italia.github.io/design-react-kit/latest/?path=/docs/documentazione-componenti-chips--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
       "title": "`Chips` - check a11y e status",
@@ -448,6 +481,8 @@
         "title": "`Collapse` - check a11y e status",
         "type": "DraftIssue"
       },
+      "dev Kit Italia": "PRONTO",
+      "dev Kit Italia - url": "https://italia.github.io/dev-kit-italia/?path=/docs/componenti-collapse--documentazione",
       "id": "PVTI_lADOAOqloM4AcXblzgMjwXg",
       "navigabile": "PRONTO",
       "notes / More": "In React kit c'è la sola funzionalità Accordion e un esempio collapse sotto List. ",
@@ -461,7 +496,7 @@
     {
       "amichevole con lettori di schermo": "PRONTO",
       "angular Kit": "PRONTO",
-      "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/form-input",
+      "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/form/form-input",
       "assignees": [
         "Fupete"
       ],
@@ -474,11 +509,13 @@
         "title": "`Datepicker` - check a11y e status",
         "type": "DraftIssue"
       },
+      "dev Kit Italia": "PRONTO",
+      "dev Kit Italia - url": "https://italia.github.io/dev-kit-italia/?path=/docs/componenti-form-datepicker--documentazione",
       "id": "PVTI_lADOAOqloM4AcXblzgMjwXw",
       "navigabile": "PRONTO",
       "notes / More": "In Angular kit e React kit, così come in UI Kit Italia, è una variante sotto Form Input. ",
       "react Kit": "PRONTO",
-      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/story/documentazione-form-input--input-datepicker",
+      "react Kit - url": "https://italia.github.io/design-react-kit/latest/?path=/story/documentazione-form-input--input-datepicker",
       "status": "Todo",
       "status a11y check": "Done",
       "title": "`Datepicker` - check a11y e status",
@@ -502,11 +539,13 @@
         "title": "`Dimmer` - check a11y e status",
         "type": "DraftIssue"
       },
+      "dev Kit Italia": "PRONTO",
+      "dev Kit Italia - url": "https://italia.github.io/dev-kit-italia/?path=/docs/componenti-dimmer--documentazione",
       "id": "PVTI_lADOAOqloM4AcXblzgMjwYM",
       "navigabile": "PRONTO",
       "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1165",
       "react Kit": "DA RIVEDERE A11Y",
-      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-dimmer--documentazione",
+      "react Kit - url": "https://italia.github.io/design-react-kit/latest/?path=/docs/documentazione-componenti-dimmer--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
       "title": "`Dimmer` - check a11y e status",
@@ -515,13 +554,13 @@
       "visivamente accessibile": "PRONTO"
     },
     {
-      "amichevole con lettori di schermo": "DA RIVEDERE",
-      "angular Kit": "DA RIVEDERE A11Y",
+      "amichevole con lettori di schermo": "PRONTO",
+      "angular Kit": "PRONTO",
       "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/dropdown",
       "assignees": [
         "Fupete"
       ],
-      "bootstrap Italia": "DA RIVEDERE A11Y",
+      "bootstrap Italia": "PRONTO",
       "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/componenti/dropdown/",
       "comprensibile": "PRONTO",
       "content": {
@@ -530,11 +569,13 @@
         "title": "`Dropdown` - check a11y e status",
         "type": "DraftIssue"
       },
+      "dev Kit Italia": "PRONTO",
+      "dev Kit Italia - url": "https://italia.github.io/dev-kit-italia/?path=/docs/componenti-dropdown--documentazione",
       "id": "PVTI_lADOAOqloM4AcXblzgMjwYc",
       "navigabile": "PRONTO",
-      "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1168 — https://github.com/italia/design-ui-kit/issues/182",
+      "notes / Issues": "https://github.com/italia/design-ui-kit/issues/182",
       "react Kit": "PRONTO",
-      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-dropdown--documentazione",
+      "react Kit - url": "https://italia.github.io/design-react-kit/latest/?path=/docs/documentazione-componenti-dropdown--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
       "title": "`Dropdown` - check a11y e status",
@@ -545,6 +586,7 @@
     {
       "amichevole con lettori di schermo": "PRONTO",
       "angular Kit": "PRONTO",
+      "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/menu-di-navigazione/footer",
       "assignees": [
         "Fupete"
       ],
@@ -557,11 +599,12 @@
         "title": "`Footer` - check a11y e status",
         "type": "DraftIssue"
       },
+      "dev Kit Italia": "PRONTO",
+      "dev Kit Italia - url": "https://italia.github.io/dev-kit-italia/?path=/docs/componenti-footer--documentazione",
       "id": "PVTI_lADOAOqloM4AcXblzgMjwZc",
       "navigabile": "PRONTO",
-      "notes / More": "Alcune incongruenze di contenuti e spazi da verificare: in UI Kit Italia ci sono cose in più (es: newsletter, presente solo in React Kit ma non in BSI). — In UI Kit Italia c'è anche una variante \"Alternate\" non presente in sviluppo. ",
       "react Kit": "PRONTO",
-      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-menu-di-navigazione-footer--documentazione",
+      "react Kit - url": "https://italia.github.io/design-react-kit/latest/?path=/docs/documentazione-menu-di-navigazione-footer--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
       "title": "`Footer` - check a11y e status",
@@ -572,7 +615,7 @@
     {
       "amichevole con lettori di schermo": "PRONTO",
       "angular Kit": "PRONTO",
-      "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/form-input",
+      "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/form/form-input",
       "assignees": [
         "Fupete"
       ],
@@ -585,12 +628,14 @@
         "title": "`Form` - check a11y e status",
         "type": "DraftIssue"
       },
+      "dev Kit Italia": "PRONTO",
+      "dev Kit Italia - url": "https://italia.github.io/dev-kit-italia/?path=/docs/componenti-form--documentazione",
       "id": "PVTI_lADOAOqloM4AcXblzgMjwZo",
       "navigabile": "PRONTO",
-      "notes / Issues": "https://github.com/italia/design-ui-kit/issues/118 — https://github.com/italia/bootstrap-italia/issues/1403 — https://github.com/italia/design-react-kit/issues/1154",
+      "notes / Issues": "https://github.com/italia/design-ui-kit/issues/118 — https://github.com/italia/bootstrap-italia/issues/1403",
       "notes / More": "In Angular kit ci sono cose sotto Form Input. — La variante Angular kit \"Interazione con Form Input dotato di validazione Model Driven\" sarebbe utile anche in Bootstrap Italia e React kit",
-      "react Kit": "DA RIVEDERE",
-      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-form--documentazione",
+      "react Kit": "PRONTO",
+      "react Kit - url": "https://italia.github.io/design-react-kit/latest/?path=/docs/documentazione-form--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
       "title": "`Form` - check a11y e status",
@@ -600,7 +645,7 @@
     {
       "amichevole con lettori di schermo": "PRONTO",
       "angular Kit": "PRONTO",
-      "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/forward",
+      "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/menu-di-navigazione/forward",
       "assignees": [
         "Fupete"
       ],
@@ -613,10 +658,12 @@
         "title": "`Forward` - check a11y e status",
         "type": "DraftIssue"
       },
+      "dev Kit Italia": "PRONTO",
+      "dev Kit Italia - url": "https://italia.github.io/dev-kit-italia/?path=/docs/componenti-forward--documentazione",
       "id": "PVTI_lADOAOqloM4AcXblzgMjwZ8",
       "navigabile": "PRONTO",
       "react Kit": "PRONTO",
-      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-menu-di-navigazione-forward--documentazione",
+      "react Kit - url": "https://italia.github.io/design-react-kit/latest/?path=/docs/documentazione-menu-di-navigazione-forward--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
       "title": "`Forward` - check a11y e status",
@@ -627,7 +674,7 @@
     {
       "amichevole con lettori di schermo": "PRONTO",
       "angular Kit": "PRONTO",
-      "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/header",
+      "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/menu-di-navigazione/header",
       "assignees": [
         "Fupete"
       ],
@@ -640,12 +687,13 @@
         "title": "`Header` - check a11y e status",
         "type": "DraftIssue"
       },
+      "dev Kit Italia": "DA FARE",
       "id": "PVTI_lADOAOqloM4AcXblzgMjwaI",
       "navigabile": "PRONTO",
       "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/978 ",
       "notes / More": "In UI Kit Italia c'è anche la versione \"loggata\" dello slim header, non mi pare sia nei framework di sviluppo. ",
       "react Kit": "PRONTO",
-      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-menu-di-navigazione-header--documentazione",
+      "react Kit - url": "https://italia.github.io/design-react-kit/latest/?path=/docs/documentazione-menu-di-navigazione-header--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
       "title": "`Header` - check a11y e status",
@@ -668,11 +716,13 @@
         "title": "`Hero` - check a11y e status",
         "type": "DraftIssue"
       },
+      "dev Kit Italia": "PRONTO",
+      "dev Kit Italia - url": "https://italia.github.io/dev-kit-italia/?path=/docs/componenti-hero--documentazione",
       "id": "PVTI_lADOAOqloM4AcXblzgMjwaY",
       "navigabile": "PRONTO",
       "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1175",
       "react Kit": "PRONTO",
-      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-menu-di-navigazione-hero--documentazione",
+      "react Kit - url": "https://italia.github.io/design-react-kit/latest/?path=/docs/documentazione-menu-di-navigazione-hero--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
       "title": "`Hero` - check a11y e status",
@@ -682,12 +732,12 @@
     },
     {
       "amichevole con lettori di schermo": "PRONTO",
-      "angular Kit": "DA RIVEDERE",
-      "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/form-input",
+      "angular Kit": "PRONTO",
+      "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/form/form-input",
       "assignees": [
         "Fupete"
       ],
-      "bootstrap Italia": "DA RIVEDERE",
+      "bootstrap Italia": "PRONTO",
       "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/form/input/",
       "comprensibile": "PRONTO",
       "content": {
@@ -696,23 +746,24 @@
         "title": "`Input` - check a11y e status",
         "type": "DraftIssue"
       },
+      "dev Kit Italia": "PRONTO",
+      "dev Kit Italia - url": "https://italia.github.io/dev-kit-italia/?path=/docs/componenti-form-input--documentazione",
       "id": "PVTI_lADOAOqloM4AcXblzgMjwas",
       "navigabile": "PRONTO",
-      "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1387",
-      "notes / More": "In UI Kit Italia è presente anche il componente \"To be\". Decidere roadmap. ",
-      "react Kit": "DA RIVEDERE",
-      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-form-input--documentazione",
+      "notes / More": "In UI Kit Italia è presente anche il componente \"To be\" che sarà integrato in BSI v3.",
+      "react Kit": "PRONTO",
+      "react Kit - url": "https://italia.github.io/design-react-kit/latest/?path=/docs/documentazione-form-input--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
       "title": "`Input` - check a11y e status",
-      "uI Kit Italia": "DA RIVEDERE",
+      "uI Kit Italia": "PRONTO",
       "uI Kit Italia - url": "https://www.figma.com/community/file/1105848677422572920",
       "visivamente accessibile": "PRONTO"
     },
     {
       "amichevole con lettori di schermo": "PRONTO",
       "angular Kit": "PRONTO",
-      "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/list",
+      "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/organizzare-i-contenuti/list",
       "assignees": [
         "Fupete"
       ],
@@ -725,10 +776,12 @@
         "title": "`List` - check a11y e status",
         "type": "DraftIssue"
       },
+      "dev Kit Italia": "PRONTO",
+      "dev Kit Italia - url": "https://italia.github.io/dev-kit-italia/?path=/docs/componenti-list--documentazione",
       "id": "PVTI_lADOAOqloM4AcXblzgMjwbY",
       "navigabile": "PRONTO",
       "react Kit": "PRONTO",
-      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-organizzare-i-contenuti-liste--documentazione",
+      "react Kit - url": "https://italia.github.io/design-react-kit/latest/?path=/docs/documentazione-organizzare-i-contenuti-liste--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
       "title": "`List` - check a11y e status",
@@ -739,7 +792,7 @@
     {
       "amichevole con lettori di schermo": "PRONTO",
       "angular Kit": "PRONTO",
-      "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/megamenu",
+      "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/menu-di-navigazione/megamenu",
       "assignees": [
         "Fupete"
       ],
@@ -752,10 +805,12 @@
         "title": "`Megamenu` - check a11y e status",
         "type": "DraftIssue"
       },
+      "dev Kit Italia": "PRONTO",
+      "dev Kit Italia - url": "https://italia.github.io/dev-kit-italia/?path=/docs/componenti-megamenu--documentazione",
       "id": "PVTI_lADOAOqloM4AcXblzgMjwb8",
       "navigabile": "PRONTO",
       "react Kit": "PRONTO",
-      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-menu-di-navigazione-megamenu--documentazione",
+      "react Kit - url": "https://italia.github.io/design-react-kit/latest/?path=/docs/documentazione-menu-di-navigazione-megamenu--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
       "title": "`Megamenu` - check a11y e status",
@@ -764,13 +819,13 @@
       "visivamente accessibile": "PRONTO"
     },
     {
-      "amichevole con lettori di schermo": "IN REVIEW",
+      "amichevole con lettori di schermo": "PRONTO",
       "angular Kit": "PRONTO",
       "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/modal",
       "assignees": [
         "Fupete"
       ],
-      "bootstrap Italia": "DA RIVEDERE A11Y",
+      "bootstrap Italia": "PRONTO",
       "bootstrap Italia - url": "https://italia.github.io/bootstrap-italia/docs/componenti/modale/",
       "comprensibile": "PRONTO",
       "content": {
@@ -779,11 +834,13 @@
         "title": "`Modal` - check a11y e status",
         "type": "DraftIssue"
       },
+      "dev Kit Italia": "PRONTO",
+      "dev Kit Italia - url": "https://italia.github.io/dev-kit-italia/?path=/docs/componenti-modal--documentazione",
       "id": "PVTI_lADOAOqloM4AcXblzgMjwcM",
       "navigabile": "PRONTO",
-      "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1176 — https://github.com/italia/design-ui-kit/issues/183",
-      "react Kit": "DA RIVEDERE A11Y",
-      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-modale--documentazione",
+      "notes / Issues": "https://github.com/italia/design-ui-kit/issues/183",
+      "react Kit": "PRONTO",
+      "react Kit - url": "https://italia.github.io/design-react-kit/latest/?path=/docs/documentazione-componenti-modale--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
       "title": "`Modal` - check a11y e status",
@@ -792,9 +849,9 @@
       "visivamente accessibile": "PRONTO"
     },
     {
-      "amichevole con lettori di schermo": "IN REVIEW",
+      "amichevole con lettori di schermo": "PRONTO",
       "angular Kit": "PRONTO",
-      "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/navscroll",
+      "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/menu-di-navigazione/navscroll",
       "assignees": [
         "Fupete"
       ],
@@ -807,11 +864,13 @@
         "title": "`Navscroll` - check a11y e status",
         "type": "DraftIssue"
       },
+      "dev Kit Italia": "PRONTO",
+      "dev Kit Italia - url": "https://italia.github.io/dev-kit-italia/?path=/docs/componenti-navscroll--documentazione",
       "id": "PVTI_lADOAOqloM4AcXblzgMjwcs",
-      "navigabile": "IN REVIEW",
+      "navigabile": "PRONTO",
       "notes / Issues": "https://github.com/italia/design-react-kit/issues/1188",
-      "react Kit": "DA RIVEDERE A11Y",
-      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-menu-di-navigazione-navscroll--documentazione",
+      "react Kit": "PRONTO",
+      "react Kit - url": "https://italia.github.io/design-react-kit/latest/?path=/docs/documentazione-menu-di-navigazione-navscroll--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
       "title": "`Navscroll` - check a11y e status",
@@ -835,11 +894,12 @@
         "title": "`Notifications` - check a11y e status",
         "type": "DraftIssue"
       },
+      "dev Kit Italia": "DA FARE",
       "id": "PVTI_lADOAOqloM4AcXblzgMjwdM",
       "navigabile": "IN REVIEW",
       "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1177 — https://github.com/italia/bootstrap-italia/issues/1178 — https://github.com/italia/design-ui-kit/issues/139",
       "react Kit": "DA COMPLETARE VARIANTI",
-      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-notification--documentazione",
+      "react Kit - url": "https://italia.github.io/design-react-kit/latest/?path=/docs/documentazione-componenti-notification--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
       "title": "`Notifications` - check a11y e status",
@@ -850,7 +910,7 @@
     {
       "amichevole con lettori di schermo": "PRONTO",
       "angular Kit": "PRONTO",
-      "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/form-input",
+      "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/form/form-input",
       "assignees": [
         "Fupete"
       ],
@@ -863,11 +923,13 @@
         "title": "`Number input` - check a11y e status",
         "type": "DraftIssue"
       },
+      "dev Kit Italia": "PRONTO",
+      "dev Kit Italia - url": "https://italia.github.io/dev-kit-italia/?path=/docs/componenti-form-number-input--documentazione",
       "id": "PVTI_lADOAOqloM4AcXblzgMjweI",
       "navigabile": "PRONTO",
       "notes / More": "In Angular cose sotto Form Input.",
       "react Kit": "PRONTO",
-      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-form-inputnumerico--documentazione",
+      "react Kit - url": "https://italia.github.io/design-react-kit/latest/?path=/docs/documentazione-form-inputnumerico--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
       "title": "`Number input` - check a11y e status",
@@ -890,6 +952,8 @@
         "title": "`Overlay` - check a11y e status",
         "type": "DraftIssue"
       },
+      "dev Kit Italia": "PRONTO",
+      "dev Kit Italia - url": "https://italia.github.io/dev-kit-italia/?path=/docs/componenti-overlay--documentazione",
       "id": "PVTI_lADOAOqloM4AcXblzgMjweU",
       "navigabile": "PRONTO",
       "notes / Issues": "https://github.com/italia/design-ui-kit/issues/123",
@@ -918,11 +982,13 @@
         "title": "`Pagination` - check a11y e status",
         "type": "DraftIssue"
       },
+      "dev Kit Italia": "PRONTO",
+      "dev Kit Italia - url": "https://italia.github.io/dev-kit-italia/?path=/docs/componenti-pagination--documentazione",
       "id": "PVTI_lADOAOqloM4AcXblzgMjwew",
       "navigabile": "PRONTO",
       "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1170 — https://github.com/italia/bootstrap-italia/issues/1171",
       "react Kit": "DA RIVEDERE A11Y",
-      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-pager--documentazione",
+      "react Kit - url": "https://italia.github.io/design-react-kit/latest/?path=/docs/documentazione-componenti-pager--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
       "title": "`Pagination` - check a11y e status",
@@ -946,12 +1012,14 @@
         "title": "`Popover` - check a11y e status",
         "type": "DraftIssue"
       },
+      "dev Kit Italia": "PRONTO",
+      "dev Kit Italia - url": "https://italia.github.io/dev-kit-italia/?path=/docs/componenti-popover--documentazione",
       "id": "PVTI_lADOAOqloM4AcXblzgMjwfA",
       "navigabile": "IN REVIEW",
       "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1180 — https://github.com/italia/bootstrap-italia/issues/1181",
       "notes / More": "Sarebbe da capire se usare sul pulsante \"aria-expanded\" per settare la visibilità del popover e \"aria-controls\" per gestire la navigazione al contenuto (vedi carbon) — Su UI Kit Italia ci sono le varianti disabilitate, non necessarie — Il popover per link disabilitati, e più che altro, il popover all'hover, non sono accessibili da tastiera. Valutare di integrare documentazione con un disclaimer. O deprecarli. — Le varianti in Angular kit non sono complete. ",
       "react Kit": "PRONTO",
-      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-popover--documentazione",
+      "react Kit - url": "https://italia.github.io/design-react-kit/latest/?path=/docs/documentazione-componenti-popover--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
       "title": "`Popover` - check a11y e status",
@@ -975,12 +1043,14 @@
         "title": "`Progress indicators` - check a11y e status",
         "type": "DraftIssue"
       },
+      "dev Kit Italia": "PRONTO",
+      "dev Kit Italia - url": "https://italia.github.io/dev-kit-italia/?path=/docs/componenti-progress--documentazione",
       "id": "PVTI_lADOAOqloM4AcXblzgMjwf0",
       "navigabile": "PRONTO",
       "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1219",
       "notes / More": "In React e Angular kit non è presente la variante Ciambelle — Integrare doc varianti di colore con callout sul tema colore semantico? ",
       "react Kit": "DA COMPLETARE VARIANTI",
-      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-progress--documentazione",
+      "react Kit - url": "https://italia.github.io/design-react-kit/latest/?path=/docs/documentazione-componenti-progress--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
       "title": "`Progress indicators` - check a11y e status",
@@ -991,7 +1061,7 @@
     {
       "amichevole con lettori di schermo": "PRONTO",
       "angular Kit": "DA COMPLETARE VARIANTI",
-      "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/radio",
+      "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/form/radio",
       "assignees": [
         "Fupete"
       ],
@@ -1004,11 +1074,13 @@
         "title": "`Radio button` - check a11y e status",
         "type": "DraftIssue"
       },
+      "dev Kit Italia": "PRONTO",
+      "dev Kit Italia - url": "https://italia.github.io/dev-kit-italia/?path=/docs/componenti-form-radio-button--documentazione",
       "id": "PVTI_lADOAOqloM4AcXblzgMjwgU",
       "navigabile": "PRONTO",
       "notes / More": "In Angular manca la variante \"gruppi\" con radio a destra, ma c'è una variante Radio con link nella label che non è altrove. Di quest'ultima è dubbia l'a11y. ",
       "react Kit": "PRONTO",
-      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-form-radio--documentazione",
+      "react Kit - url": "https://italia.github.io/design-react-kit/latest/?path=/docs/documentazione-form-radio--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
       "title": "`Radio button` - check a11y e status",
@@ -1032,11 +1104,13 @@
         "title": "`Rating` - check a11y e status",
         "type": "DraftIssue"
       },
+      "dev Kit Italia": "PRONTO",
+      "dev Kit Italia - url": "https://italia.github.io/dev-kit-italia/?path=/docs/componenti-rating--documentazione",
       "id": "PVTI_lADOAOqloM4AcXblzgMjwg0",
       "navigabile": "PRONTO",
       "notes / More": "C'è una discrepanza con UI Kit Italia, lì cè anche stellina outline per non ancora filled, nei framework di sviluppo no — Dovrebbe essere dentro la categoria Form nei framework di sviluppo BSI e React. Verificare.",
       "react Kit": "PRONTO",
-      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-rating--documentazione",
+      "react Kit - url": "https://italia.github.io/design-react-kit/latest/?path=/docs/documentazione-componenti-rating--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
       "title": "`Rating` - check a11y e status",
@@ -1059,11 +1133,13 @@
         "title": "`Sections` - check a11y e status",
         "type": "DraftIssue"
       },
+      "dev Kit Italia": "PRONTO",
+      "dev Kit Italia - url": "https://italia.github.io/dev-kit-italia/?path=/docs/componenti-section--documentazione",
       "id": "PVTI_lADOAOqloM4AcXblzgMjwhE",
       "navigabile": "PRONTO",
       "notes / More": "Da valutare se anche a UI KIt Italia e Angular kit aggiungere un componente container Sections che possa avere gi spaziature e auto-layout coerenti.",
       "react Kit": "PRONTO",
-      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-section--documentazione",
+      "react Kit - url": "https://italia.github.io/design-react-kit/latest/?path=/docs/documentazione-componenti-section--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
       "title": "`Sections` - check a11y e status",
@@ -1073,7 +1149,7 @@
     {
       "amichevole con lettori di schermo": "PRONTO",
       "angular Kit": "PRONTO",
-      "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/select",
+      "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/form/select",
       "assignees": [
         "Fupete"
       ],
@@ -1086,11 +1162,13 @@
         "title": "`Select` - check a11y e status",
         "type": "DraftIssue"
       },
+      "dev Kit Italia": "PRONTO",
+      "dev Kit Italia - url": "https://italia.github.io/dev-kit-italia/?path=/docs/componenti-form-select--documentazione",
       "id": "PVTI_lADOAOqloM4AcXblzgMjwhk",
       "navigabile": "PRONTO",
-      "notes / More": "In UI Kit Italia è presente anche il componente \"To be\". Decidere roadmap. ",
+      "notes / More": "In UI Kit Italia è presente anche il componente \"To be\" che sarà integrato in BSI v3.",
       "react Kit": "PRONTO",
-      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-form-select--documentazione",
+      "react Kit - url": "https://italia.github.io/design-react-kit/latest/?path=/docs/documentazione-form-select--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
       "title": "`Select` - check a11y e status",
@@ -1101,7 +1179,7 @@
     {
       "amichevole con lettori di schermo": "IN REVIEW",
       "angular Kit": "DA RIVEDERE A11Y",
-      "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/sidebar",
+      "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/menu-di-navigazione/sidebar",
       "assignees": [
         "Fupete"
       ],
@@ -1114,11 +1192,13 @@
         "title": "`Sidebar` - check a11y e status",
         "type": "DraftIssue"
       },
+      "dev Kit Italia": "PRONTO",
+      "dev Kit Italia - url": "https://italia.github.io/dev-kit-italia/?path=/docs/componenti-sidebar--documentazione",
       "id": "PVTI_lADOAOqloM4AcXblzgMjwh8",
       "navigabile": "PRONTO",
       "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1198",
       "react Kit": "DA RIVEDERE A11Y",
-      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-sidebar--documentazione",
+      "react Kit - url": "https://italia.github.io/design-react-kit/latest/?path=/docs/documentazione-componenti-sidebar--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
       "title": "`Sidebar` - check a11y e status",
@@ -1129,7 +1209,7 @@
     {
       "amichevole con lettori di schermo": "PRONTO",
       "angular Kit": "PRONTO",
-      "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/skiplink",
+      "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/menu-di-navigazione/skiplink",
       "assignees": [
         "Fupete"
       ],
@@ -1142,10 +1222,12 @@
         "title": "`Skiplinks` - check a11y e status",
         "type": "DraftIssue"
       },
+      "dev Kit Italia": "PRONTO",
+      "dev Kit Italia - url": "https://italia.github.io/dev-kit-italia/?path=/docs/componenti-skiplinks--documentazione",
       "id": "PVTI_lADOAOqloM4AcXblzgMjwiU",
       "navigabile": "PRONTO",
       "react Kit": "PRONTO",
-      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-skiplinks--documentazione",
+      "react Kit - url": "https://italia.github.io/design-react-kit/latest/?path=/docs/documentazione-componenti-skiplinks--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
       "title": "`Skiplinks` - check a11y e status",
@@ -1169,11 +1251,12 @@
         "title": "`Steppers` - check a11y e status",
         "type": "DraftIssue"
       },
+      "dev Kit Italia": "DA FARE",
       "id": "PVTI_lADOAOqloM4AcXblzgMjwi8",
       "navigabile": "PRONTO",
       "notes / More": "Angular ha il tick confermato in posizione sbagliata — UI Kit Italia ha meno varianti, più deciso nell'uso dei pulsanti. Da valutare di aggiornare i framework dev, specie a valle di un lavoro per il design pattern form multi-step da fare. ",
       "react Kit": "PRONTO",
-      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-stepper--documentazione",
+      "react Kit - url": "https://italia.github.io/design-react-kit/latest/?path=/docs/documentazione-componenti-stepper--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
       "title": "`Steppers` - check a11y e status",
@@ -1196,6 +1279,8 @@
         "title": "`Sticky` - check a11y e status",
         "type": "DraftIssue"
       },
+      "dev Kit Italia": "PRONTO",
+      "dev Kit Italia - url": "https://italia.github.io/dev-kit-italia/?path=/docs/componenti-sticky--documentazione",
       "id": "PVTI_lADOAOqloM4AcXblzgMjwjI",
       "navigabile": "PRONTO",
       "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/978",
@@ -1205,12 +1290,12 @@
       "status a11y check": "Done",
       "title": "`Sticky` - check a11y e status",
       "uI Kit Italia": "NON PRESENTE",
-      "visivamente accessibile": "IN REVIEW"
+      "visivamente accessibile": "PRONTO"
     },
     {
       "amichevole con lettori di schermo": "PRONTO",
       "angular Kit": "DA RIVEDERE A11Y",
-      "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/table",
+      "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/organizzare-i-contenuti/table",
       "assignees": [
         "Fupete"
       ],
@@ -1223,12 +1308,14 @@
         "title": "`Tables`- check a11y e status",
         "type": "DraftIssue"
       },
+      "dev Kit Italia": "PRONTO",
+      "dev Kit Italia - url": "https://italia.github.io/dev-kit-italia/?path=/docs/componenti-tables--documentazione",
       "id": "PVTI_lADOAOqloM4AcXblzgSKjNY",
       "navigabile": "PRONTO",
       "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1209",
       "notes / More": "La variante con piede (usa tfoot) non ha styling particolare — In Angular kit è presente una Tabella con paginazione non disponibile altrove. Da verificarne a11y. ",
       "react Kit": "DA RIVEDERE A11Y",
-      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-tables--documentazione",
+      "react Kit - url": "https://italia.github.io/design-react-kit/latest/?path=/docs/documentazione-componenti-tables--documentazione",
       "status a11y check": "Done",
       "title": "`Tables`- check a11y e status",
       "uI Kit Italia": "PRONTO",
@@ -1251,11 +1338,13 @@
         "title": "`Tabs` - check a11y e status",
         "type": "DraftIssue"
       },
+      "dev Kit Italia": "PRONTO",
+      "dev Kit Italia - url": "https://italia.github.io/dev-kit-italia/?path=/docs/componenti-tabs--documentazione",
       "id": "PVTI_lADOAOqloM4AcXblzgMjwjM",
       "navigabile": "PRONTO",
       "notes / More": "In Angular kit non ci sono tab verticali e variante card. In React kit non c'è variante card e c'è una variante in più Pulsanti. Ne in Angular ne in React kit ci sono varianti bottom o right.",
       "react Kit": "PRONTO",
-      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-tab--documentazione",
+      "react Kit - url": "https://italia.github.io/design-react-kit/latest/?path=/docs/documentazione-componenti-tab--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
       "title": "`Tabs` - check a11y e status",
@@ -1278,11 +1367,12 @@
         "title": "`Thumbnav` - check a11y e status",
         "type": "DraftIssue"
       },
+      "dev Kit Italia": "DA FARE",
       "id": "PVTI_lADOAOqloM4AcXblzgMjwjk",
       "navigabile": "PRONTO",
       "notes / More": "Verificare in UI Kit Italia l'opportunità di ripensare le \"griglie\" immagine, di navigazione o meno. ",
       "react Kit": "PRONTO",
-      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-menu-di-navigazione-thumbnav--documentazione",
+      "react Kit - url": "https://italia.github.io/design-react-kit/latest/?path=/docs/documentazione-menu-di-navigazione-thumbnav--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
       "title": "`Thumbnav` - check a11y e status",
@@ -1305,11 +1395,13 @@
         "title": "`Timeline` - check a11y e status",
         "type": "DraftIssue"
       },
+      "dev Kit Italia": "PRONTO",
+      "dev Kit Italia - url": "https://italia.github.io/dev-kit-italia/?path=/docs/componenti-timeline--documentazione",
       "id": "PVTI_lADOAOqloM4AcXblzgMjwj8",
       "navigabile": "PRONTO",
       "notes / More": "Nel template su Designers Italia la classe h-100 applicata al body fa sì che si \"rompa\" la visualizzazione fullscreen di BSI — Sarebbe utile la versione orizzontale sviluppata per innovazione.gov.it",
       "react Kit": "PRONTO",
-      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-timeline--documentazione",
+      "react Kit - url": "https://italia.github.io/design-react-kit/latest/?path=/docs/documentazione-componenti-timeline--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
       "title": "`Timeline` - check a11y e status",
@@ -1320,7 +1412,7 @@
     {
       "amichevole con lettori di schermo": "PRONTO",
       "angular Kit": "PRONTO",
-      "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/form-input",
+      "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/form/form-input",
       "assignees": [
         "Fupete"
       ],
@@ -1333,11 +1425,13 @@
         "title": "`Timepicker` - check a11y e status",
         "type": "DraftIssue"
       },
+      "dev Kit Italia": "PRONTO",
+      "dev Kit Italia - url": "https://italia.github.io/dev-kit-italia/?path=/docs/componenti-form-timepicker--documentazione",
       "id": "PVTI_lADOAOqloM4AcXblzgMjwkE",
       "navigabile": "PRONTO",
       "notes / More": "In Angular kit cose sotto Form Input. In React kit sotto input.",
       "react Kit": "PRONTO",
-      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/story/documentazione-form-input--input-hourpicker",
+      "react Kit - url": "https://italia.github.io/design-react-kit/latest/?path=/story/documentazione-form-input--input-hourpicker",
       "status": "Todo",
       "status a11y check": "Done",
       "title": "`Timepicker` - check a11y e status",
@@ -1348,7 +1442,7 @@
     {
       "amichevole con lettori di schermo": "PRONTO",
       "angular Kit": "DA COMPLETARE VARIANTI",
-      "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/toggle",
+      "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/form/toggle",
       "assignees": [
         "Fupete"
       ],
@@ -1361,11 +1455,13 @@
         "title": "`Toggles` - check a11y e status",
         "type": "DraftIssue"
       },
+      "dev Kit Italia": "PRONTO",
+      "dev Kit Italia - url": "https://italia.github.io/dev-kit-italia/?path=/docs/componenti-form-toggle--documentazione",
       "id": "PVTI_lADOAOqloM4AcXblzgMjwkw",
       "navigabile": "PRONTO",
-      "notes / More": "In UI Kit Italia è presente anche il componente \"To be\". Decidere roadmap. — In Angular kit manca la variante \"gruppi\"",
+      "notes / More": "In UI Kit Italia è presente anche il componente \"To be\" che sarà integrato in BSI v3. — In Angular kit manca la variante \"gruppi\"",
       "react Kit": "PRONTO",
-      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-form-toggles--documentazione",
+      "react Kit - url": "https://italia.github.io/design-react-kit/latest/?path=/docs/documentazione-form-toggles--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
       "title": "`Toggles` - check a11y e status",
@@ -1388,11 +1484,12 @@
         "title": "`Toolbar` - check a11y e status",
         "type": "DraftIssue"
       },
+      "dev Kit Italia": "DA FARE",
       "id": "PVTI_lADOAOqloM4AcXblzgMjwlA",
       "navigabile": "PRONTO",
       "notes / Issues": "https://github.com/italia/design-ui-kit/issues/135",
       "react Kit": "PRONTO",
-      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-toolbar--documentazione",
+      "react Kit - url": "https://italia.github.io/design-react-kit/latest/?path=/docs/documentazione-componenti-toolbar--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
       "title": "`Toolbar` - check a11y e status",
@@ -1415,11 +1512,13 @@
         "title": "`Tooltip` - check a11y e status",
         "type": "DraftIssue"
       },
+      "dev Kit Italia": "PRONTO",
+      "dev Kit Italia - url": "https://italia.github.io/dev-kit-italia/?path=/docs/componenti-tooltip--documentazione",
       "id": "PVTI_lADOAOqloM4AcXblzgMjwmo",
       "navigabile": "IN REVIEW",
       "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1180 ",
       "react Kit": "PRONTO",
-      "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-componenti-tooltip--documentazione",
+      "react Kit - url": "https://italia.github.io/design-react-kit/latest/?path=/docs/documentazione-componenti-tooltip--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
       "title": "`Tooltip` - check a11y e status",
@@ -1430,6 +1529,7 @@
     {
       "amichevole con lettori di schermo": "IN REVIEW",
       "angular Kit": "PRONTO",
+      "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/form/transfer",
       "assignees": [
         "Fupete"
       ],
@@ -1442,10 +1542,12 @@
         "title": "`Transfer` - check a11y e status",
         "type": "DraftIssue"
       },
+      "dev Kit Italia": "DA FARE",
       "id": "PVTI_lADOAOqloM4AcXblzgMjwng",
       "navigabile": "DA RIVEDERE",
       "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1187 — https://github.com/italia/bootstrap-italia/issues/1188 — https://github.com/italia/bootstrap-italia/issues/1189 — https://github.com/italia/bootstrap-italia/issues/1190 — https://github.com/italia/design-ui-kit/issues/151",
-      "react Kit": "NON PRESENTE",
+      "react Kit": "PRONTO",
+      "react Kit - url": "https://italia.github.io/design-react-kit/latest/?path=/docs/documentazione-form-transfer--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
       "title": "`Transfer` - check a11y e status",
@@ -1455,7 +1557,7 @@
     {
       "amichevole con lettori di schermo": "PRONTO",
       "angular Kit": "DA COMPLETARE VARIANTI",
-      "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/upload",
+      "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/form/upload",
       "assignees": [
         "Fupete"
       ],
@@ -1468,10 +1570,12 @@
         "title": "`Upload` - check a11y e status",
         "type": "DraftIssue"
       },
+      "dev Kit Italia": "DA FARE",
       "id": "PVTI_lADOAOqloM4AcXblzgMjwnk",
       "navigabile": "PRONTO",
       "notes / More": "La versione con \"Animazione\" per simularne il funzionamento funziona solo al click del mouse, non via tastiera. — In Angular kit manca la versione Avatar",
-      "react Kit": "NON PRESENTE",
+      "react Kit": "PRONTO",
+      "react Kit - url": "https://italia.github.io/design-react-kit/latest/?path=/docs/documentazione-form-upload--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
       "title": "`Upload` - check a11y e status",
@@ -1482,6 +1586,7 @@
     {
       "amichevole con lettori di schermo": "PRONTO",
       "angular Kit": "PRONTO",
+      "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/video-player",
       "assignees": [
         "Fupete"
       ],
@@ -1494,9 +1599,12 @@
         "title": "`Video player` - check a11y e status",
         "type": "DraftIssue"
       },
+      "dev Kit Italia": "PRONTO",
+      "dev Kit Italia - url": "https://italia.github.io/dev-kit-italia/?path=/docs/componenti-video-player--documentazione",
       "id": "PVTI_lADOAOqloM4AcXblzgMjwoU",
       "navigabile": "PRONTO",
       "react Kit": "PRONTO",
+      "react Kit - url": "https://italia.github.io/design-react-kit/latest/?path=/docs/documentazione-componenti-video--documentazione",
       "status": "Todo",
       "status a11y check": "Done",
       "title": "`Video player` - check a11y e status",
