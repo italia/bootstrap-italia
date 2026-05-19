@@ -61,7 +61,7 @@ Per ancorare un elemento alla parte alta della pagina è sufficiente applicare l
 
 ### Vertical Affix bottom
 
-Per ancorare un elemento alla parte alta della pagina è sufficiente applicare la classe `.affix-parent` all'elemento che lo contiene e la classe `.affix-bottom` all'elemento stesso.
+Per ancorare un elemento alla parte bassa della pagina è sufficiente applicare la classe `.affix-parent` all'elemento che lo contiene e la classe `.affix-bottom` all'elemento stesso.
 
 {% comment %}Example name: Verticale in basso{% endcomment %}
 {% capture example %}

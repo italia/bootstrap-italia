@@ -1,7 +1,25 @@
-@media (max-width: #{map-get($grid-breakpoints, lg)}) {
+@use 'sass:map';
+@use '../base/config' as *;
+@use '../base/variables' as *;
+
+// Component: headernavbartheme
+//
+// Description: Component styles for headernavbartheme
+//
+
+// Variables
+//
+
+// Properties
+//
+
+// Styles
+//
+
+@media (max-width: #{map.get($grid-breakpoints, lg)}) {
   .it-header-center-wrapper.theme-light + .it-header-navbar-wrapper {
     .custom-navbar-toggler .icon {
-      fill: $navigation-light-text-color;
+      fill: var(--#{$primar}icon-primary);
     }
   }
   .it-header-navbar-wrapper {
@@ -11,7 +29,7 @@
         .navbar-collapsable {
           // menu vrapper
           .menu-wrapper {
-            background: $navigation-dark-bg-color;
+            background: var(--#{$header-nav-background});
           }
           /*lista menu*/
           .navbar-nav {
@@ -112,7 +130,7 @@
 /*
 ++++++++++++++++++++++++++++++Desktop light Theme+++++++++++++++++++++++++++++++++++++++++++++++++
 */
-@media (min-width: #{map-get($grid-breakpoints, lg)}) {
+@media (min-width: #{map.get($grid-breakpoints, lg)}) {
   .it-header-navbar-wrapper {
     &.theme-light-desk {
       background: $navigation-light-bg-color;

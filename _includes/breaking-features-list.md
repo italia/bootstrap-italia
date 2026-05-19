@@ -1,3 +1,195 @@
+## 3.0.0
+
+[Changelog completo](https://github.com/italia/bootstrap-italia/releases/tag/v3.0.0) <svg class="icon steppers-success" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
+
+### Alert
+
+- Nel markup del componente il contenuto va incluso in un tag `<p>`. 
+- L'icona d'ora in poi va definita esplicitamente con il tag `<svg>` e la corretta semantica per l'accessibilità. 
+
+
+### Avatar
+
+- Nelle varianti avatar con testo i colori di fondo possono essere solo `.avatar-primary` e `.avatar-secondary`. Sono state rimosse le classi `.avatar-green`, `.avatar-orange` e `.avatar-red`.
+- Corretta l'icona nella variante Avatar con icona (`sprites.svg#it-user`).
+- Rimossi dagli esempi liste i colori di sfondo custom, ad esempio `.complementary-3-bg`.
+
+
+### Badge
+
+- Le classi che controllano il colore diventano specifiche per il componente e hanno cambiato nome, ad esempio le classi `.bg-secondary` e `.bg-white` diventano `.badge-secondary` e `.badge-inverse`.
+- Viene definita la classe `.badge-sm` per l'uso mirato all'intero di pulsanti.  
+
+
+### Breadcrumbs
+
+- Per la versione su sfondo scuro il colore delle icone dovrà essere impostato manualmente con la classe `.icon-inverse` per renderle visibili su sfondo scuro.
+
+
+### Buttons
+
+- Il nome delle varianti di dimensione ora coincide con UI Kit Italia: 
+  - Large (`.btn-lg`) diventa Grande (stessa classe `.btn-lg`).
+  - Small (`.btn-sm`) diventa Base (senza classe di dimensione specifica).
+  - Mini (`.btn-xs`) diventa Piccolo (stessa classe `.btn-xs`).
+- La classe `.btn-me` è stata sostituita a favore delle classi di spacing generico usando `.me-2`.
+- Nelle varianti con icona le classi che ne controllano il colore potrebbero aver cambiato nome, ad esempio `.icon-white` diventa `.icon-inverse`.
+
+
+### Callout
+
+- Il carattere di default del contenuto diventa senza grazie e con dimensione `16px`. 
+- È disponibile la nuova classe `.callout-big-text` per aumentare la dimensione del carattere del contenuto. 
+- È disponibile la nuova classe `.callout-primary`.
+- Le classi che controllano il colore diventano specifiche per il componente, ad esempio le classi `.success` e `.danger` diventano `.callout-success` e `.callout-danger`.
+- Sono state rimosse la classi `.important` e `.note` a favore delle varianti standard. 
+
+
+### Card
+
+- Per i metadati è stata rimossa la classe `.it-card-related` a favore del solo uso dell'elemento `<footer>` con classe `.it-card-footer` a seguire il corpo della card.
+- Usa un `<div>` con la sola classe `.it-card-actions` a seguire il corpo della card per ospitare link correlati e/o secondari.
+- È stata rimossa la classe `.chips-list` dall'elemento `<ul>` con classe `.it-card-chips` che ospita una lista di più argomenti.
+- La doppia classe `.card-profile` è stata sostituita da `.card-profile-content` per le card di tipo profilo.
+
+
+### Chips
+
+- È stata rimossa la classe `.chip-simple`.
+- Nelle chip con pulsante di chiusura il tag `<label>` diventa `<span>`.
+- Alle icone del pulsante di chiusura per le chip con classe `.chip-lg` viene aggiunta la classe `.icon-md`. 
+
+
+### Dropdown
+
+- Per quanto riguarda le icone le classi che ne controllano il colore potrebbero aver cambiato nome, ad esempio `.icon-white` diventa `.icon-inverse`.
+- Aggiunta classe `.dropdown-item` alla voce attiva nell'esempio di menu voci attive ed a tutti agli elementi dei menu dropdown laddove mancava.
+- Corretto markup dell'intestazione nel Menu con intestazioni e separatori, `<div>` diventa `<h4>`. Sarà da far attenzione alla corretta gerarchia in pagina di questa intestazione scegliendone il livello a seconda del contesto. 
+
+
+### Footer
+
+- Per la `<section>` di branding dell'ente: aggiunta classe `.pb-4`.
+- Per la `<section>` che ospita sitemap o link: aggiunta classe `.pt-2`. 
+  - Per i `<div>` interni di questa seconda sezione è stato corretto il responsive: rimossa classe `.col-md-3` e aggiunta la classe `.pb-3`.
+- Per la `<section>` che presenta dati dell'ente e contatti: cambiato da `.py-4` a `.pt-4`.
+  - Per i `<div>` interni di questa terza sezione sono state corrette le spaziature verticali: cambiato da `.pb-2` a `.mt-2` 
+- La classe che controlla il colore delle icone social ha cambiato nome: `.icon-white` diventa `.icon-inverse`.
+- Aggiunto il markup per mostrare il campo input per l'iscrizione alla newsletter.
+
+
+### Header
+
+- Rimossa la variante `theme-light-desk` per Header Nav, ora è possibile impostare il tema chiaro con la class `.theme-light` al tag `<nav class="it-header-navbar-wrapper">`.
+- Cambiata la dimensione del pulsante Accedi: cambiato classe da `.btn-sm` a `.btn-sx`.
+- Rimossa la classe `.ms-1` dall'icona `<svg>` che segue la voce Megamenu negli esempi.
+
+
+### Icone
+
+- Per le icone bianche da usare su sfondi scuri sono state rimosse le classi `.icon-light` e `.icon-white` a favore di `.icon-inverse`.
+
+
+### Input
+
+- Nel caso di input con icona o pulsanti, l'elemento `label` è stato spostato fuori dal contenitore `.input-group` per leggibilità del markup.
+- Nel paragrafo dimensioni sono stati integrati gli esempi con icone, pulsanti di invio e istruzioni specifiche.
+
+
+### Generale
+
+La versione 3.0.0 ha portato molte breaking changes sia a livello generale che a livello di singolo componente. Fai riferimento alla [guida alla migrazione dalla versione 2]({{ site.baseurl }}/docs/come-iniziare/migrazione-dalla-versione-2/).
+
+
+### Liste
+
+- Negli esempi di varianti lista con avatar è stata rimossa la classe `.size-lg` dai `<div>` con classe `.avatar`. 
+- Nelle liste con immagini sono state aggiunge le classi per controllare la dimensione dell'immagine sui `<div>` con classe `.it-thumb`: `.ratio` e `.ratio-16x9` con istruzioni su come cambiare quest'ultima con le classi specifiche per cambiare le proporzioni.
+- Nelle liste con azioni e freccia è definita esplicitamente la dimensione e il colore delle icone freccia aggiungendo le classi `.icon-primary` e `.icon-sm` rispettivamente dove necessario.
+
+
+### Megamenu
+
+
+- Rimosse varianti scure definite dalla presenza delle classi sul `<nav>` contenitore `.theme-light-desk` e `.theme-dark-mobile`.
+- La classe `.has-megamenu` non è più necessaria per attivare il megamenu, è sufficiente la presenza della classe `.megamenu` sull'elemento `<li>` che contiene il megamenu, e la classe `.megamenu-content` sull'elemento che contiene il contenuto del megamenu.
+- Il contenuto del megamenu ora ha classe `.megamenu-content` invece di `.megamenu`, e non ha più le classi `.pb-5 .pt-3 .py-lg-0`.
+- Nella parte descrittiva del megamenu contenuta nell'elemento `.description-content`, la classe `.ps-4` è stata sostituita da `.px-4` per garantire un padding coerente anche su mobile.
+- Nella variante con Call to action in basso: rimossa la classe `.justify-content-around` sul contenitore e aggiunta la classe `.flex-grow-1` agli elementi `<a>` con classe `.it-footer-link`.
+  
+
+### Modale
+
+- È stata rimossa la classe `.h5` dal titolo della modale `<h2>`.
+- È stata aggiunga la classe `.icon-lg` all'icona `<svg>` del pulsante di chiusura `.btn-close`.
+
+
+### Navscroll
+
+- La classe che controlla il colore dell'icona chevron per le varianti scure ha cambiato nome: `.icon-white` diventa `.icon-inverse`.
+- Aggiunta la classe `.it-navscroll-heading` al titolo della sezione.
+- Rinominata la classe `.icon-white` in `.icon-inverse` per le icone chevron delle varianti scure.
+
+
+### Notification
+
+- Rinominato il componente da `Notifiche` a `Notification`.
+- Aggiunta la classe `.notification-title` al titolo della notifica.
+- Aggiunta la classe `.icon-sm` all'icona `<svg>` del titolo della notifica.
+- Aggiunta la classe `.me-2` all'icona `<svg>` del titolo della notifica.
+- Aggiunta la classe `.icon-sm` all'icona `<svg>` del pulsante di chiusura `.btn-close`.
+
+
+### Paginazione
+
+- È stato corretto il colore delle icone chevron per gli elementi disabilitati sostituendo la classe `.icon-primary` con `.icon-disabled`.
+- È stato corretto l'esempio "Changer" aggiungendo la classe `.dropdown-item` che mancava sul primo elemento `.list-item`. 
+
+
+### Progress indicators
+
+
+- Nella variante "Pulsante con Progress Bar" la classe che controlla il colore dell'icona ha cambiato nome: `.icon-white` diventa `.icon-inverse`.
+  
+
+### Sections
+
+- Negli esempi sono stati rimossi dai contenitori delle colonne le classi di utility come `.pe-0`, `.pe-md-5` e `.font-serif`. 
+
+
+### Sidebar
+
+- Rimossi elementi `<span>` con classe `list-item-title-icon-wrapper`.
+- Nella variante con una lista di link primaria annidata è stata rimossa la classe `.large` dagli elementi `<a>` con classi `.list-item .medium`. 
+- Nelle varianti scure la classe che controlla il colore delle icone bianche ha cambiato nome: `.icon-white` diventa `.icon-inverse`.
+- Rimossa le classi `.right-icon` e `.right` dai link list item.
+
+
+### Steppers
+
+- Rimossa la classe `.no-line` per nascondere il bordo inferiore azzurro.
+- Aggiunta la classe `.btn-icon` ai pulsanti "Indietro" e "Avanti".
+- Il pulsante "Avanti" è sempre un `.btn-primary`.
+- Modificata la posizione del pulsante "Salva", ora posizionato in un righe a sé stante.
+
+
+### Toolbar
+
+- L'icona del dropdown è ora gestita con il tag `<svg>`
+- Il contenuto di ogni voce è racchiuso in un contenitore dedicato nel caso di versione con dropdown.
+- Modificata la gestione dell'ombreggiatura, altezza e posizione della toolbar.
+
+
+### Torna indietro
+
+- La classe che controlla il colore delle icone bianche ha cambiato nome: `.icon-white` diventa `.icon-inverse`.
+
+
+### Torna su
+
+- La classe che controlla il colore delle icone bianche ha cambiato nome: `.icon-white` diventa `.icon-inverse`.
+
+
 ## 2.16.0
 
 [Changelog completo](https://github.com/italia/bootstrap-italia/releases/tag/v2.16.0) <svg class="icon steppers-success" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
@@ -76,8 +268,9 @@ Le classi legacy di Bootstrap `.card` sono ora deprecate ma **saranno mantenute 
 
 ### Header
 
-La navbar presente negli esempi, quando aperta in versione mobile o a forte ingrandimento, è stata reimplementata come modale per migliorare l'accessibilità con le combinazioni principali di lettori di schermo, sistema operativo e browser. Modifiche principali: 
-- struttura: la navbar ora utilizza un pattern dialog con backdrop 
+La navbar presente negli esempi, quando aperta in versione mobile o a forte ingrandimento, è stata reimplementata come modale per migliorare l'accessibilità con le combinazioni principali di lettori di schermo, sistema operativo e browser. Modifiche principali:
+
+- struttura: la navbar ora utilizza un pattern dialog con backdrop
 - gerarchia visiva: la gestione `z-index` è allineata al componente modale
 - gestione del focus: implementato `focus-trap.js` per utenti da tastiera e lettori di schermo, e gestione inert
 - il comportamento è diverso se implementata dentro o fuori dall'elemento `main` di pagina (se presente)
@@ -87,8 +280,9 @@ Se hai personalizzato il CSS della navbar, rivedi le tue modifiche per verificar
 
 ### Megamenu
 
-La navbar presente negli esempi, quando aperta in versione mobile o a forte ingrandimento, è stata reimplementata come modale per migliorare l'accessibilità con le combinazioni principali di lettori di schermo, sistema operativo e browser. Modifiche principali: 
-- struttura: la navbar ora utilizza un pattern dialog con backdrop 
+La navbar presente negli esempi, quando aperta in versione mobile o a forte ingrandimento, è stata reimplementata come modale per migliorare l'accessibilità con le combinazioni principali di lettori di schermo, sistema operativo e browser. Modifiche principali:
+
+- struttura: la navbar ora utilizza un pattern dialog con backdrop
 - gerarchia visiva: la gestione `z-index` è allineata al componente modale
 - gestione del focus: implementato `focus-trap.js` per utenti da tastiera e lettori di schermo, e gestione inert
 - il comportamento è diverso se implementata dentro o fuori dall'elemento `main` di pagina (se presente)
@@ -111,8 +305,9 @@ Se hai personalizzato il CSS della navbar, rivedi le tue modifiche per verificar
 
 ### Sticky
 
-La navbar presente nel markup dell'esempio "Attivabile con target", quando aperta in versione mobile o a forte ingrandimento, è stata reimplementata come modale per migliorare l'accessibilità con le combinazioni principali di lettori di schermo, sistema operativo e browser. Modifiche principali: 
-- struttura: la navbar ora utilizza un pattern dialog con backdrop 
+La navbar presente nel markup dell'esempio "Attivabile con target", quando aperta in versione mobile o a forte ingrandimento, è stata reimplementata come modale per migliorare l'accessibilità con le combinazioni principali di lettori di schermo, sistema operativo e browser. Modifiche principali:
+
+- struttura: la navbar ora utilizza un pattern dialog con backdrop
 - gerarchia visiva: la gestione `z-index` è allineata al componente modale
 - gestione del focus: implementato `focus-trap.js` per utenti da tastiera e lettori di schermo, e gestione inert
 - il comportamento è diverso se implementata dentro o fuori dall'elemento `main` di pagina (se presente)
@@ -259,10 +454,11 @@ Il toggle del dropdown diventa `<button>` invece di `<a>`.
 
 ### Header
 
-- Il toggle del dropdown diventa `<button>` invece di `<a>`. 
+
+- Il toggle del dropdown diventa `<button>` invece di `<a>`.
 - Gli altri elementi `<a>` che si comportano come toggle dropdown (eg. scelta Lingua), hanno l'aggiunta dell'attributo `role="button"`.
 - Il markup del Megamenu cambia come nel nuovo componente, per approfondire andare alla [relativa pagina]({{site.baseurl}}/docs/menu-di-navigazione/megamenu/).
-
+  
 
 ### Input
 
@@ -277,11 +473,12 @@ Gli elementi di tipo `<a>` dei collapse necessitano l'aggiunta dell'attributo `r
 
 ### Megamenu
 
+
 - tutti gli esempi del componente, anche quelli integrati nel componente [header]({{ site.baseurl }}/docs/menu-di-navigazione/header/), sono stati rivisti: refactoring markup `HTML`, classi e stili nei file `_megamenu.scss`, `_navigation.scss`, `_headernavbar.scss`, `_headernavbartheme.scss`, `_navigationtheme.scss`
 - rimossi esempi "con sezioni"
-- rimosse classi `.it-megamenu-footer`, `.it-external`, `.it-more`, `.divider`, `h3`, `.link-list-heading` 
+- rimosse classi `.it-megamenu-footer`, `.it-external`, `.it-more`, `.divider`, `h3`, `.link-list-heading`
 - rimosse variabili obsolete e inutilizzate da `_variables.scss`
-
+  
 
 ### Navscroll
 
@@ -302,6 +499,19 @@ Gli elementi di tipo `<a>` dei collapse necessitano l'aggiunta dell'attributo `r
 ### Transfer
 
 Agli elementi di `<a>` occorre aggiungere l'attributo `role="button"`.
+
+
+## 2.7.0
+
+[Changelog completo](https://github.com/italia/bootstrap-italia/releases/tag/v2.7.0) <svg class="icon steppers-success" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
+
+### Tipografia
+
+- Reimpostata la dimensione del carattere di base su `16px` su `body`.
+- Sostituite le unità `em` con `rem`.
+- Aggiornati i valori `font-size` per corrispondere al nuovo calcolo dell'unità `rem`.
+- Rimosse le variabili obsolete e inutilizzate da `_variables.scss`.
+- Variabili specifiche dei componenti aggiornate e allineate a `UI Kit Italia v3`.
 
 
 ## 2.4.0

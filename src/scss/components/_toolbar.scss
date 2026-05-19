@@ -1,324 +1,297 @@
+@use '../base/config' as *;
+@use '../base/variables' as *;
+
+// Component: toolbar
+//
+// Description: Component styles for toolbar
+//
+
+// Variables
+//
+
+// Properties
+//
+
 .toolbar {
-  width: 100%;
-  height: 96px;
+  --#{$prefix}toolbar-bg: var(--#{$prefix}color-background-inverse); // Controls the toolbar list background color, using color tokens.
+  --#{$prefix}toolbar-divider-color: var(--#{$prefix}color-border-subtle); // Controls the toolbar divider color, using color tokens.
+  --#{$prefix}toolbar-link-color: var(--#{$prefix}color-text-secondary); // Controls the toolbar link color, using color tokens.
+  --#{$prefix}toolbar-icon-color: var(--#{$prefix}icon-secondary); // Controls the toolbar icon color, using color tokens.
+  --#{$prefix}toolbar-dropdown-padding-x: var(--#{$prefix}spacing-xxs); // Controls the toolbar dropdown padding x, using spacing tokens.
+  --#{$prefix}toolbar-dropdown-caret-color: var(--#{$prefix}icon-secondary); // Controls the toolbar dropdown caret color, using color tokens.
+  --#{$prefix}toolbar-dropdown-caret-size: var(--#{$prefix}spacing-3xs); // Controls the toolbar dropdown caret size, using spacing tokens.
+  --#{$prefix}toolbar-dropdown-shadow: var(--#{$prefix}elevation-low); // Controls the toolbar dropdown shadow, using elevation tokens.
+  --#{$prefix}toolbar-icon-font-size: var(--#{$prefix}icon-size-l); // Controls the toolbar icon font size, using color tokens.
+  --#{$prefix}toolbar-item-gap: var(--#{$prefix}spacing-xs); // Controls the toolbar item gap, using spacing tokens.
+  --#{$prefix}toolbar-more-icon-font-size: var(--#{$prefix}label-font-size-xs); // Controls the toolbar more icon font size, using typography tokens.
+  --#{$prefix}toolbar-badge-border-color: var(--#{$prefix}color-background-inverse); // Controls the toolbar badge border color, using color tokens.
+  --#{$prefix}toolbar-badge-background-color: var(--#{$prefix}color-background-primary); // Controls the toolbar badge background color, using color tokens.
+  --#{$prefix}toolbar-badge-border-radius: var(--#{$prefix}radius-circle); // Controls the toolbar badge border radius, using radius tokens.
+  --#{$prefix}toolbar-badge-text-color: var(--#{$prefix}color-text-inverse); // Controls the toolbar badge text color, using color tokens.
+  --#{$prefix}toolbar-badge-padding-x: var(--#{$prefix}spacing-3xs); // Controls the toolbar badge padding x, using spacing tokens.
+  --#{$prefix}toolbar-badge-font-size: var(--#{$prefix}label-font-size-xs); // Controls the toolbar badge font size, using typography tokens.
+  --#{$prefix}toolbar-label-margin-top: var(--#{$prefix}spacing-3xs); // Controls the toolbar label margin top, using spacing tokens.
+  --#{$prefix}toolbar-label-font-size: var(--#{$prefix}label-font-size-xs); // Controls the toolbar label font size, using typography tokens.
+  --#{$prefix}toolbar-padding-x: var(--#{$prefix}spacing-xs); // Controls the toolbar inner padding, using spacing tokens.
+  --#{$prefix}toolbar-padding-y: var(--#{$prefix}spacing-xs); // Controls the toolbar inner padding, using spacing tokens.
+  --#{$prefix}toolbar-shadow: var(--#{$prefix}elevation-medium); // Controls the toolbar shadow, using elevation tokens.
+}
+
+// Styles
+//
+
+/* stylelint-disable-next-line no-duplicate-selectors */
+.toolbar {
   position: relative;
+  width: 100%;
+  padding: var(--#{$prefix}toolbar-padding-y) var(--#{$prefix}toolbar-padding-x);
+  background-color: var(--#{$prefix}toolbar-bg);
+  box-shadow: var(--#{$prefix}toolbar-shadow);
+
+  // Elements
+  //
 
   a {
-    text-decoration: none;
+    text-decoration: none; // Remove underline from links
   }
-  // toolbar vertical ----------------- START
-  &.toolbar-vertical {
-    height: 100%;
-    width: 96px;
+
+  // Badge wrapper
+  .badge-wrapper {
+    // width: calc(50% + 28px);
+    position: relative;
+  }
+
+  // Badge icon
+  .toolbar-badge {
     position: absolute;
     top: 0;
-    bottom: 0;
-    & > ul {
+    right: 0;
+    display: block;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 var(--#{$prefix}toolbar-badge-padding-x);
+    border: 1px solid var(--#{$prefix}toolbar-badge-border-color);
+    border-radius: var(--#{$prefix}toolbar-badge-border-radius);
+    background-color: var(--#{$prefix}toolbar-badge-background-color);
+    color: var(--#{$prefix}toolbar-badge-text-color);
+    font-size: var(--#{$prefix}toolbar-badge-font-size);
+    font-style: normal;
+    line-height: 1rem;
+  }
+
+  // Text label
+  .toolbar-label {
+    display: block;
+    margin-top: var(--#{$prefix}toolbar-label-margin-top);
+    font-size: var(--#{$prefix}toolbar-label-font-size);
+    font-weight: 600;
+    line-height: 1;
+  }
+
+  .toolbar-divider {
+    align-self: stretch;
+    width: 1px;
+    min-width: 1px; // fix for IE11
+    max-width: 1px;
+    height: auto;
+    background: var(--#{$prefix}toolbar-divider-color);
+    margin-block: var(--#{$prefix}toolbar-padding-y);
+  }
+
+  // List
+  & > ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    gap: var(--#{$prefix}toolbar-item-gap);
+
+    & > li {
       height: 100%;
-      flex-direction: column;
-      width: 72px;
-      & > li {
-        margin: 8px 0;
-        display: flex;
-        align-items: center;
-        // divider
-        &.toolbar-divider {
-          margin: 0;
-          height: 1px;
-          min-height: 1px; // fix for IE11
-          max-height: 1px;
-          width: calc(100% - 16px);
-          max-width: inherit;
-        }
+      list-style-type: none;
+      text-align: center;
+    }
+  }
+
+  // Links and buttons
+  a,
+  .btn-dropdown {
+    display: block;
+    color: var(--#{$prefix}toolbar-link-color);
+
+    .icon {
+      fill: var(--#{$prefix}toolbar-icon-color);
+    }
+
+    // Active state
+    &.active {
+      --#{$prefix}toolbar-link-color: var(--#{$prefix}color-text-primary);
+      --#{$prefix}toolbar-icon-color: var(--#{$prefix}icon-primary);
+    }
+
+    // Disabled state
+    &.disabled {
+      --#{$prefix}toolbar-link-color: var(--#{$prefix}color-text-disabled);
+      --#{$prefix}toolbar-icon-color: var(--#{$prefix}icon-disabled);
+      cursor: not-allowed;
+      &:hover {
+        text-decoration: none;
+      }
+
+      &:after {
+        color: var(--#{$prefix}toolbar-link-color);
       }
     }
 
-    &.toolbar-medium,
-    &.toolbar-small {
+    // Hover state
+    &:not(.disabled):hover {
+      --#{$prefix}toolbar-link-color: var(--#{$prefix}color-link-hover);
+      --#{$prefix}toolbar-icon-color: var(--#{$prefix}icon-primary-hover);
+      text-decoration: underline;
+    }
+
+    // Hover fix for IE11
+    /* stylelint-disable */
+    _:-ms-fullscreen,
+    &:not(.disabled):hover {
+      text-decoration: none;
+    }
+
+    /* stylelint-enable */
+  }
+
+  // Variants
+  //
+
+  // Medium toolbar
+  &.toolbar-medium {
+    --#{$prefix}toolbar-icon-font-size: var(--#{$prefix}icon-size-m);
+
+    // Icon badge
+    .toolbar-badge {
+      width: 10px;
+      min-width: 10px;
+      height: 10px;
+      padding: 0;
+    }
+  }
+
+  // Small toolbar
+  &.toolbar-small {
+    --#{$prefix}toolbar-icon-font-size: var(--#{$prefix}icon-size-s);
+    --#{$prefix}toolbar-padding-y: var(--#{$prefix}spacing-xxs);
+
+    // Icon badge
+    .toolbar-badge {
+      width: 8px;
+      min-width: 8px;
+      height: 8px;
+      padding: 0;
+    }
+  }
+
+  // Vertical toolbar
+  &.toolbar-vertical {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: auto;
+    height: 100%;
+
+    & > ul {
+      flex-direction: column;
       height: 100%;
-      & > ul {
-        height: 100%;
+
+      & > li {
+        display: flex;
+        align-items: center;
+        margin: var(--#{$prefix}toolbar-item-margin-y) var(--#{$prefix}toolbar-item-margin-x);
+
+        &.toolbar-divider {
+          align-self: auto;
+          width: calc(100% - (var(--#{$prefix}toolbar-padding-x)));
+          min-width: 0;
+          max-width: none;
+          height: 1px;
+          min-height: 1px; // fix for IE11
+          max-height: 1px;
+          margin: 0;
+        }
       }
     }
 
     &.toolbar-medium {
-      width: 84px;
-      & > ul {
-        width: 56px;
-      }
-
-      // badge
-      .toolbar-badge {
-        right: 0px;
-      }
-
-      // dropdown
-      .btn-dropdown {
-        &:after {
-          right: -10px;
-          top: 13px;
-          font-size: 0.25rem;
-        }
-      }
       .dropdown-menu {
         top: calc(-100% - 25px) !important;
       }
     }
 
     &.toolbar-small {
-      width: 72px;
-      & > ul {
-        width: 48px;
-      }
-
-      // badge
-      .toolbar-badge {
-        right: 0px;
-      }
-
-      // dropdown
-      .btn-dropdown {
-        &:after {
-          right: -9px;
-          top: 11px;
-          font-size: 0.25rem;
-        }
-      }
       .dropdown-menu {
         top: calc(-100% - 35px) !important;
       }
     }
 
-    // dropdown
     .btn-dropdown {
       padding: 0;
-      &:after {
-        right: -12px;
-        transform: rotate(-90deg);
-      }
+
       &[aria-expanded='true'] {
         &:after {
           transform: rotate(90deg) scaleX(-1);
         }
       }
     }
+
+    // Dropdown menu
     .dropdown-menu {
+      --#{$prefix}dropdown-box-shadow: var(--#{$prefix}toolbar-dropdown-shadow);
       top: calc(-100% - 28px) !important;
       left: calc(100% + 24px) !important;
       margin: 0;
-      box-shadow: $dropdown-box-shadow-vertical;
       &:before {
-        left: -6px;
         top: 24px;
+        left: -6px;
       }
     }
 
-    // shadow
-    &:before {
-      width: 360px;
-      height: 100%;
-      left: auto;
-      top: 0;
-      bottom: auto;
-      right: 32px;
-      z-index: 6;
-      background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 60%);
-      border-radius: 50%;
-      transform: translateX(50%) scalex(0.12) scaleY(1.25);
-      opacity: 0.18;
-    }
-
-    .toolbar-badge {
-      right: 0px;
-    }
+    // Shadow
+    // &:before {
+    //   top: 0;
+    //   right: 32px;
+    //   bottom: auto;
+    //   left: auto;
+    //   z-index: 6;
+    //   width: 360px;
+    //   height: 100%;
+    //   border-radius: 50%;
+    //   opacity: 0.18;
+    //   background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 60%);
+    //   transform: translateX(50%) scalex(0.12) scaleY(1.25);
+    // }
 
     .badge-wrapper {
       width: 100%;
     }
   }
-  // toolbar vertical ----------------- END
 
-  &.toolbar-medium {
-    height: 80px;
-    //  list
-    & > ul {
-      height: 48px;
-    }
-    a,
-    .btn-dropdown {
-      margin-bottom: 6px;
-    }
-    .btn-dropdown {
-      // dropdow caret
-      &:after {
-        top: 12px;
-        right: 1px;
-      }
-    }
-    // icon
-    .it-ico {
-      font-size: 1.35rem;
-      // more icon
-      &.it-more-actions {
-        &:before {
-          top: 33%;
-        }
-      }
-    }
-    // icon badge
-    .toolbar-badge {
-      height: 10px;
-      width: 10px;
-      min-width: 10px;
-      right: 0px;
-      top: -2px;
-      padding: 0;
-    }
-  }
-
-  &.toolbar-small {
-    height: 72px;
-    //  list
-    & > ul {
-      height: 40px;
-    }
-    .btn-dropdown {
-      // dropdow caret
-      &:after {
-        top: 12px;
-        right: 2px;
-      }
-    }
-    // icon
-    .it-ico {
-      font-size: 1.125rem;
-      &.it-more-actions {
-        &:before {
-          top: 25%;
-        }
-      }
-    }
-    // icon badge
-    .toolbar-badge {
-      height: 8px;
-      width: 8px;
-      min-width: 8px;
-      right: 0px;
-      top: 2px;
-      padding: 0;
-    }
-  }
-
-  // shadow
-  &:before {
-    content: '';
-    position: absolute;
-    height: 360px;
-    width: 100%;
-    top: auto;
-    bottom: 32px;
-    z-index: 6;
-    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 60%);
-    border-radius: 50%;
-    transform: translateY(50%) scalex(1.4) scaleY(0.12);
-    opacity: 0.18;
-  }
-
-  //  list
-  & > ul {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    z-index: 7;
-    background-color: $white;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-    height: 64px;
-    & > li {
-      list-style-type: none;
-      margin: 0 8px;
-      text-align: center;
-      // divider
-      &.toolbar-divider {
-        margin: 0;
-        width: 1px;
-        min-width: 1px; // fix for IE11
-        max-width: 1px;
-        height: calc(100% - 16px);
-        background: $gray-border;
-      }
-    }
-  }
-  // link and button
-  a,
+  // Dropdown button
   .btn-dropdown {
-    display: block;
-    color: $color-text-secondary;
-    .icon {
-      fill: $secondary;
-    }
-    // active
-    &.active {
-      color: $primary;
-      .icon {
-        fill: $primary;
-      }
-    }
-    // disabled
-    &.disabled {
-      cursor: not-allowed;
-      color: $gray-disabled;
-      .icon {
-        fill: $gray-disabled;
-      }
-      &:hover {
-        text-decoration: none;
-        color: $gray-disabled;
-        .icon {
-          fill: $gray-disabled;
-        }
-      }
-      &:after {
-        color: $gray-disabled;
-      }
-    }
-    // hover
-    &:not(.disabled):hover {
-      text-decoration: underline;
-      color: $color-text-primary-hover;
-      .icon {
-        fill: $color-text-primary-hover;
-      }
-    }
-    // hover fix for ie11
-    /* stylelint-disable */
-    _:-ms-fullscreen,
-    &:not(.disabled):hover {
-      text-decoration: none;
-    }
-    /* stylelint-enable */
-  }
-
-  // dropdown button
-  .btn-dropdown {
-    padding: 0;
-    width: 100%;
     position: relative;
-    padding-left: 10px;
-    padding-right: 10px;
+    width: 100%;
+    padding: 0;
+
     &.toolbar-more {
       &:after {
         display: none;
       }
     }
+
     &:not(.disabled) {
       &.active {
         box-shadow: none;
+
         &:focus {
           box-shadow: $btn-focus-box-shadow;
         }
@@ -328,75 +301,5 @@
     &:focus {
       box-shadow: $btn-focus-box-shadow;
     }
-
-    // dropdown caret
-    &:after {
-      content: '';
-      width: 0;
-      height: 0;
-      border-style: solid;
-      border-width: 4px 3px 0 3px;
-      border-color: $secondary transparent transparent transparent;
-      position: absolute;
-      top: 16px;
-      right: 2px;
-      margin-left: 0;
-    }
-  }
-
-  // icon
-  .it-ico {
-    position: relative;
-    font-size: 1.6rem;
-    display: block;
-    height: 32px;
-    &:before {
-      margin-right: 0;
-    }
-    // more icon
-    &.it-more-actions {
-      font-size: 0.6rem;
-      &:before {
-        position: relative;
-        top: 50%;
-      }
-    }
-  }
-
-  // icon badges ------------------
-  .badge-wrapper {
-    // width: calc(50% + 28px);
-    position: relative;
-  }
-
-  .toolbar-badge,
-  .toolbar-alert {
-    display: block;
-    position: absolute;
-    background-color: $primary;
-    border: 1px solid $white;
-  }
-
-  // icon badge
-  .toolbar-badge {
-    top: -4px;
-    right: 0px;
-    min-width: 18px;
-    height: 18px;
-    padding: 0 4px;
-    color: $white;
-    font-size: 0.5rem;
-    line-height: 1rem;
-    border-radius: 50%;
-    font-style: normal;
-  }
-
-  // text label
-  .toolbar-label {
-    margin-top: 8px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    line-height: 1;
-    display: block;
   }
 }

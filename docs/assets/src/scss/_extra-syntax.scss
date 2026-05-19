@@ -1,3 +1,5 @@
+@use 'src/scss/base/mixins/breakpoints' as *;
+
 .highlight .copy-button-container {
   position: absolute;
   right: 5px;
@@ -15,9 +17,14 @@
   }
   pre {
     margin-bottom: 0;
+    background: transparent;
+    padding: 0;
+    color: #fff;
+
     code {
       font-size: 1rem;
       color: #eee;
+      background: transparent;
     }
   }
 }

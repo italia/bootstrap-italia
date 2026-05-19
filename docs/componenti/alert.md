@@ -12,12 +12,53 @@ Gli avvisi sono disponibili in quattro tipologie diverse e sono adatti a qualsia
 
 {% comment %}Example name: Varianti per tipologia{% endcomment %}
 {% capture example %}
-{% assign colors = "primary,info,success,warning,danger" | split: ','%}
-{% for color in colors %}
 
-<div class="alert alert-{{color}}" role="alert">
-  Questo è un alert di tipo "<b>{{ color }}</b>".
-</div>{% endfor %}
+<div class="alert alert-primary" role="alert">
+  <p class="mb-0">
+    <svg class="alert-icon icon" role="img">
+      <title>Testo significato icon</title>
+      <use href="/dist/svg/sprites.svg#it-info-circle"></use>
+    </svg> 
+    Questo è un alert di tipo "<strong>primary</strong>".
+  </p>
+</div>
+<div class="alert alert-secondary" role="alert">
+  <p class="mb-0">
+    <svg class="alert-icon icon" role="img">
+      <title>Testo significato icon</title>
+      <use href="/dist/svg/sprites.svg#it-info-circle"></use>
+    </svg> 
+    Questo è un alert di tipo "<strong>info</strong>".
+  </p>
+</div>
+<div class="alert alert-success" role="alert">
+  <p class="mb-0">
+    <svg class="alert-icon icon" role="img">
+      <title>Testo significato icon</title>
+      <use href="/dist/svg/sprites.svg#it-check-circle"></use>
+    </svg> 
+    Questo è un alert di tipo "<strong>success</strong>".
+  </p>
+</div>
+<div class="alert alert-warning" role="alert">
+  <p class="mb-0">
+    <svg class="alert-icon icon" role="img">
+      <title>Testo significato icon</title>
+      <use href="/dist/svg/sprites.svg#it-warning-circle"></use>
+    </svg> 
+    Questo è un alert di tipo "<strong>warning</strong>".
+  </p>
+</div>
+<div class="alert alert-danger" role="alert">
+  <p class="mb-0">
+    <svg class="alert-icon icon">
+      <title>Testo significato icon</title>
+      <use href="/dist/svg/sprites.svg#it-error"></use>
+    </svg> 
+    Questo è un alert di tipo "<strong>danger</strong>".
+  </p>
+</div>
+
 {% endcapture %}
 {% include example.html content=example %}
 
@@ -168,3 +209,11 @@ myAlert.addEventListener('closed.bs.alert', () => {
   // document.getElementById('...').focus()
 })
 ```
+
+{% include properties.md properties=site.data.cprops.alert %}
+## Breaking change
+
+{% capture callout %}
+- Nel markup del componente il contenuto va incluso in un tag `<p>`. 
+- L'icona d'ora in poi va definita esplicitamente con il tag `<svg>` e la corretta semantica per l'accessibilità. 
+{% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}

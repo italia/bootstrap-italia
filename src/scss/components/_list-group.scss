@@ -1,27 +1,49 @@
+@use 'sass:color';
+@use 'sass:math';
+@use 'sass:map';
+@use '../base/config' as *;
+@use '../base/variables' as *;
+@use '../base/mixins/border-radius' as *;
+@use '../base/mixins/breakpoints' as *;
+@use '../base/mixins/list-group' as *;
+@use '../base/functions' as *;
+
+// Component: list group
+//
+// Description: Component styles for list group
+//
+
+// Variables
+//
+
+// Properties
+//
+
+// Styles
+//
+
 // Base class
 //
 // Easily usable on <ul>, <ol>, or <div>.
 
 .list-group {
-  // scss-docs-start list-group-css-vars
-  --#{$prefix}list-group-color: #{$list-group-color};
-  --#{$prefix}list-group-bg: #{$list-group-bg};
-  --#{$prefix}list-group-border-color: #{$list-group-border-color};
-  --#{$prefix}list-group-border-width: #{$list-group-border-width};
-  --#{$prefix}list-group-border-radius: #{$list-group-border-radius};
-  --#{$prefix}list-group-item-padding-x: #{$list-group-item-padding-x};
-  --#{$prefix}list-group-item-padding-y: #{$list-group-item-padding-y};
-  --#{$prefix}list-group-action-color: #{$list-group-action-color};
-  --#{$prefix}list-group-action-hover-color: #{$list-group-action-hover-color};
-  --#{$prefix}list-group-action-hover-bg: #{$list-group-hover-bg};
-  --#{$prefix}list-group-action-active-color: #{$list-group-action-active-color};
   --#{$prefix}list-group-action-active-bg: #{$list-group-action-active-bg};
-  --#{$prefix}list-group-disabled-color: #{$list-group-disabled-color};
-  --#{$prefix}list-group-disabled-bg: #{$list-group-disabled-bg};
-  --#{$prefix}list-group-active-color: #{$list-group-active-color};
+  --#{$prefix}list-group-action-active-color: #{$list-group-action-active-color};
+  --#{$prefix}list-group-action-hover-bg: #{$list-group-hover-bg};
+  --#{$prefix}list-group-action-hover-color: #{$list-group-action-hover-color};
+  --#{$prefix}list-group-action-color: #{$list-group-action-color};
   --#{$prefix}list-group-active-bg: #{$list-group-active-bg};
   --#{$prefix}list-group-active-border-color: #{$list-group-active-border-color};
-  // scss-docs-end list-group-css-vars
+  --#{$prefix}list-group-active-color: #{$list-group-active-color};
+  --#{$prefix}list-group-bg: #{$list-group-bg};
+  --#{$prefix}list-group-border-color: #{$list-group-border-color};
+  --#{$prefix}list-group-border-radius: #{$list-group-border-radius};
+  --#{$prefix}list-group-border-width: #{$list-group-border-width};
+  --#{$prefix}list-group-color: #{$list-group-color};
+  --#{$prefix}list-group-disabled-bg: #{$list-group-disabled-bg};
+  --#{$prefix}list-group-disabled-color: #{$list-group-disabled-color};
+  --#{$prefix}list-group-item-padding-x: #{$list-group-item-padding-x};
+  --#{$prefix}list-group-item-padding-y: #{$list-group-item-padding-y};
 
   display: flex;
   flex-direction: column;
@@ -77,7 +99,12 @@
   display: block;
   padding: var(--#{$prefix}list-group-item-padding-y) var(--#{$prefix}list-group-item-padding-x);
   color: var(--#{$prefix}list-group-color);
-  text-decoration: if($link-decoration == none, null, none);
+  @if $link-decoration == none {
+    text-decoration: null;
+  } @else {
+    text-decoration: none;
+  }
+
   background-color: var(--#{$prefix}list-group-bg);
   border: var(--#{$prefix}list-group-border-width) solid var(--#{$prefix}list-group-border-color);
 
@@ -119,7 +146,7 @@
 //
 // Change the layout of list group items from vertical (default) to horizontal.
 
-@each $breakpoint in map-keys($grid-breakpoints) {
+@each $breakpoint in map.keys($grid-breakpoints) {
   @include media-breakpoint-up($breakpoint) {
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
@@ -182,7 +209,7 @@
   $list-group-variant-bg: shift-color($value, $list-group-item-bg-scale);
   $list-group-variant-color: shift-color($value, $list-group-item-color-scale);
   @if (contrast-ratio($list-group-variant-bg, $list-group-variant-color) < $min-contrast-ratio) {
-    $list-group-variant-color: mix($value, color-contrast($list-group-variant-bg), abs($list-group-item-color-scale));
+    $list-group-variant-color: color.mix($value, color-contrast($list-group-variant-bg), math.abs($list-group-item-color-scale));
   }
 
   @include list-group-item-variant($state, $list-group-variant-bg, $list-group-variant-color);

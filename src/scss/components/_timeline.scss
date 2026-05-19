@@ -1,33 +1,85 @@
-//mobile
+@use '../base/config' as *;
+@use '../base/variables' as *;
+@use '../base/maps' as *;
+@use '../base/mixins/breakpoints' as *;
+
+// Component: timeline
+//
+// Description: Component styles for timeline classic and point list
+//
+
+// Utils
+//
+
+// Timeline Pin Variant mixin
+@mixin it-timeline-pin-variant($pin-bg) {
+  .pin-icon {
+    background: $pin-bg;
+  }
+
+  svg {
+    fill: var(--#{$prefix}color-text-inverse);
+  }
+
+  .pin-text {
+    background: $pin-bg;
+
+    span {
+      &:after {
+        background: $pin-bg;
+      }
+    }
+  }
+}
+
+// Variables
+//
+
+// Properties
+//
+
 .it-timeline-wrapper {
+  --#{$prefix}timeline-point-color: var(--#{$prefix}color-background-secondary);
+  --#{$prefix}timeline-line-width: var(--#{$prefix}border-thick);
+  --#{$prefix}timeline-padding: var(--#{$prefix}spacing-xs);
+  --#{$prefix}timeline-line-color: var(--#{$prefix}color-background-primary-deep);
+  --#{$prefix}timeline-pin-size: 24px;
+  --#{$prefix}timeline-pin-background: var(--#{$prefix}color-background-primary-deep);
+  --#{$prefix}timeline-pin-circle-size: 48px;
+  --#{$prefix}timeline-pin-circle-border: var(--#{$prefix}border-broad) solid var(--#{$prefix}color-background-inverse);
+  --#{$prefix}timeline-content-padding: var(--#{$prefix}spacing-s) var(--#{$prefix}spacing-s) var(--#{$prefix}spacing-s) var(--#{$prefix}spacing-xl);
+  --#{$prefix}timeline-content-padding-reverse: var(--#{$prefix}spacing-s) var(--#{$prefix}spacing-xl) var(--#{$prefix}spacing-s) var(--#{$prefix}spacing-s);
+
+  // Styles
+  //
+
   .it-now-label {
     position: absolute;
     top: 50%;
     z-index: 10;
     font-size: 1rem;
-    font-family: $font-family-monospace;
-    color: $primary;
+    font-family: var(--#{$prefix}font-sans);
+    color: var(--#{$prefix}color-text-primary);
     font-weight: 600;
   }
 
   .row {
     position: relative;
-    padding-top: $v-gap * 6;
+    padding-top: var(--#{$prefix}spacing-xxl);
 
-    //padding-bottom: $v-gap*6;
     &:after {
       content: '';
-      width: $timeline-width;
-      background: $timeline-border-color;
+      width: var(--#{$prefix}timeline-line-width);
+      background-color: var(--#{$prefix}timeline-line-color);
       position: absolute;
-      left: $v-gap * 5;
-      top: -$v-gap * 2;
-      bottom: -$v-gap * 2;
+      left: var(--#{$prefix}spacing-xl);
+      top: calc(-1 * var(--#{$prefix}spacing-xxs));
+      bottom: calc(-1 * var(--#{$prefix}spacing-xxs));
     }
   }
 
   .timeline-element {
-    padding: $timeline-content-padding;
+    padding: var(--#{$prefix}timeline-content-padding);
     position: relative;
     z-index: 1;
 
@@ -37,21 +89,21 @@
     }
 
     .it-card {
-      margin-top: 16px;
-      margin-bottom: 16px;
+      margin-top: var(--#{$prefix}spacing-s);
+      margin-bottom: var(--#{$prefix}spacing-s);
 
       + .it-card {
-        margin-top: 4px;
+        margin-top: var(--#{$prefix}spacing-3xs);
       }
 
       @include media-breakpoint-down(lg) {
-        margin-top: 32px;
-        margin-bottom: 32px;
-        margin-left: -24px;
+        margin-top: var(--#{$prefix}spacing-l);
+        margin-bottom: var(--#{$prefix}spacing-l);
+        margin-left: calc(-1 * var(--#{$prefix}spacing-m));
         width: auto;
 
         + .it-card {
-          margin-top: 8px;
+          margin-top: var(--#{$prefix}spacing-xxs);
         }
       }
     }
@@ -61,42 +113,42 @@
     display: flex;
     align-items: center;
     position: absolute;
-    top: -$timeline-pin-circle-size * 0.5;
+    top: calc(-1 * var(--#{$prefix}spacing-m));
     z-index: 4;
-    left: calc($timeline-padding / 2);
+    left: calc(var(--#{$prefix}timeline-padding) / 2);
 
     .pin-icon {
-      width: $timeline-pin-circle-size;
-      height: $timeline-pin-circle-size;
-      border-radius: $timeline-pin-circle-size;
+      width: var(--#{$prefix}timeline-pin-circle-size);
+      height: var(--#{$prefix}timeline-pin-circle-size);
+      border-radius: var(--#{$prefix}timeline-pin-circle-size);
       box-sizing: border-box;
       display: flex;
       align-items: center;
       justify-content: center;
       box-shadow: $card-shadow;
-      border: $timeline-pin-circle-border;
-      margin-right: $v-gap * 2;
-      background: $white;
+      border: var(--#{$prefix}timeline-pin-circle-border);
+      margin-right: var(--#{$prefix}spacing-s);
+      background: var(--#{$prefix}color-background-inverse);
     }
 
     svg {
-      width: $timeline-pin-size;
-      height: $timeline-pin-size;
-      fill: $primary;
+      width: var(--#{$prefix}timeline-pin-size);
+      height: var(--#{$prefix}timeline-pin-size);
+      fill: var(--#{$prefix}icon-primary);
     }
 
     .pin-text {
-      color: $white;
+      color: var(--#{$prefix}color-text-inverse);
       font-weight: 600;
       text-transform: uppercase;
-      background: $timeline-pin-background;
-      border-radius: $border-radius;
-      font-family: $font-family-monospace;
+      background: var(--#{$prefix}timeline-pin-background);
+      border-radius: var(--#{$prefix}radius-rounded);
+      font-family: var(--#{$prefix}font-mono);
       font-size: var(--bs-body-font-size);
       line-height: var(--bs-body-line-height);
 
       span {
-        padding: $v-gap * 0.5 $v-gap * 2;
+        padding: var(--#{$prefix}spacing-3xs) var(--#{$prefix}spacing-s);
         display: block;
         position: relative;
 
@@ -104,7 +156,7 @@
           content: '';
           width: 10px;
           height: 10px;
-          background: $timeline-pin-background;
+          background: var(--#{$prefix}timeline-pin-background);
           border-radius: 3px;
           position: absolute;
           left: -4px;
@@ -115,43 +167,11 @@
     }
 
     &.it-now {
-      .pin-icon {
-        background: $primary;
-      }
-
-      svg {
-        fill: $white;
-      }
-
-      .pin-text {
-        background: $primary;
-
-        span {
-          &:after {
-            background: $primary;
-          }
-        }
-      }
+      @include it-timeline-pin-variant(var(--#{$prefix}color-background-primary));
     }
 
     &.it-evidence {
-      .pin-icon {
-        background: $timeline-pin-background;
-      }
-
-      svg {
-        fill: $white;
-      }
-
-      .pin-text {
-        background: $timeline-pin-background;
-
-        span {
-          &:after {
-            background: $timeline-pin-background;
-          }
-        }
-      }
+      @include it-timeline-pin-variant(var(--#{$prefix}timeline-pin-background));
     }
   }
 
@@ -167,12 +187,12 @@
     .row {
       &:after {
         content: '';
-        left: calc(50% - #{$timeline-width});
+        left: calc(50% - var(--#{$prefix}timeline-line-width));
       }
     }
 
     .timeline-element {
-      padding: $timeline-content-padding;
+      padding: var(--#{$prefix}timeline-content-padding);
       width: 50%;
     }
 
@@ -197,14 +217,14 @@
           content: '';
           display: inline-block;
           height: 1px;
-          width: $v-gap * 2;
-          background: $primary;
-          margin-right: $v-gap * 2;
+          width: var(--#{$prefix}spacing-s);
+          background-color: var(--#{$prefix}color-background-primary);
+          margin-right: var(--#{$prefix}spacing-s);
         }
       }
 
       .timeline-element {
-        padding: $timeline-content-padding-reverse;
+        padding: var(--#{$prefix}timeline-content-padding-reverse);
       }
 
       .card-wrapper {
@@ -215,11 +235,11 @@
           &:after {
             margin-left: auto;
             display: inline-block;
-            margin-right: $v-gap * 3;
+            margin-right: var(--#{$prefix}spacing-m);
           }
 
           a.read-more {
-            right: $v-gap * 3;
+            right: var(--#{$prefix}spacing-m);
           }
         }
       }
@@ -231,7 +251,7 @@
 
         .pin-icon {
           margin-right: 0;
-          margin-left: $v-gap * 2;
+          margin-left: var(--#{$prefix}spacing-s);
         }
 
         .pin-text {
@@ -247,7 +267,7 @@
           .pin-text {
             span {
               &:after {
-                border-color: transparent transparent transparent $primary;
+                border-color: transparent transparent transparent var(--#{$prefix}color-border-primary);
               }
             }
           }
@@ -266,9 +286,9 @@
           content: '';
           display: inline-block;
           height: 1px;
-          width: $v-gap * 2;
-          background: $primary;
-          margin-left: $v-gap * 2;
+          width: var(--#{$prefix}spacing-s);
+          background-color: var(--#{$prefix}color-background-primary);
+          margin-left: var(--#{$prefix}spacing-s);
         }
       }
 
@@ -287,6 +307,259 @@
 
       .pin-text {
         font-size: 1rem;
+      }
+    }
+  }
+}
+
+// Timeline Point List
+.it-timeline-point-list {
+  @at-root ol#{&},
+    ul#{&} {
+    padding-left: 0;
+    list-style: none;
+  }
+
+  display: flex;
+  flex-direction: column;
+
+  .timeline-point {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--#{$prefix}spacing-m);
+
+    .point-aside {
+      position: relative;
+      width: 5rem;
+      flex-shrink: 0;
+      padding: 0.5rem 1rem 0.5rem 0;
+      color: var(--#{$prefix}timeline-point-color, var(--#{$prefix}color-text-primary));
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-self: stretch;
+
+      @include media-breakpoint-down(md) {
+        width: 4rem;
+        padding: 0.5rem 0.75rem 0.5rem 0;
+      }
+
+      // Vertical line
+      &::before {
+        content: '';
+        position: absolute;
+        width: 2px;
+        top: 0;
+        right: 0;
+        height: calc(100% + var(--#{$prefix}spacing-m));
+        background-color: var(--#{$prefix}timeline-point-color, var(--#{$prefix}color-background-primary));
+        z-index: 1;
+      }
+
+      // Point circle
+      &::after {
+        content: '';
+        position: absolute;
+        width: 9px;
+        height: 9px;
+        top: 50%;
+        right: -4px;
+        transform: translateY(-50%);
+        border-radius: var(--#{$prefix}radius-circle);
+        background-color: var(--#{$prefix}timeline-point-color, var(--#{$prefix}color-background-primary));
+        z-index: 2;
+      }
+
+      .point-visual {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .point-main {
+        font-size: 1.5rem;
+        line-height: 1;
+        min-width: 32px;
+
+        @include media-breakpoint-up(lg) {
+          font-size: 2.75rem;
+          min-width: 48px;
+        }
+      }
+
+      .point-top,
+      .point-bottom {
+        font-size: 1rem;
+        text-transform: uppercase;
+
+        @include media-breakpoint-down(md) {
+          font-size: 0.875rem;
+        }
+      }
+
+      .point-date {
+        @extend .point-main;
+      }
+
+      .point-month {
+        @extend .point-bottom;
+      }
+
+      .point-year {
+        @extend .point-top;
+      }
+
+      @each $color, $value in $theme-colors {
+        &.point-aside-#{$color} {
+          --#{$prefix}timeline-point-color: var(--#{$prefix}#{$color});
+        }
+      }
+    }
+
+    .point-content {
+      flex: 1;
+      margin-left: var(--#{$prefix}spacing-s);
+
+      & > * {
+        width: 100%;
+      }
+
+      & > *:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    // Last item: line extends only for aside, not content
+    &:last-child {
+      margin-bottom: 0;
+
+      .point-aside::before {
+        height: 100%;
+      }
+    }
+
+    // Align-top variant
+    &.timeline-point-align-top {
+      align-items: flex-start;
+
+      .point-aside {
+        align-self: stretch; // Extends to full height of content
+        justify-content: flex-start;
+        padding-top: 0.5rem;
+
+        &::after {
+          top: 2.6rem;
+          transform: translateY(-5px);
+        }
+
+        &:has(.point-top):has(.point-bottom) {
+          &::after {
+            top: 3.5rem;
+
+            @include media-breakpoint-down(md) {
+              top: 2.7rem;
+            }
+          }
+        }
+      }
+    }
+
+    // Compact variant
+    &.timeline-point-xs {
+      .point-aside {
+        width: 3.5rem;
+        padding: 0.5rem 0.75rem 0.5rem 0;
+
+        @include media-breakpoint-down(md) {
+          width: 3rem;
+          padding: 0.5rem 0.5rem 0.5rem 0;
+        }
+
+        .point-main,
+        .point-date {
+          font-size: 1.5rem;
+          line-height: 1;
+          min-width: 32px;
+        }
+
+        .point-bottom,
+        .point-month {
+          font-size: 0.875rem;
+        }
+      }
+
+      &.timeline-point-align-top {
+        .point-aside {
+          padding-top: 0.5rem;
+
+          &::after {
+            top: 1.3rem;
+          }
+
+          &:has(.point-main):has(.point-bottom)::after {
+            top: 2rem;
+          }
+
+          &:has(.point-top):has(.point-bottom)::after {
+            top: 2.7rem;
+          }
+        }
+      }
+    }
+  }
+
+  &.it-timeline-point-list-stack-mobile {
+    @include media-breakpoint-down(md) {
+      .timeline-point {
+        flex-wrap: wrap;
+        position: relative;
+
+        // Vertical line for stacked layout - extends through content and gap
+        &::before {
+          content: '';
+          position: absolute;
+          left: 2rem;
+          top: 0;
+          width: 2px;
+          height: calc(100% + var(--#{$prefix}spacing-m));
+          background-color: var(--#{$prefix}timeline-point-color, var(--#{$prefix}color-background-primary));
+        }
+
+        &:last-child::before {
+          height: 100%;
+        }
+
+        @each $color, $value in $colors-palette {
+          &:has(.point-aside-#{$color}) {
+            --#{$prefix}timeline-point-color: #{$value};
+          }
+        }
+
+        .point-aside {
+          width: auto;
+          flex-shrink: 0;
+          flex-direction: row-reverse;
+          padding-left: 2.5rem;
+          padding-right: 0.5rem;
+          position: relative;
+
+          &::before {
+            display: none;
+          }
+
+          &::after {
+            left: 1.75rem;
+            right: auto;
+          }
+        }
+
+        .point-content {
+          flex: 1 1 100%;
+          min-width: 0;
+          margin-left: 0;
+          margin-top: var(--#{$prefix}spacing-s);
+        }
       }
     }
   }

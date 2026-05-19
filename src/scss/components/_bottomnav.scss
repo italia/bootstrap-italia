@@ -1,25 +1,67 @@
+@use '../base/config' as *;
+@use '../base/variables' as *;
+
+// Component: bottomnav
+//
+// Description: Component styles for bottomnav
+//
+
+// Variables
+//
+
+// Properties
+//
+
+// Styles
+//
+
 .bottom-nav {
+  --#{$prefix}bottom-nav-height: 96px;
+  --#{$prefix}bottom-nav-list-height: 64px;
+  --#{$prefix}bottom-nav-item-margin: var(--#{$prefix}spacing-xxs);
+  --#{$prefix}bottom-nav-link-color: var(--#{$prefix}color-text-secondary);
+  --#{$prefix}bottom-nav-link-color-active: var(--#{$prefix}color-text-primary);
+  --#{$prefix}bottom-nav-icon-color: var(--#{$prefix}icon-secondary);
+  --#{$prefix}bottom-nav-icon-color-active: var(--#{$prefix}icon-primary);
+  --#{$prefix}bottom-nav-icon-font-size: 1.35rem;
+  --#{$prefix}bottom-nav-icon-height: var(--#{$prefix}spacing-l);
+  --#{$prefix}bottom-nav-label-margin-top: 6px;
+  --#{$prefix}bottom-nav-label-font-size: var(--#{$prefix}label-font-size-xs);
+  --#{$prefix}bottom-nav-label-font-weight: var(--#{$prefix}font-weight-solid);
+  --#{$prefix}bottom-nav-badge-bg: var(--#{$prefix}color-background-primary);
+  --#{$prefix}bottom-nav-badge-border-color: var(--#{$prefix}color-background-inverse);
+  --#{$prefix}bottom-nav-badge-color: var(--#{$prefix}color-text-inverse);
+  --#{$prefix}bottom-nav-badge-font-size: 0.625rem;
+  --#{$prefix}bottom-nav-badge-radius: var(--#{$prefix}radius-rounded);
+  --#{$prefix}bottom-nav-alert-size: 12px;
+  --#{$prefix}bottom-nav-shadow-height: 360px;
+  --#{$prefix}bottom-nav-shadow-top: var(--#{$prefix}spacing-l);
+  --#{$prefix}bottom-nav-shadow-opacity: 0.18;
+  --#{$prefix}bottom-nav-shadow-transform: translateY(-50%) scalex(1.4) scaleY(0.12);
+  --#{$prefix}bottom-nav-shadow-background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 60%);
+
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
   overflow: hidden;
-  height: 96px;
-  // shadow
+  height: var(--#{$prefix}bottom-nav-height);
+
+  // Shadow
   &:before {
     content: '';
     position: absolute;
-    height: 360px;
+    height: var(--#{$prefix}bottom-nav-shadow-height);
     width: 100%;
-    top: 32px;
+    top: var(--#{$prefix}bottom-nav-shadow-top);
     z-index: 10;
-    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 60%);
+    background: var(--#{$prefix}bottom-nav-shadow-background);
     border-radius: 50%;
-    transform: translateY(-50%) scalex(1.4) scaleY(0.12);
-    opacity: 0.18;
+    transform: var(--#{$prefix}bottom-nav-shadow-transform);
+    opacity: var(--#{$prefix}bottom-nav-shadow-opacity);
   }
 
-  //  list
+  // List
   ul {
     position: absolute;
     bottom: 0;
@@ -27,53 +69,58 @@
     right: 0;
     width: 100%;
     z-index: 20;
-    background-color: $white;
+    background-color: var(--#{$prefix}color-background-inverse);
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 0;
     margin: 0;
-    height: 64px;
+    height: var(--#{$prefix}bottom-nav-list-height);
+
     li {
       list-style-type: none;
-      margin: 8px;
+      margin: var(--#{$prefix}bottom-nav-item-margin);
       text-align: center;
     }
   }
+
   a {
+    --#{$prefix}bottom-nav-current-link-color: var(--#{$prefix}bottom-nav-link-color);
+    --#{$prefix}bottom-nav-current-icon-color: var(--#{$prefix}bottom-nav-icon-color);
+
     display: block;
-    color: $color-text-secondary; // UI kit
+    color: var(--#{$prefix}bottom-nav-current-link-color);
     text-decoration: none;
+
     .icon {
-      fill: $secondary; // UI kit
+      fill: var(--#{$prefix}bottom-nav-current-icon-color);
     }
+
     &.active {
-      color: $primary;
-      .icon {
-        fill: $primary;
-      }
+      --#{$prefix}bottom-nav-current-link-color: var(--#{$prefix}bottom-nav-link-color-active);
+      --#{$prefix}bottom-nav-current-icon-color: var(--#{$prefix}bottom-nav-icon-color-active);
     }
+
     &:hover {
+      --#{$prefix}bottom-nav-current-link-color: var(--#{$prefix}bottom-nav-link-color-active);
+      --#{$prefix}bottom-nav-current-icon-color: var(--#{$prefix}bottom-nav-icon-color-active);
       text-decoration: none;
-      color: $primary;
-      .icon {
-        fill: $primary;
-      }
     }
   }
 
-  // icon
+  // Icon
   .it-ico {
     position: relative;
-    font-size: 1.35rem;
+    font-size: var(--#{$prefix}bottom-nav-icon-font-size);
     display: block;
-    height: 32px;
+    height: var(--#{$prefix}bottom-nav-icon-height);
+
     &:before {
       margin-right: 0;
     }
   }
 
-  // icon badges ------------------
+  // Icon badges
   .badge-wrapper {
     position: relative;
   }
@@ -82,38 +129,38 @@
   .bottom-nav-alert {
     display: block;
     position: absolute;
-    background-color: $primary;
-    border: 1px solid $white;
+    background-color: var(--#{$prefix}bottom-nav-badge-bg);
+    border: 1px solid var(--#{$prefix}bottom-nav-badge-border-color);
   }
 
-  // icon badge
+  // Icon badge
   .bottom-nav-badge {
     top: 0;
     right: 0;
     min-width: 1.15rem;
     line-height: 1;
     padding: 4px 6px;
-    color: $white;
-    font-size: 0.625rem;
-    border-radius: 2rem;
+    color: var(--#{$prefix}bottom-nav-badge-color);
+    font-size: var(--#{$prefix}bottom-nav-badge-font-size);
+    border-radius: var(--#{$prefix}bottom-nav-badge-radius);
     font-style: normal;
   }
 
-  // icon alert
+  // Icon alert
   .bottom-nav-alert {
     top: 0;
     right: 4px;
-    min-width: 12px;
-    height: 12px;
-    border-radius: 50%;
+    min-width: var(--#{$prefix}bottom-nav-alert-size);
+    height: var(--#{$prefix}bottom-nav-alert-size);
+    border-radius: var(--#{$prefix}radius-circle);
   }
 
-  // text label
+  // Text label
   .bottom-nav-label {
-    margin-top: 6px;
-    font-size: 0.625rem;
+    margin-top: var(--#{$prefix}bottom-nav-label-margin-top);
+    font-size: var(--#{$prefix}bottom-nav-label-font-size);
     line-height: 1;
     display: block;
-    font-weight: 600;
+    font-weight: var(--#{$prefix}bottom-nav-label-font-weight);
   }
 }
