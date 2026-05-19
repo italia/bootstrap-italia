@@ -1129,46 +1129,6 @@
     "form": [
         {
             "description": "",
-            "value": "transparent",
-            "variable-name": "--bsi-form-control-border-color"
-        },
-        {
-            "description": "",
-            "value": "0",
-            "variable-name": "--bsi-form-control-border-radius"
-        },
-        {
-            "description": "",
-            "value": "transparent",
-            "variable-name": "--bsi-form-control-background-color"
-        },
-        {
-            "description": "",
-            "value": "0",
-            "variable-name": "--bsi-form-control-spacing"
-        },
-        {
-            "description": "",
-            "value": "var(--bsi-spacing-xxs) var(--bsi-spacing-3xs)",
-            "variable-name": "--bsi-form-control-spacing"
-        },
-        {
-            "description": "",
-            "value": "var(--bsi-label-font-size)",
-            "variable-name": "--bsi-form-control-font-size"
-        },
-        {
-            "description": "",
-            "value": "var(--bsi-lead-font-size)",
-            "variable-name": "--bsi-form-control-font-size"
-        },
-        {
-            "description": "",
-            "value": "var(--bsi-color-border-danger)",
-            "variable-name": "--bsi-form-checkbox-border-color"
-        },
-        {
-            "description": "",
             "value": "2.5rem",
             "variable-name": "--bsi-form-control-height"
         },
@@ -1241,6 +1201,46 @@
             "description": "",
             "value": "var(--bsi-color-background-muted)",
             "variable-name": "--bsi-form-control-background-color"
+        },
+        {
+            "description": "",
+            "value": "transparent",
+            "variable-name": "--bsi-form-control-border-color"
+        },
+        {
+            "description": "",
+            "value": "0",
+            "variable-name": "--bsi-form-control-border-radius"
+        },
+        {
+            "description": "",
+            "value": "transparent",
+            "variable-name": "--bsi-form-control-background-color"
+        },
+        {
+            "description": "",
+            "value": "0",
+            "variable-name": "--bsi-form-control-spacing"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-spacing-xxs) var(--bsi-spacing-3xs)",
+            "variable-name": "--bsi-form-control-spacing"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-label-font-size)",
+            "variable-name": "--bsi-form-control-font-size"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-lead-font-size)",
+            "variable-name": "--bsi-form-control-font-size"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-border-danger)",
+            "variable-name": "--bsi-form-checkbox-border-color"
         }
     ],
     "header": [
