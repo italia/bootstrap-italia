@@ -6,6 +6,7 @@
     - title: Design tokens
     - title: Font
     - title: Personalizzazione della libreria
+    - title: Personalizzare i colori
     - title: Modificare componenti
     - title: Migrazione dalla versione 2
     - title: Strumenti di compilazione
@@ -107,7 +108,6 @@
 - title: Utilities
   pages:
     - title: Colori
-    - title: Colori Custom
     - title: Icone
 
 - title: Esempi
