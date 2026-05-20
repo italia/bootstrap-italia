@@ -17,9 +17,9 @@ const CLASS_NAME_SOURCE = 'source'
 const CLASS_NAME_SEMICHECKED = 'semi-checked'
 
 const SELECTOR_BLOCK = '[data-bs-transfer]' //'.it-transfer-block'
-const SELECTOR_BTN_TRANS = 'a.transfer'
-const SELECTOR_BTN_TRANS_BACK = 'a.backtransfer'
-const SELECTOR_BTN_RESET = 'a.reset'
+const SELECTOR_BTN_TRANS = 'button.transfer'
+const SELECTOR_BTN_TRANS_BACK = 'button.backtransfer'
+const SELECTOR_BTN_RESET = 'button.reset'
 const SELECTOR_HEAD = '.transfer-header'
 const SELECTOR_HEAD_INPUT = '.transfer-header input'
 const SELECTOR_HEAD_LABEL = '.transfer-header span.num'
@@ -67,22 +67,18 @@ class Transfer extends BaseComponent {
       })
     })
 
-    EventHandler.on(this._addBtnElement, EVENT_CLICK, (evt) => {
-      evt.preventDefault()
+    EventHandler.on(this._addBtnElement, EVENT_CLICK, () => {
       // disattivo il pulsante corrente
       this._disableElement(this._addBtnElement)
       this._addItems()
     })
-    EventHandler.on(this._invBtnElement, EVENT_CLICK, (evt) => {
-      evt.preventDefault()
+    EventHandler.on(this._invBtnElement, EVENT_CLICK, () => {
       // disattivo il pulsante corrente
       this._disableElement(this._invBtnElement)
       this._addItems(true)
     })
 
-    EventHandler.on(this._resetBtnElement, EVENT_CLICK, (evt) => {
-      evt.preventDefault()
-
+    EventHandler.on(this._resetBtnElement, EVENT_CLICK, () => {
       this._disableElement(this._addBtnElement)
       this._disableElement(this._invBtnElement)
       this._disableElement(this._resetBtnElement)
