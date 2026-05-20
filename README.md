@@ -1,4 +1,4 @@
-# Bootstrap Italia
+# Bootstrap Italia 
 
 [![Versione](https://img.shields.io/npm/v/bootstrap-italia.svg?logo=npm)](https://www.npmjs.com/package/bootstrap-italia)
 [![Build](https://github.com/italia/bootstrap-italia/actions/workflows/build.yml/badge.svg)](https://github.com/italia/bootstrap-italia/actions)
