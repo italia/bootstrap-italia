@@ -1,29 +1,27 @@
 ---
 layout: docs
-title: Design tokens
-description: Sistema completo basato su Design Tokens Italia
-group: come-iniziare
+title: Design token
+description: Come utilizzare i design token per personalizzare la libreria
+group: personalizzare-la-libreria
 toc: true
 ---
 
 {% capture beta_warning %}
 ### ⚠️ Versione Beta
-
 Work in progress.
-
 {% endcapture %}{% include callout.html content=beta_warning type="warning" %}
 
 ## Introduzione
-I **design tokens** sono i valori atomici del [Design system .italia](https://designers.italia.it/design-system/fondamenti/design-tokens/) che definiscono le proprietà visive (colori, spaziature, tipografia, etc.).
+I **design tokens** sono i fondamenti del [Design system .italia](https://designers.italia.it/design-system/fondamenti/design-tokens/) che definiscono le proprietà visive fondamentali per la costruzione dell'interfaccia (colori, spaziature, tipografia, etc.).
 
-Bootstrap Italia 3 implementa i token con **CSS custom properties**, sostituendo le variabili Sass delle versioni precedenti. Questo garantisce:
+Bootstrap Italia 3 adotta i design token attraverso le nuove **CSS che sostituiscono le variabili Sass delle versioni precedenti. Questo garantisce:
 - Coerenza visiva con tutte le risorse del Design system .italia
 - Personalizzazione semplificata 
 - Facilità di manutenzione ed evoluzione
 
 {% capture callout %}
 ### Da design tokens a CSS custom properties
-Bootstrap Italia usa i design tokens disponibili dal repository [italia/design-tokens-italia](https://github.com/italia/design-tokens-italia) per definire CSS custom properties dedicate utilizzabili nel codice dei singoli componenti. Ogni token del Design System .italia diventa così in Bootstrap Italia una variabile CSS con prefisso `--bsi-*`.
+Bootstrap Italia usa i design tokens disponibili dal repository [italia/design-tokens-italia](https://github.com/italia/design-tokens-italia) per definire CSS custom properties dedicate utilizzabili nel codice dei singoli componenti. Ogni token del Design System Italia diventa così in Bootstrap Italia una variabile CSS con prefisso `--bsi-*`.
 {% endcapture %}{% include callout.html content=callout type="info" %}
 
 ## Come funzionano

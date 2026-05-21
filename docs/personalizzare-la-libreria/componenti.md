@@ -1,24 +1,20 @@
 ---
 layout: docs
-title: Modificare componenti
+title: Componenti
 description: Come modificare i componenti e i moduli esistenti, e crearne di nuovi.
-group: come-iniziare
+group: personalizzare-la-libreria
 toc: true
 ---
 
-## Struttura di un componente
+## Organizzazione dei file
 
-Ogni componente può avere una personalizzazione di stile e di funzionalità, preferibilmente attraverso l'utilizzo di un singolo file `scss` nella cartella `src/scss/components/` e, opzionalmente, di un file `javascript` nella cartella `src/js/plugins/`. Questo permette di avere una struttura dei file semplice da comprendere e di più facile manutenzione.
+Ogni componente ha tre tipi di file dedicati:
 
-Queste due cartelle, assieme alla cartella `docs` per la stesura della documentazione, sono le uniche cartelle dove avviene l'editing dei componenti.
+- `.md` per la documentazione, in una cartella `/docs/componenti/nome-componente/` (obbligatorio)
+- `.scss` per lo stile, in una cartella `src/scss/components/nome-componente/` (obbligatorio)
+- `.js` per il comportamento dinamico, in una cartella `src/js/plugins/nome-componente/` (opzionale)
 
-Il codice presente in esse, attraverso alcune procedure di compilazione utilizzando `Rollup` viene usato per _sovrascrivere_ il codice già presente in Bootstrap {{ site.bootstrap_version }} e ne esporta una versione personalizzata (un tema) nelle cartelle `dist/js` (con relativi moduli nella cartella `plugins`) e `dist/css`.
-
-In breve, gli elementi su cui intervenire per la creazione o la modifica di componenti personalizzati possono essere:
-
-- Un file `.md` per la documentazione del componente
-- Un file `.scss` per lo stile
-- Un file `.js` per comportamenti dinamici
+Il codice presente in ciascuna cartella, attraverso alcune procedure di compilazione utilizzando `Rollup` viene usato per _sovrascrivere_ il codice già presente in Bootstrap {{ site.bootstrap_version }} e ne esporta una versione personalizzata (un tema) nelle cartelle `dist/js` (con relativi moduli nella cartella `plugins`) e `dist/css`.
 
 ### Documentazione del componente
 
