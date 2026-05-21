@@ -41,7 +41,7 @@ Potrebbe anche contenere riferimenti alle pagine social dell'amministrazione.
               <a href="#" title="Vai alla pagina: Amministrazione">Amministrazione</a>
             </h4>
             <div class="link-list-wrapper">
-              <ul class="footer-list link-list clearfix">
+              <ul class="footer-list link-list clearfix" role="list">
                 <li><a class="list-item" href="#">Giunta e consiglio</a></li>
                 <li><a class="list-item" href="#">Aree di competenza</a></li>
                 <li><a class="list-item" href="#">Dipendenti</a></li>
@@ -55,7 +55,7 @@ Potrebbe anche contenere riferimenti alle pagine social dell'amministrazione.
               <a href="#" title="Vai alla pagina: Servizi">Servizi</a>
             </h4>
             <div class="link-list-wrapper">
-              <ul class="footer-list link-list clearfix">
+              <ul class="footer-list link-list clearfix" role="list">
                 <li><a class="list-item" href="#">Pagamenti</a></li>
                 <li><a class="list-item" href="#">Sostegno</a></li>
                 <li><a class="list-item" href="#">Domande e iscrizioni</a></li>
@@ -70,7 +70,7 @@ Potrebbe anche contenere riferimenti alle pagine social dell'amministrazione.
               <a href="#" title="Vai alla pagina: Novità">Novità</a>
             </h4>
             <div class="link-list-wrapper">
-              <ul class="footer-list link-list clearfix">
+              <ul class="footer-list link-list clearfix" role="list">
                 <li><a class="list-item" href="#">Notizie</a></li>
                 <li><a class="list-item" href="#">Eventi</a></li>
                 <li><a class="list-item" href="#">Comunicati stampa</a></li>
@@ -82,7 +82,7 @@ Potrebbe anche contenere riferimenti alle pagine social dell'amministrazione.
               <a href="#" title="Vai alla pagina: Documenti">Documenti</a>
             </h4>
             <div class="link-list-wrapper">
-              <ul class="footer-list link-list clearfix">
+              <ul class="footer-list link-list clearfix" role="list">
                 <li><a class="list-item" href="#">Progetti e attività</a></li>
                 <li><a class="list-item" href="#">Delibere, determine e ordinanze</a></li>
                 <li><a class="list-item" href="#">Bandi</a></li>
@@ -102,7 +102,7 @@ Potrebbe anche contenere riferimenti alle pagine social dell'amministrazione.
               Via Roma 0 - 00000 Lorem Ipsum Codice fiscale / P. IVA: 000000000
             </p>
             <div class="link-list-wrapper">
-              <ul class="footer-list link-list clearfix">
+              <ul class="footer-list link-list clearfix" role="list">
                 <li><a class="list-item" href="#">Posta Elettronica Certificata</a></li>
                 <li>
                   <a class="list-item" href="#">URP - Ufficio Relazioni con il Pubblico</a>
@@ -116,7 +116,7 @@ Potrebbe anche contenere riferimenti alle pagine social dell'amministrazione.
           <div class="col-lg-4 col-md-4 pb-2">
             <div class="pb-2">
               <h4>Seguici su</h4>
-              <ul class="list-inline text-left social">
+              <ul class="list-inline text-left social" role="list">
                 <li class="list-inline-item">
                   <a class="p-2 text-white" href="#"><svg class="icon icon-sm icon-white align-top"><use xlink:href="{{site.baseurl}}/dist/svg/sprites.svg#it-designers-italia"></use></svg><span class="visually-hidden">Designers Italia (link esterno)</span></a>
                 </li>
@@ -139,7 +139,7 @@ Potrebbe anche contenere riferimenti alle pagine social dell'amministrazione.
   <div class="it-footer-small-prints clearfix">
     <div class="container">
       <!-- <h3 class="visually-hidden">Sezione Link Utili</h3> -->
-      <ul class="it-footer-small-prints-list list-inline mb-0 d-flex flex-column flex-md-row">
+      <ul class="it-footer-small-prints-list list-inline mb-0 d-flex flex-column flex-md-row" role="list">
         <li class="list-inline-item"><a href="#">Media policy</a></li>
         <li class="list-inline-item"><a href="#">Note legali</a></li>
         <li class="list-inline-item"><a href="#">Privacy policy</a></li>
@@ -181,7 +181,7 @@ Potrebbe anche contenere riferimenti alle pagine social dell'amministrazione.
               Via Roma 0 - 00000 Lorem Ipsum Codice fiscale / P. IVA: 000000000
             </p>
             <div class="link-list-wrapper">
-              <ul class="footer-list link-list clearfix">
+              <ul class="footer-list link-list clearfix" role="list">
                 <li><a class="list-item" href="#">Posta Elettronica Certificata</a></li>
                 <li>
                   <a class="list-item" href="#">URP - Ufficio Relazioni con il Pubblico</a>
@@ -195,7 +195,7 @@ Potrebbe anche contenere riferimenti alle pagine social dell'amministrazione.
           <div class="col-lg-4 col-md-4 pb-2">
             <div class="pb-2">
               <h4>Seguici su</h4>
-              <ul class="list-inline text-left social">
+              <ul class="list-inline text-left social" role="list">
                 <li class="list-inline-item">
                   <a class="p-2 text-white" href="#"><svg class="icon icon-sm icon-white align-top"><use xlink:href="{{site.baseurl}}/dist/svg/sprites.svg#it-designers-italia"></use></svg><span class="visually-hidden">Designers Italia (link esterno)</span></a>
                 </li>
@@ -218,7 +218,7 @@ Potrebbe anche contenere riferimenti alle pagine social dell'amministrazione.
   <div class="it-footer-small-prints clearfix">
     <div class="container">
       <!-- <h3 class="visually-hidden">Sezione Link Utili</h3> -->
-      <ul class="it-footer-small-prints-list list-inline mb-0 d-flex flex-column flex-md-row">
+      <ul class="it-footer-small-prints-list list-inline mb-0 d-flex flex-column flex-md-row" role="list">
         <li class="list-inline-item"><a href="#">Media policy</a></li>
         <li class="list-inline-item"><a href="#">Note legali</a></li>
         <li class="list-inline-item"><a href="#">Privacy policy</a></li>

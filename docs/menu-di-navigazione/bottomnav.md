@@ -36,7 +36,7 @@ Il link `<a>` attivo possiede una classe `.active`.
 {% comment %}Example name: Base{% endcomment %}
 {% capture example %}
 <nav class="bottom-nav">
-  <ul>
+  <ul role="list">
     <li>
       <a href="#" class="active">
         <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-comment"></use></svg>
@@ -64,7 +64,7 @@ I link occupano automaticamente tutto lo spazio orizzontale disponibile. Qui di 
 {% comment %}Example name: Base, con 4 link{% endcomment %}
 {% capture example %}
 <nav class="bottom-nav">
-  <ul>
+  <ul role="list">
     <li>
       <a href="#" class="active">
         <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-comment"></use></svg>
@@ -100,7 +100,7 @@ Aggiungere uno `<span>` con classe `.bottom-nav-badge` all'interno dell'icona pe
 {% comment %}Example name: Con badge{% endcomment %}
 {% capture example %}
 <nav class="bottom-nav">
-  <ul>
+  <ul role="list">
     <li>
       <a href="#">
         <div class="badge-wrapper"><span class="bottom-nav-badge">1</span></div>
@@ -152,7 +152,7 @@ I badge e gli alert sono nascosti agli screen reader. Per garantire l'accessibil
 {% comment %}Example name: Con alert{% endcomment %}
 {% capture example %}
 <nav class="bottom-nav">
-  <ul>
+  <ul role="list">
     <li>
       <a href="#" class="active">
         <div class="badge-wrapper"><span class="bottom-nav-alert"></span></div>

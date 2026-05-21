@@ -483,7 +483,7 @@ Il testo corrispondente alla ricerca (_"ite"_, nell'esempio) deve essere racchiu
   <span class="autocomplete-icon" aria-hidden="true">
     <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-search"></use></svg>
   </span>
-  <ul class="autocomplete-list" id="testAutocomplete1">
+  <ul class="autocomplete-list" id="testAutocomplete1" role="list">
     <li>
       <a href="#">
         <div class="avatar size-sm">
@@ -554,7 +554,7 @@ Per ottenere una versione grande dell'Autocomplete, indicata ad esempio per inte
   <span class="autocomplete-icon" aria-hidden="true">
     <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-search"></use></svg>
   </span>
-  <ul class="autocomplete-list" id="testAutocomplete2">
+  <ul class="autocomplete-list" id="testAutocomplete2" role="list">
     <li>
       <a href="#">
         <div class="avatar size-sm">
