@@ -7,7 +7,6 @@ description: Quali sono i colori disponobili in Bootstrap Italia e come personal
 ---
 
 <style>
-  /* Colonne 1 e 2 a larghezza uguale nelle tabelle di questa pagina */
   .table-cols-equal {
     table-layout: fixed;
     width: 100%;
@@ -18,34 +17,95 @@ description: Quali sono i colori disponobili in Bootstrap Italia e come personal
   .table-cols-equal td:nth-child(2) {
     width: 50%;
   }
+  .table-cols-preview {
+    table-layout: fixed;
+    width: 100%;
+  }
+  .table-cols-preview th:first-child,
+  .table-cols-preview td:first-child {
+    width: 35%;
+  }
+  .table-cols-preview th:nth-child(2),
+  .table-cols-preview td:nth-child(2) {
+    width: 20%;
+  }
+  .table-cols-preview th:nth-child(3),
+  .table-cols-preview td:nth-child(3) {
+    width: 45%;
+  }
 </style>
 
 ## Introduzione
 
-Bootstrap Italia v3 espone i valori relativi ai colori tramite le **CSS custom properties** (variabili CSS) con prefisso `--bsi-`, disponibili globalmente tramite il selettore `:root`. 
-
-Questo approccio sostituisce il precedente sistema basato su variabili Sass, consentendo una personalizzazione più semplice e flessibile che non richiede la ricompilazione dei file sorgente `.scss`.  
-
-Le nuove variabili seguono una nomenclatura **semantica**: il nome descrive la funzione del colore e non il valore cromatico (es. `--bsi-color-text-primary`).
+Bootstrap Italia dalla `v3.x` espone i valori dei colori tramite le **[CSS custom properties]({{ site.baseurl }}/docs/personalizzare-la-libreria/variabili-css/)**.
+Il nome delle variabili descrive la funzione del colore e non il valore cromatico (es. `--bsi-color-text-primary`).
 
 ## Semantica dei colori
 
 I colori seguono la semantica definita dal [Design System Italia](https://designers.italia.it/design-system/fondamenti/colori/) e sono suddivisi in:
 
-| Nome        | Utilizzo                                                                                                 |
-| ----------- | -------------------------------------------------------------------------------------------------------- |
-| `primary`   | Indica il colore principale del tema, coincide con l'identità del prodotto                               |
-| `secondary` | Indica il colore neutro di supporto al colore primario                                                   |
-| `accent`    | Indica il colore di risalto, alternativo al colore primario per elementi interattivi                     |
-| `success`   | Indica il colore dello stato di successo, usato per indicare stati positivi                              |
-| `warning`   | Indica il colore dello stato di allerta, usato per indicare stati di avviso o di rischio                 |
-| `danger`    | Indica il colore dello stato di pericolo, usato per indicare stati di errore                             |
-| `inverse`   | Indica il colore invertito rispetto ad un colore di sfondo, generalmente bianco                          |
-{: .table .table-cols-equal .mb-4}
+<div class="table-responsive mb-4">
+  <table class="table table-cols-preview">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Esempio del colore</th>
+        <th>Utilizzo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>primary</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-background-primary' %}</td>
+        <td>Indica il colore principale del tema, coincide con l'identità del prodotto</td>
+      </tr>
+      <tr>
+        <td><code>secondary</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-background-secondary' %}</td>
+        <td>Colore neutro di supporto al colore primario</td>
+      </tr>
+      <tr>
+        <td><code>accent</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-background-accent' %}</td>
+        <td>Colore di risalto, alternativo al colore primario per elementi interattivi, sfondo o bordo</td>
+      </tr>
+      <tr>
+        <td><code>subtle</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-background-subtle' %}</td>
+        <td>Colore neutro utilizzato per elementi di sfondo o bordo.</td>
+      </tr>
+      <tr>
+        <td><code>muted</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-background-muted' %}</td>
+        <td>Colore neutro utilizzato per elementi di sfondo o bordo.</td>
+      </tr>
+      <tr>
+        <td><code>success</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-background-success' %}</td>
+        <td>Colore di sistema, identifica lo stato di successo</td>
+      </tr>
+      <tr>
+        <td><code>warning</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-background-warning' %}</td>
+        <td>Colore di sistema, identifica lo stato di allerta</td>
+      </tr>
+      <tr>
+        <td><code>danger</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-background-danger' %}</td>
+        <td>Colore di sistema, identifica lo stato di pericolo</td>
+      </tr>
+      <tr>
+        <td><code>inverse</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-background-inverse' type='bg-border' %}</td>
+        <td>Indica il colore invertito rispetto ad un colore di sfondo, generalmente bianco</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 ### Varianti
 
-Ciascun colore è disponibile in alcune varianti, definite come segue:
+Ciascun colore può avere diverse varianti:
 
 | Suffisso    | Descrizione              |
 | ----------- | ------------------------ |
@@ -57,13 +117,13 @@ Ciascun colore è disponibile in alcune varianti, definite come segue:
 | `-emphasis` | Variante di enfasi       |
 {: .table .table-cols-equal .mb-4}
 
-**Non tutte le varianti sono disponibili per ogni colore**. Ad esempio, il colore `color-background-primary` è disponibile nelle varianti `-light` e `-lighter`, ma non `-emphasis`. Ciascuna variante dipende dalla categoria di colore (sfondo, bordo o testo) e dal contesto di utilizzo. 
+**Attenzione:** I nomi `subtle` e `muted` sono utilizzati sia per i colori che per le varianti. In questo modo possono essere abbinati sia ad una proprietà come `border` che ad un colore come `primary`. Ad esempio:
 
-#### Colori e design token
-Le variabili relative ai colori seguono la stessa nomenclatura definita per i design token del Design system Italia.
-Ciascuna di esse referenzia il corrispettivo token di colore proveniente dalla risorsa [`design-tokens-italia`](https://github.com/italia/design-tokens-italia).
-
-Approfondisci la [nomenclatura dei design token](https://designers.italia.it/design-system/fondamenti/design-tokens/).
+ ```css
+ --bsi-color-background-primary-muted: #004d99;
+ --bsi-color-border-subtle: ##c5c7c9;
+ ```
+Mentre `--bsi-color-background-primary-muted` definisce una variante molto attenuata del colore primario abbinata alla proprietà `background`, la variabile `--bsi-color-border-subtle` definisce la variante di un bordo, senza esplicitare il colore di riferimento, che in questo caso è un grigio chiaro.
 
 <!-- ## Variabili del tema
 
@@ -86,126 +146,516 @@ Le variabili semantiche descrivono il **ruolo del colore** all'interno dell'inte
 
 Le variabili `--bsi-color-text-*` controllano il colore del testo in diversi contesti:
 
-| Variabile CSS | Utilizzo | Anteprima |
-|---|---|
-| `--bsi-color-text-base` | Testo principale della pagina | <span style="color: var(--bsi-color-text-base);">Testo di anteprima</span> |
-| `--bsi-color-text-primary` | Testo con funzione di link o azione primaria | <span style="color: var(--bsi-color-text-primary);">Testo di anteprima</span> |
-| `--bsi-color-text-secondary` | Testo alternativo, contenuti di dettaglio | <span style="color: var(--bsi-color-text-secondary);">Testo di anteprima</span> |
-| `--bsi-color-text-muted` | Testo di supporto, didascalie brevi | <span style="color: var(--bsi-color-text-muted);">Testo di anteprima</span> |
-| `--bsi-color-text-disabled` | Testo su elementi disabilitati | <span style="color: var(--bsi-color-text-disabled);">Testo di anteprima</span> |
-| `--bsi-color-text-inverse` | Testo su sfondi a contrasto (primary, emphasis) | <span style="color: var(--bsi-color-text-inverse); background-color: var(--bsi-color-background-primary);">Testo di anteprima</span> |
-| `--bsi-color-text-accent` | Testo di accento su sfondi a contrasto | <span style="color: var(--bsi-color-text-accent);">Testo di anteprima</span> |
-| `--bsi-color-text-success` | Testo per stati di successo | <span style="color: var(--bsi-color-text-success);">Testo di anteprima</span> |
-| `--bsi-color-text-success-hover` | Testo di successo per lo stato hover | <span style="color: var(--bsi-color-text-success-hover);">Testo di anteprima</span> |
-| `--bsi-color-text-success-active` | Testo di successo per lo stato active | <span style="color: var(--bsi-color-text-success-active);">Testo di anteprima</span> |
-| `--bsi-color-text-warning` | Testo per stati di allerta | <span style="color: var(--bsi-color-text-warning);">Testo di anteprima</span> |
-| `--bsi-color-text-warning-hover` | Testo di allerta per lo stato hover | <span style="color: var(--bsi-color-text-warning-hover);">Testo di anteprima</span> |
-| `--bsi-color-text-warning-active` | Testo di allerta per lo stato active | <span style="color: var(--bsi-color-text-warning-active);">Testo di anteprima</span> |
-| `--bsi-color-text-danger` | Testo per errori o pericoli | <span style="color: var(--bsi-color-text-danger);">Testo di anteprima</span> |
-| `--bsi-color-text-danger-hover` | Testo di pericolo per lo stato hover | <span style="color: var(--bsi-color-text-danger-hover);">Testo di anteprima</span> |
-| `--bsi-color-text-danger-active` | Testo di pericolo per lo stato active | <span style="color: var(--bsi-color-text-danger-active);">Testo di anteprima</span> |
-{: .table .mb-4}
+<div class="table-responsive mb-4">
+  <table class="table table-cols-preview">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Esempio del colore</th>
+        <th>Utilizzo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>--bsi-color-text-base</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-text-base' %}</td>
+        <td>Testo principale della pagina</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-text-primary</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-text-primary' %}</td>
+        <td>Testo con funzione di link o azione primaria</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-text-secondary</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-text-secondary' %}</td>
+        <td>Testo alternativo, contenuti di dettaglio</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-text-muted</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-text-muted' %}</td>
+        <td>Testo di supporto, didascalie brevi</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-text-disabled</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-text-disabled' %}</td>
+        <td>Testo su elementi disabilitati</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-text-inverse</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-text-inverse' type='bg-border' %}</td>
+        <td>Testo su sfondi a contrasto (primary, emphasis)</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-text-accent</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-text-accent' %}</td>
+        <td>Testo di accento su sfondi a contrasto</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-text-success</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-text-success' %}</td>
+        <td>Testo per stati di successo</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-text-success-hover</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-text-success-hover' %}</td>
+        <td>Testo di successo per lo stato hover</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-text-success-active</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-text-success-active' %}</td>
+        <td>Testo di successo per lo stato active</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-text-warning</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-text-warning' %}</td>
+        <td>Testo per stati di allerta</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-text-warning-hover</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-text-warning-hover' %}</td>
+        <td>Testo di allerta per lo stato hover</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-text-warning-active</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-text-warning-active' %}</td>
+        <td>Testo di allerta per lo stato active</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-text-danger</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-text-danger' %}</td>
+        <td>Testo per errori o pericoli</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-text-danger-hover</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-text-danger-hover' %}</td>
+        <td>Testo di pericolo per lo stato hover</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-text-danger-active</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-text-danger-active' %}</td>
+        <td>Testo di pericolo per lo stato active</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 ### Colore di sfondo
 
 Le variabili `--bsi-color-background-*` controllano i colori di sfondo di componenti e sezioni di pagina.
 
-| Variabile CSS | Utilizzo |
-|---|---|
-| `--bsi-color-background-primary` | Sfondo primario (pulsanti, link, elementi di identità) |
-| `--bsi-color-background-primary-light` | Sfondo primario chiaro (alternativo per elementi interattivi) |
-| `--bsi-color-background-primary-lighter` | Sfondo primario molto chiaro (definisce sezioni di pagina) |
-| `--bsi-color-background-primary-hover` | Sfondo primario per lo stato hover |
-| `--bsi-color-background-primary-active` | Sfondo primario per lo stato active/premuto |
-| `--bsi-color-background-primary-muted` | Sfondo primario attenuato (sezioni di pagina) |
-| `--bsi-color-background-primary-deep` | Sfondo primario scuro (sezioni di pagina) |
-| `--bsi-color-background-secondary` | Sfondo secondario (elementi interattivi alternativi) |
-| `--bsi-color-background-secondary-light` | Sfondo secondario chiaro |
-| `--bsi-color-background-secondary-lighter` | Sfondo secondario molto chiaro |
-| `--bsi-color-background-secondary-hover` | Sfondo secondario per lo stato hover |
-| `--bsi-color-background-secondary-active` | Sfondo secondario per lo stato active |
-| `--bsi-color-background-secondary-deep` | Sfondo secondario molto scuro |
-| `--bsi-color-background-accent` | Sfondo con colore di accento |
-| `--bsi-color-background-accent-hover` | Sfondo di accento per lo stato hover |
-| `--bsi-color-background-muted` | Sfondo molto chiaro (sezioni, paragrafi) |
-| `--bsi-color-background-subtle` | Sfondo chiaro (separatori, sezioni) |
-| `--bsi-color-background-emphasis` | Sfondo di enfasi (sezioni in evidenza) |
-| `--bsi-color-background-inverse` | Sfondo invertito (bianco su sfondi scuri) |
-| `--bsi-color-background-disabled` | Sfondo per elementi disabilitati |
-| `--bsi-color-background-success` | Sfondo per stati di successo |
-| `--bsi-color-background-success-light` | Sfondo di successo chiaro (contenuti medio-lunghi) |
-| `--bsi-color-background-success-hover` | Sfondo di successo per lo stato hover |
-| `--bsi-color-background-success-active` | Sfondo di successo per lo stato active |
-| `--bsi-color-background-warning` | Sfondo per stati di allerta |
-| `--bsi-color-background-warning-light` | Sfondo di allerta chiaro (contenuti medio-lunghi) |
-| `--bsi-color-background-warning-hover` | Sfondo di allerta per lo stato hover |
-| `--bsi-color-background-warning-active` | Sfondo di allerta per lo stato active |
-| `--bsi-color-background-danger` | Sfondo per errori o pericoli |
-| `--bsi-color-background-danger-light` | Sfondo di pericolo chiaro (contenuti medio-lunghi) |
-| `--bsi-color-background-danger-hover` | Sfondo di pericolo per lo stato hover |
-| `--bsi-color-background-danger-active` | Sfondo di pericolo per lo stato active |
-{: .table .table-cols-equal .mb-4}
+<div class="table-responsive mb-4">
+  <table class="table table-cols-preview">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Esempio del colore</th>
+        <th>Utilizzo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>--bsi-color-background-primary</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-background-primary' %}</td>
+        <td>Sfondo primario (pulsanti, link, elementi di identità)</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-background-primary-light</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-background-primary-light' %}</td>
+        <td>Sfondo primario chiaro (alternativo per elementi interattivi)</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-background-primary-lighter</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-background-primary-lighter' %}</td>
+        <td>Sfondo primario molto chiaro (definisce sezioni di pagina)</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-background-primary-hover</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-background-primary-hover' %}</td>
+        <td>Sfondo primario per lo stato hover</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-background-primary-active</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-background-primary-active' %}</td>
+        <td>Sfondo primario per lo stato active/premuto</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-background-primary-muted</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-background-primary-muted' %}</td>
+        <td>Sfondo primario attenuato (sezioni di pagina)</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-background-primary-deep</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-background-primary-deep' %}</td>
+        <td>Sfondo primario scuro (sezioni di pagina)</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-background-secondary</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-background-secondary' %}</td>
+        <td>Sfondo secondario (elementi interattivi alternativi)</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-background-secondary-light</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-background-secondary-light' %}</td>
+        <td>Sfondo secondario chiaro</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-background-secondary-lighter</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-background-secondary-lighter' %}</td>
+        <td>Sfondo secondario molto chiaro</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-background-secondary-hover</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-background-secondary-hover' %}</td>
+        <td>Sfondo secondario per lo stato hover</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-background-secondary-active</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-background-secondary-active' %}</td>
+        <td>Sfondo secondario per lo stato active</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-background-secondary-deep</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-background-secondary-deep' %}</td>
+        <td>Sfondo secondario molto scuro</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-background-accent</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-background-accent' %}</td>
+        <td>Sfondo con colore di accento</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-background-accent-hover</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-background-accent-hover' %}</td>
+        <td>Sfondo di accento per lo stato hover</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-background-muted</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-background-muted' %}</td>
+        <td>Sfondo molto chiaro (sezioni, paragrafi)</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-background-subtle</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-background-subtle' %}</td>
+        <td>Sfondo chiaro (separatori, sezioni)</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-background-emphasis</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-background-emphasis' %}</td>
+        <td>Sfondo di enfasi (sezioni in evidenza)</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-background-inverse</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-background-inverse' type='bg-border' %}</td>
+        <td>Sfondo invertito (bianco su sfondi scuri)</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-background-disabled</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-background-disabled' %}</td>
+        <td>Sfondo per elementi disabilitati</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-background-success</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-background-success' %}</td>
+        <td>Sfondo per stati di successo</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-background-success-light</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-background-success-light' %}</td>
+        <td>Sfondo di successo chiaro (contenuti medio-lunghi)</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-background-success-hover</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-background-success-hover' %}</td>
+        <td>Sfondo di successo per lo stato hover</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-background-success-active</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-background-success-active' %}</td>
+        <td>Sfondo di successo per lo stato active</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-background-warning</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-background-warning' %}</td>
+        <td>Sfondo per stati di allerta</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-background-warning-light</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-background-warning-light' %}</td>
+        <td>Sfondo di allerta chiaro (contenuti medio-lunghi)</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-background-warning-hover</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-background-warning-hover' %}</td>
+        <td>Sfondo di allerta per lo stato hover</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-background-warning-active</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-background-warning-active' %}</td>
+        <td>Sfondo di allerta per lo stato active</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-background-danger</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-background-danger' %}</td>
+        <td>Sfondo per errori o pericoli</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-background-danger-light</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-background-danger-light' %}</td>
+        <td>Sfondo di pericolo chiaro (contenuti medio-lunghi)</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-background-danger-hover</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-background-danger-hover' %}</td>
+        <td>Sfondo di pericolo per lo stato hover</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-background-danger-active</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-background-danger-active' %}</td>
+        <td>Sfondo di pericolo per lo stato active</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 ### Colore dei bordi
 
 Le variabili `--bsi-color-border-*` controllano i colori dei bordi di componenti e separatori.
 
-| Variabile CSS | Utilizzo |
-|---|---|
-| `--bsi-color-border-primary` | Bordo primario (elementi interattivi cliccabili) |
-| `--bsi-color-border-primary-hover` | Bordo primario per lo stato hover |
-| `--bsi-color-border-primary-active` | Bordo primario per lo stato active |
-| `--bsi-color-border-secondary` | Bordo secondario |
-| `--bsi-color-border-secondary-hover` | Bordo secondario per lo stato hover |
-| `--bsi-color-border-secondary-active` | Bordo secondario per lo stato active |
-| `--bsi-color-border-inverse` | Bordo su sfondi a contrasto |
-| `--bsi-color-border-disabled` | Bordo per elementi disabilitati |
-| `--bsi-color-border-subtle` | Bordo separatore (sezioni e componenti) |
-| `--bsi-color-border-success` | Bordo di successo |
-| `--bsi-color-border-success-hover` | Bordo di successo per lo stato hover |
-| `--bsi-color-border-success-active` | Bordo di successo per lo stato active |
-| `--bsi-color-border-warning` | Bordo di allerta |
-| `--bsi-color-border-warning-hover` | Bordo di allerta per lo stato hover |
-| `--bsi-color-border-warning-active` | Bordo di allerta per lo stato active |
-| `--bsi-color-border-danger` | Bordo di pericolo/errore |
-| `--bsi-color-border-danger-hover` | Bordo di pericolo per lo stato hover |
-| `--bsi-color-border-danger-active` | Bordo di pericolo per lo stato active |
-{: .table .table-cols-equal .mb-4}
+<div class="table-responsive mb-4">
+  <table class="table table-cols-preview">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Esempio del colore</th>
+        <th>Utilizzo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>--bsi-color-border-primary</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-border-primary' type='border' %}</td>
+        <td>Bordo primario (elementi interattivi cliccabili)</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-border-primary-hover</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-border-primary-hover' type='border' %}</td>
+        <td>Bordo primario per lo stato hover</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-border-primary-active</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-border-primary-active' type='border' %}</td>
+        <td>Bordo primario per lo stato active</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-border-secondary</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-border-secondary' type='border' %}</td>
+        <td>Bordo secondario</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-border-secondary-hover</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-border-secondary-hover' type='border' %}</td>
+        <td>Bordo secondario per lo stato hover</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-border-secondary-active</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-border-secondary-active' type='border' %}</td>
+        <td>Bordo secondario per lo stato active</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-border-inverse</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-border-inverse' type='inverse-border' %}</td>
+        <td>Bordo su sfondi a contrasto</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-border-disabled</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-border-disabled' type='border' %}</td>
+        <td>Bordo per elementi disabilitati</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-border-subtle</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-border-subtle' type='border' %}</td>
+        <td>Bordo separatore (sezioni e componenti)</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-border-success</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-border-success' type='border' %}</td>
+        <td>Bordo di successo</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-border-success-hover</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-border-success-hover' type='border' %}</td>
+        <td>Bordo di successo per lo stato hover</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-border-success-active</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-border-success-active' type='border' %}</td>
+        <td>Bordo di successo per lo stato active</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-border-warning</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-border-warning' type='border' %}</td>
+        <td>Bordo di allerta</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-border-warning-hover</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-border-warning-hover' type='border' %}</td>
+        <td>Bordo di allerta per lo stato hover</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-border-warning-active</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-border-warning-active' type='border' %}</td>
+        <td>Bordo di allerta per lo stato active</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-border-danger</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-border-danger' type='border' %}</td>
+        <td>Bordo di pericolo/errore</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-border-danger-hover</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-border-danger-hover' type='border' %}</td>
+        <td>Bordo di pericolo per lo stato hover</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-border-danger-active</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-border-danger-active' type='border' %}</td>
+        <td>Bordo di pericolo per lo stato active</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 ### Colore dei link
 
 Le variabili `--bsi-color-link-*` controllano i colori dei link nella pagina.
 
-| Variabile CSS | Utilizzo |
-|---|---|
-| `--bsi-color-link` | Colore base dei link |
-| `--bsi-color-link-hover` | Link per lo stato hover |
-| `--bsi-color-link-active` | Link per lo stato active |
-| `--bsi-color-link-secondary` | Link secondari (richiede sottolineatura) |
-| `--bsi-color-link-secondary-hover` | Link secondario per lo stato hover |
-| `--bsi-color-link-secondary-active` | Link secondario per lo stato active |
-| `--bsi-color-link-inverse` | Link su sfondi a contrasto |
-| `--bsi-color-link-disabled` | Link disabilitato |
-| `--bsi-color-link-accent` | Link con colore di accento |
-| `--bsi-color-link-accent-hover` | Link di accento per lo stato hover |
-{: .table .table-cols-equal .mb-4}
+<div class="table-responsive mb-4">
+  <table class="table table-cols-preview">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Esempio del colore</th>
+        <th>Utilizzo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>--bsi-color-link</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-link' %}</td>
+        <td>Colore base dei link</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-link-hover</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-link-hover' %}</td>
+        <td>Link per lo stato hover</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-link-active</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-link-active' %}</td>
+        <td>Link per lo stato active</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-link-secondary</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-link-secondary' %}</td>
+        <td>Link secondari (richiede sottolineatura)</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-link-secondary-hover</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-link-secondary-hover' %}</td>
+        <td>Link secondario per lo stato hover</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-link-secondary-active</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-link-secondary-active' %}</td>
+        <td>Link secondario per lo stato active</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-link-inverse</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-link-inverse' type='bg-border' %}</td>
+        <td>Link su sfondi a contrasto</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-link-disabled</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-link-disabled' %}</td>
+        <td>Link disabilitato</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-link-accent</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-link-accent' %}</td>
+        <td>Link con colore di accento</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-link-accent-hover</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-link-accent-hover' %}</td>
+        <td>Link di accento per lo stato hover</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 ### Colori di stato
 
 Le variabili `--bsi-color-status-*` sono alias semantici dei colori di sfondo di stato, utili per colorare elementi indicatori come badge, dot o icone.
 
-| Variabile CSS | Utilizzo |
-|---|---|
-| `--bsi-color-status-danger` | Colore indicatore di pericolo/errore |
-| `--bsi-color-status-danger-hover` | Indicatore pericolo per lo stato hover |
-| `--bsi-color-status-danger-active` | Indicatore pericolo per lo stato active |
-| `--bsi-color-status-success` | Colore indicatore di successo |
-| `--bsi-color-status-success-hover` | Indicatore successo per lo stato hover |
-| `--bsi-color-status-success-active` | Indicatore successo per lo stato active |
-| `--bsi-color-status-warning` | Colore indicatore di allerta |
-| `--bsi-color-status-warning-hover` | Indicatore allerta per lo stato hover |
-| `--bsi-color-status-warning-active` | Indicatore allerta per lo stato active |
-{: .table .table-cols-equal .mb-4}
+<div class="table-responsive mb-4">
+  <table class="table table-cols-preview">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Esempio del colore</th>
+        <th>Utilizzo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>--bsi-color-status-danger</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-status-danger' %}</td>
+        <td>Colore indicatore di pericolo/errore</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-status-danger-hover</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-status-danger-hover' %}</td>
+        <td>Indicatore pericolo per lo stato hover</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-status-danger-active</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-status-danger-active' %}</td>
+        <td>Indicatore pericolo per lo stato active</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-status-success</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-status-success' %}</td>
+        <td>Colore indicatore di successo</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-status-success-hover</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-status-success-hover' %}</td>
+        <td>Indicatore successo per lo stato hover</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-status-success-active</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-status-success-active' %}</td>
+        <td>Indicatore successo per lo stato active</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-status-warning</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-status-warning' %}</td>
+        <td>Colore indicatore di allerta</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-status-warning-hover</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-status-warning-hover' %}</td>
+        <td>Indicatore allerta per lo stato hover</td>
+      </tr>
+      <tr>
+        <td><code>--bsi-color-status-warning-active</code></td>
+        <td>{% include color-swatch.html var='--bsi-color-status-warning-active' %}</td>
+        <td>Indicatore allerta per lo stato active</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 ## Come personalizzare i colori
 
