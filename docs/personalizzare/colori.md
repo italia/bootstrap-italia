@@ -1,11 +1,25 @@
 ---
 layout: docs
-group: come-iniziare
+group: personalizzare-la-libreria
 toc: true
 
-title: Personalizzazione dei colori
+title: Colori
 description: Come sovrascrivere le variabili CSS di Bootstrap Italia per personalizzare i colori del tema senza ricompilare i sorgenti SCSS.
 ---
+
+<style>
+  /* Colonne 1 e 2 a larghezza uguale nelle tabelle di questa pagina */
+  .table-cols-equal {
+    table-layout: fixed;
+    width: 100%;
+  }
+  .table-cols-equal th:first-child,
+  .table-cols-equal td:first-child,
+  .table-cols-equal th:nth-child(2),
+  .table-cols-equal td:nth-child(2) {
+    width: 50%;
+  }
+</style>
 
 ## Introduzione
 
@@ -28,7 +42,7 @@ I colori seguono la semantica definita dal [Design System Italia](https://design
 | `warning`   | Indica il colore dello stato di allerta, usato per indicare stati di avviso o di rischio                 |
 | `danger`    | Indica il colore dello stato di pericolo, usato per indicare stati di errore                             |
 | `inverse`   | Indica il colore invertito rispetto ad un colore di sfondo, generalmente bianco                          |
-{: .table .mb-4}
+{: .table .table-cols-equal .mb-4}
 
 ### Varianti
 
@@ -42,13 +56,15 @@ Ciascun colore è disponibile in alcune varianti, definite come segue:
 | `-muted`    | Variante molto attenuata |
 | `-deep`     | Variante molto scura     |
 | `-emphasis` | Variante di enfasi       |
-{: .table .mb-4}
+{: .table .table-cols-equal .mb-4}
 
 **Non tutte le varianti sono disponibili per ogni colore**. Ad esempio, il colore `color-background-primary` è disponibile nelle varianti `-light` e `-lighter`, ma non `-emphasis`. Ciascuna variante dipende dalla categoria di colore (sfondo, bordo o testo) e dal contesto di utilizzo. 
 
 #### Colori e design token
-Le variabili relative ai colori seguono la stessa nomenclatura definita per i design tokens del Design System Italia.
-Ciascuna di esse referenzia il corrispettivo design token proveniente dalla risorsa [`design-tokens-italia`](https://github.com/italia/design-tokens-italia).
+Le variabili relative ai colori seguono la stessa nomenclatura definita per i design token del Design system Italia.
+Ciascuna di esse referenzia il corrispettivo token di colore proveniente dalla risorsa [`design-tokens-italia`](https://github.com/italia/design-tokens-italia).
+
+Approfondisci la [nomenclatura dei design token](https://designers.italia.it/design-system/fondamenti/design-tokens/).
 
 <!-- ## Variabili del tema
 
@@ -71,24 +87,24 @@ Le variabili semantiche descrivono il **ruolo del colore** all'interno dell'inte
 
 Le variabili `--bsi-color-text-*` controllano il colore del testo in diversi contesti:
 
-| Variabile CSS | Utilizzo |
+| Variabile CSS | Utilizzo | Anteprima |
 |---|---|
-| `--bsi-color-text-base` | Testo principale della pagina |
-| `--bsi-color-text-primary` | Testo con funzione di link o azione primaria |
-| `--bsi-color-text-secondary` | Testo alternativo, contenuti di dettaglio |
-| `--bsi-color-text-muted` | Testo di supporto, didascalie brevi |
-| `--bsi-color-text-disabled` | Testo su elementi disabilitati |
-| `--bsi-color-text-inverse` | Testo su sfondi a contrasto (primary, emphasis) |
-| `--bsi-color-text-accent` | Testo di accento su sfondi a contrasto |
-| `--bsi-color-text-success` | Testo per stati di successo |
-| `--bsi-color-text-success-hover` | Testo di successo per lo stato hover |
-| `--bsi-color-text-success-active` | Testo di successo per lo stato active |
-| `--bsi-color-text-warning` | Testo per stati di allerta |
-| `--bsi-color-text-warning-hover` | Testo di allerta per lo stato hover |
-| `--bsi-color-text-warning-active` | Testo di allerta per lo stato active |
-| `--bsi-color-text-danger` | Testo per errori o pericoli |
-| `--bsi-color-text-danger-hover` | Testo di pericolo per lo stato hover |
-| `--bsi-color-text-danger-active` | Testo di pericolo per lo stato active |
+| `--bsi-color-text-base` | Testo principale della pagina | <span style="color: var(--bsi-color-text-base);">Testo di anteprima</span> |
+| `--bsi-color-text-primary` | Testo con funzione di link o azione primaria | <span style="color: var(--bsi-color-text-primary);">Testo di anteprima</span> |
+| `--bsi-color-text-secondary` | Testo alternativo, contenuti di dettaglio | <span style="color: var(--bsi-color-text-secondary);">Testo di anteprima</span> |
+| `--bsi-color-text-muted` | Testo di supporto, didascalie brevi | <span style="color: var(--bsi-color-text-muted);">Testo di anteprima</span> |
+| `--bsi-color-text-disabled` | Testo su elementi disabilitati | <span style="color: var(--bsi-color-text-disabled);">Testo di anteprima</span> |
+| `--bsi-color-text-inverse` | Testo su sfondi a contrasto (primary, emphasis) | <span style="color: var(--bsi-color-text-inverse); background-color: var(--bsi-color-background-primary);">Testo di anteprima</span> |
+| `--bsi-color-text-accent` | Testo di accento su sfondi a contrasto | <span style="color: var(--bsi-color-text-accent);">Testo di anteprima</span> |
+| `--bsi-color-text-success` | Testo per stati di successo | <span style="color: var(--bsi-color-text-success);">Testo di anteprima</span> |
+| `--bsi-color-text-success-hover` | Testo di successo per lo stato hover | <span style="color: var(--bsi-color-text-success-hover);">Testo di anteprima</span> |
+| `--bsi-color-text-success-active` | Testo di successo per lo stato active | <span style="color: var(--bsi-color-text-success-active);">Testo di anteprima</span> |
+| `--bsi-color-text-warning` | Testo per stati di allerta | <span style="color: var(--bsi-color-text-warning);">Testo di anteprima</span> |
+| `--bsi-color-text-warning-hover` | Testo di allerta per lo stato hover | <span style="color: var(--bsi-color-text-warning-hover);">Testo di anteprima</span> |
+| `--bsi-color-text-warning-active` | Testo di allerta per lo stato active | <span style="color: var(--bsi-color-text-warning-active);">Testo di anteprima</span> |
+| `--bsi-color-text-danger` | Testo per errori o pericoli | <span style="color: var(--bsi-color-text-danger);">Testo di anteprima</span> |
+| `--bsi-color-text-danger-hover` | Testo di pericolo per lo stato hover | <span style="color: var(--bsi-color-text-danger-hover);">Testo di anteprima</span> |
+| `--bsi-color-text-danger-active` | Testo di pericolo per lo stato active | <span style="color: var(--bsi-color-text-danger-active);">Testo di anteprima</span> |
 {: .table .mb-4}
 
 ### Colore di sfondo
@@ -129,7 +145,7 @@ Le variabili `--bsi-color-background-*` controllano i colori di sfondo di compon
 | `--bsi-color-background-danger-light` | Sfondo di pericolo chiaro (contenuti medio-lunghi) |
 | `--bsi-color-background-danger-hover` | Sfondo di pericolo per lo stato hover |
 | `--bsi-color-background-danger-active` | Sfondo di pericolo per lo stato active |
-{: .table .mb-4}
+{: .table .table-cols-equal .mb-4}
 
 ### Colore dei bordi
 
@@ -155,7 +171,7 @@ Le variabili `--bsi-color-border-*` controllano i colori dei bordi di componenti
 | `--bsi-color-border-danger` | Bordo di pericolo/errore |
 | `--bsi-color-border-danger-hover` | Bordo di pericolo per lo stato hover |
 | `--bsi-color-border-danger-active` | Bordo di pericolo per lo stato active |
-{: .table .mb-4}
+{: .table .table-cols-equal .mb-4}
 
 ### Colore dei link
 
@@ -173,7 +189,7 @@ Le variabili `--bsi-color-link-*` controllano i colori dei link nella pagina.
 | `--bsi-color-link-disabled` | Link disabilitato |
 | `--bsi-color-link-accent` | Link con colore di accento |
 | `--bsi-color-link-accent-hover` | Link di accento per lo stato hover |
-{: .table .mb-4}
+{: .table .table-cols-equal .mb-4}
 
 ### Colori di stato
 
@@ -190,63 +206,35 @@ Le variabili `--bsi-color-status-*` sono alias semantici dei colori di sfondo di
 | `--bsi-color-status-warning` | Colore indicatore di allerta |
 | `--bsi-color-status-warning-hover` | Indicatore allerta per lo stato hover |
 | `--bsi-color-status-warning-active` | Indicatore allerta per lo stato active |
-{: .table .mb-4}
+{: .table .table-cols-equal .mb-4}
 
 ## Come personalizzare i colori
 
-Per personalizzare i colori è sufficiente creare un foglio di stile dedicato e caricarlo **dopo** `bootstrap-italia.min.css`, seguendo la logica a cascata dei file CSS. In questo modo è possibile sovrascrivere le variabili sull'elemento `:root`.
+Puoi personalizzare i colori creando un foglio di stile dedicato e caricarlo **dopo** `bootstrap-italia.min.css`, seguendo la logica a cascata dei file CSS. In questo modo è possibile sovrascrivere le variabili sull'elemento `:root`.
 
-### Cambiare il colore primario del tema
-
-La maggior parte dei componenti usa direttamente le variabili del gruppo `--bsi-theme-primary-*`. Per cambiare il colore primario del tema è quindi sufficiente sovrascrivere questo gruppo:
+```html
+<link rel="stylesheet" href="bootstrap-italia.min.css">
+<link rel="stylesheet" href="my-custom-colors.css">
+```
 
 ```css
-/* custom.css — da caricare dopo bootstrap-italia.min.css */
+/* my-custom-colors.css */
 :root {
-  --bsi-theme-primary:         #005C2B;
-  --bsi-theme-primary-deep:    #003D1C;
-  --bsi-theme-primary-muted:   #004D24;
-  --bsi-theme-primary-subtle:  #004D24;
-  --bsi-theme-primary-light:   #C8E6D4;
-  --bsi-theme-primary-lighter: #EDF7F1;
+  --bsi-color-primary: #005C2B;
+  --bsi-color-primary-deep: #003D1C;
+  --bsi-color-primary-muted: #004D24;
+  --bsi-color-primary-subtle: #004D24;
+  --bsi-color-primary-light: #C8E6D4;
+  --bsi-color-primary-lighter: #EDF7F1;
 }
 ```
 
-### Personalizzare variabili semantiche singole
+In questo modo il colore primario del tema sarà personalizzato con i nuovi valori specificati. Puoi personalizzare tutte le variabili semantiche per categoria seguendo la stessa logica.
 
-Per interventi più mirati — ad esempio cambiare solo il colore dei bordi primari o il colore dei link — è possibile sovrascrivere singole variabili semantiche:
-
-```css
-:root {
-  --bsi-color-border-primary:       #005C2B;
-  --bsi-color-link:                 #005C2B;
-  --bsi-color-link-hover:           #003D1C;
-}
-```
-
-### Personalizzare i colori di stato
-
-I colori di successo, allerta ed errore possono essere personalizzati indipendentemente:
-
-```css
-:root {
-  --bsi-color-background-success:       #1a6b3c;
-  --bsi-color-background-success-light: #d4edda;
-  --bsi-color-text-success:             #1a6b3c;
-  --bsi-color-border-success:           #1a6b3c;
-  --bsi-color-status-success:           #1a6b3c;
-}
-```
-
-{% capture callout %}
-#### Accessibilità
-
-Quando si personalizzano i colori verificare sempre che il contrasto tra testo e sfondo soddisfi i requisiti WCAG 2.1 (rapporto minimo 4.5:1 per testo normale, 3:1 per testo grande). Strumenti come [Contrast Checker](https://webaim.org/resources/contrastchecker/) possono aiutare nella verifica.
-{% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
 ## Migrazione dalla versione 2
 
-Nella versione 2 di Bootstrap Italia i colori erano applicati tramite classi CSS utility legate direttamente alla palette (es. `.primary-bg`, `.analogue-1-color`). In v3 questo sistema è stato rimosso e sostituito con variabili CSS semantiche.
+Nella versione 2.x di Bootstrap Italia erano disponibili classi CSS utility legate alla palette dei colori (es. `.primary-bg-*`, `.analogue-1-color-*`). Nella versione 3.x questo sistema è stato rimosso in favore delle variabili CSS.
 
 La tabella seguente riporta le corrispondenze principali per le classi che avevano un equivalente semantico. Le classi elencate come rimosse non hanno un sostituto diretto: i casi d'uso che le richiedevano devono essere valutati in base al contesto e alla funzione del colore, scegliendo la variabile semantica più appropriata.
 
@@ -257,24 +245,28 @@ La tabella seguente riporta le corrispondenze principali per le classi che aveva
 | `.primary-bg` | `background-color: var(--bsi-color-background-primary)` |
 | `.primary-color` | `color: var(--bsi-color-text-primary)` |
 | `.primary-border-color` | `border-color: var(--bsi-color-border-primary)` |
-| `.primary-bg-a*` / `.primary-bg-b*` / `.primary-bg-c*` | Rimosso — usare le varianti `--bsi-theme-primary-light`, `-lighter`, `-subtle`, `-muted`, `-deep` |
+| `.primary-bg-a*`  <br> `.primary-bg-b*`  <br> `.primary-bg-c*` | Rimosso - usare le varianti `-light`, `-lighter`, `-subtle`, `-muted`, `-deep` |
+{: .table .table-cols-equal .mb-4}
+
 
 ### Colori analoghi
 
 | v2 — Classe CSS | v3 — Variabile CSS |
 |---|---|
-| `.analogue-1-bg` / `.analogue-1-color` / `.analogue-1-border-color` | Rimosso — nessun sostituto diretto |
-| `.analogue-2-bg` / `.analogue-2-color` / `.analogue-2-border-color` | Rimosso — nessun sostituto diretto |
-| Varianti `.analogue-*-bg-a*` / `.analogue-*-bg-b*` | Rimosso — nessun sostituto diretto |
+| `.analogue-1-bg` <br> `.analogue-1-color`  <br> `.analogue-1-border-color` | Rimosso - nessun sostituto diretto |
+| `.analogue-2-bg` <br> `.analogue-2-color`  <br> `.analogue-2-border-color` | Rimosso - nessun sostituto diretto |
+| Varianti `.analogue-*-bg-a*`  <br> `.analogue-*-bg-b*` | Rimosso - nessun sostituto diretto |
+{: .table .table-cols-equal .mb-4}
 
 ### Colori complementari e triadici
 
 | v2 — Classe CSS | v3 — Variabile CSS |
 |---|---|
-| `.complementary-1-bg` / `.complementary-1-color` / `.complementary-1-border-color` | Rimosso — nessun sostituto diretto |
-| `.complementary-2-bg` / `.complementary-2-color` / `.complementary-2-border-color` | Rimosso — nessun sostituto diretto |
-| `.complementary-3-bg` / `.complementary-3-color` / `.complementary-3-border-color` | Rimosso — nessun sostituto diretto |
-| Varianti `.complementary-*-bg-a*` / `.complementary-*-bg-b*` | Rimosso — nessun sostituto diretto |
+| `.complementary-1-bg` <br> `.complementary-1-color`  <br> `.complementary-1-border-color` | Rimosso - nessun sostituto diretto |
+| `.complementary-2-bg` <br> `.complementary-2-color`  <br> `.complementary-2-border-color` | Rimosso - nessun sostituto diretto |
+| `.complementary-3-bg` <br> `.complementary-3-color`  <br> `.complementary-3-border-color` | Rimosso - nessun sostituto diretto |
+| Varianti `.complementary-*-bg-a*`  <br> `.complementary-*-bg-b*` | Rimosso - nessun sostituto diretto |
+{: .table .table-cols-equal .mb-4}
 
 ### Colori neutrali
 
@@ -288,12 +280,14 @@ I colori neutrali non hanno un sostituto diretto. In base al contesto d'uso, val
 | `.neutral-2-bg` | `background-color: var(--bsi-color-background-muted)` |
 | `.neutral-2-color` | `color: var(--bsi-color-text-muted)` |
 | `.neutral-2-border-color` | `border-color: var(--bsi-color-border-subtle)` |
-| Varianti `.neutral-*-bg-a*` / `.neutral-*-bg-b*` | Rimosso — nessun sostituto diretto |
+| Varianti `.neutral-*-bg-a*`  <br> `.neutral-*-bg-b*` | Rimosso - nessun sostituto diretto |
+{: .table .table-cols-equal .mb-4}
 
 ### Grigi chiari
 
 | v2 — Classe CSS | v3 — Variabile CSS |
 |---|---|
-| `.lightgrey-bg-a*` / `.lightgrey-bg-b*` / `.lightgrey-bg-c*` | Rimosso — nessun sostituto diretto |
-| `.lightgrey-color-*` | Rimosso — nessun sostituto diretto |
-| `.lightgrey-border-color-*` | Rimosso — nessun sostituto diretto |
+| `.lightgrey-bg-a*`  <br> `.lightgrey-bg-b*`  <br> `.lightgrey-bg-c*` | Rimosso - nessun sostituto diretto |
+| `.lightgrey-color-*` | Rimosso - nessun sostituto diretto |
+| `.lightgrey-border-color-*` | Rimosso - nessun sostituto diretto |
+{: .table .table-cols-equal .mb-4}

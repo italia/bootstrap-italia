@@ -5,13 +5,14 @@
     - title: Introduzione
     - title: Design tokens
     - title: Font
-    - title: Personalizzazione della libreria
-    - title: Personalizzare i colori
-    - title: Modificare componenti
     - title: Migrazione dalla versione 2
     - title: Strumenti di compilazione
 
-- title: Breaking change
+- title: Personalizzare la libreria
+  pages:
+    - title: Colori
+    - title: Componenti
+    - title: Personalizzazione della libreria
 
 - title: Organizzare gli spazi
   pages:
@@ -113,5 +114,7 @@
 - title: Esempi
 
 - title: Progetti
+
+- title: Breaking change
 
 - title: Informazioni

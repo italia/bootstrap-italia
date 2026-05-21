@@ -1,8 +1,8 @@
 ---
 layout: docs
-title: Modificare componenti
+title: Componenti
 description: Come modificare i componenti e i moduli esistenti, e crearne di nuovi.
-group: come-iniziare
+group: personalizzare-la-libreria
 toc: true
 ---
 
@@ -15,7 +15,7 @@ Queste due cartelle, assieme alla cartella `docs` per la stesura della documenta
 Il codice presente in esse, attraverso alcune procedure di compilazione utilizzando `Rollup` viene usato per _sovrascrivere_ il codice già presente in Bootstrap {{ site.bootstrap_version }} e ne esporta una versione personalizzata (un tema) nelle cartelle `dist/js` (con relativi moduli nella cartella `plugins`) e `dist/css`.
 
 In breve, gli elementi su cui intervenire per la creazione o la modifica di componenti personalizzati possono essere:
-
+i
 - Un file `.md` per la documentazione del componente
 - Un file `.scss` per lo stile
 - Un file `.js` per comportamenti dinamici
