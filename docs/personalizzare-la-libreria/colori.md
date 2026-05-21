@@ -2,9 +2,8 @@
 layout: docs
 group: personalizzare-la-libreria
 toc: true
-
 title: Colori
-description: Come sovrascrivere le variabili CSS di Bootstrap Italia per personalizzare i colori del tema senza ricompilare i sorgenti SCSS.
+description: Quali sono i colori disponobili in Bootstrap Italia e come personalizzarli
 ---
 
 <style>
