@@ -16,7 +16,7 @@ Bootstrap Italia inherits components, mixins, grid system, and anything else fro
 
 The project roadmap is available in the [Designers Italia 2022 activity plan](https://designers.italia.it/piano-attivita/).
 
-**[Check out the documentation »](https://italia.github.io/bootstrap-italia/)** (in italian)
+**[Check out the 3.x branch documentation »](https://bootstrap-italia-3.vercel.app/)** (in italian)
 
 or
 

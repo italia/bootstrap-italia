@@ -353,7 +353,7 @@ Usa le varianti di card editoriale inline (orizzontali).
             <div class="it-card-image-wrapper">
               <div class="ratio ratio-16x9">
                 <figure class="figure img-full">
-                  <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+                  <img src="https://picsum.photos/seed/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
                 </figure>
               </div>
             </div>
@@ -385,7 +385,7 @@ Usa le varianti di card editoriale inline (orizzontali).
             <div class="it-card-image-wrapper">
               <div class="ratio ratio-16x9">
                 <figure class="figure img-full">
-                  <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+                  <img src="https://picsum.photos/seed/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
                 </figure>
               </div>
             </div>
@@ -417,7 +417,7 @@ Usa le varianti di card editoriale inline (orizzontali).
             <div class="it-card-image-wrapper">
               <div class="ratio ratio-16x9">
                 <figure class="figure img-full">
-                  <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+                  <img src="https://picsum.photos/seed/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
                 </figure>
               </div>
             </div>
@@ -454,7 +454,7 @@ Usa le varianti di card editoriale inline (orizzontali).
             <div class="it-card-image-wrapper">
               <div class="ratio ratio-16x9">
                 <figure class="figure img-full">
-                  <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+                  <img src="https://picsum.photos/seed/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
                 </figure>
               </div>
             </div>
@@ -485,7 +485,7 @@ Usa le varianti di card editoriale inline (orizzontali).
             <div class="it-card-image-wrapper">
               <div class="ratio ratio-16x9">
                 <figure class="figure img-full">
-                  <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+                  <img src="https://picsum.photos/seed/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
                 </figure>
               </div>
             </div>
@@ -516,7 +516,7 @@ Usa le varianti di card editoriale inline (orizzontali).
             <div class="it-card-image-wrapper">
               <div class="ratio ratio-16x9">
                 <figure class="figure img-full">
-                  <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+                  <img src="https://picsum.photos/seed/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
                 </figure>
               </div>
             </div>
@@ -546,38 +546,7 @@ Usa le varianti di card editoriale inline (orizzontali).
             <div class="it-card-image-wrapper">
               <div class="ratio ratio-16x9">
                 <figure class="figure img-full">
-                  <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
-                </figure>
-              </div>
-            </div>
-            <!--card body content-->
-            <div class="it-card-body">
-              <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
-            </div>
-            <!--finally the card footer metadata-->
-            <footer class="it-card-related it-card-footer">
-              <div class="it-card-taxonomy">
-                <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
-              </div>
-              <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
-            </footer>
-          </article>
-          <!--end it-card-->
-        </div>
-      </li>
-      <li class="splide__slide">
-        <div class="it-single-slide-wrapper h-100 p-2">
-          <!--start it-card-->
-          <article class="it-card it-card-image it-card-height-full rounded shadow-sm border">
-            <!--card first child is the title (link)-->
-            <h3 class="it-card-title no_toc">
-              <a href="#">Titolo del contenuto</a>
-            </h3>
-            <!--card second child is the image (optional)-->
-            <div class="it-card-image-wrapper">
-              <div class="ratio ratio-16x9">
-                <figure class="figure img-full">
-                  <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+                  <img src="https://picsum.photos/seed/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
                 </figure>
               </div>
             </div>
@@ -608,7 +577,38 @@ Usa le varianti di card editoriale inline (orizzontali).
             <div class="it-card-image-wrapper">
               <div class="ratio ratio-16x9">
                 <figure class="figure img-full">
-                  <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+                  <img src="https://picsum.photos/seed/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+                </figure>
+              </div>
+            </div>
+            <!--card body content-->
+            <div class="it-card-body">
+              <p class="it-card-text">Questo è un testo breve che riassume il contenuto della pagina di destinazione in massimo tre o quattro righe, senza troncamento.</p>
+            </div>
+            <!--finally the card footer metadata-->
+            <footer class="it-card-related it-card-footer">
+              <div class="it-card-taxonomy">
+                <a href="#" class="it-card-category it-card-link link-secondary"><span class="visually-hidden">Categoria correlata: </span>Categoria</a>
+              </div>
+              <time class="it-card-date" datetime="{{ 'now' | date: "%Y" }}-04-22">22 aprile {{ 'now' | date: "%Y" }}</time>
+            </footer>
+          </article>
+          <!--end it-card-->
+        </div>
+      </li>
+      <li class="splide__slide">
+        <div class="it-single-slide-wrapper h-100 p-2">
+          <!--start it-card-->
+          <article class="it-card it-card-image it-card-height-full rounded shadow-sm border">
+            <!--card first child is the title (link)-->
+            <h3 class="it-card-title no_toc">
+              <a href="#">Titolo del contenuto</a>
+            </h3>
+            <!--card second child is the image (optional)-->
+            <div class="it-card-image-wrapper">
+              <div class="ratio ratio-16x9">
+                <figure class="figure img-full">
+                  <img src="https://picsum.photos/seed/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
                 </figure>
               </div>
             </div>
