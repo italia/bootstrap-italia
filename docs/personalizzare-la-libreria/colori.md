@@ -120,8 +120,10 @@ Ciascun colore può avere diverse varianti:
 **Attenzione:** I nomi `subtle` e `muted` sono utilizzati sia per i colori che per le varianti. In questo modo possono essere abbinati sia ad una proprietà come `border` che ad un colore come `primary`. Ad esempio:
 
  ```css
- --bsi-color-background-primary-muted: #004d99;
- --bsi-color-border-subtle: ##c5c7c9;
+ :root {
+   --bsi-color-background-primary-muted: #004d99;
+   --bsi-color-border-subtle: #c5c7c9;
+ }
  ```
 Mentre `--bsi-color-background-primary-muted` definisce una variante molto attenuata del colore primario abbinata alla proprietà `background`, la variabile `--bsi-color-border-subtle` definisce la variante di un bordo, senza esplicitare il colore di riferimento, che in questo caso è un grigio chiaro.
 
@@ -165,22 +167,45 @@ Puoi personalizzare i colori creando un foglio di stile dedicato e caricarlo **d
 
 ```html
 <link rel="stylesheet" href="bootstrap-italia.min.css">
+<!-- Caricamento del foglio di stile personalizzato -->
 <link rel="stylesheet" href="my-custom-colors.css">
 ```
+
+In alternativa, puoi creare un file SCSS dedicato e importarlo nel file sorgente della libreria, inserendolo dopo il parziale `_root.scss` seguendo la nuova [logica di importazione]({{ site.baseurl }}/docs/come-iniziare/introduzione/#con-sass):
+
+```scss
+// my-bootstrap-italia.scss
+
+@use 'bootstrap-italia/src/scss/base/root' as *;
+
+// altri parziali da importare
+// ...
+
+// Personalizzazione dei colori
+@use 'my-custom-colors.scss' as *;
+```
+
+### Cambiare il colore primario
+
+Ad esempio, **cambiare il colore primario del tema è molto semplice**. 
+Basta sovrascrivere le principali variabili `primary` per categoria seguendo la stessa logica:
 
 ```css
 /* my-custom-colors.css */
 :root {
-  --bsi-color-primary: #005C2B;
-  --bsi-color-primary-deep: #003D1C;
-  --bsi-color-primary-muted: #004D24;
-  --bsi-color-primary-subtle: #004D24;
-  --bsi-color-primary-light: #C8E6D4;
-  --bsi-color-primary-lighter: #EDF7F1;
+
+  /* Nuovo colore primario */
+  --my-custom-primary-color: #005C2B;
+
+  /* Override delle variabili CSS di Bootstrap Italia */
+  --bsi-color-text-primary: var(--my-custom-primary-color);
+  --bsi-color-background-primary: var(--my-custom-primary-color);
+  --bsi-color-border-primary: var(--my-custom-primary-color);
+  --bsi-color-icon-primary: var(--my-custom-primary-color);
 }
 ```
 
-In questo modo il colore primario del tema sarà personalizzato con i nuovi valori specificati. Puoi personalizzare tutte le variabili semantiche per categoria seguendo la stessa logica.
+Questo approccio è valido per tutte le [variabili disponibili nella libreria]({{ site.baseurl }}/docs/personalizzare-la-libreria/variabili-css/).
 
 
 ## Migrazione dalla versione 2
@@ -189,42 +214,23 @@ Nella versione 2.x di Bootstrap Italia erano disponibili classi CSS utility lega
 
 La tabella seguente riporta le corrispondenze principali per le classi che avevano un equivalente semantico. Le classi elencate come rimosse non hanno un sostituto diretto: i casi d'uso che le richiedevano devono essere valutati in base al contesto e alla funzione del colore, scegliendo la variabile semantica più appropriata.
 
-### Colori primari
+### Classi CSS rimosse
 
-| v2 — Classe CSS | v3 — Variabile CSS |
+Lista delle classi CSS rimosse e come sostituirle con le variabili CSS o le utilities di Bootstrap Italia.
+
+| v2.x | v3.x |
 |---|---|
-| `.primary-bg` | `background-color: var(--bsi-color-background-primary)` |
+| `.primary-bg` | `--bsi-color-background-primary`<br> `.bg-primary` |
 | `.primary-color` | `color: var(--bsi-color-text-primary)` |
 | `.primary-border-color` | `border-color: var(--bsi-color-border-primary)` |
 | `.primary-bg-a*`  <br> `.primary-bg-b*`  <br> `.primary-bg-c*` | Rimosso - usare le varianti `-light`, `-lighter`, `-subtle`, `-muted`, `-deep` |
-{: .table .table-cols-equal .mb-4}
-
-
-### Colori analoghi
-
-| v2 — Classe CSS | v3 — Variabile CSS |
-|---|---|
 | `.analogue-1-bg` <br> `.analogue-1-color`  <br> `.analogue-1-border-color` | Rimosso - nessun sostituto diretto |
 | `.analogue-2-bg` <br> `.analogue-2-color`  <br> `.analogue-2-border-color` | Rimosso - nessun sostituto diretto |
 | Varianti `.analogue-*-bg-a*`  <br> `.analogue-*-bg-b*` | Rimosso - nessun sostituto diretto |
-{: .table .table-cols-equal .mb-4}
-
-### Colori complementari e triadici
-
-| v2 — Classe CSS | v3 — Variabile CSS |
-|---|---|
 | `.complementary-1-bg` <br> `.complementary-1-color`  <br> `.complementary-1-border-color` | Rimosso - nessun sostituto diretto |
 | `.complementary-2-bg` <br> `.complementary-2-color`  <br> `.complementary-2-border-color` | Rimosso - nessun sostituto diretto |
 | `.complementary-3-bg` <br> `.complementary-3-color`  <br> `.complementary-3-border-color` | Rimosso - nessun sostituto diretto |
 | Varianti `.complementary-*-bg-a*`  <br> `.complementary-*-bg-b*` | Rimosso - nessun sostituto diretto |
-{: .table .table-cols-equal .mb-4}
-
-### Colori neutrali
-
-I colori neutrali non hanno un sostituto diretto. In base al contesto d'uso, valutare le variabili semantiche `subtle` o `muted`:
-
-| v2 — Classe CSS | v3 — Suggerimento |
-|---|---|
 | `.neutral-1-bg` | `background-color: var(--bsi-color-background-subtle)` oppure `var(--bsi-color-background-muted)` |
 | `.neutral-1-color` | `color: var(--bsi-color-text-muted)` |
 | `.neutral-1-border-color` | `border-color: var(--bsi-color-border-subtle)` |
@@ -232,13 +238,8 @@ I colori neutrali non hanno un sostituto diretto. In base al contesto d'uso, val
 | `.neutral-2-color` | `color: var(--bsi-color-text-muted)` |
 | `.neutral-2-border-color` | `border-color: var(--bsi-color-border-subtle)` |
 | Varianti `.neutral-*-bg-a*`  <br> `.neutral-*-bg-b*` | Rimosso - nessun sostituto diretto |
-{: .table .table-cols-equal .mb-4}
-
-### Grigi chiari
-
-| v2 — Classe CSS | v3 — Variabile CSS |
-|---|---|
 | `.lightgrey-bg-a*`  <br> `.lightgrey-bg-b*`  <br> `.lightgrey-bg-c*` | Rimosso - nessun sostituto diretto |
 | `.lightgrey-color-*` | Rimosso - nessun sostituto diretto |
 | `.lightgrey-border-color-*` | Rimosso - nessun sostituto diretto |
 {: .table .table-cols-equal .mb-4}
+
