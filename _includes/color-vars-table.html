@@ -3,16 +3,16 @@
   <table class="table table-cols-preview">
     <thead>
       <tr>
-        <th>Nome</th>
         <th>Esempio del colore</th>
-        <th>Utilizzo</th>
+        <th>Variabile CSS</th>
+        <th>Descrizione</th>
       </tr>
     </thead>
     <tbody>
       {%- for row in rows -%}
-      <tr>
-        <td><code>{{ row.var }}</code></td>
+      <tr class="align-middle">
         <td>{% include color-swatch.html var=row.var type=row.swatch %}</td>
+        <td><code>{{ row.var }}</code></td>
         <td>{{ row.usage }}</td>
       </tr>
       {%- endfor -%}
