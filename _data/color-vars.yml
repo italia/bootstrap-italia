@@ -3,7 +3,7 @@ text:
   swatch: bg
   usage: Testo di accento su sfondi a contrasto
 - var: --bsi-color-text-inverse
-  swatch: inverse-nested
+  swatch: bg-border
   usage: Testo su sfondi a contrasto (primary, emphasis)
 - var: --bsi-color-text-danger-active
   swatch: bg
@@ -67,7 +67,7 @@ link:
   swatch: bg
   usage: Link secondario per lo stato active
 - var: --bsi-color-link-inverse
-  swatch: inverse-nested
+  swatch: bg-border
   usage: Link su sfondi a contrasto
 - var: --bsi-color-link-disabled
   swatch: bg
@@ -113,7 +113,7 @@ border:
   swatch: border
   usage: Bordo per elementi disabilitati
 - var: --bsi-color-border-inverse
-  swatch: border-inverse
+  swatch: inverse-border
   usage: Bordo su sfondi a contrasto
 - var: --bsi-color-border-secondary-active
   swatch: border
