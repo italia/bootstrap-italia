@@ -1,0 +1,263 @@
+text:
+- var: --bsi-color-text-accent
+  swatch: bg
+  usage: Testo di accento su sfondi a contrasto
+- var: --bsi-color-text-inverse
+  swatch: inverse-nested
+  usage: Testo su sfondi a contrasto (primary, emphasis)
+- var: --bsi-color-text-danger-active
+  swatch: bg
+  usage: Testo di pericolo per lo stato active
+- var: --bsi-color-text-danger-hover
+  swatch: bg
+  usage: Testo di pericolo per lo stato hover
+- var: --bsi-color-text-danger
+  swatch: bg
+  usage: Testo per errori o pericoli
+- var: --bsi-color-text-warning-active
+  swatch: bg
+  usage: Testo di allerta per lo stato active
+- var: --bsi-color-text-warning-hover
+  swatch: bg
+  usage: Testo di allerta per lo stato hover
+- var: --bsi-color-text-warning
+  swatch: bg
+  usage: Testo per stati di allerta
+- var: --bsi-color-text-success-active
+  swatch: bg
+  usage: Testo di successo per lo stato active
+- var: --bsi-color-text-success-hover
+  swatch: bg
+  usage: Testo di successo per lo stato hover
+- var: --bsi-color-text-success
+  swatch: bg
+  usage: Testo per stati di successo
+- var: --bsi-color-text-disabled
+  swatch: bg
+  usage: Testo su elementi disabilitati
+- var: --bsi-color-text-muted
+  swatch: bg
+  usage: Testo di supporto, didascalie brevi
+- var: --bsi-color-text-secondary
+  swatch: bg
+  usage: Testo alternativo, contenuti di dettaglio
+- var: --bsi-color-text-primary
+  swatch: bg
+  usage: Testo con funzione di link o azione primaria
+- var: --bsi-color-text-base
+  swatch: bg
+  usage: Testo principale della pagina
+link:
+- var: --bsi-color-link
+  swatch: bg
+  usage: Colore base dei link
+- var: --bsi-color-link-hover
+  swatch: bg
+  usage: Link per lo stato hover
+- var: --bsi-color-link-active
+  swatch: bg
+  usage: Link per lo stato active
+- var: --bsi-color-link-secondary
+  swatch: bg
+  usage: Link secondari (richiede sottolineatura)
+- var: --bsi-color-link-secondary-hover
+  swatch: bg
+  usage: Link secondario per lo stato hover
+- var: --bsi-color-link-secondary-active
+  swatch: bg
+  usage: Link secondario per lo stato active
+- var: --bsi-color-link-inverse
+  swatch: inverse-nested
+  usage: Link su sfondi a contrasto
+- var: --bsi-color-link-disabled
+  swatch: bg
+  usage: Link disabilitato
+- var: --bsi-color-link-accent
+  swatch: bg
+  usage: Link con colore di accento
+- var: --bsi-color-link-accent-hover
+  swatch: bg
+  usage: Link di accento per lo stato hover
+border:
+- var: --bsi-color-border-danger-active
+  swatch: border
+  usage: Bordo di pericolo per lo stato active
+- var: --bsi-color-border-danger-hover
+  swatch: border
+  usage: Bordo di pericolo per lo stato hover
+- var: --bsi-color-border-danger
+  swatch: border
+  usage: Bordo di pericolo/errore
+- var: --bsi-color-border-warning-active
+  swatch: border
+  usage: Bordo di allerta per lo stato active
+- var: --bsi-color-border-warning-hover
+  swatch: border
+  usage: Bordo di allerta per lo stato hover
+- var: --bsi-color-border-warning
+  swatch: border
+  usage: Bordo di allerta
+- var: --bsi-color-border-success-active
+  swatch: border
+  usage: Bordo di successo per lo stato active
+- var: --bsi-color-border-success-hover
+  swatch: border
+  usage: Bordo di successo per lo stato hover
+- var: --bsi-color-border-success
+  swatch: border
+  usage: Bordo di successo
+- var: --bsi-color-border-subtle
+  swatch: border
+  usage: Bordo separatore (sezioni e componenti)
+- var: --bsi-color-border-disabled
+  swatch: border
+  usage: Bordo per elementi disabilitati
+- var: --bsi-color-border-inverse
+  swatch: border-inverse
+  usage: Bordo su sfondi a contrasto
+- var: --bsi-color-border-secondary-active
+  swatch: border
+  usage: Bordo secondario per lo stato active
+- var: --bsi-color-border-secondary-hover
+  swatch: border
+  usage: Bordo secondario per lo stato hover
+- var: --bsi-color-border-secondary
+  swatch: border
+  usage: Bordo secondario
+- var: --bsi-color-border-primary-active
+  swatch: border
+  usage: Bordo primario per lo stato active
+- var: --bsi-color-border-primary-hover
+  swatch: border
+  usage: Bordo primario per lo stato hover
+- var: --bsi-color-border-primary
+  swatch: border
+  usage: Bordo primario (elementi interattivi cliccabili)
+background:
+- var: --bsi-color-background-primary
+  swatch: bg
+  usage: Sfondo primario (pulsanti, link, elementi di identità)
+- var: --bsi-color-background-primary-lighter
+  swatch: bg
+  usage: Sfondo primario molto chiaro (definisce sezioni di pagina)
+- var: --bsi-color-background-primary-light
+  swatch: bg
+  usage: Sfondo primario chiaro (alternativo per elementi interattivi)
+- var: --bsi-color-background-primary-deep
+  swatch: bg
+  usage: Sfondo primario scuro (sezioni di pagina)
+- var: --bsi-color-background-primary-muted
+  swatch: bg
+  usage: Sfondo primario attenuato (sezioni di pagina)
+- var: --bsi-color-background-primary-active
+  swatch: bg
+  usage: Sfondo primario per lo stato active/premuto
+- var: --bsi-color-background-primary-hover
+  swatch: bg
+  usage: Sfondo primario per lo stato hover
+- var: --bsi-color-background-danger-active
+  swatch: bg
+  usage: Sfondo di pericolo per lo stato active
+- var: --bsi-color-background-danger-hover
+  swatch: bg
+  usage: Sfondo di pericolo per lo stato hover
+- var: --bsi-color-background-danger-light
+  swatch: bg
+  usage: Sfondo di pericolo chiaro (contenuti medio-lunghi)
+- var: --bsi-color-background-danger
+  swatch: bg
+  usage: Sfondo per errori o pericoli
+- var: --bsi-color-background-warning-active
+  swatch: bg
+  usage: Sfondo di allerta per lo stato active
+- var: --bsi-color-background-warning-hover
+  swatch: bg
+  usage: Sfondo di allerta per lo stato hover
+- var: --bsi-color-background-warning-light
+  swatch: bg
+  usage: Sfondo di allerta chiaro (contenuti medio-lunghi)
+- var: --bsi-color-background-warning
+  swatch: bg
+  usage: Sfondo per stati di allerta
+- var: --bsi-color-background-success-active
+  swatch: bg
+  usage: Sfondo di successo per lo stato active
+- var: --bsi-color-background-success-hover
+  swatch: bg
+  usage: Sfondo di successo per lo stato hover
+- var: --bsi-color-background-success-light
+  swatch: bg
+  usage: Sfondo di successo chiaro (contenuti medio-lunghi)
+- var: --bsi-color-background-success
+  swatch: bg
+  usage: Sfondo per stati di successo
+- var: --bsi-color-background-emphasis
+  swatch: bg
+  usage: Sfondo di enfasi (sezioni in evidenza)
+- var: --bsi-color-background-subtle
+  swatch: bg
+  usage: Sfondo chiaro (separatori, sezioni)
+- var: --bsi-color-background-disabled
+  swatch: bg
+  usage: Sfondo per elementi disabilitati
+- var: --bsi-color-background-inverse
+  swatch: bg-border
+  usage: Sfondo invertito (bianco su sfondi scuri)
+- var: --bsi-color-background-inverse-hover
+  swatch: bg
+  usage: Sfondo invertito per lo stato hover
+- var: --bsi-color-background-muted
+  swatch: bg
+  usage: Sfondo molto chiaro (sezioni, paragrafi)
+- var: --bsi-color-background-accent-hover
+  swatch: bg
+  usage: Sfondo di accento per lo stato hover
+- var: --bsi-color-background-accent
+  swatch: bg
+  usage: Sfondo con colore di accento
+- var: --bsi-color-background-secondary-lighter
+  swatch: bg
+  usage: Sfondo secondario molto chiaro
+- var: --bsi-color-background-secondary-light
+  swatch: bg
+  usage: Sfondo secondario chiaro
+- var: --bsi-color-background-secondary-active
+  swatch: bg
+  usage: Sfondo secondario per lo stato active
+- var: --bsi-color-background-secondary-hover
+  swatch: bg
+  usage: Sfondo secondario per lo stato hover
+- var: --bsi-color-background-secondary
+  swatch: bg
+  usage: Sfondo secondario (elementi interattivi alternativi)
+- var: --bsi-color-background-secondary-deep
+  swatch: bg
+  usage: Sfondo secondario molto scuro
+status:
+- var: --bsi-color-status-danger
+  swatch: bg
+  usage: Colore indicatore di pericolo/errore
+- var: --bsi-color-status-danger-hover
+  swatch: bg
+  usage: Indicatore pericolo per lo stato hover
+- var: --bsi-color-status-danger-active
+  swatch: bg
+  usage: Indicatore pericolo per lo stato active
+- var: --bsi-color-status-success
+  swatch: bg
+  usage: Colore indicatore di successo
+- var: --bsi-color-status-success-hover
+  swatch: bg
+  usage: Indicatore successo per lo stato hover
+- var: --bsi-color-status-success-active
+  swatch: bg
+  usage: Indicatore successo per lo stato active
+- var: --bsi-color-status-warning
+  swatch: bg
+  usage: Colore indicatore di allerta
+- var: --bsi-color-status-warning-hover
+  swatch: bg
+  usage: Indicatore allerta per lo stato hover
+- var: --bsi-color-status-warning-active
+  swatch: bg
+  usage: Indicatore allerta per lo stato active
