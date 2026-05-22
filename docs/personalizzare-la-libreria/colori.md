@@ -3,7 +3,7 @@ layout: docs
 group: personalizzare-la-libreria
 toc: true
 title: Colori
-description: Quali sono i colori disponobili in Bootstrap Italia e come personalizzarli
+description: Quali sono i colori disponibili in Bootstrap Italia e come personalizzarli
 ---
 
 <style>
@@ -23,11 +23,11 @@ description: Quali sono i colori disponobili in Bootstrap Italia e come personal
   }
   .table-cols-preview th:first-child,
   .table-cols-preview td:first-child {
-    width: 35%;
+    width: 20%;
   }
   .table-cols-preview th:nth-child(2),
   .table-cols-preview td:nth-child(2) {
-    width: 20%;
+    width: 35%;
   }
   .table-cols-preview th:nth-child(3),
   .table-cols-preview td:nth-child(3) {
@@ -38,7 +38,7 @@ description: Quali sono i colori disponobili in Bootstrap Italia e come personal
 ## Introduzione
 
 Bootstrap Italia dalla `v3.x` espone i valori dei colori tramite le **[CSS custom properties]({{ site.baseurl }}/docs/personalizzare-la-libreria/variabili-css/)**.
-Il nome delle variabili descrive la funzione del colore e non il valore cromatico (es. `--bsi-color-text-primary`).
+Il nome delle variabili descrive la funzione del colore e non il valore cromatico.
 
 ## Semantica dei colori
 
@@ -48,55 +48,55 @@ I colori seguono la semantica definita dal [Design System Italia](https://design
   <table class="table table-cols-preview">
     <thead>
       <tr>
-        <th>Nome</th>
         <th>Esempio del colore</th>
-        <th>Utilizzo</th>
+        <th>Nome</th>
+        <th>Descrizione</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td><code>primary</code></td>
+      <tr class="align-middle">
         <td>{% include color-swatch.html var='--bsi-color-background-primary' %}</td>
+        <td><code>primary</code></td>
         <td>Indica il colore principale del tema, coincide con l'identità del prodotto</td>
       </tr>
-      <tr>
-        <td><code>secondary</code></td>
+      <tr class="align-middle">
         <td>{% include color-swatch.html var='--bsi-color-background-secondary' %}</td>
+        <td><code>secondary</code></td>
         <td>Colore neutro di supporto al colore primario</td>
       </tr>
-      <tr>
-        <td><code>accent</code></td>
+      <tr class="align-middle">
         <td>{% include color-swatch.html var='--bsi-color-background-accent' %}</td>
+        <td><code>accent</code></td>
         <td>Colore di risalto, alternativo al colore primario per elementi interattivi, sfondo o bordo</td>
       </tr>
-      <tr>
-        <td><code>subtle</code></td>
+      <tr class="align-middle">
         <td>{% include color-swatch.html var='--bsi-color-background-subtle' %}</td>
+        <td><code>subtle</code></td>
         <td>Colore neutro utilizzato per elementi di sfondo o bordo.</td>
       </tr>
-      <tr>
-        <td><code>muted</code></td>
+      <tr class="align-middle">
         <td>{% include color-swatch.html var='--bsi-color-background-muted' %}</td>
+        <td><code>muted</code></td>
         <td>Colore neutro utilizzato per elementi di sfondo o bordo.</td>
       </tr>
-      <tr>
-        <td><code>success</code></td>
+      <tr class="align-middle">
         <td>{% include color-swatch.html var='--bsi-color-background-success' %}</td>
+        <td><code>success</code></td>
         <td>Colore di sistema, identifica lo stato di successo</td>
       </tr>
-      <tr>
-        <td><code>warning</code></td>
+      <tr class="align-middle">
         <td>{% include color-swatch.html var='--bsi-color-background-warning' %}</td>
+        <td><code>warning</code></td>
         <td>Colore di sistema, identifica lo stato di allerta</td>
       </tr>
-      <tr>
-        <td><code>danger</code></td>
+      <tr class="align-middle">
         <td>{% include color-swatch.html var='--bsi-color-background-danger' %}</td>
+        <td><code>danger</code></td>
         <td>Colore di sistema, identifica lo stato di pericolo</td>
       </tr>
-      <tr>
-        <td><code>inverse</code></td>
+      <tr class="align-middle">
         <td>{% include color-swatch.html var='--bsi-color-background-inverse' type='bg-border' %}</td>
+        <td><code>inverse</code></td>
         <td>Indica il colore invertito rispetto ad un colore di sfondo, generalmente bianco</td>
       </tr>
     </tbody>
@@ -125,20 +125,7 @@ Ciascun colore può avere diverse varianti:
  ```
 Mentre `--bsi-color-background-primary-muted` definisce una variante molto attenuata del colore primario abbinata alla proprietà `background`, la variabile `--bsi-color-border-subtle` definisce la variante di un bordo, senza esplicitare il colore di riferimento, che in questo caso è un grigio chiaro.
 
-<!-- ## Variabili del tema
-
-Il gruppo `--bsi-theme-primary-*` rappresenta la palette del colore primario del tema. Questi sono i valori che la maggior parte dei componenti usa direttamente per colori di sfondo, bordi e testo interattivo.
-
-| Variabile CSS | Valore default | Descrizione |
-|---|---|---|
-| `--bsi-theme-primary` | `#0066cc` | Colore base del tema (Blu Italia) |
-| `--bsi-theme-primary-light` | `#bfdfff` | Variante chiara |
-| `--bsi-theme-primary-lighter` | `#f2f7fc` | Variante molto chiara |
-| `--bsi-theme-primary-subtle` | `#004d99` | Variante attenuata |
-| `--bsi-theme-primary-muted` | `#004080` | Variante molto attenuata |
-| `--bsi-theme-primary-deep` | `#003366` | Variante scura | -->
-
-## Variabili semantiche per categoria
+## Variabili CSS disponibili
 
 Le variabili semantiche descrivono il **ruolo del colore** all'interno dell'interfaccia. Sono organizzate per categoria: testo, sfondo, bordo, link e stato.
 
