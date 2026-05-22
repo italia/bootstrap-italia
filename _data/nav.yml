@@ -3,16 +3,16 @@
 - title: Come iniziare
   pages:
     - title: Introduzione
-    - title: Design tokens
     - title: Font
     - title: Migrazione dalla versione 2
     - title: Strumenti di compilazione
 
 - title: Personalizzare la libreria
   pages:
+    - title: Variabili CSS
+    - title: Design token
     - title: Colori
     - title: Componenti
-    - title: Personalizzazione della libreria
 
 - title: Organizzare gli spazi
   pages:
