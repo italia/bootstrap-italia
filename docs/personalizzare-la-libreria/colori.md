@@ -210,36 +210,32 @@ Questo approccio è valido per tutte le [variabili disponibili nella libreria]({
 
 ## Migrazione dalla versione 2
 
-Nella versione 2.x di Bootstrap Italia erano disponibili classi CSS utility legate alla palette dei colori (es. `.primary-bg-*`, `.analogue-1-color-*`). Nella versione 3.x questo sistema è stato rimosso in favore delle variabili CSS.
+La versione `2.x` di Bootstrap Italia metteva a disposizione molte classi di utility legate alla palette dei colori che ora sono state rimosse in favore delle variabili CSS.
 
-La tabella seguente riporta le corrispondenze principali per le classi che avevano un equivalente semantico. Le classi elencate come rimosse non hanno un sostituto diretto: i casi d'uso che le richiedevano devono essere valutati in base al contesto e alla funzione del colore, scegliendo la variabile semantica più appropriata.
+Se hai utilizzato queste classi in precedenza, puoi sostituirle con le variabili CSS simili o equivalenti verificando che i valori siano compatibili, secondo il contesto di utilizzo.
 
-### Classi CSS rimosse
+### Classi rimosse
 
-Lista delle classi CSS rimosse e come sostituirle con le variabili CSS o le utilities di Bootstrap Italia.
+In questa tabella sono riportate le classi per le quali è disponibile una variabile o classe CSS equivalente. Quelle elencate come rimosse invece non hanno un sostituto diretto.
 
-| v2.x | v3.x |
+| v2.x | v3.0.0 |
 |---|---|
 | `.primary-bg` | `--bsi-color-background-primary`<br> `.bg-primary` |
-| `.primary-color` | `color: var(--bsi-color-text-primary)` |
-| `.primary-border-color` | `border-color: var(--bsi-color-border-primary)` |
-| `.primary-bg-a*`  <br> `.primary-bg-b*`  <br> `.primary-bg-c*` | Rimosso - usare le varianti `-light`, `-lighter`, `-subtle`, `-muted`, `-deep` |
-| `.analogue-1-bg` <br> `.analogue-1-color`  <br> `.analogue-1-border-color` | Rimosso - nessun sostituto diretto |
-| `.analogue-2-bg` <br> `.analogue-2-color`  <br> `.analogue-2-border-color` | Rimosso - nessun sostituto diretto |
-| Varianti `.analogue-*-bg-a*`  <br> `.analogue-*-bg-b*` | Rimosso - nessun sostituto diretto |
-| `.complementary-1-bg` <br> `.complementary-1-color`  <br> `.complementary-1-border-color` | Rimosso - nessun sostituto diretto |
-| `.complementary-2-bg` <br> `.complementary-2-color`  <br> `.complementary-2-border-color` | Rimosso - nessun sostituto diretto |
-| `.complementary-3-bg` <br> `.complementary-3-color`  <br> `.complementary-3-border-color` | Rimosso - nessun sostituto diretto |
-| Varianti `.complementary-*-bg-a*`  <br> `.complementary-*-bg-b*` | Rimosso - nessun sostituto diretto |
-| `.neutral-1-bg` | `background-color: var(--bsi-color-background-subtle)` oppure `var(--bsi-color-background-muted)` |
-| `.neutral-1-color` | `color: var(--bsi-color-text-muted)` |
-| `.neutral-1-border-color` | `border-color: var(--bsi-color-border-subtle)` |
-| `.neutral-2-bg` | `background-color: var(--bsi-color-background-muted)` |
-| `.neutral-2-color` | `color: var(--bsi-color-text-muted)` |
-| `.neutral-2-border-color` | `border-color: var(--bsi-color-border-subtle)` |
-| Varianti `.neutral-*-bg-a*`  <br> `.neutral-*-bg-b*` | Rimosso - nessun sostituto diretto |
-| `.lightgrey-bg-a*`  <br> `.lightgrey-bg-b*`  <br> `.lightgrey-bg-c*` | Rimosso - nessun sostituto diretto |
-| `.lightgrey-color-*` | Rimosso - nessun sostituto diretto |
-| `.lightgrey-border-color-*` | Rimosso - nessun sostituto diretto |
+| `.primary-color` | `--bsi-color-text-primary`<br> `.text-primary` |
+| `.primary-border-color` | `--bsi-color-border-primary`<br> `.border-primary` |
+| `.primary-bg-a*`  <br> `.primary-bg-b*`  <br> `.primary-bg-c*` | Rimosse, nessun sostituto diretto. <br> Prova le varianti `-light`, `-lighter`, `-subtle`, `-muted`, `-deep` |
+| `.analogue-1-bg` <br> `.analogue-1-color`  <br> `.analogue-1-border-color` |  Rimosse, nessun sostituto diretto |
+| `.analogue-2-bg` <br> `.analogue-2-color`  <br> `.analogue-2-border-color` |  `--bsi-color-background-accent`<br> `--bsi-color-text-accent` |
+| `.analogue-*-bg-a*`  <br> `.analogue-*-bg-b*` | Rimosse, nessun sostituto diretto |
+| `.complementary-1-bg` <br> `.complementary-1-color`  <br> `.complementary-1-border-color` | `--bsi-color-background-danger` <br> `--bsi-color-text-danger` <br> `--bsi-color-border-danger` |
+| `.complementary-2-bg` <br> `.complementary-2-color`  <br> `.complementary-2-border-color` | `--bsi-color-background-warning` <br> `--bsi-color-text-warning` <br> `--bsi-color-border-warning` |
+| `.complementary-3-bg` <br> `.complementary-3-color`  <br> `.complementary-3-border-color` | `--bsi-color-background-success` <br> `--bsi-color-text-success` <br> `--bsi-color-border-success` |
+| `.complementary-*-bg-a*`  <br> `.complementary-*-bg-b*` | Rimosse, nessun sostituto diretto |
+| `.neutral-1-bg` <br> `.neutral-1-color` <br> `.neutral-1-border-color` | `--bsi-color-background-emphasis)` <br> `--bsi-color-text-secondary` <br> `--bsi-color-border-secondary` |
+| `.neutral-2-bg` <br> `neutral-2-color` <br> `neutral-2-border-color` | `--bsi-color-background-muted` <br> `--bsi-color-text-muted` <br> `--bsi-color-border-subtle` |
+| `.neutral-*-bg-a*`  <br> `.neutral-*-bg-b*` | Rimosse, nessun sostituto diretto |
+| `.lightgrey-bg-*` | `--bsi-color-background-subtle` |
+| `.lightgrey-color-*` | `--bsi-color-text-muted` |
+| `.lightgrey-border-color-*` | `--bsi-color-border-subtle` |
 {: .table .table-cols-equal .mb-4}
 
