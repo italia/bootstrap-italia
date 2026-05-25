@@ -20,7 +20,6 @@ Tutte le variabili CSS di Bootstrap Italia usano il prefisso `bsi-`.
 Queste variabili sono definite nel file `_root.scss` della libreria e possono essere usate in qualsiasi punto del codice CSS della libreria. Il file `_root.scss` è incluso in `bootstrap-italia.scss`.
 
 
-
 ```scss
 
 ```
@@ -56,20 +55,22 @@ Le variabili CSS dei componenti sono comunque documentate in una tabella **Prope
 
 Quando si personalizza una variabile CSS, è importante distinguere se la variabile è **dinamica** o **statica**.
 
-Una variabile statica ha un valore fisso, mentre valore in base al breakpoint o a condizioni specifiche.
+Una variabile statica ha un valore fisso, mentre il valore di una variabile dinamica cambia in base a condizioni specifiche, come breakpoint o classi CSS.
 
-Bootstrap Italia 3 segue la filosofia di definire le proprietà una sola volta e poi gestire i cambiamenti modificando solo il valore.
+Bootstrap Italia 3 segue la logica per cui una proprietà viene definita una volta sola, mentre il valore ad essa associato può cambiare. È il caso delle variabili dinamiche.
 
 
 ### Variabili Dinamiche
 
-Le variabili dinamiche cambiano valore in base a due condizioni:
-- breakpoint per il responsive design
-- varianti di componente in cui cambia il selettore
+Le variabili dinamiche cambiano valore in base a due condizioni principali:
+- un breakpoint per il responsive design
+- un selettore (tag o classe)
 
-#### Variabile dinamica responsive
 
-Ad esempio, la dimensione responsive dei titoli da `h1` a `h6` è gestita esclusivamenteall'interno del file `_root.scss`:
+
+#### Variabile dinamica per breakpoint
+
+Ad esempio, la dimensione responsive dei titoli da `h1` a `h6` è gestita esclusivamenteall'interno del file `_root.scss`, cambiando il valore a partire da un breakpoint specifico:
 
 ```scss
 
@@ -93,7 +94,7 @@ Ad esempio, la dimensione responsive dei titoli da `h1` a `h6` è gestita esclus
 }
 ```
 
-Nel file `_type.scss`, la proprietà `font-size` dei titoli è dichiarata una volta sola per ciascun selettore di titolo:
+Nel file `_type.scss`, la proprietà `font-size` dei titoli è dichiarata una volta sola per ciascun tag e classe di titolo:
 
 ```scss
 /* _type.scss */
@@ -108,9 +109,9 @@ h2,
 }
 ```
 
-#### Variabile dinamica per varianti di componente
+#### Variabile dinamica per selettore
 
-Nel caso di varianti di componente, la variabile cambia valore in base al selettore applicato. Ad esempio, il background di un pulsante pulsante `.btn` è trasparente di default, mentre nella variante `.btn-primary` è blu:
+Nel caso di cambiamenti che dipendono dall'uso di un selettore (tag o classe) specifico, la variabile cambia valore ad essa assoacito. Ad esempio, lo sfondo di un pulsante con classe `.btn` è trasparente di default, mentre nella variante `.btn-primary` mostra il colore primario:
 
 ```scss
 /* _buttons.scss */
@@ -123,4 +124,4 @@ Nel caso di varianti di componente, la variabile cambia valore in base al selett
 }
 ```
 
-Le varianti interessate da questa logica sono diverse e variano a seconda del componente. È quindi necessario verificare nella documentazione di ogni componente se la variabile è dinamica o statica.
+Pertanto, le variabili definite all'inizio di un file SCSS di un componente possono essere ridefinite all'interno dello stesso. Prima di modificare il valore di una variabile, è quindi necessario verificare se la variabile è dinamica o statica.
