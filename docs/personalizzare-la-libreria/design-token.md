@@ -7,6 +7,7 @@ toc: true
 ---
 
 ## Introduzione
+
 I **design token** sono alla base del [Design system Italia](https://designers.italia.it/design-system/fondamenti/design-tokens/) e definiscono le principali proprietà visive dell’interfaccia (colori, spaziature, tipografia, ecc.).
 
 In Bootstrap Italia, i design token sono utilizzati come valori predefiniti per le **variabili CSS globali** della libreria, garantendo coerenza visiva.
