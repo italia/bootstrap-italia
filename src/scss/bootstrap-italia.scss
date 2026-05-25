@@ -11,6 +11,7 @@
 
 // Variables
 @forward 'base/variables';
+@forward 'base/root';
 // ------------------------------
 
 // Functions, maps and mixins
@@ -20,7 +21,6 @@
 // ------------------------------
 
 // Layout
-@forward 'base/root';
 @forward 'base/reboot';
 @forward 'base/containers';
 @forward 'base/transitions';

@@ -13,7 +13,7 @@ In Bootstrap Italia, i design token sono utilizzati come valori predefiniti per 
 
 ## Come vengono integrati
 
-I design token non fanno direttamente parte del codice sorgente di Bootstrap Italia, ma vengono inclusi come **dipendenza esterna** installata tramite `npm`. Il package ufficiale è [design-tokens-italia](https://www.npmjs.com/package/design-tokens-italiaa).
+I design token non fanno direttamente parte del codice sorgente di Bootstrap Italia, ma vengono inclusi come **dipendenza esterna** installata tramite `npm`. Il package ufficiale è [design-tokens-italia](https://www.npmjs.com/package/design-tokens-italia).
 
 Nel file `_root.scss` della libreria, viene importato il file `design-tokens-italia/dist/scss/_variables.scss` tramite la direttiva `@use`:
 
