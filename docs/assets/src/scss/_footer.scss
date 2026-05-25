@@ -1,6 +1,6 @@
 .bd-footer {
-  background-color: $docs-dark;
-  color: $white;
+  background-color: var(--#{$prefix}color-background-emphasis);
+  color: var(--#{$prefix}color-text-inverse);
 
   @include media-breakpoint-up(sm) {
     text-align: left;

@@ -26,18 +26,22 @@ layout: default
               <a href="https://designers.italia.it/norme-e-riferimenti/" target="_blank" rel="noopener noreferrer">Linee guida di design per i siti internet e i servizi digitali della Pubblica Amministrazione</a>.
             </p>
             <p class="mb-4">
-              <strong>Bootstrap Italia</strong> è una risorsa di
+              <strong>Bootstrap Italia</strong> è una risorsa del
               <a href="https://designers.italia.it/design-system/" target="_blank" rel="noopener noreferrer"><strong>Design System Italia</strong></a>
               e mette a disposizione fondamenti e componenti di
               <a href="https://github.com/italia/design-ui-kit/" target="_blank" rel="noopener noreferrer"><strong>UI Kit Italia</strong></a>
               con codice pronto all'uso.
             </p>
 
-            <div class="d-flex flex-column flex-sm-row align-items-sm-center gap-3 mb-2">
+            <div class="bd-start d-flex flex-column flex-sm-row align-items-sm-center gap-3 mb-2">
               <a class="btn btn-primary btn-lg" href="{{ site.baseurl }}/docs/come-iniziare/introduzione/">
                 Come iniziare
+                <svg class="icon icon-sm icon-inverse"><use href="/dist/svg/sprites.svg#it-arrow-right"></use></svg>
+ 
               </a>
-              <pre class="bg-dark rounded px-3 py-3 mb-0"><code>npm install bootstrap-italia</code></pre>
+              <figure class="highlight mb-0">
+                <pre><code>npm install bootstrap-italia</code></pre>
+              </figure>
             </div>
             <div class="text-muted caption">
               Versione corrente: <strong>v{{ site.current_version }}</strong>

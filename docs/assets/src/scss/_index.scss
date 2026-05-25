@@ -1,11 +1,7 @@
-.main-content {
-  color: $neutral-1;
-}
-
 .bottom-content {
   position: relative;
-  background-color: $primary;
-  color: white;
+  background-color: var(--#{$prefix}color-background-primary-muted);
+  color: var(--#{$prefix}color-text-inverse);
 }
 
 .tsparticles-canvas-el {
@@ -23,7 +19,7 @@
 
 .main-content--panel {
   position: relative;
-  background-color: #fff;
+  background-color: var(--#{$prefix}color-background-inverse);
   @include media-breakpoint-up(sm) {
     margin-top: -16px;
     box-shadow: 0 10px 80px 0 rgba(90, 103, 114, 0.1);
@@ -51,4 +47,9 @@
   height: 100%;
   width: 100%;
   top: 0;
+}
+
+.bd-start .highlight {
+  margin-top: 0;
+  padding: 1.2rem 4rem 1.2rem 1.2rem;
 }
