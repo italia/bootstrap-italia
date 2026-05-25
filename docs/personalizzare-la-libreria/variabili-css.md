@@ -80,6 +80,18 @@ Le variabili globali sono definite nel file `_root.scss` e possono essere usate 
   --#{$prefix}label-font-size-xs: #{tokens.$it-label-font-size-xs};
   --#{$prefix}label-font-size-l: #{tokens.$it-label-font-size-l};
   --#{$prefix}label-leading: #{tokens.$it-label-leading};
+  
+  // Typography responsive properties
+  @include media-breakpoint-up(sm) {
+    --#{$prefix}heading-1-font-size: #{tokens.$it-heading-1-font-size-l};
+    --#{$prefix}heading-2-font-size: #{tokens.$it-heading-2-font-size-l};
+    --#{$prefix}heading-3-font-size: #{tokens.$it-heading-3-font-size-l};
+    --#{$prefix}heading-4-font-size: #{tokens.$it-heading-4-font-size-l};
+    --#{$prefix}heading-5-font-size: #{tokens.$it-heading-5-font-size-l};
+    --#{$prefix}heading-6-font-size: #{tokens.$it-heading-6-font-size-l};
+    --#{$prefix}lead-font-size: #{tokens.$it-lead-font-size-l};
+    --#{$prefix}body-font-size: #{tokens.$it-body-font-size-l};
+  }
 
   // Icons
   --#{$prefix}icon-size-xl: #{tokens.$it-icon-size-xl};
@@ -194,7 +206,6 @@ Le variabili globali sono definite nel file `_root.scss` e possono essere usate 
   --#{$prefix}color-background-success-active: #{tokens.$it-color-background-success-active};
   --#{$prefix}color-background-success-hover: #{tokens.$it-color-background-success-hover};
   --#{$prefix}color-background-success-light: #{tokens.$it-color-background-success-light};
-  // --#{$prefix}color-background-success-lighter: #{tokens.$it-color-background-success-lighter};
   --#{$prefix}color-background-success: #{tokens.$it-color-background-success};
   --#{$prefix}color-background-emphasis: #{tokens.$it-color-background-emphasis};
   --#{$prefix}color-background-subtle: #{tokens.$it-color-background-subtle};
@@ -219,7 +230,7 @@ Le variabili globali sono definite nel file `_root.scss` e possono essere usate 
   --#{$prefix}del-background: #{tokens.$it-color-red-70};
   --#{$prefix}page-background: #{tokens.$it-color-background-inverse};
 
-  // Status colors - reference the background category colors only
+  // Status colors
   --#{$prefix}color-status-danger: #{tokens.$it-color-background-danger};
   --#{$prefix}color-status-danger-hover: #{tokens.$it-color-background-danger-hover};
   --#{$prefix}color-status-danger-active: #{tokens.$it-color-background-danger-active};
@@ -253,18 +264,6 @@ Le variabili globali sono definite nel file `_root.scss` e possono essere usate 
 
   // Transitions
   --#{$prefix}transition-instant: 0.2s;
-
-  // Typography responsive properties
-  @include media-breakpoint-up(sm) {
-    --#{$prefix}heading-1-font-size: #{tokens.$it-heading-1-font-size-l};
-    --#{$prefix}heading-2-font-size: #{tokens.$it-heading-2-font-size-l};
-    --#{$prefix}heading-3-font-size: #{tokens.$it-heading-3-font-size-l};
-    --#{$prefix}heading-4-font-size: #{tokens.$it-heading-4-font-size-l};
-    --#{$prefix}heading-5-font-size: #{tokens.$it-heading-5-font-size-l};
-    --#{$prefix}heading-6-font-size: #{tokens.$it-heading-6-font-size-l};
-    --#{$prefix}lead-font-size: #{tokens.$it-lead-font-size-l};
-    --#{$prefix}body-font-size: #{tokens.$it-body-font-size-l};
-  }
 }
 
 ```
