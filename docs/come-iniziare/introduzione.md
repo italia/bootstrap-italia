@@ -11,11 +11,9 @@ description: Come usare Bootstrap Italia nel tuo progetto.
 ---
 
 {% capture alpha_warning %}
-### ⚠️ Versione Alpha
+### ⚠️ Versione Beta
 
-Questa è una versione alpha di Bootstrap Italia 3.
-
-- [Breaking change]({{ site.baseurl }}/docs/come-iniziare/migrazione-dalla-versione-2/)
+Questa è una versione beta di Bootstrap Italia 3. Consulta le [breaking change](/docs/breaking-change/) o la [guida alla migrazione dalla versione 2](/docs/come-iniziare/migrazione-dalla-versione-2/)
 {% endcapture %}{% include callout.html content=alpha_warning type="warning" %}
 
 ## Installazione
