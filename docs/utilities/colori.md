@@ -14,13 +14,11 @@ description: Una serie di classi di utilità per applicare colori a testi e sfon
 Il colore è uno degli strumenti principali per la trasmissione delle informazioni, ma non dimenticare mai di affiancare all'uso del colore altri mezzi più espliciti. 
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
-Bootstrap Italia eredita gli stessi meccanismi per la gestione dei colori di Bootstrap {{ site.bootstrap_version }}, dove i colori del tema sono descritti attraverso una variabile Sass nominata `$theme-colors`.
+Bootstrap Italia eredita le classi di utilità `.text-*` e `.bg-*` di Bootstrap {{ site.bootstrap_version }}, basate sulla mappa `$theme-colors`, e le affianca a un sistema di **CSS custom properties** semantiche con prefisso `--bsi-` che governano i colori di tutti i componenti.
 
-La principale novità introdotta da Bootstrap Italia è una serie di varianti della tonalità primaria _primary_ basate sullo spazio colore [HSB](https://it.wikipedia.org/wiki/Hue_Saturation_Brightness) (coincidente con il modello HSV).
+Le variabili CSS sono definite su `:root` e derivano dal pacchetto [`design-tokens-italia`](https://github.com/italia/design-tokens-italia), che contiene i valori in formato JSON, CSS e SCSS per i design token del Design System Italia.
 
-Questo permette di avere a disposizione 16 diverse varianti "monocromatiche" (in quanto _hue_ e, in gran parte anche _saturation_ rimangono invariate) che, essendo aggiunte alla lista di $theme-colors, sono disponibili per tutti quei componenti ed utilità che ne fanno uso, come ad esempio `.text-` e `.bg-*`.
-
-Puoi trovare maggiori informazioni sulla palette di colori a disposizione alla pagina [Colori Custom]({{ site.baseurl }}/docs/utilities/colori-custom/).
+Per informazioni su come personalizzare i colori del tema sovrascrivendo le variabili CSS — senza ricompilare i sorgenti SCSS — consulta la pagina [Personalizzazione dei colori]({{ site.baseurl }}/docs/utilities/colori-custom/).
 
 ## Colore del testo
 
