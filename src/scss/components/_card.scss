@@ -250,11 +250,12 @@
 
   &.it-card-image.it-card-inline {
     padding-left: 0; // reset padding when using image variant
-  }
-
-  &.it-card-image.it-card-inline-reverse {
     padding-right: 0; // reset padding when using image variant
   }
+
+  // &.it-card-image.it-card-inline-reverse {
+  //   padding-right: 0; // reset padding when using image variant
+  // }
 
   // Card with height 100%
   &.it-card-height-full {
