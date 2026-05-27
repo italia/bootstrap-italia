@@ -167,7 +167,7 @@
   }
 
   @include media-breakpoint-up(md) {
-    --#{$prefix}display-font-size: var(--it-font-size-11);
+    --#{$prefix}display-font-size: #{tokens.$it-font-size-11};
   }
 
   // Icons
