@@ -1,8 +1,14 @@
+@use 'sass:map';
+@use 'config' as *;
+@use 'variables' as *;
+@use 'functions' as *;
+@use 'maps' as *;
+
 // Utilities
 
 $utilities: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
-$utilities: map-merge(
+$utilities: map.merge(
   (
     // scss-docs-start utils-vertical-align
     'align': (
@@ -335,7 +341,7 @@ $utilities: map-merge(
         responsive: true,
         property: margin,
         class: m,
-        values: map-merge(
+        values: map.merge(
             $spacers,
             (
               auto: auto,
@@ -346,7 +352,7 @@ $utilities: map-merge(
       responsive: true,
       property: margin-right margin-left,
       class: mx,
-      values: map-merge(
+      values: map.merge(
           $spacers,
           (
             auto: auto,
@@ -357,7 +363,7 @@ $utilities: map-merge(
       responsive: true,
       property: margin-top margin-bottom,
       class: my,
-      values: map-merge(
+      values: map.merge(
           $spacers,
           (
             auto: auto,
@@ -368,7 +374,7 @@ $utilities: map-merge(
       responsive: true,
       property: margin-top,
       class: mt,
-      values: map-merge(
+      values: map.merge(
           $spacers,
           (
             auto: auto,
@@ -379,7 +385,7 @@ $utilities: map-merge(
       responsive: true,
       property: margin-right,
       class: me,
-      values: map-merge(
+      values: map.merge(
           $spacers,
           (
             auto: auto,
@@ -390,7 +396,7 @@ $utilities: map-merge(
       responsive: true,
       property: margin-bottom,
       class: mb,
-      values: map-merge(
+      values: map.merge(
           $spacers,
           (
             auto: auto,
@@ -401,7 +407,7 @@ $utilities: map-merge(
       responsive: true,
       property: margin-left,
       class: ms,
-      values: map-merge(
+      values: map.merge(
           $spacers,
           (
             auto: auto,
@@ -587,7 +593,7 @@ $utilities: map-merge(
         local-vars: (
           'text-opacity': 1,
         ),
-        values: map-merge(
+        values: map.merge(
             $utilities-text-colors,
             (
               'secondary': $color-text-secondary,
@@ -618,7 +624,7 @@ $utilities: map-merge(
         local-vars: (
           'bg-opacity': 1,
         ),
-        values: map-merge(
+        values: map.merge(
             $utilities-bg-colors,
             (
               'transparent': transparent,

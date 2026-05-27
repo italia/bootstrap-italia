@@ -17,7 +17,7 @@
     },
     {
         "name": "Posizione predefinita",
-        "content": "\n<div class=\"container test-desktop\">\n  <div class=\"notification with-icon success\" role=\"alert\" aria-labelledby=\"not1d-title\" id=\"not1d\">\n    <h2 id=\"not1d-title\" class=\"notification-title\"><svg class=\"icon\"><use href=\"https://italia.github.io/bootstrap-italia/dist/svg/sprites.svg#it-check-circle\"></use></svg>Titolo notifica</h2>\n    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor\u2026</p>\n  </div>\n</div>\n"
+        "content": "\n<div class=\"container test-desktop\">\n  <div class=\"notification with-icon success\" role=\"alert\" aria-labelledby=\"not1d-title\" id=\"not1d\">\n    <h2 id=\"not1d-title\" class=\"notification-title\"><svg class=\"icon icon-sm me-2\"><use href=\"https://italia.github.io/bootstrap-italia/dist/svg/sprites.svg#it-check-circle\"></use></svg>Titolo notifica</h2>\n    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor\u2026</p>\n  </div>\n</div>\n"
     },
     {
         "name": "Posizione fissa",

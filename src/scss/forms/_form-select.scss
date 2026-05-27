@@ -1,3 +1,12 @@
+@use '../base/config' as *;
+@use '../base/variables' as *;
+@use '../base/mixins/border-radius' as *;
+@use '../base/mixins/box-shadow' as *;
+@use '../base/mixins/transition' as *;
+@use '../base/vendor/rfs' as *;
+
+// Select
+
 .form-select-sm {
   padding-top: $form-select-padding-y-sm;
   padding-bottom: $form-select-padding-y-sm;
@@ -21,6 +30,7 @@
     opacity: 0;
     margin-top: 0;
   }
+
   100% {
     opacity: 1;
     margin-top: 0;
@@ -33,6 +43,7 @@
     opacity: 0;
     margin-top: 0;
   }
+
   100% {
     opacity: 1;
     margin-top: 0;
@@ -86,6 +97,7 @@
 
     .bootstrap-select {
       background-color: $input-disabled-bg;
+
       & > .dropdown-toggle.bs-placeholder {
         color: $color-text-base;
         opacity: 1;

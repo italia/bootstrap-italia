@@ -336,12 +336,6 @@ Se i tab contengono icone è necessario aggiungere un'ulteriore classe al wrappe
         Tab 6
       </a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link">
-        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg>
-        Tab 7
-      </a>
-    </li>
   </ul>
 </div>
 {% endcapture %}{% include example.html content=example %}

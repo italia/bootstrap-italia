@@ -30,7 +30,7 @@ jobs:
       - run: npm ci
       - run: npm run build
       - name: Publish package to NPM
-        run: npm publish --tag alpha # to change
+        run: npm publish --tag beta # to change
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - run: npm i extract-changelog-release

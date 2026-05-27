@@ -1,3 +1,9 @@
+@use 'sass:map';
+@use '../base/config' as *;
+@use '../base/variables' as *;
+@use '../base/mixins/breakpoints' as *;
+@use '@splidejs/splide/src/css/core/index'; // XXX TO DO: To verify @use migration
+
 // Component: carousel
 //
 // Description: Component styles for carousel
@@ -8,8 +14,6 @@
 
 // Properties
 //
-
-@import '@splidejs/splide/src/css/core/index';
 
 .it-carousel-wrapper {
   --#{$prefix}carousel-arrow-size: var(--#{$prefix}spacing-xl); // Controls the arrow button size, using spacing tokens.
@@ -219,8 +223,7 @@
 
     // Landscape abstract
     &.it-carousel-landscape-abstract {
-      max-width: #{map-get($container-max-widths, lg)};
-
+      max-width: #{map.get($container-max-widths, lg)};
       .splide__list {
         display: flex;
 
@@ -301,8 +304,7 @@
 
     // 3 col card
     &.it-carousel-landscape-abstract-3 {
-      max-width: #{map-get($container-max-widths, lg)};
-
+      max-width: #{map.get($container-max-widths, lg)};
       &.it-full-carousel {
         max-width: unset;
       }
@@ -320,13 +322,12 @@
   .it-carousel-wrapper {
     // Landscape abstract
     &.it-carousel-landscape-abstract {
-      max-width: #{map-get($container-max-widths, xl)};
+      max-width: #{map.get($container-max-widths, xl)};
     }
 
     // 3 col card
     &.it-carousel-landscape-abstract-3 {
-      max-width: #{map-get($container-max-widths, xl)};
-
+      max-width: #{map.get($container-max-widths, xl)};
       &.it-full-carousel {
         max-width: unset;
       }

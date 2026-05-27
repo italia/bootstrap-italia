@@ -1,0 +1,127 @@
+// base/_config.scss
+// Variabili di configurazione primitive (NON dipendono da funzioni custom)
+
+@use 'sass:map';
+
+// Prefix for :root CSS variables
+$prefix: bsi- !default;
+
+// ============================================================================
+// COLORI BASE (valori letterali HSL/HSB)
+// ============================================================================
+
+$black: hsl(0, 0%, 0%) !default;
+$white: hsl(0, 0%, 100%) !default;
+
+// Grays
+$gray-100: hsl(0, 0%, 96%) !default; // color-gray-96
+$gray-200: hsl(0, 0%, 90%) !default; // color-gray-90
+$gray-300: hsl(0, 0%, 83%) !default; // color-gray-83
+$gray-400: hsl(0, 0%, 64%) !default; // color-gray-64
+$gray-500: hsl(0, 0%, 45%) !default; // color-gray-45
+$gray-600: hsl(0, 0%, 32%) !default; // color-gray-32
+$gray-700: hsl(0, 0%, 25%) !default; // color-gray-25
+$gray-800: hsl(0, 0%, 15%) !default; // color-gray-15
+$gray-900: hsl(0, 0%, 10%) !default; // color-gray-10
+
+// ============================================================================
+// COMPONENTI HSB DEL PRIMARY (numeri puri)
+// ============================================================================
+
+$primary-h: 210 !default;
+$primary-s: 100 !default;
+$primary-b: 80 !default;
+$primary-l: 40 !default; // Kit UI
+
+// ============================================================================
+// COLOR CONTRAST (per la funzione color-contrast)
+// ============================================================================
+
+$min-contrast-ratio: 4.5 !default;
+$color-contrast-dark: $black !default;
+$color-contrast-light: $white !default;
+
+// ============================================================================
+// COLORI DIRETTI (che non usano funzioni HSB)
+// ============================================================================
+
+$red: hsl(350, 60%, 50%) !default; // color-red-50
+$orange: hsl(36, 100%, 30%) !default; // color-orange-30
+$green: hsl(160, 100%, 25%) !default; // color-emerald-25
+$teal: hsl(178, 90%, 32%) !default;
+$dark: hsl(210, 54%, 20%) !default; // color-slate-20
+$gray-secondary: hsl(210, 17%, 44%) !default; // color-slate-44
+$gray-border: hsl(210, 4%, 78%) !default; // color-border-subtle
+$gray-disabled: hsl(210, 3%, 85%) !default; // color-background-disabled
+$gray-label-disabled: hsl(210, 12%, 44%) !default; // color-text-disabled
+
+// Light Greys A
+$lightgrey-a1: hsl(210, 3%, 85%); // progress-background-default
+$lightgrey-a3: hsl(210, 62%, 97%); // color-background-primary-lighter
+
+// Light Greys B
+$lightgrey-b1: hsl(210, 62%, 97%); // color-background-primary-lighter
+
+// Light Greys C
+$lightgrey-c2: hsl(210, 62%, 97%); // color-background-primary-lighter
+
+// ============================================================================
+// DESIGN TOKENS VARIABLES (valori diretti)
+// ============================================================================
+
+// Backgrounds
+$color-background-emphasis: hsl(210, 54%, 20%); // color-slate-20
+$color-background-primary-lighter: hsl(210, 62%, 97%); // color-blue-97
+$color-background-primary-hover: hsl(210, 100%, 30%); // color-blue-30
+$color-background-secondary-hover: hsl(210, 33%, 28%); // color-slate-28
+$color-background-secondary-lighter: hsl(210, 3%, 85%); // color-slate-85
+
+// Borders
+$color-border-secondary: hsl(210, 17%, 44%); // color-slate-44
+$color-border-subtle: hsl(210, 4%, 78%) !default; // color-slate-78
+$color-border-warning: hsl(36, 100%, 30%); // color-orange-30
+
+// Text
+$color-text-primary-active: hsl(210, 100%, 15%); // color-blue-15
+$color-text-primary-hover: hsl(210, 100%, 30%); // color-blue-30
+$color-text-muted: hsl(210, 17%, 44%); // color-slate-44
+$color-text-secondary: hsl(210, 33%, 28%); // color-slate-28
+$color-text-warning: hsl(36, 100%, 30%); // color-orange-30
+
+// ============================================================================
+// COMPONENTI HSB ACCENT COLORS (numeri puri)
+// ============================================================================
+
+// Analoghi
+$analogue-1-h: 243 !default;
+$analogue-1-s: 85 !default;
+$analogue-1-b: 100 !default;
+
+$analogue-2-h: 178 !default;
+$analogue-2-s: 95 !default;
+$analogue-2-b: 85 !default;
+
+// Complementari e triadici
+$complementary-1-h: 351 !default;
+$complementary-1-s: 75 !default;
+$complementary-1-b: 97 !default;
+
+$complementary-2-h: 36 !default;
+$complementary-2-s: 100 !default;
+$complementary-2-b: 100 !default;
+
+$complementary-3-h: 159 !default;
+$complementary-3-s: 100 !default;
+$complementary-3-b: 81 !default;
+
+// Neutral
+$neutral-1-h: 210 !default;
+$neutral-1-s: 70 !default;
+$neutral-1-b: 30 !default;
+
+$neutral-2-h: 210 !default;
+$neutral-2-s: 5 !default;
+$neutral-2-b: 95 !default;
+
+// Characters which are escaped by the escape-svg function
+$escaped-characters: (('<', '%3c'), ('>', '%3e'), ('#', '%23'), ('(', '%28'), (')', '%29')) !default;

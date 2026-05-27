@@ -127,6 +127,8 @@ La versione 3.0.0 ha portato molte breaking changes sia a livello generale che a
 ### Navscroll
 
 - La classe che controlla il colore dell'icona chevron per le varianti scure ha cambiato nome: `.icon-white` diventa `.icon-inverse`.
+- Aggiunta la classe `.it-navscroll-heading` al titolo della sezione.
+- Rinominata la classe `.icon-white` in `.icon-inverse` per le icone chevron delle varianti scure.
 
 
 ### Notification
@@ -152,7 +154,7 @@ La versione 3.0.0 ha portato molte breaking changes sia a livello generale che a
 
 ### Sections
 
-- Negli esempi sono stati rimossi dai contenitori delle colonne tutte le classi custom per padding, margin e font a favore dello standard. 
+- Negli esempi sono stati rimossi dai contenitori delle colonne le classi di utility come `.pe-0`, `.pe-md-5` e `.font-serif`. 
 
 
 ### Sidebar
@@ -160,6 +162,7 @@ La versione 3.0.0 ha portato molte breaking changes sia a livello generale che a
 - Rimossi elementi `<span>` con classe `list-item-title-icon-wrapper`.
 - Nella variante con una lista di link primaria annidata è stata rimossa la classe `.large` dagli elementi `<a>` con classi `.list-item .medium`. 
 - Nelle varianti scure la classe che controlla il colore delle icone bianche ha cambiato nome: `.icon-white` diventa `.icon-inverse`.
+- Rimossa le classi `.right-icon` e `.right` dai link list item.
 
 
 ### Steppers
@@ -168,6 +171,13 @@ La versione 3.0.0 ha portato molte breaking changes sia a livello generale che a
 - Aggiunta la classe `.btn-icon` ai pulsanti "Indietro" e "Avanti".
 - Il pulsante "Avanti" è sempre un `.btn-primary`.
 - Modificata la posizione del pulsante "Salva", ora posizionato in un righe a sé stante.
+
+
+### Toolbar
+
+- L'icona del dropdown è ora gestita con il tag `<svg>`
+- Il contenuto di ogni voce è racchiuso in un contenitore dedicato nel caso di versione con dropdown.
+- Modificata la gestione dell'ombreggiatura, altezza e posizione della toolbar.
 
 
 ### Torna indietro

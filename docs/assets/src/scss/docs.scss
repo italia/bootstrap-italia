@@ -8,27 +8,27 @@
  * --------------------------------------------------------------------------
  */
 
-@import '../../../../src/scss/base/functions';
-@import '../../../../src/scss/base/variables';
-@import '../../../../src/scss/base/mixins/buttons';
-@import '../../../../src/scss/base/mixins';
+@forward '../../../../src/scss/base/config';
+@forward '../../../../src/scss/base/variables';
+@forward '../../../../src/scss/base/functions';
+@forward '../../../../src/scss/base/mixins'; // TO DO: granularizzare in mixins specifici
 
-@import 'colors';
-@import 'nav';
-@import 'masthead';
-@import 'content';
-@import 'skiplink';
-@import 'sidebar';
-@import 'footer';
-@import 'component-examples';
-@import 'callouts';
-@import 'examples';
-@import 'index';
-@import 'clipboard-js';
-@import 'brandhead';
-@import 'custom-color';
-@import 'syntax';
-@import 'extra-syntax';
-@import 'anchor';
-@import 'algolia';
-@import 'font-switcher';
+@forward 'colors';
+@forward 'nav';
+@forward 'masthead';
+@forward 'content';
+@forward 'skiplink';
+@forward 'sidebar';
+@forward 'footer';
+@forward 'component-examples';
+@forward 'callouts';
+@forward 'examples';
+@forward 'index';
+@forward 'clipboard-js';
+@forward 'brandhead';
+@forward 'custom-color';
+@forward 'syntax';
+@forward 'extra-syntax';
+@forward 'anchor';
+@forward 'algolia';
+@forward 'font-switcher';

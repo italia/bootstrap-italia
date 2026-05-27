@@ -1,0 +1,15 @@
+on:
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+name: Lint publiccode
+jobs:
+  publiccode_yml_validation:
+    runs-on: ubuntu-latest
+    name: publiccode.yml validation
+    steps:
+    - uses: actions/checkout@v5
+    - uses: italia/publiccode-parser-action@v1
+      with:
+        publiccode: 'publiccode.yml'

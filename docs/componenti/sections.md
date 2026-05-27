@@ -215,7 +215,7 @@ Per aggiungere una serie di card all'interno di una Section si consiglia di util
             <div class="it-card-image-wrapper">
               <div class="ratio ratio-16x9">
                 <figure class="figure img-full">
-                  <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+                  <img src="https://picsum.photos/seed/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
                 </figure>
               </div>
             </div>
@@ -241,7 +241,7 @@ Per aggiungere una serie di card all'interno di una Section si consiglia di util
             <div class="it-card-image-wrapper">
               <div class="ratio ratio-16x9">
                 <figure class="figure img-full">
-                  <img src="https://placeholderimage.eu/api/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
+                  <img src="https://picsum.photos/seed/city/800/600" alt="Breve descrizione immagine se ha senso nel contesto, marcare altrimenti come decorativa lasciando l'alt applicato ma vuoto.">
                 </figure>
               </div>
             </div>

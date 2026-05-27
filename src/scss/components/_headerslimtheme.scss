@@ -1,3 +1,7 @@
+@use 'sass:map';
+@use '../base/config' as *;
+@use '../base/variables' as *;
+
 // Component: headerslimtheme
 //
 // Description: Component styles for headerslimtheme
@@ -77,7 +81,7 @@
     }
   }
 }
-@media (min-width: #{map-get($grid-breakpoints, lg)}) {
+@media (min-width: #{map.get($grid-breakpoints, lg)}) {
   .it-header-slim-wrapper {
     &.theme-light {
       .it-header-slim-wrapper-content {
@@ -120,7 +124,7 @@
   }
 }
 
-@media (min-width: #{map-get($grid-breakpoints, sm)}) {
+@media (min-width: #{map.get($grid-breakpoints, sm)}) {
   .it-user-wrapper {
     .dropdown-menu.show {
       transform: translate3d(0, 50px, 0) !important;
@@ -133,7 +137,7 @@
   }
 }
 
-@media (min-width: #{map-get($grid-breakpoints, lg)}) {
+@media (min-width: #{map.get($grid-breakpoints, lg)}) {
   .it-user-wrapper {
     .dropdown-menu.show {
       transform: translate3d(0, 56px, 0) !important;

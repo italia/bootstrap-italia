@@ -1,3 +1,7 @@
+@use 'src/scss/base/config' as *;
+@use 'src/scss/base/variables' as *;
+@use 'src/scss/base/mixins/breakpoints' as *;
+
 .bottom-content {
   position: relative;
   background-color: var(--#{$prefix}color-background-primary-muted);
