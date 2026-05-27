@@ -18,7 +18,7 @@ Bootstrap Italia eredita le classi di utilità `.text-*` e `.bg-*` di Bootstrap 
 
 Le variabili CSS sono definite su `:root` e derivano dal pacchetto [`design-tokens-italia`](https://github.com/italia/design-tokens-italia), che contiene i valori in formato JSON, CSS e SCSS per i design token del Design System Italia.
 
-Per informazioni su come personalizzare i colori del tema sovrascrivendo le variabili CSS — senza ricompilare i sorgenti SCSS — consulta la pagina [Personalizzazione dei colori]({{ site.baseurl }}/docs/utilities/colori-custom/).
+Per informazioni su come personalizzare i colori del tema sovrascrivendo le variabili CSS — senza ricompilare i sorgenti SCSS — consulta la pagina [Personalizzazione dei colori]({{ site.baseurl }}/docs/personalizzare-la-libreria/colori/).
 
 ## Colore del testo
 

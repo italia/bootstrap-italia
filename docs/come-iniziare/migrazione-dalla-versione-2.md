@@ -24,7 +24,7 @@ Bootstrap Italia 3 usa il sistema completo di [design tokens del Design system .
 - Personalizzazione semplificata tramite CSS custom properties.
 - Bundle CSS ottimizzato.
 
-[Vai alla scheda dedicata ai design tokens]({{ site.baseurl }}/docs/come-iniziare/design-tokens/)
+[Vai alla scheda dedicata ai design tokens]({{ site.baseurl }}/docs/personalizzare-la-libreria/design-token/)
 
 ### La nuova architettura Sass modulare compatibile con Dart Sass v3.0
 
