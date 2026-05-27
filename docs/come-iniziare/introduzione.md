@@ -67,7 +67,7 @@ Per utilizzare l'intera libreria:
 {% capture callout %}
 **Personalizzare colori e altre variabili?**
 
-Per maggiori dettagli sulla personalizzazione attraverso CSS custom properties, consulta la [guida alla personalizzazione della libreria]({{ site.baseurl }}/docs/come-iniziare/personalizzazione-della-libreria/).
+Per maggiori dettagli sulla personalizzazione di colori e altre variabili, consulta la [guida alla personalizzazione delle variabili CSS]({{ site.baseurl }}/docs/personalizzare-la-libreria/variabili-css/).
 {% endcapture %}{% include callout.html content=callout type="info" %}
 
 #### Ottimizzazione bundle: import selettivo
@@ -93,7 +93,7 @@ Per importare solo i componenti necessari e ridurre le dimensioni del bundle fin
 
 Quando si importano i moduli selettivamente, è necessario usare `as *` per rendere disponibili variabili, funzioni e mixin nel contesto corrente. 
 
-**Alternative:** Puoi usare un namespace custom (ad esempio, `as bsi`) per maggiore chiarezza, o omettere `as` per usare il namespace completo `bootstrap-italia.*`. Per dettagli, consulta la [guida alla personalizzazione]({{ site.baseurl }}/docs/come-iniziare/personalizzazione-della-libreria/).
+**Alternative:** Puoi usare un namespace custom (ad esempio, `as bsi`) per maggiore chiarezza, o omettere `as` per usare il namespace completo `bootstrap-italia.*`.
 {% endcapture %}{% include callout.html content=callout type="warning" %}
 
 #### Metodo legacy (deprecato)

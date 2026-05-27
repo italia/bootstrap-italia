@@ -1,5 +1,6 @@
 @use 'sass:math';
 @use '../base/config' as *;
+@use '../base/functions' as *;
 @use '../base/variables' as *;
 @use '../base/mixins/breakpoints' as *;
 @use '../base/mixins/gradients' as *;
@@ -141,7 +142,6 @@ select {
   &[multiple],
   &[size]:not([size='1']) {
     padding-right: $form-select-padding-x;
-    background-image: none;
   }
 
   &:disabled {
