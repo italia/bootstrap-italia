@@ -98,14 +98,13 @@ Il testo di aiuto deve essere esplicitamente associato ai campi a cui si riferis
   <label class="active" for="input-group-2">Campo con icona e segnaposto</label>
   <div class="input-group">
     <span class="input-group-text"><svg class="icon icon-sm icon-secondary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-pencil"></use></svg></span>
-    <input type="text" class="form-control" id="input-group-2" name="input-group-2" placeholder="Lorem Ipsum">
+    <input type="text" class="form-control" id="input-group-2" name="input-group-2" placeholder="Testo segnaposto">
   </div>
 </div>
 <div class="form-group">
-  <label for="input-group-3">Campo con icona e pulsante</label>
+  <label for="input-group-3">Campo con pulsante di invio e segnaposto</label>
   <div class="input-group">
-      <span class="input-group-text"><svg class="icon icon-sm icon-secondary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-pencil"></use></svg></span>
-      <input type="text" class="form-control" id="input-group-3" name="input-group-3">
+      <input type="text" class="form-control" id="input-group-3" name="input-group-3" placeholder="Testo segnaposto">
       <div class="input-group-append">
         <button class="btn btn-primary" type="button" id="button-4">Invio</button>
       </div>
