@@ -111,7 +111,7 @@ In tal caso è necessario utilizzare l'attributo `data-bs-target`.
                 <a class="it-opener d-lg-none" data-bs-toggle="collapse" href="#menuC1" role="button" aria-expanded="false" aria-controls="menuC1">
                   <span>Ente appartenenza</span>
                   <svg class="icon" aria-hidden="true">
-                    <use href="/dist/svg/sprites.svg#it-expand"></use>
+                    <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
                   </svg>
                 </a>
                 <div class="link-list-wrapper collapse" id="menuC1">
@@ -136,7 +136,7 @@ In tal caso è necessario utilizzare l'attributo `data-bs-target`.
               <div class="it-brand-wrapper">
                 <a href="#">
                   <svg class="icon" aria-hidden="true">
-                    <use href="/dist/svg/sprites.svg#it-pa"></use>
+                    <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-pa"></use>
                   </svg>
                   <div class="it-brand-text">
                     <div class="it-brand-title">Nome dell'Istituzione</div>

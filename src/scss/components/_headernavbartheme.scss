@@ -116,7 +116,7 @@
   .it-header-navbar-wrapper {
     &.theme-light-desk {
       background: $navigation-light-bg-color;
-      box-shadow: $dropdown-box-shadow;
+      border-bottom: 1px solid rgba($header-slim-theme-light-text-color, 0.2);
       .navbar .navbar-collapsable .navbar-nav li a.nav-link.dropdown-toggle svg {
         fill: $navigation-light-text-color;
       }

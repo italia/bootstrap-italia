@@ -1,3 +1,75 @@
+## [2.18.1](https://github.com/italia/bootstrap-italia/compare/v2.18.0...v2.18.1) (2026-04-23)
+
+
+### Bug Fixes
+
+* correct table style inheritance description ([5914bf7](https://github.com/italia/bootstrap-italia/commit/5914bf78659e294c8f7ebe00aa7c4241957e16fc))
+* replace shadow with border color [#1597](https://github.com/italia/bootstrap-italia/issues/1597) ([#1761](https://github.com/italia/bootstrap-italia/issues/1761)) ([f1e198c](https://github.com/italia/bootstrap-italia/commit/f1e198c433a89a3ef89a0946b80a30ed5f028435))
+* update examples_api_update_3.yml branch name ([feace15](https://github.com/italia/bootstrap-italia/commit/feace152bc628191021c38797d0af97e84696d1b))
+
+
+
+# [2.18.0](https://github.com/italia/bootstrap-italia/compare/v2.17.5...v2.18.0) (2026-03-05)
+
+
+### Bug Fixes
+
+* **a11y:** improve modal with icon example and docs ([#1593](https://github.com/italia/bootstrap-italia/issues/1593)) ([6a09ef0](https://github.com/italia/bootstrap-italia/commit/6a09ef0672fbf7eaec131df10d95c43f1eff6290))
+* tooltip stays open when mouse moves on it ([a2529b1](https://github.com/italia/bootstrap-italia/commit/a2529b193a049248e11403fddf8f5ce6e43be760))
+
+
+### Features
+
+* increase gutter-x starting from md breakpoint ([407fed5](https://github.com/italia/bootstrap-italia/commit/407fed53bb3e1456c254d54f12087058cf76c0a1))
+
+
+
+## [2.17.5](https://github.com/italia/bootstrap-italia/compare/v2.17.4...v2.17.5) (2026-02-24)
+
+
+### Bug Fixes
+
+* **docs:** image background on `d-flex` component viewer ([ad5eacb](https://github.com/italia/bootstrap-italia/commit/ad5eacbb903ec0ac2cfaf81e6444ec1afc19c40b))
+* **docs:** typo ([e78b675](https://github.com/italia/bootstrap-italia/commit/e78b6755af862a421e168a39857937b48daf8a18))
+* icon paths in card examples ([e62ee01](https://github.com/italia/bootstrap-italia/commit/e62ee01b434d5e97b70b0d9712e7618beacdd2b9))
+
+
+
+## [2.17.4](https://github.com/italia/bootstrap-italia/compare/v2.17.3...v2.17.4) (2026-02-17)
+
+
+### Bug Fixes
+
+* hero small height [#1505](https://github.com/italia/bootstrap-italia/issues/1505) [#1656](https://github.com/italia/bootstrap-italia/issues/1656) ([30f27ba](https://github.com/italia/bootstrap-italia/commit/30f27ba28ae06d6c5eb231b37b2808d8efb3507d))
+* typo liste.md ([dd07e68](https://github.com/italia/bootstrap-italia/commit/dd07e68f71817a98b8d38b9fdec78436366ec6b1))
+
+
+
+## [2.17.3](https://github.com/italia/bootstrap-italia/compare/v2.17.2...v2.17.3) (2026-02-04)
+
+* security update
+
+
+
+## [2.17.2](https://github.com/italia/bootstrap-italia/compare/v2.17.1...v2.17.2) (2026-01-19)
+
+
+### Bug Fixes
+
+* removed invalid selector `:after .icon` ([e4804b9](https://github.com/italia/bootstrap-italia/commit/e4804b9e71845e98307ea1e134af8a5d47e8d7b7))
+
+
+
+## [2.17.1](https://github.com/italia/bootstrap-italia/compare/v2.17.0...v2.17.1) (2025-12-18)
+
+
+### Bug Fixes
+
+* breadcrumb screen reader announcement, ignore separators ([381f845](https://github.com/italia/bootstrap-italia/commit/381f845d23218ef22cd40f241d1d9224c7588295))
+* **scss:** resolving sass deprecation warnings and compilation errors ([faa996c](https://github.com/italia/bootstrap-italia/commit/faa996c739799dfa03967f4c74c78db8f144aa84))
+
+
+
 # [2.17.0](https://github.com/italia/bootstrap-italia/compare/v2.16.2...v2.17.0) (2025-10-28)
 
 

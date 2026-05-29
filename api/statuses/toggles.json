@@ -1,7 +1,7 @@
 {
     "amichevole con lettori di schermo": "PRONTO",
     "angular Kit": "DA COMPLETARE VARIANTI",
-    "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/componenti/toggle",
+    "angular Kit - url": "https://italia.github.io/design-angular-kit/design-angular-kit#/form/toggle",
     "assignees": [
         "Fupete"
     ],
@@ -14,11 +14,13 @@
         "title": "Toggles",
         "type": "DraftIssue"
     },
+    "dev Kit Italia": "PRONTO",
+    "dev Kit Italia - url": "https://italia.github.io/dev-kit-italia/?path=/docs/componenti-form-toggle--documentazione",
     "id": "PVTI_lADOAOqloM4AcXblzgMjwkw",
     "navigabile": "PRONTO",
-    "notes / More": "In UI Kit Italia \u00e8 presente anche il componente \"To be\". Decidere roadmap. \u2014\u00a0In Angular kit manca la variante \"gruppi\"",
+    "notes / More": "In UI Kit Italia \u00e8 presente anche il componente \"To be\" che sar\u00e0 integrato in BSI v3. \u2014 In Angular kit manca la variante \"gruppi\"",
     "react Kit": "PRONTO",
-    "react Kit - url": "https://italia.github.io/design-react-kit/?path=/docs/documentazione-form-toggles--documentazione",
+    "react Kit - url": "https://italia.github.io/design-react-kit/latest/?path=/docs/documentazione-form-toggles--documentazione",
     "status": "Todo",
     "status a11y check": "Done",
     "title": "Toggles",

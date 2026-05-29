@@ -1,17 +1,16 @@
+@use 'sass:color';
+
 .bd-example-row {
-  .d-flex,
   .row {
-    background-image: linear-gradient(45deg, $neutral-1-a2 25%, transparent 25%), linear-gradient(-45deg, $neutral-1-a2 25%, transparent 25%),
+    background-image:
+      linear-gradient(45deg, $neutral-1-a2 25%, transparent 25%), linear-gradient(-45deg, $neutral-1-a2 25%, transparent 25%),
       linear-gradient(45deg, transparent 75%, $neutral-1-a2 75%), linear-gradient(-45deg, transparent 75%, $neutral-1-a2 75%);
     background-size: 20px 20px;
     background-position:
       0 0,
       0 10px,
       10px -10px,
-      -10px 0px;
-  }
-
-  .row {
+      -10px 0;
     > .col,
     > [class^='col-'] {
       padding-top: 0.75rem;
@@ -88,7 +87,7 @@
 .bd-example-container-header {
   height: 3rem;
   margin-bottom: 0.5rem;
-  background-color: lighten($blue, 50%);
+  background-color: color.scale($blue, $lightness: 50%);
   border-radius: 0.25rem;
 }
 
@@ -96,14 +95,14 @@
   float: right;
   width: 4rem;
   height: 8rem;
-  background-color: lighten($blue, 25%);
+  background-color: color.scale($blue, $lightness: 25%);
   border-radius: 0.25rem;
 }
 
 .bd-example-container-body {
   height: 8rem;
   margin-right: 4.5rem;
-  background-color: lighten($primary, 25%);
+  background-color: color.scale($primary, $lightness: 25%);
   border-radius: 0.25rem;
 }
 

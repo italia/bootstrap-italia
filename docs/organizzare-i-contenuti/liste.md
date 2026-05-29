@@ -935,7 +935,7 @@ Lista di link contenente un [checkbox]({{ site.baseurl }}/docs/form/checkbox/).
       </div>
     </li>
     <li>
-      <div class="form-check form-check-group disabled" aria-describedby=" aria-disabled="true">
+      <div class="form-check form-check-group disabled" aria-describedby="" aria-disabled="true">
         <input type="checkbox" id="checkbox8" disabled aria-disabled="true">
         <label for="checkbox8">Checkbox disabilitato non selezionato</label>
       </div>
