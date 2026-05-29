@@ -16,8 +16,8 @@
   align-items: stretch;
   width: 100%;
 
-  // Reset border
-  > input {
+  // Reset border when input is prepended with input-group-text
+  > .input-group-text + input {
     border-left-width: 0;
   }
 
