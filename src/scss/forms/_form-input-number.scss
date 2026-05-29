@@ -123,13 +123,6 @@
   }
 }
 
-// Reset border when input is prepended with input-group-text
-// input[type='number'] {
-//   .input-number .input-group-text + & {
-//     border-left: 0;
-//   }
-// }
-
 //Desktop
 @include media-breakpoint-up(xl) {
   .input-number {
