@@ -1,3 +1,22 @@
+# [3.0.0-beta.1](https://github.com/italia/bootstrap-italia/compare/v3.0.0-beta.0...v3.0.0-beta.1) (2026-06-03)
+
+
+### Bug Fixes
+
+* card inline padding [#1803](https://github.com/italia/bootstrap-italia/issues/1803) ([#1804](https://github.com/italia/bootstrap-italia/issues/1804)) ([99775f9](https://github.com/italia/bootstrap-italia/commit/99775f929fe0ce1983f6e8f11d08b88e3194cce5))
+* input group border ([2521939](https://github.com/italia/bootstrap-italia/commit/25219398aa0b320039da67f3abd35b7fec5b77e4))
+* lint scss ([92ce6ad](https://github.com/italia/bootstrap-italia/commit/92ce6ad035c347c41753c599379200483535c033))
+* missing namespace ([595ff65](https://github.com/italia/bootstrap-italia/commit/595ff650bf599c44eda9e7628a5826e542bceb9a))
+* responsive hero card ([#1802](https://github.com/italia/bootstrap-italia/issues/1802)) ([2625ea0](https://github.com/italia/bootstrap-italia/commit/2625ea0284b4c3ef28a49b8b33a5aaf835a2b786))
+* select icon appearance ([#1808](https://github.com/italia/bootstrap-italia/issues/1808)) ([ec58da5](https://github.com/italia/bootstrap-italia/commit/ec58da51d2d1ff17e253c7130f2977cb47a941a5))
+* tab bottom border ([#1801](https://github.com/italia/bootstrap-italia/issues/1801)) ([d708b86](https://github.com/italia/bootstrap-italia/commit/d708b8645082f90734e7cd27aaabf4d69dd6fbba))
+* token namespace ([1227c90](https://github.com/italia/bootstrap-italia/commit/1227c9063c3d0a3eb6346d36d141c64c4b9f428e))
+
+
+### Features
+
+* **3.x:** new homepage ([#1718](https://github.com/italia/bootstrap-italia/issues/1718)) ([8f84cab](https://github.com/italia/bootstrap-italia/commit/8f84cab10a309dee226aa9445b82a1fd1ec5a80c))
+
 # [3.0.0-beta.0](https://github.com/italia/bootstrap-italia/compare/v3.0.0-alpha.10...v3.0.0-beta.0) (2026-05-13)
 
 
