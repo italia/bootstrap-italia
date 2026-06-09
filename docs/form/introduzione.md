@@ -107,12 +107,14 @@ Ecco l'esempio di una struttura più complessa creata con il sistema a griglie.
   </div>
   <div class="row">
     <div class="form-group col-md-6">
-      <div class="toggles">
-        <label for="toggleEsempio1a">
-          Label dell'interruttore 1
-          <input type="checkbox" id="toggleEsempio1a">
-          <span class="lever"></span>
-        </label>
+      <div class="form-check form-check-inline">
+        <div class="toggles">
+          <label for="toggleEsempio1a">
+            Label dell'interruttore 1
+            <input type="checkbox" id="toggleEsempio1a">
+            <span class="lever"></span>
+          </label>
+        </div>
       </div>
     </div>
   </div>
