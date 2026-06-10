@@ -27,7 +27,7 @@ for root, dirs, files in os.walk(SCSS_BASE_PATH, topdown=True):
                 for line in f:
                     if '// Styles' in line:
                         break
-                    vars.append(re.findall(r'\s(--#{\$prefix}[a-z-].*):\s(.*);(\s\/\/.*)?', line))
+                    vars.append(re.findall(r'\s+(--#{\$prefix}[a-z0-9-]+):\s(.*);(\s\/\/.*)?', line))
                 vars = (functools.reduce(operator.iconcat, vars, []))
                 glob_vars.extend(vars)
 
