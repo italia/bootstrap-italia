@@ -2506,8 +2506,8 @@
         },
         {
             "description": "Controls the shadow/aura color behind the knob.",
-            "value": "-0.85)}",
-            "variable-name": "--bsi-toggle-knob-shadow-color: #{color.adjust($primary, $alpha"
+            "value": "#{color.adjust($primary, $alpha: -0.85)}",
+            "variable-name": "--bsi-toggle-knob-shadow-color"
         },
         {
             "description": "Controls the left offset of the knob when checked.",
