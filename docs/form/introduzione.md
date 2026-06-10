@@ -26,31 +26,46 @@ Strutture più complesse possono essere costruite usando il sistema a griglia, d
 
 Si può scegliere di dare una dimensione ad una colonna, ad esempio dandogli una classe `.col-md-6` per ottenere una certo design dal breakpoint `md` in su, mentre le restanti `.col-md` si divideranno il resto dello spazio.
 
+{% capture callout %}
+#### Separare le colonne dai campi
+Non utilizzare la classe di tipo `.col-*` sullo stesso elemento che contiene un campo del form, altrimenti la spaziatura di quest'ultimo verrà reimpostata in modo errato. **Separa sempre il layout dal contenuto**.
+{% endcapture %}{% include callout.html content=callout type="warning" %}
+
 {% comment %}Example name: Dimensionamento colonne{% endcomment %}
 {% capture example %}
 <div>
   <div class="row">
-    <div class="form-group col-md-6">
-      <label for="formNome">Nome</label>
-      <input type="text" class="form-control" id="formNome">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="formNome">Nome</label>
+        <input type="text" class="form-control" id="formNome">
+      </div>
     </div>
-    <div class="form-group col-md-6">
-      <label for="formCognome">Cognome</label>
-      <input type="text" class="form-control" id="formCognome">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="formCognome">Cognome</label>
+        <input type="text" class="form-control" id="formCognome">
+      </div>
     </div>
   </div>
   <div class="row">
-    <div class="form-group col-md-6">
-      <label for="Comune">Comune</label>
-      <input type="text" class="form-control" id="Comune">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="Comune">Comune</label>
+        <input type="text" class="form-control" id="Comune">
+      </div>
     </div>
-    <div class="form-group col-md">
-      <label for="Provincia">Provincia</label>
-      <input type="text" class="form-control" id="Provincia">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="Provincia">Provincia</label>
+        <input type="text" class="form-control" id="Provincia">
+      </div>
     </div>
-    <div class="form-group col-md">
-      <label for="CAP">CAP</label>
-      <input type="text" class="form-control" id="CAP">
+    <div class="col-md-6">
+    <div class="form-group">
+        <label for="CAP">CAP</label>
+        <input type="text" class="form-control" id="CAP">
+      </div>
     </div>
   </div>
 </div>
@@ -62,58 +77,72 @@ Ecco l'esempio di una struttura più complessa creata con il sistema a griglie.
 {% capture example %}
 <div>
   <div class="row">
-    <div class="form-group col-md-6">
-      <label class="active" for="inputEmail4">Email</label>
-      <input type="email" class="form-control" id="inputEmail4" placeholder="inserisci il tuo indirizzo email">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label class="active" for="inputEmail4">Email</label>
+        <input type="email" class="form-control" id="inputEmail4" placeholder="inserisci il tuo indirizzo email">
+      </div>
     </div>
-    <div class="form-group col-md-6">
-      <label for="exampleInputPassword1">Password</label>
-      <input type="password" data-bs-input class="form-control input-password" id="exampleInputPassword1" aria-describedby="infoPassword1">
-      <button type="button" class="password-icon btn" role="switch" aria-checked="false">
-        <span class="visually-hidden">Mostra/Nascondi Password</span>
-        <svg class="password-icon-visible icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-visible"></use></svg>
-        <svg class="password-icon-invisible icon icon-sm d-none" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-invisible"></use></svg>
-      </button>
-      <p id="infoPassword1" class="form-text text-muted d-block small pb-0">Inserisci almeno 8 caratteri e alcuni caratteri speciali.</p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="form-group col">
-      <label class="active" for="inputAddress">Indirizzo</label>
-      <input type="text" class="form-control" id="inputAddress" placeholder="Via Roma, 1">
-    </div>
-  </div>
-  <div class="row">
-    <div class="form-group col-md-6">
-      <label for="inputCity">Comune</label>
-      <input type="text" class="form-control" id="inputCity">
-    </div>
-    <div class="form-group col-md-2">
-      <label for="inputCAP">CAP</label>
-      <input type="text" class="form-control" id="inputCAP">
-    </div>
-    <div class="form-group col-md-4">
-      <div class="select-wrapper">
-        <label for="selectID">Provincia</label>
-        <select id="selectID">
-          <option value="Value 1">Opzione 1</option>
-          <option value="Value 2">Opzione 2</option>
-          <option value="Value 3">Opzione 3</option>
-          <option value="Value 4">Opzione 4</option>
-          <option value="Value 5">Opzione 5</option>
-        </select>
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" data-bs-input class="form-control input-password" id="exampleInputPassword1" aria-describedby="infoPassword1">
+        <button type="button" class="password-icon btn" role="switch" aria-checked="false">
+          <span class="visually-hidden">Mostra/Nascondi Password</span>
+          <svg class="password-icon-visible icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-visible"></use></svg>
+          <svg class="password-icon-invisible icon icon-sm d-none" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-password-invisible"></use></svg>
+        </button>
+        <p id="infoPassword1" class="form-text text-muted d-block small pb-0">Inserisci almeno 8 caratteri e alcuni caratteri speciali.</p>
       </div>
     </div>
   </div>
   <div class="row">
-    <div class="form-group col-md-6">
-      <div class="form-check form-check-inline">
-        <div class="toggles">
-          <label for="toggleEsempio1a">
-            Label dell'interruttore 1
-            <input type="checkbox" id="toggleEsempio1a">
-            <span class="lever"></span>
-          </label>
+    <div class="col-md-6">
+      <div class="form-group">
+        <label class="active" for="inputAddress">Indirizzo</label>
+        <input type="text" class="form-control" id="inputAddress" placeholder="Via Roma, 1">
+      </div>
+    </div>
+  </div>
+  <div class="row"> 
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="inputCity">Comune</label>
+        <input type="text" class="form-control" id="inputCity">
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="form-group">
+        <label for="inputCAP">CAP</label>
+        <input type="text" class="form-control" id="inputCAP">
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <div class="select-wrapper">
+          <label for="selectID">Provincia</label>
+          <select id="selectID">
+            <option value="Value 1">Opzione 1</option>
+            <option value="Value 2">Opzione 2</option>
+            <option value="Value 3">Opzione 3</option>
+            <option value="Value 4">Opzione 4</option>
+            <option value="Value 5">Opzione 5</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <div class="form-check form-check-inline">
+          <div class="toggles">
+            <label for="toggleEsempio1a">
+              Label dell'interruttore 1
+              <input type="checkbox" id="toggleEsempio1a">
+              <span class="lever"></span>
+            </label>
+          </div>
         </div>
       </div>
     </div>
