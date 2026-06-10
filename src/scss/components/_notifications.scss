@@ -13,9 +13,6 @@
 // Properties
 //
 
-// Styles
-//
-
 .notification {
   --#{$prefix}notification-background: var(--#{$prefix}color-background-inverse);
   --#{$prefix}notification-border-color: var(--#{$prefix}color-border-subtle);
@@ -35,6 +32,8 @@
   }
 }
 
+// Styles
+//
 /* stylelint-disable-next-line no-duplicate-selectors */
 .notification {
   position: fixed;

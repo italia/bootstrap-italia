@@ -17,11 +17,7 @@
 // Properties
 //
 
-// Styles
-//
-
 // stylelint-disable function-disallowed-list
-
 %offcanvas-css-vars {
   // scss-docs-start offcanvas-css-vars
   --#{$prefix}offcanvas-zindex: #{$zindex-offcanvas};
@@ -36,6 +32,9 @@
   --#{$prefix}offcanvas-box-shadow: #{$offcanvas-box-shadow};
   // scss-docs-end offcanvas-css-vars
 }
+
+// Styles
+//
 
 @each $breakpoint in map.keys($grid-breakpoints) {
   $next: breakpoint-next($breakpoint, $grid-breakpoints);
