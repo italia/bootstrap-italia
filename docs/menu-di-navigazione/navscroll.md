@@ -78,6 +78,8 @@ In questo esempio, la linea che limita la barra di navigazione è posizionata a 
                 <a class="nav-link" href="#"><span>1.3 Elemento annidato </span></a>
               </li>
             </ul>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="#"><span>2. Sezione </span></a>
             <ul class="link-list">
               <li class="nav-link">
@@ -144,6 +146,8 @@ In questo esempio, la linea che limita la barra di navigazione è posizionata a 
                 <a class="nav-link" href="#"><span>1.3 Elemento annidato </span></a>
               </li>
             </ul>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="#"><span>2. Sezione </span></a>
             <ul class="link-list">
               <li class="nav-link">
@@ -292,6 +296,8 @@ Per cambiare il tema è sufficiente aggiungere le seguenti classi al tag `<nav c
                 <a class="nav-link" href="#"><span>1.3 Elemento annidato </span></a>
               </li>
             </ul>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="#"><span>2. Sezione </span></a>
             <ul class="link-list">
               <li class="nav-link">
