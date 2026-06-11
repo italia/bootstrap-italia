@@ -68,7 +68,14 @@
   display: flex;
   justify-content: center;
 
-  a {
+  button {
+    // Reset button default styles
+    background: none;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+
+    // Component styles
     display: flex;
     width: $v-gap * 5;
     height: $v-gap * 5;
@@ -109,7 +116,7 @@
     align-items: center;
     height: 100%;
 
-    a {
+    button {
       display: inline-flex;
       width: $v-gap * 5;
       height: $v-gap * 5;
