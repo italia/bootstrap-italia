@@ -130,8 +130,10 @@
 
   // list element
   li {
+    &::marker {
+      font-size: 0; // hide default marker safely without affecting Safari accessibility
+    }
     position: relative;
-    list-style-type: none;
     margin: 8px;
     width: 240px;
     flex: 0 1 auto;
