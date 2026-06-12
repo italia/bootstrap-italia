@@ -428,6 +428,123 @@
             "variable-name": "--bsi-badge-text-color"
         }
     ],
+    "bottom": [
+        {
+            "description": "",
+            "value": "96px",
+            "variable-name": "--bsi-bottom-nav-height"
+        },
+        {
+            "description": "",
+            "value": "64px",
+            "variable-name": "--bsi-bottom-nav-list-height"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-spacing-xxs)",
+            "variable-name": "--bsi-bottom-nav-item-margin"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-text-secondary)",
+            "variable-name": "--bsi-bottom-nav-link-color"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-text-primary)",
+            "variable-name": "--bsi-bottom-nav-link-color-active"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-icon-secondary)",
+            "variable-name": "--bsi-bottom-nav-icon-color"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-icon-primary)",
+            "variable-name": "--bsi-bottom-nav-icon-color-active"
+        },
+        {
+            "description": "",
+            "value": "1.35rem",
+            "variable-name": "--bsi-bottom-nav-icon-font-size"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-spacing-l)",
+            "variable-name": "--bsi-bottom-nav-icon-height"
+        },
+        {
+            "description": "",
+            "value": "6px",
+            "variable-name": "--bsi-bottom-nav-label-margin-top"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-label-font-size-xs)",
+            "variable-name": "--bsi-bottom-nav-label-font-size"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-font-weight-solid)",
+            "variable-name": "--bsi-bottom-nav-label-font-weight"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-background-primary)",
+            "variable-name": "--bsi-bottom-nav-badge-bg"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-background-inverse)",
+            "variable-name": "--bsi-bottom-nav-badge-border-color"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-text-inverse)",
+            "variable-name": "--bsi-bottom-nav-badge-color"
+        },
+        {
+            "description": "",
+            "value": "0.625rem",
+            "variable-name": "--bsi-bottom-nav-badge-font-size"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-radius-rounded)",
+            "variable-name": "--bsi-bottom-nav-badge-radius"
+        },
+        {
+            "description": "",
+            "value": "12px",
+            "variable-name": "--bsi-bottom-nav-alert-size"
+        },
+        {
+            "description": "",
+            "value": "360px",
+            "variable-name": "--bsi-bottom-nav-shadow-height"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-spacing-l)",
+            "variable-name": "--bsi-bottom-nav-shadow-top"
+        },
+        {
+            "description": "",
+            "value": "0.18",
+            "variable-name": "--bsi-bottom-nav-shadow-opacity"
+        },
+        {
+            "description": "",
+            "value": "translateY(-50%) scalex(1.4) scaleY(0.12)",
+            "variable-name": "--bsi-bottom-nav-shadow-transform"
+        },
+        {
+            "description": "",
+            "value": "radial-gradient(ellipse at center, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 60%)",
+            "variable-name": "--bsi-bottom-nav-shadow-background"
+        }
+    ],
     "breadcrumb": [
         {
             "description": "Controls the background for the breadcrumb.",
@@ -1129,11 +1246,6 @@
     "form": [
         {
             "description": "",
-            "value": "var(--bsi-color-border-danger)",
-            "variable-name": "--bsi-form-checkbox-border-color"
-        },
-        {
-            "description": "",
             "value": "transparent",
             "variable-name": "--bsi-form-control-border-color"
         },
@@ -1166,6 +1278,11 @@
             "description": "",
             "value": "var(--bsi-lead-font-size)",
             "variable-name": "--bsi-form-control-font-size"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-border-danger)",
+            "variable-name": "--bsi-form-checkbox-border-color"
         },
         {
             "description": "",
@@ -1482,6 +1599,93 @@
             "description": "Controls the left padding of nested linklists, using spacing tokens",
             "value": "var(--bsi-spacing-s)",
             "variable-name": "--bsi-linklist-nested-spacing"
+        }
+    ],
+    "list": [
+        {
+            "description": "",
+            "value": "#{$list-group-action-active-bg}",
+            "variable-name": "--bsi-list-group-action-active-bg"
+        },
+        {
+            "description": "",
+            "value": "#{$list-group-action-active-color}",
+            "variable-name": "--bsi-list-group-action-active-color"
+        },
+        {
+            "description": "",
+            "value": "#{$list-group-hover-bg}",
+            "variable-name": "--bsi-list-group-action-hover-bg"
+        },
+        {
+            "description": "",
+            "value": "#{$list-group-action-hover-color}",
+            "variable-name": "--bsi-list-group-action-hover-color"
+        },
+        {
+            "description": "",
+            "value": "#{$list-group-action-color}",
+            "variable-name": "--bsi-list-group-action-color"
+        },
+        {
+            "description": "",
+            "value": "#{$list-group-active-bg}",
+            "variable-name": "--bsi-list-group-active-bg"
+        },
+        {
+            "description": "",
+            "value": "#{$list-group-active-border-color}",
+            "variable-name": "--bsi-list-group-active-border-color"
+        },
+        {
+            "description": "",
+            "value": "#{$list-group-active-color}",
+            "variable-name": "--bsi-list-group-active-color"
+        },
+        {
+            "description": "",
+            "value": "#{$list-group-bg}",
+            "variable-name": "--bsi-list-group-bg"
+        },
+        {
+            "description": "",
+            "value": "#{$list-group-border-color}",
+            "variable-name": "--bsi-list-group-border-color"
+        },
+        {
+            "description": "",
+            "value": "#{$list-group-border-radius}",
+            "variable-name": "--bsi-list-group-border-radius"
+        },
+        {
+            "description": "",
+            "value": "#{$list-group-border-width}",
+            "variable-name": "--bsi-list-group-border-width"
+        },
+        {
+            "description": "",
+            "value": "#{$list-group-color}",
+            "variable-name": "--bsi-list-group-color"
+        },
+        {
+            "description": "",
+            "value": "#{$list-group-disabled-bg}",
+            "variable-name": "--bsi-list-group-disabled-bg"
+        },
+        {
+            "description": "",
+            "value": "#{$list-group-disabled-color}",
+            "variable-name": "--bsi-list-group-disabled-color"
+        },
+        {
+            "description": "",
+            "value": "#{$list-group-item-padding-x}",
+            "variable-name": "--bsi-list-group-item-padding-x"
+        },
+        {
+            "description": "",
+            "value": "#{$list-group-item-padding-y}",
+            "variable-name": "--bsi-list-group-item-padding-y"
         }
     ],
     "megamenu": [
@@ -1844,6 +2048,130 @@
             "variable-name": "--bsi-navscroll-divider-color"
         }
     ],
+    "notification": [
+        {
+            "description": "",
+            "value": "var(--bsi-color-background-inverse)",
+            "variable-name": "--bsi-notification-background"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-border-subtle)",
+            "variable-name": "--bsi-notification-border-color"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-elevation-medium)",
+            "variable-name": "--bsi-notification-box-shadow"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-border-thick)",
+            "variable-name": "--bsi-notification-inset-line-width"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-border-primary)",
+            "variable-name": "--bsi-notification-inset-line-color"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-spacing-s)",
+            "variable-name": "--bsi-notification-padding-x"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-spacing-s)",
+            "variable-name": "--bsi-notification-padding-y"
+        },
+        {
+            "description": "",
+            "value": "calc(var(--bsi-spacing-m) + var(--bsi-spacing-xl))",
+            "variable-name": "--bsi-notification-padding-right"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-spacing-xxs)",
+            "variable-name": "--bsi-notification-position-distance"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-text-base)",
+            "variable-name": "--bsi-notification-title-color"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-heading-6-font-size)",
+            "variable-name": "--bsi-notification-title-font-size"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-text-secondary)",
+            "variable-name": "--bsi-notification-text-color"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-label-font-size)",
+            "variable-name": "--bsi-notification-text-font-size"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-spacing-s)",
+            "variable-name": "--bsi-notification-position-distance"
+        }
+    ],
+    "offcanvas": [
+        {
+            "description": "",
+            "value": "#{$zindex-offcanvas}",
+            "variable-name": "--bsi-offcanvas-zindex"
+        },
+        {
+            "description": "",
+            "value": "#{$offcanvas-horizontal-width}",
+            "variable-name": "--bsi-offcanvas-width"
+        },
+        {
+            "description": "",
+            "value": "#{$offcanvas-vertical-height}",
+            "variable-name": "--bsi-offcanvas-height"
+        },
+        {
+            "description": "",
+            "value": "#{$offcanvas-padding-x}",
+            "variable-name": "--bsi-offcanvas-padding-x"
+        },
+        {
+            "description": "",
+            "value": "#{$offcanvas-padding-y}",
+            "variable-name": "--bsi-offcanvas-padding-y"
+        },
+        {
+            "description": "",
+            "value": "#{$offcanvas-color}",
+            "variable-name": "--bsi-offcanvas-color"
+        },
+        {
+            "description": "",
+            "value": "#{$offcanvas-bg-color}",
+            "variable-name": "--bsi-offcanvas-bg"
+        },
+        {
+            "description": "",
+            "value": "#{$offcanvas-border-width}",
+            "variable-name": "--bsi-offcanvas-border-width"
+        },
+        {
+            "description": "",
+            "value": "#{$offcanvas-border-color}",
+            "variable-name": "--bsi-offcanvas-border-color"
+        },
+        {
+            "description": "",
+            "value": "#{$offcanvas-box-shadow}",
+            "variable-name": "--bsi-offcanvas-box-shadow"
+        }
+    ],
     "overlay": [
         {
             "description": "Controls the vertical padding of the panel, using spacing tokens",
@@ -1931,6 +2259,98 @@
             "description": "Controls the vertical padding for the pagination, using spacing tokens.",
             "value": "var(--bsi-spacing-xxs)",
             "variable-name": "--bsi-pagination-padding-y"
+        }
+    ],
+    "popover": [
+        {
+            "description": "",
+            "value": "var(--bsi-popover-border-color)",
+            "variable-name": "--bsi-popover-arrow-border"
+        },
+        {
+            "description": "",
+            "value": "#{$popover-arrow-height}",
+            "variable-name": "--bsi-popover-arrow-height"
+        },
+        {
+            "description": "",
+            "value": "#{$popover-arrow-width}",
+            "variable-name": "--bsi-popover-arrow-width"
+        },
+        {
+            "description": "",
+            "value": "#{$popover-body-color}",
+            "variable-name": "--bsi-popover-body-color"
+        },
+        {
+            "description": "",
+            "value": "#{$popover-body-padding-x}",
+            "variable-name": "--bsi-popover-body-padding-x"
+        },
+        {
+            "description": "",
+            "value": "#{$popover-body-padding-y}",
+            "variable-name": "--bsi-popover-body-padding-y"
+        },
+        {
+            "description": "",
+            "value": "#{$popover-bg}",
+            "variable-name": "--bsi-popover-bg"
+        },
+        {
+            "description": "",
+            "value": "#{$popover-box-shadow}",
+            "variable-name": "--bsi-popover-box-shadow"
+        },
+        {
+            "description": "",
+            "value": "#{$popover-border-color}",
+            "variable-name": "--bsi-popover-border-color"
+        },
+        {
+            "description": "",
+            "value": "#{$popover-border-radius}",
+            "variable-name": "--bsi-popover-border-radius"
+        },
+        {
+            "description": "",
+            "value": "#{$popover-border-width}",
+            "variable-name": "--bsi-popover-border-width"
+        },
+        {
+            "description": "",
+            "value": "#{$popover-header-bg}",
+            "variable-name": "--bsi-popover-header-bg"
+        },
+        {
+            "description": "",
+            "value": "#{$popover-header-color}",
+            "variable-name": "--bsi-popover-header-color"
+        },
+        {
+            "description": "",
+            "value": "#{$popover-header-padding-x}",
+            "variable-name": "--bsi-popover-header-padding-x"
+        },
+        {
+            "description": "",
+            "value": "#{$popover-header-padding-y}",
+            "variable-name": "--bsi-popover-header-padding-y"
+        },
+        {
+            "description": "",
+            "value": "#{$popover-inner-border-radius}",
+            "variable-name": "--bsi-popover-inner-border-radius"
+        },
+        {
+            "description": "",
+            "value": "#{$popover-max-width}",
+            "variable-name": "--bsi-popover-max-width"
+        },
+        {
+            "description": "",
+            "value": "#{$zindex-popover}",
+            "variable-name": "--bsi-popover-zindex"
         }
     ],
     "progress": [
@@ -2404,6 +2824,68 @@
             "description": "Controls the tabs border color, using color tokens.",
             "value": "var(--bsi-color-border-subtle)",
             "variable-name": "--bsi-tabs-border-color"
+        }
+    ],
+    "thumb": [
+        {
+            "description": "Controls the spacing between thumb items, using spacing tokens.",
+            "value": "var(--bsi-spacing-xxs)",
+            "variable-name": "--bsi-thumb-nav-gap"
+        },
+        {
+            "description": "Controls the offset subtracted from auto layout item widths, using spacing tokens.",
+            "value": "var(--bsi-spacing-s)",
+            "variable-name": "--bsi-thumb-nav-auto-basis-offset"
+        },
+        {
+            "description": "Controls the external offset for overlay-positioned variants, using spacing tokens.",
+            "value": "var(--bsi-spacing-s)",
+            "variable-name": "--bsi-thumb-nav-overlay-offset"
+        },
+        {
+            "description": "Controls the default width for each thumb item.",
+            "value": "240px",
+            "variable-name": "--bsi-thumb-nav-item-width"
+        },
+        {
+            "description": "Controls the width for thumb items in small variant.",
+            "value": "120px",
+            "variable-name": "--bsi-thumb-nav-item-width-small"
+        },
+        {
+            "description": "Controls the height for vertical + small thumb items.",
+            "value": "80px",
+            "variable-name": "--bsi-thumb-nav-item-height-small-vertical"
+        },
+        {
+            "description": "Controls the default overlay background color for thumb states.",
+            "value": "var(--bsi-overlay-background-primary)",
+            "variable-name": "--bsi-thumb-nav-overlay-bg-primary"
+        },
+        {
+            "description": "Controls the default overlay background color for thumb states.",
+            "value": "var(--bsi-overlay-background-light)",
+            "variable-name": "--bsi-thumb-nav-overlay-bg-black"
+        },
+        {
+            "description": "Controls the image zoom scale on hover.",
+            "value": "1.05",
+            "variable-name": "--bsi-thumb-nav-hover-scale"
+        },
+        {
+            "description": "Controls the base transition duration for overlay and image transform.",
+            "value": "0.4s",
+            "variable-name": "--bsi-thumb-nav-transition-duration"
+        },
+        {
+            "description": "Controls the transition duration applied during hover state.",
+            "value": "1s",
+            "variable-name": "--bsi-thumb-nav-transition-duration-hover"
+        },
+        {
+            "description": "Controls the easing curve used by thumb-nav transitions.",
+            "value": "cubic-bezier(0.15, 0.7, 0.36, 0.99)",
+            "variable-name": "--bsi-thumb-nav-transition-easing"
         }
     ],
     "timeline": [
