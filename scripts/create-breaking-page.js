@@ -52,7 +52,18 @@ const getBreaking = (filepath, _) => {
 }
 
 const compareVersions = (v1, v2) => {
-  return parseInt(v2.replaceAll('.', '')) - parseInt(v1.replaceAll('.', ''))
+  const partsA = v1.replace('v', '').split('.').map(Number);
+  const partsB = v2.replace('v', '').split('.').map(Number);
+  
+  for (let i = 0; i < Math.max(partsA.length, partsB.length); i++) {
+    const numA = partsA[i] || 0;
+    const numB = partsB[i] || 0;
+    
+    if (numA !== numB) {
+      return numB - numA;
+    }
+  }
+  return 0;
 }
 
 const writeBreakings = (breakings) => {

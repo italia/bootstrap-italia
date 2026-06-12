@@ -1,3 +1,20 @@
+@use '../base/config' as *;
+@use '../base/variables' as *;
+
+// Component: sidebarthemes
+//
+// Description: Component styles for sidebarthemes
+//
+
+// Variables
+//
+
+// Properties
+//
+
+// Styles
+//
+
 .sidebar-wrapper {
   &.theme-dark {
     background: $sidebar-dark-bg-color;

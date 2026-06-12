@@ -1,8 +1,40 @@
+@use '../base/config' as *;
+@use '../base/variables' as *;
+
+// Component: thumbnav
+//
+// Description: Component styles for thumbnav
+//
+
+// Variables
+//
+
+// Properties
+//
+
 .thumb-nav {
-  padding: 0;
-  margin: 0 -8px;
+  --#{$prefix}thumb-nav-gap: var(--#{$prefix}spacing-xxs); // Controls the spacing between thumb items, using spacing tokens.
+  --#{$prefix}thumb-nav-auto-basis-offset: var(--#{$prefix}spacing-s); // Controls the offset subtracted from auto layout item widths, using spacing tokens.
+  --#{$prefix}thumb-nav-overlay-offset: var(--#{$prefix}spacing-s); // Controls the external offset for overlay-positioned variants, using spacing tokens.
+  --#{$prefix}thumb-nav-item-width: 240px; // Controls the default width for each thumb item.
+  --#{$prefix}thumb-nav-item-width-small: 120px; // Controls the width for thumb items in small variant.
+  --#{$prefix}thumb-nav-item-height-small-vertical: 80px; // Controls the height for vertical + small thumb items.
+  --#{$prefix}thumb-nav-overlay-bg-primary: var(--#{$prefix}overlay-background-primary); // Controls the default overlay background color for thumb states.
+  --#{$prefix}thumb-nav-overlay-bg-black: var(--#{$prefix}overlay-background-light); // Controls the default overlay background color for thumb states.
+  --#{$prefix}thumb-nav-hover-scale: 1.05; // Controls the image zoom scale on hover.
+  --#{$prefix}thumb-nav-transition-duration: 0.4s; // Controls the base transition duration for overlay and image transform.
+  --#{$prefix}thumb-nav-transition-duration-hover: 1s; // Controls the transition duration applied during hover state.
+  --#{$prefix}thumb-nav-transition-easing: cubic-bezier(0.15, 0.7, 0.36, 0.99); // Controls the easing curve used by thumb-nav transitions.
+}
+
+// Styles
+//
+/* stylelint-disable-next-line no-duplicate-selectors */
+.thumb-nav {
   display: flex;
   justify-content: center;
+  margin: 0 calc(var(--#{$prefix}thumb-nav-gap) * -1);
+  padding: 0;
 
   // vertical version
   &.thumb-nav-vertical {
@@ -14,7 +46,7 @@
     }
     &.thumb-nav-small {
       li {
-        height: 80px;
+        height: var(--#{$prefix}thumb-nav-item-height-small-vertical);
       }
     }
   }
@@ -24,11 +56,11 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     li {
-      flex-basis: 240px;
+      flex-basis: var(--#{$prefix}thumb-nav-item-width);
     }
     &.thumb-nav-small {
       li {
-        flex-basis: 120px;
+        flex-basis: var(--#{$prefix}thumb-nav-item-width-small);
       }
     }
   }
@@ -45,22 +77,22 @@
     }
     &.thumb-nav-auto-2 {
       li {
-        flex-basis: calc(50% - 16px);
+        flex-basis: calc(50% - var(--#{$prefix}thumb-nav-auto-basis-offset));
       }
     }
     &.thumb-nav-auto-3 {
       li {
-        flex-basis: calc(33.3333% - 16px);
+        flex-basis: calc(33.3333% - var(--#{$prefix}thumb-nav-auto-basis-offset));
       }
     }
     &.thumb-nav-auto-4 {
       li {
-        flex-basis: calc(25% - 16px);
+        flex-basis: calc(25% - var(--#{$prefix}thumb-nav-auto-basis-offset));
       }
     }
     &.thumb-nav-auto-5 {
       li {
-        flex-basis: calc(20% - 16px);
+        flex-basis: calc(20% - var(--#{$prefix}thumb-nav-auto-basis-offset));
       }
     }
   }
@@ -87,12 +119,12 @@
   }
   &.thumb-nav-black {
     a:after {
-      background: rgba(0, 0, 0, 0.8);
+      background: var(--#{$prefix}thumb-nav-overlay-bg-black);
     }
   }
   &.thumb-nav-primary {
     a:after {
-      background: rgba($primary, 0.8);
+      background: var(--#{$prefix}thumb-nav-overlay-bg-primary);
     }
   }
 
@@ -101,97 +133,97 @@
   &.thumb-nav-top {
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
     width: 90%;
+    transform: translateX(-50%);
   }
   &.thumb-nav-bottom {
     bottom: 0;
-    margin-bottom: 16px;
+    margin-bottom: var(--#{$prefix}thumb-nav-overlay-offset);
   }
   &.thumb-nav-top {
     top: 0;
-    margin-top: 16px;
+    margin-top: var(--#{$prefix}thumb-nav-overlay-offset);
   }
   &.thumb-nav-left,
   &.thumb-nav-right {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
     height: 90%;
+    transform: translateY(-50%);
   }
   &.thumb-nav-left {
     left: 0;
-    margin-left: 16px;
+    margin-left: var(--#{$prefix}thumb-nav-overlay-offset);
   }
   &.thumb-nav-right {
     right: 0;
-    margin-right: 16px;
+    margin-right: var(--#{$prefix}thumb-nav-overlay-offset);
   }
 
   // list element
   li {
     position: relative;
-    list-style-type: none;
-    margin: 8px;
-    width: 240px;
     flex: 0 1 auto;
+    width: var(--#{$prefix}thumb-nav-item-width);
+    margin: var(--#{$prefix}thumb-nav-gap);
+    list-style-type: none;
   }
 
   // invisible resizer image
   .thumb-nav-resizer {
+    visibility: hidden;
     width: 100%;
     height: auto;
-    visibility: hidden;
   }
   &.thumb-nav-small {
     li {
-      width: 120px;
+      width: var(--#{$prefix}thumb-nav-item-width-small);
     }
   }
 
   // link and image
   a {
-    overflow: hidden;
     position: relative;
     display: block;
+    overflow: hidden;
     // overlay
     &:after {
-      content: '';
       position: absolute;
       top: 0;
       right: 0;
-      left: 0;
       bottom: 0;
+      left: 0;
+      content: '';
       opacity: 0;
-      transition: opacity 0.4s cubic-bezier(0.15, 0.7, 0.36, 0.99);
+      transition: opacity var(--#{$prefix}thumb-nav-transition-duration) var(--#{$prefix}thumb-nav-transition-easing);
     }
     // active state
     &.active {
       pointer-events: none;
       &:after {
         opacity: 1;
-        background: rgba($primary, 0.6);
+        background: var(--#{$prefix}thumb-nav-overlay-bg);
       }
     }
     // hover state
     &:hover {
       img {
-        transform: scale(1.05);
-        transition-duration: 1s;
+        transform: scale(var(--#{$prefix}thumb-nav-hover-scale));
+        transition-duration: var(--#{$prefix}thumb-nav-transition-duration-hover);
       }
       &:after {
-        transition-duration: 1s;
+        transition-duration: var(--#{$prefix}thumb-nav-transition-duration-hover);
       }
     }
     // image
     img {
-      object-fit: cover;
-      width: 100%;
-      height: 100%;
-      transition: transform 0.4s cubic-bezier(0.15, 0.7, 0.36, 0.99);
       position: absolute;
       top: 0;
       left: 0;
+      width: 100%;
+      height: 100%;
+      transition: transform var(--#{$prefix}thumb-nav-transition-duration) var(--#{$prefix}thumb-nav-transition-easing);
+      object-fit: cover;
     }
   }
 }

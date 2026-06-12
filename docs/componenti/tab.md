@@ -336,12 +336,6 @@ Se i tab contengono icone è necessario aggiungere un'ulteriore classe al wrappe
         Tab 6
       </a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link">
-        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg>
-        Tab 7
-      </a>
-    </li>
   </ul>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -546,7 +540,7 @@ Le label dei Tab possono essere sostituite da icone, avendo cura di includere al
 {% capture example %}
 <div class="bd-example-tabs">
   <div class="row">
-    <div class="col-3">
+    <div class="col-auto">
       <div class="nav nav-tabs nav-tabs-vertical" id="nav-vertical-tab-ico-only" role="tablist" aria-orientation="vertical">
         <a class="nav-link justify-content-end active" id="nav-vertical-tab-ico-only1-tab" data-bs-toggle="tab" href="#nav-vertical-tab-ico-only1" role="tab" aria-controls="nav-vertical-tab-ico-only1" aria-selected="true"><span class="visually-hidden">Tab titolo 1</span> <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg></a>
         <a class="nav-link justify-content-end" id="nav-vertical-tab-ico-only2-tab" data-bs-toggle="tab" href="#nav-vertical-tab-ico-only2" role="tab" aria-controls="nav-vertical-tab-ico-only2" aria-selected="false"><span class="visually-hidden">Tab titolo 2</span> <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-calendar"></use></svg></a>

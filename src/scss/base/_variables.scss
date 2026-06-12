@@ -1,26 +1,44 @@
-// Import Design Tokens Italia
-// @import '../../node_modules/design-tokens-italia/scss/variables';
-
+// base/_variables.scss
 @use 'sass:map';
+@use 'config' as *; // Variabili primitive
+@use 'functions' as *; // Funzioni custom (hsb, etc.)
 
-// Color vars
-// HSB (https://it.wikipedia.org/wiki/Hue_Saturation_Brightness, coincidente con il modello HSV)
-// è lo spazio colore scelto per ottenere le varianti colore della tonalità primaria.
+// ============================================================================
+// PRIMARY COLOR (usa hsb)
+// ============================================================================
 
-// Color system ==============================================================
+$primary: hsb($primary-h, $primary-s, $primary-b) !default; // color-blue-40
 
-$black: hsl(0, 0%, 0%) !default;
-$white: hsl(0, 0%, 100%) !default;
+// ============================================================================
+// ALTRI COLORI CHE USANO HSB
+// ============================================================================
 
-$gray-100: hsl(0, 0%, 96%) !default; // color-gray-96
-$gray-200: hsl(0, 0%, 90%) !default; // color-gray-90
-$gray-300: hsl(0, 0%, 83%) !default; // color-gray-83
-$gray-400: hsl(0, 0%, 64%) !default; // color-gray-64
-$gray-500: hsl(0, 0%, 45%) !default; // color-gray-45
-$gray-600: hsl(0, 0%, 32%) !default; // color-gray-32
-$gray-700: hsl(0, 0%, 25%) !default; // color-gray-25
-$gray-800: hsl(0, 0%, 15%) !default; // color-gray-15
-$gray-900: hsl(0, 0%, 10%) !default; // color-gray-10
+$indigo: hsb(243, 70, 100) !default;
+$purple: hsb(243, 40, 100) !default;
+$pink: hsb(350, 30, 100) !default;
+$yellow: hsb(44, 55, 100) !default;
+$cyan: hsb(178, 100, 100) !default;
+$blue: hsb(210, 100, 90) !default;
+$light: hsb(255, 5, 95) !default;
+
+$yiq-text-light: $white !default;
+$yiq-text-dark: $black !default;
+
+$red-accessible: $red !default;
+$orange-accessible: $orange !default;
+$yellow-accessible: hsb(44, 100, 59) !default;
+$green-accessible: $green !default;
+
+$gray-primary: hsb(210, 38.9, 44.3) !default;
+$gray-tertiary: hsb(205, 35, 54) !default;
+$gray-quaternary: hsb(238, 1, 100) !default;
+$gray-border-disabled: $gray-disabled !default; // color-border-disabled
+
+$secondary: $gray-secondary !default;
+
+// ============================================================================
+// GRAYS MAP - MOVE TO MAPS?
+// ============================================================================
 
 $grays: () !default;
 $grays: map.merge(
@@ -39,56 +57,12 @@ $grays: map.merge(
 );
 
 @function main($key: '80') {
-  @return map-get($mains, $key);
+  @return map.get($mains, $key);
 }
 
-// The contrast ratio to reach against white, to determine if color changes from "light" to "dark". Acceptable values for WCAG 2.0 are 3, 4.5 and 7.
-// See https://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast
-$min-contrast-ratio: 4.5 !default;
-
-// Customize the light and dark text colors for use in our color contrast function.
-$color-contrast-dark: $black !default;
-$color-contrast-light: $white !default;
-
-// PRIMARY COLORS DEFINITION //
-$primary-h: 210 !default;
-$primary-s: 100 !default;
-$primary-b: 80 !default;
-$primary-l: 40 !default; // Kit UI
-
-$primary: hsb($primary-h, $primary-s, $primary-b) !default; // color-blue-40
-
-$indigo: hsb(243, 70, 100) !default;
-$purple: hsb(243, 40, 100) !default;
-$pink: hsb(350, 30, 100) !default;
-$red: hsl(350, 60%, 50%) !default; // color-red-50
-$orange: hsl(36, 100%, 30%) !default; // color-orange-30
-$yellow: hsb(44, 55, 100) !default;
-$green: hsl(160, 100%, 25%) !default; // color-emerald-25
-$teal: hsl(178, 90%, 32%) !default;
-$cyan: hsb(178, 100, 100) !default;
-$blue: hsb(210, 100, 90) !default;
-$light: hsb(255, 5, 95) !default;
-$dark: hsl(210, 54%, 20%) !default; // color-slate-20
-
-$yiq-text-light: $white !default;
-$yiq-text-dark: $black !default;
-
-$red-accessible: $red !default;
-$orange-accessible: $orange !default;
-$yellow-accessible: hsb(44, 100, 59) !default;
-$green-accessible: $green !default;
-
-$gray-primary: hsb(210, 38.9, 44.3) !default;
-$gray-secondary: hsl(210, 17%, 44%) !default; // color-slate-44
-$gray-tertiary: hsb(205, 35, 54) !default;
-$gray-quaternary: hsb(238, 1, 100) !default;
-$gray-border: hsl(210, 4%, 78%) !default; // color-border-subtle
-$gray-disabled: hsl(210, 3%, 85%) !default; // color-background-disabled
-$gray-label-disabled: hsl(210, 12%, 44%) !default; // color-text-disabled
-$gray-border-disabled: $gray-disabled !default; // color-border-disabled
-
-$secondary: $gray-secondary !default;
+// ============================================================================
+// COLORS MAP - MOVE TO MAPS?
+// ============================================================================
 
 $colors: () !default;
 $colors: map.merge(
@@ -122,6 +96,10 @@ $info: $secondary !default;
 $warning: $orange-accessible !default;
 $danger: $red-accessible !default;
 
+// ============================================================================
+// THEME COLORS MAP - MOVE TO MAPS?
+// ============================================================================
+
 $theme-colors: () !default;
 $theme-colors: map.merge(
   (
@@ -148,62 +126,34 @@ $theme-colors: map.merge(
   $theme-colors
 );
 
-// Characters which are escaped by the escape-svg function
-$escaped-characters: (('<', '%3c'), ('>', '%3e'), ('#', '%23'), ('(', '%28'), (')', '%29')) !default;
+// ============================================================================
+// ACCENT COLORS CON HSB
+// ============================================================================
 
-// ACCENT COLORS DEFINITIONS
-// analoghi
-$analogue-1-h: 243 !default;
-$analogue-1-s: 85 !default;
-$analogue-1-b: 100 !default;
+// Analoghi
 $analogue-1: hsb($analogue-1-h, $analogue-1-s, $analogue-1-b) !default;
-$analogue-2-h: 178 !default;
-$analogue-2-s: 95 !default;
-$analogue-2-b: 85 !default;
 $analogue-2: hsb($analogue-2-h, $analogue-2-s, $analogue-2-b) !default;
-// Complementari e triadici
-$complementary-1-h: 351 !default;
-$complementary-1-s: 75 !default;
-$complementary-1-b: 97 !default;
+
+// Complementari
 $complementary-1: hsb($complementary-1-h, $complementary-1-s, $complementary-1-b) !default;
-$complementary-2-h: 36 !default;
-$complementary-2-s: 100 !default;
-$complementary-2-b: 100 !default;
 $complementary-2: hsb($complementary-2-h, $complementary-2-s, $complementary-2-b) !default;
-$complementary-3-h: 159 !default;
-$complementary-3-s: 100 !default;
-$complementary-3-b: 81 !default;
 $complementary-3: hsb($complementary-3-h, $complementary-3-s, $complementary-3-b) !default;
 
-// NEUTRAL COLORS DEFINITIONS
-$neutral-1-h: 210 !default;
-$neutral-1-s: 70 !default;
-$neutral-1-b: 30 !default;
+// Neutral
 $neutral-1: hsb($neutral-1-h, $neutral-1-s, $neutral-1-b) !default;
-$neutral-2-h: 210 !default;
-$neutral-2-s: 5 !default;
-$neutral-2-b: 95 !default;
 $neutral-2: hsb($neutral-2-h, $neutral-2-s, $neutral-2-b) !default;
 
-// Light Greys A
-$lightgrey-a1: hsl(210, 3%, 85%); // progress-background-default
+// Light Greys (altri valori letterali)
 $lightgrey-a2: #edf5fc;
-$lightgrey-a3: hsl(210, 62%, 97%); // color-background-primary-lighter
 $lightgrey-a4: #f5f9fc;
-
-// Light Greys B
-$lightgrey-b1: hsl(210, 62%, 97%); // color-background-primary-lighter
 $lightgrey-b2: #ebf2fa;
 $lightgrey-b3: #edf4fa;
 $lightgrey-b4: #f2f6fa;
-
-// Light Greys C
 $lightgrey-c1: #f7f9fa;
-$lightgrey-c2: hsl(210, 62%, 97%); // color-background-primary-lighter;
 
-//***********************************************************************
-//********************Primary color variations***************************
-//***********************************************************************
+// ============================================================================
+// PRIMARY COLOR VARIATIONS (tutte usano hsb)
+// ============================================================================
 
 //-------------------------Tinta e ombre---------------------------------
 $primary-a12: hsb($primary-h, $primary-s, 20) !default;
@@ -243,12 +193,11 @@ $primary-c10: hsb($primary-h, $primary-s, $primary-b + calc($primary-b * 20 / 10
 $primary-c11: hsb($primary-h, $primary-s, $primary-b + calc($primary-b * 10 / 100)) !default;
 $primary-c12: hsb($primary-h, $primary-s, $primary-b) !default;
 
-//***********************************************************************
-//********************Accent colors variations***************************
-//***********************************************************************
-// analoghi
-// tinte e ombre
-/***************************** 1 ****************************************/
+// ============================================================================
+// ACCENT COLORS VARIATIONS (tutti con hsb)
+// ============================================================================
+
+// ANALOGUE 1
 $analogue-1-a12: hsb($analogue-1-h, $analogue-1-s, 20) !default;
 $analogue-1-a11: hsb($analogue-1-h, $analogue-1-s, 30) !default;
 $analogue-1-a10: hsb($analogue-1-h, $analogue-1-s, 40) !default;
@@ -262,7 +211,16 @@ $analogue-1-a3: hsb($analogue-1-h, $analogue-1-s - 45, 92) !default;
 $analogue-1-a2: hsb($analogue-1-h, $analogue-1-s - 60, 96) !default;
 $analogue-1-a1: hsb($analogue-1-h, $analogue-1-s - 75, 100) !default;
 
-/***************************** 2 ****************************************/
+$analogue-1-b1: hsb($analogue-1-h, $analogue-1-s, $analogue-1-b) !default;
+$analogue-1-b2: hsb($analogue-1-h, $analogue-1-s - 10, $analogue-1-b - 10) !default;
+$analogue-1-b3: hsb($analogue-1-h, $analogue-1-s - 20, $analogue-1-b - 20) !default;
+$analogue-1-b4: hsb($analogue-1-h, $analogue-1-s - 30, $analogue-1-b - 30) !default;
+$analogue-1-b5: hsb($analogue-1-h, $analogue-1-s - 40, $analogue-1-b - 40) !default;
+$analogue-1-b6: hsb($analogue-1-h, $analogue-1-s - 50, $analogue-1-b - 50) !default;
+$analogue-1-b7: hsb($analogue-1-h, $analogue-1-s - 60, $analogue-1-b - 60) !default;
+$analogue-1-b8: hsb($analogue-1-h, $analogue-1-s - 70, $analogue-1-b - 70) !default;
+
+// ANALOGUE 2
 $analogue-2-a12: hsb($analogue-2-h, $analogue-2-s, 20) !default;
 $analogue-2-a11: hsb($analogue-2-h, $analogue-2-s, 30) !default;
 $analogue-2-a10: hsb($analogue-2-h, $analogue-2-s, 40) !default;
@@ -276,18 +234,6 @@ $analogue-2-a3: hsb($analogue-2-h, $analogue-2-s - 45, 92) !default;
 $analogue-2-a2: hsb($analogue-2-h, $analogue-2-s - 60, 96) !default;
 $analogue-2-a1: hsb($analogue-2-h, $analogue-2-s - 75, 100) !default;
 
-// toni
-/***************************** 1 ****************************************/
-$analogue-1-b1: hsb($analogue-1-h, $analogue-1-s, $analogue-1-b) !default;
-$analogue-1-b2: hsb($analogue-1-h, $analogue-1-s - 10, $analogue-1-b - 10) !default;
-$analogue-1-b3: hsb($analogue-1-h, $analogue-1-s - 20, $analogue-1-b - 20) !default;
-$analogue-1-b4: hsb($analogue-1-h, $analogue-1-s - 30, $analogue-1-b - 30) !default;
-$analogue-1-b5: hsb($analogue-1-h, $analogue-1-s - 40, $analogue-1-b - 40) !default;
-$analogue-1-b6: hsb($analogue-1-h, $analogue-1-s - 50, $analogue-1-b - 50) !default;
-$analogue-1-b7: hsb($analogue-1-h, $analogue-1-s - 60, $analogue-1-b - 60) !default;
-$analogue-1-b8: hsb($analogue-1-h, $analogue-1-s - 70, $analogue-1-b - 70) !default;
-
-/***************************** 2 ****************************************/
 $analogue-2-b1: hsb($analogue-2-h, $analogue-2-s, $analogue-2-b) !default;
 $analogue-2-b2: hsb($analogue-2-h, $analogue-2-s - 10, $analogue-2-b - 10) !default;
 $analogue-2-b3: hsb($analogue-2-h, $analogue-2-s - 20, $analogue-2-b - 20) !default;
@@ -297,9 +243,7 @@ $analogue-2-b6: hsb($analogue-2-h, $analogue-2-s - 50, $analogue-2-b - 50) !defa
 $analogue-2-b7: hsb($analogue-2-h, $analogue-2-s - 60, $analogue-2-b - 60) !default;
 $analogue-2-b8: hsb($analogue-2-h, $analogue-2-s - 70, $analogue-2-b - 70) !default;
 
-// complementari
-// tinte e ombre
-/***************************** 1 ****************************************/
+// COMPLEMENTARY 1
 $complementary-1-a12: hsb($complementary-1-h, $complementary-1-s, 20) !default;
 $complementary-1-a11: hsb($complementary-1-h, $complementary-1-s, 30) !default;
 $complementary-1-a10: hsb($complementary-1-h, $complementary-1-s, 40) !default;
@@ -313,7 +257,16 @@ $complementary-1-a3: hsb($complementary-1-h, $complementary-1-s - 45, 92) !defau
 $complementary-1-a2: hsb($complementary-1-h, $complementary-1-s - 60, 96) !default;
 $complementary-1-a1: hsb($complementary-1-h, $complementary-1-s - 75, 100) !default;
 
-/***************************** 2 ****************************************/
+$complementary-1-b1: hsb($complementary-1-h, $complementary-1-s, $complementary-1-b) !default;
+$complementary-1-b2: hsb($complementary-1-h, $complementary-1-s - 10, $complementary-1-b - 10) !default;
+$complementary-1-b3: hsb($complementary-1-h, $complementary-1-s - 20, $complementary-1-b - 20) !default;
+$complementary-1-b4: hsb($complementary-1-h, $complementary-1-s - 30, $complementary-1-b - 30) !default;
+$complementary-1-b5: hsb($complementary-1-h, $complementary-1-s - 40, $complementary-1-b - 40) !default;
+$complementary-1-b6: hsb($complementary-1-h, $complementary-1-s - 50, $complementary-1-b - 50) !default;
+$complementary-1-b7: hsb($complementary-1-h, $complementary-1-s - 60, $complementary-1-b - 60) !default;
+$complementary-1-b8: hsb($complementary-1-h, $complementary-1-s - 70, $complementary-1-b - 70) !default;
+
+// COMPLEMENTARY 2
 $complementary-2-a12: hsb($complementary-2-h, $complementary-2-s, 20) !default;
 $complementary-2-a11: hsb($complementary-2-h, $complementary-2-s, 30) !default;
 $complementary-2-a10: hsb($complementary-2-h, $complementary-2-s, 40) !default;
@@ -327,7 +280,16 @@ $complementary-2-a3: hsb($complementary-2-h, $complementary-2-s - 45, 92) !defau
 $complementary-2-a2: hsb($complementary-2-h, $complementary-2-s - 60, 96) !default;
 $complementary-2-a1: hsb($complementary-2-h, $complementary-2-s - 75, 100) !default;
 
-/***************************** 3 ****************************************/
+$complementary-2-b1: hsb($complementary-2-h, $complementary-2-s, $complementary-2-b) !default;
+$complementary-2-b2: hsb($complementary-2-h, $complementary-2-s - 10, $complementary-2-b - 10) !default;
+$complementary-2-b3: hsb($complementary-2-h, $complementary-2-s - 20, $complementary-2-b - 20) !default;
+$complementary-2-b4: hsb($complementary-2-h, $complementary-2-s - 30, $complementary-2-b - 30) !default;
+$complementary-2-b5: hsb($complementary-2-h, $complementary-2-s - 40, $complementary-2-b - 40) !default;
+$complementary-2-b6: hsb($complementary-2-h, $complementary-2-s - 50, $complementary-2-b - 50) !default;
+$complementary-2-b7: hsb($complementary-2-h, $complementary-2-s - 60, $complementary-2-b - 60) !default;
+$complementary-2-b8: hsb($complementary-2-h, $complementary-2-s - 70, $complementary-2-b - 70) !default;
+
+// COMPLEMENTARY 3
 $complementary-3-a12: hsb($complementary-3-h, $complementary-3-s, 20) !default;
 $complementary-3-a11: hsb($complementary-3-h, $complementary-3-s, 30) !default;
 $complementary-3-a10: hsb($complementary-3-h, $complementary-3-s, 40) !default;
@@ -341,28 +303,6 @@ $complementary-3-a3: hsb($complementary-3-h, $complementary-3-s - 45, 92) !defau
 $complementary-3-a2: hsb($complementary-3-h, $complementary-3-s - 60, 96) !default;
 $complementary-3-a1: hsb($complementary-3-h, $complementary-3-s - 75, 100) !default;
 
-//-------------------------- toni -----------------------------------------
-/***************************** 1 ****************************************/
-$complementary-1-b1: hsb($complementary-1-h, $complementary-1-s, $complementary-1-b) !default;
-$complementary-1-b2: hsb($complementary-1-h, $complementary-1-s - 10, $complementary-1-b - 10) !default;
-$complementary-1-b3: hsb($complementary-1-h, $complementary-1-s - 20, $complementary-1-b - 20) !default;
-$complementary-1-b4: hsb($complementary-1-h, $complementary-1-s - 30, $complementary-1-b - 30) !default;
-$complementary-1-b5: hsb($complementary-1-h, $complementary-1-s - 40, $complementary-1-b - 40) !default;
-$complementary-1-b6: hsb($complementary-1-h, $complementary-1-s - 50, $complementary-1-b - 50) !default;
-$complementary-1-b7: hsb($complementary-1-h, $complementary-1-s - 60, $complementary-1-b - 60) !default;
-$complementary-1-b8: hsb($complementary-1-h, $complementary-1-s - 70, $complementary-1-b - 70) !default;
-
-/***************************** 2 ****************************************/
-$complementary-2-b1: hsb($complementary-2-h, $complementary-2-s, $complementary-2-b) !default;
-$complementary-2-b2: hsb($complementary-2-h, $complementary-2-s - 10, $complementary-2-b - 10) !default;
-$complementary-2-b3: hsb($complementary-2-h, $complementary-2-s - 20, $complementary-2-b - 20) !default;
-$complementary-2-b4: hsb($complementary-2-h, $complementary-2-s - 30, $complementary-2-b - 30) !default;
-$complementary-2-b5: hsb($complementary-2-h, $complementary-2-s - 40, $complementary-2-b - 40) !default;
-$complementary-2-b6: hsb($complementary-2-h, $complementary-2-s - 50, $complementary-2-b - 50) !default;
-$complementary-2-b7: hsb($complementary-2-h, $complementary-2-s - 60, $complementary-2-b - 60) !default;
-$complementary-2-b8: hsb($complementary-2-h, $complementary-2-s - 70, $complementary-2-b - 70) !default;
-
-/***************************** 3 ****************************************/
 $complementary-3-b1: hsb($complementary-3-h, $complementary-3-s, $complementary-3-b) !default;
 $complementary-3-b2: hsb($complementary-3-h, $complementary-3-s - 10, $complementary-3-b - 10) !default;
 $complementary-3-b3: hsb($complementary-3-h, $complementary-3-s - 20, $complementary-3-b - 20) !default;
@@ -372,12 +312,10 @@ $complementary-3-b6: hsb($complementary-3-h, $complementary-3-s - 50, $complemen
 $complementary-3-b7: hsb($complementary-3-h, $complementary-3-s - 60, $complementary-3-b - 60) !default;
 $complementary-3-b8: hsb($complementary-3-h, $complementary-3-s - 70, $complementary-3-b - 70) !default;
 
-//***********************************************************************
-//********************Neutral color variations***************************
-//***********************************************************************
+// ============================================================================
+// NEUTRAL COLOR VARIATIONS
+// ============================================================================
 
-// tinte e ombre
-/***************************** NEUTRAL 1 ****************************************/
 $neutral-1-a10: hsb($neutral-1-h, $neutral-1-s, $neutral-1-b) !default;
 $neutral-1-a9: hsb($neutral-1-h, $neutral-1-s - 20, $neutral-1-b + 7) !default;
 $neutral-1-a8: hsb($neutral-1-h, $neutral-1-s - 30, $neutral-1-b + 14) !default;
@@ -389,7 +327,6 @@ $neutral-1-a3: hsb($neutral-1-h, $neutral-1-s - 68, $neutral-1-b + 49) !default;
 $neutral-1-a2: hsb($neutral-1-h, $neutral-1-s - 71, $neutral-1-b + 56) !default;
 $neutral-1-a1: hsb($neutral-1-h, $neutral-1-s - 73, $neutral-1-b + 63) !default;
 
-/***************************** NEUTRAL 2 ****************************************/
 $neutral-2-b1: hsb($neutral-2-h, $neutral-2-s, $neutral-2-b) !default;
 $neutral-2-b2: hsb($neutral-2-h, $neutral-2-s, $neutral-2-b - 15) !default;
 $neutral-2-b3: hsb($neutral-2-h, $neutral-2-s, $neutral-2-b - 30) !default;
@@ -398,7 +335,6 @@ $neutral-2-b5: hsb($neutral-2-h, $neutral-2-s - 1, $neutral-2-b - 60) !default;
 $neutral-2-b6: hsb($neutral-2-h, $neutral-2-s + 2, $neutral-2-b - 75) !default;
 $neutral-2-b7: hsb($neutral-2-h, $neutral-2-s + 4, $neutral-2-b - 90) !default;
 
-/***************************** NEUTRAL 2 / 3 ****************************************/
 $neutral-2-a1: hsb($neutral-2-h, $neutral-2-s, $neutral-2-b) !default;
 $neutral-2-a2: hsb($neutral-2-h, $neutral-2-s + 3, $neutral-2-b - 15) !default;
 $neutral-2-a3: hsb($neutral-2-h, $neutral-2-s + 2, $neutral-2-b - 30) !default;
@@ -407,33 +343,13 @@ $neutral-2-a5: hsb($neutral-2-h, $neutral-2-s + 2, $neutral-2-b - 60) !default;
 $neutral-2-a6: hsb($neutral-2-h, $neutral-2-s + 2, $neutral-2-b - 75) !default;
 $neutral-2-a7: hsb($neutral-2-h, $neutral-2-s + 4, $neutral-2-b - 85) !default;
 
-//==================== DESIGN TOKENS VARIABLES ============================//
+// ============================================================================
+// DESIGN TOKENS CHE USANO VARIABILI
+// ============================================================================
 
-// SEMANTIC TOKENS =========================================================
+$color-background-muted: $gray-100 !default; // color-gray-96
+$color-text-base: $gray-900 !default; // color-gray-10
 
-// Backgrounds
-$color-background-emphasis: hsl(210, 54%, 20%); // color-slate-20
-$color-background-primary-lighter: hsl(210, 62%, 97%); // color-blue-97
-$color-background-primary-hover: hsl(210, 100%, 30%); // color-blue-30
-$color-background-secondary-hover: hsl(210, 33%, 28%); // color-slate-28
-$color-background-secondary-lighter: hsl(210, 3%, 85%); // color-slate-85
-$color-background-muted: $gray-100; // color-gray-96
-
-// Borders
-$color-border-secondary: hsl(210, 17%, 44%); // color-slate-44
-$color-border-subtle: hsl(210, 4%, 78%); // color-slate-78
-$color-border-warning: hsl(36, 100%, 30%); // color-orange-30
-
-// Text
-$color-text-primary-active: hsl(210, 100%, 15%); // color-blue-15
-$color-text-primary-hover: hsl(210, 100%, 30%); // color-blue-30
-$color-text-muted: hsl(210, 17%, 44%); // color-slate-44
-$color-text-base: $gray-900; // color-gray-10
-$color-text-secondary: hsl(210, 33%, 28%); // color-slate-28
-$color-text-warning: hsl(36, 100%, 30%); // color-orange-30
-
-// SPECIFIC TOKENS =========================================================
-//
 // Footer
 $footer-top-background: $primary-a8 !default; // color-blue-30
 $footer-bottom-background: $primary-a10 !default; // color-blue-20
@@ -465,11 +381,6 @@ $enable-validation-icons: true !default;
 $enable-negative-margins: false !default;
 $enable-deprecation-messages: true !default;
 $enable-important-utilities: true !default;
-
-// Prefix for :root CSS variables
-
-$variable-prefix: bs- !default; // Deprecated in v5.2.0 for the shorter `$prefix`
-$prefix: $variable-prefix !default;
 
 // Spacing
 //
@@ -682,7 +593,7 @@ $aspect-ratios: (
 
 // Text
 $font-family-serif: 'Lora', Georgia, serif !default;
-$font-family-sans-serif: 'Titillium Web', Geneva, Tahoma, sans-serif !default;
+$font-family-sans-serif: 'Titillium Web', 'Titillium Sans Pro', Geneva, Tahoma, sans-serif !default;
 $font-family-monospace: 'Roboto Mono', monospace !default;
 $text-color: $gray-700 !default;
 $text-muted: $color-text-muted !default;
@@ -801,8 +712,8 @@ $btn-transition:
   border-color 0.15s ease-in-out,
   box-shadow 0.15s ease-in-out !default;
 
-$btn-link-color: var(--#{$prefix}link-color) !default;
-$btn-link-hover-color: var(--#{$prefix}link-hover-color) !default;
+$btn-link-color: var(--#{$prefix}color-link) !default;
+$btn-link-hover-color: var(--#{$prefix}color-link-hover) !default;
 $btn-link-disabled-color: $gray-600 !default;
 
 // Forms
@@ -954,7 +865,7 @@ $form-select-disabled-bg: $gray-200 !default;
 $form-select-disabled-border-color: $input-disabled-border-color !default;
 $form-select-bg-position: right $form-select-padding-x center !default;
 $form-select-bg-size: 16px 12px !default; // In pixels because image dimensions
-$form-select-indicator-color: $gray-800 !default;
+$form-select-indicator-color: $gray-600 !default;
 $form-select-indicator: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='#{$form-select-indicator-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/></svg>") !default;
 
 $form-select-feedback-icon-padding-end: $form-select-padding-x * 2.5 + $form-select-indicator-padding !default;
@@ -1118,19 +1029,6 @@ $table-caption-color: $text-muted !default;
 $table-bg-scale: -80% !default;
 // scss-docs-end table-variables
 
-// scss-docs-start table-loop
-$table-variants: (
-  'primary': shift-color($primary, $table-bg-scale),
-  'secondary': shift-color($secondary, $table-bg-scale),
-  'success': shift-color($success, $table-bg-scale),
-  'info': shift-color($info, $table-bg-scale),
-  'warning': shift-color($warning, $table-bg-scale),
-  'danger': shift-color($danger, $table-bg-scale),
-  'light': $light,
-  'dark': $dark,
-) !default;
-// scss-docs-end table-loop
-
 // Progress
 $progress-height: 16px;
 $progress-border-radius: 0;
@@ -1167,7 +1065,7 @@ $btn-primary-border: $primary !default;
 $link-color: $primary !default;
 $link-shade-percentage: 20% !default;
 $link-hover-color: shift-color($link-color, $link-shade-percentage) !default;
-$link-hover-decoration: null !default;
+$link-hover-decoration: underline !default;
 
 $stretched-link-pseudo-element: after !default;
 $stretched-link-z-index: 1 !default;
@@ -1236,7 +1134,7 @@ $tooltip-font-size: $font-size-sm !default;
 $tooltip-color: $white !default;
 $tooltip-bg: $black !default;
 $tooltip-border-radius: $border-radius !default;
-$tooltip-margin: null !default; // TODO: remove this in v6
+$tooltip-margin: null !default;
 $tooltip-arrow-width: 0.8rem !default;
 $tooltip-arrow-height: 0.4rem !default;
 // fusv-disable
@@ -1272,28 +1170,28 @@ $modal-backdrop-opacity: 0.8 !default;
 $modal-max-width: 32rem !default;
 $modal-dialog-margin: 0.5rem !default;
 $modal-dialog-margin-y-sm-up: 1.5rem !default;
-$modal-inner-padding: 1.5rem !default;
+// $modal-inner-padding: 1.5rem !default;
 
-$modal-header-border-color: var(--#{$prefix}border-color) !default;
-$modal-header-border-width: 0 !default;
-$modal-header-padding-y: $modal-inner-padding !default;
-$modal-header-padding-x: $modal-inner-padding !default;
-$modal-header-padding: 1.5rem !default;
+// $modal-header-border-color: var(--#{$prefix}border-color) !default;
+// $modal-header-border-width: 0 !default;
+// $modal-header-padding-y: $modal-inner-padding !default;
+// $modal-header-padding-x: $modal-inner-padding !default;
+// $modal-header-padding: 1.5rem !default;
 $modal-show-transform: none !default;
 $modal-fade-transform: translate(0, -50px) !default;
 $modal-transition: transform 0.3s ease-out !default;
 $modal-scale-transform: scale(1.02) !default;
 $modal-title-line-height: $line-height-base !default;
 
-$modal-footer-bg: null !default;
-$modal-footer-border-color: $modal-header-border-color !default;
+// $modal-footer-bg: null !default;
+// $modal-footer-border-color: $modal-header-border-color !default;
 $modal-footer-margin-between: 0.5rem !default;
-$modal-footer-border-width: 0 !default;
+// $modal-footer-border-width: 0 !default;
 
 $modal-backdrop-bg: $black !default;
 
 // Carousel
-$carousel-bg: #444e57 !default; // TODO: not used, consider to remove
+$carousel-bg: #444e57 !default;
 $carousel-padding: 3em !default;
 $carousel-control-color: $secondary !default;
 $carousel-control-width: auto !default;
@@ -1339,19 +1237,19 @@ $pagination-padding-x-lg: 1.5rem !default;
 
 $pagination-font-size: $font-size-base !default;
 
-$pagination-color: var(--#{$prefix}link-color) !default;
+$pagination-color: var(--#{$prefix}color-link) !default;
 $pagination-bg: $white !default;
 $pagination-border-radius: $border-radius !default;
 $pagination-border-width: $border-width !default;
 $pagination-margin-start: ($pagination-border-width * -1) !default;
 $pagination-border-color: $gray-300 !default;
 
-$pagination-focus-color: var(--#{$prefix}link-hover-color) !default;
+$pagination-focus-color: var(--#{$prefix}color-link-hover) !default;
 $pagination-focus-bg: $gray-200 !default;
 $pagination-focus-box-shadow: $input-btn-focus-box-shadow !default;
 $pagination-focus-outline: 0 !default;
 
-$pagination-hover-color: var(--#{$prefix}link-hover-color) !default;
+$pagination-hover-color: var(--#{$prefix}color-link-hover) !default;
 $pagination-hover-bg: $gray-200 !default;
 $pagination-hover-border-color: $gray-300 !default;
 
@@ -1563,8 +1461,8 @@ $nav-link-padding-y: 0.5rem !default;
 $nav-link-padding-x: 1rem !default;
 $nav-link-font-size: null !default;
 $nav-link-font-weight: null !default;
-$nav-link-color: var(--#{$prefix}link-color) !default;
-$nav-link-hover-color: var(--#{$prefix}link-hover-color) !default;
+$nav-link-color: var(--#{$prefix}color-link) !default;
+$nav-link-hover-color: var(--#{$prefix}color-link-hover) !default;
 $nav-link-transition:
   color 0.15s ease-in-out,
   background-color 0.15s ease-in-out,
@@ -1667,25 +1565,6 @@ $navigation-light-megamenu-separator-color: $gray-border !default; // UI kit
 //inline
 $inline-menu-line-width: 2px;
 $inline-menu-linklist-v-padding: 0.59em;
-
-// Linklist
-$link-list-font-size: 1rem;
-$link-list-font-size-l: 1.125rem;
-$link-list-line-height: 2rem;
-$link-list-heading-size: 1.125rem;
-$link-list-divider-height: 1px;
-$link-list-divider-distance: 8px;
-$link-list-h-pad: 24px;
-$link-list-v-pad: 0.25em;
-$link-list-paragraph-size: 0.875rem;
-$link-list-left-icon-space: 8px;
-$link-list-avatar-radius: 50px;
-$link-list-avatar-margin: 8px;
-$link-list-checkbox-icon-right: 35px;
-$link-list-toggle-margin: 8px;
-$link-list-icon-v-padding: 5px;
-$link-list-v-padding-l: 0.45em;
-$link-list-hover-color: $primary-a5 !default; // TODO: Not used, consider to remove it
 
 // Megamenu
 $megamenu-padding-top-desktop: $v-gap * 4;
@@ -1881,7 +1760,7 @@ $card-big-h5-l-h: 1.5rem;
 $card-big-p-size: 1.125rem;
 $card-big-p-l-h: 1.5rem;
 $card-big-top-icon-size: $v-gap * 10;
-$card-img-heading-size: 1.1111111111111112rem; // FIXME
+$card-img-heading-size: 1.1111111111111112rem;
 $card-img-heading-l-h: 1.5555555555555556rem;
 $special-card-img-width: 174px;
 // flag icon
@@ -1906,7 +1785,7 @@ $select-dd-small-separator-width: 65px;
 $select-dd-small-separator-bg: $gray-border !default; // UI kit
 $select-dd-icon-size: $v-gap * 3;
 $select-dd-icon-flag-top: 10px;
-$select-dd-pill-font-size: 0.7777777777777778rem; // FIXME
+$select-dd-pill-font-size: 0.7777777777777778rem;
 $select-dd-pill-distance: $v-gap;
 $select-dd-pill-font-w: 700;
 $select-dd-header-size: 0.875rem;
@@ -1915,7 +1794,7 @@ $select-dd-check-height: 30px;
 
 //date picker
 $dp-label-color: $color-text-base !default;
-$dp-border-bottom: 1px solid $dp-label-color !default; // TODO Not found - need more attention
+$dp-border-bottom: 1px solid $dp-label-color !default;
 $dp-shadow: $dialog-shadow;
 $dp-arrow-size: $v-gap * 2;
 $dp-month-size: 0.875rem;
@@ -1923,7 +1802,7 @@ $dp-month-l-spacing: 0.1px;
 $dp-grid-size: 0.75rem;
 $dp-current-size: $v-gap * 4;
 
-//hero
+// hero
 $hero-bg-color: $primary !default;
 $hero-height-desk: 400px;
 $hero-height-mob: 300px;
@@ -1994,10 +1873,10 @@ $stepper-spacing-h: 24px;
 $stepper-spacing-v: 16px;
 
 // transfer
-$transfer-border: 1px solid $neutral-1-a3 !default; // TODO Not found
+$transfer-border: 1px solid $neutral-1-a3 !default;
 $transfer-descr-size: 0.75rem;
-$transfer-descr-color: $neutral-1-a8 !default; // TODO Not found
-$transfer-header-line-color: $neutral-1-a3 !default; // TODO Not found
+$transfer-descr-color: $neutral-1-a8 !default;
+$transfer-header-line-color: $neutral-1-a3 !default;
 $transfer-header-line-w: 65px;
 $transfer-height: 240px;
 
@@ -2019,6 +1898,7 @@ $section-user-header-background-color: $primary-a1 !default; // Missing in the U
 // Grid breakpoints
 // Define the minimum dimensions at which your layout will change,
 // adapting to different screen sizes, for use in media queries.
+// TODO: move to _map.scss
 $grid-breakpoints: (
   xs: 0,
   sm: 576px,
@@ -2028,11 +1908,14 @@ $grid-breakpoints: (
   xxl: 1400px,
 ) !default;
 
-// Hover states breackpoint
+// Hover states breakpoint
 // Define minimum dimension for over states activation
 $grid-breakpoints-hover: 1025px;
+
 // Grid containers
 // Define the maximum width of `.container` for different screen sizes.
+// TODO: move to _map.scss
+
 $container-max-widths: (
   sm: 540px,
   md: 720px,
@@ -2110,8 +1993,8 @@ $autocomplete-box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.05) !default;
 
 // Offcanvas
 
-$offcanvas-padding-y: $modal-inner-padding !default;
-$offcanvas-padding-x: $modal-inner-padding !default;
+$offcanvas-padding-y: 1.5rem !default;
+$offcanvas-padding-x: 1.5rem !default;
 $offcanvas-horizontal-width: 400px !default;
 $offcanvas-vertical-height: 30vh !default;
 $offcanvas-transition-duration: 0.3s !default;
@@ -2123,3 +2006,15 @@ $offcanvas-color: $modal-content-color !default;
 $offcanvas-box-shadow: $modal-content-box-shadow-xs !default;
 $offcanvas-backdrop-bg: $modal-backdrop-bg !default;
 $offcanvas-backdrop-opacity: $modal-backdrop-opacity !default;
+// ============================================================
+
+// NEW VARIABLES
+
+// Global colors used inside sass loops and maps
+$color-primary: var(--#{$prefix}theme-primary);
+$color-secondary: var(--#{$prefix}color-background-secondary);
+$color-accent: var(--#{$prefix}color-background-accent);
+$color-success: var(--#{$prefix}color-background-success);
+$color-warning: var(--#{$prefix}color-background-warning);
+$color-danger: var(--#{$prefix}color-background-danger);
+$color-inverse: var(--#{$prefix}color-background-inverse);
