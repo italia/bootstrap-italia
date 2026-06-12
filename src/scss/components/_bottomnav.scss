@@ -12,9 +12,6 @@
 // Properties
 //
 
-// Styles
-//
-
 .bottom-nav {
   --#{$prefix}bottom-nav-height: 96px;
   --#{$prefix}bottom-nav-list-height: 64px;
@@ -39,7 +36,12 @@
   --#{$prefix}bottom-nav-shadow-opacity: 0.18;
   --#{$prefix}bottom-nav-shadow-transform: translateY(-50%) scalex(1.4) scaleY(0.12);
   --#{$prefix}bottom-nav-shadow-background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 60%);
+}
 
+// Styles
+//
+/* stylelint-disable-next-line no-duplicate-selectors */
+.bottom-nav {
   position: fixed;
   bottom: 0;
   left: 0;
