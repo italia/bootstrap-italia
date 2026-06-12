@@ -1,15 +1,15 @@
+// Accessible Autocomplete 
+// Original repository: https://github.com/alphagov/accessible-autocomplete
+// We use a modified version of the component with some custom styles.
+
 @use '../base/config' as *;
 @use '../base/variables' as *;
 
 .autocomplete__hint,
 .autocomplete__input {
   appearance: none;
-  border: 2px solid #0b0c0c;
-  border-radius: 0; /* Safari 10 on iOS adds implicit border rounding. */
   box-sizing: border-box;
   margin-bottom: 0; /* BUG: Safari 10 on macOS seems to add an implicit margin. */
-  line-height: 1.25;
-  height: 2.5rem;
   width: 100%;
 }
 
@@ -18,22 +18,12 @@
 }
 
 .autocomplete__hint {
-  // color: #505a5f;
+  color: var(--#{$prefix}color-text-secondary);
   position: absolute;
 }
 
-.autocomplete__input--default {
-  padding: 5px;
-}
-
-// .autocomplete__input--focused {
-//   outline: 3px solid #fd0;
-//   outline-offset: 0;
-//   box-shadow: inset 0 0 0 2px;
-// }
-
 .autocomplete__input--show-all-values {
-  padding: 5px 35px 5px 5px; /* Space for arrow. Other padding should match .autocomplete__input--default. */
+  padding: var(--#{$prefix}spacing-xs) var(--#{$prefix}spacing-xl) var(--#{$prefix}spacing-xs) var(--#{$prefix}spacing-xs); /* Space for arrow. Other padding should match .autocomplete__input--default. */
   cursor: pointer;
 }
 
@@ -49,9 +39,9 @@
 
 .autocomplete__menu {
   background-color: var(--#{$prefix}color-background-inverse);
-  border: 2px solid #0b0c0c;
+  border: 1px solid var(--#{$prefix}color-border-subtle);
   border-top: 0;
-  color: #0b0c0c;
+  color: var(--#{$prefix}color-text-base);
   margin: 0;
   max-height: 342px;
   overflow-x: hidden;
@@ -69,7 +59,7 @@
 }
 
 .autocomplete__menu--overlay {
-  box-shadow: rgba(0, 0, 0, 0.256863) 0 2px 6px;
+  box-shadow: var(--#{$prefix}elevation-low);
   left: 0;
   position: absolute;
   top: 100%;
@@ -81,7 +71,7 @@
 }
 
 .autocomplete__option {
-  border-bottom: solid #b1b4b6;
+  border-bottom: solid var(--#{$prefix}color-border-subtle);
   border-width: 1px 0;
   cursor: pointer;
   display: block;
@@ -101,14 +91,14 @@
 }
 
 .autocomplete__option--odd {
-  background-color: #f3f2f1;
+  background-color: var(--#{$prefix}color-background-primary-lighter);
 }
 
 .autocomplete__option--focused,
 .autocomplete__option:hover {
-  background-color: #1d70b8;
-  border-color: #1d70b8;
-  color: white;
+  background-color: var(--#{$prefix}color-background-primary);
+  border-color: var(--#{$prefix}color-border-primary);
+  color: var(--#{$prefix}color-text-inverse);
   outline: none;
 }
 
@@ -135,14 +125,9 @@
 }
 
 .autocomplete__option--no-results {
-  background-color: #f3f2f1;
-  color: #505a5f;
+  background-color: var(--#{$prefix}color-background-primary-lighter);  
+  color: var(--#{$prefix}color-text-secondary);
   cursor: not-allowed;
-}
-
-.autocomplete__hint,
-.autocomplete__option {
-  padding: 5px;
 }
 
 .autocomplete__wrapper {
@@ -159,7 +144,7 @@
 
     .autocomplete__hint,
     .autocomplete__option {
-      padding: var(--#{$prefix}spacing-xs) var(--#{$prefix}spacing-m);
+      padding: var(--#{$prefix}spacing-xs) var(--#{$prefix}spacing-s);
       background-color: var(--#{$prefix}color-background-inverse);
       border: none;
       font-size: 0.875rem;

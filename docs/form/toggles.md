@@ -2,50 +2,45 @@
 layout: docs
 group: form
 toc: true
-
-title: Toggles
+title: Toggle
 description: Campi di tipo "interruttore".
 ---
 
-Per ottenere un interruttore con levetta basterà usare la seguente sintassi HTML, gli stili CSS penseranno al resto. Il contenitore padre dovrà avere la classe `.toggles`, mentre la label conterrà sia la checkbox che uno `<span>` con classe `.lever`.
+Il toggle è un campo `<input>` di tipo checkbox con una levetta che modifica lo stato del campo. Per ottenere questo effetto, viene resettato lo stile predefinito del checkbox e viene aggiunto uno `<span>` con classe `.lever`. Il contenitore del toggle deve avere le classi `.form-check` e `.form-check-inline`.
 
 {% comment %}Example name: Base {% endcomment %}
 {% capture example %}
-<div>
-  <div class="form-check form-check-inline">
-    <div class="toggles">
-      <label for="toggleEsempio1a">
-        Label dell'interruttore 1
-        <input type="checkbox" id="toggleEsempio1a">
-        <span class="lever"></span>
-      </label>
-    </div>
+<div class="form-check form-check-inline">
+  <div class="toggles">
+    <label for="toggleEsempio1a">
+      Label dell'interruttore 1
+      <input type="checkbox" id="toggleEsempio1a">
+      <span class="lever"></span>
+    </label>
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
 ### Disabilitato
 
-Affinché l'interruttore risulti disabilitato occorrerà aggiungere l'attributo `disabled` al checkbox.
+Affinché l'interruttore risulti disabilitato aggiungi l'attributo `disabled` all'input.
 
 {% comment %}Example name: Disabilitato {% endcomment %}
 {% capture example %}
-<div>
-  <div class="form-check form-check-inline">
-    <div class="toggles">
-      <label for="toggleEsempio2a">
-        Label dell'interruttore 1
-        <input disabled type="checkbox" id="toggleEsempio2a">
-        <span class="lever"></span>
-      </label>
-    </div>
+<div class="form-check form-check-inline">
+  <div class="toggles">
+    <label for="toggleEsempio2a">
+      Label dell'interruttore 1
+      <input disabled type="checkbox" id="toggleEsempio2a">
+      <span class="lever"></span>
+    </label>
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
 
 ### Inline
 
-Per allineare orizzontalmente gli interruttori basterà aggiungere la classe `.form-check-inline` a qualsiasi `.form-check`.
+Per allineare orizzontalmente gli interruttori aggiungi la classe `.form-check-inline` a qualsiasi `.form-check`.
 
 {% comment %}Example name: In linea {% endcomment %}
 {% capture example %}
@@ -75,7 +70,7 @@ Per allineare orizzontalmente gli interruttori basterà aggiungere la classe `.f
 
 ### Raggruppati visivamente
 
-Per raggruppare visivamente gli elementi **toggle** occorrerà aggiungere al `.form-check` la classe `.form-check-group`.
+Per raggruppare visivamente gli elementi **toggle** aggiungi la classe `.form-check-group` al `.form-check`.
 
 {% comment %}Example name: Raggruppati visivamente {% endcomment %}
 {% capture example %}
