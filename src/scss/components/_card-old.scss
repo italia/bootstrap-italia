@@ -259,7 +259,6 @@
 
       .card-image {
         position: relative;
-        // background-color: $gray-border;
         background-color: transparent;
 
         display: flex;
@@ -523,9 +522,6 @@
   // line
   &:after {
     content: '';
-    // height: $card-small-line-height;
-    // width: $card-small-line-w;
-    // background: $card-small-line-color;
     display: block;
     margin-top: $card-small-line-margin;
     margin-left: $card-padding;
@@ -573,10 +569,6 @@
   }
   // cards with img top
   &.card-img {
-    // Why the margin?
-    // margin-left: $card-padding/3;
-    // margin-right: $card-padding/3;
-
     &.shadow .card-body,
     &.border .card-body,
     &.border-start .card-body,
@@ -734,7 +726,6 @@
       position: absolute;
       right: $card-padding * 2;
       top: $card-padding + $v-gap;
-      //left: $card-padding * 6;
       justify-content: flex-end;
     }
   }
@@ -789,7 +780,6 @@
 
   &.card-teaser {
     display: inline-flex;
-    // width: auto;
     flex-direction: row;
     align-items: flex-start;
     padding: 24px;

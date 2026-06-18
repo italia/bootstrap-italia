@@ -63,7 +63,6 @@
 
   &:not(.collapsed) {
     background-color: var(--#{$prefix}accordion-active-bg);
-    // box-shadow: inset 0 calc(-1 * var(--#{$prefix}accordion-border-width)) 0 var(--#{$prefix}accordion-border-color);
     color: var(--#{$prefix}accordion-active-color);
 
     &::after {
@@ -147,7 +146,6 @@
   &.accordion-background-active {
     .accordion-header {
       .accordion-button[aria-expanded='true'] {
-        // border-color: var(--#{$prefix}color-border-primary);
         background-color: var(--#{$prefix}color-background-primary);
         color: var(--#{$prefix}color-text-inverse);
 
@@ -166,7 +164,6 @@
   &.accordion-background-hover {
     .accordion-header {
       .accordion-button:hover {
-        // border-color: $primary;
         background-color: var(--#{$prefix}color-background-primary);
         color: var(--#{$prefix}color-text-inverse);
         &:before {
@@ -245,7 +242,6 @@
       @include border-bottom-radius(var(--#{$prefix}accordion-border-radius));
     }
   }
-  // border: none;
   &:first-of-type,
   &:last-of-type {
     border-radius: 0;

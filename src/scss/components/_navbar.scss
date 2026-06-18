@@ -374,12 +374,6 @@
           align-self: flex-end;
         }
 
-        @include media-breakpoint-up(lg) {
-          &:hover {
-            // color: var(--#{$prefix}color-text-inverse);
-          }
-        }
-
         &.disabled {
           span,
           .icon {
@@ -401,7 +395,6 @@
     }
 
     .close-div {
-      //transform: translateX(0);
       opacity: 1;
     }
   }
@@ -509,7 +502,6 @@
 
 .navbar-dark {
   --#{$prefix}navbar-color: var(--#{$prefix}color-text-inverse);
-  // --#{$prefix}navbar-hover-color: var(--#{$prefix}$color-text-inverse);
   --#{$prefix}navbar-brand-color: var(--#{$prefix}color-text-inverse);
   --#{$prefix}navbar-brand-hover-color: var(--#{$prefix}color-text-inverse);
   --#{$prefix}navbar-toggler-border-color: #{$navbar-dark-toggler-border-color};

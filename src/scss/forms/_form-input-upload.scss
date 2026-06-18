@@ -91,12 +91,6 @@
       }
     }
 
-    // &:focus,
-    // &:active {
-    //   &[type='file'] + label {
-    //     border: 2px dashed $primary-a3;
-    //   }
-    // }
   }
 
   //image
@@ -270,9 +264,6 @@
 }
 
 .avatar-upload-wrapper {
-  // position: relative;
-  // display: inline-block;
-
   .avatar-upload-icon {
     position: absolute;
     right: 4px;
