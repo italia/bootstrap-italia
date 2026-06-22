@@ -232,7 +232,6 @@
 
 // Multiline list item
 .multiline {
-
   .link-list li:not(:last-child) {
     border-bottom: 1px solid var(--#{$prefix}color-border-subtle);
   }
