@@ -18,7 +18,7 @@
 //
 
 .popover {
-    --#{$prefix}popover-arrow-border: var(--#{$prefix}popover-border-color);
+  --#{$prefix}popover-arrow-border: var(--#{$prefix}popover-border-color);
   --#{$prefix}popover-arrow-height: #{$popover-arrow-height};
   --#{$prefix}popover-arrow-width: #{$popover-arrow-width};
   --#{$prefix}popover-body-color: #{$popover-body-color};
