@@ -76,6 +76,7 @@
     display: none; // to handle resize from md to lg when open
   }
 }
+
 /* stylelint-disable-next-line no-duplicate-selectors */
 .navbar {
   position: relative;
@@ -155,9 +156,9 @@
 
   // Dropdown menu inside navbar
   // This is a special case for the dropdown menu inside the navbar
-  //
-
   .dropdown-menu {
+    --#{$prefix}dropdown-border-width: 1px;
+    --#{$prefix}dropdown-border-color: var(--#{$prefix}color-border-subtle);
     a.it-heading-link,
     a.it-footer-link {
       svg {
@@ -185,6 +186,17 @@
         }
       }
     }
+  }
+
+  // Custom notch for dropdown menu inside navbar
+  .megamenu .dropdown-toggle:before,
+  .dropdown-menu:before {
+    --#{$prefix}dropdown-notch-position-y: -10px;
+    border-color: var(--#{$prefix}color-border-subtle);
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-left-width: 1px;
+    border-left-style: solid;
   }
 }
 
@@ -249,7 +261,7 @@
   left: 0;
   z-index: #{$zindex-modal};
   display: none;
-  width: calc(100% - 48px); // occupa sempre tutta lo spazio orizzontale disponibile (BSI v2.15:) meno 48px a destra per il close e backdrop;
+  width: calc(100% - 48px); // fluid width minus 48px for close and backdrop;
   @include media-breakpoint-up(lg) {
     position: relative;
     top: auto;
@@ -355,6 +367,10 @@
 
         &.active {
           --navbar-link-border-color: var(--#{$prefix}navbar-link-active-border-color);
+        }
+
+        &.dropdown-toggle.show[data-focus-mouse='true'] {
+          border-bottom-color: transparent !important;
         }
       }
 
