@@ -463,7 +463,9 @@ a.avatar {
   padding: 0;
   flex-direction: row;
   li {
-    list-style-type: none;
+    &::marker {
+      font-size: 0; // hide default marker safely without affecting Safari accessibility
+    }
     line-height: 0;
     & > .avatar {
       margin-left: -6px;
