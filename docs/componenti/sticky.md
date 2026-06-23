@@ -115,7 +115,7 @@ In tal caso è necessario utilizzare l'attributo `data-bs-target`.
                   </svg>
                 </a>
                 <div class="link-list-wrapper collapse" id="menuC1">
-                  <ul class="link-list">
+                  <ul class="link-list" role="list">
                     <li><a class="dropdown-item list-item" href="#">Link 1</a></li>
                     <li><a class="list-item active" href="#" aria-current="page">Link 2 (Attivo)</a></li>
                   </ul>

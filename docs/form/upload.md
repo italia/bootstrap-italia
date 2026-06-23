@@ -38,7 +38,7 @@ Come è evidente dall'esempio sottostante è sempre necessario includere informa
     <svg class="icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-upload"></use></svg>
     <span>Carica file</span>
   </label>
-  <ul class="upload-file-list">
+  <ul class="upload-file-list" role="list">
     <li class="upload-file success">
       <svg class="icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
       <p>
@@ -106,7 +106,7 @@ Il componente ottimizza la visualizzazione delle immagini anche quando queste no
     <svg class="icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-upload"></use></svg>
     <span>Carica file</span>
   </label>
-  <ul class="upload-file-list upload-file-list-image">
+  <ul class="upload-file-list upload-file-list-image" role="list">
     <li class="upload-file success">
       <div class="upload-image">
         <img src="https://picsum.photos/40/40?image=1055" alt="descrizione immagine">
@@ -235,7 +235,7 @@ Anche in questo caso, nonostante il componente ottimizzi la visualizzazione dell
 {% comment %}Example name: Galleria {% endcomment %}
 {% capture example %}
 <form method="post" action="" enctype="multipart/form-data">
-  <ul class="upload-pictures-wall">
+  <ul class="upload-pictures-wall" role="list">
     <li>
       <input type="file" name="upload5" id="upload5" class="upload pictures-wall" multiple="multiple" />
       <label for="upload5">
@@ -250,7 +250,7 @@ Anche in questo caso, nonostante il componente ottimizzi la visualizzazione dell
 <p class="mt-5"><strong>Esempio Immagini Caricate</strong></p>
 
 <form method="post" action="" enctype="multipart/form-data">
-  <ul class="upload-pictures-wall">
+  <ul class="upload-pictures-wall" role="list">
     <li>
       <div class="upload-image">
         <img src="https://picsum.photos/128/128?image=1020" alt="descrizione immagine">
