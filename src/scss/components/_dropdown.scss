@@ -26,7 +26,7 @@
   --#{$prefix}dropdown-border-color: transparent; // Controls the default border color.
   --#{$prefix}dropdown-border-radius: var(--#{$prefix}radius-smooth); // Controls the border radius, using radius tokens.
   --#{$prefix}dropdown-border-width: 0; // Controls the border width.
-  --#{$prefix}dropdown-box-shadow: var(--#{$prefix}elevation-medium); // Controls the box shadow, using elevation tokens.
+  --#{$prefix}dropdown-box-shadow: var(--#{$prefix}elevation-low); // Controls the box shadow, using elevation tokens.
   --#{$prefix}dropdown-color: var(--#{$prefix}color-text-base); // Controls the default text color, using color tokens.
   --#{$prefix}dropdown-divider-bg: var(--#{$prefix}color-border-subtle); // Controls the divider background color, using color tokens.
   --#{$prefix}dropdown-divider-margin-y: var(--#{$prefix}spacing-xxs); // Controls the divider margin top and bottom, using spacing tokens.
@@ -80,7 +80,7 @@
   margin: 0; // Override default margin of ul
   padding: var(--#{$prefix}dropdown-padding-y) var(--#{$prefix}dropdown-padding-x);
   border: var(--#{$prefix}dropdown-border-width) solid var(--#{$prefix}dropdown-border-color);
-  border-radius: 0 0 var(--#{$prefix}dropdown-border-radius) var(--#{$prefix}dropdown-border-radius);
+  border-radius: var(--#{$prefix}dropdown-border-radius);
   background-color: var(--#{$prefix}dropdown-background);
   color: var(--#{$prefix}dropdown-color);
   list-style: none;
