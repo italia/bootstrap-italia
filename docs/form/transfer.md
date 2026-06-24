@@ -22,9 +22,9 @@ Il componente Transfer consente di trasferire gli elementi di una lista di check
 
 **Pulsanti per il trasferimento dei contenuti:**
 
-- `a.transfer`: Traferisce i campi selezionati a sinistra nella colonna destra
-- `a.backtransfer`: Traferisce i campi selezionati a destra nella colonna sinistra
-- `a.reset`: Ripristina lo stato iniziale delle liste
+- `button.transfer`: Traferisce i campi selezionati a sinistra nella colonna destra
+- `button.backtransfer`: Traferisce i campi selezionati a destra nella colonna sinistra
+- `button.reset`: Ripristina lo stato iniziale delle liste
 
 Nell'esempio che segue la struttura è colonnare simmetrica nella versione desktop (5 / 2 / 5), l'utente potrà scegliere i tipi di colonna da utilizzare, usando le regole di bootstrap.
 
@@ -105,17 +105,17 @@ Nell'esempio che segue la struttura è colonnare simmetrica nella versione deskt
     <div class="col-xs-12 col-md-2">
       <!-- transfer buttons-->
       <div class="it-transfer-buttons">
-        <a class="transfer" href="#" role="button" aria-label="Sposta avanti">
+        <button type="button" class="transfer" aria-label="Sposta avanti">
           <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-right"></use></svg>
-        </a>
+        </button>
         <span class="visually-hidden">Etichetta per freccia destra</span>
-        <a class="backtransfer" href="#" role="button" aria-label="Sposta indietro">
+        <button type="button" class="backtransfer" aria-label="Sposta indietro">
           <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-left"></use></svg>
-        </a>
+        </button>
         <span class="visually-hidden">Etichetta for freccia sinistra</span>
-        <a class="reset" href="#" role="button" aria-label="Reset">
+        <button type="button" class="reset" aria-label="Reset">
           <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-restore"></use></svg>
-        </a>
+        </button>
         <span class="visually-hidden">Etichetta per icona di reset</span>
       </div>
     </div>
