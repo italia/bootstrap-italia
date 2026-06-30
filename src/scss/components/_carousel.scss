@@ -31,6 +31,7 @@
   --#{$prefix}carousel-pagination-dot-size: 1rem; // Controls the dot size for carousel pagination, using spacing tokens
   --#{$prefix}carousel-pagination-dot-color: var(--#{$prefix}color-background-subtle); // Controls the dot color for carousel pagination.
   --#{$prefix}carousel-pagination-spacing: var(--#{$prefix}spacing-m); // Controls the spacing around pagination dots, using spacing tokens
+  --#{$prefix}carousel-pagination-height: var(--#{$prefix}carousel-pagination-dot-size); // Controls the pagination height, used for arrow vertical alignment
   --#{$prefix}carousel-track-padding-top: var(--#{$prefix}spacing-m); // Controls the track top padding, using spacing tokens.
 }
 
@@ -143,7 +144,7 @@
   &.it-carousel-landscape-abstract-three-cols-arrow-visible {
     .splide__arrows {
       position: absolute;
-      top: 50%;
+      top: calc(50% - var(--#{$prefix}carousel-pagination-height));
       right: calc(-1 * var(--#{$prefix}carousel-arrow-offset));
       left: calc(-1 * var(--#{$prefix}carousel-arrow-offset));
       z-index: 1;
