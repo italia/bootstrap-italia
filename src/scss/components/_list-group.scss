@@ -19,13 +19,6 @@
 // Properties
 //
 
-// Styles
-//
-
-// Base class
-//
-// Easily usable on <ul>, <ol>, or <div>.
-
 .list-group {
   --#{$prefix}list-group-action-active-bg: #{$list-group-action-active-bg};
   --#{$prefix}list-group-action-active-color: #{$list-group-action-active-color};
@@ -44,7 +37,16 @@
   --#{$prefix}list-group-disabled-color: #{$list-group-disabled-color};
   --#{$prefix}list-group-item-padding-x: #{$list-group-item-padding-x};
   --#{$prefix}list-group-item-padding-y: #{$list-group-item-padding-y};
+}
 
+// Styles
+//
+
+// Base class
+//
+// Easily usable on <ul>, <ol>, or <div>.
+/* stylelint-disable-next-line no-duplicate-selectors */
+.list-group {
   display: flex;
   flex-direction: column;
 

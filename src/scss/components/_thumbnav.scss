@@ -12,9 +12,6 @@
 // Properties
 //
 
-// Styles
-//
-
 .thumb-nav {
   --#{$prefix}thumb-nav-gap: var(--#{$prefix}spacing-xxs); // Controls the spacing between thumb items, using spacing tokens.
   --#{$prefix}thumb-nav-auto-basis-offset: var(--#{$prefix}spacing-s); // Controls the offset subtracted from auto layout item widths, using spacing tokens.
@@ -28,7 +25,12 @@
   --#{$prefix}thumb-nav-transition-duration: 0.4s; // Controls the base transition duration for overlay and image transform.
   --#{$prefix}thumb-nav-transition-duration-hover: 1s; // Controls the transition duration applied during hover state.
   --#{$prefix}thumb-nav-transition-easing: cubic-bezier(0.15, 0.7, 0.36, 0.99); // Controls the easing curve used by thumb-nav transitions.
+}
 
+// Styles
+//
+/* stylelint-disable-next-line no-duplicate-selectors */
+.thumb-nav {
   display: flex;
   justify-content: center;
   margin: 0 calc(var(--#{$prefix}thumb-nav-gap) * -1);

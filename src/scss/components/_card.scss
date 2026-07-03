@@ -253,10 +253,6 @@
     padding-right: 0; // reset padding when using image variant
   }
 
-  // &.it-card-image.it-card-inline-reverse {
-  //   padding-right: 0; // reset padding when using image variant
-  // }
-
   // Card with height 100%
   &.it-card-height-full {
     height: 100%;
@@ -502,11 +498,7 @@
     }
 
     .it-card-banner-icon-wrapper {
-      // display: flex;
-      // flex-direction: column;
       order: -1;
-      // margin-bottom: var(--#{$prefix}spacing-s);
-      // width: 100%;
     }
 
     .it-card-footer {
@@ -708,7 +700,6 @@ ul.it-card-list {
   > .it-card {
     // Default stacked on mobile
     flex: 0 0 calc(100% - var(--#{$prefix}card-group-gap));
-    // margin: calc(0.5 * var(--#{$prefix}card-group-gap));
 
     // Responsive breakpoints
     @include media-breakpoint-up(sm) {
