@@ -13,6 +13,11 @@
 // Properties
 //
 
+.vjs-theme-bootstrap-italia {
+  --#{$prefix}videoplayer-button-background: var(--#{$prefix}color-background-primary);
+  --#{$prefix}videoplayer-control-background: var(--#{$prefix}color-background-primary);
+}
+
 // Styles
 //
 
