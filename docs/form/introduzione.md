@@ -148,7 +148,7 @@ Ecco l'esempio di una struttura più complessa creata con il sistema a griglie.
     </div>
   </div>
   <div class="row mt-4">
-    <div class="form-group col text-center">
+    <div class="form-group col">
       <button type="button" class="btn btn-outline-primary">Annulla</button>
       <button type="submit" class="btn btn-primary">Conferma</button>
     </div>
