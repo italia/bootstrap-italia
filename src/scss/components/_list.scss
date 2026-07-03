@@ -20,7 +20,7 @@
   --#{$prefix}list-inline-padding: var(--#{$prefix}spacing-xxs);
   --#{$prefix}list-metadata-color: var(--#{$prefix}color-text-muted);
   --#{$prefix}list-metadata-letter-spacing: 0.5px;
-  --#{$prefix}list-metadata-font-size: var(--#{$prefix}font-size-sm);
+  --#{$prefix}list-metadata-font-size: var(--#{$prefix}label-font-size-xs);
 }
 
 // Styles
@@ -124,16 +124,16 @@
         }
 
         .text {
-          font-size: $list-font-size;
+          font-size: var(--#{$prefix}label-font-size);
           font-weight: var(--#{$prefix}font-weight-solid);
           @include media-breakpoint-up(lg) {
-            font-size: 1.125rem;
+            font-size: var(--#{$prefix}label-font-size-l);
           }
         }
 
         .text + p {
-          color: $list-sub-color;
-          font-size: $list-sub-size;
+          color: var(--#{$prefix}color-text-muted);
+          font-size: var(--#{$prefix}label-font-size-s);
           font-weight: var(--#{$prefix}font-weight-base);
         }
       }
