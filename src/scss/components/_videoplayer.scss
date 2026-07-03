@@ -26,8 +26,6 @@
 /* stylelint-enable */
 
 .vjs-theme-bootstrap-italia {
-  --#{$prefix}videoplayer-button-background: var(--#{$prefix}color-background-primary);
-  --#{$prefix}videoplayer-control-background: var(--#{$prefix}color-background-primary);
 
   .vjs-big-play-button,
   &:hover .vjs-big-play-button,
