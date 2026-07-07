@@ -46,8 +46,8 @@ https://github.com/algolia/docsearch{% endcomment %}
     transformItems: (items) =>
       items.map((item) => ({
         objectID: item.objectID,
-        content: item.content ?? '',
-        url: item.domain + item.path,
+        content: item._highlightResult.title.value ?? '',
+        url: item.objectID,
         hierarchy: {
           lvl0: (item.breadcrumb || []).join(' > ') ?? '',
           lvl1: item.h1 ?? '',
@@ -57,7 +57,7 @@ https://github.com/algolia/docsearch{% endcomment %}
           lvl5: null,
           lvl6: null,
         },
-        url_without_anchor: item.domain + item.path,
+        url_without_anchor: item.objectID,
         type: 'content',
         anchor: null,
         _highlightResult: item._highlightResult,
