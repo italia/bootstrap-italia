@@ -43,6 +43,27 @@ https://github.com/algolia/docsearch{% endcomment %}
     container: "#search-input",
     placeholder: "Cerca nella documentazione",
     debug: false,
+    transformItems: (items) =>
+      items.map((item) => ({
+        objectID: item.objectID,
+        content: item.content ?? '',
+        url: item.domain + item.path,
+        hierarchy: {
+          lvl0: (item.breadcrumb || []).join(' > ') ?? '',
+          lvl1: item.h1 ?? '',
+          lvl2: item.h2 ?? '',
+          lvl3: null,
+          lvl4: null,
+          lvl5: null,
+          lvl6: null,
+        },
+        url_without_anchor: item.domain + item.path,
+        type: 'content',
+        anchor: null,
+        _highlightResult: item._highlightResult,
+        _snippetResult: item._snippetResult,
+      }))
+    ,
     translations: {
       button: {
         buttonText: 'Cerca componenti, classi, informazioni...',
