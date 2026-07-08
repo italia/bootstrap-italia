@@ -49,7 +49,7 @@ https://github.com/algolia/docsearch{% endcomment %}
         content: item._highlightResult.title.value ?? '',
         url: item.objectID,
         hierarchy: {
-          lvl0: (item.breadcrumb || []).join(' > ') ?? '',
+          lvl0: item._highlightResult.title.value ?? '',
           lvl1: item._highlightResult.title.value ?? '',
           lvl2: item._highlightResult.title.value ?? '',
           lvl3: null,
