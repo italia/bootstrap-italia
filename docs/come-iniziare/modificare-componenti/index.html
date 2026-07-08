@@ -11,13 +11,13 @@
 
 <title>Modificare componenti · Bootstrap Italia</title>
 <!-- Bootstrap core CSS -->
-<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202607071316" rel="stylesheet" />
+<link href="/bootstrap-italia/dist/css/bootstrap-italia.min.css?202607081216" rel="stylesheet" />
 
 <!-- Documentation extras -->
  
 <link href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" rel="stylesheet" />
 
-<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202607071316" rel="stylesheet" />
+<link href="/bootstrap-italia/docs/assets/dist/css/docs.min.css?202607081216" rel="stylesheet" />
 
 <!-- Favicons -->
 <link rel="icon" href="/bootstrap-italia/favicon.ico" />
@@ -700,15 +700,15 @@
     </div>
 
     
-<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202607071316"></script>
+<script src="/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js?202607081216"></script>
 <script>
   bootstrap.loadFonts('/bootstrap-italia/dist/fonts')
-</script><script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202607071316"></script>
+</script><script src="/bootstrap-italia/docs/assets/dist/js/docs.min.js?202607081216"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/anchor.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/clipboard.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tsparticles.min.js"></script>
 
-<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202607071316"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/docs.js?202607081216"></script>
 
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/tweenjs.min.js"></script>
 <script src="/bootstrap-italia/docs/assets/src/js/vendor/easeljs.min.js"></script>
@@ -729,7 +729,7 @@
     { src: '/bootstrap-italia/docs/assets/img/cover/cover-animation-7.png', id: 'cover-7' },
   ]
 </script>
-<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202607071316"></script>
+<script src="/bootstrap-italia/docs/assets/src/js/cover-animation.js?202607081216"></script>
 <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@4"></script>
 
 <script>
@@ -740,6 +740,27 @@
     container: "#search-input",
     placeholder: "Cerca nella documentazione",
     debug: false,
+    transformItems: (items) =>
+      items.map((item) => ({
+        objectID: item.objectID,
+        content: item._highlightResult.title.value.replace(/<\/?[^>]+(>|$)/g, "") ?? '',
+        url: item.objectID,
+        hierarchy: {
+          lvl0: item._highlightResult.title.value.replace(/<\/?[^>]+(>|$)/g, "") ?? '',
+          lvl1: item._highlightResult.title.value.replace(/<\/?[^>]+(>|$)/g, "") ?? '',
+          lvl2: item._highlightResult.title.value.replace(/<\/?[^>]+(>|$)/g, "") ?? '',
+          lvl3: null,
+          lvl4: null,
+          lvl5: null,
+          lvl6: null,
+        },
+        url_without_anchor: item.objectID,
+        type: 'content',
+        anchor: null,
+        _highlightResult: item._highlightResult,
+        _snippetResult: item._snippetResult,
+      }))
+    ,
     translations: {
       button: {
         buttonText: 'Cerca componenti, classi, informazioni...',
