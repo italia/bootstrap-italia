@@ -46,12 +46,12 @@ https://github.com/algolia/docsearch{% endcomment %}
     transformItems: (items) =>
       items.map((item) => ({
         objectID: item.objectID,
-        content: item._highlightResult.title.value ?? '',
+        content: item._highlightResult.title.value.replace(/<\/?[^>]+(>|$)/g, "") ?? '',
         url: item.objectID,
         hierarchy: {
-          lvl0: item._highlightResult.title.value ?? '',
-          lvl1: item._highlightResult.title.value ?? '',
-          lvl2: item._highlightResult.title.value ?? '',
+          lvl0: item._highlightResult.title.value.replace(/<\/?[^>]+(>|$)/g, "") ?? '',
+          lvl1: item._highlightResult.title.value.replace(/<\/?[^>]+(>|$)/g, "") ?? '',
+          lvl2: item._highlightResult.title.value.replace(/<\/?[^>]+(>|$)/g, "") ?? '',
           lvl3: null,
           lvl4: null,
           lvl5: null,
