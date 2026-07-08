@@ -91,11 +91,12 @@
 }
 
 .DocSearch-Clear {
- visibility: hidden;
+  visibility: hidden;
+  display: flex;
 }
 
 .DocSearch-Clear:after {
-  animation: fade-in .1s ease-in forwards;
+  animation: fade-in 0.1s ease-in forwards;
   appearance: none;
   background: none;
   border: 0;
@@ -103,7 +104,7 @@
   cursor: pointer;
   content: 'X';
   padding: 2px;
-  right: 0;
+  right: 1rem;
   visibility: visible;
   display: block;
   position: absolute;
