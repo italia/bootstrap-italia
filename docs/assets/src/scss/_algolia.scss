@@ -94,7 +94,7 @@
  visibility: hidden;
 }
 
-.DocSearch-Clear::after {
+.DocSearch-Clear:after {
   animation: fade-in .1s ease-in forwards;
   appearance: none;
   background: none;
@@ -104,6 +104,9 @@
   content: 'X';
   padding: 2px;
   right: 0;
+  visibility: visible;
+  display: block;
+  position: absolute;
 }
 
 .DocSearch-Actions {
