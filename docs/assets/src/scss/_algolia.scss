@@ -89,3 +89,27 @@
 .DocSearch-Hit-source {
   content: 'Documentazione';
 }
+
+.DocSearch-Clear {
+ visibility: hidden;
+}
+
+.DocSearch-Clear::after {
+  animation: fade-in .1s ease-in forwards;
+  appearance: none;
+  background: none;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  content: 'X';
+  padding: 2px;
+  right: 0;
+}
+
+.DocSearch-Actions {
+  display: flex;
+}
+
+.DocSearch-Close {
+  display: none;
+}
