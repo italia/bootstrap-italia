@@ -62,6 +62,10 @@
 }
 
 .modal-dialog-scrollable {
+  // `--#{$prefix}modal-margin` is `auto` at the base breakpoint (see `.modal` above), and
+  // `calc()` with `auto` as an operand is invalid at computed-value time; give this variant its
+  // own real-length value to compute against instead of changing the shared token's default.
+  --#{$prefix}modal-margin: 0;
   height: calc(100% - var(--#{$prefix}modal-margin) * 2);
 
   .modal-content {
@@ -75,6 +79,8 @@
 }
 
 .modal-dialog-centered {
+  // Same `auto`-in-`calc()` issue as `.modal-dialog-scrollable` above.
+  --#{$prefix}modal-margin: 0;
   display: flex;
   align-items: center;
   min-height: calc(100% - var(--#{$prefix}modal-margin) * 2);
@@ -158,6 +164,13 @@
   .modal {
     --#{$prefix}modal-margin: #{$modal-dialog-margin-y-sm-up};
     --#{$prefix}modal-box-shadow: #{$modal-content-box-shadow-sm-up};
+  }
+
+  // Keep `.modal-dialog-scrollable`/`.modal-dialog-centered` in sync with `.modal`'s margin
+  // now that they carry their own copy of the custom property (see base rules above).
+  .modal-dialog-scrollable,
+  .modal-dialog-centered {
+    --#{$prefix}modal-margin: #{$modal-dialog-margin-y-sm-up};
   }
 
   // Automatically set modal's width for larger viewports
@@ -291,12 +304,24 @@
   }
 
   // Modal scrollable variation
+  //
+  // The available height is derived from `.modal-dialog`'s own margin (via its own copy of
+  // `--#{$prefix}modal-margin`, kept separate from `.modal`'s so regular, non-scrollable modals
+  // are unaffected) instead of hardcoded pixel offsets. `.modal` is `position: fixed; height: 100%`,
+  // so `100%` here already resolves against the viewport and, unlike `100vh`, isn't inflated by
+  // mobile browser UI chrome.
   &.it-dialog-scrollable {
     .modal-dialog {
+      --#{$prefix}modal-margin: #{$modal-dialog-margin}; // 0.5rem at the base breakpoint
+      height: calc(100% - var(--#{$prefix}modal-margin) * 2);
+      margin: var(--#{$prefix}modal-margin) auto;
+
       .modal-content {
         display: flex;
         flex-direction: column;
-        height: calc(100vh - 208px);
+        height: 100%;
+        max-height: 100%;
+        overflow: hidden;
         @include border-radius(0);
 
         .modal-header {
@@ -316,19 +341,19 @@
       }
 
       &.modal-dialog-left {
-        height: 100vh;
+        height: 100%;
         margin: 0 var(--#{$prefix}spacing-m) 0 0;
         .modal-content {
-          height: 100vh;
+          height: 100%;
         }
       }
 
       &.modal-dialog-right {
-        height: 100vh;
+        height: 100%;
         margin: 0 0 0 var(--#{$prefix}spacing-m);
         float: right;
         .modal-content {
-          height: 100vh;
+          height: 100%;
         }
       }
     }
@@ -375,23 +400,24 @@
       &.modal-dialog-left {
         margin: 0;
         .modal-content {
-          height: 100vh;
+          height: 100%;
         }
       }
       &.modal-dialog-right {
         margin: 0;
         float: right;
         .modal-content {
-          height: 100vh;
+          height: 100%;
         }
       }
     }
+    // Only the margin custom property is overridden here: height/margin on `.modal-dialog` and
+    // height/max-height on `.modal-content` are already derived from it by the base rules above.
+    // Capped with `10vh` so a wide-but-short viewport (e.g. landscape phones) doesn't lose a
+    // fixed 128px (2 * 64px) of height to top/bottom margins.
     &.it-dialog-scrollable {
       .modal-dialog {
-        margin: $v-gap * 8 auto;
-        .modal-content {
-          height: calc(100vh - #{$v-gap * 16});
-        }
+        --#{$prefix}modal-margin: #{min($v-gap * 8, 10vh)};
       }
     }
   }
