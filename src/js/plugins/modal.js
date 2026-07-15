@@ -61,6 +61,29 @@ const DefaultType = {
   keyboard: 'boolean',
 }
 
+// Elements outside the modal must be isolated from assistive technology (e.g. VoiceOver's
+// virtual cursor) while the modal is open, since the focus trap alone doesn't stop that kind
+// of navigation. `inert` is reference-counted because two modal instances can end up inerting
+// the same background elements at once (see the data-api handler swapping an open modal for
+// another one), so the first one to close must not remove `inert` while the second still needs it.
+const inertCounts = new Map()
+const setInert = (el) => {
+  const count = inertCounts.get(el) || 0
+  if (count === 0) {
+    el.setAttribute('inert', '')
+  }
+  inertCounts.set(el, count + 1)
+}
+const unsetInert = (el) => {
+  const count = inertCounts.get(el) || 0
+  if (count <= 1) {
+    inertCounts.delete(el)
+    el.removeAttribute('inert')
+  } else {
+    inertCounts.set(el, count - 1)
+  }
+}
+
 /**
  * Class definition
  */
@@ -75,6 +98,7 @@ class Modal extends BaseComponent {
     this._isShown = false
     this._isTransitioning = false
     this._scrollBar = new ScrollBarHelper()
+    this._inertedElements = []
 
     this._addEventListeners()
   }
@@ -149,6 +173,7 @@ class Modal extends BaseComponent {
 
     this._backdrop.dispose()
     this._focustrap.deactivate()
+    this._removeInert()
     super.dispose()
   }
 
@@ -175,6 +200,9 @@ class Modal extends BaseComponent {
     if (!document.body.contains(this._element)) {
       document.body.append(this._element)
     }
+
+    // the modal may have just been (re)parented above, so (re)compute the ancestor chain now
+    this._applyInert()
 
     this._element.style.display = 'block'
     this._element.removeAttribute('aria-hidden')
@@ -256,6 +284,9 @@ class Modal extends BaseComponent {
       document.body.classList.remove(CLASS_NAME_OPEN)
       this._resetAdjustments()
       this._scrollBar.reset()
+      // background must not be inert anymore before EVENT_HIDDEN fires, since focus is
+      // restored to the trigger element (which may be one of the previously inerted elements)
+      this._removeInert()
       EventHandler.trigger(this._element, EVENT_HIDDEN)
     })
   }
@@ -315,6 +346,43 @@ class Modal extends BaseComponent {
   _resetAdjustments() {
     this._element.style.paddingLeft = ''
     this._element.style.paddingRight = ''
+  }
+
+  _applyInert() {
+    this._inertedElements = []
+
+    let current = this._element
+    while (current && current !== document.body && current.parentElement) {
+      const parent = current.parentElement
+      for (const sibling of parent.children) {
+        if (sibling === current || !(sibling instanceof HTMLElement)) {
+          continue
+        }
+
+        if (['SCRIPT', 'STYLE', 'TEMPLATE', 'LINK'].includes(sibling.tagName)) {
+          continue
+        }
+
+        // other modals/backdrops are already display:none + aria-hidden; inert-ing them here
+        // would create a race when one modal replaces another (see data-api handler below)
+        if (sibling.matches('.modal, .modal-backdrop')) {
+          continue
+        }
+
+        setInert(sibling)
+        this._inertedElements.push(sibling)
+      }
+
+      current = parent
+    }
+  }
+
+  _removeInert() {
+    for (const element of this._inertedElements) {
+      unsetInert(element)
+    }
+
+    this._inertedElements = []
   }
 }
 
