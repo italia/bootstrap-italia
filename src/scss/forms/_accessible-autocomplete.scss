@@ -1,4 +1,4 @@
-// Accessible Autocomplete 
+// Accessible Autocomplete
 // Original repository: https://github.com/alphagov/accessible-autocomplete
 // We use a modified version of the component with some custom styles.
 
@@ -124,7 +124,7 @@
 }
 
 .autocomplete__option--no-results {
-  background-color: var(--#{$prefix}color-background-primary-lighter);  
+  background-color: var(--#{$prefix}color-background-primary-lighter);
   color: var(--#{$prefix}color-text-secondary);
   cursor: not-allowed;
 }

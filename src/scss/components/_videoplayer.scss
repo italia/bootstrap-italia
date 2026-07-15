@@ -24,10 +24,8 @@
 // Styles
 //
 
-
-
+/* stylelint-disable-next-line no-duplicate-selectors */
 .vjs-theme-bootstrap-italia {
-
   .vjs-big-play-button,
   &:hover .vjs-big-play-button,
   &.vjs-big-play-button:focus {
