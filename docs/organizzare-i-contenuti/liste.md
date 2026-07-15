@@ -889,24 +889,20 @@ Una lista di link può contenere anche elementi appartenenti ai form, di seguito
  <div class="link-list-wrapper">
   <ul class="link-list">
     <li>
-      <div class="form-check">
+      <div class="form-check form-check-inline">
         <div class="toggles">
-          <label for="toggleEsempio3a">
-            Label toggle 1
-            <input type="checkbox" id="toggleEsempio3a">
-            <span class="lever"></span>
+          <label for="toggle1">Label per toggle
+            <input type="checkbox" id="toggle1"><span class="lever"></span>
           </label>
         </div>
       </div>
     </li>
     <li>
-      <div class="form-check">
+      <div class="form-check form-check-inline">
         <div class="toggles">
-          <label for="toggleEsempio3b">
-            Label toggle 2
-            <input type="checkbox" id="toggleEsempio3b">
-            <span class="lever"></span>
-          </label>
+        <label for="toggle2">Label per toggle disabilitato
+          <input type="checkbox" id="toggle2" disabled aria-disabled="true"><span class="lever"></span>
+        </label>
         </div>
       </div>
     </li>
