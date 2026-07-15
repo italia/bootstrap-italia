@@ -1,3 +1,23 @@
+# [3.0.0-beta.2](https://github.com/italia/bootstrap-italia/compare/v3.0.0-beta.1...v3.0.0-beta.2) (2026-07-15)
+
+
+### Bug Fixes
+
+* add carousel pagination height variable for improved alignment ([4352fd9](https://github.com/italia/bootstrap-italia/commit/4352fd9adf4cf158d66a192a358c02fde870c7c5))
+* add list multiline border without using li element ([9374e19](https://github.com/italia/bootstrap-italia/commit/9374e196274f7fc2d861fcb0334943da20e177c0))
+* add megamenu border ([e607417](https://github.com/italia/bootstrap-italia/commit/e607417faf5db0674d22bc0eb2c593850dd9f22b))
+* bottomnav padding and font style ([69f2a6e](https://github.com/italia/bootstrap-italia/commit/69f2a6e1aa44c94b3d042313748e44d08ec24b8e))
+* correct regex pattern for variable extraction ([619672a](https://github.com/italia/bootstrap-italia/commit/619672a0e56e077aec04adf168b9006d952c17fc))
+* exposed properties on lists and video ([b76d113](https://github.com/italia/bootstrap-italia/commit/b76d1134454456a7dba3845f2a8b5294ad47d39c))
+* form examples ([cc33688](https://github.com/italia/bootstrap-italia/commit/cc336889c40bc9b6152b5e6f388c5354df846a0b))
+* navbar padding ([467939b](https://github.com/italia/bootstrap-italia/commit/467939bfbc68260150b77b7de30a969e56ab63dd))
+* remove autocomplete defaults ([d2d47e2](https://github.com/italia/bootstrap-italia/commit/d2d47e2353bbfe8a764c8807c1f5895fe4f6d15b))
+* update shadow class for medium shadow example in ombreggiature.md ([c4562b2](https://github.com/italia/bootstrap-italia/commit/c4562b2cef853a56ddfa2a5b271f43f8426aea90))
+
+
+### Features
+
+* expose CSS custom properties for bottomnav, list-group, notifications, offcanvas, popover, thumbnav ([03ca6c2](https://github.com/italia/bootstrap-italia/commit/03ca6c24095d24bc162c7e5ee658e86eace422c0))
 # [3.0.0-beta.1](https://github.com/italia/bootstrap-italia/compare/v3.0.0-beta.0...v3.0.0-beta.1) (2026-06-03)
 
 
