@@ -232,6 +232,10 @@
 
 // Multiline list item
 .multiline {
+  .link-list li:not(:last-child) {
+    border-bottom: 1px solid var(--#{$prefix}color-border-subtle);
+  }
+
   .list-item-title-icon-wrapper {
     margin-bottom: var(--#{$prefix}spacing-3xs);
   }
@@ -242,6 +246,7 @@
 
   // List item label inside a multiline list item
   .list-item-title {
+    margin-bottom: var(--#{$prefix}spacing-xxs);
     font-size: var(--#{$prefix}label-font-size);
     @include media-breakpoint-up(lg) {
       font-size: var(--#{$prefix}label-font-size-l);
@@ -249,6 +254,7 @@
   }
 
   .list-item {
+    --#{$prefix}linklist-item-spacing: var(--#{$prefix}spacing-s);
     display: block; // Override inline-flex display
   }
 
