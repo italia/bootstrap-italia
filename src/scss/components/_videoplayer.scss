@@ -1,6 +1,9 @@
 @use '../base/config' as *;
 @use '../base/variables' as *;
 @use '../base/mixins/breakpoints' as *;
+/* stylelint-disable */
+@use 'video.js/src/css/video-js';
+/* stylelint-enable */
 
 // Component: videoplayer
 //
@@ -13,16 +16,17 @@
 // Properties
 //
 
-// Styles
-//
-
-/* stylelint-disable */
-@use 'video.js/src/css/video-js';
-/* stylelint-enable */
-
 .vjs-theme-bootstrap-italia {
   --#{$prefix}videoplayer-button-background: var(--#{$prefix}color-background-primary);
   --#{$prefix}videoplayer-control-background: var(--#{$prefix}color-background-primary);
+}
+
+// Styles
+//
+
+
+
+.vjs-theme-bootstrap-italia {
 
   .vjs-big-play-button,
   &:hover .vjs-big-play-button,

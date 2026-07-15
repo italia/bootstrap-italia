@@ -400,7 +400,6 @@ a.btn-outline {
     fill: var(--#{$prefix}icon-secondary); // default color for the close icon, using color tokens
     // Override <a>'s hover style
     &:hover {
-      // color: var(--#{$prefix}icon-default); // default color for the close icon, using color tokens
       fill: var(--#{$prefix}icon-default); // default color for the close icon, using color tokens
       text-decoration: none;
     }

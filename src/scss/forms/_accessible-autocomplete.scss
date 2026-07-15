@@ -18,19 +18,12 @@
 }
 
 .autocomplete__hint {
-  // color: #505a5f;
   position: absolute;
 }
 
 .autocomplete__input--default {
   padding: 5px;
 }
-
-// .autocomplete__input--focused {
-//   outline: 3px solid #fd0;
-//   outline-offset: 0;
-//   box-shadow: inset 0 0 0 2px;
-// }
 
 .autocomplete__input--show-all-values {
   padding: 5px 35px 5px 5px; /* Space for arrow. Other padding should match .autocomplete__input--default. */
@@ -57,7 +50,6 @@
   overflow-x: hidden;
   padding: 0;
   width: 100%;
-  // width: calc(100% - 4px);
 }
 
 .autocomplete__menu--visible {

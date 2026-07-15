@@ -257,13 +257,6 @@
   }
 }
 
-@include media-breakpoint-up(md) {
-  .link-list-wrapper ul li a.large.icon-left,
-  .link-list-wrapper ul li a.large.icon-right {
-    --#{$prefix}linklist-item-spacing: var(--#{$prefix}spacing-s);
-  }
-}
-
 //
 // Dark theme styles
 

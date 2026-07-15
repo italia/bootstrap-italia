@@ -1,2 +1,2 @@
-python-liquid==2.2.0
+python-liquid==2.2.1
 PyYAML==6.0
