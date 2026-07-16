@@ -32,6 +32,7 @@
   --#{$prefix}navbar-disabled-item-opacity: 0.75; // Controls the navbar disabled item opacity.
   --#{$prefix}navbar-hamburger-size: 1.5rem; // Controls the navbar hamburger size.
   --#{$prefix}navbar-link-border-size: var(--#{$prefix}border-thick); // Controls the navbar link border size, using border tokens.
+  --#{$prefix}navbar-link-active-border-color: var(--#{$prefix}color-border-primary);
   --#{$prefix}navbar-link-color: var(--#{$prefix}color-link); // nav link color default - mobile, using color tokens.
   --#{$prefix}navbar-link-font-size: var(--#{$prefix}label-font-size-l); // Controls the navbar link font size, using typography tokens.
   --#{$prefix}navbar-link-font-weight: var(--#{$prefix}font-weight-solid); // Controls the navbar link font weight, using typography tokens.
@@ -186,6 +187,12 @@
         svg {
           fill: currentColor;
         }
+      }
+    }
+
+    @include media-breakpoint-down(lg) {
+      .dropdown-item {
+        --#{$prefix}dropdown-item-padding-x: var(--#{$prefix}spacing-m);
       }
     }
   }
@@ -389,9 +396,6 @@
       width: 100%; // make sure it is full width
     }
 
-    .dropdown-item {
-      --#{$prefix}dropdown-item-padding-x: var(--#{$prefix}spacing-m);
-    }
   }
 
   &.expanded {
