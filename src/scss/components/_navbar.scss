@@ -157,8 +157,10 @@
   // Dropdown menu inside navbar
   // This is a special case for the dropdown menu inside the navbar
   .dropdown-menu {
-    --#{$prefix}dropdown-border-width: 1px;
-    --#{$prefix}dropdown-border-color: var(--#{$prefix}color-border-subtle);
+    @include media-breakpoint-up(lg) {
+      --#{$prefix}dropdown-border-width: 1px;
+      --#{$prefix}dropdown-border-color: var(--#{$prefix}color-border-subtle);
+    }
     a.it-heading-link,
     a.it-footer-link {
       svg {
@@ -191,12 +193,16 @@
   // Custom notch for dropdown menu inside navbar
   .megamenu .dropdown-toggle:before,
   .dropdown-menu:before {
-    --#{$prefix}dropdown-notch-position-y: -10px;
-    border-color: var(--#{$prefix}color-border-subtle);
-    border-top-width: 1px;
-    border-top-style: solid;
-    border-left-width: 1px;
-    border-left-style: solid;
+    display: none;
+    @include media-breakpoint-up(lg) {
+      display: block;
+      --#{$prefix}dropdown-notch-position-y: -10px;
+      border-color: var(--#{$prefix}color-border-subtle);
+      border-top-width: 1px;
+      border-top-style: solid;
+      border-left-width: 1px;
+      border-left-style: solid;
+    }
   }
 }
 
@@ -381,6 +387,10 @@
 
     .dropdown-menu {
       width: 100%; // make sure it is full width
+    }
+
+    .dropdown-item {
+      --#{$prefix}dropdown-item-padding-x: var(--#{$prefix}spacing-m);
     }
   }
 
