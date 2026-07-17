@@ -84,6 +84,55 @@ const unsetInert = (el) => {
   }
 }
 
+// `ScrollBarHelper` sets `overflow: hidden` on `document.body` to lock the background while a
+// modal is open, but per spec an `overflow: hidden` box is only blocked from *user-driven*
+// scrolling (wheel/trackpad/keyboard); it remains programmatically scrollable. VoiceOver on
+// macOS Safari moves its virtual cursor with a "scroll the a11y focus target into view" step
+// that is exactly such a programmatic scroll, and WebKit acts on it by scrolling the window even
+// though the modal itself is visually isolated in a `position: fixed` dialog -- Chromium doesn't.
+// The result is the background page sliding around behind the modal, and possibly ending up at a
+// different scroll position on close (#1705). Taking `document.body` out of the scrollable flow
+// entirely (`position: fixed`) removes any scrollable overflow for WebKit's accessibility code to
+// act on, which the plain `overflow: hidden` above cannot do.
+//
+// This is scoped to modal.js only (offcanvas/navbar-collapsible keep using `ScrollBarHelper`
+// as-is) and is reference-counted like `inert` above, for the same reason: the data-api handler
+// below can swap an already-open modal for another one, and the first modal's deferred
+// `_hideModal` (it runs after the backdrop transition, i.e. potentially after the next modal's
+// `show()` already ran) must not release the lock -- or restore the saved scroll position --
+// while the next modal is still relying on it. Because the saved position is only (re)captured
+// when the count goes from 0 to 1, a second modal taking over an already-locked body never saves
+// the bogus `window.scrollY === 0` that `position: fixed` body would otherwise report.
+let scrollLockCount = 0
+let savedScrollY = 0
+const lockBackgroundScroll = () => {
+  if (scrollLockCount === 0) {
+    savedScrollY = window.scrollY || window.pageYOffset || 0
+    const { style } = document.body
+    style.position = 'fixed'
+    style.top = `${-savedScrollY}px`
+    style.left = '0'
+    style.right = '0'
+    style.width = '100%'
+  }
+
+  scrollLockCount++
+}
+const unlockBackgroundScroll = () => {
+  scrollLockCount = Math.max(0, scrollLockCount - 1)
+  if (scrollLockCount > 0) {
+    return
+  }
+
+  const { style } = document.body
+  style.removeProperty('position')
+  style.removeProperty('top')
+  style.removeProperty('left')
+  style.removeProperty('right')
+  style.removeProperty('width')
+  window.scrollTo(0, savedScrollY)
+}
+
 /**
  * Class definition
  */
@@ -99,6 +148,7 @@ class Modal extends BaseComponent {
     this._isTransitioning = false
     this._scrollBar = new ScrollBarHelper()
     this._inertedElements = []
+    this._scrollLocked = false
 
     this._addEventListeners()
   }
@@ -138,6 +188,8 @@ class Modal extends BaseComponent {
     this._isTransitioning = true
 
     this._scrollBar.hide()
+    this._scrollLocked = true
+    lockBackgroundScroll()
 
     document.body.classList.add(CLASS_NAME_OPEN)
 
@@ -174,6 +226,11 @@ class Modal extends BaseComponent {
     this._backdrop.dispose()
     this._focustrap.deactivate()
     this._removeInert()
+    if (this._scrollLocked) {
+      this._scrollLocked = false
+      unlockBackgroundScroll()
+    }
+
     super.dispose()
   }
 
@@ -284,6 +341,11 @@ class Modal extends BaseComponent {
       document.body.classList.remove(CLASS_NAME_OPEN)
       this._resetAdjustments()
       this._scrollBar.reset()
+      if (this._scrollLocked) {
+        this._scrollLocked = false
+        unlockBackgroundScroll()
+      }
+
       // background must not be inert anymore before EVENT_HIDDEN fires, since focus is
       // restored to the trigger element (which may be one of the previously inerted elements)
       this._removeInert()
