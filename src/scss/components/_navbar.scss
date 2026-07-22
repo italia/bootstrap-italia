@@ -371,7 +371,6 @@
           --#{$prefix}navbar-link-padding-x: var(--#{$prefix}spacing-s); // reduce horizontal padding for desktop
           display: flex;
           align-items: center;
-          padding-bottom: calc(var(--#{$prefix}navbar-link-padding-y) - var(--#{$prefix}navbar-link-border-size));
           border-bottom: var(--#{$prefix}navbar-link-border-size) solid var(--navbar-link-border-color);
           border-left: 0;
           line-height: var(--#{$prefix}navbar-link-line-height);
