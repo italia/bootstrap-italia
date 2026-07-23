@@ -10,8 +10,14 @@ import JustValidate from 'just-validate'
 import { CssClassObserver, ContentObserver } from './util/observer'
 
 const CONFIG_DEFAULT = {
-  errorFieldCssClass: 'is-invalid',
-  errorLabelCssClass: 'just-validate-error-label',
+  focusInvalidField: false, //if true, the first invalid field will be focused after the form submitting.
+  errorLabelCssClass: 'form-feedback text-danger', //default: just-validate-error-label
+  successLabelCssClass: 'form-feedback text-success', //default: just-validate-success-label
+  errorFieldCssClass: 'is-invalid', //default: just-validate-error-field
+  successFieldCssClass: 'is-valid', //default: just-validate-success-field
+
+  errorFieldStyle: '',
+  errorLabelStyle: '', //default: {color: '#b81111'}
 }
 
 const NAME = 'justvalidatebi'
@@ -30,15 +36,20 @@ class FormValidate {
 
     if (dictLocale != undefined) this.validate = new JustValidate(selector, config, dictLocale)
     else {
-      this.validate = new JustValidate(selector, config)
+      this.validate = new JustValidate(selector, Object.assign({}, CONFIG_DEFAULT, config))
     }
 
-    this.config = Object.assign({}, CONFIG_DEFAULT, this.validate.globalConfig)
+    this.config = Object.assign({}, this.validate.globalConfig)
+    console.log('config', { 'this.config': this.config, CONFIG_DEFAULT, 'this.validate.globalConfig': this.validate.globalConfig })
     this.formItems = []
 
     this.init()
 
     return this.validate
+  }
+
+  getCssSelectorFromClass(cl) {
+    return '.' + cl.replaceAll(' ', '.')
   }
 
   init() {
@@ -65,7 +76,7 @@ class FormValidate {
       if (inputs.length > 0) {
         const watcher = new ContentObserver(
           field,
-          '.' + this.config.errorLabelCssClass,
+          this.getCssSelectorFromClass(this.config.errorLabelCssClass),
           () => this.onFieldsetError(field),
           () => this.onFieldsetErrorRemove(field)
         )
@@ -153,10 +164,11 @@ class FormValidate {
    */
   getErrorMessages(target) {
     let parent = target
-    let messages = parent.querySelectorAll('.' + this.config.errorLabelCssClass)
+    const errorLabelSelector = this.getCssSelectorFromClass(this.config.errorLabelCssClass)
+    let messages = parent.querySelectorAll(errorLabelSelector)
     while (parent != null && messages.length === 0) {
       parent = parent.parentNode
-      messages = parent.querySelectorAll('.' + this.config.errorLabelCssClass)
+      messages = parent.querySelectorAll(errorLabelSelector)
     }
     return messages
   }
