@@ -330,72 +330,6 @@ Utilizza entrambe le classi insieme per attivare il tema scuro su tutti i dispos
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
-### Menu Inline
-
-Il componente Navscroll può essere utilizzato anche come menu in linea, utilizzando la classe `.inline-menu`.
-
-Per maggiori informazioni, si può fare riferimento alla [documentazione delle Liste di link]({{ site.baseurl }}/docs/organizzare-i-contenuti/liste/#liste-per-menu-di-navigazione).
-
-Gli inline menu possono contenere liste di link di ogni tipo; nell'esempio che segue è stata inserita una Lista di link collassabile.
-
-{% comment %}Example name: Menu in linea{% endcomment %}
-{% capture example %}
-<nav class="inline-menu">
-  <div class="link-list-wrapper">
-    <ul class="link-list">
-      <li>
-        <a class="list-item large medium right-icon" href="#collapseOne" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseOne">
-          <span class="list-item-title-icon-wrapper">
-            <span>Link lista 1</span>
-            <svg class="icon icon-xs icon-primary right"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
-          </span>
-        </a>
-        <ul class="link-sublist collapse" id="collapseOne">
-          <li><a class="list-item" href="#"><span>Link lista 1.1</span></a>
-          </li>
-          <li><a class="list-item" href="#"><span>Link lista 1.2</span></a>
-          </li>
-          <li><a class="list-item" href="#"><span>Link lista 1.3</span></a>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <a class="list-item large medium right-icon" href="#collapseTwo" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo">
-          <span class="list-item-title-icon-wrapper">
-            <span>Link lista 2</span>
-            <svg class="icon icon-xs icon-primary right"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
-          </span>
-        </a>
-        <ul class="link-sublist collapse" id="collapseTwo">
-          <li><a class="list-item" href="#"><span>Link lista 2.1</span></a>
-          </li>
-          <li><a class="list-item" href="#"><span>Link lista 2.2</span></a>
-          </li>
-          <li><a class="list-item" href="#"><span>Link lista 2.3</span></a>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <a class="list-item large medium right-icon" href="#collapseThree" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseThree">
-          <span class="list-item-title-icon-wrapper">
-            <span>Link lista 3</span>
-            <svg class="icon icon-xs icon-primary right"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
-          </span>
-        </a>
-        <ul class="link-sublist collapse" id="collapseThree">
-          <li><a class="list-item" href="#"><span>Link lista 3.1</span></a>
-          </li>
-          <li><a class="list-item" href="#"><span>Link lista 3.2</span></a>
-          </li>
-          <li><a class="list-item" href="#"><span>Link lista 3.3</span></a>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-</nav>
-{% endcapture %}{% include example.html content=example %}
-
 ## Attivazione tramite codice
 
 {% include callout-bundle-methods.md %}
@@ -408,11 +342,6 @@ import { NavScroll } from 'bootstrap-italia';
 const navscrollElement = document.querySelector('.it-navscroll-wrapper');
 const navscroll = new NavScroll(navscrollElement, options);
 ```
-
-Il componente nella sua versione `Menu Inline` utilizza al suo interno il componente 
-`Collapse`, si rimanda alle sezioni specifiche per l'attivazione:
-
-- [Attivazione Collapse tramite codice]({{ site.baseurl }}/docs/componenti/collapse/#attivazione-tramite-codice)
 
 #### Opzioni
 
@@ -475,6 +404,7 @@ Le opzioni possono essere passate tramite gli attributi data o tramite Javascrip
 - La classe che controlla il colore dell'icona chevron per le varianti scure ha cambiato nome: `.icon-white` diventa `.icon-inverse`.
 - Aggiunta la classe `.it-navscroll-heading` al titolo della sezione.
 - Rinominata la classe `.icon-white` in `.icon-inverse` per le icone chevron delle varianti scure.
+- La variante 'menu inline' è stata rimossa, in favore dell'utilizzo di una lista per menu di navigazione annidata collassabile.
 {% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}
 
 {% capture callout %}
