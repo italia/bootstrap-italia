@@ -1004,58 +1004,60 @@ Per questo tipo di link list sono state utilizzate, oltre alle classi custom, le
 
 {% comment %}Example name: Per menu, annidata collassabile{% endcomment %}
 {% capture example %}
-<div class="link-list-wrapper">
-  <ul class="link-list">
-    <li>
-      <a class="list-item large medium icon-right" href="#collapseOne" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseOne">
-        <span class="list-item-title-icon-wrapper">
-          <span class="list-item-title">Link lista 1</span>
-          <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
-        </span>
-      </a>
-      <ul class="link-sublist collapse" id="collapseOne">
-        <li><a class="list-item" href="#"><span>Link lista 1</span></a>
-        </li>
-        <li><a class="list-item" href="#"><span>Link lista 1</span></a>
-        </li>
-        <li><a class="list-item" href="#"><span>Link lista 1</span></a>
-        </li>
-      </ul>
-    </li>
-    <li>
-      <a class="list-item large medium icon-right" href="#collapseTwo" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo">
-        <span class="list-item-title-icon-wrapper">
-          <span class="list-item-title">Link lista 2</span>
-          <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
-        </span>
-      </a>
-      <ul class="link-sublist collapse" id="collapseTwo">
-        <li><a class="list-item" href="#"><span>Link lista 1</span></a>
-        </li>
-        <li><a class="list-item" href="#"><span>Link lista 1</span></a>
-        </li>
-        <li><a class="list-item" href="#"><span>Link lista 1</span></a>
-        </li>
-      </ul>
-    </li>
-    <li>
-      <a class="list-item large medium icon-right" href="#collapseThree" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseThree">
-        <span class="list-item-title-icon-wrapper">
-          <span class="list-item-title">Link lista 3</span>
-          <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
-        </span>
-      </a>
-      <ul class="link-sublist collapse" id="collapseThree">
-        <li><a class="list-item" href="#"><span>Link lista 1</span></a>
-        </li>
-        <li><a class="list-item" href="#"><span>Link lista 1</span></a>
-        </li>
-        <li><a class="list-item" href="#"><span>Link lista 1</span></a>
-        </li>
-      </ul>
-    </li>
-  </ul>
-</div>
+
+  <div class="link-list-wrapper">
+    <ul class="link-list">
+      <li>
+        <a class="list-item large medium right-icon" href="#collapseOne" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseOne">
+          <span class="list-item-title-icon-wrapper">
+            <span>Link lista 1</span>
+            <svg class="icon icon-xs icon-primary right"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
+          </span>
+        </a>
+        <ul class="link-sublist collapse" id="collapseOne">
+          <li><a class="list-item" href="#"><span>Link lista 1.1</span></a>
+          </li>
+          <li><a class="list-item" href="#"><span>Link lista 1.2</span></a>
+          </li>
+          <li><a class="list-item" href="#"><span>Link lista 1.3</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a class="list-item large medium right-icon" href="#collapseTwo" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo">
+          <span class="list-item-title-icon-wrapper">
+            <span>Link lista 2</span>
+            <svg class="icon icon-xs icon-primary right"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
+          </span>
+        </a>
+        <ul class="link-sublist collapse" id="collapseTwo">
+          <li><a class="list-item" href="#"><span>Link lista 2.1</span></a>
+          </li>
+          <li><a class="list-item" href="#"><span>Link lista 2.2</span></a>
+          </li>
+          <li><a class="list-item" href="#"><span>Link lista 2.3</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a class="list-item large medium right-icon" href="#collapseThree" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseThree">
+          <span class="list-item-title-icon-wrapper">
+            <span>Link lista 3</span>
+            <svg class="icon icon-xs icon-primary right"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
+          </span>
+        </a>
+        <ul class="link-sublist collapse" id="collapseThree">
+          <li><a class="list-item" href="#"><span>Link lista 3.1</span></a>
+          </li>
+          <li><a class="list-item" href="#"><span>Link lista 3.2</span></a>
+          </li>
+          <li><a class="list-item" href="#"><span>Link lista 3.3</span></a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
 {% endcapture %}{% include example.html content=example %}
 
 {% include properties.md properties=site.data.cprops.linklist %}
