@@ -452,7 +452,7 @@ input::-webkit-datetime-edit {
       }
     }
 
-        // Hover state
+    // Hover state
     + label:hover::before {
       border-color: var(--#{$prefix}color-border-secondary-hover);
     }
@@ -481,8 +481,6 @@ input::-webkit-datetime-edit {
         }
       }
     }
-
-
   }
 
   .form-text {

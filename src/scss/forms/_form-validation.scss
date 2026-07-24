@@ -88,12 +88,3 @@ textarea {
     background-position: top 0.5em right !important;
   }
 }
-
-// input[type='checkbox'],
-// input[type='radio'] {
-//   &.is-invalid {
-//     ~ label {
-//       --#{$prefix}form-checkbox-border-color: var(--#{$prefix}color-border-danger);
-//     }
-//   }
-// }

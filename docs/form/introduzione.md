@@ -294,7 +294,9 @@ Per il funzionamento e le opzioni disponibili, si consiglia di consultare la [do
 
 ### Stili personalizzati
 
-I campi che necessitano di validazione acquisiranno all'invio del form le classi CSS definite nello script che attiva il plugin. Nel nostro caso le classi saranno `is-invalid` e `is-valid`. I messaggi di errore avranno classe `form-feedback.text-danger`.
+I campi che necessitano di validazione acquisiranno all'invio del form le classi CSS definite nello script che attiva il plugin. Nel nostro caso le classi saranno `is-invalid` e `is-valid`.
+
+I messaggi di errore avranno classe `form-feedback text-danger`, mentre eventuali messaggi di successo avranno classe `form-feedback text-success`.
 
 Di seguito un esempio di form validato con Just Validate.
 
@@ -443,3 +445,15 @@ Di seguito un esempio di form validato con Just Validate.
 I singoli campi di tipo _input_, _checkbox_, _radio_, _toggle_, ecc. sono trattati in pagine separate della documentazione, continua a leggere alla pagina dedicata ai [campi di input]({{ site.baseurl }}/docs/form/input/).
 
 {% include properties.md properties=site.data.cprops.form %}
+
+## Breaking change
+
+{% capture callout %}
+La validazione con JustValidate, e le classi che applicano gli stili di validazione, non sono più dipendenti dal plugin JustValidate. Migliorato il comportamento di default di JustValidate.
+
+- La classe `just-validate-success-field` è stata sostiuita con la classe `is-valid`.
+- La classe `just-validate-error-label` è stata sostituita dalle classi `form-feedback text-danger`.
+- La classe `just-validate-success-label` è stata sostituita dalle classi `form-feedback text-success`.
+- Di default, il plugin di JustValidate integrato in BootstrapItalia imposta `focusInvalidField` a `false` per evitare lo scroll del form al primo campo con errore.
+
+{% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}

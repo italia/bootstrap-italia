@@ -330,6 +330,27 @@ title: Validazione Form
         </div>
       </div>
     </div>
+
+    <div class="row mb-4 mt-5">
+      <div class="col-12">
+        <h2>Password</h2>
+      </div>
+    </div>
+
+    <div class="row mb-4">
+      <div class="col-12 col-md-6">
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" data-bs-input class="form-control input-password" id="password" aria-describedby="infoPassword2" />
+          <button type="button" class="password-icon btn" role="switch" aria-checked="false">
+            <span class="visually-hidden">Mostra/Nascondi Password</span>
+            <svg class="password-icon-visible icon icon-sm" aria-hidden="true"><use href="/dist/svg/sprites.svg#it-password-visible"></use></svg>
+            <svg class="password-icon-invisible icon icon-sm d-none" aria-hidden="true"><use href="/dist/svg/sprites.svg#it-password-invisible"></use></svg>
+          </button>
+          <p id="infoPassword2" class="form-text text-muted d-block small pb-0">Inserisci almeno 8 caratteri e alcuni caratteri speciali.</p>
+        </div>
+      </div>
+    </div>
     <div class="row">
       <div class="col-12">
         <button class="btn btn-primary mt-3" type="submit">Invia form</button>
@@ -454,6 +475,17 @@ title: Validazione Form
           rule: 'maxLength',
           value: 5,
           errorMessage: 'Inserire 5 cifre',
+        },
+      ])
+      .addField('#password', [
+        {
+          rule: 'required',
+          errorMessage: 'Questo campo è richiesto',
+        },
+        {
+          rule: 'minLength',
+          value: 8,
+          errorMessage: 'Inserire almeno 8 caratteri',
         },
       ])
       .addField('#email', [
