@@ -27,11 +27,6 @@
       display: none;
     }
 
-    // Apply the border when not disabled - avoid specific styling for disabled inputs
-    &:not(:disabled) {
-      border-left: 1px solid var(--#{$prefix}form-control-border-color);
-    }
-
     &[readonly] ~ .input-group-text {
       .input-number-add,
       .input-number-sub {

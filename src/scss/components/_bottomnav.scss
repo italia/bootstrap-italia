@@ -43,45 +43,45 @@
 /* stylelint-disable-next-line no-duplicate-selectors */
 .bottom-nav {
   position: fixed;
+  right: 0;
   bottom: 0;
   left: 0;
-  right: 0;
-  overflow: hidden;
   height: var(--#{$prefix}bottom-nav-height);
+  overflow: hidden;
 
   // Shadow
   &:before {
-    content: '';
     position: absolute;
-    height: var(--#{$prefix}bottom-nav-shadow-height);
-    width: 100%;
     top: var(--#{$prefix}bottom-nav-shadow-top);
     z-index: 10;
-    background: var(--#{$prefix}bottom-nav-shadow-background);
+    content: '';
+    width: 100%;
+    height: var(--#{$prefix}bottom-nav-shadow-height);
     border-radius: 50%;
-    transform: var(--#{$prefix}bottom-nav-shadow-transform);
     opacity: var(--#{$prefix}bottom-nav-shadow-opacity);
+    background: var(--#{$prefix}bottom-nav-shadow-background);
+    transform: var(--#{$prefix}bottom-nav-shadow-transform);
   }
 
   // List
   ul {
     position: absolute;
+    right: 0;
     bottom: 0;
     left: 0;
-    right: 0;
-    width: 100%;
     z-index: 20;
-    background-color: var(--#{$prefix}color-background-inverse);
     display: flex;
-    justify-content: space-around;
     align-items: center;
-    padding: 0;
-    margin: 0;
+    justify-content: space-around;
+    width: 100%;
     height: var(--#{$prefix}bottom-nav-list-height);
+    margin: 0;
+    padding: 0;
+    background-color: var(--#{$prefix}color-background-inverse);
 
     li {
-      list-style-type: none;
       margin: var(--#{$prefix}bottom-nav-item-margin);
+      list-style-type: none;
       text-align: center;
     }
   }
@@ -113,9 +113,9 @@
   // Icon
   .it-ico {
     position: relative;
-    font-size: var(--#{$prefix}bottom-nav-icon-font-size);
     display: block;
     height: var(--#{$prefix}bottom-nav-icon-height);
+    font-size: var(--#{$prefix}bottom-nav-icon-font-size);
 
     &:before {
       margin-right: 0;
@@ -129,10 +129,10 @@
 
   .bottom-nav-badge,
   .bottom-nav-alert {
-    display: block;
     position: absolute;
-    background-color: var(--#{$prefix}bottom-nav-badge-bg);
+    display: block;
     border: 1px solid var(--#{$prefix}bottom-nav-badge-border-color);
+    background-color: var(--#{$prefix}bottom-nav-badge-bg);
   }
 
   // Icon badge
@@ -140,12 +140,12 @@
     top: 0;
     right: 0;
     min-width: 1.15rem;
-    line-height: 1;
-    padding: 4px 6px;
+    padding: var(--#{$prefix}spacing-3xs);
+    border-radius: var(--#{$prefix}bottom-nav-badge-radius);
     color: var(--#{$prefix}bottom-nav-badge-color);
     font-size: var(--#{$prefix}bottom-nav-badge-font-size);
-    border-radius: var(--#{$prefix}bottom-nav-badge-radius);
-    font-style: normal;
+    font-style: var(--#{$prefix}font-weight-solid);
+    line-height: 1;
   }
 
   // Icon alert
@@ -159,10 +159,10 @@
 
   // Text label
   .bottom-nav-label {
+    display: block;
     margin-top: var(--#{$prefix}bottom-nav-label-margin-top);
     font-size: var(--#{$prefix}bottom-nav-label-font-size);
-    line-height: 1;
-    display: block;
     font-weight: var(--#{$prefix}bottom-nav-label-font-weight);
+    line-height: 1;
   }
 }

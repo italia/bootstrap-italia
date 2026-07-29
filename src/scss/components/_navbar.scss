@@ -32,6 +32,7 @@
   --#{$prefix}navbar-disabled-item-opacity: 0.75; // Controls the navbar disabled item opacity.
   --#{$prefix}navbar-hamburger-size: 1.5rem; // Controls the navbar hamburger size.
   --#{$prefix}navbar-link-border-size: var(--#{$prefix}border-thick); // Controls the navbar link border size, using border tokens.
+  --#{$prefix}navbar-link-active-border-color: var(--#{$prefix}color-border-primary);
   --#{$prefix}navbar-link-color: var(--#{$prefix}color-link); // nav link color default - mobile, using color tokens.
   --#{$prefix}navbar-link-font-size: var(--#{$prefix}label-font-size-l); // Controls the navbar link font size, using typography tokens.
   --#{$prefix}navbar-link-font-weight: var(--#{$prefix}font-weight-solid); // Controls the navbar link font weight, using typography tokens.
@@ -76,6 +77,7 @@
     display: none; // to handle resize from md to lg when open
   }
 }
+
 /* stylelint-disable-next-line no-duplicate-selectors */
 .navbar {
   position: relative;
@@ -155,9 +157,11 @@
 
   // Dropdown menu inside navbar
   // This is a special case for the dropdown menu inside the navbar
-  //
-
   .dropdown-menu {
+    @include media-breakpoint-up(lg) {
+      --#{$prefix}dropdown-border-width: 1px;
+      --#{$prefix}dropdown-border-color: var(--#{$prefix}color-border-subtle);
+    }
     a.it-heading-link,
     a.it-footer-link {
       svg {
@@ -184,6 +188,27 @@
           fill: currentColor;
         }
       }
+    }
+
+    @include media-breakpoint-down(lg) {
+      .dropdown-item {
+        --#{$prefix}dropdown-item-padding-x: var(--#{$prefix}spacing-m);
+      }
+    }
+  }
+
+  // Custom notch for dropdown menu inside navbar
+  .megamenu .dropdown-toggle:before,
+  .dropdown-menu:before {
+    display: none;
+    @include media-breakpoint-up(lg) {
+      display: block;
+      --#{$prefix}dropdown-notch-position-y: -10px;
+      border-color: var(--#{$prefix}color-border-subtle);
+      border-top-width: 1px;
+      border-top-style: solid;
+      border-left-width: 1px;
+      border-left-style: solid;
     }
   }
 }
@@ -249,7 +274,7 @@
   left: 0;
   z-index: #{$zindex-modal};
   display: none;
-  width: calc(100% - 48px); // occupa sempre tutta lo spazio orizzontale disponibile (BSI v2.15:) meno 48px a destra per il close e backdrop;
+  width: calc(100% - 48px); // fluid width minus 48px for close and backdrop;
   @include media-breakpoint-up(lg) {
     position: relative;
     top: auto;
@@ -337,14 +362,13 @@
 
       button.nav-link,
       a.nav-link {
-        --navbar-link-border-color: transparent;
-        padding-left: calc(var(--#{$prefix}navbar-link-padding-x) - var(--#{$prefix}navbar-link-border-size));
+        --#{$prefix}navbar-link-border-color: transparent;
         border-bottom: 0;
         border-left: var(--#{$prefix}navbar-link-border-size) solid var(--navbar-link-border-color);
         background: transparent;
         font-weight: var(--#{$prefix}navbar-link-font-weight);
-
         @include media-breakpoint-up(lg) {
+          --#{$prefix}navbar-link-padding-x: var(--#{$prefix}spacing-s); // reduce horizontal padding for desktop
           display: flex;
           align-items: center;
           padding-bottom: calc(var(--#{$prefix}navbar-link-padding-y) - var(--#{$prefix}navbar-link-border-size));
@@ -356,36 +380,22 @@
         &.active {
           --navbar-link-border-color: var(--#{$prefix}navbar-link-active-border-color);
         }
+
+        &.dropdown-toggle.show[data-focus-mouse='true'] {
+          border-bottom-color: transparent !important;
+        }
       }
 
       button.nav-link {
-        display: block;
         border-top: 0;
         border-right: 0;
-
-        @include media-breakpoint-up(lg) {
-          display: flex;
-        }
-      }
-
-      a.nav-link {
-        line-height: var(--#{$prefix}navbar-link-line-height);
-        @include media-breakpoint-up(lg) {
-          align-self: flex-end;
-        }
-
-        &.disabled {
-          span,
-          .icon {
-            opacity: var(--#{$prefix}navbar-disabled-item-opacity);
-          }
-        }
       }
     }
 
     .dropdown-menu {
       width: 100%; // make sure it is full width
     }
+
   }
 
   &.expanded {

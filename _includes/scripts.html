@@ -126,16 +126,37 @@
 <script src="{{ site.baseurl }}/docs/assets/src/js/cover-animation.js?{{ buildTime }}"></script>
 {%- endif -%} {%- if page.layout == "docs" -%} {% comment %}La ricerca è gestita con Algolia DocSearch
 https://github.com/algolia/docsearch{% endcomment %}
-<script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script src="https://cdn.jsdelivr.net/npm/@docsearch/js@4"></script>
 
 <script>
   docsearch({
     appId: "V0EOJ2MHD5",
-    apiKey: "d9086c0fcf5398c87a0036a5dc3afb7f",
+    apiKey: "f88513cfc47ada5439dbdb23a177584b",
     indexName: "docs_pages",
     container: "#search-input",
     placeholder: "Cerca nella documentazione",
     debug: false,
+    transformItems: (items) =>
+      items.map((item) => ({
+        objectID: item.objectID,
+        content: item._highlightResult.title.value.replace(/<\/?[^>]+(>|$)/g, "") ?? '',
+        url: item.objectID,
+        hierarchy: {
+          lvl0: item._highlightResult.title.value.replace(/<\/?[^>]+(>|$)/g, "") ?? '',
+          lvl1: item._highlightResult.title.value.replace(/<\/?[^>]+(>|$)/g, "") ?? '',
+          lvl2: item._highlightResult.title.value.replace(/<\/?[^>]+(>|$)/g, "") ?? '',
+          lvl3: null,
+          lvl4: null,
+          lvl5: null,
+          lvl6: null,
+        },
+        url_without_anchor: item.objectID,
+        type: 'content',
+        anchor: null,
+        _highlightResult: item._highlightResult,
+        _snippetResult: item._snippetResult,
+      }))
+    ,
     translations: {
       button: {
         buttonText: 'Cerca componenti, classi, informazioni...',

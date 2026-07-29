@@ -697,9 +697,6 @@ All'interno del tag `<span class="list-item-title-icon-wrapper">` subito dopo lo
       </a>
     </li>
     <li>
-      <span class="divider" role="separator"></span>
-    </li>
-    <li>
       <a class="list-item icon-right" href="#">
         <span class="list-item-title-icon-wrapper">
           <h4 class="list-item-title">Link lista 2</h4>
@@ -710,8 +707,6 @@ All'interno del tag `<span class="list-item-title-icon-wrapper">` subito dopo lo
         </span>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit…</p>
       </a>
-    </li>
-    <li><span class="divider"></span>
     </li>
     <li>
       <a class="list-item disabled icon-right" href="#" aria-disabled="true">
@@ -724,9 +719,6 @@ All'interno del tag `<span class="list-item-title-icon-wrapper">` subito dopo lo
         </span>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit…</p>
       </a>
-    </li>
-    <li>
-      <span class="divider"></span> 
     </li>
   </ul>
 </div>
@@ -897,24 +889,20 @@ Una lista di link può contenere anche elementi appartenenti ai form, di seguito
  <div class="link-list-wrapper">
   <ul class="link-list">
     <li>
-      <div class="form-check">
+      <div class="form-check form-check-inline">
         <div class="toggles">
-          <label for="toggleEsempio3a">
-            Label toggle 1
-            <input type="checkbox" id="toggleEsempio3a">
-            <span class="lever"></span>
+          <label for="toggle1">Label per toggle
+            <input type="checkbox" id="toggle1"><span class="lever"></span>
           </label>
         </div>
       </div>
     </li>
     <li>
-      <div class="form-check">
+      <div class="form-check form-check-inline">
         <div class="toggles">
-          <label for="toggleEsempio3b">
-            Label toggle 2
-            <input type="checkbox" id="toggleEsempio3b">
-            <span class="lever"></span>
-          </label>
+        <label for="toggle2">Label per toggle disabilitato
+          <input type="checkbox" id="toggle2" disabled aria-disabled="true"><span class="lever"></span>
+        </label>
         </div>
       </div>
     </li>
@@ -1078,6 +1066,7 @@ Per questo tipo di link list sono state utilizzate, oltre alle classi custom, le
 - Negli esempi di varianti lista con avatar è stata rimossa la classe `.size-lg` dai `<div>` con classe `.avatar`. 
 - Nelle liste con immagini sono state aggiunge le classi per controllare la dimensione dell'immagine sui `<div>` con classe `.it-thumb`: `.ratio` e `.ratio-16x9` con istruzioni su come cambiare quest'ultima con le classi specifiche per cambiare le proporzioni.
 - Nelle liste con azioni e freccia è definita esplicitamente la dimensione e il colore delle icone freccia aggiungendo le classi `.icon-primary` e `.icon-sm` rispettivamente dove necessario.
+- Nelle liste multilinea è stata rimosso elemento `<li>` e il tag `<span>` con classe `.divider`, il bordo è ora gestito con stili CSS
 {% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}
 
 {% capture callout %}

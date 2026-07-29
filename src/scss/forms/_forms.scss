@@ -296,8 +296,8 @@ input::-webkit-datetime-edit {
   [type='checkbox'],
   [type='radio'] {
     position: absolute;
-    top: 9px;
-    left: 9px;
+    top: 0;
+    left: 0;
     width: auto;
     margin-top: 0;
     margin-left: 0;
@@ -346,6 +346,7 @@ input::-webkit-datetime-edit {
       border-radius: var(--#{$prefix}form-control-border-radius);
     }
 
+    // Checked state
     &:checked + label::before {
       top: 3px;
       left: 3px;
@@ -366,6 +367,7 @@ input::-webkit-datetime-edit {
       background-color: var(--#{$prefix}form-checked-color);
     }
 
+    // Unchecked state
     &:not(:checked) + label::after {
       z-index: 0;
       border-color: var(--#{$prefix}form-checkbox-border-color);
@@ -380,6 +382,12 @@ input::-webkit-datetime-edit {
       border-color: transparent;
     }
 
+    // Hover state
+    + label:hover::after {
+      border-color: var(--#{$prefix}color-border-secondary-hover);
+    }
+
+    // Disabled state
     &:disabled + label {
       opacity: 1;
       cursor: not-allowed;
@@ -430,6 +438,7 @@ input::-webkit-datetime-edit {
       }
     }
 
+    // Checked state
     &:checked + label {
       &::after {
         z-index: 0;
@@ -443,6 +452,12 @@ input::-webkit-datetime-edit {
       }
     }
 
+        // Hover state
+    + label:hover::before {
+      border-color: var(--#{$prefix}color-border-secondary-hover);
+    }
+
+    // Disabled state
     &:disabled {
       & + label {
         cursor: not-allowed;
@@ -466,6 +481,8 @@ input::-webkit-datetime-edit {
         }
       }
     }
+
+
   }
 
   .form-text {
