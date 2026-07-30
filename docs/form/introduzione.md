@@ -27,12 +27,15 @@ Strutture più complesse possono essere costruite usando il sistema a griglia, d
 Si può scegliere di dare una dimensione ad una colonna, ad esempio dandogli una classe `.col-md-6` per ottenere una certo design dal breakpoint `md` in su, mentre le restanti `.col-md` si divideranno il resto dello spazio.
 
 {% capture callout %}
+
 #### Separare le colonne dai campi
+
 Non utilizzare la classe di tipo `.col-*` sullo stesso elemento che contiene un campo del form, altrimenti la spaziatura di quest'ultimo verrà reimpostata in modo errato. **Separa sempre il layout dal contenuto**.
 {% endcapture %}{% include callout.html content=callout type="warning" %}
 
 {% comment %}Example name: Dimensionamento colonne{% endcomment %}
 {% capture example %}
+
 <div>
   <div class="row">
     <div class="col-md-6">
@@ -75,6 +78,7 @@ Ecco l'esempio di una struttura più complessa creata con il sistema a griglie.
 
 {% comment %}Example name: Con sistema a griglie{% endcomment %}
 {% capture example %}
+
 <div>
   <div class="row">
     <div class="col-md-6">
@@ -162,6 +166,7 @@ L'esempio seguente usa una delle [utilità di flexbox]({{ site.baseurl }}/docs/o
 
 {% comment %}Example name: Auto-dimensionamento {% endcomment %}
 {% capture example %}
+
 <div class="row align-items-center">
   <div class="col-12 col-md-6 col-lg-auto">
     <label class="visually-hidden" for="inlineFormInput">Nome</label>
@@ -211,6 +216,7 @@ Aggiungi l'attributo `disabled` al `<fieldset>` per disabilitare tutti gli eleme
 
 {% comment %}Example name: Form disabilitato {% endcomment %}
 {% capture example %}
+
 <div>
   <fieldset disabled aria-label="Form disabilitato">
     <legend class="mb-4">Esempio di form disabilitato</legend>
@@ -288,12 +294,15 @@ Per il funzionamento e le opzioni disponibili, si consiglia di consultare la [do
 
 ### Stili personalizzati
 
-I campi che necessitano di validazione acquisiranno all'invio del form le classi CSS definite nello script che attiva il plugin. Nel nostro caso le classi saranno `is-invalid` e `just-validate-success-field`. I messaggi di errore avranno classe `just-validate-error-label`.
+I campi che necessitano di validazione acquisiranno all'invio del form le classi CSS definite nello script che attiva il plugin. Nel nostro caso le classi saranno `is-invalid` e `is-valid`.
+
+I messaggi di errore avranno classe `form-feedback text-danger`, mentre eventuali messaggi di successo avranno classe `form-feedback text-success`.
 
 Di seguito un esempio di form validato con Just Validate.
 
 {% comment %}Example name: Con validazione {% endcomment %}
 {% capture example %}
+
 <form class="needs-validation" id="justValidateForm">
   <div class="row mt-4">
     <div class="form-group col-md-3">
@@ -348,10 +357,7 @@ Di seguito un esempio di form validato con Just Validate.
   document.addEventListener("DOMContentLoaded", function() {
     const errorMessage = '<div class="alert alert-danger alert-dismissible fade show" role="alert"><strong>Attenzione</strong> Alcuni campi inseriti sono da controllare.<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Chiudi avviso">';
     const errorWrapper = document.querySelector('#errorMsgContainer');
-    const validate = new bootstrap.FormValidate('#justValidateForm', {
-      errorFieldCssClass: 'is-invalid',
-      errorLabelCssClass: 'form-feedback',
-      errorLabelStyle: '',
+    const validate = new bootstrap.FormValidate('#justValidateForm', {         
       focusInvalidField: false,
     })
     validate
@@ -439,3 +445,15 @@ Di seguito un esempio di form validato con Just Validate.
 I singoli campi di tipo _input_, _checkbox_, _radio_, _toggle_, ecc. sono trattati in pagine separate della documentazione, continua a leggere alla pagina dedicata ai [campi di input]({{ site.baseurl }}/docs/form/input/).
 
 {% include properties.md properties=site.data.cprops.form %}
+
+## Breaking change
+
+{% capture callout %}
+La validazione con JustValidate, e le classi che applicano gli stili di validazione, non sono più dipendenti dal plugin JustValidate. Migliorato il comportamento di default di JustValidate.
+
+- La classe `just-validate-success-field` è stata sostiuita con la classe `is-valid`.
+- La classe `just-validate-error-label` è stata sostituita dalle classi `form-feedback text-danger`.
+- La classe `just-validate-success-label` è stata sostituita dalle classi `form-feedback text-success`.
+- Di default, il plugin di JustValidate integrato in BootstrapItalia imposta `focusInvalidField` a `false` per evitare lo scroll del form al primo campo con errore.
+
+{% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}

@@ -21,6 +21,7 @@ title: Validazione Form
         <div class="form-group">
           <label for="campoTesto">Campo testo</label>
           <input type="text" class="form-control" id="campoTesto" placeholder="Inserisci un testo" required />
+          <small id="campoTestoHelpDescription" class="form-text">Testo di supporto</small>
         </div>
       </div>
       <div class="col-12 col-md-4">
@@ -29,12 +30,12 @@ title: Validazione Form
           <span class="input-group input-number">
             <input type="number" data-bs-input class="form-control" id="age" min="18" max="50" step="1" required />
             <span class="input-group-text align-buttons flex-column">
-                <button class="input-number-add">
-                  <span class="visually-hidden">Aumenta valore Euro</span>
-                </button>
-                <button class="input-number-sub">
-                  <span class="visually-hidden">Diminuisci valore Euro</span>
-                </button>
+              <button class="input-number-add">
+                <span class="visually-hidden">Aumenta valore Euro</span>
+              </button>
+              <button class="input-number-sub">
+                <span class="visually-hidden">Diminuisci valore Euro</span>
+              </button>
             </span>
           </span>
         </div>
@@ -45,12 +46,12 @@ title: Validazione Form
           <span class="input-group input-number">
             <input type="number" data-bs-input class="form-control" id="camponumerico" maxlenght="5" required />
             <span class="input-group-text align-buttons flex-column">
-                <button class="input-number-add">
-                  <span class="visually-hidden">Aumenta valore Euro</span>
-                </button>
-                <button class="input-number-sub">
-                  <span class="visually-hidden">Diminuisci valore Euro</span>
-                </button>
+              <button class="input-number-add">
+                <span class="visually-hidden">Aumenta valore Euro</span>
+              </button>
+              <button class="input-number-sub">
+                <span class="visually-hidden">Diminuisci valore Euro</span>
+              </button>
             </span>
           </span>
         </div>
@@ -131,9 +132,11 @@ title: Validazione Form
       <div class="col-12">
         <div class="form-group">
           <label class="active" for="etichetta_input_group_1">Input group lg</label>
-          <div class="input-group input-group-lg">
-            <span class="input-group-text"><svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-pencil"></use></svg></span>
-            <input type="text" class="form-control" id="etichetta_input_group_1" name="etichetta_input_group_1" placeholder="Lorem Ipsum">
+          <div class="input-group">
+            <span class="input-group-text"
+              ><svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-pencil"></use></svg
+            ></span>
+            <input type="text" class="form-control form-control-lg" id="etichetta_input_group_1" name="etichetta_input_group_1" placeholder="Lorem Ipsum" />
           </div>
         </div>
       </div>
@@ -143,8 +146,10 @@ title: Validazione Form
         <div class="form-group">
           <label class="active" for="etichetta_input_group_2">Input group sm</label>
           <div class="input-group input-group-sm">
-            <span class="input-group-text"><svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-pencil"></use></svg></span>
-            <input type="text" class="form-control" id="etichetta_input_group_2" name="etichetta_input_group_2" placeholder="Lorem Ipsum">
+            <span class="input-group-text"
+              ><svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-pencil"></use></svg
+            ></span>
+            <input type="text" class="form-control form-control-sm" id="etichetta_input_group_2" name="etichetta_input_group_2" placeholder="Lorem Ipsum" />
           </div>
         </div>
       </div>
@@ -164,25 +169,23 @@ title: Validazione Form
     </div>
     <div class="row">
       <div class="col-12 col-md-4">
-         <div class="form-group">
+        <div class="form-group">
           <label class="active" for="input-text-lg">Grande</label>
-          <input type="text" class="form-control form-control-lg" id="input-text-lg" placeholder="Inserisci il tuo nome">
+          <input type="text" class="form-control form-control-lg" id="input-text-lg" placeholder="Inserisci il tuo nome" />
         </div>
       </div>
       <div class="col-12 col-md-4">
         <div class="form-group">
           <label class="active" for="input-text-normal">Normale</label>
-          <input type="text" class="form-control" id="input-text-normal" placeholder="Inserisci il tuo nome">
+          <input type="text" class="form-control" id="input-text-normal" placeholder="Inserisci il tuo nome" />
         </div>
       </div>
       <div class="col-12 col-md-4">
         <div class="form-group">
           <label class="active" for="input-text-sm">Piccolo</label>
-          <input type="text" class="form-control form-control-sm" id="input-text-sm" placeholder="Inserisci il tuo nome">
+          <input type="text" class="form-control form-control-sm" id="input-text-sm" placeholder="Inserisci il tuo nome" />
         </div>
       </div>
-
-
     </div>
 
     <div class="row mb-4">
@@ -194,11 +197,27 @@ title: Validazione Form
     <div class="row mb-4">
       <div class="col-12 col-md-4">
         <div class="form-group">
-          <label for="accessibleAutocomplete">Comune di residenza</label>
-          <div id="accessibleAutocompleteWrapper" class="autocomplete-wrapper"></div>
+          <label for="autocomplete">Comune di residenza</label>
+          <div id="autocompleteWrapper" class="autocomplete-wrapper"></div>
         </div>
       </div>
     </div>
+
+    <div class="row mb-4">
+      <div class="col-12">
+        <h2>Textarea</h2>
+      </div>
+    </div>
+
+    <div class="row mb-4">
+      <div class="col-12 col-md-4">
+        <div class="form-group">
+          <label for="textarea">Esempio di area di testo</label>
+          <textarea class="form-control" id="textarea" rows="3"></textarea>
+        </div>
+      </div>
+    </div>
+
     <div class="row mb-4">
       <div class="col-12">
         <h2>Checkbox / Radio</h2>
@@ -227,7 +246,7 @@ title: Validazione Form
     <div class="row mb-4">
       <div class="col-12 col-md-4">
         <fieldset id="radiogroup">
-          <legend>Fieldset radio buttons</legend>
+          <legend>Fieldset radio buttons orizzontale</legend>
           <div class="form-check form-check-inline">
             <input name="gruppo2" type="radio" id="radio1" required />
             <label for="radio1">Radio 1</label>
@@ -252,6 +271,45 @@ title: Validazione Form
         </fieldset>
       </div>
     </div>
+    <div class="row mb-4">
+      <fieldset class="col-12 col-md-6" id="radiogroup-vertical">
+        <legend>Gruppo di radio</legend>
+        <div class="form-check form-check-group">
+          <input name="gruppo5" type="radio" id="radio13" aria-describedby="radio13-help" />
+          <label for="radio13">Opzione 1</label>
+          <small id="radio13-help" class="form-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie libero</small>
+        </div>
+        <div class="form-check form-check-group">
+          <input name="gruppo5" type="radio" id="radio14" aria-describedby="radio14-help" />
+          <label for="radio14">Opzione 2</label>
+          <small id="radio14-help" class="form-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie libero</small>
+        </div>
+        <div class="form-check form-check-group">
+          <input name="gruppo5" type="radio" id="radio15" aria-describedby="radio15-help" disabled="disabled" />
+          <label for="radio15" class="disabled">Opzione 3</label>
+          <small id="radio15-help" class="form-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie libero</small>
+        </div>
+      </fieldset>
+
+      <fieldset class="col-12 col-md-6" id="checkboxgroup-vertical">
+        <legend>Gruppo di checkbox</legend>
+        <div class="form-check form-check-group">
+          <input id="checkbox9" type="checkbox" aria-describedby="checkbox9-help" />
+          <label for="checkbox9">Checkbox selezionato</label>
+          <small id="checkbox9-help" class="form-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie libero</small>
+        </div>
+        <div class="form-check form-check-group">
+          <input id="checkbox10" type="checkbox" aria-describedby="checkbox10-help" />
+          <label for="checkbox10">Checkbox non selezionato</label>
+          <small id="checkbox10-help" class="form-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie libero</small>
+        </div>
+        <div class="form-check form-check-group">
+          <input id="checkbox11" type="checkbox" aria-describedby="checkbox11-help" disabled="disabled" />
+          <label for="checkbox11" class="disabled">Checkbox disabilitato non selezionato</label>
+          <small id="checkbox11-help" class="form-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie libero</small>
+        </div>
+      </fieldset>
+    </div>
 
     <div class="row mb-4 mt-5">
       <div class="col-12">
@@ -269,6 +327,27 @@ title: Validazione Form
             <svg class="icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-upload"></use></svg>
             <span>Upload custom (solo jpg/png)</span>
           </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mb-4 mt-5">
+      <div class="col-12">
+        <h2>Password</h2>
+      </div>
+    </div>
+
+    <div class="row mb-4">
+      <div class="col-12 col-md-6">
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" data-bs-input class="form-control input-password" id="password" aria-describedby="infoPassword2" />
+          <button type="button" class="password-icon btn" role="switch" aria-checked="false">
+            <span class="visually-hidden">Mostra/Nascondi Password</span>
+            <svg class="password-icon-visible icon icon-sm" aria-hidden="true"><use href="/dist/svg/sprites.svg#it-password-visible"></use></svg>
+            <svg class="password-icon-invisible icon icon-sm d-none" aria-hidden="true"><use href="/dist/svg/sprites.svg#it-password-invisible"></use></svg>
+          </button>
+          <p id="infoPassword2" class="form-text text-muted d-block small pb-0">Inserisci almeno 8 caratteri e alcuni caratteri speciali.</p>
         </div>
       </div>
     </div>
@@ -292,43 +371,45 @@ title: Validazione Form
       '<div class="alert alert-danger alert-dismissible fade show" role="alert"><strong>Attenzione</strong> Alcuni campi inseriti sono da controllare.<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Chiudi avviso"></div>'
     const errorWrapper = document.querySelector('#errorMsgContainer')
     const validate = new bootstrap.FormValidate('#justValidate', {
-      errorFieldCssClass: 'is-invalid',
-      errorLabelCssClass: 'form-feedback',
-      errorLabelStyle: '',
-      focusInvalidField: false,
+      focusInvalidField: true,
     })
 
-    const comuniJson = await (await fetch('./comuni.json')).json();
-    const comuni = comuniJson.map(comune => comune.comune)
-    const selectAutocompleteWrapper = document.querySelector('#accessibleAutocompleteWrapper');
+    const comuniJson = await (await fetch('./comuni.json')).json()
+    const comuni = comuniJson.map((comune) => comune.comune)
+    const selectAutocompleteWrapper = document.querySelector('#autocompleteWrapper')
     const selectAutocomplete = new bootstrap.SelectAutocomplete(selectAutocompleteWrapper, {
       source: comuni,
-      id: 'accessibleAutocomplete',
+      id: 'autocomplete',
       name: 'comune-residenza',
       minLength: 3,
       onConfirm: () => {
-        if (!validate.isSubmitted && !validate.validateBeforeSubmitting)
-          return
-        validate.revalidateField('#accessibleAutocomplete')
-      }
-    });
+        if (!validate.isSubmitted && !validate.validateBeforeSubmitting) return
+        validate.revalidateField('#autocomplete')
+      },
+    })
     validate
-      .addField('#nome', [
+      .addField('#campoTesto', [
         {
           rule: 'required',
           errorMessage: 'Questo campo è richiesto',
         },
       ])
-      .addField('#accessibleAutocomplete', [
+      .addField('#autocomplete', [
         {
           rule: 'required',
           errorMessage: 'Questo campo è richiesto',
         },
         {
           validator: (value) => {
-            return comuni.includes(value);
+            return comuni.includes(value)
           },
           errorMessage: 'Scegli una città valida',
+        },
+      ])
+      .addField('#textarea', [
+        {
+          rule: 'required',
+          errorMessage: 'Questo campo è richiesto',
         },
       ])
       .addField('#importo_input_group', [
@@ -338,9 +419,9 @@ title: Validazione Form
         },
         {
           rule: 'minNumber',
-          value: 3.50,
-          errorMessage: 'Deve essere maggiore di 3.50',
-        }
+          value: 4,
+          errorMessage: 'Deve essere maggiore di 4',
+        },
       ])
       .addField('#perc_input_group', [
         {
@@ -349,11 +430,11 @@ title: Validazione Form
         },
         {
           rule: 'minNumber',
-          value: 80,
-          errorMessage: 'Deve essere maggiore di 80',
-        }
+          value: 90,
+          errorMessage: 'Deve essere maggiore di 90',
+        },
       ])
-      .addField('#etichetta_input_group', [
+      .addField('#etichetta_input_group_1', [
         {
           rule: 'required',
           errorMessage: 'Questo campo è richiesto',
@@ -362,7 +443,7 @@ title: Validazione Form
           rule: 'minNumber',
           value: 80,
           errorMessage: 'Deve essere maggiore di 80',
-        }
+        },
       ])
       .addField('#age', [
         {
@@ -396,6 +477,17 @@ title: Validazione Form
           errorMessage: 'Inserire 5 cifre',
         },
       ])
+      .addField('#password', [
+        {
+          rule: 'required',
+          errorMessage: 'Questo campo è richiesto',
+        },
+        {
+          rule: 'minLength',
+          value: 8,
+          errorMessage: 'Inserire almeno 8 caratteri',
+        },
+      ])
       .addField('#email', [
         {
           rule: 'required',
@@ -415,6 +507,8 @@ title: Validazione Form
 
       .addRequiredGroup('#radiogroup', 'Scegli un’opzione')
       .addRequiredGroup('#checkgroup', 'Scegli almeno un’opzione')
+      .addRequiredGroup('#radiogroup-vertical', 'Scegli un’opzione')
+      .addRequiredGroup('#checkboxgroup-vertical', 'Scegli almeno un’opzione')
       .addField('#date', [
         {
           rule: 'required',
