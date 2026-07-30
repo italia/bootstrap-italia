@@ -24,7 +24,7 @@
   --#{$prefix}dropdown-animation-speed: var(--#{$prefix}transition-instant); // Controls the speed of the dropdown open animation, using transition tokens.
   --#{$prefix}dropdown-background: var(--#{$prefix}color-background-inverse); // Controls the default background, using color tokens.
   --#{$prefix}dropdown-border-color: transparent; // Controls the default border color.
-  --#{$prefix}dropdown-border-radius: var(--#{$prefix}radius-smooth); // Controls the border radius, using radius tokens.
+  --#{$prefix}dropdown-border-radius: 2px; // Controls the border radius.
   --#{$prefix}dropdown-border-width: 0; // Controls the border width.
   --#{$prefix}dropdown-box-shadow: var(--#{$prefix}elevation-low); // Controls the box shadow, using elevation tokens.
   --#{$prefix}dropdown-color: var(--#{$prefix}color-text-base); // Controls the default text color, using color tokens.

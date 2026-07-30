@@ -135,6 +135,7 @@
   }
 }
 
+
 // Desktop only styles for megamenu
 
 @include media-breakpoint-up(lg) {
@@ -215,6 +216,46 @@
       }
     }
   }
+
+  .nav-item.megamenu {
+    position: static;
+
+    > a.dropdown-toggle,
+    > button.dropdown-toggle {
+      position: relative;
+
+      &:before {
+        position: absolute;
+        top: auto;
+        bottom: -14px;
+        left: 24px;
+        content: '';
+        display: block;
+        width: 18px;
+        height: 18px;
+        opacity: 0;
+        border-radius: 2px;
+        background-color: var(--#{$prefix}color-background-inverse);
+        transform: rotate(45deg);
+        transition: opacity calc(var($dropdown-menu-animation-speed) * 0.5) cubic-bezier(0.1, 0.57, 0.36, 0.99);
+      }
+    }
+
+    > button.dropdown-toggle:before {
+      bottom: calc(var($dropdown-menu-notch-base-size) * -1 - 8);
+    }
+
+    a.dropdown-toggle,
+    button.dropdown-toggle {
+      &.show {
+        &:before {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+
 
   .it-header-sticky.is-sticky .nav-item button.nav-link {
     font-size: 16px;
