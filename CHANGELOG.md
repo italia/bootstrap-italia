@@ -422,6 +422,13 @@
 * extract variables for api and add Properties table to documentation ([c421a01](https://github.com/italia/bootstrap-italia/commit/c421a01262e9955cdbb361c16cdeb4d993bbba5b))
 
 
+## [2.18.2](https://github.com/italia/bootstrap-italia/compare/v2.18.1...v2.18.2) (2026-07-15)
+
+
+### Bug Fixes
+
+* remove autocomplete defaults ([d2d47e2](https://github.com/italia/bootstrap-italia/commit/d2d47e2353bbfe8a764c8807c1f5895fe4f6d15b))
+
 
 ## [2.18.1](https://github.com/italia/bootstrap-italia/compare/v2.18.0...v2.18.1) (2026-04-23)
 
