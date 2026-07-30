@@ -135,7 +135,6 @@
   }
 }
 
-
 // Desktop only styles for megamenu
 
 @include media-breakpoint-up(lg) {
@@ -254,8 +253,6 @@
       }
     }
   }
-
-
 
   .it-header-sticky.is-sticky .nav-item button.nav-link {
     font-size: 16px;
