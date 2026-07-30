@@ -101,6 +101,16 @@
 La versione 3.0.0 ha portato molte breaking changes sia a livello generale che a livello di singolo componente. Fai riferimento alla [guida alla migrazione dalla versione 2]({{ site.baseurl }}/docs/come-iniziare/migrazione-dalla-versione-2/).
 
 
+
+La validazione con JustValidate, e le classi che applicano gli stili di validazione, non sono più dipendenti dal plugin JustValidate. Migliorato il comportamento di default di JustValidate.
+
+- La classe `just-validate-success-field` è stata sostiuita con la classe `is-valid`.
+- La classe `just-validate-error-label` è stata sostituita dalle classi `form-feedback text-danger`.
+- La classe `just-validate-success-label` è stata sostituita dalle classi `form-feedback text-success`.
+- Di default, il plugin di JustValidate integrato in BootstrapItalia imposta `focusInvalidField` a `false` per evitare lo scroll del form al primo campo con errore.
+
+
+
 ### Liste
 
 - Negli esempi di varianti lista con avatar è stata rimossa la classe `.size-lg` dai `<div>` con classe `.avatar`. 
@@ -130,6 +140,7 @@ La versione 3.0.0 ha portato molte breaking changes sia a livello generale che a
 - La classe che controlla il colore dell'icona chevron per le varianti scure ha cambiato nome: `.icon-white` diventa `.icon-inverse`.
 - Aggiunta la classe `.it-navscroll-heading` al titolo della sezione.
 - Rinominata la classe `.icon-white` in `.icon-inverse` per le icone chevron delle varianti scure.
+- La variante 'menu inline' è stata rimossa, in favore dell'utilizzo di una lista per menu di navigazione annidata collassabile.
 
 
 ### Notification
