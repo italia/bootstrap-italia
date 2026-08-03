@@ -47,6 +47,25 @@ declare namespace InputSearch {
      * @default []
      */
     autocomplete: any[],
+    /**
+     * Allowed HTML tags and attributes for sanitization of option content.
+     * Defaults to the DefaultAllowlist extended with `mark`, `svg`, `use`.
+     */
+    allowList: Record<string, Array<string | RegExp>>,
+    /**
+     * Enable HTML sanitization of option content. Disable only if `autocomplete`
+     * is populated exclusively from trusted sources.
+     *
+     * @default true
+     */
+    sanitize: boolean,
+    /**
+     * Custom sanitization function. If provided, replaces the built-in sanitizer
+     * (e.g. pipe through DOMPurify).
+     *
+     * @default null
+     */
+    sanitizeFn: ((html: string) => string) | null,
   }
 
 }

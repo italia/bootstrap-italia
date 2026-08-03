@@ -9,14 +9,28 @@
 import BaseComponent from './base-component'
 import EventHandler from './dom/event-handler'
 import InputLabel from './input-label'
+import { DefaultAllowlist, sanitizeHtml } from './util/sanitizer'
 
 const NAME = 'inputsearchautocomplete'
 const DATA_KEY = 'bs.inputsearchautocomplete'
 const EVENT_KEY = `.${DATA_KEY}`
 
+const AutocompleteAllowlist = {
+  ...DefaultAllowlist,
+  mark: [],
+  svg: ['xmlns', 'viewBox', 'fill', 'width', 'height', 'focusable', 'aria-hidden'],
+  use: ['href', 'xlink:href'],
+}
+
 const Default = {
   autocomplete: [],
+  allowList: AutocompleteAllowlist,
+  sanitize: true,
+  sanitizeFn: null,
 }
+
+const REGEXP_SPECIAL_CHARS = /[\\^$.*+?()[\]{}|]/g
+const escapeRegExp = (str) => String(str).replace(REGEXP_SPECIAL_CHARS, String.raw`\$&`)
 
 const EVENT_KEYUP = `keyup${EVENT_KEY}`
 
@@ -55,17 +69,20 @@ class InputSearch extends BaseComponent {
     this._autocompleteElement.innerHTML = ''
 
     if (value) {
+      const itemText = (item) => (typeof item.text === 'string' ? item.text : '')
+      const markText = new RegExp('(' + escapeRegExp(value) + ')', 'gi')
       this._items.forEach((item) => {
-        let markText = new RegExp('(' + value + ')', 'gi')
-        let optionText = item.text.replace(markText, '<mark>$1</mark>')
-        let optionLabel = item.label ? '<em>' + item.label + '</em>' : ''
-        let optionIcon = item.icon ? item.icon : ''
-        let optionLink = item.link ? item.link : '#'
-
-        if (optionText.toLowerCase().indexOf(value.toLowerCase()) !== -1) {
-          this._autocompleteElement.classList.add(CLASS_NAME_SHOW)
-          this._autocompleteElement.appendChild(this._createOption(optionLink, optionText, optionLabel, optionIcon))
+        const text = itemText(item)
+        if (!text.toLowerCase().includes(value.toLowerCase())) {
+          return
         }
+        const optionText = text.replace(markText, '<mark>$1</mark>')
+        const optionLabel = item.label ? '<em>' + item.label + '</em>' : ''
+        const optionIcon = item.icon ? item.icon : ''
+        const optionLink = item.link ? item.link : '#'
+
+        this._autocompleteElement.classList.add(CLASS_NAME_SHOW)
+        this._autocompleteElement.appendChild(this._createOption(optionLink, optionText, optionLabel, optionIcon))
       })
     } else {
       this._autocompleteElement.classList.remove(CLASS_NAME_SHOW)
@@ -111,13 +128,21 @@ class InputSearch extends BaseComponent {
       return
     }
     const option = document.createElement('li')
-    option.innerHTML = `<a href="${link}">
+    const rawHtml = `<a href="${link}">
         ${icon}
         <span class="autocomplete-list-text">
           <span>${text}</span>
           ${label}
         </span>
       </a>`
+    option.innerHTML = this._config.sanitize ? sanitizeHtml(rawHtml, this._config.allowList, this._config.sanitizeFn) : rawHtml
+
+    // If the sanitizer dropped the href (e.g. javascript: scheme),
+    // fall back to "#" so the option stays a proper anchor.
+    const anchor = option.querySelector('a')
+    if (anchor && !anchor.hasAttribute('href')) {
+      anchor.setAttribute('href', '#')
+    }
 
     return option
   }
