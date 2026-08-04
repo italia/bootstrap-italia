@@ -950,6 +950,11 @@
             "variable-name": "--bsi-carousel-pagination-spacing"
         },
         {
+            "description": "Controls the pagination height, used for arrow vertical alignment",
+            "value": "var(--bsi-carousel-pagination-dot-size)",
+            "variable-name": "--bsi-carousel-pagination-height"
+        },
+        {
             "description": "Controls the track top padding, using spacing tokens.",
             "value": "var(--bsi-spacing-m)",
             "variable-name": "--bsi-carousel-track-padding-top"
@@ -1086,8 +1091,8 @@
             "variable-name": "--bsi-dropdown-border-color"
         },
         {
-            "description": "Controls the border radius, using radius tokens.",
-            "value": "var(--bsi-radius-smooth)",
+            "description": "Controls the border radius.",
+            "value": "2px",
             "variable-name": "--bsi-dropdown-border-radius"
         },
         {
@@ -1097,7 +1102,7 @@
         },
         {
             "description": "Controls the box shadow, using elevation tokens.",
-            "value": "var(--bsi-elevation-medium)",
+            "value": "var(--bsi-elevation-low)",
             "variable-name": "--bsi-dropdown-box-shadow"
         },
         {
@@ -1278,11 +1283,6 @@
             "description": "",
             "value": "var(--bsi-lead-font-size)",
             "variable-name": "--bsi-form-control-font-size"
-        },
-        {
-            "description": "",
-            "value": "var(--bsi-color-border-danger)",
-            "variable-name": "--bsi-form-checkbox-border-color"
         },
         {
             "description": "",
@@ -1604,6 +1604,36 @@
     "list": [
         {
             "description": "",
+            "value": "var(--bsi-spacing-s) var(--bsi-spacing-xxs)",
+            "variable-name": "--bsi-list-item-spacing"
+        },
+        {
+            "description": "",
+            "value": "5rem",
+            "variable-name": "--bsi-list-item-thumb-size"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-spacing-xxs)",
+            "variable-name": "--bsi-list-inline-padding"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-text-muted)",
+            "variable-name": "--bsi-list-metadata-color"
+        },
+        {
+            "description": "",
+            "value": "0.5px",
+            "variable-name": "--bsi-list-metadata-letter-spacing"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-label-font-size-xs)",
+            "variable-name": "--bsi-list-metadata-font-size"
+        },
+        {
+            "description": "",
             "value": "#{$list-group-action-active-bg}",
             "variable-name": "--bsi-list-group-action-active-bg"
         },
@@ -1874,6 +1904,11 @@
             "description": "Controls the navbar link border size, using border tokens.",
             "value": "var(--bsi-border-thick)",
             "variable-name": "--bsi-navbar-link-border-size"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-border-primary)",
+            "variable-name": "--bsi-navbar-link-active-border-color"
         },
         {
             "description": "Nav link color default - mobile, using color tokens.",
@@ -3179,6 +3214,18 @@
             "description": "Controls the tooltip zindex.",
             "value": "10",
             "variable-name": "--bsi-tooltip-zindex"
+        }
+    ],
+    "videoplayer": [
+        {
+            "description": "",
+            "value": "var(--bsi-color-background-primary)",
+            "variable-name": "--bsi-videoplayer-button-background"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-background-primary)",
+            "variable-name": "--bsi-videoplayer-control-background"
         }
     ]
 }
