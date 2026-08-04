@@ -53,7 +53,7 @@ L'elemento `.avatar` precede l'elemento `.it-right-zone` che contiene il testo.
   <ul class="it-list">
     <li>
       <div class="list-item">
-        <div class="avatar size-lg">
+        <div class="avatar">
           <img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Anna Barbieri">
         </div>
         <div class="it-right-zone">
@@ -63,7 +63,7 @@ L'elemento `.avatar` precede l'elemento `.it-right-zone` che contiene il testo.
     </li>
     <li>
       <a href="#" class="list-item">
-        <div class="avatar size-lg">
+        <div class="avatar">
           <img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Anna Barbieri">
         </div>
         <div class="it-right-zone">
@@ -73,7 +73,7 @@ L'elemento `.avatar` precede l'elemento `.it-right-zone` che contiene il testo.
     </li>
     <li>
       <div class="list-item">
-        <div class="avatar size-lg">
+        <div class="avatar">
           <img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Anna Barbieri">
         </div>
         <div class="it-right-zone">
@@ -138,7 +138,7 @@ L'elemento `.it-rounded-icon` con all'interno la relativa icona, precede l'eleme
 
 ### Lista con immagine
 
-L'elemento `.it-thumb` con all'interno la relativa immagine, precede l'elemento `.it-right-zone` che contiene il testo.
+L'elemento `.it-thumb` con all'interno la relativa immagine, precede l'elemento `.it-right-zone` che contiene il testo. Ha una dimensione massima di `5rem` che corrispondono a `80px`. La proporzione dell'immagine può essere modificata utilizzando le classi specifiche per le <a href="{{ site.baseurl }}/docs/organizzare-gli-spazi/proporzioni/">proporzioni</a>
 
 {% comment %}Example name: Base, con immagine{% endcomment %}
 {% capture example %}
@@ -146,8 +146,8 @@ L'elemento `.it-thumb` con all'interno la relativa immagine, precede l'elemento 
   <ul class="it-list">
     <li>
       <div class="list-item">
-        <div class="it-thumb">
-          <img src="https://placehold.co/40x40.png?text=40x40" alt="descrizione immagine">
+        <div class="it-thumb ratio ratio-16x9">
+          <img src="https://placehold.co/400x300.png?text=thumb" alt="descrizione immagine">
         </div>
         <div class="it-right-zone">
           <span class="text">Testo</span>
@@ -156,8 +156,8 @@ L'elemento `.it-thumb` con all'interno la relativa immagine, precede l'elemento 
     </li>
     <li>
       <a href="#" class="list-item">
-        <div class="it-thumb">
-          <img src="https://placehold.co/40x40.png?text=40x40" alt="descrizione immagine">
+        <div class="it-thumb ratio ratio-4x3">
+          <img src="https://placehold.co/400x300.png?text=thumb" alt="descrizione immagine">
         </div>
         <div class="it-right-zone">
           <span class="text">Link</span>
@@ -166,8 +166,8 @@ L'elemento `.it-thumb` con all'interno la relativa immagine, precede l'elemento 
     </li>
     <li>
       <div class="list-item">
-        <div class="it-thumb">
-          <img src="https://placehold.co/40x40.png?text=40x40" alt="descrizione immagine">
+        <div class="it-thumb ratio ratio-1x1">
+          <img src="https://placehold.co/400x300.png?text=thumb" alt="descrizione immagine">
         </div>
         <div class="it-right-zone">
           <span class="text">Testo</span>
@@ -194,7 +194,7 @@ L'elemento `.icon` con all'interno la relativa icona segue l'elemento `.text` ch
       <a href="#" class="list-item">
         <div class="it-right-zone">
           <span class="text">Link</span>
-          <svg class="icon">
+          <svg class="icon icon-primary icon-sm">
             <title>Freccia destra</title>
             <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use>
           </svg>
@@ -205,7 +205,7 @@ L'elemento `.icon` con all'interno la relativa icona segue l'elemento `.text` ch
       <a href="#" class="list-item">
         <div class="it-right-zone">
           <span class="text">Link</span>
-          <svg class="icon">
+          <svg class="icon icon-primary icon-sm">
             <title>Freccia destra</title>
             <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-right"></use>
           </svg>
@@ -230,19 +230,19 @@ L'elemento `.it-multiple` con all'interno le relative icone, segue l'elemento `.
           <span class="text">Testo</span>
           <span class="it-multiple">
             <a href="#" aria-label="Testo - Azione 1">
-              <svg class="icon">
+              <svg class="icon icon-primary">
                 <title>Codice</title>
                 <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
               </svg>
             </a>
             <a href="#" aria-label="Testo - Azione 2">
-              <svg class="icon">
+              <svg class="icon icon-primary">
                 <title>Codice</title>
                 <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
               </svg>
             </a>
             <a href="#" aria-label="Testo - Azione 3">
-              <svg class="icon">
+              <svg class="icon icon-primary">
                 <title>Codice</title>
                 <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
               </svg>
@@ -259,19 +259,19 @@ L'elemento `.it-multiple` con all'interno le relative icone, segue l'elemento `.
           </a>
           <span class="it-multiple">
             <a href="#" aria-label="Link - Azione 1">
-              <svg class="icon">
+              <svg class="icon icon-primary">
                 <title>Codice</title>
                 <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
               </svg>
             </a>
             <a href="#" aria-label="Link - Azione 2">
-              <svg class="icon">
+              <svg class="icon icon-primary">
                 <title>Codice</title>
                 <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
               </svg>
             </a>
             <a href="#" aria-label="Link - Azione 3">
-              <svg class="icon">
+              <svg class="icon icon-primary">
                 <title>Codice</title>
                 <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
               </svg>
@@ -288,19 +288,19 @@ L'elemento `.it-multiple` con all'interno le relative icone, segue l'elemento `.
           </a>
           <span class="it-multiple">
             <a href="#" aria-label="Link - Azione 1">
-              <svg class="icon">
+              <svg class="icon icon-primary">
                 <title>Codice</title>
                 <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
               </svg>
             </a>
             <a href="#" aria-label="Link - Azione 2">
-              <svg class="icon">
+              <svg class="icon icon-primary">
                 <title>Codice</title>
                 <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
               </svg>
             </a>
             <a href="#" aria-label="Link - Azione 3">
-              <svg class="icon">
+              <svg class="icon icon-primary">
                 <title>Codice</title>
                 <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
               </svg>
@@ -326,7 +326,7 @@ L'elemento `.metadata`, segue l'elemento `.text`.
   <ul class="it-list">
     <li>
       <div class="list-item">
-        <div class="avatar size-lg">
+        <div class="avatar">
           <img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Anna Barbieri">
         </div>
         <div class="it-right-zone">
@@ -337,7 +337,7 @@ L'elemento `.metadata`, segue l'elemento `.text`.
     </li>
     <li>
       <div class="list-item">
-        <div class="avatar size-lg">
+        <div class="avatar">
           <img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Anna Barbieri">
         </div>
         <div class="it-right-zone">
@@ -348,7 +348,7 @@ L'elemento `.metadata`, segue l'elemento `.text`.
     </li>
     <li>
       <a href="#" class="list-item">
-        <div class="avatar size-lg">
+        <div class="avatar">
           <img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Anna Barbieri">
         </div>
         <div class="it-right-zone">
@@ -359,7 +359,7 @@ L'elemento `.metadata`, segue l'elemento `.text`.
     </li>
     <li>
       <div class="list-item">
-        <div class="avatar size-lg">
+        <div class="avatar">
           <img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Anna Barbieri">
         </div>
         <div class="it-right-zone">
@@ -372,7 +372,7 @@ L'elemento `.metadata`, segue l'elemento `.text`.
     </li>
     <li>
       <a class="list-item" href="#">
-        <div class="avatar size-lg">
+        <div class="avatar">
           <img src="https://randomuser.me/api/portraits/women/41.jpg" alt="Anna Barbieri">
         </div>
         <div class="it-right-zone">
@@ -403,19 +403,19 @@ Per avere una lista che permetta paragrafi di testo aggiuntivo per ogni elemento
           <span class="it-multiple">
             <span class="metadata">metadata testo</span>
             <a href="#" aria-label="Testo - Azione 1">
-              <svg class="icon">
+              <svg class="icon icon-primary">
                 <title>Codice</title>
                 <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
               </svg>
             </a>
             <a href="#" aria-label="Testo - Azione 2">
-              <svg class="icon">
+              <svg class="icon icon-primary">
                 <title>Codice</title>
                 <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
               </svg>
             </a>
             <a href="#" aria-label="Testo - Azione 3">
-              <svg class="icon">
+              <svg class="icon icon-primary">
                 <title>Codice</title>
                 <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
               </svg>
@@ -434,19 +434,19 @@ Per avere una lista che permetta paragrafi di testo aggiuntivo per ogni elemento
           <span class="it-multiple">
             <span class="metadata"><a href="#">metadata link</a></span>
             <a href="#" aria-label="Testo 2 - Azione 1">
-              <svg class="icon">
+              <svg class="icon icon-primary">
                 <title>Codice</title>
                 <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
               </svg>
             </a>
             <a href="#" aria-label="Testo 2 - Azione 2">
-              <svg class="icon">
+              <svg class="icon icon-primary">
                 <title>Codice</title>
                 <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
               </svg>
             </a>
             <a href="#" aria-label="Testo 2 - Azione 3">
-              <svg class="icon">
+              <svg class="icon icon-primary">
                 <title>Codice</title>
                 <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
               </svg>
@@ -465,19 +465,19 @@ Per avere una lista che permetta paragrafi di testo aggiuntivo per ogni elemento
           <span class="it-multiple">
             <span class="metadata"><a href="#">metadata link</a></span>
             <a href="#" aria-label="Link - Azione 1">
-              <svg class="icon">
+              <svg class="icon icon-primary">
                 <title>Codice</title>
                 <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
               </svg>
             </a>
             <a href="#" aria-label="Link - Azione 2">
-              <svg class="icon">
+              <svg class="icon icon-primary">
                 <title>Codice</title>
                 <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
               </svg>
             </a>
             <a href="#" aria-label="Link - Azione 3">
-              <svg class="icon">
+              <svg class="icon icon-primary">
                 <title>Codice</title>
                 <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
               </svg>
@@ -496,19 +496,19 @@ Per avere una lista che permetta paragrafi di testo aggiuntivo per ogni elemento
           <span class="it-multiple">
             <span class="metadata">metadata testo</span>
             <a href="#" aria-label="Link - Azione 1">
-              <svg class="icon">
+              <svg class="icon icon-primary">
                 <title>Codice</title>
                 <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
               </svg>
             </a>
             <a href="#" aria-label="Link - Azione 2">
-              <svg class="icon">
+              <svg class="icon icon-primary">
                 <title>Codice</title>
                 <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
               </svg>
             </a>
             <a href="#" aria-label="Link - Azione 3">
-              <svg class="icon">
+              <svg class="icon icon-primary">
                 <title>Codice</title>
                 <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use>
               </svg>
@@ -697,9 +697,6 @@ All'interno del tag `<span class="list-item-title-icon-wrapper">` subito dopo lo
       </a>
     </li>
     <li>
-      <span class="divider" role="separator"></span>
-    </li>
-    <li>
       <a class="list-item icon-right" href="#">
         <span class="list-item-title-icon-wrapper">
           <h4 class="list-item-title">Link lista 2</h4>
@@ -710,8 +707,6 @@ All'interno del tag `<span class="list-item-title-icon-wrapper">` subito dopo lo
         </span>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit…</p>
       </a>
-    </li>
-    <li><span class="divider"></span>
     </li>
     <li>
       <a class="list-item disabled icon-right" href="#" aria-disabled="true">
@@ -724,9 +719,6 @@ All'interno del tag `<span class="list-item-title-icon-wrapper">` subito dopo lo
         </span>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit…</p>
       </a>
-    </li>
-    <li>
-      <span class="divider"></span> 
     </li>
   </ul>
 </div>
@@ -802,7 +794,7 @@ Per posizionare correttamente l'icona a destra del testo bisogna aggiungere al t
       <a class="list-item active icon-right" href="#">
         <span class="list-item-title-icon-wrapper">
           <span class="list-item-title">Link lista 1 attivo</span>
-          <svg class="icon icon-primary">
+          <svg class="icon icon-primary icon-sm">
             <title>Link</title>
             <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use>
           </svg>
@@ -813,7 +805,7 @@ Per posizionare correttamente l'icona a destra del testo bisogna aggiungere al t
       <a class="list-item icon-right" href="#">
         <span class="list-item-title-icon-wrapper">
           <span class="list-item-title">Link lista 2</span>
-          <svg class="icon icon-primary">
+          <svg class="icon icon-primary icon-sm">
             <title>Link</title>
             <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use>
           </svg>
@@ -824,7 +816,7 @@ Per posizionare correttamente l'icona a destra del testo bisogna aggiungere al t
       <a class="list-item icon-right disabled" href="#" aria-disabled="true">
         <span class="list-item-title-icon-wrapper">
           <span class="list-item-title">Link lista 3 disabilitato</span>
-          <svg class="icon icon-primary">
+          <svg class="icon icon-primary icon-sm">
             <title>Link</title>
             <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use>
           </svg>
@@ -854,7 +846,7 @@ Inserisci l'icona all'interno del tag `<span class="list-item-title-icon-wrapper
     <li>
       <a class="list-item active icon-left" href="#">
         <span class="list-item-title-icon-wrapper">
-          <svg class="icon icon-primary">
+          <svg class="icon icon-primary icon-sm">
             <title>Link</title>
             <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use>
           </svg>
@@ -865,7 +857,7 @@ Inserisci l'icona all'interno del tag `<span class="list-item-title-icon-wrapper
     <li>
       <a class="list-item icon-left" href="#">
         <span class="list-item-title-icon-wrapper">
-          <svg class="icon icon-primary">
+          <svg class="icon icon-primary icon-sm">
             <title>Link</title>
             <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use>
           </svg>
@@ -877,7 +869,7 @@ Inserisci l'icona all'interno del tag `<span class="list-item-title-icon-wrapper
       <a class="list-item disabled icon-right" href="#" aria-disabled="true">
         <span class="list-item-title-icon-wrapper">
           <span class="list-item-title">Link lista 3 disabilitato con icona a destra</span>
-          <svg class="icon icon-primary">
+          <svg class="icon icon-primary icon-sm">
             <title>Link</title>
             <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use>
           </svg>
@@ -897,17 +889,21 @@ Una lista di link può contenere anche elementi appartenenti ai form, di seguito
  <div class="link-list-wrapper">
   <ul class="link-list">
     <li>
-      <div class="toggles">
-        <label for="toggle1">Label per toggle
-          <input type="checkbox" id="toggle1"><span class="lever"></span>
-        </label>
+      <div class="form-check form-check-inline">
+        <div class="toggles">
+          <label for="toggle1">Label per toggle
+            <input type="checkbox" id="toggle1"><span class="lever"></span>
+          </label>
+        </div>
       </div>
     </li>
     <li>
-      <div class="toggles">
+      <div class="form-check form-check-inline">
+        <div class="toggles">
         <label for="toggle2">Label per toggle disabilitato
           <input type="checkbox" id="toggle2" disabled aria-disabled="true"><span class="lever"></span>
         </label>
+        </div>
       </div>
     </li>
   </ul>
@@ -935,7 +931,7 @@ Lista di link contenente un [checkbox]({{ site.baseurl }}/docs/form/checkbox/).
       </div>
     </li>
     <li>
-      <div class="form-check form-check-group disabled" aria-describedby="" aria-disabled="true">
+      <div class="form-check form-check-group disabled" aria-disabled="true">
         <input type="checkbox" id="checkbox8" disabled aria-disabled="true">
         <label for="checkbox8">Checkbox disabilitato non selezionato</label>
       </div>
@@ -960,7 +956,7 @@ Di seguito un esempio di navigazione annidata espansa.
       <a class="list-item large medium icon-right" href="#">
         <span class="list-item-title-icon-wrapper">
           <span class="list-item-title">Link lista 1</span>
-          <svg class="icon icon-primary">
+          <svg class="icon icon-primary icon-sm">
             <title>Link</title>
             <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use>
           </svg>
@@ -971,7 +967,7 @@ Di seguito un esempio di navigazione annidata espansa.
       <a class="list-item large medium icon-right" href="#">
         <span class="list-item-title-icon-wrapper">
           <span class="list-item-title">Link lista 2</span>
-          <svg class="icon icon-primary">
+          <svg class="icon icon-primary icon-sm">
             <title>Link</title>
             <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use>
           </svg>
@@ -990,7 +986,7 @@ Di seguito un esempio di navigazione annidata espansa.
       <a class="list-item large medium icon-right" href="#">
         <span class="list-item-title-icon-wrapper">
           <span class="list-item-title">Link lista 3</span>
-          <svg class="icon icon-primary">
+          <svg class="icon icon-primary icon-sm">
             <title>Link</title>
             <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use>
           </svg>
@@ -1008,61 +1004,72 @@ Per questo tipo di link list sono state utilizzate, oltre alle classi custom, le
 
 {% comment %}Example name: Per menu, annidata collassabile{% endcomment %}
 {% capture example %}
-<div class="link-list-wrapper">
-  <ul class="link-list">
-    <li>
-      <a class="list-item large medium icon-right" href="#collapseOne" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseOne">
-        <span class="list-item-title-icon-wrapper">
-          <span class="list-item-title">Link lista 1</span>
-          <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
-        </span>
-      </a>
-      <ul class="link-sublist collapse" id="collapseOne">
-        <li><a class="list-item" href="#"><span>Link lista 1</span></a>
-        </li>
-        <li><a class="list-item" href="#"><span>Link lista 1</span></a>
-        </li>
-        <li><a class="list-item" href="#"><span>Link lista 1</span></a>
-        </li>
-      </ul>
-    </li>
-    <li>
-      <a class="list-item large medium icon-right" href="#collapseTwo" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo">
-        <span class="list-item-title-icon-wrapper">
-          <span class="list-item-title">Link lista 2</span>
-          <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
-        </span>
-      </a>
-      <ul class="link-sublist collapse" id="collapseTwo">
-        <li><a class="list-item" href="#"><span>Link lista 1</span></a>
-        </li>
-        <li><a class="list-item" href="#"><span>Link lista 1</span></a>
-        </li>
-        <li><a class="list-item" href="#"><span>Link lista 1</span></a>
-        </li>
-      </ul>
-    </li>
-    <li>
-      <a class="list-item large medium icon-right" href="#collapseThree" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseThree">
-        <span class="list-item-title-icon-wrapper">
-          <span class="list-item-title">Link lista 3</span>
-          <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
-        </span>
-      </a>
-      <ul class="link-sublist collapse" id="collapseThree">
-        <li><a class="list-item" href="#"><span>Link lista 1</span></a>
-        </li>
-        <li><a class="list-item" href="#"><span>Link lista 1</span></a>
-        </li>
-        <li><a class="list-item" href="#"><span>Link lista 1</span></a>
-        </li>
-      </ul>
-    </li>
-  </ul>
-</div>
+
+  <div class="link-list-wrapper">
+    <ul class="link-list">
+      <li>
+        <a class="list-item large medium right-icon" href="#collapseOne" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseOne">
+          <span class="list-item-title-icon-wrapper">
+            <span>Link lista 1</span>
+            <svg class="icon icon-xs icon-primary right"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
+          </span>
+        </a>
+        <ul class="link-sublist collapse" id="collapseOne">
+          <li><a class="list-item" href="#"><span>Link lista 1.1</span></a>
+          </li>
+          <li><a class="list-item" href="#"><span>Link lista 1.2</span></a>
+          </li>
+          <li><a class="list-item" href="#"><span>Link lista 1.3</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a class="list-item large medium right-icon" href="#collapseTwo" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo">
+          <span class="list-item-title-icon-wrapper">
+            <span>Link lista 2</span>
+            <svg class="icon icon-xs icon-primary right"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
+          </span>
+        </a>
+        <ul class="link-sublist collapse" id="collapseTwo">
+          <li><a class="list-item" href="#"><span>Link lista 2.1</span></a>
+          </li>
+          <li><a class="list-item" href="#"><span>Link lista 2.2</span></a>
+          </li>
+          <li><a class="list-item" href="#"><span>Link lista 2.3</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a class="list-item large medium right-icon" href="#collapseThree" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseThree">
+          <span class="list-item-title-icon-wrapper">
+            <span>Link lista 3</span>
+            <svg class="icon icon-xs icon-primary right"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
+          </span>
+        </a>
+        <ul class="link-sublist collapse" id="collapseThree">
+          <li><a class="list-item" href="#"><span>Link lista 3.1</span></a>
+          </li>
+          <li><a class="list-item" href="#"><span>Link lista 3.2</span></a>
+          </li>
+          <li><a class="list-item" href="#"><span>Link lista 3.3</span></a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
 {% endcapture %}{% include example.html content=example %}
 
+{% include properties.md properties=site.data.cprops.linklist %}
+
 ## Breaking change
+
+{% capture callout %}
+- Negli esempi di varianti lista con avatar è stata rimossa la classe `.size-lg` dai `<div>` con classe `.avatar`. 
+- Nelle liste con immagini sono state aggiunge le classi per controllare la dimensione dell'immagine sui `<div>` con classe `.it-thumb`: `.ratio` e `.ratio-16x9` con istruzioni su come cambiare quest'ultima con le classi specifiche per cambiare le proporzioni.
+- Nelle liste con azioni e freccia è definita esplicitamente la dimensione e il colore delle icone freccia aggiungendo le classi `.icon-primary` e `.icon-sm` rispettivamente dove necessario.
+- Nelle liste multilinea è stata rimosso elemento `<li>` e il tag `<span>` con classe `.divider`, il bordo è ora gestito con stili CSS
+{% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}
 
 {% capture callout %}
 Gli elementi di tipo `<a>` dei collapse necessitano l'aggiunta dell'attributo `role="button"`.

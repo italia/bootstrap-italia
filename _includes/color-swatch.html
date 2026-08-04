@@ -1,0 +1,12 @@
+{%- assign swatch_type = include.type | default: 'bg' -%}
+{%- if swatch_type == 'border' -%}
+<div class="rounded" style="min-height: 2.5rem; background-color: var(--bsi-page-background); border: 4px solid var({{ include.var }});">&nbsp;</div>
+{%- elsif swatch_type == 'inverse-border' -%}
+<div class="p-2" style="background-color: var(--bsi-color-background-primary-deep);"><div class=" rounded" style="min-height: 1.5rem; border: 4px solid var({{ include.var }});">&nbsp;</div></div>
+{%- elsif swatch_type == 'inverse-nested' -%}
+<div class="p-3 rounded" style="background-color: var(--bsi-color-background-primary);"><div class="p-2 rounded" style="background-color: var({{ include.var }});">&nbsp;</div></div>
+{%- elsif swatch_type == 'bg-border' -%}
+<div class="p-3 rounded border" style="background-color: var({{ include.var }});">&nbsp;</div>
+{%- else -%}
+<div class="p-3 rounded" style="background-color: var({{ include.var }});">&nbsp;</div>
+{%- endif -%}

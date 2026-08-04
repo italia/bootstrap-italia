@@ -30,12 +30,14 @@ Il testo è contenuto all'interno di un tag `<p>` e può essere preceduto da un'
 
 {% comment %}Example name: Base{% endcomment %}
 {% capture example %}
-<div class="toggles col-md-6 col-lg-4">
-  <label for="toggleDimmer1">
-    Attiva Dimmer 1
-    <input type="checkbox" id="toggleDimmer1" data-bs-toggle="dimmer" data-bs-target="#dimmer1" checked>
-    <span class="lever"></span>
-  </label>
+<div class="form-check form-check-inline">
+  <div class="toggles">
+    <label for="toggleDimmer1">
+      Dimmer attivo
+      <input type="checkbox" id="toggleDimmer1" data-bs-toggle="dimmer" data-bs-target="#dimmer1" checked>
+        <span class="lever"></span>
+    </label>
+  </div>
 </div>
 
 <div class="row dimmable">
@@ -107,12 +109,14 @@ Se si vuole iniziare con il dimmer disabilitato è necessario utilizzare l'attri
 {% comment %}Example name: Base, default disattivato{% endcomment %}
 {% capture example %}
 
-<div class="toggles col-md-6 col-lg-4">
-  <label for="toggleDimmer2">
-    Attiva Dimmer 2
-    <input type="checkbox" id="toggleDimmer2" data-bs-toggle="dimmer" data-bs-target="#dimmer2">
-    <span class="lever"></span>
-  </label>
+<div class="form-check form-check-inline">
+  <div class="toggles">
+    <label for="toggleDimmer2">
+      Dimmer attivo
+      <input type="checkbox" id="toggleDimmer2" data-bs-toggle="dimmer" data-bs-target="#dimmer2" checked>
+        <span class="lever"></span>
+    </label>
+  </div>
 </div>
 
 <div class="row dimmable">
@@ -186,12 +190,14 @@ Aggiungendo la classe `.dimmer-primary` al wrapper del dimmer si ottiene una ver
 {% comment %}Example name: Colore primary{% endcomment %}
 {% capture example %}
 
-<div class="toggles col-md-6 col-lg-4">
-  <label for="toggleDimmer3">
-    Attiva Dimmer 2
-    <input type="checkbox" id="toggleDimmer3" data-bs-toggle="dimmer" data-bs-target="#dimmer3" checked>
-    <span class="lever"></span>
-  </label>
+<div class="form-check form-check-inline">
+  <div class="toggles">
+    <label for="toggleDimmer3">
+      Dimmer attivo
+      <input type="checkbox" id="toggleDimmer3" data-bs-toggle="dimmer" data-bs-target="#dimmer3" checked>
+        <span class="lever"></span>
+    </label>
+  </div>
 </div>
 
 <div class="row dimmable">
@@ -264,12 +270,14 @@ I pulsanti vanno inseriti in un `<div>` con classi `.dimmer-buttons` e `.bg-dark
 {% comment %}Example name: Con azioni{% endcomment %}
 {% capture example %}
 
-<div class="toggles col-md-6 col-lg-4">
-  <label for="toggleDimmer4">
-    Attiva Dimmer 4
-    <input type="checkbox" id="toggleDimmer4" data-bs-toggle="dimmer" data-bs-target="#dimmer4" checked>
-    <span class="lever"></span>
-  </label>
+<div class="form-check form-check-inline">
+  <div class="toggles">
+    <label for="toggleDimmer4">
+      Dimmer attivo
+      <input type="checkbox" id="toggleDimmer4" data-bs-toggle="dimmer" data-bs-target="#dimmer4" checked>
+        <span class="lever"></span>
+    </label>
+  </div>
 </div>
 
 <div class="row dimmable">
@@ -344,12 +352,14 @@ Aggiungendo la classe `.dimmer-primary` al wrapper del dimmer si ottiene una ver
 {% comment %}Example name: Con azioni, colore primary{% endcomment %}
 {% capture example %}
 
-<div class="toggles col-md-6 col-lg-4">
-  <label for="toggleDimmer5">
-    Attiva Dimmer 5
-    <input type="checkbox" id="toggleDimmer5" data-bs-toggle="dimmer" data-bs-target="#dimmer5" checked>
-    <span class="lever"></span>
-  </label>
+<div class="form-check form-check-inline">
+  <div class="toggles">
+    <label for="toggleDimmer5">
+      Dimmer attivo
+      <input type="checkbox" id="toggleDimmer5" data-bs-toggle="dimmer" data-bs-target="#dimmer5" checked>
+        <span class="lever"></span>
+    </label>
+  </div>
 </div>
 
 <div class="row dimmable">
