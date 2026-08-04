@@ -28,6 +28,10 @@ const SELECTOR_TRANS_GROUP = '.transfer-group';
 const SELECTOR_SOURCE = `${SELECTOR_TRANS_WRAPPER}.source`;
 const SELECTOR_TARGET = `${SELECTOR_TRANS_WRAPPER}.target`;
 const SELECTOR_FORM_CHECK = '.form-check';
+// Selettore per l'istanziazione pigra (vedi in fondo al file): deve coprire
+// sia la label sia l'input, perché nel markup del componente l'input è
+// FRATELLO della label e non vi passa mai attraverso.
+const SELECTOR_DATA_API_INIT = `${SELECTOR_BLOCK} ${SELECTOR_FORM_CHECK} label, ${SELECTOR_BLOCK} ${SELECTOR_FORM_CHECK} input`;
 
 class Transfer extends BaseComponent {
   constructor(element) {
@@ -250,10 +254,16 @@ class Transfer extends BaseComponent {
  */
 
 if (typeof window !== 'undefined' && typeof document !== 'undefined') {
-  EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_BLOCK + ' .form-check label', function () {
+  // Il componente viene istanziato alla prima interazione. Con il mouse si
+  // clicca la label, l'evento la attraversa e il browser inoltra poi il click
+  // all'input: l'istanza esiste già quando l'input viene attivato. Da tastiera
+  // invece il focus è sull'input, e lo Spazio genera keyup e click direttamente
+  // su di esso senza toccare la label: delegando sulla sola label il componente
+  // non veniva mai istanziato e nessuna interazione da tastiera aveva effetto.
+  EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_API_INIT, function () {
     Transfer.getOrCreateInstance(this.closest(SELECTOR_BLOCK));
   });
-  EventHandler.on(document, EVENT_KEYUP_DATA_API, SELECTOR_BLOCK + ' .form-check label', function () {
+  EventHandler.on(document, EVENT_KEYUP_DATA_API, SELECTOR_DATA_API_INIT, function () {
     Transfer.getOrCreateInstance(this.closest(SELECTOR_BLOCK));
   });
 }
