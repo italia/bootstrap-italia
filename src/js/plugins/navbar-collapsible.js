@@ -14,6 +14,7 @@ import { isScreenMobile } from './util/device'
 import ScrollBarHelper from './util/scrollbar'
 import FocusTrap from './util/focustrap'
 import Backdrop from './util/backdrop'
+import { buildMobileMenu } from './util/mobile-menu'
 
 const NAME = 'navbarcollapsible'
 const DATA_KEY = 'bs.navbarcollapsible'
@@ -76,6 +77,9 @@ class NavBarCollapsible extends BaseComponent {
     this._btnClose = SelectorEngine.findOne(SELECTOR_BTN_CLOSE, this._element)
     this._btnBack = SelectorEngine.findOne(SELECTOR_BTN_BACK, this._element)
     this._menuWrapper = SelectorEngine.findOne(SELECTOR_MENU_WRAPPER, this._element)
+
+    // Must run before `_menuItems` is collected, so that the cloned links are bound as well.
+    buildMobileMenu(this._element)
 
     this._menuItems = SelectorEngine.find(
       [SELECTOR_NAVLINK, SELECTOR_MEGAMENUNAVLINK, SELECTOR_HEADINGLINK, SELECTOR_FOOTERLINK, SELECTOR_BTN_MENU_CLOSE].join(','),
