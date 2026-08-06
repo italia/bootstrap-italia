@@ -17,6 +17,7 @@ import BaseComponent from './base-component'
 import Backdrop from './util/backdrop'
 import FocusTrap from './util/focustrap'
 import { enableDismissTrigger } from './util/component-functions'
+import { applyInert, releaseInert } from './util/inert'
 
 /**
  * Constants
@@ -63,26 +64,8 @@ const DefaultType = {
 
 // Elements outside the modal must be isolated from assistive technology (e.g. VoiceOver's
 // virtual cursor) while the modal is open, since the focus trap alone doesn't stop that kind
-// of navigation. `inert` is reference-counted because two modal instances can end up inerting
-// the same background elements at once (see the data-api handler swapping an open modal for
-// another one), so the first one to close must not remove `inert` while the second still needs it.
-const inertCounts = new Map()
-const setInert = (el) => {
-  const count = inertCounts.get(el) || 0
-  if (count === 0) {
-    el.setAttribute('inert', '')
-  }
-  inertCounts.set(el, count + 1)
-}
-const unsetInert = (el) => {
-  const count = inertCounts.get(el) || 0
-  if (count <= 1) {
-    inertCounts.delete(el)
-    el.removeAttribute('inert')
-  } else {
-    inertCounts.set(el, count - 1)
-  }
-}
+// of navigation. The walk and its reference counting live in `util/inert.js`, shared with the
+// other components that isolate the background (see `navbar-collapsible.js`).
 
 // `ScrollBarHelper` sets `overflow: hidden` on `document.body` to lock the background while a
 // modal is open, but per spec an `overflow: hidden` box is only blocked from *user-driven*
@@ -411,40 +394,15 @@ class Modal extends BaseComponent {
   }
 
   _applyInert() {
-    this._inertedElements = []
-
-    let current = this._element
-    while (current && current !== document.body && current.parentElement) {
-      const parent = current.parentElement
-      for (const sibling of parent.children) {
-        if (sibling === current || !(sibling instanceof HTMLElement)) {
-          continue
-        }
-
-        if (['SCRIPT', 'STYLE', 'TEMPLATE', 'LINK'].includes(sibling.tagName)) {
-          continue
-        }
-
-        // other modals/backdrops are already display:none + aria-hidden; inert-ing them here
-        // would create a race when one modal replaces another (see data-api handler below)
-        if (sibling.matches('.modal, .modal-backdrop')) {
-          continue
-        }
-
-        setInert(sibling)
-        this._inertedElements.push(sibling)
-      }
-
-      current = parent
-    }
+    this._inertedElements = applyInert(this._element, (sibling) =>
+      // other modals/backdrops are already display:none + aria-hidden; inert-ing them here
+      // would create a race when one modal replaces another (see data-api handler below)
+      sibling.matches('.modal, .modal-backdrop')
+    )
   }
 
   _removeInert() {
-    for (const element of this._inertedElements) {
-      unsetInert(element)
-    }
-
-    this._inertedElements = []
+    this._inertedElements = releaseInert(this._inertedElements)
   }
 }
 

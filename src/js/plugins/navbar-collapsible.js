@@ -15,6 +15,7 @@ import ScrollBarHelper from './util/scrollbar'
 import FocusTrap from './util/focustrap'
 import Backdrop from './util/backdrop'
 import { buildMobileMenu } from './util/mobile-menu'
+import { applyInert, releaseInert } from './util/inert'
 
 const NAME = 'navbarcollapsible'
 const DATA_KEY = 'bs.navbarcollapsible'
@@ -58,9 +59,8 @@ class NavBarCollapsible extends BaseComponent {
   constructor(element, config) {
     super(element, config)
 
-    this._mainElement = SelectorEngine.findOne('main')
-    this._isNavbarOutsideMain = this._mainElement && !this._mainElement.contains(this._element)
     this._parentElement = this._element.parentNode
+    this._inertedElements = []
 
     this._isShown = this._element.classList.contains(CLASS_NAME_EXPANDED)
 
@@ -186,6 +186,7 @@ class NavBarCollapsible extends BaseComponent {
     this._backdrop.dispose()
 
     this._focustrap.deactivate()
+    this._removeInert()
     super.dispose()
   }
 
@@ -258,9 +259,7 @@ class NavBarCollapsible extends BaseComponent {
     this._element.setAttribute('aria-modal', true)
     this._element.setAttribute('role', 'dialog')
 
-    if (this._mainElement && this._isNavbarOutsideMain) {
-      this._mainElement.setAttribute('inert', '')
-    }
+    this._applyInert()
 
     reflow(this._element)
 
@@ -284,14 +283,27 @@ class NavBarCollapsible extends BaseComponent {
 
     document.body.classList.remove(CLASS_NAME_OPEN)
 
-    if (this._mainElement && this._isNavbarOutsideMain) {
-      this._mainElement.removeAttribute('inert')
-    }
+    // the background must not be inert anymore before EVENT_HIDDEN fires, since focus is
+    // restored to the toggle button, which is one of the previously inerted elements
+    this._removeInert()
 
     this._scrollBar.reset()
     this._isTransitioning = false
 
     EventHandler.trigger(this._element, EVENT_HIDDEN)
+  }
+
+  _applyInert() {
+    // The panel is a fixed overlay covering the whole viewport, so everything outside it must be
+    // unreachable while it is open: the focus trap alone doesn't stop a screen reader virtual
+    // cursor, which would otherwise walk the header bands, the page content and the footer.
+    // The backdrop is skipped because `inert` also blocks pointer events, and clicking it closes
+    // the menu.
+    this._inertedElements = applyInert(this._element, (sibling) => sibling.matches('.navbar-backdrop'))
+  }
+
+  _removeInert() {
+    this._inertedElements = releaseInert(this._inertedElements)
   }
 }
 
