@@ -25,6 +25,13 @@ const NON_RENDERED_TAGS = ['SCRIPT', 'STYLE', 'TEMPLATE', 'LINK']
 export const setInert = (el) => {
   const count = inertCounts.get(el) || 0
   if (count === 0) {
+    // WebKit doesn't reliably blur the element that had focus when it becomes inert, which would
+    // leave the keyboard (and VoiceOver) stuck on the isolated background — typically the
+    // hamburger button that just opened the mobile menu.
+    if (document.activeElement && el.contains(document.activeElement)) {
+      document.activeElement.blur()
+    }
+
     el.setAttribute('inert', '')
   }
   inertCounts.set(el, count + 1)

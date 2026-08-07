@@ -241,9 +241,6 @@ class Modal extends BaseComponent {
       document.body.append(this._element)
     }
 
-    // the modal may have just been (re)parented above, so (re)compute the ancestor chain now
-    this._applyInert()
-
     this._element.style.display = 'block'
     this._element.removeAttribute('aria-hidden')
     this._element.setAttribute('aria-modal', true)
@@ -259,11 +256,17 @@ class Modal extends BaseComponent {
 
     this._element.classList.add(CLASS_NAME_SHOW)
 
-    const transitionComplete = () => {
-      if (this._config.focus) {
-        this._focustrap.activate()
-      }
+    // Focus has to move inside the dialog *before* the background is inerted, otherwise the
+    // element that opened it stays focused while becoming inert, and WebKit leaves the VoiceOver
+    // cursor stranded on it. The ancestor chain is computed here and not earlier because the modal
+    // may have just been (re)parented above.
+    if (this._config.focus) {
+      this._focustrap.activate()
+    }
 
+    this._applyInert()
+
+    const transitionComplete = () => {
       this._isTransitioning = false
       EventHandler.trigger(this._element, EVENT_SHOWN, {
         relatedTarget,

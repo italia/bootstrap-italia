@@ -205,7 +205,9 @@ class NavBarCollapsible extends BaseComponent {
   _initializeFocusTrap() {
     return new FocusTrap({
       trapElement: this._element,
-      initialFocus: () => this._btnClose || this._element.querySelector('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'),
+      // FocusTrap falls back to the first focusable element of the panel when the close button is
+      // missing or not focusable, so no manual fallback is needed here.
+      initialFocus: () => this._btnClose,
     })
   }
 
@@ -259,16 +261,21 @@ class NavBarCollapsible extends BaseComponent {
     this._element.setAttribute('aria-modal', true)
     this._element.setAttribute('role', 'dialog')
 
-    this._applyInert()
-
     reflow(this._element)
 
     this._element.classList.add(CLASS_NAME_EXPANDED)
 
+    // Focus has to move inside the panel *before* the background is inerted: the hamburger button
+    // is one of the elements that is about to become inert, and WebKit leaves the VoiceOver cursor
+    // on it, with no way out of the isolated background. Activating the trap here also closes the
+    // window, lasting the whole opening transition, in which Tab could still reach the page behind.
+    if (this._config.focus) {
+      this._focustrap.activate()
+    }
+
+    this._applyInert()
+
     const transitionComplete = () => {
-      if (this._config.focus) {
-        this._focustrap.activate()
-      }
       this._isTransitioning = false
       EventHandler.trigger(this._element, EVENT_SHOWN)
     }
