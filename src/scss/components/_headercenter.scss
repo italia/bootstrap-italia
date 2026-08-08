@@ -60,7 +60,11 @@
         align-items: center;
         font-size: $header-center-text-size;
         ul {
-          list-style-type: none;
+          li {
+            &::marker {
+              font-size: 0; // hide default marker safely without affecting Safari accessibility
+            }
+          }
           margin: 0;
           padding: 0;
           display: flex;
@@ -167,7 +171,11 @@
           align-items: center;
           font-size: $header-center-text-size;
           ul {
-            list-style-type: none;
+            li {
+              &::marker {
+                font-size: 0; // hide default marker safely without affecting Safari accessibility
+              }
+            }
             margin: 0;
             padding: 0;
             display: flex;

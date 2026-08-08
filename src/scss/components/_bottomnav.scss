@@ -35,7 +35,9 @@
     margin: 0;
     height: 64px;
     li {
-      list-style-type: none;
+      &::marker {
+        font-size: 0; // hide default marker safely without affecting Safari accessibility
+      }
       margin: 8px;
       text-align: center;
     }

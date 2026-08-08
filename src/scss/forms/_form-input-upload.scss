@@ -46,7 +46,9 @@
   flex-wrap: wrap;
   //grid list element
   & > li {
-    list-style-type: none;
+    &::marker {
+      font-size: 0; // hide default marker safely without affecting Safari accessibility
+    }
     margin-right: $v-gap;
     margin-bottom: $v-gap;
 
@@ -120,7 +122,9 @@
   }
 
   .upload-file {
-    list-style-type: none;
+    &::marker {
+      font-size: 0; // hide default marker safely without affecting Safari accessibility
+    }
     display: flex;
     align-items: center;
     max-width: 375px;

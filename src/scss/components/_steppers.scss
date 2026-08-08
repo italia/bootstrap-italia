@@ -41,7 +41,9 @@
         font-size: 1.125rem;
         font-weight: 600;
         color: $gray-secondary;
-        list-style-type: none;
+        &::marker {
+          font-size: 0; // hide default marker safely without affecting Safari accessibility
+        }
         .icon {
           fill: $gray-secondary;
           margin-right: 0.667rem;
@@ -156,7 +158,9 @@
       justify-content: center;
       align-items: center;
       li {
-        list-style-type: none;
+        &::marker {
+          font-size: 0; // hide default marker safely without affecting Safari accessibility
+        }
         padding: 0;
         height: 4px;
         width: 4px;

@@ -1,7 +1,6 @@
 //mobile
 .it-list-wrapper {
   .it-list {
-    list-style-type: none;
     margin: 0;
     padding: 0;
 
@@ -112,10 +111,16 @@
       }
     }
 
-    li:last-child {
-      .list-item {
-        span.text {
-          border-bottom: 1px solid transparent;
+    li {
+      &::marker {
+        font-size: 0; // hide default marker safely without affecting Safari accessibility
+      }
+
+      &:last-child {
+        .list-item {
+          span.text {
+            border-bottom: 1px solid transparent;
+          }
         }
       }
     }
