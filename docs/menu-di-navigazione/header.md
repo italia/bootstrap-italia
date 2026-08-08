@@ -53,7 +53,7 @@ Il cambio lingua è gestito con il componente [dropdown]({{ site.baseurl }}/docs
                 <svg class="icon" aria-hidden="true"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
               </a>
               <div class="link-list-wrapper collapse" id="menu1a">
-                <ul class="link-list">
+                <ul class="link-list" role="list">
                   <li><a class="dropdown-item list-item" href="#">Link 1</a></li>
                   <li><a class="list-item active" href="#" aria-current="page">Link 2 (Attivo)</a></li>
                 </ul>
@@ -71,7 +71,7 @@ Il cambio lingua è gestito con il componente [dropdown]({{ site.baseurl }}/docs
                 <div class="row">
                   <div class="col-12">
                     <div class="link-list-wrapper">
-                      <ul class="link-list">
+                      <ul class="link-list" role="list">
                         <li><a class="dropdown-item list-item" href="#"><span>ITA <span class="visually-hidden">selezionata</span></span></a></li>
                         <li><a class="dropdown-item list-item" href="#"><span>ENG</span></a></li>
                       </ul>
@@ -117,7 +117,7 @@ Il modificatore `.btn-full` è disponibile anche con il tema chiaro attivato da 
                 <div class="row">
                   <div class="col-12">
                     <div class="link-list-wrapper">
-                      <ul class="link-list">
+                      <ul class="link-list" role="list">
                         <li><a class="dropdown-item list-item" href="#"><span>ITA <span class="visually-hidden">selezionata</span></span></a></li>
                         <li><a class="dropdown-item list-item" href="#"><span>ENG</span></a></li>
                       </ul>
@@ -161,7 +161,7 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
                 <svg class="icon" aria-hidden="true"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
               </a>
               <div class="link-list-wrapper collapse" id="menu1b">
-                <ul class="link-list">
+                <ul class="link-list" role="list">
                   <li><a class="dropdown-item list-item" href="#">Link 1</a></li>
                   <li><a class="list-item active" href="#" aria-current="page">Link 2 (Attivo)</a></li>
                 </ul>
@@ -179,7 +179,7 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
                 <div class="row">
                   <div class="col-12">
                     <div class="link-list-wrapper">
-                      <ul class="link-list">
+                      <ul class="link-list" role="list">
                         <li><a class="dropdown-item list-item" href="#"><span>ITA <span class="visually-hidden">selezionata</span></span></a></li>
                         <li><a class="dropdown-item list-item" href="#"><span>ENG</span></a></li>
                       </ul>
@@ -429,7 +429,7 @@ Per cambiare tema all'header centrale è sufficiente aggiungere la classe `theme
                   </a>
                   <div class="dropdown-menu" role="region" aria-labelledby="mainNavDropdown1">
                     <div class="link-list-wrapper">
-                      <ul class="link-list">
+                      <ul class="link-list" role="list">
                         <li><a class="dropdown-item list-item" href="#"><span>Link lista 1</span></a></li>
                         <li><a class="dropdown-item list-item" href="#"><span>Link lista 2</span></a></li>
                         <li><a class="dropdown-item list-item" href="#"><span>Link lista 3</span></a></li>
@@ -472,7 +472,7 @@ Per cambiare tema all'header centrale è sufficiente aggiungere la classe `theme
                           <div class="row">
                             <div class="col-12 col-lg-6">
                               <div class="link-list-wrapper">
-                                <ul class="link-list">
+                                <ul class="link-list" role="list">
                                   <li>
                                     <a class="list-item dropdown-item" href="#">
                                       <svg role="img" class="icon icon-sm me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
@@ -496,7 +496,7 @@ Per cambiare tema all'header centrale è sufficiente aggiungere la classe `theme
                             </div>
                             <div class="col-12 col-lg-6">
                               <div class="link-list-wrapper">
-                                <ul class="link-list">
+                                <ul class="link-list" role="list">
                                   <li>
                                     <a class="list-item dropdown-item" href="#">
                                       <svg role="img" class="icon icon-sm me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
@@ -579,7 +579,7 @@ Per modificare il tema dell'Header Nav è sufficiente aggiungere una o tutte e d
                   </a>
                   <div class="dropdown-menu" role="region" aria-labelledby="mainNavDropdown0">
                     <div class="link-list-wrapper">
-                      <ul class="link-list">
+                      <ul class="link-list" role="list">
                         <li><a class="dropdown-item list-item" href="#"><span>Link lista 1</span></a></li>
                         <li><a class="dropdown-item list-item" href="#"><span>Link lista 2</span></a></li>
                         <li><a class="dropdown-item list-item" href="#"><span>Link lista 3</span></a></li>
@@ -622,7 +622,7 @@ Per modificare il tema dell'Header Nav è sufficiente aggiungere una o tutte e d
                           <div class="row">
                             <div class="col-12 col-lg-6">
                               <div class="link-list-wrapper">
-                                <ul class="link-list">
+                                <ul class="link-list" role="list">
                                   <li>
                                     <a class="list-item dropdown-item" href="#">
                                       <svg role="img" class="icon icon-sm me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
@@ -646,7 +646,7 @@ Per modificare il tema dell'Header Nav è sufficiente aggiungere una o tutte e d
                             </div>
                             <div class="col-12 col-lg-6">
                               <div class="link-list-wrapper">
-                                <ul class="link-list">
+                                <ul class="link-list" role="list">
                                   <li>
                                     <a class="list-item dropdown-item" href="#">
                                       <svg role="img" class="icon icon-sm me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
@@ -717,7 +717,7 @@ Per modificare il tema dell'Header Nav è sufficiente aggiungere una o tutte e d
                   </a>
                   <div class="dropdown-menu" role="region" aria-labelledby="mainNavDropdown2">
                     <div class="link-list-wrapper">
-                      <ul class="link-list">
+                      <ul class="link-list" role="list">
                         <li><a class="dropdown-item list-item" href="#"><span>Link lista 1</span></a></li>
                         <li><a class="dropdown-item list-item" href="#"><span>Link lista 2</span></a></li>
                         <li><a class="dropdown-item list-item" href="#"><span>Link lista 3</span></a></li>
@@ -760,7 +760,7 @@ Per modificare il tema dell'Header Nav è sufficiente aggiungere una o tutte e d
                           <div class="row">
                             <div class="col-12 col-lg-6">
                               <div class="link-list-wrapper">
-                                <ul class="link-list">
+                                <ul class="link-list" role="list">
                                   <li>
                                     <a class="list-item dropdown-item" href="#">
                                       <svg role="img" class="icon icon-sm me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
@@ -784,7 +784,7 @@ Per modificare il tema dell'Header Nav è sufficiente aggiungere una o tutte e d
                             </div>
                             <div class="col-12 col-lg-6">
                               <div class="link-list-wrapper">
-                                <ul class="link-list">
+                                <ul class="link-list" role="list">
                                   <li>
                                     <a class="list-item dropdown-item" href="#">
                                       <svg role="img" class="icon icon-sm me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
@@ -857,7 +857,7 @@ Per modificare il tema dell'Header Nav è sufficiente aggiungere una o tutte e d
                   </a>
                   <div class="dropdown-menu" role="region" aria-labelledby="mainNavDropdown3">
                     <div class="link-list-wrapper">
-                      <ul class="link-list">
+                      <ul class="link-list" role="list">
                         <li><a class="dropdown-item list-item" href="#"><span>Link lista 1</span></a></li>
                         <li><a class="dropdown-item list-item" href="#"><span>Link lista 2</span></a></li>
                         <li><a class="dropdown-item list-item" href="#"><span>Link lista 3</span></a></li>
@@ -900,7 +900,7 @@ Per modificare il tema dell'Header Nav è sufficiente aggiungere una o tutte e d
                           <div class="row">
                             <div class="col-12 col-lg-6">
                               <div class="link-list-wrapper">
-                                <ul class="link-list">
+                                <ul class="link-list" role="list">
                                   <li>
                                     <a class="list-item dropdown-item" href="#">
                                       <svg role="img" class="icon icon-sm me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
@@ -924,7 +924,7 @@ Per modificare il tema dell'Header Nav è sufficiente aggiungere una o tutte e d
                             </div>
                             <div class="col-12 col-lg-6">
                               <div class="link-list-wrapper">
-                                <ul class="link-list">
+                                <ul class="link-list" role="list">
                                   <li>
                                     <a class="list-item dropdown-item" href="#">
                                       <svg role="img" class="icon icon-sm me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
@@ -1024,7 +1024,7 @@ Al menu di navigazione principale può essere aggiunto anche un menu di navigazi
                   <svg class="icon" aria-hidden="true"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
                 </a>
                 <div class="link-list-wrapper collapse" id="menuC1">
-                  <ul class="link-list">
+                  <ul class="link-list" role="list">
                     <li><a class="dropdown-item list-item" href="#">Link 1</a></li>
                     <li><a class="list-item active" href="#" aria-current="page">Link 2 (Attivo)</a></li>
                   </ul>
@@ -1042,7 +1042,7 @@ Al menu di navigazione principale può essere aggiunto anche un menu di navigazi
                   <div class="row">
                     <div class="col-12">
                       <div class="link-list-wrapper">
-                        <ul class="link-list">
+                        <ul class="link-list" role="list">
                           <li><a class="dropdown-item list-item" href="#"><span>ITA <span class="visually-hidden">selezionata</span></span></a></li>
                           <li><a class="dropdown-item list-item" href="#"><span>ENG</span></a></li>
                         </ul>
@@ -1143,7 +1143,7 @@ Al menu di navigazione principale può essere aggiunto anche un menu di navigazi
                       </a>
                       <div class="dropdown-menu" role="region" aria-labelledby="mainNavDropdownC1">
                         <div class="link-list-wrapper">
-                          <ul class="link-list">
+                          <ul class="link-list" role="list">
                             <li><a class="dropdown-item list-item" href="#"><span>Link lista 1</span></a></li>
                             <li><a class="dropdown-item list-item" href="#"><span>Link lista 2</span></a></li>
                             <li><a class="dropdown-item list-item" href="#"><span>Link lista 3</span></a></li>
@@ -1186,7 +1186,7 @@ Al menu di navigazione principale può essere aggiunto anche un menu di navigazi
                               <div class="row">
                                 <div class="col-12 col-lg-6">
                                   <div class="link-list-wrapper">
-                                    <ul class="link-list">
+                                    <ul class="link-list" role="list">
                                       <li>
                                         <a class="list-item dropdown-item" href="#">
                                           <svg role="img" class="icon icon-sm me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
@@ -1210,7 +1210,7 @@ Al menu di navigazione principale può essere aggiunto anche un menu di navigazi
                                 </div>
                                 <div class="col-12 col-lg-6">
                                   <div class="link-list-wrapper">
-                                    <ul class="link-list">
+                                    <ul class="link-list" role="list">
                                       <li>
                                         <a class="list-item dropdown-item" href="#">
                                           <svg role="img" class="icon icon-sm me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
@@ -1272,7 +1272,7 @@ Verrà creata un'ombra per enfatizzare l'Header rispetto alla pagina in cui è c
                   <svg class="icon" aria-hidden="true"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
                 </a>
                 <div class="link-list-wrapper collapse" id="menuC2">
-                  <ul class="link-list">
+                  <ul class="link-list" role="list">
                     <li><a class="dropdown-item list-item" href="#">Link 1</a></li>
                     <li><a class="list-item active" href="#" aria-current="page">Link 2 (Attivo)</a></li>
                   </ul>
@@ -1290,7 +1290,7 @@ Verrà creata un'ombra per enfatizzare l'Header rispetto alla pagina in cui è c
                   <div class="row">
                     <div class="col-12">
                       <div class="link-list-wrapper">
-                        <ul class="link-list">
+                        <ul class="link-list" role="list">
                           <li><a class="dropdown-item list-item" href="#"><span>ITA <span class="visually-hidden">selezionata</span></span></a></li>
                           <li><a class="dropdown-item list-item" href="#"><span>ENG</span></a></li>
                         </ul>
@@ -1385,7 +1385,7 @@ Verrà creata un'ombra per enfatizzare l'Header rispetto alla pagina in cui è c
                       </a>
                       <div class="dropdown-menu" role="region" aria-labelledby="mainNavDropdownC2">
                         <div class="link-list-wrapper">
-                          <ul class="link-list">
+                          <ul class="link-list" role="list">
                             <li><a class="dropdown-item list-item" href="#"><span>Link lista 1</span></a></li>
                             <li><a class="dropdown-item list-item" href="#"><span>Link lista 2</span></a></li>
                             <li><a class="dropdown-item list-item" href="#"><span>Link lista 3</span></a></li>
@@ -1428,7 +1428,7 @@ Verrà creata un'ombra per enfatizzare l'Header rispetto alla pagina in cui è c
                               <div class="row">
                                 <div class="col-12 col-lg-6">
                                   <div class="link-list-wrapper">
-                                    <ul class="link-list">
+                                    <ul class="link-list" role="list">
                                       <li>
                                         <a class="list-item dropdown-item" href="#">
                                           <svg role="img" class="icon icon-sm me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
@@ -1452,7 +1452,7 @@ Verrà creata un'ombra per enfatizzare l'Header rispetto alla pagina in cui è c
                                 </div>
                                 <div class="col-12 col-lg-6">
                                   <div class="link-list-wrapper">
-                                    <ul class="link-list">
+                                    <ul class="link-list" role="list">
                                       <li>
                                         <a class="list-item dropdown-item" href="#">
                                           <svg role="img" class="icon icon-sm me-2"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>

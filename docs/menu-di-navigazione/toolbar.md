@@ -424,7 +424,7 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
           <div class="link-list-wrapper">
-            <ul class="link-list">
+            <ul class="link-list" role="list">
               <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
               <li><a class="dropdown-item list-item" href="#"><span>Azione 2</span></a></li>
               <li><a class="dropdown-item list-item" href="#"><span>Azione 3</span></a></li>
@@ -441,7 +441,7 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
           <div class="link-list-wrapper">
-            <ul class="link-list">
+            <ul class="link-list" role="list">
               <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
               <li><a class="dropdown-item list-item" href="#"><span>Azione 2</span></a></li>
               <li><a class="dropdown-item list-item" href="#"><span>Azione 3</span></a></li>
@@ -458,7 +458,7 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton4">
           <div class="link-list-wrapper">
-            <ul class="link-list">
+            <ul class="link-list" role="list">
               <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
               <li><a class="dropdown-item list-item" href="#"><span>Azione 2</span></a></li>
               <li><a class="dropdown-item list-item" href="#"><span>Azione 3</span></a></li>
@@ -475,7 +475,7 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton5">
           <div class="link-list-wrapper">
-            <ul class="link-list">
+            <ul class="link-list" role="list">
               <li><a class="list-item icon-left" href="#"><svg class="icon me-2" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg><span>Label</span></a></li>
               <li><a class="list-item icon-left" href="#"><svg class="icon me-2" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-mail"></use></svg><span>Label</span></a></li>
               <li><a class="list-item icon-left" href="#"><svg class="icon me-2" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-settings"></use></svg><span>Label</span></a></li>
@@ -507,7 +507,7 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton-med">
           <div class="link-list-wrapper">
-            <ul class="link-list">
+            <ul class="link-list" role="list">
               <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
               <li><a class="dropdown-item list-item" href="#"><span>Azione 2</span></a></li>
               <li><a class="dropdown-item list-item" href="#"><span>Azione 3</span></a></li>
@@ -528,7 +528,7 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2-med">
           <div class="link-list-wrapper">
-            <ul class="link-list">
+            <ul class="link-list" role="list">
               <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
               <li><a class="dropdown-item list-item" href="#"><span>Azione 2</span></a></li>
               <li><a class="dropdown-item list-item" href="#"><span>Azione 3</span></a></li>
@@ -545,7 +545,7 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton3-med">
           <div class="link-list-wrapper">
-            <ul class="link-list">
+            <ul class="link-list" role="list">
               <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
               <li><a class="dropdown-item list-item" href="#"><span>Azione 2</span></a></li>
               <li><a class="dropdown-item list-item" href="#"><span>Azione 3</span></a></li>
@@ -562,7 +562,7 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton4-med">
           <div class="link-list-wrapper">
-            <ul class="link-list">
+            <ul class="link-list" role="list">
               <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
               <li><a class="dropdown-item list-item" href="#"><span>Azione 2</span></a></li>
               <li><a class="dropdown-item list-item" href="#"><span>Azione 3</span></a></li>
@@ -579,7 +579,7 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton5-med">
           <div class="link-list-wrapper">
-            <ul class="link-list">
+            <ul class="link-list" role="list">
               <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
               <li><a class="dropdown-item list-item" href="#"><span>Azione 2</span></a></li>
               <li><a class="dropdown-item list-item" href="#"><span>Azione 3</span></a></li>
@@ -596,7 +596,7 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton6-med">
           <div class="link-list-wrapper">
-            <ul class="link-list">
+            <ul class="link-list" role="list">
               <li><a class="list-item icon-left" href="#"><svg class="icon me-2" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg><span>Label</span></a></li>
               <li><a class="list-item icon-left" href="#"><svg class="icon me-2" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-mail"></use></svg><span>Label</span></a></li>
               <li><a class="list-item icon-left" href="#"><svg class="icon me-2" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-settings"></use></svg><span>Label</span></a></li>
@@ -628,7 +628,7 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton-sml">
           <div class="link-list-wrapper">
-            <ul class="link-list">
+            <ul class="link-list" role="list">
               <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
               <li><a class="dropdown-item list-item" href="#"><span>Azione 2</span></a></li>
               <li><a class="dropdown-item list-item" href="#"><span>Azione 3</span></a></li>
@@ -649,7 +649,7 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2-sml">
           <div class="link-list-wrapper">
-            <ul class="link-list">
+            <ul class="link-list" role="list">
               <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
               <li><a class="dropdown-item list-item" href="#"><span>Azione 2</span></a></li>
               <li><a class="dropdown-item list-item" href="#"><span>Azione 3</span></a></li>
@@ -666,7 +666,7 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton3-sml">
           <div class="link-list-wrapper">
-            <ul class="link-list">
+            <ul class="link-list" role="list">
               <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
               <li><a class="dropdown-item list-item" href="#"><span>Azione 2</span></a></li>
               <li><a class="dropdown-item list-item" href="#"><span>Azione 3</span></a></li>
@@ -683,7 +683,7 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton4-sml">
           <div class="link-list-wrapper">
-            <ul class="link-list">
+            <ul class="link-list" role="list">
               <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
               <li><a class="dropdown-item list-item" href="#"><span>Azione 2</span></a></li>
               <li><a class="dropdown-item list-item" href="#"><span>Azione 3</span></a></li>
@@ -700,7 +700,7 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton5-sml">
           <div class="link-list-wrapper">
-            <ul class="link-list">
+            <ul class="link-list" role="list">
               <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
               <li><a class="dropdown-item list-item" href="#"><span>Azione 2</span></a></li>
               <li><a class="dropdown-item list-item" href="#"><span>Azione 3</span></a></li>
@@ -717,7 +717,7 @@ All'interno della Toolbar è possibile implementare dei pulsanti dropdown con re
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton6-sml">
           <div class="link-list-wrapper">
-            <ul class="link-list">
+            <ul class="link-list" role="list">
               <li><a class="list-item left-icon" href="#"><svg class="icon icon-sm me-2 left" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-link"></use></svg><span>Label</span></a></li>
               <li><a class="list-item left-icon" href="#"><svg class="icon icon-sm me-2 left" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-mail"></use></svg><span>Label</span></a></li>
               <li><a class="list-item left-icon" href="#"><svg class="icon icon-sm me-2 left" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-settings"></use></svg><span>Label</span></a></li>
@@ -757,7 +757,7 @@ Applicando una classe aggiuntiva `.toolbar-vertical` alla Toolbar gli elementi v
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1-vert">
           <div class="link-list-wrapper">
-            <ul class="link-list">
+            <ul class="link-list" role="list">
               <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
               <li><a class="dropdown-item list-item" href="#"><span>Azione 2</span></a></li>
               <li><a class="dropdown-item list-item" href="#"><span>Azione 3</span></a></li>
@@ -818,7 +818,7 @@ Applicando una classe aggiuntiva `.toolbar-vertical` alla Toolbar gli elementi v
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton-vert">
           <div class="link-list-wrapper">
-            <ul class="link-list">
+            <ul class="link-list" role="list">
               <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
               <li><a class="dropdown-item list-item" href="#"><span>Azione 2</span></a></li>
               <li><a class="dropdown-item list-item" href="#"><span>Azione 3</span></a></li>
@@ -879,7 +879,7 @@ Applicando una classe aggiuntiva `.toolbar-vertical` alla Toolbar gli elementi v
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1-vert-sml">
           <div class="link-list-wrapper">
-            <ul class="link-list">
+            <ul class="link-list" role="list">
               <li><a class="dropdown-item list-item" href="#"><span>Azione 1</span></a></li>
               <li><a class="dropdown-item list-item" href="#"><span>Azione 2</span></a></li>
               <li><a class="dropdown-item list-item" href="#"><span>Azione 3</span></a></li>

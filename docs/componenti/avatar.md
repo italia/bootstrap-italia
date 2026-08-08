@@ -214,7 +214,7 @@ Lista verticale di Avatar di dimensione piccola con classe `.size-sm`.
 {% capture example %}
 
 <div class="link-list-wrapper">
-  <ul class="link-list avatar-group">
+  <ul class="link-list avatar-group" role="list">
     <li>
       <a class="list-item" href="#">
         <div class="avatar size-sm"><img src="https://randomuser.me/api/portraits/men/43.jpg" alt="" aria-hidden="true">
@@ -258,7 +258,7 @@ Lista verticale di Avatar di dimensione media con classe `.size-md`.
 {% capture example %}
 
 <div class="link-list-wrapper">
-  <ul class="link-list avatar-group">
+  <ul class="link-list avatar-group" role="list">
     <li>
       <a class="dropdown-item list-item" href="#">
         <div class="avatar size-md"><img src="https://randomuser.me/api/portraits/men/46.jpg" alt="" aria-hidden="true">
@@ -305,7 +305,7 @@ Gruppo di Avatar sovrapposti di dimensione piccola con classe `.size-sm`.
 {% comment %}Example name: Gruppo, sovrapposti piccoli{% endcomment %}
 {% capture example %}
 
-<ul class="avatar-group-stacked">
+<ul class="avatar-group-stacked" role="list">
   <li>
     <a class="avatar size-sm" href="#">
       <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Arianna Rossi">
@@ -361,7 +361,7 @@ Gruppo di Avatar sovrapposti di dimensione piccola con classe `.size-sm`.
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuToggle1">
           <div class="link-list-wrapper">
-            <ul class="link-list">
+            <ul class="link-list" role="list">
               <li>
                 <a class="dropdown-item list-item" href="#">
                   <div class="avatar size-sm"><img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Mario Rossi"></div>
@@ -408,7 +408,7 @@ Gruppo di Avatar sovrapposti di dimensione media con classe `.size-md`.
 {% comment %}Example name: Gruppo, sovrapposti medi{% endcomment %}
 {% capture example %}
 
-<ul class="avatar-group-stacked">
+<ul class="avatar-group-stacked" role="list">
   <li>
     <a class="avatar size-md" href="#">
       <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Arianna Rossi">
@@ -446,7 +446,7 @@ Gruppo di Avatar sovrapposti di dimensione media con classe `.size-md`.
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuToggle2">
           <div class="link-list-wrapper">
-            <ul class="link-list">
+            <ul class="link-list" role="list">
               <li>
                 <a class="dropdown-item list-item" href="#">
                   <div class="avatar size-md">

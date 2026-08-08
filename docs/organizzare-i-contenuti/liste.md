@@ -17,7 +17,7 @@ Le liste, costituite da tag `<ul>` con classe `.it-list` all'interno di un wrapp
 
 {% capture example %}
 <div class="it-list-wrapper">
-  <ul class="it-list">
+  <ul class="it-list" role="list">
     <li>
       <div class="list-item">
         <div class="it-right-zone">
@@ -50,7 +50,7 @@ L'elemento `.avatar` precede l'elemento `.it-right-zone` che contiene il testo.
 {% comment %}Example name: Base, con avatar{% endcomment %}
 {% capture example %}
 <div class="it-list-wrapper">
-  <ul class="it-list">
+  <ul class="it-list" role="list">
     <li>
       <div class="list-item">
         <div class="avatar size-lg">
@@ -92,7 +92,7 @@ L'elemento `.it-rounded-icon` con all'interno la relativa icona, precede l'eleme
 {% comment %}Example name: Base, con icona{% endcomment %}
 {% capture example %}
 <div class="it-list-wrapper">
-  <ul class="it-list">
+  <ul class="it-list" role="list">
     <li>
       <div class="list-item">
         <div class="it-rounded-icon">
@@ -143,7 +143,7 @@ L'elemento `.it-thumb` con all'interno la relativa immagine, precede l'elemento 
 {% comment %}Example name: Base, con immagine{% endcomment %}
 {% capture example %}
 <div class="it-list-wrapper">
-  <ul class="it-list">
+  <ul class="it-list" role="list">
     <li>
       <div class="list-item">
         <div class="it-thumb">
@@ -189,7 +189,7 @@ L'elemento `.icon` con all'interno la relativa icona segue l'elemento `.text` ch
 {% comment %}Example name: Azioni, con freccia{% endcomment %}
 {% capture example %}
 <div class="it-list-wrapper">
-  <ul class="it-list">
+  <ul class="it-list" role="list">
     <li>
       <a href="#" class="list-item">
         <div class="it-right-zone">
@@ -223,7 +223,7 @@ L'elemento `.it-multiple` con all'interno le relative icone, segue l'elemento `.
 {% comment %}Example name: Azioni, multiple{% endcomment %}
 {% capture example %}
 <div class="it-list-wrapper">
-  <ul class="it-list">
+  <ul class="it-list" role="list">
     <li>
       <div class="list-item">
         <div class="it-right-zone">
@@ -323,7 +323,7 @@ L'elemento `.metadata`, segue l'elemento `.text`.
 {% comment %}Example name: Con metadata{% endcomment %}
 {% capture example %}
 <div class="it-list-wrapper">
-  <ul class="it-list">
+  <ul class="it-list" role="list">
     <li>
       <div class="list-item">
         <div class="avatar size-lg">
@@ -392,7 +392,7 @@ Per avere una lista che permetta paragrafi di testo aggiuntivo per ogni elemento
 {% comment %}Example name: Con testo aggiuntivo, azioni multiple e metadata{% endcomment %}
 {% capture example %}
 <div class="it-list-wrapper">
-  <ul class="it-list">
+  <ul class="it-list" role="list">
     <li>
       <div class="list-item">
         <div class="it-right-zone">
@@ -530,7 +530,7 @@ Le liste per menu di navigazione, costituite da tag `<ul>` con classe `.link-lis
 {% comment %}Example name: Per menu, base{% endcomment %}
 {% capture example %}
 <div class="link-list-wrapper">
-  <ul class="link-list">
+  <ul class="link-list" role="list">
     <li>
       <a class="list-item" href="#"><span>Link lista 1</span></a>
     </li>
@@ -551,7 +551,7 @@ Per rendere attivo un elemento è sufficiente aggiungere la classe `.active` al 
 {% comment %}Example name: Per menu, con stato attivo{% endcomment %}
 {% capture example %}
 <div class="link-list-wrapper">
-  <ul class="link-list">
+  <ul class="link-list" role="list">
     <li>
       <a class="list-item" href="#"><span>Link lista 1</span></a>
     </li>
@@ -572,7 +572,7 @@ Per disabilitare un elemento è sufficiente aggiungere la classe `.disabled` al 
 {% comment %}Example name: Per menu, con stato disabilitato{% endcomment %}
 {% capture example %}
 <div class="link-list-wrapper">
-  <ul class="link-list">
+  <ul class="link-list" role="list">
     <li>
       <a class="list-item" href="#"><span>Link lista 1</span></a>
     </li>
@@ -597,7 +597,7 @@ Il divisore è costituito dal tag `<span>` con classe `.divider` e attributo `ro
 {% capture example %}
 <div class="link-list-wrapper">
   <h4 class="link-list-heading">Intestazione senza link</h4>
-  <ul class="link-list">
+  <ul class="link-list" role="list">
     <li>
       <a class="list-item" href="#"><span>Link lista 1</span></a>
     </li>
@@ -621,7 +621,7 @@ Il divisore è costituito dal tag `<span>` con classe `.divider` e attributo `ro
 {% capture example %}
 <div class="link-list-wrapper">
   <h4 class="link-list-heading"><a href="#">Intestazione con link</a></h4>
-  <ul class="link-list">
+  <ul class="link-list" role="list">
     <li>
       <a class="list-item" href="#"><span>Link lista 1</span></a>
     </li>
@@ -649,7 +649,7 @@ Per ogni elemento di una lista di link è possibile definire una variante di dim
 {% capture example %}
 <div class="link-list-wrapper">
   <h4 class="link-list-heading">Intestazione</h4>
-  <ul class="link-list">
+  <ul class="link-list" role="list">
     <li>
       <a class="list-item large" href="#"><span>Link lista 1</span></a>
     </li>
@@ -683,7 +683,7 @@ All'interno del tag `<span class="list-item-title-icon-wrapper">` subito dopo lo
 {% comment %}Example name: Per menu, multilinea con icona{% endcomment %}
 {% capture example %}
 <div class="link-list-wrapper multiline">
-  <ul class="link-list">
+  <ul class="link-list" role="list">
     <li>
       <a class="list-item active icon-right" href="#">
         <span class="list-item-title-icon-wrapper">
@@ -749,7 +749,7 @@ Per posizionare correttamente l'icona a sinistra del testo bisogna aggiungere al
 {% comment %}Example name: Per menu, con controlli e icona a sinistra{% endcomment %}
 {% capture example %}
 <div class="link-list-wrapper">
-  <ul class="link-list">
+  <ul class="link-list" role="list">
     <li>
       <a class="list-item active icon-left" href="#">
         <span class="list-item-title-icon-wrapper">
@@ -797,7 +797,7 @@ Per posizionare correttamente l'icona a destra del testo bisogna aggiungere al t
 {% comment %}Example name: Per menu, con controlli e icona a destra{% endcomment %}
 {% capture example %}
 <div class="link-list-wrapper">
-  <ul class="link-list">
+  <ul class="link-list" role="list">
     <li>
       <a class="list-item active icon-right" href="#">
         <span class="list-item-title-icon-wrapper">
@@ -850,7 +850,7 @@ Inserisci l'icona all'interno del tag `<span class="list-item-title-icon-wrapper
 {% comment %}Example name: Per menu, con azioni primaria e secondaria, varianti posizione icona{% endcomment %}
 {% capture example %}
 <div class="link-list-wrapper">
-  <ul class="link-list">
+  <ul class="link-list" role="list">
     <li>
       <a class="list-item active icon-left" href="#">
         <span class="list-item-title-icon-wrapper">
@@ -895,7 +895,7 @@ Una lista di link può contenere anche elementi appartenenti ai form, di seguito
 {% comment %}Example name: Lista di link, con toggle{% endcomment %}
 {% capture example %}
  <div class="link-list-wrapper">
-  <ul class="link-list">
+  <ul class="link-list" role="list">
     <li>
       <div class="toggles">
         <label for="toggle1">Label per toggle
@@ -921,7 +921,7 @@ Lista di link contenente un [checkbox]({{ site.baseurl }}/docs/form/checkbox/).
 {% comment %}Example name: Lista di link, con checkbox{% endcomment %}
 {% capture example %}
 <div class="link-list-wrapper">
-  <ul class="link-list">
+  <ul class="link-list" role="list">
     <li>
       <div class="form-check form-check-group" aria-describedby="">
         <input type="checkbox" id="checkbox6" checked>
@@ -955,7 +955,7 @@ Di seguito un esempio di navigazione annidata espansa.
 {% comment %}Example name: Per menu, annidata espansa{% endcomment %}
 {% capture example %}
 <div class="link-list-wrapper">
-  <ul class="link-list">
+  <ul class="link-list" role="list">
     <li>
       <a class="list-item large medium icon-right" href="#">
         <span class="list-item-title-icon-wrapper">
@@ -977,7 +977,7 @@ Di seguito un esempio di navigazione annidata espansa.
           </svg>
         </span>
       </a>
-      <ul class="link-sublist" id="">
+      <ul class="link-sublist" id="" role="list">
         <li><a class="list-item" href="#"><span>Link lista 1</span></a>
         </li>
         <li><a class="list-item" href="#"><span>Link lista 2</span></a>
@@ -1009,7 +1009,7 @@ Per questo tipo di link list sono state utilizzate, oltre alle classi custom, le
 {% comment %}Example name: Per menu, annidata collassabile{% endcomment %}
 {% capture example %}
 <div class="link-list-wrapper">
-  <ul class="link-list">
+  <ul class="link-list" role="list">
     <li>
       <a class="list-item large medium icon-right" href="#collapseOne" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseOne">
         <span class="list-item-title-icon-wrapper">
@@ -1017,7 +1017,7 @@ Per questo tipo di link list sono state utilizzate, oltre alle classi custom, le
           <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
         </span>
       </a>
-      <ul class="link-sublist collapse" id="collapseOne">
+      <ul class="link-sublist collapse" id="collapseOne" role="list">
         <li><a class="list-item" href="#"><span>Link lista 1</span></a>
         </li>
         <li><a class="list-item" href="#"><span>Link lista 1</span></a>
@@ -1033,7 +1033,7 @@ Per questo tipo di link list sono state utilizzate, oltre alle classi custom, le
           <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
         </span>
       </a>
-      <ul class="link-sublist collapse" id="collapseTwo">
+      <ul class="link-sublist collapse" id="collapseTwo" role="list">
         <li><a class="list-item" href="#"><span>Link lista 1</span></a>
         </li>
         <li><a class="list-item" href="#"><span>Link lista 1</span></a>
@@ -1049,7 +1049,7 @@ Per questo tipo di link list sono state utilizzate, oltre alle classi custom, le
           <svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
         </span>
       </a>
-      <ul class="link-sublist collapse" id="collapseThree">
+      <ul class="link-sublist collapse" id="collapseThree" role="list">
         <li><a class="list-item" href="#"><span>Link lista 1</span></a>
         </li>
         <li><a class="list-item" href="#"><span>Link lista 1</span></a>

@@ -21,7 +21,7 @@ Per differenziare a livello stilistico i link secondari, è sufficiente aggiunge
 <div class="sidebar-wrapper">
   <div class="sidebar-linklist-wrapper">
     <div class="link-list-wrapper">
-      <ul class="link-list">
+      <ul class="link-list" role="list">
         <li>
           <h3 class="no_toc">Header</h3>
         </li>
@@ -38,7 +38,7 @@ Per differenziare a livello stilistico i link secondari, è sufficiente aggiunge
   </div>
   <div class="sidebar-linklist-wrapper linklist-secondary">
     <div class="link-list-wrapper">
-      <ul class="link-list">
+      <ul class="link-list" role="list">
         <li><a class="list-item" href="#"><span>Link secondario 1</span></a>
         </li>
         <li><a class="list-item active" href="#"><span>Link secondario 2 (attivo)</span></a>
@@ -60,7 +60,7 @@ La sidebar può contenere icone nella sua Lista di link.
 <div class="sidebar-wrapper">
   <div class="sidebar-linklist-wrapper">
     <div class="link-list-wrapper">
-      <ul class="link-list">
+      <ul class="link-list" role="list">
         <li>
           <h3 class="no_toc">Header</h3>
         </li>
@@ -97,7 +97,7 @@ La sidebar può contenere icone nella sua Lista di link.
   </div>
   <div class="sidebar-linklist-wrapper linklist-secondary">
     <div class="link-list-wrapper">
-      <ul class="link-list">
+      <ul class="link-list" role="list">
         <li><a class="list-item" href="#"><span>Link secondario 1</span></a>
         </li>
         <li><a class="list-item active" href="#"><span>Link secondario 2 (attivo)</span></a>
@@ -119,7 +119,7 @@ Per creare una sidebar con linea separatrice a destra è sufficiente aggiungere 
 <div class="sidebar-wrapper it-line-right-side">
   <div class="sidebar-linklist-wrapper">
     <div class="link-list-wrapper">
-      <ul class="link-list">
+      <ul class="link-list" role="list">
         <li>
           <h3 class="no_toc">Header</h3>
         </li>
@@ -136,7 +136,7 @@ Per creare una sidebar con linea separatrice a destra è sufficiente aggiungere 
   </div>
   <div class="sidebar-linklist-wrapper linklist-secondary">
     <div class="link-list-wrapper">
-      <ul class="link-list">
+      <ul class="link-list" role="list">
         <li><a class="list-item" href="#"><span>Link secondario 1</span></a>
         </li>
         <li><a class="list-item active" href="#"><span>Link secondario 2 (attivo)</span></a>
@@ -158,7 +158,7 @@ Per creare una sidebar con linea separatrice a sinistra è sufficiente aggiunger
 <div class="sidebar-wrapper it-line-left-side">
   <div class="sidebar-linklist-wrapper">
     <div class="link-list-wrapper">
-      <ul class="link-list">
+      <ul class="link-list" role="list">
         <li>
           <h3 class="no_toc">Header</h3>
         </li>
@@ -175,7 +175,7 @@ Per creare una sidebar con linea separatrice a sinistra è sufficiente aggiunger
   </div>
   <div class="sidebar-linklist-wrapper linklist-secondary">
     <div class="link-list-wrapper">
-      <ul class="link-list">
+      <ul class="link-list" role="list">
         <li><a class="list-item" href="#"><span>Link secondario 1</span></a>
         </li>
         <li><a class="list-item active" href="#"><span>Link secondario 2 (attivo)</span></a>
@@ -198,7 +198,7 @@ La sidebar può contenere una Lista di link primaria annidata.
   <h3 class="no_toc">Header</h3>
   <div class="sidebar-linklist-wrapper">
     <div class="link-list-wrapper">
-      <ul class="link-list">
+      <ul class="link-list" role="list">
         <li>
           <a class="list-item large medium right-icon active" href="#collapseOne" role="button" data-bs-toggle="collapse" aria-expanded="true" aria-controls="collapseOne">
           <span class="list-item-title-icon-wrapper">
@@ -206,7 +206,7 @@ La sidebar può contenere una Lista di link primaria annidata.
             <svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
           </span>
           </a>
-          <ul class="link-sublist collapse show" id="collapseOne">
+          <ul class="link-sublist collapse show" id="collapseOne" role="list">
             <li><a class="list-item active" href="#"><span>Link lista 1.1 (attivo)</span></a>
             </li>
             <li><a class="list-item" href="#"><span>Link lista 1.2</span></a>
@@ -222,7 +222,7 @@ La sidebar può contenere una Lista di link primaria annidata.
               <svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
             </span>
           </a>
-          <ul class="link-sublist collapse" id="collapseTwo">
+          <ul class="link-sublist collapse" id="collapseTwo" role="list">
             <li><a class="list-item" href="#"><span>Link lista 2.1</span></a>
             </li>
             <li><a class="list-item" href="#"><span>Link lista 2.2</span></a>
@@ -238,7 +238,7 @@ La sidebar può contenere una Lista di link primaria annidata.
               <svg class="icon icon-sm icon-primary right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
             </span>
           </a>
-          <ul class="link-sublist collapse" id="collapseThree">
+          <ul class="link-sublist collapse" id="collapseThree" role="list">
             <li><a class="list-item" href="#"><span>Link lista 3.1</span></a>
             </li>
             <li><a class="list-item" href="#"><span>Link lista 3.2</span></a>
@@ -252,7 +252,7 @@ La sidebar può contenere una Lista di link primaria annidata.
   </div>
   <div class="sidebar-linklist-wrapper linklist-secondary">
     <div class="link-list-wrapper">
-      <ul class="link-list">
+      <ul class="link-list" role="list">
         <li><a class="list-item" href="#"><span>Link secondario 1</span></a>
         </li>
         <li><a class="list-item active" href="#"><span>Link secondario 2 (attivo)</span></a>
@@ -275,7 +275,7 @@ Per cambiare il tema della sidebar e renderla scura è sufficiente aggiungere al
   <h3 class="no_toc">Header</h3>
   <div class="sidebar-linklist-wrapper">
     <div class="link-list-wrapper">
-      <ul class="link-list">
+      <ul class="link-list" role="list">
         <li>
           <a class="list-item large medium right-icon active" href="#collapseFour" role="button" data-bs-toggle="collapse" aria-expanded="true" aria-controls="collapseOne">
             <span class="list-item-title-icon-wrapper">
@@ -297,7 +297,7 @@ Per cambiare il tema della sidebar e renderla scura è sufficiente aggiungere al
               <span>Link lista 2</span><svg class="icon icon-sm icon-white right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
             </span>
           </a>
-          <ul class="link-sublist collapse" id="collapseFive">
+          <ul class="link-sublist collapse" id="collapseFive" role="list">
             <li><a class="list-item" href="#"><span>Link lista 2.1</span></a>
             </li>
             <li><a class="list-item" href="#"><span>Link lista 2.2</span></a>
@@ -312,7 +312,7 @@ Per cambiare il tema della sidebar e renderla scura è sufficiente aggiungere al
               <span>Link lista 3</span><svg class="icon icon-sm icon-white right" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
             </span>
           </a>
-          <ul class="link-sublist collapse" id="collapseSix">
+          <ul class="link-sublist collapse" id="collapseSix" role="list">
             <li><a class="list-item" href="#"><span>Link lista 3.1</span></a>
             </li>
             <li><a class="list-item" href="#"><span>Link lista 3.2</span></a>
@@ -326,7 +326,7 @@ Per cambiare il tema della sidebar e renderla scura è sufficiente aggiungere al
   </div>
   <div class="sidebar-linklist-wrapper linklist-secondary">
     <div class="link-list-wrapper">
-      <ul class="link-list">
+      <ul class="link-list" role="list">
         <li><a class="list-item" href="#"><span>Link secondario 1</span></a>
         </li>
         <li><a class="list-item active" href="#"><span>Link secondario 2 (attivo)</span></a>

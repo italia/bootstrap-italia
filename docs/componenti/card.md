@@ -156,7 +156,7 @@ La struttura dei metadati include:
       <!--finally the card footer metadata-->
       <footer class="it-card-related it-card-footer">
         <div class="it-card-taxonomy">
-          <ul class="it-card-chips chips-list" aria-label="Argomenti correlati: ">
+          <ul class="it-card-chips chips-list" aria-label="Argomenti correlati: " role="list">
             <li class="list-item"><a class="chip chip-simple chip-sm" href="#">
               <span class="chip-label"><span class="visually-hidden">Argomento: </span>Argomento 1</span>
             </a></li>
@@ -288,7 +288,7 @@ Per indicare l'autore del contenuto, usa l'elemento semantico `address` con clas
       <!--finally the card footer metadata-->
       <footer class="it-card-related it-card-footer">
         <div class="it-card-taxonomy">
-          <ul class="it-card-chips chips-list" aria-label="Argomenti correlati: ">
+          <ul class="it-card-chips chips-list" aria-label="Argomenti correlati: " role="list">
             <li class="list-item"><a class="chip chip-simple chip-sm" href="#">
               <span class="chip-label"><span class="visually-hidden">Argomento: </span>Argomento 1</span>
             </a></li>
@@ -742,7 +742,7 @@ Negli esempi non abbiamo usato il `target` del link per favorire la normale navi
       <!--finally the card footer metadata-->
       <footer class="it-card-related it-card-footer">
         <div class="it-card-taxonomy">
-          <ul class="it-card-chips chips-list" aria-label="Argomenti correlati: ">
+          <ul class="it-card-chips chips-list" aria-label="Argomenti correlati: " role="list">
             <li class="list-item"><a class="chip chip-simple chip-sm" href="#">
               <span class="chip-label"><span class="visually-hidden">Argomento: </span>Argomento 1</span>
             </a></li>
@@ -801,7 +801,7 @@ Negli esempi non abbiamo usato il `target` del link per favorire la normale navi
       <!--finally the card footer metadata-->
       <footer class="it-card-related it-card-footer">
         <div class="it-card-taxonomy">
-          <ul class="it-card-chips chips-list" aria-label="Argomenti correlati: ">
+          <ul class="it-card-chips chips-list" aria-label="Argomenti correlati: " role="list">
             <li class="list-item"><a class="chip chip-simple chip-sm" href="#">
               <span class="chip-label"><span class="visually-hidden">Argomento: </span>Argomento 1</span>
             </a></li>
@@ -1401,7 +1401,7 @@ Puoi combinare questa impostazione con le funzionalità del contenitore `.it-car
       <!--card body content-->
       <div class="it-card-body">
         <p class="it-card-text">Descrizione breve dell'argomento in poche righe non troncate.</p>
-        <ul class="list-group list-group-flush" aria-label="Contenuti in evidenza:">
+        <ul class="list-group list-group-flush" aria-label="Contenuti in evidenza:" role="list">
           <li class="list-group-item"><a href="#">Titolo notizia affine</a></li>
           <li class="list-group-item"><a href="#">Titolo media affine</a></li>
           <li class="list-group-item"><a href="#">Altro titolo scheda affine</a></li>
@@ -1430,7 +1430,7 @@ Puoi combinare questa impostazione con le funzionalità del contenitore `.it-car
       <div class="it-card-body">
         <p class="it-card-subtitle">Dal 17 al 22 novembre</p>
         <p class="it-card-text">Descrizione breve dell'evento in poche righe non troncate.</p>
-        <ul class="list-group list-group-flush" aria-label="Contenuti in evidenza:">
+        <ul class="list-group list-group-flush" aria-label="Contenuti in evidenza:" role="list">
           <li class="list-group-item"><a href="#">Gli artisti</a></li>
           <li class="list-group-item"><a href="#">Il luogo</a></li>
           <li class="list-group-item"><a href="#">Il programma dettagliato</a></li>
@@ -1461,7 +1461,7 @@ Puoi combinare questa impostazione con le funzionalità del contenitore `.it-car
       <!--card body content-->
       <div class="it-card-body">
         <p class="it-card-text">Descrizione breve dell'argomento in poche righe non troncate.</p>
-        <ul class="list-group list-group-flush" aria-label="Contenuti in evidenza:">
+        <ul class="list-group list-group-flush" aria-label="Contenuti in evidenza:" role="list">
           <li class="list-group-item"><a href="#" class="it-card-link">Titolo notizia affine</a></li>
           <li class="list-group-item"><a href="#" class="it-card-link">Titolo media affine</a></li>
           <li class="list-group-item"><a href="#" class="it-card-link">Altro titolo scheda affine</a></li>
@@ -2018,11 +2018,13 @@ Per **gruppi numerosi di card** (come pagine di listini, cataloghi, risultati di
 Con le liste, le tecnologie assistive permettono agli utenti di conoscere il numero totale di componenti card che si stanno esplorando e navigare più facilmente.
 
 Se necessario nel contesto aggiungi una `aria-label` che spieghi i contenuti della lista come nell'esempio che segue. 
+
+Per permettere a Voice Over su Safari di riconoscerle come liste definisci anche l'attributo `role="list"` sull'elemento `<ul>`. 
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
 ```html
 <div class="container-xl">
-  <ul class="it-card-list row" aria-label="Risultati della ricerca: ">
+  <ul class="it-card-list row" aria-label="Risultati della ricerca: " role="list">
     <li class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
       <article class="it-card">...</article>
     </li>
@@ -2037,7 +2039,7 @@ Esempio di lista card:
 
 {% comment %}Example name: Lista di card{% endcomment %}
 {% capture example %}
-<ul class="it-card-list row" aria-label="Risultati della ricerca: ">
+<ul class="it-card-list row" aria-label="Risultati della ricerca: " role="list">
   <li class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-height-full rounded shadow-sm border">

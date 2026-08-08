@@ -32,7 +32,7 @@ Per ragioni di accessibilità è importante indicare all'interno dell'attributo 
 
 {% comment %}Example name: Base{% endcomment %}
 {% capture example %}
-<ul class="thumb-nav">
+<ul class="thumb-nav" role="list">
     <li>
       <a href="#" class="active ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1056" alt="Visualizza immagine 1"></a>
     </li>
@@ -51,7 +51,7 @@ Applicando la classe `.thumb-nav-small` al contenitore `.thumb-nav` si otterrann
 
 {% comment %}Example name: Variante compatta{% endcomment %}
 {% capture example %}
-<ul class="thumb-nav thumb-nav-small">
+<ul class="thumb-nav thumb-nav-small" role="list">
     <li>
       <a href="#" class="active ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1056" alt="Visualizza immagine 1"></a>
     </li>
@@ -74,7 +74,7 @@ Utilizzare la classe `.thumb-nav-nozoom` per disabilitare l'effetto di zoom sull
 
 {% comment %}Example name: Con hover senza ingrandimento{% endcomment %}
 {% capture example %}
-<ul class="thumb-nav thumb-nav-nozoom">
+<ul class="thumb-nav thumb-nav-nozoom" role="list">
     <li>
       <a href="#" class="active ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1056" alt="Visualizza immagine 1"></a>
     </li>
@@ -93,7 +93,7 @@ Utilizzare la classe `.thumb-nav-black` per ottenere un effetto di overlay nero 
 
 {% comment %}Example name: Con hover con livello nero{% endcomment %}
 {% capture example %}
-<ul class="thumb-nav thumb-nav-black">
+<ul class="thumb-nav thumb-nav-black" role="list">
     <li>
       <a href="#" class="active ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1056" alt="Visualizza immagine 1"></a>
     </li>
@@ -112,7 +112,7 @@ Utilizzare la classe `.thumb-nav-primary` per ottenere un effetto di overlay di 
 
 {% comment %}Example name: Con hover con livello primary{% endcomment %}
 {% capture example %}
-<ul class="thumb-nav thumb-nav-primary">
+<ul class="thumb-nav thumb-nav-primary" role="list">
     <li>
       <a href="#" class="active ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1056" alt="Visualizza immagine 1"></a>
     </li>
@@ -131,7 +131,7 @@ Applicando la classe `.thumb-nav-vertical` al contenitore `.thumb-nav` si ottien
 
 {% comment %}Example name: Verticale{% endcomment %}
 {% capture example %}
-<ul class="thumb-nav thumb-nav-vertical">
+<ul class="thumb-nav thumb-nav-vertical" role="list">
     <li>
       <a href="#" class="active ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1056" alt="Visualizza immagine 1"></a>
     </li>
@@ -161,7 +161,7 @@ Alla Thumbnav dovrà essere applicata una classe a scelta fra:
 {% capture example %}
 <div class="test-gallery position-relative">
   <img src="https://picsum.photos/1280/720?image=1056" class="test-image" alt="Descrizione immagine"/>
-  <ul class="thumb-nav thumb-nav-small thumb-nav-bottom">
+  <ul class="thumb-nav thumb-nav-small thumb-nav-bottom" role="list">
       <li>
         <a href="#" class="active ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1056" alt="Visualizza immagine 1"></a>
       </li>
@@ -181,7 +181,7 @@ Alla Thumbnav dovrà essere applicata una classe a scelta fra:
 {% capture example %}
 <div class="test-gallery position-relative">
   <img src="https://picsum.photos/1280/720?image=1056" class="test-image" alt="Descrizione immagine"/>
-  <ul class="thumb-nav thumb-nav-small thumb-nav-top">
+  <ul class="thumb-nav thumb-nav-small thumb-nav-top" role="list">
       <li>
         <a href="#" class="active ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1056" alt="Visualizza immagine 1"></a>
       </li>
@@ -202,7 +202,7 @@ Alla Thumbnav dovrà essere applicata una classe a scelta fra:
 <div class="test-gallery position-relative">
   <img src="https://picsum.photos/720/720?image=1056" class="d-md-none test-image" alt="Descrizione immagine"/>
   <img src="https://picsum.photos/1280/720?image=1056" class="d-none d-md-block test-image" alt="Descrizione immagine"/>
-  <ul class="thumb-nav thumb-nav-vertical thumb-nav-small thumb-nav-left">
+  <ul class="thumb-nav thumb-nav-vertical thumb-nav-small thumb-nav-left" role="list">
       <li>
         <a href="#" class="active ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1056" alt="Visualizza immagine 1"></a>
       </li>
@@ -223,7 +223,7 @@ Alla Thumbnav dovrà essere applicata una classe a scelta fra:
 <div class="test-gallery position-relative">
   <img src="https://picsum.photos/720/720?image=1056" class="d-md-none test-image" alt="Descrizione immagine"/>
   <img src="https://picsum.photos/1280/720?image=1056" class="d-none d-md-block test-image" alt="Descrizione immagine"/>
-  <ul class="thumb-nav thumb-nav-vertical thumb-nav-small thumb-nav-right">
+  <ul class="thumb-nav thumb-nav-vertical thumb-nav-small thumb-nav-right" role="list">
       <li>
         <a href="#" class="active ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1056" alt="Visualizza immagine 1"></a>
       </li>
@@ -243,7 +243,7 @@ Applicando la classe `.thumb-nav-fixed` alla Thumbnav le thumbnail avranno una l
 
 {% comment %}Example name: Griglia a larghezza fissa{% endcomment %}
 {% capture example %}
-<ul class="thumb-nav thumb-nav-fixed">
+<ul class="thumb-nav thumb-nav-fixed" role="list">
     <li>
       <a href="#" class="ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1056" alt="Visualizza immagine 1"></a>
     </li>
@@ -276,7 +276,7 @@ Applicando la classe `.thumb-nav-auto` alla Thumbnav le thumbnail occuperanno au
 
 {% comment %}Example name: Griglia a larghezza automatica, eg. 1{% endcomment %}
 {% capture example %}
-<ul class="thumb-nav thumb-nav-auto thumb-nav-auto-3">
+<ul class="thumb-nav thumb-nav-auto thumb-nav-auto-3" role="list">
     <li>
       <a href="#" class="ratio ratio-3x2"><img src="https://picsum.photos/390/260?image=1056" alt="Visualizza immagine 1"></a>
     </li>
@@ -299,7 +299,7 @@ Applicando la classe `.thumb-nav-auto` alla Thumbnav le thumbnail occuperanno au
 
 {% comment %}Example name: Griglia a larghezza automatica, eg. 2{% endcomment %}
 {% capture example %}
-<ul class="thumb-nav thumb-nav-auto thumb-nav-auto-5">
+<ul class="thumb-nav thumb-nav-auto thumb-nav-auto-5" role="list">
     <li>
       <a href="#" class="ratio ratio-3x2"><img src="https://picsum.photos/240/160?image=1056" alt="Visualizza immagine 1"></a>
     </li>
