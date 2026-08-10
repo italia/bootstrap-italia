@@ -409,8 +409,6 @@ Quando l'Header Nav fa parte di un Header completo (cioè è contenuto in un ele
 
 Non è necessario duplicare il markup: gli elementi vengono clonati dal componente JavaScript `navbarcollapsible` all'interno di `.menu-wrapper` e nascosti da CSS a partire dal breakpoint `lg`, dove ogni elemento torna nella propria fascia.
 
-Se un elenco di link ha un attributo `aria-label`, questo viene usato anche come intestazione visiva del gruppo all'interno del menu (`.navbar-ul-descriptor`, che essendo una ripetizione è `aria-hidden`).
-
 La fascia con il logo ha come sfondo il colore primario del sito. Per renderla bianca, con testo e logo nel colore primario, si aggiunge la classe `.menu-brand-light` all'elemento `.navbar-collapsable`.
 
 Le voci del menu su mobile hanno sempre sfondo bianco e link nel colore primario: per questo motivo la classe `.theme-dark-mobile` non è più disponibile.

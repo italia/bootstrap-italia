@@ -13,7 +13,6 @@
  */
 
 const CLASS_NAME_BRAND_MOBILE = 'it-brand-mobile'
-const CLASS_NAME_DESCRIPTOR = 'navbar-ul-descriptor'
 const CLASS_NAME_SLIM_MENU = 'header-slim-menu'
 
 const SELECTOR_HEADER = '.it-header-wrapper'
@@ -69,20 +68,6 @@ const cloneLinkListAsNavbarNav = (list, className = '') => {
 }
 
 /**
- * Builds the visual heading rendered above a group of links, from the `aria-label` of its list.
- * It is `aria-hidden` because the accessible name is already carried by the list itself.
- * @param {string} label
- * @returns {HTMLDivElement}
- */
-const createDescriptor = (label) => {
-  const descriptor = document.createElement('div')
-  descriptor.className = CLASS_NAME_DESCRIPTOR
-  descriptor.setAttribute('aria-hidden', 'true')
-  descriptor.textContent = label
-  return descriptor
-}
-
-/**
  * Fills `.menu-wrapper` with the elements that on mobile belong to the navigation menu but
  * live elsewhere in the header: the brand, the slim header links and the socials.
  *
@@ -131,11 +116,6 @@ export const buildMobileMenu = (navbarCollapsable) => {
     socialsClone.setAttribute('class', 'it-socials')
     menuWrapper.append(socialsClone)
   }
-
-  // headings above every labelled group
-  menuWrapper.querySelectorAll(':scope > ul.navbar-nav[aria-label]').forEach((list) => {
-    list.before(createDescriptor(list.getAttribute('aria-label')))
-  })
 
   return true
 }

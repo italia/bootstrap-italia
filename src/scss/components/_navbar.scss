@@ -355,20 +355,6 @@
       }
     }
 
-    // Visual heading of a group of links, built from the `aria-label` of its list
-    .navbar-ul-descriptor {
-      display: block;
-      width: 100%;
-      padding: var(--#{$prefix}spacing-m) var(--#{$prefix}navbar-link-padding-x) 0;
-      padding-left: calc(var(--#{$prefix}navbar-link-padding-x) - var(--#{$prefix}navbar-link-border-size));
-      border-left: var(--#{$prefix}navbar-link-border-size) solid transparent;
-      font-size: var(--#{$prefix}font-size-2);
-      text-transform: uppercase;
-      @include media-breakpoint-up(lg) {
-        display: none;
-      }
-    }
-
     // Slim header links, cloned below the site menus
     .navbar-nav.header-slim-menu {
       @include media-breakpoint-up(lg) {
@@ -389,22 +375,15 @@
       }
 
       // Separator between two consecutive groups
-      .navbar-nav + .navbar-nav,
-      .navbar-nav + .navbar-ul-descriptor {
-        &::before {
-          display: block;
-          width: 100%;
-          max-width: 65px;
-          height: 1px;
-          margin-bottom: var(--#{$prefix}spacing-m);
-          margin-left: var(--#{$prefix}navbar-link-padding-x);
-          background: var(--#{$prefix}navbar-menu-group-separator-color);
-          content: '';
-        }
-      }
-
-      .navbar-nav + .navbar-ul-descriptor::before {
-        margin-left: 0;
+      .navbar-nav + .navbar-nav::before {
+        display: block;
+        width: 100%;
+        max-width: 65px;
+        height: 1px;
+        margin-bottom: var(--#{$prefix}spacing-m);
+        margin-left: var(--#{$prefix}navbar-link-padding-x);
+        background: var(--#{$prefix}navbar-menu-group-separator-color);
+        content: '';
       }
     }
 
