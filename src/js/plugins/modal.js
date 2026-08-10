@@ -47,6 +47,7 @@ const CLASS_NAME_STATIC = 'modal-static'
 
 const OPEN_SELECTOR = '.modal.show'
 const SELECTOR_DIALOG = '.modal-dialog'
+const SELECTOR_CONTENT = '.modal-content'
 const SELECTOR_MODAL_BODY = '.modal-body'
 const SELECTOR_DATA_TOGGLE = '[data-bs-toggle="modal"]'
 
@@ -232,7 +233,28 @@ class Modal extends BaseComponent {
   _initializeFocusTrap() {
     return new FocusTrap({
       trapElement: this._element,
+      initialFocus: () => this._entryPoint(),
     })
+  }
+
+  _entryPoint() {
+    // NVDA doesn't announce the role of a dialog when focus lands on the dialog element itself
+    // (nvaccess/nvda#8620): the user is told the name of the modal, but never that it is a dialog.
+    // Entering on the content wrapper keeps the announcement complete, because the dialog is then
+    // an ancestor of the focused element and is announced as such, role included. Being a
+    // container and not a control, the wrapper still gets its content read out afterwards, exactly
+    // as the modal itself would.
+    const content = SelectorEngine.findOne(SELECTOR_CONTENT, this._dialog)
+
+    if (!content) {
+      return this._element
+    }
+
+    if (!content.getAttribute('tabindex')) {
+      content.setAttribute('tabindex', '-1')
+    }
+
+    return content
   }
 
   _showElement(relatedTarget) {

@@ -11,6 +11,7 @@
 
 import EventHandler from '../dom/event-handler'
 import SelectorEngine from '../dom/selector-engine'
+import { isVisible } from './index'
 import Config from './config'
 
 /**
@@ -133,8 +134,14 @@ class FocusTrap extends Config {
     const focusables = SelectorEngine.focusableChildren(trapElement)
 
     // A hidden, disabled or detached target would make `focus()` a silent no-op, leaving focus
-    // wherever it was, so it is honoured only when it is really focusable right now.
+    // wherever it was, so it is honoured only when it can really take focus right now. Besides the
+    // tabbable elements that is also true of containers made focusable with `tabindex="-1"`, which
+    // dialogs use as entry point to have their content read out.
     if (target === trapElement || focusables.includes(target)) {
+      return target
+    }
+
+    if (target && target.hasAttribute('tabindex') && trapElement.contains(target) && isVisible(target)) {
       return target
     }
 
@@ -184,16 +191,17 @@ class FocusTrap extends Config {
     // while the panel is open the rest of the page is `inert`, so past the last focusable element
     // there is nothing left in the document to receive focus. The browser hands it to its own UI
     // (address bar, devtools) and no `focusin` ever fires to bring it back.
-    const first = elements[0]
-    const last = elements[elements.length - 1]
-    const active = document.activeElement
+    // `-1` covers the entry points that are not tabbable themselves, the trap element and the
+    // containers focused with `tabindex="-1"`: they come before their own content, so going
+    // backward from them has to wrap, while going forward can just follow the document order.
+    const index = elements.indexOf(document.activeElement)
 
-    if (event.shiftKey && (active === first || active === trapElement)) {
+    if (event.shiftKey && index <= 0) {
       event.preventDefault()
-      last.focus()
-    } else if (!event.shiftKey && active === last) {
+      elements[elements.length - 1].focus()
+    } else if (!event.shiftKey && index === elements.length - 1) {
       event.preventDefault()
-      first.focus()
+      elements[0].focus()
     }
   }
 }
