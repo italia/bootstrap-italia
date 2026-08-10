@@ -203,10 +203,13 @@ class NavBarCollapsible extends BaseComponent {
   }
 
   _initializeFocusTrap() {
+    // Focus enters on the close button, and not on the panel: screen readers announce a dialog
+    // when focus crosses into it from the outside, taking role and label from the ancestor, so
+    // landing on the button gets both the dialog and the button announced. Landing on the panel
+    // itself would spend that crossing on a node that only carries the label, and the later move
+    // to the button, being internal to the dialog, would be silent.
     return new FocusTrap({
       trapElement: this._element,
-      // FocusTrap falls back to the first focusable element of the panel when the close button is
-      // missing or not focusable, so no manual fallback is needed here.
       initialFocus: () => this._btnClose,
     })
   }
@@ -265,10 +268,9 @@ class NavBarCollapsible extends BaseComponent {
 
     this._element.classList.add(CLASS_NAME_EXPANDED)
 
-    // Focus has to move inside the panel *before* the background is inerted: the hamburger button
-    // is one of the elements that is about to become inert, and WebKit leaves the VoiceOver cursor
-    // on it, with no way out of the isolated background. Activating the trap here also closes the
-    // window, lasting the whole opening transition, in which Tab could still reach the page behind.
+    // Focus has to move inside the panel *before* the background is inerted, and not once the
+    // panel has finished opening: the hamburger button is about to become inert, and WebKit leaves
+    // the VoiceOver cursor stranded on it, with no way out of the isolated background.
     if (this._config.focus) {
       this._focustrap.activate()
     }
