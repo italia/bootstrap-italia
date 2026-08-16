@@ -321,7 +321,7 @@ Questi elementi sono racchiusi in `.point-visual` con `aria-hidden="true"` perch
   - **Per punti data**: usa l'elemento semantico `<time>` con l'attributo `datetime` in formato ISO (es. `2025-10-14`).
   - **Per punti non temporali:** usa un `<div>` contenitore generico e usa `<span class="visually-hidden">` per descrivere il contenuto in linguaggio naturale seguendo l'ordine visivo (top → bottom, es. "Categoria AB, passo 1 di 3").
   - **Per punti icona:** usa `aria-hidden="true"` sull'elemento `<svg>` e veicola il significato usando `<span class="visually-hidden">`.
-- Include l'attributo `role="list"` sull'elemento `<ol>` per ripristinare la semantica di lista **in ambiente Safari**. 
+- Include l'attributo `role="list"` sull'elemento `<ol>` per ripristinare la semantica di lista **su Safari e VoiceOver (macOS/iOS)**. 
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
 ### Varianti colore

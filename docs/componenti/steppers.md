@@ -390,7 +390,7 @@ Per ottenere una versione scura degli Stepper è sufficiente aggiungere la class
 - Aggiunta la classe `.btn-icon` ai pulsanti "Indietro" e "Avanti".
 - Il pulsante "Avanti" è sempre un `.btn-primary`.
 - Modificata la posizione del pulsante "Salva", ora posizionato in un righe a sé stante.
-- Per le liste di stepper, è consigliabile inserire l'attributo `role="list"` sull'elemento `<ul>` per ripristinare la semantica lista in ambiente Safari. 
+- Per le liste di stepper, è consigliabile inserire l'attributo `role="list"` sull'elemento `<ul>` per ripristinare la semantica lista su Safari e VoiceOver (macOS/iOS).
 {% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}
 
 {% capture callout %}

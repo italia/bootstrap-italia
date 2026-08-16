@@ -222,7 +222,7 @@ Per formattare correttamente il contenuto di questa modale, aggiungere la classe
 
 #### Accessibilità lista di link
 
-È da notare che, **in ambiente Safari**, se la lista di link `.link-list` non vive dentro un elemento `<nav>`, potrebbe non avere la semantica di lista. In questo caso, se i test ne confermano l'utilità, è possibile ripristinarla integrando l'attributo `role="list"` sull'elemento `<ul>`
+È da notare che, **su Safari e VoiceOver (macOS/iOS)**, se la lista di link `.link-list` non vive dentro un elemento `<nav>`, potrebbe non avere la semantica di lista. In questo caso, se i test ne confermano l'utilità, è possibile ripristinarla integrando l'attributo `role="list"` sull'elemento `<ul>`.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
 {% comment %}Example name: Con lista link{% endcomment %}

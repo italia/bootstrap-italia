@@ -2439,7 +2439,7 @@ Svolgi sempre test di usabilità con utenti che utilizzano tecnologie assistive 
 - Usa un `<div>` con la sola classe `.it-card-actions` a seguire il corpo della card per ospitare link correlati e/o secondari.
 - È stata rimossa la classe `.chips-list` dall'elemento `<ul>` con classe `.it-card-chips` che ospita una lista di più argomenti.
 - La doppia classe `.card-profile` è stata sostituita da `.card-profile-content` per le card di tipo profilo.
-- Per le liste di card `.it-card-list` o di card collegate `list-group`, è consigliabile inserire nell'elemento `<ul>` l'attributo `role="list"` per ripristinare la semantica lista in ambiente Safari. 
+- Per le liste di card `.it-card-list` o di card collegate `list-group`, è consigliabile inserire nell'elemento `<ul>` l'attributo `role="list"` per ripristinare la semantica lista su Safari e VoiceOver (macOS/iOS).
 {% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}
 
 {% capture callout %}

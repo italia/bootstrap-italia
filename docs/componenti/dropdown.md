@@ -25,7 +25,7 @@ Tuttavia, Bootstrap comprende di base il supporto per la maggior parte delle int
 
 Si ricorda che link di navigazione semanticamente sono tag `<a>`, mentre link che attivano azioni in pagina sono tag `<button>`, seppur questi ultimi è possibile implementarli in casi molto particolari come tag `<a>` con proprietà `role="button"`.
 
-Altresì è da notare che, **in ambiente Safari**, se il componente Dropdown non vive dentro un elemento `<nav>`, la lista di elementi all'apertura potrebbe non avere la semantica di lista. In questo caso, se i test ne confermano l'utilità, è possibile ripristinarla integrando l'attributo `role="list"` sull'elemento `<ul>`
+Altresì è da notare che, su **Safari e VoiceOver (macOS/iOS)**, se il componente Dropdown non vive dentro un elemento `<nav>`, la lista di elementi all'apertura potrebbe non avere la semantica di lista. In questo caso, se i test ne confermano l'utilità, è possibile ripristinarla integrando l'attributo `role="list"` sull'elemento `<ul>`.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
 
