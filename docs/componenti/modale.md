@@ -218,6 +218,13 @@ Di seguito una modale con un elenco di radio button.
 All'interno della modale è possibile inserire delle [Liste di link]({{ site.baseurl }}/docs/organizzare-i-contenuti/liste/#liste-per-menu-di-navigazione).
 Per formattare correttamente il contenuto di questa modale, aggiungere la classe `it-dialog-link-list` all'elemento `<div class="modal">`
 
+{% capture callout %}
+
+#### Accessibilità lista di link
+
+È da notare che, **in ambiente Safari**, se la lista di link `.link-list` non vive dentro un elemento `<nav>`, potrebbe non avere la semantica di lista. In questo caso, se i test ne confermano l'utilità, è possibile ripristinarla integrando l'attributo `role="list"` sull'elemento `<ul>`
+{% endcapture %}{% include callout.html content=callout type="accessibility" %}
+
 {% comment %}Example name: Con lista link{% endcomment %}
 {% capture example %}
 <div class="it-example-modal">

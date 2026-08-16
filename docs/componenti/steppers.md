@@ -86,7 +86,7 @@ Gli esempi includono sempre il codice HTML per elementi globali come il `.contai
     <div class="col-12">
       <div class="steppers">
         <div class="steppers-header mb-3">
-          <ul>
+          <ul role="list">
             <li class="confirmed">Primo contenuto <svg class="icon steppers-success" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg><span class="visually-hidden">Confermato</span></li>
             <li class="active">Secondo contenuto <span class="visually-hidden">Attivo</span></li>
             <li>Terzo contenuto</li>
@@ -132,7 +132,7 @@ I passi visibili nell'intestazione possono essere corredati da tre classi aggiun
     <div class="col-12">
       <div class="steppers">
         <div class="steppers-header">
-          <ul>
+          <ul role="list">
             <li class="confirmed">Primo contenuto <svg class="icon steppers-success" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg><span class="visually-hidden">Confermato</span></li>
             <li class="active">Secondo contenuto <span class="visually-hidden">Attivo</span></li>
             <li>Terzo contenuto</li>
@@ -164,7 +164,7 @@ Nel caso in cui l'icona è semanticamente rilevante e non spiegata dal testo che
 {% capture example %}
 <div class="steppers">
   <div class="steppers-header">
-    <ul>
+    <ul role="list">
       <li class="confirmed"><svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-calendar"></use></svg>Primo contenuto <svg class="icon steppers-success" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg><span class="visually-hidden">Confermato</span></li>
       <li class="active"><svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-lock"></use></svg>Secondo contenuto <span class="visually-hidden">Attivo</span></li>
       <li><svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-settings"></use></svg>Terzo contenuto</li>
@@ -182,7 +182,7 @@ Le label presenti negli steps dell'header possono essere anticipate dal numero o
 {% capture example %}
 <div class="steppers">
   <div class="steppers-header">
-    <ul>
+    <ul role="list">
       <li class="confirmed"><span class="steppers-number"><svg class="icon steppers-success" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg><span class="visually-hidden">Confermato</span></span>Primo contenuto</li>
       <li class="active"><span class="steppers-number"><span class="visually-hidden">Step </span>2</span>Secondo contenuto <span class="visually-hidden">Attivo</span></li>
       <li><span class="steppers-number"><span class="visually-hidden">Step </span>3</span>Terzo contenuto</li>
@@ -257,7 +257,7 @@ Per ragioni di accessibilità, i `<li>` devono contenere uno `<span>` con classe
   </div>
   <nav class="steppers-nav">
     <button type="button" class="btn btn-icon btn-outline-primary btn-sm steppers-btn-prev"><svg class="icon icon-sm icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-chevron-left"></use></svg>Indietro</button>
-    <ul class="steppers-dots">
+    <ul class="steppers-dots" role="list">
       <li class="done"><span class="visually-hidden">Step 1 di 6 - Confermato</span></li>
       <li class="done"><span class="visually-hidden">Step 2 di 6 - Confermato</span></li>
       <li class="done"><span class="visually-hidden">Step 3 di 6 - Confermato</span></li>
@@ -323,7 +323,7 @@ Per ottenere una versione scura degli Stepper è sufficiente aggiungere la class
 {% capture example %}
 <div class="steppers bg-dark">
   <div class="steppers-header">
-    <ul>
+    <ul role="list">
       <li class="confirmed">Primo contenuto <svg class="icon steppers-success" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg><span class="visually-hidden">Confermato</span></li>
       <li class="active">Secondo contenuto <span class="visually-hidden">Attivo</span></li>
       <li>Terzo contenuto</li>
@@ -349,7 +349,7 @@ Per ottenere una versione scura degli Stepper è sufficiente aggiungere la class
 <!-- Solo testo -->
 <div class="steppers bg-dark">
   <div class="steppers-header">
-    <ul>
+    <ul role="list">
       <li class="confirmed">Primo contenuto <svg class="icon steppers-success" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg><span class="visually-hidden">Confermato</span></li>
       <li class="active">Secondo contenuto <span class="visually-hidden">Attivo</span></li>
       <li>Terzo contenuto</li>
@@ -361,7 +361,7 @@ Per ottenere una versione scura degli Stepper è sufficiente aggiungere la class
 <!-- Testo e icone -->
 <div class="steppers bg-dark">
   <div class="steppers-header">
-    <ul>
+    <ul role="list">
       <li class="confirmed"><svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-calendar"></use></svg>Primo contenuto <svg class="icon steppers-success" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg><span class="visually-hidden">Confermato</span></li>
       <li class="active"><svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-lock"></use></svg>Secondo contenuto <span class="visually-hidden">Attivo</span></li>
       <li><svg class="icon" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-settings"></use></svg>Terzo contenuto</li>
@@ -373,7 +373,7 @@ Per ottenere una versione scura degli Stepper è sufficiente aggiungere la class
 <!-- Numeri -->
 <div class="steppers bg-dark">
   <div class="steppers-header">
-    <ul>
+    <ul role="list">
       <li class="confirmed"><span class="steppers-number"><svg class="icon steppers-success" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-check"></use></svg><span class="visually-hidden">Confermato Step 1</span></span>Primo contenuto</li>
       <li class="active"><span class="steppers-number"><span class="visually-hidden">Attivo Step </span>2</span>Secondo contenuto</li>
       <li><span class="steppers-number"><span class="visually-hidden">Step </span>3</span>Terzo contenuto</li>
@@ -390,6 +390,7 @@ Per ottenere una versione scura degli Stepper è sufficiente aggiungere la class
 - Aggiunta la classe `.btn-icon` ai pulsanti "Indietro" e "Avanti".
 - Il pulsante "Avanti" è sempre un `.btn-primary`.
 - Modificata la posizione del pulsante "Salva", ora posizionato in un righe a sé stante.
+- Per le liste di stepper, è consigliabile inserire l'attributo `role="list"` sull'elemento `<ul>` per ripristinare la semantica lista in ambiente Safari. 
 {% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}
 
 {% capture callout %}
