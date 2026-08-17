@@ -22,10 +22,10 @@ Novita' rispetto alla v1/v2:
   - rileva anche @function mai chiamate, non solo @mixin mai inclusi
 
 Uso:
-    python3 audit_custom_properties.py <cartella1> [cartella2 ...]
+    python3 ./scripts/audit_custom_properties.py <cartella1> [cartella2 ...]
 
 Esempio:
-    python3 ./scripts/audit_custom_properties.py ../src/scss/
+    python3 ./scripts/audit_custom_properties.py ./src/scss/
 """
 
 import re
@@ -47,7 +47,7 @@ CALL_RE = re.compile(r"\b([\w-]+)\s*\(")
 
 VAR_DECL_RE = re.compile(r"\$([\w-]+)\s*:[^;\n]*!default\b")
 VAR_USE_RE = re.compile(r"\$([\w-]+)(?!\s*:)")
-VAR_WRAPS_SASSVAR_RE = re.compile(r"var\(\s*\$([\w-]+)")
+VAR_WRAPS_SASSVAR_RE = re.compile(r"(?<![\w-])var\(\s*\$([\w-]+)")
 
 HAS_LETTER_RE = re.compile(r"[a-zA-Z]")
 BAREWORD_RE = re.compile(r"[\w-]+")
