@@ -233,6 +233,8 @@
 
   // Tab Card version
   &.nav-tabs-cards {
+    border-bottom: 0; // Reset bottom border for nav tabs cards
+
     // Grey fullwidth bottom border for ul
     &::after {
       content: '';
