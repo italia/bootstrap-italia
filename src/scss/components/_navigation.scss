@@ -127,7 +127,7 @@
       }
 
       &.show {
-        animation: megamenuFadeIn forwards calc(var($dropdown-menu-animation-speed) * 0.5);
+        animation: megamenuFadeIn forwards calc(var(--#{$prefix}dropdown-animation-speed) * 0.5);
       }
     }
   }

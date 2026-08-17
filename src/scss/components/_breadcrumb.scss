@@ -69,7 +69,7 @@
   + .breadcrumb-item {
     &::before {
       content: var(--#{$prefix}breadcrumb-divider, escape-svg($breadcrumb-divider)) #{'/* rtl:'}
-        var(--#{$prefix}breadcrumb-divider, escape-svg($breadcrumb-divider-flipped)) #{'*/'};
+        var(--#{$prefix}breadcrumb-divider-flipped, escape-svg($breadcrumb-divider-flipped)) #{'*/'};
       padding-right: var(--#{$prefix}breadcrumb-item-padding-x);
       float: left; // Suppress inline spacings and underlining of the separator
       color: var(--#{$prefix}breadcrumb-divider-color);
