@@ -14,7 +14,7 @@
 //
 
 .callout {
-  --#{$prefix}callout-background-color: var(--#{$prefix}page-background); // Controls the callout background color
+  --#{$prefix}callout-background-color: transparent; // Controls the callout background color
   --#{$prefix}callout-border-color: var(--#{$prefix}color-border-secondary); // Controls the callout border color, using color tokens
   --#{$prefix}callout-border-size: 2px; // Controls the callout border size
   --#{$prefix}callout-font-family: var(--#{$prefix}font-sans); // Controls the callout font family, using font tokens
