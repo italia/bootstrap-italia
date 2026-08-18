@@ -28,6 +28,7 @@ Esempio:
     python3 ./scripts/audit_custom_properties.py ./src/scss/
 """
 
+import csv
 import re
 import sys
 import difflib
@@ -46,8 +47,15 @@ FUNC_DEF_RE = re.compile(r"@function\s+([\w-]+)")
 CALL_RE = re.compile(r"\b([\w-]+)\s*\(")
 
 VAR_DECL_RE = re.compile(r"\$([\w-]+)\s*:[^;\n]*!default\b")
+VAR_DECL_BROAD_RE = re.compile(r"\$([\w-]+)\s*:")
 VAR_USE_RE = re.compile(r"\$([\w-]+)(?!\s*:)")
 VAR_WRAPS_SASSVAR_RE = re.compile(r"(?<![\w-])var\(\s*\$([\w-]+)")
+
+# File puramente dichiarativi (nessun @mixin/@function al loro interno):
+# per questi possiamo allargare la detection delle variabili Sass anche a
+# quelle senza !default, senza rischiare di prendere parametri di mixin
+# come falso rumore.
+BROAD_VAR_FILES = {"_config.scss", "_variables.scss"}
 
 HAS_LETTER_RE = re.compile(r"[a-zA-Z]")
 BAREWORD_RE = re.compile(r"[\w-]+")
@@ -252,7 +260,84 @@ def scan_file_pass2(text: str, dead_spans):
     return declared, used, suspicious, vars_declared, vars_used, sassvar_in_var
 
 
-def main(paths):
+def analyze_broad_var_files(file_data, dead_mixins, dead_funcs, global_vars_used,
+                             var_usage_categories, global_declared):
+    """Analisi dedicata a _config.scss/_variables.scss: tutte le
+    dichiarazioni Sass (anche senza !default, dato che questi file non
+    definiscono mixin/function), incrociate con l'uso globale e con i
+    nomi delle custom property dichiarate altrove (incluso root.scss),
+    per capire quali variabili puntano concettualmente a un token che
+    esiste gia' li'. Per ogni variabile usata riporta anche DOVE
+    (docs/components/forms/altro/solo dentro config-variables stessi),
+    cosi' si vede sia l'uso in docs (anche se non esclusivo) sia il caso
+    di una variabile che raggiunge solo altre variabili nello stesso
+    file seme, senza mai arrivare a un consumatore reale."""
+    results = {}  # path -> list of (name, used_bool, root_match_bool, categories_set)
+
+    for f, (text, mspans, fspans) in file_data.items():
+        if f.name not in BROAD_VAR_FILES:
+            continue
+
+        dead_spans = []
+        for name, sig_span, body_end in mspans:
+            if name in dead_mixins:
+                dead_spans.append((sig_span[0], body_end))
+        for name, sig_span, body_end in fspans:
+            if name in dead_funcs:
+                dead_spans.append((sig_span[0], body_end))
+
+        def excluded(pos):
+            return any(s <= pos < e for s, e in dead_spans)
+
+        names = set()
+        for m in VAR_DECL_BROAD_RE.finditer(text):
+            if excluded(m.start()):
+                continue
+            name = m.group(1)
+            if has_letter(name):
+                names.add(name)
+
+        rows = []
+        for name in sorted(names):
+            used = name in global_vars_used
+            root_match = name in global_declared
+            categories = var_usage_categories.get(name, set())
+            rows.append((name, used, root_match, categories))
+        results[f] = rows
+
+    return results
+
+
+def write_csv(path, rows):
+    with open(path, "w", newline="", encoding="utf-8") as f:
+        w = csv.writer(f)
+        w.writerow(["categoria", "file", "nome", "note"])
+        for row in rows:
+            w.writerow(row)
+
+
+SPECIAL_FILES = {"_utilities.scss": "utilities.scss", "_maps.scss": "maps.scss"}
+
+
+def categorize_file(f: Path) -> str:
+    """Classifica un file per capire CHI consuma una variabile: i file
+    seme stessi (config/variables.scss), docs, componenti/forms,
+    utilities.scss/maps.scss (che generano le classi utility), o
+    generico 'altro' (altri file base/, ecc.)."""
+    if f.name in BROAD_VAR_FILES:
+        return f.name  # "_config.scss" o "_variables.scss"
+    if f.name in SPECIAL_FILES:
+        return SPECIAL_FILES[f.name]
+    if "docs" in f.parts:
+        return "docs"
+    if "components" in f.parts:
+        return "components"
+    if "forms" in f.parts:
+        return "forms"
+    return "altro-base"
+
+
+def main(paths, csv_path=None):
     files = []
     for p in paths:
         root = Path(p)
@@ -301,6 +386,7 @@ def main(paths):
     all_suspicious = []
     global_vars_declared = {}
     global_vars_used = set()
+    var_usage_categories = {}  # nome -> set di categorie che lo usano
     all_sassvar_in_var = []
 
     for f in files:
@@ -322,6 +408,9 @@ def main(paths):
         for name in vdecl:
             global_vars_declared.setdefault(name, f)
         global_vars_used |= vuse
+        cat = categorize_file(f)
+        for name in vuse:
+            var_usage_categories.setdefault(name, set()).add(cat)
         for name in sassvar_in_var:
             all_sassvar_in_var.append((f, name))
 
@@ -329,6 +418,8 @@ def main(paths):
         print("\n" + "=" * 78)
         print(title)
         print("=" * 78)
+
+    csv_rows = []
 
     section("1) DICHIARATE MA MAI LETTE IN NESSUN FILE SCANSIONATO (dead)")
     any_dead = False
@@ -339,6 +430,7 @@ def main(paths):
             print(f"\n{f}")
             for d in dead:
                 print(f"  - {d}")
+                csv_rows.append(("1-dead-property", str(f), d, ""))
     if not any_dead:
         print("(nessuna)")
 
@@ -351,6 +443,7 @@ def main(paths):
             print(f"\n{f}")
             for o in orphan:
                 print(f"  - {o}")
+                csv_rows.append(("2-orphan-var", str(f), o, ""))
     if not any_orphan:
         print("(nessuno)")
 
@@ -389,6 +482,7 @@ def main(paths):
     if dead_mixins:
         for name in sorted(dead_mixins):
             print(f"  {name}  (definito in {global_mixins_defined[name]})")
+            csv_rows.append(("5-dead-mixin", str(global_mixins_defined[name]), name, ""))
     else:
         print("(nessuno)")
 
@@ -396,6 +490,7 @@ def main(paths):
     if dead_funcs:
         for name in sorted(dead_funcs):
             print(f"  {name}  (definita in {global_funcs_defined[name]})")
+            csv_rows.append(("6-dead-function", str(global_funcs_defined[name]), name, ""))
     else:
         print("(nessuna)")
 
@@ -410,6 +505,7 @@ def main(paths):
     if dead_vars_via_dead_code:
         for name in dead_vars_via_dead_code:
             print(f"  ${name}  (dichiarata in {global_vars_declared[name]})")
+            csv_rows.append(("7a-sassvar-dead-via-dead-code", str(global_vars_declared[name]), name, ""))
     else:
         print("(nessuna)")
 
@@ -420,6 +516,7 @@ def main(paths):
     if dead_vars_never_referenced:
         for name in dead_vars_never_referenced:
             print(f"  ${name}  (dichiarata in {global_vars_declared[name]})")
+            csv_rows.append(("7b-sassvar-dead-never-referenced", str(global_vars_declared[name]), name, ""))
     else:
         print("(nessuna)")
 
@@ -433,6 +530,80 @@ def main(paths):
             print(f"      var(${name}) - probabilmente andava var(--#{{$prefix}}...) o rimosso il var()")
     else:
         print("(nessuno)")
+
+    section(
+        "9) FOCUS _config.scss / _variables.scss — tutte le variabili\n"
+        "   Sass (anche senza !default), incrociate con l'uso globale e\n"
+        "   con i nomi delle custom property dichiarate altrove (incl.\n"
+        "   root.scss)"
+    )
+    broad_results = analyze_broad_var_files(
+        file_data, dead_mixins, dead_funcs, global_vars_used,
+        var_usage_categories, global_declared
+    )
+
+    SEED_ONLY = {"_config.scss", "_variables.scss"}
+    group_9a, group_9b, group_9c = [], [], []
+    for f, rows in broad_results.items():
+        for name, used, root_match, categories in rows:
+            if used and root_match:
+                chain_only = bool(categories) and categories.issubset(SEED_ONLY)
+                group_9a.append((f, name, categories, chain_only))
+            elif not used and root_match:
+                group_9b.append((f, name))
+            elif not used and not root_match:
+                group_9c.append((f, name))
+            # used and not root_match: usata, nessun token corrispondente
+            # in root.scss - normale, non serve segnalarla
+
+    print(
+        "\n-- 9a) USATE, e il nome corrisponde a una custom property "
+        "dichiarata altrove (incl. root.scss) --\n"
+        "   Per ognuna: DOVE viene letta (docs / components / forms /\n"
+        "   altro-base / solo dentro config.scss o variables.scss stessi).\n"
+        "   Se compare SOLO _config.scss/_variables.scss -> catena che\n"
+        "   non raggiunge mai un consumatore reale, nonostante 'usata'."
+    )
+    if group_9a:
+        for f, name, categories, chain_only in group_9a:
+            cats_str = ", ".join(sorted(categories)) if categories else "?"
+            flag = "  [!] SOLO nella catena config/variables, nessun consumatore reale" if chain_only else ""
+            print(f"  {f}: ${name}  -- usata in: {cats_str}{flag}")
+            csv_rows.append((
+                "9a-sassvar-used-root-match", str(f), name,
+                f"usata in: {cats_str}" + (" | SOLO catena config/variables" if chain_only else "")
+            ))
+    else:
+        print("  (nessuna)")
+
+    print(
+        "\n-- 9b) MAI USATE, ma il nome corrisponde a una custom property "
+        "dichiarata altrove --\n"
+        "   Candidate forti: probabilmente vanno rimosse (il token vero "
+        "e' altrove) o il codice che dovrebbe leggerle va corretto"
+    )
+    if group_9b:
+        for f, name in group_9b:
+            print(f"  {f}: ${name}")
+            csv_rows.append(("9b-sassvar-dead-root-match", str(f), name, "candidata forte: cancellare o correggere chi dovrebbe leggerla"))
+    else:
+        print("  (nessuna)")
+
+    print(
+        "\n-- 9c) MAI USATE, nessun corrispondente altrove --\n"
+        "   Probabile puro retaggio Bootstrap 5 senza equivalente BSI, "
+        "candidate a cancellazione diretta"
+    )
+    if group_9c:
+        for f, name in group_9c:
+            print(f"  {f}: ${name}")
+            csv_rows.append(("9c-sassvar-dead-no-match", str(f), name, "probabile retaggio Bootstrap 5, candidata a cancellazione diretta"))
+    else:
+        print("  (nessuna)")
+
+    if csv_path:
+        write_csv(csv_path, csv_rows)
+        print(f"\nCSV scritto in: {csv_path} ({len(csv_rows)} righe)")
 
     section("RIEPILOGO")
     print(f"File scansionati: {len(files)}")
@@ -448,6 +619,15 @@ def main(paths):
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        print("Uso: python3 audit_custom_properties.py <cartella1> [cartella2 ...]")
+        print("Uso: python3 audit_custom_properties.py <cartella1> [cartella2 ...] [--csv report.csv]")
         sys.exit(1)
-    main(sys.argv[1:])
+    args = sys.argv[1:]
+    csv_path = None
+    if "--csv" in args:
+        idx = args.index("--csv")
+        if idx + 1 >= len(args):
+            print("Uso: --csv richiede un path, es. --csv report.csv", file=sys.stderr)
+            sys.exit(1)
+        csv_path = args[idx + 1]
+        args = args[:idx] + args[idx + 2:]
+    main(args, csv_path)
