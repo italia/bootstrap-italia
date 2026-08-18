@@ -17,7 +17,7 @@
   --#{$prefix}avatar-background: var(--#{$prefix}color-background-secondary-lighter); // Controls the background for the avatar, using color tokens.
   --#{$prefix}avatar-dot-border-color: var(--#{$prefix}color-border-inverse); // Controls the dot border color for the avatar, using color tokens.
   --#{$prefix}avatar-dot-border-size: 2px; // Controls the dot border size for the avatar.
-  --#{$prefix}avatar-dot-offset-bottom: 0; // Controls the bottom offset for the avatar dot.
+  --#{$prefix}avatar-dot-offset-bottom: 8px; // Controls the bottom offset for the avatar dot.
   --#{$prefix}avatar-dot-offset-right: 0; // Controls the right offset for the avatar dot.
   --#{$prefix}avatar-dot-offset-top: 4px; // Controls the top offset for the avatar dot.
   --#{$prefix}avatar-dot-size: 12px; // Controls the size of the avatar dot.
@@ -145,7 +145,7 @@ $avatar-variants: (
   }
 
   &-presence {
-    bottom: 8px;
+    bottom: var(--#{$prefix}avatar-dot-offset-bottom);
   }
 
   &-presence.hidden {
