@@ -240,10 +240,6 @@
       }
     }
 
-    > button.dropdown-toggle:before {
-      bottom: calc(var(--#{$prefix}dropdown-notch-base-size) * -1 - 8);
-    }
-
     a.dropdown-toggle,
     button.dropdown-toggle {
       &.show {
