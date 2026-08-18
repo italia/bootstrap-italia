@@ -81,11 +81,8 @@
 ### Header
 
 - Rimossa la variante `theme-light-desk` per Header Nav, ora è possibile impostare il tema chiaro con la class `.theme-light` al tag `<nav class="it-header-navbar-wrapper">`.
-- Rimossa la variante `theme-dark-mobile`: le voci del menu su mobile hanno sempre sfondo bianco e link nel colore primario.
 - Cambiata la dimensione del pulsante Accedi: cambiato classe da `.btn-sm` a `.btn-sx`.
 - Rimossa la classe `.ms-1` dall'icona `<svg>` che segue la voce Megamenu negli esempi.
-- Su mobile il menu di navigazione raccoglie anche il logo dell'ente, i link accessori dello Slim Header e i social: il pulsante `.it-opener` che apriva i link accessori dal nome dell'ente è stato rimosso dagli esempi e l'elenco è nascosto con `.d-none.d-lg-flex`. Le regole di stile di `.it-opener` restano per retrocompatibilità ma sono deprecate.
-- La fascia con il logo in cima al menu mobile usa il colore primario; la classe `.menu-brand-light` su `.navbar-collapsable` la rende bianca.
 
 
 ### Icone
