@@ -158,7 +158,7 @@
 
   // Dropdown on dark background
   &.dark {
-    --#{$prefix}dropdown-text-color: var(--#{$prefix}color-text-inverse);
+    --#{$prefix}dropdown-color: var(--#{$prefix}color-text-inverse);
     --#{$prefix}dropdown-background: var(--#{$prefix}color-background-primary-muted);
     --#{$prefix}dropdown-link-color: var(--#{$prefix}color-text-inverse);
     --#{$prefix}dropdown-divider-bg: var(--#{$prefix}color-border-subtle);
