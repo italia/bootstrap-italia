@@ -328,9 +328,9 @@
         }
       }
       &:hover {
-        color: shade-color($primary, 10%);
+        color: var(--#{$prefix}tab-close-btn-color-hover);
         .icon {
-          fill: shade-color($primary, 10%);
+          fill: var(--#{$prefix}tab-close-btn-color-hover);
         }
       }
       .it-ico {
