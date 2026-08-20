@@ -27,7 +27,7 @@
   --#{$prefix}tab-shadow: 0 12px 25px -20px rgba(0, 0, 0, 0.5); // Controls the tab shadow, using elevation tokens.
   --#{$prefix}tab-background-light: var(--#{$prefix}color-background-primary-lighter); // Controls the tab background light, using color tokens.
   --#{$prefix}tab-border-color: transparent; // Controls the tab border color, using border tokens.
-  --#{$prefix}tab-border-width-cards: 2px; // Controls the tab border width cards, using border tokens.
+  --#{$prefix}tab-border-width-cards: 1px; // Controls the tab border width cards, using border tokens.
   --#{$prefix}tab-border-color-cards: var(--#{$prefix}color-border-subtle); // Controls the tab border color cards, using color tokens.
   --#{$prefix}tab-add-btn-border: var(--#{$prefix}color-border-primary); // Controls the tab add btn border, using color tokens.
   --#{$prefix}tab-add-btn-color: var(--#{$prefix}color-background-primary); // Controls the tab add btn color, using color tokens.
