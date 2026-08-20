@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-audit_custom_properties.py — v3
+audit_custom_properties.py — v4
 
 Confronta, in un albero di file .scss, le custom property dichiarate
 (--#{$prefix}nome: valore;) con quelle effettivamente lette con
@@ -8,7 +8,7 @@ var(--#{$prefix}nome...), incrociando su TUTTI i file scansionati.
 Controlla anche mixin (@mixin/@include), function (@function) e
 variabili Sass ($xxx: ... !default;) mai usate.
 
-Novita' rispetto alla v1/v2:
+Novita' v3:
   - comment-stripping consapevole delle stringhe (un // dentro
     url('http://...') non mangia piu' il resto della riga)
   - gestisce anche i commenti a blocco /* ... */
@@ -21,11 +21,32 @@ Novita' rispetto alla v1/v2:
     non ricorsivo/fixed-point (vedi limiti in fondo al file).
   - rileva anche @function mai chiamate, non solo @mixin mai inclusi
 
+Novita' v4:
+  - opzionale: scansiona anche una cartella .js (es. src/js/) alla
+    ricerca di custom property lette con il prefix scritto alla
+    lettera (es. getComputedStyle(...).getPropertyValue('--bsi-xxx')),
+    dato che in JS non esiste interpolazione di $prefix e il nome
+    compare sempre hardcoded. Una property letta SOLO da JS non e'
+    piu' segnalata come "dead" in sezione 1 (falso positivo evitato).
+  - nuova sezione 10: elenca ogni occorrenza JS di prefix hardcoded
+    trovata, a prescindere dal suo stato dead/vivo lato SCSS — serve
+    a mappare il debito "prefix non configurabile in JS" invece di
+    scoprirlo per caso componente per componente.
+  - LIMITE NOTO: lo strip dei commenti JS riusa la stessa funzione
+    dello SCSS, che riconosce solo apici singoli/doppi come stringhe.
+    Un // dentro un template literal con backtick puo' quindi troncare
+    erroneamente il resto della riga. Accettabile per uno strumento
+    diagnostico, non per una build.
+
 Uso:
     python3 ./scripts/audit_custom_properties.py <cartella1> [cartella2 ...]
+        [--js-dirs <cartellaJS1> [<cartellaJS2> ...]]
+        [--hardcoded-prefix bsi-]
+        [--csv report.csv]
 
 Esempio:
-    python3 ./scripts/audit_custom_properties.py ./src/scss/
+    python3 ./scripts/audit_custom_properties.py ./src/scss/ \\
+        --js-dirs ./src/js/ --csv audit-report.csv
 """
 
 import csv
@@ -59,6 +80,11 @@ BROAD_VAR_FILES = {"_config.scss", "_variables.scss"}
 
 HAS_LETTER_RE = re.compile(r"[a-zA-Z]")
 BAREWORD_RE = re.compile(r"[\w-]+")
+
+# Prefix hardcoded letteralmente in JS (nessuna interpolazione $prefix
+# possibile lato JS). Configurabile via --hardcoded-prefix, default 'bsi-'
+# per allinearsi al default di $prefix in base/_config.scss.
+DEFAULT_HARDCODED_PREFIX = "bsi-"
 
 
 def strip_comments(text: str) -> str:
@@ -260,6 +286,23 @@ def scan_file_pass2(text: str, dead_spans):
     return declared, used, suspicious, vars_declared, vars_used, sassvar_in_var
 
 
+def scan_js_file(path: Path, hardcoded_prefix: str):
+    """Cerca in un file .js occorrenze di custom property lette/scritte
+    con il prefix scritto alla lettera (es. '--bsi-dropdown-position'),
+    dato che in JS non esiste interpolazione Sass. Ritorna un set di
+    nomi (senza --prefix) trovati nel file, per marcarli come "usati"
+    lato SCSS ed evitare falsi positivi in sezione 1."""
+    raw = path.read_text(encoding="utf-8", errors="replace")
+    text = strip_comments(raw)  # limite noto: non riconosce i backtick
+    js_prop_re = re.compile(r"--" + re.escape(hardcoded_prefix) + r"([\w-]+)")
+    names = set()
+    for m in js_prop_re.finditer(text):
+        name = m.group(1)
+        if has_letter(name):
+            names.add(name)
+    return names
+
+
 def analyze_broad_var_files(file_data, dead_mixins, dead_funcs, global_vars_used,
                              var_usage_categories, global_declared):
     """Analisi dedicata a _config.scss/_variables.scss: tutte le
@@ -337,7 +380,7 @@ def categorize_file(f: Path) -> str:
     return "altro-base"
 
 
-def main(paths, csv_path=None):
+def main(paths, csv_path=None, js_paths=None, hardcoded_prefix=DEFAULT_HARDCODED_PREFIX):
     files = []
     for p in paths:
         root = Path(p)
@@ -351,6 +394,29 @@ def main(paths, csv_path=None):
     if not files:
         print("Nessun file .scss trovato.", file=sys.stderr)
         sys.exit(1)
+
+    # ---- Scan opzionale delle cartelle JS: property lette con prefix
+    #      hardcoded (niente interpolazione $prefix possibile in JS) ----
+    js_files = []
+    for p in js_paths or []:
+        root = Path(p)
+        if root.is_file() and root.suffix == ".js":
+            js_files.append(root)
+        elif root.is_dir():
+            js_files.extend(sorted(
+                f for f in root.rglob("*.js")
+                if "node_modules" not in f.parts and not f.name.endswith(".min.js")
+            ))
+        else:
+            print(f"Attenzione: {p} non esiste, salto (--js-dirs).", file=sys.stderr)
+
+    global_js_used = set()
+    js_occurrences = []  # (file, nome) — ogni occorrenza, dead o viva
+    for f in js_files:
+        names = scan_js_file(f, hardcoded_prefix)
+        global_js_used |= names
+        for name in sorted(names):
+            js_occurrences.append((f, name))
 
     # ---- Pass 1: capire cosa e' morto (mixin, function) ----
     file_data = {}
@@ -413,6 +479,12 @@ def main(paths, csv_path=None):
             var_usage_categories.setdefault(name, set()).add(cat)
         for name in sassvar_in_var:
             all_sassvar_in_var.append((f, name))
+
+    # Una property letta solo da JS (prefix hardcoded) non e' "dead":
+    # va unita a global_used PRIMA del confronto di sezione 1, altrimenti
+    # risulterebbe erroneamente morta solo perche' lo script non guarda
+    # fuori dai file .scss.
+    global_used |= global_js_used
 
     def section(title):
         print("\n" + "=" * 78)
@@ -601,6 +673,27 @@ def main(paths, csv_path=None):
     else:
         print("  (nessuna)")
 
+    if js_paths:
+        section(
+            "10) CUSTOM PROPERTY LETTE DA JS CON PREFIX HARDCODED\n"
+            f"    (letteralmente '--{hardcoded_prefix}nome', mai interpolate —\n"
+            "    con un $prefix personalizzato in config.scss questi punti\n"
+            "    smettono di funzionare silenziosamente. Elencate a "
+            "prescindere\n"
+            "    dal loro stato dead/vivo lato SCSS: e' un debito a se',\n"
+            "    non solo un fix di collegamento)"
+        )
+        if js_occurrences:
+            for f, name in js_occurrences:
+                dead_side = " [!] nome non dichiarato in nessun .scss scansionato" if name not in global_declared else ""
+                print(f"  {f}: --{hardcoded_prefix}{name}{dead_side}")
+                csv_rows.append((
+                    "10-js-hardcoded-prefix", str(f), name,
+                    "non dichiarata in alcun .scss" if name not in global_declared else ""
+                ))
+        else:
+            print("  (nessuna)")
+
     if csv_path:
         write_csv(csv_path, csv_rows)
         print(f"\nCSV scritto in: {csv_path} ({len(csv_rows)} righe)")
@@ -615,13 +708,36 @@ def main(paths, csv_path=None):
     print(f"Variabili Sass morte (via codice morto): {len(dead_vars_via_dead_code)}")
     print(f"Variabili Sass morte (mai referenziate): {len(dead_vars_never_referenced)}")
     print(f"var($...) invece di var(--...): {len(all_sassvar_in_var)}")
+    if js_paths:
+        print(f"File .js scansionati: {len(js_files)}")
+        print(f"Property lette da JS con prefix hardcoded: {len(global_js_used)} uniche, {len(js_occurrences)} occorrenze")
+
+
+def _extract_flag_values(args, flag):
+    """Estrae da args tutti i valori consecutivi dopo `flag`, fino al
+    prossimo argomento che inizia con '--' o alla fine della lista.
+    Ritorna (valori, args_rimanenti)."""
+    if flag not in args:
+        return [], args
+    idx = args.index(flag)
+    values = []
+    j = idx + 1
+    while j < len(args) and not args[j].startswith("--"):
+        values.append(args[j])
+        j += 1
+    remaining = args[:idx] + args[j:]
+    return values, remaining
 
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        print("Uso: python3 audit_custom_properties.py <cartella1> [cartella2 ...] [--csv report.csv]")
+        print(
+            "Uso: python3 audit_custom_properties.py <cartella1> [cartella2 ...] "
+            "[--js-dirs <cartellaJS1> ...] [--hardcoded-prefix bsi-] [--csv report.csv]"
+        )
         sys.exit(1)
     args = sys.argv[1:]
+
     csv_path = None
     if "--csv" in args:
         idx = args.index("--csv")
@@ -630,4 +746,16 @@ if __name__ == "__main__":
             sys.exit(1)
         csv_path = args[idx + 1]
         args = args[:idx] + args[idx + 2:]
-    main(args, csv_path)
+
+    js_dirs, args = _extract_flag_values(args, "--js-dirs")
+
+    hardcoded_prefix = DEFAULT_HARDCODED_PREFIX
+    if "--hardcoded-prefix" in args:
+        idx = args.index("--hardcoded-prefix")
+        if idx + 1 >= len(args):
+            print("Uso: --hardcoded-prefix richiede un valore, es. --hardcoded-prefix bsi-", file=sys.stderr)
+            sys.exit(1)
+        hardcoded_prefix = args[idx + 1]
+        args = args[:idx] + args[idx + 2:]
+
+    main(args, csv_path, js_paths=js_dirs, hardcoded_prefix=hardcoded_prefix)
