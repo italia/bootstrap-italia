@@ -42,6 +42,11 @@
   justify-content: center;
   padding: var(--#{$prefix}acceptoverlay-spacing-inset);
   background-color: var(--#{$prefix}acceptoverlay-background-color);
+
+  a {
+    color: var(--#{$prefix}color-link-inverse);
+  }
+
   // Change spacing on medium devices
   @include media-breakpoint-up(md) {
     --#{$prefix}acceptoverlay-spacing-inset: var(--#{$prefix}spacing-m);
