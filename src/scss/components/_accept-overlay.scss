@@ -26,6 +26,7 @@
   --#{$prefix}acceptoverlay-icon-fill: var(--#{$prefix}icon-inverse); // Controls the acceptoverlay icon fill, using color tokens
   --#{$prefix}acceptoverlay-buttons-spacing: var(--#{$prefix}spacing-s); // Controls the acceptoverlay buttons spacing, using spacing tokens
 }
+
 // Styles
 //
 /* stylelint-disable-next-line no-duplicate-selectors */
@@ -51,6 +52,7 @@
   @include media-breakpoint-up(md) {
     --#{$prefix}acceptoverlay-spacing-inset: var(--#{$prefix}spacing-m);
   }
+
   // Change alignment on large devices
   @include media-breakpoint-up(lg) {
     align-items: center;
@@ -58,6 +60,7 @@
 
   label {
     color: var(--#{$prefix}acceptoverlay-label-color);
+
     &::after {
       border-color: var(--#{$prefix}acceptoverlay-label-border-color) !important;
     }
@@ -69,6 +72,7 @@
 
   &.acceptoverlay-primary {
     --#{$prefix}acceptoverlay-background-color: var(--#{$prefix}color-background-primary);
+
     &.show {
       --#{$prefix}acceptoverlay-background-color: color-mix(
         in srgb,
@@ -105,6 +109,7 @@
   .acceptoverlay-icon {
     margin-bottom: var(--#{$prefix}acceptoverlay-icon-spacing);
     text-align: center;
+
     @include media-breakpoint-up(md) {
       --#{$prefix}acceptoverlay-icon-spacing: var(--#{$prefix}spacing-xxl);
     }
@@ -125,6 +130,7 @@
 
     button {
       width: 100%;
+
       &:last-child {
         --#{$prefix}acceptoverlay-buttons-spacing: var(--#{$prefix}spacing-xxs);
       }
@@ -137,17 +143,21 @@
     }
   }
 }
+
 //Tablet vertical
 @include media-breakpoint-up(md) {
   .acceptoverlay-buttons {
     flex-wrap: nowrap;
+
     button {
       width: 50%;
       margin-top: 0 !important;
+
       &:last-child {
         margin-left: var(--#{$prefix}spacing-m);
       }
     }
+
     &.single-button {
       button {
         width: auto;
@@ -160,6 +170,7 @@
 
 .acceptoverlayable {
   position: relative;
+
   &.show {
     min-height: 450px;
   }
