@@ -19,9 +19,8 @@
   --#{$prefix}acceptoverlay-color-text: var(--#{$prefix}color-text-inverse); // Controls the acceptoverlay color text, using color tokens
   --#{$prefix}acceptoverlay-label-color: var(--#{$prefix}color-text-inverse); // Controls the acceptoverlay label color, using color tokens
   --#{$prefix}acceptoverlay-label-border-color: var(--#{$prefix}color-border-inverse); // Controls the acceptoverlay label border color, using color tokens
-  --#{$prefix}acceptoverlay-opacity: 0.9; // Controls the acceptoverlay opacity
   --#{$prefix}acceptoverlay-spacing-inset: var(--#{$prefix}spacing-s); // Controls the acceptoverlay spacing inset, using spacing tokens
-  --#{$prefix}acceptoverlay-primary-opacity: 0.95; // Controls the acceptoverlay primary opacity
+  --#{$prefix}acceptoverlay-primary-opacity: 95%; // Controls the acceptoverlay primary opacity
   --#{$prefix}acceptoverlay-inner-width: 600px; // Controls the acceptoverlay inner width
   --#{$prefix}acceptoverlay-icon-spacing: var(--#{$prefix}spacing-s); // Controls the acceptoverlay icon spacing, using spacing tokens
   --#{$prefix}acceptoverlay-icon-fill: var(--#{$prefix}icon-inverse); // Controls the acceptoverlay icon fill, using color tokens
@@ -42,7 +41,6 @@
   align-items: flex-start;
   justify-content: center;
   padding: var(--#{$prefix}acceptoverlay-spacing-inset);
-  opacity: var(--#{$prefix}acceptoverlay-opacity);
   background-color: var(--#{$prefix}acceptoverlay-background-color);
   // Change spacing on medium devices
   @include media-breakpoint-up(md) {
@@ -67,7 +65,11 @@
   &.acceptoverlay-primary {
     --#{$prefix}acceptoverlay-background-color: var(--#{$prefix}color-background-primary);
     &.show {
-      opacity: var(--#{$prefix}acceptoverlay-primary-opacity);
+      --#{$prefix}acceptoverlay-background-color: color-mix(
+        in srgb,
+        var(--#{$prefix}color-background-primary) var(--#{$prefix}acceptoverlay-primary-opacity),
+        transparent
+      );
     }
   }
 
