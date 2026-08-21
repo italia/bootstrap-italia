@@ -99,7 +99,7 @@
     margin-bottom: var(--#{$prefix}acceptoverlay-icon-spacing);
     text-align: center;
     @include media-breakpoint-up(md) {
-      --#{$prefix}acceptoverlay-icon-margin-bottom: var(--#{$prefix}spacing-xxl);
+      --#{$prefix}acceptoverlay-icon-spacing: var(--#{$prefix}spacing-xxl);
     }
 
     .icon {
