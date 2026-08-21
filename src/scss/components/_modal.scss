@@ -94,6 +94,11 @@
   // when there should be a fixed height on `.modal-dialog`.
   flex: 1 1 auto;
   padding: var(--#{$prefix}modal-padding);
+
+  &:has(+ .modal-footer) {
+    padding-bottom: 0;
+  }
+
   color: var(--#{$prefix}color-text-base);
 }
 
@@ -141,7 +146,7 @@
   gap: var(--#{$prefix}modal-footer-gap);
   align-items: center; // vertically center
   justify-content: flex-end; // Right align buttons with flex property because text-align doesn't work on flex items
-  padding: 0 var(--#{$prefix}modal-padding) var(--#{$prefix}modal-padding);
+  padding: calc(var(--#{$prefix}modal-padding) / 2) var(--#{$prefix}modal-padding);
   border-top: var(--#{$prefix}modal-footer-border-width) solid var(--#{$prefix}modal-footer-border-color);
   background-color: var(--#{$prefix}modal-footer-bg);
   @include border-bottom-radius(var(--#{$prefix}modal-border-radius));
@@ -184,6 +189,7 @@
 }
 
 @include media-breakpoint-up(lg) {
+
   .modal-lg,
   .modal-xl {
     --#{$prefix}modal-width: 800px;
@@ -200,7 +206,8 @@
 @each $breakpoint in map.keys($grid-breakpoints) {
   $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
   $postfix: '';
-  @if $infix != '' {
+
+  @if $infix !='' {
     $postfix: $infix + '-down';
   }
 
@@ -228,6 +235,7 @@
     }
   }
 }
+
 /* stylelint-disable-next-line no-duplicate-selectors */
 .modal {
   position: fixed;
@@ -254,6 +262,7 @@
         .modal-header {
           align-items: start;
           justify-content: left;
+
           .icon {
             flex-shrink: 0;
             margin-right: $modal-icon-distance;
@@ -273,6 +282,7 @@
           --#{$prefix}modal-header-border-width: 1px;
           padding-bottom: var(--#{$prefix}modal-padding);
         }
+
         .modal-body {
           .link-list-wrapper {
             .link-list {
@@ -297,6 +307,7 @@
           line-height: var(--#{$prefix}caption-leading);
         }
       }
+
       .modal-footer {
         justify-content: flex-start;
       }
@@ -335,7 +346,6 @@
         }
 
         .modal-footer {
-          padding-top: var(--#{$prefix}modal-padding);
           flex-shrink: 0;
         }
       }
@@ -343,6 +353,7 @@
       &.modal-dialog-left {
         height: 100%;
         margin: 0 var(--#{$prefix}spacing-m) 0 0;
+
         .modal-content {
           height: 100%;
         }
@@ -352,6 +363,7 @@
         height: 100%;
         margin: 0 0 0 var(--#{$prefix}spacing-m);
         float: right;
+
         .modal-content {
           height: 100%;
         }
@@ -363,26 +375,32 @@
   &.fade {
     .modal-dialog {
       @include transition(var(--#{$prefix}modal-transition));
+
       &.modal-dialog-left {
         transform: translateX(-100%);
         transition: transform 0.3s ease-in-out;
       }
+
       &.modal-dialog-right {
         transform: translateX(100%);
         transition: transform 0.3s ease-in-out;
       }
+
       &.modal-dialog-centered {
         transform: translate(0, -5%);
       }
     }
+
     &.show {
       .modal-dialog {
         &.modal-dialog-left {
           transform: translateX(0);
         }
+
         &.modal-dialog-right {
           transform: translateX(0);
         }
+
         &.modal-dialog-centered {
           transform: translate(0, 0);
         }
@@ -397,20 +415,25 @@
     .modal-dialog {
       margin-right: auto;
       margin-left: auto;
+
       &.modal-dialog-left {
         margin: 0;
+
         .modal-content {
           height: 100%;
         }
       }
+
       &.modal-dialog-right {
         margin: 0;
         float: right;
+
         .modal-content {
           height: 100%;
         }
       }
     }
+
     // Only the margin custom property is overridden here: height/margin on `.modal-dialog` and
     // height/max-height on `.modal-content` are already derived from it by the base rules above.
     // Capped with `10vh` so a wide-but-short viewport (e.g. landscape phones) doesn't lose a
