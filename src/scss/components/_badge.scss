@@ -17,7 +17,6 @@
 
 .badge {
   --#{$prefix}badge-border-radius: var(--#{$prefix}radius-smooth); // Controls the border radius for the badge, using radius tokens.
-  --#{$prefix}badge-font-size: var(--#{$prefix}label-font-size-s); // Controls the font size for the badge, using font tokens.
   --#{$prefix}badge-font-size-relative: 1em; // Controls the relative font size for the badge.
   --#{$prefix}badge-font-weight: var(--#{$prefix}font-weight-solid); // Controls the font weight for the badge, using font tokens.
   --#{$prefix}badge-padding-x: var(--#{$prefix}spacing-xs); // Controls the horizontal padding for the badge, using spacing tokens.
