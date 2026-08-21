@@ -24,7 +24,7 @@
   --#{$prefix}acceptoverlay-primary-opacity: 0.95; // Controls the acceptoverlay primary opacity
   --#{$prefix}acceptoverlay-inner-width: 600px; // Controls the acceptoverlay inner width
   --#{$prefix}acceptoverlay-icon-spacing: var(--#{$prefix}spacing-s); // Controls the acceptoverlay icon spacing, using spacing tokens
-  --#{$prefix}acceptoverlay-icon-fill: var(--#{$prefix}icon-primary); // Controls the acceptoverlay icon fill, using color tokens
+  --#{$prefix}acceptoverlay-icon-fill: var(--#{$prefix}icon-inverse); // Controls the acceptoverlay icon fill, using color tokens
   --#{$prefix}acceptoverlay-buttons-spacing: var(--#{$prefix}spacing-s); // Controls the acceptoverlay buttons spacing, using spacing tokens
 }
 // Styles
