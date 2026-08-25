@@ -11,6 +11,7 @@ La descrizione delle custom properties è in inglese perché risiede nei files `
         <th>Variabile CSS</th>
         <th>Descrizione (Inglese)</th>
         <th>Predefinito</th>
+        <th>Altri valori</th>
       </tr>
     </thead>
     <tbody>
