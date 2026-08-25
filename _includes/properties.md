@@ -51,7 +51,7 @@ si prega di far riferimento al codice per personalizzare il comportamento.
       <tr>
         <td><code>{{ track.variable-name }}</code></td>
         <td>{{ track.description }}</td>
-        <td>{% for v in track.other_values %}<code>{{ v }}</code>&nbsp;{% endfor %}</td>
+        <td><code>{{ track.value }}</code>&nbsp;{% for v in track.other_values %}<code>{{ v }}</code>&nbsp;{% endfor %}</td>
       </tr>
     {% endif %}
     {% endfor %}
