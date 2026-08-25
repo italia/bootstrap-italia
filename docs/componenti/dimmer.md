@@ -462,6 +462,8 @@ const dimmer = new Dimmer(dimmerEl)
   </table>
 </div>
 
+{% include properties.md properties=site.data.cprops.dimmer %}
+
 ## Breaking change 
 
 {% capture callout %}

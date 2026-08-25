@@ -432,3 +432,5 @@ Le opzioni possono essere passate tramite attributi data o tramite JavaScript. P
     </tbody>
   </table>
 </div>
+
+{% include properties.md properties=site.data.cprops.tooltip %}

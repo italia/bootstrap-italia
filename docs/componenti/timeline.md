@@ -879,6 +879,8 @@ Per fissare verticalmente il punto dell'elenco all'inizio del contenuto usa la c
 </ol>
 {% endcapture %}{% include example.html content=example %}
 
+{% include properties.md properties=site.data.cprops.timeline %}
+
 ## Breaking change
 
 {% capture callout %}
