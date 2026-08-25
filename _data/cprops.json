@@ -1251,41 +1251,6 @@
     "form": [
         {
             "description": "",
-            "value": "transparent",
-            "variable-name": "--bsi-form-control-border-color"
-        },
-        {
-            "description": "",
-            "value": "0",
-            "variable-name": "--bsi-form-control-border-radius"
-        },
-        {
-            "description": "",
-            "value": "transparent",
-            "variable-name": "--bsi-form-control-background-color"
-        },
-        {
-            "description": "",
-            "value": "0",
-            "variable-name": "--bsi-form-control-spacing"
-        },
-        {
-            "description": "",
-            "value": "var(--bsi-spacing-xxs) var(--bsi-spacing-3xs)",
-            "variable-name": "--bsi-form-control-spacing"
-        },
-        {
-            "description": "",
-            "value": "var(--bsi-label-font-size)",
-            "variable-name": "--bsi-form-control-font-size"
-        },
-        {
-            "description": "",
-            "value": "var(--bsi-lead-font-size)",
-            "variable-name": "--bsi-form-control-font-size"
-        },
-        {
-            "description": "",
             "value": "2.5rem",
             "variable-name": "--bsi-form-control-height"
         },
@@ -1358,6 +1323,41 @@
             "description": "",
             "value": "var(--bsi-color-background-muted)",
             "variable-name": "--bsi-form-control-background-color"
+        },
+        {
+            "description": "",
+            "value": "transparent",
+            "variable-name": "--bsi-form-control-border-color"
+        },
+        {
+            "description": "",
+            "value": "0",
+            "variable-name": "--bsi-form-control-border-radius"
+        },
+        {
+            "description": "",
+            "value": "transparent",
+            "variable-name": "--bsi-form-control-background-color"
+        },
+        {
+            "description": "",
+            "value": "0",
+            "variable-name": "--bsi-form-control-spacing"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-spacing-xxs) var(--bsi-spacing-3xs)",
+            "variable-name": "--bsi-form-control-spacing"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-label-font-size)",
+            "variable-name": "--bsi-form-control-font-size"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-lead-font-size)",
+            "variable-name": "--bsi-form-control-font-size"
         }
     ],
     "header": [
@@ -1604,6 +1604,36 @@
     "list": [
         {
             "description": "",
+            "value": "var(--bsi-spacing-s) var(--bsi-spacing-xxs)",
+            "variable-name": "--bsi-list-item-spacing"
+        },
+        {
+            "description": "",
+            "value": "5rem",
+            "variable-name": "--bsi-list-item-thumb-size"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-spacing-xxs)",
+            "variable-name": "--bsi-list-inline-padding"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-text-muted)",
+            "variable-name": "--bsi-list-metadata-color"
+        },
+        {
+            "description": "",
+            "value": "0.5px",
+            "variable-name": "--bsi-list-metadata-letter-spacing"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-label-font-size-xs)",
+            "variable-name": "--bsi-list-metadata-font-size"
+        },
+        {
+            "description": "",
             "value": "#{$list-group-action-active-bg}",
             "variable-name": "--bsi-list-group-action-active-bg"
         },
@@ -1686,36 +1716,6 @@
             "description": "",
             "value": "#{$list-group-item-padding-y}",
             "variable-name": "--bsi-list-group-item-padding-y"
-        },
-        {
-            "description": "",
-            "value": "var(--bsi-spacing-s) var(--bsi-spacing-xxs)",
-            "variable-name": "--bsi-list-item-spacing"
-        },
-        {
-            "description": "",
-            "value": "5rem",
-            "variable-name": "--bsi-list-item-thumb-size"
-        },
-        {
-            "description": "",
-            "value": "var(--bsi-spacing-xxs)",
-            "variable-name": "--bsi-list-inline-padding"
-        },
-        {
-            "description": "",
-            "value": "var(--bsi-color-text-muted)",
-            "variable-name": "--bsi-list-metadata-color"
-        },
-        {
-            "description": "",
-            "value": "0.5px",
-            "variable-name": "--bsi-list-metadata-letter-spacing"
-        },
-        {
-            "description": "",
-            "value": "var(--bsi-label-font-size-xs)",
-            "variable-name": "--bsi-list-metadata-font-size"
         }
     ],
     "megamenu": [
