@@ -4,6 +4,12 @@
 
 La descrizione delle custom properties è in inglese perché risiede nei files `.scss` dei componenti.
 
+{% capture callout %}
+⚠ Nella colonna "Altri valori" è possibile trovare varianti responsive/tema/stato della property stessa,
+si prega di far riferimento al codice per personalizzare il valore.
+{% endcapture %}{% include callout.html content=example type="warning" %}
+
+
 <div class="table-responsive" style="font-size: 1rem">
   <table class="table table-simple">
     <thead>
@@ -20,7 +26,7 @@ La descrizione delle custom properties è in inglese perché risiede nei files `
       <td><code>{{ track.variable-name }}</code></td>
       <td>{{ track.description }}</td>
       <td><code>{{ track.value }}</code></td>
-      <td>{% for v in track.other_values %}<code>{{ v }}</code>{% endfor %}</td>
+      <td>{% for v in track.other_values %}<code>{{ v }}</code>&nbsp;{% endfor %}</td>
     </tr>
     {% endfor %}
     </tbody>
