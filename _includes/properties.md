@@ -1,6 +1,6 @@
 {%- assign properties = include.properties -%}
 {% if properties %}
-{% assign dynamic_props = False %}
+{% assign dynamic_props = false %}
 
 ## Properties
 
@@ -26,14 +26,14 @@ La descrizione delle custom properties è in inglese perché risiede nei files `
         <td><code>{{ track.value }}</code></td>
       </tr>
     {% else %}
-    {% assign dynamic_props = True %}
+    {% assign dynamic_props = true %}
     {% endif %}
     {% endfor %}
     </tbody>
   </table>
 </div>
 
-{% if dynamic_props %}
+{% if dynamic_props == true %}
 ### Properties dinamiche
 
 Nella colonna `"Valori predefiniti"` è possibile trovare varianti responsive/tema/stato della property stessa,
