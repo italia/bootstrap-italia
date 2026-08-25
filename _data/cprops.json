@@ -1604,36 +1604,6 @@
     "list": [
         {
             "description": "",
-            "value": "var(--bsi-spacing-s) var(--bsi-spacing-xxs)",
-            "variable-name": "--bsi-list-item-spacing"
-        },
-        {
-            "description": "",
-            "value": "5rem",
-            "variable-name": "--bsi-list-item-thumb-size"
-        },
-        {
-            "description": "",
-            "value": "var(--bsi-spacing-xxs)",
-            "variable-name": "--bsi-list-inline-padding"
-        },
-        {
-            "description": "",
-            "value": "var(--bsi-color-text-muted)",
-            "variable-name": "--bsi-list-metadata-color"
-        },
-        {
-            "description": "",
-            "value": "0.5px",
-            "variable-name": "--bsi-list-metadata-letter-spacing"
-        },
-        {
-            "description": "",
-            "value": "var(--bsi-label-font-size-xs)",
-            "variable-name": "--bsi-list-metadata-font-size"
-        },
-        {
-            "description": "",
             "value": "#{$list-group-action-active-bg}",
             "variable-name": "--bsi-list-group-action-active-bg"
         },
@@ -1716,6 +1686,36 @@
             "description": "",
             "value": "#{$list-group-item-padding-y}",
             "variable-name": "--bsi-list-group-item-padding-y"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-spacing-s) var(--bsi-spacing-xxs)",
+            "variable-name": "--bsi-list-item-spacing"
+        },
+        {
+            "description": "",
+            "value": "5rem",
+            "variable-name": "--bsi-list-item-thumb-size"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-spacing-xxs)",
+            "variable-name": "--bsi-list-inline-padding"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-color-text-muted)",
+            "variable-name": "--bsi-list-metadata-color"
+        },
+        {
+            "description": "",
+            "value": "0.5px",
+            "variable-name": "--bsi-list-metadata-letter-spacing"
+        },
+        {
+            "description": "",
+            "value": "var(--bsi-label-font-size-xs)",
+            "variable-name": "--bsi-list-metadata-font-size"
         }
     ],
     "megamenu": [
@@ -2390,41 +2390,6 @@
     ],
     "progress": [
         {
-            "description": "Controls the progress spinner bg, using color tokens.",
-            "value": "var(--bsi-color-border-secondary)",
-            "variable-name": "--bsi-progress-spinner-bg"
-        },
-        {
-            "description": "Controls the progress spinner size.",
-            "value": "48px",
-            "variable-name": "--bsi-progress-spinner-size"
-        },
-        {
-            "description": "Controls the progress spinner size sm.",
-            "value": "32px",
-            "variable-name": "--bsi-progress-spinner-size-sm"
-        },
-        {
-            "description": "Controls the progress spinner size lg.",
-            "value": "64px",
-            "variable-name": "--bsi-progress-spinner-size-lg"
-        },
-        {
-            "description": "Controls the progress spinner size xl.",
-            "value": "80px",
-            "variable-name": "--bsi-progress-spinner-size-xl"
-        },
-        {
-            "description": "Controls the progress spinner border width.",
-            "value": "4px",
-            "variable-name": "--bsi-progress-spinner-border-width"
-        },
-        {
-            "description": "Controls the progress spinner animation duration.",
-            "value": "0.75s",
-            "variable-name": "--bsi-progress-spinner-animation-duration"
-        },
-        {
             "description": "Controls the progress bg, using color tokens.",
             "value": "var(--bsi-color-background-secondary-lighter)",
             "variable-name": "--bsi-progress-bg"
@@ -2463,6 +2428,41 @@
             "description": "Controls the progress height.",
             "value": "4px",
             "variable-name": "--bsi-progress-height"
+        },
+        {
+            "description": "Controls the progress spinner bg, using color tokens.",
+            "value": "var(--bsi-color-border-secondary)",
+            "variable-name": "--bsi-progress-spinner-bg"
+        },
+        {
+            "description": "Controls the progress spinner size.",
+            "value": "48px",
+            "variable-name": "--bsi-progress-spinner-size"
+        },
+        {
+            "description": "Controls the progress spinner size sm.",
+            "value": "32px",
+            "variable-name": "--bsi-progress-spinner-size-sm"
+        },
+        {
+            "description": "Controls the progress spinner size lg.",
+            "value": "64px",
+            "variable-name": "--bsi-progress-spinner-size-lg"
+        },
+        {
+            "description": "Controls the progress spinner size xl.",
+            "value": "80px",
+            "variable-name": "--bsi-progress-spinner-size-xl"
+        },
+        {
+            "description": "Controls the progress spinner border width.",
+            "value": "4px",
+            "variable-name": "--bsi-progress-spinner-border-width"
+        },
+        {
+            "description": "Controls the progress spinner animation duration.",
+            "value": "0.75s",
+            "variable-name": "--bsi-progress-spinner-animation-duration"
         }
     ],
     "rating": [
