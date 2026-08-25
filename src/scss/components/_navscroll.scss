@@ -27,6 +27,7 @@
   --#{$prefix}navscroll-heading-spacing-x: var(--#{$prefix}spacing-m); // Controls the heading spacing x for the navscroll, using spacing tokens.
   --#{$prefix}navscroll-heading-font-size: var(--#{$prefix}heading-6-font-size); // Controls the heading font size for the navscroll, using font tokens.
   --#{$prefix}navscroll-heading-font-weight: var(--#{$prefix}heading-font-weight); // Controls the heading font weight for the navscroll, using font tokens.
+  --#{$prefix}navscroll-heading-color: var(--#{$prefix}color-text-base); // Controls the heading color for the navscroll, using color tokens.
   --#{$prefix}navscroll-toggler-color: var(--#{$prefix}color-text-primary); // Controls the toggler color for the navscroll, using color tokens.
   --#{$prefix}navscroll-divider-color: var(--#{$prefix}color-border-subtle); // Controls the divider color for the navscroll, using color tokens.
 }
