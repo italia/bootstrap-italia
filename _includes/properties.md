@@ -19,6 +19,7 @@ La descrizione delle custom properties è in inglese perché risiede nei files `
       <td><code>{{ track.variable-name }}</code></td>
       <td>{{ track.description }}</td>
       <td><code>{{ track.value }}</code></td>
+      <td>{% for v in track.other_values %}<code>{{ v }}</code>{% endfor %}</td>
     </tr>
     {% endfor %}
     </tbody>
