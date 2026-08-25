@@ -4,11 +4,8 @@
 
 La descrizione delle custom properties è in inglese perché risiede nei files `.scss` dei componenti.
 
-{% capture callout %}
-⚠ Nella colonna "Altri valori" è possibile trovare varianti responsive/tema/stato della property stessa,
+Nella colonna `"Altri valori"` è possibile trovare varianti responsive/tema/stato della property stessa,
 si prega di far riferimento al codice per personalizzare il valore.
-{% endcapture %}{% include callout.html type="warning" %}
-
 
 <div class="table-responsive" style="font-size: 1rem">
   <table class="table table-simple">
