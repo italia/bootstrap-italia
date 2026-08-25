@@ -1,5 +1,7 @@
 {%- assign properties = include.properties -%}
 {% if properties %}
+{% assign dynamic_props = False %}
+
 ## Properties
 
 La descrizione delle custom properties è in inglese perché risiede nei files `.scss` dei componenti.
@@ -23,13 +25,15 @@ La descrizione delle custom properties è in inglese perché risiede nei files `
         <td>{{ track.description }}</td>
         <td><code>{{ track.value }}</code></td>
       </tr>
+    {% else %}
+    {% assign dynamic_props = True %}
     {% endif %}
     {% endfor %}
     </tbody>
   </table>
 </div>
 
-
+{% if dynamic_props %}
 ### Properties dinamiche
 
 Nella colonna `"Valori predefiniti"` è possibile trovare varianti responsive/tema/stato della property stessa,
@@ -58,5 +62,5 @@ si prega di far riferimento al codice per personalizzare il comportamento.
     </tbody>
   </table>
 </div>
-
+{% endif %}
 {% endif %}
