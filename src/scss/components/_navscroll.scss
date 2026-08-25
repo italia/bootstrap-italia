@@ -15,7 +15,7 @@
 
 .it-navscroll-wrapper {
   --#{$prefix}navscroll-background: var(--#{$prefix}page-background); // Controls the background for the navscroll, using color tokens.
-  --#{$prefix}navscroll-backbutton-padding: var(--#{$prefix}spacing-xs); // Controls the backbutton padding for the navscroll, using spacing tokens.
+  --#{$prefix}navscroll-backbutton-padding: var(--#{$prefix}spacing-s) var(--#{$prefix}spacing-m); // Controls the backbutton padding for the navscroll, using spacing tokens.
   --#{$prefix}navscroll-bottom-box-shadow: 0 0px 30px 5px rgba(0, 0, 0, 0.05); // Controls the bottom box shadow for the navscroll.
   --#{$prefix}navscroll-backbutton-weight: var(--#{$prefix}font-weight-solid); // Controls the backbutton font weight for the navscroll, using font tokens.
   --#{$prefix}navscroll-item-spacing: var(--#{$prefix}spacing-xs) var(--#{$prefix}spacing-m); // Controls the item spacing for the navscroll, using spacing tokens.
@@ -44,7 +44,7 @@
     left: 0;
     z-index: 10;
     visibility: hidden;
-    padding: var(--#{$prefix}spacing-s) var(--#{$prefix}spacing-m);
+    padding: var(--#{$prefix}navscroll-backbutton-padding);
     border-radius: 0;
     opacity: 0;
     background: var(--#{$prefix}navscroll-background);
