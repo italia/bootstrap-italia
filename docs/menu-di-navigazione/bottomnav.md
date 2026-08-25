@@ -188,3 +188,5 @@ I badge e gli alert sono nascosti agli screen reader. Per garantire l'accessibil
   </ul>
 </nav>
 {% endcapture %}{% include example.html content=example %}
+
+{% include properties.md properties=site.data.cprops.bottom %}

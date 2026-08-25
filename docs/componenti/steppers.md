@@ -383,6 +383,8 @@ Per ottenere una versione scura degli Stepper è sufficiente aggiungere la class
 </div>
 {% endcapture %}{% include example.html content=example %}
 
+{% include properties.md properties=site.data.cprops.stepper %}
+
 ## Breaking change
 
 {% capture callout %}

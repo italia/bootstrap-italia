@@ -39,15 +39,25 @@ for pkt in glob_vars:
     prefixes = var.split('-')
     if len(prefixes) > 1:
         prefix = clean_variable(prefixes[0])
+        # Create a new entry in the mapped_vars dictionary if the prefix does not exist
         if prefix not in mapped_vars:
             mapped_vars[prefix] = []
+        # Search for an existing entry in the mapped_vars dictionary for the variable with the cleaned name
         final_var_name = f"--bsi-{clean_variable(var)}"
-        mapped_vars[prefix].append({
-          'variable-name': final_var_name,
-          'value': pkt[1].replace("--#{$prefix}", "--bsi-"),
-          'description': pkt[2].replace('//', '').strip().capitalize()
-        })
-
+        duplicate_found = False
+        for existing_var in mapped_vars[prefix]:
+            if existing_var['variable-name'] == final_var_name:
+                duplicate_found = True
+                existing_var['other_values'].append(pkt[1].replace("--#{$prefix}", "--bsi-"))
+                break
+        # Create a new entry in the mapped_vars dictionary for the variable with the cleaned name and value
+        if not duplicate_found:
+            mapped_vars[prefix].append({
+              'variable-name': final_var_name,
+              'value': pkt[1].replace("--#{$prefix}", "--bsi-"),
+              'description': pkt[2].replace('//', '').strip().capitalize(),
+              'other_values': []
+            })
 
 with open(OUTPUT_JSON, "w") as fapi:
     fapi.write(json.dumps(mapped_vars, sort_keys=True, indent=4))

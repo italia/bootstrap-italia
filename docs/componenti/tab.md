@@ -826,6 +826,8 @@ triggerTabList.forEach(function (triggerEl) {
   </table>
 </div>
 
+{% include properties.md properties=site.data.cprops.tab %}
+
 ## Breaking change
 
 {% capture callout %}

@@ -874,6 +874,8 @@ const carouselElements = elementList.forEach((element) => {
   </table>
 </div>
 
+{% include properties.md properties=site.data.cprops.carousel %}
+
 ## Breaking change
 
 {% capture callout %}
