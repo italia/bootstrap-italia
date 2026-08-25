@@ -233,7 +233,7 @@
 
   // Tab Card version
   &.nav-tabs-cards {
-    border-bottom: 0; // Reset bottom border for nav tabs cards
+    border-bottom-width: 0; // Container has no own border: full-width border comes from ::after ("open card" effect)
 
     // Grey fullwidth bottom border for ul
     &::after {
