@@ -204,7 +204,9 @@ $table-variants: (
 .table-hover {
   > tbody > tr:hover > * {
     --#{$prefix}table-bg: var(--#{$prefix}table-hover-bg);
+    --#{$prefix}table-color: var(--#{$prefix}table-hover-color);
     cursor: pointer;
+
     @media (prefers-reduced-motion: no-preference) {
       transition: background-color var(--#{$prefix}transition-instant) ease;
     }
@@ -236,6 +238,7 @@ $table-variants: (
 
     @if map.get($values, 'color') {
       --#{$prefix}table-color: var(--#{$prefix}#{map.get($values, 'color')});
+      --#{$prefix}table-hover-color: var(--#{$prefix}#{map.get($values, 'color')});
     }
 
     @if map.get($values, 'border-color') {
