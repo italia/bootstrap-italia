@@ -36,6 +36,7 @@
 
 .nav-link {
   display: block;
+  padding: var(--#{$prefix}nav-link-padding-y) var(--#{$prefix}nav-link-padding-x);
   color: var(--#{$prefix}navbar-link-color);
   font-size: var(--#{$prefix}navbar-link-font-size);
   font-weight: var(--#{$prefix}navbar-link-font-weight);
