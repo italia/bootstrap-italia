@@ -1,8 +1,10 @@
 {%- assign properties = include.properties -%}
+{%- assign title = include.title -%}
+
 {% if properties %}
 {% assign dynamic_props = false %}
 
-## Properties
+## Properties {{title}}
 
 La descrizione delle custom properties è in inglese perché risiede nei files `.scss` dei componenti.
 
