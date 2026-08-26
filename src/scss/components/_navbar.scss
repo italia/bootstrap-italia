@@ -23,6 +23,7 @@
   --#{$prefix}navbar-brand-padding-y: #{$navbar-brand-padding-y}; // Controls the navbar brand padding y.
   --#{$prefix}navbar-close-button-font-size: 0.75rem; // Controls the navbar close button font size.
   --#{$prefix}navbar-close-button-size: 44px; // Controls the navbar close button size.
+  --#{$prefix}navbar-close-button-text-color: var(--#{$prefix}color-text-inverse); // Controls the navbar close button text color, using color tokens.
   --#{$prefix}navbar-disabled-item-opacity: 0.75; // Controls the navbar disabled item opacity.
   --#{$prefix}navbar-hamburger-size: 1.5rem; // Controls the navbar hamburger size.
   --#{$prefix}navbar-link-border-size: var(--#{$prefix}border-thick); // Controls the navbar link border size, using border tokens.
@@ -36,6 +37,7 @@
   --#{$prefix}navbar-overlay-bg: rgba(0, 0, 0, 0.6); // Controls the navbar overlay bg.
   --#{$prefix}navbar-toggle-button-icon-color: var(--#{$prefix}icon-inverse); // Controls the navbar toggle button icon color, using icon tokens.
   --#{$prefix}navbar-toggle-button-icon-size: 1.5rem; // Controls the navbar toggle button icon size.
+
   @include media-breakpoint-up(lg) {
     --#{$prefix}navbar-link-color: var(--#{$prefix}color-text-inverse); // nav link color default - desktop.
     --#{$prefix}navbar-link-active-border-color: var(--#{$prefix}color-border-inverse);
