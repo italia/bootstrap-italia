@@ -527,5 +527,5 @@ consentono di aggiungere nuove funzionalità, come la riproduzione di video in V
 l'analisi delle statistiche di visualizzazione del video, le utility per la UI mobile 
 e molto altro ancora.
 
-{% include properties.md properties=site.data.cprops.acceptoverlay title="Accept Overlay" %}
+{% include properties.md properties=site.data.cprops.acceptoverlay title="Accept Overlay" selector=".acceptoverlay" %}
 {% include properties.md properties=site.data.cprops.vjs-theme-bootstrap-italia selector=".vjs-theme-bootstrap-italia" title="Video player" %}

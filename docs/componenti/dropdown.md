@@ -557,7 +557,8 @@ Le opzioni possono essere passate tramite gli attributi data o tramite JavaScrip
   </table>
 </div>
 
-{% include properties.md properties=site.data.cprops.dropdown %}
+{% include properties.md properties=site.data.cprops.dropdown-menu selector=".dropdown-menu" %}
+
 ## Breaking change
 
 {% capture callout %}

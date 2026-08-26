@@ -1060,7 +1060,9 @@ Per questo tipo di link list sono state utilizzate, oltre alle classi custom, le
 
 {% endcapture %}{% include example.html content=example %}
 
-{% include properties.md properties=site.data.cprops.linklist %}
+{% include properties.md properties=site.data.cprops.it-list selector=".it-list" title="List" %}
+{% include properties.md properties=site.data.cprops.link-list-wrapper selector=".link-list-wrapper" title="Link list" %}
+{% include properties.md properties=site.data.cprops.list-group selector=".list-group" title="List group" %}
 
 ## Breaking change
 

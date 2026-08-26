@@ -903,7 +903,7 @@ Applicando una classe aggiuntiva `.toolbar-vertical` alla Toolbar gli elementi v
 Il componente Toolbar utilizza al suo interno il componente `Dropdown`, si rimanda dunque alla 
 sezione [attivazione Dropdown tramite codice]({{ site.baseurl }}/docs/componenti/dropdown/#attivazione-tramite-codice)
 
-{% include properties.md properties=site.data.cprops.toolbar %}
+{% include properties.md properties=site.data.cprops.toolbar selector=".toolbar" %}
 
 ## Breaking change
 
