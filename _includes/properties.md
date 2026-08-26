@@ -1,11 +1,13 @@
 {%- assign properties = include.properties -%}
 {%- assign title = include.title -%}
+{%- assign selector = include.selector -%}
 
 {% if properties %}
 {% assign dynamic_props = false %}
 
 ## Properties {{title}}
 
+Il selettore da utilizzare per le sovrascrittura delle property è `{{selector}}`.
 La descrizione delle custom properties è in inglese perché risiede nei files `.scss` dei componenti.
 
 ### Properties statiche
