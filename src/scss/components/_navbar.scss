@@ -69,6 +69,7 @@
   --#{$prefix}backdrop-bg: #{$modal-backdrop-bg};
   --#{$prefix}backdrop-opacity: #{$modal-backdrop-opacity};
   @include overlay-backdrop(var(--#{$prefix}backdrop-zindex), var(--#{$prefix}backdrop-bg), var(--#{$prefix}backdrop-opacity));
+
   @media (min-width: #{map.get($grid-breakpoints, lg)}) {
     display: none; // to handle resize from md to lg when open
   }
@@ -82,6 +83,7 @@
   align-items: center;
   justify-content: space-between; // space out brand from logo
   background: var(--#{$prefix}navbar-background);
+
   @include media-breakpoint-up(lg) {
     --#{$prefix}navbar-link-font-size: var(--#{$prefix}label-font-size-l);
   }
@@ -128,6 +130,7 @@
     background: transparent;
     transition: all 0.3s cubic-bezier(0.1, 0.57, 0.4, 0.97);
     pointer-events: none;
+
     @include media-breakpoint-up(lg) {
       display: none;
     }
@@ -157,6 +160,7 @@
       --#{$prefix}dropdown-border-width: 1px;
       --#{$prefix}dropdown-border-color: var(--#{$prefix}color-border-subtle);
     }
+
     a.it-heading-link,
     a.it-footer-link {
       svg {
@@ -196,6 +200,7 @@
   .megamenu .dropdown-toggle:before,
   .dropdown-menu:before {
     display: none;
+
     @include media-breakpoint-up(lg) {
       display: block;
       --#{$prefix}dropdown-notch-position-y: -10px;
@@ -269,6 +274,7 @@
   z-index: #{$zindex-modal};
   display: none;
   width: calc(100% - 48px); // fluid width minus 48px for close and backdrop;
+
   @include media-breakpoint-up(lg) {
     position: relative;
     top: auto;
@@ -294,6 +300,7 @@
     transform: translateX(-100%);
     transition: all 0.2s cubic-bezier(0.29, 0.85, 0.5, 0.99);
     pointer-events: all;
+
     @include media-breakpoint-up(lg) {
       position: inherit;
       top: auto;
@@ -314,6 +321,7 @@
   .navbar-nav {
     padding-top: var(--#{$prefix}spacing-m);
     overflow: hidden;
+
     @include media-breakpoint-up(lg) {
       margin-top: 0;
       padding-top: 0;
@@ -324,6 +332,7 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
+
       @include media-breakpoint-up(lg) {
         flex-direction: row;
       }
@@ -335,10 +344,12 @@
         position: relative;
         padding: var(--#{$prefix}navbar-link-padding-y) var(--#{$prefix}navbar-link-padding-x);
         font-weight: var(--#{$prefix}navbar-link-font-weight);
+
         &.disabled span,
         &.disabled .icon {
           opacity: var(--#{$prefix}navbar-disabled-item-opacity);
         }
+
         &.dropdown-toggle {
           svg {
             margin-top: 2px;
@@ -346,6 +357,7 @@
             fill: currentColor;
             transition: all var(--#{$prefix}transition-instant);
           }
+
           &[aria-expanded='true'] {
             svg {
               transform: scaleY(-1);
@@ -361,6 +373,7 @@
         border-left: var(--#{$prefix}navbar-link-border-size) solid var(--#{$prefix}navbar-link-border-color);
         background: transparent;
         font-weight: var(--#{$prefix}navbar-link-font-weight);
+
         @include media-breakpoint-up(lg) {
           --#{$prefix}navbar-link-padding-x: var(--#{$prefix}spacing-s); // reduce horizontal padding for desktop
           display: flex;
@@ -409,6 +422,7 @@
   border: none;
   background: none;
   cursor: pointer;
+
   @include media-breakpoint-up(lg) {
     display: none;
   }
@@ -477,7 +491,7 @@
           border: 0 !important;
           background-color: transparent !important;
           transform: none !important;
-          transition: none; 
+          transition: none;
           // stylelint-enable declaration-no-important
 
           .offcanvas-header {
@@ -495,6 +509,7 @@
     }
   }
 }
+
 // scss-docs-end navbar-expand-loop
 
 // Navbar themes
