@@ -1,14 +1,8 @@
 @use 'sass:map';
 @use '../base/config' as *;
 @use '../base/variables' as *;
-@use '../base/mixins/border-radius' as *;
-@use '../base/mixins/box-shadow' as *;
-@use '../base/mixins/gradients' as *;
-@use '../base/mixins/transition' as *;
-@use '../base/mixins/deprecate' as *;
 @use '../base/mixins/backdrop' as *;
 @use '../base/mixins/breakpoints' as *;
-@use '../base/vendor/rfs' as *;
 
 // Component: navbar
 //
@@ -483,8 +477,7 @@
           border: 0 !important;
           background-color: transparent !important;
           transform: none !important;
-          @include box-shadow(none);
-          @include transition(none);
+          transition: none; 
           // stylelint-enable declaration-no-important
 
           .offcanvas-header {
