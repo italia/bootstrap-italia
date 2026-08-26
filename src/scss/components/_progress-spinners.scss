@@ -1,6 +1,5 @@
 @use '../base/config' as *;
 @use '../base/variables' as *;
-@use '../base/mixins/progress' as *;
 
 // Component: progress spinners
 //
@@ -13,8 +12,9 @@
 // Properties
 //
 .progress-spinner {
-  @include progress-base;
-
+  --#{$prefix}progress-bg: var(
+    --#{$prefix}color-background-secondary-lighter
+  ); // Shared with .progress (progress-bars), used for the default (non-active) ring border.
   --#{$prefix}progress-spinner-bg: var(--#{$prefix}color-border-secondary); // Controls the progress spinner bg, using color tokens.
   --#{$prefix}progress-spinner-size: 48px; // Controls the progress spinner size.
   --#{$prefix}progress-spinner-size-sm: 32px; // Controls the progress spinner size sm.
@@ -34,24 +34,29 @@
   0% {
     transform: rotate(0);
   }
+
   100% {
     transform: rotate(360deg);
   }
 }
+
 //double spinner anim 1
 @keyframes spinnerAnimInner1 {
   0% {
     transform: rotate(60deg);
   }
+
   100% {
     transform: rotate(205deg);
   }
 }
+
 //double spinner anim 2
 @keyframes spinnerAnimInner2 {
   0% {
     transform: rotate(30deg);
   }
+
   100% {
     transform: rotate(-105deg);
   }
@@ -65,15 +70,18 @@
   height: var(--#{$prefix}progress-spinner-size);
   border-radius: 50%;
   border: var(--#{$prefix}progress-spinner-border-width) solid var(--#{$prefix}progress-bg);
+
   //spinner active state
   &.progress-spinner-active {
     animation: spinnerAnim 0.75s linear infinite;
   }
+
   //standard spinner active state
   &.progress-spinner-active:not(.progress-spinner-double) {
     border-color: $secondary;
     border-bottom-color: var(--#{$prefix}progress-bg);
   }
+
   //small size
   &.size-sm {
     width: var(--#{$prefix}progress-spinner-size-sm);
@@ -101,6 +109,7 @@
     &.size-sm {
       width: var(--#{$prefix}progress-spinner-size-sm);
       height: var(--#{$prefix}progress-spinner-size-sm);
+
       //double spinner inner
       .progress-spinner-inner {
         width: var(--#{$prefix}progress-spinner-size-sm);
@@ -111,6 +120,7 @@
     &.size-lg {
       width: var(--#{$prefix}progress-spinner-size-lg);
       height: var(--#{$prefix}progress-spinner-size-lg);
+
       //double spinner inner
       .progress-spinner-inner {
         width: var(--#{$prefix}progress-spinner-size-lg);
@@ -121,6 +131,7 @@
     &.size-xl {
       width: var(--#{$prefix}progress-spinner-size-xl);
       height: var(--#{$prefix}progress-spinner-size-xl);
+
       //double spinner inner
       .progress-spinner-inner {
         width: var(--#{$prefix}progress-spinner-size-xl);
@@ -134,6 +145,7 @@
         opacity: 1;
       }
     }
+
     //double spinner inner
     .progress-spinner-inner {
       width: var(--#{$prefix}progress-spinner-size);
@@ -142,15 +154,19 @@
       margin-left: calc(var(--#{$prefix}progress-spinner-border-width) * -1);
       opacity: 0;
       transition: opacity 0.3s;
+
       &:nth-child(1) {
         margin-top: calc(var(--#{$prefix}progress-spinner-border-width) * -1);
       }
+
       &:nth-child(2) {
         transform: rotate(180deg);
+
         &:after {
           animation-name: spinnerAnimInner2;
         }
       }
+
       &:after {
         content: '';
         display: inline-block;

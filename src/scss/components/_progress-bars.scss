@@ -5,8 +5,6 @@
 @use '../base/mixins/gradients' as *;
 @use '../base/mixins/transition' as *;
 @use '../base/mixins/breakpoints' as *;
-@use '../base/mixins/progress' as *;
-@use '../base/vendor/rfs' as *;
 
 // Component: progress bars
 //
@@ -19,11 +17,9 @@
 // Properties
 //
 .progress {
-  @include progress-base;
-
   --#{$prefix}progress-bg: var(--#{$prefix}color-background-secondary-lighter); // Controls the progress bg, using color tokens.
   --#{$prefix}progress-border-radius: var(--#{$prefix}radius-smooth); // Controls the progress border radius, using radius tokens.
-  --#{$prefix}progress-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075); // Controls the progress box shadow,
+  --#{$prefix}progress-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075); // Controls the progress box shadow.
   --#{$prefix}progress-label-color: var(--#{$prefix}color-text-secondary); // Controls the progress label color, using color tokens.
   --#{$prefix}progress-label-font-size: var(--#{$prefix}label-font-size-xs); // Controls the progress label font size, using typography tokens.
   --#{$prefix}progress-bar-transition: width 0.5s ease; // Controls the progress bar transition.
