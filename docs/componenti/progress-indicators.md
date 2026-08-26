@@ -379,7 +379,8 @@ Aggiungendo la classe `.progress-spinner-double` allo Spinner si ottiene un'anim
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-{% include properties.md properties=site.data.cprops.progress %}
+{% include properties.md properties=site.data.cprops.progress selector=".progress" title="Progress" %}
+{% include properties.md properties=site.data.cprops.progress-spinner selector=".progress-spinner" title="Progress Spinner" %}
 
 ## Breaking change
 

@@ -39,6 +39,7 @@ for root, dirs, files in os.walk(SCSS_BASE_PATH, topdown=True):
                             vars.append(re.findall(r'\s+(--#{\$prefix}[a-z0-9-]+):\s(.*);(\s\/\/.*)?', line))
             if selector and vars:
                 vars = (functools.reduce(operator.iconcat, vars, []))
+                print (selector)
                 mapped_vars[selector] = []
                 # Map variables with prefix (e.g. dropdown, form ecc..)
                 for pkt in vars:
@@ -57,8 +58,6 @@ for root, dirs, files in os.walk(SCSS_BASE_PATH, topdown=True):
                             'description': pkt[2].replace('//', '').strip().capitalize(),
                             'other_values': []
                         })
-
-print (mapped_vars)
 
 with open(OUTPUT_JSON, "w") as fapi:
     fapi.write(json.dumps(mapped_vars, sort_keys=True, indent=4))

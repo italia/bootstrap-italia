@@ -1433,4 +1433,5 @@ Se hai personalizzato il CSS della navbar, rivedi le tue modifiche per verificar
 - Il markup del Megamenu cambia come nel nuovo componente, per approfondire andare alla [relativa pagina]({{site.baseurl}}/docs/menu-di-navigazione/megamenu/).
   {% endcapture %}{% include callout-breaking.html content=callout version="2.8.0" type="danger" %}
 
-{% include properties.md properties=site.data.cprops.header %}
+{% include properties.md properties=site.data.cprops.header title="Header" %}
+{% include properties.md properties=site.data.cprops.navbar selector=".navbar" title="Navbar" %}

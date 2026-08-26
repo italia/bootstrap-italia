@@ -189,4 +189,4 @@ I badge e gli alert sono nascosti agli screen reader. Per garantire l'accessibil
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
-{% include properties.md properties=site.data.cprops.bottom %}
+{% include properties.md properties=site.data.cprops.bottom-nav selector="bottom-nav" %}

@@ -528,4 +528,4 @@ l'analisi delle statistiche di visualizzazione del video, le utility per la UI m
 e molto altro ancora.
 
 {% include properties.md properties=site.data.cprops.acceptoverlay title="Accept Overlay" %}
-{% include properties.md properties=site.data.cprops.videoplayer title="Video player" %}
+{% include properties.md properties=site.data.cprops.vjs-theme-bootstrap-italia selector=".vjs-theme-bootstrap-italia" title="Video player" %}
