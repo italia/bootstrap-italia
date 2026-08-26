@@ -235,7 +235,6 @@
   flex-direction: column; // cannot use `inherit` to get the `.navbar`s value
   margin-bottom: 0;
   padding-left: 0;
-  font-size: var(--#{$prefix}nav-link-font-size);
   list-style: none;
 
   .dropdown-menu {
