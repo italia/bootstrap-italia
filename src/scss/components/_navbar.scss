@@ -502,7 +502,6 @@
 // Styles for switching between navbars with light or dark background.
 
 .navbar-dark {
-  --#{$prefix}navbar-color: var(--#{$prefix}color-text-inverse);
   --#{$prefix}navbar-brand-color: var(--#{$prefix}color-text-inverse);
   --#{$prefix}navbar-brand-hover-color: var(--#{$prefix}color-text-inverse);
   --#{$prefix}navbar-toggler-border-color: #{$navbar-dark-toggler-border-color};
