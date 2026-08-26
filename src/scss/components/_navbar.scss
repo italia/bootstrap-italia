@@ -81,7 +81,6 @@
   justify-content: space-between; // space out brand from logo
   background: var(--#{$prefix}navbar-background);
   @include media-breakpoint-up(lg) {
-    --#{$prefix}navbar-padding-y: 0;
     --#{$prefix}navbar-link-font-size: var(--#{$prefix}label-font-size-l);
   }
 
