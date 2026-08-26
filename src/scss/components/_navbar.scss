@@ -448,8 +448,8 @@
           }
 
           .nav-link {
-            padding-right: var(--#{$prefix}navbar-nav-link-padding-x);
-            padding-left: var(--#{$prefix}navbar-nav-link-padding-x);
+            padding-right: var(--#{$prefix}navbar-link-padding-x);
+            padding-left: var(--#{$prefix}navbar-link-padding-x);
           }
         }
 
