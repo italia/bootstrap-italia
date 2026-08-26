@@ -358,20 +358,20 @@
       a.nav-link {
         --#{$prefix}navbar-link-border-color: transparent;
         border-bottom: 0;
-        border-left: var(--#{$prefix}navbar-link-border-size) solid var(--navbar-link-border-color);
+        border-left: var(--#{$prefix}navbar-link-border-size) solid var(--#{$prefix}navbar-link-border-color);
         background: transparent;
         font-weight: var(--#{$prefix}navbar-link-font-weight);
         @include media-breakpoint-up(lg) {
           --#{$prefix}navbar-link-padding-x: var(--#{$prefix}spacing-s); // reduce horizontal padding for desktop
           display: flex;
           align-items: center;
-          border-bottom: var(--#{$prefix}navbar-link-border-size) solid var(--navbar-link-border-color);
+          border-bottom: var(--#{$prefix}navbar-link-border-size) solid var(--#{$prefix}navbar-link-border-color);
           border-left: 0;
           line-height: var(--#{$prefix}navbar-link-line-height);
         }
 
         &.active {
-          --navbar-link-border-color: var(--#{$prefix}navbar-link-active-border-color);
+          --#{$prefix}navbar-link-border-color: var(--#{$prefix}navbar-link-active-border-color);
         }
 
         &.dropdown-toggle.show[data-focus-mouse='true'] {
