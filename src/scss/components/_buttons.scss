@@ -70,6 +70,8 @@ $btn-close-white-filter: invert(1) grayscale(100%) brightness(200%) !default;
     pointer-events: none;
   }
 
+  --#{$prefix}btn-hover-border-color: transparent;
+
   &:focus-visible {
     border-color: var(--#{$prefix}btn-hover-border-color);
     outline: 0;
