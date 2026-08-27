@@ -121,7 +121,7 @@
       --#{$prefix}tab-font-size: var(--#{$prefix}label-font-size-l);
     }
     &:hover {
-      --#{$prefix}tab-text-color: var(--#{$prefix}color-text-secondary-hover);
+      --#{$prefix}tab-text-color: var(--#{$prefix}color-link-secondary-hover);
     }
     &.disabled {
       --#{$prefix}tab-text-color: var(--#{$prefix}color-link-disabled);
