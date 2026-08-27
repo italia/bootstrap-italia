@@ -15,9 +15,7 @@
   --#{$prefix}accordion-active-bg: var(
     --#{$prefix}color-background-primary
   ); // Controls the active background color for the accordion button, using color tokens.
-  --#{$prefix}accordion-active-color: var(
-    --#{$prefix}color-link-active
-  ); // Controls the active text color for the accordion button, using color tokens.
+  --#{$prefix}accordion-active-color: var(--#{$prefix}color-link-active); // Controls the active text color for the accordion button, using color tokens.
   --#{$prefix}accordion-background: var(--#{$prefix}page-background); // Controls the background color for the accordion item, using color tokens.
   --#{$prefix}accordion-border-color: var(--#{$prefix}color-border-subtle); // Controls the border color for the accordion, using color tokens.
   --#{$prefix}accordion-border-radius: var(--#{$prefix}radius-smooth); // Controls the border radius for the accordion, using radius tokens.

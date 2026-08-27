@@ -21,7 +21,9 @@
   --#{$prefix}breadcrumb-divider-color: var(--#{$prefix}color-border-secondary); // Controls the divider color for the breadcrumb, using color tokens.
   --#{$prefix}breadcrumb-divider-flipped: var(--#{$prefix}breadcrumb-divider); // Controls the flipped divider for the breadcrumb.
   --#{$prefix}breadcrumb-font-size: var(--#{$prefix}label-font-size); // Controls the font size for the breadcrumb, using font tokens.
-  --#{$prefix}breadcrumb-item-active-color: var(--#{$prefix}color-text-base); // Controls the color of the active (current page) breadcrumb item, using color tokens.
+  --#{$prefix}breadcrumb-item-active-color: var(
+    --#{$prefix}color-text-base
+  ); // Controls the color of the active (current page) breadcrumb item, using color tokens.
   --#{$prefix}breadcrumb-item-padding-x: var(--#{$prefix}spacing-xs); // Controls the horizontal padding for breadcrumb items, using spacing tokens.
   --#{$prefix}breadcrumb-link-color: var(--#{$prefix}color-text-secondary); // Controls the link color for the breadcrumb, using color tokens.
   --#{$prefix}breadcrumb-link-font-weight: var(--#{$prefix}font-weight-solid); // Controls the link font weight for the breadcrumb, using font tokens.
