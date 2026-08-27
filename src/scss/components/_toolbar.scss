@@ -18,8 +18,6 @@
   --#{$prefix}toolbar-link-color: var(--#{$prefix}color-text-secondary); // Controls the toolbar link color, using color tokens.
   --#{$prefix}toolbar-icon-color: var(--#{$prefix}icon-secondary); // Controls the toolbar icon color, using color tokens.
   --#{$prefix}toolbar-dropdown-padding-x: var(--#{$prefix}spacing-xxs); // Controls the toolbar dropdown padding x, using spacing tokens.
-  --#{$prefix}toolbar-dropdown-caret-color: var(--#{$prefix}icon-secondary); // Controls the toolbar dropdown caret color, using color tokens.
-  --#{$prefix}toolbar-dropdown-caret-size: var(--#{$prefix}spacing-3xs); // Controls the toolbar dropdown caret size, using spacing tokens.
   --#{$prefix}toolbar-dropdown-shadow: var(--#{$prefix}elevation-low); // Controls the toolbar dropdown shadow, using elevation tokens.
   --#{$prefix}toolbar-icon-font-size: var(--#{$prefix}icon-size-l); // Controls the toolbar icon font size, using color tokens.
   --#{$prefix}toolbar-item-gap: var(--#{$prefix}spacing-xs); // Controls the toolbar item gap, using spacing tokens.
