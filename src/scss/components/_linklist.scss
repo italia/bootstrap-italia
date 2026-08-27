@@ -33,7 +33,7 @@
     color: var(--#{$prefix}linklist-heading-color);
     font-size: var(--#{$prefix}linklist-heading-font-size);
     font-weight: var(--#{$prefix}heading-font-weight-weak);
-    line-height: var(--#{$prefix}heading-line-height);
+    line-height: var(--#{$prefix}heading-leading);
   }
 
   h3 {
