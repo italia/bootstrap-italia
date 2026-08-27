@@ -1409,7 +1409,6 @@ const headerSticky = new HeaderSticky(headerStickyElement)
 
 {% include properties.md properties=site.data.cprops.nav selector=".nav" title="Nav" %}
 {% include properties.md properties=site.data.cprops.navbar selector=".navbar" title="Navbar" %}
-{% include properties.md properties=site.data.cprops.nav-tabs selector=".nav-tabs" title="Nav tabs" %}
 {% include properties.md properties=site.data.cprops.it-header-navbar-wrapper selector=".it-header-navbar-wrapper" title="Header Navbar" %}
 
 ## Breaking change
