@@ -34,7 +34,7 @@
   --#{$prefix}tab-close-btn-color: var(--#{$prefix}color-text-secondary); // Controls the tab close btn color, using color tokens.
   --#{$prefix}tab-close-btn-color-hover: color-mix(
     in srgb,
-    var(--#{$prefix}primary) 90%,
+    var(--#{$prefix}tab-close-btn-color) 90%,
     black 10%
   ); // Controls the tab close btn color hover, using color tokens.
   --#{$prefix}tab-close-btn-color-disabled: var(--#{$prefix}color-text-disabled); // Controls the tab close btn color disabled, using color tokens.
