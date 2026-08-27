@@ -21,7 +21,7 @@
   --#{$prefix}sidebar-link-padding-y: var(--#{$prefix}spacing-xs); // Controls the link vertical padding for the sidebar, using spacing tokens.
   --#{$prefix}sidebar-link-sublist-indent: var(--#{$prefix}spacing-m); // Controls the sublist indent for the sidebar, using spacing tokens.
   --#{$prefix}sidebar-link-font-size: var(--#{$prefix}label-font-size); // Controls the link font size for the sidebar, using font tokens.
-  --#{$prefix}sidebar-link-line-height: var(--#{$prefix}body-line-height); // Controls the link line height for the sidebar, using font tokens.
+  --#{$prefix}sidebar-link-line-height: var(--#{$prefix}body-leading); // Controls the link line height for the sidebar, using font tokens.
   --#{$prefix}sidebar-link-active-line-width: 4px; // Controls the active line width for the sidebar.
   --#{$prefix}sidebar-divider-color: var(--#{$prefix}color-border-subtle); // Controls the divider color for the sidebar, using color tokens.
   --#{$prefix}sidebar-link-active-border-color: var(--#{$prefix}color-border-primary); // Controls the active border color for the sidebar, using color tokens.

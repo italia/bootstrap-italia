@@ -313,7 +313,7 @@
 .accordion-body {
   padding: var(--#{$prefix}accordion-body-padding-y) var(--#{$prefix}accordion-body-padding-x);
   font-size: var(--#{$prefix}body-font-size);
-  line-height: var(--#{$prefix}body-line-height);
+  line-height: var(--#{$prefix}body-leading);
 
   .accordion-header button[aria-expanded='true']:before {
     width: 0;
