@@ -19,8 +19,9 @@
   --#{$prefix}thumb-nav-item-width: 240px; // Controls the default width for each thumb item.
   --#{$prefix}thumb-nav-item-width-small: 120px; // Controls the width for thumb items in small variant.
   --#{$prefix}thumb-nav-item-height-small-vertical: 80px; // Controls the height for vertical + small thumb items.
-  --#{$prefix}thumb-nav-overlay-bg-primary: var(--#{$prefix}overlay-background-primary); // Controls the default overlay background color for thumb states.
-  --#{$prefix}thumb-nav-overlay-bg-black: var(--#{$prefix}overlay-background-light); // Controls the default overlay background color for thumb states.
+  --#{$prefix}thumb-nav-overlay-bg-primary: var(--#{$prefix}overlay-background-primary); // Controls the default overlay background color for thumb states. Variant primary.
+  --#{$prefix}thumb-nav-overlay-bg-black: var(--#{$prefix}overlay-background-light); // Controls the default overlay background color for thumb states. Variant black.
+  --#{$prefix}thumb-nav-overlay-bg-active: var(--#{$prefix}overlay-background-primary); // Controls the overlay background for the active state, fixed regardless of the color variant.
   --#{$prefix}thumb-nav-hover-scale: 1.05; // Controls the image zoom scale on hover.
   --#{$prefix}thumb-nav-transition-duration: 0.4s; // Controls the base transition duration for overlay and image transform.
   --#{$prefix}thumb-nav-transition-duration-hover: 1s; // Controls the transition duration applied during hover state.
@@ -202,7 +203,7 @@
       pointer-events: none;
       &:after {
         opacity: 1;
-        background: var(--#{$prefix}thumb-nav-overlay-bg);
+        background: var(--#{$prefix}thumb-nav-overlay-bg-active);
       }
     }
     // hover state
