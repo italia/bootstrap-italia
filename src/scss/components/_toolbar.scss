@@ -19,7 +19,7 @@
   --#{$prefix}toolbar-icon-color: var(--#{$prefix}icon-secondary); // Controls the toolbar icon color, using color tokens.
   --#{$prefix}toolbar-dropdown-shadow: var(--#{$prefix}elevation-low); // Controls the toolbar dropdown shadow, using elevation tokens.
   --#{$prefix}toolbar-item-gap: var(--#{$prefix}spacing-xs); // Controls the toolbar item gap, using spacing tokens.
-  --#{$prefix}toolbar-vertical-item-margin-x: 0; // Controls the horizontal margin between items in the vertical toolbar variant. Defaults to 0: spacing is currently handled by toolbar-item-gap.
+  --#{$prefix}toolbar-vertical-item-margin-x: 0; // Controls the horizontal inset of each item within the vertical toolbar variant.
   --#{$prefix}toolbar-vertical-item-margin-y: 0; // Controls the vertical margin between items in the vertical toolbar variant. Defaults to 0: spacing is currently handled by toolbar-item-gap.  
   --#{$prefix}toolbar-badge-border-color: var(--#{$prefix}color-background-inverse); // Controls the toolbar badge border color, using color tokens.
   --#{$prefix}toolbar-badge-background-color: var(--#{$prefix}color-background-primary); // Controls the toolbar badge background color, using color tokens.
