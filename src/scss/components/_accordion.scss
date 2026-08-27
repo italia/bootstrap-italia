@@ -16,7 +16,7 @@
     --#{$prefix}color-background-primary
   ); // Controls the active background color for the accordion button, using color tokens.
   --#{$prefix}accordion-active-color: var(
-    --#{$prefix}color-text-primary-active
+    --#{$prefix}color-link-active
   ); // Controls the active text color for the accordion button, using color tokens.
   --#{$prefix}accordion-background: var(--#{$prefix}page-background); // Controls the background color for the accordion item, using color tokens.
   --#{$prefix}accordion-border-color: var(--#{$prefix}color-border-subtle); // Controls the border color for the accordion, using color tokens.
@@ -284,6 +284,7 @@
 
     // Rotate icon
     &:not(.collapsed) {
+      color: var(--#{$prefix}accordion-active-color);
       &:after {
         transform: scaleY(1);
       }
