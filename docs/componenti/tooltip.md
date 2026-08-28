@@ -433,4 +433,4 @@ Le opzioni possono essere passate tramite attributi data o tramite JavaScript. P
   </table>
 </div>
 
-{% include properties.md properties=site.data.cprops.tooltip %}
+{% include properties.md properties=site.data.cprops.tooltip selector=".tooltip" %}

@@ -1407,6 +1407,10 @@ const headerSticky = new HeaderSticky(headerStickyElement)
   </table>
 </div>
 
+{% include properties.md properties=site.data.cprops.nav selector=".nav" title="Nav" %}
+{% include properties.md properties=site.data.cprops.navbar selector=".navbar" title="Navbar" %}
+{% include properties.md properties=site.data.cprops.it-header-navbar-wrapper selector=".it-header-navbar-wrapper" title="Header Navbar" %}
+
 ## Breaking change
 
 {% capture callout %}
@@ -1433,4 +1437,3 @@ Se hai personalizzato il CSS della navbar, rivedi le tue modifiche per verificar
 - Il markup del Megamenu cambia come nel nuovo componente, per approfondire andare alla [relativa pagina]({{site.baseurl}}/docs/menu-di-navigazione/megamenu/).
   {% endcapture %}{% include callout-breaking.html content=callout version="2.8.0" type="danger" %}
 
-{% include properties.md properties=site.data.cprops.header %}

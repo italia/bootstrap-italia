@@ -318,4 +318,4 @@ Applicando la classe `.thumb-nav-auto` alla Thumbnav le thumbnail occuperanno au
 </ul>
 {% endcapture %}{% include example.html content=example %}
 
-{% include properties.md properties=site.data.cprops.thumb %}
+{% include properties.md properties=site.data.cprops.thumb-nav selector=".thumb-nav" %}

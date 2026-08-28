@@ -462,7 +462,7 @@ const dimmer = new Dimmer(dimmerEl)
   </table>
 </div>
 
-{% include properties.md properties=site.data.cprops.dimmer %}
+{% include properties.md properties=site.data.cprops.dimmer selector=".dimmer" %}
 
 ## Breaking change 
 

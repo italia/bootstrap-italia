@@ -174,7 +174,7 @@ Le opzioni possono essere passate tramite gli attributi data o tramite Javascrip
   </tbody>
 </table>
 
-{% include properties.md properties=site.data.cprops.backtop %}
+{% include properties.md properties=site.data.cprops.back-to-top selector=".back-to-top" %}
 
 ## Breaking change
 

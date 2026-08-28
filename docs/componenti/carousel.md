@@ -874,7 +874,7 @@ const carouselElements = elementList.forEach((element) => {
   </table>
 </div>
 
-{% include properties.md properties=site.data.cprops.carousel %}
+{% include properties.md properties=site.data.cprops.it-carousel-wrapper selector=".it-carousel-wrapper" %}
 
 ## Breaking change
 
