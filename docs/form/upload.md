@@ -216,7 +216,7 @@ Ci si aspetta venga caricato un solo file (immagine) il form non ha quindi l'att
           </form>
         </div>
         <div class="avatar-upload-icon">
-          <svg class="icon icon-sm" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-camera"></use></svg>
+          <svg class="icon icon-xs" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-camera"></use></svg>
         </div>
       </div>
     </div>
@@ -463,3 +463,9 @@ const uploadDragDrop = new UploadDragDrop(uploadElement);
     </tr>
   </tbody>
 </table>
+
+## Breaking change
+
+{% capture callout %}
+- Nella variante Avatar - Dimensione Piccola, l'icona presente su mobile ha la classe `.icon-xs` al posto di `.icon-sm`.  
+{% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}
