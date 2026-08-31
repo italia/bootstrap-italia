@@ -484,3 +484,5 @@ myPopoverTrigger.addEventListener('hidden.bs.popover', function () {
     </tbody>
   </table>
 </div>
+
+{% include properties.md properties=site.data.cprops.popover selector=".popover" %}
