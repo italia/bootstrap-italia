@@ -195,7 +195,7 @@
     color: var(--#{$prefix}card-link-color);
 
     &:hover {
-      color: var(--#{$prefix}color-link-hover);
+      color: var(--#{$prefix}color-link-secondary-hover);
     }
 
     + .it-card-link {
