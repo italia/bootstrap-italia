@@ -1,10 +1,12 @@
 ---
 layout: docs
-title: Migrazione dalla versione 1
-description: Un pratico elenco dei principali cambiamenti fra Bootstrap Italia 1.x e 2.0.
+title: Migrazione dalla versione 1 alla versione 2
+description: Un pratico elenco dei principali cambiamenti fra Bootstrap Italia 1.x e 2.x.
 group: come-iniziare
 toc: true
 ---
+
+**È disponibile la nuova [guida alla migrazione dalle versioni 2.x all'attuale 3.x](/docs/come-iniziare/migrazione-dalla-versione-2/).**
 
 I cambiamenti che richiedono una modifica del codice precedente sono contrassegnati come <span class="bg-danger text-white px-2">Breaking</span>.
 

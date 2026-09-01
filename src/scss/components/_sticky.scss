@@ -1,3 +1,20 @@
+@use '../base/config' as *;
+@use '../base/variables' as *;
+
+// Component: sticky
+//
+// Description: Component styles for sticky
+//
+
+// Variables
+//
+
+// Properties
+//
+
+// Styles
+//
+
 .bs-is-sticky {
   position: sticky !important;
   z-index: $zindex-sticky !important;

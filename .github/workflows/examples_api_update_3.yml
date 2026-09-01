@@ -26,11 +26,13 @@ jobs:
         GH_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
     - run: python extract_examples.py
     - run: python extract_custom_properties.py
+    - run: python extract_root_colors.py
     - name: Setup Git
       uses: fregante/setup-git-user@v1
     - name: Add API stuff
       run: |
         git add api/
+        git add _data/color-vars.yml
         git commit -m "chore: update examples api and tokens"
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v4

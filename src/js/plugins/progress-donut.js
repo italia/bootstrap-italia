@@ -82,6 +82,9 @@ class ProgressDonut extends BaseComponent {
 
       const value = Math.round(circle.value() * 100)
       circle.setText(value + '%')
+
+      // Update ARIA attribute for accessibility
+      this._element.setAttribute('aria-valuenow', value)
       /*if (value === 0) {
         circle.setText('')
       } else {
@@ -91,6 +94,11 @@ class ProgressDonut extends BaseComponent {
   }
 
   _init() {
+    // Set ARIA attributes for accessibility
+    this._element.setAttribute('aria-valuenow', Math.round(this._config.value * 100))
+    this._element.setAttribute('aria-valuemin', 0)
+    this._element.setAttribute('aria-valuemax', 100)
+    this._element.setAttribute('role', 'progressbar')
     this._bar = new Circle(this._element, this._config)
 
     if (this._config.value > 0) {

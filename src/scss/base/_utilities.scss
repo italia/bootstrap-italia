@@ -1,8 +1,14 @@
+@use 'sass:map';
+@use 'config' as *;
+@use 'variables' as *;
+@use 'functions' as *;
+@use 'maps' as *;
+
 // Utilities
 
 $utilities: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
-$utilities: map-merge(
+$utilities: map.merge(
   (
     // scss-docs-start utils-vertical-align
     'align': (
@@ -55,9 +61,9 @@ $utilities: map-merge(
         property: box-shadow,
         class: shadow,
         values: (
-          null: $box-shadow,
-          sm: $box-shadow-sm,
-          lg: $box-shadow-lg,
+          sm: var(--#{$prefix}elevation-low),
+          md: var(--#{$prefix}elevation-medium),
+          lg: var(--#{$prefix}elevation-high),
           none: none,
         ),
       ),
@@ -99,14 +105,14 @@ $utilities: map-merge(
     'border': (
         property: border,
         values: (
-          null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
+          null: var(--#{$prefix}border-base) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
           0: 0,
         ),
       ),
     'border-top': (
       property: border-top,
       values: (
-        null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
+        null: var(--#{$prefix}border-base) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
         0: 0,
       ),
     ),
@@ -114,14 +120,14 @@ $utilities: map-merge(
       property: border-right,
       class: border-end,
       values: (
-        null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
+        null: var(--#{$prefix}border-base) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
         0: 0,
       ),
     ),
     'border-bottom': (
       property: border-bottom,
       values: (
-        null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
+        null: var(--#{$prefix}border-base) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
         0: 0,
       ),
     ),
@@ -129,12 +135,14 @@ $utilities: map-merge(
       property: border-left,
       class: border-start,
       values: (
-        null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
+        null: var(--#{$prefix}border-base) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
         0: 0,
       ),
     ),
     'border-color': (
       property: border-color,
+      css-var: true,
+      css-variable-name: border-color,
       class: border,
       local-vars: (
         'border-opacity': 1,
@@ -333,7 +341,7 @@ $utilities: map-merge(
         responsive: true,
         property: margin,
         class: m,
-        values: map-merge(
+        values: map.merge(
             $spacers,
             (
               auto: auto,
@@ -344,7 +352,7 @@ $utilities: map-merge(
       responsive: true,
       property: margin-right margin-left,
       class: mx,
-      values: map-merge(
+      values: map.merge(
           $spacers,
           (
             auto: auto,
@@ -355,7 +363,7 @@ $utilities: map-merge(
       responsive: true,
       property: margin-top margin-bottom,
       class: my,
-      values: map-merge(
+      values: map.merge(
           $spacers,
           (
             auto: auto,
@@ -366,7 +374,7 @@ $utilities: map-merge(
       responsive: true,
       property: margin-top,
       class: mt,
-      values: map-merge(
+      values: map.merge(
           $spacers,
           (
             auto: auto,
@@ -377,7 +385,7 @@ $utilities: map-merge(
       responsive: true,
       property: margin-right,
       class: me,
-      values: map-merge(
+      values: map.merge(
           $spacers,
           (
             auto: auto,
@@ -388,7 +396,7 @@ $utilities: map-merge(
       responsive: true,
       property: margin-bottom,
       class: mb,
-      values: map-merge(
+      values: map.merge(
           $spacers,
           (
             auto: auto,
@@ -399,7 +407,7 @@ $utilities: map-merge(
       responsive: true,
       property: margin-left,
       class: ms,
-      values: map-merge(
+      values: map.merge(
           $spacers,
           (
             auto: auto,
@@ -585,7 +593,7 @@ $utilities: map-merge(
         local-vars: (
           'text-opacity': 1,
         ),
-        values: map-merge(
+        values: map.merge(
             $utilities-text-colors,
             (
               'secondary': $color-text-secondary,
@@ -616,7 +624,7 @@ $utilities: map-merge(
         local-vars: (
           'bg-opacity': 1,
         ),
-        values: map-merge(
+        values: map.merge(
             $utilities-bg-colors,
             (
               'transparent': transparent,
@@ -658,15 +666,10 @@ $utilities: map-merge(
         property: border-radius,
         class: rounded,
         values: (
-          null: var(--#{$prefix}border-radius),
+          null: var(--#{$prefix}radius-smooth),
           0: 0,
-          1: var(--#{$prefix}border-radius-sm),
-          2: var(--#{$prefix}border-radius),
-          3: var(--#{$prefix}border-radius-lg),
-          4: var(--#{$prefix}border-radius-xl),
-          5: var(--#{$prefix}border-radius-2xl),
-          circle: 50%,
-          pill: var(--#{$prefix}border-radius-pill),
+          circle: var(--#{$prefix}radius-circle),
+          pill: var(--#{$prefix}radius-rounded),
         ),
       ),
     'rounded-top': (

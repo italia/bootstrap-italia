@@ -14,6 +14,7 @@ Per la creazione del componente, è stato utilizzato il plugin [Accessible autoc
 
 {% comment %}Example name: Base{% endcomment %}
 {% capture example %}
+
 <div class="form-group">
   <label for="accessibleAutocomplete">Regione</label>
   <div id="accessibleAutocompleteWrapper" class="autocomplete-wrapper"></div>
@@ -33,15 +34,16 @@ Per la creazione del componente, è stato utilizzato il plugin [Accessible autoc
 
 ## Cambiare i valori dinamicamente
 
-In questo esempio viene mostrato come popolare il componente con dati che 
+In questo esempio viene mostrato come popolare il componente con dati che
 cambiano a fronte di un altro input, ad esempio il valore di un altro elemento
-di un form (come una select nell'esempio che segue). 
-Per far fronte a questa esigenza è sufficiente passare come opzione `source` 
+di un form (come una select nell'esempio che segue).
+Per far fronte a questa esigenza è sufficiente passare come opzione `source`
 una funzione per filtrare i dati e popolare il componente
 ([Tutte le opzioni disponibili del componente](#attivazione-tramite-codice)).
 
 {% comment %}Example name: Cambiare i valori dinamicamente{% endcomment %}
 {% capture example %}
+
 <div class="row">
   <div class="col-12">
     <div class="form-group">
@@ -102,6 +104,7 @@ una funzione per filtrare i dati e popolare il componente
 
 {% comment %}Example name: Regioni e Comuni{% endcomment %}
 {% capture example %}
+
 <div class="row">
   <div class="col-12">
     <div class="form-group">
@@ -152,16 +155,15 @@ una funzione per filtrare i dati e popolare il componente
 ## Validazione
 
 {% capture callout %}
-Per la validazione del campo con autocompletamento, si consiglia di utilizzare 
-il plugin Just Validate come da [guida]({{ site.baseurl }}/docs/form/introduzione/#validazione). 
-È possibile testare la validazione del campo con autocompletamento sulla 
+Per la validazione del campo con autocompletamento, si consiglia di utilizzare
+il plugin Just Validate come da [guida]({{ site.baseurl }}/docs/form/introduzione/#validazione).
+È possibile testare la validazione del campo con autocompletamento sulla
 [pagina di esempio validazione]({{ site.baseurl }}/docs/esempi/form/).
 {% endcapture %}{% include callout.html content=callout type="warning" %}
 
-
 Quando l'utente seleziona un valore dalla tendinda di Autocomplete occorre
 richiamare nuovamente la funzione di validazione. Questa chiamata può essere
-effettuata all'interno del metodo `onConfirm` che viene passato in configurazione 
+effettuata all'interno del metodo `onConfirm` che viene passato in configurazione
 e verrà chiamata ogni volta che l'utente seleziona un opzione.
 
 Ad esempio con JustValidate occorrerà istanziare il componente in questo modo
@@ -172,8 +174,8 @@ const selectAutocomplete = new SelectAutocomplete(selectAutocompleteWrapper, {
   id: 'idAutocomplete',
   onConfirm: () => {
     validate.revalidateField('#idAutocomplete')
-  }
-});
+  },
+})
 ```
 
 Il campo verrà validato così anche nel caso in cui l'utente seleziona un'opzione.
@@ -181,20 +183,20 @@ Nel caso in cui è stato impostato che JustValidate validi il form solo dopo la
 submit occorre controllare il suo stato
 
 ```js
-  onConfirm: () => {
-    if (!validate.isSubmitted && !validate.validateBeforeSubmitting)
-      return
-    validate.revalidateField('#idAutocomplete')
-  }
+onConfirm: () => {
+  if (!validate.isSubmitted && !validate.validateBeforeSubmitting) return
+  validate.revalidateField('#idAutocomplete')
+}
 ```
 
-Nell'esempio seguente si può provare questo comportamento (si noti che tra le 
-configurazioni è stato passato anche `minLength: 3`, vista la grande mole di dati 
-questa opzione impedirà la visualizzazione dei suggerimenti se vengono digitati 
+Nell'esempio seguente si può provare questo comportamento (si noti che tra le
+configurazioni è stato passato anche `minLength: 3`, vista la grande mole di dati
+questa opzione impedirà la visualizzazione dei suggerimenti se vengono digitati
 meno di 3 caratteri)
 
 {% comment %}Example name: Validazione{% endcomment %}
 {% capture example %}
+
 <div>
   <form id="justValidate">
     <div class="row">
@@ -213,10 +215,7 @@ meno di 3 caratteri)
   </form>
   <script>
     document.addEventListener('DOMContentLoaded', async function () {
-      const validate = new bootstrap.FormValidate('#justValidate', {
-        errorFieldCssClass: 'is-invalid',
-        errorLabelCssClass: 'form-feedback',
-        errorLabelStyle: '',
+      const validate = new bootstrap.FormValidate('#justValidate', {                     
         focusInvalidField: false,
       })
       const comuniJson = await (await fetch('{{ site.baseurl }}/docs/esempi/form/comuni.json')).json();
@@ -260,26 +259,26 @@ meno di 3 caratteri)
 È possibile abilitare l'autocomplete manualmente utilizzando l'oggetto `SelectAutocomplete`.
 
 ```js
-import { SelectAutocomplete } from 'bootstrap-italia';
+import { SelectAutocomplete } from 'bootstrap-italia'
 
-const autocompleteWrapperElement = document.querySelector('#wrapper-autocomplete');
-const autocomplete = new SelectAutocomplete(autocompleteWrapperElement, options);
+const autocompleteWrapperElement = document.querySelector('#wrapper-autocomplete')
+const autocomplete = new SelectAutocomplete(autocompleteWrapperElement, options)
 ```
 
 #### Opzioni
 
 ```js
-import { SelectAutocomplete } from 'bootstrap-italia';
+import { SelectAutocomplete } from 'bootstrap-italia'
 
-const selectAutocompleteWrapper = document.querySelector('#accessibleAutocompleteWrapper');
+const selectAutocompleteWrapper = document.querySelector('#accessibleAutocompleteWrapper')
 const selectAutocomplete = new SelectAutocomplete(selectAutocompleteWrapper, {
   source: ['Option 1', 'Option 2', 'Option 3'],
   id: 'accessibleAutocomplete',
   minLength: 3,
   onConfirm: (selectedElement) => {
-    console.log(selectedElement);
-  }
-});
+    console.log(selectedElement)
+  },
+})
 ```
 
 <div class="table-responsive">
@@ -361,6 +360,8 @@ Il componente è internazionalizzabile tramite alcuni parametri della configuraz
 La configurazione per Bootstrap Italia è stata settata in italiano.
 Per maggiori dettagli sulle stringhe che possono essere passate al componente
 fare riferimento alla [guida ufficiale](https://github.com/alphagov/accessible-autocomplete?tab=readme-ov-file#internationalization).
+
+{% include properties.md properties=site.data.cprops.autocomplete %}
 
 ## Breaking change
 

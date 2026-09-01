@@ -3,12 +3,16 @@
 - title: Come iniziare
   pages:
     - title: Introduzione
+    - title: Font
+    - title: Migrazione dalla versione 2
     - title: Strumenti di compilazione
-    - title: Personalizzazione della libreria
-    - title: Modificare Componenti
-    - title: Migrazione dalla versione 1
 
-- title: Breaking change
+- title: Personalizzare la libreria
+  pages:
+    - title: Variabili CSS
+    - title: Design token
+    - title: Colori
+    - title: Componenti
 
 - title: Organizzare gli spazi
   pages:
@@ -73,7 +77,7 @@
     - title: Dropdown
     - title: Hero
     - title: Modale
-    - title: Notifiche
+    - title: Notification
     - title: Overlay
     - title: Paginazione
     - title: Popover
@@ -105,11 +109,12 @@
 - title: Utilities
   pages:
     - title: Colori
-    - title: Colori Custom
     - title: Icone
 
 - title: Esempi
 
 - title: Progetti
+
+- title: Breaking change
 
 - title: Informazioni
