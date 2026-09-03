@@ -319,7 +319,7 @@
   // Navbar Nav
   .navbar-nav {
     padding-top: var(--#{$prefix}spacing-m);
-    overflow: hidden;
+    overflow: visible;
     @include media-breakpoint-up(lg) {
       margin-top: 0;
       padding-top: 0;
