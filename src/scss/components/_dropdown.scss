@@ -316,7 +316,7 @@
 //
 // `<button>`-specific styles are denoted with `// For <button>s`
 .dropdown-item.list-item {
-  width: auto; // For `<button>`s
+  width: 100%; 
   padding: var(--#{$prefix}dropdown-item-padding-y) var(--#{$prefix}dropdown-item-padding-x);
   border: 0; // For `<button>`s
   background-color: transparent; // For `<button>`s
