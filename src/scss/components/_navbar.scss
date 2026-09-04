@@ -344,12 +344,6 @@
         position: relative;
         padding: var(--#{$prefix}navbar-link-padding-y) var(--#{$prefix}navbar-link-padding-x);
         font-weight: var(--#{$prefix}navbar-link-font-weight);
-
-        &.disabled span,
-        &.disabled .icon {
-          opacity: var(--#{$prefix}navbar-disabled-item-opacity);
-        }
-
         &.dropdown-toggle {
           svg {
             margin-top: 2px;
