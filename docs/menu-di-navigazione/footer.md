@@ -45,63 +45,65 @@ Nel footer completo sono presenti i seguenti elementi:
         </div>
       </section>
       <section class="pt-2">
-        <div class="row">
-          <div class="col-lg-3 col-sm-6 pb-3">
-            <h4>
-              <a href="#" title="Vai alla pagina: Amministrazione">Amministrazione</a>
-            </h4>
-            <div class="link-list-wrapper">
-              <ul class="footer-list link-list clearfix">
-                <li><a class="list-item" href="#">Giunta e consiglio</a></li>
-                <li><a class="list-item" href="#">Aree di competenza</a></li>
-                <li><a class="list-item" href="#">Dipendenti</a></li>
-                <li><a class="list-item" href="#">Luoghi</a></li>
-                <li><a class="list-item" href="#">Associazioni e società partecipate</a></li>
-              </ul>
+        <nav aria-label="Mappa del sito">
+          <div class="row">
+            <div class="col-lg-3 col-sm-6 pb-3">
+              <h4>
+                <a href="#" title="Vai alla pagina: Amministrazione">Amministrazione</a>
+              </h4>
+              <div class="link-list-wrapper">
+                <ul class="footer-list link-list clearfix">
+                  <li><a class="list-item" href="#">Giunta e consiglio</a></li>
+                  <li><a class="list-item" href="#">Aree di competenza</a></li>
+                  <li><a class="list-item" href="#">Dipendenti</a></li>
+                  <li><a class="list-item" href="#">Luoghi</a></li>
+                  <li><a class="list-item" href="#">Associazioni e società partecipate</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 pb-3">
+              <h4>
+                <a href="#" title="Vai alla pagina: Servizi">Servizi</a>
+              </h4>
+              <div class="link-list-wrapper">
+                <ul class="footer-list link-list clearfix">
+                  <li><a class="list-item" href="#">Pagamenti</a></li>
+                  <li><a class="list-item" href="#">Sostegno</a></li>
+                  <li><a class="list-item" href="#">Domande e iscrizioni</a></li>
+                  <li><a class="list-item" href="#">Segnalazioni</a></li>
+                  <li><a class="list-item" href="#">Autorizzazioni e concessioni</a></li>
+                  <li><a class="list-item" href="#">Certificati e dichiarazioni</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 pb-3">
+              <h4>
+                <a href="#" title="Vai alla pagina: Novità">Novità</a>
+              </h4>
+              <div class="link-list-wrapper">
+                <ul class="footer-list link-list clearfix">
+                  <li><a class="list-item" href="#">Notizie</a></li>
+                  <li><a class="list-item" href="#">Eventi</a></li>
+                  <li><a class="list-item" href="#">Comunicati stampa</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 pb-3">
+              <h4>
+                <a href="#" title="Vai alla pagina: Documenti">Documenti</a>
+              </h4>
+              <div class="link-list-wrapper">
+                <ul class="footer-list link-list clearfix">
+                  <li><a class="list-item" href="#">Progetti e attività</a></li>
+                  <li><a class="list-item" href="#">Delibere, determine e ordinanze</a></li>
+                  <li><a class="list-item" href="#">Bandi</a></li>
+                  <li><a class="list-item" href="#">Concorsi</a></li>
+                  <li><a class="list-item" href="#">Albo pretorio</a></li>
+                </ul>
+              </div>
             </div>
           </div>
-          <div class="col-lg-3 col-sm-6 pb-3">
-            <h4>
-              <a href="#" title="Vai alla pagina: Servizi">Servizi</a>
-            </h4>
-            <div class="link-list-wrapper">
-              <ul class="footer-list link-list clearfix">
-                <li><a class="list-item" href="#">Pagamenti</a></li>
-                <li><a class="list-item" href="#">Sostegno</a></li>
-                <li><a class="list-item" href="#">Domande e iscrizioni</a></li>
-                <li><a class="list-item" href="#">Segnalazioni</a></li>
-                <li><a class="list-item" href="#">Autorizzazioni e concessioni</a></li>
-                <li><a class="list-item" href="#">Certificati e dichiarazioni</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-lg-3 col-sm-6 pb-3">
-            <h4>
-              <a href="#" title="Vai alla pagina: Novità">Novità</a>
-            </h4>
-            <div class="link-list-wrapper">
-              <ul class="footer-list link-list clearfix">
-                <li><a class="list-item" href="#">Notizie</a></li>
-                <li><a class="list-item" href="#">Eventi</a></li>
-                <li><a class="list-item" href="#">Comunicati stampa</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-lg-3 col-sm-6 pb-3">
-            <h4>
-              <a href="#" title="Vai alla pagina: Documenti">Documenti</a>
-            </h4>
-            <div class="link-list-wrapper">
-              <ul class="footer-list link-list clearfix">
-                <li><a class="list-item" href="#">Progetti e attività</a></li>
-                <li><a class="list-item" href="#">Delibere, determine e ordinanze</a></li>
-                <li><a class="list-item" href="#">Bandi</a></li>
-                <li><a class="list-item" href="#">Concorsi</a></li>
-                <li><a class="list-item" href="#">Albo pretorio</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
+        </nav>
       </section>
       <section class="pt-4 border-white border-top">
         <div class="row">
@@ -151,8 +153,7 @@ Nel footer completo sono presenti i seguenti elementi:
     </div>
   </div>
   <div class="it-footer-small-prints clearfix">
-    <div class="container">
-      <!-- <h3 class="visually-hidden">Sezione Link Utili</h3> -->
+    <nav class="container" aria-label="Link utili">
       <ul class="it-footer-small-prints-list list-inline mb-0 d-flex flex-column flex-md-row">
         <li class="list-inline-item"><a href="#">Media policy</a></li>
         <li class="list-inline-item"><a href="#">Note legali</a></li>
@@ -160,7 +161,7 @@ Nel footer completo sono presenti i seguenti elementi:
         <li class="list-inline-item"><a href="#">Mappa del sito</a></li>
         <li class="list-inline-item"><a href="https://form.agid.gov.it/view/xyz">Dichiarazione di accessibilità <span class="visually-hidden">(link esterno su sito AgID)</span></a></li>
       </ul>
-    </div>
+    </nav>
   </div>
 </footer>
 {% endcapture %}{% include example.html content=example %}
@@ -238,8 +239,7 @@ Contiene i contatti dell'ente, collegamenti ai profili social, form di iscrizion
     </div>
   </div>
   <div class="it-footer-small-prints clearfix">
-    <div class="container">
-      <!-- <h3 class="visually-hidden">Sezione Link Utili</h3> -->
+    <nav class="container" aria-label="Link utili">
       <ul class="it-footer-small-prints-list list-inline mb-0 d-flex flex-column flex-md-row">
         <li class="list-inline-item"><a href="#">Media policy</a></li>
         <li class="list-inline-item"><a href="#">Note legali</a></li>
@@ -258,10 +258,13 @@ Contiene i contatti dell'ente, collegamenti ai profili social, form di iscrizion
 
 {% capture callout %}
 - Per la `<section>` di branding dell'ente: aggiunta classe `.pb-4`.
-- Per la `<section>` che ospita sitemap o link: aggiunta classe `.pt-2`. 
+- Per la `<section>` che ospita sitemap o link: 
+  - racchiusa in un `<nav>` con `aria-label` dedicata;
+  - aggiunta classe `.pt-2`. 
   - Per i `<div>` interni di questa seconda sezione è stato corretto il responsive: rimossa classe `.col-md-3` e aggiunta la classe `.pb-3`.
 - Per la `<section>` che presenta dati dell'ente e contatti: cambiato da `.py-4` a `.pt-4`.
   - Per i `<div>` interni di questa terza sezione sono state corrette le spaziature verticali: cambiato da `.pb-2` a `.mt-2` 
+- La `<section>` che ospita i link utili a fondo pagina è ora racchiusa un `<nav>` con `aria-label` dedicata;
 - La classe che controlla il colore delle icone social ha cambiato nome: `.icon-white` diventa `.icon-inverse`.
 - Aggiunto il markup per mostrare il campo input per l'iscrizione alla newsletter.
 {% endcapture %}{% include callout.html content=callout version="3.0.0" type="danger" %}

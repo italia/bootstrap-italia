@@ -513,7 +513,7 @@ Il testo corrispondente alla ricerca (_"ite"_, nell'esempio) deve essere racchiu
   <span class="autocomplete-icon" aria-hidden="true">
     <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-search"></use></svg>
   </span>
-  <ul class="autocomplete-list" id="testAutocomplete1">
+  <ul class="autocomplete-list" id="testAutocomplete1" role="list">
     <li>
       <a href="#">
         <div class="avatar size-sm">
@@ -584,7 +584,7 @@ Per ottenere una versione grande dell'Autocomplete, indicata ad esempio per inte
   <span class="autocomplete-icon" aria-hidden="true">
     <svg class="icon icon-secondary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-search"></use></svg>
   </span>
-  <ul class="autocomplete-list" id="testAutocomplete2">
+  <ul class="autocomplete-list" id="testAutocomplete2" role="list">
     <li>
       <a href="#">
         <div class="avatar size-sm">
@@ -777,7 +777,8 @@ Includendo l'elemento all'interno di un `.form-group`, la label assumerà lo ste
 {% capture callout %}
 - Nel caso di input con icona o pulsanti, l'elemento `label` è stato spostato fuori dal contenitore `.input-group` per leggibilità del markup.
 - Nel paragrafo dimensioni sono stati integrati gli esempi con icone, pulsanti di invio e istruzioni specifiche.
-{% endcapture %}{% include callout.html content=callout version="3.0.0" type="danger" %}
+- Nei due esempi grafici di liste di ricerca è stato aggiunto l'attributo `role="list"` sull'elemento `<ul>` per ripristinarne la semantica lista su Safari e VoiceOver (macOS/iOS). 
+{% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}
 
 {% capture callout %}
 Quando si utilizza l'attributo `placeholder` o l'input parte già valorizzato assicurarsi di aggiungere alla label la classe **`active`** per impedire la sovrapposizione della label al campo.

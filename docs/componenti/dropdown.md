@@ -17,13 +17,15 @@ Per l'attivazione di un dropdown è sufficiente racchiudere il link per l'apertu
 {% capture callout %}
 #### Accessibilità
 
-Lo standard [WAI ARIA](https://www.w3.org/TR/wai-aria/) definisce un widget con proprietà [`role="menu"`](https://www.w3.org/TR/wai-aria/#menu), specifica per i menu applicativi con link o azioni. Questi menu possono contenere solo voci di menu, voci di menu di caselle di controllo, voci di menu dei pulsanti di opzione, gruppi di pulsanti di opzione e sottomenu.
+Lo standard [WAI ARIA](https://www.w3.org/TR/wai-aria/) definisce un widget con proprietà [`role="menu"`](https://www.w3.org/TR/wai-aria/#menu), specifico per i menu applicativi con azioni o comandi, similmente ai menu di software desktop (File, Modifica, ecc.). Questi menu **non possono contenere link di navigazione** e possono includere solo voci di menu, voci di menu di caselle di controllo, voci di menu dei pulsanti di opzione, gruppi di pulsanti di opzione e sottomenu.
 
-I dropdown del framework Bootstrap sono progettati per essere invece generici e applicabili a una varietà di situazioni e strutture di markup. Per questo motivo, Bootstrap non si aspetta (né aggiunge automaticamente) alcuno degli attributi ARIA e di ruolo richiesti. Gli autori dovranno integrare nel proprio markup gli eventuali attributi specifici e, nel caso di sviluppo di soluzioni che non ricadano nello standard ARIA, porre particolare attenzione a verifiche di accessibilità e test con utenti.
+I dropdown del framework Bootstrap sono progettati per essere invece generici e applicabili a una varietà di situazioni e strutture di markup. Per questo motivo, Bootstrap Italia non si aspetta (né aggiunge automaticamente) alcuno degli attributi ARIA e di ruolo richiesti. Gli autori dovranno integrare nel proprio markup gli eventuali attributi specifici e, nel caso di sviluppo di soluzioni che non ricadano nello standard ARIA, porre particolare attenzione a verifiche di accessibilità e test con utenti.
 
 Tuttavia, Bootstrap comprende di base il supporto per la maggior parte delle interazioni standard del menu della tastiera, come la possibilità di spostarsi tra i singoli elementi `.list-item` usando i tasti freccia, e chiude il menu con il tasto ESC.
 
 Si ricorda che link di navigazione semanticamente sono tag `<a>`, mentre link che attivano azioni in pagina sono tag `<button>`, seppur questi ultimi è possibile implementarli in casi molto particolari come tag `<a>` con proprietà `role="button"`.
+
+Altresì è da notare che, su **Safari e VoiceOver (macOS/iOS)**, se il componente Dropdown non vive dentro un elemento `<nav>`, la lista di elementi all'apertura potrebbe non avere la semantica di lista. In questo caso, se i test ne confermano l'utilità, è possibile ripristinarla integrando l'attributo `role="list"` sull'elemento `<ul>`.
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
 

@@ -269,7 +269,7 @@ Il componente è implementato come elenco ordinato `<ol> per garantire la corret
 
 {% comment %}Example name: Timeline point list{% endcomment %}
 {% capture example %}
-<ol class="it-timeline-point-list">
+<ol class="it-timeline-point-list" role="list">
   <li class="timeline-point">
     <div class="point-aside point-aside-primary">
       <time datetime="2025-10-14">
@@ -321,6 +321,7 @@ Questi elementi sono racchiusi in `.point-visual` con `aria-hidden="true"` perch
   - **Per punti data**: usa l'elemento semantico `<time>` con l'attributo `datetime` in formato ISO (es. `2025-10-14`).
   - **Per punti non temporali:** usa un `<div>` contenitore generico e usa `<span class="visually-hidden">` per descrivere il contenuto in linguaggio naturale seguendo l'ordine visivo (top → bottom, es. "Categoria AB, passo 1 di 3").
   - **Per punti icona:** usa `aria-hidden="true"` sull'elemento `<svg>` e veicola il significato usando `<span class="visually-hidden">`.
+- Include l'attributo `role="list"` sull'elemento `<ol>` per ripristinare la semantica di lista **su Safari e VoiceOver (macOS/iOS)**. 
 {% endcapture %}{% include callout.html content=callout type="accessibility" %}
 
 ### Varianti colore
@@ -329,7 +330,7 @@ Modificando la classe `.point-aside-{suffisso}` è possibile personalizzare il c
 
 {% comment %}Example name: Timeline point list, varianti colore{% endcomment %}
 {% capture example %}
-<ol class="it-timeline-point-list">
+<ol class="it-timeline-point-list" role="list">
   <li class="timeline-point">
     <div class="point-aside point-aside-primary">
       <time datetime="2025-10-14">
@@ -429,7 +430,7 @@ Tramite la classe `.timeline-point-xs` applicata all'elemento `.timeline-point` 
 
 {% comment %}Example name: Timeline point list, compatta{% endcomment %}
 {% capture example %}
-<ol class="it-timeline-point-list">
+<ol class="it-timeline-point-list" role="list">
   <li class="timeline-point timeline-point-xs">
     <div class="point-aside point-aside-primary">
       <time datetime="2025-10-14">
@@ -455,7 +456,7 @@ Per esplicitare le date complete si usa l'elemento `<time>` con l'attributo `dat
 
 {% comment %}Example name: Timeline point list, calendario{% endcomment %}
 {% capture example %}
-<ol class="it-timeline-point-list">
+<ol class="it-timeline-point-list" role="list">
   <li class="timeline-point">
     <div class="point-aside point-aside-primary">
       <time datetime="2025-10-14">
@@ -479,7 +480,7 @@ Tramite il contenitore `.point-top` è possibile visualizzare anche l'anno.
 
 {% comment %}Example name: Timeline point list, calendario completo{% endcomment %}
 {% capture example %}
-<ol class="it-timeline-point-list">
+<ol class="it-timeline-point-list" role="list">
   <li class="timeline-point">
     <div class="point-aside point-aside-primary">
       <time datetime="2025-10-14">
@@ -509,7 +510,7 @@ La sezione laterale può essere usata anche per visualizzare progressi e traguar
 
 {% comment %}Example name: Timeline point list, progresi numerici{% endcomment %}
 {% capture example %}
-<ol class="it-timeline-point-list">
+<ol class="it-timeline-point-list" role="list">
   <li class="timeline-point">
     <div class="point-aside point-aside-primary">
       <div>
@@ -561,7 +562,7 @@ La sezione laterale può essere usata anche per visualizzare progressi e traguar
 
 {% comment %}Example name: Timeline point list, traguardi con icone{% endcomment %}
 {% capture example %}
-<ol class="it-timeline-point-list">
+<ol class="it-timeline-point-list" role="list">
   <li class="timeline-point">
     <div class="point-aside point-aside-primary">
       <div>
@@ -623,7 +624,7 @@ Usa la classe `.timeline-point-align-top` sull'elemento `.timeline-point` per fi
 
 {% comment %}Example name: Timeline con card generiche{% endcomment %}
 {% capture example %}
-<ol class="it-timeline-point-list">
+<ol class="it-timeline-point-list" role="list">
   <li class="timeline-point">
     <div class="point-aside point-aside-dark">
       <time datetime="2022-01-04">

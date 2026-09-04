@@ -1401,7 +1401,7 @@ Puoi combinare questa impostazione con le funzionalità del contenitore `.it-car
       <!--card body content-->
       <div class="it-card-body">
         <p class="it-card-text">Descrizione breve dell'argomento in poche righe non troncate.</p>
-        <ul class="list-group list-group-flush" aria-label="Contenuti in evidenza:">
+        <ul class="list-group list-group-flush" aria-label="Contenuti in evidenza:" role="list">
           <li class="list-group-item"><a href="#">Titolo notizia affine</a></li>
           <li class="list-group-item"><a href="#">Titolo media affine</a></li>
           <li class="list-group-item"><a href="#">Altro titolo scheda affine</a></li>
@@ -1430,7 +1430,7 @@ Puoi combinare questa impostazione con le funzionalità del contenitore `.it-car
       <div class="it-card-body">
         <p class="it-card-subtitle">Dal 17 al 22 novembre</p>
         <p class="it-card-text">Descrizione breve dell'evento in poche righe non troncate.</p>
-        <ul class="list-group list-group-flush" aria-label="Contenuti in evidenza:">
+        <ul class="list-group list-group-flush" aria-label="Contenuti in evidenza:" role="list">
           <li class="list-group-item"><a href="#">Gli artisti</a></li>
           <li class="list-group-item"><a href="#">Il luogo</a></li>
           <li class="list-group-item"><a href="#">Il programma dettagliato</a></li>
@@ -1461,7 +1461,7 @@ Puoi combinare questa impostazione con le funzionalità del contenitore `.it-car
       <!--card body content-->
       <div class="it-card-body">
         <p class="it-card-text">Descrizione breve dell'argomento in poche righe non troncate.</p>
-        <ul class="list-group list-group-flush" aria-label="Contenuti in evidenza:">
+        <ul class="list-group list-group-flush" aria-label="Contenuti in evidenza:" role="list">
           <li class="list-group-item"><a href="#" class="it-card-link">Titolo notizia affine</a></li>
           <li class="list-group-item"><a href="#" class="it-card-link">Titolo media affine</a></li>
           <li class="list-group-item"><a href="#" class="it-card-link">Altro titolo scheda affine</a></li>
@@ -2022,7 +2022,7 @@ Se necessario nel contesto aggiungi una `aria-label` che spieghi i contenuti del
 
 ```html
 <div class="container-xl">
-  <ul class="it-card-list row" aria-label="Risultati della ricerca: ">
+  <ul class="it-card-list row" aria-label="Risultati della ricerca: " role="list">
     <li class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
       <article class="it-card">...</article>
     </li>
@@ -2037,7 +2037,7 @@ Esempio di lista card:
 
 {% comment %}Example name: Lista di card{% endcomment %}
 {% capture example %}
-<ul class="it-card-list row" aria-label="Risultati della ricerca: ">
+<ul class="it-card-list row" aria-label="Risultati della ricerca: " role="list">
   <li class="col-12 col-md-6 col-lg-4 mb-3 mb-md-4">
     <!--start it-card-->
     <article class="it-card it-card-height-full rounded shadow-sm border">
@@ -2439,6 +2439,7 @@ Svolgi sempre test di usabilità con utenti che utilizzano tecnologie assistive 
 - Usa un `<div>` con la sola classe `.it-card-actions` a seguire il corpo della card per ospitare link correlati e/o secondari.
 - È stata rimossa la classe `.chips-list` dall'elemento `<ul>` con classe `.it-card-chips` che ospita una lista di più argomenti.
 - La doppia classe `.card-profile` è stata sostituita da `.card-profile-content` per le card di tipo profilo.
+- Per le liste di card `.it-card-list` o di card collegate `list-group`, è consigliabile inserire nell'elemento `<ul>` l'attributo `role="list"` per ripristinare la semantica lista su Safari e VoiceOver (macOS/iOS).
 {% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}
 
 {% capture callout %}
