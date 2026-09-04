@@ -326,7 +326,7 @@ const myNotification = new Notification(document.getElementById('myNotification'
   </table>
 </div>
 
-{% include properties.md properties=site.data.cprops.notification %}
+{% include properties.md properties=site.data.cprops.notification selector=".notification" %}
 
 ## Breaking changes
 

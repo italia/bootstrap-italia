@@ -25,7 +25,7 @@ description: Obbligano un elemento a mantenere la proporzione scelta. Soluzione 
 
   @media (min-width: 768px) {
     .ratio-example-breakpoint {
-      --bs-aspect-ratio: 50%;
+      --bsi-aspect-ratio: 50%;
     }
   }
 
@@ -87,11 +87,11 @@ Vengono fornite le seguenti proporzioni pre-impostate:
 
 Ogni classe `.ratio-*` include una variabile CSS nel selettore. Puoi fare un override di questa variabile per creare una proporzione custom _al volo_ facendo un rapido calcolo.
 
-Ad esempio, per creare una proporzione custom 2x1, utilizza il valore `--bs-aspect-ratio: 50%` sull'elemento `.ratio`.
+Ad esempio, per creare una proporzione custom 2x1, utilizza il valore `--bsi-aspect-ratio: 50%` sull'elemento `.ratio`.
 
 {% comment %}Example name: Proporzione personalizzata{% endcomment %}
 {% capture example %}
-<div class="ratio ratio-example" style="--bs-aspect-ratio: 50%;">
+<div class="ratio ratio-example" style="--bsi-aspect-ratio: 50%;">
   <div>2x1</div>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -101,7 +101,7 @@ Questa variabile CSS rende semplice modificare la proporzione a seconda del brea
 ```scss
 .ratio-4x3 {
   @include media-breakpoint-up(md) {
-    --bs-aspect-ratio: 50%; // 2x1
+    --bsi-aspect-ratio: 50%; // 2x1
   }
 }
 ```
@@ -125,3 +125,9 @@ $aspect-ratios: (
   '21x9': calc(9 / 21 * 100%),
 );
 ```
+
+## Breaking change
+
+{% capture callout %}
+La variabile per il controllo della proporzione custom è ora `--bsi-aspect-ratio`, non `--bs-aspect-ratio`.
+{% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}

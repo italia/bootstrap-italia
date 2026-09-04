@@ -826,6 +826,9 @@ triggerTabList.forEach(function (triggerEl) {
   </table>
 </div>
 
+{% include properties.md properties=site.data.cprops.tab %}
+{% include properties.md properties=site.data.cprops.nav-tabs selector=".nav-tabs" title="Nav tabs" %}
+
 ## Breaking change
 
 {% capture callout %}
