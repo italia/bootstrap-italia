@@ -815,7 +815,7 @@ myModalEl.addEventListener('hidden.bs.modal', function (event) {
   </table>
 </div>
 
-{% include properties.md properties=site.data.cprops.modal %}
+{% include properties.md properties=site.data.cprops.modal selector=".modal" %}
 ## Breaking change
 
 {% capture callout %}
