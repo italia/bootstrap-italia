@@ -18,12 +18,13 @@
 .navbar {
   --#{$prefix}navbar-background: var(--#{$prefix}color-background-primary); // Controls the navbar background, using color tokens.
   --#{$prefix}navbar-brand-color: var(--#{$prefix}color-text-inverse); // Controls the navbar brand color, using color tokens.
-  --#{$prefix}navbar-brand-font-size: var(--#{$prefix}); // Controls the navbar brand font size, using size tokens.
-  --#{$prefix}navbar-brand-margin-end: #{$navbar-brand-margin-end}; // Controls the navbar brand margin end.
-  --#{$prefix}navbar-brand-padding-y: #{$navbar-brand-padding-y}; // Controls the navbar brand padding y.
+  --#{$prefix}navbar-brand-font-size: var(--#{$prefix}label-font-size); // Controls the navbar brand font size, using size tokens.
+  --#{$prefix}navbar-brand-margin-end: var(--#{$prefix}spacing-s); // Controls the navbar brand margin end.
+  --#{$prefix}navbar-brand-padding-y: var(--#{$prefix}spacing-xxs); // Controls the navbar brand padding y.
   --#{$prefix}navbar-close-button-font-size: 0.75rem; // Controls the navbar close button font size.
   --#{$prefix}navbar-close-button-size: 44px; // Controls the navbar close button size.
   --#{$prefix}navbar-close-button-text-color: var(--#{$prefix}color-text-inverse); // Controls the navbar close button text color, using color tokens.
+  --#{$prefix}navbar-collapsable-zindex: 1055; // Controls the z-index for the collapsable navbar overlay. Default matching the modal's.
   --#{$prefix}navbar-disabled-item-opacity: 0.75; // Controls the navbar disabled item opacity.
   --#{$prefix}navbar-hamburger-size: 1.5rem; // Controls the navbar hamburger size.
   --#{$prefix}navbar-link-border-size: var(--#{$prefix}border-thick); // Controls the navbar link border size, using border tokens.
@@ -65,9 +66,9 @@
 
 // Navbar mobile backdrop, inspired by "modal" approachAdd commentMore actions
 .navbar-backdrop {
-  --#{$prefix}backdrop-zindex: #{$zindex-modal-backdrop};
-  --#{$prefix}backdrop-bg: #{$modal-backdrop-bg};
-  --#{$prefix}backdrop-opacity: #{$modal-backdrop-opacity};
+  --#{$prefix}backdrop-zindex: 1050;
+  --#{$prefix}backdrop-bg: var(--#{$prefix}black);
+  --#{$prefix}backdrop-opacity: 0.8;
   @include overlay-backdrop(var(--#{$prefix}backdrop-zindex), var(--#{$prefix}backdrop-bg), var(--#{$prefix}backdrop-opacity));
 
   @media (min-width: #{map.get($grid-breakpoints, lg)}) {
@@ -271,7 +272,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: #{$zindex-modal};
+  z-index: var(--#{$prefix}navbar-collapsable-zindex);
   display: none;
   width: calc(100% - 48px); // fluid width minus 48px for close and backdrop;
 
