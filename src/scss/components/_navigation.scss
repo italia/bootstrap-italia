@@ -110,14 +110,8 @@
 
   .megamenu {
     .dropdown-menu {
-      right: var(--#{$prefix}navbar-spacing-inset);
-      left: var(--#{$prefix}navbar-spacing-inset);
       min-width: auto;
       animation-timing-function: cubic-bezier(0.1, 0.57, 0.36, 0.99);
-      @include media-breakpoint-up(lg) {
-        right: 0;
-        left: 0;
-      }
 
       // hide arrow
       &:before {

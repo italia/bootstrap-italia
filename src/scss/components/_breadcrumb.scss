@@ -94,7 +94,7 @@
   // The breadcrumb item text with no link
   &.active {
     color: var(--#{$prefix}breadcrumb-item-active-color);
-    font-weight: var(--#{$prefix}font-weight-regular);
+    font-weight: var(--#{$prefix}font-weight-base);
     pointer-events: none;
   }
 
