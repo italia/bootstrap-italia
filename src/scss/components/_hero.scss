@@ -22,7 +22,7 @@
   --#{$prefix}hero-overlap-spacing-inset: 4.5rem; // Controls the inset spacing for overlapping content within the hero
   --#{$prefix}hero-overlay-background: transparent; // Controls the overlay background color for the hero
   --#{$prefix}hero-padding-x: var(--#{$prefix}spacing-xs); // Controls the horizontal padding for the hero, using spacing tokens
-  --#{$prefix}hero-padding-y: var(--#{$prefix}spacing-3xl); // Controls the vertical padding for the hero, using spacing tokens
+  --#{$prefix}hero-padding-y: calc(var(--#{$prefix}spacing-l) + var(--#{$prefix}spacing-s)); // Controls the vertical padding for the hero, using spacing tokens
   --#{$prefix}hero-text-font-family: var(--#{$prefix}font-serif); // Controls the font family for the hero text, using typography tokens
   --#{$prefix}hero-text-color: var(--#{$prefix}color-text-inverse); // Controls the text color for the hero text, using color tokens
 }
@@ -88,7 +88,7 @@
   // Text container centered
   .it-hero-text-wrapper {
     position: relative;
-    padding: 3rem 0.75rem;
+    padding: var(--#{$prefix}hero-padding-y) var(--#{$prefix}hero-padding-x);
     background: transparent !important;
   }
 
@@ -118,7 +118,7 @@
   }
 
   .it-hero-text-wrapper p {
-    font-family: var(--#{$prefix}hero-text-family);
+    font-family: var(--#{$prefix}hero-text-font-family);
   }
 
   &.it-overlay .img-responsive-wrapper:after {

@@ -37,6 +37,7 @@ textarea,
 select {
   display: block;
   width: 100%;
+  min-height: var(--#{$prefix}form-control-height);
   padding: var(--#{$prefix}form-control-spacing);
   border: 1px solid var(--#{$prefix}form-control-border-color);
   // Note: This has no effect on <select>s in some browsers, due to the limited stylability of `<select>`s in CSS.

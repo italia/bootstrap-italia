@@ -38,9 +38,7 @@
   --#{$prefix}dropdown-inner-border-radius: var(--#{$prefix}radius-smooth); // Controls the inner border radius for first and last items, using radius tokens.
   --#{$prefix}dropdown-item-padding-x: var(--#{$prefix}spacing-s); // Controls the dropdown item padding left and right, using spacing tokens.
   --#{$prefix}dropdown-item-padding-y: var(--#{$prefix}spacing-xs); // Controls the dropdown item padding top and bottom, using spacing tokens.
-  --#{$prefix}dropdown-link-active-color: var(--#{$prefix}color-text-primary-active); // Controls the active link color, using color tokens.
   --#{$prefix}dropdown-link-color: var(--#{$prefix}color-text-primary); // Controls the link color in dropdown items, using color tokens.
-  --#{$prefix}dropdown-link-hover-color: var(--#{$prefix}color-text-primary-hover); // Controls the link hover color in dropdown items, using color tokens.
   --#{$prefix}dropdown-min-width: 10rem; // Controls the minimum width of the dropdown menu.
   --#{$prefix}dropdown-notch-base-size: 1.125rem; // Controls the size of the notch element.
   --#{$prefix}dropdown-notch-position-x: 20px; // Controls the x position of the notch element.
@@ -158,11 +156,10 @@
 
   // Dropdown on dark background
   &.dark {
-    --#{$prefix}dropdown-text-color: var(--#{$prefix}color-text-inverse);
+    --#{$prefix}dropdown-color: var(--#{$prefix}color-text-inverse);
     --#{$prefix}dropdown-background: var(--#{$prefix}color-background-primary-muted);
     --#{$prefix}dropdown-link-color: var(--#{$prefix}color-text-inverse);
     --#{$prefix}dropdown-divider-bg: var(--#{$prefix}color-border-subtle);
-    --#{$prefix}dropdown-link-active-color: var(--#{$prefix}color-text-inverse);
     --#{$prefix}dropdown-header-color: var(--#{$prefix}color-text-inverse);
 
     // Notch element
@@ -430,8 +427,6 @@
 // Dropdown button
 .btn-dropdown {
   --#{$prefix}dropdown-button-color: var(--#{$prefix}color-text-primary);
-  --#{$prefix}dropdown-button-padding: 10px;
-  --#{$prefix}dropdown-button-background: #fff;
   border-radius: 0;
   box-shadow: none;
   color: var(--#{$prefix}dropdown-button-color);
