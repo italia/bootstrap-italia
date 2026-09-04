@@ -1,5 +1,6 @@
 @use '../base/config' as *;
 @use '../base/variables' as *;
+@use '../base/mixins/breakpoints' as *;
 @forward '../base/mixins/focus';
 @use '../base/mixins/focus' as *;
 
@@ -117,5 +118,21 @@ p.it-card-text a {
       border: 3px solid $focus-outline-color-out !important;
       box-shadow: none !important;
     }
+  }
+}
+
+.dropdown-menu .dropdown-item.list-item:focus:not([data-focus-mouse='true']) {
+  box-shadow:
+    inset 0 0 0 3px var(--#{$prefix}color-outline-focus),
+    inset 0 0 0 5px var(--#{$prefix}color-border-inverse) !important;
+  outline-offset: -3px !important;
+}
+
+@include media-breakpoint-down(lg) {
+  .navbar-collapsable .navbar-nav li .nav-link:focus:not([data-focus-mouse='true']) {
+    box-shadow:
+      inset 0 0 0 3px var(--#{$prefix}color-outline-focus),
+      inset 0 0 0 5px var(--#{$prefix}color-border-inverse) !important;
+    outline-offset: -3px !important;
   }
 }
