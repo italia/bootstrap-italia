@@ -10,6 +10,12 @@ title: Introduzione
 description: Come usare Bootstrap Italia nel tuo progetto.
 ---
 
+{% capture alpha_warning %}
+### ⚠️ Versione Beta
+
+Questa è una versione beta di Bootstrap Italia 3. Consulta le [breaking change](/docs/breaking-change/) o la [guida alla migrazione dalla versione 2](/docs/come-iniziare/migrazione-dalla-versione-2/)
+{% endcapture %}{% include callout.html content=alpha_warning type="warning" %}
+
 ## Installazione
 
 ### Con NPM
@@ -48,8 +54,56 @@ La libreria è accessibile anche via CDN su [jsDelivr](https://www.jsdelivr.com/
 
 ### Con SASS
 
-Utilizzando SASS nella propria pipeline, si può ottimizzare Bootstrap Italia (e di conseguenza il bundle finale) importando solo i componenti di cui si ha bisogno. Le ottimizzazioni maggiori proverranno probabilmente dalla sezione Layout e dai componenti del file principale `bootstrap-italia.scss`, ad esempio
+Utilizzando SASS nella propria pipeline, puoi sfruttare le funzionalità del sistema di moduli per personalizzare variabili e ottimizzare il bundle finale.
 
+#### Metodo raccomandato: import completo
+
+Per utilizzare l'intera libreria:
+```scss
+// Import completo degli stili
+@use 'bootstrap-italia/src/scss/bootstrap-italia.scss';
+```
+
+{% capture callout %}
+**Personalizzare colori e altre variabili?**
+
+Per maggiori dettagli sulla personalizzazione di colori e altre variabili, consulta la [guida alla personalizzazione delle variabili CSS]({{ site.baseurl }}/docs/personalizzare-la-libreria/variabili-css/).
+{% endcapture %}{% include callout.html content=callout type="info" %}
+
+#### Ottimizzazione bundle: import selettivo
+Per importare solo i componenti necessari e ridurre le dimensioni del bundle finale:
+
+```scss
+// 1. Import base (obbligatorio)
+@use 'bootstrap-italia/src/scss/functions' as *;
+@use 'bootstrap-italia/src/scss/variables' as *;
+@use 'bootstrap-italia/src/scss/maps' as *;
+@use 'bootstrap-italia/src/scss/mixins' as *;
+
+// 2. Import moduli (esempi)
+@use 'bootstrap-italia/src/scss/base/root' as *;
+@use 'bootstrap-italia/src/scss/base/reboot' as *;
+@use 'bootstrap-italia/src/scss/components/buttons' as *;
+@use 'bootstrap-italia/src/scss/utilities/colors' as *;
+// ... altri moduli
+```
+
+{% capture callout %}
+**Nota importante sullo scope**
+
+Quando si importano i moduli selettivamente, è necessario usare `as *` per rendere disponibili variabili, funzioni e mixin nel contesto corrente. 
+
+**Alternative:** Puoi usare un namespace custom (ad esempio, `as bsi`) per maggiore chiarezza, o omettere `as` per usare il namespace completo `bootstrap-italia.*`.
+{% endcapture %}{% include callout.html content=callout type="warning" %}
+
+#### Metodo legacy (deprecato)
+
+##### Import completo:
+```scss
+@import 'bootstrap-italia/src/scss/bootstrap-italia.scss';
+```
+
+##### Import selettivo (ottimizzazione bundle):
 ```scss
 // funzioni e variabili colore
 @import 'bootstrap-italia/src/scss/functions';
@@ -63,6 +117,11 @@ Utilizzando SASS nella propria pipeline, si può ottimizzare Bootstrap Italia (e
 
 // ...
 ```
+
+{% capture callout %}
+**⚠️ Metodo deprecato**
+La sintassi `@import` è deprecata in Dart Sass e sarà rimossa nella versione 3.0. Si raccomanda di migrare a @use per evitare problemi futuri.
+{% endcapture %}{% include callout.html content=callout type="warning" %}
 
 ### Con il bundle CSS
 
@@ -145,280 +204,21 @@ Per la versione non bundle, dopo aver copiato i file all'interno del progetto, s
 <script src="<path-a-bootstrap-italia>/dist/js/bootstrap-italia.min.js"></script>
 ```
 
-## Fonts
+## Font
 
-È necessario anche includere i file relativi ai font referenziati nel CSS, mantenendo i path dei singoli font utilizzato nei [file sorgente della libreria](https://github.com/italia/bootstrap-italia/releases/tag/v{{ site.current_version }}). L'inclusione dei font può avvenire utilizzando CSS o JavaScript.
+Bootstrap Italia include tre famiglie di caratteri tipografici: **Titillium** (Titillium Web o Titillium Sans Pro) per il testo principale e l'interfaccia, **Lora** per contenuti editoriali, e **Roboto Mono** per codice e numeri.
 
-### Via CSS
-
-Per caricare i font necessari via CSS è necessario inserire nei propri fogli di stile il seguente codice. Per semplicità abbiamo utilizzato la sintassi SCSS in modo da utilizzare una variabile per specificare la path di base dove prendere i font.
-
-```scss
-$font-path: "/fonts";
-
-/* Titillium+Web:300,400,600,700 */
-
-/* titillium-web-300 - latin-ext_latin */
-@font-face {
-    font-family: 'Titillium Web';
-    font-style: normal;
-    font-weight: 300;
-    font-display: swap;
-    src: url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-300.eot'); /* IE9 Compat Modes */
-    src: local(''),
-        url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-        url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-300.woff2') format('woff2'), /* Super Modern Browsers */
-        url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-300.woff') format('woff'), /* Modern Browsers */
-        url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
-        url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-300.svg#TitilliumWeb') format('svg'); /* Legacy iOS */
-}
-
-/* titillium-web-300italic - latin-ext_latin */
-@font-face {
-    font-family: 'Titillium Web';
-    font-style: italic;
-    font-weight: 300;
-    font-display: swap;
-    src: url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-300italic.eot'); /* IE9 Compat Modes */
-    src: local(''),
-        url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-300italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-        url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-300italic.woff2') format('woff2'), /* Super Modern Browsers */
-        url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-300italic.woff') format('woff'), /* Modern Browsers */
-        url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-300italic.ttf') format('truetype'), /* Safari, Android, iOS */
-        url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-300italic.svg#TitilliumWeb') format('svg'); /* Legacy iOS */
-}
-
-/* titillium-web-regular - latin-ext_latin */
-@font-face {
-    font-family: 'Titillium Web';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-regular.eot'); /* IE9 Compat Modes */
-    src: local(''),
-        url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-        url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-        url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-regular.woff') format('woff'), /* Modern Browsers */
-        url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-        url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-regular.svg#TitilliumWeb') format('svg'); /* Legacy iOS */
-}
-
-/* titillium-web-italic - latin-ext_latin */
-@font-face {
-    font-family: 'Titillium Web';
-    font-style: italic;
-    font-weight: 400;
-    font-display: swap;
-    src: url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-italic.eot'); /* IE9 Compat Modes */
-    src: local(''),
-        url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-        url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-italic.woff2') format('woff2'), /* Super Modern Browsers */
-        url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-italic.woff') format('woff'), /* Modern Browsers */
-        url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-italic.ttf') format('truetype'), /* Safari, Android, iOS */
-        url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-italic.svg#TitilliumWeb') format('svg'); /* Legacy iOS */
-}
-
-/* titillium-web-700 - latin-ext_latin */
-@font-face {
-    font-family: 'Titillium Web';
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap;
-    src: url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-700.eot'); /* IE9 Compat Modes */
-    src: local(''),
-        url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-        url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-700.woff2') format('woff2'), /* Super Modern Browsers */
-        url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-700.woff') format('woff'), /* Modern Browsers */
-        url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
-        url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-700.svg#TitilliumWeb') format('svg'); /* Legacy iOS */
-}
-
-/* titillium-web-700italic - latin-ext_latin */
-@font-face {
-    font-family: 'Titillium Web';
-    font-style: italic;
-    font-weight: 700;
-    font-display: swap;
-    src: url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-700italic.eot'); /* IE9 Compat Modes */
-    src: local(''),
-        url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-700italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-        url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-700italic.woff2') format('woff2'), /* Super Modern Browsers */
-        url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-700italic.woff') format('woff'), /* Modern Browsers */
-        url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-700italic.ttf') format('truetype'), /* Safari, Android, iOS */
-        url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-700italic.svg#TitilliumWeb') format('svg'); /* Legacy iOS */
-}
-/* titillium-web-600 - latin-ext_latin */
-@font-face {
-    font-family: 'Titillium Web';
-    font-style: normal;
-    font-weight: 600;
-    font-display: swap;
-    src: url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-600.eot'); /* IE9 Compat Modes */
-    src: local(''),
-        url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-        url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-600.woff2') format('woff2'), /* Super Modern Browsers */
-        url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-600.woff') format('woff'), /* Modern Browsers */
-        url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
-        url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-600.svg#TitilliumWeb') format('svg'); /* Legacy iOS */
-}
-
-/* titillium-web-600italic - latin-ext_latin */
-@font-face {
-    font-family: 'Titillium Web';
-    font-style: italic;
-    font-weight: 600;
-    font-display: swap;
-    src: url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-600italic.eot'); /* IE9 Compat Modes */
-    src: local(''),
-        url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-600italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-        url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-600italic.woff2') format('woff2'), /* Super Modern Browsers */
-        url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-600italic.woff') format('woff'), /* Modern Browsers */
-        url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-600italic.ttf') format('truetype'), /* Safari, Android, iOS */
-        url('#{$font-path}/Titillium_Web/titillium-web-v10-latin-ext_latin-600italic.svg#TitilliumWeb') format('svg'); /* Legacy iOS */
-}
-
-/* Lora:400,700 */
-
-/* lora-regular - latin-ext_latin */
-@font-face {
-    font-family: 'Lora';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url('#{$font-path}/Lora/lora-v20-latin-ext_latin-regular.eot'); /* IE9 Compat Modes */
-    src: local(''),
-        url('#{$font-path}/Lora/lora-v20-latin-ext_latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-        url('#{$font-path}/Lora/lora-v20-latin-ext_latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-        url('#{$font-path}/Lora/lora-v20-latin-ext_latin-regular.woff') format('woff'), /* Modern Browsers */
-        url('#{$font-path}/Lora/lora-v20-latin-ext_latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-        url('#{$font-path}/Lora/lora-v20-latin-ext_latin-regular.svg#Lora') format('svg'); /* Legacy iOS */
-}
-
-/* lora-700 - latin-ext_latin */
-@font-face {
-    font-family: 'Lora';
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap;
-    src: url('#{$font-path}/Lora/lora-v20-latin-ext_latin-700.eot'); /* IE9 Compat Modes */
-    src: local(''),
-        url('#{$font-path}/Lora/lora-v20-latin-ext_latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-        url('#{$font-path}/Lora/lora-v20-latin-ext_latin-700.woff2') format('woff2'), /* Super Modern Browsers */
-        url('#{$font-path}/Lora/lora-v20-latin-ext_latin-700.woff') format('woff'), /* Modern Browsers */
-        url('#{$font-path}/Lora/lora-v20-latin-ext_latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
-        url('#{$font-path}/Lora/lora-v20-latin-ext_latin-700.svg#Lora') format('svg'); /* Legacy iOS */
-}
-
-/* lora-italic - latin-ext_latin */
-@font-face {
-    font-family: 'Lora';
-    font-style: italic;
-    font-weight: 400;
-    font-display: swap;
-    src: url('#{$font-path}/Lora/lora-v20-latin-ext_latin-italic.eot'); /* IE9 Compat Modes */
-    src: local(''),
-        url('#{$font-path}/Lora/lora-v20-latin-ext_latin-italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-        url('#{$font-path}/Lora/lora-v20-latin-ext_latin-italic.woff2') format('woff2'), /* Super Modern Browsers */
-        url('#{$font-path}/Lora/lora-v20-latin-ext_latin-italic.woff') format('woff'), /* Modern Browsers */
-        url('#{$font-path}/Lora/lora-v20-latin-ext_latin-italic.ttf') format('truetype'), /* Safari, Android, iOS */
-        url('#{$font-path}/Lora/lora-v20-latin-ext_latin-italic.svg#Lora') format('svg'); /* Legacy iOS */
-}
-
-/* lora-700italic - latin-ext_latin */
-@font-face {
-    font-family: 'Lora';
-    font-style: italic;
-    font-weight: 700;
-    font-display: swap;
-    src: url('#{$font-path}/Lora/lora-v20-latin-ext_latin-700italic.eot'); /* IE9 Compat Modes */
-    src: local(''),
-        url('#{$font-path}/Lora/lora-v20-latin-ext_latin-700italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-        url('#{$font-path}/Lora/lora-v20-latin-ext_latin-700italic.woff2') format('woff2'), /* Super Modern Browsers */
-        url('#{$font-path}/Lora/lora-v20-latin-ext_latin-700italic.woff') format('woff'), /* Modern Browsers */
-        url('#{$font-path}/Lora/lora-v20-latin-ext_latin-700italic.ttf') format('truetype'), /* Safari, Android, iOS */
-        url('#{$font-path}/Lora/lora-v20-latin-ext_latin-700italic.svg#Lora') format('svg'); /* Legacy iOS */
-}
-
-/* Roboto+Mono:400,700 */
-
-/* roboto-mono-regular - latin-ext_latin */
-@font-face {
-    font-family: 'Roboto Mono';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url('#{$font-path}/Roboto_Mono/roboto-mono-v13-latin-ext_latin-regular.eot'); /* IE9 Compat Modes */
-    src: local(''),
-        url('#{$font-path}/Roboto_Mono/roboto-mono-v13-latin-ext_latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-        url('#{$font-path}/Roboto_Mono/roboto-mono-v13-latin-ext_latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-        url('#{$font-path}/Roboto_Mono/roboto-mono-v13-latin-ext_latin-regular.woff') format('woff'), /* Modern Browsers */
-        url('#{$font-path}/Roboto_Mono/roboto-mono-v13-latin-ext_latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-        url('#{$font-path}/Roboto_Mono/roboto-mono-v13-latin-ext_latin-regular.svg#RobotoMono') format('svg'); /* Legacy iOS */
-}
-
-/* roboto-mono-700 - latin-ext_latin */
-@font-face {
-    font-family: 'Roboto Mono';
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap;
-    src: url('#{$font-path}/Roboto_Mono/roboto-mono-v13-latin-ext_latin-700.eot'); /* IE9 Compat Modes */
-    src: local(''),
-        url('#{$font-path}/Roboto_Mono/roboto-mono-v13-latin-ext_latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-        url('#{$font-path}/Roboto_Mono/roboto-mono-v13-latin-ext_latin-700.woff2') format('woff2'), /* Super Modern Browsers */
-        url('#{$font-path}/Roboto_Mono/roboto-mono-v13-latin-ext_latin-700.woff') format('woff'), /* Modern Browsers */
-        url('#{$font-path}/Roboto_Mono/roboto-mono-v13-latin-ext_latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
-        url('#{$font-path}/Roboto_Mono/roboto-mono-v13-latin-ext_latin-700.svg#RobotoMono') format('svg'); /* Legacy iOS */
-}
-
-/* roboto-mono-italic - latin-ext_latin */
-@font-face {
-    font-family: 'Roboto Mono';
-    font-style: italic;
-    font-weight: 400;
-    font-display: swap;
-    src: url('#{$font-path}/Roboto_Mono/roboto-mono-v13-latin-ext_latin-italic.eot'); /* IE9 Compat Modes */
-    src: local(''),
-        url('#{$font-path}/Roboto_Mono/roboto-mono-v13-latin-ext_latin-italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-        url('#{$font-path}/Roboto_Mono/roboto-mono-v13-latin-ext_latin-italic.woff2') format('woff2'), /* Super Modern Browsers */
-        url('#{$font-path}/Roboto_Mono/roboto-mono-v13-latin-ext_latin-italic.woff') format('woff'), /* Modern Browsers */
-        url('#{$font-path}/Roboto_Mono/roboto-mono-v13-latin-ext_latin-italic.ttf') format('truetype'), /* Safari, Android, iOS */
-        url('#{$font-path}/Roboto_Mono/roboto-mono-v13-latin-ext_latin-italic.svg#RobotoMono') format('svg'); /* Legacy iOS */
-}
-
-/* roboto-mono-700italic - latin-ext_latin */
-@font-face {
-    font-family: 'Roboto Mono';
-    font-style: italic;
-    font-weight: 700;
-    font-display: swap;
-    src: url('#{$font-path}/Roboto_Mono/roboto-mono-v13-latin-ext_latin-700italic.eot'); /* IE9 Compat Modes */
-    src: local(''),
-        url('#{$font-path}/Roboto_Mono/roboto-mono-v13-latin-ext_latin-700italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-        url('#{$font-path}/Roboto_Mono/roboto-mono-v13-latin-ext_latin-700italic.woff2') format('woff2'), /* Super Modern Browsers */
-        url('#{$font-path}/Roboto_Mono/roboto-mono-v13-latin-ext_latin-700italic.woff') format('woff'), /* Modern Browsers */
-        url('#{$font-path}/Roboto_Mono/roboto-mono-v13-latin-ext_latin-700italic.ttf') format('truetype'), /* Safari, Android, iOS */
-        url('#{$font-path}/Roboto_Mono/roboto-mono-v13-latin-ext_latin-700italic.svg#RobotoMono') format('svg'); /* Legacy iOS */
-}
-```
-
-### Via JavaScript
-
+Il modo più semplice per caricarli è via JavaScript:
 ```js
 import { loadFonts } from 'bootstrap-italia'
-
-loadFonts('/bootstrap-italia/dist/fonts');
+loadFonts('/fonts');
 ```
 
-Oppure
+In alternativa, puoi usare `@font-face` CSS o bundle precompilati.
 
-```html
-<script>
-  bootstrap.loadFonts('/bootstrap-italia/dist/fonts');
-</script>
-```
-
-Di default se non viene specificato alcun path, i font saranno cercati all'interno di una cartella `/node_modules/bootstrap-italia/dist/fonts` oppure, se valorizzata, utilizzando il contenuto della variabile globale `__PUBLIC_PATH__`.
+{% capture callout %}
+Per tutte le opzioni di configurazione, varianti disponibili, ed esempi completi, consulta la [**pagina dedicata Font**]({{ site.baseurl }}/docs/come-iniziare/font/).
+{% endcapture %}{% include callout.html content=callout type="info" %}
 
 ## Icone
 
@@ -484,6 +284,10 @@ continua a leggere alla pagina [strumenti di compilazione e contribuzione]({{ si
 
 
 ## Breaking change
+
+{% capture callout %}
+La versione 3.0.0 ha portato molte breaking changes sia a livello generale che a livello di singolo componente. Fai riferimento alla [guida alla migrazione dalla versione 2]({{ site.baseurl }}/docs/come-iniziare/migrazione-dalla-versione-2/).
+{% endcapture %}{% include callout-breaking.html version="3.0.0" content=callout type="danger" %}
 
 {% capture callout %}
 Per caricare i font utilizzando JavaScript occorre chiamare **esplicitamente** la funzione `loadFonts` passando il percorso della cartella dove si trovano i font.

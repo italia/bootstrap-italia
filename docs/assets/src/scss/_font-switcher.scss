@@ -1,0 +1,19 @@
+.font-switcher {
+  .btn {
+    font-size: 0.8rem;
+    border-color: #dee2e6;
+  }
+
+  .dropdown-item {
+    &.active {
+      background-color: var(--bsi-primary);
+      color: white;
+
+      &:focus,
+      &:hover {
+        background-color: var(--bsi-primary);
+        color: white;
+      }
+    }
+  }
+}
