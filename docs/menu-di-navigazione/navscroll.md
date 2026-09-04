@@ -396,7 +396,7 @@ Le opzioni possono essere passate tramite gli attributi data o tramite Javascrip
   </tbody>
 </table>
 
-{% include properties.md properties=site.data.cprops.navscroll %}
+{% include properties.md properties=site.data.cprops.it-navscroll-wrapper selector=".it-navscroll-wrapper" %}
 
 ## Breaking change
 

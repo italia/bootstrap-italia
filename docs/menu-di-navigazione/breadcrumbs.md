@@ -80,7 +80,7 @@ Quando la versione su sfondo scuro viene utilizzata su un fondo di colore differ
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
-{% include properties.md properties=site.data.cprops.breadcrumb %}
+{% include properties.md properties=site.data.cprops.breadcrumb selector=".breadcrumb" %}
 
 ## Breaking change
 

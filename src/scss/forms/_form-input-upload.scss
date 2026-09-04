@@ -263,6 +263,9 @@
 }
 
 .avatar-upload-wrapper {
+  position: relative;
+  display: inline-block;
+
   .avatar-upload-icon {
     position: absolute;
     right: 4px;
@@ -270,17 +273,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 26px;
-    height: 26px;
+    width: 32px;
+    height: 32px;
     border: 2px solid var(--#{$prefix}color-border-inverse);
     border-radius: 50%;
     background: $neutral-1-a1;
     pointer-events: none;
+    z-index: 1;
 
-    & > svg {
-      width: 16px;
-      height: 16px;
-    }
+    // & > svg {
+    //   width: 16px;
+    //   height: 16px;
+    // }
   }
 
   &.size-sm {
@@ -290,15 +294,15 @@
     }
 
     .avatar-upload-icon {
-      right: 4px;
-      bottom: 6px;
-      width: 18px;
-      height: 18px;
+      right: 6px;
+      bottom: 8px;
+      width: 24px;
+      height: 24px;
 
-      & > svg {
-        width: 12px;
-        height: 12px;
-      }
+      // & > svg {
+      //   width: 12px;
+      //   height: 12px;
+      // }
     }
   }
 }
