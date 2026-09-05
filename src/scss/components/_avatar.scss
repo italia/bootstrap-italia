@@ -17,7 +17,7 @@
   --#{$prefix}avatar-background: var(--#{$prefix}color-background-secondary-lighter); // Controls the background for the avatar, using color tokens.
   --#{$prefix}avatar-dot-border-color: var(--#{$prefix}color-border-inverse); // Controls the dot border color for the avatar, using color tokens.
   --#{$prefix}avatar-dot-border-size: 2px; // Controls the dot border size for the avatar.
-  --#{$prefix}avatar-dot-offset-bottom: 0; // Controls the bottom offset for the avatar dot.
+  --#{$prefix}avatar-dot-offset-bottom: 8px; // Controls the bottom offset for the avatar dot.
   --#{$prefix}avatar-dot-offset-right: 0; // Controls the right offset for the avatar dot.
   --#{$prefix}avatar-dot-offset-top: 4px; // Controls the top offset for the avatar dot.
   --#{$prefix}avatar-dot-size: 12px; // Controls the size of the avatar dot.
@@ -125,7 +125,7 @@ $avatar-variants: (
     height: var(--#{$prefix}avatar-dot-size);
     border: var(--#{$prefix}avatar-dot-border-size) solid var(--#{$prefix}avatar-dot-border-color);
     border-radius: var(--#{$prefix}avatar-radius);
-    background: $color-background-secondary-lighter;
+    background: var(--#{$prefix}color-background-secondary-lighter);
     color: var(--#{$prefix}color-text-inverse);
 
     .icon {
@@ -141,11 +141,11 @@ $avatar-variants: (
 
   &-presence.busy,
   &-status.declined {
-    background: $red;
+    background: var(--#{$prefix}color-background-danger);
   }
 
   &-presence {
-    bottom: 8px;
+    bottom: var(--#{$prefix}avatar-dot-offset-bottom);
   }
 
   &-presence.hidden {
@@ -216,7 +216,7 @@ a .avatar {
     height: 100%;
     border-radius: var(--#{$prefix}avatar-radius);
     opacity: 0;
-    background: var(--#{$prefix}color-background-emphasis);
+    background: var(--#{$prefix}avatar-overlay-background);
     transition: opacity 0.2s;
   }
 

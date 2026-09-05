@@ -195,7 +195,7 @@
     color: var(--#{$prefix}card-link-color);
 
     &:hover {
-      color: color-hover($color-text-secondary);
+      color: var(--#{$prefix}color-link-hover);
     }
 
     + .it-card-link {
@@ -472,7 +472,7 @@
           justify-content: center;
           align-items: center;
 
-          background-color: $color-background-primary-lighter;
+          background-color:  var(--#{$prefix}color-background-primary-lighter);
         }
       }
     }

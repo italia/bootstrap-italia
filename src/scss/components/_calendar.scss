@@ -19,8 +19,8 @@
   .it-header-block-title {
     padding: 0.5em 0;
     border-radius: 4px 4px 0 0;
-    background-color: $primary;
-    color: $white;
+    background-color: var(--#{$prefix}color-background-primary);
+    color: var(--#{$prefix}color-text-inverse);
   }
 
   .card-wrapper {
@@ -31,13 +31,13 @@
     .card-title,
     .card-text {
       padding-bottom: 16px;
-      border-bottom: 1px solid $color-border-subtle;
+      border-bottom: 1px solid var(--#{$prefix}color-border-subtle);
     }
 
     .card-body {
       .card-title {
         padding-top: 16px;
-        font-family: $font-family-sans-serif;
+        font-family: var(--#{$prefix}font-sans);
         font-size: 3rem;
         font-weight: 400;
 
@@ -45,7 +45,7 @@
           display: block;
           padding-top: 1em;
           padding-left: 1em;
-          font-family: $font-family-monospace;
+          font-family: var(--#{$prefix}font-mono);
           font-size: 0.3em;
         }
       }
@@ -53,13 +53,13 @@
 
     .card-text {
       a {
-        color: $color-text-base;
-        font-family: $font-family-sans-serif;
+        color: var(--#{$prefix}color-link);
+        font-family: var(--#{$prefix}font-sans);
         font-size: var(--#{$prefix}body-font-size)-l;
         text-decoration: none;
 
         &:hover {
-          color: $link-color;
+          color: var(--#{$prefix}color-link-hover);
           text-decoration: underline;
         }
       }

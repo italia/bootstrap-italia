@@ -237,7 +237,7 @@ h1,
 blockquote,
 .blockquote {
   margin: var(--#{$prefix}spacing-m) 0;
-  margin-left: var(--#{$prefix}spacin-inline-xs);
+  margin-left: var(--#{$prefix}spacing-inline-xs);
   padding: var(--#{$prefix}spacing-s);
   border-left: var(--#{$prefix}border-thick) solid var(--#{$prefix}border-color-secondary);
   font-size: var(--#{$prefix}body-font-size);
@@ -248,7 +248,7 @@ blockquote,
   }
 
   &.text-end {
-    margin-right: var(--#{$prefix}spacin-inline-xs);
+    margin-right: var(--#{$prefix}spacing-inline-xs);
     border-right: var(--#{$prefix}border-thick) solid var(--#{$prefix}border-color-secondary);
   }
 

@@ -20,12 +20,10 @@
 // Menu on bottom animation
 @keyframes megamenuFadeIn {
   0% {
-    margin-top: 1rem;
     opacity: 0;
   }
 
   100% {
-    margin-top: 1rem;
     opacity: 1;
   }
 }
@@ -127,7 +125,7 @@
       }
 
       &.show {
-        animation: megamenuFadeIn forwards calc(var($dropdown-menu-animation-speed) * 0.5);
+        animation: megamenuFadeIn forwards calc(var(--#{$prefix}dropdown-animation-speed) * 0.5);
       }
     }
   }

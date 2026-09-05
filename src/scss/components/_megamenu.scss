@@ -236,12 +236,8 @@
         border-radius: 2px;
         background-color: var(--#{$prefix}color-background-inverse);
         transform: rotate(45deg);
-        transition: opacity calc(var($dropdown-menu-animation-speed) * 0.5) cubic-bezier(0.1, 0.57, 0.36, 0.99);
+        transition: opacity calc(var(--#{$prefix}dropdown-animation-speed) * 0.5) cubic-bezier(0.1, 0.57, 0.36, 0.99);
       }
-    }
-
-    > button.dropdown-toggle:before {
-      bottom: calc(var($dropdown-menu-notch-base-size) * -1 - 8);
     }
 
     a.dropdown-toggle,
