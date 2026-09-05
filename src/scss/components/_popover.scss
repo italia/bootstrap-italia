@@ -276,7 +276,7 @@
   .popover-body {
     font-size: 0.875rem;
     line-height: 1.5em;
-    color: $color-text-secondary; // UI Kit
+    color: var(--#{$prefix}color-text-secondary);
     padding: $v-gap * 2 $v-gap * 3;
     //inner bottom link
     a.popover-inner-link {

@@ -2,7 +2,6 @@
 @use '../base/variables' as *;
 @use '../base/mixins/border-radius' as *;
 @use '../base/mixins/gradients' as *;
-@use '../base/vendor/rfs' as *;
 @use '../base/maps' as *;
 
 // Component: badge
@@ -18,8 +17,7 @@
 
 .badge {
   --#{$prefix}badge-border-radius: var(--#{$prefix}radius-smooth); // Controls the border radius for the badge, using radius tokens.
-  --#{$prefix}badge-font-size: var(--#{$prefix}label-font-size-s); // Controls the font size for the badge, using font tokens.
-  --#{$prefix}badge-font-size-relative: 0.75em; // Controls the relative font size for the badge.
+  --#{$prefix}badge-font-size-relative: 1em; // Controls the relative font size for the badge.
   --#{$prefix}badge-font-weight: var(--#{$prefix}font-weight-solid); // Controls the font weight for the badge, using font tokens.
   --#{$prefix}badge-padding-x: var(--#{$prefix}spacing-xs); // Controls the horizontal padding for the badge, using spacing tokens.
   --#{$prefix}badge-padding-y: var(--#{$prefix}spacing-3xs); // Controls the vertical padding for the badge, using spacing tokens.
@@ -33,6 +31,7 @@
   display: inline-block;
   padding: var(--#{$prefix}badge-padding-y) var(--#{$prefix}badge-padding-x);
   color: var(--#{$prefix}badge-text-color);
+  font-size: var(--#{$prefix}badge-font-size-relative);
   font-weight: var(--#{$prefix}badge-font-weight);
   line-height: 1;
   text-align: center;
@@ -43,7 +42,6 @@
     background-color var(--#{$prefix}transition-instant) ease-in-out,
     border-color var(--#{$prefix}transition-instant) ease-in-out,
     box-shadow var(--#{$prefix}transition-instant) ease-in-out;
-  @include rfs($badge-font-size, --#{$prefix}badge-font-size);
   @include border-radius(var(--#{$prefix}badge-border-radius));
 
   // Empty badges collapse automatically

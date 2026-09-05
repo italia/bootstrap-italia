@@ -1,14 +1,8 @@
 @use 'sass:map';
 @use '../base/config' as *;
 @use '../base/variables' as *;
-@use '../base/mixins/border-radius' as *;
-@use '../base/mixins/box-shadow' as *;
-@use '../base/mixins/gradients' as *;
-@use '../base/mixins/transition' as *;
-@use '../base/mixins/deprecate' as *;
 @use '../base/mixins/backdrop' as *;
 @use '../base/mixins/breakpoints' as *;
-@use '../base/vendor/rfs' as *;
 
 // Component: navbar
 //
@@ -29,6 +23,7 @@
   --#{$prefix}navbar-brand-padding-y: #{$navbar-brand-padding-y}; // Controls the navbar brand padding y.
   --#{$prefix}navbar-close-button-font-size: 0.75rem; // Controls the navbar close button font size.
   --#{$prefix}navbar-close-button-size: 44px; // Controls the navbar close button size.
+  --#{$prefix}navbar-close-button-text-color: var(--#{$prefix}color-text-inverse); // Controls the navbar close button text color, using color tokens.
   --#{$prefix}navbar-disabled-item-opacity: 0.75; // Controls the navbar disabled item opacity.
   --#{$prefix}navbar-hamburger-size: 1.5rem; // Controls the navbar hamburger size.
   --#{$prefix}navbar-link-border-size: var(--#{$prefix}border-thick); // Controls the navbar link border size, using border tokens.
@@ -42,6 +37,7 @@
   --#{$prefix}navbar-overlay-bg: rgba(0, 0, 0, 0.6); // Controls the navbar overlay bg.
   --#{$prefix}navbar-toggle-button-icon-color: var(--#{$prefix}icon-inverse); // Controls the navbar toggle button icon color, using icon tokens.
   --#{$prefix}navbar-toggle-button-icon-size: 1.5rem; // Controls the navbar toggle button icon size.
+
   @include media-breakpoint-up(lg) {
     --#{$prefix}navbar-link-color: var(--#{$prefix}color-text-inverse); // nav link color default - desktop.
     --#{$prefix}navbar-link-active-border-color: var(--#{$prefix}color-border-inverse);
@@ -73,6 +69,7 @@
   --#{$prefix}backdrop-bg: #{$modal-backdrop-bg};
   --#{$prefix}backdrop-opacity: #{$modal-backdrop-opacity};
   @include overlay-backdrop(var(--#{$prefix}backdrop-zindex), var(--#{$prefix}backdrop-bg), var(--#{$prefix}backdrop-opacity));
+
   @media (min-width: #{map.get($grid-breakpoints, lg)}) {
     display: none; // to handle resize from md to lg when open
   }
@@ -86,8 +83,8 @@
   align-items: center;
   justify-content: space-between; // space out brand from logo
   background: var(--#{$prefix}navbar-background);
+
   @include media-breakpoint-up(lg) {
-    --#{$prefix}navbar-padding-y: 0;
     --#{$prefix}navbar-link-font-size: var(--#{$prefix}label-font-size-l);
   }
 
@@ -133,6 +130,7 @@
     background: transparent;
     transition: all 0.3s cubic-bezier(0.1, 0.57, 0.4, 0.97);
     pointer-events: none;
+
     @include media-breakpoint-up(lg) {
       display: none;
     }
@@ -162,6 +160,7 @@
       --#{$prefix}dropdown-border-width: 1px;
       --#{$prefix}dropdown-border-color: var(--#{$prefix}color-border-subtle);
     }
+
     a.it-heading-link,
     a.it-footer-link {
       svg {
@@ -201,6 +200,7 @@
   .megamenu .dropdown-toggle:before,
   .dropdown-menu:before {
     display: none;
+
     @include media-breakpoint-up(lg) {
       display: block;
       --#{$prefix}dropdown-notch-position-y: -10px;
@@ -241,7 +241,6 @@
   flex-direction: column; // cannot use `inherit` to get the `.navbar`s value
   margin-bottom: 0;
   padding-left: 0;
-  font-size: var(--#{$prefix}nav-link-font-size);
   list-style: none;
 
   .dropdown-menu {
@@ -275,6 +274,7 @@
   z-index: #{$zindex-modal};
   display: none;
   width: calc(100% - 48px); // fluid width minus 48px for close and backdrop;
+
   @include media-breakpoint-up(lg) {
     position: relative;
     top: auto;
@@ -300,6 +300,7 @@
     transform: translateX(-100%);
     transition: all 0.2s cubic-bezier(0.29, 0.85, 0.5, 0.99);
     pointer-events: all;
+
     @include media-breakpoint-up(lg) {
       position: inherit;
       top: auto;
@@ -320,6 +321,7 @@
   .navbar-nav {
     padding-top: var(--#{$prefix}spacing-m);
     overflow: hidden;
+
     @include media-breakpoint-up(lg) {
       margin-top: 0;
       padding-top: 0;
@@ -330,6 +332,7 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
+
       @include media-breakpoint-up(lg) {
         flex-direction: row;
       }
@@ -341,10 +344,6 @@
         position: relative;
         padding: var(--#{$prefix}navbar-link-padding-y) var(--#{$prefix}navbar-link-padding-x);
         font-weight: var(--#{$prefix}navbar-link-font-weight);
-        &.disabled span,
-        &.disabled .icon {
-          opacity: var(--#{$prefix}navbar-disabled-item-opacity);
-        }
         &.dropdown-toggle {
           svg {
             margin-top: 2px;
@@ -352,6 +351,7 @@
             fill: currentColor;
             transition: all var(--#{$prefix}transition-instant);
           }
+
           &[aria-expanded='true'] {
             svg {
               transform: scaleY(-1);
@@ -364,20 +364,21 @@
       a.nav-link {
         --#{$prefix}navbar-link-border-color: transparent;
         border-bottom: 0;
-        border-left: var(--#{$prefix}navbar-link-border-size) solid var(--navbar-link-border-color);
+        border-left: var(--#{$prefix}navbar-link-border-size) solid var(--#{$prefix}navbar-link-border-color);
         background: transparent;
         font-weight: var(--#{$prefix}navbar-link-font-weight);
+
         @include media-breakpoint-up(lg) {
           --#{$prefix}navbar-link-padding-x: var(--#{$prefix}spacing-s); // reduce horizontal padding for desktop
           display: flex;
           align-items: center;
-          border-bottom: var(--#{$prefix}navbar-link-border-size) solid var(--navbar-link-border-color);
+          border-bottom: var(--#{$prefix}navbar-link-border-size) solid var(--#{$prefix}navbar-link-border-color);
           border-left: 0;
           line-height: var(--#{$prefix}navbar-link-line-height);
         }
 
         &.active {
-          --navbar-link-border-color: var(--#{$prefix}navbar-link-active-border-color);
+          --#{$prefix}navbar-link-border-color: var(--#{$prefix}navbar-link-active-border-color);
         }
 
         &.dropdown-toggle.show[data-focus-mouse='true'] {
@@ -415,6 +416,7 @@
   border: none;
   background: none;
   cursor: pointer;
+
   @include media-breakpoint-up(lg) {
     display: none;
   }
@@ -454,8 +456,8 @@
           }
 
           .nav-link {
-            padding-right: var(--#{$prefix}navbar-nav-link-padding-x);
-            padding-left: var(--#{$prefix}navbar-nav-link-padding-x);
+            padding-right: var(--#{$prefix}navbar-link-padding-x);
+            padding-left: var(--#{$prefix}navbar-link-padding-x);
           }
         }
 
@@ -483,8 +485,7 @@
           border: 0 !important;
           background-color: transparent !important;
           transform: none !important;
-          @include box-shadow(none);
-          @include transition(none);
+          transition: none;
           // stylelint-enable declaration-no-important
 
           .offcanvas-header {
@@ -502,6 +503,7 @@
     }
   }
 }
+
 // scss-docs-end navbar-expand-loop
 
 // Navbar themes
@@ -509,7 +511,6 @@
 // Styles for switching between navbars with light or dark background.
 
 .navbar-dark {
-  --#{$prefix}navbar-color: var(--#{$prefix}color-text-inverse);
   --#{$prefix}navbar-brand-color: var(--#{$prefix}color-text-inverse);
   --#{$prefix}navbar-brand-hover-color: var(--#{$prefix}color-text-inverse);
   --#{$prefix}navbar-toggler-border-color: #{$navbar-dark-toggler-border-color};

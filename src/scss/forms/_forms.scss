@@ -37,6 +37,7 @@ textarea,
 select {
   display: block;
   width: 100%;
+  min-height: var(--#{$prefix}form-control-height);
   padding: var(--#{$prefix}form-control-spacing);
   border: 1px solid var(--#{$prefix}form-control-border-color);
   // Note: This has no effect on <select>s in some browsers, due to the limited stylability of `<select>`s in CSS.
@@ -195,7 +196,7 @@ input[type='time'] {
 fieldset {
   legend {
     margin-bottom: var(--#{$prefix}spacing-s);
-    padding: 0 var(--#{$prefix}form-input-spacing-x);
+    padding: 0;
     background-color: transparent;
     color: var(--#{$prefix}form-control-text-color);
     font-size: var(--#{$prefix}label-font-size-s);
@@ -210,7 +211,7 @@ fieldset {
 // WebKit datetime edit fields
 input::-webkit-datetime-edit {
   background-color: var(--#{$prefix}color-background-primary-lighter);
-  color: var(--#{$prefix}form-contro-text-color);
+  color: var(--#{$prefix}form-control-text-color);
 }
 
 //
@@ -343,7 +344,7 @@ input::-webkit-datetime-edit {
       top: 0;
       width: 20px;
       height: 20px;
-      border-radius: var(--#{$prefix}form-control-border-radius);
+      border-radius: var(--#{$prefix}form-checkbox-border-radius);
     }
 
     // Checked state

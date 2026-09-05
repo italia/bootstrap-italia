@@ -75,12 +75,12 @@
     text-decoration: none;
 
     &:hover {
-      background-color: var(--#{$prefix}color-background-primary-lighter);
-      color: var(--#{$prefix}color-text-primary);
+      background-color: var(--#{$prefix}autocomplete-item-hover-background-color);
+      color: var(--#{$prefix}autocomplete-item-hover-color);
       text-decoration: none;
 
       .icon {
-        fill: var(--#{$prefix}icon-primary);
+        fill: var(--#{$prefix}autocomplete-item-hover-icon-color);
       }
 
       .autocomplete-list-text {
@@ -130,8 +130,6 @@
 
 // Variant Big
 .autocomplete-wrapper-big {
-  --#{$prefix}autocomplete-item-text-size: var(--#{$prefix}body-font-size-l);
-
   .autocomplete {
     @extend .form-control-lg;
   }
