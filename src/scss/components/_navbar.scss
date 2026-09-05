@@ -55,8 +55,7 @@
     --#{$prefix}navbar-link-active-border-color: var(--#{$prefix}color-border-primary);
   }
 
-  .theme-dark &,
-  .theme-dark-mobile & {
+  .theme-dark & {
     --#{$prefix}navbar-background: var(--#{$prefix}color-background-primary);
     --#{$prefix}navbar-link-color: var(--#{$prefix}color-text-inverse); // nav link color theme dark
     --#{$prefix}navbar-toggle-button-icon-color: var(--#{$prefix}icon-inverse);
@@ -267,6 +266,11 @@
 
 // Navbar collapsable used in header component
 .navbar-collapsable {
+  // Mobile menu: brand band colors and separator between menu groups.
+  // The band uses the primary color by default, `.menu-brand-light` switches it to white.
+  --#{$prefix}navbar-brand-mobile-background: var(--#{$prefix}color-background-primary);
+  --#{$prefix}navbar-brand-mobile-color: var(--#{$prefix}color-text-inverse);
+  --#{$prefix}navbar-menu-group-separator-color: var(--#{$prefix}color-border-subtle);
   position: fixed;
   top: 0;
   right: 0;
@@ -313,6 +317,100 @@
       background: transparent;
       transform: none;
       transition: none;
+    }
+
+    // Mobile menu extra content
+    //
+    // Brand, slim header links and socials are cloned here by the `navbarcollapsible`
+    // plugin, so that on mobile the whole header navigation lives in a single panel.
+    // They are meaningless on desktop, where every element is shown in its own band,
+    // hence they are hidden from the `lg` breakpoint up.
+    // Aligned with the `<it-header>` web component of Dev Kit Italia.
+
+    // Brand band, always the first element of the panel
+    .it-brand-wrapper.it-brand-mobile {
+      --#{$prefix}header-brand-spacing: 0;
+      --#{$prefix}header-brand-color: var(--#{$prefix}navbar-brand-mobile-color);
+      --#{$prefix}header-brand-icon-color: var(--#{$prefix}navbar-brand-mobile-color);
+      padding: var(--#{$prefix}spacing-m) var(--#{$prefix}navbar-link-padding-x);
+      background: var(--#{$prefix}navbar-brand-mobile-background);
+      color: var(--#{$prefix}navbar-brand-mobile-color);
+      @include media-breakpoint-up(lg) {
+        display: none;
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        color: var(--#{$prefix}navbar-brand-mobile-color);
+        text-decoration: none;
+      }
+
+      .icon {
+        flex-shrink: 0;
+        width: var(--#{$prefix}header-brand-size);
+        height: var(--#{$prefix}header-brand-size);
+        margin-right: var(--#{$prefix}spacing-xxs);
+        fill: var(--#{$prefix}navbar-brand-mobile-color);
+      }
+    }
+
+    // Slim header links, cloned below the site menus
+    .navbar-nav.header-slim-menu {
+      @include media-breakpoint-up(lg) {
+        display: none;
+      }
+    }
+
+    @include media-breakpoint-down(lg) {
+      // Every menu group is a full width column on mobile, `.navbar-secondary` included
+      .navbar-nav {
+        width: 100%;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        &.navbar-secondary {
+          --#{$prefix}navbar-link-font-weight: var(--#{$prefix}font-weight-base);
+        }
+      }
+
+      // Separator between two consecutive groups
+      .navbar-nav + .navbar-nav::before {
+        display: block;
+        width: 100%;
+        max-width: 65px;
+        height: 1px;
+        margin-bottom: var(--#{$prefix}spacing-m);
+        margin-left: var(--#{$prefix}navbar-link-padding-x);
+        background: var(--#{$prefix}navbar-menu-group-separator-color);
+        content: '';
+      }
+    }
+
+    // Socials, at the very bottom of the panel
+    .it-socials {
+      padding: 0 var(--#{$prefix}navbar-link-padding-x);
+      margin-top: var(--#{$prefix}spacing-l);
+      margin-bottom: var(--#{$prefix}spacing-m);
+      color: var(--#{$prefix}color-link);
+      @include media-breakpoint-up(lg) {
+        display: none;
+      }
+
+      ul {
+        display: flex;
+        align-items: center;
+        padding: 0;
+        margin: var(--#{$prefix}spacing-xs) 0 0;
+        gap: 0.65rem;
+        list-style-type: none;
+      }
+
+      .icon {
+        width: var(--#{$prefix}icon-size-s);
+        height: var(--#{$prefix}icon-size-s);
+        fill: currentcolor;
+      }
     }
   }
 
@@ -394,6 +492,11 @@
     .dropdown-menu {
       width: 100%; // make sure it is full width
     }
+  }
+
+  &.menu-brand-light {
+    --#{$prefix}navbar-brand-mobile-background: var(--#{$prefix}color-background-inverse);
+    --#{$prefix}navbar-brand-mobile-color: var(--#{$prefix}color-link);
   }
 
   &.expanded {
