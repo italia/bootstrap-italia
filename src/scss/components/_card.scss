@@ -258,7 +258,7 @@
     height: 100%;
   }
 
-  // Profile card
+  // Profile card (persons and places)
   &.it-card-profile {
     .it-card-profile-header {
       display: flex;
@@ -268,8 +268,11 @@
       gap: var(--#{$prefix}card-spacing-x);
 
       .it-card-profile-content {
+        flex: 1;
+        max-width: 100%;
+
         .it-card-profile-name {
-          margin-bottom: var(--#{$prefix}spacing-3xs);
+          margin-bottom: var(--#{$prefix}spacing-xxs);
         }
 
         .it-card-profile-role,
@@ -293,7 +296,7 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          background-color: var(--#{$prefix}color-background-muted);
+          background-color: var(--#{$prefix}color-background-primary-lighter);
         }
       }
     }
@@ -412,69 +415,6 @@
 
     &.it-card-border-top-danger::after {
       --#{$prefix}card-border-top-color: var(--#{$prefix}color-border-danger);
-    }
-  }
-
-  // Card profile
-  /* stylelint-disable-next-line no-duplicate-selectors */
-  &.it-card-profile {
-    /* stylelint-disable-next-line no-duplicate-selectors */
-    .it-card-profile-header {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap-reverse;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: calc(2 * var(--#{$prefix}card-title-spacer-y));
-      margin-bottom: var(--#{$prefix}card-title-spacer-y);
-      padding: 0 var(--#{$prefix}card-spacer-x);
-
-      // Gap fallback
-      > * {
-        margin: 0.5rem;
-      }
-
-      @supports (gap: 1rem) {
-        gap: 1rem;
-
-        > * {
-          margin: 0;
-        }
-      }
-
-      .it-card-profile {
-        flex: 1;
-        max-width: 100%;
-
-        .it-card-profile-name {
-          margin-bottom: 0.25rem;
-        }
-
-        .it-card-profile-role,
-        .it-card-place-type {
-          font-weight: 600;
-          font-size: 1rem;
-          line-height: 1.5rem;
-          margin-bottom: 0;
-        }
-      }
-      /* stylelint-disable-next-line no-duplicate-selectors */
-      .it-card-profile-image {
-        max-width: 80px;
-        max-height: 80px;
-        /* stylelint-disable-next-line no-duplicate-selectors */
-        figure {
-          margin-bottom: 0;
-        }
-        /* stylelint-disable-next-line no-duplicate-selectors */
-        .it-card-profile-image-icon-wrapper {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-
-          background-color: $color-background-primary-lighter;
-        }
-      }
     }
   }
 
@@ -696,6 +636,7 @@ ul.it-card-list {
       }
     }
   }
+
   /* stylelint-disable-next-line no-duplicate-selectors */
   > .it-card {
     // Default stacked on mobile

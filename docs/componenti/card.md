@@ -1240,7 +1240,7 @@ Negli esempi abbiamo utilizzato il tag `h4` per i titoli `.it-card-profile-name`
     <!--start it-card-->
     <article class="it-card it-card-profile it-card-height-full rounded shadow-sm border">
       <div class="it-card-profile-header">
-        <div class="it-card-profile">
+        <div class="it-card-profile-content">
           <h4 class="it-card-profile-name no_toc">
             <a href="#">Toponimo o luogo</a>
           </h4>
@@ -1259,7 +1259,7 @@ Negli esempi abbiamo utilizzato il tag `h4` per i titoli `.it-card-profile-name`
     <!--start it-card-->
     <article class="it-card it-card-profile it-card-height-full it-card-border-top it-card-border-top-secondary rounded shadow-sm border">
       <div class="it-card-profile-header">
-        <div class="it-card-profile">
+        <div class="it-card-profile-content">
           <h4 class="it-card-profile-name no_toc">
             <a href="#">Toponimo o luogo</a>
           </h4>
@@ -1280,7 +1280,7 @@ Negli esempi abbiamo utilizzato il tag `h4` per i titoli `.it-card-profile-name`
     <!--start it-card-->
     <article class="it-card it-card-profile it-card-height-full rounded shadow-sm border">
       <div class="it-card-profile-header">
-        <div class="it-card-profile">
+        <div class="it-card-profile-content">
           <h4 class="it-card-profile-name no_toc">
             <a href="#">Toponimo o luogo</a>
           </h4>
@@ -1315,7 +1315,7 @@ Negli esempi abbiamo utilizzato il tag `h4` per i titoli `.it-card-profile-name`
     <!--start it-card-->
     <article class="it-card it-card-profile it-card-height-full it-card-border-top it-card-border-top-secondary rounded shadow-sm border mb-3">
       <div class="it-card-profile-header">
-        <div class="it-card-profile">
+        <div class="it-card-profile-content">
           <h4 class="it-card-profile-name no_toc">
             <a href="#">Toponimo o luogo</a>
           </h4>
@@ -2438,7 +2438,7 @@ Svolgi sempre test di usabilità con utenti che utilizzano tecnologie assistive 
 - Per i metadati è stata rimossa la classe `.it-card-related` a favore del solo uso dell'elemento `<footer>` con classe `.it-card-footer` a seguire il corpo della card.
 - Usa un `<div>` con la sola classe `.it-card-actions` a seguire il corpo della card per ospitare link correlati e/o secondari.
 - È stata rimossa la classe `.chips-list` dall'elemento `<ul>` con classe `.it-card-chips` che ospita una lista di più argomenti.
-- La doppia classe `.card-profile` è stata sostituita da `.card-profile-content` per le card di tipo profilo.
+- La doppia classe `.card-profile` è stata sostituita da `.card-profile-content` per le card di tipo profilo e luogo.
 {% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}
 
 {% capture callout %}
