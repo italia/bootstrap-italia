@@ -56,8 +56,39 @@ for root, dirs, files in os.walk(SCSS_BASE_PATH, topdown=True):
                             'variable-name': var,
                             'value': pkt[1].replace("--#{$prefix}", "--bsi-"),
                             'description': pkt[2].replace('//', '').strip().capitalize(),
-                            'other_values': []
+                            'other_values': [],
+                            'files': [css_file_to_inspect.replace(SCSS_BASE_PATH, '')]
                         })
+
+
+for root, dirs, files in os.walk(SCSS_BASE_PATH, topdown=True):
+    dirs[:] = [d for d in dirs if d not in EXCLUDED_FOLDERS]
+    for file in files:
+        if file.endswith(".scss"):
+            css_file_to_inspect = os.path.join(root, file)
+            with open(css_file_to_inspect, "r") as f:
+                inspect_other_values = False
+                vars = []
+                for line in f:
+                    if '// Styles' in line:
+                        inspect_other_values = True
+                    if inspect_other_values:
+                        for new_var in re.findall(r'\s+(--#{\$prefix}[a-z0-9-]+):\s(.*);(\s\/\/.*)?', line):
+                            name, value, description = new_var
+                            name = name.replace("--#{$prefix}", "--bsi-")
+                            # Check if the variable already exists in the mapped_vars dictionary
+                            for selector, variables in mapped_vars.items():
+                                for existing_var in variables:
+                                    if existing_var['variable-name'] == name:
+                                        # If the variable already exists, add the new value to the other_values list
+                                        if value not in existing_var['other_values']:
+                                            existing_var['other_values'].append(value)
+                                        if css_file_to_inspect.replace(SCSS_BASE_PATH, '') not in existing_var['files']:
+                                            existing_var['files'].append(css_file_to_inspect.replace(SCSS_BASE_PATH, ''))
+                                        break
+                                else:
+                                    continue
+                                break
 
 with open(OUTPUT_JSON, "w") as fapi:
     fapi.write(json.dumps(mapped_vars, sort_keys=True, indent=4))
