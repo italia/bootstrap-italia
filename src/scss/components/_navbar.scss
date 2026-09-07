@@ -319,7 +319,7 @@
   // Navbar Nav
   .navbar-nav {
     padding-top: var(--#{$prefix}spacing-m);
-    overflow: hidden;
+    overflow: visible;
     @include media-breakpoint-up(lg) {
       margin-top: 0;
       padding-top: 0;
@@ -329,9 +329,10 @@
     .nav-item {
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
+      align-items: stretch;
       @include media-breakpoint-up(lg) {
         flex-direction: row;
+        align-items: flex-start;
       }
     }
 
@@ -367,6 +368,7 @@
         border-left: var(--#{$prefix}navbar-link-border-size) solid var(--navbar-link-border-color);
         background: transparent;
         font-weight: var(--#{$prefix}navbar-link-font-weight);
+        text-align: left;
         @include media-breakpoint-up(lg) {
           --#{$prefix}navbar-link-padding-x: var(--#{$prefix}spacing-s); // reduce horizontal padding for desktop
           display: flex;
