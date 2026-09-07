@@ -39,7 +39,7 @@ for root, dirs, files in os.walk(SCSS_BASE_PATH, topdown=True):
                             vars.append(re.findall(r'\s+(--#{\$prefix}[a-z0-9-]+):\s(.*);(\s\/\/.*)?', line))
             if selector and vars:
                 vars = (functools.reduce(operator.iconcat, vars, []))
-                print (selector)
+                print (f"📤 Extracting variables for `.{selector}` selector from {css_file_to_inspect}.scss file")
                 mapped_vars[selector] = []
                 # Map variables with prefix (e.g. dropdown, form ecc..)
                 for pkt in vars:
