@@ -20,6 +20,7 @@ for root, dirs, files in os.walk(SCSS_BASE_PATH, topdown=True):
     for file in files:
         if file.endswith(".scss"):
             css_file_to_inspect = os.path.join(root, file)
+            css_file_to_inspect_name = css_file_to_inspect.replace(SCSS_BASE_PATH, '').replace('/components/', '')
             with open(css_file_to_inspect, "r") as f:
                 selector = None
                 props_found = False
@@ -57,7 +58,7 @@ for root, dirs, files in os.walk(SCSS_BASE_PATH, topdown=True):
                             'value': pkt[1].replace("--#{$prefix}", "--bsi-"),
                             'description': pkt[2].replace('//', '').strip().capitalize(),
                             'other_values': [],
-                            'files': [css_file_to_inspect.replace(SCSS_BASE_PATH, '')]
+                            'files': [css_file_to_inspect_name]
                         })
 
 
@@ -66,6 +67,7 @@ for root, dirs, files in os.walk(SCSS_BASE_PATH, topdown=True):
     for file in files:
         if file.endswith(".scss"):
             css_file_to_inspect = os.path.join(root, file)
+            css_file_to_inspect_name = css_file_to_inspect.replace(SCSS_BASE_PATH, '').replace('/components/', '')
             with open(css_file_to_inspect, "r") as f:
                 inspect_other_values = False
                 vars = []
@@ -83,8 +85,8 @@ for root, dirs, files in os.walk(SCSS_BASE_PATH, topdown=True):
                                         # If the variable already exists, add the new value to the other_values list
                                         if value not in existing_var['other_values']:
                                             existing_var['other_values'].append(value)
-                                        if css_file_to_inspect.replace(SCSS_BASE_PATH, '') not in existing_var['files']:
-                                            existing_var['files'].append(css_file_to_inspect.replace(SCSS_BASE_PATH, ''))
+                                        if css_file_to_inspect_name not in existing_var['files']:
+                                            existing_var['files'].append(css_file_to_inspect_name)
                                         break
                                 else:
                                     continue

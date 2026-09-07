@@ -19,6 +19,7 @@ La descrizione delle custom properties è in inglese perché risiede nei files `
         <th>Variabile CSS</th>
         <th>Descrizione (Inglese)</th>
         <th>Predefinito</th>
+        <th>File SCSS</th>
       </tr>
     </thead>
     <tbody>
@@ -28,6 +29,7 @@ La descrizione delle custom properties è in inglese perché risiede nei files `
         <td><code>{{ track.variable-name }}</code></td>
         <td>{{ track.description }}</td>
         <td><code>{{ track.value }}</code></td>
+        <td>{% for v in track.files %}<code>{{ v }}</code></br>{% endfor %}</td>
       </tr>
     {% else %}
     {% assign dynamic_props = true %}
@@ -50,6 +52,7 @@ si prega di far riferimento al codice per personalizzare il comportamento.
         <th>Variabile CSS</th>
         <th>Descrizione (Inglese)</th>
         <th>Valori predefiniti</th>
+        <th>File SCSS</th>
       </tr>
     </thead>
     <tbody>
@@ -59,6 +62,7 @@ si prega di far riferimento al codice per personalizzare il comportamento.
         <td><code>{{ track.variable-name }}</code></td>
         <td>{{ track.description }}</td>
         <td><code>{{ track.value }}</code>&nbsp;{% for v in track.other_values %}<code>{{ v }}</code>&nbsp;{% endfor %}</td>
+        <td>{% for v in track.files %}<code>{{ v }}</code></br>{% endfor %}</td>
       </tr>
     {% endif %}
     {% endfor %}
