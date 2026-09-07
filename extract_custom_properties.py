@@ -78,12 +78,13 @@ for root, dirs, files in os.walk(SCSS_BASE_PATH, topdown=True):
                         for new_var in re.findall(r'\s+(--#{\$prefix}[a-z0-9-]+):\s(.*);(\s\/\/.*)?', line):
                             name, value, description = new_var
                             name = name.replace("--#{$prefix}", "--bsi-")
+                            value = value.replace("--#{$prefix}", "--bsi-")
                             # Check if the variable already exists in the mapped_vars dictionary
                             for selector, variables in mapped_vars.items():
                                 for existing_var in variables:
                                     if existing_var['variable-name'] == name:
                                         # If the variable already exists, add the new value to the other_values list
-                                        if value not in existing_var['other_values']:
+                                        if value != existing_var['value'] and value not in existing_var['other_values']:
                                             existing_var['other_values'].append(value)
                                         if css_file_to_inspect_name not in existing_var['files']:
                                             existing_var['files'].append(css_file_to_inspect_name)
