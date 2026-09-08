@@ -399,7 +399,7 @@ Per cambiare tema all'header centrale è sufficiente aggiungere la classe `theme
 
 ### Menu su mobile
 
-Quando l'Header Nav fa parte di un Header completo (cioè è contenuto in un elemento `.it-header-wrapper`), il pannello che si apre con il pulsante hamburger raccoglie automaticamente tutta la navigazione dell'header, nell'ordine:
+Quando header nav fa parte di un header completo (cioè è contenuto in un elemento `.it-header-wrapper`), il pannello laterale mobile mostra gli stessi elementi di navigazione presenti su desktop, nell'ordine:
 
 1. logo, titolo e tagline dell'ente (`.it-brand-wrapper` dell'Header Centrale)
 2. menu di navigazione principale (`.navbar-nav`)
