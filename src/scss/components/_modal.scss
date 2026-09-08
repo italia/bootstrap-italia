@@ -114,9 +114,9 @@
 
 // Modal background
 .modal-backdrop {
-  --#{$prefix}backdrop-zindex: #{$zindex-modal-backdrop};
-  --#{$prefix}backdrop-bg: #{$modal-backdrop-bg};
-  --#{$prefix}backdrop-opacity: #{$modal-backdrop-opacity};
+  --#{$prefix}backdrop-zindex: 1050;
+  --#{$prefix}backdrop-bg: var(--#{$prefix}black);
+  --#{$prefix}backdrop-opacity: 0.8;
 
   @include overlay-backdrop(var(--#{$prefix}backdrop-zindex), var(--#{$prefix}backdrop-bg), var(--#{$prefix}backdrop-opacity));
 }
