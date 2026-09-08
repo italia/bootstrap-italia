@@ -18,8 +18,7 @@ La descrizione delle custom properties è in inglese perché risiede nei files `
       <tr>
         <th>Variabile CSS</th>
         <th>Descrizione (Inglese)</th>
-        <th>Predefinito</th>
-        <th>File SCSS</th>
+        <th>Valore predefinito</th>
       </tr>
     </thead>
     <tbody>
@@ -29,7 +28,6 @@ La descrizione delle custom properties è in inglese perché risiede nei files `
         <td><code>{{ track.variable-name }}</code></td>
         <td>{{ track.description }}</td>
         <td><code>{{ track.value }}</code></td>
-        <td>{% for v in track.files %}<code>{{ v }}</code><br/>{% endfor %}</td>
       </tr>
     {% else %}
     {% assign dynamic_props = true %}
@@ -43,7 +41,7 @@ La descrizione delle custom properties è in inglese perché risiede nei files `
 <h3 class="no_toc">Properties dinamiche</h3>
 
 Nella colonna `"Valori predefiniti"` è possibile trovare varianti responsive/tema/stato della property stessa,
-si prega di far riferimento al codice per personalizzare il comportamento.
+si prega di far riferimento al codice dei file SCSS relativi per personalizzare il comportamento.
 
 <div class="table-responsive" style="font-size: 1rem">
   <table class="table table-simple">
@@ -51,7 +49,7 @@ si prega di far riferimento al codice per personalizzare il comportamento.
       <tr>
         <th>Variabile CSS</th>
         <th>Descrizione (Inglese)</th>
-        <th>Valori predefiniti</th>
+        <th>Valore predefinito</th>
         <th>File SCSS</th>
       </tr>
     </thead>
@@ -61,7 +59,7 @@ si prega di far riferimento al codice per personalizzare il comportamento.
       <tr>
         <td><code>{{ track.variable-name }}</code></td>
         <td>{{ track.description }}</td>
-        <td><code>{{ track.value }}</code>&nbsp;{% for v in track.other_values %}<code>{{ v }}</code>&nbsp;{% endfor %}</td>
+        <td><code>{{ track.value }}</code>&nbsp;<code>...</code></td>
         <td>{% for v in track.files %}<code>{{ v }}</code><br/>{% endfor %}</td>
       </tr>
     {% endif %}
