@@ -210,7 +210,8 @@ myAlert.addEventListener('closed.bs.alert', () => {
 })
 ```
 
-{% include properties.md properties=site.data.cprops.alert %}
+{% include properties.md properties=site.data.cprops.alert selector=".alert" %}
+
 ## Breaking change
 
 {% capture callout %}

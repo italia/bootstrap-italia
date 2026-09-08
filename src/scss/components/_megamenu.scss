@@ -67,6 +67,13 @@
     border-bottom-style: solid;
   }
 
+  .it-heading-link-wrapper .it-heading-link,
+  .it-footer-link-wrapper > .it-footer-link {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
   .it-heading-link,
   .it-footer-link {
     font-size: var(--#{$prefix}heading-6-font-size);

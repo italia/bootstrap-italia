@@ -252,7 +252,8 @@ Contiene i contatti dell'ente, collegamenti ai profili social, form di iscrizion
 </footer>
 {% endcapture %}{% include example.html content=example %}
 
-{% include properties.md properties=site.data.cprops.footer %}
+{% include properties.md properties=site.data.cprops.it-footer selector=".it-footer" %}
+
 ## Breaking change
 
 {% capture callout %}

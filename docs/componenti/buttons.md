@@ -236,7 +236,7 @@ const button = new Button(buttonEl)
   </table>
 </div>
 
-{% include properties.md properties=site.data.cprops.btn %}
+{% include properties.md properties=site.data.cprops.btn selector=".btn" %}
 
 ## Breaking change
 

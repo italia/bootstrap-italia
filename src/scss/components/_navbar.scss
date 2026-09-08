@@ -417,7 +417,7 @@
   // Navbar Nav
   .navbar-nav {
     padding-top: var(--#{$prefix}spacing-m);
-    overflow: hidden;
+    overflow: visible;
     @include media-breakpoint-up(lg) {
       margin-top: 0;
       padding-top: 0;
@@ -427,9 +427,10 @@
     .nav-item {
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
+      align-items: stretch;
       @include media-breakpoint-up(lg) {
         flex-direction: row;
+        align-items: flex-start;
       }
     }
 
@@ -462,20 +463,21 @@
       a.nav-link {
         --#{$prefix}navbar-link-border-color: transparent;
         border-bottom: 0;
-        border-left: var(--#{$prefix}navbar-link-border-size) solid var(--navbar-link-border-color);
+        border-left: var(--#{$prefix}navbar-link-border-size) solid var(--#{$prefix}navbar-link-border-color);
         background: transparent;
         font-weight: var(--#{$prefix}navbar-link-font-weight);
+        text-align: left;
         @include media-breakpoint-up(lg) {
           --#{$prefix}navbar-link-padding-x: var(--#{$prefix}spacing-s); // reduce horizontal padding for desktop
           display: flex;
           align-items: center;
-          border-bottom: var(--#{$prefix}navbar-link-border-size) solid var(--navbar-link-border-color);
+          border-bottom: var(--#{$prefix}navbar-link-border-size) solid var(--#{$prefix}navbar-link-border-color);
           border-left: 0;
           line-height: var(--#{$prefix}navbar-link-line-height);
         }
 
         &.active {
-          --navbar-link-border-color: var(--#{$prefix}navbar-link-active-border-color);
+          --#{$prefix}navbar-link-border-color: var(--#{$prefix}navbar-link-active-border-color);
         }
 
         &.dropdown-toggle.show[data-focus-mouse='true'] {

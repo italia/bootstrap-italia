@@ -539,7 +539,7 @@ Con il posizionamento a destra
 </nav>
 {% endcapture %}{% include example.html content=example %}
 
-{% include properties.md properties=site.data.cprops.pagination %}
+{% include properties.md properties=site.data.cprops.pagination selector=".pagination" %}
 
 ## Breaking change
 

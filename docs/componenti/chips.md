@@ -298,7 +298,8 @@ I gruppi di chip vengono visualizzati in linea.
 </a>
 {% endcapture %}{% include example.html content=example %}
 
-{% include properties.md properties=site.data.cprops.chip %}
+{% include properties.md properties=site.data.cprops.chip selector=".chip" %}
+
 ## Breaking change
 
 {% capture callout %}

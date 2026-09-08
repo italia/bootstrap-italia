@@ -953,4 +953,4 @@ Per renderizzare la `<caption>` in cima alla tabella utilizza la classe `.captio
   </table>
 {% endcapture %}{% include example.html content=example %}
 
-{% include properties.md properties=site.data.cprops.table %}
+{% include properties.md properties=site.data.cprops.table selector="table" %}
