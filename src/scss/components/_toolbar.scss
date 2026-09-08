@@ -17,13 +17,10 @@
   --#{$prefix}toolbar-divider-color: var(--#{$prefix}color-border-subtle); // Controls the toolbar divider color, using color tokens.
   --#{$prefix}toolbar-link-color: var(--#{$prefix}color-text-secondary); // Controls the toolbar link color, using color tokens.
   --#{$prefix}toolbar-icon-color: var(--#{$prefix}icon-secondary); // Controls the toolbar icon color, using color tokens.
-  --#{$prefix}toolbar-dropdown-padding-x: var(--#{$prefix}spacing-xxs); // Controls the toolbar dropdown padding x, using spacing tokens.
-  --#{$prefix}toolbar-dropdown-caret-color: var(--#{$prefix}icon-secondary); // Controls the toolbar dropdown caret color, using color tokens.
-  --#{$prefix}toolbar-dropdown-caret-size: var(--#{$prefix}spacing-3xs); // Controls the toolbar dropdown caret size, using spacing tokens.
   --#{$prefix}toolbar-dropdown-shadow: var(--#{$prefix}elevation-low); // Controls the toolbar dropdown shadow, using elevation tokens.
-  --#{$prefix}toolbar-icon-font-size: var(--#{$prefix}icon-size-l); // Controls the toolbar icon font size, using color tokens.
   --#{$prefix}toolbar-item-gap: var(--#{$prefix}spacing-xs); // Controls the toolbar item gap, using spacing tokens.
-  --#{$prefix}toolbar-more-icon-font-size: var(--#{$prefix}label-font-size-xs); // Controls the toolbar more icon font size, using typography tokens.
+  --#{$prefix}toolbar-vertical-item-margin-x: 0; // Controls the horizontal inset of each item within the vertical toolbar variant.
+  --#{$prefix}toolbar-vertical-item-margin-y: 0; // Controls the vertical margin between items in the vertical toolbar variant. Defaults to 0: spacing is currently handled by toolbar-item-gap.  
   --#{$prefix}toolbar-badge-border-color: var(--#{$prefix}color-background-inverse); // Controls the toolbar badge border color, using color tokens.
   --#{$prefix}toolbar-badge-background-color: var(--#{$prefix}color-background-primary); // Controls the toolbar badge background color, using color tokens.
   --#{$prefix}toolbar-badge-border-radius: var(--#{$prefix}radius-circle); // Controls the toolbar badge border radius, using radius tokens.
@@ -166,7 +163,6 @@
 
   // Medium toolbar
   &.toolbar-medium {
-    --#{$prefix}toolbar-icon-font-size: var(--#{$prefix}icon-size-m);
 
     // Icon badge
     .toolbar-badge {
@@ -179,7 +175,6 @@
 
   // Small toolbar
   &.toolbar-small {
-    --#{$prefix}toolbar-icon-font-size: var(--#{$prefix}icon-size-s);
     --#{$prefix}toolbar-padding-y: var(--#{$prefix}spacing-xxs);
 
     // Icon badge
@@ -206,7 +201,7 @@
       & > li {
         display: flex;
         align-items: center;
-        margin: var(--#{$prefix}toolbar-item-margin-y) var(--#{$prefix}toolbar-item-margin-x);
+        margin: var(--#{$prefix}toolbar-vertical-item-margin-y) var(--#{$prefix}toolbar-vertical-item-margin-x);
 
         &.toolbar-divider {
           align-self: auto;

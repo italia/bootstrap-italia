@@ -141,7 +141,7 @@
   }
 
   .icon {
-    fill: currentColor;
+    fill: var(--#{$prefix}pagination-icon-color, currentColor);
   }
 }
 

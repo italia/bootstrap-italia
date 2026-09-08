@@ -130,8 +130,6 @@
 
 // Variant Big
 .autocomplete-wrapper-big {
-  --#{$prefix}autocomplete-item-text-size: var(--#{$prefix}body-font-size-l);
-
   .autocomplete {
     @extend .form-control-lg;
   }
