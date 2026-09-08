@@ -164,6 +164,11 @@ La validazione con JustValidate, e le classi che applicano gli stili di validazi
 - Nella variante "Pulsante con Progress Bar" la classe che controlla il colore dell'icona ha cambiato nome: `.icon-white` diventa `.icon-inverse`.
   
 
+### Proporzioni
+
+La variabile per il controllo della proporzione custom è ora `--bsi-aspect-ratio`, non `--bs-aspect-ratio`.
+
+
 ### Sections
 
 - Negli esempi sono stati rimossi dai contenitori delle colonne le classi di utility come `.pe-0`, `.pe-md-5` e `.font-serif`. 
@@ -200,6 +205,11 @@ La validazione con JustValidate, e le classi che applicano gli stili di validazi
 ### Torna su
 
 - La classe che controlla il colore delle icone bianche ha cambiato nome: `.icon-white` diventa `.icon-inverse`.
+
+
+### Upload
+
+- Nella variante Avatar - Dimensione Piccola, l'icona presente su mobile ha la classe `.icon-xs` al posto di `.icon-sm`.  
 
 
 ## 2.16.0
