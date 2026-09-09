@@ -191,7 +191,7 @@
         --#{$prefix}stepper-item-text-color: var(--#{$prefix}color-text-primary);
         --#{$prefix}stepper-number-border-color: var(--#{$prefix}color-border-primary);
         --#{$prefix}stepper-number-background: var(--#{$prefix}color-background-primary);
-        
+
         @include media-breakpoint-up(lg) {
           border-bottom: var(--#{$prefix}stepper-active-indicator-height) solid var(--#{$prefix}stepper-item-border-color-active);
         }
