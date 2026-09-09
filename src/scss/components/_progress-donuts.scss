@@ -12,10 +12,17 @@
 
 // Properties
 //
+.progress-donut-wrapper {
+  --#{$prefix}progress-label-color: var(--#{$prefix}color-text-secondary); // Controls the progress bg, using color tokens.
+  --#{$prefix}progress-donut-track-color: var(
+    --#{$prefix}color-background-secondary-lighter
+  ); // Controls the donut track (outer ring) background, using color tokens.
+}
 
 // Styles
 //
 
+/* stylelint-disable-next-line no-duplicate-selectors */
 .progress-donut-wrapper {
   position: relative;
   width: 128px;
@@ -26,12 +33,15 @@
     color: var(--#{$prefix}progress-label-color);
     font-weight: var(--#{$prefix}font-weight-solid);
   }
+
   svg {
     position: relative;
+
     path:first-child {
       display: none;
     }
   }
+
   &:after {
     position: absolute;
     top: 50%;
@@ -44,6 +54,7 @@
     background: var(--#{$prefix}color-background-inverse);
     transform: translateX(-50%) translateY(-50%);
   }
+
   &:before {
     position: absolute;
     top: 50%;
@@ -53,7 +64,7 @@
     width: 110px;
     height: 110px;
     border-radius: 50%;
-    background: var(--#{$prefix}color-background-secondary-lighter);
+    background: var(--#{$prefix}progress-donut-track-color);
     transform: translateX(-50%) translateY(-50%);
   }
 }
@@ -62,10 +73,12 @@
   .progress-donut-wrapper {
     width: 180px;
     height: 180px;
+
     &:after {
       width: 94px;
       height: 94px;
     }
+
     &:before {
       content: '';
       width: 150px;

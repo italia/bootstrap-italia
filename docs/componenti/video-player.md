@@ -424,7 +424,7 @@ In questo la Pubblica Amministrazione che fa uso di servizi di terze parti come 
       <div class="acceptoverlay-icon">
         <svg class="icon icon-xl"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-video"></use></svg>
       </div>
-        <p>Accetta i cookie di YouTube per vedere il video. Puoi gestire le preferenze nella <a href="#" class="text-white">cookie policy</a>.
+        <p>Accetta i cookie di YouTube per vedere il video. Puoi gestire le preferenze nella <a href="#">cookie policy</a>.
         </p>
       <div class="acceptoverlay-buttons bg-dark">
         <button type="button" class="btn btn-primary" data-bs-accept-from="youtube.com"

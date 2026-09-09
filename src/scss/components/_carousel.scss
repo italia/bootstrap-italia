@@ -24,7 +24,6 @@
   --#{$prefix}carousel-card-padding-bottom: var(--#{$prefix}spacing-s); // Controls the card bottom padding, using spacing tokens
   --#{$prefix}carousel-divider-color: var(--#{$prefix}color-border-subtle); // Controls the divider color between slides, using color tokens
   --#{$prefix}carousel-divider-offset: var(--#{$prefix}spacing-xs); // Controls the divider offset from the slide edge, using spacing tokens
-  --#{$prefix}carousel-heading-font-size: 1.75rem; // Controls the heading font size for carousel header.
   --#{$prefix}carousel-heading-padding-inline: var(--#{$prefix}spacing-m); // Controls the inline padding for carousel header, using spacing tokens
   --#{$prefix}carousel-heading-border-color: var(--#{$prefix}color-border-subtle); // Controls the heading border color, using color tokens
   --#{$prefix}carousel-landscape-card-spacing: var(--#{$prefix}spacing-xxl); // Controls the landscape card body spacing, using spacing tokens
@@ -79,7 +78,11 @@
   }
 
   .it-header-block {
-    h2 {
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       margin-bottom: 0;
       padding-bottom: var(--#{$prefix}carousel-pagination-spacing);
       border-bottom: 1px solid var(--#{$prefix}carousel-heading-border-color);
@@ -225,6 +228,7 @@
     // Landscape abstract
     &.it-carousel-landscape-abstract {
       max-width: #{map.get($container-max-widths, lg)};
+
       .splide__list {
         display: flex;
 
@@ -306,6 +310,7 @@
     // 3 col card
     &.it-carousel-landscape-abstract-3 {
       max-width: #{map.get($container-max-widths, lg)};
+
       &.it-full-carousel {
         max-width: unset;
       }
@@ -329,6 +334,7 @@
     // 3 col card
     &.it-carousel-landscape-abstract-3 {
       max-width: #{map.get($container-max-widths, xl)};
+
       &.it-full-carousel {
         max-width: unset;
       }

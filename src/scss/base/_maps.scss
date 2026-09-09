@@ -46,13 +46,13 @@ $utilities-bg-colors: map-loop($utilities-bg, rgba-css-var, '$key', 'bg') !defau
 
 // scss-docs-start utilities-border-colors
 $utilities-border-colors: (
-  'primary': var(--bsi-color-border-primary),
-  'secondary': var(--bsi-color-border-secondary),
-  'success': var(--bsi-color-border-success),
-  'warning': var(--bsi-color-border-warning),
-  'danger': var(--bsi-color-border-danger),
-  'inverse': var(--bsi-color-border-inverse),
-  'white': var(--bsi-color-border-inverse),
+  'primary': var(--#{$prefix}color-border-primary),
+  'secondary': var(--#{$prefix}color-border-secondary),
+  'success': var(--#{$prefix}color-border-success),
+  'warning': var(--#{$prefix}color-border-warning),
+  'danger': var(--#{$prefix}color-border-danger),
+  'inverse': var(--#{$prefix}color-border-inverse),
+  'white': var(--#{$prefix}color-border-inverse),
 ) !default;
 // scss-docs-end utilities-border-colors
 
