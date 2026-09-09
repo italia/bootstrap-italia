@@ -687,7 +687,8 @@
         "title": "`Header` - check a11y e status",
         "type": "DraftIssue"
       },
-      "dev Kit Italia": "DA FARE",
+      "dev Kit Italia": "PRONTO",
+      "dev Kit Italia - url": "https://italia.github.io/dev-kit-italia/?path=/docs/componenti-header--documentazione",
       "id": "PVTI_lADOAOqloM4AcXblzgMjwaI",
       "navigabile": "PRONTO",
       "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/978 ",
@@ -894,7 +895,8 @@
         "title": "`Notifications` - check a11y e status",
         "type": "DraftIssue"
       },
-      "dev Kit Italia": "DA FARE",
+      "dev Kit Italia": "PRONTO",
+      "dev Kit Italia - url": "https://italia.github.io/dev-kit-italia/?path=/docs/componenti-notification--documentazione",
       "id": "PVTI_lADOAOqloM4AcXblzgMjwdM",
       "navigabile": "IN REVIEW",
       "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1177 — https://github.com/italia/bootstrap-italia/issues/1178 — https://github.com/italia/design-ui-kit/issues/139",
@@ -1251,7 +1253,8 @@
         "title": "`Steppers` - check a11y e status",
         "type": "DraftIssue"
       },
-      "dev Kit Italia": "DA FARE",
+      "dev Kit Italia": "PRONTO",
+      "dev Kit Italia - url": "https://italia.github.io/dev-kit-italia/?path=/docs/componenti-stepper--documentazione",
       "id": "PVTI_lADOAOqloM4AcXblzgMjwi8",
       "navigabile": "PRONTO",
       "notes / More": "Angular ha il tick confermato in posizione sbagliata — UI Kit Italia ha meno varianti, più deciso nell'uso dei pulsanti. Da valutare di aggiornare i framework dev, specie a valle di un lavoro per il design pattern form multi-step da fare. ",
@@ -1367,7 +1370,8 @@
         "title": "`Thumbnav` - check a11y e status",
         "type": "DraftIssue"
       },
-      "dev Kit Italia": "DA FARE",
+      "dev Kit Italia": "PRONTO",
+      "dev Kit Italia - url": "https://italia.github.io/dev-kit-italia/?path=/docs/componenti-thumbnav--documentazione",
       "id": "PVTI_lADOAOqloM4AcXblzgMjwjk",
       "navigabile": "PRONTO",
       "notes / More": "Verificare in UI Kit Italia l'opportunità di ripensare le \"griglie\" immagine, di navigazione o meno. ",
@@ -1484,7 +1488,8 @@
         "title": "`Toolbar` - check a11y e status",
         "type": "DraftIssue"
       },
-      "dev Kit Italia": "DA FARE",
+      "dev Kit Italia": "PRONTO",
+      "dev Kit Italia - url": "https://italia.github.io/dev-kit-italia/?path=/docs/componenti-toolbar--documentazione",
       "id": "PVTI_lADOAOqloM4AcXblzgMjwlA",
       "navigabile": "PRONTO",
       "notes / Issues": "https://github.com/italia/design-ui-kit/issues/135",
@@ -1542,7 +1547,8 @@
         "title": "`Transfer` - check a11y e status",
         "type": "DraftIssue"
       },
-      "dev Kit Italia": "DA FARE",
+      "dev Kit Italia": "PRONTO",
+      "dev Kit Italia - url": "https://italia.github.io/dev-kit-italia/?path=/docs/componenti-form-transfer--documentazione",
       "id": "PVTI_lADOAOqloM4AcXblzgMjwng",
       "navigabile": "DA RIVEDERE",
       "notes / Issues": "https://github.com/italia/bootstrap-italia/issues/1187 — https://github.com/italia/bootstrap-italia/issues/1188 — https://github.com/italia/bootstrap-italia/issues/1189 — https://github.com/italia/bootstrap-italia/issues/1190 — https://github.com/italia/design-ui-kit/issues/151",
@@ -1570,7 +1576,8 @@
         "title": "`Upload` - check a11y e status",
         "type": "DraftIssue"
       },
-      "dev Kit Italia": "DA FARE",
+      "dev Kit Italia": "PRONTO",
+      "dev Kit Italia - url": "https://italia.github.io/dev-kit-italia/?path=/docs/componenti-form-upload--documentazione",
       "id": "PVTI_lADOAOqloM4AcXblzgMjwnk",
       "navigabile": "PRONTO",
       "notes / More": "La versione con \"Animazione\" per simularne il funzionamento funziona solo al click del mouse, non via tastiera. — In Angular kit manca la versione Avatar",

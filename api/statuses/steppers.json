@@ -14,7 +14,8 @@
         "title": "Steppers",
         "type": "DraftIssue"
     },
-    "dev Kit Italia": "DA FARE",
+    "dev Kit Italia": "PRONTO",
+    "dev Kit Italia - url": "https://italia.github.io/dev-kit-italia/?path=/docs/componenti-stepper--documentazione",
     "id": "PVTI_lADOAOqloM4AcXblzgMjwi8",
     "navigabile": "PRONTO",
     "notes / More": "Angular ha il tick confermato in posizione sbagliata \u2014 UI Kit Italia ha meno varianti, pi\u00f9 deciso nell'uso dei pulsanti. Da valutare di aggiornare i framework dev, specie a valle di un lavoro per il design pattern form multi-step da fare. ",
