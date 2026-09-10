@@ -28,7 +28,7 @@ L'azione richiesta per l'eliminazione della chip andrà associata al `<button>`.
     <p class="mt-4 mb-2">Testo e chiusura</p>
     <div class="chip">
       <span class="chip-label">Etichetta</span>
-      <button  data-bs-dismiss='alert'>
+      <button data-bs-dismiss='chip'>
         <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
         <span class="visually-hidden">Elimina etichetta</span>
       </button>
@@ -37,7 +37,7 @@ L'azione richiesta per l'eliminazione della chip andrà associata al `<button>`.
     <div class="chip">
       <svg class="icon icon-xs"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-github"></use></svg>
       <span class="chip-label">Etichetta</span>
-      <button data-bs-dismiss='alert'>
+      <button data-bs-dismiss='chip'>
         <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
         <span class="visually-hidden">Elimina etichetta</span>
       </button>
@@ -48,7 +48,7 @@ L'azione richiesta per l'eliminazione della chip andrà associata al `<button>`.
         <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Mario Rossi">
       </div>
       <span class="chip-label">Etichetta</span>
-      <button data-bs-dismiss='alert'>
+      <button data-bs-dismiss='chip'>
         <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
         <span class="visually-hidden">Elimina etichetta</span>
       </button>
@@ -60,29 +60,29 @@ L'azione richiesta per l'eliminazione della chip andrà associata al `<button>`.
       <span class="chip-label">Etichetta</span>
     </div>
     <p class="mt-4 mb-2">Testo e chiusura grande</p>
-    <div class="chip chip-lg alert">
+    <div class="chip chip-lg">
       <span class="chip-label">Etichetta</span>
-      <button data-bs-dismiss='alert'>
+      <button data-bs-dismiss='chip'>
         <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
         <span class="visually-hidden">Elimina etichetta</span>
       </button>
     </div>
     <p class="mt-4 mb-2">Icona, testo e chiusura grande</p>
-    <div class="chip chip-lg alert">
+    <div class="chip chip-lg">
       <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-github"></use></svg>
       <span class="chip-label">Etichetta</span>
-      <button data-bs-dismiss='alert'>
+      <button data-bs-dismiss='chip'>
         <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
         <span class="visually-hidden">Elimina etichetta</span>
       </button>
     </div>
     <p class="mt-4 mb-2">Avatar, testo e chiusura grande</p>
-    <div class="chip chip-lg alert">
+    <div class="chip chip-lg">
       <div class="avatar size-sm">
         <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Mario Rossi">
       </div>
       <span class="chip-label">Etichetta</span>
-      <button data-bs-dismiss='alert'>
+      <button data-bs-dismiss='chip'>
         <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
         <span class="visually-hidden">Elimina etichetta</span>
       </button>
@@ -145,7 +145,7 @@ Gli stili definiti da Bootstrap Italia utilizzano un naming consistente con i te
 
 ## Chip Disabilitata
 
-Aggiungendo la classe `.chip-disabled` al contenitore e l'attributo `disabled` al `<button>` si ottiene una chip disabilitata.
+Aggiungendo la classe `.chip-disabled` al contenitore, e la classe `.disabled` con l'attributo `aria-disabled="true"` al `<button>`, si ottiene una chip disabilitata. Il bottone resta raggiungibile da tastiera, ma il click (mouse e tastiera) è bloccato.
 
 {% comment %}Example name: Disabilitata{% endcomment %}
 {% capture example %}
@@ -155,18 +155,18 @@ Aggiungendo la classe `.chip-disabled` al contenitore e l'attributo `disabled` a
 
 <div class="chip chip-disabled">
   <span class="chip-label">Etichetta</span>
-  <button disabled data-bs-dismiss='chip'>
+  <button class="disabled" aria-disabled="true" data-bs-dismiss='chip'>
     <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
-    <span class="visually-hidden">Elimina etichetta</span>
+    <span class="visually-hidden">Elimina etichetta, non disponibile: chip disabilitata</span>
   </button>
 </div>
 
 <div class="chip chip-disabled">
   <svg class="icon icon-xs"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-github"></use></svg>
   <span class="chip-label">Etichetta</span>
-  <button data-bs-dismiss='chip'>
+  <button class="disabled" aria-disabled="true" data-bs-dismiss='chip'>
     <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
-    <span class="visually-hidden">Elimina etichetta</span>
+    <span class="visually-hidden">Elimina etichetta, non disponibile: chip disabilitata</span>
   </button>
 </div>
 
@@ -175,9 +175,9 @@ Aggiungendo la classe `.chip-disabled` al contenitore e l'attributo `disabled` a
     <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Mario Rossi">
   </div>
   <span class="chip-label">Etichetta</span>
-  <button data-bs-dismiss='chip'>
+  <button class="disabled" aria-disabled="true" data-bs-dismiss='chip'>
     <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
-    <span class="visually-hidden">Elimina etichetta</span>
+    <span class="visually-hidden">Elimina etichetta, non disponibile: chip disabilitata</span>
   </button>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -190,62 +190,62 @@ I gruppi di chip vengono visualizzati in linea.
 {% capture example %}
 <div class="bg-white p-4">
   <div class="chip">
-    <span class="chip-label">Label</span>
+    <span class="chip-label">Etichetta</span>
   </div>
   <div class="chip">
-    <span class="chip-label">Label</span>
-    <button>
+    <span class="chip-label">Etichetta</span>
+    <button data-bs-dismiss='chip'>
       <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
-      <span class="visually-hidden">Elimina label</span>
+      <span class="visually-hidden">Elimina etichetta</span>
     </button>
   </div>
   <div class="chip">
     <svg class="icon icon-xs"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-github"></use></svg>
-    <span class="chip-label">Label</span>
-    <button>
+    <span class="chip-label">Etichetta</span>
+    <button data-bs-dismiss='chip'>
       <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
-      <span class="visually-hidden">Elimina label</span>
+      <span class="visually-hidden">Elimina etichetta</span>
     </button>
   </div>
   <div class="chip">
     <div class="avatar size-xs">
       <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Mario Rossi">
     </div>
-    <span class="chip-label">Label</span>
-    <button>
+    <span class="chip-label">Etichetta</span>
+    <button data-bs-dismiss='chip'>
       <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
-      <span class="visually-hidden">Elimina label</span>
+      <span class="visually-hidden">Elimina etichetta</span>
     </button>
   </div>
 
   <hr/>
 
   <div class="chip chip-lg">
-    <span class="chip-label">Label</span>
+    <span class="chip-label">Etichetta</span>
   </div>
   <div class="chip chip-lg">
-    <span class="chip-label">Label</span>
-    <button>
+    <span class="chip-label">Etichetta</span>
+    <button data-bs-dismiss='chip'>
       <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
-      <span class="visually-hidden">Elimina label</span>
+      <span class="visually-hidden">Elimina etichetta</span>
     </button>
   </div>
   <div class="chip chip-lg">
     <svg class="icon icon-xs"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-github"></use></svg>
-    <span class="chip-label">Label</span>
-    <button>
+    <span class="chip-label">Etichetta</span>
+    <button data-bs-dismiss='chip'>
       <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
-      <span class="visually-hidden">Elimina label</span>
+      <span class="visually-hidden">Elimina etichetta</span>
     </button>
   </div>
   <div class="chip chip-lg">
     <div class="avatar size-xs">
       <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Mario Rossi">
     </div>
-    <span class="chip-label">Label</span>
-    <button>
+    <span class="chip-label">Etichetta</span>
+    <button data-bs-dismiss='chip'>
       <svg class="icon icon-md"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
-      <span class="visually-hidden">Elimina label</span>
+      <span class="visually-hidden">Elimina etichetta</span>
     </button>
   </div>
 
@@ -257,44 +257,31 @@ I gruppi di chip vengono visualizzati in linea.
 {% comment %}Example name: Gruppi di Chip con link{% endcomment %}
 {% capture example %}
 <a href="#" class="chip chip-primary">
-  <span class="chip-label">Label</span>
+  <span class="chip-label">Etichetta</span>
 </a>
 <a href="#" class="chip chip-primary">
-  <span class="chip-label">Label</span>
+  <span class="chip-label">Etichetta</span>
 </a>
 <a href="#" class="chip chip-primary">
-  <span class="chip-label">Label</span>
+  <span class="chip-label">Etichetta</span>
 </a>
 <a href="#" class="chip chip-primary">
-  <span class="chip-label">Label</span>
+  <span class="chip-label">Etichetta</span>
 </a>
 
 <hr/>
 
 <a href="#" class="chip chip-lg chip-primary">
-  <span class="chip-label">Etichetta</span>
-  <button>
-    <svg class="icon icon-sm"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
-    <span class="visually-hidden">Etichetta</span>
-  </button>
+  <span class="chip-label">Etichetta grande</span>
 </a>
 <a href="#" class="chip chip-lg chip-primary">
-  <svg class="icon icon-xs"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-github"></use></svg>
-  <span class="chip-label">Etichetta</span>
-  <button>
-    <svg class="icon icon-md"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
-    <span class="visually-hidden">Elimina etichetta</span>
-  </button>
+  <span class="chip-label">Etichetta grande</span>
 </a>
 <a href="#" class="chip chip-lg chip-primary">
-  <div class="avatar size-xs">
-    <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Mario Rossi">
-  </div>
-  <span class="chip-label">Etichetta</span>
-  <button>
-    <svg class="icon icon-md"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-close"></use></svg>
-    <span class="visually-hidden">Elimina etichetta</span>
-  </button>
+  <span class="chip-label">Etichetta grande</span>
+</a>
+<a href="#" class="chip chip-lg chip-primary">
+  <span class="chip-label">Etichetta grande</span>
 </a>
 {% endcapture %}{% include example.html content=example %}
 
@@ -306,4 +293,6 @@ I gruppi di chip vengono visualizzati in linea.
 - È stata rimossa la classe `.chip-simple`.
 - Nelle chip con pulsante di chiusura il tag `<label>` diventa `<span>`.
 - Alle icone del pulsante di chiusura per le chip con classe `.chip-lg` viene aggiunta la classe `.icon-md`. 
+- Il pulsante di chiusura richiede ora `data-bs-dismiss="chip"` (in precedenza, dove funzionava, si usava `data-bs-dismiss="alert"` insieme alla classe `alert` aggiunta al contenitore — entrambi da rimuovere). Le chip disabilitate usano `class="disabled"` + `aria-disabled="true"` sul bottone, non più l'attributo `disabled` nativo, per restare raggiungibili da tastiera.
+- I chip con link (`<a>`) non supportano il pulsante di chiusura: un elemento interattivo non può contenerne validamente un altro. Gli esempi `chip-lg` con chiusura in "Gruppi di Chip con link" sono stati rimossi.
 {% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}
