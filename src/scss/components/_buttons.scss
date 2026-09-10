@@ -42,7 +42,7 @@ $btn-close-white-filter: invert(1) grayscale(100%) brightness(200%) !default;
 .btn {
   display: inline-block;
   padding: var(--#{$prefix}btn-padding-y) var(--#{$prefix}btn-padding-x);
-  border: var(--#{$prefix}btn-border-width) solid var(--#{$prefix}btn-border-color);
+  border: var(--#{$prefix}btn-border-size) solid var(--#{$prefix}btn-border-color);
   border-radius: var(--#{$prefix}btn-border-radius);
   background: var(--#{$prefix}btn-background);
   box-shadow: var(--#{$prefix}btn-box-shadow, none);
@@ -69,6 +69,8 @@ $btn-close-white-filter: invert(1) grayscale(100%) brightness(200%) !default;
     cursor: not-allowed;
     pointer-events: none;
   }
+
+  --#{$prefix}btn-hover-border-color: transparent;
 
   &:focus-visible {
     border-color: var(--#{$prefix}btn-hover-border-color);

@@ -514,7 +514,7 @@ $utilities: map.merge(
         property: font-family,
         class: font,
         values: (
-          monospace: var(--#{$prefix}font-monospace),
+          monospace: var(--#{$prefix}font-mono),
         ),
       ),
     'font-size': (

@@ -57,7 +57,7 @@
   }
 
   &:hover {
-    --backtop-background: var(--#{$prefix}color-background-primary-hover);
+    --#{$prefix}backtop-background: var(--#{$prefix}color-background-primary-hover);
     text-decoration: none;
   }
 

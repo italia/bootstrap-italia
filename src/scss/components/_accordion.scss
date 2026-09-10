@@ -15,9 +15,7 @@
   --#{$prefix}accordion-active-bg: var(
     --#{$prefix}color-background-primary
   ); // Controls the active background color for the accordion button, using color tokens.
-  --#{$prefix}accordion-active-color: var(
-    --#{$prefix}color-text-primary-active
-  ); // Controls the active text color for the accordion button, using color tokens.
+  --#{$prefix}accordion-active-color: var(--#{$prefix}color-link-active); // Controls the active text color for the accordion button, using color tokens.
   --#{$prefix}accordion-background: var(--#{$prefix}page-background); // Controls the background color for the accordion item, using color tokens.
   --#{$prefix}accordion-border-color: var(--#{$prefix}color-border-subtle); // Controls the border color for the accordion, using color tokens.
   --#{$prefix}accordion-border-radius: var(--#{$prefix}radius-smooth); // Controls the border radius for the accordion, using radius tokens.
@@ -284,6 +282,7 @@
 
     // Rotate icon
     &:not(.collapsed) {
+      color: var(--#{$prefix}accordion-active-color);
       &:after {
         transform: scaleY(1);
       }
@@ -313,7 +312,7 @@
 .accordion-body {
   padding: var(--#{$prefix}accordion-body-padding-y) var(--#{$prefix}accordion-body-padding-x);
   font-size: var(--#{$prefix}body-font-size);
-  line-height: var(--#{$prefix}body-line-height);
+  line-height: var(--#{$prefix}body-leading);
 
   .accordion-header button[aria-expanded='true']:before {
     width: 0;

@@ -21,7 +21,7 @@
   --#{$prefix}notification-inset-line-color: var(--#{$prefix}color-border-primary);
   --#{$prefix}notification-padding-x: var(--#{$prefix}spacing-s);
   --#{$prefix}notification-padding-y: var(--#{$prefix}spacing-s);
-  --#{$prefix}notification-padding-right: calc(var(--#{$prefix}spacing-m) + var(--#{$prefix}spacing-xl));
+  --#{$prefix}notification-dismissable-padding-right: calc(var(--#{$prefix}spacing-m) + var(--#{$prefix}spacing-xl));
   --#{$prefix}notification-position-distance: var(--#{$prefix}spacing-xxs);
   --#{$prefix}notification-title-color: var(--#{$prefix}color-text-base);
   --#{$prefix}notification-title-font-size: var(--#{$prefix}heading-6-font-size);
@@ -158,6 +158,8 @@
 
   // Dismissable
   &.dismissable {
+    padding-right: var(--#{$prefix}notification-dismissable-padding-right);
+
     .notification-close {
       position: absolute;
       top: var(--#{$prefix}notification-padding-y);

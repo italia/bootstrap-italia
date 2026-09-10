@@ -23,7 +23,7 @@
   --#{$prefix}alert-icon-spacing: var(--#{$prefix}icon-spacing); // Controls the icon spacing for the alert, using spacing tokens.
   --#{$prefix}alert-spacing-inset: var(--#{$prefix}spacing-s); // Controls the inset spacing for the alert, using spacing tokens.
   --#{$prefix}alert-spacing-inset-extra: var(--#{$prefix}spacing-xxl); // Controls the extra inset spacing for the alert, using spacing tokens.
-  --#{$prefix}alert-spacing-outside: var(--#{$prefix}spacing-m); // Controls the outside spacing for the alert, using spacing tokens.
+  --#{$prefix}alert-spacing-outside: 0; // Controls the outside spacing for the alert, using spacing tokens.
   --#{$prefix}alert-text-color: var(--#{$prefix}color-text-base); // Controls the text color for the alert, using color tokens.
 }
 
@@ -32,14 +32,14 @@
 /* stylelint-disable-next-line no-duplicate-selectors */
 .alert {
   position: relative;
-  margin-bottom: var(--#{$prefix}alert-margin);
+  margin-bottom: var(--#{$prefix}alert-spacing-outside);
   padding: var(--#{$prefix}alert-spacing-inset);
   border: 1px solid var(--#{$prefix}alert-border-color);
   background-color: var(--#{$prefix}alert-background-color);
   color: var(--#{$prefix}alert-text-color);
 
   @include media-breakpoint-up(lg) {
-    --#{$prefix}alert-spacing-inset: var(-#{$prefix}spacing-inset-m);
+    --#{$prefix}alert-spacing-inset: var(--#{$prefix}spacing-s);
     padding-left: var(--#{$prefix}alert-spacing-inset);
   }
 }
