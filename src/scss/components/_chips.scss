@@ -66,11 +66,12 @@
     background: transparent;
     line-height: 1; // Reset default button line-height
 
-    &:hover:not([disabled]) {
+    &:hover:not([disabled]):not(.disabled) {
       cursor: pointer;
     }
 
-    &:hover[disabled] {
+    &:hover[disabled],
++   &:hover.disabled {
       cursor: not-allowed;
     }
 
