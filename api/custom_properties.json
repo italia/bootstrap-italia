@@ -463,10 +463,10 @@
             "other_values": [
                 "0.625rem",
                 "var(--bsi-font-size-1)",
+                "var(--bsi-font-size-11)",
                 "var(--bsi-font-size-4)",
                 "var(--bsi-font-size-6)",
-                "var(--bsi-font-size-9)",
-                "var(--bsi-font-size-11)"
+                "var(--bsi-font-size-9)"
             ],
             "value": "var(--bsi-font-size-3)",
             "variable-name": "--bsi-avatar-font-size"
@@ -487,10 +487,10 @@
             ],
             "other_values": [
                 "0.625rem",
-                "var(--bsi-icon-size-xs)",
-                "var(--bsi-icon-size-m)",
                 "var(--bsi-icon-size-l)",
-                "var(--bsi-icon-size-xl)"
+                "var(--bsi-icon-size-m)",
+                "var(--bsi-icon-size-xl)",
+                "var(--bsi-icon-size-xs)"
             ],
             "value": "var(--bsi-icon-size-s)",
             "variable-name": "--bsi-avatar-icon-size"
@@ -519,8 +519,8 @@
                 "_avatar.scss"
             ],
             "other_values": [
-                "1rem",
                 "1.5rem",
+                "1rem",
                 "3.5rem",
                 "5rem",
                 "7rem"
@@ -565,9 +565,9 @@
                 "_back-to-top.scss"
             ],
             "other_values": [
-                "var(--bsi-color-background-primary-hover)",
                 "var(--bsi-color-background-inverse)",
-                "var(--bsi-color-background-inverse-hover)"
+                "var(--bsi-color-background-inverse-hover)",
+                "var(--bsi-color-background-primary-hover)"
             ],
             "value": "var(--bsi-color-background-primary)",
             "variable-name": "--bsi-backtop-background"
@@ -945,8 +945,8 @@
                 "_breadcrumb.scss"
             ],
             "other_values": [
-                "var(--bsi-color-text-inverse)",
-                "var(--bsi-color-link-secondary-hover)"
+                "var(--bsi-color-link-secondary-hover)",
+                "var(--bsi-color-text-inverse)"
             ],
             "value": "var(--bsi-color-text-secondary)",
             "variable-name": "--bsi-breadcrumb-link-color"
@@ -1002,30 +1002,30 @@
             "description": "Controls the background for the button.",
             "files": [
                 "_buttons.scss",
-                "_headerslim.scss",
-                "_footer.scss"
+                "_footer.scss",
+                "_headerslim.scss"
             ],
             "other_values": [
-                "var(--bsi-color-background-primary)",
-                "var(--bsi-color-background-primary-hover)",
-                "var(--bsi-color-background-primary-active)",
-                "var(--bsi-color-background-secondary)",
-                "var(--bsi-color-background-secondary-hover)",
-                "var(--bsi-color-background-secondary-active)",
-                "var(--bsi-color-background-success)",
-                "var(--bsi-color-background-success-hover)",
-                "var(--bsi-color-background-success-active)",
-                "var(--bsi-color-background-warning)",
-                "var(--bsi-color-background-warning-hover)",
-                "var(--bsi-color-background-warning-active)",
-                "var(--bsi-color-background-danger)",
-                "var(--bsi-color-background-danger-hover)",
-                "var(--bsi-color-background-danger-active)",
-                "var(--bsi-color-background-inverse)",
-                "color-mix(in srgb, var(--bsi-color-background-inverse) 85%, black)",
                 "color-mix(in srgb, var(--bsi-color-background-inverse) 80%, black)",
+                "color-mix(in srgb, var(--bsi-color-background-inverse) 85%, black)",
                 "color-mix(in srgb, var(--bsi-color-background-secondary) 85%, black)",
-                "var(--bsi-color-background-primary-deep)"
+                "var(--bsi-color-background-danger)",
+                "var(--bsi-color-background-danger-active)",
+                "var(--bsi-color-background-danger-hover)",
+                "var(--bsi-color-background-inverse)",
+                "var(--bsi-color-background-primary)",
+                "var(--bsi-color-background-primary-active)",
+                "var(--bsi-color-background-primary-deep)",
+                "var(--bsi-color-background-primary-hover)",
+                "var(--bsi-color-background-secondary)",
+                "var(--bsi-color-background-secondary-active)",
+                "var(--bsi-color-background-secondary-hover)",
+                "var(--bsi-color-background-success)",
+                "var(--bsi-color-background-success-active)",
+                "var(--bsi-color-background-success-hover)",
+                "var(--bsi-color-background-warning)",
+                "var(--bsi-color-background-warning-active)",
+                "var(--bsi-color-background-warning-hover)"
             ],
             "value": "transparent",
             "variable-name": "--bsi-btn-background"
@@ -1081,8 +1081,8 @@
                 "_buttons.scss"
             ],
             "other_values": [
-                "var(--bsi-label-font-size-s)",
-                "var(--bsi-label-font-size-l)"
+                "var(--bsi-label-font-size-l)",
+                "var(--bsi-label-font-size-s)"
             ],
             "value": "var(--bsi-label-font-size)",
             "variable-name": "--bsi-btn-font-size"
@@ -1114,23 +1114,23 @@
                 "_buttons.scss"
             ],
             "other_values": [
-                "var(--bsi-color-border-primary)",
-                "color-mix(in srgb, var(--bsi-color-border-primary-hover) 70%, black)",
-                "var(--bsi-color-border-primary-active)",
-                "var(--bsi-color-border-secondary)",
-                "var(--bsi-color-border-secondary-hover)",
-                "var(--bsi-color-border-secondary-active)",
-                "var(--bsi-color-border-success)",
-                "color-mix(in srgb, var(--bsi-color-border-success-hover) 70%, black)",
-                "var(--bsi-color-border-success-active)",
-                "var(--bsi-color-border-warning)",
-                "color-mix(in srgb, var(--bsi-color-border-warning-hover) 70%, black)",
-                "var(--bsi-color-border-warning-active)",
-                "var(--bsi-color-border-danger)",
                 "color-mix(in srgb, var(--bsi-color-border-danger-hover) 70%, black)",
+                "color-mix(in srgb, var(--bsi-color-border-primary-hover) 70%, black)",
+                "color-mix(in srgb, var(--bsi-color-border-success-hover) 70%, black)",
+                "color-mix(in srgb, var(--bsi-color-border-warning-hover) 70%, black)",
+                "var(--bsi-btn-boxshadow-color-desaturated)",
+                "var(--bsi-color-border-danger)",
                 "var(--bsi-color-border-danger-active)",
                 "var(--bsi-color-border-inverse)",
-                "var(--bsi-btn-boxshadow-color-desaturated)"
+                "var(--bsi-color-border-primary)",
+                "var(--bsi-color-border-primary-active)",
+                "var(--bsi-color-border-secondary)",
+                "var(--bsi-color-border-secondary-active)",
+                "var(--bsi-color-border-secondary-hover)",
+                "var(--bsi-color-border-success)",
+                "var(--bsi-color-border-success-active)",
+                "var(--bsi-color-border-warning)",
+                "var(--bsi-color-border-warning-active)"
             ],
             "value": "transparent",
             "variable-name": "--bsi-btn-outline-border-color"
@@ -1150,8 +1150,8 @@
                 "_buttons.scss"
             ],
             "other_values": [
-                "var(--bsi-spacing-xs)",
-                "var(--bsi-spacing-m)"
+                "var(--bsi-spacing-m)",
+                "var(--bsi-spacing-xs)"
             ],
             "value": "var(--bsi-spacing-s)",
             "variable-name": "--bsi-btn-padding-x"
@@ -1173,21 +1173,21 @@
                 "_buttons.scss"
             ],
             "other_values": [
-                "var(--bsi-color-text-inverse)",
-                "var(--bsi-color-link-hover)",
                 "var(--bsi-color-link-active)",
-                "var(--bsi-color-text-secondary)",
-                "var(--bsi-color-link-secondary-hover)",
+                "var(--bsi-color-link-hover)",
                 "var(--bsi-color-link-secondary-active)",
-                "var(--bsi-color-text-success)",
-                "var(--bsi-color-text-success-hover)",
-                "var(--bsi-color-text-success-active)",
-                "var(--bsi-color-text-warning)",
-                "var(--bsi-color-text-warning-hover)",
-                "var(--bsi-color-text-warning-active)",
+                "var(--bsi-color-link-secondary-hover)",
                 "var(--bsi-color-text-danger)",
+                "var(--bsi-color-text-danger-active)",
                 "var(--bsi-color-text-danger-hover)",
-                "var(--bsi-color-text-danger-active)"
+                "var(--bsi-color-text-inverse)",
+                "var(--bsi-color-text-secondary)",
+                "var(--bsi-color-text-success)",
+                "var(--bsi-color-text-success-active)",
+                "var(--bsi-color-text-success-hover)",
+                "var(--bsi-color-text-warning)",
+                "var(--bsi-color-text-warning-active)",
+                "var(--bsi-color-text-warning-hover)"
             ],
             "value": "var(--bsi-color-text-primary)",
             "variable-name": "--bsi-btn-text-color"
@@ -1209,10 +1209,10 @@
                 "_callout.scss"
             ],
             "other_values": [
+                "var(--bsi-color-border-danger)",
                 "var(--bsi-color-border-primary)",
                 "var(--bsi-color-border-success)",
-                "var(--bsi-color-border-warning)",
-                "var(--bsi-color-border-danger)"
+                "var(--bsi-color-border-warning)"
             ],
             "value": "var(--bsi-color-border-secondary)",
             "variable-name": "--bsi-callout-border-color"
@@ -1250,10 +1250,10 @@
                 "_callout.scss"
             ],
             "other_values": [
+                "var(--bsi-icon-danger)",
                 "var(--bsi-icon-primary)",
                 "var(--bsi-icon-success)",
-                "var(--bsi-icon-warning)",
-                "var(--bsi-icon-danger)"
+                "var(--bsi-icon-warning)"
             ],
             "value": "var(--bsi-icon-secondary)",
             "variable-name": "--bsi-callout-icon-color"
@@ -1300,10 +1300,10 @@
                 "_callout.scss"
             ],
             "other_values": [
+                "var(--bsi-color-text-danger)",
                 "var(--bsi-color-text-primary)",
                 "var(--bsi-color-text-success)",
-                "var(--bsi-color-text-warning)",
-                "var(--bsi-color-text-danger)"
+                "var(--bsi-color-text-warning)"
             ],
             "value": "var(--bsi-color-text-secondary)",
             "variable-name": "--bsi-callout-title-color"
@@ -1335,11 +1335,11 @@
             ],
             "other_values": [
                 "transparent",
-                "var(--bsi-color-background-disabled)",
-                "var(--bsi-color-background-secondary-hover)",
-                "var(--bsi-color-background-primary-hover)",
-                "var(--bsi-color-background-success-hover)",
                 "var(--bsi-color-background-danger-hover)",
+                "var(--bsi-color-background-disabled)",
+                "var(--bsi-color-background-primary-hover)",
+                "var(--bsi-color-background-secondary-hover)",
+                "var(--bsi-color-background-success-hover)",
                 "var(--bsi-color-background-warning-hover)"
             ],
             "value": "var(--bsi-color-background-muted)",
@@ -1351,16 +1351,16 @@
                 "_chips.scss"
             ],
             "other_values": [
-                "var(--bsi-color-border-primary)",
-                "var(--bsi-color-border-secondary)",
-                "var(--bsi-color-border-success)",
-                "var(--bsi-color-border-danger)",
-                "var(--bsi-color-border-warning)",
                 "var(--bsi-color-background-secondary-hover)",
-                "var(--bsi-color-border-primary-hover)",
-                "var(--bsi-color-border-secondary-hover)",
-                "var(--bsi-color-border-success-hover)",
+                "var(--bsi-color-border-danger)",
                 "var(--bsi-color-border-danger-hover)",
+                "var(--bsi-color-border-primary)",
+                "var(--bsi-color-border-primary-hover)",
+                "var(--bsi-color-border-secondary)",
+                "var(--bsi-color-border-secondary-hover)",
+                "var(--bsi-color-border-success)",
+                "var(--bsi-color-border-success-hover)",
+                "var(--bsi-color-border-warning)",
                 "var(--bsi-color-border-warning-hover)"
             ],
             "value": "var(--bsi-color-border-subtle)",
@@ -1428,12 +1428,12 @@
                 "_chips.scss"
             ],
             "other_values": [
+                "var(--bsi-chip-link-hover)",
+                "var(--bsi-color-text-danger)",
+                "var(--bsi-color-text-disabled)",
                 "var(--bsi-color-text-primary)",
                 "var(--bsi-color-text-success)",
-                "var(--bsi-color-text-danger)",
-                "var(--bsi-color-text-warning)",
-                "var(--bsi-color-text-disabled)",
-                "var(--bsi-chip-link-hover)"
+                "var(--bsi-color-text-warning)"
             ],
             "value": "var(--bsi-color-text-secondary)",
             "variable-name": "--bsi-chip-text-color"
@@ -1725,8 +1725,8 @@
             "description": "Controls the dropdown item padding left and right, using spacing tokens.",
             "files": [
                 "_dropdown.scss",
-                "_navbar.scss",
-                "_megamenu.scss"
+                "_megamenu.scss",
+                "_navbar.scss"
             ],
             "other_values": [
                 "var(--bsi-spacing-m)",
@@ -1865,8 +1865,8 @@
         {
             "description": "Controls the card border color, using color tokens",
             "files": [
-                "_card.scss",
-                "_card-old.scss"
+                "_card-old.scss",
+                "_card.scss"
             ],
             "other_values": [
                 "#{$card-border-color}"
@@ -1877,8 +1877,8 @@
         {
             "description": "Controls the outer border radius of the card, using radius tokens",
             "files": [
-                "_card.scss",
-                "_card-old.scss"
+                "_card-old.scss",
+                "_card.scss"
             ],
             "other_values": [
                 "#{$card-border-radius}"
@@ -1892,11 +1892,11 @@
                 "_card.scss"
             ],
             "other_values": [
+                "var(--bsi-color-border-danger)",
                 "var(--bsi-color-border-primary)",
                 "var(--bsi-color-border-secondary)",
                 "var(--bsi-color-border-success)",
-                "var(--bsi-color-border-warning)",
-                "var(--bsi-color-border-danger)"
+                "var(--bsi-color-border-warning)"
             ],
             "value": "transparent",
             "variable-name": "--bsi-card-border-top-color"
@@ -2030,8 +2030,8 @@
         {
             "description": "Controls the height of the card, can be set to fixed value or auto",
             "files": [
-                "_card.scss",
-                "_card-old.scss"
+                "_card-old.scss",
+                "_card.scss"
             ],
             "other_values": [
                 "#{$card-height}"
@@ -2370,9 +2370,9 @@
                 "_headercenter.scss"
             ],
             "other_values": [
-                "7.5rem",
                 "4rem",
-                "6.5rem"
+                "6.5rem",
+                "7.5rem"
             ],
             "value": "4.5rem",
             "variable-name": "--bsi-header-center-height"
@@ -2561,8 +2561,8 @@
                 "_hero.scss"
             ],
             "other_values": [
-                "calc(var(--bsi-spacing-l) * -1)",
-                "-40px"
+                "-40px",
+                "calc(var(--bsi-spacing-l) * -1)"
             ],
             "value": "-3rem",
             "variable-name": "--bsi-hero-overlap-negative-spacing"
@@ -2585,8 +2585,8 @@
                 "_hero.scss"
             ],
             "other_values": [
-                "var(--bsi-overlay-background-primary-muted)",
-                "var(--bsi-overlay-background-primary)"
+                "var(--bsi-overlay-background-primary)",
+                "var(--bsi-overlay-background-primary-muted)"
             ],
             "value": "transparent",
             "variable-name": "--bsi-hero-overlay-background"
@@ -2759,8 +2759,8 @@
                 "_navscroll.scss"
             ],
             "other_values": [
-                "var(--bsi-color-border-primary)",
-                "var(--bsi-color-border-inverse)"
+                "var(--bsi-color-border-inverse)",
+                "var(--bsi-color-border-primary)"
             ],
             "value": "transparent",
             "variable-name": "--bsi-navscroll-item-border-color"
@@ -2849,8 +2849,8 @@
                 "_timeline.scss"
             ],
             "other_values": [
-                "var(--bsi-#{$color})",
-                "#{$value}"
+                "#{$value}",
+                "var(--bsi-#{$color})"
             ],
             "value": "var(--bsi-color-background-secondary)",
             "variable-name": "--bsi-timeline-point-color"
@@ -2981,8 +2981,8 @@
         {
             "description": "Controls the line height of the list items, using text tokens",
             "files": [
-                "_linklist.scss",
-                "_dropdown.scss"
+                "_dropdown.scss",
+                "_linklist.scss"
             ],
             "other_values": [
                 "1.5"
@@ -3314,10 +3314,10 @@
                 "_modal.scss"
             ],
             "other_values": [
-                "0",
                 "#{$modal-dialog-margin-y-sm-up}",
                 "#{$modal-dialog-margin}",
-                "#{min($v-gap * 8, 10vh)}"
+                "#{min($v-gap * 8, 10vh)}",
+                "0"
             ],
             "value": "auto",
             "variable-name": "--bsi-modal-margin"
@@ -3373,9 +3373,9 @@
                 "_modal.scss"
             ],
             "other_values": [
+                "1140px",
                 "300px",
-                "800px",
-                "1140px"
+                "800px"
             ],
             "value": "500px",
             "variable-name": "--bsi-modal-width"
@@ -3446,10 +3446,10 @@
                 "_tab.scss"
             ],
             "other_values": [
-                "var(--bsi-color-link-secondary-hover)",
                 "var(--bsi-color-link-disabled)",
-                "var(--bsi-color-text-primary)",
-                "var(--bsi-color-text-inverse)"
+                "var(--bsi-color-link-secondary-hover)",
+                "var(--bsi-color-text-inverse)",
+                "var(--bsi-color-text-primary)"
             ],
             "value": "var(--bsi-color-text-secondary)",
             "variable-name": "--bsi-tab-text-color"
@@ -3460,9 +3460,9 @@
                 "_tab.scss"
             ],
             "other_values": [
+                "var(--bsi-color-text-inverse)",
                 "var(--bsi-icon-primary)",
-                "var(--bsi-icon-secondary-hover)",
-                "var(--bsi-color-text-inverse)"
+                "var(--bsi-icon-secondary-hover)"
             ],
             "value": "var(--bsi-icon-secondary)",
             "variable-name": "--bsi-tab-icon-color"
@@ -3549,9 +3549,9 @@
                 "_tab.scss"
             ],
             "other_values": [
-                "var(--bsi-color-border-subtle)",
-                "var(--bsi-color-border-primary)",
                 "var(--bsi-color-border-inverse)",
+                "var(--bsi-color-border-primary)",
+                "var(--bsi-color-border-subtle)",
                 "var(--bsi-tab-border-color-cards)"
             ],
             "value": "transparent",
@@ -3731,8 +3731,8 @@
             ],
             "other_values": [
                 "var(--bsi-color-border-inverse)",
-                "var(--bsi-color-border-primary)",
-                "var(--bsi-color-border-inverse)"
+                "var(--bsi-color-border-inverse)",
+                "var(--bsi-color-border-primary)"
             ],
             "value": "var(--bsi-color-border-primary)",
             "variable-name": "--bsi-navbar-link-active-border-color"
@@ -3743,8 +3743,8 @@
                 "_navbar.scss"
             ],
             "other_values": [
-                "var(--bsi-color-text-inverse)",
                 "var(--bsi-color-link)",
+                "var(--bsi-color-text-inverse)",
                 "var(--bsi-color-text-inverse)"
             ],
             "value": "var(--bsi-color-link)",
@@ -3812,8 +3812,8 @@
                 "_navbar.scss"
             ],
             "other_values": [
-                "var(--bsi-icon-primary)",
-                "var(--bsi-icon-inverse)"
+                "var(--bsi-icon-inverse)",
+                "var(--bsi-icon-primary)"
             ],
             "value": "var(--bsi-icon-inverse)",
             "variable-name": "--bsi-navbar-toggle-button-icon-color"
@@ -3871,9 +3871,9 @@
                 "_notifications.scss"
             ],
             "other_values": [
-                "var(--bsi-color-border-success)",
                 "var(--bsi-color-border-danger)",
                 "var(--bsi-color-border-secondary)",
+                "var(--bsi-color-border-success)",
                 "var(--bsi-color-border-warning)"
             ],
             "value": "var(--bsi-color-border-primary)",
@@ -4017,9 +4017,9 @@
                 "_pagination.scss"
             ],
             "other_values": [
+                "var(--bsi-color-link-active)",
                 "var(--bsi-color-link-hover)",
-                "var(--bsi-color-text-disabled)",
-                "var(--bsi-color-link-active)"
+                "var(--bsi-color-text-disabled)"
             ],
             "value": "var(--bsi-color-link)",
             "variable-name": "--bsi-pagination-link-color"
@@ -4211,8 +4211,8 @@
         {
             "description": "Controls the progress bg, using color tokens.",
             "files": [
-                "_progress-bars.scss",
-                "_navscroll.scss"
+                "_navscroll.scss",
+                "_progress-bars.scss"
             ],
             "other_values": [
                 "var(--bsi-color-slate-52)"
@@ -4268,8 +4268,8 @@
         {
             "description": "Controls the progress bar bg, using color tokens.",
             "files": [
-                "_progress-bars.scss",
-                "_navscroll.scss"
+                "_navscroll.scss",
+                "_progress-bars.scss"
             ],
             "other_values": [
                 "var(--bsi-color-background-inverse)"
@@ -4419,9 +4419,9 @@
                 "_sections.scss"
             ],
             "other_values": [
+                "var(--bsi-color-background-emphasis)",
                 "var(--bsi-color-background-muted)",
-                "var(--bsi-color-background-primary)",
-                "var(--bsi-color-background-emphasis)"
+                "var(--bsi-color-background-primary)"
             ],
             "value": "transparent",
             "variable-name": "--bsi-section-background-color"
@@ -4728,10 +4728,10 @@
                 "_steppers.scss"
             ],
             "other_values": [
-                "var(--bsi-color-text-primary)",
+                "var(--bsi-color-slate-62)",
                 "var(--bsi-color-text-base)",
                 "var(--bsi-color-text-inverse)",
-                "var(--bsi-color-slate-62)"
+                "var(--bsi-color-text-primary)"
             ],
             "value": "var(--bsi-color-text-muted)",
             "variable-name": "--bsi-stepper-item-text-color"
@@ -4764,8 +4764,8 @@
                 "_steppers.scss"
             ],
             "other_values": [
-                "var(--bsi-color-text-inverse)",
                 "var(--bsi-color-slate-62)",
+                "var(--bsi-color-text-inverse)",
                 "var(--bsi-color-text-secondary)"
             ],
             "value": "var(--bsi-color-text-muted)",
@@ -4815,10 +4815,10 @@
                 "_tables.scss"
             ],
             "other_values": [
-                "var(--bsi-table-striped-color)",
+                "var(--bsi-#{map.get($values, 'color')})",
                 "var(--bsi-color-text-inverse)",
                 "var(--bsi-table-hover-color)",
-                "var(--bsi-#{map.get($values, 'color')})"
+                "var(--bsi-table-striped-color)"
             ],
             "value": "var(--bsi-color-text-base)",
             "variable-name": "--bsi-table-color"
@@ -4829,11 +4829,11 @@
                 "_tables.scss"
             ],
             "other_values": [
-                "var(--bsi-table-striped-bg, var(--bsi-color-background-muted))",
+                "var(--bsi-#{map.get($values, 'bg')})",
                 "var(--bsi-color-background-primary-muted)",
                 "var(--bsi-table-active-bg)",
                 "var(--bsi-table-hover-bg)",
-                "var(--bsi-#{map.get($values, 'bg')})"
+                "var(--bsi-table-striped-bg, var(--bsi-color-background-muted))"
             ],
             "value": "transparent",
             "variable-name": "--bsi-table-bg"
@@ -4904,8 +4904,8 @@
                 "_tables.scss"
             ],
             "other_values": [
-                "color-mix(in srgb, var(--bsi-table-bg) 80%, white 10%)",
-                "color-mix(in srgb, var(--bsi-table-bg) 80%, black 10%)"
+                "color-mix(in srgb, var(--bsi-table-bg) 80%, black 10%)",
+                "color-mix(in srgb, var(--bsi-table-bg) 80%, white 10%)"
             ],
             "value": "var(--bsi-color-slate-85)",
             "variable-name": "--bsi-table-hover-bg"
@@ -5176,9 +5176,9 @@
                 "_toolbar.scss"
             ],
             "other_values": [
-                "var(--bsi-color-text-primary)",
+                "var(--bsi-color-link-hover)",
                 "var(--bsi-color-text-disabled)",
-                "var(--bsi-color-link-hover)"
+                "var(--bsi-color-text-primary)"
             ],
             "value": "var(--bsi-color-text-secondary)",
             "variable-name": "--bsi-toolbar-link-color"
@@ -5189,8 +5189,8 @@
                 "_toolbar.scss"
             ],
             "other_values": [
-                "var(--bsi-icon-primary)",
                 "var(--bsi-icon-disabled)",
+                "var(--bsi-icon-primary)",
                 "var(--bsi-icon-primary-hover)"
             ],
             "value": "var(--bsi-icon-secondary)",
