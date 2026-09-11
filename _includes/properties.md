@@ -60,6 +60,7 @@ si prega di far riferimento al codice dei file SCSS relativi per personalizzare 
         <td><code>{{ track.variable-name }}</code></td>
         <td>{{ track.description }}</td>
         <td><code>{{ track.value }}</code>&nbsp;<code>...</code></td>
+        <td><code>{{ track.value }}</code>{% if track.other_values.size > 0 %}&nbsp;<span class="badge bg-primary text-white rounded-pill">+{{ track.other_values.size }}</span>{% endif %}</td>
         <td>{% for v in track.files %}<code>{{ v }}</code><br/>{% endfor %}</td>
       </tr>
     {% endif %}
