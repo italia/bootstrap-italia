@@ -38,7 +38,7 @@
   li,
   p {
     font-size: var(--#{$prefix}label-font-size);
-    line-height: var(--#{$prefix}body-line-height);
+    line-height: var(--#{$prefix}body-leading);
   }
 
   // Links color and decoration

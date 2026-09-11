@@ -13,18 +13,20 @@
 // Properties
 //
 .acceptoverlay {
-  --#{$prefix}acceptoverlay-color-background: var(--#{$prefix}color-background-inverse); // Controls the acceptoverlay color background, using color tokens
+  --#{$prefix}acceptoverlay-background-color: var(
+    --#{$prefix}overlay-background-primary-muted
+  ); // Controls the acceptoverlay color background, using color tokens
   --#{$prefix}acceptoverlay-color-text: var(--#{$prefix}color-text-inverse); // Controls the acceptoverlay color text, using color tokens
   --#{$prefix}acceptoverlay-label-color: var(--#{$prefix}color-text-inverse); // Controls the acceptoverlay label color, using color tokens
   --#{$prefix}acceptoverlay-label-border-color: var(--#{$prefix}color-border-inverse); // Controls the acceptoverlay label border color, using color tokens
-  --#{$prefix}acceptoverlay-opacity: 0.9; // Controls the acceptoverlay opacity
   --#{$prefix}acceptoverlay-spacing-inset: var(--#{$prefix}spacing-s); // Controls the acceptoverlay spacing inset, using spacing tokens
-  --#{$prefix}acceptoverlay-primary-opacity: 0.95; // Controls the acceptoverlay primary opacity
+  --#{$prefix}acceptoverlay-primary-opacity: 95%; // Controls the acceptoverlay primary opacity
   --#{$prefix}acceptoverlay-inner-width: 600px; // Controls the acceptoverlay inner width
   --#{$prefix}acceptoverlay-icon-spacing: var(--#{$prefix}spacing-s); // Controls the acceptoverlay icon spacing, using spacing tokens
-  --#{$prefix}acceptoverlay-icon-fill: var(--#{$prefix}icon-primary); // Controls the acceptoverlay icon fill, using color tokens
+  --#{$prefix}acceptoverlay-icon-fill: var(--#{$prefix}icon-inverse); // Controls the acceptoverlay icon fill, using color tokens
   --#{$prefix}acceptoverlay-buttons-spacing: var(--#{$prefix}spacing-s); // Controls the acceptoverlay buttons spacing, using spacing tokens
 }
+
 // Styles
 //
 /* stylelint-disable-next-line no-duplicate-selectors */
@@ -40,12 +42,17 @@
   align-items: flex-start;
   justify-content: center;
   padding: var(--#{$prefix}acceptoverlay-spacing-inset);
-  opacity: var(--#{$prefix}acceptoverlay-opacity);
   background-color: var(--#{$prefix}acceptoverlay-background-color);
+
+  a {
+    color: var(--#{$prefix}color-link-inverse);
+  }
+
   // Change spacing on medium devices
   @include media-breakpoint-up(md) {
     --#{$prefix}acceptoverlay-spacing-inset: var(--#{$prefix}spacing-m);
   }
+
   // Change alignment on large devices
   @include media-breakpoint-up(lg) {
     align-items: center;
@@ -53,6 +60,7 @@
 
   label {
     color: var(--#{$prefix}acceptoverlay-label-color);
+
     &::after {
       border-color: var(--#{$prefix}acceptoverlay-label-border-color) !important;
     }
@@ -64,8 +72,13 @@
 
   &.acceptoverlay-primary {
     --#{$prefix}acceptoverlay-background-color: var(--#{$prefix}color-background-primary);
+
     &.show {
-      opacity: var(--#{$prefix}acceptoverlay-primary-opacity);
+      --#{$prefix}acceptoverlay-background-color: color-mix(
+        in srgb,
+        var(--#{$prefix}color-background-primary) var(--#{$prefix}acceptoverlay-primary-opacity),
+        transparent
+      );
     }
   }
 
@@ -96,8 +109,9 @@
   .acceptoverlay-icon {
     margin-bottom: var(--#{$prefix}acceptoverlay-icon-spacing);
     text-align: center;
+
     @include media-breakpoint-up(md) {
-      --#{$prefix}acceptoverlay-icon-margin-bottom: var(--#{$prefix}spacing-xxl);
+      --#{$prefix}acceptoverlay-icon-spacing: var(--#{$prefix}spacing-xxl);
     }
 
     .icon {
@@ -116,6 +130,7 @@
 
     button {
       width: 100%;
+
       &:last-child {
         --#{$prefix}acceptoverlay-buttons-spacing: var(--#{$prefix}spacing-xxs);
       }
@@ -128,17 +143,21 @@
     }
   }
 }
+
 //Tablet vertical
 @include media-breakpoint-up(md) {
   .acceptoverlay-buttons {
     flex-wrap: nowrap;
+
     button {
       width: 50%;
       margin-top: 0 !important;
+
       &:last-child {
         margin-left: var(--#{$prefix}spacing-m);
       }
     }
+
     &.single-button {
       button {
         width: auto;
@@ -151,6 +170,7 @@
 
 .acceptoverlayable {
   position: relative;
+
   &.show {
     min-height: 450px;
   }

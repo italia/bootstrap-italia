@@ -195,7 +195,7 @@
     color: var(--#{$prefix}card-link-color);
 
     &:hover {
-      color: color-hover($color-text-secondary);
+      color: var(--#{$prefix}color-link-secondary-hover);
     }
 
     + .it-card-link {
@@ -434,7 +434,7 @@
     }
 
     .it-card-body .it-card-subtitle {
-      font-weight: var(--#{$prefix}font-weight-weak);
+      font-weight: var(--#{$prefix}font-weight-base);
     }
 
     .it-card-banner-icon-wrapper {

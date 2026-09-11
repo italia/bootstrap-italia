@@ -45,7 +45,7 @@
               justify-content: flex-end;
 
               a {
-                font-size: 0.875rem;
+                font-size: var(--#{$prefix}header-nav-secondary-font-size);
                 line-height: var(--#{$prefix}label-leading);
               }
             }

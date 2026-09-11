@@ -60,6 +60,7 @@ $table-variants: (
   --#{$prefix}table-border-color: var(--#{$prefix}border-color); // Controls the border color for the table, using color tokens.
   --#{$prefix}table-border-width: var(--#{$prefix}border-width); // Controls the border width for the table cell.
   --#{$prefix}table-striped-bg: var(--#{$prefix}color-background-muted); // Controls the text color for the striped rows, using color tokens.
+  --#{$prefix}table-striped-color: var(--#{$prefix}table-color); // Controls the text color for the striped rows, using color tokens.
   --#{$prefix}table-active-bg: var(--bsi-color-slate-85); // Controls the background color for the active rows, using color tokens.
   --#{$prefix}table-hover-color: var(--#{$prefix}color-text-base); // Controls the text color for the hovered rows, using color tokens.
   --#{$prefix}table-hover-bg: var(--bsi-color-slate-85); // Controls the background color for the hovered rows, using color tokens.
@@ -204,7 +205,9 @@ $table-variants: (
 .table-hover {
   > tbody > tr:hover > * {
     --#{$prefix}table-bg: var(--#{$prefix}table-hover-bg);
+    --#{$prefix}table-color: var(--#{$prefix}table-hover-color);
     cursor: pointer;
+
     @media (prefers-reduced-motion: no-preference) {
       transition: background-color var(--#{$prefix}transition-instant) ease;
     }
@@ -236,6 +239,7 @@ $table-variants: (
 
     @if map.get($values, 'color') {
       --#{$prefix}table-color: var(--#{$prefix}#{map.get($values, 'color')});
+      --#{$prefix}table-hover-color: var(--#{$prefix}#{map.get($values, 'color')});
     }
 
     @if map.get($values, 'border-color') {
