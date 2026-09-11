@@ -65,10 +65,10 @@ $gutters: $spacers !default;
 
 // Colors Palette
 $colors-palette: (
-  'primary': var(--bsi-color-background-primary),
-  'secondary': var(--bsi-color-background-secondary),
-  'success': var(--bsi-color-background-success),
-  'warning': var(--bsi-color-background-warning),
-  'danger': var(--bsi-color-background-danger),
-  'inverse': var(--bsi-color-background-inverse),
+  'primary': var(--#{$prefix}color-background-primary),
+  'secondary': var(--#{$prefix}color-background-secondary),
+  'success': var(--#{$prefix}color-background-success),
+  'warning': var(--#{$prefix}color-background-warning),
+  'danger': var(--#{$prefix}color-background-danger),
+  'inverse': var(--#{$prefix}color-background-inverse),
 ) !default;
