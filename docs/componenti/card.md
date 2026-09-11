@@ -11,15 +11,6 @@ Le card sono contenitori flessibili e versatili per organizzare e presentare con
 
 Aiutano a presentare un gruppo di contenuti correlati, come articoli o sezioni di un sito web e permettono di continuare la navigazione verso le rispettive pagine di dettaglio.
 
-{% capture callout %}
-#### Questo è un nuovo componente card
-Questo componente card e le sue varianti sono definiti dalle classi `.it-card` e relativi modificatori. 
-
-Le classi legacy di Bootstrap `.card` sono ora deprecate ma **saranno mantenute nei fogli di stile fino al prossimo rilascio maggiore, per permettere una migrazione graduale**. 
-
-[Vai alla documentazione del componente card legacy (deprecato)](../card-old/)
-{% endcapture %}{% include callout.html content=callout type="warning" %}
-
 ## Quick start 
 
 ```html
@@ -2439,6 +2430,7 @@ Svolgi sempre test di usabilità con utenti che utilizzano tecnologie assistive 
 - Usa un `<div>` con la sola classe `.it-card-actions` a seguire il corpo della card per ospitare link correlati e/o secondari.
 - È stata rimossa la classe `.chips-list` dall'elemento `<ul>` con classe `.it-card-chips` che ospita una lista di più argomenti.
 - La doppia classe `.card-profile` è stata sostituita da `.card-profile-content` per le card di tipo profilo e luogo.
+- Rimosso il componente card legacy (classi `.card`, deprecate) e la relativa documentazione `card-old`; migra alle classi `.it-card` documentate in questa pagina.
 {% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}
 
 {% capture callout %}
