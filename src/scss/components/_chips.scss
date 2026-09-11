@@ -71,7 +71,7 @@
     }
 
     &:hover[disabled],
-+   &:hover.disabled {
+    &:hover.disabled {
       cursor: not-allowed;
     }
 
