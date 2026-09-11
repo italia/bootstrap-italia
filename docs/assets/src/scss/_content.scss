@@ -1,3 +1,6 @@
+@use 'src/scss/base/config' as *;
+@use 'src/scss/base/variables' as *;
+
 .bd-content {
   order: 1;
 
@@ -31,11 +34,11 @@
   > ul li,
   > ol li {
     margin-bottom: 0.25rem;
-    max-width: 40rem;
+    max-width: 50rem;
   }
 
   > p {
-    max-width: 40rem;
+    max-width: 50rem;
   }
 }
 
@@ -44,9 +47,9 @@
   margin-bottom: 0.5rem;
 }
 
-code.highlighter-rouge {
-  background-color: #efc;
-  a > & {
-    color: $neutral-1;
-  }
-}
+// code.highlighter-rouge {
+//   background-color: #efc;
+//   a > & {
+//     color: var(--#{$prefix}color-text-base);
+//   }
+// }

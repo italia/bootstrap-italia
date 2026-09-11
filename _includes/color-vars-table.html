@@ -1,0 +1,21 @@
+{%- assign rows = site.data.color-vars[include.category] -%}
+<div class="table-responsive mb-4">
+  <table class="table table-cols-preview">
+    <thead>
+      <tr>
+        <th>Esempio del colore</th>
+        <th>Variabile CSS</th>
+        <th>Descrizione</th>
+      </tr>
+    </thead>
+    <tbody>
+      {%- for row in rows -%}
+      <tr class="align-middle">
+        <td>{% include color-swatch.html var=row.var type=row.swatch %}</td>
+        <td><code>{{ row.var }}</code></td>
+        <td>{{ row.usage }}</td>
+      </tr>
+      {%- endfor -%}
+    </tbody>
+  </table>
+</div>

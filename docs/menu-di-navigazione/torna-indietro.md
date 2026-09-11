@@ -23,8 +23,8 @@ Nel caso dell'utilizzo di un pulsante l'accorgimento sopraindicato non è necess
 
 {% comment %}Example name: Pulsanti con freccia{% endcomment %}
 {% capture example %}
-<button type="button" class="btn btn-primary go-back" data-bs-toggle="historyback"><svg class="icon icon-sm icon-white me-2"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-left"></use></svg>Torna indietro</button>
-<button type="button" class="btn btn-primary go-back" data-bs-toggle="historyback"><svg class="icon icon-sm icon-white me-2"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-up"></use></svg> Livello superiore</button>
+<button type="button" class="btn btn-primary go-back" data-bs-toggle="historyback"><svg class="icon icon-sm icon-inverse me-2"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-left"></use></svg>Torna indietro</button>
+<button type="button" class="btn btn-primary go-back" data-bs-toggle="historyback"><svg class="icon icon-sm icon-inverse me-2"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-up"></use></svg> Livello superiore</button>
 {% endcapture %}{% include example.html content=example %}
 
 ### Pulsanti con sola icona
@@ -33,8 +33,8 @@ Nel caso dell'utilizzo di un pulsante l'accorgimento sopraindicato non è necess
 
 {% comment %}Example name: Pulsanti, solo icona{% endcomment %}
 {% capture example %}
-<button type="button" class="btn btn-primary go-back" data-bs-toggle="historyback"><svg class="icon icon-sm icon-white"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-left"></use></svg><span class="visually-hidden">Torna indietro</span></button>
-<button type="button" class="btn btn-primary go-back" data-bs-toggle="historyback"><svg class="icon icon-sm icon-white"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-up"></use></svg><span class="visually-hidden">Livello superiore</span></button>
+<button type="button" class="btn btn-primary go-back" data-bs-toggle="historyback"><svg class="icon icon-sm icon-inverse"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-left"></use></svg><span class="visually-hidden">Torna indietro</span></button>
+<button type="button" class="btn btn-primary go-back" data-bs-toggle="historyback"><svg class="icon icon-sm icon-inverse"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-arrow-up"></use></svg><span class="visually-hidden">Livello superiore</span></button>
 {% endcapture %}{% include example.html content=example %}
 
 ## Attivazione tramite codice
@@ -108,3 +108,9 @@ Le opzioni possono essere passate tramite gli attributi data o tramite Javascrip
     </tr>
   </tbody>
 </table>
+
+## Breaking change
+
+{% capture callout %}
+- La classe che controlla il colore delle icone bianche ha cambiato nome: `.icon-white` diventa `.icon-inverse`.
+{% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}

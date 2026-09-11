@@ -1,11 +1,11 @@
 [
     {
         "name": "Base ",
-        "content": "\n<div>\n  <div class=\"form-check form-check-inline\">\n    <div class=\"toggles\">\n      <label for=\"toggleEsempio1a\">\n        Label dell'interruttore 1\n        <input type=\"checkbox\" id=\"toggleEsempio1a\">\n        <span class=\"lever\"></span>\n      </label>\n    </div>\n  </div>\n</div>\n"
+        "content": "\n<div class=\"form-check form-check-inline\">\n  <div class=\"toggles\">\n    <label for=\"toggleEsempio1a\">\n      Label dell'interruttore 1\n      <input type=\"checkbox\" id=\"toggleEsempio1a\">\n      <span class=\"lever\"></span>\n    </label>\n  </div>\n</div>\n"
     },
     {
         "name": "Disabilitato ",
-        "content": "\n<div>\n  <div class=\"form-check form-check-inline\">\n    <div class=\"toggles\">\n      <label for=\"toggleEsempio2a\">\n        Label dell'interruttore 1\n        <input disabled type=\"checkbox\" id=\"toggleEsempio2a\">\n        <span class=\"lever\"></span>\n      </label>\n    </div>\n  </div>\n</div>\n"
+        "content": "\n<div class=\"form-check form-check-inline\">\n  <div class=\"toggles\">\n    <label for=\"toggleEsempio2a\">\n      Label dell'interruttore 1\n      <input disabled type=\"checkbox\" id=\"toggleEsempio2a\">\n      <span class=\"lever\"></span>\n    </label>\n  </div>\n</div>\n"
     },
     {
         "name": "In linea ",

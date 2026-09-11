@@ -424,7 +424,7 @@ In questo la Pubblica Amministrazione che fa uso di servizi di terze parti come 
       <div class="acceptoverlay-icon">
         <svg class="icon icon-xl"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-video"></use></svg>
       </div>
-        <p>Accetta i cookie di YouTube per vedere il video. Puoi gestire le preferenze nella <a href="#" class="text-white">cookie policy</a>.
+        <p>Accetta i cookie di YouTube per vedere il video. Puoi gestire le preferenze nella <a href="#">cookie policy</a>.
         </p>
       <div class="acceptoverlay-buttons bg-dark">
         <button type="button" class="btn btn-primary" data-bs-accept-from="youtube.com"
@@ -526,3 +526,6 @@ Esistono numerosi [plugin](https://videojs.com/plugins/) disponibili per video.j
 consentono di aggiungere nuove funzionalità, come la riproduzione di video in VR, 
 l'analisi delle statistiche di visualizzazione del video, le utility per la UI mobile 
 e molto altro ancora.
+
+{% include properties.md properties=site.data.cprops.acceptoverlay title="Accept Overlay" selector=".acceptoverlay" %}
+{% include properties.md properties=site.data.cprops.vjs-theme-bootstrap-italia selector=".vjs-theme-bootstrap-italia" title="Video player" %}

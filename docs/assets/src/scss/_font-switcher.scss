@@ -1,0 +1,15 @@
+@use 'src/scss/base/config' as *;
+@use 'src/scss/base/variables' as *;
+
+.font-switcher {
+  .btn {
+    --#{$prefix}btn-font-size: var(--#{$prefix}label-font-size-s);
+  }
+
+  .dropdown-item {
+    &.active {
+      background-color: var(--#{$prefix}color-background-primary);
+      color: white;
+    }
+  }
+}

@@ -1,3 +1,7 @@
+@use 'src/scss/base/config' as *;
+@use 'src/scss/base/variables' as *;
+@use 'src/scss/base/mixins/breakpoints' as *;
+
 .navbar.navbar-institutional {
   background-color: #0059b3;
 

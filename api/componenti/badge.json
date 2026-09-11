@@ -1,26 +1,26 @@
 [
     {
         "name": "Base",
-        "content": "\n<div class=\"h1\">Titolo di esempio h1<span class=\"badge bg-secondary\">New</span></div>\n<div class=\"h2\">Titolo di esempio h2<span class=\"badge bg-secondary\">New</span></div>\n<div class=\"h3\">Titolo di esempio h3<span class=\"badge bg-secondary\">New</span></div>\n<div class=\"h4\">Titolo di esempio h4<span class=\"badge bg-secondary\">New</span></div>\n<div class=\"h5\">Titolo di esempio h5<span class=\"badge bg-secondary\">New</span></div>\n<div class=\"h6\">Titolo di esempio h6<span class=\"badge bg-secondary\">New</span></div>\n"
+        "content": "\n<div class=\"h1\">Titolo di esempio h1<span class=\"badge badge-secondary\">New</span></div>\n<div class=\"h2\">Titolo di esempio h2<span class=\"badge badge-secondary\">New</span></div>\n<div class=\"h3\">Titolo di esempio h3<span class=\"badge badge-secondary\">New</span></div>\n<div class=\"h4\">Titolo di esempio h4<span class=\"badge badge-secondary\">New</span></div>\n<div class=\"h5\">Titolo di esempio h5<span class=\"badge badge-secondary\">New</span></div>\n<div class=\"h6\">Titolo di esempio h6<span class=\"badge badge-secondary\">New</span></div>\n"
     },
     {
         "name": "In pulsante",
-        "content": "\n<button type=\"button\" class=\"btn btn-primary\">\nNotifiche <span class=\"badge bg-white text-secondary\">4</span>\n</button>\n"
+        "content": "\n<button type=\"button\" class=\"btn btn-primary\">\nNotifiche <span class=\"badge badge-sm badge-inverse\">4</span>\n</button>\n"
     },
     {
         "name": "In pulsante, per screen reader",
-        "content": "\n<button type=\"button\" class=\"btn btn-primary\">\nProfilo <span class=\"badge bg-white text-primary\">9</span>\n<span class=\"visually-hidden\">Messaggi non letti</span>\n</button>\n"
+        "content": "\n<button type=\"button\" class=\"btn btn-primary\">\nProfilo <span class=\"badge badge-sm badge-inverse text-primary\">9</span>\n<span class=\"visually-hidden\">Messaggi non letti</span>\n</button>\n"
     },
     {
         "name": "Varianti di colore",
-        "content": "\n\n<span class=\"badge bg-primary\">Primary</span>\n<span class=\"badge bg-secondary\">Secondary</span>\n<span class=\"badge bg-success\">Success</span>\n<span class=\"badge bg-danger\">Danger</span>\n<span class=\"badge bg-warning\">Warning</span>\n"
+        "content": "\n\n<span class=\"badge badge-primary\">Primary</span>\n<span class=\"badge badge-secondary\">Secondary</span>\n<span class=\"badge badge-success\">Success</span>\n<span class=\"badge badge-danger\">Danger</span>\n<span class=\"badge badge-warning\">Warning</span>\n"
     },
     {
         "name": "Arrotondati",
-        "content": "\n\n<span class=\"badge rounded-pill bg-primary\">Primary</span>\n<span class=\"badge rounded-pill bg-secondary\">Secondary</span>\n<span class=\"badge rounded-pill bg-success\">Success</span>\n<span class=\"badge rounded-pill bg-danger\">Danger</span>\n<span class=\"badge rounded-pill bg-warning\">Warning</span>\n"
+        "content": "\n\n<span class=\"badge rounded-pill badge-primary\">Primary</span>\n<span class=\"badge rounded-pill badge-secondary\">Secondary</span>\n<span class=\"badge rounded-pill badge-success\">Success</span>\n<span class=\"badge rounded-pill badge-danger\">Danger</span>\n<span class=\"badge rounded-pill badge-warning\">Warning</span>\n"
     },
     {
         "name": "Link",
-        "content": "\n\n<a href=\"#\" class=\"badge bg-primary\">Primary</a>\n<a href=\"#\" class=\"badge bg-secondary\">Secondary</a>\n<a href=\"#\" class=\"badge bg-success\">Success</a>\n<a href=\"#\" class=\"badge bg-danger\">Danger</a>\n<a href=\"#\" class=\"badge bg-warning\">Warning</a>\n"
+        "content": "\n\n<a href=\"#\" class=\"badge badge-primary\">Primary</a>\n<a href=\"#\" class=\"badge badge-secondary\">Secondary</a>\n<a href=\"#\" class=\"badge badge-success\">Success</a>\n<a href=\"#\" class=\"badge badge-danger\">Danger</a>\n<a href=\"#\" class=\"badge badge-warning\">Warning</a>\n"
     }
 ]

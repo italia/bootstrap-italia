@@ -53,6 +53,7 @@ import {
   Masonry,
   List,
   Transfer,
+  Chip,
   VideoPlayer,
 } from './bootstrap-italia.esm'
 
@@ -76,6 +77,7 @@ export default {
   AcceptOverlay,
   Accordion,
   BackToTop,
+  Chip,
   Cookiebar,
   Dimmer,
   FormValidate,
