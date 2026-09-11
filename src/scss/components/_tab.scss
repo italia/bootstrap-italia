@@ -27,14 +27,14 @@
   --#{$prefix}tab-shadow: 0 12px 25px -20px rgba(0, 0, 0, 0.5); // Controls the tab shadow, using elevation tokens.
   --#{$prefix}tab-background-light: var(--#{$prefix}color-background-primary-lighter); // Controls the tab background light, using color tokens.
   --#{$prefix}tab-border-color: transparent; // Controls the tab border color, using border tokens.
-  --#{$prefix}tab-border-width-cards: 2px; // Controls the tab border width cards, using border tokens.
+  --#{$prefix}tab-border-width-cards: 1px; // Controls the tab border width cards, using border tokens.
   --#{$prefix}tab-border-color-cards: var(--#{$prefix}color-border-subtle); // Controls the tab border color cards, using color tokens.
   --#{$prefix}tab-add-btn-border: var(--#{$prefix}color-border-primary); // Controls the tab add btn border, using color tokens.
   --#{$prefix}tab-add-btn-color: var(--#{$prefix}color-background-primary); // Controls the tab add btn color, using color tokens.
   --#{$prefix}tab-close-btn-color: var(--#{$prefix}color-text-secondary); // Controls the tab close btn color, using color tokens.
   --#{$prefix}tab-close-btn-color-hover: color-mix(
     in srgb,
-    var(--#{$prefix}primary) 90%,
+    var(--#{$prefix}tab-close-btn-color) 90%,
     black 10%
   ); // Controls the tab close btn color hover, using color tokens.
   --#{$prefix}tab-close-btn-color-disabled: var(--#{$prefix}color-text-disabled); // Controls the tab close btn color disabled, using color tokens.
@@ -121,7 +121,7 @@
       --#{$prefix}tab-font-size: var(--#{$prefix}label-font-size-l);
     }
     &:hover {
-      --#{$prefix}tab-text-color: var(--#{$prefix}color-text-secondary-hover);
+      --#{$prefix}tab-text-color: var(--#{$prefix}color-link-secondary-hover);
     }
     &.disabled {
       --#{$prefix}tab-text-color: var(--#{$prefix}color-link-disabled);
@@ -191,7 +191,7 @@
     &.nav-tabs-vertical-background {
       .nav-link.active,
       .nav-item.show .nav-link {
-        --#{$prefix}tab-background-color: var(--#{$prefix}color-background-primary-lighter);
+        --#{$prefix}tab-background-color: var(--#{$prefix}tab-background-light);
       }
     }
   }
@@ -239,13 +239,13 @@
     &::after {
       content: '';
       flex-grow: 1;
-      border-bottom: 1px solid var(--#{$prefix}color-border-subtle);
+      border-bottom: 1px solid var(--#{$prefix}tab-border-color-cards);
     }
 
     // Tab link styles
     .nav-link {
-      --#{$prefix}tab-border-width: 1px;
-      border-bottom: var(--#{$prefix}tab-border-width) solid var(--#{$prefix}color-border-subtle);
+      --#{$prefix}tab-border-width: var(--#{$prefix}tab-border-width-cards);
+      border-bottom: var(--#{$prefix}tab-border-width) solid var(--#{$prefix}tab-border-color-cards);
       position: relative;
 
       &[data-focus-mouse='true']:not(.active) {
@@ -254,7 +254,7 @@
 
       &.active,
       &[data-focus-mouse='true']:not(:focus) {
-        --#{$prefix}tab-border-color: var(--#{$prefix}color-border-subtle);
+        --#{$prefix}tab-border-color: var(--#{$prefix}tab-border-color-cards);
         border-color: var(--#{$prefix}tab-border-color);
         border-top-width: var(--#{$prefix}tab-border-width);
         border-right-width: var(--#{$prefix}tab-border-width);
@@ -283,7 +283,7 @@
       width: 1.5rem;
       height: 1.5rem;
       margin: -0.2em 1em 0;
-      border: 1px solid var(--#{$prefix}color-border-primary);
+      border: 1px solid var(--#{$prefix}tab-add-btn-border);
       border-radius: 50%;
 
       // Plus sign
@@ -294,7 +294,7 @@
         content: '';
         width: 2px;
         height: 0.778rem;
-        background-color: var(--#{$prefix}color-background-primary);
+        background-color: var(--#{$prefix}tab-add-btn-color);
       }
       &:before {
         position: absolute;
@@ -303,7 +303,7 @@
         content: '';
         width: 0.778rem;
         height: 2px;
-        background-color: var(--#{$prefix}color-background-primary);
+        background-color: var(--#{$prefix}tab-add-btn-color);
       }
     }
 
@@ -316,23 +316,23 @@
       position: absolute;
       top: calc(50% - 1rem);
       right: 0.889rem;
-      color: var(--#{$prefix}color-text-secondary);
+      color: var(--#{$prefix}tab-close-btn-color);
       transition: color 0.2s;
       cursor: pointer;
       .icon {
         fill: var(--#{$prefix}icon-secondary);
       }
       &.disabled {
-        color: var(--#{$prefix}color-text-disabled);
+        color: var(--#{$prefix}tab-close-btn-color-disabled);
         cursor: pointer;
         .icon {
           fill: var(--#{$prefix}icon-disabled);
         }
       }
       &:hover {
-        color: shade-color($primary, 10%);
+        color: var(--#{$prefix}tab-close-btn-color-hover);
         .icon {
-          fill: shade-color($primary, 10%);
+          fill: var(--#{$prefix}tab-close-btn-color-hover);
         }
       }
       .it-ico {
@@ -405,7 +405,7 @@
 
 @include media-breakpoint-down(md) {
   .nav-tabs {
-    box-shadow: 0 12px 25px -20px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--#{$prefix}tab-shadow);
     &.nav-tabs-vertical,
     &.nav-tabs-cards {
       box-shadow: none;

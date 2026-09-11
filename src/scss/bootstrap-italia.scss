@@ -35,7 +35,6 @@
 @forward 'utilities/focus';
 @forward 'utilities/icons';
 @forward 'utilities/colors';
-// @forward 'utilities/text-colors';
 
 // Nav & Header
 @forward 'components/nav';
@@ -64,7 +63,6 @@
 @forward 'components/buttons';
 @forward 'components/font';
 @forward 'components/dropdown';
-// @forward 'components/pager'; // Removed in 3.x before this merge
 @forward 'components/tab';
 @forward 'components/cookiebar';
 @forward 'components/hero';
@@ -118,14 +116,12 @@
 @forward 'components/page-scroll';
 @forward 'components/pagination';
 @forward 'components/placeholders'; // Keep?
-// @forward 'components/toasts';
 @forward 'components/footer';
 // ------------------------------
 
 // Form
 @forward 'forms/forms';
 // @forward 'forms/labels'; // Keep? It was already removed in 3.x before this merge
-// @forward 'forms/form-text'; // Keep? It was already removed in 3.x before this merge
 @forward 'forms/form-control';
 // @forward 'forms/form-check'; // Keep? It was already removed in 3.x before this merge
 // @forward 'forms/form-range'; // Keep? It was already removed in 3.x before this merge
@@ -141,6 +137,5 @@
 @forward 'forms/form-transfer';
 @forward 'forms/accessible-autocomplete';
 @forward 'forms/autocomplete';
-//@forward 'forms/just-validate';
 @forward 'forms/form-validation';
 // ------------------------------
