@@ -93,11 +93,6 @@ for root, dirs, files in os.walk(SCSS_BASE_PATH, topdown=True):
                                     continue
                                 break
 
-with open(OUTPUT_JSON, "w") as fapi:
-    fapi.write(json.dumps(mapped_vars, sort_keys=True, indent=4))
-
-with open(OUTPUT_JSON_JEKYLL, "w") as fapi:
-
 for variables in mapped_vars.values():
     for var in variables:
         var['other_values'] = sorted(var['other_values'])
