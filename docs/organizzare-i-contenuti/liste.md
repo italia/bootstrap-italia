@@ -43,6 +43,16 @@ Le liste, costituite da tag `<ul>` con classe `.it-list` all'interno di un wrapp
 </div>
 {% endcapture %}{% include example.html content=example %}
 
+{% capture callout %}
+#### Accessibilità e semantica delle liste
+
+A causa di un comportamento noto di WebKit, applicare `list-style-type: none;` a un elemento `<ul>` o `<ol>` (necessario per nascondere i marcatori visivi) ne rimuove la semantica di lista per le tecnologie assistive su **Safari e VoiceOver** (macOS/iOS): gli elementi vengono letti in sequenza, senza indicarne il conteggio o la posizione.
+
+Per ripristinarla, se l'elemento non si trova già all'interno di un `<nav>` (che fornisce già un contesto di navigazione riconoscibile), è consigliato aggiungere l'attributo `role="list"` all'elemento `<ul>` o `<ol>` interessato.
+
+Questa indicazione riguarda in particolare le [liste per menu di navigazione](#liste-per-menu-di-navigazione) utilizzate nei componenti Dropdown, Megamenu, Sidebar e Navscroll, ma vale in generale per qualunque lista personalizzata che rimuova lo stile nativo dei marcatori.
+{% endcapture %}{% include callout.html content=callout type="accessibility" %}
+
 ### Lista con avatar
 
 L'elemento `.avatar` precede l'elemento `.it-right-zone` che contiene il testo.

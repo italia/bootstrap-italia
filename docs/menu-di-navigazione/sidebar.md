@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Sidebar
-description: Barra di navigazione laterale, include liste di link e liste di link annidate.
+description: Barra di navigazione secondaria, include liste di link e liste di link annidate.
 group: menu-di-navigazione
 toc: true
 ---
@@ -18,7 +18,7 @@ Per differenziare a livello stilistico i link secondari, è sufficiente aggiunge
 
 {% comment %}Example name: Base{% endcomment %}
 {% capture example %}
-<div class="sidebar-wrapper">
+<nav class="sidebar-wrapper" aria-label="Menu di navigazione secondaria">
   <div class="sidebar-linklist-wrapper">
     <div class="link-list-wrapper">
       <ul class="link-list">
@@ -57,7 +57,7 @@ La sidebar può contenere icone nella sua Lista di link.
 
 {% comment %}Example name: Con icona{% endcomment %}
 {% capture example %}
-<div class="sidebar-wrapper">
+<nav class="sidebar-wrapper" aria-label="Menu di navigazione secondaria">
   <div class="sidebar-linklist-wrapper">
     <div class="link-list-wrapper">
       <ul class="link-list">
@@ -108,7 +108,7 @@ Per creare una sidebar con linea separatrice a destra è sufficiente aggiungere 
 
 {% comment %}Example name: Con linea a destra{% endcomment %}
 {% capture example %}
-<div class="sidebar-wrapper it-line-right-side">
+<nav class="sidebar-wrapper it-line-right-side" aria-label="Menu di navigazione secondaria">
   <div class="sidebar-linklist-wrapper">
     <div class="link-list-wrapper">
       <ul class="link-list">
@@ -147,7 +147,7 @@ Per creare una sidebar con linea separatrice a sinistra è sufficiente aggiunger
 
 {% comment %}Example name: Con linea a sinistra{% endcomment %}
 {% capture example %}
-<div class="sidebar-wrapper it-line-left-side">
+<nav class="sidebar-wrapper it-line-left-side" aria-label="Menu di navigazione secondaria">
   <div class="sidebar-linklist-wrapper">
     <div class="link-list-wrapper">
       <ul class="link-list">
@@ -186,7 +186,7 @@ La sidebar può contenere una Lista di link primaria annidata.
 
 {% comment %}Example name: Annidata{% endcomment %}
 {% capture example %}
-<div class="sidebar-wrapper">
+<nav class="sidebar-wrapper" aria-label="Menu di navigazione secondaria">
   <h3 class="no_toc">Header</h3>
   <div class="sidebar-linklist-wrapper">
     <div class="link-list-wrapper">
@@ -263,7 +263,7 @@ Per cambiare il tema della sidebar e renderla scura è sufficiente aggiungere al
 
 {% comment %}Example name: Con sfondo scuro{% endcomment %}
 {% capture example %}
-<div class="sidebar-wrapper theme-dark">
+<nav class="sidebar-wrapper theme-dark" aria-label="Menu di navigazione secondaria">
   <h3 class="no_toc">Header</h3>
   <div class="sidebar-linklist-wrapper">
     <div class="link-list-wrapper">
@@ -341,6 +341,7 @@ sezione [attivazione Collapse tramite codice]({{ site.baseurl }}/docs/componenti
 ## Breaking change
 
 {% capture callout %}
+- L'intera sidebar `.sidebar-wrapper` è diventata un elemento `<nav>` per indicarne meglio la semantica. 
 - Rimossi elementi `<span>` con classe `list-item-title-icon-wrapper`.
 - Nella variante con una lista di link primaria annidata è stata rimossa la classe `.large` dagli elementi `<a>` con classi `.list-item .medium`. 
 - Nelle varianti scure la classe che controlla il colore delle icone bianche ha cambiato nome: `.icon-white` diventa `.icon-inverse`.
