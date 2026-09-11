@@ -1865,24 +1865,18 @@
         {
             "description": "Controls the card border color, using color tokens",
             "files": [
-                "_card-old.scss",
                 "_card.scss"
             ],
-            "other_values": [
-                "#{$card-border-color}"
-            ],
+            "other_values": [],
             "value": "var(--bsi-color-border-subtle)",
             "variable-name": "--bsi-card-border-color"
         },
         {
             "description": "Controls the outer border radius of the card, using radius tokens",
             "files": [
-                "_card-old.scss",
                 "_card.scss"
             ],
-            "other_values": [
-                "#{$card-border-radius}"
-            ],
+            "other_values": [],
             "value": "var(--bsi-radius-smooth)",
             "variable-name": "--bsi-card-border-radius"
         },
@@ -2030,12 +2024,9 @@
         {
             "description": "Controls the height of the card, can be set to fixed value or auto",
             "files": [
-                "_card-old.scss",
                 "_card.scss"
             ],
-            "other_values": [
-                "#{$card-height}"
-            ],
+            "other_values": [],
             "value": "auto",
             "variable-name": "--bsi-card-height"
         },
@@ -2292,10 +2283,12 @@
         {
             "description": "Controls the brand color for the header, using color tokens.",
             "files": [
-                "_header.scss"
+                "_header.scss",
+                "_navbar.scss"
             ],
             "other_values": [
-                "var(--bsi-color-text-primary)"
+                "var(--bsi-color-text-primary)",
+                "var(--bsi-navbar-brand-mobile-color)"
             ],
             "value": "var(--bsi-color-text-inverse)",
             "variable-name": "--bsi-header-brand-color"
@@ -2303,10 +2296,12 @@
         {
             "description": "Controls the brand icon color for the header, using icon tokens.",
             "files": [
-                "_header.scss"
+                "_header.scss",
+                "_navbar.scss"
             ],
             "other_values": [
-                "var(--bsi-icon-primary)"
+                "var(--bsi-icon-primary)",
+                "var(--bsi-navbar-brand-mobile-color)"
             ],
             "value": "var(--bsi-icon-inverse)",
             "variable-name": "--bsi-header-brand-icon-color"
@@ -3764,7 +3759,9 @@
             "files": [
                 "_navbar.scss"
             ],
-            "other_values": [],
+            "other_values": [
+                "var(--bsi-font-weight-base)"
+            ],
             "value": "var(--bsi-font-weight-solid)",
             "variable-name": "--bsi-navbar-link-font-weight"
         },
