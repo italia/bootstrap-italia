@@ -28,7 +28,7 @@ Puoi usare l'attributo `data-bs-toggle` con valore `sticky` per attivare la funz
     <div class="row">
       <div class="col-12">
         <div class="it-header-slim-wrapper-content">
-          <a class="d-none d-lg-block navbar-brand" href="#">Elemento Sticky</a>
+          <a class="d-block navbar-brand" href="#">Elemento Sticky</a>
         </div>
       </div>
     </div>
@@ -51,7 +51,7 @@ Per facilitare il cambio di stile dell'elemento è possibile usare la proprietà
     <div class="row">
       <div class="col-12">
         <div class="it-header-slim-wrapper-content">
-          <a class="d-none d-lg-block navbar-brand" href="#">Elemento Sticky con position fixed</a>
+          <a class="d-block navbar-brand" href="#">Elemento Sticky con position fixed</a>
         </div>
       </div>
     </div>
@@ -73,7 +73,7 @@ Se sono presenti più componenti sticky nella pagina, è possibile fare in modo 
     <div class="row">
       <div class="col-12">
         <div class="it-header-slim-wrapper-content">
-          <a class="d-none d-lg-block navbar-brand" href="#">Elemento Sticky impilabile</a>
+          <a class="d-block navbar-brand" href="#">Elemento Sticky impilabile</a>
         </div>
       </div>
     </div>
@@ -109,18 +109,12 @@ In tal caso è necessario utilizzare l'attributo `data-bs-target`.
       <div class="row">
         <div class="col-12">
           <div class="it-header-slim-wrapper-content">
-            <a class="d-none d-lg-block navbar-brand" href="#">Ente appartenenza</a>
+            <a class="d-block navbar-brand" href="#">Ente appartenenza</a>
             <div class="nav-mobile">
               <nav aria-label="Navigazione secondaria">
-                <a class="it-opener d-lg-none" data-bs-toggle="collapse" href="#menuC1" role="button" aria-expanded="false" aria-controls="menuC1">
-                  <span>Ente appartenenza</span>
-                  <svg class="icon" aria-hidden="true">
-                    <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
-                  </svg>
-                </a>
-                <div class="link-list-wrapper collapse" id="menuC1">
-                  <ul class="link-list">
-                    <li><a class="dropdown-item list-item" href="#">Link 1</a></li>
+                <div class="link-list-wrapper d-none d-lg-flex">
+                  <ul class="link-list" aria-label="Link utili">
+                    <li><a class="list-item" href="#">Link 1</a></li>
                     <li><a class="list-item active" href="#" aria-current="page">Link 2 (Attivo)</a></li>
                   </ul>
                 </div>
