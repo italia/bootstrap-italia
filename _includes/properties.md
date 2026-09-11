@@ -41,7 +41,7 @@ La descrizione delle custom properties è in inglese perché risiede nei files `
 <h3 class="no_toc">Properties dinamiche</h3>
 
 Nella colonna `"Valore predefinito"` è possibile trovare, oltre al valore di base, un'indicazione delle eventuali varianti responsive/tema/stato della property stessa:
-si prega di far riferimento al codice dei file SCSS relativi per personalizzare il comportamento.
+fare riferimento ai file elencati nella colonna `"File SCSS"` per il dettaglio dei valori e del contesto di applicazione.
 
 <div class="table-responsive" style="font-size: 1rem">
   <table class="table table-simple">
