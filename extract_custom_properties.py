@@ -20,6 +20,7 @@ for root, dirs, files in os.walk(SCSS_BASE_PATH, topdown=True):
     for file in files:
         if file.endswith(".scss"):
             css_file_to_inspect = os.path.join(root, file)
+            css_file_to_inspect_name = css_file_to_inspect.replace(SCSS_BASE_PATH, '').replace('/components/', '')
             with open(css_file_to_inspect, "r") as f:
                 selector = None
                 props_found = False
@@ -39,7 +40,7 @@ for root, dirs, files in os.walk(SCSS_BASE_PATH, topdown=True):
                             vars.append(re.findall(r'\s+(--#{\$prefix}[a-z0-9-]+):\s(.*);(\s\/\/.*)?', line))
             if selector and vars:
                 vars = (functools.reduce(operator.iconcat, vars, []))
-                print (selector)
+                print (f"📤 Extracting variables for `.{selector}` selector from {css_file_to_inspect}.scss file")
                 mapped_vars[selector] = []
                 # Map variables with prefix (e.g. dropdown, form ecc..)
                 for pkt in vars:
@@ -56,8 +57,46 @@ for root, dirs, files in os.walk(SCSS_BASE_PATH, topdown=True):
                             'variable-name': var,
                             'value': pkt[1].replace("--#{$prefix}", "--bsi-"),
                             'description': pkt[2].replace('//', '').strip().capitalize(),
-                            'other_values': []
+                            'other_values': [],
+                            'files': [css_file_to_inspect_name]
                         })
+
+
+for root, dirs, files in os.walk(SCSS_BASE_PATH, topdown=True):
+    dirs[:] = [d for d in dirs if d not in EXCLUDED_FOLDERS]
+    for file in files:
+        if file.endswith(".scss"):
+            css_file_to_inspect = os.path.join(root, file)
+            css_file_to_inspect_name = css_file_to_inspect.replace(SCSS_BASE_PATH, '').replace('/components/', '')
+            with open(css_file_to_inspect, "r") as f:
+                inspect_other_values = False
+                vars = []
+                for line in f:
+                    if '// Styles' in line:
+                        inspect_other_values = True
+                    if inspect_other_values:
+                        for new_var in re.findall(r'\s+(--#{\$prefix}[a-z0-9-]+):\s(.*);(\s\/\/.*)?', line):
+                            name, value, description = new_var
+                            name = name.replace("--#{$prefix}", "--bsi-")
+                            value = value.replace("--#{$prefix}", "--bsi-")
+                            # Check if the variable already exists in the mapped_vars dictionary
+                            for selector, variables in mapped_vars.items():
+                                for existing_var in variables:
+                                    if existing_var['variable-name'] == name:
+                                        # If the variable already exists, add the new value to the other_values list
+                                        if value != existing_var['value'] and value not in existing_var['other_values']:
+                                            existing_var['other_values'].append(value)
+                                        if css_file_to_inspect_name not in existing_var['files']:
+                                            existing_var['files'].append(css_file_to_inspect_name)
+                                        break
+                                else:
+                                    continue
+                                break
+
+for variables in mapped_vars.values():
+    for var in variables:
+        var['other_values'] = sorted(var['other_values'])
+        var['files'] = sorted(var['files'])
 
 with open(OUTPUT_JSON, "w") as fapi:
     fapi.write(json.dumps(mapped_vars, sort_keys=True, indent=4))

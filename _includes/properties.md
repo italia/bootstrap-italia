@@ -18,7 +18,7 @@ La descrizione delle custom properties è in inglese perché risiede nei files `
       <tr>
         <th>Variabile CSS</th>
         <th>Descrizione (Inglese)</th>
-        <th>Predefinito</th>
+        <th>Valore predefinito</th>
       </tr>
     </thead>
     <tbody>
@@ -40,8 +40,8 @@ La descrizione delle custom properties è in inglese perché risiede nei files `
 {% if dynamic_props == true %}
 <h3 class="no_toc">Properties dinamiche</h3>
 
-Nella colonna `"Valori predefiniti"` è possibile trovare varianti responsive/tema/stato della property stessa,
-si prega di far riferimento al codice per personalizzare il comportamento.
+Nella colonna `"Valore predefinito"` è possibile trovare, oltre al valore di base, un'indicazione delle eventuali varianti responsive/tema/stato della property stessa:
+fare riferimento ai file elencati nella colonna `"File SCSS"` per il dettaglio dei valori e del contesto di applicazione.
 
 <div class="table-responsive" style="font-size: 1rem">
   <table class="table table-simple">
@@ -49,7 +49,8 @@ si prega di far riferimento al codice per personalizzare il comportamento.
       <tr>
         <th>Variabile CSS</th>
         <th>Descrizione (Inglese)</th>
-        <th>Valori predefiniti</th>
+        <th>Valore predefinito</th>
+        <th>File SCSS</th>
       </tr>
     </thead>
     <tbody>
@@ -58,7 +59,9 @@ si prega di far riferimento al codice per personalizzare il comportamento.
       <tr>
         <td><code>{{ track.variable-name }}</code></td>
         <td>{{ track.description }}</td>
-        <td><code>{{ track.value }}</code>&nbsp;{% for v in track.other_values %}<code>{{ v }}</code>&nbsp;{% endfor %}</td>
+        <td><code>{{ track.value }}</code>&nbsp;<code>...</code></td>
+        <td><code>{{ track.value }}</code>{% if track.other_values.size > 0 %}&nbsp;<span class="badge bg-primary text-white rounded-pill">+{{ track.other_values.size }}</span>{% endif %}</td>
+        <td>{% for v in track.files %}<code>{{ v }}</code><br/>{% endfor %}</td>
       </tr>
     {% endif %}
     {% endfor %}
