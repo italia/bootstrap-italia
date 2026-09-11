@@ -29,6 +29,7 @@ export { default as Forward } from './plugins/forward'
 export { default as Masonry } from './plugins/masonry'
 export { default as List } from './plugins/list'
 export { default as Transfer } from './plugins/transfer'
+export { default as Chip } from './plugins/chip'
 
 /* Bootstrap */
 export { default as Alert } from './plugins/alert'
