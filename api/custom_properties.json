@@ -1,15 +1,6 @@
 {
     "acceptoverlay": [
         {
-            "description": "Controls the acceptoverlay color background, using color tokens",
-            "files": [
-                "_accept-overlay.scss"
-            ],
-            "other_values": [],
-            "value": "var(--bsi-color-background-inverse)",
-            "variable-name": "--bsi-acceptoverlay-color-background"
-        },
-        {
             "description": "Controls the acceptoverlay color text, using color tokens",
             "files": [
                 "_accept-overlay.scss"
@@ -37,15 +28,6 @@
             "variable-name": "--bsi-acceptoverlay-label-border-color"
         },
         {
-            "description": "Controls the acceptoverlay opacity",
-            "files": [
-                "_accept-overlay.scss"
-            ],
-            "other_values": [],
-            "value": "0.9",
-            "variable-name": "--bsi-acceptoverlay-opacity"
-        },
-        {
             "description": "Controls the acceptoverlay spacing inset, using spacing tokens",
             "files": [
                 "_accept-overlay.scss"
@@ -62,7 +44,7 @@
                 "_accept-overlay.scss"
             ],
             "other_values": [],
-            "value": "0.95",
+            "value": "95%",
             "variable-name": "--bsi-acceptoverlay-primary-opacity"
         },
         {
@@ -79,7 +61,9 @@
             "files": [
                 "_accept-overlay.scss"
             ],
-            "other_values": [],
+            "other_values": [
+                "var(--bsi-spacing-xxl)"
+            ],
             "value": "var(--bsi-spacing-s)",
             "variable-name": "--bsi-acceptoverlay-icon-spacing"
         },
@@ -89,7 +73,7 @@
                 "_accept-overlay.scss"
             ],
             "other_values": [],
-            "value": "var(--bsi-icon-primary)",
+            "value": "var(--bsi-icon-inverse)",
             "variable-name": "--bsi-acceptoverlay-icon-fill"
         },
         {
@@ -105,6 +89,15 @@
         }
     ],
     "accordion": [
+        {
+            "description": "Controls the active text color for the accordion button, using color tokens.",
+            "files": [
+                "_accordion.scss"
+            ],
+            "other_values": [],
+            "value": "var(--bsi-color-link-active)",
+            "variable-name": "--bsi-accordion-active-color"
+        },
         {
             "description": "Controls the background color for the accordion item, using color tokens.",
             "files": [
@@ -355,9 +348,7 @@
             "files": [
                 "_alert.scss"
             ],
-            "other_values": [
-                "var(-#{$prefix}spacing-inset-m)"
-            ],
+            "other_values": [],
             "value": "var(--bsi-spacing-s)",
             "variable-name": "--bsi-alert-spacing-inset"
         },
@@ -376,7 +367,7 @@
                 "_alert.scss"
             ],
             "other_values": [],
-            "value": "var(--bsi-spacing-m)",
+            "value": "0",
             "variable-name": "--bsi-alert-spacing-outside"
         },
         {
@@ -427,7 +418,7 @@
                 "_avatar.scss"
             ],
             "other_values": [],
-            "value": "0",
+            "value": "8px",
             "variable-name": "--bsi-avatar-dot-offset-bottom"
         },
         {
@@ -574,6 +565,7 @@
                 "_back-to-top.scss"
             ],
             "other_values": [
+                "var(--bsi-color-background-primary-hover)",
                 "var(--bsi-color-background-inverse)",
                 "var(--bsi-color-background-inverse-hover)"
             ],
@@ -623,21 +615,12 @@
             "variable-name": "--bsi-badge-border-radius"
         },
         {
-            "description": "Controls the font size for the badge, using font tokens.",
-            "files": [
-                "_badge.scss"
-            ],
-            "other_values": [],
-            "value": "var(--bsi-label-font-size-s)",
-            "variable-name": "--bsi-badge-font-size"
-        },
-        {
             "description": "Controls the relative font size for the badge.",
             "files": [
                 "_badge.scss"
             ],
             "other_values": [],
-            "value": "0.75em",
+            "value": "1em",
             "variable-name": "--bsi-badge-font-size-relative"
         },
         {
@@ -1217,7 +1200,7 @@
                 "_callout.scss"
             ],
             "other_values": [],
-            "value": "var(--bsi-page-background-color)",
+            "value": "transparent",
             "variable-name": "--bsi-callout-background-color"
         },
         {
@@ -1242,6 +1225,15 @@
             "other_values": [],
             "value": "2px",
             "variable-name": "--bsi-callout-border-size"
+        },
+        {
+            "description": "",
+            "files": [
+                "_callout.scss"
+            ],
+            "other_values": [],
+            "value": "0",
+            "variable-name": "--bsi-callout-border-radius"
         },
         {
             "description": "Controls the callout font family, using font tokens",
@@ -1649,7 +1641,9 @@
             "files": [
                 "_dropdown.scss"
             ],
-            "other_values": [],
+            "other_values": [
+                "var(--bsi-color-text-inverse)"
+            ],
             "value": "var(--bsi-color-text-base)",
             "variable-name": "--bsi-dropdown-color"
         },
@@ -1754,17 +1748,6 @@
             "variable-name": "--bsi-dropdown-item-padding-y"
         },
         {
-            "description": "Controls the active link color, using color tokens.",
-            "files": [
-                "_dropdown.scss"
-            ],
-            "other_values": [
-                "var(--bsi-color-text-inverse)"
-            ],
-            "value": "var(--bsi-color-text-primary-active)",
-            "variable-name": "--bsi-dropdown-link-active-color"
-        },
-        {
             "description": "Controls the link color in dropdown items, using color tokens.",
             "files": [
                 "_dropdown.scss"
@@ -1774,15 +1757,6 @@
             ],
             "value": "var(--bsi-color-text-primary)",
             "variable-name": "--bsi-dropdown-link-color"
-        },
-        {
-            "description": "Controls the link hover color in dropdown items, using color tokens.",
-            "files": [
-                "_dropdown.scss"
-            ],
-            "other_values": [],
-            "value": "var(--bsi-color-text-primary-hover)",
-            "variable-name": "--bsi-dropdown-link-hover-color"
         },
         {
             "description": "Controls the minimum width of the dropdown menu.",
@@ -2198,15 +2172,6 @@
             "variable-name": "--bsi-carousel-divider-offset"
         },
         {
-            "description": "Controls the heading font size for carousel header.",
-            "files": [
-                "_carousel.scss"
-            ],
-            "other_values": [],
-            "value": "1.75rem",
-            "variable-name": "--bsi-carousel-heading-font-size"
-        },
-        {
             "description": "Controls the inline padding for carousel header, using spacing tokens",
             "files": [
                 "_carousel.scss"
@@ -2359,15 +2324,6 @@
             "variable-name": "--bsi-header-brand-size"
         },
         {
-            "description": "Controls the brand spacing for the header, using spacing tokens.",
-            "files": [
-                "_header.scss"
-            ],
-            "other_values": [],
-            "value": "var(--bsi-spacing-14x)",
-            "variable-name": "--bsi-header-brand-spacing"
-        },
-        {
             "description": "Controls the brand tagline size for the header, using font tokens",
             "files": [
                 "_header.scss"
@@ -2449,7 +2405,7 @@
                 "_header.scss"
             ],
             "other_values": [],
-            "value": "var(--bsi-label-font-size)",
+            "value": "var(--bsi-label-font-size-s)",
             "variable-name": "--bsi-header-nav-secondary-font-size"
         },
         {
@@ -2462,15 +2418,6 @@
             ],
             "value": "var(--bsi-color-link)",
             "variable-name": "--bsi-header-nav-text-color"
-        },
-        {
-            "description": "Controls the search button color for the header, using icon tokens.",
-            "files": [
-                "_header.scss"
-            ],
-            "other_values": [],
-            "value": "var(--bsi-icon-inverse)",
-            "variable-name": "--bsi-header-search-button-color"
         },
         {
             "description": "Controls the header search button size.",
@@ -2659,7 +2606,7 @@
                 "_hero.scss"
             ],
             "other_values": [],
-            "value": "var(--bsi-spacing-3xl)",
+            "value": "calc(var(--bsi-spacing-l) + var(--bsi-spacing-s))",
             "variable-name": "--bsi-hero-padding-y"
         },
         {
@@ -2755,7 +2702,7 @@
                 "_navscroll.scss"
             ],
             "other_values": [],
-            "value": "var(--bsi-spacing-xs)",
+            "value": "var(--bsi-spacing-s) var(--bsi-spacing-m)",
             "variable-name": "--bsi-navscroll-backbutton-padding"
         },
         {
@@ -2862,6 +2809,17 @@
             "other_values": [],
             "value": "var(--bsi-heading-font-weight)",
             "variable-name": "--bsi-navscroll-heading-font-weight"
+        },
+        {
+            "description": "Controls the heading color for the navscroll, using color tokens.",
+            "files": [
+                "_navscroll.scss"
+            ],
+            "other_values": [
+                "var(--bsi-color-text-inverse)"
+            ],
+            "value": "var(--bsi-color-text-base)",
+            "variable-name": "--bsi-navscroll-heading-color"
         },
         {
             "description": "Controls the toggler color for the navscroll, using color tokens.",
@@ -3397,7 +3355,7 @@
                 "_modal.scss"
             ],
             "other_values": [],
-            "value": "var(--bsi-heading-line-height)",
+            "value": "var(--bsi-heading-leading)",
             "variable-name": "--bsi-modal-title-line-height"
         },
         {
@@ -3488,7 +3446,7 @@
                 "_tab.scss"
             ],
             "other_values": [
-                "var(--bsi-color-text-secondary-hover)",
+                "var(--bsi-color-link-secondary-hover)",
                 "var(--bsi-color-link-disabled)",
                 "var(--bsi-color-text-primary)",
                 "var(--bsi-color-text-inverse)"
@@ -3524,7 +3482,7 @@
                 "_tab.scss"
             ],
             "other_values": [
-                "1px"
+                "var(--bsi-tab-border-width-cards)"
             ],
             "value": "3px",
             "variable-name": "--bsi-tab-border-width"
@@ -3593,7 +3551,8 @@
             "other_values": [
                 "var(--bsi-color-border-subtle)",
                 "var(--bsi-color-border-primary)",
-                "var(--bsi-color-border-inverse)"
+                "var(--bsi-color-border-inverse)",
+                "var(--bsi-tab-border-color-cards)"
             ],
             "value": "transparent",
             "variable-name": "--bsi-tab-border-color"
@@ -3604,7 +3563,7 @@
                 "_tab.scss"
             ],
             "other_values": [],
-            "value": "2px",
+            "value": "1px",
             "variable-name": "--bsi-tab-border-width-cards"
         },
         {
@@ -3681,7 +3640,7 @@
                 "_navbar.scss"
             ],
             "other_values": [],
-            "value": "var(--bsi-)",
+            "value": "var(--bsi-label-font-size)",
             "variable-name": "--bsi-navbar-brand-font-size"
         },
         {
@@ -3690,7 +3649,7 @@
                 "_navbar.scss"
             ],
             "other_values": [],
-            "value": "#{$navbar-brand-margin-end}",
+            "value": "var(--bsi-spacing-s)",
             "variable-name": "--bsi-navbar-brand-margin-end"
         },
         {
@@ -3699,7 +3658,7 @@
                 "_navbar.scss"
             ],
             "other_values": [],
-            "value": "#{$navbar-brand-padding-y}",
+            "value": "var(--bsi-spacing-xxs)",
             "variable-name": "--bsi-navbar-brand-padding-y"
         },
         {
@@ -3719,6 +3678,24 @@
             "other_values": [],
             "value": "44px",
             "variable-name": "--bsi-navbar-close-button-size"
+        },
+        {
+            "description": "Controls the navbar close button text color, using color tokens.",
+            "files": [
+                "_navbar.scss"
+            ],
+            "other_values": [],
+            "value": "var(--bsi-color-text-inverse)",
+            "variable-name": "--bsi-navbar-close-button-text-color"
+        },
+        {
+            "description": "Controls the z-index for the collapsable navbar overlay. default matching the modal's.",
+            "files": [
+                "_navbar.scss"
+            ],
+            "other_values": [],
+            "value": "1055",
+            "variable-name": "--bsi-navbar-collapsable-zindex"
         },
         {
             "description": "Controls the navbar disabled item opacity.",
@@ -3927,7 +3904,7 @@
             ],
             "other_values": [],
             "value": "calc(var(--bsi-spacing-m) + var(--bsi-spacing-xl))",
-            "variable-name": "--bsi-notification-padding-right"
+            "variable-name": "--bsi-notification-dismissable-padding-right"
         },
         {
             "description": "",
@@ -4253,7 +4230,7 @@
             "variable-name": "--bsi-progress-border-radius"
         },
         {
-            "description": "Controls the progress box shadow,",
+            "description": "Controls the progress box shadow.",
             "files": [
                 "_progress-bars.scss"
             ],
@@ -4308,6 +4285,17 @@
             "other_values": [],
             "value": "4px",
             "variable-name": "--bsi-progress-height"
+        }
+    ],
+    "progress-donut-wrapper": [
+        {
+            "description": "Controls the progress bg, using color tokens.",
+            "files": [
+                "_progress-donuts.scss"
+            ],
+            "other_values": [],
+            "value": "var(--bsi-color-text-secondary)",
+            "variable-name": "--bsi-progress-label-color"
         }
     ],
     "progress-spinner": [
@@ -4448,6 +4436,15 @@
             "variable-name": "--bsi-section-image-overlay"
         },
         {
+            "description": "Controls the horizontal padding for the section, overridable per variant. default 0.",
+            "files": [
+                "_sections.scss"
+            ],
+            "other_values": [],
+            "value": "0",
+            "variable-name": "--bsi-section-padding-x"
+        },
+        {
             "description": "Controls the vertical padding for the section, using spacing tokens.",
             "files": [
                 "_sections.scss"
@@ -4542,7 +4539,7 @@
                 "_sidebar.scss"
             ],
             "other_values": [],
-            "value": "var(--bsi-body-line-height)",
+            "value": "var(--bsi-body-leading)",
             "variable-name": "--bsi-sidebar-link-line-height"
         },
         {
@@ -4573,6 +4570,15 @@
             ],
             "value": "var(--bsi-color-border-primary)",
             "variable-name": "--bsi-sidebar-link-active-border-color"
+        },
+        {
+            "description": "Controls the text transform for sidebar links.",
+            "files": [
+                "_sidebar.scss"
+            ],
+            "other_values": [],
+            "value": "none",
+            "variable-name": "--bsi-sidebar-text-transform"
         }
     ],
     "steppers": [
@@ -4740,15 +4746,6 @@
             "variable-name": "--bsi-stepper-nav-height"
         },
         {
-            "description": "Controls the stepper number background active, using color tokens.",
-            "files": [
-                "_steppers.scss"
-            ],
-            "other_values": [],
-            "value": "var(--bsi-color-background-primary)",
-            "variable-name": "--bsi-stepper-number-background-active"
-        },
-        {
             "description": "Controls the stepper number border color, using color tokens.",
             "files": [
                 "_steppers.scss"
@@ -4820,6 +4817,7 @@
             "other_values": [
                 "var(--bsi-table-striped-color)",
                 "var(--bsi-color-text-inverse)",
+                "var(--bsi-table-hover-color)",
                 "var(--bsi-#{map.get($values, 'color')})"
             ],
             "value": "var(--bsi-color-text-base)",
@@ -4870,6 +4868,15 @@
             "variable-name": "--bsi-table-striped-bg"
         },
         {
+            "description": "Controls the text color for the striped rows, using color tokens.",
+            "files": [
+                "_tables.scss"
+            ],
+            "other_values": [],
+            "value": "var(--bsi-table-color)",
+            "variable-name": "--bsi-table-striped-color"
+        },
+        {
             "description": "Controls the background color for the active rows, using color tokens.",
             "files": [
                 "_tables.scss"
@@ -4885,7 +4892,9 @@
             "files": [
                 "_tables.scss"
             ],
-            "other_values": [],
+            "other_values": [
+                "var(--bsi-#{map.get($values, 'color')})"
+            ],
             "value": "var(--bsi-color-text-base)",
             "variable-name": "--bsi-table-hover-color"
         },
@@ -4985,24 +4994,6 @@
             "other_values": [],
             "value": "80px",
             "variable-name": "--bsi-thumb-nav-item-height-small-vertical"
-        },
-        {
-            "description": "Controls the default overlay background color for thumb states.",
-            "files": [
-                "_thumbnav.scss"
-            ],
-            "other_values": [],
-            "value": "var(--bsi-overlay-background-primary)",
-            "variable-name": "--bsi-thumb-nav-overlay-bg-primary"
-        },
-        {
-            "description": "Controls the default overlay background color for thumb states.",
-            "files": [
-                "_thumbnav.scss"
-            ],
-            "other_values": [],
-            "value": "var(--bsi-overlay-background-light)",
-            "variable-name": "--bsi-thumb-nav-overlay-bg-black"
         },
         {
             "description": "Controls the image zoom scale on hover.",
@@ -5206,33 +5197,6 @@
             "variable-name": "--bsi-toolbar-icon-color"
         },
         {
-            "description": "Controls the toolbar dropdown padding x, using spacing tokens.",
-            "files": [
-                "_toolbar.scss"
-            ],
-            "other_values": [],
-            "value": "var(--bsi-spacing-xxs)",
-            "variable-name": "--bsi-toolbar-dropdown-padding-x"
-        },
-        {
-            "description": "Controls the toolbar dropdown caret color, using color tokens.",
-            "files": [
-                "_toolbar.scss"
-            ],
-            "other_values": [],
-            "value": "var(--bsi-icon-secondary)",
-            "variable-name": "--bsi-toolbar-dropdown-caret-color"
-        },
-        {
-            "description": "Controls the toolbar dropdown caret size, using spacing tokens.",
-            "files": [
-                "_toolbar.scss"
-            ],
-            "other_values": [],
-            "value": "var(--bsi-spacing-3xs)",
-            "variable-name": "--bsi-toolbar-dropdown-caret-size"
-        },
-        {
             "description": "Controls the toolbar dropdown shadow, using elevation tokens.",
             "files": [
                 "_toolbar.scss"
@@ -5240,18 +5204,6 @@
             "other_values": [],
             "value": "var(--bsi-elevation-low)",
             "variable-name": "--bsi-toolbar-dropdown-shadow"
-        },
-        {
-            "description": "Controls the toolbar icon font size, using color tokens.",
-            "files": [
-                "_toolbar.scss"
-            ],
-            "other_values": [
-                "var(--bsi-icon-size-m)",
-                "var(--bsi-icon-size-s)"
-            ],
-            "value": "var(--bsi-icon-size-l)",
-            "variable-name": "--bsi-toolbar-icon-font-size"
         },
         {
             "description": "Controls the toolbar item gap, using spacing tokens.",
@@ -5263,13 +5215,22 @@
             "variable-name": "--bsi-toolbar-item-gap"
         },
         {
-            "description": "Controls the toolbar more icon font size, using typography tokens.",
+            "description": "Controls the horizontal inset of each item within the vertical toolbar variant.",
             "files": [
                 "_toolbar.scss"
             ],
             "other_values": [],
-            "value": "var(--bsi-label-font-size-xs)",
-            "variable-name": "--bsi-toolbar-more-icon-font-size"
+            "value": "0",
+            "variable-name": "--bsi-toolbar-vertical-item-margin-x"
+        },
+        {
+            "description": "Controls the vertical margin between items in the vertical toolbar variant. defaults to 0: spacing is currently handled by toolbar-item-gap.",
+            "files": [
+                "_toolbar.scss"
+            ],
+            "other_values": [],
+            "value": "0",
+            "variable-name": "--bsi-toolbar-vertical-item-margin-y"
         },
         {
             "description": "Controls the toolbar badge border color, using color tokens.",
