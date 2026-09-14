@@ -7,7 +7,12 @@
 
 ## Properties {{title}}
 
+{% if selector == ":root" %}
+Le properties di questo componente sono trasversali e hanno scope `:root` per 
+facilitarne la customizzazione.
+{% else %}
 Il selettore da utilizzare per le sovrascrittura delle property è `{{selector}}`.
+{% endif %}
 La descrizione delle custom properties è in inglese perché risiede nei files `.scss` dei componenti.
 
 <h3 class="no_toc">Properties statiche</h3>

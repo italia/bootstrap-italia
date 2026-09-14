@@ -444,7 +444,8 @@ Di seguito un esempio di form validato con Just Validate.
 
 I singoli campi di tipo _input_, _checkbox_, _radio_, _toggle_, ecc. sono trattati in pagine separate della documentazione, continua a leggere alla pagina dedicata ai [campi di input]({{ site.baseurl }}/docs/form/input/).
 
-{% include properties.md properties=site.data.cprops.form %}
+{% include properties.md properties=site.data.cprops.forms selector=":root" %}
+
 
 ## Breaking change
 

@@ -1852,6 +1852,129 @@
             "variable-name": "--bsi-dropdown-zindex"
         }
     ],
+    "forms": [
+        {
+            "description": "",
+            "files": [
+                "/forms/_forms.scss"
+            ],
+            "other_values": [],
+            "value": "2.5rem",
+            "variable-name": "--bsi-form-control-height"
+        },
+        {
+            "description": "",
+            "files": [
+                "/forms/_forms.scss"
+            ],
+            "other_values": [],
+            "value": "var(--bsi-spacing-xxs)",
+            "variable-name": "--bsi-form-control-spacing"
+        },
+        {
+            "description": "",
+            "files": [
+                "/forms/_forms.scss"
+            ],
+            "other_values": [
+                "var(--bsi-color-background-muted)"
+            ],
+            "value": "var(--bsi-color-background-inverse)",
+            "variable-name": "--bsi-form-control-background-color"
+        },
+        {
+            "description": "",
+            "files": [
+                "/forms/_forms.scss"
+            ],
+            "other_values": [
+                "var(--bsi-color-border-subtle)"
+            ],
+            "value": "var(--bsi-color-border-secondary)",
+            "variable-name": "--bsi-form-control-border-color"
+        },
+        {
+            "description": "",
+            "files": [
+                "/forms/_forms.scss"
+            ],
+            "other_values": [],
+            "value": "var(--bsi-radius-smooth)",
+            "variable-name": "--bsi-form-control-border-radius"
+        },
+        {
+            "description": "",
+            "files": [
+                "/forms/_forms.scss"
+            ],
+            "other_values": [],
+            "value": "var(--bsi-color-text-muted)",
+            "variable-name": "--bsi-form-control-placeholder-color"
+        },
+        {
+            "description": "",
+            "files": [
+                "/forms/_forms.scss"
+            ],
+            "other_values": [],
+            "value": "var(--bsi-color-text-base)",
+            "variable-name": "--bsi-form-control-label-color"
+        },
+        {
+            "description": "",
+            "files": [
+                "/forms/_forms.scss"
+            ],
+            "other_values": [],
+            "value": "var(--bsi-color-text-secondary)",
+            "variable-name": "--bsi-form-control-text-color"
+        },
+        {
+            "description": "",
+            "files": [
+                "/forms/_forms.scss"
+            ],
+            "other_values": [],
+            "value": "var(--bsi-body-font-size)",
+            "variable-name": "--bsi-form-control-font-size"
+        },
+        {
+            "description": "",
+            "files": [
+                "/forms/_forms.scss"
+            ],
+            "other_values": [],
+            "value": "var(--bsi-spacing-m)",
+            "variable-name": "--bsi-form-group-spacing-y"
+        },
+        {
+            "description": "",
+            "files": [
+                "/forms/_forms.scss"
+            ],
+            "other_values": [],
+            "value": "var(--bsi-color-border-secondary)",
+            "variable-name": "--bsi-form-checkbox-border-color"
+        },
+        {
+            "description": "",
+            "files": [
+                "/forms/_forms.scss"
+            ],
+            "other_values": [],
+            "value": "var(--bsi-radius-smooth)",
+            "variable-name": "--bsi-form-checkbox-border-radius"
+        },
+        {
+            "description": "",
+            "files": [
+                "/forms/_forms.scss"
+            ],
+            "other_values": [],
+            "value": "var(--bsi-color-background-primary)",
+            "variable-name": "--bsi-form-checked-color"
+        }
+    ],
     "it-card": [
         {
             "description": "Controls the card background color, using color tokens",
