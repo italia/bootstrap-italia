@@ -212,6 +212,51 @@ Per aggiungere degli elementi divisori fra gli elementi utilizzare dei tag `<li>
 {% endcapture %}
 {% include example.html content=example %}  
 
+### Divisori in toolbar verticale
+
+Il divisore funziona anche nella variante verticale della Toolbar. L'attributo `aria-orientation` indica l'orientamento della linea, non del contenitore: in una toolbar verticale la linea è orizzontale, quindi `aria-orientation="horizontal"`.
+
+{% comment %}Example name: Verticale con divisori{% endcomment %}
+{% capture example %}
+<nav class="toolbar toolbar-vertical">
+  <ul>
+    <li>
+      <a href="#" class="active">
+        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-comment"></use></svg>
+        <span class="toolbar-label">Messaggi</span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-camera"></use></svg>
+        <span class="toolbar-label">Immagini</span>
+      </a>
+    </li>
+    <li class="toolbar-divider" role="separator" aria-orientation="horizontal"></li>
+    <li>
+      <a href="#">
+        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-file"></use></svg>
+        <span class="toolbar-label">Documenti</span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-locked"></use></svg>
+        <span class="toolbar-label">Privacy</span>
+      </a>
+    </li>
+    <li class="toolbar-divider" role="separator" aria-orientation="horizontal"></li>
+    <li>
+      <a href="#" class="disabled" disabled aria-disabled="true">
+        <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg>
+        <span class="toolbar-label">Preferiti</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+{% endcapture %}
+{% include example.html content=example %}
+
 ## Toolbar con Badge
 
 I Badge possono essere utilizzati per indicare contenuti non letti o alert di vario tipo.
