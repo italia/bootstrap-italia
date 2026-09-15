@@ -380,6 +380,125 @@
             "variable-name": "--bsi-alert-text-color"
         }
     ],
+    "autocomplete-list": [
+        {
+            "description": "",
+            "files": [
+                "/forms/_autocomplete.scss"
+            ],
+            "other_values": [],
+            "value": "0",
+            "variable-name": "--bsi-autocomplete-list-spacing"
+        },
+        {
+            "description": "",
+            "files": [
+                "/forms/_autocomplete.scss"
+            ],
+            "other_values": [],
+            "value": "var(--bsi-color-background-inverse)",
+            "variable-name": "--bsi-autocomplete-list-background-color"
+        },
+        {
+            "description": "Change to show border",
+            "files": [
+                "/forms/_autocomplete.scss"
+            ],
+            "other_values": [],
+            "value": "transparent",
+            "variable-name": "--bsi-autocomplete-list-border-color"
+        },
+        {
+            "description": "Change to 1px to show border",
+            "files": [
+                "/forms/_autocomplete.scss"
+            ],
+            "other_values": [],
+            "value": "0",
+            "variable-name": "--bsi-autocomplete-list-border-size"
+        },
+        {
+            "description": "",
+            "files": [
+                "/forms/_autocomplete.scss"
+            ],
+            "other_values": [],
+            "value": "var(--bsi-radius-smooth)",
+            "variable-name": "--bsi-autocomplete-list-radius"
+        },
+        {
+            "description": "",
+            "files": [
+                "/forms/_autocomplete.scss"
+            ],
+            "other_values": [],
+            "value": "var(--bsi-elevation-high)",
+            "variable-name": "--bsi-autocomplete-list-shadow"
+        },
+        {
+            "description": "",
+            "files": [
+                "/forms/_autocomplete.scss"
+            ],
+            "other_values": [],
+            "value": "var(--bsi-color-text-secondary)",
+            "variable-name": "--bsi-autocomplete-item-color"
+        },
+        {
+            "description": "",
+            "files": [
+                "/forms/_autocomplete.scss"
+            ],
+            "other_values": [],
+            "value": "var(--bsi-color-text-primary)",
+            "variable-name": "--bsi-autocomplete-item-hover-color"
+        },
+        {
+            "description": "",
+            "files": [
+                "/forms/_autocomplete.scss"
+            ],
+            "other_values": [],
+            "value": "var(--bsi-color-background-primary-lighter)",
+            "variable-name": "--bsi-autocomplete-item-hover-background-color"
+        },
+        {
+            "description": "",
+            "files": [
+                "/forms/_autocomplete.scss"
+            ],
+            "other_values": [],
+            "value": "var(--bsi-icon-primary)",
+            "variable-name": "--bsi-autocomplete-item-hover-icon-color"
+        },
+        {
+            "description": "",
+            "files": [
+                "/forms/_autocomplete.scss"
+            ],
+            "other_values": [],
+            "value": "var(--bsi-body-font-size)",
+            "variable-name": "--bsi-autocomplete-item-text-size"
+        },
+        {
+            "description": "",
+            "files": [
+                "/forms/_autocomplete.scss"
+            ],
+            "other_values": [],
+            "value": "var(--bsi-spacing-xs) var(--bsi-spacing-s)",
+            "variable-name": "--bsi-autocomplete-item-spacing"
+        },
+        {
+            "description": "",
+            "files": [
+                "/forms/_autocomplete.scss"
+            ],
+            "other_values": [],
+            "value": "var(--bsi-color-text-primary)",
+            "variable-name": "--bsi-autocomplete-text-highlight"
+        }
+    ],
     "avatar": [
         {
             "description": "Controls the background for the avatar, using color tokens.",

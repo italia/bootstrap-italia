@@ -464,6 +464,8 @@ const uploadDragDrop = new UploadDragDrop(uploadElement);
   </tbody>
 </table>
 
+{% include properties.md properties=site.data.cprops.forms selector=":root" title="trasversali" %}
+
 ## Breaking change
 
 {% capture callout %}
