@@ -81,6 +81,7 @@
 
   // Colors
   --#{$prefix}color-blue-30: #{tokens.$it-color-blue-30}; // Color blue 30% (eg. for header slim background)
+  --#{$prefix}color-slate-36: #{tokens.$it-color-slate-36}; // Color for text on chip label disabled state
   --#{$prefix}color-slate-52: #{tokens.$it-color-slate-52};
   --#{$prefix}color-slate-62: #{tokens.$it-color-slate-62};
   --#{$prefix}color-slate-85: #{tokens.$it-color-slate-85};
