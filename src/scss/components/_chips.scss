@@ -138,7 +138,9 @@
   // State disabled
   &.chip-disabled {
     --#{$prefix}chip-background-color: var(--#{$prefix}color-background-disabled);
-    --#{$prefix}chip-text-color: var(--#{$prefix}color-slate-36); // color-text-disabled (3.7:1) isn't readable here: the label span isn't covered by the WCAG SC 1.4.3 exception, it's a sibling of the button, not part of the disabled control. Needs the standard 4.5:1.
+    --#{$prefix}chip-text-color: var(
+      --#{$prefix}color-slate-36
+    ); // color-text-disabled (3.7:1) isn't readable here: the label span isn't covered by the WCAG SC 1.4.3 exception, it's a sibling of the button, not part of the disabled control. Needs the standard 4.5:1.
 
     &:hover {
       cursor: not-allowed;
