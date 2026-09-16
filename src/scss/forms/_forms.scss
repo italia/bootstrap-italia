@@ -7,6 +7,8 @@
 @use '../base/mixins/transition' as *;
 @use '../base/mixins/focus' as *;
 
+// Properties
+
 // Form properties are :root scoped to allow for easy customization of form elements.
 :root {
   --#{$prefix}form-control-height: 2.5rem;
@@ -23,6 +25,8 @@
   --#{$prefix}form-checkbox-border-radius: var(--#{$prefix}radius-smooth);
   --#{$prefix}form-checked-color: var(--#{$prefix}color-background-primary);
 }
+
+// Styles
 
 input[readonly],
 textarea[readonly],

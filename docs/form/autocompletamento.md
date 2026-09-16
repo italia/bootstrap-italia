@@ -361,7 +361,7 @@ La configurazione per Bootstrap Italia è stata settata in italiano.
 Per maggiori dettagli sulle stringhe che possono essere passate al componente
 fare riferimento alla [guida ufficiale](https://github.com/alphagov/accessible-autocomplete?tab=readme-ov-file#internationalization).
 
-{% include properties.md properties=site.data.cprops.autocomplete %}
+{% include properties.md properties=site.data.cprops.forms selector=":root" title="trasversali" %}
 
 ## Breaking change
 

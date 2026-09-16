@@ -66,3 +66,5 @@ Per ottenere select con raggruppamenti, utilizzare il tag HTML `<optgroup>` per 
   </select>
 </div>
 {% endcapture %}{% include example.html content=example %}
+
+{% include properties.md properties=site.data.cprops.forms selector=":root" title="trasversali" %}

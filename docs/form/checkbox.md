@@ -123,6 +123,8 @@ Per l'utilizzo del componente mixed button, è disponibile un esempio integrato 
 </div>
 {% endcapture %}{% include example.html content=example %}
 
+{% include properties.md properties=site.data.cprops.forms selector=":root" title="trasversali" %}
+
 ## Breaking change
 
 {% capture callout %}
