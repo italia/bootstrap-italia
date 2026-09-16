@@ -101,7 +101,7 @@ class AcceptOverlay extends BaseComponent {
     }
 
     this._element.classList.add(CLASS_NAME_SHOW)
-    this._overlayable.add(CLASS_NAME_SHOW)
+    this._overlayable.classList.add(CLASS_NAME_SHOW)
 
     const transitionComplete = () => {
       this._isTransitioning = false
