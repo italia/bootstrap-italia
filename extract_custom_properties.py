@@ -32,10 +32,12 @@ for root, dirs, files in os.walk(SCSS_BASE_PATH, topdown=True):
                         if '// Styles' in line:
                             break
                         if not selector:
-                            selector = re.match(r'^\s*([.#][a-z0-9-]+)\s*{', line)
+                            selector = re.match(r'^\s*([.#:][a-z0-9-]+)\s*{', line)
                             if selector:
                                 selector = selector.group(1)
                                 selector = selector.replace(".", "")
+                                if selector.startswith(":root"):
+                                    selector = selector.replace(":root", file.replace(".scss", "").replace("_", ""))
                         else:
                             vars.append(re.findall(r'\s+(--#{\$prefix}[a-z0-9-]+):\s(.*);(\s\/\/.*)?', line))
             if selector and vars:

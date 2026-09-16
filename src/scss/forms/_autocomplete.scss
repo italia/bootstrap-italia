@@ -20,6 +20,8 @@
   padding: 0 var(--#{$prefix}form-control-spacing);
 }
 
+// Properties
+
 // Aucomplete result list
 .autocomplete-list {
   --#{$prefix}autocomplete-list-spacing: 0;
@@ -127,6 +129,8 @@
     font-weight: var(--#{$prefix}font-weight-strong);
   }
 }
+
+// Styles
 
 // Variant Big
 .autocomplete-wrapper-big {
