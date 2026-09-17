@@ -81,6 +81,7 @@ $rating-icon-full: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/sv
     font-size: var(--#{$prefix}rating-font-size);
     float: right;
     width: auto;
+    margin: 0;
     margin-left: var(--#{$prefix}spacing-xxs);
     font-weight: var(--#{$prefix}rating-font-weight);
     line-height: var(--#{$prefix}rating-line-height);
