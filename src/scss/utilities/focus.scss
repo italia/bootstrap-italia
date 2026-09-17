@@ -8,9 +8,13 @@
 .it-carousel-wrapper .splide__pagination button:focus:not([data-focus-mouse='true']),
 .upload:focus:not([data-focus-mouse='true']) + label,
 .upload-dragdrop-input:focus[type='file']:not([data-focus-mouse='true']) + label,
-.avatar-upload:focus-within:not([data-focus-mouse='true']),
-.rating input:focus:not([data-focus-mouse='true']) + label svg {
+.avatar-upload:focus-within:not([data-focus-mouse='true']) {
   @include focus;
+}
+
+.rating input:focus:not([data-focus-mouse='true']) + label {
+  @include focus;
+  border-radius: 50%;
 }
 
 [tabindex='-1']:focus:not(:focus-visible) {
