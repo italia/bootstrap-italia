@@ -9,7 +9,7 @@
     },
     {
         "name": "Proporzione personalizzata",
-        "content": "\n<div class=\"ratio ratio-example\" style=\"--bs-aspect-ratio: 50%;\">\n  <div>2x1</div>\n</div>\n"
+        "content": "\n<div class=\"ratio ratio-example\" style=\"--bsi-aspect-ratio: 50%;\">\n  <div>2x1</div>\n</div>\n"
     },
     {
         "name": "Proporzione personalizzata responsive",

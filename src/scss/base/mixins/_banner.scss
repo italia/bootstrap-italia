@@ -1,3 +1,6 @@
+@use '../config' as *;
+@use '../variables' as *;
+
 @mixin bsBanner($file) {
   /*!
    * Bootstrap Italia #{$file} (https://italia.github.io/bootstrap-italia/)

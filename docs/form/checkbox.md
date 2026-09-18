@@ -28,7 +28,7 @@ Per allineare orizzontalmente le `checkbox` basterà aggiungere la classe `.form
 {% comment %}Example name: In linea {% endcomment %}
 {% capture example %}
 <fieldset>
-  <legend>Gruppo di checkbox</legend>
+<legend>Gruppo di checkbox</legend>
   <div class="form-check form-check-inline">
     <input id="checkbox2" type="checkbox">
     <label for="checkbox2">Checkbox non selezionato</label>
@@ -122,6 +122,8 @@ Per l'utilizzo del componente mixed button, è disponibile un esempio integrato 
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
+
+{% include properties.md properties=site.data.cprops.forms selector=":root" title="trasversali" %}
 
 ## Breaking change
 

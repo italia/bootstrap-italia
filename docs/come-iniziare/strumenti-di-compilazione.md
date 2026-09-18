@@ -177,4 +177,4 @@ Aggiunta di una [GitHub release](https://help.github.com/articles/about-releases
 ###### Continua la lettura >
 
 Se ti interessa sapere come modificare o aggiungere nuovi componenti alla libreria Bootstrap Italia,
-continua a leggere alla [pagina che spiega come farlo]({{ site.baseurl }}/docs/come-iniziare/modificare-componenti/).
+continua a leggere alla [pagina che spiega come farlo]({{ site.baseurl }}/docs/personalizzare-la-libreria/componenti/).

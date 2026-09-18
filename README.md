@@ -9,7 +9,7 @@
 
 _🇬🇧 [English version](README.EN.md)_
 
-_⚠️ [La versione 1.x di Bootstrap Italia (basata su Bootstrap 4) è deprecata](https://github.com/italia/bootstrap-italia/tree/1.x)_
+_⚠️ Attenzione: questo branch 3.x è in lavorazione. Non è consigliato per l'utilizzo in ambienti di produzione._
 
 Bootstrap Italia è un framework basato su [Bootstrap 5](https://getbootstrap.com/docs/5.2/getting-started/introduction/).
 
@@ -19,7 +19,7 @@ Bootstrap Italia è la risorsa di sviluppo dell'ecosistema [design system del Pa
 
 La roadmap del progetto è consultabile nel [piano attività di Designers Italia](https://designers.italia.it/piano-attivita/).
 
-**[Esplora la documentazione di sviluppo »](https://italia.github.io/bootstrap-italia/)**
+**[Esplora la documentazione di sviluppo del ramo 3.x »](https://bootstrap-italia-3.vercel.app/)**
 
 **[Esplora la documentazione del design system del Paese »](https://designers.italia.it/design-system/come-iniziare/)**
 

@@ -22,12 +22,13 @@ Puoi usare l'attributo `data-bs-toggle` con valore `sticky` per attivare la funz
 
 {% comment %}Example name: Base{% endcomment %}
 {% capture example %}
+
 <div class="it-header-slim-wrapper" data-bs-toggle="sticky">
   <div class="container">
     <div class="row">
       <div class="col-12">
         <div class="it-header-slim-wrapper-content">
-          <a class="d-none d-lg-block navbar-brand" href="#">Elemento Sticky</a>
+          <a class="d-block navbar-brand" href="#">Elemento Sticky</a>
         </div>
       </div>
     </div>
@@ -44,12 +45,13 @@ Per facilitare il cambio di stile dell'elemento è possibile usare la proprietà
 
 {% comment %}Example name: Con posizione fissa{% endcomment %}
 {% capture example %}
+
 <div class="it-header-slim-wrapper it-header-sticky" data-bs-toggle="sticky" data-bs-position-type="fixed" data-bs-target="#stickyTrigger1" data-bs-sticky-class-name="is-sticky">
   <div class="container">
     <div class="row">
       <div class="col-12">
         <div class="it-header-slim-wrapper-content">
-          <a class="d-none d-lg-block navbar-brand" href="#">Elemento Sticky con position fixed</a>
+          <a class="d-block navbar-brand" href="#">Elemento Sticky con position fixed</a>
         </div>
       </div>
     </div>
@@ -65,12 +67,13 @@ Se sono presenti più componenti sticky nella pagina, è possibile fare in modo 
 
 {% comment %}Example name: Variante impilabile{% endcomment %}
 {% capture example %}
+
 <div class="it-header-slim-wrapper" data-bs-toggle="sticky" data-bs-stackable="true">
   <div class="container">
     <div class="row">
       <div class="col-12">
         <div class="it-header-slim-wrapper-content">
-          <a class="d-none d-lg-block navbar-brand" href="#">Elemento Sticky impilabile</a>
+          <a class="d-block navbar-brand" href="#">Elemento Sticky impilabile</a>
         </div>
       </div>
     </div>
@@ -99,24 +102,19 @@ In tal caso è necessario utilizzare l'attributo `data-bs-target`.
 
 {% comment %}Example name: Attivabile con target{% endcomment %}
 {% capture example %}
+
 <header class="it-header-wrapper" data-bs-toggle="sticky"  data-bs-target="#stickyTrigger1">
   <div class="it-header-slim-wrapper">
     <div class="container">
       <div class="row">
         <div class="col-12">
           <div class="it-header-slim-wrapper-content">
-            <a class="d-none d-lg-block navbar-brand" href="#">Ente appartenenza</a>
+            <a class="d-block navbar-brand" href="#">Ente appartenenza</a>
             <div class="nav-mobile">
               <nav aria-label="Navigazione secondaria">
-                <a class="it-opener d-lg-none" data-bs-toggle="collapse" href="#menuC1" role="button" aria-expanded="false" aria-controls="menuC1">
-                  <span>Ente appartenenza</span>
-                  <svg class="icon" aria-hidden="true">
-                    <use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use>
-                  </svg>
-                </a>
-                <div class="link-list-wrapper collapse" id="menuC1">
-                  <ul class="link-list">
-                    <li><a class="dropdown-item list-item" href="#">Link 1</a></li>
+                <div class="link-list-wrapper d-none d-lg-flex">
+                  <ul class="link-list" aria-label="Link utili">
+                    <li><a class="list-item" href="#">Link 1</a></li>
                     <li><a class="list-item active" href="#" aria-current="page">Link 2 (Attivo)</a></li>
                   </ul>
                 </div>
@@ -154,7 +152,7 @@ In tal caso è necessario utilizzare l'attributo `data-bs-target`.
         <div class="row">
           <div class="col-12">
             <!--start nav-->
-            <nav class="navbar navbar-expand-lg has-megamenu" aria-label="Navigazione principale">
+            <nav class="navbar navbar-expand-lg" aria-label="Navigazione principale">
               <button class="custom-navbar-toggler" type="button" aria-controls="navC1" aria-label="Mostra/Nascondi la navigazione" data-bs-toggle="navbarcollapsible" data-bs-target="#navC1">
                 <svg class="icon"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-burger"></use></svg>
               </button>
@@ -192,10 +190,10 @@ In tal caso è necessario utilizzare l'attributo `data-bs-target`.
 È possibile creare un'istanza con il constructor, ad esempio:
 
 ```js
-import { Sticky } from 'bootstrap-italia';
+import { Sticky } from 'bootstrap-italia'
 
-const stickyElement = document.getElementById('sticky');
-const sticky = new Sticky(stickyElement, options);
+const stickyElement = document.getElementById('sticky')
+const sticky = new Sticky(stickyElement, options)
 ```
 
 #### Opzioni
@@ -203,15 +201,15 @@ const sticky = new Sticky(stickyElement, options);
 Le opzioni possono essere passate tramite gli attributi data o tramite JavaScript. Per quanto riguarda gli attributi data, aggiungi il nome dell'opzione a `data-bs`, come in `data-bs-position-type=""`.
 
 ```js
-import { Sticky } from 'bootstrap-italia';
+import { Sticky } from 'bootstrap-italia'
 
-const stickyElement = document.getElementById('sticky');
+const stickyElement = document.getElementById('sticky')
 const sticky = new Sticky(stickyElement, {
   positionType: 'sticky',
   stickyClassName: 'is-sticky',
   stackable: true,
   paddingTop: 0,
-});
+})
 ```
 
 <div class="table-responsive">
@@ -295,7 +293,7 @@ La classe `Sticky` di Bootstrap espone alcuni eventi per agganciare comportament
 </div>
 
 ```js
-var stickyElement = document.getElementById('sticky');
+var stickyElement = document.getElementById('sticky')
 stickyElement.addEventListener('on.bs.sticky', () => {
   // do something...
 })
@@ -304,8 +302,9 @@ stickyElement.addEventListener('on.bs.sticky', () => {
 ## Breaking changes
 
 {% capture callout %}
-La navbar presente nel markup dell'esempio "Attivabile con target", quando aperta in versione mobile o a forte ingrandimento, è stata reimplementata come modale per migliorare l'accessibilità con le combinazioni principali di lettori di schermo, sistema operativo e browser. Modifiche principali: 
-- struttura: la navbar ora utilizza un pattern dialog con backdrop 
+La navbar presente nel markup dell'esempio "Attivabile con target", quando aperta in versione mobile o a forte ingrandimento, è stata reimplementata come modale per migliorare l'accessibilità con le combinazioni principali di lettori di schermo, sistema operativo e browser. Modifiche principali:
+
+- struttura: la navbar ora utilizza un pattern dialog con backdrop
 - gerarchia visiva: la gestione `z-index` è allineata al componente modale
 - gestione del focus: implementato `focus-trap.js` per utenti da tastiera e lettori di schermo, e gestione inert
 - il comportamento è diverso se implementata dentro o fuori dall'elemento `main` di pagina (se presente)

@@ -1,4 +1,6 @@
-// Pagination
+@use '../config' as *;
+@use '../variables' as *;
+@use '../vendor/rfs' as *;
 
 // scss-docs-start pagination-mixin
 @mixin pagination-size($padding-y, $padding-x, $font-size, $border-radius) {

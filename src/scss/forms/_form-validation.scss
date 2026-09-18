@@ -1,0 +1,90 @@
+@use '../base/config' as *;
+@use '../base/variables' as *;
+
+.form-feedback {
+  width: 100%;
+  margin-top: 0.25rem;
+  font-size: 0.75rem;
+}
+
+.input-group-text:has(~ [data-focus-mouse='true']:not(.btn)),
+[data-focus-mouse='true']:not(.btn) ~ .input-group-text,
+button:has(~ [data-focus-mouse='true']:not(.btn)),
+[data-focus-mouse='true']:not(.btn) + button {
+  border-color: inherit !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+//same border color for element in input-group
+.input-group-text:has(~ .is-invalid),
+.is-invalid ~ .input-group-text,
+button:has(~ .is-invalid),
+.is-invalid + button {
+  border-color: var(--#{$prefix}color-border-danger) !important;
+}
+
+.sr-only-justvalidate-bi {
+  display: none;
+}
+
+.is-valid,
+.is-invalid {
+  padding-right: calc(1.5em + 0.75rem) !important;
+
+  &[type='number'] {
+    padding-right: calc(1.5em + 0.75rem + var(--#{$prefix}form-control-spacing) + 1rem) !important;
+  }
+}
+
+.was-validated &:valid,
+.is-valid {
+  border-color: var(--#{$prefix}color-border-success) !important;
+  background-image: url('data:image/svg+xml,<svg width="24" height="24" viewBox="0 0 24 24" fill="%23008055" xmlns="http://www.w3.org/2000/svg"><path d="M9.6,16.9L4,11.4l0.8-0.7l4.8,4.8l8.5-8.4l0.7,0.7L9.6,16.9z" /></svg>');
+
+  ~ .warning-feedback {
+    display: block;
+  }
+}
+
+.was-validated &:invalid,
+.is-invalid {
+  border-color: var(--#{$prefix}color-border-danger) !important;
+  background-image: url('data:image/svg+xml,<svg width="24" fill="%23cc334d" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.7,12l6.7,6.6l-0.8,0.8L12,12.7l-6.6,6.7l-0.8-0.8l6.7-6.6L4.6,5.4l0.8-0.8l6.6,6.7l6.6-6.7l0.8,0.8L12.7,12z" /></svg>');
+}
+
+.form-control {
+  &.warning {
+    border-color: var(--#{$prefix}color-border-warning) !important;
+    background-image: url('data:image/svg+xml,<svg width="24" height="24" fill="%23995c00" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.5,17h-1V2h1V17z M12.5,20h-1v2h1V20z" /></svg>');
+  }
+}
+
+.input-group-text:has(~ .is-valid),
+.is-valid ~ .input-group-text,
+button:has(~ .is-valid),
+.is-valid + button {
+  border-color: var(--#{$prefix}color-border-success);
+}
+
+//move buttons to make validation icon visible
+.is-valid + .input-group-text.align-buttons,
+.is-invalid + .input-group-text.align-buttons {
+  right: 30px;
+}
+
+.is-invalid + .input-group-text.align-buttons {
+  bottom: 22px; //height of the form-feedback element
+}
+
+.autocomplete__wrapper {
+  .form-feedback {
+    position: absolute;
+  }
+}
+
+textarea {
+  &.form-control {
+    background-position: top 0.5em right !important;
+  }
+}

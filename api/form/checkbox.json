@@ -5,7 +5,7 @@
     },
     {
         "name": "In linea ",
-        "content": "\n<fieldset>\n  <legend>Gruppo di checkbox</legend>\n  <div class=\"form-check form-check-inline\">\n    <input id=\"checkbox2\" type=\"checkbox\">\n    <label for=\"checkbox2\">Checkbox non selezionato</label>\n  </div>\n  <div class=\"form-check form-check-inline\">\n    <input id=\"checkbox3\" type=\"checkbox\" checked=\"checked\">\n    <label for=\"checkbox3\">Checkbox selezionato</label>\n  </div>\n</fieldset>\n"
+        "content": "\n<fieldset>\n<legend>Gruppo di checkbox</legend>\n  <div class=\"form-check form-check-inline\">\n    <input id=\"checkbox2\" type=\"checkbox\">\n    <label for=\"checkbox2\">Checkbox non selezionato</label>\n  </div>\n  <div class=\"form-check form-check-inline\">\n    <input id=\"checkbox3\" type=\"checkbox\" checked=\"checked\">\n    <label for=\"checkbox3\">Checkbox selezionato</label>\n  </div>\n</fieldset>\n"
     },
     {
         "name": "Disabilitato ",

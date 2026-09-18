@@ -1,4 +1,23 @@
-@media (max-width: #{map-get($grid-breakpoints, lg)}) {
+@use 'sass:map';
+@use '../base/config' as *;
+@use '../base/variables' as *;
+@use '../base/mixins/breakpoints' as *;
+
+// Component: navscrolltheme
+//
+// Description: Component styles for navscrolltheme
+//
+
+// Variables
+//
+
+// Properties
+//
+
+// Styles
+//
+
+@media (max-width: #{map.get($grid-breakpoints, lg)}) {
   .navbar {
     &.it-navscroll-wrapper {
       &.theme-dark-mobile {
