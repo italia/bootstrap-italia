@@ -1549,7 +1549,6 @@
             "other_values": [
                 "var(--bsi-chip-link-hover)",
                 "var(--bsi-color-text-danger)",
-                "var(--bsi-color-text-disabled)",
                 "var(--bsi-color-text-primary)",
                 "var(--bsi-color-text-success)",
                 "var(--bsi-color-text-warning)"
@@ -4620,17 +4619,6 @@
             "other_values": [],
             "value": "var(--bsi-font-weight-solid)",
             "variable-name": "--bsi-rating-font-weight"
-        },
-        {
-            "description": "Controls the icon fill for the rating, using color tokens.",
-            "files": [
-                "_rating.scss"
-            ],
-            "other_values": [
-                "var(--bsi-icon-primary)"
-            ],
-            "value": "var(--bsi-color-background-secondary-light)",
-            "variable-name": "--bsi-rating-icon-fill"
         },
         {
             "description": "Controls the line height for the rating, using font tokens.",
