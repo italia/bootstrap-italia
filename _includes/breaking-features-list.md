@@ -50,7 +50,8 @@
 - Per i metadati è stata rimossa la classe `.it-card-related` a favore del solo uso dell'elemento `<footer>` con classe `.it-card-footer` a seguire il corpo della card.
 - Usa un `<div>` con la sola classe `.it-card-actions` a seguire il corpo della card per ospitare link correlati e/o secondari.
 - È stata rimossa la classe `.chips-list` dall'elemento `<ul>` con classe `.it-card-chips` che ospita una lista di più argomenti.
-- La doppia classe `.card-profile` è stata sostituita da `.card-profile-content` per le card di tipo profilo.
+- La doppia classe `.card-profile` è stata sostituita da `.card-profile-content` per le card di tipo profilo e luogo.
+- Rimosso il componente card legacy (classi `.card`, deprecate) e la relativa documentazione `card-old`; migra alle classi `.it-card` documentate in questa pagina.
 
 
 ### Chips
@@ -58,6 +59,8 @@
 - È stata rimossa la classe `.chip-simple`.
 - Nelle chip con pulsante di chiusura il tag `<label>` diventa `<span>`.
 - Alle icone del pulsante di chiusura per le chip con classe `.chip-lg` viene aggiunta la classe `.icon-md`. 
+- Il pulsante di chiusura richiede ora `data-bs-dismiss="chip"` (in precedenza, dove funzionava, si usava `data-bs-dismiss="alert"` insieme alla classe `alert` aggiunta al contenitore — entrambi da rimuovere). Le chip disabilitate usano `class="disabled"` + `aria-disabled="true"` sul bottone, non più l'attributo `disabled` nativo, per restare raggiungibili da tastiera.
+- I chip con link (`<a>`) non supportano il pulsante di chiusura: un elemento interattivo non può contenerne validamente un altro. Gli esempi `chip-lg` con chiusura in "Gruppi di Chip con link" sono stati rimossi.
 
 
 ### Dropdown
@@ -81,6 +84,8 @@
 ### Header
 
 - Rimossa la variante `theme-light-desk` per Header Nav, ora è possibile impostare il tema chiaro con la class `.theme-light` al tag `<nav class="it-header-navbar-wrapper">`.
+- Rimossa la variante `theme-dark-mobile`: le voci del menu su mobile hanno sempre sfondo bianco e link nel colore primario.
+- I link accessori dello Slim Header non sono più raccolti in un menu a tendina che si apre dal nome dell'ente: su mobile confluiscono nel menu di navigazione insieme al logo e ai social. Negli esempi il pulsante `.it-opener` è stato rimosso e l'elenco è nascosto sotto il breakpoint `lg` con `.d-none.d-lg-flex`. Le regole di stile di `.it-opener` restano disponibili per retrocompatibilità ma sono da considerarsi deprecate.
 - Cambiata la dimensione del pulsante Accedi: cambiato classe da `.btn-sm` a `.btn-sx`.
 - Rimossa la classe `.ms-1` dall'icona `<svg>` che segue la voce Megamenu negli esempi.
 
@@ -167,6 +172,16 @@ La validazione con JustValidate, e le classi che applicano gli stili di validazi
 ### Proporzioni
 
 La variabile per il controllo della proporzione custom è ora `--bsi-aspect-ratio`, non `--bs-aspect-ratio`.
+
+
+### Rating
+
+- Le stelle non selezionate ora hanno una forma a contorno (outline), non più una stella piena semplicemente più chiara: la distinzione tra stelle attive/inattive non si basa più solo sul colore.
+- Il colore di default a riposo è cambiato: prima `--bsi-color-background-secondary-light`, ora `--bsi-icon-secondary`.
+- L'ordine delle stelle nel markup è ora da 1 a 5 (era da 5 a 1): la navigazione da tastiera segue ora l'ordine visivo da sinistra a destra.
+- L'icona non è più un `<svg><use>` dentro la `<label>`: è generata via CSS (`mask-image`), pilotata dalla custom property `--bsi-rating-icon-fill`. Chi personalizzava lo stile (incluso il focus ring) puntando all'`<svg>` interno deve aggiornare il selettore.
+- Il gruppo non è più allineato a destra di default nel contenitore: seguiva `justify-content: flex-end` come effetto collaterale del vecchio ordinamento inverso, ora segue il flusso naturale a sinistra.
+- Nella variante sola lettura, `aria-hidden="true"` va aggiunto anche sulle `<label>`, non solo sugli `<input>`.
 
 
 ### Sections
