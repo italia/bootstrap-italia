@@ -1,3 +1,166 @@
+# [3.0.0-beta.6](https://github.com/italia/bootstrap-italia/compare/v3.0.0-beta.5...v3.0.0-beta.6) (2026-09-18)
+
+### Bug Fixes
+
+**Navbar**
+
+* add prefix to CSS custom property --navbar-link-border-color ([4e302c1](https://github.com/italia/bootstrap-italia/commit/4e302c1175fcf642742c8641956e2d8b448adb50))
+* correct navbar-disabled-item-opacity typo in _nav.scss ([4d37b9c](https://github.com/italia/bootstrap-italia/commit/4d37b9ceb65747b74fe0056e9d81c0de227fcc5d)), closes [#1888](https://github.com/italia/bootstrap-italia/issues/1888)
+* add default for navbar-close-button-text-color ([21bbfae](https://github.com/italia/bootstrap-italia/commit/21bbfae00831ad98f8ef187bb399b5787da6f40b)), closes [#1888](https://github.com/italia/bootstrap-italia/issues/1888)
+* fix broken brand custom properties ([5c08eea](https://github.com/italia/bootstrap-italia/commit/5c08eead5a26c943725888ac4cadadbf8f1d845f)), closes [#1902](https://github.com/italia/bootstrap-italia/issues/1902)
+* reuse navbar-link-padding-x instead of orphaned nav-link-padding-x ([491f2b7](https://github.com/italia/bootstrap-italia/commit/491f2b71a0801a1c89c3229cff38bb29f7001254)), closes [#1888](https://github.com/italia/bootstrap-italia/issues/1888)
+* use CSS custom properties instead of Sass variable interpolation in backdrop ([35231e8](https://github.com/italia/bootstrap-italia/commit/35231e826c2dce01b764d2044560d57cdb435524)), closes [#1902](https://github.com/italia/bootstrap-italia/issues/1902)
+* use prefixed custom property for link border color ([41b53e6](https://github.com/italia/bootstrap-italia/commit/41b53e6b5b5951a1b39c8900ac1e736a41b45c72)), closes [#1888](https://github.com/italia/bootstrap-italia/issues/1888)
+* remove redundant disabled-item opacity rule in _navbar.scss ([c625875](https://github.com/italia/bootstrap-italia/commit/c62587529219360aad7f82d57043f53ddd226eb3)), closes [#1888](https://github.com/italia/bootstrap-italia/issues/1888)
+* restore missing padding on .nav-link in _nav.scss ([9c503f1](https://github.com/italia/bootstrap-italia/commit/9c503f1764b3e01d5a7c7e4bdded500186853ee0)), closes [#1888](https://github.com/italia/bootstrap-italia/issues/1888)
+
+**Mobile navbar & menu accessibility**
+
+* close the focus trap cycle and move it before isolating the background ([4e9c7e6](https://github.com/italia/bootstrap-italia/commit/4e9c7e6fabd9798cde35c27d0f0c9e9460e9962c)), closes [#1753](https://github.com/italia/bootstrap-italia/issues/1753)
+* contain mobile navbar focus ring within element bounds ([3f9cab2](https://github.com/italia/bootstrap-italia/commit/3f9cab28bafe19b7519268f665d390990f86e197)), closes [#1909](https://github.com/italia/bootstrap-italia/issues/1909)
+* increase line-height of dropdown/megamenu list items ([df0a6bf](https://github.com/italia/bootstrap-italia/commit/df0a6bf05f94319b7d253a73a598af8f29feea22)), closes [#1909](https://github.com/italia/bootstrap-italia/issues/1909)
+* make dropdown-item.list-item full width ([f2dfca2](https://github.com/italia/bootstrap-italia/commit/f2dfca23b258f762be6f6de4bedc8d48fa1dc526)), closes [#1909](https://github.com/italia/bootstrap-italia/issues/1909)
+* make megamenu heading/footer links full width ([7ea10df](https://github.com/italia/bootstrap-italia/commit/7ea10df7684ac6339d604a119a0cbaae7cb7b795)), closes [#1909](https://github.com/italia/bootstrap-italia/issues/1909)
+* make mobile nav-link fill full row width ([a0d62ac](https://github.com/italia/bootstrap-italia/commit/a0d62ac1e0a94a3463654c72a0afab5068a8d67a)), closes [#1909](https://github.com/italia/bootstrap-italia/issues/1909)
+* restore visible overflow on mobile navbar-nav ([bed837e](https://github.com/italia/bootstrap-italia/commit/bed837eb8301cdb53d846197d407c0c5e1216b98)), closes [#1907](https://github.com/italia/bootstrap-italia/issues/1907)
+
+**Card**
+
+* connect font-weight-weak to font-weight-base ([d8bac3e](https://github.com/italia/bootstrap-italia/commit/d8bac3e17ae5bd67e4a7c69cc0d8b215adcbfd03)), closes [#1888](https://github.com/italia/bootstrap-italia/issues/1888)
+* card link color token ([d9e8057](https://github.com/italia/bootstrap-italia/commit/d9e805713daa7f71c8ef1a113378a46445723262))
+* card places HTML example ([2294fda](https://github.com/italia/bootstrap-italia/commit/2294fda3f5571aa7737db1120bbc98d4e7292ecd))
+* connect hover link to color-link-secondary-hover ([7e41c9e](https://github.com/italia/bootstrap-italia/commit/7e41c9e502336c559de0efe8be79577e422cc1aa)), closes [#1888](https://github.com/italia/bootstrap-italia/issues/1888)
+* complete [#1566](https://github.com/italia/bootstrap-italia/issues/1566) markup rename for place-type profile cards ([1e9d2d2](https://github.com/italia/bootstrap-italia/commit/1e9d2d2ee1b502e1b71f164ce1102bf1d6e0ecef))
+
+**Tab**
+
+* align tab-border-width-cards default with the value actually in use ([9dbc93c](https://github.com/italia/bootstrap-italia/commit/9dbc93c934293f940ecc49d95f355003616459ec)), closes [#1888](https://github.com/italia/bootstrap-italia/issues/1888)
+* connect disconnected custom properties in _tab.scss ([dcf5a10](https://github.com/italia/bootstrap-italia/commit/dcf5a10e18a7d3ec1789474e6eaeeea925bdbf44)), closes [#1888](https://github.com/italia/bootstrap-italia/issues/1888)
+* connect tab-close-btn-color-hover ([45e368b](https://github.com/italia/bootstrap-italia/commit/45e368be16bd5e6c4536bb99d68433c4072b978d)), closes [#1888](https://github.com/italia/bootstrap-italia/issues/1888)
+* tab hover text color reads a non-existent token ([387efca](https://github.com/italia/bootstrap-italia/commit/387efca41f299998aa44515daea6f36c2d377931)), closes [#1888](https://github.com/italia/bootstrap-italia/issues/1888)
+* tab-close-btn-color-hover references a non-existent primary token ([97b5c72](https://github.com/italia/bootstrap-italia/commit/97b5c72e8b00b669ff73056c8c443530862551bd)), closes [#1888](https://github.com/italia/bootstrap-italia/issues/1888)
+
+**Toolbar**
+
+* reconnect and rename toolbar-item-margin-x/-y to toolbar-vertical-item-margin-x/-y ([8e980ec](https://github.com/italia/bootstrap-italia/commit/8e980eca828d5553697c0602cb35a0774a0906c7)), closes [#1888](https://github.com/italia/bootstrap-italia/issues/1888)
+* remove toolbar-dropdown-caret-color and toolbar-dropdown-caret-size ([1822534](https://github.com/italia/bootstrap-italia/commit/18225340d800503e1c377cf8dbf9fb40050cc2fd)), closes [#1888](https://github.com/italia/bootstrap-italia/issues/1888)
+* remove toolbar-dropdown-padding-x ([87a2368](https://github.com/italia/bootstrap-italia/commit/87a23684c07814fcda0f5368ac2b2d499442fce1)), closes [#1888](https://github.com/italia/bootstrap-italia/issues/1888)
+* remove toolbar-icon-font-size and toolbar-more-icon-font-size ([6062bd1](https://github.com/italia/bootstrap-italia/commit/6062bd1aff1b2eee1aa37705556210f29bb840ea)), closes [#1888](https://github.com/italia/bootstrap-italia/issues/1888)
+
+**Accept overlay**
+
+* fix standard color for links inside accept-overlay to color-link-inverse; text-white on <a> tags no longer needed ([9db9407](https://github.com/italia/bootstrap-italia/commit/9db9407d244f378816a974289eb7f5e479c0fbfd))
+* connect acceptoverlay-icon-margin-bottom to icon-spacing ([c8c3269](https://github.com/italia/bootstrap-italia/commit/c8c32690006c3b175d03a05e9f2a3ea67293d845))
+* fix icon color contrast on primary variant ([ae18c25](https://github.com/italia/bootstrap-italia/commit/ae18c2589e7a2b2f5c67a01f6dc494559b1fab74)), closes [#1888](https://github.com/italia/bootstrap-italia/issues/1888)
+* rename acceptoverlay-color-background to acceptoverlay-background-color ([77f71c0](https://github.com/italia/bootstrap-italia/commit/77f71c07831251c4940892f2de4bb6235cab3741)), closes [#1888](https://github.com/italia/bootstrap-italia/issues/1888)
+* fix missing classList call on overlayable element ([2b27f39](https://github.com/italia/bootstrap-italia/commit/2b27f390264ccaab409e1107bf46b3c7c9f295c2))
+
+**Header / mobile menu**
+
+* move focus into the mobile menu from the close button ([fd28b82](https://github.com/italia/bootstrap-italia/commit/fd28b82f68bfbc900aabdfd469cfcc3082f242df))
+* font-size navbar-secondary, remove 2 orphan properties ([267ac4a](https://github.com/italia/bootstrap-italia/commit/267ac4a08fceb8ba5617fd65f2d57f4777afd673)), closes [#1888](https://github.com/italia/bootstrap-italia/issues/1888)
+* isolate the entire page behind the mobile menu from assistive technologies ([10ef078](https://github.com/italia/bootstrap-italia/commit/10ef078600ebf0f756ca817cfb9127006575664c)), closes [#1753](https://github.com/italia/bootstrap-italia/issues/1753)
+* remove group headings from the mobile menu ([8aead11](https://github.com/italia/bootstrap-italia/commit/8aead11b4f149f5666e2042b558ceb35e4bc8321))
+
+**Modal**
+
+* connect heading-line-height to heading-leading ([1811772](https://github.com/italia/bootstrap-italia/commit/181177248ab8b648a64f4d8a8f3b06a2b57ca425)), closes [#1888](https://github.com/italia/bootstrap-italia/issues/1888)
+* connect modal-inner-border-radius on the footer ([8285eee](https://github.com/italia/bootstrap-italia/commit/8285eee543f976a8351741920034b7b881c555ff)), closes [#1888](https://github.com/italia/bootstrap-italia/issues/1888)
+* make the dialog announced by NVDA too ([247028b](https://github.com/italia/bootstrap-italia/commit/247028b360bbd676e93c60e85d3856e29c434dca))
+* use CSS custom properties instead of Sass variable interpolation in backdrop ([746f06e](https://github.com/italia/bootstrap-italia/commit/746f06ea0cac6096cc45c71cb6f6371534ecdc53)), closes [#1902](https://github.com/italia/bootstrap-italia/issues/1902)
+
+**Breadcrumb**
+
+* connect font-weight-regular to font-weight-base ([f741f23](https://github.com/italia/bootstrap-italia/commit/f741f2347b026149274892c067843b30de3e5e34)), closes [#1888](https://github.com/italia/bootstrap-italia/issues/1888)
+* connect breadcrumb-border-radius, remove unused imports ([e4fb5f7](https://github.com/italia/bootstrap-italia/commit/e4fb5f7925c98307551512bcb532c99c3d082890)), closes [#1888](https://github.com/italia/bootstrap-italia/issues/1888)
+* default vars for avatar and breadcrumb ([e30ace9](https://github.com/italia/bootstrap-italia/commit/e30ace9a3981af09cda1b8deb3a7a350319bb00c))
+
+**Chips**
+
+* use color-slate-36 for disabled label text contrast ([80a8063](https://github.com/italia/bootstrap-italia/commit/80a8063de038f98d34183939439370c7e8a7d5cf))
+* fix typo in _chips.scss ([540cda5](https://github.com/italia/bootstrap-italia/commit/540cda5aba9e92d817be65e6bc84833184164214))
+* **chip:** implement dismissable chip component ([aa1dadf](https://github.com/italia/bootstrap-italia/commit/aa1dadf0e389acdaadf976ca76a0c15891474277))
+
+**Utilities**
+
+* fix bsi prefix on utilities-border-colors maps ([b2af539](https://github.com/italia/bootstrap-italia/commit/b2af539211807e00cd13c8764ebef0dc72fea655))
+* uncomment gradient in root for utilities use ([b01d44c](https://github.com/italia/bootstrap-italia/commit/b01d44ca3105ee4c5659969357ca57535961cc1f))
+* fix utilities font-family-mono token name ([2fcdc3d](https://github.com/italia/bootstrap-italia/commit/2fcdc3d4d73170bdde0680425520a2985b240538))
+
+**Badge**
+
+* connect badge-font-size-relative, drop ineffective rfs() usage ([1434fa7](https://github.com/italia/bootstrap-italia/commit/1434fa7df14f2b61e34992cecde652cc190ca1de)), closes [#1888](https://github.com/italia/bootstrap-italia/issues/1888)
+* remove badge-font-size, never the actual source of truth ([38a3cd5](https://github.com/italia/bootstrap-italia/commit/38a3cd53140fe8008cc20d705060d33d380f4f5f)), closes [#1895](https://github.com/italia/bootstrap-italia/issues/1895) [#1888](https://github.com/italia/bootstrap-italia/issues/1888)
+
+**Callout**
+
+* callout background-color property transparent by default ([26f7353](https://github.com/italia/bootstrap-italia/commit/26f7353978d0088f3db3186075d04649ede923f4))
+* connect callout-border-radius, consolidate highlight blocks ([dad3d7e](https://github.com/italia/bootstrap-italia/commit/dad3d7e30db3c58fc86ec9cf98dddb82b0a2f733)), closes [#1888](https://github.com/italia/bootstrap-italia/issues/1888)
+
+**Dropdown**
+
+* fix dropdown-text-color to dropdown-color on the dark variant ([1acae07](https://github.com/italia/bootstrap-italia/commit/1acae07a034037950b22394cc53969c4cdb6b11b)), closes [#1888](https://github.com/italia/bootstrap-italia/issues/1888)
+* remove never-connected custom properties in _dropdown.scss ([7799636](https://github.com/italia/bootstrap-italia/commit/779963681a62b1ea47004fca1a02030770dc62e5)), closes [#1888](https://github.com/italia/bootstrap-italia/issues/1888)
+
+**Hardcoded prefix references**
+
+* fix hardcoded bs- prefix in _timeline.scss ([5197106](https://github.com/italia/bootstrap-italia/commit/5197106fd505a91bbc80d97e5bcbeeb4199b9d4e))
+* fix hardcoded bsi- prefix in var() (icons, tables, maps, font-switcher) ([c16623e](https://github.com/italia/bootstrap-italia/commit/c16623e6009cc770c7628a4d3ee7320e125ef128))
+
+**Navscroll**
+
+* correct navscroll-backbutton-padding default and connect it ([9e1af38](https://github.com/italia/bootstrap-italia/commit/9e1af38f6c1fa1db05fdde64850a962abb25426c)), closes [#1888](https://github.com/italia/bootstrap-italia/issues/1888)
+* declare navscroll-heading-color default for light theme ([63f526f](https://github.com/italia/bootstrap-italia/commit/63f526fb29c05a6ddb0d57c0f3d0c775edc0c8ca)), closes [#1888](https://github.com/italia/bootstrap-italia/issues/1888)
+
+**Stepper**
+
+* remove stepper-number-background-active, never wired ([f18498c](https://github.com/italia/bootstrap-italia/commit/f18498c5f1a0a45261eafeecd1d532316a0bb280)), closes [#1888](https://github.com/italia/bootstrap-italia/issues/1888)
+* restore stepper-nav-height as min-height, fix number badge squish ([1ab0e1e](https://github.com/italia/bootstrap-italia/commit/1ab0e1eef494574f82f452f5c492b4b2da86250d)), closes [#1888](https://github.com/italia/bootstrap-italia/issues/1888)
+
+**Tables**
+
+* connect table-hover-color on .table-hover, fix dark variant regression ([ead5e27](https://github.com/italia/bootstrap-italia/commit/ead5e27d115a854ae35e9fdeeda89544d7a056e0)), closes [#1888](https://github.com/italia/bootstrap-italia/issues/1888)
+* declare default for table-striped-color ([9984bea](https://github.com/italia/bootstrap-italia/commit/9984bead68240b6b376be479009681011268d6ed)), closes [#1888](https://github.com/italia/bootstrap-italia/issues/1888)
+
+**General**
+
+* from color-border-primary-lighter to color-background-primary-lighter for the pictures-wall input button ([07b5a44](https://github.com/italia/bootstrap-italia/commit/07b5a446cb5cbe2a9248c20d861557f141e5aa90)), closes [#1888](https://github.com/italia/bootstrap-italia/issues/1888)
+* connect form-control-height as min-height ([c72a198](https://github.com/italia/bootstrap-italia/commit/c72a198c6396d7d5b8ae6376f57707f9abbf268e)), closes [#1888](https://github.com/italia/bootstrap-italia/issues/1888)
+* connect hero-padding-x/-y, hero-text-font-family ([dad585d](https://github.com/italia/bootstrap-italia/commit/dad585d39c7b445e0badf57555e045e222273543)), closes [#1888](https://github.com/italia/bootstrap-italia/issues/1888)
+* connect icon-primary-active, fix color->fill ([c6f5a25](https://github.com/italia/bootstrap-italia/commit/c6f5a25a2436382d5e800f2e8ce0aed81ebc3911)), closes [#1888](https://github.com/italia/bootstrap-italia/issues/1888)
+* promote section-padding-x to a component-level property ([9594b52](https://github.com/italia/bootstrap-italia/commit/9594b523990f282a122a0265f46e490e402008d3)), closes [#1888](https://github.com/italia/bootstrap-italia/issues/1888)
+* connect thumb-nav-overlay-bg as thumb-nav-overlay-bg-active ([5370d2c](https://github.com/italia/bootstrap-italia/commit/5370d2ccd355980e93c919f3a892273532dee700)), closes [#1888](https://github.com/italia/bootstrap-italia/issues/1888)
+* color-text-primary-active -> color-link-active ([d86a5f1](https://github.com/italia/bootstrap-italia/commit/d86a5f1b786813310bd326ecdd527dd8a350550b)), closes [#1888](https://github.com/italia/bootstrap-italia/issues/1888)
+* connect alert-spacing-outside, fix invalid lg breakpoint syntax ([cb35aad](https://github.com/italia/bootstrap-italia/commit/cb35aad20f2aa4e1917a53ac0cb4af503f304e5e)), closes [#1888](https://github.com/italia/bootstrap-italia/issues/1888)
+* remove orphaned body-font-size-l ([aed4ed9](https://github.com/italia/bootstrap-italia/commit/aed4ed9cdcca3efdc8bc05a7afa327795b9ad271)), closes [#1888](https://github.com/italia/bootstrap-italia/issues/1888)
+* connect to body-leading across 4 components ([311abfb](https://github.com/italia/bootstrap-italia/commit/311abfbd08bb1b5d124d6c5da874de3ed5ad0120)), closes [#1888](https://github.com/italia/bootstrap-italia/issues/1888)
+* restore btn-hover-border-color ([8915b10](https://github.com/italia/bootstrap-italia/commit/8915b101b3d8a45d833c430394f095bd1402d923)), closes [#1888](https://github.com/italia/bootstrap-italia/issues/1888)
+* extend heading block to h2-h6 ([9d260b3](https://github.com/italia/bootstrap-italia/commit/9d260b3936ad73e91dc3d8873a4c998620a69a08)), closes [#1888](https://github.com/italia/bootstrap-italia/issues/1888)
+* connect disconnected custom properties in progress components ([560bcc1](https://github.com/italia/bootstrap-italia/commit/560bcc1266c5769ae679082051f62e448d7df25d)), Closes [#1888](https://github.com/italia/bootstrap-italia/issues/1888)
+* connect pagination-icol-color on .icon declaration ([ad179ff](https://github.com/italia/bootstrap-italia/commit/ad179ffe1ef56a03db35f06b031c31e24543f84c))
+* correct hardcoded --bsi- prefix in .bg-dark variant ([0f88937](https://github.com/italia/bootstrap-italia/commit/0f8893723bc1894789f8a7935e848f24b64c035b)), closes [#502](https://github.com/italia/bootstrap-italia/issues/502) [#1888](https://github.com/italia/bootstrap-italia/issues/1888)
+* enhance properties table look & feel ([283ff65](https://github.com/italia/bootstrap-italia/commit/283ff65dbb7cce1bb458d9caa879feb7920d40cd))
+* forms fieldsed legend no padding ([2da2eea](https://github.com/italia/bootstrap-italia/commit/2da2eeab52f2b9f281f6ac3991ac1a1447532719))
+* migrate calendar.scss to tokens ([090018f](https://github.com/italia/bootstrap-italia/commit/090018fe934b1c701489a0e0ea481b61258063e1))
+* remove orphaned navbar-spacing-inset from the megamenu ([b66300e](https://github.com/italia/bootstrap-italia/commit/b66300ea9ce28a271de0bf3fc6cd33f55413fe9d)), closes [#1888](https://github.com/italia/bootstrap-italia/issues/1888)
+* connect notification-padding-right, scope to dismissable only ([70d5bb9](https://github.com/italia/bootstrap-italia/commit/70d5bb92b300ad8107ba4ce5e195dd73c8db3ee9)), closes [#1888](https://github.com/italia/bootstrap-italia/issues/1888)
+* popover-body color token, text-secondary ([860be0d](https://github.com/italia/bootstrap-italia/commit/860be0d961efc9af880c1819a6093e7eb5cd883d))
+* prevent visual regression from earlier var($sassvar) fix in megamenu ([654f07d](https://github.com/italia/bootstrap-italia/commit/654f07d03a561b3a8ae2df0608b1de90fceaa167))
+* miscellaneous typos ([a21eeb9](https://github.com/italia/bootstrap-italia/commit/a21eeb9624e541e97700eb1e39826363d7040c68))
+* remove text-white class on link inside videoplayer overlay ([c1c933e](https://github.com/italia/bootstrap-italia/commit/c1c933e0b8a45d576e7b91c6771cbecaaf44ca5c))
+* remove unused main function in _variables.scss ([d035d33](https://github.com/italia/bootstrap-italia/commit/d035d3344fa9cfbf35114136ca84c6019831ec81))
+* connect sidebar-text-transform (refs [#1888](https://github.com/italia/bootstrap-italia/issues/1888)) ([7ca0de2](https://github.com/italia/bootstrap-italia/commit/7ca0de2cfd796649bbfa62ab03f728698e5fbb93))
+
+### Features
+
+* **header:** collect logo, slim links and social into the mobile menu ([7651274](https://github.com/italia/bootstrap-italia/commit/7651274ebcc790b958ae40e616ce6ed1aacac774)), closes [#1753](https://github.com/italia/bootstrap-italia/issues/1753)
+* **rating:** new rating with outline/full variants, natural DOM order and mask-image ([42a0265](https://github.com/italia/bootstrap-italia/commit/42a0265350dad826826493862bdc634be12968cf)), closes [bootstrap-italia#1630](https://github.com/italia/bootstrap-italia/issues/1630) [#1200](https://github.com/italia/bootstrap-italia/issues/1200) [#1630](https://github.com/italia/bootstrap-italia/issues/1630) [#1601](https://github.com/italia/bootstrap-italia/issues/1601) [#1200](https://github.com/italia/bootstrap-italia/issues/1200) [#1630](https://github.com/italia/bootstrap-italia/issues/1630)
+
+### Chore
+
+* restore auto-generated files ([5af2afb](https://github.com/italia/bootstrap-italia/commit/5af2afb25f98163acde75273b3e787e382fbe3a3)), closes [#1753](https://github.com/italia/bootstrap-italia/issues/1753)
+
+
 # [3.0.0-beta.5](https://github.com/italia/bootstrap-italia/compare/v2.18.3...v3.0.0-beta.5) (2026-09-01)
 
 
