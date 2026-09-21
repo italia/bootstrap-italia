@@ -138,5 +138,6 @@ p.it-card-text a {
       inset 0 0 0 3px var(--#{$prefix}color-outline-focus),
       inset 0 0 0 5px var(--#{$prefix}color-border-inverse) !important;
     outline-offset: -3px !important;
+    border-left-color: var(--#{$prefix}navbar-link-border-color) !important;
   }
 }
