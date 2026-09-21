@@ -27,6 +27,10 @@
 .megamenu {
   .megamenu-content {
     padding: var(--#{$prefix}megamenu-content-spacing);
+
+    .col-lg-4.px-0 > .row {
+      --#{$prefix}gutter-x: 0;
+    }
   }
 
   // Description & image variation
