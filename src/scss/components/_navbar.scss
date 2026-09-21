@@ -156,6 +156,13 @@
   // Dropdown menu inside navbar
   // This is a special case for the dropdown menu inside the navbar
   .dropdown-menu {
+    @include media-breakpoint-down(lg) {
+      --#{$prefix}dropdown-border-width: 1px;
+      --#{$prefix}dropdown-border-color: var(--#{$prefix}color-border-subtle);
+      border-left: 0;
+      border-right: 0;
+    }
+
     @include media-breakpoint-up(lg) {
       --#{$prefix}dropdown-border-width: 1px;
       --#{$prefix}dropdown-border-color: var(--#{$prefix}color-border-subtle);
