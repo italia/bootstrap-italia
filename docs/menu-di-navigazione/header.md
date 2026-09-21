@@ -48,7 +48,7 @@ Il cambio lingua è gestito con il componente [dropdown]({{ site.baseurl }}/docs
           <a class="d-none d-lg-block navbar-brand" href="#">Ente appartenenza</a>
           <div class="nav-mobile">
             <nav aria-label="Navigazione accessoria">
-              <a class="it-opener d-lg-none" data-bs-toggle="collapse" href="#menu1a" role="button" aria-expanded="false" aria-controls="menu4">
+              <a class="it-opener d-lg-none" data-bs-toggle="collapse" href="#menu1a" role="button" aria-expanded="false" aria-controls="menu1a">
                 <span>Ente appartenenza</span>
                 <svg class="icon" aria-hidden="true"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
               </a>
@@ -62,12 +62,12 @@ Il cambio lingua è gestito con il componente [dropdown]({{ site.baseurl }}/docs
           </div>
           <div class="it-header-slim-right-zone">
             <div class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" id="dd-1a" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <span class="visually-hidden">Selezione lingua: lingua selezionata</span>
                 <span>ITA</span>
                 <svg class="icon d-none d-lg-block"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
               </a>
-              <div class="dropdown-menu">
+              <div class="dropdown-menu" aria-labelledby="dd-1a">
                 <div class="row">
                   <div class="col-12">
                     <div class="link-list-wrapper">
@@ -108,12 +108,12 @@ Il modificatore `.btn-full` è disponibile anche con il tema chiaro attivato da 
           <a class="d-lg-block navbar-brand" href="#">Ente appartenenza</a>
           <div class="it-header-slim-right-zone">
             <div class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" id="dd-1b" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <span class="visually-hidden">Selezione lingua: lingua selezionata</span>
                 <span>ITA</span>
                 <svg class="icon d-none d-lg-block"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
               </a>
-              <div class="dropdown-menu">
+              <div class="dropdown-menu" aria-labelledby="dd-1b">
                 <div class="row">
                   <div class="col-12">
                     <div class="link-list-wrapper">
@@ -156,7 +156,7 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
           <a class="d-none d-lg-block navbar-brand" href="#">Ente appartenenza</a>
           <div class="nav-mobile">
             <nav aria-label="Navigazione accessoria">
-              <a class="it-opener d-lg-none" data-bs-toggle="collapse" href="#menu1b" role="button" aria-expanded="false" aria-controls="menu4">
+              <a class="it-opener d-lg-none" data-bs-toggle="collapse" href="#menu1b" role="button" aria-expanded="false" aria-controls="menu1b">
                 <span>Ente appartenenza</span>
                 <svg class="icon" aria-hidden="true"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
               </a>
@@ -170,12 +170,12 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
           </div>
           <div class="it-header-slim-right-zone">
             <div class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" id="dd-1c" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <span class="visually-hidden">Selezione lingua: lingua selezionata</span>
                 <span>ITA</span>
                 <svg class="icon d-none d-lg-block"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
               </a>
-              <div class="dropdown-menu">
+              <div class="dropdown-menu" aria-labelledby="dd-1c">
                 <div class="row">
                   <div class="col-12">
                     <div class="link-list-wrapper">
@@ -427,7 +427,7 @@ Per cambiare tema all'header centrale è sufficiente aggiungere la classe `theme
                     <span>Menu Dropdown</span>
                     <svg class="icon icon-xs"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
                   </a>
-                  <div class="dropdown-menu" role="region" aria-labelledby="mainNavDropdown1">
+                  <div class="dropdown-menu" aria-labelledby="mainNavDropdown1">
                     <div class="link-list-wrapper">
                       <ul class="link-list">
                         <li><a class="dropdown-item list-item" href="#"><span>Link lista 1</span></a></li>
@@ -444,7 +444,7 @@ Per cambiare tema all'header centrale è sufficiente aggiungere la classe `theme
                   <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-1" data-focus-mouse="false">
                       <span>Megamenu</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
                   </button>
-                  <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-1">
+                  <div class="dropdown-menu shadow-lg" aria-labelledby="megamenu-1">
                     <div class="megamenu pb-5 pt-3 py-lg-0">
                       <div class="row">
                         <div class="col-xs-12 col-lg-4 px-0">
@@ -577,7 +577,7 @@ Per modificare il tema dell'Header Nav è sufficiente aggiungere una o tutte e d
                     <span>Menu Dropdown</span>
                     <svg class="icon icon-xs"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
                   </a>
-                  <div class="dropdown-menu" role="region" aria-labelledby="mainNavDropdown0">
+                  <div class="dropdown-menu" aria-labelledby="mainNavDropdown0">
                     <div class="link-list-wrapper">
                       <ul class="link-list">
                         <li><a class="dropdown-item list-item" href="#"><span>Link lista 1</span></a></li>
@@ -594,7 +594,7 @@ Per modificare il tema dell'Header Nav è sufficiente aggiungere una o tutte e d
                   <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-2" data-focus-mouse="false">
                       <span>Megamenu</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
                   </button>
-                  <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-2">
+                  <div class="dropdown-menu shadow-lg" aria-labelledby="megamenu-2">
                     <div class="megamenu pb-5 pt-3 py-lg-0">
                       <div class="row">
                         <div class="col-xs-12 col-lg-4 px-0">
@@ -715,7 +715,7 @@ Per modificare il tema dell'Header Nav è sufficiente aggiungere una o tutte e d
                     <span>Menu Dropdown</span>
                     <svg class="icon icon-xs"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
                   </a>
-                  <div class="dropdown-menu" role="region" aria-labelledby="mainNavDropdown2">
+                  <div class="dropdown-menu" aria-labelledby="mainNavDropdown2">
                     <div class="link-list-wrapper">
                       <ul class="link-list">
                         <li><a class="dropdown-item list-item" href="#"><span>Link lista 1</span></a></li>
@@ -732,7 +732,7 @@ Per modificare il tema dell'Header Nav è sufficiente aggiungere una o tutte e d
                   <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-3" data-focus-mouse="false">
                       <span>Megamenu</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
                   </button>
-                  <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-3">
+                  <div class="dropdown-menu shadow-lg" aria-labelledby="megamenu-3">
                     <div class="megamenu pb-5 pt-3 py-lg-0">
                       <div class="row">
                         <div class="col-xs-12 col-lg-4 px-0">
@@ -855,7 +855,7 @@ Per modificare il tema dell'Header Nav è sufficiente aggiungere una o tutte e d
                     <span>Menu Dropdown</span>
                     <svg class="icon icon-xs"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
                   </a>
-                  <div class="dropdown-menu" role="region" aria-labelledby="mainNavDropdown3">
+                  <div class="dropdown-menu" aria-labelledby="mainNavDropdown3">
                     <div class="link-list-wrapper">
                       <ul class="link-list">
                         <li><a class="dropdown-item list-item" href="#"><span>Link lista 1</span></a></li>
@@ -872,7 +872,7 @@ Per modificare il tema dell'Header Nav è sufficiente aggiungere una o tutte e d
                   <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-4" data-focus-mouse="false">
                       <span>Megamenu</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
                   </button>
-                  <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-4">
+                  <div class="dropdown-menu shadow-lg" aria-labelledby="megamenu-4">
                     <div class="megamenu pb-5 pt-3 py-lg-0">
                       <div class="row">
                         <div class="col-xs-12 col-lg-4 px-0">
@@ -1033,12 +1033,12 @@ Al menu di navigazione principale può essere aggiunto anche un menu di navigazi
             </div>
             <div class="it-header-slim-right-zone">
               <div class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" id="dd-c1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   <span class="visually-hidden">Selezione lingua: lingua selezionata</span>
                   <span>ITA</span>
                   <svg class="icon d-none d-lg-block"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
                 </a>
-                <div class="dropdown-menu">
+                <div class="dropdown-menu" aria-labelledby="dd-c1">
                   <div class="row">
                     <div class="col-12">
                       <div class="link-list-wrapper">
@@ -1141,7 +1141,7 @@ Al menu di navigazione principale può essere aggiunto anche un menu di navigazi
                           <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use>
                         </svg>
                       </a>
-                      <div class="dropdown-menu" role="region" aria-labelledby="mainNavDropdownC1">
+                      <div class="dropdown-menu" aria-labelledby="mainNavDropdownC1">
                         <div class="link-list-wrapper">
                           <ul class="link-list">
                             <li><a class="dropdown-item list-item" href="#"><span>Link lista 1</span></a></li>
@@ -1158,7 +1158,7 @@ Al menu di navigazione principale può essere aggiunto anche un menu di navigazi
                       <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-5" data-focus-mouse="false">
                           <span>Megamenu</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
                       </button>
-                      <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-5">
+                      <div class="dropdown-menu shadow-lg" aria-labelledby="megamenu-5">
                         <div class="megamenu pb-5 pt-3 py-lg-0">
                           <div class="row">
                             <div class="col-xs-12 col-lg-4 px-0">
@@ -1281,12 +1281,12 @@ Verrà creata un'ombra per enfatizzare l'Header rispetto alla pagina in cui è c
             </div>
             <div class="it-header-slim-right-zone">
               <div class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" id="dd-c2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   <span class="visually-hidden">Selezione lingua: lingua selezionata</span>
                   <span>ITA</span>
                   <svg class="icon d-none d-lg-block"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
                 </a>
-                <div class="dropdown-menu">
+                <div class="dropdown-menu" aria-labelledby="dd-c2">
                   <div class="row">
                     <div class="col-12">
                       <div class="link-list-wrapper">
@@ -1383,7 +1383,7 @@ Verrà creata un'ombra per enfatizzare l'Header rispetto alla pagina in cui è c
                         <span>Menu Dropdown</span>
                         <svg class="icon icon-xs"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
                       </a>
-                      <div class="dropdown-menu" role="region" aria-labelledby="mainNavDropdownC2">
+                      <div class="dropdown-menu" aria-labelledby="mainNavDropdownC2">
                         <div class="link-list-wrapper">
                           <ul class="link-list">
                             <li><a class="dropdown-item list-item" href="#"><span>Link lista 1</span></a></li>
@@ -1400,7 +1400,7 @@ Verrà creata un'ombra per enfatizzare l'Header rispetto alla pagina in cui è c
                       <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-6" data-focus-mouse="false">
                           <span>Megamenu</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
                       </button>
-                      <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-6">
+                      <div class="dropdown-menu shadow-lg" aria-labelledby="megamenu-6">
                         <div class="megamenu pb-5 pt-3 py-lg-0">
                           <div class="row">
                             <div class="col-xs-12 col-lg-4 px-0">
