@@ -55,7 +55,7 @@ Permette di includere **immagine e testo descrittivo** per una introduzione ai c
             <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3 active" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-completo-A1" data-focus-mouse="false">
                 <span>Megamenu 1 (attivo)</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
             </button>
-            <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-completo-A1">
+            <div class="dropdown-menu" role="region" aria-labelledby="megamenu-completo-A1">
               <div class="megamenu-content">
                 <div class="row">
                   <div class="col-xs-12 col-lg-4 px-0">
@@ -140,7 +140,7 @@ Permette di includere **immagine e testo descrittivo** per una introduzione ai c
             <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-completo-A2" data-focus-mouse="false">
                 <span>Megamenu 2</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
             </button>
-            <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-completo-A2">
+            <div class="dropdown-menu" role="region" aria-labelledby="megamenu-completo-A2">
               <div class="megamenu-content">
                 <div class="row">
                   <div class="col-xs-12 col-lg-4 px-0">
@@ -252,7 +252,7 @@ Variante base che può contenere liste di link organizzate in tre colonne ed eve
           <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-base-D" data-focus-mouse="false">
               <span>Megamenu</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
           </button>
-          <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-base-D">
+          <div class="dropdown-menu" role="region" aria-labelledby="megamenu-base-D">
             <div class="megamenu-content">
               <div class="row">
                 <div class="col-12">
@@ -366,7 +366,7 @@ Come nella variante completa è possibile aggiungere un link "Esplora la sezione
           <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-base-E" data-focus-mouse="false">
               <span>Megamenu</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
           </button>
-          <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-base-E">
+          <div class="dropdown-menu" role="region" aria-labelledby="megamenu-base-E">
             <div class="megamenu-content">
               <div class="row">
                 <div class="col-12">
@@ -485,7 +485,7 @@ Nel caso le voci da mostrare fossero numerose, è possibile aggiungere un link "
           <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-base-F" data-focus-mouse="false">
               <span>Megamenu</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
           </button>
-          <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-base-F">
+          <div class="dropdown-menu" role="region" aria-labelledby="megamenu-base-F">
             <div class="megamenu-content">
               <div class="row">
                 <div class="col-12">
@@ -623,7 +623,7 @@ Questi seguono le liste di link, posizionati in basso o in una colonna destra, a
           <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-base-G" data-focus-mouse="false">
               <span>Megamenu</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
           </button>
-          <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-base-G">
+          <div class="dropdown-menu" role="region" aria-labelledby="megamenu-base-G">
             <div class="megamenu-content">
               <div class="row">
                 <div class="col-12">
@@ -747,7 +747,7 @@ Questi seguono le liste di link, posizionati in basso o in una colonna destra, a
           <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-base-H" data-focus-mouse="false">
               <span>Megamenu</span><svg role="img" class="icon icon-xs ms-1"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
           </button>
-          <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-base-H">
+          <div class="dropdown-menu" role="region" aria-labelledby="megamenu-base-H">
             <div class="megamenu-content">
               <div class="row">
                 <div class="col-12 col-lg-8">
@@ -842,6 +842,7 @@ sezione [attivazione Dropdown tramite codice]({{ site.baseurl }}/docs/componenti
 - Il contenuto del megamenu ora ha classe `.megamenu-content` invece di `.megamenu`, e non ha più le classi `.pb-5 .pt-3 .py-lg-0`.
 - Nella parte descrittiva del megamenu contenuta nell'elemento `.description-content`, la classe `.ps-4` è stata sostituita da `.px-4` per garantire un padding coerente anche su mobile.
 - Nella variante con Call to action in basso: rimossa la classe `.justify-content-around` sul contenitore e aggiunta la classe `.flex-grow-1` agli elementi `<a>` con classe `.it-footer-link`.
+- È stato rimossa la classe `.shadow-lg` sull'elemento `.dropdown-menu` in tutte le varianti. L'ombra è controllata dalle property "elevation".  
   {% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}
 
 {% capture callout %}
