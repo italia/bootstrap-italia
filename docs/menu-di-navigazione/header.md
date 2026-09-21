@@ -458,7 +458,7 @@ Le voci del menu su mobile hanno sempre sfondo bianco e link nel colore primario
                   <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-1" data-focus-mouse="false">
                       <span>Megamenu</span><svg role="img" class="icon icon-xs"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
                   </button>
-                  <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-1">
+                  <div class="dropdown-menu" role="region" aria-labelledby="megamenu-1">
                     <div class="megamenu-content">
                       <div class="row">
                         <div class="col-xs-12 col-lg-4 px-0">
@@ -604,7 +604,7 @@ Per modificare il colore di sfondo e testi di Header Nav bisogna aggiungere la c
                   <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-2" data-focus-mouse="false">
                       <span>Megamenu</span><svg role="img" class="icon icon-xs"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
                   </button>
-                  <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-2">
+                  <div class="dropdown-menu" role="region" aria-labelledby="megamenu-2">
                     <div class="megamenu-content">
                       <div class="row">
                         <div class="col-xs-12 col-lg-4 px-0">
@@ -743,7 +743,7 @@ Per modificare il colore di sfondo e testi di Header Nav bisogna aggiungere la c
                   <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-4" data-focus-mouse="false">
                       <span>Megamenu</span><svg role="img" class="icon icon-xs"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
                   </button>
-                  <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-4">
+                  <div class="dropdown-menu" role="region" aria-labelledby="megamenu-4">
                     <div class="megamenu-content">
                       <div class="row">
                         <div class="col-xs-12 col-lg-4 px-0">
@@ -1022,7 +1022,7 @@ Al menu di navigazione principale può essere aggiunto anche un menu di navigazi
                       <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-5" data-focus-mouse="false">
                           <span>Megamenu</span><svg role="img" class="icon icon-xs"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
                       </button>
-                      <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-5">
+                      <div class="dropdown-menu" role="region" aria-labelledby="megamenu-5">
                         <div class="megamenu-content">
                           <div class="row">
                             <div class="col-xs-12 col-lg-4 px-0">
@@ -1259,7 +1259,7 @@ Verrà creata un'ombra per enfatizzare l'Header rispetto alla pagina in cui è c
                       <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-6" data-focus-mouse="false">
                           <span>Megamenu</span><svg role="img" class="icon icon-xs"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
                       </button>
-                      <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-6">
+                      <div class="dropdown-menu" role="region" aria-labelledby="megamenu-6">
                         <div class="megamenu-content">
                           <div class="row">
                             <div class="col-xs-12 col-lg-4 px-0">
@@ -1419,6 +1419,7 @@ const headerSticky = new HeaderSticky(headerStickyElement)
 - I link accessori dello Slim Header non sono più raccolti in un menu a tendina che si apre dal nome dell'ente: su mobile confluiscono nel menu di navigazione insieme al logo e ai social. Negli esempi il pulsante `.it-opener` è stato rimosso e l'elenco è nascosto sotto il breakpoint `lg` con `.d-none.d-lg-flex`. Le regole di stile di `.it-opener` restano disponibili per retrocompatibilità ma sono da considerarsi deprecate.
 - Cambiata la dimensione del pulsante Accedi: cambiato classe da `.btn-sm` a `.btn-sx`.
 - Rimossa la classe `.ms-1` dall'icona `<svg>` che segue la voce Megamenu negli esempi.
+- È stato rimossa la classe `.shadow-lg` sull'elemento `.dropdown-menu` in tutte le varianti. L'ombra è controllata dalle property "elevation".  
 {% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}
 
 {% capture callout %}
