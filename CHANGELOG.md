@@ -1,3 +1,17 @@
+# [3.0.0-beta.7](https://github.com/italia/bootstrap-italia/compare/v3.0.0-beta.6...v3.0.0-beta.7) (2026-09-22)
+
+
+### Bug Fixes
+
+* **dropdown:** fix notch border and position on all placement variants ([446032d](https://github.com/italia/bootstrap-italia/commit/446032d847e938931386184601fbb3fee6c1fa20))
+* **dropdown:** restore missing left offset on notch ([6e77e4a](https://github.com/italia/bootstrap-italia/commit/6e77e4a636c53e3886cdcfa565527e214b9e910e))
+* **megamenu:** stop description column row from overflowing on mobile ([3d381ac](https://github.com/italia/bootstrap-italia/commit/3d381ac88b2c2d72c517fa24bcdbf8f05b3108a1))
+* **navbar:** don't let the focus ring override the active nav-link border ([241bfec](https://github.com/italia/bootstrap-italia/commit/241bfec70d39b656377c7da092584e4c09d46109))
+* **navbar:** keep top/bottom border on dropdown-menu on mobile ([78b50dd](https://github.com/italia/bootstrap-italia/commit/78b50dd0887ceb70a10e00c290efac39c1c1d01a))
+* **navbar:** re-assert dropdown border via custom properties, not literals ([1ef0838](https://github.com/italia/bootstrap-italia/commit/1ef08386c7f3159152ed23e33d3bd33036cd00b2))
+* var prefix ([9aa9f7b](https://github.com/italia/bootstrap-italia/commit/9aa9f7bf957652f6f1a7893a441e953efa44be61))
+
+
 # [3.0.0-beta.6](https://github.com/italia/bootstrap-italia/compare/v3.0.0-beta.5...v3.0.0-beta.6) (2026-09-18)
 
 ### Bug Fixes
