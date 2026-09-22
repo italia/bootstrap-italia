@@ -204,6 +204,8 @@
   }
 
   // Custom notch for dropdown menu inside navbar
+  // Border re-asserted explicitly (not inherited) so navbar/megamenu keeps
+  // its border regardless of the generic default in _dropdown.scss.
   .megamenu .dropdown-toggle:before,
   .dropdown-menu:before {
     display: none;
@@ -211,11 +213,10 @@
     @include media-breakpoint-up(lg) {
       display: block;
       --#{$prefix}dropdown-notch-position-y: -10px;
-      border-color: var(--#{$prefix}color-border-subtle);
-      border-top-width: 1px;
-      border-top-style: solid;
-      border-left-width: 1px;
-      border-left-style: solid;
+      --#{$prefix}dropdown-border-width: 1px;
+      --#{$prefix}dropdown-border-color: var(--#{$prefix}color-border-subtle);
+      border-top: var(--#{$prefix}dropdown-border-width) solid var(--#{$prefix}dropdown-border-color);
+      border-left: var(--#{$prefix}dropdown-border-width) solid var(--#{$prefix}dropdown-border-color);
     }
   }
 }
