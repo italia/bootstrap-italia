@@ -136,7 +136,7 @@
     position: absolute;
     top: var(--#{$prefix}dropdown-notch-offset);
     content: '';
-    left: var(--bsi-dropdown-notch-position-x);
+    left: var(--#{$prefix}dropdown-notch-position-x);
     width: var(--#{$prefix}dropdown-notch-base-size);
     height: var(--#{$prefix}dropdown-notch-base-size);
     border-radius: var(--#{$prefix}dropdown-border-radius);
