@@ -71,6 +71,10 @@
 
 // Dropdown menu
 .dropdown-menu {
+  --#{$prefix}dropdown-notch-offset: calc(
+  var(--#{$prefix}dropdown-notch-position-y) - var(--#{$prefix}dropdown-border-width) -
+    (var(--#{$prefix}dropdown-notch-base-size) - 1.125rem) / 2
+  );
   position: absolute;
   z-index: var(--#{$prefix}dropdown-zindex);
   display: none; // none by default, but block on "open" of the menu
@@ -130,7 +134,7 @@
   // notch
   &:before {
     position: absolute;
-    top: calc(var(--#{$prefix}dropdown-notch-position-y) - var(--#{$prefix}dropdown-border-width));
+    top: var(--#{$prefix}dropdown-notch-offset);
     content: '';
     left: var(--bsi-dropdown-notch-position-x);
     width: var(--#{$prefix}dropdown-notch-base-size);
@@ -148,7 +152,11 @@
     //notch
     &:before {
       top: auto;
-      bottom: var(--#{$prefix}dropdown-notch-position-y);
+      bottom: var(--#{$prefix}dropdown-notch-offset);
+      border-top: 0;
+      border-left: 0;
+      border-bottom: var(--#{$prefix}dropdown-border-width) solid var(--#{$prefix}dropdown-border-color);
+      border-right: var(--#{$prefix}dropdown-border-width) solid var(--#{$prefix}dropdown-border-color);
     }
   }
 
@@ -213,17 +221,25 @@
     &[data-popper-placement='left-start'] {
       animation: dropdownFadeInTop forwards var(--#{$prefix}dropdown-animation-speed);
       &:before {
-        top: 20px;
-        right: -6px;
+        top: var(--bsi-dropdown-notch-position-x);
+        right: var(--#{$prefix}dropdown-notch-offset);
         left: auto;
+        border-top: var(--#{$prefix}dropdown-border-width) solid var(--#{$prefix}dropdown-border-color);
+        border-right: var(--#{$prefix}dropdown-border-width) solid var(--#{$prefix}dropdown-border-color);
+        border-left: 0;
+        border-bottom: 0;
       }
     }
     // menu on right
     &[data-popper-placement='right-start'] {
       animation: dropdownFadeInTop forwards var(--#{$prefix}dropdown-animation-speed);
       &:before {
-        top: 20px;
-        left: -6px;
+        top: var(--bsi-dropdown-notch-position-x);
+        left: var(--#{$prefix}dropdown-notch-offset);
+        border-bottom: var(--#{$prefix}dropdown-border-width) solid var(--#{$prefix}dropdown-border-color);
+        border-left: var(--#{$prefix}dropdown-border-width) solid var(--#{$prefix}dropdown-border-color);
+        border-top: 0;
+        border-right: 0;
       }
     }
   }
