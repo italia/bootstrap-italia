@@ -132,6 +132,7 @@
     position: absolute;
     top: calc(var(--#{$prefix}dropdown-notch-position-y) - var(--#{$prefix}dropdown-border-width));
     content: '';
+    left: var(--bsi-dropdown-notch-position-x);
     width: var(--#{$prefix}dropdown-notch-base-size);
     height: var(--#{$prefix}dropdown-notch-base-size);
     border-radius: var(--#{$prefix}dropdown-border-radius);
