@@ -1,6 +1,24 @@
 {
     "acceptoverlay": [
         {
+            "description": "Controls the acceptoverlay body font family, using typography tokens.",
+            "files": [
+                "_accept-overlay.scss"
+            ],
+            "other_values": [],
+            "value": "var(--bsi-font-serif)",
+            "variable-name": "--bsi-acceptoverlay-body-font-family"
+        },
+        {
+            "description": "Controls the acceptoverlay body font size, using typography tokens.",
+            "files": [
+                "_accept-overlay.scss"
+            ],
+            "other_values": [],
+            "value": "var(--bsi-body-font-size)",
+            "variable-name": "--bsi-acceptoverlay-body-font-size"
+        },
+        {
             "description": "Controls the acceptoverlay color text, using color tokens",
             "files": [
                 "_accept-overlay.scss"
