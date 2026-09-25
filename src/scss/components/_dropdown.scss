@@ -72,8 +72,7 @@
 // Dropdown menu
 .dropdown-menu {
   --#{$prefix}dropdown-notch-offset: calc(
-  var(--#{$prefix}dropdown-notch-position-y) - var(--#{$prefix}dropdown-border-width) -
-    (var(--#{$prefix}dropdown-notch-base-size) - 1.125rem) / 2
+    var(--#{$prefix}dropdown-notch-position-y) - var(--#{$prefix}dropdown-border-width) - (var(--#{$prefix}dropdown-notch-base-size) - 1.125rem) / 2
   );
   position: absolute;
   z-index: var(--#{$prefix}dropdown-zindex);
