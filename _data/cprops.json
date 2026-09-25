@@ -1715,10 +1715,8 @@
                 "_dropdown.scss",
                 "_navbar.scss"
             ],
-            "other_values": [
-                "var(--bsi-color-border-subtle)"
-            ],
-            "value": "transparent",
+            "other_values": [],
+            "value": "var(--bsi-color-border-subtle)",
             "variable-name": "--bsi-dropdown-border-color"
         },
         {
@@ -1736,10 +1734,8 @@
                 "_dropdown.scss",
                 "_navbar.scss"
             ],
-            "other_values": [
-                "1px"
-            ],
-            "value": "0",
+            "other_values": [],
+            "value": "1px",
             "variable-name": "--bsi-dropdown-border-width"
         },
         {
@@ -1751,7 +1747,7 @@
             "other_values": [
                 "var(--bsi-toolbar-dropdown-shadow)"
             ],
-            "value": "var(--bsi-elevation-low)",
+            "value": "var(--bsi-elevation-medium)",
             "variable-name": "--bsi-dropdown-box-shadow"
         },
         {
@@ -2695,7 +2691,7 @@
             "other_values": [
                 "var(--bsi-color-background-inverse)"
             ],
-            "value": "var(--bsi-color-blue-30)",
+            "value": "var(--bsi-color-background-primary-muted)",
             "variable-name": "--bsi-header-slim-background"
         },
         {
