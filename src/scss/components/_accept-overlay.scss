@@ -16,6 +16,8 @@
   --#{$prefix}acceptoverlay-background-color: var(
     --#{$prefix}overlay-background-primary-muted
   ); // Controls the acceptoverlay color background, using color tokens
+  --#{$prefix}acceptoverlay-body-font-family: var(--#{$prefix}font-serif); // Controls the acceptoverlay body font family, using typography tokens.
+  --#{$prefix}acceptoverlay-body-font-size: var(--#{$prefix}body-font-size); // Controls the acceptoverlay body font size, using typography tokens.
   --#{$prefix}acceptoverlay-color-text: var(--#{$prefix}color-text-inverse); // Controls the acceptoverlay color text, using color tokens
   --#{$prefix}acceptoverlay-label-color: var(--#{$prefix}color-text-inverse); // Controls the acceptoverlay label color, using color tokens
   --#{$prefix}acceptoverlay-label-border-color: var(--#{$prefix}color-border-inverse); // Controls the acceptoverlay label border color, using color tokens
@@ -99,8 +101,10 @@
 
   p {
     text-align: justify;
+    font-family: var(--#{$prefix}acceptoverlay-body-font-family);
+    font-size: var(--#{$prefix}acceptoverlay-body-font-size);
   }
-
+  
   .acceptoverlay-inner {
     width: 100%;
     max-width: var(--#{$prefix}acceptoverlay-inner-width);
