@@ -10077,8 +10077,9 @@
   AdobeAn.Layer = new (function () {
     this.getLayerZDepth = function (timeline, layerName) {
       if (layerName === 'Camera') layerName = '___camera___instance'
-      var script = 'if(timeline.' + layerName + ') timeline.' + layerName + '.depth; else 0;'
-      return eval(script)
+      var target = timeline[layerName]
+      if (target) return target.depth
+      return 0
     }
     this.setLayerZDepth = function (timeline, layerName, zDepth) {
       var MAX_zDepth = 10000
@@ -10086,13 +10087,17 @@
       if (zDepth > MAX_zDepth) zDepth = MAX_zDepth
       else if (zDepth < MIN_zDepth) zDepth = MIN_zDepth
       if (layerName === 'Camera') layerName = '___camera___instance'
-      var script = 'if(timeline.' + layerName + ') timeline.' + layerName + '.depth = ' + zDepth + ';'
-      eval(script)
+      var target = timeline[layerName]
+      if (target) {
+        target.depth = zDepth
+      }
     }
     this.removeLayer = function (timeline, layerName) {
       if (layerName === 'Camera') layerName = '___camera___instance'
-      var script = 'if(timeline.' + layerName + ') timeline.removeChild(timeline.' + layerName + ');'
-      eval(script)
+      var target = timeline[layerName]
+      if (target) {
+        timeline.removeChild(target)
+      }
     }
     this.addNewLayer = function (timeline, layerName, zDepth) {
       if (layerName === 'Camera') layerName = '___camera___instance'

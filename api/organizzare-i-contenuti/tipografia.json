@@ -8,19 +8,23 @@
         "content": "\n<p class=\"font-serif\">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>\n<p class=\"font-serif\">abcdefghijklmnopqrstuvwxyz</p>\n<p class=\"font-serif\">0123456789</p>\n"
     },
     {
-        "name": "Roboto",
+        "name": "Roboto Mono",
         "content": "\n<p class=\"font-monospace\">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>\n<p class=\"font-monospace\">abcdefghijklmnopqrstuvwxyz</p>\n<p class=\"font-monospace\">0123456789</p>\n"
     },
     {
         "name": "Intestazioni",
-        "content": "\n<h1>Intestazione di tipo h1</h1>\n<h2>Intestazione di tipo h2</h2>\n<h3>Intestazione di tipo h3</h3>\n<h4>Intestazione di tipo h4</h4>\n<h5>Intestazione di tipo h5</h5>\n<h6>Intestazione di tipo h6</h6>\n\n<p class=\"h1\">Stile h1</p>\n<p class=\"h2\">Stile h2</p>\n<p class=\"h3\">Stile h3</p>\n<p class=\"h4\">Stile h4</p>\n<p class=\"h5\">Stile h5</p>\n<p class=\"h6\">Stile h6</p>\n"
+        "content": "\n<h1>Intestazione di tipo h1</h1>\n<h2>Intestazione di tipo h2</h2>\n<h3>Intestazione di tipo h3</h3>\n<h4>Intestazione di tipo h4</h4>\n<h5>Intestazione di tipo h5</h5>\n<h6>Intestazione di tipo h6</h6>\n"
+    },
+    {
+        "name": "Stili intestazioni",
+        "content": "\n<p class=\"h1\">Testo con classe .h1</p>\n<p class=\"h2\">Testo con classe .h2</p>\n<p class=\"h3\">Testo con classe .h3</p>\n<p class=\"h4\">Testo con classe .h4</p>\n<p class=\"h5\">Testo con classe .h5</p>\n<p class=\"h6\">Testo con classe .h6</p>\n"
     },
     {
         "name": "Intestazione h1 in evidenza",
         "content": "\n<h1 class=\"display-1\">Intestazione di tipo h1 in evidenza</h1>\n"
     },
     {
-        "name": "tipografia-6",
+        "name": "tipografia-7",
         "content": "\n\n<h4>Intestazione <small class=\"text-muted\">con testo secondario</small></h4>\n"
     },
     {
@@ -33,7 +37,7 @@
     },
     {
         "name": "Markup semantico nei paragrafi",
-        "content": "\n<p>Esempio di testo <u>sottolineato</u>.</p>\n<p>Esempio di testo <mark>evidenziato</mark>.</p>\n<p>Esempio di testo <em>corsivo</em>.</p>\n<p>Esempio di testo <strong>in grassetto</strong>.</p>\n<p>Esempio di testo <small>rimpicciolito</small>.</p>\n<p>Esempio di testo <ins>aggiuntivo</ins>.</p>\n<p>Esempio di testo <del>cancellato</del> o <s>invalido</s>.</p>\n<p>Esempio di testo <code>monospace</code>.</p>\n"
+        "content": "\n<p>Esempio di testo <u>sottolineato</u>.</p>\n<p>Esempio di testo <mark>evidenziato</mark>.</p>\n<p>Esempio di testo <em>corsivo</em>.</p>\n<p>Esempio di testo <strong>in grassetto</strong>.</p>\n<p>Esempio di testo <small>rimpicciolito</small>.</p>\n<p>Esempio di <code>codice</code> in un paragrafo di testo.</p>\n<ins>Testo aggiunto</ins>\n<del>Testo rimosso</del>\n"
     },
     {
         "name": "Link",

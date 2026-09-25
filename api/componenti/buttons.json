@@ -8,24 +8,24 @@
         "content": "\n<a class=\"btn btn-link\" href=\"#\" role=\"button\">Pulsante link</a>\n<button class=\"btn btn-secondary\" type=\"submit\">Pulsante button</button>\n<input class=\"btn btn-outline-secondary\" type=\"button\" value=\"Pulsante input\">\n<input class=\"btn btn-outline-success\" type=\"submit\" value=\"Pulsante submit\">\n<input class=\"btn btn-danger\" type=\"reset\" value=\"Pulsante reset\">\n"
     },
     {
-        "name": "Button large",
-        "content": "\n<button type=\"button\" class=\"btn btn-primary btn-lg btn-me\">Primary large</button>\n<button type=\"button\" class=\"btn btn-secondary btn-lg\">Secondary large</button>\n"
+        "name": "Button grande",
+        "content": "\n<button type=\"button\" class=\"btn btn-primary btn-lg me-2\">Etichetta pulsante</button>\n<button type=\"button\" class=\"btn btn-secondary btn-lg\">Etichetta pulsante</button>\n"
     },
     {
-        "name": "Button small",
-        "content": "\n<button type=\"button\" class=\"btn btn-primary btn-sm btn-me\">Primary small</button>\n<button type=\"button\" class=\"btn btn-secondary btn-sm\">Secondary small</button>\n"
+        "name": "Button base",
+        "content": "\n<button type=\"button\" class=\"btn btn-primary me-2\">Etichetta pulsante</button>\n<button type=\"button\" class=\"btn btn-secondary\">Etichetta pulsante</button>\n"
     },
     {
-        "name": "Button mini",
-        "content": "\n<button type=\"button\" class=\"btn btn-primary btn-xs btn-me\">Primary mini</button>\n<button type=\"button\" class=\"btn btn-secondary btn-xs\">Secondary mini</button>\n"
+        "name": "Button piccolo",
+        "content": "\n<button type=\"button\" class=\"btn btn-primary btn-xs me-2\">Etichetta pulsante</button>\n<button type=\"button\" class=\"btn btn-secondary btn-xs\">Etichetta pulsante</button>\n"
     },
     {
         "name": "Button full width",
-        "content": "\n<div class=\"d-grid gap-2\">\n  <button class=\"btn btn-primary\" type=\"button\">Primary</button>\n  <button class=\"btn btn-secondary\" type=\"button\">Secondary</button>\n</div>\n"
+        "content": "\n\n<div class=\"d-grid gap-2\">\n  <button class=\"btn btn-primary\" type=\"button\">Primary</button>\n  <button class=\"btn btn-secondary\" type=\"button\">Secondary</button>\n</div>\n"
     },
     {
         "name": "Button full width su mobile",
-        "content": "\n<div class=\"d-grid gap-2 d-md-block\">\n  <button class=\"btn btn-primary\" type=\"button\">Primary</button>\n  <button class=\"btn btn-secondary\" type=\"button\">Secondary</button>\n</div>\n"
+        "content": "\n\n<div class=\"d-grid gap-2 d-md-block\">\n  <button class=\"btn btn-primary\" type=\"button\">Primary</button>\n  <button class=\"btn btn-secondary\" type=\"button\">Secondary</button>\n</div>\n"
     },
     {
         "name": "Varianti di colore",
@@ -41,10 +41,10 @@
     },
     {
         "name": "Button con icona",
-        "content": "\n<button class=\"btn btn-success btn-lg btn-icon\">\n  <span>Etichetta pulsante</span>\n  <svg class=\"icon icon-white ms-1\"><use href=\"https://italia.github.io/bootstrap-italia/dist/svg/sprites.svg#it-star-full\"></use></svg>\n</button>\n\n<button class=\"btn btn-primary btn-icon\">\n  <span>Etichetta pulsante</span>\n  <svg class=\"icon icon-white ms-1\"><use href=\"https://italia.github.io/bootstrap-italia/dist/svg/sprites.svg#it-star-full\"></use></svg>\n</button>\n\n<button class=\"btn btn-danger btn-sm btn-icon\">\n  <span>Etichetta pulsante</span>\n  <svg class=\"icon icon-white ms-1\"><use href=\"https://italia.github.io/bootstrap-italia/dist/svg/sprites.svg#it-star-full\"></use></svg>\n</button>\n\n<button class=\"btn btn-info btn-xs btn-icon\">\n  <span>Etichetta pulsante</span>\n  <svg class=\"icon icon-white ms-1\"><use href=\"https://italia.github.io/bootstrap-italia/dist/svg/sprites.svg#it-star-full\"></use></svg>\n</button>\n"
+        "content": "\n<button class=\"btn btn-success btn-lg btn-icon\">\n<span>Etichetta pulsante</span>\n<svg class=\"icon icon-sm icon-inverse\"><use href=\"https://italia.github.io/bootstrap-italia/dist/svg/sprites.svg#it-star-full\"></use></svg>\n</button>\n\n<button class=\"btn btn-primary btn-icon\">\n  <span>Etichetta pulsante</span>\n  <svg class=\"icon icon-sm icon-inverse\"><use href=\"https://italia.github.io/bootstrap-italia/dist/svg/sprites.svg#it-star-full\"></use></svg>\n</button>\n\n<button class=\"btn btn-danger btn-icon\">\n  <span>Etichetta pulsante</span>\n  <svg class=\"icon icon-sm icon-inverse\"><use href=\"https://italia.github.io/bootstrap-italia/dist/svg/sprites.svg#it-star-full\"></use></svg>\n</button>\n\n<button class=\"btn btn-secondary btn-xs btn-icon\">\n  <span>Etichetta pulsante</span>\n  <svg class=\"icon icon-xs icon-inverse\"><use href=\"https://italia.github.io/bootstrap-italia/dist/svg/sprites.svg#it-star-full\"></use></svg>\n</button>\n"
     },
     {
         "name": "Con icona, cerchiata",
-        "content": "\n<button class=\"btn btn-success btn-lg btn-icon btn-me\">\n  <span class=\"rounded-icon\">\n    <svg class=\"icon icon-success\"><use href=\"https://italia.github.io/bootstrap-italia/dist/svg/sprites.svg#it-user\"></use></svg>\n  </span>\n  <span>Etichetta pulsante</span>\n</button>\n\n<button class=\"btn btn-primary btn-icon btn-me\">\n  <span class=\"rounded-icon\">\n    <svg class=\"icon icon-primary\"><use href=\"https://italia.github.io/bootstrap-italia/dist/svg/sprites.svg#it-user\"></use></svg>\n  </span>\n  <span>Etichetta pulsante</span>\n</button>\n\n<button class=\"btn btn-danger btn-sm btn-icon btn-me\">\n  <span class=\"rounded-icon\">\n    <svg class=\"icon icon-danger\"><use href=\"https://italia.github.io/bootstrap-italia/dist/svg/sprites.svg#it-user\"></use></svg>\n  </span>\n  <span>Etichetta pulsante</span>\n</button>\n\n<button class=\"btn btn-secondary btn-xs btn-icon\">\n  <span class=\"rounded-icon\">\n    <svg class=\"icon icon-secondary\"><use href=\"https://italia.github.io/bootstrap-italia/dist/svg/sprites.svg#it-user\"></use></svg>\n  </span>\n  <span>Etichetta pulsante</span>\n</button>\n"
+        "content": "\n<button class=\"btn btn-success btn-lg btn-icon me-2\">\n<span class=\"rounded-icon\">\n<svg class=\"icon icon-xs icon-success\"><use href=\"https://italia.github.io/bootstrap-italia/dist/svg/sprites.svg#it-user\"></use></svg>\n</span>\n<span>Etichetta pulsante</span>\n</button>\n\n<button class=\"btn btn-primary btn-icon me-2\">\n  <span class=\"rounded-icon\">\n    <svg class=\"icon icon-xs icon-primary\"><use href=\"https://italia.github.io/bootstrap-italia/dist/svg/sprites.svg#it-user\"></use></svg>\n  </span>\n  <span>Etichetta pulsante</span>\n</button>\n\n<button class=\"btn btn-danger btn-icon me-2\">\n  <span class=\"rounded-icon\">\n    <svg class=\"icon icon-xs icon-danger\"><use href=\"https://italia.github.io/bootstrap-italia/dist/svg/sprites.svg#it-user\"></use></svg>\n  </span>\n  <span>Etichetta pulsante</span>\n</button>\n\n<button class=\"btn btn-secondary btn-xs btn-icon\">\n  <span class=\"rounded-icon\">\n    <svg class=\"icon icon-xs icon-secondary\"><use href=\"https://italia.github.io/bootstrap-italia/dist/svg/sprites.svg#it-user\"></use></svg>\n  </span>\n  <span>Etichetta pulsante</span>\n</button>\n"
     }
 ]

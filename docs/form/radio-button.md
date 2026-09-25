@@ -107,6 +107,8 @@ Per raggruppare visivamente gli elementi `checkbox` e `radio` occorrerà aggiung
 </div>
 {% endcapture %}{% include example.html content=example %}
 
+{% include properties.md properties=site.data.cprops.forms selector=":root" title="trasversali" %}
+
 ## Breaking change
 
 {% capture callout %}
