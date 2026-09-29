@@ -371,3 +371,6 @@ Nel caso di cambiamenti che dipendono dall'uso di un selettore (tag o classe) sp
 ```
 
 Le variabili definite al principio del file SCSS di un componente possono essere ridefinite all'interno dello stesso. Prima di modificarne il valore, verifica se la variabile è statica o dinamica cercando i riferimenti nel codice.
+
+
+{% include properties.md properties=site.data.cprops.root %}
