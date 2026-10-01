@@ -152,6 +152,45 @@ $btn-close-white-filter: invert(1) grayscale(100%) brightness(200%) !default;
   cursor: not-allowed;
 }
 
+// Checkbox/radio as button
+// <input class="btn-check"> + <label class="btn">: input is hidden, label is styled as button
+.btn-check {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  width: auto; // width reset: 100% input in _forms.scss, but we want to reset it to auto for the button
+  pointer-events: none;
+
+  + .btn {
+    margin-bottom: 0; // label margin-bottom reset in _forms.scss, but we want to reset it to 0 for the button
+    cursor: pointer;
+  }
+
+  &[disabled],
+  &:disabled {
+    + .btn {
+      pointer-events: none;
+      opacity: var(--#{$prefix}btn-disabled-opacity);
+    }
+  }
+}
+
+// retro-compatibility: .btn-check inside .form-check.
+// _forms.scss draw a checkbox/radio on each "input + label" inside .form-check:
+// here we reset padding, font-size and pseudo-elements on the btn label.
+.form-check .btn-check + .btn {
+  padding: var(--#{$prefix}btn-padding-y) var(--#{$prefix}btn-padding-x);
+  font-size: var(--#{$prefix}btn-font-size);
+
+  &::before,
+  &::after {
+    content: none;
+  }
+}
+
+.btn-check + .btn .icon {
+  fill: var(--#{$prefix}btn-text-color);
+}
+
 .btn-primary,
 a.btn-primary {
   --#{$prefix}btn-text-color: var(--#{$prefix}color-text-inverse);
@@ -321,6 +360,48 @@ a.btn-outline {
       --#{$prefix}btn-text-color: var(--#{$prefix}color-text-danger-active);
     }
   }
+}
+
+// Selected button (btn-check)
+//
+
+.btn-check:checked + .btn-primary,
+.btn-check:checked + .btn-outline-primary {
+  --#{$prefix}btn-background: var(--#{$prefix}color-background-primary-active);
+  --#{$prefix}btn-outline-border-color: var(--#{$prefix}color-border-primary-active);
+  --#{$prefix}btn-text-color: var(--#{$prefix}color-text-inverse);
+}
+
+.btn-check:checked + .btn-secondary,
+.btn-check:checked + .btn-outline-secondary {
+  --#{$prefix}btn-background: var(--#{$prefix}color-background-secondary-active);
+  --#{$prefix}btn-outline-border-color: var(--#{$prefix}color-border-secondary-active);
+  --#{$prefix}btn-text-color: var(--#{$prefix}color-text-inverse);
+}
+
+.btn-check:checked + .btn-success,
+.btn-check:checked + .btn-outline-success {
+  --#{$prefix}btn-background: var(--#{$prefix}color-background-success-active);
+  --#{$prefix}btn-outline-border-color: var(--#{$prefix}color-border-success-active);
+  --#{$prefix}btn-text-color: var(--#{$prefix}color-text-inverse);
+}
+
+.btn-check:checked + .btn-warning,
+.btn-check:checked + .btn-outline-warning {
+  --#{$prefix}btn-background: var(--#{$prefix}color-background-warning-active);
+  --#{$prefix}btn-outline-border-color: var(--#{$prefix}color-border-warning-active);
+  --#{$prefix}btn-text-color: var(--#{$prefix}color-text-inverse);
+}
+
+.btn-check:checked + .btn-danger,
+.btn-check:checked + .btn-outline-danger {
+  --#{$prefix}btn-background: var(--#{$prefix}color-background-danger-active);
+  --#{$prefix}btn-outline-border-color: var(--#{$prefix}color-border-danger-active);
+  --#{$prefix}btn-text-color: var(--#{$prefix}color-text-inverse);
+}
+
+.btn-check:checked + .btn .icon {
+  fill: var(--#{$prefix}icon-inverse);
 }
 
 // Button in a dark background

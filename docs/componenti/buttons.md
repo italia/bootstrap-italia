@@ -207,6 +207,78 @@ Per modificare la dimensione dell'icona, è possibile utilizzare le classi `.ico
 </button>
 {% endcapture %}{% include example.html content=example %}
 
+### Checkbox e radio come pulsanti
+
+Per ottenere pulsanti che si comportano come checkbox o radio, usare un `<input>` con classe `.btn-check` seguito da una `<label>` con classe `.btn`. L'input è nascosto visivamente ma resta raggiungibile da tastiera e dalle tecnologie assistive; la label ne è il controllo.
+
+Come per le checkbox e i radio, i gruppi di scelte vanno racchiusi nell'elemento nativo `<fieldset>`, con una `<legend>` che ne descrive lo scopo.
+
+Dato che l'aspetto di un pulsante suggerisce un'azione, per far capire che si tratta di una scelta è consigliabile racchiudere i pulsanti in un `.btn-group` ed evitare di affiancarli a pulsanti di azione (ad esempio una CTA) nella stessa variante di colore. Gli esempi mostrano sia i pulsanti separati, per compatibilità con il pattern di Bootstrap, sia il gruppo di pulsanti.
+
+{% capture callout %}
+#### Accessibilità pulsanti selezionabili
+
+Lo stato selezionato deve essere percepibile anche senza distinguere i colori. Le varianti outline lo comunicano con il riempimento del pulsante; le varianti piene cambiano solo di tonalità e sono sconsigliate con `.btn-check`.
+{% endcapture %}{% include callout.html content=callout type="accessibility" %}
+
+
+#### Pulsanti separati
+
+{% comment %}Example name: Checkbox e radio come pulsanti, separati{% endcomment %}
+{% capture example %}
+
+<fieldset class="mb-4">
+  <legend>Selezione una o più opzioni checkbox</legend>
+  <input type="checkbox" class="btn-check" id="btn-check-single-1" autocomplete="off">
+  <label class="btn btn-outline-secondary me-2" for="btn-check-single-1">Checkbox 1</label>
+  <input type="checkbox" class="btn-check" id="btn-check-single-2" autocomplete="off">
+  <label class="btn btn-outline-secondary me-2" for="btn-check-single-2">Checkbox 2</label>
+  <input type="checkbox" class="btn-check" id="btn-check-single-3" autocomplete="off">
+  <label class="btn btn-outline-secondary" for="btn-check-single-3">Checkbox 3</label>
+</fieldset>
+<fieldset>
+  <legend>Seleziona un'opzione radio</legend>
+  <input type="radio" class="btn-check" name="btn-radio-single" id="btn-radio-single-1" autocomplete="off" checked>
+  <label class="btn btn-outline-secondary me-2" for="btn-radio-single-1">Radio 1</label>
+  <input type="radio" class="btn-check" name="btn-radio-single" id="btn-radio-single-2" autocomplete="off">
+  <label class="btn btn-outline-secondary me-2" for="btn-radio-single-2">Radio 2</label>
+  <input type="radio" class="btn-check" name="btn-radio-single" id="btn-radio-single-3" autocomplete="off">
+  <label class="btn btn-outline-secondary" for="btn-radio-single-3">Radio 3</label>
+</fieldset>
+{% endcapture %}{% include example.html content=example %}
+
+#### Gruppo di pulsanti
+
+Per affiancare i pulsanti checkbox o radio in un unico blocco, racchiuderli in un `.btn-group` all'interno del `<fieldset>`.
+
+{% comment %}Example name: Checkbox e radio come pulsanti, in un gruppo di pulsanti{% endcomment %}
+{% capture example %}
+
+<fieldset class="mb-4">
+  <legend>Seleziona una o più opzioni checkbox</legend>
+  <div class="btn-group">
+    <input type="checkbox" class="btn-check" id="btn-check-1" autocomplete="off">
+    <label class="btn btn-outline-secondary" for="btn-check-1">Checkbox 1</label>
+    <input type="checkbox" class="btn-check" id="btn-check-2" autocomplete="off">
+    <label class="btn btn-outline-secondary" for="btn-check-2">Checkbox 2</label>
+    <input type="checkbox" class="btn-check" id="btn-check-3" autocomplete="off">
+    <label class="btn btn-outline-secondary" for="btn-check-3">Checkbox 3</label>
+  </div>
+</fieldset>
+<fieldset>
+  <legend>Seleziona un'opzione radio</legend>
+  <div class="btn-group">
+    <input type="radio" class="btn-check" name="btn-radio" id="btn-radio-1" autocomplete="off" checked>
+    <label class="btn btn-outline-secondary" for="btn-radio-1">Radio 1</label>
+    <input type="radio" class="btn-check" name="btn-radio" id="btn-radio-2" autocomplete="off">
+    <label class="btn btn-outline-secondary" for="btn-radio-2">Radio 2</label>
+    <input type="radio" class="btn-check" name="btn-radio" id="btn-radio-3" autocomplete="off">
+    <label class="btn btn-outline-secondary" for="btn-radio-3">Radio 3</label>
+  </div>
+</fieldset>
+{% endcapture %}{% include example.html content=example %}
+
+
 ## Attivazione tramite codice
 
 ```js

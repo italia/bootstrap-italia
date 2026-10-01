@@ -107,6 +107,10 @@ Per raggruppare visivamente gli elementi `checkbox` e `radio` occorrerà aggiung
 </div>
 {% endcapture %}{% include example.html content=example %}
 
+### Come pulsanti
+
+Per mostrare i radio come pulsanti, vedi la sezione [Checkbox e radio come pulsanti]({{ site.baseurl }}/docs/componenti/buttons/#checkbox-e-radio-come-pulsanti) nella pagina Buttons.
+
 {% include properties.md properties=site.data.cprops.forms selector=":root" title="trasversali" %}
 
 ## Breaking change

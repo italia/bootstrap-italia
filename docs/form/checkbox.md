@@ -7,8 +7,6 @@ title: Checkbox
 description: Elementi e stili per la creazione di checkbox accessibili.
 ---
 
-## Checkbox
-
 Per utilizzare i checkbox personalizzati è necessario inserire la classe `.form-check` nell'elemento padre.
 
 {% comment %}Example name: Base {% endcomment %}
@@ -122,6 +120,10 @@ Per l'utilizzo del componente mixed button, è disponibile un esempio integrato 
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
+
+### Come pulsanti
+
+Per mostrare le checkbox come pulsanti, vedi la sezione [Checkbox e radio come pulsanti]({{ site.baseurl }}/docs/componenti/buttons/#checkbox-e-radio-come-pulsanti) nella pagina Buttons.
 
 {% include properties.md properties=site.data.cprops.forms selector=":root" title="trasversali" %}
 

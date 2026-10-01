@@ -8,7 +8,8 @@
 .it-carousel-wrapper .splide__pagination button:focus:not([data-focus-mouse='true']),
 .upload:focus:not([data-focus-mouse='true']) + label,
 .upload-dragdrop-input:focus[type='file']:not([data-focus-mouse='true']) + label,
-.avatar-upload:focus-within:not([data-focus-mouse='true']) {
+.avatar-upload:focus-within:not([data-focus-mouse='true']),
+.btn-check:focus:not([data-focus-mouse='true']) + .btn {
   @include focus;
 }
 
@@ -103,6 +104,10 @@ p.it-card-text a {
     [type='radio']:focus + label {
       width: 100%;
     }
+  }
+
+  .btn-check:focus[data-focus-mouse='true'] + .btn {
+    box-shadow: var(--#{$prefix}btn-box-shadow, none) !important;
   }
 }
 
