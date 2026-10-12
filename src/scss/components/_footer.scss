@@ -33,7 +33,7 @@
     font-size: var(--#{$prefix}label-font-size);
     text-transform: uppercase;
 
-    // Section titles could be links in the full footer: almost click/focus vertical padding as the list items
+    // Section titles could be links in the full footer: same click/focus vertical padding as the list items that follow
     a {
       display: inline-block;
       padding-block: calc(var(--#{$prefix}spacing-xs) / 2);
