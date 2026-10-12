@@ -32,6 +32,13 @@
     margin-bottom: var(--#{$prefix}spacing-s);
     font-size: var(--#{$prefix}label-font-size);
     text-transform: uppercase;
+
+    // Section titles could be links in the full footer: same click/focus vertical padding as the list items that follow
+    a {
+      display: inline-block;
+      padding-block: calc(var(--#{$prefix}spacing-xs) / 2);
+      margin-block: calc(-1 * calc(var(--#{$prefix}spacing-xs) / 2));
+    }
   }
 
   ul,
@@ -77,14 +84,25 @@
     font-weight: var(--#{$prefix}font-weight-solid);
   }
 
-  .link-list-wrapper ul li:not(:last-child) {
-    margin-bottom: var(--#{$prefix}spacing-xs);
-  }
-
   // Override the default .link-list styles - /components/_linklist.scss
-  .link-list-wrapper .list-item {
-    padding: 0;
-    text-decoration: underline;
+  .link-list-wrapper {
+    // Vertical spacing lives in the link padding (6px per side), so it is part of the click/focus area
+    --#{$prefix}linklist-item-spacing: calc(var(--#{$prefix}spacing-xs) / 2);
+    // Same line-height the footer already sets on ul/li/p
+    --#{$prefix}linklist-item-line-height: var(--#{$prefix}body-leading);
+
+    .list-item {
+      text-decoration: underline;
+    }
+
+    // Compensate the outer padding, so the text of the list keeps its position
+    li:first-child {
+      margin-top: calc(-1 * var(--#{$prefix}linklist-item-spacing));
+    }
+
+    li:last-child {
+      margin-bottom: calc(-1 * var(--#{$prefix}linklist-item-spacing));
+    }
   }
 
   .it-brand-wrapper {
@@ -141,6 +159,12 @@
 
       &:last-child {
         padding-bottom: 0;
+      }
+
+      a {
+        display: inline-block;
+        padding-block: calc(var(--#{$prefix}spacing-xs) / 2);
+        margin-block: calc(-1 * var(--#{$prefix}spacing-xs) / 2);
       }
     }
   }
