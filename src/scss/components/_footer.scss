@@ -160,6 +160,12 @@
       &:last-child {
         padding-bottom: 0;
       }
+
+      a {
+        display: inline-block;
+        padding-block: calc(var(--#{$prefix}spacing-xs) / 2);
+        margin-block: calc(-1 * var(--#{$prefix}spacing-xs) / 2);
+      }
     }
   }
 }
