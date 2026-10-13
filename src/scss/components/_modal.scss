@@ -147,6 +147,7 @@
   @include border-bottom-radius(var(--#{$prefix}modal-inner-border-radius));
 
   &.modal-footer-shadow {
+    padding-top: calc(var(--#{$prefix}modal-padding) - var(--#{$prefix}spacing-xs));
     box-shadow: 0 15px 25px 5px rgb(0, 0, 0, 0.3);
   }
 }
@@ -335,7 +336,7 @@
         }
 
         .modal-footer {
-          padding-top: var(--#{$prefix}modal-padding);
+          padding-top: calc(var(--#{$prefix}modal-padding) - var(--#{$prefix}spacing-xs));
           flex-shrink: 0;
         }
       }
