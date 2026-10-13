@@ -95,6 +95,10 @@
   flex: 1 1 auto;
   padding: var(--#{$prefix}modal-padding);
   color: var(--#{$prefix}color-text-base);
+
+  > :last-child {
+    margin-bottom: 0;
+  }
 }
 
 // Actual modal
