@@ -301,11 +301,9 @@
       margin-right: auto;
       margin-left: auto;
 
-      .modal-body {
-        p {
-          font-size: var(--#{$prefix}caption-font-size);
-          line-height: var(--#{$prefix}caption-leading);
-        }
+      // Confirmation text stays at 16px from sm up, without the default body font-size stepup to 18px
+      .modal-body p {
+        --#{$prefix}body-font-size: 1rem;
       }
       .modal-footer {
         justify-content: flex-start;
