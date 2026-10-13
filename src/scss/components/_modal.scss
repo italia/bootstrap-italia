@@ -132,12 +132,12 @@
   flex-shrink: 0;
   align-items: center;
   justify-content: space-between; // Put modal header elements (title and dismiss) on opposite ends
-  padding: var(--#{$prefix}modal-padding) var(--#{$prefix}modal-padding) calc(var(--#{$prefix}modal-padding) - var(--#{$prefix}spacing-xs));
+  padding: var(--#{$prefix}modal-padding) var(--#{$prefix}modal-padding) calc(var(--#{$prefix}modal-padding) - var(--#{$prefix}spacing-xxs));
   border-bottom: var(--#{$prefix}modal-header-border-width) solid var(--#{$prefix}modal-header-border-color);
 }
 
 .modal-header + .modal-body {
-  padding-top: var(--#{$prefix}spacing-xs);
+  padding-top: var(--#{$prefix}spacing-xxs);
 }
 
 // Modal footer
@@ -155,7 +155,7 @@
   @include border-bottom-radius(var(--#{$prefix}modal-inner-border-radius));
 
   &.modal-footer-shadow {
-    padding-top: calc(var(--#{$prefix}modal-padding) - var(--#{$prefix}spacing-xs));
+    padding-top: calc(var(--#{$prefix}modal-padding) - var(--#{$prefix}spacing-xxs));
     box-shadow: 0 15px 25px 5px rgb(0, 0, 0, 0.3);
   }
 }
@@ -341,7 +341,7 @@
         }
 
         .modal-footer {
-          padding-top: calc(var(--#{$prefix}modal-padding) - var(--#{$prefix}spacing-xs));
+          padding-top: calc(var(--#{$prefix}modal-padding) - var(--#{$prefix}spacing-xxs));
           flex-shrink: 0;
         }
       }
