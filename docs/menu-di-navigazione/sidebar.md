@@ -6,6 +6,18 @@ group: menu-di-navigazione
 toc: true
 ---
 
+La sidebar organizza in una barra laterale una o più [liste di link]({{ site.baseurl }}/docs/organizzare-i-contenuti/liste/#liste-per-menu-di-navigazione), anche annidate, con un eventuale titolo.
+
+{% capture callout %}
+#### Accessibilità
+
+Se nella pagina la sidebar è un contenuto complementare, `.sidebar-wrapper` può essere un `<aside>`, con il titolo come nome tramite `aria-labelledby`.
+
+Usa un `<nav>` per ogni lista di link (`.link-list-wrapper`). Quando nella pagina ci sono più `<nav>`, dai a ciascuno un `aria-label` distinto che ne indichi la funzione.
+
+Non inserire il titolo come elemento `<li>`: verrebbe contato tra gli elementi della lista. Posizionalo prima della lista, all'inizio di `.sidebar-wrapper` come negli esempi oppure dentro il `<nav>` della lista. Nel secondo caso usa il titolo come nome del `<nav>` tramite `aria-labelledby`, al posto di `aria-label`.
+{% endcapture %}{% include callout.html content=callout type="accessibility" %}
+
 ## Semplice
 
 La sidebar semplice può contenere:
@@ -18,13 +30,11 @@ Per differenziare a livello stilistico i link secondari, è sufficiente aggiunge
 
 {% comment %}Example name: Base{% endcomment %}
 {% capture example %}
-<nav class="sidebar-wrapper" aria-label="Menu di navigazione secondaria">
+<div class="sidebar-wrapper">
+  <h3 class="no_toc">Header</h3>
   <div class="sidebar-linklist-wrapper">
-    <div class="link-list-wrapper">
+    <nav class="link-list-wrapper" aria-label="Pagine della sezione">
       <ul class="link-list">
-        <li>
-          <h3 class="no_toc">Header</h3>
-        </li>
         <li><a class="list-item medium active" href="#"><span>Link lista 1 (attivo)</span></a>
         </li>
         <li><a class="list-item medium disabled" href="#"><span>Link lista 2 (disabilitato)</span></a>
@@ -34,10 +44,10 @@ Per differenziare a livello stilistico i link secondari, è sufficiente aggiunge
         <li><a class="list-item medium" href="#"><span>Link lista 4</span></a>
         </li>
       </ul>
-    </div>
+    </nav>
   </div>
   <div class="sidebar-linklist-wrapper linklist-secondary">
-    <div class="link-list-wrapper">
+    <nav class="link-list-wrapper" aria-label="Link secondari">
       <ul class="link-list">
         <li><a class="list-item" href="#"><span>Link secondario 1</span></a>
         </li>
@@ -46,7 +56,7 @@ Per differenziare a livello stilistico i link secondari, è sufficiente aggiunge
         <li><a class="list-item disabled" href="#"><span>Link secondario 3 (disabilitato)</span></a>
         </li>
       </ul>
-    </div>
+    </nav>
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -57,13 +67,11 @@ La sidebar può contenere icone nella sua Lista di link.
 
 {% comment %}Example name: Con icona{% endcomment %}
 {% capture example %}
-<nav class="sidebar-wrapper" aria-label="Menu di navigazione secondaria">
+<div class="sidebar-wrapper">
+  <h3 class="no_toc">Header</h3>
   <div class="sidebar-linklist-wrapper">
-    <div class="link-list-wrapper">
+    <nav class="link-list-wrapper" aria-label="Pagine della sezione">
       <ul class="link-list">
-        <li>
-          <h3 class="no_toc">Header</h3>
-        </li>
         <li>
           <a class="list-item medium active" href="#">
             <svg class="icon icon-sm icon-primary" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-star-outline"></use></svg><span>Link lista 1 (selezionato)</span>
@@ -85,10 +93,10 @@ La sidebar può contenere icone nella sua Lista di link.
           </a>
         </li>
       </ul>
-    </div>
+    </nav>
   </div>
   <div class="sidebar-linklist-wrapper linklist-secondary">
-    <div class="link-list-wrapper">
+    <nav class="link-list-wrapper" aria-label="Link secondari">
       <ul class="link-list">
         <li><a class="list-item" href="#"><span>Link secondario 1</span></a>
         </li>
@@ -97,7 +105,7 @@ La sidebar può contenere icone nella sua Lista di link.
         <li><a class="list-item disabled" href="#"><span>Link secondario 3 (disabilitato)</span></a>
         </li>
       </ul>
-    </div>
+    </nav>
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -108,13 +116,11 @@ Per creare una sidebar con linea separatrice a destra è sufficiente aggiungere 
 
 {% comment %}Example name: Con linea a destra{% endcomment %}
 {% capture example %}
-<nav class="sidebar-wrapper it-line-right-side" aria-label="Menu di navigazione secondaria">
+<div class="sidebar-wrapper it-line-right-side">
+  <h3 class="no_toc">Header</h3>
   <div class="sidebar-linklist-wrapper">
-    <div class="link-list-wrapper">
+    <nav class="link-list-wrapper" aria-label="Pagine della sezione">
       <ul class="link-list">
-        <li>
-          <h3 class="no_toc">Header</h3>
-        </li>
         <li><a class="list-item medium active" href="#"><span>Link lista 1 (selezionato)</span></a>
         </li>
         <li><a class="list-item medium disabled" href="#"><span>Link lista 2 (disabilitato)</span></a>
@@ -124,10 +130,10 @@ Per creare una sidebar con linea separatrice a destra è sufficiente aggiungere 
         <li><a class="list-item medium" href="#"><span>Link lista 4</span></a>
         </li>
       </ul>
-    </div>
+    </nav>
   </div>
   <div class="sidebar-linklist-wrapper linklist-secondary">
-    <div class="link-list-wrapper">
+    <nav class="link-list-wrapper" aria-label="Link secondari">
       <ul class="link-list">
         <li><a class="list-item" href="#"><span>Link secondario 1</span></a>
         </li>
@@ -136,7 +142,7 @@ Per creare una sidebar con linea separatrice a destra è sufficiente aggiungere 
         <li><a class="list-item disabled" href="#"><span>Link secondario 3 (disabilitato)</span></a>
         </li>
       </ul>
-    </div>
+    </nav>
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -147,13 +153,11 @@ Per creare una sidebar con linea separatrice a sinistra è sufficiente aggiunger
 
 {% comment %}Example name: Con linea a sinistra{% endcomment %}
 {% capture example %}
-<nav class="sidebar-wrapper it-line-left-side" aria-label="Menu di navigazione secondaria">
+<div class="sidebar-wrapper it-line-left-side">
+  <h3 class="no_toc">Header</h3>
   <div class="sidebar-linklist-wrapper">
-    <div class="link-list-wrapper">
+    <nav class="link-list-wrapper" aria-label="Pagine della sezione">
       <ul class="link-list">
-        <li>
-          <h3 class="no_toc">Header</h3>
-        </li>
         <li><a class="list-item medium active" href="#"><span>Link lista 1 (attivo)</span></a>
         </li>
         <li><a class="list-item medium disabled" href="#"><span>Link lista 2 (disabilitato)</span></a>
@@ -163,10 +167,10 @@ Per creare una sidebar con linea separatrice a sinistra è sufficiente aggiunger
         <li><a class="list-item medium" href="#"><span>Link lista 4</span></a>
         </li>
       </ul>
-    </div>
+    </nav>
   </div>
   <div class="sidebar-linklist-wrapper linklist-secondary">
-    <div class="link-list-wrapper">
+    <nav class="link-list-wrapper" aria-label="Link secondari">
       <ul class="link-list">
         <li><a class="list-item" href="#"><span>Link secondario 1</span></a>
         </li>
@@ -175,7 +179,7 @@ Per creare una sidebar con linea separatrice a sinistra è sufficiente aggiunger
         <li><a class="list-item disabled" href="#"><span>Link secondario 3 (disabilitato)</span></a>
         </li>
       </ul>
-    </div>
+    </nav>
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -186,10 +190,10 @@ La sidebar può contenere una Lista di link primaria annidata.
 
 {% comment %}Example name: Annidata{% endcomment %}
 {% capture example %}
-<nav class="sidebar-wrapper" aria-label="Menu di navigazione secondaria">
+<div class="sidebar-wrapper">
   <h3 class="no_toc">Header</h3>
   <div class="sidebar-linklist-wrapper">
-    <div class="link-list-wrapper">
+    <nav class="link-list-wrapper" aria-label="Pagine della sezione">
       <ul class="link-list">
         <li>
           <a class="list-item medium" href="#collapseOne" role="button" data-bs-toggle="collapse" aria-expanded="true" aria-controls="collapseOne">
@@ -240,10 +244,10 @@ La sidebar può contenere una Lista di link primaria annidata.
           </ul>
         </li>
       </ul>
-    </div>
+    </nav>
   </div>
   <div class="sidebar-linklist-wrapper linklist-secondary">
-    <div class="link-list-wrapper">
+    <nav class="link-list-wrapper" aria-label="Link secondari">
       <ul class="link-list">
         <li><a class="list-item" href="#"><span>Link secondario 1</span></a>
         </li>
@@ -252,7 +256,7 @@ La sidebar può contenere una Lista di link primaria annidata.
         <li><a class="list-item disabled" href="#"><span>Link secondario 3 (disabilitato)</span></a>
         </li>
       </ul>
-    </div>
+    </nav>
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -263,10 +267,10 @@ Per cambiare il tema della sidebar e renderla scura è sufficiente aggiungere al
 
 {% comment %}Example name: Con sfondo scuro{% endcomment %}
 {% capture example %}
-<nav class="sidebar-wrapper theme-dark" aria-label="Menu di navigazione secondaria">
+<div class="sidebar-wrapper theme-dark">
   <h3 class="no_toc">Header</h3>
   <div class="sidebar-linklist-wrapper">
-    <div class="link-list-wrapper">
+    <nav class="link-list-wrapper" aria-label="Pagine della sezione">
       <ul class="link-list">
         <li>
           <a class="list-item large medium" href="#collapseFour" role="button" data-bs-toggle="collapse" aria-expanded="true" aria-controls="collapseOne">
@@ -314,10 +318,10 @@ Per cambiare il tema della sidebar e renderla scura è sufficiente aggiungere al
           </ul>
         </li>
       </ul>
-    </div>
+    </nav>
   </div>
   <div class="sidebar-linklist-wrapper linklist-secondary">
-    <div class="link-list-wrapper">
+    <nav class="link-list-wrapper" aria-label="Link secondari">
       <ul class="link-list">
         <li><a class="list-item" href="#"><span>Link secondario 1</span></a>
         </li>
@@ -326,7 +330,7 @@ Per cambiare il tema della sidebar e renderla scura è sufficiente aggiungere al
         <li><a class="list-item disabled" href="#"><span>Link secondario 3 (disabilitato)</span></a>
         </li>
       </ul>
-    </div>
+    </nav>
   </div>
 </div>
 {% endcapture %}{% include example.html content=example %}
@@ -341,8 +345,8 @@ sezione [attivazione Collapse tramite codice]({{ site.baseurl }}/docs/componenti
 ## Breaking change
 
 {% capture callout %}
-- L'intera sidebar `.sidebar-wrapper` è diventata un elemento `<nav>` per indicarne meglio la semantica. 
-- Rimossi elementi `<span>` con classe `list-item-title-icon-wrapper`.
+- Ogni lista di link della sidebar (`.link-list-wrapper`) è ora un elemento `<nav>` con un nome accessibile dedicato, al posto di un `<div>`.
+- Il titolo della sidebar (`<h3>`) non è più un elemento `<li>` della lista di link: negli esempi è posto all'inizio del contenitore `.sidebar-wrapper`. A seconda del contesto può essere posizionato diversamente, vedi la nota di accessibilità.
 - Nella variante con una lista di link primaria annidata è stata rimossa la classe `.large` dagli elementi `<a>` con classi `.list-item .medium`. 
 - Nelle varianti scure la classe che controlla il colore delle icone bianche ha cambiato nome: `.icon-white` diventa `.icon-inverse`.
 - Rimossa le classi `.right-icon` e `.right` dai link list item.
