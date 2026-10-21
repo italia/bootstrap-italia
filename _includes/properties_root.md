@@ -8,7 +8,7 @@ La descrizione delle custom properties è in inglese perché risiede nei files `
 
 <!-- Tipografia statiche -->
 
-<h3 class="no_toc">Properties Tipografia</h3>
+<h3>Tipografia</h3>
 
 <div class="table-responsive" style="font-size: 1rem">
   <table class="table table-simple">
@@ -37,7 +37,7 @@ La descrizione delle custom properties è in inglese perché risiede nei files `
 
 <!-- Tipografia dinamiche -->
 
-<h3 class="no_toc">Properties Tipografia dinamiche</h3>
+<h3>Tipografia dinamiche</h3>
 
 Nella colonna `"Valore predefinito"` è possibile trovare, oltre al valore di base, un'indicazione delle eventuali varianti responsive/tema/stato della property stessa:
 fare riferimento ai file elencati nella colonna `"File SCSS"` per il dettaglio dei valori e del contesto di applicazione.
@@ -71,7 +71,7 @@ fare riferimento ai file elencati nella colonna `"File SCSS"` per il dettaglio d
 
 <!-- Icone -->
 
-<h3 class="no_toc">Properties Icons</h3>
+<h3>Icons</h3>
 
 <div class="table-responsive" style="font-size: 1rem">
   <table class="table table-simple">
@@ -100,7 +100,7 @@ fare riferimento ai file elencati nella colonna `"File SCSS"` per il dettaglio d
 
 <!-- Border -->
 
-<h3 class="no_toc">Properties Border</h3>
+<h3>Border</h3>
 
 <div class="table-responsive" style="font-size: 1rem">
   <table class="table table-simple">
@@ -132,7 +132,7 @@ fare riferimento ai file elencati nella colonna `"File SCSS"` per il dettaglio d
 
 <!-- Sizing -->
 
-<h3 class="no_toc">Properties Sizing</h3>
+<h3>Sizing</h3>
 
 <div class="table-responsive" style="font-size: 1rem">
   <table class="table table-simple">
@@ -161,7 +161,7 @@ fare riferimento ai file elencati nella colonna `"File SCSS"` per il dettaglio d
 
 <!-- Shadow -->
 
-<h3 class="no_toc">Properties Shadow</h3>
+<h3>Shadow</h3>
 
 <div class="table-responsive" style="font-size: 1rem">
   <table class="table table-simple">
@@ -190,7 +190,7 @@ fare riferimento ai file elencati nella colonna `"File SCSS"` per il dettaglio d
 
 <!-- Spacing -->
 
-<h3 class="no_toc">Properties Spacing</h3>
+<h3>Spacing</h3>
 
 <div class="table-responsive" style="font-size: 1rem">
   <table class="table table-simple">
