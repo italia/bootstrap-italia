@@ -4653,6 +4653,2438 @@
             "variable-name": "--bsi-rating-text"
         }
     ],
+    "root": [
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "hsl(0, 0%, 96%)",
+            "variable-name": "--bsi--gray-100"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "hsl(0, 0%, 90%)",
+            "variable-name": "--bsi--gray-200"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "hsl(0, 0%, 83%)",
+            "variable-name": "--bsi--gray-300"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "hsl(0, 0%, 64%)",
+            "variable-name": "--bsi--gray-400"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "hsl(0, 0%, 45%)",
+            "variable-name": "--bsi--gray-500"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "hsl(0, 0%, 32%)",
+            "variable-name": "--bsi--gray-600"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "hsl(0, 0%, 25%)",
+            "variable-name": "--bsi--gray-700"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "hsl(0, 0%, 15%)",
+            "variable-name": "--bsi--gray-800"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "hsl(0, 0%, 10%)",
+            "variable-name": "--bsi--gray-900"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "hsl(210, 100%, 40%)",
+            "variable-name": "--bsi--primary"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "hsl(210, 17%, 44%)",
+            "variable-name": "--bsi--secondary"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "hsl(160, 100%, 25%)",
+            "variable-name": "--bsi--success"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "hsl(210, 17%, 44%)",
+            "variable-name": "--bsi--info"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "hsl(36, 100%, 30%)",
+            "variable-name": "--bsi--warning"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "hsl(350, 60%, 50%)",
+            "variable-name": "--bsi--danger"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "hsl(255, 32.2033898305%, 92.625%)",
+            "variable-name": "--bsi--light"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "hsl(210, 54%, 20%)",
+            "variable-name": "--bsi--dark"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "hsl(0, 0%, 0%)",
+            "variable-name": "--bsi--black"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "hsl(0, 0%, 100%)",
+            "variable-name": "--bsi--white"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "hsl(0, 0%, 96%)",
+            "variable-name": "--bsi--100"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "hsl(0, 0%, 90%)",
+            "variable-name": "--bsi--200"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "hsl(0, 0%, 83%)",
+            "variable-name": "--bsi--300"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "hsl(0, 0%, 64%)",
+            "variable-name": "--bsi--400"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "hsl(0, 0%, 45%)",
+            "variable-name": "--bsi--500"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "hsl(0, 0%, 32%)",
+            "variable-name": "--bsi--600"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "hsl(0, 0%, 25%)",
+            "variable-name": "--bsi--700"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "hsl(0, 0%, 15%)",
+            "variable-name": "--bsi--800"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "hsl(0, 0%, 10%)",
+            "variable-name": "--bsi--900"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "0, 102, 204",
+            "variable-name": "--bsi--primary-rgb"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "93.126, 112.2, 131.274",
+            "variable-name": "--bsi--secondary-rgb"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "0, 127.5, 85",
+            "variable-name": "--bsi--success-rgb"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "93.126, 112.2, 131.274",
+            "variable-name": "--bsi--info-rgb"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "153, 91.8, 0",
+            "variable-name": "--bsi--warning-rgb"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "204, 51, 76.5",
+            "variable-name": "--bsi--danger-rgb"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "233.165625, 230.1375, 242.25",
+            "variable-name": "--bsi--light-rgb"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "23.46, 51, 78.54",
+            "variable-name": "--bsi--dark-rgb"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "0, 0, 0",
+            "variable-name": "--bsi--black-rgb"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "255, 255, 255",
+            "variable-name": "--bsi--white-rgb"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "244.8, 244.8, 244.8",
+            "variable-name": "--bsi--100-rgb"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "229.5, 229.5, 229.5",
+            "variable-name": "--bsi--200-rgb"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "211.65, 211.65, 211.65",
+            "variable-name": "--bsi--300-rgb"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "163.2, 163.2, 163.2",
+            "variable-name": "--bsi--400-rgb"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "114.75, 114.75, 114.75",
+            "variable-name": "--bsi--500-rgb"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "81.6, 81.6, 81.6",
+            "variable-name": "--bsi--600-rgb"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "63.75, 63.75, 63.75",
+            "variable-name": "--bsi--700-rgb"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "38.25, 38.25, 38.25",
+            "variable-name": "--bsi--800-rgb"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "25.5, 25.5, 25.5",
+            "variable-name": "--bsi--900-rgb"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0))",
+            "variable-name": "--bsi--gradient"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "rgba(0, 0, 0, 0.175)",
+            "variable-name": "--bsi--border-color-translucent"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "4px",
+            "variable-name": "--bsi--border-radius"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "2px",
+            "variable-name": "--bsi--border-radius-sm"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "8px",
+            "variable-name": "--bsi--border-radius-lg"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "1rem",
+            "variable-name": "--bsi--border-radius-xl"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "2rem",
+            "variable-name": "--bsi--border-radius-2xl"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "50rem",
+            "variable-name": "--bsi--border-radius-pill"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#0066cc",
+            "variable-name": "--bsi--theme-primary"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#bfdfff",
+            "variable-name": "--bsi--theme-primary-light"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#f2f7fc",
+            "variable-name": "--bsi--theme-primary-lighter"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#004d99",
+            "variable-name": "--bsi--theme-primary-subtle"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#004080",
+            "variable-name": "--bsi--theme-primary-muted"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#003366",
+            "variable-name": "--bsi--theme-primary-deep"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#004d99",
+            "variable-name": "--bsi--color-blue-30"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#455b71",
+            "variable-name": "--bsi--color-slate-36"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#768594",
+            "variable-name": "--bsi--color-slate-52"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#929da9",
+            "variable-name": "--bsi--color-slate-62"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#d9dadb",
+            "variable-name": "--bsi--color-slate-85"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "96px",
+            "variable-name": "--bsi--spacing-3xl"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "48px",
+            "variable-name": "--bsi--spacing-xxl"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "40px",
+            "variable-name": "--bsi--spacing-xl"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "32px",
+            "variable-name": "--bsi--spacing-l"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "24px",
+            "variable-name": "--bsi--spacing-m"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "16px",
+            "variable-name": "--bsi--spacing-s"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "56px",
+            "variable-name": "--bsi--spacing-14x"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "12px",
+            "variable-name": "--bsi--spacing-xs"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "8px",
+            "variable-name": "--bsi--spacing-xxs"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "4px",
+            "variable-name": "--bsi--spacing-3xs"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "16px",
+            "variable-name": "--bsi--heading-spacing"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "24px",
+            "variable-name": "--bsi--paragraph-spacing"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "Roboto Mono",
+            "variable-name": "--bsi--font-mono"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "Lora",
+            "variable-name": "--bsi--font-serif"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "'Titillium Web', 'Titillium Sans Pro', Titillium Web",
+            "variable-name": "--bsi--font-sans"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "700",
+            "variable-name": "--bsi--font-weight-strong"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "600",
+            "variable-name": "--bsi--font-weight-solid"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "400",
+            "variable-name": "--bsi--font-weight-base"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "300",
+            "variable-name": "--bsi--font-weight-thin"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "56px",
+            "variable-name": "--bsi--font-size-11"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "48px",
+            "variable-name": "--bsi--font-size-10"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "40px",
+            "variable-name": "--bsi--font-size-9"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "32px",
+            "variable-name": "--bsi--font-size-8"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "28px",
+            "variable-name": "--bsi--font-size-7"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "24px",
+            "variable-name": "--bsi--font-size-6"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "20px",
+            "variable-name": "--bsi--font-size-5"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "18px",
+            "variable-name": "--bsi--font-size-4"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "16px",
+            "variable-name": "--bsi--font-size-3"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "14px",
+            "variable-name": "--bsi--font-size-2"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "12px",
+            "variable-name": "--bsi--font-size-1"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "1.5",
+            "variable-name": "--bsi--font-leading-5"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "1.4",
+            "variable-name": "--bsi--font-leading-4"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "1.3",
+            "variable-name": "--bsi--font-leading-3"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "1.2",
+            "variable-name": "--bsi--font-leading-2"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "1.1",
+            "variable-name": "--bsi--font-leading-1"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "0px",
+            "variable-name": "--bsi--font-tracking-normal"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "-2px",
+            "variable-name": "--bsi--font-tracking-tight"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "-1.3px",
+            "variable-name": "--bsi--font-tracking-narrow"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "-1px",
+            "variable-name": "--bsi--font-tracking-short"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [
+                "56px"
+            ],
+            "value": "48px",
+            "variable-name": "--bsi--display-font-size"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [
+                "18px"
+            ],
+            "value": "16px",
+            "variable-name": "--bsi--heading-6-font-size"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [
+                "24px"
+            ],
+            "value": "20px",
+            "variable-name": "--bsi--heading-5-font-size"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [
+                "28px"
+            ],
+            "value": "24px",
+            "variable-name": "--bsi--heading-4-font-size"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [
+                "32px"
+            ],
+            "value": "28px",
+            "variable-name": "--bsi--heading-3-font-size"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [
+                "40px"
+            ],
+            "value": "32px",
+            "variable-name": "--bsi--heading-2-font-size"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [
+                "48px"
+            ],
+            "value": "40px",
+            "variable-name": "--bsi--heading-1-font-size"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "700",
+            "variable-name": "--bsi--heading-font-weight"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "600",
+            "variable-name": "--bsi--heading-font-weight-weak"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "1.2",
+            "variable-name": "--bsi--heading-leading"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [
+                "18px"
+            ],
+            "value": "16px",
+            "variable-name": "--bsi--body-font-size"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "1.5",
+            "variable-name": "--bsi--body-leading"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "400",
+            "variable-name": "--bsi--body-font-weight"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [
+                "24px"
+            ],
+            "value": "20px",
+            "variable-name": "--bsi--lead-font-size"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "1.3",
+            "variable-name": "--bsi--lead-leading"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "400",
+            "variable-name": "--bsi--lead-font-weight"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "14px",
+            "variable-name": "--bsi--caption-font-size"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "1.3",
+            "variable-name": "--bsi--caption-leading"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "400",
+            "variable-name": "--bsi--caption-font-weight-regular"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "600",
+            "variable-name": "--bsi--caption-font-weight-semibold"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "16px",
+            "variable-name": "--bsi--label-font-size"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "14px",
+            "variable-name": "--bsi--label-font-size-s"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "12px",
+            "variable-name": "--bsi--label-font-size-xs"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "18px",
+            "variable-name": "--bsi--label-font-size-l"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "1.1",
+            "variable-name": "--bsi--label-leading"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "64px",
+            "variable-name": "--bsi--icon-size-xl"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "48px",
+            "variable-name": "--bsi--icon-size-l"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "32px",
+            "variable-name": "--bsi--icon-size-m"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "24px",
+            "variable-name": "--bsi--icon-size-s"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "16px",
+            "variable-name": "--bsi--icon-size-xs"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "1px",
+            "variable-name": "--bsi--border-width"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "solid",
+            "variable-name": "--bsi--border-style"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#c5c7c9",
+            "variable-name": "--bsi--border-color"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "8px",
+            "variable-name": "--bsi--border-broad"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "4px",
+            "variable-name": "--bsi--border-thick"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "2px",
+            "variable-name": "--bsi--border-double"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "1px",
+            "variable-name": "--bsi--border-base"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "40px",
+            "variable-name": "--bsi--radius-rounded"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "80px",
+            "variable-name": "--bsi--radius-circle"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "4px",
+            "variable-name": "--bsi--radius-smooth"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "100%",
+            "variable-name": "--bsi--sizing-full"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "75%",
+            "variable-name": "--bsi--sizing-two-thirds"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "50%",
+            "variable-name": "--bsi--sizing-half"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "25%",
+            "variable-name": "--bsi--sizing-quarter"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "0 16px 48px 0 rgba(0, 0, 0, 0.15)",
+            "variable-name": "--bsi--elevation-high"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "0 8px 16px 0 rgba(0, 0, 0, 0.1)",
+            "variable-name": "--bsi--elevation-medium"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "0 4px 4px 0 rgba(0, 0, 0, 0.05)",
+            "variable-name": "--bsi--elevation-low"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#089994",
+            "variable-name": "--bsi--color-text-accent"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#ffffff",
+            "variable-name": "--bsi--color-text-inverse"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#661a26",
+            "variable-name": "--bsi--color-text-danger-active"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#992639",
+            "variable-name": "--bsi--color-text-danger-hover"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#cc334d",
+            "variable-name": "--bsi--color-text-danger"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#663d00",
+            "variable-name": "--bsi--color-text-warning-active"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#804d00",
+            "variable-name": "--bsi--color-text-warning-hover"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#995c00",
+            "variable-name": "--bsi--color-text-warning"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#004d33",
+            "variable-name": "--bsi--color-text-success-active"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#006644",
+            "variable-name": "--bsi--color-text-success-hover"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#008055",
+            "variable-name": "--bsi--color-text-success"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#5c6f82",
+            "variable-name": "--bsi--color-text-disabled"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#5c6f82",
+            "variable-name": "--bsi--color-text-muted"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#2f475e",
+            "variable-name": "--bsi--color-text-secondary"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#0066cc",
+            "variable-name": "--bsi--color-text-primary"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#1a1a1a",
+            "variable-name": "--bsi--color-text-base"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#b32d43",
+            "variable-name": "--bsi--color-code"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#0066cc",
+            "variable-name": "--bsi--color-link"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#004d99",
+            "variable-name": "--bsi--color-link-hover"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#003366",
+            "variable-name": "--bsi--color-link-active"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#2f475e",
+            "variable-name": "--bsi--color-link-secondary"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#17324d",
+            "variable-name": "--bsi--color-link-secondary-hover"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#17324d",
+            "variable-name": "--bsi--color-link-secondary-active"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#ffffff",
+            "variable-name": "--bsi--color-link-inverse"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#929da9",
+            "variable-name": "--bsi--color-link-disabled"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#089994",
+            "variable-name": "--bsi--color-link-accent"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#077f7b",
+            "variable-name": "--bsi--color-link-accent-hover"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#661a26",
+            "variable-name": "--bsi--color-border-danger-active"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#992639",
+            "variable-name": "--bsi--color-border-danger-hover"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#cc334d",
+            "variable-name": "--bsi--color-border-danger"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#663d00",
+            "variable-name": "--bsi--color-border-warning-active"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#804d00",
+            "variable-name": "--bsi--color-border-warning-hover"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#995c00",
+            "variable-name": "--bsi--color-border-warning"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#004d33",
+            "variable-name": "--bsi--color-border-success-active"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#006644",
+            "variable-name": "--bsi--color-border-success-hover"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#008055",
+            "variable-name": "--bsi--color-border-success"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#c5c7c9",
+            "variable-name": "--bsi--color-border-subtle"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#d9dadb",
+            "variable-name": "--bsi--color-border-disabled"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#ffffff",
+            "variable-name": "--bsi--color-border-inverse"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#17324d",
+            "variable-name": "--bsi--color-border-secondary-active"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#2f475e",
+            "variable-name": "--bsi--color-border-secondary-hover"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#5c6f82",
+            "variable-name": "--bsi--color-border-secondary"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#003366",
+            "variable-name": "--bsi--color-border-primary-active"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#004d99",
+            "variable-name": "--bsi--color-border-primary-hover"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#0066cc",
+            "variable-name": "--bsi--color-border-primary"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#1a1a1a",
+            "variable-name": "--bsi--color-outline-focus"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#0066cc",
+            "variable-name": "--bsi--color-background-primary"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#f2f7fc",
+            "variable-name": "--bsi--color-background-primary-lighter"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#bfdfff",
+            "variable-name": "--bsi--color-background-primary-light"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#003366",
+            "variable-name": "--bsi--color-background-primary-deep"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#004d99",
+            "variable-name": "--bsi--color-background-primary-muted"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#003366",
+            "variable-name": "--bsi--color-background-primary-active"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#004d99",
+            "variable-name": "--bsi--color-background-primary-hover"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#661a26",
+            "variable-name": "--bsi--color-background-danger-active"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#992639",
+            "variable-name": "--bsi--color-background-danger-hover"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#fbeff1",
+            "variable-name": "--bsi--color-background-danger-light"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#cc334d",
+            "variable-name": "--bsi--color-background-danger"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#663d00",
+            "variable-name": "--bsi--color-background-warning-active"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#804d00",
+            "variable-name": "--bsi--color-background-warning-hover"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#f6e4c8",
+            "variable-name": "--bsi--color-background-warning-light"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#995c00",
+            "variable-name": "--bsi--color-background-warning"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#004d33",
+            "variable-name": "--bsi--color-background-success-active"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#006644",
+            "variable-name": "--bsi--color-background-success-hover"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#c8f6e7",
+            "variable-name": "--bsi--color-background-success-light"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#008055",
+            "variable-name": "--bsi--color-background-success"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#17324d",
+            "variable-name": "--bsi--color-background-emphasis"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#d4d4d4",
+            "variable-name": "--bsi--color-background-subtle"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#d9dadb",
+            "variable-name": "--bsi--color-background-disabled"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#ffffff",
+            "variable-name": "--bsi--color-background-inverse"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#ebeced",
+            "variable-name": "--bsi--color-background-inverse-hover"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#f5f5f5",
+            "variable-name": "--bsi--color-background-muted"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#077f7b",
+            "variable-name": "--bsi--color-background-accent-hover"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#089994",
+            "variable-name": "--bsi--color-background-accent"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#d9dadb",
+            "variable-name": "--bsi--color-background-secondary-lighter"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#a3adb7",
+            "variable-name": "--bsi--color-background-secondary-light"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#17324d",
+            "variable-name": "--bsi--color-background-secondary-active"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#2f475e",
+            "variable-name": "--bsi--color-background-secondary-hover"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#5c6f82",
+            "variable-name": "--bsi--color-background-secondary"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#17324d",
+            "variable-name": "--bsi--color-background-secondary-deep"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "hsla(0, 0%, 0%, 0.5)",
+            "variable-name": "--bsi--overlay-background-light"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "hsla(210, 100%, 40%, 0.85)",
+            "variable-name": "--bsi--overlay-background-primary"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "hsla(210, 54%, 20%, 0.85)",
+            "variable-name": "--bsi--overlay-background-primary-muted"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#a3f5f2",
+            "variable-name": "--bsi--highlight-background"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#ebeced",
+            "variable-name": "--bsi--code-background"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#6ee7bf",
+            "variable-name": "--bsi--ins-background"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#e08593",
+            "variable-name": "--bsi--del-background"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#ffffff",
+            "variable-name": "--bsi--page-background"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#cc334d",
+            "variable-name": "--bsi--color-status-danger"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#992639",
+            "variable-name": "--bsi--color-status-danger-hover"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#661a26",
+            "variable-name": "--bsi--color-status-danger-active"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#008055",
+            "variable-name": "--bsi--color-status-success"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#006644",
+            "variable-name": "--bsi--color-status-success-hover"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#004d33",
+            "variable-name": "--bsi--color-status-success-active"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#995c00",
+            "variable-name": "--bsi--color-status-warning"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#804d00",
+            "variable-name": "--bsi--color-status-warning-hover"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#663d00",
+            "variable-name": "--bsi--color-status-warning-active"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#661a26",
+            "variable-name": "--bsi--icon-danger-active"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#992639",
+            "variable-name": "--bsi--icon-danger-hover"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#cc334d",
+            "variable-name": "--bsi--icon-danger"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#663d00",
+            "variable-name": "--bsi--icon-warning-active"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#804d00",
+            "variable-name": "--bsi--icon-warning-hover"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#995c00",
+            "variable-name": "--bsi--icon-warning"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#004d33",
+            "variable-name": "--bsi--icon-success-active"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#006644",
+            "variable-name": "--bsi--icon-success-hover"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#008055",
+            "variable-name": "--bsi--icon-success"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#17324d",
+            "variable-name": "--bsi--icon-secondary-active"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#ffffff",
+            "variable-name": "--bsi--icon-inverse"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#2f475e",
+            "variable-name": "--bsi--icon-secondary-hover"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#5c6f82",
+            "variable-name": "--bsi--icon-secondary"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#003366",
+            "variable-name": "--bsi--icon-primary-active"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#004d99",
+            "variable-name": "--bsi--icon-primary-hover"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#0066cc",
+            "variable-name": "--bsi--icon-primary"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#1a1a1a",
+            "variable-name": "--bsi--icon-default"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "#929da9",
+            "variable-name": "--bsi--icon-disabled"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "12px",
+            "variable-name": "--bsi--icon-spacing"
+        },
+        {
+            "description": "",
+            "files": [
+                "_root.scss"
+            ],
+            "other_values": [],
+            "value": "0.2s",
+            "variable-name": "--bsi--transition-instant"
+        }
+    ],
     "section": [
         {
             "description": "Controls the section background color.",

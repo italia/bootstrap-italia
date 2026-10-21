@@ -3,6 +3,7 @@ import re
 import functools
 import operator
 import json
+import subprocess
 
 
 SCSS_BASE_PATH = os.path.join('src', 'scss')
@@ -12,6 +13,33 @@ EXCLUDED_FOLDERS = ['base']
 
 mapped_vars = {}
 
+
+# Substitute in `src/scss/base/_root.scss` the string `@use 'design-tokens-italia/` with `@use '../../../node_modules/design-tokens-italia/` to ensure that the design tokens are correctly imported from the node_modules folder. This is necessary because the `_root.scss` file is located in the `src/scss/base/` directory, and we need to go up three levels to reach the `node_modules` folder.
+with open(os.path.join(SCSS_BASE_PATH, 'base', '_root.scss'), 'r') as f:
+    root_scss_content = f.read()
+root_scss_content = root_scss_content.replace("@use 'design-tokens-italia/", "@use '../../../node_modules/design-tokens-italia/")
+with open(os.path.join(SCSS_BASE_PATH, 'base', '_root.scss'), 'w') as f:
+    f.write(root_scss_content)
+
+
+# Generate root.scss file with all the custom properties from _root.scss and the design tokens
+
+ROOT_COMPILATION_CMD = "node -e \"const sass = require('sass');const result = sass.compile('src/scss/base/_root.scss');console.log(result.css);\""
+
+result = subprocess.run(ROOT_COMPILATION_CMD, shell=True, stdout=subprocess.PIPE)
+result.stdout
+
+# Write the compiled CSS to /src/scss/components/_root.scss file
+with open(os.path.join(SCSS_BASE_PATH, 'components', '_root.scss'), 'w') as broot_file:
+    broot_file.write("// Properties\n\n" + result.stdout.decode('utf-8').replace('--bsi', '--#{$prefix}') + "\n\n// Styles\n")
+
+
+# Revert the changes made to `src/scss/base/_root.scss` to restore the original import statement for design tokens
+with open(os.path.join(SCSS_BASE_PATH, 'base', '_root.scss'), 'r') as f:
+    root_scss_content = f.read()
+root_scss_content = root_scss_content.replace("@use '../../../node_modules/design-tokens-italia/", "@use 'design-tokens-italia/")
+with open(os.path.join(SCSS_BASE_PATH, 'base', '_root.scss'), 'w') as f:
+    f.write(root_scss_content)
 
 # Look for all available variables
 
