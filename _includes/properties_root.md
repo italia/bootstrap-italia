@@ -69,7 +69,7 @@ fare riferimento ai file elencati nella colonna `"File SCSS"` per il dettaglio d
   </table>
 </div>
 
-<!-- Tipografia icone -->
+<!-- Icone -->
 
 <h3 class="no_toc">Properties Icons</h3>
 
@@ -98,9 +98,9 @@ fare riferimento ai file elencati nella colonna `"File SCSS"` per il dettaglio d
   </table>
 </div>
 
-<!-- Tipografia border -->
+<!-- Border -->
 
-<h3 class="no_toc">Properties Icons</h3>
+<h3 class="no_toc">Properties Border</h3>
 
 <div class="table-responsive" style="font-size: 1rem">
   <table class="table table-simple">
@@ -115,6 +115,38 @@ fare riferimento ai file elencati nella colonna `"File SCSS"` per il dettaglio d
     {% for track in properties %}
     {% if track.variable-name contains "border" or track.variable-name contains "radius" %}
     {% if track.other_values.size == 0 %}
+    {% unless track.variable-name contains "color" %}
+      <tr>
+        <td style="min-width: 320px; width: 320px;"><code>{{ track.variable-name }}</code></td>
+        <td style="min-width: 320px;"><small>{{ track.description }}</small></td>
+        <td style="min-width: 320px"><code>{{ track.value }}</code></td>
+      </tr>
+    {% endunless %}
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+
+<!-- Sizing -->
+
+<h3 class="no_toc">Properties Sizing</h3>
+
+<div class="table-responsive" style="font-size: 1rem">
+  <table class="table table-simple">
+    <thead>
+      <tr>
+        <th>Variabile CSS</th>
+        <th>Descrizione (Inglese)</th>
+        <th>Valore predefinito</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for track in properties %}
+    {% if track.variable-name contains "sizing" %}
+    {% if track.other_values.size == 0 %}
       <tr>
         <td style="min-width: 320px; width: 320px;"><code>{{ track.variable-name }}</code></td>
         <td style="min-width: 320px;"><small>{{ track.description }}</small></td>
@@ -127,5 +159,62 @@ fare riferimento ai file elencati nella colonna `"File SCSS"` per il dettaglio d
   </table>
 </div>
 
+<!-- Shadow -->
+
+<h3 class="no_toc">Properties Shadow</h3>
+
+<div class="table-responsive" style="font-size: 1rem">
+  <table class="table table-simple">
+    <thead>
+      <tr>
+        <th>Variabile CSS</th>
+        <th>Descrizione (Inglese)</th>
+        <th>Valore predefinito</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for track in properties %}
+    {% if track.variable-name contains "elevation" %}
+    {% if track.other_values.size == 0 %}
+      <tr>
+        <td style="min-width: 320px; width: 320px;"><code>{{ track.variable-name }}</code></td>
+        <td style="min-width: 320px;"><small>{{ track.description }}</small></td>
+        <td style="min-width: 320px"><code>{{ track.value }}</code></td>
+      </tr>
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+<!-- Spacing -->
+
+<h3 class="no_toc">Properties Spacing</h3>
+
+<div class="table-responsive" style="font-size: 1rem">
+  <table class="table table-simple">
+    <thead>
+      <tr>
+        <th>Variabile CSS</th>
+        <th>Descrizione (Inglese)</th>
+        <th>Valore predefinito</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for track in properties %}
+    {% if track.variable-name contains "spacing" %}
+    {% if track.other_values.size == 0 %}
+      <tr>
+        <td style="min-width: 320px; width: 320px;"><code>{{ track.variable-name }}</code></td>
+        <td style="min-width: 320px;"><small>{{ track.description }}</small></td>
+        <td style="min-width: 320px"><code>{{ track.value }}</code></td>
+      </tr>
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
 
 {% endif %}
