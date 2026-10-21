@@ -7,12 +7,14 @@
  */
 
 import TrackFocus from './track-focus'
+import NativeValidationScroll from './native-validation-scroll'
 
 import BOOTSTRAP_ITALIA_VERSION from '../version'
 
 const init = () => {
   if (typeof window !== 'undefined' && !window.BOOTSTRAP_ITALIA_VERSION) {
     new TrackFocus()
+    new NativeValidationScroll()
     window.BOOTSTRAP_ITALIA_VERSION = BOOTSTRAP_ITALIA_VERSION
   }
 }
