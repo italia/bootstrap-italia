@@ -323,5 +323,5 @@ Applicando la classe `.thumb-nav-auto` alla Thumbnav le thumbnail occuperanno au
 ## Breaking change
 
 {% capture callout %}
-- Per le liste di thumbnail, è consigliabile inserire l'attributo `role="list"` sull'elemento `<ul>` per ripristinare la semantica lista in ambiente Safari. 
+- Per le liste di thumbnail, è consigliabile inserire l'attributo `role="list"` sull'elemento `<ul>` per ripristinare la semantica lista su Safari e VoiceOver (macOS/iOS). 
 {% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}
