@@ -4,6 +4,7 @@
 
 {% if properties %}
 
+Di seguito la lista delle custom properties divise per tipologie.
 La descrizione delle custom properties è in inglese perché risiede nei files `.scss` dei componenti.
 
 <!-- Tipografia statiche -->

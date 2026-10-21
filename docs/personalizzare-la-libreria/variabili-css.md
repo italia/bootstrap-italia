@@ -24,8 +24,6 @@ Le variabili globali sono definite nel file `_root.scss` e possono essere usate 
 @forward 'base/root';
 ```
 
-### Lista completa
-
 {% include properties_root.md properties=site.data.cprops.root selector=":root" %}
 
 ## Variabili di componente
