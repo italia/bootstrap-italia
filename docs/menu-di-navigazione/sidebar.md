@@ -273,7 +273,7 @@ Per cambiare il tema della sidebar e renderla scura è sufficiente aggiungere al
     <nav class="link-list-wrapper" aria-label="Pagine della sezione">
       <ul class="link-list">
         <li>
-          <a class="list-item large medium" href="#collapseFour" role="button" data-bs-toggle="collapse" aria-expanded="true" aria-controls="collapseOne">
+          <a class="list-item large medium" href="#collapseFour" role="button" data-bs-toggle="collapse" aria-expanded="true" aria-controls="collapseFour">
             <span class="list-item-title-icon-wrapper">
               <span>Link lista 1</span><svg class="icon icon-sm icon-inverse" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
             </span>
@@ -288,7 +288,7 @@ Per cambiare il tema della sidebar e renderla scura è sufficiente aggiungere al
           </ul>
         </li>
         <li>
-          <a class="list-item large medium" href="#collapseFive" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo">
+          <a class="list-item large medium" href="#collapseFive" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseFile">
           <span class="list-item-title-icon-wrapper">
               <span>Link lista 2</span><svg class="icon icon-sm icon-inverse" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
             </span>
@@ -303,7 +303,7 @@ Per cambiare il tema della sidebar e renderla scura è sufficiente aggiungere al
           </ul>
         </li>
         <li>
-          <a class="list-item large medium" href="#collapseSix" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseThree">
+          <a class="list-item large medium" href="#collapseSix" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseSix">
             <span class="list-item-title-icon-wrapper">
               <span>Link lista 3</span><svg class="icon icon-sm icon-inverse" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
             </span>
@@ -349,7 +349,8 @@ sezione [attivazione Collapse tramite codice]({{ site.baseurl }}/docs/componenti
 - Il titolo della sidebar (`<h3>`) non è più un elemento `<li>` della lista di link: negli esempi è posto all'inizio del contenitore `.sidebar-wrapper`. A seconda del contesto può essere posizionato diversamente, vedi la nota di accessibilità.
 - Nella variante con una lista di link primaria annidata è stata rimossa la classe `.large` dagli elementi `<a>` con classi `.list-item .medium`. 
 - Nelle varianti scure la classe che controlla il colore delle icone bianche ha cambiato nome: `.icon-white` diventa `.icon-inverse`.
-- Rimossa le classi `.right-icon` e `.right` dai link list item.
+- Nella variante con icona sono stati rimossi gli elementi `<span>` con classe `list-item-title-icon-wrapper`: icona e testo sono figli diretti del link.
+- Rimosse le classi `.right-icon` e `.right` dai link list item.
 {% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}
 
 {% capture callout %}
