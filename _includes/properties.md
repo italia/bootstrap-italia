@@ -7,7 +7,12 @@
 
 ## Properties {{title}}
 
+{% if selector == ":root" %}
+Le properties di questo componente sono trasversali e hanno scope `:root` per 
+facilitarne la customizzazione.
+{% else %}
 Il selettore da utilizzare per le sovrascrittura delle property è `{{selector}}`.
+{% endif %}
 La descrizione delle custom properties è in inglese perché risiede nei files `.scss` dei componenti.
 
 <h3 class="no_toc">Properties statiche</h3>
@@ -18,16 +23,16 @@ La descrizione delle custom properties è in inglese perché risiede nei files `
       <tr>
         <th>Variabile CSS</th>
         <th>Descrizione (Inglese)</th>
-        <th>Predefinito</th>
+        <th>Valore predefinito</th>
       </tr>
     </thead>
     <tbody>
     {% for track in properties %}
     {% if track.other_values.size == 0 %}
       <tr>
-        <td><code>{{ track.variable-name }}</code></td>
-        <td>{{ track.description }}</td>
-        <td><code>{{ track.value }}</code></td>
+        <td style="min-width: 320px; width: 320px;"><code>{{ track.variable-name }}</code></td>
+        <td style="min-width: 320px;"><small>{{ track.description }}</small></td>
+        <td style="min-width: 320px"><code>{{ track.value }}</code></td>
       </tr>
     {% else %}
     {% assign dynamic_props = true %}
@@ -40,25 +45,27 @@ La descrizione delle custom properties è in inglese perché risiede nei files `
 {% if dynamic_props == true %}
 <h3 class="no_toc">Properties dinamiche</h3>
 
-Nella colonna `"Valori predefiniti"` è possibile trovare varianti responsive/tema/stato della property stessa,
-si prega di far riferimento al codice per personalizzare il comportamento.
+Nella colonna `"Valore predefinito"` è possibile trovare, oltre al valore di base, un'indicazione delle eventuali varianti responsive/tema/stato della property stessa:
+fare riferimento ai file elencati nella colonna `"File SCSS"` per il dettaglio dei valori e del contesto di applicazione.
 
-<div class="table-responsive" style="font-size: 1rem">
-  <table class="table table-simple">
+<div class="table-responsive">
+  <table class="table">
     <thead>
       <tr>
         <th>Variabile CSS</th>
         <th>Descrizione (Inglese)</th>
-        <th>Valori predefiniti</th>
+        <th>Valore predefinito</th>
+        <th>File SCSS</th>
       </tr>
     </thead>
     <tbody>
     {% for track in properties %}
     {% if track.other_values.size > 0 %}
       <tr>
-        <td><code>{{ track.variable-name }}</code></td>
-        <td>{{ track.description }}</td>
-        <td><code>{{ track.value }}</code>&nbsp;{% for v in track.other_values %}<code>{{ v }}</code>&nbsp;{% endfor %}</td>
+        <td style="min-width: 320px; width: 320px;"><code>{{ track.variable-name }}</code></td>
+        <td style="min-width: 320px;"><small>{{ track.description }}</small></td>
+        <td style="min-width: 320px"><code>{{ track.value }}</code>{% if track.other_values.size > 0 %}&nbsp;<small><span class="badge badge-secondary badge-sm small">+{{ track.other_values.size }}</span></small>{% endif %}</td>
+        <td>{% for v in track.files %}<code>{{ v }}</code><br/>{% endfor %}</td>
       </tr>
     {% endif %}
     {% endfor %}

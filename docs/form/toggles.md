@@ -143,6 +143,7 @@ Per raggruppare visivamente gli elementi **toggle** aggiungi la classe `.form-ch
 </div>
 {% endcapture %}{% include example.html content=example %}
 
+{% include properties.md properties=site.data.cprops.forms selector=":root" title="trasversali" %}
 {% include properties.md properties=site.data.cprops.toggles selector=".toggles" %}
 
 ## Breaking change

@@ -772,6 +772,10 @@ Includendo l'elemento all'interno di un `.form-group`, la label assumerà lo ste
   </div>
 {% endcapture %}{% include example.html content=example %}
 
+
+{% include properties.md properties=site.data.cprops.forms selector=":root" title="trasversali" %}
+{% include properties.md properties=site.data.cprops.navbar selector=".autocomplete-list" title="lista Autocomplete" %}
+
 ## Breaking change
 
 {% capture callout %}

@@ -234,6 +234,7 @@ const inputNumber = new InputNumberEl(inputNumberEl, options);
   </table>
 </div>
 
+{% include properties.md properties=site.data.cprops.forms selector=":root" title="trasversali" %}
 
 ## Breaking change
 

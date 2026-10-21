@@ -25,3 +25,5 @@ Assicurarsi di aggiungere alla label la classe **`active`** per impedire la sovr
     <input class="form-control" type="date" id="dateStandard" name="dateStandard">
 </div>
 {% endcapture %}{% include example.html content=example %}
+
+{% include properties.md properties=site.data.cprops.forms selector=":root" title="trasversali" %}

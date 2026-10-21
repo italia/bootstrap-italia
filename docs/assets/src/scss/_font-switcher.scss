@@ -1,19 +1,15 @@
+@use 'src/scss/base/config' as *;
+@use 'src/scss/base/variables' as *;
+
 .font-switcher {
   .btn {
-    font-size: 0.8rem;
-    border-color: #dee2e6;
+    --#{$prefix}btn-font-size: var(--#{$prefix}label-font-size-s);
   }
 
   .dropdown-item {
     &.active {
-      background-color: var(--bsi-primary);
+      background-color: var(--#{$prefix}color-background-primary);
       color: white;
-
-      &:focus,
-      &:hover {
-        background-color: var(--bsi-primary);
-        color: white;
-      }
     }
   }
 }

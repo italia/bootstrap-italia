@@ -47,16 +47,12 @@ Il cambio lingua è gestito con il componente [dropdown]({{ site.baseurl }}/docs
     <div class="row">
       <div class="col-12">
         <div class="it-header-slim-wrapper-content">
-          <a class="d-none d-lg-block navbar-brand" href="#">Ente appartenenza</a>
+          <a class="d-block navbar-brand" href="#">Ente appartenenza</a>
           <div class="nav-mobile">
             <nav aria-label="Navigazione accessoria">
-              <a class="it-opener d-lg-none" data-bs-toggle="collapse" href="#menu1a" role="button" aria-expanded="false" aria-controls="menu4">
-                <span>Ente appartenenza</span>
-                <svg class="icon" aria-hidden="true"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
-              </a>
-              <div class="link-list-wrapper collapse" id="menu1a">
-                <ul class="link-list">
-                  <li><a class="dropdown-item list-item" href="#">Link 1</a></li>
+              <div class="link-list-wrapper d-none d-lg-flex">
+                <ul class="link-list" aria-label="Link utili">
+                  <li><a class="list-item" href="#">Link 1</a></li>
                   <li><a class="list-item active" href="#" aria-current="page">Link 2 (Attivo)</a></li>
                 </ul>
               </div>
@@ -157,16 +153,12 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
     <div class="row">
       <div class="col-12">
         <div class="it-header-slim-wrapper-content">
-          <a class="d-none d-lg-block navbar-brand" href="#">Ente appartenenza</a>
+          <a class="d-block navbar-brand" href="#">Ente appartenenza</a>
           <div class="nav-mobile">
             <nav aria-label="Navigazione accessoria">
-              <a class="it-opener d-lg-none" data-bs-toggle="collapse" href="#menu1b" role="button" aria-expanded="false" aria-controls="menu4">
-                <span>Ente appartenenza</span>
-                <svg class="icon" aria-hidden="true"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
-              </a>
-              <div class="link-list-wrapper collapse" id="menu1b">
-                <ul class="link-list">
-                  <li><a class="dropdown-item list-item" href="#">Link 1</a></li>
+              <div class="link-list-wrapper d-none d-lg-flex">
+                <ul class="link-list" aria-label="Link utili">
+                  <li><a class="list-item" href="#">Link 1</a></li>
                   <li><a class="list-item active" href="#" aria-current="page">Link 2 (Attivo)</a></li>
                 </ul>
               </div>
@@ -405,6 +397,22 @@ Per cambiare tema all'header centrale è sufficiente aggiungere la classe `theme
 
 **Header Nav**, per elencare le voci di navigazione, siano esse semplici link, o pulsanti per [Dropdown]({{ site.baseurl }}/docs/componenti/dropdown/) e [Megamenu]({{ site.baseurl }}/docs/menu-di-navigazione/megamenu/).
 
+### Menu su mobile
+
+Quando header nav fa parte di un header completo (cioè è contenuto in un elemento `.it-header-wrapper`), il pannello laterale mobile mostra gli stessi elementi di navigazione presenti su desktop, nell'ordine:
+
+1. logo, titolo e tagline dell'ente (`.it-brand-wrapper` dell'Header Centrale)
+2. menu di navigazione principale (`.navbar-nav`)
+3. menu di navigazione secondario (`.navbar-nav.navbar-secondary`)
+4. link accessori dello Slim Header (`.nav-mobile .link-list`)
+5. social (`.it-socials` dell'Header Centrale)
+
+Non è necessario duplicare il markup: gli elementi vengono clonati dal componente JavaScript `navbarcollapsible` all'interno di `.menu-wrapper` e nascosti da CSS a partire dal breakpoint `lg`, dove ogni elemento torna nella propria fascia.
+
+La fascia con il logo usa di default il colore primario del sito come sfondo. Per renderla bianca, con testo e logo inveriti nel colore primario, aggiungi la classe `.menu-brand-light` all'elemento `.navbar-collapsable`.
+
+Le voci del menu su mobile hanno sempre sfondo bianco e link nel colore primario: per questo motivo la classe `.theme-dark-mobile` non è più disponibile.
+
 {% comment %}Example name: Header navigazione{% endcomment %}
 {% capture example %}
 
@@ -450,7 +458,7 @@ Per cambiare tema all'header centrale è sufficiente aggiungere la classe `theme
                   <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-1" data-focus-mouse="false">
                       <span>Megamenu</span><svg role="img" class="icon icon-xs"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
                   </button>
-                  <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-1">
+                  <div class="dropdown-menu" role="region" aria-labelledby="megamenu-1">
                     <div class="megamenu-content">
                       <div class="row">
                         <div class="col-xs-12 col-lg-4 px-0">
@@ -596,7 +604,7 @@ Per modificare il colore di sfondo e testi di Header Nav bisogna aggiungere la c
                   <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-2" data-focus-mouse="false">
                       <span>Megamenu</span><svg role="img" class="icon icon-xs"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
                   </button>
-                  <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-2">
+                  <div class="dropdown-menu" role="region" aria-labelledby="megamenu-2">
                     <div class="megamenu-content">
                       <div class="row">
                         <div class="col-xs-12 col-lg-4 px-0">
@@ -735,7 +743,7 @@ Per modificare il colore di sfondo e testi di Header Nav bisogna aggiungere la c
                   <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-4" data-focus-mouse="false">
                       <span>Megamenu</span><svg role="img" class="icon icon-xs"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
                   </button>
-                  <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-4">
+                  <div class="dropdown-menu" role="region" aria-labelledby="megamenu-4">
                     <div class="megamenu-content">
                       <div class="row">
                         <div class="col-xs-12 col-lg-4 px-0">
@@ -878,16 +886,12 @@ Al menu di navigazione principale può essere aggiunto anche un menu di navigazi
       <div class="row">
         <div class="col-12">
           <div class="it-header-slim-wrapper-content">
-            <a class="d-none d-lg-block navbar-brand" href="#">Ente appartenenza</a>
+            <a class="d-block navbar-brand" href="#">Ente appartenenza</a>
             <div class="nav-mobile">
               <nav aria-label="Navigazione secondaria">
-                <a class="it-opener d-lg-none" data-bs-toggle="collapse" href="#menuC1" role="button" aria-expanded="false" aria-controls="menuC1">
-                  <span>Ente appartenenza</span>
-                  <svg class="icon" aria-hidden="true"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
-                </a>
-                <div class="link-list-wrapper collapse" id="menuC1">
-                  <ul class="link-list">
-                    <li><a class="dropdown-item list-item" href="#">Link 1</a></li>
+                <div class="link-list-wrapper d-none d-lg-flex">
+                  <ul class="link-list" aria-label="Link utili">
+                    <li><a class="list-item" href="#">Link 1</a></li>
                     <li><a class="list-item active" href="#" aria-current="page">Link 2 (Attivo)</a></li>
                   </ul>
                 </div>
@@ -1018,7 +1022,7 @@ Al menu di navigazione principale può essere aggiunto anche un menu di navigazi
                       <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-5" data-focus-mouse="false">
                           <span>Megamenu</span><svg role="img" class="icon icon-xs"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
                       </button>
-                      <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-5">
+                      <div class="dropdown-menu" role="region" aria-labelledby="megamenu-5">
                         <div class="megamenu-content">
                           <div class="row">
                             <div class="col-xs-12 col-lg-4 px-0">
@@ -1125,16 +1129,12 @@ Verrà creata un'ombra per enfatizzare l'Header rispetto alla pagina in cui è c
       <div class="row">
         <div class="col-12">
           <div class="it-header-slim-wrapper-content">
-            <a class="d-none d-lg-block navbar-brand" href="#">Ente appartenenza</a>
+            <a class="d-block navbar-brand" href="#">Ente appartenenza</a>
             <div class="nav-mobile">
               <nav aria-label="Navigazione secondaria">
-                <a class="it-opener d-lg-none" data-bs-toggle="collapse" href="#menuC2" role="button" aria-expanded="false" aria-controls="menuC2">
-                  <span>Ente appartenenza</span>
-                  <svg class="icon" aria-hidden="true"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
-                </a>
-                <div class="link-list-wrapper collapse" id="menuC2">
-                  <ul class="link-list">
-                    <li><a class="dropdown-item list-item" href="#">Link 1</a></li>
+                <div class="link-list-wrapper d-none d-lg-flex">
+                  <ul class="link-list" aria-label="Link utili">
+                    <li><a class="list-item" href="#">Link 1</a></li>
                     <li><a class="list-item active" href="#" aria-current="page">Link 2 (Attivo)</a></li>
                   </ul>
                 </div>
@@ -1259,7 +1259,7 @@ Verrà creata un'ombra per enfatizzare l'Header rispetto alla pagina in cui è c
                       <button type="button" class="nav-link dropdown-toggle px-lg-2 px-xl-3" data-bs-toggle="dropdown" aria-expanded="false" id="megamenu-6" data-focus-mouse="false">
                           <span>Megamenu</span><svg role="img" class="icon icon-xs"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
                       </button>
-                      <div class="dropdown-menu shadow-lg" role="region" aria-labelledby="megamenu-6">
+                      <div class="dropdown-menu" role="region" aria-labelledby="megamenu-6">
                         <div class="megamenu-content">
                           <div class="row">
                             <div class="col-xs-12 col-lg-4 px-0">
@@ -1415,8 +1415,11 @@ const headerSticky = new HeaderSticky(headerStickyElement)
 
 {% capture callout %}
 - Rimossa la variante `theme-light-desk` per Header Nav, ora è possibile impostare il tema chiaro con la class `.theme-light` al tag `<nav class="it-header-navbar-wrapper">`.
+- Rimossa la variante `theme-dark-mobile`: le voci del menu su mobile hanno sempre sfondo bianco e link nel colore primario.
+- I link accessori dello Slim Header non sono più raccolti in un menu a tendina che si apre dal nome dell'ente: su mobile confluiscono nel menu di navigazione insieme al logo e ai social. Negli esempi il pulsante `.it-opener` è stato rimosso e l'elenco è nascosto sotto il breakpoint `lg` con `.d-none.d-lg-flex`. Le regole di stile di `.it-opener` restano disponibili per retrocompatibilità ma sono da considerarsi deprecate.
 - Cambiata la dimensione del pulsante Accedi: cambiato classe da `.btn-sm` a `.btn-sx`.
 - Rimossa la classe `.ms-1` dall'icona `<svg>` che segue la voce Megamenu negli esempi.
+- È stato rimossa la classe `.shadow-lg` sull'elemento `.dropdown-menu` in tutte le varianti. L'ombra è controllata dalle property "elevation".  
 {% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}
 
 {% capture callout %}

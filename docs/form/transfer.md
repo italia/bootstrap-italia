@@ -226,6 +226,8 @@ const transfer = new Transfer(transferElement, config);
   </tbody>
 </table>
 
+{% include properties.md properties=site.data.cprops.forms selector=":root" title="trasversali" %}
+
 ## Breaking change
 
 {% capture callout %}
