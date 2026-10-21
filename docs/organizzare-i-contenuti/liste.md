@@ -291,7 +291,7 @@ L'elemento `.it-multiple` con all'interno le relative icone, segue l'elemento `.
       </div>
     </li>
     <li>
-      <div class="list-item" href="#">
+      <div class="list-item">
         <div class="it-right-zone">
           <a href="#">
             <span class="text">Link</span>
@@ -688,7 +688,7 @@ Per includere un'icona bisogna aggiungere al tag `<a>` una delle seguenti classi
 - `icon-right`: se si vuole posizionare l'icona a destra del testo
 - `icon-left`: se si vuole posizionare l'icona a sinistra del testo
 
-All'interno del tag `<span class="list-item-title-icon-wrapper">` subito dopo lo `<span class="list-item-title">` contenente il testo, puoi inserire [l'icona necessaria]({{ site.baseurl }}/docs/utilities/icone/).
+All'interno del tag `<span class="list-item-title-icon-wrapper">` subito dopo l'intestazione con classe `.list-item-title`, puoi inserire [l'icona necessaria]({{ site.baseurl }}/docs/utilities/icone/).
 
 {% comment %}Example name: Per menu, multilinea con icona{% endcomment %}
 {% capture example %}
@@ -847,7 +847,7 @@ Inserisci l'icona all'interno del tag `<span class="list-item-title-icon-wrapper
 ##### Icona a destra
 
 Per aggiungere un'icona a destra del testo bisogna aggiungere al tag `<a>` la classe: `.icon-right`.  
-Inserisci l'icona all'interno del tag `<span class="list-item-title-icon-wrapper">` subito prima del tag `<span class="list-item-title">` contenente il testo.
+Inserisci l'icona all'interno del tag `<span class="list-item-title-icon-wrapper">` subito dopo il tag `<span class="list-item-title">` contenente il testo.
 
 {% comment %}Example name: Per menu, con azioni primaria e secondaria, varianti posizione icona{% endcomment %}
 {% capture example %}
@@ -920,7 +920,7 @@ Una lista di link può contenere anche elementi appartenenti ai form, di seguito
 </div>
 {% endcapture %}{% include example.html content=example %}
 
-#### List con checkbox
+#### Lista con checkbox
 
 Lista di link contenente un [checkbox]({{ site.baseurl }}/docs/form/checkbox/).
 
@@ -1018,13 +1018,13 @@ Per questo tipo di link list sono state utilizzate, oltre alle classi custom, le
   <div class="link-list-wrapper">
     <ul class="link-list">
       <li>
-        <a class="list-item large medium right-icon" href="#collapseOne" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseOne">
+        <a class="list-item large medium icon-right" href="#collapseOne" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseOne">
           <span class="list-item-title-icon-wrapper">
             <span>Link lista 1</span>
-            <svg class="icon icon-xs icon-primary right"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
+            <svg class="icon icon-xs icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
           </span>
         </a>
-        <ul class="link-sublist collapse" id="collapseOne">
+        <ul class="link-sublist collapse icon-right" id="collapseOne">
           <li><a class="list-item" href="#"><span>Link lista 1.1</span></a>
           </li>
           <li><a class="list-item" href="#"><span>Link lista 1.2</span></a>
@@ -1034,10 +1034,10 @@ Per questo tipo di link list sono state utilizzate, oltre alle classi custom, le
         </ul>
       </li>
       <li>
-        <a class="list-item large medium right-icon" href="#collapseTwo" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo">
+        <a class="list-item large medium icon-right" href="#collapseTwo" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo">
           <span class="list-item-title-icon-wrapper">
             <span>Link lista 2</span>
-            <svg class="icon icon-xs icon-primary right"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
+            <svg class="icon icon-xs icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
           </span>
         </a>
         <ul class="link-sublist collapse" id="collapseTwo">
@@ -1050,10 +1050,10 @@ Per questo tipo di link list sono state utilizzate, oltre alle classi custom, le
         </ul>
       </li>
       <li>
-        <a class="list-item large medium right-icon" href="#collapseThree" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseThree">
+        <a class="list-item large medium icon-right" href="#collapseThree" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseThree">
           <span class="list-item-title-icon-wrapper">
             <span>Link lista 3</span>
-            <svg class="icon icon-xs icon-primary right"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
+            <svg class="icon icon-xs icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
           </span>
         </a>
         <ul class="link-sublist collapse" id="collapseThree">
@@ -1078,9 +1078,9 @@ Per questo tipo di link list sono state utilizzate, oltre alle classi custom, le
 
 {% capture callout %}
 - Negli esempi di varianti lista con avatar è stata rimossa la classe `.size-lg` dai `<div>` con classe `.avatar`. 
-- Nelle liste con immagini sono state aggiunge le classi per controllare la dimensione dell'immagine sui `<div>` con classe `.it-thumb`: `.ratio` e `.ratio-16x9` con istruzioni su come cambiare quest'ultima con le classi specifiche per cambiare le proporzioni.
+- Nelle liste con immagini sono state aggiunte le classi per controllare la dimensione dell'immagine sui `<div>` con classe `.it-thumb`: `.ratio` e `.ratio-16x9` con istruzioni su come cambiare quest'ultima con le classi specifiche per cambiare le proporzioni.
 - Nelle liste con azioni e freccia è definita esplicitamente la dimensione e il colore delle icone freccia aggiungendo le classi `.icon-primary` e `.icon-sm` rispettivamente dove necessario.
-- Nelle liste multilinea è stata rimosso elemento `<li>` e il tag `<span>` con classe `.divider`, il bordo è ora gestito con stili CSS
+- Nelle liste multilinea è stato rimosso l'elemento `<li>` e il tag `<span>` con classe `.divider`, il bordo è ora gestito con stili CSS
 {% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}
 
 {% capture callout %}
