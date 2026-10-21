@@ -469,6 +469,6 @@ const uploadDragDrop = new UploadDragDrop(uploadElement);
 ## Breaking change
 
 {% capture callout %}
-- Per le liste `.upload-file-list`, `.upload-file-list-image` e `.upload-pictures-wall`, è consigliabile inserire l'attributo `role="list"` sull'elemento `<ul>` per ripristinare la semantica lista su Safari e VoiceOver (macOS/iOS). 
-- Nella variante Avatar - Dimensione Piccola, l'icona presente su mobile ha la classe `.icon-xs` al posto di `.icon-sm`.  
+- Per le liste `.upload-file-list`, anche nella variante con immagini (`.upload-file-list-image`), e `.upload-pictures-wall`, è consigliabile inserire l'attributo `role="list"` sull'elemento `<ul>` per ripristinare la semantica lista su Safari e VoiceOver (macOS/iOS).
+- Nella variante Avatar - Dimensione Piccola, l'icona presente su mobile ha la classe `.icon-xs` al posto di `.icon-sm`.
 {% endcapture %}{% include callout-breaking.html content=callout version="3.0.0" type="danger" %}
