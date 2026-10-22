@@ -288,7 +288,7 @@ Per cambiare il tema della sidebar e renderla scura è sufficiente aggiungere al
           </ul>
         </li>
         <li>
-          <a class="list-item large medium" href="#collapseFive" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseFile">
+          <a class="list-item large medium" href="#collapseFive" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseFive">
           <span class="list-item-title-icon-wrapper">
               <span>Link lista 2</span><svg class="icon icon-sm icon-inverse" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
             </span>
