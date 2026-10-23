@@ -1024,7 +1024,7 @@ Per questo tipo di link list sono state utilizzate, oltre alle classi custom, le
             <svg class="icon icon-xs icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-expand"></use></svg>
           </span>
         </a>
-        <ul class="link-sublist collapse icon-right" id="collapseOne">
+        <ul class="link-sublist collapse" id="collapseOne">
           <li><a class="list-item" href="#"><span>Link lista 1.1</span></a>
           </li>
           <li><a class="list-item" href="#"><span>Link lista 1.2</span></a>
