@@ -140,6 +140,11 @@ select {
     padding-right: $form-select-padding-x;
   }
 
+  // No arrow on list boxes; :where() keeps the validation icons of .is-valid and .is-invalid
+  &:where([multiple], [size]:not([size='1'])) {
+    background-image: none;
+  }
+
   &:disabled {
     border-color: $form-select-disabled-border-color;
     background-color: $form-select-disabled-bg;
