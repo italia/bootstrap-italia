@@ -37,7 +37,8 @@ button:has(~ .is-invalid),
   }
 }
 
-.was-validated &:valid,
+.was-validated .form-control:valid,
+.was-validated select:valid,
 .is-valid {
   border-color: var(--#{$prefix}color-border-success) !important;
   background-image: url('data:image/svg+xml,<svg width="24" height="24" viewBox="0 0 24 24" fill="%23008055" xmlns="http://www.w3.org/2000/svg"><path d="M9.6,16.9L4,11.4l0.8-0.7l4.8,4.8l8.5-8.4l0.7,0.7L9.6,16.9z" /></svg>');
@@ -47,7 +48,8 @@ button:has(~ .is-invalid),
   }
 }
 
-.was-validated &:invalid,
+.was-validated .form-control:invalid,
+.was-validated select:invalid,
 .is-invalid {
   border-color: var(--#{$prefix}color-border-danger) !important;
   background-image: url('data:image/svg+xml,<svg width="24" fill="%23cc334d" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.7,12l6.7,6.6l-0.8,0.8L12,12.7l-6.6,6.7l-0.8-0.8l6.7-6.6L4.6,5.4l0.8-0.8l6.6,6.7l6.6-6.7l0.8,0.8L12.7,12z" /></svg>');
