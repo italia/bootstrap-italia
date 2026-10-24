@@ -20,6 +20,7 @@
   --#{$prefix}form-control-label-color: var(--#{$prefix}color-text-base);
   --#{$prefix}form-control-text-color: var(--#{$prefix}color-text-secondary);
   --#{$prefix}form-control-font-size: var(--#{$prefix}body-font-size);
+  --#{$prefix}form-select-indicator: #{escape-svg($form-select-indicator)};
   --#{$prefix}form-group-spacing-y: var(--#{$prefix}spacing-m);
   --#{$prefix}form-checkbox-border-color: var(--#{$prefix}color-border-secondary);
   --#{$prefix}form-checkbox-border-radius: var(--#{$prefix}radius-smooth);
@@ -114,7 +115,7 @@ input {
 }
 
 select {
-  background-image: escape-svg($form-select-indicator);
+  background-image: var(--#{$prefix}form-select-indicator);
   background-repeat: no-repeat;
   background-position: right var(--#{$prefix}form-control-spacing) center;
   background-size: 16px 12px;
