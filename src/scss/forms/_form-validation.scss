@@ -7,21 +7,31 @@
   font-size: 0.75rem;
 }
 
-.input-group-text:has(~ [data-focus-mouse='true']:not(.btn)),
-[data-focus-mouse='true']:not(.btn) ~ .input-group-text,
-button:has(~ [data-focus-mouse='true']:not(.btn)),
-[data-focus-mouse='true']:not(.btn) + button {
-  border-color: inherit !important;
-  box-shadow: none !important;
-  outline: none !important;
-}
+// Only inside .input-group: buttons next to a field elsewhere (password toggle, inline forms) keep their style
+.input-group {
+  .input-group-text:has(~ [data-focus-mouse='true']:not(.btn)),
+  [data-focus-mouse='true']:not(.btn) ~ .input-group-text,
+  button:has(~ [data-focus-mouse='true']:not(.btn)),
+  [data-focus-mouse='true']:not(.btn) + button {
+    border-color: inherit !important;
+    box-shadow: none !important;
+    outline: none !important;
+  }
 
-//same border color for element in input-group
-.input-group-text:has(~ .is-invalid),
-.is-invalid ~ .input-group-text,
-button:has(~ .is-invalid),
-.is-invalid + button {
-  border-color: var(--#{$prefix}color-border-danger) !important;
+  //same border color for element in input-group
+  .input-group-text:has(~ .is-invalid),
+  .is-invalid ~ .input-group-text,
+  button:has(~ .is-invalid),
+  .is-invalid + button {
+    border-color: var(--#{$prefix}color-border-danger) !important;
+  }
+
+  .input-group-text:has(~ .is-valid),
+  .is-valid ~ .input-group-text,
+  button:has(~ .is-valid),
+  .is-valid + button {
+    border-color: var(--#{$prefix}color-border-success);
+  }
 }
 
 .sr-only-justvalidate-bi {
@@ -58,13 +68,6 @@ button:has(~ .is-invalid),
     border-color: var(--#{$prefix}color-border-warning) !important;
     background-image: url('data:image/svg+xml,<svg width="24" height="24" fill="%23995c00" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.5,17h-1V2h1V17z M12.5,20h-1v2h1V20z" /></svg>');
   }
-}
-
-.input-group-text:has(~ .is-valid),
-.is-valid ~ .input-group-text,
-button:has(~ .is-valid),
-.is-valid + button {
-  border-color: var(--#{$prefix}color-border-success);
 }
 
 //move buttons to make validation icon visible
