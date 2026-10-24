@@ -126,18 +126,17 @@ p.it-card-text a {
 }
 
 .dropdown-menu .dropdown-item.list-item:focus:not([data-focus-mouse='true']) {
-  box-shadow:
-    inset 0 0 0 3px var(--#{$prefix}color-outline-focus),
-    inset 0 0 0 5px var(--#{$prefix}color-border-inverse) !important;
-  outline-offset: -3px !important;
+  @include focus-inset;
 }
 
 @include media-breakpoint-down(lg) {
   .navbar-collapsable .navbar-nav li .nav-link:focus:not([data-focus-mouse='true']) {
-    box-shadow:
-      inset 0 0 0 3px var(--#{$prefix}color-outline-focus),
-      inset 0 0 0 5px var(--#{$prefix}color-border-inverse) !important;
-    outline-offset: -3px !important;
+    @include focus-inset;
     border-left-color: var(--#{$prefix}navbar-link-border-color) !important;
   }
+}
+
+// Inset focus ring for any element whose outer ring would be clipped
+.focus-inset:focus:not([data-focus-mouse='true']) {
+  @include focus-inset;
 }

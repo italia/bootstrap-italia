@@ -267,6 +267,20 @@ Si possono trovare dettagli aggiuntivi alla [pagina corrispondente](https://getb
 
 Infine, per _normalizzare_ alcuni comportamenti cross-browser, Bootstrap Italia eredita da Bootstrap il cosiddetto "[Reboot]({{ site.baseurl }}/docs/organizzare-i-contenuti/introduzione/#reboot)", una serie di regole CSS che correggono inconsistenze tra browsers e dispositivi.
 
+### Focus
+
+Gli elementi interattivi mostrano un anello di focus quando ricevono il focus da tastiera. Il plugin `track-focus` aggiunge `data-focus-mouse="true"` agli elementi su cui si fa clic, così l'anello non compare quando il focus arriva dal mouse.
+
+L'anello è disegnato fuori dall'elemento. Dove verrebbe tagliato, per esempio dentro un contenitore con `overflow: hidden`, sul bordo della finestra o sotto un header fisso, aggiungi la classe `.focus-inset` e l'anello verrà disegnato all'interno. Nei fogli di stile Sass lo stesso stile è disponibile con `@include focus-inset;`. Le voci dei menu a tendina e i link della navbar su mobile lo usano già.
+
+{% comment %}Example name: Anello di focus interno{% endcomment %}
+{% capture example %}
+<div class="overflow-hidden border rounded">
+  <a href="#" class="d-block p-3 border-bottom">Anello di focus esterno, tagliato dal contenitore</a>
+  <a href="#" class="d-block p-3 focus-inset">Anello di focus interno con <code>.focus-inset</code></a>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
 ---
 
 ## Altri esempi
