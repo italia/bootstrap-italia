@@ -67,4 +67,14 @@ Per ottenere select con raggruppamenti, utilizzare il tag HTML `<optgroup>` per 
 </div>
 {% endcapture %}{% include example.html content=example %}
 
+### Freccia della select
+
+La freccia è l'immagine nella custom property `--bsi-form-select-indicator`. Per cambiarla in una parte della pagina, per esempio su un fondo scuro, ridefiniscila su un elemento che contiene le select:
+
+```css
+.area-scura {
+  --bsi-form-select-indicator: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+}
+```
+
 {% include properties.md properties=site.data.cprops.forms selector=":root" title="trasversali" %}
