@@ -363,6 +363,7 @@ fare riferimento ai file elencati nella colonna `"File SCSS"` per il dettaglio d
     <tbody>
     {% for track in properties %}
     {% if track.variable-name contains "icon-" %}
+    {% unless track.variable-name contains "icon-size" %}
     {% if track.other_values.size == 0 %}
       <tr>
         <td style="min-width: 320px; width: 320px;"><code>{{ track.variable-name }}</code></td>
@@ -370,6 +371,7 @@ fare riferimento ai file elencati nella colonna `"File SCSS"` per il dettaglio d
         <td style="min-width: 320px"><code>{{ track.value }}</code></td>
       </tr>
     {% endif %}
+    {% endunless %}
     {% endif %}
     {% endfor %}
     </tbody>
