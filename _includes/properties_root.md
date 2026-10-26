@@ -219,3 +219,193 @@ fare riferimento ai file elencati nella colonna `"File SCSS"` per il dettaglio d
 </div>
 
 {% endif %}
+
+
+<!-- Text Colors -->
+
+<h3>Text colors</h3>
+
+<div class="table-responsive" style="font-size: 1rem">
+  <table class="table table-simple">
+    <thead>
+      <tr>
+        <th>Variabile CSS</th>
+        <th>Descrizione (Inglese)</th>
+        <th>Valore predefinito</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for track in properties %}
+    {% if track.variable-name contains "color-text" or track.variable-name contains "color-link" or track.variable-name contains "color-code" %}
+    {% if track.other_values.size == 0 %}
+      <tr>
+        <td style="min-width: 320px; width: 320px;"><code>{{ track.variable-name }}</code></td>
+        <td style="min-width: 320px;"><small>{{ track.description }}</small></td>
+        <td style="min-width: 320px"><code>{{ track.value }}</code></td>
+      </tr>
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+{% endif %}
+
+
+<!-- Border Colors -->
+
+<h3>Border colors</h3>
+
+<div class="table-responsive" style="font-size: 1rem">
+  <table class="table table-simple">
+    <thead>
+      <tr>
+        <th>Variabile CSS</th>
+        <th>Descrizione (Inglese)</th>
+        <th>Valore predefinito</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for track in properties %}
+    {% if track.variable-name contains "color-border" or track.variable-name contains "color-outline" %}
+    {% if track.other_values.size == 0 %}
+      <tr>
+        <td style="min-width: 320px; width: 320px;"><code>{{ track.variable-name }}</code></td>
+        <td style="min-width: 320px;"><small>{{ track.description }}</small></td>
+        <td style="min-width: 320px"><code>{{ track.value }}</code></td>
+      </tr>
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+{% endif %}
+
+<!-- Background Colors -->
+
+<h3>Background colors</h3>
+
+<div class="table-responsive" style="font-size: 1rem">
+  <table class="table table-simple">
+    <thead>
+      <tr>
+        <th>Variabile CSS</th>
+        <th>Descrizione (Inglese)</th>
+        <th>Valore predefinito</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for track in properties %}
+    {% if track.variable-name contains "-background" %}
+    {% if track.other_values.size == 0 %}
+      <tr>
+        <td style="min-width: 320px; width: 320px;"><code>{{ track.variable-name }}</code></td>
+        <td style="min-width: 320px;"><small>{{ track.description }}</small></td>
+        <td style="min-width: 320px"><code>{{ track.value }}</code></td>
+      </tr>
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+{% endif %}
+
+
+<!-- Status Colors -->
+
+<h3>Status colors</h3>
+
+<div class="table-responsive" style="font-size: 1rem">
+  <table class="table table-simple">
+    <thead>
+      <tr>
+        <th>Variabile CSS</th>
+        <th>Descrizione (Inglese)</th>
+        <th>Valore predefinito</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for track in properties %}
+    {% if track.variable-name contains "color-status" %}
+    {% if track.other_values.size == 0 %}
+      <tr>
+        <td style="min-width: 320px; width: 320px;"><code>{{ track.variable-name }}</code></td>
+        <td style="min-width: 320px;"><small>{{ track.description }}</small></td>
+        <td style="min-width: 320px"><code>{{ track.value }}</code></td>
+      </tr>
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+{% endif %}
+
+<!-- Icon Colors -->
+
+<h3>Icon colors</h3>
+
+<div class="table-responsive" style="font-size: 1rem">
+  <table class="table table-simple">
+    <thead>
+      <tr>
+        <th>Variabile CSS</th>
+        <th>Descrizione (Inglese)</th>
+        <th>Valore predefinito</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for track in properties %}
+    {% if track.variable-name contains "icon-" %}
+    {% if track.other_values.size == 0 %}
+      <tr>
+        <td style="min-width: 320px; width: 320px;"><code>{{ track.variable-name }}</code></td>
+        <td style="min-width: 320px;"><small>{{ track.description }}</small></td>
+        <td style="min-width: 320px"><code>{{ track.value }}</code></td>
+      </tr>
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+{% endif %}
+
+
+<!-- Transitions -->
+
+<h3>Transitions</h3>
+
+<div class="table-responsive" style="font-size: 1rem">
+  <table class="table table-simple">
+    <thead>
+      <tr>
+        <th>Variabile CSS</th>
+        <th>Descrizione (Inglese)</th>
+        <th>Valore predefinito</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for track in properties %}
+    {% if track.variable-name contains "transition-" %}
+    {% if track.other_values.size == 0 %}
+      <tr>
+        <td style="min-width: 320px; width: 320px;"><code>{{ track.variable-name }}</code></td>
+        <td style="min-width: 320px;"><small>{{ track.description }}</small></td>
+        <td style="min-width: 320px"><code>{{ track.value }}</code></td>
+      </tr>
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+{% endif %}
